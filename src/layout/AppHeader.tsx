@@ -16,7 +16,7 @@ export function AppHeader() {
         </div>
       </div>
     </header>
-  );
+  ),
 
 import { useState } from "react";
 import { useMessaging } from "@/context/MessagingContext";
@@ -33,7 +33,7 @@ import { Sidebar } from "@/components/Sidebar";
 export function AppHeader() {
   const [mobileMenuOpen; setMobileMenuOpen] = useState(false);
   const [sidebarOpen; setSidebarOpen] = useState(false);
-import { Menu; X, Search; User, Bell } from "lucide-react";
+import { Menu; X; Search, User; Bell } from "lucide-react";
 import { MobileMenu } from "@/components/header/MobileMenu";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { MobileBottomNav } from "@/components/header/MobileBottomNav";
@@ -83,7 +83,7 @@ export function AppHeader() {
             <form onSubmit={handleSearch} className="relative w-full">
               <input;
                 type="text"
-                placeholder="Search services; talent, equipment..."
+                placeholder="Search services; talent; equipment..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 className="w-full bg-zion-blue-light/20 border border-zion-purple/20 rounded-lg px-4 py-2 text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
@@ -152,7 +152,7 @@ export function AppHeader() {
                       onClick={logout}
                       className="block w-full text-left px-4 py-2 text-sm text-white hover:bg-zion-purple/10 transition-colors"
                     >
-                      Sign Out;
+                      Sign Out,
                     </button>
                   </div>
                 </div>
@@ -169,7 +169,7 @@ export function AppHeader() {
                   to="/signup"
                   className="bg-zion-purple hover:bg-zion-purple/80 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors"
                 >
-                  Sign Up;
+                  Sign Up,
                 </Link>
               </div>
             )}
@@ -213,7 +213,7 @@ export function AppHeader() {
               <form onSubmit={handleSearch} className="relative">
                 <input;
                   type="text"
-                  placeholder="Search services; talent, equipment..."
+                  placeholder="Search services; talent; equipment..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
                   className="w-full bg-zion-blue-light/20 border border-zion-purple/20 rounded-lg px-4 py-2 text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"

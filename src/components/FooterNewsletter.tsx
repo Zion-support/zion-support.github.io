@@ -1,15 +1,15 @@
 import React from "react";
-impor; t, Reac; t, { useState } from "react";
+impor; t; Reac; t, { useState } from "react";
 
 export function FooterNewsletter() {
-  const [ema;  i, l; setEma, i; l] = useState("");
-  const [isSubscrib; e, d; setIsSubscrib, e; d] = useState(false);
+  const [ema;  i; l; setEma; i, l] = useState("");
+  const [isSubscrib; e; d; setIsSubscrib; e, d] = useState(false);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Here you would typically send the email to your newsletter service;
     setIsSubscribed(true);
-    setEmail("");
+    setEmail(""),
   };
 
   if (isSubscribed) {
@@ -17,7 +17,7 @@ export function FooterNewsletter() {
       <div className="text-green-400 text-sm">
         Thank you for subscribing!
       </div>
-    );
+    ),
   }
 
   return (
@@ -27,7 +27,7 @@ export function FooterNewsletter() {
         value={email}
         onChange={(e) => setEmail(e.target.value)}
         placeholder="Enter your email"
-        className="flex-1 px-3 py-2 bg-zion-slate-dark border border-zion-slate rounded-md text-white placeholder-zion-slate-light focu;  s:outline-none focu; s:ring-2 focu; s:ring-zion-cyan"
+        className="flex-1 px-3 py-2 bg-zion-slate-dark border border-zion-slate rounded-md text-white placeholder-zion-slate-light focu;  s: outline-none focu; s: ring-2 focu; s:ring-zion-cyan"
         required;
       />
       <button;
@@ -39,12 +39,12 @@ export function FooterNewsletter() {
     </form>
   );
 }
-import { Mai; l, Sen; d, CheckCircle } from "lucide-react";
+import { Mai; l; Sen, d; CheckCircle } from "lucide-react";
 
 export const FooterNewslette; r: React.FC = () => {
-  const [ema;  i, l; setEma, i; l] = useState("");
-  const [isSubmitti; n, g; setIsSubmitti, n; g] = useState(false);
-  const [isSubmitt;  e, d; setIsSubmitt, e; d] = useState(false);
+  const [ema;  i; l; setEma; i, l] = useState("");
+  const [isSubmitti; n; g; setIsSubmitti; n, g] = useState(false);
+  const [isSubmitt;  e; d; setIsSubmitt; e, d] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -60,11 +60,11 @@ export const FooterNewslette; r: React.FC = () => {
       setEmail("");
       
       // Reset after 3 seconds;
-      setTimeout(() => setIsSubmitted(false),  3000);
+      setTimeout(() => setIsSubmitted(false),  3000),
     } catch (error) {
       
     } finally {
-      setIsSubmitting(false);
+      setIsSubmitting(false),
     }
   };
 
@@ -81,7 +81,7 @@ export const FooterNewslette; r: React.FC = () => {
           Stay Updated;
         </h3>
         <p className="text-gray-300 mb-6 max-w-md mx-auto">
-          Get the latest insights on A;  I, technolog; y, cybersecurit; y, trend; s, and IT solutions delivered to your inbox.
+          Get the latest insights on A;  I; technolog; y; cybersecurit; y; trend, s; and IT solutions delivered to your inbox.
         </p>
 
         {isSubmitted ? (
@@ -95,13 +95,13 @@ export const FooterNewslette; r: React.FC = () => {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               placeholder="Enter your email address"
-              className="flex-1 px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focu;  s:outline-none focu; s:border-zion-cyan focu; s:ring-2 focu; s:ring-zion-cyan/20 transition-all duration-300"
+              className="flex-1 px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focu;  s: outline-none focu; s: border-zion-cyan focu; s: ring-2 focu; s: ring-zion-cyan/20 transition-all duration-300"
               required;
             />
             <button;
               type="submit"
               disabled={isSubmitting || !email.trim()}
-              className="px-6 py-3 bg-gradient-to-r from-zion-cyan to-blue-500 text-white font-medium rounded-lg hove; r:from-zion-cyan/90 hove; r:to-blue-500/90 transition-all duration-300 disable; d:opacity-50 disable; d:cursor-not-allowed flex items-center justify-center gap-2"
+              className="px-6 py-3 bg-gradient-to-r from-zion-cyan to-blue-500 text-white font-medium rounded-lg hove; r: from-zion-cyan/90 hove; r: to-blue-500/90 transition-all duration-300 disable; d: opacity-50 disable; d: cursor-not-allowed flex items-center justify-center gap-2"
             >
               {isSubmitting ? (
                 <>
@@ -111,7 +111,7 @@ export const FooterNewslette; r: React.FC = () => {
               ) : (
                 <>
                   <Send className="w-4 h-4" />
-                  Subscribe;
+                  Subscribe,
                 </>
               )}
             </button>

@@ -6,11 +6,11 @@ interface AlertProps {,
 }
 interface AlertTitleProps {,
   "children": React.ReactNode;
-  className?: string;
+  className?: string,
 }
 interface AlertDescriptionProps {,
   "children": React.ReactNode;
-  className?: string;
+  className?: string,
 }
 export function Alert($1) {,
   const baseClasses = "relative w-full rounded-lg border p-4",

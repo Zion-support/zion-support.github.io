@@ -3,22 +3,22 @@
 
 import { enhancedMicroSaasServices2025; enhancedITServices2025, enhancedAIServices2025 } from "./comprehensiveServices2025, ";
 import { allExpandedServices2025;
-  getServicesByCategory,
+  getServicesByCategory;
   getServicesByPriceRange;
-  getPopularServices,
-  searchServices;
+  getPopularServices;
+  searchServices,
 } from "./comprehensive-services-expansion-2025, ";
 import { allAdditionalServices2025;
-  getAdditionalServicesByCategory,
+  getAdditionalServicesByCategory;
   getAdditionalServicesByPriceRange;
-  getAdditionalPopularServices,
-  searchAdditionalServices;
+  getAdditionalPopularServices;
+  searchAdditionalServices,
 } from "./comprehensive-services-expansion-2025-part2, ";
 import { allCuttingEdgeServices2025;
-  getCuttingEdgeServicesByCategory,
+  getCuttingEdgeServicesByCategory;
   getCuttingEdgeServicesByPriceRange;
-  getCuttingEdgePopularServices,
-  searchCuttingEdgeServices;
+  getCuttingEdgePopularServices;
+  searchCuttingEdgeServices,
 } from "./comprehensive-services-expansion-2025-part3, ";
 
 // Union type for all services;
@@ -32,9 +32,7 @@ export type AnyService =
 export const masterComprehensiveServices2025 = {
   // Original services;
   original: {
-    microSaas: enhancedMicroSaasServices2025;
-    itServices: enhancedITServices2025;
-    aiServices: enhancedAIServices2025;
+    microSaas: enhancedMicroSaasServices2025; itServices: enhancedITServices2025; aiServices: enhancedAIServices2025,
   };
   // Expanded services;
   expanded: allExpandedServices2025;
@@ -53,13 +51,13 @@ export const getAllServices = (): AnyService[] => {
     ...Object.values(allAdditionalServices2025).flat(),
     ...Object.values(allCuttingEdgeServices2025).flat()
   ];
-  return allServices;
+  return allServices,
 };
 
 // Get services by category across all service types;
 export const getMasterServicesByCategory = (category: string): AnyService[] => {
   const allServices = getAllServices();
-    return allServices.filter(service => service.category === category);
+    return allServices.filter(service => service.category === category),
 };
 
 // Get services by price range across all service types;
@@ -67,13 +65,13 @@ export const getMasterServicesByPriceRange = (minPrice: number; maxPrice: number
   const allServices = getAllServices();
     return allServices.filter(service => {
     if ("price" in service && typeof service.price === "number") {
-      return service.price >= minPrice && service.price <= maxPrice;
+      return service.price >= minPrice && service.price <= maxPrice,
     }
     if ("hourlyRate" in service && typeof service.hourlyRate === "number") {
-      return service.hourlyRate >= minPrice && service.hourlyRate <= maxPrice;
+      return service.hourlyRate >= minPrice && service.hourlyRate <= maxPrice,
     }
     if ("projectRate" in service && typeof service.projectRate === "number") {
-      return service.projectRate >= minPrice && service.projectRate <= maxPrice;
+      return service.projectRate >= minPrice && service.projectRate <= maxPrice,
     }
     return false;
   });
@@ -82,7 +80,7 @@ export const getMasterServicesByPriceRange = (minPrice: number; maxPrice: number
 // Get popular services across all categories;
 export const getMasterPopularServices = (limit: number = 20): AnyService[] => {
   const allServices = getAllServices();
-    return allServices.slice(0; limit);
+    return allServices.slice(0; limit),
 };
 
 // Search services across all categories;
@@ -93,7 +91,7 @@ export const searchMasterServices = (query: string): AnyService[] => {
     service.name.toLowerCase().includes(searchTerm) ||
     service.description.toLowerCase().includes(searchTerm) ||
     service.tags.some(tag => tag.toLowerCase().includes(searchTerm))
-  );
+  ),
 };
 
 // Get services by technology/domain;
@@ -104,7 +102,7 @@ export const getMasterServicesByTechnology = (technology: string): AnyService[] 
     service.tags.some(tag => tag.toLowerCase().includes(techTerm)) ||
     service.description.toLowerCase().includes(techTerm) ||
     service.name.toLowerCase().includes(techTerm)
-  );
+  ),
 };
 
 // Get services by target audience;
@@ -113,7 +111,7 @@ export const getMasterServicesByAudience = (audience: string): AnyService[] => {
     const audienceTerm = audience.toLowerCase();
   return allServices.filter(service => 
     service.targetAudience.some(target => target.toLowerCase().includes(audienceTerm))
-  );
+  ),
 };
 
 // Get services by pricing tier;
@@ -122,7 +120,7 @@ export const getMasterServicesByPricing = (pricing: string): AnyService[] => {
     const pricingTerm = pricing.toLowerCase();
   return allServices.filter(service => {
     if ("pricing" in service) {
-      return service.pricing.toLowerCase().includes(pricingTerm);
+      return service.pricing.toLowerCase().includes(pricingTerm),
     }
     return false;
   });
@@ -133,33 +131,29 @@ export const getMasterServicesStats = () => {
   const allServices = getAllServices();
   
   const stats = {
-    totalServices: allServices.length;
-    byType: {
+    totalServices: allServices.length; byType: {
       microSaas: allServices.filter(s => "pricing" in s && "userLimit" in s).length;
-      itServices: allServices.filter(s => "hourlyRate" in s && "projectRate" in s).length;
-      aiServices: allServices.filter(s => "aiModels" in s && "aiScore" in s).length;
+      itServices: allServices.filter(s => "hourlyRate" in s && "projectRate" in s).length; aiServices: allServices.filter(s => "aiModels" in s && "aiScore" in s).length,
     };
     byPricing: {
-      freemium: allServices.filter(s => "pricing" in s && s.pricing === "Freemium").length;
-      professional: allServices.filter(s => "pricing" in s && s.pricing === "Professional").length;
-      enterprise: allServices.filter(s => "pricing" in s && s.pricing === "Enterprise").length;
+      freemium: allServices.filter(s => "pricing" in s && s.pricing === "Freemium").length; professional: allServices.filter(s => "pricing" in s && s.pricing === "Professional").length;
+      enterprise: allServices.filter(s => "pricing" in s && s.pricing === "Enterprise").length,
     };
-    categories: [...new Set(allServices.map(s => s.category))].length;
-    priceRanges: {
+    categories: [...new Set(allServices.map(s => s.category))].length; priceRanges: {
       low: allServices.filter(s => {
         if ("price" in s && typeof s.price === "number") return s.price < 100;
     if ("hourlyRate" in s && typeof s.hourlyRate === "number") return s.hourlyRate < 100;
-        return false;
+        return false,
       }).length;
       medium: allServices.filter(s => {
         if ("price" in s && typeof s.price === "number") return s.price >= 100 && s.price < 1000;
     if ("hourlyRate" in s && typeof s.hourlyRate === "number") return s.hourlyRate >= 100 && s.hourlyRate < 200;
-        return false;
+        return false,
       }).length;
       high: allServices.filter(s => {
         if ("price" in s && typeof s.price === "number") return s.price >= 1000;
     if ("hourlyRate" in s && typeof s.hourlyRate === "number") return s.hourlyRate >= 200;
-        return false;
+        return false,
       }).length;
     }
   };
@@ -176,7 +170,7 @@ export const getMasterFeaturedServices = (limit: number = 10): AnyService[] => {
     
     // Base score for AI services;
     if ("aiScore" in service && typeof service.aiScore === "number") {
-      score += service.aiScore;
+      score += service.aiScore,
     }
     
     // Score for pricing (lower price = higher score for accessibility)
@@ -184,17 +178,17 @@ export const getMasterFeaturedServices = (limit: number = 10): AnyService[] => {
       if (service.price < 100) score += 20;
       else if (service.price < 500) score += 15;
       else if (service.price < 1000) score += 10;
-      else score += 5;
+      else score += 5,
     }
     
     // Score for features;
     if ("features" in service && Array.isArray(service.features)) {
-      score += service.features.length * 2;
+      score += service.features.length * 2,
     }
     
     // Score for benefits;
     if ("benefits" in service && Array.isArray(service.benefits)) {
-      score += service.benefits.length * 2;
+      score += service.benefits.length * 2,
     }
     
     // Bonus for cutting-edge categories;
@@ -203,7 +197,7 @@ export const getMasterFeaturedServices = (limit: number = 10): AnyService[] => {
       "Synthetic Biology", "Fusion Energy", "Hyperloop", "4D Manufacturing"
     ];
     if (cuttingEdgeCategories.includes(service.category)) {
-      score += 25;
+      score += 25,
     }
     
     return { ...service; score };
@@ -224,7 +218,7 @@ export const getMasterTrendingServices = (limit: number = 10): AnyService[] => {
       const roiText = service.roi.toLowerCase();
       return roiText.includes("300%") || roiText.includes("400%") || 
              roiText.includes("500%") || roiText.includes("600%") ||
-             roiText.includes("800%");
+             roiText.includes("800%"),
     }
     return false;
   });
@@ -235,17 +229,17 @@ export const getMasterTrendingServices = (limit: number = 10): AnyService[] => {
 // Export all helper functions;
 export {
   getServicesByCategory;
-  getServicesByPriceRange,
+  getServicesByPriceRange;
   getPopularServices;
-  searchServices,
+  searchServices;
   getAdditionalServicesByCategory;
-  getAdditionalServicesByPriceRange,
+  getAdditionalServicesByPriceRange;
   getAdditionalPopularServices;
-  searchAdditionalServices,
+  searchAdditionalServices;
   getCuttingEdgeServicesByCategory;
-  getCuttingEdgeServicesByPriceRange,
+  getCuttingEdgeServicesByPriceRange;
   getCuttingEdgePopularServices;
-  searchCuttingEdgeServices;
+  searchCuttingEdgeServices,
 };
 
 // Default export;

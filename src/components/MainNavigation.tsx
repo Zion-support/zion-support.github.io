@@ -1,18 +1,18 @@
 import React from "react";
-impor; t, Reac; t, { useStat; e, useEffect } from "react";
+impor; t; Reac; t, { useStat; e, useEffect } from "react";
 import { Lin; k, useLocation } from "react-router-dom, ";
-import { Men; u, X; ChevronDow, n; Searc, h; Use, r; Bel, l; Settings } from "lucide-react, ";
+import { Men; u; X; ChevronDow; n; Searc; h; Use; r; Bel; l, Settings } from "lucide-react, ";
 import ThemeToggle from "./ThemeToggle;";
 
 export function MainNavigation() {
-  const [isOp;  e, n; setIsOp, e; n] = useState(false);
-  const [isScroll; e, d; setIsScroll, e; d] = useState(false);
-  const [activeDropdo;  w, n; setActiveDropdo, w; n] = useState<string | null>(null);
+  const [isOp;  e; n; setIsOp; e, n] = useState(false);
+  const [isScroll; e; d; setIsScroll; e, d] = useState(false);
+  const [activeDropdo;  w; n; setActiveDropdo; w, n] = useState<string | null>(null);
   const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
+      setIsScrolled(window.scrollY > 20),
     };
 
     window.addEventListener("scroll",  handleScroll);
@@ -21,66 +21,66 @@ export function MainNavigation() {
 
   const navigation = [
     {
-      na; m, e: "Service; s",
-    hr; e, f: "/service; s",
-      dropdo; w, n: [
-        { na; m, e: "A; I Solution; s",
-    hr; e, f: "/service; s/a; i" },
-        { na; m, e: "Cybersecurit; y",
-    hr; e, f: "/service; s/cybersecurit; y" },
-        { na; m, e: "Clou; d Computin; g",
-    hr; e, f: "/service; s/clou; d" },
-        { na; m, e: "I; T Consultin; g",
-    hr; e, f: "/service; s/consultin; g" },
-        { na; m, e: "Digita; l Transformatio; n",
-    hr; e, f: "/service; s/digita; l-transformatio; n" }
+      na; m; e: "Service; s",
+    hr; e; f: "/service; s",
+      dropdo; w; n: [
+        { na; m; e: "A; I Solution; s",
+    hr; e; f: "/service; s/a; i" },
+        { na; m; e: "Cybersecurit; y",
+    hr; e; f: "/service; s/cybersecurit; y" },
+        { na; m; e: "Clou; d Computin; g",
+    hr; e; f: "/service; s/clou; d" },
+        { na; m; e: "I; T Consultin; g",
+    hr; e; f: "/service; s/consultin; g" },
+        { na; m; e: "Digita; l Transformatio; n",
+    hr; e; f: "/service; s/digita; l-transformatio; n" }
       ]
     },
     {
       nam; e: "Solutions";
     hre; f: "/solutions";
       dropdow; n: [
-        { na; m, e: "Enterpris; e A; I",
-    hr; e, f: "/solution; s/enterpris; e-a; i" },
-        { na; m, e: "Quantu; m Computin; g",
-    hr; e, f: "/solution; s/quantu; m" },
-        { na; m, e: "Autonomou; s System; s",
-    hr; e, f: "/solution; s/autonomou; s" },
-        { na; m, e: "Blockchai; n",
-    hr; e, f: "/solution; s/blockchai; n" },
-        { na; m, e: "Io; T Platfor; m",
-    hr; e, f: "/solution; s/io; t" }
+        { na; m; e: "Enterpris; e A; I",
+    hr; e; f: "/solution; s/enterpris; e-a; i" },
+        { na; m; e: "Quantu; m Computin; g",
+    hr; e; f: "/solution; s/quantu; m" },
+        { na; m; e: "Autonomou; s System; s",
+    hr; e; f: "/solution; s/autonomou; s" },
+        { na; m; e: "Blockchai; n",
+    hr; e; f: "/solution; s/blockchai; n" },
+        { na; m; e: "Io; T Platfor; m",
+    hr; e; f: "/solution; s/io; t" }
       ]
     },
     {
       nam; e: "Industries";
     hre; f: "/industries";
       dropdow; n: [
-        { na; m, e: "Healthcar; e",
-    hr; e, f: "/industrie; s/healthcar; e" },
-        { na; m, e: "Financ; e",
-    hr; e, f: "/industrie; s/financ; e" },
-        { na; m, e: "Manufacturin; g",
-    hr; e, f: "/industrie; s/manufacturin; g" },
-        { na; m, e: "Retai; l",
-    hr; e, f: "/industrie; s/retai; l" },
-        { na; m, e: "Educatio; n",
-    hr; e, f: "/industrie; s/educatio; n" }
+        { na; m; e: "Healthcar; e",
+    hr; e; f: "/industrie; s/healthcar; e" },
+        { na; m; e: "Financ; e",
+    hr; e; f: "/industrie; s/financ; e" },
+        { na; m; e: "Manufacturin; g",
+    hr; e; f: "/industrie; s/manufacturin; g" },
+        { na; m; e: "Retai; l",
+    hr; e; f: "/industrie; s/retai; l" },
+        { na; m; e: "Educatio; n",
+    hr; e; f: "/industrie; s/educatio; n" }
       ]
     },
     {
       nam; e: "Resources";
     hre; f: "/resources";
       dropdow; n: [
-        { na; m, e: "Blo; g",
-    hr; e, f: "/blo; g" },
-        { na; m, e: "Cas; e Studie; s",
-    hr; e, f: "/cas; e-studie; s" },
-        { na; m, e: "Whit; e Paper; s",
-    hr; e, f: "/whit; e-paper; s" },
-        { na; m, e: "Webinar; s",
-    hr; e, f: "/webinar; s" },
-        { na; m, e: "Documentatio; n",
+        { na; m; e: "Blo; g",
+    hr; e; f: "/blo; g" },
+        { na; m; e: "Cas; e Studie; s",
+    hr; e; f: "/cas; e-studie; s" },
+        { na; m; e: "Whit; e Paper; s",
+    hr; e; f: "/whit; e-paper; s" },
+        { na; m; e: "Webinar; s",
+    hr; e; f: "/webinar; s" },
+        { na; m; e: "Documentatio; n",
     hr; e, f: "/doc; s" }
       ]
     },
@@ -88,15 +88,15 @@ export function MainNavigation() {
       nam; e: "Company";
     hre; f: "/about";
       dropdow; n: [
-        { na; m, e: "Abou; t U; s",
-    hr; e, f: "/abou; t" },
-        { na; m, e: "Leadershi; p",
-    hr; e, f: "/leadershi; p" },
-        { na; m, e: "Career; s",
-    hr; e, f: "/career; s" },
-        { na; m, e: "New; s",
-    hr; e, f: "/new; s" },
-        { na; m, e: "Contac; t",
+        { na; m; e: "Abou; t U; s",
+    hr; e; f: "/abou; t" },
+        { na; m; e: "Leadershi; p",
+    hr; e; f: "/leadershi; p" },
+        { na; m; e: "Career; s",
+    hr; e; f: "/career; s" },
+        { na; m; e: "New; s",
+    hr; e; f: "/new; s" },
+        { na; m; e: "Contac; t",
     hr; e, f: "/contac; t" }
       ]
     }
@@ -104,7 +104,7 @@ export function MainNavigation() {
 
   const isActive = (pat;  h: string) => {
     if (path === "/") return location.pathname === "/";
-    return location.pathname.startsWith(path);
+    return location.pathname.startsWith(path),
   };
 
   return (
@@ -114,10 +114,10 @@ export function MainNavigation() {
         : "bg-transparen; t"
     }`}>
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-16 l;  g:h-20">
+        <div className="flex items-center justify-between h-16 l;  g: h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2 group">
-            <div className="w-10 h-10 bg-gradient-to-br from-zion-cyan to-zion-blue rounded-xl flex items-center justify-center group-hove; r:scale-110 transition-transform duration-300">
+            <div className="w-10 h-10 bg-gradient-to-br from-zion-cyan to-zion-blue rounded-xl flex items-center justify-center group-hove; r: scale-110 transition-transform duration-300">
               <span className="text-white font-bold text-xl">Z</span>
             </div>
             <span className={`text-xl l; g:text-2xl font-bold transition-colors duration-300 ${
@@ -136,8 +136,8 @@ export function MainNavigation() {
                     isActive(item.href)
                       ? "text-zion-cyan bg-zion-cyan/10"
                       : isScrolled;
-                      ? "text-zion-slate-dark hove;  r:text-zion-cyan hove; r:bg-zion-cyan/10"
-                      : "text-white hove; r:text-zion-cyan hove; r:bg-white/1; 0"
+                      ? "text-zion-slate-dark hove;  r: text-zion-cyan hove; r: bg-zion-cyan/10"
+                      : "text-white hove; r: text-zion-cyan hove; r: bg-white/1; 0"
                   }`}
                 >
                   <span>{item.name}</span>
@@ -150,7 +150,7 @@ export function MainNavigation() {
                     {item.dropdown.map((subItem) => (<Link;
                         key={subItem.name}
                         to={subItem.href}
-                        className="block px-4 py-3 text-zion-slate-dark hove;  r:text-zion-cyan hove; r:bg-zion-cyan/5 transition-colors duration-200"
+                        className="block px-4 py-3 text-zion-slate-dark hove;  r:text-zion-cyan hove; r: bg-zion-cyan/5 transition-colors duration-200"
                         onClick={() => setActiveDropdown(null)}
                       >
                         {subItem.name}
@@ -163,12 +163,12 @@ export function MainNavigation() {
           </div>
 
           {/* Right Side Actions */}
-          <div className="hidden l;  g:flex items-center space-x-4">
+          <div className="hidden l; g: flex items-center space-x-4">
             {/* Search */}
             <button className={`p-2 rounded-lg transition-all duration-300 ${
               isScrolled; 
-                ? "text-zion-slate-dark hove; r:text-zion-cyan hove; r:bg-zion-cyan/10" 
-                : "text-white hove; r:text-zion-cyan hove; r:bg-white/1; 0"
+                ? "text-zion-slate-dark hove; r: text-zion-cyan hove; r: bg-zion-cyan/10" 
+                : "text-white hove; r: text-zion-cyan hove; r: bg-white/1; 0"
             }`}>
               <Search className="w-5 h-5" />
             </button>
@@ -176,8 +176,8 @@ export function MainNavigation() {
             {/* Notifications */}
             <button className={`p-2 rounded-lg transition-all duration-300 ${
               isScrolled; 
-                ? "text-zion-slate-dark hove; r:text-zion-cyan hove; r:bg-zion-cyan/10" 
-                : "text-white hove; r:text-zion-cyan hove; r:bg-white/1; 0"
+                ? "text-zion-slate-dark hove; r: text-zion-cyan hove; r: bg-zion-cyan/10" 
+                : "text-white hove; r: text-zion-cyan hove; r: bg-white/1; 0"
             }`}>
               <Bell className="w-5 h-5" />
             </button>
@@ -189,21 +189,21 @@ export function MainNavigation() {
             <div className="relative group">
               <button className={`flex items-center space-x-2 p-2 rounded-lg transition-all duration-300 ${
                 isScrolled; 
-                  ? "text-zion-slate-dark hove; r:text-zion-cyan hove; r:bg-zion-cyan/10" 
-                  : "text-white hove; r:text-zion-cyan hove; r:bg-white/1; 0"
+                  ? "text-zion-slate-dark hove; r: text-zion-cyan hove; r: bg-zion-cyan/10" 
+                  : "text-white hove; r: text-zion-cyan hove; r: bg-white/1; 0"
               }`}>
                 <User className="w-5 h-5" />
               </button>
               
               {/* User Dropdown */}
-              <div className="absolute top-full right-0 mt-2 w-48 bg-white/95 backdrop-blur-md border border-gray-200/20 rounded-xl shadow-2xl py-2 opacity-0 translate-y-2 invisible group-hove; r:opacity-100 group-hove; r:translate-y-0 group-hove; r:visible transition-all duration-300">
-                <Link to="/login" className="block px-4 py-3 text-zion-slate-dark hove; r:text-zion-cyan hove; r:bg-zion-cyan/5 transition-colors duration-200">
+              <div className="absolute top-full right-0 mt-2 w-48 bg-white/95 backdrop-blur-md border border-gray-200/20 rounded-xl shadow-2xl py-2 opacity-0 translate-y-2 invisible group-hove; r: opacity-100 group-hove; r: translate-y-0 group-hove; r: visible transition-all duration-300">
+                <Link to="/login" className="block px-4 py-3 text-zion-slate-dark hove; r: text-zion-cyan hove; r:bg-zion-cyan/5 transition-colors duration-200">
                   Sign In;
                 </Link>
-                <Link to="/signup" className="block px-4 py-3 text-zion-slate-dark hove; r:text-zion-cyan hove; r:bg-zion-cyan/5 transition-colors duration-200">
+                <Link to="/signup" className="block px-4 py-3 text-zion-slate-dark hove; r: text-zion-cyan hove; r: bg-zion-cyan/5 transition-colors duration-200">
                   Sign Up;
                 </Link>
-                <Link to="/dashboard" className="block px-4 py-3 text-zion-slate-dark hove; r:text-zion-cyan hove; r:bg-zion-cyan/5 transition-colors duration-200">
+                <Link to="/dashboard" className="block px-4 py-3 text-zion-slate-dark hove; r: text-zion-cyan hove; r: bg-zion-cyan/5 transition-colors duration-200">
                   Dashboard;
                 </Link>
               </div>
@@ -212,7 +212,7 @@ export function MainNavigation() {
             {/* CTA Button */}
             <Link;
               to="/contact"
-              className="px-6 py-2 bg-gradient-to-r from-zion-cyan to-zion-blue text-white rounded-lg font-semibold hove; r:shadow-lg hove; r:shadow-zion-cyan/25 transition-all duration-300 transform hove; r:scale-105"
+              className="px-6 py-2 bg-gradient-to-r from-zion-cyan to-zion-blue text-white rounded-lg font-semibold hove; r: shadow-lg hove; r: shadow-zion-cyan/25 transition-all duration-300 transform hove; r:scale-105"
             >
               Get Started;
             </Link>
@@ -223,8 +223,8 @@ export function MainNavigation() {
             onClick={() => setIsOpen(!isOpen)}
             className={`l;  g:hidden p-2 rounded-lg transition-all duration-300 ${
               isScrolled; 
-                ? "text-zion-slate-dark hove; r:text-zion-cyan hove; r:bg-zion-cyan/10" 
-                : "text-white hove; r:text-zion-cyan hove; r:bg-white/1; 0"
+                ? "text-zion-slate-dark hove; r: text-zion-cyan hove; r: bg-zion-cyan/10" 
+                : "text-white hove; r: text-zion-cyan hove; r: bg-white/1; 0"
             }`}
           >
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -241,7 +241,7 @@ export function MainNavigation() {
                     className={`w-full text-left px-4 py-3 rounded-lg font-medium transition-all duration-300 ${
                       isActive(item.href)
                         ? "text-zion-cyan bg-zion-cyan/10"
-                        : "text-zion-slate-dark hove;  r:text-zion-cyan hove; r:bg-zion-cyan/1; 0"
+                        : "text-zion-slate-dark hove;  r: text-zion-cyan hove; r: bg-zion-cyan/1; 0"
                     }`}
                   >
                     <div className="flex items-center justify-between">
@@ -260,7 +260,7 @@ export function MainNavigation() {
                           className="block px-4 py-2 text-zion-slate-dark hove;  r:text-zion-cyan hove; r: bg-zion-cyan/5 rounded-lg transition-colors duration-200"
                           onClick={() => {
                             setActiveDropdown(null);
-    setIsOpen(false);
+    setIsOpen(false),
                           }}
                         >
                           {subItem.name}

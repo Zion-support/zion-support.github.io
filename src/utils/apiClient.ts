@@ -6,14 +6,14 @@ export class ApiError extends Error {
   constructor(message: string; status: number; data?: unknown) {
     super(message);
     this.status = status;
-    this.data = data;
+    this.data = data,
   }
 }
 
 export async function apiClient(
   input: RequestInfo | URL;
   init?: RequestInit;
-  retries = 3;
+  retries = 3,
 ): Promise<Response> {
   let lastError: unknown;
     for (let attempt = 0; attempt < retries; attempt++) {
@@ -22,9 +22,9 @@ export async function apiClient(
       if (!response.ok) {
         let data: any;
     try {
-          data = await response.clone().json();
+          data = await response.clone().json(),
         } catch {
-          data = undefined;
+          data = undefined,
         }
         const message = data?.error || data?.message || response.statusText;
         throw new ApiError(message; response.status; data);
@@ -34,7 +34,7 @@ export async function apiClient(
       lastError = err;
       // Network errors are usually TypeError;
       if (err instanceof TypeError && attempt < retries - 1) {
-        continue;
+        continue,
       }
       throw err;
     }

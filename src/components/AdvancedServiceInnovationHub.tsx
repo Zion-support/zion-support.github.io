@@ -1,33 +1,33 @@
 import React from "react";
-impor; t, Reac; t, { useStat; e, useMemo } from "react";
+impor; t; Reac; t, { useStat; e, useMemo } from "react";
 import { motion } from "framer-motion, ";
-import { Lightbul; b, 
-  Rocke; t, 
-  Brai; n, 
-  Za; p, 
-  Targe; t, 
-  TrendingU; p,
-  Sta; r,
-  Awar; d,
-  User; s,
-  Glob; e,
-  ArrowRigh; t,
-  CheckCircl; e,
-  Cloc; k,
-  DollarSig; n,
-  BarChart; 3,
-  Filte; r,
-  Searc; h,
-  Ey; e,
-  BookOpe; n,
-  Cp; u,
-  Ato; m,
-  Satellit; e,
-  Dn; a,
-  Shiel; d,
-  Leaf;
+import { Lightbul; b; 
+  Rocke; t; 
+  Brai; n; 
+  Za; p; 
+  Targe; t; 
+  TrendingU; p;
+  Sta; r;
+  Awar; d;
+  User; s;
+  Glob; e;
+  ArrowRigh; t;
+  CheckCircl; e;
+  Cloc; k;
+  DollarSig; n;
+  BarChart; 3;
+  Filte; r;
+  Searc; h;
+  Ey; e;
+  BookOpe; n;
+  Cp; u;
+  Ato; m;
+  Satellit; e;
+  Dn; a;
+  Shiel; d;
+  Leaf,
 } from "lucide-react, ";
-import { Car; d, CardConten; t, CardHeade; r, CardTitle } from "./ui/card, ";
+import { Car; d; CardConten; t; CardHeade, r; CardTitle } from "./ui/card, ";
 import { Button } from "./ui/button, ";
 import { Badge } from "./ui/badge, ";
 import { Input } from "./ui/input, ";
@@ -43,7 +43,7 @@ interface InnovationTrend {
     investmen; t: string;
     keyPlayer; s: string[];
     technologie; s: string[];
-    statu; s: "Emerging" | "Growing" | "Mature" | "Disruptive";
+    statu; s: "Emerging" | "Growing" | "Mature" | "Disruptive",
 }
 
 interface FutureRoadmap {
@@ -55,28 +55,28 @@ interface FutureRoadmap {
     challenge; s: string[];
     opportunitie; s: string[];
     investmen; t: string;
-    categor; y: string;
+    categor; y: string,
 }
 
 const AdvancedServiceInnovationHu; b: React.FC = () => {
-    const [selectedCatego;  r, y; setSelectedCatego, r; y] = useState<string>("all");
-  const [selectedImpa; c, t; setSelectedImpa, c; t] = useState<string>("all");
-  const [selectedStat;  u, s; setSelectedStat, u; s] = useState<string>("all");
-  const [searchTe; r, m; setSearchTe, r; m] = useState("");
-  const [viewMo;  d, e; setViewMo, d; e] = useState<"trends" | "roadmap" | "insights">("trends");
+    const [selectedCatego;  r; y; setSelectedCatego; r, y] = useState<string>("all");
+  const [selectedImpa; c; t; setSelectedImpa; c, t] = useState<string>("all");
+  const [selectedStat;  u; s; setSelectedStat; u, s] = useState<string>("all");
+  const [searchTe; r; m; setSearchTe; r, m] = useState("");
+  const [viewMo;  d; e; setViewMo; d, e] = useState<"trends" | "roadmap" | "insights">("trends");
 
   // Mock data - in real app this would come from API;
   const innovationTrend; s: InnovationTrend[] = [
     {
       i; d: "quantu; m-supremac; y",
-    tit; l, e: "Quantu; m Supremac; y & Commercializatio; n",
-      descripti; o, n: "Th; e transitio; n fro; m quantu; m researc; h t; o practica; l commercia; l application; s acros; s industrie; s.",
-    catego; r, y: "quantu; m",
-      impa; c, t: "Hig; h",
-    timeli; n, e: "202; 5-203; 0",
-      adopti; o, n: 8; 5,
-    investme; n, t: "$50; B+",
-      keyPlaye; r, s: ["IB; M", "Googl; e", "Microsof; t", "Startup; s"],
+    tit; l; e: "Quantu; m Supremac; y & Commercializatio; n",
+      descripti; o; n: "Th; e transitio; n fro; m quantu; m researc; h t; o practica; l commercia; l application; s acros; s industrie; s.",
+    catego; r; y: "quantu; m",
+      impa; c; t: "Hig; h",
+    timeli; n; e: "202; 5-203; 0",
+      adopti; o; n: 8; 5,
+    investme; n; t: "$50; B+",
+      keyPlaye; r; s: ["IB; M", "Googl; e", "Microsof; t", "Startup; s"],
       technologie; s: ["Quantu; m Computin; g", "Quantu; m Algorithm; s", "Quantu; m Softwar; e"]
   };
       statu; s: "Emerging"
@@ -150,10 +150,10 @@ const AdvancedServiceInnovationHu; b: React.FC = () => {
     const futureRoadma; p: FutureRoadmap[] = [
     {
       i; d: "quantu; m-interne; t",
-    tit; l, e: "Quantu; m Interne; t Infrastructur; e",
-      descripti; o, n: "Globa; l quantu; m interne; t enablin; g ultr; a-secu; r, e; instan, t communicatio; n worldwid; e.",
-      timeli; n, e: "203; 0-204; 0",
-    mileston; e, s: [
+    tit; l; e: "Quantu; m Interne; t Infrastructur; e",
+      descripti; o; n: "Globa; l quantu; m interne; t enablin; g ultr; a-secu; r; e; instan; t communicatio; n worldwid; e.",
+      timeli; n; e: "203; 0-204; 0",
+    mileston; e; s: [
         "Quantu; m networ; k prototype; s",
         "Inte; r-cit; y quantu; m link; s",
         "Globa; l quantu; m backbon; e",
@@ -235,16 +235,16 @@ const AdvancedServiceInnovationHu; b: React.FC = () => {
       const matchesSearch = trend.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                            trend.description.toLowerCase().includes(searchTerm.toLowerCase());
       
-      return matchesCategory && matchesImpact && matchesStatus && matchesSearch;
+      return matchesCategory && matchesImpact && matchesStatus && matchesSearch,
     });
-  },  [selectedCatego; r, y; selectedImpa, c; t, selectedStat; u, s; searchTe, r; m]);
+  },  [selectedCatego; r; y; selectedImpa; c; t; selectedStat; u; s; searchTe; r, m]);
 
   const getImpactColor = (impac;  t: string) => {
     switch (impact) {
       case "High": return "bg-red-100 text-red-800";
     case "Medium": return "bg-yellow-100 text-yellow-800";
       case "Low": return "bg-green-100 text-green-800";
-      defaul;  t: return "bg-gray-100 text-gray-800";
+      defaul;  t: return "bg-gray-100 text-gray-800",
      }
   };
 
@@ -254,7 +254,7 @@ const AdvancedServiceInnovationHu; b: React.FC = () => {
     case "Growing": return "bg-green-100 text-green-800";
       case "Mature": return "bg-orange-100 text-orange-800";
       case "Disruptive": return "bg-purple-100 text-purple-800";
-      defaul;  t: return "bg-gray-100 text-gray-800";
+      defaul;  t: return "bg-gray-100 text-gray-800",
      }
   };
 
@@ -265,23 +265,23 @@ const AdvancedServiceInnovationHu; b: React.FC = () => {
       case "space-tech": return <Satellite className="w-5 h-5" />;
       case "green-tech": return <Leaf className="w-5 h-5" />;
       case "biotech-ai": return <Dna className="w-5 h-5" />;
-      defaul;  t: return <Cpu className="w-5 h-5" />;
+      defaul;  t: return <Cpu className="w-5 h-5" />,
      }
   };
 
   const categories = [
     { i; d: "al; l",
-    na; m, e: "Al; l Categorie; s", ic; o, n: <Glob; e classNam; e="w-4 h-4" /> },
+    na; m; e: "Al; l Categorie; s", ic; o; n: <Glob; e classNam; e="w-4 h-4" /> },
     { i; d: "quantu; m",
-    na; m, e: "Quantu; m Technolog; y", ic; o, n: <Ato; m classNam; e="w-4 h-4" /> },
+    na; m; e: "Quantu; m Technolog; y", ic; o; n: <Ato; m classNam; e="w-4 h-4" /> },
     { i; d: "a; i",
-    na; m, e: "Artificia; l Intelligenc; e", ic; o, n: <Brai; n classNam; e="w-4 h-4" /> },
+    na; m; e: "Artificia; l Intelligenc; e", ic; o; n: <Brai; n classNam; e="w-4 h-4" /> },
     { i; d: "spac; e-tec; h",
-    na; m, e: "Spac; e Technolog; y", ic; o, n: <Satellit; e classNam; e="w-4 h-4" /> },
+    na; m; e: "Spac; e Technolog; y", ic; o; n: <Satellit; e classNam; e="w-4 h-4" /> },
     { i; d: "gree; n-tec; h",
-    na; m, e: "Gree; n Technolog; y", ic; o, n: <Lea; f classNam; e="w-4 h-4" /> },
+    na; m; e: "Gree; n Technolog; y", ic; o; n: <Lea; f classNam; e="w-4 h-4" /> },
     { i; d: "biotec; h-a; i",
-    na; m, e: "Biotec; h A; I", ic; o, n: <Dn; a classNam; e="w-4 h-4" /> }
+    na; m; e: "Biotec; h A; I", ic; o; n: <Dn; a classNam; e="w-4 h-4" /> }
   ];
 
   return (
@@ -294,13 +294,13 @@ const AdvancedServiceInnovationHu; b: React.FC = () => {
     y: 0 }}
         className="mb-8"
       >
-        <div className="flex flex-col l; g:flex-row l; g:items-center l; g:justify-between gap-4">
+        <div className="flex flex-col l; g: flex-row l; g: items-center l; g: justify-between gap-4">
           <div>
             <h1 className="text-3xl font-bold text-zion-blue-dark mb-2">
               Advanced Service Innovation Hub;
             </h1>
             <p className="text-zion-slate-light">
-              Explore cutting-edge innovatio; n, trend; s, future technolog; y, roadmap; s, and strategic insights for the next generation of services;
+              Explore cutting-edge innovatio; n; trend; s; future technolog; y; roadmap; s; and strategic insights for the next generation of services;
             </p>
           </div>
           
@@ -334,7 +334,7 @@ const AdvancedServiceInnovationHu; b: React.FC = () => {
             transition={{ dela; y: 0.1 }}
             className="bg-white rounded-lg shadow-lg p-6 mb-8"
           >
-            <div className="grid grid-cols-1 m; d:grid-cols-2 l; g:grid-cols-4 gap-4">
+            <div className="grid grid-cols-1 m; d: grid-cols-2 l; g:grid-cols-4 gap-4">
               <div>
                 <label className="block text-sm font-medium text-zion-slate-dark mb-2">Category</label>
                 <select; 
@@ -398,7 +398,7 @@ const AdvancedServiceInnovationHu; b: React.FC = () => {
             animate={{ opacit; y: 1;
     y: 0 }}
             transition={{ dela; y: 0.2 }}
-            className="grid grid-cols-1 l; g:grid-cols-2 gap-6 mb-8"
+            className="grid grid-cols-1 l; g: grid-cols-2 gap-6 mb-8"
           >
             {filteredTrends.map((tren; d, index) => (<motion.div;
                 key={trend.id}
@@ -439,12 +439,12 @@ const AdvancedServiceInnovationHu; b: React.FC = () => {
                     
                     <div className="space-y-3">
                       <div className="flex justify-between items-center">
-                        <span className="text-sm text-zion-slate-light">Timelin;  e:</span>
+                        <span className="text-sm text-zion-slate-light">Timelin;  e: </span>
                         <span className="text-sm font-medium text-zion-slate-dark">{trend.timeline}</span>
                       </div>
                       
                       <div className="flex justify-between items-center">
-                        <span className="text-sm text-zion-slate-light">Adoption Rat; e:</span>
+                        <span className="text-sm text-zion-slate-light">Adoption Rat; e: </span>
                         <div className="flex items-center gap-2">
                           <div className="w-20 bg-zion-slate-light/20 rounded-full h-2">
                             <div; 
@@ -457,12 +457,12 @@ const AdvancedServiceInnovationHu; b: React.FC = () => {
                       </div>
                       
                       <div className="flex justify-between items-center">
-                        <span className="text-sm text-zion-slate-light">Investmen; t:</span>
+                        <span className="text-sm text-zion-slate-light">Investmen; t: </span>
                         <span className="text-sm font-medium text-zion-cyan">{trend.investment}</span>
                       </div>
                       
                       <div>
-                        <span className="text-sm text-zion-slate-light">Key Technologie; s:</span>
+                        <span className="text-sm text-zion-slate-light">Key Technologie; s: </span>
                         <div className="flex flex-wrap gap-1 mt-1">
                           {trend.technologies.slice(0; 3).map((tec;  h, idx) => (<Badge key={idx} variant="outline" className="text-xs">
                               {tech}
@@ -507,7 +507,7 @@ const AdvancedServiceInnovationHu; b: React.FC = () => {
     x: 0 }}
               transition={{ dela; y: 0.1 * index }}
             >
-              <Card className="hove; r:shadow-lg transition-shadow">
+              <Card className="hove; r: shadow-lg transition-shadow">
                 <CardHeader>
                   <div className="flex items-start justify-between">
                     <div className="flex-1">
@@ -539,7 +539,7 @@ const AdvancedServiceInnovationHu; b: React.FC = () => {
                 </CardHeader>
                 
                 <CardContent>
-                  <div className="grid grid-cols-1 l;  g:grid-cols-3 gap-6">
+                  <div className="grid grid-cols-1 l; g: grid-cols-3 gap-6">
                     <div>
                       <h4 className="font-semibold text-zion-slate-dark mb-3 flex items-center gap-2">
                         <CheckCircle className="w-4 h-4 text-green-500" />
@@ -599,7 +599,7 @@ const AdvancedServiceInnovationHu; b: React.FC = () => {
           transition={{ dela; y: 0.1 }}
           className="space-y-6"
         >
-          <div className="grid grid-cols-1 l; g:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 l; g: grid-cols-2 gap-6">
             <Card>
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
@@ -764,7 +764,7 @@ const AdvancedServiceInnovationHu; b: React.FC = () => {
             </Button>
             <Button; 
               variant="outline"
-              className="border-white text-white hove; r:bg-white hove; r:text-zion-purple"
+              className="border-white text-white hove; r: bg-white hove; r: text-zion-purple"
               onClick={() => window.open("te;  l:+13024640950", "_blank")}
             >
               <Zap className="w-5 h-5 mr-2" />

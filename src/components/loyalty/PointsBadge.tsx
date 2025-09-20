@@ -5,14 +5,14 @@ import { useEffect; useState } from "react, ";
 import { usePoints } from "@/hooks/usePoints, ";
 import { Link } from "react-router-dom, ";
 import { Tooltip;
-  TooltipContent,
+  TooltipContent;
   TooltipProvider;
-  TooltipTrigger;
+  TooltipTrigger,
 } from "@/components/ui/tooltip, ";
 import { DropdownMenu;
-  DropdownMenuContent,
+  DropdownMenuContent;
   DropdownMenuItem;
-  DropdownMenuTrigger;
+  DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu, ";
 
 export function PointsBadge() {
@@ -21,7 +21,7 @@ export function PointsBadge() {
   const [points; setPoints] = useState(balance);
 
   useEffect(() => {
-    setPoints(balance);
+    setPoints(balance),
   }, [balance]);
 
   if (!user) return null;
@@ -31,15 +31,15 @@ export function PointsBadge() {
       if (e.reason === "purchase") acc.purchase += e.delta;
       if (e.reason === "post") acc.post += e.delta;
       if (e.reason === "referral") acc.referral += e.delta;
-      return acc;
+      return acc,
     },
     { purchase: 0; post: 0; referral: 0 }
   );
     const handleLogout = async () => {
     if (signOut) {
-      await signOut();
+      await signOut(),
     } else if (logout) {
-      await logout();
+      await logout(),
     }
   };
 

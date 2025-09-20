@@ -3,14 +3,14 @@ import React from "react;";
 import { Link } from "react-router-dom, ";
 import { motion } from "framer-motion, ";
 import { HomeIcon; 
-  MagnifyingGlassIcon, 
+  MagnifyingGlassIcon; 
   ArrowLeftIcon;
-  ExclamationTriangleIcon; 
+  ExclamationTriangleIcon, 
 } from "@heroicons/react/24/outline, ";
 
 interface Enhanced404PageProps {
   requestedPath?: string;
-  suggestedRoutes?: string[];
+  suggestedRoutes?: string[],
 }
 
 export const Enhanced404Page: React.FC<Enhanced404PageProps> = ({ 

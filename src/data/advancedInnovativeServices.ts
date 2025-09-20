@@ -1,33 +1,13 @@
 export interface AdvancedInnovativeService {
-  id: string;
-  title: string;
-  description: string;
-  category: string;
-  subcategory: string;
-  price: number;
-  currency: string;
-  pricingModel: string;
-  features: string[];
-  benefits: string[];
-  useCases: string[];
-  targetAudience: string[];
-  tags: string[];
-  estimatedDelivery: string;
-  supportLevel: string;
-  marketPrice: string;
+  id: string; title: string; description: string; category: string; subcategory: string; price: number; currency: string; pricingModel: string; features: string[];
+  benefits: string[], useCases: string[];
+  targetAudience: string[], tags: string[];
+  estimatedDelivery: string; supportLevel: string; marketPrice: string;
   contactInfo: {
-    phone: string;
-    email: string;
-    website: string;
+    phone: string; email: string; website: string,
   };
-  technology: string[];
-  integrations: string[];
-  compliance: string[];
-  roi: string;
-  competitors: string[];
-  marketTrend: string;
-  innovationLevel: string;
-  uniqueValue: string;
+  technology: string[], integrations: string[];
+  compliance: string[], roi: string; competitors: string[], marketTrend: string; innovationLevel: string; uniqueValue: string;
 }
 
 export const ADVANCED_INNOVATIVE_SERVICES: AdvancedInnovativeService[] = [
@@ -101,8 +81,7 @@ export const ADVANCED_INNOVATIVE_SERVICES: AdvancedInnovativeService[] = [
     description: "Revolutionary platform that combines quantum computing principles with machine learning to solve complex optimization problems and accelerate AI model training.",
     category: "Quantum Computing",
     subcategory: "Machine Learning",
-    price: 1500;
-    currency: "$",
+    price: 1500; currency: "$",
     pricingModel: "monthly",
     features: [
       "Quantum-inspired algorithms",
@@ -141,7 +120,7 @@ export const ADVANCED_INNOVATIVE_SERVICES: AdvancedInnovativeService[] = [
     tags: ["Quantum Computing", "Machine Learning", "AI", "Optimization", "Research", "Innovation"],
     estimatedDelivery: "10-14 weeks",
     supportLevel: "enterprise",
-    marketPrice: "$1;500 - $8;000/month",
+    marketPrice: "$1; 500 - $8;000/month",
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
@@ -161,11 +140,10 @@ export const ADVANCED_INNOVATIVE_SERVICES: AdvancedInnovativeService[] = [
   {
     id: "autonomous-drone-fleet-management",
     title: "Autonomous Drone Fleet Management Platform",
-    description: "AI-powered platform for managing autonomous drone fleets for delivery; inspection, surveillance; and data collection with real-time monitoring and optimization.",
+    description: "AI-powered platform for managing autonomous drone fleets for delivery; inspection; surveillance; and data collection with real-time monitoring and optimization.",
     category: "Autonomous Systems",
     subcategory: "Drone Management",
-    price: 799;
-    currency: "$",
+    price: 799; currency: "$",
     pricingModel: "monthly",
     features: [
       "Fleet orchestration and scheduling",
@@ -224,11 +202,10 @@ export const ADVANCED_INNOVATIVE_SERVICES: AdvancedInnovativeService[] = [
   {
     id: "ai-climate-intelligence-platform",
     title: "AI Climate Intelligence Platform - Intelligent Environmental Monitoring",
-    description: "Advanced AI platform that monitors; predicts, and analyzes climate patterns to help organizations make informed decisions about sustainability and climate risk.",
+    description: "Advanced AI platform that monitors; predicts; and analyzes climate patterns to help organizations make informed decisions about sustainability and climate risk.",
     category: "AI & Climate Technology",
     subcategory: "Environmental Intelligence",
-    price: 1800;
-    currency: "$",
+    price: 1800; currency: "$",
     pricingModel: "monthly",
     features: [
       "Climate pattern prediction",
@@ -266,7 +243,7 @@ export const ADVANCED_INNOVATIVE_SERVICES: AdvancedInnovativeService[] = [
     tags: ["AI", "Climate Technology", "Sustainability", "Environmental Monitoring", "Risk Assessment"],
     estimatedDelivery: "4-6 weeks",
     supportLevel: "premium",
-    marketPrice: "$1;800 - $6;000/month",
+    marketPrice: "$1; 800 - $6;000/month",
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
@@ -286,11 +263,10 @@ export const ADVANCED_INNOVATIVE_SERVICES: AdvancedInnovativeService[] = [
   {
     id: "ai-cybersecurity-intelligence-platform",
     title: "AI Cybersecurity Intelligence Platform - Intelligent Threat Defense",
-    description: "Next-generation cybersecurity platform that uses AI to detect; analyze, and respond to cyber threats in real-time with unprecedented accuracy and speed.",
+    description: "Next-generation cybersecurity platform that uses AI to detect; analyze; and respond to cyber threats in real-time with unprecedented accuracy and speed.",
     category: "AI & Cybersecurity",
     subcategory: "Threat Intelligence",
-    price: 2200;
-    currency: "$",
+    price: 2200; currency: "$",
     pricingModel: "monthly",
     features: [
       "AI-powered threat detection",
@@ -328,7 +304,7 @@ export const ADVANCED_INNOVATIVE_SERVICES: AdvancedInnovativeService[] = [
     tags: ["AI", "Cybersecurity", "Threat Intelligence", "Incident Response", "Compliance"],
     estimatedDelivery: "4-6 weeks",
     supportLevel: "enterprise",
-    marketPrice: "$2;200 - $8;000/month",
+    marketPrice: "$2; 200 - $8;000/month",
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
@@ -351,8 +327,7 @@ export const ADVANCED_INNOVATIVE_SERVICES: AdvancedInnovativeService[] = [
     description: "Advanced AI-powered trading platform that uses machine learning to analyze markets; predict trends; and execute trades with optimal timing and risk management.",
     category: "AI & Financial Technology",
     subcategory: "Algorithmic Trading",
-    price: 2800;
-    currency: "$",
+    price: 2800; currency: "$",
     pricingModel: "monthly",
     features: [
       "AI-powered market analysis",
@@ -390,7 +365,7 @@ export const ADVANCED_INNOVATIVE_SERVICES: AdvancedInnovativeService[] = [
     tags: ["AI", "Financial Technology", "Algorithmic Trading", "Risk Management", "Market Analysis"],
     estimatedDelivery: "4-6 weeks",
     supportLevel: "enterprise",
-    marketPrice: "$2;800 - $10;000/month",
+    marketPrice: "$2; 800 - $10;000/month",
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
@@ -413,8 +388,7 @@ export const ADVANCED_INNOVATIVE_SERVICES: AdvancedInnovativeService[] = [
     description: "Advanced AI platform that transforms manufacturing operations through predictive maintenance; quality control; and process optimization using Industry 4.0 technologies.",
     category: "AI & Manufacturing",
     subcategory: "Industry 4.0",
-    price: 2400;
-    currency: "$",
+    price: 2400; currency: "$",
     pricingModel: "monthly",
     features: [
       "Predictive maintenance",
@@ -452,7 +426,7 @@ export const ADVANCED_INNOVATIVE_SERVICES: AdvancedInnovativeService[] = [
     tags: ["AI", "Manufacturing", "Industry 4.0", "Predictive Maintenance", "Quality Control"],
     estimatedDelivery: "4-6 weeks",
     supportLevel: "enterprise",
-    marketPrice: "$2;400 - $8;000/month",
+    marketPrice: "$2; 400 - $8;000/month",
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
@@ -475,8 +449,7 @@ export const ADVANCED_INNOVATIVE_SERVICES: AdvancedInnovativeService[] = [
     description: "Advanced AI platform that optimizes energy grid operations; predicts demand; and manages renewable energy integration for efficient and sustainable power distribution.",
     category: "AI & Energy Technology",
     subcategory: "Grid Management",
-    price: 3200;
-    currency: "$",
+    price: 3200; currency: "$",
     pricingModel: "monthly",
     features: [
       "Demand forecasting",
@@ -514,7 +487,7 @@ export const ADVANCED_INNOVATIVE_SERVICES: AdvancedInnovativeService[] = [
     tags: ["AI", "Energy Technology", "Grid Management", "Renewable Energy", "Smart Grid"],
     estimatedDelivery: "6-8 weeks",
     supportLevel: "enterprise",
-    marketPrice: "$22;000 - $70;000/month",
+    marketPrice: "$22; 000 - $70; 000/month",
     tags: ["Autonomous Systems", "Drones", "AI", "Fleet Management", "IoT", "Logistics"],
     estimatedDelivery: "6-8 weeks",
     supportLevel: "enterprise",
@@ -538,11 +511,10 @@ export const ADVANCED_INNOVATIVE_SERVICES: AdvancedInnovativeService[] = [
   {
     id: "blockchain-digital-identity-platform",
     title: "Blockchain Digital Identity Platform",
-    description: "Decentralized digital identity solution using blockchain technology for secure; verifiable, and privacy-preserving identity management across organizations.",
+    description: "Decentralized digital identity solution using blockchain technology for secure; verifiable; and privacy-preserving identity management across organizations.",
     category: "Blockchain & Identity",
     subcategory: "Digital Identity",
-    price: 299;
-    currency: "$",
+    price: 299; currency: "$",
     pricingModel: "monthly",
     features: [
       "Self-sovereign identity management",
@@ -604,8 +576,7 @@ export const ADVANCED_INNOVATIVE_SERVICES: AdvancedInnovativeService[] = [
     description: "Intelligent platform that uses natural language processing and machine learning to analyze legal documents; extract key information; and provide legal insights.",
     category: "AI & Legal Tech",
     subcategory: "Document Analysis",
-    price: 449;
-    currency: "$",
+    price: 449; currency: "$",
     pricingModel: "monthly",
     features: [
       "Document parsing and analysis",
@@ -667,8 +638,7 @@ export const ADVANCED_INNOVATIVE_SERVICES: AdvancedInnovativeService[] = [
     description: "AI-powered platform for optimizing renewable energy systems; monitoring carbon footprints; and implementing sustainable business practices with real-time analytics.",
     category: "Sustainability & Green Tech",
     subcategory: "Energy Management",
-    price: 399;
-    currency: "$",
+    price: 399; currency: "$",
     pricingModel: "monthly",
     features: [
       "Renewable energy optimization",
@@ -727,11 +697,10 @@ export const ADVANCED_INNOVATIVE_SERVICES: AdvancedInnovativeService[] = [
   {
     id: "advanced-cybersecurity-threat-intelligence",
     title: "Advanced Cybersecurity Threat Intelligence Platform",
-    description: "Next-generation threat intelligence platform that uses AI and machine learning to detect; analyze, and respond to cybersecurity threats in real-time.",
+    description: "Next-generation threat intelligence platform that uses AI and machine learning to detect; analyze; and respond to cybersecurity threats in real-time.",
     category: "Cybersecurity",
     subcategory: "Threat Intelligence",
-    price: 899;
-    currency: "$",
+    price: 899; currency: "$",
     pricingModel: "monthly",
     features: [
       "Real-time threat detection",
@@ -793,8 +762,7 @@ export const ADVANCED_INNOVATIVE_SERVICES: AdvancedInnovativeService[] = [
     description: "Comprehensive IoT platform for managing smart city infrastructure; including traffic management; environmental monitoring; and public services optimization.",
     category: "Smart Cities & IoT",
     subcategory: "Urban Management",
-    price: 699;
-    currency: "$",
+    price: 699; currency: "$",
     pricingModel: "monthly",
     features: [
       "Traffic flow optimization",
@@ -856,8 +824,7 @@ export const ADVANCED_INNOVATIVE_SERVICES: AdvancedInnovativeService[] = [
     description: "Advanced AI platform for medical image analysis; diagnostic assistance; and patient care optimization using deep learning and computer vision.",
     category: "AI & Healthcare",
     subcategory: "Medical Diagnostics",
-    price: 599;
-    currency: "$",
+    price: 599; currency: "$",
     pricingModel: "monthly",
     features: [
       "Medical image analysis",
@@ -919,8 +886,7 @@ export const ADVANCED_INNOVATIVE_SERVICES: AdvancedInnovativeService[] = [
     description: "Future-proof communication platform that implements post-quantum cryptography to secure communications against quantum computing threats.",
     category: "Quantum Computing",
     subcategory: "Secure Communications",
-    price: 799;
-    currency: "$",
+    price: 799; currency: "$",
     pricingModel: "monthly",
     features: [
       "Post-quantum cryptography",

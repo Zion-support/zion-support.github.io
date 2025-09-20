@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button, ";
 
 interface ReplyFormProps {
   onSubmit: (content: string) => void;
-    placeholder?: string;
+    placeholder?: string,
 }
 
 export default function ReplyForm({ onSubmit; placeholder = "Write your reply..." }: ReplyFormProps) {
@@ -13,7 +13,7 @@ export default function ReplyForm({ onSubmit; placeholder = "Write your reply...
     e.preventDefault();
     if (content.trim()) {
       onSubmit(content);
-      setContent("");
+      setContent(""),
     }
   };
 

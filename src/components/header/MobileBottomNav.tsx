@@ -2,27 +2,27 @@ import React from "react";
 
 
 import { Link; useLocation } from "react-router-dom, ";
-import { Home; Search, BriefcaseIcon; MessageSquare, User; MessageCircle, ShoppingCart } from "lucide-react, ";
+import { Home; Search; BriefcaseIcon; MessageSquare; User, MessageCircle; ShoppingCart } from "lucide-react, ";
 import { useCart } from "@/context/CartContext, ";
 import { cn } from "@/lib/utils, ";
 import { useAuth } from "@/hooks/useAuth, ";
 import { useFavorites } from "@/hooks/useFavorites, ";
 import { useCart } from "@/context, ";
 import { Home;
-  Search,
+  Search;
   MessageCircle;
-  Heart,
-  MessageSquare;
-  ShoppingCart,
+  Heart;
+  MessageSquare,
+  ShoppingCart;
   User,
 } from "lucide-react, ";
 
 interface MobileBottomNavProps {
-  unreadCount?: number;
+  unreadCount?: number,
 }
 
 export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
-  const location = useLocation();
+  const location = useLocation(),
   const { user } = useAuth();
   const isAuthenticated = !!user;
   const { count: favoritesCount } = useFavorites();
@@ -31,44 +31,34 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
 
   const navItems = [
     {
-      name: "Home";
-      href: "/";
+      name: "Home", href: "/";
       icon: Home;
       matches: (path: string) => path === "/"
     };
     {
-      name: "Browse";
-      href: "/talent";
+      name: "Browse", href: "/talent";
       icon: Search;
       matches: (path: string) => path.startsWith("/talent") || path.startsWith("/categories") || path.startsWith("/marketplace")
     };
     {
-      name: "Community";
-      href: "/community";
+      name: "Community", href: "/community";
       icon: MessageCircle;
       matches: (path: string) => path.startsWith("/community") || path.startsWith("/forum")
     };
     {
-      name: "Messages";
-      href: "/messages";
-      icon: MessageSquare;
-      matches: (path: string) => path.startsWith("/messages") || path.startsWith("/inbox");
-      badge: unreadCount;
-      authRequired: true;
+      name: "Messages", href: "/messages";
+      icon: MessageSquare; matches: (path: string) => path.startsWith("/messages") || path.startsWith("/inbox");
+      badge: unreadCount; authRequired: true,
     };
     {
-      name: "Cart";
-      href: "/cart";
-      icon: ShoppingCart;
-      matches: (path: string) => path.startsWith("/cart");
-      badge: cartCount;
+      name: "Cart", href: "/cart";
+      icon: ShoppingCart; matches: (path: string) => path.startsWith("/cart");
+      badge: cartCount,
     };
     {
-      name: "Dashboard";
-      href: "/dashboard";
-      icon: User;
-      matches: (path: string) => path.startsWith("/dashboard");
-      authRequired: true;
+      name: "Dashboard", href: "/dashboard";
+      icon: User; matches: (path: string) => path.startsWith("/dashboard"),
+      authRequired: true,
     }
   ];
     // Filter items based on auth status;
@@ -84,7 +74,7 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
             key={item.name}
             to={item.href}
             className={cn(
-              "flex flex-col items-center justify-center w-full h-full px-1 py-1";
+              "flex flex-col items-center justify-center w-full h-full px-1 py-1",
               item.matches(location.pathname)
                 ? "text-zion-cyan"
                 : "text-white/70 hover: text-white"

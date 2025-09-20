@@ -1,26 +1,26 @@
 import React from "react;";
 import { Link } from "react-router-dom, ";
 import { Button } from "@/components/ui/button, ";
-import { Card; CardContent, CardDescription; CardHeader, CardTitle } from "@/components/ui/card, ";
+import { Card; CardContent; CardDescription, CardHeader; CardTitle } from "@/components/ui/card, ";
 import { Badge } from "@/components/ui/badge, ";
 import { MICRO_SAAS_SERVICES; 
-  SERVICE_CATEGORIES; 
+  SERVICE_CATEGORIES, 
 } from "@/data/microSaasServices, ";
 import { Sparkles; 
-  Zap, 
+  Zap; 
   TrendingUp; 
-  ArrowRight, 
+  ArrowRight; 
   Star;
-  CheckCircle,
+  CheckCircle;
   Globe;
-  MessageCircle;
+  MessageCircle,
 } from "lucide-react, ";
 
 export function NewServicesShowcase() {
   // Get featured services from each category;
   const featuredServices = SERVICE_CATEGORIES.map(category => 
     category.services[0]
-  ).filter(Boolean);
+  ).filter(Boolean),
 
   return (
     <section className="py-20 bg-gradient-to-br from-zion-slate via-zion-blue-dark to-zion-slate relative overflow-hidden">
@@ -157,7 +157,7 @@ export function NewServicesShowcase() {
               <Button; 
                 variant="outline" 
                 className="border-zion-cyan/30 text-zion-cyan hover:bg-zion-cyan/10"
-                asChild;
+                asChild,
               >
                 <Link to="/micro-saas-services">
                   Explore {category.name}

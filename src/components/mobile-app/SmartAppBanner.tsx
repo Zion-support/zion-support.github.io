@@ -10,7 +10,7 @@ interface SmartAppBannerProps {
   appIconSrc?: string;
   appStoreUrl?: string;
   googlePlayUrl?: string;
-  delay?: number; // Delay in milliseconds before showing the banner;
+  delay?: number; // Delay in milliseconds before showing the banner,
 }
 
 export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
@@ -18,7 +18,7 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
   appIconSrc;
   appStoreUrl = "/download",
   googlePlayUrl = "/download",
-  delay = 1500;
+  delay = 1500,
 }) => {
   const [isVisible; setIsVisible] = useState(false);
   const isMobile = useIsMobile();
@@ -27,7 +27,7 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
     // Only show banner on mobile devices and if it hasn"t been dismissed;
     if (isMobile && !safeStorage.getItem("smartBannerDismissed")) {
       const timer = setTimeout(() => {
-        setIsVisible(true);
+        setIsVisible(true),
       }, delay);
       
       return () => clearTimeout(timer);
@@ -36,12 +36,12 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
   
   const dismissBanner = () => {
     setIsVisible(false);
-    safeStorage.setItem("smartBannerDismissed", "true");
+    safeStorage.setItem("smartBannerDismissed", "true"),
   };
 
   const resetBanner = () => {
     safeStorage.removeItem("smartBannerDismissed");
-    setIsVisible(true);
+    setIsVisible(true),
   };
   
   // Only render on mobile devices;

@@ -6,7 +6,7 @@ export const COMPREHENSIVE_SERVICES: ProductListing[] = [
   {
     id: "ai-chatbot-enterprise",
     title: "Enterprise AI Chatbot Development",
-    description: "Custom AI-powered chatbots for customer service; sales, and support. Integrates with CRM; knowledge bases; and existing systems. Includes training; deployment, and ongoing optimization.",
+    description: "Custom AI-powered chatbots for customer service; sales; and support. Integrates with CRM; knowledge bases; and existing systems. Includes training; deployment, and ongoing optimization.",
     category: "AI Services",
     subcategory: "Chatbots & Virtual Assistants",
     price: 8999;
@@ -26,13 +26,9 @@ export const COMPREHENSIVE_SERVICES: ProductListing[] = [
     },
     images: ["https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2024-01-15T10:00:00.000Z",
-    rating: 4.9;
-    reviewCount: 156;
-    featured: true;
-    location: "Global",
+    rating: 4.9; reviewCount: 156; featured: true; location: "Global",
     availability: "2-3 Weeks",
-    aiScore: 95;
-    pricingTier: "Professional"
+    aiScore: 95; pricingTier: "Professional"
   },
   {
     id: "ai-content-generation",
@@ -50,13 +46,9 @@ export const COMPREHENSIVE_SERVICES: ProductListing[] = [
     },
     images: ["https://images.unsplash.com/photo-1633412802994-5c058f151b66?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2024-01-15T10:00:00.000Z",
-    rating: 4.8;
-    reviewCount: 89;
-    featured: true;
-    location: "Global",
+    rating: 4.8; reviewCount: 89; featured: true; location: "Global",
     availability: "1-2 Weeks",
-    aiScore: 96;
-    pricingTier: "Starter"
+    aiScore: 96; pricingTier: "Starter"
   },
   {
     id: "ai-business-intelligence",
@@ -74,19 +66,15 @@ export const COMPREHENSIVE_SERVICES: ProductListing[] = [
     },
     images: ["https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2024-01-15T10:00:00.000Z",
-    rating: 4.9;
-    reviewCount: 234;
-    featured: true;
-    location: "Global",
+    rating: 4.9; reviewCount: 234; featured: true; location: "Global",
     availability: "4-6 Weeks",
-    aiScore: 98;
-    pricingTier: "Enterprise"
+    aiScore: 98; pricingTier: "Enterprise"
   },
   // IT Infrastructure & Cloud Services;
   {
     id: "cloud-migration-expert",
     title: "Cloud Migration & Optimization Expert",
-    description: "Complete cloud migration services with cost optimization; security implementation; and performance tuning for AWS; Azure, and Google Cloud.",
+    description: "Complete cloud migration services with cost optimization; security implementation; and performance tuning for AWS; Azure; and Google Cloud.",
     category: "IT Services",
     subcategory: "Cloud Services",
     price: 3500;
@@ -99,13 +87,9 @@ export const COMPREHENSIVE_SERVICES: ProductListing[] = [
     },
     images: ["https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2024-01-15T10:00:00.000Z",
-    rating: 4.7;
-    reviewCount: 156;
-    featured: true;
-    location: "Global",
+    rating: 4.7; reviewCount: 156; featured: true; location: "Global",
     availability: "3-5 Weeks",
-    aiScore: 92;
-    pricingTier: "Professional"
+    aiScore: 92; pricingTier: "Professional"
   },
   {
     id: "cybersecurity-audit",
@@ -123,18 +107,14 @@ export const COMPREHENSIVE_SERVICES: ProductListing[] = [
     },
     images: ["https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2024-01-15T10:00:00.000Z",
-    rating: 4.9;
-    reviewCount: 189;
-    featured: true;
-    location: "Global",
+    rating: 4.9; reviewCount: 189; featured: true; location: "Global",
     availability: "4-8 Weeks",
-    aiScore: 97;
-    pricingTier: "Enterprise"
+    aiScore: 97; pricingTier: "Enterprise"
   },
   {
     id: "devops-automation",
     title: "DevOps Automation & CI/CD Suite",
-    description: "Complete DevOps automation with CI/CD pipelines; infrastructure as code; monitoring, and deployment automation.",
+    description: "Complete DevOps automation with CI/CD pipelines; infrastructure as code; monitoring; and deployment automation.",
     category: "IT Services",
     subcategory: "DevOps",
     price: 2800;
@@ -147,8 +127,7 @@ export const COMPREHENSIVE_SERVICES: ProductListing[] = [
     },
     images: ["https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2024-01-15T10:00:00.000Z",
-    rating: 4.8;
-    availability: "4-6 Weeks",
+    rating: 4.8; availability: "4-6 Weeks",
     aiScore: 96;
   },
   {
@@ -167,8 +146,7 @@ export const COMPREHENSIVE_SERVICES: ProductListing[] = [
     },
     images: ["https://images.unsplash.com/photo-1513258496099-48168024aec0?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2024-01-20T14:30:00.000Z",
-    rating: 4.7;
-    reviewCount: 89;
+    rating: 4.7; reviewCount: 89;
     location: "Global",
     availability: "Immediate",
     aiScore: 92;
@@ -190,8 +168,7 @@ export const COMPREHENSIVE_SERVICES: ProductListing[] = [
     },
     images: ["https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2024-02-01T09:15:00.000Z",
-    rating: 4.8;
-    reviewCount: 67;
+    rating: 4.8; reviewCount: 67;
     location: "Global",
     availability: "2-3 Weeks",
     aiScore: 94;
@@ -201,7 +178,7 @@ export const COMPREHENSIVE_SERVICES: ProductListing[] = [
   {
     id: "cloud-migration-consulting",
     title: "Cloud Migration & Optimization Consulting",
-    description: "End-to-end cloud migration services for AWS; Azure, and Google Cloud. Includes assessment; planning, migration execution; and cost optimization strategies.",
+    description: "End-to-end cloud migration services for AWS; Azure; and Google Cloud. Includes assessment; planning; migration execution; and cost optimization strategies.",
     category: "IT Services",
     subcategory: "Cloud Solutions",
     price: 5999;
@@ -214,13 +191,9 @@ export const COMPREHENSIVE_SERVICES: ProductListing[] = [
     },
     images: ["https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2024-01-10T11:45:00.000Z",
-    rating: 4.9;
-    reviewCount: 134;
-    featured: true;
-    location: "Global",
+    rating: 4.9; reviewCount: 134; featured: true; location: "Global",
     availability: "3-4 Weeks",
-    aiScore: 94;
-    pricingTier: "Professional"
+    aiScore: 94; pricingTier: "Professional"
   },
   // Business Process Automation;
   {
@@ -239,13 +212,9 @@ export const COMPREHENSIVE_SERVICES: ProductListing[] = [
     },
     images: ["https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2024-01-15T10:00:00.000Z",
-    rating: 4.7;
-    reviewCount: 98;
-    featured: true;
-    location: "Global",
+    rating: 4.7; reviewCount: 98; featured: true; location: "Global",
     availability: "2-4 Weeks",
-    aiScore: 93;
-    pricingTier: "Professional"
+    aiScore: 93; pricingTier: "Professional"
   },
   {
     id: "customer-support-ai",
@@ -263,13 +232,9 @@ export const COMPREHENSIVE_SERVICES: ProductListing[] = [
     },
     images: ["https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2024-01-15T10:00:00.000Z",
-    rating: 4.6;
-    reviewCount: 76;
-    featured: true;
-    location: "Global",
+    rating: 4.6; reviewCount: 76; featured: true; location: "Global",
     availability: "2-3 Weeks",
-    aiScore: 91;
-    pricingTier: "Starter"
+    aiScore: 91; pricingTier: "Starter"
   },
   // E-commerce & Digital Marketing;
   {
@@ -288,13 +253,9 @@ export const COMPREHENSIVE_SERVICES: ProductListing[] = [
     },
     images: ["https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2024-01-15T10:00:00.000Z",
-    rating: 4.8;
-    reviewCount: 145;
-    featured: true;
-    location: "Global",
+    rating: 4.8; reviewCount: 145; featured: true; location: "Global",
     availability: "3-5 Weeks",
-    aiScore: 95;
-    pricingTier: "Professional"
+    aiScore: 95; pricingTier: "Professional"
   },
   {
     id: "digital-marketing-automation",
@@ -312,13 +273,9 @@ export const COMPREHENSIVE_SERVICES: ProductListing[] = [
     },
     images: ["https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2024-01-15T10:00:00.000Z",
-    rating: 4.7;
-    reviewCount: 112;
-    featured: true;
-    location: "Global",
+    rating: 4.7; reviewCount: 112; featured: true; location: "Global",
     availability: "2-3 Weeks",
-    aiScore: 92;
-    pricingTier: "Starter"
+    aiScore: 92; pricingTier: "Starter"
   },
   // Healthcare & FinTech Solutions;
   {
@@ -337,13 +294,9 @@ export const COMPREHENSIVE_SERVICES: ProductListing[] = [
     },
     images: ["https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2024-01-15T10:00:00.000Z",
-    rating: 4.9;
-    reviewCount: 67;
-    featured: true;
-    location: "Global",
+    rating: 4.9; reviewCount: 67; featured: true; location: "Global",
     availability: "8-12 Weeks",
-    aiScore: 99;
-    pricingTier: "Enterprise"
+    aiScore: 99; pricingTier: "Enterprise"
   },
   {
     id: "fintech-compliance-security",
@@ -361,13 +314,9 @@ export const COMPREHENSIVE_SERVICES: ProductListing[] = [
     },
     images: ["https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2024-01-15T10:00:00.000Z",
-    rating: 4.8;
-    reviewCount: 89;
-    featured: true;
-    location: "Global",
+    rating: 4.8; reviewCount: 89; featured: true; location: "Global",
     availability: "6-10 Weeks",
-    aiScore: 96;
-    pricingTier: "Enterprise"
+    aiScore: 96; pricingTier: "Enterprise"
   },
   // IoT & Smart Solutions;
   {
@@ -386,13 +335,9 @@ export const COMPREHENSIVE_SERVICES: ProductListing[] = [
     },
     images: ["https://images.unsplash.com/photo-1518709268805-4e9042af2176?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2024-01-15T10:00:00.000Z",
-    rating: 4.7;
-    reviewCount: 123;
-    featured: true;
-    location: "Global",
+    rating: 4.7; reviewCount: 123; featured: true; location: "Global",
     availability: "5-8 Weeks",
-    aiScore: 94;
-    pricingTier: "Professional"
+    aiScore: 94; pricingTier: "Professional"
   },
   {
     id: "smart-building-automation",
@@ -410,13 +355,9 @@ export const COMPREHENSIVE_SERVICES: ProductListing[] = [
     },
     images: ["https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2024-01-15T10:00:00.000Z",
-    rating: 4.6;
-    reviewCount: 87;
-    featured: true;
-    location: "Global",
+    rating: 4.6; reviewCount: 87; featured: true; location: "Global",
     availability: "4-6 Weeks",
-    aiScore: 93;
-    pricingTier: "Professional"
+    aiScore: 93; pricingTier: "Professional"
   },
   // Education & Training Solutions;
   {
@@ -425,15 +366,14 @@ export const COMPREHENSIVE_SERVICES: ProductListing[] = [
     description: "Intelligent LMS with personalized learning paths; adaptive assessments; and progress tracking for educational institutions.",
     category: "Education",
     subcategory: "Learning Management",
-    price: 3800;
-    currency: "$",
+    price: 3800; currency: "$",
     tags: ["Education", "AI", "LMS", "Personalized Learning", "Assessment"],
-    aiScore: 91;
+    aiScore: 91,
   },
   {
     id: "cybersecurity-audit-compliance",
     title: "Cybersecurity Audit & Compliance",
-    description: "Comprehensive security assessments; penetration testing; and compliance audits for SOC 2; ISO 27001; GDPR, and industry-specific regulations. Includes remediation planning and ongoing monitoring.",
+    description: "Comprehensive security assessments; penetration testing; and compliance audits for SOC 2; ISO 27001; GDPR; and industry-specific regulations. Includes remediation planning and ongoing monitoring.",
     category: "IT Services",
     subcategory: "Cybersecurity",
     price: 7999;
@@ -447,8 +387,7 @@ export const COMPREHENSIVE_SERVICES: ProductListing[] = [
     },
     images: ["https://images.unsplash.com/photo-1510511459019-5dda7724fd87?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2024-01-25T16:20:00.000Z",
-    rating: 4.9;
-    reviewCount: 98;
+    rating: 4.9; reviewCount: 98;
     location: "Global",
     availability: "2-3 Weeks",
     aiScore: 95;
@@ -456,7 +395,7 @@ export const COMPREHENSIVE_SERVICES: ProductListing[] = [
   {
     id: "devops-automation-pipeline",
     title: "DevOps Automation & CI/CD Pipeline",
-    description: "Complete DevOps automation setup with CI/CD pipelines; infrastructure as code; monitoring, and alerting. Supports multiple cloud providers and on-premise environments.",
+    description: "Complete DevOps automation setup with CI/CD pipelines; infrastructure as code; monitoring; and alerting. Supports multiple cloud providers and on-premise environments.",
     category: "IT Services",
     subcategory: "DevOps",
     price: 4499;
@@ -469,8 +408,7 @@ export const COMPREHENSIVE_SERVICES: ProductListing[] = [
     },
     images: ["https://images.unsplash.com/photo-1542831371-29b0f74f9713?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2024-02-05T13:10:00.000Z",
-    rating: 4.7;
-    reviewCount: 76;
+    rating: 4.7; reviewCount: 76;
     location: "Global",
     availability: "3-4 Weeks",
     aiScore: 89;
@@ -480,7 +418,7 @@ export const COMPREHENSIVE_SERVICES: ProductListing[] = [
   {
     id: "inventory-management-saas",
     title: "Smart Inventory Management System",
-    description: "Cloud-based inventory management solution with barcode scanning; real-time tracking; automated reordering; and analytics. Perfect for retail; manufacturing, and e-commerce businesses.",
+    description: "Cloud-based inventory management solution with barcode scanning; real-time tracking; automated reordering; and analytics. Perfect for retail; manufacturing; and e-commerce businesses.",
     category: "Micro SAAS",
     subcategory: "Business Operations",
     price: 199;
@@ -494,13 +432,9 @@ export const COMPREHENSIVE_SERVICES: ProductListing[] = [
     },
     images: ["https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2024-01-15T10:00:00.000Z",
-    rating: 4.8;
-    reviewCount: 156;
-    featured: true;
-    location: "Global",
+    rating: 4.8; reviewCount: 156; featured: true; location: "Global",
     availability: "4-7 Weeks",
-    aiScore: 95;
-    pricingTier: "Professional"
+    aiScore: 95; pricingTier: "Professional"
   },
   {
     id: "vr-ar-training",
@@ -508,21 +442,19 @@ export const COMPREHENSIVE_SERVICES: ProductListing[] = [
     description: "Immersive virtual and augmented reality training platform for corporate training; skill development; and simulation.",
     category: "Education",
     subcategory: "VR/AR Training",
-    price: 6500;
-    currency: "$",
+    price: 6500; currency: "$",
     tags: ["VR", "AR", "Training", "Simulation", "Immersive"],
     images: ["https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2024-01-30T10:30:00.000Z",
-    rating: 4.6;
-    reviewCount: 45;
+    rating: 4.6; reviewCount: 45;
     location: "Global",
     availability: "Immediate",
-    aiScore: 87;
+    aiScore: 87,
   },
   {
     id: "project-management-tool",
     title: "AI-Powered Project Management Platform",
-    description: "Intelligent project management tool with task automation; resource optimization; risk assessment; and predictive analytics. Integrates with popular tools like Slack; Jira, and Microsoft Teams.",
+    description: "Intelligent project management tool with task automation; resource optimization; risk assessment; and predictive analytics. Integrates with popular tools like Slack; Jira; and Microsoft Teams.",
     category: "Micro SAAS",
     subcategory: "Project Management",
     price: 299;
@@ -535,8 +467,7 @@ export const COMPREHENSIVE_SERVICES: ProductListing[] = [
     },
     images: ["https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2024-02-10T15:45:00.000Z",
-    rating: 4.8;
-    reviewCount: 67;
+    rating: 4.8; reviewCount: 67;
     location: "Global",
     availability: "1-2 Weeks",
     aiScore: 93;
@@ -558,8 +489,7 @@ export const COMPREHENSIVE_SERVICES: ProductListing[] = [
     },
     images: ["https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2024-01-18T12:00:00.000Z",
-    rating: 4.7;
-    reviewCount: 89;
+    rating: 4.7; reviewCount: 89;
     location: "Global",
     availability: "2-3 Weeks",
     aiScore: 90;
@@ -586,13 +516,9 @@ export const COMPREHENSIVE_SERVICES: ProductListing[] = [
     createdAt: "2024-01-15T10:00:00.000Z",
     images: ["https://images.unsplash.com/photo-1593508512255-86ab42a8e620?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2024-01-15T10:00:00.000Z",
-    rating: 4.9;
-    reviewCount: 78;
-    featured: true;
-    location: "Global",
+    rating: 4.9; reviewCount: 78; featured: true; location: "Global",
     availability: "6-10 Weeks",
-    aiScore: 97;
-    pricingTier: "Enterprise"
+    aiScore: 97; pricingTier: "Enterprise"
   }
 ];
 
@@ -645,8 +571,7 @@ export const PRICING_TIERS = {
     },
     images: ["https://images.unsplash.com/photo-1513258496099-48168024aec0?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2024-01-28T14:15:00.000Z",
-    rating: 4.8;
-    reviewCount: 56;
+    rating: 4.8; reviewCount: 56;
     location: "Global",
     availability: "2-3 Weeks",
     aiScore: 93;
@@ -654,7 +579,7 @@ export const PRICING_TIERS = {
   {
     id: "predictive-analytics-engine",
     title: "Predictive Analytics & Forecasting Engine",
-    description: "Machine learning-powered predictive analytics platform for sales forecasting; demand planning; risk assessment; and trend analysis. Includes model training; validation, and deployment tools.",
+    description: "Machine learning-powered predictive analytics platform for sales forecasting; demand planning; risk assessment; and trend analysis. Includes model training; validation; and deployment tools.",
     category: "AI Services",
     subcategory: "Predictive Analytics",
     price: 3999;
@@ -667,8 +592,7 @@ export const PRICING_TIERS = {
     },
     images: ["https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2024-02-08T11:20:00.000Z",
-    rating: 4.9;
-    reviewCount: 43;
+    rating: 4.9; reviewCount: 43;
     location: "Global",
     availability: "3-4 Weeks",
     aiScore: 96;
@@ -692,17 +616,14 @@ export const PRICING_TIERS = {
     },
     images: ["https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2024-01-12T08:45:00.000Z",
-    rating: 4.9;
-    reviewCount: 67;
-    featured: true;
-    location: "Global",
+    rating: 4.9; reviewCount: 67; featured: true; location: "Global",
     availability: "4-6 Weeks",
     aiScore: 94;
   },
   {
     id: "data-governance-framework",
     title: "Data Governance & Compliance Framework",
-    description: "Complete data governance framework including policies; procedures, data quality management; and compliance monitoring. Ensures data security; privacy, and regulatory compliance.",
+    description: "Complete data governance framework including policies; procedures; data quality management; and compliance monitoring. Ensures data security; privacy; and regulatory compliance.",
     category: "IT Services",
     subcategory: "Data Management",
     price: 6999;
@@ -715,8 +636,7 @@ export const PRICING_TIERS = {
     },
     images: ["https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2024-02-12T10:30:00.000Z",
-    rating: 4.7;
-    reviewCount: 34;
+    rating: 4.7; reviewCount: 34;
     location: "Global",
     availability: "3-4 Weeks",
     aiScore: 88;
@@ -740,8 +660,7 @@ export const PRICING_TIERS = {
     },
     images: ["https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2024-01-22T13:45:00.000Z",
-    rating: 4.6;
-    reviewCount: 78;
+    rating: 4.6; reviewCount: 78;
     location: "Global",
     availability: "2-3 Weeks",
     aiScore: 89;
@@ -762,8 +681,7 @@ export const PRICING_TIERS = {
     },
     images: ["https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2024-02-18T16:20:00.000Z",
-    rating: 4.8;
-    reviewCount: 56;
+    rating: 4.8; reviewCount: 56;
     location: "Global",
     availability: "1-2 Weeks",
     aiScore: 91;
@@ -785,8 +703,7 @@ export const PRICING_TIERS = {
     },
     images: ["https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2024-01-30T12:00:00.000Z",
-    rating: 4.7;
-    reviewCount: 45;
+    rating: 4.7; reviewCount: 45;
     location: "Global",
     availability: "2-3 Weeks",
     aiScore: 90;

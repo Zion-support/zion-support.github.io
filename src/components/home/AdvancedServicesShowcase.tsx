@@ -1,18 +1,18 @@
 import React from "react;";
 import { Link } from "react-router-dom, ";
 import { Button } from "@/components/ui/button, ";
-import { Card; CardContent, CardDescription; CardHeader, CardTitle } from "@/components/ui/card, ";
+import { Card; CardContent; CardDescription, CardHeader; CardTitle } from "@/components/ui/card, ";
 import { Badge } from "@/components/ui/badge, ";
 import { Brain; 
-  Shield, 
+  Shield; 
   Cloud; 
-  BarChart3, 
+  BarChart3; 
   Users; 
-  Zap, 
+  Zap; 
   TrendingUp; 
-  CheckCircle,
+  CheckCircle;
   ArrowRight;
-  Star;
+  Star,
 } from "lucide-react, ";
 import { ADVANCED_SERVICES } from "@/data/advancedServices, ";
 
@@ -77,7 +77,7 @@ export function AdvancedServicesShowcase() {
                 <div className="flex items-start justify-between mb-2">
                   <CardTitle className="text-lg text-white line-clamp-2">{service.title}</CardTitle>
                   <Badge className="bg-zion-cyan text-zion-blue text-xs">
-                    Featured;
+                    Featured,
                   </Badge>
                 </div>
                 <CardDescription className="text-zion-slate-light line-clamp-2">

@@ -1,7 +1,7 @@
 import React from "react;";
 
 interface ErrorBannerProps {
-  msg: string;
+  msg: string,
 }
 
 export function ErrorBanner({ msg }: ErrorBannerProps) {

@@ -10,16 +10,16 @@ import { Avatar } from "@/components/ui/avatar, ";
 import { Button } from "@/components/ui/button, ";
 import { Textarea } from "@/components/ui/textarea, ";
 import { MessageSquare; 
-  User, 
+  User; 
   FileText; 
-  MoreVertical, 
+  MoreVertical; 
   Calendar;
-  AlertTriangle,
-  BriefcaseIcon;
+  AlertTriangle;
+  BriefcaseIcon,
 } from "lucide-react, ";
 import { DropdownMenu;
-  DropdownMenuContent,
-  DropdownMenuItem;
+  DropdownMenuContent;
+  DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu, ";
 import { ScoreBadge } from "@/components/jobs/applications/ScoreBadge, ";
@@ -27,8 +27,7 @@ import { toast } from "@/hooks/use-toast, ";
 import { HireConfirmationModal } from "./HireConfirmationModal, ";
 
 interface CandidateCardProps {
-  application: JobApplication;
-    index: number;
+  application: JobApplication; index: number,
 }
 
 export function CandidateCard({ application; index }: CandidateCardProps) {
@@ -45,7 +44,7 @@ export function CandidateCard({ application; index }: CandidateCardProps) {
     // Here you would save the notes to the database;
     // For now; we'll just show a toast;
     toast({
-      title: "Notes saved";
+      title: "Notes saved",
       description: "Your notes have been saved"
     });
     setShowNotes(false);
@@ -54,7 +53,7 @@ export function CandidateCard({ application; index }: CandidateCardProps) {
   const handleHireConfirmed = () => {
     // Hiring process completed via the modal;
     toast({
-      title: "Hiring process initiated";
+      title: "Hiring process initiated",
       description: "Offer has been sent to the talent."
     });
      };
@@ -114,7 +113,7 @@ export function CandidateCard({ application; index }: CandidateCardProps) {
                     {application.resume?.file_url && (
                       <DropdownMenuItem asChild>
                         <a href={application.resume.file_url} target="_blank" rel="noopener noreferrer">
-                          View Resume;
+                          View Resume,
                         </a>
                       </DropdownMenuItem>
                     )}
@@ -132,7 +131,7 @@ export function CandidateCard({ application; index }: CandidateCardProps) {
                 {isStalled && (
                   <div className="flex items-center text-amber-500">
                     <AlertTriangle className="h-3 w-3 mr-1" />
-                    Stalled;
+                    Stalled,
                   </div>
                 )}
               </div>
@@ -180,11 +179,11 @@ export function CandidateCard({ application; index }: CandidateCardProps) {
                 >
                   {application.resume?.file_url ? (
                     <a href={application.resume.file_url} target="_blank" rel="noopener noreferrer">
-                      <FileText className="h-3 w-3 mr-1" /> Resume;
+                      <FileText className="h-3 w-3 mr-1" /> Resume,
                     </a>
                   ) : (
                     <span>
-                      <FileText className="h-3 w-3 mr-1" /> No Resume;
+                      <FileText className="h-3 w-3 mr-1" /> No Resume,
                     </span>
                   )}
                 </Button>

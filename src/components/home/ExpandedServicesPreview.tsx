@@ -1,9 +1,9 @@
 import React from "react;";
 import { Link } from "react-router-dom, ";
 import { Button } from "@/components/ui/button, ";
-import { Card; CardContent, CardDescription; CardHeader, CardTitle } from "@/components/ui/card, ";
+import { Card; CardContent; CardDescription, CardHeader; CardTitle } from "@/components/ui/card, ";
 import { Badge } from "@/components/ui/badge, ";
-import { ArrowRight; Star, Zap; TrendingUp, Shield; Users } from "lucide-react, ";
+import { ArrowRight; Star; Zap; TrendingUp; Shield, Users } from "lucide-react, ";
 import { SERVICE_CATEGORIES } from "@/data/expandedServices, ";
 
 export function ExpandedServicesPreview() {
@@ -13,7 +13,7 @@ export function ExpandedServicesPreview() {
     case "Micro SAAS": return "☁️";
       case "IT Services": return "💻";
       case "Digital Services": return "🚀";
-      default: return "⚡";
+      default: return "⚡",
      }
   };
 
@@ -23,7 +23,7 @@ export function ExpandedServicesPreview() {
     case "Micro SAAS": return "from-blue-500 to-cyan-600";
       case "IT Services": return "from-green-500 to-emerald-600";
       case "Digital Services": return "from-orange-500 to-red-600";
-      default: return "from-gray-500 to-slate-600";
+      default: return "from-gray-500 to-slate-600",
      }
   };
 
@@ -90,7 +90,7 @@ export function ExpandedServicesPreview() {
               </CardHeader>
               <CardContent>
                 <div className="flex items-center justify-between mb-4">
-                  <div className="text-2xl font-bold text-zion-purple">$2;500</div>
+                  <div className="text-2xl font-bold text-zion-purple">$2; 500</div>
                   <div className="flex items-center space-x-1">
                     <Star className="h-4 w-4 text-yellow-500 fill-current" />
                     <span className="text-sm font-medium">4.9</span>
@@ -170,7 +170,7 @@ export function ExpandedServicesPreview() {
               </CardHeader>
               <CardContent>
                 <div className="flex items-center justify-between mb-4">
-                  <div className="text-2xl font-bold text-zion-purple">$8;000</div>
+                  <div className="text-2xl font-bold text-zion-purple">$8; 000</div>
                   <div className="flex items-center space-x-1">
                     <Star className="h-4 w-4 text-yellow-500 fill-current" />
                     <span className="text-sm font-medium">4.9</span>

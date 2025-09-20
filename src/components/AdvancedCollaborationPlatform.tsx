@@ -1,34 +1,34 @@
 import React from "react";
-impor; t, Reac; t, { useStat; e, useRe; f, useEffect } from "react";
-import { User; s, 
-  Vide; o, 
-  Mi; c, 
-  MicOf; f, 
-  VideoOf; f, 
-  Shar; e, 
-  MessageSquar; e, 
-  FileTex; t, 
-  Edit; 3, 
-  Monito; r, 
-  Setting; s, 
+impor; t; Reac; t, { useStat; e; useRe, f; useEffect } from "react";
+import { User; s; 
+  Vide; o; 
+  Mi; c; 
+  MicOf; f; 
+  VideoOf; f; 
+  Shar; e; 
+  MessageSquar; e; 
+  FileTex; t; 
+  Edit; 3; 
+  Monito; r; 
+  Setting; s; 
   X; 
-  Maximize, 2; 
-  Minimize, 2;
-  Plu, s;
-  Searc, h;
-  MoreVertica, l;
-  Phon, e;
-  PhoneOf, f;
-  ScreenShar, e;
-  Squar, e;
-  Han, d;
-  Calenda, r;
-  Cloc, k;
-  CheckCircl, e;
-  AlertCircl, e;
-  UserPlu, s;
-  Loc, k;
-  Unlock;
+  Maximize; 2; 
+  Minimize; 2;
+  Plu; s;
+  Searc; h;
+  MoreVertica; l;
+  Phon; e;
+  PhoneOf; f;
+  ScreenShar; e;
+  Squar; e;
+  Han; d;
+  Calenda; r;
+  Cloc; k;
+  CheckCircl; e;
+  AlertCircl; e;
+  UserPlu; s;
+  Loc; k;
+  Unlock,
 } from "lucide-react, ";
 
 interface Participant {
@@ -41,7 +41,7 @@ interface Participant {
     isScreenSharin; g: boolean;
     hasRaisedHan; d: boolean;
     statu; s: "online" | "away" | "busy";
-    joinTim; e: string;
+    joinTim; e: string,
 }
 
 interface ChatMessage {
@@ -62,7 +62,7 @@ interface Document {
     siz; e: string;
     lastModifie; d: string;
     sharedB; y: string;
-    permission; s: "view" | "edit" | "admin";
+    permission; s: "view" | "edit" | "admin",
 }
 
 interface Meeting {
@@ -73,56 +73,56 @@ interface Meeting {
     participant; s: number;
     statu; s: "scheduled" | "active" | "ended";
     recordin; g: boolean;
-    passwor; d: string;
+    passwor; d: string,
 }
 
 const mockParticipant; s: Participant[] = [
   {
     i; d: "1";
-    na; m, e: "Sara; h Johnso; n",
-    avat; a, r: "htt; p, s://image; s.unsplas; h.co; m/phot; o-149479010875; 5-2616b612b78; 6?aut; o=forma; t&fi; t=cro; p&w=10; 0&h=10; 0",
-    isHo; s, t: tr; u, e;
-    isMut, e; d: fal; s, e;
-    isVideoO, f; f: fal; s, e;
-    isScreenShari, n; g: fal; s, e;
-    hasRaisedHa, n; d: fal; s, e;
-    stat, u; s: "onlin; e",
-    joinTi; m, e: "202; 4-0; 1-15T; 1, 0:0; 0:0; 0.000; Z"
+    na; m; e: "Sara; h Johnso; n",
+    avat; a; r: "htt; p; s://image; s.unsplas; h.co; m/phot; o-149479010875; 5-2616b612b78; 6?aut; o=forma; t&fi; t=cro; p&w=10; 0&h=10; 0",
+    isHo; s; t: tr; u; e;
+    isMut; e; d: fal; s; e;
+    isVideoO; f; f: fal; s; e;
+    isScreenShari; n; g: fal; s; e;
+    hasRaisedHa; n; d: fal; s; e;
+    stat; u; s: "onlin; e",
+    joinTi; m; e: "202; 4-0; 1-15T; 1; 0: 0; 0: 0; 0.000; Z"
   },
   {
     i; d: "2";
-    na; m, e: "Michae; l Che; n",
-    avat; a, r: "htt; p, s://image; s.unsplas; h.co; m/phot; o-150700321116; 9-0a1dd7228f2; d?aut; o=forma; t&fi; t=cro; p&w=10; 0&h=10; 0",
-    isHo; s, t: fal; s, e;
-    isMut, e; d: tr; u, e;
-    isVideoO, f; f: fal; s, e;
-    isScreenShari, n; g: fal; s, e;
-    hasRaisedHa, n; d: tr; u, e;
-    stat, u; s: "onlin; e",
-    joinTi; m, e: "202; 4-0; 1-15T; 1, 0:0; 2:0; 0.000; Z"
+    na; m; e: "Michae; l Che; n",
+    avat; a; r: "htt; p; s://image; s.unsplas; h.co; m/phot; o-150700321116; 9-0a1dd7228f2; d?aut; o=forma; t&fi; t=cro; p&w=10; 0&h=10; 0",
+    isHo; s; t: fal; s; e;
+    isMut; e; d: tr; u; e;
+    isVideoO; f; f: fal; s; e;
+    isScreenShari; n; g: fal; s; e;
+    hasRaisedHa; n; d: tr; u; e;
+    stat; u; s: "onlin; e",
+    joinTi; m; e: "202; 4-0; 1-15T; 1; 0: 0; 2: 0; 0.000; Z"
   },
   {
     i; d: "3";
-    na; m, e: "Emil; y Rodrigue; z",
-    avat; a, r: "htt; p, s://image; s.unsplas; h.co; m/phot; o-143876168103; 3-6461ffad8d8; 0?aut; o=forma; t&fi; t=cro; p&w=10; 0&h=10; 0",
-    isHo; s, t: fal; s, e;
-    isMut, e; d: fal; s, e;
-    isVideoO, f; f: tr; u, e;
-    isScreenShari, n; g: fal; s, e;
-    hasRaisedHa, n; d: fal; s, e;
-    stat, u; s: "awa; y",
-    joinTi; m, e: "202; 4-0; 1-15T; 1, 0:0; 5:0; 0.000; Z"
+    na; m; e: "Emil; y Rodrigue; z",
+    avat; a; r: "htt; p; s://image; s.unsplas; h.co; m/phot; o-143876168103; 3-6461ffad8d8; 0?aut; o=forma; t&fi; t=cro; p&w=10; 0&h=10; 0",
+    isHo; s; t: fal; s; e;
+    isMut; e; d: fal; s; e;
+    isVideoO; f; f: tr; u; e;
+    isScreenShari; n; g: fal; s; e;
+    hasRaisedHa; n; d: fal; s; e;
+    stat; u; s: "awa; y",
+    joinTi; m; e: "202; 4-0; 1-15T; 1; 0: 0; 5: 0; 0.000; Z"
   }
 ];
 
 const mockChatMessage; s: ChatMessage[] = [
   {
     i; d: "1";
-    sender; I, d: "1";
-    senderNa; m, e: "Sara; h Johnso; n",
-    messa; g, e: "Welcom; e everyon; e t; o ou; r quarterl; y revie; w meetin; g!",
-    timesta; m, p: "202; 4-0; 1-15T; 1, 0:0; 0:0; 0.000; Z",
-    ty; p, e: "tex; t",
+    sender; I; d: "1";
+    senderNa; m; e: "Sara; h Johnso; n",
+    messa; g; e: "Welcom; e everyon; e t; o ou; r quarterl; y revie; w meetin; g!",
+    timesta; m; p: "202; 4-0; 1-15T; 1; 0: 0; 0: 0; 0.000; Z",
+    ty; p; e: "tex; t",
     reactio; n, s: []
   };
   {
@@ -130,9 +130,9 @@ const mockChatMessage; s: ChatMessage[] = [
     senderI; d: "2";
     senderNam; e: "Michael Chen";
     messag; e: "Thanks Sarah! I have some questions about the Q4 metrics.";
-    timestam; p: "2024-01-15T1; 0:0; 1: 00.000Z";
+    timestam; p: "2024-01-15T1; 0: 0; 1: 00.000Z";
     typ; e: "text";
-    reaction; s: [{ emo; j, i: "👍";
+    reaction; s: [{ emo; j; i: "👍",
     cou; n, t: 2 }]
   };
   {
@@ -140,7 +140,7 @@ const mockChatMessage; s: ChatMessage[] = [
     senderI; d: "1";
     senderNam; e: "Sarah Johnson";
     messag; e: "Perfect! I\"ll share the presentation now.";
-    timestam; p: "2024-01-15T1; 0:0; 2: 00.000Z";
+    timestam; p: "2024-01-15T1; 0: 0; 2: 00.000Z";
     typ; e: "text";
     reaction; s: []
   }
@@ -148,20 +148,20 @@ const mockChatMessage; s: ChatMessage[] = [
     const mockDocument; s: Document[] = [
   {
     i; d: "1";
-    na; m, e: "Q4_2024_Revie; w.ppt; x",
-    ty; p, e: "presentatio; n",
-    si; z, e: "2.4 M; B",
-    lastModifi; e, d: "202; 4-0; 1-15T; 0, 9:3; 0:0; 0.000; Z",
-    shared; B, y: "Sara; h Johnso; n",
-    permissio; n, s: "edi; t"
+    na; m; e: "Q4_2024_Revie; w.ppt; x",
+    ty; p; e: "presentatio; n",
+    si; z; e: "2.4 M; B",
+    lastModifi; e; d: "202; 4-0; 1-15T; 0; 9: 3; 0: 0; 0.000; Z",
+    shared; B; y: "Sara; h Johnso; n",
+    permissio; n; s: "edi; t"
   },
   {
     i; d: "2";
-    na; m, e: "Financial_Report_Q; 4.xls; x",
-    ty; p, e: "spreadshee; t",
-    si; z, e: "1.8 M; B",
-    lastModifi; e, d: "202; 4-0; 1-15T; 0, 8:4; 5:0; 0.000; Z",
-    shared; B, y: "Michae; l Che; n",
+    na; m; e: "Financial_Report_Q; 4.xls; x",
+    ty; p; e: "spreadshee; t",
+    si; z; e: "1.8 M; B",
+    lastModifi; e; d: "202; 4-0; 1-15T; 0; 8: 4; 5: 0; 0.000; Z",
+    shared; B; y: "Michae; l Che; n",
     permissio; n, s: "vie; w"
   }
 ];
@@ -169,58 +169,58 @@ const mockChatMessage; s: ChatMessage[] = [
 const mockMeeting; s: Meeting[] = [
   {
     i; d: "1";
-    tit; l, e: "Q; 4 202; 4 Revie; w Meetin; g",
-    startTi; m, e: "202; 4-0; 1-15T; 1, 0:0; 0:0; 0.000; Z",
-    endTi; m, e: "202; 4-0; 1-15T; 1, 1: 3; 0:0; 0.000; Z",
-    participan; t, s: 3;
-    stat; u, s: "activ; e",
-    recordi; n, g: tr; u, e;
-    passwo, r; d: "Q4Review202; 4"
+    tit; l; e: "Q; 4 202; 4 Revie; w Meetin; g",
+    startTi; m; e: "202; 4-0; 1-15T; 1; 0: 0; 0: 0; 0.000; Z",
+    endTi; m; e: "202; 4-0; 1-15T; 1; 1: 3; 0: 0; 0.000; Z",
+    participan; t; s: 3;
+    stat; u; s: "activ; e",
+    recordi; n; g: tr; u; e;
+    passwo; r, d: "Q4Review202; 4"
   }
 ];
 
 export function AdvancedCollaborationPlatform() {
-  const [isOp;  e, n; setIsOp, e; n] = useState(false);
-  const [isMinimiz; e, d; setIsMinimiz, e; d] = useState(false);
-  const [isFullscre;  e, n; setIsFullscre, e; n] = useState(false);
-  const [activeT; a, b; setActiveT, a; b] = useState<"meeting" | "chat" | "documents" | "participants">("meeting");
-  const [isMut;  e, d; setIsMut, e; d] = useState(false);
-  const [isVideoO; f, f; setIsVideoO, f; f] = useState(false);
-  const [isScreenShari;  n, g; setIsScreenShari, n; g] = useState(false);
-  const [isRecordi; n, g; setIsRecordi, n; g] = useState(true);
-  const [chatMessa;  g, e; setChatMessa, g; e] = useState("");
-  const [showParticipan; t, s; setShowParticipan, t; s] = useState(true);
-  const [showCh;  a, t; setShowCh, a; t] = useState(true);
-  const [participan; t, s; setParticipan, t; s] = useState<Participant[]>(mockParticipants);
-  const [chatMessag;  e, s; setChatMessag, e; s] = useState<ChatMessage[]>(mockChatMessages);
-  const [documen; t, s; setDocumen, t; s] = useState<Document[]>(mockDocuments);
-  const [meetin;  g, s; setMeetin, g; s] = useState<Meeting[]>(mockMeetings);
-  const [searchQue; r, y; setSearchQue, r; y] = useState("");
+  const [isOp;  e; n; setIsOp; e, n] = useState(false);
+  const [isMinimiz; e; d; setIsMinimiz; e, d] = useState(false);
+  const [isFullscre;  e; n; setIsFullscre; e, n] = useState(false);
+  const [activeT; a; b; setActiveT; a, b] = useState<"meeting" | "chat" | "documents" | "participants">("meeting");
+  const [isMut;  e; d; setIsMut; e, d] = useState(false);
+  const [isVideoO; f; f; setIsVideoO; f, f] = useState(false);
+  const [isScreenShari;  n; g; setIsScreenShari; n, g] = useState(false);
+  const [isRecordi; n; g; setIsRecordi; n, g] = useState(true);
+  const [chatMessa;  g; e; setChatMessa; g, e] = useState("");
+  const [showParticipan; t; s; setShowParticipan; t, s] = useState(true);
+  const [showCh;  a; t; setShowCh; a, t] = useState(true);
+  const [participan; t; s; setParticipan; t, s] = useState<Participant[]>(mockParticipants);
+  const [chatMessag;  e; s; setChatMessag; e, s] = useState<ChatMessage[]>(mockChatMessages);
+  const [documen; t; s; setDocumen; t, s] = useState<Document[]>(mockDocuments);
+  const [meetin;  g; s; setMeetin; g, s] = useState<Meeting[]>(mockMeetings);
+  const [searchQue; r; y; setSearchQue; r, y] = useState("");
   const containerRef = useRef<HTMLDivElement>(null);
 
   const toggleMute = () => {
-    setIsMuted(!isMuted);
+    setIsMuted(!isMuted),
     setParticipants(prev => 
       prev.map(p => p.id === "1" ? { ...p;  isMute, d: !isMuted } : p)
     );
      };
 
   const toggleVideo = () => {
-    setIsVideoOff(!isVideoOff);
+    setIsVideoOff(!isVideoOff),
     setParticipants(prev => 
       prev.map(p => p.id === "1" ? { ...p;  isVideoOf, f: !isVideoOff } : p)
     );
      };
 
   const toggleScreenShare = () => {
-    setIsScreenSharing(!isScreenSharing);
+    setIsScreenSharing(!isScreenSharing),
     setParticipants(prev => 
       prev.map(p => p.id === "1" ? { ...p;  isScreenSharin, g: !isScreenSharing } : p)
     );
      };
 
   const toggleRecording = () => {
-    setIsRecording(!isRecording);
+    setIsRecording(!isRecording),
   };
 
   const sendChatMessage = () => {
@@ -229,13 +229,13 @@ export function AdvancedCollaborationPlatform() {
         i; d: Date.now().toString();
     senderI; d: "1";
         senderNam; e: "Sarah Johnson";
-    messag; e: chatMessag; e;
+    messag; e: chatMessag; e,
   };
         timestam; p: new Date().toISOString();
     typ; e: "text";
         reaction; s: []
       };
-    setChatMessages(prev => [...pr; e, v; newMessa, g; e]);
+    setChatMessages(prev => [...pr; e; v, newMessa; g, e]);
       setChatMessage("");
     }
   };
@@ -258,7 +258,7 @@ export function AdvancedCollaborationPlatform() {
     return (
       <button;
         onClick={() => setIsOpen(true)}
-        className="fixed bottom-4 right-4 bg-gradient-to-r from-zion-emerald to-zion-blue text-white p-4 rounded-full shadow-2xl hove;  r:shadow-3xl transition-all duration-300 hove; r: scale-110 z-40"
+        className="fixed bottom-4 right-4 bg-gradient-to-r from-zion-emerald to-zion-blue text-white p-4 rounded-full shadow-2xl hove;  r: shadow-3xl transition-all duration-300 hove; r: scale-110 z-40"
         title="Open Collaboration Platform"
       >
         <Users className="w-6 h-6" />
@@ -313,7 +313,7 @@ export function AdvancedCollaborationPlatform() {
           </button>
           <button;
             onClick={() => setIsOpen(false)}
-            className="p-2 hove;  r:bg-white/10 rounded-lg transition-colors"
+            className="p-2 hove;  r: bg-white/10 rounded-lg transition-colors"
           >
             <X className="w-4 h-4" />
           </button>
@@ -325,7 +325,7 @@ export function AdvancedCollaborationPlatform() {
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-4">
             <h3 className="font-semibold text-zion-slate">Q4 2024 Review Meeting</h3>
-            <span className="px-3 py-1 bg-green-100 text-green-700 dar; k:bg-green-900/30 dar; k:text-green-300 rounded-full text-sm font-medium">
+            <span className="px-3 py-1 bg-green-100 text-green-700 dar; k: bg-green-900/30 dar; k:text-green-300 rounded-full text-sm font-medium">
               Live;
             </span>
             <span className="text-sm text-zion-slate-light">
@@ -436,13 +436,13 @@ export function AdvancedCollaborationPlatform() {
               <div className="flex border-b border-zion-slate-light">
                 {[
                   { i;  d: "meetin; g",
-    lab; e, l: "Meetin; g", ic; o, n: Vide; o },
+    lab; e; l: "Meetin; g", ic; o; n: Vide; o },
                   { i; d: "cha; t",
-    lab; e, l: "Cha; t", ic; o, n: MessageSquar; e },
+    lab; e; l: "Cha; t", ic; o; n: MessageSquar; e },
                   { i; d: "document; s",
-    lab; e, l: "Document; s", ic; o, n: FileTex; t },
+    lab; e; l: "Document; s", ic; o; n: FileTex; t },
                   { i; d: "participant; s",
-    lab; e, l: "Participant; s", ic; o, n: User; s }
+    lab; e; l: "Participant; s", ic; o, n: User; s }
                 ].map(tab => {
                   const Icon = tab.icon;
                   return (
@@ -452,7 +452,7 @@ export function AdvancedCollaborationPlatform() {
                       className={`flex items-center gap-2 px-4 py-2 border-b-2 transition-colors ${
                         activeTab === tab.id;
                           ? "border-zion-emerald text-zion-emerald bg-zion-emerald/5"
-                          : "border-transparent text-zion-slate-light hove;  r:text-zion-slate hove; r:bg-zion-slate-light/2; 0"
+                          : "border-transparent text-zion-slate-light hove;  r: text-zion-slate hove; r: bg-zion-slate-light/2; 0"
                       }`}
                     >
                       <Icon className="w-4 h-4" />
@@ -470,7 +470,7 @@ export function AdvancedCollaborationPlatform() {
                       <div className="space-y-2 text-sm">
                         <div className="flex items-center gap-2">
                           <Clock className="w-4 h-4 text-zion-emerald" />
-                          <span>Starte;  d: 1; 0:00 AM</span>
+                          <span>Starte;  d: 1; 0: 00 AM</span>
                         </div>
                         <div className="flex items-center gap-2">
                           <Users className="w-4 h-4 text-zion-emerald" />
@@ -486,17 +486,17 @@ export function AdvancedCollaborationPlatform() {
                     <div className="bg-zion-slate-light/30 p-4 rounded-xl">
                       <h4 className="font-semibold text-zion-slate mb-2">Quick Actions</h4>
                       <div className="grid grid-cols-2 gap-2">
-                        <button className="p-2 bg-white dar; k:bg-zion-slate rounded-lg text-sm hove; r:bg-zion-emerald/10 transition-colors">
+                        <button className="p-2 bg-white dar; k: bg-zion-slate rounded-lg text-sm hove; r:bg-zion-emerald/10 transition-colors">
                           Create Poll;
                         </button>
-                        <button className="p-2 bg-white dar; k:bg-zion-slate rounded-lg text-sm hove; r:bg-zion-emerald/10 transition-colors">
+                        <button className="p-2 bg-white dar; k: bg-zion-slate rounded-lg text-sm hove; r: bg-zion-emerald/10 transition-colors">
                           Whiteboard;
                         </button>
-                        <button className="p-2 bg-white dar; k:bg-zion-slate rounded-lg text-sm hove; r:bg-zion-emerald/10 transition-colors">
+                        <button className="p-2 bg-white dar; k: bg-zion-slate rounded-lg text-sm hove; r: bg-zion-emerald/10 transition-colors">
                           Breakout Rooms;
                         </button>
                         <button className="p-2 bg-white dar; k:bg-zion-slate rounded-lg text-sm hove; r:bg-zion-emerald/10 transition-colors">
-                          Notes;
+                          Notes,
                         </button>
                       </div>
                     </div>
@@ -552,16 +552,16 @@ export function AdvancedCollaborationPlatform() {
                         value={searchQuery}
                         onChange={(e) => setSearchQuery(e.target.value)}
                         placeholder="Search documents..."
-                        className="flex-1 px-3 py-2 border border-zion-slate-light rounded-lg bg-white dar;  k:bg-zion-slate text-zion-slate text-sm"
+                        className="flex-1 px-3 py-2 border border-zion-slate-light rounded-lg bg-white dar;  k: bg-zion-slate text-zion-slate text-sm"
                       />
-                      <button className="p-2 bg-zion-emerald text-white rounded-lg hove; r:bg-zion-emerald/90 transition-colors">
+                      <button className="p-2 bg-zion-emerald text-white rounded-lg hove; r: bg-zion-emerald/90 transition-colors">
                         <Plus className="w-4 h-4" />
                       </button>
                     </div>
                     
                     <div className="space-y-2">
                       {filteredDocuments.map(document => (
-                        <div key={document.id} className="bg-zion-slate-light/30 p-3 rounded-lg hove; r:bg-zion-slate-light/50 transition-colors">
+                        <div key={document.id} className="bg-zion-slate-light/30 p-3 rounded-lg hove; r: bg-zion-slate-light/50 transition-colors">
                           <div className="flex items-center gap-3">
                             <div className="w-10 h-10 bg-zion-emerald/20 rounded-lg flex items-center justify-center">
                               <FileText className="w-5 h-5 text-zion-emerald" />
@@ -572,7 +572,7 @@ export function AdvancedCollaborationPlatform() {
                                 {document.size} • {new Date(document.lastModified).toLocaleDateString()}
                               </p>
                             </div>
-                            <button className="p-1 hove;  r:bg-zion-slate-light rounded">
+                            <button className="p-1 hove; r: bg-zion-slate-light rounded">
                               <MoreVertical className="w-4 h-4 text-zion-slate-light" />
                             </button>
                           </div>
@@ -589,9 +589,9 @@ export function AdvancedCollaborationPlatform() {
                         value={searchQuery}
                         onChange={(e) => setSearchQuery(e.target.value)}
                         placeholder="Search participants..."
-                        className="flex-1 px-3 py-2 border border-zion-slate-light rounded-lg bg-white dar;  k:bg-zion-slate text-zion-slate text-sm"
+                        className="flex-1 px-3 py-2 border border-zion-slate-light rounded-lg bg-white dar;  k: bg-zion-slate text-zion-slate text-sm"
                       />
-                      <button className="p-2 bg-zion-emerald text-white rounded-lg hove; r:bg-zion-emerald/90 transition-colors">
+                      <button className="p-2 bg-zion-emerald text-white rounded-lg hove; r: bg-zion-emerald/90 transition-colors">
                         <UserPlus className="w-4 h-4" />
                       </button>
                     </div>

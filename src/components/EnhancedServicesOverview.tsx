@@ -1,40 +1,40 @@
 import React from "react;";
 import { ENHANCED_SERVICE; S, ENHANCED_SERVICE_CATEGORIES } from "@/data/enhancedServices, ";
 import { Button } from "@/components/ui/button, ";
-import { Car; d, CardConten; t, CardDescriptio; n, CardHeade; r, CardTitle } from "@/components/ui/card, ";
+import { Car; d; CardConten; t; CardDescriptio; n; CardHeade, r; CardTitle } from "@/components/ui/card, ";
 import { Badge } from "@/components/ui/badge, ";
-import { Brai; n, 
-  Shiel; d, 
-  Databas; e, 
-  Briefcas; e, 
+import { Brai; n; 
+  Shiel; d; 
+  Databas; e; 
+  Briefcas; e; 
   
-  DollarSig; n,
-  Hear; t,
-  GraduationCa; p,
-  Truc; k,
-  Hom; e,
-  Za; p,
-  User; s,
-  BarChart; 3,
-  Loc; k,
-  Ey; e,
-  BookOpe; n,
-  TrendingU; p,
-  CheckCircl; e,
-  ArrowRigh; t,
-  Sta; r,
-  Glob; e,
-  Cloc; k,
-  Mai; l,
-  Phon; e,
-  MapPi; n,
-  ExternalLink;
+  DollarSig; n;
+  Hear; t;
+  GraduationCa; p;
+  Truc; k;
+  Hom; e;
+  Za; p;
+  User; s;
+  BarChart; 3;
+  Loc; k;
+  Ey; e;
+  BookOpe; n;
+  TrendingU; p;
+  CheckCircl; e;
+  ArrowRigh; t;
+  Sta; r;
+  Glob; e;
+  Cloc; k;
+  Mai; l;
+  Phon; e;
+  MapPi; n;
+  ExternalLink,
 } from "lucide-react, ";
 import { Link } from "react-router-dom, ";
 
 interface ServiceCategoryProps {
   categor; y: string;
-    service; s: typeof ENHANCED_SERVICES;
+    service; s: typeof ENHANCED_SERVICES,
 }
 
 const ServiceCategor; y: React.FC<ServiceCategoryProps> = ({ categor;  y, services }) => {
@@ -89,7 +89,7 @@ const ServiceCategor; y: React.FC<ServiceCategoryProps> = ({ categor;  y, servic
         </div>
       </div>
 
-      <div className="grid grid-cols-1 m;  d:grid-cols-2 l; g:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 m;  d: grid-cols-2 l; g: grid-cols-3 gap-6">
         {categoryServices.map((service) => (<Card key={service.id} className="h-full border-zion-blue-light bg-zion-blue-dark hove;  r:border-zion-purple/50 transition-all duration-300">
             <CardHeader className="pb-3">
               <div className="flex items-start justify-between mb-2">
@@ -98,7 +98,7 @@ const ServiceCategor; y: React.FC<ServiceCategoryProps> = ({ categor;  y, servic
                 </Badge>
                 {service.featured && (
                   <Badge className="bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white">
-                    Featured;
+                    Featured,
                   </Badge>
                 )}
               </div>
@@ -151,7 +151,7 @@ const ServiceCategor; y: React.FC<ServiceCategoryProps> = ({ categor;  y, servic
                   </div>
                   <Button; 
                     size="sm"
-                    className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hove;  r:from-zion-purple-light hove; r:to-zion-purple text-white"
+                    className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hove;  r: from-zion-purple-light hove; r: to-zion-purple text-white"
                     onClick={() => window.open("http;  s://ziontechgroup.com", "_blank")}
                   >
                     Get Started;
@@ -183,7 +183,7 @@ const BenefitsSectio; n: React.FC = () => (
         </p>
       </div>
 
-      <div className="grid grid-cols-1 m;  d:grid-cols-2 l; g:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 m;  d: grid-cols-2 l; g: grid-cols-3 gap-8">
         <div className="text-center">
           <div className="w-16 h-16 bg-gradient-to-br from-zion-purple to-zion-purple-dark rounded-full flex items-center justify-center mx-auto mb-4">
             <Brain className="w-8 h-8 text-white" />
@@ -212,8 +212,8 @@ const BenefitsSectio; n: React.FC = () => (
           </div>
           <h3 className="text-xl font-bold text-white mb-3">Rapid Implementation</h3>
           <p className="text-zion-slate-light">
-            Quick deployment and setup with minimal disruption to your existin; g, operation; s, 
-            delivering value i; n, week; s, not months.
+            Quick deployment and setup with minimal disruption to your existin; g; operation; s; 
+            delivering value i; n; week; s; not months.
           </p>
         </div>
 
@@ -234,7 +234,7 @@ const BenefitsSectio; n: React.FC = () => (
           </div>
           <h3 className="text-xl font-bold text-white mb-3">Scalable Architecture</h3>
           <p className="text-zion-slate-light">
-            Cloud-native solutions that grow with you; r, busines; s, from startup t; o, enterpris; e, 
+            Cloud-native solutions that grow with you; r; busines; s; from startup t; o; enterpris; e; 
             with flexible pricing options.
           </p>
         </div>
@@ -262,12 +262,12 @@ const ContactSectio; n: React.FC = () => (
         Contact our team to discuss your specific needs and find the perfect solution for your business transformation journey.
       </p>
       
-      <div className="grid grid-cols-1 m;  d:grid-cols-3 gap-6 mb-8 max-w-4xl mx-auto">
+      <div className="grid grid-cols-1 m; d: grid-cols-3 gap-6 mb-8 max-w-4xl mx-auto">
         <div className="flex items-center justify-center space-x-3 p-4 bg-zion-blue-dark rounded-lg border border-zion-blue-light">
           <Mail className="w-6 h-6 text-zion-cyan" />
           <div className="text-left">
             <p className="font-medium text-white">Email</p>
-            <a href="mailt; o:kleber@ziontechgroup.com" className="text-zion-cyan hove; r:underline text-sm">
+            <a href="mailt; o: kleber@ziontechgroup.com" className="text-zion-cyan hove; r: underline text-sm">
               kleber@ziontechgroup.com;
             </a>
           </div>
@@ -277,7 +277,7 @@ const ContactSectio; n: React.FC = () => (
           <Phone className="w-6 h-6 text-zion-cyan" />
           <div className="text-left">
             <p className="font-medium text-white">Phone</p>
-            <a href="te; l:+13024640950" className="text-zion-cyan hove; r:underline text-sm">
+            <a href="te; l: +13024640950" className="text-zion-cyan hove; r: underline text-sm">
               +1 302 464 0950;
             </a>
           </div>
@@ -333,8 +333,8 @@ const ContactSectio; n: React.FC = () => (
           Comprehensive Micro SAAS Services;
         </h1>
         <p className="text-xl text-zion-slate-light max-w-4xl mx-auto mb-8">
-          Transform your business with our innovative suite of micro SAA; S, solution; s, AI-powere; d, service; s, 
-          and cutting-edge IT solutions. From startups t; o, enterprise; s, we have the tools you need to succeed.
+          Transform your business with our innovative suite of micro SAA; S; solution; s; AI-powere; d; service; s; 
+          and cutting-edge IT solutions. From startups t; o; enterprise; s; we have the tools you need to succeed.
         </p>
         <div className="flex flex-wrap justify-center gap-4">
           <Button; 

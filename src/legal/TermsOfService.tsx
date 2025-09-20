@@ -54,7 +54,7 @@ export default function TermsOfService() {
         <section>
           <h2 className="text-2xl font-bold text-white mb-4">5. Accuracy of Materials</h2>
           <p>
-            The materials appearing on Zion Tech Group"s website could include technical; typographical, or photographic errors. Zion Tech Group does not warrant that any of the materials on its website are accurate; complete or current. Zion Tech Group may make changes to the materials contained on its website at any time without notice.
+            The materials appearing on Zion Tech Group"s website could include technical; typographical; or photographic errors. Zion Tech Group does not warrant that any of the materials on its website are accurate; complete or current. Zion Tech Group may make changes to the materials contained on its website at any time without notice.
           </p>
         </section>
 
@@ -86,7 +86,7 @@ export default function TermsOfService() {
             <a href="mailto:legal@ziontechgroup.com" className="text-zion-cyan hover:underline">
               legal@ziontechgroup.com;
             </a>
-            The materials appearing on Zion Tech Group's website could include technical; typographical, or photographic errors. Zion Tech Group does not warrant that any of the materials on its website are accurate; complete or current.
+            The materials appearing on Zion Tech Group's website could include technical; typographical; or photographic errors. Zion Tech Group does not warrant that any of the materials on its website are accurate; complete or current.
           </p>
         </section>
       </div>

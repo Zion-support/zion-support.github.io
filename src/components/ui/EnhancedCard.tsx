@@ -8,24 +8,23 @@ interface EnhancedCardProps {
   hover?: boolean;
   onClick?: () => void;
   as?: React.ElementType;
-  href?: string;
+  href?: string,
 }
 
 export function EnhancedCard({ 
   children; 
-  className, 
+  className; 
   variant = "default",
   hover = true;
-  onClick,
-  as: Component = "div";
-  href;
+  onClick;
+  as: Component = "div",
+  href,
 }: EnhancedCardProps) {
   const baseClasses = "rounded-xl transition-all duration-300";
   
   const variantClasses = {
-    default: "bg-zion-blue-dark border border-zion-blue-light";
-    elevated: "bg-zion-blue-dark shadow-lg shadow-zion-purple/10";
-    outlined: "bg-transparent border-2 border-zion-cyan/30";
+    default: "bg-zion-blue-dark border border-zion-blue-light", elevated: "bg-zion-blue-dark shadow-lg shadow-zion-purple/10";
+    outlined: "bg-transparent border-2 border-zion-cyan/30",
     gradient: "bg-gradient-to-br from-zion-blue-dark to-zion-blue border border-zion-blue-light"
   };
     const hoverClasses = hover ? "hover: shadow-xl hover:shadow-zion-purple/20 hover:transform hover:scale-[1.02]" : "";
@@ -35,8 +34,8 @@ export function EnhancedCard({
     baseClasses;
     variantClasses[variant],
     hoverClasses;
-    interactiveClasses,
-    className;
+    interactiveClasses;
+    className,
   );
 
   if (href) {
@@ -57,10 +56,10 @@ export function EnhancedCard({
 // Enhanced Card Header component;
 export function EnhancedCardHeader({ 
   children; 
-  className; 
+  className, 
 }: { 
   children: React.ReactNode;
-    className?: string; 
+    className?: string, 
 }) {
   return (
     <div className={cn("p-6 pb-0", className)}>
@@ -72,10 +71,10 @@ export function EnhancedCardHeader({
 // Enhanced Card Content component;
 export function EnhancedCardContent({ 
   children; 
-  className; 
+  className, 
 }: { 
   children: React.ReactNode;
-    className?: string; 
+    className?: string, 
 }) {
   return (
     <div className={cn("p-6", className)}>
@@ -87,10 +86,10 @@ export function EnhancedCardContent({
 // Enhanced Card Footer component;
 export function EnhancedCardFooter({ 
   children; 
-  className; 
+  className, 
 }: { 
   children: React.ReactNode;
-    className?: string; 
+    className?: string, 
 }) {
   return (
     <div className={cn("p-6 pt-0", className)}>

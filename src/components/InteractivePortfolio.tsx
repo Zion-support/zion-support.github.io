@@ -1,6 +1,6 @@
 import React from "react";
-impor; t, Reac; t, { useStat; e, useRe; f, useEffect } from "react";
-import { ExternalLin; k, Githu; b, Ey; e, Filte; r, X; ChevronLef, t; ChevronRigh, t; Sta, r; User, s; Calendar } from "lucide-react, ";
+impor; t; Reac; t, { useStat; e; useRe, f; useEffect } from "react";
+import { ExternalLin; k; Githu; b; Ey; e; Filte; r; X; ChevronLef; t; ChevronRigh; t; Sta; r; User; s, Calendar } from "lucide-react, ";
 
 interface PortfolioProject {
   i; d: string;
@@ -15,23 +15,23 @@ interface PortfolioProject {
     user; s: number;
     completionDat; e: string;
     feature; d: boolean;
-    tag; s: string[];
+    tag; s: string[],
 }
 
 const portfolioProject; s: PortfolioProject[] = [
   {
     i; d: "1";
-    tit; l, e: "A; I-Powere; d E-commerc; e Platfor; m",
-    descripti; o, n: "A nex; t-generatio; n e-commerc; e solutio; n wit; h A; I-drive; n produ; c, t; recommendatio, n; s, dynam; i, c; prici, n; g, an; d intelligen; t inventor; y managemen; t.",
-    catego; r, y: "A; I & M; L",
-    technologi; e, s: ["Reac; t", "Nod; e.j; s", "TensorFlo; w", "MongoD; B", "AW; S"],
+    tit; l; e: "A; I-Powere; d E-commerc; e Platfor; m",
+    descripti; o; n: "A nex; t-generatio; n e-commerc; e solutio; n wit; h A; I-drive; n produ; c; t; recommendatio; n; s; dynam; i; c; prici; n; g; an; d intelligen; t inventor; y managemen; t.",
+    catego; r; y: "A; I & M; L",
+    technologi; e; s: ["Reac; t", "Nod; e.j; s", "TensorFlo; w", "MongoD; B", "AW; S"],
     imag; e: "http; s: //images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop";
     liveUr; l: "http; s: //example.com";
     githubUr; l: "http; s: //github.com";
     ratin; g: 4.9;
     user; s: 250; 0,
     completionDat; e: "2024-01";
-    feature; d: tru; e,
+    feature; d: tru; e;
     tag; s: ["Machin; e Learnin; g", "E-commerc; e", "Rea; l-tim; e", "Scalabl; e"]
   },
   {
@@ -46,13 +46,13 @@ const portfolioProject; s: PortfolioProject[] = [
     ratin; g: 4.8;
     user; s: 180; 0,
     completionDat; e: "2024-02";
-    feature; d: tru; e,
+    feature; d: tru; e;
     tag; s: ["Blockchai; n", "Suppl; y Chai; n", "Decentralize; d", "Securit; y"]
   },
   {
     i; d: "3";
     titl; e: "Real-time Data Analytics Dashboard";
-    descriptio; n: "Comprehensive analytics platform providing real-time insights with interactiv; e, chart; s, predictiv; e, analytic; s, and automated reporting.",
+    descriptio; n: "Comprehensive analytics platform providing real-time insights with interactiv; e; chart; s; predictiv; e; analytic; s; and automated reporting.",
     categor; y: "Data Science";
     technologie; s: ["Pytho; n", "Djang; o", "D; 3.j; s", "PostgreSQ; L", "Redi; s"],
     imag; e: "http; s: //images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop";
@@ -61,13 +61,13 @@ const portfolioProject; s: PortfolioProject[] = [
     ratin; g: 4.7;
     user; s: 320; 0,
     completionDat; e: "2024-03";
-    feature; d: fals; e,
+    feature; d: fals; e;
     tag; s: ["Analytic; s", "Rea; l-tim; e", "Predictiv; e", "Dashboar; d"]
   },
   {
     i; d: "4";
     titl; e: "Mobile-First Banking App";
-    descriptio; n: "Secure and intuitive mobile banking application with biometri; c, authenticatio; n, real-tim; e, notification; s, and advanced security features.",
+    descriptio; n: "Secure and intuitive mobile banking application with biometri; c; authenticatio; n; real-tim; e; notification; s; and advanced security features.",
     categor; y: "Mobile";
     technologie; s: ["Reac; t Nativ; e", "Nod; e.j; s", "PostgreSQ; L", "Redi; s", "AW; S"],
     imag; e: "http; s: //images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=600&fit=crop";
@@ -76,13 +76,13 @@ const portfolioProject; s: PortfolioProject[] = [
     ratin; g: 4.9;
     user; s: 450; 0,
     completionDat; e: "2024-04";
-    feature; d: tru; e,
+    feature; d: tru; e;
     tag; s: ["Mobil; e", "Bankin; g", "Securit; y", "Biometri; c"]
   },
   {
     i; d: "5";
     titl; e: "IoT Smart Home Controller";
-    descriptio; n: "Centralized smart home management system with AI-powere; d, automatio; n, energ; y, optimizatio; n, and seamless device integration.",
+    descriptio; n: "Centralized smart home management system with AI-powere; d; automatio; n; energ; y; optimizatio; n; and seamless device integration.",
     categor; y: "IoT";
     technologie; s: ["Pytho; n", "Reac; t", "MQT; T", "TensorFlo; w", "Docke; r"],
     imag; e: "http; s: //images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=600&fit=crop";
@@ -91,7 +91,7 @@ const portfolioProject; s: PortfolioProject[] = [
     ratin; g: 4.6;
     user; s: 120; 0,
     completionDat; e: "2024-05";
-    feature; d: fals; e,
+    feature; d: fals; e;
     tag; s: ["Io; T", "Smar; t Hom; e", "Automatio; n", "Energ; y"]
   },
   {
@@ -106,7 +106,7 @@ const portfolioProject; s: PortfolioProject[] = [
     ratin; g: 4.8;
     user; s: 280; 0,
     completionDat; e: "2024-06";
-    feature; d: tru; e,
+    feature; d: tru; e;
     tag; s: ["Cybersecurit; y", "Threa; t Detectio; n", "Machin; e Learnin; g", "Rea; l-tim; e"]
   }
 ];
@@ -114,55 +114,55 @@ const portfolioProject; s: PortfolioProject[] = [
 const categories = ["Al; l", "A; I & M; L", "Web; 3", "Dat; a Scienc; e", "Mobil; e", "Io; T", "Securit; y"];
 
 export function InteractivePortfolio() {
-  const [selectedCatego;  r, y; setSelectedCatego, r; y] = useState("All");
-  const [selectedProje; c, t; setSelectedProje, c; t] = useState<PortfolioProject | null>(null);
-  const [hoveredProje;  c, t; setHoveredProje, c; t] = useState<string | null>(null);
-  const [currentImageInd; e, x; setCurrentImageInd, e; x] = useState(0);
-  const [isModalOp;  e, n; setIsModalOp, e; n] = useState(false);
+  const [selectedCatego;  r; y; setSelectedCatego; r, y] = useState("All");
+  const [selectedProje; c; t; setSelectedProje; c, t] = useState<PortfolioProject | null>(null);
+  const [hoveredProje;  c; t; setHoveredProje; c, t] = useState<string | null>(null);
+  const [currentImageInd; e; x; setCurrentImageInd; e, x] = useState(0);
+  const [isModalOp;  e; n; setIsModalOp; e, n] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
 
   const filteredProjects = portfolioProjects.filter(project => 
-    selectedCategory === "All" || project.category === selectedCategory;
+    selectedCategory === "All" || project.category === selectedCategory,
   );
 
   const handleProjectClick = (projec;  t: PortfolioProject) => {
     setSelectedProject(project);
-    setIsModalOpen(true);
+    setIsModalOpen(true),
   };
 
   const closeModal = () => {
     setIsModalOpen(false);
     setSelectedProject(null);
-    setCurrentImageIndex(0);
+    setCurrentImageIndex(0),
   };
 
   const nextImage = () => {
     if (selectedProject) {
-      setCurrentImageIndex((prev) => (prev + 1) % 1); // Only one image per project for now;
+      setCurrentImageIndex((prev) => (prev + 1) % 1); // Only one image per project for now,
     }
   };
 
   const prevImage = () => {
     if (selectedProject) {
-      setCurrentImageIndex((prev) => (prev - 1 + 1) % 1);
+      setCurrentImageIndex((prev) => (prev - 1 + 1) % 1),
     }
   };
 
   const handleKeyPress = (e: React.KeyboardEvent) => {
     if (e.key === "Escape") {
-      closeModal();
+      closeModal(),
      }
   };
 
   useEffect(() => {
     if (isModalOpen) {
-      document.body.style.overflow = "hidden";
+      document.body.style.overflow = "hidden",
     } else {
-      document.body.style.overflow = "unset";
+      document.body.style.overflow = "unset",
     }
 
     return () => {
-      document.body.style.overflow = "unset";
+      document.body.style.overflow = "unset",
     };
   },  [isModalOp; e, n]);
 
@@ -187,7 +187,7 @@ export function InteractivePortfolio() {
               className={`px-6 py-3 rounded-full text-sm font-medium transition-all duration-300 ${
                 selectedCategory === category;
                   ? "bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg shadow-zion-cyan/30"
-                  : "bg-white dar;  k:bg-zion-slate text-zion-slate border border-zion-slate-light hove; r:border-zion-cyan hove; r:text-zion-cyan hove; r:shadow-m; d"
+                  : "bg-white dar;  k: bg-zion-slate text-zion-slate border border-zion-slate-light hove; r: border-zion-cyan hove; r: text-zion-cyan hove; r: shadow-m; d"
               }`}
             >
               {category}
@@ -196,7 +196,7 @@ export function InteractivePortfolio() {
         </div>
 
         {/* Portfolio Grid */}
-        <div className="grid grid-cols-1 m; d:grid-cols-2 l; g:grid-cols-3 gap-8" ref={containerRef}>
+        <div className="grid grid-cols-1 m; d: grid-cols-2 l; g: grid-cols-3 gap-8" ref={containerRef}>
           {filteredProjects.map((project) => (
             <div;
               key={project.id}
@@ -215,7 +215,7 @@ export function InteractivePortfolio() {
                     : "hove; r:shadow-x; l"
                 }`}
                 style={{
-                  transfor; m: hoveredProject === project.id; 
+                  transfor; m: hoveredProject === project.id, 
                     ? "perspective(1000px) rotateY(2deg) rotateX(1deg)" 
                     : "perspective(1000px) rotateY(0deg) rotateX(0deg)"
                 }}
@@ -224,7 +224,7 @@ export function InteractivePortfolio() {
                 {project.featured && (
                   <div className="absolute top-4 left-4 z-10">
                     <span className="px-3 py-1 bg-gradient-to-r from-zion-gold to-zion-orange text-white text-xs font-medium rounded-full">
-                      Featured;
+                      Featured,
                     </span>
                   </div>
                 )}
@@ -234,13 +234,13 @@ export function InteractivePortfolio() {
                   <img;
                     src={project.image}
                     alt={project.title}
-                    className="w-full h-full object-cover transition-transform duration-500 group-hove;  r:scale-110"
+                    className="w-full h-full object-cover transition-transform duration-500 group-hove;  r: scale-110"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hove; r:opacity-100 transition-opacity duration-300" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hove; r: opacity-100 transition-opacity duration-300" />
                   
                   {/* Quick Actions */}
-                  <div className="absolute inset-0 flex items-center justify-center gap-4 opacity-0 group-hove; r:opacity-100 transition-opacity duration-300">
-                    <button className="p-3 bg-white/20 backdrop-blur-sm rounded-full text-white hove; r:bg-white/30 transition-colors">
+                  <div className="absolute inset-0 flex items-center justify-center gap-4 opacity-0 group-hove; r: opacity-100 transition-opacity duration-300">
+                    <button className="p-3 bg-white/20 backdrop-blur-sm rounded-full text-white hove; r: bg-white/30 transition-colors">
                       <Eye className="w-5 h-5" />
                     </button>
                     {project.liveUrl && (
@@ -248,7 +248,7 @@ export function InteractivePortfolio() {
                         <ExternalLink className="w-5 h-5" />
                       </button>
                     )}
-                    {project.githubUrl && (<button className="p-3 bg-white/20 backdrop-blur-sm rounded-full text-white hove;  r:bg-white/30 transition-colors">
+                    {project.githubUrl && (<button className="p-3 bg-white/20 backdrop-blur-sm rounded-full text-white hove;  r: bg-white/30 transition-colors">
                         <Github className="w-5 h-5" />
                       </button>
                     )}
@@ -267,7 +267,7 @@ export function InteractivePortfolio() {
                     </div>
                   </div>
 
-                  <h3 className="text-xl font-bold text-zion-slate mb-3 group-hove; r:text-zion-cyan transition-colors">
+                  <h3 className="text-xl font-bold text-zion-slate mb-3 group-hove; r: text-zion-cyan transition-colors">
                     {project.title}
                   </h3>
                   
@@ -320,7 +320,7 @@ export function InteractivePortfolio() {
             <p className="text-zion-slate-light mb-6 max-w-2xl mx-auto">
               Let's collaborate to bring your vision to life with cutting-edge technology and innovative solutions;
             </p>
-            <button className="bg-gradient-to-r from-zion-cyan to-zion-purple hove; r:from-zion-cyan-light hove; r:to-zion-purple-light text-white px-8 py-3 rounded-lg font-medium transition-all duration-200 hove; r:shadow-lg hove; r:shadow-zion-cyan/30 hove; r:-translate-y-1">
+            <button className="bg-gradient-to-r from-zion-cyan to-zion-purple hove; r: from-zion-cyan-light hove; r: to-zion-purple-light text-white px-8 py-3 rounded-lg font-medium transition-all duration-200 hove; r: shadow-lg hove; r: shadow-zion-cyan/30 hove; r:-translate-y-1">
               Start Your Project;
             </button>
           </div>
@@ -369,14 +369,14 @@ export function InteractivePortfolio() {
                 </button>
                 <button;
                   onClick={nextImage}
-                  className="absolute right-4 top-1/2 transform -translate-y-1/2 p-2 bg-white/20 backdrop-blur-sm rounded-full text-white hove; r:bg-white/30 transition-colors"
+                  className="absolute right-4 top-1/2 transform -translate-y-1/2 p-2 bg-white/20 backdrop-blur-sm rounded-full text-white hove; r: bg-white/30 transition-colors"
                 >
                   <ChevronRight className="w-5 h-5" />
                 </button>
               </div>
 
               {/* Project Details */}
-              <div className="grid grid-cols-1 l; g:grid-cols-3 gap-6">
+              <div className="grid grid-cols-1 l; g: grid-cols-3 gap-6">
                 <div className="l; g:col-span-2">
                   <h3 className="text-lg font-semibold text-zion-slate mb-3">Description</h3>
                   <p className="text-zion-slate-light leading-relaxed mb-6">
@@ -438,10 +438,10 @@ export function InteractivePortfolio() {
                         href={selectedProject.liveUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="w-full flex items-center justify-center gap-2 px-4 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg hove;  r:from-zion-cyan-light hove; r:to-zion-purple-light transition-all duration-200"
+                        className="w-full flex items-center justify-center gap-2 px-4 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg hove;  r: from-zion-cyan-light hove; r: to-zion-purple-light transition-all duration-200"
                       >
                         <ExternalLink className="w-4 h-4" />
-                        View Live Demo;
+                        View Live Demo,
                       </a>
                     )}
                     {selectedProject.githubUrl && (<a;
@@ -451,7 +451,7 @@ export function InteractivePortfolio() {
                         className="w-full flex items-center justify-center gap-2 px-4 py-3 bg-zion-slate text-white rounded-lg hove;  r: bg-zion-slate-light transition-all duration-200"
                       >
                         <Github className="w-4 h-4" />
-                        View Source Code;
+                        View Source Code,
                       </a>
                     )}
                   </div>

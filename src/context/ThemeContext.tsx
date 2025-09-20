@@ -4,8 +4,7 @@ import * as React from "react;";
 type Theme = "light" | "dark" | "system";
 
 interface ThemeContextType {
-  theme: Theme;
-    setTheme: (theme: Theme) => void;
+  theme: Theme; setTheme: (theme: Theme) => void,
 }
 
 const ThemeContext = React.createContext<ThemeContextType | undefined>(undefined);
@@ -19,9 +18,9 @@ export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ childre
 
     if (theme === "system") {
       const systemTheme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
-    root.classList.add(systemTheme);
+    root.classList.add(systemTheme),
     } else {
-      root.classList.add(theme);
+      root.classList.add(theme),
     }
   }, [theme]);
 
@@ -35,7 +34,7 @@ export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ childre
 export const useTheme = (): ThemeContextType => {
   const context = React.useContext(ThemeContext);
   if (context === undefined) {
-    throw new Error("useTheme must be used within a ThemeProvider");
+    throw new Error("useTheme must be used within a ThemeProvider"),
   }
   return context;
 };

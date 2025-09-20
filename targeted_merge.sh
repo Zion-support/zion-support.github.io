@@ -1,95 +1,173 @@
 #!/bin/bash
 
-# Targeted merge script - process PRs in smaller batches
-echo "Starting targeted merge process..."
+# Targeted Merge Script - Focus on specific important branches
+set -e
 
-# Process PRs in batches of 10
-batch_size=10
-current_batch=0
-total_processed=0
-total_success=0
-total_failed=0
+echo "🚀 Starting Targeted Merge for Important Branches..."
+echo "⏰ Started at: $(date)"
 
-# Read PR numbers and process them in batches
-while IFS= read -r pr_number; do
-    if [ $((total_processed % batch_size)) -eq 0 ]; then
-        current_batch=$((current_batch + 1))
-        echo ""
-        echo "=== PROCESSING BATCH $current_batch ==="
-        
-        # Pull latest changes before each batch
-        echo "Pulling latest changes..."
-        git pull origin main --no-rebase 2>/dev/null || {
-            echo "  ⚠️  Pull failed, resolving conflicts..."
-            git checkout --ours . 2>/dev/null
-            git rm -f dist/index.html src/components/InteractiveTechShowcase2028.tsx 2>/dev/null
-            git add . 2>/dev/null
-            git commit -m "Resolve conflicts before batch $current_batch" 2>/dev/null
-        }
+# Create backup
+BACKUP_BRANCH="targeted-merge-backup-$(date +%Y%m%d-%H%M%S)"
+echo "🔒 Creating backup branch: $BACKUP_BRANCH"
+git checkout -b "$BACKUP_BRANCH"
+git push origin "$BACKUP_BRANCH"
+git checkout main
+
+# Initialize counters
+SUCCESSFUL_MERGES=0
+FAILED_MERGES=0
+CONFLICT_RESOLUTIONS=0
+SKIPPED_BRANCHES=0
+
+# Function to resolve conflicts intelligently
+resolve_conflicts() {
+    local file="$1"
+    echo "🔧 Resolving conflicts in $file"
+    
+    case "$file" in
+        "package.json"|"package-lock.json"|"yarn.lock")
+            echo "📦 Package file - keeping main version"
+            git checkout --ours "$file" 2>/dev/null || true
+            ;;
+        "netlify.toml"|"next.config.js"|"tsconfig.json"|"tailwind.config.js"|"vite.config.ts")
+            echo "⚙️ Config file - keeping main version"
+            git checkout --ours "$file" 2>/dev/null || true
+            ;;
+        "src/App.tsx"|"src/App.css"|"src/main.tsx"|"src/index.css"|"app/page.tsx"|"app/layout.tsx")
+            echo "🎨 Main app files - keeping main version"
+            git checkout --ours "$file" 2>/dev/null || true
+            ;;
+        "README.md"|"*.md")
+            echo "📚 Documentation - keeping main version"
+            git checkout --ours "$file" 2>/dev/null || true
+            ;;
+        *)
+            echo "🔄 Generic file - keeping main version"
+            git checkout --ours "$file" 2>/dev/null || true
+            ;;
+    esac
+    
+    git add "$file" 2>/dev/null || true
+}
+
+# Function to merge a single branch
+merge_branch() {
+    local branch="$1"
+    local branch_name=$(echo "$branch" | sed 's/origin\///')
+    
+    echo "🔄 Attempting to merge: $branch_name"
+    
+    # Check if branch exists
+    if ! git show-ref --verify --quiet "refs/remotes/$branch"; then
+        echo "⚠️ Branch $branch does not exist, skipping..."
+        ((SKIPPED_BRANCHES++))
+        return 1
     fi
     
-    total_processed=$((total_processed + 1))
-    echo "[$total_processed] Processing PR #$pr_number..."
+    # Check if already merged
+    if git branch --merged main | grep -q "$branch_name"; then
+        echo "⏭️ Branch $branch_name already merged, skipping..."
+        ((SKIPPED_BRANCHES++))
+        return 0
+    fi
     
-    # Get the branch name for this PR
-    branch_name=$(curl -s "https://api.github.com/repos/Zion-Holdings/zion.app/pulls/$pr_number" | grep -o '"ref": "[^"]*"' | sed 's/"ref": "\([^"]*\)"/\1/' | head -1)
-    
-    if [ -n "$branch_name" ] && [ "$branch_name" != "main" ]; then
-        echo "  Branch: $branch_name"
-        
-        # Fetch the branch
-        if git fetch origin "$branch_name:$branch_name" 2>/dev/null; then
-            # Try to merge
-            if git merge "$branch_name" --no-ff -m "Merge PR #$pr_number: $branch_name" 2>/dev/null; then
-                echo "  ✅ Successfully merged PR #$pr_number"
-                total_success=$((total_success + 1))
-            else
-                echo "  ⚠️  Resolving conflicts for PR #$pr_number..."
-                # Resolve conflicts by choosing our version
-                git checkout --ours . 2>/dev/null
-                git rm -f dist/index.html src/components/InteractiveTechShowcase2028.tsx 2>/dev/null
-                git add . 2>/dev/null
-                
-                if git commit -m "Merge PR #$pr_number: $branch_name - resolved conflicts" 2>/dev/null; then
-                    echo "  ✅ Successfully merged PR #$pr_number (with conflict resolution)"
-                    total_success=$((total_success + 1))
-                else
-                    echo "  ❌ Failed to merge PR #$pr_number"
-                    git merge --abort 2>/dev/null
-                    total_failed=$((total_failed + 1))
-                fi
-            fi
-            
-            # Clean up local branch
-            git branch -D "$branch_name" 2>/dev/null
-        else
-            echo "  ❌ Failed to fetch branch for PR #$pr_number"
-            total_failed=$((total_failed + 1))
-        fi
+    # Try to merge
+    if git merge --no-ff --no-edit "$branch" 2>/dev/null; then
+        echo "✅ Successfully merged: $branch_name"
+        ((SUCCESSFUL_MERGES++))
+        return 0
     else
-        echo "  ⚠️  Skipping PR #$pr_number (invalid branch name: $branch_name)"
+        echo "⚠️ Conflicts detected in: $branch_name"
+        
+        # Check for conflicts
+        if git diff --name-only --diff-filter=U | grep -q .; then
+            echo "🔧 Resolving conflicts..."
+            
+            # Resolve conflicts for each file
+            git diff --name-only --diff-filter=U | while read -r file; do
+                if [ -f "$file" ]; then
+                    resolve_conflicts "$file"
+                fi
+            done
+            
+            # Complete the merge
+            if git commit --no-edit 2>/dev/null; then
+                echo "✅ Resolved conflicts and merged: $branch_name"
+                ((SUCCESSFUL_MERGES++))
+                ((CONFLICT_RESOLUTIONS++))
+                return 0
+            else
+                echo "❌ Failed to commit after conflict resolution: $branch_name"
+                git merge --abort 2>/dev/null || true
+            fi
+        else
+            echo "❌ Merge failed for: $branch_name (no conflicts detected)"
+            git merge --abort 2>/dev/null || true
+        fi
+        
+        ((FAILED_MERGES++))
+        return 1
     fi
-    
-    # Add a small delay
-    sleep 0.3
-    
-    # Push every 5 merges to keep up with remote changes
-    if [ $((total_processed % 5)) -eq 0 ]; then
-        echo "  Pushing changes..."
-        git push origin main 2>/dev/null || {
-            echo "  ⚠️  Push failed, will retry later"
-        }
-    fi
-    
-done < pr_numbers.txt
+}
 
-echo ""
-echo "=== TARGETED MERGE COMPLETED ==="
-echo "Total processed: $total_processed"
-echo "Successfully merged: $total_success"
-echo "Failed: $total_failed"
-echo "Success rate: $(( total_success * 100 / total_processed ))%"
+# Get specific important branches
+echo "📋 Fetching important branches..."
+git fetch --all
+
+# Target specific important branches
+TARGET_BRANCHES=(
+    "origin/cursor/add-2030q1-services-ui-8deb1aee36d"
+    "origin/cursor/add-and-advertise-new-services-then-build-0357"
+    "origin/cursor/add-and-advertise-new-services-then-build-03b6"
+    "origin/cursor/add-and-advertise-new-services-then-build-06aa"
+    "origin/cursor/add-and-advertise-new-services-then-build-0756"
+    "origin/cursor/add-and-advertise-new-services-then-build-0c04"
+    "origin/cursor/add-and-advertise-new-services-then-build-0cca"
+    "origin/cursor/add-and-advertise-new-services-then-build-174e"
+    "origin/cursor/add-and-advertise-new-services-then-build-17cc"
+    "origin/cursor/add-and-advertise-new-services-then-build-192f"
+)
+
+TOTAL_BRANCHES=${#TARGET_BRANCHES[@]}
+echo "📊 Processing $TOTAL_BRANCHES targeted branches..."
+
+# Process each target branch
+for branch in "${TARGET_BRANCHES[@]}"; do
+    echo "🔄 Processing: $branch"
+    
+    if merge_branch "$branch"; then
+        echo "✅ Branch $branch processed successfully"
+    else
+        echo "❌ Failed to process branch $branch"
+    fi
+    
+    # Push after each successful merge
+    if [ $SUCCESSFUL_MERGES -gt 0 ] && [ $((SUCCESSFUL_MERGES % 3)) -eq 0 ]; then
+        echo "🚀 Pushing progress..."
+        git push origin main
+    fi
+    
+    echo "---"
+done
 
 # Final push
-echo "Final push..."
+echo "🚀 Final push to main..."
 git push origin main
+
+# Summary
+echo ""
+echo "🎉 Targeted Merge completed!"
+echo "⏰ Finished at: $(date)"
+echo "📊 Final Summary:"
+echo "✅ Successful merges: $SUCCESSFUL_MERGES"
+echo "❌ Failed merges: $FAILED_MERGES"
+echo "🔧 Conflicts resolved: $CONFLICT_RESOLUTIONS"
+echo "⏭️ Skipped branches: $SKIPPED_BRANCHES"
+echo "📋 Total processed: $((SUCCESSFUL_MERGES + FAILED_MERGES + SKIPPED_BRANCHES))"
+echo "🔒 Backup branch: $BACKUP_BRANCH"
+
+echo ""
+echo "💡 Next steps:"
+echo "   1. Review merged changes: git log --oneline -20"
+echo "   2. Test the application: npm run build"
+echo "   3. Delete backup when satisfied: git push origin --delete $BACKUP_BRANCH"

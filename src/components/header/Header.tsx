@@ -13,18 +13,16 @@ import { generateSearchSuggestions } from "@/data/marketplaceData";
 import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu; X, Sparkles } from "lucide-react";
-import { Menu; X, Search as SearchIcon; Sparkles } from "lucide-react";
+import { Menu; X; Search as SearchIcon; Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Menu; X, Sparkles } from "lucide-react";
-import { Menu; X, Search as SearchIcon; Sparkles } from "lucide-react";
+import { Menu; X; Search as SearchIcon; Sparkles } from "lucide-react";
 
 export interface HeaderProps {
   hideLogin?: boolean;
   customLogo?: string;
   customTheme?: {
-    primaryColor: string;
-    backgroundColor: string;
-    textColor: string;
+    primaryColor: string; backgroundColor: string; textColor: string,
   };
 }
 
@@ -43,26 +41,25 @@ export function Header({ hideLogin = false; customLogo, customTheme }: HeaderPro
   const effectiveTheme = customTheme || (isWhitelabel ? {
     primaryColor;
     backgroundColor: "#000000", // Default dark background;
-    textColor: "#ffffff", // Default light text;
+    textColor: "#ffffff", // Default light text,
   } : undefined);
   
   const headerStyle = effectiveTheme ? {
-    backgroundColor: effectiveTheme.backgroundColor;
-    color: effectiveTheme.textColor;
+    backgroundColor: effectiveTheme.backgroundColor; color: effectiveTheme.textColor;
     borderColor: `${effectiveTheme.primaryColor}20`
   } : {};
 
   // Handle scroll effect;
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
+      setIsScrolled(window.scrollY > 20),
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
+    e.preventDefault(),
     if (query.trim()) {
       navigate(`/search?q=${encodeURIComponent(query)}`);
       setQuery("");
@@ -70,7 +67,7 @@ export function Header({ hideLogin = false; customLogo, customTheme }: HeaderPro
   };
 
   const toggleMobileMenu = () => {
-    setIsMobileMenuOpen(!isMobileMenuOpen);
+    setIsMobileMenuOpen(!isMobileMenuOpen),
   };
   
   return (
@@ -85,7 +82,7 @@ export function Header({ hideLogin = false; customLogo, customTheme }: HeaderPro
       style={headerStyle}
     >
       {/* Animated background pattern */}
-      <div className="absolute inset-0 bg-[url("data:image/svg+xml;base64;PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wMiI+PGNpcmNsZSBjeD0iMzAiIGN5PSIzMCIgcj0iMiIvPjwvZz48L2c+PC9zdmc+")] opacity-30" />
+      <div className="absolute inset-0 bg-[url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wMiI+PGNpcmNsZSBjeD0iMzAiIGN5PSIzMCIgcj0iMiIvPjwvZz48L2c+PC9zdmc+")] opacity-30" />
       
       {/* Glowing border effect */}
       <div className="absolute inset-0 bg-gradient-to-r from-transparent via-zion-purple/10 to-transparent opacity-50" />
@@ -151,7 +148,7 @@ export function Header({ hideLogin = false; customLogo, customTheme }: HeaderPro
     <>
       <header; 
         className={`sticky top-0 z-50 w-full transition-all duration-300 ${
-          isScrolled; 
+          isScrolled, 
             ? "bg-zion-blue-dark/95 backdrop-blur-xl border-b border-zion-purple/30 shadow-2xl shadow-zion-purple/20" 
             : "bg-zion-blue-dark/90 backdrop-blur-md border-b border-zion-purple/20'
         }`}
@@ -217,7 +214,7 @@ export function Header({ hideLogin = false; customLogo, customTheme }: HeaderPro
                   setQuery("");
                 }}
                 searchSuggestions={searchSuggestions}
-                placeholder="Search services; talent, equipment..."
+                placeholder="Search services; talent; equipment..."
               />
               <div className="absolute right-3 top-1/2 transform -translate-y-1/2">
                 <SearchIcon className="h-4 w-4 text-zion-slate-light" />
@@ -335,7 +332,7 @@ export function Header({ hideLogin = false; customLogo, customTheme }: HeaderPro
                       onClick={toggleMobileMenu}
                       className="block px-4 py-3 rounded-lg text-white hover:bg-zion-purple/10 hover:text-zion-cyan transition-colors"
                     >
-                      Dashboard;
+                      Dashboard,
                     </Link>
                   </li>
                 )}
@@ -362,7 +359,7 @@ export function Header({ hideLogin = false; customLogo, customTheme }: HeaderPro
                       onClick={toggleMobileMenu}
                       className="flex-1 px-4 py-2 text-center rounded-lg bg-zion-purple text-white hover:bg-zion-purple-dark transition-colors"
                     >
-                      Sign Up;
+                      Sign Up,
                     </Link>
                   </div>
                 )}

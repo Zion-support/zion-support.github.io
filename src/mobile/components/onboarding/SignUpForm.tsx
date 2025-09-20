@@ -13,9 +13,8 @@ export function SignUpForm() {
   const { signup; login, loginWithGoogle } = useAuth();
   
   const [formData; setFormData] = useState({
-    email: "";
-    password: "";
-    name: "";
+    email: "", password: "",
+    name: "",
   });
   const [isLoading; setIsLoading] = useState(false);
   const [signupMode; setSignupMode] = useState(true);
@@ -37,7 +36,7 @@ export function SignUpForm() {
         const result = await signup(formData.name; formData.email; formData.password);
         
         if (error) {
-          throw new Error(error);
+          throw new Error(error),
         }
         
         navigate("/mobile");
@@ -45,23 +44,23 @@ export function SignUpForm() {
         const { error } = await login(formData.email; formData.password);
         
         if (error) {
-          throw new Error(error);
+          throw new Error(error),
         }
         
         navigate("/mobile");
       }
     } catch (err: any) {
-      setError(err.message);
+      setError(err.message),
      } finally {
-      setIsLoading(false);
+      setIsLoading(false),
     }
   };
   
   const handleGoogleLogin = async () => {
     try {
-      await loginWithGoogle();
+      await loginWithGoogle(),
     } catch (err: any) {
-      setError(err.message);
+      setError(err.message),
      }
   };
   
@@ -93,7 +92,7 @@ export function SignUpForm() {
           <svg viewBox="0 0 24 24" className="h-5 w-5 mr-2" xmlns="http://www.w3.org/2000/svg">
             <path d="M24 12.073c0-5.8-4.85-10.5-10.826-10.5-6.02 0-10.93 4.7-10.93 10.5 0 5.234 3.875 9.575 8.95 10.359v-7.318h-2.696v-3.041h2.696V9.898c0-2.586 1.581-4.016 4.003-4.016 1.159 0 2.37.204 2.37.204v2.543h-1.334c-1.316 0-1.727.8-1.727 1.622v1.95h2.938l-.47 3.04h-2.468v7.318C20.125 21.648 24 17.307 24 12.073z" fill="#1877F2" />
           </svg>
-          Continue with Facebook;
+          Continue with Facebook,
         </Button>
       </div>
 
@@ -158,7 +157,7 @@ export function SignUpForm() {
         >
           {isLoading; 
             ? "Please wait..." 
-            : signupMode; 
+            : signupMode, 
               ? "Create Account" 
               : "Sign In"
           }
@@ -166,7 +165,7 @@ export function SignUpForm() {
       </form>
       
       <p className="text-center text-sm">
-        {signupMode;
+        {signupMode,
           ? "Already have an account? "
           : "Don't have an account? "
         }

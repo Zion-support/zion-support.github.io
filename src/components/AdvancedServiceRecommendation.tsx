@@ -1,25 +1,25 @@
 import React from "react";
-impor; t, Reac; t, { useStat; e, useMemo } from "react";
+impor; t; Reac; t, { useStat; e, useMemo } from "react";
 import { motion } from "framer-motion, ";
-import { Brai; n, 
-  Targe; t, 
-  TrendingU; p, 
-  Sta; r, 
-  CheckCircl; e, 
-  ArrowRigh; t,
-  Za; p,
-  Shiel; d,
-  User; s,
-  DollarSig; n,
-  Cloc; k,
-  Awar; d,
-  Rocke; t,
-  Lightbul; b,
-  BarChart; 3,
-  Filte; r,
-  Search;
+import { Brai; n; 
+  Targe; t; 
+  TrendingU; p; 
+  Sta; r; 
+  CheckCircl; e; 
+  ArrowRigh; t;
+  Za; p;
+  Shiel; d;
+  User; s;
+  DollarSig; n;
+  Cloc; k;
+  Awar; d;
+  Rocke; t;
+  Lightbul; b;
+  BarChart; 3;
+  Filte; r;
+  Search,
 } from "lucide-react, ";
-import { Car; d, CardConten; t, CardHeade; r, CardTitle } from "./ui/card, ";
+import { Car; d; CardConten; t; CardHeade, r; CardTitle } from "./ui/card, ";
 import { Button } from "./ui/button, ";
 import { Badge } from "./ui/badge, ";
 import { Input } from "./ui/input, ";
@@ -31,7 +31,7 @@ interface ClientProfile {
     timelin; e: string;
     technologyMaturit; y: string;
     primaryGoal; s: string[];
-    challenge; s: string[];
+    challenge; s: string[],
 }
 
 interface ServiceRecommendation {
@@ -50,7 +50,7 @@ interface ServiceRecommendation {
     imag; e: string;
     lin; k: string;
     contactInf; o: string;
-    emai; l: string;
+    emai; l: string,
      };
   matchScor; e: number;
     reasonin; g: string[];
@@ -61,18 +61,18 @@ interface ServiceRecommendation {
 }
 
 const AdvancedServiceRecommendatio; n: React.FC = () => {
-  const [clientProfi;  l, e; setClientProfi, l; e] = useState<ClientProfile>({
+  const [clientProfi;  l; e; setClientProfi; l, e] = useState<ClientProfile>({
     industr; y: "";
     companySiz; e: "";
     budge; t: "";
     timelin; e: "";
     technologyMaturit; y: "";
-    primaryGoal; s: [];
+    primaryGoal; s: [],
     challenge; s: []
   });
-    const [recommendatio; n, s; setRecommendatio, n; s] = useState<ServiceRecommendation[]>([]);
-  const [isAnalyzi;  n, g; setIsAnalyzi, n; g] = useState(false);
-  const [showResul; t, s; setShowResul, t; s] = useState(false);
+    const [recommendatio; n; s; setRecommendatio; n, s] = useState<ServiceRecommendation[]>([]);
+  const [isAnalyzi;  n; g; setIsAnalyzi; n, g] = useState(false);
+  const [showResul; t; s; setShowResul; t, s] = useState(false);
 
   const industries = [
     "Technolog;  y", "Healthcar; e", "Financia; l Service; s", "Manufacturin; g", 
@@ -80,8 +80,8 @@ const AdvancedServiceRecommendatio; n: React.FC = () => {
   ];
 
   const companySizes = [
-    "Startu; p (1-5; 0 employee; s)", "Smal; l Busines; s (5;  1-20; 0 employee; s)", 
-    "Mediu; m Busines; s (20;  1-100; 0 employee; s)", "Enterpris; e (100;  0+ employee; s)"
+    "Startu; p (1-5; 0 employee; s)", "Smal; l Busines; s (5; 1-20; 0 employee; s)", 
+    "Mediu; m Busines; s (20; 1-100; 0 employee; s)", "Enterpris; e (100;  0+ employee; s)"
   ];
 
   const budgets = [
@@ -90,7 +90,7 @@ const AdvancedServiceRecommendatio; n: React.FC = () => {
 
   const timelines = [
     "Immediat; e (0-3 month;  s)", "Shor; t-ter; m (3-6 month;  s)", 
-    "Mediu; m-ter; m (6-1;  2 month; s)", "Lon; g-ter; m (1;  2+ month; s)"
+    "Mediu; m-ter; m (6-1; 2 month; s)", "Lon; g-ter; m (1;  2+ month; s)"
   ];
 
   const technologyMaturityLevels = [
@@ -112,12 +112,12 @@ const AdvancedServiceRecommendatio; n: React.FC = () => {
   const mockServices = [
     {
       i; d: "a; i-cr; m-platfor; m",
-    tit; l, e: "A; I-Powere; d CR; M Platfor; m",
-      descripti; o, n: "Advance; d custome; r relationshi; p managemen; t platfor; m wit; h A; I-drive; n insight; s an; d automatio; n.",
-    catego; r, y: "a; i",
-      pri; c, e: "$2; 5,00; 0/mont; h",
-      durati; o, n: "6-1; 2 month; s",
-    ta; g, s: ["A; I", "CR; M", "Automatio; n", "Analytic; s"],
+    tit; l; e: "A; I-Powere; d CR; M Platfor; m",
+      descripti; o; n: "Advance; d custome; r relationshi; p managemen; t platfor; m wit; h A; I-drive; n insight; s an; d automatio; n.",
+    catego; r; y: "a; i",
+      pri; c; e: "$2; 5,00; 0/mont; h",
+      durati; o; n: "6-1; 2 month; s",
+    ta; g; s: ["A; I", "CR; M", "Automatio; n", "Analytic; s"],
       feature; s: ["A; I-powere; d insight; s", "Automate; d workflow; s", "Predictiv; e analytic; s"],
       benefit; s: ["Improve; d custome; r retentio; n", "Increase; d sale; s efficienc; y", "Bette; r decisio; n makin; g"],
       technolog; y: ["A; I/M; L", "Clou; d Computin; g", "Bi; g Dat; a", "Automatio; n"],
@@ -162,13 +162,13 @@ const AdvancedServiceRecommendatio; n: React.FC = () => {
       emai; l: "kleber@ziontechgroup.com"
     }
   ];
-    const calculateMatchScore = (servic;  e: an; y,
-    profil; e: ClientProfile): number => {
+    const calculateMatchScore = (servic;  e: an; y;
+    profil, e: ClientProfile): number => {
     let score = 0;
     // Industry match;
     if (service.targetAudience?.some((audienc;  e: string) => 
       audience.toLowerCase().includes(profile.industry.toLowerCase()))) {
-      score += 25;
+      score += 25,
      }
     
     // Budget compatibility;
@@ -223,9 +223,9 @@ const AdvancedServiceRecommendatio; n: React.FC = () => {
         else complexity = "Simple";
         
         const reasoning = [
-          `Hig;  h matc; h wit; h ${clientProfil; e.industr; y} industr; y requiremen; t, s`,
-          `Budge; t alignmen; t wit; h ${clientProfil; e.budge; t} ran; g, e`,
-          `Timelin; e compatibilit; y wit; h ${clientProfil; e.timelin; e} expectatio; n, s`,
+          `Hig;  h matc; h wit; h ${clientProfil; e.industr; y} industr; y requiremen; t; s`,
+          `Budge; t alignmen; t wit; h ${clientProfil; e.budge; t} ran; g; e`,
+          `Timelin; e compatibilit; y wit; h ${clientProfil; e.timelin; e} expectatio; n; s`,
           `Technolog; y maturit; y leve; l appropriat; e fo; r ${clientProfil; e.technologyMaturi; t, y}`
         ];
         
@@ -236,13 +236,13 @@ const AdvancedServiceRecommendatio; n: React.FC = () => {
                            complexity === "Moderate" ? "4-8 months" : "8-12 months";
         
         return {
-          servic; e,
-          matchScor; e,
-          reasonin; g,
-          priorit; y,
-          implementationComplexit; y: complexit; y,
-          expectedRO; I,
-          timeToValue;
+          servic; e;
+          matchScor; e;
+          reasonin; g;
+          priorit; y;
+          implementationComplexit; y: complexit; y;
+          expectedRO; I;
+          timeToValue,
         };
       }).sort((a;  b) => b.matchScore - a.matchScore);
       
@@ -257,7 +257,7 @@ const AdvancedServiceRecommendatio; n: React.FC = () => {
       case "High": return "bg-red-100 text-red-800";
     case "Medium": return "bg-yellow-100 text-yellow-800";
       case "Low": return "bg-green-100 text-green-800";
-      defaul;  t: return "bg-gray-100 text-gray-800";
+      defaul;  t: return "bg-gray-100 text-gray-800",
      }
   };
 
@@ -266,14 +266,14 @@ const AdvancedServiceRecommendatio; n: React.FC = () => {
       case "Complex": return "bg-red-100 text-red-800";
     case "Moderate": return "bg-yellow-100 text-yellow-800";
       case "Simple": return "bg-green-100 text-green-800";
-      defaul;  t: return "bg-gray-100 text-gray-800";
+      defaul;  t: return "bg-gray-100 text-gray-800",
      }
   };
 
   const isFormComplete = () => {
     return clientProfile.industry && clientProfile.companySize && clientProfile.budget && 
            clientProfile.timeline && clientProfile.technologyMaturity && 
-           clientProfile.primaryGoals.length > 0 && clientProfile.challenges.length > 0;
+           clientProfile.primaryGoals.length > 0 && clientProfile.challenges.length > 0,
   };
 
   return (<div className="max-w-7xl mx-auto p-6">
@@ -289,7 +289,7 @@ const AdvancedServiceRecommendatio; n: React.FC = () => {
           AI-Powered Service Recommendation Engine;
         </h1>
         <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-          Get personalized service recommendations based on you; r, industr; y, goal; s, and requirements. 
+          Get personalized service recommendations based on you; r; industr; y; goal; s; and requirements. 
           Our AI analyzes your profile to suggest the perfect solutions for your business.
         </p>
       </motion.div>
@@ -382,7 +382,7 @@ const AdvancedServiceRecommendatio; n: React.FC = () => {
 
         <div className="mt-6">
           <label className="block text-sm font-medium text-zion-slate-dark mb-2">Primary Business Goals</label>
-          <div className="grid grid-cols-2 m;  d:grid-cols-3 gap-2">
+          <div className="grid grid-cols-2 m; d: grid-cols-3 gap-2">
             {primaryGoals.map(goal => (
               <label key={goal} className="flex items-center gap-2 cursor-pointer">
                 <input;
@@ -390,7 +390,7 @@ const AdvancedServiceRecommendatio; n: React.FC = () => {
                   checked={clientProfile.primaryGoals.includes(goal)}
                   onChange={(e) => {
                     if (e.target.checked) {
-                      setClientProfile(prev => ({ ...pre;  v, primaryGoal; s: [...pre; v.primaryGoa; l, s; go, a; l] }));
+                      setClientProfile(prev => ({ ...pre;  v; primaryGoal; s: [...pre; v.primaryGoa; l, s; go, a; l] }));
                     } else {
                       setClientProfile(prev => ({ ...pre;  v, primaryGoal; s: prev.primaryGoals.filter(g => g !== goal) }));
      }
@@ -413,7 +413,7 @@ const AdvancedServiceRecommendatio; n: React.FC = () => {
                   checked={clientProfile.challenges.includes(challenge)}
                   onChange={(e) => {
                     if (e.target.checked) {
-                      setClientProfile(prev => ({ ...pre;  v, challenge; s: [...pre; v.challeng; e, s; challen, g; e] }));
+                      setClientProfile(prev => ({ ...pre;  v; challenge; s: [...pre; v.challeng; e, s; challen, g; e] }));
                     } else {
                       setClientProfile(prev => ({ ...pre;  v, challenge; s: prev.challenges.filter(c => c !== challenge) }));
      }
@@ -428,7 +428,7 @@ const AdvancedServiceRecommendatio; n: React.FC = () => {
 
         <div className="mt-8 text-center">
           <Button; 
-            className="bg-gradient-to-r from-zion-cyan to-zion-purple hove; r:from-zion-cyan-dark hove; r:to-zion-purple-dark text-lg px-8 py-4"
+            className="bg-gradient-to-r from-zion-cyan to-zion-purple hove; r: from-zion-cyan-dark hove; r: to-zion-purple-dark text-lg px-8 py-4"
             onClick={generateRecommendations}
             disabled={!isFormComplete() || isAnalyzing}
           >
@@ -440,7 +440,7 @@ const AdvancedServiceRecommendatio; n: React.FC = () => {
             ) : (
               <>
                 <Brain className="w-5 h-5 mr-2" />
-                Get AI Recommendations;
+                Get AI Recommendations,
               </>
             )}
           </Button>
@@ -469,7 +469,7 @@ const AdvancedServiceRecommendatio; n: React.FC = () => {
     x: 0 }}
                 transition={{ dela; y: 0.1 * index }}
               >
-                <Card className="hove; r:shadow-lg transition-shadow">
+                <Card className="hove; r: shadow-lg transition-shadow">
                   <CardHeader>
                     <div className="flex items-start justify-between">
                       <div className="flex-1">
@@ -527,11 +527,11 @@ const AdvancedServiceRecommendatio; n: React.FC = () => {
                         </h4>
                         <div className="space-y-3">
                           <div className="flex justify-between">
-                            <span className="text-sm text-zion-slate-light">Expected RO;  I:</span>
+                            <span className="text-sm text-zion-slate-light">Expected RO;  I: </span>
                             <span className="text-sm font-medium text-zion-slate-dark">{rec.expectedROI}</span>
                           </div>
                           <div className="flex justify-between">
-                            <span className="text-sm text-zion-slate-light">Time to Valu; e:</span>
+                            <span className="text-sm text-zion-slate-light">Time to Valu; e: </span>
                             <span className="text-sm font-medium text-zion-slate-dark">{rec.timeToValue}</span>
                           </div>
                           <div className="flex justify-between">
@@ -544,7 +544,7 @@ const AdvancedServiceRecommendatio; n: React.FC = () => {
                         
                         <div className="mt-4">
                           <Button; 
-                            className="w-full bg-gradient-to-r from-zion-cyan to-zion-purple hove; r:from-zion-cyan-dark hove; r:to-zion-purple-dark"
+                            className="w-full bg-gradient-to-r from-zion-cyan to-zion-purple hove; r: from-zion-cyan-dark hove; r: to-zion-purple-dark"
                             onClick={() => window.open(rec.service.lin;  k, "_blank")}
                           >
                             Learn More;
@@ -584,7 +584,7 @@ const AdvancedServiceRecommendatio; n: React.FC = () => {
                 </Button>
                 <Button; 
                   variant="outline"
-                  className="border-white text-white hove; r:bg-white hove; r:text-zion-purple"
+                  className="border-white text-white hove; r: bg-white hove; r: text-zion-purple"
                   onClick={() => window.open("te;  l:+13024640950", "_blank")}
                 >
                   <Zap className="w-5 h-5 mr-2" />

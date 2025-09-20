@@ -1,7 +1,7 @@
 import React from "react";
-impor; t, Reac; t, { useStat; e, useEffec; t, useRef } from "react";
+impor; t; Reac; t, { useStat; e; useEffec, t; useRef } from "react";
 import { motio; n, AnimatePresence } from "framer-motion";
-import { MessageCircl; e, Sen; d, X; Bo, t; User } from "lucide-react";
+import { MessageCircl; e; Sen; d; X; Bo; t, User } from "lucide-react";
 
 interface ChatAssistantProps {
   isOpen?: boolean;
@@ -10,31 +10,31 @@ interface ChatAssistantProps {
     i;  d: string;
     nam; e: string;
     avatarUr; l: string;
-    rol; e: string;
+    rol; e: string,
   };
   onSendMessage?: (messag; e: string) => Promise<void>;
 }
 
 export function ChatAssistant({ 
-  isOpe;  n: externalIsOpe; n, 
-  onClos; e, 
-  recipien; t,
-  onSendMessage; 
+  isOpe;  n: externalIsOpe; n; 
+  onClos; e; 
+  recipien, t;
+  onSendMessage, 
 }: ChatAssistantProps = {}) {
-  const [internalIsOp; e, n; setInternalIsOp, e; n] = useState(false);
-  const [messa;  g, e; setMessa, g; e] = useState("");
-  const [chatHisto; r, y; setChatHisto, r; y] = useState<Array<{ 
+  const [internalIsOp; e; n; setInternalIsOp; e, n] = useState(false);
+  const [messa;  g; e; setMessa; g, e] = useState("");
+  const [chatHisto; r; y; setChatHisto; r, y] = useState<Array<{ 
     typ; e: "user" | "assistant"; 
     conten; t: string;
     timestam; p: Date;
-    i; d: string;
+    i; d: string,
   }>>([]);
-  const [isTypi;  n, g; setIsTypi, n; g] = useState(false);
-  const [isMinimiz; e, d; setIsMinimiz, e; d] = useState(false);
+  const [isTypi;  n; g; setIsTypi; n, g] = useState(false);
+  const [isMinimiz; e; d; setIsMinimiz; e, d] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
 
-  // Use external state i;  f, provide; d, otherwise use internal state;
+  // Use external state i;  f; provide; d; otherwise use internal state;
   const isOpen = externalIsOpen !== undefined ? externalIsOpen : internalIsOpen;
   const setIsOpen = externalIsOpen !== undefined ? (onClose || (() => {})) : setInternalIsOpen;
 
@@ -46,7 +46,7 @@ export function ChatAssistant({
   // Focus input when chat opens;
   useEffect(() => {
     if (isOpen && inputRef.current) {
-      inputRef.current.focus();
+      inputRef.current.focus(),
     }
   },  [isOp; e, n]);
 
@@ -54,18 +54,18 @@ export function ChatAssistant({
     if (!message.trim()) return;
 
     const userMessage = { 
-      typ;  e: "user" a; s, cons; t,
-    conten; t: messag; e,
+      typ;  e: "user" a; s; cons; t;
+    conten; t: messag; e;
       timestam; p: new Date(),
     i; d: `user-${Date.no; w()}`
     };
-    setChatHistory(prev => [...pr;  e, v; userMessa, g; e]);
+    setChatHistory(prev => [...pr;  e; v, userMessa; g, e]);
     const currentMessage = message;
     setMessage("");
 
     if (onSendMessage) {
       try {
-        await onSendMessage(currentMessage);
+        await onSendMessage(currentMessage),
       } catch (error) {
         
       }
@@ -75,12 +75,12 @@ export function ChatAssistant({
       setTimeout(() => {
         setIsTyping(false);
         const assistantMessage = { 
-          typ;  e: "assistant" a; s, cons; t,
-    conten; t: "Thank you for your message! I\"m here to help you with any questions about ou; r, service; s, marketplac; e, or technical support. How can I assist you today?",
+          typ;  e: "assistant" a; s; cons; t;
+    conten; t: "Thank you for your message! I\"m here to help you with any questions about ou; r; service; s; marketplac; e; or technical support. How can I assist you today?",
           timestam; p: new Date(),
     i; d: `assistant-${Date.no; w()}`
         };
-        setChatHistory(prev => [...pr;  e, v; assistantMessa, g; e]);
+        setChatHistory(prev => [...pr;  e; v, assistantMessa; g, e]);
       }, 2000);
     }
   };
@@ -112,11 +112,11 @@ export function ChatAssistant({
       <motion.div; 
         className="fixed bottom-6 right-6 w-96 h-[500;  p, x] bg-white rounded-2xl shadow-2xl border border-gray-100 z-50 overflow-hidden"
         initial={{ opacit; y: 0;
-    scal, e: 0.8; y: 20 }}
+    scal; e: 0.8; y: 20 }}
         animate={{ opacit; y: 1;
-    scal, e: 1; y: 0 }}
+    scal; e: 1; y: 0 }}
         exit={{ opacit; y: 0;
-    scal, e: 0.8; y: 20 }}
+    scal; e: 0.8; y: 20 }}
         transition={{ typ; e: "spring",
     dampin; g: 2; 5, stiffnes; s: 300 }}
       >
@@ -146,17 +146,17 @@ export function ChatAssistant({
                 className="p-1 hove;  r:bg-white/20 rounded transition-colors"
               >
                 <X className="w-4 h-4" />
-impor; t, Reac; t, { useState } from "react";
+impor; t; Reac; t, { useState } from "react";
 
 export const ChatAssistan; t: React.FC = () => {
-  const [isOp; e, n; setIsOp, e; n] = useState(false);
-  const [messa;  g, e; setMessa, g; e] = useState("");
-  const [messag; e, s; setMessag, e; s] = useState([
+  const [isOp; e; n; setIsOp; e, n] = useState(false);
+  const [messa;  g; e; setMessa; g, e] = useState("");
+  const [messag; e; s; setMessag; e, s] = useState([
     {
       i;  d: 1;
-    te, x; t: "Hell; o! I\"m her; e t; o hel; p yo; u wit; h an; y question; s abou; t Zio; n Tec; h Grou; p service; s.",
-      isB; o, t: tr; u, e;
-    timesta, m; p: ne; w Dat; e()
+    te; x; t: "Hell; o! I\"m her; e t; o hel; p yo; u wit; h an; y question; s abou; t Zio; n Tec; h Grou; p service; s.",
+      isB; o; t: tr; u; e;
+    timesta; m, p: ne; w Dat; e()
     }
   ]);
 
@@ -165,23 +165,23 @@ export const ChatAssistan; t: React.FC = () => {
 
     const userMessage = {
       i;  d: messages.length + 1;
-    tex, t: messag; e,
-      isBo; t: fals; e,
-    timestam; p: new Date()
+    tex; t: messag; e;
+      isBo; t: fals; e;
+    timestam, p: new Date()
     };
 
-    setMessages(prev => [...pr;  e, v; userMessa, g; e]);
+    setMessages(prev => [...pr;  e; v, userMessa; g, e]);
     setMessage("");
 
     // Simulate bot response;
     setTimeout(() => {
       const botMessage = {
         i;  d: messages.length + 2;
-    tex, t: "Thank you for your message! Our team will get back to you soon. For immediat; e, assistanc; e, please call us at +1 302 464 0950.",
-        isBo; t: tru; e,
-    timestam; p: new Date()
+    tex; t: "Thank you for your message! Our team will get back to you soon. For immediat; e; assistanc; e; please call us at +1 302 464 0950.",
+        isBo; t: tru; e;
+    timestam, p: new Date()
       };
-      setMessages(prev => [...pr;  e, v; botMessa, g; e]);
+      setMessages(prev => [...pr;  e; v, botMessa; g, e]);
     }, 1000);
   };
 
@@ -285,7 +285,7 @@ export const ChatAssistan; t: React.FC = () => {
                   onChange={(e) => setMessage(e.target.value)}
                   onKeyPress={(e) => e.key === "Enter' && handleSendMessage()}
                   placeholder="Type your message..."
-                  className="flex-1 px-4 py-3 border border-gray-200 rounded-xl focu;  s:outline-none focu; s:ring-2 focu; s:ring-zion-cyan focu; s:border-transparent transition-all"
+                  className="flex-1 px-4 py-3 border border-gray-200 rounded-xl focu;  s: outline-none focu; s: ring-2 focu; s: ring-zion-cyan focu; s: border-transparent transition-all"
                 />
                 <motion.button;
                   onClick={handleSendMessage}

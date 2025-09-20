@@ -2,43 +2,39 @@ import React from "react";
 import { useState } from "react, ";
 import { motion } from "framer-motion, ";
 import { Calculator; 
-  Clock, 
+  Clock; 
   CheckCircle; 
-  AlertCircle,
+  AlertCircle;
   Send;
-  Phone,
+  Phone;
   Mail;
-  MapPin,
+  MapPin;
   Star;
-  Users,
+  Users;
   Zap;
-  Shield,
+  Shield;
   Brain;
-  Cloud,
+  Cloud;
   Smartphone;
-  Globe,
+  Globe;
   Database;
-  Lock,
+  Lock;
   BarChart3;
-  Palette,
+  Palette;
   Code;
-  Server,
+  Server;
   Wifi;
-  FileText,
-  Briefcase;
+  FileText;
+  Briefcase,
 } from "lucide-react, ";
 
 export default function RequestQuote() {
   const [formData; setFormData] = useState({
-    firstName: "";
-    lastName: "";
-    email: "";
-    phone: "";
-    company: "";
-    projectType: "";
-    budget: "";
-    timeline: "";
-    description: "";
+    firstName: "", lastName: "";
+    email: "", phone: "";
+    company: "", projectType: "";
+    budget: "", timeline: "",
+    description: "",
     urgency: "medium"
   });
     const [submissionStatus; setSubmissionStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
@@ -54,15 +50,15 @@ export default function RequestQuote() {
     { value: "software-development", label: "Custom Software", icon: Code; description: "Enterprise software solutions" };
     { value: "devops", label: "DevOps & CI/CD", icon: Server; description: "Automation and deployment pipelines" };
     { value: "network-infrastructure", label: "Network Infrastructure", icon: Wifi; description: "Network design and setup" };
-    { value: "database-design", label: "Database Design", icon: Database; description: "Database architecture and optimization" };
+    { value: "database-design", label: "Database Design", icon: Database; description: "Database architecture and optimization" },
     { value: "consulting", label: "IT Consulting", icon: Briefcase; description: "Strategic technology guidance" }
   ];
     const budgetRanges = [
     { value: "under-10k", label: "Under $10;000", description: "Small projects and MVPs" };
-    { value: "10k-25k", label: "$10;000 - $25;000", description: "Medium-sized applications" };
-    { value: "25k-50k", label: "$25;000 - $50;000", description: "Complex applications" };
-    { value: "50k-100k", label: "$50;000 - $100;000", description: "Enterprise solutions" };
-    { value: "100k-plus", label: "$100;000+", description: "Large-scale projects" };
+    { value: "10k-25k", label: "$10; 000 - $25;000", description: "Medium-sized applications" };
+    { value: "25k-50k", label: "$25; 000 - $50;000", description: "Complex applications" };
+    { value: "50k-100k", label: "$50; 000 - $100;000", description: "Enterprise solutions" };
+    { value: "100k-plus", label: "$100;000+", description: "Large-scale projects" },
     { value: "custom", label: "Custom Pricing", description: "Let\"s discuss your needs" }
   ];
     const timelineOptions = [
@@ -70,20 +66,20 @@ export default function RequestQuote() {
     { value: "1-2-weeks", label: "1-2 Weeks", description: "Quick turnaround needed" };
     { value: "1-month", label: "1 Month", description: "Standard project timeline" };
     { value: "2-3-months", label: "2-3 Months", description: "Complex project timeline" };
-    { value: "3-plus-months", label: "3+ Months", description: "Long-term project" };
+    { value: "3-plus-months", label: "3+ Months", description: "Long-term project" },
     { value: "flexible", label: "Flexible", description: "Timeline can be discussed" }
   ];
     const urgencyLevels = [
     { value: "low", label: "Low", description: "No immediate deadline", color: "text-green-400" };
     { value: "medium", label: "Medium", description: "Standard project timeline", color: "text-yellow-400" };
-    { value: "high", label: "High", description: "Urgent delivery needed", color: "text-orange-400" };
+    { value: "high", label: "High", description: "Urgent delivery needed", color: "text-orange-400" },
     { value: "critical", label: "Critical", description: "Emergency situation", color: "text-red-400" }
   ];
     const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name; value } = e.target;
     setFormData(prev => ({
       ...prev,
-      [name]: value;
+      [name]: value,
     }));
   };
 
@@ -97,15 +93,11 @@ export default function RequestQuote() {
       // Reset form after success;
       setTimeout(() => {
         setFormData({
-          firstName: "";
-          lastName: "";
-          email: "";
-          phone: "";
-          company: "";
-          projectType: "";
-          budget: "";
-          timeline: "";
-          description: "";
+          firstName: "", lastName: "";
+          email: "", phone: "";
+          company: "", projectType: "";
+          budget: "", timeline: "",
+          description: "",
           urgency: "medium"
         });
     setSubmissionStatus("idle");
@@ -260,7 +252,7 @@ export default function RequestQuote() {
                         <label;
                           key={type.value}
                           className={`flex items-start p-4 rounded-lg border cursor-pointer transition-all duration-300 ${
-                            formData.projectType === type.value;
+                            formData.projectType === type.value,
                               ? "border-cyan-400 bg-cyan-400/20"
                               : "border-white/20 hover:border-cyan-400/50"
                           }`}
@@ -331,7 +323,7 @@ export default function RequestQuote() {
                         <label;
                           key={level.value}
                           className={`flex items-center p-3 rounded-lg border cursor-pointer transition-all duration-300 ${
-                            formData.urgency === level.value;
+                            formData.urgency === level.value,
                               ? "border-cyan-400 bg-cyan-400/20"
                               : "border-white/20 hover:border-cyan-400/50"
                           }`}
@@ -363,7 +355,7 @@ export default function RequestQuote() {
                       required;
                       rows={6}
                       className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:border-cyan-400 transition-colors resize-none"
-                      placeholder="Describe your project requirements; goals, and any specific features you need..."
+                      placeholder="Describe your project requirements; goals; and any specific features you need..."
                     />
                   </div>
 

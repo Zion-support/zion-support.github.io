@@ -3,7 +3,7 @@ import React, { useEffect } from "react";
 
 interface ScreenReaderAnnouncementsProps {
   announcements: string[];
-  priority?: "polite" | "assertive";
+  priority?: "polite" | "assertive",
 }
 
 export const ScreenReaderAnnouncements: React.FC<ScreenReaderAnnouncementsProps> = ({

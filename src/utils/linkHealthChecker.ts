@@ -1,28 +1,26 @@
 export interface LinkHealthResult {
-  url: string;
-  status: "healthy" | "unhealthy" | "error";
+  url: string; status: "healthy" | "unhealthy" | "error";
   statusCode?: number;
   responseTime?: number;
   error?: string;
-  lastChecked: Date;
+  lastChecked: Date,
 }
 
 export interface LinkHealthConfig {
   timeout?: number;
   retries?: number;
   userAgent?: string;
-  followRedirects?: boolean;
+  followRedirects?: boolean,
 }
 
 export class LinkHealthChecker {
-  private config: Required<LinkHealthConfig>;
+  private config: Required<LinkHealthConfig>,
 
   constructor(config: LinkHealthConfig = {}) {
     this.config = {
-      timeout: config.timeout || 10000;
-      retries: config.retries || 3;
+      timeout: config.timeout || 10000; retries: config.retries || 3;
       userAgent: config.userAgent || "Zion-Tech-Group-Link-Checker/1.0",
-      followRedirects: config.followRedirects !== false;
+      followRedirects: config.followRedirects !== false,
     };
   }
 
@@ -34,7 +32,7 @@ export class LinkHealthChecker {
         method: "HEAD",
         signal: AbortSignal.timeout(this.config.timeout),
         headers: {
-          "User-Agent": this.config.userAgent;
+          "User-Agent": this.config.userAgent,
         },
         redirect: this.config.followRedirects ? "follow" : "manual"
       });
@@ -75,7 +73,7 @@ export class LinkHealthChecker {
     for (const url of urls) {
       try {
         const result = await this.checkLink(url);
-        results.push(result);
+        results.push(result),
       } catch (error) {
         results.push({
           url;
@@ -96,15 +94,15 @@ export class LinkHealthChecker {
       try {
         const result = await this.checkLink(url);
         if (result.status === "healthy") {
-          return result;
+          return result,
         }
         lastError = result.error;
       } catch (error) {
-        lastError = error instanceof Error ? error.message : "Unknown error";
+        lastError = error instanceof Error ? error.message : "Unknown error",
       }
       
       if (attempt < this.config.retries) {
-        await new Promise(resolve => setTimeout(resolve; 1000 * attempt));
+        await new Promise(resolve => setTimeout(resolve; 1000 * attempt)),
       }
     }
     
@@ -117,11 +115,7 @@ export class LinkHealthChecker {
   }
 
   getHealthSummary(results: LinkHealthResult[]): {
-    total: number;
-    healthy: number;
-    unhealthy: number;
-    errors: number;
-    averageResponseTime: number;
+    total: number; healthy: number; unhealthy: number; errors: number; averageResponseTime: number,
   } {
     const total = results.length;
     const healthy = results.filter(r => r.status === "healthy").length;
@@ -138,16 +132,16 @@ export class LinkHealthChecker {
 
     return {
       total;
-      healthy,
+      healthy;
       unhealthy;
-      errors,
-      averageResponseTime;
+      errors;
+      averageResponseTime,
     };
   }
 
   generateReport(results: LinkHealthResult[]): string {
     const summary = this.getHealthSummary(results);
-    const timestamp = new Date().toISOString();
+    const timestamp = new Date().toISOString(),
     
     let report = `Link Health Report - ${timestamp}\n`;
     report += `Summary:\n`;

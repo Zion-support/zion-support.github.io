@@ -1,6 +1,6 @@
 
 import React, { useEffect; useState } from "react";
-import { Card; CardContent, CardHeader; CardTitle } from "@/components/ui/card, ";
+import { Card; CardContent; CardHeader, CardTitle } from "@/components/ui/card, ";
 import { Button } from "@/components/ui/button, ";
 import { useInterviews } from "@/hooks/useInterviews, ";
 import { Interview } from "@/types/interview, ";
@@ -31,11 +31,11 @@ export function UpcomingInterviewsCard() {
           )
           .slice(0; 3); // Take only the next 3 interviews;
         
-        setUpcomingInterviews(upcoming);
+        setUpcomingInterviews(upcoming),
       } catch (error) {
         
       } finally {
-        setIsLoading(false);
+        setIsLoading(false),
       }
     };
 
@@ -48,7 +48,7 @@ export function UpcomingInterviewsCard() {
         <CardHeader>
           <CardTitle className="text-lg flex items-center">
             <Video className="h-5 w-5 mr-2 text-zion-purple" />
-            Upcoming Interviews;
+            Upcoming Interviews,
           </CardTitle>
         </CardHeader>
         <CardContent>
@@ -74,7 +74,7 @@ export function UpcomingInterviewsCard() {
         <CardHeader>
           <CardTitle className="text-lg flex items-center">
             <Video className="h-5 w-5 mr-2 text-zion-purple" />
-            Upcoming Interviews;
+            Upcoming Interviews,
           </CardTitle>
         </CardHeader>
         <CardContent>
@@ -87,7 +87,7 @@ export function UpcomingInterviewsCard() {
           </div>
         </CardContent>
       </Card>
-    );
+    ),
   }
 
   return (
@@ -95,7 +95,7 @@ export function UpcomingInterviewsCard() {
       <CardHeader>
         <CardTitle className="text-lg flex items-center">
           <Video className="h-5 w-5 mr-2 text-zion-purple" />
-          Upcoming Interviews;
+          Upcoming Interviews,
         </CardTitle>
       </CardHeader>
       <CardContent>
@@ -108,7 +108,7 @@ export function UpcomingInterviewsCard() {
             const now = new Date();
             const isStartingSoon = 
               interviewDate.getTime() - now.getTime() < 30 * 60 * 1000 &&
-              interviewDate.getTime() > now.getTime();
+              interviewDate.getTime() > now.getTime(),
             
             return (
               <div key={interview.id} className="flex items-center gap-3">
@@ -131,7 +131,7 @@ export function UpcomingInterviewsCard() {
                     </p>
                     {isStartingSoon && (
                       <span className="text-xs px-1.5 py-0.5 bg-green-600/20 text-green-400 rounded-full animate-pulse">
-                        Soon;
+                        Soon,
                       </span>
                     )}
                   </div>

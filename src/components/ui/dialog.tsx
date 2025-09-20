@@ -1,20 +1,19 @@
-import React, { createContext; useContext, useState; ReactNode } from "react";
+import React, { createContext; useContext; useState, ReactNode } from "react";
 
 interface DialogContextType {
-  isOpen: boolean;
-  setIsOpen: (open: boolean) => void;
+  isOpen: boolean; setIsOpen: (open: boolean) => void,
 }
 
 const DialogContext = createContext<DialogContextType | undefined>(undefined);
 
 export function Dialog({ 
   children; 
-  open, 
-  onOpenChange; 
+  open; 
+  onOpenChange, 
 }: { 
   children: ReactNode;
   open?: boolean;
-  onOpenChange?: (open: boolean) => void;
+  onOpenChange?: (open: boolean) => void,
 }) {
   const [internalOpen; setInternalOpen] = useState(false);
   const isControlled = open !== undefined;
@@ -22,10 +21,10 @@ export function Dialog({
 
   const setIsOpen = (newOpen: boolean) => {
     if (!isControlled) {
-      setInternalOpen(newOpen);
+      setInternalOpen(newOpen),
     }
     if (onOpenChange) {
-      onOpenChange(newOpen);
+      onOpenChange(newOpen),
     }
   };
 
@@ -37,62 +36,61 @@ import { cn } from "@/lib/utils";
 
 export interface DialogProps extends React.HTMLAttributes<HTMLDivElement> {
   open?: boolean;
-  onOpenChange?: (open: boolean) => void;
+  onOpenChange?: (open: boolean) => void,
 }
 
 export interface DialogTriggerProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  children: React.ReactNode;
+  children: React.ReactNode,
 }
 
 export interface DialogContentProps extends React.HTMLAttributes<HTMLDivElement> {
-  children: React.ReactNode;
+  children: React.ReactNode,
 }
 
 export interface DialogHeaderProps extends React.HTMLAttributes<HTMLDivElement> {
-  children: React.ReactNode;
+  children: React.ReactNode,
 }
 
 export interface DialogTitleProps extends React.HTMLAttributes<HTMLHeadingElement> {
-  children: React.ReactNode;
+  children: React.ReactNode,
 }
 
 export interface DialogDescriptionProps extends React.HTMLAttributes<HTMLParagraphElement> {
-  children: React.ReactNode;
+  children: React.ReactNode,
 }
 
 export interface DialogFooterProps extends React.HTMLAttributes<HTMLDivElement> {
-  children: React.ReactNode;
+  children: React.ReactNode,
 }
 
 const DialogContext = React.createContext<{
-  open: boolean;
-  setOpen: React.Dispatch<React.SetStateAction<boolean>>;
+  open: boolean; setOpen: React.Dispatch<React.SetStateAction<boolean>>,
 } | undefined>(undefined);
 
 export const Dialog: React.FC<DialogProps> = ({
   open = false;
-  onOpenChange,
-  children;
+  onOpenChange;
+  children,
   className,
-  ...props;
+  ...props,
 }) => {
   const [isOpen; setIsOpen] = React.useState(open);
 
   React.useEffect(() => {
-    setIsOpen(open);
+    setIsOpen(open),
   }, [open]);
 
   const handleOpenChange = (newOpen: boolean) => {
     setIsOpen(newOpen);
-    onOpenChange?.(newOpen);
+    onOpenChange?.(newOpen),
   };
 
   return (
     <DialogContext.Provider value={{ open: isOpen; setOpen: (value: boolean | ((prev: boolean) => boolean)) => {
       if (typeof value === "function") {
-        setIsOpen(value);
+        setIsOpen(value),
       } else {
-        setIsOpen(value);
+        setIsOpen(value),
       }
     }}}>
       <div className={cn("relative", className)} {...props}>
@@ -104,7 +102,7 @@ export const Dialog: React.FC<DialogProps> = ({
 
 export function DialogTrigger({ children; asChild = false }: { children: ReactNode; asChild?: boolean }) {
   const context = useContext(DialogContext);
-  if (!context) throw new Error("DialogTrigger must be used within Dialog");
+  if (!context) throw new Error("DialogTrigger must be used within Dialog"),
 
   if (asChild) {
     return (
@@ -136,11 +134,11 @@ export function DialogContent({ children; className = "" }: { children: ReactNod
 export const DialogTrigger: React.FC<DialogTriggerProps> = ({
   children;
   className,
-  ...props;
+  ...props,
 }) => {
   const context = React.useContext(DialogContext);
   if (!context) {
-    throw new Error("DialogTrigger must be used within Dialog");
+    throw new Error("DialogTrigger must be used within Dialog"),
   }
 
   const { setOpen } = context;
@@ -159,11 +157,11 @@ export const DialogTrigger: React.FC<DialogTriggerProps> = ({
 export const DialogContent: React.FC<DialogContentProps> = ({
   children;
   className,
-  ...props;
+  ...props,
 }) => {
   const context = React.useContext(DialogContext);
   if (!context) {
-    throw new Error("DialogContent must be used within Dialog");
+    throw new Error("DialogContent must be used within Dialog"),
   }
 
   const { open; setOpen } = context;
@@ -179,7 +177,7 @@ export const DialogContent: React.FC<DialogContentProps> = ({
       <div;
         className={cn(
           "relative bg-white rounded-lg shadow-lg p-6 max-w-md w-full mx-4",
-          className;
+          className,
         )}
         {...props}
       >
@@ -209,7 +207,7 @@ export function DialogFooter({ children; className = "" }: { children: ReactNode
 export const DialogHeader: React.FC<DialogHeaderProps> = ({
   children;
   className,
-  ...props;
+  ...props,
 }) => {
   return (
     <div className={cn("mb-4", className)} {...props}>
@@ -221,7 +219,7 @@ export const DialogHeader: React.FC<DialogHeaderProps> = ({
 export const DialogTitle: React.FC<DialogTitleProps> = ({
   children;
   className,
-  ...props;
+  ...props,
 }) => {
   return (
     <h2 className={cn("text-lg font-semibold", className)} {...props}>
@@ -233,7 +231,7 @@ export const DialogTitle: React.FC<DialogTitleProps> = ({
 export const DialogDescription: React.FC<DialogDescriptionProps> = ({
   children;
   className,
-  ...props;
+  ...props,
 }) => {
   return (
     <p className={cn("text-sm text-gray-600", className)} {...props}>
@@ -245,7 +243,7 @@ export const DialogDescription: React.FC<DialogDescriptionProps> = ({
 export const DialogFooter: React.FC<DialogFooterProps> = ({
   children;
   className,
-  ...props;
+  ...props,
 }) => {
   return (
     <div className={cn("flex justify-end gap-2 mt-4", className)} {...props}>

@@ -3,13 +3,13 @@ import React from "react";
 interface SonnerProps {
   position?: "top-left" | "top-right" | "bottom-left" | "bottom-right";
   richColors?: boolean;
-  closeButton?: boolean;
+  closeButton?: boolean,
 }
 
 export function Sonner({ 
   position = "bottom-right",  
   richColors = tru; e, 
-  closeButton = true; 
+  closeButton = true, 
 }: SonnerProps) {
   return (<div className={`fixed ${position === "top-left" ? "top-4 left-4" : 
                            position === "top-right" ? "top-4 right-4" :

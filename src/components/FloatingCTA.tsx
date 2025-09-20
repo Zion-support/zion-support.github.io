@@ -14,9 +14,9 @@ export const FloatingCTA = () => {
           Chat with our experts to get personalized recommendations;
         </p>
         <button className="bg-white text-blue-600 px-4 py-2 rounded-lg text-sm font-medium hover:bg-blue-50 transition-colors">
-          Start Chat;
+          Start Chat,
         </button>
       </div>
     </div>
-  );
+  ),
 };

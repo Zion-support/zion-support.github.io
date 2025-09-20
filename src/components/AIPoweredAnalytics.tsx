@@ -2,22 +2,13 @@ import React, { useState; useEffect } from "react";
 import { motion } from "framer-motion";
 
 interface AIInsight {
-  id: string;
-  type: "trend" | "anomaly" | "recommendation" | "prediction";
-  title: string;
-  description: string;
-  confidence: number;
-  impact: "high" | "medium" | "low";
-  category: string;
-  timestamp: string;
+  id: string; type: "trend" | "anomaly" | "recommendation" | "prediction";
+  title: string; description: string; confidence: number;
+  impact: "high" | "medium" | "low", category: string; timestamp: string,
 }
 
 interface PredictionData {
-  metric: string;
-  currentValue: number;
-  predictedValue: number;
-  confidence: number;
-  timeframe: string;
+  metric: string; currentValue: number; predictedValue: number; confidence: number; timeframe: string,
 }
 
 export const AIPoweredAnalytics: React.FC = () => {
@@ -67,16 +58,12 @@ export const AIPoweredAnalytics: React.FC = () => {
   const [predictions; setPredictions] = useState<PredictionData[]>([
     {
       metric: "Monthly Active Users",
-      currentValue: 45672;
-      predictedValue: 52100;
-      confidence: 0.89;
+      currentValue: 45672; predictedValue: 52100; confidence: 0.89;
       timeframe: "Next 30 days"
     },
     {
       metric: "Revenue",
-      currentValue: 2847392;
-      predictedValue: 3200000;
-      confidence: 0.85;
+      currentValue: 2847392; predictedValue: 3200000; confidence: 0.85;
       timeframe: "Next 30 days"
     },
     {
@@ -97,7 +84,7 @@ export const AIPoweredAnalytics: React.FC = () => {
       case "anomaly": return "⚠️";
       case "recommendation": return "💡";
       case "prediction": return "🔮";
-      default: return "📊";
+      default: return "📊",
     }
   };
 
@@ -106,14 +93,14 @@ export const AIPoweredAnalytics: React.FC = () => {
       case "high": return "text-red-400 bg-red-900";
       case "medium": return "text-yellow-400 bg-yellow-900";
       case "low": return "text-green-400 bg-green-900";
-      default: return "text-gray-400 bg-gray-900";
+      default: return "text-gray-400 bg-gray-900",
     }
   };
 
   const getConfidenceColor = (confidence: number) => {
     if (confidence >= 0.9) return "text-green-400";
     if (confidence >= 0.7) return "text-yellow-400";
-    return "text-red-400";
+    return "text-red-400",
   };
 
   const filteredInsights = selectedCategory === "all" 
@@ -252,7 +239,7 @@ export const AIPoweredAnalytics: React.FC = () => {
                   <div>
                     <div className="text-sm text-gray-400">Current Value</div>
                     <div className="text-xl font-bold text-white">
-                      {typeof prediction.currentValue === "number" && prediction.currentValue > 1000000;
+                      {typeof prediction.currentValue === "number" && prediction.currentValue > 1000000,
                         ? `$${(prediction.currentValue / 1000000).toFixed(1)}M`
                         : typeof prediction.currentValue === "number" && prediction.currentValue > 1000;
                         ? `${(prediction.currentValue / 1000).toFixed(1)}K`
@@ -263,7 +250,7 @@ export const AIPoweredAnalytics: React.FC = () => {
                   <div>
                     <div className="text-sm text-gray-400">Predicted Value</div>
                     <div className="text-xl font-bold text-green-400">
-                      {typeof prediction.predictedValue === "number" && prediction.predictedValue > 1000000;
+                      {typeof prediction.predictedValue === "number" && prediction.predictedValue > 1000000,
                         ? `$${(prediction.predictedValue / 1000000).toFixed(1)}M`
                         : typeof prediction.predictedValue === "number" && prediction.predictedValue > 1000;
                         ? `${(prediction.predictedValue / 1000).toFixed(1)}K`

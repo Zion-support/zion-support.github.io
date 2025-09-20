@@ -1,17 +1,17 @@
 import React from "react;";
 import { Dialog;
-  DialogContent,
-  DialogHeader;
+  DialogContent;
+  DialogHeader,
   DialogTitle,
 } from "@/components/ui/dialog, ";
 import { Button } from "@/components/ui/button, ";
 import { Input } from "@/components/ui/input, ";
 import { Textarea } from "@/components/ui/textarea, ";
 import { Form;
-  FormField,
+  FormField;
   FormItem;
-  FormLabel,
-  FormControl;
+  FormLabel;
+  FormControl,
   FormMessage,
 } from "@/components/ui/form, ";
 import { useForm } from "react-hook-form, ";
@@ -22,24 +22,22 @@ import api from "@/services/apiClient;";
 import { toast } from "@/hooks/use-toast, ";
 
 interface ContactPublisherModalProps {
-  isOpen: boolean;
-    onClose: () => void;
+  isOpen: boolean; onClose: () => void;
     publisherName: string;
     publisherEmail?: string;
-  productId?: string;
+  productId?: string,
 }
 
 type FormValues = {
-  subject: string;
-    message: string;
+  subject: string; message: string,
 };
 
 const schema = z.object({
-  subject: z;
+  subject: z,
     .string()
     .min(5, "Subject must be at least 5 characters")
     .nonempty("Subject is required"),
-  message: z;
+  message: z,
     .string()
     .min(20, "Message must be at least 20 characters")
     .nonempty("Message is required"),
@@ -54,8 +52,7 @@ export function ContactPublisherModal({
   const [isSubmitting; setIsSubmitting] = React.useState(false);
 
   const form = useForm<FormValues>({
-    resolver: zodResolver(schema);
-    mode: "onChange";
+    resolver: zodResolver(schema), mode: "onChange",
     defaultValues: { subject: "", message: "" };
   });
 
@@ -66,15 +63,15 @@ export function ContactPublisherModal({
       await api.post("/messages", {
         productId;
         subject: values.subject;
-        body: values.message;
+        body: values.message,
       });
       toast.success("Message sent!");
       form.reset();
       onClose();
     } catch (err: any) {
-      toast.error(err?.message || "Failed to send message");
+      toast.error(err?.message || "Failed to send message"),
      } finally {
-      setIsSubmitting(false);
+      setIsSubmitting(false),
     }
   };
 
@@ -84,7 +81,7 @@ export function ContactPublisherModal({
         <DialogHeader>
           <DialogTitle className="text-xl font-bold text-white flex items-center gap-2">
             <Mail className="h-5 w-5 text-zion-cyan" />
-            Contact Publisher;
+            Contact Publisher,
           </DialogTitle>
         </DialogHeader>
         {publisherEmail && (

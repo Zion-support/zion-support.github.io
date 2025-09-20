@@ -19,7 +19,31 @@ const nextConfig = {
 		// Allow builds to pass even if there are type errors; CI can run type-check separately
 		ignoreBuildErrors: true
 	},
+	// Performance optimizations
+	swcMinify: true,
+	compress: true,
+	poweredByHeader: false,
 	// Redirects are handled by _redirects file for static export compatibility
+	// Additional optimizations
+	experimental: {
+		optimizeCss: true,
+		scrollRestoration: true
+	},
+	// Webpack optimizations
+	webpack: (config, { dev, isServer }) => {
+		// Optimize bundle size
+		if (!dev && !isServer) {
+			config.optimization.splitChunks.cacheGroups = {
+				...config.optimization.splitChunks.cacheGroups,
+				vendor: {
+					test: /[\\/]node_modules[\\/]/,
+					name: 'vendors',
+					chunks: 'all',
+				},
+			};
+		}
+		return config;
+	},
 };
 
 module.exports = nextConfig;

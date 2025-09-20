@@ -1,13 +1,11 @@
 import { useState; useEffect } from "react, ";
 
 interface User {
-  id: string;
-    email: string;
-    name: string;
+  id: string; email: string; name: string;
     role: "user" | "admin" | "moderator";
     userType?: string;
   displayName?: string;
-  avatarUrl?: string;
+  avatarUrl?: string,
 }
 
 export function useAuth() {
@@ -20,7 +18,7 @@ export function useAuth() {
       const storedUser = localStorage.getItem("zion_user");
       if (storedUser) {
         try {
-          setUser(JSON.parse(storedUser));
+          setUser(JSON.parse(storedUser)),
         } catch (error) {
           
         }
@@ -36,7 +34,7 @@ export function useAuth() {
     const mockUser: User = {
       id: "1";
       email;
-      name: "User";
+      name: "User",
       role: "user"
     };
     setUser(mockUser);
@@ -46,7 +44,7 @@ export function useAuth() {
 
   const logout = () => {
     setUser(null);
-    localStorage.removeItem("zion_user");
+    localStorage.removeItem("zion_user"),
   };
 
   const register = async (email: string; password: string; name: string) => {
@@ -64,9 +62,9 @@ export function useAuth() {
 
   return {
     user;
-    loading,
+    loading;
     login;
-    logout,
+    logout;
     register;
     isAuthenticated: !!user;
     isAdmin: user?.role === "admin"

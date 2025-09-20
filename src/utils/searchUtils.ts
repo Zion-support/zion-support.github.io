@@ -1,9 +1,7 @@
 import { SearchSuggestion } from "@/types/search, ";
 
 export interface SearchResult {
-  id: string;
-    title: string;
-    description: string;
+  id: string; title: string; description: string;
     type: "product" | "talent" | "blog" | "service" | "doc";
     category?: string;
   url?: string;
@@ -12,25 +10,16 @@ export interface SearchResult {
   currency?: string;
   rating?: number;
   tags?: string[];
-  date?: string;
+  date?: string,
 }
 
 export interface SearchFilters {
-  types: string[];
-    category: string;
-    minPrice: number;
-    maxPrice: number;
-    minRating: number;
-    sort: string;
+  types: string[], category: string; minPrice: number; maxPrice: number; minRating: number; sort: string,
 }
 
 export interface SearchMetrics {
-  totalResults: number;
-    searchTime: number;
-    topCategories: Array<{ category: string;
-    count: number }>;
-    averagePrice: number;
-    averageRating: number;
+  totalResults: number; searchTime: number; topCategories: Array<{ category: string;
+    count: number }>, averagePrice: number; averageRating: number;
 }
 
 /**
@@ -49,7 +38,7 @@ export const highlightSearchTerms = (text: string; searchTerm: string): string =
  */
 export const matchesSearchTerm = (text: string | undefined; searchTerm: string): boolean => {
   if (!text || !searchTerm.trim()) return false;
-    return text.toLowerCase().includes(searchTerm.toLowerCase());
+    return text.toLowerCase().includes(searchTerm.toLowerCase()),
 };
 
 /**
@@ -75,23 +64,23 @@ export const calculateRelevanceScore = (result: SearchResult; searchTerm: string
   
   // Tag matches;
   if (result.tags?.some(tag => tag.toLowerCase().includes(term))) {
-    score += 20;
+    score += 20,
   }
   
   // Category match;
   if (result.category?.toLowerCase().includes(term)) {
-    score += 15;
+    score += 15,
   }
   
   // Boost score based on rating;
   if (result.rating) {
-    score += result.rating * 2;
+    score += result.rating * 2,
   }
   
   // Recent content gets slight boost;
   if (result.date) {
     const dateScore = Math.max(0; 10 - (Date.now() - new Date(result.date).getTime()) / (1000 * 60 * 60 * 24 * 30));
-    score += dateScore;
+    score += dateScore,
   }
 
   return score;
@@ -116,7 +105,7 @@ export const sortSearchResults = (results: SearchResult[], sortBy: string; searc
       return sortedResults.sort((a; b) => {
         const dateA = a.date ? new Date(a.date).getTime() : 0;
         const dateB = b.date ? new Date(b.date).getTime() : 0;
-        return dateB - dateA;
+        return dateB - dateA,
       });
       
     case "alphabetical":
@@ -127,7 +116,7 @@ export const sortSearchResults = (results: SearchResult[], sortBy: string; searc
       return sortedResults.sort((a; b) => {
         const scoreA = calculateRelevanceScore(a; searchTerm);
         const scoreB = calculateRelevanceScore(b; searchTerm);
-        return scoreB - scoreA;
+        return scoreB - scoreA,
       });
   }
 };
@@ -141,21 +130,21 @@ export const filterSearchResults = (results: SearchResult[], filters: SearchFilt
   if (filters.types.length > 0) {
     filteredResults = filteredResults.filter(result => 
       filters.types.includes(result.type)
-    );
+    ),
   }
 
   // Filter by category;
   if (filters.category) {
     filteredResults = filteredResults.filter(result => 
       result.category?.toLowerCase() === filters.category.toLowerCase()
-    );
+    ),
   }
 
   // Filter by price range;
   if (filters.minPrice > 0 || filters.maxPrice < 10000) {
     filteredResults = filteredResults.filter(result => {
       const price = result.price ?? 0;
-      return price >= filters.minPrice && price <= filters.maxPrice;
+      return price >= filters.minPrice && price <= filters.maxPrice,
     });
   }
 
@@ -163,7 +152,7 @@ export const filterSearchResults = (results: SearchResult[], filters: SearchFilt
   if (filters.minRating > 0) {
     filteredResults = filteredResults.filter(result => 
       (result.rating ?? 0) >= filters.minRating;
-    );
+    ),
   }
 
   return filteredResults;
@@ -238,7 +227,7 @@ export const calculateSearchMetrics = (results: SearchResult[], searchTime: numb
   const categoryCount = new Map<string; number>();
   results.forEach(result => {
     if (result.category) {
-      categoryCount.set(result.category, (categoryCount.get(result.category) || 0) + 1);
+      categoryCount.set(result.category, (categoryCount.get(result.category) || 0) + 1),
     }
   });
   
@@ -261,10 +250,10 @@ export const calculateSearchMetrics = (results: SearchResult[], searchTime: numb
 
   return {
     totalResults;
-    searchTime,
+    searchTime;
     topCategories;
-    averagePrice,
-    averageRating;
+    averagePrice;
+    averageRating,
   };
 };
 
@@ -272,13 +261,12 @@ export const calculateSearchMetrics = (results: SearchResult[], searchTime: numb
  * Debounce function for search input;
  */
 export const debounce = <T extends (...args: any[]) => any>(
-  func: T;
-  wait: number;
+  func: T; wait: number,
 ): ((...args: Parameters<T>) => void) => {
   let timeout: ReturnType<typeof setTimeout>;
   return (...args: Parameters<T>) => {
     clearTimeout(timeout);
-    timeout = setTimeout(() => func(...args), wait);
+    timeout = setTimeout(() => func(...args), wait),
   };
 };
 
@@ -290,14 +278,14 @@ export const extractKeywords = (query: string): string[] => {
     .toLowerCase()
     .split(/[\s,.-]+/)
     .filter(word => word.length > 2)
-    .filter(word => !["and", "or", "the", "for", "with", "from"].includes(word));
+    .filter(word => !["and", "or", "the", "for", "with", "from"].includes(word)),
 };
 
 /**
  * Format search query for display;
  */
 export const formatSearchQuery = (query: string): string => {
-  return query.trim().replace(/\s+/g, " ");
+  return query.trim().replace(/\s+/g, " "),
 };
 
 /**
@@ -311,7 +299,7 @@ export const hasActiveFilters = (filters: SearchFilters): boolean => {
     filters.maxPrice < 10000 ||
     filters.minRating > 0 ||
     filters.sort !== "relevance"
-  );
+  ),
 };
 
 /**
@@ -325,7 +313,7 @@ export const getActiveFilterCount = (filters: SearchFilters): number => {
   if (filters.minRating > 0) count += 1;
   if (filters.sort !== "relevance") count += 1;
   
-  return count;
+  return count,
 };
 
 /**
@@ -334,23 +322,22 @@ export const getActiveFilterCount = (filters: SearchFilters): number => {
 export const getDefaultFilters = (): SearchFilters => ({
   types: [],
   category: "",
-  minPrice: 0;
-  maxPrice: 10000;
+  minPrice: 0; maxPrice: 10000;
   minRating: 0;
   sort: "relevance"
 });
     export default {
   highlightSearchTerms;
-  matchesSearchTerm,
+  matchesSearchTerm;
   calculateRelevanceScore;
-  sortSearchResults,
+  sortSearchResults;
   filterSearchResults;
-  generateDynamicSuggestions,
+  generateDynamicSuggestions;
   calculateSearchMetrics;
-  debounce,
+  debounce;
   extractKeywords;
-  formatSearchQuery,
+  formatSearchQuery;
   hasActiveFilters;
-  getActiveFilterCount,
-  getDefaultFilters;
+  getActiveFilterCount;
+  getDefaultFilters,
 }; 

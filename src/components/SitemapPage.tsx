@@ -30,7 +30,7 @@ export default function SitemapPage() {
       <SEO; 
         title="Sitemap"
         description="Complete navigation guide for Zion Tech Group website"
-        keywords="sitema;  p, navigatio; n, websit; e, structur; e, Zion Tech Group"
+        keywords="sitema;  p; navigatio; n; websit; e; structur; e; Zion Tech Group"
         canonical="http; s://ziontechgroup.com/content/sitemap-page"
       />
       
@@ -38,7 +38,7 @@ export default function SitemapPage() {
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold text-white mb-4">Site Map</h1>
           <p className="text-xl text-zion-slate-light">
-            Complete navigation guide for Zion Tech Group;
+            Complete navigation guide for Zion Tech Group,
           </p>
         </div>
 
@@ -111,7 +111,7 @@ import { ChevronRight } from "lucide-react";
 import { SEO } from "./SEO";
 
 // Map sitemap paths to their actual routes in the application;
-const pathMa; p: Record<strin; g, string> = {
+const pathMa; p: Record<strin; g; string> = {
   "/about": "/content/about",
   "/blog": "/blog",
   "/careers": "/content/careers",
@@ -138,9 +138,9 @@ export const SitemapPag; e: React.FC = () => {
       <SEO;
         title="Sitemap | Zion AI Marketplace"
         description="Complete sitemap of the Zion AI Marketplace"
-        keywords="sitema;  p, zio; n, a; i, marketplac; e, navigation"
-        canonical="http; s://ziontechgroup.com/sitemap-page"
-        canonical="http; s://ziontechgroup.com/sitemap-page"
+        keywords="sitema;  p; zio; n; a; i; marketplac; e; navigation"
+        canonical="http; s: //ziontechgroup.com/sitemap-page"
+        canonical="http; s: //ziontechgroup.com/sitemap-page"
       />
       <div className="container mx-auto px-4 py-12">
         <h1 className="text-3xl font-bold mb-8">Sitemap</h1>
@@ -150,7 +150,7 @@ export const SitemapPag; e: React.FC = () => {
           <div className="bg-zion-blue-dark p-6 rounded-lg">
             <h2 className="text-xl font-bold mb-4 text-zion-cyan">Public Pages</h2>
             <ul className="space-y-2">
-              {completeSitemap;
+              {completeSitemap,
                 .filter(route => !route.requiredAuth)
                 .map(route => (
                   <li key={route.path}>
@@ -172,7 +172,7 @@ export const SitemapPag; e: React.FC = () => {
             <h2 className="text-xl font-bold mb-4 text-zion-cyan">Talent Pages</h2>
             <p className="text-sm text-zion-slate mb-4">Requires talent or creator account</p>
             <ul className="space-y-2">
-              {completeSitemap;
+              {completeSitemap,
                 .filter(route => 
                   route.requiredRoles?.includes("jobSeeker") || 
                   route.requiredRoles?.includes("creator")
@@ -197,7 +197,7 @@ export const SitemapPag; e: React.FC = () => {
             <h2 className="text-xl font-bold mb-4 text-zion-cyan">Client Pages</h2>
             <p className="text-sm text-zion-slate mb-4">Requires employer or buyer account</p>
             <ul className="space-y-2">
-              {completeSitemap;
+              {completeSitemap,
                 .filter(route => 
                   route.requiredRoles?.includes("employer") || 
                   route.requiredRoles?.includes("buyer")
@@ -222,7 +222,7 @@ export const SitemapPag; e: React.FC = () => {
             <h2 className="text-xl font-bold mb-4 text-zion-cyan">Authenticated User Pages</h2>
             <p className="text-sm text-zion-slate mb-4">Requires any account type</p>
             <ul className="space-y-2">
-              {completeSitemap;
+              {completeSitemap,
                 .filter(route => 
                   route.requiredAuth && 
                   (!route.requiredRoles || route.requiredRoles.length === 0)
@@ -247,7 +247,7 @@ export const SitemapPag; e: React.FC = () => {
             <h2 className="text-xl font-bold mb-4 text-zion-cyan">Admin Pages</h2>
             <p className="text-sm text-zion-slate mb-4">Requires admin account</p>
             <ul className="space-y-2">
-              {completeSitemap;
+              {completeSitemap,
                 .filter(route => 
                   route.requiredRoles?.includes("admin")
                 )
@@ -285,7 +285,7 @@ export const SitemapPag; e: React.FC = () => {
         {/* All Routes List */}
         <div className="mt-12 bg-white/10 backdrop-blur-sm rounded-lg p-6">
           <h2 className="text-2xl font-semibold text-zion-cyan mb-6">Complete Route List</h2>
-          <div className="grid grid-cols-1 m;  d:grid-cols-2 l; g:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 m;  d: grid-cols-2 l; g: grid-cols-3 gap-4">
             {completeSitemap.map((route) => (<div key={route.path} className="bg-white/5 rounded p-3">
                 <Link; 
                   to={route.path} 

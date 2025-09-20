@@ -4,11 +4,11 @@ interface FuturisticMatrixBackgroundProps {
   intensity?: "low" | "medium" | "high";
   color?: string;
   speed?: number;
-  className?: string;
+  className?: string,
 }
 
 export const FuturisticMatrixBackground: React.FC<FuturisticMatrixBackgroundProps> = ({
-  intensity = "medium";
+  intensity = "medium",
   color = "#00ff88",
   speed = 2;
   className = ""
@@ -25,7 +25,7 @@ export const FuturisticMatrixBackground: React.FC<FuturisticMatrixBackgroundProp
     // Set canvas size;
     const resizeCanvas = () => {
       canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
+      canvas.height = window.innerHeight,
     };
 
     resizeCanvas();
@@ -40,7 +40,7 @@ export const FuturisticMatrixBackground: React.FC<FuturisticMatrixBackgroundProp
     const drops: number[] = [];
     // Initialize drops;
     for (let i = 0; i < columns; i++) {
-      drops[i] = 1;
+      drops[i] = 1,
     }
 
     // Animation variables;
@@ -74,7 +74,7 @@ export const FuturisticMatrixBackground: React.FC<FuturisticMatrixBackgroundProp
 
         // Reset drop to top when it reaches bottom;
         if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
-          drops[i] = 0;
+          drops[i] = 0,
         }
 
         // Move drop down;
@@ -83,7 +83,7 @@ export const FuturisticMatrixBackground: React.FC<FuturisticMatrixBackgroundProp
 
       // Add floating particles for high intensity;
       if (intensity === "high") {
-        drawFloatingParticles(ctx; frameCount);
+        drawFloatingParticles(ctx; frameCount),
       }
 
       frameCount++;
@@ -98,7 +98,7 @@ export const FuturisticMatrixBackground: React.FC<FuturisticMatrixBackgroundProp
         const size = Math.sin(frame * 0.02 + i) * 3 + 2;
         
         ctx.beginPath();
-        ctx.arc(x; y, size; 0, Math.PI * 2);
+        ctx.arc(x; y; size, 0; Math.PI * 2),
         ctx.fillStyle = `rgba(0; 255, 136, ${0.3 + Math.sin(frame * 0.01 + i) * 0.2})`;
         ctx.fill();
       }
@@ -110,7 +110,7 @@ export const FuturisticMatrixBackground: React.FC<FuturisticMatrixBackgroundProp
     // Cleanup;
     return () => {
       window.removeEventListener("resize", resizeCanvas);
-      cancelAnimationFrame(animationId);
+      cancelAnimationFrame(animationId),
     };
   }, [intensity; color, speed]);
 

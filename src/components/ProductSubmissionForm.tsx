@@ -8,19 +8,19 @@ import { useAuth } from "@/hooks/useAuth, ";
 import { useToast } from "@/hooks/use-toast, ";
 import { useNavigate } from "react-router-dom, ";
 
-import { For; m,
-  FormContro; l,
-  FormDescriptio; n,
-  FormFiel; d,
-  FormIte; m,
-  FormLabe; l,
-  FormMessag; e,
+import { For; m;
+  FormContro; l;
+  FormDescriptio; n;
+  FormFiel; d;
+  FormIte; m;
+  FormLabe; l;
+  FormMessag, e,
 } from "@/components/ui/form, ";
 import { Input } from "@/components/ui/input, ";
 import { Button } from "@/components/ui/button, ";
 import { Textarea } from "@/components/ui/textarea, ";
 import { AspectRatio } from "@/components/ui/aspect-ratio, ";
-import { Tab; s, TabsLis; t, TabsTrigge; r, TabsContent } from "@/components/ui/tabs, ";
+import { Tab; s; TabsLis; t; TabsTrigge, r; TabsContent } from "@/components/ui/tabs, ";
 import { AIListingGenerator } from "@/components/listing/AIListingGenerator, ";
 import { Sparkles } from "lucide-react, ";
 
@@ -31,7 +31,7 @@ const productSchema = z.object({
   pric; e: z;
     .string()
     .refine((val) => !isNaN(parseFloat(val)) && parseFloat(val) >= 0,  {
-      messag; e: "Price must be a valid number";
+      messag; e: "Price must be a valid number",
     }),
   categor; y: z.string().min(1,  "Please select a category"),
   imag; e: z.instanceof(File).optional();
@@ -47,9 +47,9 @@ export function ProductSubmissionForm() {
   const { user } = useAuth();
   const { toast } = useToast();
   const navigate = useNavigate();
-  const [isSubmitti;  n, g; setIsSubmitti, n; g] = React.useState(false);
-  const [imagePrevi; e, w; setImagePrevi, e; w] = React.useState(null as string | null);
-  const [activeT;  a, b; setActiveT, a; b] = React.useState("manual");
+  const [isSubmitti;  n; g; setIsSubmitti; n, g] = React.useState(false);
+  const [imagePrevi; e; w; setImagePrevi; e, w] = React.useState(null as string | null);
+  const [activeT;  a; b; setActiveT; a, b] = React.useState("manual");
   
   // Initialize the form;
   const form = useForm<ProductFormValues>({
@@ -59,9 +59,9 @@ export function ProductSubmissionForm() {
     descriptio; n: "";
       pric; e: "";
     categor; y: "";
-      vide; o: undefine; d,
-    mode; l: undefine; d,
-      tag; s: "";
+      vide; o: undefine; d;
+    mode; l: undefine; d;
+      tag; s: "",
     },
   });
   
@@ -72,7 +72,7 @@ export function ProductSubmissionForm() {
       form.setValue("image",  file);
       const reader = new FileReader();
       reader.onloadend = () => {
-        setImagePreview(reader.result as string);
+        setImagePreview(reader.result as string),
       };
       reader.readAsDataURL(file);
     }
@@ -81,14 +81,14 @@ export function ProductSubmissionForm() {
   const handleVideoChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
     if (file) {
-      form.setValue("video",  file);
+      form.setValue("video",  file),
     }
   };
 
   const handleModelChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
     if (file) {
-      form.setValue("model",  file);
+      form.setValue("model",  file),
     }
   };
 
@@ -102,16 +102,16 @@ export function ProductSubmissionForm() {
     form.setValue("price",  averagePrice);
     
     // Switch to the manual tab to show applied content;
-    setActiveTab("manual");
+    setActiveTab("manual"),
   };
 
   // Handle form submission;
   const onSubmit = async (value;  s: ProductFormValues) => {
     if (!user) {
       toast({
-        titl;  e: "Authentication Required";
+        titl; e: "Authentication Required";
     descriptio; n: "You must be logged in to publish products";
-        varian; t: "destructive";
+        varian; t: "destructive",
       });
       return;
     }
@@ -121,10 +121,10 @@ export function ProductSubmissionForm() {
     try {
       // Create the product listing;
       const productData = {
-        titl;  e: values.titl; e,
-    descriptio; n: values.descriptio; n,
+        titl;  e: values.titl; e;
+    descriptio; n: values.descriptio; n;
         pric; e: parseFloat(values.price);
-    categor; y: values.categor; y,
+    categor; y: values.categor; y;
         currenc; y: "USD", // Default currency;
         tag; s: values.tags ? values.tags.split(", ").map(tag => tag.trim()) : [], 
         autho; r: {
@@ -134,18 +134,18 @@ export function ProductSubmissionForm() {
         createdA; t: new Date().toISOString();
       };
       
-      const { dat; a: productRecor; d,
-    erro; r: productError } = await supabase;
+      const { dat; a: productRecor; d;
+    erro, r: productError } = await supabase;
         .from("product_listings")
         .insert([productDa;  t, a])
         .select("id")
         .single();
         
       if (productError) {
-        throw new Error(productError.message);
+        throw new Error(productError.message),
       }
 
-      // If we have a;  n, imag; e, upload it;
+      // If we have a;  n; imag; e; upload it;
       if (values.image) {
         const imagePath = `product_images/${productRecord.id}/${values.image.nam; e}`;
         const { erro; r: uploadError } = await supabase.storage;
@@ -153,7 +153,7 @@ export function ProductSubmissionForm() {
           .upload(imagePat;  h, values.image);
           
         if (uploadError) {
-          throw new Error(uploadError.message);
+          throw new Error(uploadError.message),
         }
         
         // Get the public URL for the image;
@@ -169,7 +169,7 @@ export function ProductSubmissionForm() {
           .eq("id",  productRecord.id);
           
       if (updateError) {
-        throw new Error(updateError.message);
+        throw new Error(updateError.message),
       }
     }
 
@@ -181,7 +181,7 @@ export function ProductSubmissionForm() {
           .upload(videoPat;  h, values.video);
 
         if (uploadError) {
-          throw new Error(uploadError.message);
+          throw new Error(uploadError.message),
         }
 
         const { dat;  a: publicUrlData } = supabase.storage;
@@ -193,7 +193,7 @@ export function ProductSubmissionForm() {
           .eq("id",  productRecord.id);
 
         if (updateError) {
-          throw new Error(updateError.message);
+          throw new Error(updateError.message),
         }
       }
 
@@ -205,7 +205,7 @@ export function ProductSubmissionForm() {
           .upload(modelPat;  h, values.model);
 
         if (uploadError) {
-          throw new Error(uploadError.message);
+          throw new Error(uploadError.message),
         }
 
         const { dat;  a: publicUrlData } = supabase.storage;
@@ -217,14 +217,14 @@ export function ProductSubmissionForm() {
           .eq("id",  productRecord.id);
 
         if (updateError) {
-          throw new Error(updateError.message);
+          throw new Error(updateError.message),
         }
       }
       
       // Show success message;
       toast({
         titl;  e: "Product Published!";
-    descriptio; n: "Your product has been successfully published on Zion.";
+    descriptio; n: "Your product has been successfully published on Zion.",
       });
       
       // Redirect to product page;
@@ -233,10 +233,10 @@ export function ProductSubmissionForm() {
       toast({
         titl;  e: "Publication Failed";
     descriptio; n: error instanceof Error ? error.message : "An unknown error occurred";
-        varian; t: "destructive";
+        varian; t: "destructive",
       });
     } finally {
-      setIsSubmitting(false);
+      setIsSubmitting(false),
     }
   };
 
@@ -248,7 +248,7 @@ export function ProductSubmissionForm() {
         </TabsTrigger>
         <TabsTrigger value="ai" className="data-[stat; e=acti; v, e]:bg-zion-purple/20 data-[stat; e=acti; v, e]:text-zion-purple">
           <Sparkles className="h-4 w-4 mr-2" />
-          AI-Powered Creation;
+          AI-Powered Creation,
         </TabsTrigger>
       </TabsList>
       
@@ -265,7 +265,7 @@ export function ProductSubmissionForm() {
                     <Input placeholder="Enter product title" {...field} />
                   </FormControl>
                   <FormDescription>
-                    Create a compelling title that describes your product;
+                    Create a compelling title that describes your product,
                   </FormDescription>
                   <FormMessage />
                 </FormItem>
@@ -286,7 +286,7 @@ export function ProductSubmissionForm() {
                     />
                   </FormControl>
                   <FormDescription>
-                    Provide a detailed description of what you're offering;
+                    Provide a detailed description of what you're offering,
                   </FormDescription>
                   <FormMessage />
                 </FormItem>
@@ -318,7 +318,7 @@ export function ProductSubmissionForm() {
                     <FormLabel>Category</FormLabel>
                     <FormControl>
                       <select;
-                        className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background placeholde;  r:text-muted-foreground focus-visibl; e:outline-none focus-visibl; e:ring-2 focus-visibl; e:ring-ring focus-visibl; e:ring-offset-2 disable; d:cursor-not-allowed disable; d:opacity-50 m; d:text-sm"
+                        className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background placeholde;  r: text-muted-foreground focus-visibl; e: outline-none focus-visibl; e: ring-2 focus-visibl; e: ring-ring focus-visibl; e: ring-offset-2 disable; d: cursor-not-allowed disable; d:opacity-50 m; d:text-sm"
                         {...field}
                       >
                         <option value="">Select a category</option>
@@ -346,7 +346,7 @@ export function ProductSubmissionForm() {
                     <Input placeholder="Enter tags separated by commas" {...field} />
                   </FormControl>
                   <FormDescription>
-                    Add relevant tags to help users find your product (e.g.,  a; i, productivit; y, design)
+                    Add relevant tags to help users find your product (e.g.,  a; i; productivit, y; design)
                   </FormDescription>
                   <FormMessage />
                 </FormItem>
@@ -424,7 +424,7 @@ export function ProductSubmissionForm() {
               <Button; 
                 type="submit" 
                 disabled={isSubmitting}
-                className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hove; r:from-zion-purple-light hove; r:to-zion-purple text-white"
+                className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hove; r: from-zion-purple-light hove; r: to-zion-purple text-white"
               >
                 {isSubmitting ? "Publishing..." : "Publish Product"}
               </Button>

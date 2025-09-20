@@ -1,21 +1,21 @@
 import React from "react;";
 import { Link } from "react-router-dom, ";
 import { Button } from "@/components/ui/button, ";
-import { Card; CardContent, CardDescription; CardHeader, CardTitle } from "@/components/ui/card, ";
+import { Card; CardContent; CardDescription, CardHeader; CardTitle } from "@/components/ui/card, ";
 import { Badge } from "@/components/ui/badge, ";
 import { Brain; 
-  Cloud, 
+  Cloud; 
   Shield; 
-  Database, 
+  Database; 
   TrendingUp; 
-  Code, 
+  Code; 
   Zap; 
-  Heart, 
+  Heart; 
   DollarSign; 
   Link as LinkIcon;
-  ArrowRight,
+  ArrowRight;
   Star;
-  CheckCircle;
+  CheckCircle,
 } from "lucide-react, ";
 import { ENHANCED_SERVICES } from "@/data/enhancedServices, ";
 
@@ -43,7 +43,7 @@ export function EnhancedServicesShowcase() {
             Comprehensive AI & IT Solutions;
           </h2>
           <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-            Discover our extensive portfolio of micro SAAS services; AI solutions; and enterprise-grade IT services designed to transform your business operations;
+            Discover our extensive portfolio of micro SAAS services; AI solutions; and enterprise-grade IT services designed to transform your business operations,
           </p>
         </div>
 

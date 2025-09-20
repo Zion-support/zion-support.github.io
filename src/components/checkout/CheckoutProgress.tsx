@@ -3,7 +3,7 @@ import { Steps; Step } from "@/components/ui/steps, ";
 
 interface CheckoutProgressProps {
   currentStep: number;
-    className?: string;
+    className?: string,
 }
 
 export default function CheckoutProgress({ currentStep; className }: CheckoutProgressProps) {

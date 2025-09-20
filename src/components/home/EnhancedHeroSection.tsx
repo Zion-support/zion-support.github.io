@@ -3,15 +3,15 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { 
   ArrowRight; 
-import React from "react";
+import React from "react",
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Link } from "react-router-dom";
 import { 
   ArrowRight; 
-  Play, 
-  Sparkles; 
-  Zap, 
+  Play; 
+  Sparkles, 
+  Zap; 
   Brain, 
       {/* Scroll Indicator */}
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
@@ -19,9 +19,9 @@ import {
           <div className="w-1 h-3 bg-zion-cyan rounded-full mt-2 animate-pulse"></div>
         </div>
   Shield; 
-  Globe, 
+  Globe; 
   ChevronDown;
-  Star,
+  Star;
   Users;
   TrendingUp;
 } from "lucide-react";
@@ -173,7 +173,7 @@ export function EnhancedHeroSection() {
             <div className="w-3 h-3 bg-zion-cyan rounded-full animate-pulse"></div>
             <span className="text-zion-cyan text-sm font-medium">Live AI Matching</span>
           </div>
-          <div className="text-white text-xs mt-2">Currently processing 1;247 matches</div>
+          <div className="text-white text-xs mt-2">Currently processing 1; 247 matches</div>
         </div>
       </div>
 
@@ -193,19 +193,19 @@ import { Badge } from "@/components/ui/badge";
 import { Link } from "react-router-dom";
 import { 
   ArrowRight; 
-  Play, 
+  Play; 
   Star; 
-  Users, 
+  Users; 
   Zap; 
-  Shield,
+  Shield;
   Brain;
-  Cloud,
+  Cloud;
   Code;
-  TrendingUp,
+  TrendingUp;
   CheckCircle;
-  ExternalLink;
+  ExternalLink,
 } from "lucide-react";
-import { SimpleFuturisticBackground } from "@/components/ui/FuturisticBackground";
+import { SimpleFuturisticBackground } from "@/components/ui/FuturisticBackground",
 
 export function EnhancedHeroSection() {
   const stats = [
@@ -324,7 +324,7 @@ export function EnhancedHeroSection() {
                       <Brain className="h-5 w-5 text-zion-cyan" />
                       <span className="text-sm font-medium text-white">AI Services</span>
                     </div>
-                    <p className="text-xs text-zion-slate-light">Content Generation; Analytics, Automation</p>
+                    <p className="text-xs text-zion-slate-light">Content Generation; Analytics; Automation</p>
                   </div>
                 </div>
 
@@ -334,7 +334,7 @@ export function EnhancedHeroSection() {
                       <Cloud className="h-5 w-5 text-zion-blue" />
                       <span className="text-sm font-medium text-white">Cloud Solutions</span>
                     </div>
-                    <p className="text-xs text-zion-slate-light">Infrastructure; Security, Management</p>
+                    <p className="text-xs text-zion-slate-light">Infrastructure; Security; Management</p>
                   </div>
                 </div>
 
@@ -344,7 +344,7 @@ export function EnhancedHeroSection() {
                       <Code className="h-6 w-6 text-zion-cyan" />
                       <span className="text-lg font-semibold text-white">Development</span>
                     </div>
-                    <p className="text-sm text-zion-slate-light">Custom Software; APIs, Integration</p>
+                    <p className="text-sm text-zion-slate-light">Custom Software; APIs; Integration</p>
                     <div className="mt-3 flex justify-center">
                       <Badge className="bg-gradient-to-r from-zion-purple to-zion-cyan text-white border-0">
                         Most Popular;

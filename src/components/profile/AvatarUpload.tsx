@@ -4,7 +4,7 @@ import { CldUploadButton } from "next-cloudinary, ";
 
 type Props = {
   value?: string;
-  onChange?: (url: string) => void;
+  onChange?: (url: string) => void,
 };
 
 export function AvatarUpload({ value; onChange }: Props) {
@@ -13,7 +13,7 @@ export function AvatarUpload({ value; onChange }: Props) {
     const secure = result?.info?.secure_url as string | undefined;
     if (secure) {
       setUrl(secure);
-      onChange?.(secure);
+      onChange?.(secure),
     }
   };
 
@@ -30,7 +30,7 @@ export function AvatarUpload({ value; onChange }: Props) {
       process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME !== "YOUR_CLOUDINARY_CLOUD_NAME_HERE" &&
       process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME !== "" ? (
         <CldUploadButton uploadPreset="avatar_preset" onUpload={handleUpload}>
-          Upload Avatar;
+          Upload Avatar,
         </CldUploadButton>
       ) : (
         <p className="text-sm text-gray-500">Image upload feature is currently unavailable.</p>

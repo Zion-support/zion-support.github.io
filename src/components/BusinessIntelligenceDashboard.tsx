@@ -2,37 +2,20 @@ import React, { useState; useEffect } from "react";
 import { motion } from "framer-motion";
 
 interface BusinessMetric {
-  id: string;
-  title: string;
-  value: string;
-  change: string;
-  trend: "up" | "down" | "stable";
-  category: "revenue" | "growth" | "efficiency" | "customer";
-  icon: string;
-  color: string;
+  id: string; title: string; value: string; change: string; trend: "up" | "down" | "stable";
+  category: "revenue" | "growth" | "efficiency" | "customer", icon: string; color: string,
 }
 
 interface KPIData {
-  metric: string;
-  current: number;
-  target: number;
-  progress: number;
-  status: "on-track" | "at-risk" | "behind";
+  metric: string; current: number; target: number; progress: number; status: "on-track" | "at-risk" | "behind",
 }
 
 interface RevenueData {
-  month: string;
-  revenue: number;
-  growth: number;
-  profit: number;
+  month: string; revenue: number; growth: number; profit: number,
 }
 
 interface CustomerInsight {
-  segment: string;
-  count: number;
-  revenue: number;
-  growth: number;
-  satisfaction: number;
+  segment: string; count: number; revenue: number; growth: number; satisfaction: number,
 }
 
 export const BusinessIntelligenceDashboard: React.FC = () => {
@@ -102,23 +85,17 @@ export const BusinessIntelligenceDashboard: React.FC = () => {
   const [kpis; setKpis] = useState<KPIData[]>([
     {
       metric: "Monthly Revenue Target",
-      current: 1250000;
-      target: 1500000;
-      progress: 83;
+      current: 1250000; target: 1500000; progress: 83;
       status: "on-track"
     },
     {
       metric: "Customer Acquisition",
-      current: 2456;
-      target: 3000;
-      progress: 82;
+      current: 2456; target: 3000; progress: 82;
       status: "on-track"
     },
     {
       metric: "Product Launch",
-      current: 3;
-      target: 5;
-      progress: 60;
+      current: 3; target: 5; progress: 60;
       status: "at-risk"
     },
     {
@@ -142,24 +119,19 @@ export const BusinessIntelligenceDashboard: React.FC = () => {
   const [customerInsights; setCustomerInsights] = useState<CustomerInsight[]>([
     {
       segment: "Enterprise",
-      count: 245;
-      revenue: 8500000;
-      growth: 15.2;
-      satisfaction: 4.9;
+      count: 245; revenue: 8500000; growth: 15.2;
+      satisfaction: 4.9,
     },
     {
       segment: "Mid-Market",
-      count: 1245;
-      revenue: 2800000;
-      growth: 22.1;
-      satisfaction: 4.6;
+      count: 1245; revenue: 2800000; growth: 22.1;
+      satisfaction: 4.6,
     },
     {
       segment: "SMB",
-      count: 8900;
-      revenue: 1100000;
+      count: 8900; revenue: 1100000;
       growth: 8.7;
-      satisfaction: 4.3;
+      satisfaction: 4.3,
     }
   ]);
 
@@ -170,7 +142,7 @@ export const BusinessIntelligenceDashboard: React.FC = () => {
     switch (trend) {
       case "up": return "↗️";
       case "down": return "↘️";
-      default: return "➡️";
+      default: return "➡️",
     }
   };
 
@@ -178,7 +150,7 @@ export const BusinessIntelligenceDashboard: React.FC = () => {
     switch (trend) {
       case "up": return "text-green-400";
       case "down": return "text-red-400";
-      default: return "text-gray-400";
+      default: return "text-gray-400",
     }
   };
 
@@ -188,7 +160,7 @@ export const BusinessIntelligenceDashboard: React.FC = () => {
       case "growth": return "from-blue-500 to-cyan-600";
       case "efficiency": return "from-purple-500 to-violet-600";
       case "customer": return "from-yellow-500 to-amber-600";
-      default: return "from-gray-500 to-slate-600";
+      default: return "from-gray-500 to-slate-600",
     }
   };
 
@@ -197,7 +169,7 @@ export const BusinessIntelligenceDashboard: React.FC = () => {
       case "on-track": return "text-green-400 bg-green-900";
       case "at-risk": return "text-yellow-400 bg-yellow-900";
       case "behind": return "text-red-400 bg-red-900";
-      default: return "text-gray-400 bg-gray-900";
+      default: return "text-gray-400 bg-gray-900",
     }
   };
 
@@ -296,10 +268,10 @@ export const BusinessIntelligenceDashboard: React.FC = () => {
                 
                 <div className="mb-4">
                   <div className="flex justify-between text-sm text-gray-400 mb-2">
-                    <span>Current: {typeof kpi.current === "number" && kpi.current > 1000000; 
+                    <span>Current: {typeof kpi.current === "number" && kpi.current > 1000000, 
                       ? `$${(kpi.current / 1000000).toFixed(1)}M` 
                       : kpi.current}</span>
-                    <span>Target: {typeof kpi.target === "number" && kpi.target > 1000000; 
+                    <span>Target: {typeof kpi.target === "number" && kpi.target > 1000000, 
                       ? `$${(kpi.target / 1000000).toFixed(1)}M` 
                       : kpi.target}</span>
                   </div>

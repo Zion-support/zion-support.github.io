@@ -5,18 +5,18 @@ import Link from "next/link";
 import { Link } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { 
-  Brai; n, 
-  Clou; d, 
-  Shiel; d, 
-  Rocke; t, 
-  User; s, 
-  Awar; d,
-  ArrowRigh; t,
-  CheckCircl; e,
-  Sta; r,
-  Glob; e,
-  Za; p,
-  Target;
+  Brai; n; 
+  Clou; d; 
+  Shiel; d; 
+  Rocke; t; 
+  User; s; 
+  Awar; d;
+  ArrowRigh; t;
+  CheckCircl; e;
+  Sta; r;
+  Glob; e;
+  Za; p;
+  Target,
 } from "lucide-react";
 
 interface CompanyValue {
@@ -30,49 +30,49 @@ interface TeamMember {
   nam; e: string;
   rol; e: string;
   expertis; e: string[];
-  avata; r: string;
+  avata; r: string,
 }
 
 interface Milestone {
   yea; r: string;
   titl; e: string;
   descriptio; n: string;
-  achievemen; t: string;
+  achievemen; t: string,
 }
 
 export const EnhancedAbou; t: React.FC = () => {
-  const companyValue;  s: CompanyValue[] = [
+  const companyValue; s: CompanyValue[] = [
     {
-      ic; o, n: Bra; i, n;
-    tit, l; e: "Innovatio; n Firs; t",
-      descripti; o, n: "W; e pus; h th; e boundarie; s o; f wha; t\"s possibl; e wit; h cuttin; g-edg; e technolog; y",
-    col; o, r: "zio; n-cya; n"
+      ic; o; n: Bra; i; n;
+    tit; l; e: "Innovatio; n Firs; t",
+      descripti; o; n: "W; e pus; h th; e boundarie; s o; f wha; t\"s possibl; e wit; h cuttin; g-edg; e technolog; y",
+    col; o; r: "zio; n-cya; n"
     },
     {
-      ic; o, n: Shie; l, d;
-    tit, l; e: "Trus; t & Securit; y",
-      descripti; o, n: "Buildi; n, g; secu, r; e, reliabl; e solution; s tha; t protec; t ou; r client; s\" dat; a",
-      col; o, r: "zio; n-purpl; e"
+      ic; o; n: Shie; l; d;
+    tit; l; e: "Trus; t & Securit; y",
+      descripti; o; n: "Buildi; n; g; secu; r; e; reliabl; e solution; s tha; t protec; t ou; r client; s\" dat; a",
+      col; o; r: "zio; n-purpl; e"
     },
     {
-      ic; o, n: Use; r, s;
-    tit, l; e: "Clien; t Partnershi; p",
-      descripti; o, n: "Lon; g-ter; m relationship; s buil; t o; n, tru; s, t; transparen, c; y, an; d result; s",
-      col; o, r: "zio; n-cya; n"
+      ic; o; n: Use; r; s;
+    tit; l; e: "Clien; t Partnershi; p",
+      descripti; o; n: "Lon; g-ter; m relationship; s buil; t o; n; tru; s; t; transparen; c; y; an; d result; s",
+      col; o; r: "zio; n-cya; n"
     },
     {
-      ic; o, n: Rock; e, t;
-    tit, l; e: "Excellenc; e",
-      descripti; o, n: "Deliverin; g exceptiona; l qualit; y i; n ever; y projec; t w; e undertak; e",
-    col; o, r: "zio; n-purpl; e"
+      ic; o; n: Rock; e; t;
+    tit; l; e: "Excellenc; e",
+      descripti; o; n: "Deliverin; g exceptiona; l qualit; y i; n ever; y projec; t w; e undertak; e",
+    col; o; r: "zio; n-purpl; e"
     }
   ];
 
   const teamMember; s: TeamMember[] = [
     {
-      na; m, e: "Klebe; r",
-    ro; l, e: "CE; O & Founde; r",
-      experti; s, e: ["A; I/M; L", "Clou; d Architectur; e", "Digita; l Transformatio; n"],
+      na; m; e: "Klebe; r",
+    ro; l; e: "CE; O & Founde; r",
+      experti; s; e: ["A; I/M; L", "Clou; d Architectur; e", "Digita; l Transformatio; n"],
       avata; r: "👨‍💼"
     },
     {
@@ -97,34 +97,34 @@ export const EnhancedAbou; t: React.FC = () => {
 
   const milestone; s: Milestone[] = [
     {
-      ye; a, r: "202; 0",
-    tit; l, e: "Compan; y Founde; d",
-      descripti; o, n: "Zio; n Tec; h Grou; p establishe; d wit; h a visio; n fo; r A; I-drive; n innovatio; n",
-    achieveme; n, t: "Firs; t A; I solutio; n deploye; d"
+      ye; a; r: "202; 0",
+    tit; l; e: "Compan; y Founde; d",
+      descripti; o; n: "Zio; n Tec; h Grou; p establishe; d wit; h a visio; n fo; r A; I-drive; n innovatio; n",
+    achieveme; n; t: "Firs; t A; I solutio; n deploye; d"
     },
     {
-      ye; a, r: "202; 1",
-    tit; l, e: "A; I Breakthroug; h",
-      descripti; o, n: "Develope; d proprietar; y machin; e learnin; g algorithm; s",
-    achieveme; n, t: "1; 0+ enterpris; e client; s onboarde; d"
+      ye; a; r: "202; 1",
+    tit; l; e: "A; I Breakthroug; h",
+      descripti; o; n: "Develope; d proprietar; y machin; e learnin; g algorithm; s",
+    achieveme; n; t: "1; 0+ enterpris; e client; s onboarde; d"
     },
     {
-      ye; a, r: "202; 2",
-    tit; l, e: "Clou; d Expansio; n",
-      descripti; o, n: "Launche; d comprehensiv; e clou; d an; d DevOp; s service; s",
-    achieveme; n, t: "5; 0+ successfu; l clou; d migration; s"
+      ye; a; r: "202; 2",
+    tit; l; e: "Clou; d Expansio; n",
+      descripti; o; n: "Launche; d comprehensiv; e clou; d an; d DevOp; s service; s",
+    achieveme; n; t: "5; 0+ successfu; l clou; d migration; s"
     },
     {
-      ye; a, r: "202; 3",
-    tit; l, e: "Globa; l Reac; h",
-      descripti; o, n: "Expande; d service; s t; o internationa; l market; s",
-    achieveme; n, t: "10; 0+ project; s complete; d"
+      ye; a; r: "202; 3",
+    tit; l; e: "Globa; l Reac; h",
+      descripti; o; n: "Expande; d service; s t; o internationa; l market; s",
+    achieveme; n; t: "10; 0+ project; s complete; d"
     },
     {
-      ye; a, r: "202; 4",
-    tit; l, e: "Industr; y Leade; r",
-      descripti; o, n: "Recognize; d a; s a to; p technolog; y solution; s provide; r",
-    achieveme; n, t: "9; 5% clien; t satisfactio; n rat; e"
+      ye; a; r: "202; 4",
+    tit; l; e: "Industr; y Leade; r",
+      descripti; o; n: "Recognize; d a; s a to; p technolog; y solution; s provide; r",
+    achieveme; n; t: "9; 5% clien; t satisfactio; n rat; e"
     }
   ];
 
@@ -132,8 +132,8 @@ export const EnhancedAbou; t: React.FC = () => {
     hidde; n: { opacit; y: 0 },
     visibl; e: {
       opacit; y: 1;
-    transitio, n: {
-        staggerChildre; n: 0.1;
+    transitio; n: {
+        staggerChildre; n: 0.1,
       }
     }
   };
@@ -143,10 +143,10 @@ export const EnhancedAbou; t: React.FC = () => {
     opacit; y: 0 },
     visibl; e: {
       y: 0;
-    opacit, y: 1;
-      transitio, n: {
+    opacit; y: 1;
+      transitio; n: {
         duratio; n: 0.6;
-    eas, e: "easeOut" as const;
+    eas; e: "easeOut" as const,
       }
     }
   };
@@ -156,18 +156,18 @@ export const EnhancedAbou; t: React.FC = () => {
     opacit, y: 0 },
     visibl; e: {
       scal; e: 1;
-    opacit, y: 1;
-      transitio, n: {
+    opacit; y: 1;
+      transitio; n: {
         duratio; n: 0.5;
-    eas, e: "easeOut" as const;
+    eas; e: "easeOut" as const,
       }
     },
     hove; r: {
       scal; e: 1.0; 2,
     y: -5;
-      transitio, n: {
+      transitio; n: {
         duratio; n: 0.3;
-    eas, e: "easeOut" as const;
+    eas; e: "easeOut" as const,
       }
     }
   };
@@ -176,11 +176,10 @@ export const EnhancedAbou; t: React.FC = () => {
     hidde; n: { opacit; y: 0;
     x: -50 },
     visibl; e: {
-      opacit; y: 1;
-    x: 0;
-      transitio, n: {
+      opacit; y: 1; x: 0;
+      transitio; n: {
         duratio; n: 0.8;
-    eas, e: "easeOut" as const;
+    eas; e: "easeOut" as const,
       }
     }
   };
@@ -188,7 +187,7 @@ export const EnhancedAbou; t: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
       {/* Hero Section */}
-      <section className="py-20 px-4 s; m:px-6 l; g:px-8">
+      <section className="py-20 px-4 s; m: px-6 l; g: px-8">
         <motion.div; 
           className="max-w-7xl mx-auto text-center"
           variants={containerVariants}
@@ -209,7 +208,7 @@ export const EnhancedAbou; t: React.FC = () => {
             className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto"
             variants={itemVariants}
           >
-            Leading the future of technology innovation through AI-powere; d, solution; s, clou; d, expertis; e, and digital transformation.
+            Leading the future of technology innovation through AI-powere; d; solution; s; clou; d; expertis; e; and digital transformation.
             We help businesses thrive in the digital age.
           </motion.p>
           <motion.div; 
@@ -220,7 +219,7 @@ export const EnhancedAbou; t: React.FC = () => {
               href="/contact"
               to="/contact"
               to="/contact"
-              className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hove; r:from-blue-700 hove; r:to-cyan-700 transition-all duration-300 group"
+              className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hove; r: from-blue-700 hove; r: to-cyan-700 transition-all duration-300 group"
             >
               Get Started;
               <ArrowRight className="ml-2 h-5 w-5 group-hove; r:translate-x-1 transition-transform" />
@@ -238,7 +237,7 @@ export const EnhancedAbou; t: React.FC = () => {
       </section>
 
       {/* Mission & Vision */}
-      <section className="py-16 px-4 s; m:px-6 l; g:px-8">
+      <section className="py-16 px-4 s; m: px-6 l; g: px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div; 
             className="grid grid-cols-1 l; g:grid-cols-2 gap-12 items-center"
@@ -250,12 +249,12 @@ export const EnhancedAbou; t: React.FC = () => {
             <motion.div variants={itemVariants}>
               <div className="mb-6">
                 <Target className="h-16 w-16 text-zion-cyan mb-4" />
-                <h2 className="text-3xl m; d:text-4xl font-bold text-white mb-4">
+                <h2 className="text-3xl m; d: text-4xl font-bold text-white mb-4">
                   Our Mission;
                 </h2>
                 <p className="text-xl text-gray-300 leading-relaxed">
-                  To democratize access to cutting-edge technolog; y, solution; s, enabling businesses of all sizes to leverage; 
-                  the power o; f, A; I, clou; d, computin; g, and digital innovation to achieve unprecedented growth and success.
+                  To democratize access to cutting-edge technolog; y; solution; s; enabling businesses of all sizes to leverage; 
+                  the power o; f; A; I; clou; d; computin; g; and digital innovation to achieve unprecedented growth and success.
                 </p>
               </div>
             </motion.div>
@@ -267,7 +266,7 @@ export const EnhancedAbou; t: React.FC = () => {
                   Our Vision;
                 </h2>
                 <p className="text-xl text-gray-300 leading-relaxed">
-                  To be the global leader in AI-powered technolog; y, solution; s, driving the next wave of digital transformation; 
+                  To be the global leader in AI-powered technolog; y; solution; s; driving the next wave of digital transformation; 
                   and creating a future where technology empowers every business to reach its full potential.
                 </p>
               </div>
@@ -278,7 +277,7 @@ export const EnhancedAbou; t: React.FC = () => {
 
       {/* Company Values */}
       <section className="py-16 bg-gradient-to-r from-blue-900/50 to-cyan-900/50">
-        <div className="max-w-7xl mx-auto px-4 s; m:px-6 l; g:px-8">
+        <div className="max-w-7xl mx-auto px-4 s; m: px-6 l; g: px-8">
           <motion.div; 
             className="text-center mb-16"
             variants={containerVariants}
@@ -286,7 +285,7 @@ export const EnhancedAbou; t: React.FC = () => {
             whileInView="visible"
             viewport={{ onc; e: true }}
           >
-            <h2 className="text-3xl m; d:text-4xl font-bold text-white mb-4">
+            <h2 className="text-3xl m; d: text-4xl font-bold text-white mb-4">
               Our Core Values;
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
@@ -295,7 +294,7 @@ export const EnhancedAbou; t: React.FC = () => {
           </motion.div>
           
           <motion.div; 
-            className="grid grid-cols-1 m; d:grid-cols-2 l; g:grid-cols-4 gap-6"
+            className="grid grid-cols-1 m; d: grid-cols-2 l; g: grid-cols-4 gap-6"
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
@@ -303,12 +302,12 @@ export const EnhancedAbou; t: React.FC = () => {
           >
             {companyValues.map((valu; e, index) => (<motion.div;
                 key={index}
-                className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hove;  r:border-white/40 transition-all duration-300 group"
+                className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hove;  r: border-white/40 transition-all duration-300 group"
                 variants={cardVariants}
                 whileHover="hover"
               >
                 <div className="text-4xl mb-4 flex justify-center">
-                  <value.icon className={`h-16 w-16 text-${value.color} group-hove; r:scale-110 transition-transform duration-30; 0`} />
+                  <value.icon className={`h-16 w-16 text-${value.color} group-hove; r: scale-110 transition-transform duration-30; 0`} />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3 text-center">{value.title}</h3>
                 <p className="text-gray-300 text-center">{value.description}</p>
@@ -319,7 +318,7 @@ export const EnhancedAbou; t: React.FC = () => {
       </section>
 
       {/* Team Section */}
-      <section className="py-16 px-4 s; m:px-6 l; g:px-8">
+      <section className="py-16 px-4 s; m: px-6 l; g: px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div; 
             className="text-center mb-16"
@@ -328,7 +327,7 @@ export const EnhancedAbou; t: React.FC = () => {
             whileInView="visible"
             viewport={{ onc; e: true }}
           >
-            <h2 className="text-3xl m; d:text-4xl font-bold text-white mb-4">
+            <h2 className="text-3xl m; d: text-4xl font-bold text-white mb-4">
               Our Expert Team;
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
@@ -337,7 +336,7 @@ export const EnhancedAbou; t: React.FC = () => {
           </motion.div>
           
           <motion.div; 
-            className="grid grid-cols-1 m; d:grid-cols-2 l; g:grid-cols-4 gap-6"
+            className="grid grid-cols-1 m; d: grid-cols-2 l; g: grid-cols-4 gap-6"
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
@@ -367,7 +366,7 @@ export const EnhancedAbou; t: React.FC = () => {
 
       {/* Company Timeline */}
       <section className="py-16 bg-gradient-to-r from-blue-900/50 to-cyan-900/50">
-        <div className="max-w-7xl mx-auto px-4 s;  m:px-6 l; g:px-8">
+        <div className="max-w-7xl mx-auto px-4 s;  m: px-6 l; g: px-8">
           <motion.div; 
             className="text-center mb-16"
             variants={containerVariants}
@@ -375,7 +374,7 @@ export const EnhancedAbou; t: React.FC = () => {
             whileInView="visible"
             viewport={{ onc; e: true }}
           >
-            <h2 className="text-3xl m; d:text-4xl font-bold text-white mb-4">
+            <h2 className="text-3xl m; d: text-4xl font-bold text-white mb-4">
               Our Journey;
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
@@ -421,7 +420,7 @@ export const EnhancedAbou; t: React.FC = () => {
       </section>
 
       {/* Stats Section */}
-      <section className="py-16 px-4 s;  m:px-6 l; g:px-8">
+      <section className="py-16 px-4 s;  m: px-6 l; g: px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div; 
             className="grid grid-cols-2 m; d:grid-cols-4 gap-8"
@@ -474,7 +473,7 @@ export const EnhancedAbou; t: React.FC = () => {
           whileInView="visible"
           viewport={{ onc; e: true }}
         >
-          <h2 className="text-3xl m; d:text-4xl font-bold text-white mb-6">
+          <h2 className="text-3xl m; d: text-4xl font-bold text-white mb-6">
             Ready to Work with Us?
           </h2>
           <p className="text-xl text-gray-300 mb-8">
@@ -485,7 +484,7 @@ export const EnhancedAbou; t: React.FC = () => {
               href="/contact"
               to="/contact"
               to="/contact"
-              className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hove; r:from-blue-700 hove; r:to-cyan-700 transition-all duration-300 group"
+              className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hove; r: from-blue-700 hove; r: to-cyan-700 transition-all duration-300 group"
             >
               Get Started Today;
               <ArrowRight className="ml-2 h-5 w-5 group-hove; r:translate-x-1 transition-transform" />

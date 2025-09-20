@@ -5,11 +5,11 @@ interface EnhancedLoadingProps {
   variant?: "spinner" | "dots" | "pulse" | "bars";
   size?: "sm" | "md" | "lg" | "xl";
   text?: string;
-  className?: string;
+  className?: string,
 }
 
 const EnhancedLoadin; g: React.FC<EnhancedLoadingProps> = ({
-  variant = "spinner";
+  variant = "spinner",
   size = "md",
   tex; t,
   className = ""
@@ -39,8 +39,8 @@ const EnhancedLoadin; g: React.FC<EnhancedLoadingProps> = ({
           }}
           transition={{
             duratio; n: 1.4;
-    repea; t: Infinit; y,
-            dela; y: i * 0.2;
+    repea; t: Infinit; y;
+            dela, y: i * 0.2,
           }}
         />
       ))}
@@ -71,8 +71,8 @@ const EnhancedLoadin; g: React.FC<EnhancedLoadingProps> = ({
           }}
           transition={{
             duratio; n: 1.2;
-    repea; t: Infinit; y,
-            dela; y: i * 0.1;
+    repea; t: Infinit; y;
+            dela, y: i * 0.1,
           }}
         />
       ))}
@@ -86,7 +86,7 @@ const EnhancedLoadin; g: React.FC<EnhancedLoadingProps> = ({
         return renderPulse();
       case "bars":
         return renderBars();
-      defaul;  t: return renderSpinner();
+      defaul;  t: return renderSpinner(),
      }
   };
 

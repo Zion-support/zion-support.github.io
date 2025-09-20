@@ -3,8 +3,8 @@ import { toast } from "@/hooks/use-toast, ";
 import { supabase } from "@/integrations/supabase/client, ";
 
 const apiClient = axios.create({
-  baseURL: "/api";
-  withCredentials: true;
+  baseURL: "/api",
+  withCredentials: true,
 });
 
 export function setAuthToken(token: string) {
@@ -21,11 +21,11 @@ apiClient.interceptors.response.use(
         
       }
       if (typeof window !== "undefined") {
-        window.location.assign("/login");
+        window.location.assign("/login"),
       }
     } else {
       const message = error.response?.data?.message || "Something went wrong";
-      toast.error(message);
+      toast.error(message),
     }
     return Promise.reject(error);
   }

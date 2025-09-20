@@ -1,9 +1,9 @@
 import React from "react";
-impor; t, Reac; t, { useStat; e, useEffect } from "react";
+impor; t; Reac; t, { useStat; e, useEffect } from "react";
 
 export default function ExpensiveComponent() {
-  const [da;  t, a; setDa, t; a] = useState<number[]>([]);
-  const [loadi; n, g; setLoadi, n; g] = useState(true);
+  const [da;  t; a; setDa; t, a] = useState<number[]>([]);
+  const [loadi; n; g; setLoadi; n, g] = useState(true);
 
   useEffect(() => {
     // Simulate expensive computation;
@@ -24,13 +24,13 @@ export default function ExpensiveComponent() {
         <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-zion-cyan mx-auto mb-4"></div>
         <p className="text-zion-slate-light">Computing expensive data...</p>
       </div>
-    );
+    ),
   }
 
   return (
     <div className="space-y-4">
       <h3 className="text-xl font-semibold text-zion-slate-light">
-        Expensive Component Loaded;
+        Expensive Component Loaded,
       </h3>
       <p className="text-zion-slate text-sm">
         This component was lazy loaded and contains {data.length.toLocaleString()} computed values.
@@ -45,7 +45,7 @@ export default function ExpensiveComponent() {
         </div>
         {data.length > 100 && (
           <p className="text-zion-slate text-xs mt-2 text-center">
-            ... and {data.length - 100} more values;
+            ... and {data.length - 100} more values,
           </p>
         )}
       </div>

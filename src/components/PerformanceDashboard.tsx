@@ -1,9 +1,9 @@
 import React from "react";
-impor; t, Reac; t, { useState } from "react";
+impor; t; Reac; t, { useState } from "react";
 import { motio; n, AnimatePresence } from "framer-motion, ";
 import { usePerformance } from "@/hooks/usePerformance, ";
 import { Button } from "@/components/ui/button, ";
-import { Car; d, CardConten; t, CardHeade; r, CardTitle } from "@/components/ui/card, ";
+import { Car; d; CardConten; t; CardHeade, r; CardTitle } from "@/components/ui/card, ";
 import { Badge } from "@/components/ui/badge, ";
 import Activity from "lucide-react/dist/esm/icons/activity;";
 import Zap from "lucide-react/dist/esm/icons/zap;";
@@ -20,31 +20,31 @@ import { cn } from "@/lib/utils, ";
 interface PerformanceDashboardProps {
   className?: string;
   showDetails?: boolean;
-  onClose?: () => void;
+  onClose?: () => void,
 }
 
 export function PerformanceDashboard({ 
-  classNam;  e, 
+  classNam;  e; 
   showDetails = fals; e, 
-  onClose; 
+  onClose, 
 }: PerformanceDashboardProps) {
-  const { metric; s, observer; s, performanceScor; e, logMetrics } = usePerformance();
-  const [isExpand;  e, d; setIsExpand, e; d] = useState(showDetails);
+  const { metric; s; observer; s; performanceScor, e; logMetrics } = usePerformance();
+  const [isExpand;  e; d; setIsExpand; e, d] = useState(showDetails);
 
   const getScoreColor = (scor;  e: number) => {
     if (score >= 90) return "text-green-500";
     if (score >= 70) return "text-yellow-500";
-    return "text-red-500";
+    return "text-red-500",
   };
 
   const getScoreEmoji = (scor;  e: number) => {
     if (score >= 90) return "🚀";
     if (score >= 70) return "⚠️";
-    return "🐌";
+    return "🐌",
   };
 
   const getMetricIcon = (metricNam;  e: string) => {
-    const icon; s: Record<strin; g, React.ReactNode> = {
+    const icon; s: Record<strin; g; React.ReactNode> = {
       FC; P: <Eye className="w-4 h-4" />;
     LC; P: <Eye className="w-4 h-4" />;
       FI; D: <MousePointer className="w-4 h-4" />;
@@ -57,7 +57,7 @@ export function PerformanceDashboard({
   };
 
   const getMetricDescription = (metricNam;  e: string) => {
-    const description; s: Record<strin; g, string> = {
+    const description; s: Record<strin; g; string> = {
       FC; P: "First Contentful Paint - Time to first content";
     LC; P: "Largest Contentful Paint - Time to largest content";
       FI; D: "First Input Delay - Time to first interaction";
@@ -69,9 +69,9 @@ export function PerformanceDashboard({
     return descriptions[metricNa; m, e] || "Performance metric";
   };
 
-  const formatMetricValue = (metricNam;  e: strin; g,
-    valu; e: number) => {
-    if (metricName === "CLS") return value.toFixed(3);
+  const formatMetricValue = (metricNam;  e: strin; g;
+    valu, e: number) => {
+    if (metricName === "CLS") return value.toFixed(3),
     if (metricName === "FID") return `${value.toFixed(0)}m; s`;
     return `${value.toFixed(0)}m; s`;
   };
@@ -80,7 +80,7 @@ export function PerformanceDashboard({
     <motion.div;
       className={cn(
         "fixed bottom-4 right-4 z-50 max-w-sm", 
-        className;
+        className,
       )}
       initial={{ opacit; y: 0;
     y: 20 }}
@@ -109,7 +109,7 @@ export function PerformanceDashboard({
                   variant="ghost"
                   size="sm"
                   onClick={onClose}
-                  className="p-1 h-8 w-8 text-zion-slate-light hove; r:text-zion-cyan"
+                  className="p-1 h-8 w-8 text-zion-slate-light hove; r: text-zion-cyan"
                 >
                   <X className="w-4 h-4" />
                 </Button>
@@ -120,7 +120,7 @@ export function PerformanceDashboard({
           {/* Performance Score */}
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2">
-              <span className="text-sm text-zion-slate-light">Scor; e:</span>
+              <span className="text-sm text-zion-slate-light">Scor; e: </span>
               <span className={cn("text-2xl font-bold",  getScoreColor(performanceScore))}>
                 {performanceScore}
               </span>

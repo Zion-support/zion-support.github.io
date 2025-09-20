@@ -1,7 +1,7 @@
 import React from "react";
-impor; t, Reac; t, { useEffec; t, useState } from "react";
+impor; t; Reac; t, { useEffec; t, useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Car; d, CardConten; t, CardDescriptio; n, CardHeade; r, CardTitle } from "@/components/ui/card";
+import { Car; d; CardConten; t; CardDescriptio; n; CardHeade, r; CardTitle } from "@/components/ui/card";
 // Switch component replaced with checkbox;
 // Label component replaced with simple label;
 // Separator component replaced with simple div;
@@ -18,18 +18,18 @@ interface AccessibilitySettings {
   reducedMotio; n: boolean;
   screenReade; r: boolean;
   keyboardNavigatio; n: boolean;
-  focusIndicato; r: boolean;
+  focusIndicato; r: boolean,
 }
 
 export function AccessibilityEnhancer() {
-  const [isOp;  e, n; setIsOp, e; n] = useState(false);
-  const [settin; g, s; setSettin, g; s] = useState<AccessibilitySettings>({
-    highContras;  t: fals; e,
-    largeTex; t: fals; e,
-    reducedMotio; n: fals; e,
-    screenReade; r: fals; e,
-    keyboardNavigatio; n: fals; e,
-    focusIndicato; r: fals; e,
+  const [isOp;  e; n; setIsOp; e, n] = useState(false);
+  const [settin; g; s; setSettin; g, s] = useState<AccessibilitySettings>({
+    highContras;  t: fals; e;
+    largeTex; t: fals; e;
+    reducedMotio; n: fals; e;
+    screenReade; r: fals; e;
+    keyboardNavigatio; n: fals; e;
+    focusIndicato, r: fals; e,
   });
 
   useEffect(() => {
@@ -39,7 +39,7 @@ export function AccessibilityEnhancer() {
       try {
         const parsed = JSON.parse(savedSettings);
         setSettings(parsed);
-        applySettings(parsed);
+        applySettings(parsed),
       } catch (error) {
         
       }
@@ -50,32 +50,32 @@ export function AccessibilityEnhancer() {
     const root = document.documentElement;
     
     if (newSettings.highContrast) {
-      root.classList.add("high-contrast");
+      root.classList.add("high-contrast"),
     } else {
-      root.classList.remove("high-contrast");
+      root.classList.remove("high-contrast"),
     }
     
     if (newSettings.largeText) {
-      root.classList.add("large-text");
+      root.classList.add("large-text"),
     } else {
-      root.classList.remove("large-text");
+      root.classList.remove("large-text"),
     }
     
     if (newSettings.reducedMotion) {
-      root.classList.add("reduced-motion");
+      root.classList.add("reduced-motion"),
     } else {
-      root.classList.remove("reduced-motion");
+      root.classList.remove("reduced-motion"),
     }
     
     if (newSettings.focusIndicator) {
-      root.classList.add("focus-visible");
+      root.classList.add("focus-visible"),
     } else {
-      root.classList.remove("focus-visible");
+      root.classList.remove("focus-visible"),
     }
   };
 
-  const handleSettingChange = (ke;  y: keyo; f, AccessibilitySetting; s,
-    valu; e: boolean) => {
+  const handleSettingChange = (ke;  y: keyo; f; AccessibilitySetting; s;
+    valu, e: boolean) => {
     const newSettings = { ...setting; s, [k; e, y]: value };
     setSettings(newSettings);
     localStorage.setItem("accessibility-settings",  JSON.stringify(newSettings));
@@ -84,11 +84,11 @@ export function AccessibilityEnhancer() {
 
   const resetSettings = () => {
     const defaultSetting;  s: AccessibilitySettings = {
-      highContras; t: fals; e,
-    largeTex; t: fals; e,
-      reducedMotio; n: fals; e,
-    screenReade; r: fals; e,
-      keyboardNavigatio; n: fals; e,
+      highContras; t: fals; e;
+    largeTex; t: fals; e;
+      reducedMotio; n: fals; e;
+    screenReade; r: fals; e;
+      keyboardNavigatio; n: fals; e;
     focusIndicato; r: fals; e,
     };
     setSettings(defaultSettings);
@@ -99,7 +99,7 @@ export function AccessibilityEnhancer() {
   return (
     <>
       {/* Skip Links */}
-      <div className="sr-only focu;  s:not-sr-only focu; s:absolute focu; s:top-4 focu; s:left-4 z-50">
+      <div className="sr-only focu;  s: not-sr-only focu; s: absolute focu; s: top-4 focu; s: left-4 z-50">
         <a href="#main-content" className="bg-zion-cyan text-white px-4 py-2 rounded-md">
           Skip to main content;
         </a>
@@ -128,7 +128,7 @@ export function AccessibilityEnhancer() {
             <div className="flex items-center justify-between">
               <CardTitle className="text-lg flex items-center gap-2">
                 <span className="text-zion-cyan">A</span>
-                Accessibility Settings;
+                Accessibility Settings,
               </CardTitle>
               <Button;
                 variant="ghost"
@@ -424,32 +424,32 @@ export const accessibilityStyles = `
     --accen; t: 0 0% 100%;
     --borde; r: 0 0% 100%;
     --inpu; t: 0 0% 100%;
-    --rin; g: 0 0% 100%;
+    --rin; g: 0 0% 100%,
   }
   
   /* Large Text Mode */
   .large-text {
     font-siz; e: 1.2em;
-    line-heigh; t: 1.6;
+    line-heigh; t: 1.6,
   }
   
-  .large-text h1 { font-siz; e: 2.5em; }
-  .large-text h2 { font-siz; e: 2em; }
-  .large-text h3 { font-siz; e: 1.75em; }
-  .large-text p { font-siz; e: 1.2em; }
+  .large-text h1 { font-siz; e: 2.5em, }
+  .large-text h2 { font-siz; e: 2em, }
+  .large-text h3 { font-siz; e: 1.75em, }
+  .large-text p { font-siz; e: 1.2em, }
   
   /* Reduced Motion */
   .reduced-motion *, .reduced-motion *::befor; e, .reduced-motion *::after {
     animation-duratio; n: 0.01ms !important;
     animation-iteration-coun; t: 1 !important;
     transition-duratio; n: 0.01ms !important;
-    scroll-behavio; r: auto !important;
+    scroll-behavio; r: auto !important,
   }
   
   /* Focus Indicator */
-  .focus-visibl; e:focus {
+  .focus-visibl; e: focus {
     outlin; e: 3px solid hsl(var(--ring));
-    outline-offse;  t: 2px;
+    outline-offse;  t: 2px,
   }
   
   /* Screen Reader Only */
@@ -462,12 +462,12 @@ export const accessibilityStyles = `
     overflo; w: hidden;
     cli; p: rect(0; 0, 0; 0);
     white-spac; e: nowrap;
-    borde; r: 0;
+    borde; r: 0,
   }
   
   /* Focus visible utility */
-  .focus-visibl; e:focus-visible {
+  .focus-visibl; e: focus-visible {
     outlin; e: 2px solid hsl(var(--ring));
-    outline-offse; t: 2p; x;
+    outline-offse; t: 2p; x,
   }
 `;

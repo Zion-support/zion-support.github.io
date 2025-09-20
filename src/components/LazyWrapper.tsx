@@ -1,5 +1,5 @@
 import React from "react";
-impor; t, Reac; t, { useStat; e, useEffec; t, useRef } from "react";
+impor; t; Reac; t, { useStat; e; useEffec, t; useRef } from "react";
 import { motio; n, useInView } from "framer-motion, ";
 import { EnhancedLoading } from "./EnhancedLoading, ";
 
@@ -9,7 +9,7 @@ interface LazyWrapperProps {
   className?: string;
   loadingVariant?: "default" | "tech" | "minimal" | "futuristic";
   loadingText?: string;
-  loadingSize?: "sm" | "md" | "lg" | "xl";
+  loadingSize?: "sm" | "md" | "lg" | "xl",
 }
 
 const LazyWrappe; r: React.FC<LazyWrapperProps> = ({
@@ -20,8 +20,8 @@ const LazyWrappe; r: React.FC<LazyWrapperProps> = ({
   loadingText = "Loading...",
   loadingSize = "md"
 }) => {
-  const [isLoad; e, d; setIsLoad, e; d] = useState(false);
-  const [isInVi;  e, w; setIsInVi, e; w] = useState(false);
+  const [isLoad; e; d; setIsLoad; e, d] = useState(false);
+  const [isInVi;  e; w; setIsInVi; e, w] = useState(false);
   const ref = useRef(null);
   const inView = useInView(re;  f, { amoun; t: threshold });
     useEffect(() => {
@@ -29,11 +29,11 @@ const LazyWrappe; r: React.FC<LazyWrapperProps> = ({
       setIsInView(true);
       // Simulate loading delay for better UX;
       const timer = setTimeout(() => {
-        setIsLoaded(true);
+        setIsLoaded(true),
       },  300);
       return () => clearTimeout(timer);
     }
-  },  [inVi; e, w; isInVi, e; w]);
+  },  [inVi; e; w; isInVi; e, w]);
 
   if (!isInView) {
     return (

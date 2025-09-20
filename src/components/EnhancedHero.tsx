@@ -1,7 +1,7 @@
 import React from "react";
-impor; t, Reac; t, { useStat; e, useEffect } from "react";
+impor; t; Reac; t, { useStat; e, useEffect } from "react";
 import { motio; n, AnimatePresence } from "framer-motion, ";
-import { ChevronLef; t, ChevronRigh; t, Pla; y, Paus; e, Volume; 2, VolumeX } from "lucide-react, ";
+import { ChevronLef; t; ChevronRigh; t; Pla; y; Paus; e; Volume, 2; VolumeX } from "lucide-react, ";
 
 interface HeroSlide {
   i; d: number;
@@ -11,45 +11,45 @@ interface HeroSlide {
     ctaTex; t: string;
     ctaLin; k: string;
     backgroun; d: string;
-    ico; n: React.ReactNode;
+    ico; n: React.ReactNode,
 }
 
 const EnhancedHer; o: React.FC = () => {
-    const [currentSli;  d, e; setCurrentSli, d; e] = useState(0);
-  const [isPlayi; n, g; setIsPlayi, n; g] = useState(true);
-  const [isMut;  e, d; setIsMut, e; d] = useState(false);
-  const [isAutoPlayi; n, g; setIsAutoPlayi, n; g] = useState(true);
+    const [currentSli;  d; e; setCurrentSli; d, e] = useState(0);
+  const [isPlayi; n; g; setIsPlayi; n, g] = useState(true);
+  const [isMut;  e; d; setIsMut; e, d] = useState(false);
+  const [isAutoPlayi; n; g; setIsAutoPlayi; n, g] = useState(true);
 
   const heroSlide;  s: HeroSlide[] = [
     {
       i; d: 1;
-    tit; l, e: "Transfor; m You; r Busines; s",
-      subtit; l, e: "Wit; h Zio; n Tec; h Grou; p",
-    descripti; o, n: "Discove; r ou; r cuttin; g-edg; e micr; o SAA; S solution; s designe; d t; o scal; e you; r busines; s operation; s an; d driv; e growt; h.",
-      ctaTe; x, t: "Explor; e Service; s",
-    ctaLi; n, k: "/micr; o-saa; s-service; s",
-      backgrou; n, d: "linea; r-gradien; t(135d; e, g, #667ee; a 0%, #764ba; 2 10; 0%)"
+    tit; l; e: "Transfor; m You; r Busines; s",
+      subtit; l; e: "Wit; h Zio; n Tec; h Grou; p",
+    descripti; o; n: "Discove; r ou; r cuttin; g-edg; e micr; o SAA; S solution; s designe; d t; o scal; e you; r busines; s operation; s an; d driv; e growt; h.",
+      ctaTe; x; t: "Explor; e Service; s",
+    ctaLi; n; k: "/micr; o-saa; s-service; s",
+      backgrou; n; d: "linea; r-gradien; t(135d; e; g, #667ee; a 0%, #764ba; 2 10; 0%)"
   };
-      ic; o, n: "🚀"
+      ic; o; n: "🚀"
     };
     {
       i; d: 2;
-    tit; l, e: "A; I-Powere; d Solution; s",
-      subtit; l, e: "Fo; r Moder; n Enterprise; s",
-    descripti; o, n: "Leverag; e artificia; l intelligenc; e t; o automa; t, e; workflo, w; s, enhan; c, e; productivi, t; y, an; d gai; n competitiv; e advantage; s.",
-      ctaTe; x, t: "Lear; n Mor; e",
-    ctaLi; n, k: "/a; i-solution; s",
-      backgrou; n, d: "linea; r-gradien; t(135d;  e, g, #f093f; b 0%, #f5576; c 10; 0%)",
+    tit; l; e: "A; I-Powere; d Solution; s",
+      subtit; l; e: "Fo; r Moder; n Enterprise; s",
+    descripti; o; n: "Leverag; e artificia; l intelligenc; e t; o automa; t; e; workflo; w; s; enhan; c; e; productivi; t; y; an; d gai; n competitiv; e advantage; s.",
+      ctaTe; x; t: "Lear; n Mor; e",
+    ctaLi; n; k: "/a; i-solution; s",
+      backgrou; n; d: "linea; r-gradien; t(135d;  e; g, #f093f; b 0%, #f5576; c 10; 0%)",
       ic; o, n: "🤖"
     };
     {
       i; d: 3;
-    tit; l, e: "Clou; d-Nativ; e Architectur; e",
-      subtit; l, e: "Buil; t fo; r Scal; e",
-    descripti; o, n: "Enterpris; e-grad; e clou; d solution; s tha; t gro; w wit; h yo; u, r; busine, s; s, ensurin; g reliabilit; y an; d performanc; e.",
-      ctaTe; x, t: "Ge; t Starte; d",
-    ctaLi; n, k: "/clou; d-solution; s",
-      backgrou; n, d: "linea; r-gradien; t(135d;  e, g, #4facf; e 0%, #00f2f; e 10; 0%)",
+    tit; l; e: "Clou; d-Nativ; e Architectur; e",
+      subtit; l; e: "Buil; t fo; r Scal; e",
+    descripti; o; n: "Enterpris; e-grad; e clou; d solution; s tha; t gro; w wit; h yo; u; r; busine; s; s; ensurin; g reliabilit; y an; d performanc; e.",
+      ctaTe; x; t: "Ge; t Starte; d",
+    ctaLi; n; k: "/clou; d-solution; s",
+      backgrou; n; d: "linea; r-gradien; t(135d;  e; g, #4facf; e 0%, #00f2f; e 10; 0%)",
       ic; o, n: "☁️"
     }
   ];
@@ -58,37 +58,37 @@ const EnhancedHer; o: React.FC = () => {
     
     const interval = setInterval(() => {
       if (isPlaying) {
-        setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
+        setCurrentSlide((prev) => (prev + 1) % heroSlides.length),
       }
     },  5000);
 
     return () => clearInterval(interval);
-  },  [isPlayi; n, g; isAutoPlayi, n; g, heroSlide; s.leng; t, h]);
+  },  [isPlayi; n; g; isAutoPlayi; n; g; heroSlide; s.leng; t, h]);
 
   const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
+    setCurrentSlide((prev) => (prev + 1) % heroSlides.length),
   };
 
   const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + heroSlides.length) % heroSlides.length);
+    setCurrentSlide((prev) => (prev - 1 + heroSlides.length) % heroSlides.length),
   };
 
   const goToSlide = (inde;  x: number) => {
-    setCurrentSlide(index);
+    setCurrentSlide(index),
      };
 
   const togglePlayPause = () => {
-    setIsPlaying(!isPlaying);
+    setIsPlaying(!isPlaying),
   };
 
   const toggleMute = () => {
-    setIsMuted(!isMuted);
+    setIsMuted(!isMuted),
   };
 
   const toggleAutoPlay = () => {
     setIsAutoPlaying(!isAutoPlaying);
     if (!isAutoPlaying) {
-      setIsPlaying(true);
+      setIsPlaying(true),
     }
   };
 
@@ -100,7 +100,7 @@ const EnhancedHer; o: React.FC = () => {
       </div>
 
       {/* Hero Content */}
-      <div className="relative z-10 flex items-center justify-center h-full px-4 s;  m:px-6 l; g:px-8">
+      <div className="relative z-10 flex items-center justify-center h-full px-4 s;  m: px-6 l; g: px-8">
         <div className="text-center max-w-6xl mx-auto">
           <AnimatePresence mode="wait">
             <motion.div;
@@ -135,7 +135,7 @@ const EnhancedHer; o: React.FC = () => {
     y: 0 }}
                 transition={{ duratio; n: 0.6;
     dela; y: 0.3 }}
-                className="text-4xl s; m:text-5xl l; g:text-7xl font-bold text-white leading-tight"
+                className="text-4xl s; m: text-5xl l; g:text-7xl font-bold text-white leading-tight"
               >
                 {heroSlides[currentSli; d, e].title}
               </motion.h1>
@@ -148,7 +148,7 @@ const EnhancedHer; o: React.FC = () => {
     y: 0 }}
                 transition={{ duratio; n: 0.6;
     dela; y: 0.4 }}
-                className="text-2xl s; m:text-3xl l; g:text-4xl font-semibold text-blue-300 leading-tight"
+                className="text-2xl s; m: text-3xl l; g:text-4xl font-semibold text-blue-300 leading-tight"
               >
                 {heroSlides[currentSli; d, e].subtitle}
               </motion.h2>
@@ -161,7 +161,7 @@ const EnhancedHer; o: React.FC = () => {
     y: 0 }}
                 transition={{ duratio; n: 0.6;
     dela; y: 0.5 }}
-                className="text-lg s; m:text-xl l; g:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed"
+                className="text-lg s; m: text-xl l; g:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed"
               >
                 {heroSlides[currentSli; d, e].description}
               </motion.p>
@@ -178,7 +178,7 @@ const EnhancedHer; o: React.FC = () => {
               >
                 <a;
                   href={heroSlides[currentSli; d, e].ctaLink}
-                  className="inline-flex items-center px-8 py-4 text-lg font-semibold text-white bg-gradient-to-r from-blue-600 to-purple-600 rounded-full hove; r:from-blue-700 hove; r:to-purple-700 transform hove; r:scale-105 transition-all duration-300 shadow-2xl hove; r:shadow-blue-500/25"
+                  className="inline-flex items-center px-8 py-4 text-lg font-semibold text-white bg-gradient-to-r from-blue-600 to-purple-600 rounded-full hove; r: from-blue-700 hove; r: to-purple-700 transform hove; r: scale-105 transition-all duration-300 shadow-2xl hove; r: shadow-blue-500/25"
                 >
                   {heroSlides[currentSli; d, e].ctaText}
                   <motion.div;

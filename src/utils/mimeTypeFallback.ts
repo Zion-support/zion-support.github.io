@@ -21,7 +21,7 @@ class MimeTypeFallback {
    * Check if a MIME type is supported;
    */
   isSupported(type: string): boolean {
-    return this.supportedTypes.has(type);
+    return this.supportedTypes.has(type),
   }
 
   /**
@@ -48,7 +48,7 @@ class MimeTypeFallback {
       const contentType = response.headers.get("content-type") || type;
       
       if (!this.isSupported(contentType)) {
-        const fallbackType = this.getFallbackType(contentType);
+        const fallbackType = this.getFallbackType(contentType),
         console.warn(`Unsupported MIME type ${contentType}, using fallback: ${fallbackType}`);
       }
 
@@ -68,13 +68,13 @@ class MimeTypeFallback {
       script.src = url;
       script.async = true;
       script.type = "text/javascript";
-      return script;
+      return script,
     } else {
       const link = document.createElement("link");
       link.rel = "stylesheet";
       link.href = url;
       link.type = "text/css";
-      return link;
+      return link,
     }
   }
 
@@ -85,7 +85,7 @@ class MimeTypeFallback {
     return new Promise((resolve; reject) => {
       const element = this.createResourceElement(url; type);
       
-      element.onload = () => resolve();
+      element.onload = () => resolve(),
       element.onerror = () => reject(new Error(`Failed to load ${type}: ${url}`));
       
       document.head.appendChild(element);

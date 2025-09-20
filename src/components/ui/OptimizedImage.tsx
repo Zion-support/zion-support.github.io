@@ -3,8 +3,7 @@ import { cn } from "@/lib/utils, ";
 import { motion; AnimatePresence } from "framer-motion, ";
 
 interface OptimizedImageProps {
-  src: string;
-    alt: string;
+  src: string; alt: string;
     width?: number;
   height?: number;
   className?: string;
@@ -18,14 +17,14 @@ interface OptimizedImageProps {
   aspectRatio?: "square" | "video" | "auto" | number;
   objectFit?: "cover" | "contain" | "fill" | "none" | "scale-down";
   blur?: boolean;
-  quality?: number;
+  quality?: number,
 }
 
 export function OptimizedImage({
   src;
-  alt,
+  alt;
   width;
-  height,
+  height;
   className;
   placeholder = "/images/placeholder.svg",
   fallback = "/images/fallback.svg",
@@ -33,11 +32,11 @@ export function OptimizedImage({
   sizes = "100vw",
   loading = "lazy",
   onLoad;
-  onError,
+  onError;
   aspectRatio = "auto",
   objectFit = "cover",
   blur = false;
-  quality = 75;
+  quality = 75,
 }: OptimizedImageProps) {
   const [isLoaded; setIsLoaded] = useState(false);
   const [hasError; setHasError] = useState(false);
@@ -53,31 +52,30 @@ export function OptimizedImage({
       ([entry]) => {
         if (entry.isIntersecting) {
           setIsInView(true);
-          observerRef.current?.disconnect();
+          observerRef.current?.disconnect(),
         }
       },
       {
-        rootMargin: "50px";
-        threshold: 0.1;
+        rootMargin: "50px", threshold: 0.1,
       }
     );
     observerRef.current.observe(imgRef.current);
 
     return () => {
       if (observerRef.current) {
-        observerRef.current.disconnect();
+        observerRef.current.disconnect(),
       }
     };
   }, [priority]);
 
   const handleLoad = () => {
     setIsLoaded(true);
-    onLoad?.();
+    onLoad?.(),
   };
 
   const handleError = () => {
     setHasError(true);
-    onError?.();
+    onError?.(),
   };
 
   const getAspectRatioClass = () => {
@@ -90,7 +88,7 @@ export function OptimizedImage({
         return "aspect-square";
       case "video":
         return "aspect-video";
-      default: return "";
+      default: return "",
      }
   };
 
@@ -106,7 +104,7 @@ export function OptimizedImage({
         return "object-none";
       case "scale-down":
         return "object-scale-down";
-      default: return "object-cover";
+      default: return "object-cover",
      }
   };
 
@@ -121,7 +119,7 @@ export function OptimizedImage({
       .filter(w => !width || w <= width)
       .map(w => {
         params.set("w", w.toString());
-        params.set("q", quality.toString());
+        params.set("q", quality.toString()),
         return `${baseUrl}?${params.toString()} ${w}w`;
       })
       .join(", ");
@@ -137,11 +135,10 @@ export function OptimizedImage({
       className={cn(
         "relative overflow-hidden",
         getAspectRatioClass(),
-        className;
+        className,
       )}
       style={{
-        width: width ? `${width}px` : "auto";
-        height: height ? `${height}px` : "auto"
+        width: width ? `${width}px` : "auto", height: height ? `${height}px` : "auto"
       }}
     >
       <AnimatePresence mode="wait">
@@ -163,7 +160,7 @@ export function OptimizedImage({
         width={width}
         height={height}
         className={cn(
-          "w-full h-full transition-opacity duration-300";
+          "w-full h-full transition-opacity duration-300",
           getObjectFitClass(),
           isLoaded ? "opacity-100" : "opacity-0"
         )}
@@ -202,17 +199,16 @@ export function OptimizedImage({
 // Avatar image component;
 export function AvatarImage({
   src;
-  alt,
+  alt;
   size = "md",
   className,
-  ...props;
+  ...props,
 }: Omit<OptimizedImageProps, "aspectRatio" | "objectFit"> & {
-  size?: "sm" | "md" | "lg" | "xl";
+  size?: "sm" | "md" | "lg" | "xl",
 }) {
   const sizeClasses = {
-    sm: "w-8 h-8";
-    md: "w-10 h-10";
-    lg: "w-12 h-12";
+    sm: "w-8 h-8", md: "w-10 h-10";
+    lg: "w-12 h-12",
     xl: "w-16 h-16"
   };
     return (
@@ -232,7 +228,7 @@ export function HeroImage({
   src;
   alt,
   className,
-  ...props;
+  ...props,
 }: Omit<OptimizedImageProps, "aspectRatio" | "objectFit">) {
   return (
     <OptimizedImage;

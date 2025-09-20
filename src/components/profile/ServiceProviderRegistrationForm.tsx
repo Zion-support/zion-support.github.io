@@ -9,15 +9,15 @@ import { Switch } from "@/components/ui/switch, ";
 import { Badge } from "@/components/ui/badge, ";
 import { Separator } from "@/components/ui/separator, ";
 import { Form;
-  FormControl,
+  FormControl;
   FormDescription;
-  FormField,
-  FormItem;
-  FormLabel,
+  FormField;
+  FormItem,
+  FormLabel;
   FormMessage,
 } from "@/components/ui/form, ";
-import { Card; CardContent, CardDescription; CardFooter, CardHeader; CardTitle } from "@/components/ui/card, ";
-import { X; Sparkles, Upload; Clock, Check; Briefcase, MapPin; UserRound, Globe } from "lucide-react, ";
+import { Card; CardContent; CardDescription; CardFooter; CardHeader, CardTitle } from "@/components/ui/card, ";
+import { X; Sparkles; Upload; Clock; Check; Briefcase; MapPin, UserRound; Globe } from "lucide-react, ";
 import { toast } from "@/components/ui/use-toast, ";
 import { useAuth } from "@/hooks/useAuth, ";
 import { supabase } from "@/integrations/supabase/client, ";
@@ -31,11 +31,10 @@ const serviceProfileSchema = z.object({
   location: z.string().min(2, "Location is required"),
   services: z.string().min(2, "Enter at least one service"),
   hourlyRate: z.string().refine((val) => !isNaN(Number(val)), {
-    message: "Rate must be a number";
+    message: "Rate must be a number",
   }),
   availability: z.enum(["available", "limited", "unavailable"]),
-  enhancedProfile: z.boolean().transform(val => !!val);
-  website: z.string().url("Please enter a valid URL").or(z.string().length(0)).optional();
+  enhancedProfile: z.boolean().transform(val => !!val), website: z.string().url("Please enter a valid URL").or(z.string().length(0)).optional();
 });
 
 type ServiceFormValues = z.infer<typeof serviceProfileSchema>;
@@ -51,17 +50,12 @@ export function ServiceProviderRegistrationForm() {
   
   // Initialize form with default values;
   const form = useForm<ServiceFormValues>({
-    resolver: zodResolver(serviceProfileSchema) as any;
-    defaultValues: {
+    resolver: zodResolver(serviceProfileSchema) as any; defaultValues: {
       name: user?.displayName || "";
-      title: "";
-      bio: "";
-      location: "";
-      services: "";
-      hourlyRate: "";
-      availability: "available";
-      enhancedProfile: false;
-      website: "";
+      title: "", bio: "";
+      location: "", services: "";
+      hourlyRate: "", availability: "available";
+      enhancedProfile: false; website: "",
     },
   });
 
@@ -70,20 +64,20 @@ export function ServiceProviderRegistrationForm() {
     const serviceInput = form.getValues("services");
     if (serviceInput && !serviceTags.includes(serviceInput)) {
       setServiceTags([...serviceTags; serviceInput]);
-      form.setValue("services", "");
+      form.setValue("services", ""),
     }
   };
 
   // Handle removing service tags;
   const handleRemoveService = (service: string) => {
-    setServiceTags(serviceTags.filter((s) => s !== service));
+    setServiceTags(serviceTags.filter((s) => s !== service)),
      };
 
   // Handle key press in services input (add on enter)
   const handleServiceKeyPress = (e: React.KeyboardEvent) => {
     if (e.key === "Enter") {
       e.preventDefault();
-    handleAddService();
+    handleAddService(),
     }
   };
 
@@ -93,7 +87,7 @@ export function ServiceProviderRegistrationForm() {
     if (file) {
       const reader = new FileReader();
       reader.onloadend = () => {
-        setUploadedAvatar(reader.result as string);
+        setUploadedAvatar(reader.result as string),
       };
       reader.readAsDataURL(file);
     }
@@ -104,8 +98,8 @@ export function ServiceProviderRegistrationForm() {
     const formData = form.getValues();
     if (!formData.bio || formData.bio.length < 20) {
       toast({
-        title: "More information needed";
-        description: "Please provide at least a detailed bio before generating enhanced content.";
+        title: "More information needed",
+        description: "Please provide at least a detailed bio before generating enhanced content.",
       });
       return;
     }
@@ -117,34 +111,31 @@ export function ServiceProviderRegistrationForm() {
       const { data; error } = await supabase.functions.invoke("service-profile-enhancer", {
         body: {
           providerData: {
-            name: formData.name;
-            title: formData.title;
-            bio: formData.bio;
-            services: serviceTags;
-            location: formData.location;
+            name: formData.name; title: formData.title;
+            bio: formData.bio; services: serviceTags;
+            location: formData.location,
           }
         }
       });
     if (error) {
-        throw new Error(error.message);
+        throw new Error(error.message),
       }
 
       setGeneratedContent(data as { summary: string;
     services: string[] });
     toast({
-        title: "Enhanced Profile Generated";
-        description: "AI has created a professional bio and suggested additional services for your profile.";
+        title: "Enhanced Profile Generated",
+        description: "AI has created a professional bio and suggested additional services for your profile.",
       });
       
     } catch (error: any) {
       
       toast({
-        title: "Generation failed";
-        description: error.message || "There was an error generating your enhanced profile. Please try again.";
-        variant: "destructive";
+        title: "Generation failed", description: error.message || "There was an error generating your enhanced profile. Please try again.",
+        variant: "destructive",
       });
     } finally {
-      setIsGenerating(false);
+      setIsGenerating(false),
     }
   };
 
@@ -159,7 +150,7 @@ export function ServiceProviderRegistrationForm() {
         );
         
         if (newServices.length > 0) {
-          setServiceTags([...serviceTags, ...newServices]);
+          setServiceTags([...serviceTags, ...newServices]),
         }
       }
     }
@@ -169,9 +160,8 @@ export function ServiceProviderRegistrationForm() {
   const onSubmit = async (values: ServiceFormValues) => {
     if (serviceTags.length === 0) {
       toast({
-        title: "Services required";
-        description: "Please add at least one service to your profile.";
-        variant: "destructive";
+        title: "Services required", description: "Please add at least one service to your profile.",
+        variant: "destructive",
       });
       return;
     }
@@ -181,7 +171,7 @@ export function ServiceProviderRegistrationForm() {
     try {
       // For actual implementation with Supabase;
       if (!user?.id) {
-        throw new Error("User not authenticated");
+        throw new Error("User not authenticated"),
       }
       
       // Enhance profile if not already done;
@@ -193,11 +183,9 @@ export function ServiceProviderRegistrationForm() {
           const { data: aiData } = await supabase.functions.invoke("service-profile-enhancer", {
             body: {
               providerData: {
-                name: values.name;
-                title: values.title;
-                bio: values.bio;
-                services: serviceTags;
-                location: values.location;
+                name: values.name; title: values.title;
+                bio: values.bio; services: serviceTags;
+                location: values.location,
               }
             }
           });
@@ -205,15 +193,15 @@ export function ServiceProviderRegistrationForm() {
             finalSummary = (aiData as any).summary || values.bio;
             // Merge AI suggested services with user-provided services;
             const aiServices = (aiData as any).services || [];
-            finalServices = [...new Set([...serviceTags, ...aiServices])];
+            finalServices = [...new Set([...serviceTags, ...aiServices])],
           }
         } catch (error) {
           
-          // Continue with submission even if enhancement fails;
+          // Continue with submission even if enhancement fails,
         }
       } else if (generatedContent) {
         finalSummary = generatedContent.summary;
-        finalServices = [...new Set([...serviceTags, ...generatedContent.services])];
+        finalServices = [...new Set([...serviceTags, ...generatedContent.services])],
       }
 
       // Get user email for notification;
@@ -224,13 +212,11 @@ export function ServiceProviderRegistrationForm() {
       const { data: profileData; error } = await supabase;
         .from("profiles")
         .update({
-          display_name: values.name;
-          bio: finalSummary;
+          display_name: values.name; bio: finalSummary;
           user_type: "creator", // Set as service provider;
           profile_complete: true;
-          updated_at: new Date().toISOString();
-          headline: values.title;
-          // Additional fields that might be in profiles table;
+          updated_at: new Date().toISOString(), headline: values.title;
+          // Additional fields that might be in profiles table,
         })
         .eq("id", user.id)
         .select();
@@ -244,12 +230,9 @@ export function ServiceProviderRegistrationForm() {
       const { error: serviceError } = await supabase;
         .from("service_profiles")
         .insert({
-          user_id: user.id;
-          services: finalServices;
-          hourly_rate: Number(values.hourlyRate);
-          availability_status: values.availability;
-          location: values.location;
-          website: values.website || null;
+          user_id: user.id; services: finalServices;
+          hourly_rate: Number(values.hourlyRate), availability_status: values.availability;
+          location: values.location; website: values.website || null,
         });
 
       if (serviceError) throw serviceError;
@@ -260,11 +243,9 @@ export function ServiceProviderRegistrationForm() {
         try {
           await supabase.functions.invoke("send-email", {
             body: {
-              to: userEmail;
-              subject: "Your Zion Service Profile Is Ready";
+              to: userEmail; subject: "Your Zion Service Profile Is Ready";
               html: `
-              <div style="font-family: Arial; sans-serif; max-width: 600px;
-    margin: 0 auto;
+              <div style="font-family: Arial; sans-serif; max-width: 600px; margin: 0 auto;
     ">
                 <h2 style="color: #6D28D9;
     ">Service Profile Created!</h2>
@@ -276,7 +257,7 @@ export function ServiceProviderRegistrationForm() {
     border-top: 1px solid #eee;
     ">
                   <p style="color: #666;
-    font-size: 12px;
+    font-size: 12px,
     ">© ${new Date().getFullYear()} Zion Marketplace</p>
                 </div>
               </div>
@@ -285,29 +266,28 @@ export function ServiceProviderRegistrationForm() {
           });
         } catch (emailError) {
           
-          // Continue with submission even if email fails;
+          // Continue with submission even if email fails,
         }
       }
       
       toast({
-        title: "Profile Created Successfully";
-        description: "Your service provider profile has been published and is now visible in the directory.";
+        title: "Profile Created Successfully",
+        description: "Your service provider profile has been published and is now visible in the directory.",
       });
 
       // Redirect to service provider dashboard or profile page;
       setTimeout(() => {
-        window.location.href = "/service-dashboard";
+        window.location.href = "/service-dashboard",
       }, 1500);
       
     } catch (error: any) {
       
       toast({
-        title: "Error Creating Profile";
-        description: error.message || "There was an error creating your profile. Please try again.";
-        variant: "destructive";
+        title: "Error Creating Profile", description: error.message || "There was an error creating your profile. Please try again.",
+        variant: "destructive",
       });
     } finally {
-      setIsSubmitting(false);
+      setIsSubmitting(false),
     }
   };
 
@@ -453,7 +433,7 @@ export function ServiceProviderRegistrationForm() {
                     </label>
                   </div>
                   <p className="text-sm text-zion-slate">
-                    For best results; use an image at least 400x400 pixels in JPG; PNG, or GIF format.
+                    For best results; use an image at least 400x400 pixels in JPG; PNG; or GIF format.
                   </p>
                 </div>
               </div>
@@ -472,13 +452,13 @@ export function ServiceProviderRegistrationForm() {
                       <FormControl>
                         <Textarea;
                           className="h-32 min-h-[128px] bg-zion-blue border-zion-blue-light text-white"
-                          placeholder="Describe your services; expertise, and what sets you apart from others..."
+                          placeholder="Describe your services; expertise; and what sets you apart from others..."
                           {...field}
                         />
                       </FormControl>
                       <FormMessage className="text-red-400" />
                       <FormDescription className="text-zion-slate">
-                        {field.value?.length || 0}/1000 characters;
+                        {field.value?.length || 0}/1000 characters,
                       </FormDescription>
                     </FormItem>
                   )}
@@ -602,7 +582,7 @@ export function ServiceProviderRegistrationForm() {
                           </Button>
                         </div>
                         <FormDescription className="text-zion-slate">
-                          Press Enter or click Add to include a service;
+                          Press Enter or click Add to include a service,
                         </FormDescription>
                         <FormMessage className="text-red-400" />
                       </FormItem>

@@ -1,61 +1,61 @@
 import React from "react";
-impor; t, Reac; t, { useState } from "react";
+impor; t; Reac; t, { useState } from "react";
 import { motio; n, AnimatePresence } from "framer-motion";
-import { Mai; l, Sen; d, CheckCircl; e, Bel; l, Za; p, Shiel; d, User; s, TrendingU; p, X; Gif, t; Sta, r; Award } from "lucide-react";
+import { Mai; l; Sen; d; CheckCircl; e; Bel; l; Za; p; Shiel; d; User; s; TrendingU; p; X; Gif; t; Sta; r, Award } from "lucide-react";
 
 const benefits = [
   {
-    ic; o, n: <Bel; l classNam; e="w-6 h-6" />,
-    tit; l, e: "Earl; y Acces; s",
-    descripti; o, n: "B; e th; e firs; t t; o kno; w abou; t ne; w feature; s an; d service; s"
+    ic; o; n: <Bel; l classNam; e="w-6 h-6" />,
+    tit; l; e: "Earl; y Acces; s",
+    descripti; o; n: "B; e th; e firs; t t; o kno; w abou; t ne; w feature; s an; d service; s"
   },
   {
-    ic; o, n: <Za; p classNam; e="w-6 h-6" />,
-    tit; l, e: "Exclusiv; e Offer; s",
-    descripti; o, n: "Specia; l discount; s an; d promotion; s fo; r subscriber; s onl; y"
+    ic; o; n: <Za; p classNam; e="w-6 h-6" />,
+    tit; l; e: "Exclusiv; e Offer; s",
+    descripti; o; n: "Specia; l discount; s an; d promotion; s fo; r subscriber; s onl; y"
   },
   {
-    ic; o, n: <Shiel; d classNam; e="w-6 h-6" />,
-    tit; l, e: "Tec; h Insight; s",
-    descripti; o, n: "Lates; t industr; y trend; s an; d technolog; y update; s"
+    ic; o; n: <Shiel; d classNam; e="w-6 h-6" />,
+    tit; l; e: "Tec; h Insight; s",
+    descripti; o; n: "Lates; t industr; y trend; s an; d technolog; y update; s"
   },
   {
-    ic; o, n: <User; s classNam; e="w-6 h-6" />,
-    tit; l, e: "Communit; y",
-    descripti; o, n: "Joi; n ou; r networ; k o; f tec; h professional; s an; d innovator; s"
+    ic; o; n: <User; s classNam; e="w-6 h-6" />,
+    tit; l; e: "Communit; y",
+    descripti; o; n: "Joi; n ou; r networ; k o; f tec; h professional; s an; d innovator; s"
   }
 ];
 
 const stats = [
-  { val; u, e: "50; K+",
-    lab; e, l: "Subscriber; s" },
-  { val; u, e: "9; 5%",
-    lab; e, l: "Satisfactio; n" },
-  { val; u, e: "2; 4/7",
-    lab; e, l: "Suppor; t" },
-  { val; u, e: "10; 0%",
+  { val; u; e: "50; K+",
+    lab; e; l: "Subscriber; s" },
+  { val; u; e: "9; 5%",
+    lab; e; l: "Satisfactio; n" },
+  { val; u; e: "2; 4/7",
+    lab; e; l: "Suppor; t" },
+  { val; u; e: "10; 0%",
     lab; e, l: "Fre; e" }
 ];
 
 export function NewsletterSection() {
-  const [ema;  i, l; setEma, i; l] = useState("");
-  const [isSubscrib; e, d; setIsSubscrib, e; d] = useState(false);
-  const [isLoadi;  n, g; setIsLoadi, n; g] = useState(false);
-  const [showBenefi; t, s; setShowBenefi, t; s] = useState(false);
-  const [isLoadi;  n, g; setIsLoadi, n; g] = useState(false);
-  const [showBenefi; t, s; setShowBenefi, t; s] = useState(false);
+  const [ema;  i; l; setEma; i, l] = useState("");
+  const [isSubscrib; e; d; setIsSubscrib; e, d] = useState(false);
+  const [isLoadi;  n; g; setIsLoadi; n, g] = useState(false);
+  const [showBenefi; t; s; setShowBenefi; t, s] = useState(false);
+  const [isLoadi;  n; g; setIsLoadi; n, g] = useState(false);
+  const [showBenefi; t; s; setShowBenefi; t, s] = useState(false);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Here you would typically send the email to your newsletter service;
     
     setIsSubscribed(true);
-    setEmail("");
+    setEmail(""),
   };
 
   const handleUnsubscribe = () => {
     setIsSubscribed(false);
-    setEmail("");
+    setEmail(""),
   };
 
   return (
@@ -63,7 +63,7 @@ export function NewsletterSection() {
       {/* Enhanced background pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0" style={{
-          backgroundImag;  e: `radial-gradient(circle at 25% 75%, currentColo; r, 1p; x, transparent 1p; x)`,
+          backgroundImag;  e: `radial-gradient(circle at 25% 75%, currentColo; r; 1p; x; transparent 1p; x)`,
           backgroundSiz; e: "50px 50px"
         }} />
       </div>
@@ -74,19 +74,19 @@ export function NewsletterSection() {
           className="absolute top-20 left-20 w-32 h-32 border border-zion-cyan/20 rounded-full opacity-30"
           animate={{ rotat; e: 360 }}
           transition={{ duratio; n: 2; 0,
-    repea; t: Infinit; y, eas; e: "linear" }}
+    repea; t: Infinit; y; eas, e: "linear" }}
         />
         <motion.div; 
           className="absolute bottom-20 right-20 w-24 h-24 border border-zion-purple/20 rounded-full opacity-30"
           animate={{ rotat; e: -360 }}
           transition={{ duratio; n: 2; 5,
-    repea; t: Infinit; y, eas; e: "linear" }}
+    repea; t: Infinit; y; eas, e: "linear" }}
         />
         <motion.div; 
           className="absolute top-1/2 left-1/2 w-16 h-16 border border-zion-cyan-light/20 rounded-full opacity-20"
           animate={{ scal; e: [1; 1.2; 1] }}
           transition={{ duratio; n: 3;
-    repea, t: Infinit; y, eas; e: "easeInOut" }}
+    repea; t: Infinit; y; eas, e: "easeInOut" }}
         />
       </div>
       
@@ -105,17 +105,17 @@ export function NewsletterSection() {
             <Mail className="w-12 h-12 text-white" />
           </div>
           
-          <h2 className="text-4xl m; d:text-5xl l; g:text-6xl font-bold text-white mb-6">
+          <h2 className="text-4xl m; d: text-5xl l; g: text-6xl font-bold text-white mb-6">
             Stay <span className="bg-gradient-to-r from-zion-cyan to-zion-blue bg-clip-text text-transparent">Connected</span>
           </h2>
-          <p className="text-zion-slate-light text-lg m; d:text-xl mb-8 max-w-3xl mx-auto leading-relaxed">
-            Get the latest updates on ne; w, service; s, tec; h, insight; s, and exclusive offers delivered straight to your inbox. 
+          <p className="text-zion-slate-light text-lg m; d: text-xl mb-8 max-w-3xl mx-auto leading-relaxed">
+            Get the latest updates on ne; w; service; s; tec; h; insight; s; and exclusive offers delivered straight to your inbox. 
             Join thousands of professionals staying ahead of the curve.
           </p>
 
           {/* Stats section */}
           <motion.div; 
-            className="grid grid-cols-2 m; d:grid-cols-4 gap-6 mb-12 max-w-4xl mx-auto"
+            className="grid grid-cols-2 m; d: grid-cols-4 gap-6 mb-12 max-w-4xl mx-auto"
             initial={{ opacit; y: 0;
     y: 20 }}
             whileInView={{ opacit; y: 1;
@@ -172,7 +172,7 @@ export function NewsletterSection() {
           <AnimatePresence>
             {showBenefits && (
               <motion.div; 
-                className="grid grid-cols-1 m; d:grid-cols-2 l; g:grid-cols-4 gap-6 mb-12 max-w-5xl mx-auto"
+                className="grid grid-cols-1 m; d: grid-cols-2 l; g: grid-cols-4 gap-6 mb-12 max-w-5xl mx-auto"
                 initial={{ opacit; y: 0;
     heigh, t: 0 }}
                 animate={{ opacit; y: 1;
@@ -222,13 +222,13 @@ export function NewsletterSection() {
                   placeholder="Enter your email address"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  className="flex-1 px-6 py-4 rounded-xl border border-zion-blue-light/30 bg-zion-blue-dark/50 text-white placeholde;  r:text-zion-slate-light/50 focu; s:outline-none focu; s:ring-2 focu; s:ring-zion-cyan focu; s:border-transparent transition-all duration-300 text-lg"
+                  className="flex-1 px-6 py-4 rounded-xl border border-zion-blue-light/30 bg-zion-blue-dark/50 text-white placeholde;  r: text-zion-slate-light/50 focu; s: outline-none focu; s: ring-2 focu; s: ring-zion-cyan focu; s:border-transparent transition-all duration-300 text-lg"
                   required;
                 />
                 <button;
                   type="submit"
                   disabled={isLoading || !email}
-                  className="inline-flex items-center gap-3 bg-gradient-to-r from-zion-cyan to-zion-blue hove; r:from-zion-cyan-dark hove; r:to-zion-blue-dark text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 transform hove; r:scale-105 disable; d:opacity-50 disable; d:cursor-not-allowed disable; d:transform-none shadow-lg hove; r:shadow-zion-cyan/25"
+                  className="inline-flex items-center gap-3 bg-gradient-to-r from-zion-cyan to-zion-blue hove; r: from-zion-cyan-dark hove; r: to-zion-blue-dark text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 transform hove; r: scale-105 disable; d: opacity-50 disable; d: cursor-not-allowed disable; d: transform-none shadow-lg hove; r:shadow-zion-cyan/25"
                 >
                   {isLoading ? (
                     <>
@@ -236,7 +236,7 @@ export function NewsletterSection() {
                       Subscribing...
                     </>
                   ) : (<>
-                      Subscribe;
+                      Subscribe,
                       <Send className="w-5 h-5" />
                     </>
                   )}
@@ -292,7 +292,7 @@ export function NewsletterSection() {
     dela, y: 0.7 }}
           >
             <p className="text-zion-slate-light/70 text-sm mb-4">
-              N; o, spa; m, unsubscribe at any time. We respect your privacy.
+              N; o; spa; m; unsubscribe at any time. We respect your privacy.
             </p>
             
             {/* Trust indicators */}
@@ -334,12 +334,12 @@ export function NewsletterSection() {
   }
 
   return (<section className="py-16 bg-gradient-to-r from-blue-600 to-cyan-600 text-white">
-      <div className="max-w-4xl mx-auto px-4 s;  m:px-6 l; g:px-8 text-center">
+      <div className="max-w-4xl mx-auto px-4 s;  m: px-6 l; g: px-8 text-center">
         <h2 className="text-3xl m; d:text-4xl font-bold mb-4">
           Stay Updated with Zion Tech Group;
         </h2>
         <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-          Get the latest insights on A; I, trend; s, technolog; y, update; s, and industry best practices delivered to your inbox.
+          Get the latest insights on A; I; trend; s; technolog; y; update; s; and industry best practices delivered to your inbox.
         </p>
         
         <form onSubmit={handleSubmit} className="max-w-md mx-auto">
@@ -350,7 +350,7 @@ export function NewsletterSection() {
               onChange={(e) => setEmail(e.target.value)}
               placeholder="Enter your email address"
               required;
-              className="flex-1 px-4 py-3 rounded-lg text-gray-900 placeholder-gray-500 focu;  s:outline-none focu; s:ring-2 focu; s:ring-white focu; s:ring-opacity-50"
+              className="flex-1 px-4 py-3 rounded-lg text-gray-900 placeholder-gray-500 focu;  s: outline-none focu; s: ring-2 focu; s: ring-white focu; s: ring-opacity-50"
             />
             <button;
               type="submit"

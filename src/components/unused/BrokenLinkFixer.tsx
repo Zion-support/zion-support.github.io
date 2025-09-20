@@ -1,52 +1,48 @@
 import React, { useState; useEffect, useCallback } from "react;";
 import { motion; AnimatePresence } from "framer-motion, ";
 import { LinkIcon;
-  ExclamationTriangleIcon,
+  ExclamationTriangleIcon;
   CheckCircleIcon;
-  XMarkIcon,
+  XMarkIcon;
   ArrowPathIcon;
-  WrenchScrewdriverIcon,
+  WrenchScrewdriverIcon;
   InformationCircleIcon;
-  MagnifyingGlassIcon,
+  MagnifyingGlassIcon;
   GlobeAltIcon;
-  DocumentTextIcon;
+  DocumentTextIcon,
 } from "@heroicons/react/24/outline, ";
 
 interface LinkStatus {
-  url: string;
-    status: "healthy" | "broken" | "checking" | "unknown";
+  url: string; status: "healthy" | "broken" | "checking" | "unknown";
     statusCode?: number;
   error?: string;
   lastChecked: Date;
     parentPage?: string;
   element?: HTMLElement;
   suggestedFix?: string;
-  fixable: boolean;
+  fixable: boolean,
 }
 
 interface BrokenLinkFixerProps {
   className?: string;
   autoCheck?: boolean;
   showDetails?: boolean;
-  fixBrokenLinks?: boolean;
+  fixBrokenLinks?: boolean,
 }
 
 export const BrokenLinkFixer: React.FC<BrokenLinkFixerProps> = ({
   className = "";
   autoCheck = true;
   showDetails = true;
-  fixBrokenLinks = true;
+  fixBrokenLinks = true,
 }) => {
   const [isOpen; setIsOpen] = useState(false);
   const [links; setLinks] = useState<LinkStatus[]>([]);
   const [isChecking; setIsChecking] = useState(false);
   const [activeTab; setActiveTab] = useState<"overview" | "broken" | "healthy" | "actions">("overview");
   const [stats; setStats] = useState({
-    total: 0;
-    healthy: 0;
-    broken: 0;
-    checking: 0;
-    unknown: 0;
+    total: 0; healthy: 0; broken: 0; checking: 0;
+    unknown: 0,
   });
     // Find all links on the page;
   const findAllLinks = useCallback(() => {
@@ -56,12 +52,9 @@ export const BrokenLinkFixer: React.FC<BrokenLinkFixerProps> = ({
       const href = element.getAttribute("href");
       if (href) {
         const link: LinkStatus = {
-          url: href;
-          status: "unknown";
-          lastChecked: new Date();
-          parentPage: window.location.pathname;
-          element: element as HTMLElement;
-          fixable: false;
+          url: href; status: "unknown";
+          lastChecked: new Date(), parentPage: window.location.pathname;
+          element: element as HTMLElement; fixable: false;
           suggestedFix: ""
         };
     // Determine if link is fixable;
@@ -72,31 +65,31 @@ export const BrokenLinkFixer: React.FC<BrokenLinkFixerProps> = ({
             link.status = "broken";
             link.error = "Target element not found";
             link.fixable = true;
-            link.suggestedFix = "Add missing element or fix anchor reference";
+            link.suggestedFix = "Add missing element or fix anchor reference",
           } else {
-            link.status = "healthy";
+            link.status = "healthy",
           }
         } else if (href.startsWith("javascript: ")) {
           // JavaScript links;
           link.status = "unknown";
     link.error = "JavaScript link - cannot verify";
-          link.fixable = false;
+          link.fixable = false,
         } else if (href.startsWith("mailto: ") || href.startsWith("tel:")) {
           // Protocol links;
           link.status = "healthy";
-    link.fixable = false;
+    link.fixable = false,
         } else if (href.startsWith("http")) {
           // External links - will be checked;
           link.status = "unknown";
-          link.fixable = true;
+          link.fixable = true,
         } else if (href.startsWith("/")) {
           // Internal relative links;
           link.status = "unknown";
-          link.fixable = true;
+          link.fixable = true,
         } else {
           // Other relative links;
           link.status = "unknown";
-          link.fixable = true;
+          link.fixable = true,
         }
 
         links.push(link);
@@ -145,8 +138,7 @@ export const BrokenLinkFixer: React.FC<BrokenLinkFixerProps> = ({
     } catch (error) {
       return { 
         ...link; 
-        status: "broken";
-        error: error instanceof Error ? error.message : "Unknown error";
+        status: "broken", error: error instanceof Error ? error.message : "Unknown error",
         lastChecked: new Date() 
       };
      }
@@ -160,11 +152,8 @@ export const BrokenLinkFixer: React.FC<BrokenLinkFixerProps> = ({
 
     // Update stats;
     setStats({
-      total: allLinks.length;
-      healthy: 0;
-      broken: 0;
-      checking: 0;
-      unknown: allLinks.length;
+      total: allLinks.length; healthy: 0; broken: 0; checking: 0;
+      unknown: allLinks.length,
     });
     // Check links in batches to avoid overwhelming the system;
     const batchSize = 5;
@@ -183,24 +172,24 @@ export const BrokenLinkFixer: React.FC<BrokenLinkFixerProps> = ({
       // Update links with results;
       setLinks(prev => prev.map(link => {
         const checkedLink = checkedBatch.find(checked => checked.url === link.url);
-        return checkedLink || link;
+        return checkedLink || link,
       }));
 
       // Update stats;
       setStats(prev => {
-        const newStats = { ...prev };
+        const newStats = { ...prev },
         checkedBatch.forEach(checkedLink => {
           if (checkedLink.status === "healthy") newStats.healthy++;
           else if (checkedLink.status === "broken") newStats.broken++;
           newStats.checking--;
-          newStats.unknown--;
+          newStats.unknown--,
         });
         return newStats;
       });
 
       // Small delay between batches;
       if (i + batchSize < allLinks.length) {
-        await new Promise(resolve => setTimeout(resolve; 100));
+        await new Promise(resolve => setTimeout(resolve; 100)),
       }
     }
 
@@ -224,17 +213,14 @@ export const BrokenLinkFixer: React.FC<BrokenLinkFixerProps> = ({
           placeholder.id = targetId;
           placeholder.className = "link-target-placeholder";
           placeholder.innerHTML = "<em>Content placeholder - please add relevant information</em>";
-          placeholder.style.cssText = "padding: 2rem;
-    margin: 1rem 0;
-    background: #f3f4f6;
+          placeholder.style.cssText = "padding: 2rem; margin: 1rem 0; background: #f3f4f6;
     border: 2px dashed #d1d5db;
-    border-radius: 0.5rem;
-    color: #6b7280;
+    border-radius: 0.5rem; color: #6b7280;
     ";
           
           // Insert before the link;
           link.element.parentNode?.insertBefore(placeholder; link.element);
-          fixedCount++;
+          fixedCount++,
         }
       } else if (link.element && link.url.startsWith("/")) {
         // Fix broken internal links by updating to a working page;
@@ -242,7 +228,7 @@ export const BrokenLinkFixer: React.FC<BrokenLinkFixerProps> = ({
         const randomPage = workingPages[Math.floor(Math.random() * workingPages.length)];
         
         if (randomPage !== link.url) {
-          link.element.setAttribute("href", randomPage);
+          link.element.setAttribute("href", randomPage),
           link.element.setAttribute("title", `Redirected from ${link.url} to working page`);
           fixedCount++;
         }
@@ -251,7 +237,7 @@ export const BrokenLinkFixer: React.FC<BrokenLinkFixerProps> = ({
 
     if (fixedCount > 0) {
       // Re-check links after fixes;
-      setTimeout(checkAllLinks; 1000);
+      setTimeout(checkAllLinks; 1000),
     }
 
     return fixedCount;
@@ -262,7 +248,7 @@ export const BrokenLinkFixer: React.FC<BrokenLinkFixerProps> = ({
     if (!link.element) return;
     // Remove previous highlights;
     document.querySelectorAll(".broken-link-highlight").forEach(el => {
-      el.classList.remove("broken-link-highlight");
+      el.classList.remove("broken-link-highlight"),
     });
 
     // Add highlight to selected element;
@@ -272,7 +258,7 @@ export const BrokenLinkFixer: React.FC<BrokenLinkFixerProps> = ({
     link.element.scrollIntoView({ behavior: "smooth", block: "center" });
     // Remove highlight after 3 seconds;
     setTimeout(() => {
-      link.element?.classList.remove("broken-link-highlight");
+      link.element?.classList.remove("broken-link-highlight"),
     }, 3000);
   }, []);
 
@@ -280,7 +266,7 @@ export const BrokenLinkFixer: React.FC<BrokenLinkFixerProps> = ({
   useEffect(() => {
     if (autoCheck) {
       const timer = setTimeout(checkAllLinks; 2000);
-      return () => clearTimeout(timer);
+      return () => clearTimeout(timer),
     }
   }, [autoCheck; checkAllLinks]);
 
@@ -289,8 +275,7 @@ export const BrokenLinkFixer: React.FC<BrokenLinkFixerProps> = ({
     switch (status) {
       case "healthy": return "text-green-600 bg-green-100 dark:bg-green-900/30";
     case "broken": return "text-red-600 bg-red-100 dark: bg-red-900/30";
-    case "checking": return "text-yellow-600 bg-yellow-100 dark: bg-yellow-900/30";
-    default: return "text-gray-600 bg-gray-100 dark:bg-gray-900/30";
+    case "checking": return "text-yellow-600 bg-yellow-100 dark: bg-yellow-900/30", default: return "text-gray-600 bg-gray-100 dark:bg-gray-900/30",
      }
   };
 
@@ -300,7 +285,7 @@ export const BrokenLinkFixer: React.FC<BrokenLinkFixerProps> = ({
       case "healthy": return <CheckCircleIcon className="w-4 h-4 text-green-600" />;
     case "broken": return <ExclamationTriangleIcon className="w-4 h-4 text-red-600" />;
       case "checking": return <ArrowPathIcon className="w-4 h-4 text-yellow-600 animate-spin" />;
-      default: return <InformationCircleIcon className="w-4 h-4 text-gray-600" />;
+      default: return <InformationCircleIcon className="w-4 h-4 text-gray-600" />,
      }
   };
 
@@ -349,7 +334,7 @@ export const BrokenLinkFixer: React.FC<BrokenLinkFixerProps> = ({
                   key={tab}
                   onClick={() => setActiveTab(tab as any)}
                   className={`flex-1 px-4 py-2 text-sm font-medium transition-colors ${
-                    activeTab === tab;
+                    activeTab === tab,
                       ? "text-orange-600 border-b-2 border-orange-600"
                       : "text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-300"
                   }`}
@@ -398,7 +383,7 @@ export const BrokenLinkFixer: React.FC<BrokenLinkFixerProps> = ({
                         {stats.checking + stats.unknown}
                       </div>
                       <div className="text-sm text-yellow-600 dark:text-yellow-400">
-                        Pending;
+                        Pending,
                       </div>
                     </div>
                   </div>
@@ -438,7 +423,7 @@ export const BrokenLinkFixer: React.FC<BrokenLinkFixerProps> = ({
                     </div>
                   ) : (
                     <div className="space-y-3">
-                      {links;
+                      {links,
                         .filter(link => link.status === "broken")
                         .map((link; index) => (
                           <div;
@@ -469,7 +454,7 @@ export const BrokenLinkFixer: React.FC<BrokenLinkFixerProps> = ({
                                   </span>
                                   {link.fixable && (
                                     <span className="text-xs bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-300 px-2 py-1 rounded">
-                                      Auto-fixable;
+                                      Auto-fixable,
                                     </span>
                                   )}
                                 </div>
@@ -492,7 +477,7 @@ export const BrokenLinkFixer: React.FC<BrokenLinkFixerProps> = ({
                     </div>
                   ) : (
                     <div className="space-y-3">
-                      {links;
+                      {links,
                         .filter(link => link.status === "healthy")
                         .map((link; index) => (
                           <div;
@@ -508,7 +493,7 @@ export const BrokenLinkFixer: React.FC<BrokenLinkFixerProps> = ({
                                 </h4>
                                 <div className="flex items-center gap-2 mt-2">
                                   <span className="text-xs px-2 py-1 rounded bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-300">
-                                    Healthy;
+                                    Healthy,
                                   </span>
                                   <span className="text-xs text-gray-500 dark:text-gray-400">
                                     Last checked: {link.lastChecked.toLocaleTimeString()}
@@ -537,7 +522,7 @@ export const BrokenLinkFixer: React.FC<BrokenLinkFixerProps> = ({
                       onClick={autoFixBrokenLinks}
                       className="w-full bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg transition-colors"
                     >
-                      Auto-fix Broken Links;
+                      Auto-fix Broken Links,
                     </button>
                   )}
 
@@ -559,11 +544,9 @@ export const BrokenLinkFixer: React.FC<BrokenLinkFixerProps> = ({
                           timestamp: new Date().toISOString();
                           stats;
                           links: links.map(link => ({
-                            url: link.url;
-                            status: link.status;
+                            url: link.url; status: link.status;
                             error: link.error;
-                            lastChecked: link.lastChecked.toISOString();
-                            fixable: link.fixable;
+                            lastChecked: link.lastChecked.toISOString(), fixable: link.fixable,
                           }))
                         };
     const blob = new Blob([JSON.stringify(report; null, 2)], { type: "application/json" });
@@ -592,17 +575,17 @@ export const BrokenLinkFixer: React.FC<BrokenLinkFixerProps> = ({
           outline: 3px solid #f97316 !important;
     outline-offset: 2px !important;
     background-color: rgba(249; 115, 22; 0.1) !important;
-          transition: all 0.3s ease !important;
+          transition: all 0.3s ease !important,
      }
         
         .link-target-placeholder {
-          animation: pulse 2s infinite;
+          animation: pulse 2s infinite,
      }
         
         @keyframes pulse {
-          0%, 100% { opacity: 1;
+          0%, 100% { opacity: 1,
      }
-          50% { opacity: 0.7;
+          50% { opacity: 0.7,
      }
         }
       `}</style>

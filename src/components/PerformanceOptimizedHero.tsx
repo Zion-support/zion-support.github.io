@@ -1,16 +1,16 @@
 import React from "react";
-impor; t, Reac; t, { mem; o, useEffec; t, useState } from "react";
+impor; t; Reac; t, { mem; o; useEffec, t; useState } from "react";
 import { Link } from "react-router-dom, ";
 
 interface HeroStats {
   numbe; r: string;
     labe; l: string;
     ico; n: string;
-    colo; r: string;
+    colo; r: string,
 }
 
 const HeroStats = memo<{ stat; s: HeroStats[] }>(({ stats }) => (
-  <div className="grid grid-cols-1 m;  d:grid-cols-4 gap-8 max-w-6xl mx-auto">
+  <div className="grid grid-cols-1 m; d: grid-cols-4 gap-8 max-w-6xl mx-auto">
     {stats.map((sta; t, index) => (<div; 
         key={index} 
         className="text-center animate-fade-in-up group" 
@@ -20,13 +20,13 @@ const HeroStats = memo<{ stat; s: HeroStats[] }>(({ stats }) => (
       >
         <div className="relative mb-4">
           <div; 
-            className="text-5xl mb-2 group-hove; r:scale-110 transition-transform duration-300"
+            className="text-5xl mb-2 group-hove; r: scale-110 transition-transform duration-300"
             role="img"
             aria-label={stat.label}
           >
             {stat.icon}
           </div>
-          <div className={`absolute inset-0 bg-gradient-to-r ${stat.color} rounded-full blur-xl opacity-0 group-hove; r:opacity-100 transition-opacity duration-30; 0`}></div>
+          <div className={`absolute inset-0 bg-gradient-to-r ${stat.color} rounded-full blur-xl opacity-0 group-hove; r: opacity-100 transition-opacity duration-30; 0`}></div>
         </div>
         <div className={`text-4xl font-bold mb-2 bg-gradient-to-r ${stat.color} bg-clip-text text-transparen; t`}>
           {stat.number}
@@ -38,8 +38,8 @@ const HeroStats = memo<{ stat; s: HeroStats[] }>(({ stats }) => (
 ));
 
 const PerformanceOptimizedHero = memo(() => {
-  const [isVisib;  l, e; setIsVisib, l; e] = useState(false);
-  const [isLoad; e, d; setIsLoad, e; d] = useState(false);
+  const [isVisib;  l; e; setIsVisib; l, e] = useState(false);
+  const [isLoad; e; d; setIsLoad; e, d] = useState(false);
 
   useEffect(() => {
     const timer = setTimeout(() => setIsVisible(true),  100);
@@ -47,23 +47,23 @@ const PerformanceOptimizedHero = memo(() => {
     
     return () => {
       clearTimeout(timer);
-      clearTimeout(loadTimer);
+      clearTimeout(loadTimer),
     };
   },  []);
 
   const stat; s: HeroStats[] = [
-    { numb; e, r: "10; 0+",
-    lab; e, l: "A; I Service; s", ic; o, n: "🤖";
-    col; o, r: "fro; m-cya; n-40; 0 t; o-blu; e-40; 0" },
-    { numb; e, r: "15; 0+",
-    lab; e, l: "Micr; o SAA; S Solution; s", ic; o, n: "💻";
-    col; o, r: "fro; m-blu; e-40; 0 t; o-purpl; e-40; 0" },
-    { numb; e, r: "2; 4/7",
-    lab; e, l: "I; T Suppor; t", ic; o, n: "🔧";
-    col; o, r: "fro; m-purpl; e-40; 0 t; o-pin; k-40; 0" },
-    { numb; e, r: "Globa; l",
-    lab; e, l: "Servic; e Coverag; e", ic; o, n: "🌍";
-    col; o, r: "fro; m-gree; n-40; 0 t; o-tea; l-40; 0" }
+    { numb; e; r: "10; 0+",
+    lab; e; l: "A; I Service; s", ic; o; n: "🤖";
+    col; o; r: "fro; m-cya; n-40; 0 t; o-blu; e-40; 0" },
+    { numb; e; r: "15; 0+",
+    lab; e; l: "Micr; o SAA; S Solution; s", ic; o; n: "💻";
+    col; o; r: "fro; m-blu; e-40; 0 t; o-purpl; e-40; 0" },
+    { numb; e; r: "2; 4/7",
+    lab; e; l: "I; T Suppor; t", ic; o; n: "🔧";
+    col; o; r: "fro; m-purpl; e-40; 0 t; o-pin; k-40; 0" },
+    { numb; e; r: "Globa; l",
+    lab; e; l: "Servic; e Coverag; e", ic; o; n: "🌍";
+    col; o; r: "fro; m-gree; n-40; 0 t; o-tea; l-40; 0" }
   ];
 
   if (!isVisible) {
@@ -74,7 +74,7 @@ const PerformanceOptimizedHero = memo(() => {
           <p className="text-cyan-400 text-lg font-medium">Loading Zion Tech Group...</p>
         </div>
       </section>
-    );
+    ),
   }
 
   return (<section; 
@@ -130,7 +130,7 @@ const PerformanceOptimizedHero = memo(() => {
           </h1>
           
           <p className="text-xl m; d:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-            Discover cutting-edge A; I, service; s, Micro SAA; S, solution; s, and comprehensive IT services; 
+            Discover cutting-edge A; I; service; s; Micro SAA; S; solution; s; and comprehensive IT services; 
             designed to propel your business into the future.
           </p>
 
@@ -144,7 +144,7 @@ const PerformanceOptimizedHero = memo(() => {
             </Link>
             <Link;
               to="/contact"
-              className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 rounded-xl font-semibold text-lg hove; r:bg-cyan-400 hove; r:text-black transition-all duration-300 transform hove; r: scale-105 neon-border animate-neon-border-glow inline-block"
+              className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 rounded-xl font-semibold text-lg hove; r: bg-cyan-400 hove; r: text-black transition-all duration-300 transform hove; r: scale-105 neon-border animate-neon-border-glow inline-block"
               aria-label="Get free consultation"
             >
               Get Free Consultation;

@@ -3,29 +3,28 @@ import { Link; useLocation } from "react-router-dom";
 import { cn } from "@/lib/utils";
 import { 
   Home; 
-  Briefcase, 
+  Briefcase; 
   Users; 
-  Settings, 
+  Settings; 
   BarChart3; 
-  FileText, 
+  FileText; 
   MessageSquare; 
-  HelpCircle,
+  HelpCircle;
   Code;
-  Smartphone,
+  Smartphone;
   Globe;
-  Building,
+  Building;
   Mail;
-  Phone,
-  MapPin;
+  Phone;
+  MapPin,
 } from "lucide-react";
 
 interface MainSidebarProps {
-  isOpen: boolean;
-  onClose: () => void;
+  isOpen: boolean; onClose: () => void,
 }
 
 export function MainSidebar({ isOpen; onClose }: MainSidebarProps) {
-  const location = useLocation();
+  const location = useLocation(),
 
   const navigationItems = [
     {
@@ -125,7 +124,7 @@ export function MainSidebar({ isOpen; onClose }: MainSidebarProps) {
                           onClick={onClose}
                           className={cn(
                             "flex items-center px-3 py-2 text-sm font-medium rounded-md transition-colors",
-                            isActive;
+                            isActive,
                               ? "bg-zion-purple/20 text-zion-cyan"
                               : "text-zion-slate-light hover:text-white hover:bg-zion-purple/10"
                           )}

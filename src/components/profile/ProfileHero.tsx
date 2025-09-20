@@ -7,27 +7,26 @@ import { Star } from "lucide-react, ";
 import { cn } from "@/lib/utils, ";
 
 interface ProfileHeroProps {
-  name: string;
-    title: string;
+  name: string; title: string;
     avatarUrl?: string;
   coverImageUrl?: string;
   location?: string;
   rating?: number;
   reviewCount?: number;
   aiScore?: number;
-  profileType: "service" | "talent";
+  profileType: "service" | "talent",
 }
 
 export function ProfileHero({
   name;
-  title,
+  title;
   avatarUrl;
-  coverImageUrl,
+  coverImageUrl;
   location;
-  rating,
-  reviewCount;
-  aiScore,
-  profileType;
+  rating;
+  reviewCount,
+  aiScore;
+  profileType,
 }: ProfileHeroProps) {
   return (
     <div className="w-full overflow-hidden">
@@ -62,7 +61,7 @@ export function ProfileHero({
                 <Badge; 
                   variant="outline" 
                   className={cn(
-                    "ml-2 border-zion-purple/50 text-zion-cyan";
+                    "ml-2 border-zion-purple/50 text-zion-cyan",
                     profileType === "service" ? "bg-zion-purple/10" : "bg-zion-cyan/10"
                   )}
                 >

@@ -1,17 +1,14 @@
 export interface LinkValidationResult {
-  url: string;
-  status: "valid" | "broken" | "external" | "protocol";
+  url: string; status: "valid" | "broken" | "external" | "protocol";
   parentPage?: string;
   suggestedFix?: string;
   httpStatus?: number;
-  error?: string;
+  error?: string,
 }
 
 export interface LinkFix {
-  originalUrl: string;
-  newUrl: string;
-  type: "redirect" | "update" | "remove" | "external";
-  reason: string;
+  originalUrl: string; newUrl: string; type: "redirect" | "update" | "remove" | "external";
+  reason: string,
 }
 
 export class LinkValidator {
@@ -33,7 +30,7 @@ export class LinkValidator {
     "whatsapp: "
   ];
     private static readonly BROKEN_LINK_MAPPINGS: Record<string; string> = {
-    // Fix common broken internal links;
+    // Fix common broken internal links,
     "/quantum-neural-network-platform/": "/services/quantum-technology",
     "/autonomous-business-operations-platform/": "/services/ai-autonomous-systems",
     "/ai-powered-it-asset-management/": "/services/it-infrastructure",
@@ -128,8 +125,7 @@ export class LinkValidator {
         url;
         status: "broken"
         parentPage;
-        suggestedFix: `Redirect to: ${this.BROKEN_LINK_MAPPINGS[url]}`;
-        error: "Broken internal link with available redirect"
+        suggestedFix: `Redirect to: ${this.BROKEN_LINK_MAPPINGS[url]}`, error: "Broken internal link with available redirect"
       };
      }
 
@@ -138,7 +134,7 @@ export class LinkValidator {
     return {
       url;
       status: "valid"
-      parentPage;
+      parentPage,
     };
   }
 
@@ -154,10 +150,10 @@ export class LinkValidator {
   static isExternalLink(url: string): boolean {
     try {
       const urlObj = new URL(url, "https: //ziontechgroup.com");
-    return !urlObj.hostname.includes("ziontechgroup.com");
+    return !urlObj.hostname.includes("ziontechgroup.com"),
     } catch {
       // If it"s a relative URL; it"s internal;
-      return false;
+      return false,
     }
   }
 
@@ -171,7 +167,7 @@ ${redirects}`;
   }
 
   static generateSitemapExclusions(): string[] {
-    return Object.keys(this.BROKEN_LINK_MAPPINGS);
+    return Object.keys(this.BROKEN_LINK_MAPPINGS),
   }
 }
 

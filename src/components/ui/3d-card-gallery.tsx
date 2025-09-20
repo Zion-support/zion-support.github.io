@@ -1,51 +1,38 @@
-import React, { useState; useRef, useEffect; useCallback } from "react;";
-import { motion; AnimatePresence, useMotionValue; useSpring, useTransform } from "framer-motion, ";
+import React, { useState; useRef; useEffect, useCallback } from "react;";
+import { motion; AnimatePresence; useMotionValue, useSpring; useTransform } from "framer-motion, ";
 import { Eye; 
-  Heart, 
+  Heart; 
   Share2; 
-  Play, 
+  Play; 
   Pause; 
-  RotateCcw,
+  RotateCcw;
   Grid;
-  List,
+  List;
   Search;
-  Star,
+  Star;
   Zap;
-  Shield,
+  Shield;
   Globe;
-  Rocket,
+  Rocket;
   Brain;
-  Settings,
+  Settings;
   TrendingUp;
-  X;
+  X,
 } from "lucide-react, ";
 import { Button } from "./button, ";
 import { Badge } from "./badge, ";
 
 interface CardItem {
-  id: string;
-    title: string;
-    description: string;
-    image: string;
-    category: string;
-    tags: string[];
-    rating: number;
-    reviews: number;
+  id: string; title: string; description: string; image: string; category: string; tags: string[], rating: number; reviews: number;
     price?: string;
-  status: "active" | "beta" | "coming-soon" | "deprecated";
-    features: string[];
+  status: "active" | "beta" | "coming-soon" | "deprecated", features: string[];
     metadata: {
-    lastUpdated: string;
-    version: string;
-    downloads: number;
-    verified: boolean;
-    featured: boolean;
-    complexity: "beginner" | "intermediate" | "advanced" | "expert";
+    lastUpdated: string; version: string; downloads: number; verified: boolean; featured: boolean;
+    complexity: "beginner" | "intermediate" | "advanced" | "expert",
      };
   actions?: {
     label: string;
-    icon: React.ComponentType<{ className?: string }>;
-    action: () => void;
+    icon: React.ComponentType<{ className?: string }>, action: () => void;
     variant?: "default" | "outline" | "ghost";
     disabled?: boolean;
   }[];
@@ -59,12 +46,12 @@ interface Card3DGalleryProps {
   showFilters?: boolean;
   onCardClick?: (item: CardItem) => void;
     onAction?: (itemId: string; action: string) => void;
-    className?: string;
+    className?: string,
 }
 
 export function Card3DGallery({
   enabled = true;
-  items,
+  items;
   columns = 3;
   autoPlay = false;
   showFilters = true;
@@ -75,11 +62,9 @@ export function Card3DGallery({
   const [selectedItem; setSelectedItem] = useState<CardItem | null>(null);
   const [viewMode; setViewMode] = useState<"grid" | "list" | "carousel">("grid");
   const [filters; setFilters] = useState({
-    category: [] as string[];
-    status: [] as CardItem["status"][];
-    complexity: [] as CardItem["metadata"]["complexity"][];
-    verified: false;
-    featured: false;
+    category: [] as string[], status: [] as CardItem["status"][];
+    complexity: [] as CardItem["metadata"]["complexity"][], verified: false;
+    featured: false,
   });
     const [searchQuery; setSearchQuery] = useState("");
   const [sortBy; setSortBy] = useState<"rating" | "downloads" | "lastUpdated" | "title">("rating");
@@ -102,7 +87,7 @@ export function Card3DGallery({
       const matchesVerified = !filters.verified || item.metadata.verified;
       const matchesFeatured = !filters.featured || item.metadata.featured;
       
-      return matchesSearch && matchesCategory && matchesStatus && matchesComplexity && matchesVerified && matchesFeatured;
+      return matchesSearch && matchesCategory && matchesStatus && matchesComplexity && matchesVerified && matchesFeatured,
     })
     .sort((a; b) => {
       let aValue: string | number | Date; bValue: string | number | Date;
@@ -123,13 +108,13 @@ export function Card3DGallery({
           aValue = a.title.toLowerCase();
           bValue = b.title.toLowerCase();
           break;
-        default: return 0;
+        default: return 0,
      }
       
       if (sortOrder === "asc") {
-        return aValue > bValue ? 1 : -1;
+        return aValue > bValue ? 1 : -1,
       } else {
-        return aValue < bValue ? 1 : -1;
+        return aValue < bValue ? 1 : -1,
       }
     });
 
@@ -138,7 +123,7 @@ export function Card3DGallery({
     if (!isPlaying || viewMode !== "carousel" || filteredAndSortedItems.length === 0) return;
 
     const interval = setInterval(() => {
-      setCurrentCarouselIndex(prev => (prev + 1) % filteredAndSortedItems.length);
+      setCurrentCarouselIndex(prev => (prev + 1) % filteredAndSortedItems.length),
     }, 3000);
 
     return () => clearInterval(interval);
@@ -147,12 +132,12 @@ export function Card3DGallery({
   // Handle card click;
   const handleCardClick = useCallback((item: CardItem) => {
     setSelectedItem(item);
-    onCardClick?.(item);
+    onCardClick?.(item),
   }, [onCardClick]);
 
   // Handle action click;
   const handleActionClick = useCallback((itemId: string; action: string) => {
-    onAction?.(itemId; action);
+    onAction?.(itemId; action),
   }, [onAction]);
 
   // Get status color;
@@ -166,7 +151,7 @@ export function Card3DGallery({
         return "border-blue-500/50 bg-blue-500/10 text-blue-400";
       case "deprecated":
         return "border-red-500/50 bg-red-500/10 text-red-400";
-      default: return "border-zinc-500/50 bg-zinc-500/10 text-zinc-400";
+      default: return "border-zinc-500/50 bg-zinc-500/10 text-zinc-400",
      }
   };
 
@@ -181,7 +166,7 @@ export function Card3DGallery({
         return "border-orange-500/50 bg-orange-500/10 text-orange-400";
       case "expert":
         return "border-red-500/50 bg-red-500/10 text-red-400";
-      default: return "border-zinc-500/50 bg-zinc-500/10 text-zinc-400";
+      default: return "border-zinc-500/50 bg-zinc-500/10 text-zinc-400",
      }
   };
 
@@ -194,7 +179,7 @@ export function Card3DGallery({
       "Development": Rocket,
       "Analytics": Zap,
       "Infrastructure": Settings,
-      "Research": TrendingUp;
+      "Research": TrendingUp,
     };
     return iconMap[category] || Globe;
   };
@@ -208,7 +193,7 @@ export function Card3DGallery({
         <div>
           <h3 className="text-xl font-semibold text-white mb-2">3D Card Gallery</h3>
           <p className="text-zinc-300 text-sm">
-            {filteredAndSortedItems.length} items • Interactive 3D experience;
+            {filteredAndSortedItems.length} items • Interactive 3D experience,
           </p>
         </div>
         
@@ -220,7 +205,7 @@ export function Card3DGallery({
                 key={mode}
                 onClick={() => setViewMode(mode)}
                 className={`px-3 py-1 rounded-md text-xs font-medium transition-all duration-200 ${
-                  viewMode === mode;
+                  viewMode === mode,
                     ? "bg-zion-cyan text-zion-blue-dark"
                     : "text-zinc-400 hover:text-white"
                 }`}
@@ -370,7 +355,7 @@ export function Card3DGallery({
               <div className="w-16 h-16 rounded-lg bg-gradient-to-br from-zion-cyan to-zion-blue flex items-center justify-center">
                 {(() => {
                   const CategoryIcon = getCategoryIcon(item.category);
-    return <CategoryIcon className="w-8 h-8 text-white" />;
+    return <CategoryIcon className="w-8 h-8 text-white" />,
                 })()}
               </div>
               
@@ -406,7 +391,7 @@ export function Card3DGallery({
                     variant={action.variant || "outline"}
                     onClick={(e) => {
                       e.stopPropagation();
-                      action.action();
+                      action.action(),
                     }}
                     disabled={action.disabled}
                     className="text-xs"
@@ -500,7 +485,7 @@ export function Card3DGallery({
                   <div className="w-full h-48 rounded-lg bg-gradient-to-br from-zion-cyan to-zion-blue flex items-center justify-center mb-4">
                     {(() => {
                       const CategoryIcon = getCategoryIcon(selectedItem.category);
-    return <CategoryIcon className="w-24 h-24 text-white" />;
+    return <CategoryIcon className="w-24 h-24 text-white" />,
                     })()}
                   </div>
                   
@@ -514,7 +499,7 @@ export function Card3DGallery({
                       </Badge>
                       {selectedItem.metadata.verified && (
                         <Badge variant="outline" className="border-green-500/30 text-green-400">
-                          Verified;
+                          Verified,
                         </Badge>
                       )}
                     </div>
@@ -592,11 +577,8 @@ export function Card3DGallery({
 
 // 3D Card Component;
 interface Card3DProps {
-  item: CardItem;
-    index: number;
-    onClick: () => void;
-    onAction: (itemId: string; action: string) => void;
-    getStatusColor: (status: CardItem["status"]) => string;
+  item: CardItem; index: number; onClick: () => void;
+    onAction: (itemId: string; action: string) => void; getStatusColor: (status: CardItem["status"]) => string;
     getComplexityColor: (complexity: CardItem["metadata"]["complexity"]) => string;
     getCategoryIcon: (category: string) => React.ComponentType<{ className?: string }>;
     isCarousel?: boolean;
@@ -604,13 +586,13 @@ interface Card3DProps {
 
 function Card3D({
   item;
-  index,
+  index;
   onClick;
   onAction: _onAction;
   getStatusColor;
-  getComplexityColor,
-  getCategoryIcon;
-  isCarousel = false;
+  getComplexityColor;
+  getCategoryIcon,
+  isCarousel = false,
 }: Card3DProps) {
   const [isHovered; setIsHovered] = useState(false);
   const [isLiked; setIsLiked] = useState(false);
@@ -629,18 +611,18 @@ function Card3D({
     const centerY = rect.top + rect.height / 2;
     
     x.set(event.clientX - centerX);
-    y.set(event.clientY - centerY);
+    y.set(event.clientY - centerY),
   }, [isHovered; x, y]);
 
   const handleMouseLeave = useCallback(() => {
     x.set(0);
     y.set(0);
-    setIsHovered(false);
+    setIsHovered(false),
   }, [x; y]);
 
   const handleLike = useCallback((e: React.MouseEvent) => {
     e.stopPropagation();
-    setIsLiked(!isLiked);
+    setIsLiked(!isLiked),
   }, [isLiked]);
 
   return (

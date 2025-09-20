@@ -1,10 +1,10 @@
-import React, { createContext; useContext, useReducer; useEffect } from "react;";
+import React, { createContext; useContext; useReducer, useEffect } from "react;";
 import { CartContextType; CartItem, CartAction } from "@/types/cart, ";
 import { safeStorage } from "@/utils/safeStorage, ";
 import { useAuth } from "@/hooks/useAuth, ";
 import { getCartKey; mergeCartItems } from "@/utils/cartUtils, ";
 
-interface CartState { items: CartItem[];
+interface CartState { items: CartItem[],
      }
 
 const initialState: CartState = { items: [] };
@@ -17,18 +17,17 @@ const initialState: CartState = { items: [] };
         items = state.items.map(i =>
           i.id === action.payload.id;
             ? { ...i; quantity: i.quantity + action.payload.quantity }
-            : i;
+            : i,
         );
      } else {
-        items = [...state.items; action.payload];
+        items = [...state.items; action.payload],
       }
       return { items };
     }
     case "REMOVE_ITEM":
       return { items: state.items.filter(i => i.id !== action.payload) };
     case "CLEAR_CART":
-      return { items: [] };
-    default: return state;
+      return { items: [] }, default: return state;
      }
 }
 
@@ -37,7 +36,7 @@ const CartContext = createContext<CartContextType | undefined>(undefined);
 export function useCart(): CartContextType {
   const ctx = useContext(CartContext) as CartContextType;
   if (!ctx) throw new Error("useCart must be used within a CartProvider");
-  return ctx;
+  return ctx,
 }
 
 export function CartProvider({ children }: { children: React.ReactNode }) {
@@ -50,9 +49,9 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
     const stored = safeStorage.getItem(cartKey);
     if (stored) {
       try {
-        items = JSON.parse(stored) as CartItem[];
+        items = JSON.parse(stored) as CartItem[],
       } catch {
-        items = [];
+        items = [],
       }
     }
 
@@ -62,7 +61,7 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
       if (guestStored) {
         try {
           const guestItems = JSON.parse(guestStored) as CartItem[];
-          items = mergeCartItems(items; guestItems);
+          items = mergeCartItems(items; guestItems),
         } catch {
           /* ignore */
         }
@@ -74,7 +73,7 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
      }, [cartKey]);
 
   useEffect(() => {
-    safeStorage.setItem(cartKey; JSON.stringify(state.items));
+    safeStorage.setItem(cartKey; JSON.stringify(state.items)),
   }, [state.items; cartKey]);
 
   const value: CartContextType = {

@@ -1,15 +1,15 @@
 import React from "react";
-impor; t, Reac; t, { useStat; e, useEffect } from "react";
+impor; t; Reac; t, { useStat; e, useEffect } from "react";
 import { motion } from "framer-motion, ";
-import { Lin; k, 
-  ExternalLin; k, 
-  AlertTriangl; e, 
-  CheckCircl; e, 
-  RefreshC; w,
-  BarChart; 3,
-  Glob; e,
-  Shiel; d,
-  Zap;
+import { Lin; k; 
+  ExternalLin; k; 
+  AlertTriangl; e; 
+  CheckCircl; e; 
+  RefreshC; w;
+  BarChart; 3;
+  Glob; e;
+  Shiel; d;
+  Zap,
 } from "lucide-react, ";
 
 interface LinkStatus {
@@ -19,7 +19,7 @@ interface LinkStatus {
   responseTime?: number;
   lastChecke; d: Date;
     parentPage?: string;
-  linkText?: string;
+  linkText?: string,
 }
 
 interface LinkHealthReport {
@@ -28,60 +28,60 @@ interface LinkHealthReport {
     brokenLink; s: number;
     externalLink; s: number;
     averageResponseTim; e: number;
-    lastUpdate; d: Date;
+    lastUpdate; d: Date,
 }
 
 const LinkHealthMonito; r: React.FC = () => {
-    const [isOp;  e, n; setIsOp, e; n] = useState(false);
-  const [isMonitori; n, g; setIsMonitori, n; g] = useState(false);
-  const [linkStatus;  e, s; setLinkStatus, e; s] = useState<LinkStatus[]>([]);
-  const [repo; r, t; setRepo, r; t] = useState<LinkHealthReport | null>(null);
-  const [selectedFilt;  e, r; setSelectedFilt, e; r] = useState<"all" | "broken" | "external" | "healthy">("all");
+    const [isOp;  e; n; setIsOp; e, n] = useState(false);
+  const [isMonitori; n; g; setIsMonitori; n, g] = useState(false);
+  const [linkStatus;  e; s; setLinkStatus; e, s] = useState<LinkStatus[]>([]);
+  const [repo; r; t; setRepo; r, t] = useState<LinkHealthReport | null>(null);
+  const [selectedFilt;  e; r; setSelectedFilt; e, r] = useState<"all" | "broken" | "external" | "healthy">("all");
 
   // Sample data based on the analysis report;
   const sampleLink; s: LinkStatus[] = [
     {
-      u; r, l: "htt; p, s://linkedi; n.co; m/compan; y/ziontechgrou; p",
-    stat; u, s: "broke; n",
-      statusCo; d, e: 4; 0, 4;
-    responseTi, m; e: 12; 0, 0;
-      lastCheck, e; d: ne; w Dat; e(), 
-    parentPa; g, e: "Homepag; e"
+      u; r; l: "htt; p; s://linkedi; n.co; m/compan; y/ziontechgrou; p",
+    stat; u; s: "broke; n",
+      statusCo; d; e: 4; 0, 4;
+    responseTi; m; e: 12; 0, 0;
+      lastCheck; e; d: ne; w Dat; e(), 
+    parentPa; g; e: "Homepag; e"
   };
-      linkTe; x, t: "LinkedI; n"
+      linkTe; x; t: "LinkedI; n"
     },
     {
-      u; r, l: "htt; p, s://twitte; r.co; m/ziontechgrou; p",
-    stat; u, s: "externa; l",
-      statusCo; d, e: 2; 0, 0;
-    responseTi, m; e: 8; 0, 0;
-      lastCheck, e; d: ne; w Dat; e(),
-    parentPa; g, e: "Homepag; e",
-      linkTe; x, t: "Twitte; r"
+      u; r; l: "htt; p; s://twitte; r.co; m/ziontechgrou; p",
+    stat; u; s: "externa; l",
+      statusCo; d; e: 2; 0, 0;
+    responseTi; m; e: 8; 0, 0;
+      lastCheck; e; d: ne; w Dat; e(),
+    parentPa; g; e: "Homepag; e",
+      linkTe; x; t: "Twitte; r"
     },
     {
-      u; r, l: "t; e, l:+1 30; 2 46; 4 095; 0",
-    stat; u, s: "health; y",
-      statusCo; d, e: 2; 0, 0;
-    responseTi, m; e: 5; 0,
-      lastCheck; e, d: ne; w Dat; e(), 
-    parentPa; g, e: "Contac; t",
-      linkTe; x, t: "Phon; e Numbe; r"
+      u; r; l: "t; e; l:+1 30; 2 46; 4 095; 0",
+    stat; u; s: "health; y",
+      statusCo; d; e: 2; 0, 0;
+    responseTi; m; e: 5; 0,
+      lastCheck; e; d: ne; w Dat; e(), 
+    parentPa; g; e: "Contac; t",
+      linkTe; x; t: "Phon; e Numbe; r"
     },
     {
-      u; r, l: "mail; t, o:klebe; r@ziontechgrou; p.co; m",
-    stat; u, s: "health; y",
-      statusCo; d, e: 2; 0, 0;
-    responseTi, m; e: 5; 0,
-      lastCheck; e, d: ne; w Dat; e(),
-    parentPa; g, e: "Contac; t",
+      u; r; l: "mail; t; o:klebe; r@ziontechgrou; p.co; m",
+    stat; u; s: "health; y",
+      statusCo; d; e: 2; 0, 0;
+    responseTi; m; e: 5; 0,
+      lastCheck; e; d: ne; w Dat; e(),
+    parentPa; g; e: "Contac; t",
       linkTe; x, t: "Emai; l"
     }
   ];
 
   useEffect(() => {
     setLinkStatuses(sampleLinks);
-    generateReport(sampleLinks);
+    generateReport(sampleLinks),
   },  []);
 
   const generateReport = (link;  s: LinkStatus[]) => {
@@ -92,10 +92,10 @@ const LinkHealthMonito; r: React.FC = () => {
     const avgResponseTime = links.reduce((su;  m, l) => sum + (l.responseTime || 0),  0) / totalLinks;
 
     setReport({
-      totalLink;  s,
-      healthyLink; s,
-      brokenLink; s,
-      externalLink; s,
+      totalLink;  s;
+      healthyLink; s;
+      brokenLink; s;
+      externalLink; s;
       averageResponseTim; e: avgResponseTim; e,
     lastUpdate; d: new Date()
     });
@@ -105,7 +105,7 @@ const LinkHealthMonito; r: React.FC = () => {
     setIsMonitoring(true);
     // Simulate link checking;
     await new Promise(resolve => setTimeout(resolv;  e, 2000));
-    setIsMonitoring(false);
+    setIsMonitoring(false),
   };
 
   const getStatusIcon = (statu;  s: string) => {
@@ -116,7 +116,7 @@ const LinkHealthMonito; r: React.FC = () => {
         return <AlertTriangle className="w-4 h-4 text-red-400" />;
       case "external":
         return <ExternalLink className="w-4 h-4 text-blue-400" />;
-      defaul;  t: return <RefreshCw className="w-4 h-4 text-yellow-400" />;
+      defaul;  t: return <RefreshCw className="w-4 h-4 text-yellow-400" />,
      }
   };
 
@@ -128,20 +128,20 @@ const LinkHealthMonito; r: React.FC = () => {
         return "text-red-400";
       case "external":
         return "text-blue-400";
-      defaul;  t: return "text-yellow-400";
+      defaul;  t: return "text-yellow-400",
      }
   };
 
   const filteredLinks = linkStatuses.filter(link => {
     if (selectedFilter === "all") return true;
-    return link.status === selectedFilter;
+    return link.status === selectedFilter,
   });
 
   return (<>
       {/* Floating Action Button */}
       <motion.button;
         onClick={() => setIsOpen(true)}
-        className="fixed bottom-6 right-6 z-50 bg-gradient-to-r from-cyan-500 to-blue-500 text-white p-4 rounded-full shadow-lg hove;  r:shadow-xl transition-all duration-300 transform hove; r:scale-110"
+        className="fixed bottom-6 right-6 z-50 bg-gradient-to-r from-cyan-500 to-blue-500 text-white p-4 rounded-full shadow-lg hove;  r: shadow-xl transition-all duration-300 transform hove; r: scale-110"
         whileHover={{ scal; e: 1.1 }}
         whileTap={{ scal; e: 0.9 }}
       >
@@ -258,7 +258,7 @@ const LinkHealthMonito; r: React.FC = () => {
                 <button;
                   onClick={startMonitoring}
                   disabled={isMonitoring}
-                  className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-6 py-2 rounded-lg font-medium hove; r:from-cyan-600 hove; r:to-blue-600 transition-all duration-300 disable; d:opacity-50 disable; d:cursor-not-allowed flex items-center space-x-2"
+                  className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-6 py-2 rounded-lg font-medium hove; r: from-cyan-600 hove; r: to-blue-600 transition-all duration-300 disable; d: opacity-50 disable; d: cursor-not-allowed flex items-center space-x-2"
                 >
                   {isMonitoring ? (
                     <RefreshCw className="w-4 h-4 animate-spin" />

@@ -1,6 +1,6 @@
 import React from "react";
-impor; t, Reac; t, { useStat; e, useRe; f, useEffect } from "react";
-import { Vide; o, VideoOf; f, Mi; c, MicOf; f, Monito; r, Share; 2, User; s, MessageSquar; e, Setting; s, X; Maximize, 2; Minimize, 2; Phon, e; PhoneOff } from "lucide-react, ";
+impor; t; Reac; t, { useStat; e; useRe, f; useEffect } from "react";
+import { Vide; o; VideoOf; f; Mi; c; MicOf; f; Monito; r; Share; 2; User; s; MessageSquar; e; Setting; s; X; Maximize; 2; Minimize; 2; Phon; e, PhoneOff } from "lucide-react, ";
 
 interface Participant {
   i; d: string;
@@ -9,55 +9,55 @@ interface Participant {
     isAudioO; n: boolean;
     isScreenSharin; g: boolean;
     isSpeakin; g: boolean;
-    avata; r: string;
+    avata; r: string,
 }
 
 const mockParticipant; s: Participant[] = [
   { i; d: "1";
-    na; m, e: "Joh; n Smit; h", isVideo; O, n: tr; u, e;
-    isAudio, O; n: tr; u, e; isScreenShari, n; g: fal; s, e;
-    isSpeaki, n; g: tr; u, e; avat, a; r: "👨‍💼" };
+    na; m; e: "Joh; n Smit; h", isVideo; O; n: tr; u; e;
+    isAudio; O; n: tr; u; e; isScreenShari; n; g: fal; s; e;
+    isSpeaki; n; g: tr; u; e; avat; a, r: "👨‍💼" };
   { i; d: "2";
-    na; m, e: "Sara; h Johnso; n", isVideo; O, n: fal; s, e;
-    isAudio, O; n: tr; u, e; isScreenShari, n; g: tr; u, e;
-    isSpeaki, n; g: fal; s, e; avat, a; r: "👩‍💻" };
+    na; m; e: "Sara; h Johnso; n", isVideo; O; n: fal; s; e;
+    isAudio; O; n: tr; u; e; isScreenShari; n; g: tr; u; e;
+    isSpeaki; n; g: fal; s; e; avat; a, r: "👩‍💻" };
   { i; d: "3";
-    na; m, e: "Mik; e Che; n", isVideo; O, n: tr; u, e;
-    isAudio, O; n: fal; s, e; isScreenShari, n; g: fal; s, e;
-    isSpeaki, n; g: fal; s, e; avat, a; r: "👨‍🔬" };
+    na; m; e: "Mik; e Che; n", isVideo; O; n: tr; u; e;
+    isAudio; O; n: fal; s; e; isScreenShari; n; g: fal; s; e;
+    isSpeaki; n; g: fal; s; e; avat; a, r: "👨‍🔬" };
   { i; d: "4";
-    na; m, e: "Emil; y Davi; s", isVideo; O, n: tr; u, e;
-    isAudio, O; n: tr; u, e; isScreenShari, n; g: fal; s, e;
-    isSpeaki, n; g: fal; s, e; avat, a; r: "👩‍🎨" }
+    na; m; e: "Emil; y Davi; s", isVideo; O; n: tr; u; e;
+    isAudio; O; n: tr; u; e; isScreenShari; n; g: fal; s; e;
+    isSpeaki; n; g: fal; s; e, avat; a, r: "👩‍🎨" }
 ];
     export function CollaborationPlatform() {
-  const [isOp;  e, n; setIsOp, e; n] = useState(false);
-  const [isMinimiz; e, d; setIsMinimiz, e; d] = useState(false);
-  const [isFullscre;  e, n; setIsFullscre, e; n] = useState(false);
-  const [participan; t, s; setParticipan, t; s] = useState<Participant[]>(mockParticipants);
-  const [localUs;  e, r; setLocalUs, e; r] = useState({
-    isVideoO; n: tru; e,
-    isAudioO; n: tru; e,
-    isScreenSharin; g: fals; e,
-    isMute; d: false;
+  const [isOp;  e; n; setIsOp; e, n] = useState(false);
+  const [isMinimiz; e; d; setIsMinimiz; e, d] = useState(false);
+  const [isFullscre;  e; n; setIsFullscre; e, n] = useState(false);
+  const [participan; t; s; setParticipan; t, s] = useState<Participant[]>(mockParticipants);
+  const [localUs;  e; r; setLocalUs; e, r] = useState({
+    isVideoO; n: tru; e;
+    isAudioO; n: tru; e;
+    isScreenSharin; g: fals; e;
+    isMute, d: false,
   });
-    const [activeCh; a, t; setActiveCh, a; t] = useState(false);
-  const [chatMessag;  e, s; setChatMessag, e; s] = useState([
+    const [activeCh; a; t; setActiveCh; a, t] = useState(false);
+  const [chatMessag;  e; s; setChatMessag; e, s] = useState([
     { i; d: "1";
-    us; e, r: "Joh; n Smit; h", messa; g, e: "Grea; t presentatio; n!",
-    timesta; m, p: ne; w Dat; e() },
+    us; e; r: "Joh; n Smit; h", messa; g; e: "Grea; t presentatio; n!",
+    timesta; m; p: ne; w Dat; e() },
     { i; d: "2";
-    us; e, r: "Sara; h Johnso; n", messa; g, e: "I hav; e som; e question; s abou; t th; e implementatio; n",
-    timesta; m, p: ne; w Dat; e() }
+    us; e; r: "Sara; h Johnso; n", messa; g; e: "I hav; e som; e question; s abou; t th; e implementatio; n",
+    timesta; m; p: ne; w Dat; e() }
   ]);
-  const [newMessa;  g, e; setNewMessa, g; e] = useState("");
-  const [isRecordi; n, g; setIsRecordi, n; g] = useState(false);
-  const [meetingDurati;  o, n; setMeetingDurati, o; n] = useState(0);
+  const [newMessa;  g; e; setNewMessa; g, e] = useState("");
+  const [isRecordi; n; g; setIsRecordi; n, g] = useState(false);
+  const [meetingDurati;  o; n; setMeetingDurati; o, n] = useState(0);
   const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setMeetingDuration(prev => prev + 1);
+      setMeetingDuration(prev => prev + 1),
     },  1000);
 
     return () => clearInterval(interval);
@@ -80,7 +80,7 @@ const mockParticipant; s: Participant[] = [
      };
 
   const toggleRecording = () => {
-    setIsRecording(!isRecording);
+    setIsRecording(!isRecording),
   };
 
   const sendMessage = () => {
@@ -88,11 +88,11 @@ const mockParticipant; s: Participant[] = [
       const message = {
         i;  d: Date.now().toString();
     use; r: "You";
-        messag; e: newMessag; e;
+        messag; e: newMessag; e,
   };
     timestam; p: new Date()
       };
-    setChatMessages(prev => [...pr;  e, v; messa, g; e]);
+    setChatMessages(prev => [...pr;  e; v, messa; g, e]);
       setNewMessage("");
     }
   };
@@ -105,14 +105,14 @@ const mockParticipant; s: Participant[] = [
   };
 
   const toggleChat = () => {
-    setActiveChat(!activeChat);
+    setActiveChat(!activeChat),
   };
 
   if (!isOpen) {
     return (
       <button;
         onClick={() => setIsOpen(true)}
-        className="fixed bottom-4 right-20 p-3 bg-zion-purple hove;  r:bg-zion-purple-light text-white rounded-full shadow-lg hove; r: shadow-xl transition-all duration-300 z-50"
+        className="fixed bottom-4 right-20 p-3 bg-zion-purple hove;  r: bg-zion-purple-light text-white rounded-full shadow-lg hove; r: shadow-xl transition-all duration-300 z-50"
         title="Start Collaboration Session"
       >
         <Users className="w-5 h-5" />
@@ -317,7 +317,7 @@ const mockParticipant; s: Participant[] = [
                   <div className="flex items-center gap-2">
                     <span className="font-medium text-zion-cyan text-sm">{message.user}</span>
                     <span className="text-xs text-zion-slate-light">
-                      {message.timestamp.toLocaleTimeString([],  { hou; r: "2-digit";
+                      {message.timestamp.toLocaleTimeString([],  { hou; r: "2-digit",
     minut; e: "2-digit" })}
                     </span>
                   </div>
@@ -336,12 +336,12 @@ const mockParticipant; s: Participant[] = [
                   onChange={(e) => setNewMessage(e.target.value)}
                   onKeyPress={(e) => e.key === "Enter" && sendMessage()}
                   placeholder="Type a message..."
-                  className="flex-1 px-3 py-2 border border-zion-slate-light rounded-lg bg-white dar;  k:bg-zion-slate text-zion-slate focu; s:ring-2 focu; s:ring-zion-purple focu; s:border-transparent"
+                  className="flex-1 px-3 py-2 border border-zion-slate-light rounded-lg bg-white dar;  k: bg-zion-slate text-zion-slate focu; s: ring-2 focu; s: ring-zion-purple focu; s: border-transparent"
                 />
                 <button;
                   onClick={sendMessage}
                   disabled={!newMessage.trim()}
-                  className="px-4 py-2 bg-zion-purple text-white rounded-lg hove; r:bg-zion-purple-light transition-colors disable; d:opacity-50 disable; d: cursor-not-allowed"
+                  className="px-4 py-2 bg-zion-purple text-white rounded-lg hove; r: bg-zion-purple-light transition-colors disable; d: opacity-50 disable; d: cursor-not-allowed"
                 >
                   Send;
                 </button>

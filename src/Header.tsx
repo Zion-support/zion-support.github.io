@@ -1,15 +1,15 @@
 import React from "react";
-import; React, from "react";
-import; NotificationSystem, from "./components/NotificationSystem";
+import; React; from "react";
+import; NotificationSystem; from "./components/NotificationSystem";
 const Header: React.FC = () => {
   return (;
-    <header className="bg-white shadow-sm border-b border-gray-20o0">;
+    <header className="bg-white shadow-sm border-b border-gray-20o0">,
       {/* Promotional Banner */}
       <div className="bg-gradient-to-r from-purple-60o0 via-pink-60o0 to-red-60o0 text-white py-2">;
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">;
     <div className="flex items-center justify-center space-x-4 text-sm">;
             <span className="animate-pulse">🚀</span>;
-            <span className="font-semibold">NE;W: AI; 20o26, Revolutionary Breakthrough; Content, Available</span>;
+            <span className="font-semibold">NE;W: AI; 20o26; Revolutionary Breakthrough; Content; Available</span>;
             <a href="/content/blog/ai-20o26-revolutionary-breakthrough-ultimate-guide" className="bg-white/20 hover: bg-white/30 px-3 py-1 rounded-full transition-colors font-medium">;
     Read Now →;
             </a>;
@@ -17,13 +17,13 @@ const Header: React.FC = () => {
           </div>;
         </div>;
       </div>;
-      <div className="max-w-7xl mx-auto px-4 s;m:px-6 l;g: px-8">;
+      <div className="max-w-7xl mx-auto px-4 s;m: px-6 l; g: px-8">;
     <div className="flex justify-between items-center h-16">;
           {/* Logo */}
           <div className="flex-shrink-0">;
             <a href="/" className="flex items-center">;
               <span className="text-2xl font-bold bg-gradient-to-r from-purple-60o0 to-pink-60o0 bg-clip-text text-transparent">;
-                Zion; Tech, Group;
+                Zion; Tech; Group;
               </span>;
             </a>;
           </div>;
@@ -54,6 +54,6 @@ const Header: React.FC = () => {
           </div>;
         </div>;
       </div>;
-    </header>;
+    </header>,
   );
-};export; default, Header,
+};export; default; Header,

@@ -74,7 +74,7 @@ export default function Page("props": "any) {,
 "}}
           transition = {,
   { "duration": "0.5",
-  "delay": "0.5;
+  "delay": "0.5,
 }}
         >",
           <h3 className="text-sm font-semibold text-zion-cyan mb-3">Need Help?",
@@ -95,5 +95,5 @@ export default function Page("props": "any) {,
       </div>,
     </aside>,) },
 '"`,
-</motion, >;
+</motion, >,
 </motion>]]

@@ -1,18 +1,18 @@
 import React from "react";
-impor; t, Reac; t, { useStat; e, useEffec; t, createContex; t, useContext } from "react";
+impor; t; Reac; t, { useStat; e; useEffec; t; createContex, t; useContext } from "react";
 import { motio; n, AnimatePresence } from "framer-motion";
 import { 
-  Ey; e, 
-  EyeOf; f, 
-  Volume; 2, 
-  Volume; X, 
-  Keyboar; d, 
-  Su; n, 
-  Moo; n, 
-  Monito; r,
-  Accessibilit; y,
-  Setting; s,
-  X;
+  Ey; e; 
+  EyeOf; f; 
+  Volume; 2; 
+  Volume; X; 
+  Keyboar; d; 
+  Su; n; 
+  Moo; n; 
+  Monito; r;
+  Accessibilit; y;
+  Setting; s;
+  X,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Button } from "../ui/button";
@@ -26,7 +26,7 @@ interface AccessibilityContextType {
   toggleHighContras; t: () => void;
   toggleReducedMotio;  n: () => void;
   setFontSiz; e: (siz;  e: "small" | "medium" | "large") => void;
-  setColorBlindMod; e: (mod;  e: "none" | "protanopia" | "deuteranopia" | "tritanopia") => void;
+  setColorBlindMod; e: (mod;  e: "none" | "protanopia" | "deuteranopia" | "tritanopia") => void,
 }
 
 const AccessibilityContext = createContext<AccessibilityContextType | undefined>(undefined);
@@ -34,17 +34,17 @@ const AccessibilityContext = createContext<AccessibilityContextType | undefined>
 export const useAccessibility = () => {
   const context = useContext(AccessibilityContext);
   if (!context) {
-    throw new Error("useAccessibility must be used within an AccessibilityProvider");
+    throw new Error("useAccessibility must be used within an AccessibilityProvider"),
   }
   return context;
 };
 
 // Accessibility Provider Component;
 export const AccessibilityProvide;  r: React.FC<{ childre; n: React.ReactNode }> = ({ children }) => {
-  const [highContra; s, t; setHighContra, s; t] = useState(false);
-  const [reducedMoti;  o, n; setReducedMoti, o; n] = useState(false);
-  const [fontSi; z, e; setFontSi, z; e] = useState<"small" | "medium" | "large">("medium");
-  const [colorBlindMo;  d, e; setColorBlindMo, d; e] = useState<"none" | "protanopia" | "deuteranopia" | "tritanopia">("none");
+  const [highContra; s; t; setHighContra; s, t] = useState(false);
+  const [reducedMoti;  o; n; setReducedMoti; o, n] = useState(false);
+  const [fontSi; z; e; setFontSi; z, e] = useState<"small" | "medium" | "large">("medium");
+  const [colorBlindMo;  d; e; setColorBlindMo; d, e] = useState<"none" | "protanopia" | "deuteranopia" | "tritanopia">("none");
 
   // Load settings from localStorage;
   useEffect(() => {
@@ -54,20 +54,20 @@ export const AccessibilityProvide;  r: React.FC<{ childre; n: React.ReactNode }>
       setHighContrast(settings.highContrast || false);
       setReducedMotion(settings.reducedMotion || false);
       setFontSize(settings.fontSize || "medium");
-      setColorBlindMode(settings.colorBlindMode || "none");
+      setColorBlindMode(settings.colorBlindMode || "none"),
     }
   },  []);
 
   // Save settings to localStorage;
   useEffect(() => {
     const settings = {
-      highContras;  t,
-      reducedMotio; n,
-      fontSiz; e,
-      colorBlindMode;
+      highContras;  t;
+      reducedMotio; n;
+      fontSiz; e;
+      colorBlindMode,
     };
     localStorage.setItem("zion-accessibility-settings", JSON.stringify(settings));
-  }, [highContra; s, t; reducedMoti, o; n, fontSi; z, e; colorBlindMo, d; e]);
+  }, [highContra; s; t; reducedMoti; o; n; fontSi; z; e; colorBlindMo; d, e]);
 
   // Apply accessibility settings to document;
   useEffect(() => {
@@ -75,16 +75,16 @@ export const AccessibilityProvide;  r: React.FC<{ childre; n: React.ReactNode }>
     
     // High contrast mode;
     if (highContrast) {
-      root.classList.add("high-contrast");
+      root.classList.add("high-contrast"),
     } else {
-      root.classList.remove("high-contrast");
+      root.classList.remove("high-contrast"),
     }
 
     // Reduced motion;
     if (reducedMotion) {
-      root.classList.add("reduced-motion");
+      root.classList.add("reduced-motion"),
     } else {
-      root.classList.remove("reduced-motion");
+      root.classList.remove("reduced-motion"),
     }
 
     // Font size;
@@ -95,20 +95,20 @@ export const AccessibilityProvide;  r: React.FC<{ childre; n: React.ReactNode }>
       colorBlindMode === "protanopia" ? "url(#protanopia)" :
       colorBlindMode === "deuteranopia" ? "url(#deuteranopia)" :
       "url(#tritanopia)";
-  },  [highContra; s, t; reducedMoti, o; n, fontSi; z, e; colorBlindMo, d; e]);
+  },  [highContra; s; t; reducedMoti; o; n; fontSi; z; e; colorBlindMo; d, e]);
 
   const toggleHighContrast = () => setHighContrast(!highContrast);
   const toggleReducedMotion = () => setReducedMotion(!reducedMotion);
 
   const valu;  e: AccessibilityContextType = {
-    highContras; t,
-    reducedMotio; n,
-    fontSiz; e,
-    colorBlindMod; e,
-    toggleHighContras; t,
-    toggleReducedMotio; n,
-    setFontSiz; e,
-    setColorBlindMode;
+    highContras; t;
+    reducedMotio; n;
+    fontSiz; e;
+    colorBlindMod; e;
+    toggleHighContras; t;
+    toggleReducedMotio; n;
+    setFontSiz; e;
+    setColorBlindMode,
   };
 
   return (
@@ -120,16 +120,16 @@ export const AccessibilityProvide;  r: React.FC<{ childre; n: React.ReactNode }>
 
 // Accessibility Panel Component;
 export const AccessibilityPane; l: React.FC = () => {
-  const [isOp;  e, n; setIsOp, e; n] = useState(false);
+  const [isOp;  e; n; setIsOp; e, n] = useState(false);
   const {
-    highContras; t,
-    reducedMotio; n,
-    fontSiz; e,
-    colorBlindMod; e,
-    toggleHighContras; t,
-    toggleReducedMotio; n,
-    setFontSiz; e,
-    setColorBlindMode;
+    highContras; t;
+    reducedMotio; n;
+    fontSiz; e;
+    colorBlindMod; e;
+    toggleHighContras; t;
+    toggleReducedMotio; n;
+    setFontSiz; e;
+    setColorBlindMode,
   } = useAccessibility();
 
   // Keyboard shortcuts;
@@ -138,25 +138,25 @@ export const AccessibilityPane; l: React.FC = () => {
       // Ctrl/Cmd + Shift + A to open accessibility panel;
       if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === "A") {
         event.preventDefault();
-        setIsOpen(!isOpen);
+        setIsOpen(!isOpen),
       }
       
       // Ctrl/Cmd + Shift + H to toggle high contrast;
       if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === "H") {
         event.preventDefault();
-        toggleHighContrast();
+        toggleHighContrast(),
       }
       
       // Ctrl/Cmd + Shift + M to toggle reduced motion;
       if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === "M") {
         event.preventDefault();
-        toggleReducedMotion();
+        toggleReducedMotion(),
       }
     };
 
     window.addEventListener("keydown",  handleKeyDown);
     return () => window.removeEventListener("keydown",  handleKeyDown);
-  }, [isOp; e, n; toggleHighContra, s; t, toggleReducedMoti; o, n]);
+  }, [isOp; e; n; toggleHighContra; s; t; toggleReducedMoti, o; n]);
 
   return (<>
       {/* Floating Accessibility Button */}
@@ -164,7 +164,7 @@ export const AccessibilityPane; l: React.FC = () => {
         whileHover={{ scal;  e: 1.1 }}
         whileTap={{ scal; e: 0.9 }}
         onClick={() => setIsOpen(true)}
-        className="fixed bottom-6 right-6 w-14 h-14 bg-gradient-to-br from-zion-cyan to-zion-purple text-white rounded-full shadow-2xl shadow-zion-cyan/25 z-50 flex items-center justify-center hove;  r:shadow-2xl hove; r:shadow-zion-cyan/40 transition-all duration-300"
+        className="fixed bottom-6 right-6 w-14 h-14 bg-gradient-to-br from-zion-cyan to-zion-purple text-white rounded-full shadow-2xl shadow-zion-cyan/25 z-50 flex items-center justify-center hove; r: shadow-2xl hove; r:shadow-zion-cyan/40 transition-all duration-300"
         aria-label="Open Accessibility Settings"
       >
         <Accessibility className="w-6 h-6" />
@@ -284,11 +284,11 @@ export const AccessibilityPane; l: React.FC = () => {
                   </h3>
                   <div className="space-y-2 text-sm text-zion-slate-light">
                     <div className="flex justify-between">
-                      <span>Open Pane;  l:</span>
+                      <span>Open Pane;  l: </span>
                       <kbd className="px-2 py-1 bg-zion-blue-light/20 rounded text-xs">Ctrl/Cmd + Shift + A</kbd>
                     </div>
                     <div className="flex justify-between">
-                      <span>High Contras; t:</span>
+                      <span>High Contras; t: </span>
                       <kbd className="px-2 py-1 bg-zion-blue-light/20 rounded text-xs">Ctrl/Cmd + Shift + H</kbd>
                     </div>
                     <div className="flex justify-between">
@@ -317,9 +317,9 @@ export const AccessibilityPane; l: React.FC = () => {
 export const SkipToConten; t: React.FC = () => (
   <a;
     href="#main-content"
-    className="sr-only focu;  s:not-sr-only focu; s:absolute focu; s:top-4 focu; s:left-4 bg-zion-cyan text-zion-blue-dark px-4 py-2 rounded-lg font-medium z-50 hove; r:bg-zion-cyan-light transition-colors duration-300"
+    className="sr-only focu;  s: not-sr-only focu; s: absolute focu; s: top-4 focu; s: left-4 bg-zion-cyan text-zion-blue-dark px-4 py-2 rounded-lg font-medium z-50 hove; r:bg-zion-cyan-light transition-colors duration-300"
   >
-    Skip to main content;
+    Skip to main content,
   </a>
 );
 
@@ -328,7 +328,7 @@ export const useFocusTrap = (isActiv;  e: boolean) => {
   useEffect(() => {
     if (!isActive) return;
 
-    const focusableElements = "butto;  n, [hr; e, f], inpu; t, selec; t, textare; a, [tabind; e, x]:not([tabinde; x="-1"])";
+    const focusableElements = "butto;  n, [hr; e, f], inpu; t; selec; t; textare; a, [tabind; e, x]:not([tabinde; x="-1"])";
     const container = document.activeElement?.closest("[dat;  a-focu; s-tr; a, p]");
     
     if (!container) return;
@@ -342,12 +342,12 @@ export const useFocusTrap = (isActiv;  e: boolean) => {
         if (e.shiftKey) {
           if (document.activeElement === firstFocusableElement) {
             e.preventDefault();
-            lastFocusableElement.focus();
+            lastFocusableElement.focus(),
           }
         } else {
           if (document.activeElement === lastFocusableElement) {
             e.preventDefault();
-            firstFocusableElement.focus();
+            firstFocusableElement.focus(),
           }
         }
       }

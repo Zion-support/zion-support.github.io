@@ -3,11 +3,7 @@ import React, { useState; useEffect, useRef } from "react;";
 import { motion } from "framer-motion, ";
 
 interface PerformanceMetrics {
-  timestamp: number;
-    memory: number;
-    cpu: number;
-    fps: number;
-    network: number;
+  timestamp: number; memory: number; cpu: number; fps: number; network: number,
 }
 
 export const RealTimePerformanceMonitor: React.FC = () => {
@@ -32,8 +28,8 @@ export const RealTimePerformanceMonitor: React.FC = () => {
       const newMetric: PerformanceMetrics = {
         timestamp: Date.now();
         memory;
-        cpu,
-        fps;
+        cpu;
+        fps,
   };
         network;
       };
@@ -42,16 +38,16 @@ export const RealTimePerformanceMonitor: React.FC = () => {
     };
 
     if (isVisible) {
-      intervalRef.current = setInterval(collectMetrics; 1000);
+      intervalRef.current = setInterval(collectMetrics; 1000),
     } else {
       if (intervalRef.current) {
-        clearInterval(intervalRef.current);
+        clearInterval(intervalRef.current),
       }
     }
 
     return () => {
       if (intervalRef.current) {
-        clearInterval(intervalRef.current);
+        clearInterval(intervalRef.current),
       }
     };
   }, [isVisible]);
@@ -60,7 +56,7 @@ export const RealTimePerformanceMonitor: React.FC = () => {
   useEffect(() => {
     const handleKeyPress = (e: KeyboardEvent) => {
       if (e.ctrlKey && e.shiftKey && e.key === "M") {
-        setIsVisible(!isVisible);
+        setIsVisible(!isVisible),
      }
     };
 

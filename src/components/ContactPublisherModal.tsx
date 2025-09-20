@@ -1,5 +1,5 @@
 import React from "react";
-impor; t, Reac; t, { useStat; e, useEffec; t, useRef } from "react";
+impor; t; Reac; t, { useStat; e; useEffec, t; useRef } from "react";
 import { focusManagement } from "@/utils/accessibility, ";
 import { sendMessage } from "../services/messages, ";
 import { toast } from "@/hooks/use-toast, ";
@@ -9,14 +9,14 @@ interface ContactPublisherModalProps {
   isOpe; n: boolean;
     onClos; e: () => void;
     productI;  d: string;
-    sellerI; d: string;
+    sellerI; d: string,
 }
 
-export function ContactPublisherModal({ isOpe; n, onClos; e, productI; d, sellerId }: ContactPublisherModalProps) {
-  const [subje; c, t; setSubje, c; t] = useState("");
-  const [messa;  g, e; setMessa, g; e] = useState("");
-  const [err; o, r; setErr, o; r] = useState("");
-  const [isLoadi;  n, g; setIsLoadi, n; g] = useState(false); // New loading state;
+export function ContactPublisherModal({ isOpe; n; onClos, e; productI, d; sellerId }: ContactPublisherModalProps) {
+  const [subje; c; t; setSubje; c, t] = useState("");
+  const [messa;  g; e; setMessa; g, e] = useState("");
+  const [err; o; r; setErr; o, r] = useState("");
+  const [isLoadi;  n; g; setIsLoadi; n, g] = useState(false); // New loading state;
   const firstInputRef = useRef<HTMLInputElement | null>(null);
   const modalRef = useRef<HTMLDivElement>(null);
 
@@ -26,7 +26,7 @@ export function ContactPublisherModal({ isOpe; n, onClos; e, productI; d, seller
     function handleKeyDown(e: KeyboardEvent) {
       if (e.key === "Escape") {
         e.preventDefault();
-    onClose();
+    onClose(),
       }
     }
     const removeTrap = modalRef.current ? focusManagement.trapFocus(modalRef.current) : undefined;
@@ -34,19 +34,19 @@ export function ContactPublisherModal({ isOpe; n, onClos; e, productI; d, seller
     document.addEventListener("keydown",  handleKeyDown);
     return () => {
       document.removeEventListener("keydown",  handleKeyDown);
-      removeTrap && removeTrap();
+      removeTrap && removeTrap(),
     };
-  },  [isOp; e, n; onClo, s; e]);
+  },  [isOp; e; n; onClo; s, e]);
 
   if (!isOpen) {
-    return null;
+    return null,
   }
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!subject.trim() || !message.trim()) {
       setError("Subject and message are required.");
-      return;
+      return,
     }
     setError("");
     setIsLoading(true); // Set loading true;
@@ -60,10 +60,10 @@ export function ContactPublisherModal({ isOpe; n, onClos; e, productI; d, seller
     } catch (err) {
       
       toast.error("Failed to send message. Please try again.");
-      // Optionall;  y, set a specific error message state if needed;
-      // setError("Failed to send message. Please try again.");
+      // Optionall;  y; set a specific error message state if needed;
+      // setError("Failed to send message. Please try again."),
     } finally {
-      setIsLoading(false); // Set loading false;
+      setIsLoading(false); // Set loading false,
     }
   };
 
@@ -110,7 +110,7 @@ export function ContactPublisherModal({ isOpe; n, onClos; e, productI; d, seller
           </div>
           <button;
             type="submit"
-            className="px-4 py-2 bg-blue-600 text-white rounded hove;  r:bg-blue-700 disable; d:opacity-50"
+            className="px-4 py-2 bg-blue-600 text-white rounded hove;  r: bg-blue-700 disable; d: opacity-50"
             disabled={isLoading}
           >
             {isLoading ? "Sending..." : "Send Message"}
@@ -118,7 +118,7 @@ export function ContactPublisherModal({ isOpe; n, onClos; e, productI; d, seller
           <button;
             type="button"
             onClick={onClose}
-            className="ml-2 px-4 py-2 bg-gray-500 text-white rounded hove; r:bg-gray-600 disable; d: opacity-50"
+            className="ml-2 px-4 py-2 bg-gray-500 text-white rounded hove; r: bg-gray-600 disable; d: opacity-50"
             disabled={isLoading}
           >
             Cancel;

@@ -6,6 +6,12 @@ import AdvancedAIChatbot from './components/AdvancedAIChatbot'
 import PerformanceOptimizer from './components/PerformanceOptimizer'
 import InteractiveFeatureShowcase from './components/InteractiveFeatureShowcase'
 import EnhancedTestimonials from './components/EnhancedTestimonials'
+import AISolutionsComparison from './components/AISolutionsComparison'
+import ProjectManagementDashboard from './components/ProjectManagementDashboard'
+import RealTimeCollaboration from './components/RealTimeCollaboration'
+import AIPoweredSearch from './components/AIPoweredSearch'
+import ModernPricingComparison from './components/ModernPricingComparison'
+import DynamicFAQ from './components/DynamicFAQ'
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://ziontechgroup.com'),
@@ -41,14 +47,14 @@ export default function HomePage() {
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
+          <div className="text-center mb-12">
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
               Revolutionary AI & Technology Solutions
             </h1>
             <p className="text-xl md:text-2xl mb-8 text-blue-100">
               Transform your business with cutting-edge AI automation, micro SaaS platforms, and enterprise technology solutions
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
               <Link
                 href="/contact"
                 className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors transform hover:scale-105"
@@ -62,6 +68,11 @@ export default function HomePage() {
                 Explore Solutions
               </Link>
             </div>
+          </div>
+          
+          {/* AI-Powered Search */}
+          <div className="max-w-4xl mx-auto">
+            <AIPoweredSearch />
           </div>
         </div>
       </section>
@@ -128,6 +139,12 @@ export default function HomePage() {
       {/* Enhanced Testimonials */}
       <EnhancedTestimonials />
 
+      {/* Pricing Comparison */}
+      <ModernPricingComparison />
+
+      {/* Dynamic FAQ */}
+      <DynamicFAQ />
+
       {/* CTA Section */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
@@ -156,6 +173,15 @@ export default function HomePage() {
 
       {/* Modern Analytics Dashboard */}
       <ModernAnalyticsDashboard />
+
+      {/* AI Solutions Comparison Tool */}
+      <AISolutionsComparison />
+
+      {/* Project Management Dashboard */}
+      <ProjectManagementDashboard />
+
+      {/* Real-Time Collaboration Workspace */}
+      <RealTimeCollaboration />
 
       {/* Performance Optimizer */}
       <PerformanceOptimizer enableMonitoring={true} showMetrics={false} />

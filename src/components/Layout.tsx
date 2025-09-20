@@ -6,7 +6,7 @@ interface LayoutProps {,
   children: React.ReactNode;
   title?: string;
   description?: string;
-  keywords?: string;
+  keywords?: string,
 }
 export default function Layout({,
   children;
@@ -28,7 +28,7 @@ export default function Layout({,
         <meta property="og: url" content="https://ziontechgroup.com" />;
         <meta name="twitter: card" content="summary_large_image" />;
         <meta name="twitter: title" content={title} />;
-        <meta name="twitter: description" content={description} />;
+        <meta name="twitter: description" content={description} />,
       </Head>,
       <div className="min-h-screen flex flex-col">,
         <Header />,

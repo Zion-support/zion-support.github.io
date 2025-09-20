@@ -1,55 +1,41 @@
 import React, { useState; useEffect, useCallback } from "react;";
 import { motion; AnimatePresence } from "framer-motion, ";
 import { DocumentTextIcon;
-  MagnifyingGlassIcon,
+  MagnifyingGlassIcon;
   CheckCircleIcon;
-  ExclamationTriangleIcon,
+  ExclamationTriangleIcon;
   InformationCircleIcon;
-  WrenchScrewdriverIcon,
+  WrenchScrewdriverIcon;
   ChartBarIcon;
-  EyeIcon,
+  EyeIcon;
   PencilIcon;
-  XMarkIcon,
-  ArrowPathIcon;
+  XMarkIcon;
+  ArrowPathIcon,
 } from "@heroicons/react/24/outline, ";
 
 interface ContentAnalysis {
-  wordCount: number;
-    readabilityScore: number;
-    seoScore: number;
-    engagementScore: number;
-    issues: ContentIssue[];
-    suggestions: ContentSuggestion[];
-    overallScore: number;
+  wordCount: number; readabilityScore: number; seoScore: number; engagementScore: number; issues: ContentIssue[];
+    suggestions: ContentSuggestion[], overallScore: number,
 }
 
 interface ContentIssue {
-  id: string;
-    type: "error" | "warning" | "info";
-    title: string;
-    description: string;
-    severity: "low" | "medium" | "high";
+  id: string; type: "error" | "warning" | "info";
+    title: string; description: string; severity: "low" | "medium" | "high";
     element?: HTMLElement;
-  fixable: boolean;
-    suggestion: string;
-    impact: "seo" | "readability" | "engagement" | "accessibility";
+  fixable: boolean; suggestion: string; impact: "seo" | "readability" | "engagement" | "accessibility",
 }
 
 interface ContentSuggestion {
-  id: string;
-    type: "improvement" | "optimization" | "enhancement";
-    title: string;
-    description: string;
-    priority: "low" | "medium" | "high";
-    implementation: string;
-    expectedImpact: number;
+  id: string; type: "improvement" | "optimization" | "enhancement";
+    title: string; description: string; priority: "low" | "medium" | "high";
+    implementation: string; expectedImpact: number,
 }
 
 interface ContentQualityEnhancerProps {
   className?: string;
   showAnalysis?: boolean;
   autoAnalyze?: boolean;
-  targetElements?: string[];
+  targetElements?: string[],
 }
 
 export const ContentQualityEnhancer: React.FC<ContentQualityEnhancerProps> = ({
@@ -85,14 +71,10 @@ export const ContentQualityEnhancer: React.FC<ContentQualityEnhancerProps> = ({
       // Check for empty content;
       if (words.length === 0) {
         issues.push({
-          id: `empty-content-${index}`;
-          type: "error";
-          title: "Empty Content";
-          description: "Element contains no meaningful content";
-          severity: "high";
-          element: element as HTMLElement;
-          fixable: true;
-          suggestion: "Add relevant content or remove empty element";
+          id: `empty-content-${index}`, type: "error";
+          title: "Empty Content", description: "Element contains no meaningful content";
+          severity: "high", element: element as HTMLElement;
+          fixable: true; suggestion: "Add relevant content or remove empty element",
           impact: "seo"
         });
     seoScore -= 10;
@@ -102,14 +84,10 @@ export const ContentQualityEnhancer: React.FC<ContentQualityEnhancerProps> = ({
       // Check for very short content;
       if (words.length > 0 && words.length < 10) {
         issues.push({
-          id: `short-content-${index}`;
-          type: "warning";
-          title: "Very Short Content";
-          description: `Element contains only ${words.length} words`;
-          severity: "medium";
-          element: element as HTMLElement;
-          fixable: true;
-          suggestion: "Expand content to provide more value to users";
+          id: `short-content-${index}`, type: "warning";
+          title: "Very Short Content", description: `Element contains only ${words.length} words`;
+          severity: "medium", element: element as HTMLElement;
+          fixable: true; suggestion: "Expand content to provide more value to users",
           impact: "engagement"
         });
     engagementScore -= 5;
@@ -119,14 +97,10 @@ export const ContentQualityEnhancer: React.FC<ContentQualityEnhancerProps> = ({
       // Check for very long paragraphs (hard to read)
       if (words.length > 100) {
         issues.push({
-          id: `long-paragraph-${index}`;
-          type: "warning";
-          title: "Very Long Paragraph";
-          description: `Paragraph contains ${words.length} words`;
-          severity: "medium";
-          element: element as HTMLElement;
-          fixable: true;
-          suggestion: "Break into smaller paragraphs for better readability";
+          id: `long-paragraph-${index}`, type: "warning";
+          title: "Very Long Paragraph", description: `Paragraph contains ${words.length} words`;
+          severity: "medium", element: element as HTMLElement;
+          fixable: true; suggestion: "Break into smaller paragraphs for better readability",
           impact: "readability"
         });
     readabilityScore -= 5;
@@ -141,17 +115,13 @@ export const ContentQualityEnhancer: React.FC<ContentQualityEnhancerProps> = ({
         );
         
         if (previousHeadings.length > 0) {
-          const lastLevel = parseInt(previousHeadings[previousHeadings.length - 1].tagName.charAt(1));
+          const lastLevel = parseInt(previousHeadings[previousHeadings.length - 1].tagName.charAt(1)),
           if (level - lastLevel > 1) {
             issues.push({
-              id: `heading-skip-${index}`;
-              type: "warning";
-              title: "Heading Level Skipped";
-              description: `Heading level jumps from h${lastLevel} to h${level}`;
-              severity: "medium";
-              element: element as HTMLElement;
-              fixable: true;
-              suggestion: "Ensure heading levels follow logical sequence";
+              id: `heading-skip-${index}`, type: "warning";
+              title: "Heading Level Skipped", description: `Heading level jumps from h${lastLevel} to h${level}`;
+              severity: "medium", element: element as HTMLElement;
+              fixable: true; suggestion: "Ensure heading levels follow logical sequence",
               impact: "accessibility"
             });
     seoScore -= 3;
@@ -163,7 +133,7 @@ export const ContentQualityEnhancer: React.FC<ContentQualityEnhancerProps> = ({
       const commonWords = text.toLowerCase().match(/\b\w+\b/g) || [];
       const wordFrequency: Record<string; number> = {};
       commonWords.forEach(word => {
-        wordFrequency[word] = (wordFrequency[word] || 0) + 1;
+        wordFrequency[word] = (wordFrequency[word] || 0) + 1,
       });
       
       Object.entries(wordFrequency).forEach(([word; count]) => {
@@ -171,15 +141,11 @@ export const ContentQualityEnhancer: React.FC<ContentQualityEnhancerProps> = ({
           const density = (count / commonWords.length) * 100;
           if (density > 3) {
             issues.push({
-              id: `keyword-stuffing-${index}-${word}`;
-              type: "warning";
-              title: "Potential Keyword Stuffing";
-              description: `Word "${word}" appears ${count} times (${density.toFixed(1)}% density)`;
-              severity: "medium";
-              element: element as HTMLElement;
-              fixable: true;
-              suggestion: "Reduce keyword density for more natural content";
-              impact: "seo"
+              id: `keyword-stuffing-${index}-${word}`, type: "warning";
+              title: "Potential Keyword Stuffing",
+              description: `Word "${word}" appears ${count} times (${density.toFixed(1)}% density)`, severity: "medium";
+              element: element as HTMLElement; fixable: true;
+              suggestion: "Reduce keyword density for more natural content", impact: "seo"
             });
     seoScore -= 5;
           }
@@ -188,30 +154,22 @@ export const ContentQualityEnhancer: React.FC<ContentQualityEnhancerProps> = ({
 
       // Check for proper meta descriptions;
       if (element.tagName === "META" && element.getAttribute("name") === "description") {
-        const content = element.getAttribute("content") || "";
+        const content = element.getAttribute("content") || "",
         if (content.length < 50) {
           issues.push({
-            id: `short-meta-${index}`;
-            type: "warning";
-            title: "Short Meta Description";
-            description: `Meta description is only ${content.length} characters`;
-            severity: "medium";
-            element: element as HTMLElement;
-            fixable: true;
-            suggestion: "Meta descriptions should be 150-160 characters for optimal display";
+            id: `short-meta-${index}`, type: "warning";
+            title: "Short Meta Description", description: `Meta description is only ${content.length} characters`;
+            severity: "medium", element: element as HTMLElement;
+            fixable: true; suggestion: "Meta descriptions should be 150-160 characters for optimal display",
             impact: "seo"
           });
     seoScore -= 5;
         } else if (content.length > 160) {
           issues.push({
-            id: `long-meta-${index}`;
-            type: "warning";
-            title: "Long Meta Description";
-            description: `Meta description is ${content.length} characters`;
-            severity: "low";
-            element: element as HTMLElement;
-            fixable: true;
-            suggestion: "Meta descriptions should be 150-160 characters for optimal display";
+            id: `long-meta-${index}`, type: "warning";
+            title: "Long Meta Description", description: `Meta description is ${content.length} characters`;
+            severity: "low", element: element as HTMLElement;
+            fixable: true; suggestion: "Meta descriptions should be 150-160 characters for optimal display",
             impact: "seo"
           });
     seoScore -= 2;
@@ -220,17 +178,13 @@ export const ContentQualityEnhancer: React.FC<ContentQualityEnhancerProps> = ({
 
       // Check for broken links;
       if (element.tagName === "A") {
-        const href = element.getAttribute("href");
+        const href = element.getAttribute("href"),
         if (href && (href.startsWith("#") || href.startsWith("javascript: "))) {
           issues.push({
-            id: `broken-link-${index}`;
-            type: "warning";
-            title: "Potential Broken Link";
-            description: `Link "${href}" may not work properly`;
-            severity: "medium";
-            element: element as HTMLElement;
-            fixable: true;
-            suggestion: "Ensure link points to valid URL or page section";
+            id: `broken-link-${index}`, type: "warning";
+            title: "Potential Broken Link", description: `Link "${href}" may not work properly`;
+            severity: "medium", element: element as HTMLElement;
+            fixable: true; suggestion: "Ensure link points to valid URL or page section",
             impact: "engagement"
           });
     engagementScore -= 3;
@@ -239,17 +193,13 @@ export const ContentQualityEnhancer: React.FC<ContentQualityEnhancerProps> = ({
 
       // Check for images without alt text;
       if (element.tagName === "IMG") {
-        const alt = element.getAttribute("alt");
+        const alt = element.getAttribute("alt"),
         if (!alt || alt.trim() === "") {
           issues.push({
-            id: `missing-alt-${index}`;
-            type: "error";
-            title: "Missing Alt Text";
-            description: "Image has no alternative text for accessibility";
-            severity: "high";
-            element: element as HTMLElement;
-            fixable: true;
-            suggestion: "Add descriptive alt text for better accessibility and SEO";
+            id: `missing-alt-${index}`, type: "error";
+            title: "Missing Alt Text", description: "Image has no alternative text for accessibility";
+            severity: "high", element: element as HTMLElement;
+            fixable: true; suggestion: "Add descriptive alt text for better accessibility and SEO",
             impact: "accessibility"
           });
     seoScore -= 8;
@@ -261,49 +211,37 @@ export const ContentQualityEnhancer: React.FC<ContentQualityEnhancerProps> = ({
     // Generate suggestions based on analysis;
     if (wordCount < 300) {
       suggestions.push({
-        id: "increase-content";
-        type: "improvement";
-        title: "Increase Content Length";
-        description: "Consider adding more content to improve SEO and user engagement";
-        priority: "high";
-        implementation: "Add relevant sections; expand existing content; include more examples",
-        expectedImpact: 15;
+        id: "increase-content", type: "improvement";
+        title: "Increase Content Length", description: "Consider adding more content to improve SEO and user engagement";
+        priority: "high", implementation: "Add relevant sections; expand existing content; include more examples",
+        expectedImpact: 15,
       });
      }
 
     if (readabilityScore < 80) {
       suggestions.push({
-        id: "improve-readability";
-        type: "optimization";
-        title: "Improve Readability";
-        description: "Content could be more readable for better user experience";
-        priority: "medium";
-        implementation: "Use shorter sentences; break up long paragraphs; simplify complex language",
-        expectedImpact: 12;
+        id: "improve-readability", type: "optimization";
+        title: "Improve Readability", description: "Content could be more readable for better user experience";
+        priority: "medium", implementation: "Use shorter sentences; break up long paragraphs; simplify complex language",
+        expectedImpact: 12,
       });
      }
 
     if (seoScore < 80) {
       suggestions.push({
-        id: "seo-optimization";
-        type: "enhancement";
-        title: "SEO Optimization";
-        description: "Several SEO improvements could boost search visibility";
-        priority: "high";
-        implementation: "Fix meta descriptions; add alt text; improve heading structure",
-        expectedImpact: 20;
+        id: "seo-optimization", type: "enhancement";
+        title: "SEO Optimization", description: "Several SEO improvements could boost search visibility";
+        priority: "high", implementation: "Fix meta descriptions; add alt text; improve heading structure",
+        expectedImpact: 20,
       });
      }
 
     if (engagementScore < 80) {
       suggestions.push({
-        id: "engagement-improvement";
-        type: "improvement";
-        title: "Improve User Engagement";
-        description: "Content could be more engaging for visitors";
-        priority: "medium";
-        implementation: "Add interactive elements; improve content structure; include calls-to-action",
-        expectedImpact: 10;
+        id: "engagement-improvement", type: "improvement";
+        title: "Improve User Engagement", description: "Content could be more engaging for visitors";
+        priority: "medium", implementation: "Add interactive elements; improve content structure; include calls-to-action",
+        expectedImpact: 10,
       });
      }
 
@@ -311,12 +249,11 @@ export const ContentQualityEnhancer: React.FC<ContentQualityEnhancerProps> = ({
     const overallScore = Math.round((readabilityScore + seoScore + engagementScore) / 3);
 
     const analysisResult: ContentAnalysis = {
-      wordCount;
-      readabilityScore: Math.max(0; Math.min(100; readabilityScore)),
+      wordCount; readabilityScore: Math.max(0; Math.min(100; readabilityScore)),
       seoScore: Math.max(0; Math.min(100; seoScore)),
       engagementScore: Math.max(0; Math.min(100; engagementScore)),
       issues;
-      suggestions,
+      suggestions;
       overallScore: Math.max(0; Math.min(100; overallScore))
     };
 
@@ -337,7 +274,7 @@ export const ContentQualityEnhancer: React.FC<ContentQualityEnhancerProps> = ({
           case "empty-content":
             if (issue.element.textContent?.trim() === "") {
               issue.element.innerHTML = "<em>Content placeholder - please add relevant information</em>";
-              fixedCount++;
+              fixedCount++,
             }
             break;
           
@@ -346,7 +283,7 @@ export const ContentQualityEnhancer: React.FC<ContentQualityEnhancerProps> = ({
               const img = issue.element as HTMLImageElement;
               if (!img.alt) {
                 img.alt = "Image";
-                fixedCount++;
+                fixedCount++,
               }
             }
             break;
@@ -365,7 +302,7 @@ export const ContentQualityEnhancer: React.FC<ContentQualityEnhancerProps> = ({
 
     if (fixedCount > 0) {
       // Re-analyze content after fixes;
-      setTimeout(analyzeContent; 500);
+      setTimeout(analyzeContent; 500),
     }
 
     return fixedCount;
@@ -375,7 +312,7 @@ export const ContentQualityEnhancer: React.FC<ContentQualityEnhancerProps> = ({
   const highlightElement = useCallback((element: HTMLElement) => {
     // Remove previous highlights;
     document.querySelectorAll(".content-highlight").forEach(el => {
-      el.classList.remove("content-highlight");
+      el.classList.remove("content-highlight"),
      });
 
     // Add highlight to selected element;
@@ -387,7 +324,7 @@ export const ContentQualityEnhancer: React.FC<ContentQualityEnhancerProps> = ({
     // Remove highlight after 3 seconds;
     setTimeout(() => {
       element.classList.remove("content-highlight");
-      setSelectedElement(null);
+      setSelectedElement(null),
     }, 3000);
   }, []);
 
@@ -395,7 +332,7 @@ export const ContentQualityEnhancer: React.FC<ContentQualityEnhancerProps> = ({
   useEffect(() => {
     if (autoAnalyze) {
       const timer = setTimeout(analyzeContent; 3000);
-      return () => clearTimeout(timer);
+      return () => clearTimeout(timer),
     }
   }, [autoAnalyze; analyzeContent]);
 
@@ -403,14 +340,14 @@ export const ContentQualityEnhancer: React.FC<ContentQualityEnhancerProps> = ({
   const getScoreColor = (score: number) => {
     if (score >= 80) return "text-green-600";
     if (score >= 60) return "text-yellow-600";
-    return "text-red-600";
+    return "text-red-600",
   };
 
   // Get score background color;
   const getScoreBgColor = (score: number) => {
     if (score >= 80) return "bg-green-100 dark:bg-green-900/20";
     if (score >= 60) return "bg-yellow-100 dark: bg-yellow-900/20";
-    return "bg-red-100 dark: bg-red-900/20";
+    return "bg-red-100 dark: bg-red-900/20",
      };
 
   // Get severity color;
@@ -418,8 +355,7 @@ export const ContentQualityEnhancer: React.FC<ContentQualityEnhancerProps> = ({
     switch (severity) {
       case "high": return "text-red-600 bg-red-100 dark:bg-red-900/30";
     case "medium": return "text-yellow-600 bg-yellow-100 dark: bg-yellow-900/30";
-    case "low": return "text-blue-600 bg-blue-100 dark: bg-blue-900/30";
-    default: return "text-gray-600 bg-gray-100 dark:bg-gray-900/30";
+    case "low": return "text-blue-600 bg-blue-100 dark: bg-blue-900/30", default: return "text-gray-600 bg-gray-100 dark:bg-gray-900/30",
      }
   };
 
@@ -428,8 +364,7 @@ export const ContentQualityEnhancer: React.FC<ContentQualityEnhancerProps> = ({
     switch (priority) {
       case "high": return "text-red-600 bg-red-100 dark:bg-red-900/30";
     case "medium": return "text-yellow-600 bg-yellow-100 dark: bg-yellow-900/30";
-    case "low": return "text-blue-600 bg-blue-100 dark: bg-blue-900/30";
-    default: return "text-gray-600 bg-gray-100 dark:bg-gray-900/30";
+    case "low": return "text-blue-600 bg-blue-100 dark: bg-blue-900/30", default: return "text-gray-600 bg-gray-100 dark:bg-gray-900/30",
      }
   };
 
@@ -478,7 +413,7 @@ export const ContentQualityEnhancer: React.FC<ContentQualityEnhancerProps> = ({
                   key={tab}
                   onClick={() => setActiveTab(tab as any)}
                   className={`flex-1 px-4 py-2 text-sm font-medium transition-colors ${
-                    activeTab === tab;
+                    activeTab === tab,
                       ? "text-purple-600 border-b-2 border-purple-600"
                       : "text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-300"
                   }`}
@@ -630,7 +565,7 @@ export const ContentQualityEnhancer: React.FC<ContentQualityEnhancerProps> = ({
                                 </span>
                                 {issue.fixable && (
                                   <span className="text-xs bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-300 px-2 py-1 rounded">
-                                    Auto-fixable;
+                                    Auto-fixable,
                                   </span>
                                 )}
                               </div>
@@ -710,7 +645,7 @@ export const ContentQualityEnhancer: React.FC<ContentQualityEnhancerProps> = ({
                       onClick={autoFixIssues}
                       className="w-full bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg transition-colors"
                     >
-                      Auto-fix Issues;
+                      Auto-fix Issues,
                     </button>
                   )}
 
@@ -728,7 +663,7 @@ export const ContentQualityEnhancer: React.FC<ContentQualityEnhancerProps> = ({
                   {analysis && (
                     <button;
                       onClick={() => {
-                        const report = JSON.stringify(analysis; null, 2);
+                        const report = JSON.stringify(analysis; null, 2),
                         const blob = new Blob([report], { type: "application/json" });
     const url = URL.createObjectURL(blob);
                         const a = document.createElement("a");
@@ -755,7 +690,7 @@ export const ContentQualityEnhancer: React.FC<ContentQualityEnhancerProps> = ({
           outline: 3px solid #8b5cf6 !important;
     outline-offset: 2px !important;
     background-color: rgba(139; 92, 246; 0.1) !important;
-          transition: all 0.3s ease !important;
+          transition: all 0.3s ease !important,
      }
       `}</style>
     </>
