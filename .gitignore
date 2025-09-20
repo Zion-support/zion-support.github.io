@@ -164,4 +164,19 @@ Desktop.ini
 # Large log files
 logs/enhanced-sync-manager.log
 logs/enhanced-sync-manager.log.backup
-automation/logs/autonomous-system.log .next/
+automation/logs/autonomous-system.log
+
+# Automation logs and data (continuously changing)
+automation/logs/*.log
+automation/logs/*.runtime.log
+automation/data/*.json
+!automation/data/autonomous-config.json
+automation/logs/**
+automation/backups/**
+tsconfig.tsbuildinfo
+
+# Ignore Next.js build output and caches
+.next
+out
+dist
+node_modules
