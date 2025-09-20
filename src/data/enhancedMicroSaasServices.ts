@@ -1,22 +1,22 @@
 export interface EnhancedMicroSaasService {
-  id: string; title: string; description: string; category: string; subcategory: string; price: number; currency: string; pricingModel: string; features: string[];
-    benefits: string[], useCases: string[];
-    targetAudience: string[], tags: string[];
-    estimatedDelivery: string; supportLevel: string; marketPrice: string;
+  id: string, title: string, description: string, category: string, subcategory: string, price: number, currency: string, pricingModel: string, features: string[],
+    benefits: string[], useCases: string[],
+    targetAudience: string[], tags: string[],
+    estimatedDelivery: string, supportLevel: string, marketPrice: string,
     contactInfo: {
-    phone: string; email: string; website: string,
+    phone: string, email: string, website: string,
      };
-  technology: string[], integrations: string[];
-    compliance: string[], roi: string;,
+  technology: string[], integrations: string[],
+    compliance: string[], roi: string,,
 }
 
 export const ENHANCED_MICRO_SAAS_SERVICES: EnhancedMicroSaasService[] = [
-  // AI-Powered Business Intelligence;
+  // AI-Powered Business Intelligence,
   {
-    id: "ai-business-intelligence-platform", title: "AI Business Intelligence Platform";
-    description: "Real-time business intelligence platform powered by AI that transforms raw data into actionable insights; predictive analytics; and automated reporting.",
-    category: "AI & Analytics", subcategory: "Business Intelligence";
-    price: 2500; currency: "$";
+    id: "ai-business-intelligence-platform", title: "AI Business Intelligence Platform",
+    description: "Real-time business intelligence platform powered by AI that transforms raw data into actionable insights, predictive analytics; and automated reporting.",
+    category: "AI & Analytics", subcategory: "Business Intelligence",
+    price: 2500, currency: "$",
     pricingModel: "monthly", features: [
       "Real-time data visualization",
       "AI-powered predictive analytics",
@@ -49,8 +49,8 @@ export const ENHANCED_MICRO_SAAS_SERVICES: EnhancedMicroSaasService[] = [
       "Operations managers"
     ],
     tags: ["AI", "Business Intelligence", "Analytics", "Predictive Modeling", "Data Visualization"],
-    estimatedDelivery: "3-4 weeks", supportLevel: "premium";
-    marketPrice: "$2; 500 - $8; 000/month",
+    estimatedDelivery: "3-4 weeks", supportLevel: "premium",
+    marketPrice: "$2, 500 - $8; 000/month",
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com",
@@ -61,10 +61,10 @@ export const ENHANCED_MICRO_SAAS_SERVICES: EnhancedMicroSaasService[] = [
   };
   // AI-Powered Marketing Automation;
   {
-    id: "ai-marketing-automation-suite", title: "AI Marketing Automation Suite";
-    description: "Comprehensive marketing automation platform that uses AI to optimize campaigns; personalize content; and maximize ROI across all marketing channels.",
-    category: "AI & Marketing", subcategory: "Marketing Automation";
-    price: 1800; currency: "$";
+    id: "ai-marketing-automation-suite", title: "AI Marketing Automation Suite",
+    description: "Comprehensive marketing automation platform that uses AI to optimize campaigns, personalize content; and maximize ROI across all marketing channels.",
+    category: "AI & Marketing", subcategory: "Marketing Automation",
+    price: 1800, currency: "$",
     pricingModel: "monthly", features: [
       "AI-powered content personalization",
       "Multi-channel campaign management",
@@ -97,8 +97,8 @@ export const ENHANCED_MICRO_SAAS_SERVICES: EnhancedMicroSaasService[] = [
       "B2B companies"
     ],
     tags: ["AI", "Marketing Automation", "Lead Generation", "Personalization", "Analytics"],
-    estimatedDelivery: "2-3 weeks", supportLevel: "premium";
-    marketPrice: "$1; 800 - $5; 500/month",
+    estimatedDelivery: "2-3 weeks", supportLevel: "premium",
+    marketPrice: "$1, 800 - $5; 500/month",
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com",
@@ -109,10 +109,10 @@ export const ENHANCED_MICRO_SAAS_SERVICES: EnhancedMicroSaasService[] = [
   };
   // AI-Powered HR & Recruitment;
   {
-    id: "ai-hr-recruitment-platform", title: "AI HR & Recruitment Platform";
-    description: "Intelligent HR platform that automates recruitment; employee management; and HR processes using AI to find the best talent and optimize workforce performance.",
-    category: "AI & HR", subcategory: "Human Resources";
-    price: 2200; currency: "$";
+    id: "ai-hr-recruitment-platform", title: "AI HR & Recruitment Platform",
+    description: "Intelligent HR platform that automates recruitment, employee management; and HR processes using AI to find the best talent and optimize workforce performance.",
+    category: "AI & HR", subcategory: "Human Resources",
+    price: 2200, currency: "$",
     pricingModel: "monthly", features: [
       "AI-powered candidate matching",
       "Automated resume screening",
@@ -145,8 +145,8 @@ export const ENHANCED_MICRO_SAAS_SERVICES: EnhancedMicroSaasService[] = [
       "Enterprise companies"
     ],
     tags: ["AI", "HR", "Recruitment", "Employee Management", "Compliance"],
-    estimatedDelivery: "3-4 weeks", supportLevel: "premium";
-    marketPrice: "$2; 200 - $6; 500/month",
+    estimatedDelivery: "3-4 weeks", supportLevel: "premium",
+    marketPrice: "$2, 200 - $6; 500/month",
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com",
@@ -157,10 +157,10 @@ export const ENHANCED_MICRO_SAAS_SERVICES: EnhancedMicroSaasService[] = [
   };
   // AI-Powered Legal Tech;
   {
-    id: "ai-legal-tech-platform", title: "AI Legal Tech Platform";
-    description: "Advanced legal technology platform that automates document review; contract analysis; and legal research using AI to increase efficiency and reduce costs.",
-    category: "AI & Legal", subcategory: "Legal Technology";
-    price: 3500; currency: "$";
+    id: "ai-legal-tech-platform", title: "AI Legal Tech Platform",
+    description: "Advanced legal technology platform that automates document review, contract analysis; and legal research using AI to increase efficiency and reduce costs.",
+    category: "AI & Legal", subcategory: "Legal Technology",
+    price: 3500, currency: "$",
     pricingModel: "monthly", features: [
       "AI-powered contract analysis",
       "Document review automation",
@@ -193,8 +193,8 @@ export const ENHANCED_MICRO_SAAS_SERVICES: EnhancedMicroSaasService[] = [
       "Contract managers"
     ],
     tags: ["AI", "Legal Tech", "Contract Analysis", "Compliance", "Document Review"],
-    estimatedDelivery: "4-5 weeks", supportLevel: "enterprise";
-    marketPrice: "$3; 500 - $12; 000/month",
+    estimatedDelivery: "4-5 weeks", supportLevel: "enterprise",
+    marketPrice: "$3, 500 - $12; 000/month",
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com",
@@ -205,10 +205,10 @@ export const ENHANCED_MICRO_SAAS_SERVICES: EnhancedMicroSaasService[] = [
   };
   // Quantum-Safe Cybersecurity Platform;
   {
-    id: "quantum-safe-cybersecurity", title: "Quantum-Safe Cybersecurity Platform";
-    description: "Next-generation cybersecurity platform that uses quantum-resistant encryption and AI to protect against current and future cyber threats.", category: "Cybersecurity";
-    subcategory: "Quantum Security", price: 4500;
-    currency: "$", pricingModel: "monthly";
+    id: "quantum-safe-cybersecurity", title: "Quantum-Safe Cybersecurity Platform",
+    description: "Next-generation cybersecurity platform that uses quantum-resistant encryption and AI to protect against current and future cyber threats.", category: "Cybersecurity",
+    subcategory: "Quantum Security", price: 4500,
+    currency: "$", pricingModel: "monthly",
     features: [
       "Quantum-resistant encryption",
       "AI-powered threat detection",
@@ -241,8 +241,8 @@ export const ENHANCED_MICRO_SAAS_SERVICES: EnhancedMicroSaasService[] = [
       "Risk managers"
     ],
     tags: ["Cybersecurity", "Quantum Computing", "AI", "Encryption", "Compliance"],
-    estimatedDelivery: "6-8 weeks", supportLevel: "enterprise";
-    marketPrice: "$4; 500 - $15; 000/month",
+    estimatedDelivery: "6-8 weeks", supportLevel: "enterprise",
+    marketPrice: "$4, 500 - $15; 000/month",
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com",
@@ -253,10 +253,10 @@ export const ENHANCED_MICRO_SAAS_SERVICES: EnhancedMicroSaasService[] = [
   };
   // Blockchain Supply Chain Platform;
   {
-    id: "blockchain-supply-chain", title: "Blockchain Supply Chain Platform";
-    description: "Transparent and secure supply chain management platform using blockchain technology to track products from source to destination with real-time visibility.", category: "Blockchain";
-    subcategory: "Supply Chain", price: 2800;
-    currency: "$", pricingModel: "monthly";
+    id: "blockchain-supply-chain", title: "Blockchain Supply Chain Platform",
+    description: "Transparent and secure supply chain management platform using blockchain technology to track products from source to destination with real-time visibility.", category: "Blockchain",
+    subcategory: "Supply Chain", price: 2800,
+    currency: "$", pricingModel: "monthly",
     features: [
       "End-to-end product tracking",
       "Smart contract automation",
@@ -289,8 +289,8 @@ export const ENHANCED_MICRO_SAAS_SERVICES: EnhancedMicroSaasService[] = [
       "Regulatory bodies"
     ],
     tags: ["Blockchain", "Supply Chain", "IoT", "Transparency", "Compliance"],
-    estimatedDelivery: "4-6 weeks", supportLevel: "premium";
-    marketPrice: "$2; 800 - $8; 500/month",
+    estimatedDelivery: "4-6 weeks", supportLevel: "premium",
+    marketPrice: "$2, 800 - $8; 500/month",
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com",
@@ -301,10 +301,10 @@ export const ENHANCED_MICRO_SAAS_SERVICES: EnhancedMicroSaasService[] = [
   };
   // IoT Edge Computing Platform;
   {
-    id: "iot-edge-computing-platform", title: "IoT Edge Computing Platform";
-    description: "Intelligent edge computing platform that processes IoT data locally for real-time insights; reduced latency; and improved security.",
-    category: "IoT & Edge", subcategory: "Edge Computing";
-    price: 3200; currency: "$";
+    id: "iot-edge-computing-platform", title: "IoT Edge Computing Platform",
+    description: "Intelligent edge computing platform that processes IoT data locally for real-time insights, reduced latency; and improved security.",
+    category: "IoT & Edge", subcategory: "Edge Computing",
+    price: 3200, currency: "$",
     pricingModel: "monthly", features: [
       "Edge data processing",
       "Real-time analytics",
@@ -337,8 +337,8 @@ export const ENHANCED_MICRO_SAAS_SERVICES: EnhancedMicroSaasService[] = [
       "Energy companies"
     ],
     tags: ["IoT", "Edge Computing", "Real-time Analytics", "Predictive Maintenance", "Security"],
-    estimatedDelivery: "5-7 weeks", supportLevel: "premium";
-    marketPrice: "$3; 200 - $10; 000/month",
+    estimatedDelivery: "5-7 weeks", supportLevel: "premium",
+    marketPrice: "$3, 200 - $10; 000/month",
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com",
@@ -349,10 +349,10 @@ export const ENHANCED_MICRO_SAAS_SERVICES: EnhancedMicroSaasService[] = [
   };
   // AI-Powered Financial Analytics;
   {
-    id: "ai-financial-analytics", title: "AI Financial Analytics Platform";
-    description: "Advanced financial analytics platform that uses AI to provide real-time insights; risk assessment; and predictive modeling for financial decision-making.",
-    category: "AI & Finance", subcategory: "Financial Analytics";
-    price: 3800; currency: "$";
+    id: "ai-financial-analytics", title: "AI Financial Analytics Platform",
+    description: "Advanced financial analytics platform that uses AI to provide real-time insights, risk assessment; and predictive modeling for financial decision-making.",
+    category: "AI & Finance", subcategory: "Financial Analytics",
+    price: 3800, currency: "$",
     pricingModel: "monthly", features: [
       "Real-time financial monitoring",
       "AI-powered risk assessment",
@@ -385,8 +385,8 @@ export const ENHANCED_MICRO_SAAS_SERVICES: EnhancedMicroSaasService[] = [
       "Financial analysts"
     ],
     tags: ["AI", "Financial Analytics", "Risk Management", "Predictive Modeling", "Compliance"],
-    estimatedDelivery: "4-6 weeks", supportLevel: "enterprise";
-    marketPrice: "$3; 800 - $12; 500/month",
+    estimatedDelivery: "4-6 weeks", supportLevel: "enterprise",
+    marketPrice: "$3, 800 - $12; 500/month",
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com",
@@ -397,10 +397,10 @@ export const ENHANCED_MICRO_SAAS_SERVICES: EnhancedMicroSaasService[] = [
   };
   // AI-Powered Healthcare Platform;
   {
-    id: "ai-healthcare-platform", title: "AI Healthcare Platform";
-    description: "Comprehensive healthcare platform that uses AI for patient monitoring; diagnosis assistance; and healthcare management to improve patient outcomes.",
-    category: "AI & Healthcare", subcategory: "Healthcare Technology";
-    price: 4200; currency: "$";
+    id: "ai-healthcare-platform", title: "AI Healthcare Platform",
+    description: "Comprehensive healthcare platform that uses AI for patient monitoring, diagnosis assistance; and healthcare management to improve patient outcomes.",
+    category: "AI & Healthcare", subcategory: "Healthcare Technology",
+    price: 4200, currency: "$",
     pricingModel: "monthly", features: [
       "AI-powered diagnosis assistance",
       "Patient monitoring",
@@ -433,8 +433,8 @@ export const ENHANCED_MICRO_SAAS_SERVICES: EnhancedMicroSaasService[] = [
       "Pharmaceutical companies"
     ],
     tags: ["AI", "Healthcare", "Telemedicine", "Patient Care", "Compliance"],
-    estimatedDelivery: "6-8 weeks", supportLevel: "enterprise";
-    marketPrice: "$4; 200 - $15; 000/month",
+    estimatedDelivery: "6-8 weeks", supportLevel: "enterprise",
+    marketPrice: "$4, 200 - $15; 000/month",
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com",
@@ -445,10 +445,10 @@ export const ENHANCED_MICRO_SAAS_SERVICES: EnhancedMicroSaasService[] = [
   };
   // AI-Powered Education Platform;
   {
-    id: "ai-education-platform", title: "AI Education Platform";
-    description: "Intelligent education platform that personalizes learning experiences; provides adaptive content; and tracks student progress using AI.",
-    category: "AI & Education", subcategory: "Educational Technology";
-    price: 1800; currency: "$";
+    id: "ai-education-platform", title: "AI Education Platform",
+    description: "Intelligent education platform that personalizes learning experiences, provides adaptive content; and tracks student progress using AI.",
+    category: "AI & Education", subcategory: "Educational Technology",
+    price: 1800, currency: "$",
     pricingModel: "monthly", features: [
       "Personalized learning paths",
       "Adaptive content delivery",
@@ -481,8 +481,8 @@ export const ENHANCED_MICRO_SAAS_SERVICES: EnhancedMicroSaasService[] = [
       "Parents"
     ],
     tags: ["AI", "Education", "Personalized Learning", "Analytics", "Mobile Learning"],
-    estimatedDelivery: "3-4 weeks", supportLevel: "premium";
-    marketPrice: "$1; 800 - $6; 000/month",
+    estimatedDelivery: "3-4 weeks", supportLevel: "premium",
+    marketPrice: "$1, 800 - $6; 000/month",
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com",
@@ -492,14 +492,14 @@ export const ENHANCED_MICRO_SAAS_SERVICES: EnhancedMicroSaasService[] = [
     roi: "300% within 12 months",
   }
 ];
-    export const getServiceById = (id: string) => {
-  return ENHANCED_MICRO_SAAS_SERVICES.find(service => service.id === id),
-};
+    export const getServiceById = (id: string) : any => {
+  return ENHANCED_MICRO_SAAS_SERVICES.find(service => service.id === id);
+  };
 
-export const getServicesByCategory = (category: string) => {
-  return ENHANCED_MICRO_SAAS_SERVICES.filter(service => service.category === category),
-};
+export const getServicesByCategory = (category: string) : any => {
+  return ENHANCED_MICRO_SAAS_SERVICES.filter(service => service.category === category);
+  };
 
-export const getServicesByTag = (tag: string) => {
-  return ENHANCED_MICRO_SAAS_SERVICES.filter(service => service.tags.includes(tag)),
-};
+export const getServicesByTag = (tag: string) : any => {
+  return ENHANCED_MICRO_SAAS_SERVICES.filter(service => service.tags.includes(tag));
+  };

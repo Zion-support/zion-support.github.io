@@ -1,6 +1,6 @@
 import React from 'react',
 import SEO from '../../../components/SEO',
-export default function AIStartupFundingGuide2025() {,
+export default function AIStartupFundingGuide2025() : any {,
   return (,
     <div className="min-h-screen bg-white">,
       <SEO,
@@ -210,4 +210,4 @@ export default function AIStartupFundingGuide2025() {,
         </div>,
       </article>,
     </div>,
-  )}
+  )}'

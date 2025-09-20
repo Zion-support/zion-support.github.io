@@ -49,6 +49,6 @@ exports.handler = async function(event, context) {
         function: 'repo-knowledge-graph-runner',
         status: 'error'
       })
-    },
+    };
   }
 },

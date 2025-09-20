@@ -1,16 +1,18 @@
 import { useEffect, useRef, useState } from 'react, ';
 export function usePerformance() {
     const [metrics, setMetrics] = useState({
-        fcp: null;
-        lcp: null;
-        fid: null;
-        cls: null;
-        ttfb: null;
-        domLoad: null;
+        fcp: null,
+        lcp: null,
+        fid: null,
+        cls: null,
+        ttfb: null,
+        domLoad: null,
         windowLoad: null,
     });
-    const [observers, setObservers] = useState([]);
-    const observerRef = useRef(null);
+
+  const [observers, setObservers] = useState([]);
+
+  const observerRef = useRef(null);
     useEffect(() => {
         // Check if PerformanceObserver is supported;
         if (!('PerformanceObserver' in window)) {
@@ -23,7 +25,7 @@ export function usePerformance() {
             const fcpEntry = entries.find(entry => entry.name === 'first-contentful-paint');
             if (fcpEntry) {
                 setMetrics(prev => ({ ...prev, fcp: fcpEntry.startTime }));
-     }
+};
         });
         // Largest Contentful Paint (LCP)
         const lcpObserver = new PerformanceObserver((list) => {
@@ -31,7 +33,7 @@ export function usePerformance() {
             const lcpEntry = entries[entries.length - 1];
             if (lcpEntry) {
                 setMetrics(prev => ({ ...prev, lcp: lcpEntry.startTime }));
-     }
+};
         });
         // First Input Delay (FID)
         const fidObserver = new PerformanceObserver((list) => {
@@ -39,7 +41,7 @@ export function usePerformance() {
             const fidEntry = entries[entries.length - 1];
             if (fidEntry && 'processingStart' in fidEntry) {
                 setMetrics(prev => ({ ...prev, fid: fidEntry.processingStart - fidEntry.startTime }));
-     }
+};
         });
         // Cumulative Layout Shift (CLS)
         const clsObserver = new PerformanceObserver((list) => {
@@ -50,15 +52,15 @@ export function usePerformance() {
                     clsValue += layoutShiftEntry.value;
                 }
             }
-            setMetrics(prev => ({ ...prev, cls: clsValue }));
+            setMetrics(prev => ({ ...prev, cls: clsValue })),
      });
         // Start observing;
         try {
-            fcpObserver.observe({ entryTypes: ['paint'] });
-    lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
-    fidObserver.observe({ entryTypes: ['first-input'] });
+            fcpObserver.observe({ entryTypes: ['paint'] }),
+    lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] }),
+    fidObserver.observe({ entryTypes: ['first-input'] }),
     clsObserver.observe({ entryTypes: ['layout-shift'] });
-     }
+};
         catch (error) {
             
         }
@@ -67,8 +69,8 @@ export function usePerformance() {
         if (navigationEntry) {
             setMetrics(prev => ({
                 ...prev,
-                ttfb: navigationEntry.responseStart - navigationEntry.requestStart;
-                domLoad: navigationEntry.domContentLoadedEventEnd - navigationEntry.domContentLoadedEventStart;
+                ttfb: navigationEntry.responseStart - navigationEntry.requestStart,
+                domLoad: navigationEntry.domContentLoadedEventEnd - navigationEntry.domContentLoadedEventStart,
                 windowLoad: navigationEntry.loadEventEnd - navigationEntry.loadEventStart,
             }));
      }
@@ -83,12 +85,12 @@ export function usePerformance() {
     // Get performance rating;
     const getRating = (metric, value) => {
         const thresholds = {
-            fcp: { good: 1800, poor: 3000 };
-            lcp: { good: 2500, poor: 4000 };
-            fid: { good: 100, poor: 300 };
-            cls: { good: 0.1, poor: 0.25 };
+            fcp: { good: 1800, poor: 3000 },
+            lcp: { good: 2500, poor: 4000 },
+            fid: { good: 100, poor: 300 },
+            cls: { good: 0.1, poor: 0.25 },
             ttfb: { good: 800, poor: 1800 }
-        };
+        },
     const threshold = thresholds[metric];
         if (!threshold)
             return 'good';
@@ -104,7 +106,7 @@ export function usePerformance() {
         Object.entries(metrics).forEach(([key, value]) => {
             if (value !== null) {
                 result.push({
-                    name: key.toUpperCase();
+                    name: key.toUpperCase(),
                     value;
   };
                     rating: getRating(key, value)
@@ -133,8 +135,8 @@ export function usePerformance() {
                 case 'good': return 100;
                 case 'needs-improvement': return 65;
                 case 'poor': return 0;
-                default: return 0;,
-     }
+                default: return 0,;
+  }
         });
         return Math.round(scores.reduce((sum, score) => sum + score, 0) / scores.length);
     };
@@ -147,8 +149,8 @@ export function usePerformance() {
             entries.forEach((entry) => {
                 if (entry.duration > 50) {
                     console.warn('Long task detected:', {
-                        duration: entry.duration;
-                        startTime: entry.startTime;
+                        duration: entry.duration,
+                        startTime: entry.startTime,
                         name: entry.name,
                     });
      }
@@ -156,7 +158,7 @@ export function usePerformance() {
         });
         try {
             longTaskObserver.observe({ entryTypes: ['longtask'] });
-     }
+};
         catch (error) {
             
         }
@@ -164,11 +166,11 @@ export function usePerformance() {
     }, []);
     return {
         metrics,
-        observers: getMetricsWithRatings();
-        performanceScore: getPerformanceScore();
+        observers: getMetricsWithRatings(),
+        performanceScore: getPerformanceScore(),
         logMetrics,
         getRating: (metric) => {
-            const value = metrics[metric];
+            const value = metrics[metric],
     return value !== null ? getRating(metric, value) : null;
         }
     };
@@ -183,7 +185,7 @@ export function usePerformanceEvent(eventName, callback) {
         });
         try {
             observer.observe({ entryTypes: [eventName] });
-     }
+};
         catch (error) {
             
         }

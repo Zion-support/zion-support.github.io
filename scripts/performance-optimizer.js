@@ -48,8 +48,8 @@ unusedDirectories.forEach(dir => {
   const fullPath = path.join(process.cwd(), dir);
   if (fs.existsSync(fullPath)) {
     try {
-      fs.rmSync(fullPath, { recursive: true, force: true });
-      console.log(`✅ Removed: ${dir}`);
+      fs.rmSync(fullPath, { recursive: true, force: true }),
+      console.log(`✅ Removed: ${dir}`),
     } catch (error) {
       console.log(`⚠️  Could not remove ${dir}: ${error.message}`);
     }
@@ -85,7 +85,7 @@ if (fs.existsSync(packageJsonPath)) {
     if (packageJson.dependencies && packageJson.dependencies[dep]) {
       delete packageJson.dependencies[dep];
       console.log(`✅ Removed unused dependency: ${dep}`);
-    }
+};
   });
   
   // Add performance scripts
@@ -197,7 +197,7 @@ fs.writeFileSync(path.join(process.cwd(), 'src/utils/performance.ts'), performan
 console.log('✅ Created performance monitoring utilities');
 
 console.log('🎉 Performance optimization completed!');
-console.log('📊 Next steps:');
+console.log('📊 Next steps: '),
 console.log('1. Run "npm run optimize" to test the optimized build');
 console.log('2. Run "npm run analyze" to analyze bundle size');
 console.log('3. Check the performance improvements');

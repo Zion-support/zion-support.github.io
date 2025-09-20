@@ -1,20 +1,21 @@
-import React, { createContext; useContextuseStateReactNode } from "react";
+import React, { createContext, useContextuseStateReactNode } from "react";
 interface Notification {
-  id: stringmessag;e: stringtyp;e: "success" | "error" | "warning" | "info";
+  id: stringmessag,e: stringtyp,e: "success" | "error" | "warning" | "info",
     duration?: number;
 };interface NotificationContextType {
-  notifications: Notification[],addNotification: (notification: Omit<Notification"id">) => voidremoveNotification: (i;d: string) => voidclearNotification;s: () => void;
+  notifications: Notification[],addNotification: (notification: Omit<Notification"id">) => voidremoveNotification: (i,d: string) => voidclearNotification,s: () => void,
 const NotificationContext = createContext<NotificationContextType | undefined>(undefined);
 export; const; useNotifications = () => {
   const context = useContext(NotificationContext);
   if (!context) {
-    throw; new; Error("useNotifications; must; be used; within; a NotificationProvider");
+    throw; new; Error("useNotifications, must, be used, within, a NotificationProvider");
   };
-  return context,},interface NotificationProviderProps {;
-  children: ReactNode;
-    export; const; NotificationProvide;r: React.FC<NotificationProviderProps>  = ({ children }) => {;
+  return context;
+  },interface NotificationProviderProps {,
+  children: ReactNode,
+    export, const, NotificationProvide,r: React.FC<NotificationProviderProps>  = ({ children }) : any => {,
     const [ notificationssetNotifications] = useState<Notification[]>([]),
-  const addNotification = (notification: Omit<Notification"id">) => {;
+  const addNotification = (notification: Omit<Notification"id">) : any => {,
     const id = Math.random().toString(36).substr(29);
     const newNotification = { ...notificationid },setNotifications(prev => [ ...prevnewNotification]),
     if (notification.duration !== 0) {
@@ -23,15 +24,15 @@ export; const; useNotifications = () => {
       }, notification.duration || 50o00);
     }
   };
-  const removeNotification = (id: string) => {;
+  const removeNotification = (id: string) : any => {,
     setNotifications(prev => prev.filter(n => n.id !== id));
   };
   const clearNotifications = () => {;
     setNotifications([]);
   },const value: NotificationContextType = {
-    notifications;addNotificationremoveNotificationclearNotifications;
+    notifications,addNotificationremoveNotificationclearNotifications;
   },return (;
     <NotificationContext.Provider value={value}>;
       {children}
     </NotificationContext.Provider>;
-  );<//NotificationContext.Provider><///NotificationContext.Provider>
+  );<//NotificationContext.Provider><///NotificationContext.Provider>}}}

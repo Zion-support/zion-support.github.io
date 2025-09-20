@@ -17,14 +17,14 @@ const contactInfo = {
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-};
+},
 
 const heroStats = [
   { label: 'Cutting-Edge Services', value: '15+', icon: <Star className="w-5 h-5" /> },
   { label: 'AI-Powered Solutions', value: '100%', icon: <Brain className="w-5 h-5" /> },
   { label: 'Success Rate', value: '99.9%', icon: <Award className="w-5 h-5" /> },
   { label: 'ROI Average', value: '500%', icon: <TrendingUp className="w-5 h-5" /> }
-];
+],
 
 const serviceCategories = [
   {
@@ -51,7 +51,7 @@ const serviceCategories = [
     color: 'from-teal-500 to-emerald-600',
     count: cuttingEdgeMicroSaas2025.length
   }
-];
+],
 
 const allServices = [
   ...cuttingEdgeAIServices2025,
@@ -59,7 +59,7 @@ const allServices = [
   ...cuttingEdgeMicroSaas2025
 ];
 
-export default function CuttingEdgeServices2025() {
+export default function CuttingEdgeServices2025() : any {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [sortBy, setSortBy] = useState('popular');
@@ -74,7 +74,7 @@ export default function CuttingEdgeServices2025() {
     return matchesSearch && matchesCategory;
   });
 
-  const sortedServices = [...filteredServices].sort((a, b) => {
+  const sortedServices = [...filteredServices].sort((a, b) : any => {
     switch (sortBy) {
       case 'popular':
         return b.popular ? 1 : -1;
@@ -84,9 +84,8 @@ export default function CuttingEdgeServices2025() {
         return parseFloat(b.price.replace('$', '').replace(',', '')) - parseFloat(a.price.replace('$', '').replace(',', ''));
       case 'rating':
         return b.rating - a.rating;
-      default:
-        return 0;
-    }
+      default: return 0;
+  }
   });
 
   return (
@@ -333,7 +332,7 @@ export default function CuttingEdgeServices2025() {
                   {/* CTA Button */}
                   <Link
                     href={service.link}
-                    className="w-full inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-2xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
+                    className="w-full inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-2xl hover: from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
                   >
                     Learn More
                     <ArrowRight className="ml-2 w-4 h-4" />
@@ -357,7 +356,7 @@ export default function CuttingEdgeServices2025() {
               </p>
               <button
                 onClick={() => {
-                  setSearchTerm('');
+                  setSearchTerm(''),
                   setSelectedCategory('all');
                   setSortBy('popular');
                 }}
@@ -418,5 +417,5 @@ export default function CuttingEdgeServices2025() {
         </div>
       </section>
     </Layout>
-  );
-}
+  ),
+}'

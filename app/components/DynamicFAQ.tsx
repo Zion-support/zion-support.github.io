@@ -99,9 +99,9 @@ const DynamicFAQ: React.FC = () => {
     const matchesCategory = selectedCategory === 'all' || item.category === selectedCategory
     
     return matchesSearch && matchesCategory
-  })
+  });
 
-  const toggleItem = (itemId: string) => {
+  const toggleItem = (itemId: string) : any => {
     const newOpenItems = new Set(openItems)
     if (newOpenItems.has(itemId)) {
       newOpenItems.delete(itemId)
@@ -188,7 +188,7 @@ const DynamicFAQ: React.FC = () => {
               <div className="text-gray-400">Try adjusting your search or category filter</div>
             </div>
           ) : (
-            filteredItems.map((item) => {
+            filteredItems.map((item) : any => {
               const isOpen = openItems.has(item.id)
               
               return (

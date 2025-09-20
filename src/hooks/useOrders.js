@@ -4,14 +4,14 @@ export function useGetOrdersQuery(userId) {
         queryKey: ['orders', userId],
         queryFn: async () => {
             if (!userId)
-                return [];
+                return [],
     const res = await fetch(`/api/orders?user_id=me`);
             if (!res.ok) {
                 throw new Error('Failed to fetch orders');
             }
             return (await res.json());
         },
-        enabled: !!userId;
-        initialData: [];,
+        enabled: !!userId,
+        initialData: [],,
     });
 }

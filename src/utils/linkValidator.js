@@ -10,11 +10,11 @@ export class LinkValidator {
         'twitch.tv'
     ];
     static PROTOCOL_LINKS = [
-        'tel: ';
-        'mailto: ';
-        'sms: ';
+        'tel: ',
+        'mailto: ',
+        'sms: ',
         'whatsapp: '
-    ];
+    ],
     static BROKEN_LINK_MAPPINGS = {
         // Fix common broken internal links;
         '/quantum-neural-network-platform/': '/services/quantum-technology',
@@ -88,49 +88,49 @@ export class LinkValidator {
         if (this.PROTOCOL_LINKS.some(protocol => url.startsWith(protocol))) {
             return {
                 url,
-                status: 'protocol';
+                status: 'protocol',
                 parentPage,
-                suggestedFix: 'Keep as-is - these are valid protocol links',
-            };
+                suggestedFix: 'Keep as-is - these are valid protocol links';
+  };
      }
         // Check for external links;
         if (this.isExternalLink(url)) {
             return {
                 url,
-                status: 'external';
+                status: 'external',
                 parentPage,
-                suggestedFix: 'Add rel="nofollow" and validate periodically',
-            };
+                suggestedFix: 'Add rel="nofollow" and validate periodically';
+  };
      }
         // Check for broken internal links that have mappings;
         if (this.BROKEN_LINK_MAPPINGS[url]) {
             return {
                 url,
-                status: 'broken';
+                status: 'broken',
                 parentPage,
-                suggestedFix: `Redirect to: ${this.BROKEN_LINK_MAPPINGS[url]}`;
-                error: 'Broken internal link with available redirect',
-            };
+                suggestedFix: `Redirect to: ${this.BROKEN_LINK_MAPPINGS[url]}`,
+                error: 'Broken internal link with available redirect';
+  };
      }
         // For now, assume internal links are valid;
         // In a real implementation, you'd check against actual routes;
         return {
             url,
-            status: 'valid';
+            status: 'valid',
             parentPage;
         };
     }
     static getSuggestedFixes() {
         return Object.entries(this.BROKEN_LINK_MAPPINGS).map(([original, newUrl]) => ({
-            originalUrl: original;
-            newUrl: newUrl;
-            type: 'redirect';
-            reason: 'Broken internal link with available redirect mapping',
-        }));
+            originalUrl: original,
+            newUrl: newUrl,
+            type: 'redirect',
+            reason: 'Broken internal link with available redirect mapping';
+  }));
      }
     static isExternalLink(url) {
         try {
-            const urlObj = new URL(url, 'https: //ziontechgroup.com');
+            const urlObj = new URL(url, 'https: //ziontechgroup.com'),
     return !urlObj.hostname.includes('ziontechgroup.com');
         }
         catch {
@@ -150,3 +150,4 @@ ${redirects}`;
     }
 }
 export const linkValidator = new LinkValidator();
+'

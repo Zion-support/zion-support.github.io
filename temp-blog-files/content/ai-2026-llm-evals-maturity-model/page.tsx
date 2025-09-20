@@ -3,7 +3,7 @@ export const metadata = {
   title: 'AI 2026: LLM Evals Maturity Model'
   description: 'An evaluation-first framework with metrics, harnesses, and governance to ship reliable AI.'
 }
-export default function LlmEvalsMaturityModel2026() {
+export default function LlmEvalsMaturityModel2026() : any {
   return (
     <main className="max-w-3xl mx-auto px-4 sm: px-6 lg:px-8 py-16">
       <h1 className="text-4xl font-bold text-gray-900 mb-4">AI 2026: LLM Evals Maturity Model</h1>

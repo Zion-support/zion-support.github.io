@@ -26,8 +26,8 @@ if (process.env.NODE_ENV !== 'production') {,
   logger.add(,
     new winston.transports.Console({,
       format: winston.format.simple()}),
-  ),
-}
+  );
+};
 ,
 class ContinuousImprovement {,
   constructor() {,
@@ -65,8 +65,8 @@ class ContinuousImprovement {,
       const reportPath = path.join(__dirname, 'monitor-report.json'),
       if (fs.existsSync(reportPath)) {,
         const data = fs.readFileSync(reportPath, 'utf8'),
-        return JSON.parse(data),
-      }
+        return JSON.parse(data);
+};
       return {},
     } catch (error) {,
       logger.warn('Failed to load monitor data:', error.message),
@@ -83,8 +83,8 @@ class ContinuousImprovement {,
         priority: 'high',
         description: 'Fix lint errors',
         action: 'run_lint_fix',
-        automatic: true}),
-    }
+        automatic: true});
+};
 ,
     if (monitorData.codeQuality?.testCoverage < 80) {,
       suggestions.push({,
@@ -92,8 +92,8 @@ class ContinuousImprovement {,
         priority: 'medium',
         description: 'Improve test coverage',
         action: 'add_tests',
-        automatic: false}),
-    }
+        automatic: false});
+};
 ,
     // Performance improvements,
     if (monitorData.performance?.bundleSize > 1000) {,
@@ -102,8 +102,8 @@ class ContinuousImprovement {,
         priority: 'medium',
         description: 'Optimize bundle size',
         action: 'optimize_bundle',
-        automatic: false}),
-    }
+        automatic: false});
+};
 ,
     if (monitorData.performance?.lighthouseScore < 80) {,
       suggestions.push({,
@@ -111,8 +111,8 @@ class ContinuousImprovement {,
         priority: 'high',
         description: 'Improve Lighthouse score',
         action: 'optimize_performance',
-        automatic: false}),
-    }
+        automatic: false});
+};
 ,
     // Security improvements,
     if (monitorData.security?.vulnerabilities > 0) {,
@@ -121,8 +121,8 @@ class ContinuousImprovement {,
         priority: 'high',
         description: 'Fix security vulnerabilities',
         action: 'audit_fix',
-        automatic: true}),
-    }
+        automatic: true});
+};
 ,
     if (monitorData.security?.outdatedPackages > 10) {,
       suggestions.push({,
@@ -130,8 +130,8 @@ class ContinuousImprovement {,
         priority: 'medium',
         description: 'Update outdated packages',
         action: 'update_packages',
-        automatic: true}),
-    }
+        automatic: true});
+};
 ,
     return suggestions,
   }
@@ -147,12 +147,12 @@ class ContinuousImprovement {,
               ...suggestion,
               appliedAt: new Date().toISOString(),
               result: result.message}),
-            logger.info(`✅ Applied: ${suggestion.description}`),
-          }
+            logger.info(`✅ Applied: ${suggestion.description}`);
+};
         } catch (error) {,
           logger.error(`❌ Failed to apply ${suggestion.description}:`,
-            error.message),
-        }
+            error.message);
+};
       }
     }
 ,
@@ -205,8 +205,8 @@ class ContinuousImprovement {,
       .map((suggestion) => ({,
         ...suggestion,
         generatedAt: new Date().toISOString(),
-        instructions: this.getInstructions(suggestion)})),
-  }
+        instructions: this.getInstructions(suggestion)}));
+};
 ,
   getInstructions(suggestion) {,
     const instructions = {,
@@ -218,8 +218,8 @@ class ContinuousImprovement {,
     },
     return (,
       instructions[suggestion.action] ||,
-      'Review and implement the suggested improvement'),
-  }
+      'Review and implement the suggested improvement');
+};
 ,
   async saveResults(applied, manualSuggestions) {,
     const results = {,
@@ -232,8 +232,8 @@ class ContinuousImprovement {,
         total: applied.length + manualSuggestions.length}
     },
     const resultsPath = path.join(__dirname, 'improvement-results.json'),
-    fs.writeFileSync(resultsPath, JSON.stringify(results, null, 2)),
-  }
+    fs.writeFileSync(resultsPath, JSON.stringify(results, null, 2));
+};
 ,
   async generateExampleSuggestions() {,
     const exampleSuggestions = [,
@@ -267,8 +267,8 @@ class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundarySta
   }
 ,
   componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {,
-    console.error('Error caught by boundary:', error, errorInfo),
-  }
+    console.error('Error caught by boundary:', error, errorInfo);
+};
 ,
   render() {,
     if (this.state.hasError) {,
@@ -283,8 +283,8 @@ class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundarySta
             <summary>Error details</summary>,
             <pre>{this.state.error?.message}</pre>,
           </details>,
-        </div>),
-    }
+        </div>);
+};
 ,
     return this.props.children,
   }
@@ -332,8 +332,8 @@ if (require.main === module) {,
       break,
     case 'suggest':,
       improvement.generateExampleSuggestions().then((suggestions) => {,
-        console.log(JSON.stringify(suggestions, null, 2)),
-      }),
+        console.log(JSON.stringify(suggestions, null, 2));
+  }),
       break,
     default: logger.info('Usage: node improve.js [apply|suggest]')}
 }

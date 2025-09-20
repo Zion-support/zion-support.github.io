@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react, ';
 export function useApiKeys() {
     const [apiKeys, setApiKeys] = useState([]);
-    const [loading, setLoading] = useState(true);
+
+  const [loading, setLoading] = useState(true);
     const [newApiKey, setNewApiKey] = useState(null);
     useEffect(() => {
         // Load API keys from localStorage or API;
@@ -19,7 +20,8 @@ export function useApiKeys() {
         };
         loadApiKeys();
     }, []);
-    const fetchApiKeys = async () => {
+
+  const fetchApiKeys = async () => {
         // Implement actual API call here;
         setLoading(true);
         // Simulate API call;
@@ -29,11 +31,11 @@ export function useApiKeys() {
     };
     const createApiKey = async (name, scopes) => {
         const newKey = {
-            id: Date.now().toString();
+            id: Date.now().toString(),
             name,
             key: `zion_${Math.random().toString(36).substr(2, 9)}`,
             scopes,
-            createdAt: new Date().toISOString();
+            createdAt: new Date().toISOString(),
             isActive: true,
         };
     const updatedKeys = [...apiKeys, newKey];
@@ -48,7 +50,7 @@ export function useApiKeys() {
         localStorage.setItem('zion_api_keys', JSON.stringify(updatedKeys));
     };
     const toggleApiKey = async (id) => {
-        const updatedKeys = apiKeys.map(key => key.id === id ? { ...key, isActive: !key.isActive } : key);
+        const updatedKeys = apiKeys.map(key => key.id === id ? { ...key, isActive: !key.isActive } : key),
     setApiKeys(updatedKeys);
         localStorage.setItem('zion_api_keys', JSON.stringify(updatedKeys));
     };
@@ -59,7 +61,7 @@ export function useApiKeys() {
     };
     const regenerateApiKey = async (id) => {
         const newKey = `zion_${Math.random().toString(36).substr(2, 9)}`;
-        const updatedKeys = apiKeys.map(key => key.id === id ? { ...key, key: newKey } : key);
+        const updatedKeys = apiKeys.map(key => key.id === id ? { ...key, key: newKey } : key),
     setApiKeys(updatedKeys);
         setNewApiKey(newKey);
         localStorage.setItem('zion_api_keys', JSON.stringify(updatedKeys));

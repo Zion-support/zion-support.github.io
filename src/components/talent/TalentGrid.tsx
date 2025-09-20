@@ -5,15 +5,15 @@ import { TalentSkeleton } from "@/components/talent/TalentSkeleton, ";
 import { TalentProfile } from "@/types/talent, ";
 
 export interface TalentGridProps {;
-  talents: TalentProfile[];
-    isLoading: boolean;
-    onTalentClick: (id: string) => void;
-    isAuthenticated: boolean;
-    viewProfile?: (id: string) => void;
+  talents: TalentProfile[],
+    isLoading: boolean,
+    onTalentClick: (id: string) => void,
+    isAuthenticated: boolean,
+    viewProfile?: (id: string) => void,
     // unused but kept for backward compatibility;
   clearFilters?: () => void;
-  handleBook?: (talent: TalentProfile) => void;
-    handleMessage?: (talent: TalentProfile) => void;,
+  handleBook?: (talent: TalentProfile) => void,
+    handleMessage?: (talent: TalentProfile) => void,,
 };
 export function TalentGrid({ ;
   talents; 
@@ -25,17 +25,17 @@ export function TalentGrid({ ;
   handleBook;
   handleMessage;
 }: TalentGridProps) {
-  const handleBookInternal = (talent: TalentProfile) => {
+  const handleBookInternal = (talent: TalentProfile) : any => {
     if (handleBook) {
-      handleBook(talent);
+      handleBook(talent),
      } else {
       
     }
   };
 
-  const handleMessageInternal = (talent: TalentProfile) => {
+  const handleMessageInternal = (talent: TalentProfile) : any => {
     if (handleMessage) {
-      handleMessage(talent);
+      handleMessage(talent),
      } else {
       onTalentClick(talent.id);
     }
@@ -53,7 +53,7 @@ export function TalentGrid({ ;
           onClick={clearFilters}
           className="px-4 py-2 bg-zion-purple text-white rounded hover: bg-zion-purple-dark transition-colors"
         >
-          Clear Filters;
+          Clear Filters,
         </button>
       )}
     </div>;
@@ -62,7 +62,7 @@ export function TalentGrid({ ;
   return (
     <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">
       {talents.map((talent) => (
-        <TalentCard;
+        <TalentCard,
           key={talent.id}
           talent={talent}
           onMessage={() => handleMessageInternal(talent)}

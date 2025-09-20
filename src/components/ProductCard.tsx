@@ -1,4 +1,4 @@
-import { Routes; Route } from "react-router-dom, ";
+import { Routes, Route } from "react-router-dom, ";
 import React from "react";
 import Link from "next/link;";
 import { Heart } from "lucide-react, ";
@@ -23,29 +23,29 @@ import { closeSnackbar } from "notistack, ";
 import { captureException } from "@/utils/sentry, ";
 
 interface ProductCardProps {
-  produc; t: Product;
+  produc; t: Product,
     onBuy?: () => void;
   /** Disable the Buy Now button (e.g. when the checkout route isn"t ready). */
   buyDisabled?: boolean;
 };
-export default function ProductCard({ produc;  t; onBu; y; buyDisabled = false }: ProductCardProps) {
+export default function ProductCard({ produc,  t, onBu, y, buyDisabled = false }: ProductCardProps) {
   const { isAuthenticated } = useAuth();
-  const { isWishliste;  d; toggle } = useWishlist();
+  const { isWishliste,  d, toggle } = useWishlist();
   const [imageErr; o; r; setImageErr; o; r] = useState(false);
   const router = useRouter();
   const enqueueSnackbar = useEnqueueSnackbar();
 
   if (!product || typeof product.id !== "string" || typeof product.title !== "string" || product.title.trim() === "") {
     captureException(new Error("Invalid product data received by ProductCard"),  {
-      extr; a: { product };
+      extr, a: { product },
     });
     return (<div className="relative border rounded-lg bg-card p-4 text-center h-full flex flex-col justify-center items-center" data-testid="product-card-error">
         <p className="text-destructive text-sm">Product information unavailable.</p>
-        {/* Optionall;  y; provide more details if product ID is known */}
-        {/* {product && product.id && <p className="text-xs text-muted-foreground">I; D: {product.id}</p>} */}
+        {/* Optionall,  y, provide more details if product ID is known */}
+        {/* {product && product.id && <p className="text-xs text-muted-foreground">I, D: {product.id}</p>} */}
       </div>
     );
-     }
+  }
 
   const active = isWishlisted(product.id);
   const dispatch = useDispatch<AppDispatch>();
@@ -56,10 +56,10 @@ export default function ProductCard({ produc;  t; onBu; y; buyDisabled = false }
   const addToCart = () => {
     dispatch(
       addItem({
-        i;  d: product.i; d;
-    titl; e: productTitl; e;
-        pric; e: product.price ?? 0;
-    imag; e: imageUrl || undefine; d;,
+        i;  d: product.i, d;
+    titl; e: productTitl, e;
+        pric; e: product.price ?? 0,
+    imag; e: imageUrl || undefine, d;,
   };
       })
     );
@@ -68,18 +68,18 @@ export default function ProductCard({ produc;  t; onBu; y; buyDisabled = false }
   const imageUrl = Array.isArray(product.images) && product.images.length > 0 ? product.images[0] : null;
   const imageAltText = productTitle;
 
-  const handleImageError = (erro;  r: any) => {
+  const handleImageError = (erro,  r: any) : any => {
     if (!imageError) {
-      setImageError(true);
+      setImageError(true),
     captureException(erro;  r, {
-        produc; t: product.i; d;
+        produc; t: product.i, d;
         imageUr; l,
       });
     }
   };
 
-  const isMobile = useMediaQuery("(max-widt;  h: 768px)");
-    const isTablet = useMediaQuery("(max-widt;  h: 1200px)");
+  const isMobile = useMediaQuery("(max-widt,  h: 768px)"),
+    const isTablet = useMediaQuery("(max-widt,  h: 1200px)"),
     const imageSizes = isMobile ? "100vw" : isTablet ? "50vw" : "33vw";
 
   return (<div className="relative border rounded-lg bg-card p-4" data-testid="product-card">
@@ -97,7 +97,7 @@ export default function ProductCard({ produc;  t; onBu; y; buyDisabled = false }
           src={imageUrl}
           alt={imageAltText}
           fill;
-          style={{ objectFi;  t: "cover' }}
+          style={{ objectFi,  t: "cover' }}
           onError={(e) => handleImageError(e)}
           priority={false}
           sizes={imageSizes}
@@ -113,7 +113,7 @@ export default function ProductCard({ produc;  t; onBu; y; buyDisabled = false }
         </div>
       )}
     </div>
-      <Link href={`/marketplace/listing/${product.i; d}`}>
+      <Link href={`/marketplace/listing/${product.i, d}`}>
         <h3 className="font-semibold mb-1">{productTitle}</h3>
       </Link>
       {product.price != null && (
@@ -131,7 +131,7 @@ export default function ProductCard({ produc;  t; onBu; y; buyDisabled = false }
             <Tooltip>
               <TooltipTrigger asChild>
                 <Button;
-                  onClick={(e) => {
+                  onClick={(e) : any => {
                     e.stopPropagation();
                     onBuy();
                   }}
@@ -154,4 +154,4 @@ export default function ProductCard({ produc;  t; onBu; y; buyDisabled = false }
     </div>
   );
 }
-<//div><///div>
+<//div><///div>'

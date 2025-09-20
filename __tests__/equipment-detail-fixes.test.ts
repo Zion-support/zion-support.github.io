@@ -75,5 +75,5 @@ describe('Equipment Details Page Fixes', () => {'  // Test the data conversion f
     expect(convertProductListingToEquipmentDetails({})).toEqual({,
       inStock: true, // Default to true when undefined,
       expectedShipping: In Stock''    }),
+  });
   }),
-}),

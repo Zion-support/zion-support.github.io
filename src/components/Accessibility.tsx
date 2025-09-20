@@ -1,6 +1,6 @@
 import React from "react";
-impor; t; Reac; t, { useStat; e; useEffec; t; createContex; t; useContext } from "react";
-import { motio; n; AnimatePresence } from "framer-motion";
+impor; t; Reac; t, { useStat, e, useEffec, t, createContex, t, useContext } from "react";
+import { motio, n, AnimatePresence } from "framer-motion";
 import { 
   Ey; e; 
   EyeOf; f; 
@@ -19,14 +19,14 @@ import { Button } from "../ui/button";
 
 // Accessibility Context;
 interface AccessibilityContextType {
-  highContras; t: boolean;
-  reducedMotio; n: boolean;
-  fontSiz; e: "small" | "medium" | "large";
-  colorBlindMod; e: "none" | "protanopia" | "deuteranopia" | "tritanopia";
-  toggleHighContras; t: () => void;
-  toggleReducedMotio;  n: () => void;
-  setFontSiz; e: (siz;  e: "small" | "medium" | "large") => void;
-  setColorBlindMod; e: (mod;  e: "none" | "protanopia" | "deuteranopia" | "tritanopia") => void;,
+  highContras; t: boolean,
+  reducedMotio; n: boolean,
+  fontSiz; e: "small" | "medium" | "large",
+  colorBlindMod; e: "none" | "protanopia" | "deuteranopia" | "tritanopia",
+  toggleHighContras; t: () => void,
+  toggleReducedMotio;  n: () => void,
+  setFontSiz; e: (siz,  e: "small" | "medium" | "large") => void,
+  setColorBlindMod; e: (mod,  e: "none" | "protanopia" | "deuteranopia" | "tritanopia") => void,,
 };
 const AccessibilityContext = createContext<AccessibilityContextType | undefined>(undefined);
 
@@ -39,8 +39,8 @@ export const useAccessibility = () => {;
 };
 
 // Accessibility Provider Component;
-export const AccessibilityProvide;  r: React.FC<{ childre; n: React.ReactNode }> = ({ children }) => {
-  const [highContra; s; t; setHighContra; s; t] = useState(false);
+export const AccessibilityProvide;  r: React.FC<{ childre, n: React.ReactNode }> = ({ children }) : any => {
+  const [highContra, s; t; setHighContra; s; t] = useState(false);
   const [reducedMoti;  o; n; setReducedMoti; o; n] = useState(false);
   const [fontSi; z; e; setFontSi; z; e] = useState<"small" | "medium" | "large">("medium");
   const [colorBlindMo;  d; e; setColorBlindMo; d; e] = useState<"none" | "protanopia" | "deuteranopia" | "tritanopia">("none");
@@ -100,7 +100,7 @@ export const AccessibilityProvide;  r: React.FC<{ childre; n: React.ReactNode }>
   const toggleReducedMotion = () => setReducedMotion(!reducedMotion);
 
   const valu;  e: AccessibilityContextType = {
-    highContras; t;
+    highContras, t;
     reducedMotio; n;
     fontSiz; e;
     colorBlindMod; e;
@@ -119,7 +119,7 @@ export const AccessibilityProvide;  r: React.FC<{ childre; n: React.ReactNode }>
 
 // Accessibility Panel Component;
 export const AccessibilityPane; l: React.FC = () => {
-  const [isOp;  e; n; setIsOp; e; n] = useState(false);
+  const [isOp,  e; n; setIsOp; e; n] = useState(false);
   const {
     highContras; t;
     reducedMotio; n;
@@ -133,8 +133,8 @@ export const AccessibilityPane; l: React.FC = () => {
 
   // Keyboard shortcuts;
   useEffect(() => {
-    const handleKeyDown = (even;  t: KeyboardEvent) => {
-      // Ctrl/Cmd + Shift + A to open accessibility panel;
+    const handleKeyDown = (even,  t: KeyboardEvent) : any => {
+      // Ctrl/Cmd + Shift + A to open accessibility panel,
       if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === "A") {
         event.preventDefault();
         setIsOpen(!isOpen);
@@ -160,10 +160,10 @@ export const AccessibilityPane; l: React.FC = () => {
   return (<>
       {/* Floating Accessibility Button */}
       <motion.button;
-        whileHover={{ scal;  e: 1.1 }}
-        whileTap={{ scal; e: 0.9 }}
+        whileHover={{ scal,  e: 1.1 }}
+        whileTap={{ scal, e: 0.9 }}
         onClick={() => setIsOpen(true)}
-        className="fixed bottom-6 right-6 w-14 h-14 bg-gradient-to-br from-zion-cyan to-zion-purple text-white rounded-full shadow-2xl shadow-zion-cyan/25 z-50 flex items-center justify-center hove;  r:shadow-2xl hove; r:shadow-zion-cyan/40 transition-all duration-300"
+        className="fixed bottom-6 right-6 w-14 h-14 bg-gradient-to-br from-zion-cyan to-zion-purple text-white rounded-full shadow-2xl shadow-zion-cyan/25 z-50 flex items-center justify-center hove,  r: shadow-2xl hove, r:shadow-zion-cyan/40 transition-all duration-300"
         aria-label="Open Accessibility Settings"
       >
         <Accessibility className="w-6 h-6" />
@@ -172,21 +172,21 @@ export const AccessibilityPane; l: React.FC = () => {
       {/* Accessibility Panel */}
       <AnimatePresence>
         {isOpen && (
-          <motion.div;
-            initial={{ opacit; y: 0 }}
-            animate={{ opacit; y: 1 }}
-            exit={{ opacit; y: 0 }}
+          <motion.div,
+            initial={{ opacit, y: 0 }}
+            animate={{ opacit, y: 1 }}
+            exit={{ opacit, y: 0 }}
             className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4"
             onClick={() => setIsOpen(false)}
           >
-            <motion.div;
-              initial={{ scal;  e: 0.9;
-    opacit; y: 0 }}
-              animate={{ scal; e: 1;
-    opacit; y: 1 }}
-              exit={{ scal; e: 0.9;
-    opacit; y: 0 }}
-              className="bg-zion-blue-dark border border-zion-cyan/20 rounded-2xl p-6 max-w-md w-full max-h-[90; v; h] overflow-y-auto"
+            <motion.div,
+              initial={{ scal,  e: 0.9,
+    opacit, y: 0 }}
+              animate={{ scal, e: 1,
+    opacit, y: 1 }}
+              exit={{ scal, e: 0.9,
+    opacit, y: 0 }}
+              className="bg-zion-blue-dark border border-zion-cyan/20 rounded-2xl p-6 max-w-md w-full max-h-[90, v; h] overflow-y-auto"
               onClick={(e) => e.stopPropagation()}
             >
               {/* Header */}
@@ -199,7 +199,7 @@ export const AccessibilityPane; l: React.FC = () => {
                   variant="ghost"
                   size="sm"
                   onClick={() => setIsOpen(false)}
-                  className="text-zion-slate-light hove;  r:text-white"
+                  className="text-zion-slate-light hove;  r: text-white"
                 >
                   <X className="w-4 h-4" />
                 </Button>
@@ -213,7 +213,7 @@ export const AccessibilityPane; l: React.FC = () => {
                     <h3 className="text-white font-medium mb-1">High Contrast</h3>
                     <p className="text-sm text-zion-slate-light">Increase contrast for better visibility</p>
                   </div>
-                  <Button;
+                  <Button,
                     variant={highContrast ? "default" : "outline"}
                     size="sm"
                     onClick={toggleHighContrast}
@@ -243,7 +243,7 @@ export const AccessibilityPane; l: React.FC = () => {
                 <div>
                   <h3 className="text-white font-medium mb-3">Font Size</h3>
                   <div className="flex gap-2">
-                    {(["smal; l", "mediu; m", "larg; e"] as const).map((size) => (
+                    {(["smal, l", "mediu, m", "larg, e"] as const).map((size) => (
                       <Button;
                         key={size}
                         variant={fontSize === size ? "default" : "outline"}
@@ -261,7 +261,7 @@ export const AccessibilityPane; l: React.FC = () => {
                 <div>
                   <h3 className="text-white font-medium mb-3">Color Blind Support</h3>
                   <div className="grid grid-cols-2 gap-2">
-                    {(["non;  e", "protanopi; a", "deuteranopi; a", "tritanopi; a"] as const).map((mode) => (
+                    {(["non,  e", "protanopi, a", "deuteranopi, a", "tritanopi, a"] as const).map((mode) => (
                       <Button;
                         key={mode}
                         variant={colorBlindMode === mode ? "default" : "outline"}
@@ -283,15 +283,15 @@ export const AccessibilityPane; l: React.FC = () => {
                   </h3>
                   <div className="space-y-2 text-sm text-zion-slate-light">
                     <div className="flex justify-between">
-                      <span>Open Pane;  l:</span>
+                      <span>Open Pane;  l: </span>
                       <kbd className="px-2 py-1 bg-zion-blue-light/20 rounded text-xs">Ctrl/Cmd + Shift + A</kbd>
                     </div>
                     <div className="flex justify-between">
-                      <span>High Contras; t:</span>
+                      <span>High Contras, t: </span>
                       <kbd className="px-2 py-1 bg-zion-blue-light/20 rounded text-xs">Ctrl/Cmd + Shift + H</kbd>
                     </div>
                     <div className="flex justify-between">
-                      <span>Reduced Motio; n:</span>
+                      <span>Reduced Motio, n: </span>
                       <kbd className="px-2 py-1 bg-zion-blue-light/20 rounded text-xs">Ctrl/Cmd + Shift + M</kbd>
                     </div>
                   </div>
@@ -310,25 +310,25 @@ export const AccessibilityPane; l: React.FC = () => {
       </AnimatePresence>
     </>
   );
-};
+  };
 
 // Skip to Content Link;
 export const SkipToConten; t: React.FC = () => (
-  <a;
+  <a,
     href="#main-content"
-    className="sr-only focu;  s:not-sr-only focu; s:absolute focu; s:top-4 focu; s:left-4 bg-zion-cyan text-zion-blue-dark px-4 py-2 rounded-lg font-medium z-50 hove; r:bg-zion-cyan-light transition-colors duration-300"
+    className="sr-only focu;  s: not-sr-only focu, s: absolute focu, s: top-4 focu, s: left-4 bg-zion-cyan text-zion-blue-dark px-4 py-2 rounded-lg font-medium z-50 hove, r: bg-zion-cyan-light transition-colors duration-300"
   >
-    Skip to main content;
+    Skip to main content,
   </a>
 );
 
 // Focus Trap Hook;
-export const useFocusTrap = (isActiv;  e: boolean) => {
+export const useFocusTrap = (isActiv,  e: boolean) : any => {
   useEffect(() => {
-    if (!isActive) return;
+    if (!isActive) return,
 
-    const focusableElements = "butto;  n, [hr; e; f], inpu; t; selec; t; textare; a, [tabind; e; x]:not([tabinde; x="-1"])";
-    const container = document.activeElement?.closest("[dat;  a-focu; s-tr; a; p]");
+    const focusableElements = "butto;  n, [hr; e; f], inpu; t; selec; t; textare; a, [tabind; e; x]:not([tabinde, x="-1"])";
+    const container = document.activeElement?.closest("[dat,  a-focu, s-tr, a, p]");
     
     if (!container) return;
 
@@ -336,11 +336,11 @@ export const useFocusTrap = (isActiv;  e: boolean) => {
     const firstFocusableElement = focusableContent[0] as HTMLElement;
     const lastFocusableElement = focusableContent[focusableConten;  t.lengt; h - 1] as HTMLElement;
 
-    const handleTabKey = (e: KeyboardEvent) => {
+    const handleTabKey = (e: KeyboardEvent) : any => {
       if (e.key === "Tab") {
         if (e.shiftKey) {
           if (document.activeElement === firstFocusableElement) {
-            e.preventDefault();
+            e.preventDefault(),
             lastFocusableElement.focus();
           }
         } else {
@@ -358,8 +358,8 @@ export const useFocusTrap = (isActiv;  e: boolean) => {
 };
 
 // Screen Reader Only Text;
-export const SrOnl; y: React.FC<{ childre; n: React.ReactNode }> = ({ children }) => (
+export const SrOnl; y: React.FC<{ childre, n: React.ReactNode }> = ({ children }) => (
   <span className="sr-only">{children}</span>
-);
+),
 
 export default AccessibilityPanel;<//span><///span>

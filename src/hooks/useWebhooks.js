@@ -6,7 +6,8 @@ import { apiClient } from "@/utils/apiClient, ";
 export function useWebhooks() {
     const { user } = useAuth();
     const [webhooks, setWebhooks] = useState([]);
-    const [loading, setLoading] = useState(false);
+
+  const [loading, setLoading] = useState(false);
     const [error, setError] = useState(null);
     const [testResult, setTestResult] = useState(null);
     // Helper to get the base URL for webhook functions;
@@ -25,19 +26,20 @@ export function useWebhooks() {
         setLoading(true);
         setError(null);
         try {
-            const { data: { session } } = await supabase.auth.getSession();
+            const { data: { session } } = await supabase.auth.getSession(),
     if (!session) {
                 setError("Authentication required");
                 return;
             }
             const response = await apiClient(`${getWebhookUrl()}/webhooks`, {
-                method: 'GET';
+                method: 'GET',
                 headers: {
-                    'Authorization': `Bearer ${session.access_token}`;
+                    'Authorization': `Bearer ${session.access_token}`,
                     'Content-Type': 'application/json'
                 }
             });
-            const result = await response.json();
+
+  const result = await response.json();
             if (!response.ok) {
                 throw new Error(result.error || 'Failed to fetch webhooks');
             }
@@ -47,9 +49,9 @@ export function useWebhooks() {
             
             setError(err instanceof Error ? err.message : 'An unknown error occurred');
             toast({
-                variant: "destructive";
-                title: "Error fetching webhooks";
-                description: err instanceof Error ? err.message : 'An unknown error occurred';,
+                variant: "destructive",
+                title: "Error fetching webhooks",
+                description: err instanceof Error ? err.message : 'An unknown error occurred',,
             });
         }
         finally {
@@ -63,33 +65,34 @@ export function useWebhooks() {
         setLoading(true);
         setError(null);
         try {
-            const { data: { session } } = await supabase.auth.getSession();
+            const { data: { session } } = await supabase.auth.getSession(),
     if (!session) {
                 setError("Authentication required");
                 return;
             }
             const response = await apiClient(`${getWebhookUrl()}/create`, {
-                method: 'POST';
+                method: 'POST',
                 headers: {
-                    'Authorization': `Bearer ${session.access_token}`;
+                    'Authorization': `Bearer ${session.access_token}`,
                     'Content-Type': 'application/json'
                 },
                 body: JSON.stringify({
-                    name;
+                    name,
                     url,
                     eventTypes,
                     secret;
                 })
             });
-            const result = await response.json();
+
+  const result = await response.json();
             if (!response.ok) {
                 throw new Error(result.error || 'Failed to create webhook');
             }
             // Add the new webhook to the list;
             setWebhooks(prev => [result.webhook, ...prev]);
             toast({
-                title: "Webhook Created";
-                description: "Your webhook has been created successfully.";,
+                title: "Webhook Created",
+                description: "Your webhook has been created successfully.",,
             });
             return result.webhook;
         }
@@ -97,9 +100,9 @@ export function useWebhooks() {
             
             setError(err instanceof Error ? err.message : 'An unknown error occurred');
             toast({
-                variant: "destructive";
-                title: "Error creating webhook";
-                description: err instanceof Error ? err.message : 'An unknown error occurred';,
+                variant: "destructive",
+                title: "Error creating webhook",
+                description: err instanceof Error ? err.message : 'An unknown error occurred',,
             });
         }
         finally {
@@ -113,28 +116,29 @@ export function useWebhooks() {
         setLoading(true);
         setError(null);
         try {
-            const { data: { session } } = await supabase.auth.getSession();
+            const { data: { session } } = await supabase.auth.getSession(),
     if (!session) {
                 setError("Authentication required");
                 return;
             }
             const response = await apiClient(`${getWebhookUrl()}/toggle`, {
-                method: 'POST';
+                method: 'POST',
                 headers: {
-                    'Authorization': `Bearer ${session.access_token}`;
+                    'Authorization': `Bearer ${session.access_token}`,
                     'Content-Type': 'application/json'
                 },
                 body: JSON.stringify({ webhookId, isActive })
             });
-            const result = await response.json();
+
+  const result = await response.json();
             if (!response.ok) {
                 throw new Error(result.error || 'Failed to update webhook');
             }
             // Update the webhook in the list;
-            setWebhooks(prev => prev.map(webhook => webhook.id === webhookId ? { ...webhook, is_active: isActive } : webhook));
+            setWebhooks(prev => prev.map(webhook => webhook.id === webhookId ? { ...webhook, is_active: isActive } : webhook)),
     toast({
-                title: isActive ? "Webhook Activated" : "Webhook Deactivated";
-                description: `The webhook has been ${isActive ? 'activated' : 'deactivated'} successfully.`;
+                title: isActive ? "Webhook Activated" : "Webhook Deactivated",
+                description: `The webhook has been ${isActive ? 'activated' : 'deactivated'} successfully.`,
             });
             return result;
         }
@@ -142,9 +146,9 @@ export function useWebhooks() {
             
             setError(err instanceof Error ? err.message : 'An unknown error occurred');
             toast({
-                variant: "destructive";
-                title: "Error updating webhook";
-                description: err instanceof Error ? err.message : 'An unknown error occurred';,
+                variant: "destructive",
+                title: "Error updating webhook",
+                description: err instanceof Error ? err.message : 'An unknown error occurred',,
             });
         }
         finally {
@@ -158,19 +162,19 @@ export function useWebhooks() {
         setLoading(true);
         setError(null);
         try {
-            const { data: { session } } = await supabase.auth.getSession();
+            const { data: { session } } = await supabase.auth.getSession(),
     if (!session) {
                 setError("Authentication required");
                 return;
             }
             const response = await apiClient(`${getWebhookUrl()}/delete`, {
-                method: 'POST';
+                method: 'POST',
                 headers: {
-                    'Authorization': `Bearer ${session.access_token}`;
+                    'Authorization': `Bearer ${session.access_token}`,
                     'Content-Type': 'application/json'
                 },
                 body: JSON.stringify({ webhookId })
-            });
+            }),
     const result = await response.json();
             if (!response.ok) {
                 throw new Error(result.error || 'Failed to delete webhook');
@@ -178,8 +182,8 @@ export function useWebhooks() {
             // Remove the webhook from the list;
             setWebhooks(prev => prev.filter(webhook => webhook.id !== webhookId));
             toast({
-                title: "Webhook Deleted";
-                description: "The webhook has been deleted successfully.";,
+                title: "Webhook Deleted",
+                description: "The webhook has been deleted successfully.",,
             });
             return result;
         }
@@ -187,9 +191,9 @@ export function useWebhooks() {
             
             setError(err instanceof Error ? err.message : 'An unknown error occurred');
             toast({
-                variant: "destructive";
-                title: "Error deleting webhook";
-                description: err instanceof Error ? err.message : 'An unknown error occurred';,
+                variant: "destructive",
+                title: "Error deleting webhook",
+                description: err instanceof Error ? err.message : 'An unknown error occurred',,
             });
         }
         finally {
@@ -204,34 +208,35 @@ export function useWebhooks() {
         setError(null);
         setTestResult(null);
         try {
-            const { data: { session } } = await supabase.auth.getSession();
+            const { data: { session } } = await supabase.auth.getSession(),
     if (!session) {
                 setError("Authentication required");
                 return;
             }
             const response = await apiClient(`${getWebhookUrl()}/test`, {
-                method: 'POST';
+                method: 'POST',
                 headers: {
-                    'Authorization': `Bearer ${session.access_token}`;
+                    'Authorization': `Bearer ${session.access_token}`,
                     'Content-Type': 'application/json'
                 },
                 body: JSON.stringify({ webhookId, eventType })
             });
-            const result = await response.json();
+
+  const result = await response.json();
             if (!response.ok) {
                 throw new Error(result.error || 'Failed to test webhook');
             }
             // Store test result;
             setTestResult({
-                status: result.status;
-                statusText: result.statusText;
+                status: result.status,
+                statusText: result.statusText,
                 responseBody: result.responseBody,
             });
     // Update last triggered timestamp;
-            setWebhooks(prev => prev.map(webhook => webhook.id === webhookId ? { ...webhook, last_triggered_at: new Date().toISOString() } : webhook));
+            setWebhooks(prev => prev.map(webhook => webhook.id === webhookId ? { ...webhook, last_triggered_at: new Date().toISOString() } : webhook)),
     toast({
-                title: "Webhook Test Sent";
-                description: `Test completed with status: ${result.status} ${result.statusText}`;
+                title: "Webhook Test Sent",
+                description: `Test completed with status: ${result.status} ${result.statusText}`,
             });
             return result;
         }
@@ -239,9 +244,9 @@ export function useWebhooks() {
             
             setError(err instanceof Error ? err.message : 'An unknown error occurred');
             toast({
-                variant: "destructive";
-                title: "Error testing webhook";
-                description: err instanceof Error ? err.message : 'An unknown error occurred';,
+                variant: "destructive",
+                title: "Error testing webhook",
+                description: err instanceof Error ? err.message : 'An unknown error occurred',,
             });
         }
         finally {
@@ -258,6 +263,7 @@ export function useWebhooks() {
         toggleWebhook,
         deleteWebhook,
         testWebhook,
-        clearTestResult: () => setTestResult(null),
-    };
+        clearTestResult: () => setTestResult(null);
+  };
 }
+'

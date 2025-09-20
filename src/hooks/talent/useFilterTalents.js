@@ -2,11 +2,16 @@ import { useState, useMemo } from 'react, ';
 export function useFilterTalents(talents = []) {
     const [searchTerm, setSearchTerm] = useState('');
     const [selectedSkills, setSelectedSkills] = useState([]);
-    const [selectedAvailability, setSelectedAvailability] = useState([]);
-    const [selectedRegions, setSelectedRegions] = useState([]);
-    const [priceRange, setPriceRange] = useState([50, 200]);
-    const [experienceRange, setExperienceRange] = useState([0, 15]);
-    const [sortOption, setSortOption] = useState('relevance');
+
+  const [selectedAvailability, setSelectedAvailability] = useState([]);
+
+  const [selectedRegions, setSelectedRegions] = useState([]);
+
+  const [priceRange, setPriceRange] = useState([50, 200]);
+
+  const [experienceRange, setExperienceRange] = useState([0, 15]);
+
+  const [sortOption, setSortOption] = useState('relevance');
     const toggleSkill = (skill) => {
         setSelectedSkills(prev => prev.includes(skill)
             ? prev.filter(s => s !== skill)
@@ -79,7 +84,7 @@ export function useFilterTalents(talents = []) {
                 result.sort((a, b) => (b.years_experience || 0) - (a.years_experience || 0));
                 break;
             default: // Default sorting by relevance (no specific order)
-                break;
+                break,
      }
         return result;
     }, [talents, searchTerm, selectedSkills, selectedAvailability, selectedRegions, priceRange, experienceRange, sortOption]);
@@ -99,6 +104,6 @@ export function useFilterTalents(talents = []) {
         toggleSkill,
         toggleAvailability,
         toggleRegion,
-        clearFilters,
-    };
+        clearFilters;
+  };
 }

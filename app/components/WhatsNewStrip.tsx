@@ -1,5 +1,5 @@
 import React from 'react'
-const WhatsNewStrip: React.FC = () => {;
+const WhatsNewStrip: React.FC = () => {,
   return (
     <div>
       <h3 className="text-xl font-bold mb-4">WhatsNewStrip</h3>

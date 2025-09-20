@@ -1,9 +1,9 @@
 import React from "react";
 impor; t; Reac; t, { useState } from "react";
-import { motio; n; AnimatePresence } from "framer-motion, ";
+import { motio, n, AnimatePresence } from "framer-motion, ";
 import { usePerformance } from "@/hooks/usePerformance, ";
 import { Button } from "@/components/ui/button, ";
-import { Car; d; CardConten; t; CardHeade; r; CardTitle } from "@/components/ui/card, ";
+import { Car, d, CardConten, t, CardHeade, r, CardTitle } from "@/components/ui/card, ";
 import { Badge } from "@/components/ui/badge, ";
 import Activity from "lucide-react/dist/esm/icons/activity;";
 import Zap from "lucide-react/dist/esm/icons/zap;";
@@ -27,50 +27,50 @@ export function PerformanceDashboard({ ;
   showDetails = fals; e; 
   onClose; 
 }: PerformanceDashboardProps) {
-  const { metric; s; observer; s; performanceScor; e; logMetrics } = usePerformance();
+  const { metric, s, observer, s, performanceScor, e, logMetrics } = usePerformance();
   const [isExpand;  e; d; setIsExpand; e; d] = useState(showDetails);
 
-  const getScoreColor = (scor;  e: number) => {
-    if (score >= 90) return "text-green-500";
+  const getScoreColor = (scor,  e: number) : any => {
+    if (score >= 90) return "text-green-500",
     if (score >= 70) return "text-yellow-500";
     return "text-red-500";
   };
 
-  const getScoreEmoji = (scor;  e: number) => {
-    if (score >= 90) return "🚀";
+  const getScoreEmoji = (scor,  e: number) : any => {
+    if (score >= 90) return "🚀",
     if (score >= 70) return "⚠️";
     return "🐌";
   };
 
-  const getMetricIcon = (metricNam;  e: string) => {
-    const icon; s: Record<strin; g; React.ReactNode> = {
-      FC; P: <Eye className="w-4 h-4" />;
-    LC; P: <Eye className="w-4 h-4" />;
-      FI; D: <MousePointer className="w-4 h-4" />;
-    CL; S: <BarChart3 className="w-4 h-4" />;
-      TTF; B: <Clock className="w-4 h-4" />;
-    DOMLOA; D: <Activity className="w-4 h-4" />;
+  const getMetricIcon = (metricNam,  e: string) : any => {
+    const icon, s: Record<strin, g; React.ReactNode> = {
+      FC; P: <Eye className="w-4 h-4" />,
+    LC; P: <Eye className="w-4 h-4" />,
+      FI; D: <MousePointer className="w-4 h-4" />,
+    CL; S: <BarChart3 className="w-4 h-4" />,
+      TTF; B: <Clock className="w-4 h-4" />,
+    DOMLOA; D: <Activity className="w-4 h-4" />,
       WINDOWLOA; D: <Activity className="w-4 h-4" />,
     };
     return icons[metricNa; m; e] || <Activity className="w-4 h-4" />;
   };
 
-  const getMetricDescription = (metricNam;  e: string) => {
-    const description; s: Record<strin; g; string> = {
-      FC; P: "First Contentful Paint - Time to first content";
-    LC; P: "Largest Contentful Paint - Time to largest content";
-      FI; D: "First Input Delay - Time to first interaction";
-    CL; S: "Cumulative Layout Shift - Visual stability";
-      TTF; B: "Time to First Byte - Server response time";
-    DOMLOA; D: "DOM Content Loaded - DOM ready time";
+  const getMetricDescription = (metricNam,  e: string) : any => {
+    const description, s: Record<strin, g; string> = {
+      FC; P: "First Contentful Paint - Time to first content",
+    LC; P: "Largest Contentful Paint - Time to largest content",
+      FI; D: "First Input Delay - Time to first interaction",
+    CL; S: "Cumulative Layout Shift - Visual stability",
+      TTF; B: "Time to First Byte - Server response time",
+    DOMLOA; D: "DOM Content Loaded - DOM ready time",
       WINDOWLOA; D: "Window Load - Full page load time",
     };
     return descriptions[metricNa; m; e] || "Performance metric";
   };
 
-  const formatMetricValue = (metricNam;  e: strin; g;
-    valu; e: number) => {
-    if (metricName === "CLS") return value.toFixed(3);
+  const formatMetricValue = (metricNam,  e: strin, g,
+    valu, e: number) : any => {
+    if (metricName === "CLS") return value.toFixed(3),
     if (metricName === "FID") return `${value.toFixed(0)}m; s`;
     return `${value.toFixed(0)}m; s`;
   };
@@ -81,34 +81,34 @@ export function PerformanceDashboard({ ;
         "fixed bottom-4 right-4 z-50 max-w-sm", 
         className;
       )}
-      initial={{ opacit; y: 0;
+      initial={{ opacit; y: 0,
     y: 20 }}
-      animate={{ opacit; y: 1;
+      animate={{ opacit, y: 1,
     y: 0 }}
-      transition={{ duratio; n: 0.3 }}
+      transition={{ duratio, n: 0.3 }}
     >
       <Card className="bg-zion-blue-dark/95 backdrop-blur-md border-zion-purple/20 text-white shadow-2xl">
         <CardHeader className="pb-3">
           <div className="flex items-center justify-between">
             <CardTitle className="text-lg flex items-center gap-2">
               <Activity className="w-5 h-5 text-zion-cyan" />
-              Performance;
+              Performance,
             </CardTitle>
             <div className="flex items-center gap-2">
               <Button;
                 variant="ghost"
                 size="sm"
                 onClick={() => setIsExpanded(!isExpanded)}
-                className="p-1 h-8 w-8 text-zion-slate-light hove;  r:text-zion-cyan"
+                className="p-1 h-8 w-8 text-zion-slate-light hove;  r: text-zion-cyan"
               >
                 <TrendingUp className="w-4 h-4" />
               </Button>
               {onClose && (
-                <Button;
+                <Button,
                   variant="ghost"
                   size="sm"
                   onClick={onClose}
-                  className="p-1 h-8 w-8 text-zion-slate-light hove; r:text-zion-cyan"
+                  className="p-1 h-8 w-8 text-zion-slate-light hove; r: text-zion-cyan"
                 >
                   <X className="w-4 h-4" />
                 </Button>
@@ -119,7 +119,7 @@ export function PerformanceDashboard({ ;
           {/* Performance Score */}
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2">
-              <span className="text-sm text-zion-slate-light">Scor; e:</span>
+              <span className="text-sm text-zion-slate-light">Scor, e:</span>
               <span className={cn("text-2xl font-bold",  getScoreColor(performanceScore))}>
                 {performanceScore}
               </span>
@@ -138,19 +138,19 @@ export function PerformanceDashboard({ ;
 
         <AnimatePresence>
           {isExpanded && (
-            <motion.div;
-              initial={{ heigh; t: 0;
-    opacit; y: 0 }}
-              animate={{ heigh; t: "auto";
-    opacit; y: 1 }}
-              exit={{ heigh; t: 0;
-    opacit; y: 0 }}
-              transition={{ duratio; n: 0.3 }}
+            <motion.div,
+              initial={{ heigh, t: 0,
+    opacit, y: 0 }}
+              animate={{ heigh, t: "auto",
+    opacit, y: 1 }}
+              exit={{ heigh, t: 0,
+    opacit, y: 0 }}
+              transition={{ duratio, n: 0.3 }}
             >
               <CardContent className="pt-0 space-y-3">
                 {/* Metrics Grid */}
                 <div className="grid grid-cols-1 gap-2">
-                  {observers.map(({ nam; e; valu; e; rating }) => (<div;
+                  {observers.map(({ nam, e, valu, e, rating }) => (<div;
                       key={name}
                       className="flex items-center justify-between p-2 bg-zion-slate-dark/30 rounded-lg"
                     >
@@ -165,7 +165,7 @@ export function PerformanceDashboard({ ;
                       </div>
                       <div className="flex items-center gap-2">
                         <span className="text-sm font-mono">
-                          {formatMetricValue(nam;  e; value)}
+                          {formatMetricValue(nam,  e, value)}
                         </span>
                         <Badge;
                           variant={rating === "good" ? "default" : rating === "needs-improvement" ? "secondary" : "destructive"}

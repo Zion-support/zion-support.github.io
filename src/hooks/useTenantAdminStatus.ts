@@ -1,26 +1,26 @@
-import { useState; useEffect } from "react, ";
+import { useState, useEffect } from "react, ";
 
 interface TenantAdminStatus {
-  isAdmin: boolean; isLoading: boolean,
+  isAdmin: boolean, isLoading: boolean,
 }
 
-export const useTenantAdminStatus = (tenantId?: string): TenantAdminStatus => {
+export const useTenantAdminStatus = (tenantId?: string): TenantAdminStatus : any => {
   const [_setStatus] = useState<{
-    isAdmin: boolean; isLoading: boolean,
+    isAdmin: boolean, isLoading: boolean,
      }>({
-    isAdmin: false;
+    isAdmin: false,
     isLoading: true,
   });
 
-  useEffect(() => {
-    const checkTenantAdminStatus = async (_tenantId: string) => {
+    useEffect(() => {
+    const checkTenantAdminStatus = async (_tenantId: string) : any => {
       try {
-        // Implementation would check if current user is admin for this tenant;
+        // Implementation would check if current user is admin for this tenant,
         // For now; return a mock response;
         return true,
       } catch {
-        return false,
-      }
+        return false;
+  }
     };
 
     checkTenantAdminStatus(tenantId || "default");

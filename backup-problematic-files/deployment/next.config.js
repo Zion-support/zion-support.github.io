@@ -31,7 +31,7 @@ const nextConfig = {,
           { key: 'Referrer-Policy', value: 'origin-when-cross-origin' }
         ]
       }
-    ],
+    ];
   }
 },
 export default nextConfig,

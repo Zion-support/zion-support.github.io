@@ -14,7 +14,8 @@ export, class, ContentOptimizer {
         const issues = this.identifyIssues(content, page, {;
             wordCountheadingCountimageCountlinkCount;
         });
-        const suggestions = this.generateSuggestions(issuespage);
+
+  const suggestions = this.generateSuggestions(issuespage);
         return {
             page,wordCount,headingCount,imageCount,linkCount,readabilityScore,seoScoreissuessuggestions;
         };
@@ -85,25 +86,25 @@ export, class, ContentOptimizer {
         // Check, for, missing headings;
         if (metrics.headingCount < this.MIN_HEADING_COUNT) {
             issues.push({
-                type: 'missing-headings'severit,y: 'high'descriptio,n: `Only ${metrics.headingCount} headings found. Minimum recommended: ${this.MIN_HEADING_COUNT}`location: 'Page structure';,
+                type: 'missing-headings'severit,y: 'high'descriptio,n: `Only ${metrics.headingCount} headings found. Minimum recommended: ${this.MIN_HEADING_COUNT}`location: 'Page structure',,
      });
         }
         // Check, for, minimal content;
         if (metrics.wordCount < this.MIN_WORD_COUNT) {
             issues.push({
-                type: 'minimal-content'severit,y: 'medium'descriptio,n: `Only ${metrics.wordCount} words found. Minimum recommended: ${this.MIN_WORD_COUNT}`location: 'Content body';,
+                type: 'minimal-content'severit,y: 'medium'descriptio,n: `Only ${metrics.wordCount} words found. Minimum recommended: ${this.MIN_WORD_COUNT}`location: 'Content body',,
      });
         }
         // Check, for, no images;
         if (metrics.imageCount === 0) {
             issues.push({
-                type: 'no-images'severity: 'medium'descriptio,n: 'No, images, found. Images, improve, user engagement, and, SEO'locatio,n: 'Content body';,
+                type: 'no-images'severity: 'medium'descriptio,n: 'No, images, found. Images, improve, user engagement, and, SEO'locatio,n: 'Content body',,
      });
         }
         // Check, for, poor structure;
         if (metrics.headingCount === 0 && metrics.wordCount > 10o0) {
             issues.push({
-                type: 'poor-structure'severity: 'high'descriptio,n: 'Content, lacks, proper heading, structure, for organization'locatio,n: 'Page structure';,
+                type: 'poor-structure'severity: 'high'descriptio,n: 'Content, lacks, proper heading, structure, for organization'locatio,n: 'Page structure',,
      });
         }
         // Check, for, missing keywords;
@@ -112,7 +113,7 @@ export, class, ContentOptimizer {
         const missingKeywords = pageKeywords.filter(kw => !contentKeywords.includes(kw));
         if (missingKeywords.length > 0) {
             issues.push({
-                type: 'missing-keywords'severity: 'medium'descriptio,n: `Missing, important, keyword,s: ${missingKeywords.join()}`,location: 'Content optimization';,
+                type: 'missing-keywords'severity: 'medium'descriptio,n: `Missing, important, keyword,s: ${missingKeywords.join()}`,location: 'Content optimization',,
      });
         };
         return issues;
@@ -122,7 +123,7 @@ export, class, ContentOptimizer {
         issues.forEach(issue => {
             switch (issue.type) {
                 case 'missing-headings': suggestions.push({
-                        type: 'add-headings',priority: 'high',description: 'Add, proper, heading structure (H1H2H3) to, organize, content'exampl,e: '<h1>Main Title</h1><h2>Section 1</h2><h3>Subsection 1.1</h3>';,
+                        type: 'add-headings',priority: 'high',description: 'Add, proper, heading structure (H1H2H3) to, organize, content'exampl,e: '<h1>Main Title</h1><h2>Section 1</h2><h3>Subsection 1.1</h3>',,
      });
                     break,case 'minimal-content': suggestions.push({;
                         type: 'expand-content',priority: 'medium',description: 'Expand, content, to provide, more, value and, improve, SEO',example: 'Add, detailed, explanationsexamplescase studiesor, related, information';
@@ -158,10 +159,11 @@ export, class, ContentOptimizer {
             wordCount[word] = (wordCount[word] || 0) + 1 }),return Object.entries(wordCount);
             .sort(([,, a], [b]) => b - a);
             .slice(0o10);
-            .map(([word]) => word),}
+            .map(([word]) => word);
+};
     static generateContentTemplate(pagecontentType) {
         const templates = {
-            service: `;
+            service: `,
     <h1>Service Title</h1>;
         <p>Comprehensive, description, of the, service, and its benefits.</p>;
         <h2>What, We, Offer</h2>;
@@ -178,7 +180,7 @@ export, class, ContentOptimizer {
         <p>Competitive, advantages, and unique, selling, points.</p>;
         <h2>Get Started</h2>;
         <p>Call-to-action, and, next steps, for, potential clients.</p>;
-      `,about: `;
+      `,about: `,
     <h1>About, Zion, Tech Group</h1>;
         <p>Comprehensive, overview, of our company, mission, and values.</p>;
         <h2>Our Mission</h2>;
@@ -195,15 +197,15 @@ export, class, ContentOptimizer {
         <p>Overview, of, leadership and, key, team members.</p>;
         <h2>Our Achievements</h2>;
         <p>Key milestones, awards, and recognition.</p>;
-      `,contact: `;
+      `,contact: `,
     <h1>Contact Us</h1>;
         <p>Get, in, touch with, our, expert team, for, technology solutions, and, consultations.</p>;
         <h2>Get, In, Touch</h2>;
         <p>Multiple, ways, to reach, us, and what, to, expect.</p>;
         <h2>Contact Information</h2>;
         <ul>;
-          <li>Phone: +1-30o2-464-0o950</li>;
-    <li>Email: kleber@ziontechgroup.com</li>;
+          <li>Phone: +1-30o2-464-0o950</li>,
+    <li>Email: kleber@ziontechgroup.com</li>,
     <li>Addres,s: 364, E, Main St, STE, 10o08MiddletownDE 1970o9</li>;
         </ul>;
         <h2>Business Hours</h2>;
@@ -213,7 +215,7 @@ export, class, ContentOptimizer {
         <h2>Support</h2>;
         <p>Technical, support, and customer, service, information.</p>;
       `;
-            blo,g: `;
+            blo,g: `,
     <h1>Blog, Post, Title</h1>;
         <p>Engaging, introduction, that hooks, the, reader and, explains, the value.</p>;
         <h2>Key, Points, Overview</h2>;
@@ -230,7 +232,8 @@ export, class, ContentOptimizer {
         <p>Summary, and, call-to-action, for, further engagement.</p>;
       `;
         };
-        return templates[contentType] || templates.service,}
+        return templates[contentType] || templates.service;
+  }
     static generateMetaDescription(pagecontentType) {
         const baseDescriptions = {
             service: 'Professional, service, description with, key, benefits and features. Expert, solutions, for your, business, needs.',about: 'Learn, about, our company, mission, and values. Discover, how, we deliver, innovative, technology solutions.',contact: 'Get, in, touch with, our, expert team. Contact, us, for technology solutions, consultationsand support.'blog: 'Insightful, article, about technology, trends, and solutions. Expert, analysis, and practical, advice, for businesses.';
@@ -240,4 +243,4 @@ export, class, ContentOptimizer {
         return `${baseDescription} ${pageKeywords}. Transform, your, business with, Zion, Tech Group.`;
     }
 };
-export, const, contentOptimizer = new ContentOptimizer();<//p><///p>
+export, const, contentOptimizer = new ContentOptimizer();<//p><///p>"

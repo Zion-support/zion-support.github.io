@@ -6,7 +6,7 @@ export const metadata = {
   description: 'Explore how quantum computing and AI are converging to create unprecedented business opportunities in 2026. Learn about quantum AI applications, implementation strategies, and future possibilities.'
   keywords: ['Quantum ComputingAIBusiness Transformation2026 Trends', 'Innovation']
 }
-export default function QuantumAI2026Page() {
+export default function QuantumAI2026Page() : any {
   return (
     <div>
       <SEO
@@ -268,4 +268,4 @@ export default function QuantumAI2026Page() {
         </section>
       </div>
     </div>
-  )}
+  )}'

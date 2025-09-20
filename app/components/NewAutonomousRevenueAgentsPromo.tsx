@@ -1,5 +1,5 @@
 import Link from 'next/link'
-export default function NewAutonomousRevenueAgentsPromo() {
+export default function NewAutonomousRevenueAgentsPromo() : any {
   return (
     <section className="py-10 bg-gradient-to-r from-purple-50 to-blue-50">
       <div>

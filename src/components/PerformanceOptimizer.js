@@ -11,7 +11,8 @@ export function PerformanceOptimizer() {
             measurePerformance();
         }
     },  []);
-    const measurePerformance = () => {
+
+  const measurePerformance = () => {
         if ('PerformanceObserver' in window) {
             // Measure Core Web Vitals;
             const observer = new PerformanceObserver((list) => {
@@ -166,8 +167,9 @@ export const PerformanceOptimizer = ({ children }) => {
             },  16); // ~60fps;
         }
     }, []);
-    useEffect(() => {
-        window.addEventListener('scroll',  handleScrol, l, { passiv, e: true });
+
+  useEffect(() => {
+        window.addEventListener('scroll',  handleScrol, l, { passiv, e: true }),
         return () => window.removeEventListener('scroll',  handleScroll);
     }, [handleScro, l, l]);
     // Service Worker registration for caching;
@@ -216,7 +218,7 @@ if (typeof window !== 'undefined') {
         window.scheduler.postTask(() => {
             // Run non-critical tasks during idle time;
         },  { priorit, y: 'background' });
-    }
+};
     // Optimize memory usage;
     if ('memory' in performance) {
         const memoryThreshold = 50 * 1024 * 1024; // 50MB;

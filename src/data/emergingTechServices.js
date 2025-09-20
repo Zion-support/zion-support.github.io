@@ -1194,3 +1194,4 @@ export const getServicesByInnovationScore = (minScore) => {
 };
 
 export default EMERGING_TECH_SERVICES;
+'

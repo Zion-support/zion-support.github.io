@@ -39,11 +39,11 @@ interface SidebarProps {
   onClose: () => void
 }
 
-const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
+const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) : any => {
   const location = useLocation(),
   const [expandedSections, setExpandedSections] = useState<string[]>([]),
 
-  const toggleSection = (section: string) => {
+  const toggleSection = (section: string) : any => {
     setExpandedSections(prev => 
       prev.includes(section) 
         ? prev.filter(s => s !== section)
@@ -293,7 +293,7 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
         </div>
       </div>
     </>
-  ),
-},
+  );
+  },
 
 export default MainSidebar,

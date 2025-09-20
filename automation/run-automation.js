@@ -14,14 +14,14 @@ const { execSync, spawn } = require('child_process'),
 class AutomationRunner {,
   constructor() {,
     this.projectRoot = process.cwd(),
-    this.config = this.loadConfig(),
-  }
+    this.config = this.loadConfig();
+};
 ,
   loadConfig() {,
     const configPath = path.join(__dirname, 'automation-config.json'),
     if (fs.existsSync(configPath)) {,
-      return JSON.parse(fs.readFileSync(configPath, 'utf8')),
-    }
+      return JSON.parse(fs.readFileSync(configPath, 'utf8'));
+};
     return { gitManager: { enabled: true } },
   }
 ,
@@ -35,8 +35,8 @@ class AutomationRunner {,
           : level === 'warn',
             ? '⚠️',
             : 'ℹ️',
-    console.log(`${prefix} [${timestamp}] ${message}`),
-  }
+    console.log(`${prefix} [${timestamp}] ${message}`);
+};
 ,
   async executeCommand(command, options = {}) {,
     try {,
@@ -78,8 +78,8 @@ class AutomationRunner {,
       } else if (status[0] === ' ') {,
         unstaged.push(file),
       } else {,
-        staged.push(file),
-      }
+        staged.push(file);
+};
     }),
     return { staged, unstaged, untracked },
   }
@@ -171,8 +171,8 @@ class AutomationRunner {,
     const message = `Auto-commit: ${allFiles.length} files updated at ${timestamp}`,
     // Commit and push,
     if (await this.commit(message)) {,
-      return await this.push(),
-    }
+      return await this.push();
+};
 ,
     return false,
   }
@@ -183,25 +183,25 @@ class AutomationRunner {,
     console.log('\n📊 Git Status Summary: '),
     if (status.staged.length > 0) {,
       console.log(`\n📦 Staged files (${status.staged.length}):`),
-      status.staged.forEach((file) => console.log(`  ✅ ${file}`)),
-    }
+      status.staged.forEach((file) => console.log(`  ✅ ${file}`));
+};
 ,
     if (status.unstaged.length > 0) {,
       console.log(`\n📝 Modified files (${status.unstaged.length}):`),
-      status.unstaged.forEach((file) => console.log(`  📝 ${file}`)),
-    }
+      status.unstaged.forEach((file) => console.log(`  📝 ${file}`));
+};
 ,
     if (status.untracked.length > 0) {,
       console.log(`\n🆕 Untracked files (${status.untracked.length}):`),
-      status.untracked.forEach((file) => console.log(`  🆕 ${file}`)),
-    }
+      status.untracked.forEach((file) => console.log(`  🆕 ${file}`));
+};
 ,
     if (,
       status.staged.length === 0 &&,
       status.unstaged.length === 0 &&,
       status.untracked.length === 0) {,
-      console.log('\n✅ Working directory is clean'),
-    }
+      console.log('\n✅ Working directory is clean');
+};
   }
 ,
   async runAll() {,
@@ -216,8 +216,8 @@ class AutomationRunner {,
     if (success) {,
       this.log('🎉 Complete automation sequence finished successfully!success'),
     } else {,
-      this.log('❌ Automation sequence encountered errorserror'),
-    }
+      this.log('❌ Automation sequence encountered errorserror');
+};
 ,
     return success,
   }
@@ -284,8 +284,8 @@ async function main() {,
           if (allFiles.length > 0) {,
             await runner.stageFiles(allFiles),
             const message = `Auto-commit: ${allFiles.length} files updated`,
-            await runner.commit(message),
-          }
+            await runner.commit(message);
+};
         }
         break,
       case 'push':,
@@ -294,16 +294,16 @@ async function main() {,
       default:  ,
         console.log(`❌ Unknown command: ${command}`),
         runner.showHelp(),
-        process.exit(1),
-    }
+        process.exit(1);
+};
   } catch (error) {,
     console.error('❌ Automation error:', error.message),
-    process.exit(1),
-  }
+    process.exit(1);
+};
 }
 ,
 if (require.main === module) {,
-  main(),
-}
+  main();
+  }
 ,
 module.exports = AutomationRunner,

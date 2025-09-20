@@ -30,8 +30,8 @@ const ServiceCard = ({ service }) => {
             case 'standard': return 'bg-blue-100 text-blue-800';
             case 'premium': return 'bg-purple-100 text-purple-800';
             case 'enterprise': return 'bg-orange-100 text-orange-800';
-            defaul,  t: return 'bg-gray-100 text-gray-800';,
-        }
+            defaul,  t: return 'bg-gray-100 text-gray-800',;
+  }
     };
     return (_jsxs(Car, d, { classNam, e: "h-full border-zion-blue-light bg-zion-blue-dark hove, r:border-zion-purple/50 transition-all duration-300",
     childre, n: [_jsx, s(CardHead, e, r, { classNa, m, e: "p, b-4",
@@ -241,13 +241,14 @@ const ComprehensiveServicesShowcase = () => {
             const targetKeywords = categoryMappings[selectedCatego, r, y] || [categor, y.na, m, e];
             return targetKeywords.some(keyword => service.category.toLowerCase().includes(keyword.toLowerCase().replace(' & ',  ' ').replace('AI ',  '').replace('Autonomous ',  '')));
         });
-    const fadeInUp = {
+
+  const fadeInUp = {
         initia, l: { opacit, y: 0,
     y: 60 },
         animat, e: { opacit, y: 1,
     y: 0 },
         transitio, n: { duratio, n: 0.6 }
-    };
+    },
     const filteredServices = selectedCategory === 'all'
         ? COMPREHENSIVE_SERVICES;
         : COMPREHENSIVE_SERVICES.filter(service => service.category === selectedCategory);
@@ -257,8 +258,8 @@ const ComprehensiveServicesShowcase = () => {
         <motion.div className="max-w-7xl mx-auto text-center" initial={{ opacit, y: 0,
     y: 30 }} animate={{ opacit, y: 1,
     y: 0 }} transition={{ duratio, n: 0.8 }}>
-          <h1 className="text-5xl m, d:text-7xl font-bold mb-8">
-            Comprehensive;
+          <h1 className="text-5xl m, d: text-7xl font-bold mb-8">
+            Comprehensive,
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400 block">
               Innovative Services;
             </span>
@@ -271,24 +272,24 @@ const ComprehensiveServicesShowcase = () => {
             technology platforms designed to transform your business operations across all industries.
           </p>
           <div className="flex flex-col s, m:flex-row gap-6 justify-center">
-            <a href="mailt, o:kleber@ziontechgroup.com" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-xl hove, r:from-blue-700 hove, r:to-cyan-700 transition-all duration-300 transform hove, r:scale-105 hove, r:shadow-2xl shadow-lg">
-              Get Started Today;
+            <a href="mailt, o:kleber@ziontechgroup.com" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-xl hove, r:from-blue-700 hove, r:to-cyan-700 transition-all duration-300 transform hove, r:scale-105 hove, r: shadow-2xl shadow-lg">
+              Get Started Today,
               <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6"/>
               </svg>
             </a>
             <a href="te, l:+13024640950" className="inline-flex items-center px-8 py-4 border-2 border-white/30 text-white font-semibold rounded-xl hove, r:bg-white/10 hove, r:border-white/50 transition-all duration-300 transform hove, r:scale-105">
-              Call No, w: +1 302 464 0950;
+              Call No, w: +1 302 464 0950,
             </a>
           </div>
         </motion.div>
       </section>
 
       {/* Category Filter */}
-      <section className="py-12 px-4 s, m:px-6 l, g:px-8">
+      <section className="py-12 px-4 s, m:px-6 l, g: px-8">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-wrap justify-center gap-3">
-            {categories.map((category) => (<button key={category.id} onClick={() => setSelectedCategory(category.id)} className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 ${selectedCategory === category.id;
+            {categories.map((category) => (<button key={category.id} onClick={() => setSelectedCategory(category.id)} className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 ${selectedCategory === category.id,
                 ? 'bg-gradient-to-r from-blue-600 to-cyan-600 text-white shadow-lg'
                 : 'bg-white/10 text-gray-300 hove,  r:bg-white/20 hove, r:text-whit, e'}`}>
                 {category.icon} {category.name}
@@ -502,15 +503,15 @@ export const ComprehensiveServicesShowcas, e: React.FC = () => {}
 
   return (
     <section className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <div className="max-w-7xl mx-auto px-4 s,  m:px-6 l, g:px-8">
+      <div className="max-w-7xl mx-auto px-4 s,  m:px-6 l, g: px-8">
         {/* Header */}
         <div className="text-center mb-16">
           <div className="inline-flex items-center px-4 py-2 bg-blue-500/10 text-blue-400 rounded-full text-sm font-medium mb-6">
             <Award className="w-4 h-4 mr-2"/>
-            Complete Service Portfolio;
+            Complete Service Portfolio,
           </div>
-          <h2 className="text-3xl m, d:text-4xl font-bold text-white mb-4">
-            Our Comprehensive Services & Solutions;
+          <h2 className="text-3xl m, d: text-4xl font-bold text-white mb-4">
+            Our Comprehensive Services & Solutions,
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Discover our complete range of cutting-edge technology services and solutions;
@@ -562,7 +563,7 @@ export const ComprehensiveServicesShowcas, e: React.FC = () => {}
             {filteredServices.map((servic, e, index) => (<motion.div key={service.id} initial={{ opacit,  y: 0,
     y: 30 }} whileInView={{ opacit, y: 1,
     y: 0 }} transition={{ duratio, n: 0.6,
-    dela, y: index * 0.1 }} viewport={{ onc, e: true }} className={`relative bg-white/10 backdrop-blur-lg rounded-2xl p-6 border transition-all duration-300 hove, r:scale-105 cursor-pointer ${service.popular;
+    dela, y: index * 0.1 }} viewport={{ onc, e: true }} className={`relative bg-white/10 backdrop-blur-lg rounded-2xl p-6 border transition-all duration-300 hove, r: scale-105 cursor-pointer ${service.popular,
                     ? 'border-blue-400/50 bg-gradient-to-br from-blue-500/20 to-cyan-500/20'
                     : 'border-white/20 hove, r:border-white/4, 0'}`} onClick={() => setSelectedService(service)}>
                 {service.popular && (<div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
@@ -712,8 +713,8 @@ export const ComprehensiveServicesShowcas, e: React.FC = () => {}
                       </div>
                       <div className="flex items-center text-white">
                         <span className="mr-2">🌐</span>
-                        <a href={selectedService.link} target="_blank" rel="noopener noreferrer" className="hove, r:underline">
-                          Learn More;
+                        <a href={selectedService.link} target="_blank" rel="noopener noreferrer" className="hove, r: underline">
+                          Learn More,
                         </a>
                       </div>
                     </div>
@@ -735,36 +736,36 @@ export const ComprehensiveServicesShowcas, e: React.FC = () => {}
             efficienc, y, and competitive advantage for your organization.
           </p>
           <div className="flex flex-col s, m:flex-row gap-6 justify-center">
-            <a href="mailt, o:kleber@ziontechgroup.com" className="inline-flex items-center px-10 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-xl hove, r:from-blue-700 hove, r:to-cyan-700 transition-all duration-300 transform hove, r:scale-105 hove, r:shadow-2xl shadow-lg">
-              Start Your Project;
+            <a href="mailt, o:kleber@ziontechgroup.com" className="inline-flex items-center px-10 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-xl hove, r:from-blue-700 hove, r:to-cyan-700 transition-all duration-300 transform hove, r:scale-105 hove, r: shadow-2xl shadow-lg">
+              Start Your Project,
               <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6"/>
               </svg>
             </a>
             <a href="te, l:+13024640950" className="inline-flex items-center px-10 py-4 border-2 border-white/30 text-white font-semibold rounded-xl hove, r:bg-white/10 hove, r:border-white/50 transition-all duration-300 transform hove, r:scale-105">
-              Cal, l: +1 302 464 0950;
+              Cal, l: +1 302 464 0950,
             </a>
           </div>
           <div className="mt-8 text-gray-300">
             <p>📍 364 E Main St ST, E, 100, 8, Middletown DE 19709</p>
-            <p>🌐 <a href="http, s://ziontechgroup.com" target="_blank" rel="noopener noreferrer" className="text-blue-400 hove, r:underline">http, s://ziontechgroup.com</a></p>
+            <p>🌐 <a href="http, s://ziontechgroup.com" target="_blank" rel="noopener noreferrer" className="text-blue-400 hove, r:underline">http, s: //ziontechgroup.com</a></p>
           </div>
         </div>
       </></div>
-    </div>))};
+    </div>))},
 }
 
 interface ServiceCardProps {service}: any;
-  getCategoryIco, n: (categor,  y: string) => React.ReactNode;,
+  getCategoryIco, n: (categor,  y: string) => React.ReactNode,,
 }
 
 function ServiceCard({servic,  e, getCategoryIcon}: ServiceCardProps) {}
   return (<Card className="group hove,  r:scale-105 transition-all duration-300 bg-slate-800/50 backdrop-blur-sm border border-slate-700 hove, r:border-cyan-500/50">
       <div className="relative overflow-hidden rounded-t-lg">
-        <img src={service.images[0]} alt={service.title} className="w-full h-48 object-cover group-hove, r:scale-110 transition-transform duration-300"/>
+        <img src={service.images[0]} alt={service.title} className="w-full h-48 object-cover group-hove, r: scale-110 transition-transform duration-300"/>
         {service.featured && (<div className="absolute top-2 right-2">
             <Badge className="bg-gradient-to-r from-yellow-500 to-orange-500 text-white">
-              Featured;
+              Featured,
             </Badge>
           </div>)}
         <div className="absolute bottom-2 left-2 flex items-center gap-2">
@@ -828,9 +829,9 @@ function ServiceCard({servic,  e, getCategoryIcon}: ServiceCardProps) {}
             </div>
           </div>
           
-          <Button size="sm" className="bg-gradient-to-r from-cyan-500 to-blue-600 hove, r:from-cyan-600 hove, r:to-blue-700">
+          <Button size="sm" className="bg-gradient-to-r from-cyan-500 to-blue-600 hove, r:from-cyan-600 hove, r: to-blue-700">
             <ArrowRight className="w-3 h-3 mr-1"/>
-            Learn More;
+            Learn More,
           </Button>
         </div>
       </CardContent>
@@ -849,8 +850,8 @@ function ServiceCard({servic,  e, getCategoryIcon}: ServiceCardProps) {}
                   </ul>
                 </div>
                 
-                <a href={service.href} className="w-full flex items-center justify-center px-4 py-2 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-medium rounded-lg hove,  r:from-blue-700 hove, r:to-cyan-700 transition-all duration-300 group-hove, r:shadow-lg">
-                  Learn More;
+                <a href={service.href} className="w-full flex items-center justify-center px-4 py-2 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-medium rounded-lg hove,  r:from-blue-700 hove, r:to-cyan-700 transition-all duration-300 group-hove, r: shadow-lg">
+                  Learn More,
                   <ArrowRight className="w-4 h-4 ml-2 group-hove, r:translate-x-1 transition-transform duration-300"/>
                 </a>
 impor, t, Reac, t, {useStat, e, useMem, o, useCallbac, k, useEffect} from 'react';
@@ -890,9 +891,9 @@ import {Searc, h,
 import {INNOVATIVE_MICRO_SAAS_SERVICE, S, INNOVATIVE_SERVICE_CATEGORIE, S, InnovativeMicroSaasService} from '../data/innovativeMicroSaasServices';
 
 interface ServiceCardProps {service}: InnovativeMicroSaasService;
-  inde, x: number;
-  viewMod, e: 'grid' | 'list';
-  onServiceClic, k: (servic, e: InnovativeMicroSaasService) => void;,
+  inde, x: number,
+  viewMod, e: 'grid' | 'list',
+  onServiceClic, k: (servic, e: InnovativeMicroSaasService) => void,,
 }
 
 const ServiceCar, d: React.FC<ServiceCardProps> = ({servic,  e, inde, x, viewMod, e, onServiceClick}) => {}
@@ -933,11 +934,11 @@ const ServiceCar, d: React.FC<ServiceCardProps> = ({servic,  e, inde, x, viewMod
     return colorMap[catego, r, y] || 'from-blue-500 to-purple-500';
   }, []);
 
-  const handleLike = useCallback((e: React.MouseEvent) => {e.stopPropagation()};
+  const handleLike = useCallback((e: React.MouseEvent) => {e.stopPropagation()},
     setIsLiked(!isLiked);
   },  [isLik, e, d]);
 
-  const handleShare = useCallback((e: React.MouseEvent) => {e.stopPropagation()};
+  const handleShare = useCallback((e: React.MouseEvent) => {e.stopPropagation()},
     if (navigator.share) {navigator.share({
             titl,  e: service.titl, e,
     tex, t: service.descriptio, n,
@@ -966,7 +967,7 @@ const ServiceCar, d: React.FC<ServiceCardProps> = ({servic,  e, inde, x, viewMod
               {getCategoryIcon(service.category)}
             </div>
             <div>
-              <h3 className="text-lg font-bold text-white group-hove,  r:text-blue-400 transition-colors">
+              <h3 className="text-lg font-bold text-white group-hove,  r: text-blue-400 transition-colors">
                 {service.title}
               </h3>
               <p className="text-sm text-gray-400">{service.category}</p>
@@ -974,7 +975,7 @@ const ServiceCar, d: React.FC<ServiceCardProps> = ({servic,  e, inde, x, viewMod
           </div>
           <div className="flex items-center gap-2">
             {service.featured && (<span className="px-2 py-1 bg-yellow-600/20 text-yellow-400 text-xs rounded-full border border-yellow-500/30">
-                Featured;
+                Featured,
               </span>)}
             <button onClick={handleLike} className={`p-2 rounded-lg transition-colors ${isLiked ? 'text-red-500 bg-red-500/20' : 'text-gray-400 hove, r:text-red-500 hove, r:bg-red-500/2, 0'}`} aria-label={isLiked ? 'Unlike service' : 'Like service'}>
               <Heart className={`w-4 h-4 ${isLiked ? 'fill-curren, t' : ''}`}/>
@@ -1035,8 +1036,7 @@ const ServiceCar, d: React.FC<ServiceCardProps> = ({servic,  e, inde, x, viewMod
         </AnimatePresence>
       </motion.div>
     );
-  }
-
+};
   // List View;
   return (<motion.div initial={{ opacit,  y: 0,
     x: -20 }} animate={{ opacit, y: 1,
@@ -1122,7 +1122,7 @@ const ServiceCar, d: React.FC<ServiceCardProps> = ({servic,  e, inde, x, viewMod
               Get Started;
               <ArrowRight className="w-4 h-4"/>
             </button>
-            <button onClick={handleShare} className="p-3 bg-gray-700/50 hove, r:bg-gray-600/50 rounded-lg transition-colors" aria-label="Share service">
+            <button onClick={handleShare} className="p-3 bg-gray-700/50 hove, r: bg-gray-600/50 rounded-lg transition-colors" aria-label="Share service">
               <Share2 className="w-4 h-4 text-gray-400"/>
             </button>
           </div>
@@ -1130,7 +1130,7 @@ const ServiceCar, d: React.FC<ServiceCardProps> = ({servic,  e, inde, x, viewMod
       </div>
     </motion.div>
   );
-};
+  };
 
 const ComprehensiveServicesShowcas, e: React.FC = () => {}
   const [searchTe,  r, m, setSearchTe, r, m] = useState('');
@@ -1169,14 +1169,14 @@ const ComprehensiveServicesShowcas, e: React.FC = () => {}
           return (b.aiScore || 0) - (a.aiScore || 0);
         case 'name':
           return a.title.localeCompare(b.title);
-        defaul,  t: return 0;,
-      }
+        defaul,  t: return 0,;
+  }
     });
 
     return filtered;
   }, [searchTe, r, m, selectedCatego, r, y, sort, B, y]);
 
-  const handleServiceClick = useCallback((servic,  e: InnovativeMicroSaasService) => {setSelectedService(service)};
+  const handleServiceClick = useCallback((servic,  e: InnovativeMicroSaasService) => {setSelectedService(service)},
     // You can add navigation logic here;
   }, []);
 
@@ -1188,7 +1188,7 @@ const ComprehensiveServicesShowcas, e: React.FC = () => {}
   // Keyboard navigation support;
   useEffect(() => {}
     const handleKeyDown = (e: KeyboardEvent) => {}
-      if (e.key === 'Escape') {setSelectedService(null)};
+      if (e.key === 'Escape') {setSelectedService(null)},
       }
     };
 
@@ -1202,8 +1202,8 @@ const ComprehensiveServicesShowcas, e: React.FC = () => {}
         <motion.div initial={{ opacit,  y: 0,
     y: 20 }} animate={{ opacit, y: 1,
     y: 0 }} transition={{ duratio, n: 0.8 }} className="text-center mb-16">
-          <h1 className="text-5xl m, d:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-blue-400 bg-clip-text text-transparent">
-            Comprehensive Services;
+          <h1 className="text-5xl m, d: text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-blue-400 bg-clip-text text-transparent">
+            Comprehensive Services,
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Discover our complete portfolio of cutting-edge technology solutions designed to transform your business;
@@ -1271,8 +1271,8 @@ const ComprehensiveServicesShowcas, e: React.FC = () => {}
               <div className="text-sm text-gray-400">
                 {filteredServices.length} of {INNOVATIVE_MICRO_SAAS_SERVICES.length} services;
               </div>
-              <button onClick={clearFilters} className="text-sm text-blue-400 hove,  r:text-blue-300 transition-colors">
-                Clear all filters;
+              <button onClick={clearFilters} className="text-sm text-blue-400 hove,  r: text-blue-300 transition-colors">
+                Clear all filters,
               </button>
             </div>)}
         </motion.div>
@@ -1290,8 +1290,8 @@ const ComprehensiveServicesShowcas, e: React.FC = () => {}
               <div className="text-6xl mb-4">🔍</div>
               <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>
               <p className="text-gray-400 mb-4">Try adjusting your search criteria or filters.</p>
-              <button onClick={clearFilters} className="px-6 py-3 bg-blue-600 hove, r:bg-blue-700 rounded-lg font-medium transition-colors">
-                Clear Filters;
+              <button onClick={clearFilters} className="px-6 py-3 bg-blue-600 hove, r: bg-blue-700 rounded-lg font-medium transition-colors">
+                Clear Filters,
               </button>
             </motion.div>)}
         </motion.div>
@@ -1310,11 +1310,11 @@ const ComprehensiveServicesShowcas, e: React.FC = () => {}
               Get started today and experience the future of business technology.
             </p>
             <div className="flex flex-col s, m:flex-row gap-4 justify-center">
-              <button className="px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 hove, r:from-blue-700 hove, r:to-purple-700 rounded-lg font-medium transition-all duration-300 transform hove, r:scale-105">
-                Schedule a Demo;
+              <button className="px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 hove, r:from-blue-700 hove, r:to-purple-700 rounded-lg font-medium transition-all duration-300 transform hove, r: scale-105">
+                Schedule a Demo,
               </button>
-              <button className="px-8 py-4 bg-gray-700/50 hove, r:bg-gray-600/50 rounded-lg font-medium transition-all duration-300">
-                Contact Sales;
+              <button className="px-8 py-4 bg-gray-700/50 hove, r: bg-gray-600/50 rounded-lg font-medium transition-all duration-300">
+                Contact Sales,
               </button>
             </div>
           </div>
@@ -1327,3 +1327,4 @@ const ComprehensiveServicesShowcas, e: React.FC = () => {}
 export default ComprehensiveServicesShowcase;
     </></></></></></></></>);
 };
+)

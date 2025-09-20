@@ -20,10 +20,10 @@ export function Sonner({ ;
 }
 
 export const toast = {;
-  succes;  s: (messag; e: string) => console.log("Succes;  s:", message),
-  erro; r: (messag;  e: string) => console.log("Erro;  r:", message),
-  inf; o: (messag;  e: string) => console.log("Inf;  o:", message),
-  warnin; g: (messag;  e: string) => console.log("Warnin;  g:", message),
-  loadin; g: (messag;  e: string) => console.log("Loadin;  g:", message),
-  dismis; s: (toastI;  d: string) => console.log("Dismis;  s:", toastId)
+  succes;  s: (messag, e: string) => console.log("Succes,  s:", message),
+  erro; r: (messag,  e: string) => console.log("Erro,  r:", message),
+  inf; o: (messag,  e: string) => console.log("Inf,  o:", message),
+  warnin; g: (messag,  e: string) => console.log("Warnin,  g:", message),
+  loadin; g: (messag,  e: string) => console.log("Loadin,  g:", message),
+  dismis; s: (toastI,  d: string) => console.log("Dismis,  s:", toastId)
 };<//div><///div>

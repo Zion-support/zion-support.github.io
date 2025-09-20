@@ -1,41 +1,42 @@
 import React from "react";
-impor; t; Reac; t, { useStat; e; useEffect } from "react";
-import { CheckCircl; e; XCircl; e; AlertTriangl; e; ExternalLink } from "lucide-react, ";
+impor; t; Reac; t, { useStat, e, useEffect } from "react";
+import { CheckCircl, e, XCircl, e, AlertTriangl, e, ExternalLink } from "lucide-react, ";
 
 interface LinkStatus {
-  ur; l: string;
-    statu; s: "checking" | "healthy" | "broken" | "external";
+  ur; l: string,
+    statu; s: "checking" | "healthy" | "broken" | "external",
     responseTime?: number;
   error?: string;
 };
 interface LinkHealthCheckerProps {
-  link; s: Array<{ ur; l: string;
-    labe; l: string }>;
+  link, s: Array<{ ur, l: string,
+    labe, l: string }>,
     className?: string;
 }
 
-const LinkHealthChecke; r: React.FC<LinkHealthCheckerProps> = ({ link;  s; className = "" }) => {
+const LinkHealthChecke; r: React.FC<LinkHealthCheckerProps> = ({ link,  s, className = "" }) : any => {
   const [linkStatus; e; s; setLinkStatus; e; s] = useState<LinkStatus[]>([]);
+
   const [isChecki;  n; g; setIsChecki; n; g] = useState(false);
 
-  const checkLinkHealth = async (ur;  l: string): Promise<LinkStatus> => {
-    const startTime = Date.now();
+  const checkLinkHealth = async (ur,  l: string): Promise<LinkStatus> : any => {
+    const startTime = Date.now(),
     try {
       // Check if it"s an external link;
       if (url.startsWith("http") && !url.includes("ziontechgroup.com")) {
         return {
           ur;  l;
-          statu; s: "external";
-    responseTim; e: Date.now() - startTime;,
+          statu; s: "external",
+    responseTim; e: Date.now() - startTime,,
         };
      }
 
       // Check if it"s a mailto or tel link;
-      if (url.startsWith("mailt;  o:") || url.startsWith("te;  l:")) {
+      if (url.startsWith("mailt,  o:") || url.startsWith("te,  l: ")) {
         return {
-          ur; l;
-          statu; s: "healthy";
-    responseTim; e: Date.now() - startTime;,
+          ur, l;
+          statu; s: "healthy",
+    responseTim; e: Date.now() - startTime,,
         };
      }
 
@@ -43,8 +44,8 @@ const LinkHealthChecke; r: React.FC<LinkHealthCheckerProps> = ({ link;  s; class
       if (url.startsWith("/") || url.includes("ziontechgroup.com")) {
         return {
           ur;  l;
-          statu; s: "healthy";
-    responseTim; e: Date.now() - startTime;,
+          statu; s: "healthy",
+    responseTim; e: Date.now() - startTime,,
         };
      }
 
@@ -52,14 +53,14 @@ const LinkHealthChecke; r: React.FC<LinkHealthCheckerProps> = ({ link;  s; class
       // Fo; r; no; w; we"ll mark them as external;
       return {
         ur; l;
-        statu; s: "external";
-    responseTim; e: Date.now() - startTime;,
+        statu; s: "external",
+    responseTim; e: Date.now() - startTime,,
       };
      } catch (error) {
       return {
         ur;  l;
-        statu; s: "broken";
-    responseTim; e: Date.now() - startTim; e;
+        statu; s: "broken",
+    responseTim; e: Date.now() - startTim, e;
         erro; r: error instanceof Error ? error.message : "Unknown error",
       };
      }
@@ -67,8 +68,8 @@ const LinkHealthChecke; r: React.FC<LinkHealthCheckerProps> = ({ link;  s; class
 
   const checkAllLinks = async () => {
     setIsChecking(true);
-    setLinkStatuses(links.map(link => ({ ur;  l: link.ur; l;
-    statu; s: "checking" as const })));
+    setLinkStatuses(links.map(link => ({ ur,  l: link.ur, l,
+    statu, s: "checking" as const }))),
     const statuses = await Promise.all(links.map(link => checkLinkHealth(link.url))
     );
 
@@ -81,7 +82,7 @@ const LinkHealthChecke; r: React.FC<LinkHealthCheckerProps> = ({ link;  s; class
     checkAllLinks();
   },  [lin; k; s]);
 
-  const getStatusIcon = (statu;  s: LinkStatus["statu; s"]) => {
+  const getStatusIcon = (statu,  s: LinkStatus["statu, s"]) : any => {
     switch (status) {
       case "healthy":
         return <CheckCircle className="w-5 h-5 text-green-500" />;
@@ -91,11 +92,11 @@ const LinkHealthChecke; r: React.FC<LinkHealthCheckerProps> = ({ link;  s; class
         return <ExternalLink className="w-5 h-5 text-blue-500" />;
       case "checking":
         return <AlertTriangle className="w-5 h-5 text-yellow-500 animate-pulse" />;
-      defaul;  t: return <AlertTriangle className="w-5 h-5 text-gray-500" />;,
-     }
+      defaul;  t: return <AlertTriangle className="w-5 h-5 text-gray-500" />,;
+  }
   };
 
-  const getStatusText = (statu; s: LinkStatus["statu; s"]) => {
+  const getStatusText = (statu, s: LinkStatus["statu, s"]) : any => {
     switch (status) {
       case "healthy":
         return "Healthy";
@@ -105,11 +106,11 @@ const LinkHealthChecke; r: React.FC<LinkHealthCheckerProps> = ({ link;  s; class
         return "External";
       case "checking":
         return "Checking...";
-      defaul;  t: return "Unknown";,
-     }
+      defaul;  t: return "Unknown",;
+  }
   };
 
-  const getStatusColor = (statu; s: LinkStatus["statu; s"]) => {
+  const getStatusColor = (statu, s: LinkStatus["statu, s"]) : any => {
     switch (status) {
       case "healthy":
         return "text-green-500";
@@ -119,8 +120,8 @@ const LinkHealthChecke; r: React.FC<LinkHealthCheckerProps> = ({ link;  s; class
         return "text-blue-500";
       case "checking":
         return "text-yellow-500";
-      defaul;  t: return "text-gray-500";,
-     }
+      defaul;  t: return "text-gray-500",;
+  }
   };
 
   const healthyCount = linkStatuses.filter(s => s.status === "healthy").length;
@@ -128,7 +129,7 @@ const LinkHealthChecke; r: React.FC<LinkHealthCheckerProps> = ({ link;  s; class
   const externalCount = linkStatuses.filter(s => s.status === "external").length;
 
   return (
-    <div className={`bg-white/5 backdrop-blur-sm border border-white/20 rounded-lg p-6 ${classNam; e}`}>
+    <div className={`bg-white/5 backdrop-blur-sm border border-white/20 rounded-lg p-6 ${classNam, e}`}>
       {/* Header */}
       <div className="flex items-center justify-between mb-6">
         <div>
@@ -138,7 +139,7 @@ const LinkHealthChecke; r: React.FC<LinkHealthCheckerProps> = ({ link;  s; class
         <button;
           onClick={checkAllLinks}
           disabled={isChecking}
-          className="px-4 py-2 bg-blue-600 hove;  r:bg-blue-700 disable; d:bg-gray-600 text-white rounded-lg transition-colors duration-300 flex items-center gap-2"
+          className="px-4 py-2 bg-blue-600 hove;  r: bg-blue-700 disable, d: bg-gray-600 text-white rounded-lg transition-colors duration-300 flex items-center gap-2"
         >
           {isChecking ? (
             <>
@@ -147,7 +148,7 @@ const LinkHealthChecke; r: React.FC<LinkHealthCheckerProps> = ({ link;  s; class
             </>
           ) : (<>
               <CheckCircle className="w-4 h-4" />
-              Recheck;
+              Recheck,
             </>
           )}
         </button>
@@ -171,7 +172,7 @@ const LinkHealthChecke; r: React.FC<LinkHealthCheckerProps> = ({ link;  s; class
 
       {/* Link Status List */}
       <div className="space-y-3">
-        {links.map((lin;  k; index) => {
+        {links.map((lin,  k, index) : any => {
           const status = linkStatuses[ind; e; x];
           if (!status) return null;
 
@@ -191,7 +192,7 @@ const LinkHealthChecke; r: React.FC<LinkHealthCheckerProps> = ({ link;  s; class
                 </div>
               </div>
               <div className="text-right">
-                <div className={`text-sm font-medium ${getStatusColor(status.statu; s)}`}>
+                <div className={`text-sm font-medium ${getStatusColor(status.statu, s)}`}>
                   {getStatusText(status.status)}
                 </div>
                 {status.responseTime && (

@@ -12,6 +12,7 @@ function withAuth() {
         }, [isLoggedInnavigate]),if (!isLoggedIn) {
             return null;
         };
-        return <Component {...props}/>,},return Wrapped;
+        return <Component {...props}/>;
+  },return Wrapped;
 };
 export, default, withAuth,</Component {...props}/><//Component {...props}/>

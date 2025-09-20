@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   description: 'Explore the revolutionary quantum computing breakthroughs that will transform AI and enterprise computing in 2026. Quantum supremacy, quantum AI, and practical applications.',
   keywords: ['quantum computing 2026quantum AIquantum supremacyquantum algorithms', 'enterprise quantum']
 }
-export default function AI2026QuantumComputingBreakthrough() {
+export default function AI2026QuantumComputingBreakthrough() : any {
   return (
     <div>
       <div>
@@ -240,4 +240,4 @@ export default function AI2026QuantumComputingBreakthrough() {
         </div>
       </div>
     </div>
-  )}
+  )}'

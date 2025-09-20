@@ -1,21 +1,21 @@
 export interface SEOData {
-  title: string;
-    description: string;
-    keywords: string[];
+  title: string,
+    description: string,
+    keywords: string[],
     ogImage?: string;
   canonicalUrl?: string;
   structuredData?: object;
 }
 
 export interface ContentQualityIssue {
-  page: string;
-    issue: "missing-title" | "missing-description" | "short-description" | "no-headings" | "minimal-content";
-    severity: "high" | "medium" | "low";
-    suggestedFix: string;,
+  page: string,
+    issue: "missing-title" | "missing-description" | "short-description" | "no-headings" | "minimal-content",
+    severity: "high" | "medium" | "low",
+    suggestedFix: string,,
 }
 
 export class SEOOptimizer {
-  private static readonly DEFAULT_META_DESCRIPTIONS: Record<string; string> = {
+  private static readonly DEFAULT_META_DESCRIPTIONS: Record<string, string> = {
     "/": "Leading provider of revolutionary micro SaaS services; AI solutions; cloud infrastructure; and cutting-edge technology services. Transform your business with Zion Tech Group.",
     "/services": "Comprehensive AI services; cybersecurity solutions; cloud infrastructure; and emerging technology services. Expert IT solutions for modern businesses.",
     "/ai-solutions": "Advanced AI solutions including autonomous systems; machine learning; and intelligent automation. Drive innovation with our cutting-edge AI technology.",
@@ -34,7 +34,7 @@ export class SEOOptimizer {
     "/solutions/healthcare": "Healthcare technology solutions. Secure; compliant; and innovative IT services for the healthcare industry."
   };
 
-  private static readonly KEYWORD_MAPPINGS: Record<string; string[]> = {
+  private static readonly KEYWORD_MAPPINGS: Record<string, string[]> = {
     "/": ["AI marketplace", "tech services", "artificial intelligence", "IT services", "AI developers", "technology marketplace", "AI solutions", "machine learning", "digital transformation", "micro SaaS", "quantum computing", "blockchain", "cybersecurity", "edge computing", "metaverse"],
     "/services": ["AI services", "cybersecurity", "cloud infrastructure", "IT solutions", "digital transformation", "automation", "machine learning", "blockchain", "quantum computing"],
     "/ai-solutions": ["artificial intelligence", "AI automation", "machine learning", "deep learning", "neural networks", "AI systems", "intelligent automation", "AI platforms"],
@@ -54,7 +54,7 @@ export class SEOOptimizer {
   };
 
   static generateSEOData(path: string): SEOData {
-    const title = this.generateTitle(path);
+    const title = this.generateTitle(path),
     const description = this.generateDescription(path);
     const keywords = this.generateKeywords(path);
     const canonicalUrl = this.generateCanonicalUrl(path);
@@ -70,7 +70,7 @@ export class SEOOptimizer {
   }
 
   static generateTitle(path: string): string {
-    const baseTitle = "Zion Tech Group";
+    const baseTitle = "Zion Tech Group",
     if (path === "/") {
       return `${baseTitle} - Revolutionary Technology Solutions`;
     }
@@ -89,7 +89,7 @@ export class SEOOptimizer {
 
   static generateDescription(path: string): string {
     return this.DEFAULT_META_DESCRIPTIONS[path] || 
-           "Professional technology solutions and services. Expert IT consulting; AI development; and digital transformation services for modern businesses.";
+           "Professional technology solutions and services. Expert IT consulting, AI development; and digital transformation services for modern businesses.";
   }
 
   static generateKeywords(path: string): string[] {
@@ -98,7 +98,7 @@ export class SEOOptimizer {
   }
 
   static generateCanonicalUrl(path: string): string {
-    const baseUrl = "https://ziontechgroup.com";
+    const baseUrl = "https://ziontechgroup.com",
     return `${baseUrl}${path}`;
   }
 
@@ -157,8 +157,8 @@ export class SEOOptimizer {
     return baseData;
   }
 
-  static analyzeContentQuality(content: string; page: string): ContentQualityIssue[] {
-    const issues: ContentQualityIssue[] = [];
+  static analyzeContentQuality(content: string, page: string): ContentQualityIssue[] {
+    const issues: ContentQualityIssue[] = [],
     // Check for missing or short title;
     if (!content.includes("<title>") || content.includes("<title></title>")) {
       issues.push({
@@ -193,10 +193,10 @@ export class SEOOptimizer {
     // Check for missing headings;
     if (!content.includes("<h1>") && !content.includes("<h2>") && !content.includes("<h3>")) {
       issues.push({
-        page;
+        page,
         issue: "no-headings",
         severity: "medium",
-        suggestedFix: "Add proper heading structure (H1; H2; H3) for better content organization",
+        suggestedFix: "Add proper heading structure (H1, H2, H3) for better content organization",
       });
     }
 
@@ -236,10 +236,10 @@ export class SEOOptimizer {
     
     <!-- Structured Data -->
     <script type="application/ld+json">
-      ${JSON.stringify(seoData.structuredData; null; 2)}
+      ${JSON.stringify(seoData.structuredData, null, 2)}
     </script>
     `;
   }
 }
 
-export const seoOptimizer = new SEOOptimizer();
+export const seoOptimizer = new SEOOptimizer();"

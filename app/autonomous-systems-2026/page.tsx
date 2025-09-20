@@ -1,7 +1,7 @@
 import React from 'react'
 import SEO from '@/components/SEO'
 
-export default function AutonomousSystems2026Page() {
+export default function AutonomousSystems2026Page() : any {
   return (
     <div>
       <SEO

@@ -23,6 +23,6 @@ export default function manifest(): MetadataRoute.Manifest {
     ],
     categories: ['business', 'productivity', 'technology'],
     lang: 'en',
-    orientation: 'portrait-primary',
+    orientation: 'portrait-primary'
   }
 }

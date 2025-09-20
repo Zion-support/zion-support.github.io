@@ -16,7 +16,7 @@ export function LoadingSpinner({ size = 'md', className, text, variant = 'defaul
     };
     if (variant === 'pulse') {
         return (_jsxs("div", { className: cn("flex flex-col items-center justify-center", className), children: [_jsx("div", { className: cn("rounded-full bg-zion-purple animate-pulse", sizeClasses[size]) }), text && (_jsx("p", { className: cn("mt-2 text-zion-slate-light text-center", textSizeClasses[size]), children: text }))] }));
-    }
+};
     if (variant === 'dots') {
         return (_jsxs("div", { className: cn("flex flex-col items-center justify-center", className), children: [_jsx("div", { className: "flex space-x-1", children: [0, 1, 2].map((i) => (_jsx(motion.div, { className: "w-2 h-2 bg-zion-cyan rounded-full", animate: {
                             y: [0, -10, 0],
@@ -27,21 +27,21 @@ export function LoadingSpinner({ size = 'md', className, text, variant = 'defaul
                             delay: i * 0.2,
                             ease: "easeInOut",
                         } }, i))) }), text && (_jsx("p", { className: cn("mt-3 text-zion-slate-light text-center", textSizeClasses[size]), children: text }))] }));
-    }
+};
     return (_jsxs("div", { className: cn("flex flex-col items-center justify-center", className), children: [_jsx(motion.div, { className: cn("border-2 border-zion-blue-light border-t-zion-purple rounded-full", sizeClasses[size]), animate: { rotate: 360 }, transition: {
                     duration: 1,
                     repeat: Infinity,
                     ease: "linear",
                 } }), text && (_jsx(motion.p, { className: cn("mt-3 text-zion-slate-light text-center", textSizeClasses[size]), initial: { opacity: 0, y: 10 }, animate: { opacity: 1, y: 0 }, transition: { delay: 0.5, duration: 0.5 }, children: text }))] }));
-}
+};
 export function PageLoader() {
     return (_jsx("div", { className: "min-h-screen bg-background flex items-center justify-center", children: _jsx("div", { className: "text-center", children: _jsx(LoadingSpinner, { size: "xl", text: "Loading amazing content..." }) }) }));
-}
+};
 export function SectionLoader() {
     return (_jsx("div", { className: "py-20 flex items-center justify-center", children: _jsx(LoadingSpinner, { size: "lg", text: "Loading section..." }) }));
-}
+  }
 export function CardLoader() {
-    return (_jsx("div", { className: "p-8 flex items-center justify-center", children: _jsx(LoadingSpinner, { size: "md", text: "Loading..." }) }));
+    return (_jsx("div", { className: "p-8 flex items-center justify-center", children: _jsx(LoadingSpinner, { size: "md", text: "Loading..." }) })),
 import React from 'react';
 import { motion } from 'framer-motion';
 import { cn } from '@/lib/utils';
@@ -67,7 +67,7 @@ export function LoadingSpinner({ size = 'md', variant = 'default', className = '
           {text}
         </motion.p>)}
     </div>);
-}
+  }
 // Page loading component;
 export function PageLoader() {
     return (<div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-900 via-blue-800 to-slate-900">
@@ -84,4 +84,5 @@ export function InlineLoader({ size = 'sm', variant = 'default' }) {
       <LoadingSpinner size={size} variant={variant} className="mr-2"/>
       <span className="text-sm text-gray-600">Loading...</span>
     </div>);
+}
 }

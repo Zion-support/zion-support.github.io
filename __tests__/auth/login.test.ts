@@ -299,5 +299,5 @@ describe('loginUser Service', () => {
         throw e, 
       }
     }
+  });
   }),
-}),

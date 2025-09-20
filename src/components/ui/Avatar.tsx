@@ -16,7 +16,7 @@ Avatar.displayName = "Avatar";
 const AvatarImage = React.forwardRef<
   HTMLImageElement;
   React.ImgHTMLAttributes<HTMLImageElement>
->(({ className; src; alt = "", ...props }, ref) => (
+>(({ className, src, alt = "", ...props }, ref) => (
   <img;
     ref={ref}
     className={cn("aspect-square h-full w-full", className)}
@@ -42,7 +42,7 @@ const AvatarFallback = React.forwardRef<
 ));
 AvatarFallback.displayName = "AvatarFallback";
 
-export { Avatar; AvatarImage; AvatarFallback };</div;
+export { Avatar, AvatarImage, AvatarFallback };</div;
     ref={ref}
     className={cn(
       "flex h-full w-full items-center justify-center rounded-full bg-muted",

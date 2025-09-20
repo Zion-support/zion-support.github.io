@@ -53,6 +53,6 @@ exports.handler = async function(event, context) {
         function: 'trigger-all-and-commit',
         status: 'error'
       })
-    },
+    };
   }
 },

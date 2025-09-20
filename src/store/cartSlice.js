@@ -12,10 +12,10 @@ const loadState = () => {
     }
 };
 const initialState = {
-    items: loadState();,
+    items: loadState(),,
 };
 const cartSlice = createSlice({
-    name: 'cart';
+    name: 'cart',
     initialState,
     reducers: {
         addItem: (state, action) => {
@@ -25,11 +25,11 @@ const cartSlice = createSlice({
             }
             else {
                 state.items.push({
-                    id: action.payload.id;
-                    name: action.payload.title;
-                    price: action.payload.price;
-                    quantity: 1;
-                    image: action.payload.image;,
+                    id: action.payload.id,
+                    name: action.payload.title,
+                    price: action.payload.price,
+                    quantity: 1,
+                    image: action.payload.image,,
                 });
             }
         },
@@ -46,7 +46,7 @@ const cartSlice = createSlice({
             state.items = action.payload;
         },
         clear: state => {
-            state.items = [];
+            state.items = [],
      },
     },
 });

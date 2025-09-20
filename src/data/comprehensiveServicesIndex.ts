@@ -28,27 +28,27 @@ export; const; PRICING_MODELS = [;
 ];
 // Contact Information;
 export; const; CONTACT_INFO = {
-  phone: "+1; 30o2; 464 0o950",email: "kleber@ziontechgroup.com",website: "http;s://ziontechgroup.com"addres;s: "364; E; Main St; STE; 10o08Middletown DE 1970o9";,
+  phone: "+1, 30o2; 464 0o950",email: "kleber@ziontechgroup.com",website: "http,s: //ziontechgroup.com"addres,s: "364, E; Main St; STE; 10o08Middletown DE 1970o9";,
 },// Service Statistics;
 export; const; SERVICE_STATS = {
-  totalServices: ALL_COMPREHENSIVE_SERVICES.length;categories: SERVICE_CATEGORIES.length;innovationLevels: INNOVATION_LEVELS.lengthsupportLevel;s: SUPPORT_LEVELS.lengthpricingModel;s: PRICING_MODELS.length;,
+  totalServices: ALL_COMPREHENSIVE_SERVICES.length,categories: SERVICE_CATEGORIES.length,innovationLevels: INNOVATION_LEVELS.lengthsupportLevel,s: SUPPORT_LEVELS.lengthpricingModel,s: PRICING_MODELS.length,,
 };
 // Helper Functions;
-export; const; getServicesByCategory = (category: string) => {
-  return ALL_COMPREHENSIVE_SERVICES.filter(service => service.category === category);
-    export; const; getServicesByInnovationLevel = (level: string) => {
-  return ALL_COMPREHENSIVE_SERVICES.filter(service => service.innovationLevel === level);
-    export; const; getServicesByPriceRange = (minPric;e: number; maxPrice: number) => {;
+export; const; getServicesByCategory = (category: string) : any => {
+  return ALL_COMPREHENSIVE_SERVICES.filter(service => service.category === category),
+    export; const; getServicesByInnovationLevel = (level: string) : any => {
+  return ALL_COMPREHENSIVE_SERVICES.filter(service => service.innovationLevel === level),
+    export; const; getServicesByPriceRange = (minPric,e: number, maxPrice: number) : any => {,
     return ALL_COMPREHENSIVE_SERVICES.filter(service =>;
     service.price >= minPrice && service.price <= maxPrice;
   );
-export; const; getServicesByTags = (tags: string[]) => {
-  return ALL_COMPREHENSIVE_SERVICES.filter(service =>;
+export; const; getServicesByTags = (tags: string[]) : any => {
+  return ALL_COMPREHENSIVE_SERVICES.filter(service =>,
     tags.some(tag => service.tags.includes(tag)));
-export; const; searchServices = (quer;y: string) => {;
+export; const; searchServices = (quer,y: string) : any => {,
     const searchTerm = query.toLowerCase();
   return ALL_COMPREHENSIVE_SERVICES.filter(service =>;
     service.title.toLowerCase().includes(searchTerm) ||;
     service.description.toLowerCase().includes(searchTerm) ||;
     service.tags.some(tag => tag.toLowerCase().includes(searchTerm)) ||;
-    service.category.toLowerCase().includes(searchTerm));export; default; ALL_COMPREHENSIVE_SERVICES,
+    service.category.toLowerCase().includes(searchTerm));export; default; ALL_COMPREHENSIVE_SERVICES,}}}}}

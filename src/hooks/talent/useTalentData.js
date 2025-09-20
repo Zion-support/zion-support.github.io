@@ -6,13 +6,13 @@ async function fetchTalentProfiles() {
 }
 export function useTalentData() {
     const { data, isLoading, error } = useQuery({
-        queryKey: ['talent-profiles'];
-        queryFn: fetchTalentProfiles;
-        initialData: [];,
+        queryKey: ['talent-profiles'],
+        queryFn: fetchTalentProfiles,
+        initialData: [],,
     });
     return {
-        talents: data ?? [];
+        talents: data ?? [],
         isLoading,
-        error,
-    };
+        error;
+  };
 }

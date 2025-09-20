@@ -9,7 +9,8 @@ export function useAuthOperations(setUser, setIsLoading) {
     useEffect(() => {
         checkUrlForReferralCode();
     }, []);
-    const login = async ({ email, password }) => {
+
+  const login = async ({ email, password }) => {
         setIsLoading(true);
         try {
             // Clean up any stale auth state before login;
@@ -21,26 +22,26 @@ export function useAuthOperations(setUser, setIsLoading) {
             
             if (error) {
                 toast({
-                    variant: "destructive";
-                    title: "Oh no! Something went wrong.";
-                    description: error.message;,
+                    variant: "destructive",
+                    title: "Oh no! Something went wrong.",
+                    description: error.message,,
                 });
-                return { data: null, error: error.message };
+                return { data: null, error: error.message },
      }
             toast({
-                title: "Login successful!";
-                description: `Welcome back, ${email}!`,
-            });
-            return { data, error: null };
+                title: "Login successful!",
+                description: `Welcome back, ${email}!`;
+  });
+            return { data, error: null },
      }
         catch (error) {
             toast({
-                variant: "destructive";
-                title: "Oh no! Something went wrong.";
-                description: "Failed to sign in. Please check your credentials.";,
-            });
+                variant: "destructive",
+                title: "Oh no! Something went wrong.",
+                description: "Failed to sign in. Please check your credentials.",;
+  });
             return { data: null, error: "Failed to sign in." };
-     }
+  }
         finally {
             setIsLoading(false);
         }
@@ -53,7 +54,7 @@ export function useAuthOperations(setUser, setIsLoading) {
                 password,
                 options: {
                     data: {
-                        display_name: display_name;,
+                        display_name: display_name,,
                     },
                 },
             });
@@ -61,22 +62,22 @@ export function useAuthOperations(setUser, setIsLoading) {
             if (error) {
                 showApiError(error, "Error during signup");
                 return { data: null, error: error.message };
-     }
+  }
             // Add this after successful signup;
             if (data?.user) {
                 // Track referral if there was a referral code;
                 await trackReferral(data.user.id, email);
             }
             toast({
-                title: "Signup successful!";
+                title: "Signup successful!",
                 description: `Welcome, ${display_name}! Please check your email to verify your account.`,
             });
             return { data, error: null };
-     }
+  }
         catch (error) {
             showApiError(error, "Failed to sign up. Please try again.");
             return { data: null, error: "Failed to sign up." };
-     }
+  }
         finally {
             setIsLoading(false);
         }
@@ -87,25 +88,25 @@ export function useAuthOperations(setUser, setIsLoading) {
             const { error } = await supabase.auth.signOut();
             if (error) {
                 toast({
-                    variant: "destructive";
-                    title: "Oh no! Something went wrong.";
-                    description: error.message;,
+                    variant: "destructive",
+                    title: "Oh no! Something went wrong.",
+                    description: error.message,,
                 });
             }
             else {
                 setUser(null); // Clear the user state upon successful logout;
                 toast({
-                    title: "Logout successful!";
-                    description: "You have been successfully logged out.";,
+                    title: "Logout successful!",
+                    description: "You have been successfully logged out.",,
                 });
             }
         }
         catch (error) {
             
             toast({
-                variant: "destructive";
-                title: "Logout failed";
-                description: "There was an issue logging you out. Please try again.";,
+                variant: "destructive",
+                title: "Logout failed",
+                description: "There was an issue logging you out. Please try again.",,
             });
         }
         finally {
@@ -116,30 +117,30 @@ export function useAuthOperations(setUser, setIsLoading) {
         setIsLoading(true);
         try {
             const { data, error } = await supabase.auth.resetPasswordForEmail(email, {
-                redirectTo: `${window.location.origin}/update-password`;
+                redirectTo: `${window.location.origin}/update-password`,
             });
             if (error) {
                 toast({
-                    variant: "destructive";
-                    title: "Oh no! Something went wrong.";
-                    description: error.message;,
+                    variant: "destructive",
+                    title: "Oh no! Something went wrong.",
+                    description: error.message,,
                 });
-                return { data: null, error: error.message };
+                return { data: null, error: error.message },
      }
             toast({
-                title: "Password reset email sent!";
+                title: "Password reset email sent!",
                 description: `Please check your email (${email}) for instructions on how to reset your password.`;
-            });
-            return { data, error: null };
+  });
+            return { data, error: null },
      }
         catch (error) {
             toast({
-                variant: "destructive";
-                title: "Oh no! Something went wrong.";
-                description: "Failed to send reset password email. Please try again.";,
-            });
+                variant: "destructive",
+                title: "Oh no! Something went wrong.",
+                description: "Failed to send reset password email. Please try again.",;
+  });
             return { data: null, error: "Failed to send reset password email." };
-     }
+  }
         finally {
             setIsLoading(false);
         }
@@ -153,22 +154,22 @@ export function useAuthOperations(setUser, setIsLoading) {
             const { error } = await supabase;
                 .from("profiles")
                 .update({
-                display_name: profileData.displayName;
-                user_type: profileData.userType;
-                profile_complete: profileData.profileComplete;
-                bio: profileData.bio;
-                avatar_url: profileData.avatarUrl;
-                headline: profileData.headline;,
+                display_name: profileData.displayName,
+                user_type: profileData.userType,
+                profile_complete: profileData.profileComplete,
+                bio: profileData.bio,
+                avatar_url: profileData.avatarUrl,
+                headline: profileData.headline,,
             })
                 .eq("id", profileData.id);
             if (error) {
                 toast({
-                    variant: "destructive";
-                    title: "Failed to update profile";
-                    description: error.message;,
+                    variant: "destructive",
+                    title: "Failed to update profile",
+                    description: error.message,,
                 });
                 return { error: error.message };
-     }
+  }
             // Optimistically update the local user state;
             setUser((prevUser) => {
                 if (prevUser) {
@@ -176,21 +177,22 @@ export function useAuthOperations(setUser, setIsLoading) {
                 }
                 return prevUser;
             });
-            toast({
-                title: "Profile updated!";
-                description: "Your profile has been successfully updated.";,
+
+    toast({
+                title: "Profile updated!",
+                description: "Your profile has been successfully updated.",,
             });
-            return { error: null };
+            return { error: null },
      }
         catch (error) {
             
             toast({
-                variant: "destructive";
-                title: "Profile update failed";
-                description: "There was an issue updating your profile. Please try again.";,
-            });
+                variant: "destructive",
+                title: "Profile update failed",
+                description: "There was an issue updating your profile. Please try again.",;
+  });
             return { error: "Failed to update profile." };
-     }
+  }
         finally {
             setIsLoading(false);
         }
@@ -199,13 +201,13 @@ export function useAuthOperations(setUser, setIsLoading) {
         setIsLoading(true);
         try {
             const { data, error } = await supabase.auth.signInWithOAuth({
-                provider: "google";,
+                provider: "google",,
             });
             if (error) {
                 toast({
-                    variant: "destructive";
-                    title: "Oh no! Something went wrong.";
-                    description: error.message;,
+                    variant: "destructive",
+                    title: "Oh no! Something went wrong.",
+                    description: error.message,,
                 });
             }
         }
@@ -217,13 +219,13 @@ export function useAuthOperations(setUser, setIsLoading) {
         setIsLoading(true);
         try {
             const { data, error } = await supabase.auth.signInWithOAuth({
-                provider: "facebook";,
+                provider: "facebook",,
             });
             if (error) {
                 toast({
-                    variant: "destructive";
-                    title: "Oh no! Something went wrong.";
-                    description: error.message;,
+                    variant: "destructive",
+                    title: "Oh no! Something went wrong.",
+                    description: error.message,,
                 });
             }
         }
@@ -235,13 +237,13 @@ export function useAuthOperations(setUser, setIsLoading) {
         setIsLoading(true);
         try {
             const { data, error } = await supabase.auth.signInWithOAuth({
-                provider: "twitter";,
+                provider: "twitter",,
             });
             if (error) {
                 toast({
-                    variant: "destructive";
-                    title: "Oh no! Something went wrong.";
-                    description: error.message;,
+                    variant: "destructive",
+                    title: "Oh no! Something went wrong.",
+                    description: error.message,,
                 });
             }
         }
@@ -256,28 +258,29 @@ export function useAuthOperations(setUser, setIsLoading) {
             if (!ethereum) {
                 throw new Error("Web3 wallet not found");
             }
-            const accounts = await ethereum.request({ method: 'eth_requestAccounts' });
+            const accounts = await ethereum.request({ method: 'eth_requestAccounts' }),
     const address = accounts[0];
             await ethereum.request({
-                method: 'personal_sign';
+                method: 'personal_sign',
                 params: [address, address]
             });
-            // Fix: Create a proper UserProfile object;
+            // Fix: Create a proper UserProfile object,
             setUser({
-                id: address;
-                displayName: address;
-                profileComplete: true;
+                id: address,
+                displayName: address,
+                profileComplete: true,
                 email: '', // Add required fields;
                 userType: 'talent', // Default user type;
-                createdAt: new Date().toISOString();
+                createdAt: new Date().toISOString(),
                 updatedAt: new Date().toISOString(),
             });
+
     toast({ title: 'Wallet connected', description: address });
-     }
+};
         catch (error) {
             toast({
-                variant: 'destructive';
-                title: 'Web3 login failed';
+                variant: 'destructive',
+                title: 'Web3 login failed',
                 description: error?.message || 'Unable to connect wallet',
             });
      }
@@ -294,6 +297,6 @@ export function useAuthOperations(setUser, setIsLoading) {
         loginWithGoogle,
         loginWithFacebook,
         loginWithTwitter,
-        loginWithWeb3,
-    };
+        loginWithWeb3;
+  };
 }

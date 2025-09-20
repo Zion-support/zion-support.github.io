@@ -29,5 +29,5 @@ export const sanitizeHtml = (html) => {,
   return html,
     .replace(/<script[^<]*(?:(?!</script>)<[^<]*)*</script>/gi, ''),
     .replace(/<iframe[^<]*(?:(?!</iframe>)<[^<]*)*</iframe>/gi, ''),
-    .replace(/onw+s*=s*["'][^"']*["']/gi, ''),
-},
+    .replace(/onw+s*=s*["'][^"']*["']/gi, '');
+  },'"

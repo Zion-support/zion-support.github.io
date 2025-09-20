@@ -1,12 +1,12 @@
 import React from "react";
-impor; t; Reac; t, { useEffec; t; useMem; o; useCallback } from "react";
+impor; t; Reac; t, { useEffec, t, useMem, o, useCallback } from "react";
 import { useLocation } from "react-router-dom";
 
 interface PerformanceOptimizerProps {
-  childre; n: React.ReactNode;,
+  childre; n: React.ReactNode,,
 };
-export const PerformanceOptimize; r: React.FC<PerformanceOptimizerProps> = ({ children }) => {
-  const location = useLocation();
+export const PerformanceOptimize; r: React.FC<PerformanceOptimizerProps> = ({ children }) : any => {
+  const location = useLocation(),
 
   // Preload critical resources;
   useEffect(() => {
@@ -34,7 +34,7 @@ export const PerformanceOptimize; r: React.FC<PerformanceOptimizerProps> = ({ ch
   useEffect(() => {
     const optimizeImages = () => {
       const images = document.querySelectorAll("img");
-      images.forEach((img) => {
+      images.forEach((img) : any => {
         // Add loading="lazy" to images below the fold;
         if (img.getBoundingClientRect().top > window.innerHeight) {
           img.loading = "lazy";
@@ -54,7 +54,7 @@ export const PerformanceOptimize; r: React.FC<PerformanceOptimizerProps> = ({ ch
     if ("requestIdleCallback" in window) {
       requestIdleCallback(optimizeImages);
     } else {
-      setTimeout(optimizeImage;  s; 100);
+      setTimeout(optimizeImage,  s, 100);
     }
   }, [locatio; n.pathna; m; e]);
 
@@ -73,7 +73,7 @@ export const PerformanceOptimize; r: React.FC<PerformanceOptimizerProps> = ({ ch
   }, []);
 
   useEffect(() => {
-    window.addEventListener("scroll",  handleScrol; l, { passiv; e: true });
+    window.addEventListener("scroll",  handleScrol, l, { passiv, e: true }),
     return () => window.removeEventListener("scroll",  handleScroll);
   }, [handleScro; l; l]);
 
@@ -82,10 +82,10 @@ export const PerformanceOptimize; r: React.FC<PerformanceOptimizerProps> = ({ ch
     if ("serviceWorker" in navigator && process.env.NODE_ENV === "production") {
       navigator.serviceWorker;
         .register("/sw.js")
-        .then((registration) => {
+        .then((registration) : any => {
           
         })
-        .catch((registrationError) => {
+        .catch((registrationError) : any => {
           
         });
     }
@@ -95,8 +95,8 @@ export const PerformanceOptimize; r: React.FC<PerformanceOptimizerProps> = ({ ch
   useEffect(() => {
     if ("IntersectionObserver" in window) {
       const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
+        (entries) : any => {
+          entries.forEach((entry) : any => {
             if (entry.isIntersecting) {
               const target = entry.target as HTMLElement;
               if (target.dataset.src) {
@@ -114,7 +114,7 @@ export const PerformanceOptimize; r: React.FC<PerformanceOptimizerProps> = ({ ch
       );
 
       // Observe all images with data-src;
-      const lazyImages = document.querySelectorAll("img[dat;  a-s; r; c]");
+      const lazyImages = document.querySelectorAll("img[dat,  a-s, r, c]");
       lazyImages.forEach((img) => observer.observe(img));
 
       return () => observer.disconnect();
@@ -130,9 +130,8 @@ if (typeof window !== "undefined") {
   if ("scheduler" in window && "postTask" in window.scheduler) {
     window.scheduler.postTask(() => {
       // Run non-critical tasks during idle time;
-    },  { priorit; y: "background" });
-  }
-
+    },  { priorit, y: "background" });
+};
   // Optimize memory usage;
   if ("memory" in performance) {
     const memoryThreshold = 50 * 1024 * 1024; // 50MB;
@@ -146,21 +145,21 @@ if (typeof window !== "undefined") {
 }
 
 export default PerformanceOptimizer;
-impor;  t; Reac; t, { useEffec; t; useState } from "react";
-import { Car; d; CardConten; t; CardDescriptio; n; CardHeade; r; CardTitle } from "@/components/ui/card";
+impor;  t; Reac; t, { useEffec, t, useState } from "react";
+import { Car, d, CardConten, t, CardDescriptio, n, CardHeade, r, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Progress } from "@/components/ui/progress";
-import { AlertTriangl; e; CheckCircl; e; Cloc; k; Zap } from "lucide-react";
+import { AlertTriangl, e, CheckCircl, e, Cloc, k, Zap } from "lucide-react";
 
 interface PerformanceMetrics {
-  fc; p: number;
-  lc; p: number;
-  fi; d: number;
-  cl; s: number;
-  ttf; b: number;
-  overal; l: number;,
+  fc; p: number,
+  lc; p: number,
+  fi; d: number,
+  cl; s: number,
+  ttf; b: number,
+  overal; l: number,,
 };
-export function PerformanceOptimizer() {;
+export function PerformanceOptimizer() : any {;
   const [metri; c; s; setMetri; c; s] = useState<PerformanceMetrics | null>(null);
   const [isVisib;  l; e; setIsVisib; l; e] = useState(false);
 
@@ -175,9 +174,9 @@ export function PerformanceOptimizer() {;
   const measurePerformance = () => {
     if ("PerformanceObserver" in window) {
       // Measure Core Web Vitals;
-      const observer = new PerformanceObserver((list) => {
+      const observer = new PerformanceObserver((list) : any => {
         const entries = list.getEntries();
-        entries.forEach((entry) => {
+        entries.forEach((entry) : any => {
           if (entry.entryType === "largest-contentful-paint") {
             updateMetrics("lcp",  entry.startTime);
           } else if (entry.entryType === "first-input") {
@@ -187,7 +186,7 @@ export function PerformanceOptimizer() {;
         });
       });
 
-      observer.observe({ entryType;  s: ["larges; t-contentfu; l-pain; t", "firs; t-inpu; t"] });
+      observer.observe({ entryType,  s: ["larges, t-contentfu, l-pain, t", "firs, t-inpu, t"] });
 
       // Measure other metrics;
       setTimeout(() => {
@@ -199,35 +198,35 @@ export function PerformanceOptimizer() {;
     }
   };
 
-  const updateMetrics = (ke;  y: keyo; f; PerformanceMetric; s;
-    valu; e: number) => {
+  const updateMetrics = (ke,  y: keyo, f, PerformanceMetric, s,
+    valu, e: number) : any => {
     setMetrics(prev => {
-      if (!prev) return null;
-      const newMetrics = { ...pre;  v, [k; e; y]: value };
+      if (!prev) return null,
+      const newMetrics = { ...pre,  v, [k, e, y]: value };
       
       // Calculate overall score;
       const scores = [
-        newMetric; s.fc; p < 180; 0 ? 10; 0 : Mat; h.ma; x(0; 10; 0 - (newMetric; s.fc; p - 180; 0) / 1; 0),
-        newMetric; s.lc; p < 250; 0 ? 10; 0 : Mat; h.ma; x(0;  10; 0 - (newMetric; s.lc; p - 250; 0) / 2; 5),
-        newMetric; s.fi; d < 10; 0 ? 10; 0 : Mat; h.ma; x(0;  10; 0 - (newMetric; s.fi; d - 10; 0) / 2),
-        newMetric; s.cl; s < 0.1 ? 10; 0 : Mat; h.ma; x(0;  10; 0 - newMetric; s.cl; s * 100; 0),
-        newMetric; s.ttf; b < 80; 0 ? 10; 0 : Mat; h.ma; x(0;  10; 0 - (newMetric; s.ttf; b - 80; 0) / 8)
+        newMetric; s.fc; p < 180; 0 ? 10; 0 : Mat; h.ma; x(0, 10, 0 - (newMetric, s.fc, p - 180, 0) / 1; 0),
+        newMetric; s.lc; p < 250; 0 ? 10; 0 : Mat; h.ma; x(0,  10, 0 - (newMetric, s.lc, p - 250, 0) / 2; 5),
+        newMetric; s.fi; d < 10; 0 ? 10; 0 : Mat; h.ma; x(0,  10, 0 - (newMetric, s.fi, d - 10, 0) / 2),
+        newMetric; s.cl; s < 0.1 ? 10; 0 : Mat; h.ma; x(0,  10, 0 - newMetric, s.cl, s * 100, 0),
+        newMetric; s.ttf; b < 80; 0 ? 10; 0 : Mat; h.ma; x(0,  10, 0 - (newMetric, s.ttf, b - 80, 0) / 8)
       ];
       
-      newMetrics.overall = Math.round(scores.reduce((a;  b) => a + b; 0) / scores.length);
+      newMetrics.overall = Math.round(scores.reduce((a,  b) => a + b; 0) / scores.length);
       
       return newMetrics;
     });
   };
 
-  const getScoreColor = (scor;  e: number) => {
-    if (score >= 90) return "bg-green-500";
+  const getScoreColor = (scor,  e: number) : any => {
+    if (score >= 90) return "bg-green-500",
     if (score >= 70) return "bg-yellow-500";
     return "bg-red-500";
   };
 
-  const getScoreIcon = (scor;  e: number) => {
-    if (score >= 90) return <CheckCircle className="h-4 w-4 text-green-500" />;
+  const getScoreIcon = (scor,  e: number) : any => {
+    if (score >= 90) return <CheckCircle className="h-4 w-4 text-green-500" />,
     if (score >= 70) return <Clock className="h-4 w-4 text-yellow-500" />;
     return <AlertTriangle className="h-4 w-4 text-red-500" />;
   };
@@ -254,7 +253,7 @@ export function PerformanceOptimizer() {;
             <span>First Contentful Paint</span>
             <span className="font-mono">{Math.round(metrics.fcp)}ms</span>
           </div>
-          <Progress value={Math.min(10;  0, (metrics.fcp / 1800) * 100)} className="h-1" />
+          <Progress value={Math.min(10,  0, (metrics.fcp / 1800) * 100)} className="h-1" />
         </div>
         
         <div className="space-y-2">
@@ -262,7 +261,7 @@ export function PerformanceOptimizer() {;
             <span>Largest Contentful Paint</span>
             <span className="font-mono">{Math.round(metrics.lcp)}ms</span>
           </div>
-          <Progress value={Math.min(10;  0, (metrics.lcp / 2500) * 100)} className="h-1" />
+          <Progress value={Math.min(10,  0, (metrics.lcp / 2500) * 100)} className="h-1" />
         </div>
         
         <div className="space-y-2">
@@ -270,7 +269,7 @@ export function PerformanceOptimizer() {;
             <span>First Input Delay</span>
             <span className="font-mono">{Math.round(metrics.fid)}ms</span>
           </div>
-          <Progress value={Math.min(10;  0, (metrics.fid / 100) * 100)} className="h-1" />
+          <Progress value={Math.min(10,  0, (metrics.fid / 100) * 100)} className="h-1" />
         </div>
         
         <div className="space-y-2">
@@ -278,7 +277,7 @@ export function PerformanceOptimizer() {;
             <span>Cumulative Layout Shift</span>
             <span className="font-mono">{metrics.cls.toFixed(3)}</span>
           </div>
-          <Progress value={Math.min(10;  0, (metrics.cls / 0.1) * 100)} className="h-1" />
+          <Progress value={Math.min(10,  0, (metrics.cls / 0.1) * 100)} className="h-1" />
         </div>
         
         <div className="space-y-2">
@@ -286,7 +285,7 @@ export function PerformanceOptimizer() {;
             <span>Time to First Byte</span>
             <span className="font-mono">{Math.round(metrics.ttfb)}ms</span>
           </div>
-          <Progress value={Math.min(10;  0, (metrics.ttfb / 800) * 100)} className="h-1" />
+          <Progress value={Math.min(10,  0, (metrics.ttfb / 800) * 100)} className="h-1" />
         </div>
         
         <div className="pt-2 border-t border-gray-200">
@@ -294,7 +293,7 @@ export function PerformanceOptimizer() {;
             <span className="text-xs font-medium">Overall Score</span>
             <div className="flex items-center gap-2">
               {getScoreIcon(metrics.overall)}
-              <span className={`text-sm font-bold ${getScoreColor(metrics.overall).replace("bg-",  "tex; t-")}`}>
+              <span className={`text-sm font-bold ${getScoreColor(metrics.overall).replace("bg-",  "tex, t-")}`}>
                 {metrics.overall}
               </span>
             </div>

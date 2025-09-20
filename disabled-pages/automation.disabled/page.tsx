@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description: "Advanced analytics and data insights for your business"
 }
 
-export default function AnalyticsPage() {
+export default function AnalyticsPage() : any {
   return (
     <div>
       <div className="min-h-screen bg-gray-900 text-white">

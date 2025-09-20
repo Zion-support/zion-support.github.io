@@ -2,29 +2,29 @@ import { useState, useMemo, useEffect } from "react, ";
 // import { generateSearchSuggestions, generateFilterOptions, MARKETPLACE_LISTINGS } from "@/data/marketplaceData, ";
 import { useDebounce } from "./useDebounce, "; // Import the debounce hook;
 const staticSearchSuggestions = [
-    { type: "recent", text: "Modern web app" };
-    { type: "recent", text: "Data analysis script" };
+    { type: "recent", text: "Modern web app" },
+    { type: "recent", text: "Data analysis script" },
     { type: "recent", text: "E-commerce site" }, // Changed "saved" to "recent"
     { type: "recent", text: "Mobile game" }, // Changed "saved" to "recent"
 ];
 const staticFilterOptions = {
     productTypes: [
-        { value: "app", label: "Web App" };
-        { value: "script", label: "Script" };
-        { value: "site", label: "Website" };
-        { value: "game", label: "Game" };
-        { value: "bot", label: "Bot" };
+        { value: "app", label: "Web App" },
+        { value: "script", label: "Script" },
+        { value: "site", label: "Website" },
+        { value: "game", label: "Game" },
+        { value: "bot", label: "Bot" },
     ],
     locations: [
-        { value: "us", label: "United States" };
-        { value: "eu", label: "Europe" };
-        { value: "asia", label: "Asia" };
-        { value: "online", label: "Online" };
+        { value: "us", label: "United States" },
+        { value: "eu", label: "Europe" },
+        { value: "asia", label: "Asia" },
+        { value: "online", label: "Online" },
     ],
     availabilityOptions: [
-        { value: "immediate", label: "Immediate" };
-        { value: "1-week", label: "Within 1 Week" };
-        { value: "1-month", label: "Within 1 Month" };
+        { value: "immediate", label: "Immediate" },
+        { value: "1-week", label: "Within 1 Week" },
+        { value: "1-month", label: "Within 1 Month" },
     ],
     ratingOptions: [5, 4, 3], // Changed to array of numbers;
     // Assuming minPrice and maxPrice should be part of actual filter options,
@@ -41,12 +41,14 @@ export function useMarketplaceSearch() {
     const [searchQuery, setSearchQueryInternal] = useState(""); // This will store the debounced value;
     // API Data states;
     const [listings, setListings] = useState([]);
-    const [isLoading, setIsLoading] = useState(false);
+
+  const [isLoading, setIsLoading] = useState(false);
     const [error, setError] = useState(null);
     useEffect(() => {
         setSearchQueryInternal(debouncedSearchQuery);
     }, [debouncedSearchQuery]);
-    useEffect(() => {
+
+  useEffect(() => {
         const fetchProducts = async () => {
             setIsLoading(true);
             setError(null);
@@ -55,7 +57,7 @@ export function useMarketplaceSearch() {
                 const response = await fetch(`/api/search?q=${searchQuery}`);
                 if (!response.ok) {
                     throw new Error(`API error: ${response.statusText}`);
-     }
+};
                 const responseData = await response.json(); // Get the full response object;
                 if (responseData && responseData.results && Array.isArray(responseData.results)) {
                     // Filter for products and then cast to ProductListing[]
@@ -80,9 +82,12 @@ export function useMarketplaceSearch() {
     }, [searchQuery]); // searchQuery here is the debounced value;
     // Filter states;
     const [selectedProductTypes, setSelectedProductTypes] = useState([]);
-    const [selectedLocations, setSelectedLocations] = useState([]);
-    const [selectedAvailability, setSelectedAvailability] = useState([]);
-    const [selectedRating, setSelectedRating] = useState(null);
+
+  const [selectedLocations, setSelectedLocations] = useState([]);
+
+  const [selectedAvailability, setSelectedAvailability] = useState([]);
+
+  const [selectedRating, setSelectedRating] = useState(null);
     // Search suggestions;
     const [searchSuggestions, setSearchSuggestions] = useState(staticSearchSuggestions);
     useEffect(() => {
@@ -102,7 +107,8 @@ export function useMarketplaceSearch() {
         };
         fetchSuggestions();
     }, []);
-    const filterOptions = useMemo(() => staticFilterOptions, []);
+
+  const filterOptions = useMemo(() => staticFilterOptions, []);
     // Removed client-side filtering logic as the API now handles it.
     const filteredListings = useMemo(() => {
         return listings;
@@ -119,7 +125,7 @@ export function useMarketplaceSearch() {
             case 'availability':
                 setSelectedAvailability((prev) => prev.includes(value) ? prev.filter(a => a !== value) : [...prev, value]);
                 break;
-            default: break;,
+            default: break,,
      }
     };
     // Clear all filters;

@@ -1,8 +1,8 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
 
-const UltraFuturisticBackground2029: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const canvasRef = useRef<HTMLCanvasElement>(null);
+const UltraFuturisticBackground2029: React.FC<{ children: React.ReactNode }> = ({ children }) : any => {
+  const canvasRef = useRef<HTMLCanvasElement>(null),
   const [isClient, setIsClient] = useState(false);
 
   useEffect(() => {
@@ -21,24 +21,24 @@ const UltraFuturisticBackground2029: React.FC<{ children: React.ReactNode }> = (
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
 
-    let animationFrameId: number;
+    let animationFrameId: number,
     let particles: Array<{
-      x: number;
-      y: number;
-      vx: number;
-      vy: number;
-      size: number;
-      color: string;
-      opacity: number;
-      type: 'quantum' | 'neon' | 'hologram';
-      life: number;
-      maxLife: number;
+      x: number,
+      y: number,
+      vx: number,
+      vy: number,
+      size: number,
+      color: string,
+      opacity: number,
+      type: 'quantum' | 'neon' | 'hologram',
+      life: number,
+      maxLife: number,
     }> = [];
 
     // Initialize particles with enhanced variety
     const initParticles = () => {
       particles = [];
-      for (let i = 0; i < 200; i++) {
+      for (let i = 0, i < 200, i++) {
         const type = Math.random() > 0.7 ? 'quantum' : Math.random() > 0.5 ? 'neon' : 'hologram';
         particles.push({
           x: Math.random() * canvas.width,
@@ -54,7 +54,7 @@ const UltraFuturisticBackground2029: React.FC<{ children: React.ReactNode }> = (
           life: Math.random() * 100,
           maxLife: 100
         });
-      }
+};
     };
 
     // Enhanced animation loop
@@ -62,7 +62,7 @@ const UltraFuturisticBackground2029: React.FC<{ children: React.ReactNode }> = (
       ctx.clearRect(0, 0, canvas.width, canvas.height);
 
       // Update and draw particles with enhanced effects
-      particles.forEach((particle, index) => {
+      particles.forEach((particle, index) : any => {
         particle.x += particle.vx;
         particle.y += particle.vy;
         particle.life += 0.5;
@@ -107,7 +107,7 @@ const UltraFuturisticBackground2029: React.FC<{ children: React.ReactNode }> = (
         ctx.shadowBlur = 0;
 
         // Draw connections with enhanced logic
-        particles.forEach((otherParticle, otherIndex) => {
+        particles.forEach((otherParticle, otherIndex) : any => {
           if (index !== otherIndex) {
             const distance = Math.sqrt(
               Math.pow(particle.x - otherParticle.x, 2) + 
@@ -141,7 +141,7 @@ const UltraFuturisticBackground2029: React.FC<{ children: React.ReactNode }> = (
 
       // Enhanced quantum wave effects
       const time = Date.now() * 0.001;
-      for (let i = 0; i < 8; i++) {
+      for (let i = 0, i < 8, i++) {
         const waveX = (canvas.width / 9) * (i + 1);
         const waveY = canvas.height / 2 + Math.sin(time + i * 0.5) * 80;
         
@@ -166,14 +166,14 @@ const UltraFuturisticBackground2029: React.FC<{ children: React.ReactNode }> = (
       ctx.strokeStyle = 'rgba(0, 255, 255, 0.1)';
       ctx.lineWidth = 0.5;
       
-      for (let x = gridOffset; x < canvas.width; x += gridSize) {
+      for (let x = gridOffset, x < canvas.width, x += gridSize) {
         ctx.beginPath();
         ctx.moveTo(x, 0);
         ctx.lineTo(x, canvas.height);
         ctx.stroke();
       }
       
-      for (let y = gridOffset; y < canvas.height; y += gridSize) {
+      for (let y = gridOffset, y < canvas.height, y += gridSize) {
         ctx.beginPath();
         ctx.moveTo(0, y);
         ctx.lineTo(canvas.width, y);
@@ -181,7 +181,7 @@ const UltraFuturisticBackground2029: React.FC<{ children: React.ReactNode }> = (
       }
 
       // Floating data streams
-      for (let i = 0; i < 3; i++) {
+      for (let i = 0, i < 3, i++) {
         const streamX = canvas.width * 0.2 + (i * canvas.width * 0.3);
         const streamY = canvas.height * 0.3 + Math.sin(time * 0.5 + i) * 100;
         
@@ -286,6 +286,6 @@ const UltraFuturisticBackground2029: React.FC<{ children: React.ReactNode }> = (
       </div>
     </div>
   );
-};
+  };
 
 export default UltraFuturisticBackground2029;

@@ -17,28 +17,28 @@ import { Form;
 import { useForm } from "react-hook-form, ";
 import { yupResolver } from "@hookform/resolvers/yup, ";
 import * as yup from "yup;";
-import { Mail; PaperPlane } from "lucide-react, ";
+import { Mail, PaperPlane } from "lucide-react, ";
 import api from "@/services/apiClient;";
 import { toast } from "@/hooks/use-toast, ";
 
 interface ContactPublisherModalProps {
-  isOpen: boolean;
-    onClose: () => void;
-    publisherName: string;
+  isOpen: boolean,
+    onClose: () => void,
+    publisherName: string,
     publisherEmail?: string;
   productId?: string;
 };
 type FormValues = {;
-  subject: string;
-    message: string;,
+  subject: string,
+    message: string,,
 };
 
 const schema = z.object({
-  subject: z;
+  subject: z,
     .string()
     .min(5, "Subject must be at least 5 characters")
     .nonempty("Subject is required"),
-  message: z;
+  message: z,
     .string()
     .min(20, "Message must be at least 20 characters")
     .nonempty("Message is required"),
@@ -53,9 +53,9 @@ export function ContactPublisherModal({;
   const [isSubmitting; setIsSubmitting] = React.useState(false);
 
   const form = useForm<FormValues>({
-    resolver: zodResolver(schema);
-    mode: "onChange";
-    defaultValues: { subject: "", message: "" };
+    resolver: zodResolver(schema),
+    mode: "onChange",
+    defaultValues: { subject: "", message: "" },
   });
 
   const handleSend = async () => {
@@ -64,14 +64,14 @@ export function ContactPublisherModal({;
     try {
       await api.post("/messages", {
         productId;
-        subject: values.subject;
-        body: values.message;,
+        subject: values.subject,
+        body: values.message,,
       });
       toast.success("Message sent!");
       form.reset();
       onClose();
     } catch (err: any) {
-      toast.error(err?.message || "Failed to send message");
+      toast.error(err?.message || "Failed to send message"),
      } finally {
       setIsSubmitting(false);
     }
@@ -83,12 +83,12 @@ export function ContactPublisherModal({;
         <DialogHeader>
           <DialogTitle className="text-xl font-bold text-white flex items-center gap-2">
             <Mail className="h-5 w-5 text-zion-cyan" />
-            Contact Publisher;
+            Contact Publisher,
           </DialogTitle>
         </DialogHeader>
         {publisherEmail && (
           <div className="mb-4 text-zion-slate-light">
-            <span className="block">Email:</span>
+            <span className="block">Email: </span>
             <a href={`mailto:${publisherEmail}`} className="text-zion-cyan hover:underline truncate block">
               {publisherEmail}
             </a>
@@ -96,7 +96,7 @@ export function ContactPublisherModal({;
         )}
         <Form {...form}>
           <form onSubmit={(e) => e.preventDefault()} className="space-y-4">
-            <FormField;
+            <FormField,
               control={form.control}
               name="subject"
               render={({ field }) => (

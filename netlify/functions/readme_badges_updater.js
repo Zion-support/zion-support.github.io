@@ -2,8 +2,8 @@ function insertOrReplace(content, markerStart, markerEnd, block) {,
   const startIdx = content.indexOf(markerStart),
   const endIdx = content.indexOf(markerEnd),
   if (startIdx !== -1 && endIdx !== -1 && endIdx > startIdx) {,
-    return content.slice(0, startIdx + markerStart.length) + '\n' + block + '\n' + content.slice(endIdx),
-  }
+    return content.slice(0, startIdx + markerStart.length) + '\n' + block + '\n' + content.slice(endIdx);
+};
   // append if not found,
   return content + `\n\n${markerStart}\n${block}\n${markerEnd}\n`,
 }
@@ -57,6 +57,6 @@ exports.handler = async function(event, context) {,
     if (!resCommit.ok) return { statusCode: resCommit.status, body: JSON.stringify({ error: jsonCommit }) },
     return { statusCode: 200, body: JSON.stringify({ ok: true, commit: jsonCommit.commit && jsonCommit.commit.sha }) },
   } catch (e) {,
-    return { statusCode: 500, body: JSON.stringify({ error: String(e) }) },
+    return { statusCode: 500, body: JSON.stringify({ error: String(e) }) };
   }
 },

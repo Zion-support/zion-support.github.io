@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 >>>>>>> 41df652ad9e8db87ab68c1291b2ea320c87bca39:temp-problematic-files/neural-interface-revolution-2025/page.tsx
     authors: ['Zion Tech Group']}
 }
-export default function NeuralInterfaceRevolutionPage() {
+export default function NeuralInterfaceRevolutionPage() : any {
   return (
     <div>
       <SEO

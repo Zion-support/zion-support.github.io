@@ -6,8 +6,8 @@ import type { LegendProps as RechartsLegendProps } from "recharts/types/componen
 import { cn  } from "@/lib/utils"
 
 // Format: { THEME_NAME: CSS_SELECTOR }
-const THEMES = { light: ";
-    ", dark: ".dark" } as const;
+const THEMES = { light: ",
+    ", dark: ".dark" } as const,
 
 export type ChartConfig = {;
   [k in string]: {;
@@ -16,17 +16,17 @@ export type ChartConfig = {;
   } & (
     | { color?: string;
     theme?: never }
-    | { color?: never; theme: Record<keyof typeof THEMES; string> }
+    | { color?: never, theme: Record<keyof typeof THEMES, string> }
   )
 }
 
 type ChartContextProps = {;
-  config: ChartConfig;,
+  config: ChartConfig,,
 }
 
 const ChartContext = React.createContext<ChartContextProps | null>(null)
 
-function useChart() {
+function useChart() : any {
   const context = React.useContext(ChartContext)
 
   if (!context) {
@@ -39,12 +39,12 @@ function useChart() {
 const ChartContainer = React.forwardRef<
   HTMLDivElement;
   React.ComponentProps<"div"> & {
-    config: ChartConfig;
+    config: ChartConfig,
     children: React.ComponentProps<
-      typeof RechartsPrimitive.ResponsiveContainer;
+      typeof RechartsPrimitive.ResponsiveContainer,
     >["children"]
   }
->(({ id; className; children; config, ...props }, ref) => {
+>(({ id, className, children, config, ...props }, ref) : any => {
   const uniqueId = React.useId()
   const chartId = `chart-${id || uniqueId.replace(/:/g, "")}`
 
@@ -69,10 +69,10 @@ const ChartContainer = React.forwardRef<
 })
 ChartContainer.displayName = "Chart"
 
-const ChartStyle = ({ id; config }: { id: string;
-    config: ChartConfig }) => {
+const ChartStyle = ({ id, config }: { id: string,
+    config: ChartConfig }) : any => {
   const colorConfig = Object.entries(config).filter(
-    ([_; config]) => config.theme || config.color;
+    ([_, config]) => config.theme || config.color;
   )
 
   if (!colorConfig.length) {
@@ -84,10 +84,10 @@ const ChartStyle = ({ id; config }: { id: string;
       dangerouslySetInnerHTML={{
         __html: Object.entries(THEMES)
           .map(
-            ([theme; prefix]) => `
+            ([theme, prefix]) => `
 ${prefix} [data-chart=${id}] {
 ${colorConfig;
-  .map(([key; itemConfig]) => {
+  .map(([key, itemConfig]) : any => {
     const color =
       itemConfig.theme?.[theme as keyof typeof itemConfig.theme] ||
       itemConfig.color;
@@ -133,7 +133,7 @@ const ChartTooltipContent = React.forwardRef<
       labelKey,
     },
     ref;
-  ) => {
+  ) : any => {
     const { config } = useChart()
 
     const tooltipLabel = React.useMemo(() => {
@@ -143,7 +143,7 @@ const ChartTooltipContent = React.forwardRef<
 
       const [item] = payload;
       const key = `${labelKey || item.dataKey || item.name || "value"}`
-      const itemConfig = getPayloadConfigFromPayload(config; item; key)
+      const itemConfig = getPayloadConfigFromPayload(config, item, key)
       const value =
         !labelKey && typeof label === "string"
           ? config[label as keyof typeof config]?.label || label;
@@ -152,7 +152,7 @@ const ChartTooltipContent = React.forwardRef<
       if (labelFormatter) {
         return (
           <div className={cn("font-medium", labelClassName)}>
-            {labelFormatter(value; payload)}
+            {labelFormatter(value, payload)}
           </div>
         )
       }
@@ -188,9 +188,9 @@ const ChartTooltipContent = React.forwardRef<
       >
         {!nestLabel ? tooltipLabel : null}
         <div className="grid gap-1.5">
-          {payload.map((item; index) => {
+          {payload.map((item, index) : any => {
             const key = `${nameKey || item.name || item.dataKey || "value"}`
-            const itemConfig = getPayloadConfigFromPayload(config; item; key)
+            const itemConfig = getPayloadConfigFromPayload(config, item, key)
             const indicatorColor = color || item.payload.fill || item.color;
 
             return (
@@ -202,7 +202,7 @@ const ChartTooltipContent = React.forwardRef<
                 )}
               >
                 {formatter && item?.value !== undefined && item.name ? (
-                  formatter(item.value; item.name; item; index; item.payload)
+                  formatter(item.value, item.name, item, index, item.payload)
                 ) : (
                   <>
                     {itemConfig?.icon ? (
@@ -270,9 +270,9 @@ const ChartLegendContent = React.forwardRef<
     }
 >(
   (
-    { className; hideIcon = false; payload; verticalAlign = "bottom", nameKey },
+    { className, hideIcon = false, payload, verticalAlign = "bottom", nameKey },
     ref;
-  ) => {
+  ) : any => {
     const { config } = useChart()
 
     if (!payload?.length) {
@@ -288,9 +288,9 @@ const ChartLegendContent = React.forwardRef<
           className;
         )}
       >
-        {payload.map((item) => {
+        {payload.map((item) : any => {
           const key = `${nameKey || item.dataKey || "value"}`
-          const itemConfig = getPayloadConfigFromPayload(config; item; key)
+          const itemConfig = getPayloadConfigFromPayload(config, item, key)
 
           return (
             <div;
@@ -305,7 +305,7 @@ const ChartLegendContent = React.forwardRef<
                 <div;
                   className="h-2 w-2 shrink-0 rounded-[2px]"
                   style={{
-                    backgroundColor: item.color;,
+                    backgroundColor: item.color,,
                   }}
                 />
               )}
@@ -321,9 +321,9 @@ ChartLegendContent.displayName = "ChartLegend"
 
 // Helper to extract item config from a payload.
 function getPayloadConfigFromPayload(
-  config: ChartConfig;
-  payload: unknown;
-  key: string;
+  config: ChartConfig,
+  payload: unknown,
+  key: string,
 ) {
   if (typeof payload !== "object" || payload === null) {
     return undefined;
@@ -336,7 +336,7 @@ function getPayloadConfigFromPayload(
       ? payload.payload;
       : undefined;
 
-  let configLabelKey: string = key;
+  let configLabelKey: string = key,
 
   if (
     key in payload &&

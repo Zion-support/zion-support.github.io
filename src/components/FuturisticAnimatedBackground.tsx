@@ -12,4 +12,4 @@ export default function FuturisticAnimatedBackground(props: any) {return (,
       </div>",
     </div>,;
   ),,',;
-"}, ";<//div><///div>
+"}, ";<//div><///div>'

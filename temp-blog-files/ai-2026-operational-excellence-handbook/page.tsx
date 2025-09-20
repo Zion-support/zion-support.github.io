@@ -3,7 +3,7 @@ export const metadata = {
   description:
     'A concise handbook for safe, reliable, and efficient day-2 operations of autonomous agent platforms.'
 }
-export default function Page() {
+export default function Page() : any {
   return (
     <main className="min-h-screen bg-white">
       <section className="py-16 bg-gradient-to-r from-blue-50 to-indigo-50">
@@ -42,7 +42,7 @@ export const metadata = {
     'Practical handbook to run safe, reliable, and cost‑efficient autonomous agent platforms at scale.'
   keywords: ['operational excellenceagentsreliabilitycost optimization', 'governance']
 }
-export default function OperationalExcellenceHandbookPage() {
+export default function OperationalExcellenceHandbookPage() : any {
   return (
     <div>
       <SEO

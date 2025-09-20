@@ -190,6 +190,6 @@ const RevolutionaryTechShowcase2026Banner = () => {,
         </div>,
       </div>,
     </div>,
-  ),
-},
+  );
+  },
 export default RevolutionaryTechShowcase2026Banner,

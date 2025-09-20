@@ -1,7 +1,7 @@
 import { ReactNode } from "react";
 
 interface EnhancedLayoutProps {
-  children: ReactNode;
+  children: ReactNode,
 }
 
 export default function EnhancedLayout({ children }: EnhancedLayoutProps) {

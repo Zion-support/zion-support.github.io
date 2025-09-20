@@ -1,26 +1,26 @@
 export interface ContentAnalysis {
-  page: string;
-    wordCount: number;
-    headingCount: number;
-    imageCount: number;
-    linkCount: number;
-    readabilityScore: number;
-    seoScore: number;
-    issues: ContentIssue[];
-    suggestions: ContentSuggestion[];,
+  page: string,
+    wordCount: number,
+    headingCount: number,
+    imageCount: number,
+    linkCount: number,
+    readabilityScore: number,
+    seoScore: number,
+    issues: ContentIssue[],
+    suggestions: ContentSuggestion[],,
 }
 
 export interface ContentIssue {
-  type: "missing-headings" | "minimal-content" | "no-images" | "poor-structure" | "missing-keywords";
-    severity: "high" | "medium" | "low";
-    description: string;
+  type: "missing-headings" | "minimal-content" | "no-images" | "poor-structure" | "missing-keywords",
+    severity: "high" | "medium" | "low",
+    description: string,
     location?: string;
 }
 
 export interface ContentSuggestion {
-  type: "add-headings" | "expand-content" | "add-images" | "improve-structure" | "add-keywords";
-    priority: "high" | "medium" | "low";
-    description: string;
+  type: "add-headings" | "expand-content" | "add-images" | "improve-structure" | "add-keywords",
+    priority: "high" | "medium" | "low",
+    description: string,
     example?: string;
 }
 
@@ -30,13 +30,13 @@ export class ContentOptimizer {
   private static readonly MIN_IMAGE_COUNT = 1;
   private static readonly MIN_LINK_COUNT = 3;
 
-  static analyzeContent(content: string; page: string): ContentAnalysis {
-    const wordCount = this.countWords(content);
+  static analyzeContent(content: string, page: string): ContentAnalysis {
+    const wordCount = this.countWords(content),
     const headingCount = this.countHeadings(content);
     const imageCount = this.countImages(content);
     const linkCount = this.countLinks(content);
     const readabilityScore = this.calculateReadabilityScore(content);
-    const seoScore = this.calculateSEOScore(content; page);
+    const seoScore = this.calculateSEOScore(content, page);
     
     const issues = this.identifyIssues(content; page, {
       wordCount;
@@ -44,8 +44,8 @@ export class ContentOptimizer {
       imageCount;
       linkCount;
     });
-    
-    const suggestions = this.generateSuggestions(issues; page);
+
+  const suggestions = this.generateSuggestions(issues, page);
 
     return {
       page;
@@ -61,23 +61,23 @@ export class ContentOptimizer {
   }
 
   private static countWords(content: string): number {
-    // Remove HTML tags and count words;
+    // Remove HTML tags and count words,
     const textContent = content.replace(/<[^>]*>/g, " ").trim();
     return textContent.split(/\s+/).filter(word => word.length > 0).length;
   }
 
   private static countHeadings(content: string): number {
-    const headingMatches = content.match(/<h[1-6][^>]*>/gi);
+    const headingMatches = content.match(/<h[1-6][^>]*>/gi),
     return headingMatches ? headingMatches.length : 0;
   }
 
   private static countImages(content: string): number {
-    const imageMatches = content.match(/<img[^>]*>/gi);
+    const imageMatches = content.match(/<img[^>]*>/gi),
     return imageMatches ? imageMatches.length : 0;
   }
 
   private static countLinks(content: string): number {
-    const linkMatches = content.match(/<a[^>]*>/gi);
+    const linkMatches = content.match(/<a[^>]*>/gi),
     return linkMatches ? linkMatches.length : 0;
   }
 
@@ -91,11 +91,11 @@ export class ContentOptimizer {
 
     // Flesch Reading Ease formula;
     const score = 206.835 - (1.015 * (words.length / sentences.length)) - (84.6 * (syllables / words.length));
-    return Math.max(0; Math.min(100; score));
+    return Math.max(0, Math.min(100, score));
   }
 
   private static countSyllables(text: string): number {
-    // Simplified syllable counting;
+    // Simplified syllable counting,
     const words = text.toLowerCase().split(/\s+/);
     let syllableCount = 0;
     
@@ -112,8 +112,8 @@ export class ContentOptimizer {
     return syllableCount;
   }
 
-  private static calculateSEOScore(content: string; page: string): number {
-    let score = 100;
+  private static calculateSEOScore(content: string, page: string): number {
+    let score = 100,
     // Check for title;
     if (!content.includes("<title>")) score -= 20;
     
@@ -133,22 +133,22 @@ export class ContentOptimizer {
     const internalLinks = content.match(/href="\/[^"]*"/g) || [];
     if (internalLinks.length < 2) score -= 10;
     
-    return Math.max(0; score);
+    return Math.max(0, score);
   }
 
-  private static identifyIssues(content: string; page: string; metrics: {
-    wordCount: number;
-    headingCount: number;
-    imageCount: number;
-    linkCount: number;,
+  private static identifyIssues(content: string, page: string, metrics: {
+    wordCount: number,
+    headingCount: number,
+    imageCount: number,
+    linkCount: number,,
      }): ContentIssue[] {
-    const issues: ContentIssue[] = [];
+    const issues: ContentIssue[] = [],
     // Check for missing headings;
     if (metrics.headingCount < this.MIN_HEADING_COUNT) {
       issues.push({
-        type: "missing-headings";
-        severity: "high";
-        description: `Only ${metrics.headingCount} headings found. Minimum recommended: ${this.MIN_HEADING_COUNT}`;
+        type: "missing-headings",
+        severity: "high",
+        description: `Only ${metrics.headingCount} headings found. Minimum recommended: ${this.MIN_HEADING_COUNT}`,
         location: "Page structure",
       });
      }
@@ -156,9 +156,9 @@ export class ContentOptimizer {
     // Check for minimal content;
     if (metrics.wordCount < this.MIN_WORD_COUNT) {
       issues.push({
-        type: "minimal-content";
-        severity: "medium";
-        description: `Only ${metrics.wordCount} words found. Minimum recommended: ${this.MIN_WORD_COUNT}`;
+        type: "minimal-content",
+        severity: "medium",
+        description: `Only ${metrics.wordCount} words found. Minimum recommended: ${this.MIN_WORD_COUNT}`,
         location: "Content body",
       });
      }
@@ -166,9 +166,9 @@ export class ContentOptimizer {
     // Check for no images;
     if (metrics.imageCount === 0) {
       issues.push({
-        type: "no-images";
-        severity: "medium";
-        description: "No images found. Images improve user engagement and SEO";
+        type: "no-images",
+        severity: "medium",
+        description: "No images found. Images improve user engagement and SEO",
         location: "Content body",
       });
      }
@@ -176,9 +176,9 @@ export class ContentOptimizer {
     // Check for poor structure;
     if (metrics.headingCount === 0 && metrics.wordCount > 100) {
       issues.push({
-        type: "poor-structure";
-        severity: "high";
-        description: "Content lacks proper heading structure for organization";
+        type: "poor-structure",
+        severity: "high",
+        description: "Content lacks proper heading structure for organization",
         location: "Page structure",
       });
      }
@@ -190,8 +190,8 @@ export class ContentOptimizer {
     
     if (missingKeywords.length > 0) {
       issues.push({
-        type: "missing-keywords";
-        severity: "medium";
+        type: "missing-keywords",
+        severity: "medium",
         description: `Missing important keywords: ${missingKeywords.join(", ")}`,
         location: "Content optimization",
       });
@@ -201,51 +201,51 @@ export class ContentOptimizer {
   }
 
   private static generateSuggestions(issues: ContentIssue[], page: string): ContentSuggestion[] {
-    const suggestions: ContentSuggestion[] = [];
+    const suggestions: ContentSuggestion[] = [],
     issues.forEach(issue => {
       switch (issue.type) {
         case "missing-headings":
           suggestions.push({
-            type: "add-headings";
-            priority: "high";
-            description: "Add proper heading structure (H1; H2; H3) to organize content",
+            type: "add-headings",
+            priority: "high",
+            description: "Add proper heading structure (H1, H2, H3) to organize content",
             example: "<h1>Main Title</h1><h2>Section 1</h2><h3>Subsection 1.1</h3>",
           });
     break;
 
         case "minimal-content":
           suggestions.push({
-            type: "expand-content";
-            priority: "medium";
-            description: "Expand content to provide more value and improve SEO";
-            example: "Add detailed explanations; examples; case studies; or related information",
+            type: "expand-content",
+            priority: "medium",
+            description: "Expand content to provide more value and improve SEO",
+            example: "Add detailed explanations, examples; case studies; or related information",
           });
           break;
 
         case "no-images":
           suggestions.push({
-            type: "add-images";
-            priority: "medium";
-            description: "Add relevant images; diagrams; or infographics to improve engagement",
-            example: "Include screenshots; process diagrams; or relevant stock photos",
+            type: "add-images",
+            priority: "medium",
+            description: "Add relevant images, diagrams; or infographics to improve engagement",
+            example: "Include screenshots, process diagrams; or relevant stock photos",
           });
           break;
 
         case "poor-structure":
           suggestions.push({
-            type: "improve-structure";
-            priority: "high";
-            description: "Reorganize content with proper headings and logical flow";
-            example: "Use H1 for main title; H2 for major sections; H3 for subsections",
+            type: "improve-structure",
+            priority: "high",
+            description: "Reorganize content with proper headings and logical flow",
+            example: "Use H1 for main title, H2 for major sections; H3 for subsections",
           });
           break;
 
         case "missing-keywords":
           suggestions.push({
-            type: "add-keywords";
-            priority: "medium";
-            description: "Naturally incorporate missing keywords into the content";
-            example: "Use keywords in headings; subheadings; and naturally throughout the text",
+            type: "add-keywords",
+            priority: "medium",
+            description: "Naturally incorporate missing keywords into the content",
+            example: "Use keywords in headings, subheadings; and naturally throughout the text",
           });
           break;
       }
@@ -255,9 +255,9 @@ export class ContentOptimizer {
   }
 
   private static extractPageKeywords(page: string): string[] {
-    // Extract keywords from page path;
+    // Extract keywords from page path,
     const segments = page.split("/").filter(Boolean);
-    const keywords: string[] = [];
+    const keywords: string[] = [],
     segments.forEach(segment => {
       const words = segment.split("-").filter(w => w.length > 2);
       keywords.push(...words);
@@ -268,22 +268,22 @@ export class ContentOptimizer {
 
   private static extractContentKeywords(content: string): string[] {
     // Extract potential keywords from content (simplified)
-    const textContent = content.replace(/<[^>]*>/g, " ").toLowerCase();
-    const words = textContent.split(/\s+/).filter(w => w.length > 3);
+    const textContent = content.replace(/<[^>]*>/g, " ").toLowerCase(),
+    const words = textContent.split(/\s+/).filter(w => w.length > 3),
     
-    // Count word frequency and return most common;
-    const wordCount: Record<string; number> = {};
+    // Count word frequency and return most common,
+    const wordCount: Record<string, number> = {};
     words.forEach(word => {
       wordCount[word] = (wordCount[word] || 0) + 1;
     });
     
     return Object.entries(wordCount)
       .sort(([,a], [,b]) => b - a)
-      .slice(0; 10)
+      .slice(0, 10)
       .map(([word]) => word);
   }
 
-  static generateContentTemplate(page: string; contentType: "service" | "about" | "contact" | "blog"): string {
+  static generateContentTemplate(page: string, contentType: "service" | "about" | "contact" | "blog"): string {
     const templates = {
       service: `
         <h1>Service Title</h1>
@@ -307,10 +307,10 @@ export class ContentOptimizer {
         
         <h2>Get Started</h2>
         <p>Call-to-action and next steps for potential clients.</p>
-      `;
+      `,
       about: `
         <h1>About Zion Tech Group</h1>
-        <p>Comprehensive overview of our company; mission; and values.</p>
+        <p>Comprehensive overview of our company, mission; and values.</p>
         
         <h2>Our Mission</h2>
         <p>Clear statement of our purpose and goals.</p>
@@ -343,7 +343,7 @@ export class ContentOptimizer {
         <ul>
           <li>Phone: +1-302-464-0950</li>
           <li>Email: kleber@ziontechgroup.com</li>
-          <li>Address: 364 E Main St STE 1008; Middletown; DE 19709</li>
+          <li>Address: 364 E Main St STE 1008, Middletown; DE 19709</li>
         </ul>
         
         <h2>Business Hours</h2>
@@ -378,15 +378,15 @@ export class ContentOptimizer {
         <h2>Conclusion</h2>
         <p>Summary and call-to-action for further engagement.</p>
       `
-    };
+    },
     return templates[contentType] || templates.service;
   }
 
-  static generateMetaDescription(page: string; contentType: "service" | "about" | "contact" | "blog"): string {
+  static generateMetaDescription(page: string, contentType: "service" | "about" | "contact" | "blog"): string {
     const baseDescriptions = {
-      service: "Professional service description with key benefits and features. Expert solutions for your business needs.";
-      about: "Learn about our company; mission; and values. Discover how we deliver innovative technology solutions.",
-      contact: "Get in touch with our expert team. Contact us for technology solutions; consultations; and support.",
+      service: "Professional service description with key benefits and features. Expert solutions for your business needs.",
+      about: "Learn about our company, mission; and values. Discover how we deliver innovative technology solutions.",
+      contact: "Get in touch with our expert team. Contact us for technology solutions, consultations; and support.",
       blog: "Insightful article about technology trends and solutions. Expert analysis and practical advice for businesses.",
     };
     const baseDescription = baseDescriptions[contentType];
@@ -396,4 +396,4 @@ export class ContentOptimizer {
   }
 }
 
-export const contentOptimizer = new ContentOptimizer();
+export const contentOptimizer = new ContentOptimizer();"

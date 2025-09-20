@@ -12,8 +12,8 @@ async function analyzeBundle() {,
       require.resolve(BUNDLE_ANALYZER_PACKAGE),
     } catch {,
       console.log(`📦 Installing ${BUNDLE_ANALYZER_PACKAGE}...`),
-      execSync(`npm install --save-dev ${BUNDLE_ANALYZER_PACKAGE}`, { stdio: 'inherit' }),
-    }
+      execSync(`npm install --save-dev ${BUNDLE_ANALYZER_PACKAGE}`, { stdio: 'inherit' });
+};
     // Build the project,
     console.log('🏗️  Building project...'),
     execSync('npm run build', { stdio: 'inherit' }),
@@ -24,8 +24,8 @@ async function analyzeBundle() {,
     generateBundleReport(),
   } catch (error) {,
     console.error('❌ Bundle analysis failed:', error.message),
-    process.exit(1),
-  }
+    process.exit(1);
+};
 }
 function generateBundleReport() {,
   const distPath = path.join(process.cwd(), 'dist'),
@@ -60,22 +60,22 @@ function generateBundleReport() {,
     largeFiles.forEach(file => {,
       console.log(`   - ${file.name}: ${file.sizeKB} KB`),
     }),
-    console.log('   Consider code splitting or lazy loading for these components.'),
-  }
+    console.log('   Consider code splitting or lazy loading for these components.');
+};
   const mediumFiles = jsFiles.filter(file => file.size > 50 * 1024 && file.size <= 100 * 1024),
   if (mediumFiles.length > 0) {,
     console.log('⚠️  Medium files: '),
     mediumFiles.forEach(file => {,
       console.log(`   - ${file.name}: ${file.sizeKB} KB`),
-    }),
-  }
+    });
+};
   // Performance tips,
   console.log('\n🚀 Performance Tips: '),
   console.log('   - Use React.lazy() for route-based code splitting'),
   console.log('   - Implement dynamic imports for heavy components'),
   console.log('   - Consider using webpack-bundle-analyzer for detailed analysis'),
   console.log('   - Optimize images and use modern formats (WebP, AVIF)'),
-  console.log('   - Enable gzip compression on your server'),
-}
+  console.log('   - Enable gzip compression on your server');
+  }
 // Run analysis,
 analyzeBundle().catch(console.error),

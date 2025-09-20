@@ -55,8 +55,8 @@ export async function fetchOnboardingProgress(userId: stringrole: 'talent' | 'cl
       .maybeSingle(),
     if (error) {,
       // eslint-disable-next-line no-console,
-      console.warn('Supabase onboarding fetch error:', (error as any).message || String(error)),
-    }
+      console.warn('Supabase onboarding fetch error:', (error as any).message || String(error));
+};
     return (data as OnboardingRecord | null) ?? null,
   } catch (e) {,
     // eslint-disable-next-line no-console,
@@ -72,5 +72,5 @@ export function fallbackTalentProgress(): TalentOnboarding {,
 ,
 export function fallbackClientProgress(): ClientOnboarding {,
   return {,
-    job_posted: truetalent_invited: falsequote_received: falsefirst_hire_complete: false},
-}
+    job_posted: truetalent_invited: falsequote_received: falsefirst_hire_complete: false};
+  }

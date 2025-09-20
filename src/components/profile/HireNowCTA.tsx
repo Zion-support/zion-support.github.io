@@ -1,47 +1,49 @@
 import React, { useState } from "react;";
 import { Button } from "../ui/Button, ";
-import { Card; CardContent; CardHeader; CardTitle } from "../ui/Card, ";
+import { Card, CardContent, CardHeader, CardTitle } from "../ui/Card, ";
 import { Input } from "../ui/Input, ";
 import { Textarea } from "../ui/Textarea, ";
-import { Mail; Calendar; DollarSign; MessageSquare } from "lucide-react, ";
+import { Mail, Calendar, DollarSign, MessageSquare } from "lucide-react, ";
 
 interface HireNowCTAProps {
-  talentName: string;
+  talentName: string,
     hourlyRate?: number;
-  onHire?: (data: HireData) => void;,
+  onHire?: (data: HireData) => void,,
 };
 interface HireData {
-  projectDescription: string;
-    budget: string;
-    startDate: string;
-    message: string;,
+  projectDescription: string,
+    budget: string,
+    startDate: string,
+    message: string,,
 };
-export function HireNowCTA({ talentName; hourlyRate; onHire }: HireNowCTAProps) {
+export function HireNowCTA({ talentName, hourlyRate, onHire }: HireNowCTAProps) {
   const [isFormOpen; setIsFormOpen] = useState(false);
   const [formData; setFormData] = useState<HireData>({
-    projectDescription: "";
-    budget: "";
-    startDate: "";
+    projectDescription: "",
+    budget: "",
+    startDate: "",
     message: "",
   });
-    const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
+
+  const handleSubmit = (e: React.FormEvent) : any => {
+    e.preventDefault(),
     if (onHire) {
       onHire(formData);
     }
     // Reset form and close;
     setFormData({
-      projectDescription: "";
-      budget: "";
-      startDate: "";
+      projectDescription: "",
+      budget: "",
+      startDate: "",
       message: "",
     });
+
     setIsFormOpen(false);
   };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) : any => {
     setFormData(prev => ({
-      ...prev;
+      ...prev,
       [e.target.name]: e.target.value;
     }));
   };
@@ -68,9 +70,9 @@ export function HireNowCTA({ talentName; hourlyRate; onHire }: HireNowCTAProps) 
             </p>
             <Button;
               onClick={() => setIsFormOpen(true)}
-              className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple"
+              className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple"
             >
-              Start Project Discussion;
+              Start Project Discussion,
             </Button>
           </div>
         ) : (
@@ -85,8 +87,8 @@ export function HireNowCTA({ talentName; hourlyRate; onHire }: HireNowCTAProps) 
                 value={formData.projectDescription}
                 onChange={handleChange}
                 placeholder="Describe your project requirements..."
-                className="bg-zion-blue border-zion-blue-light text-white placeholder:text-zion-slate-light focus:border-zion-cyan"
-                required;
+                className="bg-zion-blue border-zion-blue-light text-white placeholder: text-zion-slate-light focus:border-zion-cyan"
+                required,
               />
             </div>
 
@@ -102,7 +104,7 @@ export function HireNowCTA({ talentName; hourlyRate; onHire }: HireNowCTAProps) 
                   onChange={handleChange}
                   placeholder="e.g., $1000-5000"
                   className="bg-zion-blue border-zion-blue-light text-white placeholder: text-zion-slate-light focus:border-zion-cyan"
-                  required;
+                  required,
                 />
               </div>
 
@@ -116,8 +118,8 @@ export function HireNowCTA({ talentName; hourlyRate; onHire }: HireNowCTAProps) 
                   type="date"
                   value={formData.startDate}
                   onChange={handleChange}
-                  className="bg-zion-blue border-zion-blue-light text-white focus:border-zion-cyan"
-                  required;
+                  className="bg-zion-blue border-zion-blue-light text-white focus: border-zion-cyan"
+                  required,
                 />
               </div>
             </div>
@@ -132,25 +134,25 @@ export function HireNowCTA({ talentName; hourlyRate; onHire }: HireNowCTAProps) 
                 value={formData.message}
                 onChange={handleChange}
                 placeholder="Any additional details or questions..."
-                className="bg-zion-blue border-zion-blue-light text-white placeholder:text-zion-slate-light focus:border-zion-cyan"
+                className="bg-zion-blue border-zion-blue-light text-white placeholder: text-zion-slate-light focus:border-zion-cyan"
                 rows={3}
               />
             </div>
 
             <div className="flex gap-3">
-              <Button;
+              <Button,
                 type="submit"
-                className="flex-1 bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple"
+                className="flex-1 bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple"
               >
-                Send Message;
+                Send Message,
               </Button>
               <Button;
                 type="button"
                 variant="outline"
                 onClick={() => setIsFormOpen(false)}
-                className="border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white"
+                className="border-zion-blue-light text-zion-slate-light hover: bg-zion-blue-light hover:text-white"
               >
-                Cancel;
+                Cancel,
               </Button>
             </div>
           </form>

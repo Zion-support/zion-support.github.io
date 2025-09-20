@@ -8,7 +8,7 @@ import {
 } from 'lucide-react';
 
 const Footer: React.FC = () => {
-  const currentYear = new Date().getFullYear();
+  const currentYear = new Date().getFullYear(),
 
   const footerSections = [
     {
@@ -49,13 +49,13 @@ const Footer: React.FC = () => {
         { name: 'Security', href: '/security' }
       ]
     }
-  ];
+  ],
 
   const socialLinks = [
     { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: <Twitter className="w-5 h-5" /> },
     { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: <Linkedin className="w-5 h-5" /> },
     { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: <Github className="w-5 h-5" /> }
-  ];
+  ],
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -106,7 +106,7 @@ const Footer: React.FC = () => {
                   <MapPin className="w-4 h-4 text-green-400" />
                   <span>364 E Main St STE 1008, Middletown DE 19709</span>
                 </div>
-                <div className="flex items-center space-x-3 text-gray-400 hover:text-white transition-colors">
+                <div className="flex items-center space-x-3 text-gray-400 hover: text-white transition-colors">
                   <Globe className="w-4 h-4 text-blue-400" />
                   <span>https://ziontechgroup.com</span>
                 </div>
@@ -140,8 +140,8 @@ const Footer: React.FC = () => {
             <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
               {/* Copyright */}
               <div className="flex items-center space-x-2 text-gray-400">
-                <span>&copy; {currentYear} Zion Tech Group. All rights reserved.</span>
-                <span className="hidden sm:inline">•</span>
+                <span>&copy, {currentYear} Zion Tech Group. All rights reserved.</span>
+                <span className="hidden sm: inline">•</span>
                 <span className="hidden sm:inline">Built with</span>
                 <Heart className="w-4 h-4 text-red-400 fill-current" />
                 <span className="hidden sm:inline">and</span>
@@ -179,6 +179,6 @@ const Footer: React.FC = () => {
       </div>
     </footer>
   );
-};
+  };
 
 export default Footer;

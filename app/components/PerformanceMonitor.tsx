@@ -9,22 +9,22 @@ interface PerformanceMetrics {
   ttfb: number | null
 }
 
-export default function PerformanceMonitor() {
+export default function PerformanceMonitor() : any {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
     fcp: null,
     lcp: null,
     fid: null,
     cls: null,
     ttfb: null
-  })
+  });
 
-  useEffect(() => {
+    useEffect(() => {
     if (typeof window === 'undefined') return
     
     // Only run in development
     if (process.env.NODE_ENV !== 'development') return
 
-    const observer = new PerformanceObserver((list) => {
+    const observer = new PerformanceObserver((list) : any => {
       for (const entry of list.getEntries()) {
         if (entry.entryType === 'paint') {
           if (entry.name === 'first-contentful-paint') {

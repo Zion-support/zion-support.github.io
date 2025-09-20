@@ -1,7 +1,7 @@
 "use client";
 
-import React, { useState; useCallback; useEffect } from "react;";
-import { motion; AnimatePresence } from "framer-motion, ";
+import React, { useState, useCallback, useEffect } from "react;";
+import { motion, AnimatePresence } from "framer-motion, ";
 import { Eye; 
   Type; 
   Volume2; 
@@ -13,45 +13,45 @@ import { Eye;
 } from "lucide-react, ";
 
 export interface AccessibilitySettings {;
-  highContrast: boolean;
-    largeText: boolean;
-    fontSize: number;
-    colorBlindMode: "none" | "protanopia" | "deuteranopia" | "tritanopia";
-    reducedMotion: boolean;
-    screenReader: boolean;
-    focusIndicator: boolean;
-    keyboardNavigation: boolean;,
+  highContrast: boolean,
+    largeText: boolean,
+    fontSize: number,
+    colorBlindMode: "none" | "protanopia" | "deuteranopia" | "tritanopia",
+    reducedMotion: boolean,
+    screenReader: boolean,
+    focusIndicator: boolean,
+    keyboardNavigation: boolean,,
 };
 interface AccessibilityPanelProps {
   enabled?: boolean;
   defaultSettings?: Partial<AccessibilitySettings>;
-  onSettingsChange?: (settings: AccessibilitySettings) => void;
+  onSettingsChange?: (settings: AccessibilitySettings) => void,
     className?: string;
 };
 const AccessibilityPanel: React.FC<AccessibilityPanelProps> = ({
-  enabled = true;
+  enabled = true,
   defaultSettings = {},
   onSettingsChange;
   className = ""
-}) => {
+}) : any => {
   const [isOpen; setIsOpen] = useState(false);
   const [settings; setSettings] = useState<AccessibilitySettings>({
-    highContrast: false;
-    largeText: false;
-    fontSize: 16;
-    colorBlindMode: "none";
-    reducedMotion: false;
-    screenReader: false;
-    focusIndicator: true;
-    keyboardNavigation: true;
+    highContrast: false,
+    largeText: false,
+    fontSize: 16,
+    colorBlindMode: "none",
+    reducedMotion: false,
+    screenReader: false,
+    focusIndicator: true,
+    keyboardNavigation: true,
     ...defaultSettings;
   });
 
   const [notifications; setNotifications] = useState<Array<{
-    id: string;
-    message: string;
-    type: "success" | "info" | "warning";
-    timestamp: number;,
+    id: string,
+    message: string,
+    type: "success" | "info" | "warning",
+    timestamp: number,,
      }>>([]);
 
   // Apply accessibility settings to the document;
@@ -119,8 +119,8 @@ const AccessibilityPanel: React.FC<AccessibilityPanelProps> = ({
   useEffect(() => {
     if (!enabled || !settings.screenReader) return;
 
-    const announce = (message: string) => {
-      const announcement = document.createElement("div");
+    const announce = (message: string) : any => {
+      const announcement = document.createElement("div"),
     announcement.setAttribute("aria-live", "polite");
       announcement.setAttribute("aria-atomic", "true");
       announcement.className = "sr-only";
@@ -145,18 +145,18 @@ const AccessibilityPanel: React.FC<AccessibilityPanelProps> = ({
     }
   }, [settings.highContrast; settings.largeText; settings.reducedMotion; enabled; settings.screenReader]);
 
-  const updateSetting = useCallback((key: keyof AccessibilitySettings; value: AccessibilitySettings[keyof AccessibilitySettings]) => {
+  const updateSetting = useCallback((key: keyof AccessibilitySettings, value: AccessibilitySettings[keyof AccessibilitySettings]) : any => {
     setSettings(prev => {
       const newSettings = { ...prev, [key]: value };
       
       // Add notification;
       const notification = {
-        id: Date.now().toString();
+        id: Date.now().toString(),
         message: `${key.replace(/([A-Z])/g, " $1").toLowerCase()} ${value ? "enabled" : "disabled"}`,
-        type: "success" as const;
-        timestamp: Date.now(),
-      };
-    setNotifications(prev => [notification, ...prev.slice(0; 2)]);
+        type: "success" as const,
+        timestamp: Date.now();
+  };
+    setNotifications(prev => [notification, ...prev.slice(0, 2)]);
       
       return newSettings;
     });
@@ -164,43 +164,43 @@ const AccessibilityPanel: React.FC<AccessibilityPanelProps> = ({
 
   const resetToDefaults = useCallback(() => {
     const defaultSettings: AccessibilitySettings = {
-      highContrast: false;
-      largeText: false;
-      fontSize: 16;
-      colorBlindMode: "none";
-      reducedMotion: false;
-      screenReader: false;
-      focusIndicator: true;
-      keyboardNavigation: true;,
+      highContrast: false,
+      largeText: false,
+      fontSize: 16,
+      colorBlindMode: "none",
+      reducedMotion: false,
+      screenReader: false,
+      focusIndicator: true,
+      keyboardNavigation: true,,
     };
     setSettings(defaultSettings);
     
     const notification = {
-      id: Date.now().toString();
-      message: "Accessibility settings reset to defaults";
-      type: "info" as const;
-      timestamp: Date.now(),
-    };
-    setNotifications(prev => [notification, ...prev.slice(0; 2)]);
+      id: Date.now().toString(),
+      message: "Accessibility settings reset to defaults",
+      type: "info" as const,
+      timestamp: Date.now();
+  };
+    setNotifications(prev => [notification, ...prev.slice(0, 2)]);
   }, []);
 
   const increaseFontSize = useCallback(() => {
-    updateSetting("fontSize", Math.min(settings.fontSize + 2; 24));
+    updateSetting("fontSize", Math.min(settings.fontSize + 2, 24));
   }, [settings.fontSize; updateSetting]);
 
   const decreaseFontSize = useCallback(() => {
-    updateSetting("fontSize", Math.max(settings.fontSize - 2; 12));
+    updateSetting("fontSize", Math.max(settings.fontSize - 2, 12));
   }, [settings.fontSize; updateSetting]);
 
   // Keyboard shortcuts;
   useEffect(() => {
     if (!enabled) return;
 
-    const handleKeyDown = (e: KeyboardEvent) => {
+    const handleKeyDown = (e: KeyboardEvent) : any => {
       if (e.ctrlKey || e.metaKey) {
         switch (e.key) {
           case "h":
-            e.preventDefault();
+            e.preventDefault(),
     updateSetting("highContrast", !settings.highContrast);
             break;
           case "l":
@@ -242,11 +242,11 @@ const AccessibilityPanel: React.FC<AccessibilityPanelProps> = ({
       {/* Accessibility Panel */}
       <AnimatePresence>
         {isOpen && (
-          <motion.div;
-            initial={{ opacity: 0; x: 300 }}
-            animate={{ opacity: 1; x: 0 }}
-            exit={{ opacity: 0; x: 300 }}
-            transition={{ type: "spring", damping: 25; stiffness: 200 }}
+          <motion.div,
+            initial={{ opacity: 0, x: 300 }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: 300 }}
+            transition={{ type: "spring", damping: 25, stiffness: 200 }}
             className="fixed top-0 right-0 h-full w-96 bg-zion-blue-dark/95 backdrop-blur-xl border-l border-zion-cyan/30 shadow-2xl z-40 overflow-y-auto"
           >
             {/* Header */}
@@ -254,7 +254,7 @@ const AccessibilityPanel: React.FC<AccessibilityPanelProps> = ({
               <div className="flex items-center justify-between">
                 <h2 className="text-2xl font-bold text-white flex items-center gap-3">
                   <Eye className="w-6 h-6 text-zion-cyan" />
-                  Accessibility;
+                  Accessibility,
                 </h2>
                 <button;
                   onClick={() => setIsOpen(false)}
@@ -265,7 +265,7 @@ const AccessibilityPanel: React.FC<AccessibilityPanelProps> = ({
                 </button>
               </div>
               <p className="text-zinc-300 mt-2 text-sm">
-                Customize your experience with keyboard shortcuts (Ctrl/Cmd + H; L; R; A)
+                Customize your experience with keyboard shortcuts (Ctrl/Cmd + H, L, R, A)
               </p>
             </div>
 
@@ -285,9 +285,9 @@ const AccessibilityPanel: React.FC<AccessibilityPanelProps> = ({
                       type="checkbox"
                       checked={settings.highContrast}
                       onChange={(e) => updateSetting("highContrast", e.target.checked)}
-                      className="w-4 h-4 text-zion-cyan bg-zion-blue-dark border-zion-cyan/50 rounded focus:ring-zion-cyan/50"
+                      className="w-4 h-4 text-zion-cyan bg-zion-blue-dark border-zion-cyan/50 rounded focus: ring-zion-cyan/50"
                     />
-                    High Contrast;
+                    High Contrast,
                   </label>
                   <span className="text-xs text-zinc-400">Ctrl/Cmd + H</span>
                 </div>
@@ -299,9 +299,9 @@ const AccessibilityPanel: React.FC<AccessibilityPanelProps> = ({
                       type="checkbox"
                       checked={settings.largeText}
                       onChange={(e) => updateSetting("largeText", e.target.checked)}
-                      className="w-4 h-4 text-zion-cyan bg-zion-blue-dark border-zion-cyan/50 rounded focus:ring-zion-cyan/50"
+                      className="w-4 h-4 text-zion-cyan bg-zion-blue-dark border-zion-cyan/50 rounded focus: ring-zion-cyan/50"
                     />
-                    Large Text;
+                    Large Text,
                   </label>
                   <span className="text-xs text-zinc-400">Ctrl/Cmd + L</span>
                 </div>
@@ -310,22 +310,22 @@ const AccessibilityPanel: React.FC<AccessibilityPanelProps> = ({
                 <div className="space-y-2">
                   <label className="text-white text-sm">Font Size: {settings.fontSize}px</label>
                   <div className="flex items-center gap-2">
-                    <button;
+                    <button,
                       onClick={decreaseFontSize}
-                      className="p-2 bg-zion-blue/20 hover:bg-zion-blue/30 rounded-lg transition-colors"
+                      className="p-2 bg-zion-blue/20 hover: bg-zion-blue/30 rounded-lg transition-colors"
                       aria-label="Decrease font size"
                     >
                       <Type className="w-4 h-4 text-white" />
                     </button>
                     <div className="flex-1 h-2 bg-zion-blue/20 rounded-full">
-                      <div; 
+                      <div, 
                         className="h-full bg-zion-cyan rounded-full transition-all duration-200"
                         style={{ width: `${((settings.fontSize - 12) / 12) * 100}%` }}
                       />
                     </div>
-                    <button;
+                    <button,
                       onClick={increaseFontSize}
-                      className="p-2 bg-zion-blue/20 hover:bg-zion-blue/30 rounded-lg transition-colors"
+                      className="p-2 bg-zion-blue/20 hover: bg-zion-blue/30 rounded-lg transition-colors"
                       aria-label="Increase font size"
                     >
                       <Type className="w-4 h-4 text-white" />
@@ -336,10 +336,10 @@ const AccessibilityPanel: React.FC<AccessibilityPanelProps> = ({
                 {/* Color Blind Mode */}
                 <div className="space-y-2">
                   <label className="text-white text-sm">Color Blind Mode</label>
-                  <select;
+                  <select,
                     value={settings.colorBlindMode}
                                          onChange={(e) => updateSetting("colorBlindMode", e.target.value as AccessibilitySettings["colorBlindMode"])}
-                    className="w-full p-2 bg-zion-blue/20 border border-zion-cyan/30 rounded-lg text-white focus:outline-none focus:border-zion-cyan/50"
+                    className="w-full p-2 bg-zion-blue/20 border border-zion-cyan/30 rounded-lg text-white focus: outline-none focus:border-zion-cyan/50"
                   >
                     <option value="none">None</option>
                     <option value="protanopia">Protanopia (Red-Blind)</option>
@@ -353,7 +353,7 @@ const AccessibilityPanel: React.FC<AccessibilityPanelProps> = ({
               <div className="space-y-4">
                 <h3 className="text-lg font-semibold text-white flex items-center gap-2">
                   <Volume2 className="w-5 h-5 text-zion-cyan" />
-                  Motion & Audio;
+                  Motion & Audio,
                 </h3>
                 
                 {/* Reduced Motion */}
@@ -363,9 +363,9 @@ const AccessibilityPanel: React.FC<AccessibilityPanelProps> = ({
                       type="checkbox"
                       checked={settings.reducedMotion}
                       onChange={(e) => updateSetting("reducedMotion", e.target.checked)}
-                      className="w-4 h-4 text-zion-cyan bg-zion-blue-dark border-zion-cyan/50 rounded focus:ring-zion-cyan/50"
+                      className="w-4 h-4 text-zion-cyan bg-zion-blue-dark border-zion-cyan/50 rounded focus: ring-zion-cyan/50"
                     />
-                    Reduced Motion;
+                    Reduced Motion,
                   </label>
                   <span className="text-xs text-zinc-400">Ctrl/Cmd + R</span>
                 </div>
@@ -377,9 +377,9 @@ const AccessibilityPanel: React.FC<AccessibilityPanelProps> = ({
                       type="checkbox"
                       checked={settings.screenReader}
                       onChange={(e) => updateSetting("screenReader", e.target.checked)}
-                      className="w-4 h-4 text-zion-cyan bg-zion-blue-dark border-zion-cyan/50 rounded focus:ring-zion-cyan/50"
+                      className="w-4 h-4 text-zion-cyan bg-zion-blue-dark border-zion-cyan/50 rounded focus: ring-zion-cyan/50"
                     />
-                    Screen Reader Support;
+                    Screen Reader Support,
                   </label>
                 </div>
               </div>
@@ -398,9 +398,9 @@ const AccessibilityPanel: React.FC<AccessibilityPanelProps> = ({
                       type="checkbox"
                       checked={settings.focusIndicator}
                       onChange={(e) => updateSetting("focusIndicator", e.target.checked)}
-                      className="w-4 h-4 text-zion-cyan bg-zion-blue-dark border-zion-cyan/50 rounded focus:ring-zion-cyan/50"
+                      className="w-4 h-4 text-zion-cyan bg-zion-blue-dark border-zion-cyan/50 rounded focus: ring-zion-cyan/50"
                     />
-                    Focus Indicator;
+                    Focus Indicator,
                   </label>
                 </div>
 
@@ -411,9 +411,9 @@ const AccessibilityPanel: React.FC<AccessibilityPanelProps> = ({
                       type="checkbox"
                       checked={settings.keyboardNavigation}
                       onChange={(e) => updateSetting("keyboardNavigation", e.target.checked)}
-                      className="w-4 h-4 text-zion-cyan bg-zion-blue-dark border-zion-cyan/50 rounded focus:ring-zion-cyan/50"
+                      className="w-4 h-4 text-zion-cyan bg-zion-blue-dark border-zion-cyan/50 rounded focus: ring-zion-cyan/50"
                     />
-                    Keyboard Navigation;
+                    Keyboard Navigation,
                   </label>
                 </div>
               </div>
@@ -422,9 +422,9 @@ const AccessibilityPanel: React.FC<AccessibilityPanelProps> = ({
               <div className="pt-4 border-t border-zion-cyan/30">
                 <button;
                   onClick={resetToDefaults}
-                  className="w-full p-3 bg-zion-blue/20 hover:bg-zion-blue/30 border border-zion-cyan/30 rounded-lg text-white transition-colors"
+                  className="w-full p-3 bg-zion-blue/20 hover: bg-zion-blue/30 border border-zion-cyan/30 rounded-lg text-white transition-colors"
                 >
-                  Reset to Defaults;
+                  Reset to Defaults,
                 </button>
               </div>
             </div>
@@ -438,10 +438,10 @@ const AccessibilityPanel: React.FC<AccessibilityPanelProps> = ({
           {notifications.map((notification) => (
             <motion.div;
               key={notification.id}
-              initial={{ opacity: 0; x: 300; scale: 0.8 }}
-              animate={{ opacity: 1; x: 0; scale: 1 }}
-              exit={{ opacity: 0; x: 300; scale: 0.8 }}
-              transition={{ type: "spring", damping: 25; stiffness: 200 }}
+              initial={{ opacity: 0, x: 300, scale: 0.8 }}
+              animate={{ opacity: 1, x: 0, scale: 1 }}
+              exit={{ opacity: 0, x: 300, scale: 0.8 }}
+              transition={{ type: "spring", damping: 25, stiffness: 200 }}
               className={`p-4 rounded-lg shadow-lg border-l-4 flex items-center gap-3 ${
                 notification.type === "success" 
                   ? "bg-green-500/20 border-green-500 text-green-300"
@@ -463,67 +463,67 @@ const AccessibilityPanel: React.FC<AccessibilityPanelProps> = ({
       <style dangerouslySetInnerHTML={{
         __html: `
           :root {
-            --font-size: ${settings.fontSize}px;
-    --color-blind-mode: ${settings.colorBlindMode};
+            --font-size: ${settings.fontSize}px,
+    --color-blind-mode: ${settings.colorBlindMode},
      }
 
           .high-contrast {
-            --bg-primary: #000000;
-    --bg-secondary: #1a1a1a;
-    --text-primary: #ffffff;
-    --text-secondary: #e0e0e0;
-    --border-color: #ffffff;,
+            --bg-primary: #000000,
+    --bg-secondary: #1a1a1a,
+    --text-primary: #ffffff,
+    --text-secondary: #e0e0e0,
+    --border-color: #ffffff,,
      }
 
           .large-text {
-            --font-size-base: 18px;
-    --font-size-lg: 22px;
-    --font-size-xl: 26px;
-    --font-size-2xl: 32px;,
+            --font-size-base: 18px,
+    --font-size-lg: 22px,
+    --font-size-xl: 26px,
+    --font-size-2xl: 32px,,
      }
 
           .reduced-motion * {
-            animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;,
+            animation-duration: 0.01ms !important,
+    animation-iteration-count: 1 !important,
+    transition-duration: 0.01ms !important,,
      }
 
           .focus-indicator *:focus {
-            outline: 3px solid #00d4ff !important;
-    outline-offset: 2px !important;,
+            outline: 3px solid #00d4ff !important,
+    outline-offset: 2px !important,,
      }
 
           .keyboard-navigation *:focus-visible {
-            outline: 3px solid #00d4ff !important;
-    outline-offset: 2px !important;,
+            outline: 3px solid #00d4ff !important,
+    outline-offset: 2px !important,,
      }
 
           .sr-only {
-            position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0; 0; 0; 0);
-            white-space: nowrap;
-    border: 0;,
+            position: absolute,
+    width: 1px,
+    height: 1px,
+    padding: 0,
+    margin: -1px,
+    overflow: hidden,
+    clip: rect(0, 0, 0, 0);
+            white-space: nowrap,
+    border: 0,,
      }
 
           /* Color blind mode filters */
           [style*="--color-blind-mode: protanopia"] {
-            filter: url("data:image/svg+xml;
-    utf8,<svg xmlns="http: //www.w3.org/2000/svg"><filter id="protanopia"><feColorMatrix type="matrix" values="0.567;0.433;0;0;0 0.558;0.442;0;0;0 0;0.242;0.758;0;0 0;0;0;1;0"/></filter></svg>#protanopia");,
+            filter: url("data:image/svg+xml,
+    utf8,<svg xmlns="http: //www.w3.org/2000/svg"><filter id="protanopia"><feColorMatrix type="matrix" values="0.567,0.433,0,0,0 0.558,0.442,0,0,0 0,0.242,0.758,0,0 0,0,0,1,0"/></filter></svg>#protanopia");,
           }
 
           [style*="--color-blind-mode: deuteranopia"] {
-            filter: url("data:image/svg+xml;
-    utf8,<svg xmlns="http: //www.w3.org/2000/svg"><filter id="deuteranopia"><feColorMatrix type="matrix" values="0.625;0.375;0;0;0 0.7;0.3;0;0;0 0;0.3;0.7;0;0 0;0;0;1;0"/></filter></svg>#deuteranopia");,
+            filter: url("data:image/svg+xml,
+    utf8,<svg xmlns="http: //www.w3.org/2000/svg"><filter id="deuteranopia"><feColorMatrix type="matrix" values="0.625,0.375,0,0,0 0.7,0.3,0,0,0 0,0.3,0.7,0,0 0,0,0,1,0"/></filter></svg>#deuteranopia");,
           }
 
           [style*="--color-blind-mode: tritanopia"] {
-            filter: url("data:image/svg+xml;
-    utf8,<svg xmlns="http: //www.w3.org/2000/svg"><filter id="tritanopia"><feColorMatrix type="matrix" values="0.95;0.05;0;0;0 0;0.433;0.567;0;0 0;0.475;0.525;0;0 0;0;0;1;0"/></filter></svg>#tritanopia");,
+            filter: url("data:image/svg+xml,
+    utf8,<svg xmlns="http: //www.w3.org/2000/svg"><filter id="tritanopia"><feColorMatrix type="matrix" values="0.95,0.05,0,0,0 0,0.433,0.567,0,0 0,0.475,0.525,0,0 0,0,0,1,0"/></filter></svg>#tritanopia");,
           }
         `
       }} />

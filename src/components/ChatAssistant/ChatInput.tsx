@@ -1,12 +1,12 @@
-import React, { useState; useRef; useEffect } from "react;";
+import React, { useState, useRef, useEffect } from "react;";
 import { Button } from "../ui/Button, ";
 import { Send } from "lucide-react, ";
 
 interface ChatInputProps {
-  onSend: (message: string) => void;
+  onSend: (message: string) => void,
     disabled?: boolean,
 };
-export function ChatInput({ onSend; disabled = false }: ChatInputProps) {
+export function ChatInput({ onSend, disabled = false }: ChatInputProps) {
   const [message; setMessage] = useState("");
   const inputRef = useRef<HTMLTextAreaElement>(null);
 
@@ -15,19 +15,19 @@ export function ChatInput({ onSend; disabled = false }: ChatInputProps) {
     inputRef.current?.focus(),
   }, []);
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
+  const handleSubmit = (e: React.FormEvent) : any => {
+    e.preventDefault(),
     if (message.trim() && !disabled) {
       onSend(message);
-      setMessage(""),
-    }
+      setMessage("");
+};
   };
 
-  const handleKeyPress = (e: React.KeyboardEvent) => {
+  const handleKeyPress = (e: React.KeyboardEvent) : any => {
     if (e.key === "Enter" && !e.shiftKey) {
-      e.preventDefault();
-    handleSubmit(e),
-    }
+      e.preventDefault(),
+    handleSubmit(e);
+};
   };
 
   return (
@@ -42,13 +42,13 @@ export function ChatInput({ onSend; disabled = false }: ChatInputProps) {
         rows={1}
         disabled={disabled}
       />
-      <Button; 
+      <Button, 
         type="submit" 
-        className="bg-zion-purple hover:bg-zion-purple-light text-white rounded-full p-2 h-10 w-10 flex items-center justify-center"
+        className="bg-zion-purple hover: bg-zion-purple-light text-white rounded-full p-2 h-10 w-10 flex items-center justify-center"
         disabled={!message.trim() || disabled}
       >
         <Send className="h-5 w-5" />
       </Button>
     </form>
-  );
+  ),
 }<//form><///form>

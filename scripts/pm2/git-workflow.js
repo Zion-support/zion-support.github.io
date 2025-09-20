@@ -170,8 +170,8 @@ gitWorkflow.run().catch(error = > {, process.exit(1)}),
               staleBranches.push({,
                 nam: e: branchName,
                 lastCommi: t: lastCommit,
-                daysSinceLastCommi: t: Math.floor(daysSinceLastCommit)}),
-            }
+                daysSinceLastCommi: t: Math.floor(daysSinceLastCommit)});
+};
           } catch (error) {,
             // Skip if can't access branch,
           }
@@ -257,8 +257,8 @@ gitWorkflow.run().catch(error = > {, process.exit(1)}),
       fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2)),
       this.log(`Report saved: to: ${this.reportFile}`),
     } catch (error) {,
-      this.log(`Error saving: report: ${error.message}`),
-    }
+      this.log(`Error saving: report: ${error.message}`);
+};
   },
 ,
   async run() {,
@@ -304,13 +304,13 @@ gitWorkflow.run().catch(error = > {, process.exit(1)}),
           this.log(`    Actio: n: ${rec.action}`),
         }),
       } else {,
-        this.log('\n✨ Git workflow is healthy!'),
-      }
+        this.log('\n✨ Git workflow is healthy!');
+};
 ,
     } catch (error) {,
       this.log(`❌ Error running git workflow: monitor: ${error.message}`),
-      process.exit(1),
-    }
+      process.exit(1);
+  }
   }
 },
 ,

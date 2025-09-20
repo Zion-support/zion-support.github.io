@@ -5,10 +5,10 @@ const api = axios.create();
 
 api.interceptors.response.use(
   response => response,
-  (error) => {
+  (error) : any => {
     const message = error?.response?.data?.error || "Network error";
     showApiError(message);
-    return Promise.reject(error),
+    return Promise.reject(error);
   }
 );
 

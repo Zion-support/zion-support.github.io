@@ -54,6 +54,6 @@ exports.handler = async function(event, context) {
         function: 'a11y-alt-text-runner',
         status: 'error'
       })
-    },
+    };
   }
 },

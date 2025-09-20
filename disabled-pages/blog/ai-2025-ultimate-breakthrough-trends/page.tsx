@@ -61,7 +61,7 @@ import React from 'react'
               </Card>
 import Link from 'next/link'
 import SEO from '../../../components/SEO';
-export default function AI2025UltimateBreakthroughTrends() {
+export default function AI2025UltimateBreakthroughTrends() : any {
   return (
     <div>
       <SEO

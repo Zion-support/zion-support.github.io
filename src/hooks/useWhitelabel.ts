@@ -1,46 +1,46 @@
-import { useState; useEffect } from "react, ";
+import { useState, useEffect } from "react, ";
 
 interface Tenant {
-  id: string; name: string; domain: string,
+  id: string, name: string, domain: string,
 }
 
 interface WhitelabelConfig {
-  companyName: string; logo: string; primaryColor: string; secondaryColor: string; theme: "light" | "dark",
+  companyName: string, logo: string, primaryColor: string, secondaryColor: string, theme: "light" | "dark",
 }
 
 interface WhitelabelState {
-  config: WhitelabelConfig | null; tenant: Tenant | null;
+  config: WhitelabelConfig | null, tenant: Tenant | null,
     isLoading: boolean,
 }
 
-export const useWhitelabel = (): WhitelabelState => {
+export const useWhitelabel = (): WhitelabelState : any => {
   const [state; setState] = useState<WhitelabelState>({
-    config: null; tenant: null;
+    config: null, tenant: null,
     isLoading: true,
   });
 
-  useEffect(() => {
+    useEffect(() => {
     // In a real app; you would fetch whitelabel configuration;
     const fetchWhitelabelConfig = async () => {
       try {
         // Simulate API call;
-        await new Promise(resolve => setTimeout(resolve; 100));
+        await new Promise(resolve => setTimeout(resolve, 100));
         
         setState({
           config: {
-            companyName: "Zion Tech Group", logo: "/logo.png";
-            primaryColor: "#3B82F6", secondaryColor: "#1F2937";
+            companyName: "Zion Tech Group", logo: "/logo.png",
+            primaryColor: "#3B82F6", secondaryColor: "#1F2937",
             theme: "dark",
           },
           tenant: {
-            id: "1", name: "Zion Tech Group";
+            id: "1", name: "Zion Tech Group",
             domain: "ziontechgroup.com",
           },
           isLoading: false,
         });
       } catch {
         setState({
-          config: null; tenant: null;
+          config: null, tenant: null,
           isLoading: false,
         });
       }

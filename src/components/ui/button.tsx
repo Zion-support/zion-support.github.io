@@ -1,7 +1,7 @@
 import React from "react";
 
 interface ButtonProps {
-  children: React.ReactNode;
+  children: React.ReactNode,
   variant?: "default" | "outline" | "ghost" | "link";
   size?: "sm" | "md" | "lg" | "icon";
   asChild?: boolean;
@@ -54,6 +54,6 @@ export function Button({ ;
   );
 }
 // Re-export from Button.tsx for backward compatibility;
-export { Button; buttonVariants } from "./Button";
+export { Button, buttonVariants } from "./Button";
 export type { ButtonProps } from "./Button";
 <//button><///button>

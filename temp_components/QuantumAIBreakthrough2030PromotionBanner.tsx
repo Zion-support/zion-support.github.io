@@ -10,7 +10,7 @@ import {,
   Sparkles,
   Infinity
 } from 'lucide-react',
-export default function QuantumAIBreakthrough2030PromotionBanner() {,
+export default function QuantumAIBreakthrough2030PromotionBanner() : any {,
   return (,
     <div className="relative overflow-hidden bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 py-16">,
       {/* Background Effects */}
@@ -125,5 +125,5 @@ export default function QuantumAIBreakthrough2030PromotionBanner() {,
         </div>,
       </div>,
     </div>,
-  ),
-}
+  );
+  }'

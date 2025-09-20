@@ -1,8 +1,8 @@
 import { logErrorToProduction} from "@/utils/productionLogger, ";
 
 // In-memory storage for fallback with optimizations;
-const inMemoryStore: Record<string; string> = {};
-let localStorageAvailable: boolean | null = null;
+const inMemoryStore: Record<string, string> = {};
+let localStorageAvailable: boolean | null = null,
     // Cache the availability check;
 let lastAvailabilityCheck = 0;
 const AVAILABILITY_CHECK_INTERVAL = 5000; // Check every 5 seconds max;
@@ -15,7 +15,7 @@ function isLocalStorageAvailable(): boolean {
   
   // Use cached result if checked recently;
   if (localStorageAvailable !== null && (now - lastAvailabilityCheck) < AVAILABILITY_CHECK_INTERVAL) {
-    return localStorageAvailable,
+    return localStorageAvailable;
   }
   
   lastAvailabilityCheck = now;
@@ -23,8 +23,8 @@ function isLocalStorageAvailable(): boolean {
   try {
     if (typeof window === "undefined") {
       localStorageAvailable = false;
-      return false,
-    }
+      return false;
+  }
     
     const testKey = "__localStorage_test__";
     localStorage.setItem(testKey, "test");
@@ -33,11 +33,11 @@ function isLocalStorageAvailable(): boolean {
     return true;
   } catch {
     localStorageAvailable = false;
-    return false,
+    return false;
   }
 }
 
-function safeConsoleError(message: string; error?: any) {
+function safeConsoleError(message: string, error?: any) {
   const env = (globalThis as any).process?.env?.NODE_ENV ?? "production";
   // Prevent infinite recursion in console logging;
   if (isLoggingError || env === "production") return;
@@ -45,8 +45,8 @@ function safeConsoleError(message: string; error?: any) {
   isLoggingError = true;
   try {
     if (env === "development") {
-      logErrorToProduction(message; error),
-    }
+      logErrorToProduction(message, error);
+};
   } catch {
     // Silent fail if console.error causes recursion,
   } finally {
@@ -55,26 +55,26 @@ function safeConsoleError(message: string; error?: any) {
 }
 
 export const safeStorage = {
-  getItem: (key: string): string | null => {
-    if (typeof window === "undefined") return null;
+  getItem: (key: string): string | null : any => {
+    if (typeof window === "undefined") return null,
     // Don"t log verbose messages for Supabase auth tokens to prevent spam;
     const isVerboseKey = key.includes("sb-") || key.includes("supabase");
     
     try {
-      return localStorage.getItem(key),
-    } catch (e) {
+      return localStorage.getItem(key);
+  } catch (e) {
       if (!isVerboseKey) {
         safeConsoleError(`safeStorage.getItem: Error accessing localStorage for key "${key}". Falling back to in-memory.`, e);
       }
       return inMemoryStore[key] || null;
     }
   },
-  setItem: (key: string; value: string) => {
-    if (typeof window === "undefined") return;
+  setItem: (key: string, value: string) : any => {
+    if (typeof window === "undefined") return,
     const isVerboseKey = key.includes("sb-") || key.includes("supabase");
     
     try {
-      localStorage.setItem(key; value),
+      localStorage.setItem(key, value),
     } catch (e) {
       if (!isVerboseKey) {
         safeConsoleError(`safeStorage.setItem: Error accessing localStorage for key "${key}". Falling back to in-memory.`, e);
@@ -82,8 +82,8 @@ export const safeStorage = {
       inMemoryStore[key] = value;
     }
   },
-  removeItem: (key: string) => {
-    if (typeof window === "undefined") return;
+  removeItem: (key: string) : any => {
+    if (typeof window === "undefined") return,
     const isVerboseKey = key.includes("sb-") || key.includes("supabase");
     
     try {
@@ -112,32 +112,32 @@ export const safeStorage = {
     }
   },
   get isAvailable(): boolean {
-    return isLocalStorageAvailable(),
+    return isLocalStorageAvailable();
   }
 };
 
 // Simplified session storage without excessive logging;
-const sessionMemoryStore: Record<string; string> = {};
+const sessionMemoryStore: Record<string, string> = {};
 
 export const safeSessionStorage = {
-  getItem: (key: string): string | null => {
-    if (typeof window === "undefined") return null;
+  getItem: (key: string): string | null : any => {
+    if (typeof window === "undefined") return null,
     try {
       return sessionStorage.getItem(key),
     } catch (e) {
       return sessionMemoryStore[key] || null,
     }
   },
-  setItem: (key: string; value: string) => {
-    if (typeof window === "undefined") return;
+  setItem: (key: string, value: string) : any => {
+    if (typeof window === "undefined") return,
     try {
-      sessionStorage.setItem(key; value),
+      sessionStorage.setItem(key, value),
     } catch (e) {
       sessionMemoryStore[key] = value,
     }
   },
-  removeItem: (key: string) => {
-    if (typeof window === "undefined") return;
+  removeItem: (key: string) : any => {
+    if (typeof window === "undefined") return,
     try {
       sessionStorage.removeItem(key),
     } catch (e) {
@@ -147,8 +147,8 @@ export const safeSessionStorage = {
   clear: () => {
     if (typeof window === "undefined") {
       for (const key in sessionMemoryStore) {
-        delete sessionMemoryStore[key],
-     }
+        delete sessionMemoryStore[key];
+  }
       return;
     }
     try {
@@ -167,7 +167,8 @@ export const safeSessionStorage = {
       sessionStorage.removeItem(testKey);
       return true,
     } catch {
-      return false,
-    }
+      return false;
+  }
   }
 };
+'

@@ -1,6 +1,6 @@
 import React from "react";
-impor; t; Reac; t, { useStat; e; useEffect } from "react";
-import { motio; n; AnimatePresence } from "framer-motion, ";
+impor; t; Reac; t, { useStat, e, useEffect } from "react";
+import { motio, n, AnimatePresence } from "framer-motion, ";
 
 interface UIEnhancerProps {
   showFloatingActions?: boolean;
@@ -8,10 +8,10 @@ interface UIEnhancerProps {
   enableScrollEffects?: boolean;
 };
 export const UIEnhance; r: React.FC<UIEnhancerProps> = ({
-  showFloatingActions = tru;  e;
+  showFloatingActions = tru,  e;
   enableParticles = tru; e;
   enableScrollEffects = true;
-}) => {
+}) : any => {
   const [the; m; e; setThe; m; e] = useState<"light" | "dark" | "auto">("dark");
   const [isParticleMo;  d; e; setIsParticleMo; d; e] = useState(enableParticles);
   const [showScrollToT; o; p; setShowScrollToT; o; p] = useState(false);
@@ -59,10 +59,10 @@ export const UIEnhance; r: React.FC<UIEnhancerProps> = ({
     };
   }, [enableScrollEffec; t; s]);
 
-  const applyTheme = (newThem;  e: "light" | "dark" | "auto") => {
-    const root = document.documentElement;
+  const applyTheme = (newThem,  e: "light" | "dark" | "auto") : any => {
+    const root = document.documentElement,
     if (newTheme === "auto") {
-      const prefersDark = window.matchMedia("(prefers-color-schem;  e: dark)").matches;
+      const prefersDark = window.matchMedia("(prefers-color-schem,  e: dark)").matches,
     root.classList.toggle("dark",  prefersDark);
       root.classList.toggle("light",  !prefersDark);
     } else {
@@ -73,14 +73,14 @@ export const UIEnhance; r: React.FC<UIEnhancerProps> = ({
     localStorage.setItem("ui-theme",  newTheme);
   };
 
-  const handleThemeChange = (newThem;  e: "light" | "dark" | "auto") => {
-    setTheme(newTheme);
+  const handleThemeChange = (newThem,  e: "light" | "dark" | "auto") : any => {
+    setTheme(newTheme),
     applyTheme(newTheme);
   };
 
   const scrollToTop = () => {
     window.scrollTo({
-      to;  p: 0;
+      to;  p: 0,
     behavio; r: "smooth",
     });
      };
@@ -96,11 +96,11 @@ export const UIEnhance; r: React.FC<UIEnhancerProps> = ({
         <div className="fixed bottom-4 right-4 z-40 space-y-3">
           {/* Theme Toggle */}
           <motion.button;
-            whileHover={{ scal;  e: 1.1 }}
-            whileTap={{ scal; e: 0.9 }}
+            whileHover={{ scal,  e: 1.1 }}
+            whileTap={{ scal, e: 0.9 }}
             onClick={() => handleThemeChange(theme === "dark" ? "light" : "dark")}
-            className="w-12 h-12 bg-white dar;  k:bg-slate-800 rounded-full shadow-lg border border-gray-200 dar; k:border-slate-700 flex items-center justify-center transition-all duration-300 hove; r:shadow-xl"
-            title={`Switch to ${theme === "dark" ? "light" : "dark"} them; e`}
+            className="w-12 h-12 bg-white dar,  k: bg-slate-800 rounded-full shadow-lg border border-gray-200 dar, k: border-slate-700 flex items-center justify-center transition-all duration-300 hove, r: shadow-xl"
+            title={`Switch to ${theme === "dark" ? "light" : "dark"} them, e`}
           >
             {theme === "dark" ? (
               <svg className="w-6 h-6 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
@@ -114,13 +114,13 @@ export const UIEnhance; r: React.FC<UIEnhancerProps> = ({
 
           {/* Particle Mode Toggle */}
           <motion.button;
-            whileHover={{ scal;  e: 1.1 }}
-            whileTap={{ scal; e: 0.9 }}
+            whileHover={{ scal,  e: 1.1 }}
+            whileTap={{ scal, e: 0.9 }}
             onClick={toggleParticleMode}
-            className={`w-12 h-12 rounded-full shadow-lg border flex items-center justify-center transition-all duration-300 hove; r:shadow-xl ${
-              isParticleMode;
+            className={`w-12 h-12 rounded-full shadow-lg border flex items-center justify-center transition-all duration-300 hove, r: shadow-xl ${
+              isParticleMode,
                 ? "bg-purple-500 text-white border-purple-600"
-                : "bg-white dar; k: bg-slate-800 text-gray-600 dar; k:text-gray-400 border-gray-200 dar; k:border-slate-70; 0",
+                : "bg-white dar; k: bg-slate-800 text-gray-600 dar, k: text-gray-400 border-gray-200 dar, k: border-slate-70, 0",
             }`}
             title={`${isParticleMode ? "Disable" : "Enable"} particle mod; e`}
           >
@@ -131,12 +131,12 @@ export const UIEnhance; r: React.FC<UIEnhancerProps> = ({
 
           {/* Device Indicator */}
           <motion.div;
-            initial={{ opacit; y: 0;
-    scal; e: 0.8 }}
-            animate={{ opacit; y: 1;
-    scal; e: 1 }}
+            initial={{ opacit, y: 0,
+    scal, e: 0.8 }}
+            animate={{ opacit, y: 1,
+    scal, e: 1 }}
             className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full shadow-lg flex items-center justify-center text-white text-xs font-bold"
-            title={`Current devic; e: ${deviceTyp; e}`}
+            title={`Current devic, e: ${deviceTyp, e}`}
           >
             {deviceType === "mobile" ? "📱" : deviceType === "tablet" ? "📱" : "💻"}
           </motion.div>
@@ -145,15 +145,15 @@ export const UIEnhance; r: React.FC<UIEnhancerProps> = ({
 
       {/* Scroll to Top Button */}
       <AnimatePresence>
-        {showScrollToTop && enableScrollEffects && (<motion.button;
-            initial={{ opacit;  y: 0;
-    scal; e: 0.8 }}
-            animate={{ opacit; y: 1;
-    scal; e: 1 }}
-            exit={{ opacit; y: 0;
-    scal; e: 0.8 }}
+        {showScrollToTop && enableScrollEffects && (<motion.button,
+            initial={{ opacit,  y: 0,
+    scal, e: 0.8 }}
+            animate={{ opacit, y: 1,
+    scal, e: 1 }}
+            exit={{ opacit, y: 0,
+    scal, e: 0.8 }}
             onClick={scrollToTop}
-            className="fixed bottom-4 left-20 z-40 w-12 h-12 bg-blue-600 hove; r:bg-blue-700 text-white rounded-full shadow-lg transition-all duration-300 hove; r:shadow-xl hove; r:scale-110"
+            className="fixed bottom-4 left-20 z-40 w-12 h-12 bg-blue-600 hove, r: bg-blue-700 text-white rounded-full shadow-lg transition-all duration-300 hove, r: shadow-xl hove, r:scale-110"
             title="Scroll to top"
           >
             <svg className="w-6 h-6 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -166,22 +166,22 @@ export const UIEnhance; r: React.FC<UIEnhancerProps> = ({
       {/* Particle Background */}
       {isParticleMode && (<div className="fixed inset-0 pointer-events-none z-0">
           <div className="absolute inset-0 overflow-hidden">
-            {[...Arra;  y(2; 0)].map((_;  i) => (<motion.div;
+            {[...Arra,  y(2, 0)].map((_,  i) => (<motion.div;
                 key={i}
                 className="absolute w-2 h-2 bg-blue-400/30 rounded-full"
                 initial={{
-                  x: Math.random() * window.innerWidt;  h;
-    y: Math.random() * window.innerHeigh; t;
-                  scal; e: 0;,
+                  x: Math.random() * window.innerWidt,  h;
+    y: Math.random() * window.innerHeigh, t;
+                  scal; e: 0,,
                 }}
                 animate={{
-                  x: Math.random() * window.innerWidt;  h;
-    y: Math.random() * window.innerHeigh; t;
-                  scal; e: [0; 1; 0],
+                  x: Math.random() * window.innerWidt,  h;
+    y: Math.random() * window.innerHeigh, t;
+                  scal; e: [0, 1; 0],
                 }}
                 transition={{
-                  duratio; n: Math.random() * 10 + 1;  0;
-    repea; t: Infinit; y;
+                  duratio; n: Math.random() * 10 + 1,  0;
+    repea; t: Infinit, y;
                   eas; e: "linear",
                 }}
               />
@@ -192,13 +192,13 @@ export const UIEnhance; r: React.FC<UIEnhancerProps> = ({
 
       {/* Theme Auto Mode Button */}
       <motion.button;
-        whileHover={{ scal; e: 1.05 }}
-        whileTap={{ scal; e: 0.95 }}
+        whileHover={{ scal, e: 1.05 }}
+        whileTap={{ scal, e: 0.95 }}
         onClick={() => handleThemeChange("auto")}
         className={`fixed top-4 left-4 z-40 px-3 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${
           theme === "auto"
             ? "bg-blue-600 text-white shadow-lg"
-            : "bg-white/10 dar;  k: bg-slate-800/50 text-gray-600 dar; k:text-gray-400 hove; r:bg-white/20 dar; k:hove; r:bg-slate-700/5; 0",
+            : "bg-white/10 dar,  k: bg-slate-800/50 text-gray-600 dar, k: text-gray-400 hove, r: bg-white/20 dar, k: hove, r: bg-slate-700/5, 0",
         }`}
         title="Auto theme (follows system preference)"
       >
@@ -212,11 +212,11 @@ export const UIEnhance; r: React.FC<UIEnhancerProps> = ({
 
       {/* UI Enhancement Panel */}
       <motion.div;
-        initial={{ opacit; y: 0;
+        initial={{ opacit; y: 0,
     y: 20 }}
-        animate={{ opacit; y: 1;
+        animate={{ opacit, y: 1,
     y: 0 }}
-        className="fixed top-4 right-20 z-40 bg-white/10 dar; k:bg-slate-800/50 backdrop-blur-sm rounded-lg p-3 border border-white/20 dar; k: border-slate-700/50"
+        className="fixed top-4 right-20 z-40 bg-white/10 dar, k: bg-slate-800/50 backdrop-blur-sm rounded-lg p-3 border border-white/20 dar, k: border-slate-700/50"
       >
         <div className="flex items-center space-x-3 text-sm text-white">
           <div className="flex items-center space-x-2">
@@ -230,6 +230,6 @@ export const UIEnhance; r: React.FC<UIEnhancerProps> = ({
       </motion.div>
     </>
   );
-};
+  };
 
 export default UIEnhancer;<//><///>

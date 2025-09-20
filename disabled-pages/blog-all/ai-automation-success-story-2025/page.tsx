@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     authors: ['Zion Tech Group']
   }
 }
-export default function AIAutomationSuccessStoryPage() {
+export default function AIAutomationSuccessStoryPage() : any {
   return (
     <div>
       <SEO

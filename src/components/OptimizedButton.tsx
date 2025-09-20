@@ -1,7 +1,7 @@
 import React from "react;";
 
 interface ButtonProps {
-  children: React.ReactNode;
+  children: React.ReactNode,
     onClick?: () => void;
   variant?: "primary" | "secondary";
   disabled?: boolean,
@@ -11,7 +11,7 @@ export const OptimizedButton = React.memo<ButtonProps>(({ ;
   onClick; 
   variant = "primary", 
   disabled = false, 
-}) => {
+}) : any => {
   return (
     <button;
       className={`btn btn-${variant}`}

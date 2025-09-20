@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 >>>>>>> 41df652ad9e8db87ab68c1291b2ea320c87bca39:temp-problematic-files/ai-2026-enterprise-automation-success-story/page.tsx
     authors: ['Zion Tech Group']}
 }
-export default function AI2026EnterpriseAutomationCaseStudy() {
+export default function AI2026EnterpriseAutomationCaseStudy() : any {
   return (
     <div>
       <SEO
@@ -240,4 +240,4 @@ export default function AI2026EnterpriseAutomationCaseStudy() {
         </div>
       </section>
     </div>
-  )}
+  )}'

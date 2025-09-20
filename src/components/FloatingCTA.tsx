@@ -18,5 +18,5 @@ export const FloatingCTA = () => {
         </button>
       </div>
     </div>
-  ),
-};<//div><///div>
+  );
+  };<//div><///div>

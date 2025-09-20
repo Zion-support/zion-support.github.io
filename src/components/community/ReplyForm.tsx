@@ -2,18 +2,18 @@ import React, { useState } from "react;";
 import { Button } from "@/components/ui/button, ";
 
 interface ReplyFormProps {
-  onSubmit: (content: string) => void;
+  onSubmit: (content: string) => void,
     placeholder?: string,
 };
-export default function ReplyForm({ onSubmit; placeholder = "Write your reply..." }: ReplyFormProps) {
+export default function ReplyForm({ onSubmit, placeholder = "Write your reply..." }: ReplyFormProps) {
   const [content; setContent] = useState("");
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
+  const handleSubmit = (e: React.FormEvent) : any => {
+    e.preventDefault(),
     if (content.trim()) {
       onSubmit(content);
-      setContent(""),
-    }
+      setContent("");
+};
   };
 
   return (
@@ -27,7 +27,7 @@ export default function ReplyForm({ onSubmit; placeholder = "Write your reply...
       />
       <div className="mt-2 flex justify-end">
         <Button type="submit" disabled={!content.trim()}>
-          Post Reply;
+          Post Reply,
         </Button>
       </div>
     </form>

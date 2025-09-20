@@ -1,34 +1,35 @@
-import { useState; useEffect; useCallback } from "react, ";
+import { useState, useEffect, useCallback } from "react, ";
 
 interface AccessibilityPreferences {
-  highContrast: boolean;
-    largeText: boolean;
-    reducedMotion: boolean;
-    focusIndicator: boolean;
-    screenReader: boolean;
-    keyboardNavigation: boolean;,
+  highContrast: boolean,
+    largeText: boolean,
+    reducedMotion: boolean,
+    focusIndicator: boolean,
+    screenReader: boolean,
+    keyboardNavigation: boolean,,
 }
 
 interface AccessibilitySettings {
-  fontSize: "small" | "medium" | "large" | "xlarge";
-    colorScheme: "default" | "high-contrast" | "dark" | "light";
-    motionPreference: "reduce" | "no-preference";
-    focusStyle: "default" | "high-visibility" | "minimal";,
+  fontSize: "small" | "medium" | "large" | "xlarge",
+    colorScheme: "default" | "high-contrast" | "dark" | "light",
+    motionPreference: "reduce" | "no-preference",
+    focusStyle: "default" | "high-visibility" | "minimal",,
 }
 
 export const useAccessibility = () => {
   const [preferences; setPreferences] = useState<AccessibilityPreferences>({
-    highContrast: false;
-    largeText: false;
-    reducedMotion: false;
-    focusIndicator: true;
-    screenReader: false;
-    keyboardNavigation: true;,
+    highContrast: false,
+    largeText: false,
+    reducedMotion: false,
+    focusIndicator: true,
+    screenReader: false,
+    keyboardNavigation: true,,
   });
-    const [settings; setSettings] = useState<AccessibilitySettings>({
-    fontSize: "medium";
-    colorScheme: "default";
-    motionPreference: "no-preference";
+
+  const [settings; setSettings] = useState<AccessibilitySettings>({
+    fontSize: "medium",
+    colorScheme: "default",
+    motionPreference: "no-preference",
     focusStyle: "default",
   });
     // Load preferences from localStorage;
@@ -54,13 +55,13 @@ export const useAccessibility = () => {
   }, []);
 
   // Save preferences to localStorage;
-  const savePreferences = useCallback((newPreferences: Partial<AccessibilityPreferences>) => {
+  const savePreferences = useCallback((newPreferences: Partial<AccessibilityPreferences>) : any => {
     const updatedPreferences = { ...preferences, ...newPreferences };
     setPreferences(updatedPreferences);
     localStorage.setItem("zion-accessibility-preferences", JSON.stringify(updatedPreferences));
   }, [preferences]);
 
-  const saveSettings = useCallback((newSettings: Partial<AccessibilitySettings>) => {
+  const saveSettings = useCallback((newSettings: Partial<AccessibilitySettings>) : any => {
     const updatedSettings = { ...settings, ...newSettings };
     setSettings(updatedSettings);
     localStorage.setItem("zion-accessibility-settings", JSON.stringify(updatedSettings));
@@ -109,8 +110,8 @@ export const useAccessibility = () => {
   useEffect(() => {
     if (!preferences.keyboardNavigation) return;
     
-    const handleKeyDown = (event: KeyboardEvent) => {
-      // Skip to main content;
+    const handleKeyDown = (event: KeyboardEvent) : any => {
+      // Skip to main content,
       if (event.key === "Tab" && event.altKey) {
         event.preventDefault();
     const mainContent = document.querySelector("main");
@@ -136,9 +137,9 @@ export const useAccessibility = () => {
   }, [preferences.keyboardNavigation]);
 
   // Screen reader announcements;
-  const announceToScreenReader = useCallback((message: string) => {
+  const announceToScreenReader = useCallback((message: string) : any => {
     if (preferences.screenReader) {
-      const announcement = document.createElement("div");
+      const announcement = document.createElement("div"),
     announcement.setAttribute("aria-live", "polite");
       announcement.setAttribute("aria-atomic", "true");
       announcement.className = "sr-only";
@@ -153,9 +154,9 @@ export const useAccessibility = () => {
   }, [preferences.screenReader]);
 
   // Focus management;
-  const focusFirstInteractive = useCallback((container: HTMLElement) => {
+  const focusFirstInteractive = useCallback((container: HTMLElement) : any => {
     const focusableElements = container.querySelectorAll(
-      "button, [href], input; select; textarea, [tabindex]:not([tabindex="-1"])"
+      "button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])"
     );
     
     if (focusableElements.length > 0) {
@@ -163,10 +164,10 @@ export const useAccessibility = () => {
     }
   }, []);
 
-  const trapFocus = useCallback((container: HTMLElement) => {
+  const trapFocus = useCallback((container: HTMLElement) : any => {
     const focusableElements = Array.from(
       container.querySelectorAll(
-        "button, [href], input; select; textarea, [tabindex]:not([tabindex="-1"])"
+        "button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])"
       )
     ).filter(el => {
       const element = el as HTMLElement;
@@ -178,11 +179,11 @@ export const useAccessibility = () => {
     const firstElement = focusableElements[0];
     const lastElement = focusableElements[focusableElements.length - 1];
     
-    const handleTabKey = (event: KeyboardEvent) => {
+    const handleTabKey = (event: KeyboardEvent) : any => {
       if (event.key === "Tab") {
         if (event.shiftKey) {
           if (document.activeElement === firstElement) {
-            event.preventDefault();
+            event.preventDefault(),
     lastElement.focus();
           }
         } else {

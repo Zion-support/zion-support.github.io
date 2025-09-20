@@ -7,7 +7,7 @@ export const metadata = {
   description: 'Experience the ultimate neural interface revolution of 2026, where direct brain-computer integration transforms human capabilities and communication.'
   keywords: ['neural interface 2026brain-computer interfaceneural implantsmind control', 'neural technology']
 }
-export default function NeuralInterfaceRevolution2026Ultimate() {
+export default function NeuralInterfaceRevolution2026Ultimate() : any {
   return (
     <div>
       <SEO

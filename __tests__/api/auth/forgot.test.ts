@@ -24,8 +24,8 @@ describe('/api/auth/forgot API Endpoint', () => {
     for (let i = 0, i < 5, i++) {
       mockedAxios.post.mockResolvedValueOnce({ status: 200, data: { ok: true } }),
       const { req, res } = createMocks({ method: 'POST', body }),
-      await forgotHandler(req as NextApiRequest, res as NextApiResponse),
-    }
+      await forgotHandler(req as NextApiRequest, res as NextApiResponse);
+};
     const { req, res } = createMocks({ method: 'POST', body }),
     mockedAxios.post.mockResolvedValueOnce({ status: 200, data: { ok: true } }),
     await forgotHandler(req as NextApiRequest, res as NextApiResponse),

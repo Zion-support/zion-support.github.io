@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   keywords: ['AI 2026', 'business transformation', 'quantum computing', 'neural interfaces', 'autonomous systems', 'enterprise AI', 'digital transformation']
 }
 
-export default function AI2026UltimateBusinessTransformationPage() {
+export default function AI2026UltimateBusinessTransformationPage() : any {
   return (
     <div>
       <h1>AI 2026 Ultimate Business Transformation</h1>

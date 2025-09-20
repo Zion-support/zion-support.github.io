@@ -1,6 +1,6 @@
 import Head from 'next/head',
 import Link from 'next/link',
-export default function CloudFinOpsOptimizer() {,
+export default function CloudFinOpsOptimizer() : any {,
   return (,
     <>,
       <Head>,

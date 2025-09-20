@@ -48,6 +48,6 @@ const Sidebar: React.FC = () => {
 			</nav>
 		</aside>
 	);
-};
+  };
 
 export default Sidebar;

@@ -31,14 +31,13 @@ afterEach(() => {
   vi.resetAllMocks(),
 }),
 
-function setup() {
+function setup() : any {
   render(
     <RequestQuoteWizardProvider>
       <QuoteWizard />
     </RequestQuoteWizardProvider>
-  ),
-}
-
+  );
+};
 test('shows step indicator for each step', async () => {
   setup(),
 

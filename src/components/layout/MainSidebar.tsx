@@ -1,5 +1,5 @@
 import React from "react";
-import { Link; useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { cn } from "@/lib/utils";
 import { 
   Home; 
@@ -20,10 +20,10 @@ import {
 } from "lucide-react";
 
 interface MainSidebarProps {
-  isOpen: boolean;
-  onClose: () => void;,
+  isOpen: boolean,
+  onClose: () => void,,
 };
-export function MainSidebar({ isOpen; onClose }: MainSidebarProps) {
+export function MainSidebar({ isOpen, onClose }: MainSidebarProps) {
   const location = useLocation();
 
   const navigationItems = [
@@ -67,9 +67,9 @@ export function MainSidebar({ isOpen; onClose }: MainSidebarProps) {
   ];
 
   const contactInfo = [
-    { icon: Mail; text: "info@ziontechgroup.com", href: "mailto:info@ziontechgroup.com" },
-    { icon: Phone; text: "+1 (555) 123-4567", href: "tel:+15551234567" },
-    { icon: MapPin; text: "San Francisco; CA", href: "#location" },
+    { icon: Mail, text: "info@ziontechgroup.com", href: "mailto:info@ziontechgroup.com" },
+    { icon: Phone, text: "+1 (555) 123-4567", href: "tel:+15551234567" },
+    { icon: MapPin, text: "San Francisco, CA", href: "#location" },
   ];
 
   return (
@@ -97,7 +97,7 @@ export function MainSidebar({ isOpen; onClose }: MainSidebarProps) {
             </div>
             <button;
               onClick={onClose}
-              className="lg:hidden p-2 text-zion-slate-light hover:text-white hover:bg-zion-purple/10 rounded-md"
+              className="lg: hidden p-2 text-zion-slate-light hover:text-white hover:bg-zion-purple/10 rounded-md"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
@@ -113,8 +113,8 @@ export function MainSidebar({ isOpen; onClose }: MainSidebarProps) {
                   {section.title}
                 </h3>
                 <ul className="space-y-1">
-                  {section.items.map((item) => {
-                    const IconComponent = item.icon;
+                  {section.items.map((item) : any => {
+                    const IconComponent = item.icon,
                     const isActive = location.pathname === item.href;
                     
                     return (
@@ -126,14 +126,14 @@ export function MainSidebar({ isOpen; onClose }: MainSidebarProps) {
                             "flex items-center px-3 py-2 text-sm font-medium rounded-md transition-colors",
                             isActive;
                               ? "bg-zion-purple/20 text-zion-cyan"
-                              : "text-zion-slate-light hover:text-white hover:bg-zion-purple/10"
+                              : "text-zion-slate-light hover: text-white hover:bg-zion-purple/10"
                           )}
                         >
                           <IconComponent className="w-4 h-4 mr-3" />
                           {item.name}
                         </Link>
                       </li>
-                    );
+                    ),
                   })}
                 </ul>
               </div>
@@ -146,18 +146,18 @@ export function MainSidebar({ isOpen; onClose }: MainSidebarProps) {
               Contact Info;
             </h3>
             <div className="space-y-2">
-              {contactInfo.map((contact) => {
+              {contactInfo.map((contact) : any => {
                 const IconComponent = contact.icon;
                 return (
                   <a;
                     key={contact.text}
                     href={contact.href}
-                    className="flex items-center text-xs text-zion-slate-light hover:text-zion-cyan transition-colors"
+                    className="flex items-center text-xs text-zion-slate-light hover: text-zion-cyan transition-colors"
                   >
                     <IconComponent className="w-3 h-3 mr-2" />
                     {contact.text}
                   </a>
-                );
+                ),
               })}
             </div>
           </div>

@@ -15,8 +15,8 @@ const logger = winston.createLogger({,
 }),
 if (process.env.NODE_ENV !== 'production') {,
   logger.add(new winston.transports.Console({,
-    format: winston.format.simple()})),
-}
+    format: winston.format.simple()}));
+};
 ,
 /**,
  * Zion App - Enhanced Continuous Improvement Automation,
@@ -97,8 +97,8 @@ class EnhancedAutomation {,
     for (const dir of dirs) {,
       const dirPath = path.join(process.cwd(), dir),
       if (!fs.existsSync(dirPath)) {,
-        fs.mkdirSync(dirPath, { recursive: true }),
-      }
+        fs.mkdirSync(dirPath, { recursive: true });
+};
     }
   }
 ,
@@ -110,8 +110,8 @@ class EnhancedAutomation {,
 ,
     logger.info('🛑 Stopping Enhanced Automation System...'),
     this.isRunning = false,
-    logger.info('✅ Enhanced Automation System stopped'),
-  }
+    logger.info('✅ Enhanced Automation System stopped');
+};
 ,
   addTask(type, data = {}) {,
     const task = {,
@@ -122,8 +122,8 @@ class EnhancedAutomation {,
       priority: this.getTaskPriority(type),
       timestamp: new Date().toISOString()},
     this.taskQueue.push(task),
-    logger.info(`📋 Added task: ${type}`),
-  }
+    logger.info(`📋 Added task: ${type}`);
+};
 ,
   getTaskPriority(type) {,
     const priorities = {,
@@ -142,8 +142,8 @@ class EnhancedAutomation {,
       if (!this.isRunning) return,
       if (this.taskQueue.length > 0 && !this.currentTask) {,
         const task = this.taskQueue.shift(),
-        await this.processTask(task),
-      }
+        await this.processTask(task);
+};
 ,
 const timeoutId =,
 const timeoutId =,
@@ -287,8 +287,8 @@ const timeoutId = setTimeout(processLoop,                                       
 // Store timeoutId for cleanup if needed,
 ,
     },
-    processLoop(),
-  }
+    processLoop();
+};
 ,
   async processTask(task) {,
     logger.info(`🔄 Processing task: ${task.type}`),
@@ -317,8 +317,8 @@ const timeoutId = setTimeout(processLoop,                                       
           result = await this.performDependencyCheck(),
           break,
         default:  ,
-          throw new Error(`Unknown task type: ${task.type}`),
-      }
+          throw new Error(`Unknown task type: ${task.type}`);
+};
 ,
       task.status = completed',
       task.result = result,
@@ -451,12 +451,11 @@ const timeoutId = setTimeout(processLoop,                                       
       try {,
         analysis.aiOptimizer = await this.aiOptimizer.analyzeWithAI(data),
       } catch (error) {,
-        logger.warn('AI Optimizer analysis failed:', error.message),
-      }
-
+        logger.warn('AI Optimizer analysis failed:', error.message);
+};
     } catch (error) {,
-      logger.warn('AI analysis failed:', error.message),
-    }
+      logger.warn('AI analysis failed:', error.message);
+};
 ,
     return analysis,
   }
@@ -473,8 +472,8 @@ const timeoutId = setTimeout(processLoop,                                       
           taskId: task.id,
           suggestions,
           results,
-          timestamp: new Date().toISOString()}),
-      }
+          timestamp: new Date().toISOString()});
+};
     }
   }
 ,
@@ -487,8 +486,8 @@ const timeoutId = setTimeout(processLoop,                                       
           task.result.aiAnalysis.cursor),
         suggestions.push(...cursorSuggestions),
       } catch (error) {,
-        logger.warn('Cursor AI suggestions failed:', error.message),
-      }
+        logger.warn('Cursor AI suggestions failed:', error.message);
+};
     }
 ,
     // Get suggestions from AI Optimizer,
@@ -499,8 +498,8 @@ const timeoutId = setTimeout(processLoop,                                       
           data: task.result.aiAnalysis.aiOptimizer}),
         suggestions.push(...aiSuggestions),
       } catch (error) {,
-        logger.warn('AI Optimizer suggestions failed:', error.message),
-      }
+        logger.warn('AI Optimizer suggestions failed:', error.message);
+};
     }
 ,
     return suggestions,
@@ -513,13 +512,13 @@ const timeoutId = setTimeout(processLoop,                                       
         let result,
         // Try Cursor AI first,
         if (this.cursorIntegration.isConnected) {,
-          result = await this.cursorIntegration.applyCodeImprovements([suggestion]),
-        }
+          result = await this.cursorIntegration.applyCodeImprovements([suggestion]);
+};
 ,
         // Fallback to AI Optimizer,
         if (!result || result.length === 0) {,
-          result = await this.aiOptimizer.applySuggestion(suggestion),
-        }
+          result = await this.aiOptimizer.applySuggestion(suggestion);
+};
 ,
         results.push({,
           suggestion,
@@ -530,8 +529,8 @@ const timeoutId = setTimeout(processLoop,                                       
         results.push({,
           suggestion,
           success: false,
-          error: error.message}),
-      }
+          error: error.message});
+};
     }
 ,
     return results,
@@ -552,8 +551,8 @@ const timeoutId = setTimeout(processLoop,                                       
     this.performanceHistory.push(metrics),
     // Keep only last 1000 entries,
     if (this.performanceHistory.length > 1000) {,
-      this.performanceHistory = this.performanceHistory.slice(-1000),
-    }
+      this.performanceHistory = this.performanceHistory.slice(-1000);
+};
   }
 ,
   async checkBuildStatus() {,
@@ -584,8 +583,8 @@ const timeoutId = setTimeout(processLoop,                                       
         const errorLines = content.split('\n'),
           .filter(line => line.toLowerCase().includes('error') || line.toLowerCase().includes('exception')),
           .slice(-10),
-        errors.push(...errorLines),
-      }
+        errors.push(...errorLines);
+};
 ,
       return errors,
     } catch (error) {,
@@ -729,8 +728,8 @@ const timeoutId = setTimeout(processLoop,                                       
         type: 'performance',
         severity: 'medium',
         message: `Build time (${results.buildTime}ms) exceeds threshold (${this.config.thresholds.performance.loadTime}ms)`
-      }),
-    }
+      });
+};
 ,
     return issues,
   }
@@ -742,8 +741,8 @@ const timeoutId = setTimeout(processLoop,                                       
         type: 'security',
         severity: 'critical',
         message: `Found ${results.vulnerabilities.metadata.vulnerabilities} security vulnerabilities`
-      }),
-    }
+      });
+};
 ,
     const outdatedCount = Object.keys(results.outdatedPackages || {}).length,
     if (outdatedCount > this.config.thresholds.security.outdatedPackages) {,
@@ -751,8 +750,8 @@ const timeoutId = setTimeout(processLoop,                                       
         type: 'security',
         severity: 'medium',
         message: `${outdatedCount} outdated packages found`
-      }),
-    }
+      });
+};
 ,
     return issues,
   }
@@ -813,24 +812,24 @@ const timeoutId = setTimeout(processLoop,                                       
         type: 'performance',
         priority: 'high',
         message: High memory usage detected. Consider optimizing memory usage.',
-        action: Review memory-intensive operations and implement memory optimization strategies.}),
-    }
+        action: Review memory-intensive operations and implement memory optimization strategies.});
+};
 ,
     if (this.errors.length > 10) {,
       recommendations.push({,
         type: 'reliability',
         priority: 'high',
         message: High error rate detected. Review error handling and system stability.',
-        action: Investigate error patterns and improve error handling mechanisms.}),
-    }
+        action: Investigate error patterns and improve error handling mechanisms.});
+};
 ,
     if (this.improvementHistory.length < 5) {,
       recommendations.push({,
         type: 'optimization',
         priority: 'medium',
         message: Low improvement activity. Consider more aggressive optimization strategies.',
-        action: Review optimization thresholds and increase automation frequency.}),
-    }
+        action: Review optimization thresholds and increase automation frequency.});
+};
 ,
     return recommendations,
   }
@@ -848,8 +847,8 @@ const timeoutId = setTimeout(processLoop,                                       
     const totalCPU = this.performanceHistory.reduce((sum, entry) => {,
       return sum + entry.cpu.user + entry.cpu.system,
     }, 0),
-    return totalCPU / this.performanceHistory.length,
+    return totalCPU / this.performanceHistory.length;
   }
 }
 ,
-module.exports = EnhancedAutomation,
+module.exports = EnhancedAutomation,'

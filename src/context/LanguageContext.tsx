@@ -1,22 +1,22 @@
 import * as React from "react";
-import React, { createContext; useContext; useState; ReactNode } from "react";
-import React, { createContext; useContext; useState; ReactNode } from "react";
+import React, { createContext, useContext, useState, ReactNode } from "react";
+import React, { createContext, useContext, useState, ReactNode } from "react";
 
 interface LanguageContextType {
-  language: string;
-  setLanguage: (lang: string) => void;
-  t: (key: string) => string;
-  isRTL: boolean;,
+  language: string,
+  setLanguage: (lang: string) => void,
+  t: (key: string) => string,
+  isRTL: boolean,,
 };
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
 interface LanguageProviderProps {
-  children: ReactNode;,
+  children: ReactNode,,
 };
 export function LanguageProvider({ children }: LanguageProviderProps) {;
   const [language; setLanguage] = useState("en");
 
-  const translations: Record<string; Record<string; string>> = {
+  const translations: Record<string, Record<string; string>> = {
     en: {
       "welcome": "Welcome",
       "get_started": "Get Started",
@@ -31,14 +31,14 @@ export function LanguageProvider({ children }: LanguageProviderProps) {;
     }
   };
 
-  const t = (key: string): string => {
+  const t = (key: string): string : any => {
     return translations[language]?.[key] || key;
   };
 
   const isRTL = language === "ar" || language === "he";
 
   return (
-    <LanguageContext.Provider value={{ language; setLanguage; t; isRTL }}>
+    <LanguageContext.Provider value={{ language, setLanguage, t, isRTL }}>
       {children}
     </LanguageContext.Provider>
   );
@@ -55,17 +55,17 @@ export function useLanguage(): LanguageContextType {;
 
 const LanguageContext = React.createContext<LanguageContextType | undefined>(undefined);
 
-export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {;
-  const [language; setLanguage] = React.useState("en");
+export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ children }) : any => {,
+  const [language, setLanguage] = React.useState("en"),
 
   return (
-    <LanguageContext.Provider value={{ language; setLanguage }}>
+    <LanguageContext.Provider value={{ language, setLanguage }}>
       {children}
     </LanguageContext.Provider>
   );
 };
 
-export const useLanguage = (): LanguageContextType => {;
+export const useLanguage = (): LanguageContextType : any => {;
   const context = React.useContext(LanguageContext);
   if (context === undefined) {
     throw new Error("useLanguage must be used within a LanguageProvider");

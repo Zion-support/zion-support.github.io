@@ -2,10 +2,10 @@
 import React from 'react';
 
 interface StructuredDataProps {
-  type: 'Organization' | 'WebSite' | 'Service' | 'Article' | 'LocalBusiness';
-  data: any;,
+  type: 'Organization' | 'WebSite' | 'Service' | 'Article' | 'LocalBusiness',
+  data: any,,
 };
-export const StructuredData: React.FC<StructuredDataProps> = ({ type, data }) => {
+export const StructuredData: React.FC<StructuredDataProps> = ({ type, data }) : any => {
   const getStructuredData = () => {
     const baseStructure = {
       '@context': 'https://schema.org',
@@ -49,7 +49,7 @@ export const OrganizationSchema = {
   sameAs: [
     'https://twitter.com/ziontechgroup',
     'https://linkedin.com/company/ziontechgroup',
-    'https://github.com/ziontechgroup';
+    'https: //github.com/ziontechgroup',
   ];
 };
 

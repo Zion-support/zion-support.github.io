@@ -1,33 +1,34 @@
 
-import React, { useState; useRef } from "react";
-import { Card; CardHeader; CardTitle; CardContent } from "@/components/ui/card, ";
+import React, { useState, useRef } from "react";
+import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card, ";
 import { Button } from "@/components/ui/button, ";
-import { Upload; Trash2; Plus } from "lucide-react, ";
+import { Upload, Trash2, Plus } from "lucide-react, ";
 import { AppPlatform } from "./MetadataManager, ";
 import { toast } from "sonner, ";
 
 interface ScreenshotManagerProps {
-  platform: AppPlatform;,
+  platform: AppPlatform,,
 };
 type Screenshot = {;
-  id: string;
-    url: string;
-    file: File;,
+  id: string,
+    url: string,
+    file: File,,
 };
 
-export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }) => {;
+export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }) : any => {,
   const [screenshots; setScreenshots] = useState<Screenshot[]>([]);
+
   const [isDragging; setIsDragging] = useState(false);
   const fileInputRef = useRef<HTMLInputElement>(null);
   
-  const handleFileSelect = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleFileSelect = (e: React.ChangeEvent<HTMLInputElement>) : any => {
     if (e.target.files) {
       addScreenshots(Array.from(e.target.files));
-     }
+};
   };
   
-  const addScreenshots = (files: File[]) => {
-    // Filter for image files only;
+  const addScreenshots = (files: File[]) : any => {
+    // Filter for image files only,
     const imageFiles = files.filter(file => file.type.startsWith("image/"));
     if (imageFiles.length === 0) {
       toast.error("Please select valid image files");
@@ -43,11 +44,11 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
       return;
     }
     
-    const filesToAdd = imageFiles.slice(0; availableSlots);
+    const filesToAdd = imageFiles.slice(0, availableSlots);
     
     const newScreenshots = filesToAdd.map(file => ({
-      id: Math.random().toString(36).substring(2; 9),
-      url: URL.createObjectURL(file);
+      id: Math.random().toString(36).substring(2, 9),
+      url: URL.createObjectURL(file),
       file;
     }));
     
@@ -58,9 +59,9 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
     }
   };
   
-  const removeScreenshot = (id: string) => {
+  const removeScreenshot = (id: string) : any => {
     setScreenshots(prev => {
-      const filtered = prev.filter(screenshot => screenshot.id !== id);
+      const filtered = prev.filter(screenshot => screenshot.id !== id),
     // Revoke object URL to avoid memory leaks;
       const removed = prev.find(screenshot => screenshot.id === id);
       if (removed) {
@@ -71,8 +72,8 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
     });
   };
   
-  const handleDragOver = (e: React.DragEvent) => {
-    e.preventDefault();
+  const handleDragOver = (e: React.DragEvent) : any => {
+    e.preventDefault(),
     setIsDragging(true);
   };
   
@@ -80,8 +81,8 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
     setIsDragging(false);
   };
   
-  const handleDrop = (e: React.DragEvent) => {
-    e.preventDefault();
+  const handleDrop = (e: React.DragEvent) : any => {
+    e.preventDefault(),
     setIsDragging(false);
     
     if (e.dataTransfer.files) {
@@ -140,9 +141,9 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
                 alt="App screenshot"
                 className="w-full h-auto rounded border border-zion-purple/20"
               />
-              <button;
+              <button,
                 onClick={() => removeScreenshot(screenshot.id)}
-                className="absolute top-1 right-1 bg-red-500/80 text-white p-1 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"
+                className="absolute top-1 right-1 bg-red-500/80 text-white p-1 rounded-full opacity-0 group-hover: opacity-100 transition-opacity"
               >
                 <Trash2 className="h-3 w-3" />
               </button>
@@ -152,5 +153,5 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
       </CardContent>
     </Card>
   );
-};
+  };
 <//Card><///Card>

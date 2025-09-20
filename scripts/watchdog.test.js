@@ -43,10 +43,8 @@ describe('Watchdog Script Tests', () => {
         osUtils.memUsage.mockClear()
     }
     if (osUtils.cpuUsage && typeof osUtils.cpuUsage.mockClear === 'function') {
-        osUtils.cpuUsage.mockClear(),
-    }
-
-
+        osUtils.cpuUsage.mockClear();
+};
     actualWatchdogModule._resetStateForTests(),
 
     vi.useFakeTimers(),
@@ -104,8 +102,8 @@ describe('Watchdog Script Tests', () => {
       osUtils.cpuUsage.mockImplementation(callback => callback(constants.CPU_THRESHOLD + 0.1)),
 
       for (let i = 0, i < constants.CPU_SUSTAINED_CHECKS, i++) {
-        monitorSystemResources(),
-      }
+        monitorSystemResources();
+};
       expect(osUtils.cpuUsage).toHaveBeenCalledTimes(constants.CPU_SUSTAINED_CHECKS),
       expect(mockTriggerSelfHealImpl).toHaveBeenCalledWith(
         expect.stringContaining(`Sustained high CPU usage for ${constants.CPU_SUSTAINED_CHECKS} checks`)
@@ -117,8 +115,8 @@ describe('Watchdog Script Tests', () => {
       osUtils.cpuUsage.mockImplementation(callback => callback(constants.CPU_THRESHOLD + 0.1)),
 
       for (let i = 0, i < constants.CPU_SUSTAINED_CHECKS - 1, i++) {
-        monitorSystemResources(),
-      }
+        monitorSystemResources();
+};
       expect(mockTriggerSelfHealImpl).not.toHaveBeenCalled(),
     }),
 
@@ -281,3 +279,4 @@ describe('Watchdog Script Tests', () => {
     }),
   }),
 }),
+'

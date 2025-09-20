@@ -17,7 +17,7 @@ const contactInfo = {
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-};
+},
 
 const serviceCategories = [
   {
@@ -152,7 +152,7 @@ const companyLinks = [
   { name: '🎯 About Us', href: '/about', icon: Users },
   { name: '📞 Contact', href: '/contact', icon: MessageCircle },
   { name: '🔒 Support', href: '/support', icon: ShieldCheck }
-];
+],
 
 const resourceLinks = [
   { name: '📖 Documentation', href: '/docs', icon: BookOpen },
@@ -163,9 +163,9 @@ const resourceLinks = [
   { name: '☁️ Cloud Services', href: '/cloud', icon: Cloud },
   { name: '🔐 Security Center', href: '/security', icon: Shield },
   { name: '📊 Analytics', href: '/analytics', icon: BarChart3 }
-];
+],
 
-export default function UltraFuturisticNavigation2028() {
+export default function UltraFuturisticNavigation2028() : any {
   const [isOpen, setIsOpen] = useState(false);
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState('');
@@ -173,7 +173,7 @@ export default function UltraFuturisticNavigation2028() {
   const toggleMenu = () => setIsOpen(!isOpen);
   const closeMenu = () => setIsOpen(false);
 
-  const handleCategoryHover = (categoryTitle: string) => {
+  const handleCategoryHover = (categoryTitle: string) : any => {
     setActiveCategory(categoryTitle);
   };
 
@@ -439,7 +439,7 @@ export default function UltraFuturisticNavigation2028() {
                 <Link
                   key={service.name}
                   href={service.href}
-                  className="block p-3 rounded-lg bg-purple-900/20 hover:bg-purple-900/40 transition-colors"
+                  className="block p-3 rounded-lg bg-purple-900/20 hover: bg-purple-900/40 transition-colors"
                 >
                   <div className="flex items-center justify-between">
                     <div>
@@ -456,4 +456,4 @@ export default function UltraFuturisticNavigation2028() {
       )}
     </nav>
   );
-}
+  }

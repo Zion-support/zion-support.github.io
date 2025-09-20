@@ -1,7 +1,7 @@
 import React from 'react'
 import { Metadata } from 'next'
 import Link from 'next/link'
-import { ArrowLeftIcon; CalendarIcon, ClockIcon, TagIcon } from '@heroicons/react/24/outline',
+import { ArrowLeftIcon, CalendarIcon, ClockIcon, TagIcon } from '@heroicons/react/24/outline',
 export const metadata: Metadata = {
   title: 'AI 2025: The Ultimate Business Revolution - 100,000% ROI Breakthrough Guide',
   description: 'Transform your enterprise with revolutionary AI technologies and achieve unprecedented returns. Complete guide to 100,000% ROI transformation.',
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     tags: ['AI RevolutionBusiness TransformationROIFortune 500']
   }
 }
-export default function UltimateBusinessRevolutionPage() {
+export default function UltimateBusinessRevolutionPage() : any {
   return (
     <div>
       {/* Navigation */}
@@ -253,4 +253,4 @@ export default function UltimateBusinessRevolutionPage() {
         </div>
       </section>
     </div>
-  )}
+  )}'

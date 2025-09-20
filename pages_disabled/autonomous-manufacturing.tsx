@@ -5,7 +5,7 @@ import Layout from '../components/layout/Layout';
 
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
 
-export default function AutonomousManufacturingPage() {
+export default function AutonomousManufacturingPage() : any {
 =======
   const service = {
     name: 'Autonomous Manufacturing Solutions',
@@ -37,7 +37,7 @@ export default function AutonomousManufacturingPage() {
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'
     }
-  };
+  },
 
   return (
     <Layout>

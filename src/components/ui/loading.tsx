@@ -14,7 +14,7 @@ export function Loading({
   text, 
 }: LoadingProps) {
   const sizeClasses = {
-    sm: "w-4 h-4", md: "w-6 h-6";
+    sm: "w-4 h-4", md: "w-6 h-6",
     lg: "w-8 h-8",
     xl: "w-12 h-12",
   };
@@ -31,7 +31,7 @@ export function Loading({
       <div className={cn("bg-current rounded-full animate-bounce", sizeClasses[size])} style={{animationDelay: "150ms"}} />
       <div className={cn("bg-current rounded-full animate-bounce", sizeClasses[size])} style={{animationDelay: "300ms"}} />
     </div>
-  );
+  ),
     const renderPulse = () => (
     <div className={cn("bg-current rounded-full animate-ping", sizeClasses[size])} />
   );
@@ -48,8 +48,8 @@ export function Loading({
         return renderPulse();
       case "skeleton":
         return renderSkeleton();
-      default: return renderSpinner(),
-     }
+      default: return renderSpinner();
+  }
   };
 
   return (
@@ -73,7 +73,7 @@ export function Skeleton({ className, ...props }: React.HTMLAttributes<HTMLDivEl
 }
 
 // Page loading component;
-export function PageLoading() {
+export function PageLoading() : any {
   return (
     <div className="min-h-screen flex items-center justify-center bg-background">
       <div className="text-center space-y-4">
@@ -82,11 +82,11 @@ export function PageLoading() {
         <p className="text-zion-slate-light">Preparing your experience...</p>
       </div>
     </div>
-  ),
-};
+  );
+  };
 ;
 // Content skeleton loading;
-export function ContentSkeleton() {
+export function ContentSkeleton() : any {
   return (
     <div className="space-y-4 animate-pulse">
       <div className="h-8 bg-zion-slate-light/20 rounded w-3/4"></div>
@@ -96,11 +96,11 @@ export function ContentSkeleton() {
         <div className="h-4 bg-zion-slate-light/20 rounded w-4/6"></div>
       </div>
     </div>
-  ),
-};
+  );
+  };
 ;
 // Card skeleton loading;
-export function CardSkeleton() {
+export function CardSkeleton() : any {
   return (
     <div className="bg-white border border-gray-200 rounded-lg p-6 space-y-4 animate-pulse">
       <div className="h-6 bg-zion-slate-light/20 rounded w-1/2"></div>

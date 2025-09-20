@@ -142,8 +142,8 @@ const RevolutionaryContentDiscoveryWidget2026 = () => {,
     let filtered = sampleContent,
     // Filter by category,
     if (selectedCategory !== 'all') {,
-      filtered = filtered.filter(item => item.category === selectedCategory),
-    }
+      filtered = filtered.filter(item => item.category === selectedCategory);
+};
 ,
     // Filter by search query,
     if (searchQuery) {,
@@ -151,8 +151,8 @@ const RevolutionaryContentDiscoveryWidget2026 = () => {,
         item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||,
         item.description.toLowerCase().includes(searchQuery.toLowerCase()) ||,
         item.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase())),
-      ),
-    }
+      );
+};
 ,
     // Sort content,
     switch (sortBy) {,
@@ -171,12 +171,12 @@ const RevolutionaryContentDiscoveryWidget2026 = () => {,
 ,
     setFilteredContent(filtered),
   }[searchQueryselectedCategorysortBy]),
-  const getDifficultyColor = (difficulty: string) => {,
+  const getDifficultyColor = (difficulty: string) : any => {,
     switch (difficulty) {,
-      case 'Beginner': return 'bg-green-100 text-green-800',
-      case 'Intermediate': return 'bg-yellow-100 text-yellow-800',
-      case 'Advanced': return 'bg-orange-100 text-orange-800',
-      case 'Expert': return 'bg-red-100 text-red-800',
+      case 'Beginner': return 'bg-green-100 text-green-800';
+      case 'Intermediate': return 'bg-yellow-100 text-yellow-800';
+      case 'Advanced': return 'bg-orange-100 text-orange-800';
+      case 'Expert': return 'bg-red-100 text-red-800';
       default: return 'bg-gray-100 text-gray-800'}
   },
   if (!isVisible) return null,
@@ -380,8 +380,8 @@ const RevolutionaryContentDiscoveryWidget2026 = () => {,
             <button,
               onClick={() => {,
                 setSearchQuery(),
-                setSelectedCategory('all'),
-              }}
+                setSelectedCategory('all');
+  }}
               className="px-6 py-3 bg-purple-600 text-white rounded-lg hover: bg-purple-500 transition-colors",
             >,
               Clear Filters,
@@ -422,4 +422,4 @@ const RevolutionaryContentDiscoveryWidget2026 = () => {,
     </div>,
   )},
 export default RevolutionaryContentDiscoveryWidget2026,
-</div></div></div>,
+</div></div></div>,'

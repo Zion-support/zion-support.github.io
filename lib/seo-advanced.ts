@@ -3,8 +3,8 @@
  */
 
 export interface SEOData {
-  title: string;
-  description: string;
+  title: string,
+  description: string,
   keywords?: string[];
   canonicalUrl?: string;
   ogImage?: string;
@@ -15,7 +15,7 @@ export interface SEOData {
   language?: string;
 }
 
-export const generateAdvancedSEO = (data: SEOData) => {
+export const generateAdvancedSEO = (data: SEOData) : any => {
   const {
     title,
     description,
@@ -68,7 +68,7 @@ export const generateAdvancedSEO = (data: SEOData) => {
     },
     ...(structuredData && {
       structuredData: JSON.stringify(structuredData),
-    }),
+    });
   };
 };
 
@@ -134,7 +134,7 @@ export const generateStructuredData = {
     ...data,
   }),
 
-  breadcrumb: (items: Array<{ name: string; url: string }>) => ({
+  breadcrumb: (items: Array<{ name: string, url: string }>) => ({
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: items.map((item, index) => ({
@@ -143,37 +143,37 @@ export const generateStructuredData = {
       name: item.name,
       item: item.url,
     })),
-  }),
-};
+  });
+  };
 
-export const generateSitemap = (pages: Array<{ url: string; lastmod?: string; changefreq?: string; priority?: number }>) => {
+export const generateSitemap = (pages: Array<{ url: string, lastmod?: string, changefreq?: string, priority?: number }>) : any => {
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http: //www.sitemaps.org/schemas/sitemap/0.9">
 ${pages.map(page => `  <url>
     <loc>${page.url}</loc>
     <lastmod>${page.lastmod || new Date().toISOString().split('T')[0]}</lastmod>
     <changefreq>${page.changefreq || 'weekly'}</changefreq>
     <priority>${page.priority || '0.8'}</priority>
   </url>`).join('\n')}
-</urlset>`;
+</urlset>`,
   
   return sitemap;
 };
 
-export const generateRobotsTxt = (allow: string[] = ['/'], disallow: string[] = ['/api/', '/admin/']) => {
+export const generateRobotsTxt = (allow: string[] = ['/'], disallow: string[] = ['/api/', '/admin/']) : any => {
   return `User-agent: *
 ${allow.map(path => `Allow: ${path}`).join('\n')}
 ${disallow.map(path => `Disallow: ${path}`).join('\n')}
 
 Sitemap: https://zion.app/sitemap.xml`;
-};
+  };
 
 export const optimizeImages = {
-  generateSrcSet: (baseUrl: string, sizes: number[] = [640, 750, 828, 1080, 1200, 1920, 2048, 3840]) => {
+  generateSrcSet: (baseUrl: string, sizes: number[] = [640, 750, 828, 1080, 1200, 1920, 2048, 3840]) : any => {
     return sizes.map(size => `${baseUrl}?w=${size}&q=80 ${size}w`).join(', ');
   },
   
-  generateSizes: (breakpoints: Array<{ min: number; max?: number; size: string }>) => {
+  generateSizes: (breakpoints: Array<{ min: number, max?: number, size: string }>) : any => {
     return breakpoints.map(bp => 
       bp.max ? `(min-width: ${bp.min}px) and (max-width: ${bp.max}px) ${bp.size}` 
              : `(min-width: ${bp.min}px) ${bp.size}`
@@ -181,8 +181,8 @@ export const optimizeImages = {
   },
 };
 
-export const generateMetaTags = (seoData: SEOData) => {
-  const tags = [];
+export const generateMetaTags = (seoData: SEOData) : any => {
+  const tags = [],
   
   tags.push(`<title>${seoData.title}</title>`);
   tags.push(`<meta name="description" content="${seoData.description}" />`);
@@ -200,26 +200,23 @@ export const generateMetaTags = (seoData: SEOData) => {
   }
   
   // Open Graph tags
-  tags.push(`<meta property="og:title" content="${seoData.title}" />`);
-  tags.push(`<meta property="og:description" content="${seoData.description}" />`);
-  tags.push(`<meta property="og:type" content="${seoData.ogType || 'website'}" />`);
+  tags.push(`<meta property="og: title" content="${seoData.title}" />`),
+  tags.push(`<meta property="og: description" content="${seoData.description}" />`),
+  tags.push(`<meta property="og: type" content="${seoData.ogType || 'website'}" />`),
   
   if (seoData.canonicalUrl) {
-    tags.push(`<meta property="og:url" content="${seoData.canonicalUrl}" />`);
-  }
-  
+    tags.push(`<meta property="og: url" content="${seoData.canonicalUrl}" />`);
+};
   if (seoData.ogImage) {
-    tags.push(`<meta property="og:image" content="${seoData.ogImage}" />`);
-  }
-  
+    tags.push(`<meta property="og: image" content="${seoData.ogImage}" />`);
+};
   // Twitter Card tags
-  tags.push(`<meta name="twitter:card" content="${seoData.twitterCard || 'summary_large_image'}" />`);
-  tags.push(`<meta name="twitter:title" content="${seoData.title}" />`);
-  tags.push(`<meta name="twitter:description" content="${seoData.description}" />`);
+  tags.push(`<meta name="twitter: card" content="${seoData.twitterCard || 'summary_large_image'}" />`),
+  tags.push(`<meta name="twitter: title" content="${seoData.title}" />`),
+  tags.push(`<meta name="twitter: description" content="${seoData.description}" />`),
   
   if (seoData.ogImage) {
-    tags.push(`<meta name="twitter:image" content="${seoData.ogImage}" />`);
-  }
-  
+    tags.push(`<meta name="twitter: image" content="${seoData.ogImage}" />`);
+};
   return tags.join('\n');
 };

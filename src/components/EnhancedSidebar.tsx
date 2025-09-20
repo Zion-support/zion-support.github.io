@@ -1,4 +1,4 @@
-import { import { motion; AnimatePresence   } from "framer-motion",
+import { import { motion, AnimatePresence   } from "framer-motion",
 ,
 export default function Page("props": "any) {,
     setExpandedSections(newExpanded)"},
@@ -96,4 +96,4 @@ export default function Page("props": "any) {,
     </aside>,) },
 '"`,
 </motion, >,
-</motion>]]<//motion><///motion>
+</motion>]]<//motion><///motion>'

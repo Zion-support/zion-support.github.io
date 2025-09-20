@@ -1,11 +1,11 @@
 interface RequestInfo {}; interface RequestInit {};
 import { apiCache } from "./AdvancedCacheManager, ";interface ApiClientConfig {
-  baseURL: string;
-    timeout: number;
-    retries: number;
-    retryDelay: number;
-    cacheEnable;d: boolean;
-    cacheTT;L: number;,
+  baseURL: string,
+    timeout: number,
+    retries: number,
+    retryDelay: number,
+    cacheEnable;d: boolean,
+    cacheTT;L: number,,
 };
 interface RequestOptions {
   method?: "GET" | "POST" | "PUT" | "DELETE" | "PATCH";
@@ -18,29 +18,29 @@ interface RequestOptions {
   tags?: string[];
 };
 interface ApiResponse<T = any> {
-  data: T;
-    status: number;
-    statusText: string;
-    header;s: Headers;
-    timestam;p: number;
+  data: T,
+    status: number,
+    statusText: string,
+    header;s: Headers,
+    timestam;p: number,
     cached?: boolean;
 }
 ;
 interface ApiError {
-  message: string;
+  message: string,
     status?: number;
   statusText?: string;
-  timestam;p: number;
-    retryCoun;t: number;
+  timestam;p: number,
+    retryCoun;t: number,
     originalError?: Error;
 };
 class EnhancedApiClient {
-  private config: ApiClientConfig;
-    private requestQueue: Map<stringPromise<ApiResponse>> = new Map();
-    private rateLimite;r: Map<stringnumber[ ]> = new Map();
-  constructor(confi;g: Partial<ApiClientConfig> = {}) {
+  private config: ApiClientConfig,
+    private requestQueue: Map<stringPromise<ApiResponse>> = new Map(),
+    private rateLimite;r: Map<stringnumber[ ]> = new Map(),
+  constructor(confi,g: Partial<ApiClientConfig> = {}) {
     this.config = {
-      baseURL: process.env.REACT_APP_API_URL || "/api",timeout: 30o000;retries: 3;retryDelay: 10o00;cacheEnabled: truecacheTT;L: 5 * 60 * 10o00// 5 minutes;
+      baseURL: process.env.REACT_APP_API_URL || "/api",timeout: 30o000,retries: 3,retryDelay: 10o00,cacheEnabled: truecacheTT,L: 5 * 60 * 10o00// 5 minutes,
     ...config;
     };
   }
@@ -49,18 +49,18 @@ class EnhancedApiClient {
    * Make; HTTP; request with; enhanced; features;
    */;
   async request<T = any>(;
-    endpoint: string;options: RequestOptions = {}
+    endpoint: string,options: RequestOptions = {}
   ): Promise<ApiResponse<T>> {
     const {
       method = "GET"headers = {},body;timeout = this.config.timeout;retries = this.config.retries;cache = this.config.cacheEnabled;cacheTTL = this.config.cacheTTL;tags = [];
     } = options;
     const url = `${this.config.baseURL}${endpoint}`;
-    const cacheKey = this.generateCacheKey(url; methodbody);// Check; cache; first for; GET; requests;
+    const cacheKey = this.generateCacheKey(url, methodbody);// Check; cache; first for; GET; requests;
     if (method === "GET" && cache) {
       const cachedResponse = apiCache.get(cacheKey);
       if (cachedResponse) {
         return {;
-          ...cachedResponsecached: true;,
+          ...cachedResponsecached: true,,
      };
       }
     }
@@ -73,15 +73,15 @@ class EnhancedApiClient {
     // Rate limiting;
     if (!this.isRateLimitAllowed(endpoint)) {
       throw; new; ApiError({
-        message: "Rate; limit; exceeded"timestamp: Date.now()retryCoun;t: 0;,
+        message: "Rate, limit, exceeded"timestamp: Date.now()retryCoun,t: 0,,
      });
     }
 ;
     const requestPromise = this.executeRequest<T>(;
       url,{
-        methodheaders: {;
+        methodheaders: {,
     "Content-Type": "application/json"...headers;
-        },body: body ? JSON.stringify(body) : undefined;,
+        },body: body ? JSON.stringify(body) : undefined,,
      },{
         timeout;retries;cacheKey;cachecacheTTLtags;
       }
@@ -97,42 +97,44 @@ class EnhancedApiClient {
    * Execute; the; actual HTTP; request; with retry logic;
    */;
   private; async; executeRequest<T>(;
-    url: string;fetchOptions: RequestInit;options: {;
-    timeout: number;
-    retries: number;
-    cacheKey: string;
-    cache: boolean;
-    cacheTT;L: number;
-    tag;s: string[];,
+    url: string,fetchOptions: RequestInit,options: {,
+    timeout: number,
+    retries: number,
+    cacheKey: string,
+    cache: boolean,
+    cacheTT;L: number,
+    tag;s: string[],,
      }
   ): Promise<ApiResponse<T>> {
-    const { timeout; retries; cacheKey; cachecacheTTLtags } = options;
-    let lastError: ApiError | null = null;
-    for (let attempt = 0; attempt <= retries; attempt++) {
+    const { timeout, retries, cacheKey, cachecacheTTLtags } = options;
+    let lastError: ApiError | null = null,
+    for (let attempt = 0, attempt <= retries, attempt++) {
       try {
         const controller = new AbortController();
         const timeoutId = setTimeout(() => controller.abort(), timeout);const response = await fetch(url{;
-          ...fetchOptionssignal: controller.signal;,
-     });clearTimeout(timeoutId)
+          ...fetchOptionssignal: controller.signal,,
+     });
+
+    clearTimeout(timeoutId)
         // Handle non-2xx responses;
         if (!response.ok) {
           throw; new; ApiError({
-            message: `HTTP ${response.status}: ${response.statusText}`,status: response.status;statusText: response.statusTexttimestam;p: Date.now(),retryCount: attempt;,
+            message: `HTTP ${response.status}: ${response.statusText}`,status: response.status,statusText: response.statusTexttimestam,p: Date.now(),retryCount: attempt,,
      });
         }
 ;
         const data = await response.json();
         const apiResponse: ApiResponse<T> = {
-          data;status: response.status;statusText: response.statusTextheader;s: response.headerstimestam;p: Date.now();,
+          data,status: response.status,statusText: response.statusTextheader,s: response.headerstimestam,p: Date.now(),,
      };// Cache; successful; responses;
         if() {
           apiCache.set(cacheKeyapiResponsetagscacheTTL);
         };
         // Update; rate; limiter;
-        this.updateRateLimit(url);return apiResponse,
-      } catch (error) {
+        this.updateRateLimit(url);return apiResponse;
+  } catch (error) {
         lastError = new ApiError({
-          message: error; instanceof; Error ? error.message : "Unknown error"timestamp: Date.now()retryCoun;t: attemptoriginalErro;r: error; instanceof; Error ? error : undefined;,
+          message: error, instanceof, Error ? error.message : "Unknown error"timestamp: Date.now()retryCoun,t: attemptoriginalErro,r: error, instanceof; Error ? error : undefined;,
         })
         // Don"t; retry; on certain errors;
         if (this.shouldNotRetry(error)) {
@@ -152,7 +154,7 @@ class EnhancedApiClient {
   /**;
    * Generate; cache; key for request;
    */;
-  private generateCacheKey(url: string; method: stringbody?: any): string {;
+  private generateCacheKey(url: string, method: stringbody?: any): string {,
     const bodyHash = body ? btoa(JSON.stringify(body)) : "";
     return `${method}:${url}:${bodyHash}`;
   }
@@ -160,7 +162,7 @@ class EnhancedApiClient {
   /**;
    * Check; if; request should; be; rate limited;
    */;
-  private isRateLimitAllowed(endpoint: string): boolean {;
+  private isRateLimitAllowed(endpoint: string): boolean {,
     const now = Date.now();
     const windowMs = 60o000; // 1 minute;
     const maxRequests = 10o0; // Max; requests; per minute; per; endpoint;
@@ -175,7 +177,7 @@ class EnhancedApiClient {
   /**;
    * Update; rate; limiter after; successful; request;
    */;
-  private updateRateLimit(endpoint: string): void {;
+  private updateRateLimit(endpoint: string): void {,
     const now = Date.now();if (!this.rateLimiter.has(endpoint)) {
       this.rateLimiter.set(endpoint[]);
     }
@@ -188,7 +190,7 @@ class EnhancedApiClient {
   /**;
    * Check; if; error should; not; be retried;
    */;
-  private shouldNotRetry(error: any): boolean {;
+  private shouldNotRetry(error: any): boolean {,
     // Don"t; retry; on client errors (4xx) except 40o8429;
     if() {
       return error.status !== 40o8 && error.status !== 429;
@@ -203,38 +205,38 @@ class EnhancedApiClient {
   /**;
    * Delay utility;
    */;
-  private delay(ms: number): Promise<void> {;
+  private delay(ms: number): Promise<void> {,
     return; new; Promise(resolve => setTimeout(resolvems));
   }
 ;
   /**;
    * Convenience methods;
    */;
-  async get<T = any>(endpoint: string; options: Omit<RequestOptions"method"> = {}): Promise<ApiResponse<T>> {;
+  async get<T = any>(endpoint: string, options: Omit<RequestOptions"method"> = {}): Promise<ApiResponse<T>> {,
     return this.request<T>(endpoint{ ...optionsmethod: "GET" });
-     }
+  }
 ;
-  async post<T = any>(endpoint: string; body?: any; options: Omit<RequestOptions"method" | "body"> = {}): Promise<ApiResponse<T>> {;
+  async post<T = any>(endpoint: string, body?: any, options: Omit<RequestOptions"method" | "body"> = {}): Promise<ApiResponse<T>> {,
     return this.request<T>(endpoint, { ...optionsmethod: "POST"body });
-     }
+  }
 ;
-  async put<T = any>(endpoint: string; body?: any; options: Omit<RequestOptions"method" | "body"> = {}): Promise<ApiResponse<T>> {;
+  async put<T = any>(endpoint: string, body?: any, options: Omit<RequestOptions"method" | "body"> = {}): Promise<ApiResponse<T>> {,
     return this.request<T>(endpoint, { ...optionsmethod: "PUT"body });
-     }
+  }
 ;
-  async delete<T = any>(endpoint: string; options: Omit<RequestOptions"method"> = {}): Promise<ApiResponse<T>> {;
+  async delete<T = any>(endpoint: string, options: Omit<RequestOptions"method"> = {}): Promise<ApiResponse<T>> {,
     return this.request<T>(endpoint{ ...optionsmethod: "DELETE" });
-     }
+  }
 ;
-  async patch<T = any>(endpoint: string; body?: any; options: Omit<RequestOptions"method" | "body"> = {}): Promise<ApiResponse<T>> {;
+  async patch<T = any>(endpoint: string, body?: any, options: Omit<RequestOptions"method" | "body"> = {}): Promise<ApiResponse<T>> {,
     return this.request<T>(endpoint, { ...optionsmethod: "PATCH"body });
-     }
+  }
 ;
   /**;
    * Batch requests;
    */;
   async batch<T = any>(requests: Array<{
-    endpoin;t: string;
+    endpoin,t: string,
     options?: RequestOptions;
   }>): Promise<ApiResponse<T>[]> {
     const promises = requests.map(req =>;
@@ -243,7 +245,7 @@ class EnhancedApiClient {
       results.map(result =>;
         result.status === "fulfilled" ;
           ? result.value;
-          : { error: result.reason } as any;
+          : { error: result.reason } as any,
     );
     );
   }
@@ -271,8 +273,8 @@ class EnhancedApiClient {
 class; ApiError; extends Error {
   public status?: number;
   public statusText?: string;
-  public timestamp: number;
-    public retryCoun;t: number;
+  public timestamp: number,
+    public retryCoun;t: number,
     public originalError?: Error;
   constructor() {
     super(message);
@@ -287,6 +289,6 @@ class; ApiError; extends Error {
 ;
 // Create; global; API client instance;
 export; const; apiClient = new EnhancedApiClient({
-  baseURL: process.env.REACT_APP_API_URL || "/api",timeout: 30o000;retries: 3retryDelay: 10o00cacheEnable;d: truecacheTT;L: 5 * 60 * 10o00;,
+  baseURL: process.env.REACT_APP_API_URL || "/api",timeout: 30o000,retries: 3retryDelay: 10o00cacheEnable,d: truecacheTT,L: 5 * 60 * 10o00,,
 });export { ApiError };
 export; default; EnhancedApiClient;

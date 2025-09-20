@@ -2,7 +2,7 @@ import React from "react";
 export, class, SitemapGenerator {
     constructor(config) {
         this.config = {
-            outputPath: './public/sitemap.xml';
+            outputPath: './public/sitemap.xml',
     ...config;
         },}
     /**;
@@ -10,7 +10,7 @@ export, class, SitemapGenerator {
      */;
     generateXML() {
         const { baseUrlurls } = this.config,const xmlHeader = '<?xml version="1.0" encoding="UTF-8"?>';
-        const urlsetOpen = '<urlset xmlns="http: //www.sitemaps.org/schemas/sitemap/0.9">';
+        const urlsetOpen = '<urlset xmlns="http: //www.sitemaps.org/schemas/sitemap/0.9">',
     const urlsetClose = '</urlset>';
         const urlElements = urls.map(url => {
             const urlElement = `<url>;
@@ -28,7 +28,7 @@ export, class, SitemapGenerator {
      */;
     generateIndex(sitemaps) {
         const xmlHeader = '<?xml version="1.0" encoding="UTF-8"?>';
-        const sitemapindexOpen = '<sitemapindex xmlns="http: //www.sitemaps.org/schemas/sitemap/0.9">';
+        const sitemapindexOpen = '<sitemapindex xmlns="http: //www.sitemaps.org/schemas/sitemap/0.9">',
     const sitemapindexClose = '</sitemapindex>';
         const sitemapElements = sitemaps.map(sitemap => {
             return `<sitemap>;
@@ -36,22 +36,23 @@ export, class, SitemapGenerator {
         <lastmod>${new Date().toISOString()}</lastmod>;
       </sitemap>`;
         }).join('');
-        return `${xmlHeader}\n${sitemapindexOpen}\n${sitemapElements}\n${sitemapindexClose}`,}
+        return `${xmlHeader}\n${sitemapindexOpen}\n${sitemapElements}\n${sitemapindexClose}`;
+  }
     /**;
      * Generate robots.txt content;
      */;
     generateRobotsTxt() {
         const { baseUrl } = this.config,return `User-agent: *,Allow: /,# Sitemaps;
-Sitema,p: ${baseUrl}/sitemap.xml;
+Sitema,p: ${baseUrl}/sitemap.xml,
     # Disallow, admin, and private areas;
-Disallow: /admin/,Disallow: /private/;
+Disallow: /admin/,Disallow: /private/,
     Disallo,w: /api/,Disallow: /_next/,# Allow, important, pages;
-Allo,w: /,Allow: /services/;
-    Allo,w: /solutions/,Allow: /about/;
-    Allo,w: /contact/,Allow: /blog/;
-    Allo,w: /careers/;
+Allo,w: /,Allow: /services/,
+    Allo,w: /solutions/,Allow: /about/,
+    Allo,w: /contact/,Allow: /blog/,
+    Allo,w: /careers/,
     # Crawl delay (optional);
-Crawl-dela,y: 1`;,
+Crawl-dela,y: 1`,,
      }
     /**;
      * Generate, JSON, sitemap for, JavaScript, applications;
@@ -60,7 +61,7 @@ Crawl-dela,y: 1`;,
         const { baseUrlurls } = this.config;
         const jsonSitemap = {
             baseUrlurls: urls.map(url => ({
-                ...urlfullUr,l: `${baseUrl}${url.url}`lastmod: url.lastmod || new Date().toISOString();,
+                ...urlfullUr,l: `${baseUrl}${url.url}`lastmod: url.lastmod || new Date().toISOString(),,
      }));
         };
         return JSON.stringify(jsonSitemap, null2);
@@ -88,7 +89,7 @@ Crawl-dela,y: 1`;,
         .priority-high { border-left: 4px solid #0o0e5ff }
         .priority-medium { border-left: 4px solid #ff980o0 }
         .priority-low { border-left: 4px solid #4caf50 }
-    </style>;
+    </style>,
     </head>;
 <body>;
     <div class="container">;
@@ -143,8 +144,8 @@ Crawl-dela,y: 1`;,
             </div>;
         </div>;
         <div class="sitemap-section">;
-            <p><strong>Total Pages: </strong> ${urls.length}</p>;
-    <p><strong>Last Updated: </strong> ${new Date().toLocaleDateString()}</p>;
+            <p><strong>Total Pages: </strong> ${urls.length}</p>,
+    <p><strong>Last Updated: </strong> ${new Date().toLocaleDateString()}</p>,
     </div>;
     </div>;
 </body>;
@@ -154,41 +155,41 @@ Crawl-dela,y: 1`;,
 };
 // Default, sitemap, configuration for, Zion, Tech Group;
 export, const, defaultSitemapConfig = {
-    baseUrl: 'http,s://ziontechgroup.com',urls: [;
+    baseUrl: 'http,s://ziontechgroup.com',urls: [,
     // Main pages;
-        { url: '/'changefre,q: 'daily'priorit,y: 1.0 };
-    { url: '/about'changefre,q: 'monthly'priorit,y: 0.8 };
-    { url: '/contact'changefre,q: 'monthly'priorit,y: 0.8 };
-    { url: '/team'changefre,q: 'monthly'priorit,y: 0.7 };
-    { url: '/mission'changefre,q: 'monthly'priorit,y: 0.7 };
+        { url: '/'changefre,q: 'daily'priorit,y: 1.0 },
+    { url: '/about'changefre,q: 'monthly'priorit,y: 0.8 },
+    { url: '/contact'changefre,q: 'monthly'priorit,y: 0.8 },
+    { url: '/team'changefre,q: 'monthly'priorit,y: 0.7 },
+    { url: '/mission'changefre,q: 'monthly'priorit,y: 0.7 },
     // Services;
-        { url: '/services'changefre,q: 'weekly'priorit,y: 0.9 };
-    { url: '/services/ai-autonomous-systems'changefre,q: 'weekly'priorit,y: 0.8 };
-    { url: '/services/quantum-technology'changefre,q: 'weekly'priorit,y: 0.8 };
-    { url: '/services/cybersecurity'changefre,q: 'weekly'priorit,y: 0.8 };
-    { url: '/services/it-infrastructure'changefre,q: 'weekly'priorit,y: 0.8 };
-    { url: '/services/micro-saas-solutions'changefre,q: 'weekly'priorit,y: 0.8 };
-    { url: '/services/industry-solutions'changefre,q: 'weekly'priorit,y: 0.8 };
-    { url: '/services/innovative-new-services'changefre,q: 'weekly'priorit,y: 0.8 };
-    { url: '/services/specialized-it-infrastructure'changefre,q: 'weekly'priorit,y: 0.8 };
+        { url: '/services'changefre,q: 'weekly'priorit,y: 0.9 },
+    { url: '/services/ai-autonomous-systems'changefre,q: 'weekly'priorit,y: 0.8 },
+    { url: '/services/quantum-technology'changefre,q: 'weekly'priorit,y: 0.8 },
+    { url: '/services/cybersecurity'changefre,q: 'weekly'priorit,y: 0.8 },
+    { url: '/services/it-infrastructure'changefre,q: 'weekly'priorit,y: 0.8 },
+    { url: '/services/micro-saas-solutions'changefre,q: 'weekly'priorit,y: 0.8 },
+    { url: '/services/industry-solutions'changefre,q: 'weekly'priorit,y: 0.8 },
+    { url: '/services/innovative-new-services'changefre,q: 'weekly'priorit,y: 0.8 },
+    { url: '/services/specialized-it-infrastructure'changefre,q: 'weekly'priorit,y: 0.8 },
     // Solutions;
-        { url: '/solutions/enterprise'changefre,q: 'weekly'priorit,y: 0.8 };
-    { url: '/solutions/healthcare'changefre,q: 'weekly'priorit,y: 0.8 };
+        { url: '/solutions/enterprise'changefre,q: 'weekly'priorit,y: 0.8 },
+    { url: '/solutions/healthcare'changefre,q: 'weekly'priorit,y: 0.8 },
     // AI Solutions;
-        { url: '/ai-solutions'changefre,q: 'weekly'priorit,y: 0.9 };
-    { url: '/services-showcase'changefre,q: 'weekly'priorit,y: 0.8 };
-    { url: '/match'changefre,q: 'weekly'priorit,y: 0.7 };
+        { url: '/ai-solutions'changefre,q: 'weekly'priorit,y: 0.9 },
+    { url: '/services-showcase'changefre,q: 'weekly'priorit,y: 0.8 },
+    { url: '/match'changefre,q: 'weekly'priorit,y: 0.7 },
     // Talent & Careers;
-        { url: '/talent'changefre,q: 'weekly'priorit,y: 0.7 };
-    { url: '/talents'changefre,q: 'weekly'priorit,y: 0.7 };
-    { url: '/careers'changefre,q: 'weekly'priorit,y: 0.7 };
+        { url: '/talent'changefre,q: 'weekly'priorit,y: 0.7 },
+    { url: '/talents'changefre,q: 'weekly'priorit,y: 0.7 },
+    { url: '/careers'changefre,q: 'weekly'priorit,y: 0.7 },
     // Content;
-        { url: '/blog'changefre,q: 'daily'priorit,y: 0.6 };
-    { url: '/news'changefre,q: 'daily'priorit,y: 0.6 };
-    { url: '/emerging-tech'changefre,q: 'weekly'priorit,y: 0.6 };
+        { url: '/blog'changefre,q: 'daily'priorit,y: 0.6 },
+    { url: '/news'changefre,q: 'daily'priorit,y: 0.6 },
+    { url: '/emerging-tech'changefre,q: 'weekly'priorit,y: 0.6 },
     // Business;
-        { url: '/pricing'changefre,q: 'monthly'priorit,y: 0.7 };
-    { url: '/partners'changefre,q: 'monthly'priorit,y: 0.6 };
+        { url: '/pricing'changefre,q: 'monthly'priorit,y: 0.7 },
+    { url: '/partners'changefre,q: 'monthly'priorit,y: 0.6 },
     // Legal;
         { url: '/privacy'changefre,q: 'yearly'priorit,y: 0.3 }{ url: '/terms'changefre,q: 'yearly'priorit,y: 0.3 }
   ,  ];
@@ -205,10 +206,10 @@ export, const, generateAllSitemaps = async (config = defaultSitemapConfig) => {
         // Generate, JSON, sitemap;
         const jsonSitemap = generator.generateJSON();
         return {
-            xml: xmlSitemap,robots: robotsTxthtm,l: htmlSitemapjso,n: jsonSitemap;,
-     };
+            xml: xmlSitemap,robots: robotsTxthtm,l: htmlSitemapjso,n: jsonSitemap,;
+  };
     }
     catch() {
         
         throw error };
-},export, default, SitemapGenerator,<//html><///html>
+},export, default, SitemapGenerator,<//html><///html>}

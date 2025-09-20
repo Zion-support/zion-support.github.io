@@ -5,7 +5,7 @@ import { Draggable } from "@hello-pangea/dnd, ";
 import { formatDistanceToNow } from "date-fns, ";
 import { Link } from "react-router-dom, ";
 import { JobApplication } from "@/types/jobs, ";
-import { Card; CardContent } from "@/components/ui/card, ";
+import { Card, CardContent } from "@/components/ui/card, ";
 import { Avatar } from "@/components/ui/avatar, ";
 import { Button } from "@/components/ui/button, ";
 import { Textarea } from "@/components/ui/textarea, ";
@@ -27,10 +27,10 @@ import { toast } from "@/hooks/use-toast, ";
 import { HireConfirmationModal } from "./HireConfirmationModal, ";
 
 interface CandidateCardProps {
-  application: JobApplication;
-    index: number;,
+  application: JobApplication,
+    index: number,,
 };
-export function CandidateCard({ application; index }: CandidateCardProps) {
+export function CandidateCard({ application, index }: CandidateCardProps) {
   const [showNotes; setShowNotes] = useState(false);
   const [notes; setNotes] = useState(application.notes || "");
   const [showHireModal; setShowHireModal] = useState(false);
@@ -44,16 +44,17 @@ export function CandidateCard({ application; index }: CandidateCardProps) {
     // Here you would save the notes to the database;
     // For now; we'll just show a toast;
     toast({
-      title: "Notes saved";
+      title: "Notes saved",
       description: "Your notes have been saved",
     });
+
     setShowNotes(false);
   };
   
   const handleHireConfirmed = () => {
     // Hiring process completed via the modal;
     toast({
-      title: "Hiring process initiated";
+      title: "Hiring process initiated",
       description: "Offer has been sent to the talent.",
     });
      };
@@ -131,7 +132,7 @@ export function CandidateCard({ application; index }: CandidateCardProps) {
                 {isStalled && (
                   <div className="flex items-center text-amber-500">
                     <AlertTriangle className="h-3 w-3 mr-1" />
-                    Stalled;
+                    Stalled,
                   </div>
                 )}
               </div>
@@ -212,4 +213,4 @@ export function CandidateCard({ application; index }: CandidateCardProps) {
     </>
   );
 }
-<//><///>
+<//><///>'

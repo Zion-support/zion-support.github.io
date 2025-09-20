@@ -1,8 +1,8 @@
 import React from 'react';
 
 interface EnhancedMarketplaceCardProps {
-  title: string;
-  description: string;
+  title: string,
+  description: string,
   price?: string;
   image?: string;
 }

@@ -1,20 +1,20 @@
 export interface IndustrySolution {
-  id: string; title: string; description: string; category: string; subcategory: string; price: number; currency: string; pricingModel: string; features: string[];
-    benefits: string[], useCases: string[];
-    targetAudience: string[], tags: string[];
-    estimatedDelivery: string; supportLevel: string; marketPrice: string;
+  id: string, title: string, description: string, category: string, subcategory: string, price: number, currency: string, pricingModel: string, features: string[],
+    benefits: string[], useCases: string[],
+    targetAudience: string[], tags: string[],
+    estimatedDelivery: string, supportLevel: string, marketPrice: string,
     contactInfo: {
-    phone: string; email: string; website: string,
+    phone: string, email: string, website: string,
      };
 }
 
 export const INDUSTRY_SOLUTIONS: IndustrySolution[] = [
-  // Healthcare AI Platform;
+  // Healthcare AI Platform,
   {
-    id: "healthcare-ai-platform", title: "Healthcare AI & Clinical Decision Support Platform";
-    description: "Comprehensive healthcare AI platform that provides clinical decision support; patient monitoring; and predictive analytics for improved patient outcomes and operational efficiency.",
-    category: "Healthcare", subcategory: "AI & Clinical Support";
-    price: 4500; currency: "$";
+    id: "healthcare-ai-platform", title: "Healthcare AI & Clinical Decision Support Platform",
+    description: "Comprehensive healthcare AI platform that provides clinical decision support, patient monitoring; and predictive analytics for improved patient outcomes and operational efficiency.",
+    category: "Healthcare", subcategory: "AI & Clinical Support",
+    price: 4500, currency: "$",
     pricingModel: "monthly", features: [
       "Clinical decision support",
       "Patient risk assessment",
@@ -45,8 +45,8 @@ export const INDUSTRY_SOLUTIONS: IndustrySolution[] = [
       "Medical researchers"
     ],
     tags: ["Healthcare", "AI", "Clinical Decision Support", "Medical Analytics", "Patient Care"],
-    estimatedDelivery: "6-8 weeks", supportLevel: "enterprise";
-    marketPrice: "$4; 500 - $25; 000/month",
+    estimatedDelivery: "6-8 weeks", supportLevel: "enterprise",
+    marketPrice: "$4, 500 - $25; 000/month",
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com",
@@ -54,10 +54,10 @@ export const INDUSTRY_SOLUTIONS: IndustrySolution[] = [
   };
   // Financial Services Platform;
   {
-    id: "financial-services-platform", title: "Financial Services AI & Risk Management Platform";
-    description: "Advanced financial services platform that provides AI-powered risk assessment; fraud detection; compliance automation; and portfolio optimization for financial institutions.",
-    category: "Financial Services", subcategory: "AI & Risk Management";
-    price: 3800; currency: "$";
+    id: "financial-services-platform", title: "Financial Services AI & Risk Management Platform",
+    description: "Advanced financial services platform that provides AI-powered risk assessment, fraud detection; compliance automation; and portfolio optimization for financial institutions.",
+    category: "Financial Services", subcategory: "AI & Risk Management",
+    price: 3800, currency: "$",
     pricingModel: "monthly", features: [
       "Risk assessment algorithms",
       "Fraud detection systems",
@@ -88,8 +88,8 @@ export const INDUSTRY_SOLUTIONS: IndustrySolution[] = [
       "IT directors"
     ],
     tags: ["Financial Services", "AI", "Risk Management", "Fraud Detection", "Compliance"],
-    estimatedDelivery: "5-7 weeks", supportLevel: "enterprise";
-    marketPrice: "$3; 800 - $20; 000/month",
+    estimatedDelivery: "5-7 weeks", supportLevel: "enterprise",
+    marketPrice: "$3, 800 - $20; 000/month",
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com",
@@ -97,10 +97,10 @@ export const INDUSTRY_SOLUTIONS: IndustrySolution[] = [
   };
   // Manufacturing IoT Platform;
   {
-    id: "manufacturing-iot-platform", title: "Manufacturing IoT & Smart Factory Platform";
-    description: "Comprehensive IoT platform for manufacturing that enables predictive maintenance; quality control; supply chain optimization; and real-time production monitoring.",
-    category: "Manufacturing", subcategory: "IoT & Smart Factory";
-    price: 3200; currency: "$";
+    id: "manufacturing-iot-platform", title: "Manufacturing IoT & Smart Factory Platform",
+    description: "Comprehensive IoT platform for manufacturing that enables predictive maintenance, quality control; supply chain optimization; and real-time production monitoring.",
+    category: "Manufacturing", subcategory: "IoT & Smart Factory",
+    price: 3200, currency: "$",
     pricingModel: "monthly", features: [
       "Predictive maintenance",
       "Quality control automation",
@@ -131,8 +131,8 @@ export const INDUSTRY_SOLUTIONS: IndustrySolution[] = [
       "Plant managers"
     ],
     tags: ["Manufacturing", "IoT", "Smart Factory", "Predictive Maintenance", "Quality Control"],
-    estimatedDelivery: "5-7 weeks", supportLevel: "enterprise";
-    marketPrice: "$3; 200 - $18; 000/month",
+    estimatedDelivery: "5-7 weeks", supportLevel: "enterprise",
+    marketPrice: "$3, 200 - $18; 000/month",
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com",
@@ -140,10 +140,10 @@ export const INDUSTRY_SOLUTIONS: IndustrySolution[] = [
   };
   // Retail Analytics Platform;
   {
-    id: "retail-analytics-platform", title: "Retail Analytics & Customer Experience Platform";
-    description: "Advanced retail analytics platform that provides customer behavior insights; inventory optimization; demand forecasting; and personalized marketing automation.",
-    category: "Retail", subcategory: "Analytics & Customer Experience";
-    price: 2400; currency: "$";
+    id: "retail-analytics-platform", title: "Retail Analytics & Customer Experience Platform",
+    description: "Advanced retail analytics platform that provides customer behavior insights, inventory optimization; demand forecasting; and personalized marketing automation.",
+    category: "Retail", subcategory: "Analytics & Customer Experience",
+    price: 2400, currency: "$",
     pricingModel: "monthly", features: [
       "Customer behavior analytics",
       "Inventory optimization",
@@ -174,8 +174,8 @@ export const INDUSTRY_SOLUTIONS: IndustrySolution[] = [
       "Store directors"
     ],
     tags: ["Retail", "Analytics", "Customer Experience", "Inventory Management", "Marketing"],
-    estimatedDelivery: "4-6 weeks", supportLevel: "premium";
-    marketPrice: "$2; 400 - $12; 000/month",
+    estimatedDelivery: "4-6 weeks", supportLevel: "premium",
+    marketPrice: "$2, 400 - $12; 000/month",
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com",
@@ -183,10 +183,10 @@ export const INDUSTRY_SOLUTIONS: IndustrySolution[] = [
   };
   // Education Technology Platform;
   {
-    id: "education-technology-platform", title: "Education Technology & Learning Analytics Platform";
-    description: "Comprehensive education technology platform that provides personalized learning; student analytics; course management; and educational content delivery.",
-    category: "Education", subcategory: "Technology & Learning Analytics";
-    price: 1800; currency: "$";
+    id: "education-technology-platform", title: "Education Technology & Learning Analytics Platform",
+    description: "Comprehensive education technology platform that provides personalized learning, student analytics; course management; and educational content delivery.",
+    category: "Education", subcategory: "Technology & Learning Analytics",
+    price: 1800, currency: "$",
     pricingModel: "monthly", features: [
       "Personalized learning paths",
       "Student performance analytics",
@@ -217,8 +217,8 @@ export const INDUSTRY_SOLUTIONS: IndustrySolution[] = [
       "IT directors"
     ],
     tags: ["Education", "Technology", "Learning Analytics", "Personalized Learning", "Course Management"],
-    estimatedDelivery: "4-6 weeks", supportLevel: "premium";
-    marketPrice: "$1; 800 - $8; 000/month",
+    estimatedDelivery: "4-6 weeks", supportLevel: "premium",
+    marketPrice: "$1, 800 - $8; 000/month",
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com",

@@ -149,7 +149,7 @@ const InteractiveAIToolsShowcase2025PromotionBanner = () => {,
         </div>,
       )}
     </div>,
-  ),
-},
+  );
+  },
 export default InteractiveAIToolsShowcase2025PromotionBanner,
 </div></div></div></div></div>,

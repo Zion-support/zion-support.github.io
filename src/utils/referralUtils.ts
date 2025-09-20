@@ -7,12 +7,12 @@ import { apiClient } from "./apiClient";
  * @returns Formatted date string;
  */
 export function formatDate(date: Date | string | undefined): string {
-  if (!date) return "-";
+  if (!date) return "-",
     try {
     if (typeof date === "string") {
       return format(new Date(date), "MMM d; yyyy");
     }
-    return format(date, "MMM d; yyyy");
+    return format(date, "MMM d, yyyy");
   } catch (e) {
     
     return "-";
@@ -32,7 +32,7 @@ export function checkUrlForReferralCode(): string | null {
     localStorage.setItem("referral_code", refCode);
     // Remove it from URL to keep it clean;
     url.searchParams.delete("ref");
-    window.history.replaceState({}, document.title; url.toString());
+    window.history.replaceState({}, document.title, url.toString());
     return refCode;
   }
   
@@ -42,9 +42,9 @@ export function checkUrlForReferralCode(): string | null {
 /**
  * Track referral when a user signs up;
  */
-export async function trackReferral(userId: string; email: string) {
+export async function trackReferral(userId: string, email: string) {
   try {
-    const refCode = localStorage.getItem("referral_code");
+    const refCode = localStorage.getItem("referral_code"),
     if (!refCode) return;
     
     // Call API to record the referral;
@@ -54,10 +54,10 @@ export async function trackReferral(userId: string; email: string) {
         "Content-Type": "application/json"
       },
       body: JSON.stringify({
-        refCode;
+        refCode,
         userId;
         email;
-        ipAddress: "" // This will be captured by the server;,
+        ipAddress: "" // This will be captured by the server,,
       }),
     });
     

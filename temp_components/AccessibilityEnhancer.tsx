@@ -21,7 +21,7 @@ interface AccessibilityEnhancerProps {
   children: React.ReactNode
 }
 
-const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children }) => {
+const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children }) : any => {
   const [isOpen, setIsOpen] = useState(false),
   const [isVisible, setIsVisible] = useState(false),
   const [settings, setSettings] = useState<AccessibilitySettings>({
@@ -42,7 +42,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
   const settingsRef = useRef<HTMLDivElement>(null),
 
   // Apply accessibility settings to the document
-  const applySettings = (newSettings: AccessibilitySettings) => {
+  const applySettings = (newSettings: AccessibilitySettings) : any => {
     const root = document.documentElement,
     
     // High contrast
@@ -53,9 +53,8 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
     } else {
       root.style.removeProperty('--text-color'),
       root.style.removeProperty('--bg-color'),
-      root.style.removeProperty('--accent-color'),
-    }
-
+      root.style.removeProperty('--accent-color');
+};
     // Large text
     if (newSettings.largeText) {
       root.style.fontSize = '18px',
@@ -67,9 +66,8 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
     if (newSettings.reducedMotion) {
       root.style.setProperty('--reduced-motionreduce'),
     } else {
-      root.style.removeProperty('--reduced-motion'),
-    }
-
+      root.style.removeProperty('--reduced-motion');
+};
     // Font size
     root.style.setProperty('--font-size', `${newSettings.fontSize}px`),
     
@@ -95,7 +93,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
 
   // Handle click outside to close settings
   useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
+    const handleClickOutside = (event: MouseEvent) : any => {
       if (settingsRef.current && !settingsRef.current.contains(event.target as Node)) {
         setIsOpen(false)
       }
@@ -106,7 +104,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
   }, []),
 
   // Text-to-speech functionality
-  const speakText = (text: string) => {
+  const speakText = (text: string) : any => {
     if ('speechSynthesis' in window) {
       // Stop any current speech
       window.speechSynthesis.cancel(),
@@ -124,8 +122,8 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
   const stopSpeaking = () => {
     if ('speechSynthesis' in window) {
       window.speechSynthesis.cancel(),
-      setIsReading(false),
-    }
+      setIsReading(false);
+};
   },
 
   // Screen reader mode
@@ -143,21 +141,21 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
   },
 
   // Focus management
-  const handleFocusChange = useCallback((e: FocusEvent<Element>) => {
+  const handleFocusChange = useCallback((e: FocusEvent<Element>) : any => {
     const target = e.target as HTMLElement,
     if (target) {
       setCurrentFocus(target),
-      announceToScreenReader(`Focused on ${target.textContent || target.tagName.toLowerCase()}`),
-    }
+      announceToScreenReader(`Focused on ${target.textContent || target.tagName.toLowerCase()}`);
+};
   }, []),
 
   // Keyboard navigation enhancements
-  const handleKeyDown = useCallback((_e: any) => {
+  const handleKeyDown = useCallback((_e: any) : any => {
     // Tab navigation detected
   }, []),
 
   // Announce to screen reader
-  const announceToScreenReader = useCallback((message: string) => {
+  const announceToScreenReader = useCallback((message: string) : any => {
     // setAnnouncements(prev => [...prev, message]), // This line was removed
     
     // Create live region for screen readers
@@ -186,7 +184,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
   useEffect(() => {
     if (!settings.keyboardNavigation) return,
 
-    const handleKeyDown = (e: KeyboardEvent) => {
+    const handleKeyDown = (e: KeyboardEvent) : any => {
       const target = e.target as HTMLElement,
       
       // Skip if target is an input, textarea, or select
@@ -223,8 +221,8 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
             if (modal.getAttribute('aria-hidden') === 'false') {
               const closeButton = modal.querySelector('[aria-label*="close"], [aria-label*="Close"]'),
               if (closeButton instanceof HTMLElement) {
-                closeButton.click(),
-              }
+                closeButton.click();
+};
             }
           }),
           break,
@@ -238,7 +236,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
 
   // Focus management
   useEffect(() => {
-    const handleFocusIn = (e: Event) => {
+    const handleFocusIn = (e: Event) : any => {
       const target = e.target as HTMLElement,
       
       // Announce focus changes for screen readers
@@ -258,7 +256,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
       }
     },
 
-    const handleFocusOut = (e: Event) => {
+    const handleFocusOut = (e: Event) : any => {
       const target = e.target as HTMLElement,
       if (settings.focusIndicators) {
         target.style.outline = '',
@@ -276,7 +274,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
   }, [settings.screenReader, settings.focusIndicators]),
 
   // Get all focusable elements
-  const getFocusableElements = (): HTMLElement[] => {
+  const getFocusableElements = (): HTMLElement[] : any => {
     const focusableSelectors = [
       'button:not([disabled])input:not([disabled])',
       'select:not([disabled])textarea:not([disabled])',
@@ -555,8 +553,8 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
       {/* Render children with accessibility enhancements */}
       {children}
     </>
-  ),
-},
+  );
+  },
 
 // Skip Link Component
 export const SkipLink: React.FC<{ href: string, children: React.ReactNode }> = ({ href, children }) => (

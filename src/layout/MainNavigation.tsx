@@ -1,28 +1,28 @@
 import React from "react";
 
-import { Link; useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { cn } from "@/lib/utils";
 import { useAuth } from "@/hooks/useAuth";
-import { MessageSquare; ChevronDown; Users; Briefcase; Settings; BarChart3 } from "lucide-react";
-import { MessageSquare; ChevronDown; Brain; Shield; Cloud; Zap } from "lucide-react";
+import { MessageSquare, ChevronDown, Users, Briefcase, Settings, BarChart3 } from "lucide-react";
+import { MessageSquare, ChevronDown, Brain, Shield, Cloud, Zap } from "lucide-react";
 import { useTranslation } from "react-i18next";
-import { useState; useRef; useEffect } from "react";
-import { MessageSquare; ChevronDown } from "lucide-react";
-import { useTranslation } from "react-i18next";
-import { useState } from "react";
-import { MessageSquare; ChevronDown; Users; Settings; HelpCircle; FileText } from "lucide-react";
-import { useTranslation } from "react-i18next";
-import { useState; useRef; useEffect } from "react";
-import { MessageSquare; ChevronDown } from "lucide-react";
-import { useTranslation } from "react-i18next";
-import { useState; useEffect; useRef } from "react";
-import { MessageSquare; ChevronDown } from "lucide-react";
+import { useState, useRef, useEffect } from "react";
+import { MessageSquare, ChevronDown } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { useState } from "react";
-import { MessageSquare; ChevronDown } from "lucide-react";
+import { MessageSquare, ChevronDown, Users, Settings, HelpCircle, FileText } from "lucide-react";
+import { useTranslation } from "react-i18next";
+import { useState, useRef, useEffect } from "react";
+import { MessageSquare, ChevronDown } from "lucide-react";
+import { useTranslation } from "react-i18next";
+import { useState, useEffect, useRef } from "react";
+import { MessageSquare, ChevronDown } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { useState } from "react";
-import { MessageSquare; ChevronDown } from "lucide-react";
+import { MessageSquare, ChevronDown } from "lucide-react";
+import { useTranslation } from "react-i18next";
+import { useState } from "react";
+import { MessageSquare, ChevronDown } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
@@ -39,14 +39,14 @@ interface MainNavigationProps {
   className?: string;
 };
 interface NavigationLink {
-  key: string;
-  href: string;
-  name: string;
-  matches: (path: string) => boolean;
-  dropdown?: { href: string; name: string; }[];
+  key: string,
+  href: string,
+  name: string,
+  matches: (path: string) => boolean,
+  dropdown?: { href: string, name: string, }[];
 }
 
-export function MainNavigation({ isAdmin = false; unreadCount = 0; className }: MainNavigationProps) {
+export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: MainNavigationProps) {
   const { user } = useAuth();
   const isAuthenticated = !!user;
   const location = useLocation();
@@ -56,24 +56,25 @@ export function MainNavigation({ isAdmin = false; unreadCount = 0; className }: 
 
   // Close dropdown when clicking outside;
   useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
+    const handleClickOutside = (event: MouseEvent) : any => {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
-  const [dropdownOpen; setDropdownOpen] = useState(false);
+  const [dropdownOpen, setDropdownOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
   const [dropdownOpen; setDropdownOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
 
   // Close dropdown when clicking outside;
   useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
+    const handleClickOutside = (event: MouseEvent) : any => {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
         setDropdownOpen(false);
-      }
+};
     };
 
     document.addEventListener("mousedown", handleClickOutside);
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
+
   const [isServicesOpen; setIsServicesOpen] = useState(false);
   const [isCompanyOpen; setIsCompanyOpen] = useState(false);
   const [isServicesOpen; setIsServicesOpen] = useState(false);
@@ -88,22 +89,22 @@ export function MainNavigation({ isAdmin = false; unreadCount = 0; className }: 
     { key: "cybersecurity", href: "/cybersecurity-services", name: "Cybersecurity" },
     { key: "cloud-migration", href: "/cloud-migration-services", name: "Cloud Migration" },
     { key: "it-onsite", href: "/it-onsite-services", name: "IT Onsite Services" }
-  ];
+  ],
 
-  let links = baseLinks.map(link => ({ ...link; name: t(`nav.${link.key}`) }));
+  let links = baseLinks.map(link => ({ ...link, name: t(`nav.${link.key}`) })),
       matches: (path: string) => path.startsWith("/blog"),
-      name: t("nav.blog"),
-    }
+      name: t("nav.blog");
+};
   ];
 
   let links = baseLinks;
   
   // Close dropdown when clicking outside;
   useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
+    const handleClickOutside = (event: MouseEvent) : any => {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
         setIsServicesOpen(false);
-      }
+};
     };
 
   const baseLinks: NavigationLink[] = [
@@ -226,8 +227,8 @@ export function MainNavigation({ isAdmin = false; unreadCount = 0; className }: 
       href: "/talent",
       key: "ai-hiring",
       href: "/zion-hire-ai",
-      matches: (path: string) => path.startsWith("/zion-hire-ai") || path.startsWith("/hire-ai"),
-    }
+      matches: (path: string) => path.startsWith("/zion-hire-ai") || path.startsWith("/hire-ai");
+};
   ];
 
   const moreLinks = [
@@ -312,8 +313,8 @@ export function MainNavigation({ isAdmin = false; unreadCount = 0; className }: 
       key: "blog",
       href: "/blog",
       matches: (path: string) => path.startsWith("/blog")
-      matches: (path: string) => path.startsWith("/blog"),
-    }
+      matches: (path: string) => path.startsWith("/blog");
+};
   ];
 
   const serviceDropdowns = [
@@ -375,22 +376,22 @@ export function MainNavigation({ isAdmin = false; unreadCount = 0; className }: 
     { key: "cybersecurity", href: "/cybersecurity-services", name: "Cybersecurity" },
     { key: "cloud-migration", href: "/cloud-migration-services", name: "Cloud Migration" },
     { key: "it-onsite", href: "/it-onsite-services", name: "IT Onsite Services" }
-  ];
+  ],
 
-  let links = baseLinks.map(link => ({ ...link; name: t(`nav.${link.key}`) }));
+  let links = baseLinks.map(link => ({ ...link, name: t(`nav.${link.key}`) })),
       matches: (path: string) => path.startsWith("/blog"),
-      name: t("nav.blog"),
-    }
+      name: t("nav.blog");
+};
   ];
 
   let links = baseLinks;
   
   // Close dropdown when clicking outside;
   useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
+    const handleClickOutside = (event: MouseEvent) : any => {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
         setIsServicesOpen(false);
-      }
+};
     };
 
     document.addEventListener("mousedown", handleClickOutside);
@@ -423,9 +424,9 @@ export function MainNavigation({ isAdmin = false; unreadCount = 0; className }: 
         { href: "/contact", name: "Contact" }
       ]
     }
-  ];
+  ],
 
-  let links: NavigationLink[] = baseLinks;
+  let links: NavigationLink[] = baseLinks,
   
   // Add authenticated-only links;
   if (isAuthenticated) {
@@ -447,7 +448,7 @@ export function MainNavigation({ isAdmin = false; unreadCount = 0; className }: 
     });
   }
 
-  const handleDropdownToggle = (key: string) => {
+  const handleDropdownToggle = (key: string) : any => {
     setActiveDropdown(activeDropdown === key ? null : key);
   };
 
@@ -455,7 +456,7 @@ export function MainNavigation({ isAdmin = false; unreadCount = 0; className }: 
     setActiveDropdown(null);
   };
   
-  const handleDropdownToggle = (key: string) => {
+  const handleDropdownToggle = (key: string) : any => {
     setActiveDropdown(activeDropdown === key ? null : key);
   };
 
@@ -463,7 +464,7 @@ export function MainNavigation({ isAdmin = false; unreadCount = 0; className }: 
     setActiveDropdown(null);
   };
   
-  const handleDropdownToggle = (key: string) => {
+  const handleDropdownToggle = (key: string) : any => {
     setActiveDropdown(activeDropdown === key ? null : key);
   };
 
@@ -473,11 +474,11 @@ export function MainNavigation({ isAdmin = false; unreadCount = 0; className }: 
   
   return (
     <nav className={cn("navbar ml-6 hidden lg:flex", className)}>
-  const toggleDropdown = (key: string) => {
+  const toggleDropdown = (key: string) : any => {
     setActiveDropdown(activeDropdown === key ? null : key);
   };
 
-  const isDropdownActive = (key: string) => activeDropdown === key;
+  const isDropdownActive = (key: string) => activeDropdown === key,
   
   return (
     <nav className={cn("navbar ml-6 hidden lg:flex", className)} ref={dropdownRef}>
@@ -508,12 +509,12 @@ export function MainNavigation({ isAdmin = false; unreadCount = 0; className }: 
               <div className="relative">
                 <button;
                   onClick={() => handleDropdownToggle(link.key)}
-                  onBlur={() => setTimeout(closeDropdowns; 150)}
+                  onBlur={() => setTimeout(closeDropdowns, 150)}
                   className={cn(
                     "inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors",
                     link.matches(location.pathname)
                       ? "bg-zion-purple/20 text-zion-cyan"
-                      : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
+                      : "text-white hover: bg-zion-purple/10 hover:text-zion-cyan"
                   )}
                 >
                   {link.name}
@@ -524,11 +525,11 @@ export function MainNavigation({ isAdmin = false; unreadCount = 0; className }: 
                   <div className="absolute top-full left-0 mt-1 w-48 bg-zion-blue-dark border border-zion-blue-light rounded-md shadow-lg z-50">
                     <div className="py-2">
                       {link.dropdown.map((item) => (
-                        <Link;
+                        <Link,
                           key={item.href}
                           to={item.href}
                           onClick={closeDropdowns}
-                          className="block px-4 py-2 text-sm text-zion-slate-light hover:bg-zion-purple/10 hover:text-zion-cyan transition-colors"
+                          className="block px-4 py-2 text-sm text-zion-slate-light hover: bg-zion-purple/10 hover:text-zion-cyan transition-colors"
                         >
                           {item.name}
                         </Link>
@@ -538,7 +539,7 @@ export function MainNavigation({ isAdmin = false; unreadCount = 0; className }: 
                 )}
               </div>
             ) : (
-              <Link;
+              <Link,
                 to={link.href}
                 className={cn(
                   "inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors",
@@ -550,7 +551,7 @@ export function MainNavigation({ isAdmin = false; unreadCount = 0; className }: 
                 {link.name}
               </Link>
             )}
-        {links.map((link) => {
+        {links.map((link) : any => {
           if (link.key === "marketplace") {
             return (
               <li key={link.key}>
@@ -575,13 +576,13 @@ export function MainNavigation({ isAdmin = false; unreadCount = 0; className }: 
                   "inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors",
                   link.matches(location.pathname)
                     ? "bg-zion-purple/20 text-zion-cyan"
-                    : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
+                    : "text-white hover: bg-zion-purple/10 hover:text-zion-cyan"
                 )}
               >
                 {link.name}
               </Link>
             </li>
-          );
+          ),
         })}
 
         {/* Service Dropdowns */}
@@ -609,12 +610,12 @@ export function MainNavigation({ isAdmin = false; unreadCount = 0; className }: 
             {isDropdownActive(dropdown.key) && (
               <div className="absolute top-full left-0 mt-1 w-64 bg-zion-slate border border-zion-purple/30 rounded-lg shadow-2xl shadow-zion-purple/20 backdrop-blur-xl z-50">
                 <div className="p-2">
-                  {dropdown.items.map((item; index) => (
+                  {dropdown.items.map((item, index) => (
                     <Link;
                       key={index}
                       to={item.href}
                       onClick={() => setActiveDropdown(null)}
-                      className="flex items-center gap-3 px-3 py-2 text-sm text-zion-slate-light hover:text-zion-cyan hover:bg-zion-purple/10 rounded-md transition-colors"
+                      className="flex items-center gap-3 px-3 py-2 text-sm text-zion-slate-light hover: text-zion-cyan hover:bg-zion-purple/10 rounded-md transition-colors"
                     >
                       {dropdown.icon}
                       {item.name}
@@ -628,7 +629,7 @@ export function MainNavigation({ isAdmin = false; unreadCount = 0; className }: 
         
         {/* Services Dropdown */}
         <li className="relative">
-          <button;
+          <button,
             onClick={() => setIsServicesOpen(!isServicesOpen)}
             onMouseEnter={() => setIsServicesOpen(true)}
             onMouseLeave={() => setIsServicesOpen(false)}
@@ -636,10 +637,10 @@ export function MainNavigation({ isAdmin = false; unreadCount = 0; className }: 
               "inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors",
               location.pathname.startsWith("/services") || location.pathname.startsWith("/it-onsite-services") || location.pathname.startsWith("/green-it")
                 ? "bg-zion-purple/20 text-zion-cyan"
-                : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
+                : "text-white hover: bg-zion-purple/10 hover:text-zion-cyan"
             )}
           >
-            Services;
+            Services,
             <ChevronDown className="ml-1 h-4 w-4" />
           </button>
           
@@ -651,27 +652,27 @@ export function MainNavigation({ isAdmin = false; unreadCount = 0; className }: 
             >
               <Link;
                 to="/services"
-                className="block px-4 py-2 text-sm text-zion-slate-light hover:text-zion-cyan hover:bg-zion-purple/10 transition-colors"
+                className="block px-4 py-2 text-sm text-zion-slate-light hover: text-zion-cyan hover:bg-zion-purple/10 transition-colors"
               >
-                All Services;
+                All Services,
               </Link>
               <Link;
                 to="/it-onsite-services"
-                className="block px-4 py-2 text-sm text-zion-slate-light hover:text-zion-cyan hover:bg-zion-purple/10 transition-colors"
+                className="block px-4 py-2 text-sm text-zion-slate-light hover: text-zion-cyan hover:bg-zion-purple/10 transition-colors"
               >
-                IT Onsite Services;
+                IT Onsite Services,
               </Link>
               <Link;
                 to="/green-it"
-                className="block px-4 py-2 text-sm text-zion-slate-light hover:text-zion-cyan hover:bg-zion-purple/10 transition-colors"
+                className="block px-4 py-2 text-sm text-zion-slate-light hover: text-zion-cyan hover:bg-zion-purple/10 transition-colors"
               >
-                Green IT Solutions;
+                Green IT Solutions,
               </Link>
               <Link;
                 to="/zion-hire-ai"
-                className="block px-4 py-2 text-sm text-zion-slate-light hover:text-zion-cyan hover:bg-zion-purple/10 transition-colors"
+                className="block px-4 py-2 text-sm text-zion-slate-light hover: text-zion-cyan hover:bg-zion-purple/10 transition-colors"
               >
-                AI Hiring Solutions;
+                AI Hiring Solutions,
               </Link>
             </div>
           )}
@@ -687,10 +688,10 @@ export function MainNavigation({ isAdmin = false; unreadCount = 0; className }: 
               "inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors",
               location.pathname === "/about" || location.pathname === "/careers" || location.pathname === "/partners" || location.pathname === "/contact"
                 ? "bg-zion-purple/20 text-zion-cyan"
-                : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
+                : "text-white hover: bg-zion-purple/10 hover:text-zion-cyan"
             )}
           >
-            Company;
+            Company,
             <ChevronDown className="ml-1 h-4 w-4" />
           </button>
           
@@ -702,33 +703,33 @@ export function MainNavigation({ isAdmin = false; unreadCount = 0; className }: 
             >
               <Link;
                 to="/about"
-                className="block px-4 py-2 text-sm text-zion-slate-light hover:text-zion-cyan hover:bg-zion-purple/10 transition-colors"
+                className="block px-4 py-2 text-sm text-zion-slate-light hover: text-zion-cyan hover:bg-zion-purple/10 transition-colors"
               >
-                About Us;
+                About Us,
               </Link>
               <Link;
                 to="/careers"
-                className="block px-4 py-2 text-sm text-zion-slate-light hover:text-zion-cyan hover:bg-zion-purple/10 transition-colors"
+                className="block px-4 py-2 text-sm text-zion-slate-light hover: text-zion-cyan hover:bg-zion-purple/10 transition-colors"
               >
-                Careers;
+                Careers,
               </Link>
               <Link;
                 to="/partners"
-                className="block px-4 py-2 text-sm text-zion-slate-light hover:text-zion-cyan hover:bg-zion-purple/10 transition-colors"
+                className="block px-4 py-2 text-sm text-zion-slate-light hover: text-zion-cyan hover:bg-zion-purple/10 transition-colors"
               >
-                Partners;
+                Partners,
               </Link>
               <Link;
                 to="/contact"
-                className="block px-4 py-2 text-sm text-zion-slate-light hover:text-zion-cyan hover:bg-zion-purple/10 transition-colors"
+                className="block px-4 py-2 text-sm text-zion-slate-light hover: text-zion-cyan hover:bg-zion-purple/10 transition-colors"
               >
-                Contact;
+                Contact,
               </Link>
               <Link;
                 to="/blog"
-                className="block px-4 py-2 text-sm text-zion-slate-light hover:text-zion-cyan hover:bg-zion-purple/10 transition-colors"
+                className="block px-4 py-2 text-sm text-zion-slate-light hover: text-zion-cyan hover:bg-zion-purple/10 transition-colors"
               >
-                Blog;
+                Blog,
               </Link>
             </div>
           )}
@@ -743,10 +744,10 @@ export function MainNavigation({ isAdmin = false; unreadCount = 0; className }: 
               "inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors",
               dropdownOpen;
                 ? "bg-zion-purple/20 text-zion-cyan"
-                : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
+                : "text-white hover: bg-zion-purple/10 hover:text-zion-cyan"
             )}
           >
-            More;
+            More,
             <ChevronDown className={cn("ml-1 w-4 h-4 transition-transform", dropdownOpen && "rotate-180")} />
           </button>
           
@@ -758,7 +759,7 @@ export function MainNavigation({ isAdmin = false; unreadCount = 0; className }: 
                     key={link.key}
                     to={link.href}
                     onClick={() => setDropdownOpen(false)}
-                    className="flex items-start gap-3 p-3 rounded-md text-white hover:bg-zion-purple/10 transition-colors"
+                    className="flex items-start gap-3 p-3 rounded-md text-white hover: bg-zion-purple/10 transition-colors"
                   >
                     <div className="text-zion-cyan mt-0.5">
                       {link.icon}
@@ -777,16 +778,16 @@ export function MainNavigation({ isAdmin = false; unreadCount = 0; className }: 
         
         {/* Services Dropdown */}
         <li className="relative" ref={dropdownRef}>
-          <button;
+          <button,
             onClick={() => setIsServicesOpen(!isServicesOpen)}
             className={cn(
               "inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors",
               location.pathname.includes("/ai-") || location.pathname.includes("/cybersecurity") || location.pathname.includes("/cloud-migration")
                 ? "bg-zion-purple/20 text-zion-cyan"
-                : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
+                : "text-white hover: bg-zion-purple/10 hover:text-zion-cyan"
             )}
           >
-            Services;
+            Services,
             <ChevronDown className="ml-1 h-4 w-4" />
           </button>
           
@@ -819,10 +820,10 @@ export function MainNavigation({ isAdmin = false; unreadCount = 0; className }: 
               "inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors",
               activeDropdown === "company"
                 ? "bg-zion-purple/20 text-zion-cyan"
-                : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
+                : "text-white hover: bg-zion-purple/10 hover:text-zion-cyan"
             )}
           >
-            Company;
+            Company,
             <ChevronDown className="ml-1 h-4 w-4" />
           </button>
           {activeDropdown === "company" && (
@@ -830,31 +831,31 @@ export function MainNavigation({ isAdmin = false; unreadCount = 0; className }: 
               <div className="py-2">
                 <Link;
                   to="/about"
-                  className="block px-4 py-2 text-sm text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
+                  className="block px-4 py-2 text-sm text-white hover: bg-zion-purple/10 hover:text-zion-cyan"
                   onClick={closeDropdown}
                 >
-                  About Us;
+                  About Us,
                 </Link>
                 <Link;
                   to="/careers"
-                  className="block px-4 py-2 text-sm text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
+                  className="block px-4 py-2 text-sm text-white hover: bg-zion-purple/10 hover:text-zion-cyan"
                   onClick={closeDropdown}
                 >
-                  Careers;
+                  Careers,
                 </Link>
                 <Link;
                   to="/partners"
-                  className="block px-4 py-2 text-sm text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
+                  className="block px-4 py-2 text-sm text-white hover: bg-zion-purple/10 hover:text-zion-cyan"
                   onClick={closeDropdown}
                 >
-                  Partners;
+                  Partners,
                 </Link>
                 <Link;
                   to="/contact"
-                  className="block px-4 py-2 text-sm text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
+                  className="block px-4 py-2 text-sm text-white hover: bg-zion-purple/10 hover:text-zion-cyan"
                   onClick={closeDropdown}
                 >
-                  Contact;
+                  Contact,
                 </Link>
               </div>
             </div>
@@ -869,10 +870,10 @@ export function MainNavigation({ isAdmin = false; unreadCount = 0; className }: 
               "inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors",
               activeDropdown === "support"
                 ? "bg-zion-purple/20 text-zion-cyan"
-                : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
+                : "text-white hover: bg-zion-purple/10 hover:text-zion-cyan"
             )}
           >
-            Support;
+            Support,
             <ChevronDown className="ml-1 h-4 w-4" />
           </button>
           {activeDropdown === "support" && (
@@ -880,24 +881,24 @@ export function MainNavigation({ isAdmin = false; unreadCount = 0; className }: 
               <div className="py-2">
                 <Link;
                   to="/help"
-                  className="block px-4 py-2 text-sm text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
+                  className="block px-4 py-2 text-sm text-white hover: bg-zion-purple/10 hover:text-zion-cyan"
                   onClick={closeDropdown}
                 >
-                  Help Center;
+                  Help Center,
                 </Link>
                 <Link;
                   to="/request-quote"
-                  className="block px-4 py-2 text-sm text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
+                  className="block px-4 py-2 text-sm text-white hover: bg-zion-purple/10 hover:text-zion-cyan"
                   onClick={closeDropdown}
                 >
-                  Request Quote;
+                  Request Quote,
                 </Link>
                 <Link;
                   to="/it-onsite-services"
-                  className="block px-4 py-2 text-sm text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
+                  className="block px-4 py-2 text-sm text-white hover: bg-zion-purple/10 hover:text-zion-cyan"
                   onClick={closeDropdown}
                 >
-                  IT Services;
+                  IT Services,
                 </Link>
               </div>
             </div>
@@ -910,7 +911,7 @@ export function MainNavigation({ isAdmin = false; unreadCount = 0; className }: 
                 "inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors",
                 link.matches(location.pathname)
                   ? "bg-zion-purple/20 text-zion-cyan"
-                  : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
+                  : "text-white hover: bg-zion-purple/10 hover:text-zion-cyan"
               )}
             >
               {link.name}
@@ -923,27 +924,27 @@ export function MainNavigation({ isAdmin = false; unreadCount = 0; className }: 
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
               <button className="inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors text-white hover:bg-zion-purple/10 hover:text-zion-cyan">
-                Resources;
+                Resources,
                 <ChevronDown className="ml-1 h-4 w-4" />
               </button>
             </DropdownMenuTrigger>
             <DropdownMenuContent className="w-48 bg-zion-blue-dark border-zion-blue-light">
               <DropdownMenuItem asChild>
-                <Link to="/help" className="flex items-center gap-2 text-white hover:bg-zion-purple/10">
+                <Link to="/help" className="flex items-center gap-2 text-white hover: bg-zion-purple/10">
                   <Settings className="h-4 w-4" />
-                  Help Center;
+                  Help Center,
                 </Link>
               </DropdownMenuItem>
               <DropdownMenuItem asChild>
-                <Link to="/faq" className="flex items-center gap-2 text-white hover:bg-zion-purple/10">
+                <Link to="/faq" className="flex items-center gap-2 text-white hover: bg-zion-purple/10">
                   <Briefcase className="h-4 w-4" />
-                  FAQ;
+                  FAQ,
                 </Link>
               </DropdownMenuItem>
               <DropdownMenuItem asChild>
-                <Link to="/sitemap" className="flex items-center gap-2 text-white hover:bg-zion-purple/10">
+                <Link to="/sitemap" className="flex items-center gap-2 text-white hover: bg-zion-purple/10">
                   <BarChart3 className="h-4 w-4" />
-                  Sitemap;
+                  Sitemap,
                 </Link>
               </DropdownMenuItem>
             </DropdownMenuContent>
@@ -954,34 +955,34 @@ export function MainNavigation({ isAdmin = false; unreadCount = 0; className }: 
         <li>
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
-              <button className="inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors text-white hover:bg-zion-purple/10 hover:text-zion-cyan">
-                Company;
+              <button className="inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors text-white hover: bg-zion-purple/10 hover:text-zion-cyan">
+                Company,
                 <ChevronDown className="ml-1 h-4 w-4" />
               </button>
             </DropdownMenuTrigger>
             <DropdownMenuContent className="w-48 bg-zion-blue-dark border-zion-blue-light">
               <DropdownMenuItem asChild>
-                <Link to="/about" className="flex items-center gap-2 text-white hover:bg-zion-purple/10">
+                <Link to="/about" className="flex items-center gap-2 text-white hover: bg-zion-purple/10">
                   <Users className="h-4 w-4" />
-                  About Us;
+                  About Us,
                 </Link>
               </DropdownMenuItem>
               <DropdownMenuItem asChild>
-                <Link to="/careers" className="flex items-center gap-2 text-white hover:bg-zion-purple/10">
+                <Link to="/careers" className="flex items-center gap-2 text-white hover: bg-zion-purple/10">
                   <Briefcase className="h-4 w-4" />
-                  Careers;
+                  Careers,
                 </Link>
               </DropdownMenuItem>
               <DropdownMenuItem asChild>
-                <Link to="/partners" className="flex items-center gap-2 text-white hover:bg-zion-purple/10">
+                <Link to="/partners" className="flex items-center gap-2 text-white hover: bg-zion-purple/10">
                   <Users className="h-4 w-4" />
-                  Partners;
+                  Partners,
                 </Link>
               </DropdownMenuItem>
               <DropdownMenuItem asChild>
-                <Link to="/contact" className="flex items-center gap-2 text-white hover:bg-zion-purple/10">
+                <Link to="/contact" className="flex items-center gap-2 text-white hover: bg-zion-purple/10">
                   <Settings className="h-4 w-4" />
-                  Contact;
+                  Contact,
                 </Link>
               </DropdownMenuItem>
             </DropdownMenuContent>
@@ -1001,12 +1002,12 @@ export function MainNavigation({ isAdmin = false; unreadCount = 0; className }: 
                 "inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-all duration-300 relative",
                 location.pathname === "/messages" || location.pathname === "/inbox"
                   ? "bg-zion-purple/20 text-zion-cyan border border-zion-purple/30 shadow-lg shadow-zion-purple/20"
-                  : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan hover:border hover:border-zion-purple/20"
+                  : "text-white hover: bg-zion-purple/10 hover:text-zion-cyan hover:border hover:border-zion-purple/20"
               )}
               onClick={closeDropdown}
             >
               <MessageSquare className="w-4 h-4 mr-1" />
-              Messages;
+              Messages,
               {unreadCount > 0 && (
                 <span className="absolute -top-1 -right-1 bg-zion-purple text-white text-xs rounded-full h-5 w-5 flex items-center justify-center animate-pulse">
                 <span className="absolute -top-1 -right-1 bg-zion-purple text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
@@ -1022,13 +1023,13 @@ export function MainNavigation({ isAdmin = false; unreadCount = 0; className }: 
         <li>
           <Link;
             to="/request-quote"
-            className="inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium bg-zion-purple hover:bg-zion-purple/80 text-white transition-colors"
+            className="inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium bg-zion-purple hover: bg-zion-purple/80 text-white transition-colors"
           >
-            Get Quote;
+            Get Quote,
           </Link>
         </li>
       </ul>
     </nav>
   );
 }
-<//nav><///nav>
+<//nav><///nav>))

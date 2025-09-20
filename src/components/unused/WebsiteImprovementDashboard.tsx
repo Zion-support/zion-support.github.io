@@ -1,5 +1,5 @@
-import React, { useState; useEffect; useCallback } from "react;";
-import { motion; AnimatePresence } from "framer-motion, ";
+import React, { useState, useEffect, useCallback } from "react;";
+import { motion, AnimatePresence } from "framer-motion, ";
 import { ChartBarIcon;
   CogIcon;
   ExclamationTriangleIcon;
@@ -17,89 +17,92 @@ import { ChartBarIcon;
 } from "@heroicons/react/24/outline, ";
 
 interface PerformanceMetrics {
-  loadTime: number;
-    firstContentfulPaint: number;
-    largestContentfulPaint: number;
-    cumulativeLayoutShift: number;
-    firstInputDelay: number;
-    timeToInteractive: number;,
+  loadTime: number,
+    firstContentfulPaint: number,
+    largestContentfulPaint: number,
+    cumulativeLayoutShift: number,
+    firstInputDelay: number,
+    timeToInteractive: number,,
 };
 interface SEOAnalysis {
-  score: number;
-    issues: string[];
-    suggestions: string[];
+  score: number,
+    issues: string[],
+    suggestions: string[],
     metaTags: {
-    title: boolean;
-    description: boolean;
-    keywords: boolean;
-    canonical: boolean;
-    ogTags: boolean;
-    twitterTags: boolean;,
+    title: boolean,
+    description: boolean,
+    keywords: boolean,
+    canonical: boolean,
+    ogTags: boolean,
+    twitterTags: boolean,,
      };
 }
 
 interface AccessibilityReport {
-  score: number;
-    issues: string[];
-    wcagCompliance: "A" | "AA" | "AAA" | "Non-Compliant";
-    criticalIssues: number;
-    warnings: number;,
+  score: number,
+    issues: string[],
+    wcagCompliance: "A" | "AA" | "AAA" | "Non-Compliant",
+    criticalIssues: number,
+    warnings: number,,
 };
 interface WebsiteImprovementDashboardProps {
   className?: string;
   showOnLoad?: boolean;
 };
 const WebsiteImprovementDashboard: React.FC<WebsiteImprovementDashboardProps> = ({
-  className = "";
+  className = "",
   showOnLoad = false;
-}) => {
+}) : any => {
   const [isOpen; setIsOpen] = useState(showOnLoad);
   const [activeTab; setActiveTab] = useState<"overview" | "performance" | "seo" | "accessibility" | "recommendations">("overview");
   const [metrics; setMetrics] = useState<PerformanceMetrics>({
-    loadTime: 0;
-    firstContentfulPaint: 0;
-    largestContentfulPaint: 0;
-    cumulativeLayoutShift: 0;
-    firstInputDelay: 0;
-    timeToInteractive: 0;,
+    loadTime: 0,
+    firstContentfulPaint: 0,
+    largestContentfulPaint: 0,
+    cumulativeLayoutShift: 0,
+    firstInputDelay: 0,
+    timeToInteractive: 0,,
   });
-    const [seoAnalysis; setSeoAnalysis] = useState<SEOAnalysis>({
-    score: 0;
-    issues: [];
-    suggestions: [];
+
+  const [seoAnalysis; setSeoAnalysis] = useState<SEOAnalysis>({
+    score: 0,
+    issues: [],
+    suggestions: [],
     metaTags: {
-      title: false;
-      description: false;
-      keywords: false;
-      canonical: false;
-      ogTags: false;
-      twitterTags: false;,
+      title: false,
+      description: false,
+      keywords: false,
+      canonical: false,
+      ogTags: false,
+      twitterTags: false,,
     }
   });
-    const [accessibilityReport; setAccessibilityReport] = useState<AccessibilityReport>({
-    score: 0;
-    issues: [];
-    wcagCompliance: "Non-Compliant";
-    criticalIssues: 0;
-    warnings: 0;,
+
+  const [accessibilityReport; setAccessibilityReport] = useState<AccessibilityReport>({
+    score: 0,
+    issues: [],
+    wcagCompliance: "Non-Compliant",
+    criticalIssues: 0,
+    warnings: 0,,
   });
-    const [isAnalyzing; setIsAnalyzing] = useState(false);
+
+  const [isAnalyzing; setIsAnalyzing] = useState(false);
 
   // Analyze website performance;
   const analyzePerformance = useCallback(async () => {
     setIsAnalyzing(true);
     
     // Simulate performance analysis;
-    await new Promise(resolve => setTimeout(resolve; 2000));
+    await new Promise(resolve => setTimeout(resolve, 2000));
     
-    // Mock performance data (in a real app; you"d use Web Vitals API)
+    // Mock performance data (in a real app, you"d use Web Vitals API)
     const mockMetrics: PerformanceMetrics = {
       loadTime: Math.random() * 3000 + 1000, // 1-4 seconds;
       firstContentfulPaint: Math.random() * 2000 + 500, // 0.5-2.5 seconds;
       largestContentfulPaint: Math.random() * 3000 + 1000, // 1-4 seconds;
       cumulativeLayoutShift: Math.random() * 0.1, // 0-0.1;
       firstInputDelay: Math.random() * 100 + 50, // 50-150ms;
-      timeToInteractive: Math.random() * 4000 + 2000 // 2-6 seconds;,
+      timeToInteractive: Math.random() * 4000 + 2000 // 2-6 seconds,,
     };
     setMetrics(mockMetrics);
     setIsAnalyzing(false);
@@ -109,28 +112,28 @@ const WebsiteImprovementDashboard: React.FC<WebsiteImprovementDashboardProps> = 
   const analyzeSEO = useCallback(async () => {
     setIsAnalyzing(true);
     
-    await new Promise(resolve => setTimeout(resolve; 1500));
+    await new Promise(resolve => setTimeout(resolve, 1500));
     
     // Mock SEO analysis;
     const mockSEO: SEOAnalysis = {
       score: Math.floor(Math.random() * 40) + 60, // 60-100;
       issues: [
-        "Missing meta description on some pages";
+        "Missing meta description on some pages",
         "Some images lack alt text",
         "Heading structure could be improved"
       ],
       suggestions: [
-        "Add structured data markup";
+        "Add structured data markup",
         "Optimize page titles for better CTR",
         "Improve internal linking structure"
       ],
       metaTags: {
-        title: true;
-        description: Math.random() > 0.3;
-        keywords: Math.random() > 0.5;
-        canonical: true;
-        ogTags: Math.random() > 0.2;
-        twitterTags: Math.random() > 0.4;,
+        title: true,
+        description: Math.random() > 0.3,
+        keywords: Math.random() > 0.5,
+        canonical: true,
+        ogTags: Math.random() > 0.2,
+        twitterTags: Math.random() > 0.4,,
       }
     };
     setSeoAnalysis(mockSEO);
@@ -141,19 +144,19 @@ const WebsiteImprovementDashboard: React.FC<WebsiteImprovementDashboardProps> = 
   const analyzeAccessibility = useCallback(async () => {
     setIsAnalyzing(true);
     
-    await new Promise(resolve => setTimeout(resolve; 1800));
+    await new Promise(resolve => setTimeout(resolve, 1800));
     
     // Mock accessibility analysis;
     const mockAccessibility: AccessibilityReport = {
       score: Math.floor(Math.random() * 30) + 70, // 70-100;
       issues: [
-        "Some form controls lack proper labels";
+        "Some form controls lack proper labels",
         "Color contrast could be improved",
         "Keyboard navigation needs enhancement"
       ],
-      wcagCompliance: Math.random() > 0.7 ? "AA" : Math.random() > 0.4 ? "A" : "Non-Compliant";
-      criticalIssues: Math.floor(Math.random() * 3);
-      warnings: Math.floor(Math.random() * 5) + 1;,
+      wcagCompliance: Math.random() > 0.7 ? "AA" : Math.random() > 0.4 ? "A" : "Non-Compliant",
+      criticalIssues: Math.floor(Math.random() * 3),
+      warnings: Math.floor(Math.random() * 5) + 1,,
     };
     setAccessibilityReport(mockAccessibility);
     setIsAnalyzing(false);
@@ -169,19 +172,19 @@ const WebsiteImprovementDashboard: React.FC<WebsiteImprovementDashboardProps> = 
   }, [analyzePerformance; analyzeSEO; analyzeAccessibility]);
 
   // Get performance grade;
-  const getPerformanceGrade = (metric: number; thresholds: { good: number;
-    needsImprovement: number }) => {
-    if (metric <= thresholds.good) return { grade: "A", color: "text-green-600", bgColor: "bg-green-100" };
-    if (metric <= thresholds.needsImprovement) return { grade: "B", color: "text-yellow-600", bgColor: "bg-yellow-100" };
+  const getPerformanceGrade = (metric: number, thresholds: { good: number,
+    needsImprovement: number }) : any => {
+    if (metric <= thresholds.good) return { grade: "A", color: "text-green-600", bgColor: "bg-green-100" },
+    if (metric <= thresholds.needsImprovement) return { grade: "B", color: "text-yellow-600", bgColor: "bg-yellow-100" },
     return { grade: "C", color: "text-red-600", bgColor: "bg-red-100" };
-     };
+  };
 
   // Get trend indicator;
-  const getTrendIndicator = (value: number; previousValue: number) => {
-    if (value < previousValue) return { icon: ArrowUpIcon; color: "text-green-600", text: "Improving" };
-    if (value > previousValue) return { icon: ArrowDownIcon; color: "text-red-600", text: "Declining" };
-    return { icon: MinusIcon; color: "text-gray-600", text: "Stable" };
-     };
+  const getTrendIndicator = (value: number, previousValue: number) : any => {
+    if (value < previousValue) return { icon: ArrowUpIcon, color: "text-green-600", text: "Improving" },
+    if (value > previousValue) return { icon: ArrowDownIcon, color: "text-red-600", text: "Declining" },
+    return { icon: MinusIcon, color: "text-gray-600", text: "Stable" };
+  };
 
   useEffect(() => {
     if (showOnLoad) {
@@ -206,10 +209,10 @@ const WebsiteImprovementDashboard: React.FC<WebsiteImprovementDashboardProps> = 
       {/* Dashboard Panel */}
       <AnimatePresence>
         {isOpen && (
-          <motion.div;
-            initial={{ opacity: 0; x: -400 }}
-            animate={{ opacity: 1; x: 0 }}
-            exit={{ opacity: 0; x: -400 }}
+          <motion.div,
+            initial={{ opacity: 0, x: -400 }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: -400 }}
             className="fixed top-4 left-20 z-40 w-96 bg-white dark:bg-gray-900 rounded-lg shadow-2xl border border-gray-200 dark:border-gray-700 max-h-[90vh] overflow-hidden"
           >
             {/* Header */}
@@ -217,7 +220,7 @@ const WebsiteImprovementDashboard: React.FC<WebsiteImprovementDashboardProps> = 
               <div className="flex items-center gap-2">
                 <ChartBarIcon className="w-6 h-6" />
                 <h2 className="text-lg font-semibold">
-                  Website Improvement Dashboard;
+                  Website Improvement Dashboard,
                 </h2>
               </div>
               <button;
@@ -232,13 +235,13 @@ const WebsiteImprovementDashboard: React.FC<WebsiteImprovementDashboardProps> = 
             {/* Tabs */}
             <div className="flex border-b border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800">
               {[
-                { id: "overview", label: "Overview", icon: ChartBarIcon };
-                { id: "performance", label: "Performance", icon: CogIcon };
-                { id: "seo", label: "SEO", icon: GlobeAltIcon };
-                { id: "accessibility", label: "Accessibility", icon: EyeIcon };
+                { id: "overview", label: "Overview", icon: ChartBarIcon },
+                { id: "performance", label: "Performance", icon: CogIcon },
+                { id: "seo", label: "SEO", icon: GlobeAltIcon },
+                { id: "accessibility", label: "Accessibility", icon: EyeIcon },
                 { id: "recommendations", label: "Actions", icon: InformationCircleIcon }
               ].map(tab => (
-                <button;
+                <button,
                   key={tab.id}
                   onClick={() => setActiveTab(tab.id as any)}
                   className={`flex-1 flex items-center justify-center gap-2 px-3 py-2 text-xs font-medium transition-colors ${
@@ -259,13 +262,13 @@ const WebsiteImprovementDashboard: React.FC<WebsiteImprovementDashboardProps> = 
                 <div className="space-y-4">
                   {/* Quick Stats */}
                   <div className="grid grid-cols-2 gap-3">
-                    <div className="bg-blue-50 dark:bg-blue-900/20 p-3 rounded-lg">
+                    <div className="bg-blue-50 dark: bg-blue-900/20 p-3 rounded-lg">
                       <div className="text-2xl font-bold text-blue-600">
-                        {Math.round(metrics.loadTime / 1000)}s;
+                        {Math.round(metrics.loadTime / 1000)}s,
                       </div>
                       <div className="text-xs text-blue-600">Load Time</div>
                     </div>
-                    <div className="bg-green-50 dark:bg-green-900/20 p-3 rounded-lg">
+                    <div className="bg-green-50 dark: bg-green-900/20 p-3 rounded-lg">
                       <div className="text-2xl font-bold text-green-600">
                         {seoAnalysis.score}
                       </div>
@@ -286,10 +289,10 @@ const WebsiteImprovementDashboard: React.FC<WebsiteImprovementDashboardProps> = 
                   </div>
 
                   {/* Action Button */}
-                  <button;
+                  <button,
                     onClick={runFullAnalysis}
                     disabled={isAnalyzing}
-                    className="w-full bg-indigo-600 hover:bg-indigo-700 disabled:bg-gray-400 text-white py-2 px-4 rounded-lg transition-colors flex items-center justify-center gap-2"
+                    className="w-full bg-indigo-600 hover: bg-indigo-700 disabled:bg-gray-400 text-white py-2 px-4 rounded-lg transition-colors flex items-center justify-center gap-2"
                   >
                     {isAnalyzing ? (
                       <>
@@ -299,20 +302,20 @@ const WebsiteImprovementDashboard: React.FC<WebsiteImprovementDashboardProps> = 
                     ) : (
                       <>
                         <ChartBarIcon className="w-4 h-4" />
-                        Run Full Analysis;
+                        Run Full Analysis,
                       </>
                     )}
                   </button>
 
                   {/* Recent Activity */}
                   <div>
-                    <h3 className="text-sm font-medium text-gray-900 dark:text-white mb-3">
-                      Recent Activity;
+                    <h3 className="text-sm font-medium text-gray-900 dark: text-white mb-3">
+                      Recent Activity,
                     </h3>
-                    <div className="space-y-2 text-xs text-gray-600 dark:text-gray-400">
+                    <div className="space-y-2 text-xs text-gray-600 dark: text-gray-400">
                       <div className="flex items-center gap-2">
                         <CheckCircleIcon className="w-3 h-3 text-green-500" />
-                        Performance analysis completed;
+                        Performance analysis completed,
                       </div>
                       <div className="flex items-center gap-2">
                         <ExclamationTriangleIcon className="w-3 h-3 text-yellow-500" />
@@ -330,44 +333,44 @@ const WebsiteImprovementDashboard: React.FC<WebsiteImprovementDashboardProps> = 
               {activeTab === "performance" && (
                 <div className="space-y-4">
                   <h3 className="text-sm font-medium text-gray-900 dark:text-white">
-                    Performance Metrics;
+                    Performance Metrics,
                   </h3>
                   
                   {/* Core Web Vitals */}
                   <div className="space-y-3">
                     {[
                       {
-                        label: "Load Time";
-                        value: metrics.loadTime;
-                        unit: "ms";
-                        thresholds: { good: 2000; needsImprovement: 4000 }
-                      };
+                        label: "Load Time",
+                        value: metrics.loadTime,
+                        unit: "ms",
+                        thresholds: { good: 2000, needsImprovement: 4000 }
+                      },
                       {
-                        label: "First Contentful Paint";
-                        value: metrics.firstContentfulPaint;
-                        unit: "ms";
-                        thresholds: { good: 1000; needsImprovement: 2000 }
-                      };
+                        label: "First Contentful Paint",
+                        value: metrics.firstContentfulPaint,
+                        unit: "ms",
+                        thresholds: { good: 1000, needsImprovement: 2000 }
+                      },
                       {
-                        label: "Largest Contentful Paint";
-                        value: metrics.largestContentfulPaint;
-                        unit: "ms";
-                        thresholds: { good: 2000; needsImprovement: 4000 }
-                      };
+                        label: "Largest Contentful Paint",
+                        value: metrics.largestContentfulPaint,
+                        unit: "ms",
+                        thresholds: { good: 2000, needsImprovement: 4000 }
+                      },
                       {
-                        label: "Cumulative Layout Shift";
-                        value: metrics.cumulativeLayoutShift;
-                        unit: "";
-                        thresholds: { good: 0.1; needsImprovement: 0.25 }
-                      };
+                        label: "Cumulative Layout Shift",
+                        value: metrics.cumulativeLayoutShift,
+                        unit: "",
+                        thresholds: { good: 0.1, needsImprovement: 0.25 }
+                      },
                       {
-                        label: "First Input Delay";
-                        value: metrics.firstInputDelay;
-                        unit: "ms";
-                        thresholds: { good: 100; needsImprovement: 300 }
+                        label: "First Input Delay",
+                        value: metrics.firstInputDelay,
+                        unit: "ms",
+                        thresholds: { good: 100, needsImprovement: 300 }
                       }
-                    ].map((metric; index) => {
-                      const grade = getPerformanceGrade(metric.value; metric.thresholds);
+                    ].map((metric, index) : any => {
+                      const grade = getPerformanceGrade(metric.value, metric.thresholds);
                       return (
                         <div key={index} className="flex items-center justify-between p-3 bg-gray-50 dark: bg-gray-800 rounded-lg">
                           <div>
@@ -382,7 +385,7 @@ const WebsiteImprovementDashboard: React.FC<WebsiteImprovementDashboardProps> = 
                             {grade.grade}
                           </div>
                         </div>
-                      );
+                      ),
      })}
                   </div>
                 </div>
@@ -390,27 +393,27 @@ const WebsiteImprovementDashboard: React.FC<WebsiteImprovementDashboardProps> = 
 
               {activeTab === "seo" && (
                 <div className="space-y-4">
-                  <h3 className="text-sm font-medium text-gray-900 dark:text-white">
-                    SEO Analysis;
+                  <h3 className="text-sm font-medium text-gray-900 dark: text-white">
+                    SEO Analysis,
                   </h3>
                   
                   {/* SEO Score */}
-                  <div className="text-center p-4 bg-gradient-to-r from-green-50 to-blue-50 dark:from-green-900/20 dark:to-blue-900/20 rounded-lg">
+                  <div className="text-center p-4 bg-gradient-to-r from-green-50 to-blue-50 dark: from-green-900/20 dark:to-blue-900/20 rounded-lg">
                     <div className="text-3xl font-bold text-green-600">
-                      {seoAnalysis.score}/100;
+                      {seoAnalysis.score}/100,
                     </div>
-                    <div className="text-sm text-gray-600 dark:text-gray-400">
-                      SEO Score;
+                    <div className="text-sm text-gray-600 dark: text-gray-400">
+                      SEO Score,
                     </div>
                   </div>
                   
                   {/* Meta Tags Status */}
                   <div>
-                    <h4 className="text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                      Meta Tags Status;
+                    <h4 className="text-sm font-medium text-gray-700 dark: text-gray-300 mb-2">
+                      Meta Tags Status,
                     </h4>
                     <div className="space-y-2">
-                      {Object.entries(seoAnalysis.metaTags).map(([tag; present]) => (
+                      {Object.entries(seoAnalysis.metaTags).map(([tag, present]) => (
                         <div key={tag} className="flex items-center justify-between">
                           <span className="text-xs text-gray-600 dark:text-gray-400 capitalize">
                             {tag.replace(/([A-Z])/g, " $1").trim()}
@@ -429,10 +432,10 @@ const WebsiteImprovementDashboard: React.FC<WebsiteImprovementDashboardProps> = 
                   {seoAnalysis.issues.length > 0 && (
                     <div>
                       <h4 className="text-sm font-medium text-red-600 mb-2">
-                        Issues Found;
+                        Issues Found,
                       </h4>
                       <div className="space-y-2">
-                        {seoAnalysis.issues.map((issue; index) => (
+                        {seoAnalysis.issues.map((issue, index) => (
                           <div key={index} className="text-xs text-red-600 bg-red-50 dark:bg-red-900/20 p-2 rounded">
                             {issue}
                           </div>
@@ -445,10 +448,10 @@ const WebsiteImprovementDashboard: React.FC<WebsiteImprovementDashboardProps> = 
                   {seoAnalysis.suggestions.length > 0 && (
                     <div>
                       <h4 className="text-sm font-medium text-blue-600 mb-2">
-                        Suggestions;
+                        Suggestions,
                       </h4>
                       <div className="space-y-2">
-                        {seoAnalysis.suggestions.map((suggestion; index) => (
+                        {seoAnalysis.suggestions.map((suggestion, index) => (
                           <div key={index} className="text-xs text-blue-600 bg-blue-50 dark:bg-blue-900/20 p-2 rounded">
                             {suggestion}
                           </div>
@@ -462,19 +465,19 @@ const WebsiteImprovementDashboard: React.FC<WebsiteImprovementDashboardProps> = 
               {activeTab === "accessibility" && (
                 <div className="space-y-4">
                   <h3 className="text-sm font-medium text-gray-900 dark:text-white">
-                    Accessibility Report;
+                    Accessibility Report,
                   </h3>
                   
                   {/* Accessibility Score */}
                   <div className="text-center p-4 bg-gradient-to-r from-purple-50 to-pink-50 dark:from-purple-900/20 dark:to-pink-900/20 rounded-lg">
                     <div className="text-3xl font-bold text-purple-600">
-                      {accessibilityReport.score}/100;
+                      {accessibilityReport.score}/100,
                     </div>
                     <div className="text-sm text-gray-600 dark:text-gray-400">
-                      Accessibility Score;
+                      Accessibility Score,
                     </div>
                     <div className="text-xs text-purple-600 mt-1">
-                      WCAG {accessibilityReport.wcagCompliance} Compliance;
+                      WCAG {accessibilityReport.wcagCompliance} Compliance,
                     </div>
                   </div>
                   
@@ -498,10 +501,10 @@ const WebsiteImprovementDashboard: React.FC<WebsiteImprovementDashboardProps> = 
                   {accessibilityReport.issues.length > 0 && (
                     <div>
                       <h4 className="text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                        Issues Found;
+                        Issues Found,
                       </h4>
                       <div className="space-y-2">
-                        {accessibilityReport.issues.map((issue; index) => (
+                        {accessibilityReport.issues.map((issue, index) => (
                           <div key={index} className="text-xs text-gray-600 bg-gray-50 dark: bg-gray-800 p-2 rounded">
                             {issue}
                           </div>
@@ -515,52 +518,52 @@ const WebsiteImprovementDashboard: React.FC<WebsiteImprovementDashboardProps> = 
               {activeTab === "recommendations" && (
                 <div className="space-y-4">
                   <h3 className="text-sm font-medium text-gray-900 dark:text-white">
-                    Actionable Recommendations;
+                    Actionable Recommendations,
                   </h3>
                   
                   {/* Priority Actions */}
                   <div className="space-y-3">
                     {[
                       {
-                        priority: "High";
-                        title: "Fix Critical Accessibility Issues";
-                        description: "Address WCAG compliance violations";
-                        impact: "High";
+                        priority: "High",
+                        title: "Fix Critical Accessibility Issues",
+                        description: "Address WCAG compliance violations",
+                        impact: "High",
                         effort: "Medium",
-                      };
+                      },
                       {
-                        priority: "High";
-                        title: "Optimize Core Web Vitals";
-                        description: "Improve page load performance";
-                        impact: "High";
+                        priority: "High",
+                        title: "Optimize Core Web Vitals",
+                        description: "Improve page load performance",
+                        impact: "High",
                         effort: "High",
-                      };
+                      },
                       {
-                        priority: "Medium";
-                        title: "Enhance SEO Meta Tags";
-                        description: "Add missing meta descriptions and titles";
-                        impact: "Medium";
+                        priority: "Medium",
+                        title: "Enhance SEO Meta Tags",
+                        description: "Add missing meta descriptions and titles",
+                        impact: "Medium",
                         effort: "Low",
-                      };
+                      },
                       {
-                        priority: "Medium";
-                        title: "Improve Image Optimization";
-                        description: "Add alt text and compress images";
-                        impact: "Medium";
+                        priority: "Medium",
+                        title: "Improve Image Optimization",
+                        description: "Add alt text and compress images",
+                        impact: "Medium",
                         effort: "Low",
                       }
-                    ].map((action; index) => (
+                    ].map((action, index) => (
                       <div key={index} className="p-3 border border-gray-200 dark: border-gray-700 rounded-lg">
                         <div className="flex items-start justify-between mb-2">
                           <span className={`text-xs px-2 py-1 rounded font-medium ${
                             action.priority === "High" 
                               ? "bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-300"
-                              : "bg-yellow-100 text-yellow-700 dark: bg-yellow-900/30 dark:text-yellow-300',
-                          }`}>
+                              : "bg-yellow-100 text-yellow-700 dark: bg-yellow-900/30 dark:text-yellow-300';
+  }`}>
                             {action.priority}
                           </span>
                           <div className="text-right text-xs">
-                            <div className="text-gray-500 dark:text-gray-400">Impact: {action.impact}</div>
+                            <div className="text-gray-500 dark: text-gray-400">Impact: {action.impact}</div>
                             <div className="text-gray-500 dark:text-gray-400">Effort: {action.effort}</div>
                           </div>
                         </div>
@@ -577,17 +580,17 @@ const WebsiteImprovementDashboard: React.FC<WebsiteImprovementDashboardProps> = 
                   {/* Quick Actions */}
                   <div>
                     <h4 className="text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                      Quick Actions;
+                      Quick Actions,
                     </h4>
                     <div className="space-y-2">
-                      <button className="w-full text-left text-xs bg-blue-50 hover:bg-blue-100 dark:bg-blue-900/20 dark:hover:bg-blue-900/30 text-blue-700 dark:text-blue-300 p-2 rounded transition-colors">
-                        Generate SEO Report;
+                      <button className="w-full text-left text-xs bg-blue-50 hover: bg-blue-100 dark:bg-blue-900/20 dark:hover:bg-blue-900/30 text-blue-700 dark:text-blue-300 p-2 rounded transition-colors">
+                        Generate SEO Report,
                       </button>
-                      <button className="w-full text-left text-xs bg-green-50 hover:bg-green-100 dark:bg-green-900/20 dark:hover:bg-green-900/30 text-green-700 dark:text-green-300 p-2 rounded transition-colors">
-                        Export Accessibility Data;
+                      <button className="w-full text-left text-xs bg-green-50 hover: bg-green-100 dark:bg-green-900/20 dark:hover:bg-green-900/30 text-green-700 dark:text-green-300 p-2 rounded transition-colors">
+                        Export Accessibility Data,
                       </button>
-                      <button className="w-full text-left text-xs bg-purple-50 hover:bg-purple-100 dark:bg-purple-900/20 dark:hover:bg-purple-900/30 text-purple-700 dark:text-purple-300 p-2 rounded transition-colors">
-                        Schedule Performance Monitoring;
+                      <button className="w-full text-left text-xs bg-purple-50 hover: bg-purple-100 dark:bg-purple-900/20 dark:hover:bg-purple-900/30 text-purple-700 dark:text-purple-300 p-2 rounded transition-colors">
+                        Schedule Performance Monitoring,
                       </button>
                     </div>
                   </div>
@@ -601,4 +604,4 @@ const WebsiteImprovementDashboard: React.FC<WebsiteImprovementDashboardProps> = 
   );
 };
 
-export default WebsiteImprovementDashboard;<//><///>
+export default WebsiteImprovementDashboard;<//><///>'

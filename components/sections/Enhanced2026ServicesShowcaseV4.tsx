@@ -4,48 +4,48 @@ import { Star, TrendingUp, Users, Zap, ArrowRight, CheckCircle, Clock, DollarSig
 import Link from 'next/link';
 
 interface Service {
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  textColor: string;
-  link: string;
-  marketPosition: string;
-  targetAudience: string;
-  trialDays: number;
-  setupTime: string;
-  category: string;
-  realService: boolean;
-  technology: string[];
-  integrations: string[];
-  useCases: string[];
-  roi: string;
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
-  variant: string;
+  id: string,
+  name: string,
+  tagline: string,
+  price: string,
+  period: string,
+  description: string,
+  features: string[],
+  popular: boolean,
+  icon: string,
+  color: string,
+  textColor: string,
+  link: string,
+  marketPosition: string,
+  targetAudience: string,
+  trialDays: number,
+  setupTime: string,
+  category: string,
+  realService: boolean,
+  technology: string[],
+  integrations: string[],
+  useCases: string[],
+  roi: string,
+  competitors: string[],
+  marketSize: string,
+  growthRate: string,
+  variant: string,
   contactInfo: {
-    mobile: string;
-    email: string;
-    address: string;
-    website: string;
+    mobile: string,
+    email: string,
+    address: string,
+    website: string,
   };
-  realImplementation: boolean;
-  implementationDetails: string;
-  launchDate: string;
-  customers: number;
-  rating: number;
-  reviews: number;
+  realImplementation: boolean,
+  implementationDetails: string,
+  launchDate: string,
+  customers: number,
+  rating: number,
+  reviews: number,
 }
 
 interface Enhanced2026ServicesShowcaseV4Props {
-  services: Service[];
+  services: Service[],
   title?: string;
   subtitle?: string;
   showFilters?: boolean;
@@ -56,7 +56,7 @@ const Enhanced2026ServicesShowcaseV4: React.FC<Enhanced2026ServicesShowcaseV4Pro
   title = "Revolutionary 2026 Services",
   subtitle = "Experience the future of technology with our cutting-edge solutions",
   showFilters = true
-}) => {
+}) : any => {
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [selectedPriceRange, setSelectedPriceRange] = useState<string>('all');
   const [sortBy, setSortBy] = useState<string>('name');
@@ -69,7 +69,7 @@ const Enhanced2026ServicesShowcaseV4: React.FC<Enhanced2026ServicesShowcaseV4Pro
     { id: 'medium', label: '$100 - $500', min: 100, max: 500 },
     { id: 'high', label: '$500 - $1000', min: 500, max: 1000 },
     { id: 'enterprise', label: '$1000+', min: 1000, max: Infinity }
-  ];
+  ],
 
   const filteredServices = services.filter(service => {
     const matchesCategory = selectedCategory === 'all' || 
@@ -91,7 +91,7 @@ const Enhanced2026ServicesShowcaseV4: React.FC<Enhanced2026ServicesShowcaseV4Pro
     return matchesCategory && matchesSearch && matchesPrice;
   });
 
-  const sortedServices = [...filteredServices].sort((a, b) => {
+  const sortedServices = [...filteredServices].sort((a, b) : any => {
     switch (sortBy) {
       case 'price':
         return parseInt(a.price.replace(/[^0-9]/g, '')) - parseInt(b.price.replace(/[^0-9]/g, ''));
@@ -100,9 +100,8 @@ const Enhanced2026ServicesShowcaseV4: React.FC<Enhanced2026ServicesShowcaseV4Pro
       case 'customers':
         return b.customers - a.customers;
       case 'name':
-      default:
-        return a.name.localeCompare(b.name);
-    }
+      default: return a.name.localeCompare(b.name);
+  }
   });
 
   const containerVariants = {
@@ -113,7 +112,7 @@ const Enhanced2026ServicesShowcaseV4: React.FC<Enhanced2026ServicesShowcaseV4Pro
         staggerChildren: 0.1
       }
     }
-  };
+  },
 
   const itemVariants = {
     hidden: { y: 20, opacity: 0 },
@@ -124,7 +123,7 @@ const Enhanced2026ServicesShowcaseV4: React.FC<Enhanced2026ServicesShowcaseV4Pro
         duration: 0.5
       }
     }
-  };
+  },
 
   return (
     <section className="py-20 relative overflow-hidden">
@@ -292,7 +291,7 @@ const Enhanced2026ServicesShowcaseV4: React.FC<Enhanced2026ServicesShowcaseV4Pro
                   {/* Market Info */}
                   <div className="space-y-2 mb-6 text-xs">
                     <div className="flex justify-between">
-                      <span className="text-gray-400">Market Size:</span>
+                      <span className="text-gray-400">Market Size: </span>
                       <span className="text-white">{service.marketSize}</span>
                     </div>
                     <div className="flex justify-between">
@@ -334,6 +333,6 @@ const Enhanced2026ServicesShowcaseV4: React.FC<Enhanced2026ServicesShowcaseV4Pro
       </div>
     </section>
   );
-};
+  };
 
 export default Enhanced2026ServicesShowcaseV4;

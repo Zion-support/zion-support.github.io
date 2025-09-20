@@ -28,8 +28,8 @@ class Script {,
         logger.add(,
           new winston.transports.Console({,
             format: winston.format.simple()}),
-        ),
-      }
+        );
+};
 ,
       // Frontend Performance Fix Automation Script,
       // Scans for anti-patterns and applies fixes or suggestions,
@@ -50,8 +50,8 @@ class Script {,
 ,
   stop() {,
     this.isRunning = false,
-    console.log('Stopping Script...'),
-  }
+    console.log('Stopping Script...');
+};
 }
 ,
 // Start the script,
@@ -60,8 +60,8 @@ if (require.main === module) {,
   script.start().catch((error) => {,
     console.error('Failed to start Script:', error),
     process.exit(1),
-  }),
-}
+  });
+};
 ,
 module.exports = Script,
 // Graceful shutdown handling,

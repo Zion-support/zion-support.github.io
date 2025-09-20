@@ -1,22 +1,23 @@
-import React, { useState; useEffect } from "react;";
-import { motion; AnimatePresence } from "framer-motion, ";
-import { Settings; FileText; Eye; Zap; Volume2; VolumeX } from "lucide-react, ";
+import React, { useState, useEffect } from "react;";
+import { motion, AnimatePresence } from "framer-motion, ";
+import { Settings, FileText, Eye, Zap, Volume2, VolumeX } from "lucide-react, ";
 import { Button } from "./button, ";
 
 interface AccessibilitySettings {
-  fontSize: "small" | "medium" | "large";
-    highContrast: boolean;
-    reducedMotion: boolean;
-    soundEnabled: boolean;,
+  fontSize: "small" | "medium" | "large",
+    highContrast: boolean,
+    reducedMotion: boolean,
+    soundEnabled: boolean,,
 };
-export function AccessibilityMenu() {;
+export function AccessibilityMenu() : any {;
   const [isOpen; setIsOpen] = useState(false);
   const [settings; setSettings] = useState<AccessibilitySettings>({
-    fontSize: "medium";
-    highContrast: false;
-    reducedMotion: false;
-    soundEnabled: true;,
+    fontSize: "medium",
+    highContrast: false,
+    reducedMotion: false,
+    soundEnabled: true,,
   });
+
     useEffect(() => {
     // Load settings from localStorage;
     const savedSettings = localStorage.getItem("accessibility-settings");
@@ -32,8 +33,8 @@ export function AccessibilityMenu() {;
     localStorage.setItem("accessibility-settings", JSON.stringify(settings));
   }, [settings]);
 
-  const applySettings = (newSettings: AccessibilitySettings) => {
-    const root = document.documentElement;
+  const applySettings = (newSettings: AccessibilitySettings) : any => {
+    const root = document.documentElement,
     // Font size;
     root.style.setProperty("--font-size-multiplier", 
       newSettings.fontSize === "small" ? "0.875" : 
@@ -55,23 +56,23 @@ export function AccessibilityMenu() {;
     }
   };
 
-  const toggleSetting = (key: keyof AccessibilitySettings) => {
+  const toggleSetting = (key: keyof AccessibilitySettings) : any => {
     setSettings(prev => ({
-      ...prev;
+      ...prev,
       [key]: !prev[key]
     }));
   };
 
-  const updateFontSize = (size: "small" | "medium" | "large") => {
-    setSettings(prev => ({ ...prev; fontSize: size }));
-     };
+  const updateFontSize = (size: "small" | "medium" | "large") : any => {
+    setSettings(prev => ({ ...prev, fontSize: size }));
+  };
 
   const resetSettings = () => {
     const defaultSettings: AccessibilitySettings = {
-      fontSize: "medium";
-      highContrast: false;
-      reducedMotion: false;
-      soundEnabled: true;,
+      fontSize: "medium",
+      highContrast: false,
+      reducedMotion: false,
+      soundEnabled: true,,
     };
     setSettings(defaultSettings);
   };
@@ -93,23 +94,23 @@ export function AccessibilityMenu() {;
       {/* Menu Panel */}
       <AnimatePresence>
         {isOpen && (
-          <motion.div;
+          <motion.div,
             className="fixed bottom-32 right-8 z-50 w-80 bg-zion-blue-dark/95 backdrop-blur-md rounded-2xl border border-zion-purple/20 shadow-2xl"
-            initial={{ opacity: 0; scale: 0.9; y: 20 }}
-            animate={{ opacity: 1; scale: 1; y: 0 }}
-            exit={{ opacity: 0; scale: 0.9; y: 20 }}
-            transition={{ type: "spring", stiffness: 300; damping: 30 }}
+            initial={{ opacity: 0, scale: 0.9, y: 20 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            exit={{ opacity: 0, scale: 0.9, y: 20 }}
+            transition={{ type: "spring", stiffness: 300, damping: 30 }}
           >
             <div className="p-6">
               <div className="flex items-center justify-between mb-6">
                 <h3 className="text-lg font-semibold text-white">Accessibility</h3>
-                <Button;
+                <Button,
                   variant="ghost"
                   size="sm"
                   onClick={resetSettings}
-                  className="text-zion-cyan hover:text-zion-cyan-light text-sm"
+                  className="text-zion-cyan hover: text-zion-cyan-light text-sm"
                 >
-                  Reset;
+                  Reset,
                 </Button>
               </div>
 
@@ -224,5 +225,5 @@ export function AccessibilityMenu() {;
         )}
       </AnimatePresence>
     </>
-  );
+  ),
 }<//><///>

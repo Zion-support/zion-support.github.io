@@ -1,7 +1,7 @@
 import { ReactNode } from "react";
 
 interface GlassmorphismCardProps {
-  children: ReactNode;
+  children: ReactNode,
   className?: string;
 }
 

@@ -74,15 +74,15 @@ export function PrimaryNav() {
                 router.push(`/blog/${sugg.slug}`);
             }
             else {
-                // Default: search results page with slug;
+                // Default: search results page with slug,
                 router.push(`/search/${sugg.slug || slugify(sugg.text)}`);
      }
             setQuery('');
             // Track analytics event;
             if (typeof window !== 'undefined' && window.gtag) {
                 window.gtag('event', 'search_suggestion_click', {
-                    search_term: sugg.text;
-                    suggestion_type: sugg.type;
+                    search_term: sugg.text,
+                    suggestion_type: sugg.type,
                     suggestion_id: sugg.id || sugg.slug,
                 });
      }
@@ -151,4 +151,4 @@ export function PrimaryNav() {
         </div>)}
       {isMobile && <MobileBottomNav unreadCount={unreadCount}/>}
     </>);
-}
+};

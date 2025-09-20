@@ -80,4 +80,5 @@ const InteractiveTechDemo2029PromotionBanner: React.FC = () => {
   )
 },
 
-export default InteractiveTechDemo2029PromotionBanner,
+export default InteractiveTechDemo2029PromotionBanner;
+  }

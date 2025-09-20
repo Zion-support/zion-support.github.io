@@ -1,7 +1,7 @@
 import React from 'react',
 import Head from 'next/head',
 import Link from 'next/link',
-export default function TeamPage() {,
+export default function TeamPage() : any {,
 	return (,
 		<>,
 			<Head>,
@@ -284,4 +284,4 @@ export default function TeamPage() {,
 					</section>,
 				</div>,
 			</main>,
-		</>)}
+		</>)}'

@@ -1,6 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
-export default function UltimateAI2026RevolutionBanner() {
+export default function UltimateAI2026RevolutionBanner() : any {
   return (
     <div>
       {/* Animated background elements */}

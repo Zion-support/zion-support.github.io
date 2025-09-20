@@ -15,14 +15,14 @@ class BuildHealthMonitor {,
     // Ensure logs directory exists,
     this.ensureLogsDirectory(),
     // Initialize monitoring,
-    this.startMonitoring(),
-  }
+    this.startMonitoring();
+};
 ,
   ensureLogsDirectory() {,
     const logsDir = path.dirname(this.logFile),
     if (!fs.existsSync(logsDir)) {,
-      fs.mkdirSync(logsDir, { recursive: true }),
-    }
+      fs.mkdirSync(logsDir, { recursive: true });
+};
   }
 ,
   log(message, level = 'INFO') {,
@@ -34,8 +34,8 @@ class BuildHealthMonitor {,
     try {,
       fs.appendFileSync(this.logFile, logEntry),
     } catch (error) {,
-      console.error('Failed to write to log file:', error.message),
-    }
+      console.error('Failed to write to log file:', error.message);
+};
   }
 ,
   async startMonitoring() {,
@@ -56,8 +56,8 @@ class BuildHealthMonitor {,
     setTimeout(() => {,
       this.performHealthCheck(),
     }, 5000),
-    this.log('Build health monitoring started successfully'),
-  }
+    this.log('Build health monitoring started successfully');
+};
 ,
   async performHealthCheck() {,
     if (this.monitoring) return,
@@ -70,14 +70,13 @@ class BuildHealthMonitor {,
         this.log(`Found ${issues.length} issues, attempting fixes...`),
         await this.autoFixIssues(issues),
       } else {,
-        this.log('No issues detected, build health is good'),
-      }
+        this.log('No issues detected, build health is good');
+};
 ,
       // Test build if needed,
       if (this.shouldTestBuild()) {,
-        await this.testBuild(),
-      }
-
+        await this.testBuild();
+};
     } catch (error) {,
       this.log(`Health check failed: ${error.message}`, 'ERROR'),
       this.errorCount++,
@@ -93,8 +92,8 @@ class BuildHealthMonitor {,
       issues.push({,
         type: 'nextjs_imports',
         severity: 'high',
-        description: 'Next.js imports detected in Vite project'}),
-    }
+        description: 'Next.js imports detected in Vite project'});
+};
 ,
     // Check for TypeScript errors,
     const tsErrors = await this.checkTypeScriptErrors(),
@@ -103,24 +102,24 @@ class BuildHealthMonitor {,
         type: 'typescript_errors',
         severity: 'medium',
         description: `${tsErrors.length} TypeScript errors found`,
-        details: tsErrors}),
-    }
+        details: tsErrors});
+};
 ,
     // Check for missing dependencies,
     if (await this.hasMissingDependencies()) {,
       issues.push({,
         type: 'missing_dependencies',
         severity: 'high',
-        description: 'Missing critical dependencies detected'}),
-    }
+        description: 'Missing critical dependencies detected'});
+};
 ,
     // Check for build configuration issues,
     if (await this.hasBuildConfigIssues()) {,
       issues.push({,
         type: 'build_config',
         severity: 'medium',
-        description: 'Build configuration issues detected'}),
-    }
+        description: 'Build configuration issues detected'});
+};
 ,
     return issues,
   }
@@ -215,8 +214,8 @@ class BuildHealthMonitor {,
         this.fixCount++,
         this.log(`Successfully fixed: ${issue.type}`),
       } catch (error) {,
-        this.log(`Failed to fix ${issue.type}: ${error.message}`, 'ERROR'),
-      }
+        this.log(`Failed to fix ${issue.type}: ${error.message}`, 'ERROR');
+};
     }
   }
 ,
@@ -230,11 +229,11 @@ class BuildHealthMonitor {,
           stdio: 'inherit'}),
       } else {,
         // Run inline fix,
-        await this.runInlineNextJSFix(),
-      }
+        await this.runInlineNextJSFix();
+};
     } catch (error) {,
-      throw new Error(`Next.js import fix failed: ${error.message}`),
-    }
+      throw new Error(`Next.js import fix failed: ${error.message}`);
+};
   }
 ,
   async runInlineNextJSFix() {,
@@ -272,12 +271,12 @@ class BuildHealthMonitor {,
           fixedCount++,
         }
       } catch (error) {,
-        this.log(`Error processing ${file}: ${error.message}`, 'WARN'),
-      }
+        this.log(`Error processing ${file}: ${error.message}`, 'WARN');
+};
     }
 ,
-    this.log(`Fixed Next.js imports in ${fixedCount} files`),
-  }
+    this.log(`Fixed Next.js imports in ${fixedCount} files`);
+};
 ,
   async fixTypeScriptErrors(errors) {,
     this.log('Attempting to fix TypeScript errors...'),
@@ -290,8 +289,8 @@ class BuildHealthMonitor {,
       fs.writeFileSync(reportPath, reportContent),
       this.log(`TypeScript errors report saved to: ${reportPath}`),
     } catch (error) {,
-      this.log(`Failed to save TypeScript report: ${error.message}`, 'WARN'),
-    }
+      this.log(`Failed to save TypeScript report: ${error.message}`, 'WARN');
+};
   }
 ,
   async fixMissingDependencies() {,
@@ -302,8 +301,8 @@ class BuildHealthMonitor {,
         stdio: 'inherit'}),
       this.log('Dependencies installed successfully'),
     } catch (error) {,
-      throw new Error(`Dependency installation failed: ${error.message}`),
-    }
+      throw new Error(`Dependency installation failed: ${error.message}`);
+};
   }
 ,
   async fixBuildConfig() {,
@@ -314,16 +313,16 @@ class BuildHealthMonitor {,
       const backupPath = path.join(this.projectRoot, 'vite.config.ts.backup'),
       if (fs.existsSync(configPath)) {,
         fs.copyFileSync(configPath, backupPath),
-        this.log('Backed up existing vite.config.ts'),
-      }
+        this.log('Backed up existing vite.config.ts');
+};
 ,
       // Create a clean config,
       const cleanConfig = this.generateCleanViteConfig(),
       fs.writeFileSync(configPath, cleanConfig),
       this.log('Generated clean vite.config.ts'),
     } catch (error) {,
-      throw new Error(`Build config fix failed: ${error.message}`),
-    }
+      throw new Error(`Build config fix failed: ${error.message}`);
+};
   }
 ,
   generateCleanViteConfig() {,
@@ -385,11 +384,11 @@ export default defineConfig({,
         const stat = fs.statSync(fullPath),
         if (stat.isDirectory()) {,
           if (!['node_modules.gitdistbuild', '.next'].includes(item)) {,
-            traverse(fullPath),
-          }
+            traverse(fullPath);
+};
         } else if (extensions.some(ext => item.endsWith(ext))) {,
-          files.push(fullPath),
-        }
+          files.push(fullPath);
+};
       }
     }
 ,
@@ -423,8 +422,8 @@ export default defineConfig({,
       this.errorCount++,
       // If build fails consistently, trigger alert,
       if (this.errorCount >= 3) {,
-        await this.triggerBuildAlert(),
-      }
+        await this.triggerBuildAlert();
+};
     }
   }
 ,
@@ -437,8 +436,8 @@ export default defineConfig({,
       fs.writeFileSync(alertPath, alertContent),
       this.log('Build alert created'),
     } catch (error) {,
-      this.log(`Failed to create build alert: ${error.message}`, 'ERROR'),
-    }
+      this.log(`Failed to create build alert: ${error.message}`, 'ERROR');
+};
   }
 ,
   async performDeepScan() {,
@@ -452,8 +451,8 @@ export default defineConfig({,
       await this.cleanupTemporaryFiles(),
       this.log('Deep scan completed'),
     } catch (error) {,
-      this.log(`Deep scan failed: ${error.message}`, 'ERROR'),
-    }
+      this.log(`Deep scan failed: ${error.message}`, 'ERROR');
+};
   }
 ,
   async performWeeklyMaintenance() {,
@@ -467,8 +466,8 @@ export default defineConfig({,
       await this.optimizeBuildConfig(),
       this.log('Weekly maintenance completed'),
     } catch (error) {,
-      this.log(`Weekly maintenance failed: ${error.message}`, 'ERROR'),
-    }
+      this.log(`Weekly maintenance failed: ${error.message}`, 'ERROR');
+};
   }
 ,
   async checkFileIntegrity() {,
@@ -480,8 +479,8 @@ export default defineConfig({,
     for (const file of criticalFiles) {,
       const filePath = path.join(this.projectRoot, file),
       if (!fs.existsSync(filePath)) {,
-        this.log(`Critical file missing: ${file}`, 'WARN'),
-      }
+        this.log(`Critical file missing: ${file}`, 'WARN');
+};
     }
   }
 ,
@@ -493,8 +492,8 @@ export default defineConfig({,
         stdio: 'pipe'}),
       this.log('No security vulnerabilities found'),
     } catch (error) {,
-      this.log('Security vulnerabilities detected, consider running npm audit fixWARN'),
-    }
+      this.log('Security vulnerabilities detected, consider running npm audit fixWARN');
+};
   }
 ,
   async cleanupTemporaryFiles() {,
@@ -503,8 +502,8 @@ export default defineConfig({,
       '*.tmp*.temp*.log.old*.backup.*'
     ],
     // Implementation would depend on specific cleanup needs,
-    this.log('Temporary file cleanup completed'),
-  }
+    this.log('Temporary file cleanup completed');
+};
 ,
   async cleanupOldLogs() {,
     this.log('Cleaning up old logs...'),
@@ -519,13 +518,13 @@ export default defineConfig({,
           const stats = fs.statSync(filePath),
           if (now - stats.mtime.getTime() > maxAge) {,
             fs.unlinkSync(filePath),
-            this.log(`Removed old log: ${file}`),
-          }
+            this.log(`Removed old log: ${file}`);
+};
         }
       }
     } catch (error) {,
-      this.log(`Log cleanup failed: ${error.message}`, 'WARN'),
-    }
+      this.log(`Log cleanup failed: ${error.message}`, 'WARN');
+};
   }
 ,
   async checkForDependencyUpdates() {,
@@ -537,16 +536,16 @@ export default defineConfig({,
       this.log('Dependency update check completed'),
     } catch (error) {,
       // npm outdated returns non-zero if there are outdated packages,
-      this.log('Some dependencies may be outdatedINFO'),
-    }
+      this.log('Some dependencies may be outdatedINFO');
+};
   }
 ,
   async optimizeBuildConfig() {,
     this.log('Optimizing build configuration...'),
     // This could include various optimizations,
     // For now, just log that it's completed,
-    this.log('Build configuration optimization completed'),
-  }
+    this.log('Build configuration optimization completed');
+};
 ,
   getStats() {,
     return {,
@@ -560,20 +559,20 @@ export default defineConfig({,
   async stop() {,
     this.log('Stopping build health monitor...'),
     this.monitoring = false,
-    process.exit(0),
-  }
+    process.exit(0);
+};
 }
 ,
 // Handle graceful shutdown,
 process.on('SIGINT', async () => {,
   if (monitor) {,
-    await monitor.stop(),
-  }
+    await monitor.stop();
+};
 }),
 process.on('SIGTERM', async () => {,
   if (monitor) {,
-    await monitor.stop(),
-  }
+    await monitor.stop();
+};
 }),
 // Start the monitor,
 const monitor = new BuildHealthMonitor(),
@@ -581,5 +580,5 @@ const monitor = new BuildHealthMonitor(),
 setInterval(() => {,
   // Heartbeat,
   const stats = monitor.getStats(),
-  monitor.log(`Monitor heartbeat - Errors: ${stats.errorCount}, Fixes: ${stats.fixCount}, Uptime: ${Math.round(stats.uptime)}s`),
-}, 300000), // Every 5 minutes,)
+  monitor.log(`Monitor heartbeat - Errors: ${stats.errorCount}, Fixes: ${stats.fixCount}, Uptime: ${Math.round(stats.uptime)}s`);
+  }, 300000), // Every 5 minutes,)'

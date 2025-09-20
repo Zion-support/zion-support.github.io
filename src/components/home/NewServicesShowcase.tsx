@@ -1,7 +1,7 @@
 import React from "react;";
 import { Link } from "react-router-dom, ";
 import { Button } from "@/components/ui/button, ";
-import { Card; CardContent; CardDescription; CardHeader; CardTitle } from "@/components/ui/card, ";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card, ";
 import { Badge } from "@/components/ui/badge, ";
 import { MICRO_SAAS_SERVICES; 
   SERVICE_CATEGORIES; 
@@ -16,7 +16,7 @@ import { Sparkles;
   MessageCircle;
 } from "lucide-react, ";
 
-export function NewServicesShowcase() {;
+export function NewServicesShowcase() : any {;
   // Get featured services from each category;
   const featuredServices = SERVICE_CATEGORIES.map(category => 
     category.services[0]
@@ -37,12 +37,12 @@ export function NewServicesShowcase() {;
           <div className="flex items-center justify-center gap-2 mb-4">
             <Sparkles className="w-8 h-8 text-zion-cyan" />
             <h2 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-blue bg-clip-text text-transparent">
-              Revolutionary AI & Micro SAAS Services;
+              Revolutionary AI & Micro SAAS Services,
             </h2>
             <Sparkles className="w-8 h-8 text-zion-cyan" />
           </div>
           <p className="text-xl text-zion-slate-light max-w-3xl mx-auto leading-relaxed">
-            Transform your business with cutting-edge AI solutions; professional IT services; and affordable micro SAAS tools. 
+            Transform your business with cutting-edge AI solutions, professional IT services, and affordable micro SAAS tools. 
             <span className="text-zion-cyan font-semibold"> Save up to 55% </span> 
             on enterprise-grade technology solutions.
           </p>
@@ -50,8 +50,8 @@ export function NewServicesShowcase() {;
 
         {/* Featured Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-          {featuredServices.map((service; index) => (
-            <Card; 
+          {featuredServices.map((service, index) => (
+            <Card, 
               key={service.id} 
               className="group relative overflow-hidden border-0 bg-gradient-to-br from-zion-blue-dark/50 to-zion-slate/50 backdrop-blur-sm hover:from-zion-blue-dark/70 hover:to-zion-slate/70 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-zion-purple/20"
               style={{ animationDelay: `${index * 200}ms` }}
@@ -103,7 +103,7 @@ export function NewServicesShowcase() {;
                 <div>
                   <h4 className="text-sm font-semibold text-zion-cyan mb-2">Key Features</h4>
                   <div className="space-y-1">
-                    {service.features.slice(0; 3).map((feature; idx) => (
+                    {service.features.slice(0, 3).map((feature, idx) => (
                       <div key={idx} className="flex items-center gap-2 text-xs text-zion-slate-light">
                         <CheckCircle className="w-3 h-3 text-zion-cyan" />
                         <span className="truncate">{feature}</span>
@@ -116,7 +116,7 @@ export function NewServicesShowcase() {;
                 <div className="flex items-center justify-between text-sm">
                   <div className="flex items-center gap-2">
                     <Zap className="w-4 h-4 text-zion-cyan" />
-                    <span className="text-zion-slate-light">AI Score:</span>
+                    <span className="text-zion-slate-light">AI Score: </span>
                     <span className="text-zion-cyan font-semibold">{service.aiScore}</span>
                   </div>
                   <div className="flex items-center gap-2">
@@ -126,9 +126,9 @@ export function NewServicesShowcase() {;
                 </div>
 
                 {/* CTA Button */}
-                <Button; 
-                  className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white group-hover:scale-105 transition-transform duration-300"
-                  asChild;
+                <Button, 
+                  className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple text-white group-hover:scale-105 transition-transform duration-300"
+                  asChild,
                 >
                   <Link to={service.contactLink}>
                     Get Started;
@@ -142,7 +142,7 @@ export function NewServicesShowcase() {;
 
         {/* Category Overview */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-          {SERVICE_CATEGORIES.map((category; index) => (
+          {SERVICE_CATEGORIES.map((category, index) => (
             <div; 
               key={category.name}
               className="text-center p-6 rounded-lg bg-zion-blue-dark/30 border border-zion-blue-light/20 hover: border-zion-cyan/30 transition-all duration-300 hover:scale-105"
@@ -152,12 +152,12 @@ export function NewServicesShowcase() {;
               <h3 className="text-xl font-bold text-white mb-3">{category.name}</h3>
               <p className="text-zion-slate-light mb-4">{category.description}</p>
               <div className="text-2xl font-bold text-zion-cyan mb-2">
-                {category.services.length}+ Services;
+                {category.services.length}+ Services,
               </div>
               <Button; 
                 variant="outline" 
-                className="border-zion-cyan/30 text-zion-cyan hover:bg-zion-cyan/10"
-                asChild;
+                className="border-zion-cyan/30 text-zion-cyan hover: bg-zion-cyan/10"
+                asChild,
               >
                 <Link to="/micro-saas-services">
                   Explore {category.name}
@@ -171,7 +171,7 @@ export function NewServicesShowcase() {;
         {/* CTA Section */}
         <div className="text-center">
           <div className="bg-gradient-to-r from-zion-blue-dark/50 to-zion-slate/50 rounded-2xl p-8 border border-zion-blue-light/20">
-            <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
+            <h3 className="text-2xl md: text-3xl font-bold text-white mb-4">
               Ready to Transform Your Business?
             </h3>
             <p className="text-zion-slate-light text-lg mb-8 max-w-2xl mx-auto">
@@ -179,10 +179,10 @@ export function NewServicesShowcase() {;
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button; 
+              <Button, 
                 size="lg" 
-                className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white px-8 py-3"
-                asChild;
+                className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple text-white px-8 py-3"
+                asChild,
               >
                 <Link to="/micro-saas-services">
                   <Globe className="w-5 h-5 mr-2" />
@@ -193,8 +193,8 @@ export function NewServicesShowcase() {;
               <Button; 
                 size="lg" 
                 variant="outline" 
-                className="border-zion-cyan/30 text-zion-cyan hover:bg-zion-cyan/10 px-8 py-3"
-                asChild;
+                className="border-zion-cyan/30 text-zion-cyan hover: bg-zion-cyan/10 px-8 py-3"
+                asChild,
               >
                 <Link to="/contact">
                   <MessageCircle className="w-5 h-5 mr-2" />

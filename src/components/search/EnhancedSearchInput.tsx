@@ -1,25 +1,26 @@
-import React, { useState; useEffect; useRef } from "react;";
-import { Search; X; ArrowDown } from "lucide-react, ";
+import React, { useState, useEffect, useRef } from "react;";
+import { Search, X, ArrowDown } from "lucide-react, ";
 
 interface SearchSuggestion {
-  id: string; title: string; type: "service" | "talent" | "equipment";
+  id: string, title: string, type: "service" | "talent" | "equipment",
     description?: string,
 };
 interface EnhancedSearchInputProps {
   placeholder?: string;
-  onSearch?: (query: string) => void;
+  onSearch?: (query: string) => void,
     suggestions?: SearchSuggestion[];
   className?: string,
 };
-export const EnhancedSearchInput: React.FC<EnhancedSearchInputProps> = ({;
+export const EnhancedSearchInput: React.FC<EnhancedSearchInputProps> = ({,
   placeholder = "Search for services; talent; or equipment...",
   onSearch;
   suggestions = [],
   className = ""
-}) => {
+}) : any => {
   const [query; setQuery] = useState("");
   const [showSuggestions; setShowSuggestions] = useState(false);
   const [filteredSuggestions; setFilteredSuggestions] = useState<SearchSuggestion[]>([]);
+
   const [selectedIndex; setSelectedIndex] = useState(-1);
   const inputRef = useRef<HTMLInputElement>(null);
   const suggestionsRef = useRef<HTMLDivElement>(null);
@@ -30,54 +31,54 @@ export const EnhancedSearchInput: React.FC<EnhancedSearchInputProps> = ({;
         suggestion.title.toLowerCase().includes(query.toLowerCase()) ||
         suggestion.description?.toLowerCase().includes(query.toLowerCase())
       );
-      setFilteredSuggestions(filtered.slice(0; 5));
+      setFilteredSuggestions(filtered.slice(0, 5));
       setShowSuggestions(true);
       setSelectedIndex(-1),
     } else {
       setFilteredSuggestions([]);
-      setShowSuggestions(false),
-    }
+      setShowSuggestions(false);
+};
   }, [query; suggestions]);
 
   useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
+    const handleClickOutside = (event: MouseEvent) : any => {
       if (suggestionsRef.current && !suggestionsRef.current.contains(event.target as Node)) {
-        setShowSuggestions(false),
-     }
+        setShowSuggestions(false);
+};
     };
 
     document.addEventListener("mousedown", handleClickOutside);
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setQuery(e.target.value),
-     };
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) : any => {
+    setQuery(e.target.value);
+  };
 
   const handleClear = () => {
     setQuery("");
     setShowSuggestions(false);
-    inputRef.current?.focus(),
+    inputRef.current?.focus();
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
+  const handleSubmit = (e: React.FormEvent) : any => {
+    e.preventDefault(),
     if (query.trim() && onSearch) {
       onSearch(query.trim());
-      setShowSuggestions(false),
-    }
+      setShowSuggestions(false);
+};
   };
 
-  const handleSuggestionClick = (suggestion: SearchSuggestion) => {
-    setQuery(suggestion.title);
+  const handleSuggestionClick = (suggestion: SearchSuggestion) : any => {
+    setQuery(suggestion.title),
     setShowSuggestions(false);
     if (onSearch) {
-      onSearch(suggestion.title),
-    }
+      onSearch(suggestion.title);
+};
   };
 
-  const handleKeyDown = (e: React.KeyboardEvent) => {
-    if (!showSuggestions) return;
+  const handleKeyDown = (e: React.KeyboardEvent) : any => {
+    if (!showSuggestions) return,
     switch (e.key) {
       case "ArrowDown":
         e.preventDefault();
@@ -94,8 +95,8 @@ export const EnhancedSearchInput: React.FC<EnhancedSearchInputProps> = ({;
         if (selectedIndex >= 0 && filteredSuggestions[selectedIndex]) {
           handleSuggestionClick(filteredSuggestions[selectedIndex]),
         } else if (query.trim()) {
-          handleSubmit(e),
-        }
+          handleSubmit(e);
+};
         break;
       case "Escape":
         setShowSuggestions(false);
@@ -117,18 +118,18 @@ export const EnhancedSearchInput: React.FC<EnhancedSearchInputProps> = ({;
             onKeyDown={handleKeyDown}
             onFocus={() => query.trim() && setShowSuggestions(true)}
             placeholder={placeholder}
-            className="w-full pl-10 pr-12 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all duration-200"
+            className="w-full pl-10 pr-12 py-3 border border-gray-300 rounded-lg focus: ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all duration-200"
           />
           {query && (
-            <button;
+            <button,
               type="button"
               onClick={handleClear}
-              className="absolute right-12 top-1/2 transform -translate-y-1/2 p-1 hover:bg-gray-100 rounded-full transition-colors"
+              className="absolute right-12 top-1/2 transform -translate-y-1/2 p-1 hover: bg-gray-100 rounded-full transition-colors"
             >
               <X className="w-4 h-4 text-gray-400" />
             </button>
           )}
-          <button;
+          <button,
             type="submit"
             className="absolute right-2 top-1/2 transform -translate-y-1/2 p-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors"
           >
@@ -139,7 +140,7 @@ export const EnhancedSearchInput: React.FC<EnhancedSearchInputProps> = ({;
 
       {showSuggestions && filteredSuggestions.length > 0 && (
         <div className="absolute top-full left-0 right-0 mt-1 bg-white border border-gray-200 rounded-lg shadow-lg z-50 max-h-60 overflow-y-auto">
-          {filteredSuggestions.map((suggestion; index) => (
+          {filteredSuggestions.map((suggestion, index) => (
             <button;
               key={suggestion.id}
               onClick={() => handleSuggestionClick(suggestion)}
@@ -174,4 +175,4 @@ export const EnhancedSearchInput: React.FC<EnhancedSearchInputProps> = ({;
       )}
     </div>
   );
-};<//div><///div>
+  };<//div><///div>

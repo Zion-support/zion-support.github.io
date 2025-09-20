@@ -14,17 +14,17 @@ import {
   ArrowRight
 } from 'lucide-react'
 
-export default function Login() {
+export default function Login() : any {
   const [formData, setFormData] = useState({
     email: '',
     password: ''
-  })
+  });
 
   const [showPassword, setShowPassword] = useState(false)
   const [isSubmitting, setIsSubmitting] = useState(false)
-  const [errors, setErrors] = useState<Record<string, string>>({})
+  const [errors, setErrors] = useState<Record<string, string>>({});
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) : any => {
     const { name, value } = e.target
     setFormData(prev => ({ ...prev, [name]: value }))
     // Clear error when user starts typing
@@ -45,7 +45,7 @@ export default function Login() {
     return Object.keys(newErrors).length === 0
   }
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) : any => {
     e.preventDefault()
     
     if (!validateForm()) return
@@ -358,4 +358,4 @@ export default function Login() {
       </main>
     </>
   )
-}
+}'

@@ -15,19 +15,20 @@ export class LinkHealthChecker {
                 method: 'HEAD',
                 signal: AbortSignal.timeout(this.config.timeout),
                 headers: {
-                    'User-Agent': this.config.userAgent;
+                    'User-Agent': this.config.userAgent,
                 },
                 redirect: this.config.followRedirects ? 'follow' : 'manual',
             });
-            const responseTime = Date.now() - startTime;
+
+  const responseTime = Date.now() - startTime;
             if (response.ok || response.status < 400) {
                 return {
                     url,
                     status: 'healthy',
                     statusCode: response.status,
                     responseTime,
-                    lastChecked: new Date(),
-                };
+                    lastChecked: new Date();
+  };
             }
             else {
                 return {
@@ -36,8 +37,8 @@ export class LinkHealthChecker {
                     statusCode: response.status,
                     responseTime,
                     error: `HTTP ${response.status}: ${response.statusText}`,
-                    lastChecked: new Date(),
-                };
+                    lastChecked: new Date();
+  };
             }
         }
         catch (error) {
@@ -45,8 +46,8 @@ export class LinkHealthChecker {
                 url,
                 status: 'error',
                 error: error instanceof Error ? error.message : 'Unknown error',
-                lastChecked: new Date(),
-            };
+                lastChecked: new Date();
+  };
         }
     }
     async checkMultipleLinks(urls) {
@@ -69,7 +70,7 @@ export class LinkHealthChecker {
     }
     async checkLinksWithRetry(url) {
         let lastError;
-        for (let attempt = 1; attempt <= this.config.retries; attempt++) {
+        for (let attempt = 1, attempt <= this.config.retries, attempt++) {
             try {
                 const result = await this.checkLink(url);
                 if (result.status === 'healthy') {
@@ -88,8 +89,8 @@ export class LinkHealthChecker {
             url,
             status: 'error',
             error: `Failed after ${this.config.retries} attempts. Last error: ${lastError}`,
-            lastChecked: new Date(),
-        };
+            lastChecked: new Date();
+  };
     }
     getHealthSummary(results) {
         const total = results.length;
@@ -114,23 +115,23 @@ export class LinkHealthChecker {
         const summary = this.getHealthSummary(results);
         const timestamp = new Date().toISOString();
         let report = `Link Health Report - ${timestamp}\n`;
-        report += `Summary:\n`;
-        report += `- Total Links: ${summary.total}\n`;
-        report += `- Healthy: ${summary.healthy}\n`;
-        report += `- Unhealthy: ${summary.unhealthy}\n`;
-        report += `- Errors: ${summary.errors}\n`;
-        report += `- Average Response Time: ${summary.averageResponseTime.toFixed(2)}ms\n\n`;
-        report += `Detailed Results:\n`;
+        report += `Summary: \n`,
+        report += `- Total Links: ${summary.total}\n`,
+        report += `- Healthy: ${summary.healthy}\n`,
+        report += `- Unhealthy: ${summary.unhealthy}\n`,
+        report += `- Errors: ${summary.errors}\n`,
+        report += `- Average Response Time: ${summary.averageResponseTime.toFixed(2)}ms\n\n`,
+        report += `Detailed Results: \n`,
         results.forEach((result, index) => {
             report += `${index + 1}. ${result.url}\n`;
-            report += `   Status: ${result.status}\n`;
+            report += `   Status: ${result.status}\n`,
             if (result.statusCode)
-                report += `   Status Code: ${result.statusCode}\n`;
+                report += `   Status Code: ${result.statusCode}\n`,
             if (result.responseTime)
-                report += `   Response Time: ${result.responseTime}ms\n`;
+                report += `   Response Time: ${result.responseTime}ms\n`,
             if (result.error)
-                report += `   Error: ${result.error}\n`;
-            report += `   Last Checked: ${result.lastChecked.toISOString()}\n\n`;
+                report += `   Error: ${result.error}\n`,
+            report += `   Last Checked: ${result.lastChecked.toISOString()}\n\n`,
         });
         return report;
     }

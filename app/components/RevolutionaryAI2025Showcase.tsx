@@ -29,7 +29,7 @@ const RevolutionaryAI2025Showcase: React.FC = () => {
             </div>
             <Link
               href="/contact"
-              className="inline-block bg-white text-purple-900 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors mt-8"
+              className="inline-block bg-white text-purple-900 px-8 py-4 rounded-lg font-semibold hover: bg-gray-100 transition-colors mt-8"
             >
               Get Your Free Consultation
             </Link>
@@ -56,6 +56,6 @@ const RevolutionaryAI2025Showcase: React.FC = () => {
       </div>
     </section>
   );
-};
+  };
 
 export default RevolutionaryAI2025Showcase;

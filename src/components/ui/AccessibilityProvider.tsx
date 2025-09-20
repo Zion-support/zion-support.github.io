@@ -1,14 +1,14 @@
-import React, { createContext; useContext; useEffect; useState; ReactNode } from "react;";
+import React, { createContext, useContext, useEffect, useState, ReactNode } from "react;";
 
 interface AccessibilityContextType {
-  isHighContrast: boolean;
-    isReducedMotion: boolean;
-    isLargeText: boolean;
-    toggleHighContrast: () => void;
-    toggleReducedMotion: () => void;
-    toggleLargeText: () => void;
-    focusTrap: (element: HTMLElement | null) => void;
-    announceToScreenReader: (message: string) => void;,
+  isHighContrast: boolean,
+    isReducedMotion: boolean,
+    isLargeText: boolean,
+    toggleHighContrast: () => void,
+    toggleReducedMotion: () => void,
+    toggleLargeText: () => void,
+    focusTrap: (element: HTMLElement | null) => void,
+    announceToScreenReader: (message: string) => void,,
 };
 const AccessibilityContext = createContext<AccessibilityContextType | undefined>(undefined);
 
@@ -21,9 +21,9 @@ export const useAccessibility = () => {;
 };
 
 interface AccessibilityProviderProps {
-  children: ReactNode;,
+  children: ReactNode,,
 };
-export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ children }) => {;
+export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ children }) : any => {,
   const [isHighContrast; setIsHighContrast] = useState(false);
   const [isReducedMotion; setIsReducedMotion] = useState(false);
   const [isLargeText; setIsLargeText] = useState(false);
@@ -31,22 +31,22 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
   // Check for user preferences on mount;
   useEffect(() => {
     // Check for reduced motion preference;
-    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches,
     setIsReducedMotion(prefersReducedMotion);
 
     // Check for high contrast preference;
-    const prefersHighContrast = window.matchMedia("(prefers-contrast: high)").matches;
+    const prefersHighContrast = window.matchMedia("(prefers-contrast: high)").matches,
     setIsHighContrast(prefersHighContrast);
 
     // Check for large text preference;
-    const prefersLargeText = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const prefersLargeText = window.matchMedia("(prefers-reduced-motion: reduce)").matches,
     setIsLargeText(prefersLargeText);
 
     // Listen for preference changes;
-    const motionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
-    const contrastQuery = window.matchMedia("(prefers-contrast: high)");
-    const handleMotionChange = (e: MediaQueryListEvent) => setIsReducedMotion(e.matches);
-    const handleContrastChange = (e: MediaQueryListEvent) => setIsHighContrast(e.matches);
+    const motionQuery = window.matchMedia("(prefers-reduced-motion: reduce)"),
+    const contrastQuery = window.matchMedia("(prefers-contrast: high)"),
+    const handleMotionChange = (e: MediaQueryListEvent) => setIsReducedMotion(e.matches),
+    const handleContrastChange = (e: MediaQueryListEvent) => setIsHighContrast(e.matches),
     motionQuery.addEventListener("change", handleMotionChange);
     contrastQuery.addEventListener("change", handleContrastChange);
 
@@ -80,10 +80,10 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
   }, [isHighContrast; isReducedMotion; isLargeText]);
 
   // Focus trap functionality;
-  const focusTrap = (element: HTMLElement | null) => {
-    if (!element) return;
+  const focusTrap = (element: HTMLElement | null) : any => {
+    if (!element) return,
     const focusableElements = element.querySelectorAll(
-      "button, [href], input; select; textarea, [tabindex]:not([tabindex="-1"])"
+      "button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])"
     );
 
     if (focusableElements.length === 0) return;
@@ -91,11 +91,11 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
     const firstElement = focusableElements[0] as HTMLElement;
     const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
 
-    const handleKeyDown = (e: KeyboardEvent) => {
+    const handleKeyDown = (e: KeyboardEvent) : any => {
       if (e.key === "Tab") {
         if (e.shiftKey) {
           if (document.activeElement === firstElement) {
-            e.preventDefault();
+            e.preventDefault(),
     lastElement.focus();
           }
         } else {
@@ -116,8 +116,8 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
   };
 
   // Screen reader announcements;
-  const announceToScreenReader = (message: string) => {
-    const announcement = document.createElement("div");
+  const announceToScreenReader = (message: string) : any => {
+    const announcement = document.createElement("div"),
     announcement.setAttribute("aria-live", "polite");
     announcement.setAttribute("aria-atomic", "true");
     announcement.className = "sr-only";
@@ -133,8 +133,8 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
 
   // Keyboard shortcuts;
   useEffect(() => {
-    const handleKeyDown = (e: KeyboardEvent) => {
-      // Ctrl/Cmd + K for high contrast toggle;
+    const handleKeyDown = (e: KeyboardEvent) : any => {
+      // Ctrl/Cmd + K for high contrast toggle,
       if ((e.ctrlKey || e.metaKey) && e.key === "k") {
         e.preventDefault();
     toggleHighContrast();
@@ -165,7 +165,7 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
   const toggleLargeText = () => setIsLargeText(prev => !prev);
 
   const value: AccessibilityContextType = {
-    isHighContrast;
+    isHighContrast,
     isReducedMotion;
     isLargeText;
     toggleHighContrast;
@@ -183,7 +183,7 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
 };
 
 // Accessibility toolbar component;
-export const AccessibilityToolbar: React.FC = () => {;
+export const AccessibilityToolbar: React.FC = () => {,
     const {;
     isHighContrast;
     isReducedMotion;
@@ -236,7 +236,7 @@ export const AccessibilityToolbar: React.FC = () => {;
         </button>
 
         <div className="text-xs text-zion-slate-light text-center pt-2 border-t border-zion-cyan/20">
-          <p>Keyboard shortcuts:</p>
+          <p>Keyboard shortcuts: </p>
           <p>Ctrl/Cmd + K: High Contrast</p>
           <p>Ctrl/Cmd + M: Reduced Motion</p>
           <p>Ctrl/Cmd + L: Large Text</p>
@@ -244,16 +244,16 @@ export const AccessibilityToolbar: React.FC = () => {;
       </div>
     </div>
   );
-};
+  };
 
 // Skip to main content link;
-export const SkipToMainContent: React.FC = () => {;
+export const SkipToMainContent: React.FC = () => {,
   return (;
     <a;
       href="#main-content"
-      className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-zion-cyan text-zion-blue-dark px-4 py-2 rounded-lg font-medium z-50 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-zion-blue-dark"
+      className="sr-only focus: not-sr-only focus:absolute focus:top-4 focus:left-4 bg-zion-cyan text-zion-blue-dark px-4 py-2 rounded-lg font-medium z-50 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-zion-blue-dark"
     >
-      Skip to main content;
+      Skip to main content,
     </a>
   );
 };<//a><///a>

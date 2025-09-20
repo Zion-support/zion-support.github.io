@@ -1,6 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
-const WhatsNew: React.FC = () => {;
+const WhatsNew: React.FC = () => {,
   return (
     <section className="py-12 bg-gradient-to-r from-blue-50 to-purple-50">
       <div>
@@ -13,7 +13,7 @@ const WhatsNew: React.FC = () => {;
             <div className="text-sm font-semibold text-blue-600 mb-2">New Feature</div>
             <h3 className="text-xl font-bold text-gray-900 mb-2">AI 2026 Content Hub</h3>
             <p className="text-gray-600 mb-4">Discover the latest AI insights and breakthroughs for 2026.</p>
-            <Link href="/blog" className="text-blue-600 font-semibold hover:text-blue-800">
+            <Link href="/blog" className="text-blue-600 font-semibold hover: text-blue-800">
               Explore →
             </Link>
           </div>
@@ -36,4 +36,4 @@ const WhatsNew: React.FC = () => {;
         </div>
       </div>
     </section>)}
-export default WhatsNew;
+export default WhatsNew,'

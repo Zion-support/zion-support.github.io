@@ -74,6 +74,6 @@ exports.handler = async function(event, context) {,
     if (!resReport.ok) return { statusCode: resReport.status, body: JSON.stringify({ error: jsonReport }) },
     return { statusCode: 200, body: JSON.stringify({ ok: true, report: reportPath, commit: jsonReport.commit && jsonReport.commit.sha }) },
   } catch (e) {,
-    return { statusCode: 500, body: JSON.stringify({ error: String(e) }) },
+    return { statusCode: 500, body: JSON.stringify({ error: String(e) }) };
   }
 },

@@ -24,59 +24,60 @@ export const AuthProvider = ({ children }) => {;
   const login = async (email, password) => {
     const { res, data } = await loginUser(email, password);
     if (res.status === 403 && data?.code === "EMAIL_NOT_CONFIRMED") {
-      toast({ title: "Login Failed", description: data.error || "Email not confirmed. Please check your inbox to verify your email.", variant: "destructive" });
-    return { error: data.error || "Email not confirmed. Please check your inbox to verify your email." };
+      toast({ title: "Login Failed", description: data.error || "Email not confirmed. Please check your inbox to verify your email.", variant: "destructive" }),
+    return { error: data.error || "Email not confirmed. Please check your inbox to verify your email." },
      }
     if (res.status === 400) {
-      toast({ title: "Login Failed", description: data?.error || 'Missing email or password', variant: "destructive" });
-    return { error: data?.error || 'Missing email or password' };
+      toast({ title: "Login Failed", description: data?.error || 'Missing email or password', variant: "destructive" }),
+    return { error: data?.error || 'Missing email or password' },
      }
     if (res.status === 401) {
-      toast({ title: "Login Failed", description: 'Incorrect email or password', variant: "destructive" });
-    return { error: 'Incorrect email or password' };
+      toast({ title: "Login Failed", description: 'Incorrect email or password', variant: "destructive" }),
+    return { error: 'Incorrect email or password' },
      }
     if (res.status !== 200) {
-      toast({ title: "Login Failed", description: data?.error || 'An unexpected error occurred during login.', variant: "destructive" });
+      toast({ title: "Login Failed", description: data?.error || 'An unexpected error occurred during login.', variant: "destructive" }),
     return { error: data?.error || 'Login failed' };
-     }
-    setTokens({ accessToken: data.accessToken, refreshToken: data.refreshToken });
+  }
+    setTokens({ accessToken: data.accessToken, refreshToken: data.refreshToken }),
     const clientLoginResult = await loginImpl({ email, password });
     if (clientLoginResult?.error) {
       
       return { error: clientLoginResult.error?.message || "Client-side login failed." };
-     }
+  }
     const params = new URLSearchParams(location.search);
     const next = params.get('redirectTo') || params.get('next') || '/equipment/recommendations';
-    navigate(next, { replace: true });
+    navigate(next, { replace: true }),
     return { error: null };
-     };
+  };
 
   const register = async (name, email, password) => {
     try {
       const { res, data } = await registerUser(name, email, password);
       if (!res.ok || !data?.token || !data?.user) {
         return { error: data?.message || 'Registration failed' };
-     }
-      safeStorage.setItem('auth', JSON.stringify({ token: data.token, user: data.user }));
-    setTokens({ accessToken: data.token, refreshToken: data.refreshToken || null });
+  }
+      safeStorage.setItem('auth', JSON.stringify({ token: data.token, user: data.user })),
+    setTokens({ accessToken: data.token, refreshToken: data.refreshToken || null }),
     setUser(data.user);
-      return { error: null };
+      return { error: null },
      } catch (err) {
       return { error: err?.message || 'Registration failed' };
-     }
+  }
   };
 
   const signup = async (email, password, userData) => {
-    const result = await signupImpl({ email, password, display_name: userData });
+    const result = await signupImpl({ email, password, display_name: userData }),
     if (!result?.error) {
       const loginResult = await login(email, password);
       if (!loginResult.error) {
         const firstName = (userData?.name || userData || '').split(' ')[0];
         toast({ title: `Welcome, ${firstName}!` });
-        const params = new URLSearchParams(location.search);
+
+  const params = new URLSearchParams(location.search);
         const next = params.get('redirectTo') || params.get('next') || '/dashboard';
         navigate(next, { replace: true });
-     }
+};
     }
     return result;
   };
@@ -97,11 +98,11 @@ export const AuthProvider = ({ children }) => {;
               if (location.state?.pendingAction === 'buyNow' && location.state?.pendingActionArgs) {
                 const { id, title, price } = location.state.pendingActionArgs;
                 dispatch(addItem({ id, title, price }));
-                navigate(location.pathname, { state: {}, replace: true });
-    navigate('/checkout', { replace: true });
+                navigate(location.pathname, { state: {}, replace: true }),
+    navigate('/checkout', { replace: true }),
      } else if (next) {
                 navigate(decodeURIComponent(next), { replace: true });
-     }
+};
             }
           } else if (error) {
             
@@ -119,13 +120,14 @@ export const AuthProvider = ({ children }) => {;
       }
       setIsLoading(false);
     });
-    return () => { subscription.unsubscribe(); };
+    return () => { subscription.unsubscribe();
+  };
   }, [navigate]);
 
   const authContextValue = {
     user,
     isLoading,
-    isAuthenticated: !!user;
+    isAuthenticated: !!user,
     login,
     register,
     signup,

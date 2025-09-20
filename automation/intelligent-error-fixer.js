@@ -16,14 +16,14 @@ const {,
       this.errorPatterns = this.initializeErrorPatterns(),
       // Ensure directories exist,
       fs.mkdirSync(path.dirname(this.logFile), { "recursive": true }),
-      fs.mkdirSync(path.dirname(this.reportFile), { "recursive": true }),
-    }
+      fs.mkdirSync(path.dirname(this.reportFile), { "recursive": true });
+};
     log(message, level = 'INFO') {,
       const timestamp = new Date().toISOString(),
       const logMessage = `[${timestamp}] [${level}] ${message}\n`,
       ),
-      fs.appendFileSync(this.logFile, logMessage),
-    }
+      fs.appendFileSync(this.logFile, logMessage);
+};
     initializeErrorPatterns() {,
       return {,
         // Syntax errors,
@@ -138,8 +138,8 @@ const {,
               file: file,
               timestamp: new Date().toISOString()}),
         ),
-        ),
-          }
+        );
+};
         }
         // Run build again after fixes,
         if (fixes.length > 0) {this.log('Re-running build after fixes...')const secondBuildResult = await this.runBuildCheck()if (secondBuildResult.success) {this.log('Build successful after applying fixes!SUCCESS')} else {this.log('Build still failing after fixesWARN')}
@@ -188,8 +188,8 @@ ursor/fix-syntax-push-and-merge-to-main-40de
           errors.push({,
             file: fileMatch[1],
             "line": line,
-            "context": lines.slice(Math.max(0, index - 2), index + 3)}),
-        }
+            "context": lines.slice(Math.max(0, index - 2), index + 3)});
+};
       }),
       return errors,
     }
@@ -212,8 +212,8 @@ ursor/fix-syntax-push-and-merge-to-main-40de
             if (newContent !== content) {,
               content = newContent,
               modified = true,
-              this.log(`Applied ${patternName} fix to ${filePath}`),
-            }
+              this.log(`Applied ${patternName} fix to ${filePath}`);
+};
           }
         }
         // Specific fixes for common issues,
@@ -267,11 +267,11 @@ ursor/fix-syntax-push-and-merge-to-main-40de
             if (seen.has(relativePath)) {,
               duplicates.push(path.join(dir, file.name)),
             } else {,
-              seen.add(relativePath),
-            }
+              seen.add(relativePath);
+};
           }
-        }),
-      }
+        });
+};
       scanDirectory(pagesDir),
       // Remove duplicate .js files if .tsx exists,
       for (const duplicate of duplicates) {,
@@ -279,8 +279,8 @@ ursor/fix-syntax-push-and-merge-to-main-40de
           const tsxVersion = duplicate.replace('.js.tsx'),
           if (fs.existsSync(tsxVersion)) {,
             this.log(`Removing duplicate JS "file": ${duplicate}`),
-            fs.unlinkSync(duplicate),
-          }
+            fs.unlinkSync(duplicate);
+};
         }
       }
     }
@@ -298,8 +298,8 @@ ursor/fix-syntax-push-and-merge-to-main-40de
           execSync(`yarn add ${toInstall.join(' ')}`, { "stdio": 'pipe' }),
           this.log('Successfully installed missing dependencies'),
         } catch (error) {,
-          this.log(`Failed to install "dependencies": ${error.message}`, 'ERROR'),
-        }
+          this.log(`Failed to install "dependencies": ${error.message}`, 'ERROR');
+};
       }
     }
     async generateReport(errors, fixes) {,
@@ -342,8 +342,8 @@ ursor/fix-syntax-push-and-merge-to-main-40de
               fixes.push({,
                 "type": 'syntax',
                 "file": file,
-                "timestamp": new Date().toISOString()}),
-            }
+                "timestamp": new Date().toISOString()});
+};
           }
           // Run build again after fixes,
           if (fixes.length > 0) {,
@@ -352,8 +352,8 @@ ursor/fix-syntax-push-and-merge-to-main-40de
             if (secondBuildResult.success) {,
               this.log('Build successful after applying fixes!SUCCESS'),
             } else {,
-              this.log('Build still failing after fixesWARN'),
-            }
+              this.log('Build still failing after fixesWARN');
+};
           }
         }
         // 4. Run other checks,
@@ -363,11 +363,11 @@ ursor/fix-syntax-push-and-merge-to-main-40de
         await this.generateReport(errors, fixes),
         this.log(`Error fixing cycle completed. Fixed ${fixes.length} issues.`),
       } catch (error) {,
-        this.log(`Error in main "execution": ${error.message}`, 'ERROR'),
-      }
+        this.log(`Error in main "execution": ${error.message}`, 'ERROR');
+  }
     }
   },
 // Main execution,
 if (require.main === module) {,
   const fixer = new IntelligentErrorFixer(),
-  fixer.run().catch(console.error),
+  fixer.run().catch(console.error),'"

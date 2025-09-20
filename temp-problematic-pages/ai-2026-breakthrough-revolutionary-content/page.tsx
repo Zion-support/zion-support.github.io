@@ -5,7 +5,7 @@ export const metadata: Metadata = {,
   title: 'AI 2026 Breakthrough Revolutionary Content - Zion Tech Group',
   description: 'Experience the future of AI with our revolutionary 2026 breakthrough content. Quantum-neural fusionconsciousness integrationand transcendent intelligence delivering infinite possibilities.',
   keywords: 'AI 2026 breakthroughrevolutionary contentquantum neural fusionconsciousness integrationtranscendent intelligencefuture AI'},
-export default function AI2026BreakthroughRevolutionaryContent() {,
+export default function AI2026BreakthroughRevolutionaryContent() : any {,
   return (,
     <div className="min-h-screen bg-gradient-to-br from-cyan-900 via-blue-900 to-purple-900 text-white">,
       {/* Hero Section */}

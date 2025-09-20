@@ -1,5 +1,5 @@
 import React from 'react'
-const QuantumAI2025PromotionBanner: React.FC = () => {;
+const QuantumAI2025PromotionBanner: React.FC = () => {,
   return (
     <div>
       <h3 className="text-xl font-bold mb-4">QuantumAI2025PromotionBanner</h3>

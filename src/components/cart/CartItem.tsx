@@ -3,11 +3,11 @@ import { CartItem as CartItemType } from "@/types/cart, ";
 import { Button } from "@/components/ui/button, ";
 
 interface CartItemProps {
-  item: CartItemType;
-    onRemove?: (id: string) => void;
-    onUpdateQuantity?: (id: string; qty: number) => void,
+  item: CartItemType,
+    onRemove?: (id: string) => void,
+    onUpdateQuantity?: (id: string, qty: number) => void,
 };
-export function CartItem({ item; onRemove; onUpdateQuantity }: CartItemProps) {
+export function CartItem({ item, onRemove, onUpdateQuantity }: CartItemProps) {
   return (
     <li className="flex items-center gap-4">
       <img;
@@ -24,7 +24,7 @@ export function CartItem({ item; onRemove; onUpdateQuantity }: CartItemProps) {
         min={1}
         value={item.quantity}
         onChange={e =>
-          onUpdateQuantity?.(item.id; parseInt(e.target.value || "1", 10))
+          onUpdateQuantity?.(item.id, parseInt(e.target.value || "1", 10))
         }
         className="w-16 bg-transparent border border-input rounded p-1 text-center"
       />

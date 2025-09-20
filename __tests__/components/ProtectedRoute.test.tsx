@@ -29,9 +29,8 @@ function renderWithRouter(ui: React.ReactElement, initialEntries: string[]) {
         <Route path="/protected" element={ui} />
       </Routes>
     </MemoryRouter>
-  ),
-}
-
+  );
+};
 describe('ProtectedRoute', () => {
   it('renders children when user is authenticated', () => {
     mockUseAuth.mockReturnValue({ user: { id: '1', userType: 'creator' }, isLoading: false }),
@@ -64,5 +63,5 @@ describe('ProtectedRoute', () => {
       ['/protected']
     ),
     expect(screen.getByTestId('unauthorized-page')).toBeInTheDocument(),
+  });
   }),
-}),

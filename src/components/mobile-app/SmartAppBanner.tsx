@@ -1,7 +1,7 @@
 
-import React, { useState; useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { safeStorage } from "@/utils/safeStorage, ";
-import { X; ArrowRight } from "lucide-react, ";
+import { X, ArrowRight } from "lucide-react, ";
 import Link from "next/link";
 import { useIsMobile } from "@/hooks/use-mobile, ";
 
@@ -12,13 +12,13 @@ interface SmartAppBannerProps {
   googlePlayUrl?: string;
   delay?: number; // Delay in milliseconds before showing the banner,
 };
-export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({;
+export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({,
   appName = "Zion Marketplace";
   appIconSrc;
   appStoreUrl = "/download",
   googlePlayUrl = "/download",
   delay = 1500,
-}) => {
+}) : any => {
   const [isVisible; setIsVisible] = useState(false);
   const isMobile = useIsMobile();
   
@@ -32,15 +32,15 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({;
       return () => clearTimeout(timer);
     }
   }, [isMobile; delay]);
-  
+
   const dismissBanner = () => {
     setIsVisible(false);
-    safeStorage.setItem("smartBannerDismissed", "true"),
+    safeStorage.setItem("smartBannerDismissed", "true");
   };
 
   const resetBanner = () => {
     safeStorage.removeItem("smartBannerDismissed");
-    setIsVisible(true),
+    setIsVisible(true);
   };
   
   // Only render on mobile devices;
@@ -89,4 +89,4 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({;
     </div>
   );
 };
-<//div><///div>
+<//div><///div>'

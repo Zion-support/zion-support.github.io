@@ -62,8 +62,8 @@ const NeuralInterfaceRevolutionBanner2025: React.FC = () => {,
     const savedState = localStorage.getItem('neural-interface-banner-dismissed'),
     if (savedState === 'true') {,
       setIsDismissed(true),
-      setIsVisible(false),
-    }
+      setIsVisible(false);
+};
   }[]),
   useEffect(() => {,
     const interval = setInterval(() => {,
@@ -81,7 +81,7 @@ const NeuralInterfaceRevolutionBanner2025: React.FC = () => {,
   const handleUndismiss = () => {,
     setIsVisible(true),
     setIsDismissed(false),
-    localStorage.removeItem('neural-interface-banner-dismissed'),
+    localStorage.removeItem('neural-interface-banner-dismissed');
   },
   if (isDismissed) {,
     return (,
@@ -316,4 +316,4 @@ const NeuralInterfaceRevolutionBanner2025: React.FC = () => {,
     </div>,
   ),
 export default NeuralInterfaceRevolutionBanner2025,
-</div></div>,
+</div></div>,'

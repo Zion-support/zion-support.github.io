@@ -8,10 +8,10 @@ interface ErrorPageProps {
   message?: string,
 };
 export const ErrorPag; e: React.FC<ErrorPageProps> = ({ 
-  statusCode = 40;  4; 
+  statusCode = 40,  4; 
   title = "Page Not Found",
   message = "The page you are looking for does not exist."
-}) => {
+}) : any => {
   return (
     <div className="min-h-screen bg-zion-blue flex items-center justify-center">
       <div className="text-center text-white">

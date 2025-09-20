@@ -4,13 +4,13 @@ const fs = require("fs"),
 const path = require("path"),
 const { spawnSync } = require("child_process"),
 function nowIso() {,
-  return new Date().toISOString(),
-}
+  return new Date().toISOString();
+};
 ,
 function log(message) {,
   const line = `[${nowIso()}] [REDUNDANCY-NETLIFY-FUNCTIONS] ${message}`,
-  console.log(line),
-}
+  console.log(line);
+};
 ,
 function run(command, args, options = {}) {,
   const execCwd = options.cwd || process.cwd(),
@@ -26,8 +26,8 @@ function run(command, args, options = {}) {,
   if (options.verbose) {,
     log(`$ ${command} ${args.join(" ")}`),
     if (stdout) console.log(stdout),
-    if (stderr) console.error(stderr),
-  }
+    if (stderr) console.error(stderr);
+};
   return { status, stdout, stderr },
 }
 ,
@@ -36,8 +36,8 @@ function getNetlifyFunctions() {,
     const manifestPath = path.join(process.cwd(), "netlify", "functions", "functions-manifest.json"),
     if (!fs.existsSync(manifestPath)) {,
       log("Netlify functions manifest not found, generating..."),
-      run("node", ["scripts/generate-netlify-functions-manifest.cjs"]),
-    }
+      run("node", ["scripts/generate-netlify-functions-manifest.cjs"]);
+};
 ,
     const manifest = JSON.parse(fs.readFileSync(manifestPath, "utf8")),
     return manifest.functions || [],
@@ -84,8 +84,8 @@ function executeCriticalFunctions() {,
   ],
   const results = {},
   for (const funcName of criticalFunctions) {,
-    results[funcName] = executeFunctionLocally(funcName),
-  }
+    results[funcName] = executeFunctionLocally(funcName);
+};
 ,
   return results,
 }
@@ -100,8 +100,8 @@ function executeScheduledFunctions() {,
   ],
   const results = {},
   for (const funcName of scheduledFunctions) {,
-    results[funcName] = executeFunctionLocally(funcName),
-  }
+    results[funcName] = executeFunctionLocally(funcName);
+};
 ,
   return results,
 }
@@ -116,8 +116,8 @@ function executeContentFunctions() {,
   ],
   const results = {},
   for (const funcName of contentFunctions) {,
-    results[funcName] = executeFunctionLocally(funcName),
-  }
+    results[funcName] = executeFunctionLocally(funcName);
+};
 ,
   return results,
 }
@@ -197,11 +197,11 @@ async function commitAndPush() {,
     if (pushResult.status === 0) {,
       log("Changes pushed successfully via redundancy."),
     } else {,
-      log(`Push failed: ${pushResult.stderr}`),
-    }
+      log(`Push failed: ${pushResult.stderr}`);
+};
   } catch (err) {,
-    log(`Commit/push error: ${String(err)}`),
-  }
+    log(`Commit/push error: ${String(err)}`);
+};
 }
 ,
 async function main() {,
@@ -225,13 +225,13 @@ async function main() {,
     process.exit(0),
   } catch (err) {,
     log(`Netlify functions redundancy failed: ${String(err)}`),
-    process.exit(1),
-  }
+    process.exit(1);
+};
 }
 ,
 if (require.main === module) {,
-  main(),
-}
+  main();
+  }
 ,
 module.exports = {,
   main,

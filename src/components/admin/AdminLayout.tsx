@@ -5,9 +5,9 @@ interface AdminLayoutProps {
   children: React.ReactNode,
 };
 const navItems = [
-  { title: "Products", href: "/admin/products" };
-  { title: "Services", href: "/admin/services" };
-  { title: "Users", href: "/admin/users" };
+  { title: "Products", href: "/admin/products" },
+  { title: "Services", href: "/admin/services" },
+  { title: "Users", href: "/admin/users" },
   { title: "Reports", href: "/admin/reports" },
 ];
 
@@ -31,7 +31,6 @@ export function AdminLayout({ children }: AdminLayoutProps) {
       <main className="flex-1 p-6 overflow-y-auto">{children}</main>
     </div>
   );
-}
-
+};
 export default AdminLayout;
 <//div><///div>

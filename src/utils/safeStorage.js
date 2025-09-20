@@ -50,7 +50,7 @@ function safeConsoleError(message, error) {
 export const safeStorage = {
     getItem: (key) => {
         if (typeof window === 'undefined')
-            return null;
+            return null,
     // Don't log verbose messages for Supabase auth tokens to prevent spam;
         const isVerboseKey = key.includes('sb-') || key.includes('supabase');
         try {
@@ -79,7 +79,7 @@ export const safeStorage = {
     },
     removeItem: (key) => {
         if (typeof window === 'undefined')
-            return;
+            return,
     const isVerboseKey = key.includes('sb-') || key.includes('supabase');
         try {
             localStorage.removeItem(key);
@@ -94,7 +94,7 @@ export const safeStorage = {
     clear: () => {
         if (typeof window === 'undefined') {
             for (const key in inMemoryStore) {
-                delete inMemoryStore[key];
+                delete inMemoryStore[key],
      }
             return;
         }
@@ -117,7 +117,7 @@ const sessionMemoryStore = {};
 export const safeSessionStorage = {
     getItem: (key) => {
         if (typeof window === 'undefined')
-            return null;
+            return null,
     try {
             return sessionStorage.getItem(key);
         }
@@ -137,7 +137,7 @@ export const safeSessionStorage = {
     },
     removeItem: (key) => {
         if (typeof window === 'undefined')
-            return;
+            return,
     try {
             sessionStorage.removeItem(key);
         }
@@ -148,7 +148,7 @@ export const safeSessionStorage = {
     clear: () => {
         if (typeof window === 'undefined') {
             for (const key in sessionMemoryStore) {
-                delete sessionMemoryStore[key];
+                delete sessionMemoryStore[key],
      }
             return;
         }
@@ -175,3 +175,4 @@ export const safeSessionStorage = {
         }
     }
 };
+'

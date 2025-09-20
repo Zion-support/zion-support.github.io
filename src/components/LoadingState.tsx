@@ -13,11 +13,11 @@ export const LoadingState: React.FC<LoadingStateProps> = ({
   size = 'md',
   color = 'blue',
   text
-}) => {
+}) : any => {
   const sizeClasses = {
     sm: 'w-4 h-4',
     md: 'w-8 h-8',;
-    lg: 'w-12 h-12';,
+    lg: 'w-12 h-12',,
   };
 
   const colorClasses = {
@@ -36,7 +36,7 @@ export const LoadingState: React.FC<LoadingStateProps> = ({
             animate={{ rotate: 360 }}
             transition={{ duration: 1, repeat: Infinity, ease: 'linear' }}
           />
-        );
+        ),
       
       case 'skeleton':
         return (
@@ -53,7 +53,7 @@ export const LoadingState: React.FC<LoadingStateProps> = ({
             animate={{ scale: [1, 1.2, 1] }}
             transition={{ duration: 1, repeat: Infinity }}
           />
-        );
+        ),
       
       case 'dots':
         return (
@@ -66,15 +66,15 @@ export const LoadingState: React.FC<LoadingStateProps> = ({
                 transition={{
                   duration: 0.6,
                   repeat: Infinity,
-                  delay: i * 0.2,
-                }}
+                  delay: i * 0.2;
+  }}
               />
             ))}
           </div>
         );
       
-      default: return null;,
-    }
+      default: return null,;
+  }
   };
 
   return (
@@ -91,7 +91,7 @@ export const LoadingState: React.FC<LoadingStateProps> = ({
       )}
     </div>
   );
-};
+  };
 
 export default LoadingState;
 <//div><///div>

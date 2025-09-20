@@ -15,9 +15,9 @@ import {
 } from 'lucide-react';
 
 interface SidebarItem {
-  name: string;
-  href: string;
-  icon: React.ReactNode;
+  name: string,
+  href: string,
+  icon: React.ReactNode,
   description?: string;
   children?: SidebarItem[];
   badge?: string;
@@ -245,24 +245,24 @@ const sidebarSections = [
       }
     ]
   }
-];
+],
 
 interface EnhancedSidebar2025Props {
-  isOpen: boolean;
-  onClose: () => void;
+  isOpen: boolean,
+  onClose: () => void,
 }
 
 interface EnhancedSidebarProps {
-  isOpen: boolean;
-  onClose: () => void;
+  isOpen: boolean,
+  onClose: () => void,
 }
 
 export default function EnhancedSidebar2025({ isOpen, onClose }: EnhancedSidebarProps) {
   const [searchQuery, setSearchQuery] = useState('');
   const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set());
 
-  const toggleSection = (title: string) => {
-    const newExpanded = new Set(expandedSections);
+  const toggleSection = (title: string) : any => {
+    const newExpanded = new Set(expandedSections),
     if (newExpanded.has(title)) newExpanded.delete(title); else newExpanded.add(title);
     setExpandedSections(newExpanded);
   };
@@ -363,4 +363,4 @@ export default function EnhancedSidebar2025({ isOpen, onClose }: EnhancedSidebar
       </div>
     </motion.aside>
   );
-}
+  }

@@ -2,7 +2,7 @@ import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0",
 import { MailchimpService } from "../../..//src/integrations/mailchimp/MailchimpService.ts",
 
-serve(async (req) => {
+serve(async (req) : any => {
   try {
     const supabase = createClient(
       Deno.env.get("SUPABASE_URL") ?? "",
@@ -26,9 +26,8 @@ serve(async (req) => {
       await mailchimp.upsertMember({
         email: u.email,
         mergeFields: { FNAME: u.display_name }
-      }),
-    }
-
+      });
+};
     return new Response(
       JSON.stringify({ synced: users?.length || 0 }),
       { status: 200, headers: { "Content-Type": "application/json" } }
@@ -38,6 +37,6 @@ serve(async (req) => {
     return new Response(
       JSON.stringify({ error: err.message }),
       { status: 500, headers: { "Content-Type": "application/json" } }
-    ),
+    );
   }
 }),

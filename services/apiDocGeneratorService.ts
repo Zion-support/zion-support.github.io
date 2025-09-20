@@ -179,9 +179,8 @@ export class APIDocGeneratorService {
 
       // Generate examples if requested
       if (config.includeExamples) {
-        documentation.examples = await this.generateExamples(documentation.endpoints),
-      }
-
+        documentation.examples = await this.generateExamples(documentation.endpoints);
+};
       // Calculate coverage
       documentation.metadata.coverage = this.calculateCoverage(documentation.endpoints),
 
@@ -223,8 +222,8 @@ export class APIDocGeneratorService {
       } else if (extension === 'java') {
         languages.push('java'),
         frameworks.push('spring'),
-        endpoints.push(...this.analyzeJavaFile(file)),
-      }
+        endpoints.push(...this.analyzeJavaFile(file));
+};
     }
 
     // Remove duplicates
@@ -346,9 +345,8 @@ export class APIDocGeneratorService {
           tags: ['Users'],
           deprecated: false
         }
-      ),
-    }
-
+      );
+};
     return endpoints,
   }
 
@@ -389,9 +387,8 @@ export class APIDocGeneratorService {
         ],
         tags: ['Products'],
         deprecated: false
-      }),
-    }
-
+      });
+};
     return endpoints,
   }
 
@@ -432,9 +429,8 @@ export class APIDocGeneratorService {
         ],
         tags: ['Orders'],
         deprecated: false
-      }),
-    }
-
+      });
+};
     return endpoints,
   }
 
@@ -528,9 +524,8 @@ export class APIDocGeneratorService {
           body: this.generateExampleResponse(endpoint.responses[0])
         },
         tags: endpoint.tags
-      }),
-    }
-
+      });
+};
     return examples,
   }
 
@@ -609,9 +604,8 @@ export class APIDocGeneratorService {
       }
     }
     
-    return Math.round((documentedEndpoints / endpoints.length) * 100),
-  }
-
+    return Math.round((documentedEndpoints / endpoints.length) * 100);
+};
   async exportDocumentation(
     documentation: APIDocumentation,
     format: 'html' | 'markdown' | 'pdf' | 'json' | 'openapi'
@@ -633,7 +627,7 @@ export class APIDocGeneratorService {
         ...changes.metadata,
         lastGenerated: new Date()
       }
-    } as APIDocumentation,
+    } as APIDocumentation;
   }
 }
 

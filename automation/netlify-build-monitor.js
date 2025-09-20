@@ -15,8 +15,8 @@ const logger = winston.createLogger({,
 }),
 if (process.env.NODE_ENV !== 'production') {,
   logger.add(new winston.transports.Console({,
-    format: winston.format.simple()})),
-}
+    format: winston.format.simple()}));
+};
 ,
 const fs = require('fs'),
 const path = require('path'),
@@ -50,15 +50,15 @@ class NetlifyBuildMonitor {,
           return false,
         } else if (status === 'building') {,
           logger.info('⏳ Build in progress...'),
-          await this.sleep(this.config.checkInterval),
-        }
+          await this.sleep(this.config.checkInterval);
+};
 ,
         retries++,
       } catch (error) {,
         logger.error(`Error monitoring build: ${error.message}`),
         retries++,
-        await this.sleep(this.config.checkInterval),
-      }
+        await this.sleep(this.config.checkInterval);
+};
     }
 ,
     logger.info('⚠️ Max retries reached'),
@@ -106,8 +106,8 @@ class NetlifyBuildMonitor {,
     for (const errorPattern of errorPatterns) {,
       if (this.errors.some(error => errorPattern.pattern.test(error))) {,
         logger.info(`🔧 Applying fix: ${errorPattern.description}`),
-        await errorPattern.fix(),
-      }
+        await errorPattern.fix();
+};
     }
   }
 ,
@@ -138,15 +138,15 @@ class NetlifyBuildMonitor {,
         if (modified) {,
           fs.writeFileSync(file, content, utf8'),
           fixedCount++,
-          this.fixes.push(`Fixed string constants in ${file}`),
-        }
+          this.fixes.push(`Fixed string constants in ${file}`);
+};
       } catch (error) {,
-        logger.error(`Error fixing ${file}:`, error.message),
-      }
+        logger.error(`Error fixing ${file}:`, error.message);
+};
     }
 ,
-    logger.info(`✅ Fixed string constants in ${fixedCount} files`),
-  }
+    logger.info(`✅ Fixed string constants in ${fixedCount} files`);
+};
 ,
   // Fix import statement errors,
   async fixImportStatements() {,
@@ -162,8 +162,8 @@ class NetlifyBuildMonitor {,
           { regex: /import\s+(?:type\s+)?{[^}]+}\s+from\s+next',/g, replacement: (match) => match.replace("next',", "'next',") },
           { regex: /import\s+([^}]+)\s+from\s+([^]+),/g, replacement: (match, imports, module) => {,
             if (!module.includes("'") && !module.includes('"')) {,
-              return match.replace(module, `'${module.trim()}`),
-            }
+              return match.replace(module, `'${module.trim()}`);
+};
             return match,
           }}
         ],
@@ -177,15 +177,15 @@ class NetlifyBuildMonitor {,
         if (modified) {,
           fs.writeFileSync(file, content, utf8'),
           fixedCount++,
-          this.fixes.push(`Fixed imports in ${file}`),
-        }
+          this.fixes.push(`Fixed imports in ${file}`);
+};
       } catch (error) {,
-        logger.error(`Error fixing imports in ${file}:`, error.message),
-      }
+        logger.error(`Error fixing imports in ${file}:`, error.message);
+};
     }
 ,
-    logger.info(`✅ Fixed import statements in ${fixedCount} files`),
-  }
+    logger.info(`✅ Fixed import statements in ${fixedCount} files`);
+};
 ,
   // Fix TypeScript type errors,
   async fixTypeErrors() {,
@@ -200,15 +200,15 @@ class NetlifyBuildMonitor {,
       const lines = result.split('\n'),
       for (const line of lines) {,
         if (line.includes('error TS')) {,
-          this.errors.push(line),
-        }
+          this.errors.push(line);
+};
       }
 ,
       logger.info(`Found ${this.errors.length} TypeScript errors`),
     } catch (error) {,
       // TypeScript compilation failed, which is expected,
-      logger.info('TypeScript check completed'),
-    }
+      logger.info('TypeScript check completed');
+};
   }
 ,
   // Fix module errors,
@@ -223,18 +223,18 @@ class NetlifyBuildMonitor {,
         try {,
           require.resolve(dep),
         } catch (error) {,
-          missingDeps.push(dep),
-        }
+          missingDeps.push(dep);
+};
       }
 ,
       if (missingDeps.length > 0) {,
         logger.info(`Installing missing dependencies: ${missingDeps.join(')}`),
         execSync(`npm install ${missingDeps.join(' )}`, { stdio: 'inherit' }),
-        this.fixes.push(`Installed missing dependencies: ${missingDeps.join(')}`),
-      }
+        this.fixes.push(`Installed missing dependencies: ${missingDeps.join(')}`);
+};
     } catch (error) {,
-      logger.error('Error fixing module errors:', error.message),
-    }
+      logger.error('Error fixing module errors:', error.message);
+};
   }
 ,
   // Fix missing dependencies,
@@ -247,8 +247,8 @@ class NetlifyBuildMonitor {,
       execSync('npm install', { stdio: 'inherit' }),
       this.fixes.push('Reinstalled all dependencies'),
     } catch (error) {,
-      logger.error('Error reinstalling dependencies:', error.message),
-    }
+      logger.error('Error reinstalling dependencies:', error.message);
+};
   }
 ,
   // Find all TypeScript files,
@@ -261,12 +261,12 @@ class NetlifyBuildMonitor {,
         if (stat.isDirectory() && !item.startsWith('.') && item !== node_modules' && item !== .next') {,
           this.findTsFiles(fullPath, files),
         } else if (item.endsWith('.ts') || item.endsWith('.tsx')) {,
-          files.push(fullPath),
-        }
+          files.push(fullPath);
+};
       }
     } catch (error) {,
-      logger.error(`Error reading directory ${dir}:`, error.message),
-    }
+      logger.error(`Error reading directory ${dir}:`, error.message);
+};
 ,
     return files,
   }
@@ -486,8 +486,8 @@ const timeoutId = setTimeout(resolve,                                           
 // Store timeoutId for cleanup if needed,
 ,
 // Store timeoutId for cleanup if needed,
-),
-  }
+);
+};
 ,
   // Main execution method,
   async run() {,
@@ -499,13 +499,13 @@ const timeoutId = setTimeout(resolve,                                           
         if (!success && this.config.autoFix) {,
           await this.analyzeAndFixErrors(),
           if (this.fixes.length > 0) {,
-            await this.triggerBuild(),
-          }
+            await this.triggerBuild();
+};
         }
       } else {,
         // Local development mode - just run fixes,
-        await this.analyzeAndFixErrors(),
-      }
+        await this.analyzeAndFixErrors();
+};
 ,
       // Generate report,
       const report = this.generateReport(),
@@ -514,21 +514,20 @@ const timeoutId = setTimeout(resolve,                                           
         process.exit(0),
       } else {,
         logger.info('⚠️ Build monitor completed with issues'),
-        process.exit(1),
-      }
-
+        process.exit(1);
+};
     } catch (error) {,
       logger.error('❌ Build monitor failed:', error.message),
-      process.exit(1),
-    }
+      process.exit(1);
+};
   }
 }
 ,
 // Run the monitor if this file is executed directly,
 if (require.main === module) {,
   const monitor = new NetlifyBuildMonitor(),
-  monitor.run(),
-}
+  monitor.run();
+};
 ,
 module.exports = NetlifyBuildMonitor,
 // Graceful shutdown handling,
@@ -540,5 +539,5 @@ process.on('SIGINT', () => {,
 process.on('SIGTERM', () => {,
   console.log('\n🛑 Received SIGTERM, shutting down gracefully...'),
   // Add cleanup logic here,
-  process.exit(0),
-}),
+  process.exit(0);
+  }),"

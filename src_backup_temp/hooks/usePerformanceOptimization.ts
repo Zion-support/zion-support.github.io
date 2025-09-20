@@ -11,7 +11,7 @@ interface UsePerformanceOptimizationOptions {,
   enableMemoryManagement?: boolean,
   enableFPSMonitoring?: boolean,
   threshold?: number"}
-export const usePerformanceOptimization = ("options": "UsePerformanceOptimizationOption s = {"}) => {,
+export const usePerformanceOptimization = ("options": "UsePerformanceOptimizationOption s = {"}) : any => {,
 interface PerformanceMetrics {,
   "loadTime": number,
   renderTime: number,
@@ -23,7 +23,7 @@ interface UsePerformanceOptimizationOptions {,
   enableMemoryManagement?: boolean,
   enableFPSMonitoring?: boolean,
   threshold?: number}
-export const usePerformanceOptimization = ("options": UsePerformanceOptimizationOption s = {}) => {,
+export const usePerformanceOptimization = ("options": UsePerformanceOptimizationOption s = {}) : any => {,
   const {,
     enableLazyLoading = true,
     enableIntersectionObserver = true,
@@ -101,8 +101,8 @@ const "metricsRef": "useRe f<PerformanceMetrics>({,
         metricsRef.current.memoryUsage = memory.usedJSHeapSize / 1024 / 1024, // MB,
         // Warn if memory usage is high,
         if (memory.usedJSHeapSize > 100 * 1024 * 1024) { // 100MB,
-          // // // // // // // , 'MB'),
-        }
+          // // // // // // // , 'MB');
+  }
           , 'MB')}
       }
     },
@@ -189,8 +189,8 @@ const "metricsRef": useRe f<PerformanceMetrics>({,
       return}
     if (observerRef.current) {,
       observerRef.current.disconnect()}
-    observerRef.current = createIntersectionObserver((entries) => {,
-      entries.forEach((entry) => {,
+    observerRef.current = createIntersectionObserver((entries) : any => {,
+      entries.forEach((entry) : any => {,
         if (entry.isIntersecting) {,
           callback(),
           if (observerRef.current) {,

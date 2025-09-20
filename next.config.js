@@ -16,7 +16,7 @@ const nextConfig = {
 		dirs: []
 	},
 	typescript: {
-		// Allow builds to pass even if there are type errors; CI can run type-check separately
+		// Allow builds to pass even if there are type errors, CI can run type-check separately
 		ignoreBuildErrors: true
 	},
 	// Performance optimizations

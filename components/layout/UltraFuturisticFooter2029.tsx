@@ -13,7 +13,7 @@ const contactInfo = {
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-};
+},
 
 const serviceCategories = [
   {
@@ -56,7 +56,7 @@ const serviceCategories = [
       { name: 'Data Governance', href: '/data-governance-automation-platform-2029' }
     ]
   }
-];
+],
 
 const businessSolutions = [
   { name: 'E-commerce Optimization', href: '/ai-powered-ecommerce-optimization-2029' },
@@ -64,7 +64,7 @@ const businessSolutions = [
   { name: 'HR Recruitment', href: '/ai-hr-recruitment-automation-2029' },
   { name: 'Supply Chain Optimization', href: '/ai-supply-chain-optimization-2029' },
   { name: 'Customer Success', href: '/ai-customer-success-automation-2029' }
-];
+],
 
 const companyLinks = [
   { name: 'About Us', href: '/about' },
@@ -73,7 +73,7 @@ const companyLinks = [
   { name: 'News & Updates', href: '/news' },
   { name: 'Case Studies', href: '/case-studies' },
   { name: 'Research & Development', href: '/research' }
-];
+],
 
 const supportLinks = [
   { name: 'Documentation', href: '/docs' },
@@ -82,7 +82,7 @@ const supportLinks = [
   { name: 'Contact Sales', href: '/contact' },
   { name: 'Training & Certification', href: '/training' },
   { name: 'Community Forum', href: '/community' }
-];
+],
 
 const legalLinks = [
   { name: 'Privacy Policy', href: '/privacy' },
@@ -91,7 +91,7 @@ const legalLinks = [
   { name: 'Security', href: '/security' },
   { name: 'Compliance', href: '/compliance' },
   { name: 'GDPR', href: '/gdpr' }
-];
+],
 
 const socialLinks = [
   { name: 'Twitter', href: '#', icon: Twitter, color: 'hover:text-blue-400' },
@@ -100,9 +100,9 @@ const socialLinks = [
   { name: 'Instagram', href: '#', icon: Instagram, color: 'hover:text-pink-500' },
   { name: 'YouTube', href: '#', icon: Youtube, color: 'hover:text-red-500' },
   { name: 'GitHub', href: '#', icon: Github, color: 'hover:text-gray-400' }
-];
+],
 
-export default function UltraFuturisticFooter2029() {
+export default function UltraFuturisticFooter2029() : any {
   return (
     <footer className="bg-gradient-to-br from-black via-gray-900 to-black text-white relative overflow-hidden">
       {/* Background Elements */}
@@ -191,7 +191,7 @@ export default function UltraFuturisticFooter2029() {
         </div>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+        <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
           {serviceCategories.map((category) => (
             <div key={category.title} className="space-y-4">
               <div className="flex items-center space-x-3">
@@ -289,7 +289,7 @@ export default function UltraFuturisticFooter2029() {
         <div className="border-t border-gray-800 pt-8">
           <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
             <div className="flex items-center space-x-6 text-sm text-gray-400">
-              <span>&copy; 2029 Zion Tech Group. All rights reserved.</span>
+              <span>&copy, 2029 Zion Tech Group. All rights reserved.</span>
               <span>•</span>
               <span>Leading Technology Innovation</span>
               <span>•</span>
@@ -323,8 +323,8 @@ export default function UltraFuturisticFooter2029() {
             }}
             style={{
               left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-            }}
+              top: `${Math.random() * 100}%`;
+  }}
           />
         ))}
       </div>

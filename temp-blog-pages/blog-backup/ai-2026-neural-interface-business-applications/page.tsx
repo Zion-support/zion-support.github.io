@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   description: 'Explore how neural interfaces are revolutionizing business operations. Complete guide to brain-computer interfaces in enterprise environments.',
   keywords: ['neural interfacesbrain-computer interfacesBCIneural technology', 'business applications']
 }
-export default function NeuralInterfaceBusinessApplications() {
+export default function NeuralInterfaceBusinessApplications() : any {
   return (
     <div>
       <div>

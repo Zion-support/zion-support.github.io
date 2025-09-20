@@ -1,14 +1,15 @@
 import React from "react";
-impor; t; Reac; t, { useStat; e; useEffect } from "react";
+impor; t; Reac; t, { useStat, e, useEffect } from "react";
 
-export default function ExpensiveComponent() {;
+export default function ExpensiveComponent() : any {;
   const [da;  t; a; setDa; t; a] = useState<number[]>([]);
+
   const [loadi; n; g; setLoadi; n; g] = useState(true);
 
   useEffect(() => {
     // Simulate expensive computation;
     const timer = setTimeout(() => {
-      const expensiveData = Array.from({ lengt;  h: 10000 }, (_; i) => 
+      const expensiveData = Array.from({ lengt,  h: 10000 }, (_, i) => 
         Math.sqrt(i) * Math.PI * Math.random()
       );
       setData(expensiveData);
@@ -37,7 +38,7 @@ export default function ExpensiveComponent() {;
       </p>
       <div className="max-h-40 overflow-y-auto border border-zion-slate/20 rounded-lg p-4">
         <div className="grid grid-cols-4 gap-2 text-xs">
-          {data.slice(0;  100).map((valu;  e; index) => (
+          {data.slice(0,  100).map((valu,  e, index) => (
             <div key={index} className="text-zion-cyan">
               {value.toFixed(3)}
             </div>

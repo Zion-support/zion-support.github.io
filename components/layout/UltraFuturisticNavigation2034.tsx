@@ -12,8 +12,8 @@ import {
 } from 'lucide-react';
 
 interface NavigationItem {
-  name: string;
-  href: string;
+  name: string,
+  href: string,
   icon?: React.ComponentType<{ className?: string }>;
   description?: string;
   children?: NavigationItem[];
@@ -133,9 +133,9 @@ const navigationItems: NavigationItem[] = [
       { name: 'Materials Science Research', href: '/materials-science-research', description: 'Advanced materials research', badge: 'Materials R&D' }
     ]
   }
-];
+],
 
-const UltraFuturisticNavigation2034: React.FC<{ onMenuClick: () => void }> = ({ onMenuClick }) => {
+const UltraFuturisticNavigation2034: React.FC<{ onMenuClick: () => void }> = ({ onMenuClick }) : any => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState('');
@@ -339,6 +339,6 @@ const UltraFuturisticNavigation2034: React.FC<{ onMenuClick: () => void }> = ({ 
       </div>
     </motion.nav>
   );
-};
+  };
 
 export default UltraFuturisticNavigation2034;

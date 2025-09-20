@@ -45,6 +45,6 @@ exports.handler = async function(event, context) {
         function: 'continuous-orchestrator',
         status: 'error'
       })
-    },
+    };
   }
 },

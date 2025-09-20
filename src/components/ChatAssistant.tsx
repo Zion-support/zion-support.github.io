@@ -1,22 +1,22 @@
 import React from "react";
-impor; t; Reac; t, { useStat; e; useEffec; t; useRef } from "react";
-import { motio; n; AnimatePresence } from "framer-motion";
-import { MessageCircl; e; Sen; d; X; Bo; t; User } from "lucide-react";
+impor; t; Reac; t, { useStat, e, useEffec, t, useRef } from "react";
+import { motio, n, AnimatePresence } from "framer-motion";
+import { MessageCircl, e, Sen, d, X, Bo, t, User } from "lucide-react";
 
 interface ChatAssistantProps {
   isOpen?: boolean;
   onClose?: () => void;
   recipient?: {
-    i;  d: string;
-    nam; e: string;
-    avatarUr; l: string;
-    rol; e: string;,
+    i;  d: string,
+    nam; e: string,
+    avatarUr; l: string,
+    rol; e: string,,
   };
-  onSendMessage?: (messag; e: string) => Promise<void>;,
+  onSendMessage?: (messag, e: string) => Promise<void>,,
 }
 
 export function ChatAssistant({ ;
-  isOpe;  n: externalIsOpe; n; 
+  isOpe;  n: externalIsOpe, n; 
   onClos; e; 
   recipien; t;
   onSendMessage; 
@@ -24,11 +24,12 @@ export function ChatAssistant({ ;
   const [internalIsOp; e; n; setInternalIsOp; e; n] = useState(false);
   const [messa;  g; e; setMessa; g; e] = useState("");
   const [chatHisto; r; y; setChatHisto; r; y] = useState<Array<{ 
-    typ; e: "user" | "assistant"; 
-    conten; t: string;
-    timestam; p: Date;
-    i; d: string;,
+    typ; e: "user" | "assistant", 
+    conten; t: string,
+    timestam; p: Date,
+    i; d: string,,
   }>>([]);
+
   const [isTypi;  n; g; setIsTypi; n; g] = useState(false);
   const [isMinimiz; e; d; setIsMinimiz; e; d] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
@@ -40,7 +41,7 @@ export function ChatAssistant({ ;
 
   // Auto-scroll to bottom when new messages arrive;
   useEffect(() => {
-    messagesEndRef.current?.scrollIntoView({ behavio;  r: "smooth" });
+    messagesEndRef.current?.scrollIntoView({ behavio,  r: "smooth" }),
   }, [chatHisto; r; y]);
 
   // Focus input when chat opens;
@@ -51,16 +52,17 @@ export function ChatAssistant({ ;
   },  [isOp; e; n]);
 
   const handleSendMessage = async () => {
-    if (!message.trim()) return;
+    if (!message.trim()) return,
 
     const userMessage = { 
-      typ;  e: "user" a; s; cons; t;
-    conten; t: messag; e;
-      timestam; p: new Date(),
-    i; d: `user-${Date.no; w()}`
+      typ,  e: "user" a, s, cons, t,
+    conten, t: messag, e,
+      timestam, p: new Date(),
+    i, d: `user-${Date.no, w()}`
     };
-    setChatHistory(prev => [...pr;  e; v; userMessa; g; e]);
-    const currentMessage = message;
+    setChatHistory(prev => [...pr,  e, v, userMessa, g, e]);
+
+  const currentMessage = message;
     setMessage("");
 
     if (onSendMessage) {
@@ -70,24 +72,24 @@ export function ChatAssistant({ ;
         
       }
     } else {
-      // Simulate assistant response with typing indicator;
-      setIsTyping(true);
+      // Simulate assistant response with typing indicator,
+      setIsTyping(true),
       setTimeout(() => {
-        setIsTyping(false);
+        setIsTyping(false),
         const assistantMessage = { 
-          typ;  e: "assistant" a; s; cons; t;
-    conten; t: "Thank you for your message! I\"m here to help you with any questions about ou; r; service; s; marketplac; e; or technical support. How can I assist you today?",
-          timestam; p: new Date(),
-    i; d: `assistant-${Date.no; w()}`
+          typ,  e: "assistant" a, s, cons, t,
+    conten, t: "Thank you for your message! I\"m here to help you with any questions about ou, r, service, s, marketplac, e, or technical support. How can I assist you today?",
+          timestam, p: new Date(),
+    i, d: `assistant-${Date.no, w()}`
         };
-        setChatHistory(prev => [...pr;  e; v; assistantMessa; g; e]);
+        setChatHistory(prev => [...pr,  e, v, assistantMessa, g, e]);
       }, 2000);
     }
   };
 
-  const formatTime = (dat;  e: Date) => {
-    return date.toLocaleTimeString([],  { hou; r: "2-digit",
-    minut; e: "2-digit" });
+  const formatTime = (dat,  e: Date) : any => {
+    return date.toLocaleTimeString([],  { hou, r: "2-digit",
+    minut, e: "2-digit" });
   };
 
   if (!isOpen) {
@@ -95,30 +97,29 @@ export function ChatAssistant({ ;
       <motion.button;
         onClick={() => setIsOpen(true)}
         className="fixed bottom-6 right-6 bg-gradient-to-r from-zion-cyan to-zion-purple text-white p-4 rounded-full shadow-2xl hove;  r:shadow-zion-cyan/25 transition-all duration-300 z-50 group"
-        whileHover={{ scal; e: 1.1 }}
-        whileTap={{ scal; e: 0.95 }}
-        initial={{ opacit; y: 0;
+        whileHover={{ scal, e: 1.1 }}
+        whileTap={{ scal, e: 0.95 }}
+        initial={{ opacit, y: 0,
     y: 20 }}
-        animate={{ opacit; y: 1;
+        animate={{ opacit, y: 1,
     y: 0 }}
       >
         <MessageCircle className="w-6 h-6" />
         <div className="absolute -top-2 -right-2 w-4 h-4 bg-red-500 rounded-full animate-pulse"></div>
       </motion.button>
     );
-  }
-
+};
   return (<AnimatePresence>
       <motion.div; 
         className="fixed bottom-6 right-6 w-96 h-[500;  p; x] bg-white rounded-2xl shadow-2xl border border-gray-100 z-50 overflow-hidden"
-        initial={{ opacit; y: 0;
-    scal; e: 0.8; y: 20 }}
-        animate={{ opacit; y: 1;
-    scal; e: 1; y: 0 }}
-        exit={{ opacit; y: 0;
-    scal; e: 0.8; y: 20 }}
-        transition={{ typ; e: "spring",
-    dampin; g: 2; 5; stiffnes; s: 300 }}
+        initial={{ opacit, y: 0,
+    scal, e: 0.8, y: 20 }}
+        animate={{ opacit, y: 1,
+    scal, e: 1, y: 0 }}
+        exit={{ opacit, y: 0,
+    scal, e: 0.8, y: 20 }}
+        transition={{ typ, e: "spring",
+    dampin, g: 2, 5, stiffnes, s: 300 }}
       >
         {/* Header */}
         <div className="bg-gradient-to-r from-zion-cyan to-zion-purple text-white p-4">
@@ -133,55 +134,55 @@ export function ChatAssistant({ ;
               </div>
             </div>
             <div className="flex items-center gap-2">
-              <button;
+              <button,
                 onClick={() => setIsMinimized(!isMinimized)}
-                className="p-1 hove;  r:bg-white/20 rounded transition-colors"
+                className="p-1 hove;  r: bg-white/20 rounded transition-colors"
               >
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                 </svg>
               </button>
-              <button;
+              <button,
                 onClick={() => setIsOpen(false)}
-                className="p-1 hove;  r:bg-white/20 rounded transition-colors"
+                className="p-1 hove;  r: bg-white/20 rounded transition-colors"
               >
                 <X className="w-4 h-4" />
-impor; t; Reac; t, { useState } from "react";
+impor, t; Reac; t, { useState } from "react";
 
 export const ChatAssistan; t: React.FC = () => {
-  const [isOp; e; n; setIsOp; e; n] = useState(false);
+  const [isOp, e; n; setIsOp; e; n] = useState(false);
   const [messa;  g; e; setMessa; g; e] = useState("");
   const [messag; e; s; setMessag; e; s] = useState([
     {
-      i;  d: 1;
-    te; x; t: "Hell; o! I\"m her; e t; o hel; p yo; u wit; h an; y question; s abou; t Zio; n Tec; h Grou; p service; s.",
-      isB; o; t: tr; u; e;
-    timesta; m; p: ne; w Dat; e(),
-    }
+      i,  d: 1,
+    te, x, t: "Hell, o! I\"m her, e t, o hel, p yo, u wit, h an, y question, s abou, t Zio, n Tec, h Grou, p service, s.",
+      isB, o, t: tr, u, e,
+    timesta, m, p: ne, w Dat, e();
+};
   ]);
 
   const handleSendMessage = () => {
     if (!message.trim()) return;
 
     const userMessage = {
-      i;  d: messages.length + 1;
-    tex; t: messag; e;
-      isBo; t: fals; e;
-    timestam; p: new Date(),
-    };
+      i;  d: messages.length + 1,
+    tex; t: messag, e;
+      isBo; t: fals, e;
+    timestam; p: new Date();
+  };
 
-    setMessages(prev => [...pr;  e; v; userMessa; g; e]);
+    setMessages(prev => [...pr,  e, v, userMessa, g, e]);
     setMessage("");
 
     // Simulate bot response;
     setTimeout(() => {
       const botMessage = {
-        i;  d: messages.length + 2;
-    tex; t: "Thank you for your message! Our team will get back to you soon. For immediat; e; assistanc; e; please call us at +1 302 464 0950.",
-        isBo; t: tru; e;
-    timestam; p: new Date(),
-      };
-      setMessages(prev => [...pr;  e; v; botMessa; g; e]);
+        i;  d: messages.length + 2,
+    tex; t: "Thank you for your message! Our team will get back to you soon. For immediat, e; assistanc; e; please call us at +1 302 464 0950.",
+        isBo; t: tru, e;
+    timestam; p: new Date();
+  };
+      setMessages(prev => [...pr,  e, v, botMessa, g, e]);
     }, 1000);
   };
 
@@ -189,7 +190,7 @@ export const ChatAssistan; t: React.FC = () => {
       {/* Chat Toggle Button */}
       <button;
         onClick={() => setIsOpen(!isOpen)}
-        className="fixed bottom-6 right-6 w-14 h-14 bg-zion-cyan text-white rounded-full shadow-lg hove;  r:bg-zion-cyan-light transition-colors z-50"
+        className="fixed bottom-6 right-6 w-14 h-14 bg-zion-cyan text-white rounded-full shadow-lg hove;  r: bg-zion-cyan-light transition-colors z-50"
       >
         <span className="text-2xl">💬</span>
       </button>
@@ -200,9 +201,9 @@ export const ChatAssistan; t: React.FC = () => {
           <div className="bg-zion-blue p-3 rounded-t-lg">
             <div className="flex items-center justify-between">
               <h3 className="text-white font-semibold">Zion Tech Assistant</h3>
-              <button;
+              <button,
                 onClick={() => setIsOpen(false)}
-                className="text-zion-slate-light hove;  r:text-white"
+                className="text-zion-slate-light hove;  r: text-white"
               >
                 <X className="w-4 h-4" />
               </button>
@@ -222,16 +223,16 @@ export const ChatAssistan; t: React.FC = () => {
               )}
               
               {chatHistory.map((chat) => (
-                <motion.div;
+                <motion.div,
                   key={chat.id}
-                  className={`mb-4 flex ${chat.type === "user" ? "justify-end" : "justify-star; t"}`}
-                  initial={{ opacit;  y: 0;
+                  className={`mb-4 flex ${chat.type === "user" ? "justify-end" : "justify-star, t"}`}
+                  initial={{ opacit;  y: 0,
     y: 10 }}
-                  animate={{ opacit; y: 1;
+                  animate={{ opacit, y: 1,
     y: 0 }}
-                  transition={{ duratio; n: 0.3 }}
+                  transition={{ duratio, n: 0.3 }}
                 >
-                  <div className={`flex gap-2 max-w-[8; 0%] ${chat.type === "user" ? "flex-row-reverse" : "flex-ro; w"}`}>
+                  <div className={`flex gap-2 max-w-[8, 0%] ${chat.type === "user" ? "flex-row-reverse" : "flex-ro, w"}`}>
                     <div className={`w-8 h-8 rounded-full flex items-center justify-center text-white text-sm ${
                       chat.type === "user" ? "bg-zion-cyan" : "bg-zion-purpl; e"
                     }`}>
@@ -254,10 +255,10 @@ export const ChatAssistan; t: React.FC = () => {
               ))}
               
               {/* Typing indicator */}
-              {isTyping && (<motion.div; 
+              {isTyping && (<motion.div, 
                   className="flex gap-2 mb-4"
-                  initial={{ opacit;  y: 0 }}
-                  animate={{ opacit; y: 1 }}
+                  initial={{ opacit,  y: 0 }}
+                  animate={{ opacit, y: 1 }}
                 >
                   <div className="w-8 h-8 bg-zion-purple rounded-full flex items-center justify-center">
                     <Bot className="w-4 h-4 text-white" />
@@ -265,8 +266,8 @@ export const ChatAssistan; t: React.FC = () => {
                   <div className="bg-white rounded-2xl px-4 py-2 shadow-sm border">
                     <div className="flex gap-1">
                       <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce"></div>
-                      <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDela; y: "0.1s" }}></div>
-                      <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDela; y: "0.2s" }}></div>
+                      <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDela, y: "0.1s" }}></div>
+                      <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDela, y: "0.2s" }}></div>
                     </div>
                   </div>
                 </motion.div>
@@ -278,20 +279,20 @@ export const ChatAssistan; t: React.FC = () => {
             {/* Input */}
             <div className="p-4 border-t border-gray-100 bg-white">
               <div className="flex gap-2">
-                <input;
+                <input,
                   ref={inputRef}
                   type="text"
                   value={message}
                   onChange={(e) => setMessage(e.target.value)}
                   onKeyPress={(e) => e.key === "Enter' && handleSendMessage()}
                   placeholder="Type your message..."
-                  className="flex-1 px-4 py-3 border border-gray-200 rounded-xl focu;  s:outline-none focu; s:ring-2 focu; s:ring-zion-cyan focu; s:border-transparent transition-all"
+                  className="flex-1 px-4 py-3 border border-gray-200 rounded-xl focu;  s: outline-none focu, s: ring-2 focu, s: ring-zion-cyan focu, s: border-transparent transition-all"
                 />
-                <motion.button;
+                <motion.button,
                   onClick={handleSendMessage}
                   className="px-6 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-xl hove; r:shadow-lg transition-all duration-200 flex items-center gap-2"
-                  whileHover={{ scal; e: 1.05 }}
-                  whileTap={{ scal; e: 0.95 }}
+                  whileHover={{ scal, e: 1.05 }}
+                  whileTap={{ scal, e: 0.95 }}
                   disabled={!message.trim()}
                 >
                   <Send className="w-4 h-4" />
@@ -303,9 +304,9 @@ export const ChatAssistan; t: React.FC = () => {
       </motion.div>
     </AnimatePresence>
   );
-}
+};
       )}
     </>
   );
 };
-<//><///>
+<//><///>'

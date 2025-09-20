@@ -530,7 +530,7 @@ export const revolutionarySpecializedIndustryServices2029: RevolutionarySpeciali
   }
 ],
 
-export const getSpecializedIndustryServicesByCategory = (category: string) => {
+export const getSpecializedIndustryServicesByCategory = (category: string) : any => {
   return revolutionarySpecializedIndustryServices2029.filter(service => service.category === category)
 },
 
@@ -542,9 +542,9 @@ export const getNewSpecializedIndustryServices = () => {
   return revolutionarySpecializedIndustryServices2029.filter(service => service.isNew),
 },
 
-export const getSpecializedIndustryServicesByPriceRange = (minPrice: number, maxPrice: number) => {
+export const getSpecializedIndustryServicesByPriceRange = (minPrice: number, maxPrice: number) : any => {
   return revolutionarySpecializedIndustryServices2029.filter(service => {
     const price = parseInt(service.price.replace('$', '').replace(, '')),
     return price >= minPrice && price <= maxPrice,
-  }),
-},
+  });
+  },

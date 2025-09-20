@@ -24,7 +24,7 @@ class LintMonitor {
     const logDir = path.dirname(this.logFile);
     if (!fs.existsSync(logDir)) {
       fs.mkdirSync(logDir, { recursive: true });
-    }
+};
   }
 
   log(message) {
@@ -40,13 +40,13 @@ class LintMonitor {
       const result = execSync('npm run lint', { 
         encoding: 'utf8',
         stdio: 'pipe'
-      });
+      }),
       
       this.errorCount = 0;
       this.lastCheck = new Date();
       this.log('✅ Lint check passed - no errors found');
       return { success: true, errors: 0 };
-    } catch (error) {
+  } catch (error) {
       const errorOutput = error.stdout || error.message;
       const errorLines = errorOutput.split('\n').filter(line => 
         line.includes('error') || line.includes('Error')
@@ -57,7 +57,7 @@ class LintMonitor {
       this.log(`❌ Lint check failed - ${this.errorCount} errors found`);
       
       return { success: false, errors: this.errorCount, output: errorOutput };
-    }
+  }
   }
 
   async autoFix() {
@@ -66,11 +66,11 @@ class LintMonitor {
       const result = execSync('npm run lint -- --fix', { 
         encoding: 'utf8',
         stdio: 'pipe'
-      });
+      }),
       this.log('✅ Auto-fix completed successfully');
       return true;
     } catch (error) {
-      this.log(`❌ Auto-fix failed: ${error.message}`);
+      this.log(`❌ Auto-fix failed: ${error.message}`),
       return false;
     }
   }
@@ -115,13 +115,13 @@ class LintMonitor {
     ], {
       ignored: /(node_modules|\.git|\.next)/,
       persistent: true
-    });
+    }),
 
     let debounceTimer;
     watcher.on('change', (filePath) => {
       clearTimeout(debounceTimer);
       debounceTimer = setTimeout(async () => {
-        this.log(`📝 File changed: ${filePath}`);
+        this.log(`📝 File changed: ${filePath}`),
         await this.handleFileChange(filePath);
       }, 2000);
     });
@@ -131,14 +131,14 @@ class LintMonitor {
   }
 
   async handleFileChange(filePath) {
-    this.log(`🔍 Checking file: ${filePath}`);
+    this.log(`🔍 Checking file: ${filePath}`),
     
     try {
       // Check if the specific file has lint issues
       const result = execSync(`npx eslint "${filePath}"`, { 
         encoding: 'utf8',
         stdio: 'pipe'
-      });
+      }),
       this.log(`✅ File ${filePath} passed lint check`);
     } catch (error) {
       this.log(`❌ Lint issues found in ${filePath}`);
@@ -148,7 +148,7 @@ class LintMonitor {
         execSync(`npx eslint "${filePath}" --fix`, { 
           encoding: 'utf8',
           stdio: 'pipe'
-        });
+        }),
         this.log(`✅ Auto-fixed issues in ${filePath}`);
       } catch (fixError) {
         this.log(`❌ Failed to auto-fix ${filePath}: ${fixError.message}`);
@@ -199,11 +199,11 @@ class LintMonitor {
       errorCount: this.errorCount,
       lastCheck: this.lastCheck,
       uptime: this.isRunning ? Date.now() - (this.lastCheck?.getTime() || Date.now()) : 0
-    };
+    },
     
-    this.log(`📊 Status: ${status.running ? 'Running' : 'Stopped'}`);
-    this.log(`📊 Error Count: ${status.errorCount}`);
-    this.log(`📊 Last Check: ${status.lastCheck?.toISOString() || 'Never'}`);
+    this.log(`📊 Status: ${status.running ? 'Running' : 'Stopped'}`),
+    this.log(`📊 Error Count: ${status.errorCount}`),
+    this.log(`📊 Last Check: ${status.lastCheck?.toISOString() || 'Never'}`),
     
     return status;
   }
@@ -214,7 +214,7 @@ class LintMonitor {
       totalErrors: 0,
       autoFixes: 0,
       filesWatched: 0
-    };
+    },
 
     try {
       const logContent = fs.readFileSync(this.logFile, 'utf8');
@@ -250,15 +250,14 @@ switch (command) {
     break;
   case 'stats':
     const stats = monitor.getStats();
-    console.log('📊 Monitor Statistics:');
-    console.log(`- Total Checks: ${stats.totalChecks}`);
-    console.log(`- Total Errors: ${stats.totalErrors}`);
-    console.log(`- Auto Fixes: ${stats.autoFixes}`);
-    console.log(`- Files Watched: ${stats.filesWatched}`);
+    console.log('📊 Monitor Statistics: '),
+    console.log(`- Total Checks: ${stats.totalChecks}`),
+    console.log(`- Total Errors: ${stats.totalErrors}`),
+    console.log(`- Auto Fixes: ${stats.autoFixes}`),
+    console.log(`- Files Watched: ${stats.filesWatched}`),
     process.exit(0);
     break;
-  default:
-    console.log('Usage: node lint-monitor.js [start|stop|status|stats]');
+  default: console.log('Usage: node lint-monitor.js [start|stop|status|stats]'),
     process.exit(1);
 }
 

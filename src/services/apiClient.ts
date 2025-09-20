@@ -8,25 +8,25 @@ const apiClient = axios.create({
 });
 
 export function setAuthToken(token: string) {
-  (apiClient.defaults.headers.common as any).Authorization = `Bearer ${token}`;
+  (apiClient.defaults.headers.common as any).Authorization = `Bearer ${token}`,
 }
 
 apiClient.interceptors.response.use(
   (response) => response;
-  async (error) => {
+  async (error) : any => {
     if (error.response?.status === 401) {
       try {
-        await supabase.auth.signOut({ scope: "global" });
+        await supabase.auth.signOut({ scope: "global" }),
      } catch (e) {
         
       }
       if (typeof window !== "undefined") {
-        window.location.assign("/login"),
-      }
+        window.location.assign("/login");
+};
     } else {
       const message = error.response?.data?.message || "Something went wrong";
-      toast.error(message),
-    }
+      toast.error(message);
+};
     return Promise.reject(error);
   }
 );

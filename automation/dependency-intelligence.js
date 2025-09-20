@@ -27,22 +27,22 @@ class DependencyIntelligence {,
       criticalVulnerabilityThreshold: 0,
       highVulnerabilityThreshold: 2},
     // // // // // // console.log('🧠 Dependency Intelligence Starting...'),
-    this.startIntelligence(),
-  }
+    this.startIntelligence();
+};
 ,
   ensureLogsDirectory() {,
     const logsDir = path.dirname(this.logFile),
     if (!fs.existsSync(logsDir)) {,
-      fs.mkdirSync(logsDir, { recursive: true }),
-    }
+      fs.mkdirSync(logsDir, { recursive: true });
+};
   }
 ,
   log(message, level = 'INFO') {,
     const timestamp = new Date().toISOString(),
     const logEntry = `[${timestamp}] [${level}] ${message}\n`,
     // // // // // // console.log(`[${level}] ${message}`),
-    fs.appendFileSync(this.logFile, logEntry),
-  }
+    fs.appendFileSync(this.logFile, logEntry);
+};
 ,
   loadDependencyData() {,
     try {,
@@ -101,8 +101,8 @@ class DependencyIntelligence {,
       }, 6 * 60 * 60 * 1000), // Every 6 hours
     }
 ,
-    this.log('Dependency Intelligence started successfully'),
-  }
+    this.log('Dependency Intelligence started successfully');
+};
 ,
   async performDependencyAnalysis() {,
     this.log('Performing comprehensive dependency analysis...'),
@@ -126,20 +126,20 @@ class DependencyIntelligence {,
       const criticalIssues = this.detectCriticalIssues(analysis),
       if (criticalIssues.length > 0) {,
         this.log(`Detected ${criticalIssues.length} critical dependency issues`, 'WARN'),
-        await this.handleCriticalIssues(criticalIssues),
-      }
+        await this.handleCriticalIssues(criticalIssues);
+};
 ,
       // Apply safe updates if enabled,
       if (this.autoUpdateSafe && analysis.outdatedDependencies.length > 0) {,
-        await this.applySafeUpdates(analysis.outdatedDependencies),
-      }
+        await this.applySafeUpdates(analysis.outdatedDependencies);
+};
 ,
       this.log(`Dependency analysis completed. Health score: ${healthScore.toFixed(2)}/100`),
       // Save dependency data,
       this.saveDependencyData(),
     } catch (error) {,
-      this.log(`Dependency analysis failed: ${error.message}`, 'ERROR'),
-    }
+      this.log(`Dependency analysis failed: ${error.message}`, 'ERROR');
+};
   }
 ,
   async checkOutdatedDependencies() {,
@@ -159,8 +159,8 @@ class DependencyIntelligence {,
           location: info.location,
           updateType: this.determineUpdateType(info.current, info.latest),
           isSafe: this.isSafeUpdate(info.current, info.latest)
-        }),
-      }
+        });
+};
 ,
       return dependencies,
     } catch (error) {,
@@ -200,8 +200,8 @@ class DependencyIntelligence {,
             description: vuln.description,
             recommendation: vuln.recommendation,
             via: vuln.via,
-            dependencyOf: vuln.dependencyOf || []}),
-        }
+            dependencyOf: vuln.dependencyOf || []});
+};
       }
 ,
       return vulnerabilities,
@@ -243,8 +243,8 @@ class DependencyIntelligence {,
             name: dep,
             type: 'unused',
             severity: 'LOW',
-            description: 'Unused dependency'}),
-        }
+            description: 'Unused dependency'});
+};
       }
 ,
       return unused,
@@ -270,8 +270,8 @@ class DependencyIntelligence {,
             conflicts.push({,
               description: problem,
               severity: 'MEDIUM',
-              type: 'dependency_conflict'}),
-          }
+              type: 'dependency_conflict'});
+};
         }
       }
 ,
@@ -308,8 +308,8 @@ class DependencyIntelligence {,
         stdio: 'pipe',
         timeout: 300000 // 5 minutes}),
     } catch (error) {,
-      throw new Error(`Build failed: ${error.message}`),
-    }
+      throw new Error(`Build failed: ${error.message}`);
+};
   }
 ,
   async getBundleSize() {,
@@ -341,8 +341,8 @@ class DependencyIntelligence {,
       if (stat.isDirectory()) {,
         files.push(...this.getAllFiles(fullPath)),
       } else {,
-        files.push(fullPath),
-      }
+        files.push(fullPath);
+};
     }
 ,
     return files,
@@ -358,8 +358,8 @@ class DependencyIntelligence {,
     const sorted = Object.entries(dependencySizes),
       .sort(([,a], [,b]) => b - a),
       .slice(0, 10),
-    return sorted.map(([name, size]) => ({ name, size })),
-  }
+    return sorted.map(([name, size]) => ({ name, size }));
+};
 ,
   identifyOptimizationOpportunities(dependencySizes) {,
     const opportunities = [],
@@ -369,8 +369,8 @@ class DependencyIntelligence {,
         opportunities.push({,
           dependency: name,
           currentSize: size,
-          suggestion: 'Consider tree-shaking or alternative packages'}),
-      }
+          suggestion: 'Consider tree-shaking or alternative packages'});
+};
     }
 ,
     return opportunities,
@@ -394,8 +394,8 @@ class DependencyIntelligence {,
     score -= analysis.circularDependencies.length * 10,
     // Deduct points for unused dependencies,
     score -= analysis.unusedDependencies.length * 3,
-    return Math.max(0, score),
-  }
+    return Math.max(0, score);
+};
 ,
   getHealthLevel(score) {,
     if (score >= 90) return 'EXCELLENT',
@@ -415,8 +415,8 @@ class DependencyIntelligence {,
         severity: 'CRITICAL',
         count: criticalVulns.length,
         description: `${criticalVulns.length} critical security vulnerabilities detected`
-      }),
-    }
+      });
+};
 ,
     // Check for too many outdated dependencies,
     if (analysis.outdatedDependencies.length > this.safetyThresholds.maxOutdatedDeps) {,
@@ -425,8 +425,8 @@ class DependencyIntelligence {,
         severity: 'HIGH',
         count: analysis.outdatedDependencies.length,
         description: `${analysis.outdatedDependencies.length} outdated dependencies (threshold: ${this.safetyThresholds.maxOutdatedDeps})`
-      }),
-    }
+      });
+};
 ,
     // Check for circular dependencies,
     if (analysis.circularDependencies.length > 0) {,
@@ -435,8 +435,8 @@ class DependencyIntelligence {,
         severity: 'MEDIUM',
         count: analysis.circularDependencies.length,
         description: `${analysis.circularDependencies.length} circular dependencies detected`
-      }),
-    }
+      });
+};
 ,
     return criticalIssues,
   }
@@ -447,8 +447,8 @@ class DependencyIntelligence {,
       try {,
         await this.applyCriticalFix(issue),
       } catch (error) {,
-        this.log(`Failed to handle issue ${issue.type}: ${error.message}`, 'ERROR'),
-      }
+        this.log(`Failed to handle issue ${issue.type}: ${error.message}`, 'ERROR');
+};
     }
   }
 ,
@@ -466,11 +466,11 @@ class DependencyIntelligence {,
           await this.fixCircularDependencies(),
           break,
         default:  ,
-          this.log(`Unknown issue type: ${issue.type}`, 'WARN'),
-      }
+          this.log(`Unknown issue type: ${issue.type}`, 'WARN');
+};
     } catch (error) {,
-      throw new Error(`Critical fix failed: ${error.message}`),
-    }
+      throw new Error(`Critical fix failed: ${error.message}`);
+};
   }
 ,
   async fixCriticalVulnerabilities() {,
@@ -482,8 +482,8 @@ class DependencyIntelligence {,
       execSync('npm audit fix --force', { stdio: 'pipe' }),
       this.log('Critical vulnerabilities fixed'),
     } catch (error) {,
-      this.log(`Failed to fix critical vulnerabilities: ${error.message}`, 'WARN'),
-    }
+      this.log(`Failed to fix critical vulnerabilities: ${error.message}`, 'WARN');
+};
   }
 ,
   async updateCriticalDependencies() {,
@@ -493,8 +493,8 @@ class DependencyIntelligence {,
       execSync('npm update', { stdio: 'pipe' }),
       this.log('Critical dependencies updated'),
     } catch (error) {,
-      this.log(`Failed to update critical dependencies: ${error.message}`, 'WARN'),
-    }
+      this.log(`Failed to update critical dependencies: ${error.message}`, 'WARN');
+};
   }
 ,
   async fixCircularDependencies() {,
@@ -504,13 +504,13 @@ class DependencyIntelligence {,
       // Log the circular dependencies for developer review,
       const circular = this.dependencyData.dependencies.circularDependencies,
       for (const dep of circular) {,
-        this.log(`Circular dependency detected: ${dep.path}`, 'WARN'),
-      }
+        this.log(`Circular dependency detected: ${dep.path}`, 'WARN');
+};
 ,
       this.log('Circular dependencies logged for manual review'),
     } catch (error) {,
-      this.log(`Failed to fix circular dependencies: ${error.message}`, 'WARN'),
-    }
+      this.log(`Failed to fix circular dependencies: ${error.message}`, 'WARN');
+};
   }
 ,
   async applySafeUpdates(outdatedDependencies) {,
@@ -526,18 +526,17 @@ class DependencyIntelligence {,
             // Record update,
             this.recordUpdate(dep),
           } catch (error) {,
-            this.log(`Failed to update ${dep.name}: ${error.message}`, 'WARN'),
-          }
+            this.log(`Failed to update ${dep.name}: ${error.message}`, 'WARN');
+};
         }
       }
 ,
       if (updatedCount > 0) {,
-        this.log(`Successfully updated ${updatedCount} dependencies`),
-      }
-
+        this.log(`Successfully updated ${updatedCount} dependencies`);
+};
     } catch (error) {,
-      this.log(`Safe updates failed: ${error.message}`, 'ERROR'),
-    }
+      this.log(`Safe updates failed: ${error.message}`, 'ERROR');
+};
   }
 ,
   recordUpdate(dependency) {,
@@ -549,8 +548,8 @@ class DependencyIntelligence {,
       type: dependency.updateType}),
     // Keep only last 100 updates,
     if (this.dependencyData.updateHistory.length > 100) {,
-      this.dependencyData.updateHistory = this.dependencyData.updateHistory.slice(-100),
-    }
+      this.dependencyData.updateHistory = this.dependencyData.updateHistory.slice(-100);
+};
   }
 ,
   async performVulnerabilityScan() {,
@@ -567,8 +566,8 @@ class DependencyIntelligence {,
         high: vulnerabilities.filter(v => v.severity === 'high').length}),
       // Keep only last 50 scans,
       if (this.vulnerabilityHistory.scans.length > 50) {,
-        this.vulnerabilityHistory.scans = this.vulnerabilityHistory.scans.slice(-50),
-      }
+        this.vulnerabilityHistory.scans = this.vulnerabilityHistory.scans.slice(-50);
+};
 ,
       // Update trends,
       this.updateVulnerabilityTrends(),
@@ -576,8 +575,8 @@ class DependencyIntelligence {,
       // Save vulnerability history,
       this.saveVulnerabilityHistory(),
     } catch (error) {,
-      this.log(`Vulnerability scan failed: ${error.message}`, 'ERROR'),
-    }
+      this.log(`Vulnerability scan failed: ${error.message}`, 'ERROR');
+};
   }
 ,
   updateVulnerabilityTrends() {,
@@ -607,16 +606,16 @@ class DependencyIntelligence {,
     try {,
       fs.writeFileSync(this.dependencyDataFile, JSON.stringify(this.dependencyData, null, 2)),
     } catch (error) {,
-      this.log(`Failed to save dependency data: ${error.message}`, 'ERROR'),
-    }
+      this.log(`Failed to save dependency data: ${error.message}`, 'ERROR');
+};
   }
 ,
   saveVulnerabilityHistory() {,
     try {,
       fs.writeFileSync(this.vulnerabilityHistoryFile, JSON.stringify(this.vulnerabilityHistory, null, 2)),
     } catch (error) {,
-      this.log(`Failed to save vulnerability history: ${error.message}`, 'ERROR'),
-    }
+      this.log(`Failed to save vulnerability history: ${error.message}`, 'ERROR');
+};
   }
 }
 ,
@@ -629,5 +628,5 @@ process.on('SIGINT', () => {,
 }),
 process.on('SIGTERM', () => {,
   intelligence.log('Shutting down Dependency Intelligence...INFO'),
-  process.exit(0),
-}),
+  process.exit(0);
+  }),'

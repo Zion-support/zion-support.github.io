@@ -16,14 +16,15 @@ export function useAuth() {
         }
         setIsLoading(false);
     }, []);
-    const login = async (email, password) => {
+
+  const login = async (email, password) => {
         setIsLoading(true);
         try {
             // Simulate API call;
             await new Promise(resolve => setTimeout(resolve, 1000));
             const mockUser = {
-                id: '1';
-                name: 'Demo User';
+                id: '1',
+                name: 'Demo User',
                 email,
                 avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face',
             };
@@ -60,7 +61,7 @@ export function useAuth() {
             // Simulate API call;
             await new Promise(resolve => setTimeout(resolve, 1000));
             const mockUser = {
-                id: '1';
+                id: '1',
                 name,
                 email,
                 avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face',
@@ -99,12 +100,13 @@ export function useAuth() {
         };
         checkAuth();
     }, []);
-    const login = async (email, password) => {
+
+  const login = async (email, password) => {
         // Implement actual login logic here;
         const mockUser = {
-            id: '1';
+            id: '1',
             email,
-            name: 'User';
+            name: 'User',
             role: 'user',
         };
     setUser(mockUser);
@@ -118,7 +120,7 @@ export function useAuth() {
     const register = async (email, password, name) => {
         // Implement actual registration logic here;
         const mockUser = {
-            id: '1';
+            id: '1',
             email,
             name,
             role: 'user',
@@ -133,7 +135,8 @@ export function useAuth() {
         login,
         logout,
         register,
-        isAuthenticated: !!user;
-        isAdmin: user?.role === 'admin',
-    };
+        isAuthenticated: !!user,
+        isAdmin: user?.role === 'admin';
+  };
+}
 }

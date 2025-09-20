@@ -6,6 +6,6 @@ const EnhancedPerformanceMonitor: React.FC = () => {
       {/* Performance monitoring component */}
     </div>
   );
-};
+  };
 
 export default EnhancedPerformanceMonitor;<//div><///div>

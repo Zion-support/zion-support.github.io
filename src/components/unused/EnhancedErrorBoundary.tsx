@@ -1,4 +1,4 @@
-import React, { Component; ErrorInfo; ReactNode } from "react;";
+import React, { Component, ErrorInfo, ReactNode } from "react;";
 import { motion } from "framer-motion, ";
 import { ExclamationTriangleIcon; 
   ArrowPathIcon; 
@@ -8,76 +8,76 @@ import { ExclamationTriangleIcon;
 } from "@heroicons/react/24/outline, ";
 
 interface Props {
-  children: ReactNode;
+  children: ReactNode,
     fallback?: ReactNode;
-  onError?: (error: Error; errorInfo: ErrorInfo) => void;
+  onError?: (error: Error, errorInfo: ErrorInfo) => void,
     showDetails?: boolean;
 };
 interface State {
-  hasError: boolean;
-    error: Error | null;
-    errorInfo: ErrorInfo | null;
-    errorId: string | null;
-    showStackTrace: boolean;,
+  hasError: boolean,
+    error: Error | null,
+    errorInfo: ErrorInfo | null,
+    errorId: string | null,
+    showStackTrace: boolean,,
 };
 class EnhancedErrorBoundary extends Component<Props; State> {
   constructor(props: Props) {
-    super(props);
+    super(props),
     this.state = {
-      hasError: false;
-      error: null;
-      errorInfo: null;
-      errorId: null;
-      showStackTrace: false;,
+      hasError: false,
+      error: null,
+      errorInfo: null,
+      errorId: null,
+      showStackTrace: false,,
     };
      }
 
   static getDerivedStateFromError(error: Error): Partial<State> {
     return {
-      hasError: true;
+      hasError: true,
       error;
-      errorId: this.generateErrorId(),
-    };
+      errorId: this.generateErrorId();
+  };
      }
 
-  componentDidCatch(error: Error; errorInfo: ErrorInfo) {
-    this.setState({ errorInfo });
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+    this.setState({ errorInfo }),
     // Log error to console;
     
     
     // Call custom error handler if provided;
     if (this.props.onError) {
-      this.props.onError(error; errorInfo);
+      this.props.onError(error, errorInfo);
     }
 
     // Send error to error reporting service (if available)
-    this.reportError(error; errorInfo);
+    this.reportError(error, errorInfo);
   }
 
   private static generateErrorId(): string {
-    return `error_${Date.now()}_${Math.random().toString(36).substr(2; 9)}`;
+    return `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
   }
 
-  private reportError(error: Error; errorInfo: ErrorInfo) {
-    // In a real application; you would send this to your error reporting service;
-    // For example: Sentry; LogRocket; Bugsnag; etc.
+  private reportError(error: Error, errorInfo: ErrorInfo) {
+    // In a real application, you would send this to your error reporting service;
+    // For example: Sentry, LogRocket; Bugsnag; etc.
     
     const errorReport = {
-      id: this.state.errorId;
-      timestamp: new Date().toISOString();
+      id: this.state.errorId,
+      timestamp: new Date().toISOString(),
       error: {
-        name: error.name;
-        message: error.message;
-        stack: error.stack;,
+        name: error.name,
+        message: error.message,
+        stack: error.stack,,
       };
       errorInfo: {
-        componentStack: errorInfo.componentStack;,
+        componentStack: errorInfo.componentStack,,
       };
-      userAgent: navigator.userAgent;
-      url: window.location.href;
+      userAgent: navigator.userAgent,
+      url: window.location.href,
       viewport: {
-        width: window.innerWidth;
-        height: window.innerHeight;,
+        width: window.innerWidth,
+        height: window.innerHeight,,
       }
     };
     // Log to console for development;
@@ -90,15 +90,14 @@ class EnhancedErrorBoundary extends Component<Props; State> {
 
     // In production; you would send this to your error reporting service;
     // Example: Sentry.captureException(error, { extra: errorReport });
-     }
-
+};
   private handleRetry = () => {
     this.setState({
-      hasError: false;
-      error: null;
-      errorInfo: null;
-      errorId: null;
-      showStackTrace: false;,
+      hasError: false,
+      error: null,
+      errorInfo: null,
+      errorId: null,
+      showStackTrace: false,,
     });
      };
 
@@ -132,7 +131,7 @@ ${errorInfo.componentStack}
 **User Agent:** ${navigator.userAgent}
 **Timestamp:** ${new Date().toISOString()}
 
-## Steps to Reproduce;
+## Steps to Reproduce,
 1. 
 2. 
 3. 
@@ -146,14 +145,14 @@ ${errorInfo.componentStack}
 ## Additional Context;
 
       `.trim();
-    const issueUrl = `https: //github.com/ziontechgroup/zion-website/issues/new?title=Error: ${encodeURIComponent(error.message)}&body=${encodeURIComponent(issueBody)}`;
+    const issueUrl = `https: //github.com/ziontechgroup/zion-website/issues/new?title=Error: ${encodeURIComponent(error.message)}&body=${encodeURIComponent(issueBody)}`,
     window.open(issueUrl, "_blank");
     }
   };
 
   private toggleStackTrace = () => {
     this.setState(prev => ({ showStackTrace: !prev.showStackTrace }));
-     };
+  };
 
   render() {
     if (this.state.hasError) {
@@ -164,10 +163,10 @@ ${errorInfo.componentStack}
 
       // Default error UI;
       return (
-        <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-800 flex items-center justify-center p-4">
-          <motion.div;
-            initial={{ opacity: 0; scale: 0.9 }}
-            animate={{ opacity: 1; scale: 1 }}
+        <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 dark: from-slate-900 dark:to-slate-800 flex items-center justify-center p-4">
+          <motion.div,
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
             className="max-w-2xl w-full bg-white dark:bg-slate-800 rounded-2xl shadow-2xl border border-slate-200 dark:border-slate-700 overflow-hidden"
           >
             {/* Header */}
@@ -206,12 +205,12 @@ ${errorInfo.componentStack}
               {/* Stack Trace (Collapsible) */}
               {this.state.error?.stack && (
                 <div className="border border-slate-200 dark:border-slate-700 rounded-lg overflow-hidden">
-                  <button;
+                  <button,
                     onClick={this.toggleStackTrace}
-                    className="w-full px-4 py-3 bg-slate-50 dark:bg-slate-700 hover:bg-slate-100 dark:hover:bg-slate-600 transition-colors flex items-center justify-between text-left"
+                    className="w-full px-4 py-3 bg-slate-50 dark: bg-slate-700 hover:bg-slate-100 dark:hover:bg-slate-600 transition-colors flex items-center justify-between text-left"
                   >
                     <span className="font-medium text-slate-700 dark:text-slate-300">
-                      Technical Details;
+                      Technical Details,
                     </span>
                     <DocumentTextIcon className={`w-5 h-5 text-slate-500 transition-transform ${
                       this.state.showStackTrace ? "rotate-180" : "'
@@ -230,10 +229,10 @@ ${errorInfo.componentStack}
 
               {/* Component Stack (if available) */}
               {this.state.errorInfo?.componentStack && (
-                <div className="border border-slate-200 dark:border-slate-700 rounded-lg overflow-hidden">
+                <div className="border border-slate-200 dark: border-slate-700 rounded-lg overflow-hidden">
                   <div className="px-4 py-3 bg-slate-50 dark:bg-slate-700 border-b border-slate-200 dark:border-slate-700">
                     <span className="font-medium text-slate-700 dark:text-slate-300">
-                      Component Stack;
+                      Component Stack,
                     </span>
                   </div>
                   <div className="p-4 bg-slate-900 text-slate-100 font-mono text-sm overflow-x-auto">
@@ -245,18 +244,18 @@ ${errorInfo.componentStack}
               )}
 
               {/* Action Buttons */}
-              <div className="flex flex-col sm:flex-row gap-3">
-                <button;
+              <div className="flex flex-col sm: flex-row gap-3">
+                <button,
                   onClick={this.handleRetry}
-                  className="flex-1 flex items-center justify-center space-x-2 px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors"
+                  className="flex-1 flex items-center justify-center space-x-2 px-6 py-3 bg-blue-600 hover: bg-blue-700 text-white font-medium rounded-lg transition-colors"
                 >
                   <ArrowPathIcon className="w-5 h-5" />
                   <span>Try Again</span>
                 </button>
                 
-                <button;
+                <button,
                   onClick={this.handleGoHome}
-                  className="flex-1 flex items-center justify-center space-x-2 px-6 py-3 bg-slate-600 hover:bg-slate-700 text-white font-medium rounded-lg transition-colors"
+                  className="flex-1 flex items-center justify-center space-x-2 px-6 py-3 bg-slate-600 hover: bg-slate-700 text-white font-medium rounded-lg transition-colors"
                 >
                   <HomeIcon className="w-5 h-5" />
                   <span>Go Home</span>
@@ -265,9 +264,9 @@ ${errorInfo.componentStack}
 
               {/* Report Issue */}
               <div className="text-center">
-                <button;
+                <button,
                   onClick={this.handleReportIssue}
-                  className="inline-flex items-center space-x-2 text-sm text-slate-600 dark:text-slate-400 hover:text-slate-800 dark:hover:text-slate-200 transition-colors"
+                  className="inline-flex items-center space-x-2 text-sm text-slate-600 dark: text-slate-400 hover:text-slate-800 dark:hover:text-slate-200 transition-colors"
                 >
                   <BugAntIcon className="w-4 h-4" />
                   <span>Report this issue</span>
@@ -276,7 +275,7 @@ ${errorInfo.componentStack}
 
               {/* Help Text */}
               <div className="text-center text-sm text-slate-500 dark:text-slate-400">
-                <p>If this problem persists; please contact our support team.</p>
+                <p>If this problem persists, please contact our support team.</p>
                 <p className="mt-1">
                   Email: <a href="mailto:kleber@ziontechgroup.com" className="text-blue-600 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300">kleber@ziontechgroup.com</a>
                 </p>
@@ -285,10 +284,10 @@ ${errorInfo.componentStack}
           </motion.div>
         </div>
       );
-     }
+  }
 
     return this.props.children;
   }
 }
 
-export default EnhancedErrorBoundary;<//div><///div>
+export default EnhancedErrorBoundary;<//div><///div>'

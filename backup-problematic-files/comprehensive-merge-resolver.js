@@ -603,5 +603,5 @@ if ( {) {,
 ,
 // Run the merge resolver,
 if (require && require.main === module) {,
-  const resolver = new ComprehensiveMergeResolver(),
-}}}}}
+  const resolver = new ComprehensiveMergeResolver();
+  }}}}}

@@ -9,7 +9,7 @@ export const metadata = {
   keywords: ['AI 2026', 'artificial intelligence breakthrough', 'machine learning revolution', 'neural networks', 'quantum AI'],
 }
 
-export default function AI2026BreakthroughRevolution() {
+export default function AI2026BreakthroughRevolution() : any {
   return (
     <div>
       <SEO

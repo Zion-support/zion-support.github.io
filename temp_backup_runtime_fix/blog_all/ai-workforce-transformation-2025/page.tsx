@@ -1,7 +1,7 @@
 import React from 'react',
 import BlogSEO from '../../../components/BlogSEO',
 import Link from 'next/link',
-export default function AIWorkforceTransformation2025() {,
+export default function AIWorkforceTransformation2025() : any {,
   return (,
     <div className="min-h-screen bg-white">,
       <BlogSEO,
@@ -277,4 +277,4 @@ export default function AIWorkforceTransformation2025() {,
         </div>,
       </div>,
     </div>,
-  )}
+  )}'

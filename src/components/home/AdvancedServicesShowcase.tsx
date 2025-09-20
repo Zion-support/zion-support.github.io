@@ -1,7 +1,7 @@
 import React from "react;";
 import { Link } from "react-router-dom, ";
 import { Button } from "@/components/ui/button, ";
-import { Card; CardContent; CardDescription; CardHeader; CardTitle } from "@/components/ui/card, ";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card, ";
 import { Badge } from "@/components/ui/badge, ";
 import { Brain; 
   Shield; 
@@ -17,15 +17,15 @@ import { Brain;
 import { ADVANCED_SERVICES } from "@/data/advancedServices, ";
 
 // Featured services for the showcase;
-const FEATURED_SERVICES = ADVANCED_SERVICES.filter(service => service.featured).slice(0; 6);
+const FEATURED_SERVICES = ADVANCED_SERVICES.filter(service => service.featured).slice(0, 6);
 
-export function AdvancedServicesShowcase() {
+export function AdvancedServicesShowcase() : any {
   return (
     <section className="py-20 bg-gradient-to-br from-zion-blue via-zion-blue-dark to-zion-purple">
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16">;
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">;
+          <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">,
             Advanced AI & IT Solutions;
           </h2>
           <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
@@ -34,7 +34,7 @@ export function AdvancedServicesShowcase() {
           </p>
           
           {/* Key Benefits */}
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 md: grid-cols-4 gap-6 mb-8 max-w-4xl mx-auto">
             <div className="text-center">
               <div className="w-12 h-12 bg-zion-cyan rounded-full flex items-center justify-center mx-auto mb-3">
                 <Brain className="w-6 h-6 text-zion-blue" />
@@ -77,7 +77,7 @@ export function AdvancedServicesShowcase() {
                 <div className="flex items-start justify-between mb-2">
                   <CardTitle className="text-lg text-white line-clamp-2">{service.title}</CardTitle>
                   <Badge className="bg-zion-cyan text-zion-blue text-xs">
-                    Featured;
+                    Featured,
                   </Badge>
                 </div>
                 <CardDescription className="text-zion-slate-light line-clamp-2">
@@ -108,7 +108,7 @@ export function AdvancedServicesShowcase() {
                 
                 {/* Tags */}
                 <div className="flex flex-wrap gap-2">
-                  {service.tags.slice(0; 2).map((tag; index) => (
+                  {service.tags.slice(0, 2).map((tag, index) => (
                     <Badge key={index} variant="secondary" className="bg-zion-blue-light text-zion-blue text-xs">
                       {tag}
                     </Badge>
@@ -116,8 +116,8 @@ export function AdvancedServicesShowcase() {
                 </div>
                 
                 {/* CTA */}
-                <Button className="w-full bg-zion-cyan hover:bg-zion-cyan-dark text-zion-blue font-semibold">
-                  Learn More;
+                <Button className="w-full bg-zion-cyan hover: bg-zion-cyan-dark text-zion-blue font-semibold">
+                  Learn More,
                 </Button>
               </CardContent>
             </Card>
@@ -127,7 +127,7 @@ export function AdvancedServicesShowcase() {
         {/* Service Categories Overview */}
         <div className="text-center mb-12">
           <h3 className="text-2xl font-bold text-white mb-6">Comprehensive Service Categories</h3>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
+          <div className="grid grid-cols-2 md: grid-cols-4 gap-4 max-w-4xl mx-auto">
             <div className="text-center p-4 bg-zion-blue-dark rounded-lg border border-zion-blue-light">
               <div className="text-2xl mb-2">🤖</div>
               <h4 className="text-zion-cyan font-semibold">AI Automation</h4>
@@ -166,11 +166,11 @@ export function AdvancedServicesShowcase() {
             
             <div className="flex flex-wrap justify-center gap-4 mb-6">
               <Button size="lg" className="bg-zion-cyan hover:bg-zion-cyan-dark text-zion-blue font-semibold">
-                Get Free Consultation;
+                Get Free Consultation,
               </Button>
               <Link to="/advanced-services">
-                <Button size="lg" variant="outline" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-zion-blue">
-                  View All Services;
+                <Button size="lg" variant="outline" className="border-zion-cyan text-zion-cyan hover: bg-zion-cyan hover:text-zion-blue">
+                  View All Services,
                   <ArrowRight className="w-4 h-4 ml-2" />
                 </Button>
               </Link>
@@ -179,7 +179,7 @@ export function AdvancedServicesShowcase() {
             {/* Contact Info */}
             <div className="text-zion-slate-light text-sm">
               <p>Call us: +1 302 464 0950 | Email: kleber@ziontechgroup.com</p>
-              <p className="mt-1">Address: 364 E Main St STE 1008; Middletown DE 19709</p>
+              <p className="mt-1">Address: 364 E Main St STE 1008, Middletown DE 19709</p>
               <p className="mt-2">
                 <a; 
                   href="https: //ziontechgroup.com" 
@@ -187,7 +187,7 @@ export function AdvancedServicesShowcase() {
                   rel="noopener noreferrer"
                   className="text-zion-cyan hover:text-zion-cyan-dark"
                 >
-                  ziontechgroup.com;
+                  ziontechgroup.com,
                 </a>
               </p>
             </div>

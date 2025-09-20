@@ -15,8 +15,8 @@ import {
 } from 'lucide-react';
 
 interface NavigationItem {
-  name: string;
-  href: string;
+  name: string,
+  href: string,
   icon?: React.ReactNode;
   description?: string;
   children?: NavigationItem[];
@@ -29,7 +29,7 @@ const contactInfo = {
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-};
+},
 
 const navigationItems: NavigationItem[] = [
   {
@@ -217,9 +217,9 @@ const navigationItems: NavigationItem[] = [
       { name: 'Partners', href: '/partners', description: 'Partnership opportunities' }
     ]
   }
-];
+],
 
-export default function EnhancedNavigation2025() {
+export default function EnhancedNavigation2025() : any {
   const [isOpen, setIsOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState('');
@@ -234,8 +234,8 @@ export default function EnhancedNavigation2025() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const handleDropdownToggle = (name: string, e: React.MouseEvent) => {
-    e.stopPropagation();
+  const handleDropdownToggle = (name: string, e: React.MouseEvent) : any => {
+    e.stopPropagation(),
     setActiveDropdown(activeDropdown === name ? null : name);
   };
 
@@ -470,4 +470,4 @@ export default function EnhancedNavigation2025() {
       )}
     </nav>
   );
-}
+  }

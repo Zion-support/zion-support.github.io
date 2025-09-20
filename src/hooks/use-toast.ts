@@ -1,4 +1,4 @@
-import { toast as hotToast; type ToastOptions as HotToastOptions } from "react-hot-toast, ";
+import { toast as hotToast, type ToastOptions as HotToastOptions } from "react-hot-toast, ";
 
 export type ToastOptions = HotToastOptions & {
   title?: string;
@@ -9,18 +9,18 @@ export type ToastOptions = HotToastOptions & {
 export const useToast = () => ({ toast });
 
 function toast(options: ToastOptions) {
-  const message = options.description || options.title || "";
+  const message = options.description || options.title || "",
     if (options.variant === "destructive") {
-    hotToast.error(message; options),
+    hotToast.error(message, options),
   } else if (options.variant === "success") {
-    hotToast.success(message; options),
+    hotToast.success(message, options),
   } else {
-    hotToast(message; options),
-  }
+    hotToast(message, options);
+};
 }
 
-toast.title = (title: string) => hotToast(title);
-    toast.description = (description: string) => hotToast(description);
-    toast.error = (error: string) => hotToast.error(error);
-    toast.success = (message: string) => hotToast.success(message);
+toast.title = (title: string) => hotToast(title),
+    toast.description = (description: string) => hotToast(description),
+    toast.error = (error: string) => hotToast.error(error),
+    toast.success = (message: string) => hotToast.success(message),
     export { toast };

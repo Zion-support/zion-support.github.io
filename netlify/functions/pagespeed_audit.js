@@ -6,8 +6,8 @@ async function runPsi(url, strategy = 'mobile', key) {,
   if (key) u.searchParams.set('key', key),
   const res = await fetch(u.toString()),
   if (!res.ok) throw new Error(`PSI ${strategy} failed ${res.status}`),
-  return res.json(),
-}
+  return res.json();
+};
 ,
 exports.handler = async function(event, context) {,
   try {,
@@ -25,8 +25,8 @@ exports.handler = async function(event, context) {,
         const score = mobile.lighthouseResult?.categories?.performance?.score ?? null,
         results.push({ route, strategy: 'mobile', score, fetchedAt: new Date().toISOString() }),
       } catch (e) {,
-        results.push({ route, strategy: 'mobile', error: String(e) }),
-      }
+        results.push({ route, strategy: 'mobile', error: String(e) });
+};
     }
 ,
     const payload = { origin, results, generatedAt: new Date().toISOString() },
@@ -63,6 +63,6 @@ exports.handler = async function(event, context) {,
 ,
     return { statusCode: 200, body: JSON.stringify({ ok: true, commit: jsonCommit.commit && jsonCommit.commit.sha }) },
   } catch (e) {,
-    return { statusCode: 500, body: JSON.stringify({ error: String(e) }) },
+    return { statusCode: 500, body: JSON.stringify({ error: String(e) }) };
   }
 },

@@ -26,7 +26,7 @@ import {
   TrendingUp;
 } from "lucide-react";
 
-export function EnhancedHeroSection() {
+export function EnhancedHeroSection() : any {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-zion-blue-dark via-zion-slate to-zion-blue-dark">
       {/* Animated Background Elements */}
@@ -50,56 +50,56 @@ export function EnhancedHeroSection() {
       {/* Main Content */}
       <div className="relative z-10 container mx-auto px-4 text-center">
         {/* Badge */}
-        <div className="inline-flex items-center gap-2 bg-zion-cyan/10 text-zion-cyan px-6 py-3 rounded-full text-sm font-medium mb-8 border border-zion-cyan/20 hover:border-zion-cyan/40 transition-all duration-300 hover:bg-zion-cyan/20">
+        <div className="inline-flex items-center gap-2 bg-zion-cyan/10 text-zion-cyan px-6 py-3 rounded-full text-sm font-medium mb-8 border border-zion-cyan/20 hover: border-zion-cyan/40 transition-all duration-300 hover:bg-zion-cyan/20">
           <Sparkles className="h-4 w-4 animate-pulse" />
           <span className="neon-text">New Micro SAAS Services Available</span>
         </div>
 
         {/* Main Heading */}
-        <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight mb-8">;
+        <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight mb-8">,
           <span className="block bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-blue bg-clip-text text-transparent neon-pulse">;
             ZION;
           </span>
-          <span className="block text-2xl md:text-4xl lg:text-5xl text-white mt-4 font-normal">
-            The Future of Tech & AI;
+          <span className="block text-2xl md: text-4xl lg:text-5xl text-white mt-4 font-normal">
+            The Future of Tech & AI,
           </span>
         </h1>
 
         {/* Subtitle */}
-        <p className="text-xl md:text-2xl lg:text-3xl text-zion-slate-light mb-12 max-w-5xl mx-auto leading-relaxed">
-          Discover the world"s most comprehensive marketplace for AI talent; micro SAAS services; 
+        <p className="text-xl md: text-2xl lg:text-3xl text-zion-slate-light mb-12 max-w-5xl mx-auto leading-relaxed">
+          Discover the world"s most comprehensive marketplace for AI talent, micro SAAS services; 
           and cutting-edge technology solutions. Transform your business with our innovative platform.
         </p>
 
         {/* CTA Buttons */}
-        <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
-          <Button; 
+        <div className="flex flex-col sm: flex-row gap-4 justify-center mb-16">
+          <Button, 
             asChild; 
             size="lg" 
-            className="bg-gradient-to-r from-zion-cyan to-zion-blue hover:from-zion-cyan/90 hover:to-zion-blue/90 text-zion-slate font-semibold px-8 py-6 text-lg hover-lift hover-glow transition-all duration-300"
+            className="bg-gradient-to-r from-zion-cyan to-zion-blue hover: from-zion-cyan/90 hover:to-zion-blue/90 text-zion-slate font-semibold px-8 py-6 text-lg hover-lift hover-glow transition-all duration-300"
           >
             <Link to="/micro-saas-services">
               <Zap className="h-6 w-6 mr-3" />
-              Explore Services;
-              <ArrowRight className="h-6 w-6 ml-3 group-hover:translate-x-1 transition-transform" />
+              Explore Services,
+              <ArrowRight className="h-6 w-6 ml-3 group-hover: translate-x-1 transition-transform" />
             </Link>
           </Button>
           
-          <Button; 
+          <Button, 
             asChild; 
             size="lg" 
             variant="outline" 
-            className="border-2 border-zion-purple text-zion-purple hover:bg-zion-purple hover:text-white font-semibold px-8 py-6 text-lg hover-lift transition-all duration-300"
+            className="border-2 border-zion-purple text-zion-purple hover: bg-zion-purple hover:text-white font-semibold px-8 py-6 text-lg hover-lift transition-all duration-300"
           >
             <Link to="/request-quote">
               <Users className="h-6 w-6 mr-3" />
-              Get Started;
+              Get Started,
             </Link>
           </Button>
         </div>
 
         {/* Stats Section */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
+        <div className="grid grid-cols-2 md: grid-cols-4 gap-8 mb-16">
           <div className="text-center group">
             <div className="text-3xl md:text-4xl font-bold text-zion-cyan mb-2 group-hover:scale-110 transition-transform duration-300">
               500+
@@ -120,9 +120,9 @@ export function EnhancedHeroSection() {
           </div>
           <div className="text-center group">
             <div className="text-3xl md:text-4xl font-bold text-zion-cyan mb-2 group-hover:scale-110 transition-transform duration-300">
-              24/7;
+              24/7,
             </div>
-            <div className="text-zion-slate-light text-sm md:text-base">Support Available</div>
+            <div className="text-zion-slate-light text-sm md: text-base">Support Available</div>
           </div>
         </div>
 
@@ -173,11 +173,11 @@ export function EnhancedHeroSection() {
             <div className="w-3 h-3 bg-zion-cyan rounded-full animate-pulse"></div>
             <span className="text-zion-cyan text-sm font-medium">Live AI Matching</span>
           </div>
-          <div className="text-white text-xs mt-2">Currently processing 1;247 matches</div>
+          <div className="text-white text-xs mt-2">Currently processing 1,247 matches</div>
         </div>
       </div>
 
-      <div className="absolute bottom-1/4 left-8 hidden lg:block">
+      <div className="absolute bottom-1/4 left-8 hidden lg: block">
         <div className="glass-effect p-4 rounded-lg border border-zion-purple/20 hover:border-zion-purple/50 transition-all duration-300 hover:scale-105">
           <div className="flex items-center gap-3">
             <Star className="h-4 w-4 text-zion-purple" />
@@ -187,7 +187,7 @@ export function EnhancedHeroSection() {
         </div>
       </div>
     </section>
-import React from "react";
+import React from "react",
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Link } from "react-router-dom";
@@ -207,12 +207,12 @@ import {
 } from "lucide-react";
 import { SimpleFuturisticBackground } from "@/components/ui/FuturisticBackground";
 
-export function EnhancedHeroSection() {
+export function EnhancedHeroSection() : any {
   const stats = [
     { label: "Active Users", value: "50K+", icon: <Users className="h-5 w-5" /> },
     { label: "Services Delivered", value: "10K+", icon: <Zap className="h-5 w-5" /> },
     { label: "Success Rate", value: "99.9%", icon: <Shield className="h-5 w-5" /> },;
-    { label: "Global Reach", value: "150+", icon: <TrendingUp className="h-5 w-5" /> };
+    { label: "Global Reach", value: "150+", icon: <TrendingUp className="h-5 w-5" /> },
   ];
 
   const features = [
@@ -243,27 +243,27 @@ export function EnhancedHeroSection() {
               <div className="space-y-4">
                 <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-tight">
                   <span className="bg-gradient-to-r from-white via-zion-cyan to-zion-purple bg-clip-text text-transparent">
-                    The Future of;
+                    The Future of,
                   </span>
                   <br />
                   <span className="bg-gradient-to-r from-zion-purple via-zion-cyan to-white bg-clip-text text-transparent">
-                    Tech & AI;
+                    Tech & AI,
                   </span>
                   <br />
                   <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
-                    Marketplace;
+                    Marketplace,
                   </span>
                 </h1>
                 
                 <p className="text-xl md:text-2xl text-zion-slate-light max-w-2xl leading-relaxed">
-                  Discover cutting-edge AI services; enterprise IT solutions; and innovative SaaS platforms. 
+                  Discover cutting-edge AI services, enterprise IT solutions, and innovative SaaS platforms. 
                   Connect with top talent and transform your business with next-generation technology.
                 </p>
               </div>
 
               {/* Features List */}
               <div className="grid grid-cols-2 gap-3">
-                {features.map((feature; index) => (
+                {features.map((feature, index) => (
                   <div key={index} className="flex items-center gap-2 text-zion-slate-light">
                     <CheckCircle className="h-4 w-4 text-zion-cyan flex-shrink-0" />
                     <span className="text-sm">{feature}</span>
@@ -272,17 +272,17 @@ export function EnhancedHeroSection() {
               </div>
 
               {/* CTA Buttons */}
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Button; 
+              <div className="flex flex-col sm: flex-row gap-4">
+                <Button, 
                   size="lg" 
                   className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white px-8 py-4 text-lg font-semibold gap-3 group transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-zion-purple/25"
                   onClick={() => window.open("https://ziontechgroup.com/contact", "_blank")}
                 >
                   <span>Get Started Today</span>
-                  <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                  <ArrowRight className="h-5 w-5 group-hover: translate-x-1 transition-transform" />
                 </Button>
                 
-                <Button; 
+                <Button, 
                   size="lg" 
                   variant="outline" 
                   className="border-zion-purple/30 text-zion-cyan hover:bg-zion-purple/10 hover:border-zion-purple/50 px-8 py-4 text-lg font-semibold gap-3 backdrop-blur-sm"
@@ -376,9 +376,9 @@ export function EnhancedHeroSection() {
           {/* Stats Section */}
           <div className="mt-20">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-              {stats.map((stat; index) => (
+              {stats.map((stat, index) => (
                 <div key={index} className="text-center group">
-                  <div className="flex items-center justify-center w-16 h-16 mx-auto mb-4 bg-gradient-to-r from-zion-purple/20 to-zion-cyan/20 border border-zion-purple/30 rounded-2xl backdrop-blur-sm group-hover:scale-110 transition-transform duration-300">
+                  <div className="flex items-center justify-center w-16 h-16 mx-auto mb-4 bg-gradient-to-r from-zion-purple/20 to-zion-cyan/20 border border-zion-purple/30 rounded-2xl backdrop-blur-sm group-hover: scale-110 transition-transform duration-300">
                     <div className="text-zion-cyan group-hover:text-white transition-colors">
                       {stat.icon}
                     </div>
@@ -397,11 +397,11 @@ export function EnhancedHeroSection() {
                 Ready to Experience the Future?
               </h3>
               <p className="text-zion-slate-light mb-6 max-w-2xl mx-auto">
-                Join thousands of businesses already transforming their operations with our cutting-edge; 
+                Join thousands of businesses already transforming their operations with our cutting-edge, 
                 technology solutions. Start your journey today.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button; 
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">
+                <Button, 
                   size="lg" 
                   className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white gap-3"
                   onClick={() => window.open("https://ziontechgroup.com/contact", "_blank")}
@@ -425,4 +425,4 @@ export function EnhancedHeroSection() {
       </section>
     </SimpleFuturisticBackground>
   );
-}<//SimpleFuturisticBackground><///SimpleFuturisticBackground>
+}<//SimpleFuturisticBackground><///SimpleFuturisticBackground>}})'

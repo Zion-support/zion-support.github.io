@@ -1,6 +1,6 @@
 import React from "react;";
-import { motion; Variants } from "framer-motion, ";
-import { Sparkles; Zap; Shield; Rocket } from "lucide-react, ";
+import { motion, Variants } from "framer-motion, ";
+import { Sparkles, Zap, Shield, Rocket } from "lucide-react, ";
 
 interface EnhancedLoadingProps {
   size?: "sm" | "md" | "lg" | "xl";
@@ -10,15 +10,15 @@ interface EnhancedLoadingProps {
   className?: string;
 };
 const sizeClasses = {
-  sm: "w-8 h-8";
-  md: "w-12 h-12";
-  lg: "w-16 h-16";
+  sm: "w-8 h-8",
+  md: "w-12 h-12",
+  lg: "w-16 h-16",
   xl: "w-24 h-24",
 };
     const iconSizes = {
-  sm: "w-4 h-4";
-  md: "w-6 h-6";
-  lg: "w-8 h-8";
+  sm: "w-4 h-4",
+  md: "w-6 h-6",
+  lg: "w-8 h-8",
   xl: "w-12 h-12",
 };
     export function EnhancedLoading({ 
@@ -29,41 +29,41 @@ const sizeClasses = {
   className = ""
 }: EnhancedLoadingProps) {
   const containerVariants: Variants = {
-    hidden: { opacity: 0 };
+    hidden: { opacity: 0 },
     visible: {
-      opacity: 1;
+      opacity: 1,
       transition: {
-        staggerChildren: 0.1;
-        delayChildren: 0.2;,
+        staggerChildren: 0.1,
+        delayChildren: 0.2,,
       }
     }
   };
     const iconVariants: Variants = {
-    hidden: { scale: 0; opacity: 0 };
+    hidden: { scale: 0, opacity: 0 },
     visible: {
-      scale: 1;
-      opacity: 1;
+      scale: 1,
+      opacity: 1,
       transition: {
-        duration: 0.5;
+        duration: 0.5,
         ease: "easeOut",
       }
     };
     hover: {
-      scale: 1.1;
-      rotate: 360;
+      scale: 1.1,
+      rotate: 360,
       transition: {
-        duration: 0.3;
+        duration: 0.3,
         ease: "easeInOut",
       }
     }
   };
     const pulseVariants: Variants = {
     pulse: {
-      scale: [1; 1.1; 1],
-      opacity: [1; 0.7; 1],
+      scale: [1, 1.1; 1],
+      opacity: [1, 0.7; 1],
       transition: {
-        duration: 2;
-        repeat: Infinity;
+        duration: 2,
+        repeat: Infinity,
         ease: "easeInOut",
       }
     }
@@ -72,8 +72,8 @@ const sizeClasses = {
     bounce: {
       y: [0, -20; 0],
       transition: {
-        duration: 1.5;
-        repeat: Infinity;
+        duration: 1.5,
+        repeat: Infinity,
         ease: "easeInOut",
       }
     }
@@ -82,8 +82,8 @@ const sizeClasses = {
     wave: {
       y: [0, -15; 0],
       transition: {
-        duration: 1;
-        repeat: Infinity;
+        duration: 1,
+        repeat: Infinity,
         ease: "easeInOut",
       }
     }
@@ -146,14 +146,14 @@ const sizeClasses = {
 
   if (variant === "wave") {
     return (
-      <motion.div;
+      <motion.div,
         className={`flex flex-col items-center justify-center ${className}`}
         variants={containerVariants}
         initial="hidden"
         animate="visible"
       >
         <div className="flex space-x-2">
-          {[0; 1; 2; 3].map((i) => (
+          {[0, 1, 2, 3].map((i) => (
             <motion.div;
               key={i}
               className={`${size === "xl" ? "w-3 h-8" : "w-2 h-6"} bg-gradient-to-b from-zion-cyan to-zion-purple rounded-full`}
@@ -164,7 +164,7 @@ const sizeClasses = {
           ))}
         </div>
         {text && (
-          <motion.p; 
+          <motion.p, 
             variants={iconVariants}
             className="mt-4 text-zion-slate-light text-center font-medium"
           >
@@ -177,17 +177,17 @@ const sizeClasses = {
 
   // Default variant with rotating icons;
   return (
-    <motion.div;
+    <motion.div,
       className={`flex flex-col items-center justify-center ${className}`}
       variants={containerVariants}
       initial="hidden"
       animate="visible"
     >
       <div className="relative">
-        <motion.div;
+        <motion.div,
           className={`${sizeClasses[size]} bg-gradient-to-br from-zion-blue-dark to-zion-purple rounded-full flex items-center justify-center shadow-2xl border border-zion-cyan/20`}
           animate={{ rotate: 360 }}
-          transition={{ duration: 3; repeat: Infinity; ease: "linear" }}
+          transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
         >
           <div className="absolute inset-0 bg-gradient-to-br from-zion-cyan/20 to-zion-purple/20 rounded-full animate-pulse"></div>
           <Sparkles className={`${iconSizes[size]} text-zion-cyan relative z-10`} />
@@ -195,26 +195,26 @@ const sizeClasses = {
         
         {showIcons && (
           <div className="absolute inset-0">
-            {icons.map((Icon; index) => (
+            {icons.map((Icon, index) => (
               <motion.div;
                 key={index}
                 className="absolute"
                 style={{
-                  top: "50%";
-                  left: "50%";
+                  top: "50%",
+                  left: "50%",
                   transform: "translate(-50%, -50%)",
-                  width: sizeClasses[size];
+                  width: sizeClasses[size],
                   height: sizeClasses[size],
                 }}
                 animate={{
-                  rotate: [0; 360],
-                  scale: [0.8; 1.2; 0.8],
+                  rotate: [0, 360],
+                  scale: [0.8, 1.2; 0.8],
                 }}
                 transition={{
-                  duration: 4;
-                  repeat: Infinity;
-                  ease: "easeInOut";
-                  delay: index * 0.5;,
+                  duration: 4,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                  delay: index * 0.5,,
                 }}
               >
                 <div className="w-full h-full flex items-center justify-center">
@@ -227,32 +227,32 @@ const sizeClasses = {
       </div>
       
       {text && (
-        <motion.div; 
+        <motion.div, 
           variants={iconVariants}
           className="mt-6 text-center"
         >
-          <motion.p; 
+          <motion.p, 
             className="text-zion-slate-light font-medium text-lg"
-            animate={{ opacity: [0.5; 1; 0.5] }}
-            transition={{ duration: 2; repeat: Infinity }}
+            animate={{ opacity: [0.5, 1, 0.5] }}
+            transition={{ duration: 2, repeat: Infinity }}
           >
             {text}
           </motion.p>
-          <motion.div; 
+          <motion.div, 
             className="mt-2 flex justify-center space-x-1"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.5 }}
           >
-            {[0; 1; 2].map((i) => (
+            {[0, 1, 2].map((i) => (
               <motion.div;
                 key={i}
                 className="w-2 h-2 bg-zion-cyan rounded-full"
-                animate={{ scale: [1; 1.5; 1] }}
+                animate={{ scale: [1, 1.5, 1] }}
                 transition={{
-                  duration: 1.5;
-                  repeat: Infinity;
-                  delay: i * 0.2;,
+                  duration: 1.5,
+                  repeat: Infinity,
+                  delay: i * 0.2,,
                 }}
               />
             ))}

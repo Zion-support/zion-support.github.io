@@ -12,7 +12,7 @@ class CodeQualityMonitor {
       testCoverage: 0,
       performance: 0,
       lastUpdated: new Date().toISOString()
-    };
+    },
     this.logFile = path.join(__dirname, 'logs', 'code-quality.log');
   }
 
@@ -28,7 +28,7 @@ class CodeQualityMonitor {
       this.log('Starting code quality analysis...');
       
       // Analyze TypeScript complexity
-      const result = execSync('npx tsc --noEmit', { encoding: 'utf8' });
+      const result = execSync('npx tsc --noEmit', { encoding: 'utf8' }),
       this.metrics.complexity = this.calculateComplexity();
       this.metrics.maintainability = this.calculateMaintainability();
       this.metrics.testCoverage = this.calculateTestCoverage();

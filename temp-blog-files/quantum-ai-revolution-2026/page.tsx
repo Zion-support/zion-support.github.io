@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description: 'Discover the revolutionary quantum AI technologies that will transform business operations in 2026. Quantum computing, neural networks, and synthetic intelligence breakthrough guide.'
   keywords: ['quantum AIquantum computingAI revolution 2026quantum neural networks', 'synthetic intelligencebusiness transformation']
 }
-export default function QuantumAIRevolution2026Page() {
+export default function QuantumAIRevolution2026Page() : any {
   return (
     <div>
       {/* Hero Section */}

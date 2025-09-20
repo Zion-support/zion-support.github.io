@@ -32,7 +32,7 @@ export function FooterNewsletter() {
     onChan, g, e: (e) => setEmai, l(e.targe,  t.valu, e), classNa, m, e: "p, l-1, 0 b, g-zio, n-blu, e borde, r-zio, n-blu, e-ligh, t tex, t-whit, e placehold, e, r:tex, t-zio, n-slat, e-ligh, t foc, u, s:borde, r-zio, n-cya, n",
     requir, e, d: tru, e })] }), _jsx(Butto,  n, { typ, e: "submit",
     disable, d: isLoading || !email.trim(), classNam, e: "w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hove, r:from-zion-purple-light hove, r:to-zion-purple disable, d:opacity-50 disable, d:cursor-not-allowed",
-    childre, n: isLoading ? 'Subscribing...' : 'Subscribe' })] }));
+    childre, n: isLoading ? 'Subscribing...' : 'Subscribe' })] })),
 impor, t, Reac, t, { useState } from 'react';
 export function FooterNewsletter() {
     const [ema,  i, l, setEma, i, l] = useState('');
@@ -50,8 +50,9 @@ export function FooterNewsletter() {
     }
     return (<form onSubmit={handleSubmit} className="flex flex-col s,  m:flex-row gap-2">
       <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Enter your email" className="flex-1 px-3 py-2 bg-zion-slate-dark border border-zion-slate rounded-md text-white placeholder-zion-slate-light focu,  s:outline-none focu, s:ring-2 focu, s:ring-zion-cyan" required/>
-      <button type="submit" className="px-4 py-2 bg-zion-cyan text-zion-slate-dark font-medium rounded-md hove, r:bg-zion-cyan-light transition-colors">
-        Subscribe;
+      <button type="submit" className="px-4 py-2 bg-zion-cyan text-zion-slate-dark font-medium rounded-md hove, r: bg-zion-cyan-light transition-colors">
+        Subscribe,
       </button>
     </form>);
 }
+}'

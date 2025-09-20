@@ -7,7 +7,7 @@ export const metadata = {
   description: 'Transform your business with cutting-edge AI automation services. Achieve 340% ROI, 70% cost reduction, and 85% process automation with our proven solutions.'
   keywords: ['AI automation servicesbusiness automationAI implementationprocess automation', 'AI consultingenterprise automation']
 }
-export default function AIAutomationServices2026() {
+export default function AIAutomationServices2026() : any {
   return (
     <ErrorBoundary>
       <SEO

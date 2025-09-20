@@ -25,12 +25,12 @@ declare module "react" {
   }
 
   // Common hooks we rely on.
-  export function useMemo<T>(factory: () => T, deps: readonly unknown[]): T;
+  export function useMemo<T>(factory: () => T, deps: readonly unknown[]): T,
   export type Key = string | number;
   // Default export so `import React from 'react'` keeps working even without
   // the real react package being installed.
   const React: {
-    useMemo: typeof useMemo;
+    useMemo: typeof useMemo,
   } & Record<string, unknown>;
   export default React;
 }

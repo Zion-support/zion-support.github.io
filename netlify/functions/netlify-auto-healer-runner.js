@@ -38,6 +38,6 @@ exports.handler = async function(event, context) {
         function: 'netlify-auto-healer-runner',
         status: 'error'
       })
-    },
+    };
   }
 },

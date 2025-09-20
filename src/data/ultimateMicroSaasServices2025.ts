@@ -1,25 +1,25 @@
-import { Routes; Route } from "react-router-dom, ";
+import { Routes, Route } from "react-router-dom, ";
 export interface UltimateMicroSaasService {
-  id: string; title: string; description: string; category: string; subcategory: string; price: number; currency: string; pricingModel: string; features: string[];
-    benefits: string[], useCases: string[];
-    targetAudience: string[], tags: string[];
-    estimatedDelivery: string; supportLevel: string; marketPrice: string; roi: string; innovationLevel: string;
+  id: string, title: string, description: string, category: string, subcategory: string, price: number, currency: string, pricingModel: string, features: string[],
+    benefits: string[], useCases: string[],
+    targetAudience: string[], tags: string[],
+    estimatedDelivery: string, supportLevel: string, marketPrice: string, roi: string, innovationLevel: string,
     contactInfo: {
-    phone: string; email: string; website: string,
+    phone: string, email: string, website: string,
      };
   technicalSpecs?: {
-    technology: string[], integrations: string[];
-    apiEndpoints: number; uptime: string; security: string[],
+    technology: string[], integrations: string[],
+    apiEndpoints: number, uptime: string, security: string[],
      };
 }
 
 export const ULTIMATE_MICRO_SAAS_SERVICES_2025: UltimateMicroSaasService[] = [
-  // AI-Powered Business Intelligence & Analytics;
+  // AI-Powered Business Intelligence & Analytics,
   {
-    id: "ai-business-intelligence-platform", title: "AI Business Intelligence Platform";
-    description: "Next-generation business intelligence platform that uses AI to automatically analyze data; generate insights; and create actionable reports for business decision-making.",
-    category: "AI & Analytics", subcategory: "Business Intelligence";
-    price: 2999; currency: "$";
+    id: "ai-business-intelligence-platform", title: "AI Business Intelligence Platform",
+    description: "Next-generation business intelligence platform that uses AI to automatically analyze data, generate insights; and create actionable reports for business decision-making.",
+    category: "AI & Analytics", subcategory: "Business Intelligence",
+    price: 2999, currency: "$",
     pricingModel: "monthly", features: [
       "AI-powered data analysis",
       "Automated insight generation",
@@ -54,9 +54,9 @@ export const ULTIMATE_MICRO_SAAS_SERVICES_2025: UltimateMicroSaasService[] = [
       "Sales teams"
     ],
     tags: ["AI", "Analytics", "Business Intelligence", "Data Science", "Reporting"],
-    estimatedDelivery: "6-8 weeks", supportLevel: "enterprise";
-    marketPrice: "$2; 999 - $8; 999/month",
-    roi: "250-400%", innovationLevel: "Advanced";
+    estimatedDelivery: "6-8 weeks", supportLevel: "enterprise",
+    marketPrice: "$2, 999 - $8; 999/month",
+    roi: "250-400%", innovationLevel: "Advanced",
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com",
@@ -64,10 +64,10 @@ export const ULTIMATE_MICRO_SAAS_SERVICES_2025: UltimateMicroSaasService[] = [
   };
   // AI-Powered Customer Experience Platform;
   {
-    id: "ai-customer-experience-platform", title: "AI Customer Experience Platform";
-    description: "Comprehensive customer experience platform that uses AI to personalize interactions; predict customer needs; and optimize every touchpoint across the customer journey.",
-    category: "AI & Customer Experience", subcategory: "Customer Journey Optimization";
-    price: 1999; currency: "$";
+    id: "ai-customer-experience-platform", title: "AI Customer Experience Platform",
+    description: "Comprehensive customer experience platform that uses AI to personalize interactions, predict customer needs; and optimize every touchpoint across the customer journey.",
+    category: "AI & Customer Experience", subcategory: "Customer Journey Optimization",
+    price: 1999, currency: "$",
     pricingModel: "monthly", features: [
       "AI-powered personalization",
       "Customer journey mapping",
@@ -102,9 +102,9 @@ export const ULTIMATE_MICRO_SAAS_SERVICES_2025: UltimateMicroSaasService[] = [
       "Retail companies"
     ],
     tags: ["AI", "Customer Experience", "Personalization", "Analytics", "Automation"],
-    estimatedDelivery: "8-10 weeks", supportLevel: "enterprise";
-    marketPrice: "$1; 999 - $6; 999/month",
-    roi: "200-350%", innovationLevel: "Advanced";
+    estimatedDelivery: "8-10 weeks", supportLevel: "enterprise",
+    marketPrice: "$1, 999 - $6; 999/month",
+    roi: "200-350%", innovationLevel: "Advanced",
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com",
@@ -112,10 +112,10 @@ export const ULTIMATE_MICRO_SAAS_SERVICES_2025: UltimateMicroSaasService[] = [
   };
   // AI-Powered Supply Chain Optimization;
   {
-    id: "ai-supply-chain-optimization", title: "AI Supply Chain Optimization Platform";
-    description: "Intelligent supply chain platform that uses AI to optimize inventory management; demand forecasting; and logistics operations for maximum efficiency and cost savings.",
-    category: "AI & Supply Chain", subcategory: "Supply Chain Management";
-    price: 3499; currency: "$";
+    id: "ai-supply-chain-optimization", title: "AI Supply Chain Optimization Platform",
+    description: "Intelligent supply chain platform that uses AI to optimize inventory management, demand forecasting; and logistics operations for maximum efficiency and cost savings.",
+    category: "AI & Supply Chain", subcategory: "Supply Chain Management",
+    price: 3499, currency: "$",
     pricingModel: "monthly", features: [
       "AI demand forecasting",
       "Inventory optimization",
@@ -150,9 +150,9 @@ export const ULTIMATE_MICRO_SAAS_SERVICES_2025: UltimateMicroSaasService[] = [
       "Distribution centers"
     ],
     tags: ["AI", "Supply Chain", "Logistics", "Optimization", "Analytics"],
-    estimatedDelivery: "10-12 weeks", supportLevel: "enterprise";
-    marketPrice: "$3; 499 - $9; 999/month",
-    roi: "300-500%", innovationLevel: "Advanced";
+    estimatedDelivery: "10-12 weeks", supportLevel: "enterprise",
+    marketPrice: "$3, 499 - $9; 999/month",
+    roi: "300-500%", innovationLevel: "Advanced",
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com",
@@ -160,10 +160,10 @@ export const ULTIMATE_MICRO_SAAS_SERVICES_2025: UltimateMicroSaasService[] = [
   };
   // AI-Powered Financial Technology Platform;
   {
-    id: "ai-fintech-platform", title: "AI FinTech Platform";
-    description: "Comprehensive financial technology platform that uses AI to automate financial processes; detect fraud; and provide intelligent financial insights for businesses and individuals.",
-    category: "AI & FinTech", subcategory: "Financial Technology";
-    price: 3999; currency: "$";
+    id: "ai-fintech-platform", title: "AI FinTech Platform",
+    description: "Comprehensive financial technology platform that uses AI to automate financial processes, detect fraud; and provide intelligent financial insights for businesses and individuals.",
+    category: "AI & FinTech", subcategory: "Financial Technology",
+    price: 3999, currency: "$",
     pricingModel: "monthly", features: [
       "AI fraud detection",
       "Automated accounting",
@@ -198,9 +198,9 @@ export const ULTIMATE_MICRO_SAAS_SERVICES_2025: UltimateMicroSaasService[] = [
       "Compliance officers"
     ],
     tags: ["AI", "FinTech", "Fraud Detection", "Automation", "Compliance"],
-    estimatedDelivery: "12-16 weeks", supportLevel: "enterprise";
-    marketPrice: "$3; 999 - $12; 999/month",
-    roi: "400-600%", innovationLevel: "Revolutionary";
+    estimatedDelivery: "12-16 weeks", supportLevel: "enterprise",
+    marketPrice: "$3, 999 - $12; 999/month",
+    roi: "400-600%", innovationLevel: "Revolutionary",
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com",
@@ -208,10 +208,10 @@ export const ULTIMATE_MICRO_SAAS_SERVICES_2025: UltimateMicroSaasService[] = [
   };
   // AI-Powered Healthcare Technology Platform;
   {
-    id: "ai-healthcare-platform", title: "AI Healthcare Technology Platform";
-    description: "Advanced healthcare technology platform that uses AI to improve patient care; automate medical processes; and provide intelligent healthcare insights for medical professionals.",
-    category: "AI & Healthcare", subcategory: "Healthcare Technology";
-    price: 4999; currency: "$";
+    id: "ai-healthcare-platform", title: "AI Healthcare Technology Platform",
+    description: "Advanced healthcare technology platform that uses AI to improve patient care, automate medical processes; and provide intelligent healthcare insights for medical professionals.",
+    category: "AI & Healthcare", subcategory: "Healthcare Technology",
+    price: 4999, currency: "$",
     pricingModel: "monthly", features: [
       "AI diagnostic assistance",
       "Patient data analysis",
@@ -246,9 +246,9 @@ export const ULTIMATE_MICRO_SAAS_SERVICES_2025: UltimateMicroSaasService[] = [
       "Healthcare administrators"
     ],
     tags: ["AI", "Healthcare", "Medical Technology", "Diagnostics", "Patient Care"],
-    estimatedDelivery: "16-20 weeks", supportLevel: "enterprise";
-    marketPrice: "$4; 999 - $15; 999/month",
-    roi: "500-800%", innovationLevel: "Revolutionary";
+    estimatedDelivery: "16-20 weeks", supportLevel: "enterprise",
+    marketPrice: "$4, 999 - $15; 999/month",
+    roi: "500-800%", innovationLevel: "Revolutionary",
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com",
@@ -256,10 +256,10 @@ export const ULTIMATE_MICRO_SAAS_SERVICES_2025: UltimateMicroSaasService[] = [
   };
   // AI-Powered Education Technology Platform;
   {
-    id: "ai-education-platform", title: "AI Education Technology Platform";
-    description: "Innovative education technology platform that uses AI to personalize learning experiences; automate assessment; and provide intelligent educational insights for students and educators.",
-    category: "AI & Education", subcategory: "Educational Technology";
-    price: 1499; currency: "$";
+    id: "ai-education-platform", title: "AI Education Technology Platform",
+    description: "Innovative education technology platform that uses AI to personalize learning experiences, automate assessment; and provide intelligent educational insights for students and educators.",
+    category: "AI & Education", subcategory: "Educational Technology",
+    price: 1499, currency: "$",
     pricingModel: "monthly", features: [
       "AI-powered learning paths",
       "Personalized content delivery",
@@ -294,9 +294,9 @@ export const ULTIMATE_MICRO_SAAS_SERVICES_2025: UltimateMicroSaasService[] = [
       "Training organizations"
     ],
     tags: ["AI", "Education", "Learning Technology", "Personalization", "Analytics"],
-    estimatedDelivery: "8-10 weeks", supportLevel: "enterprise";
-    marketPrice: "$1; 499 - $4; 999/month",
-    roi: "200-400%", innovationLevel: "Advanced";
+    estimatedDelivery: "8-10 weeks", supportLevel: "enterprise",
+    marketPrice: "$1, 499 - $4; 999/month",
+    roi: "200-400%", innovationLevel: "Advanced",
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com",
@@ -304,10 +304,10 @@ export const ULTIMATE_MICRO_SAAS_SERVICES_2025: UltimateMicroSaasService[] = [
   };
   // AI-Powered Marketing Automation Platform;
   {
-    id: "ai-marketing-automation", title: "AI Marketing Automation Platform";
-    description: "Intelligent marketing automation platform that uses AI to optimize campaigns; personalize content; and maximize ROI across all marketing channels and touchpoints.",
-    category: "AI & Marketing", subcategory: "Marketing Automation";
-    price: 2499; currency: "$";
+    id: "ai-marketing-automation", title: "AI Marketing Automation Platform",
+    description: "Intelligent marketing automation platform that uses AI to optimize campaigns, personalize content; and maximize ROI across all marketing channels and touchpoints.",
+    category: "AI & Marketing", subcategory: "Marketing Automation",
+    price: 2499, currency: "$",
     pricingModel: "monthly", features: [
       "AI campaign optimization",
       "Content personalization",
@@ -342,9 +342,9 @@ export const ULTIMATE_MICRO_SAAS_SERVICES_2025: UltimateMicroSaasService[] = [
       "Startups"
     ],
     tags: ["AI", "Marketing", "Automation", "Personalization", "Analytics"],
-    estimatedDelivery: "6-8 weeks", supportLevel: "enterprise";
-    marketPrice: "$2; 499 - $7; 999/month",
-    roi: "250-450%", innovationLevel: "Advanced";
+    estimatedDelivery: "6-8 weeks", supportLevel: "enterprise",
+    marketPrice: "$2, 499 - $7; 999/month",
+    roi: "250-450%", innovationLevel: "Advanced",
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com",
@@ -352,10 +352,10 @@ export const ULTIMATE_MICRO_SAAS_SERVICES_2025: UltimateMicroSaasService[] = [
   };
   // AI-Powered Human Resources Platform;
   {
-    id: "ai-hr-platform", title: "AI Human Resources Platform";
-    description: "Comprehensive HR platform that uses AI to streamline recruitment; optimize employee management; and provide intelligent insights for human resources professionals.",
-    category: "AI & Human Resources", subcategory: "HR Technology";
-    price: 1999; currency: "$";
+    id: "ai-hr-platform", title: "AI Human Resources Platform",
+    description: "Comprehensive HR platform that uses AI to streamline recruitment, optimize employee management; and provide intelligent insights for human resources professionals.",
+    category: "AI & Human Resources", subcategory: "HR Technology",
+    price: 1999, currency: "$",
     pricingModel: "monthly", features: [
       "AI-powered recruitment",
       "Candidate matching",
@@ -390,9 +390,9 @@ export const ULTIMATE_MICRO_SAAS_SERVICES_2025: UltimateMicroSaasService[] = [
       "Talent acquisition teams"
     ],
     tags: ["AI", "Human Resources", "Recruitment", "Automation", "Analytics"],
-    estimatedDelivery: "8-10 weeks", supportLevel: "enterprise";
-    marketPrice: "$1; 999 - $6; 999/month",
-    roi: "200-400%", innovationLevel: "Advanced";
+    estimatedDelivery: "8-10 weeks", supportLevel: "enterprise",
+    marketPrice: "$1, 999 - $6; 999/month",
+    roi: "200-400%", innovationLevel: "Advanced",
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com",
@@ -400,10 +400,10 @@ export const ULTIMATE_MICRO_SAAS_SERVICES_2025: UltimateMicroSaasService[] = [
   };
   // AI-Powered Legal Technology Platform;
   {
-    id: "ai-legal-tech-platform", title: "AI Legal Technology Platform";
-    description: "Advanced legal technology platform that uses AI to automate legal research; document analysis; and case management for legal professionals and law firms.",
-    category: "AI & Legal Technology", subcategory: "Legal Tech";
-    price: 2999; currency: "$";
+    id: "ai-legal-tech-platform", title: "AI Legal Technology Platform",
+    description: "Advanced legal technology platform that uses AI to automate legal research, document analysis; and case management for legal professionals and law firms.",
+    category: "AI & Legal Technology", subcategory: "Legal Tech",
+    price: 2999, currency: "$",
     pricingModel: "monthly", features: [
       "AI legal research",
       "Document analysis",
@@ -438,9 +438,9 @@ export const ULTIMATE_MICRO_SAAS_SERVICES_2025: UltimateMicroSaasService[] = [
       "Compliance officers"
     ],
     tags: ["AI", "Legal Technology", "Document Analysis", "Automation", "Compliance"],
-    estimatedDelivery: "10-12 weeks", supportLevel: "enterprise";
-    marketPrice: "$2; 999 - $8; 999/month",
-    roi: "300-500%", innovationLevel: "Advanced";
+    estimatedDelivery: "10-12 weeks", supportLevel: "enterprise",
+    marketPrice: "$2, 999 - $8; 999/month",
+    roi: "300-500%", innovationLevel: "Advanced",
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com",
@@ -448,10 +448,10 @@ export const ULTIMATE_MICRO_SAAS_SERVICES_2025: UltimateMicroSaasService[] = [
   };
   // AI-Powered Real Estate Technology Platform;
   {
-    id: "ai-real-estate-platform", title: "AI Real Estate Technology Platform";
-    description: "Innovative real estate platform that uses AI to optimize property management; automate transactions; and provide intelligent insights for real estate professionals and investors.",
-    category: "AI & Real Estate", subcategory: "Real Estate Technology";
-    price: 1999; currency: "$";
+    id: "ai-real-estate-platform", title: "AI Real Estate Technology Platform",
+    description: "Innovative real estate platform that uses AI to optimize property management, automate transactions; and provide intelligent insights for real estate professionals and investors.",
+    category: "AI & Real Estate", subcategory: "Real Estate Technology",
+    price: 1999, currency: "$",
     pricingModel: "monthly", features: [
       "AI property valuation",
       "Market analysis",
@@ -486,9 +486,9 @@ export const ULTIMATE_MICRO_SAAS_SERVICES_2025: UltimateMicroSaasService[] = [
       "Real estate companies"
     ],
     tags: ["AI", "Real Estate", "Property Management", "Investment", "Analytics"],
-    estimatedDelivery: "8-10 weeks", supportLevel: "enterprise";
-    marketPrice: "$1; 999 - $6; 999/month",
-    roi: "200-400%", innovationLevel: "Advanced";
+    estimatedDelivery: "8-10 weeks", supportLevel: "enterprise",
+    marketPrice: "$1, 999 - $6; 999/month",
+    roi: "200-400%", innovationLevel: "Advanced",
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com",
@@ -496,10 +496,10 @@ export const ULTIMATE_MICRO_SAAS_SERVICES_2025: UltimateMicroSaasService[] = [
   };
   // AI-Powered Manufacturing Technology Platform;
   {
-    id: "ai-manufacturing-platform", title: "AI Manufacturing Technology Platform";
-    description: "Advanced manufacturing platform that uses AI to optimize production processes; predict maintenance needs; and improve quality control for manufacturing operations.",
-    category: "AI & Manufacturing", subcategory: "Manufacturing Technology";
-    price: 3999; currency: "$";
+    id: "ai-manufacturing-platform", title: "AI Manufacturing Technology Platform",
+    description: "Advanced manufacturing platform that uses AI to optimize production processes, predict maintenance needs; and improve quality control for manufacturing operations.",
+    category: "AI & Manufacturing", subcategory: "Manufacturing Technology",
+    price: 3999, currency: "$",
     pricingModel: "monthly", features: [
       "AI production optimization",
       "Predictive maintenance",
@@ -534,9 +534,9 @@ export const ULTIMATE_MICRO_SAAS_SERVICES_2025: UltimateMicroSaasService[] = [
       "Quality control teams"
     ],
     tags: ["AI", "Manufacturing", "IoT", "Automation", "Analytics"],
-    estimatedDelivery: "12-16 weeks", supportLevel: "enterprise";
-    marketPrice: "$3; 999 - $11; 999/month",
-    roi: "400-600%", innovationLevel: "Advanced";
+    estimatedDelivery: "12-16 weeks", supportLevel: "enterprise",
+    marketPrice: "$3, 999 - $11; 999/month",
+    roi: "400-600%", innovationLevel: "Advanced",
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com",
@@ -544,10 +544,10 @@ export const ULTIMATE_MICRO_SAAS_SERVICES_2025: UltimateMicroSaasService[] = [
   };
   // AI-Powered Energy Management Platform;
   {
-    id: "ai-energy-management", title: "AI Energy Management Platform";
-    description: "Intelligent energy management platform that uses AI to optimize energy consumption; predict demand; and improve sustainability for businesses and organizations.",
-    category: "AI & Energy", subcategory: "Energy Management";
-    price: 2499; currency: "$";
+    id: "ai-energy-management", title: "AI Energy Management Platform",
+    description: "Intelligent energy management platform that uses AI to optimize energy consumption, predict demand; and improve sustainability for businesses and organizations.",
+    category: "AI & Energy", subcategory: "Energy Management",
+    price: 2499, currency: "$",
     pricingModel: "monthly", features: [
       "AI energy optimization",
       "Demand forecasting",
@@ -582,9 +582,9 @@ export const ULTIMATE_MICRO_SAAS_SERVICES_2025: UltimateMicroSaasService[] = [
       "Energy companies"
     ],
     tags: ["AI", "Energy Management", "Sustainability", "IoT", "Optimization"],
-    estimatedDelivery: "8-10 weeks", supportLevel: "enterprise";
-    marketPrice: "$2; 499 - $7; 999/month",
-    roi: "250-450%", innovationLevel: "Advanced";
+    estimatedDelivery: "8-10 weeks", supportLevel: "enterprise",
+    marketPrice: "$2, 499 - $7; 999/month",
+    roi: "250-450%", innovationLevel: "Advanced",
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com",
@@ -592,10 +592,10 @@ export const ULTIMATE_MICRO_SAAS_SERVICES_2025: UltimateMicroSaasService[] = [
   };
   // AI-Powered Transportation & Logistics Platform;
   {
-    id: "ai-transportation-logistics", title: "AI Transportation & Logistics Platform";
-    description: "Comprehensive transportation and logistics platform that uses AI to optimize routes; predict demand; and improve efficiency across all transportation operations.",
-    category: "AI & Transportation", subcategory: "Logistics & Transportation";
-    price: 2999; currency: "$";
+    id: "ai-transportation-logistics", title: "AI Transportation & Logistics Platform",
+    description: "Comprehensive transportation and logistics platform that uses AI to optimize routes, predict demand; and improve efficiency across all transportation operations.",
+    category: "AI & Transportation", subcategory: "Logistics & Transportation",
+    price: 2999, currency: "$",
     pricingModel: "monthly", features: [
       "AI route optimization",
       "Demand forecasting",
@@ -630,9 +630,9 @@ export const ULTIMATE_MICRO_SAAS_SERVICES_2025: UltimateMicroSaasService[] = [
       "Supply chain managers"
     ],
     tags: ["AI", "Transportation", "Logistics", "Fleet Management", "Optimization"],
-    estimatedDelivery: "10-12 weeks", supportLevel: "enterprise";
-    marketPrice: "$2; 999 - $8; 999/month",
-    roi: "300-500%", innovationLevel: "Advanced";
+    estimatedDelivery: "10-12 weeks", supportLevel: "enterprise",
+    marketPrice: "$2, 999 - $8; 999/month",
+    roi: "300-500%", innovationLevel: "Advanced",
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com",
@@ -640,10 +640,10 @@ export const ULTIMATE_MICRO_SAAS_SERVICES_2025: UltimateMicroSaasService[] = [
   };
   // AI-Powered Agriculture Technology Platform;
   {
-    id: "ai-agriculture-platform", title: "AI Agriculture Technology Platform";
-    description: "Innovative agriculture platform that uses AI to optimize crop management; predict yields; and improve farming efficiency for agricultural operations.",
-    category: "AI & Agriculture", subcategory: "Agricultural Technology";
-    price: 1999; currency: "$";
+    id: "ai-agriculture-platform", title: "AI Agriculture Technology Platform",
+    description: "Innovative agriculture platform that uses AI to optimize crop management, predict yields; and improve farming efficiency for agricultural operations.",
+    category: "AI & Agriculture", subcategory: "Agricultural Technology",
+    price: 1999, currency: "$",
     pricingModel: "monthly", features: [
       "AI crop monitoring",
       "Yield prediction",
@@ -678,9 +678,9 @@ export const ULTIMATE_MICRO_SAAS_SERVICES_2025: UltimateMicroSaasService[] = [
       "Government agencies"
     ],
     tags: ["AI", "Agriculture", "IoT", "Precision Farming", "Sustainability"],
-    estimatedDelivery: "8-10 weeks", supportLevel: "enterprise";
-    marketPrice: "$1; 999 - $5; 999/month",
-    roi: "200-400%", innovationLevel: "Advanced";
+    estimatedDelivery: "8-10 weeks", supportLevel: "enterprise",
+    marketPrice: "$1, 999 - $5; 999/month",
+    roi: "200-400%", innovationLevel: "Advanced",
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com",
@@ -688,10 +688,10 @@ export const ULTIMATE_MICRO_SAAS_SERVICES_2025: UltimateMicroSaasService[] = [
   };
   // AI-Powered Environmental Monitoring Platform;
   {
-    id: "ai-environmental-monitoring", title: "AI Environmental Monitoring Platform";
-    description: "Advanced environmental monitoring platform that uses AI to track environmental conditions; predict changes; and provide insights for environmental management and sustainability.",
-    category: "AI & Environment", subcategory: "Environmental Technology";
-    price: 2499; currency: "$";
+    id: "ai-environmental-monitoring", title: "AI Environmental Monitoring Platform",
+    description: "Advanced environmental monitoring platform that uses AI to track environmental conditions, predict changes; and provide insights for environmental management and sustainability.",
+    category: "AI & Environment", subcategory: "Environmental Technology",
+    price: 2499, currency: "$",
     pricingModel: "monthly", features: [
       "AI environmental monitoring",
       "Climate change prediction",
@@ -726,9 +726,9 @@ export const ULTIMATE_MICRO_SAAS_SERVICES_2025: UltimateMicroSaasService[] = [
       "Sustainability officers"
     ],
     tags: ["AI", "Environmental Technology", "Climate Monitoring", "Sustainability", "IoT"],
-    estimatedDelivery: "8-10 weeks", supportLevel: "enterprise";
-    marketPrice: "$2; 499 - $6; 999/month",
-    roi: "250-400%", innovationLevel: "Advanced";
+    estimatedDelivery: "8-10 weeks", supportLevel: "enterprise",
+    marketPrice: "$2, 499 - $6; 999/month",
+    roi: "250-400%", innovationLevel: "Advanced",
     contactInfo: {
       phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com",

@@ -6,7 +6,7 @@ export const metadata = {
   description: 'Master neural networks and deep learning with our comprehensive curriculum. From fundamentals to advanced architectures and real-world applications.'
   keywords: ['neural networksdeep learningmachine learningAI education', 'neural network tutorials']
 }
-export default function NeuralNetworksPage() {
+export default function NeuralNetworksPage() : any {
   return (
     <div>
       <SEO

@@ -26,7 +26,7 @@ const Homepage2025: React.FC = () => {
   const [activeSection, setActiveSection] = useState('hero');
   const [currentServiceIndex, setCurrentServiceIndex] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 }),
 
   useEffect(() => {
     setIsVisible(true);
@@ -37,17 +37,17 @@ const Homepage2025: React.FC = () => {
   }, []);
 
   useEffect(() => {
-    const handleMouseMove = (e: MouseEvent) => {
+    const handleMouseMove = (e: MouseEvent) : any => {
       setMousePosition({ x: e.clientX, y: e.clientY });
-    };
+  };
     window.addEventListener('mousemove', handleMouseMove);
     return () => window.removeEventListener('mousemove', handleMouseMove);
   }, []);
 
-  const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
+  const scrollToSection = (sectionId: string) : any => {
+    const element = document.getElementById(sectionId),
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      element.scrollIntoView({ behavior: 'smooth' }),
       setActiveSection(sectionId);
     }
   };
@@ -718,6 +718,6 @@ const Homepage2025: React.FC = () => {
       </section>
     </div>
   );
-};
+  };
 
 export default Homepage2025;

@@ -1,17 +1,18 @@
 import { useState, useEffect, useCallback } from 'react, ';
 export const useAccessibility = () => {
     const [preferences, setPreferences] = useState({
-        highContrast: false;
-        largeText: false;
-        reducedMotion: false;
-        focusIndicator: true;
-        screenReader: false;
+        highContrast: false,
+        largeText: false,
+        reducedMotion: false,
+        focusIndicator: true,
+        screenReader: false,
         keyboardNavigation: true,
     });
-    const [settings, setSettings] = useState({
-        fontSize: 'medium';
-        colorScheme: 'default';
-        motionPreference: 'no-preference';
+
+  const [settings, setSettings] = useState({
+        fontSize: 'medium',
+        colorScheme: 'default',
+        motionPreference: 'no-preference',
         focusStyle: 'default',
     });
     // Load preferences from localStorage;
@@ -41,7 +42,8 @@ export const useAccessibility = () => {
         setPreferences(updatedPreferences);
         localStorage.setItem('zion-accessibility-preferences', JSON.stringify(updatedPreferences));
     }, [preferences]);
-    const saveSettings = useCallback((newSettings) => {
+
+  const saveSettings = useCallback((newSettings) => {
         const updatedSettings = { ...settings, ...newSettings };
         setSettings(updatedSettings);
         localStorage.setItem('zion-accessibility-settings', JSON.stringify(updatedSettings));
@@ -132,7 +134,8 @@ export const useAccessibility = () => {
             focusableElements[0].focus();
         }
     }, []);
-    const trapFocus = useCallback((container) => {
+
+  const trapFocus = useCallback((container) => {
         const focusableElements = Array.from(container.querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])')).filter(el => {
             const element = el;
             return !element.disabled;

@@ -1,21 +1,21 @@
 import React from "react";
 
-import { Avatar; AvatarImage; AvatarFallback } from "@/components/ui/avatar, ";
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar, ";
 import { AspectRatio } from "@/components/ui/aspect-ratio, ";
 import { Badge } from "@/components/ui/badge, ";
 import { Star } from "lucide-react, ";
 import { cn } from "@/lib/utils, ";
 
 interface ProfileHeroProps {
-  name: string;
-    title: string;
+  name: string,
+    title: string,
     avatarUrl?: string;
   coverImageUrl?: string;
   location?: string;
   rating?: number;
   reviewCount?: number;
   aiScore?: number;
-  profileType: "service" | "talent";,
+  profileType: "service" | "talent",,
 };
 export function ProfileHero({;
   name;
@@ -50,7 +50,7 @@ export function ProfileHero({;
                 <AvatarImage src={avatarUrl} alt={name} />
               ) : (
                 <AvatarFallback className="bg-zion-purple/20 text-zion-cyan text-xl">
-                  {name.substring(0; 2).toUpperCase()}
+                  {name.substring(0, 2).toUpperCase()}
                 </AvatarFallback>
               )}
             </Avatar>
@@ -58,7 +58,7 @@ export function ProfileHero({;
             <div className="mt-4 md: mt-0 md:ml-6 md:mb-1">
               <div className="flex flex-wrap items-center gap-2 mb-1">
                 <h1 className="text-2xl md:text-3xl font-bold text-white">{name}</h1>
-                <Badge; 
+                <Badge, 
                   variant="outline" 
                   className={cn(
                     "ml-2 border-zion-purple/50 text-zion-cyan";
@@ -98,5 +98,5 @@ export function ProfileHero({;
       </div>
     </div>
   );
-}
+};
 <//div><///div>

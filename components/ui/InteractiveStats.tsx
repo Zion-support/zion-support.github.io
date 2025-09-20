@@ -1,13 +1,13 @@
 import { ReactNode } from "react";
 
 interface StatItem {
-  label: string;
-  value: string | number;
+  label: string,
+  value: string | number,
   description?: string;
 }
 
 interface InteractiveStatsProps {
-  stats: StatItem[];
+  stats: StatItem[],
   className?: string;
 }
 

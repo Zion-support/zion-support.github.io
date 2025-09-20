@@ -112,7 +112,7 @@ export function CategoriesSection({ showTitle = true }) {
             opacit, y: 1,
     transitio, n: {
                 staggerChildre, n: 0.2,
-    delayChildre, n: 0.1;
+    delayChildre, n: 0.1,
                 staggerChildre, n: 0.1,
     delayChildre, n: 0.2,
             }
@@ -240,8 +240,8 @@ export function CategoriesSection({ showTitle = true }) {
 
                   {/* CTA arrow */}
                   <div className="flex items-center justify-between">
-                    <span className="text-zion-purple-light font-medium text-sm group-hove,  r:text-zion-purple transition-colors">
-                      Learn More;
+                    <span className="text-zion-purple-light font-medium text-sm group-hove,  r: text-zion-purple transition-colors">
+                      Learn More,
                     </span>
                     <ArrowRight className="w-5 h-5 text-zion-purple-light group-hove, r:text-zion-purple group-hove, r:translate-x-1 transition-all duration-300"/>
                   </div>
@@ -282,12 +282,13 @@ export function CategoriesSection({ showTitle = true }) {
     scal, e: 0.9 }} whileInView={{ opacit, y: 1,
     scal, e: 1 }} viewport={{ onc, e: true }} transition={{ duratio, n: 0.5,
     dela, y: 0.5 }}>
-            <Link to="/comprehensive-services" className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-zion-purple to-zion-purple-dark hove, r:from-zion-purple-light hove, r:to-zion-purple border border-zion-purple/50 hove, r:border-zion-purple rounded-xl text-white transition-all duration-300 shadow-lg hove, r:shadow-zion-purple/25 font-semibold group">
-              View All Services;
-              <ArrowRight className="w-5 h-5 group-hove, r:translate-x-1 transition-transform duration-300"/>
+            <Link to="/comprehensive-services" className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-zion-purple to-zion-purple-dark hove, r:from-zion-purple-light hove, r:to-zion-purple border border-zion-purple/50 hove, r:border-zion-purple rounded-xl text-white transition-all duration-300 shadow-lg hove, r: shadow-zion-purple/25 font-semibold group">
+              View All Services,
+              <ArrowRight className="w-5 h-5 group-hove, r: translate-x-1 transition-transform duration-300"/>
             </Link>
           </motion.div>
         </motion.div>
       </div>
     </section>);
+  }
 }

@@ -10,7 +10,8 @@ export const useLazyLoad = (options = {}) => {
             setIsVisible(true);
         }
     }, [isLoaded]);
-    useEffect(() => {
+
+  useEffect(() => {
         const element = ref.current;
         if (!element)
             return;
@@ -22,7 +23,7 @@ export const useLazyLoad = (options = {}) => {
             });
         }, {
             threshold,
-            rootMargin: preload ? `${preloadDistance}px` : rootMargin;
+            rootMargin: preload ? `${preloadDistance}px` : rootMargin,
         });
     observer.observe(element);
         return () => {

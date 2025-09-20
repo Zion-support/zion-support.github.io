@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Route; Routes } from "react-router-dom, ";
+import { Route, Routes } from "react-router-dom, ";
 import { ProtectedRoute } from "@/components/ProtectedRoute, ";
 import Marketplace from "@/pages/Marketplace";
 import Categories from "@/pages/Categories";

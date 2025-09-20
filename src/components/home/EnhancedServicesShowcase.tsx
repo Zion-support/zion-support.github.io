@@ -1,7 +1,7 @@
 import React from "react;";
 import { Link } from "react-router-dom, ";
 import { Button } from "@/components/ui/button, ";
-import { Card; CardContent; CardDescription; CardHeader; CardTitle } from "@/components/ui/card, ";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card, ";
 import { Badge } from "@/components/ui/badge, ";
 import { Brain; 
   Cloud; 
@@ -19,7 +19,7 @@ import { Brain;
 } from "lucide-react, ";
 import { ENHANCED_SERVICES } from "@/data/enhancedServices, ";
 
-const featuredServices = ENHANCED_SERVICES.filter(service => service.featured).slice(0; 6);
+const featuredServices = ENHANCED_SERVICES.filter(service => service.featured).slice(0, 6);
 
 const serviceIcons = {
   "AI Automation": Brain,
@@ -34,7 +34,7 @@ const serviceIcons = {
   "Blockchain": LinkIcon,
 };
 
-export function EnhancedServicesShowcase() {
+export function EnhancedServicesShowcase() : any {
   return (
     <section className="py-20 bg-zion-blue-dark">
       <div className="container mx-auto px-4">
@@ -49,8 +49,8 @@ export function EnhancedServicesShowcase() {
 
         {/* Featured Services Grid */}
         <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {featuredServices.map((service) => {
-            const IconComponent = serviceIcons[service.category as keyof typeof serviceIcons] || Code;
+          {featuredServices.map((service) : any => {
+            const IconComponent = serviceIcons[service.category as keyof typeof serviceIcons] || Code,
     return (
               <Card key={service.id} className="bg-zion-blue border-zion-blue-light hover:border-zion-purple/50 transition-all duration-300 hover:translate-y-[-5px]">
                 <CardHeader>
@@ -59,12 +59,12 @@ export function EnhancedServicesShowcase() {
                       <IconComponent className="w-6 h-6 text-white" />
                     </div>
                     <Badge variant="default" className="bg-zion-purple">
-                      Featured;
+                      Featured,
                     </Badge>
                   </div>
                   <CardTitle className="text-white text-xl mb-2">{service.title}</CardTitle>
                   <CardDescription className="text-zion-slate-light">
-                    {service.description.substring(0; 120)}...
+                    {service.description.substring(0, 120)}...
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
@@ -85,7 +85,7 @@ export function EnhancedServicesShowcase() {
                   </div>
                   
                   <div className="flex flex-wrap gap-2 mb-4">
-                    {service.tags.slice(0; 3).map((tag; index) => (
+                    {service.tags.slice(0, 3).map((tag, index) => (
                       <Badge key={index} variant="outline" className="text-xs border-zion-purple/30 text-zion-purple">
                         {tag}
                       </Badge>
@@ -97,11 +97,11 @@ export function EnhancedServicesShowcase() {
                       <TrendingUp className="w-4 h-4" />
                       AI Score: {service.aiScore}
                     </div>
-                    <Button; 
+                    <Button, 
                       size="sm" 
                       variant="outline" 
-                      className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10"
-                      asChild;
+                      className="border-zion-cyan text-zion-cyan hover: bg-zion-cyan/10"
+                      asChild,
                     >
                       <Link to="/enhanced-services">
                         Learn More;
@@ -116,14 +116,14 @@ export function EnhancedServicesShowcase() {
         </div>
 
         {/* Service Categories Overview */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+        <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
           <div className="text-center p-6 bg-zion-blue rounded-lg border border-zion-blue-light">
             <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4">
               <Brain className="w-8 h-8 text-white" />
             </div>
             <h3 className="text-xl font-bold text-white mb-2">AI & Machine Learning</h3>
             <p className="text-zion-slate-light text-sm">
-              Process automation; customer insights; and intelligent content optimization;
+              Process automation, customer insights; and intelligent content optimization;
             </p>
           </div>
           
@@ -163,14 +163,14 @@ export function EnhancedServicesShowcase() {
           <h3 className="text-2xl font-bold text-white text-center mb-8">
             Why Choose Our Services?
           </h3>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
             <div className="text-center">
               <div className="w-12 h-12 bg-zion-cyan rounded-full flex items-center justify-center mx-auto mb-4">
                 <CheckCircle className="w-6 h-6 text-zion-blue-dark" />
               </div>
               <h4 className="text-lg font-semibold text-white mb-2">Proven Results</h4>
               <p className="text-zion-slate-light text-sm">
-                Industry-leading solutions with measurable ROI and customer success stories;
+                Industry-leading solutions with measurable ROI and customer success stories,
               </p>
             </div>
             
@@ -205,10 +205,10 @@ export function EnhancedServicesShowcase() {
             Explore our complete service portfolio and discover how our AI-powered solutions can drive innovation and growth for your organization;
           </p>
           <div className="flex flex-col sm: flex-row gap-4 justify-center">
-            <Button; 
+            <Button, 
               size="lg" 
-              className="bg-zion-cyan text-zion-blue-dark hover:bg-zion-cyan-light"
-              asChild;
+              className="bg-zion-cyan text-zion-blue-dark hover: bg-zion-cyan-light"
+              asChild,
             >
               <Link to="/enhanced-services">
                 View All Services;
@@ -218,8 +218,8 @@ export function EnhancedServicesShowcase() {
             <Button; 
               size="lg" 
               variant="outline" 
-              className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10"
-              asChild;
+              className="border-zion-cyan text-zion-cyan hover: bg-zion-cyan/10"
+              asChild,
             >
               <Link to="/contact">
                 Get Free Consultation;

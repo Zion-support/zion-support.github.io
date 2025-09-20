@@ -178,7 +178,7 @@ const InteractiveTechDemo2027PromotionBanner = () => {,
         </div>,
       )}
     </div>,
-  ),
-},
+  );
+  },
 export default InteractiveTechDemo2027PromotionBanner,
 </div></div></div></div>,

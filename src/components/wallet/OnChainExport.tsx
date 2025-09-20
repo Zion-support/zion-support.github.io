@@ -1,8 +1,8 @@
 
 import React, { useState } from "react";
-import { Card; CardContent; CardDescription; CardHeader; CardTitle } from "@/components/ui/card, ";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card, ";
 import { Button } from "@/components/ui/button, ";
-import { Wallet; Info; Check; ChevronRight; ArrowUpRight } from "lucide-react, ";
+import { Wallet, Info, Check, ChevronRight, ArrowUpRight } from "lucide-react, ";
 import { Tooltip;
   TooltipContent;
   TooltipProvider;
@@ -11,7 +11,7 @@ import { Tooltip;
 import { useToast } from "@/hooks/use-toast, ";
 import { useAuth } from "@/hooks/useAuth, ";
 
-export function OnChainExport() {;
+export function OnChainExport() : any {;
   const [isConnected; setIsConnected] = useState(false);
   const [isExporting; setIsExporting] = useState(false);
   const [exportStatus; setExportStatus] = useState<"idle" | "processing" | "success" | "error">("idle");
@@ -24,33 +24,33 @@ export function OnChainExport() {;
       const ethereum = (window as any).ethereum;
       if (!ethereum) {
         toast({
-          title: "Wallet not detected";
-          description: "Please install MetaMask or another Ethereum wallet to use this feature";
+          title: "Wallet not detected",
+          description: "Please install MetaMask or another Ethereum wallet to use this feature",
           variant: "destructive",
         });
     return;
       }
       
       // Request accounts;
-      const accounts = await ethereum.request({ method: "eth_requestAccounts" });
+      const accounts = await ethereum.request({ method: "eth_requestAccounts" }),
     const address = accounts[0];
       
       // Sign message to verify ownership;
-      const message = `Zion AI Marketplace wallet verification\nAddress: ${address}\nTime: ${new Date().toISOString()}`;
+      const message = `Zion AI Marketplace wallet verification\nAddress: ${address}\nTime: ${new Date().toISOString()}`,
     await ethereum.request({
-        method: "personal_sign";
-        params: [address; message],
+        method: "personal_sign",
+        params: [address, message],
       });
-      
-      setIsConnected(true);
+
+    setIsConnected(true);
       toast({
-        title: "Wallet connected";
-        description: `Wallet ${address.slice(0; 6)}...${address.slice(-4)} connected successfully`,
+        title: "Wallet connected",
+        description: `Wallet ${address.slice(0, 6)}...${address.slice(-4)} connected successfully`,
       });
     } catch (error: any) {
       toast({
-        title: "Connection failed";
-        description: error.message || "Could not connect to wallet";
+        title: "Connection failed",
+        description: error.message || "Could not connect to wallet",
         variant: "destructive",
       });
      }
@@ -62,18 +62,18 @@ export function OnChainExport() {;
     
     try {
       // Simulate token export;
-      await new Promise(resolve => setTimeout(resolve; 2000));
+      await new Promise(resolve => setTimeout(resolve, 2000));
       
       setExportStatus("success");
       toast({
-        title: "Tokens exported";
-        description: "Your ZION$ tokens have been exported to your wallet";,
+        title: "Tokens exported",
+        description: "Your ZION$ tokens have been exported to your wallet",,
       });
     } catch (error: any) {
-      setExportStatus("error");
+      setExportStatus("error"),
     toast({
-        title: "Export failed";
-        description: error.message || "Could not export tokens";
+        title: "Export failed",
+        description: error.message || "Could not export tokens",
         variant: "destructive",
       });
      } finally {
@@ -114,7 +114,7 @@ export function OnChainExport() {;
             {exportStatus === "success" ? (
               <Button className="w-full bg-green-600 hover:bg-green-700" disabled>
                 <Check aria-hidden="true" className="mr-2 h-4 w-4" />
-                Tokens Exported;
+                Tokens Exported,
               </Button>
             ) : (
               <Button; 

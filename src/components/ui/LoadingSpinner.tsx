@@ -45,7 +45,7 @@ export function LoadingSpinner({
         )}
         animate={{ rotate: 360 }}
         transition={{
-          duration: 1; repeat: Infinity;
+          duration: 1, repeat: Infinity,
           ease: "linear",
         }}
         role="status"
@@ -70,7 +70,7 @@ export function LoadingSpinner({
     secondary: "border-zion-blue border-t-transparent",
     white: "border-white border-t-transparent",
     custom: customColor ? `border-${customColor} border-t-transparent` : "border-zion-cyan border-t-transparent"
-  };
+  },
 
   const textSizes = {
     sm: "text-xs",
@@ -84,21 +84,21 @@ export function LoadingSpinner({
       <motion.div;
         className={`${sizeClasses[size]} ${colorClasses[color]} border-2 rounded-full animate-spin`}
         animate={{ rotate: 360 }}
-        transition={{ duration: 1; repeat: Infinity; ease: "linear" }}
+        transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
         style={{
           borderTopColor: customColor && color === "custom" ? customColor : undefined,
         }}
       />
       
       {showText && (
-        <motion.p;
+        <motion.p,
           className="mt-3 text-sm text-zion-slate-light text-center"
-          initial={{ opacity: 0; y: 10 }}
-          animate={{ opacity: 1; y: 0 }}
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
-          initial={{ opacity: 0; y: 10 }}
-          animate={{ opacity: 1; y: 0 }}
-          transition={{ delay: 0.2; duration: 0.3 }}
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.2, duration: 0.3 }}
           className={`mt-3 text-zion-slate-light ${textSizes[size]} font-medium`}
         >
           {text}
@@ -106,8 +106,7 @@ export function LoadingSpinner({
       )}
     </div>
   );
-}
-
+};
 // Skeleton loading component for content;
 export function SkeletonLoader({;
   className;
@@ -120,7 +119,7 @@ export function SkeletonLoader({;
 }) {
   return (
     <div className={cn("space-y-3", className)}>
-      {Array.from({ length: lines }).map((_; index) => (
+      {Array.from({ length: lines }).map((_, index) => (
         <motion.div;
           key={index}
           className={cn(
@@ -130,7 +129,7 @@ export function SkeletonLoader({;
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: index * 0.1 }}
-// Optimized skeleton loader;
+// Optimized skeleton loader,
 export function SkeletonLoader({ ;
   className = "", ;
   lines = 3; 
@@ -142,19 +141,18 @@ export function SkeletonLoader({ ;
 }) {
   return (
     <div className={`space-y-3 ${className}`}>
-      {Array.from({ length: lines }).map((_; index) => (
+      {Array.from({ length: lines }).map((_, index) => (
         <motion.div;
           key={index}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ delay: index * 0.1; duration: 0.3 }}
+          transition={{ delay: index * 0.1, duration: 0.3 }}
           className={`${height} bg-white/10 rounded-lg animate-pulse`}
         />
       ))}
     </div>
   );
-}
-
+};
 // Page loading component;
 export function PageLoader({
   text = "Loading page...",
@@ -201,10 +199,10 @@ export function PageLoader({
     >
       <div className="text-center">
         {showSpinner && <LoadingSpinner size="xl" color="primary" />}
-        <motion.p;
-          initial={{ opacity: 0; y: 10 }}
-          animate={{ opacity: 1; y: 0 }}
-          transition={{ delay: 0.3; duration: 0.3 }}
+        <motion.p,
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.3, duration: 0.3 }}
           className="mt-4 text-lg text-zion-slate-light font-medium"
         >
           {text}
@@ -212,8 +210,7 @@ export function PageLoader({
       </div>
     </motion.div>
   );
-}
-
+};
 // Content loading placeholder;
 export function ContentPlaceholder({ 
   className = "",
@@ -233,12 +230,12 @@ export function ContentPlaceholder({
     <div className={`${variants[variant]} ${className}`}>
       {variant === "card" ? (
         // Card placeholders;
-        Array.from({ length: 6 }).map((_; index) => (
+        Array.from({ length: 6 }).map((_, index) => (
           <motion.div;
             key={index}
-            initial={{ opacity: 0; y: 20 }}
-            animate={{ opacity: 1; y: 0 }}
-            transition={{ delay: index * 0.1; duration: 0.3 }}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: index * 0.1, duration: 0.3 }}
             className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10"
           >
             <div className="w-16 h-16 bg-white/10 rounded-xl mb-4 animate-pulse" />
@@ -248,13 +245,13 @@ export function ContentPlaceholder({
           </motion.div>
         ))
       ) : variant === "list" ? (
-        // List placeholders;
-        Array.from({ length: 8 }).map((_; index) => (
+        // List placeholders,
+        Array.from({ length: 8 }).map((_, index) => (
           <motion.div;
             key={index}
-            initial={{ opacity: 0; x: -20 }}
-            animate={{ opacity: 1; x: 0 }}
-            transition={{ delay: index * 0.05; duration: 0.3 }}
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: index * 0.05, duration: 0.3 }}
             className="flex items-center space-x-4"
           >
             <div className="w-12 h-12 bg-white/10 rounded-full animate-pulse" />
@@ -265,13 +262,13 @@ export function ContentPlaceholder({
           </motion.div>
         ))
       ) : variant === "grid" ? (
-        // Grid placeholders;
-        Array.from({ length: 8 }).map((_; index) => (
+        // Grid placeholders,
+        Array.from({ length: 8 }).map((_, index) => (
           <motion.div;
             key={index}
-            initial={{ opacity: 0; scale: 0.9 }}
-            animate={{ opacity: 1; scale: 1 }}
-            transition={{ delay: index * 0.1; duration: 0.3 }}
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ delay: index * 0.1, duration: 0.3 }}
             className="bg-white/5 rounded-xl p-4 border border-white/10"
           >
             <div className="w-full h-24 bg-white/10 rounded-lg mb-3 animate-pulse" />
@@ -280,17 +277,17 @@ export function ContentPlaceholder({
           </motion.div>
         ))
       ) : (
-        // Default placeholders;
-        Array.from({ length: 4 }).map((_; index) => (
+        // Default placeholders,
+        Array.from({ length: 4 }).map((_, index) => (
           <motion.div;
             key={index}
-            initial={{ opacity: 0; y: 10 }}
-            animate={{ opacity: 1; y: 0 }}
-            transition={{ delay: index * 0.1; duration: 0.3 }}
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: index * 0.1, duration: 0.3 }}
             className="h-4 bg-white/10 rounded-lg animate-pulse"
           />
         ))
       )}
     </div>
-  );
-}<//div><///div>
+  ),
+}<//div><///div>}}}})))))

@@ -816,4 +816,4 @@ export const innovativeAIServices2025ExpansionV2 = [
         rating: 4.8,
     reviews: 67
   }
-];
+],

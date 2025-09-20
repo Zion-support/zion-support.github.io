@@ -8,7 +8,7 @@ interface PageLoaderProps {
 export const PageLoader: React.FC<PageLoaderProps> = ({ 
   text = "Loading...",
   className, 
-}) => {
+}) : any => {
   return (
     <div className={cn(
       "flex flex-col items-center justify-center min-h-screen",

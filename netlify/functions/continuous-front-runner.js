@@ -91,6 +91,6 @@ exports.handler = async function(event, context) {
         function: 'continuous-front-runner',
         status: 'error'
       })
-    },
+    };
   }
 },

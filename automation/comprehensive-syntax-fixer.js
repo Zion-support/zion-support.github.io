@@ -26,8 +26,8 @@ class ComprehensiveSyntaxFixer {,
           : level === 'warn',
             ? '⚠️',
             : 'ℹ️',
-    console.log(`${prefix} [${timestamp}] ${message}`),
-  }
+    console.log(`${prefix} [${timestamp}] ${message}`);
+};
 ,
   async fixFile(filePath) {,
     try {,
@@ -48,8 +48,8 @@ class ComprehensiveSyntaxFixer {,
       content = this.fixImportsExports(content),
       // Fix API route issues,
       if (filePath.includes('/api/')) {,
-        content = this.fixAPIRoutes(content),
-      }
+        content = this.fixAPIRoutes(content);
+};
 ,
       if (content !== originalContent) {,
         fs.writeFileSync(filePath, content, 'utf8'),
@@ -98,8 +98,8 @@ class ComprehensiveSyntaxFixer {,
     let closeBraces = (content.match(/}/g) || []).length,
     if (openBraces > closeBraces) {,
       const missingBraces = openBraces - closeBraces,
-      content += '\n'.repeat(missingBraces) + '}'.repeat(missingBraces),
-    }
+      content += '\n'.repeat(missingBraces) + '}'.repeat(missingBraces);
+};
 ,
     return content,
   }
@@ -171,21 +171,21 @@ class ComprehensiveSyntaxFixer {,
           if (,
             !['node_modules.nextdistbuild', '.git'].includes(file),
           ) {,
-            await this.fixDirectory(fullPath),
-          }
+            await this.fixDirectory(fullPath);
+};
         } else if (,
           file.endsWith('.tsx') ||,
           file.endsWith('.ts') ||,
           file.endsWith('.jsx') ||,
           file.endsWith('.js'),
         ) {,
-          await this.fixFile(fullPath),
-        }
+          await this.fixFile(fullPath);
+};
       }
     } catch (error) {,
       this.log(`Error processing directory ${dirPath}: ${error.message}`,
-        'error'),
-    }
+        'error');
+};
   }
 ,
   async fixAll() {,
@@ -195,8 +195,8 @@ class ComprehensiveSyntaxFixer {,
       const dirPath = path.join(this.projectRoot, dir),
       if (fs.existsSync(dirPath)) {,
         this.log(`Processing directory: ${dir}`),
-        await this.fixDirectory(dirPath),
-      }
+        await this.fixDirectory(dirPath);
+};
     }
 ,
     this.log(`✅ Comprehensive syntax fix completed. Fixed ${this.fixedFiles.length} files.`),
@@ -204,8 +204,8 @@ class ComprehensiveSyntaxFixer {,
       this.log(`⚠️ ${this.errors.length} errors encountered:`, 'warn'),
       this.errors.forEach((error) => {,
         this.log(`  ${error.file}: ${error.error}`, 'warn'),
-      }),
-    }
+      });
+};
 ,
     return this.fixedFiles.length,
   }
@@ -238,5 +238,5 @@ Examples:,
     break
 }
 ,
-module.exports = ComprehensiveSyntaxFixer,
-}}}}}}}}}}}}}}}}}))))))
+module.exports = ComprehensiveSyntaxFixer;
+  }}}}}}}}}}}}}}}}}))))))'

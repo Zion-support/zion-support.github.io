@@ -8,14 +8,14 @@ function extractLinks(html, origin) {,
     if (href.startsWith('http')) {,
       if (href.startsWith(origin)) {,
         const path = href.substring(origin.length) || '/',
-        if (path.startsWith('/')) links.push(path.split('#')[0]),
-      }
+        if (path.startsWith('/')) links.push(path.split('#')[0]);
+};
     } else if (href.startsWith('/')) {,
-      links.push(href.split('#')[0]),
-    }
+      links.push(href.split('#')[0]);
+};
   }
-  return Array.from(new Set(links)).sort(),
-}
+  return Array.from(new Set(links)).sort();
+};
 ,
 exports.handler = async function(event, context) {,
   try {,
@@ -83,6 +83,6 @@ exports.handler = async function(event, context) {,
 ,
     return { statusCode: 200, body: JSON.stringify({ ok: true, path, commit: jsonCommit.commit && jsonCommit.commit.sha }) },
   } catch (e) {,
-    return { statusCode: 500, body: JSON.stringify({ error: String(e) }) },
+    return { statusCode: 500, body: JSON.stringify({ error: String(e) }) };
   }
-},
+},'"

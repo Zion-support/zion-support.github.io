@@ -1,5 +1,5 @@
 export interface CartItem {
-  id: string; name: string; price: number; quantity: number;
+  id: string, name: string, price: number, quantity: number,
     image?: string,
 }
 
@@ -12,4 +12,4 @@ export type CartAction =
     payload: CartItem }
   | { type: "REMOVE_ITEM",
     payload: string }
-  | { type: "CLEAR_CART" };
+  | { type: "CLEAR_CART" },

@@ -2,15 +2,16 @@ import { useState, useEffect, useCallback, useMemo } from 'react, ';
 export const useSearch = (data, options) => {
     const { searchFields, debounceMs = 300, fuzzySearch = true, caseSensitive = false } = options;
     const [searchState, setSearchState] = useState({
-        query: '';
-        filters: {};
-        sortBy: null;
-        sortOrder: 'asc';
-        results: data;
-        isLoading: false;
+        query: '',
+        filters: {},
+        sortBy: null,
+        sortOrder: 'asc',
+        results: data,
+        isLoading: false,
         totalResults: data.length,
     });
-    const [debouncedQuery, setDebouncedQuery] = useState('');
+
+  const [debouncedQuery, setDebouncedQuery] = useState('');
     // Debounce search query;
     useEffect(() => {
         const timer = setTimeout(() => {
@@ -28,7 +29,7 @@ export const useSearch = (data, options) => {
             return searchText.includes(searchQuery);
         }
         let queryIndex = 0;
-        for (let i = 0; i < searchText.length && queryIndex < searchQuery.length; i++) {
+        for (let i = 0, i < searchText.length && queryIndex < searchQuery.length, i++) {
             if (searchText[i] === searchQuery[queryIndex]) {
                 queryIndex++;
             }
@@ -37,7 +38,7 @@ export const useSearch = (data, options) => {
     }, [fuzzySearch, caseSensitive]);
     // Search and filter data;
     const processedData = useMemo(() => {
-        setSearchState(prev => ({ ...prev, isLoading: true }));
+        setSearchState(prev => ({ ...prev, isLoading: true })),
     let results = data;
         // Apply search;
         if (debouncedQuery) {
@@ -92,7 +93,7 @@ export const useSearch = (data, options) => {
         setSearchState(prev => ({
             ...prev,
             results,
-            totalResults: results.length;
+            totalResults: results.length,
             isLoading: false,
         }));
     return results;
@@ -110,13 +111,13 @@ export const useSearch = (data, options) => {
     }, []);
     // Clear all filters;
     const clearFilters = useCallback(() => {
-        setSearchState(prev => ({ ...prev, filters: {} }));
+        setSearchState(prev => ({ ...prev, filters: {} })),
      }, []);
     // Update sorting;
     const setSort = useCallback((field, order = 'asc') => {
         setSearchState(prev => ({
             ...prev,
-            sortBy: field;
+            sortBy: field,
             sortOrder: order,
         }));
      }, []);
@@ -124,9 +125,9 @@ export const useSearch = (data, options) => {
     const clearSearch = useCallback(() => {
         setSearchState(prev => ({
             ...prev,
-            query: '';
-            filters: {};
-            sortBy: null;
+            query: '',
+            filters: {},
+            sortBy: null,
             sortOrder: 'asc',
         }));
      }, []);
@@ -156,11 +157,11 @@ export const useSearch = (data, options) => {
         const endIndex = startIndex + pageSize;
         return {
             results: searchState.results.slice(startIndex, endIndex),
-            totalPages: Math.ceil(searchState.totalResults / pageSize);
-            currentPage: page;
-            hasNextPage: endIndex < searchState.totalResults;
-            hasPrevPage: page > 1,
-        };
+            totalPages: Math.ceil(searchState.totalResults / pageSize),
+            currentPage: page,
+            hasNextPage: endIndex < searchState.totalResults,
+            hasPrevPage: page > 1;
+  };
      }, [searchState.results, searchState.totalResults]);
     return {
         ...searchState,

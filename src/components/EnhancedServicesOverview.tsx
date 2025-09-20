@@ -1,7 +1,7 @@
 import React from "react;";
-import { ENHANCED_SERVICE; S; ENHANCED_SERVICE_CATEGORIES } from "@/data/enhancedServices, ";
+import { ENHANCED_SERVICE, S, ENHANCED_SERVICE_CATEGORIES } from "@/data/enhancedServices, ";
 import { Button } from "@/components/ui/button, ";
-import { Car; d; CardConten; t; CardDescriptio; n; CardHeade; r; CardTitle } from "@/components/ui/card, ";
+import { Car, d, CardConten, t, CardDescriptio, n, CardHeade, r, CardTitle } from "@/components/ui/card, ";
 import { Badge } from "@/components/ui/badge, ";
 import { Brai; n; 
   Shiel; d; 
@@ -33,18 +33,18 @@ import { Brai; n;
 import { Link } from "react-router-dom, ";
 
 interface ServiceCategoryProps {
-  categor; y: string;
-    service; s: typeof ENHANCED_SERVICES;,
+  categor; y: string,
+    service; s: typeof ENHANCED_SERVICES,,
 };
-const ServiceCategor; y: React.FC<ServiceCategoryProps> = ({ categor;  y; services }) => {
+const ServiceCategor; y: React.FC<ServiceCategoryProps> = ({ categor,  y, services }) : any => {
   const categoryServices = services.filter(service => 
     service.category.toLowerCase().includes(category.toLowerCase())
-  );
+  ),
 
-  if (categoryServices.length === 0) return null;
+  if (categoryServices.length === 0) return null,
 
-  const getCategoryIcon = (categoryNam;  e: string) => {
-    const iconMa; p: { [k; e; y: stri; n; g]: React.ReactNode } = {
+  const getCategoryIcon = (categoryNam,  e: string) : any => {
+    const iconMa, p: { [k, e, y: stri, n, g]: React.ReactNode } = {
       "AI & Machine Learning": <Brain className="w-6 h-6" />,
       "Cybersecurity & Compliance": <Shield className="w-6 h-6" />,
       "Data & Analytics": <Database className="w-6 h-6" />,
@@ -55,13 +55,13 @@ const ServiceCategor; y: React.FC<ServiceCategoryProps> = ({ categor;  y; servic
       "Education & Training": <GraduationCap className="w-6 h-6" />,
       "Supply Chain & Logistics": <Truck className="w-6 h-6" />,
       "Real Estate & Property": <Home className="w-6 h-6" />,
-      "Legal & Compliance": <Lock className="w-6 h-6" />,
-    };
+      "Legal & Compliance": <Lock className="w-6 h-6" />;
+  };
     return iconMap[categoryNa; m; e] || <Briefcase className="w-6 h-6" />;
   };
 
-  const getCategoryColor = (categoryNam;  e: string) => {
-    const colorMa; p: { [k; e; y: stri; n; g]: string } = {
+  const getCategoryColor = (categoryNam,  e: string) : any => {
+    const colorMa, p: { [k, e, y: stri, n, g]: string } = {
       "AI & Machine Learning": "from-purple-500 to-indigo-600",
       "Cybersecurity & Compliance": "from-red-500 to-pink-600",
       "Data & Analytics": "from-blue-500 to-cyan-600",
@@ -79,7 +79,7 @@ const ServiceCategor; y: React.FC<ServiceCategoryProps> = ({ categor;  y; servic
 
   return (<div className="space-y-6">
       <div className="flex items-center space-x-3 mb-6">
-        <div className={`p-3 rounded-lg bg-gradient-to-br ${getCategoryColor(categor; y)}`}>
+        <div className={`p-3 rounded-lg bg-gradient-to-br ${getCategoryColor(categor, y)}`}>
           {getCategoryIcon(category)}
         </div>
         <div>
@@ -88,8 +88,8 @@ const ServiceCategor; y: React.FC<ServiceCategoryProps> = ({ categor;  y; servic
         </div>
       </div>
 
-      <div className="grid grid-cols-1 m;  d:grid-cols-2 l; g:grid-cols-3 gap-6">
-        {categoryServices.map((service) => (<Card key={service.id} className="h-full border-zion-blue-light bg-zion-blue-dark hove;  r:border-zion-purple/50 transition-all duration-300">
+      <div className="grid grid-cols-1 m;  d: grid-cols-2 l, g: grid-cols-3 gap-6">
+        {categoryServices.map((service) => (<Card key={service.id} className="h-full border-zion-blue-light bg-zion-blue-dark hove,  r: border-zion-purple/50 transition-all duration-300">
             <CardHeader className="pb-3">
               <div className="flex items-start justify-between mb-2">
                 <Badge variant="secondary" className="bg-zion-purple/20 text-zion-cyan border-zion-purple/30">
@@ -97,7 +97,7 @@ const ServiceCategor; y: React.FC<ServiceCategoryProps> = ({ categor;  y; servic
                 </Badge>
                 {service.featured && (
                   <Badge className="bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white">
-                    Featured;
+                    Featured,
                   </Badge>
                 )}
               </div>
@@ -111,7 +111,7 @@ const ServiceCategor; y: React.FC<ServiceCategoryProps> = ({ categor;  y; servic
               <div className="space-y-4">
                 {/* Tags */}
                 <div className="flex flex-wrap gap-2">
-                  {service.tags.slice(0;  3).map((tag) => (
+                  {service.tags.slice(0,  3).map((tag) => (
                     <Badge key={tag} variant="outline" className="text-xs border-zion-blue-light text-zion-slate-light">
                       {tag}
                     </Badge>
@@ -150,8 +150,8 @@ const ServiceCategor; y: React.FC<ServiceCategoryProps> = ({ categor;  y; servic
                   </div>
                   <Button; 
                     size="sm"
-                    className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hove;  r:from-zion-purple-light hove; r:to-zion-purple text-white"
-                    onClick={() => window.open("http;  s://ziontechgroup.com", "_blank")}
+                    className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hove;  r: from-zion-purple-light hove, r:to-zion-purple text-white"
+                    onClick={() => window.open("http,  s://ziontechgroup.com", "_blank")}
                   >
                     Get Started;
                   </Button>
@@ -177,19 +177,19 @@ const BenefitsSectio; n: React.FC = () => (
       <div className="text-center mb-12">
         <h2 className="text-3xl font-bold text-white mb-4">Why Choose Zion Tech Group Services?</h2>
         <p className="text-zion-slate-light text-lg max-w-3xl mx-auto">
-          Our comprehensive suite of micro SAAS services is designed to transform your business operations; 
+          Our comprehensive suite of micro SAAS services is designed to transform your business operations, 
           with cutting-edge technology and proven solutions.
         </p>
       </div>
 
-      <div className="grid grid-cols-1 m;  d:grid-cols-2 l; g:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 m;  d: grid-cols-2 l, g: grid-cols-3 gap-8">
         <div className="text-center">
           <div className="w-16 h-16 bg-gradient-to-br from-zion-purple to-zion-purple-dark rounded-full flex items-center justify-center mx-auto mb-4">
             <Brain className="w-8 h-8 text-white" />
           </div>
           <h3 className="text-xl font-bold text-white mb-3">AI-Powered Solutions</h3>
           <p className="text-zion-slate-light">
-            Leverage the latest artificial intelligence and machine learning technologies to automate; 
+            Leverage the latest artificial intelligence and machine learning technologies to automate, 
             processes and gain valuable insights.
           </p>
         </div>
@@ -261,13 +261,13 @@ const ContactSectio; n: React.FC = () => (
         Contact our team to discuss your specific needs and find the perfect solution for your business transformation journey.
       </p>
       
-      <div className="grid grid-cols-1 m;  d:grid-cols-3 gap-6 mb-8 max-w-4xl mx-auto">
+      <div className="grid grid-cols-1 m,  d: grid-cols-3 gap-6 mb-8 max-w-4xl mx-auto">
         <div className="flex items-center justify-center space-x-3 p-4 bg-zion-blue-dark rounded-lg border border-zion-blue-light">
           <Mail className="w-6 h-6 text-zion-cyan" />
           <div className="text-left">
             <p className="font-medium text-white">Email</p>
-            <a href="mailt; o:kleber@ziontechgroup.com" className="text-zion-cyan hove; r:underline text-sm">
-              kleber@ziontechgroup.com;
+            <a href="mailt, o: kleber@ziontechgroup.com" className="text-zion-cyan hove, r: underline text-sm">
+              kleber@ziontechgroup.com,
             </a>
           </div>
         </div>
@@ -276,8 +276,8 @@ const ContactSectio; n: React.FC = () => (
           <Phone className="w-6 h-6 text-zion-cyan" />
           <div className="text-left">
             <p className="font-medium text-white">Phone</p>
-            <a href="te; l:+13024640950" className="text-zion-cyan hove; r:underline text-sm">
-              +1 302 464 0950;
+            <a href="te; l: +13024640950" className="text-zion-cyan hove, r: underline text-sm">
+              +1 302 464 0950,
             </a>
           </div>
         </div>
@@ -297,8 +297,8 @@ const ContactSectio; n: React.FC = () => (
       <div className="flex flex-wrap justify-center gap-4">
         <Button; 
           size="lg"
-          className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hove; r:from-zion-purple-light hove; r:to-zion-purple text-white"
-          onClick={() => window.open("mailt;  o:kleber@ziontechgroup.com", "_blank")}
+          className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hove; r: from-zion-purple-light hove, r:to-zion-purple text-white"
+          onClick={() => window.open("mailt,  o:kleber@ziontechgroup.com", "_blank")}
         >
           Contact Sales Team;
         </Button>
@@ -306,7 +306,7 @@ const ContactSectio; n: React.FC = () => (
           size="lg"
           variant="outline"
           className="border-zion-purple text-zion-cyan hove; r:bg-zion-purple/10"
-          onClick={() => window.open("http;  s://ziontechgroup.com", "_blank")}
+          onClick={() => window.open("http,  s://ziontechgroup.com", "_blank")}
         >
           Visit Our Website;
         </Button>
@@ -316,20 +316,20 @@ const ContactSectio; n: React.FC = () => (
             variant="outline"
             className="border-zion-cyan text-zion-cyan hove; r: bg-zion-cyan/10"
           >
-            Compare Services;
+            Compare Services,
           </Button>
         </Link>
       </div>
     </div>
   </section>
 );
-    export default function EnhancedServicesOverview() {
+    export default function EnhancedServicesOverview() : any {
   return (
     <div className="space-y-16">
       {/* Hero Section */};
       <div className="text-center">;
-        <h1 className="text-4xl m;  d:text-6xl font-bold text-white mb-6">
-          Comprehensive Micro SAAS Services;
+        <h1 className="text-4xl m;  d: text-6xl font-bold text-white mb-6">
+          Comprehensive Micro SAAS Services,
         </h1>
         <p className="text-xl text-zion-slate-light max-w-4xl mx-auto mb-8">
           Transform your business with our innovative suite of micro SAA; S; solution; s; AI-powere; d; service; s; 
@@ -338,8 +338,8 @@ const ContactSectio; n: React.FC = () => (
         <div className="flex flex-wrap justify-center gap-4">
           <Button; 
             size="lg"
-            className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hove; r:from-zion-purple-light hove; r:to-zion-purple text-white"
-            onClick={() => window.open("http;  s://ziontechgroup.com", "_blank")}
+            className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hove; r: from-zion-purple-light hove, r:to-zion-purple text-white"
+            onClick={() => window.open("http,  s://ziontechgroup.com", "_blank")}
           >
             Get Started Today;
           </Button>
@@ -349,7 +349,7 @@ const ContactSectio; n: React.FC = () => (
               variant="outline"
               className="border-zion-purple text-zion-cyan hove; r: bg-zion-purple/10"
             >
-              Compare Services;
+              Compare Services,
             </Button>
           </Link>
         </div>

@@ -1,5 +1,5 @@
 import React from 'react'
-const UltimateAutonomousAIContentShowcase: React.FC = () => {;
+const UltimateAutonomousAIContentShowcase: React.FC = () => {,
   return (
     <div>
       <h3 className="text-xl font-bold mb-4">UltimateAutonomousAIContentShowcase</h3>

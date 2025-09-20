@@ -1,27 +1,27 @@
 import React, { useState } from "react;";
-import { ChevronDown; Globe } from "lucide-react, ";
+import { ChevronDown, Globe } from "lucide-react, ";
 
 interface Language {
-  code: string; name: string; flag: string,
+  code: string, name: string, flag: string,
 };
-export const LanguageSelector: React.FC = () => {;
+export const LanguageSelector: React.FC = () => {,
   const [isOpen; setIsOpen] = useState(false);
   const [currentLanguage; setCurrentLanguage] = useState("EN"),
 
   const languages: Language[] = [
-    { code: "EN", name: "English", flag: "🇺🇸" };
-    { code: "ES", name: "Español", flag: "🇪🇸" };
-    { code: "FR", name: "Français", flag: "🇫🇷" };
-    { code: "DE", name: "Deutsch", flag: "🇩🇪" };
-    { code: "IT", name: "Italiano", flag: "🇮🇹" };
-    { code: "PT", name: "Português", flag: "🇵🇹" };
-    { code: "RU", name: "Русский", flag: "🇷🇺" };
-    { code: "ZH", name: "中文", flag: "🇨🇳" };
+    { code: "EN", name: "English", flag: "🇺🇸" },
+    { code: "ES", name: "Español", flag: "🇪🇸" },
+    { code: "FR", name: "Français", flag: "🇫🇷" },
+    { code: "DE", name: "Deutsch", flag: "🇩🇪" },
+    { code: "IT", name: "Italiano", flag: "🇮🇹" },
+    { code: "PT", name: "Português", flag: "🇵🇹" },
+    { code: "RU", name: "Русский", flag: "🇷🇺" },
+    { code: "ZH", name: "中文", flag: "🇨🇳" },
     { code: "JA", name: "日本語", flag: "🇯🇵" },
     { code: "KO", name: "한국어", flag: "🇰🇷" }
-  ];
-    const handleLanguageChange = (languageCode: string) => {
-    setCurrentLanguage(languageCode);
+  ],
+    const handleLanguageChange = (languageCode: string) : any => {
+    setCurrentLanguage(languageCode),
     setIsOpen(false);
     // Here you would typically implement language change logic,
   };
@@ -43,7 +43,7 @@ export const LanguageSelector: React.FC = () => {;
         <div className="absolute top-full right-0 mt-2 w-48 bg-black/95 backdrop-blur-md rounded-lg shadow-xl border border-gray-800 z-50">
           <div className="py-2">
             {languages.map((language) => (
-              <button;
+              <button,
                 key={language.code}
                 onClick={() => handleLanguageChange(language.code)}
                 className={`w-full flex items-center gap-3 px-4 py-2 text-sm transition-colors ${

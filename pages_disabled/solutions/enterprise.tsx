@@ -8,7 +8,7 @@ import {
 import EnhancedNavigation from '../../components/EnhancedNavigation';
 import EnhancedFooter from '../../components/EnhancedFooter';
 
-export default function EnterpriseSolutionsPage() {
+export default function EnterpriseSolutionsPage() : any {
   const solutions = [
     {
       title: "Enterprise AI Platform",
@@ -46,7 +46,7 @@ export default function EnterpriseSolutionsPage() {
       price: "Custom Pricing",
       icon: Database
     }
-  ];
+  ],
 
   const benefits = [
     {
@@ -69,7 +69,7 @@ export default function EnterpriseSolutionsPage() {
       title: "Custom Solutions",
       description: "Tailored solutions designed specifically for your business needs"
     }
-  ];
+  ],
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white overflow-hidden">
@@ -251,4 +251,4 @@ export default function EnterpriseSolutionsPage() {
       <EnhancedFooter />
     </div>
   );
-}
+  }'

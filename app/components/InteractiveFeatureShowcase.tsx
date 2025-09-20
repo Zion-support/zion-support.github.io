@@ -4,13 +4,13 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 
 interface Feature {
-  id: string;
-  title: string;
-  description: string;
-  icon: string;
-  benefits: string[];
-  link: string;
-  color: string;
+  id: string,
+  title: string,
+  description: string,
+  icon: string,
+  benefits: string[],
+  link: string,
+  color: string,
 }
 
 const InteractiveFeatureShowcase: React.FC = () => {
@@ -74,14 +74,14 @@ const InteractiveFeatureShowcase: React.FC = () => {
       link: '/tools',
       color: 'from-orange-500 to-red-600'
     }
-  ];
+  ]);
 
   useEffect(() => {
     setIsVisible(true);
     const interval = setInterval(() => {
       setActiveFeature((prev) => (prev + 1) % features.length);
     }, 5000);
-    return () => clearInterval(interval);
+    return () => { clearInterval(interval); };
   }, [features.length]);
 
   return (
@@ -158,7 +158,7 @@ const InteractiveFeatureShowcase: React.FC = () => {
               <div className="text-center">
                 <Link
                   href={features[activeFeature].link}
-                  className={`inline-block bg-gradient-to-r ${features[activeFeature].color} text-white px-8 py-4 rounded-lg font-semibold transition-all transform hover:scale-105 hover:shadow-lg`}
+                  className={`inline-block bg-gradient-to-r ${features[activeFeature].color} text-white px-8 py-4 rounded-lg font-semibold transition-all transform hover: scale-105 hover:shadow-lg`}
                 >
                   Explore This Solution
                 </Link>

@@ -178,9 +178,8 @@ export class AIFinancialAdvisorService {
       }),
 
       if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`),
-      }
-
+        throw new Error(`HTTP error! status: ${response.status}`);
+};
       const data = await response.json(),
       return data.portfolio,
     } catch (error) {
@@ -201,9 +200,8 @@ export class AIFinancialAdvisorService {
       }),
 
       if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`),
-      }
-
+        throw new Error(`HTTP error! status: ${response.status}`);
+};
       const data = await response.json(),
       return data.recommendations || [],
     } catch (error) {
@@ -224,9 +222,8 @@ export class AIFinancialAdvisorService {
       }),
 
       if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`),
-      }
-
+        throw new Error(`HTTP error! status: ${response.status}`);
+};
       const data = await response.json(),
       return data.plan,
     } catch (error) {
@@ -244,9 +241,8 @@ export class AIFinancialAdvisorService {
       }),
 
       if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`),
-      }
-
+        throw new Error(`HTTP error! status: ${response.status}`);
+};
       const data = await response.json(),
       return data.goals || [],
     } catch (error) {
@@ -264,9 +260,8 @@ export class AIFinancialAdvisorService {
       }),
 
       if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`),
-      }
-
+        throw new Error(`HTTP error! status: ${response.status}`);
+};
       const data = await response.json(),
       return data.analysis,
     } catch (error) {
@@ -298,9 +293,8 @@ export class AIFinancialAdvisorService {
       }),
 
       if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`),
-      }
-
+        throw new Error(`HTTP error! status: ${response.status}`);
+};
       const data = await response.json(),
       return data.rebalancing,
     } catch (error) {
@@ -327,9 +321,8 @@ export class AIFinancialAdvisorService {
       }),
 
       if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`),
-      }
-
+        throw new Error(`HTTP error! status: ${response.status}`);
+};
       const data = await response.json(),
       return data.calculation,
     } catch (error) {
@@ -356,9 +349,8 @@ export class AIFinancialAdvisorService {
       }),
 
       if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`),
-      }
-
+        throw new Error(`HTTP error! status: ${response.status}`);
+};
       const data = await response.json(),
       return data.optimization,
     } catch (error) {
@@ -386,15 +378,14 @@ export class AIFinancialAdvisorService {
       }),
 
       if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`),
-      }
-
+        throw new Error(`HTTP error! status: ${response.status}`);
+};
       const data = await response.json(),
       return data.report,
     } catch (error) {
       console.error('Error generating financial report:', error),
-      throw error,
-    }
+      throw error;
+  }
   }
 }
 

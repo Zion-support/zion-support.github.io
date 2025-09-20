@@ -40,8 +40,8 @@ const InteractiveAIToolsDemo2026 = () => {,
           }
           return prev + 2,
         }),
-      }100),
-    }
+      }100);
+};
     return () => clearInterval(interval),
   }[isRunning]),
   const demos = [,
@@ -112,7 +112,7 @@ const InteractiveAIToolsDemo2026 = () => {,
   },
   const handleResetDemo = () => {,
     setIsRunning(false),
-    setProgress(0),
+    setProgress(0);
   },
   if (!isVisible) return null,
   return (,

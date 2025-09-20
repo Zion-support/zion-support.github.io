@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 >>>>>>> 41df652ad9e8db87ab68c1291b2ea320c87bca39:temp-problematic-files/fortune-500-ai-transformation-ultimate-success-2025/page.tsx
     authors: ['Zion Tech Group']}
 }
-export default function Fortune500AITransformation() {
+export default function Fortune500AITransformation() : any {
   return (
     <div>
       <div>

@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     startTime: '2025-02-15T14:00:00.000Z',
     endTime: '2025-02-15T16:00:00.000Z'}
 }
-export default function AI2026Masterclass() {
+export default function AI2026Masterclass() : any {
   return (
     <div>
       <article className="prose prose-lg max-w-none">

@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     tags: ['Quantum AIBusiness TransformationMachine LearningOptimization']
   }
 }
-const blogPost = {;
+const blogPost = {,
   title: 'Quantum AI 2026: Business Transformation Ultimate Guide',
   description: 'Discover how quantum AI will revolutionize business operations in 2026. Explore quantum machine learning, optimization algorithms, and transformative business applications.',
   date: '2026-01-20',
@@ -122,7 +122,7 @@ const relatedPosts = [;
     excerpt: 'Learn about the AI innovations that will define 2025 and beyond.',
     image: '/images/ai-2025-revolutionary.jpg'}
 ],
-export default function QuantumAI2026BusinessTransformationPage() {
+export default function QuantumAI2026BusinessTransformationPage() : any {
   return (
     <div>
       <SEO
@@ -182,4 +182,4 @@ export default function QuantumAI2026BusinessTransformationPage() {
         </section>
       </div>
     </div>
-  )}
+  )}'"

@@ -6,6 +6,6 @@ const BundleAnalyzer: React.FC = () => {
       {/* Bundle analysis */}
     </div>
   );
-};
+  };
 
 export default BundleAnalyzer;<//div><///div>

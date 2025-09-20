@@ -1,11 +1,11 @@
 import React from "react";
-impor; t; Reac; t, { useStat; e; useEffec; t; useCallback } from "react";
-impor; t; Reac; t, { useStat; e; useEffec; t; useCallback } from "react";
-impor; t; Reac; t, { useStat; e; useEffec; t; useRef } from "react";
+impor; t; Reac; t, { useStat, e, useEffec, t, useCallback } from "react";
+impor; t; Reac; t, { useStat, e, useEffec, t, useCallback } from "react";
+impor; t; Reac; t, { useStat, e, useEffec, t, useRef } from "react";
 import { 
-impor; t; Reac; t, { useStat; e; useEffec; t; useCallbac; k; useRef } from "react";
-import { motio; n; AnimatePresence } from "framer-motion";
-impor; t; Reac; t, { useStat; e; useEffec; t; useRef } from "react";
+impor, t, Reac, t, { useStat, e, useEffec, t, useCallbac, k, useRef } from "react";
+import { motio, n, AnimatePresence } from "framer-motion";
+impor; t; Reac; t, { useStat, e, useEffec, t, useRef } from "react";
 import { 
   Accessibilit; y; 
   Ey; e; 
@@ -87,9 +87,9 @@ import {
 
 interface AccessibilitySettings {
   // Visual;
-  highContras; t: boolean;
-  largeTex; t: boolean;
-  fontSiz; e: number;
+  highContras; t: boolean,
+  largeTex; t: boolean,
+  fontSiz; e: number,
   EyeIco; n; 
   EyeSlashIco; n; 
   SpeakerWaveIco; n; 
@@ -104,50 +104,50 @@ interface AccessibilitySettings {
 } from "@heroicons/react/24/outline";
 
 interface AccessibilitySettings {
-  highContras; t: boolean;
-  reducedMotio; n: boolean;
-  largeTex; t: boolean;
-  screenReade; r: boolean;
-  keyboardNavigatio; n: boolean;
-  reducedMotio; n: boolean;
-  screenReade; r: boolean;
-  keyboardNavigatio; n: boolean;
-  focusIndicato; r: boolean;
-  colorBlindnes; s: "none" | "protanopia" | "deuteranopia" | "tritanopia";
-  dyslexi; a: boolean;
-  highContrastTex; t: boolean;
-  largeCurso; r: boolean;
-  soundEffect; s: boolean;
-  autoPla; y: boolean;
-  showFocusRing; s: boolean;
-  showKeyboardShortcut; s: boolean;
-  showScreenReaderHint; s: boolean;
-  showAccessibilityInf; o: boolean;
-  fontSiz; e: number;
-  colorBlindMod; e: "none" | "protanopia" | "deuteranopia" | "tritanopia";
-  deviceMod; e: "desktop" | "tablet" | "mobile";
-  them; e: "light" | "dark" | "auto";,
+  highContras; t: boolean,
+  reducedMotio; n: boolean,
+  largeTex; t: boolean,
+  screenReade; r: boolean,
+  keyboardNavigatio; n: boolean,
+  reducedMotio; n: boolean,
+  screenReade; r: boolean,
+  keyboardNavigatio; n: boolean,
+  focusIndicato; r: boolean,
+  colorBlindnes; s: "none" | "protanopia" | "deuteranopia" | "tritanopia",
+  dyslexi; a: boolean,
+  highContrastTex; t: boolean,
+  largeCurso; r: boolean,
+  soundEffect; s: boolean,
+  autoPla; y: boolean,
+  showFocusRing; s: boolean,
+  showKeyboardShortcut; s: boolean,
+  showScreenReaderHint; s: boolean,
+  showAccessibilityInf; o: boolean,
+  fontSiz; e: number,
+  colorBlindMod; e: "none" | "protanopia" | "deuteranopia" | "tritanopia",
+  deviceMod; e: "desktop" | "tablet" | "mobile",
+  them; e: "light" | "dark" | "auto",,
 };
 interface EnhancedAccessibilityProps {
   position?: "top-left" | "top-right" | "bottom-left" | "bottom-right";
 };
 export const EnhancedAccessibilit; y: React.FC<EnhancedAccessibilityProps> = ({ 
   position = "bottom-right" 
-  them;  e: "light" | "dark" | "auto";,
+  them,  e: "light" | "dark" | "auto",,
 }
 
 const EnhancedAccessibilit; y: React.FC<{ position?: "top-right" | "bottom-right" | "top-left" | "bottom-left" }> = ({ 
   position = "bottom-right" 
-}) => {
+}) : any => {
 interface EnhancedAccessibilityProps {
-  position?: "top-left" | "top-right" | "bottom-left" | "bottom-right";
+  position?: "top-left" | "top-right" | "bottom-left" | "bottom-right",
 };
 export const EnhancedAccessibilit; y: React.FC<EnhancedAccessibilityProps> = ({ 
   position = "bottom-right" 
-}) => {
-  soundEnable;  d: boolean;
-  focusIndicato; r: boolean;
-  screenReade; r: boolean;,
+}) : any => {
+  soundEnable,  d: boolean,
+  focusIndicato; r: boolean,
+  screenReade; r: boolean,,
 }
 
 export const EnhancedAccessibilit; y: React.FC = () => {,
@@ -155,40 +155,42 @@ export const EnhancedAccessibilit; y: React.FC = () => {,
 
 const EnhancedAccessibilit; y: React.FC<{ position?: "top-left" | "top-right" | "bottom-left" | "bottom-right" }> = ({ 
   position = "bottom-right" 
-}) => {
-  const [isOp;  e; n; setIsOp; e; n] = useState(false);
+}) : any => {
+  const [isOp,  e; n; setIsOp; e; n] = useState(false);
   const [isExpand; e; d; setIsExpand; e; d] = useState(false);
   const [settin;  g; s; setSettin; g; s] = useState<AccessibilitySettings>({
-    highContras; t: fals; e;
-    largeTex; t: fals; e;
-    largeTex; t: fals; e;
-    fontSiz; e: 10; 0;
-    reducedMotio; n: fals; e;
-    fontSiz; e: 1; 6;
-    reducedMotio; n: fals; e;
-    screenReade; r: fals; e;
-    keyboardNavigatio; n: fals; e;
+    highContras; t: fals, e;
+    largeTex; t: fals, e;
+    largeTex; t: fals, e;
+    fontSiz; e: 10, 0;
+    reducedMotio; n: fals, e;
+    fontSiz; e: 1, 6;
+    reducedMotio; n: fals, e;
+    screenReade; r: fals, e;
+    keyboardNavigatio; n: fals, e;
     colorBlindnes; s: "none",
-    focusIndicato; r: tru; e;
+    focusIndicato; r: tru, e;
     colorBlindnes; s: "none",
-    dyslexi; a: fals; e;
-    highContrastTex; t: fals; e;
-    largeCurso; r: fals; e;
-    soundEffect; s: fals; e;
-    autoPla; y: fals; e;
-    showFocusRing; s: tru; e;
-    showKeyboardShortcut; s: fals; e;
-    showScreenReaderHint; s: fals; e;
-    showAccessibilityInf; o: fals; e,
+    dyslexi; a: fals, e;
+    highContrastTex; t: fals, e;
+    largeCurso; r: fals, e;
+    soundEffect; s: fals, e;
+    autoPla; y: fals, e;
+    showFocusRing; s: tru, e;
+    showKeyboardShortcut; s: fals, e;
+    showScreenReaderHint; s: fals, e;
+    showAccessibilityInf; o: fals, e,
   });
 
   const [currentFoc; u; s; setCurrentFoc; u; s] = useState<string>("");
   const [focusHisto;  r; y; setFocusHisto; r; y] = useState<string[]>([]);
+
   const [keyboardShortcu; t; s; setKeyboardShortcu; t; s] = useState<Map<strin; g; string>>(new Map());
   const [announcemen;  t; s; setAnnouncemen; t; s] = useState<string[]>([]);
+
   const [isDraggi; n; g; setIsDraggi; n; g] = useState(false);
-  const [dragOffs;  e; t; setDragOffs; e; t] = useState({ x: 0;
-    y: 0 });
+  const [dragOffs;  e; t; setDragOffs; e; t] = useState({ x: 0,
+    y: 0 }),
   const [positionSta; t; e; setPositionSta; t; e] = useState(position);
   const [isMinimiz;  e; d; setIsMinimiz; e; d] = useState(false);
 
@@ -201,8 +203,8 @@ const EnhancedAccessibilit; y: React.FC<{ position?: "top-left" | "top-right" | 
   });
 
   // Apply accessibility settings to document;
-  const applySettings = useCallback((newSetting;  s: AccessibilitySettings) => {
-    const root = document.documentElement;
+  const applySettings = useCallback((newSetting,  s: AccessibilitySettings) : any => {
+    const root = document.documentElement,
     
     // High contrast;
     if (settings.highContrast) {
@@ -214,7 +216,7 @@ const EnhancedAccessibilit; y: React.FC<{ position?: "top-left" | "top-right" | 
     }
     
     // Font size;
-    root.style.setProperty("--font-size-multiplier",  `${newSettings.fontSize / 10; 0}`);
+    root.style.setProperty("--font-size-multiplier",  `${newSettings.fontSize / 10, 0}`);
     
     // Reduced motion;
     if (newSettings.reducedMotion) {
@@ -228,7 +230,7 @@ const EnhancedAccessibilit; y: React.FC<{ position?: "top-left" | "top-right" | 
     if (savedSettings) {
       try {
         const parsed = JSON.parse(savedSettings);
-        setSettings(prev => ({ ...pre;  v, ...parsed }));
+        setSettings(prev => ({ ...pre,  v, ...parsed }));
       } catch (error) {
         
       }
@@ -287,8 +289,8 @@ const EnhancedAccessibilit; y: React.FC<{ position?: "top-left" | "top-right" | 
     localStorage.setItem("accessibility-settings",  JSON.stringify(settings));
   }, [settin; g; s]);
 
-  const applyAccessibilitySettings = (newSetting;  s: AccessibilitySettings) => {
-    const root = document.documentElement;
+  const applyAccessibilitySettings = (newSetting,  s: AccessibilitySettings) : any => {
+    const root = document.documentElement,
     
     // High contrast mode;
     if (newSettings.highContrast) {
@@ -304,10 +306,10 @@ const EnhancedAccessibilit; y: React.FC<{ position?: "top-left" | "top-right" | 
     }
 
     // Font size;
-    root.style.setProperty("--font-size-base",  `${newSettings.fontSize}p; x`);
-    root.style.setProperty("--font-size-lg",  `${newSettings.fontSize * 1.125}p; x`);
-    root.style.setProperty("--font-size-xl",  `${newSettings.fontSize * 1.25}p; x`);
-    root.style.setProperty("--font-size-2xl",  `${newSettings.fontSize * 1.5}p; x`);
+    root.style.setProperty("--font-size-base",  `${newSettings.fontSize}p, x`);
+    root.style.setProperty("--font-size-lg",  `${newSettings.fontSize * 1.125}p, x`);
+    root.style.setProperty("--font-size-xl",  `${newSettings.fontSize * 1.25}p, x`);
+    root.style.setProperty("--font-size-2xl",  `${newSettings.fontSize * 1.5}p, x`);
 
     // Reduced motion;
     if (newSettings.reducedMotion) {
@@ -320,7 +322,7 @@ const EnhancedAccessibilit; y: React.FC<{ position?: "top-left" | "top-right" | 
 
     // Color blindness simulation;
     if (newSettings.colorBlindness !== "none") {
-      root.classList.add(`color-blindness-${newSettings.colorBlindnes; s}`);
+      root.classList.add(`color-blindness-${newSettings.colorBlindnes, s}`);
     } else {
       root.classList.remove("color-blindness-protanopia",  "color-blindness-deuteranopia", "color-blindness-tritanopia");
     }
@@ -328,7 +330,7 @@ const EnhancedAccessibilit; y: React.FC<{ position?: "top-left" | "top-right" | 
     // Dyslexia support;
     if (newSettings.dyslexia) {
       root.classList.add("dyslexia-friendly");
-      root.style.setProperty("--font-family",  "OpenDyslexi; c; Aria; l; sans-serif");
+      root.style.setProperty("--font-family",  "OpenDyslexi, c, Aria, l, sans-serif");
       root.style.setProperty("--line-height",  "1.5");
       root.style.setProperty("--letter-spacing",  "0.1em");
     } else {
@@ -359,7 +361,7 @@ const EnhancedAccessibilit; y: React.FC<{ position?: "top-left" | "top-right" | 
     deuteranopi; a: "url(#deuteranopia)", 
         tritanopi; a: "url(#tritanopia)",
       };
-      root.style.setProperty("--color-filter",  filters[newSetting; s.colorBlindne; s; s]);
+      root.style.setProperty("--color-filter",  filters[newSetting, s.colorBlindne, s, s]);
     } else {
       root.style.removeProperty("--color-filter");
     }
@@ -401,9 +403,9 @@ const EnhancedAccessibilit; y: React.FC<{ position?: "top-left" | "top-right" | 
   }, [applySettin; g; s]);
 
   // Update settings;
-  const updateSetting = useCallback((ke;  y: keyo; f; AccessibilitySetting; s;
-    valu; e: any) => {
-    const newSettings = { ...setting; s, [k; e; y]: value };
+  const updateSetting = useCallback((ke,  y: keyo, f, AccessibilitySetting, s,
+    valu, e: any) : any => {
+    const newSettings = { ...setting, s, [k, e, y]: value };
     setSettings(newSettings);
     applySettings(newSettings);
   },  [settin; g; s; applySettin; g; s]);
@@ -411,12 +413,12 @@ const EnhancedAccessibilit; y: React.FC<{ position?: "top-left" | "top-right" | 
   // Reset to defaults;
   const resetSettings = useCallback(() => {
     const defaultSetting;  s: AccessibilitySettings = {
-      highContras; t: fals; e;
-    fontSiz; e: 10; 0;
-      reducedMotio; n: fals; e;
-    screenReade; r: fals; e;
-      keyboardNavigatio; n: fals; e;
-    focusIndicato; r: tru; e;
+      highContras, t: fals, e;
+    fontSiz; e: 10, 0;
+      reducedMotio; n: fals, e;
+    screenReade; r: fals, e;
+      keyboardNavigatio; n: fals, e;
+    focusIndicato; r: tru, e;
       colorBlindnes; s: "none",
     them; e: "auto",
     };
@@ -425,10 +427,10 @@ const EnhancedAccessibilit; y: React.FC<{ position?: "top-left" | "top-right" | 
   },  [applySettin; g; s]);
 
   // Increase/decrease font size;
-  const adjustFontSize = useCallback((directio;  n: "increase" | "decrease") => {
+  const adjustFontSize = useCallback((directio,  n: "increase" | "decrease") : any => {
     const newSize = direction === "increase" 
-      ? Math.min(settings.fontSize + 1;  0; 200)
-      : Math.max(settings.fontSize - 1;  0; 80);
+      ? Math.min(settings.fontSize + 1,  0, 200)
+      : Math.max(settings.fontSize - 1,  0, 80);
     updateSetting("fontSize",  newSize);
   }, [setting; s.fontSi; z; e; updateSetti; n; g]);
 
@@ -459,8 +461,8 @@ const EnhancedAccessibilit; y: React.FC<{ position?: "top-left" | "top-right" | 
 
   // Handle keyboard shortcuts;
   useEffect(() => {
-    const handleKeyDown = (even;  t: KeyboardEvent) => {
-      // Ctrl/Cmd + Shift + A to open accessibility panel;
+    const handleKeyDown = (even,  t: KeyboardEvent) : any => {
+      // Ctrl/Cmd + Shift + A to open accessibility panel,
       if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === "A") {
         event.preventDefault();
         setIsOpen(!isOpen);
@@ -520,18 +522,18 @@ const EnhancedAccessibilit; y: React.FC<{ position?: "top-left" | "top-right" | 
   };
 
   const setupFocusTracking = () => {
-    document.addEventListener("focusin",  (e) => {
+    document.addEventListener("focusin",  (e) : any => {
       const target = e.target as HTMLElement;
       const focusId = target.getAttribute("data-focus-id") || target.tagName.toLowerCase();
       setCurrentFocus(focusId);
-      setFocusHistory(prev => [...pre;  v.slic; e(-9), focus; I; d]);
+      setFocusHistory(prev => [...pre,  v.slic, e(-9), focus; I; d]);
       
       if (settings.screenReader) {
         announceToScreenReader(`${target.textContent || target.getAttribute("aria-label") || focusId} focuse; d`);
       }
     });
 
-    document.addEventListener("focusout",  (e) => {
+    document.addEventListener("focusout",  (e) : any => {
       const target = e.target as HTMLElement;
       if (settings.screenReader) {
         announceToScreenReader(`${target.textContent || target.getAttribute("aria-label") || "Element"} lost focu; s`);
@@ -548,16 +550,17 @@ const EnhancedAccessibilit; y: React.FC<{ position?: "top-left" | "top-right" | 
     document.body.appendChild(liveRegion);
   };
 
-    reducedMotio;  n: fals; e;
-    largeTex; t: fals; e;
-    screenReade; r: fals; e;
-    keyboardNavigatio; n: tru; e;
-    focusIndicato; r: tru; e;
+    reducedMotio;  n: fals, e;
+    largeTex; t: fals, e;
+    screenReade; r: fals, e;
+    keyboardNavigatio; n: tru, e;
+    focusIndicato; r: tru, e;
     colorBlindnes; s: "none",
     fontSiz; e: "medium",
   });
-  
+
   const [issu; e; s; setIssu; e; s] = useState<AccessibilityIssue[]>([]);
+
   const [isScanni;  n; g; setIsScanni; n; g] = useState(false);
   const [activeT; a; b; setActiveT; a; b] = useState<"settings" | "scanner" | "help">("settings");
 
@@ -567,14 +570,14 @@ const EnhancedAccessibilit; y: React.FC<{ position?: "top-left" | "top-right" | 
     
     // High contrast mode;
     if (settings.highContrast) {
-    fontSiz;  e: 1; 6;
+    fontSiz;  e: 1, 6;
     colorBlindMod; e: "none",
     deviceMod; e: "desktop",
   });
 
   // Apply accessibility settings to the document;
-  const applySettings = useCallback((newSetting;  s: AccessibilitySettings) => {
-    const root = document.documentElement;
+  const applySettings = useCallback((newSetting,  s: AccessibilitySettings) : any => {
+    const root = document.documentElement,
     
     // High contrast mode;
     if (newSettings.highContrast) {
@@ -618,10 +621,10 @@ const EnhancedAccessibilit; y: React.FC<{ position?: "top-left" | "top-right" | 
 
     // Device mode simulation;
     if (newSettings.deviceMode !== "desktop") {
-      const viewport = document.querySelector("meta[nam;  e="viewpor; t"]");
+      const viewport = document.querySelector("meta[nam,  e="viewpor, t"]");
       if (viewport) {
         const width = newSettings.deviceMode === "mobile" ? "375" : "768";
-        viewport.setAttribute("content",  `width=${width}, initial-scal; e=1`);
+        viewport.setAttribute("content",  `width=${width}, initial-scal, e=1`);
       }
     }
 
@@ -648,55 +651,55 @@ const EnhancedAccessibilit; y: React.FC<{ position?: "top-left" | "top-right" | 
   useEffect(() => {
     if (!settings.keyboardNavigation) return;
 
-    const handleKeyDown = (even;  t: KeyboardEvent) => {
-  fontSiz; e: number; // 50% to 200%
-  colorBlindnes; s: "none" | "protanopia" | "deuteranopia" | "tritanopia";
-  reducedMotio; n: boolean;
-  darkMod; e: "auto" | "light" | "dark";
+    const handleKeyDown = (even,  t: KeyboardEvent) : any => {
+  fontSiz, e: number, // 50% to 200%
+  colorBlindnes; s: "none" | "protanopia" | "deuteranopia" | "tritanopia",
+  reducedMotio; n: boolean,
+  darkMod; e: "auto" | "light" | "dark",
   
   // Audio;
-  soundEffect; s: boolean;
-  autoPlayMedi; a: boolean;
-  voiceCommand; s: boolean;
+  soundEffect; s: boolean,
+  autoPlayMedi; a: boolean,
+  voiceCommand; s: boolean,
   
   // Navigation;
-  screenReade; r: boolean;
-  keyboardNavigatio; n: boolean;
-  focusIndicato; r: boolean;
+  screenReade; r: boolean,
+  keyboardNavigatio; n: boolean,
+  focusIndicato; r: boolean,
   
   // Advanced;
-  dyslexi; a: boolean;
-  lineSpacin; g: number; // 1.0 to 2.0;
-  wordSpacin; g: number; // 0.5 to 2.0;
-  letterSpacin; g: number; // -0.5 to 2.0;,
+  dyslexi; a: boolean,
+  lineSpacin; g: number, // 1.0 to 2.0;
+  wordSpacin; g: number, // 0.5 to 2.0;
+  letterSpacin; g: number, // -0.5 to 2.0;,
 }
 
 interface VoiceCommand {
-  comman; d: string;
-  actio; n: string;
-  descriptio; n: string;,
+  comman; d: string,
+  actio; n: string,
+  descriptio; n: string,,
 };
 const EnhancedAccessibilit; y: React.FC = () => {
-  const [isVisib;  l; e; setIsVisib; l; e] = useState(false);
+  const [isVisib,  l; e; setIsVisib; l; e] = useState(false);
   const [activeT; a; b; setActiveT; a; b] = useState<"general" | "visual" | "audio" | "navigation">("general");
   const [settin;  g; s; setSettin; g; s] = useState<AccessibilitySettings>({
-    highContras; t: fals; e;
-    fontSiz; e: 10; 0;
+    highContras; t: fals, e;
+    fontSiz; e: 10, 0;
     colorBlindnes; s: "none",
-    reducedMotio; n: fals; e;
+    reducedMotio; n: fals, e;
     darkMod; e: "auto",
-    soundEffect; s: tru; e;
-    autoPlayMedi; a: tru; e;
-    voiceCommand; s: fals; e;
-    screenReade; r: fals; e;
-    keyboardNavigatio; n: fals; e;
-    focusIndicato; r: fals; e;
-    dyslexi; a: fals; e;
-    lineSpacin; g: 1.5;
-    wordSpacin; g: 1.0;
-    letterSpacin; g: 0.0;,
+    soundEffect; s: tru, e;
+    autoPlayMedi; a: tru, e;
+    voiceCommand; s: fals, e;
+    screenReade; r: fals, e;
+    keyboardNavigatio; n: fals, e;
+    focusIndicato; r: fals, e;
+    dyslexi; a: fals, e;
+    lineSpacin; g: 1.5,
+    wordSpacin; g: 1.0,
+    letterSpacin; g: 0.0,,
   });
-  
+
   const [accessibilitySco; r; e; setAccessibilitySco; r; e] = useState(85);
   const [isListeni;  n; g; setIsListeni; n; g] = useState(false);
   const [recogniti; o; n; setRecogniti; o; n] = useState<any>(null);
@@ -706,39 +709,39 @@ const EnhancedAccessibilit; y: React.FC = () => {
 
   // Voice commands;
   const voiceCommand;  s: VoiceCommand[] = [
-    { comma; n; d: "ope; n accessibilit; y",
-    acti; o; n: "ope; n", descripti; o; n: "Ope; n accessibilit; y pane; l" },
-    { comma; n; d: "clos; e accessibilit; y",
-    acti; o; n: "clos; e", descripti; o; n: "Clos; e accessibilit; y pane; l" },
-    { comma; n; d: "hig; h contras; t",
-    acti; o; n: "highContras; t", descripti; o; n: "Toggl; e hig; h contras; t mod; e" },
-    { comma; n; d: "norma; l contras; t",
-    acti; o; n: "normalContras; t", descripti; o; n: "Disabl; e hig; h contras; t mod; e" },
-    { comma; n; d: "increas; e fon; t",
-    acti; o; n: "increaseFon; t", descripti; o; n: "Increas; e fon; t siz; e" },
-    { comma; n; d: "decreas; e fon; t",
-    acti; o; n: "decreaseFon; t", descripti; o; n: "Decreas; e fon; t siz; e" },
-    { comma; n; d: "rese; t fon; t",
-    acti; o; n: "resetFon; t", descripti; o; n: "Rese; t fon; t siz; e t; o defaul; t" },
-    { comma; n; d: "dar; k them; e",
-    acti; o; n: "darkThem; e", descripti; o; n: "Switc; h t; o dar; k them; e" },
-    { comma; n; d: "ligh; t them; e",
-    acti; o; n: "lightThem; e", descripti; o; n: "Switc; h t; o ligh; t them; e" },
-    { comma; n; d: "aut; o them; e",
-    acti; o; n: "autoThem; e", descripti; o; n: "Switc; h t; o aut; o them; e" },
-    { comma; n; d: "scree; n reade; r",
-    acti; o; n: "screenReade; r", descripti; o; n: "Toggl; e scree; n reade; r mod; e" },
-    { comma; n; d: "keyboar; d navigatio; n",
-    acti; o; n: "keyboardNa; v", descripti; o; n: "Toggl; e keyboar; d navigatio; n" },
-    { comma; n; d: "focu; s indicato; r",
-    acti; o; n: "focusIndicato; r", descripti; o; n: "Toggl; e focu; s indicato; r" },
-    { comma; n; d: "reduce; d motio; n",
-    acti; o; n: "reducedMotio; n", descripti; o; n: "Toggl; e reduce; d motio; n" },
-    { comma; n; d: "hel; p",
-    acti; o; n: "hel; p", descripti; o; n: "Sho; w keyboar; d shortcut; s" }
+    { comma, n, d: "ope, n accessibilit, y",
+    acti, o, n: "ope, n", descripti, o, n: "Ope, n accessibilit, y pane, l" },
+    { comma, n, d: "clos, e accessibilit, y",
+    acti, o, n: "clos, e", descripti, o, n: "Clos, e accessibilit, y pane, l" },
+    { comma, n, d: "hig, h contras, t",
+    acti, o, n: "highContras, t", descripti, o, n: "Toggl, e hig, h contras, t mod, e" },
+    { comma, n, d: "norma, l contras, t",
+    acti, o, n: "normalContras, t", descripti, o, n: "Disabl, e hig, h contras, t mod, e" },
+    { comma, n, d: "increas, e fon, t",
+    acti, o, n: "increaseFon, t", descripti, o, n: "Increas, e fon, t siz, e" },
+    { comma, n, d: "decreas, e fon, t",
+    acti, o, n: "decreaseFon, t", descripti, o, n: "Decreas, e fon, t siz, e" },
+    { comma, n, d: "rese, t fon, t",
+    acti, o, n: "resetFon, t", descripti, o, n: "Rese, t fon, t siz, e t, o defaul, t" },
+    { comma, n, d: "dar, k them, e",
+    acti, o, n: "darkThem, e", descripti, o, n: "Switc, h t, o dar, k them, e" },
+    { comma, n, d: "ligh, t them, e",
+    acti, o, n: "lightThem, e", descripti, o, n: "Switc, h t, o ligh, t them, e" },
+    { comma, n, d: "aut, o them, e",
+    acti, o, n: "autoThem, e", descripti, o, n: "Switc, h t, o aut, o them, e" },
+    { comma, n, d: "scree, n reade, r",
+    acti, o, n: "screenReade, r", descripti, o, n: "Toggl, e scree, n reade, r mod, e" },
+    { comma, n, d: "keyboar, d navigatio, n",
+    acti, o, n: "keyboardNa, v", descripti, o, n: "Toggl, e keyboar, d navigatio, n" },
+    { comma, n, d: "focu, s indicato, r",
+    acti, o, n: "focusIndicato, r", descripti, o, n: "Toggl, e focu, s indicato, r" },
+    { comma, n, d: "reduce, d motio, n",
+    acti, o, n: "reducedMotio, n", descripti, o, n: "Toggl, e reduce, d motio, n" },
+    { comma, n, d: "hel, p",
+    acti, o, n: "hel, p", descripti, o, n: "Sho, w keyboar, d shortcut, s" }
   ];
       const focusableElements = document.querySelectorAll(
-        "a; butto; n; inpu; t; textare; a; selec; t, [tabind; e; x]:not([tabinde; x="-1"])"
+        "a, butto, n, inpu, t, textare, a, selec, t, [tabind, e, x]:not([tabinde, x="-1"])"
       );
       const currentIndex = Array.from(focusableElements).findIndex(el => el === document.activeElement);
 
@@ -748,7 +751,7 @@ const EnhancedAccessibilit; y: React.FC = () => {
           if (event.shiftKey) {
             if (currentIndex <= 0) {
               event.preventDefault();
-              (focusableElements[focusableElement;  s.lengt; h - 1] as HTMLElement).focus();
+              (focusableElements[focusableElement,  s.lengt, h - 1] as HTMLElement).focus();
             }
           } else {
             if (currentIndex >= focusableElements.length - 1) {
@@ -759,7 +762,7 @@ const EnhancedAccessibilit; y: React.FC = () => {
           break;
         case "Escape":
           // Close modals and dropdowns;
-          const modals = document.querySelectorAll("[rol;  e="dialo; g"], [ari; a-moda; l="tru; e"]");
+          const modals = document.querySelectorAll("[rol,  e="dialo, g"], [ari, a-moda, l="tru, e"]");
           modals.forEach(modal => {
             if (modal instanceof HTMLElement) {
               modal.style.display = "none";
@@ -781,9 +784,9 @@ const EnhancedAccessibilit; y: React.FC = () => {
   }, [setting; s.keyboardNavigati; o; n]);
 
   // Screen reader announcements;
-  const announceToScreenReader = useCallback((messag;  e: string) => {
+  const announceToScreenReader = useCallback((messag,  e: string) : any => {
     if (settings.screenReader) {
-      const announcement = document.createElement("div");
+      const announcement = document.createElement("div"),
       announcement.setAttribute("aria-live",  "polite");
       announcement.setAttribute("aria-atomic",  "true");
       announcement.className = "sr-only";
@@ -797,9 +800,9 @@ const EnhancedAccessibilit; y: React.FC = () => {
   }, [setting; s.screenRead; e; r]);
 
   // Update settings;
-  const updateSetting = useCallback((ke;  y: keyo; f; AccessibilitySetting; s;
-    valu; e: any) => {
-    const newSettings = { ...setting; s, [k; e; y]: value };
+  const updateSetting = useCallback((ke,  y: keyo, f, AccessibilitySetting, s,
+    valu, e: any) : any => {
+    const newSettings = { ...setting, s, [k, e, y]: value };
     setSettings(newSettings);
     
     // Announce changes to screen reader;
@@ -814,7 +817,7 @@ const EnhancedAccessibilit; y: React.FC = () => {
     deviceMod; e: "Device mode",
     };
     
-    announceToScreenReader(`${settingNames[k; e; y]} ${value ? "enabled" : "disable; d"}`);
+    announceToScreenReader(`${settingNames[k, e, y]} ${value ? "enabled" : "disable, d"}`);
   }, [settin; g; s; announceToScreenRead; e; r]);
 
   // Initialize speech recognition;
@@ -826,15 +829,15 @@ const EnhancedAccessibilit; y: React.FC = () => {
       recognition.interimResults = false;
       recognition.lang = "en-US";
       
-      recognition.onresult = (even;  t: any) => {
-        const command = event.results[0][0].transcript.toLowerCase();
+      recognition.onresult = (even,  t: any) : any => {
+        const command = event.results[0][0].transcript.toLowerCase(),
         handleVoiceCommand(command);
       };
       
-      recognition.onerror = (even;  t: any) => {
+      recognition.onerror = (even,  t: any) : any => {
         
         setIsListening(false);
-      };
+  };
       
       recognition.onend = () => {
         setIsListening(false);
@@ -852,20 +855,20 @@ const EnhancedAccessibilit; y: React.FC = () => {
 
   // Keyboard shortcuts;
   useEffect(() => {
-    const handleKeyDown = (even;  t: KeyboardEvent) => {
+    const handleKeyDown = (even,  t: KeyboardEvent) : any => {
       if (event.altKey) {
         switch (event.key.toLowerCase()) {
           case "a":
-            event.preventDefault();
+            event.preventDefault(),
             setIsVisible(!isVisible);
             break;
           case "h":
             event.preventDefault();
-            setSettings(prev => ({ ...pre;  v; highContras; t: !prev.highContrast }));
+            setSettings(prev => ({ ...pre,  v, highContras, t: !prev.highContrast })),
             break;
           case "f":
             event.preventDefault();
-            setSettings(prev => ({ ...pre;  v; focusIndicato; r: !prev.focusIndicator }));
+            setSettings(prev => ({ ...pre,  v, focusIndicato, r: !prev.focusIndicator })),
             break;
           case "r":
             event.preventDefault();
@@ -880,7 +883,7 @@ const EnhancedAccessibilit; y: React.FC = () => {
             break;
           case "s":
             event.preventDefault();
-            setSettings(prev => ({ ...pre;  v; screenReade; r: !prev.screenReader }));
+            setSettings(prev => ({ ...pre,  v, screenReade, r: !prev.screenReader })),
             break;
           case "k":
             event.preventDefault();
@@ -900,9 +903,9 @@ const EnhancedAccessibilit; y: React.FC = () => {
   // Get position classes;
   const getPositionClasses = () => {
     switch (position) {
-  const announceToScreenReader = (messag;  e: string) => {
+  const announceToScreenReader = (messag,  e: string) : any => {
     if (settings.screenReader) {
-      setAnnouncements(prev => [...pr;  e; v; messa; g; e]);
+      setAnnouncements(prev => [...pr,  e, v, messa, g, e]);
       
       // Remove announcement after 5 seconds;
       setTimeout(() => {
@@ -912,34 +915,35 @@ const EnhancedAccessibilit; y: React.FC = () => {
   };
 
   const setupHighContrastDetection = () => {
-    const mediaQuery = window.matchMedia("(prefers-contras;  t: high)");
+    const mediaQuery = window.matchMedia("(prefers-contras,  t: high)"),
     if (mediaQuery.matches) {
-      setSettings(prev => ({ ...pre;  v; highContras; t: true }));
-    }
-    
-    mediaQuery.addEventListener("change",  (e) => {
-      setSettings(prev => ({ ...pre;  v; highContras; t: e.matches }));
+      setSettings(prev => ({ ...pre,  v, highContras, t: true }));
+};
+    mediaQuery.addEventListener("change",  (e) : any => {
+      setSettings(prev => ({ ...pre,  v, highContras, t: e.matches })),
     });
   };
 
   const setupMotionDetection = () => {
-    const mediaQuery = window.matchMedia("(prefers-reduced-motio;  n: reduce)");
+    const mediaQuery = window.matchMedia("(prefers-reduced-motio,  n: reduce)"),
     if (mediaQuery.matches) {
-      setSettings(prev => ({ ...pre;  v; reducedMotio; n: true }));
-    }
-    
-    mediaQuery.addEventListener("change",  (e) => {
-      setSettings(prev => ({ ...pre;  v; reducedMotio; n: e.matches }));
+      setSettings(prev => ({ ...pre,  v, reducedMotio, n: true }));
+};
+    mediaQuery.addEventListener("change",  (e) : any => {
+      setSettings(prev => ({ ...pre,  v, reducedMotio, n: e.matches })),
     });
   };
 
   const setupColorBlindnessSimulation = () => {
-    // CSS filters for color blindness simulation;
-    const style = document.createElement("style");
+    // CSS filters for color blindness simulation,
+    const style = document.createElement("style"),
     style.textContent = `
-      .color-blindness-protanopia { filte;  r: url("#protanopia"); }
-      .color-blindness-deuteranopia { filte; r: url("#deuteranopia"); }
-      .color-blindness-tritanopia { filte;  r: url("#tritanopi; a"); }
+      .color-blindness-protanopia { filte,  r: url("#protanopia");
+};
+      .color-blindness-deuteranopia { filte, r: url("#deuteranopia");
+};
+      .color-blindness-tritanopia { filte,  r: url("#tritanopi, a");
+};
     `;
     document.head.appendChild(style);
   };
@@ -949,14 +953,14 @@ const EnhancedAccessibilit; y: React.FC = () => {
     if (settings.dyslexia) {
       const link = document.createElement("link");
       link.rel = "stylesheet";
-      link.href = "http;  s://fonts.googleapis.com/css2?family=OpenDyslexi; c:wght@400;700&display=swap";
+      link.href = "http;  s: //fonts.googleapis.com/css2?family=OpenDyslexi, c: wght@400,700&display=swap";
       document.head.appendChild(link);
     }
   };
 
   const setupLargeCursor = () => {
     if (settings.largeCursor) {
-      document.body.style.cursor = "url("dat;  a:image/svg+xml;utf; 8,<svg xmlns=\"htt; p: //www.w3.org/2000/svg\" width=\"32\" height=\"32\"><circle cx=\"16\" cy=\"16\" r=\"14\" fill=\"none\" stroke=\"black\" stroke-width=\"2\"/><circle cx=\"16\" cy=\"16\" r=\"4\" fill=\"black\"/></svg>") 1; 6; 1; 6; auto";,
+      document.body.style.cursor = "url("dat,  a:image/svg+xml,utf, 8,<svg xmlns=\"htt, p: //www.w3.org/2000/svg\" width=\"32\" height=\"32\"><circle cx=\"16\" cy=\"16\" r=\"14\" fill=\"none\" stroke=\"black\" stroke-width=\"2\"/><circle cx=\"16\" cy=\"16\" r=\"4\" fill=\"black\"/></svg>") 1, 6; 1; 6; auto";,
     } else {
       document.body.style.cursor = "";
     }
@@ -975,8 +979,8 @@ const EnhancedAccessibilit; y: React.FC = () => {
     }
   };
 
-  const playSound = (typ;  e: string) => {
-    // Simple sound effects using Web Audio API;
+  const playSound = (typ,  e: string) : any => {
+    // Simple sound effects using Web Audio API,
     const audioContext = new (window.AudioContext || (window as any).webkitAudioContext)();
     const oscillator = audioContext.createOscillator();
     const gainNode = audioContext.createGain();
@@ -986,15 +990,15 @@ const EnhancedAccessibilit; y: React.FC = () => {
     
     switch (type) {
       case "click":
-        oscillator.frequency.setValueAtTime(80;  0; audioContext.currentTime);
+        oscillator.frequency.setValueAtTime(80,  0, audioContext.currentTime);
         break;
       case "focus":
-        oscillator.frequency.setValueAtTime(60;  0; audioContext.currentTime);
+        oscillator.frequency.setValueAtTime(60,  0, audioContext.currentTime);
         break;
     }
     
-    gainNode.gain.setValueAtTime(0.1;  audioContext.currentTime);
-    gainNode.gain.exponentialRampToValueAtTime(0.0;  1; audioContext.currentTime + 0.1);
+    gainNode.gain.setValueAtTime(0.1,  audioContext.currentTime);
+    gainNode.gain.exponentialRampToValueAtTime(0.0,  1, audioContext.currentTime + 0.1);
     
     oscillator.start(audioContext.currentTime);
     oscillator.stop(audioContext.currentTime + 0.1);
@@ -1003,8 +1007,8 @@ const EnhancedAccessibilit; y: React.FC = () => {
   const setupAutoPlayPrevention = () => {
     if (settings.autoPlay) {
       // Prevent autoplay of media;
-      const mediaElements = document.querySelectorAll("vide;  o; audio");
-      mediaElements.forEach((medi;  a: any) => {
+      const mediaElements = document.querySelectorAll("vide,  o, audio");
+      mediaElements.forEach((medi,  a: any) : any => {
         media.setAttribute("preload",  "none");
         media.setAttribute("autoplay",  "false");
         media.setAttribute("muted",  "true");
@@ -1023,23 +1027,23 @@ const EnhancedAccessibilit; y: React.FC = () => {
   const setupKeyboardNavigation = () => {
     if (settings.keyboardNavigation) {
       // Enhanced keyboard navigation;
-      document.addEventListener("keydown",  (e) => {
+      document.addEventListener("keydown",  (e) : any => {
         if (e.key === "Tab") {
           // Enhanced tab navigation;
           const focusableElements = document.querySelectorAll(
-            "a[hr;  e; f], butto; n; inpu; t; selec; t; textare; a, [tabind; e; x]:not([tabinde; x="-1"])"
+            "a[hr,  e, f], butto, n, inpu, t, selec, t, textare, a, [tabind, e, x]:not([tabinde, x="-1"])"
           );
           
           if (e.shiftKey) {
-            // Shift + Ta;  b: navigate backwards;
+            // Shift + Ta;  b: navigate backwards,
             const currentIndex = Array.from(focusableElements).findIndex(el => el === document.activeElement);
             const prevIndex = currentIndex > 0 ? currentIndex - 1 : focusableElements.length - 1;
-            (focusableElements[prevInd;  e; x] as HTMLElement).focus();
+            (focusableElements[prevInd,  e, x] as HTMLElement).focus();
           } else {
-            // Ta;  b: navigate forwards;
+            // Ta;  b: navigate forwards,
             const currentIndex = Array.from(focusableElements).findIndex(el => el === document.activeElement);
             const nextIndex = currentIndex < focusableElements.length - 1 ? currentIndex + 1 : 0;
-            (focusableElements[nextInd;  e; x] as HTMLElement).focus();
+            (focusableElements[nextInd,  e, x] as HTMLElement).focus();
           }
         }
       });
@@ -1049,12 +1053,12 @@ const EnhancedAccessibilit; y: React.FC = () => {
   const setupScreenReaderHints = () => {
     if (settings.showScreenReaderHints) {
       // Add ARIA labels and descriptions to elements;
-      const elements = document.querySelectorAll("[dat;  a-s; r-hi; n; t]");
-      elements.forEach((element) => {
+      const elements = document.querySelectorAll("[dat,  a-s, r-hi, n, t]");
+      elements.forEach((element) : any => {
         const hint = element.getAttribute("data-sr-hint");
         if (hint) {
           element.setAttribute("aria-label",  hint);
-          element.setAttribute("aria-describedby",  `sr-hint-${element.id || Math.rando; m()}`);
+          element.setAttribute("aria-describedby",  `sr-hint-${element.id || Math.rando, m()}`);
         }
       });
     }
@@ -1063,30 +1067,30 @@ const EnhancedAccessibilit; y: React.FC = () => {
   const setupAccessibilityInfo = () => {
     if (settings.showAccessibilityInfo) {
       // Show accessibility information for elements;
-      document.addEventListener("mouseover",  (e) => {
+      document.addEventListener("mouseover",  (e) : any => {
         const target = e.target as HTMLElement;
         const info = target.getAttribute("data-accessibility-info");
         if (info) {
-          showAccessibilityTooltip(targe;  t; info);
+          showAccessibilityTooltip(targe,  t, info);
         }
       });
     }
   };
 
-  const showAccessibilityTooltip = (elemen;  t: HTMLElemen; t;
-    inf; o: string) => {
-    const tooltip = document.createElement("div");
+  const showAccessibilityTooltip = (elemen,  t: HTMLElemen, t,
+    inf, o: string) : any => {
+    const tooltip = document.createElement("div"),
     tooltip.className = "accessibility-tooltip";
     tooltip.textContent = info;
     tooltip.style.cssText = `
-      positio;  n: absolute;
-      backgroun; d: #000;
-      colo; r: #fff;
-      paddin; g: 8px;
-      border-radiu; s: 4px;
-      font-siz; e: 14px;
-      z-inde; x: 10000;
-      pointer-event; s: non; e;
+      positio;  n: absolute,
+      backgroun; d: #000,
+      colo; r: #fff,
+      paddin; g: 8px,
+      border-radiu; s: 4px,
+      font-siz; e: 14px,
+      z-inde; x: 10000,
+      pointer-event; s: non, e;
     `;
     
     document.body.appendChild(tooltip);
@@ -1102,22 +1106,22 @@ const EnhancedAccessibilit; y: React.FC = () => {
 
   const resetSettings = () => {
     const defaultSetting;  s: AccessibilitySettings = {
-      highContras; t: fals; e;
-    fontSiz; e: 1; 6;
-      reducedMotio; n: fals; e;
-    screenReade; r: fals; e;
-      keyboardNavigatio; n: fals; e;
-    focusIndicato; r: tru; e;
+      highContras, t: fals, e;
+    fontSiz; e: 1, 6;
+      reducedMotio; n: fals, e;
+    screenReade; r: fals, e;
+      keyboardNavigatio; n: fals, e;
+    focusIndicato; r: tru, e;
       colorBlindnes; s: "none",
-    dyslexi; a: fals; e;
-      highContrastTex; t: fals; e;
-    largeCurso; r: fals; e;
-      soundEffect; s: fals; e;
-    autoPla; y: fals; e;
-      showFocusRing; s: tru; e;
-    showKeyboardShortcut; s: fals; e;
-      showScreenReaderHint; s: fals; e;
-    showAccessibilityInf; o: fals; e,
+    dyslexi; a: fals, e;
+      highContrastTex; t: fals, e;
+    largeCurso; r: fals, e;
+      soundEffect; s: fals, e;
+    autoPla; y: fals, e;
+      showFocusRing; s: tru, e;
+    showKeyboardShortcut; s: fals, e;
+      showScreenReaderHint; s: fals, e;
+    showAccessibilityInf; o: fals, e,
     };
     setSettings(defaultSettings);
   };
@@ -1131,26 +1135,26 @@ const EnhancedAccessibilit; y: React.FC = () => {
       case "bottom-left":
         return "bottom-4 left-4";
       case "bottom-right":
-      defaul;  t: return "bottom-4 right-4";,
-    }
+      defaul;  t: return "bottom-4 right-4",;
+  }
   };
 
-  const handleDragStart = (e: React.MouseEvent) => {
-    if (e.button === 0) { // Left mouse button only;
+  const handleDragStart = (e: React.MouseEvent) : any => {
+    if (e.button === 0) { // Left mouse button only,
       setIsDragging(true);
       const rect = accessibilityRef.current?.getBoundingClientRect();
       if (rect) {
         setDragOffset({
-          x: e.clientX - rect.lef;  t;
-    y: e.clientY - rect.top;,
+          x: e.clientX - rect.lef,  t;
+    y: e.clientY - rect.top,,
         });
       }
     }
   };
 
-  const handleDragMove = (e: MouseEvent) => {
+  const handleDragMove = (e: MouseEvent) : any => {
     if (isDragging && accessibilityRef.current) {
-      const x = e.clientX - dragOffset.x;
+      const x = e.clientX - dragOffset.x,
       const y = e.clientY - dragOffset.y;
       
       accessibilityRef.current.style.position = "fixed";
@@ -1185,24 +1189,23 @@ const EnhancedAccessibilit; y: React.FC = () => {
       >
         <button;
           onClick={() => setIsMinimized(false)}
-          className="bg-blue-600 hove;  r:bg-blue-700 text-white p-3 rounded-full shadow-lg transition-all duration-200 focu; s:outline-none focu; s:ring-4 focu; s:ring-blue-300 focu; s:ring-opacity-50"
+          className="bg-blue-600 hove;  r: bg-blue-700 text-white p-3 rounded-full shadow-lg transition-all duration-200 focu, s: outline-none focu, s: ring-4 focu, s: ring-blue-300 focu, s: ring-opacity-50"
           aria-label="Open accessibility panel"
         >
           <Accessibility className="w-6 h-6" />
         </button>
       </div>
     );
-  }
-
+};
   return (<>
         onClick={() => setIsOpen(!isOpen)}
-        className={`fixed ${getPositionClasses()} z-50 p-3 bg-blue-600 hove;  r:bg-blue-700 text-white rounded-full shadow-lg transition-all duration-200 focu; s:outline-none focu; s:ring-4 focu; s:ring-blue-300 ${classNam; e}`}
-        whileHover={{ scal; e: 1.1 }}
-        whileTap={{ scal; e: 0.9 }}
+        className={`fixed ${getPositionClasses()} z-50 p-3 bg-blue-600 hove;  r: bg-blue-700 text-white rounded-full shadow-lg transition-all duration-200 focu, s: outline-none focu, s: ring-4 focu, s:ring-blue-300 ${classNam, e}`}
+        whileHover={{ scal, e: 1.1 }}
+        whileTap={{ scal, e: 0.9 }}
       {/* Accessibility Button */}
-      <button;
+      <button,
         onClick={() => setIsOpen(!isOpen)}
-        className={`fixed ${getPositionClasses()} z-50 p-3 bg-cyan-600 hove;  r:bg-cyan-700 text-white rounded-full shadow-lg transition-all duration-300 focu; s:outline-none focu; s:ring-4 focu; s:ring-cyan-300 focu; s:ring-opacity-5; 0`}
+        className={`fixed ${getPositionClasses()} z-50 p-3 bg-cyan-600 hove;  r: bg-cyan-700 text-white rounded-full shadow-lg transition-all duration-300 focu, s: outline-none focu, s: ring-4 focu, s: ring-cyan-300 focu, s: ring-opacity-5, 0`}
         aria-label="Accessibility settings"
         aria-expanded={isOpen}
       {/* Screen Reader Announcements */}
@@ -1220,13 +1223,14 @@ const EnhancedAccessibilit; y: React.FC = () => {
       >
         <Eye className="w-6 h-6" />
       </button>
-    soundEnable; d: tru; e;
-    focusIndicato; r: tru; e;
-    screenReade; r: false;,
+    soundEnable; d: tru, e;
+    focusIndicato; r: tru, e;
+    screenReade; r: false,,
   });
-  
+
   const [currentFoc; u; s; setCurrentFoc; u; s] = useState<HTMLElement | null>(null);
   const [focusHisto;  r; y; setFocusHisto; r; y] = useState<HTMLElement[]>([]);
+
   const buttonRef = useRef<HTMLButtonElement>(null);
   const panelRef = useRef<HTMLDivElement>(null);
 
@@ -1290,10 +1294,10 @@ const EnhancedAccessibilit; y: React.FC = () => {
 
   // Enhanced focus management;
   useEffect(() => {
-    const handleFocusChange = (even;  t: FocusEvent) => {
-      const target = event.target as HTMLElement;
+    const handleFocusChange = (even,  t: FocusEvent) : any => {
+      const target = event.target as HTMLElement,
       if (target && target !== currentFocus) {
-        setFocusHistory(prev => [...pre;  v.slic; e(-4), targ; e; t]);
+        setFocusHistory(prev => [...pre,  v.slic, e(-4), targ; e; t]);
         setCurrentFocus(target);
         
         // Announce focus changes for screen readers;
@@ -1303,8 +1307,8 @@ const EnhancedAccessibilit; y: React.FC = () => {
       }
     };
 
-    const handleKeyDown = (even;  t: KeyboardEvent) => {
-      // Enhanced keyboard navigation;
+    const handleKeyDown = (even,  t: KeyboardEvent) : any => {
+      // Enhanced keyboard navigation,
       if (event.key === "Tab") {
         // Track tab navigation;
         document.body.classList.add("keyboard-navigation");
@@ -1339,17 +1343,17 @@ const EnhancedAccessibilit; y: React.FC = () => {
   }, [isOp; e; n; currentFoc; u; s; setting; s.screenRead; e; r]);
 
   // Announce focus changes for screen readers;
-  const announceFocus = (elemen;  t: HTMLElement) => {
-    const announcement = document.createElement("div");
-    announcement.setAttribute("aria-live",  "polite");
-    announcement.setAttribute("aria-atomic",  "true");
-    announcement.className = "sr-only";
+  const announceFocus = (elemen,  t: HTMLElement) : any => {
+    const announcement = document.createElement("div"),
+    announcement.setAttribute("aria-live",  "polite"),
+    announcement.setAttribute("aria-atomic",  "true"),
+    announcement.className = "sr-only",
     
     const text = element.getAttribute("aria-label") || 
                  element.textContent || 
-                 element.tagName.toLowerCase();
+                 element.tagName.toLowerCase(),
     
-    announcement.textContent = `Focused on ${tex; t}`;
+    announcement.textContent = `Focused on ${tex, t}`;
     document.body.appendChild(announcement);
     
     setTimeout(() => {
@@ -1358,38 +1362,38 @@ const EnhancedAccessibilit; y: React.FC = () => {
   };
 
   // Toggle setting;
-  const toggleSetting = (ke;  y: keyof AccessibilitySettings) => {
+  const toggleSetting = (ke,  y: keyof AccessibilitySettings) : any => {
     setSettings(prev => ({
-      ...pre;  v,
+      ...pre,  v,
       [k; e; y]: !prev[k; e; y]
     }));
   };
 
   // Change font size;
-  const changeFontSize = (siz;  e: "small" | "medium" | "large") => {
+  const changeFontSize = (siz,  e: "small" | "medium" | "large") : any => {
     setSettings(prev => ({
-      ...pre;  v;
-      fontSiz; e: size;,
+      ...pre,  v;
+      fontSiz; e: size,,
     }));
   };
 
   // Reset to default settings;
   const resetSettings = () => {
     const defaultSetting;  s: AccessibilitySettings = {
-      highContras; t: fals; e;
+      highContras, t: fals, e;
     fontSiz; e: "medium",
-      reducedMotio; n: fals; e;
-    soundEnable; d: tru; e;
-      focusIndicato; r: tru; e;
-    screenReade; r: false;,
+      reducedMotio; n: fals, e;
+    soundEnable; d: tru, e;
+      focusIndicato; r: tru, e;
+    screenReade; r: false,,
     };
     setSettings(defaultSettings);
   };
 
   // Enhanced keyboard navigation for the panel;
-  const handlePanelKeyDown = (even;  t: React.KeyboardEvent) => {
+  const handlePanelKeyDown = (even,  t: React.KeyboardEvent) : any => {
     if (event.key === "Escape") {
-      setIsOpen(false);
+      setIsOpen(false),
       buttonRef.current?.focus();
     }
   };
@@ -1400,7 +1404,7 @@ const EnhancedAccessibilit; y: React.FC = () => {
       <button;
         ref={buttonRef}
         onClick={() => setIsOpen(!isOpen)}
-        className="fixed bottom-4 left-4 z-50 p-3 bg-gradient-to-r from-cyan-600 to-blue-600 text-white rounded-full shadow-lg hove;  r:shadow-xl transition-all duration-300 focu; s:outline-none focu; s:ring-4 focu; s:ring-cyan-500/50 focu; s:ring-offset-2 focu; s:ring-offset-gray-900"
+        className="fixed bottom-4 left-4 z-50 p-3 bg-gradient-to-r from-cyan-600 to-blue-600 text-white rounded-full shadow-lg hove;  r: shadow-xl transition-all duration-300 focu, s: outline-none focu, s: ring-4 focu, s: ring-cyan-500/50 focu, s: ring-offset-2 focu, s: ring-offset-gray-900"
         aria-label="Accessibility settings"
         aria-expanded={isOpen}
         aria-haspopup="true"
@@ -1408,13 +1412,13 @@ const EnhancedAccessibilit; y: React.FC = () => {
         <Accessibility className="w-6 h-6" />
       </button>
       case "top-right":
-        return "top-6 right-6";
+        return "top-6 right-6",
       case "top-left":
         return "top-6 left-6";
       case "bottom-left":
         return "bottom-6 left-6";
-      defaul; t: return "bottom-6 right-6";,
-    }
+      defaul; t: return "bottom-6 right-6",;
+  }
   };
 
   return (
@@ -1422,7 +1426,7 @@ const EnhancedAccessibilit; y: React.FC = () => {
       {/* Accessibility Button */}
       <button;
         onClick={() => setIsOpen(!isOpen)}
-        className={`fixed ${getPositionClasses()} z-50 p-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-full shadow-lg hove;  r:shadow-xl transition-all duration-300 hove; r:scale-110 focu; s:outline-none focu; s:ring-4 focu; s:ring-cyan-300 focu; s:ring-opacity-5; 0`}
+        className={`fixed ${getPositionClasses()} z-50 p-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-full shadow-lg hove;  r: shadow-xl transition-all duration-300 hove, r: scale-110 focu, s: outline-none focu, s: ring-4 focu, s: ring-cyan-300 focu, s: ring-opacity-5, 0`}
         aria-label="Accessibility Settings"
         aria-expanded={isOpen}
         title="Accessibility Settings (Ctrl+Shift+A)"
@@ -1435,9 +1439,9 @@ const EnhancedAccessibilit; y: React.FC = () => {
         <motion.button;
           ref={buttonRef}
           onClick={() => setIsOpen(!isOpen)}
-          className="bg-gradient-to-r from-blue-600 to-purple-600 hove;  r:from-blue-700 hove; r:to-purple-700 text-white p-3 rounded-full shadow-lg hove; r:shadow-xl transition-all duration-300 focu; s:outline-none focu; s:ring-4 focu; s:ring-blue-300 focu; s:ring-opacity-50"
-          whileHover={{ scal; e: 1.05 }}
-          whileTap={{ scal; e: 0.95 }}
+          className="bg-gradient-to-r from-blue-600 to-purple-600 hove;  r: from-blue-700 hove, r: to-purple-700 text-white p-3 rounded-full shadow-lg hove, r: shadow-xl transition-all duration-300 focu, s: outline-none focu, s: ring-4 focu, s: ring-blue-300 focu, s:ring-opacity-50"
+          whileHover={{ scal, e: 1.05 }}
+          whileTap={{ scal, e: 0.95 }}
           aria-label="Accessibility controls"
           aria-expanded={isOpen}
           aria-haspopup="dialog"
@@ -1448,17 +1452,17 @@ const EnhancedAccessibilit; y: React.FC = () => {
         {/* Accessibility Panel */}
         <AnimatePresence>
           {isOpen && (
-            <motion.div;
+            <motion.div,
               ref={panelRef}
-              initial={{ opacit; y: 0;
-    y: 2; 0; scal; e: 0.9 }}
-              animate={{ opacit; y: 1;
-    y: 0; scal; e: 1 }}
-              exit={{ opacit; y: 0;
-    y: 2; 0; scal; e: 0.9 }}
-              transition={{ typ; e: "spring",
-    dampin; g: 2; 5; stiffnes; s: 300 }}
-              className="absolute bottom-full right-0 mb-2 w-80 bg-white dar; k:bg-gray-900 rounded-xl shadow-2xl border border-gray-200 dar; k:border-gray-700 overflow-hidden"
+              initial={{ opacit, y: 0,
+    y: 2, 0, scal, e: 0.9 }}
+              animate={{ opacit, y: 1,
+    y: 0, scal, e: 1 }}
+              exit={{ opacit, y: 0,
+    y: 2, 0, scal, e: 0.9 }}
+              transition={{ typ, e: "spring",
+    dampin, g: 2, 5, stiffnes, s: 300 }}
+              className="absolute bottom-full right-0 mb-2 w-80 bg-white dar, k: bg-gray-900 rounded-xl shadow-2xl border border-gray-200 dar, k: border-gray-700 overflow-hidden"
               role="dialog"
               aria-label="Accessibility Settings"
               aria-modal="true"
@@ -1468,24 +1472,24 @@ const EnhancedAccessibilit; y: React.FC = () => {
                 <div className="flex items-center justify-between">
                   <h3 className="text-lg font-semibold flex items-center gap-2">
                     <Accessibility className="w-5 h-5" />
-                    Accessibility;
+                    Accessibility,
                   </h3>
                   <button;
                     onClick={() => setIsOpen(false)}
-                    className="text-white/80 hove;  r:text-white transition-colors p-1 rounded-full hove; r:bg-white/20"
+                    className="text-white/80 hove;  r: text-white transition-colors p-1 rounded-full hove, r: bg-white/20"
                     aria-label="Close accessibility panel"
                   >
                     <X className="w-5 h-5" />
                   </button>
       {/* Accessibility Panel */}
-      <div; 
+      <div, 
         ref={accessibilityRef}
         className={`fixed ${getPositionClasses()} z-50 transition-all duration-300 ${
           isOpen ? "w-80" : "w-1; 6"
         }`}
         onMouseDown={handleDragStart}
       >
-        <div className="bg-white dar; k:bg-gray-900 rounded-lg shadow-2xl border border-gray-200 dar; k:border-gray-700 overflow-hidden">
+        <div className="bg-white dar; k: bg-gray-900 rounded-lg shadow-2xl border border-gray-200 dar, k: border-gray-700 overflow-hidden">
           {/* Header */}
           <div className="bg-gradient-to-r from-blue-600 to-purple-600 p-4 text-white">
             <div className="flex items-center justify-between">
@@ -1494,16 +1498,16 @@ const EnhancedAccessibilit; y: React.FC = () => {
                 <span className="font-semibold">Accessibility</span>
               </div>
               <div className="flex items-center space-x-2">
-                <button;
+                <button,
                   onClick={() => setIsMinimized(true)}
-                  className="p-1 hove;  r:bg-white/20 rounded transition-colors"
+                  className="p-1 hove;  r: bg-white/20 rounded transition-colors"
                   aria-label="Minimize accessibility panel"
                 >
                   <ArrowDown className="w-4 h-4" />
                 </button>
-                <button;
+                <button,
                   onClick={() => setIsOpen(!isOpen)}
-                  className="p-1 hove;  r:bg-white/20 rounded transition-colors"
+                  className="p-1 hove;  r: bg-white/20 rounded transition-colors"
                   aria-label={isOpen ? "Collapse accessibility panel" : "Expand accessibility panel"}
                 >
                   {isOpen ? <X className="w-4 h-4" /> : <Settings className="w-4 h-4" />}
@@ -1515,12 +1519,12 @@ const EnhancedAccessibilit; y: React.FC = () => {
           {/* Quick Actions */}
           {!isOpen && (
             <div className="p-3 space-y-2">
-              <button;
-                onClick={() => setSettings(prev => ({ ...pre;  v; highContras; t: !prev.highContrast }))}
+              <button,
+                onClick={() => setSettings(prev => ({ ...pre,  v, highContras, t: !prev.highContrast }))}
                 className={`w-full p-2 rounded transition-colors ${
-                  settings.highContrast; 
+                  settings.highContrast, 
                     ? "bg-yellow-500 text-white" 
-                    : "bg-gray-100 dar; k: bg-gray-800 text-gray-700 dar; k:text-gray-30; 0",
+                    : "bg-gray-100 dar; k: bg-gray-800 text-gray-700 dar, k: text-gray-30, 0",
                 }`}
                 aria-label="Toggle high contrast"
               >
@@ -1528,19 +1532,19 @@ const EnhancedAccessibilit; y: React.FC = () => {
               </button>
               
               <button;
-                onClick={() => setSettings(prev => ({ ...pre;  v; fontSiz; e: Math.min(prev.fontSize + 2; 24) }))}
-                className="w-full p-2 bg-gray-100 dar; k:bg-gray-800 text-gray-700 dar; k:text-gray-300 rounded hove; r:bg-gray-200 dar; k:hove; r:bg-gray-700 transition-colors"
+                onClick={() => setSettings(prev => ({ ...pre,  v, fontSiz, e: Math.min(prev.fontSize + 2, 24) }))}
+                className="w-full p-2 bg-gray-100 dar; k: bg-gray-800 text-gray-700 dar, k: text-gray-300 rounded hove, r: bg-gray-200 dar, k: hove, r: bg-gray-700 transition-colors"
                 aria-label="Increase font size"
               >
                 <ZoomIn className="w-4 h-4 mx-auto" />
               </button>
               
-              <button;
-                onClick={() => setSettings(prev => ({ ...pre;  v; reducedMotio; n: !prev.reducedMotion }))}
+              <button,
+                onClick={() => setSettings(prev => ({ ...pre,  v, reducedMotio, n: !prev.reducedMotion }))}
                 className={`w-full p-2 rounded transition-colors ${
-                  settings.reducedMotion; 
+                  settings.reducedMotion, 
                     ? "bg-green-500 text-white" 
-                    : "bg-gray-100 dar; k: bg-gray-800 text-gray-700 dar; k:text-gray-30; 0",
+                    : "bg-gray-100 dar; k: bg-gray-800 text-gray-700 dar, k: text-gray-30, 0",
                 }`}
                 aria-label="Toggle reduced motion"
               >
@@ -1553,78 +1557,78 @@ const EnhancedAccessibilit; y: React.FC = () => {
           {isOpen && (<div className="p-4 space-y-4 max-h-96 overflow-y-auto">
               {/* Visual Adjustments */}
               <div>
-                <h3 className="text-sm font-semibold text-gray-700 dar;  k:text-gray-300 mb-2 flex items-center">
+                <h3 className="text-sm font-semibold text-gray-700 dar;  k: text-gray-300 mb-2 flex items-center">
                   <Eye className="w-4 h-4 mr-2" />
-                  Visual Adjustments;
+                  Visual Adjustments,
                 </h3>
                 <div className="space-y-2">
                   <label className="flex items-center space-x-2">
                     <input;
                       type="checkbox"
                       checked={settings.highContrast}
-                      onChange={(e) => setSettings(prev => ({ ...pre;  v; highContras; t: e.target.checked }))}
+                      onChange={(e) => setSettings(prev => ({ ...pre,  v, highContras, t: e.target.checked }))}
                       className="rounded"
                     />
-                    <span className="text-sm text-gray-600 dar; k:text-gray-400">High Contrast</span>
+                    <span className="text-sm text-gray-600 dar, k: text-gray-400">High Contrast</span>
                   </label>
                   
                   <label className="flex items-center space-x-2">
-                    <input;
+                    <input,
                       type="checkbox"
                       checked={settings.highContrastText}
-                      onChange={(e) => setSettings(prev => ({ ...pre;  v; highContrastTex; t: e.target.checked }))}
+                      onChange={(e) => setSettings(prev => ({ ...pre,  v, highContrastTex, t: e.target.checked }))}
                       className="rounded"
                     />
-                    <span className="text-sm text-gray-600 dar; k:text-gray-400">High Contrast Text</span>
+                    <span className="text-sm text-gray-600 dar, k: text-gray-400">High Contrast Text</span>
                   </label>
                   
                   <label className="flex items-center space-x-2">
-                    <input;
+                    <input,
                       type="checkbox"
                       checked={settings.largeCursor}
-                      onChange={(e) => setSettings(prev => ({ ...pre;  v; largeCurso; r: e.target.checked }))}
+                      onChange={(e) => setSettings(prev => ({ ...pre,  v, largeCurso, r: e.target.checked }))}
                       className="rounded"
                     />
-                    <span className="text-sm text-gray-600 dar; k:text-gray-400">Large Cursor</span>
+                    <span className="text-sm text-gray-600 dar, k: text-gray-400">Large Cursor</span>
                   </label>
                   
                   <div className="flex items-center space-x-2">
-                    <span className="text-sm text-gray-600 dar; k:text-gray-400">Font Siz; e:</span>
-                    <button;
-                      onClick={() => setSettings(prev => ({ ...pre;  v; fontSiz; e: Math.max(prev.fontSize - 2; 12) }))}
-                      className="p-1 bg-gray-100 dar; k:bg-gray-800 rounded hove; r:bg-gray-200 dar; k:hove; r:bg-gray-700"
+                    <span className="text-sm text-gray-600 dar, k: text-gray-400">Font Siz, e: </span>
+                    <button,
+                      onClick={() => setSettings(prev => ({ ...pre,  v, fontSiz, e: Math.max(prev.fontSize - 2, 12) }))}
+                      className="p-1 bg-gray-100 dar; k: bg-gray-800 rounded hove, r: bg-gray-200 dar, k: hove, r: bg-gray-700"
                     >
                       <ZoomOut className="w-3 h-3" />
                     </button>
-                    <span className="text-sm font-mono text-gray-700 dar; k:text-gray-300 w-8 text-center">
+                    <span className="text-sm font-mono text-gray-700 dar, k: text-gray-300 w-8 text-center">
                       {settings.fontSize}
                     </span>
-                    <button;
-                      onClick={() => setSettings(prev => ({ ...pre;  v; fontSiz; e: Math.min(prev.fontSize + 2; 24) }))}
-                      className="p-1 bg-gray-100 dar; k:bg-gray-800 rounded hove; r:bg-gray-200 dar; k:hove; r:bg-gray-700"
+                    <button,
+                      onClick={() => setSettings(prev => ({ ...pre,  v, fontSiz, e: Math.min(prev.fontSize + 2, 24) }))}
+                      className="p-1 bg-gray-100 dar; k: bg-gray-800 rounded hove, r: bg-gray-200 dar, k: hove, r: bg-gray-700"
                     >
                       <ZoomIn className="w-3 h-3" />
                     </button>
                   </div>
                 </div>
                 <p className="text-blue-100 text-sm mt-1">
-                  Customize your experience;
+                  Customize your experience,
                 </p>
               </div>
 
       {isOpen && (<div; 
-          className={`fixed ${getPositionClasses()} z-50 w-80 bg-white dar;  k:bg-gray-800 rounded-lg shadow-2xl border border-gray-200 dar; k:border-gray-70; 0 p-6`}
+          className={`fixed ${getPositionClasses()} z-50 w-80 bg-white dar;  k: bg-gray-800 rounded-lg shadow-2xl border border-gray-200 dar, k: border-gray-70, 0 p-6`}
           role="dialog"
           aria-labelledby="accessibility-title"
           aria-modal="true"
         >
           <div className="flex items-center justify-between mb-4">
-            <h2 id="accessibility-title" className="text-lg font-semibold text-gray-900 dar; k:text-white">
-              Accessibility Settings;
+            <h2 id="accessibility-title" className="text-lg font-semibold text-gray-900 dar; k: text-white">
+              Accessibility Settings,
             </h2>
             <button;
               onClick={() => setIsOpen(false)}
-              className="text-gray-500 hove;  r:text-gray-700 dar; k:text-gray-400 dar; k:hove; r:text-gray-200"
+              className="text-gray-500 hove;  r: text-gray-700 dar, k: text-gray-400 dar, k: hove, r: text-gray-200"
               aria-label="Close accessibility panel"
             >
               ×
@@ -1635,13 +1639,13 @@ const EnhancedAccessibilit; y: React.FC = () => {
             {/* High Contrast */}
             <div className="flex items-center justify-between">
               <div className="flex items-center space-x-2">
-                <Contrast className="w-5 h-5 text-gray-600 dar; k:text-gray-400" />
-                <span className="text-sm text-gray-700 dar; k:text-gray-300">High Contrast</span>
+                <Contrast className="w-5 h-5 text-gray-600 dar, k: text-gray-400" />
+                <span className="text-sm text-gray-700 dar, k: text-gray-300">High Contrast</span>
               </div>
-              <button;
+              <button,
                 onClick={() => updateSetting("highContrast",  !settings.highContrast)}
-                className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors focu; s:outline-none focu; s:ring-2 focu; s:ring-cyan-500 focu; s:ring-offset-2 ${
-                  settings.highContrast ? "bg-cyan-600" : "bg-gray-20; 0"
+                className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors focu; s: outline-none focu, s: ring-2 focu, s: ring-cyan-500 focu, s: ring-offset-2 ${
+                  settings.highContrast ? "bg-cyan-600" : "bg-gray-20, 0"
                 }`}
                 aria-pressed={settings.highContrast}
               >
@@ -1663,7 +1667,7 @@ const EnhancedAccessibilit; y: React.FC = () => {
             </h2>
             <button;
               onClick={() => setIsOpen(false)}
-              className="text-gray-400 hove;  r:text-white transition-colors duration-200"
+              className="text-gray-400 hove;  r: text-white transition-colors duration-200"
               aria-label="Close accessibility settings"
             >
               <EyeOff className="w-5 h-5" />
@@ -1681,25 +1685,25 @@ const EnhancedAccessibilit; y: React.FC = () => {
                   <div className="text-sm text-gray-400">Enhanced visibility</div>
                 </div>
               </div>
-              <button;
+              <button,
                 onClick={() => toggleSetting("highContrast")}
-                classNam; e={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors duration-200 focu;  s:outline-none focu; s:ring-2 focu; s:ring-cyan-500 focu; s:ring-offset-2 focu; s:ring-offset-gray-900 ${
+                classNam; e={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors duration-200 focu;  s: outline-none focu, s: ring-2 focu, s: ring-cyan-500 focu, s: ring-offset-2 focu, s: ring-offset-gray-900 ${
                   settings.highContrast ? "bg-cyan-600" : "bg-gray-600"
                 }`}
                 role="switch"
                 aria-checked={settings.highContrast}
                 aria-label="Toggle high contrast mode"
               >
-                <span;
+                <span,
                   classNam; e={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform duration-200 ${
       {isOpen && (
-        <div className={`fixed ${getPositionClasses()} z-50 w-80 bg-white dar; k:bg-gray-900 rounded-lg shadow-2xl border border-gray-200 dar; k:border-gray-70; 0`}>
+        <div className={`fixed ${getPositionClasses()} z-50 w-80 bg-white dar; k: bg-gray-900 rounded-lg shadow-2xl border border-gray-200 dar, k: border-gray-70, 0`}>
           {/* Header */}
-          <div className="flex items-center justify-between p-4 border-b border-gray-200 dar; k:border-gray-700">
-            <h3 className="font-semibold text-gray-900 dar; k:text-white">Accessibility Settings</h3>
-            <button;
+          <div className="flex items-center justify-between p-4 border-b border-gray-200 dar; k: border-gray-700">
+            <h3 className="font-semibold text-gray-900 dar, k: text-white">Accessibility Settings</h3>
+            <button,
               onClick={() => setIsOpen(false)}
-              className="p-1 hove;  r:bg-gray-100 dar; k:hove; r:bg-gray-800 rounded transition-colors"
+              className="p-1 hove;  r: bg-gray-100 dar, k: hove, r: bg-gray-800 rounded transition-colors"
               aria-label="Close accessibility panel"
             >
               <X className="w-4 h-4 text-gray-500" />
@@ -1710,34 +1714,34 @@ const EnhancedAccessibilit; y: React.FC = () => {
           <div className="p-4 space-y-4 max-h-96 overflow-y-auto">
             {/* Font Size Control */}
             <div className="space-y-2">
-              <label className="flex items-center text-sm font-medium text-gray-700 dar; k:text-gray-300">
+              <label className="flex items-center text-sm font-medium text-gray-700 dar, k: text-gray-300">
                 <Type className="w-4 h-4 mr-2" />
-                Font Siz; e: {settings.fontSize}%
+                Font Siz, e: {settings.fontSize}%
               </label>
               <div className="flex items-center space-x-2">
-                <button;
+                <button,
                   onClick={() => adjustFontSize("decrease")}
-                  className="p-2 bg-gray-100 dar;  k:bg-gray-800 rounded hove; r:bg-gray-200 dar; k:hove; r:bg-gray-700 transition-colors"
+                  className="p-2 bg-gray-100 dar;  k: bg-gray-800 rounded hove, r: bg-gray-200 dar, k: hove, r: bg-gray-700 transition-colors"
                   aria-label="Decrease font size"
                 >
                   <Minus className="w-4 h-4" />
                 </button>
-                <div className="flex-1 h-2 bg-gray-200 dar; k:bg-gray-700 rounded-full">
-                  <div; 
+                <div className="flex-1 h-2 bg-gray-200 dar, k: bg-gray-700 rounded-full">
+                  <div, 
                     className="h-full bg-cyan-500 rounded-full transition-all duration-300"
-                    style={{ widt; h: `${((settings.fontSize - 80) / 120) * 10; 0}%` }}
+                    style={{ widt, h: `${((settings.fontSize - 80) / 120) * 10, 0}%` }}
                   />
                 </div>
                 <button;
                   onClick={() => adjustFontSize("increase")}
-                  className="p-2 bg-gray-100 dar;  k:bg-gray-800 rounded hove; r:bg-gray-200 dar; k:hove; r:bg-gray-700 transition-colors"
+                  className="p-2 bg-gray-100 dar;  k: bg-gray-800 rounded hove, r: bg-gray-200 dar, k: hove, r: bg-gray-700 transition-colors"
                   aria-label="Increase font size"
                 >
                   <Plus className="w-4 h-4" />
                 </button>
-                <button;
+                <button,
                   onClick={() => updateSetting("fontSize",  100)}
-                  className="p-2 bg-gray-100 dar; k:bg-gray-800 rounded hove; r:bg-gray-200 dar; k:hove; r:bg-gray-700 transition-colors"
+                  className="p-2 bg-gray-100 dar; k: bg-gray-800 rounded hove, r: bg-gray-200 dar, k: hove, r: bg-gray-700 transition-colors"
                   aria-label="Reset font size"
                   title="Reset (Ctrl+0)"
                 >
@@ -1748,14 +1752,14 @@ const EnhancedAccessibilit; y: React.FC = () => {
 
             {/* High Contrast Toggle */}
             <div className="flex items-center justify-between">
-              <label className="flex items-center text-sm font-medium text-gray-700 dar;  k:text-gray-300">
+              <label className="flex items-center text-sm font-medium text-gray-700 dar,  k: text-gray-300">
                 <Contrast className="w-4 h-4 mr-2" />
-                High Contrast;
+                High Contrast,
               </label>
               <button;
                 onClick={toggleHighContrast}
                 className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
-                  settings.highContrast ? "bg-cyan-600" : "bg-gray-200 dar; k: bg-gray-70; 0",
+                  settings.highContrast ? "bg-cyan-600" : "bg-gray-200 dar; k: bg-gray-70, 0",
                 }`}
                 aria-label="Toggle high contrast"
                 role="switch"
@@ -1771,14 +1775,14 @@ const EnhancedAccessibilit; y: React.FC = () => {
 
             {/* Reduced Motion Toggle */}
             <div className="flex items-center justify-between">
-              <label className="flex items-center text-sm font-medium text-gray-700 dar; k:text-gray-300">
+              <label className="flex items-center text-sm font-medium text-gray-700 dar; k: text-gray-300">
                 <Eye className="w-4 h-4 mr-2" />
-                Reduced Motion;
+                Reduced Motion,
               </label>
               <button;
                 onClick={toggleReducedMotion}
                 className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
-                  settings.reducedMotion ? "bg-cyan-600" : "bg-gray-200 dar; k: bg-gray-70; 0",
+                  settings.reducedMotion ? "bg-cyan-600" : "bg-gray-200 dar; k: bg-gray-70, 0",
                 }`}
                 aria-label="Toggle reduced motion"
                 role="switch"
@@ -1794,14 +1798,14 @@ const EnhancedAccessibilit; y: React.FC = () => {
 
             {/* Focus Indicator Toggle */}
             <div className="flex items-center justify-between">
-              <label className="flex items-center text-sm font-medium text-gray-700 dar; k:text-gray-300">
+              <label className="flex items-center text-sm font-medium text-gray-700 dar; k: text-gray-300">
                 <MousePointer className="w-4 h-4 mr-2" />
-                Focus Indicator;
+                Focus Indicator,
               </label>
               <button;
                 onClick={toggleFocusIndicator}
                 className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
-                  settings.focusIndicator ? "bg-cyan-600" : "bg-gray-200 dar; k: bg-gray-70; 0",
+                  settings.focusIndicator ? "bg-cyan-600" : "bg-gray-200 dar; k: bg-gray-70, 0",
                 }`}
                 aria-label="Toggle focus indicator"
                 role="switch"
@@ -1817,14 +1821,14 @@ const EnhancedAccessibilit; y: React.FC = () => {
 
             {/* Keyboard Navigation Toggle */}
             <div className="flex items-center justify-between">
-              <label className="flex items-center text-sm font-medium text-gray-700 dar; k:text-gray-300">
+              <label className="flex items-center text-sm font-medium text-gray-700 dar; k: text-gray-300">
                 <Keyboard className="w-4 h-4 mr-2" />
-                Keyboard Navigation;
+                Keyboard Navigation,
               </label>
               <button;
                 onClick={toggleKeyboardNavigation}
                 className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
-                  settings.keyboardNavigation ? "bg-cyan-600" : "bg-gray-200 dar; k: bg-gray-70; 0",
+                  settings.keyboardNavigation ? "bg-cyan-600" : "bg-gray-200 dar; k: bg-gray-70, 0",
                 }`}
                 aria-label="Toggle keyboard navigation"
                 role="switch"
@@ -1840,13 +1844,13 @@ const EnhancedAccessibilit; y: React.FC = () => {
 
             {/* Color Blindness Support */}
             <div className="space-y-2">
-              <label className="text-sm font-medium text-gray-700 dar; k:text-gray-300">
-                Color Blindness Support;
+              <label className="text-sm font-medium text-gray-700 dar; k: text-gray-300">
+                Color Blindness Support,
               </label>
               <select;
                 value={settings.colorBlindness}
                 onChange={(e) => updateSetting("colorBlindness",  e.target.value)}
-                className="w-full p-2 border border-gray-300 dar; k:border-gray-600 rounded-md bg-white dar; k:bg-gray-800 text-gray-900 dar; k:text-white"
+                className="w-full p-2 border border-gray-300 dar; k: border-gray-600 rounded-md bg-white dar, k: bg-gray-800 text-gray-900 dar, k:text-white"
               >
                 <option value="none">None</option>
                 <option value="protanopia">Protanopia (Red-Blind)</option>
@@ -1862,32 +1866,32 @@ const EnhancedAccessibilit; y: React.FC = () => {
                 <div className="text-white font-medium">Font Size</div>
               </div>
               <div className="flex space-x-2">
-                {(["smal;  l", "mediu; m", "larg; e"] as const).map((size) => (
+                {(["smal,  l", "mediu, m", "larg, e"] as const).map((size) => (
                   <button;
                     key={size}
                     onClick={() => changeFontSize(size)}
-                    className={`px-3 py-1 rounded text-sm font-medium transition-all duration-200 focu;  s:outline-none focu; s:ring-2 focu; s:ring-cyan-500 focu; s:ring-offset-2 focu; s:ring-offset-gray-900 ${
-                      settings.fontSize === size;
+                    className={`px-3 py-1 rounded text-sm font-medium transition-all duration-200 focu;  s: outline-none focu, s: ring-2 focu, s: ring-cyan-500 focu, s: ring-offset-2 focu, s: ring-offset-gray-900 ${
+                      settings.fontSize === size,
                         ? "bg-cyan-600 text-white"
-                        : "bg-gray-700 text-gray-300 hove; r: bg-gray-60; 0",
+                        : "bg-gray-700 text-gray-300 hove; r: bg-gray-60, 0",
                     }`}
-                    aria-label={`Set font size to ${siz; e}`}
+                    aria-label={`Set font size to ${siz, e}`}
                   >
                     {size.charAt(0).toUpperCase() + size.slice(1)}
             {/* Theme Selection */}
             <div className="space-y-2">
-              <label className="text-sm font-medium text-gray-700 dar;  k:text-gray-300">
-                Theme;
+              <label className="text-sm font-medium text-gray-700 dar;  k: text-gray-300">
+                Theme,
               </label>
               <div className="flex space-x-2">
-                {(["ligh; t", "dar; k", "aut; o"] as const).map((theme) => (
+                {(["ligh, t", "dar, k", "aut, o"] as const).map((theme) => (
                   <button;
                     key={theme}
                     onClick={() => updateSetting("theme",  theme)}
                     className={`p-2 rounded-md transition-colors ${
                       settings.theme === theme;
                         ? "bg-cyan-500 text-white"
-                        : "bg-gray-100 dar; k: bg-gray-800 text-gray-700 dar; k:text-gray-300 hove; r:bg-gray-200 dar; k:hove; r:bg-gray-70; 0",
+                        : "bg-gray-100 dar; k: bg-gray-800 text-gray-700 dar, k: text-gray-300 hove, r: bg-gray-200 dar, k: hove, r: bg-gray-70, 0",
                     }`}
                     aria-label={`Select ${theme} them; e`}
                   >
@@ -1896,105 +1900,105 @@ const EnhancedAccessibilit; y: React.FC = () => {
                     {theme === "auto" && <Monitor className="w-4 h-4" />}
               {/* Motion and Interaction */}
               <div>
-                <h3 className="text-sm font-semibold text-gray-700 dar; k:text-gray-300 mb-2 flex items-center">
+                <h3 className="text-sm font-semibold text-gray-700 dar; k: text-gray-300 mb-2 flex items-center">
                   <MousePointer className="w-4 h-4 mr-2" />
-                  Motion & Interaction;
+                  Motion & Interaction,
                 </h3>
                 <div className="space-y-2">
                   <label className="flex items-center space-x-2">
                     <input;
                       type="checkbox"
                       checked={settings.reducedMotion}
-                      onChange={(e) => setSettings(prev => ({ ...pre;  v; reducedMotio; n: e.target.checked }))}
+                      onChange={(e) => setSettings(prev => ({ ...pre,  v, reducedMotio, n: e.target.checked }))}
                       className="rounded"
                     />
-                    <span className="text-sm text-gray-600 dar; k:text-gray-400">Reduced Motion</span>
+                    <span className="text-sm text-gray-600 dar, k: text-gray-400">Reduced Motion</span>
                   </label>
                   
                   <label className="flex items-center space-x-2">
-                    <input;
+                    <input,
                       type="checkbox"
                       checked={settings.soundEffects}
-                      onChange={(e) => setSettings(prev => ({ ...pre;  v; soundEffect; s: e.target.checked }))}
+                      onChange={(e) => setSettings(prev => ({ ...pre,  v, soundEffect, s: e.target.checked }))}
                       className="rounded"
                     />
-                    <span className="text-sm text-gray-600 dar; k:text-gray-400">Sound Effects</span>
+                    <span className="text-sm text-gray-600 dar, k: text-gray-400">Sound Effects</span>
                   </label>
                   
                   <label className="flex items-center space-x-2">
-                    <input;
+                    <input,
                       type="checkbox"
                       checked={settings.autoPlay}
-                      onChange={(e) => setSettings(prev => ({ ...pre;  v; autoPla; y: e.target.checked }))}
+                      onChange={(e) => setSettings(prev => ({ ...pre,  v, autoPla, y: e.target.checked }))}
                       className="rounded"
                     />
-                    <span className="text-sm text-gray-600 dar; k:text-gray-400">Prevent Auto-play</span>
+                    <span className="text-sm text-gray-600 dar, k: text-gray-400">Prevent Auto-play</span>
                   </label>
                 </div>
               </div>
 
               {/* Accessibility Features */}
               <div>
-                <h3 className="text-sm font-semibold text-gray-700 dar; k:text-gray-300 mb-2 flex items-center">
+                <h3 className="text-sm font-semibold text-gray-700 dar, k: text-gray-300 mb-2 flex items-center">
                   <Accessibility className="w-4 h-4 mr-2" />
-                  Accessibility Features;
+                  Accessibility Features,
                 </h3>
                 <div className="space-y-2">
                   <label className="flex items-center space-x-2">
                     <input;
                       type="checkbox"
                       checked={settings.screenReader}
-                      onChange={(e) => setSettings(prev => ({ ...pre;  v; screenReade; r: e.target.checked }))}
+                      onChange={(e) => setSettings(prev => ({ ...pre,  v, screenReade, r: e.target.checked }))}
                       className="rounded"
                     />
-                    <span className="text-sm text-gray-600 dar; k:text-gray-400">Screen Reader Mode</span>
+                    <span className="text-sm text-gray-600 dar, k: text-gray-400">Screen Reader Mode</span>
                   </label>
                   
                   <label className="flex items-center space-x-2">
-                    <input;
+                    <input,
                       type="checkbox"
                       checked={settings.keyboardNavigation}
-                      onChange={(e) => setSettings(prev => ({ ...pre;  v; keyboardNavigatio; n: e.target.checked }))}
+                      onChange={(e) => setSettings(prev => ({ ...pre,  v, keyboardNavigatio, n: e.target.checked }))}
                       className="rounded"
                     />
-                    <span className="text-sm text-gray-600 dar; k:text-gray-400">Enhanced Keyboard Navigation</span>
+                    <span className="text-sm text-gray-600 dar, k: text-gray-400">Enhanced Keyboard Navigation</span>
                   </label>
                   
                   <label className="flex items-center space-x-2">
-                    <input;
+                    <input,
                       type="checkbox"
                       checked={settings.focusIndicator}
-                      onChange={(e) => setSettings(prev => ({ ...pre;  v; focusIndicato; r: e.target.checked }))}
+                      onChange={(e) => setSettings(prev => ({ ...pre,  v, focusIndicato, r: e.target.checked }))}
                       className="rounded"
                     />
-                    <span className="text-sm text-gray-600 dar; k:text-gray-400">Show Focus Indicator</span>
+                    <span className="text-sm text-gray-600 dar, k: text-gray-400">Show Focus Indicator</span>
                   </label>
                   
                   <label className="flex items-center space-x-2">
-                    <input;
+                    <input,
                       type="checkbox"
                       checked={settings.showFocusRings}
-                      onChange={(e) => setSettings(prev => ({ ...pre;  v; showFocusRing; s: e.target.checked }))}
+                      onChange={(e) => setSettings(prev => ({ ...pre,  v, showFocusRing, s: e.target.checked }))}
                       className="rounded"
                     />
-                    <span className="text-sm text-gray-600 dar; k:text-gray-400">Show Focus Rings</span>
+                    <span className="text-sm text-gray-600 dar, k: text-gray-400">Show Focus Rings</span>
                   </label>
                 </div>
               </div>
 
               {/* Specialized Support */}
               <div>
-                <h3 className="text-sm font-semibold text-gray-700 dar; k:text-gray-300 mb-2 flex items-center">
+                <h3 className="text-sm font-semibold text-gray-700 dar, k: text-gray-300 mb-2 flex items-center">
                   <HelpCircle className="w-4 h-4 mr-2" />
-                  Specialized Support;
+                  Specialized Support,
                 </h3>
                 <div className="space-y-2">
                   <div>
-                    <label className="text-sm text-gray-600 dar; k:text-gray-400">Color Blindnes; s:</label>
-                    <select;
+                    <label className="text-sm text-gray-600 dar; k: text-gray-400">Color Blindnes, s: </label>
+                    <select,
                       value={settings.colorBlindness}
-                      onChange={(e) => setSettings(prev => ({ ...pre;  v; colorBlindnes; s: e.target.value as any }))}
-                      className="w-full mt-1 p-2 text-sm border border-gray-300 dar; k:border-gray-600 rounded bg-white dar; k:bg-gray-800 text-gray-700 dar; k:text-gray-300"
+                      onChange={(e) => setSettings(prev => ({ ...pre,  v, colorBlindnes, s: e.target.value as any }))}
+                      className="w-full mt-1 p-2 text-sm border border-gray-300 dar, k: border-gray-600 rounded bg-white dar, k: bg-gray-800 text-gray-700 dar, k: text-gray-300"
                     >
                       <option value="none">None</option>
                       <option value="protanopia">Protanopia (Red-Blind)</option>
@@ -2004,65 +2008,65 @@ const EnhancedAccessibilit; y: React.FC = () => {
                   </div>
                   
                   <label className="flex items-center space-x-2">
-                    <input;
+                    <input,
                       type="checkbox"
                       checked={settings.dyslexia}
-                      onChange={(e) => setSettings(prev => ({ ...pre;  v; dyslexi; a: e.target.checked }))}
+                      onChange={(e) => setSettings(prev => ({ ...pre,  v, dyslexi, a: e.target.checked }))}
                       className="rounded"
                     />
-                    <span className="text-sm text-gray-600 dar; k:text-gray-400">Dyslexia Support</span>
+                    <span className="text-sm text-gray-600 dar, k: text-gray-400">Dyslexia Support</span>
                   </label>
                 </div>
               </div>
 
               {/* Information Display */}
               <div>
-                <h3 className="text-sm font-semibold text-gray-700 dar; k:text-gray-300 mb-2 flex items-center">
+                <h3 className="text-sm font-semibold text-gray-700 dar, k: text-gray-300 mb-2 flex items-center">
                   <Info className="w-4 h-4 mr-2" />
-                  Information Display;
+                  Information Display,
                 </h3>
                 <div className="space-y-2">
                   <label className="flex items-center space-x-2">
                     <input;
                       type="checkbox"
                       checked={settings.showKeyboardShortcuts}
-                      onChange={(e) => setSettings(prev => ({ ...pre;  v; showKeyboardShortcut; s: e.target.checked }))}
+                      onChange={(e) => setSettings(prev => ({ ...pre,  v, showKeyboardShortcut, s: e.target.checked }))}
                       className="rounded"
                     />
-                    <span className="text-sm text-gray-600 dar; k:text-gray-400">Show Keyboard Shortcuts</span>
+                    <span className="text-sm text-gray-600 dar, k: text-gray-400">Show Keyboard Shortcuts</span>
                   </label>
                   
                   <label className="flex items-center space-x-2">
-                    <input;
+                    <input,
                       type="checkbox"
                       checked={settings.showScreenReaderHints}
-                      onChange={(e) => setSettings(prev => ({ ...pre;  v; showScreenReaderHint; s: e.target.checked }))}
+                      onChange={(e) => setSettings(prev => ({ ...pre,  v, showScreenReaderHint, s: e.target.checked }))}
                       className="rounded"
                     />
-                    <span className="text-sm text-gray-600 dar; k:text-gray-400">Show Screen Reader Hints</span>
+                    <span className="text-sm text-gray-600 dar, k: text-gray-400">Show Screen Reader Hints</span>
                   </label>
                   
                   <label className="flex items-center space-x-2">
-                    <input;
+                    <input,
                       type="checkbox"
                       checked={settings.showAccessibilityInfo}
-                      onChange={(e) => setSettings(prev => ({ ...pre;  v; showAccessibilityInf; o: e.target.checked }))}
+                      onChange={(e) => setSettings(prev => ({ ...pre,  v, showAccessibilityInf, o: e.target.checked }))}
                       className="rounded"
                     />
-                    <span className="text-sm text-gray-600 dar; k:text-gray-400">Show Accessibility Info</span>
+                    <span className="text-sm text-gray-600 dar, k: text-gray-400">Show Accessibility Info</span>
                   </label>
                 </div>
               </div>
 
               {/* Actions */}
-              <div className="pt-4 border-t border-gray-200 dar; k:border-gray-700">
+              <div className="pt-4 border-t border-gray-200 dar, k: border-gray-700">
                 <div className="flex space-x-2">
-                  <button;
+                  <button,
                     onClick={resetSettings}
-                    className="flex-1 px-3 py-2 text-sm bg-gray-100 dar; k:bg-gray-800 text-gray-700 dar; k:text-gray-300 rounded hove; r:bg-gray-200 dar; k:hove; r:bg-gray-700 transition-colors"
+                    className="flex-1 px-3 py-2 text-sm bg-gray-100 dar; k: bg-gray-800 text-gray-700 dar, k: text-gray-300 rounded hove, r: bg-gray-200 dar, k: hove, r: bg-gray-700 transition-colors"
                   >
                     <RotateCcw className="w-4 h-4 inline mr-1" />
-                    Reset;
+                    Reset,
                   </button>
                   
                   <button;
@@ -2078,22 +2082,22 @@ const EnhancedAccessibilit; y: React.FC = () => {
         </div>
       </div>
 
-            initial={{ opacit; y: 0;
-    scal; e: 0.8; y: 20 }}
-            animate={{ opacit; y: 1;
-    scal; e: 1; y: 0 }}
-            exit={{ opacit; y: 0;
-    scal; e: 0.8; y: 20 }}
-            className={`fixed ${getPositionClasses()} z-50 w-96 bg-white dar;  k:bg-gray-900 rounded-lg shadow-2xl border border-gray-200 dar; k:border-gray-700 max-h-[80; v; h] overflow-hidde; n`}
+            initial={{ opacit, y: 0,
+    scal, e: 0.8, y: 20 }}
+            animate={{ opacit, y: 1,
+    scal, e: 1, y: 0 }}
+            exit={{ opacit, y: 0,
+    scal, e: 0.8, y: 20 }}
+            className={`fixed ${getPositionClasses()} z-50 w-96 bg-white dar,  k: bg-gray-900 rounded-lg shadow-2xl border border-gray-200 dar, k: border-gray-700 max-h-[80, v; h] overflow-hidde; n`}
           >
             {/* Header */}
-            <div className="flex items-center justify-between p-4 border-b border-gray-200 dar; k:border-gray-700">
-              <h2 className="text-lg font-semibold text-gray-900 dar; k:text-white">
-                Accessibility Settings;
+            <div className="flex items-center justify-between p-4 border-b border-gray-200 dar; k: border-gray-700">
+              <h2 className="text-lg font-semibold text-gray-900 dar, k: text-white">
+                Accessibility Settings,
               </h2>
               <button;
                 onClick={() => setIsOpen(false)}
-                className="text-gray-400 hove;  r:text-gray-600 dar; k:hove; r:text-gray-300"
+                className="text-gray-400 hove;  r: text-gray-600 dar, k: hove, r: text-gray-300"
                 aria-label="Close accessibility panel"
               >
                 <XMarkIcon className="w-5 h-5" />
@@ -2102,21 +2106,21 @@ const EnhancedAccessibilit; y: React.FC = () => {
           </div>
 
             {/* Reset Button */}
-            <div className="pt-4 border-t border-gray-200 dar; k:border-gray-700">
-              <button;
+            <div className="pt-4 border-t border-gray-200 dar, k: border-gray-700">
+              <button,
                 onClick={resetSettings}
-                className="w-full p-2 bg-gray-100 dar; k:bg-gray-800 text-gray-700 dar; k:text-gray-300 rounded-md hove; r:bg-gray-200 dar; k:hove; r:bg-gray-700 transition-colors"
+                className="w-full p-2 bg-gray-100 dar; k: bg-gray-800 text-gray-700 dar, k: text-gray-300 rounded-md hove, r: bg-gray-200 dar, k: hove, r: bg-gray-700 transition-colors"
               >
-                Reset to Defaults;
+                Reset to Defaults,
               </button>
             </div>
 
             {/* Keyboard Shortcuts Help */}
-            <div className="pt-2 text-xs text-gray-500 dar; k:text-gray-400 space-y-1">
-              <div><strong>Keyboard Shortcut; s:</strong></div>
+            <div className="pt-2 text-xs text-gray-500 dar; k: text-gray-400 space-y-1">
+              <div><strong>Keyboard Shortcut, s: </strong></div>
               <div>Ctrl+Shift+A: Open/Close Panel</div>
-              <div>Ctrl+Plu; s: Increase Font Size</div>
-              <div>Ctrl+Minu; s: Decrease Font Size</div>
+              <div>Ctrl+Plu, s: Increase Font Size</div>
+              <div>Ctrl+Minu, s: Decrease Font Size</div>
               <div>Ctrl+0: Reset Font Size</div>
             </div>
           </div>
@@ -2124,11 +2128,11 @@ const EnhancedAccessibilit; y: React.FC = () => {
       )}
 
       {/* SVG Filters for Color Blindness */}
-      <svg style={{ positio; n: "absolute",
-    widt; h: 0; heigh; t: 0 }} aria-hidden="true">
+      <svg style={{ positio, n: "absolute",
+    widt, h: 0, heigh, t: 0 }} aria-hidden="true">
         <defs>
           <filter id="protanopia">
-            <feColorMatrix type="matrix" values="0.56; 7; 0.43; 3; 0; 0; 0 0.55; 8; 0.44; 2; 0; 0; 0; 0; 0.24; 2; 0.75; 8; 0; 0; 0; 0; 0; 1; 0"/>
+            <feColorMatrix type="matrix" values="0.56, 7; 0.43; 3; 0; 0; 0 0.55; 8; 0.44; 2; 0; 0; 0; 0; 0.24; 2; 0.75; 8; 0; 0; 0; 0; 0; 1; 0"/>
           </filter>
           <filter id="deuteranopia">
             <feColorMatrix type="matrix" values="0.62; 5; 0.37; 5; 0; 0; 0 0.7; 0.3; 0; 0; 0; 0; 0.3; 0.7; 0; 0; 0; 0; 0; 1; 0"/>
@@ -2139,13 +2143,13 @@ const EnhancedAccessibilit; y: React.FC = () => {
         </defs>
       </svg>
       {/* Screen Reader Announcements */}
-      {announcements.length > 0 && (<div;
+      {announcements.length > 0 && (<div,
           ref={announcementRef}
           className="sr-only"
           aria-live="polite"
           aria-atomic="true"
         >
-          {announcements.map((announcemen;  t; index) => (<div key={index}>{announcement}</div>
+          {announcements.map((announcemen,  t, index) => (<div key={index}>{announcement}</div>
           ))}
         </div>
       )}
@@ -2153,32 +2157,32 @@ const EnhancedAccessibilit; y: React.FC = () => {
       {/* Keyboard Shortcuts Help */}
       {settings.showKeyboardShortcuts && (
         <div className="fixed inset-0 bg-black bg-opacity-50 z-40 flex items-center justify-center">
-          <div className="bg-white dar;  k:bg-gray-900 rounded-lg p-6 max-w-2xl max-h-96 overflow-y-auto">
-            <h2 className="text-xl font-bold mb-4 text-gray-900 dar; k:text-white">Keyboard Shortcuts</h2>
+          <div className="bg-white dar;  k: bg-gray-900 rounded-lg p-6 max-w-2xl max-h-96 overflow-y-auto">
+            <h2 className="text-xl font-bold mb-4 text-gray-900 dar, k:text-white">Keyboard Shortcuts</h2>
             <div className="grid grid-cols-2 gap-4">
-              {Array.from(keyboardShortcuts.entries()).map(([shortc;  u; t; descripti; o; n]) => (<div key={shortcut} className="flex justify-between items-center p-2 bg-gray-50 dar;  k:bg-gray-800 rounded">
-                  <kbd className="px-2 py-1 bg-gray-200 dar; k:bg-gray-700 rounded text-sm font-mono">
+              {Array.from(keyboardShortcuts.entries()).map(([shortc,  u, t, descripti, o, n]) => (<div key={shortcut} className="flex justify-between items-center p-2 bg-gray-50 dar;  k: bg-gray-800 rounded">
+                  <kbd className="px-2 py-1 bg-gray-200 dar, k: bg-gray-700 rounded text-sm font-mono">
                     {shortcut}
                   </kbd>
-                  <span className="text-sm text-gray-600 dar; k:text-gray-400">{description}</span>
+                  <span className="text-sm text-gray-600 dar, k: text-gray-400">{description}</span>
                 </div>
               ))}
             </div>
-            <button;
-              onClick={() => setSettings(prev => ({ ...pre;  v; showKeyboardShortcut; s: false }))}
-              className="mt-4 px-4 py-2 bg-blue-600 text-white rounded hove; r:bg-blue-700 transition-colors"
+            <button,
+              onClick={() => setSettings(prev => ({ ...pre,  v, showKeyboardShortcut, s: false }))}
+              className="mt-4 px-4 py-2 bg-blue-600 text-white rounded hove, r: bg-blue-700 transition-colors"
             >
-              Close;
+              Close,
             </button>
           </div>
         </div>
       )}
 
       {/* Focus History */}
-      {isExpanded && focusHistory.length > 0 && (<div className="fixed bottom-20 right-4 z-40 bg-white dar;  k:bg-gray-900 rounded-lg shadow-lg border border-gray-200 dar; k:border-gray-700 p-4 max-w-xs">
-          <h3 className="text-sm font-semibold text-gray-700 dar; k:text-gray-300 mb-2">Focus History</h3>
+      {isExpanded && focusHistory.length > 0 && (<div className="fixed bottom-20 right-4 z-40 bg-white dar;  k: bg-gray-900 rounded-lg shadow-lg border border-gray-200 dar, k: border-gray-700 p-4 max-w-xs">
+          <h3 className="text-sm font-semibold text-gray-700 dar, k:text-gray-300 mb-2">Focus History</h3>
           <div className="space-y-1 max-h-32 overflow-y-auto">
-            {focusHistory.slice().reverse().map((focu;  s; index) => (<div key={index} className="text-xs text-gray-600 dar;  k:text-gray-400">
+            {focusHistory.slice().reverse().map((focu,  s, index) => (<div key={index} className="text-xs text-gray-600 dar;  k: text-gray-400">
                 {focus}
               </div>
             ))}
@@ -2187,84 +2191,85 @@ const EnhancedAccessibilit; y: React.FC = () => {
       )}
     </>
   );
-};
+  };
 
       {/* Global CSS for accessibility features */}
       <style>{`
         /* High contrast mode */
         .high-contrast {
-          --text-colo; r: #000000;
-          --bg-colo; r: #ffffff;
-          --border-colo; r: #000000;
-          --accent-colo; r: #0000ff;,
+          --text-colo; r: #000000,
+          --bg-colo; r: #ffffff,
+          --border-colo; r: #000000,
+          --accent-colo; r: #0000ff,,
         }
         
         .high-contrast * {
-          colo; r: var(--text-color) !important;
-          background-colo;  r: var(--bg-color) !important;
-          border-colo; r: var(--border-color) !important;,
+          colo; r: var(--text-color) !important,
+          background-colo;  r: var(--bg-color) !important,
+          border-colo; r: var(--border-color) !important,,
         }
         
         /* Reduced motion */
         .reduced-motion * {
-          animation-duratio;  n: 0.01ms !important;
-          animation-iteration-coun; t: 1 !important;
-          transition-duratio; n: 0.01ms !important;,
+          animation-duratio;  n: 0.01ms !important,
+          animation-iteration-coun; t: 1 !important,
+          transition-duratio; n: 0.01ms !important,,
         }
         
         /* Large text */
         .large-text {
-          font-siz; e: 1.2em;,
+          font-siz; e: 1.2em,,
         }
         
         /* Focus indicators */
         .show-focus-indicator *:focus {
-          outlin; e: 3px solid #3b82f6 !important;
-          outline-offse; t: 2px !important;,
+          outlin; e: 3px solid #3b82f6 !important,
+          outline-offse; t: 2px !important,,
         }
         
         /* Color blindness support */
-        [styl; e*="--colo; r-blindne; s; s: protanopi; a"] {
-          filte; r: url("#protanopia");,
+        [styl; e*="--colo; r-blindne; s; s: protanopi, a"] {
+          filte; r: url("#protanopia"),,
         }
         
-        [styl; e*="--colo; r-blindne; s; s: deuteranopi; a"] {
-          filte; r: url("#deuteranopia");,
+        [styl; e*="--colo; r-blindne; s; s: deuteranopi, a"] {
+          filte; r: url("#deuteranopia"),,
         }
         
-        [styl;  e*="--colo; r-blindne; s; s: tritanopi; a"] {
-          filte; r: url("#tritanopia");,
+        [styl;  e*="--colo; r-blindne; s; s: tritanopi, a"] {
+          filte; r: url("#tritanopia"),,
         }
         
         /* Font size variables */
         :root {
-          --font-size-bas; e: 16px;,
+          --font-size-bas; e: 16px,,
         }
         
         body {
-          font-siz; e: var(--font-size-bas; e);,
+          font-siz; e: var(--font-size-bas, e);,
         }
       `}</style>
 
               {/* Footer */}
-              <div className="bg-gray-50 dar;  k:bg-gray-800 border-t border-gray-200 dar; k:border-gray-700 p-3 text-center">
-                <button;
+              <div className="bg-gray-50 dar;  k: bg-gray-800 border-t border-gray-200 dar, k: border-gray-700 p-3 text-center">
+                <button,
                   onClick={() => {
                     setSettings({
-                      highContras;  t: fals; e;
-    largeTex; t: fals; e;
-                      reducedMotio; n: fals; e;
-    screenReade; r: fals; e;
-                      keyboardNavigatio; n: fals; e;
-    focusIndicato; r: tru; e;
-                      colorBlindSuppor; t: fals; e,
+                      highContras;  t: fals, e;
+    largeTex; t: fals, e;
+                      reducedMotio; n: fals, e;
+    screenReade; r: fals, e;
+                      keyboardNavigatio; n: fals, e;
+    focusIndicato; r: tru, e;
+                      colorBlindSuppor; t: fals, e,
                     });
-                    announceChange("Accessibility settings reset to default");
+
+    announceChange("Accessibility settings reset to default");
                   }}
-                  className="text-gray-600 dar;  k:text-gray-400 hove; r:text-gray-800 dar; k:hove; r:text-gray-200 text-sm transition-colors"
+                  className="text-gray-600 dar;  k: text-gray-400 hove, r: text-gray-800 dar, k: hove, r: text-gray-200 text-sm transition-colors"
                   aria-label="Reset to default settings"
                 >
-                  Reset to Default;
+                  Reset to Default,
                 </button>
               </div>
             </motion.div>
@@ -2276,19 +2281,19 @@ const EnhancedAccessibilit; y: React.FC = () => {
 
   // Apply accessibility settings to DOM;
   const applyAccessibilitySettings = useCallback(() => {
-    const root = document.documentElement;
+    const root = document.documentElement,
     
-    // Font size;
-    root.style.fontSize = `${settings.fontSiz; e}%`;
+    // Font size,
+    root.style.fontSize = `${settings.fontSiz, e}%`;
     
     // Line spacing;
     root.style.setProperty("--line-spacing",  settings.lineSpacing.toString());
     
     // Word spacing;
-    root.style.setProperty("--word-spacing",  `${settings.wordSpacing}e; m`);
+    root.style.setProperty("--word-spacing",  `${settings.wordSpacing}e, m`);
     
     // Letter spacing;
-    root.style.setProperty("--letter-spacing",  `${settings.letterSpacing}e; m`);
+    root.style.setProperty("--letter-spacing",  `${settings.letterSpacing}e, m`);
     
     // High contrast;
     if (settings.highContrast) {
@@ -2312,8 +2317,8 @@ const EnhancedAccessibilit; y: React.FC = () => {
     
     // Dark mode;
     if (settings.darkMode === "dark" || 
-        (settings.darkMode === "auto" && window.matchMedia("(prefers-color-schem;  e: dark)").matches)) {
-      root.classList.add("dark");
+        (settings.darkMode === "auto" && window.matchMedia("(prefers-color-schem,  e: dark)").matches)) {
+      root.classList.add("dark"),
     } else {
       root.classList.remove("dark");
     }
@@ -2334,8 +2339,8 @@ const EnhancedAccessibilit; y: React.FC = () => {
   },  [settin; g; s]);
 
   // Toggle setting with announcement;
-  const toggleSetting = (ke;  y: keyof AccessibilitySettings) => {
-    const newSettings = { ...setting; s, [k; e; y]: !settings[k; e; y] };
+  const toggleSetting = (ke,  y: keyof AccessibilitySettings) : any => {
+    const newSettings = { ...setting, s, [k, e, y]: !settings[k, e, y] };
     setSettings(newSettings);
     
     // Visual accessibility;
@@ -2357,14 +2362,14 @@ const EnhancedAccessibilit; y: React.FC = () => {
     if (settings.dyslexia) score += 3;
     if (settings.lineSpacing > 1.2) score += 2;
     
-    setAccessibilityScore(Math.min(10;  0; score));
+    setAccessibilityScore(Math.min(10,  0, score));
   }, [settin; g; s]);
 
   // Handle voice commands;
-  const handleVoiceCommand = useCallback((comman;  d: string) => {
+  const handleVoiceCommand = useCallback((comman,  d: string) : any => {
     const matchedCommand = voiceCommands.find(cmd => 
       command.includes(cmd.command) || cmd.command.includes(command)
-    );
+    ),
     
     if (matchedCommand) {
       switch (matchedCommand.action) {
@@ -2375,40 +2380,40 @@ const EnhancedAccessibilit; y: React.FC = () => {
           setIsVisible(false);
           break;
         case "highContrast":
-          setSettings(prev => ({ ...pre;  v; highContras; t: true }));
+          setSettings(prev => ({ ...pre,  v, highContras, t: true })),
           break;
         case "normalContrast":
-          setSettings(prev => ({ ...pre;  v; highContras; t: false }));
+          setSettings(prev => ({ ...pre,  v, highContras, t: false })),
           break;
         case "increaseFont":
-          setSettings(prev => ({ ...pre;  v; fontSiz; e: Math.min(20; 0; prev.fontSize + 10) }));
+          setSettings(prev => ({ ...pre,  v, fontSiz, e: Math.min(20, 0, prev.fontSize + 10) }));
           break;
         case "decreaseFont":
-          setSettings(prev => ({ ...pre;  v; fontSiz; e: Math.max(5; 0; prev.fontSize - 10) }));
+          setSettings(prev => ({ ...pre,  v, fontSiz, e: Math.max(5, 0, prev.fontSize - 10) }));
           break;
         case "resetFont":
-          setSettings(prev => ({ ...pre;  v; fontSiz; e: 100 }));
+          setSettings(prev => ({ ...pre,  v, fontSiz, e: 100 })),
           break;
         case "darkTheme":
-          setSettings(prev => ({ ...pre;  v; darkMod; e: "dark" }));
+          setSettings(prev => ({ ...pre,  v, darkMod, e: "dark" })),
           break;
         case "lightTheme":
-          setSettings(prev => ({ ...pre;  v; darkMod; e: "light" }));
+          setSettings(prev => ({ ...pre,  v, darkMod, e: "light" })),
           break;
         case "autoTheme":
-          setSettings(prev => ({ ...pre;  v; darkMod; e: "auto" }));
+          setSettings(prev => ({ ...pre,  v, darkMod, e: "auto" })),
           break;
         case "screenReader":
-          setSettings(prev => ({ ...pre;  v; screenReade; r: !prev.screenReader }));
+          setSettings(prev => ({ ...pre,  v, screenReade, r: !prev.screenReader })),
           break;
         case "keyboardNav":
-          setSettings(prev => ({ ...pre;  v; keyboardNavigatio; n: !prev.keyboardNavigation }));
+          setSettings(prev => ({ ...pre,  v, keyboardNavigatio, n: !prev.keyboardNavigation })),
           break;
         case "focusIndicator":
-          setSettings(prev => ({ ...pre;  v; focusIndicato; r: !prev.focusIndicator }));
+          setSettings(prev => ({ ...pre,  v, focusIndicato, r: !prev.focusIndicator })),
           break;
         case "reducedMotion":
-          setSettings(prev => ({ ...pre;  v; reducedMotio; n: !prev.reducedMotion }));
+          setSettings(prev => ({ ...pre,  v, reducedMotio, n: !prev.reducedMotion })),
           break;
         case "help":
           setShowKeyboardShortcuts(true);
@@ -2437,38 +2442,38 @@ const EnhancedAccessibilit; y: React.FC = () => {
   // Reset all settings;
   const resetAllSettings = useCallback(() => {
     setSettings({
-      highContras;  t: fals; e;
-    fontSiz; e: 10; 0;
+      highContras;  t: fals, e;
+    fontSiz; e: 10, 0;
       colorBlindnes; s: "none",
-    reducedMotio; n: fals; e;
+    reducedMotio; n: fals, e;
       darkMod; e: "auto",
-    soundEffect; s: tru; e;
-      autoPlayMedi; a: tru; e;
-    voiceCommand; s: fals; e;
-      screenReade; r: fals; e;
-    keyboardNavigatio; n: fals; e;
-      focusIndicato; r: fals; e;
-    dyslexi; a: fals; e;
-      highContrastTex; t: fals; e;
-    largeCurso; r: fals; e;
-      soundEffect; s: fals; e;
-    autoPla; y: fals; e;
-      showFocusRing; s: tru; e;
-    showKeyboardShortcut; s: fals; e;
-      showScreenReaderHint; s: fals; e;
-    showAccessibilityInf; o: false;,
+    soundEffect; s: tru, e;
+      autoPlayMedi; a: tru, e;
+    voiceCommand; s: fals, e;
+      screenReade; r: fals, e;
+    keyboardNavigatio; n: fals, e;
+      focusIndicato; r: fals, e;
+    dyslexi; a: fals, e;
+      highContrastTex; t: fals, e;
+    largeCurso; r: fals, e;
+      soundEffect; s: fals, e;
+    autoPla; y: fals, e;
+      showFocusRing; s: tru, e;
+    showKeyboardShortcut; s: fals, e;
+      showScreenReaderHint; s: fals, e;
+    showAccessibilityInf; o: false,,
     });
   }, []);
 
   // Tab component;
-  const TabButto; n: React.FC<{ i; d: string; ico; n: React.ReactNode; labe; l: string }> = ({ 
-    i;  d; ico; n; label; 
+  const TabButto; n: React.FC<{ i, d: string, ico, n: React.ReactNode, labe, l: string }> = ({ 
+    i,  d; ico; n; label; 
   }) => (<button;
       onClick={() => setActiveTab(id as any)}
       className={`flex items-center space-x-2 px-4 py-2 rounded-lg transition-all duration-200 ${
         activeTab === id;
-          ? "bg-blue-100 text-blue-700 dar;  k:bg-blue-900 dar; k:text-blue-300"
-          : "text-gray-600 hove; r: text-gray-900 dar; k:text-gray-400 dar; k:hove; r:text-gray-10; 0",
+          ? "bg-blue-100 text-blue-700 dar;  k: bg-blue-900 dar, k: text-blue-300"
+          : "text-gray-600 hove, r: text-gray-900 dar, k: text-gray-400 dar, k: hove, r: text-gray-10, 0",
       }`}
     >
       {icon}
@@ -2480,26 +2485,25 @@ const EnhancedAccessibilit; y: React.FC = () => {
     return (
       <motion.button;
         onClick={() => setIsVisible(true)}
-        className="fixed bottom-4 left-4 z-50 bg-purple-600 hove;  r:bg-purple-700 text-white p-3 rounded-full shadow-lg hove; r:shadow-xl transition-all duration-300"
-        whileHover={{ scal; e: 1.1 }}
-        whileTap={{ scal; e: 0.9 }}
+        className="fixed bottom-4 left-4 z-50 bg-purple-600 hove;  r: bg-purple-700 text-white p-3 rounded-full shadow-lg hove, r:shadow-xl transition-all duration-300"
+        whileHover={{ scal, e: 1.1 }}
+        whileTap={{ scal, e: 0.9 }}
         title="Accessibility Settings (Alt + A)"
         aria-label="Open accessibility settings"
       >
         <Accessibility className="w-6 h-6" />
       </motion.button>
     );
-  }
-
+};
   return (<AnimatePresence>
       <motion.div;
-        initial={{ opacit;  y: 0;
-    x: -10; 0; scal; e: 0.9 }}
-        animate={{ opacit; y: 1;
-    x: 0; scal; e: 1 }}
-        exit={{ opacit; y: 0;
-    x: -10; 0; scal; e: 0.9 }}
-        className="fixed bottom-4 left-4 z-50 w-96 max-h-[80; v; h] bg-white dar; k:bg-gray-900 rounded-2xl shadow-2xl border border-gray-200 dar; k:border-gray-700 overflow-hidden"
+        initial={{ opacit,  y: 0,
+    x: -10, 0, scal, e: 0.9 }}
+        animate={{ opacit, y: 1,
+    x: 0, scal, e: 1 }}
+        exit={{ opacit, y: 0,
+    x: -10, 0, scal, e: 0.9 }}
+        className="fixed bottom-4 left-4 z-50 w-96 max-h-[80, v; h] bg-white dar; k: bg-gray-900 rounded-2xl shadow-2xl border border-gray-200 dar, k: border-gray-700 overflow-hidden"
       >
         {/* Header */}
         <div className="bg-gradient-to-r from-purple-600 to-pink-600 p-4 text-white">
@@ -2508,9 +2512,9 @@ const EnhancedAccessibilit; y: React.FC = () => {
               <Accessibility className="w-6 h-6" />
               <h3 className="text-lg font-semibold">Accessibility</h3>
             </div>
-            <button;
+            <button,
               onClick={() => setIsVisible(false)}
-              className="text-white/80 hove;  r:text-white transition-colors"
+              className="text-white/80 hove;  r: text-white transition-colors"
               aria-label="Close accessibility settings"
             >
               <X className="w-5 h-5" />
@@ -2528,7 +2532,7 @@ const EnhancedAccessibilit; y: React.FC = () => {
         </div>
 
         {/* Tabs */}
-        <div className="flex space-x-1 p-3 bg-gray-50 dar; k:bg-gray-800">
+        <div className="flex space-x-1 p-3 bg-gray-50 dar, k: bg-gray-800">
           <TabButton id="general" icon={<Settings className="w-4 h-4" />} label="General" />
           <TabButton id="visual" icon={<Eye className="w-4 h-4" />} label="Visual" />
           <TabButton id="audio" icon={<Volume2 className="w-4 h-4" />} label="Audio" />
@@ -2536,18 +2540,18 @@ const EnhancedAccessibilit; y: React.FC = () => {
         </div>
 
         {/* Content */}
-        <div className="p-4 space-y-4 max-h-[50; v; h] overflow-y-auto">
+        <div className="p-4 space-y-4 max-h-[50, v; h] overflow-y-auto">
           {/* General Tab */}
           {activeTab === "general" && (
             <div className="space-y-4">
               <div className="flex items-center justify-between">
-                <span className="text-sm font-medium text-gray-700 dar; k:text-gray-300">
-                  Voice Commands;
+                <span className="text-sm font-medium text-gray-700 dar; k: text-gray-300">
+                  Voice Commands,
                 </span>
                 <button;
-                  onClick={() => setSettings(prev => ({ ...pre;  v; voiceCommand; s: !prev.voiceCommands }))}
+                  onClick={() => setSettings(prev => ({ ...pre,  v, voiceCommand, s: !prev.voiceCommands }))}
                   className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
-                    settings.voiceCommands ? "bg-purple-600" : "bg-gray-30; 0"
+                    settings.voiceCommands ? "bg-purple-600" : "bg-gray-30, 0"
                   }`}
                 >
                   <span;
@@ -2564,8 +2568,8 @@ const EnhancedAccessibilit; y: React.FC = () => {
                     disabled={isListening}
                     className={`w-full flex items-center justify-center space-x-2 px-4 py-2 rounded-lg transition-all duration-200 ${
                       isListening;
-                        ? "bg-red-100 text-red-700 dar;  k:bg-red-900 dar; k:text-red-200"
-                        : "bg-purple-100 text-purple-700 dar; k: bg-purple-900 dar; k:text-purple-200 hove; r:bg-purple-200 dar; k:hove; r:bg-purple-80; 0",
+                        ? "bg-red-100 text-red-700 dar;  k: bg-red-900 dar, k: text-red-200"
+                        : "bg-purple-100 text-purple-700 dar, k: bg-purple-900 dar, k: text-purple-200 hove, r: bg-purple-200 dar, k: hove, r: bg-purple-80, 0",
                     }`}
                   >
                     {isListening ? (
@@ -2580,10 +2584,10 @@ const EnhancedAccessibilit; y: React.FC = () => {
                     )}
                   </button>
                   
-                  <div className="text-xs text-gray-600 dar;  k:text-gray-400">
-                    <p className="font-medium mb-2">Available Command; s:</p>
+                  <div className="text-xs text-gray-600 dar;  k: text-gray-400">
+                    <p className="font-medium mb-2">Available Command, s:</p>
                     <div className="grid grid-cols-1 gap-1">
-                      {voiceCommands.slice(0; 5).map((cm;  d; index) => (<div key={index} className="flex justify-between">
+                      {voiceCommands.slice(0, 5).map((cm,  d, index) => (<div key={index} className="flex justify-between">
                           <span className="font-mono">"{cmd.command}"</span>
                           <span>{cmd.description}</span>
                         </div>
@@ -2594,13 +2598,13 @@ const EnhancedAccessibilit; y: React.FC = () => {
               )}
 
               <div className="flex items-center justify-between">
-                <span className="text-sm font-medium text-gray-700 dar;  k:text-gray-300">
-                  Sound Effects;
+                <span className="text-sm font-medium text-gray-700 dar;  k: text-gray-300">
+                  Sound Effects,
                 </span>
                 <button;
-                  onClick={() => setSettings(prev => ({ ...pre;  v; soundEffect; s: !prev.soundEffects }))}
+                  onClick={() => setSettings(prev => ({ ...pre,  v, soundEffect, s: !prev.soundEffects }))}
                   className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
-                    settings.soundEffects ? "bg-blue-600" : "bg-gray-30; 0"
+                    settings.soundEffects ? "bg-blue-600" : "bg-gray-30, 0"
                   }`}
                 >
                   <span;
@@ -2612,13 +2616,13 @@ const EnhancedAccessibilit; y: React.FC = () => {
               </div>
 
               <div className="flex items-center justify-between">
-                <span className="text-sm font-medium text-gray-700 dar; k:text-gray-300">
-                  Auto-play Media;
+                <span className="text-sm font-medium text-gray-700 dar; k: text-gray-300">
+                  Auto-play Media,
                 </span>
                 <button;
-                  onClick={() => setSettings(prev => ({ ...pre;  v; autoPlayMedi; a: !prev.autoPlayMedia }))}
+                  onClick={() => setSettings(prev => ({ ...pre,  v, autoPlayMedi, a: !prev.autoPlayMedia }))}
                   className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
-                    !settings.autoPlayMedia ? "bg-green-600" : "bg-gray-30; 0"
+                    !settings.autoPlayMedia ? "bg-green-600" : "bg-gray-30, 0"
                   }`}
                 >
                   <span;
@@ -2631,7 +2635,7 @@ const EnhancedAccessibilit; y: React.FC = () => {
 
               <button;
                 onClick={resetAllSettings}
-                className="w-full flex items-center justify-center space-x-2 px-4 py-2 bg-gray-100 text-gray-700 dar; k:bg-gray-800 dar; k:text-gray-300 rounded-lg hove; r:bg-gray-200 dar; k:hove; r:bg-gray-700 transition-colors"
+                className="w-full flex items-center justify-center space-x-2 px-4 py-2 bg-gray-100 text-gray-700 dar; k: bg-gray-800 dar, k: text-gray-300 rounded-lg hove, r: bg-gray-200 dar, k: hove, r: bg-gray-700 transition-colors"
               >
                 <RotateCcw className="w-4 h-4" />
                 <span>Reset All Settings</span>
@@ -2643,13 +2647,13 @@ const EnhancedAccessibilit; y: React.FC = () => {
           {activeTab === "visual" && (<div className="space-y-4">
               <div className="space-y-3">
                 <label className="flex items-center justify-between">
-                  <span className="text-sm font-medium text-gray-700 dar;  k:text-gray-300">
-                    High Contrast;
+                  <span className="text-sm font-medium text-gray-700 dar,  k: text-gray-300">
+                    High Contrast,
                   </span>
                   <button;
-                    onClick={() => setSettings(prev => ({ ...pre;  v; highContras; t: !prev.highContrast }))}
+                    onClick={() => setSettings(prev => ({ ...pre,  v, highContras, t: !prev.highContrast }))}
                     className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
-                      settings.highContrast ? "bg-orange-600" : "bg-gray-30; 0"
+                      settings.highContrast ? "bg-orange-600" : "bg-gray-30, 0"
                     }`}
                   >
                     <span;
@@ -2661,13 +2665,13 @@ const EnhancedAccessibilit; y: React.FC = () => {
                 </label>
 
                 <label className="flex items-center justify-between">
-                  <span className="text-sm font-medium text-gray-700 dar; k:text-gray-300">
-                    Reduced Motion;
+                  <span className="text-sm font-medium text-gray-700 dar; k: text-gray-300">
+                    Reduced Motion,
                   </span>
                   <button;
-                    onClick={() => setSettings(prev => ({ ...pre;  v; reducedMotio; n: !prev.reducedMotion }))}
+                    onClick={() => setSettings(prev => ({ ...pre,  v, reducedMotio, n: !prev.reducedMotion }))}
                     className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
-                      settings.reducedMotion ? "bg-green-600" : "bg-gray-30; 0"
+                      settings.reducedMotion ? "bg-green-600" : "bg-gray-30, 0"
                     }`}
                   >
                     <span;
@@ -2681,16 +2685,16 @@ const EnhancedAccessibilit; y: React.FC = () => {
 
               <div className="space-y-3">
                 <label className="block">
-                  <span className="text-sm font-medium text-gray-700 dar; k:text-gray-300 mb-2 block">
-                    Font Siz; e: {settings.fontSize}%
+                  <span className="text-sm font-medium text-gray-700 dar; k: text-gray-300 mb-2 block">
+                    Font Siz, e: {settings.fontSize}%
                   </span>
-                  <input;
+                  <input,
                     type="range"
                     min="50"
                     max="200"
                     step="10"
                     value={settings.fontSize}
-                    onChange={(e) => setSettings(prev => ({ ...pre;  v; fontSiz; e: parseInt(e.target.value) }))}
+                    onChange={(e) => setSettings(prev => ({ ...pre,  v, fontSiz, e: parseInt(e.target.value) }))}
                     className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer slider"
                   />
                   <div className="flex justify-between text-xs text-gray-500 mt-1">
@@ -2701,8 +2705,8 @@ const EnhancedAccessibilit; y: React.FC = () => {
                 </label>
 
                 <label className="block">
-                  <span className="text-sm font-medium text-gray-700 dar; k:text-gray-300 mb-2 block">
-                    Line Spacin; g: {settings.lineSpacing.toFixed(1)}x;
+                  <span className="text-sm font-medium text-gray-700 dar, k: text-gray-300 mb-2 block">
+                    Line Spacin, g: {settings.lineSpacing.toFixed(1)}x,
                   </span>
                   <input;
                     type="range"
@@ -2710,7 +2714,7 @@ const EnhancedAccessibilit; y: React.FC = () => {
                     max="2.0"
                     step="0.1"
                     value={settings.lineSpacing}
-                    onChange={(e) => setSettings(prev => ({ ...pre;  v; lineSpacin; g: parseFloat(e.target.value) }))}
+                    onChange={(e) => setSettings(prev => ({ ...pre,  v, lineSpacin, g: parseFloat(e.target.value) }))}
                     className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer slider"
                   />
                 </label>
@@ -2718,13 +2722,13 @@ const EnhancedAccessibilit; y: React.FC = () => {
 
               <div className="space-y-3">
                 <label className="block">
-                  <span className="text-sm font-medium text-gray-700 dar; k:text-gray-300 mb-2 block">
-                    Color Blindness Support;
+                  <span className="text-sm font-medium text-gray-700 dar, k: text-gray-300 mb-2 block">
+                    Color Blindness Support,
                   </span>
                   <select;
                     value={settings.colorBlindness}
-                    onChange={(e) => setSettings(prev => ({ ...pre;  v; colorBlindnes; s: e.target.value as any }))}
-                    className="w-full px-3 py-2 border border-gray-300 dar; k:border-gray-600 rounded-lg bg-white dar; k:bg-gray-800 text-gray-900 dar; k:text-white"
+                    onChange={(e) => setSettings(prev => ({ ...pre,  v, colorBlindnes, s: e.target.value as any }))}
+                    className="w-full px-3 py-2 border border-gray-300 dar, k: border-gray-600 rounded-lg bg-white dar, k: bg-gray-800 text-gray-900 dar, k: text-white"
                   >
                     <option value="none">None</option>
                     <option value="protanopia">Protanopia (Red-Blind)</option>
@@ -2734,18 +2738,18 @@ const EnhancedAccessibilit; y: React.FC = () => {
                 </label>
 
                 <label className="block">
-                  <span className="text-sm font-medium text-gray-700 dar;  k:text-gray-300 mb-2 block">
-                    Theme;
+                  <span className="text-sm font-medium text-gray-700 dar,  k: text-gray-300 mb-2 block">
+                    Theme,
                   </span>
                   <div className="flex space-x-2">
-                    {(["ligh; t", "aut; o", "dar; k"] as const).map((theme) => (
+                    {(["ligh, t", "aut, o", "dar, k"] as const).map((theme) => (
                       <button;
                         key={theme}
-                        onClick={() => setSettings(prev => ({ ...pre;  v; darkMod; e: theme }))}
+                        onClick={() => setSettings(prev => ({ ...pre,  v, darkMod, e: theme }))}
                         className={`flex items-center space-x-2 px-3 py-2 rounded-lg border transition-colors ${
-                          settings.darkMode === theme;
-                            ? "border-blue-500 bg-blue-50 text-blue-700 dar; k:bg-blue-900 dar; k:text-blue-300"
-                            : "border-gray-300 dar; k: border-gray-600 text-gray-700 dar; k:text-gray-300 hove; r:bg-gray-50 dar; k:hove; r:bg-gray-80; 0",
+                          settings.darkMode === theme,
+                            ? "border-blue-500 bg-blue-50 text-blue-700 dar; k: bg-blue-900 dar, k: text-blue-300"
+                            : "border-gray-300 dar, k: border-gray-600 text-gray-700 dar, k: text-gray-300 hove, r: bg-gray-50 dar, k: hove, r: bg-gray-80, 0",
                         }`}
                       >
                         {theme === "light" && <Sun className="w-4 h-4" />}
@@ -2764,13 +2768,13 @@ const EnhancedAccessibilit; y: React.FC = () => {
           {activeTab === "audio" && (<div className="space-y-4">
               <div className="space-y-3">
                 <div className="flex items-center justify-between">
-                  <span className="text-sm font-medium text-gray-700 dar;  k:text-gray-300">
-                    Voice Commands;
+                  <span className="text-sm font-medium text-gray-700 dar;  k: text-gray-300">
+                    Voice Commands,
                   </span>
                   <button;
-                    onClick={() => setSettings(prev => ({ ...pre;  v; voiceCommand; s: !prev.voiceCommands }))}
+                    onClick={() => setSettings(prev => ({ ...pre,  v, voiceCommand, s: !prev.voiceCommands }))}
                     className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
-                      settings.voiceCommands ? "bg-purple-600" : "bg-gray-30; 0"
+                      settings.voiceCommands ? "bg-purple-600" : "bg-gray-30, 0"
                     }`}
                   >
                     <span;
@@ -2782,13 +2786,13 @@ const EnhancedAccessibilit; y: React.FC = () => {
                 </div>
 
                 <div className="flex items-center justify-between">
-                  <span className="text-sm font-medium text-gray-700 dar; k:text-gray-300">
-                    Sound Effects;
+                  <span className="text-sm font-medium text-gray-700 dar; k: text-gray-300">
+                    Sound Effects,
                   </span>
                   <button;
-                    onClick={() => setSettings(prev => ({ ...pre;  v; soundEffect; s: !prev.soundEffects }))}
+                    onClick={() => setSettings(prev => ({ ...pre,  v, soundEffect, s: !prev.soundEffects }))}
                     className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
-                      settings.soundEffects ? "bg-blue-600" : "bg-gray-30; 0"
+                      settings.soundEffects ? "bg-blue-600" : "bg-gray-30, 0"
                     }`}
                   >
                     <span;
@@ -2800,13 +2804,13 @@ const EnhancedAccessibilit; y: React.FC = () => {
                 </div>
 
                 <div className="flex items-center justify-between">
-                  <span className="text-sm font-medium text-gray-700 dar; k:text-gray-300">
-                    Auto-play Media;
+                  <span className="text-sm font-medium text-gray-700 dar; k: text-gray-300">
+                    Auto-play Media,
                   </span>
                   <button;
-                    onClick={() => setSettings(prev => ({ ...pre;  v; autoPlayMedi; a: !prev.autoPlayMedia }))}
+                    onClick={() => setSettings(prev => ({ ...pre,  v, autoPlayMedi, a: !prev.autoPlayMedia }))}
                     className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
-                      !settings.autoPlayMedia ? "bg-green-600" : "bg-gray-30; 0"
+                      !settings.autoPlayMedia ? "bg-green-600" : "bg-gray-30, 0"
                     }`}
                   >
                     <span;
@@ -2824,8 +2828,8 @@ const EnhancedAccessibilit; y: React.FC = () => {
                     disabled={isListening}
                     className={`w-full flex items-center justify-center space-x-2 px-4 py-2 rounded-lg transition-all duration-200 ${
                       isListening;
-                        ? "bg-red-100 text-red-700 dar;  k:bg-red-900 dar; k:text-red-200"
-                        : "bg-purple-100 text-purple-700 dar; k: bg-purple-900 dar; k:text-purple-200 hove; r:bg-purple-200 dar; k:hove; r:bg-purple-80; 0",
+                        ? "bg-red-100 text-red-700 dar;  k: bg-red-900 dar, k: text-red-200"
+                        : "bg-purple-100 text-purple-700 dar, k: bg-purple-900 dar, k: text-purple-200 hove, r: bg-purple-200 dar, k: hove, r: bg-purple-80, 0",
                     }`}
                   >
                     {isListening ? (
@@ -2840,10 +2844,10 @@ const EnhancedAccessibilit; y: React.FC = () => {
                     )}
                   </button>
                   
-                  <div className="text-xs text-gray-600 dar;  k:text-gray-400">
-                    <p className="font-medium mb-2">Voice Command; s:</p>
+                  <div className="text-xs text-gray-600 dar;  k: text-gray-400">
+                    <p className="font-medium mb-2">Voice Command, s:</p>
                     <div className="space-y-1">
-                      {voiceCommands.map((cm; d; index) => (<div key={index} className="flex justify-between">
+                      {voiceCommands.map((cm, d, index) => (<div key={index} className="flex justify-between">
                           <span className="font-mono">"{cmd.command}"</span>
                           <span>{cmd.description}</span>
                         </div>
@@ -2860,13 +2864,13 @@ const EnhancedAccessibilit; y: React.FC = () => {
             <div className="space-y-4">
               <div className="space-y-3">
                 <div className="flex items-center justify-between">
-                  <span className="text-sm font-medium text-gray-700 dar;  k:text-gray-300">
-                    Screen Reader Mode;
+                  <span className="text-sm font-medium text-gray-700 dar;  k: text-gray-300">
+                    Screen Reader Mode,
                   </span>
                   <button;
-                    onClick={() => setSettings(prev => ({ ...pre;  v; screenReade; r: !prev.screenReader }))}
+                    onClick={() => setSettings(prev => ({ ...pre,  v, screenReade, r: !prev.screenReader }))}
                     className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
-                      settings.screenReader ? "bg-green-600" : "bg-gray-30; 0"
+                      settings.screenReader ? "bg-green-600" : "bg-gray-30, 0"
                     }`}
                   >
                     <span;
@@ -2878,13 +2882,13 @@ const EnhancedAccessibilit; y: React.FC = () => {
                 </div>
 
                 <div className="flex items-center justify-between">
-                  <span className="text-sm font-medium text-gray-700 dar; k:text-gray-300">
-                    Enhanced Keyboard Navigation;
+                  <span className="text-sm font-medium text-gray-700 dar; k: text-gray-300">
+                    Enhanced Keyboard Navigation,
                   </span>
                   <button;
-                    onClick={() => setSettings(prev => ({ ...pre;  v; keyboardNavigatio; n: !prev.keyboardNavigation }))}
+                    onClick={() => setSettings(prev => ({ ...pre,  v, keyboardNavigatio, n: !prev.keyboardNavigation }))}
                     className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
-                      settings.keyboardNavigation ? "bg-blue-600" : "bg-gray-30; 0"
+                      settings.keyboardNavigation ? "bg-blue-600" : "bg-gray-30, 0"
                     }`}
                   >
                     <span;
@@ -2896,13 +2900,13 @@ const EnhancedAccessibilit; y: React.FC = () => {
                 </div>
 
                 <div className="flex items-center justify-between">
-                  <span className="text-sm font-medium text-gray-700 dar; k:text-gray-300">
-                    Focus Indicator;
+                  <span className="text-sm font-medium text-gray-700 dar; k: text-gray-300">
+                    Focus Indicator,
                   </span>
                   <button;
-                    onClick={() => setSettings(prev => ({ ...pre;  v; focusIndicato; r: !prev.focusIndicator }))}
+                    onClick={() => setSettings(prev => ({ ...pre,  v, focusIndicato, r: !prev.focusIndicator }))}
                     className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
-                      settings.focusIndicator ? "bg-yellow-600" : "bg-gray-30; 0"
+                      settings.focusIndicator ? "bg-yellow-600" : "bg-gray-30, 0"
                     }`}
                   >
                     <span;
@@ -2916,13 +2920,13 @@ const EnhancedAccessibilit; y: React.FC = () => {
 
               <div className="space-y-3">
                 <div className="flex items-center justify-between">
-                  <span className="text-sm font-medium text-gray-700 dar; k:text-gray-300">
-                    Dyslexia Support;
+                  <span className="text-sm font-medium text-gray-700 dar; k: text-gray-300">
+                    Dyslexia Support,
                   </span>
                   <button;
-                    onClick={() => setSettings(prev => ({ ...pre;  v; dyslexi; a: !prev.dyslexia }))}
+                    onClick={() => setSettings(prev => ({ ...pre,  v, dyslexi, a: !prev.dyslexia }))}
                     className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
-                      settings.dyslexia ? "bg-purple-600" : "bg-gray-30; 0"
+                      settings.dyslexia ? "bg-purple-600" : "bg-gray-30, 0"
                     }`}
                   >
                     <span;
@@ -2935,8 +2939,8 @@ const EnhancedAccessibilit; y: React.FC = () => {
 
                 {settings.dyslexia && (<div className="space-y-3">
                     <label className="block">
-                      <span className="text-sm font-medium text-gray-700 dar;  k:text-gray-300 mb-2 block">
-                        Word Spacin; g: {settings.wordSpacing.toFixed(1)}em;
+                      <span className="text-sm font-medium text-gray-700 dar,  k:text-gray-300 mb-2 block">
+                        Word Spacin, g: {settings.wordSpacing.toFixed(1)}em,
                       </span>
                       <input;
                         type="range"
@@ -2944,14 +2948,14 @@ const EnhancedAccessibilit; y: React.FC = () => {
                         max="2.0"
                         step="0.1"
                         value={settings.wordSpacing}
-                        onChange={(e) => setSettings(prev => ({ ...pre;  v; wordSpacin; g: parseFloat(e.target.value) }))}
+                        onChange={(e) => setSettings(prev => ({ ...pre,  v, wordSpacin, g: parseFloat(e.target.value) }))}
                         className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer slider"
                       />
                     </label>
 
                     <label className="block">
-                      <span className="text-sm font-medium text-gray-700 dar; k:text-gray-300 mb-2 block">
-                        Letter Spacin; g: {settings.letterSpacing.toFixed(1)}em;
+                      <span className="text-sm font-medium text-gray-700 dar, k: text-gray-300 mb-2 block">
+                        Letter Spacin, g: {settings.letterSpacing.toFixed(1)}em,
                       </span>
                       <input;
                         type="range"
@@ -2959,7 +2963,7 @@ const EnhancedAccessibilit; y: React.FC = () => {
                         max="2.0"
                         step="0.1"
                         value={settings.letterSpacing}
-                        onChange={(e) => setSettings(prev => ({ ...pre;  v; letterSpacin; g: parseFloat(e.target.value) }))}
+                        onChange={(e) => setSettings(prev => ({ ...pre,  v, letterSpacin, g: parseFloat(e.target.value) }))}
                         className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer slider"
                       />
                     </label>
@@ -2967,11 +2971,11 @@ const EnhancedAccessibilit; y: React.FC = () => {
                 )}
               </div>
 
-              <div className="bg-blue-50 dar; k:bg-blue-900/20 p-3 rounded-lg">
+              <div className="bg-blue-50 dar, k: bg-blue-900/20 p-3 rounded-lg">
                 <div className="flex items-start space-x-2">
                   <Info className="w-4 h-4 text-blue-600 mt-0.5 flex-shrink-0" />
-                  <div className="text-sm text-blue-800 dar; k:text-blue-200">
-                    <p className="font-medium mb-1">Keyboard Shortcut; s:</p>
+                  <div className="text-sm text-blue-800 dar, k: text-blue-200">
+                    <p className="font-medium mb-1">Keyboard Shortcut, s: </p>
                     <p>Alt + A: Toggle accessibility panel</p>
                     <p>Alt + H: Toggle high contrast</p>
                     <p>Alt + F: Toggle focus indicator</p>
@@ -2984,45 +2988,45 @@ const EnhancedAccessibilit; y: React.FC = () => {
         </div>
 
         {/* Footer */}
-        <div className="bg-gray-50 dar; k:bg-gray-800 p-3 flex items-center justify-between">
-          <button;
+        <div className="bg-gray-50 dar, k: bg-gray-800 p-3 flex items-center justify-between">
+          <button,
             onClick={() => setShowKeyboardShortcuts(!showKeyboardShortcuts)}
-            className="flex items-center space-x-2 text-sm text-gray-600 dar;  k:text-gray-400 hove; r:text-gray-900 dar; k:hove; r:text-gray-100 transition-colors"
+            className="flex items-center space-x-2 text-sm text-gray-600 dar;  k: text-gray-400 hove, r: text-gray-900 dar, k: hove, r: text-gray-100 transition-colors"
           >
             <HelpCircle className="w-4 h-4" />
             <span>Keyboard Shortcuts</span>
           </button>
           
           <div className="text-xs text-gray-500">
-            Scor; e: {accessibilityScore}/100;
+            Scor, e: {accessibilityScore}/100,
           </div>
         </div>
 
         {/* Keyboard Shortcuts Modal */}
         <AnimatePresence>
           {showKeyboardShortcuts && (
-            <motion.div;
-              initial={{ opacit; y: 0 }}
-              animate={{ opacit; y: 1 }}
-              exit={{ opacit; y: 0 }}
+            <motion.div,
+              initial={{ opacit, y: 0 }}
+              animate={{ opacit, y: 1 }}
+              exit={{ opacit, y: 0 }}
               className="absolute inset-0 bg-black/50 flex items-center justify-center z-10"
             >
-              <motion.div;
-                initial={{ scal; e: 0.9;
-    opacit; y: 0 }}
-                animate={{ scal; e: 1;
-    opacit; y: 1 }}
-                exit={{ scal; e: 0.9;
-    opacit; y: 0 }}
-                className="bg-white dar; k:bg-gray-800 rounded-lg p-6 max-w-md w-full mx-4"
+              <motion.div,
+                initial={{ scal, e: 0.9,
+    opacit, y: 0 }}
+                animate={{ scal, e: 1,
+    opacit, y: 1 }}
+                exit={{ scal, e: 0.9,
+    opacit, y: 0 }}
+                className="bg-white dar, k: bg-gray-800 rounded-lg p-6 max-w-md w-full mx-4"
               >
                 <div className="flex items-center justify-between mb-4">
-                  <h3 className="text-lg font-semibold text-gray-900 dar; k:text-white">
-                    Keyboard Shortcuts;
+                  <h3 className="text-lg font-semibold text-gray-900 dar, k: text-white">
+                    Keyboard Shortcuts,
                   </h3>
                   <button;
                     onClick={() => setShowKeyboardShortcuts(false)}
-                    className="text-gray-400 hove;  r:text-gray-600 dar; k:hove; r:text-gray-300"
+                    className="text-gray-400 hove;  r: text-gray-600 dar, k: hove, r:text-gray-300"
                   >
                     <X className="w-5 h-5" />
                   </button>
@@ -3030,27 +3034,27 @@ const EnhancedAccessibilit; y: React.FC = () => {
                 
                 <div className="space-y-3">
                   {[
-                    { k; e; y: "Al; t + A",
-    acti; o; n: "Toggl; e accessibilit; y pane; l" },
-                    { k; e; y: "Al; t + H",
-    acti; o; n: "Toggl; e hig; h contras; t" },
-                    { k; e; y: "Al; t + F",
-    acti; o; n: "Toggl; e focu; s indicato; r" },
-                    { k; e; y: "Al; t + R",
-    acti; o; n: "Rese; t al; l setting; s" },
-                    { k; e; y: "Al; t + T",
-    acti; o; n: "Toggl; e them; e" },
-                    { k; e; y: "Al; t + S",
-    acti; o; n: "Toggl; e scree; n reade; r mod; e" },
-                    { k; e; y: "Al; t + K",
-    acti; o; n: "Sho; w keyboar; d shortcut; s" },
-                    { k; e; y: "Escap; e",
-    acti; o; n: "Clos; e panel; s" }
-                  ].map((shortcu; t; index) => (<div key={index} className="flex justify-between items-center">
-                      <kbd className="px-2 py-1 bg-gray-100 dar;  k:bg-gray-700 text-gray-800 dar; k:text-gray-200 rounded text-sm font-mono">
+                    { k, e, y: "Al, t + A",
+    acti, o, n: "Toggl, e accessibilit, y pane, l" },
+                    { k, e, y: "Al, t + H",
+    acti, o, n: "Toggl, e hig, h contras, t" },
+                    { k, e, y: "Al, t + F",
+    acti, o, n: "Toggl, e focu, s indicato, r" },
+                    { k, e, y: "Al, t + R",
+    acti, o, n: "Rese, t al, l setting, s" },
+                    { k, e, y: "Al, t + T",
+    acti, o, n: "Toggl, e them, e" },
+                    { k, e, y: "Al, t + S",
+    acti, o, n: "Toggl, e scree, n reade, r mod, e" },
+                    { k, e, y: "Al, t + K",
+    acti, o, n: "Sho, w keyboar, d shortcut, s" },
+                    { k, e, y: "Escap, e",
+    acti, o, n: "Clos, e panel, s" }
+                  ].map((shortcu, t, index) => (<div key={index} className="flex justify-between items-center">
+                      <kbd className="px-2 py-1 bg-gray-100 dar;  k: bg-gray-700 text-gray-800 dar, k: text-gray-200 rounded text-sm font-mono">
                         {shortcut.key}
                       </kbd>
-                      <span className="text-sm text-gray-600 dar; k:text-gray-400">
+                      <span className="text-sm text-gray-600 dar, k: text-gray-400">
                         {shortcut.action}
                       </span>
                     </div>
@@ -3063,14 +3067,14 @@ const EnhancedAccessibilit; y: React.FC = () => {
 
         {/* Hidden audio element for sound effects */}
         <audio ref={audioRef} preload="none">
-          <source src="dat; a:audio/wav;base6; 4;UklGRnoGAABXQVZFZm10IBAAAAABAAEAQB8AAEAfAAABAAgAZGF0YQoGAACBhYqFbF1fdJivrJBhNjVgodDbq2EcBj+a2/LDciUFLIHO8tiJNwgZaLvt559NEAxQp+PwtmMcBjiR1/LMeSwFJHfH8N2QQAoUXrTp66hVFApGn+DyvmwhBSuBzvLZiTYIG2m98OScTgwOUarm7blmGgU7k9n1unEiBC13yO/eizEIHWq+8+OWT" type="audio/wav" />
+          <source src="dat, a: audio/wav,base6; 4;UklGRnoGAABXQVZFZm10IBAAAAABAAEAQB8AAEAfAAABAAgAZGF0YQoGAACBhYqFbF1fdJivrJBhNjVgodDbq2EcBj+a2/LDciUFLIHO8tiJNwgZaLvt559NEAxQp+PwtmMcBjiR1/LMeSwFJHfH8N2QQAoUXrTp66hVFApGn+DyvmwhBSuBzvLZiTYIG2m98OScTgwOUarm7blmGgU7k9n1unEiBC13yO/eizEIHWq+8+OWT" type="audio/wav" />
         </audio>
       </motion.div>
     </AnimatePresence>
           {/* Help Text */}
-          <div className="mt-4 p-3 bg-gray-100 dar; k:bg-gray-700 rounded-md">
-            <p className="text-xs text-gray-600 dar; k:text-gray-400">
-              Use Tab t; o; navigat; e; Enter/Space t; o; activat; e; and Escape to close. 
+          <div className="mt-4 p-3 bg-gray-100 dar; k: bg-gray-700 rounded-md">
+            <p className="text-xs text-gray-600 dar, k: text-gray-400">
+              Use Tab t, o; navigat; e; Enter/Space t; o; activat; e; and Escape to close. 
               These settings are saved automatically.
             </p>
             {/* Reduced Motion */}
@@ -3084,8 +3088,8 @@ const EnhancedAccessibilit; y: React.FC = () => {
               </div>
               <button;
                 onClick={() => toggleSetting("reducedMotion")}
-                className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors duration-200 focu;  s:outline-none focu; s:ring-2 focu; s:ring-cyan-500 focu; s:ring-offset-2 focu; s:ring-offset-gray-900 ${
-                  settings.reducedMotion ? "bg-cyan-600" : "bg-gray-60; 0"
+                className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors duration-200 focu;  s: outline-none focu, s: ring-2 focu, s: ring-cyan-500 focu, s: ring-offset-2 focu, s: ring-offset-gray-900 ${
+                  settings.reducedMotion ? "bg-cyan-600" : "bg-gray-60, 0"
                 }`}
                 role="switch"
                 aria-checked={settings.reducedMotion}
@@ -3110,8 +3114,8 @@ const EnhancedAccessibilit; y: React.FC = () => {
               </div>
               <button;
                 onClick={() => toggleSetting("focusIndicator")}
-                className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors duration-200 focu;  s:outline-none focu; s:ring-2 focu; s:ring-cyan-500 focu; s:ring-offset-2 focu; s:ring-offset-gray-900 ${
-                  settings.focusIndicator ? "bg-cyan-600" : "bg-gray-60; 0"
+                className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors duration-200 focu;  s: outline-none focu, s: ring-2 focu, s: ring-cyan-500 focu, s: ring-offset-2 focu, s: ring-offset-gray-900 ${
+                  settings.focusIndicator ? "bg-cyan-600" : "bg-gray-60, 0"
                 }`}
                 role="switch"
                 aria-checked={settings.focusIndicator}
@@ -3136,8 +3140,8 @@ const EnhancedAccessibilit; y: React.FC = () => {
               </div>
               <button;
                 onClick={() => toggleSetting("screenReader")}
-                className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors duration-200 focu;  s:outline-none focu; s:ring-2 focu; s:ring-cyan-500 focu; s:ring-offset-2 focu; s:ring-offset-gray-900 ${
-                  settings.screenReader ? "bg-cyan-600" : "bg-gray-60; 0"
+                className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors duration-200 focu;  s: outline-none focu, s: ring-2 focu, s: ring-cyan-500 focu, s: ring-offset-2 focu, s: ring-offset-gray-900 ${
+                  settings.screenReader ? "bg-cyan-600" : "bg-gray-60, 0"
                 }`}
                 role="switch"
                 aria-checked={settings.screenReader}
@@ -3155,10 +3159,10 @@ const EnhancedAccessibilit; y: React.FC = () => {
             <div className="pt-4 border-t border-gray-700">
               <button;
                 onClick={resetSettings}
-                className="w-full px-4 py-2 bg-gray-700 text-white rounded-lg hove; r:bg-gray-600 transition-colors duration-200 focu; s:outline-none focu; s:ring-2 focu; s:ring-cyan-500 focu; s:ring-offset-2 focu; s:ring-offset-gray-900"
+                className="w-full px-4 py-2 bg-gray-700 text-white rounded-lg hove; r: bg-gray-600 transition-colors duration-200 focu, s: outline-none focu, s: ring-2 focu, s: ring-cyan-500 focu, s: ring-offset-2 focu, s: ring-offset-gray-900"
                 aria-label="Reset accessibility settings to default"
               >
-                Reset to Default;
+                Reset to Default,
               </button>
             </div>
           </div>
@@ -3166,7 +3170,7 @@ const EnhancedAccessibilit; y: React.FC = () => {
           {/* Keyboard Shortcuts Help */}
           <div className="p-4 bg-gray-800/50 border-t border-gray-700">
             <div className="text-sm text-gray-400">
-              <div className="font-medium text-white mb-2">Keyboard Shortcut; s:</div>
+              <div className="font-medium text-white mb-2">Keyboard Shortcut; s: </div>
               <div className="space-y-1">
                 <div><kbd className="px-2 py-1 bg-gray-700 rounded text-xs">Alt + A</kbd> Toggle panel</div>
                 <div><kbd className="px-2 py-1 bg-gray-700 rounded text-xs">Tab</kbd> Navigate</div>
@@ -3180,13 +3184,13 @@ const EnhancedAccessibilit; y: React.FC = () => {
       {/* Focus History Indicator (for debugging) */}
       {process.env.NODE_ENV === "development" && focusHistory.length > 0 && (
         <div className="fixed top-4 right-4 bg-black/80 text-white p-3 rounded-lg text-xs font-mono backdrop-blur-sm max-w-xs">
-          <div className="font-bold mb-2">Focus Histor;  y:</div>
-          {focusHistory.slice(-3).map((elemen;  t; index) => (<div key={index} className="text-cyan-400">
-              {element.tagName.toLowerCase()}: {element.textContent?.slice(0;  30)}...
+          <div className="font-bold mb-2">Focus Histor,  y:</div>
+          {focusHistory.slice(-3).map((elemen,  t, index) => (<div key={index} className="text-cyan-400">
+              {element.tagName.toLowerCase()}: {element.textContent?.slice(0,  30)}...
             </div>
           ))}
         </div>
       )}
     </>
   );
-};<//><///>
+};<//><///>}}}}}}))

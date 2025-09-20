@@ -6,7 +6,7 @@ export const metadata = {
   description: 'Transform your business with revolutionary AI 2025 automation. Achieve 2000% ROI with our breakthrough autonomous systems and quantum-enhanced AI solutions.'
   keywords: ['AI 2025Revolutionary AutomationAutonomous SystemsQuantum AI', 'Business Transformation2000% ROI']
 }
-export default function RevolutionaryAI2025AutomationPage() {
+export default function RevolutionaryAI2025AutomationPage() : any {
   return (
     <div>
       <SEO

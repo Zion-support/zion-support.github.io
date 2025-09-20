@@ -1,7 +1,7 @@
 import React from 'react';
 import ServiceLanding from '../components/sections/ServiceLanding';
 
-export default function AiAutonomousBusinessOperations() {
+export default function AiAutonomousBusinessOperations() : any {
 	return (
 		<ServiceLanding
 			title="AI Autonomous Business Operations"
@@ -21,7 +21,7 @@ export default function AiAutonomousBusinessOperations() {
 				"Human handoff and escalation"
 			]}
 			industries={["SaaS", "Ecommerce", "Fintech", "B2B Services"]}
-			canonical="https://ziontechgroup.com/ai-autonomous-business-operations"
+			canonical="https: //ziontechgroup.com/ai-autonomous-business-operations"
 		/>
 	);
-}
+  }

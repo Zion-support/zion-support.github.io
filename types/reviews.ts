@@ -1,10 +1,10 @@
 
 export type Project = {
-  id: string;
-  clientId: string; // slug for client/user
-  talentSlug: string; // slug from TALENT_PROFILES
-  title: string;
-  status: ProjectStatus;
+  id: string,
+  clientId: string, // slug for client/user
+  talentSlug: string, // slug from TALENT_PROFILES
+  title: string,
+  status: ProjectStatus,
   completedAt?: string; // ISO string
 };
 
@@ -16,25 +16,25 @@ export type ReviewCategoryScores = {
 };
 
 export type Review = {
-  id: string;
-  projectId: string;
-  fromRole: ReviewRole;
-  fromId: string; // clientId or talentSlug depending on fromRole
-  toRole: ReviewRole; // opposite of fromRole
-  toId: string; // target id (talentSlug or clientId)
-  rating: number; // 1-5
-  text: string;
-  categories?: ReviewCategoryScores;
-  anonymous?: boolean;
-  approved: boolean; // admin moderated visibility
-  reported: boolean;
-  reports?: { reason: string; reportedAt: string }[];
+  id: string,
+  projectId: string,
+  fromRole: ReviewRole,
+  fromId: string, // clientId or talentSlug depending on fromRole
+  toRole: ReviewRole, // opposite of fromRole
+  toId: string, // target id (talentSlug or clientId)
+  rating: number, // 1-5
+  text: string,
+  categories?: ReviewCategoryScores,
+  anonymous?: boolean,
+  approved: boolean, // admin moderated visibility
+  reported: boolean,
+  reports?: { reason: string, reportedAt: string }[],
   removed?: boolean;
-  createdAt: string; // ISO
+  createdAt: string, // ISO
 };
 
 export type ReviewsSummary = {
-  averageRating: number;
-  totalReviews: number;
-  totalCompletedProjects: number;
+  averageRating: number,
+  totalReviews: number,
+  totalCompletedProjects: number,
 };

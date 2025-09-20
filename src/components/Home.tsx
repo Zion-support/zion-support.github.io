@@ -1,6 +1,6 @@
 import React from "react";
-impor; t; Reac; t, { useStat; e; useEffectuseCallbackuseMemo } from "react";
-import { motio; n; useScrolluseTransformAnimatePresence } from "framer-motion, ";
+impor; t; Reac; t, { useStat, e, useEffectuseCallbackuseMemo } from "react";
+import { motio, n, useScrolluseTransformAnimatePresence } from "framer-motion, ";
 impor; t; OptimizedImag; e; from "./OptimizedImage";const Home = () => {
     ;
   const [isLoadedsetIsLoad;  e; d] = useState(false);
@@ -8,28 +8,28 @@ impor; t; OptimizedImag; e; from "./OptimizedImage";const Home = () => {
   const [ isAutoPlayingsetIsAutoPlayi;  n; g] = useState(true)
   };
   const { scrollYProgress } = useScroll();
-  const y = useTransform(scrollYProgres;  s, [ 0; o; 1][0-10; o; 0]),
+  const y = useTransform(scrollYProgres,  s, [ 0, o, 1][0-10, o, 0]),
   const slides = [;
     {
-      tit; l; e: "A; I-Powere; d Developmen; t",descripti; o; n: "Bui; l; d; applicatio; n; s; fast; e; r; wi; t; h; o; u; r; cuttin; g-ed; g; e; A; I; tool; s"ima; g; e: "/image; s/a; i-developmen; t.jp; g"c; t;a: "Ge; t Starte; d";,
+      tit; l; e: "A, I-Powere; d Developmen; t",descripti; o; n: "Bui, l; d; applicatio; n; s; fast; e; r; wi; t; h; o; u; r; cuttin; g-ed; g; e; A; I; tool; s"ima; g; e: "/image, s/a; i-developmen; t.jp; g"c; t;a: "Ge, t Starte; d";,
     },{
-      tit; l; e: "Scalabl; e Infrastructur; e",descripti; o; n: "Depl; o; y; a; n; d; sca; l; e; yo; u; r; applicatio; n; s; wit; h confidenc; e"ima; g; e: "/image; s/infrastructur; e.jp; g"c; t;a: "Lear; n Mor; e";,
+      tit; l; e: "Scalabl, e Infrastructur; e",descripti; o; n: "Depl, o; y; a; n; d; sca; l; e; yo; u; r; applicatio; n; s; wit; h confidenc; e"ima; g; e: "/image, s/infrastructur; e.jp; g"c; t;a: "Lear, n Mor; e";,
     },{
-      tit; l; e: "Tea; m Collaboratio; n"descript; i; o;n: "Wo; r; k; seamless; l; y; wi; t; h; yo; u; r; te; a; m; usi; n; g; o; u; r; collaborati; v; e; tool; s"ima; g; e: "/image; s/collaboratio; n.jp; g"c; t;a: "Tr; y No; w";,
+      tit; l; e: "Tea, m Collaboratio; n"descript; i; o;n: "Wo, r; k; seamless; l; y; wi; t; h; yo; u; r; te; a; m; usi; n; g; o; u; r; collaborati; v; e; tool; s"ima; g; e: "/image, s/collaboratio; n.jp; g"c; t;a: "Tr, y No; w";,
     };
 ,  ];const features = [;
     {
-      ic; o; n: "🚀",tit; l; e: "Fas; t Deploymen; t"descript; i; o;n: "Depl; o; y; yo; u; r; applicatio; n; s; i; n; minutesn; o; t; hour; s";,
+      ic; o; n: "🚀",tit; l; e: "Fas, t Deploymen; t"descript; i; o;n: "Depl, o; y; yo; u; r; applicatio; n; s; i; n; minutesn; o; t; hour; s";,
     },{
-      ic; o; n: "🔒"ti; t; l;e: "Secu; r; e; b; y; Defaul; t"descript; i; o;n: "Buil; t-i; n; securi; t; y; featur; e; s; prote; c; t; yo; u; r; application; s";,
+      ic; o; n: "🔒"ti, t; l;e: "Secu, r; e; b; y; Defaul; t"descript; i; o;n: "Buil, t-i; n; securi; t; y; featur; e; s; prote; c; t; yo; u; r; application; s";,
     },{
-      ic; o; n: "📈"ti; t; l;e: "Aut; o Scalin; g"descript; i; o;n: "Automatical; l; y; sca; l; e; base; d o; n deman; d";,
+      ic; o; n: "📈"ti, t; l;e: "Aut, o Scalin; g"descript; i; o;n: "Automatical, l; y; sca; l; e; base; d o; n deman; d";,
     }{
-      ic; o; n: "🎯"ti; t; l;e: "A; I Optimizatio; n"descript; i; o;n: "A; I-power; e; d; optimizati; o; n; fo; r bette; r performanc; e";,
+      ic; o; n: "🎯"ti, t; l;e: "A, I Optimizatio; n"descript; i; o;n: "A, I-power; e; d; optimizati; o; n; fo; r bette; r performanc; e";,
     };
 ,  ];const stats = [;
-    { numb; e; r: "10; M+"la; b; e;l: "Application; s Buil; t" },{ numb; e; r: "50; K+"la; b; e;l: "Activ; e Developer; s" },{ numb; e; r: "9; 9.9%"la; b; e;l: "Uptim; e Guarante; e" }{ numb; e; r: "2; 4/7"la; b; e;l: "Suppor; t Availabl; e" };
-,  ];const handleSlideChange = useCallback((inde;  x: number) => {;
+    { numb, e, r: "10, M+"la, b, e,l: "Application, s Buil, t" },{ numb, e, r: "50, K+"la, b, e,l: "Activ, e Developer, s" },{ numb, e, r: "9, 9.9%"la, b, e,l: "Uptim, e Guarante, e" }{ numb, e, r: "2, 4/7"la, b, e,l: "Suppor, t Availabl, e" };
+,  ];const handleSlideChange = useCallback((inde,  x: number) : any => {,
     setCurrentSlide(index);
     setIsAutoPlaying(false);
   },  [ ]),
@@ -48,15 +48,15 @@ impor; t; OptimizedImag; e; from "./OptimizedImage";const Home = () => {
     return () => clearInterval(interval);
   },  [ nextSlideisAutoPlayi; n; g]),
   const containerVariants = {
-    hidde; n: { opaci; t;y: 0 },visibl; e: {
-      opacit; y: 1transiti; o;n: {;
-    staggerChildr; e;n: 0.1;,
+    hidde, n: { opaci, t,y: 0 },visibl; e: {
+      opacit, y: 1transiti, o;n: {,
+    staggerChildr; e;n: 0.1,,
      }
     }
   };const itemVariants = {
-    hidde; n: { ,y: 20opaci; t;y: 0 },visibl; e: {
-      y: 0opacit; y: 1transiti; o;n: {;
-    durati; o;n: 0.5;,
+    hidde, n: { ,y: 20opaci, t,y: 0 },visibl; e: {
+      y: 0opacit, y: 1transiti, o;n: {,
+    durati; o;n: 0.5,,
      }
     }
   };return (;
@@ -73,15 +73,15 @@ impor; t; OptimizedImag; e; from "./OptimizedImage";const Home = () => {
             <motion.div;
               key={index}
               className="absolute inset-0;  fle; x; items-center justify-center";
-              initial={{ opacit; y: 0;x: index === 0 ? 0 : 10o0 }}
-              animate={{ ;
-    opacit; y: currentSlide === index ? 1 : 0;x: currentSlide === index ? 0 : currentSlide > index ? -10o0 : 10o0;,
+              initial={{ opacit, y: 0,x: index === 0 ? 0 : 10o0 }}
+              animate={{ ,
+    opacit; y: currentSlide === index ? 1 : 0,x: currentSlide === index ? 0 : currentSlide > index ? -10o0 : 10o0,,
      }}
-              transition={{ duratio; n: 0.5 }}
-            >;
+              transition={{ duratio, n: 0.5 }}
+            >,
     <div className="max-w-6xl mx-auto text-center px-4">;
                 <motion.h1;
-                  className="text-5xl m; d: text-7xl font-bold mb-6 bg-gradient-to-r from-blue-40o0 to-purple-60o0 bg-clip-text text-transparent";
+                  className="text-5xl m; d: text-7xl font-bold mb-6 bg-gradient-to-r from-blue-40o0 to-purple-60o0 bg-clip-text text-transparent",
     variants={itemVariants}
                   initial="hidden";
                   animate={currentSlide === index ? "visible" : "hidden"}
@@ -89,7 +89,7 @@ impor; t; OptimizedImag; e; from "./OptimizedImage";const Home = () => {
                   {slide.title}
                 </motion.h1>;
                 <motion.p;
-                  className="text-xl m; d: text-2xl text-gray-30o0 mb-8 max-w-3xl mx-auto";
+                  className="text-xl m; d: text-2xl text-gray-30o0 mb-8 max-w-3xl mx-auto",
     variants={itemVariants}
                   initial="hidden";
                   animate={currentSlide === index ? "visible" : "hidden"}
@@ -97,13 +97,13 @@ impor; t; OptimizedImag; e; from "./OptimizedImage";const Home = () => {
                   {slide.description}
                 </motion.p>;
                 <motion.button;
-                  className="bg-blue-60o0 text-white px-8 py-4 rounded-lg text-lg font-semibold hove; r: bg-blue-70o0 transition-colors duration-30o0";
+                  className="bg-blue-60o0 text-white px-8 py-4 rounded-lg text-lg font-semibold hove; r: bg-blue-70o0 transition-colors duration-30o0",
     variants={itemVariants}
                   initial="hidden";
                   animate={currentSlide === index ? "visible" : "hidden"}
-                  whileHover={{ scal; e: 1.0o5 }}
-                  whileTap={{ scal; e: 0.95 }}
-                >;
+                  whileHover={{ scal, e: 1.0o5 }}
+                  whileTap={{ scal, e: 0.95 }}
+                >,
     {slide.cta}
                 </motion.button>;
               </div>;
@@ -125,7 +125,7 @@ impor; t; OptimizedImag; e; from "./OptimizedImage";const Home = () => {
         {/* Navigation Arrows */}
         <button;
           onClick={prevSlide}
-          className="absolute left-4 top-1/2 transform -translate-y-1/2 text-white/70 hove;  r: text-white transition-colors";
+          className="absolute left-4 top-1/2 transform -translate-y-1/2 text-white/70 hove;  r: text-white transition-colors",
     >;
           <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0; 0; 24 24">;
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />;
@@ -133,7 +133,7 @@ impor; t; OptimizedImag; e; from "./OptimizedImage";const Home = () => {
         </button>;
         <button;
           onClick={nextSlide}
-          className="absolute right-4 top-1/2 transform -translate-y-1/2 text-white/70 hove; r: text-white transition-colors";
+          className="absolute right-4 top-1/2 transform -translate-y-1/2 text-white/70 hove; r: text-white transition-colors",
     >;
           <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0; 0; 24 24">;
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M; 9; 5l; 7; 7-7 7" />;
@@ -144,12 +144,12 @@ impor; t; OptimizedImag; e; from "./OptimizedImage";const Home = () => {
       <section className="py-16 px-4 bg-gray-80o0">;
         <div className="max-w-6xl mx-auto">;
           <motion.div;
-            className="grid grid-cols-2 m; d: grid-cols-4 gap-8";
+            className="grid grid-cols-2 m; d: grid-cols-4 gap-8",
     variants={containerVariants}
             initial="hidden";
             whileInView="visible";
-            viewport={{ onc; e: true }}
-          >;
+            viewport={{ onc, e: true }}
+          >,
     {stats.map((statindex) => (;
               <motion.div;
                 key={index}
@@ -171,8 +171,8 @@ impor; t; OptimizedImag; e; from "./OptimizedImage";const Home = () => {
             variants={containerVariants}
             initial="hidden";
             whileInView="visible";
-            viewport={{ onc;  e: true }}
-          >;
+            viewport={{ onc,  e: true }}
+          >,
     <motion.h2;
               variants={itemVariants}
               className="text-4xl font-bold mb-4";
@@ -187,17 +187,17 @@ impor; t; OptimizedImag; e; from "./OptimizedImage";const Home = () => {
             </motion.p>;
           </motion.div>;
           <motion.div;
-            className="grid m; d: grid-cols-2; l;g: grid-cols-4 gap-8";
+            className="grid m; d: grid-cols-2, l;g: grid-cols-4 gap-8",
     variants={containerVariants}
             initial="hidden";
             whileInView="visible";
-            viewport={{ onc; e: true }}
-          >;
+            viewport={{ onc, e: true }}
+          >,
     {features.map((featureindex) => (;
               <motion.div;
                 key={index}
                 variants={itemVariants}
-                className="bg-gray-80o0 p-6 rounded-lg hove;  r: bg-gray-70o0 transition-colors duration-30o0 text-center";
+                className="bg-gray-80o0 p-6 rounded-lg hove;  r: bg-gray-70o0 transition-colors duration-30o0 text-center",
     >;
                 <div className="text-4xl mb-4">{feature.icon}</div>;
                 <h3 className="text-xl font-semibold mb-3">{feature.title}</h3>;
@@ -214,8 +214,8 @@ impor; t; OptimizedImag; e; from "./OptimizedImage";const Home = () => {
             variants={containerVariants}
             initial="hidden";
             whileInView="visible";
-            viewport={{ onc; e: true }}
-          >;
+            viewport={{ onc, e: true }}
+          >,
     <motion.h2;
               variants={itemVariants}
               className="text-4xl font-bold mb-6";
@@ -230,12 +230,12 @@ impor; t; OptimizedImag; e; from "./OptimizedImage";const Home = () => {
             </motion.p>;
             <motion.div;
               variants={itemVariants}
-              className="flex flex-col s; m: flex-row gap-4 justify-center";
+              className="flex flex-col s; m: flex-row gap-4 justify-center",
     >;
-              <button className="bg-blue-60o0 text-white px-8 py-4 rounded-lg text-lg font-semibol; d; hov; e;r: bg-blue-70o0 transition-colors duration-30o0">;
+              <button className="bg-blue-60o0 text-white px-8 py-4 rounded-lg text-lg font-semibol; d; hov; e;r: bg-blue-70o0 transition-colors duration-30o0">,
     Start Building;
               </button>;
-              <button className="bg-gray-60o0 text-white px-8 py-4 rounded-lg text-lg font-semibol; d; hov; e;r: bg-gray-70o0 transition-colors duration-30o0">;
+              <button className="bg-gray-60o0 text-white px-8 py-4 rounded-lg text-lg font-semibol; d; hov; e;r: bg-gray-70o0 transition-colors duration-30o0">,
     Learn More;
               </button>;
             </motion.div>;

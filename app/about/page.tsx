@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   }
 }
 
-export default function AboutPage() {
+export default function AboutPage() : any {
   const team = [
     {
       name: 'Dr. Sarah Chen',

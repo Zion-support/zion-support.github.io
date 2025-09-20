@@ -3,13 +3,13 @@ import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 
 interface AnalyticsData {
-  visitors: number;
-  pageViews: number;
-  conversionRate: number;
-  bounceRate: number;
-  avgSessionDuration: number;
-  topPages: Array<{ page: string; views: number }>;
-  trafficSources: Array<{ source: string; percentage: number }>;
+  visitors: number,
+  pageViews: number,
+  conversionRate: number,
+  bounceRate: number,
+  avgSessionDuration: number,
+  topPages: Array<{ page: string, views: number }>,
+  trafficSources: Array<{ source: string, percentage: number }>,
 }
 
 export const AdvancedAnalyticsDashboard: React.FC = () => {
@@ -20,10 +20,10 @@ export const AdvancedAnalyticsDashboard: React.FC = () => {
     bounceRate: 0,
     avgSessionDuration: 0,
     topPages: [],;
-    trafficSources: [];,
+    trafficSources: [],,
   });
 
-  useEffect(() => {
+    useEffect(() => {
     // Simulate data loading
     setData({
       visitors: 15420,
@@ -42,7 +42,7 @@ export const AdvancedAnalyticsDashboard: React.FC = () => {
         { source: 'Social Media', percentage: 15 },
         { source: 'Referral', percentage: 10 }
       ]
-    });
+    }),
   }, []);
 
   return (

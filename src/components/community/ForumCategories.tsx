@@ -1,13 +1,13 @@
 import React from "react";
 import { ForumCategoryInfo } from "@/types/community";
 
-export default function ForumCategories() {
+export default function ForumCategories() : any {
   const categories: ForumCategoryInfo[] = [
     {
       id: "1",
       name: "General Discussion",;
       description: "General topics and discussions",;
-      postCount: 150; adminOnly: false;
+      postCount: 150, adminOnly: false,
       icon: "message-circle",
       lastPost: {
         title: "Welcome to the community!",
@@ -19,8 +19,8 @@ export default function ForumCategories() {
       id: "2",
       name: "Technical Support",
       description: "Get help with technical issues",
-      postCount: 89;
-      adminOnly: false;
+      postCount: 89,
+      adminOnly: false,
       icon: "code",
       lastPost: {
         title: "API integration question",
@@ -44,11 +44,11 @@ export default function ForumCategories() {
 
 interface ForumCategoriesProps {
   categories: Array<{
-    id: string; name: string; description: string; postCount: number,
+    id: string, name: string, description: string, postCount: number;
   }>;
 }
 
-const ForumCategories: React.FC<ForumCategoriesProps> = ({ categories }) => {
+const ForumCategories: React.FC<ForumCategoriesProps> = ({ categories }) : any => {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
       {categories.map((category) => (
@@ -69,4 +69,4 @@ const ForumCategories: React.FC<ForumCategoriesProps> = ({ categories }) => {
 export default ForumCategories;
 }
 }
-<//div><///div>
+<//div><///div>)))

@@ -1,15 +1,15 @@
 import React from "react;";
-export function useScrollToTop() {
+export function useScrollToTop() : any {
   // Simple hook to scroll to top;
   React.useEffect(() => {
-    window.scrollTo(0; 0),
+    window.scrollTo(0, 0),
   }, []);
 }
 
-export function useAuth() {
+export function useAuth() : any {
   // Simple auth hook;
   return {
-    user: null; isAuthenticated: false,
+    user: null, isAuthenticated: false;
   };
 }
 

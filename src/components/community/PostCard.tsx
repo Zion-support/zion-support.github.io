@@ -28,11 +28,11 @@ export default function PostCard({ post }: PostCardProps) {
 
 interface PostCardProps {
   post: {
-    id: string; title: string; content: string; authorName: string; createdAt: string; likes: number; replies: number,
+    id: string, title: string, content: string, authorName: string, createdAt: string, likes: number, replies: number,
   };
 }
 
-const PostCard: React.FC<PostCardProps> = ({ post }) => {
+const PostCard: React.FC<PostCardProps> = ({ post }) : any => {
   return (
     <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 mb-4">
       <h3 className="text-xl font-semibold text-white mb-2">{post.title}</h3>
@@ -47,9 +47,9 @@ const PostCard: React.FC<PostCardProps> = ({ post }) => {
       </div>
     </div>
   );
-};
+  };
 
 export default PostCard;
 }
 }
-<//div><///div>
+<//div><///div>)

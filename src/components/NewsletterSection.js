@@ -16,8 +16,8 @@ export function NewsletterSection() {
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center max-w-4xl mx-auto">
-          <h2 className="text-3xl m,  d:text-4xl font-bold text-white mb-6">
-            Stay Ahead of the Technology Curve;
+          <h2 className="text-3xl m,  d: text-4xl font-bold text-white mb-6">
+            Stay Ahead of the Technology Curve,
           </h2>
           <p className="text-xl text-zion-slate-light mb-8 leading-relaxed">
             Get exclusive insights into the latest A, I, trend, s, technolog, y, breakthrough, s, and industry updates. 
@@ -25,15 +25,15 @@ export function NewsletterSection() {
           </p>
           
           <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
-            <div className="flex flex-col m, d:flex-row gap-4 max-w-2xl mx-auto">
-              <input;
+            <div className="flex flex-col m, d: flex-row gap-4 max-w-2xl mx-auto">
+              <input,
                 type="email"
                 placeholder="Enter your professional email address"
-                className="flex-1 px-6 py-4 bg-white/10 border border-white/20 rounded-xl text-white placeholder-gray-300 focu, s:outline-none focu, s:border-zion-cyan focu, s:ring-2 focu, s:ring-zion-cyan/20 transition-all duration-300 text-lg"
-                required;
+                className="flex-1 px-6 py-4 bg-white/10 border border-white/20 rounded-xl text-white placeholder-gray-300 focu, s:outline-none focu, s:border-zion-cyan focu, s:ring-2 focu, s: ring-zion-cyan/20 transition-all duration-300 text-lg"
+                required,
               />
-              <button className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-xl hove, r:from-zion-cyan-light hove, r:to-zion-purple-light transition-all duration-300 shadow-lg hove, r:shadow-xl transform hove, r:scale-105 text-lg">
-                Subscribe Now;
+              <button className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-xl hove, r:from-zion-cyan-light hove, r:to-zion-purple-light transition-all duration-300 shadow-lg hove, r:shadow-xl transform hove, r: scale-105 text-lg">
+                Subscribe Now,
               </button>
             </div>
             <p className="text-sm text-zion-slate-light mt-4">
@@ -114,8 +114,8 @@ export function NewsletterSection() {
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0" style={{
             backgroundImag,  e: `radial-gradient(circle at 25% 75%, currentColo, r, 1p, x, transparent 1p, x)`,
-            backgroundSiz, e: '50px 50px',
-        }}/>
+            backgroundSiz, e: '50px 50px';
+  }}/>
       </div>
 
       {/* Floating decorative elements */}
@@ -164,9 +164,9 @@ export function NewsletterSection() {
     y: 20 }} whileInView={{ opacit, y: 1,
     y: 0 }} viewport={{ onc, e: true }} transition={{ duratio, n: 0.6,
     dela, y: 0.3 }}>
-            <button onClick={() => setShowBenefits(!showBenefits)} className="inline-flex items-center gap-2 text-zion-cyan hove,  r:text-zion-cyan-light transition-colors">
+            <button onClick={() => setShowBenefits(!showBenefits)} className="inline-flex items-center gap-2 text-zion-cyan hove,  r: text-zion-cyan-light transition-colors">
               <span className="text-sm font-medium">
-                {showBenefits ? 'Hide' : 'Show'} subscriber benefits;
+                {showBenefits ? 'Hide' : 'Show'} subscriber benefits,
               </span>
               <motion.div animate={{ rotat, e: showBenefits ? 180 : 0 }} transition={{ duratio, n: 0.3 }}>
                 <X className="w-4 h-4"/>
@@ -201,12 +201,12 @@ export function NewsletterSection() {
     dela, y: 0.4 }}>
               <form onSubmit={handleSubmit} className="flex flex-col s, m:flex-row gap-4 max-w-lg mx-auto mb-6">
                 <input type="email" placeholder="Enter your email address" value={email} onChange={(e) => setEmail(e.target.value)} className="flex-1 px-6 py-4 rounded-xl border border-zion-blue-light/30 bg-zion-blue-dark/50 text-white placeholde,  r:text-zion-slate-light/50 focu, s:outline-none focu, s:ring-2 focu, s:ring-zion-cyan focu, s:border-transparent transition-all duration-300 text-lg" required/>
-                <button type="submit" disabled={isLoading || !email} className="inline-flex items-center gap-3 bg-gradient-to-r from-zion-cyan to-zion-blue hove, r:from-zion-cyan-dark hove, r:to-zion-blue-dark text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 transform hove, r:scale-105 disable, d:opacity-50 disable, d:cursor-not-allowed disable, d:transform-none shadow-lg hove, r:shadow-zion-cyan/25">
+                <button type="submit" disabled={isLoading || !email} className="inline-flex items-center gap-3 bg-gradient-to-r from-zion-cyan to-zion-blue hove, r:from-zion-cyan-dark hove, r:to-zion-blue-dark text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 transform hove, r:scale-105 disable, d:opacity-50 disable, d:cursor-not-allowed disable, d:transform-none shadow-lg hove, r: shadow-zion-cyan/25">
                   {isLoading ? (<>
                       <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"/>
                       Subscribing...
                     </>) : (<>
-                      Subscribe;
+                      Subscribe,
                       <Send className="w-5 h-5"/>
                     </>)}
                 </button>
@@ -261,4 +261,5 @@ export function NewsletterSection() {
         </motion.div>
       </div>
     </section>);
+}
 }

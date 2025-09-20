@@ -8,7 +8,7 @@ export function useFraudPreventionSignup() {
     // Get the user's IP address (in a real app, you'd do this server-side)
     const getIP = async () => {
         try {
-            const response = await apiClient('https: //api.ipify.org?format=json');
+            const response = await apiClient('https: //api.ipify.org?format=json'),
     const data = await response.json();
             return data.ip;
         }
@@ -28,15 +28,15 @@ export function useFraudPreventionSignup() {
                 
                 // Create a fraud flag for admin review;
                 const { error } = await supabase.from('fraud_flags').insert({
-                    user_email: email;
-                    content_type: 'signup';
+                    user_email: email,
+                    content_type: 'signup',
                     content_id: email, // Using email as content ID for signup attempts;
-                    content_excerpt: `Signup attempt for ${email}`;
-                    severity: 'suspicious';
-                    reason: fraudCheck.reasons.join(';
+                    content_excerpt: `Signup attempt for ${email}`,
+                    severity: 'suspicious',
+                    reason: fraudCheck.reasons.join(',
     '),
-                    ip_address: ipAddress;
-                    timestamp: new Date().toISOString();
+                    ip_address: ipAddress,
+                    timestamp: new Date().toISOString(),
                     status: 'pending',
                 });
     if (error) {
@@ -47,9 +47,9 @@ export function useFraudPreventionSignup() {
                 if (fraudCheck.reasons.some(r => r.includes('Multiple accounts') ||
                     r.includes('suspicious email domain'))) {
                     toast({
-                        title: "Signup blocked";
-                        description: "This signup attempt has been flagged for security reasons. Please contact support if you believe this is an error.";
-                        variant: "destructive";,
+                        title: "Signup blocked",
+                        description: "This signup attempt has been flagged for security reasons. Please contact support if you believe this is an error.",
+                        variant: "destructive",,
                     });
                     return false;
                 }
@@ -70,6 +70,6 @@ export function useFraudPreventionSignup() {
     }, []);
     return {
         isCheckingFraud,
-        checkFraudBeforeSignup,
-    };
+        checkFraudBeforeSignup;
+  };
 }

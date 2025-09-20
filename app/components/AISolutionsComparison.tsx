@@ -3,32 +3,33 @@
 import React, { useState } from 'react';
 
 interface AISolution {
-  id: string;
-  name: string;
-  category: string;
-  description: string;
-  features: string[];
+  id: string,
+  name: string,
+  category: string,
+  description: string,
+  features: string[],
   pricing: {
-    monthly: number;
-    setup: number;
-    enterprise: boolean;
+    monthly: number,
+    setup: number,
+    enterprise: boolean,
+  },
+      roi: {
+    timeframe: string,
+    percentage: number,
+    savings: number,
+  },
+      implementation: {
+    duration: string,
+    complexity: 'Low' | 'Medium' | 'High',
+    teamSize: number,
   };
-  roi: {
-    timeframe: string;
-    percentage: number;
-    savings: number;
-  };
-  implementation: {
-    duration: string;
-    complexity: 'Low' | 'Medium' | 'High';
-    teamSize: number;
-  };
-  bestFor: string[];
-  limitations: string[];
+  bestFor: string[],
+  limitations: string[],
 }
 
 const AISolutionsComparison: React.FC = () => {
   const [selectedSolutions, setSelectedSolutions] = useState<string[]>([]);
+
   const [comparisonMode, setComparisonMode] = useState<'features' | 'pricing' | 'roi'>('features');
 
   const solutions: AISolution[] = [
@@ -62,8 +63,8 @@ const AISolutionsComparison: React.FC = () => {
       },
       bestFor: ['Manufacturing', 'Finance', 'Healthcare', 'Retail'],
       limitations: ['Requires data quality', 'Complex workflows need customization']
-    },
-    {
+      },
+      {
       id: 'quantum-ai',
       name: 'Quantum AI Computing',
       category: 'Advanced AI',
@@ -93,8 +94,8 @@ const AISolutionsComparison: React.FC = () => {
       },
       bestFor: ['Research', 'Pharmaceuticals', 'Finance', 'Defense'],
       limitations: ['High complexity', 'Specialized hardware required']
-    },
-    {
+      },
+      {
       id: 'autonomous-systems',
       name: 'Autonomous AI Systems',
       category: 'Autonomous',
@@ -124,8 +125,8 @@ const AISolutionsComparison: React.FC = () => {
       },
       bestFor: ['Manufacturing', 'Energy', 'Transportation', 'Logistics'],
       limitations: ['Requires monitoring', 'Complex debugging']
-    },
-    {
+      },
+      {
       id: 'micro-saas',
       name: 'AI Micro SaaS Platform',
       category: 'SaaS',
@@ -158,7 +159,7 @@ const AISolutionsComparison: React.FC = () => {
     }
   ];
 
-  const toggleSolution = (solutionId: string) => {
+  const toggleSolution = (solutionId: string) : any => {
     setSelectedSolutions(prev => 
       prev.includes(solutionId) 
         ? prev.filter(id => id !== solutionId)
@@ -166,7 +167,7 @@ const AISolutionsComparison: React.FC = () => {
     );
   };
 
-  const getComplexityColor = (complexity: string) => {
+  const getComplexityColor = (complexity: string) : any => {
     switch (complexity) {
       case 'Low': return 'text-green-500 bg-green-100';
       case 'Medium': return 'text-yellow-500 bg-yellow-100';
@@ -175,7 +176,7 @@ const AISolutionsComparison: React.FC = () => {
     }
   };
 
-  const formatCurrency = (amount: number) => {
+  const formatCurrency = (amount: number) : any => {
     return new Intl.NumberFormat('en-US', {
       style: 'currency',
       currency: 'USD',
@@ -375,7 +376,7 @@ const AISolutionsComparison: React.FC = () => {
           <p className="text-lg text-gray-600 mb-6">
             Ready to implement the perfect AI solution for your business?
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm: flex-row gap-4 justify-center">
             <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors transform hover:scale-105">
               Get Custom Recommendation
             </button>

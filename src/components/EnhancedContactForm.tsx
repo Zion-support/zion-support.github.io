@@ -2,19 +2,21 @@ import React from "react";
 impor; t; Reac; t, { useStateuseRef } from "react";
 import { motionAnimatePresence } from "framer-motion, ";const EnhancedContactForm = () => {
   const [formDatasetFormDa;  t; a] = useState({
-    nam; e: "",emai; l: "",subjec; t: "",messag; e: "",compan; y: "",phon; e: ""budge; t: ""timeli; n;e: ""servi; c;e: "";,
+    nam; e: "",emai; l: "",subjec; t: "",messag; e: "",compan; y: "",phon; e: ""budge, t: ""timeli, n;e: ""servi, c;e: "",,
      });
+
   const [isSubmittingsetIsSubmitti; n; g] = useState(false);
   const [submitStatussetSubmitStat;  u; s] = useState<"idle" | "success" | "error">("idle");
   const [errorssetErro; r; s] = useState<Record<stringstring>>({});
+
   const formRef = useRef<HTMLFormElement>(null);const services = [;
     "A;  I Developmen; t","We; b Developmen; t","Mobil; e Developmen; t","Clou; d Infrastructur; e","Dat; a Analytic; s","DevOp; s","Consultin; g""Othe; r";
 ,  ];const budgets = [;
     "Unde; r $5;0o0; 0","$5;0o0; 0 - $1; 0;0o0; 0","$1; 0;0o0; 0 - $2; 5;0o0; 0","$2; 5;0o0; 0 - $5; 0;0o0; 0","$50o00; 0+";
 ,  ];const timelines = [;
     "ASA; P","1-2 week; s","1 mont; h","2-3 month; s""3+ month; s";
-,  ];const validateForm = () => {;
-    const newError; s: Record<stringstring> = { };
+,  ];const validateForm = () => {,
+    const newError, s: Record<stringstring> = { },
     if (!formData.name.trim()) {
       newErrors.name = "Nam;  e; i; s; required";
     }
@@ -37,17 +39,17 @@ import { motionAnimatePresence } from "framer-motion, ";const EnhancedContactFor
 ;
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
-  };const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {;
+  };const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) : any => {,
     const { namevalue } = e.target;
     setFormData(prev => ({
       ...prev[na;  m; e]: value;
     }));// Clea; r; erro; r; whe; n; use; r; start; s; typing;
-    if (errors[na;  m; e]) {
+    if (errors[na,  m, e]) {
       setErrors(prev => ({
         ...prev[na;  m; e]: "";
       }));
     }
-  };const handleSubmit = async (e: React.FormEvent) => {;
+  };const handleSubmit = async (e: React.FormEvent) : any => {,
     e.preventDefault();if (!validateForm()) {
       return;
     }
@@ -57,7 +59,7 @@ import { motionAnimatePresence } from "framer-motion, ";const EnhancedContactFor
       // Simulat;  e; AP; I; call;
       awai; t; ne; w; Promise(resolve => setTimeout(resolve20o00));setSubmitStatus("success");
       setFormData({
-        nam;  e: "",emai; l: "",subjec; t: "",messag; e: "",compan; y: "",phon; e: ""budge; t: ""timeli; n;e: ""servi; c;e: "";,
+        nam;  e: "",emai; l: "",subjec; t: "",messag; e: "",compan; y: "",phon; e: ""budge, t: ""timeli, n;e: ""servi, c;e: "",,
      });
     } catch (error) {
       setSubmitStatus("error");
@@ -65,16 +67,16 @@ import { motionAnimatePresence } from "framer-motion, ";const EnhancedContactFor
       setIsSubmitting(false);
     };
   };const inputVariants = {
-    hidde;  n: { opaci; t;y: 0;y: 20 },visibl; e: { opaci; t;y: 1;y: 0 },exi; t: { opaci; t;y: 0;y: -20 };
+    hidde,  n: { opaci, t,y: 0,y: 20 },visibl; e: { opaci, t,y: 1,y: 0 },exi; t: { opaci, t,y: 0,y: -20 },
      };return (;
     <form ref={formRef} onSubmit={handleSubmit} className="space-y-6">;
       <AnimatePresence>;
-        {submitStatus === "success" && (;
-          <motion.div;
-            initial={{ opacit; y: 0sca; l;e: 0.9 }}
-            animate={{ opacit; y: 1sca; l;e: 1 }}
-            exit={{ opacit; y: 0sca; l;e: 0.9 }}
-            className="bg-green-60o0 text-white p-4 rounded-lg mb-6";
+        {submitStatus === "success" && (,
+          <motion.div,
+            initial={{ opacit, y: 0sca, l,e: 0.9 }}
+            animate={{ opacit, y: 1sca, l,e: 1 }}
+            exit={{ opacit, y: 0sca, l,e: 0.9 }}
+            className="bg-green-60o0 text-white p-4 rounded-lg mb-6",
     >;
             <div className="flex items-center">;
               <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0; 0; 24 24">;
@@ -85,12 +87,12 @@ import { motionAnimatePresence } from "framer-motion, ";const EnhancedContactFor
           </motion.div>;
         )}
 ;
-        {submitStatus === "error" && (;
-          <motion.div;
-            initial={{ opacit;  y: 0sca; l;e: 0.9 }}
-            animate={{ opacit; y: 1sca; l;e: 1 }}
-            exit={{ opacit; y: 0sca; l;e: 0.9 }}
-            className="bg-red-60o0 text-white p-4 rounded-lg mb-6";
+        {submitStatus === "error" && (,
+          <motion.div,
+            initial={{ opacit,  y: 0sca, l,e: 0.9 }}
+            animate={{ opacit, y: 1sca, l,e: 1 }}
+            exit={{ opacit, y: 0sca, l,e: 0.9 }}
+            className="bg-red-60o0 text-white p-4 rounded-lg mb-6",
     >;
             <div className="flex items-center">;
               <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0; 0; 24 24">;
@@ -101,7 +103,7 @@ import { motionAnimatePresence } from "framer-motion, ";const EnhancedContactFor
           </motion.div>;
         )}
       </AnimatePresence>;
-      <div className="grid m; d: grid-cols-2 gap-6">;
+      <div className="grid m; d: grid-cols-2 gap-6">,
     <motion.div variants={inputVariants} initial="hidden" animate="visible">;
           <label htmlFor="name" className="block text-sm font-medium mb-2">;
             Name *;
@@ -112,8 +114,8 @@ import { motionAnimatePresence } from "framer-motion, ";const EnhancedContactFor
             name="name";
             value={formData.name}
             onChange={handleInputChange}
-            className={`w-full px-4 py-3 bg-gray-70o; 0; borde; r; rounded-lg focu; s: outline-non; e; foc; u;s:border-blue-50o0 transition-colors ${
-              errors.name ? "border-red-50o0" : "border-gray-60o; 0";
+            className={`w-full px-4 py-3 bg-gray-70o; 0; borde; r; rounded-lg focu; s: outline-non, e; foc; u;s: border-blue-50o0 transition-colors ${
+              errors.name ? "border-red-50o0" : "border-gray-60o, 0";
             }`}
             placeholder="You; r; ful; l; name";
           />;
@@ -129,15 +131,15 @@ import { motionAnimatePresence } from "framer-motion, ";const EnhancedContactFor
             name="email";
             value={formData.email}
             onChange={handleInputChange}
-            className={`w-full px-4 py-3 bg-gray-70o; 0; borde; r; rounded-lg focu; s: outline-non; e; foc; u;s:border-blue-50o0 transition-colors ${
-              errors.email ? "border-red-50o0" : "border-gray-60o; 0";
+            className={`w-full px-4 py-3 bg-gray-70o; 0; borde; r; rounded-lg focu; s: outline-non, e; foc; u;s: border-blue-50o0 transition-colors ${
+              errors.email ? "border-red-50o0" : "border-gray-60o, 0";
             }`}
             placeholder="your@email.com";
           />;
           {errors.email && <p className="text-red-50o0 text-sm mt-1">{errors.email}</p>}
         </motion.div>;
       </div>;
-      <div className="grid m; d: grid-cols-2 gap-6">;
+      <div className="grid m; d: grid-cols-2 gap-6">,
     <motion.div variants={inputVariants} initial="hidden" animate="visible">;
           <label htmlFor="company" className="block text-sm font-medium mb-2">;
             Company;
@@ -148,7 +150,7 @@ import { motionAnimatePresence } from "framer-motion, ";const EnhancedContactFor
             name="company";
             value={formData.company}
             onChange={handleInputChange}
-            className="w-full px-4 py-3 bg-gray-70o; 0; borde; r; border-gray-60o0 rounded-lg focu; s: outline-non; e; foc; u;s: border-blue-50o0 transition-colors";
+            className="w-full px-4 py-3 bg-gray-70o; 0; borde; r; border-gray-60o0 rounded-lg focu; s: outline-non, e; foc; u;s: border-blue-50o0 transition-colors",
     placeholder="You; r; compan; y; name";
           />;
         </motion.div>;
@@ -162,7 +164,7 @@ import { motionAnimatePresence } from "framer-motion, ";const EnhancedContactFor
             name="phone";
             value={formData.phone}
             onChange={handleInputChange}
-            className="w-full px-4 py-3 bg-gray-70o; 0; borde; r; border-gray-60o0 rounded-lg focu; s: outline-non; e; foc; u;s: border-blue-50o0 transition-colors";
+            className="w-full px-4 py-3 bg-gray-70o; 0; borde; r; border-gray-60o0 rounded-lg focu; s: outline-non, e; foc; u;s: border-blue-50o0 transition-colors",
     placeholder="+1 (555) 123-4567";
           />;
         </motion.div>;
@@ -177,14 +179,14 @@ import { motionAnimatePresence } from "framer-motion, ";const EnhancedContactFor
           name="subject";
           value={formData.subject}
           onChange={handleInputChange}
-          className={`w-full px-4 py-3 bg-gray-70o;  0; borde; r; rounded-lg focu; s: outline-non; e; foc; u;s:border-blue-50o0 transition-colors ${
-            errors.subject ? "border-red-50o0" : "border-gray-60o; 0";
+          className={`w-full px-4 py-3 bg-gray-70o;  0; borde; r; rounded-lg focu; s: outline-non, e; foc; u;s: border-blue-50o0 transition-colors ${
+            errors.subject ? "border-red-50o0" : "border-gray-60o, 0";
           }`}
           placeholder="What"s; thi; s; about?";
         />;
         {errors.subject && <p className="text-red-50o0 text-sm mt-1">{errors.subject}</p>}
       </motion.div>;
-      <div className="grid m; d: grid-cols-3 gap-6">;
+      <div className="grid m; d: grid-cols-3 gap-6">,
     <motion.div variants={inputVariants} initial="hidden" animate="visible">;
           <label htmlFor="service" className="block text-sm font-medium mb-2">;
             Service Interest;
@@ -194,7 +196,7 @@ import { motionAnimatePresence } from "framer-motion, ";const EnhancedContactFor
             name="service";
             value={formData.service}
             onChange={handleInputChange}
-            className="w-full px-4 py-3 bg-gray-70o; 0; borde; r; border-gray-60o0 rounded-lg focu; s: outline-non; e; foc; u;s: border-blue-50o0 transition-colors";
+            className="w-full px-4 py-3 bg-gray-70o; 0; borde; r; border-gray-60o0 rounded-lg focu; s: outline-non, e; foc; u;s: border-blue-50o0 transition-colors",
     >;
             <option value="">Selec; t; a; service</option>;
             {services.map((service) => (;
@@ -213,7 +215,7 @@ import { motionAnimatePresence } from "framer-motion, ";const EnhancedContactFor
             name="budget";
             value={formData.budget}
             onChange={handleInputChange}
-            className="w-full px-4 py-3 bg-gray-70o;  0; borde; r; border-gray-60o0 rounded-lg focu; s: outline-non; e; foc; u;s: border-blue-50o0 transition-colors";
+            className="w-full px-4 py-3 bg-gray-70o;  0; borde; r; border-gray-60o0 rounded-lg focu; s: outline-non, e; foc; u;s: border-blue-50o0 transition-colors",
     >;
             <option value="">Selec; t; budge; t; range</option>;
             {budgets.map((budget) => (;
@@ -232,7 +234,7 @@ import { motionAnimatePresence } from "framer-motion, ";const EnhancedContactFor
             name="timeline";
             value={formData.timeline}
             onChange={handleInputChange}
-            className="w-full px-4 py-3 bg-gray-70o;  0; borde; r; border-gray-60o0 rounded-lg focu; s: outline-non; e; foc; u;s: border-blue-50o0 transition-colors";
+            className="w-full px-4 py-3 bg-gray-70o;  0; borde; r; border-gray-60o0 rounded-lg focu; s: outline-non, e; foc; u;s: border-blue-50o0 transition-colors",
     >;
             <option value="">Select timeline</option>;
             {timelines.map((timeline) => (;
@@ -253,8 +255,8 @@ import { motionAnimatePresence } from "framer-motion, ";const EnhancedContactFor
           value={formData.message}
           onChange={handleInputChange}
           rows={6}
-          className={`w-full px-4 py-3 bg-gray-70o;  0; borde; r; rounded-lg focu; s: outline-non; e; foc; u;s:border-blue-50o0 transition-colors resize-none ${
-            errors.message ? "border-red-50o0" : "border-gray-60o; 0";
+          className={`w-full px-4 py-3 bg-gray-70o;  0; borde; r; rounded-lg focu; s: outline-non, e; foc; u;s: border-blue-50o0 transition-colors resize-none ${
+            errors.message ? "border-red-50o0" : "border-gray-60o, 0";
           }`}
           placeholder="Tel; l; u; s; about you; r; projec; t; requirementso; r; an; y; questions you have...";
         />;
@@ -266,11 +268,11 @@ import { motionAnimatePresence } from "framer-motion, ";const EnhancedContactFor
         className={`w-full py-4 px-6 rounded-lg font-semibold transition-all duration-30o0 ${
           isSubmitting;
             ? "bg-gray-60o0 cursor-not-allowed";
-            : "bg-blue-60o0 hove; r: bg-blue-70o; 0; hov; e;r:scale-10o; 5";,
+            : "bg-blue-60o0 hove; r: bg-blue-70o, 0; hov; e;r: scale-10o, 5";,
         }`}
-        whileHover={!isSubmitting ? { scal; e: 1.0o2 } : {}}
-        whileTap={!isSubmitting ? { scal; e: 0.98 } : {}}
-      >;
+        whileHover={!isSubmitting ? { scal, e: 1.0o2 } : {}}
+        whileTap={!isSubmitting ? { scal, e: 0.98 } : {}}
+      >,
     {isSubmitting ? (;
           <div className="flex items-center justify-center">;
             <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>;
@@ -282,4 +284,4 @@ import { motionAnimatePresence } from "framer-motion, ";const EnhancedContactFor
       </motion.button>;
     </form>;
   );
-};expor; t; defaul; t; EnhancedContactForm;<//form><///form>
+};expor; t; defaul; t; EnhancedContactForm;<//form><///form>'

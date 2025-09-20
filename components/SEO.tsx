@@ -24,7 +24,7 @@ const DEFAULTS = {
     "Transform your business with Zion Tech Group's revolutionary AI, quantum computing, and micro SAAS solutions. Leading-edge technology for unprecedented growth.",
   url: 'https://ziontechgroup.com',
   image: 'https://ziontechgroup.com/og-image.svg'
-};
+},
 
 export default function SEO({ 
   title, 
@@ -62,7 +62,7 @@ export default function SEO({
 
   // Normalize provided canonical (if any) to an absolute URL with trailing slash
   function toAbsoluteUrl(urlOrPath: string): string {
-    if (/^(https?:)?\/\//.test(urlOrPath)) return urlOrPath;
+    if (/^(https?:)?\/\//.test(urlOrPath)) return urlOrPath,
     return baseUrl.replace(/\/$/, '') + (urlOrPath.startsWith('/') ? urlOrPath : `/${urlOrPath}`);
   }
   
@@ -110,7 +110,7 @@ export default function SEO({
       <link rel="canonical" href={canonicalUrl} />
       <link rel="alternate" hrefLang="x-default" href={canonicalUrl} />
       <link rel="alternate" hrefLang="en" href={canonicalUrl} />
-      <meta property="og:title" content={pageTitle} />
+      <meta property="og: title" content={pageTitle} />
       <meta property="og:description" content={pageDescription} />
       <meta property="og:url" content={canonicalUrl} />
       <meta property="og:type" content="website" />
@@ -132,4 +132,5 @@ export default function SEO({
       )}
     </Head>
   );
-}
+  }
+'

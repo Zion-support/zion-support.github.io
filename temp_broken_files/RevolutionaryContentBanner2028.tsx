@@ -184,7 +184,7 @@ const RevolutionaryContentBanner2028: React.FC = () => {,
         </div>,
         {/* Features Grid */}
         <div className="mt-16 grid md: grid-cols-3 gap-6">,
-          {contentItems.map((item, index) => {,
+          {contentItems.map((item, index) : any => {,
             const ItemIcon = item.icon,
             return (,
               <div,
@@ -229,5 +229,5 @@ const RevolutionaryContentBanner2028: React.FC = () => {,
       </div>,
     </div>,
   ),
-export default RevolutionaryContentBanner2028,
-}
+export default RevolutionaryContentBanner2028;
+  }

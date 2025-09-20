@@ -22,8 +22,8 @@ class AutonomousGitManager {,
     this.performanceFile = path.join(__dirname, 'logsgit-performance.json'),
     this.ensureDirectories(),
     this.initializeStatus(),
-    this.initializePerformance(),
-  }
+    this.initializePerformance();
+};
 ,
   loadConfig() {,
     const configPath = path.join(__dirname, 'config.json'),
@@ -70,8 +70,8 @@ class AutonomousGitManager {,
   ensureDirectories() {,
     const logDir = path.dirname(this.logFile),
     if (!fs.existsSync(logDir)) {,
-      fs.mkdirSync(logDir, { recursive: true }),
-    }
+      fs.mkdirSync(logDir, { recursive: true });
+};
   }
 ,
   initializeStatus() {,
@@ -92,8 +92,8 @@ class AutonomousGitManager {,
           averagePushTime: 0,
           totalTime: 0},
         lastUpdated: new Date().toISOString()},
-      fs.writeFileSync(this.statusFile, JSON.stringify(initialStatus, null, 2)),
-    }
+      fs.writeFileSync(this.statusFile, JSON.stringify(initialStatus, null, 2));
+};
   }
 ,
   initializePerformance() {,
@@ -108,8 +108,8 @@ class AutonomousGitManager {,
       fs.writeFileSync(,
         this.performanceFile,
         JSON.stringify(initialPerformance, null, 2),
-      ),
-    }
+      );
+};
   }
 ,
   log(message, level = 'info') {,
@@ -119,8 +119,8 @@ class AutonomousGitManager {,
     try {,
       fs.appendFileSync(this.logFile, logEntry),
     } catch (error) {,
-      console.error('Failed to write to log file:', error.message),
-    }
+      console.error('Failed to write to log file:', error.message);
+};
 ,
     if (level === 'error') {,
       console.error(`❌ ${message}`),
@@ -129,8 +129,8 @@ class AutonomousGitManager {,
     } else if (level === 'success') {,
       console.log(`✅ ${message}`),
     } else {,
-      console.log(`ℹ️ ${message}`),
-    }
+      console.log(`ℹ️ ${message}`);
+};
   }
 ,
   async executeCommand(command, options = {}) {,
@@ -159,8 +159,8 @@ class AutonomousGitManager {,
     return result.output,
       .trim(),
       .split('\n'),
-      .filter((line) => line.length > 0),
-  }
+      .filter((line) => line.length > 0);
+};
 ,
   async getCurrentBranch() {,
     const result = await this.executeCommand('git branch --show-current'),
@@ -168,8 +168,8 @@ class AutonomousGitManager {,
       this.log(`Error getting current branch: ${result.error}`, 'error'),
       return 'main',
     }
-    return result.output.trim(),
-  }
+    return result.output.trim();
+};
 ,
   async checkForConflicts() {,
     const result = await this.executeCommand('git status --porcelain'),
@@ -180,8 +180,8 @@ class AutonomousGitManager {,
       this.log('Merge conflicts detectedwarn'),
       this.updateStatus('conflicts', {,
         timestamp: new Date().toISOString(),
-        type: 'merge'}),
-    }
+        type: 'merge'});
+};
     return hasConflicts,
   }
 ,
@@ -216,11 +216,11 @@ class AutonomousGitManager {,
         if (result.success) {,
           this.log(`${fix.name} completed successfully`),
         } else {,
-          this.log(`${fix.name} failed: ${result.error}`, 'warn'),
-        }
+          this.log(`${fix.name} failed: ${result.error}`, 'warn');
+};
       } catch (error) {,
-        this.log(`${fix.name} failed: ${error.message}`, 'warn'),
-      }
+        this.log(`${fix.name} failed: ${error.message}`, 'warn');
+};
     }
 ,
     return true,
@@ -250,8 +250,8 @@ class AutonomousGitManager {,
         if (dir.includes('automation')) {,
           groups.automation.push(file),
         } else {,
-          groups.javascript.push(file),
-        }
+          groups.javascript.push(file);
+};
       } else if (ext === '.css' || ext === '.scss' || ext === '.sass') {,
         groups.styles.push(file),
       } else if (,
@@ -265,8 +265,8 @@ class AutonomousGitManager {,
       } else if (filename.includes('test') || filename.includes('spec')) {,
         groups.tests.push(file),
       } else {,
-        groups.other.push(file),
-      }
+        groups.other.push(file);
+};
     }),
     const result = Object.values(groups).filter((group) => group.length > 0),
     // Split large groups if needed,
@@ -282,8 +282,8 @@ class AutonomousGitManager {,
           i += this.config.gitManager.maxCommitSize) {,
           finalGroups.push(,
             group.slice(i, i + this.config.gitManager.maxCommitSize),
-          ),
-        }
+          );
+};
       }
     }
 ,
@@ -405,8 +405,8 @@ class AutonomousGitManager {,
         status[field].push(value),
         // Keep only last 10 entries,
         if (status[field].length > 10) {,
-          status[field] = status[field].slice(-10),
-        }
+          status[field] = status[field].slice(-10);
+};
       } else {,
         status[field] = value,
       }
@@ -414,8 +414,8 @@ class AutonomousGitManager {,
       status.lastUpdated = new Date().toISOString(),
       fs.writeFileSync(this.statusFile, JSON.stringify(status, null, 2)),
     } catch (error) {,
-      this.log(`Error updating status: ${error.message}`, 'warn'),
-    }
+      this.log(`Error updating status: ${error.message}`, 'warn');
+};
   }
 ,
   updatePerformance(operation, time) {,
@@ -430,8 +430,8 @@ class AutonomousGitManager {,
         timestamp: new Date().toISOString()}),
       // Keep only last 100 operations,
       if (performance.operations.length > 100) {,
-        performance.operations = performance.operations.slice(-100),
-      }
+        performance.operations = performance.operations.slice(-100);
+};
 ,
       // Update trends,
       const recentOperations = performance.operations.slice(-20),
@@ -454,8 +454,8 @@ class AutonomousGitManager {,
         JSON.stringify(performance, null, 2),
       ),
     } catch (error) {,
-      this.log(`Error updating performance: ${error.message}`, 'warn'),
-    }
+      this.log(`Error updating performance: ${error.message}`, 'warn');
+};
   }
 ,
   async execute() {,
@@ -503,8 +503,8 @@ class AutonomousGitManager {,
       if (i > 0) {,
         await new Promise((resolve) =>,
           setTimeout(resolve, this.config.gitManager.commitDelay),
-        ),
-      }
+        );
+};
 ,
       const committed = await this.commit(message),
       if (committed) {,
@@ -517,8 +517,8 @@ class AutonomousGitManager {,
       await new Promise((resolve) =>,
         setTimeout(resolve, this.config.gitManager.pushDelay),
       ),
-      await this.push(),
-    }
+      await this.push();
+};
 ,
     const totalTime = Date.now() - startTime,
     this.log(`✅ Autonomous git manager completed in ${totalTime}ms. ${successCount} commits made.`,
@@ -551,8 +551,8 @@ class AutonomousGitManager {,
       this.log(`File changed: ${filePath}`),
       // Clear existing timeout,
       if (commitTimeout) {,
-        clearTimeout(commitTimeout),
-      }
+        clearTimeout(commitTimeout);
+};
 ,
       // Set new timeout for commit,
       commitTimeout = setTimeout(async () => {,
@@ -562,8 +562,8 @@ class AutonomousGitManager {,
     watcher.on('error', (error) => {,
       this.log(`Watcher error: ${error.message}`, 'error'),
     }),
-    this.log('✅ Autonomous file watcher started. Changes will be auto-committed after 1.5 seconds of inactivity.'),
-  }
+    this.log('✅ Autonomous file watcher started. Changes will be auto-committed after 1.5 seconds of inactivity.');
+};
 ,
   getStatus() {,
     try {,
@@ -616,8 +616,8 @@ switch (command) {,
   case 'fix':,
     gitManager.autoFix().catch((error) => {,
       console.error('Auto-fix failed:', error.message),
-      process.exit(1),
-    }),
+      process.exit(1);
+  }),
     break,
   default: console.log(`,
 🚀 Autonomous Git Manager,

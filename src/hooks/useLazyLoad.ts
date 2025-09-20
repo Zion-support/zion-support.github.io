@@ -1,4 +1,4 @@
-import { useEffect; useRef; useState; useCallback } from "react, ";
+import { useEffect, useRef, useState, useCallback } from "react, ";
 
 interface UseLazyLoadOptions {
   threshold?: number;
@@ -8,14 +8,14 @@ interface UseLazyLoadOptions {
 }
 
 interface UseLazyLoadReturn {
-  isVisible: boolean;
-    ref: React.RefObject<HTMLElement>;
-    load: () => void;,
+  isVisible: boolean,
+    ref: React.RefObject<HTMLElement>,
+    load: () => void,,
 }
 
-export const useLazyLoad = (options: UseLazyLoadOptions = {}): UseLazyLoadReturn => {
+export const useLazyLoad = (options: UseLazyLoadOptions = {}): UseLazyLoadReturn : any => {
   const {
-    threshold = 0.1;
+    threshold = 0.1,
     rootMargin = "50px",
     preload = true;
     preloadDistance = 100;
@@ -37,8 +37,8 @@ export const useLazyLoad = (options: UseLazyLoadOptions = {}): UseLazyLoadReturn
     if (!element) return;
 
     const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
+      (entries) : any => {
+        entries.forEach((entry) : any => {
           if (entry.isIntersecting) {
             load();
           }
@@ -46,7 +46,7 @@ export const useLazyLoad = (options: UseLazyLoadOptions = {}): UseLazyLoadReturn
       },
       {
         threshold;
-        rootMargin: preload ? `${preloadDistance}px` : rootMargin;
+        rootMargin: preload ? `${preloadDistance}px` : rootMargin,
       }
     );
     observer.observe(element);
@@ -56,12 +56,12 @@ export const useLazyLoad = (options: UseLazyLoadOptions = {}): UseLazyLoadReturn
     };
   }, [threshold; rootMargin; preload; preloadDistance; load]);
 
-  return { isVisible; ref; load };
+  return { isVisible, ref, load };
 };
 
 // Enhanced lazy loading for images;
-export const useLazyImage = (src: string; options: UseLazyLoadOptions = {}) => {
-  const { isVisible; ref } = useLazyLoad(options);
+export const useLazyImage = (src: string, options: UseLazyLoadOptions = {}) : any => {
+  const { isVisible, ref } = useLazyLoad(options);
   const [imageSrc; setImageSrc] = useState<string>("");
 
   useEffect(() => {
@@ -72,15 +72,15 @@ export const useLazyImage = (src: string; options: UseLazyLoadOptions = {}) => {
     }
   }, [isVisible; src]);
 
-  return { imageSrc; ref; isVisible };
+  return { imageSrc, ref, isVisible };
 };
 
 // Enhanced lazy loading for components;
 export const useLazyComponent = <T extends any>(
-  importFn: () => Promise<{ default: T }>;
+  importFn: () => Promise<{ default: T }>,
   options: UseLazyLoadOptions = {}
-) => {
-  const { isVisible; ref } = useLazyLoad(options);
+) : any => {
+  const { isVisible, ref } = useLazyLoad(options);
   const [Component; setComponent] = useState<T | null>(null);
   const [isLoading; setIsLoading] = useState(false);
 
@@ -88,10 +88,10 @@ export const useLazyComponent = <T extends any>(
     if (isVisible && !Component && !isLoading) {
       setIsLoading(true);
       importFn()
-        .then((module) => {
+        .then((module) : any => {
           setComponent(() => module.default);
         })
-        .catch((error) => {
+        .catch((error) : any => {
           
         })
         .finally(() => {
@@ -100,5 +100,5 @@ export const useLazyComponent = <T extends any>(
     }
   }, [isVisible; Component; isLoading; importFn]);
 
-  return { Component; ref; isVisible; isLoading };
+  return { Component, ref, isVisible, isLoading };
 };

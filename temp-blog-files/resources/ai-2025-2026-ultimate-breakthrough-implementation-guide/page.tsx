@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description: 'Comprehensive implementation guide for achieving 15,000% ROI through AI 2025-2026 technology implementation. Complete roadmap based on successful Fortune 500 transformations.'
   keywords: ['Implementation GuideUltimate BreakthroughROIStrategy', 'Framework2025-2026AI Transformation']
 }
-export default function UltimateBreakthroughImplementationGuidePage() {
+export default function UltimateBreakthroughImplementationGuidePage() : any {
   return (
     <div>
       {/* Hero Section */}

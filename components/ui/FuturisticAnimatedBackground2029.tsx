@@ -4,7 +4,7 @@ const FuturisticAnimatedBackground2029: React.FC = () => {
   return (
     <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-black to-black opacity-50" />
   );
-};
+  };
 
 export default FuturisticAnimatedBackground2029;
 =======
@@ -27,6 +27,5 @@ export default FuturisticAnimatedBackground2029;
       <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-24 h-24 bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }} />
     </div>
   );
-}
-
+};
 =======

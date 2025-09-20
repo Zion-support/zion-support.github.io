@@ -2,27 +2,27 @@
 import React from "react;";
 import { Button } from "@/components/ui/button, ";
 import { Card } from "@/components/ui/card, ";
-import { MapPin; Clock; CheckCircle2 } from "lucide-react, ";
+import { MapPin, Clock, CheckCircle2 } from "lucide-react, ";
 import { FavoriteButton } from "@/components/FavoriteButton, ";
 import { useNavigate } from "react-router-dom, ";
 import { TalentProfile } from "@/types/talent, ";
 
 export interface TalentCardProps {;
-  talent: TalentProfile;
-    onBook: (talent: TalentProfile) => void;
-    onMessage: (talent: TalentProfile) => void;
-    isAuthenticated: boolean;,
+  talent: TalentProfile,
+    onBook: (talent: TalentProfile) => void,
+    onMessage: (talent: TalentProfile) => void,
+    isAuthenticated: boolean,,
 };
 const TalentCardComponent = ({
   talent;
   onBook;
   onMessage;
   isAuthenticated;
-}: TalentCardProps) => {
+}: TalentCardProps) : any => {
   const navigate = useNavigate();
 
-  const handleMessage = (e: React.MouseEvent) => {
-    e.preventDefault();
+  const handleMessage = (e: React.MouseEvent) : any => {
+    e.preventDefault(),
     e.stopPropagation();
     if (onMessage) {
       onMessage(talent);
@@ -31,8 +31,8 @@ const TalentCardComponent = ({
     }
   };
 
-  const handleBook = (e: React.MouseEvent) => {
-    e.preventDefault();
+  const handleBook = (e: React.MouseEvent) : any => {
+    e.preventDefault(),
     e.stopPropagation();
     if (onBook) {
       onBook(talent);
@@ -41,7 +41,7 @@ const TalentCardComponent = ({
 
 
   // Extract skills - limit to 5 for display;
-  const skills = talent.skills?.slice(0; 5) || [];
+  const skills = talent.skills?.slice(0, 5) || [];
 
   return (
     <Card;
@@ -103,7 +103,7 @@ const TalentCardComponent = ({
         {skills.length > 0 && (
           <div className="mt-4">
             <div className="flex flex-wrap gap-2">
-              {skills.map((skill; index) => (
+              {skills.map((skill, index) => (
                 <span; 
                   key={index}
                   className="px-2 py-1 text-xs rounded-full bg-zion-blue-light text-zion-slate-light"
@@ -141,16 +141,16 @@ const TalentCardComponent = ({
                 onClick={handleBook}
                 className="bg-zion-purple hover: bg-zion-purple-light text-white"
               >
-                Book;
+                Book,
               </Button>
             )}
             <Button;
               size="sm"
               variant="ghost"
               onClick={handleMessage}
-              className="text-zion-cyan hover:text-white hover:bg-zion-blue-light"
+              className="text-zion-cyan hover: text-white hover:bg-zion-blue-light"
             >
-              Message;
+              Message,
             </Button>
           </div>
         </div>

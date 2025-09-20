@@ -14,7 +14,7 @@ const contactInfo = {
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-};
+},
 
 const serviceCategories = [
   {
@@ -77,7 +77,7 @@ const serviceCategories = [
       { name: 'Biotech Research Suite', href: '/biotech-research-suite' }
     ]
   }
-];
+],
 
 const mainNavigation = [
   { name: 'Home', href: '/', icon: Home },
@@ -88,7 +88,7 @@ const mainNavigation = [
   { name: 'Case Studies', href: '/case-studies', icon: BarChart3 },
   { name: 'Careers', href: '/careers', icon: Users },
   { name: 'Contact', href: '/contact', icon: MessageCircle }
-];
+],
 
 const socialLinks = [
   { name: 'Facebook', href: '#', icon: Facebook },
@@ -97,7 +97,7 @@ const socialLinks = [
   { name: 'Instagram', href: '#', icon: Instagram },
   { name: 'YouTube', href: '#', icon: Youtube },
   { name: 'GitHub', href: '#', icon: Github }
-];
+],
 
 const UltraFuturisticFooter2030: React.FC = () => {
   return (
@@ -303,6 +303,6 @@ const UltraFuturisticFooter2030: React.FC = () => {
       </div>
     </footer>
   );
-};
+  };
 
 export default UltraFuturisticFooter2030;

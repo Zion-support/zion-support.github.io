@@ -16,8 +16,8 @@ const logger = winston.createLogger({,
 }),
 if (process.env.NODE_ENV !== 'production') {,
   logger.add(new winston.transports.Console({,
-    format: winston.format.simple()})),
-}
+    format: winston.format.simple()}));
+};
 ,
 class PerformanceMonitor {,
   constructor(config = {}) {,
@@ -67,15 +67,15 @@ class PerformanceMonitor {,
       this.metrics.push(metrics),
       // Keep only last 100 metrics,
       if (this.metrics.length > 100) {,
-        this.metrics = this.metrics.slice(-100),
-      }
+        this.metrics = this.metrics.slice(-100);
+};
 ,
       // Save metrics,
       this.saveMetrics(),
       logger.info('📊 Metrics collected successfully'),
     } catch (error) {,
-      logger.error('Error collecting metrics:', error),
-    }
+      logger.error('Error collecting metrics:', error);
+};
   }
 ,
   async getMemoryUsage() {,
@@ -167,8 +167,8 @@ class PerformanceMonitor {,
     try {,
       fs.writeFileSync(this.config.metricsFile, JSON.stringify(this.metrics, null, 2)),
     } catch (error) {,
-      logger.error('Error saving metrics:', error),
-    }
+      logger.error('Error saving metrics:', error);
+};
   }
 ,
   async healthCheck() {,
@@ -179,13 +179,13 @@ class PerformanceMonitor {,
   }
 ,
   sleep(ms) {,
-    return new Promise(resolve => setTimeout(resolve, ms)),
-  }
+    return new Promise(resolve => setTimeout(resolve, ms));
+};
 ,
   stop() {,
     logger.info('🛑 Stopping Performance Monitor'),
-    this.isRunning = false,
+    this.isRunning = false;
   }
 }
 ,
-module.exports = PerformanceMonitor,
+module.exports = PerformanceMonitor,'

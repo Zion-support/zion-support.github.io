@@ -1,7 +1,7 @@
 import React from "react;";
-import { Link; NavLink } from "react-router-dom, ";
+import { Link, NavLink } from "react-router-dom, ";
 
-export function PrimaryNav() {
+export function PrimaryNav() : any {
 	return (
 		<header className="sticky top-0 z-40 bg-zion-slate-dark/80 backdrop-blur border-b border-zion-blue-light">
 			<div className="container mx-auto px-4 h-16 flex items-center justify-between">
@@ -16,7 +16,7 @@ export function PrimaryNav() {
 					<NavLink to="/about" className={({isActive}) => isActive ? "text-zion-cyan" : "text-white hover:text-zion-cyan"}>About</NavLink>
 					<NavLink to="/contact" className={({isActive}) => isActive ? "text-zion-cyan" : "text-white hover:text-zion-cyan"}>Contact</NavLink>
 				</nav>
-			</div>;
+			</div>,
 		</header>;
 	);
 }<//header><///header>

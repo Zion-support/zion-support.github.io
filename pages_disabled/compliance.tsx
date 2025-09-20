@@ -5,7 +5,7 @@ import { Scale, CheckCircle, Globe, Shield, FileText, Users, Mail, Phone, MapPin
 import EnhancedNavigation from '../components/EnhancedNavigation';
 import EnhancedFooter from '../components/EnhancedFooter';
 
-export default function Compliance() {
+export default function Compliance() : any {
   const complianceFrameworks = [
     {
       id: 'soc2',
@@ -67,7 +67,7 @@ export default function Compliance() {
     { name: 'FERPA', description: 'Family Educational Rights and Privacy Act' },
     { name: 'FISMA', description: 'Federal Information Security Management Act' },
     { name: 'FedRAMP', description: 'Federal Risk and Authorization Management Program' }
-  ];
+  ],
 
   return (
     <>
@@ -251,7 +251,7 @@ export default function Compliance() {
                     <ul className="space-y-2 text-gray-300">
                       <li>• Right to access your personal data</li>
                       <li>• Right to rectification (correction)</li>
-                      <li>• Right to erasure (&quot;right to be forgotten&quot;)</li>
+                      <li>• Right to erasure (&quot,right to be forgotten&quot,)</li>
                       <li>• Right to restrict processing</li>
                       <li>• Right to data portability</li>
                     </ul>
@@ -354,4 +354,4 @@ export default function Compliance() {
       </div>
     </>
   );
-}
+  }'

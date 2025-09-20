@@ -1,9 +1,9 @@
-import React, { useState; useRef; useEffect } from "react;";
+import React, { useState, useRef, useEffect } from "react;";
 import { cn } from "@/lib/utils, ";
-import { motion; AnimatePresence } from "framer-motion, ";
+import { motion, AnimatePresence } from "framer-motion, ";
 
 interface OptimizedImageProps {
-  src: string; alt: string;
+  src: string, alt: string,
     width?: number;
   height?: number;
   className?: string;
@@ -48,11 +48,11 @@ export function OptimizedImage({;
     if (priority || !imgRef.current) return;
 
     observerRef.current = new IntersectionObserver(
-      ([entry]) => {
+      ([entry]) : any => {
         if (entry.isIntersecting) {
           setIsInView(true);
-          observerRef.current?.disconnect(),
-        }
+          observerRef.current?.disconnect();
+};
       },
       {
         rootMargin: "50px", threshold: 0.1,
@@ -62,19 +62,19 @@ export function OptimizedImage({;
 
     return () => {
       if (observerRef.current) {
-        observerRef.current.disconnect(),
-      }
+        observerRef.current.disconnect();
+  }
     };
   }, [priority]);
 
   const handleLoad = () => {
     setIsLoaded(true);
-    onLoad?.(),
+    onLoad?.();
   };
 
   const handleError = () => {
     setHasError(true);
-    onError?.(),
+    onError?.();
   };
 
   const getAspectRatioClass = () => {
@@ -87,8 +87,8 @@ export function OptimizedImage({;
         return "aspect-square";
       case "video":
         return "aspect-video";
-      default: return "",
-     }
+      default: return "";
+  }
   };
 
   const getObjectFitClass = () => {
@@ -103,13 +103,13 @@ export function OptimizedImage({;
         return "object-none";
       case "scale-down":
         return "object-scale-down";
-      default: return "object-cover",
-     }
+      default: return "object-cover";
+  }
   };
 
   // Generate responsive image sources;
-  const generateSrcSet = (imageSrc: string) => {
-    if (!imageSrc.includes("http")) return imageSrc;
+  const generateSrcSet = (imageSrc: string) : any => {
+    if (!imageSrc.includes("http")) return imageSrc,
     const baseUrl = imageSrc.split("?")[0];
     const params = new URLSearchParams(imageSrc.split("?")[1] || "");
     
@@ -142,7 +142,7 @@ export function OptimizedImage({;
     >
       <AnimatePresence mode="wait">
         {!isLoaded && (
-          <motion.div;
+          <motion.div,
             key="placeholder"
             className="absolute inset-0 bg-zion-slate-light/20 animate-pulse"
             initial={{ opacity: 1 }}
@@ -152,7 +152,7 @@ export function OptimizedImage({;
         )}
       </AnimatePresence>
 
-      <img;
+      <img,
         ref={imgRef}
         src={currentSrc}
         alt={alt}
@@ -206,7 +206,7 @@ export function AvatarImage({;
   size?: "sm" | "md" | "lg" | "xl",
 }) {
   const sizeClasses = {
-    sm: "w-8 h-8", md: "w-10 h-10";
+    sm: "w-8 h-8", md: "w-10 h-10",
     lg: "w-12 h-12",
     xl: "w-16 h-16",
   };

@@ -1,7 +1,8 @@
 import { useState, useCallback } from 'react';
 export function useToast() {
     const [toasts, setToasts] = useState([]);
-    const toast = useCallback((options) => {
+
+  const toast = useCallback((options) => {
         const id = Math.random().toString(36).substr(2, 9);
         const newToast = {
             id,
@@ -17,16 +18,19 @@ export function useToast() {
         }, newToast.duration);
         return id;
     }, []);
-    const dismiss = useCallback((id) => {
+
+  const dismiss = useCallback((id) => {
         setToasts(prev => prev.filter(toast => toast.id !== id));
     }, []);
-    const dismissAll = useCallback(() => {
+
+  const dismissAll = useCallback(() => {
         setToasts([]);
     }, []);
 import { useState } from 'react';
 export function useToast() {
     const [toasts, setToasts] = useState([]);
-    const toast = (options) => {
+
+  const toast = (options) => {
         const id = Date.now().toString();
         const newToast = {
             id,
@@ -45,22 +49,22 @@ export function useToast() {
     };
     const success = (title, description) => {
         return toast({ title, description, type: 'success' });
-    };
+  };
     const error = (title, description) => {
         return toast({ title, description, type: 'error', variant: 'destructive' });
-    };
+  };
     const warning = (title, description) => {
         return toast({ title, description, type: 'warning' });
-    };
+  };
     const info = (title, description) => {
         return toast({ title, description, type: 'info' });
-    };
+  };
     return {
         toasts,
         toast,
         dismiss,
-        dismissAll,
-    };
+        dismissAll;
+  };
 }
 // Export a default toast function for backward compatibility;
 export const toast = (options) => {

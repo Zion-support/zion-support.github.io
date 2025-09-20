@@ -1,32 +1,32 @@
 export interface ContentQualityMetrics {
-  pageUrl: string;
-    title: string;
-    wordCount: number;
-    headingCount: number;
-    imageCount: number;
-    linkCount: number;
-    metaDescriptionLength: number;
-    hasStructuredData: boolean;
-    readabilityScore: number;
-    seoScore: number;
-    overallScore: number;
-    issues: string[];
-    recommendations: string[];,
+  pageUrl: string,
+    title: string,
+    wordCount: number,
+    headingCount: number,
+    imageCount: number,
+    linkCount: number,
+    metaDescriptionLength: number,
+    hasStructuredData: boolean,
+    readabilityScore: number,
+    seoScore: number,
+    overallScore: number,
+    issues: string[],
+    recommendations: string[],,
 }
 
 export interface ContentQualityReport {
-  totalPages: number;
-    averageWordCount: number;
-    averageSeoScore: number;
-    pagesWithIssues: number;
-    topIssues: string[];
-    pageMetrics: ContentQualityMetrics[];
-    summary: string;,
+  totalPages: number,
+    averageWordCount: number,
+    averageSeoScore: number,
+    pagesWithIssues: number,
+    topIssues: string[],
+    pageMetrics: ContentQualityMetrics[],
+    summary: string,,
 }
 
 export class ContentQualityAnalyzer {
-  private static instance: ContentQualityAnalyzer;
-    private analyzedPages: Map<string; ContentQualityMetrics> = new Map();
+  private static instance: ContentQualityAnalyzer,
+    private analyzedPages: Map<string, ContentQualityMetrics> = new Map();
 
   static getInstance(): ContentQualityAnalyzer {
     if (!ContentQualityAnalyzer.instance) {
@@ -36,14 +36,14 @@ export class ContentQualityAnalyzer {
   }
 
   analyzePageContent(
-    pageUrl: string;
-    title: string;
-    content: string;
-    metaDescription: string = "";
-    images: string[] = [];
+    pageUrl: string,
+    title: string,
+    content: string,
+    metaDescription: string = "",
+    images: string[] = [],
     links: string[] = []
   ): ContentQualityMetrics {
-    // Check if we already analyzed this page;
+    // Check if we already analyzed this page,
     const existing = this.analyzedPages.get(pageUrl);
     if (existing) {
       return existing;
@@ -66,7 +66,7 @@ export class ContentQualityAnalyzer {
       hasStructuredData;
     });
 
-    const issues = this.identifyIssues({
+  const issues = this.identifyIssues({
       title;
       wordCount;
       headingCount;
@@ -76,12 +76,12 @@ export class ContentQualityAnalyzer {
       hasStructuredData;
     });
 
-    const recommendations = this.generateRecommendations(issues);
+  const recommendations = this.generateRecommendations(issues);
 
     const overallScore = Math.round((readabilityScore + seoScore) / 2);
 
     const metrics: ContentQualityMetrics = {
-      pageUrl;
+      pageUrl,
       title;
       wordCount;
       headingCount;
@@ -96,25 +96,25 @@ export class ContentQualityAnalyzer {
       recommendations;
     };
 
-    this.analyzedPages.set(pageUrl; metrics);
+    this.analyzedPages.set(pageUrl, metrics);
     return metrics;
   }
 
   private calculateWordCount(content: string): number {
-    if (!content) return 0;
+    if (!content) return 0,
     // Remove HTML tags and count words;
     const cleanContent = content.replace(/<[^>]*>/g, " ").replace(/\s+/g, " ").trim();
     return cleanContent.split(" ").filter(word => word.length > 0).length;
   }
 
   private countHeadings(content: string): number {
-    if (!content) return 0;
+    if (!content) return 0,
     const headingMatches = content.match(/<h[1-6][^>]*>/gi);
     return headingMatches ? headingMatches.length : 0;
   }
 
   private checkStructuredData(content: string): boolean {
-    if (!content) return false;
+    if (!content) return false,
     // Check for JSON-LD; microdata; or RDFa;
     return content.includes("application/ld+json") || 
            content.includes("itemtype=") || 
@@ -122,7 +122,7 @@ export class ContentQualityAnalyzer {
   }
 
   private calculateReadabilityScore(content: string): number {
-    if (!content) return 0;
+    if (!content) return 0,
     const wordCount = this.calculateWordCount(content);
     const sentenceCount = content.split(/[.!?]+/).filter(s => s.trim().length > 0).length;
     const syllableCount = this.estimateSyllableCount(content);
@@ -133,11 +133,11 @@ export class ContentQualityAnalyzer {
     const fleschScore = 206.835 - (1.015 * (wordCount / sentenceCount)) - (84.6 * (syllableCount / wordCount));
     
     // Convert to 0-100 scale;
-    return Math.max(0; Math.min(100; fleschScore));
+    return Math.max(0, Math.min(100, fleschScore));
   }
 
   private estimateSyllableCount(content: string): number {
-    if (!content) return 0;
+    if (!content) return 0,
     // Simple syllable estimation;
     const words = content.toLowerCase().replace(/[^a-z\s]/g, "").split(/\s+/);
     let syllableCount = 0;
@@ -156,13 +156,13 @@ export class ContentQualityAnalyzer {
   }
 
   private calculateSeoScore(metrics: {
-    title: string;
-    wordCount: number;
-    headingCount: number;
-    imageCount: number;
-    linkCount: number;
-    metaDescriptionLength: number;
-    hasStructuredData: boolean;,
+    title: string,
+    wordCount: number,
+    headingCount: number,
+    imageCount: number,
+    linkCount: number,
+    metaDescriptionLength: number,
+    hasStructuredData: boolean,,
      }): number {
     let score = 0;
     let maxScore = 0;
@@ -227,15 +227,15 @@ export class ContentQualityAnalyzer {
   }
 
   private identifyIssues(metrics: {
-    title: string;
-    wordCount: number;
-    headingCount: number;
-    imageCount: number;
-    linkCount: number;
-    metaDescriptionLength: number;
-    hasStructuredData: boolean;,
+    title: string,
+    wordCount: number,
+    headingCount: number,
+    imageCount: number,
+    linkCount: number,
+    metaDescriptionLength: number,
+    hasStructuredData: boolean,,
      }): string[] {
-    const issues: string[] = [];
+    const issues: string[] = [],
     if (!metrics.title || metrics.title.length < 30) {
       issues.push("Title is too short (should be 30-60 characters)");
     } else if (metrics.title.length > 60) {
@@ -272,13 +272,13 @@ export class ContentQualityAnalyzer {
   }
 
   private generateRecommendations(issues: string[]): string[] {
-    const recommendations: string[] = [];
+    const recommendations: string[] = [],
     if (issues.some(issue => issue.includes("Content is too short"))) {
-      recommendations.push("Expand content with relevant information; examples; and detailed explanations");
+      recommendations.push("Expand content with relevant information, examples, and detailed explanations");
     }
 
     if (issues.some(issue => issue.includes("Insufficient heading structure"))) {
-      recommendations.push("Add H1; H2; and H3 headings to improve content structure and SEO");
+      recommendations.push("Add H1, H2, and H3 headings to improve content structure and SEO");
     }
 
     if (issues.some(issue => issue.includes("Meta description"))) {
@@ -286,7 +286,7 @@ export class ContentQualityAnalyzer {
     }
 
     if (issues.some(issue => issue.includes("No images"))) {
-      recommendations.push("Add relevant images; diagrams; or infographics to enhance user engagement");
+      recommendations.push("Add relevant images, diagrams, or infographics to enhance user engagement");
     }
 
     if (issues.some(issue => issue.includes("Insufficient internal linking"))) {
@@ -301,7 +301,7 @@ export class ContentQualityAnalyzer {
       recommendations.push("Optimize page titles with relevant keywords and compelling copy");
     }
 
-    recommendations.push("Ensure content is unique; valuable; and addresses user intent");
+    recommendations.push("Ensure content is unique, valuable, and addresses user intent");
     recommendations.push("Use bullet points and numbered lists for better readability");
     recommendations.push("Include relevant keywords naturally throughout the content");
 
@@ -314,40 +314,40 @@ export class ContentQualityAnalyzer {
     
     if (totalPages === 0) {
       return {
-        totalPages: 0;
-        averageWordCount: 0;
-        averageSeoScore: 0;
-        pagesWithIssues: 0;
-        topIssues: [];
-        pageMetrics: [];
-        summary: "No pages analyzed yet",
-      };
+        totalPages: 0,
+        averageWordCount: 0,
+        averageSeoScore: 0,
+        pagesWithIssues: 0,
+        topIssues: [],
+        pageMetrics: [],
+        summary: "No pages analyzed yet";
+  };
      }
 
     const averageWordCount = Math.round(
-      pageMetrics.reduce((sum; page) => sum + page.wordCount; 0) / totalPages;
+      pageMetrics.reduce((sum, page) => sum + page.wordCount; 0) / totalPages;
     );
 
     const averageSeoScore = Math.round(
-      pageMetrics.reduce((sum; page) => sum + page.seoScore; 0) / totalPages;
+      pageMetrics.reduce((sum, page) => sum + page.seoScore; 0) / totalPages;
     );
 
     const pagesWithIssues = pageMetrics.filter(page => page.issues.length > 0).length;
 
     // Collect all issues and count frequency;
-    const issueCounts: Record<string; number> = {};
-    pageMetrics.forEach(page => {
+    const issueCounts: Record<string, number> = {};
+    pageMetrics.forEach(page : any => {
       page.issues.forEach(issue => {
         issueCounts[issue] = (issueCounts[issue] || 0) + 1;
       });
     });
 
-    const topIssues = Object.entries(issueCounts)
+  const topIssues = Object.entries(issueCounts)
       .sort(([, a], [, b]) => b - a)
-      .slice(0; 5)
+      .slice(0, 5)
       .map(([issue]) => issue);
 
-    const summary = this.generateSummary(pageMetrics; topIssues);
+    const summary = this.generateSummary(pageMetrics, topIssues);
 
     return {
       totalPages;
@@ -361,7 +361,7 @@ export class ContentQualityAnalyzer {
   }
 
   private generateSummary(pageMetrics: ContentQualityMetrics[], topIssues: string[]): string {
-    const totalPages = pageMetrics.length;
+    const totalPages = pageMetrics.length,
     const excellentPages = pageMetrics.filter(page => page.overallScore >= 80).length;
     const goodPages = pageMetrics.filter(page => page.overallScore >= 60).length;
     const poorPages = pageMetrics.filter(page => page.overallScore < 40).length;
@@ -381,7 +381,7 @@ export class ContentQualityAnalyzer {
     }
 
     if (topIssues.length > 0) {
-      summary += `Top issues to address: ${topIssues.slice(0; 3).join(", ")}.`;
+      summary += `Top issues to address: ${topIssues.slice(0, 3).join(", ")}.`;
     }
 
     return summary;
@@ -389,7 +389,7 @@ export class ContentQualityAnalyzer {
 
   getPageMetrics(pageUrl: string): ContentQualityMetrics | undefined {
     return this.analyzedPages.get(pageUrl);
-     }
+  }
 
   getAllPageMetrics(): ContentQualityMetrics[] {
     return Array.from(this.analyzedPages.values());

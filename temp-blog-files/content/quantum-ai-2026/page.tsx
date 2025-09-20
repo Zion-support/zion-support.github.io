@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description: 'Explore how quantum computing will transform AI capabilities in 2026, enabling 1000x performance improvements and breakthrough applications.'
   keywords: ['quantum AIquantum computingquantum machine learningAI 2026', 'quantum algorithms']
 }
-export default function QuantumAI2026() {
+export default function QuantumAI2026() : any {
   return (
     <div>
       <div>

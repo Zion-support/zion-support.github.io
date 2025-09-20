@@ -155,23 +155,23 @@ const AIPoweredContentRecommendationSystem = () => {,
     { id: 'healthcare-'ainame: 'Healthcare 'AIicon: Shieldcount: 78 },
     { id: 'blockchain-'ainame: 'Blockchain 'AIicon: Databasecount: 45 }
   ],
-  const getConfidenceColor = (confidence) => {,
+  const getConfidenceColor = (confidence) : any => {,
     if (confidence >= 90) return 'text-green-600 bg-green-100',
     if (confidence >= 80) return 'text-yellow-600 bg-yellow-100',
     return 'text-orange-600 bg-orange-100',
   },
-  const getAIScoreColor = (score) => {,
+  const getAIScoreColor = (score) : any => {,
     if (score >= 9.0) return 'text-green-600',
     if (score >= 8.0) return 'text-yellow-600',
-    return 'text-orange-600',
+    return 'text-orange-600';
   },
-  const getTypeIcon = (type) => {,
+  const getTypeIcon = (type) : any => {,
     switch (type) {,
-      case 'blog': return BookOpen,
-      case 'case-study': return Target,
-      case 'tutorial': return Play,
-      case 'research': return Cpu,
-      case 'whitepaper': return Shield,
+      case 'blog': return BookOpen;
+      case 'case-study': return Target;
+      case 'tutorial': return Play;
+      case 'research': return Cpu;
+      case 'whitepaper': return Shield;
       default: return Database}
   },
   return (,
@@ -252,7 +252,7 @@ const AIPoweredContentRecommendationSystem = () => {,
           className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6",
         >,
           <div>,
-            {recommendations.map((itemindex) => {,
+            {recommendations.map((itemindex) : any => {,
               const TypeIcon = getTypeIcon(item.type),
               return (,
                 <div,
@@ -363,5 +363,5 @@ const AIPoweredContentRecommendationSystem = () => {,
       </div>,
     </div>,
   ),
-export default AIPoweredContentRecommendationSystem,
-}
+export default AIPoweredContentRecommendationSystem;
+  }

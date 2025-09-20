@@ -119,21 +119,21 @@ export const generateDynamicSuggestions = (query, recentSearches = [], available
     // Add exact query as first suggestion;
     if (query.trim()) {
         suggestions.push({
-            text: query;
-            type: 'recent';
+            text: query,
+            type: 'recent',
             id: `query-${query}`
         });
-     }
+};
     // Add matching categories;
     availableCategories;
         .filter(category => category.toLowerCase().includes(lowerQuery))
         .slice(0, 3)
         .forEach(category => {
         suggestions.push({
-            text: category;
-            type: 'category';
+            text: category,
+            type: 'category',
             id: `category-${category}`
-        });
+        }),
      });
     // Add matching tags;
     availableTags;
@@ -141,10 +141,10 @@ export const generateDynamicSuggestions = (query, recentSearches = [], available
         .slice(0, 3)
         .forEach(tag => {
         suggestions.push({
-            text: tag;
-            type: 'tag';
+            text: tag,
+            type: 'tag',
             id: `tag-${tag}`
-        });
+        }),
      });
     // Add recent searches that match;
     recentSearches;
@@ -152,10 +152,10 @@ export const generateDynamicSuggestions = (query, recentSearches = [], available
         .slice(0, 3)
         .forEach(search => {
         suggestions.push({
-            text: search;
-            type: 'recent';
+            text: search,
+            type: 'recent',
             id: `recent-${search}`
-        });
+        }),
      });
     return suggestions.slice(0, 8); // Limit to 8 suggestions;
 };
@@ -171,7 +171,8 @@ export const calculateSearchMetrics = (results, searchTime) => {
             categoryCount.set(result.category, (categoryCount.get(result.category) || 0) + 1);
         }
     });
-    const topCategories = Array.from(categoryCount.entries())
+
+  const topCategories = Array.from(categoryCount.entries())
         .map(([category, count]) => ({ category, count }))
         .sort((a, b) => b.count - a.count)
         .slice(0, 5);
@@ -251,11 +252,11 @@ export const getActiveFilterCount = (filters) => {
  * Reset filters to default values;
  */
 export const getDefaultFilters = () => ({
-    types: [];
-    category: '';
-    minPrice: 0;
-    maxPrice: 10000;
-    minRating: 0;
+    types: [],
+    category: '',
+    minPrice: 0,
+    maxPrice: 10000,
+    minRating: 0,
     sort: 'relevance',
 });
     export default {

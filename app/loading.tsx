@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function Loading() {
+export default function Loading() : any {
   return (
     <div className="min-h-screen bg-gray-900 text-white flex items-center justify-center">
       <div className="text-center">

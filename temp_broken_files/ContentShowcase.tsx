@@ -39,8 +39,8 @@ const ContentShowcase: React.FC = () => {,
         .sort((a, b) => (b.publishDate || '').localeCompare(a.publishDate || '')),
         .slice(0, 4),
     } catch {,
-      return blogPosts.slice(0, 4),
-    }
+      return blogPosts.slice(0, 4);
+};
   }, [blogPosts]),
   const caseStudies = [,
     {,
@@ -414,7 +414,7 @@ const ContentShowcase: React.FC = () => {,
         <div,
           className="flex flex-wrap justify-center gap-4 mb-12",
         >,
-          {tabs.map((tab) => {,
+          {tabs.map((tab) : any => {,
             const Icon = tab.icon,
             const isActive = activeTab === tab.id,
             return (,
@@ -431,8 +431,8 @@ const ContentShowcase: React.FC = () => {,
                 <Icon className="w-5 h-5" />,
                 <span>{tab.name}</span>,
               </button>,
-            ),
-          })}
+            );
+  })}
         </div>,
         {/* Content */}
           <div,
@@ -470,4 +470,4 @@ const ContentShowcase: React.FC = () => {,
     </div>,
   )},
 export { ContentShowcase },
-export default ContentShowcase,
+export default ContentShowcase,'

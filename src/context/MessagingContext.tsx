@@ -1,36 +1,36 @@
-import React, { createContext; useContext; useState; ReactNode } from "react;";
+import React, { createContext, useContext, useState, ReactNode } from "react;";
 
 interface Message {
-  id: string;
-    content: string;
-    timestamp: Date;
-    isRead: boolean;,
+  id: string,
+    content: string,
+    timestamp: Date,
+    isRead: boolean,,
 };
 interface MessagingContextType {
-  messages: Message[];
-    unreadCount: number;
-    sendMessage: (content: string) => void;
-    markAsRead: (id: string) => void;,
+  messages: Message[],
+    unreadCount: number,
+    sendMessage: (content: string) => void,
+    markAsRead: (id: string) => void,,
 };
 const MessagingContext = createContext<MessagingContextType | undefined>(undefined);
 
-export function MessagingProvider({ children }: { children: ReactNode }) {;
+export function MessagingProvider({ children }: { children: ReactNode }) {,
   const [messages; setMessages] = useState<Message[]>([]);
 
-  const sendMessage = (content: string) => {
+  const sendMessage = (content: string) : any => {
     const newMessage: Message = {
-      id: Date.now().toString();
+      id: Date.now().toString(),
       content;
-      timestamp: new Date();
-      isRead: false;,
+      timestamp: new Date(),
+      isRead: false,,
     };
-    setMessages(prev => [...prev; newMessage]);
+    setMessages(prev => [...prev, newMessage]);
   };
 
-  const markAsRead = (id: string) => {
+  const markAsRead = (id: string) : any => {
     setMessages(prev => 
       prev.map(msg => 
-        msg.id === id ? { ...msg; isRead: true } : msg;
+        msg.id === id ? { ...msg, isRead: true } : msg,
       )
     );
      };
@@ -49,7 +49,7 @@ export function MessagingProvider({ children }: { children: ReactNode }) {;
   );
 }
 
-export function useMessaging() {;
+export function useMessaging() : any {;
   const context = useContext(MessagingContext);
   if (context === undefined) {
     throw new Error("useMessaging must be used within a MessagingProvider");

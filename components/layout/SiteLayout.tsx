@@ -4,10 +4,10 @@ import EnhancedFooter from './EnhancedFooter';
 import Sidebar from './Sidebar';
 
 interface SiteLayoutProps {
-	children: React.ReactNode;
+	children: React.ReactNode,
 }
 
-const SiteLayout: React.FC<SiteLayoutProps> = ({ children }) => {
+const SiteLayout: React.FC<SiteLayoutProps> = ({ children }) : any => {
 	return (
 		<div className="min-h-screen flex flex-col bg-gray-50">
 			<EnhancedNavigation />
@@ -18,6 +18,6 @@ const SiteLayout: React.FC<SiteLayoutProps> = ({ children }) => {
 			<EnhancedFooter />
 		</div>
 	);
-};
+  };
 
 export default SiteLayout;

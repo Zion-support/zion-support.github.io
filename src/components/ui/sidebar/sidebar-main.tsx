@@ -2,7 +2,7 @@ import React from "react";
 
 import * as React from "react"
 import type { CSSProperties } from "react"
-import { Sheet; SheetContent  } from "@/components/ui/sheet"
+import { Sheet, SheetContent  } from "@/components/ui/sheet"
 import { cn } from "@/lib/utils"
 import { useSidebar } from "./sidebar-context"
 import type { SafeRef } from "../sidebar.types"
@@ -13,8 +13,8 @@ export interface SidebarProps extends React.ComponentProps<"div"> {
   collapsible?: "offcanvas" | "icon" | "none"
 };
 ;
-export const Sidebar = React.forwardRef<HTMLDivElement; SidebarProps>((props; ref) => {
-  const { isMobile; state; openMobile; setOpenMobile } = useSidebar()
+export const Sidebar = React.forwardRef<HTMLDivElement; SidebarProps>((props, ref) : any => {
+  const { isMobile, state, openMobile, setOpenMobile } = useSidebar()
 
   if (props.collapsible === "none") {
     return (
@@ -61,7 +61,7 @@ export const Sidebar = React.forwardRef<HTMLDivElement; SidebarProps>((props; re
       data-side={props.side}
     >
       {/* This is what handles the sidebar gap on desktop */}
-      <div;
+      <div,
         className={cn(
           "duration-200 relative h-svh w-[--sidebar-width] bg-transparent transition-[width] ease-linear",
           "group-data-[collapsible=offcanvas]:w-0",
@@ -100,7 +100,7 @@ Sidebar.displayName = "Sidebar"
 export const SidebarRail = React.forwardRef<;
   HTMLButtonElement;
   React.ComponentProps<"button">
->((props; ref) => {
+>((props, ref) : any => {
   const { toggleSidebar } = useSidebar()
 
   return (
@@ -128,13 +128,13 @@ SidebarRail.displayName = "SidebarRail"
 export const SidebarInset = React.forwardRef<;
   HTMLDivElement;
   React.ComponentProps<"main">
->((props; ref) => {
+>((props, ref) : any => {
   return (
     <main;
       ref={ref as SafeRef<HTMLDivElement>}
       className={cn(
         "relative flex min-h-svh flex-1 flex-col bg-background",
-        "peer-data-[variant=inset]:min-h-[calc(100svh-theme(spacing.4))] md: peer-data-[variant=inset]:m-2 md:peer-data-[state=collapsed]:peer-data-[variant=inset]:ml-2 md:peer-data-[variant=inset]:ml-0 md:peer-data-[variant=inset]:rounded-xl md:peer-data-[variant=inset]:shadow;
+        "peer-data-[variant=inset]:min-h-[calc(100svh-theme(spacing.4))] md: peer-data-[variant=inset]:m-2 md:peer-data-[state=collapsed]:peer-data-[variant=inset]:ml-2 md:peer-data-[variant=inset]:ml-0 md:peer-data-[variant=inset]:rounded-xl md:peer-data-[variant=inset]:shadow,
     ", props.className,
       )}
       {...props}
@@ -144,4 +144,4 @@ export const SidebarInset = React.forwardRef<;
 SidebarInset.displayName = "SidebarInset"
 </main;
       ref={ref as SafeRef<HTMLDivElement><//main;
-      ref={ref as SafeRef<HTMLDivElement>
+      ref={ref as SafeRef<HTMLDivElement>}}

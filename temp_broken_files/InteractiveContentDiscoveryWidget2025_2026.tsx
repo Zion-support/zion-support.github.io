@@ -157,9 +157,9 @@ const InteractiveContentDiscoveryWidget2025_2026 = () => {,
                          item.description.toLowerCase().includes(searchQuery.toLowerCase()) ||,
                          item.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase())),
     const matchesCategory = selectedCategory === 'all' || item.category === selectedCategory,
-    return matchesSearch && matchesCategory,
+    return matchesSearch && matchesCategory;
   }),
-  const sortedContent = [...filteredContent].sort((ab) => {,
+  const sortedContent = [...filteredContent].sort((ab) : any => {,
     switch (sortBy) {,
       case 'trending':,
         return b.views - a.views,
@@ -169,14 +169,14 @@ const InteractiveContentDiscoveryWidget2025_2026 = () => {,
         return b.likes - a.likes,
       default: return 0}
   }),
-  const getTypeIcon = (type) => {,
+  const getTypeIcon = (type) : any => {,
     switch (type) {,
-      case 'video': return Play,
-      case 'interactive': return Zap,
-      case 'guide': return Bookmark,
+      case 'video': return Play;
+      case 'interactive': return Zap;
+      case 'guide': return Bookmark;
       default: return Eye}
   },
-  const getCategoryIcon = (categoryId) => {,
+  const getCategoryIcon = (categoryId) : any => {,
     const category = categories.find(cat => cat.id === categoryId),
     return category ? category.icon : Grid,
   },
@@ -264,7 +264,7 @@ const InteractiveContentDiscoveryWidget2025_2026 = () => {,
             : 'grid-cols-1'}`}
       >,
         <div>,
-          {sortedContent.map((itemindex) => {,
+          {sortedContent.map((itemindex) : any => {,
             const TypeIcon = getTypeIcon(item.type),
             const CategoryIcon = getCategoryIcon(item.category),
             return (,
@@ -481,5 +481,5 @@ const InteractiveContentDiscoveryWidget2025_2026 = () => {,
       </div>,
     </div>,
   ),
-export default InteractiveContentDiscoveryWidget2025_2026,
-}
+export default InteractiveContentDiscoveryWidget2025_2026;
+  }

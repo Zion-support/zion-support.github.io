@@ -3,7 +3,7 @@ const NewsletterSignup: React.FC = () => {,
   const [email, setEmail] = useState(''),
   const [isSubscribed, setIsSubscribed] = useState(false),
   const [isLoading, setIsLoading] = useState(false),
-  const handleSubmit = async (e: React.FormEvent) => {,
+  const handleSubmit = async (e: React.FormEvent) : any => {,
     e.preventDefault(),
     setIsLoading(true),
     // Simulate API call,
@@ -23,8 +23,8 @@ const NewsletterSignup: React.FC = () => {,
         <p className="text-lg opacity-90">,
           You're now subscribed to our exclusive newsletter. Get ready for the latest breakthroughs in AI, quantum computing, and neural interfaces.,
         </p>,
-      </div>),
-  }
+      </div>);
+};
   return (,
     <div,
       whileInView={{ opacity: 1, y: 0 }}
@@ -89,5 +89,5 @@ const NewsletterSignup: React.FC = () => {,
       </div>,
     </div>,
   ),
-export default NewsletterSignup,
-}
+export default NewsletterSignup;
+  }'

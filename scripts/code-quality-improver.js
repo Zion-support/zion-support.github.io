@@ -17,22 +17,22 @@ console.log('🔧 Starting Code Quality Improvements...');
 // 1. Fix common syntax errors in TypeScript/JavaScript files
 const fixSyntaxErrors = (filePath) => {
   try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    let fixed = false;
+    let content = fs.readFileSync(filePath, 'utf8'),
+    let fixed = false,
     
     // Fix common syntax errors
     const fixes = [
       // Fix missing semicolons
-      { pattern: /(\w+)\s*$/gm, replacement: '$1;' },
+      { pattern: /(\w+)\s*$/gm, replacement: '$1,' },
       // Fix missing commas in objects
       { pattern: /(\w+)\s*\n\s*(\w+)/gm, replacement: '$1,\n  $2' },
       // Fix missing imports
-      { pattern: /import\s+{\s*([^}]+)\s*}\s+from\s+['"]([^'"]+)['"];?\s*$/gm, replacement: 'import { $1 } from "$2";' },
+      { pattern: /import\s+{\s*([^}]+)\s*}\s+from\s+['"]([^'"]+)['"],?\s*$/gm, replacement: 'import { $1 } from "$2",' },
       // Fix React component syntax
       { pattern: /export\s+const\s+(\w+)\s*=\s*\(\s*\)\s*=>\s*{/gm, replacement: 'export const $1 = () => {' },
       // Fix missing closing braces
       { pattern: /(\w+)\s*{\s*([^}]*)\s*$/gm, replacement: '$1 {\n  $2\n}' }
-    ];
+    ],
     
     fixes.forEach(fix => {
       const newContent = content.replace(fix.pattern, fix.replacement);
@@ -97,7 +97,7 @@ const createOptimizedTemplates = () => {
     'src/components/OptimizedButton.tsx': `import React from 'react';
 
 interface ButtonProps {
-  children: React.ReactNode;
+  children: React.ReactNode,
   onClick?: () => void;
   variant?: 'primary' | 'secondary';
   disabled?: boolean;
@@ -127,8 +127,8 @@ OptimizedButton.displayName = 'OptimizedButton';
     'src/components/OptimizedCard.tsx': `import React from 'react';
 
 interface CardProps {
-  title: string;
-  children: React.ReactNode;
+  title: string,
+  children: React.ReactNode,
   className?: string;
 }
 
@@ -172,7 +172,7 @@ export const useOptimizedFetch = <T>(
       const response = await fetch(url);
       if (!response.ok) {
         throw new Error(\`HTTP error! status: \${response.status}\`);
-      }
+};
       const result = await response.json();
       setData(result);
     } catch (err) {
@@ -189,7 +189,7 @@ export const useOptimizedFetch = <T>(
   }, [fetchData, options.immediate]);
 
   return { data, loading, error, refetch: fetchData };
-};
+  };
 `
   };
   
@@ -199,10 +199,9 @@ export const useOptimizedFetch = <T>(
     
     if (!fs.existsSync(dir)) {
       fs.mkdirSync(dir, { recursive: true });
-    }
-    
+};
     fs.writeFileSync(fullPath, content);
-    console.log(`✅ Created optimized template: ${filePath}`);
+    console.log(`✅ Created optimized template: ${filePath}`),
   });
 };
 
@@ -230,7 +229,7 @@ const processFiles = (dir, extensions = ['.tsx', '.ts', '.jsx', '.js']) => {
   });
   
   return { fixed: fixedCount, optimized: optimizedCount };
-};
+  };
 
 // Main execution
 console.log('🔍 Scanning for files to improve...');
@@ -276,7 +275,7 @@ fs.writeFileSync(
 console.log('✅ Updated TypeScript configuration');
 
 console.log('🎉 Code quality improvements completed!');
-console.log('📊 Next steps:');
+console.log('📊 Next steps: '),
 console.log('1. Run "npm run type-check" to verify TypeScript');
 console.log('2. Run "npm run lint" to check for remaining issues');
-console.log('3. Test the optimized components');
+console.log('3. Test the optimized components');}}})'"

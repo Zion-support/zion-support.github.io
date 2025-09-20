@@ -1,4 +1,4 @@
-export default function Page() {
+export default function Page() : any {
   return (
     <main className="prose mx-auto px-6 py-16">
       <h1>AI 2026: Production Evidence Hub — Starter Guide</h1>

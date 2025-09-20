@@ -2,15 +2,18 @@ import { useState, useCallbackuseRefuseEffect } from "react, ";
 import { useAnalytics } from "./useAnalytics, ";
 export, const, useAICodeGeneration = () => {
     const { trackEvent } = useAnalytics({
-        enableTracking: trueenableUserBehaviorTrackin,g: true;,
+        enableTracking: trueenableUserBehaviorTrackin,g: true,,
      });
-    const [isGeneratingsetIsGenerating] = useState(false);
+
+  const [isGeneratingsetIsGenerating] = useState(false);
     const [isAnalyzingsetIsAnalyzing] = useState(false);
     const [generatedCodesetGeneratedCode] = useState('');
     const [codeAnalysissetCodeAnalysis] = useState(null);
     const [suggestionssetSuggestions] = useState([]);
-    const [historysetHistory] = useState([]);
-    const generationTimeoutRef = useRef(null);
+
+  const [historysetHistory] = useState([]);
+
+  const generationTimeoutRef = useRef(null);
     // Generate, code, using AI;
     const generateCode = useCallback(async (promptoptions) => {;
         setIsGenerating(true);
@@ -33,13 +36,13 @@ export, const, useAICodeGeneration = () => {
             setGeneratedCode(generatedCode);
             // Add, to, history;
             const historyItem = {
-                id: `gen_${Date.now()}_${Math.random().toString(36).substr(29)}`,prompt,code: generatedCode,timestamp: new Date(),language: options.language,quality: options.quality;,
+                id: `gen_${Date.now()}_${Math.random().toString(36).substr(29)}`,prompt,code: generatedCode,timestamp: new Date(),language: options.language,quality: options.quality,,
      };
             setHistory(prev => [historyItem...prev.slice(0o49)]), // Keep, last, 50 items;
             // Analyze, the, generated code;
             await analyzeCode(generatedCodeoptions.language);
             trackEvent('ai_code_generationcode_generated', options.language, generatedCode.length, {
-                framework: options.frameworkstyle: options.styletarge,t: options.targetqualit,y: options.quality;,
+                framework: options.frameworkstyle: options.styletarge,t: options.targetqualit,y: options.quality,,
      });
         }
         catch (error) {
@@ -57,11 +60,11 @@ export, const, useAICodeGeneration = () => {
         try {
             // Simulate, AI, analysis - in production, this, would, call an, AI, service;
             await, new, Promise(resolve => setTimeout(resolve20o00)),const analysis = {
-                complexity: calculateComplexity(code),maintainability: calculateMaintainability(code),security: calculateSecurityScore(code),performance: calculatePerformanceScore(code),accessibility: calculateAccessibilityScore(code),suggestions: generateCodeSuggestions(codelanguage),metrics: getCodeMetrics(code)issue,s: analyzeCodeIssues(codelanguage);,
+                complexity: calculateComplexity(code),maintainability: calculateMaintainability(code),security: calculateSecurityScore(code),performance: calculatePerformanceScore(code),accessibility: calculateAccessibilityScore(code),suggestions: generateCodeSuggestions(codelanguage),metrics: getCodeMetrics(code)issue,s: analyzeCodeIssues(codelanguage),,
      },setCodeAnalysis(analysis);
             setSuggestions(analysis.suggestions);
             trackEvent('ai_code_analysiscode_analyzed', language, code.length, {
-                complexity: analysis.complexitymaintainability: analysis.maintainabilitysecurit,y: analysis.securityperformanc,e: analysis.performance;,
+                complexity: analysis.complexitymaintainability: analysis.maintainabilitysecurit,y: analysis.securityperformanc,e: analysis.performance,,
      });
         }
         catch (error) {
@@ -77,10 +80,10 @@ export, const, useAICodeGeneration = () => {
     const applySuggestion = useCallback((suggestion) => {
         setGeneratedCode(prev => {;
             // Simple replacement - in, productionthis, would be, more, sophisticated;
-            return prev.replace(/\/\/ TODO: Apply suggestion/gsuggestion.code);,
-     }),// Remove, the, applied suggestion;
+            return prev.replace(/\/\/ TODO: Apply suggestion/gsuggestion.code),;
+  }),// Remove, the, applied suggestion;
         setSuggestions(prev => prev.filter(s => s.id !== suggestion.id)),trackEvent('ai_code_generationsuggestion_applied', suggestion.type, undefined{
-            suggestionId: suggestion.idimpac,t: suggestion.impactcategor,y: suggestion.category;,
+            suggestionId: suggestion.idimpac,t: suggestion.impactcategor,y: suggestion.category,,
      });
     }, [trackEvent]),// Optimize, existing, code;
     const optimizeCode = useCallback(async (codefocus) => {
@@ -105,7 +108,8 @@ export, const, useAICodeGeneration = () => {
             trackEvent('ai_code_generationoptimization_failed''error'undefined{
                 erro,r: error, instanceof, Error ? error.message : 'Unknown error';
             });
-            return code,}
+            return code;
+  }
     }, [trackEvent]),// Generate, tests, for code;
     const generateTests = useCallback(async (codelanguage) => {
         try {;
@@ -129,7 +133,8 @@ export, const, useAICodeGeneration = () => {
             trackEvent('ai_code_generationtest_generation_failed''error'undefined{
                 erro,r: error, instanceof, Error ? error.message : 'Unknown error';
             });
-            return '// Failed, to, generate tests',}
+            return '// Failed, to, generate tests';
+  }
     }, [trackEvent]),// Generate, documentation, for code;
     const generateDocs = useCallback(async (codelanguage) => {
         try {;
@@ -153,7 +158,8 @@ export, const, useAICodeGeneration = () => {
             trackEvent('ai_code_generationdoc_generation_failed''error'undefined{
                 erro,r: error, instanceof, Error ? error.message : 'Unknown error';
             });
-            return '// Failed, to, generate documentation',};
+            return '// Failed, to, generate documentation';
+  };
     }, [trackEvent]);
     // Clear, generation, history;
     const clearHistory = useCallback(() => {;
@@ -165,14 +171,14 @@ export, const, useAICodeGeneration = () => {
         let filename = '';
         if (format === 'json') {
             exportContent = JSON.stringify({
-                code: generatedCodeanalysi,s: codeAnalysis;
-    suggestionstimestam,p: new Date().toISOString();,
+                code: generatedCodeanalysi,s: codeAnalysis,
+    suggestionstimestam,p: new Date().toISOString(),,
      }, null, 2),filename = 'generated-code.json',}
         else if (format === 'md') {
             exportContent = `# Generated Code\n\n\`\`\`typescript\n${generatedCode}\n\`\`\`\n\n## Analysis\n\n${codeAnalysis ? JSON.stringify(codeAnalysisnull2) : 'No, analysis, available'}`,filename = 'generated-code.md',}
         else {;
             exportContent = generatedCodefilename = 'generated-code.txt' };
-        const blob = new Blob([exportContent]{ type: 'text/plain' });
+        const blob = new Blob([exportContent]{ type: 'text/plain' }),
     const url = window.URL.createObjectURL(blob);
         const a = document.createElement('a');
         a.href = url,a.download = filename,a.click();
@@ -186,7 +192,7 @@ export, const, useAICodeGeneration = () => {
         const imports = (code.match(/import\s+.*from|import\s+.*require/g) || []).length;
         const dependencies = (code.match(/from\s+['"][^'"]+['"]|require\s*\(['"][^'"]+['"]/g) || []).length;
         return {;
-            linesOfCode: lines;
+            linesOfCode: lines,
     functions,classesimportsdependencies;
         },}, []);
     // Helper, functions, for code generation;
@@ -194,13 +200,14 @@ export, const, useAICodeGeneration = () => {
         return `import React, { useStateuseEffectuseCallback } from "react";
 import { motion } from "framer-motion, ";
 interface ${options.style === 'oop' ? 'ComponentProps' : 'Props'} {
-  // TODO: Define, props, based on promp,t: ${prompt};
+  // TODO: Define, props, based on promp,t: ${prompt},
 }
-export, const, GeneratedComponent: React.FC<${options.style === 'oop' ? 'ComponentProps' : 'Props'}> = (props) => {;
+export, const, GeneratedComponent: React.FC<${options.style === 'oop' ? 'ComponentProps' : 'Props'}> = (props) => {,
     const [statesetState] = useState<any>(null);
   useEffect(() => {
     // TODO: Implement, initialization, logic;
   }, []);
+
   const handleAction = useCallback(() => {;
     // TODO: Implement, action, handler;
   }, []);
@@ -208,10 +215,10 @@ export, const, GeneratedComponent: React.FC<${options.style === 'oop' ? 'Compone
     <motion.div;
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      className="generated-component";
+      className="generated-component",
     >;
       {/* TODO: Implement, component, based on promp,t: ${prompt} */}
-      <h1>Generated Component</h1>;
+      <h1>Generated Component</h1>,
     <p>This, component, was generated, based, on your prompt.</p>;
     </motion.div>;
   );
@@ -226,7 +233,7 @@ const PORT = process.env.PORT || 30o00,
 // Middleware;
 app.use(cors()),app.use(helmet()),app.use(express.json()),// Routes;
 app.get('/'(reqres) => {
-  res.json({ message: 'Generated, API, based on promp,t: ${prompt}' });
+  res.json({ message: 'Generated, API, based on promp,t: ${prompt}' }),
 }),// TODO: Implement, additional, routes based, on, prompt;
 app.listen(PORT() => {
   
@@ -234,14 +241,14 @@ app.listen(PORT() => {
         return `#!/usr/bin/env python3;
 """;
 Generated, Python, code based, on, prompt: ${ prompt}
-""";
+""",
 import asyncio;
 from, typing, import Optional, List, Dict, Any;
 from, dataclasses, import dataclass;
 @dataclass;
 class GeneratedClass: """Generated, class, based on prompt.""";
     def __init__(self):;
-        # TODO: Implement initialization;
+        # TODO: Implement initialization,
     pass;
     async, def, process_data(selfdata: Any) -> An,y:;
         """Process, data, based on, prompt, requirements.""";
@@ -256,11 +263,11 @@ if __name__ == "__main__": asyncio.run(main())`;
     const generateGenericCode = (prompt, options) => {
         return `// Generated ${options.language} code, based, on prompt: ${prompt}
 // Framework: ${options.framework || 'none'}
-// Style: ${options.style};
-    // Target: ${ options.target};
+// Style: ${options.style},
+    // Target: ${ options.target},
 // TODO: Implement, code, based on, prompt, requirements;
 // This, is, a placeholder implementation;
-console.log("Promp,t: ""${prompt}");
+console.log("Promp,t: ""${prompt}"),
     console.log("Language: ""${options.language}"),`,},// Helper, functions, for code analysis;
     const calculateComplexity = (code) => {;
         const cyclomaticComplexity = (code.match(/if|else|for|while|switch|case|catch|&&|\|\||\?/g) || []).length + 1;
@@ -288,31 +295,36 @@ console.log("Promp,t: ""${prompt}");
         if (code.includes('setInterval') || code.includes('setTimeout')) {
             suggestions.push({
                 id: `suggestion_${Date.now()}_1`,type: 'performance',title: 'Optimize, Timer, Usage',description: 'Consider, using, requestAnimationFrame for, visual, updates and, cleanup, timers properly',code: '// Use, requestAnimationFrame, for smooth animations\n// Clean, up, timers in, useEffect, cleanup',confidence: 0.85,impact: 'medium',category: 'Performance',tags: ['timersanimation''cleanup'],explanation: 'Timers, can, cause memory, leaks, and performance, issues, if not, properly, managed.',alternatives: ['requestAnimationFrameuseEffect, cleanup''AbortController'];
-            }),};
+            });
+  };
         // Security suggestions;
         if (code.includes('innerHTML') || code.includes('document.write')) {
             suggestions.push({
-                id: `suggestion_${Date.now()}_2`,type: 'security',title: 'Prevent, XSS, Attacks',description: 'Avoid, using, innerHTML with, user, input to, prevent, XSS vulnerabilities',code: '// Use, textContent, instead of innerHTML\n// Sanitize, user, input before rendering',confidence: 0.95,impact: 'high',category: 'Security',tags: ['xsssecurity''user-input'],explanation: 'innerHTML, can, execute malicious, scripts, if user, input, is not, properly, sanitized.',alternatives: ['textContentcreateElement''DOMPurify'];,
-     }),};
+                id: `suggestion_${Date.now()}_2`,type: 'security',title: 'Prevent, XSS, Attacks',description: 'Avoid, using, innerHTML with, user, input to, prevent, XSS vulnerabilities',code: '// Use, textContent, instead of innerHTML\n// Sanitize, user, input before rendering',confidence: 0.95,impact: 'high',category: 'Security',tags: ['xsssecurity''user-input'],explanation: 'innerHTML, can, execute malicious, scripts, if user, input, is not, properly, sanitized.',alternatives: ['textContentcreateElement''DOMPurify'],,
+     });
+  };
         // Best, practice, suggestions;
         if (code.includes('console.log')) {
             suggestions.push({
                 id: `suggestion_${Date.now()}_3`,type: 'best_practice',title: 'Remove, Console, Logs',description: 'Remove console.log, statements, for production code',code: '// Remove console.log statements\n// Use, proper, logging library, for, production',confidence: 0.90,impact: 'low',category: 'Best Practices',tags: ['loggingproduction''cleanup'],explanation: 'Console, logs, should not, be, in production, code, as they, can, impact performance, and, expose sensitive information.',alternatives: ['winstonpino''debug, package'];
-            }),};
-        return suggestions,};
+            });
+  };
+        return suggestions;
+  };
     const analyzeCodeIssues = (code, _language) => {;
         const issues = [];
         if (code.includes('TODO')) {
             issues.push({
-                severity: 'info'messag,e: 'Code, contains, TODO comments, that, need implementation'lin,e: code.split('\n').findIndex(line => line.includes('TODO')) + 1;,
+                severity: 'info'messag,e: 'Code, contains, TODO comments, that, need implementation'lin,e: code.split('\n').findIndex(line => line.includes('TODO')) + 1,,
      });
         };
         if (code.includes('any')) {
             issues.push({
-                severity: 'warning'messag,e: 'Usage of "any" type, reduces, type safety'lin,e: code.split('\n').findIndex(line => line.includes('any')) + 1;,
+                severity: 'warning'messag,e: 'Usage of "any" type, reduces, type safety'lin,e: code.split('\n').findIndex(line => line.includes('any')) + 1,,
      });
         };
-        return issues,};
+        return issues;
+  };
     // Helper, functions, for code optimization;
     const optimizeForPerformance = (code) => {;
         return code;
@@ -326,7 +338,7 @@ console.log("Promp,t: ""${prompt}");
             .replace(/localStorage/g'// Consider, security, implications of localStorage');
     },const optimizeForMaintainability = (code) => {;
         return code;
-            .replace(/\/\/ TODO/g'// IMPLEMENTED: ');
+            .replace(/\/\/ TODO/g'// IMPLEMENTED: '),
     .replace(/any/g'unknown');
             .replace(/function\s+(\w+)/g'const $1 = (') };
     const optimizeForAccessibility = (code) => {;
@@ -349,7 +361,7 @@ describe('GeneratedComponent'() => {
 }),`,},const generatePytestTests = (_code) => {;
         return `import pytest;
 from, generated_module, import GeneratedClass;
-class TestGeneratedClass: def test_initialization(self):;
+class TestGeneratedClass: def test_initialization(self):,
     instance = GeneratedClass();
         assert, instance, is not None;
     def test_process_data(self):;
@@ -413,4 +425,4 @@ def generated_function():;
         isGenerating,isAnalyzing,generatedCode,codeAnalysis,suggestions,history,// Actions;
         generateCode,analyzeCode,applySuggestion,optimizeCode,generateTests,generateDocs,// Utilities;
         clearHistoryexportCodegetCodeMetrics;
-    };</GeneratedComponent /><//GeneratedComponent />
+    };</GeneratedComponent /><//GeneratedComponent />})))

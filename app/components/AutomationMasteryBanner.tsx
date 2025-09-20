@@ -1,5 +1,5 @@
 import React from 'react'
-const AutomationMasteryBanner: React.FC = () => {;
+const AutomationMasteryBanner: React.FC = () => {,
   return (
     <div>
       <h3 className="text-xl font-bold mb-4">AutomationMasteryBanner</h3>

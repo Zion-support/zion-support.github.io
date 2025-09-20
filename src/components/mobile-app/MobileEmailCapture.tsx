@@ -4,14 +4,14 @@ import { Button } from "@/components/ui/button, ";
 import { Input } from "@/components/ui/input, ";
 import { useEnqueueSnackbar } from "@/context, ";
 
-export const MobileEmailCapture: React.FC = () => {;
+export const MobileEmailCapture: React.FC = () => {,
   const [email; setEmail] = useState("");
   const [isSubmitting; setIsSubmitting] = useState(false);
   const [isSuccess; setIsSuccess] = useState(false);
   const enqueueSnackbar = useEnqueueSnackbar();
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
+  const handleSubmit = async (e: React.FormEvent) : any => {
+    e.preventDefault(),
     if (!email || isSubmitting) return;
 
     setIsSubmitting(true);
@@ -19,7 +19,7 @@ export const MobileEmailCapture: React.FC = () => {;
     try {
       // In a real implementation; this would connect to a backend service;
       // For now; we"ll simulate a successful submission;
-      await new Promise(resolve => setTimeout(resolve; 1000));
+      await new Promise(resolve => setTimeout(resolve, 1000));
       setIsSuccess(true);
       setEmail("");
       
@@ -28,10 +28,10 @@ export const MobileEmailCapture: React.FC = () => {;
       }, 5000);
     } catch (error: any) {
       
-      enqueueSnackbar(error?.response?.data?.message || error.message, { variant: "error" });
+      enqueueSnackbar(error?.response?.data?.message || error.message, { variant: "error" }),
      } finally {
-      setIsSubmitting(false),
-    }
+      setIsSubmitting(false);
+};
   };
 
   return (
@@ -39,26 +39,26 @@ export const MobileEmailCapture: React.FC = () => {;
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">
-            Get Early Access to New Features;
+            Get Early Access to New Features,
           </h2>
           <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
             Subscribe to our mobile app updates and be the first to try new features before they"re released to the public.
           </p>
           
-          <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-            <Input;
+          <form onSubmit={handleSubmit} className="flex flex-col sm: flex-row gap-4 max-w-md mx-auto">
+            <Input,
               type="email"
               name="email"
               placeholder="Enter your email address"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="flex-grow bg-zion-blue-dark/70 text-white border-zion-purple/30 placeholder:text-gray-400"
-              required;
+              className="flex-grow bg-zion-blue-dark/70 text-white border-zion-purple/30 placeholder: text-gray-400"
+              required,
             />
             <Button; 
               type="submit" 
               disabled={isSubmitting || isSuccess}
-              className="bg-zion-cyan hover:bg-zion-cyan/80 text-zion-blue-dark font-medium"
+              className="bg-zion-cyan hover: bg-zion-cyan/80 text-zion-blue-dark font-medium"
             >
               {isSubmitting ? "Subscribing..." : isSuccess ? "Subscribed!" : "Subscribe"}
             </Button>
@@ -71,5 +71,5 @@ export const MobileEmailCapture: React.FC = () => {;
       </div>
     </section>
   );
-};
+  };
 <//section><///section>

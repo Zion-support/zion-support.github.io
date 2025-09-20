@@ -3,9 +3,9 @@
 /// <reference types="react-dom" />
 
 interface ImportMetaEnv {
-  readonly VITE_APP_TITLE: string;
-  readonly MODE: string;
-  readonly DEV: boolean;
+  readonly VITE_APP_TITLE: string,
+  readonly MODE: string,
+  readonly DEV: boolean,
   readonly PROD: boolean,
 }
 

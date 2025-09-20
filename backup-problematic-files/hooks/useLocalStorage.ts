@@ -4,21 +4,21 @@ interface UseLocalStorageProps {,
   // Add props here as needed
 }
 ,
-export const useLocalStorage = <T>(key: string, initialValue: T) => {,
+export const useLocalStorage = <T>(key: string, initialValue: T) : any => {,
     try {,
 :backup-problematic-files/hooks/useLocalStorage.ts,
       const item = window.localStorage.getItem(key),
       return item ? JSON.parse(item) : initialValue
     } catch (error) {}
   }),
-  const setValue = (value: T | ((val: T) => T)) => {,
+  const setValue = (value: T | ((val: T) => T)) : any => {,
     try {,
       const valueToStore =,
         value instanceof Function ? value(storedValue) : value,
       setStoredValue(valueToStore),
       if (typeof window !== 'undefined') {,
-        window.localStorage.setItem(key, JSON.stringify(valueToStore)),
-      }
+        window.localStorage.setItem(key, JSON.stringify(valueToStore));
+};
     } catch (error) {},
   return [storedValue, setValue] as const,
 }
@@ -28,5 +28,5 @@ export const useLocalStorage = <T>(key: string, initialValue: T) => {,
   return [storedValue, setValue] as const},
 },
 },
-},
-},
+};
+  },

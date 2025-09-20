@@ -4,13 +4,13 @@ const fs = require("fs"),
 const path = require("path"),
 const { spawnSync } = require("child_process"),
 function nowIso() {,
-  return new Date().toISOString(),
-}
+  return new Date().toISOString();
+};
 ,
 function log(message) {,
   const line = `[${nowIso()}] [REDUNDANCY-BUILD-MONITOR] ${message}`,
-  console.log(line),
-}
+  console.log(line);
+};
 ,
 function run(command, args, options = {}) {,
   const execCwd = options.cwd || process.cwd(),
@@ -26,8 +26,8 @@ function run(command, args, options = {}) {,
   if (options.verbose) {,
     log(`$ ${command} ${args.join(" ")}`),
     if (stdout) console.log(stdout),
-    if (stderr) console.error(stderr),
-  }
+    if (stderr) console.error(stderr);
+};
   return { status, stdout, stderr },
 }
 ,
@@ -118,8 +118,8 @@ function checkFileSystem() {,
     ],
     const fileStatus = {},
     for (const file of criticalFiles) {,
-      fileStatus[file] = fs.existsSync(path.join(process.cwd(), file)),
-    }
+      fileStatus[file] = fs.existsSync(path.join(process.cwd(), file));
+};
 ,
     // Check automation directory,
     const automationDir = path.join(process.cwd(), "automation"),
@@ -161,16 +161,16 @@ function generateBuildReport(buildHealth, dependencies, gitStatus, fileSystem) {
   }
 ,
   if (!buildHealth.buildArtifacts?.nextBuild) {,
-    report.buildMonitor.summary.issues.push("Missing Next.js build artifacts"),
-  }
+    report.buildMonitor.summary.issues.push("Missing Next.js build artifacts");
+};
 ,
   if (dependencies.hasVulnerabilities) {,
-    report.buildMonitor.summary.issues.push("Dependencies have security vulnerabilities"),
-  }
+    report.buildMonitor.summary.issues.push("Dependencies have security vulnerabilities");
+};
 ,
   if (gitStatus.hasChanges) {,
-    report.buildMonitor.summary.issues.push("Uncommitted changes detected"),
-  }
+    report.buildMonitor.summary.issues.push("Uncommitted changes detected");
+};
 ,
   if (report.buildMonitor.summary.issues.length > 0) {,
     report.buildMonitor.summary.overallHealth = "attention_needed",
@@ -237,11 +237,11 @@ async function commitAndPush() {,
     if (pushResult.status === 0) {,
       log("Changes pushed successfully via redundancy."),
     } else {,
-      log(`Push failed: ${pushResult.stderr}`),
-    }
+      log(`Push failed: ${pushResult.stderr}`);
+};
   } catch (err) {,
-    log(`Commit/push error: ${String(err)}`),
-  }
+    log(`Commit/push error: ${String(err)}`);
+};
 }
 ,
 async function main() {,
@@ -260,13 +260,13 @@ async function main() {,
     process.exit(0),
   } catch (err) {,
     log(`Build monitor redundancy failed: ${String(err)}`),
-    process.exit(1),
-  }
+    process.exit(1);
+};
 }
 ,
 if (require.main === module) {,
-  main(),
-}
+  main();
+  }
 ,
 module.exports = {,
   main,

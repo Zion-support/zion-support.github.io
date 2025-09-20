@@ -25,13 +25,13 @@ export function useAutoTranslate(text: string, targets: string[], debounceMs = 6
         if (!cancelled) setTranslations(res),
       } catch (e: any) {,
         if (!cancelled) setError(e?.message || 'Translation failed')} finally {,
-        if (!cancelled) setLoading(false),
-      }
+        if (!cancelled) setLoading(false);
+};
     }, debounceMs),
     return () => {,
       cancelled = true,
       clearTimeout(timer),
     },
   }, [key, debounceMs]),
-  return { translations, loading, error },
-}
+  return { translations, loading, error };
+  }

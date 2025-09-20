@@ -17,6 +17,6 @@ const PerformanceOptimizationChat: NextPage = () => {
       </main>
     </div>
   );
-};
+  };
 
 export default PerformanceOptimizationChat;

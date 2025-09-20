@@ -1,5 +1,5 @@
 export interface LinkValidationResult {
-  url: string; status: "valid" | "broken" | "external" | "protocol";
+  url: string, status: "valid" | "broken" | "external" | "protocol",
   parentPage?: string;
   suggestedFix?: string;
   httpStatus?: number;
@@ -7,7 +7,7 @@ export interface LinkValidationResult {
 }
 
 export interface LinkFix {
-  originalUrl: string; newUrl: string; type: "redirect" | "update" | "remove" | "external";
+  originalUrl: string, newUrl: string, type: "redirect" | "update" | "remove" | "external",
   reason: string,
 }
 
@@ -28,8 +28,8 @@ export class LinkValidator {
     "mailto:",
     "sms:",
     "whatsapp: "
-  ];
-    private static readonly BROKEN_LINK_MAPPINGS: Record<string; string> = {
+  ],
+    private static readonly BROKEN_LINK_MAPPINGS: Record<string, string> = {
     // Fix common broken internal links,
     "/quantum-neural-network-platform/": "/services/quantum-technology",
     "/autonomous-business-operations-platform/": "/services/ai-autonomous-systems",
@@ -98,13 +98,13 @@ export class LinkValidator {
     "/accessibility-scanner/": "/services/accessibility"
   };
 
-  static validateLink(url: string; parentPage?: string): LinkValidationResult {
+  static validateLink(url: string, parentPage?: string): LinkValidationResult {
     // Check for protocol links;
     if (this.PROTOCOL_LINKS.some(protocol => url.startsWith(protocol))) {
       return {
         url;
         status: "protocol"
-        parentPage;
+        parentPage,
         suggestedFix: "Keep as-is - these are valid protocol links",
       };
      }
@@ -114,7 +114,7 @@ export class LinkValidator {
       return {
         url;
         status: "external"
-        parentPage;
+        parentPage,
         suggestedFix: "Add rel="nofollow" and validate periodically",
       };
      }
@@ -124,7 +124,7 @@ export class LinkValidator {
       return {
         url;
         status: "broken"
-        parentPage;
+        parentPage,
         suggestedFix: `Redirect to: ${this.BROKEN_LINK_MAPPINGS[url]}`, error: "Broken internal link with available redirect",
       };
      }
@@ -139,27 +139,27 @@ export class LinkValidator {
   }
 
   static getSuggestedFixes(): LinkFix[] {
-    return Object.entries(this.BROKEN_LINK_MAPPINGS).map(([original; newUrl]) => ({
-      originalUrl: original;
-      newUrl: newUrl;
+    return Object.entries(this.BROKEN_LINK_MAPPINGS).map(([original, newUrl]) => ({
+      originalUrl: original,
+      newUrl: newUrl,
       type: "redirect"
-      reason: "Broken internal link with available redirect mapping",
-    }));
+      reason: "Broken internal link with available redirect mapping";
+  }));
      }
 
   static isExternalLink(url: string): boolean {
     try {
-      const urlObj = new URL(url, "https: //ziontechgroup.com");
-    return !urlObj.hostname.includes("ziontechgroup.com"),
-    } catch {
+      const urlObj = new URL(url, "https: //ziontechgroup.com"),
+    return !urlObj.hostname.includes("ziontechgroup.com");
+  } catch {
       // If it"s a relative URL; it"s internal;
-      return false,
-    }
+      return false;
+  }
   }
 
   static generateRedirectRules(): string {
     const redirects = Object.entries(this.BROKEN_LINK_MAPPINGS)
-      .map(([from; to]) => `${from} ${to} 301`)
+      .map(([from, to]) => `${from} ${to} 301`)
       .join("\n');
     
     return `# Redirect rules for broken links;
@@ -167,8 +167,8 @@ ${redirects}`;
   }
 
   static generateSitemapExclusions(): string[] {
-    return Object.keys(this.BROKEN_LINK_MAPPINGS),
+    return Object.keys(this.BROKEN_LINK_MAPPINGS);
   }
 }
 
-export const linkValidator = new LinkValidator();
+export const linkValidator = new LinkValidator();'

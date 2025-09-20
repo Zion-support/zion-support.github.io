@@ -2,13 +2,13 @@
 import React, { useEffect } from 'react';
 
 interface ScreenReaderAnnouncementsProps {
-  announcements: string[];
+  announcements: string[],
   priority?: 'polite' | 'assertive';
 };
 export const ScreenReaderAnnouncements: React.FC<ScreenReaderAnnouncementsProps> = ({
   announcements,
   priority = 'polite'
-}) => {
+}) : any => {
   return (
     <div
       aria-live={priority}
@@ -19,8 +19,8 @@ export const ScreenReaderAnnouncements: React.FC<ScreenReaderAnnouncementsProps>
         left: '-10000px',
         width: '1px',
         height: '1px',
-        overflow: 'hidden',
-      }}
+        overflow: 'hidden';
+  }}
     >
       {announcements.map((announcement, index) => (
         <div key={index}>{announcement}</div>

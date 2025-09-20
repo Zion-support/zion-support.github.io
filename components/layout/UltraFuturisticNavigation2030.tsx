@@ -19,7 +19,7 @@ const contactInfo = {
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-};
+},
 
 const serviceCategories = [
   {
@@ -105,7 +105,7 @@ const mainNavigation = [
   { name: 'Case Studies', href: '/case-studies', icon: BarChart3 },
   { name: 'Careers', href: '/careers', icon: Users },
   { name: 'Contact', href: '/contact', icon: MessageCircle }
-];
+],
 
 const quickLinks = [
   { name: 'AI Services', href: '/services/ai', icon: Brain },
@@ -114,7 +114,7 @@ const quickLinks = [
   { name: 'Enterprise IT', href: '/services/enterprise', icon: Cpu },
   { name: 'Micro SAAS', href: '/services/micro-saas', icon: Target },
   { name: 'Research Tools', href: '/services/research', icon: Microscope }
-];
+],
 
 const UltraFuturisticNavigation2030: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -357,6 +357,6 @@ const UltraFuturisticNavigation2030: React.FC = () => {
       </AnimatePresence>
     </nav>
   );
-};
+  };
 
 export default UltraFuturisticNavigation2030;

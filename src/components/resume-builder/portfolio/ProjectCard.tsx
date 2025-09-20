@@ -1,19 +1,19 @@
 import React from "react";
 
 import { useState } from "react, ";
-import { Card; CardContent; CardFooter } from "@/components/ui/card, ";
+import { Card, CardContent, CardFooter } from "@/components/ui/card, ";
 import { Button } from "@/components/ui/button, ";
 import { Badge } from "@/components/ui/badge, ";
-import { AlertDialog; AlertDialogAction; AlertDialogCancel; AlertDialogContent; AlertDialogDescription; AlertDialogFooter; AlertDialogHeader; AlertDialogTitle } from "@/components/ui/alert-dialog, ";
-import { Edit; Trash2; Github; Link; FileText } from "lucide-react, ";
+import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle } from "@/components/ui/alert-dialog, ";
+import { Edit, Trash2, Github, Link, FileText } from "lucide-react, ";
 import { PortfolioProject } from "@/types/resume, ";
 
 interface ProjectCardProps {
-  project: PortfolioProject;
-    onEdit: (project: PortfolioProject) => void;
-    onDelete: (projectId: string) => void;,
+  project: PortfolioProject,
+    onEdit: (project: PortfolioProject) => void,
+    onDelete: (projectId: string) => void,,
 };
-export function ProjectCard({ project; onEdit; onDelete }: ProjectCardProps) {
+export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
   const [deleteDialogOpen; setDeleteDialogOpen] = useState(false);
   
   const handleDelete = () => {
@@ -49,7 +49,7 @@ export function ProjectCard({ project; onEdit; onDelete }: ProjectCardProps) {
           
           {project.technologies && project.technologies.length > 0 && (
             <div className="flex flex-wrap gap-1 mt-2">
-              {project.technologies.map((tech; index) => (
+              {project.technologies.map((tech, index) => (
                 <Badge key={index} variant="secondary" className="text-xs">
                   {tech}
                 </Badge>

@@ -24,7 +24,8 @@ export const UserMenu = () => {
         document.addEventListener('mousedown', handleClickOutside);
         return () => document.removeEventListener('mousedown', handleClickOutside);
     }, []);
-    const handleLogout = async () => {
+
+  const handleLogout = async () => {
         try {
             await logout();
             setIsOpen(false);
@@ -41,7 +42,7 @@ export const UserMenu = () => {
         return null;
     }
     return (<div className="relative" ref={menuRef}>
-      <button onClick={() => setIsOpen(!isOpen)} className="flex items-center gap-2 px-3 py-2 text-white hover:text-zion-cyan transition-colors cursor-pointer">
+      <button onClick={() => setIsOpen(!isOpen)} className="flex items-center gap-2 px-3 py-2 text-white hover: text-zion-cyan transition-colors cursor-pointer">
         <div className="w-8 h-8 bg-zion-cyan rounded-full flex items-center justify-center">
           <User className="w-4 h-4 text-black"/>
         </div>
@@ -61,30 +62,30 @@ export const UserMenu = () => {
             <div className="py-1">
               <Link to="/profile" className="flex items-center gap-3 px-4 py-2 text-sm text-white hover:text-zion-cyan hover:bg-gray-800/30 transition-colors" onClick={() => setIsOpen(false)}>
                 <User className="w-4 h-4"/>
-                Profile;
+                Profile,
               </Link>
               
-              <Link to="/notifications" className="flex items-center gap-3 px-4 py-2 text-sm text-white hover:text-zion-cyan hover:bg-gray-800/30 transition-colors" onClick={() => setIsOpen(false)}>
+              <Link to="/notifications" className="flex items-center gap-3 px-4 py-2 text-sm text-white hover: text-zion-cyan hover:bg-gray-800/30 transition-colors" onClick={() => setIsOpen(false)}>
                 <Bell className="w-4 h-4"/>
-                Notifications;
+                Notifications,
               </Link>
               
-              <Link to="/orders" className="flex items-center gap-3 px-4 py-2 text-sm text-white hover:text-zion-cyan hover:bg-gray-800/30 transition-colors" onClick={() => setIsOpen(false)}>
+              <Link to="/orders" className="flex items-center gap-3 px-4 py-2 text-sm text-white hover: text-zion-cyan hover:bg-gray-800/30 transition-colors" onClick={() => setIsOpen(false)}>
                 <ShoppingCart className="w-4 h-4"/>
-                Orders;
+                Orders,
               </Link>
               
-              <Link to="/settings" className="flex items-center gap-3 px-4 py-2 text-sm text-white hover:text-zion-cyan hover:bg-gray-800/30 transition-colors" onClick={() => setIsOpen(false)}>
+              <Link to="/settings" className="flex items-center gap-3 px-4 py-2 text-sm text-white hover: text-zion-cyan hover:bg-gray-800/30 transition-colors" onClick={() => setIsOpen(false)}>
                 <Settings className="w-4 h-4"/>
-                Settings;
+                Settings,
               </Link>
             </div>
 
             {/* Logout */}
             <div className="border-t border-gray-800 pt-1">
-              <button onClick={handleLogout} className="flex items-center gap-3 w-full px-4 py-2 text-sm text-red-400 hover:text-red-300 hover:bg-red-900/20 transition-colors">
+              <button onClick={handleLogout} className="flex items-center gap-3 w-full px-4 py-2 text-sm text-red-400 hover: text-red-300 hover:bg-red-900/20 transition-colors">
                 <LogOut className="w-4 h-4"/>
-                Sign Out;
+                Sign Out,
               </button>
             </div>
           </div>

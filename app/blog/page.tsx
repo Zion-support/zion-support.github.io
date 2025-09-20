@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   }
 }
 
-export default function BlogPage() {
+export default function BlogPage() : any {
   const blogPosts = [
     {
       title: 'The Future of AI: 2025 Predictions and Beyond',
