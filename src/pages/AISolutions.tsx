@@ -1,5 +1,5 @@
 import React from "react";
-export default function AiSolutions() {
+export default function AiSolutions() {;
   return (
     <div className="min-h-screen flex items-center justify-center bg-slate-900 text-white p-8">
       <div className="max-w-2xl text-center">
@@ -7,5 +7,5 @@ export default function AiSolutions() {
         <p className="text-slate-300">Explore our AI-powered solutions for analytics, automation, and intelligence.</p>
       </div>
     </div>
-  );
+  )
 }

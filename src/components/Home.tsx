@@ -213,7 +213,7 @@ const Home: React.FC = () => {
                   ].map((news, index) => (
                     <div
                       key={index}
-                      className="bg-gray-800/50 backdrop-blur-sm border border-purple-500/30 rounded-xl p-6 hover: bg-gray-700/50 transition-all duration-300 transform hover:scale-105 cursor-pointer"
+                      className="bg-gray-800/50 backdrop-blur-sm border border-purple-500/30 rounded-xl p-6 hover:bg-gray-700/50 transition-all duration-300 transform hover:scale-105 cursor-pointer"
                     >
                       <div className="flex items-center justify-between mb-4">
                         <span className="text-sm font-semibold text-purple-400 bg-purple-400/10 px-3 py-1 rounded-full">

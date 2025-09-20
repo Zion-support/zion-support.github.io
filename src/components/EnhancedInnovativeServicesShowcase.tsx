@@ -9,7 +9,7 @@ export const EnhancedInnovativeServicesShowcase = () => {
             Enhanced <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">Innovative Services</span>
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Discover our next-generation technology solutions designed for the future
+            Discover our next-generation technology solutions designed for the future;
           </p>
         </div>
 
@@ -19,7 +19,7 @@ export const EnhancedInnovativeServicesShowcase = () => {
             <h3 className="text-xl font-semibold text-white mb-3">Digital Transformation</h3>
             <p className="text-gray-300 mb-4">Complete business transformation with cutting-edge technology</p>
             <Link to="/services/digital-transformation" className="text-cyan-400 hover:text-cyan-300">
-              Learn More →
+              Learn More →;
             </Link>
           </div>
 
@@ -28,7 +28,7 @@ export const EnhancedInnovativeServicesShowcase = () => {
             <h3 className="text-xl font-semibold text-white mb-3">Cloud Solutions</h3>
             <p className="text-gray-300 mb-4">Scalable cloud infrastructure and DevOps automation</p>
             <Link to="/services/cloud-devops" className="text-cyan-400 hover:text-cyan-300">
-              Learn More →
+              Learn More →;
             </Link>
           </div>
 
@@ -37,12 +37,12 @@ export const EnhancedInnovativeServicesShowcase = () => {
             <h3 className="text-xl font-semibold text-white mb-3">Cybersecurity</h3>
             <p className="text-gray-300 mb-4">Advanced security and compliance solutions</p>
             <Link to="/services/cybersecurity" className="text-cyan-400 hover:text-cyan-300">
-              Learn More →
+              Learn More →;
             </Link>
           </div>
         </div>
       </div>
     </section>
   )
-};
+}
 export default EnhancedInnovativeServicesShowcase;

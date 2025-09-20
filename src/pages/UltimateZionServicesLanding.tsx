@@ -6,5 +6,5 @@ const UltimateZionServicesLanding: React.FC = () => {
       <UltimateZionServicesShowcase />
     </div>
   )
-};
+}
 export default UltimateZionServicesLanding;

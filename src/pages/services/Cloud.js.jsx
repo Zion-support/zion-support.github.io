@@ -1,20 +1,20 @@
 import React from "react";
 import { Link } from "react-router-dom";
 const CloudServices = () => {
-    const cloudServices = [
-        {
-            title: "Cloud Migration & Strategy",description: "Comprehensive cloud migration services with multi-cloud strategy and cost optimization.",price: "From $8,500/project",
-            features: ["Cloud readiness assessment", "Multi-cloud strategy planning", "Migration roadmap development", "Cost optimization analysis"]
-        },
-        {
-            title: "Cloud-Native Development",description: "Build scalable applications using cloud-native technologies and microservices architecture.",price: "From $12,000/project",
-            features: ["Microservices architecture", "Serverless development", "API-first design", "Cloud-native databases"]
-        },
-        {
-            title: "Cloud Security & Compliance",description: "Enterprise-grade security solutions with compliance frameworks and threat protection.",price: "From $6,500/month",
-            features: ["Identity and access management", "Data encryption", "Compliance monitoring", "Security auditing"]
+    const cloudServices = [;
+        {;
+            title: "Cloud Migration & Strategy",description: "Comprehensive cloud migration services with multi-cloud strategy and cost optimization.",price: "From $8,500/project";
+            features: [["Cloud readiness assessment", "Multi-cloud strategy planning", "Migration roadmap development", "Cost optimization analysis"];]
         }
-    ],
+        {;
+            title: "Cloud-Native Development",description: "Build scalable applications using cloud-native technologies and microservices architecture.",price: "From $12,000/project";
+            features: [["Microservices architecture", "Serverless development", "API-first design", "Cloud-native databases"];]
+        }
+        {;
+            title: "Cloud Security & Compliance",description: "Enterprise-grade security solutions with compliance frameworks and threat protection.",price: "From $6,500/month";
+            features: [["Identity and access management", "Data encryption", "Compliance monitoring", "Security auditing"];]
+        }
+    ]
     return (<div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100">
       <section className="pt-24 pb-16 bg-gradient-to-r from-slate-900 to-slate-800 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -24,7 +24,7 @@ const CloudServices = () => {
           </div>
         </div>
       </section>
-      
+      ;
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
@@ -39,7 +39,7 @@ const CloudServices = () => {
                 <ul className="space-y-2">
                   {service.features.map((feature, featureIndex) => (<li key={featureIndex} className="flex items-center text-sm text-gray-700">
                       <span className="w-2 h-2 bg-blue-500 rounded-full mr-2"></span>
-                      {feature}
+                      {{feature}}
                     </li>))}
                 </ul>
               </div>))}
@@ -58,5 +58,5 @@ const CloudServices = () => {
         </div>
       </section>
     </div>)
-};
+}
 export default CloudServices;
