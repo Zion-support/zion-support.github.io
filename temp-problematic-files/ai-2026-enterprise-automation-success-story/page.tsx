@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: 'AI 2026 Enterprise Automation Success Story - Fortune 500 Transformation',
   description: 'Discover how a Fortune 500 company achieved 450% ROI and 85% operational efficiency gains through AI 2026 enterprise automation implementation.',
   keywords: ['AI 2026enterprise automationcase studyFortune 500', 'ROIbusiness transformationsuccess story'],
-  openGraph: {,
+  openGraph: {
     title: 'AI 2026 Enterprise Automation Success Story - Fortune 500 Transformation',
     description: 'Discover how a Fortune 500 company achieved 450% ROI through AI 2026 enterprise automation.',
     type: 'article',

@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title: 'Global Logistics AI Transformation: 40% Cost Reduction, 60% Efficiency Gain',
   description: 'How a Fortune 500 logistics company achieved unprecedented results with AI-driven automation, reducing costs by 40% and improving efficiency by 60%.',
   keywords: ['AI transformationlogistics automationsupply chain AIcost reduction', 'efficiency gains'],
-  openGraph: {,
+  openGraph: {
     title: 'Global Logistics AI Transformation: 40% Cost Reduction, 60% Efficiency Gain',
     description: 'How a Fortune 500 logistics company achieved unprecedented results with AI-driven automation.',
     type: 'article',
