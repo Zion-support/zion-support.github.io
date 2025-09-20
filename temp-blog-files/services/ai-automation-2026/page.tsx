@@ -3,8 +3,8 @@ import Link from 'next/link'
 import SEO from '../../components/SEO';
 import ErrorBoundary from '../../components/ErrorBoundary';
 export const metadata = {
-  title: 'AI Automation Services 2026 - Zion Tech Group',
-  description: 'Transform your business with cutting-edge AI automation services. Achieve 340% ROI, 70% cost reduction, and 85% process automation with our proven solutions.',
+  title: 'AI Automation Services 2026 - Zion Tech Group'
+  description: 'Transform your business with cutting-edge AI automation services. Achieve 340% ROI, 70% cost reduction, and 85% process automation with our proven solutions.'
   keywords: ['AI automation servicesbusiness automationAI implementationprocess automation', 'AI consultingenterprise automation']
 }
 export default function AIAutomationServices2026() {
@@ -25,24 +25,24 @@ export default function AIAutomationServices2026() {
                 <span className="text-sm font-medium">🚀 AI AUTOMATION 2026</span>
               </div>
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                AI Automation Services 2026,
+                AI Automation Services 2026
               </h1>
               <p>
-                Transform your business with cutting-edge AI automation. Achieve unprecedented ROI,
-                massive cost savings, and complete process transformation.,
+                Transform your business with cutting-edge AI automation. Achieve unprecedented ROI
+                massive cost savings, and complete process transformation.
               </p>
               <div>
-                <Link,
-                  href="/contact",
+                <Link
+                  href="/contact"
                   className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
                 >
-                  Get AI Automation Quote,
+                  Get AI Automation Quote
                 </Link>
-                <Link,
-                  href="/blog/ai-automation-success-stories-2026",
+                <Link
+                  href="/blog/ai-automation-success-stories-2026"
                   className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
                 >
-                  View Success Stories,
+                  View Success Stories
                 </Link>
               </div>
             </div>
@@ -82,7 +82,7 @@ export default function AIAutomationServices2026() {
                 <div className="text-4xl mb-4">🤖</div>
                 <h3 className="text-xl font-bold text-gray-900 mb-4">Process Automation</h3>
                 <p>
-                  Automate repetitive business processes with intelligent AI systems that learn and improve over time.,
+                  Automate repetitive business processes with intelligent AI systems that learn and improve over time.
                 </p>
                 <ul className="list-disc list-inside text-gray-600 space-y-2 mb-6">
                   <li>Workflow automation</li>
@@ -91,7 +91,7 @@ export default function AIAutomationServices2026() {
                   <li>Approval workflows</li>
                 </ul>
                 <Link href="/contact" className="text-purple-600 font-semibold hover: text-purple-800">
-                  Learn More →,
+                  Learn More →
                 </Link>
               </div>
               {/* Service 2 */}
@@ -99,7 +99,7 @@ export default function AIAutomationServices2026() {
                 <div className="text-4xl mb-4">🧠</div>
                 <h3 className="text-xl font-bold text-gray-900 mb-4">Intelligent Decision Making</h3>
                 <p>
-                  Implement AI systems that make complex decisions based on data analysis and predictive modeling.,
+                  Implement AI systems that make complex decisions based on data analysis and predictive modeling.
                 </p>
                 <ul className="list-disc list-inside text-gray-600 space-y-2 mb-6">
                   <li>Predictive analytics</li>
@@ -108,7 +108,7 @@ export default function AIAutomationServices2026() {
                   <li>Performance monitoring</li>
                 </ul>
                 <Link href="/contact" className="text-purple-600 font-semibold hover: text-purple-800">
-                  Learn More →,
+                  Learn More →
                 </Link>
               </div>
               {/* Service 3 */}
@@ -116,7 +116,7 @@ export default function AIAutomationServices2026() {
                 <div className="text-4xl mb-4">💬</div>
                 <h3 className="text-xl font-bold text-gray-900 mb-4">AI-Powered Customer Service</h3>
                 <p>
-                  Deploy intelligent chatbots and virtual assistants that provide 24/7 customer support.,
+                  Deploy intelligent chatbots and virtual assistants that provide 24/7 customer support.
                 </p>
                 <ul className="list-disc list-inside text-gray-600 space-y-2 mb-6">
                   <li>Chatbot development</li>
@@ -125,7 +125,7 @@ export default function AIAutomationServices2026() {
                   <li>Multi-language support</li>
                 </ul>
                 <Link href="/contact" className="text-purple-600 font-semibold hover: text-purple-800">
-                  Learn More →,
+                  Learn More →
                 </Link>
               </div>
               {/* Service 4 */}
@@ -133,7 +133,7 @@ export default function AIAutomationServices2026() {
                 <div className="text-4xl mb-4">📊</div>
                 <h3 className="text-xl font-bold text-gray-900 mb-4">Data Intelligence</h3>
                 <p>
-                  Transform raw data into actionable insights with advanced AI analytics and reporting systems.,
+                  Transform raw data into actionable insights with advanced AI analytics and reporting systems.
                 </p>
                 <ul className="list-disc list-inside text-gray-600 space-y-2 mb-6">
                   <li>Data mining</li>
@@ -142,7 +142,7 @@ export default function AIAutomationServices2026() {
                   <li>Custom dashboards</li>
                 </ul>
                 <Link href="/contact" className="text-purple-600 font-semibold hover: text-purple-800">
-                  Learn More →,
+                  Learn More →
                 </Link>
               </div>
               {/* Service 5 */}
@@ -150,7 +150,7 @@ export default function AIAutomationServices2026() {
                 <div className="text-4xl mb-4">🔍</div>
                 <h3 className="text-xl font-bold text-gray-900 mb-4">Computer Vision</h3>
                 <p>
-                  Implement visual recognition systems for quality control, security, and process monitoring.,
+                  Implement visual recognition systems for quality control, security, and process monitoring.
                 </p>
                 <ul className="list-disc list-inside text-gray-600 space-y-2 mb-6">
                   <li>Quality inspection</li>
@@ -159,7 +159,7 @@ export default function AIAutomationServices2026() {
                   <li>Document scanning</li>
                 </ul>
                 <Link href="/contact" className="text-purple-600 font-semibold hover: text-purple-800">
-                  Learn More →,
+                  Learn More →
                 </Link>
               </div>
               {/* Service 6 */}
@@ -167,7 +167,7 @@ export default function AIAutomationServices2026() {
                 <div className="text-4xl mb-4">⚡</div>
                 <h3 className="text-xl font-bold text-gray-900 mb-4">Hyperautomation</h3>
                 <p>
-                  Combine multiple AI technologies for end-to-end business process automation and optimization.,
+                  Combine multiple AI technologies for end-to-end business process automation and optimization.
                 </p>
                 <ul className="list-disc list-inside text-gray-600 space-y-2 mb-6">
                   <li>RPA integration</li>
@@ -176,7 +176,7 @@ export default function AIAutomationServices2026() {
                   <li>System orchestration</li>
                 </ul>
                 <Link href="/contact" className="text-purple-600 font-semibold hover: text-purple-800">
-                  Learn More →,
+                  Learn More →
                 </Link>
               </div>
             </div>
@@ -191,28 +191,28 @@ export default function AIAutomationServices2026() {
                 <div className="w-16 h-16 bg-purple-600 text-white rounded-full flex items-center justify-center font-bold text-xl mx-auto mb-4">1</div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3">Assessment</h3>
                 <p>
-                  Analyze your current processes and identify automation opportunities,
+                  Analyze your current processes and identify automation opportunities
                 </p>
               </div>
               <div>
                 <div className="w-16 h-16 bg-purple-600 text-white rounded-full flex items-center justify-center font-bold text-xl mx-auto mb-4">2</div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3">Strategy</h3>
                 <p>
-                  Develop a comprehensive AI automation roadmap tailored to your business,
+                  Develop a comprehensive AI automation roadmap tailored to your business
                 </p>
               </div>
               <div>
                 <div className="w-16 h-16 bg-purple-600 text-white rounded-full flex items-center justify-center font-bold text-xl mx-auto mb-4">3</div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3">Implementation</h3>
                 <p>
-                  Deploy AI solutions with minimal disruption to your operations,
+                  Deploy AI solutions with minimal disruption to your operations
                 </p>
               </div>
               <div>
                 <div className="w-16 h-16 bg-purple-600 text-white rounded-full flex items-center justify-center font-bold text-xl mx-auto mb-4">4</div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3">Optimization</h3>
                 <p>
-                  Continuously monitor and improve AI performance for maximum ROI,
+                  Continuously monitor and improve AI performance for maximum ROI
                 </p>
               </div>
             </div>
@@ -226,37 +226,37 @@ export default function AIAutomationServices2026() {
               <div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3">Manufacturing Giant</h3>
                 <p>
-                  Achieved $75M annual savings with AI-powered quality control and predictive maintenance.,
+                  Achieved $75M annual savings with AI-powered quality control and predictive maintenance.
                 </p>
                 <div>
-                  <span className="font-semibold">Results:</span> 60% defect reduction, 45% downtime reduction,
+                  <span className="font-semibold">Results:</span> 60% defect reduction, 45% downtime reduction
                 </div>
               </div>
               <div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3">Retail Chain</h3>
                 <p>
-                  Generated $120M revenue increase through AI-driven inventory optimization and personalization.,
+                  Generated $120M revenue increase through AI-driven inventory optimization and personalization.
                 </p>
                 <div>
-                  <span className="font-semibold">Results:</span> 35% inventory cost reduction, 90% query resolution,
+                  <span className="font-semibold">Results:</span> 35% inventory cost reduction, 90% query resolution
                 </div>
               </div>
               <div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3">Financial Services</h3>
                 <p>
-                  Increased trading revenue by $200M with algorithmic trading and risk assessment systems.,
+                  Increased trading revenue by $200M with algorithmic trading and risk assessment systems.
                 </p>
                 <div>
-                  <span className="font-semibold">Results:</span> 80% faster risk assessment, 95% compliance accuracy,
+                  <span className="font-semibold">Results:</span> 80% faster risk assessment, 95% compliance accuracy
                 </div>
               </div>
             </div>
             <div>
-              <Link,
-                href="/blog/ai-automation-success-stories-2026",
+              <Link
+                href="/blog/ai-automation-success-stories-2026"
                 className="bg-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover: bg-purple-700 transition-colors"
               >
-                Read All Success Stories →,
+                Read All Success Stories →
               </Link>
             </div>
           </div>
@@ -266,20 +266,20 @@ export default function AIAutomationServices2026() {
           <div>
             <h2 className="text-3xl font-bold mb-4">Ready to Automate Your Business?</h2>
             <p>
-              Join hundreds of companies already experiencing the benefits of AI automation.,
+              Join hundreds of companies already experiencing the benefits of AI automation.
             </p>
             <div>
-              <Link,
-                href="/contact",
+              <Link
+                href="/contact"
                 className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
               >
-                Get Free AI Assessment,
+                Get Free AI Assessment
               </Link>
-              <Link,
-                href="/blog/ai-2026-ultimate-business-transformation",
+              <Link
+                href="/blog/ai-2026-ultimate-business-transformation"
                 className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
               >
-                Read Transformation Guide,
+                Read Transformation Guide
               </Link>
             </div>
           </div>

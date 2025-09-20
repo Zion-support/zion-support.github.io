@@ -8,37 +8,37 @@ export default function RevolutionaryContentBanner2026() {
             <div>
               <div>
                 <span className="px-3 py-1 bg-purple-100 text-purple-700 rounded-full text-sm font-semibold">
-                  🚀 NEW CONTENT,
+                  🚀 NEW CONTENT
                 </span>
                 <span className="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm font-semibold">
-                  AI 2026,
+                  AI 2026
                 </span>
               </div>
               <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                Revolutionary AI Technologies for 2026,
+                Revolutionary AI Technologies for 2026
               </h2>
               <p>
-                Discover our comprehensive guides to the most advanced AI technologies that will,
-                transform your business operations and create unprecedented competitive advantages.,
+                Discover our comprehensive guides to the most advanced AI technologies that will
+                transform your business operations and create unprecedented competitive advantages.
               </p>
               <div>
-                <Link,
-                  href="/blog/ai-2026-enterprise-autonomous-systems-complete-guide",
+                <Link
+                  href="/blog/ai-2026-enterprise-autonomous-systems-complete-guide"
                   className="bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors"
                 >
-                  Autonomous Systems Guide,
+                  Autonomous Systems Guide
                 </Link>
-                <Link,
-                  href="/blog/ai-2026-quantum-ai-business-transformation",
+                <Link
+                  href="/blog/ai-2026-quantum-ai-business-transformation"
                   className="border border-purple-600 text-purple-600 px-6 py-3 rounded-lg font-semibold hover:bg-purple-50 transition-colors"
                 >
-                  Quantum AI Guide,
+                  Quantum AI Guide
                 </Link>
-                <Link,
-                  href="/blog/ai-2026-neural-interface-business-applications",
+                <Link
+                  href="/blog/ai-2026-neural-interface-business-applications"
                   className="border border-blue-600 text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors"
                 >
-                  Neural Interfaces Guide,
+                  Neural Interfaces Guide
                 </Link>
               </div>
             </div>

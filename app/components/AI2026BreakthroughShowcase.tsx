@@ -7,13 +7,13 @@ const AI2026BreakthroughShowcase: React.FC = () => {;
             <span className="text-sm font-medium">🔬 AI 2026 BREAKTHROUGHS</span>
           </div>
           <h2 className="text-4xl md:text-6xl font-bold mb-6">
-            Revolutionary AI,
+            Revolutionary AI
             <span className="block text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">
-              Breakthroughs,
+              Breakthroughs
             </span>
           </h2>
           <p>
-            Discover the groundbreaking AI technologies that will reshape industries and transform the way we work in 2026.,
+            Discover the groundbreaking AI technologies that will reshape industries and transform the way we work in 2026.
           </p>
         </div>
         <div>
@@ -21,7 +21,7 @@ const AI2026BreakthroughShowcase: React.FC = () => {;
             <div className="text-4xl mb-4">🧠</div>
             <h3 className="text-2xl font-bold mb-4">Neural Architecture Revolution</h3>
             <p>
-              Next-generation neural networks that achieve human-level reasoning and decision-making capabilities.,
+              Next-generation neural networks that achieve human-level reasoning and decision-making capabilities.
             </p>
             <div>
               <div>
@@ -37,18 +37,18 @@ const AI2026BreakthroughShowcase: React.FC = () => {;
                 <span>Adaptive Intelligence</span>
               </div>
             </div>
-            <Link,
-              href="/blog/ai-2026-neural-architecture-revolution",
+            <Link
+              href="/blog/ai-2026-neural-architecture-revolution"
               className="inline-flex items-center bg-white text-cyan-800 px-6 py-3 rounded-lg font-semibold hover:bg-cyan-50 transition-all duration-300"
             >
-              Learn More →,
+              Learn More →
             </Link>
           </div>
           <div>
             <div className="text-4xl mb-4">⚡</div>
             <h3 className="text-2xl font-bold mb-4">Quantum AI Integration</h3>
             <p>
-              Revolutionary quantum computing integration that exponentially accelerates AI processing and problem-solving.,
+              Revolutionary quantum computing integration that exponentially accelerates AI processing and problem-solving.
             </p>
             <div>
               <div>
@@ -64,11 +64,11 @@ const AI2026BreakthroughShowcase: React.FC = () => {;
                 <span>Parallel Processing</span>
               </div>
             </div>
-            <Link,
-              href="/blog/ai-2026-quantum-integration",
+            <Link
+              href="/blog/ai-2026-quantum-integration"
               className="inline-flex items-center bg-white text-purple-800 px-6 py-3 rounded-lg font-semibold hover:bg-purple-50 transition-all duration-300"
             >
-              Explore →,
+              Explore →
             </Link>
           </div>
         </div>
@@ -96,11 +96,11 @@ const AI2026BreakthroughShowcase: React.FC = () => {;
           </div>
         </div>
         <div>
-          <Link,
-            href="/contact",
+          <Link
+            href="/contact"
             className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105"
           >
-            Start Your AI Journey,
+            Start Your AI Journey
           </Link>
         </div>
       </div>

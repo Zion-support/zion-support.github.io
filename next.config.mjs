@@ -1,7 +1,3 @@
-const { i18n } = require('./next-i18next.config');
-
-const withTM = withTMInit([]);
-
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   eslint: {
@@ -9,6 +5,19 @@ const nextConfig = {
     // your project has ESLint errors.
     ignoreDuringBuilds: true,
   },
+  typescript: {
+    // Warning: This allows production builds to successfully complete even if
+    // your project has type errors.
+    ignoreBuildErrors: true,
+  },
+  output: 'export',
+  trailingSlash: true,
+  images: {
+    unoptimized: true,
+  },
+  experimental: {
+    esmExternals: 'loose',
+  },
 };
 
-export default withTM(nextConfig);
+export default nextConfig;

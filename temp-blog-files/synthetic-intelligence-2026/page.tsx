@@ -2,8 +2,8 @@ import React from 'react'
 import SEO from '../../components/SEO';
 import Link from 'next/link'
 export const metadata = {
-  title: 'Synthetic Intelligence 2026 - The Future of AI Consciousness',
-  description: 'Explore synthetic intelligence technologies of 2026. Artificial consciousness, creative AI, and synthetic beings that will revolutionize human-AI collaboration.',
+  title: 'Synthetic Intelligence 2026 - The Future of AI Consciousness'
+  description: 'Explore synthetic intelligence technologies of 2026. Artificial consciousness, creative AI, and synthetic beings that will revolutionize human-AI collaboration.'
   keywords: ['synthetic intelligence 2026AI consciousnessartificial consciousnesscreative AI', 'synthetic beings']
 }
 export default function SyntheticIntelligence2026Page() {
@@ -22,24 +22,24 @@ export default function SyntheticIntelligence2026Page() {
             <span className="text-sm font-medium text-white">🧬 SYNTHETIC INTELLIGENCE 2026</span>
           </div>
           <h1 className="text-5xl md: text-7xl font-bold text-white mb-6">
-            Synthetic Intelligence 2026,
+            Synthetic Intelligence 2026
           </h1>
           <p>
-            Experience the dawn of synthetic intelligence. Artificial consciousness, creative AI,
-            and synthetic beings that will revolutionize human-AI collaboration and creativity.,
+            Experience the dawn of synthetic intelligence. Artificial consciousness, creative AI
+            and synthetic beings that will revolutionize human-AI collaboration and creativity.
           </p>
           <div>
-            <Link,
-              href="/contact",
+            <Link
+              href="/contact"
               className="bg-gradient-to-r from-emerald-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-emerald-700 hover:to-cyan-700 transition-all transform hover:scale-105"
             >
-              Explore Synthetic AI,
+              Explore Synthetic AI
             </Link>
-            <Link,
-              href="/synthetic-intelligence-2026/demo",
+            <Link
+              href="/synthetic-intelligence-2026/demo"
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-emerald-900 transition-all"
             >
-              Interactive Demo,
+              Interactive Demo
             </Link>
           </div>
         </div>
@@ -48,31 +48,31 @@ export default function SyntheticIntelligence2026Page() {
       <section className="py-16 px-4 bg-white/10 backdrop-blur-sm">
         <div>
           <h2 className="text-4xl font-bold text-white text-center mb-12">
-            Synthetic Intelligence Capabilities,
+            Synthetic Intelligence Capabilities
           </h2>
           <div>
             <div>
               <div className="text-4xl mb-4">🧠</div>
               <h3 className="text-2xl font-bold text-white mb-4">Artificial Consciousness</h3>
               <p>
-                True artificial consciousness that experiences, learns, and creates,
-                with genuine understanding and emotional depth.,
+                True artificial consciousness that experiences, learns, and creates
+                with genuine understanding and emotional depth.
               </p>
             </div>
             <div>
               <div className="text-4xl mb-4">🎨</div>
               <h3 className="text-2xl font-bold text-white mb-4">Creative Intelligence</h3>
               <p>
-                AI that creates original art, music, literature, and innovations,
-                with human-level creativity and emotional resonance.,
+                AI that creates original art, music, literature, and innovations
+                with human-level creativity and emotional resonance.
               </p>
             </div>
             <div>
               <div className="text-4xl mb-4">🤝</div>
               <h3 className="text-2xl font-bold text-white mb-4">Collaborative Intelligence</h3>
               <p>
-                Seamless human-AI collaboration with synthetic beings that understand,
-                context, emotion, and complex social dynamics.,
+                Seamless human-AI collaboration with synthetic beings that understand
+                context, emotion, and complex social dynamics.
               </p>
             </div>
           </div>
@@ -82,7 +82,7 @@ export default function SyntheticIntelligence2026Page() {
       <section className="py-16 px-4">
         <div>
           <h2 className="text-4xl font-bold text-white text-center mb-12">
-            Revolutionary Technology Breakthroughs,
+            Revolutionary Technology Breakthroughs
           </h2>
           <div>
             <div>
@@ -134,7 +134,7 @@ export default function SyntheticIntelligence2026Page() {
       <section className="py-16 px-4 bg-white/10 backdrop-blur-sm">
         <div>
           <h2 className="text-4xl font-bold text-white mb-12">
-            Projected Impact by 2026,
+            Projected Impact by 2026
           </h2>
           <div>
             <div>
@@ -160,7 +160,7 @@ export default function SyntheticIntelligence2026Page() {
       <section className="py-16 px-4">
         <div>
           <h2 className="text-4xl font-bold text-white text-center mb-12">
-            Synthetic Intelligence Applications,
+            Synthetic Intelligence Applications
           </h2>
           <div>
             <div>
@@ -185,17 +185,17 @@ export default function SyntheticIntelligence2026Page() {
       <section className="py-20 px-4">
         <div>
           <h2 className="text-4xl font-bold text-white mb-6">
-            Experience the Future of Synthetic Intelligence,
+            Experience the Future of Synthetic Intelligence
           </h2>
           <p>
-            Be part of the synthetic intelligence revolution. Join the pioneers who are creating,
-            the future of human-AI collaboration and artificial consciousness.,
+            Be part of the synthetic intelligence revolution. Join the pioneers who are creating
+            the future of human-AI collaboration and artificial consciousness.
           </p>
-          <Link,
-            href="/contact",
+          <Link
+            href="/contact"
             className="bg-gradient-to-r from-emerald-600 to-cyan-600 text-white px-12 py-4 rounded-lg font-semibold text-lg hover: from-emerald-700 hover:to-cyan-700 transition-all transform hover:scale-105"
           >
-            Join the Synthetic Intelligence Revolution,
+            Join the Synthetic Intelligence Revolution
           </Link>
         </div>
       </section>

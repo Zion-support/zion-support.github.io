@@ -2,9 +2,9 @@ import Link from 'next/link'
 import React from 'react'
 import SEO from '../../components/SEO';
 export const metadata = {
-  title: 'AI 2026: Operational Blueprint for Autonomous Agents | Zion Tech Group',
+  title: 'AI 2026: Operational Blueprint for Autonomous Agents | Zion Tech Group'
   description:
-    'Practical operating model for autonomous agents: roles, gates, on-call, and governance.',
+    'Practical operating model for autonomous agents: roles, gates, on-call, and governance.'
   keywords: ['autonomous agentsoperationson-callgovernance', 'eval-gates']
 }
 export default function OperationalBlueprintPage() {
@@ -21,7 +21,7 @@ export default function OperationalBlueprintPage() {
           <p className="text-sm font-semibold opacity-90">Operations • 2025-09-15</p>
           <h1 className="text-3xl md:text-5xl font-bold mt-2">Operational Blueprint for Autonomous Agents</h1>
           <p>
-            Roles, responsibilities, and lifecycle gates to safely scale enterprise agents.,
+            Roles, responsibilities, and lifecycle gates to safely scale enterprise agents.
           </p>
         </div>
       </section>
@@ -30,8 +30,8 @@ export default function OperationalBlueprintPage() {
           <article className="prose prose-lg max-w-none">
             <h2>Operating Model</h2>
             <p>
-              Define product owners for agent capabilities, SREs for reliability, and security partners for policy,
-              enforcement. Establish clear change management: proposal → sandbox evals → gated rollout.,
+              Define product owners for agent capabilities, SREs for reliability, and security partners for policy
+              enforcement. Establish clear change management: proposal → sandbox evals → gated rollout.
             </p>
             <h3>Lifecycle Gates</h3>
             <ul>
@@ -41,16 +41,16 @@ export default function OperationalBlueprintPage() {
             </ul>
             <h3>On-Call and Incident Response</h3>
             <p>
-              Staff Agents-On-Call rotations with playbooks, golden signals, and automated mitigations. Capture,
-              incidents with full traces and postmortems tied to policy updates.,
+              Staff Agents-On-Call rotations with playbooks, golden signals, and automated mitigations. Capture
+              incidents with full traces and postmortems tied to policy updates.
             </p>
           </article>
           <div>
             <Link href="/content/ai-2026-operational-excellence-handbook" className="bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover: bg-purple-700">
-              Operational Excellence Handbook,
+              Operational Excellence Handbook
             </Link>
             <Link href="/blog" className="border border-purple-600 text-purple-700 px-6 py-3 rounded-lg font-semibold hover:bg-purple-50">
-              ← Back to Blog,
+              ← Back to Blog
             </Link>
           </div>
         </div>

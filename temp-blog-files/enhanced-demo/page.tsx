@@ -12,21 +12,21 @@ export default function EnhancedDemoPage() {
   return (
     <EnhancedErrorBoundary>
       <div>
-        <EnhancedSEO,
+        <EnhancedSEO
           title="[^"]*"
           description="[^"]*"
           keywords={['demoenhancedadvancedfeatures', 'components']}
         />
-        <Suspense fallback={<EnhancedLoadingSpinner variant="fullscreen" />}>,
+        <Suspense fallback={<EnhancedLoadingSpinner variant="fullscreen" />}>
           <div>
             <div>
               <h1 className="text-4xl font-bold text-gray-900 dark: text-white mb-4">
-                Enhanced Features Demo,
+                Enhanced Features Demo
               </h1>
               <p>
-                Experience all the advanced components and features in action.,
-                This page demonstrates performance optimization, AI content generation,
-                analytics, and interactive tools.,
+                Experience all the advanced components and features in action.
+                This page demonstrates performance optimization, AI content generation
+                analytics, and interactive tools.
               </p>
             </div>
             <PerformanceMonitor />
