@@ -30,9 +30,9 @@ import {
   Twitter,
   Users,
   Zap
-} from 'lucide-react',
-import React, { useState } from 'react',
-import { Link, useLocation } from 'react-router-dom',
+} from 'lucide-react'
+import React, { useState } from 'react'
+import { Link, useLocation } from 'react-router-dom'
 
 interface SidebarProps {
   isOpen: boolean,

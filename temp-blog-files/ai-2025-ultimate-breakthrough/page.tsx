@@ -1,16 +1,3 @@
-<<<<<<< HEAD
-import React from 'react'
-import SEO from '../../components/SEO'
-
-export const metadata = {
-  title: 'AI 2025 Ultimate Breakthrough | Zion Tech Group',
-  description: 'Discover the ultimate AI breakthroughs of 2025. Revolutionary technologies that will transform your business.',
-  keywords: ['AI breakthrough', 'AI 2025', 'artificial intelligence', 'business transformation']
-}
-=======
-import React from 'react';
-import SEO from '@/components/SEO';
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-3eed
 
 export default function AI2025UltimateBreakthroughPage() {
   return (
