@@ -1,16 +1,15 @@
 [build]
   # Use npm for dependency installation and build (skip linting due to TypeScript version compatibility)
   command = "npm ci && npm run build"
-  publish = "dist"
-  # Explicitly specify this is a Vite static site, not a framework
+  publish = "out"
+  # Explicitly specify this is a Next.js static site
   base = "."
 
 [build.environment]
   NODE_VERSION = "20"
   NODE_OPTIONS = "--max-old-space-size=8192 --openssl-legacy-provider"
   NETLIFY_USE_NPM = "true"
-  NETLIFY_DISABLE_FRAMEWORK_DETECTION = "true"
-  NETLIFY_FORCE_STATIC_BUILD = "true"
+  NETLIFY_DISABLE_FRAMEWORK_DETECTION = "false"
   CANONICAL_URL = "https://ziontechgroup.com"
 
 # Fix MIME type issues
