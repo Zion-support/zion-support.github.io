@@ -29,5 +29,4 @@ export default function EnhancedMarketplaceCard({ service, onRequestQuote }: Pro
     </div>
   );
 };
-
 export default EnhancedMarketplaceCard;

@@ -90,5 +90,4 @@ export default function AIAutonomousScientificResearcher(props: any) {}
     </div>
   );
 };
-
 export default AIAutonomousScientificResearcher;

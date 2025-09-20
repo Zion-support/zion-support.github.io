@@ -249,5 +249,4 @@ export default function EnhancedServicesShowcase2025(req, res) {
     </div>
   );
 };
-
 export default enhanced-services-showcase-2025;

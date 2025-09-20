@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 const RevolutionaryAdBanner2026: React.FC = () => {
   const [isVisible, setIsVisible] = useState(true);
@@ -55,16 +55,49 @@ const RevolutionaryAdBanner2026: React.FC = () => {
           <p className="text-xl opacity-95 mb-6 max-w-4xl mx-auto">
             {adContent[currentAd].subtitle}
           </p>
-          <div className="flex justify-center space-x-4">
-            <a 
-              href={adContent[currentAd].link}
-              className="bg-white text-gray-900 px-8 py-3 rounded-lg hover:bg-gray-100 transition-all duration-300 font-bold text-lg shadow-lg"
+          {/* Feature Cards */}
+          <div className="grid md:grid-cols-3 gap-6 mb-8">
+            <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 hover:bg-white/20 transition-all duration-300">
+              <div className="text-4xl mb-3">🧠
+              <h3 className="text-xl font-bold text-white mb-2">AI Consciousness</h3>
+              <p className="text-gray-300 text-sm mb-4">Explore the evolution of artificial consciousness and its implications</p>
+              <Link 
+                to="/pages/RevolutionaryTechInsights2026" 
+                className="text-cyan-400 hover:text-cyan-300 font-semibold text-sm"
+              >
+                Learn More →
+              </Link>
+            <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 hover:bg-white/20 transition-all duration-300">
+              <div className="text-4xl mb-3">⚛️
+              <h3 className="text-xl font-bold text-white mb-2">Quantum Revolution</h3>
+              <p className="text-gray-300 text-sm mb-4">Discover quantum computing breakthroughs and real-world applications</p>
+              <Link 
+                to="/pages/NextGenInnovationHub2026" 
+                className="text-purple-400 hover:text-purple-300 font-semibold text-sm"
+              >
+                Explore →
+              </Link>
+            <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 hover:bg-white/20 transition-all duration-300">
+              <div className="text-4xl mb-3">📊
+              <h3 className="text-xl font-bold text-white mb-2">Success Stories</h3>
+              <p className="text-gray-300 text-sm mb-4">See how companies achieved 300%+ improvements with our solutions</p>
+              <Link 
+                to="/pages/RevolutionaryCaseStudies2026" 
+                className="text-green-400 hover:text-green-300 font-semibold text-sm"
+              >
+                View Cases →
+              </Link>
+          {/* Call to Action Buttons */}
+          <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-6">
+            <Link 
+              to="/pages/RevolutionaryTechInsights2026" 
+              className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg hover:shadow-2xl transition-all duration-300 font-semibold text-lg w-full sm:w-auto"
             >
-              {adContent[currentAd].cta} →
-            </a>
-            <button 
-              onClick={() => setIsVisible(false)}
-              className="bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-lg hover:bg-white/30 transition-all duration-300 font-semibold"
+              Explore Tech Insights
+            </Link>
+            <Link 
+              to="/pages/RevolutionaryCaseStudies2026" 
+              className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg hover:bg-cyan-400 hover:text-black transition-all duration-300 font-semibold text-lg w-full sm:w-auto"
             >
               ✕ Dismiss
             </button>
@@ -185,4 +218,54 @@ const RevolutionaryAdBanner2026: React.FC = () => {
     </div>
   );
 };
+
 export default RevolutionaryAdBanner2026;
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>

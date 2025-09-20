@@ -236,5 +236,4 @@ const categoryIcons: { [key: string]: React.ReactNode } = {
     </div>
   );
 };
-
 export default 2036-innovative-services-showcase;

@@ -652,5 +652,4 @@ const Page = () => {
     </div>
   );
 };
-
 export default sitemap;

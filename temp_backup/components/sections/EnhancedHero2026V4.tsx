@@ -24,5 +24,4 @@ export default function EnhancedHero2026V4() {
     </div>
   );
 };
-
 export default EnhancedHero2026V4;

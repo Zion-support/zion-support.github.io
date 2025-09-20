@@ -463,5 +463,4 @@ export default function GetStarted() {
     </div>
   );
 };
-
 export default get-started;

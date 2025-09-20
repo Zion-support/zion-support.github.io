@@ -165,5 +165,4 @@ const AIWorkflowAutomation = (props: any) => {
     </div>
   );
 };
-
 export default AIWorkflowAutomation;

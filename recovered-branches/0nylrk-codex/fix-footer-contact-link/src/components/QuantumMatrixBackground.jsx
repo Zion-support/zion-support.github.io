@@ -232,5 +232,4 @@ export const QuantumMatrixBackground = ({ intensity = 'medium', showParticles = 
       </div>
     </div>);
 };
-
 export default QuantumMatrixBackground;

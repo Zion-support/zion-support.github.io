@@ -5,10 +5,8 @@ import App from './App.tsx';
 import './index.css';
 
 const rootElement = document.getElementById('root');
-
 if (rootElement) {
-  const root = createRoot(rootElement);
-  root.render(
+  ReactDOM.createRoot(rootElement).render(
     <React.StrictMode>
       <HelmetProvider>
         <App />

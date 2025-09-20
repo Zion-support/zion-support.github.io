@@ -1,1 +1,2 @@
- export const FuturisticAnimatedBackground = (props: any) => { const canvasRef = useRef (null)  const animationRef = useRef ()  useEffect ( () => { const canvas = canvasRef.current if (!canvas) return const ctx = canvas.getContext ('2d')  if (!ctx) return'
+ export const FuturisticAnimatedBackground = (props: any) => { const canvasRef = useRef (null)  const animationRef = useRef ()  useEffect ( () => { const canvas = canvasRef.current if (!canvas) return const ctx = canvas.getContext ('2d')  if (!ctx) return',
+}})

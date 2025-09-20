@@ -121,5 +121,4 @@ export class ErrorBoundary extends React.Component {;
     </div>
   );
 };
-
 export default ErrorBoundary;

@@ -280,5 +280,4 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I'm Zion Tech Group's AI as
       </AnimatePresence>
     </>);
 };
-
 export default AIChatbot;

@@ -77,5 +77,4 @@ import React,{useState,useRef,useEffect,useCallback} from &apos;react&apos;; imp
   "status": 'sending';
         ;
 };
-
 export default ai-chat-assistant.js;

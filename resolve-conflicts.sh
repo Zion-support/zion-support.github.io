@@ -1,36 +1,37 @@
 #!/bin/bash
 
-echo "Resolving merge conflicts..."
+# Script to automatically resolve merge conflicts
+set -e
 
-# Get list of conflicted files
-git status --porcelain | grep "^UU" | cut -c4- > /tmp/conflicted_files.txt
+echo "🔧 Starting automatic merge conflict resolution..."
 
-# Count total conflicts
-total_conflicts=$(wc -l < /tmp/conflicted_files.txt)
-echo "Total conflicted files: $total_conflicts"
+# Find all files with merge conflicts
+CONFLICT_FILES=$(grep -r "<<<<<<< HEAD" src/ --include="*.tsx" --include="*.ts" --include="*.jsx" --include="*.js" -l)
 
-# Resolve conflicts in disabled/backup directories by accepting incoming changes
-echo "Resolving conflicts in disabled/backup directories..."
-git status --porcelain | grep "^UU" | grep -E "(disabled|backup|temp|\.disabled)" | cut -c4- | while read file; do
-    echo "Resolving $file (accepting incoming)"
-    git checkout --theirs "$file"
-    git add "$file"
+if [ -z "$CONFLICT_FILES" ]; then
+    echo "✅ No merge conflicts found in source files"
+    exit 0
+fi
+
+echo "📋 Found merge conflicts in:"
+echo "$CONFLICT_FILES"
+echo "---"
+
+# Process each file
+for file in $CONFLICT_FILES; do
+    echo "🔧 Resolving conflicts in $file..."
+    
+    # Create backup
+    cp "$file" "${file}.backup.$(date +%s)"
+    
+    # Strategy: Keep the "theirs" version (incoming changes) for most files
+    # This is generally safer for feature branches
+    sed -i '/^<<<<<<< HEAD/,/^=======/d' "$file"
+    sed -i '/^>>>>>>> /d' "$file"
+    
+    echo "✅ Resolved conflicts in $file"
 done
 
-# Resolve conflicts in src.disabled by accepting incoming changes
-echo "Resolving conflicts in src.disabled..."
-git status --porcelain | grep "^UU" | grep "src\.disabled" | cut -c4- | while read file; do
-    echo "Resolving $file (accepting incoming)"
-    git checkout --theirs "$file"
-    git add "$file"
-done
-
-# For active source files, keep our changes (accept current)
-echo "Resolving conflicts in active source files..."
-git status --porcelain | grep "^UU" | grep -v -E "(disabled|backup|temp|\.disabled|src\.disabled)" | cut -c4- | while read file; do
-    echo "Resolving $file (keeping current)"
-    git checkout --ours "$file"
-    git add "$file"
-done
-
-echo "Conflict resolution completed!"
+echo "🎉 All merge conflicts resolved!"
+echo "📋 Files processed:"
+echo "$CONFLICT_FILES"

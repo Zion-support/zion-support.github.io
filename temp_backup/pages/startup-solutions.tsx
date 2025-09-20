@@ -59,5 +59,4 @@ export default function StartupSolutions() {
     </div>
   );
 };
-
 export default startup-solutions;

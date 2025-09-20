@@ -23,7 +23,7 @@ export default function SecureToolingPermissionsBlueprintPage() {
         </div>
       </div>
     </div>
-  )
+  );
 }
 
  

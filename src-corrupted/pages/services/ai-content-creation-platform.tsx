@@ -189,5 +189,4 @@ export default function AIContentCreationPlatform(props: any) {
     </div>
   );
 };
-
 export default ai-content-creation-platform;

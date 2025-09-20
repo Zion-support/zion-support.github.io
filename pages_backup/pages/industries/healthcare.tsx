@@ -151,5 +151,4 @@ export default function Healthcare() {
     </div>
   );
 };
-
 export default healthcare;

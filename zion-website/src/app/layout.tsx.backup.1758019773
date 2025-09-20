@@ -1,0 +1,39 @@
+import Footer from '@/components/Footer'
+import Navigation from '@/components/Navigation'
+<<<<<<< HEAD
+import type { Metadata } from 'next'
+=======
+import type { Metadata, Viewport } from 'next'
+>>>>>>> origin/aggressive-merge-backup-20250915-162542
+import { Inter } from 'next/font/google'
+import './globals.css'
+
+const inter = Inter({ subsets: ['latin'] })
+
+export const metadata: Metadata = {
+  title: 'Zion Tech Group',
+  description: 'Leading AI and Technology Solutions'
+}
+
+export default function RootLayout({ children }: { children: React.ReactNode }) {
+  return (
+<<<<<<< HEAD
+    <html lang="en">
+      <body className={inter.className}>
+=======
+    <html lang="en" className="scroll-smooth">
+      <body className={`${inter.className} bg-black text-white antialiased`}>
+        {/* Promo banner */}
+        <div className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white text-center text-sm sm:text-base py-2 px-4">
+          <a href="/updates/agent-safety-whitepaper" className="font-semibold hover:underline">
+            New whitepaper: AI Agent Safety Framework (2025) — read now →
+          </a>
+        </div>
+>>>>>>> origin/aggressive-merge-backup-20250915-162542
+        <Navigation />
+        {children}
+        <Footer />
+      </body>
+    </html>
+  )
+}

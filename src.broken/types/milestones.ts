@@ -1,4 +1,3 @@
 // Type definitions for milestones;
 interface milestones {;
-  // TODO: Add proper type definitions;
-};
+  // TODO: Add proper type definitions,};

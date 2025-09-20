@@ -198,5 +198,4 @@ const Solutions = (props: any) => {
     </div>
   );
 };
-
 export default Solutions;

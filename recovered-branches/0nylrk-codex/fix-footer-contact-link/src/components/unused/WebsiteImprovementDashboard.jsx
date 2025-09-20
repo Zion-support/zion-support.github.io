@@ -468,5 +468,4 @@ const WebsiteImprovementDashboard = ({ className = '', showOnLoad = false }) => 
       </AnimatePresence>
     </>);
 };
-
 export default WebsiteImprovementDashboard;

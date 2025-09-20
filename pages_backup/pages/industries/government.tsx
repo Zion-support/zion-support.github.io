@@ -100,5 +100,4 @@ export default function Government() {
     </div>
   );
 };
-
 export default government;

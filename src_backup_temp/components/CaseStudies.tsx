@@ -147,5 +147,4 @@ export default function CaseStudies(props: any) {
     </div>
   );
 };
-
 export default CaseStudies;

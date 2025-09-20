@@ -169,5 +169,4 @@ export default function IndustrySolutionsPage() {
     </div>
   );
 };
-
 export default industry;

@@ -269,5 +269,4 @@ export default function DigitalTransformation(...args: any[]): any {
     </div>
   );
 };
-
 export default DigitalTransformation;

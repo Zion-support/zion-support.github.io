@@ -193,5 +193,4 @@ export default function ComprehensivePricingPage(req, res) {
     </div>
   );
 };
-
 export default comprehensive-pricing-2025;

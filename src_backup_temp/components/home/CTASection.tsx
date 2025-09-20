@@ -32,5 +32,4 @@ const CTASection: React.FC = (): JSX.Element => {
     </div>
   );
 };
-
 export default CTASection;

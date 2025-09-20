@@ -476,5 +476,4 @@ origin/automation-improvements-final
     </div>
   );
 };
-
 export default login;

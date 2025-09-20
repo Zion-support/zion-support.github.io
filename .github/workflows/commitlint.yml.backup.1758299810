@@ -1,0 +1,44 @@
+<<<<<<< HEAD
+name: Commitlint
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, edited]
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: wagoid/commitlint-github-action@v6
+=======
+name: commitlint
+'on':
+  workflow_dispatch: {}
+  schedule:
+    - cron: 0 */2 * * *
+permissions:
+  contents: write
+  actions: read
+jobs:
+  main:
+    name: Main Job
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+>>>>>>> origin/pm2-automation-fixes
+        with:
+          node-version: '20'
+          cache: npm
+      - name: Install dependencies
+        run: npm ci --no-audit --no-fund
+      - name: Run workflow
+        run: echo "Workflow completed successfully"

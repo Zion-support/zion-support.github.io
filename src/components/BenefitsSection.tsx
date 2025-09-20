@@ -1,35 +1,41 @@
 import React from 'react';
 import { GradientHeading } from "./GradientHeading";
 import { FeatureCard } from "./FeatureCard";
-import { Bot, Clock, Globe, TrendingDown } from 'lucide-react'
-import { cn } from "@/lib/utils";
-import { useTranslation } from "react-i18next";
+import { Bot, Clock, Globe, TrendingDown, Shield, Zap, Users, Award } from "lucide-react";
+import { motion } from "framer-motion";
 
-interface BenefitsSectionProps {
-  className?: string;
-  style?: React.CSSProperties;
-}
-
-const getBenefits = (t: any) => [
+const benefits = [
   {
-    title: t('benefits.ai_matchmaking'),
-    description: t('benefits.ai_matchmaking_desc'),
+    title: "AI-Powered Matchmaking",
+    description: "Our advanced algorithms match your needs with the perfect service providers or products, saving you time and ensuring optimal results.",
     icon: <Bot className="w-8 h-8" />,
+    color: "from-zion-purple to-zion-purple-dark",
+    bgColor: "bg-zion-purple/10",
+    features: ["Smart Algorithms", "Instant Results", "Perfect Matches"]
   },
   {
-    title: t('benefits.global_availability'),
-    description: t('benefits.global_availability_desc'),
+    title: "Global Availability",
+    description: "Access a worldwide network of tech talents, products, and services to find the best solutions regardless of geographic limitations.",
     icon: <Globe className="w-8 h-8" />,
+    color: "from-zion-cyan to-zion-cyan-dark",
+    bgColor: "bg-zion-cyan/10",
+    features: ["150+ Countries", "Local Expertise", "Global Network"]
   },
   {
-    title: t('benefits.support_24_7'),
-    description: t('benefits.support_24_7_desc'),
+    title: "24/7 Support",
+    description: "Our dedicated team is available around the clock to assist with any questions or issues you might encounter during your journey.",
     icon: <Clock className="w-8 h-8" />,
+    color: "from-zion-blue to-zion-blue-dark",
+    bgColor: "bg-zion-blue/10",
+    features: ["Always Available", "Expert Team", "Instant Response"]
   },
   {
-    title: t('benefits.cost_reduction'),
-    description: t('benefits.cost_reduction_desc'),
+    title: "Cost Reduction",
+    description: "Eliminate middlemen and reduce costs by up to 40% through direct connections with service providers and product vendors.",
     icon: <TrendingDown className="w-8 h-8" />,
+    color: "from-zion-purple-light to-zion-purple",
+    bgColor: "bg-zion-purple-light/10",
+    features: ["40% Savings", "Direct Connect", "No Hidden Fees"]
   },
 ];
 

@@ -57,6 +57,8 @@ export function createTenant(branding: TenantBranding): Tenant {
     branding,
     members: [],
     createdAt: now,
+    updatedAt: now,
+  };
   updateJsonFile<TenantsFile>(FILE, (curr) => ({ tenants: [...(curr.tenants || []), tenant] }), FALLBACK);
   return tenant;
 }

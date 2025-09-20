@@ -176,5 +176,4 @@ const AIBusinessIntelligenceDashboard = (props: any) => {
     </div>
   );
 };
-
 export default AIBusinessIntelligenceDashboard;

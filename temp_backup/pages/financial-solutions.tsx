@@ -65,6 +65,4 @@ export default function FinancialSolutions() {
     </div>
   );
 };
-
-
 export default NeuralInterface2026;

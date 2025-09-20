@@ -164,5 +164,4 @@ export default function HealthcareSolutionsPage() {
     </div>
   );
 };
-
 export default healthcare;

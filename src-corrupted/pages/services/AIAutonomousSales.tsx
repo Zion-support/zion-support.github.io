@@ -83,5 +83,4 @@ const AIAutonomousSales: Reac t.FC = (): JSX.Element => {
     </div>
   );
 };
-
 export default AIAutonomousSales;

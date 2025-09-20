@@ -289,5 +289,4 @@ export const EnhancedContact = () => {
       </section>
     </div>);
 };
-
 export default EnhancedContact;

@@ -59,6 +59,4 @@ export default function EnterpriseSolutions() {
     </div>
   );
 };
-
-
 export default QuantumComputing2026;

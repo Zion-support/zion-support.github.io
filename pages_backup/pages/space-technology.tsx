@@ -180,5 +180,4 @@ const SpaceTechnologyPage: React.FC = () => {
     </div>
   );
 };
-
 export default space-technology;

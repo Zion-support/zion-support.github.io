@@ -20,5 +20,4 @@ const StatsSection: React.FC<StatsSectionProps> = ({ stats }) => {
     </div>
   );
 };
-
 export default StatsSection;

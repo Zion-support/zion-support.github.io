@@ -1,0 +1,459 @@
+#!/usr/bin/env node
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+/**
+ * Front Index Advertiser - Promotes new content on the homepage
+ * Automatically updates the main page with new promotional content
+ */
+=======
+'use strict';
+>>>>>>> origin/auto/autonomy-17186719616
+=======
+/**
+ * Front Index Advertiser
+ * Manages and updates the front page index content
+ */
+>>>>>>> origin/pm2-automation-fixes
+
+const fs = require('fs');
+const path = require('path');
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+class FrontIndexAdvertiser {
+  constructor() {
+    this.mainPagePath = path.join(__dirname, '../app/page.tsx');
+    this.componentsPath = path.join(__dirname, '../components');
+    this.logFile = path.join(__dirname, '../automation/logs/front-advertiser.log');
+  }
+
+  async initialize() {
+    try {
+      // Ensure logs directory exists
+      const logsDir = path.dirname(this.logFile);
+      if (!fs.existsSync(logsDir)) {
+        fs.mkdirSync(logsDir, { recursive: true });
+      }
+
+      this.log('Front Index Advertiser initialized');
+      return true;
+    } catch (error) {
+      console.error('Failed to initialize Front Index Advertiser:', error);
+      return false;
+    }
+  }
+
+  log(message) {
+    const timestamp = new Date().toISOString();
+    const logMessage = `[${timestamp}] ${message}\n`;
+    
+    try {
+      fs.appendFileSync(this.logFile, logMessage);
+    } catch (error) {
+      console.error('Failed to write to log file:', error);
+    }
+    
+    console.log(`[Front Advertiser] ${message}`);
+  }
+
+  async advertiseNewContent() {
+    try {
+      this.log('Starting new content advertisement process');
+
+      // Check if main page exists
+      if (!fs.existsSync(this.mainPagePath)) {
+        this.log('Main page not found, skipping advertisement');
+        return false;
+      }
+
+      // Read current main page content
+      let mainPageContent = fs.readFileSync(this.mainPagePath, 'utf8');
+      
+      // Check for new promotional components
+      const newComponents = this.findNewPromotionalComponents();
+      
+      if (newComponents.length === 0) {
+        this.log('No new promotional components found');
+        return false;
+      }
+
+      this.log(`Found ${newComponents.length} new promotional components: ${newComponents.join(', ')}`);
+
+      // Add new components to main page
+      const updatedContent = this.integrateNewComponents(mainPageContent, newComponents);
+      
+      if (updatedContent !== mainPageContent) {
+        // Backup original content
+        const backupPath = `${this.mainPagePath}.backup.${Date.now()}`;
+        fs.writeFileSync(backupPath, mainPageContent);
+        this.log(`Created backup: ${backupPath}`);
+
+        // Write updated content
+        fs.writeFileSync(this.mainPagePath, updatedContent);
+        this.log('Successfully updated main page with new promotional content');
+        
+        return true;
+      } else {
+        this.log('No changes needed to main page');
+        return false;
+      }
+
+    } catch (error) {
+      this.log(`Error during content advertisement: ${error.message}`);
+      return false;
+    }
+  }
+
+  findNewPromotionalComponents() {
+    const newComponents = [];
+    
+    // Look for AI 2027 promotional components
+    const ai2027Components = [
+      'AI2027UltimateBreakthroughBanner',
+      'AI2027ContentShowcaseBanner'
+    ];
+
+    for (const component of ai2027Components) {
+      const componentPath = path.join(this.componentsPath, `${component}.tsx`);
+      if (fs.existsSync(componentPath)) {
+        newComponents.push(component);
+      }
+    }
+
+    return newComponents;
+  }
+
+  integrateNewComponents(content, newComponents) {
+    let updatedContent = content;
+
+    // Add imports for new components
+    for (const component of newComponents) {
+      const importStatement = `import ${component} from '../components/${component}';`;
+      
+      // Check if import already exists
+      if (!updatedContent.includes(`import ${component} from`)) {
+        // Find the last import statement and add after it
+        const lastImportIndex = updatedContent.lastIndexOf('import ');
+        const nextLineIndex = updatedContent.indexOf('\n', lastImportIndex) + 1;
+        
+        updatedContent = updatedContent.slice(0, nextLineIndex) + 
+                        importStatement + '\n' + 
+                        updatedContent.slice(nextLineIndex);
+        
+        this.log(`Added import for ${component}`);
+      }
+    }
+
+    // Add component usage in the JSX
+    for (const component of newComponents) {
+      const componentUsage = `        {/* ${component} - NEW CONTENT */}\n        <${component} />\n`;
+      
+      // Check if component is already being used
+      if (!updatedContent.includes(`<${component} />`)) {
+        // Add after the opening div
+        const divIndex = updatedContent.indexOf("<div className='min-h-screen bg-white'>");
+        const nextLineIndex = updatedContent.indexOf('\n', divIndex) + 1;
+        
+        updatedContent = updatedContent.slice(0, nextLineIndex) + 
+                        componentUsage + 
+                        updatedContent.slice(nextLineIndex);
+        
+        this.log(`Added ${component} to main page layout`);
+      }
+    }
+
+    return updatedContent;
+  }
+
+  async generateContentReport() {
+    try {
+      this.log('Generating content advertisement report');
+
+      const report = {
+        timestamp: new Date().toISOString(),
+        newComponents: this.findNewPromotionalComponents(),
+        mainPageExists: fs.existsSync(this.mainPagePath),
+        componentsDirectory: this.componentsPath,
+        status: 'active'
+      };
+
+      const reportPath = path.join(__dirname, '../automation/logs/front-advertiser-report.json');
+      fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
+      
+      this.log(`Content report generated: ${reportPath}`);
+      return report;
+
+    } catch (error) {
+      this.log(`Error generating content report: ${error.message}`);
+      return null;
+    }
+  }
+
+  async run() {
+    try {
+      const initialized = await this.initialize();
+      if (!initialized) {
+        return false;
+      }
+
+      // Advertise new content
+      const advertised = await this.advertiseNewContent();
+      
+      // Generate report
+      await this.generateContentReport();
+
+      this.log(`Front advertisement process completed. New content advertised: ${advertised}`);
+      return advertised;
+
+    } catch (error) {
+      this.log(`Front advertisement process failed: ${error.message}`);
+      return false;
+    }
+  }
+}
+
+// CLI interface
+if (require.main === module) {
+  const advertiser = new FrontIndexAdvertiser();
+  
+  const command = process.argv[2];
+  
+  switch (command) {
+    case 'advertise':
+      advertiser.run().then(success => {
+        process.exit(success ? 0 : 1);
+      });
+      break;
+      
+    case 'report':
+      advertiser.generateContentReport().then(report => {
+        console.log(JSON.stringify(report, null, 2));
+        process.exit(0);
+      });
+      break;
+      
+    default:
+      console.log('Usage: node front-index-advertiser.cjs [advertise|report]');
+      process.exit(1);
+  }
+}
+
+module.exports = FrontIndexAdvertiser;
+=======
+const ROOT = process.cwd();
+const FRONT_PAGE = path.join(ROOT, 'pages', 'main', 'front', 'index.tsx');
+const START_MARKER = '/* AUTO-GENERATED: FRONT_ADS_START */';
+const END_MARKER = '/* AUTO-GENERATED: FRONT_ADS_END */';
+
+function titleCase(slug) {
+  return slug
+    .replace(/[-_]/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim()
+    .split(' ')
+    .map((w) => (w ? w[0].toUpperCase() + w.slice(1) : w))
+    .join(' ');
+}
+
+function discoverInternalPages() {
+  const pagesDir = path.join(ROOT, 'pages');
+  const results = [];
+
+  function push(href, label, tagline) {
+    results.push({ type: 'internal', href, label, tagline });
+=======
+class FrontIndexAdvertiser {
+  constructor() {
+    this.indexFile = 'pages/index.tsx';
+    this.reportsDir = 'pages/reports';
+>>>>>>> origin/pm2-automation-fixes
+  }
+
+  async advertise() {
+    console.log('📢 Starting front index advertisement...');
+    
+    try {
+      // Get latest reports
+      const latestReports = await this.getLatestReports();
+      
+      // Update the index file
+      await this.updateIndexFile(latestReports);
+      
+      console.log(`✅ Front index updated with ${latestReports.length} latest reports`);
+      return { success: true, reportsCount: latestReports.length };
+    } catch (error) {
+      console.error('❌ Error during front index advertisement:', error.message);
+      return { success: false, error: error.message };
+    }
+  }
+
+  async getLatestReports() {
+    const reports = [];
+    
+    try {
+      if (fs.existsSync(this.reportsDir)) {
+        const reportTypes = fs.readdirSync(this.reportsDir);
+        
+        for (const type of reportTypes) {
+          const typePath = path.join(this.reportsDir, type);
+          if (fs.statSync(typePath).isDirectory()) {
+            const typeReports = fs.readdirSync(typePath)
+              .filter(f => f.endsWith('.md'))
+              .map(f => ({ type, name: f, path: path.join(type, f) }))
+              .sort((a, b) => {
+                const aStats = fs.statSync(path.join(this.reportsDir, a.path));
+                const bStats = fs.statSync(path.join(this.reportsDir, b.path));
+                return bStats.mtime.getTime() - aStats.mtime.getTime();
+              })
+              .slice(0, 3); // Get top 3 most recent
+            
+            reports.push(...typeReports);
+          }
+        }
+      }
+    } catch (error) {
+      console.warn('Warning: Could not read reports directory:', error.message);
+    }
+    
+    return reports;
+  }
+
+  async updateIndexFile(reports) {
+    try {
+      if (!fs.existsSync(this.indexFile)) {
+        console.warn('Index file not found, skipping update');
+        return;
+      }
+      
+      let content = fs.readFileSync(this.indexFile, 'utf8');
+      
+      // Find the auto-generated content section
+      const startMarker = '/* AUTO-GENERATED: HOME_LATEST_CONTENT_START */';
+      const endMarker = '/* AUTO-GENERATED: HOME_LATEST_CONTENT_END */';
+      
+      const startIndex = content.indexOf(startMarker);
+      const endIndex = content.indexOf(endMarker);
+      
+      if (startIndex === -1 || endIndex === -1) {
+        console.warn('Auto-generated content markers not found in index file');
+        return;
+      }
+      
+      // Generate new content
+      const newContent = this.generateLatestContent(reports);
+      
+      // Replace the content between markers
+      const beforeContent = content.substring(0, startIndex + startMarker.length);
+      const afterContent = content.substring(endIndex);
+      
+      content = beforeContent + '\n' + newContent + '\n          ' + afterContent;
+      
+      // Write back to file
+      fs.writeFileSync(this.indexFile, content, 'utf8');
+      
+    } catch (error) {
+      throw new Error(`Failed to update index file: ${error.message}`);
+    }
+  }
+
+  generateLatestContent(reports) {
+    if (reports.length === 0) {
+      return `            <p className="text-center text-white/60">No recent reports available</p>`;
+    }
+    
+    let content = '';
+    
+    for (const report of reports) {
+      const reportName = report.name.replace('.md', '');
+      const displayName = reportName.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
+      
+      content += `              <Link href="/reports/${report.path.replace('.md', '')}" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover">
+                <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
+                <h3 className="text-lg font-semibold">${displayName}</h3>
+                <p className="mt-1 text-sm text-white/75">Latest ${report.type} report.</p>
+                <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span></div>
+              </Link>`;
+      
+      if (reports.indexOf(report) < reports.length - 1) {
+        content += '\n              ';
+      }
+    }
+    
+    return content;
+  }
+}
+
+// Run if called directly
+if (require.main === module) {
+  const advertiser = new FrontIndexAdvertiser();
+  advertiser.advertise().then(result => {
+    if (result.success) {
+      process.exit(0);
+    } else {
+      process.exit(1);
+    }
+  });
+}
+
+<<<<<<< HEAD
+function buildCard(item) {
+  const common = 'group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo';
+  const inner = `\n  <div className=\"text-base font-semibold\">${item.label}</div>\n  <div className=\"mt-1 text-sm text-white/75\">${item.tagline || ''}</div>\n`;
+  if (item.type === 'external') {
+    return `              <a href=\"${item.href}\" target=\"_blank\" rel=\"noopener\" className=\"${common}\">${inner}  <div className=\"mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90\">Open <span aria-hidden>↗</span></div></a>`;
+  }
+  return `              <Link href=\"${item.href}\"><a className=\"${common}\">${inner}  <div className=\"mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90\">Open <span aria-hidden>→</span></div></a></Link>`;
+}
+
+function generateSection(items) {
+  return [
+    '<section id="auto-promoted" className="mx-auto max-w-7xl px-6 pb-14">',
+    '  <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Auto‑Promoted Features</h2>',
+    '  <p className="mx-auto mt-2 max-w-3xl text-center text-sm text-white/70">Continuously curated promos linking to live hubs, reports, and docs.</p>',
+    '  <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">',
+    items.map(buildCard).join('\n'),
+    '  </div>',
+    '</section>'
+  ].join('\n');
+}
+
+function replaceBetweenMarkers(source, startMarker, endMarker, replacement) {
+  const startIdx = source.indexOf(startMarker);
+  const endIdx = source.indexOf(endMarker);
+  if (startIdx === -1 || endIdx === -1 || endIdx < startIdx) {
+    throw new Error('Markers not found or invalid order in front index');
+  }
+  const before = source.slice(0, startIdx + startMarker.length);
+  const after = source.slice(endIdx);
+  return `${before}\n${replacement}\n${after}`;
+}
+
+(function main() {
+  if (!fs.existsSync(FRONT_PAGE)) {
+    console.log('Front page not found, skipping');
+    process.exit(0);
+  }
+  const internal = discoverInternalPages();
+  const external = discoverExternalLinks();
+  const combined = [...internal, ...external].slice(0, 16);
+  const block = generateSection(combined);
+  const original = fs.readFileSync(FRONT_PAGE, 'utf8');
+  let updated;
+  try {
+    updated = replaceBetweenMarkers(original, START_MARKER, END_MARKER, block);
+  } catch (e) {
+    console.log('Could not replace between markers:', e.message);
+    process.exit(0);
+  }
+  if (updated !== original) {
+    fs.writeFileSync(FRONT_PAGE, updated);
+    console.log('Front index auto‑promotions updated.');
+  } else {
+    console.log('No updates required.');
+  }
+})();
+>>>>>>> origin/auto/autonomy-17186719616
+=======
+module.exports = FrontIndexAdvertiser;
+>>>>>>> origin/pm2-automation-fixes

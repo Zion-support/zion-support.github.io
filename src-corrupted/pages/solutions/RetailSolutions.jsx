@@ -96,5 +96,4 @@ export { RetailSolutions }() {
     </div>
   );
 };
-
 export default RetailSolutions;

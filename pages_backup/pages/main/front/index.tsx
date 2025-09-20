@@ -928,5 +928,4 @@ export default function FrontLanding(req, res) {
     </div>
   );
 };
-
 export default index;

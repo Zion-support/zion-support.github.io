@@ -14,5 +14,4 @@ export const useAccessibility = (props: any) => {}
   }
   return context;
 };
-
 export default Accessibility.js;

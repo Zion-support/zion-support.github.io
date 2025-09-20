@@ -81,5 +81,4 @@ const RealTimeRetrievalArchitectures2026: React.FC = () => {
     </div>
   );
 };
-
 export default page;

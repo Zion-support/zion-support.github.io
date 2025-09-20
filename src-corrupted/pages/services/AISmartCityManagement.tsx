@@ -142,5 +142,4 @@ const AISmartCityManagement = (props: any) => {
     </div>
   );
 };
-
 export default AISmartCityManagement;

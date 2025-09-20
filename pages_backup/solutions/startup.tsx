@@ -237,5 +237,4 @@ export default function StartupSolutionsPage() {
     </Layout>;
   );
 };
-
 export default startup;

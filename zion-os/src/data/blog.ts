@@ -13,6 +13,40 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
+    id: 'ai-governance-operating-model-2026',
+    title: 'AI 2026: Governance Operating Model — From Policy to Runtime Controls',
+    excerpt: 'Translate AI policy into executable, auditable runtime controls with KPIs and rollbacks.',
+    category: 'AI Governance',
+    author: 'Dr. Emily Watson',
+    date: '2025-09-16',
+    readTime: '9 min read',
+    image: '/blog/ai-governance-operating-model.jpg',
+    featured: true,
+    content: 'Governance must move beyond documents into an operating model with enforceable controls. We outline roles, policy grammars, enforcement adapters, and evidence ledgers to make governance measurable, reversible, and auditable.'
+  },
+  {
+    id: 'agent-cost-optimizations-2025',
+    title: 'Agent Cost Optimizations 2025: Quality, Latency, and Spend Tradeoffs',
+    excerpt: 'Practical techniques to cut agent costs 30–60% while preserving SLOs using eval-aware routing.',
+    category: 'AI Solutions',
+    author: 'Michael Rodriguez',
+    date: '2025-09-16',
+    readTime: '8 min read',
+    image: '/blog/agent-cost-optimizations.jpg',
+    content: 'Cost excellence pairs eval signals with policy budgets. We cover prompt shaping, caching, speculative decoding, small model fallbacks, and per-capability routing with budget guardrails and incident-ready rollbacks.'
+  },
+  {
+    id: 'safe-tool-use-2025',
+    title: 'Safe Tool Use 2025: Permissioned Adapters, Sandboxes, and Audit',
+    excerpt: 'Design safe tool adapters with typed schemas, capability scoping, and runtime checks.',
+    category: 'AI Safety',
+    author: 'Dr. Sarah Chen',
+    date: '2025-09-16',
+    readTime: '10 min read',
+    image: '/blog/safe-tool-use.jpg',
+    content: 'Unsafe tool use drives most incidents. We present a reference adapter model: typed IO, allow/deny lists, environment sandboxes, human approvals for sensitive actions, and tamper‑evident logs integrated with governance systems.'
+  },
+  {
     id: 'ai-governance-blueprint-2025',
     title: 'AI Governance Blueprint 2025: Dual-Layer Policy for Safe Autonomy',
     excerpt: 'A pragmatic framework for blending automated policy engines with human oversight for AI at scale.',
@@ -23,6 +57,30 @@ export const blogPosts: BlogPost[] = [
     image: '/blog/ai-governance.jpg',
     featured: true,
     content: 'In 2025, AI governance requires a practical dual-layer approach...'
+  },
+  {
+    id: 'ai-2026-agent-failure-modes',
+    title: 'AI 2026: Agent Failure Modes — Taxonomy and Mitigations',
+    excerpt: 'A practical taxonomy of agent failure modes with detection signals, guardrails, and remediation playbooks.',
+    category: 'AI Safety',
+    author: 'Dr. Emily Watson',
+    date: '2025-09-16',
+    readTime: '9 min read',
+    image: '/blog/agent-failure-modes.jpg',
+    featured: true,
+    content: 'This article catalogs common autonomous agent failure modes (tool misuse, looping, objective drift, unsafe actions), the signals that reveal them, and actionable mitigations with evals and policy-as-code.'
+  },
+  {
+    id: 'ai-2026-data-lineage-in-rag',
+    title: 'AI 2026: Data Lineage in RAG — Provenance, Policies, and Evals',
+    excerpt: 'End-to-end lineage patterns to track sources, transformations, and policy gates in retrieval-augmented generation systems.',
+    category: 'Machine Learning',
+    author: 'Michael Rodriguez',
+    date: '2025-09-16',
+    readTime: '8 min read',
+    image: '/blog/data-lineage-rag.jpg',
+    featured: true,
+    content: 'We outline practical lineage graphs for RAG pipelines, tying provenance to evals, guardrails, and audit-ready evidence across the lifecycle.'
   },
   {
     id: 'quantum-risk-modeling-2025',

@@ -19,5 +19,4 @@ export default function Leadenrichment() {
     </div>
   );
 };
-
 export default lead-enrichment;

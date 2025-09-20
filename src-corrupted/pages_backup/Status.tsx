@@ -393,5 +393,4 @@ function Status() { const [last_updated, setLastUpdated] = useState (new Date ()
 }
   );
 };
-
 export default Status;

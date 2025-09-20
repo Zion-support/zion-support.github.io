@@ -19,5 +19,4 @@ export default function Cybersecurity() {
     </div>
   );
 };
-
 export default cybersecurity;

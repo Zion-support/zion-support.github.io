@@ -165,5 +165,4 @@ export const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
     </div>
   );
 };
-
 export default AccessibilityEnhancer;

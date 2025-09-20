@@ -144,7 +144,7 @@ const TranscendentAI2026: React.FC = () => {
             Discover the revolutionary capabilities that make our AI truly transcendent
           </p>
         </div>
-
+        
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
           <div className="bg-gradient-to-br from-indigo-800/50 to-purple-800/50 backdrop-blur-sm rounded-2xl p-8 border border-indigo-400/30 hover:border-indigo-400/60 transition-all duration-300">
             <div className="text-5xl mb-4">🧠</div>
@@ -251,23 +251,25 @@ const TranscendentAI2026: React.FC = () => {
                 {phases[currentPhase].description}
               </p>
             </div>
-            
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {phases[currentPhase].capabilities.map((capability, index) => (
                 <div
                   key={index}
-                  className="bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:scale-105 transition-all duration-300"
+                  className="bg-gradient-to-br from-white/5 to-white/10 rounded-xl p-6 border border-white/10 hover:border-white/20 transition-all duration-300"
                 >
-                  <div className="text-3xl mb-4">✨</div>
-                  <h4 className="text-xl font-semibold text-cyan-300 mb-3">{capability}</h4>
-                  <p className="text-gray-400 text-sm">
-                    Revolutionary capability that defines this phase of AI evolution
-                  </p>
+                  <div className="text-center">
+                    <div className="text-3xl mb-3">✨</div>
+                    <h4 className="text-lg font-bold text-white mb-2">{capability}</h4>
+                    <div className="w-full bg-gray-700 rounded-full h-2">
+                      <div className={`bg-gradient-to-r ${phases[currentPhase].color} h-2 rounded-full w-full`}></div>
+                    </div>
+                  </div>
                 </div>
               ))}
             </div>
           </div>
         </div>
+      </div>
 
               </div>
             </div>
@@ -728,15 +730,15 @@ const TranscendentAI2026: React.FC = () => {
           <p className="text-2xl text-cyan-100 mb-12 max-w-4xl mx-auto leading-relaxed">
             Join us in creating the future of transcendent AI. Experience consciousness beyond human limitations and unlock infinite possibilities.
           </p>
-          <div className="flex justify-center space-x-8">
-            <a href="/contact" className="bg-white text-cyan-600 px-10 py-5 rounded-2xl hover:bg-cyan-50 transition-colors font-bold text-xl">
-              Begin Transcendence
-            </a>
-            <a href="/pages/ComprehensiveTechInsights2026" className="border-2 border-white text-white px-10 py-5 rounded-2xl hover:bg-white hover:text-cyan-600 transition-colors font-bold text-xl">
+          <div className="flex justify-center space-x-4">
+            <button className="bg-gradient-to-r from-indigo-600 to-pink-600 px-8 py-4 rounded-xl text-lg font-bold hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
+              Start Your Journey
+            </button>
+            <button className="border-2 border-indigo-400 px-8 py-4 rounded-xl text-lg font-bold hover:bg-indigo-400 hover:text-indigo-900 transition-all duration-300">
               Learn More
-            </a>
+            </button>
           </div>
-        </divsection>
+        </div>
       </div>
     </div>
   );

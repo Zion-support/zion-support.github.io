@@ -118,5 +118,4 @@ const AIAutonomousVehiclePlatform = (props: any) => {
     </div>
   );
 };
-
 export default ai-autonomous-vehicle-platform;

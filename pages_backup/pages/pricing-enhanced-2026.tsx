@@ -419,5 +419,4 @@ export default function PricingEnhanced2026Page(req, res) {
     </div>
   );
 };
-
 export default pricing-enhanced-2026;

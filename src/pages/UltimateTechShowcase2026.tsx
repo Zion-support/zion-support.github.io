@@ -188,14 +188,84 @@ const UltimateTechShowcase2026: React.FC = () => {
               <button className="bg-white text-emerald-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
                 Schedule Demo
               </button>
-              <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-emerald-600 transition-colors">
-                Contact Our Experts
+            ))}
+          </div>
+
+          {/* Technologies Grid */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+            {filteredTechnologies.map((tech) => (
+              <div
+                key={tech.id}
+                className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:border-emerald-400/50 transition-all duration-300 hover:scale-105"
+              >
+                <div className="text-4xl mb-4">{tech.icon}</div>
+                <h3 className="text-2xl font-bold mb-3">{tech.name}</h3>
+                <p className="text-gray-300 mb-4">{tech.description}</p>
+                
+                <div className="space-y-3 mb-6">
+                  <div className="flex justify-between items-center">
+                    <span className="text-sm text-gray-400">Status:</span>
+                    <span className={`px-3 py-1 rounded-full text-xs font-semibold ${
+                      tech.status === 'Active' ? 'bg-green-500/20 text-green-400' :
+                      tech.status === 'Development' ? 'bg-yellow-500/20 text-yellow-400' :
+                      tech.status === 'Research' ? 'bg-blue-500/20 text-blue-400' :
+                      'bg-gray-500/20 text-gray-400'
+                    }`}>
+                      {tech.status}
+                    </span>
+                  </div>
+                  
+                  <div className="flex justify-between items-center">
+                    <span className="text-sm text-gray-400">Progress:</span>
+                    <span className="text-sm font-semibold">{tech.progress}%</span>
+                  </div>
+                  
+                  <div className="w-full bg-gray-700 rounded-full h-2">
+                    <div 
+                      className="bg-gradient-to-r from-emerald-500 to-cyan-500 h-2 rounded-full transition-all duration-500"
+                      style={{ width: `${tech.progress}%` }}
+                    ></div>
+                  </div>
+                </div>
+                
+                <div className="mb-4">
+                  <h4 className="text-sm font-semibold text-gray-400 mb-2">Key Features:</h4>
+                  <ul className="text-sm text-gray-300 space-y-1">
+                    {tech.features.map((feature, index) => (
+                      <li key={index} className="flex items-center">
+                        <span className="text-emerald-400 mr-2">✓</span>
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                
+                <button className="w-full bg-gradient-to-r from-emerald-600 to-cyan-600 text-white py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
+                  Learn More →
+                </button>
+              </div>
+            ))}
+          </div>
+
+          {/* Call to Action */}
+          <div className="text-center">
+            <h2 className="text-4xl font-bold mb-6">Ready for the Future?</h2>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Join us in shaping the next generation of revolutionary technology
+            </p>
+            <div className="flex flex-wrap justify-center gap-4">
+              <button className="bg-gradient-to-r from-emerald-600 to-cyan-600 px-8 py-4 rounded-lg hover:shadow-2xl transition-all duration-300 font-semibold text-lg">
+                Get Early Access →
+              </button>
+              <button className="border-2 border-emerald-400 text-emerald-400 px-8 py-4 rounded-lg hover:bg-emerald-400 hover:text-black transition-all duration-300 font-semibold text-lg">
+                Contact Our Team
               </button>
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
+
 export default UltimateTechShowcase2026;

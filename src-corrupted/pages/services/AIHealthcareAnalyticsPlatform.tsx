@@ -490,5 +490,4 @@ const AIHealthcareAnalyticsPlatform = (props: any) => {
     </div>
   );
 };
-
 export default AIHealthcareAnalyticsPlatform;

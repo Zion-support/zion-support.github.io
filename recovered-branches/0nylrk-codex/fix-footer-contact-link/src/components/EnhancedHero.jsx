@@ -162,5 +162,4 @@ const EnhancedHero = () => {
       </div>
     </div>);
 };
-
 export default EnhancedHero;

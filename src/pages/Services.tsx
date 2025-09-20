@@ -1,56 +1,24 @@
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { 
   Brain, 
   Cloud, 
   Shield, 
-  Rocket, 
   Zap, 
   Users, 
-  Globe, 
-  Cpu,
-  Lock,
-  Heart,
-  Star,
-  ArrowRight,
-  CheckCircle,
-  TrendingUp,
-  Code,
+  Globe,
   Database,
-  Network,
   Smartphone,
+  Lock,
   BarChart3,
-  MessageSquare,
-  FileText,
-  ShoppingCart,
-  Headphones,
-  Mail,
-  Search,
-  HelpCircle,
-  ShieldCheck,
-  Globe2,
-  Leaf,
-  Sparkles,
-  Target,
-  DollarSign,
-  Clock,
-  Award,
-  Phone,
-  Mail as MailIcon,
-  MapPin,
-  Infinity,
+  Cpu,
+  Network,
+  Server,
+  Code,
+  Palette,
+  Rocket,
   Building2,
-  Car,
-  Factory,
-  GraduationCap,
-  Scale,
-  Truck,
-  Wheat,
-  Zap2,
-  Brain2,
-  Cloud2,
-  Lock2,
-  ChevronLeft,
-  ChevronRight
+  CheckCircle
 } from 'lucide-react';
 import SEO from '../components/SEO';
 import { COMPREHENSIVE_INNOVATIVE_SERVICES_2030 } from '../data/comprehensiveInnovativeServices2030';
@@ -63,129 +31,128 @@ export default function Services() {
   const [currentPage, setCurrentPage] = useState(1);
   const [itemsPerPage] = useState(12);
 
+const Services: React.FC = () => {
+  const serviceCategories = [
+    {
+      title: 'AI & Machine Learning',
+      icon: Brain,
+      description: 'Cutting-edge artificial intelligence solutions for business transformation',
+      services: [
+        { name: 'AI-Powered Business Solutions', path: '/ai-business-solutions', description: 'Intelligent automation and decision-making systems' },
+        { name: 'Machine Learning Models', path: '/ai-services', description: 'Custom ML models for your specific business needs' },
+        { name: 'AI Research & Development', path: '/ai-services', description: 'Advanced AI research and custom algorithm development' },
+        { name: 'Neural Network Platforms', path: '/ai-services', description: 'Scalable neural network infrastructure' }
+      ]
+    },
+    {
+      title: 'Cloud & DevOps',
+      icon: Cloud,
+      description: 'Scalable cloud infrastructure and automated deployment solutions',
+      services: [
+        { name: 'Cloud Infrastructure', path: '/cloud-devops-solutions', description: 'Multi-cloud deployment and management' },
+        { name: 'DevOps Automation', path: '/cloud-devops-solutions', description: 'CI/CD pipelines and infrastructure as code' },
+        { name: 'Container Orchestration', path: '/cloud-devops-solutions', description: 'Kubernetes and Docker management' },
+        { name: 'Serverless Architecture', path: '/cloud-devops-solutions', description: 'Event-driven serverless solutions' }
+      ]
+    },
+    {
+      title: 'Enterprise Solutions',
+      icon: Building2,
+      description: 'Comprehensive business transformation and enterprise-grade solutions',
+      services: [
+        { name: 'Digital Transformation', path: '/digital-transformation', description: 'End-to-end business digitization' },
+        { name: 'Enterprise Architecture', path: '/enterprise-solutions', description: 'Scalable enterprise system design' },
+        { name: 'Legacy System Modernization', path: '/enterprise-solutions', description: 'Upgrade and modernize existing systems' },
+        { name: 'Business Process Automation', path: '/enterprise-solutions', description: 'Streamline operations with automation' }
+      ]
+    },
+    {
+      title: 'Cybersecurity',
+      icon: Shield,
+      description: 'Advanced security solutions to protect your digital assets',
+      services: [
+        { name: 'Security Audits', path: '/advanced-cybersecurity-suite', description: 'Comprehensive security assessments' },
+        { name: 'Threat Detection', path: '/advanced-cybersecurity-suite', description: 'AI-powered threat monitoring' },
+        { name: 'Compliance Management', path: '/soc2-compliance-automation', description: 'SOC2, GDPR, and industry compliance' },
+        { name: 'Incident Response', path: '/advanced-cybersecurity-suite', description: '24/7 security monitoring and response' }
+      ]
+    },
+    {
+      title: 'Micro SAAS Services',
+      icon: Zap,
+      description: 'Specialized software-as-a-service solutions for specific business needs',
+      services: [
+        { name: 'Micro SAAS Platforms', path: '/micro-saas-services', description: 'Custom micro-service applications' },
+        { name: 'API Development', path: '/micro-saas-services', description: 'RESTful and GraphQL API services' },
+        { name: 'Integration Services', path: '/micro-saas-services', description: 'Third-party system integrations' },
+        { name: 'Custom Dashboards', path: '/micro-saas-services', description: 'Business intelligence and analytics' }
+      ]
+    },
+    {
+      title: 'Emerging Technologies',
+      icon: Rocket,
+      description: 'Next-generation technology solutions for future-ready businesses',
+      services: [
+        { name: 'Quantum Computing', path: '/emerging-tech-services', description: 'Quantum algorithm development' },
+        { name: 'Blockchain Solutions', path: '/emerging-tech-services', description: 'Distributed ledger technology' },
+        { name: 'IoT Platforms', path: '/emerging-tech-services', description: 'Internet of Things infrastructure' },
+        { name: 'Edge Computing', path: '/emerging-tech-services', description: 'Distributed computing solutions' }
+      ]
+    }
   ];
 
-  const filteredServices = COMPREHENSIVE_INNOVATIVE_SERVICES_2030.filter(service => {
-    const matchesCategory = activeCategory === 'all' || service.category === activeCategory;
-    const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.category.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
-    return matchesCategory && matchesSearch;
-  });
-
-  const sortedServices = [...filteredServices].sort((a, b) => {
-    switch (sortBy) {
-      case 'rating':
-        return b.rating - a.rating;
-      case 'price':
-        return a.price - b.price;
-      case 'reviews':
-        return b.reviewCount - a.reviewCount;
-      case 'name':
-        return a.title.localeCompare(b.title);
-      default:
-        return 0;
+  const featuredServices = [
+    {
+      title: 'AI-Powered IT Asset Management',
+      description: 'Intelligent tracking and management of your IT infrastructure',
+      icon: Database,
+      path: '/ai-powered-it-asset-management',
+      features: ['Automated asset discovery', 'Predictive maintenance', 'Cost optimization', 'Compliance tracking']
+    },
+    {
+      title: 'Advanced Research Automation',
+      description: 'AI-driven research tools for faster insights and discoveries',
+      icon: BarChart3,
+      path: '/advanced-research-automation',
+      features: ['Data mining automation', 'Literature review tools', 'Research workflow optimization', 'Collaborative platforms']
+    },
+    {
+      title: '5G Enterprise Solutions',
+      description: 'Next-generation network infrastructure for enterprise connectivity',
+      icon: Network,
+      path: '/5g-enterprise-solutions',
+      features: ['Private 5G networks', 'Network optimization', 'Security protocols', 'Performance monitoring']
     }
-  });
-
-  // Pagination logic
-  const totalPages = Math.ceil(sortedServices.length / itemsPerPage);
-  const startIndex = (currentPage - 1) * itemsPerPage;
-  const endIndex = startIndex + itemsPerPage;
-  const currentServices = sortedServices.slice(startIndex, endIndex);
-
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1
-      }
-    }
-  };
-
-  const itemVariants = {
-    hidden: { y: 20, opacity: 0 },
-    visible: { y: 0, opacity: 1 }
-  };
-
-  const getCategoryIcon = (categoryName: string) => {
-    const category = categories.find(cat => cat.id === categoryName);
-    return category ? category.icon : '🚀';
-  };
-
-  const getCategoryColor = (categoryName: string) => {
-    const category = categories.find(cat => cat.id === categoryName);
-    return category ? category.color : 'from-cyan-500 to-blue-500';
-  };
-
-  const handleCategoryChange = (categoryId: string) => {
-    setActiveCategory(categoryId);
-    setCurrentPage(1);
-  };
-
-  const handleSearchChange = (value: string) => {
-    setSearchTerm(value);
-    setCurrentPage(1);
-  };
-
-  const handleSortChange = (value: string) => {
-    setSortBy(value);
-    setCurrentPage(1);
-  };
+  ];
 
   return (
-    <>
-      <SEO 
-        title="AI & Technology Services | Zion Tech Group"
-        description="Discover our comprehensive suite of AI-powered micro SAAS services, cutting-edge technology solutions, and innovative platforms that transform businesses across industries."
-        keywords="AI services, micro SAAS, technology solutions, business intelligence, cybersecurity, cloud computing, blockchain, IoT, quantum computing"
-      />
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-        {/* Hero Section */}
-        <section className="relative pt-32 pb-20 overflow-hidden">
-          <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%239C92AC%22%20fill-opacity%3D%220.1%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
-          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center"
+    <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple">
+      {/* Hero Section */}
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+            Our <span className="bg-gradient-to-r from-zion-cyan to-zion-purple-light bg-clip-text text-transparent">Services</span>
+          </h1>
+          <p className="text-xl text-zion-slate-light max-w-3xl mx-auto mb-8">
+            Comprehensive technology solutions designed to transform your business, 
+            from AI-powered automation to enterprise-grade infrastructure.
+          </p>
+          <div className="flex flex-wrap justify-center gap-4">
+            <Link 
+              to="/contact" 
+              className="bg-zion-cyan hover:bg-zion-cyan-light text-white px-8 py-3 rounded-lg font-semibold transition-colors"
             >
-
-                    {/* Tags */}
-                    <div className="flex flex-wrap gap-2 mb-4">
-                      {service.tags.slice(0, 3).map((tag, index) => (
-                        <span
-                          key={index}
-                          className="px-2 py-1 bg-white/10 text-gray-300 text-xs rounded-full border border-white/20"
-                        >
-                          {tag}
-                        </span>
-                      ))}
-                      {service.tags.length > 3 && (
-                        <span className="px-2 py-1 bg-white/10 text-gray-400 text-xs rounded-full border border-white/20">
-                          +{service.tags.length - 3} more
-                        </span>
-                      )}
-                    </div>
-
-                    {/* Service Details */}
-                    <div className="grid grid-cols-2 gap-4 mb-6">
-                      <div className="text-center p-3 bg-white/5 rounded-lg">
-                        <div className="text-lg font-bold text-cyan-400">{service.aiScore}%</div>
-                        <div className="text-xs text-gray-400">AI Score</div>
-                      </div>
-                      <div className="text-center p-3 bg-white/5 rounded-lg">
-                        <div className="text-lg font-bold text-emerald-400">{service.setupTime}</div>
-                        <div className="text-xs text-gray-400">Setup Time</div>
-                      </div>
-                    </div>
-
+              Get a Quote
+            </Link>
+            <Link 
+              to="/pricing" 
+              className="border border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white px-8 py-3 rounded-lg font-semibold transition-colors"
+            >
+              View Pricing
+            </Link>
           </div>
-        </motion.div>
+        </div>
+      </section>
 
         {/* CTA Section */}
 import React from 'react';

@@ -1,4 +1,5 @@
 #!/bin/bash
+set -e
 
     sed -i '/^>>>>>>>/d' "$file"
     

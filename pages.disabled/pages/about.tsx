@@ -19,5 +19,4 @@ export default function About() {
     </div>
   );
 };
-
 export default about;

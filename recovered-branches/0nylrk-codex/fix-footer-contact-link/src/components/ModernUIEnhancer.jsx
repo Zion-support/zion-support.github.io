@@ -377,5 +377,4 @@ export const ModernUIEnhancer = ({ enableAnimations = true, enableParticles = tr
         </div>)}
     </>);
 };
-
 export default ModernUIEnhancer;

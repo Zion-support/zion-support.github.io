@@ -113,5 +113,4 @@ export default function EducationPage() {
     </div>
   );
 };
-
 export default education;

@@ -24,5 +24,4 @@ const AIAutonomousHRPlatform: React.FC = () => {
     </div>
   );
 };
-
 export default ai-autonomous-hr-platform;

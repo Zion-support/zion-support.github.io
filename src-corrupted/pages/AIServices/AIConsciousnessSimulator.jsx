@@ -90,5 +90,4 @@ export default function AIConsciousnessSimulator(props: any) {}
     </div>
   );
 };
-
 export default AIConsciousnessSimulator;

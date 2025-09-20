@@ -90,5 +90,4 @@ export default function AIContentFactory(props: any) {}
     </div>
   );
 };
-
 export default AIContentFactory;

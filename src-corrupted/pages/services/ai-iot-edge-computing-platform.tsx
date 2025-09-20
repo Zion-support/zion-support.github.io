@@ -19,5 +19,4 @@ const AIIoTEdgeComputingPlatform: Reac t.FC = (): JSX.Element => {
     </div>
   );
 };
-
 export default ai-iot-edge-computing-platform;

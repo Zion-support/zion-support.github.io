@@ -199,12 +199,9 @@ const RevolutionaryContentShowcase2025: React.FC = () => {
                   index === activeIndex 
                     ? 'bg-purple-500 scale-125' 
                     : 'bg-white/30 hover:bg-white/50'
-                }`}
-              />
-            ))}
-          </div>
-        </div>
-
+                }`}</button>
+              /></button>
+            ))}</button>
         {/* Quick Access Grid */}
         <div className="mt-16">
           <h3 className="text-3xl font-bold text-center mb-8">Quick Access to All Revolutionary Content</h3>
@@ -217,16 +214,11 @@ const RevolutionaryContentShowcase2025: React.FC = () => {
               >
                 <div className="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">
                   {content.image}
-                </div>
                 <h4 className="text-xl font-bold text-white mb-2">{content.title}</h4>
                 <p className="text-white/80 text-sm">{content.description}</p>
-                <div className="mt-4 text-white/60 text-sm">Explore →</div>
+                <div className="mt-4 text-white/60 text-sm">Explore →
               </a>
             ))}
-          </div>
-        </div>
-      </div>
-    </div>
   );
 };
 

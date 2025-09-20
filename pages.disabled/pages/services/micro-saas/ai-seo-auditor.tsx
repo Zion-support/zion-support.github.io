@@ -19,5 +19,4 @@ export default function Aiseoauditor() {
     </div>
   );
 };
-
 export default ai-seo-auditor;

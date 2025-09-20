@@ -19,5 +19,4 @@ export default function Devopsautopilot() {
     </div>
   );
 };
-
 export default devops-autopilot;

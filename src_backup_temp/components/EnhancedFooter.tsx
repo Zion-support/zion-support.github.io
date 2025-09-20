@@ -390,5 +390,4 @@ export default EnhancedFooter;
     </footer>
   );
 };
-
 export default EnhancedFooter;

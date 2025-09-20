@@ -59,5 +59,4 @@ export default function ProcessAutomation() {
     </div>
   );
 };
-
 export default process-automation;

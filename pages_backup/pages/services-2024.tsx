@@ -246,5 +246,4 @@ const Services2024Page: React.FC = () => {;
     </div>
   );
 };
-
 export default services-2024;

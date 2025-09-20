@@ -257,5 +257,4 @@ export const withErrorBoundary = <P extends object>(;
     </EnhancedErrorBoundary>;
   );
 };
-
 export default EnhancedErrorBoundary;

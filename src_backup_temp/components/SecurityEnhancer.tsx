@@ -67,5 +67,4 @@ export function SecurityEnhancer("props": any) {;
     null;
   );
 };
-
 export default SecurityEnhancer;

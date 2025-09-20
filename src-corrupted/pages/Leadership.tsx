@@ -165,5 +165,4 @@ const Leadership = (props: any) => {
     </div>
   );
 };
-
 export default Leadership;

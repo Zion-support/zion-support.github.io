@@ -90,5 +90,4 @@ export default function AIAutonomousDecisionPlatform(props: any) {}
     </div>
   );
 };
-
 export default AIAutonomousDecisionPlatform;

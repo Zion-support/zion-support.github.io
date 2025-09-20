@@ -170,5 +170,4 @@ export default function EducationSolutionsPage() {
     </div>
   );
 };
-
 export default education;

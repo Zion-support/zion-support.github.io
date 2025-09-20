@@ -41,5 +41,4 @@ const categoryIcons = {
     'AI & Cloud Management': Cloud,
     'AI & DevOps': Code
 };
-
 export default ComprehensiveServicesOverview;

@@ -3,7 +3,8 @@
 # Script to merge all open PRs into main branch
 # This script will attempt to merge each PR and resolve conflicts automatically
 
-set -e
+# Extract PR numbers from the JSON file
+PR_NUMBERS=$(grep -o '"number": [0-9]*' /workspace/current_prs.json | grep -o '[0-9]*' | sort -n)
 
 echo "Starting PR merge process..."
 

@@ -170,5 +170,4 @@ export default function Page(props: any) {
   }
   return children;
 };
-
 export default EnhancedErrorBoundary;

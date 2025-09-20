@@ -1,0 +1,79 @@
+<<<<<<< HEAD
+---
+name: UI Evolution Weekly Beautify
+on:
+  schedule:
+    - cron: '0 8 * * 1' # Every Monday at 8 AM UTC
+  workflow_dispatch: {}
+jobs:
+  beautify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+=======
+name: UI Evolution Weekly Beautify
+'on':
+  workflow_dispatch: {}
+  schedule:
+    - cron: 0 2 * * *
+jobs:
+  ui-beautify:
+    runs-on: ubuntu-latest
+>>>>>>> origin/pm2-automation-fixes
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - name: Install dependencies
+        run: npm ci
+<<<<<<< HEAD
+      - name: Run UI evolution beautify
+        run: node automation/beautify-hightech-ui.cjs | cat
+      - name: Run UI evolution dashboard
+        run: node automation/ui-evolution-dashboard.cjs | tee ui-evolution-summary.json
+      - name: Upload results
+        uses: actions/upload-artifact@v4
+        with:
+          name: ui-evolution-results
+          path: ui-evolution-summary.json
+          retention-days: 7
+=======
+        continue-on-error: true
+      - name: Generate beautify suggestions
+        if: always()
+        run: node automation/beautify-hightech-ui.cjs | cat
+        continue-on-error: true
+      - name: Summarize UI evolution
+        if: always()
+        run: node automation/ui-evolution-dashboard.cjs | tee ui-evolution-summary.json
+        continue-on-error: true
+      - name: Upload UI beautify artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: ui-evolution-beautify
+          path: |
+            data/reports/ui-evolution/**/*
+            ui-evolution-summary.json
+          if-no-files-found: ignore
+          retention-days: 7
+        if: always()
+      - name: Create summary
+        if: always()
+        run: |
+          echo "## UI Evolution Weekly Beautify Summary" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "**Status:** UI evolution weekly beautify completed" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "**Timestamp:** $(date -u)" >> $GITHUB_STEP_SUMMARY
+    timeout-minutes: 30
+    runs_on: ubuntu-latest
+>>>>>>> origin/pm2-automation-fixes
+permissions:
+  contents: read
+  actions: read
+concurrency:
+  group: ui-evolution-weekly-beautify.yml-${{ github.ref }}
+  cancel-in-progress: true

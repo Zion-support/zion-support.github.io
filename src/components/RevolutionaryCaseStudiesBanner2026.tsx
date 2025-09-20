@@ -20,24 +20,21 @@ const RevolutionaryCaseStudiesBanner2026: React.FC = () => {
       company: "TechCorp Global",
       result: "300% increase in AI efficiency",
       description: "Revolutionary AI consciousness implementation transformed their entire operation.",
-      icon: <Star className="w-8 h-8" />,
-      color: "from-blue-500 to-cyan-500"
+      icon: <Star className="w-8 h-8" />
     },
     {
-      id: 2,
+      title: "Quantum Neural Integration",
       company: "Quantum Solutions Inc",
       result: "1000x faster processing",
       description: "Quantum neural fusion delivered unprecedented computational capabilities.",
-      icon: <TrendingUp className="w-8 h-8" />,
-      color: "from-purple-500 to-pink-500"
+      icon: <TrendingUp className="w-8 h-8" />
     },
     {
-      id: 3,
+      title: "Interdimensional Computing",
       company: "FutureTech Labs",
       result: "Infinite scalability achieved",
       description: "Breakthrough interdimensional technology revolutionized their infrastructure.",
-      icon: <Award className="w-8 h-8" />,
-      color: "from-emerald-500 to-teal-500"
+      icon: <Award className="w-8 h-8" />
     }
   ];
 
@@ -53,11 +50,9 @@ const RevolutionaryCaseStudiesBanner2026: React.FC = () => {
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
             Revolutionary Case Studies 2026
           </h2>
-          <p className="text-2xl opacity-90 max-w-4xl mx-auto">
-            Real results from real companies using our revolutionary technologies
+          <p className="text-2xl opacity-90 max-w-4xl mx-auto"></p>
+            Real results from real companies using our revolutionary technologies</p>
           </p>
-        </div>
-
         {/* Case Study Carousel */}
         <div className="max-w-6xl mx-auto mb-16">
           <div className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-2xl p-12 border border-indigo-400/30">
@@ -70,46 +65,34 @@ const RevolutionaryCaseStudiesBanner2026: React.FC = () => {
             >
               <div>
                 <div className="flex items-center mb-6">
-                  <div className={`w-16 h-16 bg-gradient-to-r ${caseStudies[activeCase].color} rounded-xl flex items-center justify-center mr-4`}>
-                    {caseStudies[activeCase].icon}
-                  </div>
+                  <div className="text-6xl mr-4">{caseStudies[activeCase].logo}
                   <div>
                     <h3 className="text-3xl font-bold">{caseStudies[activeCase].company}</h3>
-                    <p className="text-indigo-300">Technology Innovation</p>
-                  </div>
-                </div>
-                
+                    <p className="text-indigo-300">{caseStudies[activeCase].industry}</p>
                 <div className="mb-6">
                   <h4 className="text-lg font-semibold mb-3 text-red-300">Challenge:</h4>
-                  <p className="text-gray-300">Traditional systems were limiting growth and innovation potential</p>
-                </div>
-                
+                  <p className="text-gray-300">{caseStudies[activeCase].challenge}</p>
                 <div className="mb-6">
                   <h4 className="text-lg font-semibold mb-3 text-blue-300">Solution:</h4>
-                  <p className="text-gray-300">{caseStudies[activeCase].description}</p>
-                </div>
-                
-                <div className="bg-gradient-to-r from-green-500/20 to-emerald-500/20 p-4 rounded-lg border border-green-400/30">
-                  <h4 className="text-lg font-semibold mb-2 text-green-300">Result:</h4>
-                  <p className="text-2xl font-bold text-green-400">{caseStudies[activeCase].result}</p>
-                </div>
-              </div>
-              
-              <div className="text-center">
-                <div className="text-8xl mb-4">🚀</div>
-                <p className="text-xl text-gray-300 mb-6">
-                  "This technology completely transformed our business model and opened up possibilities we never imagined."
-                </p>
-                <div className="flex items-center justify-center space-x-2">
-                  <div className="w-10 h-10 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full flex items-center justify-center">
-                    <Star className="w-5 h-5 text-white" />
-                  </div>
-                  <div className="text-left">
-                    <p className="font-semibold">CEO, {caseStudies[activeCase].company}</p>
-                    <p className="text-sm text-gray-400">Verified Success Story</p>
-                  </div>
-                </div>
-              </div>
+                  <p className="text-gray-300">{caseStudies[activeCase].solution}</p>
+                <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+                  <p className="text-gray-300 italic mb-4">"{caseStudies[activeCase].testimonial}"</p>
+                  <p className="text-indigo-300 font-semibold">- {caseStudies[activeCase].author}</p>
+              <div>
+                <h4 className="text-2xl font-bold mb-6 text-center">Results Achieved</h4>
+                <div className="grid grid-cols-2 gap-6">
+                  <div className="bg-gradient-to-br from-green-600/30 to-emerald-600/30 backdrop-blur-sm rounded-xl p-6 text-center">
+                    <div className="text-3xl font-bold text-green-400 mb-2">{caseStudies[activeCase].results.efficiency}
+                    <div className="text-white/80 text-sm">Efficiency Gain
+                  <div className="bg-gradient-to-br from-blue-600/30 to-cyan-600/30 backdrop-blur-sm rounded-xl p-6 text-center">
+                    <div className="text-3xl font-bold text-blue-400 mb-2">{caseStudies[activeCase].results.costSavings}
+                    <div className="text-white/80 text-sm">Cost Savings
+                  <div className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-6 text-center">
+                    <div className="text-3xl font-bold text-purple-400 mb-2">{caseStudies[activeCase].results.accuracy}
+                    <div className="text-white/80 text-sm">Accuracy Rate
+                  <div className="bg-gradient-to-br from-orange-600/30 to-red-600/30 backdrop-blur-sm rounded-xl p-6 text-center">
+                    <div className="text-3xl font-bold text-orange-400 mb-2">{caseStudies[activeCase].results.timeReduction}
+                    <div className="text-white/80 text-sm">Time Reduction
             </motion.div>
           </div>
         </div>
@@ -168,3 +151,51 @@ const RevolutionaryCaseStudiesBanner2026: React.FC = () => {
 };
 
 export default RevolutionaryCaseStudiesBanner2026;
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>

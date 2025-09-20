@@ -2488,5 +2488,4 @@ export default function NewsPage(req, res) {
     </div>
   );
 };
-
 export default news;

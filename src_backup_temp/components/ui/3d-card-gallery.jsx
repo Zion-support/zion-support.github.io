@@ -109,5 +109,4 @@ export function Card3DGallery($1) {}
             'Infrastructure': Settings,''
   'Research': TrendingUp;'
 };
-
 export default 3d-card-gallery;

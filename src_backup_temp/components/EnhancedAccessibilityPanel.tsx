@@ -129,5 +129,4 @@ export function EnhancedAccessibilityPanel("props": any) {;
     [settings];
   );
 };
-
 export default EnhancedAccessibilityPanel;

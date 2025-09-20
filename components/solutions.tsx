@@ -3,6 +3,9 @@ import Layout from '../components/layout/Layout';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { 
+  Heart, DollarSign, Factory, ShoppingCart, Building2, 
+  GraduationCap, Leaf, Shield, ArrowRight, Star, CheckCircle,
+  Users, Globe, Cpu, Database, Network, Target
 } from 'lucide-react';
 
 const SolutionsPage: React.FC = () => {
@@ -12,6 +15,7 @@ const SolutionsPage: React.FC = () => {
       solutions: [
         {
           name: 'Healthcare AI Solutions',
+          description: 'AI-powered diagnostic tools, patient care optimization, and medical research platforms',
           href: '/healthcare-solutions',
           featured: true,
           icon: <Heart className="w-6 h-6" />
@@ -180,6 +184,8 @@ const SolutionsPage: React.FC = () => {
     <UltraFuturisticBackground>
       <div className="min-h-screen">
         <Head>
+          <title>Solutions - Zion Tech Group | Revolutionary AI, Quantum Computing & Emerging Technology Solutions</title>
+          <meta name="description" content="Discover Zion Tech Group's comprehensive solutions portfolio including Micro SaaS platforms, AI-powered tools, Business Intelligence, Process Automation, and Cloud platforms." />
         </Head>
 
         {/* Hero Section */}
@@ -197,6 +203,9 @@ const SolutionsPage: React.FC = () => {
               className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-12"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+            >
+              Transform your business with our cutting-edge technology solutions. From AI-powered tools to quantum computing platforms, we deliver innovation that drives results.
             </motion.p>
             
             {/* Stats Grid */}
@@ -204,6 +213,9 @@ const SolutionsPage: React.FC = () => {
               className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+            >
+              {stats.map((stat, index) => (
                 <div key={index} className="text-center">
                   <div className="flex justify-center mb-2 text-cyan-400">
                     {stat.icon}
@@ -235,11 +247,13 @@ const SolutionsPage: React.FC = () => {
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {solutions.map((solution, index) => (
                 <motion.div
                   key={index}
                   className="group relative bg-black/40 backdrop-blur-sm border border-cyan-400/20 rounded-2xl p-8 hover:border-cyan-400/40 transition-all duration-300 hover:transform hover:scale-105"
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
                 >
                   <div className={`w-16 h-16 bg-gradient-to-br ${solution.color} rounded-xl flex items-center justify-center text-white mb-6 group-hover:scale-110 transition-transform duration-300`}>
@@ -255,6 +269,7 @@ const SolutionsPage: React.FC = () => {
                   </p>
                   
                   <ul className="space-y-3 mb-8">
+                    {solution.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center space-x-3">
                         <CheckCircle className="w-5 h-5 text-cyan-400 flex-shrink-0" />
                         <span className="text-gray-300">{feature}</span>
@@ -276,6 +291,7 @@ const SolutionsPage: React.FC = () => {
               Industry Solutions
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Tailored technology solutions designed specifically for your industry's unique challenges and opportunities.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
@@ -310,24 +326,29 @@ const SolutionsPage: React.FC = () => {
               Industry-Specific Solutions
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              From healthcare to manufacturing, we deliver specialized solutions that address your industry's unique needs.
             </p>
           </motion.div>
 
           <div className="space-y-16">
+            {industrySolutions.map((category, categoryIndex) => (
               <motion.div
                 key={category.category}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: categoryIndex * 0.2 }}
                 viewport={{ once: true }}
               >
                 <h3 className="text-3xl font-bold text-white mb-8 text-center">
                   {category.category}
                 </h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                  {category.solutions.map((solution, solutionIndex) => (
                     <motion.div
                       key={solution.name}
                       initial={{ opacity: 0, y: 30 }}
                       whileInView={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.6, delay: solutionIndex * 0.1 }}
                       viewport={{ once: true }}
                       className={`bg-gradient-to-br from-gray-900/50 to-gray-800/50 border rounded-2xl p-6 backdrop-blur-sm hover:border-green-500/40 transition-all duration-300 ${
                         solution.featured ? 'border-green-500/30' : 'border-gray-700/50'
@@ -372,6 +393,7 @@ const SolutionsPage: React.FC = () => {
               Ready to Transform Your Industry?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
+              Let's discuss how our industry-specific solutions can drive innovation and growth for your organization.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link

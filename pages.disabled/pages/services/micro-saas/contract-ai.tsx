@@ -19,5 +19,4 @@ export default function Contractai() {
     </div>
   );
 };
-
 export default contract-ai;

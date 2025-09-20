@@ -104,5 +104,4 @@ export default function DigitalTransformationPage() {
     </div>
   );
 };
-
 export default transformation;

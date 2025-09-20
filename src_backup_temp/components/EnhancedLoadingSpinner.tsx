@@ -24,5 +24,4 @@ export default function EnhancedLoadingSpinner("props": "any) {;
     </div>
   );
 };
-
 export default EnhancedLoadingSpinner;

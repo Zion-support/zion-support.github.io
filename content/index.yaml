@@ -558,26 +558,6 @@ content_index:
         audit_ready: true
         integration_time: "< 1 day"
         data_sources: "Evals, Incidents, Approvals"
-=======
-        downloads: "1000+"
-        success_rate: "95%"
-        implementation_time: "6-12 months"
-        roi: "300-500%"
-  latest_2026_content:
-    - id: "ai-2026-autonomous-evals-blueprint"
-      type: "blog"
-      title: "AI 2026: Autonomous Evals Blueprint"
-      file_path: "/content/blog/ai-2026-autonomous-evals-blueprint.md"
-      url: "/blog/ai-2026-autonomous-evals-blueprint"
-      status: "published"
-      created: "2025-09-15"
-      tags: ["Evals", "CI/CD", "Guardrails", "Safety"]
-      featured: true
-      is_new: true
-      metrics:
-        coverage: "85% scenario coverage"
-        reliability: "99.2% release pass-rate"
-        rollback: "<1% rollback rate"
 
     - id: "ai-2026-evaluation-harness-blueprint"
       type: "blog"

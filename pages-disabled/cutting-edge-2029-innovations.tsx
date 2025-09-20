@@ -19,5 +19,4 @@ export default function CuttingEdge2029Innovations() {
     </div>
   );
 };
-
 export default cutting-edge-2029-innovations;

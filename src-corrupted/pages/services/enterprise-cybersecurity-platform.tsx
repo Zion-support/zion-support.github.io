@@ -178,5 +178,4 @@ export default function EnterpriseCybersecurityPlatform(props: any) {
     </div>
   );
 };
-
 export default enterprise-cybersecurity-platform;

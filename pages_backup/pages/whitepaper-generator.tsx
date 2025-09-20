@@ -1,73 +1,39 @@
-
 import { useEffect  } from 'react';
 import { useRouter } from 'next/router';
-export default function WhitepaperGeneratorRedirect() {
-
-
 import {useEffect} from 'react';
 import {useRouter} from 'next/router';
+import { useEffect } from 'react';
+import {use_router} from 'next / router';
 
+export default function WhitepaperGeneratorRedirect() {,
 export default function WhitepaperGeneratorRedirect() {;
-
-
-
-
-
-
-
   const router = useRouter();
   useEffect(() => {;
     router && router.replace('/tokenomics');
   }, [router]);
   return null;
-
-
-
-
-
-
 }
-
-
-
-
-
-
-import { useEffect } from 'react';
-import { useRouter } from 'next/router';
-export default function WhitepaperGeneratorRedirect() {
+,
+export default function WhitepaperGeneratorRedirect() {,
   const router = useRouter();
-  useEffect(() => {
-    router.replace('/tokenomics')
+  useEffect(() => {,
+    router.replace('/tokenomics'),
   }, [router]);
-  return null
+  return null,
 }
-
-import {useEffect} from 'react';
-import {use_router} from 'next / router';
-export default /**
- * WhitepaperGeneratorRedirect - Function description
- */
-function WhitepaperGeneratorRedirect() {
+,
+export default /**,
+ * WhitepaperGeneratorRedirect - Function description,
+ */,
+function WhitepaperGeneratorRedirect() {,
   const router = use_router ();
-  useEffect (() => {
+  useEffect (() => {,
 router.replace ('/tokenomics');
   }, [router]);
   return null;
-
-
-  } catch (error) {
+  } catch (error) {,
     console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    return res.status(500).json({ error: "Internal server error" ,});
   }
 }
-
-
-
-
-
-
-
-
-
-
+,

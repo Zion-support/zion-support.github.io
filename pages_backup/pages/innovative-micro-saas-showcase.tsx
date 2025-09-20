@@ -244,5 +244,4 @@ export default function InnovativeMicroSaasShowcase(req, res) {
     </div>
   );
 };
-
 export default innovative-micro-saas-showcase;

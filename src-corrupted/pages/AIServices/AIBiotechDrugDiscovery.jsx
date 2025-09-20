@@ -90,5 +90,4 @@ export default function AIBiotechDrugDiscovery(props: any) {}
     </div>
   );
 };
-
 export default AIBiotechDrugDiscovery;

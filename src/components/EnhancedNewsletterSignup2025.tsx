@@ -93,7 +93,30 @@ const EnhancedNewsletterSignup2025: React.FC = () => {
         </div>
       </div>
     </div>
+>>>>>>> af5d3bb5a25353b863602b6ccb4c281c2ad784b9
   );
 };
 
 export default EnhancedNewsletterSignup2025;
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>

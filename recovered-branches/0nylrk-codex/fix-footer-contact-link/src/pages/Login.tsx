@@ -1,14 +1,9 @@
-  return (
-    <>
-      <Header />
-      <LoginContent />
-      <Footer />
-    </>
-
-
-
-
-
-
+  return (,
+    <>,
+      <Header />,
+      <LoginContent />,
+      <Footer />,
+    </>,
   );
 }
+,

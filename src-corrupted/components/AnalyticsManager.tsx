@@ -50,5 +50,4 @@ export function AnalyticsManager(props: any) {
     null
   );
 };
-
 export default AnalyticsManager;

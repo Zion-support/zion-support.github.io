@@ -1,0 +1,33 @@
+version: 2
+updates:
+<<<<<<< HEAD
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "04:00"
+    open-pull-requests-limit: 5
+    commit-message:
+      prefix: "chore"
+      include: "scope"
+
+=======
+>>>>>>> origin/pm2-automation-fixes
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "daily"
+<<<<<<< HEAD
+      time: "05:00"
+    versioning-strategy: increase
+    open-pull-requests-limit: 10
+    commit-message:
+      prefix: "chore"
+      include: "scope"
+=======
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+>>>>>>> origin/pm2-automation-fixes

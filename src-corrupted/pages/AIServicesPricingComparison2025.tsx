@@ -411,5 +411,4 @@ const AIServicesPricingComparison2025: Reac t.FC = () => {',';';
     </div>
   );
 };
-
 export default AIServicesPricingComparison2025;

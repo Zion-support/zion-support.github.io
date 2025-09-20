@@ -74,5 +74,4 @@ interface ServiceCardProps {
     </div>
   );
 };
-
 export default UltraFuturisticServiceCardV2;

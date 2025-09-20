@@ -455,5 +455,4 @@ function MarketplacePageContent() {;
   </Card>;
   );
 };
-
 export default MarketplacePage;

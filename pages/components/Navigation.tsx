@@ -578,5 +578,4 @@ const Navigation: React.FC<NavigationProps> = ({ children }) => {
     </nav>
   );
 };
-
 export default Navigation;

@@ -59,6 +59,4 @@ const serviceData = {
     address: '364 E Main St STE 1008 Middletown DE 19709'
   }
 };
-
-
 export default UltimateContentShowcase2032;

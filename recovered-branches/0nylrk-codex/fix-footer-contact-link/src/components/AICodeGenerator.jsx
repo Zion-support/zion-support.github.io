@@ -505,5 +505,4 @@ export const AICodeGenerator = () => {
       </div>
     </div>);
 };
-
 export default AICodeGenerator;

@@ -21,5 +21,4 @@ const Skeleton: React.FC<SkeletonProps> = ({
     </div>
   );
 };
-
 export default LoadingSkeleton;

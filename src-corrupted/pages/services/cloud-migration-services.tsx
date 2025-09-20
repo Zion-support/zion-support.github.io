@@ -124,5 +124,4 @@ const CloudMigrationServices = (props: any) => {
     </div>
   );
 };
-
 export default cloud-migration-services;

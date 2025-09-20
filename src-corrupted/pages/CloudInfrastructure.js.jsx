@@ -121,5 +121,4 @@ export {CloudInfrastructure}() {
     </div>
   );
 };
-
 export default CloudInfrastructure.js;

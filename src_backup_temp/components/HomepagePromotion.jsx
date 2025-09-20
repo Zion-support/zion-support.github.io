@@ -37,5 +37,4 @@ export default function HomepagePromotion.js({ }: HomepagePromotion.jsProps) {
     </div>
   );
 };
-
 export default HomepagePromotion;

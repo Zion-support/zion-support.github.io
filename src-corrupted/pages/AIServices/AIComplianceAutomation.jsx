@@ -90,5 +90,4 @@ export default function AIComplianceAutomation(props: any) {}
     </div>
   );
 };
-
 export default AIComplianceAutomation;

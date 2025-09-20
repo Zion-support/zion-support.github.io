@@ -1,21 +1,18 @@
 import {cn} from "@/lib/utils";
 import React from "react";
-
-export function GradientHeading(props: any) {
+export function GradientHeading(props: any) {,
     const Tag = level;
-    
-    return (
-        <Tag 
-            id={id} 
-            className={cn(
-                "text-4xl font-bold tracking-tight bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent",
-                className
+    return (,
+        <Tag,
+            id={id} ,
+            className={cn(,
+                "text-4xl font-bold tracking-tight bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent";
+                className,
             )}
-        >
+        >,
             {children}
-        </Tag>
+        </Tag>,
     );
 }
-
-
+,
 export default GradientHeading;

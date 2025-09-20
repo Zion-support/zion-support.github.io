@@ -52,8 +52,7 @@ async function run() {
 
 run().catch((e)=>{ console.error(e); process.exit(1); });
 =======
-async function optimizeImages() {}
-  const publicDir = path.join(process.cwd(), 'public;';);
+async const publicDir = path.join(process.cwd(), 'public;';);
   const images = [];
   
   function findImages(dir) {}

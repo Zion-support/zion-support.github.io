@@ -146,5 +146,4 @@ const AIMarketingAutomation = (props: any) => {
     </div>
   );
 };
-
 export default AIMarketingAutomation;

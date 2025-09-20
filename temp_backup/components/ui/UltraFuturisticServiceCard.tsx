@@ -66,5 +66,4 @@ const categoryIcons: { [key: string]: React.ReactNode } = {
   'Autonomous Vehicles': <Rocket className="w-4 h-4" />,
   'Smart Energy': <Zap className="w-4 h-4" />
 };
-
 export default UltraFuturisticServiceCard;

@@ -42,5 +42,4 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ service, showContactInfo = fa
     </div>
   );
 };
-
 export default ServiceCard;

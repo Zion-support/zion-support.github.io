@@ -199,5 +199,4 @@ export default function UltraFuturisticBackground2038({
     </div>
   );
 };
-
 export default UltraFuturisticBackground2038;

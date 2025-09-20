@@ -471,5 +471,4 @@ export;
       }) }
   }
 };
-
 export default NotificationSystem;

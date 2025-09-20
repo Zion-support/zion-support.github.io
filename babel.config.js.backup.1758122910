@@ -1,7 +1,0 @@
-<<<<<<< HEAD
-=======
-module.exports = {
-  presets: ['next/babel'],
-  plugins: []
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-6469
-};

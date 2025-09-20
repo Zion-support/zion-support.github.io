@@ -5,7 +5,7 @@ import App from './App';
 import './index.css';
 import { BrowserRouter } from 'react-router-dom';
 const rootElement = document.getElementById('root');
-if (!rootElement) {
+if (!rootElement) {,
     throw new Error('Root element not found');
 }
 const root = createRoot(rootElement);

@@ -1,14 +1,34 @@
-import { apiClient } from '@/utils/apiClient';
+import axios from 'axios';
+import { toast } from '@/hooks/use-toast';
+import { safeStorage } from '@/utils/safeStorage';
+import { store } from '@/store';
+import { setToken } from '@/store/authSlice';
+import { logDev, logError } from '@/utils/productionLogger';
+
+const API_URL = process.env.NEXT_PUBLIC_API_URL || '';
 
 export async function loginUser(email: string, password: string) {
+  const res = await apiClient('/api/auth/login', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    credentials: 'include',
+    body: JSON.stringify({ email, password }),
+  });
+  const data = await res.json().catch(() => ({}));
+  return { res, data };
+}
+
+export async function registerUser(name: string, email: string, password: string) {
+  const endpoint = `${API_URL}/auth/register`;
   try {
-    const res = await fetch('/api/auth/login', {
-      method: 'POST',
-      headers: {
-    const data = await res.json().catch(() => ({}));
-    return { res, data };
-  } catch (error) {
-    console.error('Login request failed', error);
-    throw error;
+    const res = await axios.post(endpoint, { name, email, password });
+    logDev('Register API Response Status:', res.status);
+    logDev('Register API Response Body:', res.data);
+    return { res, data: res.data };
+  } catch (err) {
+    logError('Register API error:', err);
+    throw err;
   }
 }

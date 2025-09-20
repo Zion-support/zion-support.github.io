@@ -631,5 +631,4 @@ export const EnterpriseDashboard = () => {
       </div>
     </div>);
 };
-
 export default EnterpriseDashboard;

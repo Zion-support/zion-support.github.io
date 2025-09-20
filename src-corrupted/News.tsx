@@ -1145,5 +1145,4 @@ export default function News() {
     </>
   );
 };
-
 export default News;

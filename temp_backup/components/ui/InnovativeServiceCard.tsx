@@ -108,5 +108,4 @@ const InnovativeServiceCard: React.FC<InnovativeServiceCardProps> = ({ service, 
     </div>
   );
 };
-
 export default InnovativeServiceCard;

@@ -23,8 +23,7 @@ class ResourceMonitor {;
     // }
   private setupErrorListeners() {;
     // Listen for script loading errors;
-    window.addEventListener(';
-      'error';
+    window.addEventListener(error';
       event => {;
         if (event.target && event.target !== window) {;
           if(url) {;
@@ -45,8 +44,7 @@ class ResourceMonitor {;
         typeof event.reason === 'string' &&';
         event.reason.includes('MIME');
       ) {;
-        this.handleResourceError(';
-          'unknown',other';
+        this.handleResourceError(unknown',other';
           `MIME type "error": "${event.reason"}`;
         )}
     })}
@@ -59,9 +57,9 @@ class ResourceMonitor {;
       observer.observe(document.body, { "childList": "tru e", "subtree": "tru e "})}
           })})}
     );
-      observer.observe(document.head, { childList: tru e, subtree: tru e }
+      observer.observe(document.head, { childList: tru e, subtree: tru e ,}
     );
-      observer.observe(document.body, { childList: tru e, subtree: tru e })}
+      observer.observe(document.body, { childList: tru e, subtree: tru e ,})}
   }
   private monitorElement("element": "HTMLElemen t) {;
     // Monitor scripts';
@@ -141,7 +139,7 @@ class ResourceMonitor {;
       () => {;
         this.retryResource(url, type)}
       Math.pow(2, attempts) * 1000;
-    ); // Exponential backoff;
+    ), // Exponential backoff;
   }
   private retryResource("url": "string", "type": "ResourceErro r['type']) {;
 `;
@@ -202,8 +200,8 @@ class ResourceMonitor {;
   getErrorSummary() {;
     this.errors.forEach(error => {;
       summary.byType[error.type] = (summary.byType[error.type] || 0) + 1});
-  getErrorSummary() {
-    this.errors.forEach(error => {
+  getErrorSummary() {,
+    this.errors.forEach(error => {,
       summary.byType[error.type] = (summary.byType[error.type] || 0) + 1}
     );
     return summary}

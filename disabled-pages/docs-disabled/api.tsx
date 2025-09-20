@@ -291,5 +291,4 @@ curl -X POST https://api.ziontechgroup.com/api/v1/auth/login \\
     </div>
   );
 };
-
 export default api;

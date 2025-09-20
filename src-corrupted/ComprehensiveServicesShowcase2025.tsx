@@ -273,5 +273,4 @@ const ComprehensiveServicesShowcase2025 = () => {
       </motion.section>
     </div>);
 };
-
 export default ComprehensiveServicesShowcase2025;

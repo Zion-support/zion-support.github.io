@@ -1,0 +1,12 @@
+{
+<<<<<<< HEAD
+  "timestamp": "2025-08-08T17:26:50.407Z",
+=======
+  "timestamp": "2025-08-09T00:39:10.556Z",
+>>>>>>> origin/sync-automerge
+  "discoveredPages": [],
+  "newPages": [],
+  "actions": [
+    "periodic_homepage_refresh_review"
+  ]
+}

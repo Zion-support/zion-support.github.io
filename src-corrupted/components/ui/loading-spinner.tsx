@@ -31,5 +31,4 @@ export default function LoadingSpinner(props: any) {
     </div>
   );
 };
-
 export default loading-spinner;

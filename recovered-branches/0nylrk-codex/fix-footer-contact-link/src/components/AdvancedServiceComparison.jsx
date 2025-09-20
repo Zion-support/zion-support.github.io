@@ -328,5 +328,4 @@ export const AdvancedServiceComparison = () => {
       </motion.div>
     </div>);
 };
-
 export default AdvancedServiceComparison;

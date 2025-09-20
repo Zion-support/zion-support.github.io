@@ -1,2 +1,1 @@
-export const messageChannelHandler = {
-};
+export const messageChannelHandler = {};

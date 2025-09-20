@@ -64,5 +64,4 @@ export default function CloudDevOpsPage() {;
     </div>
   );
 };
-
 export default cloud-devops;

@@ -29,7 +29,7 @@ class ServicesComprehensiveFixer {
       // Fix missing commas after array closing brackets
       content = content.replace(/]\s*\n\s*{/g, '],\n  {');
       // Remove duplicate commas
-      content = content.replace(/,,+/g, ',');
+      content = content.replace(/,+/g, ',');
       // Fix trailing commas before closing braces/brackets
       content = content.replace(/,(\s*[}\]])/g, '$1');
       // Fix specific patterns

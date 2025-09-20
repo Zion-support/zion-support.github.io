@@ -253,5 +253,4 @@ export default function ServicesIndex() {
     </div>
   );
 };
-
 export default index;

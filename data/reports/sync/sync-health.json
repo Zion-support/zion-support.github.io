@@ -1,7 +1,7 @@
 {
-  "timestamp": "2025-08-10T02:17:54.017Z",
-  "host": "cursor",
-  "repoRoot": "/workspace",
+  "timestamp": "2025-08-09T00:39:10.746Z",
+  "host": "Miami2-2.local",
+  "repoRoot": "/Users/miami2/ZION_APP_AUG_08_2025/zion.app",
   "status": "degraded",
   "checks": [
     {
@@ -32,27 +32,27 @@
     {
       "name": "advanced-git-sync-lock-stale",
       "ok": true,
-      "details": "ageMs=Infinity"
+      "details": "ageMs=2918.08251953125"
     },
     {
       "name": "git-pull-rebase-lock-stale",
       "ok": true,
-      "details": "ageMs=Infinity"
+      "details": "ageMs=574.1962890625"
     },
     {
       "name": "origin-configured",
       "ok": true,
-      "details": "https://x-access-token:ghs_4yNsBBom8HmkiD0GuvaAU0qRIsPT8K29I0p8@github.com/Zion-Holdings/zion.app"
+      "details": "https://github.com/Zion-Holdings/zion.app.git"
     },
     {
       "name": "divergence",
       "ok": true,
-      "details": "behind=0, ahead=0, branch=cursor/generate-zion-multiverse-narrative-and-world-building-7334"
+      "details": "behind=0, ahead=0, branch=sync-automerge"
     },
     {
       "name": "working-tree-clean",
       "ok": false,
-      "details": "changed=8"
+      "details": "changed=733"
     }
   ]
 }

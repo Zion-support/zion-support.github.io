@@ -83,5 +83,4 @@ const AIAutonomousFinance: Reac t.FC = (): JSX.Element => {
     </div>
   );
 };
-
 export default AIAutonomousFinance;

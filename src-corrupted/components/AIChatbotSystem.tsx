@@ -211,5 +211,4 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
     </div>
   );
 };
-
 export default AIChatbotSystem;

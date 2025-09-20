@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { motion } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
 
@@ -65,6 +67,29 @@ const RevolutionaryTechShowcase2025: React.FC = () => {
     }
   ];
 
+  const containerVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.8,
+        staggerChildren: 0.2
+      }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6 }
+    }
+  };
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-violet-900 text-white">
   const caseStudies = [
     {
       company: "TechCorp Global",
@@ -130,7 +155,7 @@ const RevolutionaryTechShowcase2025: React.FC = () => {
         transition={{ duration: 0.8 }}
         className="relative overflow-hidden"
       >
-        <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm">
         <div className="relative z-10 container mx-auto px-4 py-20">
           <div className="text-center mb-16">
             <motion.div
@@ -144,11 +169,9 @@ const RevolutionaryTechShowcase2025: React.FC = () => {
             <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
               Revolutionary Tech Showcase 2025
             </h1>
-            <p className="text-2xl opacity-90 max-w-4xl mx-auto leading-relaxed">
-              Experience the future with our groundbreaking technologies that are reshaping industries and creating new possibilities for humanity.
+            <p className="text-2xl opacity-90 max-w-4xl mx-auto leading-relaxed"></p>
+              Experience the future with our groundbreaking technologies that are reshaping industries and creating new possibilities for humanity.</p>
             </p>
-          </div>
-
           {/* Technology Grid */}
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
             {technologies.map((tech, index) => (
@@ -159,10 +182,10 @@ const RevolutionaryTechShowcase2025: React.FC = () => {
                 transition={{ duration: 0.6, delay: 0.1 * index }}
                 className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300"
               >
-                <div className="text-6xl mb-4 text-center">{tech.icon}</div>
+                <div className="text-6xl mb-4 text-center">{tech.icon}
                 <h3 className="text-2xl font-bold mb-4 text-center">{tech.title}</h3>
-                <p className="text-gray-300 mb-6 text-center text-sm leading-relaxed">
-                  {tech.description}
+                <p className="text-gray-300 mb-6 text-center text-sm leading-relaxed"></p>
+                  {tech.description}</p>
                 </p>
                 <ul className="text-gray-400 space-y-2 mb-6 text-xs">
                   {tech.features.map((feature, idx) => (
@@ -172,13 +195,11 @@ const RevolutionaryTechShowcase2025: React.FC = () => {
                     </li>
                   ))}
                 </ul>
-                <button className={`w-full bg-gradient-to-r ${tech.gradient} py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold`}>
-                  Explore Technology →
+                <button className={`w-full bg-gradient-to-r ${tech.gradient} py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold`}></button>
+                  Explore Technology →</button>
                 </button>
               </motion.div>
             ))}
-          </div>
-
           {/* Interactive Demo Section */}
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
@@ -189,30 +210,23 @@ const RevolutionaryTechShowcase2025: React.FC = () => {
             <div className="text-center mb-8">
               <h2 className="text-4xl font-bold mb-4">🚀 Interactive Technology Demo</h2>
               <p className="text-xl opacity-90">Experience our technologies in real-time</p>
-            </div>
-            
             <div className="grid md:grid-cols-3 gap-8">
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center">
-                <div className="text-4xl mb-4">⚡</div>
+                <div className="text-4xl mb-4">⚡
                 <h3 className="text-xl font-bold mb-2">Processing Speed</h3>
-                <div className="text-3xl font-bold text-green-400 mb-2">99.9%</div>
+                <div className="text-3xl font-bold text-green-400 mb-2">99.9%
                 <p className="text-sm opacity-75">Faster than traditional systems</p>
-              </div>
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center">
-                <div className="text-4xl mb-4">🧠</div>
+                <div className="text-4xl mb-4">🧠
                 <h3 className="text-xl font-bold mb-2">AI Intelligence</h3>
-                <div className="text-3xl font-bold text-blue-400 mb-2">∞</div>
+                <div className="text-3xl font-bold text-blue-400 mb-2">∞
                 <p className="text-sm opacity-75">Unlimited learning capacity</p>
-              </div>
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center">
-                <div className="text-4xl mb-4">🌌</div>
+                <div className="text-4xl mb-4">🌌
                 <h3 className="text-xl font-bold mb-2">Dimensional Access</h3>
-                <div className="text-3xl font-bold text-purple-400 mb-2">11D</div>
+                <div className="text-3xl font-bold text-purple-400 mb-2">11D
                 <p className="text-sm opacity-75">Multi-dimensional processing</p>
-              </div>
-            </div>
           </motion.div>
-
           {/* Case Studies */}
           <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -223,8 +237,6 @@ const RevolutionaryTechShowcase2025: React.FC = () => {
             <div className="text-center mb-12">
               <h2 className="text-4xl font-bold mb-4">🏆 Success Stories</h2>
               <p className="text-xl opacity-90">Real results from real companies</p>
-            </div>
-            
             <div className="grid md:grid-cols-3 gap-8">
               {caseStudies.map((study, index) => (
                 <motion.div
@@ -234,15 +246,13 @@ const RevolutionaryTechShowcase2025: React.FC = () => {
                   transition={{ duration: 0.6, delay: 0.7 + 0.1 * index }}
                   className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300"
                 >
-                  <div className="text-4xl mb-4">{study.logo}</div>
+                  <div className="text-4xl mb-4">{study.logo}
                   <h3 className="text-xl font-bold mb-2">{study.company}</h3>
-                  <div className="text-2xl font-bold text-green-400 mb-4">{study.result}</div>
+                  <div className="text-2xl font-bold text-green-400 mb-4">{study.result}
                   <p className="text-gray-300 text-sm leading-relaxed">{study.description}</p>
                 </motion.div>
               ))}
-            </div>
           </motion.div>
-
           {/* CTA Section */}
           <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -252,24 +262,44 @@ const RevolutionaryTechShowcase2025: React.FC = () => {
           >
             <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl p-12">
               <h2 className="text-4xl font-bold mb-4">Ready to Transform Your Business?</h2>
-              <p className="text-xl mb-8 opacity-90">
-                Join thousands of companies already using our revolutionary technologies
+              <p className="text-xl mb-8 opacity-90"></p>
+                Join thousands of companies already using our revolutionary technologies</p>
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-white text-purple-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-colors">
-                  Start Your Journey →
+                <button className="bg-white text-purple-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-colors"></button>
+                  Start Your Journey →</button>
                 </button>
-                <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-purple-600 transition-colors">
-                  Schedule Demo
+                <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-purple-600 transition-colors"></button>
+                  Schedule Demo</button>
                 </button>
-              </div>
-            </div>
           </motion.div>
-        </div>
       </motion.div>
-      </div>
     </>
   );
 };
 
 export default RevolutionaryTechShowcase2025;
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>

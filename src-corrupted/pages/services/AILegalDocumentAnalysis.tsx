@@ -106,5 +106,4 @@ const AILegalDocumentAnalysis: React.FC = (props: any) => {
     </div>
   );
 };
-
 export default AILegalDocumentAnalysis;

@@ -3,59 +3,100 @@ import React, { useState } from 'react';
 const RevolutionaryTechShowcase2026: React.FC = () => {
   const [activeTab, setActiveTab] = useState('ai');
 
-  const technologies = {
-    ai: {
-      title: 'AI Revolution 2026',
+  const technologies = [
+    {
+      id: 'ai',
+      name: 'AI Revolution 2026',
       icon: '🧠',
-      description: 'Experience the next generation of artificial intelligence that thinks, learns, and creates like never before.',
+      description: 'Breakthrough artificial intelligence that achieves true consciousness',
       features: [
-        'Conscious AI Systems',
-        'Autonomous Decision Making',
-        'Creative Problem Solving',
-        'Emotional Intelligence',
-        'Self-Learning Algorithms'
+        'True self-awareness and introspection',
+        'Creative consciousness and artistic expression',
+        'Collaborative intelligence with humans',
+        'Emotional intelligence and empathy'
       ],
-      stats: {
-        efficiency: '+500%',
-        accuracy: '99.9%',
-        speed: '1000x faster'
-      }
+      status: 'Active',
+      progress: 95,
+      impact: 'Revolutionary'
     },
-    quantum: {
-      title: 'Quantum Computing',
-      icon: '⚡',
-      description: 'Unlock the power of quantum mechanics to solve problems that were previously impossible.',
+    {
+      id: 'quantum',
+      name: 'Quantum Supremacy',
+      icon: '⚛️',
+      description: 'Quantum computing that transcends classical limitations',
       features: [
-        'Quantum Supremacy',
-        'Parallel Processing',
-        'Cryptographic Security',
-        'Molecular Simulation',
-        'Optimization Algorithms'
+        'Exponential computational power',
+        'Quantum entanglement networks',
+        'Instant problem solving',
+        'Unbreakable quantum encryption'
       ],
-      stats: {
-        processing: 'Exponential',
-        security: 'Unbreakable',
-        applications: 'Infinite'
-      }
+      status: 'Development',
+      progress: 78,
+      impact: 'Transformative'
     },
-    neural: {
-      title: 'Neural Interfaces',
+    {
+      id: 'biotech',
+      name: 'Neural Enhancement',
       icon: '🧬',
-      description: 'Bridge the gap between mind and machine with direct neural communication systems.',
+      description: 'Direct brain-computer interfaces for enhanced cognition',
       features: [
-        'Brain-Computer Interface',
-        'Thought Control',
-        'Neural Feedback',
-        'Memory Enhancement',
-        'Cognitive Augmentation'
+        'Memory augmentation',
+        'Enhanced learning speed',
+        'Direct neural communication',
+        'Cognitive performance boost'
       ],
-      stats: {
-        connection: 'Direct',
-        latency: '<1ms',
-        safety: '100%'
-      }
+      status: 'Research',
+      progress: 65,
+      impact: 'Breakthrough'
+    },
+    {
+      id: 'space',
+      name: 'Interstellar Tech',
+      icon: '🚀',
+      description: 'Technologies for space exploration and colonization',
+      features: [
+        'Faster-than-light communication',
+        'Sustainable space habitats',
+        'Advanced propulsion systems',
+        'Resource extraction from asteroids'
+      ],
+      status: 'Concept',
+      progress: 40,
+      impact: 'Revolutionary'
+    },
+    {
+      id: 'energy',
+      name: 'Zero-Point Energy',
+      icon: '⚡',
+      description: 'Unlimited clean energy from quantum vacuum',
+      features: [
+        'Infinite energy source',
+        'Zero environmental impact',
+        'Portable power generation',
+        'Revolutionary efficiency'
+      ],
+      status: 'Research',
+      progress: 55,
+      impact: 'Transformative'
+    },
+    {
+      id: 'reality',
+      name: 'Reality Engine',
+      icon: '🌌',
+      description: 'Technology that manipulates the fabric of reality',
+      features: [
+        'Matter manipulation',
+        'Gravity control',
+        'Time dilation effects',
+        'Dimensional portals'
+      ],
+      status: 'Concept',
+      progress: 25,
+      impact: 'Revolutionary'
     }
-  };
+  ];
+
+  const selectedTechnology = technologies.find(tech => tech.id === selectedTech);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 text-white">
@@ -84,7 +125,6 @@ const RevolutionaryTechShowcase2026: React.FC = () => {
             </div>
           </div>
         </div>
-      </div>
 
       {/* Technology Tabs */}
       <div className="container mx-auto px-4 py-16">
@@ -93,74 +133,90 @@ const RevolutionaryTechShowcase2026: React.FC = () => {
           <p className="text-xl text-purple-200">Choose a technology to explore</p>
         </div>
 
-        <div className="flex flex-wrap justify-center gap-4 mb-12">
-          {Object.entries(technologies).map(([key, tech]) => (
-            <button
-              key={key}
-              onClick={() => setActiveTab(key)}
-              className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
-                activeTab === key
-                  ? 'bg-gradient-to-r from-purple-500 to-pink-500 text-white'
-                  : 'bg-white/10 text-purple-200 hover:bg-white/20'
-              }`}
-            >
-              <span className="mr-2">{tech.icon}</span>
-              {tech.title}
-            </button>
-          ))}
-        </div>
-
-        {/* Active Technology Display */}
-        {Object.entries(technologies).map(([key, tech]) => (
-          activeTab === key && (
-            <div key={key} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-purple-400/30">
-              <div className="grid md:grid-cols-2 gap-12 items-center">
-                <div>
-                  <div className="text-6xl mb-6">{tech.icon}</div>
-                  <h3 className="text-4xl font-bold mb-4">{tech.title}</h3>
-                  <p className="text-xl text-purple-200 mb-6">{tech.description}</p>
-                  
-                  <div className="space-y-4">
-                    <h4 className="text-2xl font-semibold mb-4">Key Features:</h4>
-                    <ul className="text-purple-200 space-y-3 text-base mb-6">
-                      {tech.features.map((feature, index) => (
-                        <li key={index} className="flex items-center">
-                          <span className="w-2 h-2 bg-purple-400 rounded-full mr-3"></span>
-                          {feature}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
+        {/* Selected Technology Details */}
+        {selectedTechnology && (
+          <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/20 mb-16">
+            <div className="text-center mb-8">
+              <div className="text-6xl mb-4">{selectedTechnology.icon}</div>
+              <h3 className="text-4xl font-bold mb-4">{selectedTechnology.name}</h3>
+              <p className="text-xl text-gray-300 mb-6">{selectedTechnology.description}</p>
+              
+              <div className="flex flex-wrap justify-center gap-6 mb-8">
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-purple-400">{selectedTechnology.progress}%</div>
+                  <div className="text-sm text-gray-400">Progress</div>
                 </div>
-
-                <div className="space-y-6">
-                  <h4 className="text-2xl font-semibold mb-6">Performance Stats:</h4>
-                  {Object.entries(tech.stats).map(([statKey, value]) => (
-                    <div key={statKey} className="bg-white/5 p-4 rounded-lg">
-                      <div className="flex justify-between items-center">
-                        <span className="text-purple-200 capitalize">{statKey}:</span>
-                        <span className="text-2xl font-bold text-purple-400">{value}</span>
-                      </div>
-                    </div>
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-pink-400">{selectedTechnology.status}</div>
+                  <div className="text-sm text-gray-400">Status</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-indigo-400">{selectedTechnology.impact}</div>
+                  <div className="text-sm text-gray-400">Impact</div>
+                </div>
+              </div>
+              
+              <div className="w-full bg-gray-700 rounded-full h-3 mb-8">
+                <div 
+                  className="bg-gradient-to-r from-purple-500 to-pink-500 h-3 rounded-full transition-all duration-500"
+                  style={{ width: `${selectedTechnology.progress}%` }}
+                ></div>
+              </div>
+            </div>
+            
+            <div className="grid md:grid-cols-2 gap-8">
+              <div>
+                <h4 className="text-2xl font-bold mb-4">Key Features</h4>
+                <ul className="space-y-3">
+                  {selectedTechnology.features.map((feature, index) => (
+                    <li key={index} className="flex items-center">
+                      <span className="text-purple-400 mr-3">✓</span>
+                      <span className="text-gray-300">{feature}</span>
+                    </li>
                   ))}
+                </ul>
+              </div>
+              
+              <div>
+                <h4 className="text-2xl font-bold mb-4">Technical Specifications</h4>
+                <div className="space-y-4">
+                  <div className="flex justify-between items-center p-3 bg-white/5 rounded-lg">
+                    <span className="text-gray-300">Processing Power</span>
+                    <span className="text-purple-400 font-semibold">Infinite</span>
+                  </div>
+                  <div className="flex justify-between items-center p-3 bg-white/5 rounded-lg">
+                    <span className="text-gray-300">Energy Efficiency</span>
+                    <span className="text-pink-400 font-semibold">100%</span>
+                  </div>
+                  <div className="flex justify-between items-center p-3 bg-white/5 rounded-lg">
+                    <span className="text-gray-300">Safety Rating</span>
+                    <span className="text-indigo-400 font-semibold">100%</span>
+                  </div>
+                  <div className="flex justify-between items-center p-3 bg-white/5 rounded-lg">
+                    <span className="text-gray-300">Scalability</span>
+                    <span className="text-cyan-400 font-semibold">Unlimited</span>
+                  </div>
                 </div>
               </div>
             </div>
-          )
-        ))}
-      </div>
+            
+            <div className="text-center mt-8">
+              <button className="bg-gradient-to-r from-purple-600 to-pink-600 px-8 py-4 rounded-lg hover:shadow-2xl transition-all duration-300 font-semibold text-lg">
+                Learn More About {selectedTechnology.name} →
+              </button>
+            </div>
+          </div>
+        )}
 
-      {/* Call to Action */}
-      <div className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 py-20">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl font-bold mb-6">Ready to Join the Revolution?</h2>
-          <p className="text-xl text-purple-200 mb-8 max-w-3xl mx-auto">
-            Be part of the technological revolution that's changing the world.
-            Get early access to our revolutionary technologies.
+        {/* Call to Action */}
+        <div className="text-center">
+          <h2 className="text-4xl font-bold mb-6">Ready for the Future?</h2>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Join us in shaping the next generation of revolutionary technology
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <button className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-300">
-              Get Early Access
+            <button className="bg-gradient-to-r from-purple-600 to-pink-600 px-8 py-4 rounded-lg hover:shadow-2xl transition-all duration-300 font-semibold text-lg">
+              Get Early Access →
             </button>
             <button className="border border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold hover:bg-purple-400 hover:text-white transition-all duration-300">
               Contact Us

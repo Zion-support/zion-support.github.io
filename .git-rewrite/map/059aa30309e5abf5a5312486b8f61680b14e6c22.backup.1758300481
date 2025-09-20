@@ -1,0 +1,9 @@
+<<<<<<< HEAD:.git-rewrite/map/059aa30309e5abf5a5312486b8f61680b14e6c22
+d3c660168898cf953ff29bf4dfd4b7ab99c003f3
+=======
+
+> zion-tech-group@0.1.0 test
+> jest --coverage
+
+Coverage generation failed
+>>>>>>> origin/temp-merge-branch:test-reports/coverage-results.txt

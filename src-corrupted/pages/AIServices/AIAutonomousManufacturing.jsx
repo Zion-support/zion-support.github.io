@@ -90,5 +90,4 @@ export default function AIAutonomousManufacturing(props: any) {}
     </div>
   );
 };
-
 export default AIAutonomousManufacturing;

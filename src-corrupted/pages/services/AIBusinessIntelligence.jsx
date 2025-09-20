@@ -132,5 +132,4 @@ const AIBusinessIntelligence = (props: any) => {
     </div>
   );
 };
-
 export default AIBusinessIntelligence;

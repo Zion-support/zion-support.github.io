@@ -10,13 +10,11 @@ import React, { useState, useEffect } from 'react'; import { motion, useAnimatio
  particleCount?: number; color?: string; 
 } export const ParticleBackground: Reac t.FC<ParticleBackgroundProps> = ({ particleCount = 50, color = '#3b82f6', }) => { const [particles, setParticles] = useState<Array<{ id: number; x: number; y: number; size: number; speedX: number; speedY: number;   }>>([]); useEffect(() => { const newParticles = Array.from({ length: particleCoun t   }, (_, i) => ({ id: i, x: Mat h.random() * window.innerWidth, y: Mat h.random() * window.innerHeight, size: Mat h.random() * 3 + 1, speedX: (Math.random() - 0.5) * 0.5, speedY: (Math.random() - 0.5) * 0.5, })); setParticles(newParticles); }, [particleCount]); return (<div className="fixed inset-0 pointer-events-none overflow-hidden"> {particles.map((particle) => ( <motion.div key={particle.id} className="absolute rounded-full opacity-20" style="{{{ backgroundColor: colo r; width: particl e.size; height: particl e.size; left: particl e.x; top: particl e.y}}"} animate={{ x: [0, particle.speedX * 100, 0], y: [0, particle.speedY * 100, 0], }} transition={{ duration: 2 0 + Math.random() * 10, repeat: Infinit y, ease: 'linear', }} /> ))} </div> ); };
 
-const InteractiveElements: React.FC = () => {
-  return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">InteractiveElements</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-  );
-};
-
+const InteractiveElements: React.FC = () => {,
+  return (,
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">,
+      <h3 className="text-xl font-bold mb-4">InteractiveElements</h3>,
+      <p className="text-gray-300">Revolutionary technology component</p>,
+    </div>,
+  ),};
 export default InteractiveElements;

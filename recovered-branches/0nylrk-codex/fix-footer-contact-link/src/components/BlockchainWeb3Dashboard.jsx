@@ -619,5 +619,4 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {
       </AnimatePresence>
     </div>);
 };
-
 export default BlockchainWeb3Dashboard;

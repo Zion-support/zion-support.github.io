@@ -90,5 +90,4 @@ export default function AIBrainInterface(props: any) {}
     </div>
   );
 };
-
 export default AIBrainInterface;

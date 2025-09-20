@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 const fs = require('fs');
 
-const [,, preAuditPath, postAuditPath, outdatedPath] = process.argv;
+const [, preAuditPath, postAuditPath, outdatedPath] = process.argv;
 function readJsonSafe(p){ try { return JSON.parse(fs.readFileSync(p,'utf8')); } catch(_){ return null; } }
 function readTextSafe(p){ try { return fs.readFileSync(p,'utf8'); } catch(_){ return ''; } }
 

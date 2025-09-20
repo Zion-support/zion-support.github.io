@@ -90,5 +90,4 @@ export default function AIBlockchainGovernance(props: any) {}
     </div>
   );
 };
-
 export default AIBlockchainGovernance;

@@ -267,5 +267,4 @@ function EnhancedHeader(props: any) {export function EnhancedHeader(props: any) 
     </div>
   );
 };
-
 export default EnhancedHeader;

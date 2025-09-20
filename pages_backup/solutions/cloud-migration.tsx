@@ -351,5 +351,4 @@ export default function CloudMigrationPage() {
     </Layout>
   );
 };
-
 export default cloud-migration;

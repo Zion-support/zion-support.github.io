@@ -135,5 +135,4 @@ export {NextGenServicesShowcase2025}() {
     </div>
   );
 };
-
 export default NextGenServicesShowcase2025.js;

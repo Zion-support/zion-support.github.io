@@ -90,5 +90,4 @@ export default function AIClimatePrediction(props: any) {}
     </div>
   );
 };
-
 export default AIClimatePrediction;

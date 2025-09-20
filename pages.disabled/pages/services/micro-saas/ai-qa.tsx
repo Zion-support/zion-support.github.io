@@ -19,5 +19,4 @@ export default function Aiqa() {
     </div>
   );
 };
-
 export default ai-qa;

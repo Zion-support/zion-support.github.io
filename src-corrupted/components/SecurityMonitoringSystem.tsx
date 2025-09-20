@@ -57,5 +57,4 @@ interface SecurityMonitoringSystemProps {
     []
   );
 };
-
 export default SecurityMonitoringSystem;

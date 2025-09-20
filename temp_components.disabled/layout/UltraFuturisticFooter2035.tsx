@@ -96,6 +96,4 @@ export default function UltraFuturisticFooter2035() {
     </div>
   );
 };
-
-
 export default UltimateContentBanner2035;

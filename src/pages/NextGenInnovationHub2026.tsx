@@ -136,7 +136,6 @@ const NextGenInnovationHub2026: React.FC = () => {
             </button>
           ))}
         </div>
-      </div>
 
       {/* Innovations Grid */}
       <div className="container mx-auto px-4 pb-20">
@@ -144,45 +143,45 @@ const NextGenInnovationHub2026: React.FC = () => {
           {filteredInnovations.map((innovation) => (
             <div
               key={innovation.id}
-              className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:border-purple-400/50 transition-all duration-300 hover:scale-105"
+              className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:border-purple-400/50 transition-all duration-300 hover:scale-105"
             >
-              <div className="text-center mb-6">
-                <div className="text-6xl mb-4">{innovation.icon}</div>
-                <h3 className="text-2xl font-bold text-white mb-2">{innovation.title}</h3>
-                <p className="text-gray-300 mb-4">{innovation.description}</p>
-              </div>
-
-              <div className="space-y-4">
+              <div className="text-4xl mb-4">{innovation.icon}</div>
+              <h3 className="text-2xl font-bold mb-3">{innovation.title}</h3>
+              <p className="text-gray-300 mb-4">{innovation.description}</p>
+              
+              <div className="space-y-3 mb-6">
                 <div className="flex justify-between items-center">
-                  <span className="text-gray-300">Status:</span>
-                  <span className={`px-3 py-1 rounded-full text-sm font-semibold ${
+                  <span className="text-sm text-gray-400">Status:</span>
+                  <span className={`px-3 py-1 rounded-full text-xs font-semibold ${
                     innovation.status === 'Active' ? 'bg-green-500/20 text-green-400' :
-                    innovation.status === 'In Development' ? 'bg-blue-500/20 text-blue-400' :
-                    innovation.status === 'Testing' ? 'bg-yellow-500/20 text-yellow-400' :
-                    innovation.status === 'Research' ? 'bg-purple-500/20 text-purple-400' :
-                    innovation.status === 'Concept' ? 'bg-gray-500/20 text-gray-400' :
-                    'bg-orange-500/20 text-orange-400'
+                    innovation.status === 'Development' ? 'bg-yellow-500/20 text-yellow-400' :
+                    innovation.status === 'Research' ? 'bg-blue-500/20 text-blue-400' :
+                    'bg-gray-500/20 text-gray-400'
                   }`}>
                     {innovation.status}
                   </span>
                 </div>
-
-                <div className="space-y-2">
-                  <div className="flex justify-between items-center">
-                    <span className="text-gray-300">Progress:</span>
-                    <span className="text-white font-semibold">{innovation.progress}%</span>
-                  </div>
-                  <div className="w-full bg-gray-700 rounded-full h-2">
-                    <div 
-                      className={`h-2 rounded-full bg-gradient-to-r ${innovation.color}`}
-                      style={{ width: `${innovation.progress}%` }}
-                    ></div>
-                  </div>
-                </div>
-
+                
                 <div className="flex justify-between items-center">
-                  <span className="text-gray-300">Impact:</span>
-                  <span className="text-purple-400 font-semibold">{innovation.impact}</span>
+                  <span className="text-sm text-gray-400">Progress:</span>
+                  <span className="text-sm font-semibold">{innovation.progress}%</span>
+                </div>
+                
+                <div className="w-full bg-gray-700 rounded-full h-2">
+                  <div 
+                    className="bg-gradient-to-r from-purple-500 to-indigo-500 h-2 rounded-full transition-all duration-500"
+                    style={{ width: `${innovation.progress}%` }}
+                  ></div>
+                </div>
+                
+                <div className="flex justify-between items-center">
+                  <span className="text-sm text-gray-400">Impact:</span>
+                  <span className="text-sm font-semibold text-purple-400">{innovation.impact}</span>
+                </div>
+                
+                <div className="flex justify-between items-center">
+                  <span className="text-sm text-gray-400">Timeline:</span>
+                  <span className="text-sm font-semibold">{innovation.timeline}</span>
                 </div>
               </div>
 

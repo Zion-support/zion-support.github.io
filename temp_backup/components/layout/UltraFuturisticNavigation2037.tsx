@@ -378,5 +378,4 @@ const normalizeHref = (href: string) => {
   if (href.startsWith('http')) return href;
   return href.startsWith('/') ? href : `/${href}`;
 };
-
 export default UltraFuturisticNavigation2037;

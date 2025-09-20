@@ -181,5 +181,4 @@ const AIBusinessProcessOptimization: Reac t.FC = (): JSX.Element => {
     </div>
   );
 };
-
 export default AIBusinessProcessOptimization;

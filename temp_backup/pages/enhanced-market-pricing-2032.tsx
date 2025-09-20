@@ -231,6 +231,4 @@ export default function EnhancedMarketPricing2032() {
     </div>
   );
 };
-
-
 export default AdvancedAITransformation2026;

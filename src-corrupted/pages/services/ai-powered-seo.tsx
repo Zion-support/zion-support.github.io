@@ -86,5 +86,4 @@ export { AIPoweredSEO }(...args: an y[]): any {
     </div>
   );
 };
-
 export default ai-powered-seo;

@@ -1,17 +1,75 @@
 import React, { Suspense, lazy } from 'react';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import ScrollToTop from './src/ScrollToTop';
 import Header from './src/Header';
 import Footer from './src/Footer';
-import ErrorBoundary from './src/components/ErrorBoundary';
-import LoadingSpinner from './src/components/LoadingSpinner';
-import PerformanceMonitor from './src/components/PerformanceMonitor';
+import EnhancedHeroSection from './src/components/EnhancedHeroSection';
+import FeaturedContentSection from './src/components/FeaturedContentSection';
+import CaseStudyPage from './src/CaseStudyPage';
+
+// Lazy load components for better performance
+const InnovationLanding2025 = lazy(() => import('./src/pages/InnovationLanding2025'));
+const InnovativeServicesShowcase2025 = lazy(() => import('./src/pages/InnovativeServicesShowcase2025'));
+const BlogPost2025 = lazy(() => import('./src/pages/BlogPost2025'));
+const AdvancedTechSolutions2025 = lazy(() => import('./src/pages/AdvancedTechSolutions2025'));
+const NewAIUseCases2025 = lazy(() => import('./src/pages/NewAIUseCases2025'));
+const EdgeAIandIoT2025 = lazy(() => import('./src/pages/EdgeAIandIoT2025'));
+const FutureTechTrends2025 = lazy(() => import('./src/pages/FutureTechTrends2025'));
+const ComprehensiveServices2025 = lazy(() => import('./src/pages/ComprehensiveServices2025'));
+const AIInnovationPlaybook2025 = lazy(() => import('./src/pages/AIInnovationPlaybook2025'));
+const TechnologyInsights2025 = lazy(() => import('./src/pages/TechnologyInsights2025'));
+const AITransformationGuide2025 = lazy(() => import('./src/pages/AITransformationGuide2025'));
+const QuantumComputingSolutions2025 = lazy(() => import('./src/pages/QuantumComputingSolutions2025'));
+const AIInnovationHub2025 = lazy(() => import('./src/pages/AIInnovationHub2025'));
+const DigitalTransformation2025 = lazy(() => import('./src/pages/DigitalTransformation2025'));
+const AdvancedAnalytics2025 = lazy(() => import('./src/pages/AdvancedAnalytics2025'));
+const CybersecurityFortress2025 = lazy(() => import('./src/pages/CybersecurityFortress2025'));
+const AIRevolution2025 = lazy(() => import('./src/pages/AIRevolution2025'));
+const QuantumComputingBreakthrough = lazy(() => import('./src/pages/QuantumComputingBreakthrough'));
+const NeuralInterfaceFuture = lazy(() => import('./src/pages/NeuralInterfaceFuture'));
+const DynamicContentCarousel = lazy(() => import('./src/components/DynamicContentCarousel'));
+const InteractiveTechShowcase = lazy(() => import('./src/components/InteractiveTechShowcase'));
+const AIEnterpriseCopilot2025 = lazy(() => import('./src/pages/AIEnterpriseCopilot2025'));
+const NewShowcase2025 = lazy(() => import('./src/pages/NewShowcase2025'));
+const AdvancedAITransformation2025 = lazy(() => import('./src/pages/AdvancedAITransformation2025'));
+const QuantumComputingRevolution2025 = lazy(() => import('./src/pages/QuantumComputingRevolution2025'));
+const NeuralInterfaceRevolution2025 = lazy(() => import('./src/pages/NeuralInterfaceRevolution2025'));
+const NextGenTechShowcase2025 = lazy(() => import('./src/pages/NextGenTechShowcase2025'));
+const SyntheticIntelligence2026 = lazy(() => import('./src/pages/SyntheticIntelligence2026'));
+const QuantumNeuralFusion2026 = lazy(() => import('./src/pages/QuantumNeuralFusion2026'));
+const AdvancedQuantumComputing2026 = lazy(() => import('./src/pages/AdvancedQuantumComputing2026'));
+const NeuralInterfaceRevolution2026 = lazy(() => import('./src/pages/NeuralInterfaceRevolution2026'));
+const EnhancedContentShowcase = lazy(() => import('./src/components/EnhancedContentShowcase'));
+const NextGenAIRevolution2026 = lazy(() => import('./src/pages/NextGenAIRevolution2026'));
+const QuantumComputingRevolution2026 = lazy(() => import('./src/pages/QuantumComputingRevolution2026'));
+const RevolutionaryTechBlog2026 = lazy(() => import('./src/pages/RevolutionaryTechBlog2026'));
+const RevolutionaryContentShowcase = lazy(() => import('./src/components/RevolutionaryContentShowcase'));
+const UltimateTechShowcase2027 = lazy(() => import('./src/components/UltimateTechShowcase2027'));
+const FuturisticTechShowcase2028 = lazy(() => import('./src/components/FuturisticTechShowcase2028'));
+const ComprehensiveTechInsights2026 = lazy(() => import('./src/pages/ComprehensiveTechInsights2026'));
+const UltimateTechShowcase2026 = lazy(() => import('./src/pages/UltimateTechShowcase2026'));
+const FutureTechRevolution2026 = lazy(() => import('./src/pages/FutureTechRevolution2026'));
+const AdvancedAITransformation2026 = lazy(() => import('./src/pages/AdvancedAITransformation2026'));
+const NextGenTechShowcase2026 = lazy(() => import('./src/pages/NextGenTechShowcase2026'));
+const AdvancedAISystems2026 = lazy(() => import('./src/pages/AdvancedAISystems2026'));
+const AdvancedAISystems2027 = lazy(() => import('./src/pages/AdvancedAISystems2027'));
+const QuantumComputingRevolution2027 = lazy(() => import('./src/pages/QuantumComputingRevolution2027'));
+const AdvancedAITransformation2028 = lazy(() => import('./src/pages/AdvancedAITransformation2028'));
+const QuantumNeuralFusion2028 = lazy(() => import('./src/pages/QuantumNeuralFusion2028'));
+const SpaceTechAI2025 = lazy(() => import('./src/pages/SpaceTechAI2025'));
+const BiotechAIRevolution2025 = lazy(() => import('./src/pages/BiotechAIRevolution2025'));
+const InnovationShowcase2026 = lazy(() => import('./src/components/InnovationShowcase2026'));
+
+// Loading component for lazy loading
+const LoadingSpinner = () => (
+  <div className="flex items-center justify-center min-h-screen">
+    <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-blue-600"></div>
+  </div>
+);
+
 import './src/index.css';
 
-// Lazy load the main page component for better performance
-const UltimateTechBreakthrough2026 = lazy(() => import('./src/pages/UltimateTechBreakthrough2026'));
-
-export default function App(): React.JSX.Element {
+export default function App(): JSX.Element {
   return (
     <ErrorBoundary>
       <Router>

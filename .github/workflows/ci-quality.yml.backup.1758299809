@@ -1,0 +1,58 @@
+<<<<<<< HEAD
+name: Ci Quality
+
+on:
+  workflow_dispatch: {}
+  schedule:
+    - cron: '*/10 * * * *'
+
+permissions:
+  contents: write
+  actions: read
+
+=======
+name: CI Quality Check
+'on':
+  workflow_dispatch: {}
+  schedule:
+    - cron: 0 */6 * * *
+permissions:
+  contents: write
+  actions: read
+>>>>>>> origin/pm2-automation-fixes
+jobs:
+  main:
+    name: Main Job
+    runs-on: ubuntu-latest
+<<<<<<< HEAD
+    timeout-minutes: 20
+=======
+>>>>>>> origin/pm2-automation-fixes
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+<<<<<<< HEAD
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci --no-audit --no-fund
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+=======
+          cache: npm
+      - name: Install dependencies
+        run: npm ci --no-audit --no-fund
+      - name: Run workflow
+        run: echo "CI Quality Check completed successfully"
+    runs_on: ubuntu-latest
+>>>>>>> origin/pm2-automation-fixes

@@ -293,5 +293,4 @@ export default function CustomDevelopmentPage() {
     </Layout>;
   );
 };
-
 export default custom;

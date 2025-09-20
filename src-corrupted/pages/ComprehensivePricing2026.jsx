@@ -114,5 +114,4 @@ const ComprehensivePricing2026 = (props: any) => {
     </div>
   );
 };
-
 export default ComprehensivePricing2026;

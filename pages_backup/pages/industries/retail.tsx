@@ -107,5 +107,4 @@ const Page = () => {
     </div>
   );
 };
-
 export default retail;

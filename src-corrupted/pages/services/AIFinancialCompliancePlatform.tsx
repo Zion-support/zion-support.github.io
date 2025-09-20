@@ -489,5 +489,4 @@ const AIFinancialCompliancePlatform = (props: any) => {
     </div>
   );
 };
-
 export default AIFinancialCompliancePlatform;

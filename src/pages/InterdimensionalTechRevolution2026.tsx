@@ -2,97 +2,11 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 const InterdimensionalTechRevolution2026: React.FC = () => {
-  const [activeDimension, setActiveDimension] = useState('quantum');
+  const [isVisible, setIsVisible] = useState(false);
 
-  const dimensions = [
-    {
-      id: 'quantum',
-      name: 'Quantum Dimension',
-      icon: '⚛️',
-      description: 'Where quantum mechanics reign supreme and reality bends to probability',
-      color: 'from-cyan-500 to-blue-500',
-      features: [
-        'Quantum Entanglement Networks',
-        'Probability Manipulation',
-        'Quantum Tunneling',
-        'Superposition Computing'
-      ]
-    },
-    {
-      id: 'neural',
-      name: 'Neural Dimension',
-      icon: '🧠',
-      description: 'A realm where consciousness and technology merge seamlessly',
-      color: 'from-purple-500 to-pink-500',
-      features: [
-        'Collective Consciousness',
-        'Neural Network Realms',
-        'Thought-Based Computing',
-        'Mind-Machine Fusion'
-      ]
-    },
-    {
-      id: 'temporal',
-      name: 'Temporal Dimension',
-      icon: '⏰',
-      description: 'Where time flows differently and past, present, and future coexist',
-      color: 'from-yellow-500 to-orange-500',
-      features: [
-        'Time Dilation Fields',
-        'Temporal Computing',
-        'Chronological Navigation',
-        'Future Prediction Engines'
-      ]
-    },
-    {
-      id: 'dimensional',
-      name: 'Dimensional Gateway',
-      icon: '🚪',
-      description: 'Portals that connect different realities and parallel universes',
-      color: 'from-emerald-500 to-teal-500',
-      features: [
-        'Reality Bridges',
-        'Parallel Universe Access',
-        'Dimensional Mapping',
-        'Cross-Reality Communication'
-      ]
-    }
-  ];
-
-  const technologies = [
-    {
-      title: 'Quantum Reality Engine',
-      description: 'A revolutionary system that creates stable quantum environments for computing and exploration',
-      icon: '⚛️',
-      status: 'Active',
-      progress: 95,
-      impact: 'Revolutionary'
-    },
-    {
-      title: 'Neural Interface Matrix',
-      description: 'Direct brain-computer interface that allows seamless interaction with digital realms',
-      icon: '🧠',
-      status: 'Testing',
-      progress: 78,
-      impact: 'Breakthrough'
-    },
-    {
-      title: 'Temporal Computing Core',
-      description: 'Advanced processing unit that operates across multiple time dimensions simultaneously',
-      icon: '⏰',
-      status: 'Development',
-      progress: 65,
-      impact: 'Transformative'
-    },
-    {
-      title: 'Dimension Gateway',
-      description: 'Stable portals that allow safe travel between dimensions and parallel universes',
-      icon: '🚪',
-      status: 'Research',
-      progress: 45,
-      impact: 'Cosmic'
-    }
-  ];
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900">

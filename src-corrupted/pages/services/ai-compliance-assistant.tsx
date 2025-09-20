@@ -146,5 +146,4 @@ export { AIComplianceAssistant }() {
     </div>
   );
 };
-
 export default ai-compliance-assistant;

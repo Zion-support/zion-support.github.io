@@ -38,6 +38,7 @@ export interface QuantumAIService {
   rating: number;
   reviews: number;
 }
+
 export const quantumAIServices: QuantumAIService[] = [
   {
     id: 'quantum-ai-brain-computer-interface',

@@ -1,27 +1,27 @@
+import React from 'react',
 
 import { ReactNode } from 'react';
-
-// Extend FeatureCardProps to include key for mapping
-declare module '@/components/FeatureCard' {
-  export interface FeatureCardProps {
+// Extend FeatureCardProps to include key for mapping,
+declare module '@/components/FeatureCard' {,
+  export interface FeatureCardProps {,
     title: string;
     description: string;
     icon: ReactNode;
     className?: string;
-    key?: number | string;
+    key?: number | string,
   }
 }
-
-// PWA install prompt event typing
-interface BeforeInstallPromptEvent extends Event {
+,
+// PWA install prompt event typing,
+interface BeforeInstallPromptEvent extends Event {,
   readonly platforms: string[];
   prompt(): Promise<void>;
-  userChoice: Promise<{ outcome: 'accepted' | 'dismissed'; platform: string }>;
+  userChoice: Promise<{ outcome: 'accepted' | 'dismissed', platform: string ,}>;
 }
-
-// Extend ListingScoreCardProps to include key for mapping
-declare module '@/components/ListingScoreCard' {
-  export interface ListingScoreCardProps {
+,
+// Extend ListingScoreCardProps to include key for mapping,
+declare module '@/components/ListingScoreCard' {,
+  export interface ListingScoreCardProps {,
     title: string;
     description: string;
     category: string;
@@ -33,27 +33,28 @@ declare module '@/components/ListingScoreCard' {
     rating?: number;
     reviewCount?: number;
     key?: string | number;
-    variant?: string;
+    variant?: string,
   }
 }
-
-// Extend ChatMessageProps to include key for mapping
-declare module '@/components/ChatAssistant/ChatMessage' {
-  export interface ChatMessageProps {
+,
+// Extend ChatMessageProps to include key for mapping,
+declare module '@/components/ChatAssistant/ChatMessage' {,
+  export interface ChatMessageProps {,
     role: 'user' | 'assistant';
     message: string;
     timestamp?: Date;
-    key?: string | number;
+    key?: string | number,
   }
 }
-
-// Extend ProductListingCardProps to include key for mapping
-declare module '@/components/ProductListingCard' {
-  export interface ProductListingCardProps {
+,
+// Extend ProductListingCardProps to include key for mapping,
+declare module '@/components/ProductListingCard' {,
+  export interface ProductListingCardProps {,
     listing: any;
     view: any;
     onRequestQuote: (listingId: string) => void;
     key?: string | number;
-    detailBasePath?: string;
+    detailBasePath?: string,
   }
 }
+,

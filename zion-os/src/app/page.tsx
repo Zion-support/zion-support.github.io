@@ -4,6 +4,11 @@ import Link from 'next/link';
 import FeatureCard from './components/FeatureCard';
 
 export default function HomePage() {
+  const features = [
+    {
+      icon: "🤖",
+      title: "AI-Powered Intelligence",
+      description: "ZionGPT Core, Resume AI, and autonomous decision engines power your economy with cutting-edge intelligence.",
       features: [
         "ZionGPT Core Integration",
         "Resume Builder + Proposal AI", 
@@ -72,7 +77,8 @@ export default function HomePage() {
       ],
       gradient: "bg-gradient-to-r from-indigo-600 to-blue-600"
     }
-  ],
+  ];
+
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
@@ -86,63 +92,23 @@ export default function HomePage() {
               <br />
               <span className="text-white">AI-Powered Digital Economies</span>
             </h1>
+            
             <p className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto mb-8 leading-relaxed">
-              Deploy complete AI-powered marketplaces, governance systems, and digital economies with one click.
+              Deploy complete AI-powered marketplaces, governance systems, and digital economies with one click. 
               Built for the future of decentralized business.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <a href="/multiverse/launch" className="btn-primary hover-lift">
-              <a href="/multiverse/launch" className="btn-primary hover-lift">
-              <Link href="/multiverse/launch" className="btn-primary hover-lift">
                 🚀 Launch Your Economy
               </a>
               <a href="/admin/instances" className="btn-secondary hover-lift">
                 📊 View Instances
               </a>
-              <a href="/blog/ai-governance-framework-2025" className="btn-secondary hover-lift">
-                📰 New: AI Governance Framework 2025
-              </a>
-              <a href="/blog/agent-safety-red-teaming-2025" className="btn-secondary hover-lift">
-                ✅ New: Agent Safety Red Teaming 2025
-              </a>
-              <a href="/blog/ai-foundation-models-2025" className="btn-secondary hover-lift">
-                🔬 New: Foundation Models 2025
-              </a>
-              </Link>
-              </a>
-              <a href="/news" className="btn-secondary hover-lift">
-                📰 See what's new in 2025
-              </a>
-              <a href="/blog/ai-safety-governance-blueprint-2025" className="btn-secondary hover-lift">
-                ✅ New: AI Safety & Governance 2025
-              </a>
             </div>
           </div>
         </div>
-      </section>
-
-      {/* Promo Banner - New Articles */}
-      <section className="py-6 px-4 sm:px-6 lg:px-8 bg-blue-50 border-b border-blue-100">
-        <div className="max-w-7xl mx-auto grid gap-4 md:grid-cols-2">
-          <a
-            href="/blog/agent-safety-red-teaming-2025"
-            className="block w-full bg-white rounded-xl border border-blue-200 p-5 shadow-sm hover:shadow-md transition-shadow"
-            aria-label="Read: Agent Safety Red Teaming 2025: Practical Playbooks for AI Systems"
-          >
-      {/* What's New Section */}
-      <section className="py-12 px-4 sm:px-6 lg:px-8 bg-white/5">
-        <div className="max-w-7xl mx-auto">
-          <div className="glass-effect rounded-2xl p-6 md:p-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
-            <div>
-              <p className="text-sm uppercase tracking-wider text-blue-300 mb-2">What's New</p>
-              <h3 className="text-2xl md:text-3xl font-bold mb-2">AI Governance Framework 2025 & Agent Safety Red Teaming</h3>
-              <p className="text-white/70">Latest AI governance frameworks and safety playbooks now available for enterprise deployment.</p>
-            </div>
-            <a href="/blog" className="btn-primary whitespace-nowrap">Read the updates →</a>
-          </div>
-        </div>
-      </section>
+      </div>
 
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
@@ -156,6 +122,7 @@ export default function HomePage() {
               for launching sovereign digital economies.
             </p>
           </div>
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <FeatureCard
@@ -171,114 +138,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Latest News */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">Latest News</h2>
-            <p className="text-white/70 max-w-2xl mx-auto">Product releases, research updates, and ecosystem highlights.</p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              {
-                title: 'AI Governance Blueprint 2025',
-                summary: 'New enterprise governance model for responsible AI and autonomy.',
-                href: '/blog/ai-governance-blueprint-2025'
-              },
-              {
-                title: 'Zion OS v2.5 Released',
-                summary: 'Performance boosts, analytics dashboards, and security hardening.',
-                href: '/news/v2-5-release-notes'
-              },
-              {
-                title: 'Autonomous IT Case Study',
-                summary: 'How Zion OS cut infrastructure costs by 40% for a global enterprise.',
-                href: '/case-studies/autonomous-it-40-cost-reduction'
-              }
-            ].map((item) => (
-              <div key={item.title} className="glass-effect rounded-2xl p-6 hover-lift">
-                <h3 className="text-2xl font-semibold mb-2">
-                  <a href={item.href} className="hover:underline">
-                    {item.title}
-                  </a>
-                </h3>
-                <p className="text-white/70">{item.summary}</p>
-                <a href={item.href} className="inline-block mt-4 text-blue-400 hover:text-blue-300">Read more →</a>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Latest News Teaser */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="flex items-center justify-between mb-8">
-            <h2 className="text-3xl md:text-4xl font-bold">Latest News</h2>
-            <Link href="/news" className="text-blue-400 hover:text-blue-300">View all →</Link>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <Link href="/news/ai-business-intelligence-platform-launch" className="card group">
-              <div className="w-full h-40 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-xl mb-4 flex items-center justify-center">
-                <span className="text-blue-400 text-4xl">BI</span>
-              </div>
-              <div className="flex items-center gap-3 mb-2">
-                <span className="bg-blue-500/20 text-blue-400 text-xs font-bold px-2 py-1 rounded-full">LAUNCH</span>
-                <span className="text-gray-400 text-sm">Dec 15, 2024</span>
-              </div>
-              <h3 className="text-xl font-semibold group-hover:text-blue-400 transition-colors">
-                AI-Powered Business Intelligence Platform Launch
-              </h3>
-              <p className="text-gray-400 mt-2 line-clamp-2">
-                Real-time insights, predictive analytics, and automated decision support for enterprises.
-              </p>
-            </Link>
-
-            <Link href="/news/quantum-error-correction-breakthrough" className="card group">
-              <div className="w-full h-40 bg-gradient-to-br from-purple-500/20 to-blue-500/20 rounded-xl mb-4 flex items-center justify-center">
-                <span className="text-purple-400 text-4xl">QC</span>
-              </div>
-              <div className="flex items-center gap-3 mb-2">
-                <span className="bg-purple-500/20 text-purple-400 text-xs font-bold px-2 py-1 rounded-full">QUANTUM</span>
-                <span className="text-gray-400 text-sm">Dec 12, 2024</span>
-              </div>
-              <h3 className="text-xl font-semibold group-hover:text-blue-400 transition-colors">
-                Quantum Error Correction Breakthrough
-              </h3>
-              <p className="text-gray-400 mt-2 line-clamp-2">
-                New algorithm cuts logical error rates by up to 60% across NISQ devices.
-              </p>
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Latest Updates Teaser */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-3">Latest Updates</h2>
-            <p className="text-xl text-white/70">Fresh news from our product, research, and community</p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[ 
-              { title: 'Zero-trust orchestration added across all deployments', href: '/news/zero-trust-orchestration-release', date: 'Sep 14, 2025' },
-              { title: 'Multi-region failover achieves 99.995% uptime', href: '/news/multi-region-failover-uptime', date: 'Sep 10, 2025' },
-              { title: 'Zion Academy: AI Governance Blueprint Level II', href: '/news/academy-ai-governance-blueprint-l2', date: 'Sep 06, 2025' },
-            ].map(item => (
-              <a key={item.href} href={item.href} className="group block p-6 rounded-2xl glass-effect hover-lift">
-                <div className="text-sm text-white/60 mb-2">{item.date}</div>
-                <h3 className="text-xl font-semibold group-hover:text-blue-400 transition-colors">{item.title}</h3>
-                <div className="mt-4 text-blue-400 text-sm font-medium">Read more →</div>
-              </a>
-            ))}
-          </div>
-          <div className="text-center mt-10">
-            <a href="/news" className="btn-secondary">View all updates</a>
-          </div>
-        </div>
-      </section>
-
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
@@ -289,26 +148,7 @@ export default function HomePage() {
             <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto">
               Join the revolution in decentralized business. Launch your sovereign AI-powered digital economy today.
             </p>
-            <div className="mb-8">
-              <p className="text-lg text-blue-300 mb-4">📚 Latest: AI Governance Blueprint 2025</p>
-              <a href="/blog/ai-governance-blueprint-2025" className="text-blue-400 hover:text-blue-300 underline">
-                Read our comprehensive guide to dual-layer policy for safe autonomy →
-              </a>
-            </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="/multiverse/launch" className="btn-primary hover-lift text-lg px-8 py-4">
-              <Link href="/multiverse/launch" className="btn-primary hover-lift text-lg px-8 py-4">
-                🚀 Start Building Now
-              </a>
-              <a href="/admin/instances" className="btn-secondary hover-lift text-lg px-8 py-4">
-                📊 Explore Examples
-              </a>
-              </Link>
-              <a href="/blog/ai-governance-operating-systems" className="btn-secondary hover-lift text-lg px-8 py-4">
-                📰 New: AI Governance Operating Systems
-              <a href="/blog/quantum-risk-modeling-2025" className="btn-secondary hover-lift text-lg px-8 py-4">
-                📰 New: AI Governance Blueprint 2025
-              </a>
               <a href="/multiverse/launch" className="btn-primary hover-lift text-lg px-8 py-4">
                 🚀 Start Building Now
               </a>
@@ -340,35 +180,6 @@ export default function HomePage() {
               <div className="text-3xl font-bold text-orange-400 mb-2">∞</div>
               <div className="text-white/70">Scalability</div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Latest from the Blog */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">Latest from the Blog</h2>
-            <p className="text-xl text-white/70 max-w-2xl mx-auto">Fresh insights from our team across AI, data, and quantum.</p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {[
-              { id: 'edge-ai-on-device-inference', title: 'Edge AI: On-Device Inference for Privacy and Speed' },
-              { id: 'autonomous-agents-in-enterprise', title: 'Autonomous Agents in the Enterprise: Patterns and Pitfalls' },
-              { id: 'post-quantum-cryptography-roadmap', title: 'Post-Quantum Cryptography: A Practical Migration Roadmap' },
-              { id: 'llm-evals-in-production', title: 'LLM Evals in Production: From Offline Benchmarks to Live Metrics' }
-            ].map((post) => (
-              <a key={post.id} href={`/blog/${post.id}`} className="glass-effect rounded-xl p-6 hover-lift block">
-                <div className="h-24 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg mb-4 flex items-center justify-center">
-                  <span className="text-white text-2xl font-bold">{post.title.split(' ').slice(0, 2).map((w) => w[0]).join('')}</span>
-                </div>
-                <h3 className="text-lg font-semibold">{post.title}</h3>
-                <span className="text-sm text-white/70">Read more →</span>
-              </a>
-            ))}
-          </div>
-          <div className="text-center mt-10">
-            <a href="/blog" className="btn-secondary hover-lift">View all articles</a>
           </div>
         </div>
       </section>

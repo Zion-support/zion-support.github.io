@@ -261,5 +261,4 @@ const EnhancedAccessibility = () => {
       {isOpen && (<div className="fixed inset-0 z-40" onClick={() => setIsOpen(false)} aria-hidden="true"/>)}
     </>);
 };
-
 export default EnhancedAccessibility;

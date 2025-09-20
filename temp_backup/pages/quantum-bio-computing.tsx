@@ -20,5 +20,4 @@ export default function QuantumBioComputing() {
     </div>
   );
 };
-
 export default quantum-bio-computing;

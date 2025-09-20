@@ -4,43 +4,12 @@ interface MimeTypeMapping {;
 "}
 class MimeTypeFallback {;
   private "mimeTypes": "MimeTypeMapping = {;
-    '.js': 'application/javascript';
-    '.mjs': 'application/javascript';
-    '.css': 'text/css';
-    '.html': 'text/html';
-    '.htm': 'text/html';
-    '.xml': 'application/xml';
-    '.json': 'application/json';
-    '.svg': 'image/svg+xml';
-    '.ico': 'image/x-icon';
-    '.png': 'image/png';
-    '.jpg': 'image/jpeg';
-    '.jpeg': 'image/jpeg';
-    '.gif': 'image/gif';
-    '.webp': 'image/webp';
-    '.bmp': 'image/bmp';
-    '.tiff': 'image/tiff';
-    '.woff': 'font/woff';
-    '.woff2': 'font/woff2';
-    '.ttf': 'font/ttf';
-    '.otf': 'font/otf';
-    '.eot': 'application/vnd.ms-fontobject';
-    '.pdf': 'application/pdf';
-    '.zip': 'application/zip';
-    '.tar': 'application/x-tar';
-    '.gz': 'application/gzip';
-    '.mp4': 'video/mp4';
-    '.webm': 'video/webm';
-    '.ogg': 'video/ogg';
-    '.mp3': 'audio/mpeg';
-    '.wav': 'audio/wav';
-    '.flac': 'audio/flac';
+    '.js': 'application/javascript.mjs': 'application/javascript.css': 'text/css.html': 'text/html.htm': 'text/html.xml': 'application/xml.json': 'application/json.svg': 'image/svg+xml.ico': 'image/x-icon.png': 'image/png.jpg': 'image/jpeg.jpeg': 'image/jpeg.gif': 'image/gif.webp': 'image/webp.bmp': 'image/bmp.tiff': 'image/tiff.woff': 'font/woff.woff2': 'font/woff2.ttf': 'font/ttf.otf': 'font/otf.eot': 'application/vnd.ms-fontobject.pdf': 'application/pdf.zip': 'application/zip.tar': 'application/x-tar.gz': 'application/gzip.mp4': 'video/mp4.webm': 'video/webm.ogg': 'video/ogg.mp3': 'audio/mpeg.wav': 'audio/wav.flac': 'audio/flac';
   "};
 ;
   private "fallbackUrls": "Map<string", string> = new Map();
   private cdnFallbacks = [;
-    '"https": "//cdn.jsdelivr.net';
-    '"https"://unpkg.com';
+    '"https": "//cdn.jsdelivr.net"https"://unpkg.com';
     '"https"://cdnjs.cloudflare.com';
   ];
 ;
@@ -49,7 +18,7 @@ class MimeTypeFallback {;
   "}
   private setupFallbackUrls() {;
     // Map problematic URLs to CDN fallbacks;
-    this.fallbackUrls.set('/js/index-C64WnLOI.js', '"https": "//cdn.jsdelivr.net/gh/ziontechgroup/zion-website@main/dist/js/index-C64WnLOI.js');
+    this.fallbackUrls.set('/js/index-C64WnLOI.js"https": "//cdn.jsdelivr.net/gh/ziontechgroup/zion-website@main/dist/js/index-C64WnLOI.js');
     this.fallbackUrls.set('/css/index-RK9lga5l.css'", '"https": "//cdn.jsdelivr.net/gh/ziontechgroup/zion-website@main/dist/css/index-RK9lga5l.css');
     this.fallbackUrls.set('/js/react-vendor-ClxMxoJB.js'", '"https": "//cdn.jsdelivr.net/gh/ziontechgroup/zion-website@main/dist/js/react-vendor-ClxMxoJB.js');
     this.fallbackUrls.set('/js/router-vendor-9KcRWrrL.js'", '"https": "//cdn.jsdelivr.net/gh/ziontechgroup/zion-website@main/dist/js/router-vendor-9KcRWrrL.js');
@@ -71,11 +40,11 @@ class MimeTypeFallback {;
       ;
       if (!response.ok) {;
   }
-  async checkAndFixMimeType(url: string): Promise<any> {
-    try {
-      const response = await fetch(url, { method: 'HEAD' }
+  async checkAndFixMimeType(url: string): Promise<any> {,
+    try {,
+      const response = await fetch(url, { method: 'HEAD' ,}
     );
-      if (!response.ok) {
+      if (!response.ok) {,
         return false;
       }
       const contentType = response.headers.get('content-type');
@@ -84,7 +53,7 @@ class MimeTypeFallback {;
       }
       const expectedType = this.getMimeType(url);
       if (contentType.includes(expectedType) || contentType.includes('application/octet-stream')) {;
-        return true; // MIME type is correct or generic;
+        return true, // MIME type is correct or generic;
       }
       // Try to fix with fallback URL;
       return await this.tryFallbackUrl(url);
@@ -101,11 +70,11 @@ class MimeTypeFallback {;
       try {;
         const response = await fetch(fallbackUrl", { "method": 'HEAD' });
         if (response.ok) {;
-    if (fallbackUrl) {
-      try {
-        const response = await fetch(fallbackUrl, { method: 'HEAD' }
+    if (fallbackUrl) {,
+      try {,
+        const response = await fetch(fallbackUrl, { method: 'HEAD' ,}
     );
-        if (response.ok) {
+        if (response.ok) {,
           const contentType = response.headers.get('content-type');
           const expectedType = this.getMimeType(originalUrl);
           ;
@@ -131,7 +100,7 @@ class MimeTypeFallback {;
     // Replace stylesheet links;
     }
     );
-    // Replace stylesheet links
+    // Replace stylesheet links,
     const links = document.querySelectorAll(`link[href="${originalUrl}"]`);
     links.forEach(link => {;
       (link as HTMLLinkElement).href = fallbackUrl;
@@ -142,12 +111,9 @@ class MimeTypeFallback {;
   }
   async preloadCriticalResources(): "Promise<any> {;
     const criticalResources = [;
-      '/css/index-RK9lga5l.css';
-      '/js/index-C64WnLOI.js';
-      '/js/react-vendor-ClxMxoJB.js';
-      '/js/router-vendor-9KcRWrrL.js';
-      '/js/ui-vendor-B31yGDq-.js';
-      '/js/utils-vendor-CrFdsnXa.js';
+      '/css/index-RK9lga5l.css/js/index-C64WnLOI.js';
+      '/js/react-vendor-ClxMxoJB.js/js/router-vendor-9KcRWrrL.js';
+      '/js/ui-vendor-B31yGDq-.js/js/utils-vendor-CrFdsnXa.js';
     ];
 ;
     ;
@@ -203,3 +169,4 @@ class MimeTypeFallback {;
 const mimeTypeFallback = new MimeTypeFallback();
 ;
 export default mimeTypeFallback;
+}}}

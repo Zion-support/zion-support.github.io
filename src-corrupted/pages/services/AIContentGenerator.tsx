@@ -206,5 +206,4 @@ export { AIContentGenerator }(...args[]):  {
     </div>
   );
 };
-
 export default AIContentGenerator;

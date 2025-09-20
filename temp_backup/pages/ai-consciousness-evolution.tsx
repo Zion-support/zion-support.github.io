@@ -24,6 +24,4 @@ export default function AIConsciousnessEvolution() {
     </div>
   );
 };
-
-
 export default UltimateTechRevolution2035;

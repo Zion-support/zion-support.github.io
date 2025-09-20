@@ -1,136 +1,191 @@
 #!/usr/bin/env node
 
-const { spawn } = require('child_process');
+/**
+ * Continuous Automation Improvement System
+ * This script analyzes and improves automation workflows
+ */
+
 const fs = require('fs');
 const path = require('path');
 
-const LOGS_DIR = path.join(__dirname, 'logs');
-const LOG_FILE = path.join(LOGS_DIR, 'continuous-automation-improvement-system.log');
-
-if (!fs.existsSync(LOGS_DIR)) {
-  fs.mkdirSync(LOGS_DIR, { recursive: true });
-}
-
-function log(message) {
-  const line = `[${new Date().toISOString()}] ${message}`;
-  console.log(line);
-  fs.appendFileSync(LOG_FILE, `${line}\n`);
-}
-
-function fileExists(relativePath) {
-  return fs.existsSync(path.join(__dirname, relativePath));
-}
-
-function buildCandidateTasks() {
-  const tasks = [];
-
-  const candidates = [
-    { name: 'dependency-update', cmd: ['node', ['automation/dependency-update-orchestrator.cjs']] },
-    { name: 'ui-evolution-once', cmd: ['node', ['automation/ui-evolution-orchestrator.cjs', 'once']], requires: 'automation/ui-evolution-orchestrator.cjs' },
-    { name: 'responsive-content-once', cmd: ['node', ['automation/responsive-content-orchestrator.cjs', 'once']], requires: 'automation/responsive-content-orchestrator.cjs' },
-    { name: 'variation-once', cmd: ['node', ['automation/variation-orchestrator.cjs', 'once']], requires: 'automation/variation-orchestrator.cjs' },
-    { name: 'design-orchestrator', cmd: ['node', ['automation/design-orchestrator.cjs']], requires: 'automation/design-orchestrator.cjs' },
-    { name: 'innovation', cmd: ['node', ['automation/innovation-orchestrator.cjs']], requires: 'automation/innovation-orchestrator.cjs' },
-    { name: 'security-scan', cmd: ['node', ['automation/security-scanner.cjs']], requires: 'automation/security-scanner.cjs' },
-    { name: 'performance-audit', cmd: ['node', ['automation/performance-audit.cjs']], requires: 'automation/performance-audit.cjs' },
-    { name: 'autonomous-meta-once', cmd: ['node', ['automation/autonomous-meta-orchestrator.cjs', 'once']], requires: 'automation/autonomous-meta-orchestrator.cjs' },
-    { name: 'venture-once', cmd: ['node', ['automation/venture-orchestrator.cjs', 'once']], requires: 'automation/venture-orchestrator.cjs' },
-    { name: 'frontend-sync-once', cmd: ['node', ['automation/frontend-sync-orchestrator.cjs', 'once']], requires: 'automation/frontend-sync-orchestrator.cjs' },
-    { name: 'seo-optimizer', cmd: ['node', ['automation/seo-optimizer.cjs']], requires: 'automation/seo-optimizer.cjs' },
-  ];
-
-  for (const c of candidates) {
-    if (!c.requires || fileExists(path.relative(__dirname, path.join(__dirname, '..', c.requires)))) {
-      tasks.push(c);
-    }
+class ContinuousImprovementSystem {
+  constructor() {
+    this.workflowsDir = '.github/workflows';
+    this.automationDir = 'automation';
+    this.reportsDir = 'reports';
   }
 
-  return tasks;
-}
+  async analyzeWorkflows() {
+    console.log('🔍 Analyzing workflow health...');
+    
+    try {
+      const workflowFiles = this.getWorkflowFiles();
+      const analysis = {
+        total: workflowFiles.length,
+        valid: 0,
+        issues: [],
+        recommendations: []
+      };
 
-function shuffle(array) {
-  for (let i = array.length - 1; i > 0; i -= 1) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [array[i], array[j]] = [array[j], array[i]];
-  }
-  return array;
-}
-
-function runCommand(name, command, args) {
-  return new Promise((resolve) => {
-    log(`▶️  Starting task: ${name} -> ${command} ${args.join(' ')}`);
-    const child = spawn(command, args, { stdio: ['ignore', 'pipe', 'pipe'], cwd: path.join(__dirname, '..') });
-
-    child.stdout.on('data', (data) => {
-      process.stdout.write(data);
-      fs.appendFileSync(LOG_FILE, data);
-    });
-
-    child.stderr.on('data', (data) => {
-      process.stderr.write(data);
-      fs.appendFileSync(LOG_FILE, data);
-    });
-
-    child.on('close', (code) => {
-      if (code === 0) {
-        log(`✅ Completed task: ${name}`);
-      } else {
-        log(`⚠️ Task failed (code ${code}): ${name}`);
+      for (const file of workflowFiles) {
+        const result = await this.validateWorkflow(file);
+        if (result.valid) {
+          analysis.valid++;
+        } else {
+          analysis.issues.push(result);
+        }
       }
-      resolve();
-    });
-  });
-}
 
-async function runDiverseBatch() {
-  const allTasks = buildCandidateTasks();
-  if (allTasks.length === 0) {
-    log('No candidate tasks found. Exiting early.');
-    return;
-  }
-
-  const batchSize = Math.min(4, Math.max(2, Math.ceil(allTasks.length / 4)));
-  const selected = shuffle(allTasks).slice(0, batchSize);
-
-  log(`Selected ${selected.length} tasks out of ${allTasks.length} for this cycle: ${selected.map(t => t.name).join(', ')}`);
-
-  for (const task of selected) {
-    // eslint-disable-next-line no-await-in-loop
-    await runCommand(task.name, task.cmd[0], task.cmd[1]);
-  }
-
-  log('Cycle complete.');
-}
-
-async function runOnce() {
-  log('🚀 Continuous Automation Improvement: single cycle start');
-  await runDiverseBatch();
-  log('🏁 Single cycle finished');
-}
-
-async function runContinuous(intervalMinutes) {
-  const intervalMs = intervalMinutes * 60 * 1000;
-  log(`🔁 Continuous mode enabled. Interval: ${intervalMinutes} minutes`);
-  // Run immediately, then on interval
-  // eslint-disable-next-line no-await-in-loop
-  await runDiverseBatch();
-  setInterval(() => {
-    runDiverseBatch().catch((err) => log(`Unhandled error in batch: ${err?.stack || err}`));
-  }, intervalMs);
-}
-
-(async () => {
-  const mode = process.argv[2] || 'once';
-  const intervalArg = Number(process.argv[3]) || 60; // default hourly
-
-  try {
-    if (mode === 'continuous') {
-      await runContinuous(intervalArg);
-    } else {
-      await runOnce();
+      // Generate recommendations
+      analysis.recommendations = this.generateRecommendations(analysis);
+      
+      return analysis;
+    } catch (error) {
+      console.error('❌ Error analyzing workflows:', error.message);
+      return null;
     }
-  } catch (err) {
-    log(`Fatal error: ${err?.stack || err}`);
-    process.exitCode = 1;
   }
-})();
+
+  getWorkflowFiles() {
+    try {
+      if (!fs.existsSync(this.workflowsDir)) {
+        return [];
+      }
+      
+      return fs.readdirSync(this.workflowsDir)
+        .filter(file => file.endsWith('.yml') || file.endsWith('.yaml'))
+        .map(file => path.join(this.workflowsDir, file));
+    } catch (error) {
+      console.error('❌ Error reading workflow directory:', error.message);
+      return [];
+    }
+  }
+
+  async validateWorkflow(filePath) {
+    try {
+      const content = fs.readFileSync(filePath, 'utf8');
+      const fileName = path.basename(filePath);
+      
+      const issues = [];
+      
+      // Check for basic YAML syntax
+      try {
+        require('yaml').parse(content);
+      } catch (error) {
+        issues.push(`Invalid YAML syntax: ${error.message}`);
+      }
+      
+      // Check for common issues
+      if (content.includes('\\n') && content.includes('"')) {
+        issues.push('Malformed multi-line commands detected');
+      }
+      
+      if (!content.includes('timeout-minutes')) {
+        issues.push('Missing timeout configuration');
+      }
+      
+      if (!content.includes('concurrency')) {
+        issues.push('Missing concurrency control');
+      }
+      
+      return {
+        file: fileName,
+        valid: issues.length === 0,
+        issues
+      };
+    } catch (error) {
+      return {
+        file: path.basename(filePath),
+        valid: false,
+        issues: [`File read error: ${error.message}`]
+      };
+    }
+  }
+
+  generateRecommendations(analysis) {
+    const recommendations = [];
+    
+    if (analysis.issues.length > 0) {
+      recommendations.push('Fix workflow syntax errors and validation issues');
+    }
+    
+    if (analysis.total > 50) {
+      recommendations.push('Consider consolidating workflows to reduce complexity');
+    }
+    
+    recommendations.push('Add proper error handling with continue-on-error and if: always()');
+    recommendations.push('Implement proper timeout values for all jobs');
+    recommendations.push('Use concurrency groups to prevent resource conflicts');
+    
+    return recommendations;
+  }
+
+  async generateReport(analysis) {
+    if (!analysis) return;
+    
+    const report = {
+      timestamp: new Date().toISOString(),
+      summary: {
+        total: analysis.total,
+        valid: analysis.valid,
+        issues: analysis.issues.length
+      },
+      issues: analysis.issues,
+      recommendations: analysis.recommendations
+    };
+    
+    // Ensure reports directory exists
+    if (!fs.existsSync(this.reportsDir)) {
+      fs.mkdirSync(this.reportsDir, { recursive: true });
+    }
+    
+    const reportPath = path.join(this.reportsDir, 'workflow-improvement-report.json');
+    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
+    
+    console.log('📊 Report generated:', reportPath);
+    return report;
+  }
+
+  async run(mode = 'once') {
+    console.log('🚀 Starting Continuous Improvement System...');
+    
+    try {
+      const analysis = await this.analyzeWorkflows();
+      const report = await this.generateReport(analysis);
+      
+      if (report) {
+        console.log('✅ Analysis completed successfully');
+        console.log(`📈 Workflows: ${report.summary.total} total, ${report.summary.valid} valid, ${report.summary.issues} issues`);
+        
+        if (report.recommendations.length > 0) {
+          console.log('💡 Recommendations:');
+          report.recommendations.forEach((rec, index) => {
+            console.log(`  ${index + 1}. ${rec}`);
+          });
+        }
+      }
+      
+      if (mode === 'continuous') {
+        console.log('🔄 Running in continuous mode...');
+        // In continuous mode, you could set up file watching or scheduling
+        setInterval(async () => {
+          console.log('🔄 Running periodic analysis...');
+          await this.run('once');
+        }, 300000); // Every 5 minutes
+      }
+      
+    } catch (error) {
+      console.error('❌ System error:', error.message);
+      process.exit(1);
+    }
+  }
+}
+
+// CLI interface
+if (require.main === module) {
+  const system = new ContinuousImprovementSystem();
+  const mode = process.argv[2] || 'once';
+  system.run(mode);
+}
+
+module.exports = ContinuousImprovementSystem;

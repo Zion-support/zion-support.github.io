@@ -169,5 +169,4 @@ export default function TeamPage() {
     </div>
   );
 };
-
 export default team;

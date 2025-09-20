@@ -1,6 +1,5 @@
 import { ServiceVariant } from '../types/service-variants';
-
-export interface ComprehensiveMicroSaasService {
+export interface ComprehensiveMicroSaasService {,
   id: string;
   name: string;
   tagline: string;
@@ -27,12 +26,11 @@ export interface ComprehensiveMicroSaasService {
   marketSize: string;
   growthRate: string;
   variant: ServiceVariant;
-  contactInfo: {
+  contactInfo: {,
     mobile: string;
     email: string;
     address: string;
-    website: string;
-  };
+    website: string,};
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
@@ -41,6 +39,5 @@ export interface ComprehensiveMicroSaasService {
   reviews: number;
   benefits: string[];
   capabilities: string[];
-  marketAdvantage: string;
-}
-
+  marketAdvantage: string,}
+,

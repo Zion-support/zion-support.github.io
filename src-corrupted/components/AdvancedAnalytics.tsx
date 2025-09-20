@@ -247,5 +247,4 @@ export function AdvancedAnalytics({ enabled = true, showMetrics = true }: Props)
     </div>
   );
 };
-
 export default AdvancedAnalytics;

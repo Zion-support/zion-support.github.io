@@ -100,5 +100,4 @@ const AICodeReviewAssistant = (props: any) => {
     </div>
   );
 };
-
 export default AICodeReviewAssistant;

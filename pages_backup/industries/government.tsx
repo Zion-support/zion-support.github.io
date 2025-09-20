@@ -114,5 +114,4 @@ export default function GovernmentPage() {
     </div>
   );
 };
-
 export default government;

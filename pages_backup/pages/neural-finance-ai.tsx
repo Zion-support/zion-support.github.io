@@ -503,5 +503,4 @@ const NeuralFinanceAI: React.FC = () => {
     </div>
   );
 };
-
 export default neural-finance-ai;

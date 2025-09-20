@@ -304,5 +304,4 @@ const AIBusinessIntelligence: React.FC = () => {
     </div>
   );
 };
-
 export default ai-business-intelligence;

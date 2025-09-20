@@ -7,5 +7,4 @@ const sizeClasses = {
     lg: 'w-16 h-16',
     xl: 'w-24 h-24'
 };
-
 export default enhanced-loading;

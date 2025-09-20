@@ -886,5 +886,4 @@ function CareersPage() {
     </div>
   );
 };
-
 export default careers;

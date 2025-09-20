@@ -277,5 +277,4 @@ export default function OfflinePage(req, res) {
     </div>
   );
 };
-
 export default offline;

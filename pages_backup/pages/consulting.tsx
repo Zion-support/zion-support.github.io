@@ -208,5 +208,4 @@ export default function ConsultingPage() {
     </div>
   );
 };
-
 export default consulting;

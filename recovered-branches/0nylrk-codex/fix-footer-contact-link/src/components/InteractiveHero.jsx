@@ -189,5 +189,4 @@ export const InteractiveHero = ({ title, subtitle, description, primaryAction, s
         }}/>
     </section>);
 };
-
 export default InteractiveHero;

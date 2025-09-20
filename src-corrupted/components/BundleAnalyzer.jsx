@@ -301,5 +301,4 @@ export const BundleAnalyzer = () => {
       </AnimatePresence>
     </>);
 };
-
 export default BundleAnalyzer;
