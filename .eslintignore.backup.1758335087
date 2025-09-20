@@ -110,6 +110,16 @@ zion-website/
 *.sh
 *.cjs
 
+<<<<<<< HEAD
+# Specific root level files to ignore
+*.backup.*
+*.disabled
+*.broken
+*.corrupted
+
+# Additional problematic files
+*.js
+=======
 # Only ignore specific problematic root files, not all JS/TS files
 *_backup*
 *_disabled*
@@ -123,8 +133,47 @@ quantum-ai-*/
 !src/**/*.ts
 !src/**/*.jsx
 !src/**/*.tsx
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-750c
 !App.tsx
+!main.jsx
 !index.html
+<<<<<<< HEAD
+!src/
+!components/
+!pages/
+!hooks/
+!lib/
+!utils/
+!services/
+!store/
+!data/
+!config/
+!public/
+!extension/
+!quantum-ai-*/
+!sdk/
+!src-corrupted/
+!out/
+!node_modules/
+!dist/
+!build/
+!recovered*/
+!backup*/
+!temp*/
+!test*/
+!zion*/
+!dao/
+!automation*/
+!api*/
+!admin/
+!app*/
+!ai*/
+!cache/
+!chain*/
+!deploy*/
+!netlify/
+!server/
+=======
 !main.jsx
 !vite.config.js
 !tailwind.config.js
@@ -134,3 +183,4 @@ quantum-ai-*/
 !hardhat.config.js
 !ecosystem.config.js
 !next.config.js
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-750c
