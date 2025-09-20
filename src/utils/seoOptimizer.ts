@@ -217,7 +217,7 @@ return issues;
 }
 
 static generateMetaTags(seoData: SEOData): string {
-return `;
+return `
 <title>${seoData.title}</title>
 <meta name="description" content="${seoData.description}" />
 <meta name="keywords" content="${seoData.keywords.join(", ")}" />
@@ -238,7 +238,7 @@ return `;
 
 <!-- Structured Data -->
 <script type="application/ld+json">
-${JSON.stringify(seoData.structuredData; null; 2)}
+${JSON.stringify(seoData.structuredData, null, 2)}
 </script>
 `;
 }
