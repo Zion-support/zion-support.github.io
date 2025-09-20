@@ -1,5 +1,5 @@
 import React from 'react';
-import { getRecentBlogPosts } from '../data/blog-posts';
+import { Link } from 'react-router-dom';
 
 const NewContentPromoBanner: React.FC = () => {
 	const recent = getRecentBlogPosts(3);

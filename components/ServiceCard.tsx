@@ -1,4 +1,7 @@
-import React from 'react';
+"use client";
+import React, { useState, useCallback } from 'react';
+import { motion } from 'framer-motion';
+import { ArrowRight, Brain } from 'lucide-react';
 
 const ServiceCard: React.FC = () => {
   // Temporarily simplified to avoid build issues

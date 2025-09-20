@@ -13,7 +13,6 @@ const NextGenInnovationHub2042: React.FC = () => {
     { id: 'energy', name: 'Energy Systems', icon: '⚡' },
     { id: 'matter', name: 'Matter Manipulation', icon: '🔬' }
   ];
-  const [selectedInnovation, setSelectedInnovation] = useState(0);
 
   const innovations = [
     {

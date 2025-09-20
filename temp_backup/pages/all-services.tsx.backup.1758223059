@@ -1,0 +1,100 @@
+<<<<<<< HEAD
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+=======
+import React, { useState } from 'react';
+import Head from 'next/head';
+import { motion } from 'framer-motion';
+import { 
+  Search, Filter, Star, Users, TrendingUp, Zap, 
+  Brain, Rocket, Shield, Cpu, Globe, Target,
+  ArrowRight, ExternalLink, Check, Phone, Mail, MapPin
+} from 'lucide-react';
+import UltraAdvancedQuantumBackground from '../components/ui/UltraAdvancedQuantumBackground';
+import UltraFuturisticServiceCard from '../components/ui/UltraFuturisticServiceCard';
+import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
+import { innovativeAIServices } from '../data/innovative-ai-services';
+import { advancedITServices } from '../data/advanced-it-services';
+import { extraServices } from '../data/extra-services';
+
+export default function AllServicesPage() {
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [selectedVariant, setSelectedVariant] = useState('all');
+
+  // Combine all services
+  const allServices = [
+    ...enhancedRealMicroSaasServices,
+    ...innovativeAIServices,
+    ...advancedITServices,
+    ...extraServices
+  ];
+
+  // Get unique categories
+  const categories = ['all', ...Array.from(new Set(allServices.map(service => service.category)))];
+
+  // Get unique variants
+  const variants = ['all', ...Array.from(new Set(allServices.map(service => service.variant)))];
+
+  // Filter services
+  const filteredServices = allServices.filter(service => {
+    const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         service.category.toLowerCase().includes(searchTerm.toLowerCase());
+    
+    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
+    const matchesVariant = selectedVariant === 'all' || service.variant === selectedVariant;
+
+    return matchesSearch && matchesCategory && matchesVariant;
+  });
+
+  const contactInfo = {
+    mobile: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',
+    website: 'https://ziontechgroup.com'
+  };
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+        delayChildren: 0.2
+      }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.6,
+        ease: "easeOut" as const
+      }
+    }
+  };
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-7bc1
+
+const all-services: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+      <Helmet>
+        <title>all-services | Zion Tech Group</title>
+        <meta name="description" content="all-services - Revolutionary technology solutions" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">all-services</h1>
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default all-services;

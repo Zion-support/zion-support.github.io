@@ -1,41 +1,45 @@
-export default function IncidentSimulationToolkitPage() {,
-  return (,
-    <div className="bg-black min-h-screen">,
-      <div className="mx-auto max-w-4xl px-6 pt-24">,
-        <div className="prose prose-invert max-w-none">,
-          <h1 className="text-4xl font-bold tracking-tight text-white sm: text-5xl mb-8">,
-            Incident Simulation Toolkit v1.1,
-          </h1>,
-          <div className="text-lg text-gray-300 mb-8">,
-            Advanced incident simulation and testing framework for improving IT operations readiness and response capabilities.,
-          </div>,
-          <div className="bg-white/5 p-6 rounded-2xl backdrop-blur-sm mb-8">,
-            <h2 className="text-2xl font-semibold text-white mb-4">Overview</h2>,
-            <p className="text-gray-300 leading-relaxed">,
-              The Incident Simulation Toolkit v1.1 provides comprehensive testing capabilities for IT operations teams.,
-              Create realistic incident scenarios, test response procedures, and improve team readiness through,
-              controlled simulation environments.,
-            </p>,
-          </div>,
-          <div className="bg-white/5 p-6 rounded-2xl backdrop-blur-sm mb-8">,
-            <h2 className="text-2xl font-semibold text-white mb-4">Key Features</h2>,
-            <ul className="text-gray-300 space-y-2">,
-              <li>• Realistic incident scenario generation</li>,
-              <li>• Team response testing and evaluation</li>,
-              <li>• Performance metrics and analytics</li>,
-              <li>• Integration with monitoring tools</li>,
-              <li>• Automated report generation</li>,
-            </ul>,
-          </div>,
-          <div className="bg-white/5 p-6 rounded-2xl backdrop-blur-sm">,
-            <h2 className="text-2xl font-semibold text-white mb-4">Getting Started</h2>,
-            <p className="text-gray-300 leading-relaxed">,
-              Learn how to set up and configure the Incident Simulation Toolkit in your environment.,
-              Includes sample scenarios, configuration guides, and best practices for effective testing.,
-            </p>,
-          </div>,
-        </div>,
-      </div>,
-    </div>,
+export default function Page() {
+  return (
+    <div className="bg-black min-h-screen">
+      <div className="mx-auto max-w-4xl px-6 pt-24">
+        <div className="prose prose-invert max-w-none">
+          <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl mb-8">
+            Incident Simulation Toolkit v1.1
+          </h1>
+          
+          <div className="text-lg text-gray-300 mb-8">
+            Advanced incident simulation and testing framework for improving IT operations readiness and response capabilities.
+          </div>
+
+          <div className="bg-white/5 p-6 rounded-2xl backdrop-blur-sm mb-8">
+            <h2 className="text-2xl font-semibold text-white mb-4">Overview</h2>
+            <p className="text-gray-300 leading-relaxed">
+              The Incident Simulation Toolkit v1.1 provides comprehensive testing capabilities for IT operations teams. 
+              Create realistic incident scenarios, test response procedures, and improve team readiness through 
+              controlled simulation environments.
+            </p>
+          </div>
+
+          <div className="bg-white/5 p-6 rounded-2xl backdrop-blur-sm mb-8">
+            <h2 className="text-2xl font-semibold text-white mb-4">Key Features</h2>
+            <ul className="text-gray-300 space-y-2">
+              <li>• Realistic incident scenario generation</li>
+              <li>• Team response testing and evaluation</li>
+              <li>• Performance metrics and analytics</li>
+              <li>• Integration with monitoring tools</li>
+              <li>• Automated report generation</li>
+            </ul>
+          </div>
+
+          <div className="bg-white/5 p-6 rounded-2xl backdrop-blur-sm">
+            <h2 className="text-2xl font-semibold text-white mb-4">Getting Started</h2>
+            <p className="text-gray-300 leading-relaxed">
+              Learn how to set up and configure the Incident Simulation Toolkit in your environment. 
+              Includes sample scenarios, configuration guides, and best practices for effective testing.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 }

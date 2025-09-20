@@ -1,10 +1,123 @@
-import React from 'react',
+import React, { useState, useCallback, useMemo } from 'react';
+import { motion } from 'framer-motion';
+import { ArrowRight, Crown, Building, Rocket, Star, Zap, Shield } from 'lucide-react';
+import Link from 'next/link';
 
-const AdvancedServiceCard2025: React.FC = () => {,
-  return (,
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">,
-      <h3 className="text-xl font-bold mb-4">AdvancedServiceCard2025</h3>,
-      <p className="text-gray-300">Revolutionary technology component</p>,
-    </div>,
-  ),};
+interface AdvancedService {
+  id: string;
+  name: string;
+  tagline: string;
+  description: string;
+  category: string;
+  type: string;
+  pricing: {
+    starter: string;
+    professional: string;
+    enterprise: string;
+    custom?: string;
+  };
+  features: string[];
+  benefits: string[];
+  useCases: string[];
+  marketSize: string;
+  targetAudience: string;
+  competitiveAdvantage: string;
+  contact: string;
+  mobile: string;
+  address: string;
+  website: string;
+  slug: string;
+}
+
+interface AdvancedServiceCard2025Props {
+  service: AdvancedService;
+  variant?: 'default' | 'quantum' | 'ai' | 'automation' | 'it' | 'emerging' | 'enterprise' | 'premium';
+  theme?: 'quantum' | 'cyber' | 'neon';
+  className?: string;
+  onClick?: () => void;
+}
+
+const AdvancedServiceCard2025: React.FC<AdvancedServiceCard2025Props> = ({
+  service,
+  variant = 'default',
+  className = '',
+  onClick
+}) => {
+  const [isHovered, setIsHovered] = useState(false);
+  const [isExpanded, setIsExpanded] = useState(false);
+
+  // Get variant-specific styles
+  const variantStyles = useMemo(() => {
+    if (variant === 'premium') {
+      return {
+        container: 'border-cyan-400/50 bg-gradient-to-br from-cyan-900/20 to-blue-900/20',
+        icon: <Crown className="w-5 h-5 text-yellow-400" />,
+        badge: 'bg-gradient-to-r from-yellow-400 to-orange-500 text-black',
+        button: 'bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700',
+        text: 'text-cyan-50',
+        accent: 'bg-cyan-400'
+      };
+    }
+    
+    if (variant === 'enterprise') {
+      return {
+        container: 'border-purple-400/50 bg-gradient-to-br from-purple-900/20 to-pink-900/20',
+        icon: <Building className="w-5 h-5 text-purple-400" />,
+        badge: 'bg-gradient-to-r from-purple-500 to-pink-600',
+        button: 'bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700',
+        text: 'text-purple-50',
+        accent: 'bg-purple-400'
+      };
+    }
+    
+    if (variant === 'ai') {
+      return {
+        container: 'border-blue-400/50 bg-gradient-to-br from-blue-900/20 to-indigo-900/20',
+        icon: <Zap className="w-5 h-5 text-blue-400" />,
+        badge: 'bg-gradient-to-r from-blue-500 to-indigo-600',
+        button: 'bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700',
+        text: 'text-blue-50',
+        accent: 'bg-blue-400'
+      };
+    }
+    
+    // Default variant
+    return {
+      container: 'border-gray-600/50 bg-gradient-to-br from-gray-800/20 to-gray-700/20',
+      icon: <Rocket className="w-5 h-5 text-cyan-400" />,
+      badge: 'bg-gradient-to-r from-cyan-500 to-blue-600',
+      button: 'bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700',
+      text: 'text-gray-50',
+      accent: 'bg-cyan-400'
+    };
+  }, [variant]);
+
+  const handleCardClick = useCallback(() => {
+    if (onClick) {
+      onClick();
+    }
+  }, [onClick]);
+
+  const toggleExpanded = useCallback((e: React.MouseEvent) => {
+    e.stopPropagation();
+    setIsExpanded(!isExpanded);
+  }, [isExpanded]);
+
+  const getCategoryIcon = (category: string) => {
+    if (category.includes('AI') || category.includes('Data')) return <Zap className="w-5 h-5 text-blue-400" />;
+    if (category.includes('Security') || category.includes('Compliance')) return <Shield className="w-5 h-5 text-green-400" />;
+    if (category.includes('Infrastructure') || category.includes('Cloud')) return <Building className="w-5 h-5 text-purple-400" />;
+    if (category.includes('Quantum')) return <Star className="w-5 h-5 text-cyan-400" />;
+    return <Rocket className="w-5 h-5 text-cyan-400" />;
+  };
+
+const AdvancedServiceCard2025: React.FC = () => {
+  return (
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">AdvancedServiceCard2025</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
+  );
+};
+
 export default AdvancedServiceCard2025;

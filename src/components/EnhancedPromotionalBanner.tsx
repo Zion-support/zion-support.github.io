@@ -64,15 +64,3 @@ const EnhancedPromotionalBanner: React.FC = () => {
 };
 
 export default EnhancedPromotionalBanner;
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>

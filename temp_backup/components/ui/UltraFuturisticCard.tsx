@@ -1,10 +1,126 @@
-import React from 'react',
+import React, { useState, useRef, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 
-const UltraFuturisticCard: React.FC = () => {,
-  return (,
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">,
-      <h3 className="text-xl font-bold mb-4">UltraFuturisticCard</h3>,
-      <p className="text-gray-300">Revolutionary technology component</p>,
-    </div>,
-  ),};
+interface UltraFuturisticCardProps {
+  children: React.ReactNode;
+  className?: string;
+  variant?: 'quantum' | 'holographic' | 'neural' | 'cyberpunk' | 'space';
+  glowColor?: string;
+  interactive?: boolean;
+  delay?: number;
+}
+
+const UltraFuturisticCard: React.FC<UltraFuturisticCardProps> = ({
+  children,
+  className = '',
+  variant = 'quantum',
+  glowColor,
+  interactive = true,
+  delay = 0
+}) => {
+  const [isHovered, setIsHovered] = useState(false);
+  const [isPressed, setIsPressed] = useState(false);
+  const cardRef = useRef<HTMLDivElement>(null);
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+
+  // Get variant-specific styles
+  const getVariantStyles = () => {
+    switch (variant) {
+      case 'quantum':
+        return {
+          bg: 'from-slate-900/80 via-slate-800/60 to-slate-900/80',
+          border: 'border-cyan-500/30',
+          glow: 'shadow-cyan-500/20',
+          accent: 'from-cyan-400 to-blue-500'
+        };
+      case 'holographic':
+        return {
+          bg: 'from-purple-900/80 via-pink-800/60 to-purple-900/80',
+          border: 'border-pink-500/30',
+          glow: 'shadow-pink-500/20',
+          accent: 'from-pink-400 to-purple-500'
+        };
+      case 'neural':
+        return {
+          bg: 'from-emerald-900/80 via-teal-800/60 to-emerald-900/80',
+          border: 'border-emerald-500/30',
+          glow: 'shadow-emerald-500/20',
+          accent: 'from-emerald-400 to-teal-500'
+        };
+      case 'cyberpunk':
+        return {
+          bg: 'from-red-900/80 via-orange-800/60 to-red-900/80',
+          border: 'border-orange-500/30',
+          glow: 'shadow-orange-500/20',
+          accent: 'from-orange-400 to-red-500'
+        };
+      case 'space':
+        return {
+          bg: 'from-indigo-900/80 via-blue-800/60 to-indigo-900/80',
+          border: 'border-blue-500/30',
+          glow: 'shadow-blue-500/20',
+          accent: 'from-blue-400 to-indigo-500'
+        };
+      default:
+        return {
+          bg: 'from-slate-900/80 via-slate-800/60 to-slate-900/80',
+          border: 'border-cyan-500/30',
+          glow: 'shadow-cyan-500/20',
+          accent: 'from-cyan-400 to-blue-500'
+        };
+    }
+  }[variant];
+
+  const variantStyles = getVariantStyles();
+  const customGlowColor = glowColor || variantStyles.glow;
+
+  // Mouse tracking for 3D effect
+  useEffect(() => {
+    const handleMouseMove = (e: MouseEvent) => {
+      if (!cardRef.current) return;
+      
+      const rect = cardRef.current.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      
+      setMousePosition({ x, y });
+    };
+
+    if (interactive) {
+      document.addEventListener('mousemove', handleMouseMove);
+    }
+
+    return () => {
+      if (interactive) {
+        document.removeEventListener('mousemove', handleMouseMove);
+      }
+    };
+  }, [interactive]);
+
+  // Calculate 3D rotation based on mouse position
+  const get3DTransform = () => {
+    if (!interactive || !isHovered) return {};
+    
+    const centerX = cardRef.current?.offsetWidth / 2 || 0;
+    const centerY = cardRef.current?.offsetHeight / 2 || 0;
+    
+    const rotateX = (mousePosition.y - centerY) / 20;
+    const rotateY = (mousePosition.x - centerX) / 20;
+    
+    return {
+      rotateX: `${rotateX}deg`,
+      rotateY: `${rotateY}deg`,
+      translateZ: '20px'
+    };
+  };
+
+const UltraFuturisticCard: React.FC = () => {
+  return (
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">UltraFuturisticCard</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
+  );
+};
+
 export default UltraFuturisticCard;

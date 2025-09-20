@@ -1,4 +1,10 @@
-import React from 'react',
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { 
+  Menu, X, ChevronDown, 
+  Home, Users, Code, Shield, 
+  Brain, Rocket, Globe, Phone
+} from 'lucide-react';
 
 const Navigation: React.FC = () => {,
   return (,

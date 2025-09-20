@@ -1,4 +1,3 @@
-import React from 'react';
 import React, { useState, useEffect } from 'react';
 import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -345,6 +344,10 @@ const RevolutionaryTechShowcase2032: React.FC = () => {
             <button className="border-2 border-purple-400 text-purple-400 px-10 py-4 rounded-lg hover:bg-purple-400 hover:text-white transition-colors font-semibold text-lg"></button>
               Schedule Consultation</button>
             </button>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 };
 

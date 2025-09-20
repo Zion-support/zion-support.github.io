@@ -81,13 +81,3 @@ const UltimateContentPromotionBanner2025: React.FC = () => {
 };
 
 export default UltimateContentPromotionBanner2025;
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>

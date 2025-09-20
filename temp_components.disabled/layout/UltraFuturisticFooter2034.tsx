@@ -1,15 +1,15 @@
 import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import {,
-  Zap, Mail, Phone, MapPin, Globe;
-  Twitter, Linkedin, Facebook, Instagram;
-  Youtube, Github, ArrowRight, Star;
-  Shield, Rocket, Brain, Atom, DollarSign;
-  Users, FileText, HelpCircle, Settings;
-  TrendingUp, Award, CheckCircle, Clock;
-  Globe as GlobeIcon, Cpu, Database, Lock;
-  Heart, Palette, GraduationCap, Hospital, Coins, Leaf, Scale,
+import { 
+  Zap, Mail, Phone, MapPin, Globe, 
+  Twitter, Linkedin, Facebook, Instagram, 
+  Youtube, Github, ArrowRight, Star,
+  Shield, Rocket, Brain, Atom, DollarSign,
+  Users, FileText, HelpCircle, Settings,
+  TrendingUp, Award, CheckCircle, Clock,
+  Globe as GlobeIcon, Cpu, Database, Lock,
+  Heart, Palette, GraduationCap, Hospital, Coins, Leaf, Scale
 } from 'lucide-react';
 const contactInfo = {,
   mobile: '+1 302 464 0950';

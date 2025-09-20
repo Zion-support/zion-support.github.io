@@ -1,10 +1,60 @@
-import React from 'react',
+import React, { useState, useEffect, useRef } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 
-const UltraAdvancedNeonEffects2036: React.FC = () => {,
-  return (,
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">,
-      <h3 className="text-xl font-bold mb-4">UltraAdvancedNeonEffects2036</h3>,
-      <p className="text-gray-300">Revolutionary technology component</p>,
-    </div>,
-  ),};
+interface NeonEffect2036Props {
+  children: React.ReactNode;
+  variant?: 'cyberpunk' | 'holographic' | 'quantum' | 'neon' | 'glitch' | 'energy' | 'data' | 'space';
+  intensity?: 'low' | 'medium' | 'high';
+  interactive?: boolean;
+  animated?: boolean;
+  className?: string;
+  glowColor?: string;
+  pulseSpeed?: number;
+}
+
+interface NeonGlow2036Props {
+  children: React.ReactNode;
+  color: string;
+  intensity: number;
+  spread?: number;
+  className?: string;
+  animated?: boolean;
+}
+
+// Enhanced Neon Glow Component
+const NeonGlow2036: React.FC<NeonGlow2036Props> = ({ 
+  children, 
+  color, 
+  intensity, 
+  spread = 20, 
+  className = '',
+  animated = false
+}) => {
+  const baseColor = color;
+  const glowColor = color + '80';
+  const shadowColor = color + '40';
+  const [pulse, setPulse] = useState(0);
+
+  useEffect(() => {
+    if (!animated) return;
+    
+    const interval = setInterval(() => {
+      setPulse(prev => (prev + 1) % 360);
+    }, 50);
+
+    return () => clearInterval(interval);
+  }, [animated]);
+
+  const pulseIntensity = animated ? Math.sin(pulse * Math.PI / 180) * 0.3 + 0.7 : 1;
+  const currentSpread = spread * pulseIntensity;
+
+const UltraAdvancedNeonEffects2036: React.FC = () => {
+  return (
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">UltraAdvancedNeonEffects2036</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
+  );
+};
+
 export default UltraAdvancedNeonEffects2036;

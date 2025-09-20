@@ -1,6 +1,7 @@
 import Link from 'next/link';
-export const metadata = {,
-  title: 'AI 2026: Production Safety Checklist — Ship Safer Autonomy';
+
+export const metadata = {
+  title: 'AI 2026: Production Safety Checklist — Ship Safer Autonomy',
   description: 'A practical, SLO‑driven checklist to harden agents in production: evaluations, guardrails, rollback, and audit evidence.',
 };
 export default function Page() {,

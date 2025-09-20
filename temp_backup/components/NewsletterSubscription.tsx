@@ -1,4 +1,6 @@
-import React from 'react',
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+import { Mail, Check, AlertCircle, ArrowRight, Zap, Shield, Users } from 'lucide-react';
 
 const NewsletterSubscription: React.FC = () => {,
   return (,

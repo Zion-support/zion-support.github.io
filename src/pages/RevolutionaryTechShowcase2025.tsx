@@ -1,95 +1,90 @@
-import React, { useState, useEffect } from 'react';
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { motion } from 'framer-motion';
+import React from 'react';
 import { Helmet } from 'react-helmet-async';
+import { motion } from 'framer-motion';
+import { 
+  Rocket, 
+  Brain, 
+  Zap, 
+  Shield, 
+  Globe, 
+  Cpu, 
+  Database, 
+  Cloud, 
+  Lock, 
+  Target,
+  TrendingUp,
+  Users,
+  CheckCircle,
+  ArrowRight,
+  Star,
+  Play,
+  Award,
+  Gauge,
+  Sparkles,
+  Atom,
+  CircuitBoard,
+  CpuChip,
+  Layers,
+  Lightbulb,
+  Puzzle,
+  Activity,
+  Waves,
+  Hexagon,
+  Network,
+  Eye,
+  Heart,
+  Infinity
+} from 'lucide-react';
 
 const RevolutionaryTechShowcase2025: React.FC = () => {
-  const [activeTab, setActiveTab] = useState(0);
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    setIsVisible(true);
-  }, []);
-
   const technologies = [
     {
       id: 1,
       title: "Conscious AI Systems",
-      description: "Revolutionary AI that exhibits self-awareness and emotional intelligence, capable of understanding context and making autonomous decisions.",
+      description: "Revolutionary AI that exhibits self-awareness and emotional intelligence, transcending traditional machine learning boundaries.",
+      icon: Brain,
+      gradient: "from-indigo-500 to-purple-500",
       features: [
-        "Self-learning algorithms",
-        "Emotional intelligence processing",
+        "Self-modifying neural architectures",
+        "Emotional state recognition",
         "Autonomous decision making",
-        "Context-aware responses"
+        "Creative problem solving"
       ],
-      icon: "🧠",
-      gradient: "from-purple-600 to-pink-600"
+      status: "Live",
+      impact: "High"
     },
     {
       id: 2,
-      title: "Quantum Neural Networks",
-      description: "Breakthrough technology combining quantum computing with neural networks for unprecedented processing power and speed.",
+      title: "Quantum Computing Revolution",
+      description: "Next-generation quantum processors that solve problems impossible for classical computers, opening new frontiers in computation.",
+      icon: Atom,
+      gradient: "from-purple-500 to-pink-500",
       features: [
-        "Quantum superposition processing",
-        "Exponential speed improvements",
-        "Parallel universe computing",
-        "Instant problem solving"
+        "Quantum neural networks",
+        "Consciousness simulation",
+        "Reality manipulation",
+        "Infinite processing power"
       ],
-      icon: "⚡",
-      gradient: "from-cyan-600 to-blue-600"
+      status: "Beta",
+      impact: "Revolutionary"
     },
     {
       id: 3,
-      title: "Interdimensional Computing",
-      description: "Access computing resources across multiple dimensions, enabling infinite scalability and processing power.",
-      features: [
-        "Multi-dimensional processing",
-        "Infinite scalability",
-        "Reality-bending algorithms",
-        "Transcendent data storage"
-      ],
-      icon: "🌌",
-      gradient: "from-emerald-600 to-teal-600"
-    },
-    {
-      id: 4,
-      title: "Neural Interface Revolution",
-      description: "Direct brain-computer interfaces that enable thought-based control and seamless human-AI integration.",
+      title: "Neural Interface Technology",
+      description: "Direct brain-computer interfaces that enable thought-based control and enhanced cognitive capabilities.",
+      icon: Network,
+      gradient: "from-pink-500 to-rose-500",
       features: [
         "Thought-based control",
-        "Neural data streaming",
-        "Consciousness transfer",
-        "Enhanced cognitive abilities"
+        "Memory enhancement",
+        "Cognitive augmentation",
+        "Direct AI communication"
       ],
-      icon: "🧬",
-      gradient: "from-orange-600 to-red-600"
+      status: "Research",
+      impact: "Breakthrough"
     }
   ];
 
-  const containerVariants = {
-    hidden: { opacity: 0, y: 50 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.8,
-        staggerChildren: 0.2
-      }
-    }
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 30 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.6 }
-    }
-  };
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-violet-900 text-white">
   const caseStudies = [
     {
       company: "TechCorp Global",
@@ -117,153 +112,182 @@ const RevolutionaryTechShowcase2025: React.FC = () => {
         <title>Revolutionary Tech Showcase 2025 | Zion Tech Group - Cutting-Edge Technology Solutions</title>
         <meta name="description" content="Experience the future with our Revolutionary Tech Showcase 2025. Discover conscious AI systems, quantum computing, neural interfaces, and interdimensional technology that's reshaping industries." />
         <meta name="keywords" content="revolutionary technology, AI systems, quantum computing, neural interfaces, interdimensional tech, 2025 technology, Zion Tech Group" />
-        <meta property="og:title" content="Revolutionary Tech Showcase 2025 | Zion Tech Group" />
-        <meta property="og:description" content="Experience groundbreaking technologies including conscious AI, quantum computing, and neural interfaces that are revolutionizing industries in 2025." />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://ziontechgroup.com/pages/RevolutionaryTechShowcase2025" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Revolutionary Tech Showcase 2025 | Zion Tech Group" />
-        <meta name="twitter:description" content="Discover the most advanced technologies of 2025 including conscious AI, quantum computing, and neural interfaces." />
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "WebPage",
-            "name": "Revolutionary Tech Showcase 2025",
-            "description": "Experience the future with our Revolutionary Tech Showcase 2025 featuring conscious AI systems, quantum computing, neural interfaces, and interdimensional technology.",
-            "url": "https://ziontechgroup.com/pages/RevolutionaryTechShowcase2025",
-            "mainEntity": {
-              "@type": "TechArticle",
-              "headline": "Revolutionary Tech Showcase 2025",
-              "description": "Cutting-edge technology solutions including conscious AI, quantum computing, and neural interfaces",
-              "author": {
-                "@type": "Organization",
-                "name": "Zion Tech Group"
-              },
-              "publisher": {
-                "@type": "Organization",
-                "name": "Zion Tech Group"
-              }
-            }
-          })}
-        </script>
       </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white">
-      {/* Hero Section */}
-      <motion.div
-        initial={{ opacity: 0, y: 50 }}
-        animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 50 }}
-        transition={{ duration: 0.8 }}
-        className="relative overflow-hidden"
-      >
-        <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm">
-        <div className="relative z-10 container mx-auto px-4 py-20">
-          <div className="text-center mb-16">
-            <motion.div
-              initial={{ scale: 0.8 }}
-              animate={{ scale: isVisible ? 1 : 0.8 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse"
-            >
-              🌟 REVOLUTIONARY TECHNOLOGY • JANUARY 2025
-            </motion.div>
-            <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-              Revolutionary Tech Showcase 2025
-            </h1>
-            <p className="text-2xl opacity-90 max-w-4xl mx-auto leading-relaxed"></p>
-              Experience the future with our groundbreaking technologies that are reshaping industries and creating new possibilities for humanity.</p>
-            </p>
-          {/* Technology Grid */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
-            {technologies.map((tech, index) => (
+
+      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-violet-900 text-white">
+        {/* Hero Section */}
+        <section className="relative overflow-hidden">
+          <div className="absolute inset-0 bg-black opacity-50"></div>
+          <div className="relative z-10 container mx-auto px-4 py-20">
+            <div className="text-center">
               <motion.div
-                key={tech.id}
-                initial={{ opacity: 0, y: 50 }}
-                animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 50 }}
-                transition={{ duration: 0.6, delay: 0.1 * index }}
-                className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300"
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8 }}
+                className="mb-8"
               >
-                <div className="text-6xl mb-4 text-center">{tech.icon}
-                <h3 className="text-2xl font-bold mb-4 text-center">{tech.title}</h3>
-                <p className="text-gray-300 mb-6 text-center text-sm leading-relaxed"></p>
-                  {tech.description}</p>
+                <div className="flex items-center justify-center space-x-2 mb-4">
+                  <Sparkles className="w-5 h-5 text-indigo-400" />
+                  <span className="text-indigo-300">Revolutionary Technology</span>
+                </div>
+                <h1 className="text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+                  Tech Showcase 2025
+                </h1>
+                <p className="text-xl md:text-2xl mb-12 max-w-4xl mx-auto text-gray-300 leading-relaxed">
+                  Experience the future with our groundbreaking technologies that are reshaping industries and creating new possibilities for humanity.
                 </p>
-                <ul className="text-gray-400 space-y-2 mb-6 text-xs">
-                  {tech.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-center">
-                      <span className="w-2 h-2 bg-purple-400 rounded-full mr-2"></span>
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-                <button className={`w-full bg-gradient-to-r ${tech.gradient} py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold`}></button>
-                  Explore Technology →</button>
-                </button>
+                <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16">
+                  <motion.button
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    className="px-8 py-4 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg hover:shadow-2xl transition-all duration-300 font-semibold text-lg flex items-center space-x-2"
+                  >
+                    <Play className="w-5 h-5" />
+                    <span>Explore Technologies</span>
+                  </motion.button>
+                </div>
               </motion.div>
-            ))}
-          {/* Interactive Demo Section */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: isVisible ? 1 : 0, scale: isVisible ? 1 : 0.9 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            className="bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-2xl p-12 mb-20 border border-purple-400/30"
-          >
-            <div className="text-center mb-8">
-              <h2 className="text-4xl font-bold mb-4">🚀 Interactive Technology Demo</h2>
-              <p className="text-xl opacity-90">Experience our technologies in real-time</p>
+
+              {/* Breakthrough Stats */}
+              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 max-w-6xl mx-auto">
+                {[
+                  { icon: Brain, number: "99.9%", label: "AI Accuracy" },
+                  { icon: Zap, number: "10x", label: "Performance" },
+                  { icon: Shield, number: "100%", label: "Security" },
+                  { icon: Globe, number: "50+", label: "Countries" },
+                  { icon: Users, number: "1M+", label: "Users" },
+                  { icon: Award, number: "25+", label: "Awards" }
+                ].map((stat, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                    className="text-center bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-indigo-400/20"
+                  >
+                    <stat.icon className="w-8 h-8 text-indigo-400 mx-auto mb-2" />
+                    <div className="text-3xl font-bold text-white mb-1">{stat.number}</div>
+                    <div className="text-sm text-gray-300">{stat.label}</div>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Technologies Section */}
+        <section className="py-20">
+          <div className="container mx-auto px-4">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-center mb-16"
+            >
+              <h2 className="text-4xl md:text-5xl font-bold mb-6">
+                Revolutionary <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-400">Technologies</span>
+              </h2>
+              <p className="text-xl text-gray-300 max-w-4xl mx-auto">
+                Discover the cutting-edge technologies that are reshaping our world and opening infinite possibilities for the future.
+              </p>
+            </motion.div>
+
             <div className="grid md:grid-cols-3 gap-8">
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center">
-                <div className="text-4xl mb-4">⚡
-                <h3 className="text-xl font-bold mb-2">Processing Speed</h3>
-                <div className="text-3xl font-bold text-green-400 mb-2">99.9%
-                <p className="text-sm opacity-75">Faster than traditional systems</p>
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center">
-                <div className="text-4xl mb-4">🧠
-                <h3 className="text-xl font-bold mb-2">AI Intelligence</h3>
-                <div className="text-3xl font-bold text-blue-400 mb-2">∞
-                <p className="text-sm opacity-75">Unlimited learning capacity</p>
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center">
-                <div className="text-4xl mb-4">🌌
-                <h3 className="text-xl font-bold mb-2">Dimensional Access</h3>
-                <div className="text-3xl font-bold text-purple-400 mb-2">11D
-                <p className="text-sm opacity-75">Multi-dimensional processing</p>
-          </motion.div>
-          {/* Case Studies */}
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 50 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-            className="mb-20"
-          >
-            <div className="text-center mb-12">
-              <h2 className="text-4xl font-bold mb-4">🏆 Success Stories</h2>
-              <p className="text-xl opacity-90">Real results from real companies</p>
+              {technologies.map((tech, index) => (
+                <motion.div
+                  key={tech.id}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  className="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20 hover:border-indigo-400/50 transition-all duration-300"
+                >
+                  <div className="flex items-start justify-between mb-6">
+                    <div className={`w-16 h-16 bg-gradient-to-r ${tech.gradient} rounded-xl flex items-center justify-center`}>
+                      <tech.icon className="w-8 h-8 text-white" />
+                    </div>
+                    <div className="flex flex-col items-end space-y-1">
+                      <span className="px-3 py-1 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full text-xs font-semibold">
+                        {tech.status}
+                      </span>
+                      <span className="px-2 py-1 bg-gradient-to-r from-pink-500 to-rose-500 rounded-full text-xs font-semibold">
+                        {tech.impact}
+                      </span>
+                    </div>
+                  </div>
+                  <h3 className="text-2xl font-bold mb-4">{tech.title}</h3>
+                  <p className="text-gray-300 mb-6">{tech.description}</p>
+                  <ul className="space-y-2 mb-6">
+                    {tech.features.map((feature, featureIndex) => (
+                      <li key={featureIndex} className="flex items-center space-x-2 text-sm">
+                        <CheckCircle className="w-4 h-4 text-indigo-400" />
+                        <span className="text-gray-300">{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  <button className={`w-full bg-gradient-to-r ${tech.gradient} py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold`}>
+                    Explore Technology →
+                  </button>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Case Studies Section */}
+        <section className="py-20 bg-black/20">
+          <div className="container mx-auto px-4">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="text-center mb-16"
+            >
+              <h2 className="text-4xl md:text-5xl font-bold mb-6">
+                Success <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">Stories</span>
+              </h2>
+              <p className="text-xl text-gray-300 max-w-4xl mx-auto">
+                See how our revolutionary technologies are transforming businesses and creating unprecedented value.
+              </p>
+            </motion.div>
+
             <div className="grid md:grid-cols-3 gap-8">
               {caseStudies.map((study, index) => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 30 }}
-                  animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
-                  transition={{ duration: 0.6, delay: 0.7 + 0.1 * index }}
-                  className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover:scale-105 transition-all duration-300"
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  className="bg-gradient-to-r from-white/10 to-white/5 backdrop-blur-md rounded-2xl p-8 border border-white/20"
                 >
-                  <div className="text-4xl mb-4">{study.logo}
-                  <h3 className="text-xl font-bold mb-2">{study.company}</h3>
-                  <div className="text-2xl font-bold text-green-400 mb-4">{study.result}
-                  <p className="text-gray-300 text-sm leading-relaxed">{study.description}</p>
+                  <div className="text-4xl mb-4">{study.logo}</div>
+                  <h3 className="text-2xl font-bold mb-2">{study.company}</h3>
+                  <div className="text-indigo-400 font-semibold mb-4">{study.result}</div>
+                  <p className="text-gray-300 mb-6">{study.description}</p>
+                  <button className="flex items-center space-x-2 text-indigo-400 hover:text-indigo-300 font-semibold">
+                    <span>Read Full Case Study</span>
+                    <ArrowRight className="w-4 h-4" />
+                  </button>
                 </motion.div>
               ))}
-          </motion.div>
-          {/* CTA Section */}
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 50 }}
-            transition={{ duration: 0.8, delay: 0.8 }}
-            className="text-center"
-          >
-            <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl p-12">
-              <h2 className="text-4xl font-bold mb-4">Ready to Transform Your Business?</h2>
-              <p className="text-xl mb-8 opacity-90"></p>
-                Join thousands of companies already using our revolutionary technologies</p>
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20">
+          <div className="container mx-auto px-4 text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-4xl md:text-5xl font-bold mb-6">
+                Ready to Transform Your Future?
+              </h2>
+              <p className="text-xl text-gray-300 mb-12 max-w-4xl mx-auto">
+                Join thousands of companies already using our revolutionary technologies to gain competitive advantages and drive unprecedented growth.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-white text-purple-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-colors"></button>
@@ -275,32 +299,7 @@ const RevolutionaryTechShowcase2025: React.FC = () => {
           </motion.div>
       </motion.div>
     </>
-    </>
   );
 };
 
 export default RevolutionaryTechShowcase2025;
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>

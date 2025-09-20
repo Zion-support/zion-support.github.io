@@ -1,0 +1,22 @@
+<<<<<<< HEAD
+tree fa56fcbd6e04ea75b9fbb6878a4a03b38b00c9fa
+parent 39b7712fdde26f059c6b09cc2e41acdcf05a1313
+author Automation Bot <automation@bolt.new.zion.app> 1754659500 -0300
+committer Automation Bot <automation@bolt.new.zion.app> 1754659500 -0300
+
+chore(automation): sync changes from automation at 2025-08-08T13:25:00.403Z
+=======
+<<<<<<< HEAD
+tree a13dccd81070c5daa16b93a30b1d76ff6833d5dd
+parent c93df49875d1de0b26f477b466776f7d76ce3638
+author github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com> 1755152162 -0300
+committer github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com> 1755152162 -0300
+=======
+tree f72ff938e281a45cbe2a371973c844a20c499d8f
+parent f87b6e9b2a59fdfdb79f7b1face0257a185d1015
+author github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com> 1755072262 +0000
+committer github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com> 1755072262 +0000
+>>>>>>> origin/auto/autonomy-17186719616
+
+chore(sync): fast autonomous sync
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-7bc1

@@ -1,6 +1,8 @@
 import { jsx as _jsx } from "react/jsx-runtime";
 import React from 'react';
-import ReactDOM from 'react-dom/client';
+import { createRoot } from 'react-dom/client';
+import App from './App';
+import './index.css';
 import { BrowserRouter } from 'react-router-dom';
 import App from './App';
 import './index.css';

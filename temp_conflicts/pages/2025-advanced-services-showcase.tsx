@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import SEO from '../components/SEO';
 import { motion, AnimatePresence } from 'framer-motion';
-import {,
-  Search, Grid, List, Star, CheckCircle, ArrowRight, Check;
-  Brain, Atom, Shield, Building, Globe;
-  Users, TrendingUp, Award, Phone, Mail, MapPin,
+import {
+  Search, Grid, List, Star, CheckCircle, ArrowRight, Check,
+  Brain, Atom, Shield, Building, Globe,
+  Users, TrendingUp, Award, Phone, Mail, MapPin
 } from 'lucide-react';
 // Import our new service data,
 import { advancedEnterpriseServices2025 } from '../data/2025-advanced-enterprise-services-expansion';

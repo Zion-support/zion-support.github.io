@@ -1,2 +1,201 @@
+import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Globe, MapPin, Users, Award, Star, TrendingUp, Building, ArrowRight, CheckCircle, Clock } from 'lucide-react';
+const globalOffices = [
+    {
+        id: 1,
+        city: "San Francisco",
+        country: "United States",
+        region: "North America",
+        flag: "🇺🇸",
+        established: "2018",
+        teamSize: "45+",
+        specialties: ["AI/ML", "Cloud Infrastructure", "Startup Innovation"],
+        projects: 120,
+        clients: 85,
+        rating: 4.9,
+        timezone: "PST (UTC-8)",
+        address: "123 Innovation Drive, San Francisco, CA 94105"
+    },
+    {
+        id: 2,
+        city: "London",
+        country: "United Kingdom",
+        region: "Europe",
+        flag: "🇬🇧",
+        established: "2019",
+        teamSize: "32+",
+        specialties: ["FinTech", "Digital Banking", "RegTech"],
+        projects: 95,
+        clients: 67,
+        rating: 4.8,
+        timezone: "GMT (UTC+0)",
+        address: "456 Tech Square, London, EC2A 4BX"
+    },
+    {
+        id: 3,
+        city: "Singapore",
+        country: "Singapore",
+        region: "Asia Pacific",
+        flag: "🇸🇬",
+        established: "2020",
+        teamSize: "28+",
+        specialties: ["E-commerce", "Digital Transformation", "Smart Cities"],
+        projects: 78,
+        clients: 54,
+        rating: 4.9,
+        timezone: "SGT (UTC+8)",
+        address: "789 Digital Hub, Singapore 018956"
+    },
+    {
+        id: 4,
+        city: "Toronto",
+        country: "Canada",
+        region: "North America",
+        flag: "🇨🇦",
+        established: "2021",
+        teamSize: "25+",
+        specialties: ["Healthcare Tech", "AI Research", "Enterprise Solutions"],
+        projects: 65,
+        clients: 42,
+        rating: 4.8,
+        timezone: "EST (UTC-5)",
+        address: "321 Innovation Center, Toronto, ON M5V 3A8"
+    },
+    {
+        id: 5,
+        city: "Berlin",
+        country: "Germany",
+        region: "Europe",
+        flag: "🇩🇪",
+        established: "2021",
+        teamSize: "22+",
+        specialties: ["IoT", "Manufacturing Tech", "Sustainability"],
+        projects: 58,
+        clients: 38,
+        rating: 4.7,
+        timezone: "CET (UTC+1)",
+        address: "654 Tech District, Berlin, 10115"
+    },
+    {
+        id: 6,
+        city: "Sydney",
+        country: "Australia",
+        region: "Asia Pacific",
+        flag: "🇦🇺",
+        established: "2022",
+        teamSize: "18+",
+        specialties: ["EdTech", "Green Tech", "Digital Marketing"],
+        projects: 42,
+        clients: 29,
+        rating: 4.8,
+        timezone: "AEST (UTC+10)",
+        address: "987 Innovation Bay, Sydney, NSW 2000"
+    }
+];
+const globalStats = [
+    { icon: <Globe className="w-6 h-6"/>, value: "25+", label: "Countries Served" },
+    { icon: <Building className="w-6 h-6"/>, value: "6", label: "Global Offices" },
+    { icon: <Users className="w-6 h-6"/>, value: "170+", label: "Global Team" },
+    { icon: <Award className="w-6 h-6"/>, value: "500+", label: "Projects Delivered" },
+    { icon: <Star className="w-6 h-6"/>, value: "4.8/5", label: "Global Rating" },
+    { icon: <TrendingUp className="w-6 h-6"/>, value: "98%", label: "Client Satisfaction" }
+];
+const partnerships = [
+    {
+        name: "Microsoft",
+        type: "Technology Partner",
+        logo: "/logos/microsoft.svg",
+        description: "Strategic partnership for Azure cloud solutions and enterprise services",
+        established: "2020",
+        projects: 25,
+        status: "Active"
+    },
+    {
+        name: "AWS",
+        type: "Cloud Partner",
+        logo: "/logos/aws.svg",
+        description: "Premier consulting partner for AWS cloud infrastructure and solutions",
+        established: "2019",
+        projects: 42,
+        status: "Active"
+    },
+    {
+        name: "Google Cloud",
+        type: "Cloud Partner",
+        logo: "/logos/google-cloud.svg",
+        description: "Partner for AI/ML solutions and cloud-native applications",
+        established: "2021",
+        projects: 18,
+        status: "Active"
+    },
+    {
+        name: "Salesforce",
+        type: "Business Partner",
+        logo: "/logos/salesforce.svg",
+        description: "Consulting partner for CRM implementations and custom solutions",
+        established: "2020",
+        projects: 31,
+        status: "Active"
+    },
+    {
+        name: "Oracle",
+        type: "Enterprise Partner",
+        logo: "/logos/oracle.svg",
+        description: "Partner for enterprise database and business applications",
+        established: "2021",
+        projects: 15,
+        status: "Active"
+    },
+    {
+        name: "IBM",
+        type: "Technology Partner",
+        logo: "/logos/ibm.svg",
+        description: "Strategic partner for AI, blockchain, and enterprise solutions",
+        established: "2022",
+        projects: 12,
+        status: "Active"
+    }
+];
+const industries = [
+    { name: "Financial Services", projects: 120, countries: 18, satisfaction: "99%" },
+    { name: "Healthcare", projects: 85, countries: 15, satisfaction: "98%" },
+    { name: "Manufacturing", projects: 95, countries: 22, satisfaction: "97%" },
+    { name: "Retail & E-commerce", projects: 110, countries: 20, satisfaction: "98%" },
+    { name: "Technology", projects: 150, countries: 25, satisfaction: "99%" },
+    { name: "Education", projects: 65, countries: 12, satisfaction: "96%" }
+];
+export function GlobalPresenceSection() {
+    const [selectedOffice, setSelectedOffice] = useState(null);
+    const [selectedPartnership, setSelectedPartnership] = useState(null);
+    const [hoveredIndustry, setHoveredIndustry] = useState(null);
+    const containerVariants = {
+        hidden: { opacity: 0 },
+        visible: {
+            opacity: 1,
+            transition: {
+                staggerChildren: 0.15,
+                delayChildren: 0.1
+            }
+        }
+    };
+    const itemVariants = {
+        hidden: { y: 30, opacity: 0 },
+        visible: {
+            y: 0,
+            opacity: 1,
+            transition: {
+                duration: 0.6,
+                ease: "easeOut"
+            }
+        }
+    };
+    return (<section className="py-20 bg-gradient-to-br from-zion-purple via-zion-slate-dark to-zion-blue relative overflow-hidden">
+      {/* Background decorative elements */}
+      <div className="absolute inset-0 opacity-5">
+        <div className="absolute top-20 left-20 w-32 h-32 border border-zion-cyan rounded-full"></div>
+        <div className="absolute bottom-20 right-20 w-24 h-24 border border-zion-purple rounded-full"></div>
+        <div className="absolute top-1/2 left-1/2 w-16 h-16 border border-zion-cyan-light rounded-full"></div>
+      </div>
 
 export default GlobalPresenceSection;

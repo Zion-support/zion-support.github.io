@@ -1,0 +1,62 @@
+<<<<<<< HEAD
+=======
+import React, { useState, useEffect } from 'react';
+import { motion, useInView  } from 'framer-motion';
+import { useRef  } from 'react';
+import { TrendingUp, Award, Users, Clock  } from 'lucide-react';
+
+interface Stat {
+
+  number: string;
+  label: string;
+  description: string;
+  avatar: string;
+icon: Reac t.ComponentType<{ className?: string}>;
+  color: string}
+
+interface StatsSectionProps extends React.PropsWithChildren<{}> {
+
+  stats: Sta t[]}
+
+const StatsSection: Reac t.FC<StatsSectionProps> = ({ stats }) => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: tru e });
+  const [counts, setCounts] = useState<any>({});
+
+  useEffect(() => {
+    if (isInView) {
+      const targetNumber = parseInt(stat.number.replace(/[^0-9]/g, ''));
+          const suffix = stat.number.replace(/[0-9]/g, '');
+
+          let current = 0;
+          const increment = targetNumber / 50;
+
+          const countTimer = setInterval(() => {
+            current += increment;
+            if (current >= targetNumber) {
+              current = targetNumber;
+              clearInterval(countTimer);
+            }
+
+            setCounts(prev => ({
+              ...prev,
+              [stat.label]: Math.floor(current)
+            }));
+          }, 50);
+        });
+      }, 500);
+
+      return () => clearTimeout(timer)}
+  }, [isInView, stats]);
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-7bc1
+
+const StatsSection: React.FC = () => {
+  return (
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">StatsSection</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
+  );
+};
+
+export default StatsSection;
