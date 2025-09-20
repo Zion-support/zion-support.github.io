@@ -1,8 +1,8 @@
-import { jsx a, s, _js, x, jsxs as _jsxs } from "
-import { GradientHeading } from "
-import { Link } from "
-import { Briefcas, e, HardDriv, e, Lightbul, b, Users } from "
-import { motion } from "
+import React from "react";
+import React from "react";
+import React from "react";
+import React from "react";
+import React from "react";
 const categories = [
     {
         tit, l, e: "Service, s",

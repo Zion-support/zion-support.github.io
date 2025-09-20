@@ -1,9 +1,9 @@
 
 import Link from "next/link",
 import { Button,,  } from "@/components/ui/button",
-import { Header,,  } from "
+import React from "react";
 import { ShieldAlert,,  } from 'lucide-react'
-import { useTranslation,,  } from "
+import React from "react";
 export default function Unauthorized() {
   const { t } = useTranslation()
   return (

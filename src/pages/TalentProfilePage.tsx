@@ -1,4 +1,4 @@
-import React { useState useEffect } from "
+import React from "react";
 import import { useRouter,,, ,,  } from 'next/router';
 import { TalentProfile,,  } from "@/components/profile/TalentProfile",
 import { ProfileLoadingState,,  } from "@/components/profile/ProfileLoadingState",
@@ -13,8 +13,8 @@ import { Handshake,,, MessageSquare,,  } from 'lucide-react'
 import { Button,,  } from "@/components/ui/button",
 import { useAuth,,  } from "@/hooks/useAuth",
 import { UserProfile,,  } from "@/types/auth",
-import { toast,,  } from "
-import { SEO,,  } from "
+import React from "react";
+import React from "react";
 export default function TalentProfilePage() {
 return (
     <>

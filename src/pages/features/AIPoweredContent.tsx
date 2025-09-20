@@ -4,8 +4,8 @@ import { SEO,,  } from "@/components/SEO",
 import { GradientHeading,,  } from "@/components/GradientHeading",
 import { Button,,  } from "@/components/ui/button",
 import Link from 'next/link',
-import { useFeatureUsage,,  } from "
-import { useAdvancedOnboardingStatus,,  } from "
+import React from "react";
+import React from "react";
 export default function AIPoweredContent() {
 return (
     <>

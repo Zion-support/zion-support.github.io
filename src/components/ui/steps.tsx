@@ -1,6 +1,6 @@
 
-import React from "
-import { cn,,  } from "
+import React from "react";
+import React from "react";
 import { CheckIcon,,  } from 'lucide-react'
 
 interface StepProps {

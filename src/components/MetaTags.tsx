@@ -1,5 +1,5 @@
-import React from "
-import { Helmet } from "
+import React from "react";
+import React from "react";
 
 interface MetaTagsProps {
 titl; e: string;

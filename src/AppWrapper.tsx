@@ -1,19 +1,22 @@
-import React from "
-import { ErrorBoundary } from "
-import { PerformanceOptimizer } from "
-import { AccessibilityEnhancer } from "
+import React from "react";
+import { ErrorBoundary } from "./components/ErrorHandling/EnhancedErrorBoundary";
+import { PerformanceOptimizer } from "./components/Performance/PerformanceOptimizer";
+import { AccessibilityEnhancer } from "./components/Accessibility/AccessibilityEnhancer";
 
 interface AppWrapperProps {
-children: React.ReactNode,
+  children: React.ReactNode;
 }
-export function AppWrapper({ children }: AppWrapperProps) {
-return (
-<ErrorBoundary>
-<PerformanceOptimizer>
-<AccessibilityEnhancer>
-{children}
-</AccessibilityEnhancer>
-</PerformanceOptimizer>
-</ErrorBoundary>
-)
-}<//ErrorBoundary><///ErrorBoundary>
+
+const AppWrapper: React.FC<AppWrapperProps> = ({ children }) => {
+  return (
+    <ErrorBoundary>
+      <PerformanceOptimizer>
+        <AccessibilityEnhancer>
+          {children}
+        </AccessibilityEnhancer>
+      </PerformanceOptimizer>
+    </ErrorBoundary>
+  );
+};
+
+export default AppWrapper;

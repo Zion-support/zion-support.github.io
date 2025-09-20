@@ -1,8 +1,8 @@
 
 import React from "react",
-import { Button,,  } from "
+import React from "react";
 import { Search,,, Sliders,,  } from 'lucide-react'
-import { Input,,  } from "
+import React from "react";
 interface MobileFilterBarProps {
   searchTerm: string;,
 setSearchTerm: (value: string) => void;,

@@ -1,32 +1,32 @@
-import { jsx as _jsx, Fragment as _Fragment } from "
+import React from "react";
 import import { Route } from 'react-router-dom, ';
 import import Marketplace from '@/pages/Marketplace;';
 export default function MarketplaceRoutes() {
     return (_jsx(_Fragment, { children: _jsx(Route, { path: "", element: _jsx(Marketplace, {}) }) }))
 }
-import { Route, Routes } from "
-import { ProtectedRoute } from "
-import Marketplace from "
-import Categories from "
-import CategoryDetail from "
-import Featured from "
-import ListingDetail from "
-import EquipmentPage from "
-import EquipmentDetail from "
-import PostJob from "
-import JobDetails from "
-import PublishProduct from "
-import ServicesPage from "
-import RequestQuote from "
-import AIMatcher from "
-import ServiceDescriptionGenerator from "
-import ITOnsiteServicesPage from "
-import SearchPage from "
-import ProjectRoom from "
-import VideoCall from "
-import Checkout from "
-import NewProductsPage from "
-import MoreProductsPage from "
+import React from "react";
+import React from "react";
+import React from "react";
+import React from "react";
+import React from "react";
+import React from "react";
+import React from "react";
+import React from "react";
+import React from "react";
+import React from "react";
+import React from "react";
+import React from "react";
+import React from "react";
+import React from "react";
+import React from "react";
+import React from "react";
+import React from "react";
+import React from "react";
+import React from "react";
+import React from "react";
+import React from "react";
+import React from "react";
+import React from "react";
 const MarketplaceRoutes = () => {
     return (<Routes>
       {/* Marketplace Routes */}

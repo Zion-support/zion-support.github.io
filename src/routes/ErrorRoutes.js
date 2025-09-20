@@ -1,4 +1,4 @@
-import { jsx as _jsx } from "
+import React from "react";
 import import { Route } from 'react-router-dom, ';
 import import NotFound from '@/pages/NotFound;';
 export default function ErrorRoutes() {

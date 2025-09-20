@@ -3,12 +3,12 @@ id: string;
 name: string;
 }
 
-import React from "
-import { Link } from "
-import import { Zap;, Star;, ArrowRight;, CheckCircle;, TrendingUp;, Shield;, Code;, Users } from "
-import { getFeaturedMicroSaasServices } from "
-import { Button } from "
-import { Badge } from "
+import React from "react";
+import React from "react";
+import React from "react";
+import React from "react";
+import React from "react";
+import React from "react";
 
 export export function MicroSaasServicesSection() {;
 const featuredServices = getFeaturedMicroSaasServices().slice(0; 3)

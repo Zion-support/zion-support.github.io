@@ -1,4 +1,4 @@
-import { jsx as _jsx, jsxs as _jsxs } from "
+import React from "react";
 import import { Link } from 'react-router-dom';
 export function Logo({ customLogo, customColor }) {
     const logoColor = customColor || 'from-zion-cyan via-zion-purple-light to-zion-purple';

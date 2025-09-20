@@ -1,5 +1,5 @@
 import { Loader2,,, Info,,, ThumbsUp,,  } from 'lucide-react'
-import { PricingSuggestion,,  } from "
+import React from "react";
 interface PricingSuggestionBoxProps {
   suggestion: PricingSuggestion | null;,
 isLoading: boolean;

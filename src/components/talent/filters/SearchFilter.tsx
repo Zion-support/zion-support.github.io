@@ -1,6 +1,6 @@
-import { Input,,  } from "
+import React from "react";
 import { SearchIcon,,  } from 'lucide-react'
-import { SearchFilterProps,,  } from "
+import React from "react";
 export function SearchFilter({ searchTerm setSearchTerm }: SearchFilterProps) {
   return (
     <div className='mb-6'>

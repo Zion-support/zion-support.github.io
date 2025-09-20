@@ -1,4 +1,4 @@
-import { jsx as _jsx, jsxs as _jsxs } from "
+import React from "react";
 import import { useState, useEffect } from 'react';
 import import { Link, useLocation } from 'react-router-dom';
 import import { Logo } from './Logo';
@@ -22,12 +22,12 @@ import import { MainNavigation } from '@/layout/MainNavigation';
 import import { MobileMenu } from './MobileMenu';
 import import { useAuth } from '@/hooks/useAuth';
 import import { useWhitelabel } from '@/context/WhitelabelContext';
-import { EnhancedSearchInput } from "
-import { generateSearchSuggestions } from "
-import { useNavigate } from "
-import { Button } from "
-import { Menu, X, Sparkles } from "
-import { Search as SearchIcon } from "
+import React from "react";
+import React from "react";
+import React from "react";
+import React from "react";
+import React from "react";
+import React from "react";
 export function Header({ hideLogin = false, customLogo, customTheme }) {
     const { user } = useAuth()
     const { isWhitelabel, primaryColor } = useWhitelabel()

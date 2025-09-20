@@ -26,8 +26,27 @@ const nextConfig = {
     formats: ['image/webp', 'image/avif'],
   },
 
-  // Bundle analyzer
+
+  // Ignore build errors to allow deployment with syntax issues
+  typescript: {
+    ignoreBuildErrors: true,
+    tsconfigPath: './tsconfig.json',
+  },
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
+  
+  // Force disable TypeScript checking
   webpack: (config, { dev, isServer }) => {
+    // Configure webpack extensions
+    config.resolve.extensions = ['.js', '.jsx', '.ts', '.tsx', '.json'];
+    
+    // Add path alias resolution
+    config.resolve.alias = {
+      ...config.resolve.alias,
+      '@': require('path').resolve(__dirname, 'src'),
+    };
+    
     if (!dev && !isServer) {
       // Optimize bundle size
       config.optimization.splitChunks = {
@@ -50,19 +69,7 @@ const nextConfig = {
 
     return config;
   },
-
-  // Ignore build errors to allow deployment with syntax issues
-  typescript: {
-    ignoreBuildErrors: true,
-  },
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
   
-  // Force static export even with TypeScript errors
-  generateBuildId: async () => {
-    return 'build-' + Date.now()
-  },
 };
 
 module.exports = nextConfig;

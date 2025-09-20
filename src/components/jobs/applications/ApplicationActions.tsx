@@ -1,5 +1,5 @@
 import { Eye,,, ChevronDown,,, Loader2,,  } from 'lucide-react'
-import { JobApplication,,, ApplicationStatus,,  } from "
+import React from "react";
 interface ApplicationActionsProps {
 onStatusChange,
 }: ApplicationActionsProps) {

@@ -7,8 +7,8 @@ import { Loader2,,  } from 'lucide-react'
 import { TalentProfile,,  } from "@/types/talent",
 import { PersonalInfoFields,,  } from "./PersonalInfoFields",
 import { ProjectDetailsField,,  } from "./ProjectDetailsField",
-import { TimelineField,,  } from "
-import { BudgetFields,,  } from "
+import React from "react";
+import React from "react";
 export interface HireRequestFormProps {
   talent: TalentProfile;,
 onClose: () => void;

@@ -1,4 +1,4 @@
-import { jsx as _jsx, jsxs as _jsxs } from "
+import React from "react";
 import import { useState } from 'react';
 import import { Button } from '@/components/ui/Button';
 import import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card';

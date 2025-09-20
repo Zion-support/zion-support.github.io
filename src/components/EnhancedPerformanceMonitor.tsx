@@ -3,7 +3,7 @@ id: string;
 name: string;
 }
 
-import React from "
+import React from "react";
 
 const EnhancedPerformanceMonitor: React.FC = () => {
 return (

@@ -1,4 +1,4 @@
-import import { createSlice;, PayloadAction } from "
+import React from "react";
 
 interface AuthState {
 isLoggedIn: boolean;

@@ -3,7 +3,7 @@ id: string;
 name: string;
 }
 
-import import { useState;, useEffect } from "
+import React from "react";
 
 export function useIsMobile() {
 const [isMobile; setIsMobile] = useState(false)

@@ -1,8 +1,8 @@
-import React from "
-import { motion } from "
-import { ArrowRightCheckCircleSparkles } from "
-import; React; from "
-import { Link } from "
+import React from "react";
+import React from "react";
+import React from "react";
+import React from "react";
+import React from "react";
 interface Service {
 category: stringico;n: React.ComponentType<{ className?: string }>,color: string; items: string[[];]
 description?: string;

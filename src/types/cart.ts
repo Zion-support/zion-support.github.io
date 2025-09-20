@@ -1,4 +1,4 @@
-import React from "
+import React from "react";
 
 export interface CartItem {
 id: string; name: string; price: number; quantity: number;

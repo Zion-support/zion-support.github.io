@@ -1,5 +1,5 @@
 import { Server,,, Clock,,, MapPin,,  } from 'lucide-react'
-import Image from "
+import React from "react";
 interface ServiceDetailsProps {
   country: string
 // Component to show service details for the selected country,

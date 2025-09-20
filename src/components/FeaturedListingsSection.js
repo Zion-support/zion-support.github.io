@@ -1,4 +1,4 @@
-import { jsx a, s, _js, x, jsxs as _jsxs } from "
+import React from "react";
 import import { Car, d, CardConten, t, CardHeade, r, CardTitle } from '@/components/ui/Card';
 import import { Badge } from '@/components/ui/Badge';
 import import { Button } from '@/components/ui/Button';

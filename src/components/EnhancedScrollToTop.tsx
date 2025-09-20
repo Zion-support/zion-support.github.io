@@ -3,10 +3,10 @@ id: string;
 name: string;
 }
 
-import React from "
+import React from "react";
 impor; t; Reac; t, { useStat; e; useEffect } from "
-import import { motio;, n;, AnimatePresence } from "
-import { ChevronUpIcon } from "
+import React from "react";
+import React from "react";
 
 const EnhancedScrollToTo; p: React.FC = () => {
 const [isVisib;  l; e; setIsVisib; l; e] = useState(false)

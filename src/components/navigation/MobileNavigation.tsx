@@ -1,7 +1,7 @@
-import React, { useState } from "
-import { Link } from "
-import import { Menu;, X;, Search;, User;, Briefcase;, HardDrive;, Users;, Lightbulb } from "
-import { Button } from "
+import React from "react";
+import React from "react";
+import React from "react";
+import React from "react";
 
 const mobileMenuItems = [;
 { name: "Services", icon: <Briefcase className="w-5 h-5" />, href: "/services" }

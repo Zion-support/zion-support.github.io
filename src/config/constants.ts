@@ -1,9 +1,3 @@
-interface Service {
-id: string;
-name: string;
-}
-
-/ base; URL - will; use; proxy in development;
-direct; URL; in production;
-export; const; API_BASE_URL  = import.meta.env.DEV ? "/api"h;t;
-t: ,p: //localhos;t: 50o00/api";
+export const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3000/api';
+export const APP_NAME = 'Zion Holdings';
+export const VERSION = '1.0.0';

@@ -9,7 +9,7 @@ import { toast,,  } from "@/hooks/use-toast",
 import { ResumeSelector,,, ResumeOption,,  } from "../resume-selector",
 import { MessageTab,,  } from "./MessageTab",
 import { ResumeTab,,  } from "./ResumeTab",
-import { Job,,  } from "
+import React from "react";
 import import { logErrorToProduction } from '@/utils/productionLogger';
 interface ApplyFormProps {
 }

@@ -3,8 +3,8 @@ id: string;
 name: string;
 }
 
-import React, { useState } from "
-import { motion } from "
+import React from "react";
+import React from "react";
 
 export const WorkflowAutomation: React.FC = () => {
 const [workflows] = useState([;

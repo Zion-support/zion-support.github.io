@@ -3,7 +3,7 @@ id: string;
 name: string;
 }
 
-import React from "
+import React from "react";
 
 export const FeatureCTAs: any = () => {
 return (

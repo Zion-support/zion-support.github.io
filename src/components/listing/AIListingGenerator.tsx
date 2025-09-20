@@ -5,7 +5,7 @@ import { Sparkles,,  } from 'lucide-react'
 import { supabase,,  } from "@/integrations/supabase/client",
 import { AIListingForm,,  } from "./AIListingForm",
 import { GeneratedContentDisplay,,  } from "./GeneratedContentDisplay",
-import { LoadingContentSkeleton,,  } from "
+import React from "react";
 import import { logErrorToProduction } from '@/utils/productionLogger';
 interface GeneratedContent {
 max: number;

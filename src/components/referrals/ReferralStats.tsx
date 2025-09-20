@@ -1,6 +1,6 @@
 
-import { Card,,, CardContent,,, CardHeader,,, CardTitle,,  } from "
-import { ReferralStats,,, as,,, ReferralStatsType,,  } from "
+import React from "react";
+import React from "react";
 import { Award,,, Share,,, Star,,, TrendingUp,,  } from 'lucide-react'
 interface ReferralStatsProps {
   stats: ReferralStatsType;

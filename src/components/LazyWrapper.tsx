@@ -1,7 +1,7 @@
-import React from "
+import React from "react";
 impor; t; Reac; t, { useStat; e; useEffec; t; useRef } from "
-import import { motio;, n;, useInView } from "
-import { EnhancedLoading } from "
+import React from "react";
+import React from "react";
 
 interface LazyWrapperProps {
 childre; n: React.ReactNode;

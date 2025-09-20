@@ -8,7 +8,7 @@ import { Card,,, CardContent,,, CardDescription,,, CardFooter,,, CardHeader,,, C
 import { Badge,,  } from "@/components/ui/badge",
 import { Loader2,,, Edit,,, X,,, Eye,,  } from 'lucide-react'
 import { format,,  } from "date-fns",
-import Link from "
+import React from "react";
 import import { logErrorToProduction } from '@/utils/productionLogger';
 interface JobsListProps {
 return (

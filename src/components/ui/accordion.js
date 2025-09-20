@@ -9,7 +9,7 @@ var __rest = (this && this.__rest) || function (s, e) {
         }
     return t;
 }
-import { jsx as _jsx, jsxs as _jsxs } from "
+import React from "react";
 import import React from 'react';
 import import { cn } from '@/lib/utils';
 import import { ChevronDown } from 'lucide-react';
@@ -36,10 +36,10 @@ const AccordionContent = React.forwardRef((_a, ref) => {
 })
 AccordionContent.displayName = 'AccordionContent';
 "
-import * as React from "
-import * as AccordionPrimitive from "
-import { ChevronDown } from "
-import { cn } from "
+import React from "react";
+import React from "react";
+import React from "react";
+import React from "react";
 const Accordion = AccordionPrimitive.Root;
 const AccordionItem = React.forwardRef(({ className, ...props }, ref) => (<AccordionPrimitive.Item ref={ref} className={cn("border-b", className)} {...props}/>))
 AccordionItem.displayName = "

@@ -1,4 +1,4 @@
-import React from "
+import React from "react";
 
 export interface Listing {
 id: string; title: string; description: string; price: number; currency: string; category: string; tags: string[[];],

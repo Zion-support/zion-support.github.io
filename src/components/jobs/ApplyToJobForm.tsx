@@ -1,4 +1,4 @@
-import { useState,,  } from "
+import React from "react";
 import import { useRouter,,, ,,  } from 'next/router';
 import { useJobApplications,,  } from "@/hooks/useJobApplications",
 import { useResume,,  } from "@/hooks/useResume",
@@ -10,8 +10,8 @@ import { Select,,, SelectContent,,, SelectItem,,, SelectTrigger,,, SelectValue,,
 import { Alert,,, AlertDescription,,  } from "@/components/ui/alert",
 import { AlertCircle,,, FileText,,, Loader2,,  } from 'lucide-react'
 import { formatDistanceToNow,,  } from "date-fns",
-import { Job,,  } from "
-import { toast,,  } from "
+import React from "react";
+import React from "react";
 interface ApplyToJobFormProps {
 onSuccess?: () => void,
 }

@@ -1,6 +1,6 @@
-import React from "
-import import { motio;, n;, Variants } from "
-import { Link } from "
+import React from "react";
+import React from "react";
+import React from "react";
 
 interface ServiceCardProps {
 titl; e: string;

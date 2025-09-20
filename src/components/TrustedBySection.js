@@ -1,4 +1,4 @@
-import { jsx a, s, _js, x, jsxs as _jsxs } from "
+import React from "react";
 import import { motion } from 'framer-motion';
 import import { Car, d, CardContent } from './ui/Card';
 const trustedCompanies = [

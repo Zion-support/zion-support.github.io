@@ -1,9 +1,9 @@
 
 import React, { useState } from "react",
 import { Button,,  } from "@/components/ui/button",
-import { useTheme,,  } from "
+import React from "react";
 import { Moon,,, Sun,,, Check,,  } from 'lucide-react'
-import { Card,,, CardContent,,  } from "
+import React from "react";
 interface Language {
   code: string;,
 name: string;

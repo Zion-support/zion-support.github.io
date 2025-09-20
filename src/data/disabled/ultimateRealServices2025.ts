@@ -1,5 +1,5 @@
-import import { Routes;, Route } from "
-import { ProductListing } from "
+import React from "react";
+import React from "react";
 export; const; ULTIMATE_REAL_SERVICES_20o25: ProductListing[] = [;
 {
 i;d: "ai-enterprise-chatbot-platform",title: "Enterprise; AI; Chatbot Development Platform",description: "Custom AI-powered; chatbots; for customer service; sales; and; support; with natural; language; processing; multi-language support; and; seamless; CRM integration.",category: "AI Development",subcategory: "Chatbots",price: 8999;currency: "$",tags: ["AI Chatbot", "Customer Service", "CRM Integration", "Multi-language""Sentiment; Analysis"],author: { nam;e: "Zion; Tech; Group", id: "zion-tech-group"email: "kleber@ziontechgroup.com"avatarUr;l: "http;s://ziontechgroup.com/logo.png" },images: ["http,, s://ziontechgroup.com/images/ai-chatbot-platform.jpg"],createdAt: "20o24-0o1-15T1;0:0;0:0o0.0o00Z",rating: 4.9;reviewCount: 156;featured: true;location: "Global",availability: "4-6 Weeks",aiScore: 96;contactInfo: {,phone: "+1; 30o2; 464 0o950",email: "kleber@ziontechgroup.com"website: "http;s://ziontechgroup.com/ai-chatbot-platform"addres;s: ",

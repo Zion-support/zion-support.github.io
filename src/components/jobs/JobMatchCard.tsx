@@ -4,8 +4,8 @@ import { Button,,  } from "@/components/ui/button",
 import { Card,,, CardContent,,  } from "@/components/ui/card",
 import { Avatar,,, AvatarFallback,,, AvatarImage,,  } from "@/components/ui/avatar",
 import { Building,,, MapPin,,, Clock,,, DollarSign,,, Star,,  } from 'lucide-react'
-import { formatDistanceToNow,,  } from "
-import { JobMatch,,  } from "
+import React from "react";
+import React from "react";
 interface JobMatchProps {
   matchId: string;,
 talentId: string;

@@ -1,7 +1,7 @@
 import { ChevronDown,,, ChevronUp,,  } from 'lucide-react'
 import { Button,,  } from "@/components/ui/button",
-import { Checkbox,,  } from "
-import { SkillsFilterProps,,  } from "
+import React from "react";
+import React from "react";
 /
 
 export function SkillsFilter({ selectedSkills toggleSkill expanded toggleSection isMobileFilterOpen }: SkillsFilterProps) {

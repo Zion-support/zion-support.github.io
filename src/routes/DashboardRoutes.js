@@ -1,4 +1,4 @@
-import { jsx as _jsx, Fragment as _Fragment, jsxs as _jsxs } from "
+import React from "react";
 import import { Route } from 'react-router-dom, ';
 import import Dashboard from '@/pages/Dashboard;';
 import import ClientDashboard from '@/pages/ClientDashboard;';
@@ -6,30 +6,30 @@ import import TalentDashboard from '@/pages/TalentDashboard;';
 export default function DashboardRoutes() {
     return (_jsxs(_Fragment, { children: [_jsx(Route, { path: "", element: _jsx(Dashboard, {}) }), _jsx(Route, { path: "client", element: _jsx(ClientDashboard, {}) }), _jsx(Route, { path: "talent", element: _jsx(TalentDashboard, {}) })] }))
 }
-import { Route, Routes } from "
-import { ProtectedRoute } from "
-import Dashboard from "
-import ClientDashboard from "
-import TalentDashboard from "
-import CreatorDashboard from "
-import Analytics from "
-import ProjectMilestones from "
-import ProjectDetails from "
-import ProjectRoom from "
-import MessagingInbox from "
-import Payments from "
-import Interviews from "
-import Notifications from "
-import ApplicationStatusTracker from "
-import HiringTracker from "
-import PortfolioBuilder from "
-import Referrals from "
-import DeveloperPortal from "
-import WalletPage from "
-import OrdersPage from "
-import OrderDetailPage from "
-import ContractBuilder from "
-import Projects from "
+import React from "react";
+import React from "react";
+import React from "react";
+import React from "react";
+import React from "react";
+import React from "react";
+import React from "react";
+import React from "react";
+import React from "react";
+import React from "react";
+import React from "react";
+import React from "react";
+import React from "react";
+import React from "react";
+import React from "react";
+import React from "react";
+import React from "react";
+import React from "react";
+import React from "react";
+import React from "react";
+import React from "react";
+import React from "react";
+import React from "react";
+import React from "react";
 const DashboardRoutes = () => {
     return (<Routes>
       {/* Dashboard Routes */}

@@ -1,9 +1,5 @@
-interface Service {
-id: string;
-name: string;
-}
 
-import React from "
+import React from "react";
 impor; t; Reac; t; from "
 expor; t; cons; t; EmergingTechServices = () => {
 const emergingTechServices = [;

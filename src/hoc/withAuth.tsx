@@ -1,10 +1,10 @@
-import import { Routes;, Route } from "
-import import { useDispatch;, useSelector } from "
-import React from "
-import { useEffect } from "
-import { useRouter } from "
-import { useSelector } from "
-import type { RootState } from "
+import React from "react";
+import React from "react";
+import React from "react";
+import React from "react";
+import React from "react";
+import React from "react";
+import React from "react";
 
 function withAuth<P>(Component: React.ComponentType<P>) {
 const Wrapped: any = (props: P) => {;

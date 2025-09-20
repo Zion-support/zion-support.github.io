@@ -4,6 +4,6 @@ import { Card,,, CardHeader,,, CardTitle,,, CardContent,,  } from "@/components/
 import { Button,,  } from "@/components/ui/button",
 import { Download,,  } from 'lucide-react'
 import { AppPlatform,,, AppMetadataValues,,  } from "./MetadataManager",
-import { toast,,  } from "
+import React from "react";
 import import { logInfo,,, logErrorToProduction,,  } from '@/utils/productionLogger';
 interface ExportPanelProps {

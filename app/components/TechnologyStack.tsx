@@ -72,11 +72,11 @@ const TechnologyStack: React.FC = () => {
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-      {technologies.map((tech, index) => (
+      {technologies?.map((tech, index) => (
         <div key={index} className="bg-gray-700 rounded-lg p-6 hover:bg-gray-600 transition-colors">
           <h3 className="text-xl font-bold mb-4 text-blue-400">{tech.category}</h3>
           <ul className="space-y-2">
-            {tech.items.map((item, itemIndex) => (
+            {tech.items?.map((item, itemIndex) => (
               <li key={itemIndex} className="text-gray-300 flex items-center">
                 <div className="w-2 h-2 bg-blue-400 rounded-full mr-3"></div>
                 {item}
@@ -84,7 +84,7 @@ const TechnologyStack: React.FC = () => {
             ))}
           </ul>
         </div>
-      ))}
+      )) || []}
     </div>
   );
 };

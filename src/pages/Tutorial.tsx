@@ -4,8 +4,8 @@ import { TUTORIALS,,  } from '@/data/tutorials'
 import { SEO,,  } from '@/components/SEO'
 import { Button,,  } from '@/components/ui/button'
 import { ArrowLeft,,  } from 'lucide-react'
-import ReactMarkdown from "
-import type { Tutorial as TutorialType } from "
+import React from "react";
+import React from "react";
 interface TutorialPageProps {
   tutorial?: TutorialType,
 export default function Tutorial({

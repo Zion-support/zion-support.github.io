@@ -1,4 +1,4 @@
-import React from "
+import React from "react";
 
 export interface BlogPost {
 id: string; title: string; content: string; excerpt: string; author: {,

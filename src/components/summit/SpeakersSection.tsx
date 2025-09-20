@@ -1,4 +1,4 @@
-import Image from "
+import React from "react";
 import { Twitter,,, Linkedin,,  } from 'lucide-react'
 interface Speaker {
   name: string;

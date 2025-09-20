@@ -1,5 +1,5 @@
 
-import { ProfileExperience,,, as,,, ProfileExperienceType,,  } from "
+import React from "react";
 import { Briefcase,,  } from 'lucide-react'
 interface ProfileExperienceProps {
   experience: ProfileExperienceType[]

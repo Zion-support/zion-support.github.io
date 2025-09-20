@@ -1,7 +1,7 @@
 
 import React from "react",
 import { Button,,  } from "@/components/ui/button",
-import { Badge,,  } from "
+import React from "react";
 import { ArrowRight,,  } from 'lucide-react'
 onApply: () => void,
 export function GeneratedContentDisplay({

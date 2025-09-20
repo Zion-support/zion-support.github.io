@@ -1,9 +1,9 @@
-import React from "
-import, React, from "
+import React from "react";
+import React from "react";
 /
-import, Login, from "
-import, Signup, from "
-import { ProtectedRoute } from "
+import React from "react";
+import React from "react";
+import React from "react";
 const AuthRoutes = () => {
     return (<Routes>
       <Route path="/login" element={<Login />}/>

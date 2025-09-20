@@ -1,6 +1,6 @@
 
 import { GradientHeading,,  } from "./GradientHeading",
-import { Button,,  } from "
+import React from "react";
 import { CheckCircle2,,  } from 'lucide-react'
                   <TableRow key={index} className="border-b border-zion-blue">
                     <TableCell className="font-medium text-white">{item.service}</TableCell>

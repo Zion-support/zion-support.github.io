@@ -7,8 +7,8 @@ import { SkillsFilter,,  } from "./filters/SkillsFilter",
 import { AvailabilityFilter,,  } from "./filters/AvailabilityFilter",
 import { RegionFilter,,  } from "./filters/RegionFilter",
 import { ExperienceFilter,,  } from "./filters/ExperienceFilter",
-import { PriceFilter,,  } from "
-import { FilterSidebarProps,,  } from "
+import React from "react";
+import React from "react";
 export function FilterSidebar({
 return (
     <>

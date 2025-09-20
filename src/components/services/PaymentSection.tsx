@@ -1,7 +1,7 @@
 import { MapPin,,  } from 'lucide-react'
 import { PaymentButton,,  } from "@/components/transactions/PaymentButton",
-import { CountryPricing,,  } from "
-import { toast,,  } from "
+import React from "react";
+import React from "react";
 interface PaymentSectionProps {
   selectedCountry: CountryPricing;
 export function PaymentSection({ selectedCountry }: PaymentSectionProps) {
