@@ -167,7 +167,6 @@ const [retryCount, setRetryCount] = useState(0);
                 console.error('ErrorBoundary caught an error:', event.error);
             }
         };
-
         const handleUnhandledRejection = (event) => {
             setHasError(true);
             setError(new Error(event.reason));
@@ -188,26 +187,26 @@ const [retryCount, setRetryCount] = useState(0);
             window.removeEventListener('unhandledrejection', handleUnhandledRejection);
         };
     }, [onError]);
-const resetError = () => {
+    const resetError = () => {
         setHasError(false);
         setError(null);
         setRetryCount(prev => prev + 1);
-};
+    };
 
     if (hasError) {
         if (fallback) {
-            return fallback;
-        }
+            return fallback
+}
         return (
             <ErrorFallback 
                 error={error || undefined} 
                 resetError={resetError}
                 retryCount={retryCount}
             />
-        );
-    }
+        )
+}
 
-    return <>{children}</>;
+    return <>{children}</>
 }
 
 // Hook for functional components to handle errors
