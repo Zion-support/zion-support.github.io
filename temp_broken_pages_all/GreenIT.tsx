@@ -1,10 +1,17 @@
 import React from 'react';
 
+<<<<<<<< HEAD:temp_broken_pages_all/GreenIT.tsx
 <<<<<<< HEAD:temp_broken_pages_all/GreenIT.tsx
 import { SEO } from "@/components/SEO";,
 import { GradientHeading } from "@/components/GradientHeading";,
 import { Button } from "@/components/ui/button";
 import { Leaf, Server, Cloud } from "lucide-react";
+========
+import { SEO,  } from "@/components/SEO",
+import { GradientHeading,  } from "@/components/GradientHeading",
+import { Button,  } from "@/components/ui/button";
+import { Leaf,, Server, Cloud,  } from 'lucide-react'
+>>>>>>>> pr-22690:temp-broken-files/GreenIT.tsx
 import Link from "next/link";
 export default function GreenIT() {
   return (

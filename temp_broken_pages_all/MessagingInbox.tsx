@@ -1,5 +1,6 @@
 <<<<<<< HEAD:temp_broken_pages_all/MessagingInbox.tsx
 import React { useEffect useState } from 'react';
+<<<<<<<< HEAD:temp_broken_pages_all/MessagingInbox.tsx
 import { MessageSquare, Video } from "lucide-react";
 import { useMessaging } from "@/context/MessagingContext";
 import { ProtectedRoute } from "@/components/ProtectedRoute";

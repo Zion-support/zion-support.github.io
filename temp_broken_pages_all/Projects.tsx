@@ -1,5 +1,9 @@
+<<<<<<<< HEAD:temp_broken_pages_all/Projects.tsx
 <<<<<<< HEAD:temp_broken_pages_all/Projects.tsx
 import { Clock, Briefcase } from "lucide-react";
+========
+import { Clock, Briefcase,  } from 'lucide-react'
+>>>>>>>> pr-22690:temp-broken-files/Projects.tsx
 function ProjectsContent() { const { projects, isLoading } = useProjects()
 function ProjectsContent() {
 return (

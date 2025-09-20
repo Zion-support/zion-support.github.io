@@ -8,22 +8,21 @@ export default function Home() {
           <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">
             Welcome to Zion AI
           </h1>
-          
+
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Discover cutting-edge AI solutions, machine learning services, and innovative technology solutions to transform your business.
           </p>
-          
+
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a href="/services" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded">
               Explore Services
             </a>
-            
+
             <a href="/marketplace" className="border border-white/20 text-white hover:bg-white/10 px-8 py-3 rounded">
               Visit Marketplace
             </a>
           </div>
         </div>
       </div>
-    </div>
-  );
+    </div>  );
 }

@@ -1,5 +1,6 @@
 <<<<<<< HEAD:temp_broken_pages_all/Orders.tsx
 } from '@/components/ui/table';
+<<<<<<<< HEAD:temp_broken_pages_all/Orders.tsx
 import { Badge } from "@/components/ui/badge";
 import { FileText, CheckCircle2, Clock, ShieldAlert } from "lucide-react";
 import Link from 'next/link', // Changed from react-router-dom;
@@ -12,6 +13,20 @@ import { Table;
 , TableHeader;
 , TableRow } from "@/components/ui/table";
 import { Badge } from "@/components/ui/badge";
+========
+import { Badge,  } from '@/components/ui/badge';
+import { FileText,, CheckCircle2,, Clock, ShieldAlert,  } from 'lucide-react'
+import Link from 'next/link', // Changed from react-router-dom,
+import { useAuth, ,  } from '@/hooks/useAuth';
+import { useGetOrdersQuery,  } from '@/hooks/useOrders';
+import { Table;
+,, TableBody;
+,, TableCell;
+,, TableHead;
+,, TableHeader;
+,, TableRow,  } from '@/components/ui/table';
+import { Badge, ,  } from '@/components/ui/badge';
+>>>>>>>> pr-22690:temp-broken-files/Orders.tsx
 import Skeleton from '@/components/ui/skeleton';
 import { EmptyState } from "@/components/ui/empty-state";
 export default function OrdersPage() {

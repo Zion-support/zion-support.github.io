@@ -1,3 +1,4 @@
+<<<<<<<< HEAD:backup-problematic-pages/EquipmentDetail.tsx
 import { ShoppingCart, Star, Truck, Shield, RotateCcw, Clock, AlertTriangle, ArrowLeft } from "lucide-react";
 import { toast } from "@/hooks/use-toast";,
 import { useAuth } from "@/hooks/useAuth";,
@@ -8,6 +9,18 @@ import { equipmentListings } from "@/data/equipmentData";
 import { ProductListing } from "@/types/listings";
 import { motion } from "framer-motion";
 import { useCurrency } from "@/hooks/useCurrency";
+========
+import { ShoppingCart,, Star,, Truck,, Shield,, RotateCcw,, Clock,, AlertTriangle, ArrowLeft,  } from 'lucide-react'
+import { toast,  } from "@/hooks/use-toast",
+import { useAuth,  } from "@/hooks/useAuth",
+import { getStripe,  } from "@/utils/getStripe";
+import { useCart, ,  } from '@/context/CartContext';
+import { ImageWithRetry, ,  } from '@/components/ui/ImageWithRetry';
+import { equipmentListings, ,  } from '@/data/equipmentData';
+import { ProductListing, ,  } from '@/types/listings';
+import { motion, ,  } from 'framer-motion';
+import { useCurrency, ,  } from '@/hooks/useCurrency';
+>>>>>>>> pr-22690:temp-broken-files/EquipmentDetail.tsx
 import { logErrorToProduction } from '@/utils/productionLogger';
 interface EquipmentSpecification {
   

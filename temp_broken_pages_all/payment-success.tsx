@@ -1,9 +1,16 @@
 import React from 'react';
+<<<<<<<< HEAD:temp_broken_pages_all/payment-success.tsx
 <<<<<<< HEAD:temp_broken_pages_all/payment-success.tsx
 import { Button } from "@/components/ui/button";
 import { useRouter } from "next/router";, // Changed from useNavigate,
 import { CheckCircle2 } from "lucide-react";
 import { useTranslation } from "react-i18next";
+========
+import { Button, ,  } from '@/components/ui/button';
+import { useRouter,  } from 'next/router', // Changed from useNavigate,
+import { CheckCircle2,  } from 'lucide-react'
+import { useTranslation,  } from 'react-i18next';
+>>>>>>>> pr-22690:temp-broken-files/payment-success.tsx
 export default function PaymentSuccess() {
   return (
   return (

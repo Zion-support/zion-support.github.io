@@ -32,8 +32,7 @@ const categories = [
     name: 'Talent',
     description: 'Human resources and talent management',
     icon: <Users className="h-8 w-8" />,
-    count: 15
-  }
+    count: 15  }
 ];
 
 export default function AllCategoriesPage() {

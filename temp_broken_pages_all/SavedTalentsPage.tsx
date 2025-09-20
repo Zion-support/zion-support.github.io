@@ -1,3 +1,4 @@
+<<<<<<<< HEAD:temp_broken_pages_all/SavedTalentsPage.tsx
 <<<<<<< HEAD:temp_broken_pages_all/SavedTalentsPage.tsx
 import { useState, useEffect } from "react";,
 import { SEO } from "@/components/SEO";,
@@ -11,6 +12,20 @@ import { logErrorToProduction } from "@/utils/productionLogger";
 import { EmptyState } from "@/components/ui/empty-state";
 import { Heart } from "lucide-react";
 import { logInfo, logWarn } from "@/utils/productionLogger";
+========
+import { useState, useEffect,  } from "react",
+import { SEO,  } from "@/components/SEO",
+import { TalentCard,  } from "@/components/talent/TalentCard",
+import { useAuth,  } from "@/hooks/useAuth",
+import { supabase,  } from "@/integrations/supabase/client",
+import { TalentProfile,  } from "@/types/talent",
+import { toast,  } from "@/components/ui/use-toast";
+import { useRouter, ,  } from 'next/router';
+import { logErrorToProduction, ,  } from '@/utils/productionLogger';
+import { EmptyState,  } from "@/components/ui/empty-state";
+import { Heart,  } from 'lucide-react'
+import { logInfo, logWarn,  } from '@/utils/productionLogger';
+>>>>>>>> pr-22690:temp-broken-files/SavedTalentsPage.tsx
 export default function SavedTalentsPage() {
   return (
   return (

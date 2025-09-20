@@ -1,5 +1,6 @@
 import React from 'react';
 
+<<<<<<<< HEAD:temp_broken_pages_all/HiringTracker.tsx
 <<<<<<< HEAD:temp_broken_pages_all/HiringTracker.tsx
 import { useState } from "react";,
 import { useRouter } from "next/router";,
