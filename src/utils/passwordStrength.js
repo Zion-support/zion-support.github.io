@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export function calculatePasswordStrength(password) {
     let score = 0;
     if (password.length >= 8)
@@ -21,6 +22,13 @@ export function getStrengthLabel(score) {
     case 2: return "Fair";
     case 3: return "Good";
     case 4: return "Strong";
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-5df3
     default: return "";
      }
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-5df3

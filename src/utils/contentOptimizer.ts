@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export interface ContentAnalysis {
 page: string;
 wordCount: number;
@@ -5,6 +6,9 @@ headingCount: number;
 imageCount: number;
 linkCount: number;
 readabilityScore: number;
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-5df3
 seoScore: number;,
 issues: ContentIssue[];,
 suggestions: ContentSuggestion[];
@@ -384,4 +388,9 @@ return `${baseDescription} ${pageKeywords}. Transform your business with Zion Te
 }
 }
 
+<<<<<<< HEAD
 export const contentOptimizer = new ContentOptimizer();
+=======
+export const contentOptimizer = new ContentOptimizer();
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-5df3

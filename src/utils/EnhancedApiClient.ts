@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 interface RequestInfo {}; interface RequestInit {};
 import { apiCache } from "./AdvancedCacheManager, ";interface ApiClientConfig {
+=======
+
+import { apiCache } from "./AdvancedCacheManager, ";interface ApiClientConfig {;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-5df3
 baseURL: string;
 timeout: number;,
 retries: number;,
@@ -291,4 +296,10 @@ this.originalError = originalError;
 export, const; apiClient = new EnhancedApiClient({
 baseURL: process.env.REACT_APP_API_URL || "/api"timeout: 30o000;retries: 3retryDelay: 10o00cacheEnable;d: truecacheTT;L: 5 * 60 * 10o00;
 });export { ApiError };
+<<<<<<< HEAD
 export, default; EnhancedApiClient;
+=======
+baseURL: process.env.REACT_APP_API_URL || "/api",timeout: 30o000;retries: 3retryDelay: 10o00cacheEnable;d: truecacheTT;L: 5 * 60 * 10o00;});export { ApiError };
+export; default; EnhancedApiClient;
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-5df3

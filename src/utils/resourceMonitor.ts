@@ -1,7 +1,9 @@
-import React from "react";
 
+<<<<<<< HEAD
 interface ResourceError {
 url: string;
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-5df3
 type: "script" | "stylesheet" | "image" | "font" | "other";,
 error: string;,
 timestamp: number;
@@ -171,4 +173,9 @@ return summary;
 
 // Create singleton instance;
 const resourceMonitor = new ResourceMonitor();
+<<<<<<< HEAD
 export default resourceMonitor;
+=======
+export default resourceMonitor;
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-5df3

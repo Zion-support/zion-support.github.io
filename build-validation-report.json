@@ -1,0 +1,4337 @@
+{
+  "timestamp": "2025-09-20T17:13:12.055Z",
+  "summary": {
+    "total": 720,
+    "passed": 421,
+    "failed": 26,
+    "warnings": 273,
+    "successRate": 58
+  },
+  "checks": [
+    {
+      "name": "Build output exists",
+      "passed": true,
+      "severity": "critical",
+      "timestamp": "2025-09-20T17:13:11.984Z"
+    },
+    {
+      "name": "Essential file: index.html",
+      "passed": true,
+      "severity": "critical",
+      "timestamp": "2025-09-20T17:13:11.984Z"
+    },
+    {
+      "name": "Essential file: robots.txt",
+      "passed": true,
+      "severity": "critical",
+      "timestamp": "2025-09-20T17:13:11.984Z"
+    },
+    {
+      "name": "Essential file: sitemap.xml",
+      "passed": true,
+      "severity": "critical",
+      "timestamp": "2025-09-20T17:13:11.984Z"
+    },
+    {
+      "name": "Build artifact: .next",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:11.984Z"
+    },
+    {
+      "name": "No broken internal links",
+      "passed": false,
+      "severity": "critical",
+      "timestamp": "2025-09-20T17:13:12.001Z"
+    },
+    {
+      "name": "HTML doctype in index.html",
+      "passed": true,
+      "severity": "critical",
+      "timestamp": "2025-09-20T17:13:12.005Z"
+    },
+    {
+      "name": "HTML title in index.html",
+      "passed": true,
+      "severity": "critical",
+      "timestamp": "2025-09-20T17:13:12.005Z"
+    },
+    {
+      "name": "Meta description in index.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.005Z"
+    },
+    {
+      "name": "HTML lang attribute in index.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.005Z"
+    },
+    {
+      "name": "HTML doctype in 404.html",
+      "passed": true,
+      "severity": "critical",
+      "timestamp": "2025-09-20T17:13:12.005Z"
+    },
+    {
+      "name": "HTML title in 404.html",
+      "passed": true,
+      "severity": "critical",
+      "timestamp": "2025-09-20T17:13:12.005Z"
+    },
+    {
+      "name": "Meta description in 404.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.005Z"
+    },
+    {
+      "name": "HTML lang attribute in 404.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.005Z"
+    },
+    {
+      "name": "HTML doctype in index.html",
+      "passed": true,
+      "severity": "critical",
+      "timestamp": "2025-09-20T17:13:12.005Z"
+    },
+    {
+      "name": "HTML title in index.html",
+      "passed": true,
+      "severity": "critical",
+      "timestamp": "2025-09-20T17:13:12.005Z"
+    },
+    {
+      "name": "Meta description in index.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.005Z"
+    },
+    {
+      "name": "HTML lang attribute in index.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.005Z"
+    },
+    {
+      "name": "HTML doctype in index.html",
+      "passed": true,
+      "severity": "critical",
+      "timestamp": "2025-09-20T17:13:12.005Z"
+    },
+    {
+      "name": "HTML title in index.html",
+      "passed": true,
+      "severity": "critical",
+      "timestamp": "2025-09-20T17:13:12.005Z"
+    },
+    {
+      "name": "Meta description in index.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.005Z"
+    },
+    {
+      "name": "HTML lang attribute in index.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.005Z"
+    },
+    {
+      "name": "HTML doctype in index.html",
+      "passed": true,
+      "severity": "critical",
+      "timestamp": "2025-09-20T17:13:12.005Z"
+    },
+    {
+      "name": "HTML title in index.html",
+      "passed": true,
+      "severity": "critical",
+      "timestamp": "2025-09-20T17:13:12.005Z"
+    },
+    {
+      "name": "Meta description in index.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.005Z"
+    },
+    {
+      "name": "HTML lang attribute in index.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.005Z"
+    },
+    {
+      "name": "HTML doctype in index.html",
+      "passed": true,
+      "severity": "critical",
+      "timestamp": "2025-09-20T17:13:12.005Z"
+    },
+    {
+      "name": "HTML title in index.html",
+      "passed": true,
+      "severity": "critical",
+      "timestamp": "2025-09-20T17:13:12.005Z"
+    },
+    {
+      "name": "Meta description in index.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.005Z"
+    },
+    {
+      "name": "HTML lang attribute in index.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.005Z"
+    },
+    {
+      "name": "HTML doctype in index.html",
+      "passed": true,
+      "severity": "critical",
+      "timestamp": "2025-09-20T17:13:12.005Z"
+    },
+    {
+      "name": "HTML title in index.html",
+      "passed": true,
+      "severity": "critical",
+      "timestamp": "2025-09-20T17:13:12.006Z"
+    },
+    {
+      "name": "Meta description in index.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.006Z"
+    },
+    {
+      "name": "HTML lang attribute in index.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.006Z"
+    },
+    {
+      "name": "HTML doctype in index.html",
+      "passed": true,
+      "severity": "critical",
+      "timestamp": "2025-09-20T17:13:12.006Z"
+    },
+    {
+      "name": "HTML title in index.html",
+      "passed": true,
+      "severity": "critical",
+      "timestamp": "2025-09-20T17:13:12.006Z"
+    },
+    {
+      "name": "Meta description in index.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.006Z"
+    },
+    {
+      "name": "HTML lang attribute in index.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.006Z"
+    },
+    {
+      "name": "HTML doctype in index.html",
+      "passed": true,
+      "severity": "critical",
+      "timestamp": "2025-09-20T17:13:12.006Z"
+    },
+    {
+      "name": "HTML title in index.html",
+      "passed": false,
+      "severity": "critical",
+      "timestamp": "2025-09-20T17:13:12.006Z"
+    },
+    {
+      "name": "Meta description in index.html",
+      "passed": false,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.006Z"
+    },
+    {
+      "name": "HTML lang attribute in index.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.006Z"
+    },
+    {
+      "name": "HTML doctype in index.html",
+      "passed": true,
+      "severity": "critical",
+      "timestamp": "2025-09-20T17:13:12.006Z"
+    },
+    {
+      "name": "HTML title in index.html",
+      "passed": true,
+      "severity": "critical",
+      "timestamp": "2025-09-20T17:13:12.006Z"
+    },
+    {
+      "name": "Meta description in index.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.006Z"
+    },
+    {
+      "name": "HTML lang attribute in index.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.006Z"
+    },
+    {
+      "name": "HTML doctype in index.html",
+      "passed": true,
+      "severity": "critical",
+      "timestamp": "2025-09-20T17:13:12.006Z"
+    },
+    {
+      "name": "HTML title in index.html",
+      "passed": true,
+      "severity": "critical",
+      "timestamp": "2025-09-20T17:13:12.006Z"
+    },
+    {
+      "name": "Meta description in index.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.006Z"
+    },
+    {
+      "name": "HTML lang attribute in index.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.006Z"
+    },
+    {
+      "name": "HTML doctype in index.html",
+      "passed": true,
+      "severity": "critical",
+      "timestamp": "2025-09-20T17:13:12.006Z"
+    },
+    {
+      "name": "HTML title in index.html",
+      "passed": false,
+      "severity": "critical",
+      "timestamp": "2025-09-20T17:13:12.006Z"
+    },
+    {
+      "name": "Meta description in index.html",
+      "passed": false,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.006Z"
+    },
+    {
+      "name": "HTML lang attribute in index.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.006Z"
+    },
+    {
+      "name": "HTML doctype in index.html",
+      "passed": true,
+      "severity": "critical",
+      "timestamp": "2025-09-20T17:13:12.007Z"
+    },
+    {
+      "name": "HTML title in index.html",
+      "passed": false,
+      "severity": "critical",
+      "timestamp": "2025-09-20T17:13:12.007Z"
+    },
+    {
+      "name": "Meta description in index.html",
+      "passed": false,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.007Z"
+    },
+    {
+      "name": "HTML lang attribute in index.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.007Z"
+    },
+    {
+      "name": "HTML doctype in index.html",
+      "passed": true,
+      "severity": "critical",
+      "timestamp": "2025-09-20T17:13:12.007Z"
+    },
+    {
+      "name": "HTML title in index.html",
+      "passed": true,
+      "severity": "critical",
+      "timestamp": "2025-09-20T17:13:12.007Z"
+    },
+    {
+      "name": "Meta description in index.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.007Z"
+    },
+    {
+      "name": "HTML lang attribute in index.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.007Z"
+    },
+    {
+      "name": "HTML doctype in index.html",
+      "passed": true,
+      "severity": "critical",
+      "timestamp": "2025-09-20T17:13:12.007Z"
+    },
+    {
+      "name": "HTML title in index.html",
+      "passed": true,
+      "severity": "critical",
+      "timestamp": "2025-09-20T17:13:12.007Z"
+    },
+    {
+      "name": "Meta description in index.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.007Z"
+    },
+    {
+      "name": "HTML lang attribute in index.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.007Z"
+    },
+    {
+      "name": "HTML doctype in index.html",
+      "passed": true,
+      "severity": "critical",
+      "timestamp": "2025-09-20T17:13:12.007Z"
+    },
+    {
+      "name": "HTML title in index.html",
+      "passed": true,
+      "severity": "critical",
+      "timestamp": "2025-09-20T17:13:12.007Z"
+    },
+    {
+      "name": "Meta description in index.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.007Z"
+    },
+    {
+      "name": "HTML lang attribute in index.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.007Z"
+    },
+    {
+      "name": "HTML doctype in index.html",
+      "passed": true,
+      "severity": "critical",
+      "timestamp": "2025-09-20T17:13:12.007Z"
+    },
+    {
+      "name": "HTML title in index.html",
+      "passed": true,
+      "severity": "critical",
+      "timestamp": "2025-09-20T17:13:12.007Z"
+    },
+    {
+      "name": "Meta description in index.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.007Z"
+    },
+    {
+      "name": "HTML lang attribute in index.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.007Z"
+    },
+    {
+      "name": "HTML doctype in index.html",
+      "passed": true,
+      "severity": "critical",
+      "timestamp": "2025-09-20T17:13:12.007Z"
+    },
+    {
+      "name": "HTML title in index.html",
+      "passed": false,
+      "severity": "critical",
+      "timestamp": "2025-09-20T17:13:12.007Z"
+    },
+    {
+      "name": "Meta description in index.html",
+      "passed": false,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.007Z"
+    },
+    {
+      "name": "HTML lang attribute in index.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.007Z"
+    },
+    {
+      "name": "HTML doctype in index.html",
+      "passed": true,
+      "severity": "critical",
+      "timestamp": "2025-09-20T17:13:12.007Z"
+    },
+    {
+      "name": "HTML title in index.html",
+      "passed": true,
+      "severity": "critical",
+      "timestamp": "2025-09-20T17:13:12.007Z"
+    },
+    {
+      "name": "Meta description in index.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.007Z"
+    },
+    {
+      "name": "HTML lang attribute in index.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.007Z"
+    },
+    {
+      "name": "HTML doctype in index.html",
+      "passed": false,
+      "severity": "critical",
+      "timestamp": "2025-09-20T17:13:12.007Z"
+    },
+    {
+      "name": "HTML title in index.html",
+      "passed": true,
+      "severity": "critical",
+      "timestamp": "2025-09-20T17:13:12.007Z"
+    },
+    {
+      "name": "Meta description in index.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.007Z"
+    },
+    {
+      "name": "HTML lang attribute in index.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.007Z"
+    },
+    {
+      "name": "HTML doctype in index.html",
+      "passed": true,
+      "severity": "critical",
+      "timestamp": "2025-09-20T17:13:12.007Z"
+    },
+    {
+      "name": "HTML title in index.html",
+      "passed": true,
+      "severity": "critical",
+      "timestamp": "2025-09-20T17:13:12.007Z"
+    },
+    {
+      "name": "Meta description in index.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.008Z"
+    },
+    {
+      "name": "HTML lang attribute in index.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.008Z"
+    },
+    {
+      "name": "HTML doctype in offline.html",
+      "passed": false,
+      "severity": "critical",
+      "timestamp": "2025-09-20T17:13:12.008Z"
+    },
+    {
+      "name": "HTML title in offline.html",
+      "passed": true,
+      "severity": "critical",
+      "timestamp": "2025-09-20T17:13:12.008Z"
+    },
+    {
+      "name": "Meta description in offline.html",
+      "passed": false,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.008Z"
+    },
+    {
+      "name": "HTML lang attribute in offline.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.008Z"
+    },
+    {
+      "name": "HTML doctype in index.html",
+      "passed": false,
+      "severity": "critical",
+      "timestamp": "2025-09-20T17:13:12.008Z"
+    },
+    {
+      "name": "HTML title in index.html",
+      "passed": true,
+      "severity": "critical",
+      "timestamp": "2025-09-20T17:13:12.008Z"
+    },
+    {
+      "name": "Meta description in index.html",
+      "passed": false,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.008Z"
+    },
+    {
+      "name": "HTML lang attribute in index.html",
+      "passed": false,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.008Z"
+    },
+    {
+      "name": "HTML doctype in index.html",
+      "passed": false,
+      "severity": "critical",
+      "timestamp": "2025-09-20T17:13:12.008Z"
+    },
+    {
+      "name": "HTML title in index.html",
+      "passed": true,
+      "severity": "critical",
+      "timestamp": "2025-09-20T17:13:12.008Z"
+    },
+    {
+      "name": "Meta description in index.html",
+      "passed": false,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.008Z"
+    },
+    {
+      "name": "HTML lang attribute in index.html",
+      "passed": false,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.008Z"
+    },
+    {
+      "name": "HTML doctype in index.html",
+      "passed": false,
+      "severity": "critical",
+      "timestamp": "2025-09-20T17:13:12.008Z"
+    },
+    {
+      "name": "HTML title in index.html",
+      "passed": true,
+      "severity": "critical",
+      "timestamp": "2025-09-20T17:13:12.008Z"
+    },
+    {
+      "name": "Meta description in index.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.008Z"
+    },
+    {
+      "name": "HTML lang attribute in index.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.008Z"
+    },
+    {
+      "name": "HTML doctype in index.html",
+      "passed": true,
+      "severity": "critical",
+      "timestamp": "2025-09-20T17:13:12.008Z"
+    },
+    {
+      "name": "HTML title in index.html",
+      "passed": true,
+      "severity": "critical",
+      "timestamp": "2025-09-20T17:13:12.008Z"
+    },
+    {
+      "name": "Meta description in index.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.008Z"
+    },
+    {
+      "name": "HTML lang attribute in index.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.008Z"
+    },
+    {
+      "name": "HTML doctype in index.html",
+      "passed": false,
+      "severity": "critical",
+      "timestamp": "2025-09-20T17:13:12.008Z"
+    },
+    {
+      "name": "HTML title in index.html",
+      "passed": true,
+      "severity": "critical",
+      "timestamp": "2025-09-20T17:13:12.009Z"
+    },
+    {
+      "name": "Meta description in index.html",
+      "passed": false,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.009Z"
+    },
+    {
+      "name": "HTML lang attribute in index.html",
+      "passed": false,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.009Z"
+    },
+    {
+      "name": "HTML doctype in index.html",
+      "passed": false,
+      "severity": "critical",
+      "timestamp": "2025-09-20T17:13:12.009Z"
+    },
+    {
+      "name": "HTML title in index.html",
+      "passed": true,
+      "severity": "critical",
+      "timestamp": "2025-09-20T17:13:12.009Z"
+    },
+    {
+      "name": "Meta description in index.html",
+      "passed": false,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.009Z"
+    },
+    {
+      "name": "HTML lang attribute in index.html",
+      "passed": false,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.009Z"
+    },
+    {
+      "name": "HTML doctype in index.html",
+      "passed": false,
+      "severity": "critical",
+      "timestamp": "2025-09-20T17:13:12.012Z"
+    },
+    {
+      "name": "HTML title in index.html",
+      "passed": true,
+      "severity": "critical",
+      "timestamp": "2025-09-20T17:13:12.012Z"
+    },
+    {
+      "name": "Meta description in index.html",
+      "passed": false,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.012Z"
+    },
+    {
+      "name": "HTML lang attribute in index.html",
+      "passed": false,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.013Z"
+    },
+    {
+      "name": "HTML doctype in index.html",
+      "passed": false,
+      "severity": "critical",
+      "timestamp": "2025-09-20T17:13:12.013Z"
+    },
+    {
+      "name": "HTML title in index.html",
+      "passed": true,
+      "severity": "critical",
+      "timestamp": "2025-09-20T17:13:12.013Z"
+    },
+    {
+      "name": "Meta description in index.html",
+      "passed": false,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.013Z"
+    },
+    {
+      "name": "HTML lang attribute in index.html",
+      "passed": false,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.013Z"
+    },
+    {
+      "name": "HTML doctype in index.html",
+      "passed": false,
+      "severity": "critical",
+      "timestamp": "2025-09-20T17:13:12.013Z"
+    },
+    {
+      "name": "HTML title in index.html",
+      "passed": true,
+      "severity": "critical",
+      "timestamp": "2025-09-20T17:13:12.013Z"
+    },
+    {
+      "name": "Meta description in index.html",
+      "passed": false,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.013Z"
+    },
+    {
+      "name": "HTML lang attribute in index.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.013Z"
+    },
+    {
+      "name": "HTML doctype in index.html",
+      "passed": true,
+      "severity": "critical",
+      "timestamp": "2025-09-20T17:13:12.013Z"
+    },
+    {
+      "name": "HTML title in index.html",
+      "passed": true,
+      "severity": "critical",
+      "timestamp": "2025-09-20T17:13:12.013Z"
+    },
+    {
+      "name": "Meta description in index.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.013Z"
+    },
+    {
+      "name": "HTML lang attribute in index.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.013Z"
+    },
+    {
+      "name": "HTML doctype in test-sw.html",
+      "passed": true,
+      "severity": "critical",
+      "timestamp": "2025-09-20T17:13:12.013Z"
+    },
+    {
+      "name": "HTML title in test-sw.html",
+      "passed": true,
+      "severity": "critical",
+      "timestamp": "2025-09-20T17:13:12.013Z"
+    },
+    {
+      "name": "Meta description in test-sw.html",
+      "passed": false,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.013Z"
+    },
+    {
+      "name": "HTML lang attribute in test-sw.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.013Z"
+    },
+    {
+      "name": "HTML doctype in index.html",
+      "passed": true,
+      "severity": "critical",
+      "timestamp": "2025-09-20T17:13:12.013Z"
+    },
+    {
+      "name": "HTML title in index.html",
+      "passed": false,
+      "severity": "critical",
+      "timestamp": "2025-09-20T17:13:12.013Z"
+    },
+    {
+      "name": "Meta description in index.html",
+      "passed": false,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.013Z"
+    },
+    {
+      "name": "HTML lang attribute in index.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.013Z"
+    },
+    {
+      "name": "HTML doctype in index.html",
+      "passed": true,
+      "severity": "critical",
+      "timestamp": "2025-09-20T17:13:12.013Z"
+    },
+    {
+      "name": "HTML title in index.html",
+      "passed": false,
+      "severity": "critical",
+      "timestamp": "2025-09-20T17:13:12.013Z"
+    },
+    {
+      "name": "Meta description in index.html",
+      "passed": false,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.013Z"
+    },
+    {
+      "name": "HTML lang attribute in index.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.013Z"
+    },
+    {
+      "name": "HTML doctype in index.html",
+      "passed": true,
+      "severity": "critical",
+      "timestamp": "2025-09-20T17:13:12.013Z"
+    },
+    {
+      "name": "HTML title in index.html",
+      "passed": false,
+      "severity": "critical",
+      "timestamp": "2025-09-20T17:13:12.013Z"
+    },
+    {
+      "name": "Meta description in index.html",
+      "passed": false,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.013Z"
+    },
+    {
+      "name": "HTML lang attribute in index.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.013Z"
+    },
+    {
+      "name": "HTML doctype in index.html",
+      "passed": true,
+      "severity": "critical",
+      "timestamp": "2025-09-20T17:13:12.013Z"
+    },
+    {
+      "name": "HTML title in index.html",
+      "passed": false,
+      "severity": "critical",
+      "timestamp": "2025-09-20T17:13:12.013Z"
+    },
+    {
+      "name": "Meta description in index.html",
+      "passed": false,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.013Z"
+    },
+    {
+      "name": "HTML lang attribute in index.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.013Z"
+    },
+    {
+      "name": "HTML doctype in index.html",
+      "passed": true,
+      "severity": "critical",
+      "timestamp": "2025-09-20T17:13:12.013Z"
+    },
+    {
+      "name": "HTML title in index.html",
+      "passed": false,
+      "severity": "critical",
+      "timestamp": "2025-09-20T17:13:12.013Z"
+    },
+    {
+      "name": "Meta description in index.html",
+      "passed": false,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.013Z"
+    },
+    {
+      "name": "HTML lang attribute in index.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.014Z"
+    },
+    {
+      "name": "HTML doctype in index.html",
+      "passed": true,
+      "severity": "critical",
+      "timestamp": "2025-09-20T17:13:12.014Z"
+    },
+    {
+      "name": "HTML title in index.html",
+      "passed": false,
+      "severity": "critical",
+      "timestamp": "2025-09-20T17:13:12.014Z"
+    },
+    {
+      "name": "Meta description in index.html",
+      "passed": false,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.014Z"
+    },
+    {
+      "name": "HTML lang attribute in index.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.014Z"
+    },
+    {
+      "name": "HTML doctype in index.html",
+      "passed": true,
+      "severity": "critical",
+      "timestamp": "2025-09-20T17:13:12.014Z"
+    },
+    {
+      "name": "HTML title in index.html",
+      "passed": false,
+      "severity": "critical",
+      "timestamp": "2025-09-20T17:13:12.014Z"
+    },
+    {
+      "name": "Meta description in index.html",
+      "passed": false,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.014Z"
+    },
+    {
+      "name": "HTML lang attribute in index.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.014Z"
+    },
+    {
+      "name": "HTML doctype in index.html",
+      "passed": true,
+      "severity": "critical",
+      "timestamp": "2025-09-20T17:13:12.014Z"
+    },
+    {
+      "name": "HTML title in index.html",
+      "passed": false,
+      "severity": "critical",
+      "timestamp": "2025-09-20T17:13:12.014Z"
+    },
+    {
+      "name": "Meta description in index.html",
+      "passed": false,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.014Z"
+    },
+    {
+      "name": "HTML lang attribute in index.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.014Z"
+    },
+    {
+      "name": "HTML doctype in index.html",
+      "passed": true,
+      "severity": "critical",
+      "timestamp": "2025-09-20T17:13:12.014Z"
+    },
+    {
+      "name": "HTML title in index.html",
+      "passed": false,
+      "severity": "critical",
+      "timestamp": "2025-09-20T17:13:12.014Z"
+    },
+    {
+      "name": "Meta description in index.html",
+      "passed": false,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.014Z"
+    },
+    {
+      "name": "HTML lang attribute in index.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.014Z"
+    },
+    {
+      "name": "HTML doctype in index.html",
+      "passed": true,
+      "severity": "critical",
+      "timestamp": "2025-09-20T17:13:12.014Z"
+    },
+    {
+      "name": "HTML title in index.html",
+      "passed": true,
+      "severity": "critical",
+      "timestamp": "2025-09-20T17:13:12.014Z"
+    },
+    {
+      "name": "Meta description in index.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.014Z"
+    },
+    {
+      "name": "HTML lang attribute in index.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.014Z"
+    },
+    {
+      "name": "HTML doctype in index.html",
+      "passed": true,
+      "severity": "critical",
+      "timestamp": "2025-09-20T17:13:12.014Z"
+    },
+    {
+      "name": "HTML title in index.html",
+      "passed": false,
+      "severity": "critical",
+      "timestamp": "2025-09-20T17:13:12.014Z"
+    },
+    {
+      "name": "Meta description in index.html",
+      "passed": false,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.014Z"
+    },
+    {
+      "name": "HTML lang attribute in index.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.014Z"
+    },
+    {
+      "name": "HTML doctype in index.html",
+      "passed": true,
+      "severity": "critical",
+      "timestamp": "2025-09-20T17:13:12.014Z"
+    },
+    {
+      "name": "HTML title in index.html",
+      "passed": false,
+      "severity": "critical",
+      "timestamp": "2025-09-20T17:13:12.014Z"
+    },
+    {
+      "name": "Meta description in index.html",
+      "passed": false,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.014Z"
+    },
+    {
+      "name": "HTML lang attribute in index.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.014Z"
+    },
+    {
+      "name": "JavaScript syntax in _buildManifest.js",
+      "passed": true,
+      "severity": "critical",
+      "timestamp": "2025-09-20T17:13:12.017Z"
+    },
+    {
+      "name": "No console.log in _buildManifest.js",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.017Z"
+    },
+    {
+      "name": "JavaScript syntax in _ssgManifest.js",
+      "passed": true,
+      "severity": "critical",
+      "timestamp": "2025-09-20T17:13:12.017Z"
+    },
+    {
+      "name": "No console.log in _ssgManifest.js",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.017Z"
+    },
+    {
+      "name": "JavaScript syntax in page-31cededc8361a5d8.js",
+      "passed": true,
+      "severity": "critical",
+      "timestamp": "2025-09-20T17:13:12.017Z"
+    },
+    {
+      "name": "No console.log in page-31cededc8361a5d8.js",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.017Z"
+    },
+    {
+      "name": "JavaScript syntax in page-ed4ae9bf9dbad5b0.js",
+      "passed": true,
+      "severity": "critical",
+      "timestamp": "2025-09-20T17:13:12.017Z"
+    },
+    {
+      "name": "No console.log in page-ed4ae9bf9dbad5b0.js",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.017Z"
+    },
+    {
+      "name": "JavaScript syntax in page-4986a5ee4b869de9.js",
+      "passed": true,
+      "severity": "critical",
+      "timestamp": "2025-09-20T17:13:12.017Z"
+    },
+    {
+      "name": "No console.log in page-4986a5ee4b869de9.js",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.017Z"
+    },
+    {
+      "name": "JavaScript syntax in page-4da4b99890f5d898.js",
+      "passed": true,
+      "severity": "critical",
+      "timestamp": "2025-09-20T17:13:12.017Z"
+    },
+    {
+      "name": "No console.log in page-4da4b99890f5d898.js",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.017Z"
+    },
+    {
+      "name": "JavaScript syntax in page-4a1fedc4ba48d86c.js",
+      "passed": true,
+      "severity": "critical",
+      "timestamp": "2025-09-20T17:13:12.017Z"
+    },
+    {
+      "name": "No console.log in page-4a1fedc4ba48d86c.js",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.017Z"
+    },
+    {
+      "name": "JavaScript syntax in page-0163105ab6ba3f82.js",
+      "passed": true,
+      "severity": "critical",
+      "timestamp": "2025-09-20T17:13:12.017Z"
+    },
+    {
+      "name": "No console.log in page-0163105ab6ba3f82.js",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.017Z"
+    },
+    {
+      "name": "JavaScript syntax in page-da324022812f3edb.js",
+      "passed": true,
+      "severity": "critical",
+      "timestamp": "2025-09-20T17:13:12.017Z"
+    },
+    {
+      "name": "No console.log in page-da324022812f3edb.js",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.017Z"
+    },
+    {
+      "name": "JavaScript syntax in page-804ced46331ccb88.js",
+      "passed": true,
+      "severity": "critical",
+      "timestamp": "2025-09-20T17:13:12.018Z"
+    },
+    {
+      "name": "No console.log in page-804ced46331ccb88.js",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.018Z"
+    },
+    {
+      "name": "JavaScript syntax in page-6765d4f6898eeb3a.js",
+      "passed": true,
+      "severity": "critical",
+      "timestamp": "2025-09-20T17:13:12.018Z"
+    },
+    {
+      "name": "No console.log in page-6765d4f6898eeb3a.js",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.018Z"
+    },
+    {
+      "name": "JavaScript syntax in page-7c67c23de6c8b33c.js",
+      "passed": true,
+      "severity": "critical",
+      "timestamp": "2025-09-20T17:13:12.018Z"
+    },
+    {
+      "name": "No console.log in page-7c67c23de6c8b33c.js",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.018Z"
+    },
+    {
+      "name": "JavaScript syntax in page-6d21581b407c8ecc.js",
+      "passed": true,
+      "severity": "critical",
+      "timestamp": "2025-09-20T17:13:12.018Z"
+    },
+    {
+      "name": "No console.log in page-6d21581b407c8ecc.js",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.018Z"
+    },
+    {
+      "name": "JavaScript syntax in page-d00011604744ecf7.js",
+      "passed": true,
+      "severity": "critical",
+      "timestamp": "2025-09-20T17:13:12.018Z"
+    },
+    {
+      "name": "No console.log in page-d00011604744ecf7.js",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.018Z"
+    },
+    {
+      "name": "JavaScript syntax in page-ede3f36a57beb59c.js",
+      "passed": true,
+      "severity": "critical",
+      "timestamp": "2025-09-20T17:13:12.018Z"
+    },
+    {
+      "name": "No console.log in page-ede3f36a57beb59c.js",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.018Z"
+    },
+    {
+      "name": "JavaScript syntax in page-9d0d713ad66136c1.js",
+      "passed": true,
+      "severity": "critical",
+      "timestamp": "2025-09-20T17:13:12.018Z"
+    },
+    {
+      "name": "No console.log in page-9d0d713ad66136c1.js",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.018Z"
+    },
+    {
+      "name": "JavaScript syntax in page-83e46e058ca0b49f.js",
+      "passed": true,
+      "severity": "critical",
+      "timestamp": "2025-09-20T17:13:12.018Z"
+    },
+    {
+      "name": "No console.log in page-83e46e058ca0b49f.js",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.018Z"
+    },
+    {
+      "name": "JavaScript syntax in page-a7967b3faa3ceca7.js",
+      "passed": true,
+      "severity": "critical",
+      "timestamp": "2025-09-20T17:13:12.018Z"
+    },
+    {
+      "name": "No console.log in page-a7967b3faa3ceca7.js",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.018Z"
+    },
+    {
+      "name": "JavaScript syntax in page-97cf51559f443490.js",
+      "passed": true,
+      "severity": "critical",
+      "timestamp": "2025-09-20T17:13:12.018Z"
+    },
+    {
+      "name": "No console.log in page-97cf51559f443490.js",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.018Z"
+    },
+    {
+      "name": "JavaScript syntax in page-d7c8e2103e29144c.js",
+      "passed": true,
+      "severity": "critical",
+      "timestamp": "2025-09-20T17:13:12.018Z"
+    },
+    {
+      "name": "No console.log in page-d7c8e2103e29144c.js",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.018Z"
+    },
+    {
+      "name": "JavaScript syntax in error-d92a853c8e58b1ce.js",
+      "passed": true,
+      "severity": "critical",
+      "timestamp": "2025-09-20T17:13:12.018Z"
+    },
+    {
+      "name": "No console.log in error-d92a853c8e58b1ce.js",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.018Z"
+    },
+    {
+      "name": "JavaScript syntax in layout-0fb1677b9808c733.js",
+      "passed": true,
+      "severity": "critical",
+      "timestamp": "2025-09-20T17:13:12.018Z"
+    },
+    {
+      "name": "No console.log in layout-0fb1677b9808c733.js",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.018Z"
+    },
+    {
+      "name": "JavaScript syntax in loading-435922c0ca1fa84d.js",
+      "passed": true,
+      "severity": "critical",
+      "timestamp": "2025-09-20T17:13:12.018Z"
+    },
+    {
+      "name": "No console.log in loading-435922c0ca1fa84d.js",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.018Z"
+    },
+    {
+      "name": "JavaScript syntax in not-found-77d8c89fec5aca01.js",
+      "passed": true,
+      "severity": "critical",
+      "timestamp": "2025-09-20T17:13:12.018Z"
+    },
+    {
+      "name": "No console.log in not-found-77d8c89fec5aca01.js",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.018Z"
+    },
+    {
+      "name": "JavaScript syntax in page-3d979dab57a4f51e.js",
+      "passed": true,
+      "severity": "critical",
+      "timestamp": "2025-09-20T17:13:12.018Z"
+    },
+    {
+      "name": "No console.log in page-3d979dab57a4f51e.js",
+      "passed": false,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.018Z"
+    },
+    {
+      "name": "JavaScript syntax in page-a5a9a25643cfe356.js",
+      "passed": true,
+      "severity": "critical",
+      "timestamp": "2025-09-20T17:13:12.018Z"
+    },
+    {
+      "name": "No console.log in page-a5a9a25643cfe356.js",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.018Z"
+    },
+    {
+      "name": "JavaScript syntax in page-038d90a36fc742e7.js",
+      "passed": true,
+      "severity": "critical",
+      "timestamp": "2025-09-20T17:13:12.018Z"
+    },
+    {
+      "name": "No console.log in page-038d90a36fc742e7.js",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.018Z"
+    },
+    {
+      "name": "JavaScript syntax in page-811cc58e3df7451e.js",
+      "passed": true,
+      "severity": "critical",
+      "timestamp": "2025-09-20T17:13:12.018Z"
+    },
+    {
+      "name": "No console.log in page-811cc58e3df7451e.js",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.018Z"
+    },
+    {
+      "name": "JavaScript syntax in page-46eefa1ddaf67d77.js",
+      "passed": true,
+      "severity": "critical",
+      "timestamp": "2025-09-20T17:13:12.018Z"
+    },
+    {
+      "name": "No console.log in page-46eefa1ddaf67d77.js",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.018Z"
+    },
+    {
+      "name": "JavaScript syntax in page-c507b756364dc045.js",
+      "passed": true,
+      "severity": "critical",
+      "timestamp": "2025-09-20T17:13:12.018Z"
+    },
+    {
+      "name": "No console.log in page-c507b756364dc045.js",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.018Z"
+    },
+    {
+      "name": "JavaScript syntax in page-c3da80d377bcfb13.js",
+      "passed": true,
+      "severity": "critical",
+      "timestamp": "2025-09-20T17:13:12.019Z"
+    },
+    {
+      "name": "No console.log in page-c3da80d377bcfb13.js",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.019Z"
+    },
+    {
+      "name": "JavaScript syntax in page-a8a9ac58fa4d436e.js",
+      "passed": true,
+      "severity": "critical",
+      "timestamp": "2025-09-20T17:13:12.019Z"
+    },
+    {
+      "name": "No console.log in page-a8a9ac58fa4d436e.js",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.019Z"
+    },
+    {
+      "name": "JavaScript syntax in page-d9882d44a87489c8.js",
+      "passed": true,
+      "severity": "critical",
+      "timestamp": "2025-09-20T17:13:12.019Z"
+    },
+    {
+      "name": "No console.log in page-d9882d44a87489c8.js",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.019Z"
+    },
+    {
+      "name": "JavaScript syntax in page-58f29115dfe8af2a.js",
+      "passed": true,
+      "severity": "critical",
+      "timestamp": "2025-09-20T17:13:12.019Z"
+    },
+    {
+      "name": "No console.log in page-58f29115dfe8af2a.js",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.019Z"
+    },
+    {
+      "name": "JavaScript syntax in page-989d3b73fc0650c8.js",
+      "passed": true,
+      "severity": "critical",
+      "timestamp": "2025-09-20T17:13:12.019Z"
+    },
+    {
+      "name": "No console.log in page-989d3b73fc0650c8.js",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.019Z"
+    },
+    {
+      "name": "JavaScript syntax in page-947d4c31b305446d.js",
+      "passed": true,
+      "severity": "critical",
+      "timestamp": "2025-09-20T17:13:12.019Z"
+    },
+    {
+      "name": "No console.log in page-947d4c31b305446d.js",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.019Z"
+    },
+    {
+      "name": "JavaScript syntax in page-71512a3f54fec972.js",
+      "passed": true,
+      "severity": "critical",
+      "timestamp": "2025-09-20T17:13:12.019Z"
+    },
+    {
+      "name": "No console.log in page-71512a3f54fec972.js",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.019Z"
+    },
+    {
+      "name": "JavaScript syntax in page-9ad558fb86e376ac.js",
+      "passed": true,
+      "severity": "critical",
+      "timestamp": "2025-09-20T17:13:12.019Z"
+    },
+    {
+      "name": "No console.log in page-9ad558fb86e376ac.js",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.019Z"
+    },
+    {
+      "name": "JavaScript syntax in page-71ac129a2ddcb352.js",
+      "passed": true,
+      "severity": "critical",
+      "timestamp": "2025-09-20T17:13:12.019Z"
+    },
+    {
+      "name": "No console.log in page-71ac129a2ddcb352.js",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.019Z"
+    },
+    {
+      "name": "JavaScript syntax in main-7b7bb642f0637cff.js",
+      "passed": true,
+      "severity": "critical",
+      "timestamp": "2025-09-20T17:13:12.019Z"
+    },
+    {
+      "name": "No console.log in main-7b7bb642f0637cff.js",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.019Z"
+    },
+    {
+      "name": "JavaScript syntax in main-app-4cdc51d22f43c1b3.js",
+      "passed": true,
+      "severity": "critical",
+      "timestamp": "2025-09-20T17:13:12.019Z"
+    },
+    {
+      "name": "No console.log in main-app-4cdc51d22f43c1b3.js",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.019Z"
+    },
+    {
+      "name": "JavaScript syntax in _app-e3c5f301a0f804d6.js",
+      "passed": true,
+      "severity": "critical",
+      "timestamp": "2025-09-20T17:13:12.019Z"
+    },
+    {
+      "name": "No console.log in _app-e3c5f301a0f804d6.js",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.019Z"
+    },
+    {
+      "name": "JavaScript syntax in _error-2f45668dbcd056fc.js",
+      "passed": true,
+      "severity": "critical",
+      "timestamp": "2025-09-20T17:13:12.019Z"
+    },
+    {
+      "name": "No console.log in _error-2f45668dbcd056fc.js",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.019Z"
+    },
+    {
+      "name": "JavaScript syntax in polyfills-42372ed130431b0a.js",
+      "passed": true,
+      "severity": "critical",
+      "timestamp": "2025-09-20T17:13:12.019Z"
+    },
+    {
+      "name": "No console.log in polyfills-42372ed130431b0a.js",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.019Z"
+    },
+    {
+      "name": "JavaScript syntax in vendors-359a1f64-8aca731c488537cb.js",
+      "passed": true,
+      "severity": "critical",
+      "timestamp": "2025-09-20T17:13:12.019Z"
+    },
+    {
+      "name": "No console.log in vendors-359a1f64-8aca731c488537cb.js",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.020Z"
+    },
+    {
+      "name": "JavaScript syntax in vendors-4a7382ad-8315efcf5e4fc90b.js",
+      "passed": true,
+      "severity": "critical",
+      "timestamp": "2025-09-20T17:13:12.020Z"
+    },
+    {
+      "name": "No console.log in vendors-4a7382ad-8315efcf5e4fc90b.js",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.020Z"
+    },
+    {
+      "name": "JavaScript syntax in vendors-4aa88247-e4d6c27e7c41eb54.js",
+      "passed": true,
+      "severity": "critical",
+      "timestamp": "2025-09-20T17:13:12.020Z"
+    },
+    {
+      "name": "No console.log in vendors-4aa88247-e4d6c27e7c41eb54.js",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.020Z"
+    },
+    {
+      "name": "JavaScript syntax in vendors-6b948b9f-7f72e26debbc19ba.js",
+      "passed": true,
+      "severity": "critical",
+      "timestamp": "2025-09-20T17:13:12.020Z"
+    },
+    {
+      "name": "No console.log in vendors-6b948b9f-7f72e26debbc19ba.js",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.020Z"
+    },
+    {
+      "name": "JavaScript syntax in vendors-89d5c698-302da197bf888669.js",
+      "passed": true,
+      "severity": "critical",
+      "timestamp": "2025-09-20T17:13:12.020Z"
+    },
+    {
+      "name": "No console.log in vendors-89d5c698-302da197bf888669.js",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.020Z"
+    },
+    {
+      "name": "JavaScript syntax in vendors-8cbd2506-b737cbf80979cb62.js",
+      "passed": true,
+      "severity": "critical",
+      "timestamp": "2025-09-20T17:13:12.020Z"
+    },
+    {
+      "name": "No console.log in vendors-8cbd2506-b737cbf80979cb62.js",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.020Z"
+    },
+    {
+      "name": "JavaScript syntax in vendors-8fbefdf3-4838b4b466343c29.js",
+      "passed": true,
+      "severity": "critical",
+      "timestamp": "2025-09-20T17:13:12.020Z"
+    },
+    {
+      "name": "No console.log in vendors-8fbefdf3-4838b4b466343c29.js",
+      "passed": false,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.020Z"
+    },
+    {
+      "name": "JavaScript syntax in vendors-a6f90180-ba8559790eb92e44.js",
+      "passed": true,
+      "severity": "critical",
+      "timestamp": "2025-09-20T17:13:12.020Z"
+    },
+    {
+      "name": "No console.log in vendors-a6f90180-ba8559790eb92e44.js",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.020Z"
+    },
+    {
+      "name": "JavaScript syntax in vendors-cfb98476-beed5eaecb8a7c51.js",
+      "passed": true,
+      "severity": "critical",
+      "timestamp": "2025-09-20T17:13:12.021Z"
+    },
+    {
+      "name": "No console.log in vendors-cfb98476-beed5eaecb8a7c51.js",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.021Z"
+    },
+    {
+      "name": "JavaScript syntax in vendors-d91c2bd6-6072917166511733.js",
+      "passed": true,
+      "severity": "critical",
+      "timestamp": "2025-09-20T17:13:12.021Z"
+    },
+    {
+      "name": "No console.log in vendors-d91c2bd6-6072917166511733.js",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.021Z"
+    },
+    {
+      "name": "JavaScript syntax in webpack-0f3dc8da88f1c143.js",
+      "passed": true,
+      "severity": "critical",
+      "timestamp": "2025-09-20T17:13:12.021Z"
+    },
+    {
+      "name": "No console.log in webpack-0f3dc8da88f1c143.js",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.021Z"
+    },
+    {
+      "name": "JavaScript syntax in security-headers.js",
+      "passed": true,
+      "severity": "critical",
+      "timestamp": "2025-09-20T17:13:12.021Z"
+    },
+    {
+      "name": "No console.log in security-headers.js",
+      "passed": false,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.021Z"
+    },
+    {
+      "name": "JavaScript syntax in service-worker.js",
+      "passed": true,
+      "severity": "critical",
+      "timestamp": "2025-09-20T17:13:12.021Z"
+    },
+    {
+      "name": "No console.log in service-worker.js",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.021Z"
+    },
+    {
+      "name": "JavaScript syntax in sw-dev.js",
+      "passed": true,
+      "severity": "critical",
+      "timestamp": "2025-09-20T17:13:12.021Z"
+    },
+    {
+      "name": "No console.log in sw-dev.js",
+      "passed": false,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.021Z"
+    },
+    {
+      "name": "JavaScript syntax in sw.js",
+      "passed": true,
+      "severity": "critical",
+      "timestamp": "2025-09-20T17:13:12.021Z"
+    },
+    {
+      "name": "No console.log in sw.js",
+      "passed": false,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.021Z"
+    },
+    {
+      "name": "Image size reasonable for favicon.svg",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.022Z"
+    },
+    {
+      "name": "Image file exists: favicon.svg",
+      "passed": true,
+      "severity": "info",
+      "timestamp": "2025-09-20T17:13:12.022Z"
+    },
+    {
+      "name": "Image size reasonable for tech-pattern.svg",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.022Z"
+    },
+    {
+      "name": "Image file exists: tech-pattern.svg",
+      "passed": true,
+      "severity": "info",
+      "timestamp": "2025-09-20T17:13:12.022Z"
+    },
+    {
+      "name": "Image size reasonable for og-image.svg",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.022Z"
+    },
+    {
+      "name": "Image file exists: og-image.svg",
+      "passed": true,
+      "severity": "info",
+      "timestamp": "2025-09-20T17:13:12.022Z"
+    },
+    {
+      "name": "Image size reasonable for vite.svg",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.022Z"
+    },
+    {
+      "name": "Image file exists: vite.svg",
+      "passed": true,
+      "severity": "info",
+      "timestamp": "2025-09-20T17:13:12.022Z"
+    },
+    {
+      "name": "Bundle size under 10MB",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.024Z"
+    },
+    {
+      "name": "Bundle size under 5MB",
+      "passed": false,
+      "severity": "info",
+      "timestamp": "2025-09-20T17:13:12.024Z"
+    },
+    {
+      "name": "No files larger than 1MB",
+      "passed": false,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.025Z"
+    },
+    {
+      "name": "Meta description in index.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.026Z"
+    },
+    {
+      "name": "Meta keywords in index.html",
+      "passed": false,
+      "severity": "info",
+      "timestamp": "2025-09-20T17:13:12.026Z"
+    },
+    {
+      "name": "Open Graph title in index.html",
+      "passed": false,
+      "severity": "info",
+      "timestamp": "2025-09-20T17:13:12.026Z"
+    },
+    {
+      "name": "Structured data in index.html",
+      "passed": false,
+      "severity": "info",
+      "timestamp": "2025-09-20T17:13:12.026Z"
+    },
+    {
+      "name": "Meta description in 404.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.026Z"
+    },
+    {
+      "name": "Meta keywords in 404.html",
+      "passed": false,
+      "severity": "info",
+      "timestamp": "2025-09-20T17:13:12.026Z"
+    },
+    {
+      "name": "Open Graph title in 404.html",
+      "passed": false,
+      "severity": "info",
+      "timestamp": "2025-09-20T17:13:12.026Z"
+    },
+    {
+      "name": "Structured data in 404.html",
+      "passed": false,
+      "severity": "info",
+      "timestamp": "2025-09-20T17:13:12.026Z"
+    },
+    {
+      "name": "Meta description in index.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.027Z"
+    },
+    {
+      "name": "Meta keywords in index.html",
+      "passed": true,
+      "severity": "info",
+      "timestamp": "2025-09-20T17:13:12.027Z"
+    },
+    {
+      "name": "Open Graph title in index.html",
+      "passed": true,
+      "severity": "info",
+      "timestamp": "2025-09-20T17:13:12.027Z"
+    },
+    {
+      "name": "Structured data in index.html",
+      "passed": false,
+      "severity": "info",
+      "timestamp": "2025-09-20T17:13:12.027Z"
+    },
+    {
+      "name": "Meta description in index.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.027Z"
+    },
+    {
+      "name": "Meta keywords in index.html",
+      "passed": false,
+      "severity": "info",
+      "timestamp": "2025-09-20T17:13:12.027Z"
+    },
+    {
+      "name": "Open Graph title in index.html",
+      "passed": false,
+      "severity": "info",
+      "timestamp": "2025-09-20T17:13:12.027Z"
+    },
+    {
+      "name": "Structured data in index.html",
+      "passed": false,
+      "severity": "info",
+      "timestamp": "2025-09-20T17:13:12.027Z"
+    },
+    {
+      "name": "Meta description in index.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.027Z"
+    },
+    {
+      "name": "Meta keywords in index.html",
+      "passed": true,
+      "severity": "info",
+      "timestamp": "2025-09-20T17:13:12.027Z"
+    },
+    {
+      "name": "Open Graph title in index.html",
+      "passed": false,
+      "severity": "info",
+      "timestamp": "2025-09-20T17:13:12.027Z"
+    },
+    {
+      "name": "Structured data in index.html",
+      "passed": false,
+      "severity": "info",
+      "timestamp": "2025-09-20T17:13:12.027Z"
+    },
+    {
+      "name": "Meta description in index.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.027Z"
+    },
+    {
+      "name": "Meta keywords in index.html",
+      "passed": true,
+      "severity": "info",
+      "timestamp": "2025-09-20T17:13:12.027Z"
+    },
+    {
+      "name": "Open Graph title in index.html",
+      "passed": false,
+      "severity": "info",
+      "timestamp": "2025-09-20T17:13:12.027Z"
+    },
+    {
+      "name": "Structured data in index.html",
+      "passed": false,
+      "severity": "info",
+      "timestamp": "2025-09-20T17:13:12.027Z"
+    },
+    {
+      "name": "Meta description in index.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.027Z"
+    },
+    {
+      "name": "Meta keywords in index.html",
+      "passed": true,
+      "severity": "info",
+      "timestamp": "2025-09-20T17:13:12.027Z"
+    },
+    {
+      "name": "Open Graph title in index.html",
+      "passed": false,
+      "severity": "info",
+      "timestamp": "2025-09-20T17:13:12.027Z"
+    },
+    {
+      "name": "Structured data in index.html",
+      "passed": false,
+      "severity": "info",
+      "timestamp": "2025-09-20T17:13:12.027Z"
+    },
+    {
+      "name": "Meta description in index.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.027Z"
+    },
+    {
+      "name": "Meta keywords in index.html",
+      "passed": false,
+      "severity": "info",
+      "timestamp": "2025-09-20T17:13:12.027Z"
+    },
+    {
+      "name": "Open Graph title in index.html",
+      "passed": false,
+      "severity": "info",
+      "timestamp": "2025-09-20T17:13:12.027Z"
+    },
+    {
+      "name": "Structured data in index.html",
+      "passed": false,
+      "severity": "info",
+      "timestamp": "2025-09-20T17:13:12.027Z"
+    },
+    {
+      "name": "Meta description in index.html",
+      "passed": false,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.027Z"
+    },
+    {
+      "name": "Meta keywords in index.html",
+      "passed": false,
+      "severity": "info",
+      "timestamp": "2025-09-20T17:13:12.027Z"
+    },
+    {
+      "name": "Open Graph title in index.html",
+      "passed": false,
+      "severity": "info",
+      "timestamp": "2025-09-20T17:13:12.027Z"
+    },
+    {
+      "name": "Structured data in index.html",
+      "passed": false,
+      "severity": "info",
+      "timestamp": "2025-09-20T17:13:12.027Z"
+    },
+    {
+      "name": "Meta description in index.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.027Z"
+    },
+    {
+      "name": "Meta keywords in index.html",
+      "passed": true,
+      "severity": "info",
+      "timestamp": "2025-09-20T17:13:12.027Z"
+    },
+    {
+      "name": "Open Graph title in index.html",
+      "passed": false,
+      "severity": "info",
+      "timestamp": "2025-09-20T17:13:12.027Z"
+    },
+    {
+      "name": "Structured data in index.html",
+      "passed": false,
+      "severity": "info",
+      "timestamp": "2025-09-20T17:13:12.027Z"
+    },
+    {
+      "name": "Meta description in index.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.027Z"
+    },
+    {
+      "name": "Meta keywords in index.html",
+      "passed": true,
+      "severity": "info",
+      "timestamp": "2025-09-20T17:13:12.027Z"
+    },
+    {
+      "name": "Open Graph title in index.html",
+      "passed": true,
+      "severity": "info",
+      "timestamp": "2025-09-20T17:13:12.027Z"
+    },
+    {
+      "name": "Structured data in index.html",
+      "passed": false,
+      "severity": "info",
+      "timestamp": "2025-09-20T17:13:12.027Z"
+    },
+    {
+      "name": "Meta description in index.html",
+      "passed": false,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.027Z"
+    },
+    {
+      "name": "Meta keywords in index.html",
+      "passed": false,
+      "severity": "info",
+      "timestamp": "2025-09-20T17:13:12.027Z"
+    },
+    {
+      "name": "Open Graph title in index.html",
+      "passed": false,
+      "severity": "info",
+      "timestamp": "2025-09-20T17:13:12.027Z"
+    },
+    {
+      "name": "Structured data in index.html",
+      "passed": false,
+      "severity": "info",
+      "timestamp": "2025-09-20T17:13:12.027Z"
+    },
+    {
+      "name": "Meta description in index.html",
+      "passed": false,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.028Z"
+    },
+    {
+      "name": "Meta keywords in index.html",
+      "passed": false,
+      "severity": "info",
+      "timestamp": "2025-09-20T17:13:12.028Z"
+    },
+    {
+      "name": "Open Graph title in index.html",
+      "passed": false,
+      "severity": "info",
+      "timestamp": "2025-09-20T17:13:12.028Z"
+    },
+    {
+      "name": "Structured data in index.html",
+      "passed": false,
+      "severity": "info",
+      "timestamp": "2025-09-20T17:13:12.028Z"
+    },
+    {
+      "name": "Meta description in index.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.028Z"
+    },
+    {
+      "name": "Meta keywords in index.html",
+      "passed": true,
+      "severity": "info",
+      "timestamp": "2025-09-20T17:13:12.028Z"
+    },
+    {
+      "name": "Open Graph title in index.html",
+      "passed": true,
+      "severity": "info",
+      "timestamp": "2025-09-20T17:13:12.028Z"
+    },
+    {
+      "name": "Structured data in index.html",
+      "passed": false,
+      "severity": "info",
+      "timestamp": "2025-09-20T17:13:12.028Z"
+    },
+    {
+      "name": "Meta description in index.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.028Z"
+    },
+    {
+      "name": "Meta keywords in index.html",
+      "passed": true,
+      "severity": "info",
+      "timestamp": "2025-09-20T17:13:12.028Z"
+    },
+    {
+      "name": "Open Graph title in index.html",
+      "passed": false,
+      "severity": "info",
+      "timestamp": "2025-09-20T17:13:12.028Z"
+    },
+    {
+      "name": "Structured data in index.html",
+      "passed": false,
+      "severity": "info",
+      "timestamp": "2025-09-20T17:13:12.028Z"
+    },
+    {
+      "name": "Meta description in index.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.028Z"
+    },
+    {
+      "name": "Meta keywords in index.html",
+      "passed": false,
+      "severity": "info",
+      "timestamp": "2025-09-20T17:13:12.028Z"
+    },
+    {
+      "name": "Open Graph title in index.html",
+      "passed": false,
+      "severity": "info",
+      "timestamp": "2025-09-20T17:13:12.028Z"
+    },
+    {
+      "name": "Structured data in index.html",
+      "passed": false,
+      "severity": "info",
+      "timestamp": "2025-09-20T17:13:12.028Z"
+    },
+    {
+      "name": "Meta description in index.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.028Z"
+    },
+    {
+      "name": "Meta keywords in index.html",
+      "passed": true,
+      "severity": "info",
+      "timestamp": "2025-09-20T17:13:12.028Z"
+    },
+    {
+      "name": "Open Graph title in index.html",
+      "passed": true,
+      "severity": "info",
+      "timestamp": "2025-09-20T17:13:12.028Z"
+    },
+    {
+      "name": "Structured data in index.html",
+      "passed": false,
+      "severity": "info",
+      "timestamp": "2025-09-20T17:13:12.028Z"
+    },
+    {
+      "name": "Meta description in index.html",
+      "passed": false,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.028Z"
+    },
+    {
+      "name": "Meta keywords in index.html",
+      "passed": false,
+      "severity": "info",
+      "timestamp": "2025-09-20T17:13:12.028Z"
+    },
+    {
+      "name": "Open Graph title in index.html",
+      "passed": false,
+      "severity": "info",
+      "timestamp": "2025-09-20T17:13:12.028Z"
+    },
+    {
+      "name": "Structured data in index.html",
+      "passed": false,
+      "severity": "info",
+      "timestamp": "2025-09-20T17:13:12.028Z"
+    },
+    {
+      "name": "Meta description in index.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.028Z"
+    },
+    {
+      "name": "Meta keywords in index.html",
+      "passed": true,
+      "severity": "info",
+      "timestamp": "2025-09-20T17:13:12.028Z"
+    },
+    {
+      "name": "Open Graph title in index.html",
+      "passed": false,
+      "severity": "info",
+      "timestamp": "2025-09-20T17:13:12.028Z"
+    },
+    {
+      "name": "Structured data in index.html",
+      "passed": false,
+      "severity": "info",
+      "timestamp": "2025-09-20T17:13:12.028Z"
+    },
+    {
+      "name": "Meta description in index.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.028Z"
+    },
+    {
+      "name": "Meta keywords in index.html",
+      "passed": true,
+      "severity": "info",
+      "timestamp": "2025-09-20T17:13:12.028Z"
+    },
+    {
+      "name": "Open Graph title in index.html",
+      "passed": true,
+      "severity": "info",
+      "timestamp": "2025-09-20T17:13:12.028Z"
+    },
+    {
+      "name": "Structured data in index.html",
+      "passed": true,
+      "severity": "info",
+      "timestamp": "2025-09-20T17:13:12.028Z"
+    },
+    {
+      "name": "Meta description in index.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.029Z"
+    },
+    {
+      "name": "Meta keywords in index.html",
+      "passed": true,
+      "severity": "info",
+      "timestamp": "2025-09-20T17:13:12.029Z"
+    },
+    {
+      "name": "Open Graph title in index.html",
+      "passed": true,
+      "severity": "info",
+      "timestamp": "2025-09-20T17:13:12.029Z"
+    },
+    {
+      "name": "Structured data in index.html",
+      "passed": false,
+      "severity": "info",
+      "timestamp": "2025-09-20T17:13:12.029Z"
+    },
+    {
+      "name": "Meta description in offline.html",
+      "passed": false,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.029Z"
+    },
+    {
+      "name": "Meta keywords in offline.html",
+      "passed": false,
+      "severity": "info",
+      "timestamp": "2025-09-20T17:13:12.029Z"
+    },
+    {
+      "name": "Open Graph title in offline.html",
+      "passed": false,
+      "severity": "info",
+      "timestamp": "2025-09-20T17:13:12.029Z"
+    },
+    {
+      "name": "Structured data in offline.html",
+      "passed": false,
+      "severity": "info",
+      "timestamp": "2025-09-20T17:13:12.029Z"
+    },
+    {
+      "name": "Meta description in index.html",
+      "passed": false,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.029Z"
+    },
+    {
+      "name": "Meta keywords in index.html",
+      "passed": false,
+      "severity": "info",
+      "timestamp": "2025-09-20T17:13:12.029Z"
+    },
+    {
+      "name": "Open Graph title in index.html",
+      "passed": false,
+      "severity": "info",
+      "timestamp": "2025-09-20T17:13:12.029Z"
+    },
+    {
+      "name": "Structured data in index.html",
+      "passed": false,
+      "severity": "info",
+      "timestamp": "2025-09-20T17:13:12.029Z"
+    },
+    {
+      "name": "Meta description in index.html",
+      "passed": false,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.029Z"
+    },
+    {
+      "name": "Meta keywords in index.html",
+      "passed": false,
+      "severity": "info",
+      "timestamp": "2025-09-20T17:13:12.029Z"
+    },
+    {
+      "name": "Open Graph title in index.html",
+      "passed": false,
+      "severity": "info",
+      "timestamp": "2025-09-20T17:13:12.029Z"
+    },
+    {
+      "name": "Structured data in index.html",
+      "passed": false,
+      "severity": "info",
+      "timestamp": "2025-09-20T17:13:12.029Z"
+    },
+    {
+      "name": "Meta description in index.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.029Z"
+    },
+    {
+      "name": "Meta keywords in index.html",
+      "passed": true,
+      "severity": "info",
+      "timestamp": "2025-09-20T17:13:12.029Z"
+    },
+    {
+      "name": "Open Graph title in index.html",
+      "passed": true,
+      "severity": "info",
+      "timestamp": "2025-09-20T17:13:12.029Z"
+    },
+    {
+      "name": "Structured data in index.html",
+      "passed": false,
+      "severity": "info",
+      "timestamp": "2025-09-20T17:13:12.029Z"
+    },
+    {
+      "name": "Meta description in index.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.029Z"
+    },
+    {
+      "name": "Meta keywords in index.html",
+      "passed": true,
+      "severity": "info",
+      "timestamp": "2025-09-20T17:13:12.029Z"
+    },
+    {
+      "name": "Open Graph title in index.html",
+      "passed": true,
+      "severity": "info",
+      "timestamp": "2025-09-20T17:13:12.029Z"
+    },
+    {
+      "name": "Structured data in index.html",
+      "passed": false,
+      "severity": "info",
+      "timestamp": "2025-09-20T17:13:12.029Z"
+    },
+    {
+      "name": "Meta description in index.html",
+      "passed": false,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.029Z"
+    },
+    {
+      "name": "Meta keywords in index.html",
+      "passed": false,
+      "severity": "info",
+      "timestamp": "2025-09-20T17:13:12.029Z"
+    },
+    {
+      "name": "Open Graph title in index.html",
+      "passed": false,
+      "severity": "info",
+      "timestamp": "2025-09-20T17:13:12.029Z"
+    },
+    {
+      "name": "Structured data in index.html",
+      "passed": false,
+      "severity": "info",
+      "timestamp": "2025-09-20T17:13:12.029Z"
+    },
+    {
+      "name": "Meta description in index.html",
+      "passed": false,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.029Z"
+    },
+    {
+      "name": "Meta keywords in index.html",
+      "passed": false,
+      "severity": "info",
+      "timestamp": "2025-09-20T17:13:12.029Z"
+    },
+    {
+      "name": "Open Graph title in index.html",
+      "passed": false,
+      "severity": "info",
+      "timestamp": "2025-09-20T17:13:12.029Z"
+    },
+    {
+      "name": "Structured data in index.html",
+      "passed": false,
+      "severity": "info",
+      "timestamp": "2025-09-20T17:13:12.029Z"
+    },
+    {
+      "name": "Meta description in index.html",
+      "passed": false,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.033Z"
+    },
+    {
+      "name": "Meta keywords in index.html",
+      "passed": false,
+      "severity": "info",
+      "timestamp": "2025-09-20T17:13:12.033Z"
+    },
+    {
+      "name": "Open Graph title in index.html",
+      "passed": false,
+      "severity": "info",
+      "timestamp": "2025-09-20T17:13:12.034Z"
+    },
+    {
+      "name": "Structured data in index.html",
+      "passed": false,
+      "severity": "info",
+      "timestamp": "2025-09-20T17:13:12.034Z"
+    },
+    {
+      "name": "Meta description in index.html",
+      "passed": false,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.034Z"
+    },
+    {
+      "name": "Meta keywords in index.html",
+      "passed": false,
+      "severity": "info",
+      "timestamp": "2025-09-20T17:13:12.034Z"
+    },
+    {
+      "name": "Open Graph title in index.html",
+      "passed": false,
+      "severity": "info",
+      "timestamp": "2025-09-20T17:13:12.034Z"
+    },
+    {
+      "name": "Structured data in index.html",
+      "passed": false,
+      "severity": "info",
+      "timestamp": "2025-09-20T17:13:12.034Z"
+    },
+    {
+      "name": "Meta description in index.html",
+      "passed": false,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.034Z"
+    },
+    {
+      "name": "Meta keywords in index.html",
+      "passed": false,
+      "severity": "info",
+      "timestamp": "2025-09-20T17:13:12.034Z"
+    },
+    {
+      "name": "Open Graph title in index.html",
+      "passed": false,
+      "severity": "info",
+      "timestamp": "2025-09-20T17:13:12.034Z"
+    },
+    {
+      "name": "Structured data in index.html",
+      "passed": false,
+      "severity": "info",
+      "timestamp": "2025-09-20T17:13:12.034Z"
+    },
+    {
+      "name": "Meta description in index.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.034Z"
+    },
+    {
+      "name": "Meta keywords in index.html",
+      "passed": true,
+      "severity": "info",
+      "timestamp": "2025-09-20T17:13:12.034Z"
+    },
+    {
+      "name": "Open Graph title in index.html",
+      "passed": true,
+      "severity": "info",
+      "timestamp": "2025-09-20T17:13:12.034Z"
+    },
+    {
+      "name": "Structured data in index.html",
+      "passed": false,
+      "severity": "info",
+      "timestamp": "2025-09-20T17:13:12.034Z"
+    },
+    {
+      "name": "Meta description in test-sw.html",
+      "passed": false,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.034Z"
+    },
+    {
+      "name": "Meta keywords in test-sw.html",
+      "passed": false,
+      "severity": "info",
+      "timestamp": "2025-09-20T17:13:12.034Z"
+    },
+    {
+      "name": "Open Graph title in test-sw.html",
+      "passed": false,
+      "severity": "info",
+      "timestamp": "2025-09-20T17:13:12.034Z"
+    },
+    {
+      "name": "Structured data in test-sw.html",
+      "passed": false,
+      "severity": "info",
+      "timestamp": "2025-09-20T17:13:12.034Z"
+    },
+    {
+      "name": "Meta description in index.html",
+      "passed": false,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.034Z"
+    },
+    {
+      "name": "Meta keywords in index.html",
+      "passed": false,
+      "severity": "info",
+      "timestamp": "2025-09-20T17:13:12.035Z"
+    },
+    {
+      "name": "Open Graph title in index.html",
+      "passed": false,
+      "severity": "info",
+      "timestamp": "2025-09-20T17:13:12.035Z"
+    },
+    {
+      "name": "Structured data in index.html",
+      "passed": false,
+      "severity": "info",
+      "timestamp": "2025-09-20T17:13:12.035Z"
+    },
+    {
+      "name": "Meta description in index.html",
+      "passed": false,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.035Z"
+    },
+    {
+      "name": "Meta keywords in index.html",
+      "passed": false,
+      "severity": "info",
+      "timestamp": "2025-09-20T17:13:12.035Z"
+    },
+    {
+      "name": "Open Graph title in index.html",
+      "passed": false,
+      "severity": "info",
+      "timestamp": "2025-09-20T17:13:12.035Z"
+    },
+    {
+      "name": "Structured data in index.html",
+      "passed": false,
+      "severity": "info",
+      "timestamp": "2025-09-20T17:13:12.035Z"
+    },
+    {
+      "name": "Meta description in index.html",
+      "passed": false,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.035Z"
+    },
+    {
+      "name": "Meta keywords in index.html",
+      "passed": false,
+      "severity": "info",
+      "timestamp": "2025-09-20T17:13:12.035Z"
+    },
+    {
+      "name": "Open Graph title in index.html",
+      "passed": false,
+      "severity": "info",
+      "timestamp": "2025-09-20T17:13:12.035Z"
+    },
+    {
+      "name": "Structured data in index.html",
+      "passed": false,
+      "severity": "info",
+      "timestamp": "2025-09-20T17:13:12.035Z"
+    },
+    {
+      "name": "Meta description in index.html",
+      "passed": false,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.035Z"
+    },
+    {
+      "name": "Meta keywords in index.html",
+      "passed": false,
+      "severity": "info",
+      "timestamp": "2025-09-20T17:13:12.035Z"
+    },
+    {
+      "name": "Open Graph title in index.html",
+      "passed": false,
+      "severity": "info",
+      "timestamp": "2025-09-20T17:13:12.035Z"
+    },
+    {
+      "name": "Structured data in index.html",
+      "passed": false,
+      "severity": "info",
+      "timestamp": "2025-09-20T17:13:12.035Z"
+    },
+    {
+      "name": "Meta description in index.html",
+      "passed": false,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.035Z"
+    },
+    {
+      "name": "Meta keywords in index.html",
+      "passed": false,
+      "severity": "info",
+      "timestamp": "2025-09-20T17:13:12.035Z"
+    },
+    {
+      "name": "Open Graph title in index.html",
+      "passed": false,
+      "severity": "info",
+      "timestamp": "2025-09-20T17:13:12.035Z"
+    },
+    {
+      "name": "Structured data in index.html",
+      "passed": false,
+      "severity": "info",
+      "timestamp": "2025-09-20T17:13:12.035Z"
+    },
+    {
+      "name": "Meta description in index.html",
+      "passed": false,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.035Z"
+    },
+    {
+      "name": "Meta keywords in index.html",
+      "passed": false,
+      "severity": "info",
+      "timestamp": "2025-09-20T17:13:12.035Z"
+    },
+    {
+      "name": "Open Graph title in index.html",
+      "passed": false,
+      "severity": "info",
+      "timestamp": "2025-09-20T17:13:12.035Z"
+    },
+    {
+      "name": "Structured data in index.html",
+      "passed": false,
+      "severity": "info",
+      "timestamp": "2025-09-20T17:13:12.035Z"
+    },
+    {
+      "name": "Meta description in index.html",
+      "passed": false,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.035Z"
+    },
+    {
+      "name": "Meta keywords in index.html",
+      "passed": false,
+      "severity": "info",
+      "timestamp": "2025-09-20T17:13:12.035Z"
+    },
+    {
+      "name": "Open Graph title in index.html",
+      "passed": false,
+      "severity": "info",
+      "timestamp": "2025-09-20T17:13:12.035Z"
+    },
+    {
+      "name": "Structured data in index.html",
+      "passed": false,
+      "severity": "info",
+      "timestamp": "2025-09-20T17:13:12.035Z"
+    },
+    {
+      "name": "Meta description in index.html",
+      "passed": false,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.035Z"
+    },
+    {
+      "name": "Meta keywords in index.html",
+      "passed": false,
+      "severity": "info",
+      "timestamp": "2025-09-20T17:13:12.035Z"
+    },
+    {
+      "name": "Open Graph title in index.html",
+      "passed": false,
+      "severity": "info",
+      "timestamp": "2025-09-20T17:13:12.035Z"
+    },
+    {
+      "name": "Structured data in index.html",
+      "passed": false,
+      "severity": "info",
+      "timestamp": "2025-09-20T17:13:12.035Z"
+    },
+    {
+      "name": "Meta description in index.html",
+      "passed": false,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.035Z"
+    },
+    {
+      "name": "Meta keywords in index.html",
+      "passed": false,
+      "severity": "info",
+      "timestamp": "2025-09-20T17:13:12.035Z"
+    },
+    {
+      "name": "Open Graph title in index.html",
+      "passed": false,
+      "severity": "info",
+      "timestamp": "2025-09-20T17:13:12.035Z"
+    },
+    {
+      "name": "Structured data in index.html",
+      "passed": false,
+      "severity": "info",
+      "timestamp": "2025-09-20T17:13:12.035Z"
+    },
+    {
+      "name": "Meta description in index.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.036Z"
+    },
+    {
+      "name": "Meta keywords in index.html",
+      "passed": true,
+      "severity": "info",
+      "timestamp": "2025-09-20T17:13:12.036Z"
+    },
+    {
+      "name": "Open Graph title in index.html",
+      "passed": true,
+      "severity": "info",
+      "timestamp": "2025-09-20T17:13:12.036Z"
+    },
+    {
+      "name": "Structured data in index.html",
+      "passed": false,
+      "severity": "info",
+      "timestamp": "2025-09-20T17:13:12.036Z"
+    },
+    {
+      "name": "Meta description in index.html",
+      "passed": false,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.036Z"
+    },
+    {
+      "name": "Meta keywords in index.html",
+      "passed": false,
+      "severity": "info",
+      "timestamp": "2025-09-20T17:13:12.036Z"
+    },
+    {
+      "name": "Open Graph title in index.html",
+      "passed": false,
+      "severity": "info",
+      "timestamp": "2025-09-20T17:13:12.036Z"
+    },
+    {
+      "name": "Structured data in index.html",
+      "passed": false,
+      "severity": "info",
+      "timestamp": "2025-09-20T17:13:12.036Z"
+    },
+    {
+      "name": "Meta description in index.html",
+      "passed": false,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.036Z"
+    },
+    {
+      "name": "Meta keywords in index.html",
+      "passed": false,
+      "severity": "info",
+      "timestamp": "2025-09-20T17:13:12.036Z"
+    },
+    {
+      "name": "Open Graph title in index.html",
+      "passed": false,
+      "severity": "info",
+      "timestamp": "2025-09-20T17:13:12.036Z"
+    },
+    {
+      "name": "Structured data in index.html",
+      "passed": false,
+      "severity": "info",
+      "timestamp": "2025-09-20T17:13:12.036Z"
+    },
+    {
+      "name": "Alt attributes on images in index.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.037Z"
+    },
+    {
+      "name": "H1 tag in index.html",
+      "passed": false,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.037Z"
+    },
+    {
+      "name": "Form labels in index.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.037Z"
+    },
+    {
+      "name": "Alt attributes on images in 404.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.037Z"
+    },
+    {
+      "name": "H1 tag in 404.html",
+      "passed": false,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.037Z"
+    },
+    {
+      "name": "Form labels in 404.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.037Z"
+    },
+    {
+      "name": "Alt attributes on images in index.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.037Z"
+    },
+    {
+      "name": "H1 tag in index.html",
+      "passed": false,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.037Z"
+    },
+    {
+      "name": "Form labels in index.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.037Z"
+    },
+    {
+      "name": "Alt attributes on images in index.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.037Z"
+    },
+    {
+      "name": "H1 tag in index.html",
+      "passed": false,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.037Z"
+    },
+    {
+      "name": "Form labels in index.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.037Z"
+    },
+    {
+      "name": "Alt attributes on images in index.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.037Z"
+    },
+    {
+      "name": "H1 tag in index.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.037Z"
+    },
+    {
+      "name": "Form labels in index.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.037Z"
+    },
+    {
+      "name": "Alt attributes on images in index.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.037Z"
+    },
+    {
+      "name": "H1 tag in index.html",
+      "passed": false,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.037Z"
+    },
+    {
+      "name": "Form labels in index.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.037Z"
+    },
+    {
+      "name": "Alt attributes on images in index.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.037Z"
+    },
+    {
+      "name": "H1 tag in index.html",
+      "passed": false,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.037Z"
+    },
+    {
+      "name": "Form labels in index.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.037Z"
+    },
+    {
+      "name": "Alt attributes on images in index.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.037Z"
+    },
+    {
+      "name": "H1 tag in index.html",
+      "passed": false,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.037Z"
+    },
+    {
+      "name": "Form labels in index.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.037Z"
+    },
+    {
+      "name": "Alt attributes on images in index.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.037Z"
+    },
+    {
+      "name": "H1 tag in index.html",
+      "passed": false,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.037Z"
+    },
+    {
+      "name": "Form labels in index.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.037Z"
+    },
+    {
+      "name": "Alt attributes on images in index.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.037Z"
+    },
+    {
+      "name": "H1 tag in index.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.037Z"
+    },
+    {
+      "name": "Form labels in index.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.037Z"
+    },
+    {
+      "name": "Alt attributes on images in index.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.038Z"
+    },
+    {
+      "name": "H1 tag in index.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.038Z"
+    },
+    {
+      "name": "Form labels in index.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.038Z"
+    },
+    {
+      "name": "Alt attributes on images in index.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.038Z"
+    },
+    {
+      "name": "H1 tag in index.html",
+      "passed": false,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.038Z"
+    },
+    {
+      "name": "Form labels in index.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.038Z"
+    },
+    {
+      "name": "Alt attributes on images in index.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.038Z"
+    },
+    {
+      "name": "H1 tag in index.html",
+      "passed": false,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.038Z"
+    },
+    {
+      "name": "Form labels in index.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.038Z"
+    },
+    {
+      "name": "Alt attributes on images in index.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.038Z"
+    },
+    {
+      "name": "H1 tag in index.html",
+      "passed": false,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.038Z"
+    },
+    {
+      "name": "Form labels in index.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.038Z"
+    },
+    {
+      "name": "Alt attributes on images in index.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.038Z"
+    },
+    {
+      "name": "H1 tag in index.html",
+      "passed": false,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.038Z"
+    },
+    {
+      "name": "Form labels in index.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.038Z"
+    },
+    {
+      "name": "Alt attributes on images in index.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.038Z"
+    },
+    {
+      "name": "H1 tag in index.html",
+      "passed": false,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.038Z"
+    },
+    {
+      "name": "Form labels in index.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.038Z"
+    },
+    {
+      "name": "Alt attributes on images in index.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.038Z"
+    },
+    {
+      "name": "H1 tag in index.html",
+      "passed": false,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.038Z"
+    },
+    {
+      "name": "Form labels in index.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.038Z"
+    },
+    {
+      "name": "Alt attributes on images in index.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.038Z"
+    },
+    {
+      "name": "H1 tag in index.html",
+      "passed": false,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.038Z"
+    },
+    {
+      "name": "Form labels in index.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.038Z"
+    },
+    {
+      "name": "Alt attributes on images in index.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.038Z"
+    },
+    {
+      "name": "H1 tag in index.html",
+      "passed": false,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.038Z"
+    },
+    {
+      "name": "Form labels in index.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.038Z"
+    },
+    {
+      "name": "Alt attributes on images in index.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.038Z"
+    },
+    {
+      "name": "H1 tag in index.html",
+      "passed": false,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.038Z"
+    },
+    {
+      "name": "Form labels in index.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.038Z"
+    },
+    {
+      "name": "Alt attributes on images in index.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.039Z"
+    },
+    {
+      "name": "H1 tag in index.html",
+      "passed": false,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.039Z"
+    },
+    {
+      "name": "Form labels in index.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.039Z"
+    },
+    {
+      "name": "Alt attributes on images in offline.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.039Z"
+    },
+    {
+      "name": "H1 tag in offline.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.039Z"
+    },
+    {
+      "name": "Form labels in offline.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.039Z"
+    },
+    {
+      "name": "Alt attributes on images in index.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.039Z"
+    },
+    {
+      "name": "H1 tag in index.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.039Z"
+    },
+    {
+      "name": "Form labels in index.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.039Z"
+    },
+    {
+      "name": "Alt attributes on images in index.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.040Z"
+    },
+    {
+      "name": "H1 tag in index.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.040Z"
+    },
+    {
+      "name": "Form labels in index.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.040Z"
+    },
+    {
+      "name": "Alt attributes on images in index.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.040Z"
+    },
+    {
+      "name": "H1 tag in index.html",
+      "passed": false,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.040Z"
+    },
+    {
+      "name": "Form labels in index.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.040Z"
+    },
+    {
+      "name": "Alt attributes on images in index.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.040Z"
+    },
+    {
+      "name": "H1 tag in index.html",
+      "passed": false,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.040Z"
+    },
+    {
+      "name": "Form labels in index.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.040Z"
+    },
+    {
+      "name": "Alt attributes on images in index.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.040Z"
+    },
+    {
+      "name": "H1 tag in index.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.040Z"
+    },
+    {
+      "name": "Form labels in index.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.040Z"
+    },
+    {
+      "name": "Alt attributes on images in index.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.040Z"
+    },
+    {
+      "name": "H1 tag in index.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.040Z"
+    },
+    {
+      "name": "Form labels in index.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.040Z"
+    },
+    {
+      "name": "Alt attributes on images in index.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.043Z"
+    },
+    {
+      "name": "H1 tag in index.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.043Z"
+    },
+    {
+      "name": "Form labels in index.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.044Z"
+    },
+    {
+      "name": "Alt attributes on images in index.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.044Z"
+    },
+    {
+      "name": "H1 tag in index.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.044Z"
+    },
+    {
+      "name": "Form labels in index.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.044Z"
+    },
+    {
+      "name": "Alt attributes on images in index.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.044Z"
+    },
+    {
+      "name": "H1 tag in index.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.044Z"
+    },
+    {
+      "name": "Form labels in index.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.044Z"
+    },
+    {
+      "name": "Alt attributes on images in index.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.044Z"
+    },
+    {
+      "name": "H1 tag in index.html",
+      "passed": false,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.044Z"
+    },
+    {
+      "name": "Form labels in index.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.044Z"
+    },
+    {
+      "name": "Alt attributes on images in test-sw.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.044Z"
+    },
+    {
+      "name": "H1 tag in test-sw.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.044Z"
+    },
+    {
+      "name": "Form labels in test-sw.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.044Z"
+    },
+    {
+      "name": "Alt attributes on images in index.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.044Z"
+    },
+    {
+      "name": "H1 tag in index.html",
+      "passed": false,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.044Z"
+    },
+    {
+      "name": "Form labels in index.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.044Z"
+    },
+    {
+      "name": "Alt attributes on images in index.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.044Z"
+    },
+    {
+      "name": "H1 tag in index.html",
+      "passed": false,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.044Z"
+    },
+    {
+      "name": "Form labels in index.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.044Z"
+    },
+    {
+      "name": "Alt attributes on images in index.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.044Z"
+    },
+    {
+      "name": "H1 tag in index.html",
+      "passed": false,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.044Z"
+    },
+    {
+      "name": "Form labels in index.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.044Z"
+    },
+    {
+      "name": "Alt attributes on images in index.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.044Z"
+    },
+    {
+      "name": "H1 tag in index.html",
+      "passed": false,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.044Z"
+    },
+    {
+      "name": "Form labels in index.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.044Z"
+    },
+    {
+      "name": "Alt attributes on images in index.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.044Z"
+    },
+    {
+      "name": "H1 tag in index.html",
+      "passed": false,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.044Z"
+    },
+    {
+      "name": "Form labels in index.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.045Z"
+    },
+    {
+      "name": "Alt attributes on images in index.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.045Z"
+    },
+    {
+      "name": "H1 tag in index.html",
+      "passed": false,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.045Z"
+    },
+    {
+      "name": "Form labels in index.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.045Z"
+    },
+    {
+      "name": "Alt attributes on images in index.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.045Z"
+    },
+    {
+      "name": "H1 tag in index.html",
+      "passed": false,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.045Z"
+    },
+    {
+      "name": "Form labels in index.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.045Z"
+    },
+    {
+      "name": "Alt attributes on images in index.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.045Z"
+    },
+    {
+      "name": "H1 tag in index.html",
+      "passed": false,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.045Z"
+    },
+    {
+      "name": "Form labels in index.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.045Z"
+    },
+    {
+      "name": "Alt attributes on images in index.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.045Z"
+    },
+    {
+      "name": "H1 tag in index.html",
+      "passed": false,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.045Z"
+    },
+    {
+      "name": "Form labels in index.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.045Z"
+    },
+    {
+      "name": "Alt attributes on images in index.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.045Z"
+    },
+    {
+      "name": "H1 tag in index.html",
+      "passed": false,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.045Z"
+    },
+    {
+      "name": "Form labels in index.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.045Z"
+    },
+    {
+      "name": "Alt attributes on images in index.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.045Z"
+    },
+    {
+      "name": "H1 tag in index.html",
+      "passed": false,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.045Z"
+    },
+    {
+      "name": "Form labels in index.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.045Z"
+    },
+    {
+      "name": "Alt attributes on images in index.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.046Z"
+    },
+    {
+      "name": "H1 tag in index.html",
+      "passed": false,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.046Z"
+    },
+    {
+      "name": "Form labels in index.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.046Z"
+    },
+    {
+      "name": "No inline scripts in index.html",
+      "passed": false,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.046Z"
+    },
+    {
+      "name": "Script integrity in index.html",
+      "passed": false,
+      "severity": "info",
+      "timestamp": "2025-09-20T17:13:12.047Z"
+    },
+    {
+      "name": "No inline scripts in 404.html",
+      "passed": false,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.047Z"
+    },
+    {
+      "name": "Script integrity in 404.html",
+      "passed": false,
+      "severity": "info",
+      "timestamp": "2025-09-20T17:13:12.047Z"
+    },
+    {
+      "name": "No inline scripts in index.html",
+      "passed": false,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.047Z"
+    },
+    {
+      "name": "Script integrity in index.html",
+      "passed": false,
+      "severity": "info",
+      "timestamp": "2025-09-20T17:13:12.047Z"
+    },
+    {
+      "name": "No inline scripts in index.html",
+      "passed": false,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.047Z"
+    },
+    {
+      "name": "Script integrity in index.html",
+      "passed": false,
+      "severity": "info",
+      "timestamp": "2025-09-20T17:13:12.047Z"
+    },
+    {
+      "name": "No inline scripts in index.html",
+      "passed": false,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.047Z"
+    },
+    {
+      "name": "Script integrity in index.html",
+      "passed": false,
+      "severity": "info",
+      "timestamp": "2025-09-20T17:13:12.047Z"
+    },
+    {
+      "name": "No inline scripts in index.html",
+      "passed": false,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.047Z"
+    },
+    {
+      "name": "Script integrity in index.html",
+      "passed": false,
+      "severity": "info",
+      "timestamp": "2025-09-20T17:13:12.047Z"
+    },
+    {
+      "name": "No inline scripts in index.html",
+      "passed": false,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.047Z"
+    },
+    {
+      "name": "Script integrity in index.html",
+      "passed": false,
+      "severity": "info",
+      "timestamp": "2025-09-20T17:13:12.047Z"
+    },
+    {
+      "name": "No inline scripts in index.html",
+      "passed": false,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.047Z"
+    },
+    {
+      "name": "Script integrity in index.html",
+      "passed": false,
+      "severity": "info",
+      "timestamp": "2025-09-20T17:13:12.047Z"
+    },
+    {
+      "name": "No inline scripts in index.html",
+      "passed": false,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.047Z"
+    },
+    {
+      "name": "Script integrity in index.html",
+      "passed": false,
+      "severity": "info",
+      "timestamp": "2025-09-20T17:13:12.047Z"
+    },
+    {
+      "name": "No inline scripts in index.html",
+      "passed": false,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.047Z"
+    },
+    {
+      "name": "Script integrity in index.html",
+      "passed": false,
+      "severity": "info",
+      "timestamp": "2025-09-20T17:13:12.047Z"
+    },
+    {
+      "name": "No inline scripts in index.html",
+      "passed": false,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.047Z"
+    },
+    {
+      "name": "Script integrity in index.html",
+      "passed": false,
+      "severity": "info",
+      "timestamp": "2025-09-20T17:13:12.047Z"
+    },
+    {
+      "name": "No inline scripts in index.html",
+      "passed": false,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.047Z"
+    },
+    {
+      "name": "Script integrity in index.html",
+      "passed": false,
+      "severity": "info",
+      "timestamp": "2025-09-20T17:13:12.047Z"
+    },
+    {
+      "name": "No inline scripts in index.html",
+      "passed": false,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.048Z"
+    },
+    {
+      "name": "Script integrity in index.html",
+      "passed": false,
+      "severity": "info",
+      "timestamp": "2025-09-20T17:13:12.048Z"
+    },
+    {
+      "name": "No inline scripts in index.html",
+      "passed": false,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.048Z"
+    },
+    {
+      "name": "Script integrity in index.html",
+      "passed": false,
+      "severity": "info",
+      "timestamp": "2025-09-20T17:13:12.048Z"
+    },
+    {
+      "name": "No inline scripts in index.html",
+      "passed": false,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.048Z"
+    },
+    {
+      "name": "Script integrity in index.html",
+      "passed": false,
+      "severity": "info",
+      "timestamp": "2025-09-20T17:13:12.048Z"
+    },
+    {
+      "name": "No inline scripts in index.html",
+      "passed": false,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.048Z"
+    },
+    {
+      "name": "Script integrity in index.html",
+      "passed": false,
+      "severity": "info",
+      "timestamp": "2025-09-20T17:13:12.048Z"
+    },
+    {
+      "name": "No inline scripts in index.html",
+      "passed": false,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.048Z"
+    },
+    {
+      "name": "Script integrity in index.html",
+      "passed": false,
+      "severity": "info",
+      "timestamp": "2025-09-20T17:13:12.048Z"
+    },
+    {
+      "name": "No inline scripts in index.html",
+      "passed": false,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.048Z"
+    },
+    {
+      "name": "Script integrity in index.html",
+      "passed": false,
+      "severity": "info",
+      "timestamp": "2025-09-20T17:13:12.048Z"
+    },
+    {
+      "name": "No inline scripts in index.html",
+      "passed": false,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.048Z"
+    },
+    {
+      "name": "Script integrity in index.html",
+      "passed": false,
+      "severity": "info",
+      "timestamp": "2025-09-20T17:13:12.048Z"
+    },
+    {
+      "name": "No inline scripts in index.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.048Z"
+    },
+    {
+      "name": "Script integrity in index.html",
+      "passed": true,
+      "severity": "info",
+      "timestamp": "2025-09-20T17:13:12.048Z"
+    },
+    {
+      "name": "No inline scripts in index.html",
+      "passed": false,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.049Z"
+    },
+    {
+      "name": "Script integrity in index.html",
+      "passed": false,
+      "severity": "info",
+      "timestamp": "2025-09-20T17:13:12.049Z"
+    },
+    {
+      "name": "No inline scripts in offline.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.049Z"
+    },
+    {
+      "name": "Script integrity in offline.html",
+      "passed": true,
+      "severity": "info",
+      "timestamp": "2025-09-20T17:13:12.049Z"
+    },
+    {
+      "name": "No inline scripts in index.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.049Z"
+    },
+    {
+      "name": "Script integrity in index.html",
+      "passed": true,
+      "severity": "info",
+      "timestamp": "2025-09-20T17:13:12.049Z"
+    },
+    {
+      "name": "No inline scripts in index.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.049Z"
+    },
+    {
+      "name": "Script integrity in index.html",
+      "passed": true,
+      "severity": "info",
+      "timestamp": "2025-09-20T17:13:12.049Z"
+    },
+    {
+      "name": "No inline scripts in index.html",
+      "passed": false,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.049Z"
+    },
+    {
+      "name": "Script integrity in index.html",
+      "passed": false,
+      "severity": "info",
+      "timestamp": "2025-09-20T17:13:12.049Z"
+    },
+    {
+      "name": "No inline scripts in index.html",
+      "passed": false,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.049Z"
+    },
+    {
+      "name": "Script integrity in index.html",
+      "passed": false,
+      "severity": "info",
+      "timestamp": "2025-09-20T17:13:12.049Z"
+    },
+    {
+      "name": "No inline scripts in index.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.050Z"
+    },
+    {
+      "name": "Script integrity in index.html",
+      "passed": true,
+      "severity": "info",
+      "timestamp": "2025-09-20T17:13:12.050Z"
+    },
+    {
+      "name": "No inline scripts in index.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.050Z"
+    },
+    {
+      "name": "Script integrity in index.html",
+      "passed": true,
+      "severity": "info",
+      "timestamp": "2025-09-20T17:13:12.050Z"
+    },
+    {
+      "name": "No inline scripts in index.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.053Z"
+    },
+    {
+      "name": "Script integrity in index.html",
+      "passed": true,
+      "severity": "info",
+      "timestamp": "2025-09-20T17:13:12.053Z"
+    },
+    {
+      "name": "No inline scripts in index.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.053Z"
+    },
+    {
+      "name": "Script integrity in index.html",
+      "passed": true,
+      "severity": "info",
+      "timestamp": "2025-09-20T17:13:12.053Z"
+    },
+    {
+      "name": "No inline scripts in index.html",
+      "passed": true,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.053Z"
+    },
+    {
+      "name": "Script integrity in index.html",
+      "passed": true,
+      "severity": "info",
+      "timestamp": "2025-09-20T17:13:12.053Z"
+    },
+    {
+      "name": "No inline scripts in index.html",
+      "passed": false,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.054Z"
+    },
+    {
+      "name": "Script integrity in index.html",
+      "passed": false,
+      "severity": "info",
+      "timestamp": "2025-09-20T17:13:12.054Z"
+    },
+    {
+      "name": "No inline scripts in test-sw.html",
+      "passed": false,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.054Z"
+    },
+    {
+      "name": "Script integrity in test-sw.html",
+      "passed": true,
+      "severity": "info",
+      "timestamp": "2025-09-20T17:13:12.054Z"
+    },
+    {
+      "name": "No inline scripts in index.html",
+      "passed": false,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.054Z"
+    },
+    {
+      "name": "Script integrity in index.html",
+      "passed": false,
+      "severity": "info",
+      "timestamp": "2025-09-20T17:13:12.054Z"
+    },
+    {
+      "name": "No inline scripts in index.html",
+      "passed": false,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.054Z"
+    },
+    {
+      "name": "Script integrity in index.html",
+      "passed": false,
+      "severity": "info",
+      "timestamp": "2025-09-20T17:13:12.054Z"
+    },
+    {
+      "name": "No inline scripts in index.html",
+      "passed": false,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.054Z"
+    },
+    {
+      "name": "Script integrity in index.html",
+      "passed": false,
+      "severity": "info",
+      "timestamp": "2025-09-20T17:13:12.054Z"
+    },
+    {
+      "name": "No inline scripts in index.html",
+      "passed": false,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.054Z"
+    },
+    {
+      "name": "Script integrity in index.html",
+      "passed": false,
+      "severity": "info",
+      "timestamp": "2025-09-20T17:13:12.054Z"
+    },
+    {
+      "name": "No inline scripts in index.html",
+      "passed": false,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.054Z"
+    },
+    {
+      "name": "Script integrity in index.html",
+      "passed": false,
+      "severity": "info",
+      "timestamp": "2025-09-20T17:13:12.054Z"
+    },
+    {
+      "name": "No inline scripts in index.html",
+      "passed": false,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.054Z"
+    },
+    {
+      "name": "Script integrity in index.html",
+      "passed": false,
+      "severity": "info",
+      "timestamp": "2025-09-20T17:13:12.054Z"
+    },
+    {
+      "name": "No inline scripts in index.html",
+      "passed": false,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.054Z"
+    },
+    {
+      "name": "Script integrity in index.html",
+      "passed": false,
+      "severity": "info",
+      "timestamp": "2025-09-20T17:13:12.054Z"
+    },
+    {
+      "name": "No inline scripts in index.html",
+      "passed": false,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.054Z"
+    },
+    {
+      "name": "Script integrity in index.html",
+      "passed": false,
+      "severity": "info",
+      "timestamp": "2025-09-20T17:13:12.054Z"
+    },
+    {
+      "name": "No inline scripts in index.html",
+      "passed": false,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.054Z"
+    },
+    {
+      "name": "Script integrity in index.html",
+      "passed": false,
+      "severity": "info",
+      "timestamp": "2025-09-20T17:13:12.054Z"
+    },
+    {
+      "name": "No inline scripts in index.html",
+      "passed": false,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.055Z"
+    },
+    {
+      "name": "Script integrity in index.html",
+      "passed": false,
+      "severity": "info",
+      "timestamp": "2025-09-20T17:13:12.055Z"
+    },
+    {
+      "name": "No inline scripts in index.html",
+      "passed": false,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.055Z"
+    },
+    {
+      "name": "Script integrity in index.html",
+      "passed": false,
+      "severity": "info",
+      "timestamp": "2025-09-20T17:13:12.055Z"
+    },
+    {
+      "name": "No inline scripts in index.html",
+      "passed": false,
+      "severity": "warning",
+      "timestamp": "2025-09-20T17:13:12.055Z"
+    },
+    {
+      "name": "Script integrity in index.html",
+      "passed": false,
+      "severity": "info",
+      "timestamp": "2025-09-20T17:13:12.055Z"
+    }
+  ],
+  "recommendations": [
+    "Add meta descriptions to all pages for better SEO",
+    "Optimize bundle size by implementing code splitting",
+    "Remove console.log statements from production build"
+  ]
+}

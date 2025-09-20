@@ -1,6 +1,9 @@
-import React from "react";
 
+<<<<<<< HEAD
 interface PerformanceMetric {name: string, startTime: number;
+=======
+interface PerformanceMetric {name: string; startTime: number;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-5df3
 }
 endTime?: number;}
 duration?: number}
@@ -45,11 +48,23 @@ this.logMetric("CLS", clsValue);
 });
 clsObserver.observe({ entryTypes: ["layout-shift"] });
 this.observers.push(clsObserver);
+<<<<<<< HEAD
 } catch (error) {console.warn("CLS observer failed: " error)}
 }
 }
 
 startTiming(name: string): void {const metric: PerformanceMetric = {
+=======
+} catch (error) {console.warn("CLS observer failed: ", error)}
+name;
+} catch (error) {
+console.warn("CLS observer failed:", error)}
+}
+}
+
+startTiming(name: string): void {
+const metric: PerformanceMetric = {
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-5df3
 name;,
 startTime: performance.now()};
 this.metrics.set(name, metric);
@@ -129,4 +144,9 @@ cleanup: performanceMonitor.cleanup.bind(performanceMonitor);
 };
 };
 
+<<<<<<< HEAD
 export default performanceMonitor;
+=======
+export default performanceMonitor;
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-5df3

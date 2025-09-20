@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 interface Service {
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-5df3
 id: string;,
 name: string;
 }
@@ -38,4 +42,9 @@ const listing;s: MarketplaceItem[] = [];
 for (let i = 0i < counti++) {
 listings.push(generateRandomListing());
 };
+<<<<<<< HEAD
 return listings,}
+=======
+return listings}
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-5df3

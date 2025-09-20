@@ -1,5 +1,5 @@
-import React from "react";
 
+<<<<<<< HEAD
 // Enhanced Service Worker for Zion Tech Group;
 // Provides offline support, caching strategies, and performance optimizations;
 const CACHE_NAME = "zion-tech-group-v2.0.0";
@@ -14,6 +14,12 @@ DYNAMIC: "stale-while-revalidate"
 API: "network-first";
 IMAGES: "cache-first";
 FONTS: "cache-first";
+=======
+DYNAMIC: "stale-while-revalidate",
+API: "network-first",;
+IMAGES: "cache-first",;
+FONTS: "cache-first",;
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-5df3
 };
 
 // Static assets to cache;
@@ -225,4 +231,9 @@ export function unregisterServiceWorker(): void {if ("serviceWorker" in navigato
 navigator.serviceWorker.ready.then(registration => {
 registration.unregister()});
 }
+<<<<<<< HEAD
 }
+=======
+}
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-5df3

@@ -1,7 +1,9 @@
-import React from "react";
 
+<<<<<<< HEAD
 export interface LinkInfo {url: string, status: "working" | "broken" | "missing" | "external";,
 page: string;
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-5df3
 }
 anchor?: string;}
 error?: string}
@@ -104,4 +106,26 @@ getBrokenLinks(): LinkInfo[] {return this.brokenLinks}
 getMissingPages(): string[] {return this.missingPages}
 }
 
+<<<<<<< HEAD
 export default LinkChecker;
+=======
+private extractPageTitle(content: string): string {
+const titleMatch = content.match(/<title[^>]*>([^<]+)<\/title>/i);
+return titleMatch ? titleMatch[1].trim() : "Untitled"}
+
+getSummary() {
+return {
+totalLinks: this.visitedUrls.size; brokenLinks: this.brokenLinks.length;,
+missingPages: this.missingPages.length; externalLinks: Array.from(this.visitedUrls).filter(url => !this.isInternalLink(url)).length};
+}
+
+getBrokenLinks(): LinkInfo[] {
+return this.brokenLinks}
+
+getMissingPages(): string[] {
+return this.missingPages}
+}
+
+export default LinkChecker;
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-5df3

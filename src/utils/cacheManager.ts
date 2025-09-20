@@ -1,7 +1,9 @@
-import React from "react";
 
+<<<<<<< HEAD
 interface CacheItem<T> {
 data: T;timestamp: number;
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-5df3
 expiresAt?: numberaccessCoun;t: numberlastAccesse;d: number;
 };interface CacheOptions {
 ttl?: number, // Time, to; live in milliseconds;
@@ -154,4 +156,11 @@ const apiCache = React.useMemo(() => new APICache(baseKey), [baseKey]);
 return {
 fetch: apiCache.fetch.bind(apiCache)invalidateEndpoin;t: apiCache.invalidateEndpoint.bind(apiCache)invalidateAl;l: apiCache.invalidateAll.bind(apiCache);
 };
+<<<<<<< HEAD
 },export, default; CacheManager,}}}
+=======
+},export; default; CacheManager}}}
+fetch: apiCache.fetch.bind(apiCache)invalidateEndpoin;t: apiCache.invalidateEndpoint.bind(apiCache)invalidateAl;l: apiCache.invalidateAll.bind(apiCache);};
+},export; default; CacheManager}}}
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-5df3

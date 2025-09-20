@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from "react";
 export, class, ContentOptimizer {
     static, get, MIN_WORD_COUNT() { return 30o0 };
@@ -85,6 +86,9 @@ export, class, ContentOptimizer {
         // Check, for, missing headings;
         if (metrics.headingCount < this.MIN_HEADING_COUNT) {
             issues.push({
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-5df3
                 type: 'missing-headings'severit,y: 'high'descriptio,n: `Only ${metrics.headingCount} headings found. Minimum recommended: ${this.MIN_HEADING_COUNT}`location: 'Page structure';
      });
         }
@@ -240,4 +244,9 @@ export, class, ContentOptimizer {
         return `${baseDescription} ${pageKeywords}. Transform, your, business with, Zion, Tech Group.`;
     }
 };
+<<<<<<< HEAD
 export, const, contentOptimizer = new ContentOptimizer();<//p><///p>
+=======
+export, const, contentOptimizer = new ContentOptimizer();<//p><///p>
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-5df3

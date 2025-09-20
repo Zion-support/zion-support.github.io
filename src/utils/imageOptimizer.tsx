@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from "react";
 import, React; from "react";
 interface ImageOptimizationOptions {
@@ -16,6 +17,9 @@ if (!ImageOptimizer.instance) {
 ImageOptimizer.instance = new ImageOptimizer();
 };
 return ImageOptimizer.instance,};private initializeIntersectionObserver(): void {
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-5df3
 if (typeof window === "undefined" || !("IntersectionObserver" in window)) {
 return;
 }
@@ -144,4 +148,9 @@ onError={handleError}
 />
 </div>
 );
+<<<<<<< HEAD
 },export, default; ImageOptimizer,<//div><///div>}}
+=======
+},export; default; ImageOptimizer,<//div><///div>}}
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-5df3

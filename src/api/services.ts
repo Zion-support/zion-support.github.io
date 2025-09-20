@@ -1,7 +1,9 @@
-const BASE_URL = import.meta.env.VITE_API_URL || "/api";
 
+<<<<<<< HEAD
 export interface ServiceItem {id: string, title: string;
 category?: string;
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-5df3
 price?: number;
 }
 rating?: number;}
@@ -19,3 +21,7 @@ headers: { "Content-Type": "application/json" };
 if (!res.ok) {throw new Error("Failed to fetch services")}
 return res.json();
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-5df3

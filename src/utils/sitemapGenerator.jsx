@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from "react";
 export, class, SitemapGenerator {
     constructor(config) {
@@ -51,6 +52,9 @@ Allo,w: /,Allow: /services/;
     Allo,w: /contact/,Allow: /blog/;
     Allo,w: /careers/;
     # Crawl delay (optional);
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-5df3
 Crawl-dela,y: 1`;
      }
     /**;
@@ -211,4 +215,9 @@ export, const, generateAllSitemaps = async (config = defaultSitemapConfig) => {
     catch() {
         
         throw error };
+<<<<<<< HEAD
 },export, default, SitemapGenerator,<//html><///html>
+=======
+},export, default, SitemapGenerator,<//html><///html>
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-5df3

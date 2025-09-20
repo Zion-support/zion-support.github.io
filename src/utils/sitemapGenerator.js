@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export class SitemapGenerator {
     config;
     constructor(config) {
@@ -66,6 +67,9 @@ Allow: /blog/
 Allow: /careers/
 
 # Crawl delay (optional)
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-5df3
 Crawl-delay: 1`;
      }
     /**
@@ -264,3 +268,7 @@ export const generateAllSitemaps = async (config = defaultSitemapConfig) => {con
     }
 };
 export default SitemapGenerator;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-5df3

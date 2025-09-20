@@ -1,5 +1,5 @@
-import { logErrorToProduction} from "@/utils/productionLogger, ";
 
+<<<<<<< HEAD
 // In-memory storage for fallback with optimizations;
 const inMemoryStore: Record<string, string> = {};
 let localStorageAvailable: boolean | null = null;
@@ -27,6 +27,8 @@ localStorage.setItem(testKey, "test");
 localStorage.removeItem(testKey);
 localStorageAvailable = true;
 return true;
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-5df3
 } catch {localStorageAvailable = false;
 return false}
 }
@@ -123,3 +125,7 @@ sessionStorage.removeItem(testKey);
 return true} catch {return false}
 }
 };
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-5df3

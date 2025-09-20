@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-5df3
 // Test setup file for Jest;
 import "@testing-library/jest-dom"
 // Mock window.matchMedia,;
@@ -48,4 +52,9 @@ originalWarn.call(console, ...args)
 }
 })
 afterAll(() => {console.error = originalError;
+<<<<<<< HEAD
 console.warn = originalWarn})
+=======
+console.warn = originalWarn})
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-5df3

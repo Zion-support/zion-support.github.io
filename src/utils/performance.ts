@@ -1,6 +1,8 @@
-import React from "react";
 
+<<<<<<< HEAD
 interface Service {
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-5df3
 id: string;,
 name: string;
 }
@@ -48,3 +50,7 @@ const metrics = getPerformanceMetrics();
 console.log("Performance Metrics:", metrics)};
 // TypeScript file;
 export const placeholder = "placeholder";
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-5df3

@@ -1,9 +1,11 @@
-import { specializedIndustrySolutions2026 } from "../../data/2026-specialized-industry-solutions";
 
+<<<<<<< HEAD
 // Interface for the existing service structure;
 export interface Service {id: string, title: string, description: string, category: string, subcategory: string, price: number, currency: string, pricingModel: string, features: string[];,
 benefits: string[] useCases: string[];,
 targetAudience: string[] tags: string[];
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-5df3
 }
 estimatedDelivery: string, supportLevel: string, marketPrice: string, roi: string, contactInfo: {}
 email: string, website: string, phone: string};
@@ -39,4 +41,11 @@ compliance: ["SOC 2" "ISO 27001"] // Default compliance;
 }));
 }
 
+<<<<<<< HEAD
 export default {map2026ServicesToExistingStructure};
+=======
+export default {map2026ServicesToExistingStructure};
+export default {
+map2026ServicesToExistingStructure};
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-5df3

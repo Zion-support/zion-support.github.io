@@ -1,6 +1,11 @@
+<<<<<<< HEAD
 import React from "react";
 interface LoadingSpinnerProps {size?: "sm" | "md" | "lg",
 }
+=======
+
+interface LoadingSpinnerProps {size?: "sm" | "md" | "lg"}
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-5df3
 text?: string;}
 className?: string};
 
@@ -22,4 +27,9 @@ return (
 };
 
 export default LoadingSpinner;
+<<<<<<< HEAD
 <//div><///div>
+=======
+<//div><///div>;
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-5df3

@@ -1,5 +1,5 @@
-import React from "react";
 
+<<<<<<< HEAD
 interface RequestInfo {}; interface RequestInit {};
 export class ApiError extends Error {status: number;
 data?: unknown;
@@ -19,6 +19,8 @@ const response = await fetch(input, init);
 if (!response.ok) {
 let data: any;
 try {
+=======
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-5df3
 data = await response.clone().json()} catch {data = undefined}
 const message = data?.error || data?.message || response.statusText;
 throw new ApiError(message, response.status, data);
@@ -33,3 +35,7 @@ throw err;
 }
 throw lastError;
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-5df3
