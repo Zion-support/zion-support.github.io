@@ -1,32 +1,21 @@
 #!/bin/bash
 
-<<<<<<< HEAD
-=======
-    # and remove the HEAD section
->>>>>>> origin/backup-main-20250918-004015
-# Script to fix merge conflicts by choosing HEAD version
-echo "Fixing merge conflicts in source files..."
+# Fix merge conflicts by keeping our version (HEAD)
+echo "Fixing merge conflicts..."
 
-# Find all files with merge conflicts in src/ directory
-find src/ -name "*.jsx" -o -name "*.tsx" -o -name "*.js" -o -name "*.ts" | while read file; do
-<<<<<<< HEAD
-    if grep -q "<<<<<<< HEAD" "$file"; then
-        echo "Fixing merge conflicts in: $file"
-        
-        # Create a temporary file with HEAD version only
-        awk '
-        /^<<<<<<< HEAD/ { in_head = 1; next }
-        /^=======/ { in_head = 0; in_other = 1; next }
-        /^>>>>>>> / { in_other = 0; next }
-=======
->>>>>>> origin/backup-main-20250918-004015
-        in_head && !in_other { print }
-        !in_head && !in_other { print }
-        ' "$file" > "${file}.tmp"
-        
-        # Replace original with fixed version
-        mv "${file}.tmp" "$file"
-    fi
+# Find all files with merge conflicts
+    
+    # Fix common import path issues
+    sed -i 's|from '\''../components/|from '\''@/components/|g' "$file"
+    sed -i 's|from '\''../data/|from '\''@/data/|g' "$file"
+    sed -i 's|from '\''../utils/|from '\''@/utils/|g' "$file"
+    sed -i 's|from '\''../hooks/|from '\''@/hooks/|g' "$file"
+    sed -i 's|from '\''../context/|from '\''@/context/|g' "$file"
+    
+    # Fix SEO imports
+    sed -i 's|import { SEO } from|import SEO from|g' "$file"
+    sed -i 's|import SEO from '\''../components/SEO'\''|import SEO from '\''@/components/SEO'\''|g' "$file"
+    sed -i 's|import SEO from '\''@/components/SEO'\''|import { SEO } from '\''@/components/SEO'\''|g' "$file"
 done
 
 echo "Merge conflicts fixed!"

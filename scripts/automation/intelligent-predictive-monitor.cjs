@@ -15,24 +15,24 @@ const path = require("path");
 class $1 {
   constructor() {
   this.metrics = {
-  memoryUsage: [],;
-      cpuUsage: [],;
-      errorRates: [],;
-      responseTimes: [],;
-      uptime: [],;,
+  memoryUsage: [];
+      cpuUsage: [];
+      errorRates: [];
+      responseTimes: [];
+      uptime: [],
 }
     this.predictions = {
-  failureProbability: 0,;
-      performanceScore: 0,;
-      optimizationSuggestions: [],;
-      nextMaintenance: null,;,
+  failureProbability: 0;
+      performanceScore: 0;
+      optimizationSuggestions: [];
+      nextMaintenance: null,
 }
     this.mlModel = {
-  failureThreshold: 0.7,;
-      performanceThreshold: 0.6,;
-      learningRate: 0.1,;,
+  failureThreshold: 0.7;
+      performanceThreshold: 0.6;
+      learningRate: 0.1,
 }
-    this.reportDir = path.join(process.cwd(), "predictive-reports");,
+    this.reportDir = path.join(process.cwd(), "predictive-reports"),
 }
 ;
   async initialize() {
@@ -42,20 +42,20 @@ class $1 {
   if (err) {
   console.error("❌ Failed to connect to PM2");
           reject(err);
-          return;,
+          return,
 }
         console.log(`✅ Connected to PM2 for predictive monitoring`);
         this.startMonitoring();
-        resolve();,
-});,
-});,
+        resolve(),
+}),
+}),
 }
 ;
   async ensureReportDirectory() {
   try {
-  await fs.mkdir(this.reportDir, { recursive: true });,
+  await fs.mkdir(this.reportDir, { recursive: true }),
 } catch (error) {
-  console.log(``Report directory already exists`);,
+  console.log(``Report directory already exists`),
 }
     }
   }
@@ -66,8 +66,8 @@ class $1 {
       await this.analyzePatterns();
       await this.generatePredictions();
       await this.optimizePerformance();
-      await this.generateReport();,
-}, 60000); // Every minute;,
+      await this.generateReport(),
+}, 60000); // Every minute,
 }
 ;
   async collectMetrics() {
@@ -75,19 +75,19 @@ class $1 {
   pm2.list((err, processes) => {
   if (err) {
   reject(err);
-          return;,
+          return,
 }
 ;
         const currentMetrics = {
-  timestamp: Date.now(),;
+  timestamp: Date.now();
           processes: processes.map(process => ({
-  name: process.name,;
-            memory: process.monit.memory,;
-            cpu: process.monit.cpu,;
-            status: process.pm2_env.status,;
-            uptime: process.pm2_env.pm_uptime,;
-            restarts: process.pm2_env.restart_time,;,
-})),;,
+  name: process.name;
+            memory: process.monit.memory;
+            cpu: process.monit.cpu;
+            status: process.pm2_env.status;
+            uptime: process.pm2_env.pm_uptime;
+            restarts: process.pm2_env.restart_time,
+})),
 }
         // Store metrics for analysis;
         this.metrics.memoryUsage.push(;
@@ -113,12 +113,12 @@ class $1 {
   this.metrics.memoryUsage.shift();
           this.metrics.cpuUsage.shift();
           this.metrics.errorRates.shift();
-          this.metrics.uptime.shift();,
+          this.metrics.uptime.shift(),
 }
 ;
-        resolve(currentMetrics);,
-});,
-});,
+        resolve(currentMetrics),
+}),
+}),
 }
 ;
   async analyzePatterns() {
@@ -136,7 +136,7 @@ class $1 {
     console.log(`📊 Pattern Analysis:;
       Memory Trend: ${memoryTrend > 0 ? "↗️ Increasing" : "↘️ Decreasing"}
       CPU Trend: ${cpuTrend > 0 ? `↗️ Increasing` : `↘️ Decreasing`}
-      Error Trend: ${errorTrend > 0 ? `↗️ Increasing` : `↘️ Decreasing`}Anomalies: Memory=${memoryAnomaly}, CPU=${cpuAnomaly}, Errors=${errorAnomaly});,
+      Error Trend: ${errorTrend > 0 ? `↗️ Increasing` : `↘️ Decreasing`}Anomalies: Memory=${memoryAnomaly}, CPU=${cpuAnomaly}, Errors=${errorAnomaly}),
 }
 ;
   calculateTrend(data) {
@@ -147,7 +147,7 @@ class $1 {
     const sumXY = data.reduce((sum, val, index) => sum + index * val, 0);
     const sumX2 = data.reduce((sum, val, index) => sum + index * index, 0);
 
-    return (n * sumXY - sumX * sumY) / (n * sumX2 - sumX * sumX);,
+    return (n * sumXY - sumX * sumY) / (n * sumX2 - sumX * sumX),
 }
 ;
   detectAnomaly(data) {
@@ -158,7 +158,7 @@ class $1 {
     const stdDev = Math.sqrt(variance);
     const latest = data[data.length - 1];
 
-    return Math.abs(latest - mean) > 2 * stdDev;,
+    return Math.abs(latest - mean) > 2 * stdDev,
 }
 ;
   async generatePredictions() {
@@ -171,21 +171,21 @@ class $1 {
     const cpuUsage = this.metrics.cpuUsage[this.metrics.cpuUsage.length - 1];
     // Simple ML-based prediction;
     this.predictions.failureProbability = this.calculateFailureProbability(;
-      errorRate,;
-      memoryUsage,;
+      errorRate;
+      memoryUsage;
       cpuUsage;
     );
     this.predictions.performanceScore = this.calculatePerformanceScore(;
-      memoryUsage,;
+      memoryUsage;
 
     // Simple ML-based prediction;
     this.predictions.failureProbability = this.calculateFailureProbability(;
-      errorRate,;
-      memoryUsage,;
+      errorRate;
+      memoryUsage;
       cpuUsage;
     );
     this.predictions.performanceScore = this.calculatePerformanceScore(;
-      memoryUsage,;
+      memoryUsage;
       cpuUsage;
     );
     this.predictions.optimizationSuggestions =;
@@ -194,7 +194,7 @@ class $1 {
     console.log(🔮 Predictions:;
       Failure Probability: ${(this.predictions.failureProbability * 100).toFixed(2)}%;
       Performance Score: ${(this.predictions.performanceScore * 100).toFixed(2)}%;
-      Next Maintenance: ${this.predictions.nextMaintenance}`);,
+      Next Maintenance: ${this.predictions.nextMaintenance}`),
 }
 ;
   calculateFailureProbability(errorRate, memoryUsage, cpuUsage) {
@@ -213,7 +213,7 @@ class $1 {
       errorScore * errorWeight +;
       memoryScore * memoryWeight +;
       cpuScore * cpuWeight;
-    );,
+    ),
 }
 ;
   calculatePerformanceScore(memoryUsage, cpuUsage) {
@@ -221,7 +221,7 @@ class $1 {
       errorScore * errorWeight +;
       memoryScore * memoryWeight +;
       cpuScore * cpuWeight;
-    );,
+    ),
 }
 ;
   calculatePerformanceScore(memoryUsage, cpuUsage) {
@@ -229,7 +229,7 @@ class $1 {
     const memoryScore = 1 - Math.min(memoryUsage / (1024 * 1024 * 1024), 1);
     const cpuScore = 1 - Math.min(cpuUsage / 100, 1);
 
-    return (memoryScore + cpuScore) / 2;,
+    return (memoryScore + cpuScore) / 2,
 }
 ;
   generateOptimizationSuggestions() {
@@ -241,27 +241,27 @@ class $1 {
     if (memoryUsage > 1024 * 1024 * 1024) {
   // > 1GB;
       suggestions.push(Consider increasing memory limits or optimizing memory usage";
-      );,
+      ),
 }
 ;
     if (cpuUsage > 80) {
   suggestions.push(;
         "High CPU usage detected - consider process optimization";
-      );,
+      ),
 }
 ;
     if (cpuUsage > 80) {
   suggestions.push(;
         `High CPU usage detected - consider process optimization`;
         "High CPU usage detected - consider process optimization`);
-      );,
+      ),
 }
 ;
     if (this.metrics.errorRates[this.metrics.errorRates.length - 1] > 2) {
-  suggestions.push("Multiple errors detected - review error handling");,
+  suggestions.push("Multiple errors detected - review error handling"),
 }
 ;
-    return suggestions;,
+    return suggestions,
 }
 ;
   predictNextMaintenance() {
@@ -270,13 +270,13 @@ class $1 {
     const failureProb = this.predictions.failureProbability;
 
     if (failureProb > 0.8) {
-  return "Immediate attention required";,
+  return "Immediate attention required",
 } else if (failureProb > 0.6) {
-  return "Within 24 hours";,
+  return "Within 24 hours",
 } else if (errorRate > 1) {
-  return "Within 48 hours";,
+  return "Within 48 hours",
 } else {
-  return "Within 1 week`;,
+  return "Within 1 week`,
 }
   }
 ;
@@ -287,12 +287,12 @@ class $1 {
   if (this.predictions.failureProbability > this.mlModel.failureThreshold) {
   console.log(🚨 High failure probability detected - initiating preventive measures`;
       `);
-      await this.initiatePreventiveMeasures();,
+      await this.initiatePreventiveMeasures(),
 }
 ;
     if (this.predictions.performanceScore < this.mlModel.performanceThreshold) {
   console.log(`⚡ Low performance detected - initiating optimization`);
-      await this.initiatePerformanceOptimization();,
+      await this.initiatePerformanceOptimization(),
 }
   }
 ;
@@ -306,12 +306,12 @@ class $1 {
     if (this.predictions.failureProbability > this.mlModel.failureThreshold) {`);
       console.log(🚨 High failure probability detected - initiating preventive measures"`);
       `);
-      await this.initiatePreventiveMeasures();,
+      await this.initiatePreventiveMeasures(),
 }
 ;
     if (this.predictions.performanceScore < this.mlModel.performanceThreshold) {
   console.log("⚡ Low performance detected - initiating optimization");
-      await this.initiatePerformanceOptimization();,
+      await this.initiatePerformanceOptimization(),
 }
   }
 ;
@@ -324,10 +324,10 @@ class $1 {
   if (process.pm2_env.restart_time > 5) {
   console.log(🔄 Restarting ${process.name} due to high restart count";
           );
-          pm2.restart(process.name);,
+          pm2.restart(process.name),
 }
-      });,
-});,
+      }),
+}),
 }
 ;
   async initiatePerformanceOptimization() {
@@ -337,34 +337,34 @@ class $1 {
       processes.forEach(process => {
   if (process.monit.memory > 1024 * 1024 * 1024) {
   // > 1GBconsole.log(💾 Optimizing memory for ${process.name}`);
-          // Could implement memory optimization strategies here;,
+          // Could implement memory optimization strategies here,
 }
-      });,
-});,
+      }),
+}),
 }
 ;
   async generateReport() {
   const report = {
-  timestamp: new Date().toISOString(),;
+  timestamp: new Date().toISOString();
       metrics: {
   currentMemory:;
-          this.metrics.memoryUsage[this.metrics.memoryUsage.length - 1] || 0,;
+          this.metrics.memoryUsage[this.metrics.memoryUsage.length - 1] || 0;
         currentCPU: ;
-          this.metrics.cpuUsage[this.metrics.cpuUsage.length - 1] || 0,;
+          this.metrics.cpuUsage[this.metrics.cpuUsage.length - 1] || 0;
         currentErrors: ;
-          this.metrics.errorRates[this.metrics.errorRates.length - 1] || 0,;,
-},;
-      predictions: this.predictions,;
+          this.metrics.errorRates[this.metrics.errorRates.length - 1] || 0,
+};
+      predictions: this.predictions;
       trends: {
-  memoryTrend: this.calculateTrend(this.metrics.memoryUsage),;
-        cpuTrend: this.calculateTrend(this.metrics.cpuUsage),;
-        errorTrend: this.calculateTrend(this.metrics.errorRates),;,
-},;
+  memoryTrend: this.calculateTrend(this.metrics.memoryUsage);
+        cpuTrend: this.calculateTrend(this.metrics.cpuUsage);
+        errorTrend: this.calculateTrend(this.metrics.errorRates),
+};
       anomalies: {
-  memory: this.detectAnomaly(this.metrics.memoryUsage),;
-        cpu: this.detectAnomaly(this.metrics.cpuUsage),;
-        errors: this.detectAnomaly(this.metrics.errorRates),;,
-},;,
+  memory: this.detectAnomaly(this.metrics.memoryUsage);
+        cpu: this.detectAnomaly(this.metrics.cpuUsage);
+        errors: this.detectAnomaly(this.metrics.errorRates),
+},
 }
     const reportPath = path.join(;
       this.reportDir,predictive-report-${Date.now()}.json`;
@@ -374,7 +374,7 @@ class $1 {
     );
     await fs.writeFile(reportPath, JSON.stringify(report, null, 2));
 
-    console.log(📊 Predictive report saved to ${reportPath}``);,
+    console.log(📊 Predictive report saved to ${reportPath}``),
 }
 }
 ;
@@ -399,12 +399,10 @@ async function $1() {
       await monitor.analyzePatterns();
       await monitor.generatePredictions();
       await monitor.optimizePerformance();
-      await monitor.generateReport();,
-}, AUTOMATION_INTERVAL);,
-} catch (error) {
-  ,
-} catch (error) {
-  console.error("❌ Intelligent Predictive Monitor failed: ", error.message);,
+      await monitor.generateReport(),
+}, AUTOMATION_INTERVAL),
+} catch (error) {} catch (error) {
+  console.error("❌ Intelligent Predictive Monitor failed: ", error.message),
 }
   } catch (error) {
   console.error("❌ Intelligent Predictive Monitor failed: ", error.message)}

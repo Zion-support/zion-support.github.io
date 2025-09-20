@@ -1,36 +1,14 @@
-<<<<<<< HEAD
-=======
----
->>>>>>> origin/auto/autonomy-17186719616
 name: labeler
-on:
+'on':
   workflow_dispatch: {}
   schedule:
-<<<<<<< HEAD
-  - cron: '0 2 * * *'
-permissions:
-  contents: read
-  actions: read
-  
-concurrency:
-  group: labeler-\${{ github.ref }}
-  cancel-in-progress: false
-jobs:
-  main:
-    name: Labeler Job
-=======
-    - cron: '0 */2 * * *'
+    - cron: 0 */2 * * *
 permissions:
   contents: write
   actions: read
-  pull-requests: write
-concurrency:
-  group: workflow-${{ github.ref }}
-  cancel-in-progress: false
 jobs:
   main:
     name: Main Job
->>>>>>> origin/auto/autonomy-17186719616
     runs-on: ubuntu-latest
     timeout-minutes: 20
     steps:

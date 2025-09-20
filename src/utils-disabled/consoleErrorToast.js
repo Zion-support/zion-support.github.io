@@ -1,1 +1,0 @@
-// Console error toast handler

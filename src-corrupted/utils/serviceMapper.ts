@@ -1,7 +1,7 @@
-// comment
+// comment,
 export const serviceMapper = {}
-
-    // Interface for the existing service structure
+,
+    // Interface for the existing service structure,
     id: string;
     title: string;
     description: string;
@@ -20,54 +20,51 @@ export const serviceMapper = {}
     marketPrice: string;
     roi: string;
     innovationLevel: string;
-    contactInfo: {
+    contactInfo: {,
       phone: string;
       email: string;
-      website: string;
-    };
-    technicalSpecs?: {
+      website: string,};
+    technicalSpecs?: {,
       technology: string[];
       integrations: string[];
       apiEndpoints: number;
       uptime: string;
-      security: string[];
-    };
+      security: string[],};
     competitors?: string[];
     marketSize?: string;
     compliance?: string[];
   }
-    id: servic e.id,
-    title: servic e.name,
-    description: servic e.description,
-    category: servic e.category,
-    subcategory: servic e.category,
-    price: parseIn t(service.price.replace(/[$,]/g, '')),
-    currency: '$',
-    pricingModel: 'monthly',
-    features: servic e.features,
-    benefits: [service.roi, service.marketPosition],
-    useCases: servic e.useCases,
-    targetAudience: [service.targetAudience],
-    tags: [service.category, ...service.technology.slice(0, 3)],
-    estimatedDelivery: servic e.setupTime,
-    supportLevel: 'enterprise',
-    marketPrice: servic e.price + service.period,
-    roi: servic e.roi,
-    innovationLevel: 'Advanced',
-    contactInfo: {
-      phone: servic e.contactInfo.mobile,
-      email: servic e.contactInfo.email,
-      website: servic e.contactInfo.website,
-    },
-    technicalSpecs: {
-      technology: servic e.technology,
-      integrations: servic e.integrations,
-      apiEndpoints: 20 0,
-      uptime: '99.9%',
-      security: ['SOC 2', 'ISO 27001', 'Data encryption'],
-    },
-    competitors: servic e.competitors,
-    marketSize: servic e.marketSize,
-    compliance: ['SOC 2',ISO 27001'], // Default compliance
+    id: servic e.id;
+    title: servic e.name;
+    description: servic e.description;
+    category: servic e.category;
+    subcategory: servic e.category;
+    price: parseIn t(service.price.replace(/[$]/g, ''));
+    currency: '$';
+    pricingModel: 'monthly';
+    features: servic e.features;
+    benefits: [service.roi, service.marketPosition];
+    useCases: servic e.useCases;
+    targetAudience: [service.targetAudience];
+    tags: [service.category, ...service.technology.slice(0, 3)];
+    estimatedDelivery: servic e.setupTime;
+    supportLevel: 'enterprise';
+    marketPrice: servic e.price + service.period;
+    roi: servic e.roi;
+    innovationLevel: 'Advanced';
+    contactInfo: {,
+      phone: servic e.contactInfo.mobile;
+      email: servic e.contactInfo.email;
+      website: servic e.contactInfo.website,};
+    technicalSpecs: {,
+      technology: servic e.technology;
+      integrations: servic e.integrations;
+      apiEndpoints: 20 0;
+      uptime: '99.9%';
+      security: ['SOC 2ISO 27001', 'Data encryption'],
+    };
+    competitors: servic e.competitors;
+    marketSize: servic e.marketSize;
+    compliance: ['SOC 2',ISO 27001'], // Default compliance,
   }))}
-'"
+'",

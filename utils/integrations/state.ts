@@ -1,5 +1,5 @@
-interface IntegrationState {
+interface IntegrationState {,
   connections: any[];
   logs: any[];
-  overrides: any[];
-}
+  overrides: any[],}
+,

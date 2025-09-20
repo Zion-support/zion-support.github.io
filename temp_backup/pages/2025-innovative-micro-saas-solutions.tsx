@@ -62,5 +62,4 @@ export default function InnovativeMicroSaasSolutions2025() {
     </div>
   );
 };
-
 export default 2025-innovative-micro-saas-solutions;

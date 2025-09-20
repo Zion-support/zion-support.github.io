@@ -1,19 +1,18 @@
-export type CandidateStatus =
-  | "applied"
-  | "shortlisted"
-  | "interview"
-  | "offer"
-  | "hired"
+export type CandidateStatus =,
+  | "applied",
+  | "shortlisted",
+  | "interview",
+  | "offer",
+  | "hired",
   | "rejected";
-
-export interface TalentProfile {
+export interface TalentProfile {,
   id: string;
   name: string;
   title?: string;
-  photoUrl?: string;
+  photoUrl?: string,
 }
-
-export interface JobApplication {
+,
+export interface JobApplication {,
   id: string;
   jobId: string;
   talentId: string;
@@ -24,10 +23,10 @@ export interface JobApplication {
   createdAt?: string;
   updatedAt?: string;
   lastActivityAt?: string | null;
-  talent?: TalentProfile;
+  talent?: TalentProfile,
 }
-
-export interface ApplicationFilters {
+,
+export interface ApplicationFilters {,
   status?: CandidateStatus | "all";
   minScore?: number;
   fromDate?: Date | null;

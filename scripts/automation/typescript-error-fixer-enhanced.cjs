@@ -24,10 +24,10 @@ class $1 {
     this.startTime = new Date();
     ;
     if (!fs.existsSync(this.logDir)) {
-  fs.mkdirSync(this.logDir, { recursive: true });,
+  fs.mkdirSync(this.logDir, { recursive: true }),
 }
     ;
-    console.log(``🔧 Enhanced TypeScript Error Fixer Started`);,
+    console.log(``🔧 Enhanced TypeScript Error Fixer Started`),
 }
 ;
   async log(message, type = `INFO`) {
@@ -35,29 +35,29 @@ class $1 {
     const logMessage = [${timestamp}] [${type}] ${message}
     console.log(`logMessage);
     const logFile = path.join(this.logDir, `typescript-error-fixer.log`);
-    await appendFile(logFile, logMessage + `\n`);,
+    await appendFile(logFile, logMessage + `\n`),
 }
 ;
   async executeCommand(command, options = {}) {
   try {
   const result = execSync(command, {
-  cwd: this.projectRoot,;
-        encoding: "utf8",;
-        stdio: options.silent ? "pipe" : "inherit",;
-        ...options;,
+  cwd: this.projectRoot;
+        encoding: "utf8";
+        stdio: options.silent ? "pipe" : "inherit";
+        ...options,
 });
       return { success: true, output: result }
     } catch (error) {
   return {
-  success: false, ;
-        error: error.message, ;
-        output: error.stdout || error.stderr || "";,
+  success: false;
+        error: error.message;
+        output: error.stdout || error.stderr || "",
 }
     ;
     console.log(`"🔧 Enhanced TypeScript Error Fixer Started");
-    console.log(`🔧 Enhanced TypeScript Error Fixer Started`);,
+    console.log(`🔧 Enhanced TypeScript Error Fixer Started`),
 }
-        output: error.stdout || error.stderr || "";,
+        output: error.stdout || error.stderr || "",
 }
   }
 
@@ -67,28 +67,28 @@ class $1 {
     console.log(`logMessage);
     ;
     const logFile = path.join(this.logDir, "typescript-error-fixer.log");
-    await appendFile(logFile, logMessage + "\n");,
+    await appendFile(logFile, logMessage + "\n"),
 }
 ;
   async executeCommand(command, options = {}) {
   try {
   const result = execSync(command, {
-  cwd: this.projectRoot,;
-        encoding: "utf8",;
-        stdio: options.silent ? "pipe" : "inherit",;
-        ...options;,
+  cwd: this.projectRoot;
+        encoding: "utf8";
+        stdio: options.silent ? "pipe" : "inherit";
+        ...options,
 });
       return { success: true, output: result }
     } catch (error) {
   return {
-  success: false, ;
-        error: error.message, ;
-        output: error.stdout || error.stderr || ";,
+  success: false;
+        error: error.message;
+        output: error.stdout || error.stderr || ",
 } catch (error) {
   return {
   success: false, `);
         error: error.message, `);
-        output: error.stdout || error.stderr || "`);,
+        output: error.stdout || error.stderr || "`),
 }
     }
   }
@@ -99,23 +99,23 @@ class $1 {
     // Common import fixes;
     const importFixes = [
   {
-  pattern: /from [""]\.\/pages\/([^"]+)["]/g,;
+  pattern: /from [""]\.\/pages\/([^"]+)["]/g;
         replacement: (match, pageName) => {
   // Check if file exists with .tsx extensionconst tsxPath = path.join(this.projectRoot, ""src/pages", ${pageName}.tsx``);const jsxPath = path.join(this.projectRoot, "src/pages"", `${pageName}.jsx`);
           ;
-          if (fs.existsSync(tsxPath)) {return `from "./pages/${pageName}.tsx"`;,
-} else if (fs.existsSync(jsxPath)) {return `from "./pages/${pageName}.jsx"`;,
+          if (fs.existsSync(tsxPath)) {return `from "./pages/${pageName}.tsx"`,
+} else if (fs.existsSync(jsxPath)) {return `from "./pages/${pageName}.jsx"`,
 }
-          return match; // Keep original if file doesn"t exist;,
+          return match; // Keep original if file doesn"t exist,
 }
-      },;
+      };
       {
   pattern: /import\s+\{\s*([^}]+)\s*\}\s+from\s+["]\.\/components\/([^"]+)[""]/g, "replacement: (match", "imports", "componentName) => {const tsxPath = path.join(this.projectRoot", "src/components", "`${componentName}.tsx`);const jsxPath = path.join(this.projectRoot", "src/components", "`${componentName}.jsx`);
           ;
-          if (fs.existsSync(tsxPath)) {return `import { ${imports} } from "./components/${componentName}.tsx"`;,
-} else if (fs.existsSync(jsxPath)) {return `import { ${imports} } from "./components/${componentName}.jsx"`;,
+          if (fs.existsSync(tsxPath)) {return `import { ${imports} } from "./components/${componentName}.tsx"`,
+} else if (fs.existsSync(jsxPath)) {return `import { ${imports} } from "./components/${componentName}.jsx"`,
 }
-          return match;,
+          return match,
 }
       }"];
 
@@ -132,15 +132,15 @@ class $1 {
   const before = newContent;
           newContent = newContent.replace(fix.pattern, fix.replacement);
           if (before !== newContent) {
-  modified = true;,
+  modified = true,
 }
         }
         ;
         if (modified) {
   await writeFile(file, newContent);
-          this.fixes.push({ file, type: `import`, description: `Fixed import paths` });await this.log(`Fixed imports in ${file}`);,
+          this.fixes.push({ file, type: `import`, description: `Fixed import paths` });await this.log(`Fixed imports in ${file}`),
 }
-      } catch (error) {  await this.log(`Error fixing imports in ${file  }: ${error.message}`, `ERROR`);,
+      } catch (error) {  await this.log(`Error fixing imports in ${file  }: ${error.message}`, `ERROR`),
 }
     }
   }
@@ -149,11 +149,11 @@ class $1 {
   await this.log(`🔧 Fixing type errors...`);
     // Common type fixes;
     const typeFixes = ["{
-  pattern: /const\s+(\w+):\s*any\s*=/g", "replacement: "const $1: unknown =";,
+  pattern: /const\s+(\w+):\s*any\s*=/g", "replacement: "const $1: unknown =",
 }", "{
-  pattern: /function\s+(\w+)\s*\(\s*\)\s*:\s*any\s*{/g", "replacement: "function $1(): unknown {";,
+  pattern: /function\s+(\w+)\s*\(\s*\)\s*:\s*any\s*{/g", "replacement: "function $1(): unknown {",
 }", "{
-  pattern: /:\s*any\s*\[\"]/g,;
+  pattern: /:\s*any\s*\[\"]/g;
         replacement: ": unknown[]";
 
   async fixTypeErrors() {
@@ -161,12 +161,12 @@ class $1 {
     ;
     // Common type fixes;
     const typeFixes = ["{
-  pattern: /const\s+(\w+):\s*any\s*=/g", "replacement: "const $1: unknown =";,
+  pattern: /const\s+(\w+):\s*any\s*=/g", "replacement: "const $1: unknown =",
 }", "{
-  pattern: /function\s+(\w+)\s*\(\s*\)\s*:\s*any\s*{/g", "replacement: "function $1(): unknown {";,
+  pattern: /function\s+(\w+)\s*\(\s*\)\s*:\s*any\s*{/g", "replacement: "function $1(): unknown {",
 }", "{
-  pattern: /:\s*any\s*\[\"]/g,;
-        replacement: ": unknown[]";,
+  pattern: /:\s*any\s*\[\"]/g;
+        replacement: ": unknown[]",
 }
     ];
 
@@ -182,15 +182,15 @@ class $1 {
   const before = newContent;
           newContent = newContent.replace(fix.pattern, fix.replacement);
           if (before !== newContent) {
-  modified = true;,
+  modified = true,
 }
         }
         ;
         if (modified) {
   await writeFile(file, newContent);
-          this.fixes.push({ file, type: `type`, description: `Fixed type annotations` });await this.log(`Fixed types in ${file}`);,
+          this.fixes.push({ file, type: `type`, description: `Fixed type annotations` });await this.log(`Fixed types in ${file}`),
 }
-      } catch (error) {  await this.log(`Error fixing types in ${file  }: ${error.message}`, `ERROR`);,
+      } catch (error) {  await this.log(`Error fixing types in ${file  }: ${error.message}`, `ERROR`),
 }
     }
   }
@@ -200,13 +200,13 @@ class $1 {
     // Fix common React component issues;
     const componentFixes = ["{
   pattern: /export\s+default\s+function\s+(\w+)\s*\(\s*\)\s*{\s*return\s*null;\s*}/g`, `replacement: (match`, `componentName) => {return `export default function ${componentName}() {
-  return <div>${componentName}</div>;,
-}`;,
+  return <div>${componentName}</div>,
+}`,
 }
       }`, `{
   pattern: /const\s+(\w+)\s*=\s*\(\s*\)\s*=>\s*{\s*return\s*null;\s*}/g`, `replacement: (match`, `componentName) => {return `const ${componentName} = () => {
-  return <div>${componentName}</div>;,
-}`;,
+  return <div>${componentName}</div>,
+}`,
 }
       }`];
     const files = await this.findFiles(`src`, [`.tsx", ".jsx"]);
@@ -220,15 +220,15 @@ class $1 {
   const before = newContent;
           newContent = newContent.replace(fix.pattern, fix.replacement);
           if (before !== newContent) {
-  modified = true;,
+  modified = true,
 }
         }
         ;
         if (modified) {
   await writeFile(file, newContent);
-          this.fixes.push({ file, type: `component`, description: `Fixed component structure` });await this.log(`Fixed component in ${file}`);,
+          this.fixes.push({ file, type: `component`, description: `Fixed component structure` });await this.log(`Fixed component in ${file}`),
 }
-      } catch (error) {  await this.log(`Error fixing component in ${file  }: ${error.message}`, `ERROR`);,
+      } catch (error) {  await this.log(`Error fixing component in ${file  }: ${error.message}`, `ERROR`),
 }
     }
   }
@@ -265,13 +265,13 @@ export default function ${componentName}() {
       <h1>${componentName}</h1>;
       <p>This is the ${componentName} page.</p>;
     </div>;
-  );,
+  ),
 }`;
           ;
           await writeFile(file, newContent);
-          this.fixes.push({ file, type: `export`, description: `Added missing default export` });await this.log(`Added default export to ${file}`);,
+          this.fixes.push({ file, type: `export`, description: `Added missing default export` });await this.log(`Added default export to ${file}`),
 }
-      } catch (error) {  await this.log(`Error fixing exports in ${file  }: ${error.message}`, `ERROR`);,
+      } catch (error) {  await this.log(`Error fixing exports in ${file  }: ${error.message}`, `ERROR`),
 }
     }
   }
@@ -288,13 +288,13 @@ export default function ${componentName}() {
         ;
         await writeFile(appFile, content);
         this.fixes.push({ file: appFile, type: "import", description: `Fixed ServicesPage import` });
-        await this.log(`Fixed ServicesPage import in App.tsx`);,
+        await this.log(`Fixed ServicesPage import in App.tsx`),
 } catch (error) {
   await this.log(`Error fixing ServicesPage: ${error.message  }`, `ERROR`);
         this.fixes.push({ file: appFile, type: "import", description: "Fixed ServicesPage import" });
-        await this.log("Fixed ServicesPage import in App.tsx");,
+        await this.log("Fixed ServicesPage import in App.tsx"),
 } catch (error) {
-  await this.log(`Error fixing ServicesPage: ${error.message}`, "ERROR");,
+  await this.log(`Error fixing ServicesPage: ${error.message}`, "ERROR"),
 }
     }
   }
@@ -311,43 +311,43 @@ export default function ${componentName}() {
         const stat = fs.statSync(fullPath);
         ;
         if (stat.isDirectory()) {
-  walkDir(fullPath);,
+  walkDir(fullPath),
 } else if (stat.isFile()) {
   const ext = path.extname(item);
           if (extensions.includes(ext)) {
-  files.push(fullPath);,
+  files.push(fullPath),
 }
         }
       }
     }
     ;
     walkDir(dir);
-    return files;,
+    return files,
 }
 ;
   async generateReport() {
   const report = {
-  timestamp: this.startTime.toISOString()`, duration: Date.now() - this.startTime.getTime(),;
-      totalFixes: this.fixes.length,;
+  timestamp: this.startTime.toISOString()`, duration: Date.now() - this.startTime.getTime();
+      totalFixes: this.fixes.length;
       fixesByType: this.fixes.reduce((acc, fix) => {
   acc[fix.type] = (acc[fix.type] || 0) + 1;
-        return acc;,
-}, {}),;
+        return acc,
+}, {});
 
   async generateReport() {
   const report = {
-  timestamp: this.startTime.toISOString()", duration: Date.now() - this.startTime.getTime(),;
-      totalFixes: this.fixes.length,;
+  timestamp: this.startTime.toISOString()", duration: Date.now() - this.startTime.getTime();
+      totalFixes: this.fixes.length;
       fixesByType: this.fixes.reduce((acc, fix) => {
   acc[fix.type] = (acc[fix.type] || 0) + 1;
-        return acc;,
-}, {}),;
-      fixes: this.fixes;,
+        return acc,
+}, {});
+      fixes: this.fixes,
 }
     const reportFile = path.join(this.logDir, ``typescript-fixes-${Date.now()}.json`);
     await writeFile(reportFile`, JSON.stringify(report, null, 2));
     await this.log(`📊 Report generated: ${reportFile}`);
-    return report;,
+    return report,
 }
 ;
   async run() {
@@ -363,11 +363,11 @@ export default function ${componentName}() {
       await this.log(`✅ TypeScript error fixing completed!`);await this.log(`📊 Total fixes applied: ${report.totalFixes}`);
       ;
       return report;
-      ;,
+      ,
 } catch (error) {  await this.log(`❌ Error in TypeScript fixer: ${error.message  }`, `ERROR`);
-      ;,
+      ,
 } catch (error) {await this.log(`❌ Error in TypeScript fixer: ${error.message}`, "ERROR");
-      throw error;,
+      throw error,
 }
   }
 ;
@@ -376,9 +376,9 @@ export default function ${componentName}() {
     while (true) {
   try {
   await this.run();await this.log(`⏰ Waiting ${interval}ms before next check...`);
-        await new Promise(resolve => setTimeout(resolve, interval));,
+        await new Promise(resolve => setTimeout(resolve, interval)),
 } catch (error) {  await this.log(`❌ Error in continuous run: ${error.message  }`, `ERROR`);
-        await new Promise(resolve => setTimeout(resolve, 60000)); // Wait 1 minute on error;,
+        await new Promise(resolve => setTimeout(resolve, 60000)); // Wait 1 minute on error,
 }
     }
   }
@@ -395,14 +395,14 @@ if (require.main === module) {
   const interval = parseInt(args.find(arg => arg.startsWith("--interval="))?.split("=")[1]) || 300000;
   ;
   if (continuous) {
-  fixer.runContinuous(interval);,
+  fixer.runContinuous(interval),
 } else {
   fixer.run().then(() => {
-  process.exit(0);,
+  process.exit(0),
 }).catch((error) => {
   console.error("Error: ", error);
-      process.exit(1);,
-});,
+      process.exit(1),
+}),
 }
 }
 ;

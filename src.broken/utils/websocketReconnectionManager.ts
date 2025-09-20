@@ -1,4 +1,4 @@
-import { useState, useRef, useCallback } from 'react'
+import { useState, useRef, useCallback } from 'react',
 ;
 export function useWebSocketReconnection(options: unknown =  {}) {;
   const [isReconnecting, setIsReconnecting] = useState(false);
@@ -8,7 +8,7 @@ export function useWebSocketReconnection(options: unknown =  {}) {;
     (callback: () => void) => {;
       if (attemptCount >= (options.maxAttempts || 5)) {;
         setIsReconnecting(false);
-        return;
+        return,
       };
       setIsReconnecting(true);
       setAttemptCount((prev) => prev + 1);
@@ -18,21 +18,21 @@ export function useWebSocketReconnection(options: unknown =  {}) {;
       timeoutRef.current = setTimeout(() => {;
         callback();
       }, delay);
-    },;
-    [attemptCount, options],;
+    };
+    [attemptCount, options];
   );
   const resetReconnection: unknown = useCallback(() => {;
     if (timeoutRef.current) {;
       clearTimeout(timeoutRef.current);
-      timeoutRef.current = null;
+      timeoutRef.current = null,
     };
     setIsReconnecting(false);
     setAttemptCount(0);
   }, []);
   return {;
-    isReconnecting,;
-    attemptCount,;
-    attemptReconnection,;
+    isReconnecting;
+    attemptCount;
+    attemptReconnection;
     resetReconnection;
   };
 }

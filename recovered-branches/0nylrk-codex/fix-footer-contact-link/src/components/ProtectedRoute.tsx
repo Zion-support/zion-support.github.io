@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import React from 'react';
 import { Navigate } from 'react-router-dom';
@@ -13,10 +14,14 @@ export interface ProtectedRouteProps {
 }
 
 export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({ 
+  children, 
   adminOnly = false,
   tenantAdminAllowed = false,
   requiredUserType
 }) => {
+  const { user, isLoading } = useAuth();
+  const { tenant } = useWhitelabel();
+  const { isAdmin: isTenantAdmin, isLoading: isCheckingTenantAdmin } = useTenantAdminStatus(tenant?.id);
   
   const isCheckingPermissions = isLoading || isCheckingTenantAdmin;
 
@@ -50,3 +55,14 @@ export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({
 };
 
 export default ProtectedRoute;
+=======
+import React from 'react';
+export function SupportChatbot() {
+  return (
+    <div>
+      <h1>Component</h1>
+      <p>Component placeholder</p>
+    </div>
+  );
+}
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

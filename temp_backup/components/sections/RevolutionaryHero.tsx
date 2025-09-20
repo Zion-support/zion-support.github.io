@@ -73,5 +73,4 @@ const RevolutionaryHero: React.FC<RevolutionaryHeroProps> = ({
     </div>
   );
 };
-
 export default RevolutionaryHero;

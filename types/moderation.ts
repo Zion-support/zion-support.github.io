@@ -1,1 +1,1 @@
-
+// Moderation type declarations

@@ -1,23 +1,20 @@
-import React from 'react'
-
-export default function AgentReliabilityScorecards11Page() {
-  return (
-    <div className="bg-black min-h-screen">
-      <div className="mx-auto max-w-3xl px-6 py-20">
-        <h1 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">Agent Reliability Scorecards v1.1</h1>
-        <p className="mt-4 text-lg leading-8 text-gray-300">Improved incident heatmaps, failure taxonomies, and SLA drift detection.</p>
-
-        <div className="mt-10 space-y-6 text-gray-300">
-          <p>Version 1.1 focuses on higher signal for incident analysis and faster MTTR.</p>
-          <ul className="list-disc pl-6 space-y-2">
-            <li>Incident heatmaps by capability, tool, and environment.</li>
-            <li>Failure taxonomy alignment with production postmortems.</li>
-            <li>Automated SLA drift detection with guardrail suggestions.</li>
-          </ul>
-          <a href="/contact" className="inline-block mt-6 rounded-md bg-blue-600 px-4 py-2 text-sm font-semibold text-white hover:bg-blue-500">Request a demo</a>
-        </div>
-      </div>
-    </div>
-  )
-}
-
+import React from 'react',
+export default function AgentReliabilityScorecards11Page() {,
+  return (,
+    <div className="bg-black min-h-screen">,
+      <div className="mx-auto max-w-3xl px-6 py-20">,
+        <h1 className="text-3xl font-bold tracking-tight text-white sm: text-4xl">Agent Reliability Scorecards v1.1</h1>,
+        <p className="mt-4 text-lg leading-8 text-gray-300">Improved incident heatmaps, failure taxonomies, and SLA drift detection.</p>,
+        <div className="mt-10 space-y-6 text-gray-300">,
+          <p>Version 1.1 focuses on higher signal for incident analysis and faster MTTR.</p>,
+          <ul className="list-disc pl-6 space-y-2">,
+            <li>Incident heatmaps by capability, tool, and environment.</li>,
+            <li>Failure taxonomy alignment with production postmortems.</li>,
+            <li>Automated SLA drift detection with guardrail suggestions.</li>,
+          </ul>,
+          <a href="/contact" className="inline-block mt-6 rounded-md bg-blue-600 px-4 py-2 text-sm font-semibold text-white hover: bg-blue-500">Request a demo</a>,
+        </div>,
+      </div>,
+    </div>,
+  ),}
+,

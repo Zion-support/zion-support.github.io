@@ -1,5 +1,9 @@
 {
+<<<<<<< HEAD
+  "timestamp": "2025-08-24T00:24:01.493Z",
+=======
   "timestamp": "2025-09-15T20:02:03.708Z",
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
   "features": [
     {
       "title": "Intelligent Orchestrator System",
@@ -143,35 +147,7 @@
   "scripts": [
     {
       "key": "start",
-      "command": "vite preview"
-    },
-    {
-      "key": "start:backend",
-      "command": "cd server && npm start"
-    },
-    {
-      "key": "start:hybrid",
-      "command": "cd server && npm start"
-    },
-    {
-      "key": "pm2:start",
-      "command": "node scripts/pm2-start.js"
-    },
-    {
-      "key": "pm2:start:apps",
-      "command": "pm2 start ecosystem.config.cjs --only apps"
-    },
-    {
-      "key": "pm2:start:automation",
-      "command": "pm2 start ecosystem.config.cjs --only automation"
-    },
-    {
-      "key": "pm2:restart",
-      "command": "pm2 restart all"
-    },
-    {
-      "key": "pm2:startup",
-      "command": "pm2 startup"
+      "command": "next start"
     }
   ]
 }

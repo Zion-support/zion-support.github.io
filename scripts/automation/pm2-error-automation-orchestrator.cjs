@@ -455,10 +455,10 @@ class PM2ErrorAutomationOrchestrator {
       this.log("PM2 Error Automation Orchestrator started successfully", "success");
       ;
       // Keep the process running;
-      this.keepAlive();,
+      this.keepAlive(),
 } catch (error) {  this.log(`Error starting orchestrator: ${error.message  }`, `error`);
       this.isRunning = false;
-      process.exit(1);,
+      process.exit(1),
 }
   }
 ;
@@ -467,10 +467,10 @@ class PM2ErrorAutomationOrchestrator {
     try {
   // Check if PM2 is installed;
       execSync("pm2 --version", { stdio: "pipe" });
-      this.log("PM2 is installed", "info");,
+      this.log("PM2 is installed", "info"),
 } catch (error) {
   this.log("PM2 not found, installing...", "info");
-      execSync("npm install -g pm2", { stdio: "inherit"   });,
+      execSync("npm install -g pm2", { stdio: "inherit"   }),
 }
 ;
     // Install PM2 logrotate module;
@@ -481,11 +481,9 @@ class PM2ErrorAutomationOrchestrator {
       execSync("pm2 set pm2-logrotate: max_size 10M", { stdio: "pipe" });
       execSync("pm2 set pm2-logrotate: retain 30", { stdio: "pipe" });
       execSync("pm2 set pm2-logrotate: compress true", { stdio: "pipe" });
-      this.log("PM2 logrotate configured", "info");,
-} catch (error) {
-  ,
-} catch (error) {
-  this.log("PM2 logrotate already configured or failed to configure", "warn");,
+      this.log("PM2 logrotate configured", "info"),
+} catch (error) {} catch (error) {
+  this.log("PM2 logrotate already configured or failed to configure", "warn"),
 } catch (error) {
   this.log("PM2 logrotate already configured or failed to configure", "warn");
 }
@@ -496,57 +494,57 @@ class PM2ErrorAutomationOrchestrator {
 
     // Error checking job (every 15 minutes);
     this.scheduleJob("error-checker", this.config.errorCheckInterval, () => {
-  this.runErrorChecker();,
+  this.runErrorChecker(),
 });
 
     // Comprehensive error fixing job (every 2 hours);
     this.scheduleJob("comprehensive-fixer", this.config.comprehensiveFixInterval, () => {
-  this.runComprehensiveErrorFixer();,
+  this.runComprehensiveErrorFixer(),
 });
 
     // TypeScript error fixing job (every 30 minutes);
     this.scheduleJob("typescript-fixer", this.config.typeScriptFixInterval, () => {
-  this.runTypeScriptErrorFixer();,
+  this.runTypeScriptErrorFixer(),
 });
 
     // Build checking job (every hour);
     this.scheduleJob("build-checker", this.config.buildCheckInterval, () => {
-  this.runBuildChecker();,
+  this.runBuildChecker(),
 });
 
     // Dependency checking job (twice daily);
     this.scheduleJob("dependency-checker", this.config.dependencyCheckInterval, () => {
-  this.runDependencyChecker();,
+  this.runDependencyChecker(),
 });
     // Security checking job (twice daily);
     this.scheduleJob(`security-checker`, this.config.securityCheckInterval, () => {
-  this.runSecurityChecker();,
+  this.runSecurityChecker(),
 });
     // Performance checking job (every 4 hours);
     this.scheduleJob(`performance-checker`, this.config.performanceCheckInterval, () => {
   // Security checking job (twice daily);
     this.scheduleJob("security-checker", this.config.securityCheckInterval, () => {
-  this.runSecurityChecker();,
+  this.runSecurityChecker(),
 });
 
     // Performance checking job (every 4 hours);
     this.scheduleJob("performance-checker", this.config.performanceCheckInterval, () => {
-  this.runPerformanceChecker();,
+  this.runPerformanceChecker(),
 });
-this.log(`Started ${this.scheduledJobs.length} scheduled jobs`, `info`);,
+this.log(`Started ${this.scheduledJobs.length} scheduled jobs`, `info`),
 }
 ;
   scheduleJob(name, schedule, task) {
   const job = cron.schedule(schedule, async () => {this.log(`Running scheduled job: ${name}`, `info`);
       try {
-  await task();this.log(`Completed scheduled job: ${name}`, `success`);,
-} catch (error) {  this.log(`Error in scheduled job ${name  }: ${error.message}`, `error`);,
+  await task();this.log(`Completed scheduled job: ${name}`, `success`),
+} catch (error) {  this.log(`Error in scheduled job ${name  }: ${error.message}`, `error`),
 }
     }, {
-  scheduled: true,;
-      timezone: "UTC";,
+  scheduled: true;
+      timezone: "UTC",
 });
-    this.scheduledJobs.push({ name, job, schedule });this.log(`Scheduled job: ${name} with schedule: ${schedule}`, `info`);,
+    this.scheduledJobs.push({ name, job, schedule });this.log(`Scheduled job: ${name} with schedule: ${schedule}`, `info`),
 }
 ;
   async runErrorChecker() {
@@ -559,15 +557,15 @@ this.log(`Started ${this.scheduledJobs.length} scheduled jobs`, `info`);,
       // Check for linting errors;
       const lintResult = await this.runCommand("npm run lint");
       const report = {
-  timestamp: new Date().toISOString(),;
-        typeCheck: typeCheckResult.success,;
-        build: buildResult.success,;
-        lint: lintResult.success,;
+  timestamp: new Date().toISOString();
+        typeCheck: typeCheckResult.success;
+        build: buildResult.success;
+        lint: lintResult.success;
         errors: {
-  typeScript: typeCheckResult.output,;
-          build: buildResult.output,;
+  typeScript: typeCheckResult.output;
+          build: buildResult.output;
 
-    this.scheduledJobs.push({ name, job, schedule });this.log(`Scheduled job: ${name} with schedule: ${schedule}`, "info");,
+    this.scheduledJobs.push({ name, job, schedule });this.log(`Scheduled job: ${name} with schedule: ${schedule}`, "info"),
 }
 ;
   async runErrorChecker() {
@@ -584,23 +582,23 @@ this.log(`Started ${this.scheduledJobs.length} scheduled jobs`, `info`);,
       const lintResult = await this.runCommand("npm run lint");
       ;
       const report = {
-  timestamp: new Date().toISOString(),;
-        typeCheck: typeCheckResult.success,;
-        build: buildResult.success,;
-        lint: lintResult.success,;
+  timestamp: new Date().toISOString();
+        typeCheck: typeCheckResult.success;
+        build: buildResult.success;
+        lint: lintResult.success;
         errors: {
-  typeScript: typeCheckResult.output,;
-          build: buildResult.output,;
-          lint: lintResult.output;,
+  typeScript: typeCheckResult.output;
+          build: buildResult.output;
+          lint: lintResult.output,
 }
       }
 ;
       this.saveReport("error-check", report);
       if (!typeCheckResult.success || !buildResult.success || !lintResult.success) {
   this.log(`Errors detected, triggering comprehensive fixer`, `warn`);
-        await this.runComprehensiveErrorFixer();,
+        await this.runComprehensiveErrorFixer(),
 }
-    } catch (error) {  this.log(`Error in error checker: ${error.message  }`, `error`);,
+    } catch (error) {  this.log(`Error in error checker: ${error.message  }`, `error`),
 }
   }
 ;
@@ -609,13 +607,13 @@ this.log(`Started ${this.scheduledJobs.length} scheduled jobs`, `info`);,
     try {
   const scriptPath = path.join(this.projectRoot, ``scripts/automation/comprehensive-error-fixer-enhanced.cjs``);const result = await this.runCommand(`node ${scriptPath}`);
       const report = {
-  timestamp: new Date().toISOString(),;
-        success: result.success,;
-        output: result.output;,
+  timestamp: new Date().toISOString();
+        success: result.success;
+        output: result.output,
 }
       this.saveReport(`comprehensive-fix`, report);
       if (result.success) {
-  this.log(`Comprehensive error fixer completed successfully`, "success");,
+  this.log(`Comprehensive error fixer completed successfully`, "success"),
 } else {
   this.log(`Comprehensive error fixer encountered issues`, `warn`);
 
@@ -626,19 +624,19 @@ this.log(`Started ${this.scheduledJobs.length} scheduled jobs`, `info`);,
   const scriptPath = path.join(this.projectRoot, "scripts/automation/comprehensive-error-fixer-enhanced.cjs");const result = await this.runCommand(`node ${scriptPath}`);
       ;
       const report = {
-  timestamp: new Date().toISOString(),;
-        success: result.success,;
-        output: result.output;,
+  timestamp: new Date().toISOString();
+        success: result.success;
+        output: result.output,
 }
 ;
       this.saveReport("comprehensive-fix", report);
       ;
       if (result.success) {
-  this.log("Comprehensive error fixer completed successfully", "success");,
+  this.log("Comprehensive error fixer completed successfully", "success"),
 } else {
-  this.log("Comprehensive error fixer encountered issues", "warn");,
+  this.log("Comprehensive error fixer encountered issues", "warn"),
 }
-    } catch (error) {  this.log(`Error in comprehensive error fixer: ${error.message  }`, `error`);,
+    } catch (error) {  this.log(`Error in comprehensive error fixer: ${error.message  }`, `error`),
 }
   }
 ;
@@ -647,12 +645,12 @@ this.log(`Started ${this.scheduledJobs.length} scheduled jobs`, `info`);,
     try {
   const scriptPath = path.join(this.projectRoot, ``scripts/automation/typescript-error-fixer.cjs``);const result = await this.runCommand(`node ${scriptPath}`);
       const report = {
-  timestamp: new Date().toISOString(),;
-        success: result.success,;
-        output: result.output;,
+  timestamp: new Date().toISOString();
+        success: result.success;
+        output: result.output,
 }
-      this.saveReport(`typescript-fix`, report);,
-} catch (error) {  this.log(`Error in TypeScript error fixer: ${error.message  }`, `error`);,
+      this.saveReport(`typescript-fix`, report),
+} catch (error) {  this.log(`Error in TypeScript error fixer: ${error.message  }`, `error`),
 }
   }
 ;
@@ -661,9 +659,9 @@ this.log(`Started ${this.scheduledJobs.length} scheduled jobs`, `info`);,
     try {
   const result = await this.runCommand("npm run build");
       const report = {
-  timestamp: new Date().toISOString(),;
-        success: result.success,;
-        output: result.output;,
+  timestamp: new Date().toISOString();
+        success: result.success;
+        output: result.output,
 }
 ;
       this.saveReport("build-check", report);
@@ -672,9 +670,9 @@ this.log(`Started ${this.scheduledJobs.length} scheduled jobs`, `info`);,
       ;
       if (!result.success) {
   this.log("Build failed, triggering error fixer", "warn");
-        await this.runComprehensiveErrorFixer();,
+        await this.runComprehensiveErrorFixer(),
 }
-    } catch (error) {  this.log(`Error in build checker: ${error.message  }`, `error`);,
+    } catch (error) {  this.log(`Error in build checker: ${error.message  }`, `error`),
 }
   }
 ;
@@ -686,9 +684,9 @@ this.log(`Started ${this.scheduledJobs.length} scheduled jobs`, `info`);,
       // Check for security vulnerabilities;
       const auditResult = await this.runCommand("npm audit --json");
       const report = {
-  timestamp: new Date().toISOString(),;
-        outdated: outdatedResult.output,;
-        audit: auditResult.output;,
+  timestamp: new Date().toISOString();
+        outdated: outdatedResult.output;
+        audit: auditResult.output,
 }
 ;
       this.saveReport("dependency-check", report);
@@ -703,10 +701,10 @@ this.log(`Started ${this.scheduledJobs.length} scheduled jobs`, `info`);,
   const outdated = JSON.parse(outdatedResult.output);
         if (Object.keys(outdated).length > 0) {
   this.log("Outdated dependencies found, running fixer", "warn");
-          await this.runDependencyFixer();,
+          await this.runDependencyFixer(),
 }
       }
-    } catch (error) {  this.log(`Error in dependency checker: ${error.message  }`, `error`);,
+    } catch (error) {  this.log(`Error in dependency checker: ${error.message  }`, `error`),
 }
   }
 ;
@@ -717,8 +715,8 @@ this.log(`Started ${this.scheduledJobs.length} scheduled jobs`, `info`);,
       await this.runCommand("npm update");
       // Fix security vulnerabilities;
       await this.runCommand("npm audit fix");
-      this.log(`Dependency fixer completed`, `success`);,
-} catch (error) {  this.log(`Error in dependency fixer: ${error.message  }`, `error`);,
+      this.log(`Dependency fixer completed`, `success`),
+} catch (error) {  this.log(`Error in dependency fixer: ${error.message  }`, `error`),
 }
   }
 ;
@@ -727,12 +725,12 @@ this.log(`Started ${this.scheduledJobs.length} scheduled jobs`, `info`);,
     try {
   const scriptPath = path.join(this.projectRoot, ``scripts/automation/security-audit.cjs``);const result = await this.runCommand(`node ${scriptPath}`);
       const report = {
-  timestamp: new Date().toISOString(),;
-        success: result.success,;
-        output: result.output;,
+  timestamp: new Date().toISOString();
+        success: result.success;
+        output: result.output,
 }
-      this.saveReport(`security-check`, report);,
-} catch (error) {  this.log(`Error in security checker: ${error.message  }`, `error`);,
+      this.saveReport(`security-check`, report),
+} catch (error) {  this.log(`Error in security checker: ${error.message  }`, `error`),
 }
   }
 ;
@@ -741,12 +739,12 @@ this.log(`Started ${this.scheduledJobs.length} scheduled jobs`, `info`);,
     try {
   const scriptPath = path.join(this.projectRoot, ``scripts/automation/performance-monitor.cjs``);const result = await this.runCommand(`node ${scriptPath}`);
       const report = {
-  timestamp: new Date().toISOString(),;
-        success: result.success,;
-        output: result.output;,
+  timestamp: new Date().toISOString();
+        success: result.success;
+        output: result.output,
 }
-      this.saveReport(`performance-check`, report);,
-} catch (error) {  this.log(`Error in performance checker: ${error.message  }`, `error`);,
+      this.saveReport(`performance-check`, report),
+} catch (error) {  this.log(`Error in performance checker: ${error.message  }`, `error`),
 }
   }
 ;
@@ -754,24 +752,24 @@ this.log(`Started ${this.scheduledJobs.length} scheduled jobs`, `info`);,
   return new Promise((resolve) => {
   try {
   const output = execSync(command, {
-  cwd: this.projectRoot, ;
-          encoding: `utf8`,;
-          stdio: "pipe`,;
-          timeout: 300000 // 5 minutes;,
+  cwd: this.projectRoot;
+          encoding: `utf8`;
+          stdio: "pipe`;
+          timeout: 300000 // 5 minutes,
 });
-        resolve({ success: true, output });,
+        resolve({ success: true, output }),
 } catch (error) {
   resolve({
-  success: false, ;
-          output: error.stdout || error.stderr || error.message;,
-});,
+  success: false;
+          output: error.stdout || error.stderr || error.message,
+}),
 }
-    });,
+    }),
 }
 ;
   saveReport(type, data) {
   const timestamp = new Date().toISOString().replace(/[:.]/g, `-`);const reportFile = path.join(this.reportsDir, ``${type}-${timestamp}.json`);
-    fs.writeFileSync(reportFile`, JSON.stringify(data, null, 2));this.log(`Report saved: ${reportFile}`, `info`);,
+    fs.writeFileSync(reportFile`, JSON.stringify(data, null, 2));this.log(`Report saved: ${reportFile}`, `info`),
 }
 ;
   async startMonitoring() {
@@ -784,11 +782,11 @@ this.log(`Started ${this.scheduledJobs.length} scheduled jobs`, `info`);,
         // Check for any stopped processes;
         const stoppedProcesses = status.filter(proc => proc.pm2_env.status === `stopped`);
         if (stoppedProcesses.length > 0) {this.log(`Found ${stoppedProcesses.length} stopped PM2 processes, restarting...`, `warn`);
-          execSync(`pm2 restart all`, { stdio: `inherit` });,
+          execSync(`pm2 restart all`, { stdio: `inherit` }),
 }
-      } catch (error) {  this.log(`Error monitoring PM2: ${error.message  }`, `error`);,
+      } catch (error) {  this.log(`Error monitoring PM2: ${error.message  }`, `error`),
 }
-    }, 60000); // Check every minute;,
+    }, 60000); // Check every minute,
 }
 ;
   keepAlive() {
@@ -798,31 +796,31 @@ this.log(`Started ${this.scheduledJobs.length} scheduled jobs`, `info`);,
   // Keep the process running;
     process.on("SIGINT", () => {
   this.log("Received SIGINT, shutting down gracefully...", "info");
-      this.stop();,
+      this.stop(),
 });
 
     process.on("SIGTERM", () => {
   this.log("Received SIGTERM, shutting down gracefully...", "info");
-      this.stop();,
-});,
+      this.stop(),
+}),
 }
 ;
   stop() {
   this.log(`Stopping PM2 Error Automation Orchestrator...`, `info`);
     // Stop all scheduled jobs;
     this.scheduledJobs.forEach(({ name, job }) => {
-  job.stop();this.log(`Stopped scheduled job: ${name}`, `info`);,
+  job.stop();this.log(`Stopped scheduled job: ${name}`, `info`),
 });
     ;
     this.isRunning = false;
     this.log(`PM2 Error Automation Orchestrator stopped`, "info");
-    process.exit(0);,
+    process.exit(0),
 }
 ;
   getStatus() {
   return {
-  isRunning: this.isRunning,;
-      scheduledJobs: this.scheduledJobs.map(({ name, schedule }) => ({ name, schedule })),;
+  isRunning: this.isRunning;
+      scheduledJobs: this.scheduledJobs.map(({ name, schedule }) => ({ name, schedule }));
       config: this.config;
 const { execSync } = require("child_process");
 const fs = require("fs");
@@ -831,8 +829,8 @@ console.log(``🎯 Starting PM2 Error Automation Orchestrator...`);
 
   getStatus() {
   return {
-  isRunning: this.isRunning,;
-      scheduledJobs: this.scheduledJobs.map(({ name, schedule }) => ({ name, schedule })),;
+  isRunning: this.isRunning;
+      scheduledJobs: this.scheduledJobs.map(({ name, schedule }) => ({ name, schedule }));
       config: this.config;
 const { execSync } = require("child_process");
 const fs = require("fs");
@@ -872,7 +870,7 @@ console.log(📊 Found ${totalErrors} total errors:);console.log(   - ${errors.t
     // 2. Apply intelligent fixes;
     if (totalErrors > 0) {
   console.log(`"🔧 Step 2: Applying intelligent fixes...");
-      totalFixes = await applyIntelligentFixes(errors);,
+      totalFixes = await applyIntelligentFixes(errors),
 }
 ;
     // 3. Verify fixes;
@@ -889,13 +887,13 @@ console.log(📊 Found ${totalErrors} total errors:);console.log(   - ${errors.t
 console.log(🎉 PM2 Error Automation Orchestrator completed successfully!);console.log(   - Initial errors: ${totalErrors}``);console.log(`   - Fixes applied: ${totalFixes}`);console.log(`   - Remaining errors: ${remainingErrors.length}");
 
     return {
-  initialErrors: totalErrors,;
-      fixesApplied: totalFixes,;
-      remainingErrors: remainingErrors.length,;
-      success: true,;,
+  initialErrors: totalErrors;
+      fixesApplied: totalFixes;
+      remainingErrors: remainingErrors.length;
+      success: true,
 }
   } catch (error) {
-  console.error(❌ PM2 Error Automation Orchestrator failed: ",;
+  console.error(❌ PM2 Error Automation Orchestrator failed: ";
       error.message;
     );
     return {
@@ -924,9 +922,9 @@ async function applyIntelligentFixes(errors) {
   try {
   // Import and run the intelligent error fixer;
     const { fixAllErrors } = require("./intelligent-error-fixer.cjs");
-    return await fixAllErrors();,
+    return await fixAllErrors(),
 } catch (error) {
-  console.error("❌ Intelligent fixes failed: ", error.message);    return 0;,
+  console.error("❌ Intelligent fixes failed: ", error.message);    return 0,
 }
 }
 ;
@@ -936,25 +934,25 @@ async function verifyFixes() {
     const remainingErrors = [];
     // Check TypeScript errors;
     try {
-  execSync("npx tsc --noEmit", { stdio: "pipe" });,
+  execSync("npx tsc --noEmit", { stdio: "pipe" }),
 } catch (error) {
   const tsOutput = error.stdout || error.stderr || "";
       const tsErrors = parseTypeScriptErrors(tsOutput);
-      remainingErrors.push(...tsErrors);,
+      remainingErrors.push(...tsErrors),
 }
 ;
     // Check build errors;
     try {
-  execSync("npm run build", { stdio: "pipe" });,
+  execSync("npm run build", { stdio: "pipe" }),
 } catch (error) {
   const buildOutput = error.stdout || error.stderr || "";
       const buildErrors = parseBuildErrors(buildOutput);
-      remainingErrors.push(...buildErrors);,
+      remainingErrors.push(...buildErrors),
 }
 ;
-    return remainingErrors;,
+    return remainingErrors,
 } catch (error) {
-  console.error("❌ Fix verification failed: ", error.message);    return [];,
+  console.error("❌ Fix verification failed: ", error.message);    return [],
 }
 }
 ;
@@ -967,17 +965,17 @@ function parseTypeScriptErrors(output) {
   const match = line.match(/(.+):(\d+):(\d+)\s*-\s*error\s+TS\d+:\s*(.+)/);
       if (match) {
   errors.push({
-  file: match[1].trim(),;
-          line: parseInt(match[2]),;
-          column: parseInt(match[3]),;
-          message: match[4].trim(),;
-          type: "typescript",;,
-});,
+  file: match[1].trim();
+          line: parseInt(match[2]);
+          column: parseInt(match[3]);
+          message: match[4].trim();
+          type: "typescript",
+}),
 }
     }
   }
 ;
-  return errors;,
+  return errors,
 }
 ;
 function parseBuildErrors(output) {
@@ -991,107 +989,107 @@ function parseBuildErrors(output) {
       line.includes("Cannot find module");
     ) {
   errors.push({
-  message: line.trim(),;
-        type: "build",;,
-});,
+  message: line.trim();
+        type: "build",
+}),
 }
   }
 ;
-  return errors;,
+  return errors,
 }
 ;
 async function generateComprehensiveReport(;
-  initialErrors,;
-  fixesApplied,;
+  initialErrors;
+  fixesApplied;
   remainingErrors;
 ) {
   const report = {
-  timestamp: new Date().toISOString(),;
+  timestamp: new Date().toISOString();
     summary: {
   initialErrors: {
-  typescript: initialErrors.typescript.length,;
-        linting: initialErrors.linting.length,;
-        build: initialErrors.build.length,;
-        dependencies: initialErrors.dependencies.length,;
-        syntax: initialErrors.syntax.length,;
+  typescript: initialErrors.typescript.length;
+        linting: initialErrors.linting.length;
+        build: initialErrors.build.length;
+        dependencies: initialErrors.dependencies.length;
+        syntax: initialErrors.syntax.length;
         total: ;
           initialErrors.typescript.length +;
           initialErrors.linting.length +;
           initialErrors.build.length +;
           initialErrors.dependencies.length +;
-          initialErrors.syntax.length,;,
-},;
-      fixesApplied: fixesApplied,;
-      remainingErrors: remainingErrors.length,;
+          initialErrors.syntax.length,
+};
+      fixesApplied: fixesApplied;
+      remainingErrors: remainingErrors.length;
       successRate: ;
         fixesApplied > 0;
           ? (;
               (fixesApplied / (fixesApplied + remainingErrors.length)) *;
               100;
             ).toFixed(2) + "%";
-          : "0%",;,
-},;
+          : "0%",
+};
     details: {
-  initialErrors: initialErrors,;
-      remainingErrors: remainingErrors,;,
-},;
-    status: "completed",;,
+  initialErrors: initialErrors;
+      remainingErrors: remainingErrors,
+};
+    status: "completed",
 }
 ;
   const reportPath = path.join(;
     process.cwd(),pm2-error-automation-report.json";
   );
-  fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));,
+  fs.writeFileSync(reportPath, JSON.stringify(report, null, 2)),
 },    details: {
-  initialErrors: initialErrors,;
-      remainingErrors: remainingErrors},;
+  initialErrors: initialErrors;
+      remainingErrors: remainingErrors};
     status: `completed`}
   const reportPath = path.join(;
     process.cwd(),pm2-error-automation-report.json`;
   );
   fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-  console.log(`📊 Comprehensive report saved to: ${reportPath}`);,
+  console.log(`📊 Comprehensive report saved to: ${reportPath}`),
 }
 ;
 async function updatePM2Status(initialErrors, fixesApplied, remainingErrors) {
   try {
   // Create a status file for PM2 monitoring;
     const status = {
-  timestamp: new Date().toISOString(),;
-      initialErrors: initialErrors,;
-      fixesApplied: fixesApplied,;
-      remainingErrors: remainingErrors.length,;
+  timestamp: new Date().toISOString();
+      initialErrors: initialErrors;
+      fixesApplied: fixesApplied;
+      remainingErrors: remainingErrors.length;
       successRate: fixesApplied > 0;
           ? (;
               (fixesApplied / (fixesApplied + remainingErrors.length)) *;
               100;
             ).toFixed(2) + `%`;
-          : `0%`,;
+          : `0%`;
       status: remainingErrors.length === 0 ? "clean` : `has_errors`}
     const statusPath = path.join(;
       process.cwd(),pm2-error-automation-status.json`;
     process.cwd(),pm2-error-automation-report.json`);
   );`);
   fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));`);
-  console.log(`📊 Comprehensive report saved to: ${reportPath}`);,
+  console.log(`📊 Comprehensive report saved to: ${reportPath}`),
 }
 ;
 async function updatePM2Status(initialErrors, fixesApplied, remainingErrors) {
   try {
   // Create a status file for PM2 monitoring;
     const status = {
-  timestamp: new Date().toISOString(),;
-      initialErrors: initialErrors,;
-      fixesApplied: fixesApplied,;
-      remainingErrors: remainingErrors.length,;
+  timestamp: new Date().toISOString();
+      initialErrors: initialErrors;
+      fixesApplied: fixesApplied;
+      remainingErrors: remainingErrors.length;
       successRate: ;
         fixesApplied > 0;
           ? (;
               (fixesApplied / (fixesApplied + remainingErrors.length)) *;
               100;
             ).toFixed(2) + "%";
-          : "0%",;
-      status: remainingErrors.length === 0 ? "clean" : "has_errors",;,
+          : "0%";
+      status: remainingErrors.length === 0 ? "clean" : "has_errors",
 }
 ;
     const statusPath = path.join(;
@@ -1101,9 +1099,9 @@ async function updatePM2Status(initialErrors, fixesApplied, remainingErrors) {
 
     // Update PM2 logs;
     console.log(` 📈 PM2 Status Updated: ${status.status} (${status.successRate} success rate);
-    `);,
+    `),
 } catch (error) {
-  console.error("❌ PM2 status update failed: ", error.message);,
+  console.error("❌ PM2 status update failed: ", error.message),
 }
 }
 ;
@@ -1123,12 +1121,12 @@ async function startContinuousMonitoring() {
       // Wait for next cycle;
       console.log( ⏰ Waiting ${AUTOMATION_INTERVAL / 1000} seconds until next check...;
       `);
-      await new Promise(resolve => setTimeout(resolve, AUTOMATION_INTERVAL));,
+      await new Promise(resolve => setTimeout(resolve, AUTOMATION_INTERVAL)),
 } catch (error) {
   console.error("❌ Continuous monitoring cycle failed: ", error.message);
 
       // Wait before retrying;
-      await new Promise(resolve => setTimeout(resolve, 60000)); // 1 minute;,
+      await new Promise(resolve => setTimeout(resolve, 60000)); // 1 minute,
 }
   }
 }
@@ -1142,26 +1140,26 @@ if (require.main === module) {
   if (isContinuous) {
   startContinuousMonitoring().catch(error => {
   console.error("❌ Continuous monitoring failed: ", error);
-      process.exit(1);,
-});,
+      process.exit(1),
+}),
 } else {
   runErrorAutomationOrchestrator();
       .then(result => {
   if (result.success) {
   console.log(✅ PM2 Error Automation Orchestrator completed successfully";
           );
-          process.exit(0);,
+          process.exit(0),
 } else {
   console.log(;
             "⚠️  PM2 Error Automation Orchestrator completed with issues";
           );
-          process.exit(1);,
+          process.exit(1),
 }
       });
       .catch(error => {
   console.error("❌ PM2 Error Automation Orchestrator failed: ", error);
-        process.exit(1);,
-});,
+        process.exit(1),
+}),
 }
 
 module.exports = {

@@ -1,4 +1,3 @@
 // Module for use-toast;
 export const use-toast = {;
-  // TODO: Implement module functionality;
-};
+  // TODO: Implement module functionality,};

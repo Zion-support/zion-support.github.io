@@ -1,5 +1,4 @@
 import { NextRequest, NextResponse } from 'next/server';
-
 export async function GET(request: NextRequest) {
   try {
     const healthCheck = {
@@ -15,15 +14,13 @@ export async function GET(request: NextRequest) {
       },
       metrics: {
         memory_usage: process.memoryUsage(),
-        cpu_usage: process.cpuUsage(),
+        cpu_usage: process.cpuUsage()
         // Add more metrics as needed
       }
     };
-
     return NextResponse.json(healthCheck);
   } catch (error) {
     console.error('Health check error:', error);
-    
     return NextResponse.json(
       {
         status: 'unhealthy',

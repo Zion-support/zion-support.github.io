@@ -1,5 +1,4 @@
 import React from 'react'
-
 export default function BlogPostPage() {
   return (
     <div className="min-h-screen bg-white">
@@ -32,5 +31,4 @@ export default function BlogPostPage() {
       </article>
     </div>
   )
-}
-
+} 

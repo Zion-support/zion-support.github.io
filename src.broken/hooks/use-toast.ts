@@ -1,139 +1,71 @@
-import React from 'react';
 import { toast as sonnerToast } from 'sonner';
-import { globalToastManager, showToast, ToastType, ToastPriority } from '@/utils/globalToastManager';
 
-const variantStyles = {
-  info: { background: '#1e3a8a', color: '#fff' },
-
-// Deduplication settings
-const DEDUPE_DELAY = 3000; // 3 seconds
-let lastKey = '';
-let lastShown = 0;
-
-interface ToastActionProps {
-  label: string;
-  onClick: () => void;
-}
-
+// This interface defines the shape the components are trying to use.
 interface ToastProps {
   title?: string;
   description?: string;
-  variant?: 'default' | 'destructive' | 'success';
-  action?: ToastActionProps;
-  onRetry?: () => void;
-  id?: string;
-  duration?: number;
-  priority?: ToastPriority;
-  persistent?: boolean;
+  variant?: 'default' | 'destructive' | 'success'; // Add other variants if used
+  action?: React.ReactNode; // Assuming action might be needed as per ShadCN/Sonner patterns
 }
 
-const shouldShow = (key: string): boolean => {
-  const now = Date.now();
-  if (key === lastKey && (now - lastShown) < DEDUPE_DELAY) {
-    return false;
-  }
-  lastKey = key;
-  lastShown = now;
-  return true;
-};
-
-/**
- * Enhanced toast adapter that uses the global toast manager
- */
+// Adapter function
 const toastAdapter = (props: ToastProps | string) => {
   if (typeof props === 'string') {
-    return globalToastManager.showToast({
-      message: props,
+    // Simple message
+    sonnerToast(props);
+    return;
   }
 
-  const { 
-    title, 
-    description, 
-    variant = 'default', 
-    action, 
-    onRetry, 
-    duration,
-    priority,
-    persistent = false 
-  } = props;
+  const { title, description, variant, action } = props;
+  const message = title || description || ''; // Sonner needs a primary message.
 
-  // Map variant to toast type
-  let type: ToastType;
+  // If only description is provided, sonner uses it as the main message.
+  // If title is also there, description goes into options.
+  const options: { description?: string; action?: React.ReactNode; } = {};
+  if (title && description) {
+    options.description = description;
+  }
+  if (action) {
+    options.action = action;
+  }
+
   switch (variant) {
     case 'destructive':
-      type = ToastType.ERROR;
+      sonnerToast.error(message, options);
       break;
     case 'success':
-      type = ToastType.SUCCESS;
+      sonnerToast.success(message, options);
       break;
     default:
-      type = ToastType.INFO;
+      // If there's a title and description, pass description in options.
+      // If only title, it's the main message. If only description, it's also the main message.
+      if (title && description) {
+        sonnerToast(title, { description });
+      } else if (title) {
+        sonnerToast(title, options);
+      } else if (description) {
+        sonnerToast(description, options);
+      } else {
+        // Fallback if neither title nor description, though unlikely with current usage
+        sonnerToast("Notification", options);
+      }
       break;
   }
-
-  // Use title as message if no description, otherwise use description
-  const message = description || title || '';
-  const toastTitle = title && description ? title : undefined;
-
-  return globalToastManager.showToast({
-    message,
-    title: toastTitle,
-    type,
-    priority,
-    duration,
-    persistent,
-    action,
 };
 
-// Convenience methods that use the global toast manager
-toastAdapter.success = (message: string, options?: { id?: string; duration?: number } & Record<string, any>) => {
-  return showToast.success(message, options);
-};
-
-toastAdapter.error = (message: string, options?: { id?: string; duration?: number } & Record<string, any>) => {
-  return showToast.error(message, options);
-};
-
-toastAdapter.info = (message: string, options?: { id?: string; duration?: number } & Record<string, any>) => {
-  return showToast.info(message, options);
-};
-
-toastAdapter.warning = (message: string, options?: { id?: string; duration?: number } & Record<string, any>) => {
-  return showToast.warning(message, options);
-};
-
-toastAdapter.dismiss = (toastId?: string | number) => {
-  if (toastId) {
-    globalToastManager.dismissToast(String(toastId));
-  } else {
-    globalToastManager.dismissAll();
-  }
-};
-
-// Enhanced useToast hook with global toast manager integration
-export const useToast = () => ({
-  toast: toastAdapter,
-  dismiss: (toastId?: string) => {
-    if (toastId) {
-      globalToastManager.dismissToast(toastId);
-    } else {
-      globalToastManager.dismissAll();
-    }
-  },
-  
-  // Additional methods from global toast manager
-  showToast: globalToastManager.showToast.bind(globalToastManager),
-  getActiveToasts: globalToastManager.getActiveToasts.bind(globalToastManager),
-  getQueueLength: globalToastManager.getQueueLength.bind(globalToastManager),
-  dismissAll: globalToastManager.dismissAll.bind(globalToastManager),
-  
-  // Convenience methods
-  success: showToast.success,
-  error: showToast.error,
-  warning: showToast.warning,
-  info: showToast.info,
-  networkError: showToast.networkError,
-  authError: showToast.authError,
-  validationError: showToast.validationError,
+// Re-exporting specific sonner methods if they are used directly elsewhere,
+// or to maintain compatibility if some parts of the app use toast.success("message")
+toastAdapter.success = (message: string, options?: object) => sonnerToast.success(message, options);
+toastAdapter.error = (message: string, options?: object) => sonnerToast.error(message, options);
+toastAdapter.info = (message: string, options?: object) => sonnerToast.info(message, options);
+toastAdapter.warning = (message: string, options?: object) => sonnerToast.warning(message, options);
+toastAdapter.loading = (message: string, options?: object) => sonnerToast.loading(message, options);
+// Ensure the component passed to the custom adapter is a ReactElement, or a function returning one.
+// Sonner's own `custom` type is `(component: (() => React.ReactNode) | React.ReactNode, options?: ExternalToastOptions) => number | string;`
+// The issue was likely my () => component was too generic. Let's align with Sonner's flexibility but fix the immediate error.
+// The error "Type 'ReactNode' is not assignable to type 'ReactElement'" suggests that 'component' itself was the problem.
+toastAdapter.custom = (component: React.ReactElement, options?: object) => sonnerToast.custom(() => component, options);
+toastAdapter.dismiss = (toastId?: string | number) => sonnerToast.dismiss(toastId);
 
 export const toast = toastAdapter;
+export const useToast = () => ({ toast: toastAdapter });

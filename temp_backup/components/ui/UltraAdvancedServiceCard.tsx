@@ -119,5 +119,4 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({
     </div>
   );
 };
-
 export default UltraAdvancedServiceCard;

@@ -1,22 +1,60 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-const RequestQuote: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
-      <Helmet>
-        <title>RequestQuote | Zion Tech Group</title>
-        <meta name="description" content="RequestQuote - Revolutionary technology solutions" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-6">RequestQuote</h1>
-          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
-        </div>
-      </div>
-    </div>
+<<<<<<< HEAD
   );
-};
+  );
+=======
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
+import { QuoteRequestForm } from "@/components/QuoteRequestForm";
+export default function RequestQuote() {
+  return (
+    <>
+      <Header />
+      <div className="min-h-screen bg-zion-blue">
+        <QuoteRequestForm />
+      </div>
+      <Footer />
+    </>
+  )
+import {Header} from "@/components/Header";
+import {Footer} from "@/components/Footer";
+import {QuoteRequestForm} from "@/components/QuoteRequestForm";
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
+import { QuoteRequestForm } from "@/components/QuoteRequestForm";
+export default function RequestQuote() {;
+  return (
+    <>;
+      <Header />;
+      <div className="min-h-screen bg-zion-blue">;
+        <QuoteRequestForm />;
+      </div>;
+      <Footer />;
+    </>;  );
+}
+import { Header } from '@/components / Header';
+import { Footer } from '@/components / Footer';
+import { QuoteRequestForm } from '@/components / QuoteRequestForm';
+export default /**
+ * RequestQuote - Function description
+ */
+function RequestQuote() {
+  return (
+    <>;
+      <Header />;
+      <div className="min - h-screen bg - zion - blue">;
+        <QuoteRequestForm />;
+      </div>;
+      <Footer />;
+    </>);
+}
 
-export default RequestQuote;
+;
+
+
+  ),;
+} export default function RequestQuote () {
+  return (min-h-screen bg-zion-blue" > <QuoteRequestForm /> </div> <Footer /> </> 
+  );
+}
+;
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

@@ -1,5 +1,4 @@
 import { NextRequest, NextResponse } from 'next/server';
-
 export async function POST(request: NextRequest) {
   try {
     const pageViewData = await request.json();
@@ -17,14 +16,13 @@ export async function POST(request: NextRequest) {
       ...pageViewData,
       timestamp: new Date().toISOString(),
       ip: request.ip || request.headers.get('x-forwarded-for') || 'unknown',
-      userAgent: request.headers.get('user-agent') || 'unknown'
+      userAgent: request.headers.get('user-agent') || 'unknown',
     });
-
+    
     // In production, you would:
     // 1. Send to Google Analytics, Mixpanel, Amplitude, etc.
     // 2. Store in your database
     // 3. Send to your data warehouse
-    
     // Example: Send to Google Analytics 4
     // await fetch(`https://www.google-analytics.com/mp/collect?measurement_id=${GA_MEASUREMENT_ID}&api_secret=${GA_API_SECRET}`, {
     //   method: 'POST',
@@ -41,7 +39,7 @@ export async function POST(request: NextRequest) {
     //     }]
     //   })
     // });
-
+    
     return NextResponse.json({ success: true });
   } catch (error) {
     console.error('Page view error:', error);

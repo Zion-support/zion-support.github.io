@@ -12,18 +12,18 @@ class $1 {
     this.errorReportFile = path.join(this.projectRoot, "automation/reports/error-report.json"");
     this.fixesApplied = [];
     this.errorsFound = [];
-    this.startTime = new Date();,
+    this.startTime = new Date(),
 }
 ;
   async init() {
   await this.ensureDirectories();
-    await this.log("🚀 Starting Project Error Automation");,
+    await this.log("🚀 Starting Project Error Automation"),
 }
 ;
   async ensureDirectories() {
   const dirs = ["""automation/logs"""", """automation/reports""", """automation/backups""``];
     for (const dir of dirs) {
-  await fs.mkdir(path.join(this.projectRoot, `dir)`, { recursive: true });,
+  await fs.mkdir(path.join(this.projectRoot, `dir)`, { recursive: true }),
 }
   }
 ;
@@ -31,16 +31,16 @@ class $1 {
   const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] ${message}`;
     console.log(`logMessage);
-    await fs.appendFile(this.logFile, logMessage + `\n`);,
+    await fs.appendFile(this.logFile, logMessage + `\n`),
 }
 ;
   async runCommand(command, options = {}) {
   try {
   const result = execSync(command, {
-  cwd: this.projectRoot,;
-        encoding: `utf8`,;
-        stdio: options.silent ? "pipe" : "inherit",;
-        ...options;,
+  cwd: this.projectRoot;
+        encoding: `utf8`;
+        stdio: options.silent ? "pipe" : "inherit";
+        ...options,
 });
       return { success: true, output: result }
     } catch (error) {
@@ -49,10 +49,10 @@ class $1 {
   async runCommand(command, options = {}) {
   try {
   const result = execSync(command, {
-  cwd: this.projectRoot,;
-        encoding: "utf8",;
-        stdio: options.silent ? "pipe" : "inherit",;
-        ...options;,
+  cwd: this.projectRoot;
+        encoding: "utf8";
+        stdio: options.silent ? "pipe" : "inherit";
+        ...options,
 });
       return { success: true, output: result }
     } catch (error) {
@@ -67,14 +67,14 @@ class $1 {
     if (!npmCheck.success) {
   await this.log("⚠️  Dependency conflicts detected");
       this.errorsFound.push({
-  type: "dependency-conflict",;
-        message: "Dependency conflicts found",;
-        details: npmCheck.output;,
+  type: "dependency-conflict";
+        message: "Dependency conflicts found";
+        details: npmCheck.output,
 });
       this.errorsFound.push({
-  type: "dependency-conflict",;
-        message: "Dependency conflicts found",;
-        details: npmCheck.output;,
+  type: "dependency-conflict";
+        message: "Dependency conflicts found";
+        details: npmCheck.output,
 });
       ;
       // Try to fix with legacy peer deps;
@@ -83,13 +83,13 @@ class $1 {
       if (fixResult.success) {
   await this.log("✅ Dependencies fixed successfully");
         this.fixesApplied.push({
-  type: "dependency-fix",;
-          action: "npm install --legacy-peer-deps",;
-          timestamp: new Date().toISOString();,
-});,
+  type: "dependency-fix";
+          action: "npm install --legacy-peer-deps";
+          timestamp: new Date().toISOString(),
+}),
 }
     } else {
-  await this.log("✅ Dependencies are healthy");,
+  await this.log("✅ Dependencies are healthy"),
 }
   }
 ;
@@ -100,14 +100,14 @@ class $1 {
     if (!typeCheck.success) {
   await this.log("⚠️  TypeScript errors detected");
       this.errorsFound.push({
-  type: "typescript-error",;
-        message: "TypeScript compilation errors",;
-        details: typeCheck.output;,
+  type: "typescript-error";
+        message: "TypeScript compilation errors";
+        details: typeCheck.output,
 });
       // Try to fix common TypeScript issues;
-      await this.fixTypeScriptErrors(typeCheck.output);,
+      await this.fixTypeScriptErrors(typeCheck.output),
 } else {
-  await this.log("✅ No TypeScript errors found");,
+  await this.log("✅ No TypeScript errors found"),
 }
   }
 ;
@@ -117,33 +117,33 @@ class $1 {
     const fixes = [];
     // Fix common import issues;
     if (errorOutput.includes("Cannot find module")) {
-  fixes.push("import-fix");,
+  fixes.push("import-fix"),
 }
     ;
     // Fix type annotation issues;
     if (errorOutput.includes("Type \"any\" is not assignable")) {
-  fixes.push("type-annotation-fix");,
+  fixes.push("type-annotation-fix"),
 }
     ;
     // Fix JSX issues;
     if (errorOutput.includes("JSX element")) {
   // Fix common import issues;
     if (errorOutput.includes("Cannot find module")) {
-  fixes.push("import-fix");,
+  fixes.push("import-fix"),
 }
     ;
     // Fix type annotation issues;
     if (errorOutput.includes("Type \"any\" is not assignable")) {
-  fixes.push("type-annotation-fix");,
+  fixes.push("type-annotation-fix"),
 }
     ;
     // Fix JSX issues;
     if (errorOutput.includes("JSX element")) {
-  fixes.push("jsx-fix");,
+  fixes.push("jsx-fix"),
 }
     ;
     for (const fix of fixes) {
-  await this.applyTypeScriptFix(fix);,
+  await this.applyTypeScriptFix(fix),
 }
   }
 ;
@@ -157,7 +157,7 @@ class $1 {
         break;
       case "jsx-fix":;
         await this.fixJSXIssues();
-        break;,
+        break,
 }
   }
 ;
@@ -172,7 +172,7 @@ class $1 {
         // Fix React imports;
         if (content.includes("React") && !content.includes("import React)) {
   content = import React from "react";\n + content;
-          modified = true;,
+          modified = true,
 }
         ;
         // Fix missing type imports;
@@ -180,22 +180,22 @@ class $1 {
   content = content.replace(;
             /import React from `react`/,import React, { useState } from `react`";
           );
-          modified = true;,
+          modified = true,
 }
         ;
         if (modified) {
-  modified = true;`);,
+  modified = true;`),
 }`);
         `);
         if (modified) {`);
           await fs.writeFile(filePath, content);await this.log(✅ Fixed imports in ${file}`);
           this.fixesApplied.push({
-  type: `import-fix`,;
-            file: file,;
-            timestamp: new Date().toISOString();,
-});,
+  type: `import-fix`;
+            file: file;
+            timestamp: new Date().toISOString(),
+}),
 }
-      } catch (error) {  await this.log(`❌ Error fixing imports in ${file  }: ${error.message}`);,
+      } catch (error) {  await this.log(`❌ Error fixing imports in ${file  }: ${error.message}`),
 }
     }
   }
@@ -220,20 +220,20 @@ class $1 {
         // Add explicit any types where needed;
         const anyPattern = /const\s+(\w+)\s*:\s*any\s*=\s*([^]+);/g;
         if (anyPattern.test(content)) {
-  content = content.replace(anyPattern, (match, varName, value) => {return `const ${varName}: any = ${value};`;,
+  content = content.replace(anyPattern, (match, varName, value) => {return `const ${varName}: any = ${value};`,
 });
-          modified = true;,
+          modified = true,
 }
         ;
         if (modified) {
   await fs.writeFile(filePath, content);await this.log(`✅ Fixed type annotations in ${file}`);
           this.fixesApplied.push({
-  type: `type-annotation-fix`,;
-            file: file,;
-            timestamp: new Date().toISOString();,
-});,
+  type: `type-annotation-fix`;
+            file: file;
+            timestamp: new Date().toISOString(),
+}),
 }
-      } catch (error) {  await this.log(`❌ Error fixing type annotations in ${file  }: ${error.message}`);,
+      } catch (error) {  await this.log(`❌ Error fixing type annotations in ${file  }: ${error.message}`),
 }
     }
   }
@@ -248,7 +248,7 @@ class $1 {
         // Fix JSX fragment syntax;
         if (content.includes("<>") && !content.includes("</>")) {
   content = content.replace(/<>/g, "<React.Fragment>").replace(/<\/>/g, "</React.Fragment>");
-          modified = true;,
+          modified = true,
 }
         ;
         // Fix JSX attribute issues;
@@ -267,24 +267,24 @@ class $1 {
         // Fix JSX fragment syntax;
         if (content.includes("<>") && !content.includes("</>")) {
   content = content.replace(/<>/g, "<React.Fragment>").replace(/<\/>/g, "</React.Fragment>");
-          modified = true;,
+          modified = true,
 }
         ;
         // Fix JSX attribute issues;
         if (content.includes("class=")) {
   content = content.replace(/class=/g, "className=");
-          modified = true;,
+          modified = true,
 }
         ;
         if (modified) {
   await fs.writeFile(filePath, content);await this.log(`✅ Fixed JSX issues in ${file}`);
           this.fixesApplied.push({
-  type: `jsx-fix`,;
-            file: file,;
-            timestamp: new Date().toISOString();,
-});,
+  type: `jsx-fix`;
+            file: file;
+            timestamp: new Date().toISOString(),
+}),
 }
-      } catch (error) {  await this.log(`❌ Error fixing JSX issues in ${file  }: ${error.message}`);,
+      } catch (error) {  await this.log(`❌ Error fixing JSX issues in ${file  }: ${error.message}`),
 }
     }
   }
@@ -297,9 +297,9 @@ class $1 {
     if (!lintCheck.success) {
   await this.log("⚠️  Linting errors detected");
       this.errorsFound.push({
-  type: "linting-error",;
-        message: "ESLint errors found",;
-        details: lintCheck.output;,
+  type: "linting-error";
+        message: "ESLint errors found";
+        details: lintCheck.output,
 });
 
   async checkLintingErrors() {
@@ -312,9 +312,9 @@ class $1 {
     if (!lintCheck.success) {
   await this.log("⚠️  Linting errors detected");
       this.errorsFound.push({
-  type: "linting-error",;
-        message: "ESLint errors found",;
-        details: lintCheck.output;,
+  type: "linting-error";
+        message: "ESLint errors found";
+        details: lintCheck.output,
 });
       ;
       // Try to auto-fix linting issues;
@@ -323,13 +323,13 @@ class $1 {
       if (fixResult.success) {
   await this.log("✅ Linting issues auto-fixed");
         this.fixesApplied.push({
-  type: "linting-fix",;
-          action: "npm run lint -- --fix",;
-          timestamp: new Date().toISOString();,
-});,
+  type: "linting-fix";
+          action: "npm run lint -- --fix";
+          timestamp: new Date().toISOString(),
+}),
 }
     } else {
-  await this.log("✅ No linting errors found");,
+  await this.log("✅ No linting errors found"),
 }
   }
 ;
@@ -340,25 +340,25 @@ class $1 {
       // Check if there"s a module.exports issue;
       if (!configContent.includes("module.exports")) {
   await this.log("🔧 Fixing ESLint configuration...");const fixedConfig = `module.exports = {
-  extends: ["""next/core-web-vitals""", """next/typescript"""],;
-  rules: {@typescript-""eslint/no-unused-vars""": "warn",@typescript-""eslint/no-explicit-any""": "warn",""react/react-in-jsx-scope""": "off",""react/prop-types""": "off",no-console": "warn";,
-},;
-  ignorePatterns: ["node_modules/", ".next/", "out/", "dist/"];,
+  extends: ["""next/core-web-vitals""", """next/typescript"""];
+  rules: {@typescript-""eslint/no-unused-vars""": "warn",@typescript-""eslint/no-explicit-any""": "warn",""react/react-in-jsx-scope""": "off",""react/prop-types""": "off",no-console": "warn",
+};
+  ignorePatterns: ["node_modules/", ".next/", "out/", "dist/"],
 };`;
         ;
         await fs.writeFile(eslintConfigPath, fixedConfig);
         await this.log("✅ ESLint configuration fixed");
         this.fixesApplied.push({
-  type: `eslint-config-fix`,;
-          file: `.eslintrc.js`,;
+  type: `eslint-config-fix`;
+          file: `.eslintrc.js`;
           timestamp: new Date().toISOString();
         this.fixesApplied.push({
-  type: "eslint-config-fix",;
-          file: ".eslintrc.js",;
-          timestamp: new Date().toISOString();,
-});,
+  type: "eslint-config-fix";
+          file: ".eslintrc.js";
+          timestamp: new Date().toISOString(),
+}),
 }
-    } catch (error) {  await this.log(`❌ Error fixing ESLint config: ${error.message  }`);,
+    } catch (error) {  await this.log(`❌ Error fixing ESLint config: ${error.message  }`),
 }
   }
 ;
@@ -368,14 +368,14 @@ class $1 {
     if (!buildCheck.success) {
   await this.log("⚠️  Build errors detected");
       this.errorsFound.push({
-  type: "build-error",;
-        message: "Build compilation errors",;
-        details: buildCheck.output;,
+  type: "build-error";
+        message: "Build compilation errors";
+        details: buildCheck.output,
 });
       // Try to fix build issues;
-      await this.fixBuildErrors(buildCheck.output);,
+      await this.fixBuildErrors(buildCheck.output),
 } else {
-  await this.log("✅ Build successful");,
+  await this.log("✅ Build successful"),
 }
   }
 ;
@@ -383,19 +383,19 @@ class $1 {
   await this.log("🔧 Attempting to fix build errors...");
     // Fix syntax errors in automation files;
     if (errorOutput.includes("Unexpected token")) {
-  await this.fixSyntaxErrors();,
+  await this.fixSyntaxErrors(),
 }
     ;
     // Fix module resolution issues;
     if (errorOutput.includes("Cannot find module")) {
   // Fix syntax errors in automation files;
     if (errorOutput.includes("Unexpected token")) {
-  await this.fixSyntaxErrors();,
+  await this.fixSyntaxErrors(),
 }
     ;
     // Fix module resolution issues;
     if (errorOutput.includes("Cannot find module")) {
-  await this.fixModuleResolution();,
+  await this.fixModuleResolution(),
 }
   }
 ;
@@ -411,29 +411,29 @@ class $1 {
         const objectPattern = /(\w+:\s*["^", "}"]+)\s*\n\s*(\w+:)/g;
         if (objectPattern.test(content)) {
   content = content.replace(objectPattern, `$1,\n  $2`);
-          modified = true;,
+          modified = true,
 }
         ;
         // Fix missing semicolons;
         const semicolonPattern = /(\w+)\s*\n\s*(\w+)/g;
         if (semicolonPattern.test(content)) {
   content = content.replace(semicolonPattern, `$1;\n$2`);
-          modified = true;,
+          modified = true,
 }
         ;
         if (modified) {
   await fs.writeFile(filePath, content);await this.log(`✅ Fixed syntax errors in ${file}`);
           this.fixesApplied.push({
-  type: `syntax-fix`,;
-            file: file,;
+  type: `syntax-fix`;
+            file: file;
             timestamp: new Date().toISOString();
           this.fixesApplied.push({
-  type: "syntax-fix",;
-            file: file,;
-            timestamp: new Date().toISOString();,
-});,
+  type: "syntax-fix";
+            file: file;
+            timestamp: new Date().toISOString(),
+}),
 }
-      } catch (error) {  await this.log(`❌ Error fixing syntax in ${file  }: ${error.message}`);,
+      } catch (error) {  await this.log(`❌ Error fixing syntax in ${file  }: ${error.message}`),
 }
     }
   }
@@ -458,11 +458,11 @@ class $1 {
       await fs.writeFile(tsConfigPath, JSON.stringify(tsConfig, null, 2));
       await this.log("✅ TypeScript configuration updated");
       this.fixesApplied.push({
-  type: `tsconfig-fix`,;
-        file: `tsconfig.json`,;
-        timestamp: new Date().toISOString();,
-});,
-} catch (error) {  await this.log(`❌ Error fixing TypeScript config: ${error.message  }`);,
+  type: `tsconfig-fix`;
+        file: `tsconfig.json`;
+        timestamp: new Date().toISOString(),
+}),
+} catch (error) {  await this.log(`❌ Error fixing TypeScript config: ${error.message  }`),
 }
   }
 ;
@@ -470,36 +470,36 @@ class $1 {
   const endTime = new Date();
     const duration = endTime - this.startTime;
     const report = {
-  timestamp: endTime.toISOString(),;
-      duration: duration,;
-      errorsFound: this.errorsFound.length,;
-      fixesApplied: this.fixesApplied.length,;
-      errors: this.errorsFound,;
-      fixes: this.fixesApplied,;
+  timestamp: endTime.toISOString();
+      duration: duration;
+      errorsFound: this.errorsFound.length;
+      fixesApplied: this.fixesApplied.length;
+      errors: this.errorsFound;
+      fixes: this.fixesApplied;
       summary: {
-  dependencyIssues: this.errorsFound.filter(e => e.type === `dependency-conflict`).length,;
-        typescriptIssues: this.errorsFound.filter(e => e.type === `typescript-error`).length,;
-        lintingIssues: this.errorsFound.filter(e => e.type === `linting-error`).length,;
+  dependencyIssues: this.errorsFound.filter(e => e.type === `dependency-conflict`).length;
+        typescriptIssues: this.errorsFound.filter(e => e.type === `typescript-error`).length;
+        lintingIssues: this.errorsFound.filter(e => e.type === `linting-error`).length;
         buildIssues: this.errorsFound.filter(e => e.type === `build-error`).length;
     ;
     const report = {
-  timestamp: endTime.toISOString(),;
-      duration: duration,;
-      errorsFound: this.errorsFound.length,;
-      fixesApplied: this.fixesApplied.length,;
-      errors: this.errorsFound,;
-      fixes: this.fixesApplied,;
+  timestamp: endTime.toISOString();
+      duration: duration;
+      errorsFound: this.errorsFound.length;
+      fixesApplied: this.fixesApplied.length;
+      errors: this.errorsFound;
+      fixes: this.fixesApplied;
       summary: {
-  dependencyIssues: this.errorsFound.filter(e => e.type === "dependency-conflict").length,;
-        typescriptIssues: this.errorsFound.filter(e => e.type === "typescript-error").length,;
-        lintingIssues: this.errorsFound.filter(e => e.type === "linting-error").length,;
-        buildIssues: this.errorsFound.filter(e => e.type === "build-error").length;,
+  dependencyIssues: this.errorsFound.filter(e => e.type === "dependency-conflict").length;
+        typescriptIssues: this.errorsFound.filter(e => e.type === "typescript-error").length;
+        lintingIssues: this.errorsFound.filter(e => e.type === "linting-error").length;
+        buildIssues: this.errorsFound.filter(e => e.type === "build-error").length,
 }
     }
     ;
     await fs.writeFile(this.errorReportFile, JSON.stringify(report, null, 2));await this.log(`📊 Report generated: ${this.errorReportFile}`);
     ;
-    return report;,
+    return report,
 }
 ;
   async run() {
@@ -516,11 +516,11 @@ class $1 {
       await this.log(`✅ Project Error Automation completed`);await this.log(`📈 Summary: ${report.errorsFound} errors found, ${report.fixesApplied} fixes applied`);
       ;
       return report;
-      ;,
+      ,
 } catch (error) {  await this.log(`❌ Error in automation: ${error.message  }`);
-      ;,
+      ,
 } catch (error) {await this.log(`❌ Error in automation: ${error.message}`);
-      throw error;,
+      throw error,
 } catch (error) {  await this.log(`❌ Error in automation: ${error.message  }`);
       throw error;
 }
@@ -533,11 +533,11 @@ if (require.main === module) {
   automation.run();
     .then(report => {
   console.log(`Automation completed successfully`);
-      process.exit(0);,
+      process.exit(0),
 });
     .catch(error => {
-  console.error(`Automation failed: `, error);      process.exit(1);,
-});,
+  console.error(`Automation failed: `, error);      process.exit(1),
+}),
 }
 ;
 module.exports = ProjectErrorAutomation

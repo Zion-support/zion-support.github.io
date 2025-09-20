@@ -42,5 +42,4 @@ export default function UltraFuturisticServiceShowcase2029({ services }: UltraFu
     </div>
   );
 };
-
 export default UltraFuturisticServiceShowcase2029;

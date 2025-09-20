@@ -11,7 +11,38 @@
   },
   {
     "route": "/about",
-    "title": "About Us - Zion Tech Group",
+    "title": "About Us - Zion Tech Group | Leading AI & Technology Innovation",
+    "h1": ""
+  },
+  {
+    "route": "/ai-autonomous-systems",
+    "title": "AI Autonomous Systems - Zion Tech Group | Self-Learning AI Solutions",
+    "h1": ""
+  },
+  {
+    "route": "/ai-business-intelligence",
+    "title": "AI Business Intelligence - Zion Tech Group | Advanced Analytics & Insights",
+    "h1": ""
+  },
+  {
+    "route": "/ai-content-generation",
+    "title": "AI Content Generation - Zion Tech Group | Automated Content Creation",
+    "h1": ""
+  },
+  {
+    "route": "/ai-customer-experience",
+    "title": "AI Customer Experience - Zion Tech Group | Personalized Customer Engagement",
+    "h1": ""
+  },
+  {
+    "route": "/ai-powered-it-asset-management",
+    "title": "AI-Powered IT Asset Management - Zion Tech Group | Intelligent Asset Tracking",
+    "h1": ""
+  },
+  {
+    "route": "/cloud-infrastructure-management",
+    "title": "Cloud Infrastructure Management - Zion Tech Group | Multi-Cloud Optimization",
+    "h1": ""
   },
   {
     "route": "/comprehensive-2025-services-showcase",
@@ -19,11 +50,29 @@
     "h1": "2025 Innovative Services Showcase"
   },
   {
+    "route": "/contact",
+    "title": "Contact Us - Zion Tech Group | Get in Touch",
+    "h1": ""
+  },
+  {
+    "route": "/docs",
+    "title": "Documentation - Zion Tech Group | Technical Guides & API Reference",
+    "h1": ""
+  },
+  {
+    "route": "/edge-computing-orchestration",
+    "title": "Edge Computing Orchestration - Zion Tech Group | Global Edge Infrastructure",
+    "h1": ""
+  },
+  {
     "route": "/",
     "title": "Zion Tech Group — Leading-Edge Technology Solutions & Autonomous Innovation Platform",
     "h1": "Zion Tech Group"
   },
   {
+    "route": "/market-pricing",
+    "title": "Market Pricing - Zion Tech Group | Competitive Pricing Analysis",
+    "h1": ""
   },
   {
     "route": "/pricing-2025",
@@ -31,5 +80,36 @@
     "h1": "2025 Pricing & Services"
   },
   {
+<<<<<<< HEAD
+    "route": "/pricing",
+    "title": "Pricing - Zion Tech Group | Transparent AI & IT Solutions Pricing",
+    "h1": ""
+  },
+  {
+    "route": "/quantum-cybersecurity",
+    "title": "Quantum Cybersecurity - Zion Tech Group | Future-Proof Security Solutions",
+    "h1": ""
+  },
+  {
+    "route": "/quantum-financial-trading",
+    "title": "Quantum Financial Trading - Zion Tech Group | Quantum AI Trading Platform",
+    "h1": ""
+  },
+  {
+    "route": "/quantum-neural-networks",
+    "title": "Quantum Neural Networks - Zion Tech Group | Quantum AI & Consciousness",
+    "h1": ""
+  },
+  {
+    "route": "/services",
+    "title": "Services - Zion Tech Group | AI & IT Solutions",
+    "h1": ""
+  },
+  {
+    "route": "/solutions",
+    "title": "Solutions - Zion Tech Group | Industry & Technology Solutions",
+    "h1": ""
+=======
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
   }
 ]

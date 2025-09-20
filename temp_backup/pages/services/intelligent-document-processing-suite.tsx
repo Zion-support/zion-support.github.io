@@ -23,5 +23,4 @@ export default function IntelligentDocumentProcessingSuite() {
     </div>
   );
 };
-
 export default intelligent-document-processing-suite;

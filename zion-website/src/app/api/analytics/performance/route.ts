@@ -1,5 +1,4 @@
 import { NextRequest, NextResponse } from 'next/server';
-
 export async function POST(request: NextRequest) {
   try {
     const performanceData = await request.json();
@@ -17,14 +16,13 @@ export async function POST(request: NextRequest) {
       ...performanceData,
       timestamp: new Date().toISOString(),
       ip: request.ip || request.headers.get('x-forwarded-for') || 'unknown',
-      userAgent: request.headers.get('user-agent') || 'unknown'
+      userAgent: request.headers.get('user-agent') || 'unknown',
     });
-
+    
     // In production, you would:
     // 1. Send to Google Analytics, Web Vitals, New Relic, DataDog, etc.
     // 2. Store in your database for analysis
     // 3. Send alerts if metrics exceed thresholds
-    
     // Example: Send to Google Analytics 4
     // await fetch(`https://www.google-analytics.com/mp/collect?measurement_id=${GA_MEASUREMENT_ID}&api_secret=${GA_API_SECRET}`, {
     //   method: 'POST',
@@ -44,10 +42,10 @@ export async function POST(request: NextRequest) {
     //     }]
     //   })
     // });
-
+    
     // Check for performance issues and potentially send alerts
     const { metrics } = performanceData;
-    const issues = [];
+    const issues: string[] = [];
     
     if (metrics.lcp && metrics.lcp > 4000) {
       issues.push('LCP is above 4s threshold');
@@ -67,9 +65,9 @@ export async function POST(request: NextRequest) {
       // In production, you might send alerts to your monitoring system
     }
 
-    return NextResponse.json({ 
-      success: true, 
-      issues: issues.length > 0 ? issues : undefined 
+    return NextResponse.json({
+      success: true,
+      issues: issues.length > 0 ? issues : undefined,
     });
   } catch (error) {
     console.error('Performance metrics error:', error);

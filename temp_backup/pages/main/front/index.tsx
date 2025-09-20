@@ -31,5 +31,4 @@ export default function MainFrontIndex() {
     </div>
   );
 };
-
 export default index;

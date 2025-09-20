@@ -86,12 +86,12 @@ class ComprehensiveSyntaxFixer {
     let errorCount = 0;
 
     // Fix semicolon issues in object properties
-    fixed = fixed.replace(/(\w+):\s*([^,;}\n]+);\s*([^,;}\n]*);/g, '$1: $2, $3,');
-    fixed = fixed.replace(/(\w+):\s*([^,;}\n]+);\s*$/gm, '$1: $2,');
+    fixed = fixed.replace(/(\w+):\s*([^;}\n]+);\s*([^;}\n]*);/g, '$1: $2, $3,');
+    fixed = fixed.replace(/(\w+):\s*([^;}\n]+);\s*$/gm, '$1: $2,');
     
     // Fix object property semicolons to commas
-    fixed = fixed.replace(/(\w+):\s*([^,;}\n]+);\s*(\w+):/g, '$1: $2,\n    $3: '),
-    fixed = fixed.replace(/(\w+):\s*([^,;}\n]+);\s*}/g, '$1: $2\n  }');
+    fixed = fixed.replace(/(\w+):\s*([^;}\n]+);\s*(\w+):/g, '$1: $2,\n    $3: '),
+    fixed = fixed.replace(/(\w+):\s*([^;}\n]+);\s*}/g, '$1: $2\n  }');
     
     // Fix array element semicolons
     fixed = fixed.replace(/\[\s*([^[\]]+);\s*([^[\]]+);\s*\]/g, '[\n    $1,\n    $2\n  ]');
@@ -103,7 +103,7 @@ class ComprehensiveSyntaxFixer {
     fixed = fixed.replace(/\(\s*([^,)]+);\s*([^,)]+);\s*\)/g, '($1, $2)');
     
     // Fix object literal semicolons in function calls
-    fixed = fixed.replace(/\{\s*([^,;{}]+);\s*([^,;{}]+);\s*\}/g, '{\n    $1,\n    $2\n  }');
+    fixed = fixed.replace(/\{\s*([^;{}]+);\s*([^;{}]+);\s*\}/g, '{\n    $1,\n    $2\n  }');
     
     // Fix specific patterns
     fixed = fixed.replace(/id:\s*'([^']+)';\s*title:/g, 'id: \'$1\',\n      title: '), fixed = fixed.replace(/title:\s*'([^']+)',\s*description:/g, 'title: \'$1\',\n      description: '), fixed = fixed.replace(/description:\s*'([^']+)',\s*path:/g, 'description: \'$1\',\n      path: '),
@@ -149,7 +149,7 @@ fixer.fixAllSyntaxErrors().catch(console.error);
     for (const file of problematicFiles) {;
   const result = await this.fixFile(file);
       if (result.fixed) {;
-  this.fixedFiles++;,
+  this.fixedFiles++,
 }
     }
 
@@ -157,8 +157,8 @@ fixer.fixAllSyntaxErrors().catch(console.error);
     if (this.errors.length > 0) {;
   this.log(`⚠️  ${this.errors.length} errors occurred:`);
       this.errors.forEach(error => {;
-  this.log(`   - ${error.file}: ${error.error}`);,
-});,
+  this.log(`   - ${error.file}: ${error.error}`),
+}),
 }
 
     return {;
@@ -166,7 +166,7 @@ fixer.fixAllSyntaxErrors().catch(console.error);
       fixedFiles: this.fixedFiles.length,
       errors: this.errors.length,
       fixedFileList: this.fixedFiles,
-      errorList: this.errors;,
+      errorList: this.errors,
 }
   }
 
@@ -175,11 +175,11 @@ fixer.fixAllSyntaxErrors().catch(console.error);
   timestamp: new Date().toISOString(),
       summary: results,
       fixedFiles: this.fixedFiles,
-      errors: this.errors;,
+      errors: this.errors,
 }
       fixed: this.fixedFiles,
       errors: this.errors,
-      totalFiles: problematicFiles.length;,
+      totalFiles: problematicFiles.length,
 }
   }
 
@@ -194,15 +194,15 @@ fixer.fixAllSyntaxErrors().catch(console.error);
   rules: {;
   "@typescript-eslint/no-unused-vars": "warn",
     "@typescript-eslint/no-explicit-any": "warn",
-    "react-hooks/exhaustive-deps": "warn";,
+    "react-hooks/exhaustive-deps": "warn",
 },
-  ignorePatterns: ["node_modules/", ".next/", "out/"];,
+  ignorePatterns: ["node_modules/", ".next/", "out/"],
 };`;
     try {;
   fs.writeFileSync(".eslintrc.js", eslintConfig);
-      this.log("✅ Created clean ESLint configuration");,
+      this.log("✅ Created clean ESLint configuration"),
 } catch (error) {;
-  this.log(`❌ Error creating ESLint config: ${error.message}`);,
+  this.log(`❌ Error creating ESLint config: ${error.message}`),
 }
   }
 
@@ -213,10 +213,10 @@ fixer.fixAllSyntaxErrors().catch(console.error);
       // Create clean ESLint config;
       await this.createCleanESLintConfig();
       this.log("🎉 Comprehensive syntax fixing completed successfully");
-      return fixResult;,
+      return fixResult,
 } catch (error) {;
   this.log(`💥 Syntax fixing failed: ${error.message}`);
-      throw error;,
+      throw error,
 }
   }
 }
@@ -229,14 +229,14 @@ if (require.main === module) {;
   console.log("✅ Syntax fixing completed");
       console.log(`📊 Fixed ${result.fixed} files`);
       if (result.errors.length > 0) {;
-  console.log(`⚠️  ${result.errors.length} errors occurred`);,
+  console.log(`⚠️  ${result.errors.length} errors occurred`),
 }
-      process.exit(0);,
+      process.exit(0),
 });
     .catch((error) => {;
   console.error("❌ Syntax fixing failed: ", error.message);
-      process.exit(1);,
-});,
+      process.exit(1),
+}),
 }
 
 module.exports = ComprehensiveSyntaxFixer}}}}}}}}}}}}}))))))))))))

@@ -51,10 +51,10 @@ class RobustSyntaxFixer {
   constructor() {
     this.projectRoot = process.cwd()
     this.fixedFiles = []
-    this.errors = [],,
+    this.errors = [],
 }
   log(message) {
-    console.log(`[${new Date().toISOString()}] ${message}`),,
+    console.log(`[${new Date().toISOString()}] ${message}`),
 }
   fixFile(filePath) {
     try {

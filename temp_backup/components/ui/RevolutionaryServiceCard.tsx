@@ -106,5 +106,4 @@ const RevolutionaryServiceCard: React.FC<RevolutionaryServiceCardProps> = ({ ser
     </div>
   );
 };
-
 export default RevolutionaryServiceCard;

@@ -290,6 +290,4 @@ export default function Metaverse() {
     </div>
   );
 };
-
-
 export default NextGenTechShowcase2026;

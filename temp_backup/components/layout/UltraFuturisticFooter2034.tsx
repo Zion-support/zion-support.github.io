@@ -141,5 +141,4 @@ export default function UltraFuturisticFooter2034() {
     </div>
   );
 };
-
 export default UltraFuturisticFooter2034;

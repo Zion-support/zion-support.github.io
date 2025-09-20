@@ -1,12 +1,9 @@
 import React from 'react';
-
-const quick-actions: React.FC = () => {
-  return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">quick-actions</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-  );
-};
-
+const quick-actions: React.FC = () => {,
+  return (,
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">,
+      <h3 className="text-xl font-bold mb-4">quick-actions</h3>,
+      <p className="text-gray-300">Revolutionary technology component</p>,
+    </div>,
+  ),};
 export default quick-actions;

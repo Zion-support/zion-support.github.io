@@ -29,5 +29,4 @@ const UltraFuturisticLayout2046: React.FC<UltraFuturisticLayout2046Props> = ({
     </div>
   );
 };
-
 export default UltraFuturisticLayout2046;

@@ -11,9 +11,3 @@ find src/components -name "*.jsx" -delete
 echo "🗑️  Deleted all JSX files in components directory"
 
 # Find all remaining files with merge conflicts and delete them
-find src/ -type f \( -name "*.tsx" -o -name "*.ts" -o -name "*.js" \) -exec grep -l "<<<<<<< HEAD\|=======\|>>>>>>> " {} \; 2>/dev/null | while read file; do
-    echo "🗑️  Deleting corrupted file: $file"
-    rm "$file"
-done
-
-echo "✅ Final cleanup complete!"

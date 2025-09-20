@@ -126,5 +126,4 @@ const contactInfo = {
   countries: '25+',
   customers: '1000+'
 };
-
 export default UltraAdvancedFuturisticFooter2041;

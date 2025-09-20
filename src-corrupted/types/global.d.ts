@@ -1,45 +1,44 @@
-// Global type definitions
-declare module '*.module.css' {
-  const classes: { [key: string]: string };
+// Global type definitions,
+declare module '*.module.css' {,
+  const classes: { [key: string]: string ,};
   export default classes;
 }
-
-declare module '*.module.scss' {
-  const classes: { [key: string]: string };
+,
+declare module '*.module.scss' {,
+  const classes: { [key: string]: string ,};
   export default classes;
 }
-
-declare module '*.png' {
+,
+declare module '*.png' {,
   const src: string;
-  export default src;
+  export default src,
 }
-
-declare module '*.jpg' {
+,
+declare module '*.jpg' {,
   const src: string;
-  export default src;
+  export default src,
 }
-
-declare module '*.jpeg' {
+,
+declare module '*.jpeg' {,
   const src: string;
-  export default src;
+  export default src,
 }
-
-declare module '*.svg' {
+,
+declare module '*.svg' {,
   const src: string;
-  export default src;
+  export default src,
 }
-
-declare module '*.gif' {
+,
+declare module '*.gif' {,
   const src: string;
-  export default src;
+  export default src,
 }
-
-// Global interfaces
-interface Window {
-  __NEXT_DATA__: any;
-}
-
-// Global types
+,
+// Global interfaces,
+interface Window {,
+  __NEXT_DATA__: any,}
+,
+// Global types,
 type AnyObject = Record<string, any>;
 type Nullable<T> = T | null;
 type Optional<T> = T | undefined;

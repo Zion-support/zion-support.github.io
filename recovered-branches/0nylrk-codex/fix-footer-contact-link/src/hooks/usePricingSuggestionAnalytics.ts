@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState, useEffect } from 'react';
 import { supabase } from "@/integrations/supabase/client";
 
@@ -49,6 +50,8 @@ export function usePricingSuggestionAnalytics(days = 30) {
             { category: 'design', count: 65, acceptanceRate: 0.82 },
             { category: 'marketing', count: 42, acceptanceRate: 0.64 },
             { category: 'content', count: 18, acceptanceRate: 0.56 },
+            { category: 'data', count: 11, acceptanceRate: 0.78 },
+          ],
           recentSuggestions: Array(10).fill(null).map((_, i) => ({
             id: `suggestion-${i}`,
             userId: `user-${Math.floor(Math.random() * 100)}`,
@@ -57,6 +60,8 @@ export function usePricingSuggestionAnalytics(days = 30) {
             actualValue: Math.random() > 0.3 ? 45 + Math.floor(Math.random() * 30) : undefined,
             accepted: Math.random() > 0.25,
             createdAt: new Date(Date.now() - Math.floor(Math.random() * 1000000000)).toISOString(),
+            type: Math.random() > 0.5 ? 'client' : 'talent' as 'client' | 'talent',
+          }))
         };
 
         setAnalytics({
@@ -89,3 +94,10 @@ export function usePricingSuggestionAnalytics(days = 30) {
 
   return analytics;
 }
+=======
+// Hook for usePricingSuggestionAnalytics;
+export const useUsePricingSuggestionAnalytics: unknown = () => {
+  // TODO: Implement hook logic;
+  return {};
+};
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

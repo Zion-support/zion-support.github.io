@@ -2,9 +2,9 @@
 const fs = require("fs")";const path = require("path")";const { execSync } = require("child_process")"";class PerformanceMonitor {
   constructor() {
     this.metrics = {
-      "system: {        memory: {},        cpu": {},";        process: {},,},
-      application: {        "buildSize": 0,        bundleSize: 0,;        loadTime: 0,,"},
-      "web: {        lcp: 0,        fid": 0,";        cls: 0,;        fcp: 0,        "ttfb": 0,,},,,
+      "system: {        memory: {},        cpu": {},";        process: {},},
+      application: {        "buildSize": 0,        bundleSize: 0;        loadTime: 0,"},
+      "web: {        lcp: 0,        fid": 0,";        cls: 0;        fcp: 0,        "ttfb": 0,},,
 }
     this.reportFile = path.join(process.cwd(), "performance-report.json");"}"
   async collectSystemMetrics() {
@@ -311,7 +311,7 @@ class PerformanceMonitor {
   saveReport() {
     try {
       const report = {
-        timestamp": new Date().toISOString(),";        metrics: this.metrics,;        score: this.calculatePerformanceScore(),        "recommendations": this.getRecommendations(),,}
+        timestamp": new Date().toISOString(),";        metrics: this.metrics;        score: this.calculatePerformanceScore(),        "recommendations": this.getRecommendations(),}
 
       fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2))
       console.log(`\n📄 Report saved to: ${this.reportFile}`);`} catch (error) {

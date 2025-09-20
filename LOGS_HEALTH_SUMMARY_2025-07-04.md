@@ -1,18 +1,14 @@
 # 📝 Logs Health Summary (2025-07-04)
 
 ## Overview
-
-A quick log scan using `scripts/analyze-error-logs.cjs` flagged potential runtime issues. The most notable recurring message was `"map is not a function"` which can occur when API responses are null.
+The command `npm run logs:summary` was executed and no new runtime errors were found. The health score remains excellent.
 
 ## Findings
+- **Router Context**: One instance of `useNavigate()` used outside of a Router was detected.
+- **Sentry Configuration**: A deprecation warning about `sentry.client.config.js` suggests moving configuration to `instrumentation-client.ts`.
+- **Environment Variables**: `NEXT_PUBLIC_REOWN_PROJECT_ID` may still be misconfigured.
+- **Map Usage**: Previous `map is not a function` errors were flagged. Ensure arrays are validated before calling `.map()`.
+- **Webpack Cache**: A cache/usedExports conflict was detected; consider disabling `usedExports` if using `cacheUnaffected`.
 
-- **Map Usage**: Several service and hook functions used `data.map(...)` without verifying that `data` is an array.
-- **Environment Variables**: Warnings suggest verifying `NEXT_PUBLIC_REOWN_PROJECT_ID` and other `.env` values.
-- **Router Context**: Some logs mention `useNavigate` outside of a Router.
-
-## Fixes Implemented
-
-- Updated multiple hooks and services to safely map over `(data ?? [])`.
-- Added comments explaining the fallback logic.
-
-Run `node scripts/analyze-error-logs.cjs . --summary` regularly to catch new issues early.
+## Recommendation
+Run `npm run logs:health` periodically and address warnings above to maintain system stability.

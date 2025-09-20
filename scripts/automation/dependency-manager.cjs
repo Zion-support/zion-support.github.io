@@ -17,21 +17,21 @@ class $1 {
   constructor() {
   this.projectRoot = process.cwd();
     this.logFile = path.join(;
-      this.projectRoot,logs",;
+      this.projectRoot,logs";
       "dependency-manager.log";
     );
     this.reportsDir = path.join(this.projectRoot, "logs", `dependency-reports`);
-    this.ensureLogsDirectory();,
+    this.ensureLogsDirectory(),
 }
 ;
   ensureLogsDirectory() {
   const logsDir = path.dirname(this.logFile);
     if (!fs.existsSync(logsDir)) {
-  fs.mkdirSync(logsDir, { recursive: true });,
+  fs.mkdirSync(logsDir, { recursive: true }),
 }
 ;
     if (!fs.existsSync(this.reportsDir)) {
-  fs.mkdirSync(this.reportsDir, { recursive: true });,
+  fs.mkdirSync(this.reportsDir, { recursive: true }),
 }
   }
 ;
@@ -39,7 +39,7 @@ class $1 {
   log(message, level = "INFO") {
   const timestamp = new Date().toISOString();
     const logEntry = `[${timestamp}] [${level}] ${message}\n`;
-    fs.appendFileSync(this.logFile, logEntry);console.log(`[${level}] ${message}`);,
+    fs.appendFileSync(this.logFile, logEntry);console.log(`[${level}] ${message}`),
 }
 ;
   async runDependencyManagement() {
@@ -54,19 +54,19 @@ class $1 {
   const packageFixes = await this.fixPackageJsonIssues(;
           status.packageJsonIssues;
         );
-        actions.push(...packageFixes);,
+        actions.push(...packageFixes),
 }
 ;
       // 3. Clean corrupted dependencies;
       if (status.corruptedDeps.length > 0) {
   const cleanupActions = await this.cleanCorruptedDependencies();
-        actions.push(...cleanupActions);,
+        actions.push(...cleanupActions),
 }
 ;
       // 4. Reinstall dependencies if needed;
       if (status.needsReinstall) {
   const reinstallActions = await this.reinstallDependencies();
-        actions.push(...reinstallActions);,
+        actions.push(...reinstallActions),
 }
 ;
       // 5. Update outdated dependencies;
@@ -74,30 +74,30 @@ class $1 {
       actions.push(...updateActions);
       // 6. Generate dependency report;
       const report = await this.generateDependencyReport(;
-        status,;
-        actions,;
+        status;
+        actions;
         errors;
       );
       // 7. Commit changes if successful;
       if (actions.length > 0 && errors.length === 0) {
-  await this.commitDependencyChanges(actions);,
+  await this.commitDependencyChanges(actions),
 }
     } catch (error) {  this.log(`Dependency management failed: ${error.message  }`, `ERROR`);
       errors.push({
-  type: `SYSTEM_ERROR`,;
-        message: error.message,;
-        timestamp: new Date().toISOString(),;
+  type: `SYSTEM_ERROR`;
+        message: error.message;
+        timestamp: new Date().toISOString();
 
       // 3. Clean corrupted dependencies;
       if (status.corruptedDeps.length > 0) {
   const cleanupActions = await this.cleanCorruptedDependencies();
-        actions.push(...cleanupActions);,
+        actions.push(...cleanupActions),
 }
 ;
       // 4. Reinstall dependencies if needed;
       if (status.needsReinstall) {
   const reinstallActions = await this.reinstallDependencies();
-        actions.push(...reinstallActions);,
+        actions.push(...reinstallActions),
 }
 ;
       // 5. Update outdated dependencies;
@@ -106,21 +106,21 @@ class $1 {
 
       // 6. Generate dependency report;
       const report = await this.generateDependencyReport(;
-        status,;
-        actions,;
+        status;
+        actions;
         errors;
       );
 
       // 7. Commit changes if successful;
       if (actions.length > 0 && errors.length === 0) {
-  await this.commitDependencyChanges(actions);,
+  await this.commitDependencyChanges(actions),
 }
     } catch (error) {this.log(`Dependency management failed: ${error.message}`, "ERROR");
       errors.push({
-  type: "SYSTEM_ERROR",;
-        message: error.message,;
-        timestamp: new Date().toISOString(),;,
-});,
+  type: "SYSTEM_ERROR";
+        message: error.message;
+        timestamp: new Date().toISOString(),
+}),
 }
 ;
     return { actions, errors }
@@ -128,10 +128,10 @@ class $1 {
 ;
   async checkDependencyStatus() {
   const status = {
-  packageJsonIssues: [],;
-      corruptedDeps: [],;
-      needsReinstall: false,;
-      outdatedDeps: [],;,
+  packageJsonIssues: [];
+      corruptedDeps: [];
+      needsReinstall: false;
+      outdatedDeps: [],
 }
     try {
   // Check package.json;
@@ -147,9 +147,9 @@ class $1 {
             )) {
   if (typeof version !== "string" || version.trim() === "") {
   status.packageJsonIssues.push({
-  type: "INVALID_VERSION",;
-                  dependency: dep,;
-                  current: version,;
+  type: "INVALID_VERSION";
+                  dependency: dep;
+                  current: version;
 
           // Check for invalid versions;
           if (packageJson.dependencies) {
@@ -158,10 +158,10 @@ class $1 {
             )) {
   if (typeof version !== "string" || version.trim() === ") {
   status.packageJsonIssues.push({
-  type: "INVALID_VERSION",;
-                  dependency: dep,;
-                  current: version,;,
-});,
+  type: "INVALID_VERSION";
+                  dependency: dep;
+                  current: version,
+}),
 }
             }
           }
@@ -172,29 +172,27 @@ class $1 {
             )) {
   if (typeof version !== "string" || version.trim() === "") {
   status.packageJsonIssues.push({
-  type: "INVALID_DEV_VERSION",;
-                  dependency: dep,;
-                  current: version,;,
-});,
+  type: "INVALID_DEV_VERSION";
+                  dependency: dep;
+                  current: version,
+}),
 }
             }
           }
         } catch (error) {
   status.packageJsonIssues.push({
-  type: `PARSE_ERROR`,;
-            error: error.message});,
+  type: `PARSE_ERROR`;
+            error: error.message}),
 }
       }
 ;
       // Check node_modules;
       const nodeModulesPath = path.join(this.projectRoot, `node_modules`);
-      if (fs.existsSync(nodeModulesPath)) {
-  ,
-} catch (error) {
+      if (fs.existsSync(nodeModulesPath)) {} catch (error) {
   status.packageJsonIssues.push({
-  type: "PARSE_ERROR",;
-            error: error.message,;,
-});,
+  type: "PARSE_ERROR";
+            error: error.message,
+}),
 }
       }
 ;
@@ -205,25 +203,25 @@ class $1 {
         status.corruptedDeps = corrupted;
 
         if (corrupted.length > 0) {
-  status.needsReinstall = true;,
+  status.needsReinstall = true,
 }
       } else {
-  status.needsReinstall = true;,
+  status.needsReinstall = true,
 }
 ;
       // Check for outdated dependencies;
       try {
   const outdated = await this.checkOutdatedDependencies();
-        status.outdatedDeps = outdated;,
+        status.outdatedDeps = outdated,
 } catch (error) {
-  this.log(Failed to check outdated dependencies: ${error.message  }`,;
+  this.log(Failed to check outdated dependencies: ${error.message  }`;
           `WARN`;
-        );,
+        ),
 }
-    } catch (error) {  this.log(`Dependency status check failed: ${error.message  }`, `ERROR`);,
+    } catch (error) {  this.log(`Dependency status check failed: ${error.message  }`, `ERROR`),
 }
 ;
-    return status;,
+    return status,
 }
 ;
   async findCorruptedPackages(nodeModulesPath) {
@@ -245,82 +243,80 @@ class $1 {
   const pkgJson = JSON.parse(fs.readFileSync(pkgJsonPath, "utf8"));
             if (!pkgJson.name || !pkgJson.version) {
   corrupted.push({
-  name: pkg,;
-                issue: "Missing name or version",;
-                path: pkgPath,;,
-});,
+  name: pkg;
+                issue: "Missing name or version";
+                path: pkgPath,
+}),
 }
           } catch {
   corrupted.push({
-  name: pkg,;
-              issue: `Invalid package.json`,;
-              path: pkgPath});,
+  name: pkg;
+              issue: `Invalid package.json`;
+              path: pkgPath}),
 }
         } else {
   corrupted.push({
-  name: pkg,;
-            issue: `Missing package.json`,;
-            path: pkgPath,          });,
+  name: pkg;
+            issue: `Missing package.json`;
+            path: pkgPath,          }),
 }
       }
-    } catch (error) {  this.log(`Error scanning packages: ${error.message  }`, `WARN`);,
+    } catch (error) {  this.log(`Error scanning packages: ${error.message  }`, `WARN`),
 }
 ;
-    return corrupted;,
+    return corrupted,
 }
 ;
   async checkOutdatedDependencies() {
   try {
   const result = execSync(`npm outdated --json`, {
-  cwd: this.projectRoot,;
-        stdio: "pipe",;
-        encoding: "utf8",;
+  cwd: this.projectRoot;
+        stdio: "pipe";
+        encoding: "utf8";
 
   async checkOutdatedDependencies() {
   try {
   const result = execSync("npm outdated --json", {
-  cwd: this.projectRoot,;
-        stdio: "pipe",;
-        encoding: "utf8",;,
+  cwd: this.projectRoot;
+        stdio: "pipe";
+        encoding: "utf8",
 });
 
       const outdated = JSON.parse(result);
       return Object.entries(outdated).map((["name", "info"]) => ({
-  name,;
-        current: info.current,;
-        wanted: info.wanted,;
-        latest: info.latest,;,
-}));,
+  name;
+        current: info.current;
+        wanted: info.wanted;
+        latest: info.latest,
+})),
 } catch (error) {
   // npm outdated returns non-zero exit code when there are outdated deps;
       if (error.stdout) {
   try {
   const outdated = JSON.parse(error.stdout);
           return Object.entries(outdated).map((["name", "info"]) => ({
-  name,;
-            current: info.current,;
-            wanted: info.wanted,;
-            latest: info.latest}));,
-} catch {
-  ,
-} catch (error) {
+  name;
+            current: info.current;
+            wanted: info.wanted;
+            latest: info.latest})),
+} catch {} catch (error) {
   // npm outdated returns non-zero exit code when there are outdated deps;
       if (error.stdout) {
   try {
   const outdated = JSON.parse(error.stdout);
           return Object.entries(outdated).map((["name", "info"]) => ({
-  name,;
-            current: info.current,;
-            wanted: info.wanted,;
-            latest: info.latest,;,
-}));,
+  name;
+            current: info.current;
+            wanted: info.wanted;
+            latest: info.latest,
+})),
 } catch {
-  return [];,
+  return [],
 } catch {
   return [];
 }
       }
-      return [];,
+      return [],
 }
   }
 ;
@@ -346,9 +342,9 @@ class $1 {
             deps[issue.dependency] = `^1.0.0`;
             modified = true;
             fixes.push({
-  type: `PACKAGE_JSON_FIX`,;
-              dependency: issue.dependency,action: `Fixed invalid version for ${issue.dependency}`,;
-              timestamp: new Date().toISOString(),;
+  type: `PACKAGE_JSON_FIX`;
+              dependency: issue.dependency,action: `Fixed invalid version for ${issue.dependency}`;
+              timestamp: new Date().toISOString();
 
       for (const issue of issues) {
   if (;
@@ -366,22 +362,22 @@ class $1 {
             modified = true;
 
             fixes.push({
-  type: "PACKAGE_JSON_FIX",;
-              dependency: issue.dependency,action: `Fixed invalid version for ${issue.dependency}`,;
-              timestamp: new Date().toISOString(),;,
-});,
+  type: "PACKAGE_JSON_FIX";
+              dependency: issue.dependency,action: `Fixed invalid version for ${issue.dependency}`;
+              timestamp: new Date().toISOString(),
+}),
 }
         }
       }
 ;
       if (modified) {
   fs.writeFileSync(packagePath, JSON.stringify(packageJson, null, 2));
-        this.log(`Fixed package.json issues`);,
+        this.log(`Fixed package.json issues`),
 }
-    } catch (error) {  this.log(`Failed to fix package.json: ${error.message  }`, `ERROR`);,
+    } catch (error) {  this.log(`Failed to fix package.json: ${error.message  }`, `ERROR`),
 }
 ;
-    return fixes;,
+    return fixes,
 }
 ;
   async cleanCorruptedDependencies() {
@@ -396,30 +392,30 @@ class $1 {
         this.log("Removed corrupted node_modules");
 
         actions.push({
-  type: "CLEANUP",;
-          action: "Removed corrupted node_modules directory",;
-          timestamp: new Date().toISOString(),;,
-});,
+  type: "CLEANUP";
+          action: "Removed corrupted node_modules directory";
+          timestamp: new Date().toISOString(),
+}),
 }
 ;
       if (fs.existsSync(packageLockPath)) {
   fs.unlinkSync(packageLockPath);
         this.log("Removed package-lock.json");
         actions.push({
-  type: `CLEANUP`,;
-          action: `Removed package-lock.json`,;
-          timestamp: new Date().toISOString(),;
+  type: `CLEANUP`;
+          action: `Removed package-lock.json`;
+          timestamp: new Date().toISOString();
 
         actions.push({
-  type: "CLEANUP",;
-          action: "Removed package-lock.json",;
-          timestamp: new Date().toISOString(),;,
-});,
+  type: "CLEANUP";
+          action: "Removed package-lock.json";
+          timestamp: new Date().toISOString(),
+}),
 }
-    } catch (error) {  this.log(`Failed to clean dependencies: ${error.message  }`, `ERROR`);,
+    } catch (error) {  this.log(`Failed to clean dependencies: ${error.message  }`, `ERROR`),
 }
 ;
-    return actions;,
+    return actions,
 }
 ;
   async reinstallDependencies() {
@@ -428,26 +424,26 @@ class $1 {
   this.log(`Reinstalling dependencies...`);
       // Run npm install;
       execSync("npm install", {
-  cwd: this.projectRoot,;
-        stdio: "pipe",;,
+  cwd: this.projectRoot;
+        stdio: "pipe",
 });
 
       this.log("Dependencies reinstalled successfully");
       actions.push({
-  type: `REINSTALL`,;
-        action: `Successfully reinstalled all dependencies`,;
-        timestamp: new Date().toISOString(),;
+  type: `REINSTALL`;
+        action: `Successfully reinstalled all dependencies`;
+        timestamp: new Date().toISOString();
 
       actions.push({
-  type: "REINSTALL",;
-        action: "Successfully reinstalled all dependencies",;
-        timestamp: new Date().toISOString(),;,
-});,
+  type: "REINSTALL";
+        action: "Successfully reinstalled all dependencies";
+        timestamp: new Date().toISOString(),
+}),
 } catch (error) {  this.log(`Failed to reinstall dependencies: ${error.message  }`, `ERROR`);
-      throw error;,
+      throw error,
 }
 ;
-    return actions;,
+    return actions,
 }
 ;
   async updateDependencies() {
@@ -461,35 +457,35 @@ class $1 {
         for (const dep of outdated) {
   try {
   if (this.isSafeUpdate(dep.current, dep.wanted)) {execSync(`npm update ${dep.name}`, {
-  cwd: this.projectRoot,;
+  cwd: this.projectRoot;
                 stdio: `pipe`});
               actions.push({
-  type: `UPDATE`,;
-                dependency: dep.name,action: `Updated ${dep.name} from ${dep.current} to ${dep.wanted}`,;
-                timestamp: new Date().toISOString(),;
+  type: `UPDATE`;
+                dependency: dep.name,action: `Updated ${dep.name} from ${dep.current} to ${dep.wanted}`;
+                timestamp: new Date().toISOString();
 
         // Update minor and patch versions only (safe updates);
         for (const dep of outdated) {
   try {
   if (this.isSafeUpdate(dep.current, dep.wanted)) {execSync(`npm update ${dep.name}`, {
-  cwd: this.projectRoot,;
-                stdio: "pipe",;,
+  cwd: this.projectRoot;
+                stdio: "pipe",
 });
 
               actions.push({
-  type: "UPDATE",;
-                dependency: dep.name,action: `Updated ${dep.name} from ${dep.current} to ${dep.wanted}`,;
-                timestamp: new Date().toISOString(),;,
-});,
+  type: "UPDATE";
+                dependency: dep.name,action: `Updated ${dep.name} from ${dep.current} to ${dep.wanted}`;
+                timestamp: new Date().toISOString(),
+}),
 }
-          } catch (error) {  this.log(`Failed to update ${dep.name  }: ${error.message}`, `WARN`);,
+          } catch (error) {  this.log(`Failed to update ${dep.name  }: ${error.message}`, `WARN`),
 }
         }
       }
-    } catch (error) {  this.log(`Failed to update dependencies: ${error.message  }`, `WARN`);,
+    } catch (error) {  this.log(`Failed to update dependencies: ${error.message  }`, `WARN`),
 }
 ;
-    return actions;,
+    return actions,
 }
 ;
   isSafeUpdate(current, wanted) {
@@ -498,25 +494,25 @@ class $1 {
     const wantedParts = wanted.split(`.`).map(Number);
     // Major version should be the same;
     if (currentParts[0] !== wantedParts[0]) {
-  return false;,
+  return false,
 }
 ;
-    return true;,
+    return true,
 }
 ;
   async generateDependencyReport(status, actions, errors) {
   const report = {
-  timestamp: new Date().toISOString(),;
+  timestamp: new Date().toISOString();
       summary: {
-  totalActions: actions.length,;
-        totalErrors: errors.length,;
-        packageJsonIssues: status.packageJsonIssues.length,;
-        corruptedDeps: status.corruptedDeps.length,;
-        outdatedDeps: status.outdatedDeps.length,;,
-},;
-      status: status,;
-      actions: actions,;
-      errors: errors,;,
+  totalActions: actions.length;
+        totalErrors: errors.length;
+        packageJsonIssues: status.packageJsonIssues.length;
+        corruptedDeps: status.corruptedDeps.length;
+        outdatedDeps: status.outdatedDeps.length,
+};
+      status: status;
+      actions: actions;
+      errors: errors,
 }
     const reportFile = path.join(;
       this.reportsDir,dependency-report-${Date.now()}.json`;
@@ -527,7 +523,7 @@ class $1 {
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
 this.log(`Dependency report generated: ${reportFile}`);
 
-    return report;,
+    return report,
 }
 ;
   async commitDependencyChanges(actions) {
@@ -535,13 +531,13 @@ this.log(`Dependency report generated: ${reportFile}`);
   this.log(`Committing dependency changes...`);
       // Add package.json and package-lock.json;
       execSync(`git add package.json package-lock.json', {
-  cwd: this.projectRoot,;
+  cwd: this.projectRoot;
         stdio: `pipe`});
       // Commitconst commitMessage = `chore: Auto-manage dependencies (${actions.length} actions)`;execSync(`git commit -m "${commitMessage}"`, {
-  cwd: this.projectRoot,;
+  cwd: this.projectRoot;
         stdio: `pipe`});
-      this.log(`Dependency changes committed successfully`);,
-} catch (error) {  this.log(`Failed to commit dependency changes: ${error.message  }`, `WARN`);,
+      this.log(`Dependency changes committed successfully`),
+} catch (error) {  this.log(`Failed to commit dependency changes: ${error.message  }`, `WARN`),
 }
   }
 }
@@ -553,24 +549,24 @@ async function $1() {
   try {
   const result = await manager.runDependencyManagement();
     if (result.errors.length === 0 && result.actions.length > 0) {
-  process.exit(0); // Success;,
+  process.exit(0); // Success,
 } else if (result.errors.length > 0) {
-  process.exit(1); // Errors occurred;,
+  process.exit(1); // Errors occurred,
 } else {
   if (result.errors.length === 0 && result.actions.length > 0) {
-  process.exit(0); // Success;,
+  process.exit(0); // Success,
 } else if (result.errors.length > 0) {
-  process.exit(1); // Errors occurred;,
+  process.exit(1); // Errors occurred,
 } else {
-  process.exit(2); // No actions needed;,
+  process.exit(2); // No actions needed,
 }
   } catch (error) {  manager.log(`Fatal error: ${error.message  }`, `ERROR`);
-    process.exit(1);,
+    process.exit(1),
 }
 }
 ;
 if (require.main === module) {
-  main();,
+  main(),
 }
 ;
 module.exports = DependencyManager

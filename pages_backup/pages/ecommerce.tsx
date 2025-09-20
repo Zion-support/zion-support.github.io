@@ -1,95 +1,13 @@
-import Head from 'next/head';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { 
-  ShoppingCart, 
-  CreditCard, 
-  Package, 
-  Truck, 
-  ArrowRight, 
-  CheckCircle, 
-  Phone, 
-  Mail, 
-  MapPin,
-  Globe,
-  Shield,
-  Zap
-} from 'lucide-react';
-import MainLayout from '../components/layout/MainLayout';
-
-const features = [
-  {
-    icon: ShoppingCart,
-    title: 'E-commerce Platforms',
-    description: 'Custom online stores with advanced features and seamless user experience.'
-  },
-  {
-    icon: CreditCard,
-    title: 'Payment Integration',
-    description: 'Secure payment processing with multiple payment gateways and methods.'
-  },
-  {
-    icon: Package,
-    title: 'Inventory Management',
-    description: 'Comprehensive inventory tracking and management systems.'
-  },
-  {
-    icon: Truck,
-    title: 'Order Fulfillment',
-    description: 'Streamlined order processing and fulfillment workflows.'
-  }
-];
-
-const solutions = [
-  {
-    title: 'Custom E-commerce Store',
-    description: 'Fully customized online store with unique design and advanced functionality.',
-    features: ['Custom Design', 'Product Catalog', 'Shopping Cart', 'Checkout Process'],
-    pricing: 'Starting at $8,000'
-  },
-  {
-    title: 'Marketplace Platform',
-    description: 'Multi-vendor marketplace platform for connecting buyers and sellers.',
-    features: ['Vendor Management', 'Commission System', 'Review System', 'Analytics Dashboard'],
-    pricing: 'Starting at $15,000'
-  },
-  {
-    title: 'Mobile Commerce App',
-    description: 'Native mobile apps for iOS and Android with e-commerce functionality.',
-    features: ['Mobile App Development', 'Push Notifications', 'Offline Support', 'App Store Optimization'],
-    pricing: 'Starting at $12,000'
-  },
-  {
-    title: 'E-commerce Integration',
-    description: 'Integrate e-commerce functionality into existing websites and systems.',
-    features: ['API Integration', 'Payment Gateway', 'Inventory Sync', 'Order Management'],
-    pricing: 'Starting at $5,000'
-  }
-];
-
-const stats = [
-  { number: '150+', label: 'E-commerce Projects' },
-  { number: '500+', label: 'Online Stores' },
-  { number: '99.9%', label: 'Uptime Guarantee' },
-  { number: '24/7', label: 'Support Available' }
-];
-
-export default function EcommercePage() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
-      <Helmet>
-        <title>ecommerce | Zion Tech Group</title>
-        <meta name="description" content="ecommerce - Revolutionary technology solutions" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-6">ecommerce</h1>
-          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
-        </div>
-      </div>
-    </div>
-  );
-};
-
-export default ecommerce;
+  return (,
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">,
+      <Helmet>,
+        <title>ecommerce | Zion Tech Group</title>,
+        <meta name="description" content="ecommerce - Revolutionary technology solutions" />,
+      </Helmet>,
+      <div className="container mx-auto px-4 py-20">,
+        <div className="text-center">,
+          <h1 className="text-4xl font-bold mb-6">ecommerce</h1>,
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>,
+        </div>,
+      </div>,
+    </div>,

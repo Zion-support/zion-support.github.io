@@ -6,7 +6,7 @@
       "message": "innerHTML assignment detected",
       "rule": "no-inner-html",
       "file": "/workspace/src/components/SecurityEnhancer.tsx",
-      "line": 152
+      "line": 158
     },
     {
       "type": "pattern",
@@ -14,29 +14,25 @@
       "message": "innerHTML assignment detected",
       "rule": "no-inner-html",
       "file": "/workspace/src/components/unused/BrokenLinkFixer.jsx",
-      "line": 153    },
+      "line": 202
+    },
     {
       "type": "pattern",
       "severity": 1,
       "message": "innerHTML assignment detected",
       "rule": "no-inner-html",
-      "file": "/workspace/src/components/unused/BrokenLinkFixer.jsx",
-      "line": 153
-    },    {
-      "type": "pattern",
-      "severity": 1,
-      "message": "innerHTML assignment detected",
-      "rule": "no-inner-html",
       "file": "/workspace/src/components/unused/ContentQualityEnhancer.jsx",
-      "line": 248
-    },    {
+      "line": 300
+    },
+    {
       "type": "pattern",
       "severity": 1,
       "message": "document.write() usage detected",
       "rule": "no-document-write",
       "file": "/workspace/src/hooks/useAICodeGeneration.jsx",
-      "line": 543
-    }  ],
+      "line": 490
+    }
+  ],
   "summary": {
     "total": 4,
     "high": 0,

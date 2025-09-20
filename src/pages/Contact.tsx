@@ -16,118 +16,83 @@ const ContactPage: React.FC = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    subject: '',
-    message: ''
+    company: '',
+    phone: '',
+    service: '',
+    message: '',
+    budget: '',
+    timeline: ''
   });
 
-  const [errors, setErrors] = useState<{[key: string]: string}>({});
-  const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
-    setErrors(prev => ({ ...prev, [name]: '' }));
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
   };
 
-  const validateForm = () => {
-    const newErrors: {[key: string]: string} = {};
-
-    if (!formData.name.trim()) {
-      newErrors.name = 'Name is required';
-    }
-
-    if (!formData.email.trim()) {
-      newErrors.email = 'Email is required';
-    } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
-      newErrors.email = 'Please enter a valid email';
-    }
-
-    if (!formData.subject.trim()) {
-      newErrors.subject = 'Subject is required';
-    }
-
-    if (!formData.message.trim()) {
-      newErrors.message = 'Message is required';
-    }
-
-    setErrors(newErrors);
-    return Object.keys(newErrors).length === 0;
-  };
-
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    // Here you would typically send the form data to your backend
+    console.log('Form submitted:', formData);
+    setIsSubmitted(true);
+    setFormData({
+      name: '',
+      email: '',
+      company: '',
+      phone: '',
+      service: '',
+      message: ''
+    });
     
-    if (!validateForm()) {
-      return;
-    }
-
-    setIsSubmitting(true);
-
-    try {
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      
-      setIsSubmitted(true);
-      setFormData({ name: '', email: '', subject: '', message: '' });
-    } catch (error) {
-      console.error('Error submitting form:', error);
-    } finally {
-      setIsSubmitting(false);
-    }
+    // Reset success message after 5 seconds
+    setTimeout(() => setIsSubmitted(false), 5000);
   };
 
-  if (isSubmitted) {
-    return (
-      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
-        <div className="max-w-md w-full bg-white rounded-lg shadow-md p-8 text-center">
-          <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-            <svg className="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-            </svg>
-          </div>
-          <h2 className="text-2xl font-bold text-gray-900 mb-2">Message Sent!</h2>
-          <p className="text-gray-600 mb-6">
-            Thank you for your message. We'll get back to you as soon as possible.
-          </p>
-          <Button 
-            onClick={() => setIsSubmitted(false)}
-            className="w-full"
-          >
-            Send Another Message
-          </Button>
-        </div>
-      </div>
-    );
-  }
+  const contactMethods = [
+    {
+      icon: Phone,
+      title: 'Phone',
+      value: '+1 (302) 464-0950',
+      link: 'tel:+13024640950',
+      description: 'Available 24/7 for urgent support'
+    },
+    {
+      icon: Mail,
+      title: 'Email',
+      value: 'kleber@ziontechgroup.com',
+      link: 'mailto:kleber@ziontechgroup.com',
+      description: 'Quick response within 2 hours'
+    },
+    {
+      icon: MapPin,
+      title: 'Office',
+      value: '364 E Main St STE 1008, Middletown, DE 19709',
+      link: 'https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709',
+      description: 'Main headquarters location'
+    },
+    {
+      icon: Clock,
+      title: 'Business Hours',
+      value: 'Monday - Friday: 9:00 AM - 6:00 PM EST',
+      link: null,
+      description: 'Weekend support available for enterprise clients'
+    }
+  ];
 
   const services = [
     'AI & Machine Learning',
-    'Quantum Technology',
+    'Cloud & DevOps',
     'Cybersecurity',
-    'Cloud Migration',
+    'Enterprise Solutions',
+    'Micro SAAS Services',
     'Digital Transformation',
     'IT Infrastructure',
-    'Micro-SaaS Development',
-    'Business Intelligence',
-    'Custom Software Development',
-    'Consulting Services'
-  ];
-
-  const budgets = [
-    'Under $10,000',
-    '$10,000 - $50,000',
-    '$50,000 - $100,000',
-    '$100,000 - $500,000',
-    'Over $500,000'
-  ];
-
-  const timelines = [
-    'Immediate (1-2 weeks)',
-    'Quick (1-2 months)',
-    'Standard (3-6 months)',
-    'Extended (6+ months)',
-    'Flexible'
+    'Custom Development',
+    'Other'
   ];
 
   return (
@@ -238,9 +203,6 @@ const ContactPage: React.FC = () => {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
               </svg>
             </div>
-            <h3 className="text-lg font-semibold text-gray-900 mb-2">Email Us</h3>
-            <p className="text-gray-600">info@ziontechgroup.com</p>
-          </div>
 
           <div className="text-center">
             <div className="bg-green-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
@@ -265,7 +227,8 @@ const ContactPage: React.FC = () => {
         </div>
       </div>
     </div>
+    </div>
   );
 };
 
-export default ContactPage;
+export default Contact;

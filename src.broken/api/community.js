@@ -1,4 +1,3 @@
-// Module for community
-export const community = {
-  // TODO: Implement module functionality
-};
+// Module for community,
+export const community = {,
+  // TODO: Implement module functionality,};

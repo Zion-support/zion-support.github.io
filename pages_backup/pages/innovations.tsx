@@ -1,82 +1,13 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-
-
-
-
-
-import UltraFuturisticBackground2029 from '../components/ui/UltraFuturisticBackground2029';
-import UltraFuturisticNavigation2029V2 from '../components/layout/UltraFuturisticNavigation2029V2';
-import UltraFuturisticFooter2029V2 from '../components/layout/UltraFuturisticFooter2029V2';
-import ComprehensiveServicesShowcase2029 from '../components/sections/ComprehensiveServicesShowcase2029';
-const contactInfo = {
-
-
-
-
-import React from 'react',;
-import Head from 'next/head',;
-import { motion } from 'framer-motion',;
-import { 
-  Brain, Rocket, Target, Cpu, Globe, Eye, 
-
-
-
-
-import React from 'react',
-import Head from 'next/head',
-import { motion } from 'framer-motion',
-import {
-  Brain, Rocket, Target, Cpu, Globe, Eye,
-
-
-
-
-
-
-
-  ChevronRight, Star, TrendingUp, Zap, Shield,
-  ArrowRight, Search, Filter, Grid, List,
-  Phone, Mail, MapPin, ExternalLink, Sparkles
-} from 'lucide-react',;
-import UltraFuturisticBackground2029 from '../components/ui/UltraFuturisticBackground2029',;
-import UltraFuturisticNavigation2029V2 from '../components/layout/UltraFuturisticNavigation2029V2',;
-import UltraFuturisticFooter2029V2 from '../components/layout/UltraFuturisticFooter2029V2',;
-import ComprehensiveServicesShowcase2029 from '../components/sections/ComprehensiveServicesShowcase2029',;
-
-
-
-
-
-
-
-
-
-const contactInfo = {
-  mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
-},
-
-
-export default function InnovationsPage() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
-      <Helmet>
-        <title>innovations | Zion Tech Group</title>
-        <meta name="description" content="innovations - Revolutionary technology solutions" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-20">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold mb-6">innovations</h1>
-          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
-        </div>
-      </div>
-    </div>
-  );
-};
-
-export default innovations;
+  return (,
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">,
+      <Helmet>,
+        <title>innovations | Zion Tech Group</title>,
+        <meta name="description" content="innovations - Revolutionary technology solutions" />,
+      </Helmet>,
+      <div className="container mx-auto px-4 py-20">,
+        <div className="text-center">,
+          <h1 className="text-4xl font-bold mb-6">innovations</h1>,
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>,
+        </div>,
+      </div>,
+    </div>,

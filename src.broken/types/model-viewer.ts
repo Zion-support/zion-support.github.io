@@ -1,4 +1,3 @@
 // Type definitions for model-viewer;
 interface model-viewer {;
-  // TODO: Add proper type definitions;
-}
+  // TODO: Add proper type definitions,}

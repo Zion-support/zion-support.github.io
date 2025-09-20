@@ -99,7 +99,26 @@ content_index:
         satisfaction: "98%"
         efficiency: "67%"
         
+<<<<<<< HEAD
+    - id: "data-governance-trust-security-2025"
+      type: "blog"
+      title: "AI 2025: Data Governance, Trust, and Security — Enterprise Guide"
+      file_path: "/content/blog/ai-2025-data-governance-trust-security.md"
+      url: "/blog/ai-2025-data-governance-trust-security"
+      status: "published"
+      created: "2025-09-15"
+      tags: ["AI", "Data Governance", "Security", "Compliance", "Enterprise"]
+      featured: true
+      is_new: true
+      metrics:
+        risk_reduction: "65%"
+        approval_speed: "2x"
+        audit_coverage: "100%"
+        incidents_reduction: "40%"
+
 =======
+=======
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
     - id: "healthcare-transformation"
       type: "case-study"
       title: "AI Healthcare Transformation 2025: 450% ROI Success Story"
@@ -183,7 +202,10 @@ content_index:
         projects: "500+"
         timeline: "6-8 months"
       reading_time: "28 min read"
+<<<<<<< HEAD
+=======
       
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
     - id: "ai-2025-advanced-automation-revolution-ultimate-guide"
       type: "blog"
       title: "AI 2025: Advanced Automation Revolution - Ultimate Enterprise Guide"
@@ -260,6 +282,8 @@ content_index:
       status: "published"
       created: "2025-01-17"
       tags: ["Case Study", "Fortune 500", "AI Transformation", "ROI", "Manufacturing", "Success Story", "Cost Savings"]
+<<<<<<< HEAD
+=======
     - id: "ai-enterprise-automation-revolution"
       type: "blog"
       title: "AI 2025: The Enterprise Automation Revolution - 500% ROI"
@@ -301,6 +325,7 @@ content_index:
       status: "published"
       created: "2025-01-17"
       tags: ["Case Study", "Financial Services", "AI Automation", "ROI", "Digital Transformation"]
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
       featured: true
       is_new: true
       metrics:
@@ -424,6 +449,11 @@ content_index:
         timeframe: "6 months"
         phases: "3 phases"
         payback: "3.8 months"
+<<<<<<< HEAD
+
+  newly_added_september_2025:
+    - id: "ai-2026-evidence-driven-release-checklists"
+=======
     - id: "ai-2026-sovereign-ai-commerce"
       type: "blog"
       title: "AI 2026: Sovereign AI Commerce — Autonomous Marketplaces"
@@ -467,10 +497,13 @@ content_index:
         citation_density: "> 0.9"
         audit_ready: true
     - id: "ai-2026-eval-driven-release-engineering"
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
       type: "blog"
       title: "AI 2026: Evidence‑Driven Release Checklists — Gates, Rollbacks, and Audit"
       file_path: "/content/blog/ai-2026-evidence-driven-release-checklists.md"
       url: "/blog/ai-2026-evidence-driven-release-checklists"
+<<<<<<< HEAD
+=======
 =======
   new_resources:
     - id: "ai-transformation-checklist-2025"
@@ -478,12 +511,95 @@ content_index:
       title: "AI Transformation Checklist 2025 - Complete Implementation Guide"
       file_path: "/content/resources/ai-transformation-checklist-2025.md"
       url: "/resources/ai-transformation-checklist-2025"
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
       status: "published"
       created: "2025-09-15"
       tags: ["Evaluations", "Reliability", "Governance", "Progressive Delivery", "2026"]
       featured: true
       is_new: true
       metrics:
+<<<<<<< HEAD
+        reliability: "99.9%"
+        rollback_time: "< 5 min"
+        audit_ready: true
+
+    - id: "ai-2026-agent-platform-health-dashboard-starter"
+      type: "resource"
+      title: "AI 2026: Agent Platform Health Dashboard — Starter Kit"
+      file_path: "/content/resources/ai-2026-agent-platform-health-dashboard-starter.md"
+      url: "/resources/ai-2026-agent-platform-health-dashboard-starter"
+      status: "published"
+      created: "2025-09-15"
+      tags: ["Observability", "SLOs", "Reliability", "Operations", "2026"]
+      featured: true
+      is_new: true
+      metrics:
+        availability: "99.9%"
+        eval_pass_rate: "> 95%"
+        cost_per_task: "tracked"
+    
+    - id: "ai-2026-zero-trust-agent-architecture"
+      type: "blog"
+      title: "AI 2026: Zero-Trust Agent Architecture"
+      file_path: "/content/blog/ai-2026-zero-trust-agent-architecture.md"
+      url: "/blog/ai-2026-zero-trust-agent-architecture"
+      status: "published"
+      created: "2025-09-15"
+      tags: ["Security", "Architecture", "Zero-Trust", "Policy-as-Code", "Isolation", "2026"]
+      featured: true
+      is_new: true
+      metrics:
+        incident_reduction: "40%"
+        rollback_time: "< 5 min"
+        audit_ready: true
+
+    - id: "ai-2026-trustworthy-model-routing-2026-preview"
+      type: "blog"
+      title: "AI 2026: Trustworthy Model Routing — 2026 Preview"
+      file_path: "/content/blog/ai-2026-trustworthy-model-routing-2026-preview.md"
+      url: "/blog/ai-2026-trustworthy-model-routing-2026-preview"
+      status: "published"
+      created: "2025-09-15"
+      tags: ["Routing", "Policy-as-Code", "Evaluations", "Reliability", "Cost Optimization", "2026"]
+      featured: true
+      is_new: true
+      metrics:
+        cost_reduction: "20-40%"
+        latency_p95: "stable"
+        override_rate: "improved"
+
+    - id: "ai-2026-trustworthy-agent-operations-blueprint"
+      type: "blueprint"
+      title: "AI 2026: Trustworthy Agent Operations — Blueprint"
+      file_path: "/content/pages/ai-2026-trustworthy-agent-operations-blueprint.md"
+      url: "/content/ai-2026-trustworthy-agent-operations-blueprint"
+      status: "published"
+      created: "2025-09-15"
+      tags: ["Operations", "SLOs", "Evaluations", "Policy-as-Code", "Observability", "2026"]
+      featured: true
+      is_new: true
+      metrics:
+        incident_reduction: "40%"
+        mttr: "< 10 min"
+        cost_optimization: "20-40%"
+
+    - id: "ai-2026-privacy-preserving-agents"
+      type: "blog"
+      title: "AI 2026: Privacy-Preserving Agents"
+      file_path: "/content/blog/ai-2026-privacy-preserving-agents.md"
+      url: "/blog/ai-2026-privacy-preserving-agents"
+      status: "published"
+      created: "2025-09-15"
+      tags: ["Privacy", "Security", "Confidential Computing", "Redaction", "Scoped Memory", "2026"]
+      featured: true
+      is_new: true
+      metrics:
+        approval_speed: "2x"
+        breaches: "reduced"
+        audit_ready: true
+
+=======
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
     - id: "ai-2026-cost-aware-model-routing"
       type: "blog"
       title: "AI 2026: Cost‑Aware Model Routing — Blueprint"
@@ -514,6 +630,13 @@ content_index:
         review_time: "-50%"
         coverage: "100% gated"
 
+<<<<<<< HEAD
+    - id: "ai-2026-agent-evidence-hub-starter"
+      type: "resource"
+      title: "AI 2026: Agent Evidence Hub — Starter Kit"
+      file_path: "/content/resources/ai-2026-agent-evidence-hub-starter.md"
+      url: "/resources/ai-2026-agent-evidence-hub-starter"
+=======
     - id: "ai-2026-generative-ai-risk-register"
       type: "blog"
       title: "AI 2026: Generative AI Risk Register — Templates, Controls, and Evidence"
@@ -549,6 +672,7 @@ content_index:
       title: "AI 2026: Secure Agent Routing Strategies"
       file_path: "/content/blog/ai-2026-secure-agent-routing-strategies.md"
       url: "/blog/ai-2026-secure-agent-routing-strategies"
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
       status: "published"
       created: "2025-09-15"
       tags: ["Evaluations", "Evidence", "Compliance", "Audit", "2026"]
@@ -558,27 +682,9 @@ content_index:
         audit_ready: true
         integration_time: "< 1 day"
         data_sources: "Evals, Incidents, Approvals"
-=======
-        downloads: "1000+"
-        success_rate: "95%"
-        implementation_time: "6-12 months"
-        roi: "300-500%"
-  latest_2026_content:
-    - id: "ai-2026-autonomous-evals-blueprint"
-      type: "blog"
-      title: "AI 2026: Autonomous Evals Blueprint"
-      file_path: "/content/blog/ai-2026-autonomous-evals-blueprint.md"
-      url: "/blog/ai-2026-autonomous-evals-blueprint"
-      status: "published"
-      created: "2025-09-15"
-      tags: ["Evals", "CI/CD", "Guardrails", "Safety"]
-      featured: true
-      is_new: true
-      metrics:
-        coverage: "85% scenario coverage"
-        reliability: "99.2% release pass-rate"
-        rollback: "<1% rollback rate"
 
+<<<<<<< HEAD
+=======
     - id: "ai-2026-evaluation-harness-blueprint"
       type: "blog"
       title: "AI 2026: Evaluation Harness Blueprint"
@@ -594,6 +700,7 @@ content_index:
         gates: "Policy gates in CI/CD"
         reporting: "Automated regression reports"
 
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
   promotion_components:
     - name: "NewContent2025AdvancedAutomationBanner"
       file_path: "/app/components/NewContent2025AdvancedAutomationBanner.tsx"
@@ -746,4 +853,7 @@ content_index:
 =======
 =======
 =======
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9

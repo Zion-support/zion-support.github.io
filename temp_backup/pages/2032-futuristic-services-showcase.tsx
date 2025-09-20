@@ -98,5 +98,4 @@ export default function FuturisticServicesShowcase2032() {
     </div>
   );
 };
-
 export default 2032-futuristic-services-showcase;

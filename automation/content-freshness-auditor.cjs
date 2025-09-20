@@ -1,208 +1,101 @@
 #!/usr/bin/env node
-
 const fs = require('fs');
-<<<<<<< HEAD
-const fse = require('fs-extra');
 const path = require('path');
 
-const ROOT = process.cwd();
-const CONTENT_DIRS = [path.join(ROOT, 'pages'), path.join(ROOT, 'docs')];
-const REPORT_DIR = path.join(ROOT, 'data', 'reports', 'content-freshness');
-const PUBLIC_REPORT = path.join(ROOT, 'public', 'reports', 'content-freshness.json');
-
-const STALE_DAYS = Number(process.env.STALE_DAYS || 60);
-
-function listFiles(dir) {
+function listFilesRecursively(startDir, includeExtensions = ['.md', '.mdx', '.js', '.jsx', '.ts', '.tsx', '.json'], excludeDirs = ['.git', 'node_modules', '.next', 'out', 'public/automation']) {
   const results = [];
-  if (!fs.existsSync(dir)) return results;
-  const stack = [dir];
-  while (stack.length) {
-    const current = stack.pop();
-    const entries = fs.readdirSync(current);
+  function walk(dir) {
+    let entries = [];
+    try { entries = fs.readdirSync(dir, { withFileTypes: true }); } catch { return; }
     for (const entry of entries) {
-      const full = path.join(current, entry);
-      const stat = fs.statSync(full);
-      if (stat.isDirectory()) {
-        // skip Next.js build and API directories
-        if (entry === '.next' || entry === 'api') continue;
-        stack.push(full);
-      } else if (/\.(md|mdx|tsx|ts|jsx|js)$/.test(entry)) {
-        results.push({ path: full, mtimeMs: stat.mtimeMs });
+      const full = path.join(dir, entry.name);
+      const rel = path.relative(process.cwd(), full);
+      if (entry.isDirectory()) {
+        if (excludeDirs.some(x => rel === x || rel.startsWith(x + path.sep))) continue;
+        walk(full);
+      } else {
+        if (includeExtensions.includes(path.extname(entry.name))) {
+          results.push(full);
+        }
       }
     }
   }
+  walk(startDir);
   return results;
 }
 
-function routeFromFile(root, full) {
-  if (!full.startsWith(root)) return null;
-  let rel = full.replace(root, '').replace(/\\/g, '/');
-  rel = rel.replace(/\.(md|mdx|tsx|ts|jsx|js)$/i, '');
-  if (rel.endsWith('/index')) rel = rel.slice(0, -6) || '/';
-  if (!rel.startsWith('/')) rel = '/' + rel;
-  return rel;
+function ensureDir(filePath) {
+  const dir = path.dirname(filePath);
+  fs.mkdirSync(dir, { recursive: true });
 }
 
-async function main() {
-  const now = Date.now();
-  const items = [];
-  for (const dir of CONTENT_DIRS) {
-    for (const f of listFiles(dir)) {
-      const route = routeFromFile(dir, f.path);
-      const ageDays = Math.round((now - f.mtimeMs) / (1000 * 60 * 60 * 24));
-      items.push({ route, file: f.path, ageDays, stale: ageDays >= STALE_DAYS });
-    }
-  }
-  items.sort((a, b) => b.ageDays - a.ageDays);
-
-  const summary = {
-    timestamp: new Date().toISOString(),
-    thresholdDays: STALE_DAYS,
-    totals: {
-      scanned: items.length,
-      stale: items.filter((i) => i.stale).length,
-    },
-    topStale: items.filter((i) => i.stale).slice(0, 50),
-  };
-
-  await fse.ensureDir(REPORT_DIR);
-  await fse.ensureDir(path.dirname(PUBLIC_REPORT));
-  const file = path.join(REPORT_DIR, `freshness-${Date.now()}.json`);
-  await fse.writeJSON(file, { summary, items }, { spaces: 2 });
-  await fse.writeJSON(path.join(REPORT_DIR, 'latest.json'), { summary, items }, { spaces: 2 });
-  await fse.writeJSON(PUBLIC_REPORT, summary, { spaces: 2 });
-  console.log(`Content freshness: ${summary.totals.stale}/${summary.totals.scanned} stale (>${STALE_DAYS}d)`);
-}
-
-main().catch((err) => { console.error(err); process.exit(1); });
-=======
-const path = require('path');
-const glob = require('glob');
-
-function listFiles(patterns, cwd) {
-  const files = new Set();
-  for (const pattern of patterns) {
-    for (const file of glob.sync(pattern, {
-      cwd,
-      nodir: true,
-      ignore: ['**/node_modules/**', '**/.next/**', '**/out/**', '**/.git/**'],
-    })) {
-      files.add(path.resolve(cwd, file));
-    }
-  }
-  return Array.from(files);
-}
-
-function daysBetween(a, b) {
-  const ms = Math.abs(a.getTime() - b.getTime());
+function daysSince(date) {
+  const ms = Date.now() - date.getTime();
   return Math.floor(ms / (1000 * 60 * 60 * 24));
 }
 
-function safeReadJson(absolutePath, fallback = null) {
-  try {
-    return JSON.parse(fs.readFileSync(absolutePath, 'utf8'));
-  } catch {
-    return fallback;
+function main() {
+  const roots = [
+    path.join(process.cwd(), 'pages'),
+    path.join(process.cwd(), 'docs'),
+    path.join(process.cwd(), 'components')
+  ];
+  const files = roots.flatMap(root => listFilesRecursively(root));
+  const items = [];
+  for (const file of files) {
+    try {
+      const stat = fs.statSync(file);
+      const lastModified = stat.mtime;
+      const d = daysSince(lastModified);
+      items.push({
+        file: path.relative(process.cwd(), file),
+        sizeBytes: stat.size,
+        lastModifiedIso: lastModified.toISOString(),
+        daysSinceModified: d
+      });
+    } catch {}
   }
-}
+  items.sort((a, b) => b.daysSinceModified - a.daysSinceModified);
 
-function generateReports() {
-  const root = path.resolve(__dirname, '..');
-  const now = new Date();
-
-  const pageFiles = listFiles(['pages/**/*.{md,mdx,js,jsx,ts,tsx}'], root);
-  const docFiles = listFiles(['docs/**/*.{md,mdx}'], root);
-
-  const allFiles = [...pageFiles, ...docFiles];
-
-  const items = allFiles.map((absolutePath) => {
-    const stat = fs.statSync(absolutePath);
-    const mtime = stat.mtime || stat.ctime || new Date(0);
-    const daysOld = daysBetween(now, new Date(mtime));
-    return {
-      file: path.relative(root, absolutePath),
-      lastModifiedIso: new Date(mtime).toISOString(),
-      daysOld,
-      stale: daysOld >= 30,
-      bucket: daysOld >= 180 ? 'very-stale' : daysOld >= 90 ? 'stale' : daysOld >= 30 ? 'aging' : 'fresh',
-    };
-  });
-
-  items.sort((a, b) => b.daysOld - a.daysOld);
-
-  const topStale = items.filter((x) => x.stale).slice(0, 50);
   const summary = {
-    generatedAtUtc: now.toISOString(),
-    scanned: {
-      pages: pageFiles.length,
-      docs: docFiles.length,
-      total: allFiles.length,
-    },
-    distribution: items.reduce(
-      (acc, cur) => {
-        acc[cur.bucket] += 1;
-        return acc;
-      },
-      { fresh: 0, aging: 0, stale: 0, 'very-stale': 0 }
-    ),
-    topStale,
+    generatedAt: new Date().toISOString(),
+    totalFiles: items.length,
+    staleThresholdDays: 60,
+    counts: {
+      gt180: items.filter(x => x.daysSinceModified >= 180).length,
+      gt120: items.filter(x => x.daysSinceModified >= 120 && x.daysSinceModified < 180).length,
+      gt60: items.filter(x => x.daysSinceModified >= 60 && x.daysSinceModified < 120).length,
+      lt60: items.filter(x => x.daysSinceModified < 60).length
+    }
   };
 
-  const publicDir = path.join(root, 'public', 'automation');
-  fs.mkdirSync(publicDir, { recursive: true });
-  fs.writeFileSync(
-    path.join(publicDir, 'content-freshness.json'),
-    JSON.stringify({ ...summary, items }, null, 2)
-  );
+  const jsonPath = path.join(process.cwd(), 'public', 'automation', 'content-freshness.json');
+  ensureDir(jsonPath);
+  fs.writeFileSync(jsonPath, JSON.stringify({ summary, items }, null, 2));
 
-  const md = [];
-  md.push('# Content Freshness Report');
-  md.push('');
-  md.push(`Generated: ${now.toISOString()}`);
-  md.push('');
-  md.push(`Scanned files: ${allFiles.length} (pages: ${pageFiles.length}, docs: ${docFiles.length})`);
-  md.push('');
-  md.push('## Stale Content (top 50)');
-  md.push('');
-  for (const row of topStale) {
-    md.push(`- ${row.file} — ${row.daysOld} days old (last modified ${row.lastModifiedIso})`);
+  const top = items.slice(0, 50);
+  const mdLines = [];
+  mdLines.push('# Content Freshness Report');
+  mdLines.push('');
+  mdLines.push(`Generated: ${summary.generatedAt}`);
+  mdLines.push('');
+  mdLines.push('| File | Days Since Modified | Last Modified | Size (bytes) |');
+  mdLines.push('|---|---:|---|---:|');
+  for (const it of top) {
+    mdLines.push(`| ${it.file} | ${it.daysSinceModified} | ${it.lastModifiedIso} | ${it.sizeBytes} |`);
   }
-  md.push('');
-  md.push('## Distribution');
-  md.push('');
-  md.push(`- fresh: ${summary.distribution.fresh}`);
-  md.push(`- aging: ${summary.distribution.aging}`);
-  md.push(`- stale: ${summary.distribution.stale}`);
-  md.push(`- very-stale: ${summary.distribution['very-stale']}`);
+  const mdPath = path.join(process.cwd(), 'docs', 'CONTENT_FRESHNESS.md');
+  ensureDir(mdPath);
+  fs.writeFileSync(mdPath, mdLines.join('\n'));
 
-  const docsDir = path.join(root, 'docs');
-  fs.mkdirSync(docsDir, { recursive: true });
-  fs.writeFileSync(path.join(docsDir, 'CONTENT_FRESHNESS_REPORT.md'), md.join('\n'));
+  // Also write a small summary stamp for quick diffs
+  const stampPath = path.join(process.cwd(), 'automation', 'logs', 'content-freshness-stamp.txt');
+  ensureDir(stampPath);
+  fs.writeFileSync(stampPath, `updated ${new Date().toISOString()}\n`);
 
-  // Optionally register in a content registry if present
-  const registryPath = path.join(publicDir, 'content-registry.json');
-  const registry = safeReadJson(registryPath, { datasets: [] });
-  const entry = {
-    key: 'content-freshness',
-    title: 'Content Freshness Report',
-    href: '/automation/content-freshness.json',
-    updatedAtUtc: now.toISOString(),
-  };
-  const existingIndex = Array.isArray(registry.datasets)
-    ? registry.datasets.findIndex((d) => d.key === entry.key)
-    : -1;
-  if (existingIndex >= 0) registry.datasets[existingIndex] = entry; else registry.datasets.push(entry);
-  fs.writeFileSync(registryPath, JSON.stringify(registry, null, 2));
-
-  console.log(`Content freshness report generated. Total files: ${allFiles.length}. Stale: ${topStale.length}`);
+  console.log(`[content-freshness] Wrote ${jsonPath} and ${mdPath}.`);
 }
 
 if (require.main === module) {
-  try {
-    generateReports();
-  } catch (err) {
-    console.error('Failed to generate content freshness report:', err);
-    process.exit(1);
-  }
+  try { main(); process.exit(0); } catch (e) { console.error(e); process.exit(1); }
 }
->>>>>>> 5f48a381108fa3a8a43c189dd4b043133ce9307e

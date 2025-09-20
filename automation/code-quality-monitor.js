@@ -1,6 +1,6 @@
-#!/usr/bin/env node
+#!/usr/bin/env node,
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
-class CodeQualityMonitor {
-  constructor() {
+class CodeQualityMonitor {,
+  constructor() {}}

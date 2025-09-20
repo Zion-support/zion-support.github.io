@@ -29,13 +29,11 @@ import { innovative2041MicroSaasServices } from '../data/innovative-2041-micro-s
 import { innovative2041ITServices } from '../data/innovative-2041-it-services';
 import { innovative2041AIServices } from '../data/innovative-2041-ai-services';
 
-const Homepage2041: React.FC = () => {
-  return (
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
-      <h3 className="text-xl font-bold mb-4">Homepage2041</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
-    </div>
-  );
-};
-
+const Homepage2041: React.FC = () => {,
+  return (,
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">,
+      <h3 className="text-xl font-bold mb-4">Homepage2041</h3>,
+      <p className="text-gray-300">Revolutionary technology component</p>,
+    </div>,
+  ),};
 export default Homepage2041;

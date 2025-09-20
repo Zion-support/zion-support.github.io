@@ -6,123 +6,117 @@ import { ;
   Star, Brain, Atom, Shield, Zap, TrendingUp, Globe, ;
   Rocket, Lock, Palette, Factory, Database, Cloud, ;
   Cpu, Eye, Target, Users, BarChart3;
-} from 'lucide-react',;
-import { innovative2025MicroSaasBatch } from '../data/innovative-2025-micro-saas-batch',;
+} from 'lucide-react';
+import { innovative2025MicroSaasBatch } from '../data/innovative-2025-micro-saas-batch';
 ;
-const Comprehensive2025InnovativeServicesShowcase:React.FC = () => {;
+const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {;
   const categories = [;
-    { name:'AI & Marketing', icon:Brain, color:'from-purple-500 to-pink-500' },;
-    { name:'Quantum & Finance', icon:Atom, color:'from-cyan-500 to-blue-500' },;
-    { name:'Space Technology', icon:Rocket, color:'from-indigo-500 to-purple-500' },;
-    { name:'Metaverse & AI', icon:Globe, color:'from-green-500 to-teal-500' },;
-    { name:'Cybersecurity', icon:Shield, color:'from-red-500 to-orange-500' },;
-    { name:'Supply Chain & AI', icon:Factory, color:'from-yellow-500 to-orange-500' },;
-    { name:'Quantum & Healthcare', icon:Cpu, color:'from-violet-500 to-purple-500' },;
-    { name:'AI & Creativity', icon:Palette, color:'from-pink-500 to-rose-500' },;
-    { name:'AI & Robotics', icon:Database, color:'from-emerald-500 to-green-500' }
-  ],;
+    { name:'AI & Marketing', icon:Brain, color: 'from-purple-500 to-pink-500' ,};
+    { name:'Quantum & Finance', icon:Atom, color: 'from-cyan-500 to-blue-500' ,};
+    { name:'Space Technology', icon:Rocket, color: 'from-indigo-500 to-purple-500' ,};
+    { name:'Metaverse & AI', icon:Globe, color: 'from-green-500 to-teal-500' ,};
+    { name:'Cybersecurity', icon:Shield, color: 'from-red-500 to-orange-500' ,};
+    { name:'Supply Chain & AI', icon:Factory, color: 'from-yellow-500 to-orange-500' ,};
+    { name:'Quantum & Healthcare', icon:Cpu, color: 'from-violet-500 to-purple-500' ,};
+    { name:'AI & Creativity', icon:Palette, color: 'from-pink-500 to-rose-500' ,};
+    { name:'AI & Robotics', icon:Database, color: 'from-emerald-500 to-green-500' ,}
+  ];
 ;
 // Import existing services for comprehensive showcase;
-import { realMicroSaasServices2025 } from '../data/2025-real-micro-saas-services',;
+import { realMicroSaasServices2025 } from '../data/2025-real-micro-saas-services';
 ;
 // Combine all services;
 const allServices = [;
-  ...innovativeMicroSaas2025ExpansionV2,;
-  ...emergingTechInnovations2025,;
+  ...innovativeMicroSaas2025ExpansionV2;
+  ...emergingTechInnovations2025;
   ...realMicroSaasServices2025;
-],;
+];
 ;
 // Service categories;
 const serviceCategories = [;
-  'All ServicesAI & Machine Learning',;
-  'Quantum ComputingCybersecurity',;
-  'Healthcare & BiotechFinance & Investment',;
-  'Supply Chain & LogisticsManufacturing & Industry 4.0',;
-  'Space TechnologyBlockchain & Web3',;
-  'Education & LearningLegal & Compliance',;
-  'Energy & SustainabilityAutonomous Vehicles',;
-  'IoT & Edge ComputingMetaverse & VR',;
+  'All ServicesAI & Machine LearningQuantum ComputingCybersecurity';
+  'Healthcare & BiotechFinance & InvestmentSupply Chain & LogisticsManufacturing & Industry 4.0';
+  'Space TechnologyBlockchain & Web3Education & LearningLegal & Compliance';
+  'Energy & SustainabilityAutonomous VehiclesIoT & Edge ComputingMetaverse & VR';
   'Neuroscience & BCI';
-],;
+];
 ;
 // Helper function to get service category;
-const getServiceCategory = (service:any) => {;
-  if (service.category) return service.category,;
-  if (service.type) return service.type,;
+const getServiceCategory = (service: any) => {;
+  if (service.category) return service.category;
+  if (service.type) return service.type;
   return 'Other';
-},;
+};
 ;
 // Helper function to get service pricing;
-const getServicePricing = (service:any) => {;
-  if (service.pricing?.starter) return service.pricing.starter,;
-  if (service.pricing?.monthly) return `$${service.pricing.monthly}/month`,;
-  if (service.price?.monthly) return `$${service.price.monthly}/month`,;
-  return 'Contact for pricing',;
-},;
+const getServicePricing = (service: any) => {;
+  if (service.pricing?.starter) return service.pricing.starter;
+  if (service.pricing?.monthly) return `$${service.pricing.monthly}/month`;
+  if (service.price?.monthly) return `$${service.price.monthly}/month`;
+  return 'Contact for pricing';
+};
 ;
 // Helper function to get service features;
-const getServiceFeatures = (service:any) => {;
-  if (service.features) return service.features,;
-  if (service.keyFeatures) return service.keyFeatures,;
+const getServiceFeatures = (service: any) => {;
+  if (service.features) return service.features;
+  if (service.keyFeatures) return service.keyFeatures;
   return [];
-},;
+};
 ;
 // Helper function to get service description;
-const getServiceDescription = (service:any) => {;
-  if (service.description) return service.description,;
-  if (service.tagline) return service.tagline,;
+const getServiceDescription = (service: any) => {;
+  if (service.description) return service.description;
+  if (service.tagline) return service.tagline;
   return '';
-},;
+};
 ;
 export default function Comprehensive2025InnovativeServicesShowcase() {;
-  const [searchTerm, setSearchTerm] = useState(''),;
-  const [selectedCategory, setSelectedCategory] = useState('All Services'),;
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),;
-  const [sortBy, setSortBy] = useState<'name' | 'price' | 'rating' | 'popularity'>('popularity'),;
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('All Services');
+  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
+  const [sortBy, setSortBy] = useState<'name' | 'price' | 'rating' | 'popularity'>('popularity');
 ;
   // Filter and sort services;
   const filteredServices = allServices;
     .filter(service => {;
-      const serviceName = (service as any).title || (service as any).name || '',;
+      const serviceName = (service as any).title || (service as any).name || '';
       const matchesSearch = serviceName.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                            service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
-                           (service as any).tagline?.toLowerCase().includes(searchTerm.toLowerCase()) || false,;
+                           (service as any).tagline?.toLowerCase().includes(searchTerm.toLowerCase()) || false;
       const matchesCategory = selectedCategory === 'All Services' || ;
-                             getServiceCategory(service).includes(selectedCategory.split(' ')[0]),;
-      return matchesSearch && matchesCategory,;
+                             getServiceCategory(service).includes(selectedCategory.split(' ')[0]);
+      return matchesSearch && matchesCategory;
     });
     .sort((a, b) => {;
-      const aName = (a as any).title || (a as any).name || '',;
-      const bName = (b as any).title || (b as any).name || '',;
+      const aName = (a as any).title || (a as any).name || '';
+      const bName = (b as any).title || (b as any).name || '';
       switch (sortBy) {;
         case 'name':;
-          return aName.localeCompare(bName),;
+          return aName.localeCompare(bName);
         case 'price':;
-          return ((a as any).price?.monthly || 0) - ((b as any).price?.monthly || 0),;
+          return ((a as any).price?.monthly || 0) - ((b as any).price?.monthly || 0);
         case 'rating':;
-          return ((b as any).rating || 0) - ((a as any).rating || 0),;
+          return ((b as any).rating || 0) - ((a as any).rating || 0);
         case 'popularity':;
-        default:return ((b as any).customers || 0) - ((a as any).customers || 0);
-      }
-    }),;
+        default: return ((b as any).customers || 0) - ((a as any).customers || 0),}
+    });
 ;
   const containerVariants = {;
-    hidden:{ opacity:0 },;
-    visible:{;
-      opacity:1,;
-      transition:{;
-        staggerChildren:0.1;
-      }
+    hidden: { opacity:0 ,};
+    visible: {;
+      opacity:1;
+      transition: {;
+        staggerChildren: 0.1,}
     }
-  const getCategoryIcon = (category:string) => {;
-    const cat = categories.find(c => c.name === category),;
+  const getCategoryIcon = (category: string) => {;
+    const cat = categories.find(c => c.name === category);
     return cat ? cat.icon :Star;
-  },;
+  };
 ;
-  const getCategoryColor = (category:string) => {;
-    const cat = categories.find(c => c.name === category),;
+  const getCategoryColor = (category: string) => {;
+    const cat = categories.find(c => c.name === category);
     return cat ? cat.color :'from-gray-500 to-gray-600';
-  },;
+  };
 ;
   return (;
     <Layout>;
@@ -130,12 +124,11 @@ export default function Comprehensive2025InnovativeServicesShowcase() {;
         title="2025 Comprehensive Innovative Services Showcase | Zion Tech Group";
         description="Discover our comprehensive portfolio of innovative micro SAAS services, AI solutions, and cutting-edge technology platforms. From quantum computing to healthcare AI, explore the future of business technology.";
         keywords={["innovative micro SAAS", "AI services", "quantum computing", "healthcare AI", "cybersecurity", "blockchain", "space technology", "autonomous vehicles", "IoT", "metaverse", "Zion Tech Group"]}
-        ogImage="https://ziontechgroup.com/og-innovative-services-2025.jpg";
+        ogImage="https: //ziontechgroup.com/og-innovative-services-2025.jpg";
         title="2025 Innovative Services Showcase | Zion Tech Group";
         description="Discover our cutting-edge 2025 innovative micro SAAS services, IT solutions, and AI platforms. Quantum computing, space technology, and autonomous systems.";
         keywords={[;
-          'innovative services 2025micro SAAS',;
-          'quantum computingspace technology',;
+          'innovative services 2025micro SAASquantum computingspace technology';
           'AI platformsautonomous systems';
         ]}
       />;
@@ -153,23 +146,23 @@ export default function Comprehensive2025InnovativeServicesShowcase() {;
         ;
         <div className="text-center max-w-6xl mx-auto relative z-10">;
           <motion.div;
-            initial={{ opacity:0, y:20 }}
-            animate={{ opacity:1, y:0 }}
-            transition={{ duration:0.8 }}
+            initial={{ opacity:0, y: 20 ,}}
+            animate={{ opacity:1, y: 0 ,}}
+            transition={{ duration: 0.8 ,}}
             className="space-y-6";
           >;
             {/* Enhanced Company Badge */}
             <motion.div;
-              initial={{ opacity:0, scale:0.8 }}
-              animate={{ opacity:1, scale:1 }}
-              transition={{ duration:0.6, delay:0.2 }}
+              initial={{ opacity:0, scale: 0.8 ,}}
+              animate={{ opacity:1, scale: 1 ,}}
+              transition={{ duration:0.6, delay: 0.2 ,}}
               className="inline-flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-400/30 rounded-full text-cyan-400 text-lg font-medium backdrop-blur-sm";
             >;
               <Star className="w-5 h-5" />;
               <span>Innovation Leader 2025</span>;
             </motion.div>;
             ;
-            <h1 className="text-6xl md:text-8xl font-bold mb-8 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">;
+            <h1 className="text-6xl md: text-8xl font-bold mb-8 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">;
               2025 Innovative Services;
             </h1>;
             <p className="text-2xl md:text-3xl text-gray-300 mb-10 max-w-4xl mx-auto leading-relaxed">;
@@ -178,10 +171,10 @@ export default function Comprehensive2025InnovativeServicesShowcase() {;
             ;
             {/* Enhanced Stats */}
             <motion.div;
-              initial={{ opacity:0, y:20 }}
-              animate={{ opacity:1, y:0 }}
-              transition={{ duration:0.8, delay:0.4 }}
-              className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto";
+              initial={{ opacity:0, y: 20 ,}}
+              animate={{ opacity:1, y: 0 ,}}
+              transition={{ duration:0.8, delay: 0.4 ,}}
+              className="grid grid-cols-2 md: grid-cols-4 gap-6 max-w-4xl mx-auto";
             >;
               <div className="p-4 group hover:bg-white/5 rounded-xl transition-all duration-300 border border-cyan-400/20">;
                 <div className="text-3xl font-bold text-cyan-400 mb-2 group-hover:text-cyan-300 transition-colors">50+</div>;
@@ -209,13 +202,13 @@ export default function Comprehensive2025InnovativeServicesShowcase() {;
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-purple-500/5"></div>;
         <div className="max-w-7xl mx-auto relative z-10">;
           <motion.div;
-            initial={{ opacity:0, y:20 }}
-            whileInView={{ opacity:1, y:0 }}
-            transition={{ duration:0.8 }}
-            viewport={{ once:true }}
+            initial={{ opacity:0, y: 20 ,}}
+            whileInView={{ opacity:1, y: 0 ,}}
+            transition={{ duration: 0.8 ,}}
+            viewport={{ once: true ,}}
             className="text-center mb-16";
           >;
-            <h2 className="text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">;
+            <h2 className="text-5xl md: text-6xl font-bold mb-8 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">;
               Service Categories;
             </h2>;
             <p className="text-xl text-gray-300 max-w-4xl mx-auto">;
@@ -225,17 +218,17 @@ export default function Comprehensive2025InnovativeServicesShowcase() {;
           ;
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
             {categories.map((category, index) => {;
-              const IconComponent = category.icon,;
+              const IconComponent = category.icon;
               return (;
                 <motion.div;
                   key={category.name}
-                  initial={{ opacity:0, y:20 }}
-                  whileInView={{ opacity:1, y:0 }}
-                  transition={{ duration:0.6, delay:index * 0.1 }}
-                  viewport={{ once:true }}
+                  initial={{ opacity:0, y: 20 ,}}
+                  whileInView={{ opacity:1, y: 0 ,}}
+                  transition={{ duration:0.6, delay: index * 0.1 ,}}
+                  viewport={{ once: true ,}}
                   className="group relative";
                 >;
-                  <div className={`p-8 rounded-2xl bg-gradient-to-br ${category.color} bg-opacity-10 border border-white/10 hover:border-white/20 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl`}>;
+                  <div className={`p-8 rounded-2xl bg-gradient-to-br ${category.color} bg-opacity-10 border border-white/10 hover: border-white/20 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl`,}>;
                     <div className="text-center">;
                       <div className={`w-16 h-16 mx-auto mb-6 rounded-full bg-gradient-to-br ${category.color} bg-opacity-20 flex items-center justify-center border border-white/20`}>;
                         <IconComponent className="w-8 h-8 text-white" />;
@@ -247,7 +240,7 @@ export default function Comprehensive2025InnovativeServicesShowcase() {;
                     </div>;
                   </div>;
                 </motion.div>;
-              ),;
+              );
             })}
           </div>;
         </div>;
@@ -257,13 +250,13 @@ export default function Comprehensive2025InnovativeServicesShowcase() {;
       <section className="py-20 px-4">;
         <div className="max-w-7xl mx-auto">;
           <motion.div;
-            initial={{ opacity:0, y:20 }}
-            whileInView={{ opacity:1, y:0 }}
-            transition={{ duration:0.8 }}
-            viewport={{ once:true }}
+            initial={{ opacity:0, y: 20 ,}}
+            whileInView={{ opacity:1, y: 0 ,}}
+            transition={{ duration: 0.8 ,}}
+            viewport={{ once: true ,}}
             className="text-center mb-16";
           >;
-            <h2 className="text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">;
+            <h2 className="text-5xl md: text-6xl font-bold mb-8 bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">;
               Featured Services;
             </h2>;
             <p className="text-xl text-gray-300 max-w-4xl mx-auto">;
@@ -273,17 +266,17 @@ export default function Comprehensive2025InnovativeServicesShowcase() {;
           ;
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
             {innovative2025MicroSaasBatch.filter(service => service.popular).map((service, index) => {;
-              const IconComponent = getCategoryIcon(service.category),;
+              const IconComponent = getCategoryIcon(service.category);
               return (;
                 <motion.div;
                   key={service.id}
-                  initial={{ opacity:0, y:20 }}
-                  whileInView={{ opacity:1, y:0 }}
-                  transition={{ duration:0.6, delay:index * 0.1 }}
-                  viewport={{ once:true }}
+                  initial={{ opacity:0, y: 20 ,}}
+                  whileInView={{ opacity:1, y: 0 ,}}
+                  transition={{ duration:0.6, delay: index * 0.1 ,}}
+                  viewport={{ once: true ,}}
                   className="group relative";
                 >;
-                  <div className="p-8 rounded-2xl bg-gradient-to-br from-gray-900/50 to-gray-800/50 border border-white/10 hover:border-white/20 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl backdrop-blur-sm">;
+                  <div className="p-8 rounded-2xl bg-gradient-to-br from-gray-900/50 to-gray-800/50 border border-white/10 hover: border-white/20 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl backdrop-blur-sm">;
                     {/* Popular Badge */}
                     {service.popular && (;
                       <div className="absolute -top-3 left-6 px-4 py-1 bg-gradient-to-r from-yellow-500 to-orange-500 text-black text-sm font-bold rounded-full">;
@@ -308,7 +301,7 @@ export default function Comprehensive2025InnovativeServicesShowcase() {;
                 </div>;
 ;
                 {/* Service Details */}
-                <div className={`p-6 bg-white/5 ${viewMode === 'list' ? 'lg:w-2/3' :''}`}>;
+                <div className={`p-6 bg-white/5 ${viewMode === 'list' ? 'lg: w-2/3' :'',}`}>;
                   <p className="text-gray-300 mb-4">{service.description}</p>;
                   ;
                   {/* Key Benefits */}
@@ -318,7 +311,7 @@ export default function Comprehensive2025InnovativeServicesShowcase() {;
                       Key Benefits;
                     </h4>;
                     <ul className="space-y-1">;
-                      {(service as any).benefits?.slice(0, 3)?.map((benefit:string, idx:number) => (;
+                      {(service as any).benefits?.slice(0, 3)?.map((benefit:string, idx: number) => (;
                         <li key={idx} className="text-gray-300 text-sm flex items-start gap-2">;
                           <Check className="w-3 h-3 text-green-400 mt-1 flex-shrink-0" />;
                           {benefit}
@@ -347,15 +340,15 @@ export default function Comprehensive2025InnovativeServicesShowcase() {;
                     {/* Market Info */}
                     <div className="border-t border-white/10 pt-4 space-y-2">;
                       <div className="text-xs text-gray-400">;
-                        Market Price:<span className="text-green-400">{service.marketPrice}</span>;
+                        Market Price: <span className="text-green-400">{service.marketPrice,}</span>;
                       </div>;
                       <div className="text-xs text-gray-400">;
-                        Category:<span className="text-cyan-400">{service.category}</span>;
+                        Category: <span className="text-cyan-400">{service.category,}</span>;
                       </div>;
                     </div>;
                   </div>;
                 </motion.div>;
-              ),;
+              );
             })}
           </div>;
         </div>;
@@ -366,13 +359,13 @@ export default function Comprehensive2025InnovativeServicesShowcase() {;
         <div className="absolute inset-0 bg-gradient-to-r from-purple-500/5 to-pink-500/5"></div>;
         <div className="max-w-7xl mx-auto relative z-10">;
           <motion.div;
-            initial={{ opacity:0, y:20 }}
-            whileInView={{ opacity:1, y:0 }}
-            transition={{ duration:0.8 }}
-            viewport={{ once:true }}
+            initial={{ opacity:0, y: 20 ,}}
+            whileInView={{ opacity:1, y: 0 ,}}
+            transition={{ duration: 0.8 ,}}
+            viewport={{ once: true ,}}
             className="text-center mb-16";
           >;
-            <h2 className="text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-green-400 to-teal-500 bg-clip-text text-transparent">;
+            <h2 className="text-5xl md: text-6xl font-bold mb-8 bg-gradient-to-r from-green-400 to-teal-500 bg-clip-text text-transparent">;
               Complete Service Portfolio;
             </h2>;
             <p className="text-xl text-gray-300 max-w-4xl mx-auto">;
@@ -382,17 +375,17 @@ export default function Comprehensive2025InnovativeServicesShowcase() {;
           ;
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">;
             {innovative2025MicroSaasBatch.map((service, index) => {;
-              const IconComponent = getCategoryIcon(service.category),;
+              const IconComponent = getCategoryIcon(service.category);
               return (;
                 <motion.div;
                   key={service.id}
-                  initial={{ opacity:0, y:20 }}
-                  whileInView={{ opacity:1, y:0 }}
-                  transition={{ duration:0.6, delay:index * 0.05 }}
-                  viewport={{ once:true }}
+                  initial={{ opacity:0, y: 20 ,}}
+                  whileInView={{ opacity:1, y: 0 ,}}
+                  transition={{ duration:0.6, delay: index * 0.05 ,}}
+                  viewport={{ once: true ,}}
                   className="group relative";
                 >;
-                  <div className="p-6 rounded-xl bg-gradient-to-br from-gray-900/30 to-gray-800/30 border border-white/5 hover:border-white/20 transition-all duration-300 transform hover:scale-105 hover:shadow-xl backdrop-blur-sm">;
+                  <div className="p-6 rounded-xl bg-gradient-to-br from-gray-900/30 to-gray-800/30 border border-white/5 hover: border-white/20 transition-all duration-300 transform hover:scale-105 hover:shadow-xl backdrop-blur-sm">;
                     <div className="flex items-start space-x-4">;
                       <div className={`w-12 h-12 rounded-lg bg-gradient-to-br ${getCategoryColor(service.category)} bg-opacity-20 flex items-center justify-center border border-white/20 text-2xl flex-shrink-0`}>;
                         {service.icon}
@@ -410,7 +403,7 @@ export default function Comprehensive2025InnovativeServicesShowcase() {;
                     </div>;
                   </div>;
                 </motion.div>;
-              ),;
+              );
             })}
           </div>;
         </div>;
@@ -420,13 +413,13 @@ export default function Comprehensive2025InnovativeServicesShowcase() {;
       <section className="py-20 px-4">;
         <div className="max-w-4xl mx-auto text-center">;
           <motion.div;
-            initial={{ opacity:0, y:20 }}
-            whileInView={{ opacity:1, y:0 }}
-            transition={{ duration:0.8 }}
-            viewport={{ once:true }}
+            initial={{ opacity:0, y: 20 ,}}
+            whileInView={{ opacity:1, y: 0 ,}}
+            transition={{ duration: 0.8 ,}}
+            viewport={{ once: true ,}}
             className="space-y-8";
           >;
-            <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">;
+            <h2 className="text-4xl md: text-5xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">;
               Ready to Transform Your Business?;
             </h2>;
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">;
@@ -451,12 +444,11 @@ export default function Comprehensive2025InnovativeServicesShowcase() {;
             ;
             <div className="text-sm text-gray-400">;
               <p>Address:364 E Main St STE 1008, Middletown DE 19709</p>;
-              <p>Website:<a href="https://ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300">https://ziontechgroup.com</a></p>;
+              <p>Website: <a href="https://ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300">https://ziontechgroup.com</a></p>;
             </div>;
           </motion.div>;
         </div>;
       </section>;
     </Layout>;
   );
-
-
+}}}

@@ -20,6 +20,4 @@ export default function BrainComputerInterface() {
     </div>
   );
 };
-
-
 export default QuantumRealityEngine2025;

@@ -4,7 +4,13 @@
     "skipLibCheck": true,
     "module": "ESNext",
     "moduleResolution": "bundler",
-    "allowSyntheticDefaultImports": true
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "noEmit": true
   },
-  "include": ["vite.config.ts"]
+  "exclude": ["./dist", "./node_modules", "./src"], // Explicitly exclude src
+  "include": [
+    "vite.config.ts"
+    // Add any other Node-specific .ts files here if necessary, e.g., scripts at the root
+  ]
 }

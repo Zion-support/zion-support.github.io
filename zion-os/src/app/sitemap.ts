@@ -1,2 +1,1 @@
 import type { MetadataRoute } from 'next';
-

@@ -77,5 +77,4 @@ const UltraAdvancedServiceCard2025: React.FC<UltraAdvancedServiceCard2025Props> 
     </div>
   );
 };
-
 export default UltraAdvancedServiceCard2025;

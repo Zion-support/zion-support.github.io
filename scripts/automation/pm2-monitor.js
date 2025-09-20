@@ -1,10 +1,8 @@
 #!/usr/bin/env node
-
 /**
  * PM2 Automation Monitor
  * Enhanced monitoring and health checking for all PM2 automation processes
  */
-
 const pm2 = require('pm2');
 const fs = require('fs');
 const path = require('path');
@@ -23,21 +21,15 @@ class PM2Monitor {
   async start() {
     try {
       console.log('🚀 Starting PM2 Automation Monitor...');
-      
       // Connect to PM2
       await this.connectToPM2();
-      
       // Collect comprehensive health data
       await this.collectHealthData();
-      
       // Generate health report
       await this.generateHealthReport();
-      
       // Send notifications if needed
       await this.sendNotifications();
-      
       console.log('✅ PM2 Monitor completed successfully');
-      
     } catch (error) {
       console.error('❌ PM2 Monitor failed:', error);
       this.healthReport.overallHealth = 'critical';
@@ -58,10 +50,8 @@ class PM2Monitor {
 
   async collectHealthData() {
     console.log('📊 Collecting health data...');
-    
     // Get PM2 status
     const status = await this.getPM2Status();
-    
     // Analyze each process
     for (const process of status) {
       this.healthReport.processes[process.name] = {
@@ -73,10 +63,9 @@ class PM2Monitor {
         health: this.assessProcessHealth(process)
       };
     }
-    
+
     // Collect system metrics
     this.healthReport.systemMetrics = await this.collectSystemMetrics();
-    
     // Assess overall health
     this.assessOverallHealth();
   }
@@ -138,7 +127,6 @@ class PM2Monitor {
 
   async collectSystemMetrics() {
     const os = require('os');
-    
     return {
       memory: {
         total: os.totalmem(),
@@ -160,7 +148,7 @@ class PM2Monitor {
     const processes = Object.values(this.healthReport.processes);
     const criticalCount = processes.filter(p => p.health.status === 'critical').length;
     const warningCount = processes.filter(p => p.health.status === 'warning').length;
-    
+
     if (criticalCount > 0) {
       this.healthReport.overallHealth = 'critical';
       this.healthReport.recommendations.push(`Immediate attention required: ${criticalCount} critical processes`);
@@ -175,24 +163,20 @@ class PM2Monitor {
 
   async generateHealthReport() {
     console.log('📋 Generating health report...');
-    
     // Create reports directory if it doesn't exist
     const reportsDir = path.join(__dirname, '../../reports');
     if (!fs.existsSync(reportsDir)) {
       fs.mkdirSync(reportsDir, { recursive: true });
     }
-    
+
     // Save detailed report
     const reportPath = path.join(reportsDir, `pm2-health-${Date.now()}.json`);
     fs.writeFileSync(reportPath, JSON.stringify(this.healthReport, null, 2));
-    
     // Save latest report
     const latestReportPath = path.join(reportsDir, 'pm2-health-latest.json');
     fs.writeFileSync(latestReportPath, JSON.stringify(this.healthReport, null, 2));
-    
     // Generate summary
     this.generateSummary();
-    
     console.log(`📄 Health report saved to: ${reportPath}`);
   }
 
@@ -207,7 +191,7 @@ class PM2Monitor {
       memoryUsage: this.healthReport.systemMetrics.memory?.usagePercent + '%',
       topRecommendations: this.healthReport.recommendations.slice(0, 3)
     };
-    
+
     console.log('\n📊 PM2 Health Summary:');
     console.log('========================');
     console.log(`Overall Health: ${summary.overallHealth.toUpperCase()}`);

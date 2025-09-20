@@ -9,60 +9,56 @@
   },
   "results": [
     {
-      "file": "pages/api/email-validator.ts",
+      "file": "pages/_app.tsx",
       "issues": [],
       "warnings": [
         {
           "type": "WARNING",
           "code": "INCOMPLETE_HTML",
           "message": "Incomplete HTML tags detected",
-          "line": 81,
+          "line": 0,
           "severity": "warning"
         }
       ]
     },
     {
-      "file": "pages/api/password-strength.ts",
-      "issues": [],
-      "warnings": [
+      "file": "pages/index.tsx",
+      "issues": [
         {
-          "type": "WARNING",
-          "code": "INCOMPLETE_HTML",
-          "message": "Incomplete HTML tags detected",
-          "line": 68,
-          "severity": "warning"
+          "type": "CRITICAL",
+          "code": "MISSING_EXPORT_DEFAULT",
+          "message": "Missing export default statement",
+          "line": 0,
+          "severity": "error"
+        },
+        {
+          "type": "CRITICAL",
+          "code": "MISSING_COMPONENT_DECLARATION",
+          "message": "Missing component function/class declaration",
+          "line": 0,
+          "severity": "error"
+        },
+        {
+          "type": "CRITICAL",
+          "code": "MISSING_RETURN_STATEMENT",
+          "message": "Missing return statement or JSX",
+          "line": 0,
+          "severity": "error"
         }
-      ]
-    },
-    {
-      "file": "pages/api/text-analyzer.ts",
-      "issues": [],
+      ],
       "warnings": [
         {
           "type": "WARNING",
-          "code": "INCOMPLETE_HTML",
-          "message": "Incomplete HTML tags detected",
-          "line": 71,
-          "severity": "warning"
-        }
-      ]
-    },
-    {
-      "file": "pages/api/url-shortener.ts",
-      "issues": [],
-      "warnings": [
-        {
-          "type": "WARNING",
-          "code": "INCOMPLETE_HTML",
-          "message": "Incomplete HTML tags detected",
-          "line": 31,
+          "code": "PAGE_TOO_SHORT",
+          "message": "Page content seems too short, may be incomplete",
+          "line": 0,
           "severity": "warning"
         }
       ]
     }
   ],
-  "results": [],
   "buildBreakingFiles": [],
   "generatedAt": "2025-08-20T19:21:03.555Z"
+=======
   "generatedAt": "2025-08-20T20:44:48.331Z"
 }

@@ -86,5 +86,4 @@ export default function ManufacturingSolutions() {
     </div>
   );
 };
-
 export default manufacturing;

@@ -1,4 +1,3 @@
 // Type definitions for fraud;
 interface fraud {;
-  // TODO: Add proper type definitions;
-};
+  // TODO: Add proper type definitions,};

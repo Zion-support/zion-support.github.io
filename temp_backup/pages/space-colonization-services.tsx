@@ -115,5 +115,4 @@ export default function SpaceColonizationServices() {
     </div>
   );
 };
-
 export default space-colonization-services;

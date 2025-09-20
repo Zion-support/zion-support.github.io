@@ -30,7 +30,7 @@ if (fs.existsSync(marketplaceOffersPath)) {
   
   // Fix the syntax error
   content = content.replace(
-    '  saveProject,;',
+    '  saveProject;',
     '  saveProject,'
   );
   
@@ -45,7 +45,7 @@ if (fs.existsSync(marketplaceProjectsPath)) {
   
   // Fix the syntax error
   content = content.replace(
-    '  ProjectNote,;',
+    '  ProjectNote;',
     '  ProjectNote,'
   );
   

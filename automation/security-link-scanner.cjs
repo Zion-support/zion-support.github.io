@@ -167,7 +167,7 @@ class SecurityLinkScanner {
       if (matches) {
         matches.forEach(url => {
           // Clean and validate URL
-          const cleanUrl = url.replace(/[^\w\-._~:/?#[\]@!$&'()*+,;=%]/g, '');
+          const cleanUrl = url.replace(/[^\w\-._~:/?#[\]@!$&'()*+;=%]/g, '');
           if (this.isValidUrl(cleanUrl)) {
             links.add(cleanUrl);
           }

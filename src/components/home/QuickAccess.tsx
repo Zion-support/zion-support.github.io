@@ -1,125 +1,81 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { Search, Users, Briefcase, Settings, Sparkles, ArrowRight } from 'lucide-react';
+
+import React from "react";
+import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
+import { motion } from "framer-motion";
+import { 
+  ArrowRight, 
+  Search, 
+  Users, 
+  Briefcase, 
+  Settings, 
+  MessageSquare, 
+  Smartphone,
+  Zap,
+  TrendingUp
+} from "lucide-react";
 
 export function QuickAccess() {
-  const quickActions = [
+  const quickLinks = [
     {
-      title: 'Find Services',
-      description: 'Discover AI and tech services',
-      icon: Search,
-      href: '/services',
-      color: 'from-zion-cyan to-zion-blue',
-      gradient: 'from-zion-cyan/20 to-zion-blue/20'
+      title: 'AI Services',
+      description: 'Machine learning, automation, and AI consulting',
+      icon: '🤖',
+      path: '/ai-services',
+      color: 'from-zion-cyan to-blue-500'
     },
     {
-      title: 'Hire Talent',
-      description: 'Connect with tech experts',
-      icon: Users,
-      href: '/talent',
-      color: 'from-zion-purple to-zion-cyan',
-      gradient: 'from-zion-purple/20 to-zion-cyan/20'
+      title: 'Cybersecurity',
+      description: 'Security audits, threat detection, and protection',
+      icon: '🔒',
+      path: '/cybersecurity',
+      color: 'from-red-500 to-pink-500'
     },
     {
-      title: 'Browse Equipment',
-      description: 'Find hardware and tools',
-      icon: Briefcase,
-      href: '/equipment',
-      color: 'from-zion-blue to-zion-purple',
-      gradient: 'from-zion-blue/20 to-zion-purple/20'
+      title: 'IT Services',
+      description: 'Infrastructure, cloud, and digital transformation',
+      icon: '💻',
+      path: '/expanded-services',
+      color: 'from-green-500 to-emerald-500'
     },
     {
-      title: 'AI Solutions',
-      description: 'Explore AI-powered tools',
-      icon: Sparkles,
-      href: '/ai-services',
-      color: 'from-zion-cyan to-zion-purple',
-      gradient: 'from-zion-cyan/20 to-zion-purple/20'
+      title: 'Green IT',
+      description: 'Sustainable and eco-friendly technology solutions',
+      icon: '🌱',
+      path: '/green-it',
+      color: 'from-emerald-500 to-teal-500'
     }
   ];
 
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1
-      }
-    }
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0 }
-  };
-
   return (
-    <section className="py-16 bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark relative overflow-hidden">
-      {/* Background Elements */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-zion-cyan/5 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-64 h-64 bg-zion-purple/5 rounded-full blur-3xl"></div>
-      </div>
-
-      <div className="container mx-auto px-4 relative">
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          className="text-center mb-12"
-        >
-          <motion.h2 variants={itemVariants} className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Quick Access
-          </motion.h2>
-          <motion.p variants={itemVariants} className="text-lg text-zion-slate-light max-w-2xl mx-auto">
-            Get started quickly with our most popular features and services
-          </motion.p>
-        </motion.div>
-
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
-        >
-          {quickActions.map((action) => (
-            <motion.div
-              key={action.title}
-              variants={itemVariants}
-              className="group"
+    <section className="py-16 bg-zion-blue-dark">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl font-bold text-white mb-4">Quick Access</h2>
+          <p className="text-zion-slate-light text-lg">
+            Get started with our most popular services
+          </p>
+        </div>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {quickLinks.map((link) => (
+            <Link
+              key={link.title}
+              to={link.path}
+              className="group bg-zion-blue border border-zion-blue-light rounded-lg p-6 hover:border-zion-cyan transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/20 transform hover:-translate-y-1"
             >
-              <Link
-                to={action.href}
-                className="block bg-zion-blue-light/10 border border-zion-blue-light/20 rounded-2xl p-6 backdrop-blur-sm hover:border-zion-cyan/40 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/20 h-full"
-              >
-                {/* Icon */}
-                <div className={`w-16 h-16 bg-gradient-to-r ${action.color} rounded-2xl flex items-center justify-center mb-4 shadow-lg group-hover:scale-110 transition-transform duration-300`}>
-                  <action.icon className="w-8 h-8 text-white" />
-                </div>
-
-                {/* Content */}
-                <h3 className="text-xl font-bold text-white mb-2 group-hover:text-zion-cyan transition-colors">
-                  {action.title}
-                </h3>
-                <p className="text-zion-slate-light text-sm mb-4">
-                  {action.description}
-                </p>
-
-                {/* Arrow */}
-                <div className="flex items-center text-zion-cyan group-hover:text-zion-cyan/80 transition-colors">
-                  <span className="text-sm font-medium">Get Started</span>
-                  <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
-                </div>
-
-                {/* Hover Effect */}
-                <div className={`absolute inset-0 rounded-2xl bg-gradient-to-r ${action.gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-300`}></div>
-              </Link>
-            </motion.div>
+              <div className={`w-16 h-16 bg-gradient-to-r ${link.color} rounded-lg flex items-center justify-center text-3xl mb-4 mx-auto`}>
+                {link.icon}
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-zion-cyan transition-colors text-center">
+                {link.title}
+              </h3>
+              <p className="text-zion-slate-light text-sm text-center">
+                {link.description}
+              </p>
+            </Link>
           ))}
-        </motion.div>
+        </div>
       </div>
     </section>
   );
