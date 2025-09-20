@@ -116,7 +116,7 @@ export default function Contact() {
                 }, onSendMessage: handleSendMessage }))] }));
 }
 "use strict";
-phone: '',
+'',
     company;
 '',
     phone;
