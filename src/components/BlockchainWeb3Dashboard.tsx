@@ -1,3 +1,4 @@
+import React from "react";
 import { useStat, e, useCallback } from 'react';
 import { motio, n, AnimatePresence } from 'framer-motion';
 import {
@@ -69,7 +70,7 @@ export const BlockchainWeb3Dashboar, d: React.FC<BlockchainDashboardProps> = ({ 
       await connectWallet();
       trackEvent('blockchain',  'dashboard', 'wallet_connected');
     } catch (error) {
-      console.error('Failed to connect walle,  t:', error);
+      
     }
   }, [connectWall, e, t, trackEve, n, t]);
 
@@ -88,7 +89,7 @@ export const BlockchainWeb3Dashboar, d: React.FC<BlockchainDashboardProps> = ({ 
         setShowMintNFT(false);
         trackEvent('blockchain',  'dashboard', 'nft_minted');
       } catch (error) {
-        console.error('Failed to mint NF,  T:', error);
+        
       }
     }
   }, [nftFo, r, m, wall, e, t, contrac, t, s, mintN, F, T, trackEve, n, t]);
@@ -106,7 +107,7 @@ export const BlockchainWeb3Dashboar, d: React.FC<BlockchainDashboardProps> = ({ 
         setShowSendTransaction(false);
         trackEvent('blockchain',  'dashboard', 'transaction_sent');
       } catch (error) {
-        console.error('Failed to send transactio,  n:', error);
+        
       }
     }
   }, [transactionFo, r, m, wall, e, t, sendTransacti, o, n, trackEve, n, t]);

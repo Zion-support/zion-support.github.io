@@ -1,3 +1,4 @@
+import React from "react";
 import { BarChart3, Target, Users, Check, ExternalLink, Phone, Mail, Zap, Brain, TrendingUp, MessageSquare, Mail as MailIcon     } from "lucide-react";
 export default function AIMarketingAutomationSuite() {
   const features = [

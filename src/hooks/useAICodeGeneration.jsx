@@ -48,7 +48,7 @@ export, const, useAICodeGeneration = () => {
             });
         }
         catch (error) {
-            console.error('Failed, to, generate code: 'error);
+            
             trackEvent('ai_code_generationgeneration_failed''error'undefined{
                 erro,;
   r: error, instanceof, Error ? error.message : 'Unknown error';
@@ -78,7 +78,7 @@ export, const, useAICodeGeneration = () => {
             });
         }
         catch (error) {
-            console.error('Failed, to, analyze code: 'error);
+            
             trackEvent('ai_code_analysisanalysis_failed''error'undefined{
                 erro,;
   r: error, instanceof, Error ? error.message : 'Unknown error';
@@ -124,7 +124,7 @@ export, const, useAICodeGeneration = () => {
             return optimizedCode;
         }
         catch (error) {
-            console.error('Failed, to, optimize code: 'error);
+            
             trackEvent('ai_code_generationoptimization_failed''error'undefined{
                 erro,;
   r: error, instanceof, Error ? error.message : 'Unknown error';
@@ -151,7 +151,7 @@ export, const, useAICodeGeneration = () => {
             return testCode;
         }
         catch (error) {
-            console.error('Failed, to, generate tests: 'error);
+            
             trackEvent('ai_code_generationtest_generation_failed''error'undefined{
                 erro,;
   r: error, instanceof, Error ? error.message : 'Unknown error';
@@ -178,7 +178,7 @@ export, const, useAICodeGeneration = () => {
             return docs;
         }
         catch (error) {
-            console.error('Failed, to, generate documentation: 'error);
+            
             trackEvent('ai_code_generationdoc_generation_failed''error'undefined{
                 erro,;
   r: error, instanceof, Error ? error.message : 'Unknown error';
@@ -282,7 +282,7 @@ app.get('/'(reqres) => {
 }),;
 // TODO: Implement, additional, routes based, on, prompt;
 app.listen(PORT() => {
-  console.log(\`Server, running, on port \${PORT}\`);
+  
 }),`,;
     },;
     const generatePythonCode = (prompt, _options) => {;

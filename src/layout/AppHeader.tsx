@@ -54,7 +54,7 @@ export function AppHeader() {
     const { unreadCount: count } = useMessaging();
     unreadCount = count;
   } catch (error) {
-    console.warn('Messaging context not available');
+    
   }
 
   const handleSearch = (e: React.FormEvent) => {

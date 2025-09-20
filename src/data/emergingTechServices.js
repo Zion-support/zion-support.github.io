@@ -1176,7 +1176,7 @@ export const getFeaturedEmergingTechServices = () => {
     return EMERGING_TECH_SERVICES.slice(0, 8);
 };
 export const getServicesByInnovationScore = (minScore) => {
-    technology: ["Unity3D", "Unreal Engine", "React", "Node.js", "WebGL", "WebXR", "3D Graphics"],
+    ["Unity3D", "Unreal Engine", "React", "Node.js", "WebGL", "WebXR", "3D Graphics"],
         integrations;
     ["Display hardware", "Content management systems", "Streaming platforms", "Mobile apps"],
         compliance;

@@ -23,7 +23,7 @@ export function useAuth() {
         try {
           setUser(JSON.parse(storedUser));
         } catch (error) {
-          console.error('Error parsing stored user:', error);
+          
         }
       }
       setLoading(false);

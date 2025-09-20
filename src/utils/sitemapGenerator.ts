@@ -283,7 +283,7 @@ export const generateAllSitemaps = async (config: SitemapConfig = defaultSitemap
       json: jsonSitemap
     };
   } catch (error) {
-    console.error('Error generating sitemaps:', error);
+    
     throw error;
   }
 };

@@ -44,7 +44,7 @@ export function usePerformance() {
   useEffect(() => {
     // Check if PerformanceObserver is supported
     if (!('PerformanceObserver' in window)) {
-      console.warn('PerformanceObserver not supported');
+      
       return;
     }
 
@@ -94,7 +94,7 @@ export function usePerformance() {
       fidObserver.observe({ entryTypes: ['first-input'] });
       clsObserver.observe({ entryTypes: ['layout-shift'] });
     } catch (error) {
-      console.warn('Error setting up performance observers:', error);
+      
     }
 
     // Navigation timing metrics
@@ -159,7 +159,7 @@ export function usePerformance() {
     
     metricsWithRatings.forEach(({ name, value, rating }) => {
       const emoji = rating === 'good' ? '✅' : rating === 'needs-improvement' ? '⚠️' : '❌';
-      console.log(`${emoji} ${name}: ${value.toFixed(2)}ms (${rating})`);
+      
     });
     
     console.groupEnd();
@@ -202,7 +202,7 @@ export function usePerformance() {
     try {
       longTaskObserver.observe({ entryTypes: ['longtask'] });
     } catch (error) {
-      console.warn('Error setting up long task observer:', error);
+      
     }
 
     return () => longTaskObserver.disconnect();
@@ -232,7 +232,7 @@ export function usePerformanceEvent(eventName: string, callback: (entry: Perform
     try {
       observer.observe({ entryTypes: [eventName] });
     } catch (error) {
-      console.warn(`Error observing ${eventName}:`, error);
+      
     }
 
     return () => observer.disconnect();

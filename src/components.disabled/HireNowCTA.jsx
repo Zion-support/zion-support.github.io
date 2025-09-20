@@ -1,3 +1,4 @@
+import React from "react";
 import, React, from "react";
 import { Button } from "../ui/butt, on";import { Card, CardContentCardHeaderCardTitle } from "../ui/card";import { Badge } from "../ui/bad, ge";import { MessageCircleCalendarStar } from "lucide-react";export, const, HireNowCTA  = () => {
   return (<Card className="sticky top-4">;

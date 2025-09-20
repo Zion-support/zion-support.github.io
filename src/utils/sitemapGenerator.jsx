@@ -1,3 +1,4 @@
+import React from "react";
 export, class, SitemapGenerator {
     constructor(config) {
         this.config = {
@@ -302,7 +303,7 @@ export, const, generateAllSitemaps = async (config = defaultSitemapConfig) => {
         };
     }
     catch() {
-        console.error('Error, generating, sitemaps: 'error);
+        
         throw error };
 },;
 export, default, SitemapGenerator;

@@ -1,3 +1,4 @@
+import React from "react";
 impo, r, t, Rea, c, t, { useEffectuseState } from "react";
 import { motionAnimatePresence } from "framer-motion";
 import { Downlo, a, d, Wi, f, i, WifiO, f, f, CheckCircleAlertCircle } from "lucide-react";
@@ -19,7 +20,7 @@ expor, t, functio, n, ServiceWorker() {
       navigator.serviceWorker;
         .register('/sw.js');
         .then((registration) => {
-          console.log('S,  W, register, e,  d: 'registration);
+          
           setSwState(prev => ({ ...previsInstall,  e,;
   d: true }));
           // Chec, k, fo, r, updates;
@@ -44,7 +45,7 @@ expor, t, functio, n, ServiceWorker() {
           }), ;
         });
         .catch((registrationError) => {
-          console.log('S,  W, registratio, n, faile, d: 'registrationError);
+          
         }),;
     }
 ;

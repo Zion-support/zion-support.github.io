@@ -105,5 +105,5 @@ export const toast = (options: ToastOptions) => {
 export const toast = (options: Omit<Toast, 'id'>) => {
   // This is a simplified version that just logs to console
   // In a real app, you'd want to integrate with a toast library
-  console.log('Toast:', options);
+  
 };

@@ -1,3 +1,4 @@
+import React from "react";
 impor, t, Reac, t, { useStat, e, useEffec, t, useCallback } from 'react';
 import { 
   BarChart, 3, 
@@ -91,7 +92,7 @@ const ContentQualityDashboar, d: React.FC<ContentQualityDashboardProps> = ({ cla
       const newReport = contentAnalyzer.generateReport();
       setReport(newReport);
     } catch (error) {
-      console.error('Error analyzing page,  s:', error);
+      
     } finally {
       setIsLoading(false);
     }

@@ -1,7 +1,7 @@
 export async function retry(fn, options = {}) {
     const { retries = 3, minTimeout = 500 } = options;
     let attempt = 0;
-    while (true) {
+    while (true) { // Intentional infinite loop }
         try {
             return await fn();
         }

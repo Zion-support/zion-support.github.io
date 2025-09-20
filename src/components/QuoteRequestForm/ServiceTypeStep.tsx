@@ -1,3 +1,4 @@
+import React from "react";
 import { useEffect, useState } from "react";
 import { QuoteFormData, ListingItem, ServiceType } from "@/types/quotes";
 import { Input } from "@/components/ui/input";
@@ -60,7 +61,7 @@ export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepPro
         } catch (err) {
           if (attempt === maxRetries - 1) {
             if (process.env.NODE_ENV === 'development') {
-              console.error('Failed to load services:', err);
+              
             } else {
               captureException(err);
             }

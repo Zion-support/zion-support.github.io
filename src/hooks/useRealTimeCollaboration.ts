@@ -94,10 +94,10 @@ export const useRealTimeCollaboration = (
 
   const wsRef = useRef<WebSocket | null>(null);
   const reconnectAttemptsRef = useRef(0);
-  const heartbeatIntervalRef = useRef<NodeJS.Timeout | null>(null);
-  const reconnectTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+  const heartbeatIntervalRef = useRef<globalThis.Timeout | null>(null);
+  const reconnectTimeoutRef = useRef<globalThis.Timeout | null>(null);
   const messageQueueRef = useRef<CollaborationMessage[]>([]);
-  const presenceUpdateRef = useRef<NodeJS.Timeout | null>(null);
+  const presenceUpdateRef = useRef<globalThis.Timeout | null>(null);
 
   // Generate user color
   const generateUserColor = useCallback((userId: string) => {
@@ -155,7 +155,7 @@ export const useRealTimeCollaboration = (
           const message: CollaborationMessage = JSON.parse(event.data);
           handleIncomingMessage(message);
         } catch (error) {
-          console.error('Failed to parse collaboration message:', error);
+          
         }
       };
 
@@ -181,12 +181,12 @@ export const useRealTimeCollaboration = (
       };
 
       wsRef.current.onerror = (error) => {
-        console.error('WebSocket error:', error);
+        
         trackEvent('collaboration', 'connection_error', 'websocket_error', undefined, { error: error.toString() });
       };
 
     } catch (error) {
-      console.error('Failed to initialize WebSocket connection:', error);
+      
       trackEvent('collaboration', 'connection_failed', 'websocket_init_failed', undefined, { 
         error: error instanceof Error ? error.message : 'Unknown error' 
       });

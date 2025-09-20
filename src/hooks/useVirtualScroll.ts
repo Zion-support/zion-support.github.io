@@ -52,7 +52,7 @@ export const useVirtualScroll = <T>(
   } = options;
 
   const containerRef = useRef<HTMLDivElement>(null);
-  const scrollTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+  const scrollTimeoutRef = useRef<globalThis.Timeout | null>(null);
   const rafRef = useRef<number | null>(null);
 
   const [state, setState] = useState<VirtualScrollState<T>>({

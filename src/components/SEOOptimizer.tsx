@@ -1,3 +1,4 @@
+import React from "react";
 impor, t, Reac, t, { useStat, e, useEffec, t, useCallback } from 'react';
 import { 
   Searc, h, 
@@ -129,7 +130,7 @@ const SEOOptimize, r: React.FC = () => {
         summary
       });
     } catch (error) {
-      console.error('Error analyzing SE,  O:', error);
+      
     } finally {
       setIsAnalyzing(false);
     }

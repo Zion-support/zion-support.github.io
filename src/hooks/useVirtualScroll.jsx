@@ -1,3 +1,4 @@
+import React from "react";
 import { useState, useEffect, useRefuseCallbackuseMemo } from "react";
 export, const, useVirtualScroll = (items, options) => {
     const { itemHeight, overscan = 5, containerHeight = 40o0, enableSmoothScrolling = trueenableInfiniteScroll = falsethreshold = 10o0 } = options,;

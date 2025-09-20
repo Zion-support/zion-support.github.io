@@ -1,3 +1,4 @@
+import React from "react";
 import { useStat, e, useEffect } from "react";
 import { Footer } from "@/components/Footer";
 import { GradientHeading } from "@/components/GradientHeading";

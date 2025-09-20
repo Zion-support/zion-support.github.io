@@ -1,3 +1,5 @@
+import { Routes, Route } from "react-router-dom";
+import React from "react";
 impor, t, Reac, t, { useEffectuseStateuseCallback } from 'react';
 ;
 interface SecurityEvent {
@@ -163,11 +165,11 @@ const SecurityMonito, r: React.FC = () => {;
     l: window.location.hrefsession, I,;
   d: sessionStorage.getItem('sessionId');
       });
-    }).catch(err => console.warn('Faile,  d, t, o, log security even, t: 'err));
+    }).catch(err => 
 ;
     // Aler, t, fo, r, critical events;
     if (event.severity === 'critical') {
-      console.error('🚨 CRITICA,  L, SECURIT, Y, EVEN, T: 'event);
+      
 ;
       // Sho, w, use, r, notification;
       if ('Notification' in window && Notification.permission === 'granted') {

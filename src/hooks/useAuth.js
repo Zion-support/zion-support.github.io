@@ -10,7 +10,7 @@ export function useAuth() {
                 setUser(JSON.parse(storedUser));
             }
             catch (error) {
-                console.error('Error parsing stored user:', error);
+                
                 localStorage.removeItem('zion_user');
             }
         }
@@ -31,7 +31,7 @@ export function useAuth() {
             localStorage.setItem('zion_user', JSON.stringify(mockUser));
         }
         catch (error) {
-            console.error('Login failed:', error);
+            
             throw error;
         }
         finally {
@@ -47,7 +47,7 @@ export function useAuth() {
             localStorage.removeItem('zion_user');
         }
         catch (error) {
-            console.error('Logout failed:', error);
+            
             throw error;
         }
         finally {
@@ -69,7 +69,7 @@ export function useAuth() {
             localStorage.setItem('zion_user', JSON.stringify(mockUser));
         }
         catch (error) {
-            console.error('Signup failed:', error);
+            
             throw error;
         }
         finally {
@@ -92,7 +92,7 @@ export function useAuth() {
                     setUser(JSON.parse(storedUser));
                 }
                 catch (error) {
-                    console.error('Error parsing stored user:', error);
+                    
                 }
             }
             setLoading(false);

@@ -1,3 +1,4 @@
+import React from "react";
 impo, r, t, Rea, c, t, { useStateuseEffect } from "react";
 import { motionAnimatePresence } from "framer-motion";
 import { Sear, c, h, Filt, e, r, St, a, r, ArrowRig, h, t, ChevronDo, w, n, Glo, b, e, Z, a, p, Shie, l, d, Bra, i, n, Clo, u, d, Lo, c, k, Use, r, s, Trending, U, p, Awa, r, d, Clo, c, k, DollarSignCheckCircle } from "lucide-react";

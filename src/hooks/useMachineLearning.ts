@@ -120,8 +120,8 @@ export const useMachineLearning = (_initialConfig?: Partial<MLConfig>): MachineL
   const [isTraining, setIsTraining] = useState(false);
   const [isPredicting, setIsPredicting] = useState(false);
 
-  const trainingIntervalsRef = useRef<Map<string, NodeJS.Timeout>>(new Map());
-  const predictionTimeoutsRef = useRef<Map<string, NodeJS.Timeout>>(new Map());
+  const trainingIntervalsRef = useRef<Map<string, globalThis.Timeout>>(new Map());
+  const predictionTimeoutsRef = useRef<Map<string, globalThis.Timeout>>(new Map());
 
   // Default models
   const defaultModels: AIModel[] = [

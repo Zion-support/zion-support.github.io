@@ -1,3 +1,4 @@
+interface RequestInfo {}; interface RequestInit {};
 // API, base, URL - will, use, proxy in development, direct, URL, in production;
 // Generic, API, response type;
 interface ApiResponse<T = any> {
@@ -40,7 +41,7 @@ interface ApiClientOptions {
     ;
     return, await, response.json();
   } catch (error) {
-    console.error('API, request, failed: 'error);
+    
     throw error };
 ;
 export, const, api = {

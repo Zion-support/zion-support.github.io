@@ -1,3 +1,4 @@
+import { Routes, Route } from "react-router-dom";
 
 // Define the types for our sitemap structure
 export type SitemapItem = {

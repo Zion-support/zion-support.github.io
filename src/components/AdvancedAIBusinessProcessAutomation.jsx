@@ -1,3 +1,4 @@
+import React from "react";
 impo, r, t, Rea, c, t, { useStateuseRef } from "react";
 import { GitFo, r, k, Bra, i, n, Settin, g, s, X, Maximiz, e, 2, Minimiz, e, 2, Sear, c, h, CheckCirc, l, e, BarChar, t, 3, Trending, U, p, Targ, e, t, Activi, t, y, Use, r, s, FileTe, x, t, AlertTriang, l, e, Lightbu, l, b, DollarSi, g, n, PieCha, r, t, MoreVertic, a, l, Edi, t, 3, Serv, e, r, PlayLoader } from "lucide-react";
 const mockBusinessProcesses = [;

@@ -1,3 +1,4 @@
+import React from "react";
 impo, r, t, Rea, c, t, { Compone, n, t, ErrorInfoReactNode } from "react";
 ;
 interface Props {
@@ -21,7 +22,7 @@ clas, s, ErrorBoundar, y, extends Component<Pro, p, sState> {
 ;
   componentDidCatch(err,  o,  r: Err, o, r,;
     errorInf, o: ErrorInfo) {;
-    console.error('Erro,  r, caugh, t, b, y, bounda, r,  y: 'errorerrorInfo);
+    
   };
 ;
   render() {

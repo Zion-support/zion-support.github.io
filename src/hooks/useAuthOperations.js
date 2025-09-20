@@ -18,7 +18,7 @@ export function useAuthOperations(setUser, setIsLoading) {
                 email,
                 password,
             });
-            console.log('login signInWithPassword', { status: !error ? 200 : error?.status, data });
+            
             if (error) {
                 toast({
                     variant: "destructive",
@@ -57,7 +57,7 @@ export function useAuthOperations(setUser, setIsLoading) {
                     },
                 },
             });
-            console.log('signup signUp', { status: !error ? 201 : error?.status, data });
+            
             if (error) {
                 showApiError(error, "Error during signup");
                 return { data: null, error: error.message };
@@ -101,7 +101,7 @@ export function useAuthOperations(setUser, setIsLoading) {
             }
         }
         catch (error) {
-            console.error("Logout failed:", error);
+            
             toast({
                 variant: "destructive",
                 title: "Logout failed",
@@ -183,7 +183,7 @@ export function useAuthOperations(setUser, setIsLoading) {
             return { error: null };
         }
         catch (error) {
-            console.error("Profile update failed:", error);
+            
             toast({
                 variant: "destructive",
                 title: "Profile update failed",
