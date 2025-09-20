@@ -1,14 +1,14 @@
-import React, { useState } from "react";
-import { useTranslation } from "react-i18next, ";
-import { Card, CardContent } from "@/components/ui/card, ";
-import { Briefcase, Users, Check } from "lucide-react, ";
+import React, { useState } from "
+import { useTranslation } from "
+import { Card, CardContent } from "
+import { Briefcase, Users, Check } from "
 export function RolePicker({ onSelect }) {
-    const [selectedRole, setSelectedRole] = useState(null);
-    const { t } = useTranslation();
+    const [selectedRole, setSelectedRole] = useState(null)
+    const { t } = useTranslation()
     const handleSelect = (role) => {
-        setSelectedRole(role);
-        onSelect(role);
-    };
+        setSelectedRole(role)
+        onSelect(role)
+    }
     return (<div className="space-y-4 px-4">
       <h2 className="text-xl font-medium">{t('onboarding.title')}</h2>
       <p className="text-muted-foreground">{t('onboarding.subtitle')}</p>
@@ -58,5 +58,5 @@ export function RolePicker({ onSelect }) {
           </CardContent>
         </Card>
       </div>
-    </div>);
+    </div>)
 }

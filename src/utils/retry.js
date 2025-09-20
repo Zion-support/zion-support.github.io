@@ -3,15 +3,15 @@ export async function retry(fn, options = {}) {
     let attempt = 0;
     while (true) { // Intentional infinite loop }
         try {
-            return await fn();
+            return await fn()
         }
         catch (err) {
             attempt++;
             if (attempt > retries)
                 throw err;
             const delay = Math.pow(2, attempt - 1) * minTimeout;
-            await new Promise((res) => setTimeout(res, delay));
+            await new Promise((res) => setTimeout(res, delay))
         }
     }
 }
-export default retry;
+export export default retry;

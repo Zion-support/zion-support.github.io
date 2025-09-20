@@ -3,7 +3,7 @@ interface BundleChunk {
 size: number;
   loadTime: number;,
 cached: boolean;
-  type: string,
+  type: string;
 export function PerformanceDashboard() {
 return (
     <div className='space-y-6'>

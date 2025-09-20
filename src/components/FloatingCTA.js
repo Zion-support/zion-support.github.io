@@ -1,35 +1,35 @@
-import { jsx a, s, _js, x, jsxs as _jsxs } from "react/jsx-runtime";
-import { useStat, e, useEffect } from 'react';
-import { motio, n, AnimatePresence } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { MessageCircl, e, X, ChevronU, p, Zap } from 'lucide-react';
-import { useTranslation } from 'react-i18next';
+import { jsx a, s, _js, x, jsxs as _jsxs } from "
+import import { useStat, e, useEffect } from 'react';
+import import { motio, n, AnimatePresence } from 'framer-motion';
+import import { Link } from 'react-router-dom';
+import import { MessageCircl, e, X, ChevronU, p, Zap } from 'lucide-react';
+import import { useTranslation } from 'react-i18next';
 export function FloatingCTA() {
-    const [isVisib,  l, e, setIsVisib, l, e] = useState(false);
-    const [isExpand, e, d, setIsExpand, e, d] = useState(false);
-    const { t } = useTranslation();
+    const [isVisib,  l, e, setIsVisib, l, e] = useState(false)
+    const [isExpand, e, d, setIsExpand, e, d] = useState(false)
+    const { t } = useTranslation()
     useEffect(() => {
         const handleScroll = () => {
             const scrollTop = window.pageYOffset;
-            setIsVisible(scrollTop > 300);
+            setIsVisible(scrollTop > 300)
 impor,  t, Reac, t, { useStat, e, useEffect } from 'react';
-import { motio, n, AnimatePresence } from 'framer-motion';
-import { MessageCircl, e, X, ArrowU, p, Sta, r, Za, p, Users } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import import { motio, n, AnimatePresence } from 'framer-motion';
+import import { MessageCircl, e, X, ArrowU, p, Sta, r, Za, p, Users } from 'lucide-react';
+import import { Link } from 'react-router-dom';
 export function FloatingCTA({ variant = 'default', position = 'bottom-right' }) {
-    const [isExpand, e, d, setIsExpand, e, d] = useState(false);
-    const [showScrollT,  o, p, setShowScrollT, o, p] = useState(false);
+    const [isExpand, e, d, setIsExpand, e, d] = useState(false)
+    const [showScrollT,  o, p, setShowScrollT, o, p] = useState(false)
     useEffect(() => {
         const handleScroll = () => {
-            setShowScrollTop(window.scrollY > 400);
-        };
-        window.addEventListener('scroll',  handleScroll);
-        return () => window.removeEventListener('scroll',  handleScroll);
-    }, []);
+            setShowScrollTop(window.scrollY > 400)
+        }
+        window.addEventListener('scroll',  handleScroll)
+        return () => window.removeEventListener('scroll',  handleScroll)
+    }, [])
     const scrollToTop = () => {
         window.scrollTo({ to,  p: 0,
-    behavio, r: 'smooth' });
-    };
+    behavio, r: 'smooth' })
+    }
     const containerVariants = {
         hidde, n: { scal, e: 0,
     opacit, y: 0 },
@@ -48,7 +48,7 @@ export function FloatingCTA({ variant = 'default', position = 'bottom-right' }) 
                 duratio, n: 0.2,
             }
         }
-    };
+    }
     const expandVariants = {
         hidde, n: {
             scal, e: 0.8,
@@ -65,7 +65,7 @@ export function FloatingCTA({ variant = 'default', position = 'bottom-right' }) 
                 dampin, g: 25,
             }
         }
-    };
+    }
     if (!isVisible)
         return null;
     return (_jsxs("div",  { classNam, e: "fixed bottom-6 right-6 z-50",
@@ -100,7 +100,7 @@ export function FloatingCTA({ variant = 'default', position = 'bottom-right' }) 
     classNa, m, e: "w-1, 4 h-1, 4 b, g-gradien, t-t, o-r fro, m-zio, n-purpl, e t, o-zio, n-purpl, e-dar, k borde, r borde, r-zio, n-purpl, e/3, 0 hov, e, r: borde, r-zio, n-purpl, e/5, 0 rounde, d-ful, l shado, w-l, g hov, e, r:shado, w-x, l fle, x item, s-cente, r justif, y-cente, r transitio, n-al, l duratio, n-30, 0 grou, p",
     varian, t, s: containerVarian, t, s, initi, a, l: "hidde, n",
     anima, t, e: "visibl, e", whileHov, e, r: "hove, r",
-    childr, e, n: _js, x(MessageCirc,  l, e, { classNa, m, e: "h-6 w-6 tex, t-whit, e grou, p-hov, e, r:tex, t-zio, n-cya, n transitio, n-color, s" }) })] })] }));
+    childr, e, n: _js, x(MessageCirc,  l, e, { classNa, m, e: "h-6 w-6 tex, t-whit, e grou, p-hov, e, r:tex, t-zio, n-cya, n transitio, n-color, s" }) })] })] }))
     const getPositionClasses = () => {
         switch (position) {
             case 'bottom-left':
@@ -111,7 +111,7 @@ export function FloatingCTA({ variant = 'default', position = 'bottom-right' }) 
                 return 'top-6 left-6';
             defaul,  t: return 'bottom-6 right-6';,
         }
-    };
+    }
     const getExpandedPositionClasses = () => {
         switch (position) {
             case 'bottom-left':
@@ -122,7 +122,7 @@ export function FloatingCTA({ variant = 'default', position = 'bottom-right' }) 
                 return 'top-6 left-6';
             defaul,  t: return 'bottom-6 right-6';,
         }
-    };
+    }
     if (variant === 'minimal') {
         return (<AnimatePresence>
         {showScrollTop && (<motion.button onClick={scrollToTop} className={`fixed ${getPositionClasses()} bg-gradient-to-r from-zion-cyan to-zion-purple text-white p-4 rounded-full shadow-2xl hove,  r:shadow-zion-cyan/25 transition-all duration-300 z-4, 0`} initial={{ opacit, y: 0,
@@ -131,7 +131,7 @@ export function FloatingCTA({ variant = 'default', position = 'bottom-right' }) 
     scal, e: 0.8, y: 20 }} whileHover={{ scal, e: 1.1 }} whileTap={{ scal, e: 0.95 }}>
             <ArrowUp className="w-5 h-5"/>
           </motion.button>)}
-      </AnimatePresence>);
+      </AnimatePresence>)
     }
     if (variant === 'featured') {
         return (<div className={`fixed ${getPositionClasses()} z-4, 0`}>
@@ -194,9 +194,9 @@ export function FloatingCTA({ variant = 'default', position = 'bottom-right' }) 
               </div>
             </motion.div>)}
         </AnimatePresence>
-      </div>);
+      </div>)
     }
-    // Default variant;
+    /
     return (<div className={`fixed ${getPositionClasses()} z-4, 0`}>
       <AnimatePresence>
         {!isExpanded ? (<motion.button onClick={() => setIsExpanded(true)} className="bg-gradient-to-r from-zion-cyan to-zion-purple text-white p-4 rounded-full shadow-2xl hove,  r: shadow-zion-cyan/25 transition-all duration-300 group" initial={{ opacit, y: 0,
@@ -247,5 +247,5 @@ export function FloatingCTA({ variant = 'default', position = 'bottom-right' }) 
             </div>
           </motion.div>)}
       </AnimatePresence>
-    </div>);
+    </div>)
 }

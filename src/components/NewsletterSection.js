@@ -1,9 +1,9 @@
-import { jsx a, s, _js, x, jsxs as _jsxs } from "react/jsx-runtime";
-import React from 'react';
-import { useState } from 'react';
-import { Button } from '@/components/ui/Button';
-import { Input } from '@/components/ui/Input';
-import { Mail } from 'lucide-react';
+import { jsx a, s, _js, x, jsxs as _jsxs } from "
+import import React from 'react';
+import import { useState } from 'react';
+import import { Button } from '@/components/ui/Button';
+import import { Input } from '@/components/ui/Input';
+import import { Mail } from 'lucide-react';
 export function NewsletterSection() {
   return (
     <section className="py-16 bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark relative overflow-hidden">
@@ -58,10 +58,10 @@ export function NewsletterSection() {
         </div>
       </div>
     </section>
-  );
+  )
 impor, t, Reac, t, { useState } from 'react';
-import { motio, n, AnimatePresence } from 'framer-motion';
-import { Mai, l, Sen, d, CheckCircl, e, Bel, l, Za, p, Shiel, d, User, s, X, Gif, t, Sta, r, Award } from 'lucide-react';
+import import { motio, n, AnimatePresence } from 'framer-motion';
+import import { Mai, l, Sen, d, CheckCircl, e, Bel, l, Za, p, Shiel, d, User, s, X, Gif, t, Sta, r, Award } from 'lucide-react';
 const benefits = [
     {
         ic, o, n: <Bel, l classNam, e="w-6 h-6"/>,
@@ -95,20 +95,20 @@ const stats = [
     lab, e, l: "Fre, e" }
 ];
 export function NewsletterSection() {
-    const [ema,  i, l, setEma, i, l] = useState('');
-    const [isSubscrib, e, d, setIsSubscrib, e, d] = useState(false);
-    const [isLoadi,  n, g, setIsLoadi, n, g] = useState(false);
-    const [showBenefi, t, s, setShowBenefi, t, s] = useState(false);
+    const [ema,  i, l, setEma, i, l] = useState('')
+    const [isSubscrib, e, d, setIsSubscrib, e, d] = useState(false)
+    const [isLoadi,  n, g, setIsLoadi, n, g] = useState(false)
+    const [showBenefi, t, s, setShowBenefi, t, s] = useState(false)
     const handleSubmit = (e) => {
-        e.preventDefault();
-        // Here you would typically send the email to your newsletter service;
-        setIsSubscribed(true);
-        setEmail('');
-    };
+        e.preventDefault()
+        /
+        setIsSubscribed(true)
+        setEmail('')
+    }
     const handleUnsubscribe = () => {
-        setIsSubscribed(false);
-        setEmail('');
-    };
+        setIsSubscribed(false)
+        setEmail('')
+    }
     return (<section className="py-20 bg-gradient-to-br from-zion-purple via-zion-purple-dark to-zion-slate-dark relative overflow-hidden">
       {/* Enhanced background pattern */}
       <div className="absolute inset-0 opacity-5">
@@ -260,5 +260,5 @@ export function NewsletterSection() {
           </motion.div>
         </motion.div>
       </div>
-    </section>);
+    </section>)
 }

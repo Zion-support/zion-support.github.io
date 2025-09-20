@@ -1,33 +1,33 @@
-import { Routes; Route } from "react-router-dom, ";
-import React from "react";
-import type { Meta; StoryObj } from "@storybook/react;";
-import Marketplace from "../pages/Marketplace;";
-import { MemoryRouter } from "react-router-dom, ";
+import import { Routes;, Route } from "
+import React from "
+import import type { Meta; StoryObj } from "
+import Marketplace from "
+import { MemoryRouter } from "
 
 const meta: Meta<typeof Marketplace> = {,
 title: "Pages/Marketplace", component: Marketplace;,
 decorators: [
 (Story) => (
-<MemoryRouter>;
-<Story />;
-</MemoryRouter>;
+<MemoryRouter>
+<Story />
+</MemoryRouter>
 )
 ];
-};
-export default meta;
-type Story = StoryObj<typeof Marketplace>;
+}
+export export default meta;
+type Story = StoryObj<typeof Marketplace>
 
-export const Grid: Story = {;,
-render: () => {;
-localStorage.setItem("marketplaceView", "grid");
+export export const const Grid: Story = {; = {,
+render: () => {
+localStorage.setItem("marketplaceView", "grid")
 return <Marketplace />,
 }
-};
+}
 
-export const List: Story = {;,
-render: () => {;
-localStorage.setItem("marketplaceView", "list");
+export export const const List: Story = {; = {,
+render: () => {
+localStorage.setItem("marketplaceView", "list")
 return <Marketplace />,
 }
-};
-</Marketplace /><//Marketplace />;
+}
+</Marketplace /><//Marketplace />

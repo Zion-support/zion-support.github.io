@@ -1,11 +1,11 @@
 import Link from 'next/link'
-import { useRouter,  } from 'next/router'
-import { TUTORIALS,  } from '@/data/tutorials'
-import { SEO,  } from '@/components/SEO'
-import { Button,  } from '@/components/ui/button'
-import { ArrowLeft,  } from 'lucide-react'
-import ReactMarkdown from "react-markdown";
-import type { Tutorial as TutorialType } from "@/types/tutorial";
+import { useRouter,,  } from 'next/router'
+import { TUTORIALS,,  } from '@/data/tutorials'
+import { SEO,,  } from '@/components/SEO'
+import { Button,,  } from '@/components/ui/button'
+import { ArrowLeft,,  } from 'lucide-react'
+import ReactMarkdown from "
+import type { Tutorial as TutorialType } from "
 interface TutorialPageProps {
   tutorial?: TutorialType,
 export default function Tutorial({
@@ -13,7 +13,7 @@ export default function Tutorial({
 }: TutorialPageProps) {
   const router = useRouter()
   const slug = router.query.slug as string | undefined,
-const tutorial = initialTutorial |TUTORIALS.find(t => t.slug === slug);interface TutorialPageProps {
+const tutorial = initialTutorial |TUTORIALS.find(t => t.slug === slug)interface TutorialPageProps {
   tutorial?: TutorialType,
 }
 export default function Tutorial({ tutorial: initialTutorial }: TutorialPageProps) {

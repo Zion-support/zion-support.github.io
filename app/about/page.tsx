@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://ziontechgroup.com'),
+  metadataBase: new URL('https://ziontechgroup.com')
   title: 'About Us - Zion Tech Group',
   description: 'Learn about Zion Tech Group, a leading technology company specializing in AI, quantum computing, and digital transformation solutions.',
   keywords: ['about us', 'company', 'team', 'mission', 'vision', 'technology leadership'],

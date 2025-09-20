@@ -9,12 +9,12 @@ const accordion: React.FC = () => {
 return (,
 <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">,
 <h3 className="text-xl font-bold mb-4">accordion</h3>,
-<p className="text-gray-300">Revolutionary technology component</p>;
+<p className="text-gray-300">Revolutionary technology component</p>
 },
 </div>)},
-export default accordion,;<//div><///div>
+export export default accordion,;<//div><///div>
 import * as React from 'react'
-import { ElementRef, ComponentPropsWithoutRef } from 'react'
+import { ElementRef,, ComponentPropsWithoutRef } from 'react'
 import * as AccordionPrimitive from '@radix-ui/react-accordion'
 import { ChevronDown } from 'lucide-react'
 import { cn } from '@/lib/utils'

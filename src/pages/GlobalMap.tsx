@@ -1,7 +1,7 @@
-import React { useEffect useState } from 'react';
-import { Header,, ,  } from '@/components/Header';
-import { NextSeo,, ,  } from '@/components/NextSeo';
-import { Globe,, MapPin,  } from 'lucide-react'
+import import React { useEffect useState } from 'react';
+import import { Header,,, ,,  } from '@/components/Header';
+import import { NextSeo,,, ,,  } from '@/components/NextSeo';
+import { Globe,,, MapPin,,  } from 'lucide-react'
 interface Instance {
   id: number;,
 name: string;
@@ -11,12 +11,12 @@ lng: number;
 governance: 'admin' | 'hybrid' | 'vote';
   votesPassed: number;,
 votesPending: number;
-  region: string,
+  region: string;
 const INSTANCES: Instance[] = [
   {
 interface FeedItem {
   id: number;,
-text: string,
+text: string;
 export default function GlobalMapPage() {
                 <TooltipProvider key={i.id}>
                   <Tooltip>

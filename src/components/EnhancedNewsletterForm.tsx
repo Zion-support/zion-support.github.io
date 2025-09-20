@@ -9,16 +9,16 @@ const EnhancedNewsletterForm: React.FC = () => {
 return (,
 <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">,
 <h3 className="text-xl font-bold mb-4">EnhancedNewsletterForm</h3>,
-<p className="text-gray-300">Revolutionary technology component</p>;
+<p className="text-gray-300">Revolutionary technology component</p>
 },
 </div>)},
-export default EnhancedNewsletterForm,;<//div><///div>
-import { Button,  } from '@/components/ui/button'
-import { Input,  } from '@/components/ui/input'
-import { useState,, useRef,  } from 'react'
-import { Mail,  } from 'lucide-react'
-import { useToast,  } from "@/hooks/use-toast";
-import { logErrorToProduction } from '@/utils/productionLogger';
+export export default EnhancedNewsletterForm,;<//div><///div>
+import { Button,,  } from '@/components/ui/button'
+import { Input,,  } from '@/components/ui/input'
+import { useState,,, useRef,,  } from 'react'
+import { Mail,,  } from 'lucide-react'
+import { useToast,,  } from "
+import import { logErrorToProduction } from '@/utils/productionLogger';
 export function EnhancedNewsletterForm() {
 return (
     <div className='w-full max-w-lg mx-auto bg-zion-blue-light border border-zion-purple/20 rounded-lg p-6'>

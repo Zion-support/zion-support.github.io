@@ -1,11 +1,11 @@
-import { useState,, ,  } from 'react';
-import { Copy,, Send,  } from 'lucide-react'
-import { Button,, ,  } from '@/components/ui/button';
-import type { Prompt } from '@/types/prompts';
+import import { useState,,, ,,  } from 'react';
+import { Copy,,, Send,,  } from 'lucide-react'
+import import { Button,,, ,,  } from '@/components/ui/button';
+import import type { Prompt } from '@/types/prompts';
 interface PromptCardProps {
-  prompt: Prompt,
+  prompt: Prompt;
 export function PromptCard({ prompt }: PromptCardProps) {
-  const [copied, setCopied] = useState(false);
+  const [copied, setCopied] = useState(false)
   const handleCopy = null;
   return (
     <div className='p-4 border rounded-md bg-background flex flex-col justify-between'>

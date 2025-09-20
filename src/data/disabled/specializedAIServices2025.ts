@@ -1,4 +1,4 @@
-import React from "react";
+import React from "
 
 export interface SpecializedAIService2025 {
 id: string;
@@ -9,11 +9,11 @@ subcategory: string;
 price: number;
 currency: string;
 pricingModel: string;
-features: string[];
-benefits: string[];
-useCases: string[];
-targetAudience: string[];
-tags: string[];
+features: string[[];]
+benefits: string[[];]
+useCases: string[[];]
+targetAudience: string[[];]
+tags: string[[];]
 estimatedDelivery: string;
 supportLevel: string;
 marketPrice: string;
@@ -21,12 +21,12 @@ contactInfo: {
 phone: string;
 email: string;,
 website: string;,
-};
-technology: string[];
-integrations: string[];
-compliance: string[];
+}
+technology: string[[];]
+integrations: string[[];]
+compliance: string[[];]
 roi: string;
-competitors: string[];
+competitors: string[[];]
 innovationLevel: string;
 marketTrend: string;
 aiModel: string;,
@@ -34,7 +34,7 @@ trainingData: string;,
 }
 
 export const SPECIALIZED_AI_SERVICES_2025: SpecializedAIService2025[] = [
-// Multimodal AI Platform;
+/
 {,
 id: "multimodal-ai-platform",
 title: "Multimodal AI Platform 2025",
@@ -52,28 +52,28 @@ features: [
 "API ecosystem",
 "Scalable infrastructure",
 "Advanced analytics",
-"Integration capabilities";
+"
 ],
 benefits: [
 "Comprehensive AI understanding",
 "Improved accuracy",
 "Reduced processing time",
 "Unified AI platform",
-"Cost-effective solution";
+"
 ],
 useCases: [
 "Content moderation",
 "Customer service",
 "Healthcare diagnostics",
 "Security monitoring",
-"Media analysis";
+"
 ],
 targetAudience: [
 "AI researchers",
 "Product developers",
 "Data scientists",
 "Technology companies",
-"Research institutions";
+"
 ],
 tags: ["Multimodal AI", "Computer Vision", "NLP", "Audio Processing", "Video Analysis"],
 estimatedDelivery: "8-10 weeks",
@@ -95,8 +95,8 @@ aiModel: "GPT-5 + Multimodal Models",
 trainingData: "Proprietary + Public Datasets",
 },
 
-// AI-Powered Predictive Healthcare Analytics;
-// AI-Powered Drug Discovery Platform;
+/
+/
 {
 id: "ai-drug-discovery-platform",
 title: "AI-Powered Drug Discovery Platform",
@@ -114,28 +114,28 @@ features: [
 "Real-time collaboration",
 "Advanced analytics",
 "API access",
-"Custom workflows";
+"
 ],
 benefits: [
 "10x faster drug discovery",
 "Reduced development costs",
 "Improved success rates",
 "Accelerated time to market",
-"Enhanced collaboration";
+"
 ],
 useCases: [
 "Pharmaceutical research",
 "Biotech companies",
 "Academic research",
 "Clinical trials",
-"Drug repurposing";
+"
 ],
 targetAudience: [
 "Pharmaceutical companies",
 "Biotech firms",
 "Research institutions",
 "Clinical researchers",
-"Drug developers";
+"
 ],
 tags: ["AI Drug Discovery", "Molecular Modeling", "Healthcare", "Biotechnology", "Research"],
 estimatedDelivery: "12-16 weeks",
@@ -157,8 +157,8 @@ aiModel: "Custom Drug Discovery Models",
 trainingData: "Proprietary Pharmaceutical Data",
 },
 
-// Autonomous Financial Trading AI;
-// AI-Powered Financial Trading Platform;
+/
+/
 {
 id: "ai-financial-trading-platform",
 title: "AI-Powered Financial Trading Platform",
@@ -176,28 +176,28 @@ features: [
 "Automated trading",
 "Performance analytics",
 "Compliance monitoring",
-"API integration";
+"
 ],
 benefits: [
 "Improved trading performance",
 "Risk reduction",
 "24/7 trading capability",
 "Data-driven decisions",
-"Cost optimization";
+"
 ],
 useCases: [
 "Algorithmic trading",
 "Portfolio management",
 "Risk assessment",
 "Market analysis",
-"Compliance reporting";
+"
 ],
 targetAudience: [
 "Investment firms",
 "Hedge funds",
 "Banks",
 "Trading companies",
-"Financial advisors";
+"
 ],
 tags: ["AI Trading", "Finance", "Machine Learning", "Risk Management", "Automation"],
 estimatedDelivery: "10-12 weeks",
@@ -219,8 +219,8 @@ aiModel: "Custom Financial AI Models",
 trainingData: "Market Data + Historical Trading Data",
 },
 
-// AI-Powered Supply Chain Optimization;
-// AI-Powered Climate Prediction Engine;
+/
+/
 {
 id: "ai-climate-prediction-engine",
 title: "AI-Powered Climate Prediction Engine",
@@ -238,28 +238,28 @@ features: [
 "Predictive modeling",
 "Risk assessment",
 "API access",
-"Custom analytics";
+"
 ],
 benefits: [
 "Accurate climate predictions",
 "Early warning systems",
 "Risk mitigation",
 "Data-driven planning",
-"Environmental protection";
+"
 ],
 useCases: [
 "Weather forecasting",
 "Disaster preparedness",
 "Agriculture planning",
 "Urban planning",
-"Insurance risk assessment";
+"
 ],
 targetAudience: [
 "Government agencies",
 "Insurance companies",
 "Agricultural firms",
 "Urban planners",
-"Environmental organizations";
+"
 ],
 tags: ["Climate AI", "Weather Prediction", "Environmental", "Machine Learning", "Satellite Data"],
 estimatedDelivery: "8-10 weeks",
@@ -281,7 +281,7 @@ aiModel: "Custom Climate Prediction Models",
 trainingData: "Satellite + Historical Climate Data",
 },
 
-// AI-Powered Legal Research Assistant;
+/
 {
 id: "ai-legal-research-assistant",
 title: "AI-Powered Legal Research Assistant",
@@ -299,28 +299,28 @@ features: [
 "Legal research automation",
 "Document generation",
 "Compliance monitoring",
-"API integration";
+"
 ],
 benefits: [
 "Faster legal research",
 "Improved accuracy",
 "Cost reduction",
 "24/7 availability",
-"Enhanced productivity";
+"
 ],
 useCases: [
 "Legal research",
 "Document review",
 "Compliance checking",
 "Case preparation",
-"Contract analysis";
+"
 ],
 targetAudience: [
 "Law firms",
 "Legal departments",
 "Compliance officers",
 "Legal researchers",
-"Government agencies";
+"
 ],
 tags: ["AI Legal", "Legal Research", "Document Analysis", "Compliance", "Automation"],
 estimatedDelivery: "4-6 weeks",
@@ -342,8 +342,8 @@ aiModel: "Custom Legal AI Models",
 trainingData: "Legal Documents + Case Law",
 },
 
-// AI-Powered Educational Personalization;
-// AI-Powered Creative Design Platform;
+/
+/
 {
 id: "ai-creative-design-platform",
 title: "AI-Powered Creative Design Platform",
@@ -361,28 +361,28 @@ features: [
 "Collaborative design",
 "Real-time generation",
 "Export capabilities",
-"API access";
+"
 ],
 benefits: [
 "Instant design generation",
 "Consistent branding",
 "Cost reduction",
 "Faster time to market",
-"Creative inspiration";
+"
 ],
 useCases: [
 "Marketing materials",
 "Social media content",
 "Brand assets",
 "Product packaging",
-"Website design";
+"
 ],
 targetAudience: [
 "Designers",
 "Marketing teams",
 "Brand managers",
 "Small businesses",
-"Creative agencies";
+"
 ],
 tags: ["AI Design", "Creative AI", "Generative AI", "Visual Content", "Automation"],
 estimatedDelivery: "3-4 weeks",

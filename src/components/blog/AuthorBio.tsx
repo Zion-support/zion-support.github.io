@@ -1,5 +1,5 @@
-import React from 'react';
-import type { BlogAuthor } from '@/types/blog';
+import import React from 'react';
+import import type { BlogAuthor } from '@/types/blog';
 interface AuthorBioProps {
   author: BlogAuthor;
 }

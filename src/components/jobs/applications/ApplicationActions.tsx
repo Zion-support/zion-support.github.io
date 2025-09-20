@@ -1,5 +1,5 @@
-import { Eye,, ChevronDown,, Loader2,  } from 'lucide-react'
-import { JobApplication,, ApplicationStatus,  } from "@/types/jobs";
+import { Eye,,, ChevronDown,,, Loader2,,  } from 'lucide-react'
+import { JobApplication,,, ApplicationStatus,,  } from "
 interface ApplicationActionsProps {
 onStatusChange,
 }: ApplicationActionsProps) {

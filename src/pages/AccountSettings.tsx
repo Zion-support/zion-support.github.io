@@ -6,7 +6,7 @@ import { SEO } from '@/components/SEO';
 import { useAuth } from '@/hooks/useAuth';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-import { Wallet, Database, Save } from 'lucide-react'
+import { Wallet, Database, Save } from 'lucide-react';
 
 export default function AccountSettings() {
   return (

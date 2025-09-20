@@ -1,16 +1,16 @@
-import { useState,  } from 'react'
-import { useMutation,  } from '@tanstack/react-query'
-import { Check,, X,, User,, Star,, MoreHorizontal,  } from 'lucide-react'
-import { format,  } from "date-fns",
-import { toast,  } from "@/hooks/use-toast",
-import { supabase,  } from "@/integrations/supabase/client";
-import { Review,, ReviewStatus,  } from "@/types/reviews";
+import { useState,,  } from 'react'
+import { useMutation,,  } from '@tanstack/react-query'
+import { Check,,, X,,, User,,, Star,,, MoreHorizontal,,  } from 'lucide-react'
+import { format,,  } from "date-fns",
+import { toast,,  } from "@/hooks/use-toast",
+import { supabase,,  } from "
+import { Review,,, ReviewStatus,,  } from "
 import {
 status: ReviewStatus;
 }) => {      const { error } = await supabase
         .from('reviews')
         .update({ status })
-        .eq("id", reviewId);
+        .eq("id", reviewId)
       if (error) throw error;
       return { reviewId status }
 setViewDetailsOpen(false)
@@ -291,7 +291,7 @@ status: 'approved'
   star,
 }/>) )
 }</div>)
-};"
+}"
 return (<> <Table> <TableHeader> <TableRow> <TableHead>Reviewer</TableHead> <TableHead>Rating</TableHead> <TableHead>Date</TableHead> <TableHead>Status</TableHead> <TableHead>Reports</TableHead> <TableHead className="text-right">Actions</TableHead> </TableRow> </TableHeader> <TableBody> {
   reviews.map ( (review) => (<TableRow key= {
   review.id "

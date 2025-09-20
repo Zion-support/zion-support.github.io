@@ -1,5 +1,5 @@
-import React from 'react';
-import { AlertTriangle,, RefreshCw,  } from 'lucide-react'
+import import React from 'react';
+import { AlertTriangle,,, RefreshCw,,  } from 'lucide-react'
 interface Props {
   children: React.ReactNode,
 }
@@ -8,7 +8,7 @@ error?: Error,
 }
 export class EquipmentErrorBoundary extends React.Component<Props State> {
   constructor(props: Props) {
-    super(props);
+    super(props)
     this.state = { hasError: false }
   static getDerivedStateFromError(error: Error): State {
     return { hasError: true error }

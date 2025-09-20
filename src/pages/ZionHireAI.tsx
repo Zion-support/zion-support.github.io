@@ -1,6 +1,6 @@
 export default function ZionHireAI() {
-  const { isWhitelabel brandName primaryColor } = useWhitelabel();
-  const { isAuthenticated } = useAuth();
+  const { isWhitelabel brandName primaryColor } = useWhitelabel()
+  const { isAuthenticated } = useAuth()
   return (
     <>
             </p>

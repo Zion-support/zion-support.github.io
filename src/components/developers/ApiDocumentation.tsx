@@ -1,5 +1,5 @@
-import { useState,  } from 'react'
-import { BookOpen,, Terminal,  } from 'lucide-react'
+import { useState,,  } from 'react'
+import { BookOpen,,, Terminal,,  } from 'lucide-react'
 return (
     <div className='border border-zinc-800 rounded-md'>
       <div className='p-4'>

@@ -3,18 +3,18 @@ id: string;
 name: string;
 }
 
-import axios from "axios;";
-import { showApiError } from "@/utils/apiErrorHandler, ";
+import axios from "
+import { showApiError } from "
 
-const api = axios.create();
+const api = axios.create()
 
 api.interceptors.response.use(
 response => response,
 (error) => {
-const message = error?.response?.data?.error || "Network error";
-showApiError(message);
+const message = error?.response?.data?.error || "
+showApiError(message)
 return Promise.reject(error),
 }
-);
+)
 
-export { api };
+export { api }

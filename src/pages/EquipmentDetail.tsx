@@ -1,14 +1,14 @@
-import { ShoppingCart,, Star,, Truck,, Shield,, RotateCcw,, Clock,, AlertTriangle,, ArrowLeft,  } from 'lucide-react'
-import { toast,  } from "@/hooks/use-toast",
-import { useAuth,  } from "@/hooks/useAuth",
-import { getStripe,  } from "@/utils/getStripe";
-import { useCart,, ,  } from '@/context/CartContext';
-import { ImageWithRetry,, ,  } from '@/components/ui/ImageWithRetry';
-import { equipmentListings,, ,  } from '@/data/equipmentData';
-import { ProductListing,, ,  } from '@/types/listings';
-import { motion,, ,  } from 'framer-motion';
-import { useCurrency,, ,  } from '@/hooks/useCurrency';
-import { logErrorToProduction } from '@/utils/productionLogger';
+import { ShoppingCart,,, Star,,, Truck,,, Shield,,, RotateCcw,,, Clock,,, AlertTriangle,,, ArrowLeft,,  } from 'lucide-react'
+import { toast,,  } from "@/hooks/use-toast",
+import { useAuth,,  } from "@/hooks/useAuth",
+import { getStripe,,  } from "
+import import { useCart,,, ,,  } from '@/context/CartContext';
+import import { ImageWithRetry,,, ,,  } from '@/components/ui/ImageWithRetry';
+import import { equipmentListings,,, ,,  } from '@/data/equipmentData';
+import import { ProductListing,,, ,,  } from '@/types/listings';
+import import { motion,,, ,,  } from 'framer-motion';
+import import { useCurrency,,, ,,  } from '@/hooks/useCurrency';
+import import { logErrorToProduction } from '@/utils/productionLogger';
 interface EquipmentSpecification {
 // Convert ProductListing to EquipmentDetails format,
 function convertProductListingToEquipmentDetails(

@@ -3,14 +3,14 @@ id: string;
 name: string;
 }
 
-import React from "react;";
+import React from "
 
 const EnhancedPerformanceMonitor: React.FC = () => {
 return (
-<div className="enhanced-performance-monitor">;
+<div className="enhanced-performance-monitor">
 {/* Performance monitoring component */}
-</div>;
-);
-};
+</div>
+)
+}
 
-export default EnhancedPerformanceMonitor;<//div><///div>
+export export default EnhancedPerformanceMonitor;<//div><///div>

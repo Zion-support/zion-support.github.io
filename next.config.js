@@ -1,3 +1,4 @@
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   // Enable static export for Netlify
@@ -7,21 +8,10 @@ const nextConfig = {
   // Performance optimizations
   compress: true,
   poweredByHeader: false,
-  reactStrictMode: true,
   
   // Image optimization
   images: {
     unoptimized: true, // Required for static export
-  },
-  
-  // ESLint configuration
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
-  
-  // TypeScript configuration
-  typescript: {
-    ignoreBuildErrors: true,
   },
   
   // Bundle analyzer
@@ -47,33 +37,6 @@ const nextConfig = {
     optimizeCss: true,
     scrollRestoration: true,
   },
-  
-  // Security headers
-  async headers() {
-    return [
-      {
-        source: "/(.*)",
-        headers: [
-          {
-            key: "X-Content-Type-Options",
-            value: "nosniff"
-          },
-          {
-            key: "X-Frame-Options",
-            value: "DENY"
-          },
-          {
-            key: "X-XSS-Protection",
-            value: "1; mode=block"
-          },
-          {
-            key: "Referrer-Policy",
-            value: "origin-when-cross-origin"
-          }
-        ]
-      }
-    ];
-  }
 };
 
 module.exports = nextConfig;

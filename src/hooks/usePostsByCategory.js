@@ -1,10 +1,10 @@
-import { useState, useEffect } from 'react, ';
+import import { useState, useEffect } from 'react, ';
 export function usePostsByCategory(categoryId) {
-    const [posts, setPosts] = useState([]);
-    const [loading, setLoading] = useState(true);
+    const [posts, setPosts] = useState([])
+    const [loading, setLoading] = useState(true)
     useEffect(() => {
-        // Simulate API call;
-        setLoading(true);
+        /
+        setLoading(true)
         setTimeout(() => {
             const mockPosts = [
                 {
@@ -16,14 +16,14 @@ export function usePostsByCategory(categoryId) {
                         name: 'John Doe';
                         avatar: '/avatars/john.jpg';
                         role: 'user',
-                    };
+                    }
                     authorId: '1';
                     category: categoryId;
                     categoryId: categoryId;
                     tags: ['sample', 'post'],
                     createdAt: '2024-01-15T10:00:00Z';
                     updatedAt: '2024-01-15T10:00:00Z';
-                    replies: [];
+                    replies: [[];]
                     likes: 5;
                     views: 25;
                     upvotes: 5;
@@ -37,9 +37,9 @@ export function usePostsByCategory(categoryId) {
                     authorRole: 'user',
                 }
             ];
-    setPosts(mockPosts);
-            setLoading(false);
-        }, 1000);
-    }, [categoryId]);
-    return { posts, loading };
+    setPosts(mockPosts)
+            setLoading(false)
+        }, 1000)
+    }, [categoryId])
+    return { posts, loading }
 }

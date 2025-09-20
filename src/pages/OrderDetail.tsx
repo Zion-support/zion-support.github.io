@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import import Link from 'next/link';
 return (
       <div className="container mx-auto px-4 py-8">
         <div className="animate-pulse">
@@ -10,7 +10,7 @@ return (
           </div>
         </div>
       </div>
-    );
+    )
   }
   if (!order) {
     return (
@@ -25,7 +25,7 @@ return (
           </Link>
         </div>
       </div>
-    );
+    )
   }
   return (
     <div className="container mx-auto px-4 py-8">
@@ -164,4 +164,4 @@ return (
         </div>
       </div>
     </div>
-  );
+  )

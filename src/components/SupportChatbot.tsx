@@ -1,8 +1,8 @@
-import { useState,, useRef,, useEffect,, ,  } from 'react';
-import { MessageSquare,, X,  } from 'lucide-react'
-import { Button,, ,  } from '@/components/ui/button';
-import { ChatMessage,, ChatInput,, ,  } from '@/components/ChatAssistant';
-import { logErrorToProduction } from '@/utils/productionLogger';
+import import { useState,,, useRef,,, useEffect,,, ,,  } from 'react';
+import { MessageSquare,,, X,,  } from 'lucide-react'
+import import { Button,,, ,,  } from '@/components/ui/button';
+import import { ChatMessage,,, ChatInput,,, ,,  } from '@/components/ChatAssistant';
+import import { logErrorToProduction } from '@/utils/productionLogger';
 interface Msg { id: string role: 'user' | 'assistant', message: string }
 
 // Fallback responses when API is unavailable,

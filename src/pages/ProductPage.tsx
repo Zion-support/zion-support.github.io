@@ -1,12 +1,12 @@
-import { useRouter,  } from 'next/router', // Changed from useParams,
-import { useEffect,, useState,, ,  } from 'react';
-import Image from 'next/image';
-import { Button,, ,  } from '@/components/ui/button';
-import { NEW_PRODUCTS,, ,  } from '@/data/newProductsData';
-import { useCart,, ,  } from '@/context/CartContext';
-import { toast,, ,  } from '@/hooks/use-toast';
-import { SEO,, ,  } from '@/components/SEO';
-import { logErrorToProduction } from '@/utils/productionLogger';
+import { useRouter,,  } from 'next/router', // Changed from useParams,
+import import { useEffect,,, useState,,, ,,  } from 'react';
+import import Image from 'next/image';
+import import { Button,,, ,,  } from '@/components/ui/button';
+import import { NEW_PRODUCTS,,, ,,  } from '@/data/newProductsData';
+import import { useCart,,, ,,  } from '@/context/CartContext';
+import import { toast,,, ,,  } from '@/hooks/use-toast';
+import import { SEO,,, ,,  } from '@/components/SEO';
+import import { logErrorToProduction } from '@/utils/productionLogger';
 export default function ProductPage() {
 return (
     <>
@@ -32,19 +32,19 @@ src = {product.images[0] |'/placeholder.svg',}
         </Button>
       </div>
     </>
-  );
+  )
 }
 //Only fetch if id is available (from router) ;
-}const inCart = items.some (i => i.id === product.id);
+}const inCart = items.some (i => i.id === product.id)
 const handleAdd = () => {if (inCart) return;
-setAdding (true);
+setAdding (true)
 dispatch ({;
   type: 'ADD ITEM';,
 payload: {;
   id: product.id name: product.title  price: product.price ?? 0 quantity: 1 ;
-});
+})
 toast.success (`1× $ {product.title ;
-}added`);
+}added`)
 setTimeout ( () => setAdding (false), 500) ;
 }
 product.title ;

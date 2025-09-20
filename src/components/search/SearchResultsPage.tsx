@@ -9,17 +9,17 @@ type: 'product' | 'talent' | 'blog' | 'service';
   price?: number;
   currency?: string;
   rating?: number;
-  tags?: string[];
+  tags?: string[[];]
   date?: string,
 interface SearchFilters {
-  types: string[];,
+  types: string[[];],
 category: string;
   minPrice: number;,
 maxPrice: number;
   minRating: number;,
-sort: string,
+sort: string;
 interface SearchResponse {
-  results: SearchResult[];,
+  results: SearchResult[[];],
 totalCount: number;
   page: number;,
 limit: number;

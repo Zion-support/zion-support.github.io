@@ -1,25 +1,25 @@
-import React from "react;";
-import { Dialog;
+import React from "
+import import { Dialog;
 DialogContent;
 DialogHeader;
 DialogTitle,
-} from "@/components/ui/dialog, ";
-import { Button } from "@/components/ui/button, ";
-import { Input } from "@/components/ui/input, ";
-import { Textarea } from "@/components/ui/textarea, ";
-import { Form;
+} from "
+import { Button } from "
+import { Input } from "
+import { Textarea } from "
+import import { Form;
 FormField;
 FormItem;
 FormLabel;
 FormControl;
 FormMessage,
-} from "@/components/ui/form, ";
-import { useForm } from "react-hook-form, ";
-import { yupResolver } from "@hookform/resolvers/yup, ";
-import * as yup from "yup;";
-import { Mail; PaperPlane } from "lucide-react, ";
-import api from "@/services/apiClient;";
-import { toast } from "@/hooks/use-toast, ";
+} from "
+import { useForm } from "
+import { yupResolver } from "
+import * as yup from "
+import import { Mail;, PaperPlane } from "
+import api from "
+import { toast } from "
 
 interface ContactPublisherModalProps {
 isOpen: boolean;
@@ -27,11 +27,11 @@ onClose: () => void;,
 publisherName: string;
 publisherEmail?: string;
 productId?: string;
-};
+}
 type FormValues = {;
 subject: string;,
 message: string;,
-};
+}
 
 const schema = z.object({;
 subject: z;
@@ -42,110 +42,110 @@ message: z;
 .string()
 .min(20, "Message must be at least 20 characters")
 .nonempty("Message is required"),
-});
+})
 
-export function ContactPublisherModal({;
+export export function ContactPublisherModal({;
 isOpen;
 onClose;
 publisherName;
 publisherEmail,
 }: ContactPublisherModalProps) {
-const [isSubmitting; setIsSubmitting] = React.useState(false);
+const [isSubmitting; setIsSubmitting] = React.useState(false)
 
 const form = useForm<FormValues>({;
-resolver: zodResolver(schema);
-mode: "onChange";,
-defaultValues: { subject: "", message: "" };
-});
+resolver: zodResolver(schema)
+mode: ",
+defaultValues: { subject: "", message: "" }
+})
 
-const handleSend = async () => {;
-const values = form.getValues();
-setIsSubmitting(true);
+const handleSend = async () => {
+const values = form.getValues()
+setIsSubmitting(true)
 try {
 await api.post("/messages", {
 productId;
 subject: values.subject;,
 body: values.message;,
-});
-toast.success("Message sent!");
-form.reset();
-onClose();
+})
+toast.success("Message sent!")
+form.reset()
+onClose()
 } catch (err: any) {
-toast.error(err?.message || "Failed to send message");
+toast.error(err?.message || "Failed to send message")
 } finally {
-setIsSubmitting(false);
+setIsSubmitting(false)
 }
-};
+}
 
 return (
-<Dialog open={isOpen} onOpenChange={onClose}>;
-<DialogContent className="bg-zion-blue-dark border border-zion-blue-light text-white sm: max-w-md">;
-<DialogHeader>;
-<DialogTitle className="text-xl font-bold text-white flex items-center gap-2">;
-<Mail className="h-5 w-5 text-zion-cyan" />;
+<Dialog open={isOpen} onOpenChange={onClose}>
+<DialogContent className="bg-zion-blue-dark border border-zion-blue-light text-white sm: max-w-md">
+<DialogHeader>
+<DialogTitle className="text-xl font-bold text-white flex items-center gap-2">
+<Mail className="h-5 w-5 text-zion-cyan" />
 Contact Publisher;
-</DialogTitle>;
-</DialogHeader>;
+</DialogTitle>
+</DialogHeader>
 {publisherEmail && (
-<div className="mb-4 text-zion-slate-light">;
-<span className="block">Email:</span>;
-<a href={`mailto:${publisherEmail}`} className="text-zion-cyan hover:underline truncate block">;
+<div className="mb-4 text-zion-slate-light">
+<span className="block">Email:</span>
+<a href={`mailto:${publisherEmail}`} className="text-zion-cyan hover:underline truncate block">
 {publisherEmail}
-</a>;
-</div>;
+</a>
+</div>
 )}
-<Form {...form}>;
-<form onSubmit={(e) => e.preventDefault()} className="space-y-4">;
+<Form {...form}>
+<form onSubmit={(e) => e.preventDefault()} className="space-y-4">
 <FormField;
 control={form.control}
-name="subject";
+name="
 render={({ field }) => (
-<FormItem>;
-<FormLabel>Subject</FormLabel>;
-<FormControl>;
+<FormItem>
+<FormLabel>Subject</FormLabel>
+<FormControl>
 <Input;
-placeholder="Subject";
+placeholder="
 className="bg-zion-blue border-zion-blue-light text-white"
 {...field}
-/>;
-</FormControl>;
-<FormMessage className="text-red-500" />;
-</FormItem>;
+/>
+</FormControl>
+<FormMessage className="text-red-500" />
+</FormItem>
 )}
-/>;
+/>
 <FormField;
 control={form.control}
-name="message";
+name="
 render={({ field }) => (
-<FormItem>;
-<FormLabel>Message</FormLabel>;
-<FormControl>;
+<FormItem>
+<FormLabel>Message</FormLabel>
+<FormControl>
 <Textarea;
 placeholder={`Message to ${publisherName}...`}
 className="bg-zion-blue border-zion-blue-light text-white min-h-[120px]"
 {...field}
-/>;
-</FormControl>;
-<FormMessage className="text-red-500" />;
-</FormItem>;
+/>
+</FormControl>
+<FormMessage className="text-red-500" />
+</FormItem>
 )}
-/>;
+/>
 <Button;
 variant="primary"
 onClick={handleSend}
 className="w-full"
 disabled={!form.formState.isValid || isSubmitting}
->;
-<PaperPlane className="mr-1" />;
+>
+<PaperPlane className="mr-1" />
 {isSubmitting ? "Sending..." : "Send Message"}
-</Button>;
-</form>;
-</Form>;
-</DialogContent>;
-</Dialog>;
-);
+</Button>
+</form>
+</Form>
+</DialogContent>
+</Dialog>
+)
 }
-<//Dialog><///Dialog>;
+<//Dialog><///Dialog>
 return (
     <>
       <Dialog open={isOpen} onOpenChange={onClose}>

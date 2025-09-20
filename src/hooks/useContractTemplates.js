@@ -1,15 +1,15 @@
-import { useState, useEffect } from 'react, ';
+import import { useState, useEffect } from 'react, ';
 export const useContractTemplates = () => {
-    const [templates, setTemplates] = useState([]);
-    const [loading, setLoading] = useState(true);
-    const [error, setError] = useState(null);
+    const [templates, setTemplates] = useState([])
+    const [loading, setLoading] = useState(true)
+    const [error, setError] = useState(null)
     useEffect(() => {
         const fetchTemplates = async () => {
             try {
-                setLoading(true);
-                // Simulate API call;
-                await new Promise(resolve => setTimeout(resolve, 1000));
-                // Mock data - in real app, this would come from API;
+                setLoading(true)
+                /
+                await new Promise(resolve => setTimeout(resolve, 1000))
+                /
                 const mockTemplates = [
                     {
                         id: '1';
@@ -77,30 +77,30 @@ export const useContractTemplates = () => {
                         tags: ['nda', 'confidentiality', 'legal'],
                     },
                 ];
-                setTemplates(mockTemplates);
-                setError(null);
+                setTemplates(mockTemplates)
+                setError(null)
             }
             catch (err) {
-                setError('Failed to fetch contract templates');
+                setError('Failed to fetch contract templates')
             }
             finally {
-                setLoading(false);
+                setLoading(false)
             }
-        };
-        fetchTemplates();
-    }, []);
+        }
+        fetchTemplates()
+    }, [])
     const getTemplateById = (id) => {
-        return templates.find(template => template.id === id);
-    };
+        return templates.find(template => template.id === id)
+    }
     const getTemplatesByCategory = (category) => {
-        return templates.filter(template => template.category === category);
-    };
+        return templates.filter(template => template.category === category)
+    }
     const searchTemplates = (query) => {
-        const lowercaseQuery = query.toLowerCase();
+        const lowercaseQuery = query.toLowerCase()
         return templates.filter(template => template.name.toLowerCase().includes(lowercaseQuery) ||
             template.description.toLowerCase().includes(lowercaseQuery) ||
-            template.tags.some(tag => tag.toLowerCase().includes(lowercaseQuery)));
-    };
+            template.tags.some(tag => tag.toLowerCase().includes(lowercaseQuery)))
+    }
     return {
         templates,
         loading,
@@ -108,5 +108,5 @@ export const useContractTemplates = () => {
         getTemplateById,
         getTemplatesByCategory,
         searchTemplates,
-    };
-};
+    }
+}

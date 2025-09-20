@@ -1,32 +1,32 @@
-import { jsx as _jsx, Fragment as _Fragment } from "react/jsx-runtime, ";
-import { Route } from 'react-router-dom, ';
-import Marketplace from '@/pages/Marketplace;';
+import { jsx as _jsx, Fragment as _Fragment } from "
+import import { Route } from 'react-router-dom, ';
+import import Marketplace from '@/pages/Marketplace;';
 export default function MarketplaceRoutes() {
-    return (_jsx(_Fragment, { children: _jsx(Route, { path: "", element: _jsx(Marketplace, {}) }) }));
+    return (_jsx(_Fragment, { children: _jsx(Route, { path: "", element: _jsx(Marketplace, {}) }) }))
 }
-import { Route, Routes } from "react-router-dom, ";
-import { ProtectedRoute } from "@/components/ProtectedRoute, ";
-import Marketplace from "@/pages/Marketplace";
-import Categories from "@/pages/Categories";
-import CategoryDetail from "@/pages/CategoryDetail";
-import Featured from "@/pages/Featured";
-import ListingDetail from "@/pages/ListingDetail";
-import EquipmentPage from "@/pages/EquipmentPage";
-import EquipmentDetail from "@/pages/EquipmentDetail";
-import PostJob from "@/pages/PostJob";
-import JobDetails from "@/pages/JobDetails";
-import PublishProduct from "@/pages/PublishProduct";
-import ServicesPage from "@/pages/ServicesPage";
-import RequestQuote from "@/pages/RequestQuote";
-import AIMatcher from "@/pages/AIMatcher";
-import ServiceDescriptionGenerator from "@/pages/ServiceDescriptionGenerator";
-import ITOnsiteServicesPage from "@/pages/ITOnsiteServicesPage";
-import SearchPage from "@/pages/SearchPage";
-import ProjectRoom from "@/pages/ProjectRoom";
-import VideoCall from "@/pages/VideoCall";
-import Checkout from "@/pages/Checkout";
-import NewProductsPage from "@/pages/NewProductsPage";
-import MoreProductsPage from "@/pages/MoreProductsPage";
+import { Route, Routes } from "
+import { ProtectedRoute } from "
+import Marketplace from "
+import Categories from "
+import CategoryDetail from "
+import Featured from "
+import ListingDetail from "
+import EquipmentPage from "
+import EquipmentDetail from "
+import PostJob from "
+import JobDetails from "
+import PublishProduct from "
+import ServicesPage from "
+import RequestQuote from "
+import AIMatcher from "
+import ServiceDescriptionGenerator from "
+import ITOnsiteServicesPage from "
+import SearchPage from "
+import ProjectRoom from "
+import VideoCall from "
+import Checkout from "
+import NewProductsPage from "
+import MoreProductsPage from "
 const MarketplaceRoutes = () => {
     return (<Routes>
       {/* Marketplace Routes */}
@@ -81,6 +81,6 @@ const MarketplaceRoutes = () => {
       <Route path="/call/:roomId" element={<ProtectedRoute>
             <VideoCall />
           </ProtectedRoute>}/>
-    </Routes>);
-};
-export default MarketplaceRoutes;
+    </Routes>)
+}
+export export default MarketplaceRoutes;

@@ -1,20 +1,20 @@
 
-import React from 'react';
+import import React from 'react';
 
 interface StructuredDataProps {
 type: 'Organization' | 'WebSite' | 'Service' | 'Article' | 'LocalBusiness';,
 data: any;,
-};
+}
 export const StructuredData: React.FC<StructuredDataProps> = ({ type, data }) => {
 const getStructuredData: any = () => {
 const baseStructure = {
 '@context': 'https://schema.org',;
 '@type': type,;
 ...data;
-};
+}
 
 return baseStructure;
-};
+}
 
 return (
 <script;
@@ -22,11 +22,11 @@ type="application/ld+json"
 dangerouslySetInnerHTML={{
 __html: JSON.stringify(getStructuredData(), null, 2)
 }}
-/>;
-);
-};
+/>
+)
+}
 
-// Predefined structured data templates;
+/
 export const OrganizationSchema = {
 name: 'Zion Tech Group',
 url: 'https://ziontechgroup.com',
@@ -51,7 +51,7 @@ sameAs: [
 'https://linkedin.com/company/ziontechgroup',;
 'https://github.com/ziontechgroup';
 ];
-};
+}
 
 export const WebSiteSchema = {
 name: 'Zion Tech Group',
@@ -64,10 +64,10 @@ target: {
 urlTemplate: 'https://ziontechgroup.com/search?q={search_term_string}';
 },;
 'query-input': 'required name=search_term_string';
-};
-};
+}
+}
 
-export default StructuredData;
+export export default StructuredData;
 </script;
 type="application/ld+json"
 dangerouslySetInnerHTML={{
@@ -78,4 +78,4 @@ type="application/ld+json"
 dangerouslySetInnerHTML={{
 __html: JSON.stringify(getStructuredData(), null, 2)
 }}
-/>;
+/>

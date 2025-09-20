@@ -1,8 +1,8 @@
-import * as SheetPrimitive from &quot;@radix-ui/react-dialog&quot;
-import { cva,, type,, VariantProps,  } from &quot;class-variance-authority&quot;
-import { X,  } from 'lucide-react'
-import * as React from &quot;react&quot;
-import { cn,  } from &quot;@/lib/utils&quot;
+import import * as SheetPrimitive from &quot;@radix-ui/react-dialog&quot;
+import import { cva,,, type,,, VariantProps,,  } from &quot;class-variance-authority&quot;
+import { X,,  } from 'lucide-react'
+import import * as React from &quot;react&quot;
+import import { cn,,  } from &quot;@/lib/utils&quot;
 const Sheet = SheetPrimitive.Root,
 const SheetTrigger = SheetPrimitive.Trigger,
 const SheetClose = SheetPrimitive.Close,
@@ -48,7 +48,7 @@ const SheetContent = React.forwardRef<
 ref={ref}
       className={cn(sheetVariants({ side }), className)}
       {...props}
-    >;
+    >
       {children}
 <SheetPrimitive.Close className=&quot;absolute right-4 top-4 rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-secondary&quot;>
         <X className=&quot;h-4 w-4&quot; />
@@ -92,20 +92,20 @@ const SheetTitle = React.forwardRef<
 ref={ref}
     className={cn(&quot;text-lg font-semibold text-foreground&quot;, className)}
     {...props}
-  />;
-));
+  />
+))
 SheetTitle.displayName = SheetPrimitive.Title.displayName;
 const SheetDescription = React.forwardRef<;
-  React.ElementRef<typeof SheetPrimitive.Description>;
-  React.ComponentPropsWithoutRef<typeof SheetPrimitive.Description>;
+  React.ElementRef<typeof SheetPrimitive.Description>
+  React.ComponentPropsWithoutRef<typeof SheetPrimitive.Description>
 >(({ className, ...props }, ref) => (;
   <SheetPrimitive.Description;
     ref={ref}
     className={cn(&quot;text-sm text-muted-foreground&quot;, className)}
     {...props}
-  />;
-));
+  />
+))
 SheetDescription.displayName = SheetPrimitive.Description.displayName;
-export {Sheet SheetClose;
+export export {Sheet SheetClose;
   SheetContent SheetDescription SheetFooter SheetHeader SheetOverlay SheetPortal SheetTitle SheetTrigger;
 }

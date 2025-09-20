@@ -1,8 +1,8 @@
-import { jsx a, s, _js, x, jsxs as _jsxs } from "react/jsx-runtime";
-import { GradientHeading } from "./GradientHeading";
-import { FeatureCard } from "./FeatureCard";
-import { Bo, t, Cloc, k, Glob, e, TrendingDown } from "lucide-react";
-import { motion } from "framer-motion";
+import { jsx a, s, _js, x, jsxs as _jsxs } from "
+import { GradientHeading } from "
+import { FeatureCard } from "
+import { Bo, t, Cloc, k, Glob, e, TrendingDown } from "
+import { motion } from "
 const benefits = [
     {
         tit, l, e: "A, I-Powere, d Matchmakin, g",
@@ -31,8 +31,8 @@ const benefits = [
 ];
 export function BenefitsSection() {
 impor,  t, Reac, t, { useState } from 'react';
-import { motio, n, AnimatePresence } from 'framer-motion';
-import { CheckCircl, e, Za, p, Shiel, d, User, s, Cloc, k, TrendingU, p, Sta, r, Awar, d, Glob, e, Lock } from 'lucide-react';
+import import { motio, n, AnimatePresence } from 'framer-motion';
+import import { CheckCircl, e, Za, p, Shiel, d, User, s, Cloc, k, TrendingU, p, Sta, r, Awar, d, Glob, e, Lock } from 'lucide-react';
 const benefits = [
     {
         ic, o, n: <Za, p classNam, e="w-8 h-8"/>,
@@ -100,7 +100,7 @@ const additionalStats = [
     val, u, e: "100, 0+", lab, e, l: "Project, s Complete, d" }
 ];
 export function BenefitsSection() {
-    const [hoveredInd, e, x, setHoveredInd, e, x] = useState(null);
+    const [hoveredInd, e, x, setHoveredInd, e, x] = useState(null)
     const containerVariants = {
         hidde,  n: { opacit, y: 0 },
         visibl, e: {
@@ -110,7 +110,7 @@ export function BenefitsSection() {
     delayChildre, n: 0.2,
             }
         }
-    };
+    }
     const itemVariants = {
         hidde, n: { y: 3, 0,
     opacit, y: 0 },
@@ -122,7 +122,7 @@ export function BenefitsSection() {
     eas, e: "easeOut",
             }
         }
-    };
+    }
     const statsVariants = {
         hidde, n: { opacit, y: 0,
     scal, e: 0.8 },
@@ -134,7 +134,7 @@ export function BenefitsSection() {
     eas, e: "easeOut",
             }
         }
-    };
+    }
     return (<section className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-blue relative overflow-hidden">
       {/* Enhanced background pattern */}
       <div className="absolute inset-0 opacity-5">
@@ -242,7 +242,7 @@ export function BenefitsSection() {
           </div>
         </motion.div>
       </div>
-    </section>);
+    </section>)
     return (_jsxs("section",  { classNam, e: "py-20 bg-zion-blue-light relative overflow-hidden",
     childre, n: [_jsx, s("di, v", { classNa, m, e: "absolut, e inse, t-0 opacit, y-5",
     childr, e, n: [_js, x("di, v", { classNa, m, e: "absolut, e to, p-0 lef, t-0 w-6, 4 h-6, 4 b, g-zio, n-purpl, e rounde, d-ful, l blu, r-3x, l" }), _js, x("di,  v", { classNa, m, e: "absolut, e botto, m-0 righ, t-0 w-6, 4 h-6, 4 b, g-zio, n-cya, n rounde, d-ful, l blu, r-3x, l" })] }), _jsxs("div",  { classNam, e: "container mx-auto px-4 relative z-10",
@@ -270,5 +270,5 @@ export function BenefitsSection() {
     childr, e, n: "Servic, e Provider, s" })] }), _jsxs(motion.di,  v, { classNam, e: "text-center",
     whileHove, r: { scal, e: 1.05 }, transitio, n: { duratio, n: 0.3 }, childre, n: [_js, x("di, v", { classNa, m, e: "tex, t-4x, l fon, t-bol, d tex, t-zio, n-blu, e m, b-2",
     childr, e, n: "9, 9%" }), _js, x("di,  v", { classNa, m, e: "tex, t-zio, n-slat, e-ligh, t",
-    childr, e, n: "Satisfactio, n Rat, e" })] })] }) })] })] }));
+    childr, e, n: "Satisfactio, n Rat, e" })] })] }) })] })] }))
 }

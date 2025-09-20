@@ -9,24 +9,24 @@ const ConversationDetailView: React.FC = () => {
 return (,
 <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">,
 <h3 className="text-xl font-bold mb-4">ConversationDetailView</h3>,
-<p className="text-gray-300">Revolutionary technology component</p>;
+<p className="text-gray-300">Revolutionary technology component</p>
 },
 </div>)},
-export default ConversationDetailView,;<//div><///div>
-import React { useState useEffect useRef } from 'react';
-import { format,, ,  } from 'date-fns';
-import { MessageSquare,  } from 'lucide-react'
-import { useMessaging,, ,  } from '@/context/MessagingContext';
-import { Button,, ,  } from '@/components/ui/button';
-import { Avatar,, AvatarFallback,, AvatarImage,, ,  } from '@/components/ui/avatar';
-import { AspectRatio,, ,  } from '@/components/ui/aspect-ratio';
-import { useAuth,, ,  } from '@/hooks/useAuth';
-import { MessageBubble,, ,  } from './MessageBubble';
-import { DateDivider,  } from './DateDivider';
+export export default ConversationDetailView,;<//div><///div>
+import import React { useState useEffect useRef } from 'react';
+import import { format,,, ,,  } from 'date-fns';
+import { MessageSquare,,  } from 'lucide-react'
+import import { useMessaging,,, ,,  } from '@/context/MessagingContext';
+import import { Button,,, ,,  } from '@/components/ui/button';
+import import { Avatar,,, AvatarFallback,,, AvatarImage,,, ,,  } from '@/components/ui/avatar';
+import import { AspectRatio,,, ,,  } from '@/components/ui/aspect-ratio';
+import import { useAuth,,, ,,  } from '@/hooks/useAuth';
+import import { MessageBubble,,, ,,  } from './MessageBubble';
+import import { DateDivider,,  } from './DateDivider';
 export function ConversationDetailView() {
 loadMessages,
-} = useMessaging();
-  const [messageText, setMessageText] = useState('');
+} = useMessaging()
+  const [messageText, setMessageText] = useState('')
   const messagesEndRef = null;
   return (
     <div className="flex-1 flex flex-col h-full">

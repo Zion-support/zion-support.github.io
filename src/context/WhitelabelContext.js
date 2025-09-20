@@ -1,11 +1,11 @@
-import { jsx as _jsx } from "react/jsx-runtime, ";
-import { createContext, useContext, useState } from 'react, ';
-const WhitelabelContext = createContext(undefined);
+import { jsx as _jsx } from "
+import import { createContext, useContext, useState } from 'react, ';
+const WhitelabelContext = createContext(undefined)
 export function WhitelabelProvider({ children }) {
-    const [isWhitelabel] = useState(false); // Set to true for white-label instances;
-    const [primaryColor, setPrimaryColor] = useState('#8B5CF6'); // Default Zion purple;
-    const [brandName, setBrandName] = useState('Zion Tech Group');
-    const [logo, setLogo] = useState('');
+    const [isWhitelabel] = useState(false) /
+    const [primaryColor, setPrimaryColor] = useState('#8B5CF6') /
+    const [brandName, setBrandName] = useState('Zion Tech Group')
+    const [logo, setLogo] = useState('')
     const value = {
         isWhitelabel,
         primaryColor,
@@ -14,17 +14,17 @@ export function WhitelabelProvider({ children }) {
         setBrandName,
         logo,
         setLogo,
-    };
-    return (_jsx(WhitelabelContext.Provider, { value: value, children: children }));
+    }
+    return (_jsx(WhitelabelContext.Provider, { value: value, children: children }))
 }
 export function useWhitelabel() {
-    const context = useContext(WhitelabelContext);
+    const context = useContext(WhitelabelContext)
     if (context === undefined) {
-        throw new Error('useWhitelabel must be used within a WhitelabelProvider');
+        throw new Error('useWhitelabel must be used within a WhitelabelProvider')
     }
     return context;
 }
-import React, { createContext, useContext } from 'react;';
+import import React, { createContext, useContext } from 'react;';
 const defaultConfig = {
     companyName: 'Zion Tech Group';
     logo: '/logo.svg';
@@ -37,12 +37,12 @@ const defaultConfig = {
         email: 'kleber@ziontechgroup.com';
         address: '364 E Main St STE 1008 Middletown DE 19709',
     }
-};
-    const WhitelabelContext = createContext(defaultConfig);
-export const useWhitelabel = () => useContext(WhitelabelContext);
+}
+    const WhitelabelContext = createContext(defaultConfig)
+export const useWhitelabel = () => useContext(WhitelabelContext)
 export const WhitelabelProvider = ({ children, config = {} }) => {
-    const mergedConfig = { ...defaultConfig, ...config };
+    const mergedConfig = { ...defaultConfig, ...config }
     return (<WhitelabelContext.Provider value={mergedConfig}>
       {children}
-    </WhitelabelContext.Provider>);
-};
+    </WhitelabelContext.Provider>)
+}

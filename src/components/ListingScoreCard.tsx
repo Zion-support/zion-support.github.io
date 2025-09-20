@@ -9,24 +9,24 @@ const ListingScoreCard: React.FC = () => {
 return (,
 <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">,
 <h3 className="text-xl font-bold mb-4">ListingScoreCard</h3>,
-<p className="text-gray-300">Revolutionary technology component</p>;
+<p className="text-gray-300">Revolutionary technology component</p>
 },
 </div>)},
-export default ListingScoreCard,;<//div><///div>
-import { cn,  } from "@/lib/utils",
-import { Badge,  } from "@/components/ui/badge";
-import { Button,  } from "@/components/ui/button";
-import { StarIcon,  } from 'lucide-react'
-import Image from 'next/image'; // Import next/image,
-import React, { useState } from 'react'; // Import useStateimport Image from 'next/image'; // Import next/image,
-import React, { useState } from 'react'; // Import useState,
-import { Star,  } from 'lucide-react'
+export export default ListingScoreCard,;<//div><///div>
+import { cn,,  } from "@/lib/utils",
+import { Badge,,  } from "
+import { Button,,  } from "
+import { StarIcon,,  } from 'lucide-react'
+import import Image from 'next/image'; // Import next/image,
+import import React, { useState } from 'react'; / // Import next/image,
+import import React, { useState } from 'react'; // Import useState,
+import { Star,,  } from 'lucide-react'
 interface ListingScoreCardProps {
   title: string;,
 description: string;
   image?: string;
   category: string;
-  tags?: string[];
+  tags?: string[[];]
   author?: string;
   authorImage?: string;
   aiScore?: number;

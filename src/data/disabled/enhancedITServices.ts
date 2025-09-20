@@ -1,11 +1,11 @@
-import React from "react";
+import React from "
 
 export interface ITService {
 id: string; title: string; description: string; category: string; pricing: {,
-hourly: number; project: number; monthly: number; currency: string; pricingModel: string,
-};
-features: string[], benefits: string[];,
-deliverables: string[], timeline: string; expertise: string[], technologies: string[];,
+hourly: number; project: number; monthly: number; currency: string; pricingModel: string;
+}
+features: string[], benefits: string[[];],
+deliverables: string[], timeline: string; expertise: string[], technologies: string[[];],
 certifications: string[], link: string;
 badge?: string;,
 icon: string; image: string;,
@@ -28,13 +28,13 @@ features: [
 "Data preprocessing & cleaning",
 "Model training & optimization",
 "API integration & deployment",
-"Performance monitoring & maintenance";
+"
 ],
 benefits: [
 "Increase operational efficiency by 40-60%",
 "Reduce manual processing time by 80%",
 "Improve decision-making accuracy",
-"Gain competitive advantage through AI";
+"
 ],
 deliverables: [
 "Custom AI solution",
@@ -42,7 +42,7 @@ deliverables: [
 "Integration guide",
 "Training materials",
 "Maintenance plan",
-"Performance reports";
+"
 ],
 timeline: "8-16 weeks depending on complexity",
 expertise: [
@@ -50,16 +50,16 @@ expertise: [
 "Natural Language Processing",
 "Computer Vision",
 "Predictive Analytics",
-"Deep Learning";
+"
 ],
 technologies: [
 "Python", "TensorFlow", "PyTorch", "Scikit-learn",
-"AWS SageMaker", "Google Cloud AI", "Azure ML";
+"AWS SageMaker", "Google Cloud AI", "
 ],
 certifications: [
 "AWS Machine Learning Specialty",
 "Google Cloud Professional ML Engineer",
-"Microsoft Azure AI Engineer";
+"
 ],
 link: "https://ziontechgroup.com/ai-development-integration",
 badge: "Premium",
@@ -82,13 +82,13 @@ features: [
 "Data migration & synchronization",
 "Application refactoring",
 "Performance optimization",
-"Security & compliance setup";
+"
 ],
 benefits: [
 "Reduce infrastructure costs by 30-50%",
 "Improve scalability & flexibility",
 "Enhance disaster recovery",
-"Increase operational efficiency";
+"
 ],
 deliverables: [
 "Migration roadmap",
@@ -96,7 +96,7 @@ deliverables: [
 "Migration execution plan",
 "Performance benchmarks",
 "Security assessment report",
-"Training & documentation";
+"
 ],
 timeline: "12-24 weeks depending on scope",
 expertise: [
@@ -104,16 +104,16 @@ expertise: [
 "DevOps & CI/CD",
 "Container orchestration",
 "Infrastructure as Code",
-"Security & compliance";
+"
 ],
 technologies: [
 "AWS", "Azure", "Google Cloud", "Kubernetes",
-"Docker", "Terraform", "Ansible", "Jenkins";
+"Docker", "Terraform", "Ansible", "
 ],
 certifications: [
 "AWS Solutions Architect Professional",
 "Microsoft Azure Solutions Architect Expert",
-"Google Cloud Professional Cloud Architect";
+"
 ],
 link: "https://ziontechgroup.com/cloud-migration-strategy",
 icon: "☁️",
@@ -135,13 +135,13 @@ features: [
 "Security architecture review",
 "Incident response planning",
 "Security awareness training",
-"Compliance audit support";
+"
 ],
 benefits: [
 "Identify and mitigate security risks",
 "Ensure compliance with regulations",
 "Protect sensitive data",
-"Build customer trust";
+"
 ],
 deliverables: [
 "Security assessment report",
@@ -149,7 +149,7 @@ deliverables: [
 "Security policies & procedures",
 "Incident response playbook",
 "Compliance documentation",
-"Security training materials";
+"
 ],
 timeline: "6-12 weeks depending on scope",
 expertise: [
@@ -157,16 +157,16 @@ expertise: [
 "Security architecture",
 "Compliance frameworks",
 "Incident response",
-"Threat intelligence";
+"
 ],
 technologies: [
 "Nmap", "Metasploit", "Wireshark", "Burp Suite",
-"SIEM tools", "EDR solutions", "Firewall systems";
+"SIEM tools", "EDR solutions", "
 ],
 certifications: [
 "Certified Ethical Hacker (CEH)",
 "Certified Information Systems Security Professional (CISSP)",
-"Offensive Security Certified Professional (OSCP)";
+"
 ],
 link: "https://ziontechgroup.com/cybersecurity-audit-protection",
 badge: "Popular",
@@ -189,13 +189,13 @@ features: [
 "Advanced analytics & modeling",
 "Interactive dashboards",
 "Predictive analytics",
-"Real-time reporting";
+"
 ],
 benefits: [
 "Make data-driven decisions",
 "Identify business opportunities",
 "Optimize operations",
-"Improve customer insights";
+"
 ],
 deliverables: [
 "Data architecture design",
@@ -203,7 +203,7 @@ deliverables: [
 "ETL pipelines",
 "Data models",
 "Analytics reports",
-"User training";
+"
 ],
 timeline: "10-18 weeks depending on complexity",
 expertise: [
@@ -211,16 +211,16 @@ expertise: [
 "Statistical analysis",
 "Machine learning",
 "Business intelligence",
-"Data visualization";
+"
 ],
 technologies: [
 "Python", "R", "SQL", "Tableau", "Power BI",
-"Apache Spark", "Hadoop", "Snowflake";
+"Apache Spark", "Hadoop", "
 ],
 certifications: [
 "Microsoft Power BI Data Analyst",
 "Tableau Desktop Specialist",
-"Google Data Analytics Professional";
+"
 ],
 link: "https://ziontechgroup.com/data-analytics-business-intelligence",
 icon: "📊",
@@ -242,13 +242,13 @@ features: [
 "Change management strategy",
 "Technology selection & implementation",
 "Process optimization",
-"Performance measurement";
+"
 ],
 benefits: [
 "Accelerate digital adoption",
 "Improve operational efficiency",
 "Enhance customer experience",
-"Increase competitive advantage";
+"
 ],
 deliverables: [
 "Digital transformation strategy",
@@ -256,7 +256,7 @@ deliverables: [
 "Change management plan",
 "Technology recommendations",
 "Process documentation",
-"Success metrics & KPIs";
+"
 ],
 timeline: "16-32 weeks depending on scope",
 expertise: [
@@ -264,16 +264,16 @@ expertise: [
 "Change management",
 "Process optimization",
 "Technology implementation",
-"Performance measurement";
+"
 ],
 technologies: [
 "Enterprise platforms", "Cloud solutions", "Automation tools",
-"Analytics platforms", "Integration tools";
+"Analytics platforms", "
 ],
 certifications: [
 "Project Management Professional (PMP)",
 "Change Management Professional",
-"Digital Transformation Specialist";
+"
 ],
 link: "https://ziontechgroup.com/digital-transformation-consulting",
 badge: "Featured",
@@ -296,13 +296,13 @@ features: [
 "Container orchestration",
 "Monitoring & alerting",
 "Security scanning",
-"Performance optimization";
+"
 ],
 benefits: [
 "Accelerate software delivery",
 "Reduce deployment errors",
 "Improve system reliability",
-"Enhance team productivity";
+"
 ],
 deliverables: [
 "CI/CD pipeline configuration",
@@ -310,7 +310,7 @@ deliverables: [
 "Monitoring setup",
 "Security policies",
 "Documentation",
-"Team training";
+"
 ],
 timeline: "8-16 weeks depending on complexity",
 expertise: [
@@ -318,16 +318,16 @@ expertise: [
 "Container technologies",
 "Infrastructure as Code",
 "Monitoring & observability",
-"Security automation";
+"
 ],
 technologies: [
 "Jenkins", "GitLab CI", "GitHub Actions", "Docker",
-"Kubernetes", "Terraform", "Ansible", "Prometheus";
+"Kubernetes", "Terraform", "Ansible", "
 ],
 certifications: [
 "AWS DevOps Engineer Professional",
 "Kubernetes Administrator (CKA)",
-"Terraform Associate";
+"
 ],
 link: "https://ziontechgroup.com/devops-automation",
 icon: "⚡",
@@ -349,13 +349,13 @@ features: [
 "Performance optimization",
 "Disaster recovery setup",
 "Monitoring & management",
-"Documentation & training";
+"
 ],
 benefits: [
 "Improve network performance",
 "Enhance security posture",
 "Reduce downtime",
-"Simplify management";
+"
 ],
 deliverables: [
 "Network design documentation",
@@ -363,7 +363,7 @@ deliverables: [
 "Security configuration",
 "Monitoring setup",
 "Disaster recovery plan",
-"User training";
+"
 ],
 timeline: "12-20 weeks depending on scope",
 expertise: [
@@ -371,16 +371,16 @@ expertise: [
 "Security implementation",
 "Performance optimization",
 "Disaster recovery",
-"Network management";
+"
 ],
 technologies: [
 "Cisco", "Juniper", "Fortinet", "Palo Alto",
-"VMware", "Hyper-V", "Monitoring tools";
+"VMware", "Hyper-V", "
 ],
 certifications: [
 "Cisco Certified Network Professional (CCNP)",
 "Juniper Networks Certified Professional (JNCIP)",
-"CompTIA Network+";
+"
 ],
 link: "https://ziontechgroup.com/network-infrastructure-design",
 icon: "🌐",
@@ -402,13 +402,13 @@ features: [
 "Backend integration",
 "Testing & quality assurance",
 "App store deployment",
-"Maintenance & updates";
+"
 ],
 benefits: [
 "Reach mobile users",
 "Improve customer engagement",
 "Increase brand visibility",
-"Generate new revenue streams";
+"
 ],
 deliverables: [
 "Mobile application",
@@ -416,7 +416,7 @@ deliverables: [
 "Documentation",
 "Testing reports",
 "Deployment guide",
-"Maintenance plan";
+"
 ],
 timeline: "16-24 weeks depending on complexity",
 expertise: [
@@ -424,16 +424,16 @@ expertise: [
 "Android development",
 "Cross-platform frameworks",
 "UI/UX design",
-"Backend integration";
+"
 ],
 technologies: [
 "Swift", "Kotlin", "React Native", "Flutter",
-"Node.js", "Firebase", "AWS Mobile";
+"Node.js", "Firebase", "
 ],
 certifications: [
 "Apple Developer Certification",
 "Google Developer Certification",
-"React Native Certification";
+"
 ],
 link: "https://ziontechgroup.com/mobile-app-development",
 icon: "📱",
@@ -455,13 +455,13 @@ features: [
 "Performance optimization",
 "Security implementation",
 "Testing & quality assurance",
-"Deployment & maintenance";
+"
 ],
 benefits: [
 "Establish online presence",
 "Improve customer experience",
 "Increase operational efficiency",
-"Generate leads & sales";
+"
 ],
 deliverables: [
 "Web application",
@@ -469,7 +469,7 @@ deliverables: [
 "Documentation",
 "Testing reports",
 "Deployment guide",
-"User training";
+"
 ],
 timeline: "12-20 weeks depending on complexity",
 expertise: [
@@ -477,16 +477,16 @@ expertise: [
 "Backend development",
 "Database design",
 "Security implementation",
-"Performance optimization";
+"
 ],
 technologies: [
 "React", "Vue.js", "Angular", "Node.js",
-"Python", "PHP", "MySQL", "PostgreSQL";
+"Python", "PHP", "MySQL", "
 ],
 certifications: [
 "Microsoft Certified: Azure Developer Associate",
 "AWS Certified Developer Associate",
-"Google Cloud Professional Developer";
+"
 ],
 link: "https://ziontechgroup.com/web-application-development",
 icon: "💻",
@@ -508,13 +508,13 @@ features: [
 "Vendor selection",
 "Project management",
 "Change management",
-"Performance optimization";
+"
 ],
 benefits: [
 "Align IT with business goals",
 "Optimize technology investments",
 "Improve operational efficiency",
-"Drive innovation";
+"
 ],
 deliverables: [
 "IT strategy document",
@@ -522,7 +522,7 @@ deliverables: [
 "Vendor recommendations",
 "Implementation plan",
 "Change management plan",
-"Success metrics";
+"
 ],
 timeline: "20-40 weeks depending on scope",
 expertise: [
@@ -530,16 +530,16 @@ expertise: [
 "Technology assessment",
 "Project management",
 "Change management",
-"Performance optimization";
+"
 ],
 technologies: [
 "Enterprise platforms", "Cloud solutions", "Analytics tools",
-"Security solutions", "Integration platforms";
+"Security solutions", "
 ],
 certifications: [
 "Project Management Professional (PMP)",
 "ITIL Foundation",
-"Certified Information Systems Auditor (CISA)";
+"
 ],
 link: "https://ziontechgroup.com/it-consulting-advisory",
 badge: "Premium",
@@ -550,12 +550,12 @@ image: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fi
 
 export const getITServiceById: any = (id: string): ITService | undefined => {
 return ENHANCED_IT_SERVICES.find(service => service.id === id),;
-};
+}
 
 export const getITServicesByCategory: any = (category: string): ITService[] => {
 return ENHANCED_IT_SERVICES.filter(service => service.category === category),;
-};
+}
 
 export const getITServiceCategories: any = (): string[] => {
 return [...new Set(ENHANCED_IT_SERVICES.map(service => service.category))],;
-};
+}

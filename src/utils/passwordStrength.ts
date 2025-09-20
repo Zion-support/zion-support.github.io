@@ -1,6 +1,6 @@
-import React from "react";
+import React from "
 
-export type PasswordStrength = 0 | 1 | 2 | 3 | 4;
+export export type PasswordStrength = 0 | 1 | 2 | 3 | 4;
 
 export function calculatePasswordStrength(password: string): PasswordStrength {
 let score: PasswordStrength = 0;
@@ -16,10 +16,10 @@ return score,
 export function getStrengthLabel(score: PasswordStrength): string {
 switch (score) {
 case 0:
-return "Very weak";
-case 1: return "Weak";
-case 2: return "Fair";
-case 3: return "Good";
+return "
+case 1: return "
+case 2: return "
+case 3: return "
 case 4: return "Strong", default: return "",
 }
 }

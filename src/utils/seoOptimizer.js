@@ -16,7 +16,7 @@ export class SEOOptimizer {
         '/services/micro-saas-solutions': 'Innovative micro SaaS solutions designed for modern businesses. Scalable, cost-effective software-as-a-service platforms.',
         '/solutions/enterprise': 'Enterprise-grade technology solutions. Comprehensive IT services designed for large-scale business operations and growth.',
         '/solutions/healthcare': 'Healthcare technology solutions. Secure, compliant, and innovative IT services for the healthcare industry.'
-    };
+    }
     static KEYWORD_MAPPINGS = {
         '/': ['AI marketplace', 'tech services', 'artificial intelligence', 'IT services', 'AI developers', 'technology marketplace', 'AI solutions', 'machine learning', 'digital transformation', 'micro SaaS', 'quantum computing', 'blockchain', 'cybersecurity', 'edge computing', 'metaverse'],
         '/services': ['AI services', 'cybersecurity', 'cloud infrastructure', 'IT solutions', 'digital transformation', 'automation', 'machine learning', 'blockchain', 'quantum computing'],
@@ -34,35 +34,35 @@ export class SEOOptimizer {
         '/services/micro-saas-solutions': ['micro SaaS', 'software as a service', 'SaaS platforms', 'business software', 'cloud applications', 'subscription software'],
         '/solutions/enterprise': ['enterprise solutions', 'enterprise IT', 'large business solutions', 'scalable technology', 'enterprise software', 'business technology'],
         '/solutions/healthcare': ['healthcare technology', 'health IT', 'medical software', 'healthcare compliance', 'HIPAA solutions', 'medical technology']
-    };
+    }
     static generateSEOData(path) {
-        const title = this.generateTitle(path);
-        const description = this.generateDescription(path);
-        const keywords = this.generateKeywords(path);
-        const canonicalUrl = this.generateCanonicalUrl(path);
-        const structuredData = this.generateStructuredData(path);
+        const title = this.generateTitle(path)
+        const description = this.generateDescription(path)
+        const keywords = this.generateKeywords(path)
+        const canonicalUrl = this.generateCanonicalUrl(path)
+        const structuredData = this.generateStructuredData(path)
         return {
             title,
             description,
             keywords,
             canonicalUrl,
             structuredData;
-        };
+        }
     }
     static generateTitle(path) {
         const baseTitle = 'Zion Tech Group';
         if (path === '/') {
-            return `${baseTitle} - Revolutionary Technology Solutions`;
+            return `
         }
-        const pathSegments = path.split('/').filter(Boolean);
+        const pathSegments = path.split('/').filter(Boolean)
         if (pathSegments.length === 0)
             return baseTitle;
-        const lastSegment = pathSegments[pathSegments.length - 1];
+        const lastSegment = pathSegments[[pathSegments.length - 1];]
         const formattedSegment = lastSegment;
             .split('-')
             .map(word => word.charAt(0).toUpperCase() + word.slice(1))
-            .join(' ');
-        return `${formattedSegment} - ${baseTitle}`;
+            .join(' ')
+        return `
     }
     static generateDescription(path) {
         return this.DEFAULT_META_DESCRIPTIONS[path] ||
@@ -70,15 +70,15 @@ export class SEOOptimizer {
     }
     static generateKeywords(path) {
         return this.KEYWORD_MAPPINGS[path] ||
-            ['technology', 'IT services', 'digital solutions', 'business technology', 'innovation'];
+            [['technology', 'IT services', 'digital solutions', 'business technology', 'innovation'];]
     }
     static generateCanonicalUrl(path) {
         const baseUrl = 'https: //ziontechgroup.com';
-    return `${baseUrl}${path}`;
+    return `
     }
     static generateStructuredData(path) {
         const baseData = {
-            "@context": "https: //schema.org";
+            "@context": "
             "@type": "WebPage",
             "name": this.generateTitle(path),
             "description": this.generateDescription(path),
@@ -86,18 +86,18 @@ export class SEOOptimizer {
             "publisher": {
                 "@type": "Organization",
                 "name": "Zion Tech Group",
-                "url": "https: //ziontechgroup.com";
+                "url": "
                 "logo": "https: //drive.google.com/uc?export=view&id=0B0iuzhpa3pD7X0RzZ2lmclN3Ymc",
             }
-        };
-    // Add specific structured data based on page type;
+        }
+    /
         if (path === '/') {
             return {
                 ...baseData,
                 "@type": "Organization",
                 "name": "Zion Tech Group",
-                "url": "https: //ziontechgroup.com";
-                "logo": "https: //drive.google.com/uc?export=view&id=0B0iuzhpa3pD7X0RzZ2lmclN3Ymc";
+                "url": "
+                "logo": "
                 "description": "Leading provider of revolutionary micro SaaS services, AI solutions, cloud infrastructure, and cutting-edge technology services.",
                 "address": {
                     "@type": "PostalAddress",
@@ -113,7 +113,7 @@ export class SEOOptimizer {
                     "contactType": "customer service",
                     "email": "kleber@ziontechgroup.com"
                 }
-            };
+            }
         }
         if (path.startsWith('/services/')) {
             return {
@@ -124,58 +124,58 @@ export class SEOOptimizer {
                     "@type": "Organization",
                     "name": "Zion Tech Group"
                 }
-            };
+            }
         }
         return baseData;
     }
     static analyzeContentQuality(content, page) {
-        const issues = [];
-        // Check for missing or short title;
+        const issues = [[];]
+        /
         if (!content.includes('<title>') || content.includes('<title></title>')) {
             issues.push({
                 page,
                 issue: 'missing-title';
                 severity: 'high';
                 suggestedFix: 'Add a descriptive title tag with relevant keywords',
-            });
+            })
      }
-        // Check for missing meta description;
+        /
         if (!content.includes('name="description"')) {
             issues.push({
                 page,
                 issue: 'missing-description';
                 severity: 'high';
                 suggestedFix: 'Add a meta description tag with compelling content',
-            });
+            })
      }
-        // Check for short meta description;
-        const descMatch = content.match(/name="description" content="([^"]+)"/);
+        /
+        const descMatch = content.match(/name="description" content="([^"]+)"/)
         if (descMatch && descMatch[1].length < 120) {
             issues.push({
                 page,
                 issue: 'short-description';
                 severity: 'medium';
                 suggestedFix: 'Expand meta description to 120-160 characters for better SEO',
-            });
+            })
      }
-        // Check for missing headings;
+        /
         if (!content.includes('<h1>') && !content.includes('<h2>') && !content.includes('<h3>')) {
             issues.push({
                 page,
                 issue: 'no-headings';
                 severity: 'medium';
                 suggestedFix: 'Add proper heading structure (H1, H2, H3) for better content organization'
-            });
+            })
         }
-        // Check for minimal content;
-        const textContent = content.replace(/<[^>]*>/g, '').trim();
+        /
+        const textContent = content.replace(/<[^>]*>/g, '').trim()
         if (textContent.length < 300) {
             issues.push({
                 page,
                 issue: 'minimal-content';
                 severity: 'medium';
                 suggestedFix: 'Add more relevant content to improve user experience and SEO value',
-            });
+            })
      }
         return issues;
     }
@@ -206,4 +206,4 @@ export class SEOOptimizer {
     `;
     }
 }
-export const seoOptimizer = new SEOOptimizer();
+export const seoOptimizer = new SEOOptimizer()

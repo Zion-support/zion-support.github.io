@@ -1,27 +1,27 @@
 
-import { useEffect,, ,  } from 'react';
-import { useAuth,, ,  } from '@/hooks/useAuth';
-import { useReferrals,, ,  } from '@/hooks/useReferrals';
-import { ReferralStats,, ,  } from '@/components/referrals/ReferralStats';
-import { ReferralLink,, ,  } from '@/components/referrals/ReferralLink';
-import { ReferralTable,, ,  } from '@/components/referrals/ReferralTable';
-import { RewardsCard,, ,  } from '@/components/referrals/RewardsCard';
-import { ReferralGuide,, ,  } from '@/components/referrals/ReferralGuide';
-import { ReferralLeaderboard,, ,  } from '@/components/referrals/ReferralLeaderboard';
-import { Card,, CardContent,, CardDescription,, CardHeader,, CardTitle,  } from "@/components/ui/card",
-import { Tabs,, TabsContent,, TabsList,, TabsTrigger,  } from "@/components/ui/tabs";
-import { Button,, ,  } from '@/components/ui/button';
-import { toast,  } from '@/hooks/use-toast';
-import { Share,, Users,  } from 'lucide-react'
-import { useRouter,  } from 'next/router', // Changed from useNavigate,
+import import { useEffect,,, ,,  } from 'react';
+import import { useAuth,,, ,,  } from '@/hooks/useAuth';
+import import { useReferrals,,, ,,  } from '@/hooks/useReferrals';
+import import { ReferralStats,,, ,,  } from '@/components/referrals/ReferralStats';
+import import { ReferralLink,,, ,,  } from '@/components/referrals/ReferralLink';
+import import { ReferralTable,,, ,,  } from '@/components/referrals/ReferralTable';
+import import { RewardsCard,,, ,,  } from '@/components/referrals/RewardsCard';
+import import { ReferralGuide,,, ,,  } from '@/components/referrals/ReferralGuide';
+import import { ReferralLeaderboard,,, ,,  } from '@/components/referrals/ReferralLeaderboard';
+import { Card,,, CardContent,,, CardDescription,,, CardHeader,,, CardTitle,,  } from "@/components/ui/card",
+import { Tabs,,, TabsContent,,, TabsList,,, TabsTrigger,,  } from "
+import import { Button,,, ,,  } from '@/components/ui/button';
+import import { toast,,  } from '@/hooks/use-toast';
+import { Share,,, Users,,  } from 'lucide-react'
+import { useRouter,,  } from 'next/router', // Changed from useNavigate,
 import { Card,
 CardContent
-, , CardDescription,
+,, ,, CardDescription,
 CardHeader
-, , CardTitle,
+,, ,, CardTitle,
  } from '@/components/ui/card'
-import { Tabs,, TabsContent,, TabsList,, TabsTrigger,  } from '@/components/ui/tabs'
-import { useRouter,  } from 'next/router'; // Changed from useNavigate,
+import { Tabs,,, TabsContent,,, TabsList,,, TabsTrigger,,  } from '@/components/ui/tabs'
+import import { useRouter,,  } from 'next/router'; // Changed from useNavigate,
 export default function ReferralsPage() {
 return (
     <div className='container max-w-7xl py-10'>

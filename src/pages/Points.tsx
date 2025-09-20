@@ -1,13 +1,13 @@
-import React, { useState } from 'react';
-import Link from 'next/link';
-import { LoginModal,  } from '@/components/auth/LoginModal';
+import import React, { useState } from 'react';
+import import Link from 'next/link';
+import import { LoginModal,,  } from '@/components/auth/LoginModal';
 export default function PointsPage() {
-  const { isAuthenticated, user } = useAuth();
-  const { ledger balance loading fetchLedger } = usePoints();
-  const [loginOpen, setLoginOpen] = useState(false);
-  const [redeeming, setRedeeming] = useState(false);
+  const { isAuthenticated, user } = useAuth()
+  const { ledger balance loading fetchLedger } = usePoints()
+  const [loginOpen, setLoginOpen] = useState(false)
+  const [redeeming, setRedeeming] = useState(false)
 if (!user?.id) return;
-    setRedeeming(true);
+    setRedeeming(true)
     try {
       await fetch('/api/points/redeem', {
 body: JSON.stringify({,
@@ -15,10 +15,10 @@ userId: user.id,
 cost: reward.cost,
 reward: reward.title,
 })
-      });
-      await fetchLedger();
+      })
+      await fetchLedger()
     } finally {
-      setRedeeming(false);    }      });
+      setRedeeming(false)    }      })
       await fetchLedger()
     } finally {
       setRedeeming(false)
@@ -138,7 +138,7 @@ earning points immediately.
         </div>
         <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />
       </>
-    );
+    )
   }
   return (
     <div className='container py-10 max-w-4xl'>
@@ -337,5 +337,5 @@ variant='outline'
         </CardContent>
       </Card>
     </div>
-  );
+  )
 }

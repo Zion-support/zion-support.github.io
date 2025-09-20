@@ -1,96 +1,96 @@
-import React from "react";
+import React from "
 
-import { Link; useLocation } from "react-router-dom";
-import { cn } from "@/lib/utils";
-import { useAuth } from "@/hooks/useAuth";
-import { MessageSquare; ChevronDown; Users; Briefcase; Settings; BarChart3 } from "lucide-react";
-import { MessageSquare; ChevronDown; Brain; Shield; Cloud; Zap } from "lucide-react";
-import { useTranslation } from "react-i18next";
-import { useState; useRef; useEffect } from "react";
-import { MessageSquare; ChevronDown } from "lucide-react";
-import { useTranslation } from "react-i18next";
-import { useState } from "react";
-import { MessageSquare; ChevronDown; Users; Settings; HelpCircle; FileText } from "lucide-react";
-import { useTranslation } from "react-i18next";
-import { useState; useRef; useEffect } from "react";
-import { MessageSquare; ChevronDown } from "lucide-react";
-import { useTranslation } from "react-i18next";
-import { useState; useEffect; useRef } from "react";
-import { MessageSquare; ChevronDown } from "lucide-react";
-import { useTranslation } from "react-i18next";
-import { useState } from "react";
-import { MessageSquare; ChevronDown } from "lucide-react";
-import { useTranslation } from "react-i18next";
-import { useState } from "react";
-import { MessageSquare; ChevronDown } from "lucide-react";
-import { useTranslation } from "react-i18next";
-import { useState } from "react";
-import { useTranslation } from "react-i18next";
+import import { Link;, useLocation } from "
+import { cn } from "
+import { useAuth } from "
+import import { MessageSquare;, ChevronDown;, Users;, Briefcase;, Settings;, BarChart3 } from "
+import import { MessageSquare;, ChevronDown;, Brain;, Shield;, Cloud;, Zap } from "
+import { useTranslation } from "
+import import { useState;, useRef;, useEffect } from "
+import import { MessageSquare;, ChevronDown } from "
+import { useTranslation } from "
+import { useState } from "
+import import { MessageSquare;, ChevronDown;, Users;, Settings;, HelpCircle;, FileText } from "
+import { useTranslation } from "
+import import { useState;, useRef;, useEffect } from "
+import import { MessageSquare;, ChevronDown } from "
+import { useTranslation } from "
+import import { useState;, useEffect;, useRef } from "
+import import { MessageSquare;, ChevronDown } from "
+import { useTranslation } from "
+import { useState } from "
+import import { MessageSquare;, ChevronDown } from "
+import { useTranslation } from "
+import { useState } from "
+import import { MessageSquare;, ChevronDown } from "
+import { useTranslation } from "
+import { useState } from "
+import { useTranslation } from "
 import {
 DropdownMenu;
 DropdownMenuContent;
 DropdownMenuItem;
 DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
+} from "
 
 interface MainNavigationProps {
 isAdmin?: boolean;
 unreadCount?: number;
 className?: string;
-};
+}
 interface NavigationLink {
 key: string;
 href: string;
 name: string;,
 matches: (path: string) => boolean;
-dropdown?: { href: string; name: string; }[];
+dropdown?: { href: string; name: string; }[[];]
 }
 
-export function MainNavigation({ isAdmin = false; unreadCount = 0; className }: MainNavigationProps) {
-const { user } = useAuth();
+export export function MainNavigation({ isAdmin = false; unreadCount = 0; className }: MainNavigationProps) {
+const { user } = useAuth()
 const isAuthenticated = !!user;
-const location = useLocation();
-const { t } = useTranslation();
-const [dropdownOpen; setDropdownOpen] = useState(false);
-const dropdownRef = useRef<HTMLDivElement>(null);
+const location = useLocation()
+const { t } = useTranslation()
+const [dropdownOpen; setDropdownOpen] = useState(false)
+const dropdownRef = useRef<HTMLDivElement>(null)
 
-// Close dropdown when clicking outside;
+/
 useEffect(() => {
 const handleClickOutside: any = (event: MouseEvent) => {
 if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {;
-const [dropdownOpen; setDropdownOpen] = useState(false);
-const dropdownRef = useRef<HTMLDivElement>(null);
-const [dropdownOpen; setDropdownOpen] = useState(false);
-const dropdownRef = useRef<HTMLDivElement>(null);
+const [dropdownOpen; setDropdownOpen] = useState(false)
+const dropdownRef = useRef<HTMLDivElement>(null)
+const [dropdownOpen; setDropdownOpen] = useState(false)
+const dropdownRef = useRef<HTMLDivElement>(null)
 
-// Close dropdown when clicking outside;
+/
 useEffect(() => {
 const handleClickOutside: any = (event: MouseEvent) => {
 if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {;
-setDropdownOpen(false);
+setDropdownOpen(false)
 }
-};
+}
 
-document.addEventListener("mousedown", handleClickOutside);
-return () => document.removeEventListener("mousedown", handleClickOutside);
-}, []);
-const [isServicesOpen; setIsServicesOpen] = useState(false);
-const [isCompanyOpen; setIsCompanyOpen] = useState(false);
-const [isServicesOpen; setIsServicesOpen] = useState(false);
-const dropdownRef = useRef<HTMLDivElement>(null);
-const [activeDropdown; setActiveDropdown] = useState<string | null>(null);
-const [activeDropdown; setActiveDropdown] = useState<string | null>(null);
-const [activeDropdown; setActiveDropdown] = useState<string | null>(null);
+document.addEventListener("mousedown", handleClickOutside)
+return () => document.removeEventListener("mousedown", handleClickOutside)
+}, [])
+const [isServicesOpen; setIsServicesOpen] = useState(false)
+const [isCompanyOpen; setIsCompanyOpen] = useState(false)
+const [isServicesOpen; setIsServicesOpen] = useState(false)
+const dropdownRef = useRef<HTMLDivElement>(null)
+const [activeDropdown; setActiveDropdown] = useState<string | null>(null)
+const [activeDropdown; setActiveDropdown] = useState<string | null>(null)
+const [activeDropdown; setActiveDropdown] = useState<string | null>(null)
 
 const serviceLinks = [
 { key: "ai-analytics", href: "/ai-analytics-dashboard", name: "AI Analytics" },
 { key: "ai-content", href: "/ai-content-generator", name: "AI Content Generator" },
 { key: "cybersecurity", href: "/cybersecurity-services", name: "Cybersecurity" },
 { key: "cloud-migration", href: "/cloud-migration-services", name: "Cloud Migration" },
-{ key: "it-onsite", href: "/it-onsite-services", name: "IT Onsite Services" };
+{ key: "it-onsite", href: "/it-onsite-services", name: "IT Onsite Services" }
 ];
 
-let links = baseLinks.map(link => ({ ...link; name: t(`nav.${link.key}`) }));
+let links = baseLinks.map(link => ({ ...link; name: t(`nav.${link.key}`) }))
 matches: (path: string) => path.startsWith("/blog"),
 name: t("nav.blog"),
 }
@@ -98,13 +98,13 @@ name: t("nav.blog"),
 
 let links = baseLinks;
 
-// Close dropdown when clicking outside;
+/
 useEffect(() => {
 const handleClickOutside: any = (event: MouseEvent) => {
 if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {;
-setIsServicesOpen(false);
+setIsServicesOpen(false)
 }
-};
+}
 
 const baseLinks: NavigationLink[] = [
 {,
@@ -313,7 +313,7 @@ key: "blog",
 href: "/blog",
 matches: (path: string) => path.startsWith("/blog"),
 matches: (path: string) => path.startsWith("/blog"),
-};
+}
 ];
 
 const serviceDropdowns = [
@@ -374,10 +374,10 @@ const serviceLinks = [
 { key: "ai-content", href: "/ai-content-generator", name: "AI Content Generator" },
 { key: "cybersecurity", href: "/cybersecurity-services", name: "Cybersecurity" },
 { key: "cloud-migration", href: "/cloud-migration-services", name: "Cloud Migration" },
-{ key: "it-onsite", href: "/it-onsite-services", name: "IT Onsite Services" };
+{ key: "it-onsite", href: "/it-onsite-services", name: "IT Onsite Services" }
 ];
 
-let links = baseLinks.map(link => ({ ...link; name: t(`nav.${link.key}`) }));
+let links = baseLinks.map(link => ({ ...link; name: t(`nav.${link.key}`) }))
 matches: (path: string) => path.startsWith("/blog"),
 name: t("nav.blog"),
 }
@@ -385,19 +385,19 @@ name: t("nav.blog"),
 
 let links = baseLinks;
 
-// Close dropdown when clicking outside;
+/
 useEffect(() => {
 const handleClickOutside: any = (event: MouseEvent) => {
 if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {;
-setIsServicesOpen(false);
+setIsServicesOpen(false)
 }
-};
+}
 
-document.addEventListener("mousedown", handleClickOutside);
+document.addEventListener("mousedown", handleClickOutside)
 return () => {
-document.removeEventListener("mousedown", handleClickOutside);
-};
-}, []);
+document.removeEventListener("mousedown", handleClickOutside)
+}
+}, [])
 name: "About",
 matches: (path: string) => path.startsWith("/about") || path === "/careers" || path === "/contact",
                         ? 'bg-zion-purple/20 text-zion-cyan'
@@ -410,7 +410,7 @@ matches: (path: string) => path.startsWith("/about") || path === "/careers" || p
                       <span className='absolute -top-1 -right-1 bg-zion-purple text-white text-xs rounded-full h-5 w-5 flex items-center justify-center'>
                         {cartCount}
                       </span>
-import { ChevronDown,, Menu,, X,, Home,, Settings,, Users,, Building,, Globe,, Zap,, Brain,, Shield,, Cloud,, Code,, BarChart3',, ,  } from 'lucide-react'
+import { ChevronDown,,, Menu,,, X,,, Home,,, Settings,,, Users,,, Building,,, Globe,,, Zap,,, Brain,,, Shield,,, Cloud,,, Code,,, BarChart3',,, ,,  } from 'lucide-react'
 export default function Page() { [])
   const baseLinks: NavigationLink[] = [{,
 key: 'home'
@@ -503,207 +503,207 @@ dropdown: [
 
 let links: NavigationLink[] = baseLinks;
 
-// Add authenticated-only links;
+/
 if (isAuthenticated) {
 links.push({,
 key: "dashboard",
 name: "Dashboard",
 href: "/dashboard",
 matches: (path: string) => path === "/dashboard" || path === "/client-dashboard" || path === "/talent-dashboard",
-});
+})
 }
 
-// Add admin-only links;
+/
 if (isAdmin) {
 links.push({
 key: "analytics",
 name: "Analytics",
 href: "/analytics",
 matches: (path: string) => path.startsWith("/analytics"),
-});
+})
 }
 
 const handleDropdownToggle: any = (key: string) => {;
-setActiveDropdown(activeDropdown === key ? null : key);
-};
+setActiveDropdown(activeDropdown === key ? null : key)
+}
 
-const closeDropdown: any = () => {;
-setActiveDropdown(null);
-};
-
-const handleDropdownToggle: any = (key: string) => {;
-setActiveDropdown(activeDropdown === key ? null : key);
-};
-
-const handleDropdownClose: any = () => {;
-setActiveDropdown(null);
-};
+const closeDropdown: any = () => {
+setActiveDropdown(null)
+}
 
 const handleDropdownToggle: any = (key: string) => {;
-setActiveDropdown(activeDropdown === key ? null : key);
-};
+setActiveDropdown(activeDropdown === key ? null : key)
+}
 
-const closeDropdowns: any = () => {;
-setActiveDropdown(null);
-};
+const handleDropdownClose: any = () => {
+setActiveDropdown(null)
+}
+
+const handleDropdownToggle: any = (key: string) => {;
+setActiveDropdown(activeDropdown === key ? null : key)
+}
+
+const closeDropdowns: any = () => {
+setActiveDropdown(null)
+}
 
 return (
-<nav className={cn("navbar ml-6 hidden lg:flex", className)}>;
+<nav className={cn("navbar ml-6 hidden lg:flex", className)}>
 const toggleDropdown: any = (key: string) => {;
-setActiveDropdown(activeDropdown === key ? null : key);
-};
+setActiveDropdown(activeDropdown === key ? null : key)
+}
 
 const isDropdownActive: any = (key: string) => activeDropdown === key;
 
 return (
-<nav className={cn("navbar ml-6 hidden lg:flex", className)} ref={dropdownRef}>;
-<ul className="flex items-center gap-1">;
+<nav className={cn("navbar ml-6 hidden lg:flex", className)} ref={dropdownRef}>
+<ul className="flex items-center gap-1">
 "inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-all duration-300 relative overflow-hidden group",
 link.matches(location.pathname)
-? "bg-gradient-to-r from-zion-purple/30 to-zion-cyan/30 text-zion-cyan shadow-lg shadow-zion-purple/20";
-: "text-white hover:text-zion-cyan";
+? "
+: "
 )}
->;
+>
 {/* Hover background effect */}
 <div className={cn(
 "absolute inset-0 bg-gradient-to-r from-zion-purple/10 to-zion-cyan/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-md",
-link.matches(location.pathname) && "opacity-100";
-)} />;
+link.matches(location.pathname) && "
+)} />
 
 {/* Glowing border effect */}
 <div className={cn(
 "absolute inset-0 rounded-md border border-transparent group-hover:border-zion-purple/30 transition-all duration-300",
-link.matches(location.pathname) && "border-zion-cyan/50";
-)} />;
+link.matches(location.pathname) && "
+)} />
 
-<span className="relative z-10">{link.name}</span>;
-</Link>;
-<li key={link.key} className="relative" onMouseLeave={handleDropdownClose}>;
-<li key={link.name} className="relative">;
+<span className="relative z-10">{link.name}</span>
+</Link>
+<li key={link.key} className="relative" onMouseLeave={handleDropdownClose}>
+<li key={link.name} className="relative">
 {link.dropdown ? (
-<div className="relative">;
+<div className="relative">
 <button;
 onClick={() => handleDropdownToggle(link.key)}
 onBlur={() => setTimeout(closeDropdowns; 150)}
 className={cn(
 "inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors",
 link.matches(location.pathname)
-? "bg-zion-purple/20 text-zion-cyan";
-: "text-white hover:bg-zion-purple/10 hover:text-zion-cyan";
+? "
+: "
 )}
->;
+>
 {link.name}
-<ChevronDown className="ml-1 h-4 w-4" />;
-</button>;
+<ChevronDown className="ml-1 h-4 w-4" />
+</button>
 
 {activeDropdown === link.key && (
-<div className="absolute top-full left-0 mt-1 w-48 bg-zion-blue-dark border border-zion-blue-light rounded-md shadow-lg z-50">;
-<div className="py-2">;
+<div className="absolute top-full left-0 mt-1 w-48 bg-zion-blue-dark border border-zion-blue-light rounded-md shadow-lg z-50">
+<div className="py-2">
 {link.dropdown.map((item) => (
 <Link;
 key={item.href}
 to={item.href}
 onClick={closeDropdowns}
 className="block px-4 py-2 text-sm text-zion-slate-light hover:bg-zion-purple/10 hover:text-zion-cyan transition-colors"
->;
+>
 {item.name}
-</Link>;
+</Link>
 ))}
-</div>;
-</div>;
+</div>
+</div>
 )}
-</div>;
+</div>
 ) : (
 <Link;
 to={link.href}
 className={cn(
 "inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors",
 link.matches(location.pathname)
-? "bg-zion-purple/20 text-zion-cyan";
-: "text-white hover:bg-zion-purple/10 hover:text-zion-cyan";
+? "
+: "
 )}
->;
+>
 {link.name}
-</Link>;
+</Link>
 )}
 {links.map((link) => {
 if (link.key === "marketplace") {
 return (
-<li key={link.key}>;
+<li key={link.key}>
 {renderDropdown(marketplaceDropdown, "marketplace")}
-</li>;
-);
+</li>
+)
 }
 
 if (link.key === "company") {
 return (
-<li key={link.key}>;
+<li key={link.key}>
 {renderDropdown(companyDropdown, "company")}
-</li>;
-);
+</li>
+)
 }
 
 return (
-<li key={link.name}>;
+<li key={link.name}>
 <Link;
 to={link.href}
 className={cn(
 "inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors",
 link.matches(location.pathname)
-? "bg-zion-purple/20 text-zion-cyan";
-: "text-white hover:bg-zion-purple/10 hover:text-zion-cyan";
+? "
+: "
 )}
->;
+>
 {link.name}
-</Link>;
-</li>;
-);
+</Link>
+</li>
+)
 })}
 
 {/* Service Dropdowns */}
 {serviceDropdowns.map((dropdown) => (
-<li key={dropdown.key} className="relative">;
+<li key={dropdown.key} className="relative">
 <button;
 onClick={() => toggleDropdown(dropdown.key)}
 className={cn(
 "inline-flex h-9 items-center gap-2 rounded-md px-4 text-sm font-medium transition-colors",
 isDropdownActive(dropdown.key)
-? "bg-zion-purple/20 text-zion-cyan";
-: "text-white hover:bg-zion-purple/10 hover:text-zion-cyan";
+? "
+: "
 )}
 onClick={closeDropdown}
->;
+>
 {dropdown.icon}
 {dropdown.label}
 <ChevronDown className={cn(
 "h-3 w-3 transition-transform duration-200",
-isDropdownActive(dropdown.key) ? "rotate-180" : "";
-)} />;
-</button>;
+isDropdownActive(dropdown.key) ? "rotate-180" : "
+)} />
+</button>
 
 {/* Dropdown Menu */}
 {isDropdownActive(dropdown.key) && (
-<div className="absolute top-full left-0 mt-1 w-64 bg-zion-slate border border-zion-purple/30 rounded-lg shadow-2xl shadow-zion-purple/20 backdrop-blur-xl z-50">;
-<div className="p-2">;
+<div className="absolute top-full left-0 mt-1 w-64 bg-zion-slate border border-zion-purple/30 rounded-lg shadow-2xl shadow-zion-purple/20 backdrop-blur-xl z-50">
+<div className="p-2">
 {dropdown.items.map((item; index) => (
 <Link;
 key={index}
 to={item.href}
 onClick={() => setActiveDropdown(null)}
 className="flex items-center gap-3 px-3 py-2 text-sm text-zion-slate-light hover:text-zion-cyan hover:bg-zion-purple/10 rounded-md transition-colors"
->;
+>
 {dropdown.icon}
 {item.name}
-</Link>;
+</Link>
 ))}
-</div>;
-</div>;
+</div>
+</div>
 )}
-</li>;
+</li>
 ))}
 
 {/* Services Dropdown */}
-<li className="relative">;
+<li className="relative">
 <button;
 onClick={() => setIsServicesOpen(!isServicesOpen)}
 onMouseEnter={() => setIsServicesOpen(true)}
@@ -711,164 +711,164 @@ onMouseLeave={() => setIsServicesOpen(false)}
 className={cn(
 "inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors",
 location.pathname.startsWith("/services") || location.pathname.startsWith("/it-onsite-services") || location.pathname.startsWith("/green-it")
-? "bg-zion-purple/20 text-zion-cyan";
-: "text-white hover:bg-zion-purple/10 hover:text-zion-cyan";
+? "
+: "
 )}
->;
+>
 Services;
-<ChevronDown className="ml-1 h-4 w-4" />;
-</button>;
+<ChevronDown className="ml-1 h-4 w-4" />
+</button>
 
 {isServicesOpen && (
 <div;
 className="absolute top-full left-0 mt-1 w-48 bg-zion-blue-dark border border-zion-purple/20 rounded-md shadow-lg py-2 z-50"
 onMouseEnter={() => setIsServicesOpen(true)}
 onMouseLeave={() => setIsServicesOpen(false)}
->;
+>
 <Link;
-to="/services";
+to="
 className="block px-4 py-2 text-sm text-zion-slate-light hover:text-zion-cyan hover:bg-zion-purple/10 transition-colors"
->;
+>
 All Services;
-</Link>;
+</Link>
 <Link;
-to="/it-onsite-services";
+to="
 className="block px-4 py-2 text-sm text-zion-slate-light hover:text-zion-cyan hover:bg-zion-purple/10 transition-colors"
->;
+>
 IT Onsite Services;
-</Link>;
+</Link>
 <Link;
-to="/green-it";
+to="
 className="block px-4 py-2 text-sm text-zion-slate-light hover:text-zion-cyan hover:bg-zion-purple/10 transition-colors"
->;
+>
 Green IT Solutions;
-</Link>;
+</Link>
 <Link;
-to="/zion-hire-ai";
+to="
 className="block px-4 py-2 text-sm text-zion-slate-light hover:text-zion-cyan hover:bg-zion-purple/10 transition-colors"
->;
+>
 AI Hiring Solutions;
-</Link>;
-</div>;
+</Link>
+</div>
 )}
-</li>;
+</li>
 
 {/* Company Dropdown */}
-<li className="relative">;
+<li className="relative">
 <button;
 onClick={() => setIsCompanyOpen(!isCompanyOpen)}
 onMouseEnter={() => setIsCompanyOpen(true)}
 onMouseLeave={() => setIsCompanyOpen(false)}
 className={cn(
 "inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors",
-location.pathname === "/about" || location.pathname === "/careers" || location.pathname === "/partners" || location.pathname === "/contact";
-? "bg-zion-purple/20 text-zion-cyan";
-: "text-white hover:bg-zion-purple/10 hover:text-zion-cyan";
+location.pathname === "/about" || location.pathname === "/careers" || location.pathname === "/partners" || location.pathname === "
+? "
+: "
 )}
->;
+>
 Company;
-<ChevronDown className="ml-1 h-4 w-4" />;
-</button>;
+<ChevronDown className="ml-1 h-4 w-4" />
+</button>
 
 {isCompanyOpen && (
 <div;
 className="absolute top-full left-0 mt-1 w-48 bg-zion-blue-dark border border-zion-purple/20 rounded-md shadow-lg py-2 z-50"
 onMouseEnter={() => setIsCompanyOpen(true)}
 onMouseLeave={() => setIsCompanyOpen(false)}
->;
+>
 <Link;
-to="/about";
+to="
 className="block px-4 py-2 text-sm text-zion-slate-light hover:text-zion-cyan hover:bg-zion-purple/10 transition-colors"
->;
+>
 About Us;
-</Link>;
+</Link>
 <Link;
-to="/careers";
+to="
 className="block px-4 py-2 text-sm text-zion-slate-light hover:text-zion-cyan hover:bg-zion-purple/10 transition-colors"
->;
+>
 Careers;
-</Link>;
+</Link>
 <Link;
-to="/partners";
+to="
 className="block px-4 py-2 text-sm text-zion-slate-light hover:text-zion-cyan hover:bg-zion-purple/10 transition-colors"
->;
+>
 Partners;
-</Link>;
+</Link>
 <Link;
-to="/contact";
+to="
 className="block px-4 py-2 text-sm text-zion-slate-light hover:text-zion-cyan hover:bg-zion-purple/10 transition-colors"
->;
+>
 Contact;
-</Link>;
+</Link>
 <Link;
-to="/blog";
+to="
 className="block px-4 py-2 text-sm text-zion-slate-light hover:text-zion-cyan hover:bg-zion-purple/10 transition-colors"
->;
+>
 Blog;
-</Link>;
-</div>;
+</Link>
+</div>
 )}
-</li>;
+</li>
 
 {/* More dropdown */}
-<li className="relative">;
-<div ref={dropdownRef}>;
+<li className="relative">
+<div ref={dropdownRef}>
 <button;
 onClick={() => setDropdownOpen(!dropdownOpen)}
 className={cn(
 "inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors",
 dropdownOpen;
-? "bg-zion-purple/20 text-zion-cyan";
-: "text-white hover:bg-zion-purple/10 hover:text-zion-cyan";
+? "
+: "
 )}
->;
+>
 More;
-<ChevronDown className={cn("ml-1 w-4 h-4 transition-transform", dropdownOpen && "rotate-180")} />;
-</button>;
+<ChevronDown className={cn("ml-1 w-4 h-4 transition-transform", dropdownOpen && "rotate-180")} />
+</button>
 
 {dropdownOpen && (
-<div className="absolute top-full left-0 mt-1 w-64 bg-zion-blue-dark border border-zion-purple/20 rounded-lg shadow-xl z-50">;
-<div className="p-2">;
+<div className="absolute top-full left-0 mt-1 w-64 bg-zion-blue-dark border border-zion-purple/20 rounded-lg shadow-xl z-50">
+<div className="p-2">
 {moreLinks.map((link) => (
 <Link;
 key={link.key}
 to={link.href}
 onClick={() => setDropdownOpen(false)}
 className="flex items-start gap-3 p-3 rounded-md text-white hover:bg-zion-purple/10 transition-colors"
->;
-<div className="text-zion-cyan mt-0.5">;
+>
+<div className="text-zion-cyan mt-0.5">
 {link.icon}
-</div>;
-<div>;
-<div className="font-medium text-sm">{t(`nav.${link.key}`)}</div>;
-<div className="text-xs text-zion-slate-light">{link.description}</div>;
-</div>;
-</Link>;
+</div>
+<div>
+<div className="font-medium text-sm">{t(`nav.${link.key}`)}</div>
+<div className="text-xs text-zion-slate-light">{link.description}</div>
+</div>
+</Link>
 ))}
-</div>;
-</div>;
+</div>
+</div>
 )}
-</div>;
-</li>;
+</div>
+</li>
 
 {/* Services Dropdown */}
-<li className="relative" ref={dropdownRef}>;
+<li className="relative" ref={dropdownRef}>
 <button;
 onClick={() => setIsServicesOpen(!isServicesOpen)}
 className={cn(
 "inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors",
 location.pathname.includes("/ai-") || location.pathname.includes("/cybersecurity") || location.pathname.includes("/cloud-migration")
-? "bg-zion-purple/20 text-zion-cyan";
-: "text-white hover:bg-zion-purple/10 hover:text-zion-cyan";
+? "
+: "
 )}
->;
+>
 Services;
-<ChevronDown className="ml-1 h-4 w-4" />;
-</button>;
+<ChevronDown className="ml-1 h-4 w-4" />
+</button>
 
 {isServicesOpen && (
-<div className="absolute top-full left-0 mt-1 w-64 bg-zion-slate-dark border border-zion-purple/20 rounded-md shadow-lg z-50">;
-<div className="py-2">;
+<div className="absolute top-full left-0 mt-1 w-64 bg-zion-slate-dark border border-zion-purple/20 rounded-md shadow-lg z-50">
+<div className="py-2">
 {serviceLinks.map((service) => (
 <Link;
 key={service.key}
@@ -876,236 +876,236 @@ to={service.href}
 onClick={() => setIsServicesOpen(false)}
 className={cn(
 "block px-4 py-2 text-sm text-zion-slate-light hover:bg-zion-purple/10 hover:text-zion-cyan transition-colors",
-location.pathname === service.href && "bg-zion-purple/20 text-zion-cyan";
+location.pathname === service.href && "
 )}
->;
+>
 {service.name}
-</Link>;
+</Link>
 ))}
-</div>;
-</div>;
+</div>
+</div>
 )}
-</li>;
+</li>
 
 {/* Company dropdown */}
-<li className="relative">;
+<li className="relative">
 <button;
 onClick={() => handleDropdownToggle("company")}
 className={cn(
 "inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors",
-activeDropdown === "company";
-? "bg-zion-purple/20 text-zion-cyan";
-: "text-white hover:bg-zion-purple/10 hover:text-zion-cyan";
+activeDropdown === "
+? "
+: "
 )}
->;
+>
 Company;
-<ChevronDown className="ml-1 h-4 w-4" />;
-</button>;
+<ChevronDown className="ml-1 h-4 w-4" />
+</button>
 {activeDropdown === "company" && (
-<div className="absolute top-full left-0 mt-1 w-48 bg-zion-blue-dark border border-zion-purple/20 rounded-md shadow-lg z-50">;
-<div className="py-2">;
+<div className="absolute top-full left-0 mt-1 w-48 bg-zion-blue-dark border border-zion-purple/20 rounded-md shadow-lg z-50">
+<div className="py-2">
 <Link;
-to="/about";
+to="
 className="block px-4 py-2 text-sm text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
 onClick={closeDropdown}
->;
+>
 About Us;
-</Link>;
+</Link>
 <Link;
-to="/careers";
+to="
 className="block px-4 py-2 text-sm text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
 onClick={closeDropdown}
->;
+>
 Careers;
-</Link>;
+</Link>
 <Link;
-to="/partners";
+to="
 className="block px-4 py-2 text-sm text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
 onClick={closeDropdown}
->;
+>
 Partners;
-</Link>;
+</Link>
 <Link;
-to="/contact";
+to="
 className="block px-4 py-2 text-sm text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
 onClick={closeDropdown}
->;
+>
 Contact;
-</Link>;
-</div>;
-</div>;
+</Link>
+</div>
+</div>
 )}
-</li>;
+</li>
 
 {/* Support dropdown */}
-<li className="relative">;
+<li className="relative">
 <button;
 onClick={() => handleDropdownToggle("support")}
 className={cn(
 "inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors",
-activeDropdown === "support";
-? "bg-zion-purple/20 text-zion-cyan";
-: "text-white hover:bg-zion-purple/10 hover:text-zion-cyan";
+activeDropdown === "
+? "
+: "
 )}
->;
+>
 Support;
-<ChevronDown className="ml-1 h-4 w-4" />;
-</button>;
+<ChevronDown className="ml-1 h-4 w-4" />
+</button>
 {activeDropdown === "support" && (
-<div className="absolute top-full left-0 mt-1 w-48 bg-zion-blue-dark border border-zion-purple/20 rounded-md shadow-lg z-50">;
-<div className="py-2">;
+<div className="absolute top-full left-0 mt-1 w-48 bg-zion-blue-dark border border-zion-purple/20 rounded-md shadow-lg z-50">
+<div className="py-2">
 <Link;
-to="/help";
+to="
 className="block px-4 py-2 text-sm text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
 onClick={closeDropdown}
->;
+>
 Help Center;
-</Link>;
+</Link>
 <Link;
-to="/request-quote";
+to="
 className="block px-4 py-2 text-sm text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
 onClick={closeDropdown}
->;
+>
 Request Quote;
-</Link>;
+</Link>
 <Link;
-to="/it-onsite-services";
+to="
 className="block px-4 py-2 text-sm text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
 onClick={closeDropdown}
->;
+>
 IT Services;
-</Link>;
-</div>;
-</div>;
+</Link>
+</div>
+</div>
 )}
 {links.map((link) => (
-<li key={link.name}>;
+<li key={link.name}>
 <Link;
 to={link.href}
 className={cn(
 "inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors",
 link.matches(location.pathname)
-? "bg-zion-purple/20 text-zion-cyan";
-: "text-white hover:bg-zion-purple/10 hover:text-zion-cyan";
+? "
+: "
 )}
->;
+>
 {link.name}
-</Link>;
-</li>;
+</Link>
+</li>
 ))}
 
 {/* Resources Dropdown */}
-<li>;
-<DropdownMenu>;
-<DropdownMenuTrigger asChild>;
-<button className="inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors text-white hover:bg-zion-purple/10 hover:text-zion-cyan">;
+<li>
+<DropdownMenu>
+<DropdownMenuTrigger asChild>
+<button className="inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors text-white hover:bg-zion-purple/10 hover:text-zion-cyan">
 Resources;
-<ChevronDown className="ml-1 h-4 w-4" />;
-</button>;
-</DropdownMenuTrigger>;
-<DropdownMenuContent className="w-48 bg-zion-blue-dark border-zion-blue-light">;
-<DropdownMenuItem asChild>;
-<Link to="/help" className="flex items-center gap-2 text-white hover:bg-zion-purple/10">;
-<Settings className="h-4 w-4" />;
+<ChevronDown className="ml-1 h-4 w-4" />
+</button>
+</DropdownMenuTrigger>
+<DropdownMenuContent className="w-48 bg-zion-blue-dark border-zion-blue-light">
+<DropdownMenuItem asChild>
+<Link to="/help" className="flex items-center gap-2 text-white hover:bg-zion-purple/10">
+<Settings className="h-4 w-4" />
 Help Center;
-</Link>;
-</DropdownMenuItem>;
-<DropdownMenuItem asChild>;
-<Link to="/faq" className="flex items-center gap-2 text-white hover:bg-zion-purple/10">;
-<Briefcase className="h-4 w-4" />;
+</Link>
+</DropdownMenuItem>
+<DropdownMenuItem asChild>
+<Link to="/faq" className="flex items-center gap-2 text-white hover:bg-zion-purple/10">
+<Briefcase className="h-4 w-4" />
 FAQ;
-</Link>;
-</DropdownMenuItem>;
-<DropdownMenuItem asChild>;
-<Link to="/sitemap" className="flex items-center gap-2 text-white hover:bg-zion-purple/10">;
-<BarChart3 className="h-4 w-4" />;
+</Link>
+</DropdownMenuItem>
+<DropdownMenuItem asChild>
+<Link to="/sitemap" className="flex items-center gap-2 text-white hover:bg-zion-purple/10">
+<BarChart3 className="h-4 w-4" />
 Sitemap;
-</Link>;
-</DropdownMenuItem>;
-</DropdownMenuContent>;
-</DropdownMenu>;
-</li>;
+</Link>
+</DropdownMenuItem>
+</DropdownMenuContent>
+</DropdownMenu>
+</li>
 
 {/* Company Dropdown */}
-<li>;
-<DropdownMenu>;
-<DropdownMenuTrigger asChild>;
-<button className="inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors text-white hover:bg-zion-purple/10 hover:text-zion-cyan">;
+<li>
+<DropdownMenu>
+<DropdownMenuTrigger asChild>
+<button className="inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors text-white hover:bg-zion-purple/10 hover:text-zion-cyan">
 Company;
-<ChevronDown className="ml-1 h-4 w-4" />;
-</button>;
-</DropdownMenuTrigger>;
-<DropdownMenuContent className="w-48 bg-zion-blue-dark border-zion-blue-light">;
-<DropdownMenuItem asChild>;
-<Link to="/about" className="flex items-center gap-2 text-white hover:bg-zion-purple/10">;
-<Users className="h-4 w-4" />;
+<ChevronDown className="ml-1 h-4 w-4" />
+</button>
+</DropdownMenuTrigger>
+<DropdownMenuContent className="w-48 bg-zion-blue-dark border-zion-blue-light">
+<DropdownMenuItem asChild>
+<Link to="/about" className="flex items-center gap-2 text-white hover:bg-zion-purple/10">
+<Users className="h-4 w-4" />
 About Us;
-</Link>;
-</DropdownMenuItem>;
-<DropdownMenuItem asChild>;
-<Link to="/careers" className="flex items-center gap-2 text-white hover:bg-zion-purple/10">;
-<Briefcase className="h-4 w-4" />;
+</Link>
+</DropdownMenuItem>
+<DropdownMenuItem asChild>
+<Link to="/careers" className="flex items-center gap-2 text-white hover:bg-zion-purple/10">
+<Briefcase className="h-4 w-4" />
 Careers;
-</Link>;
-</DropdownMenuItem>;
-<DropdownMenuItem asChild>;
-<Link to="/partners" className="flex items-center gap-2 text-white hover:bg-zion-purple/10">;
-<Users className="h-4 w-4" />;
+</Link>
+</DropdownMenuItem>
+<DropdownMenuItem asChild>
+<Link to="/partners" className="flex items-center gap-2 text-white hover:bg-zion-purple/10">
+<Users className="h-4 w-4" />
 Partners;
-</Link>;
-</DropdownMenuItem>;
-<DropdownMenuItem asChild>;
-<Link to="/contact" className="flex items-center gap-2 text-white hover:bg-zion-purple/10">;
-<Settings className="h-4 w-4" />;
+</Link>
+</DropdownMenuItem>
+<DropdownMenuItem asChild>
+<Link to="/contact" className="flex items-center gap-2 text-white hover:bg-zion-purple/10">
+<Settings className="h-4 w-4" />
 Contact;
-</Link>;
-</DropdownMenuItem>;
-</DropdownMenuContent>;
-</DropdownMenu>;
-</li>;
+</Link>
+</DropdownMenuItem>
+</DropdownMenuContent>
+</DropdownMenu>
+</li>
 
 {/* Messages link with unread counter */}
 {isAuthenticated && (
-<li>;
+<li>
 <Link;
-to="/messages";
+to="
 className={cn(
 "inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors relative",
-location.pathname === "/messages" || location.pathname === "/inbox";
-? "bg-zion-purple/20 text-zion-cyan";
-: "text-white hover:bg-zion-purple/10 hover:text-zion-cyan";
+location.pathname === "/messages" || location.pathname === "
+? "
+: "
 "inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-all duration-300 relative",
-location.pathname === "/messages" || location.pathname === "/inbox";
-? "bg-zion-purple/20 text-zion-cyan border border-zion-purple/30 shadow-lg shadow-zion-purple/20";
-: "text-white hover:bg-zion-purple/10 hover:text-zion-cyan hover:border hover:border-zion-purple/20";
+location.pathname === "/messages" || location.pathname === "
+? "
+: "
 )}
 onClick={closeDropdown}
->;
-<MessageSquare className="w-4 h-4 mr-1" />;
+>
+<MessageSquare className="w-4 h-4 mr-1" />
 Messages;
 {unreadCount > 0 && (
-<span className="absolute -top-1 -right-1 bg-zion-purple text-white text-xs rounded-full h-5 w-5 flex items-center justify-center animate-pulse">;
-<span className="absolute -top-1 -right-1 bg-zion-purple text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">;
-<span className="absolute -top-1 -right-1 bg-zion-purple text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">;
+<span className="absolute -top-1 -right-1 bg-zion-purple text-white text-xs rounded-full h-5 w-5 flex items-center justify-center animate-pulse">
+<span className="absolute -top-1 -right-1 bg-zion-purple text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
+<span className="absolute -top-1 -right-1 bg-zion-purple text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
 {unreadCount}
-</span>;
+</span>
 )}
-</Link>;
-</li>;
+</Link>
+</li>
 )}
 
 {/* Request Quote CTA */}
-<li>;
+<li>
 <Link;
-to="/request-quote";
+to="
 className="inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium bg-zion-purple hover:bg-zion-purple/80 text-white transition-colors"
->;
+>
 Get Quote;
-</Link>;
-</li>;
-</ul>;
-</nav>;
-);
+</Link>
+</li>
+</ul>
+</nav>
+)
 }
 <//nav><///nav>))
       key: 'contact',
@@ -1155,15 +1155,15 @@ onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}"
         {isMobileMenuOpen &&
           <motion.div,
 initial = {
-  { opacity: 0,
+  { opacity: 0;
 x: '100%'
 }}
             animate = {
-  { opacity: 1,
+  { opacity: 1;
 x: 0;
 }}
             exit = {
-  { opacity: 0,
+  { opacity: 0;
 x: '100%'
 }}
             transition={{ duration: 0.3 }}"
@@ -1232,5 +1232,5 @@ to={link.href}`
       </nav>
       <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />
     </>
-  );  )
+  )  )
 }

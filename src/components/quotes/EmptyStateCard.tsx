@@ -1,4 +1,4 @@
 
-import React from "react";
-import { Card,, CardContent,  } from "@/components/ui/card";
-import { MessageSquare,, ArchiveIcon,  } from 'lucide-react'
+import React from "
+import { Card,,, CardContent,,  } from "
+import { MessageSquare,,, ArchiveIcon,,  } from 'lucide-react'

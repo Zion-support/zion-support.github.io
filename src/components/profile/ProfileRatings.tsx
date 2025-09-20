@@ -9,17 +9,17 @@ const ProfileRatings: React.FC = () => {
 return (,
 <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">,
 <h3 className="text-xl font-bold mb-4">ProfileRatings</h3>,
-<p className="text-gray-300">Revolutionary technology component</p>;
+<p className="text-gray-300">Revolutionary technology component</p>
 },
 </div>)},
-export default ProfileRatings,;<//div><///div>
-import { useState,, useEffect,  } from 'react'
-import { Star,  } from 'lucide-react'
-import { ReviewStats,  } from "@/components/reviews/ReviewStats",
-import { ReviewsList,  } from "@/components/reviews/ReviewsList",
-import { useReviews,  } from "@/hooks/useReviews",
-import { Button,  } from "@/components/ui/button";
-import { Tabs,, TabsContent,, TabsList,, TabsTrigger,  } from "@/components/ui/tabs";
+export export default ProfileRatings,;<//div><///div>
+import { useState,,, useEffect,,  } from 'react'
+import { Star,,  } from 'lucide-react'
+import { ReviewStats,,  } from "@/components/reviews/ReviewStats",
+import { ReviewsList,,  } from "@/components/reviews/ReviewsList",
+import { useReviews,,  } from "@/hooks/useReviews",
+import { Button,,  } from "
+import { Tabs,,, TabsContent,,, TabsList,,, TabsTrigger,,  } from "
 interface ProfileRatingsProps {
 return (
     <div className="space-y-6">

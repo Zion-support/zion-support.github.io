@@ -1,5 +1,5 @@
 export const EMERGING_TECH_SERVICES = [
-    // Blockchain Services;
+    /
     {
         id: 'enterprise-blockchain-platform',
         title: 'Zion Enterprise Blockchain Platform',
@@ -64,7 +64,7 @@ export const EMERGING_TECH_SERVICES = [
         status: 'Active',
         innovationScore: 92,
     },
-    // IoT Services;
+    /
     {
         id: 'iot-ecosystem-platform',
         title: 'Zion IoT Ecosystem Platform',
@@ -124,7 +124,7 @@ export const EMERGING_TECH_SERVICES = [
         status: 'Active',
         innovationScore: 89,
     },
-    // Edge Computing Services;
+    /
     {
         id: 'edge-computing-orchestrator',
         title: 'Zion Edge Computing Orchestrator',
@@ -184,7 +184,7 @@ export const EMERGING_TECH_SERVICES = [
         status: 'Active',
         innovationScore: 94,
     },
-    // 5G Services;
+    /
     {
         id: '5g-network-optimization',
         title: 'Zion 5G Network Optimization',
@@ -244,7 +244,7 @@ export const EMERGING_TECH_SERVICES = [
         status: 'Active',
         innovationScore: 91,
     },
-    // AR/VR Services;
+    /
     {
         id: 'ar-vr-enterprise-platform',
         title: 'Zion AR/VR Enterprise Platform',
@@ -304,7 +304,7 @@ export const EMERGING_TECH_SERVICES = [
         status: 'Active',
         innovationScore: 88,
     },
-    // Robotics Services;
+    /
     {
         id: 'intelligent-robotics-automation',
         title: 'Zion Intelligent Robotics Automation',
@@ -365,7 +365,7 @@ export const EMERGING_TECH_SERVICES = [
         status: 'Active',
         innovationScore: 95,
     },
-    // Quantum Computing Services;
+    /
     {
         id: 'quantum-computing-simulation',
         title: 'Zion Quantum Computing Simulation',
@@ -425,7 +425,7 @@ export const EMERGING_TECH_SERVICES = [
         status: 'Active',
         innovationScore: 96,
     },
-    // Biotechnology Services;
+    /
     {
         id: 'ai-biotech-research-platform',
         title: 'Zion AI Biotech Research Platform',
@@ -485,7 +485,7 @@ export const EMERGING_TECH_SERVICES = [
         status: 'Active',
         innovationScore: 93,
     },
-    // Green Technology Services;
+    /
     {
         id: 'sustainable-tech-solutions',
         title: 'Zion Sustainable Tech Solutions',
@@ -545,7 +545,7 @@ export const EMERGING_TECH_SERVICES = [
         status: 'Active',
         innovationScore: 90,
     },
-    // Space Technology Services;
+    /
     {
         id: 'space-tech-innovation-platform',
         title: 'Zion Space Tech Innovation Platform',
@@ -605,7 +605,7 @@ export const EMERGING_TECH_SERVICES = [
         status: 'Active',
         innovationScore: 97,
     },
-    // NEW EMERGING TECHNOLOGY SERVICES;
+    /
     {
         id: "quantum-machine-learning-platform",
         title: "Quantum Machine Learning Platform",
@@ -1166,15 +1166,15 @@ export const EMERGING_TECH_SERVICES = [
     }
 ];
 export const getEmergingTechServiceByCategory = (category) => {
-    return EMERGING_TECH_SERVICES.filter(service => service.category === category);
-};
+    return EMERGING_TECH_SERVICES.filter(service => service.category === category)
+}
 export const getEmergingTechServiceBySubcategory = (subcategory) => {
-    return EMERGING_TECH_SERVICES.filter(service => service.subcategory === subcategory);
-};
+    return EMERGING_TECH_SERVICES.filter(service => service.subcategory === subcategory)
+}
 export const getFeaturedEmergingTechServices = () => {
-    // Return first 8 services since rating property doesn't exist;
-    return EMERGING_TECH_SERVICES.slice(0, 8);
-};
+    /
+    return EMERGING_TECH_SERVICES.slice(0, 8)
+}
 export const getServicesByInnovationScore = (minScore) => {
     ["Unity3D", "Unreal Engine", "React", "Node.js", "WebGL", "WebXR", "3D Graphics"],
         integrations;
@@ -1190,7 +1190,7 @@ export const getServicesByInnovationScore = (minScore) => {
         innovationLevel;
     "Advanced holographic platform for commercial applications",
         uniqueValue;
-    "First comprehensive platform for creating and distributing holographic content across multiple display types";
-};
+    "
+}
 
-export default EMERGING_TECH_SERVICES;
+export export default EMERGING_TECH_SERVICES;

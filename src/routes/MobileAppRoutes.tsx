@@ -1,12 +1,12 @@
-import { Routes; Route } from "react-router-dom, ";
-import React from "react;";
-// Next.js routing - no need for react-router-dom;
-import MobileLaunchPage from "@/pages/MobileLaunchPage;";
+import import { Routes;, Route } from "
+import React from "
+/
+import MobileLaunchPage from "
 
 export default function MobileAppRoutes() {
 return (
-<>;
-<Route path="launch" element={<MobileLaunchPage />} />;
-</>;
-);
-}<//><///>;
+<>
+<Route path="launch" element={<MobileLaunchPage />} />
+</>
+)
+}<//><///>

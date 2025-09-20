@@ -1,6 +1,6 @@
-import { useState,  } from 'react'
-import { formatDistanceToNow,  } from 'date-fns'
-import { Star,, Flag,, User,  } from 'lucide-react'
+import { useState,,  } from 'react'
+import { formatDistanceToNow,,  } from 'date-fns'
+import { Star,,, Flag,,, User,,  } from 'lucide-react'
 return (
     <div className="border rounded-lg p-4 bg-card">
       <div className="flex justify-between items-start mb-3">
@@ -186,7 +186,7 @@ onClick={handleReport}
     </div>
   )
 }</div>)
-};"
+}"
 return (<div className="border rounded-lg p-4 bg-card"> <div className="flex justify-between items-start mb-3"> <div className="flex items-center gap-3"> {"
   review.is anonymous ? (<Avatar> <AvatarFallback className="bg-muted"> <User className="h-4 w-4" /> </AvatarFallback> </Avatar>) : (<Avatar> {
   review.reviewer profile?.avatar url ? (<AvatarImage src= {

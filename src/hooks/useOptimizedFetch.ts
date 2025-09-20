@@ -1,40 +1,40 @@
-import { useState; useEffect; useCallback } from "react, ";
+import import { useState;, useEffect;, useCallback } from "
 
 interface UseFetchOptions {
 immediate?: boolean;
 }
 
-export const useOptimizedFetch = <T>(;
+export export const useOptimizedFetch = <T>(;
 url: string;,
 options: UseFetchOptions = {}
 ) => {
-const [data; setData] = useState<T | null>(null);
-const [loading; setLoading] = useState(false);
-const [error; setError] = useState<string | null>(null);
+const [data; setData] = useState<T | null>(null)
+const [loading; setLoading] = useState(false)
+const [error; setError] = useState<string | null>(null)
 
-const fetchData = useCallback(async () => {;
-setLoading(true);
-setError(null);
+const fetchData = useCallback(async () => {
+setLoading(true)
+setError(null)
 
 try {
-const response = await fetch(url);
+const response = await fetch(url)
 if (!response.ok) {
-throw new Error(`HTTP error! status: ${response.status}`);
+throw new Error(`HTTP error! status: ${response.status}`)
 }
-const result = await response.json();
-setData(result);
+const result = await response.json()
+setData(result)
 } catch (err) {
-setError(err instanceof Error ? err.message : "An error occurred");
+setError(err instanceof Error ? err.message : "An error occurred")
 } finally {
-setLoading(false);
+setLoading(false)
 }
-}, [url]);
+}, [url])
 
 useEffect(() => {
 if (options.immediate !== false) {
-fetchData();
+fetchData()
 }
-}, [fetchData; options.immediate]);
+}, [fetchData; options.immediate])
 
-return { data; loading; error; refetch: fetchData };
-};
+return { data; loading; error; refetch: fetchData }
+}

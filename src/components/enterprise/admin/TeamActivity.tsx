@@ -1,5 +1,5 @@
 
-import React from "react";
+import React from "
 import {
 return (
     <div className="space-y-6">
@@ -62,7 +62,7 @@ type="search"
   )
 }
 const getCategoryBadge = (category: string) => {
-};"
+}"
   activities.map ( (activity) => (<TableRow key= {
   activity.id,
 }> </TableCell> </TableRow>) ) "

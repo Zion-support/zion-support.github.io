@@ -3,7 +3,7 @@ id: string;
 name: string;
 }
 
-import { import { motion; AnimatePresence   } from "framer-motion",
+import import { import, {, motion;, AnimatePresence, ,  } from "framer-motion",
 ,
 export default function Page("props": "any) {,
 setExpandedSections(newExpanded)"},
@@ -30,7 +30,7 @@ initial = {,
 "}}
 animate = {,
 { "opacity": "1",
-"height": "auto";
+"height": "
 }}
 exit = {,
 { "opacity": "0",
@@ -101,4 +101,4 @@ transition = {,
 </aside>,) },
 '"`,
 </motion, >,
-</motion>]]<//motion><///motion>;
+</motion>]]<//motion><///motion>

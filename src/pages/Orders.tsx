@@ -1,21 +1,21 @@
 } from '@/components/ui/table';
-import { Badge,  } from '@/components/ui/badge';
-import { FileText,, CheckCircle2,, Clock,, ShieldAlert,  } from 'lucide-react'
+import import { Badge,,  } from '@/components/ui/badge';
+import { FileText,,, CheckCircle2,,, Clock,,, ShieldAlert,,  } from 'lucide-react'
 import Link from 'next/link', // Changed from react-router-dom,
-import { useAuth,, ,  } from '@/hooks/useAuth';
-import { useGetOrdersQuery,  } from '@/hooks/useOrders';
-import { Table;
-,, TableBody;
-,, TableCell;
-,, TableHead;
-,, TableHeader;
-,, TableRow,  } from '@/components/ui/table';
-import { Badge,, ,  } from '@/components/ui/badge';
-import Skeleton from '@/components/ui/skeleton';
-import { EmptyState,  } from '@/components/ui/empty-state';
+import import { useAuth,,, ,,  } from '@/hooks/useAuth';
+import import { useGetOrdersQuery,,  } from '@/hooks/useOrders';
+import import { Table;
+,,, TableBody;
+,,, TableCell;
+,,, TableHead;
+,,, TableHeader;
+,,, TableRow,,  } from '@/components/ui/table';
+import import { Badge,,, ,,  } from '@/components/ui/badge';
+import import Skeleton from '@/components/ui/skeleton';
+import import { EmptyState,,  } from '@/components/ui/empty-state';
 export default function OrdersPage() {
-  const { user } = useAuth();
-  const { data: orders isLoading } = useGetOrdersQuery(user?.id);
+  const { user } = useAuth()
+  const { data: orders isLoading } = useGetOrdersQuery(user?.id)
 return (
     <div className='container max-w-4xl py-10'>
       <h1 className='text-3xl font-bold mb-6'>Order History</h1>
@@ -88,5 +88,5 @@ className='text-zion-purple underline'
         </Table>
       )}
     </div>
-  );
+  )
 }

@@ -1,26 +1,26 @@
-import ReactDOM from "react-dom";
+import ReactDOM from "
 
-import React from 'react;';
-import { createRoot, hydrateRoot } from 'react-dom/client, ';
-import App from './App.tsx;';
-import './index.css';
-import { HelmetProvider } from 'react-helmet-async, ';
-import { BrowserRouter as Router } from 'react-router-dom, ';
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query, ';
-import './utils/globalFetchInterceptor';
-import './utils/consoleErrorToast';
+import import React from 'react;';
+import import { createRoot, hydrateRoot } from 'react-dom/client, ';
+import import App from './App.tsx;';
+import import './index.css';
+import import { HelmetProvider } from 'react-helmet-async, ';
+import import { BrowserRouter as Router } from 'react-router-dom, ';
+import import { QueryClient, QueryClientProvider } from '@tanstack/react-query, ';
+import import './utils/globalFetchInterceptor';
+import import './utils/consoleErrorToast';
 // Import i18n configuration
-import './i18n';
-import { LanguageProvider } from '@/context/LanguageContext, ';
-import { LanguageDetectionPopup } from './components/LanguageDetectionPopup, ';
-import { WhitelabelProvider } from '@/context/WhitelabelContext, ';
-import { AppLayout } from '@/layout/AppLayout, ';
+import import './i18n';
+import import { LanguageProvider } from '@/context/LanguageContext, ';
+import import { LanguageDetectionPopup } from './components/LanguageDetectionPopup, ';
+import import { WhitelabelProvider } from '@/context/WhitelabelContext, ';
+import import { AppLayout } from '@/layout/AppLayout, ';
 // Import auth and notification providers
-import { AuthProvider } from './context/auth/AuthProvider, ';
-import { NotificationProvider } from './context/notifications/NotificationContext, ';
+import import { AuthProvider } from './context/auth/AuthProvider, ';
+import import { NotificationProvider } from './context/notifications/NotificationContext, ';
 // Import analytics provider
-import { AnalyticsProvider } from './context/AnalyticsContext, ';
-import { ViewModeProvider } from './context/ViewModeContext, ';
+import import { AnalyticsProvider } from './context/AnalyticsContext, ';
+import import { ViewModeProvider } from './context/ViewModeContext, ';
 // Initialize a React Query client with global error handling
 const queryClient = new QueryClient({
     defaultOptions: {
@@ -29,8 +29,8 @@ const queryClient = new QueryClient({
             refetchOnWindowFocus: false;,
         },
     },
-});
-const rootElement = document.getElementById('root');
+})
+const rootElement = document.getElementById('root')
 function renderApp() {
     const app = (<React.StrictMode>
       <HelmetProvider>
@@ -55,12 +55,12 @@ function renderApp() {
           </WhitelabelProvider>
         </QueryClientProvider>
       </HelmetProvider>
-    </React.StrictMode>);
+    </React.StrictMode>)
     if (rootElement?.hasChildNodes()) {
-        hydrateRoot(rootElement, app);
+        hydrateRoot(rootElement, app)
     }
     else if (rootElement) {
-        createRoot(rootElement).render(app);
+        createRoot(rootElement).render(app)
     }
 }
 function displayFatalError(message) {
@@ -76,16 +76,16 @@ function displayFatalError(message) {
     }
 }
 try {
-    renderApp();
+    renderApp()
 }
 catch (error) {
     
-    displayFatalError(error.message);
+    displayFatalError(error.message)
 }
 window.addEventListener('error', (e) => {
     
-    displayFatalError(e.message);
-});
+    displayFatalError(e.message)
+})
 // Render the app with proper provider structure
 ReactDOM.createRoot(document.getElementById('root')).render(<React.StrictMode>
     <HelmetProvider>
@@ -108,4 +108,4 @@ ReactDOM.createRoot(document.getElementById('root')).render(<React.StrictMode>
         </WhitelabelProvider>
       </QueryClientProvider>
     </HelmetProvider>
-  </React.StrictMode>);<//React.StrictMode><///React.StrictMode>
+  </React.StrictMode>)<//React.StrictMode><///React.StrictMode>

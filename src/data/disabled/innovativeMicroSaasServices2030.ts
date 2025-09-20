@@ -1,6 +1,6 @@
-import { ProductListing } from "@/types/listings, ";export; const; INNOVATIVE_MICRO_SAAS_SERVICES_20;
+import import { ProductListing } from "export; const; INNOVATIVE_MICRO_SAAS_SERVICES_20;
 o30: ProductListing[] = [;
-// AI-Powered; Micro; SAAS Solutions;
+/ Micro; SAAS Solutions;
 {
 i;d: ",
 ai-content-creation-studio-pro",
@@ -197,5 +197,5 @@ Shopify", ",
 WooCommerce", ",
 Google Analytics", ",
 Facebook Ads"",
-Google; Ads"],};
+Google; Ads"],}
 ];

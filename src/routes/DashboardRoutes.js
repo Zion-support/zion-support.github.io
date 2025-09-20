@@ -1,35 +1,35 @@
-import { jsx as _jsx, Fragment as _Fragment, jsxs as _jsxs } from "react/jsx-runtime, ";
-import { Route } from 'react-router-dom, ';
-import Dashboard from '@/pages/Dashboard;';
-import ClientDashboard from '@/pages/ClientDashboard;';
-import TalentDashboard from '@/pages/TalentDashboard;';
+import { jsx as _jsx, Fragment as _Fragment, jsxs as _jsxs } from "
+import import { Route } from 'react-router-dom, ';
+import import Dashboard from '@/pages/Dashboard;';
+import import ClientDashboard from '@/pages/ClientDashboard;';
+import import TalentDashboard from '@/pages/TalentDashboard;';
 export default function DashboardRoutes() {
-    return (_jsxs(_Fragment, { children: [_jsx(Route, { path: "", element: _jsx(Dashboard, {}) }), _jsx(Route, { path: "client", element: _jsx(ClientDashboard, {}) }), _jsx(Route, { path: "talent", element: _jsx(TalentDashboard, {}) })] }));
+    return (_jsxs(_Fragment, { children: [_jsx(Route, { path: "", element: _jsx(Dashboard, {}) }), _jsx(Route, { path: "client", element: _jsx(ClientDashboard, {}) }), _jsx(Route, { path: "talent", element: _jsx(TalentDashboard, {}) })] }))
 }
-import { Route, Routes } from "react-router-dom, ";
-import { ProtectedRoute } from "@/components/ProtectedRoute, ";
-import Dashboard from "@/pages/Dashboard";
-import ClientDashboard from "@/pages/ClientDashboard";
-import TalentDashboard from "@/pages/TalentDashboard";
-import CreatorDashboard from "@/pages/CreatorDashboard";
-import Analytics from "@/pages/Analytics";
-import ProjectMilestones from "@/pages/ProjectMilestones";
-import ProjectDetails from "@/pages/ProjectDetails";
-import ProjectRoom from "@/pages/ProjectRoom";
-import MessagingInbox from "@/pages/MessagingInbox";
-import Payments from "@/pages/Payments";
-import Interviews from "@/pages/Interviews";
-import Notifications from "@/pages/Notifications";
-import ApplicationStatusTracker from "@/pages/ApplicationStatusTracker";
-import HiringTracker from "@/pages/HiringTracker";
-import PortfolioBuilder from "@/pages/PortfolioBuilder";
-import Referrals from "@/pages/Referrals";
-import DeveloperPortal from "@/pages/DeveloperPortal";
-import WalletPage from "@/pages/Wallet";
-import OrdersPage from "@/pages/Orders";
-import OrderDetailPage from "@/pages/OrderDetail";
-import ContractBuilder from "@/pages/ContractBuilder";
-import Projects from "@/pages/Projects";
+import { Route, Routes } from "
+import { ProtectedRoute } from "
+import Dashboard from "
+import ClientDashboard from "
+import TalentDashboard from "
+import CreatorDashboard from "
+import Analytics from "
+import ProjectMilestones from "
+import ProjectDetails from "
+import ProjectRoom from "
+import MessagingInbox from "
+import Payments from "
+import Interviews from "
+import Notifications from "
+import ApplicationStatusTracker from "
+import HiringTracker from "
+import PortfolioBuilder from "
+import Referrals from "
+import DeveloperPortal from "
+import WalletPage from "
+import OrdersPage from "
+import OrderDetailPage from "
+import ContractBuilder from "
+import Projects from "
 const DashboardRoutes = () => {
     return (<Routes>
       {/* Dashboard Routes */}
@@ -105,6 +105,6 @@ const DashboardRoutes = () => {
       <Route path="/contract-builder" element={<ProtectedRoute>
             <ContractBuilder />
           </ProtectedRoute>}/>
-    </Routes>);
-};
-export default DashboardRoutes;
+    </Routes>)
+}
+export export default DashboardRoutes;

@@ -1,10 +1,10 @@
-import { Loader2,  } from 'lucide-react'
-import Link from 'next/link';
-import { ErrorState,  } from '@/components/jobs/applications';
+import { Loader2,,  } from 'lucide-react'
+import import Link from 'next/link';
+import import { ErrorState,,  } from '@/components/jobs/applications';
 export default function EquipmentRecommendations() {
 useEffect((,) => {
     if (isAuthenticated && user?.id) {
-      setLoading(true);
+      setLoading(true)
       fetchRecommendations(user.id)
         .then(setListings)
         .catch(() => setError(true))

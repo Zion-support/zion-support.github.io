@@ -1,9 +1,9 @@
 
-import { SEO,  } from "@/components/SEO",
-import { GradientHeading,  } from "@/components/GradientHeading",
-import { Button,  } from "@/components/ui/button";
-import { Leaf,, Server,, Cloud,  } from 'lucide-react'
-import Link from "next/link";
+import { SEO,,  } from "@/components/SEO",
+import { GradientHeading,,  } from "@/components/GradientHeading",
+import { Button,,  } from "
+import { Leaf,,, Server,,, Cloud,,  } from 'lucide-react'
+import Link from "
 export default function GreenIT() {
 return (
     <>
@@ -73,178 +73,178 @@ key={index}
                     </h3>
                     <p className='text-zion-slate-light text-center'>
 import React, { useState } from 'react'
-import { motion,  } from 'framer-motion'
-import { SEO,  } from '../components/SEO'
+import { motion,,  } from 'framer-motion'
+import { SEO,,  } from '../components/SEO'
 import { Leaf,
 Zap
-, , Sun,
+,, ,, Sun,
 Wind
-, , Droplets,
+,, ,, Droplets,
 Recycle
-, , TreePine,
+,, ,, TreePine,
 Globe
-, , TrendingUp,
+,, ,, TrendingUp,
 Target
-, , CheckCircle,
+,, ,, CheckCircle,
 Award
-, , Users,
+,, ,, Users,
 Building2
-, , Server,
+,, ,, Server,
 Monitor
-, , Smartphone,
+,, ,, Smartphone,
 Cloud
-, , Database,
+,, ,, Database,
 Shield
-, , BarChart3,
+,, ,, BarChart3,
 Settings
-, , ChevronDown,
+,, ,, ChevronDown,
 ChevronUp
-, , Lightbulb,
+,, ,, Lightbulb,
 Cpu
-, , HardDrive,
+,, ,, HardDrive,
 Network
-, , Smartphone, as, Mobile,
+,, ,, Smartphone,, as,, Mobile,
 Laptop
-, , Tablet,
+,, ,, Tablet,
 Printer
-, , Router,
+,, ,, Router,
 Camera
-, , Speaker,
+,, ,, Speaker,
 Headphones
-, , Keyboard,
+,, ,, Keyboard,
 Mouse
-, , ExternalHardDrive,
+,, ,, ExternalHardDrive,
 Usb
-, , Wifi,
+,, ,, Wifi,
 Bluetooth
-, , Battery,
+,, ,, Battery,
 Power
-, , Save,
+,, ,, Save,
 Eco
-, , Plant,
+,, ,, Plant,
 Mountain
-, , Ocean,
+,, ,, Ocean,
 Forest
-, , MountainSnow,
+,, ,, MountainSnow,
 Thermometer
-, , Gauge,
+,, ,, Gauge,
 Activity
-, , LineChart,
+,, ,, LineChart,
 PieChart
-, , Calculator,
+,, ,, Calculator,
 FileText
-, , Calendar,
+,, ,, Calendar,
 Clock
-, , Star,
+,, ,, Star,
 Heart
-, , Eye,
+,, ,, Eye,
 Search
-, , Filter,
+,, ,, Filter,
 ArrowRight
-, , Mail,
+,, ,, Mail,
 Phone
-, , MapPin,
-Clock, as, Time,
+,, ,, MapPin,
+Clock,, as,, Time,
 DollarSign
-, , Percent,
+,, ,, Percent,
 Plus
-, , Minus,
+,, ,, Minus,
 X
-, , Check,
+,, ,, Check,
 AlertTriangle
-, , Info,
+,, ,, Info,
 HelpCircle
-, , ExternalLink,
+,, ,, ExternalLink,
 Download
-, , BookOpen,
+,, ,, BookOpen,
 Video
-, , Play,
+,, ,, Play,
 Pause
-, , SkipBack,
+,, ,, SkipBack,
 SkipForward
-, , Volume2,
+,, ,, Volume2,
 VolumeX
-, , Maximize2,
+,, ,, Maximize2,
 Minimize2
-, , RotateCcw,
+,, ,, RotateCcw,
 RefreshCw
-, , PowerOff,
+,, ,, PowerOff,
 PowerOn
-, , BatteryCharging,
+,, ,, BatteryCharging,
 BatteryFull
-, , BatteryLow,
+,, ,, BatteryLow,
 BatteryMedium
-, , BatteryEmpty,
+,, ,, BatteryEmpty,
 WifiOff
-, , WifiLow,
+,, ,, WifiLow,
 WifiMedium
-, , WifiHigh,
+,, ,, WifiHigh,
 Signal
-, , SignalLow,
+,, ,, SignalLow,
 SignalMedium
-, , SignalHigh,
+,, ,, SignalHigh,
 SignalOff
-, , WifiHigh, as, WifiStrong,
-WifiMedium, as, WifiMedium2,
-WifiLow, as, WifiWeak,
-WifiOff, as, WifiNone,
-SignalHigh, as, SignalStrong,
-SignalMedium, as, SignalMedium2,
-SignalLow, as, SignalWeak,
-SignalOff, as, SignalNone,
-SignalHigh, as, SignalFull,
-SignalMedium, as, SignalHalf,
-SignalLow, as, SignalQuarter,
-SignalOff, as, SignalEmpty,
-WifiHigh, as, WifiFull,
-WifiMedium, as, WifiHalf,
-WifiLow, as, WifiQuarter,
-WifiOff, as, WifiEmpty,
-BatteryCharging, as, BatteryCharging2,
-BatteryFull, as, BatteryFull2,
-BatteryLow, as, BatteryLow2,
-BatteryMedium, as, BatteryMedium2,
-BatteryEmpty, as, BatteryEmpty2,
-BatteryCharging, as, BatteryCharging3,
-BatteryFull, as, BatteryFull3,
-BatteryLow, as, BatteryLow3,
-BatteryMedium, as, BatteryMedium3,
-BatteryEmpty, as, BatteryEmpty3,
-BatteryCharging, as, BatteryCharging4,
-BatteryFull, as, BatteryFull4,
-BatteryLow, as, BatteryLow4,
-BatteryMedium, as, BatteryMedium4,
-BatteryEmpty, as, BatteryEmpty4,
-BatteryCharging, as, BatteryCharging5,
-BatteryFull, as, BatteryFull5,
-BatteryLow, as, BatteryLow5,
-BatteryMedium, as, BatteryMedium5,
-BatteryEmpty, as, BatteryEmpty5,
-BatteryCharging, as, BatteryCharging6,
-BatteryFull, as, BatteryFull6,
-BatteryLow, as, BatteryLow6,
-BatteryMedium, as, BatteryMedium6,
-BatteryEmpty, as, BatteryEmpty6,
-BatteryCharging, as, BatteryCharging7,
-BatteryFull, as, BatteryFull7,
-BatteryLow, as, BatteryLow7,
-BatteryMedium, as, BatteryMedium7,
-BatteryEmpty, as, BatteryEmpty7,
-BatteryCharging, as, BatteryCharging8,
-BatteryFull, as, BatteryFull8,
-BatteryLow, as, BatteryLow8,
-BatteryMedium, as, BatteryMedium8,
-BatteryEmpty, as, BatteryEmpty8,
-BatteryCharging, as, BatteryCharging9,
-BatteryFull, as, BatteryFull9,
-BatteryLow, as, BatteryLow9,
-BatteryMedium, as, BatteryMedium9,
-BatteryEmpty, as, BatteryEmpty9,
-BatteryCharging, as, BatteryCharging10,
-BatteryFull, as, BatteryFull10,
-BatteryLow, as, BatteryLow10,
-BatteryMedium, as, BatteryMedium10,
-BatteryEmpty, as, BatteryEmpty10,
+,, ,, WifiHigh,, as,, WifiStrong,
+WifiMedium,, as,, WifiMedium2,
+WifiLow,, as,, WifiWeak,
+WifiOff,, as,, WifiNone,
+SignalHigh,, as,, SignalStrong,
+SignalMedium,, as,, SignalMedium2,
+SignalLow,, as,, SignalWeak,
+SignalOff,, as,, SignalNone,
+SignalHigh,, as,, SignalFull,
+SignalMedium,, as,, SignalHalf,
+SignalLow,, as,, SignalQuarter,
+SignalOff,, as,, SignalEmpty,
+WifiHigh,, as,, WifiFull,
+WifiMedium,, as,, WifiHalf,
+WifiLow,, as,, WifiQuarter,
+WifiOff,, as,, WifiEmpty,
+BatteryCharging,, as,, BatteryCharging2,
+BatteryFull,, as,, BatteryFull2,
+BatteryLow,, as,, BatteryLow2,
+BatteryMedium,, as,, BatteryMedium2,
+BatteryEmpty,, as,, BatteryEmpty2,
+BatteryCharging,, as,, BatteryCharging3,
+BatteryFull,, as,, BatteryFull3,
+BatteryLow,, as,, BatteryLow3,
+BatteryMedium,, as,, BatteryMedium3,
+BatteryEmpty,, as,, BatteryEmpty3,
+BatteryCharging,, as,, BatteryCharging4,
+BatteryFull,, as,, BatteryFull4,
+BatteryLow,, as,, BatteryLow4,
+BatteryMedium,, as,, BatteryMedium4,
+BatteryEmpty,, as,, BatteryEmpty4,
+BatteryCharging,, as,, BatteryCharging5,
+BatteryFull,, as,, BatteryFull5,
+BatteryLow,, as,, BatteryLow5,
+BatteryMedium,, as,, BatteryMedium5,
+BatteryEmpty,, as,, BatteryEmpty5,
+BatteryCharging,, as,, BatteryCharging6,
+BatteryFull,, as,, BatteryFull6,
+BatteryLow,, as,, BatteryLow6,
+BatteryMedium,, as,, BatteryMedium6,
+BatteryEmpty,, as,, BatteryEmpty6,
+BatteryCharging,, as,, BatteryCharging7,
+BatteryFull,, as,, BatteryFull7,
+BatteryLow,, as,, BatteryLow7,
+BatteryMedium,, as,, BatteryMedium7,
+BatteryEmpty,, as,, BatteryEmpty7,
+BatteryCharging,, as,, BatteryCharging8,
+BatteryFull,, as,, BatteryFull8,
+BatteryLow,, as,, BatteryLow8,
+BatteryMedium,, as,, BatteryMedium8,
+BatteryEmpty,, as,, BatteryEmpty8,
+BatteryCharging,, as,, BatteryCharging9,
+BatteryFull,, as,, BatteryFull9,
+BatteryLow,, as,, BatteryLow9,
+BatteryMedium,, as,, BatteryMedium9,
+BatteryEmpty,, as,, BatteryEmpty9,
+BatteryCharging,, as,, BatteryCharging10,
+BatteryFull,, as,, BatteryFull10,
+BatteryLow,, as,, BatteryLow10,
+BatteryMedium,, as,, BatteryMedium10,
+BatteryEmpty,, as,, BatteryEmpty10,
  } from 'lucide-react'
 export default function GreenIT(...args: unknown[]): unknown {
   const [expandedSection, setExpandedSection] = useState<string | null>(null)
@@ -259,7 +259,7 @@ export default function GreenIT(...args: unknown[]): unknown {
 id: 'energy - monitoring'
       name: 'Smart Energy Monitoring',
 category: 'energy'
-      icon: Activity,
+      icon: Activity;
 description: 'Real - time energy consumption tracking and optimization',
 features: []
         'Real - time energy consumption monitoring'
@@ -283,7 +283,7 @@ implementation: '2 - 4 weeks'
       id: 'virtualization',
 name: 'Server Virtualization'
       category: 'hardware',
-icon: Server,
+icon: Server;
 description: 'Consolidate physical servers to reduce power consumption',
 features: ['Server consolidation and virtualization'
         'Dynamic resource allocation'
@@ -306,7 +306,7 @@ implementation: '4 - 8 weeks'
       id: 'cloud - optimization',
 name: 'Cloud Infrastructure Optimization'
       category: 'software',
-icon: Cloud,
+icon: Cloud;
 description: 'Optimize cloud resources for maximum efficiency',
 features: ['Cloud resource optimization'
         'Auto - scaling and load balancing'
@@ -329,7 +329,7 @@ implementation: '3 - 6 weeks'
       id: 'data - center - efficiency',
 name: 'Data Center Efficiency'
       category: 'data',
-icon: Database,
+icon: Database;
 description: 'Optimize data center operations for sustainability',
 features: ['Cooling system optimization'
         'Power distribution efficiency'
@@ -352,7 +352,7 @@ implementation: '8 - 16 weeks'
       id: 'smart - lighting',
 name: 'Smart Lighting Systems'
       category: 'energy',
-icon: Lightbulb,
+icon: Lightbulb;
 description: 'Intelligent lighting control for energy savings',
 features: ['Motion - sensing controls'
         'Daylight harvesting'
@@ -375,7 +375,7 @@ implementation: '2 - 3 weeks'
       id: 'green - software',
 name: 'Sustainable Software Development'
       category: 'software',
-icon: Code,
+icon: Code;
 description: 'Eco - friendly software development practices',
 features: ['Energy - efficient algorithms'
         'Code optimization techniques'
@@ -398,7 +398,7 @@ implementation: 'Ongoing'
       id: 'renewable - energy',
 name: 'Renewable Energy Integration'
       category: 'energy',
-icon: Sun,
+icon: Sun;
 description: 'Integrate solar wind and other renewable sources'
       features: ['Solar panel installation'
         'Wind turbine integration'
@@ -421,7 +421,7 @@ implementation: '12 - 24 weeks'
       id: 'green - hardware',
 name: 'Energy - Efficient Hardware'
       category: 'hardware',
-icon: Cpu,
+icon: Cpu;
 description: 'Select and deploy energy - efficient computing equipment',
 features: ['Energy Star certified equipment'
         'Low-power processors'
@@ -444,7 +444,7 @@ implementation: '1 - 2 weeks'
       id: 'waste - reduction',
 name: 'Electronic Waste Reduction'
       category: 'hardware',
-icon: Recycle,
+icon: Recycle;
 description: 'Comprehensive e - waste management and recycling',
 features: ['E - waste assessment and audit'
         'Secure data destruction'
@@ -467,7 +467,7 @@ implementation: '2 - 4 weeks'
       id: 'carbon - tracking',
 name: 'Carbon Footprint Tracking'
       category: 'software',
-icon: BarChart3,
+icon: BarChart3;
 description: 'Monitor and reduce carbon emissions',
 features: ['Carbon emission calculation'
         'Real - time monitoring'
@@ -490,7 +490,7 @@ implementation: '4 - 6 weeks'
       id: 'green - networking',
 name: 'Energy - Efficient Networking'
       category: 'data',
-icon: Network,
+icon: Network;
 description: 'Optimize network infrastructure for energy efficiency',
 features: ['Network equipment optimization'
         'Traffic management'
@@ -513,7 +513,7 @@ implementation: '3 - 5 weeks'
       id: 'sustainability - reporting',
 name: 'Sustainability Reporting Platform'
       category: 'software',
-icon: FileText,
+icon: FileText;
 description: 'Comprehensive sustainability reporting and analytics',
 features: ['Environmental data collection'
         'Sustainability metrics tracking'
@@ -534,7 +534,7 @@ implementation: '6 - 8 weeks'
 }
   ]
 export default function GreenIT(...args: any[]): any {): unknown {): unknown {}
-  const [expandedSection, setExpandedSection] = useState<string | null>(null);'
+  const [expandedSection, setExpandedSection] = useState<string | null>(null)'
   const [selectedCategory, setSelectedCategory] = useState('all')}
   return()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"

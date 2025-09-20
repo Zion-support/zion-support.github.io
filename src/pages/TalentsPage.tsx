@@ -1,16 +1,16 @@
-import { useRouter,, ,  } from 'next/router';
-import { useState,, useEffect,, useCallback,, useMemo,, ,  } from 'react';
-import { motion,, AnimatePresence,, ,  } from 'framer-motion';
-import { ArrowUp,, Filter,, SortAsc,, Users,, TrendingUp,, Star,, Verified,, MapPin,  } from 'lucide-react'
-import { useInfiniteScrollPagination,, ,  } from '@/hooks/useInfiniteScroll';
-import { generateAITalents,, getTalentMarketStats,, getRecommendedTalents,, ,  } from '@/utils/talentAutoFeedAlgorithm';
-import { TALENT_PROFILES,, ,  } from '@/data/talentData';
-import { TalentProfile,, ,  } from '@/types/talent';
-import { SkeletonCard,, ,  } from '@/components/ui/skeleton';
-import { Button,, ,  } from '@/components/ui/button';
-import { Badge,, ,  } from '@/components/ui/badge';
-import { Card,, CardContent,, CardHeader,, CardTitle,, ,  } from '@/components/ui/card';
-import Spinner from '@/components/ui/spinner';
+import import { useRouter,,, ,,  } from 'next/router';
+import import { useState,,, useEffect,,, useCallback,,, useMemo,,, ,,  } from 'react';
+import import { motion,,, AnimatePresence,,, ,,  } from 'framer-motion';
+import { ArrowUp,,, Filter,,, SortAsc,,, Users,,, TrendingUp,,, Star,,, Verified,,, MapPin,,  } from 'lucide-react'
+import import { useInfiniteScrollPagination,,, ,,  } from '@/hooks/useInfiniteScroll';
+import import { generateAITalents,,, getTalentMarketStats,,, getRecommendedTalents,,, ,,  } from '@/utils/talentAutoFeedAlgorithm';
+import import { TALENT_PROFILES,,, ,,  } from '@/data/talentData';
+import import { TalentProfile,,, ,,  } from '@/types/talent';
+import import { SkeletonCard,,, ,,  } from '@/components/ui/skeleton';
+import import { Button,,, ,,  } from '@/components/ui/button';
+import import { Badge,,, ,,  } from '@/components/ui/badge';
+import import { Card,,, CardContent,,, CardHeader,,, CardTitle,,, ,,  } from '@/components/ui/card';
+import import Spinner from '@/components/ui/spinner';
 // Market insights component for talents,
 const TalentMarketInsights: React.FC<{ stats: any }> = ({ stats }) => (
   <Card className;

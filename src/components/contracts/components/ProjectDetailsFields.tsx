@@ -9,15 +9,15 @@ const ProjectDetailsFields: React.FC = () => {
 return (,
 <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">,
 <h3 className="text-xl font-bold mb-4">ProjectDetailsFields</h3>,
-<p className="text-gray-300">Revolutionary technology component</p>;
+<p className="text-gray-300">Revolutionary technology component</p>
 },
 </div>)},
-export default ProjectDetailsFields,;<//div><///div>
+export export default ProjectDetailsFields,;<//div><///div>
 
-import { format,  } from "date-fns";
-import { CalendarIcon,  } from 'lucide-react'
+import { format,,  } from "
+import { CalendarIcon,,  } from 'lucide-react'
 interface ProjectDetailsFieldsProps {
-  form: UseFormReturn<ContractFormValues>;  form: UseFormReturn<ContractFormValues>
+  form: UseFormReturn<ContractFormValues>  form: UseFormReturn<ContractFormValues>
 }
 export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {
   return (

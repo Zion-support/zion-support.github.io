@@ -1,28 +1,28 @@
 'use client'
 import React { Component ErrorInfo ReactNode } from 'react'
-import { motion,, AnimatePresence,  } from 'framer-motion'
+import { motion,,, AnimatePresence,,  } from 'framer-motion'
 import { AlertTriangle,
 RefreshCw
-, , Home,
+,, ,, Home,
 Bug
-, , Send,
+,, ,, Send,
 Clipboard,
  } from 'lucide-react'
-import { Button,  } from '@/components/ui/button'
-import { Card,, CardContent,, CardHeader,, CardTitle,  } from '@/components/ui/card'
-import { Badge,  } from '@/components/ui/badge'
+import { Button,,  } from '@/components/ui/button'
+import { Card,,, CardContent,,, CardHeader,,, CardTitle,,  } from '@/components/ui/card'
+import { Badge,,  } from '@/components/ui/badge'
 import * as Sentry from '@sentry/nextjs'
-import { logErrorToProduction } from '@/utils/productionLogger';
+import import { logErrorToProduction } from '@/utils/productionLogger';
 interface ErrorBoundaryState {
-  hasError: boolean,
+  hasError: boolean;
 error: Error | null,
 errorInfo: ErrorInfo | null,
 errorId: string | null,
-retryCount: number,
-userFeedback: string,
-showDetails: boolean,
+retryCount: number;
+userFeedback: string;
+showDetails: boolean;
 interface ErrorBoundaryProps {
-  children: ReactNode,
+  children: ReactNode;
 fallback?: ReactNode,
 onError?: (error: Error errorInfo: ErrorInfo) => void,
 enableRetry?: boolean,

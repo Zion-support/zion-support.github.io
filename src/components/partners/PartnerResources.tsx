@@ -4,7 +4,7 @@ title: string;
   description: string;,
 type: 'image' | 'video' | 'document' | 'link';
   icon: JSX.Element;,
-url: string,
+url: string;
 export function PartnerResources() {
   const resources: ResourceItem[] = [
     {

@@ -1,4 +1,4 @@
-import { useState; useEffect } from "react, ";
+import import { useState;, useEffect } from "
 
 interface User {
 id: string;,
@@ -16,41 +16,41 @@ accessToken: string | null;,
 refreshToken: string | null;,
 }
 
-export const useAuthState: any = () => {;
-const [user; setUser] = useState<User | null>(null);
-const [isLoading; setIsLoading] = useState(true);
-const [onboardingStep; setOnboardingStep] = useState(0);
+export const useAuthState: any = () => {
+const [user; setUser] = useState<User | null>(null)
+const [isLoading; setIsLoading] = useState(true)
+const [onboardingStep; setOnboardingStep] = useState(0)
 const [tokens; setTokens] = useState<AuthTokens>({
 accessToken: null;,
 refreshToken: null;,
-});
+})
 
 useEffect(() => {
-// Check for existing auth state on mount;
+/
 const checkAuthState = async () => {
 try {
-if (typeof window !== "undefined") {;
-const auth = localStorage.getItem("auth") || sessionStorage.getItem("auth");
+if (if (typeof window !== "undefined") {;) {
+const auth = localStorage.getItem("auth") || sessionStorage.getItem("auth")
 if (auth) {
-const parsed = JSON.parse(auth);
+const parsed = JSON.parse(auth)
 if (parsed.user && parsed.token) {
-setUser(parsed.user);
+setUser(parsed.user)
 setTokens({
 accessToken: parsed.token;,
 refreshToken: parsed.refreshToken || null;,
-});
+})
 }
 }
 }
 } catch (error) {
-console.error("Error checking auth state:", error);
+console.error("Error checking auth state:", error)
 } finally {
-setIsLoading(false);
+setIsLoading(false)
 }
-};
+}
 
-checkAuthState();
-}, []);
+checkAuthState()
+}, [])
 
 return {
 user;
@@ -61,5 +61,5 @@ onboardingStep;
 setOnboardingStep;
 tokens;
 setTokens,
-};
-};
+}
+}

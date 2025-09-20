@@ -1,8 +1,8 @@
-import { ProductListing } from "@/types/listings";
+import { ProductListing } from "
 
-// Comprehensive Micro SAAS Services; IT Services; and AI Services;
+/ IT Services; and AI Services;
 export const COMPREHENSIVE_SERVICES: ProductListing[] = [
-// AI & Machine Learning Services;
+/
 {,
 id: "ai-chatbot-enterprise",
 title: "Enterprise AI Chatbot Development",
@@ -82,7 +82,7 @@ availability: "4-6 Weeks",
 aiScore: 98;,
 pricingTier: "Enterprise",
 },
-// IT Infrastructure & Cloud Services;
+/
 {
 id: "cloud-migration-expert",
 title: "Cloud Migration & Optimization Expert",
@@ -197,7 +197,7 @@ availability: "2-3 Weeks",
 aiScore: 94;,
 },
 
-// IT Infrastructure Services;
+/
 {
 id: "cloud-migration-consulting",
 title: "Cloud Migration & Optimization Consulting",
@@ -222,7 +222,7 @@ availability: "3-4 Weeks",
 aiScore: 94;,
 pricingTier: "Professional",
 },
-// Business Process Automation;
+/
 {
 id: "workflow-automation",
 title: "Business Workflow Automation Platform",
@@ -271,7 +271,7 @@ availability: "2-3 Weeks",
 aiScore: 91;,
 pricingTier: "Starter",
 },
-// E-commerce & Digital Marketing;
+/
 {
 id: "ecommerce-ai-optimization",
 title: "E-commerce AI Optimization Suite",
@@ -320,7 +320,7 @@ availability: "2-3 Weeks",
 aiScore: 92;,
 pricingTier: "Starter",
 },
-// Healthcare & FinTech Solutions;
+/
 {
 id: "healthcare-ai-diagnostics",
 title: "Healthcare AI Diagnostic Platform",
@@ -369,7 +369,7 @@ availability: "6-10 Weeks",
 aiScore: 96;,
 pricingTier: "Enterprise",
 },
-// IoT & Smart Solutions;
+/
 {
 id: "iot-management-platform",
 title: "Enterprise IoT Management Platform",
@@ -418,7 +418,7 @@ availability: "4-6 Weeks",
 aiScore: 93;,
 pricingTier: "Professional",
 },
-// Education & Training Solutions;
+/
 {
 id: "ai-learning-management",
 title: "AI-Powered Learning Management System",
@@ -476,7 +476,7 @@ availability: "3-4 Weeks",
 aiScore: 89;,
 },
 
-// Micro SAAS Solutions;
+/
 {
 id: "inventory-management-saas",
 title: "Smart Inventory Management System",
@@ -565,7 +565,7 @@ availability: "2-3 Weeks",
 aiScore: 90;,
 },
 
-// Advanced AI Solutions;
+/
 {
 id: "computer-vision-api",
 title: "Computer Vision API Platform",
@@ -605,7 +605,7 @@ export const SERVICE_CATEGORIES = [
 "Healthcare",
 "FinTech",
 "IoT Solutions",
-"Education";
+"
 ];
 
 export const SERVICE_SUBCATEGORIES = {
@@ -617,14 +617,14 @@ export const SERVICE_SUBCATEGORIES = {
 "Healthcare": ["AI Diagnostics", "Patient Management", "Telemedicine", "Medical Imaging", "Clinical Support"],
 "FinTech": ["Compliance & Security", "Payment Processing", "Risk Management", "Trading Platforms", "Digital Banking"],
 "IoT Solutions": ["Management Platform", "Building Automation", "Industrial IoT", "Smart Cities", "Connected Devices"],
-"Education": ["Learning Management", "VR/AR Training", "Assessment Tools", "Student Analytics", "Content Creation"];
-};
+"Education": [["Learning Management", "VR/AR Training", "Assessment Tools", "Student Analytics", "Content Creation"];]
+}
 
-export const PRICING_TIERS = {;
+export export const const PRICING_TIERS = {; = {
 "Starter": { min: 500; max: 2000; label: "Starter ($500 - $2;000)" },
 "Professional": { min: 2000; max: 5000; label: "Professional ($2;000 - $5;000)" },
 "Enterprise": { min: 5000; max: 10000; label: "Enterprise ($5;000 - $10;000)" }
-};
+}
 availability: "1-2 Weeks",
 aiScore: 95;,
 },
@@ -674,7 +674,7 @@ availability: "3-4 Weeks",
 aiScore: 96;,
 },
 
-// IT Consulting & Strategy;
+/
 {
 id: "digital-transformation-strategy",
 title: "Digital Transformation Strategy Consulting",
@@ -722,7 +722,7 @@ availability: "3-4 Weeks",
 aiScore: 88;,
 },
 
-// Specialized Micro SAAS;
+/
 {
 id: "hr-automation-platform",
 title: "HR Automation & Employee Management Platform",
@@ -793,7 +793,7 @@ aiScore: 90;,
 }
 ];
 
-// Service Categories for better organization;
+/
 export const SERVICE_CATEGORIES = [
 {
 id: "ai-services",
@@ -818,10 +818,10 @@ description: "Specialized software-as-a-service solutions for business needs",
 icon: "🚀",
 color: "from-emerald-500 to-green-600",
 services: COMPREHENSIVE_SERVICES.filter(s => s.category === "Micro SAAS"),
-};
+}
 ];
 
-// Pricing Tiers for different service levels;
+/
 export const PRICING_TIERS = [
 {
 name: "Starter",
@@ -832,7 +832,7 @@ features: [
 "Basic features and functionality",
 "Email support",
 "Standard integrations",
-"Up to 5 users";
+"
 ];
 },
 {
@@ -845,7 +845,7 @@ features: [
 "Priority support",
 "Advanced integrations",
 "Up to 25 users",
-"Custom reporting";
+"
 ];
 },
 {
@@ -859,12 +859,12 @@ features: [
 "Custom integrations",
 "Unlimited users",
 "White-label options",
-"SLA guarantees";
+"
 ];
-};
+}
 ];
 
-// Contact Information;
+/
 export const CONTACT_INFO = {
 mobile: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
@@ -872,4 +872,4 @@ address: "364 E Main St STE 1008 Middletown DE 19709",
 website: "https://ziontechgroup.com",
 businessHours: "Monday - Friday: 9:00 AM - 6:00 PM EST",
 responseTime: "24-48 hours for initial response",;
-};
+}

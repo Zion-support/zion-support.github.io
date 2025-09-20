@@ -1,7 +1,7 @@
 
-import React from "react";
-import { cn,  } from "@/lib/utils";
-import { CheckIcon,  } from 'lucide-react'
+import React from "
+import { cn,,  } from "
+import { CheckIcon,,  } from 'lucide-react'
 
 interface StepProps {
 className?: string,

@@ -1,5 +1,5 @@
 
-import React from "react";
+import React from "
 import {
 return (
     <div className='space-y-6'>

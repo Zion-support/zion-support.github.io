@@ -1,15 +1,15 @@
-// Blockchain & Web3 Services for 2025;
+/
 export const blockchainWeb3Services2025 = [
     {
         id: 1;
-        name: "DeFi Pro Suite";
-        category: "Decentralized Finance";
+        name: "
+        category: "
         description: "Comprehensive DeFi platform offering yield farming, liquidity provision, and automated trading strategies with advanced risk management",
-        pricing: "Professional";
+        pricing: "
         price: 1200;
-        pricingModel: "monthly";
+        pricingModel: "
         features: [
-            "Yield farming automation";
+            "
             "Liquidity pool management",
             "Flash loan protection",
             "Portfolio rebalancing",
@@ -19,7 +19,7 @@ export const blockchainWeb3Services2025 = [
             "Real-time analytics"
         ],
         benefits: [
-            "Higher yield returns";
+            "
             "Automated strategies",
             "Risk mitigation",
             "Cross-chain opportunities",
@@ -29,11 +29,11 @@ export const blockchainWeb3Services2025 = [
         targetAudience: ["Crypto investors", "DeFi protocols", "Financial institutions", "Trading firms", "Individual traders"],
         tags: ["DeFi", "Yield Farming", "Liquidity", "Smart Contracts", "Crypto", "Trading"],
         contactInfo: {
-            phone: "+1 302 464 0950";
-            email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com/defi-pro-suite";
+            phone: "
+            email: "
+            website: "
             address: "364 E Main St STE 1008 Middletown DE 19709",
-        };
+        }
         marketPrice: "$1,200-5,000/month",
         competitors: ["Aave", "Compound", "Yearn Finance", "Curve Finance"],
         blockchainScore: 98;
@@ -44,28 +44,28 @@ export const blockchainWeb3Services2025 = [
         customBranding: true;
         prioritySupport: true;
         trainingIncluded: true;
-        dataRetention: "7 years";
-        uptime: "99.9%";
+        dataRetention: "
+        uptime: "
         securityFeatures: ["Smart contract audits", "Multi-sig wallets", "Insurance coverage", "Real-time monitoring"],
-        integrationTime: "2-4 weeks";
-        scalability: "Multi-chain networks";
+        integrationTime: "
+        scalability: "
         realTimeProcessing: true;
         multilingualSupport: true;
         industrySpecific: true;
         web3Native: true;
         smartContractSupport: true;
         crossChainCompatibility: true,
-    };
+    }
     {
         id: 2;
-        name: "NFT Studio Pro";
-        category: "NFT & Digital Assets";
+        name: "
+        category: "
         description: "Complete NFT creation, management, and marketplace platform with AI-powered generation and blockchain verification",
-        pricing: "Professional";
+        pricing: "
         price: 800;
-        pricingModel: "monthly";
+        pricingModel: "
         features: [
-            "AI NFT generation";
+            "
             "Multi-blockchain support",
             "Marketplace integration",
             "Royalty management",
@@ -75,7 +75,7 @@ export const blockchainWeb3Services2025 = [
             "Analytics dashboard"
         ],
         benefits: [
-            "Faster NFT creation";
+            "
             "Lower gas costs",
             "Multi-chain reach",
             "Automated royalties",
@@ -85,11 +85,11 @@ export const blockchainWeb3Services2025 = [
         targetAudience: ["Artists", "Brands", "Gaming companies", "Content creators", "Collectors", "Agencies"],
         tags: ["NFT", "Digital Assets", "Blockchain", "AI Generation", "Marketplace", "Creators"],
         contactInfo: {
-            phone: "+1 302 464 0950";
-            email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com/nft-studio-pro";
+            phone: "
+            email: "
+            website: "
             address: "364 E Main St STE 1008 Middletown DE 19709",
-        };
+        }
         marketPrice: "$800-3,000/month",
         competitors: ["OpenSea", "Rarible", "Foundation", "SuperRare"],
         blockchainScore: 97;
@@ -100,28 +100,28 @@ export const blockchainWeb3Services2025 = [
         customBranding: true;
         prioritySupport: true;
         trainingIncluded: true;
-        dataRetention: "10 years";
-        uptime: "99.9%";
+        dataRetention: "
+        uptime: "
         securityFeatures: ["IPFS storage", "Blockchain verification", "Copyright protection", "Fraud detection"],
-        integrationTime: "1-3 weeks";
-        scalability: "Millions of NFTs";
+        integrationTime: "
+        scalability: "
         realTimeProcessing: true;
         multilingualSupport: true;
         industrySpecific: true;
         web3Native: true;
         smartContractSupport: true;
         crossChainCompatibility: true,
-    };
+    }
     {
         id: 3;
-        name: "Smart Contract Factory";
-        category: "Smart Contract Development";
+        name: "
+        category: "
         description: "Advanced smart contract development platform with automated testing, deployment, and monitoring across multiple blockchains",
-        pricing: "Enterprise";
+        pricing: "
         price: 1500;
-        pricingModel: "monthly";
+        pricingModel: "
         features: [
-            "Visual contract builder";
+            "
             "Automated testing",
             "Security auditing",
             "Multi-chain deployment",
@@ -131,7 +131,7 @@ export const blockchainWeb3Services2025 = [
             "Documentation generator"
         ],
         benefits: [
-            "Faster development";
+            "
             "Reduced errors",
             "Lower costs",
             "Better security",
@@ -141,11 +141,11 @@ export const blockchainWeb3Services2025 = [
         targetAudience: ["Developers", "Startups", "Enterprises", "DeFi protocols", "DAO organizations", "Consulting firms"],
         tags: ["Smart Contracts", "Blockchain", "Development", "Security", "Testing", "Deployment"],
         contactInfo: {
-            phone: "+1 302 464 0950";
-            email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com/smart-contract-factory";
+            phone: "
+            email: "
+            website: "
             address: "364 E Main St STE 1008 Middletown DE 19709",
-        };
+        }
         marketPrice: "$1,500-6,000/month",
         competitors: ["OpenZeppelin", "Truffle", "Hardhat", "Remix"],
         blockchainScore: 96;
@@ -156,28 +156,28 @@ export const blockchainWeb3Services2025 = [
         customBranding: true;
         prioritySupport: true;
         trainingIncluded: true;
-        dataRetention: "10 years";
-        uptime: "99.9%";
+        dataRetention: "
+        uptime: "
         securityFeatures: ["Automated auditing", "Vulnerability detection", "Formal verification", "Security monitoring"],
-        integrationTime: "3-6 weeks";
-        scalability: "Enterprise deployment";
+        integrationTime: "
+        scalability: "
         realTimeProcessing: true;
         multilingualSupport: true;
         industrySpecific: true;
         web3Native: true;
         smartContractSupport: true;
         crossChainCompatibility: true,
-    };
+    }
     {
         id: 4;
-        name: "DAO Governance Platform";
-        category: "Decentralized Governance";
+        name: "
+        category: "
         description: "Complete DAO governance platform with voting mechanisms, proposal management, and treasury management tools",
-        pricing: "Professional";
+        pricing: "
         price: 1000;
-        pricingModel: "monthly";
+        pricingModel: "
         features: [
-            "Multi-voting systems";
+            "
             "Proposal creation",
             "Treasury management",
             "Member management",
@@ -187,7 +187,7 @@ export const blockchainWeb3Services2025 = [
             "Real-time updates"
         ],
         benefits: [
-            "Transparent governance";
+            "
             "Efficient decision-making",
             "Member engagement",
             "Treasury security",
@@ -197,11 +197,11 @@ export const blockchainWeb3Services2025 = [
         targetAudience: ["DAO organizations", "Crypto projects", "Community groups", "Decentralized companies", "Governance consultants"],
         tags: ["DAO", "Governance", "Voting", "Treasury", "Blockchain", "Community"],
         contactInfo: {
-            phone: "+1 302 464 0950";
-            email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com/dao-governance-platform";
+            phone: "
+            email: "
+            website: "
             address: "364 E Main St STE 1008 Middletown DE 19709",
-        };
+        }
         marketPrice: "$1,000-4,000/month",
         competitors: ["Snapshot", "Aragon", "Moloch", "Compound Governance"],
         blockchainScore: 95;
@@ -212,28 +212,28 @@ export const blockchainWeb3Services2025 = [
         customBranding: true;
         prioritySupport: true;
         trainingIncluded: true;
-        dataRetention: "10 years";
-        uptime: "99.9%";
+        dataRetention: "
+        uptime: "
         securityFeatures: ["Multi-sig wallets", "Vote verification", "Treasury protection", "Access controls"],
-        integrationTime: "2-4 weeks";
-        scalability: "Large communities";
+        integrationTime: "
+        scalability: "
         realTimeProcessing: true;
         multilingualSupport: true;
         industrySpecific: true;
         web3Native: true;
         smartContractSupport: true;
         crossChainCompatibility: true,
-    };
+    }
     {
         id: 5;
-        name: "Cross-Chain Bridge Pro";
-        category: "Cross-Chain Infrastructure";
-        description: "Advanced cross-chain bridge platform enabling seamless asset transfers and data exchange between different blockchain networks";
-        pricing: "Enterprise";
+        name: "
+        category: "
+        description: "
+        pricing: "
         price: 2000;
-        pricingModel: "monthly";
+        pricingModel: "
         features: [
-            "Multi-chain support";
+            "
             "Asset bridging",
             "Data oracles",
             "Liquidity pools",
@@ -243,7 +243,7 @@ export const blockchainWeb3Services2025 = [
             "Analytics dashboard"
         ],
         benefits: [
-            "Seamless transfers";
+            "
             "Lower costs",
             "Better liquidity",
             "Enhanced security",
@@ -253,11 +253,11 @@ export const blockchainWeb3Services2025 = [
         targetAudience: ["DeFi protocols", "Exchanges", "Wallets", "Developers", "Enterprises", "Traders"],
         tags: ["Cross-Chain", "Bridge", "Interoperability", "Liquidity", "Security", "Blockchain"],
         contactInfo: {
-            phone: "+1 302 464 0950";
-            email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com/cross-chain-bridge-pro";
+            phone: "
+            email: "
+            website: "
             address: "364 E Main St STE 1008 Middletown DE 19709",
-        };
+        }
         marketPrice: "$2,000-8,000/month",
         competitors: ["Multichain", "Stargate", "Hop Protocol", "Celer Network"],
         blockchainScore: 97;
@@ -268,28 +268,28 @@ export const blockchainWeb3Services2025 = [
         customBranding: true;
         prioritySupport: true;
         trainingIncluded: true;
-        dataRetention: "7 years";
-        uptime: "99.9%";
+        dataRetention: "
+        uptime: "
         securityFeatures: ["Multi-sig validation", "Real-time monitoring", "Fraud detection", "Insurance coverage"],
-        integrationTime: "4-8 weeks";
-        scalability: "High-volume transfers";
+        integrationTime: "
+        scalability: "
         realTimeProcessing: true;
         multilingualSupport: true;
         industrySpecific: true;
         web3Native: true;
         smartContractSupport: true;
         crossChainCompatibility: true,
-    };
+    }
     {
         id: 6;
-        name: "Web3 Identity Manager";
-        category: "Decentralized Identity";
+        name: "
+        category: "
         description: "Self-sovereign identity platform with zero-knowledge proofs, verifiable credentials, and privacy-preserving authentication",
-        pricing: "Professional";
+        pricing: "
         price: 600;
-        pricingModel: "monthly";
+        pricingModel: "
         features: [
-            "Self-sovereign identity";
+            "
             "Zero-knowledge proofs",
             "Verifiable credentials",
             "Privacy protection",
@@ -299,7 +299,7 @@ export const blockchainWeb3Services2025 = [
             "Compliance tools"
         ],
         benefits: [
-            "Privacy protection";
+            "
             "Identity ownership",
             "Reduced fraud",
             "Better compliance",
@@ -309,11 +309,11 @@ export const blockchainWeb3Services2025 = [
         targetAudience: ["Enterprises", "Healthcare providers", "Financial institutions", "Government agencies", "Educational institutions"],
         tags: ["Decentralized Identity", "Privacy", "Authentication", "Verification", "Compliance", "Security"],
         contactInfo: {
-            phone: "+1 302 464 0950";
-            email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com/web3-identity-manager";
+            phone: "
+            email: "
+            website: "
             address: "364 E Main St STE 1008 Middletown DE 19709",
-        };
+        }
         marketPrice: "$600-2,500/month",
         competitors: ["Microsoft Entra", "Okta", "Auth0", "ForgeRock"],
         blockchainScore: 94;
@@ -324,11 +324,11 @@ export const blockchainWeb3Services2025 = [
         customBranding: true;
         prioritySupport: true;
         trainingIncluded: true;
-        dataRetention: "User-controlled";
-        uptime: "99.9%";
+        dataRetention: "
+        uptime: "
         securityFeatures: ["Zero-knowledge proofs", "End-to-end encryption", "Biometric security", "Privacy by design"],
-        integrationTime: "2-4 weeks";
-        scalability: "Enterprise deployment";
+        integrationTime: "
+        scalability: "
         realTimeProcessing: true;
         multilingualSupport: true;
         industrySpecific: true;
@@ -337,4 +337,4 @@ export const blockchainWeb3Services2025 = [
         crossChainCompatibility: true,
     }
 ];
-    export default blockchainWeb3Services2025;
+    export export default blockchainWeb3Services2025;

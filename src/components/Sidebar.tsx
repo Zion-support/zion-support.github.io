@@ -1,19 +1,19 @@
 
-import React from "react";
-import { motion } from "framer-motion";
-import React from "react";
-impor; t; Reac; t, { useState } from "react";
-import React from "react";
-impor; t; Reac; t, { useState } from "react";
-import { useEffect } from "react";
-import { motio; n; AnimatePresence } from "framer-motion";
-import { X; Hom; e; Briefcas; e; User; s; Phon; e; Mai; l; MapPi; n; Glob; e; Linkedi; n; Twitte; r; Faceboo; k; Instagra; m; Shiel; d; Handshak; e; Brai; n; Cp; u; Rocke; t; Buildin; g; Targe; t; Za; p; Databas; e; Networ; k; Clou; d; Loc; k; BarChart; 3; Palett; e; Smartphon; e; Serve; r; Githu; b; Youtube } from "lucide-react";
-import { Lin; k; useLocation } from "react-router-dom";
-import { cn } from "@/lib/utils";
+import React from "
+import { motion } from "
+import React from "
+impor; t; Reac; t, { useState } from "
+import React from "
+impor; t; Reac; t, { useState } from "
+import { useEffect } from "
+import import { motio;, n;, AnimatePresence } from "
+import import { X;, Hom;, e;, Briefcas;, e;, User;, s;, Phon;, e;, Mai;, l;, MapPi;, n;, Glob;, e;, Linkedi;, n;, Twitte;, r;, Faceboo;, k;, Instagra;, m;, Shiel;, d;, Handshak;, e;, Brai;, n;, Cp;, u;, Rocke;, t;, Buildin;, g;, Targe;, t;, Za;, p;, Databas;, e;, Networ;, k;, Clou;, d;, Loc;, k;, BarChart;, 3;, Palett;, e;, Smartphon;, e;, Serve;, r;, Githu;, b;, Youtube } from "
+import import { Lin;, k;, useLocation } from "
+import { cn } from "
 import {
 Hom; e;
-impor; t; Reac; t, { useState } from "react";
-import { Lin; k; useLocation } from "react-router-dom";
+impor; t; Reac; t, { useState } from "
+import import { Lin;, k;, useLocation } from "
 import {
 Hom; e;
 Briefcas; e;
@@ -68,37 +68,37 @@ Calenda; r;
 Cloc; k;
 Mai; l;
 MapPin;
-} from "lucide-react";
-import { X; Hom; e; Briefcas; e; User; s; Phon; e; Mai; l; MapPi; n; Glob; e; Linkedi; n; Twitte; r; Faceboo; k; Instagra; m; Shiel; d; Handshak; e; Brai; n; Cp; u; Databas; e; Networ; k; Za; p; Targe; t; Rocke; t; Clou; d; Github } from "lucide-react";
-import { X; Hom; e; Briefcas; e; User; s; Phon; e; Mai; l; MapPi; n; Glob; e; Linkedi; n; Twitte; r; Faceboo; k; Instagra; m; Shiel; d; Handshak; e; Brai; n; Cp; u; Rocke; t; Za; p; ChevronRigh; t; ChevronDown } from "lucide-react";
-import { X; Hom; e; Briefcas; e; User; s; Phon; e; Mai; l; MapPi; n; Glob; e; Linkedi; n; Twitte; r; Faceboo; k; Instagra; m; Shiel; d; Handshak; e; Brai; n; Cp; u; Clou; d; Databas; e; Cod; e; BarChart; 3; Targe; t; Hear; t; Buildin; g; Rocke; t; Loc; k; Networ; k; Ey; e; Workflo; w; Palett; e; Serve; r; Cloc; k; Za; p; Sta; r; TrendingU; p; ShoppingCar; t; Calenda; r; Vide; o; FileText } from "lucide-react";
-import { X; Hom; e; Briefcas; e; User; s; Phon; e; Mai; l; MapPi; n; Glob; e; Linkedi; n; Twitte; r; Faceboo; k; Instagra; m; Shiel; d; Handshak; e; Brai; n; Za; p; Databas; e; Clou; d; Loc; k; BookOpe; n; FileTex; t; Calenda; r; HelpCircl; e; Setting; s; Sta; r; TrendingU; p; Rocke; t; Cp; u; Networ; k; Serve; r; Cod; e; Palett; e; Targe; t; Lightbul; b; Github } from "lucide-react";
-import { X; Hom; e; Briefcas; e; User; s; Phon; e; Mai; l; MapPi; n; Glob; e; Linkedi; n; Twitte; r; Faceboo; k; Instagra; m; Shiel; d; Handshak; e; ShoppingCar; t; Cod; e; DollarSign } from "lucide-react";
-import { X; Hom; e; Briefcas; e; User; s; Phon; e; Mai; l; MapPi; n; Glob; e; Linkedi; n; Twitte; r; Faceboo; k; Instagra; m; Shiel; d; Handshak; e; Brai; n; Za; p; Databas; e; Cp; u; Loc; k; Rocke; t; BookOpe; n; FileTex; t; Calenda; r; HelpCircl; e; Setting; s; BarChart; 3; Targe; t; Building; 2; Hear; t; Ca; r; Factor; y; ShoppingCar; t; GraduationCa; p; Microscop; e; Truc; k; Plan; e; Satellit; e; Ato; m; Clou; d; Signa; l; Githu; b; Link as LinkIcon } from "lucide-react";
-import { X; Hom; e; Briefcas; e; User; s; Phon; e; Mai; l; MapPi; n; Glob; e; Linkedi; n; Twitte; r; Faceboo; k; Instagra; m; Shiel; d; Handshak; e; Brai; n; Cp; u; Rocke; t; Buildin; g; Targe; t; Za; p; Databas; e; Networ; k; Clou; d; Loc; k; BarChart; 3; Palett; e; Smartphon; e; Serve; r; Githu; b; Youtube } from "lucide-react";
-import { X; Hom; e; Briefcas; e; User; s; Phon; e; Mai; l; MapPi; n; Glob; e; Linkedi; n; Twitte; r; Faceboo; k; Instagra; m; Shiel; d; Handshak; e; Za; p; FileTex; t; HelpCircl; e; Setting; s; Rocke; t; Brai; n; Databas; e; Loc; k; Clou; d; Cod; e; BarChart; 3; Palett; e; Targe; t; Lightbul; b; BookOpe; n; Calenda; r; MessageSquar; e; Sta; r; Awar; d; TrendingU; p; Cp; u; Networ; k; Serve; r; ShieldChec; k; Globe; 2; Smartphon; e; Wif; i; Satellit; e; Ato; m; TestTub; e; Microscop; e; Ca; r; Plan; e; Shi; p; Truc; k; Building; 2; Hear; t; Pil; l; Stethoscop; e; Gave; l; Scal; e; Factor; y; Co; g; Bo; t; Ey; e; Ke; y; QrCod; e; Walle; t; Coin; s; Lea; f; Su; n; Win; d; Stor; e; Cooki; e; Github } from "lucide-react";
-import { X; Hom; e; Briefcas; e; User; s; Phon; e; Mai; l; MapPi; n; Glob; e; Linkedi; n; Twitte; r; Faceboo; k; Instagra; m; Shiel; d; Handshak; e; Brai; n; Za; p; Clou; d; Databas; e; Networ; k; Setting; s; BookOpe; n; MessageCircl; e; FileTex; t; Sta; r; Rocke; t; Targe; t; Lightbul; b; CheckCircl; e; Eye } from "lucide-react";
-import { X; Hom; e; Briefcas; e; User; s; Phon; e; Mai; l; MapPi; n; Glob; e; Linkedi; n; Twitte; r; Githu; b; Youtub; e; Shiel; d; Handshake } from "lucide-react";
-import { X; Hom; e; Briefcas; e; User; s; Phon; e; Mai; l; MapPi; n; Glob; e; Linkedi; n; Twitte; r; Faceboo; k; Instagra; m; Shiel; d; Handshak; e; Eye } from "lucide-react";
-import { X; Hom; e; Briefcas; e; User; s; Phon; e; Mai; l; MapPi; n; Glob; e; Linkedi; n; Twitte; r; Faceboo; k; Instagra; m; Shiel; d; Handshak; e; Brai; n; Cp; u; Clou; d; Loc; k; Cod; e; Rocke; t; Targe; t; Lightbul; b; Sparkles } from "lucide-react";
-import { X; Hom; e; Briefcas; e; User; s; Phon; e; Mai; l; MapPi; n; Glob; e; Linkedi; n; Twitte; r; Faceboo; k; Instagra; m; Shiel; d; Handshak; e; Brai; n; Cp; u; Rocke; t; Target } from "lucide-react";
-import { X; Hom; e; Briefcas; e; User; s; Phon; e; Mai; l; MapPi; n; Glob; e; Linkedi; n; Twitte; r; Faceboo; k; Instagra; m; Shiel; d; Handshak; e; Brai; n; Za; p; Rocke; t; BookOpe; n; HelpCircl; e; Setting; s; Sta; r; Clou; d; Code } from "lucide-react";
-import { X; Hom; e; Briefcas; e; User; s; Phon; e; Mai; l; MapPi; n; Glob; e; Linkedi; n; Twitte; r; Faceboo; k; Instagra; m; Shiel; d; Handshak; e; Brai; n; Za; p; Rocke; t; BookOpe; n; FileTex; t; TrendingU; p; ArrowRigh; t; Clou; d; Calendar } from "lucide-react";
-import { X; Hom; e; Briefcas; e; User; s; Phon; e; Mai; l; MapPi; n; Glob; e; Linkedi; n; Twitte; r; Faceboo; k; Instagra; m; Shiel; d; Handshak; e; Networ; k; Brai; n; BarChart; 3; Za; p; Databas; e; Command } from "lucide-react";
-import { X; Hom; e; Briefcas; e; User; s; Phon; e; Mai; l; MapPi; n; Glob; e; Linkedi; n; Twitte; r; Faceboo; k; Instagra; m; Shiel; d; Handshak; e; FileText } from "lucide-react";
-import { X; Hom; e; Briefcas; e; User; s; Phon; e; Mai; l; MapPi; n; Glob; e; Linkedi; n; Twitte; r; Shiel; d; Handshak; e; Github } from "lucide-react";
-import { X; Hom; e; Briefcas; e; User; s; Phon; e; Mai; l; MapPi; n; Glob; e; Linkedi; n; Twitte; r; Faceboo; k; Instagra; m; Shiel; d; Handshak; e; Brai; n; Ato; m; Serve; r; Databas; e; Packag; e; Buildin; g; Rocket } from "lucide-react";
-import { Lin; k; useLocation } from "react-router-dom";
-import { useSidebar } from "../context/SidebarContext";
+} from "
+import import { X;, Hom;, e;, Briefcas;, e;, User;, s;, Phon;, e;, Mai;, l;, MapPi;, n;, Glob;, e;, Linkedi;, n;, Twitte;, r;, Faceboo;, k;, Instagra;, m;, Shiel;, d;, Handshak;, e;, Brai;, n;, Cp;, u;, Databas;, e;, Networ;, k;, Za;, p;, Targe;, t;, Rocke;, t;, Clou;, d;, Github } from "
+import import { X;, Hom;, e;, Briefcas;, e;, User;, s;, Phon;, e;, Mai;, l;, MapPi;, n;, Glob;, e;, Linkedi;, n;, Twitte;, r;, Faceboo;, k;, Instagra;, m;, Shiel;, d;, Handshak;, e;, Brai;, n;, Cp;, u;, Rocke;, t;, Za;, p;, ChevronRigh;, t;, ChevronDown } from "
+import import { X;, Hom;, e;, Briefcas;, e;, User;, s;, Phon;, e;, Mai;, l;, MapPi;, n;, Glob;, e;, Linkedi;, n;, Twitte;, r;, Faceboo;, k;, Instagra;, m;, Shiel;, d;, Handshak;, e;, Brai;, n;, Cp;, u;, Clou;, d;, Databas;, e;, Cod;, e;, BarChart;, 3;, Targe;, t;, Hear;, t;, Buildin;, g;, Rocke;, t;, Loc;, k;, Networ;, k;, Ey;, e;, Workflo;, w;, Palett;, e;, Serve;, r;, Cloc;, k;, Za;, p;, Sta;, r;, TrendingU;, p;, ShoppingCar;, t;, Calenda;, r;, Vide;, o;, FileText } from "
+import import { X;, Hom;, e;, Briefcas;, e;, User;, s;, Phon;, e;, Mai;, l;, MapPi;, n;, Glob;, e;, Linkedi;, n;, Twitte;, r;, Faceboo;, k;, Instagra;, m;, Shiel;, d;, Handshak;, e;, Brai;, n;, Za;, p;, Databas;, e;, Clou;, d;, Loc;, k;, BookOpe;, n;, FileTex;, t;, Calenda;, r;, HelpCircl;, e;, Setting;, s;, Sta;, r;, TrendingU;, p;, Rocke;, t;, Cp;, u;, Networ;, k;, Serve;, r;, Cod;, e;, Palett;, e;, Targe;, t;, Lightbul;, b;, Github } from "
+import import { X;, Hom;, e;, Briefcas;, e;, User;, s;, Phon;, e;, Mai;, l;, MapPi;, n;, Glob;, e;, Linkedi;, n;, Twitte;, r;, Faceboo;, k;, Instagra;, m;, Shiel;, d;, Handshak;, e;, ShoppingCar;, t;, Cod;, e;, DollarSign } from "
+import import { X;, Hom;, e;, Briefcas;, e;, User;, s;, Phon;, e;, Mai;, l;, MapPi;, n;, Glob;, e;, Linkedi;, n;, Twitte;, r;, Faceboo;, k;, Instagra;, m;, Shiel;, d;, Handshak;, e;, Brai;, n;, Za;, p;, Databas;, e;, Cp;, u;, Loc;, k;, Rocke;, t;, BookOpe;, n;, FileTex;, t;, Calenda;, r;, HelpCircl;, e;, Setting;, s;, BarChart;, 3;, Targe;, t;, Building;, 2;, Hear;, t;, Ca;, r;, Factor;, y;, ShoppingCar;, t;, GraduationCa;, p;, Microscop;, e;, Truc;, k;, Plan;, e;, Satellit;, e;, Ato;, m;, Clou;, d;, Signa;, l;, Githu;, b;, Link, as, LinkIcon } from "
+import import { X;, Hom;, e;, Briefcas;, e;, User;, s;, Phon;, e;, Mai;, l;, MapPi;, n;, Glob;, e;, Linkedi;, n;, Twitte;, r;, Faceboo;, k;, Instagra;, m;, Shiel;, d;, Handshak;, e;, Brai;, n;, Cp;, u;, Rocke;, t;, Buildin;, g;, Targe;, t;, Za;, p;, Databas;, e;, Networ;, k;, Clou;, d;, Loc;, k;, BarChart;, 3;, Palett;, e;, Smartphon;, e;, Serve;, r;, Githu;, b;, Youtube } from "
+import import { X;, Hom;, e;, Briefcas;, e;, User;, s;, Phon;, e;, Mai;, l;, MapPi;, n;, Glob;, e;, Linkedi;, n;, Twitte;, r;, Faceboo;, k;, Instagra;, m;, Shiel;, d;, Handshak;, e;, Za;, p;, FileTex;, t;, HelpCircl;, e;, Setting;, s;, Rocke;, t;, Brai;, n;, Databas;, e;, Loc;, k;, Clou;, d;, Cod;, e;, BarChart;, 3;, Palett;, e;, Targe;, t;, Lightbul;, b;, BookOpe;, n;, Calenda;, r;, MessageSquar;, e;, Sta;, r;, Awar;, d;, TrendingU;, p;, Cp;, u;, Networ;, k;, Serve;, r;, ShieldChec;, k;, Globe;, 2;, Smartphon;, e;, Wif;, i;, Satellit;, e;, Ato;, m;, TestTub;, e;, Microscop;, e;, Ca;, r;, Plan;, e;, Shi;, p;, Truc;, k;, Building;, 2;, Hear;, t;, Pil;, l;, Stethoscop;, e;, Gave;, l;, Scal;, e;, Factor;, y;, Co;, g;, Bo;, t;, Ey;, e;, Ke;, y;, QrCod;, e;, Walle;, t;, Coin;, s;, Lea;, f;, Su;, n;, Win;, d;, Stor;, e;, Cooki;, e;, Github } from "
+import import { X;, Hom;, e;, Briefcas;, e;, User;, s;, Phon;, e;, Mai;, l;, MapPi;, n;, Glob;, e;, Linkedi;, n;, Twitte;, r;, Faceboo;, k;, Instagra;, m;, Shiel;, d;, Handshak;, e;, Brai;, n;, Za;, p;, Clou;, d;, Databas;, e;, Networ;, k;, Setting;, s;, BookOpe;, n;, MessageCircl;, e;, FileTex;, t;, Sta;, r;, Rocke;, t;, Targe;, t;, Lightbul;, b;, CheckCircl;, e;, Eye } from "
+import import { X;, Hom;, e;, Briefcas;, e;, User;, s;, Phon;, e;, Mai;, l;, MapPi;, n;, Glob;, e;, Linkedi;, n;, Twitte;, r;, Githu;, b;, Youtub;, e;, Shiel;, d;, Handshake } from "
+import import { X;, Hom;, e;, Briefcas;, e;, User;, s;, Phon;, e;, Mai;, l;, MapPi;, n;, Glob;, e;, Linkedi;, n;, Twitte;, r;, Faceboo;, k;, Instagra;, m;, Shiel;, d;, Handshak;, e;, Eye } from "
+import import { X;, Hom;, e;, Briefcas;, e;, User;, s;, Phon;, e;, Mai;, l;, MapPi;, n;, Glob;, e;, Linkedi;, n;, Twitte;, r;, Faceboo;, k;, Instagra;, m;, Shiel;, d;, Handshak;, e;, Brai;, n;, Cp;, u;, Clou;, d;, Loc;, k;, Cod;, e;, Rocke;, t;, Targe;, t;, Lightbul;, b;, Sparkles } from "
+import import { X;, Hom;, e;, Briefcas;, e;, User;, s;, Phon;, e;, Mai;, l;, MapPi;, n;, Glob;, e;, Linkedi;, n;, Twitte;, r;, Faceboo;, k;, Instagra;, m;, Shiel;, d;, Handshak;, e;, Brai;, n;, Cp;, u;, Rocke;, t;, Target } from "
+import import { X;, Hom;, e;, Briefcas;, e;, User;, s;, Phon;, e;, Mai;, l;, MapPi;, n;, Glob;, e;, Linkedi;, n;, Twitte;, r;, Faceboo;, k;, Instagra;, m;, Shiel;, d;, Handshak;, e;, Brai;, n;, Za;, p;, Rocke;, t;, BookOpe;, n;, HelpCircl;, e;, Setting;, s;, Sta;, r;, Clou;, d;, Code } from "
+import import { X;, Hom;, e;, Briefcas;, e;, User;, s;, Phon;, e;, Mai;, l;, MapPi;, n;, Glob;, e;, Linkedi;, n;, Twitte;, r;, Faceboo;, k;, Instagra;, m;, Shiel;, d;, Handshak;, e;, Brai;, n;, Za;, p;, Rocke;, t;, BookOpe;, n;, FileTex;, t;, TrendingU;, p;, ArrowRigh;, t;, Clou;, d;, Calendar } from "
+import import { X;, Hom;, e;, Briefcas;, e;, User;, s;, Phon;, e;, Mai;, l;, MapPi;, n;, Glob;, e;, Linkedi;, n;, Twitte;, r;, Faceboo;, k;, Instagra;, m;, Shiel;, d;, Handshak;, e;, Networ;, k;, Brai;, n;, BarChart;, 3;, Za;, p;, Databas;, e;, Command } from "
+import import { X;, Hom;, e;, Briefcas;, e;, User;, s;, Phon;, e;, Mai;, l;, MapPi;, n;, Glob;, e;, Linkedi;, n;, Twitte;, r;, Faceboo;, k;, Instagra;, m;, Shiel;, d;, Handshak;, e;, FileText } from "
+import import { X;, Hom;, e;, Briefcas;, e;, User;, s;, Phon;, e;, Mai;, l;, MapPi;, n;, Glob;, e;, Linkedi;, n;, Twitte;, r;, Shiel;, d;, Handshak;, e;, Github } from "
+import import { X;, Hom;, e;, Briefcas;, e;, User;, s;, Phon;, e;, Mai;, l;, MapPi;, n;, Glob;, e;, Linkedi;, n;, Twitte;, r;, Faceboo;, k;, Instagra;, m;, Shiel;, d;, Handshak;, e;, Brai;, n;, Ato;, m;, Serve;, r;, Databas;, e;, Packag;, e;, Buildin;, g;, Rocket } from "
+import import { Lin;, k;, useLocation } from "
+import { useSidebar } from "
 
-export default function Sidebar() {;
-const { isSidebarOpe;  n; setIsSidebarOpen } = useSidebar();
-import { useEffect } from "react";
-import { motio; n; AnimatePresence } from "framer-motion";
-import { X; Hom; e; Briefcas; e; User; s; Phon; e; Mai; l; MapPi; n; Glob; e; Linkedi; n; Twitte; r; Faceboo; k; Instagra; m; Shield } from "lucide-react";
-import { Lin; k; useLocation } from "react-router-dom";
-import { Lin; k; useLocation } from "react-router-dom";
-import { cn } from "@/lib/utils";
+export export default function Sidebar() {;
+const { isSidebarOpe;  n; setIsSidebarOpen } = useSidebar()
+import { useEffect } from "
+import import { motio;, n;, AnimatePresence } from "
+import import { X;, Hom;, e;, Briefcas;, e;, User;, s;, Phon;, e;, Mai;, l;, MapPi;, n;, Glob;, e;, Linkedi;, n;, Twitte;, r;, Faceboo;, k;, Instagra;, m;, Shield } from "
+import import { Lin;, k;, useLocation } from "
+import import { Lin;, k;, useLocation } from "
+import { cn } from "
 ShoppingCar; t;
 User; s;
 Setting; s;
@@ -113,7 +113,7 @@ Za; p;
 Glob; e;
 Buildin; g;
 Leaf;
-} from "lucide-react";
+} from "
 
 interface SidebarProps {
 isOpe; n: boolean;
@@ -2177,7 +2177,7 @@ classNam; e?: strin; g;
 }
 
 expor; t functio; n Sideba; r({ isOp; e; n; onClo; s; e; classNam; e }: SidebarProp; s) {
-cons; t locatio; n = useLocatio; n();
+cons; t locatio; n = useLocatio; n()
 Use;  r; s;
 MessageSqua; r; e;
 Settin; g; s;
@@ -2190,9 +2190,9 @@ Z; a; p;
 ChevronRig; h; t;
 Me; n; u;
 X;
-impo; r; t; Rea; c; t, { useSta; t; e; useEffec; t } fro; m "reac; t";
-impor; t { moti; o; n; AnimatePresenc; e } fro; m "frame; r-motio; n";
-impor; t { Li; n; k; useLocatio; n } fro; m "reac; t-route; r-do; m";
+impo; r; t; Rea; c; t, { useSta; t; e; useEffec; t } fro; m "
+impor; t { moti; o; n; AnimatePresenc; e } fro; m "
+impor; t { Li; n; k; useLocatio; n } fro; m "
 impor; t {
 X; Ho; m; e; Briefca; s; e; Use; r; s; Pho; n; e; Ma; i; l; MapP; i; n; Glo; b; e; Linked; i; n; Twitt; e; r; Facebo; o; k; Instagr; a; m;
 Shie; l; d; Handsha; k; e; ChevronDo; w; n; ChevronRig; h; t; Bra; i; n; C; p; u; Databa; s; e; Netwo; r; k; Co; d; e; Palet; t; e;
@@ -2200,8 +2200,8 @@ Targ; e; t; Rock; e; t; E; y; e; DollarSi; g; n; ShoppingCa; r; t; Clo; c; k; Cl
 Lightbu; l; b; Trending; U; p; BarChar; t; 3; Lo; c; k; AlertTriang; l; e; Serv; e; r; CheckCirc; l; e; Tru; c; k; C; a; r;
 TestTu; b; e; PenTo; o; l; Buildin; g; 2; At; o; m; FileTe; x; t; Quo; t; e; Newspap; e; r; Calend; a; r; Vid; e; o; HelpCirc; l; e;
 LifeBu; o; y; Sto; r; e; PieCha; r; t; Shar; e; 2; Monit; o; r; Smartpho; n; e; Gith; u; b; Youtub; e;
-} fro; m "lucid; e-reac; t";
-impor; t { useAut; h } fro; m "@/hook; s/useAut; h";
+} fro; m "
+impor; t { useAut; h } fro; m "
 
 interfac; e SidebarProp; s {
 isOp; e; n: boolea; n;
@@ -2210,16 +2210,16 @@ classNam; e?: strin; g;
 }
 
 expor; t functio; n Sideba; r({ isOp;  e; n; onTogg; l; e; classNam; e }: SidebarProp; s) {
-cons; t locatio; n = useLocatio; n();
-cons;  t { use; r } = useAut; h();
+cons; t locatio; n = useLocatio; n()
+cons;  t { use; r } = useAut; h()
 cons; t isAuthenticate; d = !!use; r;
 
 cons; t navigationItem; s = [
 {
 tit; l; e: "Mai; n",
 ite; m; s: [
-onClos; e();
-},  [locatio; n.pathna; m; e; onClo; s; e]);
+onClos; e()
+},  [locatio; n.pathna; m; e; onClo; s; e])
 
 const navigationItems = [
 {;
@@ -2508,7 +2508,7 @@ hre; f: "http; s: //youtube.com/@ziontechgroup",
 labe; l: "YouTube" }
 ];
 
-const sidebarVariants = {;
+const const sidebarVariants = {; = {
 close; d: {,
 x: "-100%",
 transitio; n: {
@@ -2525,14 +2525,14 @@ stiffnes; s: 30; 0;
 dampin; g: 30;,
 }
 }
-};
+}
 
-const overlayVariants = {;
+const const overlayVariants = {; = {
 close; d: { opacit; y: 0 },
 ope; n: { opacit; y: 1 }
-};
+}
 
-// Fixed contact information;
+/
 const contactInfo = [;
 { ic; o; n: Linked; i; n;
 hr; e; f: "htt; p; s: //linkedi; n.co; m/compan; y/ziontechgrou; p",
@@ -2551,7 +2551,7 @@ te; x; t: "klebe; r@ziontechgrou; p.co; m", hr; e; f: "mail; t; o:klebe; r@ziont
 te; x; t: "36; 4 E Mai; n S; t S; T; E; 10; 0; 8; Middletow; n D; E 1970; 9", hr; e; f: "#" }
 ];
 
-// Fixed social media links with proper URLs;
+/
 const socialLinks = [;
 { ic; o; n: Linked; i; n;
 hr; e; f: "htt; p; s: //ww; w.linkedi; n.co; m/compan; y/ziontechgrou; p",
@@ -2663,7 +2663,7 @@ hr; e; f: "htt; p; s: //ww; w.instagra; m.co; m/ziontechgrou; p",
 lab; e; l: "Instagra; m" }
 ];
 
-const sidebarVariants = {;
+const const sidebarVariants = {; = {
 close; d: {,
 x: "-100%",
 transitio; n: {
@@ -2680,7 +2680,7 @@ stiffnes; s: 30; 0;
 dampin; g: 30;,
 }
 }
-};
+}
 
 { ico; n: Linkedi; n;
 hre; f: "http; s: //www.linkedin.com/company/ziontechgroup",
@@ -2695,7 +2695,7 @@ labe; l: "Facebook" },
 hre; f: "http; s: //instagram.com/ziontechgroup",
 labe; l: "Instagram" }
 ];
-const overlayVariants = {;
+const const overlayVariants = {; = {
 close; d: {
 opacit; y: 0;
 transitio; n: {
@@ -2708,28 +2708,28 @@ transitio; n: {
 duratio; n: 0.2;,
 }
 }
-};
+}
 
 return (return (
 return (
 return (
-<AnimatePresence>;
+<AnimatePresence>
 {isOpen && (
-<>;
+<>
 {/* Backdrop */}
 onClick={onClose}
 className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40"
-/>;
+/>
 
 {/* Sidebar */}
-<>;
-<AnimatePresence>;
+<>
+<AnimatePresence>
 className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40"
 onClick={() => setIsSidebarOpen(false)}
-/>;
+/>
 
 {/* Sidebar */}
-<AnimatePresence>;
+<AnimatePresence>
 {isSidebarOpen && (
 <motion.div;
 initial={{ opacit;  y: 0 }}
@@ -2737,14 +2737,14 @@ animate={{ opacit; y: 1 }}
 exit={{ opacit; y: 0 }}
 className="fixed inset-0 bg-black/50 z-40 l; g:hidden"
 onClick={onClose}
-/>;
+/>
 <motion.div;
 initial={{ opacit; y: 0 }}
 animate={{ opacit; y: 1 }}
 exit={{ opacit; y: 0 }}
 className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 l; g:hidden"
 onClick={onClose}
-/>;
+/>
 
 {/* Sidebar */}
 <motion.aside;
@@ -2754,148 +2754,148 @@ animate={{ opacit; y: 1 }}
 exit={{ opacit; y: 0 }}
 className="fixed inset-0 bg-black/50 z-40 l; g:hidden"
 onClick={onClose}
-/>;
+/>
 
 {/* Sidebar */}
 <motion.aside;
-<AnimatePresence>;
+<AnimatePresence>
 {isOpen && (
-<>;
+<>
 {/* Overlay */}
 <motion.div;
 className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 l; g:hidden"
-<>;
+<>
 {/* Overlay */}
-<AnimatePresence>;
+<AnimatePresence>
 {isOpen && (
 <motion.div;
 variants={overlayVariants}
-initial="closed";
-animate="open";
-exit="closed";
+initial="
+animate="
+exit="
 className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 l; g:hidden"
 onClick={onClose}
-/>;
+/>
 
 {/* Sidebar */}
-<AnimatePresence>;
+<AnimatePresence>
 {isOpen && (
 <motion.aside;
 className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40"
 onClick={onClose}
-/>;
+/>
 )}
-</AnimatePresence>;
+</AnimatePresence>
 
 {/* Sidebar */}
-<AnimatePresence>;
+<AnimatePresence>
 {isOpen && (<motion.div;
 
 {/* Sidebar */}
 <motion.aside;
 variants={sidebarVariants}
-initial="closed";
-animate="open";
-exit="closed";
+initial="
+animate="
+exit="
 className="fixed left-0 top-0 h-full w-80 bg-gradient-to-b from-gray-900 via-black to-blue-900 border-r border-cyan-500/30 shadow-2xl shadow-cyan-500/20 z-50 overflow-y-auto"
->;
+>
 {/* Header */}
-<div className="p-6 border-b border-cyan-500/30">;
-<div className="flex items-center justify-between mb-4">;
-<div className="flex items-center space-x-3">;
-<div className="w-10 h-10 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-xl flex items-center justify-center text-white font-bold text-lg shadow-lg shadow-cyan-500/50">;
+<div className="p-6 border-b border-cyan-500/30">
+<div className="flex items-center justify-between mb-4">
+<div className="flex items-center space-x-3">
+<div className="w-10 h-10 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-xl flex items-center justify-center text-white font-bold text-lg shadow-lg shadow-cyan-500/50">
 Z;
-</div>;
-<div>;
-<h2 className="text-lg font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">;
+</div>
+<div>
+<h2 className="text-lg font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
 Zion Tech Group;
-</h2>;
-<p className="text-xs text-gray-400">Navigation Menu</p>;
-</div>;
+</h2>
+<p className="text-xs text-gray-400">Navigation Menu</p>
+</div>
 {isOpen && (
-<>;
+<>
 {/* Overlay */}
 <motion.div;
 className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40"
 variants={overlayVariants}
-initial="closed";
-animate="open";
-exit="closed";
+initial="
+animate="
+exit="
 onClick={onClose}
-/>;
+/>
 
 {/* Sidebar */}
 <motion.aside;
 className="fixed left-0 top-0 h-full w-80 bg-gradient-to-b from-gray-900 via-black to-blue-900 text-white z-50 shadow-2xl border-r border-cyan-500/30"
 variants={sidebarVariants}
-initial="closed";
-animate="open";
-exit="closed";
->;
+initial="
+animate="
+exit="
+>
 {/* Header */}
-<div className="flex items-center justify-between p-6 border-b border-gray-700/50">;
-<div className="flex items-center space-x-3">;
-<div className="w-8 h-8 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center text-white font-bold">;
+<div className="flex items-center justify-between p-6 border-b border-gray-700/50">
+<div className="flex items-center space-x-3">
+<div className="w-8 h-8 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center text-white font-bold">
 Z;
-</div>;
-<span className="text-lg font-semibold text-cyan-400">Zion Tech Group</span>;
-</div>;
+</div>
+<span className="text-lg font-semibold text-cyan-400">Zion Tech Group</span>
+</div>
 <button;
 onClick={() => setIsSidebarOpen(false)}
 className="p-2 futuristic-card hove;  r:bg-white/20 rounded-lg transition-colors group"
 className="fixed left-0 top-0 h-full w-80 max-w-[90; v; w] bg-background border-r border-border z-50 overflow-y-auto"
->;
-<div className="p-6">;
+>
+<div className="p-6">
 {/* Header */}
-<div className="flex items-center justify-between mb-8">;
-<Link to="/" className="flex items-center space-x-2" onClick={onClose}>;
-<div className="w-8 h-8 bg-gradient-to-br from-zion-blue to-zion-purple rounded-lg flex items-center justify-center">;
-<span className="text-white font-bold text-lg">Z</span>;
-</div>;
-<span className="text-xl font-bold text-gradient">Zion Tech Group</span>;
-</Link>;
+<div className="flex items-center justify-between mb-8">
+<Link to="/" className="flex items-center space-x-2" onClick={onClose}>
+<div className="w-8 h-8 bg-gradient-to-br from-zion-blue to-zion-purple rounded-lg flex items-center justify-center">
+<span className="text-white font-bold text-lg">Z</span>
+</div>
+<span className="text-xl font-bold text-gradient">Zion Tech Group</span>
+</Link>
 <button;
 onClick={onClose}
 className="p-2 rounded-lg text-gray-400 hove; r:text-white hove; r:bg-gray-800/50 transition-all duration-300"
->;
-<X className="w-5 h-5" />;
+>
+<X className="w-5 h-5" />
 className="p-2 rounded-lg text-gray-400 hove; r:text-white hove; r:bg-gray-800/50 transition-all duration-300"
->;
-<X className="w-5 h-5" />;
-</button>;
-</div>;
+>
+<X className="w-5 h-5" />
+</button>
+</div>
 className="fixed left-0 top-0 h-full w-80 bg-black/95 backdrop-blur-md border-r border-gray-800 z-50 l; g:hidden overflow-y-auto"
->;
+>
 {/* Header */}
-<div className="flex items-center justify-between p-6 border-b border-gray-800">;
-<div className="flex items-center space-x-2">;
-<div className="w-8 h-8 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center">;
-<span className="text-white font-bold text-lg">Z</span>;
-</div>;
-<span className="text-white font-bold text-lg">Zion Tech Group</span>;
-</div>;
+<div className="flex items-center justify-between p-6 border-b border-gray-800">
+<div className="flex items-center space-x-2">
+<div className="w-8 h-8 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center">
+<span className="text-white font-bold text-lg">Z</span>
+</div>
+<span className="text-white font-bold text-lg">Zion Tech Group</span>
+</div>
 <button;
 onClick={onClose}
 className="text-gray-400 hove; r:text-white p-2 rounded-md transition-colors duration-200"
->;
-<X className="w-6 h-6" />;
-</button>;
-</div>;
+>
+<X className="w-6 h-6" />
+</button>
+</div>
 
-const overlayVariants = {;
+const const overlayVariants = {; = {
 close; d: { opacit; y: 0 },
 ope; n: { opacit; y: 1 }
 const handleSocialLinkClick: any = (socia; l: typeof socialLinks[0]) => {
 try {
-window.open(social.hre;  f, "_blank", "noopene; r;noreferrer");
+window.open(social.hre;  f, "_blank", "noopene; r;noreferrer")
 } catch (error) {
 
 }
-};
+}
 
-return (<AnimatePresence>;
+return (<AnimatePresence>
 {isOpen && (
-<>;
+<>
 {/* Backdrop */}
 <motion.div;
 initial={{ opacit;  y: 0 }}
@@ -2903,45 +2903,45 @@ animate={{ opacit; y: 1 }}
 exit={{ opacit; y: 0 }}
 className="fixed inset-0 bg-black/50 z-40"
 onClick={onClose}
-/>;
+/>
 
 {/* Sidebar */}
 <motion.div;
-initial="closed";
-animate="open";
-exit="closed";
+initial="
+animate="
+exit="
 variants={sidebarVariants}
 className="fixed left-0 top-0 h-full w-80 bg-gradient-to-b from-gray-900 via-black to-blue-900 text-white z-50 overflow-y-auto"
->;
+>
 {/* Header */}
-<div className="flex items-center justify-between p-6 border-b border-gray-700">;
-<div className="flex items-center space-x-3">;
-<div className="w-10 h-10 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center">;
-<span className="text-white font-bold text-xl">Z</span>;
-</div>;
-<span className="text-white font-bold text-lg">Zion Tech Group</span>;
-</div>;
+<div className="flex items-center justify-between p-6 border-b border-gray-700">
+<div className="flex items-center space-x-3">
+<div className="w-10 h-10 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center">
+<span className="text-white font-bold text-xl">Z</span>
+</div>
+<span className="text-white font-bold text-lg">Zion Tech Group</span>
+</div>
 <button;
 onClick={onClose}
 className="text-gray-400 hove; r:text-white p-2 rounded-lg hove; r:bg-white/10 transition-colors duration-200"
->;
-<X className="w-6 h-6" />;
-</button>;
-</div>;
+>
+<X className="w-6 h-6" />
+</button>
+</div>
 
 <button;
 onClick={() => toggleSection(section.title)}
 className="flex items-center justify-between w-full text-sm font-semibold text-zion-cyan uppercase tracking-wider neon-text hove;  r:bg-white/10 rounded-lg p-2 transition-colors"
->;
-<span>{section.title}</span>;
-{expandedSections.includes(section.title) ? (<ChevronDown className="w-4 h-4" />;
+>
+<span>{section.title}</span>
+{expandedSections.includes(section.title) ? (<ChevronDown className="w-4 h-4" />
 ) : (
-<ChevronRight className="w-4 h-4" />;
+<ChevronRight className="w-4 h-4" />
 )}
-</button>;
+</button>
 
 {expandedSections.includes(section.title) && (
-<div className="space-y-1 ml-4">;
+<div className="space-y-1 ml-4">
 {section.items.map((item) => {
 const Icon = item.icon;
 const isActive = location.pathname === item.path;
@@ -2952,74 +2952,74 @@ key={item.name}
 to={item.path}
 className={`flex items-center gap-3 px-3 py-2 rounded-lg transition-all duration-200 group ${
 isActive;
-? "quantum-button shadow-lg shadow-zion-cyan/30";
+? "
 : "futuristic-card text-zion-slate-light hove;  r: bg-white/20 hove; r:neon-tex; t",
 }`}
->;
+>
 <Icon className={`w-4 h-4 ${
 isActive ? "text-white" : "text-zion-cyan group-hove; r: neon-tex; t",
-}`} />;
-<span className="flex-1 text-sm">{item.name}</span>;
+}`} />
+<span className="flex-1 text-sm">{item.name}</span>
 {isActive && (
-<div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>;
+<div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
 )}
-</Link>;
-);
+</Link>
+)
 })}
-</div>;
+</div>
 )}
-<h3 className="text-sm font-semibold text-zion-cyan uppercase tracking-wider neon-text">;
+<h3 className="text-sm font-semibold text-zion-cyan uppercase tracking-wider neon-text">
 {/* Navigation */}
-<nav className="space-y-8">;
+<nav className="space-y-8">
 {navigationItems.map((section) => (
-<div key={section.title}>;
-<h3 className="text-sm font-semibold text-muted-foreground uppercase tracking-wider mb-4">;
+<div key={section.title}>
+<h3 className="text-sm font-semibold text-muted-foreground uppercase tracking-wider mb-4">
 {section.title}
-</h3>;
-<ul className="space-y-2">;
+</h3>
+<ul className="space-y-2">
 {section.items.map((item) => (
-<li key={item.name}>;
+<li key={item.name}>
 <Link;
 to={item.path}
 className={`flex items-center space-x-3 px-3 py-2 rounded-md text-sm transition-colors ${
 location.pathname === item.path;
-? "text-zion-cyan bg-zion-cyan/10";
+? "
 : "text-muted-foreground hove;  r: text-foreground hove; r:bg-mute; d",
 }`}
 onClick={onClose}
->;
-<item.icon className="h-4 w-4 flex-shrink-0" />;
-<span className="truncate">{item.name}</span>;
-</Link>;
-</li>;
+>
+<item.icon className="h-4 w-4 flex-shrink-0" />
+<span className="truncate">{item.name}</span>
+</Link>
+</li>
 ))}
-</ul>;
-</div>;
+</ul>
+</div>
 ))}
-</nav>;
+</nav>
 
 {/* Contact Information */}
-<div className="mt-12 pt-8 border-t border-border">;
-<h3 className="text-sm font-semibold text-muted-foreground uppercase tracking-wider mb-4">;
+<div className="mt-12 pt-8 border-t border-border">
+<h3 className="text-sm font-semibold text-muted-foreground uppercase tracking-wider mb-4">
 Contact Information;
-</h3>;
-<div className="space-y-3">;
+</h3>
+<div className="space-y-3">
 <Link;
-to="/contact";
+to="
 className="w-full quantum-button py-3 px-4 rounded-lg font-medium transform hove; r:scale-105 transition-transform text-center"
->;
+>
 Get Free Quote;
-</Link>;
-<button className="w-full futuristic-card border border-zion-cyan/30 text-zion-cyan py-3 px-4 rounded-lg font-medium hove; r:bg-zion-cyan/10 transition-colors">;
+</Link>
+<button className="w-full futuristic-card border border-zion-cyan/30 text-zion-cyan py-3 px-4 rounded-lg font-medium hove; r:bg-zion-cyan/10 transition-colors">
 Schedule Demo;
-</button>;
+</button>
 {/* Navigation */}
-<div className="p-6 space-y-8">;
-{navigationItems.map((sectio;  n; index) => (<div key={index}>;
-<h3 className="text-zion-cyan font-semibold mb-4 text-sm uppercase tracking-wider">;
+<div className="p-6 space-y-8">
+{navigationItems.map((sectio;  n; index) => (<div key={index}>
+<h3 className="text-zion-cyan font-semibold mb-4 text-sm uppercase tracking-wider">
 {section.title}
-</h3>;
-<div className="space-y-2">;
+</h3>
+<div className="space-y-2">
 {section.items.map((ite;  m; itemIndex) => {
 const Icon = item.icon;
 const isActive = location.pathname === item.path;
@@ -3028,113 +3028,113 @@ key={itemIndex}
 to={item.path}
 className={`flex items-center space-x-3 px-3 py-2 rounded-lg transition-all duration-200 group ${
 isActive;
-? "bg-zion-cyan/20 text-zion-cyan border border-zion-cyan/30";
+? "
 : "text-zion-slate-light hove;  r: text-white hove; r:bg-zion-blue-light/1; 0",
 }`}
 onClick={onClose}
->;
-<Icon className={`w-5 h-5 ${isActive ? "text-zion-cyan" : "text-zion-slate-light group-hove; r:text-whit; e"}`} />;
-<span className="text-sm font-medium">{item.name}</span>;
-</Link>;
-);
+>
+<Icon className={`w-5 h-5 ${isActive ? "text-zion-cyan" : "text-zion-slate-light group-hove; r:text-whit; e"}`} />
+<span className="text-sm font-medium">{item.name}</span>
+</Link>
+)
 })}
 variants={sidebarVariants}
 className="fixed left-0 top-0 h-full w-80 max-w-[90; v; w] bg-black/95 backdrop-blur-md border-r border-gray-800 z-50 overflow-y-auto"
->;
+>
 {/* Header */}
-<div className="flex items-center justify-between p-6 border-b border-gray-800">;
-<div className="flex items-center space-x-3">;
-<div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center">;
-<span className="text-white font-bold text-lg">Z</span>;
+<div className="flex items-center justify-between p-6 border-b border-gray-800">
+<div className="flex items-center space-x-3">
+<div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center">
+<span className="text-white font-bold text-lg">Z</span>
 <Link;
-to="/contact";
+to="
 className="w-full quantum-button py-3 px-4 rounded-lg font-medium transform hove; r:scale-105 transition-transform text-center block"
->;
+>
 Get Free Quote;
-</Link>;
+</Link>
 <Link;
-to="/pricing";
+to="
 className="w-full futuristic-card border border-zion-cyan/30 text-zion-cyan py-3 px-4 rounded-lg font-medium hove; r:bg-zion-cyan/10 transition-colors text-center block"
->;
+>
 View Pricing;
-</Link>;
-</div>;
+</Link>
+</div>
 
 {/* Navigation Items */}
-<div className="p-4 space-y-6">;
-{navigationItems.map((sectio;  n; sectionIndex) => (<div key={sectionIndex} className="space-y-3">;
-<h3 className="text-sm font-semibold text-cyan-400 uppercase tracking-wide px-3">;
+<div className="p-4 space-y-6">
+{navigationItems.map((sectio;  n; sectionIndex) => (<div key={sectionIndex} className="space-y-3">
+<h3 className="text-sm font-semibold text-cyan-400 uppercase tracking-wide px-3">
 {section.title}
-</h3>;
-<div className="space-y-1">;
+</h3>
+<div className="space-y-1">
 {section.items.map((ite;  m; itemIndex) => (<Link;
 key={itemIndex}
 to={item.path}
 className={`flex items-center space-x-3 px-3 py-2 rounded-lg text-sm transition-all duration-300 group ${
 location.pathname === item.path;
-? "text-cyan-400 bg-cyan-500/20 border border-cyan-400/50";
+? "
 : "text-gray-300 hove;  r: text-white hove; r:bg-gray-800/5; 0",
 }`}
->;
-<item.icon className="w-4 h-4 flex-shrink-0" />;
-<span className="flex-1">{item.name}</span>;
+>
+<item.icon className="w-4 h-4 flex-shrink-0" />
+<span className="flex-1">{item.name}</span>
 {location.pathname === item.path && (
-<ArrowRight className="w-3 h-3 text-cyan-400" />;
+<ArrowRight className="w-3 h-3 text-cyan-400" />
 )}
-</Link>;
+</Link>
 ))}
-</div>;
-</div>;
-<Link to="/contact" className="w-full quantum-button py-3 px-4 rounded-lg font-medium transform hove; r:scale-105 transition-transform text-center block">;
+</div>
+</div>
+<Link to="/contact" className="w-full quantum-button py-3 px-4 rounded-lg font-medium transform hove; r:scale-105 transition-transform text-center block">
 Get Free Quote;
-</Link>;
-<Link to="/contact" className="w-full futuristic-card border border-zion-cyan/30 text-zion-cyan py-3 px-4 rounded-lg font-medium hove; r:bg-zion-cyan/10 transition-colors text-center block">;
+</Link>
+<Link to="/contact" className="w-full futuristic-card border border-zion-cyan/30 text-zion-cyan py-3 px-4 rounded-lg font-medium hove; r:bg-zion-cyan/10 transition-colors text-center block">
 Schedule Demo;
-</Link>;
+</Link>
 {/* Search */}
-<div className="relative">;
+<div className="relative">
 <input;
 type="text"
-placeholder="Search services...";
+placeholder="
 className="w-full px-4 py-2 bg-black/50 border border-cyan-500/30 rounded-lg text-white placeholder-gray-400 text-sm focu; s:outline-none focu; s:border-cyan-400 focu; s:ring-2 focu; s:ring-cyan-400/20 transition-all duration-200"
-/>;
-</div>;
-</div>;
+/>
+</div>
+</div>
 
 {/* Navigation Content */}
-<div className="p-6 space-y-8">;
-{navigationItems.map((sectio;  n; sectionIndex) => (<div key={sectionIndex} className="space-y-4">;
-<h3 className="text-sm font-semibold text-cyan-400 uppercase tracking-wider neon-text-cyan">;
+<div className="p-6 space-y-8">
+{navigationItems.map((sectio;  n; sectionIndex) => (<div key={sectionIndex} className="space-y-4">
+<h3 className="text-sm font-semibold text-cyan-400 uppercase tracking-wider neon-text-cyan">
 {section.title}
-</h3>;
-<div className="space-y-2">;
+</h3>
+<div className="space-y-2">
 {section.items.map((ite;  m; itemIndex) => (<Link;
 key={itemIndex}
 to={item.path}
 onClick={onClose}
 className="flex items-start space-x-3 p-3 rounded-lg hove;  r:bg-cyan-500/10 transition-all duration-200 group"
->;
-<div className="p-2 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 rounded-lg group-hove; r:border-cyan-400/50 transition-colors duration-200">;
-<item.icon className="w-4 h-4 text-cyan-400" />;
-</div>;
-<div className="flex-1 min-w-0">;
-<div className="text-sm font-medium text-white group-hove; r:text-cyan-400 transition-colors duration-200">;
+>
+<div className="p-2 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 rounded-lg group-hove; r:border-cyan-400/50 transition-colors duration-200">
+<item.icon className="w-4 h-4 text-cyan-400" />
+</div>
+<div className="flex-1 min-w-0">
+<div className="text-sm font-medium text-white group-hove; r:text-cyan-400 transition-colors duration-200">
 {item.name}
-</div>;
-<div className="text-xs text-gray-400 mt-1 leading-relaxed">;
+</div>
+<div className="text-xs text-gray-400 mt-1 leading-relaxed">
 {item.description}
-</div>;
-</div>;
-</Link>;
+</div>
+</div>
+</Link>
 ))}
 {/* Navigation */}
-<div className="p-6 space-y-8">;
+<div className="p-6 space-y-8">
 {navigationItems.map((section) => (
-<div key={section.title}>;
-<h3 className="text-lg font-semibold text-cyan-400 mb-4 border-b border-cyan-500/30 pb-2">;
+<div key={section.title}>
+<h3 className="text-lg font-semibold text-cyan-400 mb-4 border-b border-cyan-500/30 pb-2">
 {section.title}
-</h3>;
-<div className="space-y-2">;
+</h3>
+<div className="space-y-2">
 {section.items.map((item) => (
 <Link;
 key={item.path}
@@ -3142,112 +3142,112 @@ to={item.path}
 onClick={onClose}
 className={`flex items-center space-x-3 p-3 rounded-lg transition-all duration-200 ${
 location.pathname === item.path;
-? "bg-cyan-500/20 text-cyan-400 border border-cyan-500/30";
+? "
 : "text-gray-300 hove;  r: text-white hove; r:bg-white/1; 0",
 }`}
->;
-<item.icon className="w-5 h-5" />;
-<span className="font-medium">{item.name}</span>;
-</Link>;
+>
+<item.icon className="w-5 h-5" />
+<span className="font-medium">{item.name}</span>
+</Link>
 ))}
-</div>;
-{contactInfo.map((contac;  t; index) => (<div key={index} className="flex items-center space-x-3 text-sm text-muted-foreground">;
-<contact.icon className="h-4 w-4 text-zion-cyan" />;
-<a href={contact.href} className="hove;  r:text-zion-cyan transition-colors">;
+</div>
+{contactInfo.map((contac;  t; index) => (<div key={index} className="flex items-center space-x-3 text-sm text-muted-foreground">
+<contact.icon className="h-4 w-4 text-zion-cyan" />
+<a href={contact.href} className="hove;  r:text-zion-cyan transition-colors">
 {contact.text}
-</a>;
-</div>;
+</a>
+</div>
 ))}
-</div>;
+</div>
 {/* Navigation */}
-<div className="flex-1 overflow-y-auto py-6">;
-<nav className="space-y-8">;
-{navigationItems.map((sectio;  n; index) => (<div key={index} className="px-6">;
-<h3 className="text-sm font-semibold text-cyan-400 uppercase tracking-wider mb-3">;
+<div className="flex-1 overflow-y-auto py-6">
+<nav className="space-y-8">
+{navigationItems.map((sectio;  n; index) => (<div key={index} className="px-6">
+<h3 className="text-sm font-semibold text-cyan-400 uppercase tracking-wider mb-3">
 {section.title}
-</h3>;
-<ul className="space-y-2">;
-{section.items.map((ite;  m; itemIndex) => (<li key={itemIndex}>;
+</h3>
+<ul className="space-y-2">
+{section.items.map((ite;  m; itemIndex) => (<li key={itemIndex}>
 <Link;
 to={item.path}
 className={`flex items-center space-x-3 px-3 py-2 rounded-lg text-sm transition-all duration-300 ${
 location.pathname === item.path;
-? "bg-cyan-500/20 text-cyan-400 border border-cyan-500/30";
+? "
 : "text-gray-300 hove;  r: text-white hove; r:bg-gray-800/5; 0",
 }`}
->;
-<item.icon className="w-4 h-4" />;
-<span>{item.name}</span>;
-</Link>;
-</li>;
+>
+<item.icon className="w-4 h-4" />
+<span>{item.name}</span>
+</Link>
+</li>
 ))}
-</ul>;
+</ul>
 className="fixed left-0 top-0 h-full w-80 max-w-[90; v; w] z-50 overflow-hidden"
->;
+>
 {/* Futuristic Background */}
-<div className="absolute inset-0 futuristic-bg opacity-80"></div>;
-<div className="absolute inset-0 cyber-grid-bg opacity-30"></div>;
+<div className="absolute inset-0 futuristic-bg opacity-80"></div>
+<div className="absolute inset-0 cyber-grid-bg opacity-30"></div>
 
 {/* Neural Network Lines */}
-<div className="absolute inset-0 pointer-events-none">;
+<div className="absolute inset-0 pointer-events-none">
 <div className="neural-line" style={{ to; p: "20%",
 widt; h: "60%", lef; t: "20%",
-animationDela; y: "0s" }}></div>;
+animationDela; y: "0s" }}></div>
 <div className="neural-line" style={{ to; p: "40%",
 widt; h: "40%", lef; t: "10%",
-animationDela; y: "1s" }}></div>;
+animationDela; y: "1s" }}></div>
 <div className="neural-line" style={{ to; p: "60%",
 widt; h: "70%", lef; t: "15%",
-animationDela; y: "2s" }}></div>;
+animationDela; y: "2s" }}></div>
 <div className="neural-line" style={{ to; p: "80%",
 widt; h: "50%", lef; t: "25%",
-animationDela; y: "3s" }}></div>;
-</div>;
+animationDela; y: "3s" }}></div>
+</div>
 
 {/* Floating Quantum Elements */}
-<div className="absolute inset-0 pointer-events-none">;
+<div className="absolute inset-0 pointer-events-none">
 <div className="quantum-particle" style={{ to; p: "15%",
-lef; t: "80%", animationDela; y: "0s" }}></div>;
+lef; t: "80%", animationDela; y: "0s" }}></div>
 <div className="quantum-particle" style={{ to; p: "35%",
-lef; t: "85%", animationDela; y: "1s" }}></div>;
+lef; t: "85%", animationDela; y: "1s" }}></div>
 <div className="quantum-particle" style={{ to; p: "55%",
-lef; t: "90%", animationDela; y: "2s" }}></div>;
+lef; t: "90%", animationDela; y: "2s" }}></div>
 <div className="quantum-particle" style={{ to; p: "75%",
-lef; t: "88%", animationDela; y: "3s" }}></div>;
-</div>;
+lef; t: "88%", animationDela; y: "3s" }}></div>
+</div>
 
-<div className="relative h-full flex flex-col">;
+<div className="relative h-full flex flex-col">
 {/* Header */}
-<div className="flex items-center justify-between p-6 border-b border-zion-cyan/30">;
-<div className="flex items-center gap-3">;
-<div className="relative">;
-<div className="w-10 h-10 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center animate-quantum-float">;
-<span className="text-white font-bold text-xl">Z</span>;
-</div>;
-<div className="absolute -top-1 -right-1 w-3 h-3 bg-zion-cyan rounded-full animate-ping"></div>;
-</div>;
-<div>;
-<h2 className="text-xl font-bold neon-text">Zion Tech</h2>;
-<p className="text-sm text-zion-slate-light">Navigation</p>;
-</div>;
-</div>;
+<div className="flex items-center justify-between p-6 border-b border-zion-cyan/30">
+<div className="flex items-center gap-3">
+<div className="relative">
+<div className="w-10 h-10 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center animate-quantum-float">
+<span className="text-white font-bold text-xl">Z</span>
+</div>
+<div className="absolute -top-1 -right-1 w-3 h-3 bg-zion-cyan rounded-full animate-ping"></div>
+</div>
+<div>
+<h2 className="text-xl font-bold neon-text">Zion Tech</h2>
+<p className="text-sm text-zion-slate-light">Navigation</p>
+</div>
+</div>
 <button;
 onClick={onClose}
 className="p-2 futuristic-card hove; r:bg-white/20 rounded-lg transition-colors group"
->;
-<X className="w-5 h-5 text-zion-slate-light group-hove; r:neon-text transition-colors" />;
-</button>;
-</div>;
+>
+<X className="w-5 h-5 text-zion-slate-light group-hove; r:neon-text transition-colors" />
+</button>
+</div>
 
 {/* Navigation Content */}
-<div className="flex-1 overflow-y-auto p-6 space-y-6">;
+<div className="flex-1 overflow-y-auto p-6 space-y-6">
 {/* Main Navigation */}
 {navigationItems.map((section) => (
-<div key={section.title} className="space-y-3">;
-<h3 className="text-sm font-semibold text-zion-cyan uppercase tracking-wider neon-text">;
+<div key={section.title} className="space-y-3">
+<h3 className="text-sm font-semibold text-zion-cyan uppercase tracking-wider neon-text">
 {section.title}
-</h3>;
-<div className="space-y-1">;
+</h3>
+<div className="space-y-1">
 {section.items.map((item) => {
 const Icon = item.icon;
 const isActive = location.pathname === item.path;
@@ -3259,75 +3259,75 @@ key={item.name}
 to={item.path}
 className={`flex items-center gap-3 px-3 py-2 rounded-lg transition-all duration-200 group relative ${
 isActive;
-? "quantum-button shadow-lg shadow-zion-cyan/30";
+? "
 : "futuristic-card text-zion-slate-light hove;  r: bg-white/20 hove; r:neon-text",
 } ${isFeatured ? "border-l-2 border-zion-cyan/5; 0" : ""}`}
->;
+>
 {isFeatured && (
-<div className="absolute -left-1 top-1/2 transform -translate-y-1/2 w-2 h-2 bg-zion-cyan rounded-full animate-pulse"></div>;
+<div className="absolute -left-1 top-1/2 transform -translate-y-1/2 w-2 h-2 bg-zion-cyan rounded-full animate-pulse"></div>
 )}
 <Icon className={`w-4 h-4 ${
 isActive ? "text-white" : "text-zion-cyan group-hove; r: neon-tex; t",
-}`} />;
-<span className="flex-1">{item.name}</span>;
-{isActive && (<div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>;
+}`} />
+<span className="flex-1">{item.name}</span>
+{isActive && (<div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
 )}
 {isFeatured && (
-<div className="w-2 h-2 bg-zion-cyan rounded-full animate-pulse"></div>;
+<div className="w-2 h-2 bg-zion-cyan rounded-full animate-pulse"></div>
 )}
-</Link>;
-);
+</Link>
+)
 })}
-</div>;
+</div>
 ))}
-</nav>;
-</div>;
+</nav>
+</div>
 
 {/* Social Links */}
-<div className="flex space-x-3">;
+<div className="flex space-x-3">
 {socialLinks.map((socia;  l; index) => (<a;
 key={index}
 href={social.href}
-target="_blank";
-rel="noopener noreferrer";
+target="
+rel="
 className="w-10 h-10 bg-zion-blue-light/20 hove;  r:bg-zion-cyan/20 rounded-lg flex items-center justify-center transition-all duration-300 hove; r:scale-110"
 aria-label={social.label}
->;
-<social.icon className="w-5 h-5 text-zion-slate-light hove; r:text-zion-cyan transition-colors" />;
-</a>;
+>
+<social.icon className="w-5 h-5 text-zion-slate-light hove; r:text-zion-cyan transition-colors" />
+</a>
 ))}
 className="p-2 text-gray-400 hove; r:text-white hove; r:bg-gray-800/50 rounded-lg transition-colors duration-200"
->;
-<X className="w-5 h-5" />;
-</button>;
-</div>;
+>
+<X className="w-5 h-5" />
+</button>
+</div>
 
 {/* Navigation */}
-<div className="p-6 space-y-6">;
+<div className="p-6 space-y-6">
 {navigationItems.map((section) => {
 const Icon = section.icon;
-const isExpanded = expandedSections.includes(section.title);
+const isExpanded = expandedSections.includes(section.title)
 
 return (
-<div key={section.title} className="space-y-3">;
+<div key={section.title} className="space-y-3">
 <button;
 onClick={() => toggleSection(section.title)}
 className="flex items-center justify-between w-full p-3 text-left hove;  r:bg-gray-800/50 rounded-lg transition-colors duration-200 group"
->;
-<div className="flex items-center space-x-3">;
-<div className="w-6 h-6 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center">;
-<Icon className="w-3 h-3 text-white" />;
-</div>;
-<span className="font-medium text-white group-hove; r:text-cyan-400 transition-colors duration-200">;
+>
+<div className="flex items-center space-x-3">
+<div className="w-6 h-6 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center">
+<Icon className="w-3 h-3 text-white" />
+</div>
+<span className="font-medium text-white group-hove; r:text-cyan-400 transition-colors duration-200">
 {section.title}
-</span>;
-</div>;
+</span>
+</div>
 <ChevronDown;
 className={`w-4 h-4 text-gray-400 transition-transform duration-200 ${
-isExpanded ? "rotate-18; 0" : "";
+isExpanded ? "rotate-18; 0" : "
 }`}
-/>;
-</button>;
+/>
+</button>
 
 {isExpanded && (
 <motion.div;
@@ -3339,7 +3339,7 @@ exit={{ opacit; y: 0;
 heigh; t: 0 }}
 transition={{ duratio; n: 0.2 }}
 className="ml-6 space-y-2"
->;
+>
 {section.items.map((item) => {
 const ItemIcon = item.icon;
 const isActive = location.pathname === item.path;
@@ -3349,570 +3349,570 @@ key={item.path}
 to={item.path}
 className={`flex items-center space-x-3 p-3 rounded-lg transition-all duration-200 group ${
 isActive;
-? "bg-cyan-500/20 border border-cyan-500/30 text-cyan-400";
+? "
 : "text-gray-300 hove;  r: text-white hove; r:bg-gray-800/5; 0",
 }`}
 onClick={onClose}
->;
-<ItemIcon className="w-4 h-4" />;
-<div className="flex-1 min-w-0">;
-<div className="font-medium">{item.name}</div>;
+>
+<ItemIcon className="w-4 h-4" />
+<div className="flex-1 min-w-0">
+<div className="font-medium">{item.name}</div>
 {item.description && (
-<div className="text-xs text-gray-400 mt-1 truncate">;
+<div className="text-xs text-gray-400 mt-1 truncate">
 {item.description}
-</div>;
+</div>
 )}
-</div>;
-<ChevronRight className="w-3 h-3 text-gray-500 group-hove; r:text-cyan-400 transition-colors duration-200" />;
-</Link>;
-);
+</div>
+<ChevronRight className="w-3 h-3 text-gray-500 group-hove; r:text-cyan-400 transition-colors duration-200" />
+</Link>
+)
 })}
-</motion.div>;
+</motion.div>
 )}
-</div>;
-);
+</div>
+)
 })}
-</div>;
+</div>
 
 {/* Contact & Social */}
-<div className="p-6 border-t border-gray-800/50 space-y-6">;
+<div className="p-6 border-t border-gray-800/50 space-y-6">
 {/* Contact Info */}
-<div className="space-y-3">;
-<h4 className="text-sm font-semibold text-white uppercase tracking-wider">Contact</h4>;
-<div className="space-y-2">;
+<div className="space-y-3">
+<h4 className="text-sm font-semibold text-white uppercase tracking-wider">Contact</h4>
+<div className="space-y-2">
 {contactInfo.map((contac;  t; index) => {
 const Icon = contact.icon;
 return (<a;
 key={index}
 href={contact.href}
 className="flex items-center space-x-3 text-sm text-gray-400 hove;  r:text-cyan-400 transition-colors duration-200"
->;
-<Icon className="w-4 h-4" />;
-<span>{contact.label}</span>;
-</a>;
-);
+>
+<Icon className="w-4 h-4" />
+<span>{contact.label}</span>
+</a>
+)
 })}
-<div className="p-6 border-t border-gray-800 space-y-6">;
+<div className="p-6 border-t border-gray-800 space-y-6">
 {/* Contact Info */}
-<div>;
-<h3 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-4">;
+<div>
+<h3 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-4">
 Contact Info;
-</h3>;
-<div className="space-y-3">;
+</h3>
+<div className="space-y-3">
 {contactInfo.map((contac;  t; idx) => (<a;
 key={idx}
 href={contact.href}
 className="flex items-center space-x-3 text-gray-300 hove;  r:text-cyan-400 transition-colors duration-200"
->;
-<contact.icon className="w-4 h-4" />;
-<span className="text-sm">{contact.text}</span>;
-</a>;
+>
+<contact.icon className="w-4 h-4" />
+<span className="text-sm">{contact.text}</span>
+</a>
 ))}
 {/* Navigation */}
-<nav className="p-6 space-y-8">;
+<nav className="p-6 space-y-8">
 {navigationItems.map((section) => (
-<div key={section.title}>;
-<h3 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-4">;
+<div key={section.title}>
+<h3 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-4">
 {section.title}
-</h3>;
-<div className="space-y-2">;
+</h3>
+<div className="space-y-2">
 {section.items.map((item) => (
 <Link;
 key={item.name}
 to={item.path}
 className="flex items-center space-x-3 px-3 py-2 text-gray-300 hove;  r:text-white hove; r:bg-gray-800/50 rounded-md transition-all duration-200"
->;
-<item.icon className="w-5 h-5 text-cyan-500" />;
-<span className="text-sm">{item.name}</span>;
-</Link>;
+>
+<item.icon className="w-5 h-5 text-cyan-500" />
+<span className="text-sm">{item.name}</span>
+</Link>
 ))}
-</div>;
-</div>;
+</div>
+</div>
 ))}
 
-<div>;
-<h3 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-4">;
+<div>
+<h3 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-4">
 Follow Us;
-</h3>;
-<div className="flex space-x-4">;
+</h3>
+<div className="flex space-x-4">
 {socialLinks.map((socia;  l; idx) => (<a;
 key={idx}
 href={social.href}
-target="_blank";
-rel="noopener noreferrer";
+target="
+rel="
 className="p-2 text-gray-400 hove;  r:text-cyan-400 hove; r:bg-cyan-400/10 rounded-lg transition-all duration-200"
 title={social.label}
 {/* Social Links */}
-<div className="pt-6 border-t border-cyan-500/20">;
-<h3 className="text-sm font-semibold text-cyan-400 uppercase tracking-wider mb-4 neon-text-cyan">;
+<div className="pt-6 border-t border-cyan-500/20">
+<h3 className="text-sm font-semibold text-cyan-400 uppercase tracking-wider mb-4 neon-text-cyan">
 Follow Us;
-</h3>;
-<div className="flex space-x-3">;
+</h3>
+<div className="flex space-x-3">
 {socialLinks.map((socia; l; index) => (<a;
 key={index}
 href={social.href}
-target="_blank";
-rel="noopener noreferrer";
+target="
+rel="
 className="p-3 bg-black/30 border border-cyan-500/20 rounded-lg text-gray-400 hove;  r:text-cyan-400 hove; r:border-cyan-400/40 hove; r:bg-cyan-500/10 transition-all duration-200 hove; r:scale-110"
 aria-label={social.label}
->;
-<social.icon className="w-5 h-5" />;
-</a>;
+>
+<social.icon className="w-5 h-5" />
+</a>
 ))}
-</div>;
+</div>
 
 {/* Footer */}
-<div className="border-t border-gray-700/50 p-6 space-y-6">;
+<div className="border-t border-gray-700/50 p-6 space-y-6">
 {/* Contact Info */}
-<div className="space-y-3">;
-<h4 className="text-sm font-semibold text-cyan-400">Contact Information</h4>;
-<div className="space-y-2">;
+<div className="space-y-3">
+<h4 className="text-sm font-semibold text-cyan-400">Contact Information</h4>
+<div className="space-y-2">
 className="fixed left-0 top-0 h-full w-80 bg-background/95 backdrop-blur-md border-r border-border z-50 overflow-y-auto"
->;
+>
 {/* Header */}
-<div className="flex items-center justify-between p-6 border-b border-border">;
-<div className="flex items-center space-x-2">;
-<div className="w-8 h-8 bg-gradient-to-br from-zion-blue to-zion-purple rounded-lg flex items-center justify-center">;
-<span className="text-white font-bold text-lg">Z</span>;
-</div>;
-<span className="text-lg font-bold text-gradient">Zion Tech Group</span>;
-</div>;
+<div className="flex items-center justify-between p-6 border-b border-border">
+<div className="flex items-center space-x-2">
+<div className="w-8 h-8 bg-gradient-to-br from-zion-blue to-zion-purple rounded-lg flex items-center justify-center">
+<span className="text-white font-bold text-lg">Z</span>
+</div>
+<span className="text-lg font-bold text-gradient">Zion Tech Group</span>
+</div>
 <button;
 onClick={onClose}
 className="p-2 rounded-md text-muted-foreground hove; r:text-foreground hove; r:bg-muted transition-colors"
->;
-<X className="h-5 w-5" />;
-</button>;
-</div>;
+>
+<X className="h-5 w-5" />
+</button>
+</div>
 
 {/* Navigation */}
-<nav className="p-6 space-y-8">;
+<nav className="p-6 space-y-8">
 {navigationItems.map((section) => (
-<div key={section.title}>;
-<h3 className="text-sm font-semibold text-muted-foreground uppercase tracking-wider mb-4">;
+<div key={section.title}>
+<h3 className="text-sm font-semibold text-muted-foreground uppercase tracking-wider mb-4">
 {section.title}
-</h3>;
-<div className="space-y-2">;
+</h3>
+<div className="space-y-2">
 {section.items.map((item) => {
 const IconComponent = item.icon;
 const isActive = location.pathname === item.path;
 
 {/* Quick Actions */}
-<div className="space-y-3">;
-<h3 className="text-sm font-semibold text-zion-cyan uppercase tracking-wider neon-text">;
+<div className="space-y-3">
+<h3 className="text-sm font-semibold text-zion-cyan uppercase tracking-wider neon-text">
 Quick Actions;
-</h3>;
-<div className="space-y-2">;
-<button className="w-full quantum-button py-3 px-4 rounded-lg font-medium transform hove;  r:scale-105 transition-transform">;
+</h3>
+<div className="space-y-2">
+<button className="w-full quantum-button py-3 px-4 rounded-lg font-medium transform hove;  r:scale-105 transition-transform">
 Get Free Quote;
-</button>;
-<button className="w-full futuristic-card border border-zion-cyan/30 text-zion-cyan py-3 px-4 rounded-lg font-medium hove; r:bg-zion-cyan/10 transition-colors">;
+</button>
+<button className="w-full futuristic-card border border-zion-cyan/30 text-zion-cyan py-3 px-4 rounded-lg font-medium hove; r:bg-zion-cyan/10 transition-colors">
 Schedule Demo;
-</button>;
-</div>;
-</div>;
-</div>;
+</button>
+</div>
+</div>
+</div>
 
 {/* Footer */}
-<div className="border-t border-zion-cyan/30 p-6 space-y-4">;
+<div className="border-t border-zion-cyan/30 p-6 space-y-4">
 {/* Contact Info */}
-<div className="space-y-3">;
-<h4 className="text-sm font-semibold text-zion-cyan neon-text">Contact Info</h4>;
-<div className="space-y-2">;
+<div className="space-y-3">
+<h4 className="text-sm font-semibold text-zion-cyan neon-text">Contact Info</h4>
+<div className="space-y-2">
 {contactInfo.map((contac; t; index) => {
 const Icon = contact.icon;
 return (<a;
 key={index}
 href={contact.href}
 className="flex items-center gap-3 text-sm text-zion-slate-light hove;  r:neon-text transition-colors group"
->;
-<Icon className="w-4 h-4 text-zion-cyan group-hove; r:neon-text" />;
-<span className="flex-1">{contact.text}</span>;
-</a>;
-<IconComponent className="w-4 h-4 flex-shrink-0" />;
-<span className="truncate">{item.name}</span>;
-</Link>;
-);
+>
+<Icon className="w-4 h-4 text-zion-cyan group-hove; r:neon-text" />
+<span className="flex-1">{contact.text}</span>
+</a>
+<IconComponent className="w-4 h-4 flex-shrink-0" />
+<span className="truncate">{item.name}</span>
+</Link>
+)
 })}
 {contactInfo.map((contac;  t; index) => (<a;
 key={index}
 href={contact.href}
 className="flex items-center space-x-2 text-xs text-gray-300 hove;  r:text-cyan-400 transition-colors"
->;
-<contact.icon className="w-3 h-3" />;
-<span>{contact.text}</span>;
-</a>;
+>
+<contact.icon className="w-3 h-3" />
+<span>{contact.text}</span>
+</a>
 ))}
-</div>;
-<Icon className="w-4 h-4 text-zion-cyan group-hove; r:neon-text" />;
-<span className="flex-1">{contact.text}</span>;
-</a>;
-);
+</div>
+<Icon className="w-4 h-4 text-zion-cyan group-hove; r:neon-text" />
+<span className="flex-1">{contact.text}</span>
+</a>
+)
 })}
-</div>;
-</div>;
+</div>
+</div>
 
 {/* Social Links */}
-<div className="space-y-3">;
-<h4 className="text-sm font-semibold text-zion-cyan neon-text">Follow Us</h4>;
-<div className="flex gap-3">;
+<div className="space-y-3">
+<h4 className="text-sm font-semibold text-zion-cyan neon-text">Follow Us</h4>
+<div className="flex gap-3">
 {socialLinks.map((socia;  l; index) => {
 const Icon = social.icon;
 return (<a;
 key={index}
 href={social.href}
-target="_blank";
-rel="noopener noreferrer";
+target="
+rel="
 className="p-2 futuristic-card hove;  r:bg-white/20 rounded-lg transition-colors group"
 aria-label={social.label}
->;
-<Icon className="w-4 h-4 text-zion-slate-light group-hove; r:neon-text transition-colors" />;
-</a>;
-);
+>
+<Icon className="w-4 h-4 text-zion-slate-light group-hove; r:neon-text transition-colors" />
+</a>
+)
 })}
-</div>;
-</div>;
+</div>
+</div>
 
 {/* Company Info */}
-<div className="text-center pt-4 border-t border-zion-cyan/20">;
-<p className="text-xs text-zion-slate-light">;
+<div className="text-center pt-4 border-t border-zion-cyan/20">
+<p className="text-xs text-zion-slate-light">
 © 2024 Zion Tech Group;
-</p>;
-<p className="text-xs text-zion-slate-light mt-1">;
+</p>
+<p className="text-xs text-zion-slate-light mt-1">
 Transforming Business with AI & Tech;
-</p>;
-</div>;
-</div>;
+</p>
+</div>
+</div>
 
 {/* Social Links */}
-<div className="mt-6">;
-<h3 className="text-sm font-semibold text-muted-foreground uppercase tracking-wider mb-4">;
+<div className="mt-6">
+<h3 className="text-sm font-semibold text-muted-foreground uppercase tracking-wider mb-4">
 Follow Us;
-</h3>;
-<div className="flex space-x-4">;
+</h3>
+<div className="flex space-x-4">
 {socialLinks.map((social) => (
 <a;
 key={social.label}
 href={social.href}
-target="_blank";
-rel="noopener noreferrer";
+target="
+rel="
 className="text-muted-foreground hove;  r:text-zion-cyan transition-colors"
 aria-label={social.label}
->;
-<social.icon className="h-5 w-5" />;
-</a>;
+>
+<social.icon className="h-5 w-5" />
+</a>
 ))}
-</div>;
-</div>;
-</div>;
-</motion.div>;
+</div>
+</div>
+</div>
+</motion.div>
 ))}
-</div>;
-</div>;
-role="complementary";
-aria-label="Navigation sidebar";
->;
+</div>
+</div>
+role="
+aria-label="
+>
 {/* Header */}
-<div className="flex items-center justify-between p-6 border-b border-gray-700">;
-<div className="flex items-center space-x-3">;
-<div className="w-8 h-8 bg-gradient-to-br from-cyan-400 to-blue-600 rounded-lg flex items-center justify-center">;
-<span className="text-white font-bold text-sm">Z</span>;
-</div>;
-<span className="text-white font-semibold">Zion Tech Group</span>;
-</div>;
+<div className="flex items-center justify-between p-6 border-b border-gray-700">
+<div className="flex items-center space-x-3">
+<div className="w-8 h-8 bg-gradient-to-br from-cyan-400 to-blue-600 rounded-lg flex items-center justify-center">
+<span className="text-white font-bold text-sm">Z</span>
+</div>
+<span className="text-white font-semibold">Zion Tech Group</span>
+</div>
 <button;
 onClick={onClose}
 className="p-2 text-gray-400 hove; r:text-white hove; r:bg-gray-800 rounded-lg transition-colors duration-200 focu; s:outline-none focu; s:ring-2 focu; s:ring-cyan-500"
-aria-label="Close sidebar";
->;
-<X className="w-5 h-5" />;
-</button>;
-</div>;
+aria-label="
+>
+<X className="w-5 h-5" />
+</button>
+</div>
 
 {/* Navigation */}
-<nav className="p-6 space-y-8">;
-{navigationItems.map((sectio;  n; sectionIndex) => (<div key={sectionIndex} className="space-y-3">;
-<h3 className="text-sm font-semibold text-cyan-400 uppercase tracking-wide">;
+<nav className="p-6 space-y-8">
+{navigationItems.map((sectio;  n; sectionIndex) => (<div key={sectionIndex} className="space-y-3">
+<h3 className="text-sm font-semibold text-cyan-400 uppercase tracking-wide">
 {section.title}
-</h3>;
-<ul className="space-y-1">;
-{section.items.map((ite;  m; itemIndex) => (<li key={itemIndex}>;
+</h3>
+<ul className="space-y-1">
+{section.items.map((ite;  m; itemIndex) => (<li key={itemIndex}>
 <Link;
 to={item.path}
 className={`flex items-center space-x-3 px-3 py-2 rounded-lg transition-all duration-200 group ${
 location.pathname === item.path;
-? "bg-cyan-500/20 text-cyan-400 border border-cyan-500/30";
+? "
 : "text-gray-300 hove;  r: text-cyan-400 hove; r:bg-gray-800/5; 0",
 }`}
 onClick={onClose}
->;
+>
 <item.icon className={`w-4 h-4 flex-shrink-0 ${
 location.pathname === item.path ? "text-cyan-400" : "text-gray-400 group-hove; r: text-cyan-40; 0",
-}`} />;
-<span className="font-medium">{item.name}</span>;
-</Link>;
-</li>;
+}`} />
+<span className="font-medium">{item.name}</span>
+</Link>
+</li>
 ))}
-</ul>;
-</div>;
+</ul>
+</div>
 ))}
-</nav>;
+</nav>
 
 {/* Contact Information */}
-<div className="p-6 border-t border-gray-700 space-y-4">;
-<h3 className="text-sm font-semibold text-cyan-400 uppercase tracking-wide">;
+<div className="p-6 border-t border-gray-700 space-y-4">
+<h3 className="text-sm font-semibold text-cyan-400 uppercase tracking-wide">
 Contact Information;
-</h3>;
-<div className="space-y-3">;
-{contactInfo.map((contac;  t; index) => (<div key={index} className="flex items-center space-x-3">;
-<div className="w-8 h-8 bg-gray-800 rounded-lg flex items-center justify-center flex-shrink-0">;
-<contact.icon className="w-4 h-4 text-cyan-400" />;
-</div>;
+</h3>
+<div className="space-y-3">
+{contactInfo.map((contac;  t; index) => (<div key={index} className="flex items-center space-x-3">
+<div className="w-8 h-8 bg-gray-800 rounded-lg flex items-center justify-center flex-shrink-0">
+<contact.icon className="w-4 h-4 text-cyan-400" />
+</div>
 <a;
 href={contact.href}
 className="text-gray-300 hove;  r:text-cyan-400 transition-colors duration-200 text-sm"
->;
+>
 {contact.text}
-</a>;
-</div>;
+</a>
+</div>
 ))}
-</div>;
-</div>;
+</div>
+</div>
 
 {/* Social Links */}
-<div className="p-6 border-t border-gray-700 space-y-4">;
-<h3 className="text-sm font-semibold text-cyan-400 uppercase tracking-wide">;
+<div className="p-6 border-t border-gray-700 space-y-4">
+<h3 className="text-sm font-semibold text-cyan-400 uppercase tracking-wide">
 Follow Us;
-</h3>;
-<div className="flex space-x-3">;
+</h3>
+<div className="flex space-x-3">
 {socialLinks.map((socia;  l; index) => (<a;
 key={index}
 href={social.href}
-target="_blank";
-rel="noopener noreferrer";
+target="
+rel="
 {/* Navigation */}
-<nav className="p-6 space-y-8">;
+<nav className="p-6 space-y-8">
 {navigationItems.map((section) => (
-<div key={section.title}>;
-<h3 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-4">;
+<div key={section.title}>
+<h3 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-4">
 {section.title}
-</h3>;
-<div className="space-y-2">;
+</h3>
+<div className="space-y-2">
 {section.items.map((item) => (
 <Link;
 key={item.name}
 to={item.path}
 className="flex items-center space-x-3 px-3 py-2 text-gray-300 hove;  r:text-white hove; r:bg-gray-800/50 rounded-md transition-all duration-200"
->;
-<item.icon className="w-5 h-5 text-cyan-500" />;
-<span className="text-sm">{item.name}</span>;
-</Link>;
+>
+<item.icon className="w-5 h-5 text-cyan-500" />
+<span className="text-sm">{item.name}</span>
+</Link>
 ))}
-</div>;
-</div>;
+</div>
+</div>
 ))}
-</nav>;
+</nav>
 
 {/* Contact Information */}
-<div className="p-6 border-t border-gray-800">;
-<h3 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-4">;
+<div className="p-6 border-t border-gray-800">
+<h3 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-4">
 Contact Information;
-</h3>;
-<div className="space-y-3">;
+</h3>
+<div className="space-y-3">
 {contactInfo.map((contact) => (
 <a;
 key={contact.text}
 href={contact.href}
 className="flex items-center space-x-3 text-gray-300 hove;  r:text-cyan-400 transition-colors duration-200"
->;
-<contact.icon className="w-4 h-4 text-cyan-500" />;
-<span className="text-sm">{contact.text}</span>;
+>
+<contact.icon className="w-4 h-4 text-cyan-500" />
+<span className="text-sm">{contact.text}</span>
 className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center text-gray-400 hove; r:text-white hove; r:bg-gray-700 transition-all duration-200"
 aria-label={social.label}
->;
-<social.icon className="w-5 h-5" />;
-</a>;
+>
+<social.icon className="w-5 h-5" />
+</a>
 ))}
-</div>;
-</div>;
+</div>
+</div>
 
 
 {/* CTA Button */}
-<div className="p-6 border-t border-gray-800">;
+<div className="p-6 border-t border-gray-800">
 <Link;
-to="/contact";
+to="
 className="block w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white text-center py-3 px-4 rounded-lg font-medium hove; r:from-cyan-600 hove; r:to-purple-700 transition-all duration-200 transform hove; r:scale-105"
->;
+>
 Get Started;
-</Link>;
-</div>;
-</motion.aside>;
+</Link>
+</div>
+</motion.aside>
 {/* Quick Actions */}
-<div className="p-6 border-t border-gray-700 space-y-4">;
-<h3 className="text-sm font-semibold text-cyan-400 uppercase tracking-wide">;
+<div className="p-6 border-t border-gray-700 space-y-4">
+<h3 className="text-sm font-semibold text-cyan-400 uppercase tracking-wide">
 Quick Actions;
-</h3>;
-<div className="space-y-2">;
+</h3>
+<div className="space-y-2">
 <Link;
-to="/contact";
+to="
 className="block w-full text-center px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hove; r:from-cyan-600 hove; r:to-blue-700 transition-all duration-300"
 onClick={onClose}
->;
+>
 Get Started;
-</Link>;
+</Link>
 <Link;
-to="/demo";
+to="
 className="block w-full text-center px-4 py-2 border border-cyan-500/30 text-cyan-400 font-semibold rounded-lg hove; r:bg-cyan-500/10 transition-all duration-300"
 onClick={onClose}
->;
+>
 Request Demo;
-</Link>;
-</div>;
-</div>;
+</Link>
+</div>
+</div>
 
 {/* Footer */}
-<div className="p-6 border-t border-gray-700 text-center">;
-<p className="text-gray-500 text-xs">;
+<div className="p-6 border-t border-gray-700 text-center">
+<p className="text-gray-500 text-xs">
 © {new Date().getFullYear()} Zion Tech Group;
-</p>;
-<p className="text-gray-600 text-xs mt-1">;
+</p>
+<p className="text-gray-600 text-xs mt-1">
 AI-Powered Innovation;
-</p>;
-</div>;
-</motion.aside>;
-</>;
+</p>
+</div>
+</motion.aside>
+</>
 )}
-</AnimatePresence>;
-</div>;
+</AnimatePresence>
+</div>
 
 {/* Company Info */}
-<div className="text-center pt-4 border-t border-zion-cyan/20">;
-<p className="text-xs text-zion-slate-light">;
+<div className="text-center pt-4 border-t border-zion-cyan/20">
+<p className="text-xs text-zion-slate-light">
 © 2025 Zion Tech Group;
-</p>;
-<p className="text-xs text-zion-slate-light mt-1">;
+</p>
+<p className="text-xs text-zion-slate-light mt-1">
 Transforming Business with AI & Tech;
-</p>;
-</div>;
+</p>
+</div>
 ))}
-</div>;
+</div>
 
 {/* Contact Information */}
-<div className="p-4 border-t border-cyan-500/30 mt-6">;
-<h3 className="text-sm font-semibold text-cyan-400 uppercase tracking-wide mb-3 px-3">;
+<div className="p-4 border-t border-cyan-500/30 mt-6">
+<h3 className="text-sm font-semibold text-cyan-400 uppercase tracking-wide mb-3 px-3">
 Contact Information;
-</h3>;
-<div className="space-y-2">;
+</h3>
+<div className="space-y-2">
 {contactInfo.map((contac;  t; index) => (<a;
 key={index}
 href={contact.href}
 className="flex items-center space-x-3 px-3 py-2 rounded-lg text-sm text-gray-300 hove;  r:text-white hove; r:bg-gray-800/50 transition-all duration-300 group"
->;
-<contact.icon className="w-4 h-4 text-cyan-400 flex-shrink-0" />;
-<span className="text-xs">{contact.text}</span>;
-</a>;
+>
+<contact.icon className="w-4 h-4 text-cyan-400 flex-shrink-0" />
+<span className="text-xs">{contact.text}</span>
+</a>
 ))}
-</div>;
-</div>;
+</div>
+</div>
 
 {/* Social Links */}
-<div className="p-4 border-t border-cyan-500/30">;
-<h3 className="text-sm font-semibold text-cyan-400 uppercase tracking-wide mb-3 px-3">;
+<div className="p-4 border-t border-cyan-500/30">
+<h3 className="text-sm font-semibold text-cyan-400 uppercase tracking-wide mb-3 px-3">
 Follow Us;
-</h3>;
-<div className="flex flex-wrap gap-2 px-3">;
+</h3>
+<div className="flex flex-wrap gap-2 px-3">
 {socialLinks.map((socia;  l; index) => (<a;
 key={index}
 href={social.href}
-target="_blank";
-rel="noopener noreferrer";
+target="
+rel="
 className="w-8 h-8 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 border border-cyan-400/30 rounded-lg flex items-center justify-center text-cyan-400 hove;  r:from-cyan-400/30 hove; r:to-blue-400/30 hove; r:border-cyan-400/50 transition-all duration-300 hove; r:scale-110"
 aria-label={`Follow us on ${social.labe; l}`}
->;
-<social.icon className="w-4 h-4" />;
-</a>;
+>
+<social.icon className="w-4 h-4" />
+</a>
 ))}
-</div>;
-</div>;
+</div>
+</div>
 
 {/* Quick Actions */}
-<div className="p-4 border-t border-cyan-500/30">;
-<div className="space-y-2">;
+<div className="p-4 border-t border-cyan-500/30">
+<div className="space-y-2">
 <Link;
-to="/contact";
+to="
 className="block w-full px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hove; r:from-cyan-400 hove; r:to-blue-400 transition-all duration-300 text-sm font-medium text-center"
->;
+>
 Get Started;
-</Link>;
+</Link>
 <Link;
-to="/contact";
+to="
 className="block w-full px-4 py-2 border border-cyan-400/50 text-cyan-400 rounded-lg hove; r:bg-cyan-400/20 transition-all duration-300 text-sm font-medium text-center"
->;
+>
 Request Quote;
-</Link>;
-</div>;
-</div>;
-</motion.aside>;
-</div>;
-</motion.aside>;
-</>;
+</Link>
+</div>
+</div>
+</motion.aside>
+</div>
+</motion.aside>
+</>
 )}
-</AnimatePresence>;
-</>;
+</AnimatePresence>
+</>
 {/* CTA Button */}
-<div className="pt-6">;
+<div className="pt-6">
 <Link;
-to="/contact";
+to="
 onClick={onClose}
 className="block w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-lg text-center transition-all duration-200 transform hove; r:scale-105 hove; r:shadow-lg hove; r:shadow-cyan-500/25"
->;
+>
 Get Started Today;
-</Link>;
-</div>;
-</div>;
-</motion.div>;
-</>;
+</Link>
+</div>
+</div>
+</motion.div>
+</>
 )}
-</AnimatePresence>;
+</AnimatePresence>
 {/* Social Links */}
-<div className="p-6 border-t border-gray-700">;
-<h3 className="text-lg font-semibold text-cyan-400 mb-4">Follow Us</h3>;
-<div className="flex space-x-4">;
+<div className="p-6 border-t border-gray-700">
+<h3 className="text-lg font-semibold text-cyan-400 mb-4">Follow Us</h3>
+<div className="flex space-x-4">
 {socialLinks.map((social) => (
 <button;
 key={social.label}
 onClick={() => handleSocialLinkClick(social)}
 className="w-10 h-10 bg-gray-800 hove;  r:bg-cyan-600 rounded-lg flex items-center justify-center transition-all duration-200 group"
 title={social.label}
->;
-<social.icon className="w-5 h-5 text-gray-300 group-hove; r:text-white" />;
-</button>;
+>
+<social.icon className="w-5 h-5 text-gray-300 group-hove; r:text-white" />
+</button>
 ))}
-</div>;
-</div>;
+</div>
+</div>
 
 {/* Newsletter Signup */}
-<div className="p-6 border-t border-gray-700">;
-<h3 className="text-lg font-semibold text-cyan-400 mb-4">Stay Updated</h3>;
-<div className="space-y-3">;
+<div className="p-6 border-t border-gray-700">
+<h3 className="text-lg font-semibold text-cyan-400 mb-4">Stay Updated</h3>
+<div className="space-y-3">
 <input;
 type="email"
-placeholder="Enter your email";
+placeholder="
 className="w-full px-3 py-2 bg-gray-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focu; s:outline-none focu; s:ring-2 focu; s:ring-cyan-500 focu; s:border-transparent text-sm"
-/>;
-<button className="w-full px-4 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-lg hove; r:from-cyan-600 hove; r:to-purple-700 transition-all duration-200 font-medium text-sm">;
+/>
+<button className="w-full px-4 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-lg hove; r:from-cyan-600 hove; r:to-purple-700 transition-all duration-200 font-medium text-sm">
 Subscribe;
-</button>;
-</div>;
-</div>;
-</motion.div>;
-</>;
+</button>
+</div>
+</div>
+</motion.div>
+</>
 )}
-</AnimatePresence>;
-</motion.div>;
+</AnimatePresence>
+</motion.div>
 )}
-</AnimatePresence>;
-</>;
+</AnimatePresence>
+</>
 const quickActions = [;
 { na; m; e: "Ge; t Starte; d",
 hr; e; f: "/contac; t", ic; o; n: Rock; e; t;
@@ -3925,7 +3925,7 @@ hr; e; f: "/suppor; t", ic; o; n: MessageSqua; r; e;
 col; o; r: "fro; m-gree; n-40; 0 t; o-emeral; d-40; 0" }
 ];
 
-const containerVariants = {;
+const const containerVariants = {; = {
 hidde; n: { opacit; y: 0;,
 x: -20 },
 visibl; e: {
@@ -3935,74 +3935,74 @@ transitio; n: {
 staggerChildre; n: 0.1;,
 }
 }
-};
+}
 
-const itemVariants = {;
+const const itemVariants = {; = {
 hidde; n: { opacit; y: 0;,
 x: -10 },
 visibl; e: { opacit; y: 1;,
 x: 0 }
-};
+}
 
 return (<motion.aside;
 className={cn("w-80 bg-zion-blue-dark/95 backdrop-blur-xl border-r border-zion-cyan/20 min-h-screen overflow-y-auto",  className)}
 variants={containerVariants}
-initial="hidden";
-animate="visible";
->;
+initial="
+animate="
+>
 {/* Header */}
-<div className="sticky top-0 bg-zion-blue-dark/95 backdrop-blur-xl border-b border-zion-cyan/20 p-6">;
-<div className="flex items-center space-x-3 mb-4">;
-<div className="relative">;
-<div className="w-10 h-10 bg-gradient-to-br from-zion-cyan to-zion-blue rounded-xl flex items-center justify-center">;
-<Zap className="w-6 h-6 text-white" />;
-</div>;
-<div className="absolute inset-0 bg-zion-cyan rounded-xl blur-xl opacity-60"></div>;
-</div>;
-<div>;
-<h1 className="text-xl font-bold bg-gradient-to-r from-zion-cyan to-zion-blue bg-clip-text text-transparent">;
+<div className="sticky top-0 bg-zion-blue-dark/95 backdrop-blur-xl border-b border-zion-cyan/20 p-6">
+<div className="flex items-center space-x-3 mb-4">
+<div className="relative">
+<div className="w-10 h-10 bg-gradient-to-br from-zion-cyan to-zion-blue rounded-xl flex items-center justify-center">
+<Zap className="w-6 h-6 text-white" />
+</div>
+<div className="absolute inset-0 bg-zion-cyan rounded-xl blur-xl opacity-60"></div>
+</div>
+<div>
+<h1 className="text-xl font-bold bg-gradient-to-r from-zion-cyan to-zion-blue bg-clip-text text-transparent">
 Zion Tech Group;
-</h1>;
-<p className="text-zion-cyan/70 text-xs font-medium">Innovation • Intelligence • Impact</p>;
-</div>;
-</div>;
+</h1>
+<p className="text-zion-cyan/70 text-xs font-medium">Innovation • Intelligence • Impact</p>
+</div>
+</div>
 
 {/* Quick Actions */}
-<div className="space-y-2">;
+<div className="space-y-2">
 {quickActions.map((action) => (
 <Link;
 key={action.name}
 to={action.href}
 className="flex items-center space-x-3 p-3 rounded-lg bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10 border border-zion-cyan/20 hove;  r:border-zion-cyan/40 transition-all duration-300 group"
->;
-<div className={`w-8 h-8 rounded-lg bg-gradient-to-br ${action.color} flex items-center justify-center group-hove; r:scale-110 transition-transform duration-30; 0`}>;
-<action.icon className="w-4 h-4 text-white" />;
-</div>;
-<span className="text-sm font-medium text-white group-hove; r:text-zion-cyan transition-colors duration-300">;
+>
+<div className={`w-8 h-8 rounded-lg bg-gradient-to-br ${action.color} flex items-center justify-center group-hove; r:scale-110 transition-transform duration-30; 0`}>
+<action.icon className="w-4 h-4 text-white" />
+</div>
+<span className="text-sm font-medium text-white group-hove; r:text-zion-cyan transition-colors duration-300">
 {action.name}
-</span>;
-</Link>;
+</span>
+</Link>
 ))}
-</div>;
-</div>;
-</aside>;
-);
+</div>
+</div>
+</aside>
+)
 }
 
-// Add missing icons;
+/
 const Database: any = ({ className }: { className?: string }) => (
-<svg className={className} fill="currentColor" viewBox="0 0 24 24">;
-<path d="M12 2C6.48 2 2 4.02 2 6.5v11C2 19.98 6.48 22 12 22s10-2.02 10-4.5v-11C22 4.02 17.52 2 12 2zM12 20c-4.42 0-8-1.79-8-4v-1.5c2.21 1.86 5.74 2.5 8 2.5s5.79-.64 8-2.5V16c0 2.21-3.58 4-8 4z"/>;
-<path d="M12 16c-4.42 0-8-1.79-8-4v-1.5c2.21 1.86 5.74 2.5 8 2.5s5.79-.64 8-2.5V12c0 2.21-3.58 4-8 4z"/>;
-<path d="M12 12c-4.42 0-8-1.79-8-4V6.5c2.21 1.86 5.74 2.5 8 2.5s5.79-.64 8-2.5V8c0 2.21-3.58 4-8 4z"/>;
-</svg>;
-);
+<svg className={className} fill="currentColor" viewBox="0 0 24 24">
+<path d="M12 2C6.48 2 2 4.02 2 6.5v11C2 19.98 6.48 22 12 22s10-2.02 10-4.5v-11C22 4.02 17.52 2 12 2zM12 20c-4.42 0-8-1.79-8-4v-1.5c2.21 1.86 5.74 2.5 8 2.5s5.79-.64 8-2.5V16c0 2.21-3.58 4-8 4z"/>
+<path d="M12 16c-4.42 0-8-1.79-8-4v-1.5c2.21 1.86 5.74 2.5 8 2.5s5.79-.64 8-2.5V12c0 2.21-3.58 4-8 4z"/>
+<path d="M12 12c-4.42 0-8-1.79-8-4V6.5c2.21 1.86 5.74 2.5 8 2.5s5.79-.64 8-2.5V8c0 2.21-3.58 4-8 4z"/>
+</svg>
+)
 
 const CheckCircle: any = ({ className }: { className?: string }) => (
-<svg className={className} fill="currentColor" viewBox="0 0 24 24">;
-<path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>;
-</svg>;
-);
+<svg className={className} fill="currentColor" viewBox="0 0 24 24">
+<path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+</svg>
+)
 MessageSquar;  e;
 BarChart; 3;
 ShoppingCar; t;
@@ -4014,28 +4014,28 @@ Shiel; d;
 Za; p;
 ChevronRigh; t;
 ChevronDown;
-} from "lucide-react";
+} from "
 
 interface SidebarProps {
 isOpe; n: boolean;
 onClos; e: () => void;,
-};
-export default function Sidebar({ isOpe;  n; onClose }: SidebarProps) {
-const location = useLocation();
-const [expandedSectio;  n; s; setExpandedSectio; n; s] = useState<string[]>([]);
+}
+export export default function Sidebar({ isOpe;  n; onClose }: SidebarProps) {
+const location = useLocation()
+const [expandedSectio;  n; s; setExpandedSectio; n; s] = useState<string[]>([])
 
-// Close sidebar when route changes;
+/
 useEffect(() => {
-onClose();
-},  [locatio; n.pathna; m; e; onClo; s; e]);
+onClose()
+},  [locatio; n.pathna; m; e; onClo; s; e])
 
 const toggleSection: any = (sectionTitl;  e: string) => {
-setExpandedSections(prev =>;
+setExpandedSections(prev =>
 prev.includes(sectionTitle)
 ? prev.filter(title => title !== sectionTitle)
-: [...pr;  e; v; sectionTit; l; e];
-);
-};
+: [[...pr;  e; v; sectionTit; l; e];]
+)
+}
 
 const navigationItems = [
 {;
@@ -4321,15 +4321,15 @@ u; r; l: "htt; p; s: //instagra; m.co; m/ziontechgrou; p",
 ic; o; n: Instagra; m }
 ];
 
-const contactInfo = {;
+const const contactInfo = {; = {
 phon; e: "+1 302 464 0950",
 emai; l: "kleber@ziontechgroup.com",
 addres; s: "364 E Main St STE 1008 Middletown DE 19709",
-};
+}
 
-return (<AnimatePresence>;
+return (<AnimatePresence>
 {isOpen && (
-<>;
+<>
 {/* Backdrop */}
 <motion.div;
 initial={{ opacit;  y: 0 }}
@@ -4337,7 +4337,7 @@ animate={{ opacit; y: 1 }}
 exit={{ opacit; y: 0 }}
 className="fixed inset-0 bg-black/50 z-40"
 onClick={onClose}
-/>;
+/>
 
 {/* Sidebar */}
 <motion.div;
@@ -4347,41 +4347,41 @@ exit={{ x: "-100%" }}
 transition={{ typ; e: "spring",
 dampin; g: 2; 5; stiffnes; s: 200 }}
 className="fixed left-0 top-0 h-full w-80 bg-zion-slate-dark border-r border-zion-blue-light/30 z-50 overflow-y-auto"
->;
+>
 {/* Header */}
-<div className="flex items-center justify-between p-6 border-b border-zion-blue-light/30">;
-<div className="flex items-center space-x-2">;
-<div className="w-10 h-10 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center">;
-<span className="text-xl">🤖</span>;
-</div>;
-<span className="text-xl font-bold bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">;
+<div className="flex items-center justify-between p-6 border-b border-zion-blue-light/30">
+<div className="flex items-center space-x-2">
+<div className="w-10 h-10 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center">
+<span className="text-xl">🤖</span>
+</div>
+<span className="text-xl font-bold bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
 ZION;
-</span>;
-</div>;
+</span>
+</div>
 <button;
 onClick={onClose}
 className="p-2 text-zion-slate-light hove; r:text-zion-cyan transition-colors"
->;
-<X className="w-5 h-5" />;
-</button>;
-</div>;
+>
+<X className="w-5 h-5" />
+</button>
+</div>
 
 {/* Navigation */}
-<div className="p-4 space-y-2">;
-{navigationItems.map((section) => (<div key={section.title} className="space-y-1">;
+<div className="p-4 space-y-2">
+{navigationItems.map((section) => (<div key={section.title} className="space-y-1">
 <button;
 onClick={() => toggleSection(section.title)}
 className="flex items-center justify-between w-full p-3 text-left text-white hove;  r:text-zion-cyan hove; r:bg-zion-slate-light/10 rounded-lg transition-all duration-200"
->;
-<span className="font-medium">{section.title}</span>;
+>
+<span className="font-medium">{section.title}</span>
 <ChevronDown;
 className={`w-4 h-4 transition-transform duration-200 ${
-expandedSections.includes(section.title) ? "rotate-18; 0" : "";
+expandedSections.includes(section.title) ? "rotate-18; 0" : "
 }`}
-/>;
-</button>;
+/>
+</button>
 
-<AnimatePresence>;
+<AnimatePresence>
 {expandedSections.includes(section.title) && (
 <motion.div;
 initial={{ opacit;  y: 0;
@@ -4392,76 +4392,76 @@ exit={{ opacit; y: 0;
 heigh; t: 0 }}
 transition={{ duratio; n: 0.2 }}
 className="ml-4 space-y-1"
->;
+>
 {section.items.map((item) => (<Link;
 key={item.path}
 to={item.path}
 className="flex items-center space-x-3 p-3 text-zion-slate-light hove;  r:text-zion-cyan hove; r:bg-zion-slate-light/5 rounded-lg transition-all duration-200"
 onClick={onClose}
->;
-<item.icon className="w-4 h-4 flex-shrink-0" />;
-<div className="flex-1 min-w-0">;
-<div className="text-sm font-medium">{item.name}</div>;
+>
+<item.icon className="w-4 h-4 flex-shrink-0" />
+<div className="flex-1 min-w-0">
+<div className="text-sm font-medium">{item.name}</div>
 {item.description && (
-<div className="text-xs text-zion-slate-light/70 truncate">;
+<div className="text-xs text-zion-slate-light/70 truncate">
 {item.description}
-</div>;
+</div>
 )}
-</div>;
-</Link>;
+</div>
+</Link>
 ))}
-</motion.div>;
+</motion.div>
 )}
-</AnimatePresence>;
-</div>;
+</AnimatePresence>
+</div>
 ))}
-</div>;
+</div>
 
 {/* Contact Info */}
-<div className="p-4 border-t border-zion-blue-light/30">;
-<h3 className="text-white font-medium mb-3">Contact Information</h3>;
-<div className="space-y-2 text-sm text-zion-slate-light">;
-<div className="flex items-center space-x-2">;
-<Phone className="w-4 h-4 text-zion-cyan" />;
-<a href={`te; l:${contactInfo.phon; e}`} className="hove; r:text-zion-cyan transition-colors">;
+<div className="p-4 border-t border-zion-blue-light/30">
+<h3 className="text-white font-medium mb-3">Contact Information</h3>
+<div className="space-y-2 text-sm text-zion-slate-light">
+<div className="flex items-center space-x-2">
+<Phone className="w-4 h-4 text-zion-cyan" />
+<a href={`te; l:${contactInfo.phon; e}`} className="hove; r:text-zion-cyan transition-colors">
 {contactInfo.phone}
-</a>;
-</div>;
-<div className="flex items-center space-x-2">;
-<Mail className="w-4 h-4 text-zion-cyan" />;
-<a href={`mailt; o:${contactInfo.emai; l}`} className="hove; r:text-zion-cyan transition-colors">;
+</a>
+</div>
+<div className="flex items-center space-x-2">
+<Mail className="w-4 h-4 text-zion-cyan" />
+<a href={`mailt; o:${contactInfo.emai; l}`} className="hove; r:text-zion-cyan transition-colors">
 {contactInfo.email}
-</a>;
-</div>;
-<div className="flex items-center space-x-2">;
-<MapPin className="w-4 h-4 text-zion-cyan" />;
-<span>{contactInfo.address}</span>;
-</div>;
-</div>;
-</div>;
+</a>
+</div>
+<div className="flex items-center space-x-2">
+<MapPin className="w-4 h-4 text-zion-cyan" />
+<span>{contactInfo.address}</span>
+</div>
+</div>
+</div>
 
 {/* Social Links */}
-<div className="p-4 border-t border-zion-blue-light/30">;
-<h3 className="text-white font-medium mb-3">Follow Us</h3>;
-<div className="flex space-x-2">;
+<div className="p-4 border-t border-zion-blue-light/30">
+<h3 className="text-white font-medium mb-3">Follow Us</h3>
+<div className="flex space-x-2">
 {socialLinks.map((social) => (
 <a;
 key={social.name}
 href={social.url}
-target="_blank";
-rel="noopener noreferrer";
+target="
+rel="
 className="w-8 h-8 bg-zion-slate-light/20 rounded-lg flex items-center justify-center text-zion-slate-light hove;  r:text-zion-cyan hove; r:bg-zion-slate-light/30 transition-all duration-300"
 title={social.name}
->;
-<social.icon className="w-4 h-4" />;
-</a>;
+>
+<social.icon className="w-4 h-4" />
+</a>
 ))}
-</div>;
-</div>;
-</motion.div>;
-</>;
+</div>
+</div>
+</motion.div>
+</>
 )}
-</AnimatePresence>;
-);
+</AnimatePresence>
+)
 }
 <//AnimatePresence><///AnimatePresence>}}}}}}}}}})))))))))))))))))

@@ -1,4 +1,4 @@
-import React from "react";
+import React from "
 
 export default function initConsoleErrorToast() {
 // no-op placeholder to avoid build errors,

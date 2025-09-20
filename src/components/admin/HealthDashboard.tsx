@@ -13,7 +13,7 @@ memoryUsage: number;
   health: {,
 status: string;
     score: number;,
-issues: string[];
+issues: string[[];]
     recommendations: string[]
   }
   errors: {,

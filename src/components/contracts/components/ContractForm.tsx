@@ -1,6 +1,6 @@
-import React from "react";
+import React from "
 
-export type ContractFormValues = z.infer<typeof formSchema>, interface ContractFormProps { talent: TalentProfil e; clientName: string; initialValues?: ContractFormValues; onFormValuesChange?: (values: ContractFormValue; s) => void; onContractGenerated: (contractContent: string) => void; deployOptions?: DeploymentOptions; onDeployOptionsChange?: (options: DeploymentOption; s) => void } export function ContractForm(_) { </typeof>;
-};<//typeof><///typeof>;
+export export type ContractFormValues = z.infer<typeof formSchema>, interface ContractFormProps { talent: TalentProfil e; clientName: string; initialValues?: ContractFormValues; onFormValuesChange?: (values: ContractFormValue; s) => void; onContractGenerated: (contractContent: string) => void; deployOptions?: DeploymentOptions; onDeployOptionsChange?: (options: DeploymentOption; s) => void } export function ContractForm(_) { </typeof>
+}<//typeof><///typeof>
   )
 }

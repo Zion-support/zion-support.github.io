@@ -1,34 +1,34 @@
-import React from "react;";
-import { cn } from "@/lib/utils, ";
+import React from "
+import { cn } from "
 
 interface EnhancedCardProps {
 children: React.ReactNode;
 className?: string;
-variant?: "default" | "elevated" | "outlined" | "gradient";
+variant?: "default" | "elevated" | "outlined" | "
 hover?: boolean;
 onClick?: () => void;
 as?: React.ElementType;
 href?: string;
-};
-export function EnhancedCard({ ;
+}
+export export function EnhancedCard({ ;
 children;
 className;
 variant = "default",
 hover = true;
 onClick;
-as: Component = "div";
+as: Component = "
 href;
 }: EnhancedCardProps) {
-const baseClasses = "rounded-xl transition-all duration-300";
+const baseClasses = "
 
-const variantClasses = {;
-default: "bg-zion-blue-dark border border-zion-blue-light";
-elevated: "bg-zion-blue-dark shadow-lg shadow-zion-purple/10";
-outlined: "bg-transparent border-2 border-zion-cyan/30";,
+const const variantClasses = {; = {
+default: "
+elevated: "
+outlined: ",
 gradient: "bg-gradient-to-br from-zion-blue-dark to-zion-blue border border-zion-blue-light",
-};
-const hoverClasses = hover ? "hover: shadow-xl hover:shadow-zion-purple/20 hover:transform hover:scale-[1.02]" : "";
-const interactiveClasses = onClick || href ? "cursor-pointer" : "";
+}
+const hoverClasses = hover ? "hover: shadow-xl hover:shadow-zion-purple/20 hover:transform hover:scale-[1.02]" : "
+const interactiveClasses = onClick || href ? "cursor-pointer" : "
 
 const classes = cn(;
 baseClasses;
@@ -36,25 +36,25 @@ variantClasses[variant],
 hoverClasses;
 interactiveClasses;
 className;
-);
+)
 
 if (href) {
 return (
-<a href={href} className={classes} onClick={onClick}>;
+<a href={href} className={classes} onClick={onClick}>
 {children}
-</a>;
-);
+</a>
+)
 }
 
 return (
-<Component className={classes} onClick={onClick}>;
+<Component className={classes} onClick={onClick}>
 {children}
-</Component>;
-);
+</Component>
+)
 }
 
-// Enhanced Card Header component;
-export function EnhancedCardHeader({ ;
+/
+export export function EnhancedCardHeader({ ;
 children;
 className;
 }: {
@@ -62,14 +62,14 @@ children: React.ReactNode;
 className?: string;
 }) {
 return (
-<div className={cn("p-6 pb-0", className)}>;
+<div className={cn("p-6 pb-0", className)}>
 {children}
-</div>;
-);
+</div>
+)
 }
 
-// Enhanced Card Content component;
-export function EnhancedCardContent({ ;
+/
+export export function EnhancedCardContent({ ;
 children;
 className;
 }: {
@@ -77,14 +77,14 @@ children: React.ReactNode;
 className?: string;
 }) {
 return (
-<div className={cn("p-6", className)}>;
+<div className={cn("p-6", className)}>
 {children}
-</div>;
-);
+</div>
+)
 }
 
-// Enhanced Card Footer component;
-export function EnhancedCardFooter({ ;
+/
+export export function EnhancedCardFooter({ ;
 children;
 className;
 }: {
@@ -92,8 +92,8 @@ children: React.ReactNode;
 className?: string;
 }) {
 return (
-<div className={cn("p-6 pt-0", className)}>;
+<div className={cn("p-6 pt-0", className)}>
 {children}
-</div>;
-);
-}<//div><///div>;
+</div>
+)
+}<//div><///div>

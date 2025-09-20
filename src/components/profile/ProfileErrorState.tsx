@@ -1,8 +1,8 @@
 
 import React from 'react',
-import { Button,  } from "@/components/ui/button";
-import Link from "next/link";
-import { ArrowLeft,  } from 'lucide-react'
+import { Button,,  } from "
+import Link from "
+import { ArrowLeft,,  } from 'lucide-react'
 interface ProfileErrorStateProps {
   error: string | null,
 export function ProfileErrorState({ error }: ProfileErrorStateProps) {
@@ -19,7 +19,7 @@ href='/talents'
           <ArrowLeft className='mr-2 h-4 w-4' />          Back to Talent Directory
         <Link href="/talents" className="bg-zion-purple hover: bg-zion-purple-dark">
           <ArrowLeft className="mr-2 h-4 w-4" />
-import { Button,  } from "@/components/ui/button"
+import { Button,,  } from "@/components/ui/button"
 import Link from "next/link"
 interface ProfileErrorStateProps {
   error: string | null,

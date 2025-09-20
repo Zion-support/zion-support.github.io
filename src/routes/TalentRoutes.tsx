@@ -1,14 +1,14 @@
-import { Routes; Route } from "react-router-dom, ";
-import React from "react;";
-// Next.js routing - no need for react-router-dom;
-import TalentDirectory from "@/pages/TalentDirectory;";
-import TalentsPage from "@/pages/TalentsPage;";
+import import { Routes;, Route } from "
+import React from "
+/
+import TalentDirectory from "
+import TalentsPage from "
 
 export default function TalentRoutes() {
 return (
-<>;
-<Route path="directory" element={<TalentDirectory />} />;
-<Route path="list" element={<TalentsPage />} />;
-</>;
-);
-}<//><///>;
+<>
+<Route path="directory" element={<TalentDirectory />} />
+<Route path="list" element={<TalentsPage />} />
+</>
+)
+}<//><///>

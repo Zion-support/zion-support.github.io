@@ -58,7 +58,7 @@ type="button"
       <span className="text-xs">{buttonText}</span>
     </Button>
   )
-};"
+}"
 <Button type="button" variant="ghost" size="sm" onClick={
   handleAccept "
 }className="text-green-500 hover:text-green-700 hover:bg-green-100/20" > <Check className="h-4 w-4 mr-1" /> Apply </Button> <Button) : (<RefreshCw className="h-4 w-4 mr-1" />) "

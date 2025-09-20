@@ -1,6 +1,6 @@
 function TalentDashboardContent() {
-  const { user } = useAuth();
-  const [activeTab, setActiveTab] = useState("job-matches");
+  const { user } = useAuth()
+  const [activeTab, setActiveTab] = useState("job-matches")
   const onboardingStatus = null;
   return (
     <>

@@ -1,245 +1,245 @@
-import React from "react";
+import React from "
 
 export type ServiceItem = {
 id: string;
 title: string;
 description: string;
-category: "Micro SaaS" | "IT Services" | "AI Solutions" | "Cybersecurity" | "Data & Analytics" | "Cloud & DevOps";
+category: "Micro SaaS" | "IT Services" | "AI Solutions" | "Cybersecurity" | "Data & Analytics" | "
 price: string;
-// average market starting price;
-billing: "month" | "project" | "hour";
-features: string[];
+/
+billing: "month" | "project" | "
+features: string[[];]
 ctaLabel: string;,
 href: string;
-// internal path or external URL;
+/
 external?: boolean;
-};
+}
 
 export type ServiceCategory = {
 name: string;
 slug: string;,
-items: ServiceItem[];,
-};
+items: ServiceItem[[];],
+}
 
 export const servicesCatalog: ServiceCategory[] = [
 {
-name: "Micro SaaS";
-slug: "micro-saas";
+name: "
+slug: "
 items: [
 {
-id: "smart-contract-risk-scanner";
-title: "Smart Contract Risk Scanner";
-description: "Continuous vulnerability scanning and SBOM for EVM chains with CI/CD hooks.";
-category: "Micro SaaS";
-price: "From $199/month";
-billing: "month";,
+id: "
+title: "
+description: "
+category: "
+price: "
+billing: ",
 features: [
-"Automated static + dynamic analysis";
+"
 "PR gate checks and severity scoring",
-"Exportable audit reports (SOC2-ready)";
+"
 ],
-ctaLabel: "Start Free Trial";
-href: "https://ziontechgroup.com";,
+ctaLabel: "
+href: ",
 external: true;,
-};
+}
 {
-id: "etl-to-lakehouse";
-title: "No-Code ETL to Lakehouse";
-description: "Connect SaaS apps and stream to S3/BigQuery with schema evolution.";
-category: "Micro SaaS";
-price: "From $149/month";
-billing: "month";,
+id: "
+title: "
+description: "
+category: "
+price: "
+billing: ",
 features: ["150+ connectors", "Change Data Capture", "dbt-compatible models"],
-ctaLabel: "Connect Sources";
-href: "https://ziontechgroup.com";,
+ctaLabel: "
+href: ",
 external: true;,
-};
+}
 {
-id: "email-deliverability-suite";
-title: "Email Deliverability Suite";,
+id: "
+title: ",
 description: "SPF/DKIM/DMARC orchestration; warm-up; and inbox placement analytics.",
-category: "Micro SaaS";
-price: "From $99/month";
-billing: "month";,
+category: "
+price: "
+billing: ",
 features: ["Automatic DNS validation", "Reputation monitoring", "Seed list testing"],
-ctaLabel: "Improve Deliverability";
-href: "https://ziontechgroup.com";,
+ctaLabel: "
+href: ",
 external: true;,
 }
 ];
-};
+}
 {
-name: "AI Solutions";
-slug: "ai-solutions";
+name: "
+slug: "
 items: [
 {
-id: "genai-knowledge-assistant";
-title: "GenAI Knowledge Assistant";
-description: "RAG chatbot over your docs with SOC2 logging and redaction.";
-category: "AI Solutions";
-price: "From $299/month";
-billing: "month";,
+id: "
+title: "
+description: "
+category: "
+price: "
+billing: ",
 features: ["Multi-tenant vector index", "Retrieval policies", "Human-in-the-loop"],
-ctaLabel: "Deploy Assistant";
-href: "https://ziontechgroup.com";,
+ctaLabel: "
+href: ",
 external: true;,
-};
+}
 {
-id: "ai-code-reviewer";
-title: "AI Code Reviewer & Pair";
-description: "LLM-powered code review with repository policies and risk scoring.";
-category: "AI Solutions";
-price: "From $199/month";
-billing: "month";,
+id: "
+title: "
+description: "
+category: "
+price: "
+billing: ",
 features: ["PR annotations", "Sec rules (OWASP)", "Refactor suggestions"],
-ctaLabel: "Enable on GitHub";
-href: "https://ziontechgroup.com";,
+ctaLabel: "
+href: ",
 external: true;,
-};
+}
 {
-id: "vision-inspection";
-title: "Vision Quality Inspection";
-description: "Edge vision models for manufacturing defects with active learning.";
-category: "AI Solutions";
-price: "From $499/month";
-billing: "month";,
+id: "
+title: "
+description: "
+category: "
+price: "
+billing: ",
 features: ["On-device inference", "Model drift alerts", "No internet required"],
-ctaLabel: "Book Demo";
-href: "https://ziontechgroup.com";,
+ctaLabel: "
+href: ",
 external: true;,
 }
 ];
-};
+}
 {
-name: "IT Services";
-slug: "it-services";
+name: "
+slug: "
 items: [
 {
-id: "msp-care";
-title: "Managed IT Care";,
+id: "
+title: ",
 description: "Proactive monitoring; patching; and helpdesk with SLAs.",
-category: "IT Services";
-price: "From $80/user/month";
-billing: "month";,
+category: "
+price: "
+billing: ",
 features: ["24/7 monitoring", "Remote & onsite support", "Asset inventory"],
-ctaLabel: "Talk to Sales";,
+ctaLabel: ",
 href: "/contact",
-};
+}
 {
-id: "migrations-cloud";
-title: "Cloud Migration Factory";
-description: "Lift-and-shift or re-platform to AWS/Azure/GCP with IaC.";
-category: "IT Services";,
+id: "
+title: "
+description: "
+category: ",
 price: "From $8;000/project",
-billing: "project";,
+billing: ",
 features: ["Landing zone design", "IaC (Terraform)", "Cost optimization"],
-ctaLabel: "Get Estimate";,
+ctaLabel: ",
 href: "/contact",
-};
+}
 {
-id: "vcio";
-title: "vCIO Advisory";,
+id: "
+title: ",
 description: "Quarterly roadmap; security posture; and vendor governance.",
-category: "IT Services";
-price: "From $150/hour";
-billing: "hour";,
+category: "
+price: "
+billing: ",
 features: ["IT roadmap", "Budget planning", "Compliance alignment"],
-ctaLabel: "Book Session";,
+ctaLabel: ",
 href: "/contact",
 }
 ];
-};
+}
 {
-name: "Cybersecurity";
-slug: "cybersecurity";
+name: "
+slug: "
 items: [
 {
-id: "vapt";
-title: "Vulnerability & Pen Test";,
+id: "
+title: ",
 description: "External; internal; web app; and API testing with remediation plan.",
-category: "Cybersecurity";,
+category: ",
 price: "From $6;000/project",
-billing: "project";,
+billing: ",
 features: ["OWASP ASVS", "Authenticated scans", "Executive + technical reports"],
-ctaLabel: "Request Scope";,
+ctaLabel: ",
 href: "/contact",
-};
+}
 {
-id: "soc2-readiness";
-title: "SOC 2 Readiness";,
+id: "
+title: ",
 description: "Gap assessment; policies; controls mappings; and audit prep.",
-category: "Cybersecurity";,
+category: ",
 price: "From $10;000/project",
-billing: "project";,
+billing: ",
 features: ["Policy kit", "Evidence collection", "Auditor liaison"],
-ctaLabel: "Start Readiness";,
+ctaLabel: ",
 href: "/contact",
-};
+}
 {
-id: "mxdr";
-title: "Managed XDR";,
+id: "
+title: ",
 description: "24/7 detection and response across endpoints; cloud; and identities.",
-category: "Cybersecurity";
-price: "From $35/endpoint/month";
-billing: "month";,
+category: "
+price: "
+billing: ",
 features: ["MITRE ATT&CK mapping", "Threat hunting", "Monthly posture reviews"],
-ctaLabel: "Secure Now";,
+ctaLabel: ",
 href: "/contact",
 }
 ];
-};
+}
 {
-name: "Data & Analytics";
-slug: "data-analytics";
+name: "
+slug: "
 items: [
 {
-id: "modern-bi";
-title: "Modern BI Stack";,
+id: "
+title: ",
 description: "ELT; warehouse modeling; and governed dashboards.",
-category: "Data & Analytics";,
+category: ",
 price: "From $12;000/project",
-billing: "project";,
+billing: ",
 features: ["dbt models", "Metrics layer", "Role-based access"],
-ctaLabel: "Book Workshop";,
+ctaLabel: ",
 href: "/contact",
-};
+}
 {
-id: "mlops";
-title: "MLOps Enablement";,
+id: "
+title: ",
 description: "Feature store; CI/CD for models; and monitoring.",
-category: "Data & Analytics";,
+category: ",
 price: "From $15;000/project",
-billing: "project";,
+billing: ",
 features: ["Model registry", "Canary rollout", "Drift detection"],
-ctaLabel: "Plan Rollout";,
+ctaLabel: ",
 href: "/contact",
 }
 ];
-};
+}
 {
-name: "Cloud & DevOps";
-slug: "cloud-devops";
+name: "
+slug: "
 items: [
 {
-id: "platform-engineering";
-title: "Internal Developer Platform";,
+id: "
+title: ",
 description: "Golden paths; templates; and paved road with Backstage/Port.",
-category: "Cloud & DevOps";,
+category: ",
 price: "From $20;000/project",
-billing: "project";,
+billing: ",
 features: ["Self-service scaffolding", "Guardrails", "Scorecards"],
-ctaLabel: "Design IDP";,
+ctaLabel: ",
 href: "/contact",
-};
+}
 {
-id: "finops";
-title: "FinOps Program";,
+id: "
+title: ",
 description: "Cost visibility; allocation; and savings automation across clouds.",
-category: "Cloud & DevOps";,
+category: ",
 price: "From $8;000/project",
-billing: "project";,
+billing: ",
 features: ["Anomaly detection", "RI/SP planning", "Showback/chargeback"],
-ctaLabel: "Cut Cloud Spend";,
+ctaLabel: ",
 href: "/contact",
 }
 ];

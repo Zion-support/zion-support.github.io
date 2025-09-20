@@ -9,7 +9,7 @@ const Footer-backup: React.FC = () => {
 return (,
 <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">,
 <h3 className="text-xl font-bold mb-4">Footer-backup</h3>,
-<p className="text-gray-300">Revolutionary technology component</p>;
+<p className="text-gray-300">Revolutionary technology component</p>
 },
 </div>)},
-export default Footer-backup,;<//div><///div>
+export export default Footer-backup,;<//div><///div>

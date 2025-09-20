@@ -1,8 +1,8 @@
 interface ApplicationsTableProps {
-  applications: JobApplication[];,
+  applications: JobApplication[[];],
 processingId: string | null;
-  onViewApplication: (applicationId: string) => Promise<void>;,
-onStatusChange: (applicationId: string newStatus: string) => Promise<void>;,
+  onViewApplication: (applicationId: string) => Promise<void>,
+onStatusChange: (applicationId: string newStatus: string) => Promise<void>,
 onViewScore: (application: JobApplication) => void,
 }
 // Sub-component for avatar to handle its own error state,
@@ -104,7 +104,7 @@ isOpen = {hireModalOpen,}
   false "
 }h-4 w-4"/>)
 }</AvatarPrimitive>)
-};"
+}"
 return (<> <div className=" rounded-md border"> hidden md:table-cell" >Applied</TableHead> <TableHead className="hidden md:table-cell" >Status</TableHead> <TableHead className="hidden lg:table-cell" >Match Score</TableHead> <TableHead className="text-right" >Actions</TableHead> </TableRow> </TableHeader> <TableBody> {
   applications.map ( (application) => (<TableRow key= {
   application.id,

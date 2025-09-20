@@ -1,8 +1,8 @@
 import React from "react",
-import { GradientHeading,  } from "@/components/GradientHeading",
-import { Button,  } from "@/components/ui/button",
-import { Card,, CardContent,, CardFooter,  } from "@/components/ui/card";
-import Image from "next/image";
+import { GradientHeading,,  } from "@/components/GradientHeading",
+import { Button,,  } from "@/components/ui/button",
+import { Card,,, CardContent,,, CardFooter,,  } from "
+import Image from "
 export interface Benefit {
   title: string;,
 description: string;
@@ -19,8 +19,8 @@ interface ServiceLandingTemplateProps {
 subtitle: string;
   heroImage?: string;
   description: string;,
-benefits: Benefit[];
-  testimonials: Testimonial[];,
+benefits: Benefit[[];]
+  testimonials: Testimonial[[];],
 ctaText: string;
   ctaLink: string;
 }

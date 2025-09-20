@@ -1,6 +1,6 @@
-import React from 'react;';
-import { Link } from 'react-router-dom, ';
-import { MainNavigation } from './MainNavigation, ';
+import import React from 'react;';
+import import { Link } from 'react-router-dom, ';
+import import { MainNavigation } from './MainNavigation, ';
 
 export function AppHeader() {
   return (
@@ -14,7 +14,7 @@ export function AppHeader() {
           </div>
           <MainNavigation />
         </div>
-      </div>;
-    </header>;
-  );
+      </div>
+    </header>
+  )
 }<//header><///header>

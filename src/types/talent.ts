@@ -1,4 +1,4 @@
-import React from "react";
+import React from "
 
 export interface Talent {
 id: string; name: string; email: string;
@@ -6,10 +6,10 @@ avatar?: string;
 bio?: string;,
 skills: string[], experience: number; hourlyRate: number; currency: string;
 location: {,
-city: string; country: string; timezone: string,
-};
-availability: "full-time" | "part-time" | "contract" | "freelance", rating: number; reviewCount: number; portfolio: PortfolioItem[];,
-education: Education[], certifications: Certification[];,
+city: string; country: string; timezone: string;
+}
+availability: "full-time" | "part-time" | "contract" | "freelance", rating: number; reviewCount: number; portfolio: PortfolioItem[[];],
+education: Education[], certifications: Certification[[];],
 languages: Language[], socialLinks: SocialLinks; createdAt: Date; updatedAt: Date;,
 status: "active" | "inactive" | "suspended", verified: boolean; featured: boolean;,
 }
@@ -17,7 +17,7 @@ status: "active" | "inactive" | "suspended", verified: boolean; featured: boolea
 export interface PortfolioItem {
 id: string; title: string; description: string; image: string;
 url?: string;,
-technologies: string[], completedAt: Date,
+technologies: string[], completedAt: Date;
 }
 
 export interface Education {
@@ -44,32 +44,32 @@ twitter?: string,
 }
 
 export interface TalentFilter {
-skills?: string[];
+skills?: string[[];]
 experienceRange?: {
-min: number; max: number,
-};
+min: number; max: number;
+}
 hourlyRateRange?: {
-min: number; max: number,
-};
+min: number; max: number;
+}
 location?: string;
 availability?: string;
 rating?: number;
 verified?: boolean;
 featured?: boolean;
-sortBy?: "rating" | "experience" | "hourlyRate" | "createdAt";
-sortOrder?: "asc" | "desc";
+sortBy?: "rating" | "experience" | "hourlyRate" | "
+sortOrder?: "asc" | "
 }
 
 export interface TalentSearchResult {
-talents: Talent[], total: number; page: number; limit: number; hasMore: boolean,
+talents: Talent[], total: number; page: number; limit: number; hasMore: boolean;
 }
 
 export interface TalentFormData {
 name: string; email: string; bio: string; skills: string[], experience: number; hourlyRate: number; currency: string;
 location: {,
-city: string; country: string; timezone: string,
-};
-availability: string; portfolio: PortfolioItem[], education: Education[];,
-certifications: Certification[], languages: Language[];,
+city: string; country: string; timezone: string;
+}
+availability: string; portfolio: PortfolioItem[], education: Education[[];],
+certifications: Certification[], languages: Language[[];],
 socialLinks: SocialLinks;,
 }

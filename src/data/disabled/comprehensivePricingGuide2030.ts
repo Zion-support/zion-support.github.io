@@ -1,4 +1,4 @@
-import React from "react";
+import React from "
 
 interface Service {
 id: string;
@@ -13,7 +13,7 @@ features: [
 "Basic AI Analytics",
 "Standard Support",
 "Monthly Reports",
-"Email Integration";
+"
 ];
 },
 professional: {,
@@ -24,7 +24,7 @@ features: [
 "Priority Support",
 "Real-time Monitoring",
 "API Access",
-"Custom Dashboards";
+"
 ];
 },
 enterprise: {,
@@ -36,7 +36,7 @@ features: [
 "Custom Development",
 "Advanced Security",
 "Unlimited Users",
-"On-premise Deployment";
+"
 ];
 }
-};
+}

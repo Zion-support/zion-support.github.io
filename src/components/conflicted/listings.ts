@@ -1,16 +1,16 @@
-import React from "react";
+import React from "
 
 export interface ProductListing {
-id: string; title: string; description: string; category: string; price: number; currency: string; pricingModel: "one-time" | "subscription" | "usage-based" | "custom";,
-features: string[], tags: string[];
-images?: string[];
+id: string; title: string; description: string; category: string; price: number; currency: string; pricingModel: "one-time" | "subscription" | "usage-based" | ",
+features: string[], tags: string[[];]
+images?: string[[];]
 rating?: number;
 reviewCount?: number;
-availability: "immediate" | "within-week" | "within-month" | "custom";
+availability: "immediate" | "within-week" | "within-month" | "
 deliveryTime?: string;
-supportLevel: "basic" | "standard" | "premium" | "enterprise";
-compliance?: string[];
-integrations?: string[];
+supportLevel: "basic" | "standard" | "premium" | "
+compliance?: string[[];]
+integrations?: string[[];]
 documentation?: string;
 demoUrl?: string;
 website?: string;
@@ -22,7 +22,7 @@ author?: {,
 name: string; id: string;
 avatarUrl?: string;
 email?: string,
-};
+}
 createdAt: string; updatedAt: string;
 featured?: boolean;
 popular?: boolean;

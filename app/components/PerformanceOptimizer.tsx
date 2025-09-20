@@ -50,8 +50,8 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
       const cacheHitRate = resources.length > 0 ? (cachedResources.length / resources.length) * 100 : 0;
 
       setMetrics({
-        loadTime: Math.round(loadTime),
-        renderTime: Math.round(renderTime),
+        loadTime: Math.round(loadTime)
+        renderTime: Math.round(renderTime)
         bundleSize,
         cacheHitRate: Math.round(cacheHitRate)
       });

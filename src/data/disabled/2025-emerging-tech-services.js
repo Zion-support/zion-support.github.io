@@ -1,5 +1,5 @@
 export const emergingTechServices2025 = [
-    // Quantum Computing Services;
+    /
     {
         id: 'quantum-computing-as-a-service';
         name: 'Quantum Computing as a Service';
@@ -38,7 +38,7 @@ export const emergingTechServices2025 = [
             phone: '+1 302 464 0950';
             email: 'kleber@ziontechgroup.com';
             address: '364 E Main St STE 1008 Middletown DE 19709',
-        };
+        }
         trialDays: 60;
         setupTime: '2-4 weeks';
         competitors: ['IBM Quantum', 'Google Quantum AI', 'Microsoft Azure Quantum', 'Amazon Braket'],
@@ -52,7 +52,7 @@ export const emergingTechServices2025 = [
         researchPartners: ['MIT', 'Stanford', 'Caltech', 'CERN'],
         patents: ['Quantum Error Correction Method', 'Hybrid Quantum-Classical Workflow', 'Quantum Algorithm Optimization']
     },
-    // Neuromorphic Computing;
+    /
     {
         id: 'neuromorphic-computing-platform';
         name: 'Neuromorphic Computing Platform';
@@ -91,7 +91,7 @@ export const emergingTechServices2025 = [
             phone: '+1 302 464 0950';
             email: 'kleber@ziontechgroup.com';
             address: '364 E Main St STE 1008 Middletown DE 19709',
-        };
+        }
         trialDays: 45;
         setupTime: '4-6 weeks';
         competitors: ['Intel', 'IBM', 'BrainChip', 'General Vision'],
@@ -105,7 +105,7 @@ export const emergingTechServices2025 = [
         researchPartners: ['Stanford Neuroscience Institute', 'MIT Brain Research', 'UC Berkeley'],
         patents: ['Spiking Neural Network Architecture', 'Brain-Inspired Learning Algorithm', 'Neuromorphic Hardware Interface']
     },
-    // DNA Computing & Storage;
+    /
     {
         id: 'dna-computing-storage-platform';
         name: 'DNA Computing & Storage Platform';
@@ -144,7 +144,7 @@ export const emergingTechServices2025 = [
             phone: '+1 302 464 0950';
             email: 'kleber@ziontechgroup.com';
             address: '364 E Main St STE 1008 Middletown DE 19709',
-        };
+        }
         trialDays: 90;
         setupTime: '8-12 weeks';
         competitors: ['Microsoft Research', 'Illumina', 'Oxford Nanopore', 'Twist Bioscience'],
@@ -158,7 +158,7 @@ export const emergingTechServices2025 = [
         researchPartners: ['Harvard Medical School', 'MIT Biology', 'Stanford Genetics'],
         patents: ['DNA Computing Method', 'Molecular Storage System', 'Biological Algorithm Framework']
     },
-    // Photonic Computing;
+    /
     {
         id: 'photonic-computing-platform';
         name: 'Photonic Computing Platform';
@@ -197,7 +197,7 @@ export const emergingTechServices2025 = [
             phone: '+1 302 464 0950';
             email: 'kleber@ziontechgroup.com';
             address: '364 E Main St STE 1008 Middletown DE 19709',
-        };
+        }
         trialDays: 60;
         setupTime: '6-10 weeks';
         competitors: ['Intel', 'IBM', 'Hewlett Packard', 'Cisco'],
@@ -211,7 +211,7 @@ export const emergingTechServices2025 = [
         researchPartners: ['MIT Photonics', 'Stanford Optics', 'Caltech Quantum'],
         patents: ['Photonic Processor Design', 'Optical Neural Network', 'Light-Speed Computing Method']
     },
-    // Biological Computing;
+    /
     {
         id: 'biological-computing-platform';
         name: 'Biological Computing Platform';
@@ -250,7 +250,7 @@ export const emergingTechServices2025 = [
             phone: '+1 302 464 0950';
             email: 'kleber@ziontechgroup.com';
             address: '364 E Main St STE 1008 Middletown DE 19709',
-        };
+        }
         trialDays: 75;
         setupTime: '10-16 weeks';
         competitors: ['Ginkgo Bioworks', 'Twist Bioscience', 'Synthetic Genomics', 'Zymergen'],
@@ -264,7 +264,7 @@ export const emergingTechServices2025 = [
         researchPartners: ['MIT Biology', 'Stanford Bioengineering', 'UC Berkeley'],
         patents: ['Biological Computing Method', 'Cellular Algorithm Framework', 'Living Computer System']
     },
-    // Swarm Robotics;
+    /
     {
         id: 'swarm-robotics-platform';
         name: 'Swarm Robotics Platform';
@@ -303,7 +303,7 @@ export const emergingTechServices2025 = [
             phone: '+1 302 464 0950';
             email: 'kleber@ziontechgroup.com';
             address: '364 E Main St STE 1008 Middletown DE 19709',
-        };
+        }
         trialDays: 45;
         setupTime: '6-8 weeks';
         competitors: ['Boston Dynamics', 'ABB Robotics', 'KUKA', 'FANUC'],
@@ -317,7 +317,7 @@ export const emergingTechServices2025 = [
         researchPartners: ['MIT Robotics', 'Stanford AI', 'Carnegie Mellon Robotics'],
         patents: ['Swarm Coordination Algorithm', 'Multi-Robot Communication', 'Autonomous Decision System']
     },
-    // Brain-Computer Interfaces;
+    /
     {
         id: 'brain-computer-interface-platform';
         name: 'Brain-Computer Interface Platform';
@@ -356,7 +356,7 @@ export const emergingTechServices2025 = [
             phone: '+1 302 464 0950';
             email: 'kleber@ziontechgroup.com';
             address: '364 E Main St STE 1008 Middletown DE 19709',
-        };
+        }
         trialDays: 120;
         setupTime: '12-20 weeks';
         competitors: ['Neuralink', 'Kernel', 'CTRL-labs', 'Emotiv'],
@@ -370,7 +370,7 @@ export const emergingTechServices2025 = [
         researchPartners: ['Stanford Neuroscience', 'MIT Brain Research', 'Johns Hopkins Medicine'],
         patents: ['Neural Signal Processing', 'Thought-to-Action Conversion', 'BCI Development Framework']
     },
-    // Synthetic Biology;
+    /
     {
         id: 'synthetic-biology-platform';
         name: 'Synthetic Biology Platform';
@@ -409,7 +409,7 @@ export const emergingTechServices2025 = [
             phone: '+1 302 464 0950';
             email: 'kleber@ziontechgroup.com';
             address: '364 E Main St STE 1008 Middletown DE 19709',
-        };
+        }
         trialDays: 60;
         setupTime: '8-12 weeks';
         competitors: ['Ginkgo Bioworks', 'Twist Bioscience', 'Synthetic Genomics', 'Zymergen'],
@@ -424,4 +424,4 @@ export const emergingTechServices2025 = [
         patents: ['DNA Design Method', 'Genetic Circuit Framework', 'Biological System Optimization']
     }
 ];
-export default emergingTechServices2025;
+export export default emergingTechServices2025;

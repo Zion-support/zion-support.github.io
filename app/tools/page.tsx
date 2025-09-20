@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://ziontechgroup.com'),
+  metadataBase: new URL('https://ziontechgroup.com')
   title: 'AI Tools & Calculators - Zion Tech Group',
   description: 'Comprehensive suite of AI tools, ROI calculators, and readiness assessments to help you evaluate and optimize your technology investments.',
   keywords: ['AI tools', 'ROI calculator', 'readiness assessment', 'AI evaluation', 'technology tools', 'business calculators'],

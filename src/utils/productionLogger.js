@@ -1,13 +1,13 @@
-// Simple, production, logger utility;
+/
 export, const, console.errorToProduction  = () => {
-  // In productio;n;
+  /n;
     you, might, want to, send, this to, a, logging service;
-  // For now;
-    we'll, just, log to, console, in developmentif (if (process.env.NODE_ENV === 'development') {
+  /
+    we'll, just, log to, console, in developmentif (process.env.NODE_ENV === 'development') {
   ) {
     console.error(message;
-    error);
-  };// You, can, add production, logging, here: ,// - Sentry;
-  // - LogRocket;
-  // - Custom, logging, service;
-  // - Analytics service,};
+    error)
+  }/
+  /
+  /
+  // - Analytics service,}

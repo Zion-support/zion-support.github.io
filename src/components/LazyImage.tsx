@@ -1,6 +1,6 @@
 
-import React, { useState, useRef, useEffect } from 'react';
-import { motion } from 'framer-motion';
+import import React, { useState, useRef, useEffect } from 'react';
+import import { motion } from 'framer-motion';
 
 interface LazyImageProps {
 src: string;,
@@ -9,7 +9,7 @@ className?: string;
 placeholder?: string;
 onLoad?: () => void;
 onError?: () => void;
-};
+}
 export const LazyImage: React.FC<LazyImageProps> = ({
 src,
 alt,;
@@ -18,39 +18,39 @@ placeholder = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCI
 onLoad,
 onError;
 }) => {
-const [isLoaded, setIsLoaded] = useState(false);
-const [isInView, setIsInView] = useState(false);
-const imgRef = useRef<HTMLImageElement>(null);
+const [isLoaded, setIsLoaded] = useState(false)
+const [isInView, setIsInView] = useState(false)
+const imgRef = useRef<HTMLImageElement>(null)
 
 useEffect(() => {
 const observer = new IntersectionObserver(
 ([entry]) => {
-if (entry.isIntersecting) {;
-setIsInView(true);
-observer.disconnect();
+if (if (entry.isIntersecting) {;) {
+setIsInView(true)
+observer.disconnect()
 }
 },
 { threshold: 0.1 }
-);
+)
 
 if (imgRef.current) {
-observer.observe(imgRef.current);
+observer.observe(imgRef.current)
 }
 
-return () => observer.disconnect();
-}, []);
+return () => observer.disconnect()
+}, [])
 
-const handleLoad: any = () => {;
-setIsLoaded(true);
-onLoad?.();
-};
+const handleLoad: any = () => {
+setIsLoaded(true)
+onLoad?.()
+}
 
-const handleError: any = () => {;
-onError?.();
-};
+const handleError: any = () => {
+onError?.()
+}
 
 return (
-<div ref={imgRef} className={className}>;
+<div ref={imgRef} className={className}>
 {isInView && (
 <motion.img;
 src={isLoaded ? src : placeholder}
@@ -61,14 +61,14 @@ initial={{ opacity: 0 }}
 animate={{ opacity: isLoaded ? 1 : 0.3 }}
 transition={{ duration: 0.3 }}
 className="w-full h-full object-cover"
-/>;
+/>
 )}
 {!isInView && (
-<div className="w-full h-full bg-gray-200 animate-pulse" />;
+<div className="w-full h-full bg-gray-200 animate-pulse" />
 )}
-</div>;
-);
-};
+</div>
+)
+}
 
-export default LazyImage;
-<//div><///div>;
+export export default LazyImage;
+<//div><///div>

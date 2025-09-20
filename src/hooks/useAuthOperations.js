@@ -1,52 +1,52 @@
-import { useEffect } from "react, ";
-import { supabase } from "@/integrations/supabase/client, ";
-import { toast } from "@/hooks/use-toast, ";
-import { showApiError } from "@/utils/apiErrorHandler, ";
-import { trackReferral, checkUrlForReferralCode } from "@/utils/referralUtils, ";
-import { cleanupAuthState } from "@/utils/authUtils, ";
+import { useEffect } from "
+import { supabase } from "
+import { toast } from "
+import { showApiError } from "
+import { trackReferral, checkUrlForReferralCode } from "
+import { cleanupAuthState } from "
 export function useAuthOperations(setUser, setIsLoading) {
-    // Check for referral code in URL when the hook is first used;
+    /
     useEffect(() => {
-        checkUrlForReferralCode();
-    }, []);
+        checkUrlForReferralCode()
+    }, [])
     const login = async ({ email, password }) => {
-        setIsLoading(true);
+        setIsLoading(true)
         try {
-            // Clean up any stale auth state before login;
-            cleanupAuthState();
+            /
+            cleanupAuthState()
             const { data, error } = await supabase.auth.signInWithPassword({
                 email,
                 password,
-            });
+            })
             
             if (error) {
                 toast({
-                    variant: "destructive";
-                    title: "Oh no! Something went wrong.";
+                    variant: "
+                    title: "
                     description: error.message;,
-                });
-                return { data: null, error: error.message };
+                })
+                return { data: null, error: error.message }
      }
             toast({
-                title: "Login successful!";
+                title: "
                 description: `Welcome back, ${email}!`,
-            });
-            return { data, error: null };
+            })
+            return { data, error: null }
      }
         catch (error) {
             toast({
-                variant: "destructive";
-                title: "Oh no! Something went wrong.";
-                description: "Failed to sign in. Please check your credentials.";,
-            });
-            return { data: null, error: "Failed to sign in." };
+                variant: "
+                title: "
+                description: ",
+            })
+            return { data: null, error: "Failed to sign in." }
      }
         finally {
-            setIsLoading(false);
+            setIsLoading(false)
         }
-    };
+    }
     const signup = async ({ email, password, display_name }) => {
-        setIsLoading(true);
+        setIsLoading(true)
         try {
             const { data, error } = await supabase.auth.signUp({
                 email,
@@ -56,99 +56,99 @@ export function useAuthOperations(setUser, setIsLoading) {
                         display_name: display_name;,
                     },
                 },
-            });
+            })
             
             if (error) {
-                showApiError(error, "Error during signup");
-                return { data: null, error: error.message };
+                showApiError(error, "Error during signup")
+                return { data: null, error: error.message }
      }
-            // Add this after successful signup;
+            /
             if (data?.user) {
-                // Track referral if there was a referral code;
-                await trackReferral(data.user.id, email);
+                /
+                await trackReferral(data.user.id, email)
             }
             toast({
-                title: "Signup successful!";
+                title: "
                 description: `Welcome, ${display_name}! Please check your email to verify your account.`,
-            });
-            return { data, error: null };
+            })
+            return { data, error: null }
      }
         catch (error) {
-            showApiError(error, "Failed to sign up. Please try again.");
-            return { data: null, error: "Failed to sign up." };
+            showApiError(error, "Failed to sign up. Please try again.")
+            return { data: null, error: "Failed to sign up." }
      }
         finally {
-            setIsLoading(false);
+            setIsLoading(false)
         }
-    };
+    }
     const logout = async () => {
-        setIsLoading(true);
+        setIsLoading(true)
         try {
-            const { error } = await supabase.auth.signOut();
+            const { error } = await supabase.auth.signOut()
             if (error) {
                 toast({
-                    variant: "destructive";
-                    title: "Oh no! Something went wrong.";
+                    variant: "
+                    title: "
                     description: error.message;,
-                });
+                })
             }
             else {
-                setUser(null); // Clear the user state upon successful logout;
+                setUser(null) /
                 toast({
-                    title: "Logout successful!";
-                    description: "You have been successfully logged out.";,
-                });
+                    title: "
+                    description: ",
+                })
             }
         }
         catch (error) {
             
             toast({
-                variant: "destructive";
-                title: "Logout failed";
-                description: "There was an issue logging you out. Please try again.";,
-            });
+                variant: "
+                title: "
+                description: ",
+            })
         }
         finally {
-            setIsLoading(false);
+            setIsLoading(false)
         }
-    };
+    }
     const resetPassword = async (email) => {
-        setIsLoading(true);
+        setIsLoading(true)
         try {
             const { data, error } = await supabase.auth.resetPasswordForEmail(email, {
-                redirectTo: `${window.location.origin}/update-password`;
-            });
+                redirectTo: `
+            })
             if (error) {
                 toast({
-                    variant: "destructive";
-                    title: "Oh no! Something went wrong.";
+                    variant: "
+                    title: "
                     description: error.message;,
-                });
-                return { data: null, error: error.message };
+                })
+                return { data: null, error: error.message }
      }
             toast({
-                title: "Password reset email sent!";
-                description: `Please check your email (${email}) for instructions on how to reset your password.`;
-            });
-            return { data, error: null };
+                title: "
+                description: `
+            })
+            return { data, error: null }
      }
         catch (error) {
             toast({
-                variant: "destructive";
-                title: "Oh no! Something went wrong.";
-                description: "Failed to send reset password email. Please try again.";,
-            });
-            return { data: null, error: "Failed to send reset password email." };
+                variant: "
+                title: "
+                description: ",
+            })
+            return { data: null, error: "Failed to send reset password email." }
      }
         finally {
-            setIsLoading(false);
+            setIsLoading(false)
         }
-    };
+    }
     const updateProfile = async (profileData) => {
-        setIsLoading(true);
+        setIsLoading(true)
         try {
             if (!profileData || !profileData.id) {
-                throw new Error("Profile data or user ID is missing.");
+                throw new Error("Profile data or user ID is missing.")
             }
             const { error } = await supabase;
                 .from("profiles")
@@ -160,131 +160,131 @@ export function useAuthOperations(setUser, setIsLoading) {
                 avatar_url: profileData.avatarUrl;
                 headline: profileData.headline;,
             })
-                .eq("id", profileData.id);
+                .eq("id", profileData.id)
             if (error) {
                 toast({
-                    variant: "destructive";
-                    title: "Failed to update profile";
+                    variant: "
+                    title: "
                     description: error.message;,
-                });
-                return { error: error.message };
+                })
+                return { error: error.message }
      }
-            // Optimistically update the local user state;
+            /
             setUser((prevUser) => {
                 if (prevUser) {
-                    return { ...prevUser, ...profileData };
+                    return { ...prevUser, ...profileData }
                 }
                 return prevUser;
-            });
+            })
             toast({
-                title: "Profile updated!";
-                description: "Your profile has been successfully updated.";,
-            });
-            return { error: null };
+                title: "
+                description: ",
+            })
+            return { error: null }
      }
         catch (error) {
             
             toast({
-                variant: "destructive";
-                title: "Profile update failed";
-                description: "There was an issue updating your profile. Please try again.";,
-            });
-            return { error: "Failed to update profile." };
+                variant: "
+                title: "
+                description: ",
+            })
+            return { error: "Failed to update profile." }
      }
         finally {
-            setIsLoading(false);
+            setIsLoading(false)
         }
-    };
+    }
     const loginWithGoogle = async () => {
-        setIsLoading(true);
+        setIsLoading(true)
         try {
             const { data, error } = await supabase.auth.signInWithOAuth({
-                provider: "google";,
-            });
+                provider: ",
+            })
             if (error) {
                 toast({
-                    variant: "destructive";
-                    title: "Oh no! Something went wrong.";
+                    variant: "
+                    title: "
                     description: error.message;,
-                });
+                })
             }
         }
         finally {
-            setIsLoading(false);
+            setIsLoading(false)
         }
-    };
+    }
     const loginWithFacebook = async () => {
-        setIsLoading(true);
+        setIsLoading(true)
         try {
             const { data, error } = await supabase.auth.signInWithOAuth({
-                provider: "facebook";,
-            });
+                provider: ",
+            })
             if (error) {
                 toast({
-                    variant: "destructive";
-                    title: "Oh no! Something went wrong.";
+                    variant: "
+                    title: "
                     description: error.message;,
-                });
+                })
             }
         }
         finally {
-            setIsLoading(false);
+            setIsLoading(false)
         }
-    };
+    }
     const loginWithTwitter = async () => {
-        setIsLoading(true);
+        setIsLoading(true)
         try {
             const { data, error } = await supabase.auth.signInWithOAuth({
-                provider: "twitter";,
-            });
+                provider: ",
+            })
             if (error) {
                 toast({
-                    variant: "destructive";
-                    title: "Oh no! Something went wrong.";
+                    variant: "
+                    title: "
                     description: error.message;,
-                });
+                })
             }
         }
         finally {
-            setIsLoading(false);
+            setIsLoading(false)
         }
-    };
+    }
     const loginWithWeb3 = async () => {
-        setIsLoading(true);
+        setIsLoading(true)
         try {
             const ethereum = window.ethereum;
             if (!ethereum) {
-                throw new Error("Web3 wallet not found");
+                throw new Error("Web3 wallet not found")
             }
-            const accounts = await ethereum.request({ method: 'eth_requestAccounts' });
-    const address = accounts[0];
+            const accounts = await ethereum.request({ method: 'eth_requestAccounts' })
+    const address = accounts[[0];]
             await ethereum.request({
                 method: 'personal_sign';
                 params: [address, address]
-            });
-            // Fix: Create a proper UserProfile object;
+            })
+            /
             setUser({
                 id: address;
                 displayName: address;
                 profileComplete: true;
-                email: '', // Add required fields;
-                userType: 'talent', // Default user type;
-                createdAt: new Date().toISOString();
+                email: '', /
+                userType: 'talent', /
+                createdAt: new Date().toISOString()
                 updatedAt: new Date().toISOString(),
-            });
-    toast({ title: 'Wallet connected', description: address });
+            })
+    toast({ title: 'Wallet connected', description: address })
      }
         catch (error) {
             toast({
                 variant: 'destructive';
                 title: 'Web3 login failed';
                 description: error?.message || 'Unable to connect wallet',
-            });
+            })
      }
         finally {
-            setIsLoading(false);
+            setIsLoading(false)
         }
-    };
+    }
     return {
         login,
         signup,
@@ -295,5 +295,5 @@ export function useAuthOperations(setUser, setIsLoading) {
         loginWithFacebook,
         loginWithTwitter,
         loginWithWeb3,
-    };
+    }
 }

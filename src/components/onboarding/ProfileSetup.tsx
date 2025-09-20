@@ -84,7 +84,7 @@ type="submit"
       </Form>
     </div>
   )
-case "talent": return "Talent";"
+case "talent": return ""
 case "client": return "Client"
 default:
 }

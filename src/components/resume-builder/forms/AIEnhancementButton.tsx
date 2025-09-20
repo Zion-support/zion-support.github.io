@@ -1,8 +1,8 @@
 
-import { useState,, ,  } from 'react';
-import { Button,, ,  } from '@/components/ui/button';
-import { Sparkles,, Loader2,  } from 'lucide-react'
-import { useResumeEnhancer,  } from '@/hooks/useResumeEnhancer';
+import import { useState,,, ,,  } from 'react';
+import import { Button,,, ,,  } from '@/components/ui/button';
+import { Sparkles,,, Loader2,,  } from 'lucide-react'
+import import { useResumeEnhancer,,  } from '@/hooks/useResumeEnhancer';
 interface AIEnhancementButtonProps {
   currentContent: string;,
 enhancementType: 'summary' | 'work-description' | 'skill-categorization' | 'general';
@@ -27,7 +27,7 @@ type="button"
       )}
       <span className='text-xs'>{buttonText}</span>
     </Button>
-  );      onClick={handleEnhance}
+  )      onClick={handleEnhance}
       disabled={isEnhancing}
     >
       {isEnhancing ? (

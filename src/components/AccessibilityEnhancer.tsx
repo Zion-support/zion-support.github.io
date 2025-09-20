@@ -1,16 +1,16 @@
-import React from "react";
-impor; t; Reac; t, { useEffec; t; useState } from "react";
-import { Button } from "@/components/ui/button";
-import { Car; d; CardConten; t; CardDescriptio; n; CardHeade; r; CardTitle } from "@/components/ui/card";
-// Switch component replaced with checkbox;
-// Label component replaced with simple label;
-// Separator component replaced with simple div;
-import { Switch } from "@/components/ui/switch";
-import { Label } from "@/components/ui/label";
-import { Separator } from "@/components/ui/separator";
-import * as Switch from "@radix-ui/react-switch";
-import * as Label from "@radix-ui/react-label";
-import { Separator } from "@/components/ui/separator";
+import React from "
+impor; t; Reac; t, { useEffec; t; useState } from "
+import { Button } from "
+import import { Car;, d;, CardConten;, t;, CardDescriptio;, n;, CardHeade;, r;, CardTitle } from "
+/
+/
+/
+import { Switch } from "
+import { Label } from "
+import { Separator } from "
+import * as Switch from "
+import * as Label from "
+import { Separator } from "
 
 interface AccessibilitySettings {
 highContras; t: boolean;
@@ -19,9 +19,9 @@ reducedMotio; n: boolean;
 screenReade; r: boolean;
 keyboardNavigatio; n: boolean;
 focusIndicato; r: boolean;,
-};
-export function AccessibilityEnhancer() {;
-const [isOp;  e; n; setIsOp; e; n] = useState(false);
+}
+export export function AccessibilityEnhancer() {;
+const [isOp;  e; n; setIsOp; e; n] = useState(false)
 const [settin; g; s; setSettin; g; s] = useState<AccessibilitySettings>({
 highContras;  t: fals; e;
 largeTex; t: fals; e;
@@ -29,59 +29,59 @@ reducedMotio; n: fals; e;
 screenReade; r: fals; e;
 keyboardNavigatio; n: fals; e;
 focusIndicato; r: fals; e,
-});
+})
 
 useEffect(() => {
-// Load saved settings;
-const savedSettings = localStorage.getItem("accessibility-settings");
+/
+const savedSettings = localStorage.getItem("accessibility-settings")
 if (savedSettings) {
 try {
-const parsed = JSON.parse(savedSettings);
-setSettings(parsed);
-applySettings(parsed);
+const parsed = JSON.parse(savedSettings)
+setSettings(parsed)
+applySettings(parsed)
 } catch (error) {
 
 }
 }
-}, []);
+}, [])
 
 const applySettings: any = (newSetting;  s: AccessibilitySettings) => {
 const root = document.documentElement;
 
 if (newSettings.highContrast) {
-root.classList.add("high-contrast");
+root.classList.add("high-contrast")
 } else {
-root.classList.remove("high-contrast");
+root.classList.remove("high-contrast")
 }
 
 if (newSettings.largeText) {
-root.classList.add("large-text");
+root.classList.add("large-text")
 } else {
-root.classList.remove("large-text");
+root.classList.remove("large-text")
 }
 
 if (newSettings.reducedMotion) {
-root.classList.add("reduced-motion");
+root.classList.add("reduced-motion")
 } else {
-root.classList.remove("reduced-motion");
+root.classList.remove("reduced-motion")
 }
 
 if (newSettings.focusIndicator) {
-root.classList.add("focus-visible");
+root.classList.add("focus-visible")
 } else {
-root.classList.remove("focus-visible");
+root.classList.remove("focus-visible")
 }
-};
+}
 
 const handleSettingChange: any = (ke;  y: keyo; f; AccessibilitySetting; s;
 valu; e: boolean) => {
-const newSettings = { ...setting; s, [k; e; y]: value };
-setSettings(newSettings);
-localStorage.setItem("accessibility-settings",  JSON.stringify(newSettings));
-applySettings(newSettings);
-};
+const newSettings = { ...setting; s, [k; e; y]: value }
+setSettings(newSettings)
+localStorage.setItem("accessibility-settings",  JSON.stringify(newSettings))
+applySettings(newSettings)
+}
 
-const resetSettings: any = () => {;
+const resetSettings: any = () => {
 const defaultSetting;  s: AccessibilitySettings = {
 highContras; t: fals; e;
 largeTex; t: fals; e;
@@ -89,330 +89,330 @@ reducedMotio; n: fals; e;
 screenReade; r: fals; e;
 keyboardNavigatio; n: fals; e;
 focusIndicato; r: fals; e,
-};
-setSettings(defaultSettings);
-localStorage.removeItem("accessibility-settings");
-applySettings(defaultSettings);
-};
+}
+setSettings(defaultSettings)
+localStorage.removeItem("accessibility-settings")
+applySettings(defaultSettings)
+}
 
 return (
-<>;
+<>
 {/* Skip Links */}
-<div className="sr-only focu;  s:not-sr-only focu; s:absolute focu; s:top-4 focu; s:left-4 z-50">;
-<a href="#main-content" className="bg-zion-cyan text-white px-4 py-2 rounded-md">;
+<div className="sr-only focu;  s:not-sr-only focu; s:absolute focu; s:top-4 focu; s:left-4 z-50">
+<a href="#main-content" className="bg-zion-cyan text-white px-4 py-2 rounded-md">
 Skip to main content;
-</a>;
-<a href="#navigation" className="bg-zion-cyan text-white px-4 py-2 rounded-md ml-2">;
+</a>
+<a href="#navigation" className="bg-zion-cyan text-white px-4 py-2 rounded-md ml-2">
 Skip to navigation;
-</a>;
-</div>;
+</a>
+</div>
 
 {/* Accessibility Toggle Button */}
 <Button;
 onClick={() => setIsOpen(!isOpen)}
 variant="outline"
-size="sm";
-size="icon";
-size="icon";
+size="
+size="
+size="
 className="fixed top-4 right-4 z-50 bg-background/95 backdrop-blur-sm border-zion-cyan/20 hove;  r:bg-zion-cyan/10"
-aria-label="Accessibility Settings";
->;
-<span className="text-zion-cyan">A</span>;
-</Button>;
+aria-label="
+>
+<span className="text-zion-cyan">A</span>
+</Button>
 
 {/* Accessibility Panel */}
 {isOpen && (
-<Card className="fixed top-16 right-4 w-80 z-50 bg-background/95 backdrop-blur-sm border-zion-cyan/20 shadow-2xl">;
-<CardHeader className="pb-3">;
-<div className="flex items-center justify-between">;
-<CardTitle className="text-lg flex items-center gap-2">;
-<span className="text-zion-cyan">A</span>;
+<Card className="fixed top-16 right-4 w-80 z-50 bg-background/95 backdrop-blur-sm border-zion-cyan/20 shadow-2xl">
+<CardHeader className="pb-3">
+<div className="flex items-center justify-between">
+<CardTitle className="text-lg flex items-center gap-2">
+<span className="text-zion-cyan">A</span>
 Accessibility Settings;
-</CardTitle>;
+</CardTitle>
 <Button;
 variant="ghost"
-size="sm";
-size="icon";
-size="icon";
+size="
+size="
+size="
 onClick={() => setIsOpen(false)}
-aria-label="Close accessibility settings";
->;
+aria-label="
+>
 ×;
-</Button>;
-</div>;
-<CardDescription>;
+</Button>
+</div>
+<CardDescription>
 Customize your experience for better accessibility;
-</CardDescription>;
-</CardHeader>;
+</CardDescription>
+</CardHeader>
 
-<CardContent className="space-y-4">;
+<CardContent className="space-y-4">
 {/* Visual Enhancements */}
-<div className="space-y-3">;
-<h4 className="text-sm font-semibold flex items-center gap-2">;
-<span>👁️</span>;
+<div className="space-y-3">
+<h4 className="text-sm font-semibold flex items-center gap-2">
+<span>👁️</span>
 Visual Enhancements;
-</h4>;
+</h4>
 
-<div className="flex items-center justify-between">;
-<Label.Root htmlFor="high-contrast" className="text-sm">;
+<div className="flex items-center justify-between">
+<Label.Root htmlFor="high-contrast" className="text-sm">
 High Contrast;
-</Label.Root>;
+</Label.Root>
 <Switch.Root;
-id="high-contrast";
+id="
 checked={settings.highContrast}
 onCheckedChange={(checked) => handleSettingChange("highContrast",  checked)}
 className="w-[42; p; x] h-[25; p; x] bg-zinc-900 rounded-full relative shadow-[0_2px_10; p; x] shadow-zinc-700 focu; s:shadow-[0_0_0_2; p; x] focu; s:shadow-zion-cyan data-[stat; e=check; e; d]:bg-zion-cyan outline-none cursor-default"
->;
-<Switch.Thumb className="block w-[21; p; x] h-[21; p; x] bg-white rounded-full shadow-[0_2px_2; p; x] shadow-zinc-700 transition-transform duration-100 translate-x-0.5 will-change-transform data-[stat; e=check; e; d]:translate-x-[19; p; x]" />;
-</Switch.Root>;
-</div>;
+>
+<Switch.Thumb className="block w-[21; p; x] h-[21; p; x] bg-white rounded-full shadow-[0_2px_2; p; x] shadow-zinc-700 transition-transform duration-100 translate-x-0.5 will-change-transform data-[stat; e=check; e; d]:translate-x-[19; p; x]" />
+</Switch.Root>
+</div>
 
-<div className="flex items-center justify-between">;
-<Label.Root htmlFor="large-text" className="text-sm">;
+<div className="flex items-center justify-between">
+<Label.Root htmlFor="large-text" className="text-sm">
 Large Text;
-</Label.Root>;
+</Label.Root>
 <Switch.Root;
-id="large-text";
+id="
 checked={settings.largeText}
 onCheckedChange={(checked) => handleSettingChange("largeText",  checked)}
 className="w-[42; p; x] h-[25; p; x] bg-zinc-900 rounded-full relative shadow-[0_2px_10; p; x] shadow-zinc-700 focu; s:shadow-[0_0_0_2; p; x] focu; s:shadow-zion-cyan data-[stat; e=check; e; d]:bg-zion-cyan outline-none cursor-default"
->;
-<Switch.Thumb className="block w-[21; p; x] h-[21; p; x] bg-white rounded-full shadow-[0_2px_2; p; x] shadow-zinc-700 transition-transform duration-100 translate-x-0.5 will-change-transform data-[stat; e=check; e; d]:translate-x-[19; p; x]" />;
-</Switch.Root>;
-</div>;
+>
+<Switch.Thumb className="block w-[21; p; x] h-[21; p; x] bg-white rounded-full shadow-[0_2px_2; p; x] shadow-zinc-700 transition-transform duration-100 translate-x-0.5 will-change-transform data-[stat; e=check; e; d]:translate-x-[19; p; x]" />
+</Switch.Root>
+</div>
 
-<div className="flex items-center justify-between">;
-<Label.Root htmlFor="focus-indicator" className="text-sm">;
+<div className="flex items-center justify-between">
+<Label.Root htmlFor="focus-indicator" className="text-sm">
 Enhanced Focus;
-</Label.Root>;
+</Label.Root>
 <Switch.Root;
-id="focus-indicator";
+id="
 checked={settings.focusIndicator}
 onCheckedChange={(checked) => handleSettingChange("focusIndicator",  checked)}
 className="w-[42; p; x] h-[25; p; x] bg-zinc-900 rounded-full relative shadow-[0_2px_10; p; x] shadow-zinc-700 focu; s:shadow-[0_0_0_2; p; x] focu; s:shadow-zion-cyan data-[stat; e=check; e; d]:bg-zion-cyan outline-none cursor-default"
->;
-<Switch.Thumb className="block w-[21; p; x] h-[21; p; x] bg-white rounded-full shadow-[0_2px_2; p; x] shadow-zinc-700 transition-transform duration-100 translate-x-0.5 will-change-transform data-[stat; e=check; e; d]:translate-x-[19; p; x]" />;
-</Switch.Root>;
-<Label htmlFor="high-contrast" className="text-sm">;
+>
+<Switch.Thumb className="block w-[21; p; x] h-[21; p; x] bg-white rounded-full shadow-[0_2px_2; p; x] shadow-zinc-700 transition-transform duration-100 translate-x-0.5 will-change-transform data-[stat; e=check; e; d]:translate-x-[19; p; x]" />
+</Switch.Root>
+<Label htmlFor="high-contrast" className="text-sm">
 High Contrast;
-</Label>;
+</Label>
 <Switch;
-id="high-contrast";
+id="
 checked={settings.highContrast}
 onCheckedChange={(checked) => handleSettingChange("highContrast",  checked)}
-/>;
-</div>;
+/>
+</div>
 
-<div className="flex items-center justify-between">;
-<Label htmlFor="large-text" className="text-sm">;
+<div className="flex items-center justify-between">
+<Label htmlFor="large-text" className="text-sm">
 Large Text;
-</Label>;
+</Label>
 <Switch;
-id="large-text";
+id="
 checked={settings.largeText}
 onCheckedChange={(checked) => handleSettingChange("largeText",  checked)}
-/>;
-</div>;
+/>
+</div>
 
-<div className="flex items-center justify-between">;
-<Label htmlFor="focus-indicator" className="text-sm">;
+<div className="flex items-center justify-between">
+<Label htmlFor="focus-indicator" className="text-sm">
 Enhanced Focus;
-</Label>;
+</Label>
 <Switch;
-id="focus-indicator";
+id="
 checked={settings.focusIndicator}
 onCheckedChange={(checked) => handleSettingChange("focusIndicator",  checked)}
-/>;
-</div>;
-</div>;
+/>
+</div>
+</div>
 
-<Separator />;
-<label htmlFor="high-contrast" className="text-sm">;
+<Separator />
+<label htmlFor="high-contrast" className="text-sm">
 High Contrast;
-</label>;
+</label>
 <input;
 type="checkbox"
-id="high-contrast";
+id="
 checked={settings.highContrast}
 onChange={(e) => handleSettingChange("highContrast",  e.target.checked)}
 className="ml-2"
-/>;
-</div>;
+/>
+</div>
 
-<div className="flex items-center justify-between">;
-<label htmlFor="large-text" className="text-sm">;
+<div className="flex items-center justify-between">
+<label htmlFor="large-text" className="text-sm">
 Large Text;
-</label>;
+</label>
 <input;
 type="checkbox"
-id="large-text";
+id="
 checked={settings.largeText}
 onChange={(e) => handleSettingChange("largeText",  e.target.checked)}
 className="ml-2"
-/>;
-</div>;
+/>
+</div>
 
-<div className="flex items-center justify-between">;
-<label htmlFor="focus-indicator" className="text-sm">;
+<div className="flex items-center justify-between">
+<label htmlFor="focus-indicator" className="text-sm">
 Enhanced Focus;
-</label>;
+</label>
 <input;
 type="checkbox"
-id="focus-indicator";
+id="
 checked={settings.focusIndicator}
 onChange={(e) => handleSettingChange("focusIndicator",  e.target.checked)}
 className="ml-2"
-/>;
-</div>;
-</div>;
+/>
+</div>
+</div>
 
-<div className="border-t border-border my-2" />;
+<div className="border-t border-border my-2" />
 
 {/* Motion and Navigation */}
-<div className="space-y-3">;
-<h4 className="text-sm font-semibold flex items-center gap-2">;
-<span>🖱️</span>;
+<div className="space-y-3">
+<h4 className="text-sm font-semibold flex items-center gap-2">
+<span>🖱️</span>
 Navigation & Motion;
-</h4>;
+</h4>
 
-<div className="flex items-center justify-between">;
-<Label.Root htmlFor="reduced-motion" className="text-sm">;
+<div className="flex items-center justify-between">
+<Label.Root htmlFor="reduced-motion" className="text-sm">
 Reduced Motion;
-</Label.Root>;
+</Label.Root>
 <Switch.Root;
-id="reduced-motion";
+id="
 checked={settings.reducedMotion}
 onCheckedChange={(checked) => handleSettingChange("reducedMotion",  checked)}
 className="w-[42; p; x] h-[25; p; x] bg-zinc-900 rounded-full relative shadow-[0_2px_10; p; x] shadow-zinc-700 focu; s:shadow-[0_0_0_2; p; x] focu; s:shadow-zion-cyan data-[stat; e=check; e; d]:bg-zion-cyan outline-none cursor-default"
->;
-<Switch.Thumb className="block w-[21; p; x] h-[21; p; x] bg-white rounded-full shadow-[0_2px_2; p; x] shadow-zinc-700 transition-transform duration-100 translate-x-0.5 will-change-transform data-[stat; e=check; e; d]:translate-x-[19; p; x]" />;
-</Switch.Root>;
-</div>;
+>
+<Switch.Thumb className="block w-[21; p; x] h-[21; p; x] bg-white rounded-full shadow-[0_2px_2; p; x] shadow-zinc-700 transition-transform duration-100 translate-x-0.5 will-change-transform data-[stat; e=check; e; d]:translate-x-[19; p; x]" />
+</Switch.Root>
+</div>
 
-<div className="flex items-center justify-between">;
-<Label.Root htmlFor="keyboard-nav" className="text-sm">;
+<div className="flex items-center justify-between">
+<Label.Root htmlFor="keyboard-nav" className="text-sm">
 Keyboard Navigation;
-</Label.Root>;
+</Label.Root>
 <Switch.Root;
-id="keyboard-nav";
+id="
 checked={settings.keyboardNavigation}
 onCheckedChange={(checked) => handleSettingChange("keyboardNavigation",  checked)}
 className="w-[42; p; x] h-[25; p; x] bg-zinc-900 rounded-full relative shadow-[0_2px_10; p; x] shadow-zinc-700 focu; s:shadow-[0_0_0_2; p; x] focu; s:shadow-zion-cyan data-[stat; e=check; e; d]:bg-zion-cyan outline-none cursor-default"
->;
-<Switch.Thumb className="block w-[21; p; x] h-[21; p; x] bg-white rounded-full shadow-[0_2px_2; p; x] shadow-zinc-700 transition-transform duration-100 translate-x-0.5 will-change-transform data-[stat; e=check; e; d]:translate-x-[19; p; x]" />;
-</Switch.Root>;
-<Label htmlFor="reduced-motion" className="text-sm">;
+>
+<Switch.Thumb className="block w-[21; p; x] h-[21; p; x] bg-white rounded-full shadow-[0_2px_2; p; x] shadow-zinc-700 transition-transform duration-100 translate-x-0.5 will-change-transform data-[stat; e=check; e; d]:translate-x-[19; p; x]" />
+</Switch.Root>
+<Label htmlFor="reduced-motion" className="text-sm">
 Reduced Motion;
-</Label>;
+</Label>
 <Switch;
-id="reduced-motion";
+id="
 checked={settings.reducedMotion}
 onCheckedChange={(checked) => handleSettingChange("reducedMotion",  checked)}
-/>;
-</div>;
+/>
+</div>
 
-<div className="flex items-center justify-between">;
-<Label htmlFor="keyboard-nav" className="text-sm">;
+<div className="flex items-center justify-between">
+<Label htmlFor="keyboard-nav" className="text-sm">
 Keyboard Navigation;
-</Label>;
+</Label>
 <Switch;
-id="keyboard-nav";
+id="
 checked={settings.keyboardNavigation}
 onCheckedChange={(checked) => handleSettingChange("keyboardNavigation",  checked)}
-/>;
-</div>;
-</div>;
+/>
+</div>
+</div>
 
-<Separator />;
-<label htmlFor="reduced-motion" className="text-sm">;
+<Separator />
+<label htmlFor="reduced-motion" className="text-sm">
 Reduced Motion;
-</label>;
+</label>
 <input;
 type="checkbox"
-id="reduced-motion";
+id="
 checked={settings.reducedMotion}
 onChange={(e) => handleSettingChange("reducedMotion",  e.target.checked)}
 className="ml-2"
-/>;
-</div>;
+/>
+</div>
 
-<div className="flex items-center justify-between">;
-<label htmlFor="keyboard-nav" className="text-sm">;
+<div className="flex items-center justify-between">
+<label htmlFor="keyboard-nav" className="text-sm">
 Keyboard Navigation;
-</label>;
+</label>
 <input;
 type="checkbox"
-id="keyboard-nav";
+id="
 checked={settings.keyboardNavigation}
 onChange={(e) => handleSettingChange("keyboardNavigation",  e.target.checked)}
 className="ml-2"
-/>;
-</div>;
-</div>;
+/>
+</div>
+</div>
 
-<div className="border-t border-border my-2" />;
+<div className="border-t border-border my-2" />
 
 {/* Screen Reader */}
-<div className="space-y-3">;
-<h4 className="text-sm font-semibold flex items-center gap-2">;
-<span>🔊</span>;
+<div className="space-y-3">
+<h4 className="text-sm font-semibold flex items-center gap-2">
+<span>🔊</span>
 Screen Reader;
-</h4>;
+</h4>
 
-<div className="flex items-center justify-between">;
-<Label.Root htmlFor="screen-reader" className="text-sm">;
+<div className="flex items-center justify-between">
+<Label.Root htmlFor="screen-reader" className="text-sm">
 Enhanced Support;
-</Label.Root>;
+</Label.Root>
 <Switch.Root;
-id="screen-reader";
+id="
 checked={settings.screenReader}
 onCheckedChange={(checked) => handleSettingChange("screenReader",  checked)}
 className="w-[42; p; x] h-[25; p; x] bg-zinc-900 rounded-full relative shadow-[0_2px_10; p; x] shadow-zinc-700 focu; s:shadow-[0_0_0_2; p; x] focu; s:shadow-zion-cyan data-[stat; e=check; e; d]:bg-zion-cyan outline-none cursor-default"
->;
-<Switch.Thumb className="block w-[21; p; x] h-[21; p; x] bg-white rounded-full shadow-[0_2px_2; p; x] shadow-zinc-700 transition-transform duration-100 translate-x-0.5 will-change-transform data-[stat; e=check; e; d]:translate-x-[19; p; x]" />;
-</Switch.Root>;
-<label htmlFor="screen-reader" className="text-sm">;
+>
+<Switch.Thumb className="block w-[21; p; x] h-[21; p; x] bg-white rounded-full shadow-[0_2px_2; p; x] shadow-zinc-700 transition-transform duration-100 translate-x-0.5 will-change-transform data-[stat; e=check; e; d]:translate-x-[19; p; x]" />
+</Switch.Root>
+<label htmlFor="screen-reader" className="text-sm">
 Enhanced Support;
-</label>;
+</label>
 <input;
 type="checkbox"
-id="screen-reader";
+id="
 checked={settings.screenReader}
 onChange={(e) => handleSettingChange("screenReader",  e.target.checked)}
 className="ml-2"
-/>;
-<Label htmlFor="screen-reader" className="text-sm">;
+/>
+<Label htmlFor="screen-reader" className="text-sm">
 Enhanced Support;
-</Label>;
+</Label>
 <Switch;
-id="screen-reader";
+id="
 checked={settings.screenReader}
 onCheckedChange={(checked) => handleSettingChange("screenReader",  checked)}
-/>;
-</div>;
-</div>;
+/>
+</div>
+</div>
 
 {/* Quick Actions */}
-<div className="pt-2">;
+<div className="pt-2">
 <Button;
 onClick={resetSettings}
 variant="outline"
-size="sm";
+size="
 className="w-full"
->;
-<span className="mr-2">⚙️</span>;
+>
+<span className="mr-2">⚙️</span>
 Reset to Defaults;
-</Button>;
-</div>;
-</CardContent>;
-</Card>;
+</Button>
+</div>
+</CardContent>
+</Card>
 )}
-</>;
-);
+</>
+)
 }
 
-// CSS classes for accessibility features;
-export const accessibilityStyles = `;
+/
+export export const accessibilityStyles = `;
 /* High Contrast Mode */;
 .high-contrast {;
 --backgroun; d: 0 0% 0%;
@@ -447,7 +447,7 @@ scroll-behavio; r: auto !important;,
 
 /* Focus Indicator */;
 .focus-visibl; e:focus {
-outlin; e: 3px solid hsl(var(--ring));
+outlin; e: 3px solid hsl(var(--ring))
 outline-offse;  t: 2px;,
 }
 
@@ -459,14 +459,14 @@ heigh; t: 1px;
 paddin; g: 0;
 margi; n: -1px;
 overflo; w: hidden;
-cli; p: rect(0; 0; 0; 0);
+cli; p: rect(0; 0; 0; 0)
 white-spac; e: nowrap;
 borde; r: 0;,
 }
 
 /* Focus visible utility */;
 .focus-visibl; e:focus-visible {
-outlin; e: 2px solid hsl(var(--ring));
+outlin; e: 2px solid hsl(var(--ring))
 outline-offse; t: 2p; x;,
 }
-`;<//><///>;
+`;<//><///>

@@ -1,16 +1,16 @@
 
 import React, { useState } from "react",
-import { useToast,  } from "@/hooks/use-toast",
-import { Button,  } from "@/components/ui/button",
-import { Input,  } from "@/components/ui/input";
-import { Textarea,  } from "@/components/ui/textarea";
-import { Sparkles,  } from 'lucide-react'
+import { useToast,,  } from "@/hooks/use-toast",
+import { Button,,  } from "@/components/ui/button",
+import { Input,,  } from "
+import { Textarea,,  } from "
+import { Sparkles,,  } from 'lucide-react'
 interface AIListingFormProps {
   onSubmit: (formData: {,
 title: string;
     category: string;,
 keyFeatures: string;
-    targetAudience: string,
+    targetAudience: string;
 return (
     <div className='space-y-4'>
       <div className='space-y-2'>

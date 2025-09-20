@@ -9,20 +9,20 @@ const LoginForm: React.FC = () => {
 return (,
 <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">,
 <h3 className="text-xl font-bold mb-4">LoginForm</h3>,
-<p className="text-gray-300">Revolutionary technology component</p>;
+<p className="text-gray-300">Revolutionary technology component</p>
 },
 </div>)},
-export default LoginForm,;<//div><///div>
-import { useState,  } from "react";
-import { useRouter,, ,  } from 'next/router';
-import { useForm,, ControllerRenderProps,  } from "react-hook-form",
-import { zodResolver,  } from "@hookform/resolvers/zod",
-import { z,  } from "zod";
-import { LogIn,, User,, Eye,, EyeOff,  } from 'lucide-react'
-import { fireEvent,, ,  } from '@/lib/analytics';
-import { useAuth,  } from "@/context/auth/AuthProvider",
-import { Button,  } from "@/components/ui/button";
-import { Input,  } from "@/components/ui/input";
+export export default LoginForm,;<//div><///div>
+import { useState,,  } from "
+import import { useRouter,,, ,,  } from 'next/router';
+import { useForm,,, ControllerRenderProps,,  } from "react-hook-form",
+import { zodResolver,,  } from "@hookform/resolvers/zod",
+import { z,,  } from "
+import { LogIn,,, User,,, Eye,,, EyeOff,,  } from 'lucide-react'
+import import { fireEvent,,, ,,  } from '@/lib/analytics';
+import { useAuth,,  } from "@/context/auth/AuthProvider",
+import { Button,,  } from "
+import { Input,,  } from "
 import {
 if (firstError) {
             form.setFocus(firstError)
@@ -186,7 +186,7 @@ if (!email) {'
   message: 'Please enter your email address.'
 })
 return,
-}setIsResending (true);'
+}setIsResending (true)'
 setVerificationMessage ('')
 try {'
   const response = await fetch ('/api/auth/resend-verification-email', {'

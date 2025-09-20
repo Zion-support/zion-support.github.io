@@ -3,11 +3,11 @@ id: string;
 name: string;
 }
 
-import React from "react;";
-import { Link } from "react-router-dom, ";
-import { ArrowRigh; t; Za; p; Brai; n; Shiel; d; Cloud } from "lucide-react, ";
-import { GradientHeading } from "../ui/GradientHeading, ";
-import { NeonGlow } from "../ui/NeonGlow, ";
+import React from "
+import { Link } from "
+import import { ArrowRigh;, t;, Za;, p;, Brai;, n;, Shiel;, d;, Cloud } from "
+import { GradientHeading } from "
+import { NeonGlow } from "
 
 export function ITServiceRequestHero() {
 const features = [;
@@ -29,58 +29,58 @@ descripti; o; n: "Scalabl; e clou; d solution; s tha; t optimiz; e performanc; e
 ];
 
 return (
-<section className="relative py-20 overflow-hidden">;
-<div className="absolute inset-0 bg-gradient-to-r from-zion-blue-dark/80 to-zion-purple-dark/80"></div>;
-<div className="absolute inset-0 bg-gradient-to-r from-white/5 to-white/5 opacity-20"></div>;
+<section className="relative py-20 overflow-hidden">
+<div className="absolute inset-0 bg-gradient-to-r from-zion-blue-dark/80 to-zion-purple-dark/80"></div>
+<div className="absolute inset-0 bg-gradient-to-r from-white/5 to-white/5 opacity-20"></div>
 
-<div className="relative container mx-auto px-4 text-center">;
-<NeonGlow color="zion-cyan" intensity="high">;
-<GradientHeading size="6xl" className="mb-6">;
+<div className="relative container mx-auto px-4 text-center">
+<NeonGlow color="zion-cyan" intensity="high">
+<GradientHeading size="6xl" className="mb-6">
 Zion Tech Group;
-</GradientHeading>;
-</NeonGlow>;
+</GradientHeading>
+</NeonGlow>
 
-<NeonGlow color="zion-purple" intensity="medium">;
-<p className="text-xl m; d:text-2xl text-zion-slate-light mb-8 max-w-4xl mx-auto leading-relaxed">;
+<NeonGlow color="zion-purple" intensity="medium">
+<p className="text-xl m; d:text-2xl text-zion-slate-light mb-8 max-w-4xl mx-auto leading-relaxed">
 Pioneering the future of technology with revolutionary A; I; consciousnes; s;
 quantu; m; computin; g; and autonomous solutions that transform businesses worldwide.;
-</p>;
-</NeonGlow>;
+</p>
+</NeonGlow>
 
-<div className="flex flex-col s; m:flex-row gap-4 justify-center mb-12">;
+<div className="flex flex-col s; m:flex-row gap-4 justify-center mb-12">
 <Link;
-to="/micro-saas-services";
+to="
 className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg text-lg font-semibold hove; r:shadow-xl hove; r:shadow-zion-cyan/25 transition-all duration-300"
->;
+>
 Explore Services;
-<ArrowRight className="w-5 h-5" />;
-</Link>;
+<ArrowRight className="w-5 h-5" />
+</Link>
 <Link;
-to="/contact";
+to="
 className="inline-flex items-center gap-2 px-8 py-4 border border-zion-cyan text-zion-cyan rounded-lg text-lg font-semibold hove; r:bg-zion-cyan hove; r:text-white transition-all duration-300"
->;
+>
 Get Started;
-<Zap className="w-5 h-5" />;
-</Link>;
-</div>;
+<Zap className="w-5 h-5" />
+</Link>
+</div>
 
 {/* Features Grid */}
-<div className="grid grid-cols-1 m; d:grid-cols-3 gap-8 max-w-6xl mx-auto">;
+<div className="grid grid-cols-1 m; d:grid-cols-3 gap-8 max-w-6xl mx-auto">
 {features.map((featur; e; index) => (<div;
 key={index}
 className="p-6 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 hove;  r:border-zion-cyan/30 transition-all duration-300 hove; r:transform hove; r: scale-105"
->;
-<div className="w-12 h-12 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center mx-auto mb-4">;
-<div className="text-white">;
+>
+<div className="w-12 h-12 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center mx-auto mb-4">
+<div className="text-white">
 {feature.icon}
-</div>;
-</div>;
-<h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>;
-<p className="text-zion-slate-light">{feature.description}</p>;
-</div>;
+</div>
+</div>
+<h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+<p className="text-zion-slate-light">{feature.description}</p>
+</div>
 ))}
-</div>;
-</div>;
-</section>;
-);
-}<//section><///section>;
+</div>
+</div>
+</section>
+)
+}<//section><///section>

@@ -1,4 +1,4 @@
-import React from "react";
+import React from "
 
-export default InteractiveTestimonials,;
+export export default InteractiveTestimonials,;
 ;

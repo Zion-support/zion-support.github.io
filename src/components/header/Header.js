@@ -1,61 +1,61 @@
-import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
-import { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { Logo } from './Logo';
-import { UserMenu } from './UserMenu';
-import { LanguageSelector } from './LanguageSelector';
-import { Button } from '@/components/ui/Button';
-import { Menu, X, Search, Phone, Mail } from 'lucide-react';
+import { jsx as _jsx, jsxs as _jsxs } from "
+import import { useState, useEffect } from 'react';
+import import { Link, useLocation } from 'react-router-dom';
+import import { Logo } from './Logo';
+import import { UserMenu } from './UserMenu';
+import import { LanguageSelector } from './LanguageSelector';
+import import { Button } from '@/components/ui/Button';
+import import { Menu, X, Search, Phone, Mail } from 'lucide-react';
 export function Header() {
-    const [isMenuOpen, setIsMenuOpen] = useState(false);
-    const [isScrolled, setIsScrolled] = useState(false);
-    const location = useLocation();
+    const [isMenuOpen, setIsMenuOpen] = useState(false)
+    const [isScrolled, setIsScrolled] = useState(false)
+    const location = useLocation()
     useEffect(() => {
         const handleScroll = () => {
-            setIsScrolled(window.scrollY > 10);
-import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import { Logo } from './Logo';
-import { UserMenu } from './UserMenu';
-import { LanguageSelector } from './LanguageSelector';
-import { MainNavigation } from '@/layout/MainNavigation';
-import { MobileMenu } from './MobileMenu';
-import { useAuth } from '@/hooks/useAuth';
-import { useWhitelabel } from '@/context/WhitelabelContext';
-import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput";
-import { generateSearchSuggestions } from "@/data/marketplaceData";
-import { useNavigate } from "react-router-dom";
-import { Button } from "@/components/ui/button";
-import { Menu, X, Sparkles } from "lucide-react";
-import { Search as SearchIcon } from "lucide-react";
+            setIsScrolled(window.scrollY > 10)
+import import React, { useState, useEffect } from 'react';
+import import { Link } from 'react-router-dom';
+import import { Logo } from './Logo';
+import import { UserMenu } from './UserMenu';
+import import { LanguageSelector } from './LanguageSelector';
+import import { MainNavigation } from '@/layout/MainNavigation';
+import import { MobileMenu } from './MobileMenu';
+import import { useAuth } from '@/hooks/useAuth';
+import import { useWhitelabel } from '@/context/WhitelabelContext';
+import { EnhancedSearchInput } from "
+import { generateSearchSuggestions } from "
+import { useNavigate } from "
+import { Button } from "
+import { Menu, X, Sparkles } from "
+import { Search as SearchIcon } from "
 export function Header({ hideLogin = false, customLogo, customTheme }) {
-    const { user } = useAuth();
-    const { isWhitelabel, primaryColor } = useWhitelabel();
-    const navigate = useNavigate();
-    const [query, setQuery] = useState("");
-    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-    const [isScrolled, setIsScrolled] = useState(false);
-    const searchSuggestions = generateSearchSuggestions();
+    const { user } = useAuth()
+    const { isWhitelabel, primaryColor } = useWhitelabel()
+    const navigate = useNavigate()
+    const [query, setQuery] = useState("")
+    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+    const [isScrolled, setIsScrolled] = useState(false)
+    const searchSuggestions = generateSearchSuggestions()
     // If we have a white-label tenant and no specific customTheme is provided,
-    // use the tenant's primary color;
+    /
     const effectiveTheme = customTheme || (isWhitelabel ? {
         primaryColor,
-        backgroundColor: '#000000', // Default dark background;
-        textColor: '#ffffff', // Default light text;
-    } : undefined);
+        backgroundColor: '#000000', /
+        textColor: '#ffffff', /
+    } : undefined)
     const headerStyle = effectiveTheme ? {
         backgroundColor: effectiveTheme.backgroundColor,
         color: effectiveTheme.textColor,
         borderColor: `${effectiveTheme.primaryColor}20`
-    } : {};
-    // Handle scroll effect;
+    } : {}
+    /
     useEffect(() => {
         const handleScroll = () => {
-            setIsScrolled(window.scrollY > 20);
-        };
-        window.addEventListener('scroll', handleScroll);
-        return () => window.removeEventListener('scroll', handleScroll);
-    }, []);
+            setIsScrolled(window.scrollY > 20)
+        }
+        window.addEventListener('scroll', handleScroll)
+        return () => window.removeEventListener('scroll', handleScroll)
+    }, [])
     const isActive = (path) => location.pathname === path;
     const navigationItems = [
         { name: 'Home', path: '/' },
@@ -89,5 +89,5 @@ export function Header({ hideLogin = false, customLogo, customTheme }) {
                                             ? 'text-zion-blue bg-zion-blue/10'
                                             : 'text-gray-700 hover:text-zion-blue hover:bg-gray-50'}`, children: item.name })) }, item.name))) }), _jsxs("div", { className: "hidden lg:flex items-center space-x-4", children: [_jsxs(Button, { variant: "outline", size: "sm", children: [_jsx(Search, { className: "h-4 w-4 mr-2" }), "Search"] }), _jsx(Button, { size: "sm", children: "Get Started" })] }), _jsx("button", { className: "lg:hidden p-2 rounded-lg text-gray-700 hover:text-zion-blue hover:bg-gray-50", onClick: () => setIsMenuOpen(!isMenuOpen), children: isMenuOpen ? _jsx(X, { className: "h-6 w-6" }) : _jsx(Menu, { className: "h-6 w-6" }) })] }) }) }), isMenuOpen && (_jsx("div", { className: "lg:hidden bg-white border-t border-gray-200 shadow-lg", children: _jsxs("div", { className: "container mx-auto px-4 py-4", children: [_jsx("nav", { className: "space-y-2", children: navigationItems.map((item) => (_jsxs("div", { children: [_jsx(Link, { to: item.path, className: `block py-3 px-4 rounded-lg transition-colors ${isActive(item.path)
                                             ? 'text-zion-blue bg-zion-blue/10'
-                                            : 'text-gray-700 hover:text-zion-blue hover:bg-gray-50'}`, onClick: () => setIsMenuOpen(false), children: item.name }), item.hasDropdown && item.name === 'Services' && (_jsx("div", { className: "ml-4 mt-2 space-y-1", children: serviceDropdownItems.map((subItem) => (_jsxs(Link, { to: subItem.path, className: "block py-2 px-4 text-gray-600 hover:text-zion-blue transition-colors", onClick: () => setIsMenuOpen(false), children: ["• ", subItem.name] }, subItem.name))) })), item.hasDropdown && item.name === 'Talent' && (_jsx("div", { className: "ml-4 mt-2 space-y-1", children: talentDropdownItems.map((subItem) => (_jsxs(Link, { to: subItem.path, className: "block py-2 px-4 text-gray-600 hover:text-zion-blue transition-colors", onClick: () => setIsMenuOpen(false), children: ["• ", subItem.name] }, subItem.name))) }))] }, item.name))) }), _jsxs("div", { className: "mt-6 pt-6 border-t border-gray-200 space-y-3", children: [_jsxs(Button, { variant: "outline", className: "w-full", children: [_jsx(Search, { className: "h-4 w-4 mr-2" }), "Search"] }), _jsx(Button, { className: "w-full", children: "Get Started" })] })] }) }))] }));
+                                            : 'text-gray-700 hover:text-zion-blue hover:bg-gray-50'}`, onClick: () => setIsMenuOpen(false), children: item.name }), item.hasDropdown && item.name === 'Services' && (_jsx("div", { className: "ml-4 mt-2 space-y-1", children: serviceDropdownItems.map((subItem) => (_jsxs(Link, { to: subItem.path, className: "block py-2 px-4 text-gray-600 hover:text-zion-blue transition-colors", onClick: () => setIsMenuOpen(false), children: ["• ", subItem.name] }, subItem.name))) })), item.hasDropdown && item.name === 'Talent' && (_jsx("div", { className: "ml-4 mt-2 space-y-1", children: talentDropdownItems.map((subItem) => (_jsxs(Link, { to: subItem.path, className: "block py-2 px-4 text-gray-600 hover:text-zion-blue transition-colors", onClick: () => setIsMenuOpen(false), children: ["• ", subItem.name] }, subItem.name))) }))] }, item.name))) }), _jsxs("div", { className: "mt-6 pt-6 border-t border-gray-200 space-y-3", children: [_jsxs(Button, { variant: "outline", className: "w-full", children: [_jsx(Search, { className: "h-4 w-4 mr-2" }), "Search"] }), _jsx(Button, { className: "w-full", children: "Get Started" })] })] }) }))] }))
 }

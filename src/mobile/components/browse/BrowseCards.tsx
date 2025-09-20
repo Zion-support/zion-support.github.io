@@ -4,14 +4,14 @@ title: string;
   subtitle: string;,
 description: string;
   location?: string;
-  badges: string[];
+  badges: string[[];]
   price?: string;
   image?: string;
   match?: number;
   timePosted?: string,
 interface BrowseCardsProps {
-  items: BrowseItem[];,
-type: "jobs" | "talents";
+  items: BrowseItem[[];],
+type: "jobs" | "
   onViewDetails: (id: string) => void,
 export function BrowseCards({ items type onViewDetails }: BrowseCardsProps) {
   const [savedItems, setSavedItems] = useState<string[]>([]),

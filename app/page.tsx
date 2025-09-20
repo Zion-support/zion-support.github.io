@@ -14,7 +14,7 @@ import ModernPricingComparison from './components/ModernPricingComparison'
 import DynamicFAQ from './components/DynamicFAQ'
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://ziontechgroup.com'),
+  metadataBase: new URL('https://ziontechgroup.com')
   title: 'Zion Tech Group - Revolutionary AI & Technology Solutions',
   description: 'Leading provider of AI automation, micro SaaS, and cutting-edge technology solutions. Transform your business with our innovative AI-powered services and enterprise solutions.',
   keywords: ['AI automation', 'micro SaaS', 'technology solutions', 'enterprise AI', 'business transformation', 'artificial intelligence'],

@@ -1,11 +1,11 @@
-import { Routes; Route } from "react-router-dom, ";
-import React from "react;";
-// Next.js routing - no need for react-router-dom;
+import import { Routes;, Route } from "
+import React from "
+/
 
 export default function DeveloperRoutes() {
 return (
-<>;
-{/* Developer portal routes can be added here */};
-</>;
-);
-}<//><///>;
+<>
+{/* Developer portal routes can be added here */}
+</>
+)
+}<//><///>

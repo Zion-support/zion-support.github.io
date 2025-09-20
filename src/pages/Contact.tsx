@@ -1,4 +1,4 @@
-import React from 'react';
+import import React from 'react';
 
 const Contact: React.FC = () => {
   return (
@@ -77,7 +77,7 @@ const Contact: React.FC = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Contact;
+export export default Contact;

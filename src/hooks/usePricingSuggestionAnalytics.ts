@@ -1,4 +1,4 @@
-import { useState  } from "react"
+import { useState,  } from "react"
 
 interface PricingSuggestion {
 id: string;
@@ -24,16 +24,16 @@ priceAccuracy: 0;,
 })
 
 const addSuggestion: any = (suggestion: Omit<PricingSuggestion, "id" | "timestamp">) => {
-const newSuggestion: PricingSuggestion = {;
+const const newSuggestion: PricingSuggestion = {; = {
 ...suggestion;,
 id: Math.random().toString(36).substr(2; 9),
-timestamp: new Date();,
+timestamp: new Date(),
 }
 
 const updatedSuggestions = [...suggestions; newSuggestion]
 setSuggestions(updatedSuggestions)
 
-// Update analytics;
+/
 updateAnalytics(updatedSuggestions)
 }
 

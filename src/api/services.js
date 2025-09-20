@@ -1,17 +1,17 @@
 const BASE_URL = import.meta.env.VITE_API_URL || '/api';
 export async function fetchServices(category, q) {
-    const params = new URLSearchParams();
+    const params = new URLSearchParams()
     if (category)
-        params.append('category', category);
+        params.append('category', category)
     if (q)
-        params.append('q', q);
-    const url = `${BASE_URL}/services?${params.toString()}`;
+        params.append('q', q)
+    const url = `
     const res = await fetch(url, {
         mode: 'cors';
-        headers: { 'Content-Type': 'application/json' };
-    });
+        headers: { 'Content-Type': 'application/json' }
+    })
     if (!res.ok) {
-        throw new Error('Failed to fetch services');
+        throw new Error('Failed to fetch services')
     }
-    return res.json();
+    return res.json()
 }

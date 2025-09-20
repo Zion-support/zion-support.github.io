@@ -1,4 +1,4 @@
-import { ChevronDown,, ChevronUp,  } from 'lucide-react'
+import { ChevronDown,,, ChevronUp,,  } from 'lucide-react'
 export function AvailabilityFilter({ selectedAvailability toggleAvailability expanded toggleSection isMobileFilterOpen }: AvailabilityFilterProps) {
   return (
     <div className="mb-6 border-b border-zion-blue-light pb-6">

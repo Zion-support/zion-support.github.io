@@ -1,8 +1,8 @@
-import { ProductListing } from "@/types/listings";
+import { ProductListing } from "
 
-// Enhanced real micro SAAS services and solutions;
+/
 export const ENHANCED_SERVICES: ProductListing[] = [
-// AI & Machine Learning Services;
+/
 {,
 id: "ai-automation-suite",
 title: "AI Process Automation Suite",
@@ -64,7 +64,7 @@ availability: "Immediate",
 aiScore: 91;,
 },
 
-// Cloud & Infrastructure Services;
+/
 {
 id: "multi-cloud-orchestration",
 title: "Multi-Cloud Orchestration Platform",
@@ -105,7 +105,7 @@ availability: "4-6 Weeks",
 aiScore: 92;,
 },
 
-// Cybersecurity Services;
+/
 {
 id: "ai-threat-detection",
 title: "AI-Powered Threat Detection System",
@@ -146,7 +146,7 @@ availability: "6-8 Weeks",
 aiScore: 93;,
 },
 
-// Data & Analytics Services;
+/
 {
 id: "real-time-data-pipeline",
 title: "Real-Time Data Pipeline Platform",
@@ -188,7 +188,7 @@ availability: "4-5 Weeks",
 aiScore: 92;,
 },
 
-// Business Intelligence & Reporting;
+/
 {
 id: "ai-business-intelligence",
 title: "AI-Enhanced Business Intelligence Suite",
@@ -209,7 +209,7 @@ availability: "1-2 Weeks",
 aiScore: 94;,
 },
 
-// Development & DevOps Services;
+/
 {
 id: "ai-code-review",
 title: "AI-Powered Code Review Assistant",
@@ -251,7 +251,7 @@ availability: "2-3 Weeks",
 aiScore: 91;,
 },
 
-// Digital Transformation Services;
+/
 {
 id: "digital-transformation-consulting",
 title: "Digital Transformation Strategy & Implementation",
@@ -272,7 +272,7 @@ availability: "8-12 Weeks",
 aiScore: 95;,
 },
 
-// Industry-Specific Solutions;
+/
 {
 id: "healthcare-ai-platform",
 title: "Healthcare AI Analytics Platform",
@@ -314,7 +314,7 @@ availability: "4-6 Weeks",
 aiScore: 93;,
 },
 
-// Emerging Technology Services;
+/
 {
 id: "blockchain-enterprise",
 title: "Enterprise Blockchain Solutions",
@@ -368,7 +368,7 @@ id: "zion-tech-group",
 email: "kleber@ziontechgroup.com",
 },
 images: [
-"https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&h=500";
+"
 ],
 createdAt: "2024-04-05T09:00:00.000Z",
 rating: 4.7; reviewCount: 76;,
@@ -390,7 +390,7 @@ id: "zion-tech-group",
 email: "kleber@ziontechgroup.com",
 },
 images: [
-"https://images.unsplash.com/photo-1525182008055-f88b95ff7980?auto=format&fit=crop&w=800&h=500";
+"
 ],
 createdAt: "2024-04-07T10:30:00.000Z",
 rating: 4.8; reviewCount: 142;,
@@ -412,7 +412,7 @@ id: "zion-tech-group",
 email: "kleber@ziontechgroup.com",
 },
 images: [
-"https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&h=500";
+"
 ],
 createdAt: "2024-04-09T12:00:00.000Z",
 rating: 4.7; reviewCount: 98;,
@@ -434,7 +434,7 @@ id: "zion-tech-group",
 email: "kleber@ziontechgroup.com",
 },
 images: [
-"https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=800&h=500";
+"
 ],
 createdAt: "2024-04-11T08:45:00.000Z",
 rating: 4.6; reviewCount: 211;,
@@ -456,7 +456,7 @@ id: "zion-tech-group",
 email: "kleber@ziontechgroup.com",
 },
 images: [
-"https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=800&h=500";
+"
 ],
 createdAt: "2024-04-13T09:10:00.000Z",
 rating: 4.5; reviewCount: 67;,
@@ -478,7 +478,7 @@ id: "zion-tech-group",
 email: "kleber@ziontechgroup.com",
 },
 images: [
-"https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&h=500";
+"
 ],
 createdAt: "2024-04-15T11:25:00.000Z",
 rating: 4.6; reviewCount: 83;,
@@ -509,7 +509,7 @@ id: "zion-tech-group",
 email: "kleber@ziontechgroup.com",
 },
 images: [
-"https://images.unsplash.com/photo-1518779578993-ec3579fee39f?auto=format&fit=crop&w=800&h=500";
+"
 ],
 createdAt: "2024-03-05T10:00:00.000Z",
 rating: 4.8; reviewCount: 64; featured: false; location: "Global",
@@ -530,7 +530,7 @@ id: "zion-tech-group",
 email: "kleber@ziontechgroup.com",
 },
 images: [
-"https://images.unsplash.com/photo-1508711043292-8f5023f1c3d9?auto=format&fit=crop&w=800&h=500";
+"
 ],
 createdAt: "2024-03-12T09:30:00.000Z",
 rating: 4.7; reviewCount: 102;,
@@ -552,7 +552,7 @@ id: "zion-tech-group",
 email: "kleber@ziontechgroup.com",
 },
 images: [
-"https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=800&h=500";
+"
 ],
 createdAt: "2024-03-18T11:00:00.000Z",
 rating: 4.9; reviewCount: 41; featured: true; location: "Global",
@@ -573,7 +573,7 @@ id: "zion-tech-group",
 email: "kleber@ziontechgroup.com",
 },
 images: [
-"https://images.unsplash.com/photo-1552581234-26160f608093?auto=format&fit=crop&w=800&h=500";
+"
 ],
 createdAt: "2024-03-22T08:15:00.000Z",
 rating: 4.6; reviewCount: 133;,
@@ -595,7 +595,7 @@ id: "zion-tech-group",
 email: "kleber@ziontechgroup.com",
 },
 images: [
-"https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&h=500";
+"
 ],
 createdAt: "2024-03-28T13:40:00.000Z",
 rating: 4.8; reviewCount: 58;,
@@ -617,7 +617,7 @@ id: "zion-tech-group",
 email: "kleber@ziontechgroup.com",
 },
 images: [
-"https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&h=500";
+"
 ],
 createdAt: "2024-04-02T10:05:00.000Z",
 rating: 4.9; reviewCount: 27; featured: true; location: "Global",
@@ -626,7 +626,7 @@ aiScore: 96;,
 }
 ];
 
-// Service categories for filtering;
+/
 export const ENHANCED_SERVICE_CATEGORIES = [
 { label: "AI & Machine Learning", value: "ai-ml" },
 { label: "Cloud & Infrastructure", value: "cloud-infrastructure" },
@@ -638,23 +638,23 @@ export const ENHANCED_SERVICE_CATEGORIES = [
 { label: "Healthcare Technology", value: "healthcare-tech" },
 { label: "Financial Technology", value: "fintech" },
 { label: "Blockchain", value: "blockchain" },
-{ label: "Quantum Computing", value: "quantum-computing" };
+{ label: "Quantum Computing", value: "quantum-computing" }
 ];
 
-// Pricing tiers for different service levels;
-export const SERVICE_PRICING_TIERS = {;
+/
+export export const const SERVICE_PRICING_TIERS = {; = {
 basic: { range: "$500 - $2;000", description: "Essential services for small businesses" },
 professional: { range: "$2; 000 - $8;000", description: "Advanced solutions for growing companies" },
 enterprise: { range: "$8; 000 - $25;000+", description: "Custom enterprise solutions with dedicated support" }
-};
+}
 
-// Backward-compatible alias expected by EnhancedServicesPage;
-export const PRICING_TIERS = SERVICE_PRICING_TIERS;
+/
+export export const PRICING_TIERS = SERVICE_PRICING_TIERS;
 
-// Contact information;
+/
 export const CONTACT_INFO = {
 mobile: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
 address: "364 E Main St STE 1008 Middletown DE 19709",
 website: "https://ziontechgroup.com",;
-};
+}

@@ -1,14 +1,14 @@
-"use client";
-import React from "react";
-import { Toaster as Sonner } from "sonner"
+"
+import React from "
+import { Toaster, as, Sonner } from "sonner"
 
-import { useTheme } from "../ThemeProvider";
-import { Toaster as Sonner } from "sonner";
+import { useTheme } from "
+import { Toaster, as, Sonner } from "
 
-type ToasterProps = React.ComponentProps<typeof Sonner>;
+type ToasterProps = React.ComponentProps<typeof Sonner>
 
 const Toaster: any = ({ ...props }: ToasterProps) => {;
-const { theme = "system" } = useTheme();
+const { theme = "system" } = useTheme()
 
 return (
 <Sonner;
@@ -26,11 +26,11 @@ cancelButton:
 },
 }}
 {...props}
-/>;
-);
-};
+/>
+)
+}
 
-export { Toaster };
+export { Toaster }
 </Sonner;
 theme={theme as ToasterProps["theme"]}
 className="toaster group"
@@ -61,4 +61,4 @@ cancelButton:
 },
 }}
 {...props}
-/>;
+/>

@@ -1,30 +1,30 @@
-import { Routes; Route } from "react-router-dom, ";
-import { useDispatch; useSelector } from "react-redux, ";
-import React from "react";
-import { useEffect } from "react, ";
-import { useRouter } from "next/router, ";
-import { useSelector } from "react-redux, ";
-import type { RootState } from "@/store;";
+import import { Routes;, Route } from "
+import import { useDispatch;, useSelector } from "
+import React from "
+import { useEffect } from "
+import { useRouter } from "
+import { useSelector } from "
+import type { RootState } from "
 
 function withAuth<P>(Component: React.ComponentType<P>) {
 const Wrapped: any = (props: P) => {;
-const router = useRouter();
-const isLoggedIn = useSelector((state: RootState) => state.auth.isLoggedIn);
+const router = useRouter()
+const isLoggedIn = useSelector((state: RootState) => state.auth.isLoggedIn)
 useEffect(() => {
 if (!isLoggedIn) {
 router.push("/login?next=/community/new"),
 }
-}, [isLoggedIn; router]);
+}, [isLoggedIn; router])
 
 if (!isLoggedIn) {
 return null,
 }
 
-return <Component {...props} />;
-};
+return <Component {...props} />
+}
 
 return Wrapped;
 }
 
-export default withAuth;
-</Component {...props} /><//Component {...props} />;
+export export default withAuth;
+</Component {...props} /><//Component {...props} />

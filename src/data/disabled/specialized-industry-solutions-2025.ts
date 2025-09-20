@@ -1,27 +1,27 @@
-import { Routes; Route } from "react-router-dom, ";
+import import { Routes;, Route } from "
 export interface SpecializedIndustrySolution {
-id: string; title: string; description: string; industry: string; category: string; subcategory: string; price: number; currency: string; pricingModel: string; features: string[], benefits: string[];,
-useCases: string[], targetAudience: string[];,
+id: string; title: string; description: string; industry: string; category: string; subcategory: string; price: number; currency: string; pricingModel: string; features: string[], benefits: string[[];],
+useCases: string[], targetAudience: string[[];],
 tags: string[], estimatedDelivery: string; supportLevel: string; marketPrice: string;
 contactInfo: {,
-phone: string; email: string; website: string,
-};
-technology: string[], integrations: string[];,
-compliance: string[], roi: string; competitors: string[];
+phone: string; email: string; website: string;
+}
+technology: string[], integrations: string[[];],
+compliance: string[], roi: string; competitors: string[[];]
 demoUrl?: string;
-caseStudies?: string[];
+caseStudies?: string[[];]
 websiteUrl?: string;,
 industryChallenges: string[], marketOpportunity: string; competitiveAdvantage: string;,
 }
 
 export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025: SpecializedIndustrySolution[] = [
-// 1. Healthcare AI Diagnostic Platform;
+/
 {,
-id: "healthcare-ai-diagnostics-elite", title: "Healthcare AI Diagnostics Elite - Medical Intelligence Platform";,
+id: "healthcare-ai-diagnostics-elite", title: ",
 description: "Advanced AI-powered diagnostic platform that analyzes medical images; patient data; and clinical records to provide accurate diagnoses and treatment recommendations.",
-industry: "Healthcare", category: "AI & Diagnostics";,
+industry: "Healthcare", category: ",
 subcategory: "Medical Imaging", price: 45000;,
-currency: "$", pricingModel: "monthly";,
+currency: "$", pricingModel: ",
 features: [
 "AI-powered medical image analysis",
 "Patient data integration",
@@ -32,31 +32,31 @@ features: [
 "Telemedicine support",
 "Compliance monitoring",
 "Performance analytics",
-"API for healthcare systems";
+"
 ],
 benefits: [
 "Improve diagnostic accuracy by 40%",
 "Reduce diagnosis time by 60%",
 "Lower healthcare costs by 25%",
 "Enhance patient outcomes",
-"Support remote healthcare delivery";
+"
 ],
 useCases: [
 "Radiology departments",
 "Primary care clinics",
 "Specialty practices",
 "Telemedicine platforms",
-"Medical research institutions";
+"
 ],
 targetAudience: [
 "Radiologists",
 "Primary care physicians",
 "Specialists",
 "Healthcare administrators",
-"Medical researchers";
+"
 ],
 tags: ["Healthcare AI", "Medical Diagnostics", "Image Analysis", "Clinical Decision Support", "Telemedicine"],
-estimatedDelivery: "8-10 weeks", supportLevel: "enterprise";,
+estimatedDelivery: "8-10 weeks", supportLevel: ",
 marketPrice: "$45; 000 - $120; 000/month",
 contactInfo: {,
 phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
@@ -68,14 +68,14 @@ roi: "600% within 18 months", competitors: ["IBM Watson Health", "Google Health"
 demoUrl: "https://ziontechgroup.com/demo/healthcare-ai-diagnostics", caseStudies: ["Hospital 40% faster diagnoses", "Clinic 25% cost reduction"],
 websiteUrl: "https://ziontechgroup.com/services/healthcare-ai-diagnostics", industryChallenges: ["Diagnostic accuracy", "Healthcare costs", "Access to specialists", "Patient wait times"],
 marketOpportunity: "$45.2 billion by 2027", competitiveAdvantage: "Advanced AI algorithms with healthcare-specific training",
-};
-// 2. Financial Services AI Compliance Platform;
+}
+/
 {
-id: "financial-ai-compliance-elite", title: "Financial AI Compliance Elite - Regulatory Intelligence";,
+id: "financial-ai-compliance-elite", title: ",
 description: "Intelligent compliance platform that automates regulatory reporting; monitors transactions for suspicious activity; and ensures adherence to financial regulations.",
-industry: "Financial Services", category: "AI & Compliance";,
+industry: "Financial Services", category: ",
 subcategory: "Regulatory Technology", price: 32000;,
-currency: "$", pricingModel: "monthly";,
+currency: "$", pricingModel: ",
 features: [
 "Automated regulatory reporting",
 "Real-time transaction monitoring",
@@ -86,31 +86,31 @@ features: [
 "Policy management",
 "Training modules",
 "Performance metrics",
-"Multi-jurisdiction support";
+"
 ],
 benefits: [
 "Reduce compliance costs by 50%",
 "Improve detection accuracy by 80%",
 "Automate 90% of reporting",
 "Reduce regulatory fines",
-"Enhance risk management";
+"
 ],
 useCases: [
 "Banks",
 "Credit unions",
 "Investment firms",
 "Insurance companies",
-"Fintech startups";
+"
 ],
 targetAudience: [
 "Compliance officers",
 "Risk managers",
 "Legal teams",
 "Operations managers",
-"Executive leadership";
+"
 ],
 tags: ["Financial Compliance", "RegTech", "AI Monitoring", "Risk Management", "Regulatory Reporting"],
-estimatedDelivery: "6-8 weeks", supportLevel: "enterprise";,
+estimatedDelivery: "6-8 weeks", supportLevel: ",
 marketPrice: "$32; 000 - $85; 000/month",
 contactInfo: {,
 phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
@@ -122,14 +122,14 @@ roi: "450% within 12 months", competitors: ["Thomson Reuters", "LexisNexis", "Re
 demoUrl: "https://ziontechgroup.com/demo/financial-ai-compliance", caseStudies: ["Bank 50% compliance cost reduction", "Investment firm 0 regulatory violations"],
 websiteUrl: "https://ziontechgroup.com/services/financial-ai-compliance", industryChallenges: ["Regulatory complexity", "Compliance costs", "Detection accuracy", "Reporting efficiency"],
 marketOpportunity: "$28.9 billion by 2026", competitiveAdvantage: "AI-powered compliance with real-time monitoring",
-};
-// 3. Manufacturing IoT Intelligence Platform;
+}
+/
 {
-id: "manufacturing-iot-intelligence-elite", title: "Manufacturing IoT Intelligence Elite - Smart Factory Platform";,
+id: "manufacturing-iot-intelligence-elite", title: ",
 description: "Comprehensive IoT platform that connects manufacturing equipment; monitors performance; predicts maintenance needs; and optimizes production processes.",
-industry: "Manufacturing", category: "IoT & Analytics";,
+industry: "Manufacturing", category: ",
 subcategory: "Smart Manufacturing", price: 25000;,
-currency: "$", pricingModel: "monthly";,
+currency: "$", pricingModel: ",
 features: [
 "Equipment connectivity & monitoring",
 "Predictive maintenance",
@@ -140,31 +140,31 @@ features: [
 "Safety monitoring",
 "Production analytics",
 "Mobile applications",
-"API integration";
+"
 ],
 benefits: [
 "Reduce downtime by 70%",
 "Improve efficiency by 35%",
 "Lower maintenance costs by 40%",
 "Enhance product quality",
-"Optimize energy usage";
+"
 ],
 useCases: [
 "Automotive manufacturing",
 "Electronics production",
 "Chemical processing",
 "Food & beverage",
-"Pharmaceutical manufacturing";
+"
 ],
 targetAudience: [
 "Plant managers",
 "Operations directors",
 "Maintenance teams",
 "Quality managers",
-"Supply chain managers";
+"
 ],
 tags: ["Manufacturing IoT", "Smart Factory", "Predictive Maintenance", "Quality Control", "Supply Chain"],
-estimatedDelivery: "6-8 weeks", supportLevel: "enterprise";,
+estimatedDelivery: "6-8 weeks", supportLevel: ",
 marketPrice: "$25; 000 - $65; 000/month",
 contactInfo: {,
 phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
@@ -176,14 +176,14 @@ roi: "500% within 15 months", competitors: ["Siemens", "GE Digital", "PTC", "Roc
 demoUrl: "https://ziontechgroup.com/demo/manufacturing-iot-intelligence", caseStudies: ["Auto plant 70% downtime reduction", "Electronics factory 35% efficiency gain"],
 websiteUrl: "https://ziontechgroup.com/services/manufacturing-iot-intelligence", industryChallenges: ["Equipment downtime", "Maintenance costs", "Quality control", "Energy efficiency"],
 marketOpportunity: "$32.1 billion by 2027", competitiveAdvantage: "Comprehensive IoT platform with AI-powered analytics",
-};
-// 4. Retail AI Personalization Platform;
+}
+/
 {
-id: "retail-ai-personalization-elite", title: "Retail AI Personalization Elite - Customer Intelligence";,
+id: "retail-ai-personalization-elite", title: ",
 description: "Advanced AI platform that personalizes customer experiences; optimizes inventory; and provides real-time insights for retail decision-making.",
-industry: "Retail", category: "AI & Customer Experience";,
+industry: "Retail", category: ",
 subcategory: "Personalization", price: 18000;,
-currency: "$", pricingModel: "monthly";,
+currency: "$", pricingModel: ",
 features: [
 "Customer behavior analysis",
 "Personalized recommendations",
@@ -194,31 +194,31 @@ features: [
 "Marketing automation",
 "Performance analytics",
 "Mobile applications",
-"API integration";
+"
 ],
 benefits: [
 "Increase sales by 25%",
 "Improve customer retention by 40%",
 "Reduce inventory costs by 30%",
 "Enhance customer satisfaction",
-"Optimize marketing ROI";
+"
 ],
 useCases: [
 "E-commerce platforms",
 "Brick-and-mortar stores",
 "Omnichannel retail",
 "Fashion retail",
-"Electronics retail";
+"
 ],
 targetAudience: [
 "Retail managers",
 "Marketing directors",
 "E-commerce managers",
 "Merchandising teams",
-"Customer experience managers";
+"
 ],
 tags: ["Retail AI", "Customer Personalization", "Inventory Optimization", "Demand Forecasting", "Marketing Automation"],
-estimatedDelivery: "4-6 weeks", supportLevel: "premium";,
+estimatedDelivery: "4-6 weeks", supportLevel: ",
 marketPrice: "$18; 000 - $45; 000/month",
 contactInfo: {,
 phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
@@ -230,14 +230,14 @@ roi: "400% within 10 months", competitors: ["Salesforce", "Adobe", "Shopify", "A
 demoUrl: "https://ziontechgroup.com/demo/retail-ai-personalization", caseStudies: ["E-commerce 25% sales increase", "Retail chain 40% customer retention"],
 websiteUrl: "https://ziontechgroup.com/services/retail-ai-personalization", industryChallenges: ["Customer retention", "Inventory management", "Personalization", "Competition"],
 marketOpportunity: "$22.4 billion by 2026", competitiveAdvantage: "AI-powered personalization with real-time optimization",
-};
-// 5. Energy Management AI Platform;
+}
+/
 {
-id: "energy-management-ai-elite", title: "Energy Management AI Elite - Smart Grid Intelligence";,
+id: "energy-management-ai-elite", title: ",
 description: "Intelligent energy management platform that optimizes power distribution; predicts demand; and manages renewable energy integration for utilities and smart cities.",
-industry: "Energy & Utilities", category: "AI & Energy Management";,
+industry: "Energy & Utilities", category: ",
 subcategory: "Smart Grid", price: 35000;,
-currency: "$", pricingModel: "monthly";,
+currency: "$", pricingModel: ",
 features: [
 "Smart grid optimization",
 "Demand forecasting",
@@ -248,31 +248,31 @@ features: [
 "Carbon footprint tracking",
 "Real-time monitoring",
 "Mobile applications",
-"API integration";
+"
 ],
 benefits: [
 "Reduce energy costs by 30%",
 "Improve grid reliability by 95%",
 "Optimize renewable integration",
 "Reduce carbon emissions",
-"Enhance customer satisfaction";
+"
 ],
 useCases: [
 "Electric utilities",
 "Smart cities",
 "Industrial facilities",
 "Commercial buildings",
-"Renewable energy plants";
+"
 ],
 targetAudience: [
 "Utility managers",
 "City planners",
 "Facility managers",
 "Energy consultants",
-"Government officials";
+"
 ],
 tags: ["Energy Management", "Smart Grid", "Renewable Energy", "Predictive Analytics", "Sustainability"],
-estimatedDelivery: "8-10 weeks", supportLevel: "enterprise";,
+estimatedDelivery: "8-10 weeks", supportLevel: ",
 marketPrice: "$35; 000 - $90; 000/month",
 contactInfo: {,
 phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
@@ -284,14 +284,14 @@ roi: "550% within 18 months", competitors: ["Siemens", "GE Digital", "Schneider 
 demoUrl: "https://ziontechgroup.com/demo/energy-management-ai", caseStudies: ["Utility 30% cost reduction", "Smart city 95% grid reliability"],
 websiteUrl: "https://ziontechgroup.com/services/energy-management-ai", industryChallenges: ["Grid reliability", "Energy costs", "Renewable integration", "Carbon reduction"],
 marketOpportunity: "$38.7 billion by 2027", competitiveAdvantage: "AI-powered energy optimization with sustainability focus",
-};
-// 6. Transportation & Logistics AI Platform;
+}
+/
 {
-id: "transportation-logistics-ai-elite", title: "Transportation & Logistics AI Elite - Supply Chain Intelligence";,
+id: "transportation-logistics-ai-elite", title: ",
 description: "Comprehensive AI platform that optimizes transportation routes; manages logistics operations; and provides real-time visibility across the supply chain.",
-industry: "Transportation & Logistics", category: "AI & Supply Chain";,
+industry: "Transportation & Logistics", category: ",
 subcategory: "Logistics Optimization", price: 22000;,
-currency: "$", pricingModel: "monthly";,
+currency: "$", pricingModel: ",
 features: [
 "Route optimization",
 "Fleet management",
@@ -302,31 +302,31 @@ features: [
 "Last-mile delivery",
 "Performance analytics",
 "Mobile applications",
-"API integration";
+"
 ],
 benefits: [
 "Reduce transportation costs by 25%",
 "Improve delivery times by 30%",
 "Optimize fleet utilization",
 "Enhance customer satisfaction",
-"Reduce carbon footprint";
+"
 ],
 useCases: [
 "Freight companies",
 "E-commerce logistics",
 "Manufacturing supply chains",
 "Retail distribution",
-"Cold chain logistics";
+"
 ],
 targetAudience: [
 "Logistics managers",
 "Supply chain directors",
 "Fleet managers",
 "Operations managers",
-"Customer service teams";
+"
 ],
 tags: ["Logistics AI", "Supply Chain", "Route Optimization", "Fleet Management", "Real-time Tracking"],
-estimatedDelivery: "5-7 weeks", supportLevel: "premium";,
+estimatedDelivery: "5-7 weeks", supportLevel: ",
 marketPrice: "$22; 000 - $55; 000/month",
 contactInfo: {,
 phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
@@ -338,14 +338,14 @@ roi: "450% within 12 months", competitors: ["Manhattan Associates", "JDA Softwar
 demoUrl: "https://ziontechgroup.com/demo/transportation-logistics-ai", caseStudies: ["Logistics company 25% cost reduction", "E-commerce 30% faster delivery"],
 websiteUrl: "https://ziontechgroup.com/services/transportation-logistics-ai", industryChallenges: ["Transportation costs", "Delivery times", "Fleet optimization", "Supply chain visibility"],
 marketOpportunity: "$26.8 billion by 2026", competitiveAdvantage: "AI-powered logistics with real-time optimization",
-};
-// 7. Education AI Learning Platform;
+}
+/
 {
-id: "education-ai-learning-elite", title: "Education AI Learning Elite - Personalized Learning Intelligence";,
+id: "education-ai-learning-elite", title: ",
 description: "Advanced AI platform that personalizes learning experiences; tracks student progress; and provides adaptive content for educational institutions.",
-industry: "Education", category: "AI & Learning";,
+industry: "Education", category: ",
 subcategory: "Personalized Education", price: 15000;,
-currency: "$", pricingModel: "monthly";,
+currency: "$", pricingModel: ",
 features: [
 "Personalized learning paths",
 "Adaptive content delivery",
@@ -356,31 +356,31 @@ features: [
 "Learning analytics",
 "Mobile applications",
 "API integration",
-"Multi-language support";
+"
 ],
 benefits: [
 "Improve learning outcomes by 35%",
 "Reduce dropout rates by 40%",
 "Personalize education delivery",
 "Enhance student engagement",
-"Optimize resource allocation";
+"
 ],
 useCases: [
 "K-12 schools",
 "Universities",
 "Corporate training",
 "Online education",
-"Special education";
+"
 ],
 targetAudience: [
 "School administrators",
 "Teachers",
 "Training managers",
 "Educational technologists",
-"Curriculum developers";
+"
 ],
 tags: ["Education AI", "Personalized Learning", "Adaptive Content", "Learning Analytics", "Student Engagement"],
-estimatedDelivery: "4-6 weeks", supportLevel: "premium";,
+estimatedDelivery: "4-6 weeks", supportLevel: ",
 marketPrice: "$15; 000 - $40; 000/month",
 contactInfo: {,
 phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
@@ -392,14 +392,14 @@ roi: "400% within 10 months", competitors: ["Khan Academy", "Duolingo", "Courser
 demoUrl: "https://ziontechgroup.com/demo/education-ai-learning", caseStudies: ["School district 35% improvement in outcomes", "University 40% dropout reduction"],
 websiteUrl: "https://ziontechgroup.com/services/education-ai-learning", industryChallenges: ["Student engagement", "Learning outcomes", "Personalization", "Resource optimization"],
 marketOpportunity: "$19.6 billion by 2026", competitiveAdvantage: "AI-powered personalized learning with adaptive content",
-};
-// 8. Real Estate AI Platform;
+}
+/
 {
-id: "real-estate-ai-elite", title: "Real Estate AI Elite - Property Intelligence Platform";,
+id: "real-estate-ai-elite", title: ",
 description: "Comprehensive AI platform that analyzes property markets; predicts trends; and provides insights for real estate professionals and investors.",
-industry: "Real Estate", category: "AI & Market Intelligence";,
+industry: "Real Estate", category: ",
 subcategory: "Property Analytics", price: 20000;,
-currency: "$", pricingModel: "monthly";,
+currency: "$", pricingModel: ",
 features: [
 "Market trend analysis",
 "Property valuation",
@@ -410,31 +410,31 @@ features: [
 "Comparative analysis",
 "Performance metrics",
 "Mobile applications",
-"API integration";
+"
 ],
 benefits: [
 "Improve investment decisions by 40%",
 "Reduce market research time by 60%",
 "Optimize portfolio performance",
 "Identify market opportunities",
-"Enhance client services";
+"
 ],
 useCases: [
 "Real estate agencies",
 "Property investors",
 "Development companies",
 "Property managers",
-"Financial institutions";
+"
 ],
 targetAudience: [
 "Real estate agents",
 "Property investors",
 "Development managers",
 "Portfolio managers",
-"Financial advisors";
+"
 ],
 tags: ["Real Estate AI", "Market Intelligence", "Property Analytics", "Investment Analysis", "Risk Assessment"],
-estimatedDelivery: "5-7 weeks", supportLevel: "premium";,
+estimatedDelivery: "5-7 weeks", supportLevel: ",
 marketPrice: "$20; 000 - $50; 000/month",
 contactInfo: {,
 phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
@@ -448,4 +448,4 @@ websiteUrl: "https://ziontechgroup.com/services/real-estate-ai", industryChallen
 marketOpportunity: "$24.3 billion by 2026", competitiveAdvantage: "AI-powered market intelligence with predictive analytics",
 }
 ];
-export default SPECIALIZED_INDUSTRY_SOLUTIONS_2025;
+export export default SPECIALIZED_INDUSTRY_SOLUTIONS_2025;

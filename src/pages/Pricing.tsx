@@ -1,13 +1,13 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import import React, { useState } from 'react';
+import import { Link } from 'react-router-dom';
 const Pricing: React.FC = () => {
-  const [isAnnual, setIsAnnual] = useState(false);
+  const [isAnnual, setIsAnnual] = useState(false)
   const plans = [
     {
       name: "Starter",
 description: "Perfect for small businesses getting started",
-      monthlyPrice: 99,
-annualPrice: 79,
+      monthlyPrice: 99;
+annualPrice: 79;
 features: [
         "Up to 5 team members",
         "Basic AI features",
@@ -22,8 +22,8 @@ popular: false
     {
       name: "Professional",
 description: "Ideal for growing businesses",
-      monthlyPrice: 299,
-annualPrice: 239,
+      monthlyPrice: 299;
+annualPrice: 239;
       features: [
         "Up to 25 team members",
         "Advanced AI features",
@@ -40,8 +40,8 @@ annualPrice: 239,
     {
       name: "Enterprise",
 description: "For large organizations with complex needs",
-      monthlyPrice: 799,
-annualPrice: 639,
+      monthlyPrice: 799;
+annualPrice: 639;
       features: [
         "Unlimited team members",
         "Full AI suite",
@@ -201,6 +201,6 @@ to="/contact"
         </div>
       </div>
     </div>
-  );
+  )
 }
-export default Pricing;
+export export default Pricing;

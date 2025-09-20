@@ -1,5 +1,5 @@
-import React from "react";
+import React from "
 
 
-export default CustomerFeedbackSystem,;
+export export default CustomerFeedbackSystem,;
 ;

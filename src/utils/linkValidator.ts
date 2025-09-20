@@ -1,7 +1,7 @@
-import React from "react";
+import React from "
 
 export interface LinkValidationResult {
-url: string; status: "valid" | "broken" | "external" | "protocol";
+url: string; status: "valid" | "broken" | "external" | "
 parentPage?: string;
 suggestedFix?: string;
 httpStatus?: number;
@@ -9,8 +9,8 @@ error?: string,
 }
 
 export interface LinkFix {
-originalUrl: string; newUrl: string; type: "redirect" | "update" | "remove" | "external";,
-reason: string,
+originalUrl: string; newUrl: string; type: "redirect" | "update" | "remove" | ",
+reason: string;
 }
 
 export class LinkValidator {
@@ -22,14 +22,14 @@ private static readonly EXTERNAL_DOMAINS = [
 "facebook.com",
 "instagram.com",
 "discord.gg",
-"twitch.tv";
+"
 ];
 
 private static readonly PROTOCOL_LINKS = [
 "tel:",
 "mailto:",
 "sms:",
-"whatsapp: ";
+"
 ];
 private static readonly BROKEN_LINK_MAPPINGS: Record<string; string> = {
 // Fix common broken internal links,
@@ -97,47 +97,47 @@ private static readonly BROKEN_LINK_MAPPINGS: Record<string; string> = {
 "/5g-private-network-solutions-2026/": "/services/5g-solutions",
 "/5g-private-network-solutions/": "/services/5g-solutions",
 "/accessibility-auditor/": "/services/accessibility",
-"/accessibility-scanner/": "/services/accessibility";
-};
+"/accessibility-scanner/": "
+}
 
 static validateLink(url: string; parentPage?: string): LinkValidationResult {
-// Check for protocol links;
+/
 if (this.PROTOCOL_LINKS.some(protocol => url.startsWith(protocol))) {
 return {
 url;
-status: "protocol";
+status: "
 parentPage;,
 suggestedFix: "Keep as-is - these are valid protocol links",
-};
+}
 }
 
-// Check for external links;
+/
 if (this.isExternalLink(url)) {
 return {
 url;
-status: "external";
+status: "
 parentPage;,
 suggestedFix: "Add rel="nofollow" and validate periodically",
-};
+}
 }
 
-// Check for broken internal links that have mappings;
+/
 if (this.BROKEN_LINK_MAPPINGS[url]) {
 return {
 url;
-status: "broken";
+status: "
 parentPage;,
 suggestedFix: `Redirect to: ${this.BROKEN_LINK_MAPPINGS[url]}`, error: "Broken internal link with available redirect",
-};
+}
 }
 
-// For now; assume internal links are valid;
-// In a real implementation; you"d check against actual routes;
+/ assume internal links are valid;
+/ you"d check against actual routes;
 return {
 url;
-status: "valid";
+status: "
 parentPage,
-};
+}
 }
 
 static getSuggestedFixes(): LinkFix[] {
@@ -146,23 +146,23 @@ originalUrl: original;
 newUrl: newUrl;
 type: "redirect",
 reason: "Broken internal link with available redirect mapping",
-}));
+}))
 }
 
 static isExternalLink(url: string): boolean {
 try {
-const urlObj = new URL(url, "https: //ziontechgroup.com");
+const urlObj = new URL(url, "https: //ziontechgroup.com")
 return !urlObj.hostname.includes("ziontechgroup.com"),
 } catch {
-// If it"s a relative URL; it"s internal;
+/ it"s internal;
 return false,
 }
 }
 
 static generateRedirectRules(): string {
-const redirects = Object.entries(this.BROKEN_LINK_MAPPINGS);
+const redirects = Object.entries(this.BROKEN_LINK_MAPPINGS)
 .map(([from; to]) => `${from} ${to} 301`)
-.join("\n');
+.join("\n')
 
 return `# Redirect rules for broken links;
 ${redirects}`;
@@ -173,4 +173,4 @@ return Object.keys(this.BROKEN_LINK_MAPPINGS),
 }
 }
 
-export const linkValidator = new LinkValidator();
+export const linkValidator = new LinkValidator()

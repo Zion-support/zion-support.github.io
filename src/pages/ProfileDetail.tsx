@@ -1,15 +1,15 @@
-import { useState,, useEffect,  } from "react",
-import { useRouter,  } from "next/router",
-import { supabase,  } from "@/integrations/supabase/client",
-import { toast,  } from "@/hooks/use-toast",
-import { SEO,  } from "@/components/SEO",
-import { Header,  } from "@/components/Header",
-import { Avatar,, AvatarFallback,, AvatarImage,  } from "@/components/ui/avatar",
-import { Button,  } from "@/components/ui/button",
-import { Card,, CardContent,, CardDescription,, CardHeader,, CardTitle,  } from "@/components/ui/card",
-import { Badge,  } from "@/components/ui/badge";
-import { MapPin,, Clock,, Link,, as,, LinkIcon,, Github,, Twitter,, Linkedin,, CheckCircle2,, Mail,, Phone,, Globe,  } from 'lucide-react'
-import { HireNowCTA,  } from "@/components/profile/HireNowCTA";
+import { useState,,, useEffect,,  } from "react",
+import { useRouter,,  } from "next/router",
+import { supabase,,  } from "@/integrations/supabase/client",
+import { toast,,  } from "@/hooks/use-toast",
+import { SEO,,  } from "@/components/SEO",
+import { Header,,  } from "@/components/Header",
+import { Avatar,,, AvatarFallback,,, AvatarImage,,  } from "@/components/ui/avatar",
+import { Button,,  } from "@/components/ui/button",
+import { Card,,, CardContent,,, CardDescription,,, CardHeader,,, CardTitle,,  } from "@/components/ui/card",
+import { Badge,,  } from "
+import { MapPin,,, Clock,,, Link,,, as,,, LinkIcon,,, Github,,, Twitter,,, Linkedin,,, CheckCircle2,,, Mail,,, Phone,,, Globe,,  } from 'lucide-react'
+import { HireNowCTA,,  } from "
 export default function ProfileDetail() {
   // useParams is typed as `any` in this environment due to missing type
   // definitions so avoid passing a type argument to prevent TS2347.
@@ -90,17 +90,17 @@ href = {profileData.linkedin_url,}
         </div>
       </div>
     </>
-);
+)
 }
-}, [profileId]);
+}, [profileId])
 <p>Error: {error ;
 }</p> </div>) ;
 }return (<> <SEO) : (<AvatarFallback> {profileData.full name?.charAt (0) ;
 }</AvatarFallback>) ;
 }</Avatar> <div> </div> </div> </CardHeader> <CardContent> $ {profileData.hourly rate ";
-}<span className="text-zion-slate-light font-normal" >/hr</span> </div>) ";
-}</div> </CardContent> </Card> <CardHeader> <CardTitle className="text-xl font-bold text-white" >About Me</CardTitle> </CardHeader> <CardContent> <CardHeader> <CardTitle className="text-xl font-bold text-white" >Skills</CardTitle> </CardHeader> <CardContent> </div> </CardContent> </Card> <CardHeader> <CardTitle className="text-xl font-bold text-white" >Experience</CardTitle> </CardHeader> <CardContent> </div>) ) ) : (<p className="text-zion-slate-light" >No experience provided.</p>) ";
-}</CardContent> </Card> <CardHeader> <CardTitle className="text-xl font-bold text-white" >Portfolio</CardTitle> </CardHeader> <CardContent>) ) ";
+}<span className="text-zion-slate-light font-normal"
+}</div> </CardContent> </Card> <CardHeader> <CardTitle className="text-xl font-bold text-white" >About Me</CardTitle> </CardHeader> <CardContent> <CardHeader> <CardTitle className="text-xl font-bold text-white" >Skills</CardTitle> </CardHeader> <CardContent> </div> </CardContent> </Card> <CardHeader> <CardTitle className="text-xl font-bold text-white" >Experience</CardTitle> </CardHeader> <CardContent> </div>) ) ) : (<p className="text-zion-slate-light"
+}</CardContent> </Card> <CardHeader> <CardTitle className="text-xl font-bold text-white"
 }</div>) : (<p className="text-zion-slate-light" >No portfolio links provided.</p>) ;
 }</CardContent> </Card> </div> <HireNowCTA talentProfile= {{;
   id: profileData?.id |'', full name: profileData?.full name |'',  professional title: profileData?.professional title |'', hourly rate: profileData?.hourly rate |0 ;

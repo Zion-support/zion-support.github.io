@@ -1,12 +1,12 @@
-import React from "react;";
+import React from "
 
 interface ButtonProps {
 children: React.ReactNode;
 onClick?: () => void;
-variant?: "primary" | "secondary";
+variant?: "primary" | "
 disabled?: boolean,
-};
-export const OptimizedButton = React.memo<ButtonProps>(({ ;
+}
+export export const OptimizedButton = React.memo<ButtonProps>(({ ;
 children;
 onClick;
 variant = "primary",
@@ -18,11 +18,11 @@ className={`btn btn-${variant}`}
 onClick={onClick}
 disabled={disabled}
 aria-disabled={disabled}
->;
+>
 {children}
-</button>;
-);
-});
+</button>
+)
+})
 
-OptimizedButton.displayName = "OptimizedButton";
-<//button><///button>;
+OptimizedButton.displayName = "
+<//button><///button>

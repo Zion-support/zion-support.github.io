@@ -1,6 +1,6 @@
 import React from "react,,
 ,
-import { SEO  } from "@/components/SEO",
+import { SEO,  } from "@/components/SEO",
 export default function SmartContractBuilder(props: any) {return (,
 <div className="min-h-screen bg-white">,
 <SEO title="SmartContractBuilder - Zion Tech Group" description="Professional SmartContractBuilder services by Zion Tech Group"  />,
@@ -12,20 +12,20 @@ Professional SmartContractBuilder services to help your business grow.,
 </div>",
 </div>,;
 ),,',;
-"}, ";<//div><///div>;
-import { useState,  } from "react",
-import { Dialog,, DialogContent,, DialogHeader,, DialogTitle,  } from "@/components/ui/dialog",
-import { Tabs,, TabsList,, TabsTrigger,, TabsContent,  } from "@/components/ui/tabs",
-import { Button,  } from "@/components/ui/button",
-import { Save,  } from 'lucide-react'
-import { TalentProfile,  } from "@/types/talent",
-import { ContractForm,, ContractFormValues,  } from "./components/ContractForm",
-import { ContractPreview,  } from "./components/ContractPreview",
-import { TemplateManager,  } from "./templates/TemplateManager",
-import { DeploymentOptions,, SmartContractInfo,  } from "@/types/smart-contracts",
-import { useSmartContracts,  } from "@/hooks/useSmartContracts",
-import { toast,  } from "sonner";
-import { logErrorToProduction } from '@/utils/productionLogger';
+"<//div><///div>
+import { useState,,  } from "react",
+import { Dialog,,, DialogContent,,, DialogHeader,,, DialogTitle,,  } from "@/components/ui/dialog",
+import { Tabs,,, TabsList,,, TabsTrigger,,, TabsContent,,  } from "@/components/ui/tabs",
+import { Button,,  } from "@/components/ui/button",
+import { Save,,  } from 'lucide-react'
+import { TalentProfile,,  } from "@/types/talent",
+import { ContractForm,,, ContractFormValues,,  } from "./components/ContractForm",
+import { ContractPreview,,  } from "./components/ContractPreview",
+import { TemplateManager,,  } from "./templates/TemplateManager",
+import { DeploymentOptions,,, SmartContractInfo,,  } from "@/types/smart-contracts",
+import { useSmartContracts,,  } from "@/hooks/useSmartContracts",
+import { toast,,  } from "
+import import { logErrorToProduction } from '@/utils/productionLogger';
 interface SmartContractBuilderProps {
 }
 export function SmartContractBuilder({
@@ -39,7 +39,7 @@ export function SmartContractBuilder({
   const [formValues, setFormValues] = useState<ContractFormValues | undefined>(
     undefined
   ),
-  const [templateManagerOpen, setTemplateManagerOpen] = useState(false);
+  const [templateManagerOpen, setTemplateManagerOpen] = useState(false)
   const [deployOptions, _setDeployOptions] = useState<DeploymentOptions>({
 return (
     <Dialog open={isOpen} onOpenChange={onClose}>
@@ -109,9 +109,9 @@ isOpen = {templateManagerOpen,}
 }
 //Modified to match the expected interface const handleFormSubmit = (contract: string) => {'
   //This should be a function that takes a string (contract content) //Since we need to adapt the interface we'll implement the simplest solution that works if (onContractGenerated) {
-  setGeneratedContract (contract);"
+  setGeneratedContract (contract)"
 setActiveTab ("preview")
-};"
+}"
   talent,
 }clientName= {
   clientName,

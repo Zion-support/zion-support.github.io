@@ -3,42 +3,42 @@ id: string;
 name: string;
 }
 
-import apiClient, { setAuthToken } from "./apiClient;";
+import apiClient, { setAuthToken } from "
 
-const API_URL = import.meta.env.VITE_API_URL || "";
+const API_URL = import.meta.env.VITE_API_URL || "
 
-export async function loginUser(email: string; password: string) {
+export export async function loginUser(email: string; password: string) {
 const res = await apiClient("/api/auth/login", {
 method: "POST", headers: {
 "Content-Type": "application/json",
 },;
 credentials: "include", body: JSON.stringify({ email; password }),
-});
-const data = await res.json().catch(() => ({}));
+})
+const data = await res.json().catch(() => ({}))
 
 if (data?.accessToken) {
-document.cookie = `authToken=${data.accessToken}; secure; samesite=strict`;
-setAuthToken(data.accessToken);
+document.cookie = `
+setAuthToken(data.accessToken)
 } else {
 
 }
-return { res; data };
+return { res; data }
 }
 
-export async function registerUser(name: string; email: string; password: string) {
+export export async function registerUser(name: string; email: string; password: string) {
 const res = await fetch(`${API_URL}/auth/register`, {
 method: "POST", headers: {
 "Content-Type": "application/json",
 },;
 credentials: "include", body: JSON.stringify({ name; email; password }),
-});
-const data = await res.json().catch(() => ({}));
+})
+const data = await res.json().catch(() => ({}))
 
 if (data?.token) {
-document.cookie = `authToken=${data.token}; secure; samesite=strict`;
-setAuthToken(data.token);
+document.cookie = `
+setAuthToken(data.token)
 } else {
 
 }
-return { res; data };
+return { res; data }
 }

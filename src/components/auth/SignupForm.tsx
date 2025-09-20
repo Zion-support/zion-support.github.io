@@ -1,16 +1,16 @@
-import React { useState useEffect } from 'react';
-import { useForm,, ,  } from 'react-hook-form';
-import { zodResolver,, ,  } from '@hookform/resolvers/zod';
-import { z,, ,  } from 'zod';
-import { Button,, ,  } from '@/components/ui/button';
-import { Input,, ,  } from '@/components/ui/input';
-import { Label,, ,  } from '@/components/ui/label';
-import { useAuth,, ,  } from '@/hooks/useAuth';
-import { toast,, ,  } from '@/hooks/use-toast';
-import { CheckCircle,, AlertCircle,, Eye,, EyeOff,, Loader2,  } from 'lucide-react'
-import { cn,, ,  } from '@/lib/utils';
-import { fireEvent,, ,  } from '@/lib/analytics';
-import { logErrorToProduction } from '@/utils/productionLogger';
+import import React { useState useEffect } from 'react';
+import import { useForm,,, ,,  } from 'react-hook-form';
+import import { zodResolver,,, ,,  } from '@hookform/resolvers/zod';
+import import { z,,, ,,  } from 'zod';
+import import { Button,,, ,,  } from '@/components/ui/button';
+import import { Input,,, ,,  } from '@/components/ui/input';
+import import { Label,,, ,,  } from '@/components/ui/label';
+import import { useAuth,,, ,,  } from '@/hooks/useAuth';
+import import { toast,,, ,,  } from '@/hooks/use-toast';
+import { CheckCircle,,, AlertCircle,,, Eye,,, EyeOff,,, Loader2,,  } from 'lucide-react'
+import import { cn,,, ,,  } from '@/lib/utils';
+import import { fireEvent,,, ,,  } from '@/lib/analytics';
+import import { logErrorToProduction } from '@/utils/productionLogger';
 const signupSchema = null;
                 passwordStrength.strength >= 4 ? 'text-green-600' :
                 passwordStrength.strength >= 3 ? 'text-blue-600' :

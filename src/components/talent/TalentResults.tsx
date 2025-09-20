@@ -1,13 +1,13 @@
-import React from "react";
+import React from "
 
 
-import { TalentProfile } from "@/types/talent, ";
-import { ActiveFilters } from "@/components/talent/ActiveFilters, ";
-import { ResultsHeader } from "@/components/talent/ResultsHeader, ";
-import { TalentGrid } from "@/components/talent/TalentGrid, ";
+import { TalentProfile } from "
+import { ActiveFilters } from "
+import { ResultsHeader } from "
+import { TalentGrid } from "
 
 interface TalentResultsProps {
-talents: TalentProfile[];
+talents: TalentProfile[[];]
 totalCount: number;
 isLoading: boolean;
 viewProfile: (id: string) => void;
@@ -15,21 +15,21 @@ handleBook: (talent: TalentProfile) => void;
 handleMessage: (talent: TalentProfile) => void;
 isAuthenticated: boolean;
 activeFiltersProps: {
-selectedSkills: string[];
+selectedSkills: string[[];]
 toggleSkill: (skill: string) => void;
-selectedAvailability: string[];
+selectedAvailability: string[[];]
 toggleAvailability: (availability: string) => void;
-selectedRegions: string[];
+selectedRegions: string[[];]
 toggleRegion: (region: string) => void;
-priceRange: [number; number];
+priceRange: [[number; number];]
 setPriceRange: (range: [number; number]) => void;
-experienceRange: [number; number];
+experienceRange: [[number; number];]
 setExperienceRange: (range: [number; number]) => void;,
 clearFilters: () => void;,
-};
+}
 }
 
-export function TalentResults({;
+export export function TalentResults({;
 talents;
 totalCount;
 isLoading;
@@ -40,15 +40,15 @@ isAuthenticated;
 activeFiltersProps;
 }: TalentResultsProps) {
 return (
-<div className="flex-1">;
+<div className="flex-1">
 {/* Active filters */}
-<ActiveFilters {...activeFiltersProps} />;
+<ActiveFilters {...activeFiltersProps} />
 
 {/* Results count */}
 <ResultsHeader;
 isLoading={isLoading}
 resultCount={totalCount}
-/>;
+/>
 
 {/* Talents grid */}
 <TalentGrid;
@@ -59,8 +59,8 @@ handleBook={handleBook}
 handleMessage={handleMessage}
 isAuthenticated={isAuthenticated}
 clearFilters={activeFiltersProps.clearFilters}
-/>;
-</div>;
-);
+/>
+</div>
+)
 }
-<//div><///div>;
+<//div><///div>

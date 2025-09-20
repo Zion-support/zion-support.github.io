@@ -1,4 +1,4 @@
-import React from "react";
+import React from "
 
-export default SEOOptimizer,;
+export export default SEOOptimizer,;
 ;

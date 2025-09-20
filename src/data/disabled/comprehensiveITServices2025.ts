@@ -1,25 +1,25 @@
-import React from "react";
+import React from "
 
 export interface ComprehensiveITService {
-id: string; title: string; description: string; id: string; title: string; description: string; id: string; title: string; description: string; category: string; subcategory: string; description: string; pricing: string; price: number; pricingModel: string; features: string[], benefits: string[];,
-targetAudience: string[], tags: string[];
+id: string; title: string; description: string; id: string; title: string; description: string; id: string; title: string; description: string; category: string; subcategory: string; description: string; pricing: string; price: number; pricingModel: string; features: string[], benefits: string[[];],
+targetAudience: string[], tags: string[[];]
 contactInfo: {,
-phone: string; email: string; website: string; address: string,
-};
-technology: string[], technology: string[];,
-integrations: string[], compliance: string[];
-roi: string; competitors: string[];
+phone: string; email: string; website: string; address: string;
+}
+technology: string[], technology: string[[];],
+integrations: string[], compliance: string[[];]
+roi: string; competitors: string[[];]
 demoUrl?: string;
-caseStudies?: string[];
+caseStudies?: string[[];]
 websiteUrl?: string;,
 marketTrend: string; industryFocus: string[], scalability: string; customizationLevel: string; serviceLevel: string;,
 }
 
 export const comprehensiveITServices2025: ComprehensiveITService[] = [
 export const COMPREHENSIVE_IT_SERVICES_2025: ComprehensiveITService[] = [
-// Cloud Infrastructure & Migration Services;
+/
 export const COMPREHENSIVE_IT_SERVICES_2025: ComprehensiveITService[] = [
-// Cloud Infrastructure & Migration Services;
+/
 {,
 id: "cloud-infrastructure-migration-services",
 title: "Cloud Infrastructure & Migration Services - Seamless Cloud Transformation",
@@ -39,28 +39,28 @@ features: [
 "Disaster recovery and backup",
 "24/7 cloud infrastructure management",
 "Scalability planning and implementation",
-"Cloud governance and best practices";
+"
 ],
 benefits: [
 "Reduce infrastructure costs by 40%",
 "Improve system scalability by 300%",
 "Enhance disaster recovery capabilities",
 "Increase operational efficiency by 50%",
-"Enable global business expansion";
+"
 ],
 useCases: [
 "Legacy system modernization",
 "Business expansion and scaling",
 "Cost optimization initiatives",
 "Disaster recovery planning",
-"Global infrastructure deployment";
+"
 ],
 targetAudience: [
 "Enterprise IT leaders",
 "Technology directors",
 "Operations managers",
 "Business owners",
-"Digital transformation consultants";
+"
 ],
 tags: ["Cloud Computing", "Infrastructure", "Migration", "AWS", "Azure", "Google Cloud"],
 estimatedDelivery: "8-12 weeks",
@@ -86,7 +86,7 @@ customizationLevel: "Custom cloud solutions and migration strategies",
 serviceLevel: "24/7 managed cloud services",
 },
 
-// Cybersecurity & Information Security Services;
+/
 {
 id: "cybersecurity-information-security-services",
 title: "Cybersecurity & Information Security Services - Comprehensive Protection",
@@ -105,28 +105,28 @@ features: [
 "Compliance monitoring and reporting",
 "Penetration testing services",
 "Security architecture design",
-"24/7 security monitoring";
+"
 ],
 benefits: [
 "Reduce security incidents by 90%",
 "Improve threat detection by 95%",
 "Ensure regulatory compliance",
 "Protect sensitive business data",
-"Enhance customer trust and reputation";
+"
 ],
 useCases: [
 "Security framework implementation",
 "Compliance and audit support",
 "Incident response and recovery",
 "Security awareness programs",
-"Risk assessment and management";
+"
 ],
 targetAudience: [
 "Chief Information Security Officers",
 "Security managers",
 "Compliance officers",
 "IT directors",
-"Business owners";
+"
 ],
 tags: ["Cybersecurity", "Information Security", "Threat Detection", "Compliance", "Risk Management"],
 estimatedDelivery: "6-10 weeks",
@@ -151,7 +151,7 @@ customizationLevel: "Custom security frameworks and compliance solutions",
 serviceLevel: "24/7 security monitoring and response",
 },
 
-// DevOps & CI/CD Pipeline Services;
+/
 {
 id: "devops-cicd-pipeline-services",
 title: "DevOps & CI/CD Pipeline Services - Streamlined Development Operations",
@@ -170,28 +170,28 @@ features: [
 "Performance optimization",
 "Security integration",
 "Team training and enablement",
-"Ongoing support and maintenance";
+"
 ],
 benefits: [
 "Reduce deployment time by 80%",
 "Improve code quality by 60%",
 "Increase development velocity by 100%",
 "Reduce operational costs by 40%",
-"Enable faster time-to-market";
+"
 ],
 useCases: [
 "Software development optimization",
 "Release management automation",
 "Quality assurance improvement",
 "Development team enablement",
-"Infrastructure automation";
+"
 ],
 targetAudience: [
 "Development teams",
 "DevOps engineers",
 "IT operations managers",
 "Product managers",
-"Technology leaders";
+"
 ],
 tags: ["DevOps", "CI/CD", "Automation", "Infrastructure as Code", "Continuous Delivery"],
 estimatedDelivery: "6-8 weeks",
@@ -216,7 +216,7 @@ customizationLevel: "Custom DevOps workflows and automation rules",
 serviceLevel: "24/7 DevOps support and monitoring",
 },
 
-// Data Management & Analytics Services;
+/
 {
 id: "data-management-analytics-services",
 title: "Data Management & Analytics Services - Data-Driven Business Intelligence",
@@ -235,28 +235,28 @@ features: [
 "Data visualization and storytelling",
 "Real-time data processing",
 "Data security and privacy",
-"Ongoing data optimization";
+"
 ],
 benefits: [
 "Improve decision-making by 70%",
 "Increase operational efficiency by 45%",
 "Identify new business opportunities",
 "Reduce operational costs by 30%",
-"Enable data-driven culture";
+"
 ],
 useCases: [
 "Business intelligence implementation",
 "Data-driven decision making",
 "Operational optimization",
 "Customer insights and analytics",
-"Performance monitoring and reporting";
+"
 ],
 targetAudience: [
 "Data analysts",
 "Business intelligence managers",
 "Operations managers",
 "Marketing teams",
-"Executive leadership";
+"
 ],
 tags: ["Data Management", "Analytics", "Business Intelligence", "Data Visualization", "Predictive Analytics"],
 estimatedDelivery: "6-10 weeks",
@@ -268,7 +268,7 @@ targetAudience: [
 "Business intelligence managers",
 "Operations managers",
 "Marketing teams",
-"Executive leadership";
+"
 ],
 tags: ["Data Management", "Analytics", "Business Intelligence", "Data Visualization", "Predictive Analytics"],
 estimatedDelivery: "6-10 weeks",
@@ -293,7 +293,7 @@ customizationLevel: "Custom analytics solutions and reporting dashboards",
 serviceLevel: "24/7 data monitoring and support",
 },
 
-// Network Infrastructure & Management Services;
+/
 {
 id: "network-infrastructure-management-services",
 title: "Network Infrastructure & Management Services - Reliable Network Solutions",
@@ -312,28 +312,28 @@ features: [
 "Proactive maintenance",
 "Capacity planning",
 "Network documentation",
-"Ongoing support and optimization";
+"
 ],
 benefits: [
 "Improve network reliability by 95%",
 "Reduce network downtime by 80%",
 "Enhance network security",
 "Optimize network performance",
-"Reduce operational costs by 35%";
+"
 ],
 useCases: [
 "Network infrastructure design",
 "Security implementation",
 "Performance optimization",
 "Disaster recovery planning",
-"Network expansion and scaling";
+"
 ],
 targetAudience: [
 "Network administrators",
 "IT managers",
 "System administrators",
 "Business owners",
-"Technology consultants";
+"
 ],
 tags: ["Network Infrastructure", "Network Management", "Security", "Performance", "Monitoring"],
 estimatedDelivery: "4-8 weeks",
@@ -358,7 +358,7 @@ customizationLevel: "Custom network solutions and security configurations",
 serviceLevel: "24/7 network monitoring and support",
 },
 
-// IT Consulting & Strategic Planning Services;
+/
 {
 id: "it-consulting-strategic-planning-services",
 title: "IT Consulting & Strategic Planning Services - Technology Strategy Excellence",
@@ -378,28 +378,28 @@ features: [
 "Compliance and governance planning",
 "Change management strategies",
 "Performance measurement frameworks",
-"Ongoing strategic guidance";
+"
 ],
 benefits: [
 "Align technology with business goals",
 "Optimize IT investments by 40%",
 "Reduce technology risks",
 "Improve operational efficiency",
-"Enable strategic competitive advantages";
+"
 ],
 useCases: [
 "Technology strategy development",
 "Digital transformation planning",
 "IT investment optimization",
 "Vendor selection and management",
-"Technology risk assessment";
+"
 ],
 targetAudience: [
 "Chief Technology Officers",
 "IT directors",
 "Business executives",
 "Technology leaders",
-"Business owners";
+"
 ],
 tags: ["IT Consulting", "Strategic Planning", "Digital Transformation", "Technology Strategy", "IT Governance"],
 estimatedDelivery: "2-4 weeks",
@@ -424,7 +424,7 @@ customizationLevel: "Custom strategic plans and technology roadmaps",
 serviceLevel: "Flexible consulting engagement models",
 },
 
-// IT Support & Help Desk Services;
+/
 {
 id: "it-support-help-desk-services",
 title: "IT Support & Help Desk Services - Reliable Technical Support",
@@ -443,28 +443,28 @@ features: [
 "User training and education",
 "Performance reporting",
 "Escalation procedures",
-"Ongoing support optimization";
+"
 ],
 benefits: [
 "Improve user productivity by 60%",
 "Reduce IT support costs by 45%",
 "Enhance user satisfaction",
 "Minimize system downtime",
-"Enable self-service support";
+"
 ],
 useCases: [
 "Technical support and troubleshooting",
 "User training and education",
 "System maintenance and updates",
 "Performance monitoring",
-"Help desk optimization";
+"
 ],
 targetAudience: [
 "IT support managers",
 "Help desk teams",
 "Business users",
 "IT administrators",
-"Business owners";
+"
 ],
 tags: ["IT Support", "Help Desk", "Technical Support", "User Support", "Problem Resolution"],
 estimatedDelivery: "2-4 weeks",
@@ -489,7 +489,7 @@ customizationLevel: "Custom support workflows and knowledge bases",
 serviceLevel: "24/7 technical support and monitoring",
 },
 
-// Software Development & Custom Solutions;
+/
 {
 id: "software-development-custom-solutions",
 title: "Software Development & Custom Solutions - Tailored Technology Solutions",
@@ -508,28 +508,28 @@ features: [
 "Deployment and maintenance",
 "Performance optimization",
 "Security implementation",
-"Ongoing support and updates";
+"
 ],
 benefits: [
 "Create tailored business solutions",
 "Improve operational efficiency by 50%",
 "Enable new business capabilities",
 "Reduce manual processes by 70%",
-"Gain competitive advantages";
+"
 ],
 useCases: [
 "Custom business applications",
 "System integration projects",
 "Process automation",
 "Data management solutions",
-"Customer-facing applications";
+"
 ],
 targetAudience: [
 "Business owners",
 "Product managers",
 "Technology leaders",
 "Operations managers",
-"Digital transformation teams";
+"
 ],
 tags: ["Software Development", "Custom Solutions", "System Integration", "API Development", "Custom Applications"],
 estimatedDelivery: "8-16 weeks",
@@ -554,7 +554,7 @@ customizationLevel: "Fully custom software solutions and integrations",
 serviceLevel: "Comprehensive development and ongoing support",
 },
 
-// IT Project Management & Implementation Services;
+/
 {
 id: "it-project-management-implementation-services",
 title: "IT Project Management & Implementation Services - Successful Project Delivery",
@@ -573,28 +573,28 @@ features: [
 "Change management",
 "Project documentation",
 "Performance monitoring",
-"Post-implementation support";
+"
 ],
 benefits: [
 "Ensure project success by 90%",
 "Reduce project risks by 70%",
 "Deliver projects on time and budget",
 "Improve stakeholder satisfaction",
-"Enable smooth project transitions";
+"
 ],
 useCases: [
 "Technology implementation projects",
 "System migration projects",
 "Infrastructure deployment",
 "Software implementation",
-"Digital transformation projects";
+"
 ],
 targetAudience: [
 "Project managers",
 "IT directors",
 "Business executives",
 "Technology leaders",
-"Implementation teams";
+"
 ],
 tags: ["Project Management", "Implementation", "Risk Management", "Change Management", "Project Delivery"],
 estimatedDelivery: "Project-based",
@@ -619,7 +619,7 @@ customizationLevel: "Custom support workflows and knowledge bases",
 serviceLevel: "24/7 technical support and monitoring",
 },
 
-// Software Development & Custom Solutions;
+/
 {
 id: "software-development-custom-solutions",
 title: "Software Development & Custom Solutions - Tailored Technology Solutions",
@@ -638,28 +638,28 @@ features: [
 "Deployment and maintenance",
 "Performance optimization",
 "Security implementation",
-"Ongoing support and updates";
+"
 ],
 benefits: [
 "Create tailored business solutions",
 "Improve operational efficiency by 50%",
 "Enable new business capabilities",
 "Reduce manual processes by 70%",
-"Gain competitive advantages";
+"
 ],
 useCases: [
 "Custom business applications",
 "System integration projects",
 "Process automation",
 "Data management solutions",
-"Customer-facing applications";
+"
 ],
 targetAudience: [
 "Business owners",
 "Product managers",
 "Technology leaders",
 "Operations managers",
-"Digital transformation teams";
+"
 ],
 tags: ["Software Development", "Custom Solutions", "System Integration", "API Development", "Custom Applications"],
 estimatedDelivery: "8-16 weeks",
@@ -684,7 +684,7 @@ customizationLevel: "Fully custom software solutions and integrations",
 serviceLevel: "Comprehensive development and ongoing support",
 },
 
-// IT Project Management & Implementation Services;
+/
 {
 id: "it-project-management-implementation-services",
 title: "IT Project Management & Implementation Services - Successful Project Delivery",
@@ -703,28 +703,28 @@ features: [
 "Change management",
 "Project documentation",
 "Performance monitoring",
-"Post-implementation support";
+"
 ],
 benefits: [
 "Ensure project success by 90%",
 "Reduce project risks by 70%",
 "Deliver projects on time and budget",
 "Improve stakeholder satisfaction",
-"Enable smooth project transitions";
+"
 ],
 useCases: [
 "Technology implementation projects",
 "System migration projects",
 "Infrastructure deployment",
 "Software implementation",
-"Digital transformation projects";
+"
 ],
 targetAudience: [
 "Project managers",
 "IT directors",
 "Business executives",
 "Technology leaders",
-"Implementation teams";
+"
 ],
 tags: ["Project Management", "Implementation", "Risk Management", "Change Management", "Project Delivery"],
 estimatedDelivery: "Project-based",
@@ -760,12 +760,12 @@ useCases: [
 "Performance optimization",
 "Security automation",
 "Capacity planning",
-"Disaster recovery";
+"
 ],
 compliance: ["ISO 27001", "SOC 2", "NIST", "Industry standards"],
 scalability: "Unlimited network devices",
 support: "Network automation expert support",
-certifications: ["Cisco", "Juniper", "VMware", "Network Automation"];
+certifications: [["Cisco", "Juniper", "VMware", "Network Automation"];]
 },
 {
 id: 7; name: "Digital Workplace Platform",
@@ -783,7 +783,7 @@ features: [
 "Employee engagement",
 "Performance analytics",
 "Security controls",
-"Mobile access";
+"
 ],
 benefits: [
 "Enhanced productivity",
@@ -791,7 +791,7 @@ benefits: [
 "Cost reduction",
 "Employee satisfaction",
 "Remote work enablement",
-"Digital transformation";
+"
 ],
 targetAudience: [
 "Enterprise companies",
@@ -799,7 +799,7 @@ targetAudience: [
 "Government agencies",
 "Educational institutions",
 "Healthcare organizations",
-"Financial institutions";
+"
 ],
 tags: ["Digital Workplace", "Collaboration", "Remote Work", "Productivity", "Digital Transformation", "Employee Experience"],
 contactInfo: {,
@@ -821,12 +821,12 @@ useCases: [
 "Document management",
 "Workflow automation",
 "Employee engagement",
-"Digital transformation";
+"
 ],
 compliance: ["GDPR", "CCPA", "SOC 2", "ISO 27001", "HIPAA"],
 scalability: "Unlimited users",
 support: "Digital workplace expert support",
-certifications: ["Microsoft 365", "Google Workspace", "Change Management", "Digital Transformation"];
+certifications: [["Microsoft 365", "Google Workspace", "Change Management", "Digital Transformation"];]
 },
 {
 id: 8; name: "API Management Platform",
@@ -844,7 +844,7 @@ features: [
 "Developer portal",
 "API versioning",
 "Documentation generation",
-"Performance optimization";
+"
 ],
 benefits: [
 "Faster API development",
@@ -852,7 +852,7 @@ benefits: [
 "Better developer experience",
 "Improved performance",
 "Cost optimization",
-"API governance";
+"
 ],
 targetAudience: [
 "Software companies",
@@ -860,7 +860,7 @@ targetAudience: [
 "Healthcare organizations",
 "E-commerce companies",
 "Government agencies",
-"Startups";
+"
 ],
 tags: ["API Management", "Integration", "Security", "Developer Experience", "Analytics", "Performance"],
 contactInfo: {,
@@ -882,12 +882,12 @@ useCases: [
 "Developer onboarding",
 "API security",
 "Performance monitoring",
-"API governance";
+"
 ],
 compliance: ["OAuth 2.0", "OpenID Connect", "SOC 2", "ISO 27001"],
 scalability: "Unlimited APIs",
 support: "API management expert support",
-certifications: ["API Management", "Security", "Cloud Platforms", "Integration"];
+certifications: [["API Management", "Security", "Cloud Platforms", "Integration"];]
 },
 {
 id: 9; name: "Intelligent Backup & Recovery",
@@ -905,7 +905,7 @@ features: [
 "Cloud integration",
 "Compliance reporting",
 "Performance optimization",
-"Security encryption";
+"
 ],
 benefits: [
 "Zero data loss guarantee",
@@ -913,7 +913,7 @@ benefits: [
 "Cost optimization",
 "Compliance ready",
 "Enhanced security",
-"Peace of mind";
+"
 ],
 targetAudience: [
 "All businesses",
@@ -921,7 +921,7 @@ targetAudience: [
 "Financial institutions",
 "Legal services",
 "Manufacturing companies",
-"Educational institutions";
+"
 ],
 tags: ["Backup & Recovery", "Disaster Recovery", "Data Protection", "AI", "Automation", "Compliance"],
 contactInfo: {,
@@ -943,12 +943,12 @@ useCases: [
 "Compliance requirements",
 "Cloud migration",
 "Data archiving",
-"Business continuity";
+"
 ],
 compliance: ["GDPR", "HIPAA", "SOC 2", "ISO 27001", "Industry standards"],
 scalability: "Unlimited data",
 support: "Backup expert support",
-certifications: ["Veeam", "VMware", "Cloud Platforms", "Data Protection"];
+certifications: [["Veeam", "VMware", "Cloud Platforms", "Data Protection"];]
 },
 {
 id: 10; name: "Performance Monitoring Platform",
@@ -965,7 +965,7 @@ features: [
 "Performance analytics",
 "Capacity planning",
 "Root cause analysis",
-"Performance optimization";
+"
 ],
 benefits: [
 "Proactive issue detection",
@@ -973,7 +973,7 @@ benefits: [
 "Better user experience",
 "Cost optimization",
 "Reduced downtime",
-"Data-driven decisions";
+"
 ],
 targetAudience: [
 "Software companies",
@@ -981,19 +981,19 @@ targetAudience: [
 "Financial institutions",
 "Healthcare organizations",
 "Government agencies",
-"Technology companies";
+"
 ],
 tags: ["Performance Monitoring", "APM", "Infrastructure", "User Experience", "Analytics", "Optimization"],
-technology: string[], integrations: string[];,
-compliance: string[], roi: string; competitors: string[];
+technology: string[], integrations: string[[];],
+compliance: string[], roi: string; competitors: string[[];]
 demoUrl?: string;
-caseStudies?: string[];
+caseStudies?: string[[];]
 websiteUrl?: string;,
-marketTrend: string; industryFocus: string[], scalability: string; customizationLevel: string; serviceLevel: string,
+marketTrend: string; industryFocus: string[], scalability: string; customizationLevel: string; serviceLevel: string;
 }
 
 export const COMPREHENSIVE_IT_SERVICES_2025: ComprehensiveITService[] = [
-// Cloud Infrastructure & Migration Services;
+/
 {,
 id: "cloud-infrastructure-migration-services",
 title: "Cloud Infrastructure & Migration Services - Seamless Cloud Transformation",
@@ -1013,28 +1013,28 @@ features: [
 "Disaster recovery and backup",
 "24/7 cloud infrastructure management",
 "Scalability planning and implementation",
-"Cloud governance and best practices";
+"
 ],
 benefits: [
 "Reduce infrastructure costs by 40%",
 "Improve system scalability by 300%",
 "Enhance disaster recovery capabilities",
 "Increase operational efficiency by 50%",
-"Enable global business expansion";
+"
 ],
 useCases: [
 "Legacy system modernization",
 "Business expansion and scaling",
 "Cost optimization initiatives",
 "Disaster recovery planning",
-"Global infrastructure deployment";
+"
 ],
 targetAudience: [
 "Enterprise IT leaders",
 "Technology directors",
 "Operations managers",
 "Business owners",
-"Digital transformation consultants";
+"
 ],
 tags: ["Cloud Computing", "Infrastructure", "Migration", "AWS", "Azure", "Google Cloud"],
 estimatedDelivery: "8-12 weeks",
@@ -1060,7 +1060,7 @@ customizationLevel: "Custom cloud solutions and migration strategies",
 serviceLevel: "24/7 managed cloud services",
 },
 
-// Cybersecurity & Information Security Services;
+/
 {
 id: "cybersecurity-information-security-services",
 title: "Cybersecurity & Information Security Services - Comprehensive Protection",
@@ -1079,28 +1079,28 @@ features: [
 "Compliance monitoring and reporting",
 "Penetration testing services",
 "Security architecture design",
-"24/7 security monitoring";
+"
 ],
 benefits: [
 "Reduce security incidents by 90%",
 "Improve threat detection by 95%",
 "Ensure regulatory compliance",
 "Protect sensitive business data",
-"Enhance customer trust and reputation";
+"
 ],
 useCases: [
 "Security framework implementation",
 "Compliance and audit support",
 "Incident response and recovery",
 "Security awareness programs",
-"Risk assessment and management";
+"
 ],
 targetAudience: [
 "Chief Information Security Officers",
 "Security managers",
 "Compliance officers",
 "IT directors",
-"Business owners";
+"
 ],
 tags: ["Cybersecurity", "Information Security", "Threat Detection", "Compliance", "Risk Management"],
 estimatedDelivery: "6-10 weeks",
@@ -1125,7 +1125,7 @@ customizationLevel: "Custom security frameworks and compliance solutions",
 serviceLevel: "24/7 security monitoring and response",
 },
 
-// DevOps & CI/CD Pipeline Services;
+/
 {
 id: "devops-cicd-pipeline-services",
 title: "DevOps & CI/CD Pipeline Services - Streamlined Development Operations",
@@ -1144,28 +1144,28 @@ features: [
 "Performance optimization",
 "Security integration",
 "Team training and enablement",
-"Ongoing support and maintenance";
+"
 ],
 benefits: [
 "Reduce deployment time by 80%",
 "Improve code quality by 60%",
 "Increase development velocity by 100%",
 "Reduce operational costs by 40%",
-"Enable faster time-to-market";
+"
 ],
 useCases: [
 "Software development optimization",
 "Release management automation",
 "Quality assurance improvement",
 "Development team enablement",
-"Infrastructure automation";
+"
 ],
 targetAudience: [
 "Development teams",
 "DevOps engineers",
 "IT operations managers",
 "Product managers",
-"Technology leaders";
+"
 ],
 tags: ["DevOps", "CI/CD", "Automation", "Infrastructure as Code", "Continuous Delivery"],
 estimatedDelivery: "6-8 weeks",
@@ -1190,7 +1190,7 @@ customizationLevel: "Custom DevOps workflows and automation rules",
 serviceLevel: "24/7 DevOps support and monitoring",
 },
 
-// Data Management & Analytics Services;
+/
 {
 id: "data-management-analytics-services",
 title: "Data Management & Analytics Services - Data-Driven Business Intelligence",
@@ -1209,28 +1209,28 @@ features: [
 "Data visualization and storytelling",
 "Real-time data processing",
 "Data security and privacy",
-"Ongoing data optimization";
+"
 ],
 benefits: [
 "Improve decision-making by 70%",
 "Increase operational efficiency by 45%",
 "Identify new business opportunities",
 "Reduce operational costs by 30%",
-"Enable data-driven culture";
+"
 ],
 useCases: [
 "Business intelligence implementation",
 "Data-driven decision making",
 "Operational optimization",
 "Customer insights and analytics",
-"Performance monitoring and reporting";
+"
 ],
 targetAudience: [
 "Data analysts",
 "Business intelligence managers",
 "Operations managers",
 "Marketing teams",
-"Executive leadership";
+"
 ],
 tags: ["Data Management", "Analytics", "Business Intelligence", "Data Visualization", "Predictive Analytics"],
 estimatedDelivery: "6-10 weeks",
@@ -1255,7 +1255,7 @@ customizationLevel: "Custom analytics solutions and reporting dashboards",
 serviceLevel: "24/7 data monitoring and support",
 },
 
-// Network Infrastructure & Management Services;
+/
 {
 id: "network-infrastructure-management-services",
 title: "Network Infrastructure & Management Services - Reliable Network Solutions",
@@ -1274,28 +1274,28 @@ features: [
 "Proactive maintenance",
 "Capacity planning",
 "Network documentation",
-"Ongoing support and optimization";
+"
 ],
 benefits: [
 "Improve network reliability by 95%",
 "Reduce network downtime by 80%",
 "Enhance network security",
 "Optimize network performance",
-"Reduce operational costs by 35%";
+"
 ],
 useCases: [
 "Network infrastructure design",
 "Security implementation",
 "Performance optimization",
 "Disaster recovery planning",
-"Network expansion and scaling";
+"
 ],
 targetAudience: [
 "Network administrators",
 "IT managers",
 "System administrators",
 "Business owners",
-"Technology consultants";
+"
 ],
 tags: ["Network Infrastructure", "Network Management", "Security", "Performance", "Monitoring"],
 estimatedDelivery: "4-8 weeks",
@@ -1320,7 +1320,7 @@ customizationLevel: "Custom network solutions and security configurations",
 serviceLevel: "24/7 network monitoring and support",
 },
 
-// IT Consulting & Strategic Planning Services;
+/
 {
 id: "it-consulting-strategic-planning-services",
 title: "IT Consulting & Strategic Planning Services - Technology Strategy Excellence",
@@ -1340,28 +1340,28 @@ features: [
 "Compliance and governance planning",
 "Change management strategies",
 "Performance measurement frameworks",
-"Ongoing strategic guidance";
+"
 ],
 benefits: [
 "Align technology with business goals",
 "Optimize IT investments by 40%",
 "Reduce technology risks",
 "Improve operational efficiency",
-"Enable strategic competitive advantages";
+"
 ],
 useCases: [
 "Technology strategy development",
 "Digital transformation planning",
 "IT investment optimization",
 "Vendor selection and management",
-"Technology risk assessment";
+"
 ],
 targetAudience: [
 "Chief Technology Officers",
 "IT directors",
 "Business executives",
 "Technology leaders",
-"Business owners";
+"
 ],
 tags: ["IT Consulting", "Strategic Planning", "Digital Transformation", "Technology Strategy", "IT Governance"],
 estimatedDelivery: "2-4 weeks",
@@ -1386,7 +1386,7 @@ customizationLevel: "Custom strategic plans and technology roadmaps",
 serviceLevel: "Flexible consulting engagement models",
 },
 
-// IT Support & Help Desk Services;
+/
 {
 id: "it-support-help-desk-services",
 title: "IT Support & Help Desk Services - Reliable Technical Support",
@@ -1405,28 +1405,28 @@ features: [
 "User training and education",
 "Performance reporting",
 "Escalation procedures",
-"Ongoing support optimization";
+"
 ],
 benefits: [
 "Improve user productivity by 60%",
 "Reduce IT support costs by 45%",
 "Enhance user satisfaction",
 "Minimize system downtime",
-"Enable self-service support";
+"
 ],
 useCases: [
 "Technical support and troubleshooting",
 "User training and education",
 "System maintenance and updates",
 "Performance monitoring",
-"Help desk optimization";
+"
 ],
 targetAudience: [
 "IT support managers",
 "Help desk teams",
 "Business users",
 "IT administrators",
-"Business owners";
+"
 ],
 tags: ["IT Support", "Help Desk", "Technical Support", "User Support", "Problem Resolution"],
 estimatedDelivery: "2-4 weeks",
@@ -1451,7 +1451,7 @@ customizationLevel: "Custom support workflows and knowledge bases",
 serviceLevel: "24/7 technical support and monitoring",
 },
 
-// Software Development & Custom Solutions;
+/
 {
 id: "software-development-custom-solutions",
 title: "Software Development & Custom Solutions - Tailored Technology Solutions",
@@ -1470,28 +1470,28 @@ features: [
 "Deployment and maintenance",
 "Performance optimization",
 "Security implementation",
-"Ongoing support and updates";
+"
 ],
 benefits: [
 "Create tailored business solutions",
 "Improve operational efficiency by 50%",
 "Enable new business capabilities",
 "Reduce manual processes by 70%",
-"Gain competitive advantages";
+"
 ],
 useCases: [
 "Custom business applications",
 "System integration projects",
 "Process automation",
 "Data management solutions",
-"Customer-facing applications";
+"
 ],
 targetAudience: [
 "Business owners",
 "Product managers",
 "Technology leaders",
 "Operations managers",
-"Digital transformation teams";
+"
 ],
 tags: ["Software Development", "Custom Solutions", "System Integration", "API Development", "Custom Applications"],
 estimatedDelivery: "8-16 weeks",
@@ -1516,7 +1516,7 @@ customizationLevel: "Fully custom software solutions and integrations",
 serviceLevel: "Comprehensive development and ongoing support",
 },
 
-// IT Project Management & Implementation Services;
+/
 {
 id: "it-project-management-implementation-services",
 title: "IT Project Management & Implementation Services - Successful Project Delivery",
@@ -1535,28 +1535,28 @@ features: [
 "Change management",
 "Project documentation",
 "Performance monitoring",
-"Post-implementation support";
+"
 ],
 benefits: [
 "Ensure project success by 90%",
 "Reduce project risks by 70%",
 "Deliver projects on time and budget",
 "Improve stakeholder satisfaction",
-"Enable smooth project transitions";
+"
 ],
 useCases: [
 "Technology implementation projects",
 "System migration projects",
 "Infrastructure deployment",
 "Software implementation",
-"Digital transformation projects";
+"
 ],
 targetAudience: [
 "Project managers",
 "IT directors",
 "Business executives",
 "Technology leaders",
-"Implementation teams";
+"
 ],
 tags: ["Project Management", "Implementation", "Risk Management", "Change Management", "Project Delivery"],
 estimatedDelivery: "Project-based",
@@ -1582,12 +1582,12 @@ serviceLevel: "Comprehensive project management and support",
 }
 ];
 
-export default COMPREHENSIVE_IT_SERVICES_2025;
+export export default COMPREHENSIVE_IT_SERVICES_2025;
 }
 ];
 
-export default COMPREHENSIVE_IT_SERVICES_2025;
+export export default COMPREHENSIVE_IT_SERVICES_2025;
 }
 ];
 
-export default COMPREHENSIVE_IT_SERVICES_2025;
+export export default COMPREHENSIVE_IT_SERVICES_2025;

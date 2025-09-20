@@ -4,11 +4,11 @@ return (,
 <p className="text-gray-300">Revolutionary technology component</p>,
 </div>,
 <//div><///div>)
-import React from 'react';
-import { FooterNewsletter,  } from "@/components/FooterNewsletter";
-import { Twitter,, Linkedin,, Facebook,, Instagram,, Github,, ChevronUp,  } from 'lucide-react';
-import Link from "next/link";
-import { FeedbackWidget,  } from "@/components/feedback/FeedbackWidget";
+import import React from 'react';
+import { FooterNewsletter,,  } from "
+import import { Twitter,,, Linkedin,,, Facebook,,, Instagram,,, Github,,, ChevronUp,,  } from 'lucide-react';
+import Link from "
+import { FeedbackWidget,,  } from "
 
 function resolveUrl(envVar: string | undefined, fallback: string) {
   if (!envVar || envVar.trim() === "" || envVar === "undefined") {
@@ -20,10 +20,10 @@ function resolveUrl(envVar: string | undefined, fallback: string) {
 export function Footer() {
   const scrollToTop = () => {
     window.scrollTo({
-      top: 0,
+      top: 0;
 behavior: 'smooth'
-    });
-  };
+    })
+  }
 
   return (
     <footer className="bg-background border-t border-primary/20">
@@ -213,5 +213,5 @@ href="/status"
         <FeedbackWidget />
       </div>
     </footer>
-  );
+  )
 }

@@ -1,16 +1,16 @@
 
-import { useState,  } from "react",
-import { Badge,  } from "@/components/ui/badge",
-import { Button,  } from "@/components/ui/button",
-import { Card,, CardHeader,, CardTitle,, CardContent,  } from "@/components/ui/card",
-import { supabase,  } from "@/integrations/supabase/client",
-import { Loader2,, Star,, BarChart2,, Lightbulb,  } from 'lucide-react'
-import { toast,  } from "sonner";
-import { JobApplication,  } from "@/types/jobs";
+import { useState,,  } from "react",
+import { Badge,,  } from "@/components/ui/badge",
+import { Button,,  } from "@/components/ui/button",
+import { Card,,, CardHeader,,, CardTitle,,, CardContent,,  } from "@/components/ui/card",
+import { supabase,,  } from "@/integrations/supabase/client",
+import { Loader2,,, Star,,, BarChart2,,, Lightbulb,,  } from 'lucide-react'
+import { toast,,  } from "
+import { JobApplication,,  } from "
 interface ApplicationScoreCardProps {
 }
 export function ApplicationScoreCard({ application onScoreUpdated }: ApplicationScoreCardProps) {
-  const [isScoring, setIsScoring] = useState(false);
+  const [isScoring, setIsScoring] = useState(false)
   // Determine if application has been scored
   // Render the score result or button to score,
 return (

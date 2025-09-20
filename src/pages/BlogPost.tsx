@@ -1,12 +1,12 @@
-import { ArrowLeft,, Calendar,, Clock,, ChevronLeft,, ChevronRight,, Share2,, Facebook,, Twitter,, Linkedin,  } from 'lucide-react'
+import { ArrowLeft,,, Calendar,,, Clock,,, ChevronLeft,,, ChevronRight,,, Share2,,, Facebook,,, Twitter,,, Linkedin,,  } from 'lucide-react'
 import type { BlogPost as BlogPostType } from "@/types/blog",
-import { Separator,  } from "@/components/ui/separator";
-import ReactMarkdown from 'react-markdown';
-import { logErrorToProduction,  } from '@/utils/productionLogger';
+import { Separator,,  } from "
+import import ReactMarkdown from 'react-markdown';
+import import { logErrorToProduction,,  } from '@/utils/productionLogger';
 // Importing the sample blog posts - in a real app you would fetch this from an API,
-import { BLOG_POSTS,  } from "@/data/blog-posts";
-import { useSkeletonTimeout,  } from '@/hooks/useSkeletonTimeout';
-import { fetchWithRetry,  } from '@/utils/fetchWithRetry';
+import { BLOG_POSTS,,  } from "
+import import { useSkeletonTimeout,,  } from '@/hooks/useSkeletonTimeout';
+import import { fetchWithRetry,,  } from '@/utils/fetchWithRetry';
 export default function BlogPost() {
 return (
     <>
@@ -218,7 +218,7 @@ outline"className=" border-zion-blue-light text-zion-slate-light hover:bg-zion-b
 }</div> </div>) "
 }<Button asChild > <Link href=" /blog"> <ChevronLeft className=" mr-2 h-4 w-4" /> All Articles </Link> </Button> </div> </div> </div> </div> </>)
 }'"import React from 'react'
-import { SEO,  } from '@/components / SEO'
+import { SEO,,  } from '@/components / SEO'
 export default function Page() {
     ],
 }
@@ -231,12 +231,12 @@ month: 'long'
 }
   const getCategoryIcon = (category: string) => {
     const categoryIcons: { [key: string]: any } = {,
-ai: Brain,
-quantum: Cpu,
-security: Shield,
-cloud: Cloud,
-business: TrendingUp,
-iot: Network,
+ai: Brain;
+quantum: Cpu;
+security: Shield;
+cloud: Cloud;
+business: TrendingUp;
+iot: Network;
 emerging: Zap;
 }
     return categoryIcons[category] |BookOpen,

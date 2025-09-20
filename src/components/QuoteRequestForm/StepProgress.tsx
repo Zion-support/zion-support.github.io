@@ -1,8 +1,8 @@
-import { QuoteRequestSteps,  } from '../QuoteRequestForm'
-import { CheckIcon,  } from 'lucide-react'
-import { cn,  } from '@/lib/utils'
+import { QuoteRequestSteps,,  } from '../QuoteRequestForm'
+import { CheckIcon,,  } from 'lucide-react'
+import { cn,,  } from '@/lib/utils'
 interface StepProgressProps {
-  currentStep: QuoteRequestSteps,
+  currentStep: QuoteRequestSteps;
 export function StepProgress({ currentStep }: StepProgressProps) {
   const steps: { id: QuoteRequestSteps; label: string }[] = [
     { id: 'service', label: 'Service' },

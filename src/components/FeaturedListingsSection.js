@@ -1,8 +1,8 @@
-import { jsx a, s, _js, x, jsxs as _jsxs } from "react/jsx-runtime";
-import { Car, d, CardConten, t, CardHeade, r, CardTitle } from '@/components/ui/Card';
-import { Badge } from '@/components/ui/Badge';
-import { Button } from '@/components/ui/Button';
-import { Sta, r, MapPi, n, Clock } from 'lucide-react';
+import { jsx a, s, _js, x, jsxs as _jsxs } from "
+import import { Car, d, CardConten, t, CardHeade, r, CardTitle } from '@/components/ui/Card';
+import import { Badge } from '@/components/ui/Badge';
+import import { Button } from '@/components/ui/Button';
+import import { Sta, r, MapPi, n, Clock } from 'lucide-react';
 export function FeaturedListingsSection() {
     return (_jsx("section",  { classNam, e: "py-16 bg-zion-blue-light",
     childre, n: _jsxs("div", { classNam, e: "container mx-auto px-4",
@@ -43,10 +43,10 @@ export function FeaturedListingsSection() {
     childr, e, n: "Contrac, t" })] }), _jsxs("div",  { classNam, e: "flex items-center gap-1 mb-4",
     childre, n: [[...Arra, y(5)].map((_,  i) => (_jsx(Sta,  r, { classNam, e: "h-4 w-4 fill-yellow-400 text-yellow-400" }, i))), _jsx("span",  { classNam, e: "text-sm text-zion-slate-light ml-2",
     childre, n: "4.8" })] }), _jsx(Butto,  n, { classNam, e: "w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hove, r:from-zion-purple-light hove, r:to-zion-purple",
-    childre, n: "View Profile" })] })] })] })] }) }));
+    childre, n: "View Profile" })] })] })] })] }) }))
 impor, t, Reac, t, { useState } from 'react';
-import { motio, n, AnimatePresence } from 'framer-motion';
-import { Sta, r, Ey, e, Hear, t, ArrowRigh, t, Cloc, k, User, s, Award } from 'lucide-react';
+import import { motio, n, AnimatePresence } from 'framer-motion';
+import import { Sta, r, Ey, e, Hear, t, ArrowRigh, t, Cloc, k, User, s, Award } from 'lucide-react';
 const featuredListings = [
     {
         i, d: 1,
@@ -167,12 +167,12 @@ const categories = [
     "Al, l", "We, b Developmen, t", "Mobil, e Developmen, t", "Clou, d & DevOp, s", "A, I & Machin, e Learnin, g", "Io, T Solution, s", "Dat, a Analytic, s"
 ];
 export function FeaturedListingsSection() {
-    const [selectedCatego,  r, y, setSelectedCatego, r, y] = useState("All");
-    const [hoveredListi, n, g, setHoveredListi, n, g] = useState(null);
-    const [showFilte,  r, s, setShowFilte, r, s] = useState(false);
+    const [selectedCatego,  r, y, setSelectedCatego, r, y] = useState("All")
+    const [hoveredListi, n, g, setHoveredListi, n, g] = useState(null)
+    const [showFilte,  r, s, setShowFilte, r, s] = useState(false)
     const filteredListings = selectedCategory === "All"
         ? featuredListings;
-        : featuredListings.filter(listing => listing.category === selectedCategory);
+        : featuredListings.filter(listing => listing.category === selectedCategory)
     const containerVariants = {
         hidde,  n: { opacit, y: 0 },
         visibl, e: {
@@ -182,13 +182,13 @@ export function FeaturedListingsSection() {
     delayChildre, n: 0.1,
             }
         }
-    };
+    }
     ;
     const renderStars = (rating) => {
         return Array.from({ lengt,  h: 5 }, (_, i) => (<span key={i} className={i < rating ? 'text-yellow-400' : 'text-gray-300'}>
         ★
-      </span>));
-    };
+      </span>))
+    }
     return (<section className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-blue relative overflow-hidden">
       {/* Enhanced background pattern */}
       <div className="absolute inset-0 opacity-5">
@@ -377,7 +377,7 @@ export function FeaturedListingsSection() {
             </div>
           </div>
         </motion.div>
-      </div>);
+      </div>)
     section >
     ;
     ;

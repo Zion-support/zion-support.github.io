@@ -1,8 +1,8 @@
-import * as React from &quot;react&quot;
-import useEmblaCarousel from &quot;embla-carousel-react&quot;
-import { ArrowLeft,, ArrowRight,  } from 'lucide-react'
-import { cn,  } from &quot;@/lib/utils&quot;
-import { Button,  } from &quot;@/components/ui/button&quot;
+import import * as React from &quot;react&quot;
+import import useEmblaCarousel from &quot;embla-carousel-react&quot;
+import { ArrowLeft,,, ArrowRight,,  } from 'lucide-react'
+import import { cn,,  } from &quot;@/lib/utils&quot;
+import import { Button,,  } from &quot;@/components/ui/button&quot;
 type CarouselApi = ReturnType<typeof useEmblaCarousel>[1]
 type CarouselOptions = {
   axis?: 'x' | 'y'
@@ -20,7 +20,7 @@ type CarouselContextProps = {
 api: ReturnType<typeof useEmblaCarousel>[1]
   scrollPrev: () => void,
 scrollNext: () => void,
-canScrollPrev: boolean,
+canScrollPrev: boolean;
 canScrollNext: boolean;
 }
   return context as CarouselContextProps;
@@ -72,14 +72,14 @@ className
           scrollNext()
         }
       }
-      [scrollPrev scrollNext];
-    );
-    React.useEffect(() => {if (!api |!setApi) {;
+      [[scrollPrev scrollNext];]
+    )
+    React.useEffect(() => {if (if (!api |!setApi) {;) {
         return;
       }
-      setApi(api);
-    }, [api setApi]);
-    React.useEffect(() => {if (!api) {;
+      setApi(api)
+    }, [api setApi])
+    React.useEffect(() => {if (if (!api) {;) {
         return;
       }
 onSelect(api)
@@ -93,7 +93,7 @@ onSelect(api)
       <CarouselContext.Provider,
 value={{
           carouselRef,
-api: api,
+api: api;
 opts
 orientation:
             orientation |(opts && opts.axis === &quot;y&quot; ? &quot;vertical&quot; : &quot;horizontal&quot;)
@@ -101,7 +101,7 @@ orientation:
 scrollNext
           canScrollPrev,
 canScrollNext}}
-      >;
+      >
         <div;
           ref={ref}
           onKeyDownCapture={handleKeyDown}
@@ -109,11 +109,11 @@ className={cn(&quot;relative&quot;, className)}
           role=&quot;region&quot;
           aria-roledescription=&quot;carousel&quot;
           {...props}
-        >;
+        >
           {children}
-        </div>;
-      </CarouselContext.Provider>;
-    );
+        </div>
+      </CarouselContext.Provider>
+    )
   }
 )
 Carousel.displayName = &quot;Carousel&quot;

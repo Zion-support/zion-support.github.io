@@ -81,35 +81,35 @@ const RealTimeCollaboration: React.FC = () => {
         id: '1',
         text: 'Welcome to the AI Solutions workspace! Let\'s collaborate on our latest project.',
         user: mockUsers[0],
-        timestamp: new Date(Date.now() - 3600000),
+        timestamp: new Date(Date.now() - 3600000)
         type: 'system'
       },
       {
         id: '2',
         text: 'I\'ve completed the initial API design. Here\'s the documentation:',
         user: mockUsers[0],
-        timestamp: new Date(Date.now() - 1800000),
+        timestamp: new Date(Date.now() - 1800000)
         type: 'message'
       },
       {
         id: '3',
         text: 'Great work John! I\'ll review the API docs and provide feedback.',
         user: mockUsers[1],
-        timestamp: new Date(Date.now() - 1200000),
+        timestamp: new Date(Date.now() - 1200000)
         type: 'message'
       },
       {
         id: '4',
         text: '```typescript\ninterface AIService {\n  process(data: any): Promise<AIResult>;\n  train(model: Model): Promise<void>;\n}\n```',
         user: mockUsers[0],
-        timestamp: new Date(Date.now() - 600000),
+        timestamp: new Date(Date.now() - 600000)
         type: 'code'
       },
       {
         id: '5',
         text: 'The UI mockups are ready for review. Should I share them here?',
         user: mockUsers[3],
-        timestamp: new Date(Date.now() - 300000),
+        timestamp: new Date(Date.now() - 300000)
         type: 'message'
       }
     ];
@@ -121,7 +121,7 @@ const RealTimeCollaboration: React.FC = () => {
         type: 'pdf',
         size: 2048000,
         uploadedBy: mockUsers[0],
-        uploadedAt: new Date(Date.now() - 1800000),
+        uploadedAt: new Date(Date.now() - 1800000)
         url: '#'
       },
       {
@@ -130,7 +130,7 @@ const RealTimeCollaboration: React.FC = () => {
         type: 'figma',
         size: 5120000,
         uploadedBy: mockUsers[3],
-        uploadedAt: new Date(Date.now() - 300000),
+        uploadedAt: new Date(Date.now() - 300000)
         url: '#'
       },
       {
@@ -139,7 +139,7 @@ const RealTimeCollaboration: React.FC = () => {
         type: 'markdown',
         size: 128000,
         uploadedBy: mockUsers[2],
-        uploadedAt: new Date(Date.now() - 900000),
+        uploadedAt: new Date(Date.now() - 900000)
         url: '#'
       }
     ];
@@ -178,10 +178,10 @@ const RealTimeCollaboration: React.FC = () => {
     if (!newMessage.trim()) return;
 
     const message: Message = {
-      id: Date.now().toString(),
+      id: Date.now().toString()
       text: newMessage,
       user: users[0], // Current user
-      timestamp: new Date(),
+      timestamp: new Date()
       type: 'message'
     };
 
@@ -201,10 +201,10 @@ const RealTimeCollaboration: React.FC = () => {
         'Perfect timing!'
       ];
       const response: Message = {
-        id: (Date.now() + 1).toString(),
+        id: (Date.now() + 1).toString()
         text: responses[Math.floor(Math.random() * responses.length)],
         user: users[Math.floor(Math.random() * (users.length - 1)) + 1],
-        timestamp: new Date(),
+        timestamp: new Date()
         type: 'message'
       };
       setMessages(prev => [...prev, response]);

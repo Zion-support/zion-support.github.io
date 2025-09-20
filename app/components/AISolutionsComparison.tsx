@@ -257,24 +257,24 @@ const AISolutionsComparison: React.FC = () => {
                 <tr>
                   <th className="px-6 py-4 text-left text-sm font-medium text-gray-900">Solution</th>
                   {comparisonMode === 'features' && (
-                    <>
+                    <React.Fragment>
                       <th className="px-6 py-4 text-left text-sm font-medium text-gray-900">Features</th>
                       <th className="px-6 py-4 text-left text-sm font-medium text-gray-900">Best For</th>
-                    </>
+                    </React.Fragment>
                   )}
                   {comparisonMode === 'pricing' && (
-                    <>
+                    <React.Fragment>
                       <th className="px-6 py-4 text-left text-sm font-medium text-gray-900">Monthly Cost</th>
                       <th className="px-6 py-4 text-left text-sm font-medium text-gray-900">Setup Cost</th>
                       <th className="px-6 py-4 text-left text-sm font-medium text-gray-900">Implementation</th>
-                    </>
+                    </React.Fragment>
                   )}
                   {comparisonMode === 'roi' && (
-                    <>
+                    <React.Fragment>
                       <th className="px-6 py-4 text-left text-sm font-medium text-gray-900">ROI Timeframe</th>
                       <th className="px-6 py-4 text-left text-sm font-medium text-gray-900">ROI Percentage</th>
                       <th className="px-6 py-4 text-left text-sm font-medium text-gray-900">Annual Savings</th>
-                    </>
+                    </React.Fragment>
                   )}
                 </tr>
               </thead>
@@ -289,7 +289,7 @@ const AISolutionsComparison: React.FC = () => {
                     </td>
                     
                     {comparisonMode === 'features' && (
-                      <>
+                      <React.Fragment>
                         <td className="px-6 py-4">
                           <ul className="text-sm text-gray-600 space-y-1">
                             {solution.features.slice(0, 3).map((feature, index) => (
@@ -317,11 +317,11 @@ const AISolutionsComparison: React.FC = () => {
                             )}
                           </div>
                         </td>
-                      </>
+                      </React.Fragment>
                     )}
                     
                     {comparisonMode === 'pricing' && (
-                      <>
+                      <React.Fragment>
                         <td className="px-6 py-4">
                           <span className="text-lg font-semibold text-gray-900">
                             {formatCurrency(solution.pricing.monthly)}
@@ -341,11 +341,11 @@ const AISolutionsComparison: React.FC = () => {
                             </div>
                           </div>
                         </td>
-                      </>
+                      </React.Fragment>
                     )}
                     
                     {comparisonMode === 'roi' && (
-                      <>
+                      <React.Fragment>
                         <td className="px-6 py-4">
                           <span className="text-lg font-semibold text-green-600">
                             {solution.roi.timeframe}
@@ -361,7 +361,7 @@ const AISolutionsComparison: React.FC = () => {
                             {formatCurrency(solution.roi.savings)}
                           </span>
                         </td>
-                      </>
+                      </React.Fragment>
                     )}
                   </tr>
                 ))}

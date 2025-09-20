@@ -11,7 +11,7 @@ export const BLOG_POSTS = [
             avatarUrl: '/avatars/sarah.jpg';
             bio: 'AI Research Lead at Zion Tech Group';
             title: 'AI Research Lead',
-        };
+        }
         publishedAt: '2024-01-15';
         publishedDate: '2024-01-15';
         tags: ['AI', 'Technology', 'Future'],
@@ -19,7 +19,7 @@ export const BLOG_POSTS = [
         readTime: 8;
         featuredImage: '/blog/ai-future.jpg';
         isFeatured: true,
-    };
+    }
     {
         id: '2';
         title: 'Building Scalable Web Applications';
@@ -32,7 +32,7 @@ export const BLOG_POSTS = [
             avatarUrl: '/avatars/michael.jpg';
             bio: 'Senior Software Engineer';
             title: 'Senior Software Engineer',
-        };
+        }
         publishedAt: '2024-01-10';
         publishedDate: '2024-01-10';
         tags: ['Web Development', 'Scalability', 'Architecture'],

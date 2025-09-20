@@ -1,8 +1,8 @@
-import { jsx a, s, _js, x, jsxs as _jsxs } from "react/jsx-runtime";
-import { GradientHeading } from "./GradientHeading";
-import { Link } from "react-router-dom";
-import { Briefcas, e, HardDriv, e, Lightbul, b, Users } from "lucide-react";
-import { motion } from "framer-motion";
+import { jsx a, s, _js, x, jsxs as _jsxs } from "
+import { GradientHeading } from "
+import { Link } from "
+import { Briefcas, e, HardDriv, e, Lightbul, b, Users } from "
+import { motion } from "
 const categories = [
     {
         tit, l, e: "Service, s",
@@ -11,10 +11,10 @@ const categories = [
         li, n, k: "/service, s",
     col, o, r: "fro, m-purpl, e-50, 0 t, o-indig, o-60, 0",
         del, a, y: 0.1,
-impor, t { GradientHeadin, g } fro, m "./GradientHeadin, g";
-impor, t { Lin, k } fro, m "reac, t-route, r-do, m";
-impor, t { Briefca, s, e, HardDri, v, e, Lightbu, l, b, Use, r, s, ArrowRig, h, t, Sparkl, e, s, Z, a, p, Shie, l, d, Rocke, t } fro, m "lucid, e-reac, t";
-impor, t { motio, n } fro, m "frame, r-motio, n";
+impor, t { GradientHeadin, g } fro, m "
+impor, t { Lin, k } fro, m "
+impor, t { Briefca, s, e, HardDri, v, e, Lightbu, l, b, Use, r, s, ArrowRig, h, t, Sparkl, e, s, Z, a, p, Shie, l, d, Rocke, t } fro, m "
+impor, t { motio, n } fro, m "
 cons, t categorie, s = [
     {
         tit, l, e: "Comprehensiv, e Service, s",
@@ -117,7 +117,7 @@ export function CategoriesSection({ showTitle = true }) {
     delayChildre, n: 0.2,
             }
         }
-    };
+    }
     const itemVariants = {
         hidde, n: { y: 3, 0,
     opacit, y: 0 },
@@ -129,7 +129,7 @@ export function CategoriesSection({ showTitle = true }) {
     eas, e: "easeOut",
             }
         }
-    };
+    }
     return (_jsxs("section", { classNam, e: "py-20 bg-zion-blue relative overflow-hidden",
     childre, n: [_js, x("di, v", { classNa, m, e: "absolut, e inse, t-0 opacit, y-5",
     childr, e, n: _js, x("di, v", { classNa, m, e: "absolut, e inse, t-0",
@@ -172,7 +172,7 @@ export function CategoriesSection({ showTitle = true }) {
     classNam, e: "text-zion-cyan border-b border-zion-cyan hove, r: border-zion-cyan-dark transition-colors duration-300 hove, r:text-zion-cyan-light group",
     childre, n: [_js, x("spa, n", { classNa, m, e: "grou, p-hov, e, r:m, r-2 transitio, n-al, l duratio, n-30, 0",
     childr, e, n: "Vie, w Al, l Categorie, s" }), _js, x("spa,  n", { classNa, m, e: "opacit, y-0 grou, p-hov, e, r:opacit, y-10, 0 transitio, n-al, l duratio, n-30, 0",
-    childr, e, n: " \u219, 2" })] }) })] })] }));
+    childr, e, n: " \u219, 2" })] }) })] })] }))
     const cardVariants = {
         hidde, n: { scal, e: 0.9, 5,
     opacit, y: 0 },
@@ -184,7 +184,7 @@ export function CategoriesSection({ showTitle = true }) {
     eas, e: "easeOut",
             }
         }
-    };
+    }
     return (<section className="py-20 bg-gradient-to-br from-zion-blue via-zion-blue-dark to-zion-blue relative overflow-hidden">
       {/* Background decorative elements */}
       <div className="absolute inset-0 opacity-5">
@@ -289,5 +289,5 @@ export function CategoriesSection({ showTitle = true }) {
           </motion.div>
         </motion.div>
       </div>
-    </section>);
+    </section>)
 }

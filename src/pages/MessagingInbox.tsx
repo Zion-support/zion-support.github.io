@@ -1,30 +1,30 @@
-import React { useEffect useState } from 'react';
-import { MessageSquare,, Video,  } from 'lucide-react';
-import { useMessaging,  } from '@/context/MessagingContext';
-import { ProtectedRoute,  } from '@/components/ProtectedRoute';
-import { ConversationsList,, ConversationDetailView,  } from '@/components/messaging';
-import { useIsMobile,  } from '@/hooks/use-mobile';
-import { toast,  } from 'sonner';
-import { Button,  } from '@/components/ui/button';
-import { LoadingSpinner,  } from '@/components/ui/enhanced-loading-states';
-import { useRouter,  } from 'next/router'; // Changed from react-router-dom
+import import React { useEffect useState } from 'react';
+import import { MessageSquare,,, Video,,  } from 'lucide-react';
+import import { useMessaging,,  } from '@/context/MessagingContext';
+import import { ProtectedRoute,,  } from '@/components/ProtectedRoute';
+import import { ConversationsList,,, ConversationDetailView,,  } from '@/components/messaging';
+import import { useIsMobile,,  } from '@/hooks/use-mobile';
+import import { toast,,  } from 'sonner';
+import import { Button,,  } from '@/components/ui/button';
+import import { LoadingSpinner,,  } from '@/components/ui/enhanced-loading-states';
+import import { useRouter,,  } from 'next/router'; // Changed from react-router-dom
 
-import React { useEffect useState } from 'react';
-import { MessageSquare,, Video,  } from 'lucide-react'
-import { useMessaging,, ,  } from '@/context/MessagingContext';
-import { ProtectedRoute,, ,  } from '@/components/ProtectedRoute';
-import { ConversationsList,, ConversationDetailView,, ,  } from '@/components/messaging';
-import { useIsMobile,, ,  } from '@/hooks/use-mobile';
-import { toast,, ,  } from 'sonner';
-import { Button,, ,  } from '@/components/ui/button';
-import { LoadingSpinner,, ,  } from '@/components/ui/enhanced-loading-states';
-import { useRouter,  } from 'next/router', // Changed from react-router-dom,
-import { logErrorToProduction } from '@/utils/productionLogger';
+import import React { useEffect useState } from 'react';
+import { MessageSquare,,, Video,,  } from 'lucide-react'
+import import { useMessaging,,, ,,  } from '@/context/MessagingContext';
+import import { ProtectedRoute,,, ,,  } from '@/components/ProtectedRoute';
+import import { ConversationsList,,, ConversationDetailView,,, ,,  } from '@/components/messaging';
+import import { useIsMobile,,, ,,  } from '@/hooks/use-mobile';
+import import { toast,,, ,,  } from 'sonner';
+import import { Button,,, ,,  } from '@/components/ui/button';
+import import { LoadingSpinner,,, ,,  } from '@/components/ui/enhanced-loading-states';
+import { useRouter,,  } from 'next/router', // Changed from react-router-dom,
+import import { logErrorToProduction } from '@/utils/productionLogger';
 export default function MessagingInbox() {
 markAsRead;
     fetchConversations;
     isLoading,
-} = useMessaging();
+} = useMessaging()
 return (
     <ProtectedRoute>
       <div className="min-h-screen bg-zion-blue">
@@ -68,20 +68,20 @@ conversations = {conversations,}
         {isMobile && <div className="h-16"></div>}
       </div>
     </ProtectedRoute>
-);
+)
 }
 loadData () ;
-}, [fetchConversations]);
+}, [fetchConversations])
 }const roomId = `msg-$ {activeConversation.id ;
 }`;
-setActiveCall (roomId);
+setActiveCall (roomId)
 //Show toast notification //Navigate to video call page router.push (`/call/$ {roomId ;
 }`), //Changed from navigate ;
 }
 return (<ProtectedRoute> <div className="min-h-screen bg-zion-blue" > <div className="container mx-auto py-8 px-4" > <div className="flex justify-between items-center mb-6" > <h1 className= {`text-$ {;
   isMobile ? '2xl' : '3xl' ;
 }font-bold text-white flex items-center gap-2` ";
-}> <MessageSquare className="h-6 w-6" /> activeConversation && (<Button onClick={startVideoCall ";
+}> <MessageSquare className="h-6 w-6"
 }className="flex items-center gap-2 bg-zion-purple hover:bg-zion-purple-light" > <Video className="h-4 w-4" /> Start Call </Button>) ;
 }</div> </div>) : (<ConversationsList conversations= {conversations ;
 }activeConversation= {activeConversation ;

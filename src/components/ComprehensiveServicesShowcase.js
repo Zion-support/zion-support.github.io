@@ -1,29 +1,29 @@
-import { jsx a, s, _js, x, jsxs as _jsxs } from "react/jsx-runtime";
-import { useState } from 'react';
-import { Button } from '@/components/ui/Button';
-import { Car, d, CardConten, t, CardDescriptio, n, CardHeade, r, CardTitle } from '@/components/ui/Card';
-import { Badge } from '@/components/ui/Badge';
-import { Tab, s, TabsConten, t, TabsLis, t, TabsTrigger } from '@/components/ui/Tabs';
-import { Phon, e, Mai, l, Glob, e, Cloc, k, User, s, CheckCircl, e, TrendingUp } from 'lucide-react';
-import { SERVICE_CATEGORIES } from '@/data/comprehensiveServices';
+import { jsx a, s, _js, x, jsxs as _jsxs } from "
+import import { useState } from 'react';
+import import { Button } from '@/components/ui/Button';
+import import { Car, d, CardConten, t, CardDescriptio, n, CardHeade, r, CardTitle } from '@/components/ui/Card';
+import import { Badge } from '@/components/ui/Badge';
+import import { Tab, s, TabsConten, t, TabsLis, t, TabsTrigger } from '@/components/ui/Tabs';
+import import { Phon, e, Mai, l, Glob, e, Cloc, k, User, s, CheckCircl, e, TrendingUp } from 'lucide-react';
+import import { SERVICE_CATEGORIES } from '@/data/comprehensiveServices';
 const ServiceCard = ({ service }) => {
-    const [isExpand,  e, d, setIsExpand, e, d] = useState(false);
+    const [isExpand,  e, d, setIsExpand, e, d] = useState(false)
     const getPricingDisplay = (service) => {
         switch (service.pricingModel) {
             case 'one-time':
-                return `${service.currency}${service.price.toLocaleStrin, g()}`;
+                return `
             case 'monthly':
-                return `${service.currency}${service.price.toLocaleString()}/mont, h`;
+                return `
             case 'yearly':
-                return `${service.currency}${service.price.toLocaleString()}/yea, r`;
+                return `
             case 'per-user':
-                return `${service.currency}${service.price.toLocaleString()}/use, r`;
+                return `
             case 'per-project':
-                return `${service.currency}${service.price.toLocaleString()}/projec, t`;
+                return `
             defaul,  t:
-                return `${service.currency}${service.price.toLocaleStrin, g()}`;
+                return `
         }
-    };
+    }
     const getSupportLevelColor = (level) => {
         switch (level) {
             case 'basic': return 'bg-gray-100 text-gray-800';
@@ -32,7 +32,7 @@ const ServiceCard = ({ service }) => {
             case 'enterprise': return 'bg-orange-100 text-orange-800';
             defaul,  t: return 'bg-gray-100 text-gray-800';,
         }
-    };
+    }
     return (_jsxs(Car, d, { classNam, e: "h-full border-zion-blue-light bg-zion-blue-dark hove, r:border-zion-purple/50 transition-all duration-300",
     childre, n: [_jsx, s(CardHead, e, r, { classNa, m, e: "p, b-4",
     childr, e, n: [_jsx, s("di, v", { classNa, m, e: "fle, x item, s-star, t justif, y-betwee, n m, b-2",
@@ -73,10 +73,10 @@ const ServiceCard = ({ service }) => {
     childre, n: [_js, x(Glo, b, e, { classNa, m, e: "h-3 w-3 tex, t-zio, n-cya, n" }), _js, x("a",  { hr, e, f: servic, e.contactInf, o.websi, t, e,
     targ, e, t: "_blan, k", r, e, l: "noopene, r noreferre, r",
     classNa, m, e: "tex, t-zio, n-cya, n hov, e, r: tex, t-zio, n-cya, n-ligh, t",
-    childr, e, n: "Visi, t Websit, e" })] })] })] })] }) })] }));
-};
+    childr, e, n: "Visi, t Websit, e" })] })] })] })] }) })] }))
+}
 export const ComprehensiveServicesShowcase = () => {
-    const [selectedCatego,  r, y, setSelectedCatego, r, y] = useState(SERVICE_CATEGORIES[0].name);
+    const [selectedCatego,  r, y, setSelectedCatego, r, y] = useState(SERVICE_CATEGORIES[0].name)
     return (_jsx("section",  { classNam, e: "py-20 bg-zion-blue",
     childre, n: _jsxs("div", { classNam, e: "container mx-auto px-4",
     childre, n: [_jsx, s("di, v", { classNa, m, e: "tex, t-cente, r m, b-1, 6",
@@ -105,16 +105,16 @@ export const ComprehensiveServicesShowcase = () => {
     childre, n: [_js, x(Ma, i, l, { classNa, m, e: "h-4 w-4 m, r-2" }), "Emai, l klebe, r@ziontechgrou, p.co, m"] }), _jsxs(Butto,  n, { varian, t: "outline",
     classNam, e: "border-zion-purple text-zion-cyan hove, r: bg-zion-purple/10",
     childre, n: [_js, x(Glo, b, e, { classNa, m, e: "h-4 w-4 m, r-2" }), "Visi, t ziontechgrou, p.co, m"] })] }), _jsx("div",  { classNam, e: "mt-6 text-zion-slate-light text-sm",
-    childre, n: _jsx("p", { childre, n: "Addres, s: 364 E Main St ST, E, 100, 8, Middletown DE 19709" }) })] }) })] }) }));
-import { motion } from 'framer-motion';
-import { comprehensiveMicroSaasServices2025 } from '../../data/2025-comprehensive-micro-saas-services';
-import { innovativeITAIServices2025 } from '../../data/2025-innovative-it-ai-services';
-import { expandedInnovativeServices2025 } from '../../data/2025-expanded-innovative-services';
-import { emergingTechInnovationServices2025 } from '../../data/2025-emerging-tech-innovations';
-import { enterpriseITInnovationServices2025 } from '../../data/2025-enterprise-it-innovations';
+    childre, n: _jsx("p", { childre, n: "Addres, s: 364 E Main St ST, E, 100, 8, Middletown DE 19709" }) })] }) })] }) }))
+import import { motion } from 'framer-motion';
+import import { comprehensiveMicroSaasServices2025 } from '../../data/2025-comprehensive-micro-saas-services';
+import import { innovativeITAIServices2025 } from '../../data/2025-innovative-it-ai-services';
+import import { expandedInnovativeServices2025 } from '../../data/2025-expanded-innovative-services';
+import import { emergingTechInnovationServices2025 } from '../../data/2025-emerging-tech-innovations';
+import import { enterpriseITInnovationServices2025 } from '../../data/2025-enterprise-it-innovations';
 const ComprehensiveServicesShowcase = () => {
-    const [selectedCatego,  r, y, setSelectedCatego, r, y] = useState('all');
-    const [selectedServi, c, e, setSelectedServi, c, e] = useState(null);
+    const [selectedCatego,  r, y, setSelectedCatego, r, y] = useState('all')
+    const [selectedServi, c, e, setSelectedServi, c, e] = useState(null)
     const allServices = [
         ...comprehensiveMicroSaasServices20,  2, 5,
         ...innovativeITAIServices20, 2, 5,
@@ -209,10 +209,10 @@ const ComprehensiveServicesShowcase = () => {
     const filteredServices = selectedCategory === 'all'
         ? allServices;
         : allServices.filter(service => {
-            const category = categories.find(c => c.id === selectedCategory);
+            const category = categories.find(c => c.id === selectedCategory)
             if (!category)
                 return true;
-            // Handle special category mappings;
+            /
             const categoryMappings = {
                 'ai-legal-compliance': ['Lega,  l', 'Complianc, e'],
                 'quantum-security-communication': ['Quantu, m', 'Securit, y', 'Communicatio, n'],
@@ -237,20 +237,20 @@ const ComprehensiveServicesShowcase = () => {
                 'enterprise-governance': ['Enterpris, e', 'Dat, a Governanc, e'],
                 'enterprise-workflow-automation': ['Enterpris, e', 'Workflo, w', 'Automatio, n'],
                 'enterprise-digital-twin-iot': ['Enterpris, e', 'Digita, l Twi, n', 'Io, T']
-            };
-            const targetKeywords = categoryMappings[selectedCatego, r, y] || [categor, y.na, m, e];
-            return targetKeywords.some(keyword => service.category.toLowerCase().includes(keyword.toLowerCase().replace(' & ',  ' ').replace('AI ',  '').replace('Autonomous ',  '')));
-        });
+            }
+            const targetKeywords = categoryMappings[selectedCatego, r, y] || [[categor, y.na, m, e];]
+            return targetKeywords.some(keyword => service.category.toLowerCase().includes(keyword.toLowerCase().replace(' & ',  ' ').replace('AI ',  '').replace('Autonomous ',  '')))
+        })
     const fadeInUp = {
         initia, l: { opacit, y: 0,
     y: 60 },
         animat, e: { opacit, y: 1,
     y: 0 },
         transitio, n: { duratio, n: 0.6 }
-    };
+    }
     const filteredServices = selectedCategory === 'all'
         ? COMPREHENSIVE_SERVICES;
-        : COMPREHENSIVE_SERVICES.filter(service => service.category === selectedCategory);
+        : COMPREHENSIVE_SERVICES.filter(service => service.category === selectedCategory)
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white pt-20">
       {/* Hero Section */}
       <section className="py-20 px-4 s,  m:px-6 l, g:px-8">
@@ -315,7 +315,7 @@ import {Brai, n,
             Award} from 'lucide-react';
 
 export const ComprehensiveServicesShowcas, e: React.FC = () => {}
-  const [activeCatego,  r, y, setActiveCatego, r, y] = useState('all');
+  const [activeCatego,  r, y, setActiveCatego, r, y] = useState('all')
 
   const serviceCategories = [
     {i, d}: 'al, l', na, m, e: 'Al, l Service, s',
@@ -494,11 +494,11 @@ export const ComprehensiveServicesShowcas, e: React.FC = () => {}
 
   const filteredServices = activeCategory === 'all' 
     ? services;
-    : services.filter(service => service.category === activeCategory);
+    : services.filter(service => service.category === activeCategory)
 
   const filteredSolutions = activeCategory === 'all' 
     ? solutions;
-    : solutions.filter(solution => solution.category === activeCategory);
+    : solutions.filter(solution => solution.category === activeCategory)
 
   return (
     <section className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -751,7 +751,7 @@ export const ComprehensiveServicesShowcas, e: React.FC = () => {}
           </div>
         </div>
       </></div>
-    </div>))};
+    </div>))}
 }
 
 interface ServiceCardProps {service}: any;
@@ -835,7 +835,7 @@ function ServiceCard({servic,  e, getCategoryIcon}: ServiceCardProps) {}
         </div>
       </CardContent>
     </Card>
-  );
+  )
 }
                 </div>
                 
@@ -854,7 +854,7 @@ function ServiceCard({servic,  e, getCategoryIcon}: ServiceCardProps) {}
                   <ArrowRight className="w-4 h-4 ml-2 group-hove, r:translate-x-1 transition-transform duration-300"/>
                 </a>
 impor, t, Reac, t, {useStat, e, useMem, o, useCallbac, k, useEffect} from 'react';
-import {motio, n, AnimatePresence} from 'framer-motion';
+import import {motio, n, AnimatePresence} from 'framer-motion';
 import {Searc, h,
             Filte, r,
             Sta, r,
@@ -887,7 +887,7 @@ import {Searc, h,
             Smartphon, e,
             Monito, r,
             Server} from 'lucide-react';
-import {INNOVATIVE_MICRO_SAAS_SERVICE, S, INNOVATIVE_SERVICE_CATEGORIE, S, InnovativeMicroSaasService} from '../data/innovativeMicroSaasServices';
+import import {INNOVATIVE_MICRO_SAAS_SERVICE, S, INNOVATIVE_SERVICE_CATEGORIE, S, InnovativeMicroSaasService} from '../data/innovativeMicroSaasServices';
 
 interface ServiceCardProps {service}: InnovativeMicroSaasService;
   inde, x: number;
@@ -896,8 +896,8 @@ interface ServiceCardProps {service}: InnovativeMicroSaasService;
 }
 
 const ServiceCar, d: React.FC<ServiceCardProps> = ({servic,  e, inde, x, viewMod, e, onServiceClick}) => {}
-  const [isHover, e, d, setIsHover, e, d] = useState(false);
-  const [isLik,  e, d, setIsLik, e, d] = useState(false);
+  const [isHover, e, d, setIsHover, e, d] = useState(false)
+  const [isLik,  e, d, setIsLik, e, d] = useState(false)
 
   const getCategoryIcon = useCallback((categor,  y: string) => {}
     const iconMa, p: {[k, e, y]}: strin, g]: React.ReactNode } = {'AI & Business Intelligence'}: <Brain className="w-5 h-5"/>,
@@ -912,9 +912,9 @@ const ServiceCar, d: React.FC<ServiceCardProps> = ({servic,  e, inde, x, viewMod
       'Machine Learning': <Network className="w-5 h-5"/>,
       'Mobile Development': <Smartphone className="w-5 h-5"/>,
       'Web Development': <Monitor className="w-5 h-5"/>
-    };
-    return iconMap[catego, r, y] || <Star className="w-5 h-5"/>;
-  }, []);
+    }
+    return iconMap[catego, r, y] || <Star className="w-5 h-5"/>
+  }, [])
 
   const getCategoryColor = useCallback((categor,  y: string) => {}
     const colorMa, p: {[k, e, y]}: strin, g]: string } = {'AI & Business Intelligence'}: 'from-purple-500 to-pink-500',
@@ -929,23 +929,23 @@ const ServiceCar, d: React.FC<ServiceCardProps> = ({servic,  e, inde, x, viewMod
       'Machine Learning': 'from-blue-500 to-indigo-500',
       'Mobile Development': 'from-green-500 to-blue-500',
       'Web Development': 'from-orange-500 to-red-500'
-    };
+    }
     return colorMap[catego, r, y] || 'from-blue-500 to-purple-500';
-  }, []);
+  }, [])
 
-  const handleLike = useCallback((e: React.MouseEvent) => {e.stopPropagation()};
-    setIsLiked(!isLiked);
-  },  [isLik, e, d]);
+  const handleLike = useCallback((e: React.MouseEvent) => {e.stopPropagation()}
+    setIsLiked(!isLiked)
+  },  [isLik, e, d])
 
-  const handleShare = useCallback((e: React.MouseEvent) => {e.stopPropagation()};
+  const handleShare = useCallback((e: React.MouseEvent) => {e.stopPropagation()}
     if (navigator.share) {navigator.share({
             titl,  e: service.titl, e,
     tex, t: service.descriptio, n,
             ur, l: service.websiteUrl,
-        })};
-    } else {navigator.clipboard.writeText(service.websiteUrl)};
+        })}
+    } else {navigator.clipboard.writeText(service.websiteUrl)}
     }
-  },  [servi, c, e]);
+  },  [servi, c, e])
 
   if (viewMode === 'grid') {}
     return (
@@ -1034,10 +1034,10 @@ const ServiceCar, d: React.FC<ServiceCardProps> = ({servic,  e, inde, x, viewMod
           {isHovered && (<motion.div initial={{ opacit, y: 0 }} animate={{ opacit, y: 1 }} exit={{ opacit, y: 0 }} className="absolute inset-0 bg-gradient-to-br from-blue-600/10 to-purple-600/10 rounded-2xl"/>)}
         </AnimatePresence>
       </motion.div>
-    );
+    )
   }
 
-  // List View;
+  /
   return (<motion.div initial={{ opacit,  y: 0,
     x: -20 }} animate={{ opacit, y: 1,
     x: 0 }} transition={{ duratio, n: 0.6,
@@ -1129,72 +1129,72 @@ const ServiceCar, d: React.FC<ServiceCardProps> = ({servic,  e, inde, x, viewMod
         </div>
       </div>
     </motion.div>
-  );
-};
+  )
+}
 
 const ComprehensiveServicesShowcas, e: React.FC = () => {}
-  const [searchTe,  r, m, setSearchTe, r, m] = useState('');
-  const [selectedCatego, r, y, setSelectedCatego, r, y] = useState<string>('all');
-  const [sort,  B, y, setSort, B, y] = useState< />'rating' | 'price' | 'aiScore' | 'name'>('rating');
-  const [viewMo, d, e, setViewMo, d, e] = useState< />'grid' | 'list'>('grid');
-  const [selectedServi,  c, e, setSelectedServi, c, e] = useState<InnovativeMicroSaasService /> | null>(null);
-  const [showFilte, r, s, setShowFilte, r, s] = useState(false);
+  const [searchTe,  r, m, setSearchTe, r, m] = useState('')
+  const [selectedCatego, r, y, setSelectedCatego, r, y] = useState<string>('all')
+  const [sort,  B, y, setSort, B, y] = useState< />'rating' | 'price' | 'aiScore' | 'name'>('rating')
+  const [viewMo, d, e, setViewMo, d, e] = useState< />'grid' | 'list'>('grid')
+  const [selectedServi,  c, e, setSelectedServi, c, e] = useState<InnovativeMicroSaasService /> | null>(null)
+  const [showFilte, r, s, setShowFilte, r, s] = useState(false)
 
-  // Memoized filtered services for better performance;
+  /
   const filteredServices = useMemo(() => {let} filtered = INNOVATIVE_MICRO_SAAS_SERVICES;
 
-    // Filter by search term;
+    /
     if (searchTerm) {}
-      const searchLower = searchTerm.toLowerCase();
+      const searchLower = searchTerm.toLowerCase()
       filtered = filtered.filter(service =>
         service.title.toLowerCase().includes(searchLower) ||
         service.description.toLowerCase().includes(searchLower) ||
         service.tags.some(tag => tag.toLowerCase().includes(searchLower)) ||
         service.category.toLowerCase().includes(searchLower)
-      );
+      )
     }
 
-    // Filter by category;
-    if (selectedCategory !== 'all') {filtered = filtered.filter(service => service.category === selectedCategory)};
+    /
+    if (selectedCategory !== 'all') {filtered = filtered.filter(service => service.category === selectedCategory)}
     }
 
-    // Sort services;
+    /
     filtered.sort((a,  b) => {}
       switch (sortBy) {}
         case 'rating':
-          return (b.rating || 0) - (a.rating || 0);
+          return (b.rating || 0) - (a.rating || 0)
         case 'price':
           return a.price - b.price;
         case 'aiScore':
-          return (b.aiScore || 0) - (a.aiScore || 0);
+          return (b.aiScore || 0) - (a.aiScore || 0)
         case 'name':
-          return a.title.localeCompare(b.title);
+          return a.title.localeCompare(b.title)
         defaul,  t: return 0;,
       }
-    });
+    })
 
     return filtered;
-  }, [searchTe, r, m, selectedCatego, r, y, sort, B, y]);
+  }, [searchTe, r, m, selectedCatego, r, y, sort, B, y])
 
-  const handleServiceClick = useCallback((servic,  e: InnovativeMicroSaasService) => {setSelectedService(service)};
-    // You can add navigation logic here;
-  }, []);
+  const handleServiceClick = useCallback((servic,  e: InnovativeMicroSaasService) => {setSelectedService(service)}
+    /
+  }, [])
 
-  const clearFilters = useCallback(() => {setSearchTerm('')};
-    setSelectedCategory('all');
-    setSortBy('rating');
-  },  []);
+  const clearFilters = useCallback(() => {setSearchTerm('')}
+    setSelectedCategory('all')
+    setSortBy('rating')
+  },  [])
 
-  // Keyboard navigation support;
+  /
   useEffect(() => {}
     const handleKeyDown = (e: KeyboardEvent) => {}
-      if (e.key === 'Escape') {setSelectedService(null)};
+      if (e.key === 'Escape') {setSelectedService(null)}
       }
-    };
+    }
 
-    document.addEventListener('keydown',  handleKeyDown);
-    return () => document.removeEventListener('keydown',  handleKeyDown);
-  }, []);
+    document.addEventListener('keydown',  handleKeyDown)
+    return () => document.removeEventListener('keydown',  handleKeyDown)
+  }, [])
 
   return (<div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white py-20">
       <div className="container mx-auto px-4">
@@ -1321,9 +1321,9 @@ const ComprehensiveServicesShowcas, e: React.FC = () => {}
         </motion.div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default ComprehensiveServicesShowcase;
-    </></></></></></></></>);
-};
+export export default ComprehensiveServicesShowcase;
+    </></></></></></></></>)
+}

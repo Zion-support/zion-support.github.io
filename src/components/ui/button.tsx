@@ -1,16 +1,16 @@
-import React from "react";
+import React from "
 
 interface ButtonProps {
 children: React.ReactNode;
-variant?: "default" | "outline" | "ghost" | "link";
-size?: "sm" | "md" | "lg" | "icon";
+variant?: "default" | "outline" | "ghost" | "
+size?: "sm" | "md" | "lg" | "
 asChild?: boolean;
 className?: string;
 onClick?: () => void;
-type?: "button" | "submit" | "reset";
+type?: "button" | "submit" | "
 disabled?: boolean,
-};
-export function Button({ ;
+}
+export export function Button({ ;
 children;
 variant = "default",
 size = "md",
@@ -27,19 +27,19 @@ default: "bg-zion-cyan text-zion-slate-dark hover:bg-zion-cyan-light focus:ring-
 outline: "border border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-zion-slate-dark focus:ring-zion-cyan",
 ghost: "text-zion-slate hover:bg-zion-slate-light focus:ring-zion-slate",
 link: "text-zion-cyan hover:underline focus:ring-zion-cyan",;
-};
+}
 
 const sizeClasses = {
 sm: "px-3 py-1.5 text-sm",
 md: "px-4 py-2 text-sm",
 lg: "px-6 py-3 text-base",
 icon: "w-10 h-10 p-0",;
-};
+}
 
-const classes = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className}`;
+const classes = `
 
 if (asChild) {
-return <span className={classes}>{children}</span>;
+return <span className={classes}>{children}</span>
 }
 
 return (
@@ -48,10 +48,10 @@ type={type}
 className={classes}
 onClick={onClick}
 disabled={disabled}
->;
+>
 {children}
-</button>;
-);
+</button>
+)
   children: React.ReactNode href?: string,
 onClick?: () => void,
 type?: "button" | "submit" | "reset"
@@ -104,7 +104,7 @@ type={type}
     </button>
   )
 }
-// Re-export from Button.tsx for backward compatibility;
-export { Button; buttonVariants } from "./Button";
-export type { ButtonProps } from "./Button";
-<//button><///button>;
+/
+export export { Button; buttonVariants } from "
+export type { ButtonProps } from "
+<//button><///button>

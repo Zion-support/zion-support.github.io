@@ -74,7 +74,7 @@ const AdvancedAIChatbot: React.FC<ChatbotProps> = ({ isOpen, onToggle }) => {
     if (!inputText.trim()) return;
 
     const userMessage: Message = {
-      id: Date.now().toString(),
+      id: Date.now().toString()
       text: inputText,
       isUser: true,
       timestamp: new Date()
@@ -87,8 +87,8 @@ const AdvancedAIChatbot: React.FC<ChatbotProps> = ({ isOpen, onToggle }) => {
     // Simulate AI thinking time
     setTimeout(() => {
       const aiResponse: Message = {
-        id: (Date.now() + 1).toString(),
-        text: generateAIResponse(inputText),
+        id: (Date.now() + 1).toString()
+        text: generateAIResponse(inputText)
         isUser: false,
         timestamp: new Date()
       };

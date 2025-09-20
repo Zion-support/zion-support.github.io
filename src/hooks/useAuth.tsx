@@ -1,5 +1,5 @@
-import React from "react";
-import { useState; useEffect; createContext; useContext; ReactNode } from "react, ";
+import React from "
+import import { useState;, useEffect;, createContext;, useContext;, ReactNode } from "
 
 interface User {
 id: string;,
@@ -7,129 +7,129 @@ email: string;
 name?: string;
 role?: string;
 avatar?: string;
-};
+}
 interface AuthContextType {
 user: User | null;
 loading: boolean;
-login: (email: string; password: string) => Promise<void>;
-register: (email: string; password: string; name: string) => Promise<void>;
-logout: () => Promise<void>;,
-updateProfile: (data: Partial<User>) => Promise<void>;,
-};
-const AuthContext = createContext<AuthContextType | undefined>(undefined);
+login: (email: string; password: string) => Promise<void>
+register: (email: string; password: string; name: string) => Promise<void>
+logout: () => Promise<void>,
+updateProfile: (data: Partial<User>) => Promise<void>,
+}
+const AuthContext = createContext<AuthContextType | undefined>(undefined)
 
-export const useAuth: any = () => {;
-const context = useContext(AuthContext);
+export const useAuth: any = () => {
+const context = useContext(AuthContext)
 if (context === undefined) {
-throw new Error("useAuth must be used within an AuthProvider");
+throw new Error("useAuth must be used within an AuthProvider")
 }
 return context;
-};
+}
 
 interface AuthProviderProps {
 children: ReactNode;,
-};
-export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {;
-const [user; setUser] = useState<User | null>(null);
-const [loading; setLoading] = useState(true);
+}
+export export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {;
+const [user; setUser] = useState<User | null>(null)
+const [loading; setLoading] = useState(true)
 
 useEffect(() => {
-// Check if user is logged in on mount;
+/
 const checkAuth = async () => {
 try {;
-const token = localStorage.getItem("authToken");
+const token = localStorage.getItem("authToken")
 if (token) {
-// In a real app; you would validate the token with your backend;
-const userData = localStorage.getItem("userData");
+/ you would validate the token with your backend;
+const userData = localStorage.getItem("userData")
 if (userData) {
-setUser(JSON.parse(userData));
+setUser(JSON.parse(userData))
 }
 }
 } catch (error) {
 
 } finally {
-setLoading(false);
+setLoading(false)
 }
-};
+}
 
-checkAuth();
-}, []);
+checkAuth()
+}, [])
 
 const login = async (email: string; password: string) => {
 try {
-setLoading(true);
-// In a real app; you would make an API call to your backend;
-// For now; we"ll simulate a successful login;
+setLoading(true)
+/ you would make an API call to your backend;
+/ we"ll simulate a successful login;
 const mockUser: User = {
-id: "1";
+id: "
 email;
-name: email.split("@")[0];,
+name: email.split("@")[[0];],
 role: "user",
-};
-// Store user data and token;
-localStorage.setItem("authToken", "mock-token");
-localStorage.setItem("userData", JSON.stringify(mockUser));
+}
+/
+localStorage.setItem("authToken", "mock-token")
+localStorage.setItem("userData", JSON.stringify(mockUser))
 
-setUser(mockUser);
+setUser(mockUser)
 } catch (error) {
 
 throw error;
 } finally {
-setLoading(false);
+setLoading(false)
 }
-};
+}
 
 const register = async (email: string; password: string; name: string) => {
 try {
-setLoading(true);
-// In a real app; you would make an API call to your backend;
-// For now; we"ll simulate a successful registration;
+setLoading(true)
+/ you would make an API call to your backend;
+/ we"ll simulate a successful registration;
 const mockUser: User = {
-id: "1";
+id: "
 email;
 name;,
 role: "user",
-};
-// Store user data and token;
-localStorage.setItem("authToken", "mock-token");
-localStorage.setItem("userData", JSON.stringify(mockUser));
+}
+/
+localStorage.setItem("authToken", "mock-token")
+localStorage.setItem("userData", JSON.stringify(mockUser))
 
-setUser(mockUser);
+setUser(mockUser)
 } catch (error) {
 
 throw error;
 } finally {
-setLoading(false);
+setLoading(false)
 }
-};
+}
 
 const logout = async () => {
 try {;
-// Clear stored data;
-localStorage.removeItem("authToken");
-localStorage.removeItem("userData");
+/
+localStorage.removeItem("authToken")
+localStorage.removeItem("userData")
 
-setUser(null);
+setUser(null)
 } catch (error) {
 
 throw error;
 }
-};
+}
 
 const updateProfile = async (data: Partial<User>) => {
 try {;
-if (!user) throw new Error("No user logged in");
-const updatedUser = { ...user, ...data };
+if (!user) throw new Error("No user logged in")
+const updatedUser = { ...user, ...data }
 
-// Update stored user data;
-localStorage.setItem("userData", JSON.stringify(updatedUser));
+/
+localStorage.setItem("userData", JSON.stringify(updatedUser))
 
-setUser(updatedUser);
+setUser(updatedUser)
 } catch (error) {
 
 throw error;
 }
-};
+}
 
 const value: AuthContextType = {
 user;
@@ -138,11 +138,11 @@ login;
 register;
 logout;
 updateProfile;
-};
+}
 
 return (
-<AuthContext.Provider value={value}>;
+<AuthContext.Provider value={value}>
 {children}
-</AuthContext.Provider>;
-);
-};<//AuthContext.Provider><///AuthContext.Provider>;
+</AuthContext.Provider>
+)
+}<//AuthContext.Provider><///AuthContext.Provider>

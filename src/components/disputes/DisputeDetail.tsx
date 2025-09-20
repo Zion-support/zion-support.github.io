@@ -1,17 +1,17 @@
 
-import React { useState useEffect } from "react";
-import { useRouter,, ,  } from 'next/router';
-import { useDisputes,  } from "@/hooks/useDisputes";
-import { logErrorToProduction,  } from '@/utils/productionLogger';
+import React { useState useEffect } from "
+import import { useRouter,,, ,,  } from 'next/router';
+import { useDisputes,,  } from "
+import import { logErrorToProduction,,  } from '@/utils/productionLogger';
 import { Dispute,
 disputeReasonLabels
-, , DisputeMessage,
+,, ,, DisputeMessage,
 DisputeStatus
-, , ResolutionType,
+,, ,, ResolutionType,
  } from '@/types/disputes'
-import { Button,  } from '@/components/ui/button'
-import { Textarea,  } from '@/components/ui/textarea'
-import { Tabs,, TabsContent,, TabsList,, TabsTrigger,  } from '@/components/ui/tabs'
+import { Button,,  } from '@/components/ui/button'
+import { Textarea,,  } from '@/components/ui/textarea'
+import { Tabs,,, TabsContent,,, TabsList,,, TabsTrigger,,  } from '@/components/ui/tabs'
   Card,
 CardContent
   CardDescription,
@@ -19,14 +19,14 @@ CardFooter
   CardHeader,
 CardTitle,
 } from '@/components/ui/card'
-import { Badge,  } from '@/components/ui/badge'
-import { Separator,  } from '@/components/ui/separator'
-import { Avatar,, AvatarFallback,, AvatarImage,  } from '@/components/ui/avatar'
-import { format,, formatDistanceToNow,  } from 'date-fns'
-import { Alert,, AlertDescription,, AlertTitle,  } from '@/components/ui/alert'
-import { ArrowDown,, Check,, MessageSquare,, Download,  } from 'lucide-react'
-import { useAuth,  } from "@/hooks/useAuth";
-import { toast,  } from "sonner";
+import { Badge,,  } from '@/components/ui/badge'
+import { Separator,,  } from '@/components/ui/separator'
+import { Avatar,,, AvatarFallback,,, AvatarImage,,  } from '@/components/ui/avatar'
+import { format,,, formatDistanceToNow,,  } from 'date-fns'
+import { Alert,,, AlertDescription,,, AlertTitle,,  } from '@/components/ui/alert'
+import { ArrowDown,,, Check,,, MessageSquare,,, Download,,  } from 'lucide-react'
+import { useAuth,,  } from "
+import { toast,,  } from "
 export function DisputeDetail() {
                           }}
                         >
@@ -157,7 +157,7 @@ if (isLoading) {"
 }if (!dispute) {"
   return (<div className=" p-8 text-center"> () => router.push (" /dashboard/disputes") "
 }className=" mt-4"> Back to Disputes </Button> </div>)
-};"
+}"
 container mx-auto p-4 space-y-6" > <div className="flex flex-wrap items-center justify-between gap-4" > <div> Start Review </Button>) "
 }</div> </div> <Alert className="bg-green-50 border-green-200 dark:bg-green-900/20 dark:border-green-900"> <Check className="h-4 w-4" /> <AlertTitle>This dispute has been resolved</AlertTitle> <AlertDescription> {
   dispute.resolution summary,

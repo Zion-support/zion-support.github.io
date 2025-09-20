@@ -1,10 +1,10 @@
-import React from "react";
-import { ServiceLandingTemplate,  } from "@/components/services/ServiceLandingTemplate";
-import { Phone,, ShieldCheck,, Clock,  } from 'lucide-react'
+import React from "
+import { ServiceLandingTemplate,,  } from "
+import { Phone,,, ShieldCheck,,, Clock,,  } from 'lucide-react'
 export default function ITSupportPage() {
   const benefits = [
     {import React from "react"
-import { ServiceLandingTemplate,  } from "@/components/services/ServiceLandingTemplate"
+import { ServiceLandingTemplate,,  } from "@/components/services/ServiceLandingTemplate"
 import React from "react"
 export default function ITSupportPage() {
     <ServiceLandingTemplate
@@ -17,7 +17,7 @@ title="IT Support Services"
       ctaText="Get IT Support"
       ctaLink="/request-quote"
     />
-  );      benefits={benefits}
+  )      benefits={benefits}
       testimonials={testimonials}
       ctaText="Get IT Support"
       ctaLink="/request-quote"

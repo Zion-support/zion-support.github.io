@@ -1,31 +1,31 @@
-import { jsx as _jsx, Fragment as _Fragment, jsxs as _jsxs } from "react/jsx-runtime, ";
-import { Route } from 'react-router-dom, ';
-import Blog from '@/pages/Blog;';
-import BlogPost from '@/pages/BlogPost;';
+import { jsx as _jsx, Fragment as _Fragment, jsxs as _jsxs } from "
+import import { Route } from 'react-router-dom, ';
+import import Blog from '@/pages/Blog;';
+import import BlogPost from '@/pages/BlogPost;';
 export default function ContentRoutes() {
-    return (_jsxs(_Fragment, { children: [_jsx(Route, { path: "blog", element: _jsx(Blog, {}) }), _jsx(Route, { path: "blog/:slug", element: _jsx(BlogPost, {}) })] }));
+    return (_jsxs(_Fragment, { children: [_jsx(Route, { path: "blog", element: _jsx(Blog, {}) }), _jsx(Route, { path: "blog/:slug", element: _jsx(BlogPost, {}) })] }))
 }
-import { Route, Routes, Navigate } from "react-router-dom, ";
-import Home from "@/pages/Home";
-import About from "@/pages/About";
-import Contact from "@/pages/Contact";
-import Privacy from "@/pages/Privacy";
-import Blog from "@/pages/Blog";
-import BlogPost from "@/pages/BlogPost";
-import GreenIT from "@/pages/GreenIT";
-import Careers from "@/pages/Careers";
-import FAQ from "@/pages/FAQ";
-import Enterprise from "@/pages/Enterprise";
-import SearchPage from "@/pages/SearchPage";
-import { SitemapPage } from "@/components/SitemapPage, ";
-import Sitemap from "@/pages/Sitemap";
-import Terms from "@/pages/Terms";
-import Cookies from "@/pages/Cookies";
-import HelpCenterPage from "@/pages/HelpCenterPage";
-import AccountSettings from "@/pages/AccountSettings";
-import ProjectRoom from "@/pages/ProjectRoom";
-import VideoCall from "@/pages/VideoCall";
-import Services from "@/pages/Services";
+import { Route, Routes, Navigate } from "
+import Home from "
+import About from "
+import Contact from "
+import Privacy from "
+import Blog from "
+import BlogPost from "
+import GreenIT from "
+import Careers from "
+import FAQ from "
+import Enterprise from "
+import SearchPage from "
+import { SitemapPage } from "
+import Sitemap from "
+import Terms from "
+import Cookies from "
+import HelpCenterPage from "
+import AccountSettings from "
+import ProjectRoom from "
+import VideoCall from "
+import Services from "
 const ContentRoutes = () => {
     return (<Routes>
       {/* Content Routes */}
@@ -79,6 +79,6 @@ const ContentRoutes = () => {
       {/* Sitemap Pages */}
       <Route path="/sitemap" element={<Sitemap />}/>
       <Route path="/sitemap-page" element={<SitemapPage />}/>
-    </Routes>);
-};
-export default ContentRoutes;
+    </Routes>)
+}
+export export default ContentRoutes;

@@ -8,7 +8,7 @@ export const TALENT_SEEDS = [
         skills: ['React', 'Node.js', 'TypeScript'],
         hourly_rate: 120;
         availability_type: 'full_time',
-    };
+    }
     {
         id: 'seed-2';
         user_id: 'user-seed-2';
@@ -18,7 +18,7 @@ export const TALENT_SEEDS = [
         skills: ['Python', 'TensorFlow', 'Data Analysis'],
         hourly_rate: 150;
         availability_type: 'part_time',
-    };
+    }
     {
         id: 'seed-3';
         user_id: 'user-seed-3';

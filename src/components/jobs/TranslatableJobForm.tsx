@@ -1,20 +1,20 @@
 
 import React, { useState } from "react",
-import { Button,  } from "@/components/ui/button",
-import { Input,  } from "@/components/ui/input",
-import { Textarea,  } from "@/components/ui/textarea",
-import { Tabs,, TabsContent,, TabsList,, TabsTrigger,  } from "@/components/ui/tabs",
-import { Card,, CardContent,  } from "@/components/ui/card",
-import { Loader2,, Globe,  } from 'lucide-react'
-import { useTranslation,  } from "react-i18next",
-import { useTranslationService,  } from "@/hooks/useTranslationService",
-import { useLanguage,, SupportedLanguage,  } from "@/context/LanguageContext",
-import { toast,  } from "@/components/ui/use-toast";
-import { logErrorToProduction } from '@/utils/productionLogger';
+import { Button,,  } from "@/components/ui/button",
+import { Input,,  } from "@/components/ui/input",
+import { Textarea,,  } from "@/components/ui/textarea",
+import { Tabs,,, TabsContent,,, TabsList,,, TabsTrigger,,  } from "@/components/ui/tabs",
+import { Card,,, CardContent,,  } from "@/components/ui/card",
+import { Loader2,,, Globe,,  } from 'lucide-react'
+import { useTranslation,,  } from "react-i18next",
+import { useTranslationService,,  } from "@/hooks/useTranslationService",
+import { useLanguage,,, SupportedLanguage,,  } from "@/context/LanguageContext",
+import { toast,,  } from "
+import import { logErrorToProduction } from '@/utils/productionLogger';
 interface TranslatableJobFormProps {
 }
 
-export function TranslatableJobForm({ onSubmit isSubmitting;
+export export function TranslatableJobForm({ onSubmit isSubmitting;
   return (
     <form onSubmit={handleSubmit} className="space-y-6">
       <div>

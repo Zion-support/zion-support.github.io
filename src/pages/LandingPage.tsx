@@ -1,6 +1,6 @@
 export default function LandingPage() {
-  const { t } = useTranslation();
-  const { isRTL } = useLanguage();
+  const { t } = useTranslation()
+  const { isRTL } = useLanguage()
   // Tools and features showcase,
 return (
     <div className='min-h-screen bg-zion-blue text-white'>
@@ -78,5 +78,5 @@ className={`${isRTL ? 'ml-0 mr-2 rotate-180' : 'ml-2'} h-4 w-4`}
       <SocialShareSection />
       <FloatingCTA />
     </div>
-  );
+  )
 }

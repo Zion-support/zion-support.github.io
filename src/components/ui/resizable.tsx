@@ -1,6 +1,6 @@
-import { GripVertical,  } from 'lucide-react'
-import * as ResizablePrimitive from &quot;react-resizable-panels&quot;
-import { cn,  } from &quot;@/lib/utils&quot;
+import { GripVertical,,  } from 'lucide-react'
+import import * as ResizablePrimitive from &quot;react-resizable-panels&quot;
+import import { cn,,  } from &quot;@/lib/utils&quot;
 const ResizablePanelGroup = ({
   className
   ...props,
@@ -33,6 +33,6 @@ className={cn(
         <GripVertical className=&quot;h-2.5 w-2.5&quot; />
       </div>
     )}
-  </ResizablePrimitive.PanelResizeHandle>;
-);
+  </ResizablePrimitive.PanelResizeHandle>
+)
 export { ResizablePanelGroup ResizablePanel ResizableHandle }

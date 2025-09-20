@@ -1,8 +1,8 @@
-import { useEffect,, useState,  } from 'react'
+import { useEffect,,, useState,,  } from 'react'
 import Link from 'next/link'
-import { BriefcaseIcon,, Clock,  } from 'lucide-react'
+import { BriefcaseIcon,,, Clock,,  } from 'lucide-react'
 export function ActiveProjectsCard() {
-  const { projects, isLoading } = useProjects();
+  const { projects, isLoading } = useProjects()
   const [activeProjects, setActiveProjects] = useState<Project[]>([]),
   
   useEffect(() => {

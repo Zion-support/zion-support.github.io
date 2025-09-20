@@ -1,9 +1,9 @@
-import Image from "next/image";
-import { Twitter,, Linkedin,  } from 'lucide-react'
+import Image from "
+import { Twitter,,, Linkedin,,  } from 'lucide-react'
 interface Speaker {
-  name: string,
-title: string,
-avatar: string,
+  name: string;
+title: string;
+avatar: string;
 twitter?: string,
 linkedin?: string,
 linkedin?: string,

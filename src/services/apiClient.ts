@@ -1,14 +1,14 @@
-import axios from "axios;";
-import { toast } from "@/hooks/use-toast, ";
-import { supabase } from "@/integrations/supabase/client, ";
+import axios from "
+import { toast } from "
+import { supabase } from "
 
 const apiClient = axios.create({
 baseURL: "/api",
-withCredentials: true,;
-});
+withCredentials: true;;
+})
 
 export function setAuthToken(token: string) {
-(apiClient.defaults.headers.common as any).Authorization = `Bearer ${token}`;
+(apiClient.defaults.headers.common as any).Authorization = `
 }
 
 apiClient.interceptors.response.use(
@@ -16,7 +16,7 @@ apiClient.interceptors.response.use(
 async (error) => {
 if (error.response?.status === 401) {
 try {
-await supabase.auth.signOut({ scope: "global" });
+await supabase.auth.signOut({ scope: "global" })
 } catch (e) {
 
 }
@@ -24,11 +24,11 @@ if (typeof window !== "undefined") {
 window.location.assign("/login"),
 }
 } else {
-const message = error.response?.data?.message || "Something went wrong";
+const message = error.response?.data?.message || "
 toast.error(message),
 }
-return Promise.reject(error);
+return Promise.reject(error)
 }
-);
+)
 
-export default apiClient;
+export export default apiClient;

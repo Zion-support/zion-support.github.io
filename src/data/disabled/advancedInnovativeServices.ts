@@ -1,19 +1,19 @@
-import React from "react";
+import React from "
 
 export interface AdvancedInnovativeService {
-id: string; title: string; description: string; category: string; subcategory: string; price: number; currency: string; pricingModel: string; features: string[];,
-benefits: string[], useCases: string[];,
-targetAudience: string[], tags: string[];
+id: string; title: string; description: string; category: string; subcategory: string; price: number; currency: string; pricingModel: string; features: string[[];],
+benefits: string[], useCases: string[[];],
+targetAudience: string[], tags: string[[];]
 estimatedDelivery: string; supportLevel: string; marketPrice: string;
 contactInfo: {,
-phone: string; email: string; website: string,
-};
-technology: string[], integrations: string[];,
+phone: string; email: string; website: string;
+}
+technology: string[], integrations: string[[];],
 compliance: string[], roi: string; competitors: string[], marketTrend: string; innovationLevel: string; uniqueValue: string;,
 }
 
 export const ADVANCED_INNOVATIVE_SERVICES: AdvancedInnovativeService[] = [
-// AI-Powered Predictive Maintenance Platform;
+/
 {,
 id: "ai-predictive-maintenance-platform",
 title: "AI Predictive Maintenance Platform",
@@ -33,14 +33,14 @@ features: [
 "Mobile app for technicians",
 "Integration with CMMS systems",
 "Custom alert system",
-"Historical data analysis";
+"
 ],
 benefits: [
 "Reduce unplanned downtime by 75%",
 "Lower maintenance costs by 40%",
 "Extend equipment lifespan by 30%",
 "Improve safety compliance by 90%",
-"Optimize spare parts inventory by 50%";
+"
 ],
 useCases: [
 "Manufacturing plants",
@@ -48,14 +48,14 @@ useCases: [
 "Oil and gas operations",
 "Transportation fleets",
 "Healthcare equipment",
-"Building management systems";
+"
 ],
 targetAudience: [
 "Facility managers",
 "Maintenance supervisors",
 "Operations directors",
 "Asset managers",
-"Safety officers";
+"
 ],
 tags: ["AI", "IoT", "Predictive Maintenance", "Machine Learning", "Industry 4.0", "Smart Manufacturing"],
 estimatedDelivery: "4-6 weeks",
@@ -76,7 +76,7 @@ innovationLevel: "Cutting-edge AI/ML with real-time IoT integration",
 uniqueValue: "Combines edge computing with cloud-based ML for real-time predictions",
 },
 
-// Quantum Machine Learning Platform;
+/
 {
 id: "quantum-machine-learning-platform",
 title: "Quantum Machine Learning Platform",
@@ -95,14 +95,14 @@ features: [
 "Quantum chemistry simulations",
 "Financial modeling tools",
 "Drug discovery algorithms",
-"Climate modeling capabilities";
+"
 ],
 benefits: [
 "Solve complex problems 1000x faster",
 "Reduce ML training time by 80%",
 "Improve model accuracy by 45%",
 "Handle larger datasets efficiently",
-"Future-proof quantum advantage";
+"
 ],
 useCases: [
 "Drug discovery and development",
@@ -110,14 +110,14 @@ useCases: [
 "Climate change modeling",
 "Logistics optimization",
 "Cryptography and security",
-"Material science research";
+"
 ],
 targetAudience: [
 "Research institutions",
 "Pharmaceutical companies",
 "Financial institutions",
 "Government agencies",
-"Technology companies";
+"
 ],
 tags: ["Quantum Computing", "Machine Learning", "AI", "Optimization", "Research", "Innovation"],
 estimatedDelivery: "10-14 weeks",
@@ -138,7 +138,7 @@ innovationLevel: "Pioneering quantum-classical hybrid approaches",
 uniqueValue: "First commercial platform combining quantum computing with practical ML applications",
 },
 
-// Autonomous Drone Fleet Management;
+/
 {
 id: "autonomous-drone-fleet-management",
 title: "Autonomous Drone Fleet Management Platform",
@@ -157,14 +157,14 @@ features: [
 "Compliance and safety monitoring",
 "Data collection and analytics",
 "Multi-drone coordination",
-"Emergency response protocols";
+"
 ],
 benefits: [
 "Reduce delivery time by 60%",
 "Lower operational costs by 45%",
 "Improve safety by 95%",
 "Increase coverage area by 300%",
-"24/7 autonomous operations";
+"
 ],
 useCases: [
 "Last-mile delivery services",
@@ -172,14 +172,14 @@ useCases: [
 "Agricultural monitoring",
 "Search and rescue operations",
 "Security and surveillance",
-"Environmental monitoring";
+"
 ],
 targetAudience: [
 "Biotech researchers",
 "Pharmaceutical scientists",
 "Clinical researchers",
 "Bioinformaticians",
-"Medical professionals";
+"
 ],
 tags: ["Autonomous Systems", "Drones", "AI", "Fleet Management", "IoT", "Logistics"],
 estimatedDelivery: "6-8 weeks",
@@ -197,10 +197,10 @@ roi: "500% within 18 months",
 competitors: ["Insitro", "Atomwise", "BenevolentAI", "Recursion Pharmaceuticals"],
 demoUrl: "https://ziontechgroup.com/demo/ai-biotechnology",
 caseStudies: ["Drug discovery acceleration", "Protein folding breakthrough"],
-marketTrends: ["Growing biotech investment", "AI drug discovery boom", "Increasing regulatory support"];
+marketTrends: [["Growing biotech investment", "AI drug discovery boom", "Increasing regulatory support"];]
 },
 
-// AI-Powered Climate Intelligence Platform;
+/
 {
 id: "ai-climate-intelligence-platform",
 title: "AI Climate Intelligence Platform - Intelligent Environmental Monitoring",
@@ -219,28 +219,28 @@ features: [
 "Integration with IoT sensors",
 "Compliance reporting",
 "Mobile app support",
-"Advanced visualizations";
+"
 ],
 benefits: [
 "Improve sustainability by 40%",
 "Reduce climate risks",
 "Optimize resource usage",
 "Meet compliance requirements",
-"Data-driven environmental decisions";
+"
 ],
 useCases: [
 "Corporations",
 "Government agencies",
 "Environmental organizations",
 "Energy companies",
-"Manufacturing firms";
+"
 ],
 targetAudience: [
 "Sustainability managers",
 "Environmental officers",
 "Risk managers",
 "Operations directors",
-"Policy makers";
+"
 ],
 tags: ["AI", "Climate Technology", "Sustainability", "Environmental Monitoring", "Risk Assessment"],
 estimatedDelivery: "4-6 weeks",
@@ -258,10 +258,10 @@ roi: "400% within 12 months",
 competitors: ["Watershed", "Pachama", "CarbonChain", "Normative"],
 demoUrl: "https://ziontechgroup.com/demo/ai-climate-intelligence",
 caseStudies: ["Corporation 40% sustainability improvement", "Government climate risk reduction"],
-marketTrends: ["Growing climate awareness", "Increasing regulations", "Rising sustainability demand"];
+marketTrends: [["Growing climate awareness", "Increasing regulations", "Rising sustainability demand"];]
 },
 
-// AI-Powered Cybersecurity Intelligence Platform;
+/
 {
 id: "ai-cybersecurity-intelligence-platform",
 title: "AI Cybersecurity Intelligence Platform - Intelligent Threat Defense",
@@ -280,28 +280,28 @@ features: [
 "Compliance automation",
 "Security awareness training",
 "Mobile app support",
-"Advanced analytics dashboard";
+"
 ],
 benefits: [
 "Reduce security incidents by 95%",
 "Faster threat response time",
 "Automated compliance",
 "Proactive threat prevention",
-"Cost-effective security";
+"
 ],
 useCases: [
 "Financial institutions",
 "Healthcare organizations",
 "Government agencies",
 "Enterprise companies",
-"Critical infrastructure";
+"
 ],
 targetAudience: [
 "CISOs",
 "Security analysts",
 "IT managers",
 "Compliance officers",
-"Risk managers";
+"
 ],
 tags: ["AI", "Cybersecurity", "Threat Intelligence", "Incident Response", "Compliance"],
 estimatedDelivery: "4-6 weeks",
@@ -319,10 +319,10 @@ roi: "600% within 12 months",
 competitors: ["CrowdStrike", "SentinelOne", "Darktrace", "Cylance"],
 demoUrl: "https://ziontechgroup.com/demo/ai-cybersecurity",
 caseStudies: ["Bank 95% threat reduction", "Healthcare compliance automation"],
-marketTrends: ["Rising cyber threats", "Increasing regulations", "Growing AI adoption"];
+marketTrends: [["Rising cyber threats", "Increasing regulations", "Growing AI adoption"];]
 },
 
-// AI-Powered Financial Trading Platform;
+/
 {
 id: "ai-financial-trading-platform",
 title: "AI Financial Trading Platform - Intelligent Trading Intelligence",
@@ -341,28 +341,28 @@ features: [
 "Performance analytics",
 "Compliance monitoring",
 "Mobile app support",
-"Advanced reporting";
+"
 ],
 benefits: [
 "Improve trading performance by 35%",
 "Reduce trading risks",
 "Automated execution",
 "24/7 market monitoring",
-"Data-driven decisions";
+"
 ],
 useCases: [
 "Hedge funds",
 "Investment firms",
 "Trading desks",
 "Individual traders",
-"Financial institutions";
+"
 ],
 targetAudience: [
 "Portfolio managers",
 "Traders",
 "Investment advisors",
 "Risk managers",
-"Financial analysts";
+"
 ],
 tags: ["AI", "Financial Technology", "Algorithmic Trading", "Risk Management", "Market Analysis"],
 estimatedDelivery: "4-6 weeks",
@@ -380,10 +380,10 @@ roi: "500% within 12 months",
 competitors: ["Alpaca", "QuantConnect", "MetaTrader", "Interactive Brokers"],
 demoUrl: "https://ziontechgroup.com/demo/ai-financial-trading",
 caseStudies: ["Hedge fund 35% performance improvement", "Risk reduction 60%"],
-marketTrends: ["Growing algorithmic trading", "Increasing AI adoption", "Rising market volatility"];
+marketTrends: [["Growing algorithmic trading", "Increasing AI adoption", "Rising market volatility"];]
 },
 
-// AI-Powered Manufacturing Intelligence Platform;
+/
 {
 id: "ai-manufacturing-intelligence-platform",
 title: "AI Manufacturing Intelligence Platform - Intelligent Industry 4.0",
@@ -402,28 +402,28 @@ features: [
 "Integration with IoT devices",
 "Mobile app support",
 "Advanced visualizations",
-"Compliance reporting";
+"
 ],
 benefits: [
 "Reduce downtime by 50%",
 "Improve quality by 40%",
 "Optimize production efficiency",
 "Reduce operational costs",
-"Enable predictive operations";
+"
 ],
 useCases: [
 "Manufacturing plants",
 "Production facilities",
 "Quality control departments",
 "Operations management",
-"Supply chain optimization";
+"
 ],
 targetAudience: [
 "Manufacturing managers",
 "Operations directors",
 "Quality managers",
 "Production supervisors",
-"Plant managers";
+"
 ],
 tags: ["AI", "Manufacturing", "Industry 4.0", "Predictive Maintenance", "Quality Control"],
 estimatedDelivery: "4-6 weeks",
@@ -441,10 +441,10 @@ roi: "450% within 12 months",
 competitors: ["Siemens", "GE Digital", "PTC", "Rockwell Automation"],
 demoUrl: "https://ziontechgroup.com/demo/ai-manufacturing",
 caseStudies: ["Factory 50% downtime reduction", "Quality improvement 40%"],
-marketTrends: ["Industry 4.0 adoption", "Smart manufacturing growth", "IoT integration increase"];
+marketTrends: [["Industry 4.0 adoption", "Smart manufacturing growth", "IoT integration increase"];]
 },
 
-// AI-Powered Energy Grid Intelligence Platform;
+/
 {
 id: "ai-energy-grid-intelligence-platform",
 title: "AI Energy Grid Intelligence Platform - Intelligent Power Management",
@@ -463,28 +463,28 @@ features: [
 "Integration with smart meters",
 "Mobile app support",
 "Advanced analytics",
-"Compliance reporting";
+"
 ],
 benefits: [
 "Reduce energy costs by 30%",
 "Improve grid reliability",
 "Optimize renewable integration",
 "Reduce carbon footprint",
-"Enable smart grid operations";
+"
 ],
 useCases: [
 "Utility companies",
 "Energy providers",
 "Grid operators",
 "Renewable energy companies",
-"Smart city initiatives";
+"
 ],
 targetAudience: [
 "Grid operators",
 "Energy managers",
 "Utility executives",
 "Sustainability officers",
-"Energy consultants";
+"
 ],
 tags: ["AI", "Energy Technology", "Grid Management", "Renewable Energy", "Smart Grid"],
 estimatedDelivery: "6-8 weeks",
@@ -509,7 +509,7 @@ innovationLevel: "Leading-edge autonomous fleet management with AI optimization"
 uniqueValue: "First comprehensive platform for multi-drone autonomous operations",
 },
 
-// Blockchain-Based Digital Identity Platform;
+/
 {
 id: "blockchain-digital-identity-platform",
 title: "Blockchain Digital Identity Platform",
@@ -528,14 +528,14 @@ features: [
 "Mobile wallet app",
 "Biometric integration",
 "Cross-border verification",
-"Audit trail and logging";
+"
 ],
 benefits: [
 "Eliminate identity fraud by 99%",
 "Reduce verification costs by 70%",
 "Improve compliance by 90%",
 "Enhance user privacy and control",
-"Global identity portability";
+"
 ],
 useCases: [
 "Financial services",
@@ -543,14 +543,14 @@ useCases: [
 "Government services",
 "Education institutions",
 "Travel and hospitality",
-"E-commerce platforms";
+"
 ],
 targetAudience: [
 "Financial institutions",
 "Healthcare providers",
 "Government agencies",
 "Educational institutions",
-"Technology companies";
+"
 ],
 tags: ["Blockchain", "Digital Identity", "Privacy", "Security", "Compliance", "SSI"],
 estimatedDelivery: "4-6 weeks",
@@ -571,7 +571,7 @@ innovationLevel: "Cutting-edge blockchain identity with zero-knowledge proofs",
 uniqueValue: "First enterprise-grade SSI platform with comprehensive compliance features",
 },
 
-// AI-Powered Legal Document Analysis;
+/
 {
 id: "ai-legal-document-analysis",
 title: "AI Legal Document Analysis Platform",
@@ -590,14 +590,14 @@ features: [
 "Legal research automation",
 "Case law analysis",
 "Regulatory updates",
-"Collaborative review tools";
+"
 ],
 benefits: [
 "Reduce document review time by 80%",
 "Improve accuracy by 95%",
 "Lower legal costs by 60%",
 "Enhance risk assessment",
-"Accelerate due diligence";
+"
 ],
 useCases: [
 "Contract review and analysis",
@@ -605,14 +605,14 @@ useCases: [
 "Regulatory compliance",
 "Legal research",
 "Risk assessment",
-"Merger and acquisition";
+"
 ],
 targetAudience: [
 "Law firms",
 "Corporate legal departments",
 "Compliance officers",
 "Risk managers",
-"Legal consultants";
+"
 ],
 tags: ["AI", "Legal Tech", "Document Analysis", "NLP", "Compliance", "Risk Management"],
 estimatedDelivery: "3-5 weeks",
@@ -633,7 +633,7 @@ innovationLevel: "Advanced AI with legal domain expertise",
 uniqueValue: "First comprehensive legal document analysis platform with risk scoring",
 },
 
-// Sustainable Energy Management Platform;
+/
 {
 id: "sustainable-energy-management",
 title: "Sustainable Energy Management Platform",
@@ -652,14 +652,14 @@ features: [
 "Carbon offset marketplace",
 "ESG compliance tools",
 "Real-time monitoring",
-"Predictive maintenance";
+"
 ],
 benefits: [
 "Reduce energy costs by 30%",
 "Lower carbon emissions by 40%",
 "Improve sustainability scores",
 "Meet ESG compliance requirements",
-"Enhance brand reputation";
+"
 ],
 useCases: [
 "Corporate sustainability",
@@ -667,14 +667,14 @@ useCases: [
 "Manufacturing facilities",
 "Data centers",
 "Retail chains",
-"Educational institutions";
+"
 ],
 targetAudience: [
 "Sustainability managers",
 "Facility managers",
 "ESG officers",
 "Energy consultants",
-"Corporate executives";
+"
 ],
 tags: ["Sustainability", "Green Tech", "Energy Management", "ESG", "Carbon Tracking", "Renewable Energy"],
 estimatedDelivery: "4-6 weeks",
@@ -695,7 +695,7 @@ innovationLevel: "Advanced AI-powered sustainability optimization",
 uniqueValue: "First comprehensive platform combining energy management with ESG compliance",
 },
 
-// Advanced Cybersecurity Threat Intelligence;
+/
 {
 id: "advanced-cybersecurity-threat-intelligence",
 title: "Advanced Cybersecurity Threat Intelligence Platform",
@@ -714,14 +714,14 @@ features: [
 "Threat intelligence sharing",
 "Compliance reporting",
 "Mobile security monitoring",
-"Cloud security integration";
+"
 ],
 benefits: [
 "Detect threats 90% faster",
 "Reduce false positives by 70%",
 "Improve response time by 80%",
 "Lower security costs by 50%",
-"Enhanced compliance posture";
+"
 ],
 useCases: [
 "Enterprise security operations",
@@ -729,14 +729,14 @@ useCases: [
 "Healthcare organizations",
 "Government agencies",
 "Critical infrastructure",
-"E-commerce platforms";
+"
 ],
 targetAudience: [
 "CISOs",
 "Security analysts",
 "IT managers",
 "Compliance officers",
-"Risk managers";
+"
 ],
 tags: ["Cybersecurity", "Threat Intelligence", "AI", "Machine Learning", "Incident Response", "Compliance"],
 estimatedDelivery: "5-7 weeks",
@@ -757,7 +757,7 @@ innovationLevel: "Advanced AI with real-time threat intelligence",
 uniqueValue: "First AI-powered platform combining threat detection with automated response",
 },
 
-// Smart City IoT Management Platform;
+/
 {
 id: "smart-city-iot-management",
 title: "Smart City IoT Management Platform",
@@ -776,14 +776,14 @@ features: [
 "Water quality monitoring",
 "Air quality tracking",
 "Noise pollution monitoring",
-"Citizen engagement portal";
+"
 ],
 benefits: [
 "Reduce traffic congestion by 35%",
 "Lower energy consumption by 25%",
 "Improve public safety by 40%",
 "Enhance citizen satisfaction",
-"Optimize resource allocation";
+"
 ],
 useCases: [
 "Municipal governments",
@@ -791,14 +791,14 @@ useCases: [
 "Transportation authorities",
 "Utility companies",
 "Public safety agencies",
-"Environmental agencies";
+"
 ],
 targetAudience: [
 "City managers",
 "Urban planners",
 "Transportation officials",
 "Utility managers",
-"Public safety directors";
+"
 ],
 tags: ["Smart Cities", "IoT", "Urban Planning", "Sustainability", "Public Services", "Infrastructure"],
 estimatedDelivery: "8-12 weeks",
@@ -819,7 +819,7 @@ innovationLevel: "Comprehensive IoT platform for urban infrastructure management
 uniqueValue: "First integrated platform managing all aspects of smart city operations",
 },
 
-// AI-Powered Healthcare Diagnostics;
+/
 {
 id: "ai-healthcare-diagnostics",
 title: "AI-Powered Healthcare Diagnostics Platform",
@@ -838,14 +838,14 @@ features: [
 "Drug interaction checking",
 "Symptom analysis",
 "Population health analytics",
-"Clinical trial support";
+"
 ],
 benefits: [
 "Improve diagnostic accuracy by 30%",
 "Reduce diagnosis time by 60%",
 "Lower healthcare costs by 25%",
 "Enhance patient outcomes",
-"Support clinical decision making";
+"
 ],
 useCases: [
 "Hospitals and clinics",
@@ -853,14 +853,14 @@ useCases: [
 "Primary care practices",
 "Specialty clinics",
 "Research institutions",
-"Telemedicine platforms";
+"
 ],
 targetAudience: [
 "Healthcare providers",
 "Radiologists",
 "Primary care physicians",
 "Medical researchers",
-"Healthcare administrators";
+"
 ],
 tags: ["AI", "Healthcare", "Medical Diagnostics", "Computer Vision", "Deep Learning", "Telemedicine"],
 estimatedDelivery: "6-8 weeks",
@@ -881,7 +881,7 @@ innovationLevel: "Advanced AI with medical domain expertise",
 uniqueValue: "First comprehensive AI platform for medical diagnostics and clinical support",
 },
 
-// Quantum-Safe Communication Platform;
+/
 {
 id: "quantum-safe-communication",
 title: "Quantum-Safe Communication Platform",
@@ -900,14 +900,14 @@ features: [
 "Compliance reporting",
 "Audit logging",
 "Multi-platform support",
-"Integration APIs";
+"
 ],
 benefits: [
 "Future-proof against quantum threats",
 "Enhance security by 200%",
 "Meet compliance requirements",
 "Protect sensitive communications",
-"Long-term security investment";
+"
 ],
 useCases: [
 "Government communications",
@@ -915,14 +915,14 @@ useCases: [
 "Healthcare organizations",
 "Defense contractors",
 "Research institutions",
-"Critical infrastructure";
+"
 ],
 targetAudience: [
 "Security officers",
 "IT managers",
 "Compliance officers",
 "Government agencies",
-"Financial institutions";
+"
 ],
 tags: ["Quantum Computing", "Cryptography", "Security", "Communications", "Compliance", "Future-Proof"],
 estimatedDelivery: "8-10 weeks",
@@ -944,4 +944,4 @@ uniqueValue: "First commercial platform implementing NIST-approved post-quantum 
 }
 ];
 
-export default ADVANCED_INNOVATIVE_SERVICES;
+export export default ADVANCED_INNOVATIVE_SERVICES;

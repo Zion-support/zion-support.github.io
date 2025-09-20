@@ -1,4 +1,4 @@
-import { FileText,, ShieldCheck,  } from 'lucide-react'
+import { FileText,,, ShieldCheck,,  } from 'lucide-react'
 interface ContractTypeCardsProps {
   onStandardClick: () => void,
 onSmartClick: () => void,

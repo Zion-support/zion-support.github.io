@@ -1,8 +1,8 @@
 ,"}
 )}),
-),"})";
-import React from 'react';
-import { Heart,  } from 'lucide-react'
+),"
+import import React from 'react';
+import { Heart,,  } from 'lucide-react'
 interface FavoriteButtonProps {
   itemId: string;
   className?: string,
@@ -32,11 +32,11 @@ onClick = {handleToggleFavorite}`
           isFavorited ? 'fill-current' : ''`
 }`}
       />    </button>
-  )};`
+  )}`
 className: {`w-4 h-4 transition-all duration-300 ${
           isFavorited ? 'fill-current' : '';`
 }`}
       />
-    </button>;) }
+    </button>) }
 '`
 }

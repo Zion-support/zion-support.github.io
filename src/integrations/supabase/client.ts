@@ -1,39 +1,39 @@
 
-// Mock Supabase client for development;
-// In production; this would be the actual Supabase client;
-import { createClient } from "@supabase/supabase-js";
-import { supabaseStorageAdapter } from "./safeStorageAdapter";
+/
+/ this would be the actual Supabase client;
+import { createClient } from "
+import { supabaseStorageAdapter } from "
 
 interface SupabaseClient {
 auth: {,
-signUp: (credentials: any) => Promise<any>, signIn: (credentials: any) => Promise<any>;,
+signUp: (credentials: any) => Promise<any>, signIn: (credentials: any) => Promise<any>,
 signOut: () => Promise<any>, user: () => any;,
 onAuthStateChange: (callback: any) => any,
-};
+}
 from: (table: string) => any; storage: {,
 from: (bucket: string) => any,
-};
+}
 }
 
-// Mock implementation;
+/
 const createMockSupabaseClient: any = (): SupabaseClient => ({
 auth: {,
 signUp: async (credentials: any) => {
 ;
-return { data: { user: { id: "1", email: credentials.email } }, error: null };
+return { data: { user: { id: "1", email: credentials.email } }, error: null }
 },
 signIn: async (credentials: any) => {
 
-return { data: { user: { id: "1", email: credentials.email } }, error: null };
+return { data: { user: { id: "1", email: credentials.email } }, error: null }
 },
 signOut: async () => {
 
-return { error: null };
+return { error: null }
 },
 user: () => ({ id: "1", email: "user@example.com" }),
 onAuthStateChange: (callback: any) => {
 
-return { data: { subscription: { unsubscribe: () => {} } } };
+return { data: { subscription: { unsubscribe: () => {} } } }
 },
 },
 from: (table: string) => ({
@@ -65,6 +65,6 @@ download: async (path: string) => ({ data: null; error: null }),
 remove: async (paths: string[]) => ({ data: null; error: null }),
 }),
 },
-});
+})
 
-export const supabase = createMockSupabaseClient();
+export const supabase = createMockSupabaseClient()

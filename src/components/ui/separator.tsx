@@ -1,4 +1,4 @@
-import React from "react";
+import React from "
 
 ,
 ,
@@ -15,5 +15,5 @@ export { Separator }
 </SeparatorPrimitive>,
 </typeof>,
 </typeof>,
-export { Separator };
-,;<//typeof><///typeof>;
+export { Separator }
+,;<//typeof><///typeof>

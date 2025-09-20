@@ -1,16 +1,16 @@
-import { useState,, useEffect,, ,  } from 'react';
-import { useRouter,  } from 'next/router', // Changed from react-router-dom,
-import { useFormik,, ,  } from 'formik';
+import import { useState,,, useEffect,,, ,,  } from 'react';
+import { useRouter,,  } from 'next/router', // Changed from react-router-dom,
+import import { useFormik,,, ,,  } from 'formik';
 import * as Yup from 'yup',
 import axios from 'axios',
-import Link from 'next/link';
-import { Input,, ,  } from '@/components/ui/input';
-import { Button,, ,  } from '@/components/ui/button';
-import { LoadingSpinner,, ,  } from '@/components/ui/enhanced-loading-states';
-import { Alert,, AlertDescription,, ,  } from '@/components/ui/alert';
-import { PasswordStrengthMeter,, ,  } from '@/components/PasswordStrengthMeter';
-import { AuthButtons,, ,  } from '@/components/AuthButtons';
-import { AlertCircle,, CheckCircle,, Mail,  } from 'lucide-react'
+import import Link from 'next/link';
+import import { Input,,, ,,  } from '@/components/ui/input';
+import import { Button,,, ,,  } from '@/components/ui/button';
+import import { LoadingSpinner,,, ,,  } from '@/components/ui/enhanced-loading-states';
+import import { Alert,,, AlertDescription,,, ,,  } from '@/components/ui/alert';
+import import { PasswordStrengthMeter,,, ,,  } from '@/components/PasswordStrengthMeter';
+import import { AuthButtons,,, ,,  } from '@/components/AuthButtons';
+import { AlertCircle,,, CheckCircle,,, Mail,,  } from 'lucide-react'
           </form>
           {!emailVerificationRequired && (
             <div className='mt-6'>
@@ -69,25 +69,25 @@ request: err.request ? 'Request made but no response': 'No request'
 }</div> </div> </AuthLayout>)
 }'"
 }
-import { useState,  } from "react"
-import { Link,, Navigate,, useNavigate,  } from "react-router-dom"
-import { useForm,, type,, UseFormReturn,  } from "react-hook-form"
-import { zodResolver,  } from "@hookform/resolvers/zod"
-import { z,  } from "zod"
-import { User,, Mail,, Lock,, Eye,, EyeOff,, Facebook,, Twitter,, Loader2,  } from "lucide-react"
-import { useAuth,  } from "@/hooks/useAuth"
-import { register,  } from "@/services/auth"
-import { toast,  } from "@/hooks/use-toast"
-import { Button,  } from "@/components/ui/button"
-import { Input,  } from "@/components/ui/input"
-import { Checkbox,  } from "@/components/ui/checkbox"
-import { Alert,, AlertDescription,  } from "@/components/ui/alert"
-import { PasswordStrengthMeter,  } from "@/components/PasswordStrengthMeter"
+import { useState,,  } from "react"
+import { Link,,, Navigate,,, useNavigate,,  } from "react-router-dom"
+import { useForm,,, type,,, UseFormReturn,,  } from "react-hook-form"
+import { zodResolver,,  } from "@hookform/resolvers/zod"
+import { z,,  } from "zod"
+import { User,,, Mail,,, Lock,,, Eye,,, EyeOff,,, Facebook,,, Twitter,,, Loader2,,  } from "lucide-react"
+import { useAuth,,  } from "@/hooks/useAuth"
+import { register,,  } from "@/services/auth"
+import { toast,,  } from "@/hooks/use-toast"
+import { Button,,  } from "@/components/ui/button"
+import { Input,,  } from "@/components/ui/input"
+import { Checkbox,,  } from "@/components/ui/checkbox"
+import { Alert,,, AlertDescription,,  } from "@/components/ui/alert"
+import { PasswordStrengthMeter,,  } from "@/components/PasswordStrengthMeter"
 import { Form,
 FormControl
-, , FormField,
+,, ,, FormField,
 FormItem
-, , FormLabel,
+,, ,, FormLabel,
 FormMessage,
  } from "@/components/ui/form"
 // Form validation schema,

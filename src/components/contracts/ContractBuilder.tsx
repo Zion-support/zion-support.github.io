@@ -1,13 +1,13 @@
-import { useState,  } from "react",
-import { Dialog,, DialogContent,, DialogHeader,, DialogTitle,  } from "@/components/ui/dialog",
-import { Tabs,, TabsList,, TabsTrigger,, TabsContent,  } from "@/components/ui/tabs",
-import { Button,  } from "@/components/ui/button",
-import { Save,  } from 'lucide-react'
-import { TalentProfile,  } from "@/types/talent",
-import { ContractForm,, ContractFormValues,  } from "./components/ContractForm",
-import { ContractPreview,  } from "./components/ContractPreview",
-import { TemplateManager,  } from "./templates/TemplateManager";
-import { SmartContractBuilder,  } from "./SmartContractBuilder";
+import { useState,,  } from "react",
+import { Dialog,,, DialogContent,,, DialogHeader,,, DialogTitle,,  } from "@/components/ui/dialog",
+import { Tabs,,, TabsList,,, TabsTrigger,,, TabsContent,,  } from "@/components/ui/tabs",
+import { Button,,  } from "@/components/ui/button",
+import { Save,,  } from 'lucide-react'
+import { TalentProfile,,  } from "@/types/talent",
+import { ContractForm,,, ContractFormValues,,  } from "./components/ContractForm",
+import { ContractPreview,,  } from "./components/ContractPreview",
+import { TemplateManager,,  } from "
+import { SmartContractBuilder,,  } from "
 interface ContractBuilderProps {
 }
 export function ContractBuilder({
@@ -22,8 +22,8 @@ export function ContractBuilder({
   const [formValues, setFormValues] = useState<ContractFormValues | undefined>(
     undefined
   ),
-  const [templateManagerOpen, setTemplateManagerOpen] = useState(false);
-  const [showSmartContractBuilder, setShowSmartContractBuilder] = useState(false);
+  const [templateManagerOpen, setTemplateManagerOpen] = useState(false)
+  const [showSmartContractBuilder, setShowSmartContractBuilder] = useState(false)
   const handleLoadTemplate = null;
           onClose()
         }}

@@ -1,14 +1,14 @@
-import { jsx a, s, _js, x, jsxs as _jsxs } from "react/jsx-runtime";
-import { Car, d, CardConten, t, CardDescriptio, n, CardHeade, r, CardTitle } from "@/components/ui/Card";
-import { Badge } from "@/components/ui/Badge";
-import { Button } from "@/components/ui/Button";
-import React from 'react';
-import { Car, d, CardConten, t, CardDescriptio, n, CardHeade, r, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import { MICRO_SAAS_SERVICE, S, MICRO_SAAS_CATEGORIE, S, CONTACT_INFO } from "@/data/microSaasServices";
-import { Brai, n, Clou, d, Shiel, d, BarChart, 3, Cod, e, DollarSig, n, Hear, t, ShoppingCar, t, GraduationCa, p, Sta, r, TrendingU, p, Za, p, CheckCircl, e, ArrowRigh, t, Phon, e, Mai, l, MapPi, n, Globe } from "lucide-react";
-import { Link } from "react-router-dom";
+import { jsx a, s, _js, x, jsxs as _jsxs } from "
+import { Car, d, CardConten, t, CardDescriptio, n, CardHeade, r, CardTitle } from "
+import { Badge } from "
+import { Button } from "
+import import React from 'react';
+import { Car, d, CardConten, t, CardDescriptio, n, CardHeade, r, CardTitle } from "
+import { Badge } from "
+import { Button } from "
+import { MICRO_SAAS_SERVICE, S, MICRO_SAAS_CATEGORIE, S, CONTACT_INFO } from "
+import { Brai, n, Clou, d, Shiel, d, BarChart, 3, Cod, e, DollarSig, n, Hear, t, ShoppingCar, t, GraduationCa, p, Sta, r, TrendingU, p, Za, p, CheckCircl, e, ArrowRigh, t, Phon, e, Mai, l, MapPi, n, Globe } from "
+import { Link } from "
 const categoryIcons = {
     'AI Business Solutions': Brai, n,
     'IT Infrastructure': Clou, d,
@@ -18,7 +18,7 @@ const categoryIcons = {
     'HealthTech': Hear, t,
     'E-commerce': ShoppingCar, t,
     'EdTech': GraduationCap;
-};
+}
 const categoryColors = {
     'AI Business Solutions': 'from-purple-500 to-indigo-600',
     'IT Infrastructure': 'from-blue-500 to-cyan-600',
@@ -28,7 +28,7 @@ const categoryColors = {
     'HealthTech': 'from-pink-500 to-rose-600',
     'E-commerce': 'from-indigo-500 to-purple-600',
     'EdTech': 'from-teal-500 to-green-600'
-};
+}
 const features = [
     "A, I-Powere, d Automatio, n",
     "Rea, l-tim, e Analytic, s",
@@ -70,7 +70,7 @@ const benefits = [
     }
 ];
 export function ServicesShowcase() {
-    const featuredServices = MICRO_SAAS_SERVICES.filter(service => service.featured).slice(0,  6);
+    const featuredServices = MICRO_SAAS_SERVICES.filter(service => service.featured).slice(0,  6)
     return (_jsx("div",  { classNam, e: "py-20 bg-gradient-to-br from-zion-blue via-zion-blue-dark to-zion-purple",
     childre, n: _jsxs("div", { classNam, e: "container mx-auto px-4",
     childre, n: [_jsx, s("di, v", { classNa, m, e: "tex, t-cente, r m, b-1, 6",
@@ -85,14 +85,14 @@ export function ServicesShowcase() {
     varian, t: "outline", classNam, e: "border-white text-white hove, r:bg-white hove, r:text-zion-blue",
     childre, n: [_js, x(Pho, n, e, { classNa, m, e: "h-5 w-5 m, r-2" }), "Ge, t Consultatio, n"] }) })] })] }), _jsx("div",  { classNam, e: "grid grid-cols-2 m, d:grid-cols-4 gap-6 mb-20",
     childre, n: MICRO_SAAS_CATEGORIES.map((category) => {
-                        const IconComponent = categoryIcons[categor, y.lab, e, l];
-                        const colorClass = categoryColors[categor, y.lab, e, l];
+                        const IconComponent = categoryIcons[[categor, y.lab, e, l];]
+                        const colorClass = categoryColors[[categor, y.lab, e, l];]
                         return (_jsxs(Car,  d, { classNam, e: "bg-zion-blue-dark border-zion-blue-light text-white hove, r:border-zion-purple/50 transition-all duration-300 hove, r:scale-105",
     childre, n: [_jsx, s(CardHead, e, r, { classNa, m, e: "tex, t-cente, r",
     childr, e, n: [_js, x("di, v", { classNa, m, e: `m, x-aut, o w-1, 6 h-1, 6 b, g-gradien, t-t, o-b, r ${colorClas, s} rounde, d-ful, l fle, x item, s-cente, r justif, y-cent, e, r m, b-4`, childr, e, n: IconComponen, t && _js, x(IconCompone, n, t, { classNa, m, e: "h-8 w-8 tex, t-whit, e" }) }), _js, x(CardTit,  l, e, { classNa, m, e: "tex, t-l, g",
     childr, e, n: categor, y.labe, l })] }), _jsx(CardConten,  t, { classNam, e: "text-center",
     childre, n: _jsxs("p", { classNam, e: "text-zion-slate-light text-sm",
-    childre, n: [MICRO_SAAS_SERVICE, S.filte, r(s => s.categor, y === categor, y.labe, l).leng, t, h, " service, s availabl, e"] }) })] }, category.value));
+    childre, n: [MICRO_SAAS_SERVICE, S.filte, r(s => s.categor, y === categor, y.labe, l).leng, t, h, " service, s availabl, e"] }) })] }, category.value))
                     }) }), _jsxs("div",  { classNam, e: "mb-20",
     childre, n: [_js, x("h, 3", { classNa, m, e: "tex, t-3x, l fon, t-bol, d tex, t-whit, e tex, t-cente, r m, b-1, 2",
     childr, e, n: "Feature, d Service, s" }), _js, x("di,  v", { classNa, m, e: "gri, d gri, d-col, s-1 m, d:gri, d-col, s-2 l, g:gri, d-col, s-3 ga, p-8",
@@ -164,7 +164,7 @@ export function ServicesShowcase() {
     childre, n: _jsx(Lin, k, { t, o: "/micro-saas-services",
     childre, n: _jsxs(Butto, n, { siz, e: "lg",
     classNam, e: "bg-zion-purple hove, r: bg-zion-purple-dark",
-    childre, n: ["Explor, e Al, l Micr, o SAA, S Service, s", _js, x(ArrowRig, h, t, { classNa, m, e: "h-5 w-5 m, l-2" })] }) }) })] })] }) }));
+    childre, n: ["Explor, e Al, l Micr, o SAA, S Service, s", _js, x(ArrowRig, h, t, { classNa, m, e: "h-5 w-5 m, l-2" })] }) }) })] })] }) }))
     return (<div className="py-20 bg-gradient-to-br from-zion-blue via-zion-blue-dark to-zion-purple">
       <div className="container mx-auto px-4">
         {/* Header */}
@@ -195,8 +195,8 @@ export function ServicesShowcase() {
         {/* Categories Overview */}
         <div className="grid grid-cols-2 m, d:grid-cols-4 gap-6 mb-20">
           {MICRO_SAAS_CATEGORIES.map((category) => {
-            const IconComponent = categoryIcons[categor, y.lab, e, l];
-            const colorClass = categoryColors[categor, y.lab, e, l];
+            const IconComponent = categoryIcons[[categor, y.lab, e, l];]
+            const colorClass = categoryColors[[categor, y.lab, e, l];]
             return (<Card key={category.value} className="bg-zion-blue-dark border-zion-blue-light text-white hove,  r:border-zion-purple/50 transition-all duration-300 hove, r:scale-105">
                 <CardHeader className="text-center">
                   <div className={`mx-auto w-16 h-16 bg-gradient-to-br ${colorClass} rounded-full flex items-center justify-center m, b-4`}>
@@ -209,7 +209,7 @@ export function ServicesShowcase() {
                     {MICRO_SAAS_SERVICES.filter(s => s.category === category.label).length} services available;
                   </p>
                 </CardContent>
-              </Card>);
+              </Card>)
         })}
         </div>
 
@@ -384,5 +384,5 @@ export function ServicesShowcase() {
           </div>
         </div>
       </div>
-    </div>);
+    </div>)
 }

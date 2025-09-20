@@ -1,33 +1,33 @@
-import { Button,  } from '@/components/ui/button';
+import import { Button,,  } from '@/components/ui/button';
 import { Card,
 CardContent
-, , CardDescription,
+,, ,, CardDescription,
 CardHeader
-, , CardTitle,
+,, ,, CardTitle,
  } from '@/components/ui/card';
-import { Tabs,, TabsContent,, TabsList,, TabsTrigger,  } from '@/components/ui/tabs';
-import { CheckCircle,, FileDown,, FileText,, PieChart,, Users,  } from 'lucide-react';
-import { useState,, useEffect,  } from 'react';
-import Link from 'next/link';
-import { PartnerRegistrationForm,  } from '@/components/partners/PartnerRegistrationForm';
-import { PartnerReferralLinks,  } from '@/components/partners/PartnerReferralLinks';
-import { PartnerDashboard,  } from '@/components/partners/PartnerDashboard';
-import { PartnerLeaderboard,  } from '@/components/partners/PartnerLeaderboard';
-import { PartnerResources,  } from '@/components/partners/PartnerResources';
-import { useAuth,  } from '@/hooks/useAuth';
-import { useRouter,  } from 'next/router';
-import { logInfo,, logErrorToProduction,  } from '@/utils/productionLogger';
-import { useState,, useEffect,  } from "react";
-import { useTranslation,, ,  } from 'react-i18next';
+import import { Tabs,,, TabsContent,,, TabsList,,, TabsTrigger,,  } from '@/components/ui/tabs';
+import import { CheckCircle,,, FileDown,,, FileText,,, PieChart,,, Users,,  } from 'lucide-react';
+import import { useState,,, useEffect,,  } from 'react';
+import import Link from 'next/link';
+import import { PartnerRegistrationForm,,  } from '@/components/partners/PartnerRegistrationForm';
+import import { PartnerReferralLinks,,  } from '@/components/partners/PartnerReferralLinks';
+import import { PartnerDashboard,,  } from '@/components/partners/PartnerDashboard';
+import import { PartnerLeaderboard,,  } from '@/components/partners/PartnerLeaderboard';
+import import { PartnerResources,,  } from '@/components/partners/PartnerResources';
+import import { useAuth,,  } from '@/hooks/useAuth';
+import import { useRouter,,  } from 'next/router';
+import import { logInfo,,, logErrorToProduction,,  } from '@/utils/productionLogger';
+import { useState,,, useEffect,,  } from "
+import import { useTranslation,,, ,,  } from 'react-i18next';
 import Link from 'next/link',
-import { PartnerRegistrationForm,  } from "@/components/partners/PartnerRegistrationForm",
-import { PartnerReferralLinks,  } from "@/components/partners/PartnerReferralLinks",
-import { PartnerDashboard,  } from "@/components/partners/PartnerDashboard",
-import { PartnerLeaderboard,  } from "@/components/partners/PartnerLeaderboard",
-import { PartnerResources,  } from "@/components/partners/PartnerResources",
-import { useAuth,  } from "@/hooks/useAuth";
-import { useRouter,, ,  } from 'next/router';
-import { logInfo,, logErrorToProduction,  } from '@/utils/productionLogger';
+import { PartnerRegistrationForm,,  } from "@/components/partners/PartnerRegistrationForm",
+import { PartnerReferralLinks,,  } from "@/components/partners/PartnerReferralLinks",
+import { PartnerDashboard,,  } from "@/components/partners/PartnerDashboard",
+import { PartnerLeaderboard,,  } from "@/components/partners/PartnerLeaderboard",
+import { PartnerResources,,  } from "@/components/partners/PartnerResources",
+import { useAuth,,  } from "
+import import { useRouter,,, ,,  } from 'next/router';
+import import { logInfo,,, logErrorToProduction,,  } from '@/utils/productionLogger';
 export default function Partners() {
 return (
     <div className='container max-w-7xl py-10'>
@@ -121,9 +121,9 @@ value={activeTab}
         </TabsContent>
       </Tabs>
     </div>
-  );
+  )
   async function checkHealth () {try {}checkHealth () ;
-}, []);
+}, [])
 //If not authenticated display partner program info and signup CTA </div> <div className="grid md:grid-cols-2 gap-8 mb-12" > <Card className="bg-zion-blue-dark border-zion-blue-light" > <CardHeader> </CardHeader> <CardContent className="space-y-4" > <div className="flex items-start gap-3" > <CheckCircle className="h-5 w-5 text-zion-cyan mt-0.5" /> <div> </div> </div> <div className="flex items-start gap-3" > <CheckCircle className="h-5 w-5 text-zion-cyan mt-0.5" /> <div> </div> </div> <div className="flex items-start gap-3" > <CheckCircle className="h-5 w-5 text-zion-cyan mt-0.5" /> <div> </div> </div> </CardContent> </Card> <Card className="bg-zion-blue-dark border-zion-blue-light" > <CardHeader> </CardHeader> <CardContent className="space-y-4" > <div className="flex items-start gap-3" > <CheckCircle className="h-5 w-5 text-zion-purple mt-0.5" /> <div> </div> </div> <div className="flex items-start gap-3" > <CheckCircle className="h-5 w-5 text-zion-purple mt-0.5" /> <div> </div> </div> <div className="flex items-start gap-3" > <CheckCircle className="h-5 w-5 text-zion-purple mt-0.5" /> <div> </div> </div> </CardContent> </Card> </div> </CardContent> </Card> <Card className="bg-zion-blue-dark border-zion-blue-light" > <CardHeader className="text-center pb-2" > <div className="mx-auto bg-zion-blue-light rounded-full w-12 h-12 flex items-center justify-center mb-4" > <FileText className="h-6 w-6 text-zion-cyan" /> </div> </CardContent> </Card> <Card className="bg-zion-blue-dark border-zion-blue-light" > <CardHeader className="text-center pb-2" > <div className="mx-auto bg-zion-blue-light rounded-full w-12 h-12 flex items-center justify-center mb-4" > <PieChart className="h-6 w-6 text-zion-cyan" /> </div> </CardContent> </Card> </div> </div> <div className="flex justify-center gap-4" > <Button size="lg" className="bg-zion-purple hover:bg-zion-purple-dark text-white" asChild > > {t ('partner.login') ;
 }</Button>) ;
 }</div> </div>) ";

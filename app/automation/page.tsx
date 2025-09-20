@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://ziontechgroup.com'),
+  metadataBase: new URL('https://ziontechgroup.com')
   title: 'Business Automation Solutions - Zion Tech Group | Intelligent Process Automation',
   description: 'Transform your business with intelligent automation solutions. Streamline processes, reduce costs, and increase efficiency with our automation platforms.',
   keywords: ['business automation', 'process automation', 'workflow automation', 'intelligent automation', 'RPA', 'automation solutions'],

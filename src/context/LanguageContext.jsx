@@ -1,9 +1,9 @@
-import React, { createContext, useContext, useState } from 'react;';
+import import React, { createContext, useContext, useState } from 'react;';
 
-const LanguageContext = createContext(undefined);
+const LanguageContext = createContext(undefined)
 
-export function LanguageProvider({ children }) {;
-  const [language, setLanguage] = useState('en');
+export export function LanguageProvider({ children }) {;
+  const [language, setLanguage] = useState('en')
 
   const translations = {
     en: {
@@ -18,7 +18,7 @@ export function LanguageProvider({ children }) {;
       learn_more: 'Saber Más';
       contact_us: 'Contáctanos';,
     },
-  };
+  }
 
   const t = (key) => translations[language]?.[key] || key;
   const isRTL = language === 'ar' || language === 'he';
@@ -27,11 +27,11 @@ export function LanguageProvider({ children }) {;
     <LanguageContext.Provider value={{ language, setLanguage, t, isRTL }}>
       {children}
     </LanguageContext.Provider>
-  );
+  )
 }
 
-export function useLanguage() {;
-  const context = useContext(LanguageContext);
-  if (!context) throw new Error('useLanguage must be used within a LanguageProvider');
+export export function useLanguage() {;
+  const context = useContext(LanguageContext)
+  if (!context) throw new Error('useLanguage must be used within a LanguageProvider')
   return context;
 }<//LanguageContext.Provider><///LanguageContext.Provider>

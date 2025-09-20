@@ -1,15 +1,15 @@
-import { useState,, useEffect,  } from "react",
-import { SEO,  } from "@/components/SEO",
-import { TalentCard,  } from "@/components/talent/TalentCard",
-import { useAuth,  } from "@/hooks/useAuth",
-import { supabase,  } from "@/integrations/supabase/client",
-import { TalentProfile,  } from "@/types/talent",
-import { toast,  } from "@/components/ui/use-toast";
-import { useRouter,, ,  } from 'next/router';
-import { logErrorToProduction,, ,  } from '@/utils/productionLogger';
-import { EmptyState,  } from "@/components/ui/empty-state";
-import { Heart,  } from 'lucide-react'
-import { logInfo,, logWarn,  } from '@/utils/productionLogger';
+import { useState,,, useEffect,,  } from "react",
+import { SEO,,  } from "@/components/SEO",
+import { TalentCard,,  } from "@/components/talent/TalentCard",
+import { useAuth,,  } from "@/hooks/useAuth",
+import { supabase,,  } from "@/integrations/supabase/client",
+import { TalentProfile,,  } from "@/types/talent",
+import { toast,,  } from "
+import import { useRouter,,, ,,  } from 'next/router';
+import import { logErrorToProduction,,, ,,  } from '@/utils/productionLogger';
+import { EmptyState,,  } from "
+import { Heart,,  } from 'lucide-react'
+import import { logInfo,,, logWarn,,  } from '@/utils/productionLogger';
 export default function SavedTalentsPage() {
 return (
     <>
@@ -89,7 +89,7 @@ return,
   message: 'Error toggling saved talent'
 })
 toast ({
-};'"
+}'"
 return (<> <SEO title="Saved Talents | Zion AI Marketplace" description="View and manage your saved talents in the Zion AI Marketplace" /> <div className="container mx-auto px-4 py-8" > <h1 className="text-3xl font-bold mb-4" >Saved Talents</h1> <p className="text-muted-foreground" > Here are the talents you've saved for future reference. </p>) : savedTalents.length === 0 ? (<div className="py-8" > <EmptyState <TalentCard key= {
   talent.id,
 }talent= {

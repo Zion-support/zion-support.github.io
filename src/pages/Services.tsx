@@ -1,5 +1,5 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import import React from 'react';
+import import { Link } from 'react-router-dom';
 const Services: React.FC = () => {
   const services = [
     {
@@ -157,6 +157,6 @@ to="/pricing"
         </div>
       </div>
     </div>
-  );
+  )
 }
-export default Services;
+export export default Services;

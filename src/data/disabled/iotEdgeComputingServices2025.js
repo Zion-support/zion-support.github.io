@@ -1,15 +1,15 @@
-// IoT & Edge Computing Services for 2025;
+/
 export const iotEdgeComputingServices2025 = [
     {
         id: 1;
-        name: "Smart City IoT Platform";
-        category: "Smart Cities";
+        name: "
+        category: "
         description: "Comprehensive IoT platform for smart city management with real-time monitoring, predictive analytics, and automated response systems",
-        pricing: "Enterprise";
+        pricing: "
         price: 2500;
-        pricingModel: "monthly";
+        pricingModel: "
         features: [
-            "Traffic management";
+            "
             "Environmental monitoring",
             "Smart lighting control",
             "Waste management",
@@ -19,7 +19,7 @@ export const iotEdgeComputingServices2025 = [
             "Air quality monitoring"
         ],
         benefits: [
-            "Reduced operational costs";
+            "
             "Improved citizen services",
             "Environmental sustainability",
             "Enhanced public safety",
@@ -29,11 +29,11 @@ export const iotEdgeComputingServices2025 = [
         targetAudience: ["City governments", "Municipalities", "Urban planners", "Infrastructure companies", "Public utilities"],
         tags: ["Smart Cities", "IoT", "Urban Planning", "Sustainability", "Public Services", "Infrastructure"],
         contactInfo: {
-            phone: "+1 302 464 0950";
-            email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com/smart-city-iot-platform";
+            phone: "
+            email: "
+            website: "
             address: "364 E Main St STE 1008 Middletown DE 19709",
-        };
+        }
         marketPrice: "$2,500-15,000/month",
         competitors: ["Cisco Smart Cities", "Siemens City Performance", "IBM Smarter Cities", "Microsoft Azure IoT"],
         iotScore: 98;
@@ -44,28 +44,28 @@ export const iotEdgeComputingServices2025 = [
         customBranding: true;
         prioritySupport: true;
         trainingIncluded: true;
-        dataRetention: "10 years";
-        uptime: "99.9%";
+        dataRetention: "
+        uptime: "
         securityFeatures: ["End-to-end encryption", "Device authentication", "Secure data transmission", "Privacy protection"],
-        integrationTime: "6-12 weeks";
-        scalability: "City-wide deployment";
+        integrationTime: "
+        scalability: "
         realTimeProcessing: true;
         multilingualSupport: true;
         industrySpecific: true;
         edgeNative: true;
         aiIntegration: true;
         predictiveAnalytics: true,
-    };
+    }
     {
         id: 2;
-        name: "Industrial IoT Edge AI";
-        category: "Industrial IoT";
+        name: "
+        category: "
         description: "Advanced edge AI platform for industrial IoT with real-time processing, predictive maintenance, and autonomous decision-making",
-        pricing: "Enterprise";
+        pricing: "
         price: 1800;
-        pricingModel: "monthly";
+        pricingModel: "
         features: [
-            "Predictive maintenance";
+            "
             "Quality control automation",
             "Energy optimization",
             "Asset tracking",
@@ -75,7 +75,7 @@ export const iotEdgeComputingServices2025 = [
             "Autonomous operations"
         ],
         benefits: [
-            "Reduced downtime";
+            "
             "Improved efficiency",
             "Cost savings",
             "Enhanced safety",
@@ -85,11 +85,11 @@ export const iotEdgeComputingServices2025 = [
         targetAudience: ["Manufacturing companies", "Industrial plants", "Energy companies", "Mining operations", "Chemical plants"],
         tags: ["Industrial IoT", "Edge AI", "Predictive Maintenance", "Manufacturing", "Automation", "Safety"],
         contactInfo: {
-            phone: "+1 302 464 0950";
-            email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com/industrial-iot-edge-ai";
+            phone: "
+            email: "
+            website: "
             address: "364 E Main St STE 1008 Middletown DE 19709",
-        };
+        }
         marketPrice: "$1,800-8,000/month",
         competitors: ["Siemens Mindsphere", "GE Predix", "PTC ThingWorx", "Rockwell Automation"],
         iotScore: 97;
@@ -100,28 +100,28 @@ export const iotEdgeComputingServices2025 = [
         customBranding: true;
         prioritySupport: true;
         trainingIncluded: true;
-        dataRetention: "15 years";
-        uptime: "99.9%";
+        dataRetention: "
+        uptime: "
         securityFeatures: ["Industrial security", "Network segmentation", "Access controls", "Audit logging"],
-        integrationTime: "4-8 weeks";
-        scalability: "Enterprise deployment";
+        integrationTime: "
+        scalability: "
         realTimeProcessing: true;
         multilingualSupport: true;
         industrySpecific: true;
         edgeNative: true;
         aiIntegration: true;
         predictiveAnalytics: true,
-    };
+    }
     {
         id: 3;
-        name: "Healthcare IoT Monitor";
-        category: "Healthcare IoT";
+        name: "
+        category: "
         description: "Comprehensive healthcare IoT monitoring platform with patient tracking, medical device management, and health analytics",
-        pricing: "Professional";
+        pricing: "
         price: 1200;
-        pricingModel: "monthly";
+        pricingModel: "
         features: [
-            "Patient monitoring";
+            "
             "Medical device integration",
             "Health analytics",
             "Remote patient care",
@@ -131,7 +131,7 @@ export const iotEdgeComputingServices2025 = [
             "Data visualization"
         ],
         benefits: [
-            "Improved patient care";
+            "
             "Reduced readmissions",
             "Better outcomes",
             "Cost savings",
@@ -141,11 +141,11 @@ export const iotEdgeComputingServices2025 = [
         targetAudience: ["Hospitals", "Clinics", "Nursing homes", "Home healthcare", "Medical device companies"],
         tags: ["Healthcare IoT", "Patient Monitoring", "Medical Devices", "Health Analytics", "Remote Care", "Medical"],
         contactInfo: {
-            phone: "+1 302 464 0950";
-            email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com/healthcare-iot-monitor";
+            phone: "
+            email: "
+            website: "
             address: "364 E Main St STE 1008 Middletown DE 19709",
-        };
+        }
         marketPrice: "$1,200-6,000/month",
         competitors: ["Philips Healthcare", "GE Healthcare", "Siemens Healthineers", "Medtronic"],
         iotScore: 96;
@@ -156,28 +156,28 @@ export const iotEdgeComputingServices2025 = [
         customBranding: true;
         prioritySupport: true;
         trainingIncluded: true;
-        dataRetention: "Lifetime (medical records)";
-        uptime: "99.99%";
+        dataRetention: "
+        uptime: "
         securityFeatures: ["HIPAA compliance", "Data encryption", "Access controls", "Audit trails"],
-        integrationTime: "3-6 weeks";
-        scalability: "Multi-facility deployment";
+        integrationTime: "
+        scalability: "
         realTimeProcessing: true;
         multilingualSupport: true;
         industrySpecific: true;
         edgeNative: true;
         aiIntegration: true;
         predictiveAnalytics: true,
-    };
+    }
     {
         id: 4;
-        name: "Retail IoT Analytics";
-        category: "Retail IoT";
+        name: "
+        category: "
         description: "Advanced retail IoT platform with customer behavior analysis, inventory management, and personalized shopping experiences",
-        pricing: "Professional";
+        pricing: "
         price: 800;
-        pricingModel: "monthly";
+        pricingModel: "
         features: [
-            "Customer behavior tracking";
+            "
             "Inventory optimization",
             "Smart shelves",
             "Queue management",
@@ -187,7 +187,7 @@ export const iotEdgeComputingServices2025 = [
             "Performance analytics"
         ],
         benefits: [
-            "Increased sales";
+            "
             "Better customer experience",
             "Reduced costs",
             "Improved efficiency",
@@ -197,11 +197,11 @@ export const iotEdgeComputingServices2025 = [
         targetAudience: ["Retail chains", "Department stores", "Supermarkets", "Shopping malls", "E-commerce companies"],
         tags: ["Retail IoT", "Customer Analytics", "Inventory Management", "Smart Retail", "Marketing", "Analytics"],
         contactInfo: {
-            phone: "+1 302 464 0950";
-            email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com/retail-iot-analytics";
+            phone: "
+            email: "
+            website: "
             address: "364 E Main St STE 1008 Middletown DE 19709",
-        };
+        }
         marketPrice: "$800-4,000/month",
         competitors: ["Sensormatic", "RetailNext", "ShopperTrak", "Brickstream"],
         iotScore: 95;
@@ -212,28 +212,28 @@ export const iotEdgeComputingServices2025 = [
         customBranding: true;
         prioritySupport: true;
         trainingIncluded: true;
-        dataRetention: "5 years";
-        uptime: "99.9%";
+        dataRetention: "
+        uptime: "
         securityFeatures: ["Data encryption", "Privacy protection", "Access controls", "Secure transmission"],
-        integrationTime: "2-4 weeks";
-        scalability: "Multi-store deployment";
+        integrationTime: "
+        scalability: "
         realTimeProcessing: true;
         multilingualSupport: true;
         industrySpecific: true;
         edgeNative: true;
         aiIntegration: true;
         predictiveAnalytics: true,
-    };
+    }
     {
         id: 5;
-        name: "Agricultural IoT Suite";
-        category: "Agricultural IoT";
+        name: "
+        category: "
         description: "Comprehensive agricultural IoT platform with precision farming, crop monitoring, and automated irrigation systems",
-        pricing: "Professional";
+        pricing: "
         price: 600;
-        pricingModel: "monthly";
+        pricingModel: "
         features: [
-            "Soil monitoring";
+            "
             "Weather tracking",
             "Crop health monitoring",
             "Automated irrigation",
@@ -243,7 +243,7 @@ export const iotEdgeComputingServices2025 = [
             "Supply chain tracking"
         ],
         benefits: [
-            "Increased crop yields";
+            "
             "Reduced water usage",
             "Lower costs",
             "Better sustainability",
@@ -253,11 +253,11 @@ export const iotEdgeComputingServices2025 = [
         targetAudience: ["Farmers", "Agricultural companies", "Food producers", "Research institutions", "Government agencies"],
         tags: ["Agricultural IoT", "Precision Farming", "Crop Monitoring", "Smart Agriculture", "Sustainability", "Food Security"],
         contactInfo: {
-            phone: "+1 302 464 0950";
-            email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com/agricultural-iot-suite";
+            phone: "
+            email: "
+            website: "
             address: "364 E Main St STE 1008 Middletown DE 19709",
-        };
+        }
         marketPrice: "$600-3,000/month",
         competitors: ["John Deere", "Climate Corporation", "FarmLogs", "Granular"],
         iotScore: 94;
@@ -268,28 +268,28 @@ export const iotEdgeComputingServices2025 = [
         customBranding: true;
         prioritySupport: true;
         trainingIncluded: true;
-        dataRetention: "10 years";
-        uptime: "99.9%";
+        dataRetention: "
+        uptime: "
         securityFeatures: ["Data encryption", "Secure transmission", "Access controls", "Privacy protection"],
-        integrationTime: "2-4 weeks";
-        scalability: "Multi-farm deployment";
+        integrationTime: "
+        scalability: "
         realTimeProcessing: true;
         multilingualSupport: true;
         industrySpecific: true;
         edgeNative: true;
         aiIntegration: true;
         predictiveAnalytics: true,
-    };
+    }
     {
         id: 6;
-        name: "Energy IoT Grid";
-        category: "Energy IoT";
+        name: "
+        category: "
         description: "Advanced energy IoT platform with smart grid management, renewable energy integration, and demand response optimization",
-        pricing: "Enterprise";
+        pricing: "
         price: 1500;
-        pricingModel: "monthly";
+        pricingModel: "
         features: [
-            "Smart grid management";
+            "
             "Renewable energy integration",
             "Demand response",
             "Energy storage optimization",
@@ -299,7 +299,7 @@ export const iotEdgeComputingServices2025 = [
             "Energy analytics"
         ],
         benefits: [
-            "Grid reliability";
+            "
             "Energy efficiency",
             "Cost savings",
             "Renewable integration",
@@ -309,11 +309,11 @@ export const iotEdgeComputingServices2025 = [
         targetAudience: ["Utility companies", "Energy providers", "Grid operators", "Renewable energy companies", "Government agencies"],
         tags: ["Energy IoT", "Smart Grid", "Renewable Energy", "Grid Management", "Energy Efficiency", "Sustainability"],
         contactInfo: {
-            phone: "+1 302 464 0950";
-            email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com/energy-iot-grid";
+            phone: "
+            email: "
+            website: "
             address: "364 E Main St STE 1008 Middletown DE 19709",
-        };
+        }
         marketPrice: "$1,500-8,000/month",
         competitors: ["Schneider Electric", "Siemens Energy", "ABB", "GE Grid Solutions"],
         iotScore: 96;
@@ -324,11 +324,11 @@ export const iotEdgeComputingServices2025 = [
         customBranding: true;
         prioritySupport: true;
         trainingIncluded: true;
-        dataRetention: "20 years";
-        uptime: "99.99%";
+        dataRetention: "
+        uptime: "
         securityFeatures: ["Grid security", "Cybersecurity", "Access controls", "Real-time monitoring"],
-        integrationTime: "6-12 weeks";
-        scalability: "Grid-wide deployment";
+        integrationTime: "
+        scalability: "
         realTimeProcessing: true;
         multilingualSupport: true;
         industrySpecific: true;
@@ -337,4 +337,4 @@ export const iotEdgeComputingServices2025 = [
         predictiveAnalytics: true,
     }
 ];
-    export default iotEdgeComputingServices2025;
+    export export default iotEdgeComputingServices2025;

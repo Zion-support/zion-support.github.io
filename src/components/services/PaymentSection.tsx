@@ -1,9 +1,9 @@
-import { MapPin,  } from 'lucide-react'
-import { PaymentButton,  } from "@/components/transactions/PaymentButton",
-import { CountryPricing,  } from "@/data/onsiteServicePricing";
-import { toast,  } from "@/hooks/use-toast";
+import { MapPin,,  } from 'lucide-react'
+import { PaymentButton,,  } from "@/components/transactions/PaymentButton",
+import { CountryPricing,,  } from "
+import { toast,,  } from "
 interface PaymentSectionProps {
-  selectedCountry: CountryPricing,
+  selectedCountry: CountryPricing;
 export function PaymentSection({ selectedCountry }: PaymentSectionProps) {
   // Handle successful payment,
 return (

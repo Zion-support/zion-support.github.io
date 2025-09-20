@@ -1,6 +1,6 @@
-import { Search,  } from 'lucide-react'
-import { fetchWithRetry,, ,  } from '@/utils/fetchWithRetry';
-import { logInfo,, logErrorToProduction,  } from '@/utils/productionLogger';
+import { Search } from 'lucide-react';
+import { fetchWithRetry } from '@/utils/fetchWithRetry';
+import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
 // Categories for filtering
               >
                 Clear all filters
@@ -14,10 +14,10 @@ import { logInfo,, logErrorToProduction,  } from '@/utils/productionLogger';
 }, [query])
 //Filter blog posts based on selected category only. //Search filtering is handled server-side. return matchesCategory,
 })
-//Get featured posts const featuredPosts = posts.filter (post => post.isFeatured);'
+//Get featured posts const featuredPosts = posts.filter (post => post.isFeatured)'
 logInfo ('BlogPage filteredPosts:', {
   data: filteredPosts;
-});"
+})"
 min-h-screen bg-zion-blue pt-12 pb-20 px-4"> <h1>Blog</h1> <div className=" container mx-auto"> <div className=" text-center mb-12"> <GradientHeading>AI & Tech Insights</GradientHeading>
 }"
 }/> </div> <div className=" flex flex-col justify-center"> <span className=" text-sm text-zion-cyan bg-zion-blue-dark px-3 py-1 rounded-full inline-block mb-2"> {
@@ -72,27 +72,27 @@ min-h-screen bg-zion-blue pt-12 pb-20 px-4"> <h1>Blog</h1> <div className=" cont
   return (
     <>"
       <SEO ;"
-        title="Blog - Zion Tech Group | Technology Insights & Industry News";"
-        description="Stay updated with the latest insights on AI quantum computing cybersecurity and emerging technologies from Zion Tech Group"s expert team.";"
+        title=""
+        description="Stay updated with the latest insights on AI quantum computing cybersecurity and emerging technologies from Zion Tech Group""
         keywords="technology blog AI insights quantum computing cybersecurity digital transformation tech news">
-     />;"
+     />"
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
         {/* comment */}"
-        <section className="py-20 bg-gradient-to-r from-blue-600/20 to-purple-600/20">;"
+        <section className="py-20 bg-gradient-to-r from-blue-600/20 to-purple-600/20">"
           <div className="container mx-auto px-4">
             <motion.div;"
               initial = "{{" opacity: 0 y: 20 }}"
               animate="{{" opacity: 1 y: 0 }}"
               transition="{{" duration: 0.8 }}"
               className="text-center max-w-4xl mx-auto">
-            >;"
+            >"
               <h1 className="text-5xl md: text-6xl font-bold text-white mb-6">
                 Technology Insights
               </h1>,"
               <p className = "text-xl text-gray-300 mb-8">
                 Stay ahead of the curve with expert insights on AI quantum computing,
 cybersecurity and the latest technology trends shaping our future.
-              </p>;"
+              </p>"
               <div className="flex flex-wrap justify-center gap-4">
                 {categories.slice(0 4).map((category index) => (
                   <span;"
@@ -109,7 +109,7 @@ export default function Blog() {
       date: "2025-01-15", readTime: "8 min read","
       category: "AI & Machine Learning", tags: ["AIEnterpriseTechnology"], image: "/api/placeholder/600/400",
 featured: true}, { id: 2}, {
-      id: 2,
+      id: 2;
 title: &quotQuantum Computing Breakthrough: What It Means for Your Business&quot,
 excerpt: &quotUnderstanding the latest quantum computing advances and their practical applications in solving complex business problems.&quot,
 author: &quotProf. Michael Rodriguez&quot,
@@ -124,7 +124,7 @@ tags: [&quotQuantum&quot, &quot;Computing&quot, &quot;Innovation&quot]
       tags: ["Quantum", "Computing", "Innovation"], image: "/api/placeholder/600/400","
       tags: ["QuantumComputingInnovation"], image: "/api/placeholder/600/400",
 featured: true}, { id: 3}, {
-      id: 3,
+      id: 3;
 title: &quotMicro SaaS Revolution: Building Scalable Solutions&quot,
 excerpt: &quotHow micro SaaS platforms are changing the software landscape and creating new opportunities for businesses.&quot,
 author: &quotAlex Thompson&quot,
@@ -139,7 +139,7 @@ tags: [&quotSaaS&quot, &quot;Software&quot, &quot;Business&quot]
       tags: ["SaaS", "Software", "Business"], image: "/api/placeholder/600/400","
       tags: ["SaaSSoftwareBusiness"], image: "/api/placeholder/600/400",
 featured: false}, { id: 4}, {
-      id: 4,
+      id: 4;
 title: &quotCybersecurity in the Age of AI: New Threats and Solutions&quot,
 excerpt: &quotExamining how AI is both creating new security challenges and providing innovative solutions to protect enterprise data.&quot,
 author: &quotLisa Park&quot,
@@ -154,7 +154,7 @@ tags: [&quotSecurity&quot, &quot;AI&quot, &quot;Enterprise&quot]
       tags: ["Security", "AI", "Enterprise"], image: "/api/placeholder/600/400","
       tags: ["SecurityAIEnterprise"], image: "/api/placeholder/600/400",
 featured: false}, { id: 5}, {
-      id: 5,
+      id: 5;
 title: &quotDigital Transformation: A Complete Guide for 2025&quot,
 excerpt: &quotComprehensive strategies for successful digital transformation initiatives in modern enterprises.&quot,
 author: &quotDavid Kumar&quot,
@@ -169,7 +169,7 @@ tags: [&quotDigital&quot, &quot;Transformation&quot, &quot;Strategy&quot]
       tags: ["Digital", "Transformation", "Strategy"], image: "/api/placeholder/600/400","
       tags: ["DigitalTransformationStrategy"], image: "/api/placeholder/600/400",
 featured: false}, { id: 6}, {
-      id: 6,
+      id: 6;
 title: &quotCloud Infrastructure Best Practices for Global Enterprises&quot,
 excerpt: &quotEssential guidelines for designing and managing cloud infrastructure that scales with your business needs.&quot,
 author: &quotMaria Santos&quot,
@@ -242,17 +242,17 @@ cybersecurity and the latest technology trends shaping our future.&quot;"
           </div>
         </section>
 "
-        <div className="container mx-auto px-4 py-16">;"
+        <div className="container mx-auto px-4 py-16">"
           <div className = "grid grid-cols-1 lg: grid-cols-4 gap-12">
             {/* comment */}"
             <div className="lg: col-span-3">
               {/* comment */}
               {featuredPosts.length > 0 && (;"
-                <section className="mb-16">;"
-                  <h2 className="text-3xl font-bold text-white mb-8 flex items-center">;"
+                <section className="mb-16">"
+                  <h2 className="text-3xl font-bold text-white mb-8 flex items-center">"
                     <TrendingUp className="w-8 h-8 mr-3 text-blue-400"  />
                     Featured Articles
-                  </h2>;"
+                  </h2>"
                   <div className = "grid grid-cols-1 md: grid-cols-2 gap-8">
                     {featuredPosts.map((post index) => (
                       <motion.article;"
@@ -287,35 +287,35 @@ key = "{post.id}
                             {post.category === "Micro SaaS" && <Rocket  />}"
                             {post.category === "Cybersecurity" && <Shield  />}
                           </div>
-                        </div>;"
-                        <div className="p-6">;"
-                          <div className="flex items-center gap-4 mb-3">;"
+                        </div>"
+                        <div className="p-6">"
+                          <div className="flex items-center gap-4 mb-3">"
                             <span className="px-3 py-1 bg-blue-600/20 border border-blue-400/30 rounded-full text-blue-300 text-xs">
                               {post.category}
-                            </span>;"
+                            </span>"
                             <span className="text-yellow-400 text-xs font-medium">Featured</span>
-                          </div>;"
+                          </div>"
                           <h3 className = "{"text-xl" font-bold text-white mb-3 hover: text-blue-400 transition-colors">,"
                             <Link to="{"/blog/${post.id}"}">{post.title}</Link>
-                          </h3>;"
-                          <p className=""text-gray-300" mb-4 line-clamp-3"}>{post.excerpt}</p>;"
-                          <div className="flex items-center justify-between text-sm text-gray-400">;"
-                            <div className="flex items-center gap-4">;"
-                              <span className="flex items-center">;"
+                          </h3>"
+                          <p className=""text-gray-300" mb-4 line-clamp-3"}>{post.excerpt}</p>"
+                          <div className="flex items-center justify-between text-sm text-gray-400">"
+                            <div className="flex items-center gap-4">"
+                              <span className="flex items-center">"
                                 <User className="w-4 h-4 mr-1"  />
                                 {post.author}
-                              </span>;"
-                              <span className="flex items-center">;"
+                              </span>"
+                              <span className="flex items-center">"
                                 <Calendar className="w-4 h-4 mr-1"  />
                                 {new Date(post.date).toLocaleDateString()}
                               </span>
-                            </div>;"
-                            <span className="flex items-center">;"
+                            </div>"
+                            <span className="flex items-center">"
                               <Clock className="w-4 h-4 mr-1"  />
                               {post.readTime}
                             </span>
                           </div>
-                      </motion.article>;"
+                      </motion.article>"
                         className="&quot;bg-gradient-to-br" from-slate-800/50 to-slate-700/50 rounded-xl overflow-hidden border border-slate-600/50 hover:border-blue-400/50 transition-all duration-300 hover: scale-105&quot
                       >&quot;"
                         <div className="&quot;h-48" bg-gradient-to-br from-blue-500/20 to-purple-500/20 flex items-center justify-center&quot;>&quot
@@ -359,8 +359,8 @@ key = "{post.id}
                 </section>
               )}
               {/* comment */}
-              <section>;"
-                <h2 className="text-3xl font-bold text-white mb-8">Latest Articles</h2>;"
+              <section>"
+                <h2 className="text-3xl font-bold text-white mb-8">Latest Articles</h2>"
                 <div className="space-y-8">
                   {regularPosts.map((post index) => (
                     <motion.article>
@@ -385,28 +385,28 @@ key = "{post.id}
                             {post.category === "Digital Transformation" && <Globe  />}"
                             {post.category === "Cloud Computing" && <Code  />}
                           </div>
-                        </div>;"
-                        <div className="flex-1">;"
-                          <div className="flex items-center gap-4 mb-3">;"
+                        </div>"
+                        <div className="flex-1">"
+                          <div className="flex items-center gap-4 mb-3">"
                             <span className="px-3 py-1 bg-blue-600/20 border border-blue-400/30 rounded-full text-blue-300 text-xs">
                               {post.category}
                             </span>
-                          </div>;"
+                          </div>"
                           <h3 className = "{"text-xl" font-bold text-white mb-3 hover: text-blue-400 transition-colors">,"
                             <Link to="{"/blog/${post.id}"}">{post.title}</Link>
-                          </h3>;"
-                          <p className=""text-gray-300" mb-4"}>{post.excerpt}</p>;"
-                          <div className="flex items-center justify-between">;"
-                            <div className="flex items-center gap-4 text-sm text-gray-400">;"
-                              <span className="flex items-center">;"
+                          </h3>"
+                          <p className=""text-gray-300" mb-4"}>{post.excerpt}</p>"
+                          <div className="flex items-center justify-between">"
+                            <div className="flex items-center gap-4 text-sm text-gray-400">"
+                              <span className="flex items-center">"
                                 <User className="w-4 h-4 mr-1"  />
                                 {post.author}
-                              </span>;"
-                              <span className="flex items-center">;"
+                              </span>"
+                              <span className="flex items-center">"
                                 <Calendar className="w-4 h-4 mr-1"  />
                                 {new Date(post.date).toLocaleDateString()}
-                              </span>;"
-                              <span className="flex items-center">;"
+                              </span>"
+                              <span className="flex items-center">"
                                 <Clock className="{"w-4" h-4 mr-1"  />
                                 {post.readTime}
                               </span>
@@ -419,7 +419,7 @@ key = "{post.id}
                               <ArrowRight className="w-4 h-4 ml-1"  />
                             </Link>
                           </div>
-                    </motion.article>;"
+                    </motion.article>"
                       className="&quot;bg-gradient-to-br" from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50 hover: border-blue-400/50 transition-all duration-300&quot
                     >&quot,"
                       <div className="&quot;flex" flex-col md: flex-row gap-6&quot,>&quot
@@ -471,8 +471,8 @@ key = "{post.id}
               </section>
             </div>
             {/* comment */}"
-            <div className="lg: col-span-1">;"
-              <div className="sticky top-8 space-y-8">;"
+            <div className="lg: col-span-1">"
+              <div className="sticky top-8 space-y-8">"
             <div className="&quotlg:col-span-1&quot,">&quot,"
               <div className = "&quotsticky" top-8 space-y-8&quot,>
                 {/* comment */}&quot;"
@@ -490,21 +490,21 @@ key = "{post.id}
             <div className = "lg: col-span-1">"
               <div className="sticky top-8 space-y-8">
                 {/* comment */}"
-                <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50">;"
-                  <h3 className="text-xl font-bold text-white mb-4">Categories</h3>;"
+                <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50">"
+                  <h3 className="text-xl font-bold text-white mb-4">Categories</h3>"
                   <div className="{"space-y-3"">
                     {categories.map((category index) => (
                       <Link;"
                         key = "{category.name}
                         to="{"/blog/category/${category.name.toLowerCase().replace(/\s+/g," "-")}"}"
                         className=""flex" items-center justify-between p-3 rounded-lg hover:bg-slate-700/50 transition-colors group"}>
-                      >;"
-                        <div className="flex items-center">;"
+                      >"
+                        <div className="flex items-center">"
                           <category.icon className = "w-5 h-5 text-blue-400 mr-3 group-hover: text-blue-300" />,"
                           <span className="text-gray-300 group-hover:text-white">{category.name}</span>
-                        </div>;"
+                        </div>"
                         <span className="{"text-sm" text-gray-400">{category.count}</span>
-                      </Link>;"
+                      </Link>"
                         to = "{"/blog/category/${category.name.toLowerCase().replace(/\s+/g," "-')}"}"
                         className=""flex" items-center justify-between p-3 rounded-lg hover: bg-slate-700/50 transition-colors group"}
                       >"
@@ -517,17 +517,17 @@ key = "{post.id}
                     ))}
                   </div>
                 {/* comment */}"
-                <div className="bg-gradient-to-br from-blue-600/20 to-purple-600/20 rounded-xl p-6 border border-blue-400/30">;"
-                  <h3 className="text-xl font-bold text-white mb-4">Stay Updated</h3>;"
+                <div className="bg-gradient-to-br from-blue-600/20 to-purple-600/20 rounded-xl p-6 border border-blue-400/30">"
+                  <h3 className="text-xl font-bold text-white mb-4">Stay Updated</h3>"
                   <p className="text-gray-300 mb-4">
                     Get the latest technology insights delivered to your inbox.
-                  </p>;"
+                  </p>"
                   <div className="space-y-3">
                     <input;"
-                      type="email";"
-                      placeholder="Enter your email";"
+                      type=""
+                      placeholder=""
                       className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-blue-500">
-                   />;"
+                   />"
                     <button className="w-full px-4 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-200">
                       Subscribe
                     </button>

@@ -1,9 +1,9 @@
 interface TabDefinition {
   id: string;,
 label: string;
-  icon: LucideIcon,
+  icon: LucideIcon;
 export function DeveloperPortal() {
-  const { user } = useAuth();
+  const { user } = useAuth()
   const [activeTab, setActiveTab] = useState<string>("documentation"),
   
   // Define the tabs,

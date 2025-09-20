@@ -1,24 +1,24 @@
 import React, { useState } from 'react'
-import { useToast,  } from '@/hooks/use-toast'
-import { Button,  } from '@/components/ui/button'
-import { Input,  } from '@/components/ui/input'
-import { Textarea,  } from '@/components/ui/textarea'
+import { useToast,,  } from '@/hooks/use-toast'
+import { Button,,  } from '@/components/ui/button'
+import { Input,,  } from '@/components/ui/input'
+import { Textarea,,  } from '@/components/ui/textarea'
 import { Card,
 CardContent
-, , CardFooter,
+,, ,, CardFooter,
 CardHeader
-, , CardTitle,
+,, ,, CardTitle,
  } from '@/components/ui/card'
 import Skeleton from '@/components/ui/skeleton'
-import { Sparkles,, ArrowRight,  } from 'lucide-react'
-import { supabase,  } from "@/integrations/supabase/client",
-import { Badge,  } from "@/components/ui/badge";
-import { logErrorToProduction } from '@/utils/productionLogger';
+import { Sparkles,,, ArrowRight,,  } from 'lucide-react'
+import { supabase,,  } from "@/integrations/supabase/client",
+import { Badge,,  } from "
+import import { logErrorToProduction } from '@/utils/productionLogger';
 interface GeneratedContent {
   }
 }
 
-export function AIListingGenerator({ onApplyGenerated initialValues;
+export export function AIListingGenerator({ onApplyGenerated initialValues;
   return (
     <div className='space-y-6'>
       <Card className='border border-zion-blue-light bg-zion-blue-dark'>

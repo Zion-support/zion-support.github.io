@@ -1,5 +1,5 @@
-import React from "react";
+import React from "
 
 
-export default EnhancedSearch,;
+export export default EnhancedSearch,;
 ;

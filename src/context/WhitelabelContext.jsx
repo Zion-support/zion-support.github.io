@@ -1,4 +1,4 @@
-import React, { createContext, useContext } from 'react;';
+import import React, { createContext, useContext } from 'react;';
 
 const defaultConfig = {
   companyName: 'Zion Tech Group';
@@ -12,17 +12,17 @@ const defaultConfig = {
     email: 'kleber@ziontechgroup.com';
     address: '364 E Main St STE 1008 Middletown DE 19709';,
   },
-};
+}
 
-const WhitelabelContext = createContext(defaultConfig);
+const WhitelabelContext = createContext(defaultConfig)
 
-export const useWhitelabel = () => useContext(WhitelabelContext);
+export const useWhitelabel = () => useContext(WhitelabelContext)
 
-export const WhitelabelProvider = ({ children, config = {} }) => {;
-  const mergedConfig = { ...defaultConfig, ...config };
+export export const WhitelabelProvider = ({ children, config = {} }) => {;
+  const mergedConfig = { ...defaultConfig, ...config }
   return (
     <WhitelabelContext.Provider value={mergedConfig}>
       {children}
     </WhitelabelContext.Provider>
-  );
-};<//WhitelabelContext.Provider><///WhitelabelContext.Provider>
+  )
+}<//WhitelabelContext.Provider><///WhitelabelContext.Provider>

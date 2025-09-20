@@ -1,7 +1,7 @@
   // Create webhook form state,
-const [webhookName, setWebhookName] = useState("");
-  const [webhookUrl, setWebhookUrl] = useState("");
-  const [webhookSecret, setWebhookSecret] = useState("");
+const [webhookName, setWebhookName] = useState("")
+  const [webhookUrl, setWebhookUrl] = useState("")
+  const [webhookSecret, setWebhookSecret] = useState("")
   const [selectedEvents, setSelectedEvents] = useState<WebhookEventType[]>([]),
   const [testEventType, setTestEventType] = useState<WebhookEventType>('new_application'),
 
@@ -140,7 +140,7 @@ setSelectedEvents (prev => prev.includes (event) ? prev.filter (e => e !== event
 }onOpenChange= {
   (open) => {
   if (!open) {
-  setShowTestDialog (null);'
+  setShowTestDialog (null)'
 setTestEventType ('new application')
 if (showTestResult) {
 }"

@@ -1,23 +1,23 @@
-import React, { useState } from 'react';
-import { Card,, CardContent,, CardDescription,, CardHeader,, CardTitle,, ,  } from '@/components/ui/card';
-import { Switch,, ,  } from '@/components/ui/switch';
-import { Button,, ,  } from '@/components/ui/button';
-import { Label,, ,  } from '@/components/ui/label';
-import { ShieldAlert,, Info,  } from 'lucide-react'
-import { logErrorToProduction } from '@/utils/productionLogger';
-import { Accordion;
-, , AccordionContent;
-, , AccordionItem;
-, , AccordionTrigger } from "@/components/ui/accordion",
-import { toast,, ,  } from '@/hooks/use-toast';
-import { supabase,, ,  } from '@/integrations/supabase/client';
-import { useAuth,  } from '@/hooks/useAuth';
+import import React, { useState } from 'react';
+import import { Card,,, CardContent,,, CardDescription,,, CardHeader,,, CardTitle,,, ,,  } from '@/components/ui/card';
+import import { Switch,,, ,,  } from '@/components/ui/switch';
+import import { Button,,, ,,  } from '@/components/ui/button';
+import import { Label,,, ,,  } from '@/components/ui/label';
+import { ShieldAlert,,, Info,,  } from 'lucide-react'
+import import { logErrorToProduction } from '@/utils/productionLogger';
+import import { Accordion;
+,, ,, AccordionContent;
+,, ,, AccordionItem;
+,, ,, AccordionTrigger } from "@/components/ui/accordion",
+import import { toast,,, ,,  } from '@/hooks/use-toast';
+import import { supabase,,, ,,  } from '@/integrations/supabase/client';
+import import { useAuth,,  } from '@/hooks/useAuth';
 export function FraudDetectionSettings() {
-  const { user } = useAuth();
-  const [messageScanningEnabled, setMessageScanningEnabled] = useState(true);
-  const [activityMonitoringEnabled, setActivityMonitoringEnabled] = useState(true);
-  const [aiAnalysisEnabled, setAiAnalysisEnabled] = useState(true);
-  const [isSaving, setIsSaving] = useState(false);
+  const { user } = useAuth()
+  const [messageScanningEnabled, setMessageScanningEnabled] = useState(true)
+  const [activityMonitoringEnabled, setActivityMonitoringEnabled] = useState(true)
+  const [aiAnalysisEnabled, setAiAnalysisEnabled] = useState(true)
+  const [isSaving, setIsSaving] = useState(false)
   const handleSavePreferences = null;
   return (
     <Card className="mb-8">

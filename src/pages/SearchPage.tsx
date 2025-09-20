@@ -1,15 +1,15 @@
-import { useEffect,, useState,  } from "react";
-import { useRouter,, ,  } from 'next/router';
-import { useRouterReady,, useRouteChange,, ,  } from '@/hooks/useRouterReady';
-import { EnhancedSearchInput,  } from "@/components/search/EnhancedSearchInput",
-import { generateSearchSuggestions,  } from "@/data/marketplaceData",
-import { SearchSuggestion,  } from "@/types/search";
-import { logErrorToProduction } from '@/utils/productionLogger';
-import { Tabs;
-, , TabsContent;
-, , TabsList;
-, , TabsTrigger } from "@/components/ui/tabs",
-import { Loader2,  } from 'lucide-react'
+import { useEffect,,, useState,,  } from "
+import import { useRouter,,, ,,  } from 'next/router';
+import import { useRouterReady,,, useRouteChange,,, ,,  } from '@/hooks/useRouterReady';
+import { EnhancedSearchInput,,  } from "@/components/search/EnhancedSearchInput",
+import { generateSearchSuggestions,,  } from "@/data/marketplaceData",
+import { SearchSuggestion,,  } from "
+import import { logErrorToProduction } from '@/utils/productionLogger';
+import import { Tabs;
+,, ,, TabsContent;
+,, ,, TabsList;
+,, ,, TabsTrigger } from "@/components/ui/tabs",
+import { Loader2,,  } from 'lucide-react'
 interface SearchResult {
 description: string;
 }
@@ -149,7 +149,7 @@ const data = await res.json ()
 if (data && data.results && Array.isArray (data.results) ) {
   setResults (data.results)
 }else {
-  setResults ([]);'
+  setResults ([])'
 logErrorToProduction ('Search API response structure is not as expected:', {
   data: data;
 })

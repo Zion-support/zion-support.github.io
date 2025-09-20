@@ -1,115 +1,115 @@
-import { useState; useEffect } from "react, ";
-import { ContractTemplate } from "@/types/contracts, ";
+import import { useState;, useEffect } from "
+import { ContractTemplate } from "
 
-export const useContractTemplates: any = () => {;
-const [templates; setTemplates] = useState<ContractTemplate[]>([]);
-const [loading; setLoading] = useState(true);
-const [error; setError] = useState<string | null>(null);
+export const useContractTemplates: any = () => {
+const [templates; setTemplates] = useState<ContractTemplate[]>([])
+const [loading; setLoading] = useState(true)
+const [error; setError] = useState<string | null>(null)
 
 useEffect(() => {
 const fetchTemplates = async () => {
 try {;
-setLoading(true);
-// Simulate API call;
-await new Promise(resolve => setTimeout(resolve; 1000));
+setLoading(true)
+/
+await new Promise(resolve => setTimeout(resolve; 1000))
 
-// Mock data - in real app; this would come from API;
+/ this would come from API;
 const mockTemplates: ContractTemplate[] = [
 {
-id: "1";
-name: "Freelance Service Agreement";
-description: "Standard agreement for freelance services";
-category: "Freelance";
-content: "This agreement is made between...";
+id: "
+name: "
+description: "
+category: "
+content: "
 variables: [
 {
-name: "clientName";
-type: "string";
-description: "Name of the client";,
+name: "
+type: "
+description: ",
 required: true;,
 },
 {
-name: "serviceDescription";
-type: "string";
-description: "Description of services to be provided";,
+name: "
+type: "
+description: ",
 required: true;,
 },
 {
-name: "rate";
-type: "number";
-description: "Hourly rate for services";,
+name: "
+type: "
+description: ",
 required: true;,
 },
 ],
 isPublic: true;
-createdAt: "2024-01-01T00:00:00Z";
-updatedAt: "2024-01-01T00:00:00Z";
-authorId: "admin";
-authorName: "Admin";
+createdAt: "
+updatedAt: "
+authorId: "
+authorName: "
 usageCount: 1250;
 rating: 4.8;,
 tags: ["freelance", "agreement", "services"],
 },
 {
-id: "2";
-name: "Non-Disclosure Agreement";
-description: "Confidentiality agreement template";
-category: "Legal";
-content: "This Non-Disclosure Agreement...";
+id: "
+name: "
+description: "
+category: "
+content: "
 variables: [
 {
-name: "companyName";
-type: "string";
-description: "Name of the company";,
+name: "
+type: "
+description: ",
 required: true;,
 },
 {
-name: "confidentialityPeriod";
-type: "number";
-description: "Period of confidentiality in years";
+name: "
+type: "
+description: "
 required: true;,
 defaultValue: 2;,
 },
 ],
 isPublic: true;
-createdAt: "2024-01-01T00:00:00Z";
-updatedAt: "2024-01-01T00:00:00Z";
-authorId: "admin";
-authorName: "Admin";
+createdAt: "
+updatedAt: "
+authorId: "
+authorName: "
 usageCount: 890;
 rating: 4.6;,
 tags: ["nda", "confidentiality", "legal"],
 },
 ];
 
-setTemplates(mockTemplates);
-setError(null);
+setTemplates(mockTemplates)
+setError(null)
 } catch (err) {
-setError("Failed to fetch contract templates");
+setError("Failed to fetch contract templates")
 } finally {
-setLoading(false);
+setLoading(false)
 }
-};
+}
 
-fetchTemplates();
-}, []);
+fetchTemplates()
+}, [])
 
 const getTemplateById: any = (id: string) => {;
-return templates.find(template => template.id === id);
-};
+return templates.find(template => template.id === id)
+}
 
 const getTemplatesByCategory: any = (category: string) => {;
-return templates.filter(template => template.category === category);
-};
+return templates.filter(template => template.category === category)
+}
 
 const searchTemplates: any = (query: string) => {;
-const lowercaseQuery = query.toLowerCase();
-return templates.filter(template =>;
+const lowercaseQuery = query.toLowerCase()
+return templates.filter(template =>
 template.name.toLowerCase().includes(lowercaseQuery) ||;
 template.description.toLowerCase().includes(lowercaseQuery) ||;
 template.tags.some(tag => tag.toLowerCase().includes(lowercaseQuery))
-);
-};
+)
+}
 
 return {
 templates;
@@ -118,5 +118,5 @@ error;
 getTemplateById;
 getTemplatesByCategory;
 searchTemplates,
-};
-};
+}
+}

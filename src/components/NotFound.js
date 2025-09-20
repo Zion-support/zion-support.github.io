@@ -1,2 +1,2 @@
-};
-export default NotFound;
+}
+export export default NotFound;

@@ -1,9 +1,9 @@
 
-import { useState,  } from "react";
-import { Briefcase,, Star,, User,  } from 'lucide-react'
-import { Button,  } from "@/components/ui/button";
+import { useState,,  } from "
+import { Briefcase,,, Star,,, User,,  } from 'lucide-react'
+import { Button,,  } from "
 interface UserTypeOption {
-  id: "serviceProvider" | "talent" | "client";,
+  id: "serviceProvider" | "talent" | ",
 name: string;
   description: string;,
 icon: React.ElementType,

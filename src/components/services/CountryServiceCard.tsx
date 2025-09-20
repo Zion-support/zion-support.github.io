@@ -1,5 +1,5 @@
-import { Globe,, Server,, Clock,, MapPin,, Check,  } from 'lucide-react'
-import { CountryPricing,  } from "@/data/onsiteServicePricing";
+import { Globe,,, Server,,, Clock,,, MapPin,,, Check,,  } from 'lucide-react'
+import { CountryPricing,,  } from "
 interface CountryServiceCardProps {
 isPopular?: boolean,
 }

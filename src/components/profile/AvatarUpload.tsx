@@ -1,41 +1,41 @@
-import React from "react";
-import { useState; useEffect } from "react, ";
-import { CldUploadButton } from "next-cloudinary, ";
+import React from "
+import import { useState;, useEffect } from "
+import { CldUploadButton } from "
 
 type Props = {;
 value?: string;
 onChange?: (url: string) => void,
-};
+}
 
-export function AvatarUpload({ value; onChange }: Props) {
-const [url; setUrl] = useState(value);
+export export function AvatarUpload({ value; onChange }: Props) {
+const [url; setUrl] = useState(value)
 const handleUpload: any = (result: any) => {;
 const secure = result?.info?.secure_url as string | undefined;
 if (secure) {
-setUrl(secure);
+setUrl(secure)
 onChange?.(secure),
 }
-};
+}
 
 return (
-<div className="space-y-2">;
+<div className="space-y-2">
 {url && (
-<img loading="lazy";
+<img loading="
 src={url}
-alt="Avatar preview";
+alt="
 className="h-20 w-20 rounded-full"
-/>;
+/>
 )}
 {process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME &&;
 process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME !== "YOUR_CLOUDINARY_CLOUD_NAME_HERE" &&;
 process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME !== "" ? (
-<CldUploadButton uploadPreset="avatar_preset" onUpload={handleUpload}>;
+<CldUploadButton uploadPreset="avatar_preset" onUpload={handleUpload}>
 Upload Avatar,
-</CldUploadButton>;
+</CldUploadButton>
 ) : (
-<p className="text-sm text-gray-500">Image upload feature is currently unavailable.</p>;
+<p className="text-sm text-gray-500">Image upload feature is currently unavailable.</p>
 )}
-</div>;
-);
+</div>
+)
 }
-<//div><///div>;
+<//div><///div>

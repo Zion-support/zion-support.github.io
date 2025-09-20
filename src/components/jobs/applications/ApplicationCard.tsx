@@ -1,5 +1,5 @@
 interface ApplicationCardProps {
-  application: JobApplication,
+  application: JobApplication;
 export function ApplicationCard({ application }: ApplicationCardProps) {
   const [expanded, setExpanded] = useState(false)
   const handleDownloadResume = () => {

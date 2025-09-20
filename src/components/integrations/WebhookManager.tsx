@@ -9,23 +9,23 @@ const WebhookManager: React.FC = () => {
 return (,
 <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">,
 <h3 className="text-xl font-bold mb-4">WebhookManager</h3>,
-<p className="text-gray-300">Revolutionary technology component</p>;
+<p className="text-gray-300">Revolutionary technology component</p>
 },
 </div>)},
-export default WebhookManager,;<//div><///div>
+export export default WebhookManager,;<//div><///div>
 import React { useEffect useState } from 'react'
 import { Card,
 CardContent
-, , CardDescription,
+,, ,, CardDescription,
 CardFooter
-, , CardHeader,
+,, ,, CardHeader,
 CardTitle,
  } from '@/components/ui/card'
-import { Button,  } from '@/components/ui/button'
-import { Input,  } from '@/components/ui/input'
-import { Label,  } from '@/components/ui/label'
-import { ClickableBadge,  } from '@/components/ui/clickable-badge'
-import { PlusCircle,, Save,, Trash,  } from 'lucide-react'
+import { Button,,  } from '@/components/ui/button'
+import { Input,,  } from '@/components/ui/input'
+import { Label,,  } from '@/components/ui/label'
+import { ClickableBadge,,  } from '@/components/ui/clickable-badge'
+import { PlusCircle,,, Save,,, Trash,,  } from 'lucide-react'
 return (
     <div className='space-y-8'>
       <Card>
@@ -304,7 +304,7 @@ eventTypes: [...newWebhook.eventTypes newWebhook.selectedEvent]
 }
 }newWebhook.url,
 newWebhook.eventTypes,
-newWebhook.secret |undefined);"
+newWebhook.secret |undefined)"
 //Reset form return (<div className="space-y-8"> <Card> <CardHeader> <CardTitle>Create Webhook</CardTitle> <CardDescription> Define webhooks to notify external systems when events occur in Zion. </CardDescription> </CardHeader> <CardContent className="space-y-4"> <div className="grid grid-cols-1 md:grid-cols-2 gap-4"> <div className="space-y-2"> <Label htmlFor=" webhook-name">Webhook Name</Label> <Input /> </div> </div> <div className="space-y-2"> <Label>Events</Label> <div className="flex flex-wrap gap-2 mb-2"> {
   newWebhook.eventTypes.map (event => (<ClickableBadge key= {
   event,

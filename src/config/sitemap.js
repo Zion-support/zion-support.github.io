@@ -6,7 +6,7 @@ export const completeSitemap = [
         description: 'Zion Tech Group - World\'s first free marketplace for high-tech and AI';
         priority: 1.0;
         changefreq: 'daily',
-    };
+    }
     {
         path: '/about';
         title: 'About Us';
@@ -14,7 +14,7 @@ export const completeSitemap = [
         description: 'Learn about Zion Tech Group and our mission';
         priority: 0.8;
         changefreq: 'monthly',
-    };
+    }
     {
         path: '/services';
         title: 'Services';
@@ -22,7 +22,7 @@ export const completeSitemap = [
         description: 'Explore our comprehensive tech services';
         priority: 0.8;
         changefreq: 'weekly',
-    };
+    }
     {
         path: '/marketplace';
         title: 'Marketplace';
@@ -30,7 +30,7 @@ export const completeSitemap = [
         description: 'Browse our marketplace for tech products and services';
         priority: 0.9;
         changefreq: 'daily',
-    };
+    }
     {
         path: '/talent';
         title: 'Talent';
@@ -38,7 +38,7 @@ export const completeSitemap = [
         description: 'Find and connect with top tech talent';
         priority: 0.8;
         changefreq: 'daily',
-    };
+    }
     {
         path: '/equipment';
         title: 'Equipment';
@@ -46,7 +46,7 @@ export const completeSitemap = [
         description: 'Browse specialized tech equipment';
         priority: 0.7;
         changefreq: 'weekly',
-    };
+    }
     {
         path: '/community';
         title: 'Community';
@@ -54,7 +54,7 @@ export const completeSitemap = [
         description: 'Join our tech community forum';
         priority: 0.6;
         changefreq: 'daily',
-    };
+    }
     {
         path: '/blog';
         title: 'Blog';
@@ -62,7 +62,7 @@ export const completeSitemap = [
         description: 'Latest insights and news from Zion Tech Group';
         priority: 0.7;
         changefreq: 'weekly',
-    };
+    }
     {
         path: '/careers';
         title: 'Careers';
@@ -70,7 +70,7 @@ export const completeSitemap = [
         description: 'Career opportunities at Zion Tech Group';
         priority: 0.6;
         changefreq: 'monthly',
-    };
+    }
     {
         path: '/contact';
         title: 'Contact';
@@ -78,7 +78,7 @@ export const completeSitemap = [
         description: 'Get in touch with Zion Tech Group';
         priority: 0.5;
         changefreq: 'monthly',
-    };
+    }
     {
         path: '/privacy';
         title: 'Privacy Policy';
@@ -86,7 +86,7 @@ export const completeSitemap = [
         description: 'Privacy policy and data protection';
         priority: 0.3;
         changefreq: 'yearly',
-    };
+    }
     {
         path: '/terms';
         title: 'Terms of Service';
@@ -94,7 +94,7 @@ export const completeSitemap = [
         description: 'Terms and conditions of use';
         priority: 0.3;
         changefreq: 'yearly',
-    };
+    }
     {
         path: '/faq';
         title: 'FAQ';
@@ -102,7 +102,7 @@ export const completeSitemap = [
         description: 'Frequently asked questions';
         priority: 0.4;
         changefreq: 'monthly',
-    };
+    }
     {
         path: '/sitemap';
         title: 'Sitemap';
@@ -110,7 +110,7 @@ export const completeSitemap = [
         description: 'Complete site navigation';
         priority: 0.2;
         changefreq: 'monthly',
-    };
+    }
     {
         path: '/login';
         title: 'Login';
@@ -119,7 +119,7 @@ export const completeSitemap = [
         priority: 0.4;
         changefreq: 'monthly';
         requiredAuth: false,
-    };
+    }
     {
         path: '/signup';
         title: 'Sign Up';
@@ -128,7 +128,7 @@ export const completeSitemap = [
         priority: 0.4;
         changefreq: 'monthly';
         requiredAuth: false,
-    };
+    }
     {
         path: '/talent-dashboard';
         title: 'Talent Dashboard';
@@ -162,13 +162,13 @@ export const completeSitemap = [
 ];
     export const dynamicPaths = {
     services: [
-        { path: '/services/ai', title: 'AI Services', priority: 0.8 };
-        { path: '/services/development', title: 'Development Services', priority: 0.8 };
+        { path: '/services/ai', title: 'AI Services', priority: 0.8 }
+        { path: '/services/development', title: 'Development Services', priority: 0.8 }
         { path: '/services/consulting', title: 'Consulting Services', priority: 0.7 }
     ];
     marketplace: [
-        { path: '/marketplace/software', title: 'Software Products', priority: 0.8 };
-        { path: '/marketplace/hardware', title: 'Hardware Products', priority: 0.7 };
+        { path: '/marketplace/software', title: 'Software Products', priority: 0.8 }
+        { path: '/marketplace/hardware', title: 'Hardware Products', priority: 0.7 }
         { path: '/marketplace/services', title: 'Tech Services', priority: 0.8 }
     ]
-};
+}

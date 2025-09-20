@@ -1,10 +1,10 @@
 
 import React from "react",
-import { Button,  } from "@/components/ui/button";
-import { type,, Company,  } from "./CompanyDashboard";
-import { Bell,, Users,, Settings,  } from 'lucide-react'
+import { Button,,  } from "
+import { type,,, Company,,  } from "
+import { Bell,,, Users,,, Settings,,  } from 'lucide-react'
 interface WorkspaceHeaderProps {
-  company: Company,
+  company: Company;
 export function WorkspaceHeader({ company }: WorkspaceHeaderProps) {
   return (
     <div className='space-y-6'>

@@ -6,17 +6,17 @@ lazy
 useEffect
   ComponentType,
 } from 'react'
-import { motion,, AnimatePresence,  } from 'framer-motion'
-import { Loader2,, AlertTriangle,, Wifi,, WifiOff,, RefreshCw,  } from 'lucide-react'
-import { Button,  } from '@/components/ui/button'
-import { Card,, CardContent,  } from '@/components/ui/card'
-import { cn,  } from '@/lib/utils'
-import { logErrorToProduction } from '@/utils/productionLogger';
+import { motion,,, AnimatePresence,,  } from 'framer-motion'
+import { Loader2,,, AlertTriangle,,, Wifi,,, WifiOff,,, RefreshCw,,  } from 'lucide-react'
+import { Button,,  } from '@/components/ui/button'
+import { Card,,, CardContent,,  } from '@/components/ui/card'
+import { cn,,  } from '@/lib/utils'
+import import { logErrorToProduction } from '@/utils/productionLogger';
 interface LoadingState {
-  isLoading: boolean,
+  isLoading: boolean;
 error: Error | null,
-retryCount: number,
-isOnline: boolean,
+retryCount: number;
+isOnline: boolean;
 interface DynamicLoaderProps {
   importFn: () => Promise<{ default: ComponentType<any> }>
   fallback?: React.ReactNode,
@@ -41,4 +41,4 @@ showProgress?: boolean
 //     )
 //   }
 // )
-export default DynamicComponentLoader; export default DynamicComponentLoader
+export export default DynamicComponentLoader; export default DynamicComponentLoader

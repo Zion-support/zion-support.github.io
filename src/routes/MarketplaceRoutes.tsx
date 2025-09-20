@@ -3,115 +3,115 @@ id: string;
 name: string;
 }
 
-import React from "react";
+import React from "
 
-import { Route; Routes } from "react-router-dom, ";
-import { ProtectedRoute } from "@/components/ProtectedRoute, ";
-import Marketplace from "@/pages/Marketplace";
-import Categories from "@/pages/Categories";
-import CategoryDetail from "@/pages/CategoryDetail";
-import Featured from "@/pages/Featured";
-import ListingDetail from "@/pages/ListingDetail";
-import EquipmentPage from "@/pages/EquipmentPage";
-import EquipmentDetail from "@/pages/EquipmentDetail";
-import PostJob from "@/pages/PostJob";
-import JobDetails from "@/pages/JobDetails";
-import PublishProduct from "@/pages/PublishProduct";
-import ServicesPage from "@/pages/ServicesPage";
-import RequestQuote from "@/pages/RequestQuote";
-import AIMatcher from "@/pages/AIMatcher";
-import ServiceDescriptionGenerator from "@/pages/ServiceDescriptionGenerator";
-import ITOnsiteServicesPage from "@/pages/ITOnsiteServicesPage";
-import SearchPage from "@/pages/SearchPage";
-import ProjectRoom from "@/pages/ProjectRoom";
-import VideoCall from "@/pages/VideoCall";
-import Checkout from "@/pages/Checkout";
-import NewProductsPage from "@/pages/NewProductsPage";
-import MoreProductsPage from "@/pages/MoreProductsPage";
+import import { Route;, Routes } from "
+import { ProtectedRoute } from "
+import Marketplace from "
+import Categories from "
+import CategoryDetail from "
+import Featured from "
+import ListingDetail from "
+import EquipmentPage from "
+import EquipmentDetail from "
+import PostJob from "
+import JobDetails from "
+import PublishProduct from "
+import ServicesPage from "
+import RequestQuote from "
+import AIMatcher from "
+import ServiceDescriptionGenerator from "
+import ITOnsiteServicesPage from "
+import SearchPage from "
+import ProjectRoom from "
+import VideoCall from "
+import Checkout from "
+import NewProductsPage from "
+import MoreProductsPage from "
 
 const MarketplaceRoutes: any = () => {
 return (
-<Routes>;
+<Routes>
 {/* Marketplace Routes */}
-<Route index element={<Marketplace />} />;
-<Route path="/categories" element={<Categories />} />;
-<Route path="/category/:slug" element={<CategoryDetail />} />;
-<Route path="/featured" element={<Featured />} />;
-<Route path="/marketplace/listing/:id" element={<ListingDetail />} />;
-<Route path="/listing/:id" element={<ListingDetail />} />;
+<Route index element={<Marketplace />} />
+<Route path="/categories" element={<Categories />} />
+<Route path="/category/:slug" element={<CategoryDetail />} />
+<Route path="/featured" element={<Featured />} />
+<Route path="/marketplace/listing/:id" element={<ListingDetail />} />
+<Route path="/listing/:id" element={<ListingDetail />} />
 
 {/* Equipment Routes */}
-<Route path="/equipment" element={<EquipmentPage />} />;
-<Route path="/equipment/:id" element={<EquipmentDetail />} />;
-<Route path="/new-products" element={<NewProductsPage />} />;
-<Route path="/more-products" element={<MoreProductsPage />} />;
+<Route path="/equipment" element={<EquipmentPage />} />
+<Route path="/equipment/:id" element={<EquipmentDetail />} />
+<Route path="/new-products" element={<NewProductsPage />} />
+<Route path="/more-products" element={<MoreProductsPage />} />
 
-{/* Job Routes */};
+{/* Job Routes */}
 <Route;
-path="/post-job";
+path="
 element={
-<ProtectedRoute>;
-<PostJob />;
-</ProtectedRoute>;
+<ProtectedRoute>
+<PostJob />
+</ProtectedRoute>
 }
-/>;
-<Route path="/jobs/:id" element={<JobDetails />} />;
+/>
+<Route path="/jobs/:id" element={<JobDetails />} />
 
 {/* AI Matcher Routes */}
-<Route path="/ai-matcher" element={<AIMatcher />} />;
-<Route path="/match" element={<AIMatcher />} />;
+<Route path="/ai-matcher" element={<AIMatcher />} />
+<Route path="/match" element={<AIMatcher />} />
 
 {/* Creator Routes */}
 <Route;
-path="/publish";
+path="
 element={
-<ProtectedRoute>;
-<PublishProduct />;
-</ProtectedRoute>;
+<ProtectedRoute>
+<PublishProduct />
+</ProtectedRoute>
 }
-/>;
+/>
 
 {/* Service Routes */}
-<Route path="/services" element={<ServicesPage />} />;
-<Route path="/it-onsite-services" element={<ITOnsiteServicesPage />} />;
-<Route path="/request-quote" element={<RequestQuote />} />;
-<Route path="/service-description-generator" element={<ServiceDescriptionGenerator />} />;
+<Route path="/services" element={<ServicesPage />} />
+<Route path="/it-onsite-services" element={<ITOnsiteServicesPage />} />
+<Route path="/request-quote" element={<RequestQuote />} />
+<Route path="/service-description-generator" element={<ServiceDescriptionGenerator />} />
 
 {/* Search Route */}
-<Route path="/search" element={<SearchPage />} />;
+<Route path="/search" element={<SearchPage />} />
 
 {/* Checkout Route - accessible even in staging */}
 <Route;
-path="/checkout";
+path="
 element={
-<ProtectedRoute>;
-<Checkout />;
-</ProtectedRoute>;
+<ProtectedRoute>
+<Checkout />
+</ProtectedRoute>
 }
-/>;
+/>
 
 {/* Project Room Routes */}
 <Route;
-path="/project/:projectId";
+path="
 element={
-<ProtectedRoute>;
-<ProjectRoom />;
-</ProtectedRoute>;
+<ProtectedRoute>
+<ProjectRoom />
+</ProtectedRoute>
 }
-/>;
+/>
 
 {/* Video Call Routes */}
 <Route;
-path="/call/:roomId";
+path="
 element={
-<ProtectedRoute>;
-<VideoCall />;
-</ProtectedRoute>;
+<ProtectedRoute>
+<VideoCall />
+</ProtectedRoute>
 }
-/>;
-</Routes>;
-);
-};
+/>
+</Routes>
+)
+}
 
-export default MarketplaceRoutes;
-<//Routes><///Routes>;
+export export default MarketplaceRoutes;
+<//Routes><///Routes>

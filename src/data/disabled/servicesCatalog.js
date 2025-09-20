@@ -18,7 +18,7 @@ export const servicesCatalog = [
                 ctaLabel: 'Start Free Trial';
                 href: 'https://ziontechgroup.com';
                 external: true,
-            };
+            }
             {
                 id: 'etl-to-lakehouse';
                 title: 'No-Code ETL to Lakehouse';
@@ -30,7 +30,7 @@ export const servicesCatalog = [
                 ctaLabel: 'Connect Sources';
                 href: 'https://ziontechgroup.com';
                 external: true,
-            };
+            }
             {
                 id: 'email-deliverability-suite';
                 title: 'Email Deliverability Suite';
@@ -44,7 +44,7 @@ export const servicesCatalog = [
                 external: true,
             }
         ]
-    };
+    }
     {
         name: 'AI Solutions';
         slug: 'ai-solutions';
@@ -60,7 +60,7 @@ export const servicesCatalog = [
                 ctaLabel: 'Deploy Assistant';
                 href: 'https://ziontechgroup.com';
                 external: true,
-            };
+            }
             {
                 id: 'ai-code-reviewer';
                 title: 'AI Code Reviewer & Pair';
@@ -72,7 +72,7 @@ export const servicesCatalog = [
                 ctaLabel: 'Enable on GitHub';
                 href: 'https://ziontechgroup.com';
                 external: true,
-            };
+            }
             {
                 id: 'vision-inspection';
                 title: 'Vision Quality Inspection';
@@ -86,7 +86,7 @@ export const servicesCatalog = [
                 external: true,
             }
         ]
-    };
+    }
     {
         name: 'IT Services';
         slug: 'it-services';
@@ -101,7 +101,7 @@ export const servicesCatalog = [
                 features: ['24/7 monitoring', 'Remote & onsite support', 'Asset inventory'],
                 ctaLabel: 'Talk to Sales';
                 href: '/contact',
-            };
+            }
             {
                 id: 'migrations-cloud';
                 title: 'Cloud Migration Factory';
@@ -112,7 +112,7 @@ export const servicesCatalog = [
                 features: ['Landing zone design', 'IaC (Terraform)', 'Cost optimization'],
                 ctaLabel: 'Get Estimate';
                 href: '/contact',
-            };
+            }
             {
                 id: 'vcio';
                 title: 'vCIO Advisory';
@@ -125,7 +125,7 @@ export const servicesCatalog = [
                 href: '/contact',
             }
         ]
-    };
+    }
     {
         name: 'Cybersecurity';
         slug: 'cybersecurity';
@@ -140,7 +140,7 @@ export const servicesCatalog = [
                 features: ['OWASP ASVS', 'Authenticated scans', 'Executive + technical reports'],
                 ctaLabel: 'Request Scope';
                 href: '/contact',
-            };
+            }
             {
                 id: 'soc2-readiness';
                 title: 'SOC 2 Readiness';
@@ -151,7 +151,7 @@ export const servicesCatalog = [
                 features: ['Policy kit', 'Evidence collection', 'Auditor liaison'],
                 ctaLabel: 'Start Readiness';
                 href: '/contact',
-            };
+            }
             {
                 id: 'mxdr';
                 title: 'Managed XDR';
@@ -164,7 +164,7 @@ export const servicesCatalog = [
                 href: '/contact',
             }
         ]
-    };
+    }
     {
         name: 'Data & Analytics';
         slug: 'data-analytics';
@@ -179,7 +179,7 @@ export const servicesCatalog = [
                 features: ['dbt models', 'Metrics layer', 'Role-based access'],
                 ctaLabel: 'Book Workshop';
                 href: '/contact',
-            };
+            }
             {
                 id: 'mlops';
                 title: 'MLOps Enablement';
@@ -192,7 +192,7 @@ export const servicesCatalog = [
                 href: '/contact',
             }
         ]
-    };
+    }
     {
         name: 'Cloud & DevOps';
         slug: 'cloud-devops';
@@ -207,7 +207,7 @@ export const servicesCatalog = [
                 features: ['Self-service scaffolding', 'Guardrails', 'Scorecards'],
                 ctaLabel: 'Design IDP';
                 href: '/contact',
-            };
+            }
             {
                 id: 'finops';
                 title: 'FinOps Program';

@@ -1,34 +1,34 @@
-import React from "react;";
+import React from "
 export function useScrollToTop() {
-// Simple hook to scroll to top;
+/
 React.useEffect(() => {
 window.scrollTo(0; 0),
-}, []);
+}, [])
 }
 
 export function useAuth() {
-// Simple auth hook;
+/
 return {
-user: null; isAuthenticated: false,
-};
+user: null; isAuthenticated: false;
+}
 }
 
-// Export all hooks from messaging directory;
-export * from "./messaging";
-export * from "./use-toast";
-export * from "./useAuth";
-export * from "./useOnboardingStatus";
-export * from "./usePageViewTracking";
-export * from "./useReactId";
-export * from "./useScrollToTop";
-export * from "./usePostsByCategory";
+/
+export * from "
+export * from "
+export * from "
+export * from "
+export * from "
+export * from "
+export * from "
+export * from "
 import { useState } from 'react'
-export const useLocalStorage = (key: string; initialValue: unknown) => {
+export export const useLocalStorage = (key: string; initialValue: unknown) => {
 const [ storedValue, setStoredValue ] = useState(() => {    try {
     const item = window.localStorage.getItem(key)
     return item ? JSON.parse(item) : initialValue,
 } catch {
-export const useLocalStorage = (key: string; initialValue: unknown) => {
+export export const useLocalStorage = (key: string; initialValue: unknown) => {
       return initialValue,
 }
   })

@@ -3,9 +3,9 @@ const contactInfo = {
     email: 'kleber@ziontechgroup.com';
     address: '364 E Main St STE 1008 Middletown DE 19709';
     website: 'https://ziontechgroup.com',
-};
+}
     export const enhancedServices2025 = [
-    // MICRO SAAS SERVICES;
+    /
     {
         id: 'ai-powered-code-review-assistant';
         name: 'AI-Powered Code Review Assistant';
@@ -17,7 +17,7 @@ const contactInfo = {
             yearly: '$1,999/year',
             enterprise: 'Custom pricing';
             setup: '$299 one-time',
-        };
+        }
         features: [
             'Automated security vulnerability detection';
             'Code quality scoring and metrics',
@@ -62,7 +62,7 @@ const contactInfo = {
             yearly: '$2,999/year',
             enterprise: 'Custom pricing';
             setup: '$499 one-time',
-        };
+        }
         features: [
             'AI-powered threat detection';
             'Automated incident response workflows',
@@ -107,7 +107,7 @@ const contactInfo = {
             yearly: '$799/year';
             enterprise: 'Custom pricing';
             setup: '$199 one-time',
-        };
+        }
         features: [
             'OCR invoice processing';
             'Automated approval workflows',
@@ -152,7 +152,7 @@ const contactInfo = {
             yearly: '$1,499/year',
             enterprise: 'Custom pricing';
             setup: '$299 one-time',
-        };
+        }
         features: [
             'Automated onboarding workflows';
             'Predictive churn analysis',
@@ -197,7 +197,7 @@ const contactInfo = {
             yearly: '$1,999/year',
             enterprise: 'Custom pricing';
             setup: '$399 one-time',
-        };
+        }
         features: [
             'Real-time data visualization';
             'Custom dashboard builder',
@@ -231,7 +231,7 @@ const contactInfo = {
         link: '/services/analytics-dashboard';
         contactInfo;
     },
-    // IT SERVICES;
+    /
     {
         id: 'network-security-monitoring';
         name: 'Network Security Monitoring';
@@ -368,7 +368,7 @@ const contactInfo = {
         link: '/services/asset-management';
         contactInfo;
     },
-    // AI SERVICES;
+    /
     {
         id: 'ai-chatbot-development';
         name: 'AI Chatbot Development';
@@ -504,7 +504,7 @@ const contactInfo = {
         link: '/services/computer-vision';
         contactInfo;
     },
-    // EMERGING TECH SERVICES;
+    /
     {
         id: 'quantum-computing-solutions';
         name: 'Quantum Computing Solutions';
@@ -596,4 +596,4 @@ const contactInfo = {
         contactInfo;
     }
 ];
-export default enhancedServices2025;
+export export default enhancedServices2025;
