@@ -81,8 +81,8 @@ const services = useMemo(() => [
                 top: `${Math.random() * 100}%`,
                 animationDelay: `${Math.random() * 3}s`,
                 animationDuration: `${2 + Math.random() * 3}s`
-              },
-  }
+              }
+            }
             />
           ))}
         </div>

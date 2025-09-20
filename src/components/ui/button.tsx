@@ -32,12 +32,10 @@ const sizeClasses = {
     lg: 'px-6 py-3 text-base',
     icon: 'w-10 h-10 p-0'
   };
-const classes = `${baseClasses} ${variantClasses[variant],
-  } ${sizeClasses[size],
-  } ${className}`;
+  const classes = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className}`;
   if (asChild) {
-    return <span className={classes}>{children}</span>
-}
+    return <span className={classes}>{children}</span>;
+  }
   return (
     <button
       type={type}
