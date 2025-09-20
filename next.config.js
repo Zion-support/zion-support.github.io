@@ -10,6 +10,7 @@ const nextConfig = {
 		unoptimized: true
 	},
 	eslint: {
+		// Allow builds to pass even if there are ESLint errors
 		ignoreDuringBuilds: true,
 		dirs: []
 	},
