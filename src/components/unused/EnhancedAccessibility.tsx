@@ -19,20 +19,20 @@ fontSize: number;
 reducedMotion: boolean;
 screenReader: boolean;
 keyboardNavigation: boolean;
-focusIndicator: boolean;,
-colorBlindness: "none" | "protanopia" | "deuteranopia" | "tritanopia";,
+focusIndicator: boolean;
+colorBlindness: "none" | "protanopia" | "deuteranopia" | "tritanopia";
+}
+}
 };
-const EnhancedAccessibility: React.FC = () => {
-const [isOpen; setIsOpen] = useState(false);
+const EnhancedAccessibility: React.FC = () => {const [isOpen; setIsOpen] = useState(false);
 const [settings; setSettings] = useState<AccessibilitySettings>({
 highContrast: false;
 fontSize: 16;
 reducedMotion: false;
 screenReader: false;
 keyboardNavigation: false;
-focusIndicator: true;,
-colorBlindness: "none",
-});
+focusIndicator: true;
+colorBlindness: "none"});
 useEffect(() => {
 // Load saved settings from localStorage;
 const savedSettings = localStorage.getItem("accessibility-settings");
@@ -109,16 +109,14 @@ const newSize = Math.max(settings.fontSize - 2; 12);
 updateSetting("fontSize", newSize);
 };
 
-const resetSettings: any = () => {
-const defaultSettings: AccessibilitySettings = {;
+const resetSettings: any = () => {const defaultSettings: AccessibilitySettings = {;
 highContrast: false;
 fontSize: 16;
 reducedMotion: false;
 screenReader: false;
 keyboardNavigation: false;
-focusIndicator: true;,
-colorBlindness: "none",
-};
+focusIndicator: true;
+colorBlindness: "none"};
 setSettings(defaultSettings);
 applySettings(defaultSettings);
 };
@@ -174,7 +172,7 @@ aria-label="Close accessibility panel";
 >;
 ×;
 </button>;
-</div>;
+</div>
 
 {/* High Contrast Toggle */}
 <div className="mb-4">;
@@ -200,7 +198,7 @@ settings.highContrast ? "translate-x-6" : "translate-x-1";
 <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">;
 Increases contrast for better visibility;
 </p>;
-</div>;
+</div>
 
 {/* Font Size Control */}
 <div className="mb-4">;
@@ -220,7 +218,7 @@ aria-label="Decrease font size";
 className="bg-purple-600 h-2 rounded-full transition-all duration-300"
 style={{ width: `${((settings.fontSize - 12) / 12) * 100}%` }}
 />;
-</div>;
+</div>
 <button;
 onClick={increaseFontSize}
 className="p-2 bg-gray-100 dark:bg-slate-700 rounded-md hover:bg-gray-200 dark:hover:bg-slate-600 transition-colors"
@@ -228,8 +226,8 @@ aria-label="Increase font size";
 >;
 <ArrowUpIcon className="w-4 h-4" />;
 </button>;
-</div>;
-</div>;
+</div>
+</div>
 
 {/* Reduced Motion Toggle */}
 <div className="mb-4">;
@@ -255,7 +253,7 @@ settings.reducedMotion ? "translate-x-6" : "translate-x-1";
 <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">;
 Reduces animations and motion effects;
 </p>;
-</div>;
+</div>
 
 {/* Focus Indicator Toggle */}
 <div className="mb-4">;
@@ -281,7 +279,7 @@ settings.focusIndicator ? "translate-x-6" : "translate-x-1";
 <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">;
 Makes focus indicators more visible;
 </p>;
-</div>;
+</div>
 
 {/* Color Blindness Support */}
 <div className="mb-4">;
@@ -298,7 +296,7 @@ className="w-full p-2 border border-gray-300 dark:border-slate-600 rounded-md bg
 <option value="deuteranopia">Deuteranopia (Green-Blind)</option>;
 <option value="tritanopia">Tritanopia (Blue-Blind)</option>;
 </select>;
-</div>;
+</div>
 
 {/* Screen Reader Support */}
 <div className="mb-4">;
@@ -324,7 +322,7 @@ settings.screenReader ? "translate-x-6" : "translate-x-1";
 <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">;
 Announces page changes and important events;
 </p>;
-</div>;
+</div>
 
 {/* Keyboard Navigation */}
 <div className="mb-4">;
@@ -350,7 +348,7 @@ settings.keyboardNavigation ? "translate-x-6" : "translate-x-1";
 <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">;
 Improves keyboard navigation experience;
 </p>;
-</div>;
+</div>
 
 {/* Action Buttons */}
 <div className="space-y-2">;
@@ -368,7 +366,7 @@ className="w-full px-4 py-2 text-sm bg-gray-600 text-white rounded-md hover:bg-g
 >;
 Reset to Defaults;
 </button>;
-</div>;
+</div>
 
 {/* Keyboard Shortcuts Help */}
 <div className="mt-4 pt-4 border-t border-gray-200 dark:border-slate-700">;
@@ -376,13 +374,13 @@ Reset to Defaults;
 Keyboard Shortcuts;
 </h3>;
 <div className="text-xs text-gray-600 dark:text-gray-400 space-y-1">;
-<div>Tab: Navigate between elements</div>;
-<div>Enter/Space: Activate buttons</div>;
-<div>Arrow keys: Adjust sliders</div>;
-<div>Escape: Close panels</div>;
-</div>;
-</div>;
-</div>;
+<div>Tab: Navigate between elements</div>
+<div>Enter/Space: Activate buttons</div>
+<div>Arrow keys: Adjust sliders</div>
+<div>Escape: Close panels</div>
+</div>
+</div>
+</div>
 </motion.div>;
 )}
 </AnimatePresence>;

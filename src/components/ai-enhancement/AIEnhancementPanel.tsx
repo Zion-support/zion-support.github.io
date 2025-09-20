@@ -1,5 +1,5 @@
 interface AIEnhancementPanelProps {
-  title: string;,
+  title: string;
 defaultOptions: AIEnhancementOptions;
   onApply: (content: string) => void;
   onClose?: () => void;
@@ -10,7 +10,8 @@ return (
     <Card className='w-full max-w-2xl mx-auto'>
       <CardHeader>
         <CardTitle className='flex items-center gap-2'>
-          <Sparkles className='h-5 w-5 text-primary' />
+}
+          <Sparkles className='h-5 w-5 text-primary' />}
           {title}
         </CardTitle>
       </CardHeader>
@@ -18,7 +19,7 @@ return (
         {/* Input area */}
         <div className='space-y-2'>
           <label className='text-sm font-medium'>Content to enhance</label>
-          <Textarea,
+          <Textarea
 placeholder='Enter your content to enhance...'
             className='min-h-[100px]'
             value={options.content}
@@ -27,7 +28,7 @@ placeholder='Enter your content to enhance...'
         {/* Context input */}
         <div className='space-y-2'>
           <label className='text-sm font-medium'>Context (optional)</label>
-          <Textarea,
+          <Textarea
 placeholder='Add any relevant context to guide the AI...'
             className='min-h-[60px]'
             value={options.context}
@@ -39,14 +40,14 @@ placeholder='Add any relevant context to guide the AI...'
             <label className='text-sm font-medium'>
               Special instructions (optional)
             </label>
-            <Input,
+            <Input
 placeholder="E.g., 'Make it more conversational' or 'Focus on leadership skills'"
               value={options.instructions}
               onChange={e => handleInputChange(e, 'instructions')}            />
           </div>
         )}
         {/* Generate button */}
-        <Button,
+        <Button
 onClick={handleGenerate}
           className='w-full'
           disabled={isEnhancing |(!options.content && !options.context)}        >
@@ -54,12 +55,12 @@ onClick={handleGenerate}
             <>
               <Loader2 className='mr-2 h-4 w-4 animate-spin' />
               Enhancing...
-            </>
+</>
           ) : (
             <>
               <Sparkles className='mr-2 h-4 w-4' />
               Generate Enhanced Content
-            </>
+</>
           )}
         </Button>
         {/* Output area */}
@@ -67,7 +68,7 @@ onClick={handleGenerate}
           <div className='space-y-2 mt-4'>
             <div className='flex justify-between items-center'>
               <label className='text-sm font-medium'>Generated content</label>
-              <Button,
+              <Button
 variant='ghost'
                 size='sm'
                 onClick={handleCopy}
@@ -75,16 +76,16 @@ variant='ghost'
                 {copied ? (
                   <>
                     <Check className='h-4 w-4 mr-1' /> Copied
-                  </>
+</>
                 ) : (
                   <>
                     <Copy className='h-4 w-4 mr-1' /> Copy
-                  </>
+</>
                 )}
               </Button>
             </div>
             <div className='relative'>
-              <Textarea,
+              <Textarea
 value={generatedContent}
                 onChange={e => setGeneratedContent(e.target.value)}
                 className='min-h-[200px]'              />

@@ -16,7 +16,7 @@ if (isSubscribed) {
 return (
 <div className="text-green-400 text-sm">;
 Thank you for subscribing!;
-</div>;
+</div>
 );
 }
 
@@ -66,15 +66,15 @@ setTimeout(() => setIsSubmitted(false),  3000);
 } finally {
 setIsSubmitting(false);
 import React { useState useRef } from 'react';
-import { Input,, ,  } from '@/components/ui/input';
-import { Button,, ,  } from '@/components/ui/button';
-import { useToast,, ,  } from '@/hooks/use-toast';
-import { Loader2,  } from 'lucide-react'
+import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
+import { useToast } from "@/hooks/use-toast";
+import { Loader2 } from "lucide-react";
 import { logErrorToProduction } from '@/utils/productionLogger';
 export function FooterNewsletter(): React.ReactElement {
 Email address for newsletter subscription
       </label>
-      <Input,
+      <Input
 type='email'
         id='newsletter-email'
         name='newsletterEmail'
@@ -86,7 +86,7 @@ type='email'
       />
       {emailError && <p className='text-red-500 text-sm mt-1'>{emailError}</p>}
       {/* Honeypot field */}
-      <input,
+      <input
 type='text'
         value={honeypot}
         onChange={e => setHoneypot(e.target.value)}
@@ -94,7 +94,7 @@ type='text'
         autoComplete='off'
         style={{ display: 'none' }}
       />
-      <Button,
+      <Button
 type='submit'
         aria-label='Subscribe to newsletter'
         disabled={isSubmitting}
@@ -103,7 +103,7 @@ type='submit'
           <>
             <Loader2 className='h-4 w-4 mr-2 animate-spin' />
             Subscribing...
-          </>
+</>
         ) : (
           'Subscribe'
         )}
@@ -119,8 +119,8 @@ return (
 <div className="flex justify-center mb-4">;
 <div className="w-12 h-12 bg-gradient-to-r from-zion-cyan to-blue-500 rounded-full flex items-center justify-center">;
 <Mail className="w-6 h-6 text-white" />;
-</div>;
-</div>;
+</div>
+</div>
 
 <h3 className="text-xl font-bold text-white mb-2">;
 Stay Updated;
@@ -133,7 +133,7 @@ Get the latest insights on A;  I; technolog; y; cybersecurit; y; trend; s; and I
 <div className="flex items-center justify-center gap-2 text-green-400">;
 <CheckCircle className="w-5 h-5" />;
 <span>Successfully subscribed!</span>;
-</div>;
+</div>
 ) : (<form onSubmit={handleSubmit} className="flex flex-col s;  m:flex-row gap-3 max-w-md mx-auto">;
 <input;
 type="email"
@@ -166,8 +166,8 @@ Subscribe;
 <p className="text-xs text-gray-400 mt-4">;
 We respect your privacy. Unsubscribe at any time.;
 </p>;
-</div>;
-</div>;
+</div>
+</div>
 );
 };
 <//div><///div>;

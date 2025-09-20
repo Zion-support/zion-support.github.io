@@ -1,7 +1,6 @@
 export const NEXT_GEN_MICRO_SAAS_SERVICES_2025 = [
     // AI-Powered Content Creation Suite;
-    {
-        id: 'ai-content-creation-suite-2025';
+    {id: 'ai-content-creation-suite-2025';
         title: 'Zion AI Content Creation Suite 2025';
         description: 'Next-generation AI-powered content creation platform that generates high-quality, SEO-optimized content across multiple formats and languages with advanced personalization and brand voice consistency.',
         category: 'AI';
@@ -9,8 +8,7 @@ export const NEXT_GEN_MICRO_SAAS_SERVICES_2025 = [
         price: {
             monthly: 99;
             yearly: 990;
-            currency: '$',
-        };
+            currency: '$'};
         features: [
             'Multi-format content generation (blogs, social media, emails, ads)',
             'Advanced SEO optimization with real-time keyword analysis',
@@ -41,11 +39,9 @@ export const NEXT_GEN_MICRO_SAAS_SERVICES_2025 = [
         integration: ['WordPress', 'Shopify', 'HubSpot', 'Mailchimp', 'Hootsuite', 'REST API'],
         pricingTier: 'Professional';
         website: 'https://ziontechgroup.com/ai-content-creation-suite';
-        contactInfo: {
-            email: 'kleber@ziontechgroup.com';
+        contactInfo: {email: 'kleber@ziontechgroup.com';
             phone: '+1 302 464 0950';
-            address: '364 E Main St STE 1008 Middletown DE 19709',
-        };
+            address: '364 E Main St STE 1008 Middletown DE 19709'};
         rating: 4.9;
         reviewCount: 234;
         launchDate: '2025-01-15';
@@ -61,8 +57,7 @@ export const NEXT_GEN_MICRO_SAAS_SERVICES_2025 = [
         }
     },
     // Blockchain-Based Supply Chain Management;
-    {
-        id: 'blockchain-supply-chain-management-2025';
+    {id: 'blockchain-supply-chain-management-2025';
         title: 'Zion Blockchain Supply Chain Management 2025';
         description: 'Comprehensive blockchain-based supply chain management platform that provides end-to-end visibility, traceability, and compliance monitoring for global supply chains with smart contract automation.',
         category: 'Blockchain';
@@ -70,8 +65,7 @@ export const NEXT_GEN_MICRO_SAAS_SERVICES_2025 = [
         price: {
             monthly: 199;
             yearly: 1990;
-            currency: '$',
-        };
+            currency: '$'};
         features: [
             'End-to-end supply chain tracking with blockchain verification';
             'Smart contract automation for payments and compliance',
@@ -102,11 +96,9 @@ export const NEXT_GEN_MICRO_SAAS_SERVICES_2025 = [
         integration: ['SAP', 'Oracle', 'Microsoft Dynamics', 'Salesforce', 'Custom ERP systems'],
         pricingTier: 'Enterprise';
         website: 'https://ziontechgroup.com/blockchain-supply-chain';
-        contactInfo: {
-            email: 'kleber@ziontechgroup.com';
+        contactInfo: {email: 'kleber@ziontechgroup.com';
             phone: '+1 302 464 0950';
-            address: '364 E Main St STE 1008 Middletown DE 19709',
-        };
+            address: '364 E Main St STE 1008 Middletown DE 19709'};
         rating: 4.8;
         reviewCount: 156;
         launchDate: '2025-02-01';
@@ -122,8 +114,7 @@ export const NEXT_GEN_MICRO_SAAS_SERVICES_2025 = [
         }
     },
     // AI-Powered Cybersecurity Threat Detection;
-    {
-        id: 'ai-cybersecurity-threat-detection-2025';
+    {id: 'ai-cybersecurity-threat-detection-2025';
         title: 'Zion AI Cybersecurity Threat Detection 2025';
         description: 'Advanced AI-powered cybersecurity platform that detects, analyzes, and responds to cyber threats in real-time using machine learning algorithms and behavioral analytics.',
         category: 'Cybersecurity';
@@ -131,8 +122,7 @@ export const NEXT_GEN_MICRO_SAAS_SERVICES_2025 = [
         price: {
             monthly: 299;
             yearly: 2990;
-            currency: '$',
-        };
+            currency: '$'};
         features: [
             'Real-time threat detection using AI algorithms';
             'Behavioral analytics and anomaly detection',
@@ -163,11 +153,9 @@ export const NEXT_GEN_MICRO_SAAS_SERVICES_2025 = [
         integration: ['SIEM systems', 'EDR solutions', 'Cloud platforms', 'Identity providers', 'Security tools'],
         pricingTier: 'Enterprise';
         website: 'https://ziontechgroup.com/ai-cybersecurity';
-        contactInfo: {
-            email: 'kleber@ziontechgroup.com';
+        contactInfo: {email: 'kleber@ziontechgroup.com';
             phone: '+1 302 464 0950';
-            address: '364 E Main St STE 1008 Middletown DE 19709',
-        };
+            address: '364 E Main St STE 1008 Middletown DE 19709'};
         rating: 4.9;
         reviewCount: 189;
         launchDate: '2025-01-20';
@@ -183,8 +171,7 @@ export const NEXT_GEN_MICRO_SAAS_SERVICES_2025 = [
         }
     },
     // IoT Edge Computing Platform;
-    {
-        id: 'iot-edge-computing-platform-2025';
+    {id: 'iot-edge-computing-platform-2025';
         title: 'Zion IoT Edge Computing Platform 2025';
         description: 'Advanced edge computing platform that processes IoT data locally using AI algorithms, reducing latency and bandwidth while providing real-time insights and automation.',
         category: 'IoT';
@@ -192,8 +179,7 @@ export const NEXT_GEN_MICRO_SAAS_SERVICES_2025 = [
         price: {
             monthly: 149;
             yearly: 1490;
-            currency: '$',
-        };
+            currency: '$'};
         features: [
             'Local AI processing capabilities for IoT devices';
             'Real-time data analytics and insights',
@@ -224,11 +210,9 @@ export const NEXT_GEN_MICRO_SAAS_SERVICES_2025 = [
         integration: ['Industrial IoT protocols', 'Cloud platforms', 'ERP systems', 'SCADA systems', 'Custom applications'],
         pricingTier: 'Professional';
         website: 'https://ziontechgroup.com/iot-edge-computing';
-        contactInfo: {
-            email: 'kleber@ziontechgroup.com';
+        contactInfo: {email: 'kleber@ziontechgroup.com';
             phone: '+1 302 464 0950';
-            address: '364 E Main St STE 1008 Middletown DE 19709',
-        };
+            address: '364 E Main St STE 1008 Middletown DE 19709'};
         rating: 4.7;
         reviewCount: 98;
         launchDate: '2025-02-15';
@@ -244,8 +228,7 @@ export const NEXT_GEN_MICRO_SAAS_SERVICES_2025 = [
         }
     },
     // AI-Powered Healthcare Analytics;
-    {
-        id: 'ai-healthcare-analytics-2025';
+    {id: 'ai-healthcare-analytics-2025';
         title: 'Zion AI Healthcare Analytics Platform 2025';
         description: 'Comprehensive healthcare analytics platform that uses artificial intelligence to predict patient outcomes, optimize treatment plans, and improve healthcare delivery.',
         category: 'Healthcare';
@@ -253,8 +236,7 @@ export const NEXT_GEN_MICRO_SAAS_SERVICES_2025 = [
         price: {
             monthly: 399;
             yearly: 3990;
-            currency: '$',
-        };
+            currency: '$'};
         features: [
             'Patient outcome prediction using AI algorithms';
             'Treatment optimization and personalized medicine',
@@ -285,11 +267,9 @@ export const NEXT_GEN_MICRO_SAAS_SERVICES_2025 = [
         integration: ['Electronic Health Records', 'Medical devices', 'Laboratory systems', 'Pharmacy systems', 'Insurance platforms'],
         pricingTier: 'Enterprise';
         website: 'https://ziontechgroup.com/ai-healthcare-analytics';
-        contactInfo: {
-            email: 'kleber@ziontechgroup.com';
+        contactInfo: {email: 'kleber@ziontechgroup.com';
             phone: '+1 302 464 0950';
-            address: '364 E Main St STE 1008 Middletown DE 19709',
-        };
+            address: '364 E Main St STE 1008 Middletown DE 19709'};
         rating: 4.8;
         reviewCount: 167;
         launchDate: '2025-01-30';
@@ -305,8 +285,7 @@ export const NEXT_GEN_MICRO_SAAS_SERVICES_2025 = [
         }
     },
     // Quantum-Secure Communication Platform;
-    {
-        id: 'quantum-secure-communication-2025';
+    {id: 'quantum-secure-communication-2025';
         title: 'Zion Quantum-Secure Communication Platform 2025';
         description: 'Revolutionary communication platform that uses quantum key distribution to provide unbreakable encryption for secure communications, protecting against both classical and quantum attacks.',
         category: 'Quantum';
@@ -314,8 +293,7 @@ export const NEXT_GEN_MICRO_SAAS_SERVICES_2025 = [
         price: {
             monthly: 599;
             yearly: 5990;
-            currency: '$',
-        };
+            currency: '$'};
         features: [
             'Quantum key distribution for unbreakable encryption';
             'Post-quantum cryptography standards',
@@ -346,11 +324,9 @@ export const NEXT_GEN_MICRO_SAAS_SERVICES_2025 = [
         integration: ['Enterprise communication systems', 'Cloud platforms', 'Mobile applications', 'Web browsers', 'Custom applications'],
         pricingTier: 'Enterprise';
         website: 'https://ziontechgroup.com/quantum-secure-communication';
-        contactInfo: {
-            email: 'kleber@ziontechgroup.com';
+        contactInfo: {email: 'kleber@ziontechgroup.com';
             phone: '+1 302 464 0950';
-            address: '364 E Main St STE 1008 Middletown DE 19709',
-        };
+            address: '364 E Main St STE 1008 Middletown DE 19709'};
         rating: 4.9;
         reviewCount: 89;
         launchDate: '2025-03-01';
@@ -366,8 +342,7 @@ export const NEXT_GEN_MICRO_SAAS_SERVICES_2025 = [
         }
     },
     // AI-Powered Financial Trading Platform;
-    {
-        id: 'ai-financial-trading-platform-2025';
+    {id: 'ai-financial-trading-platform-2025';
         title: 'Zion AI Financial Trading Platform 2025';
         description: 'Advanced AI-powered financial trading platform that uses machine learning algorithms to analyze market data, predict trends, and execute trades with optimal timing and risk management.',
         category: 'Finance';
@@ -375,8 +350,7 @@ export const NEXT_GEN_MICRO_SAAS_SERVICES_2025 = [
         price: {
             monthly: 799;
             yearly: 7990;
-            currency: '$',
-        };
+            currency: '$'};
         features: [
             'AI-powered market analysis and prediction';
             'Real-time trading signals and alerts',
@@ -407,11 +381,9 @@ export const NEXT_GEN_MICRO_SAAS_SERVICES_2025 = [
         integration: ['Major exchanges', 'Brokerage platforms', 'Data providers', 'Risk management systems', 'Portfolio management tools'],
         pricingTier: 'Enterprise';
         website: 'https://ziontechgroup.com/ai-financial-trading';
-        contactInfo: {
-            email: 'kleber@ziontechgroup.com';
+        contactInfo: {email: 'kleber@ziontechgroup.com';
             phone: '+1 302 464 0950';
-            address: '364 E Main St STE 1008 Middletown DE 19709',
-        };
+            address: '364 E Main St STE 1008 Middletown DE 19709'};
         rating: 4.8;
         reviewCount: 145;
         launchDate: '2025-02-20';
@@ -427,8 +399,7 @@ export const NEXT_GEN_MICRO_SAAS_SERVICES_2025 = [
         }
     },
     // Sustainable Energy Management Platform;
-    {
-        id: 'sustainable-energy-management-2025';
+    {id: 'sustainable-energy-management-2025';
         title: 'Zion Sustainable Energy Management Platform 2025';
         description: 'Comprehensive energy management platform that optimizes energy consumption, integrates renewable energy sources, and provides real-time monitoring for sustainable business operations.',
         category: 'Sustainability';
@@ -436,8 +407,7 @@ export const NEXT_GEN_MICRO_SAAS_SERVICES_2025 = [
         price: {
             monthly: 199;
             yearly: 1990;
-            currency: '$',
-        };
+            currency: '$'};
         features: [
             'Real-time energy consumption monitoring';
             'AI-powered energy optimization algorithms',
@@ -468,11 +438,9 @@ export const NEXT_GEN_MICRO_SAAS_SERVICES_2025 = [
         integration: ['Building Management Systems', 'IoT sensors', 'Renewable energy systems', 'Utility providers', 'Sustainability platforms'],
         pricingTier: 'Professional';
         website: 'https://ziontechgroup.com/sustainable-energy';
-        contactInfo: {
-            email: 'kleber@ziontechgroup.com';
+        contactInfo: {email: 'kleber@ziontechgroup.com';
             phone: '+1 302 464 0950';
-            address: '364 E Main St STE 1008 Middletown DE 19709',
-        };
+            address: '364 E Main St STE 1008 Middletown DE 19709'};
         rating: 4.7;
         reviewCount: 112;
         launchDate: '2025-03-15';
@@ -488,8 +456,7 @@ export const NEXT_GEN_MICRO_SAAS_SERVICES_2025 = [
         }
     },
     // AI-Powered Education Platform;
-    {
-        id: 'ai-education-platform-2025';
+    {id: 'ai-education-platform-2025';
         title: 'Zion AI Education Platform 2025';
         description: 'Revolutionary AI-powered education platform that personalizes learning experiences, provides intelligent tutoring, and adapts content to individual student needs and learning styles.',
         category: 'Education';
@@ -497,8 +464,7 @@ export const NEXT_GEN_MICRO_SAAS_SERVICES_2025 = [
         price: {
             monthly: 79;
             yearly: 790;
-            currency: '$',
-        };
+            currency: '$'};
         features: [
             'AI-powered personalized learning paths';
             'Intelligent tutoring and adaptive content',
@@ -529,11 +495,9 @@ export const NEXT_GEN_MICRO_SAAS_SERVICES_2025 = [
         integration: ['Learning Management Systems', 'Student Information Systems', 'Assessment platforms', 'Content providers', 'Communication tools'],
         pricingTier: 'Professional';
         website: 'https://ziontechgroup.com/ai-education';
-        contactInfo: {
-            email: 'kleber@ziontechgroup.com';
+        contactInfo: {email: 'kleber@ziontechgroup.com';
             phone: '+1 302 464 0950';
-            address: '364 E Main St STE 1008 Middletown DE 19709',
-        };
+            address: '364 E Main St STE 1008 Middletown DE 19709'};
         rating: 4.8;
         reviewCount: 203;
         launchDate: '2025-01-25';

@@ -1,13 +1,12 @@
 import React from "react";
 
-export interface SpecializedBusinessSolution {
-id: string; title: string; description: string; category: string; subcategory: string; price: number; currency: string; pricingModel: string; features: string[];,
-benefits: string[], useCases: string[];,
+export interface SpecializedBusinessSolution {id: string; title: string; description: string; category: string; subcategory: string; price: number; currency: string; pricingModel: string; features: string[];
+benefits: string[], useCases: string[];
 targetAudience: string[], tags: string[];
 estimatedDelivery: string; supportLevel: string; marketPrice: string;
-contactInfo: {,
-phone: string; email: string; website: string,
-};
+}
+contactInfo: {,}
+phone: string; email: string; website: string};
 websiteUrl: string;
 demoUrl?: string;
 documentationUrl?: string;
@@ -16,10 +15,10 @@ documentationUrl?: string;
 export const SPECIALIZED_BUSINESS_SOLUTIONS: SpecializedBusinessSolution[] = [
 // AI-Powered Sales & Revenue Optimization;
 {,
-id: "ai-sales-revenue-optimization", title: "AI Sales & Revenue Optimization Platform";,
+id: "ai-sales-revenue-optimization", title: "AI Sales & Revenue Optimization Platform";
 description: "Intelligent platform that uses AI to optimize sales processes; predict customer behavior; and maximize revenue through data-driven insights and automation.",
 category: "Business Solutions", subcategory: "Sales Optimization";
-price: 699; currency: "$";,
+price: 699; currency: "$";
 pricingModel: "monthly", features: [
 "Predictive lead scoring",
 "Sales forecasting algorithms",
@@ -52,19 +51,17 @@ targetAudience: [
 "Business owners";
 ],
 tags: ["AI", "Sales", "Revenue Optimization", "CRM", "Business Intelligence"],
-estimatedDelivery: "2-3 weeks", supportLevel: "premium";,
+estimatedDelivery: "2-3 weeks", supportLevel: "premium";
 marketPrice: "$699 - $2; 299/month",
 contactInfo: {,
 phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com",
-}, websiteUrl: "https://ziontechgroup.com/ai-sales-optimization",
+website: "https://ziontechgroup.com"}, websiteUrl: "https://ziontechgroup.com/ai-sales-optimization",
 };
 // Digital Transformation Consulting;
-{
-id: "digital-transformation-consulting", title: "Digital Transformation Consulting Services";,
+{id: "digital-transformation-consulting", title: "Digital Transformation Consulting Services";
 description: "Comprehensive digital transformation consulting that helps organizations modernize their operations; adopt new technologies; and achieve digital excellence.",
 category: "Business Solutions", subcategory: "Digital Transformation";
-price: 2499; currency: "$";,
+price: 2499; currency: "$";
 pricingModel: "monthly", features: [
 "Digital maturity assessment",
 "Technology roadmap development",
@@ -97,19 +94,17 @@ targetAudience: [
 "Business consultants";
 ],
 tags: ["Digital Transformation", "Consulting", "Change Management", "Technology Adoption", "Process Optimization"],
-estimatedDelivery: "Ongoing", supportLevel: "enterprise";,
+estimatedDelivery: "Ongoing", supportLevel: "enterprise";
 marketPrice: "$2; 499 - $8; 999/month",
 contactInfo: {,
 phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com",
-}, websiteUrl: "https://ziontechgroup.com/digital-transformation",
+website: "https://ziontechgroup.com"}, websiteUrl: "https://ziontechgroup.com/digital-transformation",
 };
 // Data Analytics & Business Intelligence;
-{
-id: "data-analytics-business-intelligence", title: "Data Analytics & Business Intelligence Platform";,
+{id: "data-analytics-business-intelligence", title: "Data Analytics & Business Intelligence Platform";
 description: "Advanced analytics platform that transforms raw data into actionable business insights; enabling data-driven decision making across all organizational levels.",
 category: "Business Solutions", subcategory: "Data Analytics";
-price: 799; currency: "$";,
+price: 799; currency: "$";
 pricingModel: "monthly", features: [
 "Real-time data visualization",
 "Predictive analytics",
@@ -142,19 +137,17 @@ targetAudience: [
 "Operations teams";
 ],
 tags: ["Data Analytics", "Business Intelligence", "Predictive Analytics", "Data Visualization", "Reporting"],
-estimatedDelivery: "2-3 weeks", supportLevel: "premium";,
+estimatedDelivery: "2-3 weeks", supportLevel: "premium";
 marketPrice: "$799 - $2; 499/month",
 contactInfo: {,
 phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com",
-}, websiteUrl: "https://ziontechgroup.com/data-analytics",
+website: "https://ziontechgroup.com"}, websiteUrl: "https://ziontechgroup.com/data-analytics",
 };
 // Process Automation & Workflow Optimization;
-{
-id: "process-automation-workflow-optimization", title: "Process Automation & Workflow Optimization Platform";,
+{id: "process-automation-workflow-optimization", title: "Process Automation & Workflow Optimization Platform";
 description: "Intelligent automation platform that streamlines business processes; eliminates manual tasks; and optimizes workflows for maximum efficiency and productivity.",
 category: "Business Solutions", subcategory: "Process Automation";
-price: 599; currency: "$";,
+price: 599; currency: "$";
 pricingModel: "monthly", features: [
 "Workflow automation builder",
 "Process mapping tools",
@@ -187,19 +180,17 @@ targetAudience: [
 "Department heads";
 ],
 tags: ["Process Automation", "Workflow Optimization", "Business Process Management", "Automation", "Efficiency"],
-estimatedDelivery: "2-3 weeks", supportLevel: "premium";,
+estimatedDelivery: "2-3 weeks", supportLevel: "premium";
 marketPrice: "$599 - $1; 999/month",
 contactInfo: {,
 phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com",
-}, websiteUrl: "https://ziontechgroup.com/process-automation",
+website: "https://ziontechgroup.com"}, websiteUrl: "https://ziontechgroup.com/process-automation",
 };
 // Customer Experience & Engagement Platform;
-{
-id: "customer-experience-engagement-platform", title: "Customer Experience & Engagement Platform";,
+{id: "customer-experience-engagement-platform", title: "Customer Experience & Engagement Platform";
 description: "Comprehensive platform for managing customer interactions; personalizing experiences; and building lasting customer relationships through data-driven insights.",
 category: "Business Solutions", subcategory: "Customer Experience";
-price: 899; currency: "$";,
+price: 899; currency: "$";
 pricingModel: "monthly", features: [
 "Customer journey mapping",
 "Personalization engine",
@@ -232,11 +223,10 @@ targetAudience: [
 "Business owners";
 ],
 tags: ["Customer Experience", "Customer Engagement", "Personalization", "Customer Analytics", "Loyalty"],
-estimatedDelivery: "2-3 weeks", supportLevel: "premium";,
+estimatedDelivery: "2-3 weeks", supportLevel: "premium";
 marketPrice: "$899 - $2; 999/month",
 contactInfo: {,
 phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com",
-}, websiteUrl: "https://ziontechgroup.com/customer-experience",
+website: "https://ziontechgroup.com"}, websiteUrl: "https://ziontechgroup.com/customer-experience",
 }
 ];

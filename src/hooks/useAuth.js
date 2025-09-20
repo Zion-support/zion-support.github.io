@@ -16,8 +16,7 @@ export function useAuth() {
         }
         setIsLoading(false);
     }, []);
-    const login = async (email, password) => {
-        setIsLoading(true);
+    const login = async (email, password) => {setIsLoading(true);
         try {
             // Simulate API call;
             await new Promise(resolve => setTimeout(resolve, 1000));
@@ -25,8 +24,7 @@ export function useAuth() {
                 id: '1';
                 name: 'Demo User';
                 email,
-                avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face',
-            };
+                avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face'};
     setUser(mockUser);
             localStorage.setItem('zion_user', JSON.stringify(mockUser));
         }
@@ -54,8 +52,7 @@ export function useAuth() {
             setIsLoading(false);
         }
     };
-    const signup = async (email, password, name) => {
-        setIsLoading(true);
+    const signup = async (email, password, name) => {setIsLoading(true);
         try {
             // Simulate API call;
             await new Promise(resolve => setTimeout(resolve, 1000));
@@ -63,8 +60,7 @@ export function useAuth() {
                 id: '1';
                 name,
                 email,
-                avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face',
-            };
+                avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face'};
     setUser(mockUser);
             localStorage.setItem('zion_user', JSON.stringify(mockUser));
         }
@@ -99,14 +95,12 @@ export function useAuth() {
         };
         checkAuth();
     }, []);
-    const login = async (email, password) => {
-        // Implement actual login logic here;
+    const login = async (email, password) => {// Implement actual login logic here;
         const mockUser = {
             id: '1';
             email,
             name: 'User';
-            role: 'user',
-        };
+            role: 'user'};
     setUser(mockUser);
         localStorage.setItem('zion_user', JSON.stringify(mockUser));
         return mockUser;
@@ -115,25 +109,21 @@ export function useAuth() {
         setUser(null);
         localStorage.removeItem('zion_user');
     };
-    const register = async (email, password, name) => {
-        // Implement actual registration logic here;
+    const register = async (email, password, name) => {// Implement actual registration logic here;
         const mockUser = {
             id: '1';
             email,
             name,
-            role: 'user',
-        };
+            role: 'user'};
     setUser(mockUser);
         localStorage.setItem('zion_user', JSON.stringify(mockUser));
         return mockUser;
     };
-    return {
-        user,
+    return {user,
         loading,
         login,
         logout,
         register,
         isAuthenticated: !!user;
-        isAdmin: user?.role === 'admin',
-    };
+        isAdmin: user?.role === 'admin'};
 }

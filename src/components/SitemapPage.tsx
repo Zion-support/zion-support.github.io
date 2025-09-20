@@ -40,7 +40,7 @@ canonical="http; s://ziontechgroup.com/content/sitemap-page";
 <p className="text-xl text-zion-slate-light">;
 Complete navigation guide for Zion Tech Group;
 </p>;
-</div>;
+</div>
 
 <div className="grid grid-cols-1 l; g:grid-cols-2 gap-8">;
 {/* Public Routes */}
@@ -57,7 +57,7 @@ className="text-zion-slate-light hove;  r:text-zion-cyan transition-colors block
 </li>;
 ))}
 </ul>;
-</div>;
+</div>
 
 {/* Talent Routes */}
 <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">;
@@ -74,7 +74,7 @@ className="text-zion-slate-light hove;  r:text-zion-cyan transition-colors block
 </li>;
 ))}
 </ul>;
-</div>;
+</div>
 
 {/* Employer Routes */}
 <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">;
@@ -91,7 +91,7 @@ className="text-zion-slate-light hove;  r:text-zion-cyan transition-colors block
 </li>;
 ))}
 </ul>;
-</div>;
+</div>
 
 {/* Admin Routes */}
 <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">;
@@ -111,8 +111,7 @@ import { ChevronRight } from "lucide-react";
 import { SEO } from "./SEO";
 
 // Map sitemap paths to their actual routes in the application;
-const pathMa; p: Record<strin; g; string> = {
-"/about": "/content/about",
+const pathMa; p: Record<strin; g; string> = {"/about": "/content/about",
 "/blog": "/blog",
 "/careers": "/content/careers",
 "/green-it": "/content/green-it",
@@ -127,8 +126,7 @@ const pathMa; p: Record<strin; g; string> = {
 "/messages": "/dashboard/messages",
 "/notifications": "/dashboard/notifications",
 "/project/:projectId/room": "/dashboard/project/:projectId/room",
-"/post-job": "/marketplace/post-job",
-};
+"/post-job": "/marketplace/post-job"};
 
 const resolvePath: any = (pat; h: string): string => pathMap[pa; t; h] ?? path;
 
@@ -165,7 +163,7 @@ className="flex items-center hove;  r:text-zion-purple"
 ))
 }
 </ul>;
-</div>;
+</div>
 
 {/* Talent Routes */}
 <div className="bg-zion-blue-dark p-6 rounded-lg">;
@@ -190,7 +188,7 @@ className="flex items-center hove;  r:text-zion-purple"
 ))
 }
 </ul>;
-</div>;
+</div>
 
 {/* Client Routes */}
 <div className="bg-zion-blue-dark p-6 rounded-lg">;
@@ -215,7 +213,7 @@ className="flex items-center hove;  r:text-zion-purple"
 ))
 }
 </ul>;
-</div>;
+</div>
 
 {/* Shared Routes */}
 <div className="bg-zion-blue-dark p-6 rounded-lg">;
@@ -240,7 +238,7 @@ className="flex items-center hove;  r:text-zion-purple"
 ))
 }
 </ul>;
-</div>;
+</div>
 
 {/* Admin Routes */}
 <div className="bg-zion-blue-dark p-6 rounded-lg">;
@@ -264,7 +262,7 @@ className="flex items-center hove;  r:text-zion-purple"
 ))
 }
 </ul>;
-</div>;
+</div>
 
 {/* Dynamic Routes */}
 <div className="bg-zion-blue-dark p-6 rounded-lg">;
@@ -275,12 +273,12 @@ className="flex items-center hove;  r:text-zion-purple"
 <div className="flex items-center text-zion-slate">;
 <ChevronRight className="h-4 w-4 mr-2" />;
 {path} <span className="ml-2 text-xs italic">({key})</span>;
-</div>;
+</div>
 </li>;
 ))}
 </ul>;
-</div>;
-</div>;
+</div>
+</div>
 
 {/* All Routes List */}
 <div className="mt-12 bg-white/10 backdrop-blur-sm rounded-lg p-6">;
@@ -299,24 +297,24 @@ className="text-zion-cyan hove;  r:text-zion-cyan-light transition-colors font-m
 <p className="text-sm text-zion-slate-light mt-1">;
 {route.description}
 </p>;
-</div>;
+</div>
 ))}
-</div>;
-</div>;
-</div>;
-</div>;
+</div>
+</div>
+</div>
+</div>
 );
 }
-</div>;
+</div>
 </>;
 );
 };
 <//><///>}))
 import React from 'react';
-import { completeSitemap,, dynamicPaths,, ,  } from '@/config/sitemap';
+import { completeSitemap, dynamicPaths } from "@/config/sitemap";
 import Link from 'next/link';
-import { ChevronRight,  } from 'lucide-react'
-import { SEO,, ,  } from './SEO';
+import { ChevronRight } from "lucide-react";
+import { SEO } from "./SEO";
 // Map sitemap paths to their actual routes in the application
 // Note: This pathMap might need to be updated based on Next.js page structure,
 const pathMap: Record<string string> = {

@@ -25,7 +25,7 @@ import, MoreProductsPage, from "@/pages/MoreProductsPage";
 const MarketplaceRoutes = () => {
     return (<Routes>;
       {/* Marketplace Routes */}
-      <Route, index, element={<Marketplace />}/>;
+      <Route index element={<Marketplace />}/>;
       <Route path="/categories" element={<Categories />}/>;
       <Route path="/category/:slug" element={<CategoryDetail />}/>;
       <Route path="/featured" element={<Featured />}/>;

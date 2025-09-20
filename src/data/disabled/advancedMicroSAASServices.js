@@ -1,7 +1,6 @@
 export const ADVANCED_MICRO_SAAS_SERVICES = [
     // AI-Powered Customer Experience Platform;
-    {
-        id: "ai-customer-experience-platform";
+    {id: "ai-customer-experience-platform";
         title: "AI Customer Experience & Sentiment Analysis Platform";
         description: "Intelligent platform that analyzes customer interactions across all channels, predicts customer behavior, and provides personalized experiences using advanced AI and machine learning.",
         category: "AI & Customer Experience";
@@ -51,8 +50,7 @@ export const ADVANCED_MICRO_SAAS_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         technology: ["GPT-4", "BERT", "TensorFlow", "React", "Node.js", "PostgreSQL", "Redis"],
         integrations: ["Salesforce", "HubSpot", "Zendesk", "Intercom", "Shopify", "Stripe"],
         compliance: ["GDPR", "CCPA", "SOC 2", "ISO 27001"],
@@ -83,8 +81,7 @@ export const ADVANCED_MICRO_SAAS_SERVICES = [
         uptime: "99.95%",
     };
     // Blockchain Supply Chain Transparency Platform;
-    {
-        id: "blockchain-supply-chain-transparency";
+    {id: "blockchain-supply-chain-transparency";
         title: "Blockchain Supply Chain Transparency & Traceability Platform";
         description: "Revolutionary blockchain-based platform that provides end-to-end supply chain visibility, ensuring product authenticity, ethical sourcing, and regulatory compliance.",
         category: "Blockchain & Supply Chain";
@@ -134,8 +131,7 @@ export const ADVANCED_MICRO_SAAS_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         technology: ["Ethereum", "Hyperledger", "IPFS", "React", "Node.js", "MongoDB", "Redis"],
         integrations: ["ERP systems", "WMS", "TMS", "Quality management systems", "Compliance platforms"],
         compliance: ["ISO 9001", "ISO 14001", "FDA", "EU regulations", "SOC 2"],
@@ -166,8 +162,7 @@ export const ADVANCED_MICRO_SAAS_SERVICES = [
         uptime: "99.99%",
     };
     // AI-Powered Predictive Maintenance Platform;
-    {
-        id: "ai-predictive-maintenance-platform";
+    {id: "ai-predictive-maintenance-platform";
         title: "AI Predictive Maintenance & IoT Asset Management Platform";
         description: "Intelligent platform that uses IoT sensors, AI algorithms, and machine learning to predict equipment failures, optimize maintenance schedules, and reduce downtime.",
         category: "AI & IoT";
@@ -217,8 +212,7 @@ export const ADVANCED_MICRO_SAAS_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         technology: ["TensorFlow", "PyTorch", "IoT protocols", "React", "Node.js", "Time-series databases", "Edge computing"],
         integrations: ["SCADA systems", "CMMS", "ERP systems", "Building management systems", "IoT platforms"],
         compliance: ["ISO 55001", "ISO 41001", "SOC 2", "Industry-specific standards"],
@@ -249,8 +243,7 @@ export const ADVANCED_MICRO_SAAS_SERVICES = [
         uptime: "99.7%",
     };
     // Quantum-Safe Communication Platform;
-    {
-        id: "quantum-safe-communication-platform";
+    {id: "quantum-safe-communication-platform";
         title: "Quantum-Safe Communication & Encryption Platform";
         description: "Next-generation communication platform that implements post-quantum cryptography to protect against future quantum computing threats while maintaining current security standards.";
         category: "Quantum Technology";
@@ -300,8 +293,7 @@ export const ADVANCED_MICRO_SAAS_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         technology: ["Post-Quantum Algorithms", "Quantum Key Distribution", "Zero-Trust Architecture", "Blockchain", "Cloud Native"],
         integrations: ["Active Directory", "LDAP", "SIEM Systems", "Firewalls", "VPN Solutions"],
         compliance: ["NIST", "FIPS", "SOC 2", "ISO 27001", "GDPR", "Quantum Standards"],
@@ -332,8 +324,7 @@ export const ADVANCED_MICRO_SAAS_SERVICES = [
         uptime: "99.95%",
     };
     // AI-Powered Market Research & Intelligence Platform;
-    {
-        id: "ai-market-research-intelligence";
+    {id: "ai-market-research-intelligence";
         title: "AI Market Research & Competitive Intelligence Platform";
         description: "Intelligent platform that uses AI to analyze market trends, monitor competitors, identify opportunities, and provide actionable business intelligence for strategic decision-making.",
         category: "AI & Business Intelligence";
@@ -383,8 +374,7 @@ export const ADVANCED_MICRO_SAAS_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         technology: ["GPT-4", "Claude", "TensorFlow", "React", "Node.js", "Elasticsearch", "Apache Kafka"],
         integrations: ["CRM systems", "Marketing platforms", "Analytics tools", "Social media APIs", "News APIs"],
         compliance: ["GDPR", "CCPA", "SOC 2", "Data privacy standards"],
@@ -415,8 +405,7 @@ export const ADVANCED_MICRO_SAAS_SERVICES = [
         uptime: "99.7%",
     };
     // Autonomous AI Content Creation & Management Platform;
-    {
-        id: "autonomous-ai-content-creation";
+    {id: "autonomous-ai-content-creation";
         title: "Autonomous AI Content Creation & Management Platform";
         description: "Revolutionary platform that autonomously creates, optimizes, and manages content across all digital channels using advanced AI, with minimal human intervention.",
         category: "AI & Content Creation";
@@ -466,8 +455,7 @@ export const ADVANCED_MICRO_SAAS_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         technology: ["GPT-4", "Claude", "DALL-E", "Stable Diffusion", "React", "Node.js", "MongoDB"],
         integrations: ["WordPress", "Shopify", "HubSpot", "Mailchimp", "Social Media APIs", "CMS platforms"],
         compliance: ["GDPR", "CCPA", "SOC 2", "Content standards"],
@@ -498,8 +486,7 @@ export const ADVANCED_MICRO_SAAS_SERVICES = [
         uptime: "99.95%",
     };
     // Smart Contract Development & Management Platform;
-    {
-        id: "smart-contract-development-platform";
+    {id: "smart-contract-development-platform";
         title: "Smart Contract Development & Management Platform";
         description: "Comprehensive platform for developing, deploying, and managing smart contracts across multiple blockchain networks with advanced security, testing, and monitoring capabilities.",
         category: "Blockchain & Smart Contracts";
@@ -549,8 +536,7 @@ export const ADVANCED_MICRO_SAAS_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         technology: ["Solidity", "Rust", "Vyper", "React", "Node.js", "Ethereum", "Polygon", "Solana"],
         integrations: ["MetaMask", "WalletConnect", "Web3 libraries", "Oracle networks", "DEX protocols"],
         compliance: ["Smart contract standards", "Security best practices", "Regulatory compliance", "Audit standards"],
@@ -581,8 +567,7 @@ export const ADVANCED_MICRO_SAAS_SERVICES = [
         uptime: "99.95%",
     };
     // AI-Powered Human Resources & Talent Management Platform;
-    {
-        id: "ai-hr-talent-management";
+    {id: "ai-hr-talent-management";
         title: "AI-Powered HR & Talent Management Platform";
         description: "Intelligent HR platform that uses AI to streamline recruitment, employee management, performance evaluation, and organizational development with predictive analytics.",
         category: "AI & Human Resources";
@@ -632,8 +617,7 @@ export const ADVANCED_MICRO_SAAS_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         technology: ["GPT-4", "Claude", "TensorFlow", "React", "Node.js", "PostgreSQL", "Redis"],
         integrations: ["ATS systems", "HRIS platforms", "Job boards", "Social media", "Background check services"],
         compliance: ["GDPR", "CCPA", "EEOC", "SOC 2", "HR compliance standards"],
@@ -664,8 +648,7 @@ export const ADVANCED_MICRO_SAAS_SERVICES = [
         uptime: "99.7%",
     };
     // Quantum Machine Learning & Optimization Platform;
-    {
-        id: "quantum-ml-optimization";
+    {id: "quantum-ml-optimization";
         title: "Quantum Machine Learning & Optimization Platform";
         description: "Cutting-edge platform that combines quantum computing with machine learning to solve complex optimization problems, accelerate AI model training, and provide quantum advantage.",
         category: "Quantum Computing & AI";
@@ -715,8 +698,7 @@ export const ADVANCED_MICRO_SAAS_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         technology: ["Quantum Algorithms", "Hybrid Systems", "Quantum Error Correction", "Cloud Quantum Computing", "Advanced ML"],
         integrations: ["Quantum Hardware", "ML Frameworks", "Research Tools", "Scientific Computing", "Cloud Platforms"],
         compliance: ["Research Standards", "Security Protocols", "Data Protection", "Export Controls"],

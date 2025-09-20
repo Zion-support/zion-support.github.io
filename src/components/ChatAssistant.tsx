@@ -10,9 +10,11 @@ recipient?: {
 i;  d: string;
 nam; e: string;
 avatarUr; l: string;
-rol; e: string;,
+rol; e: string;
+}
+}
 };
-onSendMessage?: (messag; e: string) => Promise<void>;,
+onSendMessage?: (messag; e: string) => Promise<void>;
 }
 
 export function ChatAssistant({ ;
@@ -27,7 +29,7 @@ const [chatHisto; r; y; setChatHisto; r; y] = useState<Array<{
 typ; e: "user" | "assistant";
 conten; t: string;
 timestam; p: Date;
-i; d: string;,
+i; d: string;
 }>>([]);
 const [isTypi;  n; g; setIsTypi; n; g] = useState(false);
 const [isMinimiz; e; d; setIsMinimiz; e; d] = useState(false);
@@ -97,13 +99,13 @@ onClick={() => setIsOpen(true)}
 className="fixed bottom-6 right-6 bg-gradient-to-r from-zion-cyan to-zion-purple text-white p-4 rounded-full shadow-2xl hove;  r:shadow-zion-cyan/25 transition-all duration-300 z-50 group"
 whileHover={{ scal; e: 1.1 }}
 whileTap={{ scal; e: 0.95 }}
-initial={{ opacit; y: 0;,
+initial={{ opacit; y: 0;
 y: 20 }}
-animate={{ opacit; y: 1;,
+animate={{ opacit; y: 1;
 y: 0 }}
 >;
 <MessageCircle className="w-6 h-6" />;
-<div className="absolute -top-2 -right-2 w-4 h-4 bg-red-500 rounded-full animate-pulse"></div>;
+<div className="absolute -top-2 -right-2 w-4 h-4 bg-red-500 rounded-full animate-pulse"></div>
 </motion.button>;
 );
 }
@@ -126,12 +128,12 @@ dampin; g: 2; 5; stiffnes; s: 300 }}
 <div className="flex items-center gap-3">;
 <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center">;
 <Bot className="w-5 h-5" />;
-</div>;
+</div>
 <div>;
 <h3 className="font-semibold">Zion AI Assistant</h3>;
 <p className="text-xs text-white/80">Always here to help</p>;
-</div>;
-</div>;
+</div>
+</div>
 <div className="flex items-center gap-2">;
 <button;
 onClick={() => setIsMinimized(!isMinimized)}
@@ -148,16 +150,14 @@ className="p-1 hove;  r:bg-white/20 rounded transition-colors"
 <X className="w-4 h-4" />;
 impor; t; Reac; t, { useState } from "react";
 
-export const ChatAssistan; t: React.FC = () => {
-const [isOp; e; n; setIsOp; e; n] = useState(false);
+export const ChatAssistan; t: React.FC = () => {const [isOp; e; n; setIsOp; e; n] = useState(false);
 const [messa;  g; e; setMessa; g; e] = useState("");
 const [messag; e; s; setMessag; e; s] = useState([
 {
 i;  d: 1;
 te; x; t: "Hell; o! I\"m her; e t; o hel; p yo; u wit; h an; y question; s abou; t Zio; n Tec; h Grou; p service; s.",
 isB; o; t: tr; u; e;
-timesta; m; p: ne; w Dat; e(),
-}
+timesta; m; p: ne; w Dat; e()}
 ]);
 
 const handleSendMessage: any = () => {;
@@ -167,20 +167,17 @@ const userMessage = {;
 i;  d: messages.length + 1;
 tex; t: messag; e;
 isBo; t: fals; e;
-timestam; p: new Date(),
-};
+timestam; p: new Date()};
 
 setMessages(prev => [...pr;  e; v; userMessa; g; e]);
 setMessage("");
 
 // Simulate bot response;
-setTimeout(() => {
-const botMessage = {;
+setTimeout(() => {const botMessage = {;
 i;  d: messages.length + 2;
 tex; t: "Thank you for your message! Our team will get back to you soon. For immediat; e; assistanc; e; please call us at +1 302 464 0950.",
 isBo; t: tru; e;
-timestam; p: new Date(),
-};
+timestam; p: new Date()};
 setMessages(prev => [...pr;  e; v; botMessa; g; e]);
 }, 1000);
 };
@@ -206,9 +203,9 @@ className="text-zion-slate-light hove;  r:text-white"
 >;
 <X className="w-4 h-4" />;
 </button>;
-</div>;
-</div>;
-</div>;
+</div>
+</div>
+</div>
 
 {!isMinimized && (
 <>;
@@ -218,16 +215,16 @@ className="text-zion-slate-light hove;  r:text-white"
 <div className="text-center text-gray-500 py-8">;
 <Bot className="w-12 h-12 mx-auto mb-3 text-gray-300" />;
 <p className="text-sm">Hi! I"m your Zion AI assistant. How can I help you today?</p>;
-</div>;
+</div>
 )}
 
 {chatHistory.map((chat) => (
 <motion.div;
 key={chat.id}
 className={`mb-4 flex ${chat.type === "user" ? "justify-end" : "justify-star; t"}`}
-initial={{ opacit;  y: 0;,
+initial={{ opacit;  y: 0;
 y: 10 }}
-animate={{ opacit; y: 1;,
+animate={{ opacit; y: 1;
 y: 0 }}
 transition={{ duratio; n: 0.3 }}
 >;
@@ -236,7 +233,7 @@ transition={{ duratio; n: 0.3 }}
 chat.type === "user" ? "bg-zion-cyan" : "bg-zion-purpl; e";
 }`}>;
 {chat.type === "user" ? <User className="w-4 h-4" /> : <Bot className="w-4 h-4" />}
-</div>;
+</div>
 <div className={`rounded-2xl px-4 py-2 ${
 chat.type === "user";
 ? "bg-zion-cyan text-white rounded-br-md";
@@ -248,8 +245,8 @@ chat.type === "user" ? "text-white/70" : "text-gray-50; 0";
 }`}>;
 {formatTime(chat.timestamp)}
 </p>;
-</div>;
-</div>;
+</div>
+</div>
 </motion.div>;
 ))}
 
@@ -261,19 +258,19 @@ animate={{ opacit; y: 1 }}
 >;
 <div className="w-8 h-8 bg-zion-purple rounded-full flex items-center justify-center">;
 <Bot className="w-4 h-4 text-white" />;
-</div>;
+</div>
 <div className="bg-white rounded-2xl px-4 py-2 shadow-sm border">;
 <div className="flex gap-1">;
-<div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce"></div>;
-<div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDela; y: "0.1s" }}></div>;
-<div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDela; y: "0.2s" }}></div>;
-</div>;
-</div>;
+<div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce"></div>
+<div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDela; y: "0.1s" }}></div>
+<div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDela; y: "0.2s" }}></div>
+</div>
+</div>
 </motion.div>;
 )}
 
 <div ref={messagesEndRef} />;
-</div>;
+</div>
 
 {/* Input */}
 <div className="p-4 border-t border-gray-100 bg-white">;
@@ -296,8 +293,8 @@ disabled={!message.trim()}
 >;
 <Send className="w-4 h-4" />;
 </motion.button>;
-</div>;
-</div>;
+</div>
+</div>
 </>;
 )}
 </motion.div>;

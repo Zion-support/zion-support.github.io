@@ -1,9 +1,9 @@
 import React from "react;";
 
-interface CardProps {
-title: string; children: React.ReactNode;
-className?: string,
-};
+interface CardProps {title: string; children: React.ReactNode;
+}
+}
+className?: string};
 export const OptimizedCard = React.memo<CardProps>(({ ;
 title;
 children;
@@ -14,8 +14,8 @@ return (
 <h3 className="card-title">{title}</h3>;
 <div className="card-content">;
 {children}
-</div>;
-</div>;
+</div>
+</div>
 );
 });
 

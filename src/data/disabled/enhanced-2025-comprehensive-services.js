@@ -1,7 +1,6 @@
 export const enhanced2025ComprehensiveServices = [
     // AI-Powered Business Intelligence & Analytics;
-    {
-        id: 'ai-business-intelligence-suite';
+    {id: 'ai-business-intelligence-suite';
         name: 'AI Business Intelligence Suite';
         tagline: 'Transform raw data into actionable business insights with AI';
         description: 'Advanced AI-powered business intelligence platform that provides real-time analytics, predictive modeling, and automated reporting. Features include natural language querying, automated insights generation, and customizable dashboards.',
@@ -36,8 +35,7 @@ export const enhanced2025ComprehensiveServices = [
         contact: {
             phone: '+1 302 464 0950';
             email: 'kleber@ziontechgroup.com';
-            address: '364 E Main St STE 1008 Middletown DE 19709',
-        };
+            address: '364 E Main St STE 1008 Middletown DE 19709'};
         trialDays: 21;
         setupTime: '2-3 business days';
         competitors: ['Tableau', 'Power BI', 'Qlik', 'Looker', 'Domo'],
@@ -52,8 +50,7 @@ export const enhanced2025ComprehensiveServices = [
         securityFeatures: ['End-to-end encryption', 'Multi-factor authentication', 'Role-based access control', 'Audit logging']
     },
     // Quantum-Safe Cybersecurity Platform;
-    {
-        id: 'quantum-safe-cybersecurity-platform';
+    {id: 'quantum-safe-cybersecurity-platform';
         name: 'Quantum-Safe Cybersecurity Platform';
         tagline: 'Future-proof your security with quantum-resistant encryption';
         description: 'Next-generation cybersecurity platform that implements quantum-resistant cryptographic algorithms to protect against future quantum computing threats. Features include advanced threat detection, zero-trust architecture, and automated incident response.',
@@ -88,8 +85,7 @@ export const enhanced2025ComprehensiveServices = [
         contact: {
             phone: '+1 302 464 0950';
             email: 'kleber@ziontechgroup.com';
-            address: '364 E Main St STE 1008 Middletown DE 19709',
-        };
+            address: '364 E Main St STE 1008 Middletown DE 19709'};
         trialDays: 30;
         setupTime: '1-2 weeks';
         competitors: ['CrowdStrike', 'SentinelOne', 'Carbon Black', 'Cylance', 'Darktrace'],
@@ -104,8 +100,7 @@ export const enhanced2025ComprehensiveServices = [
         securityFeatures: ['Quantum-resistant encryption', 'Multi-layer security', 'Real-time threat intelligence', 'Automated response']
     },
     // Autonomous DevOps Platform;
-    {
-        id: 'autonomous-devops-platform';
+    {id: 'autonomous-devops-platform';
         name: 'Autonomous DevOps Platform';
         tagline: 'Self-healing infrastructure with AI-powered automation';
         description: 'Intelligent DevOps platform that autonomously manages infrastructure, deploys applications, and optimizes performance using AI and machine learning. Features include automated scaling, self-healing systems, and predictive maintenance.',
@@ -140,8 +135,7 @@ export const enhanced2025ComprehensiveServices = [
         contact: {
             phone: '+1 302 464 0950';
             email: 'kleber@ziontechgroup.com';
-            address: '364 E Main St STE 1008 Middletown DE 19709',
-        };
+            address: '364 E Main St STE 1008 Middletown DE 19709'};
         trialDays: 14;
         setupTime: '3-5 business days';
         competitors: ['GitLab', 'Jenkins', 'CircleCI', 'GitHub Actions', 'Azure DevOps'],
@@ -156,8 +150,7 @@ export const enhanced2025ComprehensiveServices = [
         securityFeatures: ['Automated security updates', 'Access control', 'Audit logging', 'Encryption at rest']
     },
     // Blockchain Supply Chain Transparency Platform;
-    {
-        id: 'blockchain-supply-chain-transparency';
+    {id: 'blockchain-supply-chain-transparency';
         name: 'Blockchain Supply Chain Transparency Platform';
         tagline: 'End-to-end supply chain visibility with blockchain technology';
         description: 'Comprehensive supply chain management platform that leverages blockchain technology to provide complete transparency, traceability, and compliance across the entire supply chain. Features include smart contracts, real-time tracking, and automated compliance reporting.',
@@ -192,8 +185,7 @@ export const enhanced2025ComprehensiveServices = [
         contact: {
             phone: '+1 302 464 0950';
             email: 'kleber@ziontechgroup.com';
-            address: '364 E Main St STE 1008 Middletown DE 19709',
-        };
+            address: '364 E Main St STE 1008 Middletown DE 19709'};
         trialDays: 30;
         setupTime: '2-4 weeks';
         competitors: ['IBM Food Trust', 'VeChain', 'Walmart Blockchain', 'Maersk TradeLens'],
@@ -208,8 +200,7 @@ export const enhanced2025ComprehensiveServices = [
         securityFeatures: ['Immutable records', 'Cryptographic verification', 'Access control', 'Audit trails']
     },
     // AI-Powered Healthcare Analytics Platform;
-    {
-        id: 'ai-healthcare-analytics-platform';
+    {id: 'ai-healthcare-analytics-platform';
         name: 'AI Healthcare Analytics Platform';
         tagline: 'Transform healthcare data into actionable insights with AI';
         description: 'Advanced healthcare analytics platform that uses AI and machine learning to analyze patient data, predict outcomes, and optimize healthcare delivery. Features include predictive analytics, population health management, and clinical decision support.',
@@ -244,8 +235,7 @@ export const enhanced2025ComprehensiveServices = [
         contact: {
             phone: '+1 302 464 0950';
             email: 'kleber@ziontechgroup.com';
-            address: '364 E Main St STE 1008 Middletown DE 19709',
-        };
+            address: '364 E Main St STE 1008 Middletown DE 19709'};
         trialDays: 45;
         setupTime: '4-6 weeks';
         competitors: ['IBM Watson Health', 'Cerner HealtheIntent', 'Epic Healthy Planet', 'Optum Analytics'],
@@ -260,8 +250,7 @@ export const enhanced2025ComprehensiveServices = [
         securityFeatures: ['HIPAA compliance', 'End-to-end encryption', 'Access control', 'Audit logging']
     },
     // Quantum Machine Learning Platform;
-    {
-        id: 'quantum-machine-learning-platform';
+    {id: 'quantum-machine-learning-platform';
         name: 'Quantum Machine Learning Platform';
         tagline: 'Harness quantum computing power for advanced machine learning';
         description: 'Revolutionary platform that combines quantum computing with machine learning to solve complex problems that are intractable for classical computers. Features include quantum algorithms, hybrid classical-quantum workflows, and quantum advantage demonstrations.',
@@ -296,8 +285,7 @@ export const enhanced2025ComprehensiveServices = [
         contact: {
             phone: '+1 302 464 0950';
             email: 'kleber@ziontechgroup.com';
-            address: '364 E Main St STE 1008 Middletown DE 19709',
-        };
+            address: '364 E Main St STE 1008 Middletown DE 19709'};
         trialDays: 60;
         setupTime: '6-8 weeks';
         competitors: ['IBM Quantum', 'Google Quantum AI', 'Microsoft Azure Quantum', 'Amazon Braket'],
@@ -312,8 +300,7 @@ export const enhanced2025ComprehensiveServices = [
         securityFeatures: ['Quantum encryption', 'Secure access', 'Data protection', 'Research protocols']
     },
     // Autonomous Financial Trading Platform;
-    {
-        id: 'autonomous-financial-trading-platform';
+    {id: 'autonomous-financial-trading-platform';
         name: 'Autonomous Financial Trading Platform';
         tagline: 'AI-powered autonomous trading with advanced risk management';
         description: 'Intelligent trading platform that uses AI and machine learning to autonomously execute trades, manage portfolios, and optimize investment strategies. Features include real-time market analysis, risk management, and regulatory compliance.',
@@ -348,8 +335,7 @@ export const enhanced2025ComprehensiveServices = [
         contact: {
             phone: '+1 302 464 0950';
             email: 'kleber@ziontechgroup.com';
-            address: '364 E Main St STE 1008 Middletown DE 19709',
-        };
+            address: '364 E Main St STE 1008 Middletown DE 19709'};
         trialDays: 30;
         setupTime: '2-3 weeks';
         competitors: ['Alpaca', 'QuantConnect', 'MetaTrader', 'TradingView Pro', 'Interactive Brokers'],
@@ -364,8 +350,7 @@ export const enhanced2025ComprehensiveServices = [
         securityFeatures: ['Multi-factor authentication', 'Encryption', 'Audit trails', 'Regulatory compliance']
     },
     // IoT Edge Computing Platform;
-    {
-        id: 'iot-edge-computing-platform';
+    {id: 'iot-edge-computing-platform';
         name: 'IoT Edge Computing Platform';
         tagline: 'Process IoT data at the edge for real-time insights';
         description: 'Advanced edge computing platform that processes IoT data locally to reduce latency, improve security, and enable real-time decision making. Features include edge AI, local data processing, and seamless cloud integration.',
@@ -400,8 +385,7 @@ export const enhanced2025ComprehensiveServices = [
         contact: {
             phone: '+1 302 464 0950';
             email: 'kleber@ziontechgroup.com';
-            address: '364 E Main St STE 1008 Middletown DE 19709',
-        };
+            address: '364 E Main St STE 1008 Middletown DE 19709'};
         trialDays: 21;
         setupTime: '1-2 weeks';
         competitors: ['AWS Greengrass', 'Azure IoT Edge', 'Google Cloud IoT Edge', 'FogHorn', 'ClearBlade'],
@@ -416,8 +400,7 @@ export const enhanced2025ComprehensiveServices = [
         securityFeatures: ['Edge encryption', 'Secure communication', 'Access control', 'Device authentication']
     },
     // AI-Powered Legal Research Platform;
-    {
-        id: 'ai-legal-research-platform';
+    {id: 'ai-legal-research-platform';
         name: 'AI Legal Research Platform';
         tagline: 'Revolutionize legal research with AI-powered insights';
         description: 'Advanced legal research platform that uses AI to analyze case law, statutes, and legal documents to provide comprehensive insights and recommendations. Features include natural language search, precedent analysis, and automated legal document generation.',
@@ -452,8 +435,7 @@ export const enhanced2025ComprehensiveServices = [
         contact: {
             phone: '+1 302 464 0950';
             email: 'kleber@ziontechgroup.com';
-            address: '364 E Main St STE 1008 Middletown DE 19709',
-        };
+            address: '364 E Main St STE 1008 Middletown DE 19709'};
         trialDays: 14;
         setupTime: '1-2 business days';
         competitors: ['LexisNexis', 'Westlaw', 'Fastcase', 'Casetext', 'Ravel Law'],
@@ -468,8 +450,7 @@ export const enhanced2025ComprehensiveServices = [
         securityFeatures: ['Client confidentiality', 'Data encryption', 'Access control', 'Audit logging']
     },
     // Autonomous Marketing Campaign Platform;
-    {
-        id: 'autonomous-marketing-campaign-platform';
+    {id: 'autonomous-marketing-campaign-platform';
         name: 'Autonomous Marketing Campaign Platform';
         tagline: 'AI-powered marketing campaigns that run themselves';
         description: 'Intelligent marketing platform that autonomously creates, optimizes, and manages marketing campaigns across multiple channels. Features include AI-generated content, automated A/B testing, and real-time performance optimization.',
@@ -504,8 +485,7 @@ export const enhanced2025ComprehensiveServices = [
         contact: {
             phone: '+1 302 464 0950';
             email: 'kleber@ziontechgroup.com';
-            address: '364 E Main St STE 1008 Middletown DE 19709',
-        };
+            address: '364 E Main St STE 1008 Middletown DE 19709'};
         trialDays: 14;
         setupTime: '2-3 business days';
         competitors: ['HubSpot', 'Mailchimp', 'ActiveCampaign', 'ConvertKit', 'Drip'],
@@ -523,8 +503,7 @@ export const enhanced2025ComprehensiveServices = [
 // Additional specialized services for different industries;
 export const specializedIndustryServices = [
     // Renewable Energy Management Platform;
-    {
-        id: 'renewable-energy-management-platform';
+    {id: 'renewable-energy-management-platform';
         name: 'Renewable Energy Management Platform';
         tagline: 'Optimize renewable energy production and distribution with AI';
         description: 'Comprehensive platform for managing renewable energy assets, optimizing production, and managing energy distribution. Features include predictive maintenance, energy forecasting, and grid integration.',
@@ -559,8 +538,7 @@ export const specializedIndustryServices = [
         contact: {
             phone: '+1 302 464 0950';
             email: 'kleber@ziontechgroup.com';
-            address: '364 E Main St STE 1008 Middletown DE 19709',
-        };
+            address: '364 E Main St STE 1008 Middletown DE 19709'};
         trialDays: 30;
         setupTime: '2-4 weeks';
         competitors: ['GE Digital', 'Siemens Mindsphere', 'ABB Ability', 'Schneider Electric EcoStruxure'],
@@ -575,8 +553,7 @@ export const specializedIndustryServices = [
         securityFeatures: ['Grid security', 'Data encryption', 'Access control', 'Audit logging']
     },
     // Autonomous Logistics Platform;
-    {
-        id: 'autonomous-logistics-platform';
+    {id: 'autonomous-logistics-platform';
         name: 'Autonomous Logistics Platform';
         tagline: 'Revolutionize logistics with AI-powered automation';
         description: 'Intelligent logistics platform that autonomously optimizes routes, manages fleets, and coordinates deliveries using AI and machine learning. Features include predictive routing, autonomous vehicle coordination, and real-time optimization.',
@@ -611,8 +588,7 @@ export const specializedIndustryServices = [
         contact: {
             phone: '+1 302 464 0950';
             email: 'kleber@ziontechgroup.com';
-            address: '364 E Main St STE 1008 Middletown DE 19709',
-        };
+            address: '364 E Main St STE 1008 Middletown DE 19709'};
         trialDays: 21;
         setupTime: '2-3 weeks';
         competitors: ['Manhattan Associates', 'JDA Software', 'Oracle Transportation', 'SAP Transportation'],
@@ -628,7 +604,5 @@ export const specializedIndustryServices = [
     }
 ];
 // Export all services combined;
-export const allEnhancedServices = [
-    ...enhanced2025ComprehensiveServices,
-    ...specializedIndustryServices,
-];
+export const allEnhancedServices = [...enhanced2025ComprehensiveServices,
+    ...specializedIndustryServices];

@@ -25,13 +25,12 @@ return (
           </div>
           {isLoading ? (
             <ListingGridSkeleton />
-          ) : (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-              {listings.map((listing,) => (
-                <ProductListingCard,
-key = {listing.id,}
-                  listing = {listing,}
-                  onRequestQuote = {handleRequestQuote,}
+          ) : (<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+              {listings.map((listing) => (
+                <ProductListingCard
+key = {listing.id}
+                  listing = {listing}
+                  onRequestQuote = {handleRequestQuote}
                   detailBasePath="/marketplace/listing"
                 />
               ))}
@@ -40,6 +39,6 @@ key = {listing.id,}
           </div>
         </div>
       </Suspense>
-    </>
+</>
   )
 }

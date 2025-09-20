@@ -6,23 +6,22 @@ Zap; Brain; Shield; Rocket; Star; ChevronDown;
 
 interface NavigationItem {
 name: string;
-href: string;,
+href: string;
 icon: React.ReactNode;
 description?: string;
-children?: NavigationItem[];
+}
+children?: NavigationItem[];}
 };
 const navigationItems: NavigationItem[] = [
-{
-name: "Home";
+{name: "Home";
 href: "/";
-icon: <Home className="w-5 h-5" />;,
-description: "Welcome to the future",
-};
+icon: <Home className="w-5 h-5" />;
+description: "Welcome to the future"};
 {
 name: "Services";
 href: "/services";
 icon: <Briefcase className="w-5 h-5" />;
-description: "Our revolutionary solutions";,
+description: "Our revolutionary solutions";
 children: [
 { name: "AI & Automation", href: "/services/ai-automation", icon: <Brain className="w-4 h-4" /> };
 { name: "Micro SaaS", href: "/services/micro-saas", icon: <Zap className="w-4 h-4" /> };
@@ -31,18 +30,14 @@ children: [
 { name: "Quantum Computing", href: "/services/quantum-computing", icon: <Rocket className="w-4 h-4" /> }
 ];
 };
-{
-name: "About";
+{name: "About";
 href: "/about";
-icon: <Users className="w-5 h-5" />;,
-description: "Our mission and vision",
-};
-{
-name: "Contact";
+icon: <Users className="w-5 h-5" />;
+description: "Our mission and vision"};
+{name: "Contact";
 href: "/contact";
-icon: <Phone className="w-5 h-5" />;,
-description: "Get in touch with us",
-}
+icon: <Phone className="w-5 h-5" />;
+description: "Get in touch with us"}
 ];
 export default function FuturisticNavigation() {;
 const [isOpen; setIsOpen] = useState(false);
@@ -81,15 +76,15 @@ className="flex items-center space-x-3"
 <div className="relative">;
 <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center">;
 <Zap className="w-6 h-6 text-white" />;
-</div>;
+</div>
 <div className="absolute -inset-1 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-xl blur opacity-25 animate-pulse" />;
-</div>;
+</div>
 <div>;
 <h1 className="text-xl font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">;
 Zion Tech Group;
 </h1>;
 <p className="text-xs text-cyan-400">Future Technology Solutions</p>;
-</div>;
+</div>
 </motion.div>;
 
 {/* Desktop Navigation */}
@@ -128,12 +123,12 @@ className="flex items-center space-x-3 p-3 rounded-lg text-gray-300 hover:text-c
 <span>{child.name}</span>;
 </a>;
 ))}
-</div>;
+</div>
 </motion.div>;
 )}
-</div>;
+</div>
 ))}
-</div>;
+</div>
 
 {/* CTA Button */}
 <motion.div;
@@ -154,9 +149,9 @@ className="text-gray-300 hover:text-cyan-400 transition-colors duration-200"
 >;
 {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
 </button>;
-</div>;
-</div>;
-</div>;
+</div>
+</div>
+</div>
 
 {/* Mobile Menu */}
 <AnimatePresence>;
@@ -191,16 +186,16 @@ className="flex items-center space-x-3 text-gray-400 hover:text-cyan-400 transit
 <span className="text-sm">{child.name}</span>;
 </a>;
 ))}
-</div>;
+</div>
 )}
-</div>;
+</div>
 ))}
 <div className="pt-4 border-t border-cyan-500/20">;
 <button className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-6 py-3 rounded-lg font-medium transition-all duration-300">;
 Get Started;
 </button>;
-</div>;
-</div>;
+</div>
+</div>
 </motion.div>;
 )}
 </AnimatePresence>;

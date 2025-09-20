@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react, ';
-export function usePostsByCategory(categoryId) {
-    const [posts, setPosts] = useState([]);
+export function usePostsByCategory(categoryId) {const [posts, setPosts] = useState([]);
     const [loading, setLoading] = useState(true);
     useEffect(() => {
         // Simulate API call;
@@ -15,8 +14,7 @@ export function usePostsByCategory(categoryId) {
                         id: '1';
                         name: 'John Doe';
                         avatar: '/avatars/john.jpg';
-                        role: 'user',
-                    };
+                        role: 'user'};
                     authorId: '1';
                     category: categoryId;
                     categoryId: categoryId;

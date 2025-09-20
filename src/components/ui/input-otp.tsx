@@ -6,7 +6,7 @@ const InputOTP = React.forwardRef<
   React.ElementRef<typeof OTPInput>
   React.ComponentPropsWithoutRef<typeof OTPInput>
 ></typeof>(({ className containerClassName, ...props }, ref) => (
-  <OTPInput,
+  <OTPInput
 ref={ref}
     containerClassName={cn(
       'flex items-center gap-2 [&:has([disabled])]:opacity-50'
@@ -49,5 +49,5 @@ const InputOTPSeparator = React.forwardRef<
     <Dot />
   </div>
 ))
-InputOTPSeparator.displayName = 'InputOTPSeparator'
-export { InputOTP InputOTPGroup InputOTPSlot InputOTPSeparator }
+InputOTPSeparator.displayName = 'InputOTPSeparator';
+export { InputOTP InputOTPGroup InputOTPSlot InputOTPSeparator };

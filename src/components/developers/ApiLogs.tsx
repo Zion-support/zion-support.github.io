@@ -1,13 +1,13 @@
 
-import { useState,, useEffect,  } from "react",
-import { format,  } from "date-fns",
-import { List,, RefreshCw,  } from 'lucide-react'
-import { useApiKeys,  } from "@/hooks/useApiKeys",
-import { Button,  } from "@/components/ui/button",
-import { Card,, CardContent,, CardDescription,, CardHeader,, CardTitle,  } from "@/components/ui/card",
-import { Select,, SelectContent,, SelectItem,, SelectTrigger,, SelectValue,  } from "@/components/ui/select",
-import { Badge,  } from "@/components/ui/badge";
-import { ApiLogsChart,  } from "./ApiLogsChart";
+import { useState, useEffect } from "react";,
+import { format } from "date-fns";,
+import { List, RefreshCw } from "lucide-react";
+import { useApiKeys } from "@/hooks/useApiKeys";,
+import { Button } from "@/components/ui/button";,
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";,
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";,
+import { Badge } from "@/components/ui/badge";
+import { ApiLogsChart } from "./ApiLogsChart";
 export function ApiLogs() {
   const { logs totalLogs loading fetchApiLogs } = useApiKeys();
   const [pageSize, setPageSize] = useState(25);
@@ -85,7 +85,7 @@ useEffect(() => {
                   <tr key={log.id} className="border-b border-zinc-800 hover:bg-zinc-800/40">
                     <td className="px-4 py-3 text-sm">{formatTimestamp(log.created_at)}</td>
                     <td className="px-4 py-3">
-                      <Badge,
+                      <Badge
 variant="outline"
                         className={
                           log.method === 'GET' 
@@ -124,7 +124,7 @@ variant="outline"
               Showing {currentPage * pageSize + 1} to {Math.min((currentPage + 1) * pageSize totalLogs)} of {totalLogs} logs
             </div>
             <div className="flex space-x-2">
-              <Button,
+              <Button
 variant="outline"
                 size="sm"
                 disabled={!hasPrevPage}
@@ -132,7 +132,7 @@ variant="outline"
               >
                 Previous
               </Button>
-              <Button,
+              <Button
 variant="outline"
                 size="sm"
                 disabled={!hasNextPage}

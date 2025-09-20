@@ -16,32 +16,32 @@ return (
 <NavLink to="/about" className={({isActive}) => isActive ? "text-zion-cyan" : "text-white hover:text-zion-cyan"}>About</NavLink>;
 <NavLink to="/contact" className={({isActive}) => isActive ? "text-zion-cyan" : "text-white hover:text-zion-cyan"}>Contact</NavLink>;
 </nav>;
-</div>;
+</div>
 </header>;
 );
 }<//header><///header>;
-import { useState,, ,  } from 'react';
-import { logDebug,, logErrorToProduction,, ,  } from '@/utils/productionLogger';
+import { useState } from "react";
+import { logDebug, logErrorToProduction } from "@/utils/productionLogger";
 import Link from 'next/link';
-import { useRouter,, ,  } from 'next/router';
-import { Logo,, ,  } from '@/components/header/Logo';
-import { PointsBadge,, ,  } from '@/components/loyalty/PointsBadge';
-import { UserMenu,, ,  } from '@/components/header/UserMenu';
-import { LanguageSelector,, ,  } from '@/components/header/LanguageSelector';
-import { ModeToggle,, ,  } from '@/components/ModeToggle';
-import { useAuth,, ,  } from '@/hooks/useAuth';
-import { useIsMobile,, ,  } from '@/hooks/use-mobile';
-import { useMessaging,, ,  } from '@/context/MessagingContext';
-import { EnhancedSearchInput,, ,  } from '@/components/search/EnhancedSearchInput';
-import { generateSearchSuggestions,, ,  } from '@/data/marketplaceData';
-import { slugify,, ,  } from '@/lib/slugify';
-import { ResponsiveNavigation,, ,  } from '@/components/navigation/ResponsiveNavigation';
-import { MobileMenu,, ,  } from '@/components/header/MobileMenu';
-import { MobileBottomNav,, ,  } from '@/components/header/MobileBottomNav';
-import { Menu,, X,  } from 'lucide-react'
-import { useTranslation,, ,  } from 'react-i18next';
-import { CartDrawer,, ,  } from '@/components/cart/CartDrawer';
-import { LoginModal,  } from '@/components/auth/LoginModal';
+import { useRouter } from "next/router";
+import { Logo } from "@/components/header/Logo";
+import { PointsBadge } from "@/components/loyalty/PointsBadge";
+import { UserMenu } from "@/components/header/UserMenu";
+import { LanguageSelector } from "@/components/header/LanguageSelector";
+import { ModeToggle } from "@/components/ModeToggle";
+import { useAuth } from "@/hooks/useAuth";
+import { useIsMobile } from "@/hooks/use-mobile";
+import { useMessaging } from "@/context/MessagingContext";
+import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput";
+import { generateSearchSuggestions } from "@/data/marketplaceData";
+import { slugify } from "@/lib/slugify";
+import { ResponsiveNavigation } from "@/components/navigation/ResponsiveNavigation";
+import { MobileMenu } from "@/components/header/MobileMenu";
+import { MobileBottomNav } from "@/components/header/MobileBottomNav";
+import { Menu, X } from "lucide-react";
+import { useTranslation } from "react-i18next";
+import { CartDrawer } from "@/components/cart/CartDrawer";
+import { LoginModal } from "@/components/auth/LoginModal";
 export function PrimaryNav() {
               >
                 {t('auth.login')}
@@ -53,7 +53,7 @@ export function PrimaryNav() {
             </div>
           </div>
           {/* Mobile menu button */}
-          <button,
+          <button
 className='lg:hidden p-2 rounded focus:outline-none flex-shrink-0'
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-expanded={mobileMenuOpen}
@@ -68,12 +68,12 @@ className='lg:hidden p-2 rounded focus:outline-none flex-shrink-0'
       </header>
       {mobileMenuOpen && (
         <div className='lg:hidden fixed inset-0 z-60 pt-16'>
-          <div,
+          <div
 className='absolute inset-0 bg-black/50 backdrop-blur-sm'
             onClick={() => setMobileMenuOpen(false)}
             aria-hidden='true'          />
           <div className='relative bg-card border-t border-primary/20 max-h-[calc(100vh-4rem)] overflow-y-auto'>
-            <MobileMenu,
+            <MobileMenu
 unreadCount={unreadCount}
               onClose={() => setMobileMenuOpen(false)}
               openLoginModal={returnToPath => setLoginOpen(true)}            />
@@ -82,15 +82,13 @@ unreadCount={unreadCount}
       )}
       {isMobile && <MobileBottomNav unreadCount={unreadCount} />}
       <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />
-    </>
+</>
   )
 }
 return (<> <header className="sticky top-0 z-70 w-full border-b border-primary/20 bg-card/90 backdrop-blur-md" role="navigation" aria-label="Primary" data-testid="header" > <div className="container flex items-center justify-between gap-2 min-h-16 px-4 sm:px-6 max-[320px]:flex-wrap" > <Logo />
 }setQuery ('')
 //Track analytics event,
-}searchSuggestions= {
-  suggestions,
-}/> </form> <PointsBadge /> <CartDrawer /> </div> <ModeToggle /> <LanguageSelector /> </div> <Link onClick={
+}searchSuggestions= {suggestions}/> </form> <PointsBadge /> <CartDrawer /> </div> <ModeToggle /> <LanguageSelector /> </div> <Link onClick={
   (e) => {
   > {'
   t ('auth.login') "
@@ -114,22 +112,14 @@ setLoginOpen (true)
 }<button) : (<Menu className="h-6 w-6" />) "
 }</button> </div> </header> <div className="absolute inset-0 bg-black/50 backdrop-blur-sm" onClick={
   () => setMobileMenuOpen (false) "
-}aria-hidden="true" /> <div className="relative bg-card border-t border-primary/20 max-h-[calc (100vh-4rem) ] overflow-y-auto" > <MobileMenu unreadCount= {
-  unreadCount,
-}onClose= {
+}aria-hidden="true" /> <div className="relative bg-card border-t border-primary/20 max-h-[calc (100vh-4rem) ] overflow-y-auto" > <MobileMenu unreadCount= {unreadCount}onClose= {
   () => setMobileMenuOpen (false)
 }openLoginModal= {
   (returnToPath) => setLoginOpen (true)
 }/> </div> </div>)
-}{
-  isMobile && <MobileBottomNav unreadCount= {
-  unreadCount,
-}/>
-}<LoginModal isOpen= {
-  loginOpen,
-}onOpenChange= {
-  setLoginOpen,
-}/> </>)
+}{isMobile && <MobileBottomNav unreadCount= {
+  unreadCount}/>
+}<LoginModal isOpen= {loginOpen}onOpenChange= {setLoginOpen}/> </>)
 }'"  { opacity: 0,
 height: 0;
 }}
@@ -151,7 +141,7 @@ height: 0;
                     </h3>"
                     <div className="space-y-2 ml-4">
                       {category.items.map((service: unknown serviceIndex: unknown
-                        <Link,
+                        <Link
 key={serviceIndex}
                           to={service.path}"
                           className="block text-gray-300 hover:text-white transition-colors duration-200"

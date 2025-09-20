@@ -6,13 +6,11 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { User, LogOut, LogIn } from 'lucide-react'
 import { useRouter } from 'next/navigation'
-import type {
-  User as SupabaseUser,
+import type {User as SupabaseUser,
 AuthChangeEvent
-  Session,
-} from '@supabase/supabase-js'
+  Session} from '@supabase/supabase-js'
 interface UserProfileProps {
-  onUserChange?: (user: SupabaseUser | null) => void,
+  onUserChange?: (user: SupabaseUser | null) => void,}
 export default function UserProfile({ onUserChange }: UserProfileProps) {
   const [user, setUser] = useState<SupabaseUser | null>(null)
   const [loading, setLoading] = useState(true)
@@ -108,5 +106,5 @@ const {
           Sign Out
         </Button>
       </CardContent>
-    </Card>
-  )
+    </Card>;
+  );

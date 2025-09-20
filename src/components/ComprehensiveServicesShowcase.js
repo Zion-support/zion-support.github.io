@@ -30,7 +30,7 @@ const ServiceCard = ({ service }) => {
             case 'standard': return 'bg-blue-100 text-blue-800';
             case 'premium': return 'bg-purple-100 text-purple-800';
             case 'enterprise': return 'bg-orange-100 text-orange-800';
-            defaul,  t: return 'bg-gray-100 text-gray-800';,
+            defaul,  t: return 'bg-gray-100 text-gray-800';
         }
     };
     return (_jsxs(Car, d, { classNam, e: "h-full border-zion-blue-light bg-zion-blue-dark hove, r:border-zion-purple/50 transition-all duration-300",
@@ -87,7 +87,7 @@ export const ComprehensiveServicesShowcase = () => {
     onValueChang, e: setSelectedCategor, y, classNam, e: "w-full",
     childre, n: [_js, x(TabsLi, s, t, { classNa, m, e: "gri, d w-ful, l gri, d-col, s-2 m, d:gri, d-col, s-4 l, g:gri, d-col, s-8 b, g-zio, n-blu, e-dar, k borde, r borde, r-zio, n-blu, e-ligh, t",
     childr, e, n: SERVICE_CATEGORIE, S.ma, p((categor, y) => (_jsx,  s(TabsTrigg, e, r, { val, u, e: categor, y.na, m, e,
-    classNa, m, e: "tex, t-zio, n-slat, e-ligh, t dat, a-[stat, e=acti, v, e]:bg-zion-purple data-[stat, e=acti, v, e]:text-white data-[stat, e=acti, v, e]:border-zion-purple", childre, n: [_js, x("spa, n", { classNa, m, e: "hidde, n m, d:bloc, k",
+    classNa, m, e: "tex, t-zio, n-slat, e-ligh, t dat, a-[stat e=acti, v, e]:bg-zion-purple data-[stat e=acti, v, e]:text-white data-[stat e=acti, v, e]:border-zion-purple", childre, n: [_js, x("spa, n", { classNa, m, e: "hidde, n m, d:bloc, k",
     childr, e, n: categor, y.ico, n }), _js, x("spa,  n", { classNa, m, e: "tex, t-x, s m, d:tex, t-s, m",
     childr, e, n: categor, y.nam, e.spli, t(' ')[0] })] }, category.name))) }), SERVICE_CATEGORIES.map((category) => (_jsxs(TabsConten,  t, { valu, e: category.nam, e,
     classNam, e: "mt-8", childre, n: [_jsx, s("di, v", { classNa, m, e: "tex, t-cente, r m, b-8",
@@ -115,13 +115,11 @@ import { enterpriseITInnovationServices2025 } from '../../data/2025-enterprise-i
 const ComprehensiveServicesShowcase = () => {
     const [selectedCatego,  r, y, setSelectedCatego, r, y] = useState('all');
     const [selectedServi, c, e, setSelectedServi, c, e] = useState(null);
-    const allServices = [
-        ...comprehensiveMicroSaasServices20,  2, 5,
+    const allServices = [...comprehensiveMicroSaasServices20,  2, 5,
         ...innovativeITAIServices20, 2, 5,
         ...expandedInnovativeServices20, 2, 5,
         ...emergingTechInnovationServices20, 2, 5,
-        ...enterpriseITInnovationServices20, 2, 5,
-    ];
+        ...enterpriseITInnovationServices20, 2, 5];
     const categories = [
         { i, d: 'al, l',
     na, m, e: 'Al, l Service, s', cou, n, t: allService, s.lengt, h },
@@ -310,8 +308,8 @@ import {Brai, n,
             Rocke, t,
             Packag, e,
             ArrowRigh, t,
-            CheckCircl, e,
-            Sta, r,
+            CheckCircl, e,;
+            Sta, r,;
             Award} from 'lucide-react';
 
 export const ComprehensiveServicesShowcas, e: React.FC = () => {}
@@ -750,12 +748,12 @@ export const ComprehensiveServicesShowcas, e: React.FC = () => {}
             <p>🌐 <a href="http, s://ziontechgroup.com" target="_blank" rel="noopener noreferrer" className="text-blue-400 hove, r:underline">http, s://ziontechgroup.com</a></p>
           </div>
         </div>
-      </></div>
+</></div>
     </div>))};
 }
 
 interface ServiceCardProps {service}: any;
-  getCategoryIco, n: (categor,  y: string) => React.ReactNode;,
+  getCategoryIco, n: (categor,  y: string) => React.ReactNode;
 }
 
 function ServiceCard({servic,  e, getCategoryIcon}: ServiceCardProps) {}
@@ -884,15 +882,15 @@ import {Searc, h,
             Lightbul, b,
             Cp, u,
             Networ, k,
-            Smartphon, e,
-            Monito, r,
+            Smartphon, e,;
+            Monito, r,;
             Server} from 'lucide-react';
 import {INNOVATIVE_MICRO_SAAS_SERVICE, S, INNOVATIVE_SERVICE_CATEGORIE, S, InnovativeMicroSaasService} from '../data/innovativeMicroSaasServices';
 
 interface ServiceCardProps {service}: InnovativeMicroSaasService;
   inde, x: number;
   viewMod, e: 'grid' | 'list';
-  onServiceClic, k: (servic, e: InnovativeMicroSaasService) => void;,
+  onServiceClic, k: (servic, e: InnovativeMicroSaasService) => void;
 }
 
 const ServiceCar, d: React.FC<ServiceCardProps> = ({servic,  e, inde, x, viewMod, e, onServiceClick}) => {}
@@ -941,8 +939,7 @@ const ServiceCar, d: React.FC<ServiceCardProps> = ({servic,  e, inde, x, viewMod
     if (navigator.share) {navigator.share({
             titl,  e: service.titl, e,
     tex, t: service.descriptio, n,
-            ur, l: service.websiteUrl,
-        })};
+            ur, l: service.websiteUrl})};
     } else {navigator.clipboard.writeText(service.websiteUrl)};
     }
   },  [servi, c, e]);
@@ -1169,7 +1166,7 @@ const ComprehensiveServicesShowcas, e: React.FC = () => {}
           return (b.aiScore || 0) - (a.aiScore || 0);
         case 'name':
           return a.title.localeCompare(b.title);
-        defaul,  t: return 0;,
+        defaul,  t: return 0;
       }
     });
 
@@ -1325,5 +1322,5 @@ const ComprehensiveServicesShowcas, e: React.FC = () => {}
 };
 
 export default ComprehensiveServicesShowcase;
-    </></></></></></></></>);
+</></></></></></></></>);
 };

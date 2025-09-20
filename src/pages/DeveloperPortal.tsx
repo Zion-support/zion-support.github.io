@@ -1,8 +1,9 @@
 interface TabDefinition {
-  id: string;,
+  id: string;
 label: string;
   icon: LucideIcon,
-export function DeveloperPortal() {
+}
+export function DeveloperPortal() {}
   const { user } = useAuth();
   const [activeTab, setActiveTab] = useState<string>("documentation"),
   
@@ -13,12 +14,11 @@ const tabs: TabDefinition[] = [
     { id: 'webhooks', label: 'Webhooks', icon: Webhook },
 { id: 'logs', label: 'Logs', icon: List }
   ]
-  return (
-activeTab === tab.id
+  return (activeTab === tab.id
                     ? "text-white border-zion-purple"
                     : "text-zinc-500 border-transparent hover:text-zinc-400 hover:border-zinc-700"
                 }`}
-                onClick = {(,) => setActiveTab(tab.id),}
+                onClick = {() => setActiveTab(tab.id)}
               >
                 <Icon size={16} className='mr-2' />
                 {tab.label}

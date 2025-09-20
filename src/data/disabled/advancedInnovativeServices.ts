@@ -1,15 +1,14 @@
 import React from "react";
 
-export interface AdvancedInnovativeService {
-id: string; title: string; description: string; category: string; subcategory: string; price: number; currency: string; pricingModel: string; features: string[];,
-benefits: string[], useCases: string[];,
+export interface AdvancedInnovativeService {id: string; title: string; description: string; category: string; subcategory: string; price: number; currency: string; pricingModel: string; features: string[];
+benefits: string[], useCases: string[];
 targetAudience: string[], tags: string[];
 estimatedDelivery: string; supportLevel: string; marketPrice: string;
-contactInfo: {,
-phone: string; email: string; website: string,
-};
-technology: string[], integrations: string[];,
-compliance: string[], roi: string; competitors: string[], marketTrend: string; innovationLevel: string; uniqueValue: string;,
+}
+contactInfo: {,}
+phone: string; email: string; website: string};
+technology: string[], integrations: string[];
+compliance: string[], roi: string; competitors: string[], marketTrend: string; innovationLevel: string; uniqueValue: string;
 }
 
 export const ADVANCED_INNOVATIVE_SERVICES: AdvancedInnovativeService[] = [
@@ -20,7 +19,7 @@ title: "AI Predictive Maintenance Platform",
 description: "Intelligent IoT-based predictive maintenance solution that uses machine learning to predict equipment failures; optimize maintenance schedules; and reduce downtime costs.",
 category: "AI & IoT",
 subcategory: "Predictive Maintenance",
-price: 599;,
+price: 599;
 currency: "$",
 pricingModel: "monthly",
 features: [
@@ -64,8 +63,7 @@ marketPrice: "$599 - $2;500/month",
 contactInfo: {,
 phone: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com",
-},
+website: "https://ziontechgroup.com"},
 technology: ["Python", "TensorFlow", "React", "Node.js", "MongoDB", "AWS IoT", "MQTT"],
 integrations: ["SAP", "Oracle", "Maximo", "ServiceNow", "Siemens MindSphere", "GE Predix"],
 compliance: ["ISO 55001", "OSHA", "ISO 27001", "SOC 2"],
@@ -77,8 +75,7 @@ uniqueValue: "Combines edge computing with cloud-based ML for real-time predicti
 },
 
 // Quantum Machine Learning Platform;
-{
-id: "quantum-machine-learning-platform",
+{id: "quantum-machine-learning-platform",
 title: "Quantum Machine Learning Platform",
 description: "Revolutionary platform that combines quantum computing principles with machine learning to solve complex optimization problems and accelerate AI model training.",
 category: "Quantum Computing",
@@ -126,8 +123,7 @@ marketPrice: "$1; 500 - $8;000/month",
 contactInfo: {,
 phone: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com",
-},
+website: "https://ziontechgroup.com"},
 technology: ["Qiskit", "PennyLane", "Cirq", "Python", "React", "TensorFlow", "PyTorch"],
 integrations: ["IBM Quantum", "Google Quantum", "AWS Braket", "Azure Quantum", "D-Wave"],
 compliance: ["ISO 27001", "FedRAMP", "SOC 2", "NIST"],
@@ -139,8 +135,7 @@ uniqueValue: "First commercial platform combining quantum computing with practic
 },
 
 // Autonomous Drone Fleet Management;
-{
-id: "autonomous-drone-fleet-management",
+{id: "autonomous-drone-fleet-management",
 title: "Autonomous Drone Fleet Management Platform",
 description: "AI-powered platform for managing autonomous drone fleets for delivery; inspection; surveillance; and data collection with real-time monitoring and optimization.",
 category: "Autonomous Systems",
@@ -188,8 +183,7 @@ marketPrice: "$799 - $3;000/month",
 contactInfo: {,
 phone: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com",
-},
+website: "https://ziontechgroup.com"},
 technology: ["Deep Learning", "Bioinformatics", "Python", "TensorFlow", "Molecular modeling"],
 integrations: ["Lab equipment", "Research databases", "Clinical trial systems", "FDA databases"],
 compliance: ["FDA regulations", "HIPAA", "Clinical trial standards", "Research ethics"],
@@ -201,8 +195,7 @@ marketTrends: ["Growing biotech investment", "AI drug discovery boom", "Increasi
 },
 
 // AI-Powered Climate Intelligence Platform;
-{
-id: "ai-climate-intelligence-platform",
+{id: "ai-climate-intelligence-platform",
 title: "AI Climate Intelligence Platform - Intelligent Environmental Monitoring",
 description: "Advanced AI platform that monitors; predicts; and analyzes climate patterns to help organizations make informed decisions about sustainability and climate risk.",
 category: "AI & Climate Technology",
@@ -249,8 +242,7 @@ marketPrice: "$1; 800 - $6;000/month",
 contactInfo: {,
 phone: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com",
-},
+website: "https://ziontechgroup.com"},
 technology: ["Machine Learning", "IoT", "Python", "TensorFlow", "Environmental APIs"],
 integrations: ["Weather services", "IoT sensors", "Energy management systems", "Compliance databases"],
 compliance: ["Environmental regulations", "Sustainability standards", "Climate reporting"],
@@ -262,8 +254,7 @@ marketTrends: ["Growing climate awareness", "Increasing regulations", "Rising su
 },
 
 // AI-Powered Cybersecurity Intelligence Platform;
-{
-id: "ai-cybersecurity-intelligence-platform",
+{id: "ai-cybersecurity-intelligence-platform",
 title: "AI Cybersecurity Intelligence Platform - Intelligent Threat Defense",
 description: "Next-generation cybersecurity platform that uses AI to detect; analyze; and respond to cyber threats in real-time with unprecedented accuracy and speed.",
 category: "AI & Cybersecurity",
@@ -310,8 +301,7 @@ marketPrice: "$2; 200 - $8;000/month",
 contactInfo: {,
 phone: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com",
-},
+website: "https://ziontechgroup.com"},
 technology: ["Machine Learning", "NLP", "Python", "TensorFlow", "Security frameworks"],
 integrations: ["SIEM systems", "EDR solutions", "Firewalls", "Identity providers"],
 compliance: ["SOC 2", "ISO 27001", "NIST", "GDPR", "HIPAA"],
@@ -323,8 +313,7 @@ marketTrends: ["Rising cyber threats", "Increasing regulations", "Growing AI ado
 },
 
 // AI-Powered Financial Trading Platform;
-{
-id: "ai-financial-trading-platform",
+{id: "ai-financial-trading-platform",
 title: "AI Financial Trading Platform - Intelligent Trading Intelligence",
 description: "Advanced AI-powered trading platform that uses machine learning to analyze markets; predict trends; and execute trades with optimal timing and risk management.",
 category: "AI & Financial Technology",
@@ -371,8 +360,7 @@ marketPrice: "$2; 800 - $10;000/month",
 contactInfo: {,
 phone: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com",
-},
+website: "https://ziontechgroup.com"},
 technology: ["Machine Learning", "Deep Learning", "Python", "TensorFlow", "Financial APIs"],
 integrations: ["Bloomberg", "Reuters", "Trading platforms", "Risk management systems"],
 compliance: ["Financial regulations", "Trading compliance", "Risk management standards"],
@@ -384,8 +372,7 @@ marketTrends: ["Growing algorithmic trading", "Increasing AI adoption", "Rising 
 },
 
 // AI-Powered Manufacturing Intelligence Platform;
-{
-id: "ai-manufacturing-intelligence-platform",
+{id: "ai-manufacturing-intelligence-platform",
 title: "AI Manufacturing Intelligence Platform - Intelligent Industry 4.0",
 description: "Advanced AI platform that transforms manufacturing operations through predictive maintenance; quality control; and process optimization using Industry 4.0 technologies.",
 category: "AI & Manufacturing",
@@ -432,8 +419,7 @@ marketPrice: "$2; 400 - $8;000/month",
 contactInfo: {,
 phone: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com",
-},
+website: "https://ziontechgroup.com"},
 technology: ["Machine Learning", "IoT", "Computer Vision", "Python", "TensorFlow"],
 integrations: ["MES systems", "ERP platforms", "IoT sensors", "Quality control equipment"],
 compliance: ["ISO 9001", "Manufacturing standards", "Quality regulations"],
@@ -445,8 +431,7 @@ marketTrends: ["Industry 4.0 adoption", "Smart manufacturing growth", "IoT integ
 },
 
 // AI-Powered Energy Grid Intelligence Platform;
-{
-id: "ai-energy-grid-intelligence-platform",
+{id: "ai-energy-grid-intelligence-platform",
 title: "AI Energy Grid Intelligence Platform - Intelligent Power Management",
 description: "Advanced AI platform that optimizes energy grid operations; predicts demand; and manages renewable energy integration for efficient and sustainable power distribution.",
 category: "AI & Energy Technology",
@@ -497,8 +482,7 @@ marketPrice: "$799 - $3;000/month",
 contactInfo: {,
 phone: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com",
-},
+website: "https://ziontechgroup.com"},
 technology: ["Python", "ROS", "React", "Node.js", "MongoDB", "AWS", "Computer Vision"],
 integrations: ["DJI SDK", "Parrot SDK", "Weather APIs", "GIS systems", "ERP systems"],
 compliance: ["FAA Part 107", "ISO 27001", "SOC 2", "GDPR"],
@@ -510,8 +494,7 @@ uniqueValue: "First comprehensive platform for multi-drone autonomous operations
 },
 
 // Blockchain-Based Digital Identity Platform;
-{
-id: "blockchain-digital-identity-platform",
+{id: "blockchain-digital-identity-platform",
 title: "Blockchain Digital Identity Platform",
 description: "Decentralized digital identity solution using blockchain technology for secure; verifiable; and privacy-preserving identity management across organizations.",
 category: "Blockchain & Identity",
@@ -559,8 +542,7 @@ marketPrice: "$299 - $1;200/month",
 contactInfo: {,
 phone: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com",
-},
+website: "https://ziontechgroup.com"},
 technology: ["Ethereum", "Hyperledger", "React", "Node.js", "MongoDB", "IPFS"],
 integrations: ["Okta", "Auth0", "Salesforce", "Microsoft Azure", "AWS Cognito"],
 compliance: ["GDPR", "CCPA", "SOC 2", "ISO 27001", "NIST"],
@@ -572,8 +554,7 @@ uniqueValue: "First enterprise-grade SSI platform with comprehensive compliance 
 },
 
 // AI-Powered Legal Document Analysis;
-{
-id: "ai-legal-document-analysis",
+{id: "ai-legal-document-analysis",
 title: "AI Legal Document Analysis Platform",
 description: "Intelligent platform that uses natural language processing and machine learning to analyze legal documents; extract key information; and provide legal insights.",
 category: "AI & Legal Tech",
@@ -621,8 +602,7 @@ marketPrice: "$449 - $1;800/month",
 contactInfo: {,
 phone: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com",
-},
+website: "https://ziontechgroup.com"},
 technology: ["GPT-4", "Claude", "React", "Node.js", "MongoDB", "Python", "TensorFlow"],
 integrations: ["DocuSign", "Adobe Sign", "Microsoft Office", "Salesforce", "Clio"],
 compliance: ["GDPR", "SOC 2", "ISO 27001", "Legal industry standards"],
@@ -634,8 +614,7 @@ uniqueValue: "First comprehensive legal document analysis platform with risk sco
 },
 
 // Sustainable Energy Management Platform;
-{
-id: "sustainable-energy-management",
+{id: "sustainable-energy-management",
 title: "Sustainable Energy Management Platform",
 description: "AI-powered platform for optimizing renewable energy systems; monitoring carbon footprints; and implementing sustainable business practices with real-time analytics.",
 category: "Sustainability & Green Tech",
@@ -683,8 +662,7 @@ marketPrice: "$399 - $1;500/month",
 contactInfo: {,
 phone: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com",
-},
+website: "https://ziontechgroup.com"},
 technology: ["Python", "React", "Node.js", "MongoDB", "AWS", "IoT", "Machine Learning"],
 integrations: ["Solar monitoring systems", "Smart meters", "Building management systems", "ERP systems"],
 compliance: ["ISO 14001", "LEED", "BREEAM", "ESG standards"],
@@ -696,8 +674,7 @@ uniqueValue: "First comprehensive platform combining energy management with ESG 
 },
 
 // Advanced Cybersecurity Threat Intelligence;
-{
-id: "advanced-cybersecurity-threat-intelligence",
+{id: "advanced-cybersecurity-threat-intelligence",
 title: "Advanced Cybersecurity Threat Intelligence Platform",
 description: "Next-generation threat intelligence platform that uses AI and machine learning to detect; analyze; and respond to cybersecurity threats in real-time.",
 category: "Cybersecurity",
@@ -745,8 +722,7 @@ marketPrice: "$899 - $3;500/month",
 contactInfo: {,
 phone: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com",
-},
+website: "https://ziontechgroup.com"},
 technology: ["Python", "React", "Node.js", "MongoDB", "TensorFlow", "Elasticsearch", "Kafka"],
 integrations: ["SIEM systems", "EDR solutions", "Firewalls", "Cloud security platforms"],
 compliance: ["SOC 2", "ISO 27001", "NIST", "GDPR", "HIPAA"],
@@ -758,8 +734,7 @@ uniqueValue: "First AI-powered platform combining threat detection with automate
 },
 
 // Smart City IoT Management Platform;
-{
-id: "smart-city-iot-management",
+{id: "smart-city-iot-management",
 title: "Smart City IoT Management Platform",
 description: "Comprehensive IoT platform for managing smart city infrastructure; including traffic management; environmental monitoring; and public services optimization.",
 category: "Smart Cities & IoT",
@@ -807,8 +782,7 @@ marketPrice: "$699 - $2;800/month",
 contactInfo: {,
 phone: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com",
-},
+website: "https://ziontechgroup.com"},
 technology: ["Python", "React", "Node.js", "MongoDB", "AWS IoT", "MQTT", "5G"],
 integrations: ["Traffic systems", "Utility networks", "Public safety systems", "GIS platforms"],
 compliance: ["ISO 27001", "NIST", "GDPR", "Local government standards"],
@@ -820,8 +794,7 @@ uniqueValue: "First integrated platform managing all aspects of smart city opera
 },
 
 // AI-Powered Healthcare Diagnostics;
-{
-id: "ai-healthcare-diagnostics",
+{id: "ai-healthcare-diagnostics",
 title: "AI-Powered Healthcare Diagnostics Platform",
 description: "Advanced AI platform for medical image analysis; diagnostic assistance; and patient care optimization using deep learning and computer vision.",
 category: "AI & Healthcare",
@@ -869,8 +842,7 @@ marketPrice: "$599 - $2;200/month",
 contactInfo: {,
 phone: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com",
-},
+website: "https://ziontechgroup.com"},
 technology: ["Python", "TensorFlow", "PyTorch", "React", "Node.js", "MongoDB", "AWS"],
 integrations: ["PACS systems", "EHR platforms", "Telemedicine systems", "Medical devices"],
 compliance: ["HIPAA", "FDA", "SOC 2", "ISO 27001", "GDPR"],
@@ -882,8 +854,7 @@ uniqueValue: "First comprehensive AI platform for medical diagnostics and clinic
 },
 
 // Quantum-Safe Communication Platform;
-{
-id: "quantum-safe-communication",
+{id: "quantum-safe-communication",
 title: "Quantum-Safe Communication Platform",
 description: "Future-proof communication platform that implements post-quantum cryptography to secure communications against quantum computing threats.",
 category: "Quantum Computing",
@@ -931,8 +902,7 @@ marketPrice: "$799 - $3;200/month",
 contactInfo: {,
 phone: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com",
-},
+website: "https://ziontechgroup.com"},
 technology: ["Post-quantum algorithms", "React", "Node.js", "MongoDB", "WebRTC", "Signal Protocol"],
 integrations: ["Slack", "Microsoft Teams", "Zoom", "Slack", "Email systems"],
 compliance: ["NIST", "ISO 27001", "SOC 2", "FedRAMP", "GDPR"],

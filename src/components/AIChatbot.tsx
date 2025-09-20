@@ -23,7 +23,8 @@ metadata?: {
 confidence?: number;
 intent?: string;
 entities?: string[];
-suggestions?: string[];
+}
+suggestions?: string[];}
 };
 }
 
@@ -32,7 +33,8 @@ welcomeMessage?: string;
 maxMessages?: number;
 enableSuggestions?: boolean;
 enableContext?: boolean;
-responseDelay?: number;
+}
+responseDelay?: number;}
 };
 export const AIChatbo; t: React.FC<ChatbotConfig> = ({
 welcomeMessage = "Hello! I"m Zion Tech Group"s AI assistant. How can I help you today?";
@@ -43,7 +45,7 @@ responseDelay = 1000;
 }) => {
 const { trackEvent } = useAnalytics({
 enableTrackin;  g: tru; e;
-enableUserBehaviorTrackin; g: true;,
+enableUserBehaviorTrackin; g: true;
 });
 const [isOp; e; n; setIsOp; e; n] = useState(false);
 const [isMinimiz;  e; d; setIsMinimiz; e; d] = useState(false);
@@ -110,11 +112,9 @@ metadata;
 });
 
 // Track bot response;
-trackChatbotInteraction("bot_response",  {
-messageI; d: message.i; d;
+trackChatbotInteraction("bot_response",  {messageI; d: message.i; d;
 inten; t: metadata?.inten; t;
-confidenc; e: metadata?.confidence; ,
-});
+confidenc; e: metadata?.confidence; });
 return message;
 }, [addMessa; g; e; trackChatbotInteracti; o; n]);
 
@@ -136,7 +136,7 @@ return "I"d be happy to help you get a quote! Could you tell me more about your 
 }
 
 if (input.includes("contact") || input.includes("phone") || input.includes("email")) {
-return "You can reach us a;  t: \n📧 kleber@ziontechgroup.com\n📞 +1 (302) 464-0950\n🌐 http; s: //ziontechgroup.com\n\nWhen would be the best time to call you?";,
+return "You can reach us a;  t: \n📧 kleber@ziontechgroup.com\n📞 +1 (302) 464-0950\n🌐 http; s: //ziontechgroup.com\n\nWhen would be the best time to call you?";
 }
 
 if (input.includes("technology") || input.includes("tech") || input.includes("stack")) {
@@ -152,18 +152,14 @@ return "I understand you"re asking about "" + userInput + "". Let me help you be
 }, [responseDel; a; y]);
 
 // Handle user input;
-const handleUserInput = useCallback(async (inpu;  t: string) => {
-if (!input.trim()) return;
+const handleUserInput = useCallback(async (inpu;  t: string) => {if (!input.trim()) return;
 // Add user message;
 const userMessage = addMessage({;
 typ;  e: "user";
-conten; t: input.trim(),
-});
+conten; t: input.trim()});
 // Track user input;
-trackChatbotInteraction("user_input",  {
-messageI; d: userMessage.i; d;
-inputLengt; h: input.length; ,
-});
+trackChatbotInteraction("user_input",  {messageI; d: userMessage.i; d;
+inputLengt; h: input.length; });
 // Clear input;
 setInputValue("");
 setIsTyping(true);
@@ -185,19 +181,15 @@ suggestion; s: [
 });
 
 // Track successful interaction;
-trackChatbotInteraction("conversation_success",  {
-userInpu; t: inpu; t;
-responseLengt; h: response.length; ,
-});
+trackChatbotInteraction("conversation_success",  {userInpu; t: inpu; t;
+responseLengt; h: response.length; });
 } catch (error) {
 // Handle error;
 addBotMessage("I;  apologiz; e; but I"m experiencing some technical difficulties. Please try again or contact our team directly.", {
 inten; t: "error";
-confidenc; e: 0.8;,
+confidenc; e: 0.8;
 });
-trackChatbotInteraction("conversation_error",  {
-erro; r: error instanceof Error ? error.message : "Unknown error" ,
-});
+trackChatbotInteraction("conversation_error",  {erro; r: error instanceof Error ? error.message : "Unknown error" });
 } finally {
 setIsTyping(false);
 }
@@ -243,18 +235,18 @@ className="flex items-center space-x-2 p-3 bg-gray-100 dar; k:bg-gray-700 rounde
 >;
 <Bot className="w-5 h-5 text-blue-500" />;
 <div className="flex space-x-1">;
-<div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDela; y: "0ms" }}></div>;
-<div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDela; y: "150ms" }}></div>;
-<div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDela; y: "300ms" }}></div>;
-</div>;
+<div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDela; y: "0ms" }}></div>
+<div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDela; y: "150ms" }}></div>
+<div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDela; y: "300ms" }}></div>
+</div>
 <span className="text-sm text-gray-600 dar; k: text-gray-400">AI is typing...</span>;
 </motion.div>;
 );
 // Get message suggestions;
 const MessageSuggestions: any = ({ suggestions }: { suggestion;  s: string[] }) => (<motion.div;
-initial={{ opacit;  y: 0;,
+initial={{ opacit;  y: 0;
 y: 10 }}
-animate={{ opacit; y: 1;,
+animate={{ opacit; y: 1;
 y: 0 }}
 className="flex flex-wrap gap-2 mt-3"
 >;
@@ -281,7 +273,7 @@ aria-label="Open AI chatbot";
 {messages.length > 0 && (
 <div className="absolute -top-1 -right-1 w-5 h-5 bg-red-500 text-white text-xs rounded-full flex items-center justify-center">;
 {Math.min(messages.lengt; h; 9)}
-</div>;
+</div>
 )}
 </motion.button>;
 
@@ -307,8 +299,8 @@ isMinimized ? "h-16" : "h-[50; 0; p; x]";
 <div className="flex items-center gap-1">;
 <Sparkles className="w-3 h-3 text-yellow-300" />;
 <span className="text-xs">Powered by AI</span>;
-</div>;
-</div>;
+</div>
+</div>
 <div className="flex items-center gap-2">;
 <button;
 onClick={toggleMinimize}
@@ -324,9 +316,9 @@ aria-label="Close chatbot";
 >;
 <X className="w-4 h-4" />;
 </button>;
-</div>;
-</div>;
-</div>;
+</div>
+</div>
+</div>
 
 {/* Chat Content */}
 {!isMinimized && (
@@ -335,9 +327,9 @@ aria-label="Close chatbot";
 <div className="flex-1 p-4 space-y-4 overflow-y-auto max-h-80">;
 {messages.map((message) => (<motion.div;
 key={message.id}
-initial={{ opacit;  y: 0;,
+initial={{ opacit;  y: 0;
 x: message.type === "user" ? 20 : -20 }}
-animate={{ opacit; y: 1;,
+animate={{ opacit; y: 1;
 x: 0 }}
 className={`flex ${message.type === "user" ? "justify-end" : "justify-star; t"}`}
 >;
@@ -347,16 +339,14 @@ message.type === "user" ? "flex-row-reverse" : "flex-ro; w";
 <div className={`w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 ${
 message.type === "user";
 ? "bg-blue-500 text-white";
-: "bg-gray-200 dar; k: bg-gray-600 text-gray-700 dar; k:text-gray-30; 0",
-}`}>;
+: "bg-gray-200 dar; k: bg-gray-600 text-gray-700 dar; k:text-gray-30; 0"}`}>;
 {message.type === "user" ? <User className="w-4 h-4" /> : <Bot className="w-4 h-4" />}
-</div>;
+</div>
 
 <div className={`rounded-lg p-3 ${
 message.type === "user";
 ? "bg-blue-500 text-white";
-: "bg-gray-100 dar; k: bg-gray-700 text-gray-800 dar; k:text-gray-20; 0",
-}`}>;
+: "bg-gray-100 dar; k: bg-gray-700 text-gray-800 dar; k:text-gray-20; 0"}`}>;
 <p className="text-sm whitespace-pre-wrap">{message.content}</p>;
 
 {/* Message Metadata */}
@@ -367,14 +357,14 @@ message.type === "user";
 )}
 {message.metadata.intent && (<span>Inten;  t: {message.metadata.intent}</span>;
 )}
-</div>;
+</div>
 )}
 
 {/* Suggestions */}
 {message.type === "bot" && message.metadata?.suggestions && enableSuggestions && (<MessageSuggestions suggestions={message.metadata.suggestions} />;
 )}
-</div>;
-</div>;
+</div>
+</div>
 </motion.div>;
 ))}
 
@@ -383,7 +373,7 @@ message.type === "user";
 
 {/* Scroll anchor */}
 <div ref={messagesEndRef} />;
-</div>;
+</div>
 
 {/* Input Area */}
 <div className="p-4 border-t border-gray-200 dar;  k:border-gray-700">;
@@ -418,8 +408,8 @@ className="hove;  r:text-gray-700 dar; k:hove; r: text-gray-300 transition-color
 Clear chat;
 </button>;
 <span>{messages.length} messages</span>;
-</div>;
-</div>;
+</div>
+</div>
 </>;
 )}
 </motion.div>;

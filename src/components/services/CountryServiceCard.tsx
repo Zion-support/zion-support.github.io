@@ -1,14 +1,10 @@
-import { Globe,, Server,, Clock,, MapPin,, Check,  } from 'lucide-react'
-import { CountryPricing,  } from "@/data/onsiteServicePricing";
-interface CountryServiceCardProps {
-isPopular?: boolean,
-}
-export function CountryServiceCard({
-  country,
+import { Globe, Server, Clock, MapPin, Check } from "lucide-react";
+import { CountryPricing } from "@/data/onsiteServicePricing";
+interface CountryServiceCardProps {isPopular?: boolean}
+export function CountryServiceCard({country,
 onSelect
   onQuote,
-isPopular,
-}: CountryServiceCardProps) {
+isPopular}: CountryServiceCardProps) {
   // Get region flag based on country name (for demo purposes)
           </div>
           {isPopular && (
@@ -44,8 +40,8 @@ isPopular,
         </div>
       </CardContent>
       <CardFooter className='flex flex-col space-y-2'>
-        <Button,
-onClick = {() => onSelect(country),}
+        <Button
+onClick = {() => onSelect(country)}
           className={`w-full ${
             isPopular
               ? 'bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple'
@@ -54,13 +50,13 @@ onClick = {() => onSelect(country),}
         >
           Select Service
         </Button>
-        <Button,
+        <Button
 variant='outline'
           className='w-full border-zion-purple text-zion-purple hover:bg-zion-purple/10'
           onClick={() => onQuote?.(country)}        >
           Get Quote
         </Button>
-        <Button,
+        <Button
 asChild
           variant='ghost'
           className='w-full text-zion-cyan hover:text-zion-purple'

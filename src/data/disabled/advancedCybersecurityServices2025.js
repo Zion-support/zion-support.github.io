@@ -1,7 +1,6 @@
 // Advanced Cybersecurity Services for 2025;
 export const advancedCybersecurityServices2025 = [
-    {
-        id: 1;
+    {id: 1;
         name: "Zero Trust Security Mesh";
         category: "Zero Trust Security";
         description: "Comprehensive zero-trust security platform with continuous verification, micro-segmentation, and adaptive access controls",
@@ -32,8 +31,7 @@ export const advancedCybersecurityServices2025 = [
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com/zero-trust-security-mesh";
-            address: "364 E Main St STE 1008 Middletown DE 19709",
-        };
+            address: "364 E Main St STE 1008 Middletown DE 19709"};
         marketPrice: "$2,500-12,000/month",
         competitors: ["Palo Alto Networks", "Cisco", "VMware", "Microsoft"],
         securityScore: 99;
@@ -57,8 +55,7 @@ export const advancedCybersecurityServices2025 = [
         quantumResistant: true;
         threatIntelligence: true,
     };
-    {
-        id: 2;
+    {id: 2;
         name: "AI-Powered Threat Intelligence";
         category: "Threat Intelligence";
         description: "Advanced AI-driven threat intelligence platform with real-time threat detection, predictive analytics, and automated response",
@@ -89,8 +86,7 @@ export const advancedCybersecurityServices2025 = [
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com/ai-threat-intelligence";
-            address: "364 E Main St STE 1008 Middletown DE 19709",
-        };
+            address: "364 E Main St STE 1008 Middletown DE 19709"};
         marketPrice: "$1,800-8,000/month",
         competitors: ["CrowdStrike", "SentinelOne", "Recorded Future", "ThreatConnect"],
         securityScore: 98;
@@ -114,8 +110,7 @@ export const advancedCybersecurityServices2025 = [
         quantumResistant: false;
         threatIntelligence: true,
     };
-    {
-        id: 3;
+    {id: 3;
         name: "Quantum-Resistant Cryptography";
         category: "Post-Quantum Security";
         description: "Future-proof cryptography solutions resistant to quantum computing attacks with hybrid encryption and quantum key distribution";
@@ -146,8 +141,7 @@ export const advancedCybersecurityServices2025 = [
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com/quantum-resistant-cryptography";
-            address: "364 E Main St STE 1008 Middletown DE 19709",
-        };
+            address: "364 E Main St STE 1008 Middletown DE 19709"};
         marketPrice: "$3,000-15,000/month",
         competitors: ["ISARA", "PQShield", "Cryptosense", "Quantum Xchange"],
         securityScore: 99;
@@ -171,8 +165,7 @@ export const advancedCybersecurityServices2025 = [
         quantumResistant: true;
         threatIntelligence: false,
     };
-    {
-        id: 4;
+    {id: 4;
         name: "Privacy-Preserving Analytics";
         category: "Privacy Engineering";
         description: "Advanced privacy-preserving analytics platform using differential privacy, federated learning, and secure multi-party computation",
@@ -203,8 +196,7 @@ export const advancedCybersecurityServices2025 = [
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com/privacy-preserving-analytics";
-            address: "364 E Main St STE 1008 Middletown DE 19709",
-        };
+            address: "364 E Main St STE 1008 Middletown DE 19709"};
         marketPrice: "$1,200-6,000/month",
         competitors: ["Privacera", "BigID", "OneTrust", "Collibra"],
         securityScore: 97;
@@ -228,8 +220,7 @@ export const advancedCybersecurityServices2025 = [
         quantumResistant: false;
         threatIntelligence: false,
     };
-    {
-        id: 5;
+    {id: 5;
         name: "Cloud Security Posture Management";
         category: "Cloud Security";
         description: "Comprehensive cloud security platform with continuous monitoring, compliance management, and automated remediation",
@@ -260,8 +251,7 @@ export const advancedCybersecurityServices2025 = [
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com/cloud-security-posture";
-            address: "364 E Main St STE 1008 Middletown DE 19709",
-        };
+            address: "364 E Main St STE 1008 Middletown DE 19709"};
         marketPrice: "$1,500-7,000/month",
         competitors: ["Prisma Cloud", "AWS Security Hub", "Azure Security Center", "Google Cloud Security"],
         securityScore: 96;
@@ -285,8 +275,7 @@ export const advancedCybersecurityServices2025 = [
         quantumResistant: false;
         threatIntelligence: true,
     };
-    {
-        id: 6;
+    {id: 6;
         name: "IoT Security Guardian";
         category: "IoT Security";
         description: "Comprehensive IoT security platform with device authentication, network segmentation, and behavioral monitoring",
@@ -317,8 +306,7 @@ export const advancedCybersecurityServices2025 = [
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com/iot-security-guardian";
-            address: "364 E Main St STE 1008 Middletown DE 19709",
-        };
+            address: "364 E Main St STE 1008 Middletown DE 19709"};
         marketPrice: "$800-4,000/month",
         competitors: ["Armis", "Forescout", "Nozomi Networks", "Claroty"],
         securityScore: 95;

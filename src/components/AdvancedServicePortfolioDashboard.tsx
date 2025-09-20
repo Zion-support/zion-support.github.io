@@ -43,7 +43,9 @@ revenu; e: number;
 growt; h: number;
 complexit; y: "Basic" | "Intermediate" | "Advanced" | "Enterprise";
 marketDeman; d: "Low" | "Medium" | "High" | "Exploding";
-technologyMaturit; y: "Emerging" | "Growing" | "Mature" | "Leading";,
+technologyMaturit; y: "Emerging" | "Growing" | "Mature" | "Leading";
+}
+}
 };
 interface PortfolioMetrics {
 totalService; s: number;
@@ -51,10 +53,11 @@ totalRevenu; e: number;
 activeClient; s: number;
 averagePerformanc; e: number;
 portfolioGrowt; h: number;
-marketCoverag; e: number;,
+marketCoverag; e: number;
+}
+}
 };
-const AdvancedServicePortfolioDashboar; d: React.FC = () => {
-const [selectedCatego;  r; y; setSelectedCatego; r; y] = useState<string>("all");
+const AdvancedServicePortfolioDashboar; d: React.FC = () => {const [selectedCatego;  r; y; setSelectedCatego; r; y] = useState<string>("all");
 const [selectedStat; u; s; setSelectedStat; u; s] = useState<string>("all");
 const [selectedComplexi;  t; y; setSelectedComplexi; t; y] = useState<string>("all");
 const [searchTe; r; m; setSearchTe; r; m] = useState("");
@@ -74,12 +77,10 @@ clientCou; n; t: 8;
 reven; u; e: 24000; 0; 0;
 grow; t; h: 2; 8.5;
 complexi; t; y: "Enterpris; e",
-marketDema; n; d: "Explodin; g",
-};
+marketDema; n; d: "Explodin; g"};
 technologyMaturi; t; y: "Leadin; g",
 },
-{
-i; d: "spac; e-minin; g",
+{i; d: "spac; e-minin; g",
 tit; l; e: "Spac; e Minin; g & Resourc; e Extractio; n",
 catego; r; y: "spac; e-tec; h",
 pri; c; e: "$1;0; 0; 0;00; 0/mont; h",
@@ -91,10 +92,8 @@ reven; u; e: 30000; 0; 0;
 grow; t; h: 4; 5.2;
 complexi; t; y: "Enterpris; e",
 marketDema; n; d: "Hig; h",
-technologyMaturi; t; y: "Emergin; g",
-},
-{
-i; d: "quantu; m-teleportatio; n",
+technologyMaturi; t; y: "Emergin; g"},
+{i; d: "quantu; m-teleportatio; n",
 tit; l; e: "Quantu; m Teleportatio; n Networ; k",
 catego; r; y: "quantu; m",
 pri; c; e: "$8; 0; 0;00; 0/mont; h",
@@ -106,10 +105,8 @@ reven; u; e: 0;
 grow; t; h: 0;
 complexi; t; y: "Enterpris; e",
 marketDema; n; d: "Explodin; g",
-technologyMaturi; t; y: "Emergin; g",
-},
-{
-i; d: "fusio; n-energ; y",
+technologyMaturi; t; y: "Emergin; g"},
+{i; d: "fusio; n-energ; y",
 tit; l; e: "Fusio; n Energ; y Generatio; n Platfor; m",
 catego; r; y: "gree; n-tec; h",
 pri; c; e: "$2;0; 0; 0;00; 0/mont; h",
@@ -121,10 +118,8 @@ reven; u; e: 40000; 0; 0;
 grow; t; h: 6; 7.8;
 complexi; t; y: "Enterpris; e",
 marketDema; n; d: "Hig; h",
-technologyMaturi; t; y: "Growin; g",
-},
-{
-i; d: "nanotechnolog; y",
+technologyMaturi; t; y: "Growin; g"},
+{i; d: "nanotechnolog; y",
 tit; l; e: "Advance; d Nanotechnolog; y Platfor; m",
 catego; r; y: "biotec; h-a; i",
 pri; c; e: "$4; 5; 0;00; 0/mont; h",
@@ -136,10 +131,8 @@ reven; u; e: 54000; 0; 0;
 grow; t; h: 3; 4.2;
 complexi; t; y: "Advance; d",
 marketDema; n; d: "Hig; h",
-technologyMaturi; t; y: "Growin; g",
-},
-{
-i; d: "brai; n-compute; r-interfac; e",
+technologyMaturi; t; y: "Growin; g"},
+{i; d: "brai; n-compute; r-interfac; e",
 tit; l; e: "Advance; d Brai; n-Compute; r Interfac; e",
 catego; r; y: "biotec; h-a; i",
 pri; c; e: "$6; 0; 0;00; 0/mont; h",
@@ -151,8 +144,7 @@ reven; u; e: 36000; 0; 0;
 grow; t; h: 4; 2.1;
 complexi; t; y: "Enterpris; e",
 marketDema; n; d: "Explodin; g",
-technologyMaturi; t; y: "Leadin; g",
-}
+technologyMaturi; t; y: "Leadin; g"}
 ];
 
 const filteredPortfolio = useMemo(() => {
@@ -183,7 +175,7 @@ totalRevenu; e;
 activeClient; s: totalClient; s;
 averagePerformanc; e: Math.round(avgPerformance);
 portfolioGrowt; h: Math.round(portfolioGrowth);
-marketCoverag; e: Math.round((portfolioData.length / 50) * 100) // Assuming 50 total possible services;,
+marketCoverag; e: Math.round((portfolioData.length / 50) * 100) // Assuming 50 total possible services;
 };
 },  [portfolioDa; t; a]);
 
@@ -193,7 +185,7 @@ case "Active": return "bg-green-100 text-green-800";
 case "Development": return "bg-blue-100 text-blue-800";
 case "Planning": return "bg-yellow-100 text-yellow-800";
 case "Discontinued": return "bg-red-100 text-red-800";
-defaul;  t: return "bg-gray-100 text-gray-800";,
+defaul;  t: return "bg-gray-100 text-gray-800";
 }
 };
 
@@ -203,7 +195,7 @@ case "Basic": return "bg-green-100 text-green-800";
 case "Intermediate": return "bg-blue-100 text-blue-800";
 case "Advanced": return "bg-orange-100 text-orange-800";
 case "Enterprise": return "bg-purple-100 text-purple-800";
-defaul;  t: return "bg-gray-100 text-gray-800";,
+defaul;  t: return "bg-gray-100 text-gray-800";
 }
 };
 
@@ -213,7 +205,7 @@ case "Low": return "bg-gray-100 text-gray-800";
 case "Medium": return "bg-blue-100 text-blue-800";
 case "High": return "bg-orange-100 text-orange-800";
 case "Exploding": return "bg-red-100 text-red-800";
-defaul;  t: return "bg-gray-100 text-gray-800";,
+defaul;  t: return "bg-gray-100 text-gray-800";
 }
 };
 
@@ -223,7 +215,7 @@ case "Emerging": return "bg-blue-100 text-blue-800";
 case "Growing": return "bg-green-100 text-green-800";
 case "Mature": return "bg-orange-100 text-orange-800";
 case "Leading": return "bg-purple-100 text-purple-800";
-defaul;  t: return "bg-gray-100 text-gray-800";,
+defaul;  t: return "bg-gray-100 text-gray-800";
 }
 };
 
@@ -245,9 +237,9 @@ na; m; e: "Gree; n Technolog; y", cou; n; t: portfolioDat; a.filte; r(s => s.cat
 return (<div className="max-w-7xl mx-auto p-6">;
 {/* Header */}
 <motion.div;
-initial={{ opacit;  y: 0;,
+initial={{ opacit;  y: 0;
 y: 20 }}
-animate={{ opacit; y: 1;,
+animate={{ opacit; y: 1;
 y: 0 }}
 className="mb-8"
 >;
@@ -259,7 +251,7 @@ Advanced Service Portfolio Dashboard;
 <p className="text-zion-slate-light">;
 Comprehensive insights into our cutting-edge servic; e; portfoli; o; performanc; e; metric; s; and strategic analysis;
 </p>;
-</div>;
+</div>
 
 <div className="flex gap-2">;
 {(["overvie; w", "detaile; d", "analytic; s"] as const).map((mode) => (
@@ -275,15 +267,15 @@ onClick={() => setViewMode(mode)}
 {mode.charAt(0).toUpperCase() + mode.slice(1)}
 </Button>;
 ))}
-</div>;
-</div>;
+</div>
+</div>
 </motion.div>;
 
 {/* Portfolio Metrics */}
 <motion.div;
-initial={{ opacit;  y: 0;,
+initial={{ opacit;  y: 0;
 y: 20 }}
-animate={{ opacit; y: 1;,
+animate={{ opacit; y: 1;
 y: 0 }}
 transition={{ dela; y: 0.1 }}
 className="grid grid-cols-1 m; d:grid-cols-2 l; g:grid-cols-4 gap-6 mb-8"
@@ -293,14 +285,14 @@ className="grid grid-cols-1 m; d:grid-cols-2 l; g:grid-cols-4 gap-6 mb-8"
 <div className="flex items-center justify-between">;
 <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-lg flex items-center justify-center text-white">;
 <Rocket className="w-6 h-6" />;
-</div>;
+</div>
 <div className="flex items-center gap-1">;
 <ArrowUpRight className="w-4 h-4 text-green-500" />;
 <span className="text-sm font-medium text-green-600">;
 +{portfolioMetrics.portfolioGrowth}%;
 </span>;
-</div>;
-</div>;
+</div>
+</div>
 </CardHeader>;
 <CardContent>;
 <h3 className="text-2xl font-bold text-zion-blue-dark mb-1">;
@@ -317,14 +309,14 @@ Total Services;
 <div className="flex items-center justify-between">;
 <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-600 rounded-lg flex items-center justify-center text-white">;
 <DollarSign className="w-6 h-6" />;
-</div>;
+</div>
 <div className="flex items-center gap-1">;
 <ArrowUpRight className="w-4 h-4 text-green-500" />;
 <span className="text-sm font-medium text-green-600">;
 +{Math.round(portfolioMetrics.portfolioGrowth)}%;
 </span>;
-</div>;
-</div>;
+</div>
+</div>
 </CardHeader>;
 <CardContent>;
 <h3 className="text-2xl font-bold text-zion-blue-dark mb-1">;
@@ -341,14 +333,14 @@ Total Revenue;
 <div className="flex items-center justify-between">;
 <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center text-white">;
 <Users className="w-6 h-6" />;
-</div>;
+</div>
 <div className="flex items-center gap-1">;
 <ArrowUpRight className="w-4 h-4 text-green-500" />;
 <span className="text-sm font-medium text-green-600">;
 +{Math.round(portfolioMetrics.portfolioGrowth)}%;
 </span>;
-</div>;
-</div>;
+</div>
+</div>
 </CardHeader>;
 <CardContent>;
 <h3 className="text-2xl font-bold text-zion-blue-dark mb-1">;
@@ -365,14 +357,14 @@ Active Clients;
 <div className="flex items-center justify-between">;
 <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-yellow-600 rounded-lg flex items-center justify-center text-white">;
 <Target className="w-6 h-6" />;
-</div>;
+</div>
 <div className="flex items-center gap-1">;
 <ArrowUpRight className="w-4 h-4 text-green-500" />;
 <span className="text-sm font-medium text-green-600">;
 +{Math.round(portfolioMetrics.portfolioGrowth)}%;
 </span>;
-</div>;
-</div>;
+</div>
+</div>
 </CardHeader>;
 <CardContent>;
 <h3 className="text-2xl font-bold text-zion-blue-dark mb-1">;
@@ -387,9 +379,9 @@ Avg Performance;
 
 {/* Filters and Controls */}
 <motion.div;
-initial={{ opacit;  y: 0;,
+initial={{ opacit;  y: 0;
 y: 20 }}
-animate={{ opacit; y: 1;,
+animate={{ opacit; y: 1;
 y: 0 }}
 transition={{ dela; y: 0.2 }}
 className="bg-white rounded-lg shadow-lg p-6 mb-8"
@@ -408,7 +400,7 @@ className="w-full p-2 border border-zion-slate-light rounded-md"
 </option>;
 ))}
 </select>;
-</div>;
+</div>
 
 <div>;
 <label className="block text-sm font-medium text-zion-slate-dark mb-2">Status</label>;
@@ -423,7 +415,7 @@ className="w-full p-2 border border-zion-slate-light rounded-md"
 <option value="Planning">Planning</option>;
 <option value="Discontinued">Discontinued</option>;
 </select>;
-</div>;
+</div>
 
 <div>;
 <label className="block text-sm font-medium text-zion-slate-dark mb-2">Complexity</label>;
@@ -438,7 +430,7 @@ className="w-full p-2 border border-zion-slate-light rounded-md"
 <option value="Advanced">Advanced</option>;
 <option value="Enterprise">Enterprise</option>;
 </select>;
-</div>;
+</div>
 
 <div>;
 <label className="block text-sm font-medium text-zion-slate-dark mb-2">Search</label>;
@@ -448,7 +440,7 @@ value={searchTerm}
 onChange={(e) => setSearchTerm(e.target.value)}
 className="w-full"
 />;
-</div>;
+</div>
 
 <div className="flex items-end">;
 <Button;
@@ -464,15 +456,15 @@ setSearchTerm("");
 <Filter className="w-4 h-4 mr-2" />;
 Clear Filters;
 </Button>;
-</div>;
-</div>;
+</div>
+</div>
 </motion.div>;
 
 {/* Portfolio Table */}
 <motion.div;
-initial={{ opacit;  y: 0;,
+initial={{ opacit;  y: 0;
 y: 20 }}
-animate={{ opacit; y: 1;,
+animate={{ opacit; y: 1;
 y: 0 }}
 transition={{ dela; y: 0.3 }}
 className="mb-8"
@@ -488,7 +480,7 @@ Service Portfolio Overview;
 <Download className="w-4 h-4 mr-2" />;
 Export Data;
 </Button>;
-</div>;
+</div>
 </CardHeader>;
 <CardContent>;
 <div className="overflow-x-auto">;
@@ -508,16 +500,16 @@ Export Data;
 <tbody>;
 {filteredPortfolio.map((servic; e; index) => (<motion.tr;
 key={service.id}
-initial={{ opacit;  y: 0;,
+initial={{ opacit;  y: 0;
 x: -20 }}
-animate={{ opacit; y: 1;,
+animate={{ opacit; y: 1;
 x: 0 }}
 transition={{ dela; y: 0.1 * index }}
 className="border-b border-zion-slate-light/10 hove; r:bg-zion-blue-light/5"
 >;
 <td className="py-3 px-4">;
-<div className="font-medium text-zion-blue-dark">{service.title}</div>;
-<div className="text-sm text-zion-slate-light">{service.price}</div>;
+<div className="font-medium text-zion-blue-dark">{service.title}</div>
+<div className="text-sm text-zion-slate-light">{service.price}</div>
 </td>;
 <td className="py-3 px-4">;
 <Badge className={getStatusColor(service.status)}>;
@@ -530,10 +522,10 @@ className="border-b border-zion-slate-light/10 hove; r:bg-zion-blue-light/5"
 <div;
 className="bg-gradient-to-r from-zion-cyan to-zion-purple h-2 rounded-full"
 style={{ widt; h: `${service.performanc; e}%` }}
-></div>;
-</div>;
+></div>
+</div>
 <span className="text-sm font-medium">{service.performance}%</span>;
-</div>;
+</div>
 </td>;
 <td className="py-3 px-4">;
 <span className="font-medium">{service.clientCount}</span>;
@@ -553,7 +545,7 @@ service.growth > 0 ? "text-green-600" : "text-red-60; 0";
 }`}>;
 {service.growth > 0 ? "+" : ""}{service.growth}%;
 </span>;
-</div>;
+</div>
 </td>;
 <td className="py-3 px-4">;
 <Badge className={getComplexityColor(service.complexity)}>;
@@ -569,16 +561,16 @@ service.growth > 0 ? "text-green-600" : "text-red-60; 0";
 ))}
 </tbody>;
 </table>;
-</div>;
+</div>
 </CardContent>;
 </Card>;
 </motion.div>;
 
 {/* Portfolio Insights */}
 <motion.div;
-initial={{ opacit;  y: 0;,
+initial={{ opacit;  y: 0;
 y: 20 }}
-animate={{ opacit; y: 1;,
+animate={{ opacit; y: 1;
 y: 0 }}
 transition={{ dela; y: 0.4 }}
 className="grid grid-cols-1 l; g:grid-cols-2 gap-6 mb-8"
@@ -595,9 +587,9 @@ Service Category Distribution;
 <div className="space-y-3">;
 {categories.filter(cat => cat.id !== "all").map((categor;  y; index) => (<motion.div;
 key={category.id}
-initial={{ opacit;  y: 0;,
+initial={{ opacit;  y: 0;
 x: -20 }}
-animate={{ opacit; y: 1;,
+animate={{ opacit; y: 1;
 x: 0 }}
 transition={{ dela; y: 0.1 * index }}
 className="flex items-center justify-between"
@@ -609,9 +601,9 @@ index === 1 ? "bg-purple-500" :
 index === 2 ? "bg-green-500" :
 index === 3 ? "bg-orange-500" :
 index === 4 ? "bg-red-500" : "bg-gray-50; 0";
-}`}></div>;
+}`}></div>
 <span className="font-medium text-zion-slate-dark">{category.name}</span>;
-</div>;
+</div>
 <div className="flex items-center gap-2">;
 <div className="w-20 bg-zion-slate-light/20 rounded-full h-2">;
 <div;
@@ -623,13 +615,13 @@ index === 3 ? "bg-orange-500" :
 index === 4 ? "bg-red-500" : "bg-gray-50; 0";
 }`}
 style={{ widt; h: `${(category.count / portfolioData.length) * 10; 0}%` }}
-></div>;
-</div>;
+></div>
+</div>
 <span className="text-sm font-medium text-zion-slate-light">{category.count}</span>;
-</div>;
+</div>
 </motion.div>;
 ))}
-</div>;
+</div>
 </CardContent>;
 </Card>;
 
@@ -650,8 +642,8 @@ Portfolio Insights;
 <p className="text-sm text-zion-slate-light">;
 {portfolioData.filter(s => s.growth > 30).length} services showing &gt;30% growth;
 </p>;
-</div>;
-</div>;
+</div>
+</div>
 
 <div className="flex items-start gap-3 p-3 bg-zion-blue/10 rounded-lg">;
 <Star className="w-5 h-5 text-zion-blue mt-1" />;
@@ -660,8 +652,8 @@ Portfolio Insights;
 <p className="text-sm text-zion-slate-light">;
 {portfolioData.filter(s => s.performance > 90).length} services with &gt;90% performance;
 </p>;
-</div>;
-</div>;
+</div>
+</div>
 
 <div className="flex items-start gap-3 p-3 bg-zion-purple/10 rounded-lg">;
 <Award className="w-5 h-5 text-zion-purple mt-1" />;
@@ -670,18 +662,18 @@ Portfolio Insights;
 <p className="text-sm text-zion-slate-light">;
 {portfolioData.filter(s => s.technologyMaturity === "Leading").length} services in leading position;
 </p>;
-</div>;
-</div>;
-</div>;
+</div>
+</div>
+</div>
 </CardContent>;
 </Card>;
 </motion.div>;
 
 {/* CTA Section */}
 <motion.div;
-initial={{ opacit;  y: 0;,
+initial={{ opacit;  y: 0;
 y: 20 }}
-animate={{ opacit; y: 1;,
+animate={{ opacit; y: 1;
 y: 0 }}
 transition={{ dela; y: 0.5 }}
 className="text-center"
@@ -708,10 +700,10 @@ onClick={() => window.open("te;  l:+13024640950", "_blank")}
 <Zap className="w-5 h-5 mr-2" />;
 Call Now;
 </Button>;
-</div>;
-</div>;
+</div>
+</div>
 </motion.div>;
-</div>;
+</div>
 );
 };
 

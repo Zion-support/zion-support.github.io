@@ -1,16 +1,16 @@
 
-import { useState,  } from "react",
-import { useRouter,  } from "next/router",
-import { KanbanBoard,  } from "@/components/hiring-tracker/KanbanBoard",
-import { HiringAnalytics,  } from "@/components/hiring-tracker/HiringAnalytics",
-import { Tabs,, TabsContent,, TabsList,, TabsTrigger,  } from "@/components/ui/tabs",
-import { SEO,  } from "@/components/SEO";
-import { ProtectedRoute,  } from "@/components/ProtectedRoute";
-import { Briefcase,  } from 'lucide-react'
+import { useState } from "react";,
+import { useRouter } from "next/router";,
+import { KanbanBoard } from "@/components/hiring-tracker/KanbanBoard";,
+import { HiringAnalytics } from "@/components/hiring-tracker/HiringAnalytics";,
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";,
+import { SEO } from "@/components/SEO";
+import { ProtectedRoute } from "@/components/ProtectedRoute";
+import { Briefcase } from "lucide-react";
 function HiringTrackerContent() {
 return (
     <>
-      <SEO,
+      <SEO
 title="Hiring Tracker | Zion AI Marketplace"
         description="Manage your candidate pipeline in the Zion AI Marketplace."
       />
@@ -26,7 +26,7 @@ title="Hiring Tracker | Zion AI Marketplace"
             </p>
           </div>
         </div>
-        <Tabs,
+        <Tabs
 defaultValue='kanban'
           onValueChange={setActiveTab}
           className='mb-8'
@@ -50,7 +50,7 @@ defaultValue='kanban'
           </TabsContent>
         </Tabs>
       </main>
-    </>
+</>
   )
 }
 export default function HiringTracker() {

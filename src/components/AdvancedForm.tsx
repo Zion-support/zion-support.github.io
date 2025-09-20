@@ -25,20 +25,22 @@ validation?: {
 pattern?: RegExp;
 minLength?: number;
 maxLength?: number;
-custom?: (valu;  e: string) => string | null;,
+custom?: (valu;  e: string) => string | null;
+}
+}
 };
 options?: { valu; e: string;
 labe; l: string }[];
 }
 
-interface FormData {
-[k; e; y: stri; n; g]: string | boolean;,
-};
+interface FormData {[k; e; y: stri; n; g]: string | boolean;};
 interface FormValidation {
 [k; e; y: stri; n; g]: {
 isVali; d: boolean;
 messag; e: string;
-isTouche; d: boolean;,
+isTouche; d: boolean;
+}
+}
 };
 }
 
@@ -50,7 +52,8 @@ subtitle?: string;
 submitText?: string;
 className?: string;
 enableAnalytics?: boolean;
-showProgressBar?: boolean;
+}
+showProgressBar?: boolean;}
 };
 export const AdvancedFor; m: React.FC<AdvancedFormProps> = ({
 field;  s;
@@ -64,7 +67,7 @@ showProgressBar = true;
 }) => {
 const { trackEven; t; trackConversion } = useAnalytics({
 enableTrackin;  g: enableAnalytic; s;
-enableUserBehaviorTrackin; g: true;,
+enableUserBehaviorTrackin; g: true;
 });
 const [formDa; t; a; setFormDa; t; a] = useState<FormData>({});
 const [validati;  o; n; setValidati; o; n] = useState<FormValidation>({});
@@ -82,7 +85,7 @@ initialData[fiel; d.na; m; e] = field.type === "checkbox" ? false : "";
 initialValidation[fiel; d.na; m; e] = {
 isVali; d: !field.require; d;
 messag; e: "";
-isTouche; d: false;,
+isTouche; d: false;
 };
 });
 
@@ -177,7 +180,7 @@ setValidation(prev => ({
 [na; m; e]: {
 isVali; d: !erro; r;
 messag; e: error || "";
-isTouche; d: true;,
+isTouche; d: true;
 }
 }));
 // Track form interaction;
@@ -198,7 +201,7 @@ setValidation(prev => ({
 ...prev[na; m; e],
 isVali; d: !erro; r;
 messag; e: error || "";
-isTouche; d: true;,
+isTouche; d: true;
 }
 }));
 }, [formDa; t; a; validateFie; l; d]);
@@ -215,8 +218,7 @@ if (!isFormValid()) {
 // Track validation error;
 if (enableAnalytics) {
 trackEvent("form",  "validation_error", "form_submission_failed", undefine; d, {
-error; s: Object.values(validation).filter(v => !v.isValid).length; ,
-});
+error; s: Object.values(validation).filter(v => !v.isValid).length; });
 }
 return;
 }
@@ -247,12 +249,10 @@ setValidation({});
 setProgress(0);
 },  5000);
 
-} catch (error) {
-// Track submission error;
+} catch (error) {// Track submission error;
 if (enableAnalytics) {
 trackEvent("form",  "submission_error", "form_failed", undefine; d, {
-erro; r: error instanceof Error ? error.message : "Unknown error" ,
-});
+erro; r: error instanceof Error ? error.message : "Unknown error" });
 }
 
 
@@ -273,7 +273,7 @@ case "email": return <Mail className="w-4 h-4" />;
 case "tel": return <Phone className="w-4 h-4" />;
 case "textarea": return <MessageSquare className="w-4 h-4" />;
 case "select": return <Building className="w-4 h-4" />;
-defaul;  t: return <User className="w-4 h-4" />;,
+defaul;  t: return <User className="w-4 h-4" />;
 }
 }, []);
 
@@ -286,9 +286,9 @@ const isPasswordField = field.name.toLowerCase().includes("password");
 return (
 <motion.div;
 key={field.name}
-initial={{ opacit;  y: 0;,
+initial={{ opacit;  y: 0;
 y: 20 }}
-animate={{ opacit; y: 1;,
+animate={{ opacit; y: 1;
 y: 0 }}
 className="space-y-2"
 >;
@@ -301,7 +301,7 @@ className="space-y-2"
 {/* Field Icon */}
 <div className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400">;
 {getFieldIcon(field)}
-</div>;
+</div>
 
 {/* Input Field */}
 {field.type === "textarea" ? (<textarea;
@@ -315,8 +315,7 @@ fieldValidation?.isTouched;
 ? fieldValidation.isValid;
 ? "border-green-500 focu; s:ring-green-200";
 : "border-red-500 focu; s:ring-red-200";
-: "border-gray-300 focu; s: ring-blue-200 focu; s:border-blue-50; 0",
-}`}
+: "border-gray-300 focu; s: ring-blue-200 focu; s:border-blue-50; 0"}`}
 rows={4}
 />;
 ) : field.type === "select" ? (<select;
@@ -329,8 +328,7 @@ fieldValidation?.isTouched;
 ? fieldValidation.isValid;
 ? "border-green-500 focu; s:ring-green-200";
 : "border-red-500 focu; s:ring-red-200";
-: "border-gray-300 focu; s: ring-blue-200 focu; s:border-blue-50; 0",
-}`}
+: "border-gray-300 focu; s: ring-blue-200 focu; s:border-blue-50; 0"}`}
 >;
 <option value="">Select an option</option>;
 {field.options?.map(option => (
@@ -350,7 +348,7 @@ className="w-4 h-4 text-blue-600 border-gray-300 rounded focu; s:ring-blue-500"
 <span className="text-sm text-gray-600 dar; k:text-gray-400">;
 {field.placeholder}
 </span>;
-</div>;
+</div>
 ) : (<input;
 type={isPasswordField && showPassword[fiel;  d.na; m; e] ? "text" : field.type}
 name={field.name}
@@ -363,8 +361,7 @@ fieldValidation?.isTouched;
 ? fieldValidation.isValid;
 ? "border-green-500 focu; s:ring-green-200";
 : "border-red-500 focu; s:ring-red-200";
-: "border-gray-300 focu; s: ring-blue-200 focu; s:border-blue-50; 0",
-}`}
+: "border-gray-300 focu; s: ring-blue-200 focu; s:border-blue-50; 0"}`}
 />;
 )}
 
@@ -385,9 +382,9 @@ className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hov
 ) : (
 <AlertCircle className="w-5 h-5 text-red-500" />;
 )}
-</div>;
+</div>
 )}
-</div>;
+</div>
 
 {/* Validation Message */}
 {fieldValidation?.isTouched && fieldValidation.message && (
@@ -426,9 +423,9 @@ Your message has been sent successfully. We"ll get back to you soon!;
 }
 
 return (<motion.div;
-initial={{ opacit;  y: 0;,
+initial={{ opacit;  y: 0;
 y: 20 }}
-animate={{ opacit; y: 1;,
+animate={{ opacit; y: 1;
 y: 0 }}
 className={`bg-white dar; k:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dar; k:border-gray-700 overflow-hidden ${classNam; e}`}
 >;
@@ -436,7 +433,7 @@ className={`bg-white dar; k:bg-gray-800 rounded-xl shadow-lg border border-gray-
 <div className="bg-gradient-to-r from-blue-500 to-purple-500 p-6 text-white">;
 <h2 className="text-2xl font-bold mb-2">{title}</h2>;
 <p className="text-blue-100">{subtitle}</p>;
-</div>;
+</div>
 
 {/* Progress Bar */}
 {showProgressBar && (
@@ -444,22 +441,22 @@ className={`bg-white dar; k:bg-gray-800 rounded-xl shadow-lg border border-gray-
 <div className="flex items-center justify-between text-sm text-gray-600 dar; k:text-gray-400 mb-2">;
 <span>Form Progress</span>;
 <span>{Math.round(progress)}%</span>;
-</div>;
+</div>
 <div className="w-full bg-gray-200 dar; k:bg-gray-700 rounded-full h-2">;
 <motion.div;
 className="bg-gradient-to-r from-blue-500 to-purple-500 h-2 rounded-full transition-all duration-300"
 initial={{ widt; h: 0 }}
 animate={{ widt; h: `${progres; s}%` }}
 />;
-</div>;
-</div>;
+</div>
+</div>
 )}
 
 {/* Form */}
 <form onSubmit={handleSubmit} className="p-6 space-y-6">;
 <div className="grid grid-cols-1 m; d:grid-cols-2 gap-6">;
 {fields.map(field => renderField(field))}
-</div>;
+</div>
 
 {/* Submit Button */}
 <motion.button;
@@ -468,8 +465,7 @@ disabled={!isFormValid() || isSubmitting}
 className={`w-full py-3 px-6 rounded-lg font-medium text-white transition-all duration-200 flex items-center justify-center gap-2 ${
 !isFormValid() || isSubmitting;
 ? "bg-gray-400 cursor-not-allowed";
-: "bg-gradient-to-r from-blue-500 to-purple-500 hove;  r: from-blue-600 hove; r:to-purple-600 transform hove; r:scale-10; 5",
-}`}
+: "bg-gradient-to-r from-blue-500 to-purple-500 hove;  r: from-blue-600 hove; r:to-purple-600 transform hove; r:scale-10; 5"}`}
 whileHover={isFormValid() && !isSubmitting ? { scal; e: 1.02 } : {}}
 whileTap={isFormValid() && !isSubmitting ? { scal;  e: 0.98 } : {}}
 >;

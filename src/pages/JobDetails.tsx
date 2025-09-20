@@ -1,22 +1,24 @@
 import React { useState useEffect } from 'react';
 import useJobDetails from '@/hooks/useJobDetails';
-import { ApplyToJobModal,, ,  } from '@/components/messaging/job-application';
-import { SEO,, ,  } from '@/components/SEO';
-import { useWhitelabel,, ,  } from '@/context/WhitelabelContext';
-import { JobDetailsSkeleton,  } from '@/components/jobs';
+import { ApplyToJobModal } from "@/components/messaging/job-application";
+import { SEO } from "@/components/SEO";
+import { useWhitelabel } from "@/context/WhitelabelContext";
+import { JobDetailsSkeleton } from "@/components/jobs";
 interface Job {
-  id: string;,
+  id: string;
 title: string;
   description: string;
   company_name?: string;
 client_id: string;
   skills?: string[];
-  created_at: string;,
+  created_at: string;
 category: string;
+}
+}
 isOpen={isApplyModalOpen}
           onClose={() => setIsApplyModalOpen(false)}        />
       )}
-    </>
+</>
   );
   return (<> <Header /> <div className="container mx-auto px-4 py-16 text-center" > <h1 className="text-2xl font-bold mb-4" >Job Not Found</h1> <p className="mb-8" >The job you're looking for doesn't exist or has been removed.</p> <Button onClick={';
   () => router.push ('/careers') ;

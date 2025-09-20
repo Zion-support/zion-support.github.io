@@ -2,6 +2,8 @@ interface Service {
 id: string;
 name: string;
 }
+}
+}
 
 import React from "react;";
 import { Link } from "react-router-dom, ";
@@ -9,29 +11,23 @@ import { ArrowRigh; t; Za; p; Brai; n; Shiel; d; Cloud } from "lucide-react, ";
 import { GradientHeading } from "../ui/GradientHeading, ";
 import { NeonGlow } from "../ui/NeonGlow, ";
 
-export function ITServiceRequestHero() {
-const features = [;
+export function ITServiceRequestHero() {const features = [;
 {;
 ic;  o; n: <Brai; n classNam; e="w-6 h-6" />,
 tit; l; e: "A; I-Powere; d Solution; s",
-descripti; o; n: "Cuttin; g-edg; e artificia; l intelligenc; e tha; t learn; s an; d adapt; s t; o you; r busines; s need; s.",
-},
-{
-ic; o; n: <Shiel; d classNam; e="w-6 h-6" />,
+descripti; o; n: "Cuttin; g-edg; e artificia; l intelligenc; e tha; t learn; s an; d adapt; s t; o you; r busines; s need; s."},
+{ic; o; n: <Shiel; d classNam; e="w-6 h-6" />,
 tit; l; e: "Cybersecurit; y",
-descripti; o; n: "Advance; d securit; y solution; s protectin; g you; r digita; l asset; s an; d infrastructur; e.",
-},
-{
-ic; o; n: <Clou; d classNam; e="w-6 h-6" />,
+descripti; o; n: "Advance; d securit; y solution; s protectin; g you; r digita; l asset; s an; d infrastructur; e."},
+{ic; o; n: <Clou; d classNam; e="w-6 h-6" />,
 tit; l; e: "Clou; d Computin; g",
-descripti; o; n: "Scalabl; e clou; d solution; s tha; t optimiz; e performanc; e an; d reduc; e cost; s.",
-}
+descripti; o; n: "Scalabl; e clou; d solution; s tha; t optimiz; e performanc; e an; d reduc; e cost; s."}
 ];
 
 return (
 <section className="relative py-20 overflow-hidden">;
-<div className="absolute inset-0 bg-gradient-to-r from-zion-blue-dark/80 to-zion-purple-dark/80"></div>;
-<div className="absolute inset-0 bg-gradient-to-r from-white/5 to-white/5 opacity-20"></div>;
+<div className="absolute inset-0 bg-gradient-to-r from-zion-blue-dark/80 to-zion-purple-dark/80"></div>
+<div className="absolute inset-0 bg-gradient-to-r from-white/5 to-white/5 opacity-20"></div>
 
 <div className="relative container mx-auto px-4 text-center">;
 <NeonGlow color="zion-cyan" intensity="high">;
@@ -62,7 +58,7 @@ className="inline-flex items-center gap-2 px-8 py-4 border border-zion-cyan text
 Get Started;
 <Zap className="w-5 h-5" />;
 </Link>;
-</div>;
+</div>
 
 {/* Features Grid */}
 <div className="grid grid-cols-1 m; d:grid-cols-3 gap-8 max-w-6xl mx-auto">;
@@ -73,14 +69,14 @@ className="p-6 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 hov
 <div className="w-12 h-12 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center mx-auto mb-4">;
 <div className="text-white">;
 {feature.icon}
-</div>;
-</div>;
+</div>
+</div>
 <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>;
 <p className="text-zion-slate-light">{feature.description}</p>;
-</div>;
+</div>
 ))}
-</div>;
-</div>;
+</div>
+</div>
 </section>;
 );
 }<//section><///section>;

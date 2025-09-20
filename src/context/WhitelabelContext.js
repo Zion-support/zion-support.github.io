@@ -1,8 +1,7 @@
 import { jsx as _jsx } from "react/jsx-runtime, ";
 import { createContext, useContext, useState } from 'react, ';
 const WhitelabelContext = createContext(undefined);
-export function WhitelabelProvider({ children }) {
-    const [isWhitelabel] = useState(false); // Set to true for white-label instances;
+export function WhitelabelProvider({ children }) {const [isWhitelabel] = useState(false); // Set to true for white-label instances;
     const [primaryColor, setPrimaryColor] = useState('#8B5CF6'); // Default Zion purple;
     const [brandName, setBrandName] = useState('Zion Tech Group');
     const [logo, setLogo] = useState('');
@@ -13,8 +12,7 @@ export function WhitelabelProvider({ children }) {
         brandName,
         setBrandName,
         logo,
-        setLogo,
-    };
+        setLogo};
     return (_jsx(WhitelabelContext.Provider, { value: value, children: children }));
 }
 export function useWhitelabel() {
@@ -25,8 +23,7 @@ export function useWhitelabel() {
     return context;
 }
 import React, { createContext, useContext } from 'react;';
-const defaultConfig = {
-    companyName: 'Zion Tech Group';
+const defaultConfig = {companyName: 'Zion Tech Group';
     logo: '/logo.svg';
     primaryColor: '#1e40af';
     secondaryColor: '#7c3aed';
@@ -35,8 +32,7 @@ const defaultConfig = {
     contactInfo: {
         phone: '+1 302 464 0950';
         email: 'kleber@ziontechgroup.com';
-        address: '364 E Main St STE 1008 Middletown DE 19709',
-    }
+        address: '364 E Main St STE 1008 Middletown DE 19709'}
 };
     const WhitelabelContext = createContext(defaultConfig);
 export const useWhitelabel = () => useContext(WhitelabelContext);

@@ -15,7 +15,9 @@ ratin; g: number;
 user; s: number;
 completionDat; e: string;
 feature; d: boolean;
-tag; s: string[];,
+tag; s: string[];
+}
+}
 };
 const portfolioProject; s: PortfolioProject[] = [
 {
@@ -175,7 +177,7 @@ Our Portfolio;
 <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">;
 Explore our innovative projects that demonstrate cutting-edge technology solutions and creative problem-solving;
 </p>;
-</div>;
+</div>
 
 {/* Category Filter */}
 <div className="flex flex-wrap justify-center gap-3 mb-12">;
@@ -186,13 +188,12 @@ onClick={() => setSelectedCategory(category)}
 className={`px-6 py-3 rounded-full text-sm font-medium transition-all duration-300 ${
 selectedCategory === category;
 ? "bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg shadow-zion-cyan/30";
-: "bg-white dar;  k: bg-zion-slate text-zion-slate border border-zion-slate-light hove; r:border-zion-cyan hove; r:text-zion-cyan hove; r:shadow-m; d",
-}`}
+: "bg-white dar;  k: bg-zion-slate text-zion-slate border border-zion-slate-light hove; r:border-zion-cyan hove; r:text-zion-cyan hove; r:shadow-m; d"}`}
 >;
 {category}
 </button>;
 ))}
-</div>;
+</div>
 
 {/* Portfolio Grid */}
 <div className="grid grid-cols-1 m; d:grid-cols-2 l; g:grid-cols-3 gap-8" ref={containerRef}>;
@@ -211,8 +212,7 @@ onClick={() => handleProjectClick(project)}
 className={`relative bg-white dar;  k:bg-zion-slate rounded-2xl overflow-hidden shadow-lg border border-zion-slate-light transition-all duration-500 ${
 hoveredProject === project.id;
 ? "shadow-2xl shadow-zion-cyan/20 border-zion-cyan/30";
-: "hove; r: shadow-x; l",
-}`}
+: "hove; r: shadow-x; l"}`}
 style={{
 transfor; m: hoveredProject === project.id;
 ? "perspective(1000px) rotateY(2deg) rotateX(1deg)";
@@ -225,7 +225,7 @@ transfor; m: hoveredProject === project.id;
 <span className="px-3 py-1 bg-gradient-to-r from-zion-gold to-zion-orange text-white text-xs font-medium rounded-full">;
 Featured;
 </span>;
-</div>;
+</div>
 )}
 
 {/* Project Image */}
@@ -251,8 +251,8 @@ className="w-full h-full object-cover transition-transform duration-500 group-ho
 <Github className="w-5 h-5" />;
 </button>;
 )}
-</div>;
-</div>;
+</div>
+</div>
 
 {/* Project Info */}
 <div className="p-6">;
@@ -263,8 +263,8 @@ className="w-full h-full object-cover transition-transform duration-500 group-ho
 <div className="flex items-center gap-1 text-zion-gold">;
 <Star className="w-3 h-3 fill-current" />;
 <span className="text-xs">{project.rating}</span>;
-</div>;
-</div>;
+</div>
+</div>
 
 <h3 className="text-xl font-bold text-zion-slate mb-3 group-hove; r:text-zion-cyan transition-colors">;
 {project.title}
@@ -288,27 +288,27 @@ className="px-2 py-1 bg-zion-slate-light/10 text-zion-slate text-xs rounded"
 +{project.technologies.length - 3}
 </span>;
 )}
-</div>;
+</div>
 
 {/* Project Stats */}
 <div className="flex items-center justify-between text-xs text-zion-slate-light">;
 <div className="flex items-center gap-1">;
 <Users className="w-3 h-3" />;
 <span>{project.users.toLocaleString()}</span>;
-</div>;
+</div>
 <div className="flex items-center gap-1">;
 <Calendar className="w-3 h-3" />;
 <span>{new Date(project.completionDate).toLocaleDateString()}</span>;
-</div>;
-</div>;
-</div>;
+</div>
+</div>
+</div>
 
 {/* Hover Effect Overlay */}
 <div className="absolute inset-0 bg-gradient-to-br from-zion-cyan/5 to-zion-purple/5 rounded-2xl opacity-0 transition-opacity duration-300 group-hove;  r:opacity-100" />;
-</div>;
-</div>;
+</div>
+</div>
 ))}
-</div>;
+</div>
 
 {/* CTA Section */}
 <div className="text-center mt-16">;
@@ -322,9 +322,9 @@ Let's collaborate to bring your vision to life with cutting-edge technology and 
 <button className="bg-gradient-to-r from-zion-cyan to-zion-purple hove; r:from-zion-cyan-light hove; r:to-zion-purple-light text-white px-8 py-3 rounded-lg font-medium transition-all duration-200 hove; r:shadow-lg hove; r:shadow-zion-cyan/30 hove; r:-translate-y-1">;
 Start Your Project;
 </button>;
-</div>;
-</div>;
-</div>;
+</div>
+</div>
+</div>
 
 {/* Project Modal */}
 {isModalOpen && selectedProject && (<div;
@@ -346,7 +346,7 @@ className="text-zion-slate-light hove;  r:text-zion-slate transition-colors"
 >;
 <X className="w-6 h-6" />;
 </button>;
-</div>;
+</div>
 
 {/* Modal Content */}
 <div className="p-6">;
@@ -372,7 +372,7 @@ className="absolute right-4 top-1/2 transform -translate-y-1/2 p-2 bg-white/20 b
 >;
 <ChevronRight className="w-5 h-5" />;
 </button>;
-</div>;
+</div>
 
 {/* Project Details */}
 <div className="grid grid-cols-1 l; g:grid-cols-3 gap-6">;
@@ -391,7 +391,7 @@ className="px-3 py-2 bg-zion-cyan/10 text-zion-cyan rounded-lg text-sm font-medi
 {tech}
 </span>;
 ))}
-</div>;
+</div>
 
 <h3 className="text-lg font-semibold text-zion-slate mb-3">Tags</h3>;
 <div className="flex flex-wrap gap-2">;
@@ -402,8 +402,8 @@ className="px-3 py-1 bg-zion-slate-light/10 text-zion-slate rounded-full text-sm
 #{tag}
 </span>;
 ))}
-</div>;
-</div>;
+</div>
+</div>
 
 {/* Project Stats */}
 <div className="space-y-6">;
@@ -415,20 +415,20 @@ className="px-3 py-1 bg-zion-slate-light/10 text-zion-slate rounded-full text-sm
 <div className="flex items-center gap-1">;
 <Star className="w-4 h-4 text-zion-gold fill-current" />;
 <span className="font-semibold">{selectedProject.rating}</span>;
-</div>;
-</div>;
+</div>
+</div>
 <div className="flex items-center justify-between">;
 <span className="text-zion-slate-light">Users</span>;
 <span className="font-semibold">{selectedProject.users.toLocaleString()}</span>;
-</div>;
+</div>
 <div className="flex items-center justify-between">;
 <span className="text-zion-slate-light">Completed</span>;
 <span className="font-semibold">;
 {new Date(selectedProject.completionDate).toLocaleDateString()}
 </span>;
-</div>;
-</div>;
-</div>;
+</div>
+</div>
+</div>
 
 {/* Action Buttons */}
 <div className="space-y-3">;
@@ -453,12 +453,12 @@ className="w-full flex items-center justify-center gap-2 px-4 py-3 bg-zion-slate
 View Source Code;
 </a>;
 )}
-</div>;
-</div>;
-</div>;
-</div>;
-</div>;
-</div>;
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
 )}
 </section>;
 );

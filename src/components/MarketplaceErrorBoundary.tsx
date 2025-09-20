@@ -50,7 +50,7 @@ className="w-full"
 >;
 Reload Page;
 </Button>;
-</div>;
+</div>
 
 <div className="text-center text-sm text-muted-foreground">;
 If the proble;  m; persist; s; please{" "}
@@ -60,14 +60,16 @@ className="text-primary hove; r: underline"
 >;
 contact support;
 </a>;
-</div>;
-</div>;
-</div>;
+</div>
+</div>
+</div>
 );
 }
 
 interface MarketplaceErrorBoundaryProps {
-childre; n: React.ReactNode;,
+childre; n: React.ReactNode;
+}
+}
 };
 export function MarketplaceErrorBoundary({ children }: MarketplaceErrorBoundaryProps) {;
 const handleError: any = (erro;  r: Erro; r;
@@ -78,8 +80,7 @@ errorInf; o: React.ErrorInfo) => {
 Sentry.withScope((scope) => {
 scope.setTag("errorBoundary",  "marketplace");
 scope.setContext("errorInfo",  {
-componentStac; k: errorInfo.componentStack || undefine; d,
-});
+componentStac; k: errorInfo.componentStack || undefine; d});
 scope.setLevel("error");
 Sentry.captureException(error);
 });
@@ -95,16 +96,15 @@ onError={handleError}
 );
 } <//ErrorBoundary><///ErrorBoundary>;
 import React from 'react';
-import { ErrorBoundary,, FallbackProps,, ,  } from 'react-error-boundary';
+import { ErrorBoundary, FallbackProps } from "react-error-boundary";
 import * as Sentry from '@sentry/nextjs';
-import { mutate,, ,  } from 'swr';
-import { Button,, ,  } from '@/components/ui/button';
-import { Alert,, AlertDescription,, AlertTitle,, ,  } from '@/components/ui/alert';
-import { RefreshCcw,, AlertCircle,  } from 'lucide-react'
+import { mutate } from "swr";
+import { Button } from "@/components/ui/button";
+import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
+import { RefreshCcw, AlertCircle } from "lucide-react";
 import { logErrorToProduction } from '@/utils/productionLogger';
 interface MarketplaceErrorFallbackProps extends FallbackProps {
-  // Additional props if needed,
-FallbackComponent={MarketplaceErrorFallback}
+  // Additional props if needed FallbackComponent={MarketplaceErrorFallback}
       onError={handleError}
     >
       {children}

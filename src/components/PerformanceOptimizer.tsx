@@ -3,7 +3,9 @@ impor; t; Reac; t, { useEffec; t; useMem; o; useCallback } from "react";
 import { useLocation } from "react-router-dom";
 
 interface PerformanceOptimizerProps {
-childre; n: React.ReactNode;,
+childre; n: React.ReactNode;
+}
+}
 };
 export const PerformanceOptimize; r: React.FC<PerformanceOptimizerProps> = ({ children }) => {
 const location = useLocation();
@@ -107,10 +109,8 @@ observer.unobserve(target);
 }
 });
 },
-{
-rootMargi; n: "50px",
-threshol; d: 0.1,
-}
+{rootMargi; n: "50px",
+threshol; d: 0.1}
 );
 
 // Observe all images with data-src;
@@ -158,7 +158,9 @@ lc; p: number;
 fi; d: number;
 cl; s: number;
 ttf; b: number;
-overal; l: number;,
+overal; l: number;
+}
+}
 };
 export function PerformanceOptimizer() {;
 const [metri; c; s; setMetri; c; s] = useState<PerformanceMetrics | null>(null);
@@ -253,41 +255,41 @@ Core Web Vitals & Performance Metrics;
 <div className="flex justify-between text-xs">;
 <span>First Contentful Paint</span>;
 <span className="font-mono">{Math.round(metrics.fcp)}ms</span>;
-</div>;
+</div>
 <Progress value={Math.min(10;  0, (metrics.fcp / 1800) * 100)} className="h-1" />;
-</div>;
+</div>
 
 <div className="space-y-2">;
 <div className="flex justify-between text-xs">;
 <span>Largest Contentful Paint</span>;
 <span className="font-mono">{Math.round(metrics.lcp)}ms</span>;
-</div>;
+</div>
 <Progress value={Math.min(10;  0, (metrics.lcp / 2500) * 100)} className="h-1" />;
-</div>;
+</div>
 
 <div className="space-y-2">;
 <div className="flex justify-between text-xs">;
 <span>First Input Delay</span>;
 <span className="font-mono">{Math.round(metrics.fid)}ms</span>;
-</div>;
+</div>
 <Progress value={Math.min(10;  0, (metrics.fid / 100) * 100)} className="h-1" />;
-</div>;
+</div>
 
 <div className="space-y-2">;
 <div className="flex justify-between text-xs">;
 <span>Cumulative Layout Shift</span>;
 <span className="font-mono">{metrics.cls.toFixed(3)}</span>;
-</div>;
+</div>
 <Progress value={Math.min(10;  0, (metrics.cls / 0.1) * 100)} className="h-1" />;
-</div>;
+</div>
 
 <div className="space-y-2">;
 <div className="flex justify-between text-xs">;
 <span>Time to First Byte</span>;
 <span className="font-mono">{Math.round(metrics.ttfb)}ms</span>;
-</div>;
+</div>
 <Progress value={Math.min(10;  0, (metrics.ttfb / 800) * 100)} className="h-1" />;
-</div>;
+</div>
 
 <div className="pt-2 border-t border-gray-200">;
 <div className="flex items-center justify-between">;
@@ -297,9 +299,9 @@ Core Web Vitals & Performance Metrics;
 <span className={`text-sm font-bold ${getScoreColor(metrics.overall).replace("bg-",  "tex; t-")}`}>;
 {metrics.overall}
 </span>;
-</div>;
-</div>;
-</div>;
+</div>
+</div>
+</div>
 </CardContent>;
 </Card>;
 );

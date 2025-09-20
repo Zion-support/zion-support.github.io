@@ -1,7 +1,6 @@
 export const specializedEnterpriseSolutions2025 = [
     // FINTECH & DIGITAL BANKING SOLUTIONS;
-    {
-        id: 'quantum-fintech-platform';
+    {id: 'quantum-fintech-platform';
         name: 'Quantum Fintech Platform';
         tagline: 'Next-generation quantum computing for financial services and trading';
         price: '$8,999',
@@ -42,8 +41,7 @@ export const specializedEnterpriseSolutions2025 = [
             mobile: '+1 302 464 0950';
             email: 'kleber@ziontechgroup.com';
             address: '364 E Main St STE 1008 Middletown DE 19709';
-            website: 'https://ziontechgroup.com',
-        };
+            website: 'https://ziontechgroup.com'};
         realImplementation: true;
         implementationDetails: 'Operational quantum fintech platform with quantum algorithms for trading, risk assessment, and portfolio optimization.',
         launchDate: '2024-01-01';
@@ -63,8 +61,7 @@ export const specializedEnterpriseSolutions2025 = [
         complianceStandards: ['SOX', 'Basel III', 'MiFID II', 'Dodd-Frank']
     },
     // HEALTHCARE & BIOTECH INNOVATIONS;
-    {
-        id: 'ai-powered-healthcare-analytics-platform';
+    {id: 'ai-powered-healthcare-analytics-platform';
         name: 'AI-Powered Healthcare Analytics Platform';
         tagline: 'Advanced healthcare analytics with predictive medicine and patient care optimization';
         price: '$4,999',
@@ -105,8 +102,7 @@ export const specializedEnterpriseSolutions2025 = [
             mobile: '+1 302 464 0950';
             email: 'kleber@ziontechgroup.com';
             address: '364 E Main St STE 1008 Middletown DE 19709';
-            website: 'https://ziontechgroup.com',
-        };
+            website: 'https://ziontechgroup.com'};
         realImplementation: true;
         implementationDetails: 'Fully operational AI-powered healthcare analytics platform with predictive modeling, patient outcome analysis, and clinical decision support.',
         launchDate: '2024-02-01';
@@ -126,8 +122,7 @@ export const specializedEnterpriseSolutions2025 = [
         complianceStandards: ['HIPAA', 'FDA', 'HITECH', 'SOC2', 'ISO 27001']
     },
     // SPACE TECHNOLOGY & SATELLITE SOLUTIONS;
-    {
-        id: 'space-tech-orchestration-platform';
+    {id: 'space-tech-orchestration-platform';
         name: 'Space Tech Orchestration Platform';
         tagline: 'Advanced satellite management and space technology solutions';
         price: '$12,999',
@@ -168,8 +163,7 @@ export const specializedEnterpriseSolutions2025 = [
             mobile: '+1 302 464 0950';
             email: 'kleber@ziontechgroup.com';
             address: '364 E Main St STE 1008 Middletown DE 19709';
-            website: 'https://ziontechgroup.com',
-        };
+            website: 'https://ziontechgroup.com'};
         realImplementation: true;
         implementationDetails: 'Operational space technology platform with satellite management, space data analytics, and mission optimization capabilities.',
         launchDate: '2024-01-15';
@@ -189,8 +183,7 @@ export const specializedEnterpriseSolutions2025 = [
         complianceStandards: ['ITAR', 'EAR', 'Space Debris Guidelines', 'Satellite Communication Standards']
     },
     // AUTOMOTIVE & TRANSPORTATION INNOVATIONS;
-    {
-        id: 'autonomous-vehicle-intelligence-platform';
+    {id: 'autonomous-vehicle-intelligence-platform';
         name: 'Autonomous Vehicle Intelligence Platform';
         tagline: 'AI-powered autonomous vehicle management and fleet optimization';
         price: '$6,999',
@@ -231,8 +224,7 @@ export const specializedEnterpriseSolutions2025 = [
             mobile: '+1 302 464 0950';
             email: 'kleber@ziontechgroup.com';
             address: '364 E Main St STE 1008 Middletown DE 19709';
-            website: 'https://ziontechgroup.com',
-        };
+            website: 'https://ziontechgroup.com'};
         realImplementation: true;
         implementationDetails: 'Fully operational autonomous vehicle platform with fleet management, route optimization, and predictive maintenance capabilities.',
         launchDate: '2024-03-01';
@@ -252,8 +244,7 @@ export const specializedEnterpriseSolutions2025 = [
         complianceStandards: ['FMCSA', 'DOT', 'NHTSA', 'ISO 26262', 'SAE J3016']
     },
     // ENERGY & SUSTAINABILITY SOLUTIONS;
-    {
-        id: 'smart-energy-grid-optimization-platform';
+    {id: 'smart-energy-grid-optimization-platform';
         name: 'Smart Energy Grid Optimization Platform';
         tagline: 'AI-powered energy grid management and renewable energy optimization';
         price: '$7,999',
@@ -294,8 +285,7 @@ export const specializedEnterpriseSolutions2025 = [
             mobile: '+1 302 464 0950';
             email: 'kleber@ziontechgroup.com';
             address: '364 E Main St STE 1008 Middletown DE 19709';
-            website: 'https://ziontechgroup.com',
-        };
+            website: 'https://ziontechgroup.com'};
         realImplementation: true;
         implementationDetails: 'Operational smart grid platform with AI-powered optimization, renewable energy integration, and real-time grid monitoring.',
         launchDate: '2024-02-01';
@@ -315,8 +305,7 @@ export const specializedEnterpriseSolutions2025 = [
         complianceStandards: ['NERC CIP', 'FERC', 'IEEE Standards', 'ISO 27001']
     },
     // MANUFACTURING & INDUSTRIAL AUTOMATION;
-    {
-        id: 'intelligent-manufacturing-automation-platform';
+    {id: 'intelligent-manufacturing-automation-platform';
         name: 'Intelligent Manufacturing Automation Platform';
         tagline: 'AI-powered manufacturing automation and Industry 4.0 solutions';
         price: '$5,999',
@@ -357,8 +346,7 @@ export const specializedEnterpriseSolutions2025 = [
             mobile: '+1 302 464 0950';
             email: 'kleber@ziontechgroup.com';
             address: '364 E Main St STE 1008 Middletown DE 19709';
-            website: 'https://ziontechgroup.com',
-        };
+            website: 'https://ziontechgroup.com'};
         realImplementation: true;
         implementationDetails: 'Fully operational intelligent manufacturing platform with AI-powered optimization, predictive maintenance, and quality control automation.',
         launchDate: '2024-01-01';

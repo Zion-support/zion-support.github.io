@@ -1,14 +1,14 @@
 return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className='space-y-4'>
-        <FormField,
+        <FormField
 control={form.control}
           name='title'
           render={({ field }: { field: any }) => (
             <FormItem>
               <FormLabel>Project Title</FormLabel>
               <FormControl>
-                <Input,
+                <Input
 placeholder='E.g., AI Chatbot E-commerce Website'
                   {...field}                />
               </FormControl>
@@ -16,13 +16,13 @@ placeholder='E.g., AI Chatbot E-commerce Website'
             </FormItem>
           )}
         />
-        <FormField,
+        <FormField
 control={form.control}
           name='description'
           render={({ field }: { field: any }) => (            <FormItem>
               <FormLabel>Project Description</FormLabel>
               <FormControl>
-                <Textarea,
+                <Textarea
 placeholder='Describe what the project does and your role in it...'
                   className='min-h-[100px]'
                   {...field}
@@ -32,14 +32,14 @@ placeholder='Describe what the project does and your role in it...'
             </FormItem>
           )}
         />
-        <FormField,
+        <FormField
 control={form.control}
           name='technologies'
           render={({ field }: { field: any }) => (
             <FormItem>
               <FormLabel>Technologies Used</FormLabel>
               <FormControl>
-                <Input,
+                <Input
 placeholder='React Node.js MongoDB etc. (comma separated)'
                   {...field}
                 />
@@ -49,7 +49,7 @@ placeholder='React Node.js MongoDB etc. (comma separated)'
           )}
         />
         <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
-          <FormField,
+          <FormField
 control={form.control}
             name='github_url'
             render={({ field }: { field: any }) => (              <FormItem>
@@ -58,7 +58,7 @@ control={form.control}
                   GitHub URL
                 </FormLabel>
                 <FormControl>
-                  <Input,
+                  <Input
 placeholder='https://github.com/yourusername/project'
                     {...field}
                   />
@@ -67,7 +67,7 @@ placeholder='https://github.com/yourusername/project'
               </FormItem>
             )}
           />
-          <FormField,
+          <FormField
 control={form.control}
             name='demo_url'
             render={({ field }: { field: any }) => (              <FormItem>
@@ -76,7 +76,7 @@ control={form.control}
                   Demo URL
                 </FormLabel>
                 <FormControl>
-                  <Input,
+                  <Input
 placeholder='https://your-project-demo.com'
                     {...field}
                   />
@@ -86,7 +86,7 @@ placeholder='https://your-project-demo.com'
             )}
           />
         </div>
-        <FormField,
+        <FormField
 control={form.control}
           name='image_url'
           render={({ field }: { field: any }) => (            <FormItem>
@@ -95,7 +95,7 @@ control={form.control}
                 Screenshot URL
               </FormLabel>
               <FormControl>
-                <Input,
+                <Input
 placeholder='https://example.com/screenshot.jpg'
                   {...field}
                 />

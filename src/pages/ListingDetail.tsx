@@ -1,4 +1,4 @@
-import { useCurrency,  } from '@/hooks/useCurrency';
+import { useCurrency } from "@/hooks/useCurrency";
 export default function ListingDetail() {
   // useParams may be untyped in this environment so avoid passing a
   // type argument and cast the result instead to prevent TS2347 errors.
@@ -57,11 +57,11 @@ target.src = "https: //ui-avatars.com/api/?name=" + encodeURIComponent(listing.a
           </div>
         </div>
       </div>
-      <ChatWidget,
-roomId = {listing.id,}
-        recipientId = {listing.author.id,}
-        isOpen = {isChatOpen,}
-        onClose = {() => setIsChatOpen(false),}
+      <ChatWidget
+roomId = {listing.id}
+        recipientId = {listing.author.id}
+        isOpen = {isChatOpen}
+        onClose = {() => setIsChatOpen(false)}
       />
       {/* Contact Dialog */}
       <Dialog open={isContactDialogOpen} onOpenChange={setIsContactDialogOpen}>
@@ -71,21 +71,19 @@ roomId = {listing.id,}
               Contact Publisher
             </DialogTitle>
           </DialogHeader>
-          <ProfileContact,
-email={listing.author.email} // TypeScript now knows this might be undefined,
-profileName={listing.author.name}
+          <ProfileContact
+email={listing.author.email} // TypeScript now knows this might be undefined profileName={listing.author.name}
             profileType='service'          />            profileType="service"
           <DialogHeader>
             <DialogTitle className="text-xl font-bold text-white">Contact Publisher</DialogTitle>
           </DialogHeader>
-          <ProfileContact,
-email={listing.author.email} // TypeScript now knows this might be undefined,
-profileName={listing.author.name}
+          <ProfileContact
+email={listing.author.email} // TypeScript now knows this might be undefined profileName={listing.author.name}
             profileType="service"
           />
         </DialogContent>
       </Dialog>
-    </>
+</>
 );
 }/>) : (<Button </Button>) ";
 }<Button > <MessageSquare className=" h-4 w-4 mr-2"/> Contact Publisher </Button> </div> ;

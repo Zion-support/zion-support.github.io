@@ -1,27 +1,27 @@
-import { useRouter,, ,  } from 'next/router';
-import { useState,, useEffect,, useCallback,, useMemo,, ,  } from 'react';
-import { motion,, AnimatePresence,, ,  } from 'framer-motion';
-import { ArrowUp,, Filter,, SortAsc,, Zap,, TrendingUp,, Star,, ShoppingCart,, MapPin,, Package,, AlertTriangle,, RefreshCw,  } from 'lucide-react'
-import { useInfiniteScrollPagination,, ,  } from '@/hooks/useInfiniteScroll';
-import { generateDatacenterEquipment,, getEquipmentMarketStats,, getRecommendedEquipment,, ,  } from '@/utils/equipmentAutoFeedAlgorithm';
-import { ProductListing,, ,  } from '@/types/listings';
-import { SkeletonCard,, ,  } from '@/components/ui/skeleton';
-import { Button,, ,  } from '@/components/ui/button';
-import { Badge,, ,  } from '@/components/ui/badge';
-import { Card,, CardContent,, CardHeader,, CardTitle,, ,  } from '@/components/ui/card';
+import { useRouter } from "next/router";
+import { useState, useEffect, useCallback, useMemo } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { ArrowUp, Filter, SortAsc, Zap, TrendingUp, Star, ShoppingCart, MapPin, Package, AlertTriangle, RefreshCw } from "lucide-react";
+import { useInfiniteScrollPagination } from "@/hooks/useInfiniteScroll";
+import { generateDatacenterEquipment, getEquipmentMarketStats, getRecommendedEquipment } from "@/utils/equipmentAutoFeedAlgorithm";
+import { ProductListing } from "@/types/listings";
+import { SkeletonCard } from "@/components/ui/skeleton";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import Spinner from '@/components/ui/spinner';
-import { EquipmentErrorBoundary,, ,  } from '@/components/EquipmentErrorBoundary';
-import { useCurrency,, ,  } from '@/hooks/useCurrency';
+import { EquipmentErrorBoundary } from "@/components/EquipmentErrorBoundary";
+import { useCurrency } from "@/hooks/useCurrency";
 import { logErrorToProduction } from '@/utils/productionLogger';
 // Enhanced initial equipment with more variety,
 const INITIAL_EQUIPMENT: ProductListing[] = [
   {
-    id: "nvidia-a100-server";,
+    id: "nvidia-a100-server";
 title: "NVIDIA A100 GPU Training Server";
     description: "High-performance AI training server with 8x A100 GPUs designed for demanding machine learning workloads.",
-    category: "AI Hardware";,
+    category: "AI Hardware";
 price: 85000;
-    currency: "$";,
+    currency: "$";
 brand: "NVIDIA";
     specifications: ["8x A100 GPUs", "2TB HBM2e", "NVLink"],
     tags: ["AI", "Machine Learning", "GPU"],

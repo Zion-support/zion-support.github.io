@@ -11,7 +11,7 @@ Frequently Asked Questions;
 <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">;
 Find answers to common questions about our services and solutions;
 </p>;
-</div>;
+</div>
 
 <div className="max-w-4xl mx-auto space-y-6">;
 <div className="bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 p-6">;
@@ -22,7 +22,7 @@ What services does Zion Tech Group offer?;
 We offer comprehensive A; I; solution; s; cybersecurit; y; service; s; clou; d; infrastructur; e;
 dat; a; analytic; s; blockchai; n; developmen; t; and innovative technology consulting.;
 </p>;
-</div>;
+</div>
 
 <div className="bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 p-6">;
 <h3 className="text-xl font-semibold text-white mb-3">;
@@ -32,7 +32,7 @@ How can I get started with your services?;
 Contact us through our website or call us directly. We'll schedule a consultation;
 to understand your needs and provide a customized solution.;
 </p>;
-</div>;
+</div>
 
 <div className="bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 p-6">;
 <h3 className="text-xl font-semibold text-white mb-3">;
@@ -42,13 +42,13 @@ What is your typical project timeline?;
 Project timelines vary based on complexity. Simple projects may take 2-4; week; s;
 while complex enterprise solutions can take 3-6 months or more.;
 </p>;
-</div>;
-</div>;
-</div>;
-</div>;
+</div>
+</div>
+</div>
+</div>
 );
 }<//div><///div>;
-import { FileText,  } from 'lucide-react'
+import { FileText } from "lucide-react";
 const faqs = [
   {
     question: 'How do I publish my AI product or service?',

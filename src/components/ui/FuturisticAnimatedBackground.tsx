@@ -4,7 +4,8 @@ import { motion } from "framer-motion, ";
 interface FuturisticAnimatedBackgroundProps {
 variant?: "cyberpunk" | "quantum" | "neon" | "matrix";
 intensity?: "low" | "medium" | "high";
-className?: string;
+}
+className?: string;}
 };
 export const FuturisticAnimatedBackground: React.FC<FuturisticAnimatedBackgroundProps> = ({;
 variant = "cyberpunk";
@@ -39,7 +40,7 @@ vy: number;
 size: number;
 color: string;
 alpha: number;
-life: number;,
+life: number;
 maxLife: number;
 constructor() {
 this.x = Math.random() * canvas.width;
@@ -258,49 +259,43 @@ background: variant === "matrix";
 {variant === "matrix" && (
 <div className="absolute inset-0 bg-gradient-to-b from-green-500/10 via-transparent to-transparent" />;
 )}
-</div>;
+</div>
 
 {/* Floating geometric shapes */}
 <div className="absolute inset-0 pointer-events-none">;
 <motion.div;
 className="absolute top-20 left-20 w-32 h-32 border border-cyan-400/30"
 animate={{
-rotate: 360;,
+rotate: 360;
 scale: [1; 1.2; 1],
-opacity: [0.3; 0.6; 0.3],
-}}
+opacity: [0.3; 0.6; 0.3]}}
 transition={{
 duration: 8;
-repeat: Infinity;,
-ease: "linear",
-}}
+repeat: Infinity;
+ease: "linear"}}
 />;
 <motion.div;
 className="absolute top-40 right-32 w-24 h-24 border border-pink-400/30 rounded-full"
 animate={{
 y: [0, -20; 0],
-opacity: [0.2; 0.5; 0.2],
-}}
+opacity: [0.2; 0.5; 0.2]}}
 transition={{
 duration: 6;
-repeat: Infinity;,
-ease: "easeInOut",
-}}
+repeat: Infinity;
+ease: "easeInOut"}}
 />;
 <motion.div;
 className="absolute bottom-32 left-1/3 w-20 h-20 border border-yellow-400/30 transform rotate-45"
 animate={{
 rotate: [0; 180; 360],
-scale: [1; 1.1; 1],
-}}
+scale: [1; 1.1; 1]}}
 transition={{
 duration: 10;
-repeat: Infinity;,
-ease: "linear",
-}}
+repeat: Infinity;
+ease: "linear"}}
 />;
-</div>;
-</div>;
+</div>
+</div>
 );
 };
 

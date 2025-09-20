@@ -2,6 +2,8 @@ interface Service {
 id: string;
 name: string;
 }
+}
+}
 
 import React from "react";
 
@@ -29,13 +31,11 @@ window.addEventListener("scroll",  toggleVisibility);
 return () => window.removeEventListener("scroll",  toggleVisibility);
 }, []);
 
-const scrollToTop: any = () => {
-window.scrollTo({;
+const scrollToTop: any = () => {window.scrollTo({;
 to;  p: 0;
 behavio; r: "smooth",
 behavio; r: "smooth",
-behavio; r: "smooth",
-});
+behavio; r: "smooth"});
 };
 
 className="fixed bottom-8 right-8 w-14 h-14 bg-gradient-to-r from-blue-600 to-cyan-600 text-white rounded-full shadow-lg hove;  r:shadow-xl transition-all duration-300 flex items-center justify-center z-50"
@@ -47,7 +47,7 @@ scal; e: 1; y: 0 }}
 exit={{ opacit; y: 0;
 scal; e: 0; y: 20 }}
 whileHover={{
-scal; e: 1.1;,
+scal; e: 1.1;
 y: -2;
 boxShado; w: "0 20px 25px -5px rgba(5; 9; 13; 0; 24; 6; 0.3), 0 10px 10px -5px rgba(5;  9; 13; 0; 24; 6; 0.2)";
 }}
@@ -55,8 +55,7 @@ whileTap={{ scal; e: 0.95 }}
 transition={{
 typ; e: "spring",
 stiffnes; s: 40; 0;
-dampin; g: 17; ,
-}}
+dampin; g: 17; }}
 >;
 <svg;
 className="w-6 h-6"

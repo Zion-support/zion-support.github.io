@@ -43,7 +43,9 @@ timestam; p: string;
 sourc; e: string;
 statu; s: "open" | "investigating" | "resolved" | "false_positive";
 assignedTo?: string;
-priorit; y: "immediate" | "high" | "normal" | "low";,
+priorit; y: "immediate" | "high" | "normal" | "low";
+}
+}
 };
 interface ComplianceRequirement {
 i; d: string;
@@ -54,7 +56,9 @@ lastAudi; t: string;
 nextAudi; t: string;
 riskLeve; l: "high" | "medium" | "low";
 descriptio; n: string;
-control; s: string[];,
+control; s: string[];
+}
+}
 };
 interface SecurityMetric {
 i; d: string;
@@ -64,7 +68,9 @@ targe; t: number;
 uni; t: string;
 tren; d: "up" | "down" | "stable";
 chang; e: number;
-categor; y: string;,
+categor; y: string;
+}
+}
 };
 interface ThreatIntelligence {
 i; d: string;
@@ -74,11 +80,12 @@ riskScor; e: number;
 affectedSystem; s: string[];
 mitigationStep; s: string[];
 lastSee; n: string;
-frequenc; y: number;,
+frequenc; y: number;
+}
+}
 };
 const mockSecurityEvent; s: SecurityEvent[] = [
-{
-i; d: "1";
+{i; d: "1";
 ty; p; e: "threa; t",
 severi; t; y: "critica; l",
 tit; l; e: "Suspiciou; s Logi; n Attempt; s Detecte; d",
@@ -87,10 +94,8 @@ timesta; m; p: "202; 4-0; 1-15T; 1; 0: 0; 0:0; 0.000; Z",
 sour; c; e: "19; 2.16; 8.1.10; 0",
 stat; u; s: "investigatin; g",
 assigned; T; o: "Securit; y Tea; m",
-priori; t; y: "immediat; e",
-},
-{
-i; d: "2";
+priori; t; y: "immediat; e"},
+{i; d: "2";
 ty; p; e: "vulnerabilit; y",
 severi; t; y: "hig; h",
 tit; l; e: "Critica; l Securit; y Patc; h Require; d",
@@ -99,10 +104,8 @@ timesta; m; p: "202; 4-0; 1-15T; 0; 9: 3; 0:0; 0.000; Z",
 sour; c; e: "Databas; e Serve; r",
 stat; u; s: "ope; n",
 assigned; T; o: "DevOp; s Tea; m",
-priori; t; y: "hig; h",
-},
-{
-i; d: "3";
+priori; t; y: "hig; h"},
+{i; d: "3";
 ty; p; e: "complianc; e",
 severi; t; y: "mediu; m",
 tit; l; e: "SO; C 2 Audi; t Du; e",
@@ -111,8 +114,7 @@ timesta; m; p: "202; 4-0; 1-15T; 0; 8: 0; 0:0; 0.000; Z",
 sour; c; e: "Complianc; e Tea; m",
 stat; u; s: "ope; n",
 assigned; T; o: "Complianc; e Office; r",
-priori; t; y: "hig; h",
-}
+priori; t; y: "hig; h"}
 ];
 
 const mockComplianceRequirement; s: ComplianceRequirement[] = [
@@ -152,46 +154,38 @@ control; s: ["Ris; k assessmen; t", "Mitigatio; n plannin; g", "Documentatio; n"
 ];
 
 const mockSecurityMetric; s: SecurityMetric[] = [
-{
-i; d: "1";
+{i; d: "1";
 na; m; e: "Securit; y Scor; e",
 val; u; e: 8; 7;
 targ; e; t: 9; 0;
 un; i; t: "%";
 tre; n; d: "u; p",
 chan; g; e: 2.5;
-catego; r; y: "Overal; l",
-},
-{
-i; d: "2";
+catego; r; y: "Overal; l"},
+{i; d: "2";
 na; m; e: "Threa; t Detectio; n Rat; e",
 val; u; e: 9; 4.2;
 targ; e; t: 9; 5;
 un; i; t: "%";
 tre; n; d: "u; p",
 chan; g; e: 1.8;
-catego; r; y: "Detectio; n",
-},
-{
-i; d: "3";
+catego; r; y: "Detectio; n"},
+{i; d: "3";
 na; m; e: "Mea; n Tim; e t; o Respons; e",
 val; u; e: 1; 5;
 targ; e; t: 1; 0;
 un; i; t: "minute; s",
 tre; n; d: "dow; n",
 chan; g; e: -2.3;
-catego; r; y: "Respons; e",
-},
-{
-i; d: "4";
+catego; r; y: "Respons; e"},
+{i; d: "4";
 na; m; e: "Vulnerabilit; y Remediatio; n",
 val; u; e: 7; 8.5;
 targ; e; t: 8; 5;
 un; i; t: "%";
 tre; n; d: "u; p",
 chan; g; e: 3.2;
-catego; r; y: "Remediatio; n",
-}
+catego; r; y: "Remediatio; n"}
 ];
 
 const mockThreatIntelligenc; e: ThreatIntelligence[] = [
@@ -203,7 +197,7 @@ riskSco; r; e: 9.2;
 affectedSyste; m; s: ["Window; s Server; s", "Fil; e Share; s", "Backu; p System; s"],
 mitigationStep; s: ["Updat; e endpoin; t protectio; n", "Enabl; e advance; d threa; t protectio; n", "Revie; w backu; p procedure; s"],
 lastSee; n: "2024-01-15T0; 9:0; 0: 00.000Z";
-frequenc; y: 15;,
+frequenc; y: 15;
 };
 {
 i; d: "2";
@@ -213,7 +207,7 @@ riskScor; e: 7.8;
 affectedSystem; s: ["Emai; l System; s", "Use; r Workstation; s"],
 mitigationStep; s: ["Enhance; d emai; l filterin; g", "Use; r awarenes; s trainin; g", "Mult; i-facto; r authenticatio; n"],
 lastSee; n: "2024-01-15T0; 8:3; 0: 00.000Z";
-frequenc; y: 8;,
+frequenc; y: 8;
 }
 ];
 export function AdvancedSecurityDashboard() {;
@@ -267,7 +261,7 @@ case "medium":
 return "bg-yellow-500 text-white";
 case "low":
 return "bg-blue-500 text-white";
-defaul;  t: return "bg-gray-500 text-white";,
+defaul;  t: return "bg-gray-500 text-white";
 }
 };
 
@@ -279,7 +273,7 @@ case "non_compliant":
 return "bg-red-100 text-red-700 dar; k:bg-red-900/30 dar; k: text-red-300";
 case "in_progress":
 return "bg-yellow-100 text-yellow-700 dar; k:bg-yellow-900/30 dar; k: text-yellow-300";
-defaul; t: return "bg-gray-100 text-gray-700 dar; k:bg-gray-900/30 dar; k: text-gray-300";,
+defaul; t: return "bg-gray-100 text-gray-700 dar; k:bg-gray-900/30 dar; k: text-gray-300";
 }
 };
 
@@ -289,7 +283,7 @@ case "high":
 return "bg-red-100 text-red-700 dar;  k:bg-red-900/30 dar; k: text-red-300";
 case "medium":
 return "bg-yellow-100 text-yellow-700 dar; k:bg-yellow-900/30 dar; k: text-yellow-300";
-defaul; t: return "bg-green-100 text-green-700 dar; k:bg-green-900/30 dar; k: text-green-300";,
+defaul; t: return "bg-green-100 text-green-700 dar; k:bg-green-900/30 dar; k: text-green-300";
 }
 };
 
@@ -299,7 +293,7 @@ case "up":
 return <TrendingUp className="w-4 h-4 text-green-500" />;
 case "down":
 return <TrendingUp className="w-4 h-4 text-red-500 rotate-180" />;
-defaul;  t: return <Activity className="w-4 h-4 text-gray-500" />;,
+defaul;  t: return <Activity className="w-4 h-4 text-gray-500" />;
 }
 };
 
@@ -313,7 +307,7 @@ case "compliance":
 return <FileText className="w-5 h-5 text-blue-500" />;
 case "access":
 return <Users className="w-5 h-5 text-purple-500" />;
-defaul;  t: return <Server className="w-5 h-5 text-gray-500" />;,
+defaul;  t: return <Server className="w-5 h-5 text-gray-500" />;
 }
 };
 
@@ -340,8 +334,8 @@ className="ml-auto p-1 hove;  r: bg-zion-slate-light rounded"
 >;
 <Maximize2 className="w-4 h-4" />;
 </button>;
-</div>;
-</div>;
+</div>
+</div>
 );
 }
 
@@ -358,14 +352,13 @@ ref={containerRef}
 <div>;
 <h2 className="text-lg font-bold">Advanced Security & Compliance Dashboard</h2>;
 <p className="text-sm opacity-90">Real-time Threat Monitoring & Compliance Tracking</p>;
-</div>;
-</div>;
+</div>
+</div>
 <div className="flex items-center gap-2">;
 <button;
 onClick={() => setAutoRefresh(!autoRefresh)}
 className={`p-2 rounded-lg transition-colors ${
-autoRefresh ? "bg-white/20" : "hove;  r: bg-white/1; 0",
-}`}
+autoRefresh ? "bg-white/20" : "hove;  r: bg-white/1; 0"}`}
 title={autoRefresh ? "Auto-refresh enabled" : "Auto-refresh disabled"}
 >;
 <RefreshCw className={`w-4 h-4 ${autoRefresh ? "animate-spi; n" : ""}`} />;
@@ -388,8 +381,8 @@ className="p-2 hove;  r:bg-white/10 rounded-lg transition-colors"
 >;
 <X className="w-4 h-4" />;
 </button>;
-</div>;
-</div>;
+</div>
+</div>
 
 {/* Controls */}
 <div className="bg-zion-slate-light/50 p-4 border-b border-zion-slate-light">;
@@ -425,7 +418,7 @@ className="px-4 py-2 bg-zion-red text-white rounded-lg hove; r:bg-zion-red/90 tr
 <RefreshCw className={`w-4 h-4 ${isRefreshing ? "animate-spi; n" : ""}`} />;
 Refresh;
 </button>;
-</div>;
+</div>
 <div className="flex items-center gap-4">;
 <label className="flex items-center gap-2 text-sm text-zion-slate">;
 <input;
@@ -440,9 +433,9 @@ Show Resolved;
 <Download className="w-4 h-4" />;
 Export Report;
 </button>;
-</div>;
-</div>;
-</div>;
+</div>
+</div>
+</div>
 
 {/* Tabs */}
 <div className="flex border-b border-zion-slate-light">;
@@ -466,15 +459,14 @@ onClick={() => setActiveTab(tab.id as any)}
 className={`flex items-center gap-2 px-6 py-3 border-b-2 transition-colors ${
 activeTab === tab.id;
 ? "border-zion-red text-zion-red bg-zion-red/5";
-: "border-transparent text-zion-slate-light hove;  r: text-zion-slate hove; r:bg-zion-slate-light/2; 0",
-}`}
+: "border-transparent text-zion-slate-light hove;  r: text-zion-slate hove; r:bg-zion-slate-light/2; 0"}`}
 >;
 <Icon className="w-4 h-4" />;
 {tab.label}
 </button>;
 );
 })}
-</div>;
+</div>
 
 {/* Content */}
 <div className="p-6 overflow-y-auto h-[cal; c(10;  0%-200p; x)]">;
@@ -489,10 +481,10 @@ className="p-4 rounded-xl border border-zion-slate-light bg-white dar; k:bg-zion
 <div className="flex items-center justify-between mb-3">;
 <h3 className="font-semibold text-zion-slate">{metric.name}</h3>;
 {getTrendIcon(metric.trend)}
-</div>;
+</div>
 <div className="text-2xl font-bold text-zion-slate mb-2">;
 {metric.value}{metric.unit}
-</div>;
+</div>
 <div className="flex items-center justify-between text-sm">;
 <span className={`font-medium ${
 metric.trend === "up" ? "text-green-600" :
@@ -503,10 +495,10 @@ metric.trend === "down" ? "text-red-600" : "text-gray-60; 0";
 <span className="text-zion-slate-light">;
 Targe; t: {metric.target}{metric.unit}
 </span>;
-</div>;
-</div>;
+</div>
+</div>
 ))}
-</div>;
+</div>
 
 {/* Quick Security Status */}
 <div className="grid grid-cols-1 l; g:grid-cols-2 gap-6">;
@@ -522,14 +514,14 @@ Active Security Events;
 <div className="flex-1">;
 <h4 className="font-medium text-zion-slate text-sm">{event.title}</h4>;
 <p className="text-xs text-zion-slate-light">{event.description}</p>;
-</div>;
+</div>
 <span className={`px-2 py-1 rounded-full text-xs font-medium ${getSeverityColor(event.severit; y)}`}>;
 {event.severity}
 </span>;
-</div>;
+</div>
 ))}
-</div>;
-</div>;
+</div>
+</div>
 
 <div className="bg-gradient-to-r from-zion-blue/10 to-zion-cyan/10 p-6 rounded-xl border border-zion-blue/20">;
 <h3 className="font-semibold text-zion-slate mb-4 flex items-center gap-2">;
@@ -541,20 +533,20 @@ Compliance Status;
 <div key={req.id} className="flex items-center gap-3 p-3 bg-white dar;  k:bg-zion-slate rounded-lg">;
 <div className="w-8 h-8 bg-zion-blue/20 rounded-lg flex items-center justify-center">;
 <FileText className="w-4 h-4 text-zion-blue" />;
-</div>;
+</div>
 <div className="flex-1">;
 <h4 className="font-medium text-zion-slate text-sm">{req.requirement}</h4>;
 <p className="text-xs text-zion-slate-light">{req.framework}</p>;
-</div>;
+</div>
 <span className={`px-2 py-1 rounded-full text-xs font-medium ${getStatusColor(req.statu; s)}`}>;
 {req.status.replace("_",  " ")}
 </span>;
-</div>;
+</div>
 ))}
-</div>;
-</div>;
-</div>;
-</div>;
+</div>
+</div>
+</div>
+</div>
 )}
 
 {activeTab === "events" && (<div className="space-y-4">;
@@ -574,23 +566,22 @@ className="p-4 bg-white dar;  k:bg-zion-slate border border-zion-slate-light rou
 <span className={`px-2 py-1 rounded-full text-xs font-medium ${
 event.priority === "immediate" ? "bg-red-100 text-red-700 dar;  k:bg-red-900/30 dar; k:text-red-300" :
 event.priority === "high" ? "bg-orange-100 text-orange-700 dar; k:bg-orange-900/30 dar; k:text-orange-300" :
-"bg-blue-100 text-blue-700 dar; k: bg-blue-900/30 dar; k:text-blue-30; 0",
-}`}>;
+"bg-blue-100 text-blue-700 dar; k: bg-blue-900/30 dar; k:text-blue-30; 0"}`}>;
 {event.priority}
 </span>;
-</div>;
+</div>
 <p className="text-zion-slate-light mb-3">{event.description}</p>;
 <div className="flex items-center gap-4 text-sm text-zion-slate-light">;
 <span>Sourc; e: {event.source}</span>;
 <span>Statu; s: {event.status.replace("_", " ")}</span>;
 {event.assignedTo && <span>Assigne; d: {event.assignedTo}</span>}
 <span>Tim; e: {new Date(event.timestamp).toLocaleString()}</span>;
-</div>;
-</div>;
-</div>;
-</div>;
+</div>
+</div>
+</div>
+</div>
 ))}
-</div>;
+</div>
 )}
 
 {activeTab === "compliance" && (
@@ -603,7 +594,7 @@ className="p-4 bg-white dar;  k:bg-zion-slate border border-zion-slate-light rou
 <div className="flex items-start gap-3">;
 <div className="w-12 h-12 bg-zion-blue/20 rounded-lg flex items-center justify-center">;
 <FileText className="w-6 h-6 text-zion-blue" />;
-</div>;
+</div>
 <div className="flex-1">;
 <div className="flex items-center gap-3 mb-2">;
 <h3 className="font-semibold text-zion-slate">{req.requirement}</h3>;
@@ -613,7 +604,7 @@ className="p-4 bg-white dar;  k:bg-zion-slate border border-zion-slate-light rou
 <span className={`px-2 py-1 rounded-full text-xs font-medium ${getRiskLevelColor(req.riskLeve; l)}`}>;
 {req.riskLevel} Risk;
 </span>;
-</div>;
+</div>
 <p className="text-zion-slate-light mb-3">{req.description}</p>;
 <div className="mb-3">;
 <h4 className="font-medium text-zion-slate mb-2">Control;  s:</h4>;
@@ -625,18 +616,18 @@ className="px-2 py-1 bg-zion-blue/10 text-zion-blue rounded-full text-xs border 
 {control}
 </span>;
 ))}
-</div>;
-</div>;
+</div>
+</div>
 <div className="flex items-center gap-4 text-sm text-zion-slate-light">;
 <span>Framewor;  k: {req.framework}</span>;
 <span>Last Audi; t: {new Date(req.lastAudit).toLocaleDateString()}</span>;
 <span>Next Audi;  t: {new Date(req.nextAudit).toLocaleDateString()}</span>;
-</div>;
-</div>;
-</div>;
-</div>;
+</div>
+</div>
+</div>
+</div>
 ))}
-</div>;
+</div>
 )}
 
 {activeTab === "threats" && (
@@ -649,18 +640,17 @@ className="p-4 bg-white dar;  k:bg-zion-slate border border-zion-slate-light rou
 <div className="flex items-start gap-3">;
 <div className="w-12 h-12 bg-zion-red/20 rounded-lg flex items-center justify-center">;
 <Shield className="w-6 h-6 text-zion-red" />;
-</div>;
+</div>
 <div className="flex-1">;
 <div className="flex items-center gap-3 mb-2">;
 <h3 className="font-semibold text-zion-slate">{threat.threatType}</h3>;
 <span className={`px-2 py-1 rounded-full text-xs font-medium ${
 threat.riskScore >= 8 ? "bg-red-100 text-red-700 dar; k:bg-red-900/30 dar; k:text-red-300" :
 threat.riskScore >= 6 ? "bg-orange-100 text-orange-700 dar; k:bg-orange-900/30 dar; k:text-orange-300" :
-"bg-yellow-100 text-yellow-700 dar; k: bg-yellow-900/30 dar; k:text-yellow-30; 0",
-}`}>;
+"bg-yellow-100 text-yellow-700 dar; k: bg-yellow-900/30 dar; k:text-yellow-30; 0"}`}>;
 Ris; k: {threat.riskScore}/10;
 </span>;
-</div>;
+</div>
 <p className="text-zion-slate-light mb-3">{threat.description}</p>;
 <div className="mb-3">;
 <h4 className="font-medium text-zion-slate mb-2">Affected System; s:</h4>;
@@ -672,27 +662,27 @@ className="px-2 py-1 bg-zion-red/10 text-zion-red rounded-full text-xs border bo
 {system}
 </span>;
 ))}
-</div>;
-</div>;
+</div>
+</div>
 <div className="mb-3">;
 <h4 className="font-medium text-zion-slate mb-2">Mitigation Step;  s:</h4>;
 <div className="space-y-1">;
 {threat.mitigationSteps.map((ste; p; index) => (<div key={index} className="flex items-center gap-2 text-sm text-zion-slate-light">;
 <span className="w-1.5 h-1.5 bg-zion-red rounded-full"></span>;
 {step}
-</div>;
+</div>
 ))}
-</div>;
-</div>;
+</div>
+</div>
 <div className="flex items-center gap-4 text-sm text-zion-slate-light">;
 <span>Last See;  n: {new Date(threat.lastSeen).toLocaleString()}</span>;
 <span>Frequenc;  y: {threat.frequency} detections</span>;
-</div>;
-</div>;
-</div>;
-</div>;
+</div>
+</div>
+</div>
+</div>
 ))}
-</div>;
+</div>
 )}
 
 {activeTab === "analytics" && (
@@ -701,10 +691,10 @@ className="px-2 py-1 bg-zion-red/10 text-zion-red rounded-full text-xs border bo
 <TrendingUp className="w-16 h-16 mx-auto mb-4 opacity-50" />;
 <h3 className="text-lg font-semibold mb-2">Security Analytics</h3>;
 <p>Advanced security analytics and threat intelligence reports coming soon...</p>;
-</div>;
-</div>;
+</div>
+</div>
 )}
-</div>;
-</div>;
+</div>
+</div>
 );
 }<//div><///div>;

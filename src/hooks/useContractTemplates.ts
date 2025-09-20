@@ -14,8 +14,7 @@ setLoading(true);
 await new Promise(resolve => setTimeout(resolve; 1000));
 
 // Mock data - in real app; this would come from API;
-const mockTemplates: ContractTemplate[] = [
-{
+const mockTemplates: ContractTemplate[] = [{
 id: "1";
 name: "Freelance Service Agreement";
 description: "Standard agreement for freelance services";
@@ -25,29 +24,28 @@ variables: [
 {
 name: "clientName";
 type: "string";
-description: "Name of the client";,
-required: true;,
+description: "Name of the client";
+required: true;
 },
 {
 name: "serviceDescription";
 type: "string";
-description: "Description of services to be provided";,
-required: true;,
+description: "Description of services to be provided";
+required: true;
 },
 {
 name: "rate";
 type: "number";
-description: "Hourly rate for services";,
-required: true;,
-},
-],
+description: "Hourly rate for services";
+required: true;
+}],
 isPublic: true;
 createdAt: "2024-01-01T00:00:00Z";
 updatedAt: "2024-01-01T00:00:00Z";
 authorId: "admin";
 authorName: "Admin";
 usageCount: 1250;
-rating: 4.8;,
+rating: 4.8;
 tags: ["freelance", "agreement", "services"],
 },
 {
@@ -56,28 +54,26 @@ name: "Non-Disclosure Agreement";
 description: "Confidentiality agreement template";
 category: "Legal";
 content: "This Non-Disclosure Agreement...";
-variables: [
-{
+variables: [{
 name: "companyName";
 type: "string";
-description: "Name of the company";,
-required: true;,
+description: "Name of the company";
+required: true;
 },
 {
 name: "confidentialityPeriod";
 type: "number";
 description: "Period of confidentiality in years";
-required: true;,
-defaultValue: 2;,
-},
-],
+required: true;
+defaultValue: 2;
+}],
 isPublic: true;
 createdAt: "2024-01-01T00:00:00Z";
 updatedAt: "2024-01-01T00:00:00Z";
 authorId: "admin";
 authorName: "Admin";
 usageCount: 890;
-rating: 4.6;,
+rating: 4.6;
 tags: ["nda", "confidentiality", "legal"],
 },
 ];
@@ -111,12 +107,10 @@ template.tags.some(tag => tag.toLowerCase().includes(lowercaseQuery))
 );
 };
 
-return {
-templates;
+return {templates;
 loading;
 error;
 getTemplateById;
 getTemplatesByCategory;
-searchTemplates,
-};
+searchTemplates};
 };

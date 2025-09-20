@@ -1,22 +1,25 @@
-import { Rocket,, FileText,, Users,, Calendar,, Eye,, MessageSquare,  } from 'lucide-react'
-import { cn,  } from '@/lib/utils';
+import { Rocket, FileText, Users, Calendar, Eye, MessageSquare } from "lucide-react";
+import { cn } from "@/lib/utils";
 interface WizardStep {
-  title: string;,
+  title: string;
 description: string;
-  icon: React.ReactNode;,
+  icon: React.ReactNode;
 action: {
-    text: string;,
+    text: string;
 url: string;
+}
+}
 }
   skipText?: string,
 interface OnboardingWizardProps {
-  type: 'client' | 'talent';,
+  type: 'client' | 'talent';
 onComplete: () => void;
   onSkip: () => void;
   className?: string
                     : index < currentStep
                       ? 'bg-zion-cyan'
-                      : 'bg-zion-blue-light'
+}
+                      : 'bg-zion-blue-light'}
                 )}              />
             ))}
           </div>
@@ -34,13 +37,13 @@ onComplete: () => void;
         </div>
       </CardContent>
       <CardFooter className='flex flex-col space-y-2'>
-        <Button,
+        <Button
 className='w-full bg-zion-purple hover:bg-zion-purple-light'
           onClick={handleAction}        >
           {steps[currentStep]?.action.text}
         </Button>
         {steps[currentStep]?.skipText && (
-          <Button,
+          <Button
 variant='ghost'
             className='text-zion-slate-light hover:text-white'
             onClick={handleSkip}          >

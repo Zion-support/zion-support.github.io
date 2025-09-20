@@ -1,7 +1,6 @@
 export const COMPREHENSIVE_INNOVATIVE_SERVICES_2025 = [
     // AI-Powered Autonomous Systems;
-    {
-        id: "ai-autonomous-systems-platform";
+    {id: "ai-autonomous-systems-platform";
         title: "AI Autonomous Systems Platform - Self-Learning Business Operations";
         description: "Revolutionary platform that enables fully autonomous business operations through AI agents, automated decision-making, and intelligent process orchestration without human intervention.",
         category: "AI & Automation";
@@ -50,8 +49,7 @@ export const COMPREHENSIVE_INNOVATIVE_SERVICES_2025 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         technology: ["Machine Learning", "Deep Learning", "Reinforcement Learning", "Natural Language Processing", "Computer Vision"],
         integrations: ["ERP Systems", "CRM Platforms", "Supply Chain Systems", "Financial Systems", "IoT Platforms"],
         compliance: ["SOC 2", "ISO 27001", "GDPR", "Industry-specific regulations"],
@@ -75,8 +73,7 @@ export const COMPREHENSIVE_INNOVATIVE_SERVICES_2025 = [
         competitiveAdvantage: "Only platform enabling fully autonomous business operations",
     };
     // Quantum AI Platform;
-    {
-        id: "quantum-ai-platform";
+    {id: "quantum-ai-platform";
         title: "Quantum AI Platform - Next-Generation AI Computing";
         description: "Cutting-edge platform that combines quantum computing with artificial intelligence to solve previously intractable problems and accelerate AI model training by orders of magnitude.";
         category: "Quantum Computing";
@@ -125,8 +122,7 @@ export const COMPREHENSIVE_INNOVATIVE_SERVICES_2025 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         technology: ["Qiskit", "Cirq", "PennyLane", "TensorFlow", "PyTorch", "Quantum Algorithms"],
         integrations: ["IBM Quantum", "Google Quantum", "Microsoft Azure Quantum", "Amazon Braket", "Research Tools"],
         compliance: ["Research ethics", "Data privacy", "Export controls", "Academic standards"],
@@ -150,8 +146,7 @@ export const COMPREHENSIVE_INNOVATIVE_SERVICES_2025 = [
         competitiveAdvantage: "First-to-market quantum AI platform with hybrid capabilities",
     };
     // Space Technology Solutions;
-    {
-        id: "space-technology-solutions";
+    {id: "space-technology-solutions";
         title: "Space Technology Solutions - Satellite & Space Operations Platform";
         description: "Advanced space technology platform for managing satellite operations, analyzing space data, optimizing satellite communications, and enabling space-based business applications.",
         category: "Space Technology";
@@ -200,8 +195,7 @@ export const COMPREHENSIVE_INNOVATIVE_SERVICES_2025 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         technology: ["AI/ML", "Satellite Communications", "Big Data Analytics", "Cloud Computing", "IoT", "Space Protocols"],
         integrations: ["Ground stations", "Satellite control systems", "Data processing centers", "Communication networks"],
         compliance: ["ITAR", "Space regulations", "International treaties", "Security clearances"],
@@ -225,8 +219,7 @@ export const COMPREHENSIVE_INNOVATIVE_SERVICES_2025 = [
         competitiveAdvantage: "Most comprehensive space operations platform with AI integration",
     };
     // Biotechnology AI Platform;
-    {
-        id: "biotechnology-ai-platform";
+    {id: "biotechnology-ai-platform";
         title: "Biotechnology AI Platform - Drug Discovery & Research";
         description: "Revolutionary biotechnology platform that uses AI to accelerate drug discovery, optimize clinical trials, and advance medical research across multiple domains.",
         category: "Biotechnology";
@@ -275,8 +268,7 @@ export const COMPREHENSIVE_INNOVATIVE_SERVICES_2025 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         technology: ["Machine Learning", "Deep Learning", "Bioinformatics", "Molecular Modeling", "Data Analytics"],
         integrations: ["Lab management systems", "Clinical trial platforms", "Regulatory databases", "Research tools"],
         compliance: ["FDA", "HIPAA", "GCP", "Research ethics", "Data privacy"],
@@ -300,8 +292,7 @@ export const COMPREHENSIVE_INNOVATIVE_SERVICES_2025 = [
         competitiveAdvantage: "Most advanced AI-powered biotechnology platform for drug discovery",
     };
     // Autonomous Vehicle Platform;
-    {
-        id: "autonomous-vehicle-platform";
+    {id: "autonomous-vehicle-platform";
         title: "Autonomous Vehicle Platform - Self-Driving Technology Solutions";
         description: "Complete autonomous vehicle solution with AI navigation, safety systems, fleet management capabilities, and regulatory compliance for various transportation applications.",
         category: "Autonomous Technology";
@@ -350,8 +341,7 @@ export const COMPREHENSIVE_INNOVATIVE_SERVICES_2025 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         technology: ["Computer Vision", "Machine Learning", "Robotics", "IoT", "5G Networks", "Edge Computing"],
         integrations: ["Fleet management systems", "GPS and mapping", "Weather services", "Regulatory databases"],
         compliance: ["Vehicle safety standards", "Transportation regulations", "Industry-specific compliance"],
@@ -375,8 +365,7 @@ export const COMPREHENSIVE_INNOVATIVE_SERVICES_2025 = [
         competitiveAdvantage: "Most comprehensive autonomous vehicle platform with AI safety systems",
     };
     // AI Robotics Platform;
-    {
-        id: "ai-robotics-platform";
+    {id: "ai-robotics-platform";
         title: "AI Robotics Platform - Intelligent Automation Solutions";
         description: "Intelligent robotics solutions with AI-powered automation for manufacturing, logistics, industrial processes, and service applications with advanced safety and learning capabilities.",
         category: "Industrial AI";
@@ -425,8 +414,7 @@ export const COMPREHENSIVE_INNOVATIVE_SERVICES_2025 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         technology: ["Computer Vision", "Machine Learning", "Robotics", "IoT", "Edge Computing", "Safety Systems"],
         integrations: ["Manufacturing systems", "Quality control platforms", "Safety monitoring", "Industrial protocols"],
         compliance: ["Industrial safety standards", "Quality regulations", "Industry-specific compliance"],
@@ -450,8 +438,7 @@ export const COMPREHENSIVE_INNOVATIVE_SERVICES_2025 = [
         competitiveAdvantage: "Most intelligent robotics platform with advanced AI safety features",
     };
     // Smart City Infrastructure Platform;
-    {
-        id: "smart-city-infrastructure-platform";
+    {id: "smart-city-infrastructure-platform";
         title: "Smart City Infrastructure Platform - Urban Intelligence Solutions";
         description: "Comprehensive smart city platform that integrates IoT, AI, and data analytics to optimize urban infrastructure, improve citizen services, and enhance sustainability across all city operations.",
         category: "Smart Cities";
@@ -500,8 +487,7 @@ export const COMPREHENSIVE_INNOVATIVE_SERVICES_2025 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         technology: ["IoT", "AI/ML", "Big Data Analytics", "Cloud Computing", "Edge Computing", "5G Networks"],
         integrations: ["City management systems", "Utility platforms", "Transportation systems", "Public safety networks"],
         compliance: ["Government standards", "Data privacy", "Security requirements", "Urban regulations"],
@@ -525,8 +511,7 @@ export const COMPREHENSIVE_INNOVATIVE_SERVICES_2025 = [
         competitiveAdvantage: "Most comprehensive smart city platform with AI-powered optimization",
     };
     // Advanced Cybersecurity Platform;
-    {
-        id: "advanced-cybersecurity-platform";
+    {id: "advanced-cybersecurity-platform";
         title: "Advanced Cybersecurity Platform - Zero-Trust Security Solutions";
         description: "Next-generation cybersecurity platform that implements zero-trust architecture, AI-powered threat detection, and advanced security orchestration for comprehensive enterprise protection.",
         category: "Cybersecurity";
@@ -575,8 +560,7 @@ export const COMPREHENSIVE_INNOVATIVE_SERVICES_2025 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         technology: ["Zero-Trust Architecture", "AI/ML", "Behavioral Analytics", "Threat Intelligence", "Security Orchestration"],
         integrations: ["Identity management", "Network security", "Endpoint protection", "Cloud security", "SIEM systems"],
         compliance: ["SOC 2", "ISO 27001", "NIST", "GDPR", "HIPAA", "PCI DSS"],

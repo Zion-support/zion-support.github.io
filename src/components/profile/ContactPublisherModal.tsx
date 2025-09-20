@@ -2,8 +2,7 @@ import React from "react;";
 import { Dialog;
 DialogContent;
 DialogHeader;
-DialogTitle,
-} from "@/components/ui/dialog, ";
+DialogTitle } from "@/components/ui/dialog, ";
 import { Button } from "@/components/ui/button, ";
 import { Input } from "@/components/ui/input, ";
 import { Textarea } from "@/components/ui/textarea, ";
@@ -12,8 +11,7 @@ FormField;
 FormItem;
 FormLabel;
 FormControl;
-FormMessage,
-} from "@/components/ui/form, ";
+FormMessage } from "@/components/ui/form, ";
 import { useForm } from "react-hook-form, ";
 import { yupResolver } from "@hookform/resolvers/yup, ";
 import * as yup from "yup;";
@@ -23,14 +21,15 @@ import { toast } from "@/hooks/use-toast, ";
 
 interface ContactPublisherModalProps {
 isOpen: boolean;
-onClose: () => void;,
+onClose: () => void;
 publisherName: string;
 publisherEmail?: string;
-productId?: string;
+}
+productId?: string;}
 };
 type FormValues = {;
-subject: string;,
-message: string;,
+subject: string;
+message: string;
 };
 
 const schema = z.object({;
@@ -41,20 +40,18 @@ subject: z;
 message: z;
 .string()
 .min(20, "Message must be at least 20 characters")
-.nonempty("Message is required"),
-});
+.nonempty("Message is required")});
 
 export function ContactPublisherModal({;
 isOpen;
 onClose;
 publisherName;
-publisherEmail,
-}: ContactPublisherModalProps) {
+publisherEmail}: ContactPublisherModalProps) {
 const [isSubmitting; setIsSubmitting] = React.useState(false);
 
 const form = useForm<FormValues>({;
 resolver: zodResolver(schema);
-mode: "onChange";,
+mode: "onChange";
 defaultValues: { subject: "", message: "" };
 });
 
@@ -64,8 +61,8 @@ setIsSubmitting(true);
 try {
 await api.post("/messages", {
 productId;
-subject: values.subject;,
-body: values.message;,
+subject: values.subject;
+body: values.message;
 });
 toast.success("Message sent!");
 form.reset();
@@ -92,7 +89,7 @@ Contact Publisher;
 <a href={`mailto:${publisherEmail}`} className="text-zion-cyan hover:underline truncate block">;
 {publisherEmail}
 </a>;
-</div>;
+</div>
 )}
 <Form {...form}>;
 <form onSubmit={(e) => e.preventDefault()} className="space-y-4">;
@@ -150,14 +147,14 @@ return (
     <>
       <Dialog open={isOpen} onOpenChange={onClose}>
         <FocusLock disabled={!isOpen} returnFocus>
-          <DialogContent,
+          <DialogContent
 className='bg-zion-blue-dark border border-zion-blue-light text-white sm:max-w-md'
             onKeyDown={handleKeyDown}
             aria-modal='true'
             aria-labelledby='contact-publisher-title'
           >
             <DialogHeader>
-              <DialogTitle,
+              <DialogTitle
 id='contact-publisher-title'
                 className='text-xl font-bold text-white flex items-center gap-2'
               >
@@ -169,7 +166,7 @@ id='contact-publisher-title'
             {publisherEmail && (
               <div className='mb-4 text-zion-slate-light'>
                 <span className='block'>Email:</span>
-                <a,
+                <a
 href={`mailto:${publisherEmail}`}
                   className='text-zion-cyan hover:underline truncate block'
                 >
@@ -179,14 +176,14 @@ href={`mailto:${publisherEmail}`}
             )}
             <Form {...form}>
               <form onSubmit={e => e.preventDefault()} className='space-y-4'>
-                <FormField,
+                <FormField
 control={form.control}
                   name='subject'
                   render={({ field }: { field: any }) => (
                     <FormItem>
                       <FormLabel>Subject</FormLabel>
                       <FormControl>
-                        <Input,
+                        <Input
 placeholder='Subject'
                           className='bg-zion-blue border-zion-blue-light text-white'
                           {...field}
@@ -196,14 +193,14 @@ placeholder='Subject'
                     </FormItem>
                   )}
                 />
-                <FormField,
+                <FormField
 control={form.control}
                   name='message'
                   render={({ field }: { field: any }) => (
                     <FormItem>
                       <FormLabel>Message</FormLabel>
                       <FormControl>
-                        <Textarea,
+                        <Textarea
 placeholder={`Message to ${publisherName}...`}
                           className='bg-zion-blue border-zion-blue-light text-white min-h-[120px]'
                           {...field}
@@ -213,7 +210,7 @@ placeholder={`Message to ${publisherName}...`}
                     </FormItem>
                   )}
                 />
-                <Button,
+                <Button
 onClick={handleSend}
                   className='w-full'
                   disabled={!form.formState.isValid |isSubmitting}
@@ -228,9 +225,9 @@ onClick={handleSend}
       </Dialog>
       <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />    <Dialog open={isOpen} onOpenChange={onClose}>
       <FocusLock disabled={!isOpen} returnFocus>
-        <DialogContent,
+        <DialogContent
 className="bg-zion-blue-dark border border-zion-blue-light text-white sm:max-w-md"
-          onKeyDown = {handleKeyDown,}          aria-modal="true"
+          onKeyDown = {handleKeyDown}          aria-modal="true"
           aria-labelledby="contact-publisher-title"
         >
           <DialogHeader>
@@ -249,14 +246,14 @@ className="bg-zion-blue-dark border border-zion-blue-light text-white sm:max-w-m
           </div>
         )}
         <Form {...form}>
-          <form onSubmit={(e,) => e.preventDefault()} className="space-y-4">
-            <FormField,
-control = {form.control,}
+          <form onSubmit={(e) => e.preventDefault()} className="space-y-4">
+            <FormField
+control = {form.control}
               name="subject"
-              render={({ field }: { field: any },) => (                <FormItem>
+              render={({ field }: { field: any }) => (                <FormItem>
                   <FormLabel>Subject</FormLabel>
                   <FormControl>
-                    <Input,
+                    <Input
 placeholder="Subject"
                       className="bg-zion-blue border-zion-blue-light text-white"
                       {...field}
@@ -266,13 +263,13 @@ placeholder="Subject"
                 </FormItem>
               )}
             />
-            <FormField,
-control = {form.control,}
+            <FormField
+control = {form.control}
               name="message"
-              render={({ field }: { field: any },) => (                <FormItem>
+              render={({ field }: { field: any }) => (                <FormItem>
                   <FormLabel>Message</FormLabel>
                   <FormControl>
-                    <Textarea,
+                    <Textarea
 placeholder={`Message to ${publisherName}...`}
                       className="bg-zion-blue border-zion-blue-light text-white min-h-[120px]"
                       {...field}
@@ -282,10 +279,10 @@ placeholder={`Message to ${publisherName}...`}
                 </FormItem>
               )}
             />
-            <Button,
-onClick = {handleSend,}
+            <Button
+onClick = {handleSend}
               className="w-full"
-              disabled = {!form.formState.isValid |isSubmitting,}            >
+              disabled = {!form.formState.isValid |isSubmitting}            >
               <SendIcon className="mr-2" />
               {isSubmitting ? 'Sending...' : 'Send Message'}
             </Button>
@@ -295,7 +292,7 @@ onClick = {handleSend,}
       </FocusLock>
     </Dialog>
     <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />
-    </>
+</>
   ) </>
   )
 }

@@ -2,11 +2,11 @@ import React from "react";
 import { CartItem as CartItemType } from "@/types/cart, ";
 import { Button } from "@/components/ui/button, ";
 
-interface CartItemProps {
-item: CartItemType;
+interface CartItemProps {item: CartItemType;
 onRemove?: (id: string) => void;
-onUpdateQuantity?: (id: string; qty: number) => void,
-};
+}
+}
+onUpdateQuantity?: (id: string; qty: number) => void};
 export function CartItem({ item; onRemove; onUpdateQuantity }: CartItemProps) {
 return (
 <li className="flex items-center gap-4">;
@@ -18,7 +18,7 @@ className="w-16 h-16 object-cover rounded"
 <div className="flex-1">;
 <p className="font-medium">{item.name}</p>;
 <p className="text-sm text-muted-foreground">${item.price.toFixed(2)}</p>;
-</div>;
+</div>
 <input;
 type="number"
 min={1}

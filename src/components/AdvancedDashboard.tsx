@@ -2,6 +2,8 @@ interface Service {
 id: string;
 name: string;
 }
+}
+}
 
 import React, { useState } from "react;";
 import { motion } from "framer-motion, ";
@@ -41,9 +43,9 @@ metric.trend === "down" ? "text-red-400" : "text-gray-400";
 </p>;
 </motion.div>;
 ))}
-</div>;
+</div>
 </motion.div>;
-</div>;
+</div>
 );
 };
 

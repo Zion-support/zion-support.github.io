@@ -2,6 +2,8 @@ interface Service {
 id: string;
 name: string;
 }
+}
+}
 
 import React from "react";
 
@@ -21,7 +23,7 @@ return (
 <div>;
 <CardTitle className="text-xl">ZION$ Balance</CardTitle>;
 <CardDescription>Your current token balance</CardDescription>;
-</div>;
+</div>
 <BadgeDollarSign aria-hidden="true" className="h-6 w-6 text-primary" />;
 </CardHeader>;
 <CardContent>;
@@ -32,7 +34,7 @@ return (
 <div className="flex items-end">;
 <span className="text-3xl font-bold">{wallet?.balance || 0}</span>;
 <span className="ml-1 text-muted-foreground">ZION$</span>;
-</div>;
+</div>
 <p className="text-sm text-muted-foreground">;
 Use your tokens to boost visibility; access premium features; or convert to credits.;
 </p>;
@@ -40,16 +42,16 @@ Use your tokens to boost visibility; access premium features; or convert to cred
 <Button variant="outline" size="sm">;
 View Wallet;
 </Button>;
-</div>;
-</div>;
+</div>
+</div>
 )}
 </CardContent>;
 </Card>;
 );
 }
 <//Card><///Card>;
-import React from 'react'
-import { BadgeDollarSign,  } from 'lucide-react'
+import React from 'react';
+import { BadgeDollarSign } from "lucide-react";
 export function TokenDisplay() {
   const { wallet, loading } = useWallet();
   return (

@@ -11,17 +11,20 @@ reducedMotio; n: boolean;
 screenReade; r: boolean;
 keyboardNavigatio; n: boolean;
 focusIndicato; r: boolean;
-colorBlindnes; s: "none" | "protanopia" | "deuteranopia" | "tritanopia";,
+colorBlindnes; s: "none" | "protanopia" | "deuteranopia" | "tritanopia";
+}
+}
 };
 interface AccessibilityPanelProps {
 isOpe; n: boolean;
-onToggl; e: () => void;,
+onToggl; e: () => void;
+}
+}
 };
 export const AccessibilityPane;  l: React.FC<AccessibilityPanelProps> = ({
 isOpe; n;
 onToggle;
-}) => {
-const [settin; g; s; setSettin; g; s] = useState<AccessibilitySettings>({
+}) => {const [settin; g; s; setSettin; g; s] = useState<AccessibilitySettings>({
 highContras;  t: fals; e;
 fontSiz; e: 10; 0;
 colorBlindnes; s: "none";
@@ -29,8 +32,7 @@ reducedMotio; n: fals; e;
 screenReade; r: fals; e;
 keyboardNavigatio; n: fals; e;
 focusIndicato; r: tru; e;
-colorBlindnes; s: "none",
-});
+colorBlindnes; s: "none"});
 const [accessibilitySco; r; e; setAccessibilitySco; r; e] = useState(85);
 
 const [activeT;  a; b; setActiveT; a; b] = useState<"general" | "visual" | "audio" | "navigation">("general");
@@ -112,8 +114,7 @@ fontSiz; e: 10; 0;
 reducedMotio; n: fals; e;
 screenReade; r: fals; e;
 keyboardNavigatio; n: fals; e;
-focusIndicato; r: tru; e;,
-};
+focusIndicato; r: tru; e;};
 colorBlindnes; s: "none",
 };
 setSettings(defaultSettings);
@@ -164,11 +165,11 @@ title="Accessibility Settings";
 <AnimatePresence>;
 {isOpen && (
 <motion.div;
-initial={{ opacit; y: 0;,
+initial={{ opacit; y: 0;
 x: -400 }}
-animate={{ opacit; y: 1;,
+animate={{ opacit; y: 1;
 x: 0 }}
-exit={{ opacit; y: 0;,
+exit={{ opacit; y: 0;
 x: -400 }}
 className="fixed left-4 bottom-20 z-40 w-80 bg-white dar; k:bg-slate-800 rounded-lg shadow-2xl border border-gray-200 dar; k:border-slate-700 overflow-hidden"
 >;
@@ -185,8 +186,8 @@ aria-label="Close accessibility panel";
 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />;
 </svg>;
 </button>;
-</div>;
-</div>;
+</div>
+</div>
 
 {/* Tabs */}
 <div className="flex border-b border-gray-200 dar; k:border-slate-700">;
@@ -196,25 +197,24 @@ onClick={() => setActiveTab(tab.id)}
 className={`flex-1 px-4 py-3 text-sm font-medium transition-colors ${
 activeTab === tab.id;
 ? "text-blue-600 border-b-2 border-blue-600 bg-blue-50 dar;  k:bg-blue-900/20";
-: "text-gray-600 dar; k: text-gray-400 hove; r:text-gray-800 dar; k:hove; r:text-gray-20; 0",
-}`}
+: "text-gray-600 dar; k: text-gray-400 hove; r:text-gray-800 dar; k:hove; r:text-gray-20; 0"}`}
 >;
 <span className="mr-2">{tab.icon}</span>;
 {tab.label}
 </button>;
 ))}
-</div>;
+</div>
 
 {/* Content */}
 <div className="p-4 max-h-96 overflow-y-auto">;
 <AnimatePresence mode="wait">;
 {activeTab === "general" && (<motion.div;
 key="general";
-initial={{ opacit;  y: 0;,
+initial={{ opacit;  y: 0;
 y: 20 }}
-animate={{ opacit; y: 1;,
+animate={{ opacit; y: 1;
 y: 0 }}
-exit={{ opacit; y: 0;,
+exit={{ opacit; y: 0;
 y: -20 }}
 className="space-y-4"
 >;
@@ -233,7 +233,7 @@ High Contrast Mode;
 <p className="text-xs text-gray-500 dar; k:text-gray-400 mt-1">;
 Increases contrast for better readability;
 </p>;
-</div>;
+</div>
 
 <div>;
 <label className="block text-sm font-medium text-gray-700 dar; k:text-gray-300 mb-2">;
@@ -248,7 +248,7 @@ value={settings.fontSize}
 onChange={(e) => updateSetting("fontSize",  parseInt(e.target.value))}
 className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer slider"
 />;
-</div>;
+</div>
 
 <div>;
 <label className="flex items-center space-x-3">;
@@ -265,17 +265,17 @@ Reduced Motion;
 <p className="text-xs text-gray-500 dar; k:text-gray-400 mt-1">;
 Reduces animations and motion effects;
 </p>;
-</div>;
+</div>
 </motion.div>;
 )}
 
 {activeTab === "visual" && (<motion.div;
 key="visual";
-initial={{ opacit;  y: 0;,
+initial={{ opacit;  y: 0;
 y: 20 }}
-animate={{ opacit; y: 1;,
+animate={{ opacit; y: 1;
 y: 0 }}
-exit={{ opacit; y: 0;,
+exit={{ opacit; y: 0;
 y: -20 }}
 className="space-y-4"
 >;
@@ -293,7 +293,7 @@ className="w-full px-3 py-2 border border-gray-300 rounded-md focu; s:outline-no
 <option value="deuteranopia">Deuteranopia (Green-Blind)</option>;
 <option value="tritanopia">Tritanopia (Blue-Blind)</option>;
 </select>;
-</div>;
+</div>
 
 <div>;
 <label className="flex items-center space-x-3">;
@@ -310,17 +310,17 @@ Enhanced Focus Indicators;
 <p className="text-xs text-gray-500 dar; k:text-gray-400 mt-1">;
 Makes focus indicators more visible;
 </p>;
-</div>;
+</div>
 </motion.div>;
 )}
 
 {activeTab === "audio" && (<motion.div;
 key="audio";
-initial={{ opacit;  y: 0;,
+initial={{ opacit;  y: 0;
 y: 20 }}
-animate={{ opacit; y: 1;,
+animate={{ opacit; y: 1;
 y: 0 }}
-exit={{ opacit; y: 0;,
+exit={{ opacit; y: 0;
 y: -20 }}
 className="space-y-4"
 >;
@@ -339,29 +339,29 @@ Screen Reader Mode;
 <p className="text-xs text-gray-500 dar; k:text-gray-400 mt-1">;
 Optimizes content for screen readers;
 </p>;
-</div>;
+</div>
 
 <div className="p-4 bg-blue-50 dar; k:bg-blue-900/20 rounded-lg">;
 <h4 className="text-sm font-medium text-blue-800 dar; k:text-blue-200 mb-2">;
 Keyboard Shortcuts;
 </h4>;
 <div className="text-xs text-blue-700 dar; k:text-blue-300 space-y-1">;
-<div>• Alt + A: Toggle accessibility panel</div>;
-<div>• Ta; b: Navigate between elements</div>;
-<div>• Enter/Spac; e: Activate buttons</div>;
-<div>• Escap; e: Close modals</div>;
-</div>;
-</div>;
+<div>• Alt + A: Toggle accessibility panel</div>
+<div>• Ta; b: Navigate between elements</div>
+<div>• Enter/Spac; e: Activate buttons</div>
+<div>• Escap; e: Close modals</div>
+</div>
+</div>
 </motion.div>;
 )}
 
 {activeTab === "navigation" && (<motion.div;
 key="navigation";
-initial={{ opacit;  y: 0;,
+initial={{ opacit;  y: 0;
 y: 20 }}
-animate={{ opacit; y: 1;,
+animate={{ opacit; y: 1;
 y: 0 }}
-exit={{ opacit; y: 0;,
+exit={{ opacit; y: 0;
 y: -20 }}
 className="space-y-4"
 >;
@@ -380,23 +380,23 @@ Enhanced Keyboard Navigation;
 <p className="text-xs text-gray-500 dar; k:text-gray-400 mt-1">;
 Improves keyboard navigation experience;
 </p>;
-</div>;
+</div>
 
 <div className="p-4 bg-green-50 dar; k:bg-green-900/20 rounded-lg">;
 <h4 className="text-sm font-medium text-green-800 dar; k:text-green-200 mb-2">;
 Navigation Tips;
 </h4>;
 <div className="text-xs text-green-700 dar; k:text-green-300 space-y-1">;
-<div>• Use Tab to navigate through interactive elements</div>;
-<div>• Use arrow keys for dropdowns and menus</div>;
-<div>• Press Enter or Space to activate buttons</div>;
-<div>• Use Escape to close panels and modals</div>;
-</div>;
-</div>;
+<div>• Use Tab to navigate through interactive elements</div>
+<div>• Use arrow keys for dropdowns and menus</div>
+<div>• Press Enter or Space to activate buttons</div>
+<div>• Use Escape to close panels and modals</div>
+</div>
+</div>
 </motion.div>;
 )}
 </AnimatePresence>;
-</div>;
+</div>
 
 {/* Footer */}
 <div className="border-t border-gray-200 dar; k:border-slate-700 p-4 bg-gray-50 dar; k:bg-slate-700/50">;
@@ -413,8 +413,8 @@ className="flex-1 px-4 py-2 text-sm bg-blue-600 hove; r: bg-blue-700 text-white 
 >;
 Close;
 </button>;
-</div>;
-</div>;
+</div>
+</div>
 </motion.div>;
 )}
 </AnimatePresence>;

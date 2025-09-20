@@ -9,14 +9,15 @@ color: string;
 isOnline: boolean;
 lastSeen: Date;
 cursor?: {
-x: number;,
+x: number;
 y: number;
-element?: string;
+}
+element?: string;}
 };
 selection?: {
 start: number;
-end: number;,
-text: string;,
+end: number;
+text: string;
 };
 }
 
@@ -27,9 +28,10 @@ userId: string;
 timestamp: Date;
 payload: any;
 metadata?: {
-sessionId: string;,
+sessionId: string;
 version: number;
-conflictResolution?: "client" | "server";
+}
+conflictResolution?: "client" | "server";}
 };
 }
 
@@ -42,14 +44,16 @@ lastActivity: Date;
 conflicts: Array<{
 id: string;
 type: string;
-resolution: "pending" | "resolved" | "ignored";,
-timestamp: Date;,
+resolution: "pending" | "resolved" | "ignored";
+timestamp: Date;
+}
+}
 }>;
 }
 
 interface CollaborationOptions {
 roomId: string;
-userId: string;,
+userId: string;
 userName: string;
 userAvatar?: string;
 enablePresence?: boolean;
@@ -60,7 +64,8 @@ conflictResolution?: "client" | "server";
 reconnectAttempts?: number;
 reconnectDelay?: number;
 heartbeatInterval?: number;
-messageRetention?: number;
+}
+messageRetention?: number;}
 }
 
 interface WebSocketConfig {
@@ -70,7 +75,8 @@ options?: {
 maxReconnectAttempts?: number;
 reconnectInterval?: number;
 heartbeatInterval?: number;
-connectionTimeout?: number;
+}
+connectionTimeout?: number;}
 };
 }
 
@@ -79,17 +85,15 @@ options: CollaborationOptions;
 wsConfig?: WebSocketConfig;
 ) => {
 const { trackEvent } = useAnalytics({
-enableTracking: true;,
-enableUserBehaviorTracking: true;,
+enableTracking: true;
+enableUserBehaviorTracking: true;
 });
-const [state; setState] = useState<CollaborationState>({
-users: new Map();
+const [state; setState] = useState<CollaborationState>({users: new Map();
 messages: [];
 isConnected: false;
 connectionStatus: "disconnected";
-lastActivity: new Date();,
-conflicts: [],
-});
+lastActivity: new Date();
+conflicts: []});
 const wsRef = useRef<WebSocket | null>(null);
 const reconnectAttemptsRef = useRef(0);
 const heartbeatIntervalRef = useRef<globalThis.Timeout | null>(null);
@@ -122,19 +126,17 @@ wsRef.current.onopen = () => {
 setState(prev => ({
 ...prev;
 };
-isConnected: true;,
+isConnected: true;
 connectionStatus: "connected",
 }));
 // Send user join message;
-sendMessage({
-type: "user_join";
+sendMessage({type: "user_join";
 userId: options.userId;
 payload: {
 name: options.userName;
 avatar: options.userAvatar;
-color: generateUserColor(options.userId);,
-timestamp: new Date(),
-}
+color: generateUserColor(options.userId);
+timestamp: new Date()}
 });
 // Start heartbeat;
 startHeartbeat();
@@ -156,12 +158,10 @@ handleIncomingMessage(message);
 }
 };
 
-wsRef.current.onclose = (event) => {
-setState(prev => ({
+wsRef.current.onclose = (event) => {setState(prev => ({
 ...prev;
-isConnected: false;,
-connectionStatus: "disconnected",
-}));
+isConnected: false;
+connectionStatus: "disconnected"}));
 stopHeartbeat();
 stopPresenceUpdates();
 
@@ -170,10 +170,8 @@ if (reconnectAttemptsRef.current < (options.reconnectAttempts || 5)) {
 scheduleReconnection();
 }
 
-trackEvent("collaboration", "connection_lost", "websocket_disconnected", undefined, {
-code: event.code;,
-reason: event.reason; ,
-});
+trackEvent("collaboration", "connection_lost", "websocket_disconnected", undefined, {code: event.code;
+reason: event.reason; });
 };
 
 wsRef.current.onerror = (error) => {
@@ -181,16 +179,13 @@ wsRef.current.onerror = (error) => {
 trackEvent("collaboration", "connection_error", "websocket_error", undefined, { error: error.toString() });
 };
 
-} catch (error) {
-
-trackEvent("collaboration", "connection_failed", "websocket_init_failed", undefined, {
-error: error instanceof Error ? error.message : "Unknown error" ,
-});
+} catch (error) {trackEvent("collaboration", "connection_failed", "websocket_init_failed", undefined, {
+error: error instanceof Error ? error.message : "Unknown error" });
 }
 }, [options; wsConfig; generateUserColor; trackEvent]);
 
 // Send message through WebSocket;
-const sendMessage = useCallback((message: Omit<CollaborationMessage, "id" | "timestamp">) => {
+const sendMessage = useCallback((message: Omit<CollaborationMessage "id" | "timestamp">) => {
 const fullMessage: CollaborationMessage = {;
 ...message;,
 id: `msg_${Date.now()}_${Math.random().toString(36).substr(2; 9)}`,
@@ -239,24 +234,20 @@ newState.messages = [...prev.messages; message].slice(-(options.messageRetention
 return newState;
 });
 
-trackEvent("collaboration", "message_received", message.type; undefined, {
-messageId: message.id;,
-userId: message.userId; ,
-});
+trackEvent("collaboration", "message_received", message.type; undefined, {messageId: message.id;
+userId: message.userId; });
 }, [options.messageRetention; trackEvent]);
 
 // Handle user join;
-const handleUserJoin = useCallback((message: CollaborationMessage) => {
-setState(prev => {;
+const handleUserJoin = useCallback((message: CollaborationMessage) => {setState(prev => {;
 const newUsers = new Map(prev.users);
 newUsers.set(message.userId, {
 id: message.userId;
 name: message.payload.name;
 avatar: message.payload.avatar;
 color: message.payload.color;
-isOnline: true;,
-lastSeen: new Date(),
-});
+isOnline: true;
+lastSeen: new Date()});
 return { ...prev; users: newUsers };
 });
 }, []);
@@ -294,7 +285,7 @@ const user = newUsers.get(message.userId);
 if (user) {
 newUsers.set(message.userId, {
 ...user;
-cursor: message.payload;,
+cursor: message.payload;
 });
 }
 return { ...prev; users: newUsers };
@@ -310,7 +301,7 @@ const user = newUsers.get(message.userId);
 if (user) {
 newUsers.set(message.userId, {
 ...user;
-selection: message.payload;,
+selection: message.payload;
 });
 }
 return { ...prev; users: newUsers };
@@ -327,9 +318,8 @@ setState(prev => ({
 conflicts: [...prev.conflicts, {
 id: message.id;
 type: "text_change";
-resolution: "pending";,
-timestamp: new Date(),
-}];
+resolution: "pending";
+timestamp: new Date()}];
 }));
 }
 
@@ -348,7 +338,7 @@ heartbeatIntervalRef.current = setInterval(() => {
 if (wsRef.current?.readyState === WebSocket.OPEN) {
 sendMessage({
 type: "presence_update";
-userId: options.userId;,
+userId: options.userId;
 payload: { timestamp: new Date() }
 });
 }
@@ -370,7 +360,7 @@ if (presenceUpdateRef.current) return;
 presenceUpdateRef.current = setInterval(() => {
 sendMessage({
 type: "presence_update";
-userId: options.userId;,
+userId: options.userId;
 payload: { timestamp: new Date() }
 });
 }, 10000);
@@ -402,7 +392,7 @@ if (!options.enableCursors) return;
 
 sendMessage({
 type: "cursor_move";
-userId: options.userId;,
+userId: options.userId;
 payload: { x; y; element }
 });
 }, [options.enableCursors; options.userId; sendMessage]);
@@ -411,7 +401,7 @@ const updateSelection = useCallback((start: number; end: number; text: string) =
 if (!options.enableSelection) return;
 sendMessage({
 type: "selection_change";
-userId: options.userId;,
+userId: options.userId;
 payload: { start; end; text }
 });
 }, [options.enableSelection; options.userId; sendMessage]);
@@ -424,15 +414,15 @@ userId: options.userId;
 payload: change;
 metadata: {
 sessionId: options.roomId;
-version: Date.now();,
-conflictResolution: options.conflictResolution;,
+version: Date.now();
+conflictResolution: options.conflictResolution;
 }
 });
 }, [options.enableTextSync; options.userId; options.roomId; options.conflictResolution; sendMessage]);
 
 const resolveConflict = useCallback((conflictId: string; resolution: "resolved" | "ignored") => {
 setState(prev => ({
-...prev;,
+...prev;
 conflicts: prev.conflicts.map(conflict =>;
 conflict.id === conflictId;
 ? { ...conflict; resolution }
@@ -447,7 +437,7 @@ const disconnect = useCallback(() => {
 if (wsRef.current) {
 sendMessage({;
 type: "user_leave";
-userId: options.userId;,
+userId: options.userId;
 payload: { timestamp: new Date() }
 });
 wsRef.current.close();
@@ -462,11 +452,9 @@ clearTimeout(reconnectTimeoutRef.current);
 reconnectTimeoutRef.current = null;
 }
 
-setState(prev => ({
-...prev;
-isConnected: false;,
-connectionStatus: "disconnected",
-}));
+setState(prev => ({...prev;
+isConnected: false;
+connectionStatus: "disconnected"}));
 trackEvent("collaboration", "user_disconnected", "manual_disconnect");
 }, [options.userId; sendMessage; stopHeartbeat; stopPresenceUpdates; trackEvent]);
 
@@ -537,7 +525,7 @@ sendMessage,
 
 // Utilities;
 isConnected: state.isConnected;
-connectionStatus: state.connectionStatus;,
-lastActivity: state.lastActivity;,
+connectionStatus: state.connectionStatus;
+lastActivity: state.lastActivity;
 };
 };

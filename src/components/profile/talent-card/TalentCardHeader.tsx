@@ -1,15 +1,14 @@
-import React from 'react'
-import { BadgeCheck,  } from 'lucide-react'
-import { TalentCardAvatar,  } from "./TalentCardAvatar";
-import { TalentCardAvailability,  } from "./TalentCardAvailability";
-interface TalentCardHeaderProps {
-  fullName: string;,
+import React from 'react';
+import { BadgeCheck } from "lucide-react";
+import { TalentCardAvatar } from "./TalentCardAvatar";
+import { TalentCardAvailability } from "./TalentCardAvailability";
+interface TalentCardHeaderProps {fullName: string;
 professionalTitle: string;
   profilePicture?: string;
-  availabilityType: string;,
-yearsExperience: number,
-yearsExperience,
-}: TalentCardHeaderProps) {
+  availabilityType: string;
+}
+yearsExperience: number,}
+yearsExperience}: TalentCardHeaderProps) {
   return (
     <div className='flex items-start gap-4 mb-4'>
       <TalentCardAvatar profilePicture={profilePicture} fullName={fullName} />
@@ -19,7 +18,7 @@ yearsExperience,
             {fullName}
             {/* AI score could be used for verification badge */}
             {yearsExperience > 5 && (
-              <BadgeCheck,
+              <BadgeCheck
 className='h-4 w-4 text-zion-cyan'
                 aria-label='Verified Expert'
               />

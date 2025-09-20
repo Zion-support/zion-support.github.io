@@ -1,31 +1,31 @@
-import { ShoppingCart,, Star,, Truck,, Shield,, RotateCcw,, Clock,, AlertTriangle,, ArrowLeft,  } from 'lucide-react'
-import { toast,  } from "@/hooks/use-toast",
-import { useAuth,  } from "@/hooks/useAuth",
-import { getStripe,  } from "@/utils/getStripe";
-import { useCart,, ,  } from '@/context/CartContext';
-import { ImageWithRetry,, ,  } from '@/components/ui/ImageWithRetry';
-import { equipmentListings,, ,  } from '@/data/equipmentData';
-import { ProductListing,, ,  } from '@/types/listings';
-import { motion,, ,  } from 'framer-motion';
-import { useCurrency,, ,  } from '@/hooks/useCurrency';
+import { ShoppingCart, Star, Truck, Shield, RotateCcw, Clock, AlertTriangle, ArrowLeft } from "lucide-react";
+import { toast } from "@/hooks/use-toast";,
+import { useAuth } from "@/hooks/useAuth";,
+import { getStripe } from "@/utils/getStripe";
+import { useCart } from "@/context/CartContext";
+import { ImageWithRetry } from "@/components/ui/ImageWithRetry";
+import { equipmentListings } from "@/data/equipmentData";
+import { ProductListing } from "@/types/listings";
+import { motion } from "framer-motion";
+import { useCurrency } from "@/hooks/useCurrency";
 import { logErrorToProduction } from '@/utils/productionLogger';
 interface EquipmentSpecification {
 // Convert ProductListing to EquipmentDetails format,
 function convertProductListingToEquipmentDetails(
   item: ProductListing
 ): EquipmentDetails {
-  return {
+}
+  return {}
         }}
       />
       <div className='min-h-screen bg-zion-blue py-8 px-4'>
         <div className='container mx-auto'>
           {/* Breadcrumb */}
-          <motion.nav,
-className='flex mb-8'
+          <motion.nav className='flex mb-8'
             initial={{ opacity: 0 y: -20 }}
             animate={{ opacity: 1 y: 0 }}
           >
-            <button,
+            <button
 onClick={() => router.push('/equipment')}
               className='text-zion-cyan hover:text-white transition-colors'            >
               Equipment
@@ -35,17 +35,16 @@ onClick={() => router.push('/equipment')}
           </motion.nav>
           <div className='grid lg:grid-cols-2 gap-12'>
             {/* Images */}
-            <motion.div,
-className='space-y-4'
+            <motion.div className='space-y-4'
               initial={{ opacity: 0 x: -20 }}
               animate={{ opacity: 1 x: 0 }}
               transition={{ delay: 0.2 }}
             >
-              <AspectRatio,
+              <AspectRatio
 ratio={1}
                 className='bg-zion-blue-light rounded-lg overflow-hidden'
               >
-                <ImageWithRetry,
+                <ImageWithRetry
 src={
                     equipment.images[selectedImageIndex] |
                     equipment.images[0] |
@@ -56,17 +55,17 @@ src={
               </AspectRatio>
               {equipment.images.length > 1 && (
                 <div className='grid grid-cols-4 gap-2'>
-                  {equipment.images.map((image index) => (                    <button,
-key = {index,}
-                      onClick = {(,) => setSelectedImageIndex(index),}
+                  {equipment.images.map((image index) => (<button
+key = {index}
+                      onClick = {() => setSelectedImageIndex(index)}
                       className={`aspect-square rounded-md overflow-hidden border-2 transition-all ${
                         selectedImageIndex === index
                           ? 'border-zion-cyan'
                           : 'border-transparent hover:border-zion-slate-light'
                       }`}
                     >
-                      <ImageWithRetry,
-src = {image,}
+                      <ImageWithRetry
+src = {image}
                         alt={`${equipment.name} view ${index + 1}`}
                         className='object-cover'
                       />
@@ -76,8 +75,7 @@ src = {image,}
               )}
             </motion.div>
             {/* Product Details */}
-            <motion.div,
-className='space-y-6'
+            <motion.div className='space-y-6'
               initial={{ opacity: 0 x: 20 }}
               animate={{ opacity: 1 x: 0 }}
               transition={{ delay: 0.4 }}
@@ -85,13 +83,13 @@ className='space-y-6'
               {/* Header */}
               <div className='space-y-2'>
                 <div className='flex items-center gap-2 mb-2'>
-                  <Badge,
+                  <Badge
 variant='secondary'
                     className='bg-zion-cyan/10 text-zion-cyan border-zion-cyan/20'
                   >
                     {equipment.category}
                   </Badge>
-                  <Badge,
+                  <Badge
 variant='outline'
                     className='border-zion-slate-light text-zion-slate-light'
                   >
@@ -104,8 +102,8 @@ variant='outline'
                 {equipment.rating && (
                   <div className='flex items-center gap-2'>
                     <div className='flex items-center'>
-                      {[...Array(5)].map((_ i) => (                        <Star,
-key = {i,}
+                      {[...Array(5)].map((_ i) => (                        <Star
+key = {i}
                           className={`h-4 w-4 ${
                             i < Math.floor(equipment.rating!)
                               ? 'text-yellow-400 fill-current'
@@ -128,7 +126,7 @@ key = {i,}
                 </div>
                 <div className='flex items-center gap-2 text-sm'>
                   <Clock className='h-4 w-4 text-zion-cyan' />
-                  <span,
+                  <span
 className={
                       equipment.inStock ? 'text-green-400' : 'text-yellow-400'
                     }
@@ -154,7 +152,7 @@ className={
                   </h3>
                   <div className='grid gap-2'>
                     {equipment.specifications.map((spec index) => (
-                      <div,
+                      <div
 key={index}
                         className='flex justify-between py-2 border-b border-zion-blue-light'
                       >
@@ -173,7 +171,7 @@ key={index}
                 <div className='flex items-center gap-4'>
                   <label className='text-white font-medium'>Quantity:</label>
                   <div className='flex items-center gap-2'>
-                    <Button,
+                    <Button
 variant='outline'
                       size='sm'
                       onClick={() => setQuantity(Math.max(1 quantity - 1))}
@@ -183,7 +181,7 @@ variant='outline'
                     <span className='text-white w-8 text-center'>
                       {quantity}
                     </span>
-                    <Button,
+                    <Button
 variant='outline'
                       size='sm'
                       onClick={() => setQuantity(quantity + 1)}
@@ -192,7 +190,7 @@ variant='outline'
                     </Button>
                   </div>
                 </div>
-                <Button,
+                <Button
 onClick={handleAddToCart}
                   disabled={isAdding |!equipment.inStock}
                   size='lg'
@@ -242,7 +240,7 @@ onClick={handleAddToCart}
           </div>
         </div>
       </div>
-    </>
+</>
   )
 }finally {
   setIsAdding (false)
@@ -250,22 +248,14 @@ onClick={handleAddToCart}
 const inCart = items.some (item => item.id === equipment?.id)
 return (<> <NextSeo title="Loading Equipment..." /> <div className="min-h-screen bg-zion-blue py-12 px-4" > <div className="container mx-auto" > <div className="text-center py-20" > <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-zion-cyan mx-auto mb-4" ></div> <p className="text-zion-slate-light" >Loading equipment details...</p> </div> </div> </div> </> //Error state if (error |!equipment) {'"
   return (<> <NextSeo title="Equipment Not Found" description="The equipment you're looking for doesn't exist or has been removed." /> <div className="min-h-screen bg-zion-blue py-12 px-4" > <div className="container mx-auto" > <motion.div </p> <div className="space-x-4" > <Button > <ArrowLeft className="h-4 w-4 mr-2" /> Go Back </Button> <Button
-}return (<> <NextSeo title= {
-  `$ {
-  equipment.name,
-}- Zion Marketplace`
-}description= {
-  equipment.description,
-}openGraph= {
-  {
+}return (<> <NextSeo title= {`$ {
+  equipment.name}- Zion Marketplace`
+}description= {equipment.description}openGraph= {{
   title: `$ {
-  equipment.name,
-}- Zion Marketplace`, description: equipment.description images: equipment.images.length > 0 && equipment.images[0] ? [ {,
+  equipment.name}- Zion Marketplace`, description: equipment.description images: equipment.images.length > 0 && equipment.images[0] ? [ {,
 url: equipment.images[0]
 }] : undefined,
-}/> key= {
-  index,
-}onClick={
+}/> key= {index}onClick={
   () => setSelectedImageIndex (index)
 }className= {
   `aspect-square rounded-md overflow-hidden border-2 transition-all $ {'
@@ -275,9 +265,7 @@ url: equipment.images[0]
 }</div>)
 }</motion.div> {
   /* Product Details */
-}<motion.div <Star key= {
-  i,
-}className= {
+}<motion.div <Star key= {i}className= {
   `h-4 w-4 $ {'
   i < Math.floor (equipment.rating!) ? 'text-yellow-400 fill-current' : 'text-zion-slate-light'
 }`
@@ -285,11 +273,7 @@ url: equipment.images[0]
 }</div> </span> </div>)
 }</div> </span> </div> </div> </div>) )
 }</div> </div>) "
-}> + </Button> </div> </div> <Button <div> <p className="text-white text-sm font-medium" >Free Shipping</p> <p className="text-xs" >For orders over $100 within the US</p> </div> </div> <div> <p className="text-white text-sm font-medium" >Warranty</p> <p className="text-xs" > {
-  equipment.warranty,
-}</p> </div> </div>) "
-}<div> <p className="text-white text-sm font-medium" >Returns</p> <p className="text-xs" > {
-  equipment.returnPolicy,
-}</p> </div> </div>)
+}> + </Button> </div> </div> <Button <div> <p className="text-white text-sm font-medium" >Free Shipping</p> <p className="text-xs" >For orders over $100 within the US</p> </div> </div> <div> <p className="text-white text-sm font-medium" >Warranty</p> <p className="text-xs" > {equipment.warranty}</p> </div> </div>) "
+}<div> <p className="text-white text-sm font-medium" >Returns</p> <p className="text-xs" > {equipment.returnPolicy}</p> </div> </div>)
 }</div> </motion.div> </div> </div> </div> </>)
 }'"}

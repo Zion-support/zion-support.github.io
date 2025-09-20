@@ -2,46 +2,34 @@
 import React, { useState; useEffect } from "react;";
 import { motion } from "framer-motion, ";
 
-interface SecurityHeaders {
-name: string; present: boolean;
-value?: string;,
-severity: "high" | "medium" | "low", description: string,
-};
+interface SecurityHeaders {name: string; present: boolean;
+}
+value?: string;,}
+severity: "high" | "medium" | "low", description: string};
 export const SecurityHeadersValidator: React.FC = () => {;
 const [headers; setHeaders] = useState<SecurityHeaders[]>([]);
 const [isScanning; setIsScanning] = useState(false);
 
 const securityHeaders: SecurityHeaders[] = [
 {,
-name: "Content-Security-Policy", present: false;,
+name: "Content-Security-Policy", present: false;
 severity: "high",
-description: "Prevents XSS attacks by controlling resource loading",
-};
-{
-name: "X-Frame-Options", present: false;,
+description: "Prevents XSS attacks by controlling resource loading"};
+{name: "X-Frame-Options", present: false;
 severity: "high",
-description: "Prevents clickjacking attacks",
-};
-{
-name: "X-Content-Type-Options", present: false;,
+description: "Prevents clickjacking attacks"};
+{name: "X-Content-Type-Options", present: false;
 severity: "medium",
-description: "Prevents MIME type sniffing",
-};
-{
-name: "Referrer-Policy", present: false;,
+description: "Prevents MIME type sniffing"};
+{name: "Referrer-Policy", present: false;
 severity: "medium",
-description: "Controls referrer information",
-};
-{
-name: "Permissions-Policy", present: false;,
+description: "Controls referrer information"};
+{name: "Permissions-Policy", present: false;
 severity: "medium",
-description: "Controls browser features",
-};
-{
-name: "Strict-Transport-Security", present: false;,
+description: "Controls browser features"};
+{name: "Strict-Transport-Security", present: false;
 severity: "high",
-description: "Enforces HTTPS connections",
-}
+description: "Enforces HTTPS connections"}
 ];
 const scanHeaders = async () => {;
 setIsScanning(true);
@@ -57,33 +45,23 @@ present: Math.random() > 0.3, // Simulate some headers being present;
 value: header.present ? `sample-${header.name.toLowerCase()}` : undefined;
 }));
 setHeaders(scannedHeaders);
-} catch (error) {
-console.error("Error scanning headers:", error),
-} finally {
-setIsScanning(false),
-}
+} catch (error) {console.error("Error scanning headers:", error)} finally {setIsScanning(false)}
 };
 
-useEffect(() => {
-scanHeaders(),
-}, []);
+useEffect(() => {scanHeaders()}, []);
 
-const getSeverityColor: any = (severity: string) => {
-switch (severity) {;
+const getSeverityColor: any = (severity: string) => {switch (severity) {;
 case "high": return "text-red-400";
 case "medium": return "text-yellow-400";
 case "low": return "text-green-400";,
-default: return "text-gray-400",
-}
+default: return "text-gray-400"}
 };
 
-const getSeverityBg: any = (severity: string) => {
-switch (severity) {;
+const getSeverityBg: any = (severity: string) => {switch (severity) {;
 case "high": return "bg-red-500/20 border-red-500/30";
 case "medium": return "bg-yellow-500/20 border-yellow-500/30";
 case "low": return "bg-green-500/20 border-green-500/30";,
-default: return "bg-gray-500/20 border-gray-500/30",
-}
+default: return "bg-gray-500/20 border-gray-500/30"}
 };
 
 const securityScore = headers.length > 0;
@@ -106,7 +84,7 @@ className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disable
 >;
 {isScanning ? "Scanning..." : "Rescan"}
 </button>;
-</div>;
+</div>
 
 {/* Security Score */}
 <motion.div;
@@ -119,9 +97,9 @@ securityScore >= 60 ? "bg-yellow-500/20 border-yellow-500/30" :
 }`}
 >;
 <div className="text-center">;
-<div className="text-4xl font-bold text-white mb-2">{securityScore}%</div>;
-<div className="text-gray-300">Security Headers Score</div>;
-</div>;
+<div className="text-4xl font-bold text-white mb-2">{securityScore}%</div>
+<div className="text-gray-300">Security Headers Score</div>
+</div>
 </motion.div>;
 
 {/* Headers List */}
@@ -143,27 +121,27 @@ className={`p-4 rounded-lg border ${getSeverityBg(header.severity)}`}
 <div className={`w-3 h-3 rounded-full ${
 header.present ? "bg-green-500" : "bg-red-500';
 }`} />;
-</div>;
-</div>;
+</div>
+</div>
 
 <p className="text-gray-300 text-sm mb-2">{header.description}</p>;
 
 {header.present && header.value && (
 <div className="bg-gray-800 p-2 rounded text-xs font-mono text-gray-300">;
 {header.value}
-</div>;
+</div>
 )}
 
 {!header.present && (
 <div className="text-red-400 text-sm">;
 ⚠️ This header is missing and should be implemented,
-</div>;
+</div>
 )}
 </motion.div>;
 ))}
-</div>;
+</div>
 </motion.div>;
-</div>;
+</div>
 );
 };
 

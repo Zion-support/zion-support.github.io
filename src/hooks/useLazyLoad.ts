@@ -4,13 +4,16 @@ interface UseLazyLoadOptions {
 threshold?: number;
 rootMargin?: string;
 preload?: boolean;
-preloadDistance?: number;
+}
+preloadDistance?: number;}
 }
 
 interface UseLazyLoadReturn {
 isVisible: boolean;
-ref: React.RefObject<HTMLElement>;,
-load: () => void;,
+ref: React.RefObject<HTMLElement>;
+load: () => void;
+}
+}
 }
 
 export const useLazyLoad: any = (options: UseLazyLoadOptions = {}): UseLazyLoadReturn => {

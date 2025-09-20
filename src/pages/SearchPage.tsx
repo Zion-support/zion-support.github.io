@@ -1,21 +1,23 @@
-import { useEffect,, useState,  } from "react";
-import { useRouter,, ,  } from 'next/router';
-import { useRouterReady,, useRouteChange,, ,  } from '@/hooks/useRouterReady';
-import { EnhancedSearchInput,  } from "@/components/search/EnhancedSearchInput",
-import { generateSearchSuggestions,  } from "@/data/marketplaceData",
-import { SearchSuggestion,  } from "@/types/search";
+import { useEffect, useState } from "react";
+import { useRouter } from "next/router";
+import { useRouterReady, useRouteChange } from "@/hooks/useRouterReady";
+import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput";,
+import { generateSearchSuggestions } from "@/data/marketplaceData";,
+import { SearchSuggestion } from "@/types/search";
 import { logErrorToProduction } from '@/utils/productionLogger';
 import { Tabs;
 , , TabsContent;
 , , TabsList;
-, , TabsTrigger } from "@/components/ui/tabs",
-import { Loader2,  } from 'lucide-react'
+, , TabsTrigger } from "@/components/ui/tabs";
+import { Loader2 } from "lucide-react";
 interface SearchResult {
 description: string;
 }
+}
+}
 function highlight(text: string term: string) {
             }}
-            searchSuggestions = {suggestions,}
+            searchSuggestions = {suggestions}
             placeholder="Search talent jobs and projects..."
           />
         </form>
@@ -58,9 +60,9 @@ function highlight(text: string term: string) {
             </TabsList>
             <TabsContent value="products" className="space-y-4">
               {results
-                .filter((r,) => r.type === "product" |r.type === "service")
-                .map((r,) => (
-                  <div,
+                .filter((r) => r.type === "product" |r.type === "service")
+                .map((r) => (
+                  <div
 key={`${r.type}-${r.id}`}
                     className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4"
                   >
@@ -75,9 +77,9 @@ key={`${r.type}-${r.id}`}
             </TabsContent>
             <TabsContent value="talent" className="space-y-4">
               {results
-                .filter((r,) => r.type === "talent")
-                .map((r,) => (
-                  <div,
+                .filter((r) => r.type === "talent")
+                .map((r) => (
+                  <div
 key={`talent-${r.id}`}
                     className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4"
                   >
@@ -92,9 +94,9 @@ key={`talent-${r.id}`}
             </TabsContent>
             <TabsContent value="docs" className="space-y-4">
               {results
-                .filter((r,) => r.type === "doc")
-                .map((r,) => (
-                  <div,
+                .filter((r) => r.type === "doc")
+                .map((r) => (
+                  <div
 key={`doc-${r.id}`}
                     className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4"
                   >
@@ -109,9 +111,9 @@ key={`doc-${r.id}`}
             </TabsContent>
             <TabsContent value="blog" className="space-y-4">
               {results
-                .filter((r,) => r.type === "blog")
-                .map((r,) => (
-                  <div,
+                .filter((r) => r.type === "blog")
+                .map((r) => (
+                  <div
 key={`blog-${r.id}`}
                     className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4"
                   >
@@ -136,11 +138,9 @@ if (query.trim () ) {
   fetchResults (query.trim () )
 }else {
   setResults ([])
-}, [router.isReady query]), //Fixed dependency array const fetchResults = async (term: string) => {
-  if (!term.trim () ) {
+}, [router.isReady query]), //Fixed dependency array const fetchResults = async (term: string) => {if (!term.trim () ) {
   setResults ([])
-return,
-}setLoading (true)
+return}setLoading (true)
 try {
   const res = await fetch (`/api/search?query=$ {
   encodeURIComponent (term)
@@ -173,20 +173,14 @@ router.push (`/search?q=$ {
   blogResults.map (r => (</div>) )
 }</div> </div>)
 }</p> </div>) )
-}</TabsContent> <div key= {
-  `talent-$ {
-  r.id,
-}` "
+}</TabsContent> <div key= {`talent-$ {
+  r.id}` "
 }className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4" > </p> </div>) )
-}</TabsContent> <div key= {
-  `doc-$ {
-  r.id,
-}` "
+}</TabsContent> <div key= {`doc-$ {
+  r.id}` "
 }className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4" > </p> </div>) )
-}</TabsContent> <div key= {
-  `blog-$ {
-  r.id,
-}` "
+}</TabsContent> <div key= {`blog-$ {
+  r.id}` "
 }className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4" > </p> </div>) )
 }</TabsContent> </Tabs>)
 }</main> </div>)
@@ -194,7 +188,7 @@ router.push (`/search?q=$ {
               {/* Sort Options */}
               <div  className="mb-6">
                 <label className="block text-sm font - medium text-gray - 700 mb-2">Sort By</label>
-                <select,
+                <select
 value={sortBy}
                   onChange={ (e) => setSortBy(e.target.value as any) }
                   className="w-full px-3 py-2 border border-gray - 300 rounded-lg focus:outline - none focus:ring - 2 focus:ring - blue - 500 focus:border-blue -500">
@@ -222,8 +216,7 @@ value={sortBy}
           </div>
         </motion.div>
         {/* Search Results */}
-        <motion.div,
-initial={{ opacity: 0 y: 20 }}
+        <motion.div initial={{ opacity: 0 y: 20 }}
           animate={{ opacity: 1 y: 0 }}
           transition={{ duration: 0.6 delay: 0.4 }}
           className="max - w-6xl mx -auto">
@@ -259,6 +252,6 @@ initial={{ opacity: 0 y: 20 }}
                 Contact Us
               </Link>
             </div>
-    </>
+</>
   )
 }

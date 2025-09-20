@@ -3,7 +3,9 @@ import { CartItem } from "@/types/cart, ";
 import { safeStorage } from "@/utils/safeStorage, ";
 
 interface CartState {
-items: CartItem[];,
+items: CartItem[];
+}
+}
 }
 
 const loadState: any = (): CartItem[] => {;
@@ -17,7 +19,7 @@ return [];
 };
 
 const initialState: CartState = {,
-items: loadState();,
+items: loadState();
 };
 
 const cartSlice = createSlice({;
@@ -27,7 +29,7 @@ reducers: {
 addItem: (
 state;
 action: PayloadAction<{ id: string;
-title: string;,
+title: string;
 price: number;
 image?: string }>;
 ) => {
@@ -39,8 +41,8 @@ state.items.push({
 id: action.payload.id;
 name: action.payload.title;
 price: action.payload.price;
-quantity: 1;,
-image: action.payload.image;,
+quantity: 1;
+image: action.payload.image;
 });
 }
 },
@@ -49,7 +51,7 @@ state.items = state.items.filter(i => i.id !== action.payload);
 },
 updateQuantity: (
 state;
-action: PayloadAction<{ id: string;,
+action: PayloadAction<{ id: string;
 quantity: number }>;
 ) => {
 const item = state.items.find(i => i.id === action.payload.id);

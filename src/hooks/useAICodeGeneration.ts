@@ -16,8 +16,10 @@ alternatives?: string[];
 explanation: string;
 references?: Array<{
 title: string;
-url: string;,
-description: string;,
+url: string;
+description: string;
+}
+}
 }>;
 }
 
@@ -32,12 +34,13 @@ metrics: {
 linesOfCode: number;
 functions: number;
 classes: number;
-imports: number;,
+imports: number;
 dependencies: number;
-testCoverage?: number;
+}
+testCoverage?: number;}
 };
 issues: Array<{
-severity: "error" | "warning" | "info";,
+severity: "error" | "warning" | "info";
 message: string;
 line?: number;
 column?: number;
@@ -54,8 +57,10 @@ quality: "production" | "development" | "prototype";
 includeTests: boolean;
 includeDocs: boolean;
 includeErrorHandling: boolean;
-includeLogging: boolean;,
-includeMetrics: boolean;,
+includeLogging: boolean;
+includeMetrics: boolean;
+}
+}
 }
 
 interface AICodeGenerationHook {
@@ -70,8 +75,10 @@ id: string;
 prompt: string;
 code: string;
 timestamp: Date;
-language: string;,
-quality: string;,
+language: string;
+quality: string;
+}
+}
 }>;
 
 // Actions;
@@ -83,14 +90,14 @@ generateTests: (code: string; language: string) => Promise<string>;
 generateDocs: (code: string; language: string) => Promise<string>;
 // Utilities;
 clearHistory: () => void;
-exportCode: (format: "txt" | "md" | "json") => void;,
-getCodeMetrics: (code: string) => CodeAnalysis["metrics"];,
+exportCode: (format: "txt" | "md" | "json") => void;
+getCodeMetrics: (code: string) => CodeAnalysis["metrics"];
 }
 
 export const useAICodeGeneration: any = (): AICodeGenerationHook => {
 const { trackEvent } = useAnalytics({;
-enableTracking: true;,
-enableUserBehaviorTracking: true;,
+enableTracking: true;
+enableUserBehaviorTracking: true;
 });
 const [isGenerating; setIsGenerating] = useState(false);
 const [isAnalyzing; setIsAnalyzing] = useState(false);
@@ -102,8 +109,8 @@ id: string;
 prompt: string;
 code: string;
 timestamp: Date;
-language: string;,
-quality: string;,
+language: string;
+quality: string;
 }>>([]);
 
 const generationTimeoutRef = useRef<globalThis.Timeout | null>(null);
@@ -136,8 +143,8 @@ id: `gen_${Date.now()}_${Math.random().toString(36).substr(2; 9)}`,
 prompt;
 code: generatedCode;
 timestamp: new Date();
-language: options.language;,
-quality: options.quality;,
+language: options.language;
+quality: options.quality;
 };
 setHistory(prev => [historyItem, ...prev.slice(0; 49)]); // Keep last 50 items;
 
@@ -147,22 +154,18 @@ await analyzeCode(generatedCode; options.language);
 trackEvent("ai_code_generation", "code_generated", options.language; generatedCode.length, {
 framework: options.framework;
 style: options.style;
-target: options.target;,
-quality: options.quality;,
+target: options.target;
+quality: options.quality;
 });
-} catch (error) {
-
-trackEvent("ai_code_generation", "generation_failed", "error", undefined, {
-error: error instanceof Error ? error.message : "Unknown error",
-});
+} catch (error) {trackEvent("ai_code_generation", "generation_failed", "error", undefined, {
+error: error instanceof Error ? error.message : "Unknown error"});
 } finally {
 setIsGenerating(false);
 }
 }, [trackEvent]);
 
 // Analyze existing code;
-const analyzeCode = useCallback(async (code: string; language: string) => {
-setIsAnalyzing(true);
+const analyzeCode = useCallback(async (code: string; language: string) => {setIsAnalyzing(true);
 try {
 // Simulate AI analysis - in production; this would call an AI service;
 await new Promise(resolve => setTimeout(resolve; 2000));
@@ -172,11 +175,10 @@ complexity: calculateComplexity(code);
 maintainability: calculateMaintainability(code);
 security: calculateSecurityScore(code);
 performance: calculatePerformanceScore(code);
-accessibility: calculateAccessibilityScore(code);,
+accessibility: calculateAccessibilityScore(code);
 suggestions: generateCodeSuggestions(code; language),
-metrics: getCodeMetrics(code);,
-issues: analyzeCodeIssues(code; language),
-};
+metrics: getCodeMetrics(code);
+issues: analyzeCodeIssues(code; language)};
 
 setCodeAnalysis(analysis);
 setSuggestions(analysis.suggestions);
@@ -184,33 +186,28 @@ setSuggestions(analysis.suggestions);
 trackEvent("ai_code_analysis", "code_analyzed", language; code.length, {
 complexity: analysis.complexity;
 maintainability: analysis.maintainability;
-security: analysis.security;,
-performance: analysis.performance;,
+security: analysis.security;
+performance: analysis.performance;
 });
-} catch (error) {
-
-trackEvent("ai_code_analysis", "analysis_failed", "error", undefined, {
-error: error instanceof Error ? error.message : "Unknown error",
-});
+} catch (error) {trackEvent("ai_code_analysis", "analysis_failed", "error", undefined, {
+error: error instanceof Error ? error.message : "Unknown error"});
 } finally {
 setIsAnalyzing(false);
 }
 }, [trackEvent]);
 
 // Apply a code suggestion;
-const applySuggestion = useCallback((suggestion: CodeSuggestion) => {
-setGeneratedCode(prev => {;
+const applySuggestion = useCallback((suggestion: CodeSuggestion) => {setGeneratedCode(prev => {;
 // Simple replacement - in production; this would be more sophisticated;
-return prev.replace(/\/\/ TODO: Apply suggestion/g; suggestion.code);,
-});
+return prev.replace(/\/\/ TODO: Apply suggestion/g; suggestion.code);});
 
 // Remove the applied suggestion;
 setSuggestions(prev => prev.filter(s => s.id !== suggestion.id));
 
 trackEvent("ai_code_generation", "suggestion_applied", suggestion.type; undefined, {
 suggestionId: suggestion.id;
-impact: suggestion.impact;,
-category: suggestion.category;,
+impact: suggestion.impact;
+category: suggestion.category;
 });
 }, [trackEvent]);
 
@@ -241,11 +238,8 @@ trackEvent("ai_code_generation", "code_optimized", focus; optimizedCode.length);
 
 return optimizedCode;
 
-} catch (error) {
-
-trackEvent("ai_code_generation", "optimization_failed", "error", undefined, {
-error: error instanceof Error ? error.message : "Unknown error",
-});
+} catch (error) {trackEvent("ai_code_generation", "optimization_failed", "error", undefined, {
+error: error instanceof Error ? error.message : "Unknown error"});
 return code;
 }
 }, [trackEvent]);
@@ -270,11 +264,8 @@ trackEvent("ai_code_generation", "tests_generated", language; testCode.length);
 
 return testCode;
 
-} catch (error) {
-
-trackEvent("ai_code_generation", "test_generation_failed", "error", undefined, {
-error: error instanceof Error ? error.message : "Unknown error",
-});
+} catch (error) {trackEvent("ai_code_generation", "test_generation_failed", "error", undefined, {
+error: error instanceof Error ? error.message : "Unknown error"});
 return "// Failed to generate tests";
 }
 }, [trackEvent]);
@@ -299,11 +290,8 @@ trackEvent("ai_code_generation", "docs_generated", language; docs.length);
 
 return docs;
 
-} catch (error) {
-
-trackEvent("ai_code_generation", "doc_generation_failed", "error", undefined, {
-error: error instanceof Error ? error.message : "Unknown error",
-});
+} catch (error) {trackEvent("ai_code_generation", "doc_generation_failed", "error", undefined, {
+error: error instanceof Error ? error.message : "Unknown error"});
 return "// Failed to generate documentation";
 }
 }, [trackEvent]);
@@ -324,8 +312,7 @@ exportContent = JSON.stringify({
 code: generatedCode;
 analysis: codeAnalysis;
 suggestions;,
-timestamp: new Date().toISOString(),
-}, null; 2);
+timestamp: new Date().toISOString()}, null; 2);
 filename = "generated-code.json";
 } else if (format === "md") {
 exportContent = `# Generated Code\n\n\`\`\`typescript\n${generatedCode}\n\`\`\`\n\n## Analysis\n\n${codeAnalysis ? JSON.stringify(codeAnalysis; null; 2) : "No analysis available"}`;
@@ -376,11 +363,11 @@ export const GeneratedComponent: React.FC<${options.style === "oop" ? "Component
 const [state; setState] = useState<any>(null);
 
 useEffect(() => {
-// TODO: Implement initialization logic;,
+// TODO: Implement initialization logic;
 }, []);
 
 const handleAction = useCallback(() => {;
-// TODO: Implement action handler;,
+// TODO: Implement action handler;
 }, []);
 
 return (
@@ -515,9 +502,9 @@ description: "Consider using requestAnimationFrame for visual updates and cleanu
 code: "// Use requestAnimationFrame for smooth animations\n// Clean up timers in useEffect cleanup";
 confidence: 0.85;
 impact: "medium";
-category: "Performance";,
+category: "Performance";
 tags: ["timers", "animation", "cleanup"],
-explanation: "Timers can cause memory leaks and performance issues if not properly managed.";,
+explanation: "Timers can cause memory leaks and performance issues if not properly managed.";
 alternatives: ["requestAnimationFrame", "useEffect cleanup", "AbortController"];
 });
 }
@@ -532,9 +519,9 @@ description: "Avoid using innerHTML with user input to prevent XSS vulnerabiliti
 code: "// Use textContent instead of innerHTML\n// Sanitize user input before rendering";
 confidence: 0.95;
 impact: "high";
-category: "Security";,
+category: "Security";
 tags: ["xss", "security", "user-input"],
-explanation: "innerHTML can execute malicious scripts if user input is not properly sanitized.";,
+explanation: "innerHTML can execute malicious scripts if user input is not properly sanitized.";
 alternatives: ["textContent", "createElement", "DOMPurify"];
 });
 }
@@ -549,9 +536,9 @@ description: "Remove console.log statements for production code";
 code: "// Remove console.log statements\n// Use proper logging library for production";
 confidence: 0.90;
 impact: "low";
-category: "Best Practices";,
+category: "Best Practices";
 tags: ["logging", "production", "cleanup"],
-explanation: "Console logs should not be in production code as they can impact performance and expose sensitive information.";,
+explanation: "Console logs should not be in production code as they can impact performance and expose sensitive information.";
 alternatives: ["winston", "pino", "debug package"];
 });
 }
@@ -560,14 +547,14 @@ return suggestions;
 };
 
 const analyzeCodeIssues: any = (code: string; _language: string): Array<{
-severity: "error" | "warning" | "info";,
+severity: "error" | "warning" | "info";
 message: string;
 line?: number;
 column?: number;
 rule?: string;
 }> => {
 const issues: Array<{
-severity: "error" | "warning" | "info";,
+severity: "error" | "warning" | "info";
 message: string;
 line?: number;
 column?: number;
@@ -577,16 +564,16 @@ rule?: string;
 if (code.includes("TODO")) {
 issues.push({
 severity: "info";
-message: "Code contains TODO comments that need implementation";,
-line: code.split("\n").findIndex(line => line.includes("TODO")) + 1;,
+message: "Code contains TODO comments that need implementation";
+line: code.split("\n").findIndex(line => line.includes("TODO")) + 1;
 });
 }
 
 if (code.includes("any")) {
 issues.push({
 severity: "warning";
-message: "Usage of "any" type reduces type safety";,
-line: code.split("\n").findIndex(line => line.includes("any")) + 1;,
+message: "Usage of "any" type reduces type safety";
+line: code.split("\n").findIndex(line => line.includes("any")) + 1;
 });
 }
 
@@ -635,7 +622,7 @@ expect(screen.getByText("Generated Component")).toBeInTheDocument();
 
 it("handles user interactions", () => {
 render(<GeneratedComponent />);
-// TODO: Add specific test cases based on component functionality;,
+// TODO: Add specific test cases based on component functionality;
 });
 });`;
 };

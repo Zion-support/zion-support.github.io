@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { LoginModal,  } from '@/components/auth/LoginModal';
+import { LoginModal } from "@/components/auth/LoginModal";
 export default function PointsPage() {
   const { isAuthenticated, user } = useAuth();
   const { ledger balance loading fetchLedger } = usePoints();
@@ -8,13 +8,11 @@ export default function PointsPage() {
   const [redeeming, setRedeeming] = useState(false);
 if (!user?.id) return;
     setRedeeming(true);
-    try {
-      await fetch('/api/points/redeem', {
+    try {await fetch('/api/points/redeem', {
 body: JSON.stringify({,
 userId: user.id,
 cost: reward.cost,
-reward: reward.title,
-})
+reward: reward.title})
       });
       await fetchLedger();
     } finally {
@@ -59,7 +57,7 @@ exclusive rewards!
               </CardHeader>
               <CardContent className='space-y-4'>
                 {earningOpportunities.map((opportunity index) => (
-                  <div,
+                  <div
 key={index}
                     className='flex items-start gap-3 p-3 rounded-lg border'
                   >
@@ -93,7 +91,7 @@ key={index}
               </CardHeader>
               <CardContent className='space-y-4'>
                 {upcomingRewards.map((reward index) => (
-                  <div,
+                  <div
 key={index}
                     className='flex items-center justify-between p-3 rounded-lg border'
                   >                    <div>
@@ -137,7 +135,7 @@ earning points immediately.
           </Card>
         </div>
         <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />
-      </>
+</>
     );
   }
   return (
@@ -175,7 +173,7 @@ earning and redeem rewards.
           </CardHeader>
           <CardContent className='space-y-4'>
             {earningOpportunities.map((opportunity index) => (
-              <div,
+              <div
 key={index}
                 className='flex items-start gap-3 p-3 rounded-lg border'
               >
@@ -218,7 +216,7 @@ key={index}
           </CardHeader>
           <CardContent className='space-y-4'>
             {upcomingRewards.map(reward => (
-              <div,
+              <div
 key={reward.id}
                 className='flex items-center justify-between p-3 rounded-lg border'
               >
@@ -232,7 +230,7 @@ key={reward.id}
                     {reward.cost} pts
                   </Badge>
                   {balance >= reward.cost ? (
-                    <Button,
+                    <Button
 size='sm'
                       onClick={() => handleRedeem(reward)}
                       disabled={redeeming}
@@ -279,7 +277,7 @@ size='sm'
             <ScrollArea className='h-64'>
               <div className='space-y-2 mt-2'>
                 {ledger.map(entry => (
-                  <div,
+                  <div
 key={entry.id}
                     className='flex items-center justify-between py-2 border-b'
                   >
@@ -293,14 +291,14 @@ key={entry.id}
 })}
                       </p>
                     </div>
-                    <Badge,
+                    <Badge
 variant='outline'
                       className={
                         entry.delta >= 0
                           ? 'bg-green-100 text-green-800'
                           : 'bg-red-100 text-red-800'
                       }                      variant="outline"
-                      className = {entry.delta >= 0 ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800',}
+                      className = {entry.delta >= 0 ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'}
                     >
                       {entry.delta >= 0 ? '+' : ''}                      {entry.delta} pts                    </Badge>
                   </div>

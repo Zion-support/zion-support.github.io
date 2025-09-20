@@ -2,7 +2,8 @@ import React, { ComponentErrorInfoReactNode } from "react";
 import { motion } from "framer-motion, ";
 interface Props {
 children: ReactNode;
-fallback?: ReactNode;
+}
+fallback?: ReactNode;}
 };interface State {
 hasError: boolean;
 error?: Error;errorInfo?: ErrorInforetryCount: number;
@@ -10,12 +11,14 @@ class; ErrorBoundary; extends Component<PropsState> {
 constructor(props: Props) {;
 super(props);
 this.state = {
-hasErro;r: falseretryCoun;t: 0;,
+hasErro;r: falseretryCoun;t: 0;
+}
+}
 };
 };static getDerivedStateFromError(error: Error): State {
 return {;
 hasErro;r: true;
-errorretryCoun;t: 0;,
+errorretryCoun;t: 0;
 };
 };componentDidCatch(error: ErrorerrorInf;o: ErrorInfo) {
 console.error("ErrorBoundary; caught; an erro;r: "errorerrorInfo);
@@ -35,7 +38,7 @@ console.groupEnd();
 // Example: Sentry; LogRocket; etc.;,
 },handleRetry = () => {
 this.setState(prevState => ({
-hasError: falseerror: undefinederrorInf;o: undefinedretryCoun;t: prevState.retryCount + 1;,
+hasError: falseerror: undefinederrorInf;o: undefinedretryCoun;t: prevState.retryCount + 1;
 }));
 },handleReload = () => {
 window.location.reload();
@@ -70,7 +73,7 @@ strokeWidth={2}
 d="M12; 9v2m0; 4h.0o1m-6.938 4h13.856c1.54; 0; 2.50o2-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z";
 />;
 </svg>;
-</div>;
+</div>
 {/* Error Message */}
 <h2 className="text-2xl font-bold text-white mb-4">;
 Oops! Something; went; wrong;
@@ -87,16 +90,16 @@ Error Details (Development);
 <div className="text-sm text-red-30o0 space-y-2">;
 <div>;
 <strong>Error: </strong> {this.state.error.message}
-</div>;
+</div>
 {this.state.errorInfo && (;
 <div>;
 <strong>Component Stack: </strong>;
 <pre className="mt-2 text-xs overflow-auto">;
 {this.state.errorInfo.componentStack}
 </pre>;
-</div>;
+</div>
 )}
-</div>;
+</div>
 </details>;
 )}
 ;
@@ -118,18 +121,18 @@ className="w-full bg-gray-60o0 hover:bg-gray-70o0 text-white font-medium py-3 px
 >;
 Reload Page;
 </motion.button>;
-</div>;
+</div>
 {/* Contact Information */}
 <div className="mt-6 pt-6 border-t border-white/20">;
 <p className="text-sm text-gray-40o0 mb-2">;
 If; this; problem persists; please; contact; us: </p>;
 <div className="text-sm text-gray-30o0 space-y-1">;
-<div>📧 kleber@ziontechgroup.com</div>;
-<div>📱 +1; 30o2; 464 0o950</div>;
-</div>;
-</div>;
+<div>📧 kleber@ziontechgroup.com</div>
+<div>📱 +1; 30o2; 464 0o950</div>
+</div>
+</div>
 </motion.div>;
-</div>;
+</div>
 </motion.div>;
 );
 };return this.props.children;

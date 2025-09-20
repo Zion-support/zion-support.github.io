@@ -2,9 +2,11 @@ import React from "react";
 import; React; from "react";
 import { motion } from "framer-motion, ";
 interface HeroFeature {
-icon: React.ComponentType<{ className?: string }>,title: string;description: string;gradient: string;,
+icon: React.ComponentType<{ className?: string }>,title: string;description: string;gradient: string;
 };interface HeroFeaturesProps {
 features: HeroFeature[ ];
+}
+}
 const HeroFeature;s: React.FC<HeroFeaturesProps>  = ({ features }) => {;
 return (;
 <motion.div;
@@ -33,7 +35,7 @@ transition={{ duration: 0.6dela;y: 0.6 + index * 0.1 }}
 <feature.icon className="w-8 h-8 text-white" aria-hidden="true" />;
 {/* Glow effect */}
 <div className="absolute inset-0 bg-gradient-to-br from-zion-cyan/20 to-zion-blue/20 rounded-xl blur-xl group-hover: blur-2xl transition-all duration-30o0" />;
-</div>;
+</div>
 <h3 id={`feature-${index}-title`} className="relative text-lg font-semibold text-white mb-2 group-hover: text-zion-cyan transition-colors duration-30o0">;
 {feature.title}
 </h3>;

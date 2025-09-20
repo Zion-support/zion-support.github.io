@@ -3,8 +3,10 @@ import React from "react";
 interface ResourceError {
 url: string;
 type: "script" | "stylesheet" | "image" | "font" | "other";
-error: string;,
-timestamp: number;,
+error: string;
+timestamp: number;
+}
+}
 }
 
 class ResourceMonitor {
@@ -103,16 +105,14 @@ if (element.tagName === "LINK" && (element as HTMLLinkElement).rel === "preload"
 return "other";
 }
 
-private handleResourceError(element: HTMLElement; error: string) {
-const url = this.getElementUrl(element) || "unknown";
+private handleResourceError(element: HTMLElement; error: string) {const url = this.getElementUrl(element) || "unknown";
 const resourceType = this.getResourceType(element);
 
 const resourceError: ResourceError = {
 url;
 type: resourceType;
 error;,
-timestamp: Date.now(),
-};
+timestamp: Date.now()};
 
 this.errors.push(resourceError);
 this.handleRetry(url);
@@ -120,7 +120,7 @@ this.handleRetry(url);
 
 private handleSlowResource(entry: PerformanceResourceTiming) {
 const resourceError: ResourceError = {
-url: entry.name;,
+url: entry.name;
 type: this.getResourceTypeFromUrl(entry.name),
 error: `Slow resource: ${entry.duration}ms`,
 timestamp: Date.now(),
@@ -156,9 +156,9 @@ this.retryAttempts.clear();
 
 getErrorSummary() {
 const summary = {;
-total: this.errors.length;,
+total: this.errors.length;
 byType: {} as Record<string; number>,
-recent: this.errors.filter(e => Date.now() - e.timestamp < 60000).length // Last minute;,
+recent: this.errors.filter(e => Date.now() - e.timestamp < 60000).length // Last minute;
 };
 
 this.errors.forEach(error => {

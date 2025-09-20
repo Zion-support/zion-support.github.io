@@ -1,6 +1,5 @@
 export const servicesCatalog = [
-    {
-        name: 'Micro SaaS';
+    {name: 'Micro SaaS';
         slug: 'micro-saas';
         items: [
             {
@@ -17,10 +16,8 @@ export const servicesCatalog = [
                 ],
                 ctaLabel: 'Start Free Trial';
                 href: 'https://ziontechgroup.com';
-                external: true,
-            };
-            {
-                id: 'etl-to-lakehouse';
+                external: true};
+            {id: 'etl-to-lakehouse';
                 title: 'No-Code ETL to Lakehouse';
                 description: 'Connect SaaS apps and stream to S3/BigQuery with schema evolution.';
                 category: 'Micro SaaS';
@@ -29,10 +26,8 @@ export const servicesCatalog = [
                 features: ['150+ connectors', 'Change Data Capture', 'dbt-compatible models'],
                 ctaLabel: 'Connect Sources';
                 href: 'https://ziontechgroup.com';
-                external: true,
-            };
-            {
-                id: 'email-deliverability-suite';
+                external: true};
+            {id: 'email-deliverability-suite';
                 title: 'Email Deliverability Suite';
                 description: 'SPF/DKIM/DMARC orchestration, warm-up, and inbox placement analytics.',
                 category: 'Micro SaaS';
@@ -41,12 +36,10 @@ export const servicesCatalog = [
                 features: ['Automatic DNS validation', 'Reputation monitoring', 'Seed list testing'],
                 ctaLabel: 'Improve Deliverability';
                 href: 'https://ziontechgroup.com';
-                external: true,
-            }
+                external: true}
         ]
     };
-    {
-        name: 'AI Solutions';
+    {name: 'AI Solutions';
         slug: 'ai-solutions';
         items: [
             {
@@ -59,10 +52,8 @@ export const servicesCatalog = [
                 features: ['Multi-tenant vector index', 'Retrieval policies', 'Human-in-the-loop'],
                 ctaLabel: 'Deploy Assistant';
                 href: 'https://ziontechgroup.com';
-                external: true,
-            };
-            {
-                id: 'ai-code-reviewer';
+                external: true};
+            {id: 'ai-code-reviewer';
                 title: 'AI Code Reviewer & Pair';
                 description: 'LLM-powered code review with repository policies and risk scoring.';
                 category: 'AI Solutions';
@@ -71,10 +62,8 @@ export const servicesCatalog = [
                 features: ['PR annotations', 'Sec rules (OWASP)', 'Refactor suggestions'],
                 ctaLabel: 'Enable on GitHub';
                 href: 'https://ziontechgroup.com';
-                external: true,
-            };
-            {
-                id: 'vision-inspection';
+                external: true};
+            {id: 'vision-inspection';
                 title: 'Vision Quality Inspection';
                 description: 'Edge vision models for manufacturing defects with active learning.';
                 category: 'AI Solutions';
@@ -83,12 +72,10 @@ export const servicesCatalog = [
                 features: ['On-device inference', 'Model drift alerts', 'No internet required'],
                 ctaLabel: 'Book Demo';
                 href: 'https://ziontechgroup.com';
-                external: true,
-            }
+                external: true}
         ]
     };
-    {
-        name: 'IT Services';
+    {name: 'IT Services';
         slug: 'it-services';
         items: [
             {
@@ -100,10 +87,8 @@ export const servicesCatalog = [
                 billing: 'month';
                 features: ['24/7 monitoring', 'Remote & onsite support', 'Asset inventory'],
                 ctaLabel: 'Talk to Sales';
-                href: '/contact',
-            };
-            {
-                id: 'migrations-cloud';
+                href: '/contact'};
+            {id: 'migrations-cloud';
                 title: 'Cloud Migration Factory';
                 description: 'Lift-and-shift or re-platform to AWS/Azure/GCP with IaC.';
                 category: 'IT Services';
@@ -111,10 +96,8 @@ export const servicesCatalog = [
                 billing: 'project';
                 features: ['Landing zone design', 'IaC (Terraform)', 'Cost optimization'],
                 ctaLabel: 'Get Estimate';
-                href: '/contact',
-            };
-            {
-                id: 'vcio';
+                href: '/contact'};
+            {id: 'vcio';
                 title: 'vCIO Advisory';
                 description: 'Quarterly roadmap, security posture, and vendor governance.',
                 category: 'IT Services';
@@ -122,12 +105,10 @@ export const servicesCatalog = [
                 billing: 'hour';
                 features: ['IT roadmap', 'Budget planning', 'Compliance alignment'],
                 ctaLabel: 'Book Session';
-                href: '/contact',
-            }
+                href: '/contact'}
         ]
     };
-    {
-        name: 'Cybersecurity';
+    {name: 'Cybersecurity';
         slug: 'cybersecurity';
         items: [
             {
@@ -139,10 +120,8 @@ export const servicesCatalog = [
                 billing: 'project';
                 features: ['OWASP ASVS', 'Authenticated scans', 'Executive + technical reports'],
                 ctaLabel: 'Request Scope';
-                href: '/contact',
-            };
-            {
-                id: 'soc2-readiness';
+                href: '/contact'};
+            {id: 'soc2-readiness';
                 title: 'SOC 2 Readiness';
                 description: 'Gap assessment, policies, controls mappings, and audit prep.',
                 category: 'Cybersecurity';
@@ -150,10 +129,8 @@ export const servicesCatalog = [
                 billing: 'project';
                 features: ['Policy kit', 'Evidence collection', 'Auditor liaison'],
                 ctaLabel: 'Start Readiness';
-                href: '/contact',
-            };
-            {
-                id: 'mxdr';
+                href: '/contact'};
+            {id: 'mxdr';
                 title: 'Managed XDR';
                 description: '24/7 detection and response across endpoints, cloud, and identities.',
                 category: 'Cybersecurity';
@@ -161,12 +138,10 @@ export const servicesCatalog = [
                 billing: 'month';
                 features: ['MITRE ATT&CK mapping', 'Threat hunting', 'Monthly posture reviews'],
                 ctaLabel: 'Secure Now';
-                href: '/contact',
-            }
+                href: '/contact'}
         ]
     };
-    {
-        name: 'Data & Analytics';
+    {name: 'Data & Analytics';
         slug: 'data-analytics';
         items: [
             {
@@ -178,10 +153,8 @@ export const servicesCatalog = [
                 billing: 'project';
                 features: ['dbt models', 'Metrics layer', 'Role-based access'],
                 ctaLabel: 'Book Workshop';
-                href: '/contact',
-            };
-            {
-                id: 'mlops';
+                href: '/contact'};
+            {id: 'mlops';
                 title: 'MLOps Enablement';
                 description: 'Feature store, CI/CD for models, and monitoring.',
                 category: 'Data & Analytics';
@@ -189,12 +162,10 @@ export const servicesCatalog = [
                 billing: 'project';
                 features: ['Model registry', 'Canary rollout', 'Drift detection'],
                 ctaLabel: 'Plan Rollout';
-                href: '/contact',
-            }
+                href: '/contact'}
         ]
     };
-    {
-        name: 'Cloud & DevOps';
+    {name: 'Cloud & DevOps';
         slug: 'cloud-devops';
         items: [
             {
@@ -206,10 +177,8 @@ export const servicesCatalog = [
                 billing: 'project';
                 features: ['Self-service scaffolding', 'Guardrails', 'Scorecards'],
                 ctaLabel: 'Design IDP';
-                href: '/contact',
-            };
-            {
-                id: 'finops';
+                href: '/contact'};
+            {id: 'finops';
                 title: 'FinOps Program';
                 description: 'Cost visibility, allocation, and savings automation across clouds.',
                 category: 'Cloud & DevOps';
@@ -217,8 +186,7 @@ export const servicesCatalog = [
                 billing: 'project';
                 features: ['Anomaly detection', 'RI/SP planning', 'Showback/chargeback'],
                 ctaLabel: 'Cut Cloud Spend';
-                href: '/contact',
-            }
+                href: '/contact'}
         ]
     }
 ];

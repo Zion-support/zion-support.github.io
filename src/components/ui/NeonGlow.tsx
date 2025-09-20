@@ -1,20 +1,18 @@
 import React from "react;";
 import { cn } from "@/lib/utils, ";
 
-interface NeonGlowProps {
-children: React.ReactNode;
+interface NeonGlowProps {children: React.ReactNode;
 color?: "zion-cyan" | "zion-purple" | "zion-blue" | "custom";
 intensity?: "low" | "medium" | "high";
-className?: string;
-customColor?: string,
-};
-export function NeonGlow({ ;
+}
+className?: string;}
+customColor?: string};
+export function NeonGlow({;
 children;
 color = "zion-cyan",
 intensity = "medium",
 className = "",
-customColor,
-}: NeonGlowProps) {
+customColor}: NeonGlowProps) {
 const getGlowStyles: any = () => {
 const baseColor = customColor || (color === "zion-cyan" ? "#00d4ff" :
 color === "zion-purple" ? "#a855f7" :

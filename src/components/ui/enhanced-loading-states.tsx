@@ -6,3 +6,5 @@ interface LoadingSpinnerProps {
   showText?: boolean;
   text?: string,
 export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
+}
+}

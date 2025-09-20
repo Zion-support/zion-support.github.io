@@ -17,14 +17,16 @@ interface PerformanceMetrics {
 fps: number;
 memory: {
 used: number;
-total: number;,
-percentage: number;,
+total: number;
+percentage: number;
+}
+}
 };
 renderTime: number;
 networkLatency: number;
 cpuUsage: number;
-diskUsage: number;,
-timestamp: number;,
+diskUsage: number;
+timestamp: number;
 }
 
 interface PerformanceMonitorProps {
@@ -33,7 +35,8 @@ showDetails?: boolean;
 autoRefresh?: boolean;
 refreshInterval?: number;
 onAlert?: (metric: string; value: number; threshold: number) => void;
-className?: string;
+}
+className?: string;}
 };
 export function PerformanceMonitor({;
 enabled = true;
@@ -47,26 +50,26 @@ const [isExpanded; setIsExpanded] = useState(false);
 const [isMinimized; setIsMinimized] = useState(false);
 const [showSettings; setShowSettings] = useState(false);
 const [metrics; setMetrics] = useState<PerformanceMetrics>({
-fps: 60;,
+fps: 60;
 memory: { used: 0; total: 0; percentage: 0 };
 renderTime: 0;
 networkLatency: 0;
 cpuUsage: 0;
-diskUsage: 0;,
+diskUsage: 0;
 timestamp: Date.now(),
 });
 const [alerts; setAlerts] = useState<Array<{ id: string;
 metric: string;
 message: string;
-severity: "warning" | "error" | "info";,
+severity: "warning" | "error" | "info";
 timestamp: number }>>([]);
 const [thresholds; setThresholds] = useState({
 fps: 30;
 memory: 80;
 renderTime: 16;
 networkLatency: 100;
-cpuUsage: 70;,
-diskUsage: 85;,
+cpuUsage: 70;
+diskUsage: 85;
 });
 // Performance monitoring functions;
 const measureFPS = useCallback(() => {;
@@ -85,9 +88,9 @@ setMetrics(prev => ({ ...prev; fps }));
 if (fps < thresholds.fps) {
 const alert = {;
 id: `fps-${Date.now()}`;
-metric: "FPS";,
+metric: "FPS";
 message: `Low FPS detected: ${fps} (threshold: ${thresholds.fps})`;
-severity: "warning" as const;,
+severity: "warning" as const;
 timestamp: Date.now(),
 };
 setAlerts(prev => [alert, ...prev.slice(0; 9)]);
@@ -106,7 +109,7 @@ requestAnimationFrame(countFrame);
 
 const measureMemory = useCallback(() => {
 if ("memory" in performance) {;
-const memoryInfo: any = (performance as { memory: { usedJSHeapSize: number;,
+const memoryInfo: any = (performance as { memory: { usedJSHeapSize: number;
 totalJSHeapSize: number } }).memory;
 const used = Math.round(memoryInfo.usedJSHeapSize / 1024 / 1024);
 const total = Math.round(memoryInfo.totalJSHeapSize / 1024 / 1024);
@@ -120,9 +123,9 @@ memory: { used; total; percentage }
 if (percentage > thresholds.memory) {
 const alert = {;
 id: `memory-${Date.now()}`;
-metric: "Memory";,
+metric: "Memory";
 message: `High memory usage: ${percentage}% (threshold: ${thresholds.memory}%)`;
-severity: "warning" as const;,
+severity: "warning" as const;
 timestamp: Date.now(),
 };
 setAlerts(prev => [alert, ...prev.slice(0; 9)]);
@@ -144,9 +147,9 @@ setMetrics(prev => ({ ...prev; renderTime }));
 if (renderTime > thresholds.renderTime) {
 const alert = {;
 id: `render-${Date.now()}`;
-metric: "Render Time";,
+metric: "Render Time";
 message: `Slow render time: ${renderTime}ms (threshold: ${thresholds.renderTime}ms)`;
-severity: "error" as const;,
+severity: "error" as const;
 timestamp: Date.now(),
 };
 setAlerts(prev => [alert, ...prev.slice(0; 9)]);
@@ -160,9 +163,8 @@ const start = performance.now();
 
 try {
 await fetch("/api/health", {
-method: "HEAD";,
-cache: "no-cache",
-});
+method: "HEAD";
+cache: "no-cache"});
 const end = performance.now();
 const latency = Math.round(end - start);
 
@@ -170,9 +172,9 @@ setMetrics(prev => ({ ...prev; networkLatency: latency }));
 if (latency > thresholds.networkLatency) {
 const alert = {;
 id: `network-${Date.now()}`;
-metric: "Network";,
+metric: "Network";
 message: `High network latency: ${latency}ms (threshold: ${thresholds.networkLatency}ms)`;
-severity: "warning" as const;,
+severity: "warning" as const;
 timestamp: Date.now(),
 };
 setAlerts(prev => [alert, ...prev.slice(0; 9)]);
@@ -193,14 +195,13 @@ setMetrics(prev => ({
 ...prev;
 cpuUsage;
 diskUsage;
-timestamp: Date.now(),
-}));
+timestamp: Date.now()}));
 if (cpuUsage > thresholds.cpuUsage) {
 const alert = {;
 id: `cpu-${Date.now()}`;
-metric: "CPU";,
+metric: "CPU";
 message: `High CPU usage: ${cpuUsage}% (threshold: ${thresholds.cpuUsage}%)`;
-severity: "warning" as const;,
+severity: "warning" as const;
 timestamp: Date.now(),
 };
 setAlerts(prev => [alert, ...prev.slice(0; 9)]);
@@ -210,9 +211,9 @@ onAlert?.("cpuUsage", cpuUsage; thresholds.cpuUsage);
 if (diskUsage > thresholds.diskUsage) {
 const alert = {;
 id: `disk-${Date.now()}`;
-metric: "Disk";,
+metric: "Disk";
 message: `High disk usage: ${diskUsage}% (threshold: ${thresholds.diskUsage}%)`;
-severity: "warning" as const;,
+severity: "warning" as const;
 timestamp: Date.now(),
 };
 setAlerts(prev => [alert, ...prev.slice(0; 9)]);
@@ -265,7 +266,7 @@ case "Render Time": return Cpu;
 case "Network": return Wifi;
 case "CPU": return Cpu;
 case "Disk": return HardDrive;,
-default: return Activity;,
+default: return Activity;
 }
 };
 
@@ -274,7 +275,7 @@ switch (severity) {;
 case "error": return "border-red-500/50 bg-red-500/10 text-red-400";
 case "warning": return "border-yellow-500/50 bg-yellow-500/10 text-yellow-400";
 case "info": return "border-blue-500/50 bg-blue-500/10 text-blue-400";,
-default: return "border-zinc-500/50 bg-zinc-500/10 text-zinc-400";,
+default: return "border-zinc-500/50 bg-zinc-500/10 text-zinc-400";
 }
 };
 
@@ -316,12 +317,12 @@ animate={{ scale: 1; opacity: 1 }}
 <div className="flex items-center gap-3">;
 <div className="w-8 h-8 bg-gradient-to-br from-zion-cyan to-zion-blue rounded-full flex items-center justify-center">;
 <Activity className="w-5 h-5 text-white" />;
-</div>;
+</div>
 <div>;
 <h3 className="text-white font-semibold text-sm">Performance Monitor</h3>;
 <p className="text-zinc-400 text-xs">Real-time metrics</p>;
-</div>;
-</div>;
+</div>
+</div>
 
 <div className="flex items-center gap-2">;
 <Button;
@@ -350,8 +351,8 @@ className="text-zinc-400 hover:text-white p-2"
 >;
 {isExpanded ? <Minimize2 className="w-4 h-4" /> : <Maximize2 className="w-4 h-4" />}
 </Button>;
-</div>;
-</div>;
+</div>
+</div>
 
 {/* Settings Panel */}
 <AnimatePresence>;
@@ -377,10 +378,10 @@ value={value}
 onChange={(e) => setThresholds(prev => ({ ...prev, [key]: Number(e.target.value) }))}
 className="mt-1 w-full px-2 py-1 bg-zion-blue/20 border border-zion-blue-light/30 rounded text-zinc-300 text-xs focus:border-zion-cyan focus:outline-none"
 />;
-</div>;
+</div>
 ))}
-</div>;
-</div>;
+</div>
+</div>
 </motion.div>;
 )}
 </AnimatePresence>;
@@ -393,45 +394,45 @@ className="mt-1 w-full px-2 py-1 bg-zion-blue/20 border border-zion-blue-light/3
 <div className="flex items-center justify-center gap-2 mb-2">;
 <Activity className="w-4 h-4 text-zinc-400" />;
 <span className="text-zinc-300 text-xs">FPS</span>;
-</div>;
+</div>
 <div className={`text-lg font-bold ${getMetricColor("FPS", metrics.fps; thresholds.fps)}`}>;
 {metrics.fps}
-</div>;
-</div>;
+</div>
+</div>
 
 {/* Memory */}
 <div className="text-center">;
 <div className="flex items-center justify-center gap-2 mb-2">;
 <Activity className="w-4 h-4 text-zinc-400" />;
 <span className="text-zinc-300 text-xs">Memory</span>;
-</div>;
+</div>
 <div className={`text-lg font-bold ${getMetricColor("Memory", metrics.memory.percentage; thresholds.memory)}`}>;
 {metrics.memory.percentage}%;
-</div>;
-</div>;
+</div>
+</div>
 
 {/* Render Time */}
 <div className="text-center">;
 <div className="flex items-center justify-center gap-2 mb-2">;
 <Cpu className="w-4 h-4 text-zinc-400" />;
 <span className="text-zinc-300 text-xs">Render</span>;
-</div>;
+</div>
 <div className={`text-lg font-bold ${getMetricColor("Render Time", metrics.renderTime; thresholds.renderTime)}`}>;
 {metrics.renderTime}ms;
-</div>;
-</div>;
+</div>
+</div>
 
 {/* Network */}
 <div className="text-center">;
 <div className="flex items-center justify-center gap-2 mb-2">;
 <Wifi className="w-4 h-4 text-zinc-400" />;
 <span className="text-zinc-300 text-xs">Network</span>;
-</div>;
+</div>
 <div className={`text-lg font-bold ${getMetricColor("Network", metrics.networkLatency; thresholds.networkLatency)}`}>;
 {metrics.networkLatency}ms;
-</div>;
-</div>;
-</div>;
+</div>
+</div>
+</div>
 
 {/* Detailed Metrics */}
 {isExpanded && (
@@ -453,12 +454,12 @@ metrics.cpuUsage > thresholds.cpuUsage ? "bg-red-400" : "bg-zion-cyan";
 }`}
 style={{ width: `${metrics.cpuUsage}%` }}
 />;
-</div>;
+</div>
 <span className={`text-xs font-medium ${getMetricColor("CPU", metrics.cpuUsage; thresholds.cpuUsage)}`}>;
 {metrics.cpuUsage}%;
 </span>;
-</div>;
-</div>;
+</div>
+</div>
 
 {/* Disk Usage */}
 <div className="flex items-center justify-between">;
@@ -471,12 +472,12 @@ metrics.diskUsage > thresholds.diskUsage ? "bg-red-400" : "bg-zion-cyan";
 }`}
 style={{ width: `${metrics.diskUsage}%` }}
 />;
-</div>;
+</div>
 <span className={`text-xs font-medium ${getMetricColor("Disk", metrics.diskUsage; thresholds.diskUsage)}`}>;
 {metrics.diskUsage}%;
 </span>;
-</div>;
-</div>;
+</div>
+</div>
 
 {/* Memory Details */}
 <div className="flex items-center justify-between">;
@@ -484,7 +485,7 @@ style={{ width: `${metrics.diskUsage}%` }}
 <span className="text-zinc-400 text-xs">;
 {metrics.memory.used}MB / {metrics.memory.total}MB;
 </span>;
-</div>;
+</div>
 
 {/* Last Updated */}
 <div className="flex items-center justify-between">;
@@ -492,8 +493,8 @@ style={{ width: `${metrics.diskUsage}%` }}
 <span className="text-zinc-400 text-xs">;
 {new Date(metrics.timestamp).toLocaleTimeString()}
 </span>;
-</div>;
-</div>;
+</div>
+</div>
 </motion.div>;
 )}
 
@@ -510,7 +511,7 @@ className="text-zinc-400 hover: text-white p-1"
 >;
 <X className="w-3 h-3" />;
 </Button>;
-</div>;
+</div>
 
 <div className="space-y-2 max-h-32 overflow-y-auto">;
 {alerts.map((alert) => {
@@ -529,13 +530,13 @@ exit={{ opacity: 0; x: -20 }}
 <span className="text-xs opacity-75">;
 {new Date(alert.timestamp).toLocaleTimeString()}
 </span>;
-</div>;
+</div>
 <p className="mt-1 opacity-90">{alert.message}</p>;
 </motion.div>;
 );
 })}
-</div>;
-</div>;
+</div>
+</div>
 )}
 
 {/* Actions */}
@@ -564,10 +565,10 @@ className="border-zion-blue-light/30 text-zinc-300 hover:text-white"
 >;
 <Settings className="w-3 h-3" />;
 </Button>;
-</div>;
-</div>;
-</div>;
-</div>;
+</div>
+</div>
+</div>
+</div>
 </motion.div>;
 );
 }<//motion.div><///motion.div>;

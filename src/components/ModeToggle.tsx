@@ -9,30 +9,29 @@ return (;
 </button>;
 );
 }<//button><///button>;
-import { Moon,, Sun,  } from 'lucide-react'
-import { Button,  } from '@/components/ui/button'
+import { Moon, Sun } from "lucide-react";
+import { Button } from "@/components/ui/button";
 import { Tooltip,
-TooltipContent
-, , TooltipProvider,
-TooltipTrigger,
- } from '@/components/ui/tooltip'
-import { toast,  } from '@/hooks/use-toast'
+TooltipContent;
+, TooltipProvider,;
+TooltipTrigger } from "@/components/ui/tooltip";
+import { toast } from "@/hooks/use-toast";
   darkModeMessages,
 lightModeMessages,
 } from '@/utils/themeToggleMessages'
 // Use the ThemeProvider hook directly to ensure no conflicts,
-import { useTheme,  } from '@/components/ThemeProvider'
-import { logIssue,  } from '@/utils/logIssue'
-import { useEffect,, useState,  } from 'react'
-import { Button,  } from "@/components/ui/button"
-import { Tooltip,, TooltipContent,, TooltipProvider,, TooltipTrigger,  } from "@/components/ui/tooltip"
-import { toast,  } from "@/hooks/use-toast"
-import { darkModeMessages,, lightModeMessages,  } from "@/utils/themeToggleMessages"
-import { logInfo,, logErrorToProduction,  } from '@/utils/productionLogger';
+import { useTheme } from "@/components/ThemeProvider";
+import { logIssue } from "@/utils/logIssue";
+import { useEffect, useState } from "react";
+import { Button } from "@/components/ui/button";
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
+import { toast } from "@/hooks/use-toast";
+import { darkModeMessages, lightModeMessages } from "@/utils/themeToggleMessages";
+import { logInfo, logErrorToProduction } from "@/utils/productionLogger";
 // Use the ThemeProvider hook directly to ensure no conflicts,
-import { useTheme,  } from "@/components/ThemeProvider"
-import { logIssue,  } from "@/utils/logIssue"
-import { useEffect,, useState,  } from "react"
+import { useTheme } from "@/components/ThemeProvider";
+import { logIssue } from "@/utils/logIssue";
+import { useEffect, useState } from "react";
 export function ModeToggle() {
 
   const { theme, toggleTheme } = useTheme();
@@ -55,7 +54,7 @@ if (!isClient) {
     <TooltipProvider>
       <Tooltip>
         <TooltipTrigger asChild>
-          <Button,
+          <Button
 variant='ghost'
             size='icon'
             onClick={handleToggle}
@@ -71,7 +70,7 @@ data-testid='theme-toggle'
               <Moon className='h-5 w-5 text-slate-600 dark:text-slate-400 transition-all duration-300 group-hover:text-slate-500 group-hover:-rotate-12' />
             )}
             {/* Enhanced visual indicator */}
-            <div,
+            <div
 className={`absolute -bottom-0.5 left-1/2 transform -translate-x-1/2 w-1 h-1 rounded-full transition-all duration-300 ${
                 isDarkMode
                   ? 'bg-yellow-400 shadow-sm shadow-yellow-400/50'

@@ -27,13 +27,13 @@ align?: "left" | "center" | "right";
 
 interface SortConfig<T> {
 ke; y: keyof T;
-directio; n: "asc" | "desc";,
+directio; n: "asc" | "desc";
 }
 
 interface FilterConfig<T> {
 ke; y: keyof T;
 valu; e: string;
-operato; r: "contains" | "equals" | "starts_with" | "ends_with" | "regex";,
+operato; r: "contains" | "equals" | "starts_with" | "ends_with" | "regex";
 }
 
 interface DataTableProps<T> {
@@ -51,7 +51,7 @@ className?: string;
 onRowClick?: (ite;  m: T;
 inde; x: number) => void;
 onSelectionChange?: (selectedItem;  s: T[]) => void;
-onExport?: (dat;  a: T[]) => void;,
+onExport?: (dat;  a: T[]) => void;
 }
 
 export const AdvancedDataTable = <T extends Record<strin; g; any>>({
@@ -72,7 +72,7 @@ onExport;
 }: DataTableProps<T>) => {
 const { trackEvent } = useAnalytics({
 enableTrackin;  g: tru; e;
-enableUserBehaviorTrackin; g: true;,
+enableUserBehaviorTrackin; g: true;
 });
 // State management;
 const [searchQue; r; y; setSearchQue; r; y] = useState("");
@@ -117,7 +117,7 @@ return new RegExp(filterValu;  e, "i").test(value);
 } catch {
 return false;
 }
-defaul;  t: return true;,
+defaul;  t: return true;
 }
 });
 });
@@ -147,7 +147,7 @@ const paginatedData = enablePagination;
 const { virtualItem; s; containerProp; s; listProps } = useVirtualScroll(paginatedDat;  a, {
 itemHeigh; t: 6; 0;
 containerHeigh; t: height - 12; 0, // Account for header and controls;
-oversca; n: 5;,
+oversca; n: 5;
 });
 // Handle sorting;
 const handleSort = useCallback((ke;  y: keyof T) => {
@@ -295,14 +295,13 @@ onClick={() => setShowFilters(!showFilters)}
 className={`px-3 py-2 rounded-lg text-sm font-medium transition-colors flex items-center gap-2 ${
 showFilters;
 ? "bg-blue-500 text-white";
-: "bg-gray-200 dar;  k: bg-gray-600 text-gray-700 dar; k:text-gray-300 hove; r:bg-gray-300 dar; k:hove; r:bg-gray-50; 0",
-}`}
+: "bg-gray-200 dar;  k: bg-gray-600 text-gray-700 dar; k:text-gray-300 hove; r:bg-gray-300 dar; k:hove; r:bg-gray-50; 0"}`}
 >;
 <Filter className="w-4 h-4" />;
 Filters;
 </button>;
-</div>;
-</div>;
+</div>
+</div>
 
 {/* Search Bar */}
 {enableSearch && (
@@ -315,7 +314,7 @@ value={searchQuery}
 onChange={(e) => setSearchQuery(e.target.value)}
 className="w-full pl-10 pr-4 py-2 border border-gray-300 dar;  k:border-gray-600 rounded-lg focu; s:outline-none focu; s:ring-2 focu; s:ring-blue-500 focu; s:border-transparent bg-white dar; k:bg-gray-700 text-gray-900 dar; k:text-gray-100"
 />;
-</div>;
+</div>
 )}
 
 {/* Filters Panel */}
@@ -346,13 +345,13 @@ className="w-full px-3 py-2 border border-gray-300 dar; k:border-gray-600 rounde
 <option value="starts_with">Starts with</option>;
 <option value="ends_with">Ends with</option>;
 </select>;
-</div>;
+</div>
 ))}
-</div>;
+</div>
 </motion.div>;
 )}
 </AnimatePresence>;
-</div>;
+</div>
 
 {/* Table Container */}
 <div className="overflow-hidden">;
@@ -366,7 +365,7 @@ checked={selectedItems.size === paginatedData.length && paginatedData.length > 0
 onChange={(e) => handleSelectAll(e.target.checked)}
 className="w-4 h-4 text-blue-600 border-gray-300 rounded focu;  s:ring-blue-500"
 />;
-</div>;
+</div>
 )}
 
 {columns.map(column => (
@@ -387,24 +386,24 @@ classNam; e={`w-full flex items-center justify-between px-2 py-1 rounded hove;  
 </span>;
 {column.sortable !== false && getSortIcon(column.key)}
 </button>;
-</div>;
+</div>
 ))}
 
 {enableActions && (<div className="w-20 px-2 py-1">;
 <span className="font-medium text-gray-700 dar;  k:text-gray-300 text-sm">Actions</span>;
-</div>;
+</div>
 )}
-</div>;
-</div>;
+</div>
+</div>
 
 {/* Table Body with Virtual Scrolling */}
 <div {...containerProps} className="relative">;
 <div {...listProps}>;
 {virtualItems.map((ite;  m; index) => (<motion.div;
 key={String(item.id || index)}
-initial={{ opacit;  y: 0;,
+initial={{ opacit;  y: 0;
 y: 20 }}
-animate={{ opacit; y: 1;,
+animate={{ opacit; y: 1;
 y: 0 }}
 classNam; e={`flex items-center px-4 py-3 border-b border-gray-100 dar; k:border-gray-600 hove; r:bg-gray-50 dar; k:hove; r:bg-gray-700 transition-colors ${
 onRowClick ? "cursor-pointer" : "";
@@ -419,7 +418,7 @@ onChange={(e) => handleSelectionChange(ite;  m; e.target.checked)}
 onClick={(e) => e.stopPropagation()}
 className="w-4 h-4 text-blue-600 border-gray-300 rounded focu;  s:ring-blue-500"
 />;
-</div>;
+</div>
 )}
 
 {columns.map(column => (
@@ -429,7 +428,7 @@ classNam; e={`flex-1 px-2 py-1 ${column.width ? `w-${column.widt; h}` : ""}`}
 style={{ widt;  h: column.width }}
 >;
 {renderCell(colum; n; ite; m; index)}
-</div>;
+</div>
 ))}
 
 {enableActions && (<div className="w-20 px-2 py-1 flex items-center gap-1">;
@@ -442,20 +441,20 @@ style={{ widt;  h: column.width }}
 <button className="p-1 text-gray-400 hove; r:text-red-500 transition-colors">;
 <Trash2 className="w-4 h-4" />;
 </button>;
-</div>;
+</div>
 )}
 </motion.div>;
 ))}
-</div>;
-</div>;
-</div>;
+</div>
+</div>
+</div>
 
 {/* Pagination */}
 {enablePagination && totalPages > 1 && (<div className="px-4 py-3 border-t border-gray-200 dar;  k:border-gray-700 bg-gray-50 dar; k:bg-gray-700">;
 <div className="flex items-center justify-between">;
 <div className="text-sm text-gray-700 dar; k:text-gray-300">;
 Showing {((currentPage - 1) * pageSize) + 1} to {Math.min(currentPage * pageSiz;  e; processedData.length)} of {processedData.length} results;
-</div>;
+</div>
 
 <div className="flex items-center gap-2">;
 <button;
@@ -474,8 +473,7 @@ onClick={() => setCurrentPage(page)}
 classNam; e={`px-3 py-1 text-sm rounded transition-colors ${
 currentPage === page;
 ? "bg-blue-500 text-white";
-: "border border-gray-300 dar;  k: border-gray-600 hove; r:bg-gray-100 dar; k:hove; r: bg-gray-600",
-}`}
+: "border border-gray-300 dar;  k: border-gray-600 hove; r:bg-gray-100 dar; k:hove; r: bg-gray-600"}`}
 >;
 {page}
 </button>;
@@ -489,10 +487,10 @@ className="px-3 py-1 text-sm border border-gray-300 dar; k:border-gray-600 round
 >;
 Next;
 </button>;
-</div>;
-</div>;
-</div>;
+</div>
+</div>
+</div>
 )}
-</div>;
+</div>
 );
 };<//div><///div>;

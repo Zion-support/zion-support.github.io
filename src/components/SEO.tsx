@@ -1,12 +1,11 @@
 import React from "react";
-
 interface SEOProps {
-title: string;
-description: string;
-canonical?: string;
-url?: string;
-image?: string;
-};
+  title: string;
+  description: string;
+  canonical?: string;
+  url?: string;
+  image?: string;
+}
 export const SEO: React.FC<SEOProps> = ({ title, description, canonical, url, image }) => {
   return (
     <>
@@ -20,7 +19,7 @@ export const SEO: React.FC<SEOProps> = ({ title, description, canonical, url, im
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
-    </>
+</>
   );
 };
 

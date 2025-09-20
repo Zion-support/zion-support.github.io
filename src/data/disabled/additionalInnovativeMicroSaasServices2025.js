@@ -1,7 +1,6 @@
 export const ADDITIONAL_INNOVATIVE_MICRO_SAAS_SERVICES_2025 = [
     // AI-Powered Content Creation & Marketing Automation;
-    {
-        id: "ai-content-marketing-automation-2025";
+    {id: "ai-content-marketing-automation-2025";
         title: "AI-Powered Content Creation & Marketing Automation Platform";
         description: "Comprehensive content creation and marketing automation platform that generates personalized content, optimizes campaigns, and drives engagement across all channels.",
         category: "AI & Marketing";
@@ -47,8 +46,7 @@ export const ADDITIONAL_INNOVATIVE_MICRO_SAAS_SERVICES_2025 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         websiteUrl: "https://ziontechgroup.com/ai-content-marketing-automation-2025";
         technologyStack: ["GPT-5", "Natural Language Processing", "Marketing Automation", "Analytics", "API Integration"],
         complianceStandards: ["GDPR", "CAN-SPAM", "CCPA", "SOC2"],
@@ -57,8 +55,7 @@ export const ADDITIONAL_INNOVATIVE_MICRO_SAAS_SERVICES_2025 = [
         competitiveAdvantages: ["AI-powered content generation", "Multi-channel automation", "Real-time optimization"]
     },
     // Blockchain-Based Supply Chain Transparency;
-    {
-        id: "blockchain-supply-chain-transparency-2025";
+    {id: "blockchain-supply-chain-transparency-2025";
         title: "Blockchain-Based Supply Chain Transparency Platform";
         description: "End-to-end supply chain transparency solution using blockchain technology for traceability, compliance, and trust across global supply networks.",
         category: "Blockchain & Web3";
@@ -104,8 +101,7 @@ export const ADDITIONAL_INNOVATIVE_MICRO_SAAS_SERVICES_2025 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         websiteUrl: "https://ziontechgroup.com/blockchain-supply-chain-transparency-2025";
         technologyStack: ["Ethereum", "Hyperledger", "Smart Contracts", "IoT", "Cloud Computing"],
         complianceStandards: ["ISO 9001", "FSMA", "GDPR", "Industry-specific regulations"],
@@ -114,8 +110,7 @@ export const ADDITIONAL_INNOVATIVE_MICRO_SAAS_SERVICES_2025 = [
         competitiveAdvantages: ["Blockchain-based transparency", "Real-time tracking", "Smart contract automation"]
     },
     // Quantum-Secure Communication Platform;
-    {
-        id: "quantum-secure-communication-2025";
+    {id: "quantum-secure-communication-2025";
         title: "Quantum-Secure Communication & Encryption Platform";
         description: "Next-generation communication platform with quantum-resistant encryption, ensuring data security against current and future cyber threats.",
         category: "Cybersecurity & Quantum";
@@ -161,8 +156,7 @@ export const ADDITIONAL_INNOVATIVE_MICRO_SAAS_SERVICES_2025 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         websiteUrl: "https://ziontechgroup.com/quantum-secure-communication-2025";
         technologyStack: ["Quantum-Resistant Algorithms", "Post-Quantum Cryptography", "Secure Communication", "Blockchain", "Zero-Knowledge Proofs"],
         complianceStandards: ["SOC2", "ISO 27001", "NIST", "FISMA", "FedRAMP"],
@@ -171,8 +165,7 @@ export const ADDITIONAL_INNOVATIVE_MICRO_SAAS_SERVICES_2025 = [
         competitiveAdvantages: ["Quantum-resistant security", "Future-proof protection", "Zero-knowledge architecture"]
     },
     // AI-Powered Autonomous Customer Service;
-    {
-        id: "ai-autonomous-customer-service-2025";
+    {id: "ai-autonomous-customer-service-2025";
         title: "AI Autonomous Customer Service & Support Platform";
         description: "Intelligent customer service platform that autonomously handles inquiries, resolves issues, and provides personalized support 24/7.",
         category: "AI & Customer Experience";
@@ -218,8 +211,7 @@ export const ADDITIONAL_INNOVATIVE_MICRO_SAAS_SERVICES_2025 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         websiteUrl: "https://ziontechgroup.com/ai-autonomous-customer-service-2025";
         technologyStack: ["GPT-5", "Natural Language Processing", "Machine Learning", "API Integration", "Analytics"],
         complianceStandards: ["GDPR", "CCPA", "SOC2", "Industry-specific regulations"],
@@ -228,8 +220,7 @@ export const ADDITIONAL_INNOVATIVE_MICRO_SAAS_SERVICES_2025 = [
         competitiveAdvantages: ["Autonomous operation", "Multi-language support", "Sentiment analysis"]
     },
     // Edge AI Computing & Inference Platform;
-    {
-        id: "edge-ai-computing-platform-2025";
+    {id: "edge-ai-computing-platform-2025";
         title: "Edge AI Computing & Real-Time Inference Platform";
         description: "Distributed edge computing platform that brings AI processing closer to data sources, enabling real-time AI applications with minimal latency.",
         category: "Edge Computing & AI";
@@ -275,8 +266,7 @@ export const ADDITIONAL_INNOVATIVE_MICRO_SAAS_SERVICES_2025 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         websiteUrl: "https://ziontechgroup.com/edge-ai-computing-platform-2025";
         technologyStack: ["TensorFlow Lite", "Edge ML", "IoT", "5G", "Cloud Computing"],
         complianceStandards: ["ISO 27001", "GDPR", "Industry-specific regulations"],
@@ -285,8 +275,7 @@ export const ADDITIONAL_INNOVATIVE_MICRO_SAAS_SERVICES_2025 = [
         competitiveAdvantages: ["Edge-first architecture", "Real-time processing", "Privacy-preserving AI"]
     },
     // Autonomous Financial Trading Platform;
-    {
-        id: "autonomous-financial-trading-2025";
+    {id: "autonomous-financial-trading-2025";
         title: "Autonomous Financial Trading & Investment Platform";
         description: "AI-powered autonomous trading platform that analyzes markets, executes trades, and manages portfolios with advanced risk management.",
         category: "AI & Fintech";
@@ -332,8 +321,7 @@ export const ADDITIONAL_INNOVATIVE_MICRO_SAAS_SERVICES_2025 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         websiteUrl: "https://ziontechgroup.com/autonomous-financial-trading-2025";
         technologyStack: ["Advanced AI/ML", "Real-time Data Processing", "Trading APIs", "Risk Models", "Cloud Computing"],
         complianceStandards: ["SEC", "FINRA", "GLBA", "SOX", "International regulations"],
@@ -342,8 +330,7 @@ export const ADDITIONAL_INNOVATIVE_MICRO_SAAS_SERVICES_2025 = [
         competitiveAdvantages: ["Autonomous trading", "Advanced risk management", "Multi-asset support"]
     },
     // Smart Energy Management Platform;
-    {
-        id: "smart-energy-management-2025";
+    {id: "smart-energy-management-2025";
         title: "Smart Energy Management & Optimization Platform";
         description: "AI-powered energy management platform that optimizes energy consumption, integrates renewable sources, and reduces costs for commercial buildings.",
         category: "IoT & Energy";
@@ -389,8 +376,7 @@ export const ADDITIONAL_INNOVATIVE_MICRO_SAAS_SERVICES_2025 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         websiteUrl: "https://ziontechgroup.com/smart-energy-management-2025";
         technologyStack: ["IoT Sensors", "AI/ML", "Cloud Computing", "Smart Grid Technology", "Renewable Energy Systems"],
         complianceStandards: ["ISO 50001", "LEED", "Energy Star", "Local regulations"],
@@ -399,8 +385,7 @@ export const ADDITIONAL_INNOVATIVE_MICRO_SAAS_SERVICES_2025 = [
         competitiveAdvantages: ["AI-powered optimization", "Multi-source integration", "Predictive capabilities"]
     },
     // Autonomous Healthcare Diagnostics Platform;
-    {
-        id: "autonomous-healthcare-diagnostics-2025";
+    {id: "autonomous-healthcare-diagnostics-2025";
         title: "Autonomous Healthcare Diagnostics & Monitoring Platform";
         description: "AI-powered healthcare platform that provides autonomous diagnostics, patient monitoring, and predictive health insights.",
         category: "AI & Healthcare";
@@ -446,8 +431,7 @@ export const ADDITIONAL_INNOVATIVE_MICRO_SAAS_SERVICES_2025 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         websiteUrl: "https://ziontechgroup.com/autonomous-healthcare-diagnostics-2025";
         technologyStack: ["AI/ML", "Medical Imaging", "IoT Devices", "Cloud Computing", "Security Protocols"],
         complianceStandards: ["HIPAA", "FDA", "SOC2", "ISO 13485", "GDPR"],
@@ -456,8 +440,7 @@ export const ADDITIONAL_INNOVATIVE_MICRO_SAAS_SERVICES_2025 = [
         competitiveAdvantages: ["AI-powered diagnostics", "Multi-modal analysis", "Predictive capabilities"]
     },
     // Autonomous Supply Chain Optimization;
-    {
-        id: "autonomous-supply-chain-optimization-2025";
+    {id: "autonomous-supply-chain-optimization-2025";
         title: "Autonomous Supply Chain Optimization & Logistics Platform";
         description: "AI-powered supply chain platform that autonomously optimizes logistics, inventory, and distribution networks for maximum efficiency.",
         category: "AI & Logistics";
@@ -503,8 +486,7 @@ export const ADDITIONAL_INNOVATIVE_MICRO_SAAS_SERVICES_2025 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         websiteUrl: "https://ziontechgroup.com/autonomous-supply-chain-optimization-2025";
         technologyStack: ["AI/ML", "IoT", "Cloud Computing", "Optimization Algorithms", "Real-time Analytics"],
         complianceStandards: ["ISO 9001", "C-TPAT", "GDPR", "Industry-specific regulations"],

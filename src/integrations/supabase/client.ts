@@ -4,15 +4,14 @@
 import { createClient } from "@supabase/supabase-js";
 import { supabaseStorageAdapter } from "./safeStorageAdapter";
 
-interface SupabaseClient {
-auth: {,
-signUp: (credentials: any) => Promise<any>, signIn: (credentials: any) => Promise<any>;,
-signOut: () => Promise<any>, user: () => any;,
-onAuthStateChange: (callback: any) => any,
-};
+interface SupabaseClient {auth: {,
+signUp: (credentials: any) => Promise<any>, signIn: (credentials: any) => Promise<any>;
+signOut: () => Promise<any>, user: () => any;
+}
+}
+onAuthStateChange: (callback: any) => any};
 from: (table: string) => any; storage: {,
-from: (bucket: string) => any,
-};
+from: (bucket: string) => any};
 }
 
 // Mock implementation;

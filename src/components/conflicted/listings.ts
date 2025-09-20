@@ -1,7 +1,6 @@
 import React from "react";
 
-export interface ProductListing {
-id: string; title: string; description: string; category: string; price: number; currency: string; pricingModel: "one-time" | "subscription" | "usage-based" | "custom";,
+export interface ProductListing {id: string; title: string; description: string; category: string; price: number; currency: string; pricingModel: "one-time" | "subscription" | "usage-based" | "custom";
 features: string[], tags: string[];
 images?: string[];
 rating?: number;
@@ -20,9 +19,9 @@ location?: string;
 company?: string;
 author?: {,
 name: string; id: string;
-avatarUrl?: string;
-email?: string,
-};
+}
+avatarUrl?: string;}
+email?: string};
 createdAt: string; updatedAt: string;
 featured?: boolean;
 popular?: boolean;

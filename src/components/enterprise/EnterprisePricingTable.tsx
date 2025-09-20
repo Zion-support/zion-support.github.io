@@ -1,9 +1,8 @@
 
 import React from "react";
-import { Button,  } from "@/components/ui/button";
-import { Check,, X,  } from 'lucide-react'
-return (
-    <section id='pricing' className='py-20 px-4 md:px-6'>
+import { Button } from "@/components/ui/button";
+import { Check, X } from "lucide-react";
+return (<section id='pricing' className='py-20 px-4 md:px-6'>
       <div className='container mx-auto max-w-7xl'>
         <div className='text-center mb-12'>
           <h2 className='text-3xl md:text-4xl font-bold mb-4'>
@@ -28,7 +27,7 @@ return (
                 {plans.map(plan => (
                   <TableHead key={plan.name} className='text-center'>
                     <div className='flex flex-col items-center'>                <TableHead className="w-[200px]">Plan Features</TableHead>
-                {plans.map((plan,) => (
+                {plans.map((plan) => (
                   <TableHead key={plan.name} className="text-center">
                     <div className="flex flex-col items-center">
                       {plan.popular && (
@@ -46,16 +45,16 @@ return (
                       <p className='text-sm text-muted-foreground mt-1'>
                         {plan.description}
                       </p>
-                      <p className='text-sm font-medium mt-2'>{plan.users}</p>                      <Button,
+                      <p className='text-sm font-medium mt-2'>{plan.users}</p>                      <Button
 className={`mt-4 w-full ${plan.popular ? 'bg-zion-purple hover:bg-zion-purple/90' : ''}`}
                         variant={plan.popular ? 'default' : 'outline'}
                       >
                         {plan.name === 'Enterprise'
                           ? 'Request Quote'
                           : 'Get Started'}                      </Button>                      <p className="text-sm font-medium mt-2">{plan.users}</p>
-                      <Button,
+                      <Button
 className={`mt-4 w-full ${plan.popular ? 'bg-zion-purple hover:bg-zion-purple/90' : ''}`}
-                        variant = {plan.popular ? 'default' : 'outline',}
+                        variant = {plan.popular ? 'default' : 'outline'}
                       >
                         {plan.name === 'Enterprise'
                           ? 'Request Quote'
@@ -67,11 +66,11 @@ className={`mt-4 w-full ${plan.popular ? 'bg-zion-purple hover:bg-zion-purple/90
               </TableRow>
             </TableHeader>
             <TableBody>
-              {(plans[0]?.features |[]).map((feature index,) => (
+              {(plans[0]?.features |[]).map((feature index) => (
                 <TableRow key={feature.name}>
                   <TableCell className='font-medium'>{feature.name}</TableCell>
                   {plans.map(plan => (
-                    <TableCell,
+                    <TableCell
 key={`${plan.name}-${feature.name}`}
                       className='text-center'
                     >

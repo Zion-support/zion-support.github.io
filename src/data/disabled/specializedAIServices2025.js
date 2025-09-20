@@ -1,7 +1,6 @@
 export const SPECIALIZED_AI_SERVICES_2025 = [
     // Multimodal AI Content Studio;
-    {
-        id: "multimodal-ai-content-studio";
+    {id: "multimodal-ai-content-studio";
         title: "Multimodal AI Content Studio";
         description: "Advanced AI platform that generates, edits, and optimizes content across multiple formats including text, images, video, and audio using state-of-the-art multimodal models.",
         category: "AI & Content Creation";
@@ -47,8 +46,7 @@ export const SPECIALIZED_AI_SERVICES_2025 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         technology: ["GPT-4", "DALL-E 3", "Stable Diffusion", "Python", "TensorFlow"],
         integrations: ["Canva", "Adobe Creative Suite", "Shopify", "WordPress", "Social platforms"],
         compliance: ["GDPR", "SOC 2", "Content safety"],
@@ -59,8 +57,7 @@ export const SPECIALIZED_AI_SERVICES_2025 = [
         accuracy: "95%+ content quality score",
     };
     // AI-Powered Predictive Healthcare Analytics;
-    {
-        id: "ai-powered-predictive-healthcare-analytics";
+    {id: "ai-powered-predictive-healthcare-analytics";
         title: "AI-Powered Predictive Healthcare Analytics";
         description: "Comprehensive healthcare analytics platform that uses AI to predict patient outcomes, optimize treatment plans, and improve healthcare delivery through advanced machine learning algorithms.",
         category: "AI & Healthcare";
@@ -106,8 +103,7 @@ export const SPECIALIZED_AI_SERVICES_2025 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         technology: ["TensorFlow", "PyTorch", "Python", "Apache Spark", "Kubernetes"],
         integrations: ["Epic", "Cerner", "HL7 FHIR", "DICOM", "EMR systems"],
         compliance: ["HIPAA", "FDA", "SOC 2", "ISO 27001", "GDPR"],
@@ -118,8 +114,7 @@ export const SPECIALIZED_AI_SERVICES_2025 = [
         accuracy: "92% prediction accuracy",
     };
     // Autonomous Financial Trading AI;
-    {
-        id: "autonomous-financial-trading-ai";
+    {id: "autonomous-financial-trading-ai";
         title: "Autonomous Financial Trading AI";
         description: "Advanced AI-powered trading platform that autonomously analyzes market data, executes trades, and manages portfolios using sophisticated machine learning algorithms and real-time market intelligence.",
         category: "AI & Finance";
@@ -165,8 +160,7 @@ export const SPECIALIZED_AI_SERVICES_2025 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         technology: ["Python", "TensorFlow", "PyTorch", "QuantLib", "Real-time APIs"],
         integrations: ["Bloomberg", "Reuters", "Interactive Brokers", "TD Ameritrade", "E*TRADE"],
         compliance: ["SEC", "FINRA", "SOX", "GDPR", "SOC 2"],
@@ -177,8 +171,7 @@ export const SPECIALIZED_AI_SERVICES_2025 = [
         accuracy: "87% prediction accuracy",
     };
     // AI-Powered Supply Chain Optimization;
-    {
-        id: "ai-powered-supply-chain-optimization";
+    {id: "ai-powered-supply-chain-optimization";
         title: "AI-Powered Supply Chain Optimization";
         description: "Intelligent supply chain platform that uses AI to optimize logistics, predict demand, manage inventory, and reduce costs through advanced analytics and machine learning.",
         category: "AI & Supply Chain";
@@ -224,8 +217,7 @@ export const SPECIALIZED_AI_SERVICES_2025 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         technology: ["Python", "TensorFlow", "Apache Spark", "Kubernetes", "IoT platforms"],
         integrations: ["SAP", "Oracle", "Salesforce", "Shopify", "WMS systems"],
         compliance: ["ISO 28000", "C-TPAT", "GDPR", "SOC 2"],
@@ -236,8 +228,7 @@ export const SPECIALIZED_AI_SERVICES_2025 = [
         accuracy: "89% optimization accuracy",
     };
     // AI-Powered Legal Research Assistant;
-    {
-        id: "ai-powered-legal-research-assistant";
+    {id: "ai-powered-legal-research-assistant";
         title: "AI-Powered Legal Research Assistant";
         description: "Advanced AI platform that automates legal research, analyzes case law, generates legal documents, and provides intelligent legal insights using natural language processing and machine learning.",
         category: "AI & Legal Tech";
@@ -283,8 +274,7 @@ export const SPECIALIZED_AI_SERVICES_2025 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         technology: ["GPT-4", "BERT", "Python", "NLP libraries", "Legal databases"],
         integrations: ["Westlaw", "LexisNexis", "Clio", "PracticePanther", "Legal databases"],
         compliance: ["GDPR", "SOC 2", "Legal ethics", "Data privacy"],
@@ -295,8 +285,7 @@ export const SPECIALIZED_AI_SERVICES_2025 = [
         accuracy: "94% legal accuracy",
     };
     // AI-Powered Educational Personalization;
-    {
-        id: "ai-powered-educational-personalization";
+    {id: "ai-powered-educational-personalization";
         title: "AI-Powered Educational Personalization";
         description: "Intelligent education platform that personalizes learning experiences, adapts content to individual needs, and provides real-time feedback using advanced AI and machine learning algorithms.",
         category: "AI & Education";
@@ -342,8 +331,7 @@ export const SPECIALIZED_AI_SERVICES_2025 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         technology: ["Python", "TensorFlow", "NLP", "Learning analytics", "Cloud platforms"],
         integrations: ["LMS systems", "Google Classroom", "Canvas", "Moodle", "Zoom"],
         compliance: ["FERPA", "COPPA", "GDPR", "SOC 2"],

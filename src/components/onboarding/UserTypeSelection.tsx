@@ -1,19 +1,18 @@
 
-import { useState,  } from "react";
-import { Briefcase,, Star,, User,  } from 'lucide-react'
-import { Button,  } from "@/components/ui/button";
-interface UserTypeOption {
-  id: "serviceProvider" | "talent" | "client";,
+import { useState } from "react";
+import { Briefcase, Star, User } from "lucide-react";
+import { Button } from "@/components/ui/button";
+interface UserTypeOption {id: "serviceProvider" | "talent" | "client";
 name: string;
-  description: string;,
+  description: string;
 icon: React.ElementType,
 interface UserTypeSelectionProps {
-  onSelect: (userType: "serviceProvider" | "talent" | "client") => void;,
+  onSelect: (userType: "serviceProvider" | "talent" | "client") => void;
 selectedType: string | null,
 export function UserTypeSelection({
-  onSelect,
-selectedType,
-}: UserTypeSelectionProps) {
+}
+  onSelect,}
+selectedType}: UserTypeSelectionProps) {
   const userTypes: UserTypeOption[] = [
     {
 onClick={() => onSelect(type.id)}
@@ -23,10 +22,10 @@ onClick={() => onSelect(type.id)}
                   : 'border-zion-blue-light hover:border-zion-cyan/50 text-white'
               }`}
             >
-              <div,
+              <div
 className={`p-3 rounded-full ${isSelected ? 'bg-zion-purple' : 'bg-zion-blue'}`}
               >
-                <Icon,
+                <Icon
 className={`h-6 w-6 ${isSelected ? 'text-white' : 'text-zion-slate-light'}`}
                 />
               </div>

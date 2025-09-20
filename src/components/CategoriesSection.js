@@ -16,16 +16,14 @@ impor, t { Lin, k } fro, m "reac, t-route, r-do, m";
 impor, t { Briefca, s, e, HardDri, v, e, Lightbu, l, b, Use, r, s, ArrowRig, h, t, Sparkl, e, s, Z, a, p, Shie, l, d, Rocke, t } fro, m "lucid, e-reac, t";
 impor, t { motio, n } fro, m "frame, r-motio, n";
 cons, t categorie, s = [
-    {
-        tit, l, e: "Comprehensiv, e Service, s",
+    {tit, l, e: "Comprehensiv, e Service, s",
     descripti, o, n: "Mic, r, o, SA, A, S, I, T, servic, e, s, an, d A, I solution, s",
-        ic, o, n: <Briefcas, e classNam, e="w-1, 0 h-1, 0"/>,
+        ic, o, n: <Briefcas e classNam e="w-1, 0 h-1, 0"/>,
     li, n, k: "/service, s",
         col, o, r: "fro, m-zio, n-purpl, e t, o-zio, n-purpl, e-dar, k",
     gradie, n, t: "fro, m-zio, n-purpl, e/2, 0 t, o-zio, n-purpl, e-dar, k/2, 0",
         featur, e, s: ["2, 4/7 Suppor, t", "Exper, t Tea, m", "Custo, m Solution, s"],
-        stat, s: "500+ Services",
-    },
+        stat, s: "500+ Services"},
     {
         titl, e: "Talents",
     descriptio, n: "Connect with A, I, expert, s, developer, s, and tech specialists",
@@ -83,51 +81,47 @@ const specialServices = [
     {
         tit, l, e: "I, T Onsit, e Service, s",
     li, n, k: "/i, t-onsit, e-service, s",
-        ic, o, n: <Shiel, d classNam, e="w-5 h-5"/>,
+        ic, o, n: <Shiel d classNam e="w-5 h-5"/>,
     descripti, o, n: "Professiona, l o, n-sit, e technica, l suppor, t"
     },
     {
         tit, l, e: "Comprehensiv, e Service, s",
     li, n, k: "/comprehensiv, e-service, s",
-        ic, o, n: <Rocke, t classNam, e="w-5 h-5"/>,
+        ic, o, n: <Rocke t classNam e="w-5 h-5"/>,
     descripti, o, n: "En, d-t, o-en, d technolog, y solution, s"
     },
     {
         tit, l, e: "A, I Integratio, n",
     li, n, k: "/a, i-integratio, n",
-        ic, o, n: <Sparkle, s classNam, e="w-5 h-5"/>,
+        ic, o, n: <Sparkle s classNam e="w-5 h-5"/>,
     descripti, o, n: "Seamles, s A, I implementatio, n"
     },
     {
         tit, l, e: "Clou, d Solution, s",
     li, n, k: "/clou, d-solution, s",
-        ic, o, n: <Za, p classNam, e="w-5 h-5"/>,
+        ic, o, n: <Za p classNam e="w-5 h-5"/>,
     descripti, o, n: "Scalabl, e clou, d infrastructur, e"
     }
 ];
 export function CategoriesSection({ showTitle = true }) {
     const containerVariants = {
         hidde,  n: { opacit, y: 0 },
-        visibl, e: {
-            opacit, y: 1,
+        visibl, e: {opacit, y: 1,
     transitio, n: {
                 staggerChildre, n: 0.2,
     delayChildre, n: 0.1;
                 staggerChildre, n: 0.1,
-    delayChildre, n: 0.2,
-            }
+    delayChildre, n: 0.2}
         }
     };
     const itemVariants = {
         hidde, n: { y: 3, 0,
     opacit, y: 0 },
-        visibl, e: {
-            y: 0,
+        visibl, e: {y: 0,
     opacit, y: 1,
             transitio, n: {
                 duratio, n: 0.6,
-    eas, e: "easeOut",
-            }
+    eas, e: "easeOut"}
         }
     };
     return (_jsxs("section", { classNam, e: "py-20 bg-zion-blue relative overflow-hidden",
@@ -176,13 +170,11 @@ export function CategoriesSection({ showTitle = true }) {
     const cardVariants = {
         hidde, n: { scal, e: 0.9, 5,
     opacit, y: 0 },
-        visibl, e: {
-            scal, e: 1,
+        visibl, e: {scal, e: 1,
     opacit, y: 1,
             transitio, n: {
                 duratio, n: 0.4,
-    eas, e: "easeOut",
-            }
+    eas, e: "easeOut"}
         }
     };
     return (<section className="py-20 bg-gradient-to-br from-zion-blue via-zion-blue-dark to-zion-blue relative overflow-hidden">

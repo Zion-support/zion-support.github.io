@@ -26,23 +26,24 @@ import { MessageSquare; ChevronDown } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
-import {
-DropdownMenu;
+import { DropdownMenu;
 DropdownMenuContent;
 DropdownMenuItem;
-DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
+DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 
 interface MainNavigationProps {
 isAdmin?: boolean;
 unreadCount?: number;
-className?: string;
+}
+className?: string;}
 };
 interface NavigationLink {
 key: string;
 href: string;
-name: string;,
+name: string;
 matches: (path: string) => boolean;
+}
+}
 dropdown?: { href: string; name: string; }[];
 }
 
@@ -115,56 +116,38 @@ href: "/about",
 matches: (path: string) => path.startsWith("/about"),
 key: "about",
 href: "/about",
-matches: (path: string) => path === "/about",
-},
-{
-key: "services",
+matches: (path: string) => path === "/about"},
+{key: "services",
 href: "/services",
 matches: (path: string) => path.startsWith("/services"),
 key: "services",
 href: "/services",
-matches: (path: string) => path.startsWith("/services"),
-},
-{
-key: "ai-services",
+matches: (path: string) => path.startsWith("/services")},
+{key: "ai-services",
 href: "/ai-services",
-matches: (path: string) => path.startsWith("/ai-services"),
-},
-{
-key: "it-services",
+matches: (path: string) => path.startsWith("/ai-services")},
+{key: "it-services",
 href: "/it-services",
-matches: (path: string) => path.startsWith("/it-services"),
-},
-{
-key: "micro-saas",
+matches: (path: string) => path.startsWith("/it-services")},
+{key: "micro-saas",
 href: "/micro-saas",
-matches: (path: string) => path.startsWith("/micro-saas"),
-},
-{
-key: "about",
+matches: (path: string) => path.startsWith("/micro-saas")},
+{key: "about",
 href: "/about",
-matches: (path: string) => path.startsWith("/about"),
-},
-{
-key: "services",
+matches: (path: string) => path.startsWith("/about")},
+{key: "services",
 href: "/services",
 matches: (path: string) => path.startsWith("/services") || path.startsWith("/it-onsite-services"),
 name: "Home",
-matches: (path: string) => path === "/",
-},
-{
-key: "services",
+matches: (path: string) => path === "/"},
+{key: "services",
 href: "/services",
 name: "Services",
-matches: (path: string) => path.startsWith("/services"),
-},
-{
-key: "services",
+matches: (path: string) => path.startsWith("/services")},
+{key: "services",
 href: "/comprehensive-services",
-matches: (path: string) => path.startsWith("/comprehensive-services") || path.startsWith("/services"),
-},
-{
-key: "marketplace",
+matches: (path: string) => path.startsWith("/comprehensive-services") || path.startsWith("/services")},
+{key: "marketplace",
 href: "/marketplace",
 key: "services",
 href: "/services",
@@ -174,24 +157,17 @@ href: "/services",
 matches: (path: string) => path.startsWith("/services"),
 key: "services",
 href: "/services",
-matches: (path: string) => path.startsWith("/services") || path.startsWith("/it-onsite-services"),
-},
-{
-key: "micro-saas",
+matches: (path: string) => path.startsWith("/services") || path.startsWith("/it-onsite-services")},
+{key: "micro-saas",
 href: "/micro-saas-services",
 matches: (path: string) => path.startsWith("/micro-saas-services"),
-matches: (path: string) => path === "/",
-},
-{
-key: "marketplace",
+matches: (path: string) => path === "/"},
+{key: "marketplace",
 href: "/marketplace",
-matches: (path: string) => path.startsWith("/marketplace"),
-},
-{
-key: "services",
+matches: (path: string) => path.startsWith("/marketplace")},
+{key: "services",
 href: "/services",
-matches: (path: string) => path.startsWith("/services"),
-},
+matches: (path: string) => path.startsWith("/services")},
 {
 key: "services",
 href: "/services",
@@ -221,20 +197,16 @@ dropdown: [
 { href: "/green-it", name: "Green IT" }
 ];
 },
-{
-key: "talent",
+{key: "talent",
 href: "/talent",
 key: "ai-hiring",
 href: "/zion-hire-ai",
-matches: (path: string) => path.startsWith("/zion-hire-ai") || path.startsWith("/hire-ai"),
-}
+matches: (path: string) => path.startsWith("/zion-hire-ai") || path.startsWith("/hire-ai")}
 ];
 
 const moreLinks = [
-{
-matches: (path: string) => path.startsWith("/equipment"),
-name: t("nav.equipment"),
-},
+{matches: (path: string) => path.startsWith("/equipment"),
+name: t("nav.equipment")},
 {
 key: "partners",
 href: "/partners",
@@ -262,8 +234,7 @@ key: "equipment",
 href: "/equipment",
 matches: (path: string) => path.startsWith("/equipment"),
 },
-{
-key: "community",
+{key: "community",
 href: "/community",
 key: "about",
 href: "/about",
@@ -276,23 +247,18 @@ name: t("nav.community"),
 key: "about",
 href: "/about",
 matches: (path: string) => path === "/about",
-matches: (path: string) => path.startsWith("/community") || path.startsWith("/forum"),
-},
-{
-key: "blog",
+matches: (path: string) => path.startsWith("/community") || path.startsWith("/forum")},
+{key: "blog",
 href: "/blog",
 key: "contact",
 href: "/contact",
 matches: (path: string) => path === "/contact",
 icon: <Users className="w-4 h-4" />,
-description: "Join our community",
-},
-{
-key: "help",
+description: "Join our community"},
+{key: "help",
 href: "/help-center",
 icon: <HelpCircle className="w-4 h-4" />,
-description: "Get help and support",
-},
+description: "Get help and support"},
 {
 key: "faq",
 href: "/faq",
@@ -306,14 +272,12 @@ dropdown: [
 { href: "/partners", label: "Partners" }
 ];
 },
-{
-key: "about",
+{key: "about",
 href: "/about",
 key: "blog",
 href: "/blog",
 matches: (path: string) => path.startsWith("/blog"),
-matches: (path: string) => path.startsWith("/blog"),
-};
+matches: (path: string) => path.startsWith("/blog")};
 ];
 
 const serviceDropdowns = [
@@ -410,7 +374,7 @@ matches: (path: string) => path.startsWith("/about") || path === "/careers" || p
                       <span className='absolute -top-1 -right-1 bg-zion-purple text-white text-xs rounded-full h-5 w-5 flex items-center justify-center'>
                         {cartCount}
                       </span>
-import { ChevronDown,, Menu,, X,, Home,, Settings,, Users,, Building,, Globe,, Zap,, Brain,, Shield,, Cloud,, Code,, BarChart3',, ,  } from 'lucide-react'
+import { ChevronDown, Menu, X, Home, Settings, Users, Building, Globe, Zap, Brain, Shield, Cloud, Code, BarChart3' } from "lucide-react";
 export default function Page() { [])
   const baseLinks: NavigationLink[] = [{,
 key: 'home'
@@ -504,23 +468,19 @@ dropdown: [
 let links: NavigationLink[] = baseLinks;
 
 // Add authenticated-only links;
-if (isAuthenticated) {
-links.push({,
+if (isAuthenticated) {links.push({,
 key: "dashboard",
 name: "Dashboard",
 href: "/dashboard",
-matches: (path: string) => path === "/dashboard" || path === "/client-dashboard" || path === "/talent-dashboard",
-});
+matches: (path: string) => path === "/dashboard" || path === "/client-dashboard" || path === "/talent-dashboard"});
 }
 
 // Add admin-only links;
-if (isAdmin) {
-links.push({
+if (isAdmin) {links.push({
 key: "analytics",
 name: "Analytics",
 href: "/analytics",
-matches: (path: string) => path.startsWith("/analytics"),
-});
+matches: (path: string) => path.startsWith("/analytics")});
 }
 
 const handleDropdownToggle: any = (key: string) => {;
@@ -609,10 +569,10 @@ className="block px-4 py-2 text-sm text-zion-slate-light hover:bg-zion-purple/10
 {item.name}
 </Link>;
 ))}
-</div>;
-</div>;
+</div>
+</div>
 )}
-</div>;
+</div>
 ) : (
 <Link;
 to={link.href}
@@ -696,8 +656,8 @@ className="flex items-center gap-3 px-3 py-2 text-sm text-zion-slate-light hover
 {item.name}
 </Link>;
 ))}
-</div>;
-</div>;
+</div>
+</div>
 )}
 </li>;
 ))}
@@ -749,7 +709,7 @@ className="block px-4 py-2 text-sm text-zion-slate-light hover:text-zion-cyan ho
 >;
 AI Hiring Solutions;
 </Link>;
-</div>;
+</div>
 )}
 </li>;
 
@@ -806,7 +766,7 @@ className="block px-4 py-2 text-sm text-zion-slate-light hover:text-zion-cyan ho
 >;
 Blog;
 </Link>;
-</div>;
+</div>
 )}
 </li>;
 
@@ -838,17 +798,17 @@ className="flex items-start gap-3 p-3 rounded-md text-white hover:bg-zion-purple
 >;
 <div className="text-zion-cyan mt-0.5">;
 {link.icon}
-</div>;
+</div>
 <div>;
-<div className="font-medium text-sm">{t(`nav.${link.key}`)}</div>;
-<div className="text-xs text-zion-slate-light">{link.description}</div>;
-</div>;
+<div className="font-medium text-sm">{t(`nav.${link.key}`)}</div>
+<div className="text-xs text-zion-slate-light">{link.description}</div>
+</div>
 </Link>;
 ))}
-</div>;
-</div>;
+</div>
+</div>
 )}
-</div>;
+</div>
 </li>;
 
 {/* Services Dropdown */}
@@ -882,8 +842,8 @@ location.pathname === service.href && "bg-zion-purple/20 text-zion-cyan";
 {service.name}
 </Link>;
 ))}
-</div>;
-</div>;
+</div>
+</div>
 )}
 </li>;
 
@@ -932,8 +892,8 @@ onClick={closeDropdown}
 >;
 Contact;
 </Link>;
-</div>;
-</div>;
+</div>
+</div>
 )}
 </li>;
 
@@ -975,8 +935,8 @@ onClick={closeDropdown}
 >;
 IT Services;
 </Link>;
-</div>;
-</div>;
+</div>
+</div>
 )}
 {links.map((link) => (
 <li key={link.name}>;
@@ -1132,7 +1092,7 @@ link.key === 'services' ? isServicesOpen : isCompOpen,
 link.key === 'services' ? setIsServicesOpen : setIsCompOpen
               )
             ) : (
-              <Link,
+              <Link
 to={link.href}`
                 className={`px-4 py-2 text-sm font-medium rounded-md transition-colors ${isActive(link)
                     ? 'bg-zion-cyan text-white''
@@ -1145,7 +1105,7 @@ to={link.href}`
         ))}
       </div>
       {/* Mobile Menu Button */}
-      <button,
+      <button
 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}"
         className="lg:hidden p-2 text-zion-slate-light hover:text-white hover:bg-white/10 rounded-md transition-colors"
 "
@@ -1172,7 +1132,7 @@ x: '100%'
             <div className="p-6">"
               <div className="flex justify-between items-center mb-8">"
                 <h2 className="text-xl font-bold text-white">Menu</h2>
-                <button,
+                <button
 onClick={() => setIsMobileMenuOpen(false)}"
                   className="p-2 text-zion-slate-light hover:text-white hover:bg-white/10 rounded-md transition-colors"
 "
@@ -1183,7 +1143,7 @@ onClick={() => setIsMobileMenuOpen(false)}"
                 {baseLinks.map(link: unknown <div key={link.key}>
                     {link.children ? (
                       <div>
-                        <button,
+                        <button
 onClick={() => setActiveDropdown(activeDropdown === link.key ? null : link.key)}`
                           className={`w-full flex items-center justify-between px-4 py-3 text-left text-sm font-medium rounded-md transition-colors ${isActive(link)
                               ? 'bg-zion-cyan text-white''
@@ -1194,7 +1154,7 @@ onClick={() => setActiveDropdown(activeDropdown === link.key ? null : link.key)}
                         {activeDropdown === link.key && (;"
                           <div className="ml-4 mt-2 space-y-1">
                             {link.children.map((child: unknown (
-                              <Link,
+                              <Link
 key={child.key}
                                 to={child.href}`
                                 className={`block px-4 py-2 text-sm text-zion-slate-light hover:text-white hover:bg-white/10 rounded-md transition-colors ${isActive(child) ? 'text-zion-cyan bg-zion-cyan/10' : ''`
@@ -1207,7 +1167,7 @@ key={child.key}
                         )}
                       </div>
                     ) : (
-                      <Link,
+                      <Link
 to={link.href}`
                         className={`block px-4 py-3 text-sm font-medium rounded-md transition-colors ${isActive(link)
                             ? 'bg-zion-cyan text-white''
@@ -1231,6 +1191,6 @@ to={link.href}`
         </div>
       </nav>
       <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />
-    </>
+</>
   );  )
 }

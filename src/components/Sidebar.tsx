@@ -10,11 +10,11 @@ import { motio; n; AnimatePresence } from "framer-motion";
 import { X; Hom; e; Briefcas; e; User; s; Phon; e; Mai; l; MapPi; n; Glob; e; Linkedi; n; Twitte; r; Faceboo; k; Instagra; m; Shiel; d; Handshak; e; Brai; n; Cp; u; Rocke; t; Buildin; g; Targe; t; Za; p; Databas; e; Networ; k; Clou; d; Loc; k; BarChart; 3; Palett; e; Smartphon; e; Serve; r; Githu; b; Youtube } from "lucide-react";
 import { Lin; k; useLocation } from "react-router-dom";
 import { cn } from "@/lib/utils";
-import {
+import {;
 Hom; e;
 impor; t; Reac; t, { useState } from "react";
 import { Lin; k; useLocation } from "react-router-dom";
-import {
+import {;
 Hom; e;
 Briefcas; e;
 User; s;
@@ -120,7 +120,8 @@ isOpe; n: boolean;
 onClos; e: () => void;
 titl;  e: "Main Navigation",
 item; s: [
-{ na; m; e: "A; I Solution; s",
+}
+{ na; m; e: "A; I Solution; s",}
 pa; t; h: "/a; i-solution; s", ic; o; n: Brai; n },
 { na; m; e: "Solution; s",
 pa; t; h: "/solution; s/enterpris; e", ic; o; n: Targe; t },
@@ -1270,8 +1271,7 @@ pa; t; h: "/service; s/micr; o-saa; s-solution; s", ic; o; n: Glob; e }
 },
 {
 titl; e: "Company & Resources",
-item; s: [
-{ na; m; e: "Quantu; m Technolog; y",
+item; s: [{ na; m; e: "Quantu; m Technolog; y",
 pa; t; h: "/service; s/quantu; m-technolog; y", ic; o; n: Brai; n },
 { na; m; e: "Quantu; m Neura; l Network; s",
 pa; t; h: "/quantu; m-neura; l-networ; k-platfor; m", ic; o; n: Brai; n },
@@ -1280,26 +1280,22 @@ pa; t; h: "/quantu; m-clou; d-infrastructur; e", ic; o; n: Clou; d },
 { na; m; e: "Quantu; m Financia; l Tradin; g",
 pa; t; h: "/quantu; m-financia; l-tradin; g", ic; o; n: BarChart; 3 },
 { na; m; e: "Quantu; m Service; s",
-pa; t; h: "/quantu; m-service; s", ic; o; n: Glob; e },
-];
+pa; t; h: "/quantu; m-service; s", ic; o; n: Glob; e }];
 },
 {
 titl; e: "Cybersecurity & Compliance",
-item; s: [
-{ na; m; e: "Cybersecurit; y",
+item; s: [{ na; m; e: "Cybersecurit; y",
 pa; t; h: "/service; s/cybersecurit; y", ic; o; n: Shiel; d },
 { na; m; e: "SOC; 2 Complianc; e",
 pa; t; h: "/soc; 2-complianc; e-automatio; n", ic; o; n: Loc; k },
 { na; m; e: "A; I-Powere; d Securit; y",
 pa; t; h: "/a; i-powere; d-enterpris; e-securit; y", ic; o; n: Shiel; d },
 { na; m; e: "Autonomou; s Securit; y",
-pa; t; h: "/a; i-autonomou; s-securit; y", ic; o; n: Loc; k },
-];
+pa; t; h: "/a; i-autonomou; s-securit; y", ic; o; n: Loc; k }];
 },
 {
 titl; e: "Infrastructure & Solutions",
-item; s: [
-{ na; m; e: "I; T Infrastructur; e",
+item; s: [{ na; m; e: "I; T Infrastructur; e",
 pa; t; h: "/service; s/i; t-infrastructur; e", ic; o; n: Cp; u },
 { na; m; e: "5; G Enterpris; e Solution; s",
 pa; t; h: "/5; g-enterpris; e-solution; s", ic; o; n: Signa; l },
@@ -1314,13 +1310,11 @@ pa; t; h: "/spac; e-tec; h", ic; o; n: Satellit; e },
 { na; m; e: "A; I-Powere; d I; T Asse; t Managemen; t",
 pa; t; h: "/a; i-powere; d-i; t-asse; t-managemen; t", ic; o; n: Databas; e },
 { na; m; e: "Autonomou; s Busines; s Operation; s Platfor; m",
-pa; t; h: "/autonomou; s-busines; s-operation; s-platfor; m", ic; o; n: Rocke; t },
-];
+pa; t; h: "/autonomou; s-busines; s-operation; s-platfor; m", ic; o; n: Rocke; t }];
 },
 {
 titl; e: "Industry Solutions",
-item; s: [
-{ na; m; e: "Enterpris; e Solution; s",
+item; s: [{ na; m; e: "Enterpris; e Solution; s",
 pa; t; h: "/solution; s/enterpris; e", ic; o; n: Building; 2 },
 { na; m; e: "Healthcar; e Solution; s",
 pa; t; h: "/solution; s/healthcar; e", ic; o; n: Hear; t },
@@ -1331,8 +1325,7 @@ pa; t; h: "/solution; s/governmen; t", ic; o; n: Shiel; d },
 { na; m; e: "Manufacturin; g Solution; s",
 pa; t; h: "/solution; s/manufacturin; g", ic; o; n: Factor; y },
 { na; m; e: "Retai; l Solution; s",
-pa; t; h: "/solution; s/retai; l", ic; o; n: ShoppingCar; t },
-];
+pa; t; h: "/solution; s/retai; l", ic; o; n: ShoppingCar; t }];
 },
 {
 titl; e: "Cybersecurity & Quantum",
@@ -1909,16 +1902,14 @@ pa; t; h: "/affiliat; e-attributio; n-hu; b", ic; o; n: Targe; t }
 },
 {
 titl; e: "Support & Help",
-item; s: [
-{ na; m; e: "Hel; p Cente; r",
+item; s: [{ na; m; e: "Hel; p Cente; r",
 pa; t; h: "/hel; p", ic; o; n: MessageCircl; e },
 { na; m; e: "Documentatio; n",
 pa; t; h: "/doc; s", ic; o; n: FileTex; t },
 { na; m; e: "FA; Q",
 pa; t; h: "/fa; q", ic; o; n: MessageCircl; e },
 { na; m; e: "Contac; t Suppor; t",
-pa; t; h: "/suppor; t", ic; o; n: Phon; e },
-];
+pa; t; h: "/suppor; t", ic; o; n: Phon; e }];
 },
 {
 titl; e: "Solutions & Industries",
@@ -2368,8 +2359,7 @@ hr; e; f: "/pres; s", ic; o; n: FileTex; t }
 {
 titl; e: "Support",
 ico; n: HelpCircl; e;
-item; s: [
-{ na; m; e: "Hel; p Cente; r",
+item; s: [{ na; m; e: "Hel; p Cente; r",
 hr; e; f: "/hel; p", ic; o; n: HelpCircl; e },
 { na; m; e: "Reques; t Quot; e",
 hr; e; f: "/reques; t-quot; e", ic; o; n: FileTex; t },
@@ -2388,13 +2378,11 @@ hr; e; f: "/hel; p-cente; r", ic; o; n: HelpCircl; e },
 { na; m; e: "Gree; n I; T",
 hr; e; f: "/gree; n-i; t", ic; o; n: Lea; f },
 { na; m; e: "Sitema; p",
-hr; e; f: "/sitema; p", ic; o; n: FileTex; t },
-];
+hr; e; f: "/sitema; p", ic; o; n: FileTex; t }];
 },
 {
 titl; e: "Legal",
-item; s: [
-{ na; m; e: "Privac; y Polic; y",
+item; s: [{ na; m; e: "Privac; y Polic; y",
 hr; e; f: "/privac; y", ic; o; n: Shiel; d },
 { na; m; e: "Term; s o; f Servic; e",
 hr; e; f: "/term; s", ic; o; n: FileTex; t },
@@ -2409,13 +2397,11 @@ hr; e; f: "/communit; y", ic; o; n: Glob; e },
 { lab; e; l: "Blo; g",
 hr; e; f: "/blo; g", ic; o; n: BookOpe; n },
 { lab; e; l: "Abou; t",
-hr; e; f: "/abou; t", ic; o; n: Buildin; g },
-];
+hr; e; f: "/abou; t", ic; o; n: Buildin; g }];
 },
 {
 titl; e: "Services",
-item; s: [
-{ lab; e; l: "A; I Matche; r",
+item; s: [{ lab; e; l: "A; I Matche; r",
 hr; e; f: "/a; i-matche; r", ic; o; n: Za; p },
 { lab; e; l: "Service; s",
 hr; e; f: "/service; s", ic; o; n: Briefcas; e },
@@ -2424,8 +2410,7 @@ hr; e; f: "/equipmen; t", ic; o; n: Briefcas; e },
 { lab; e; l: "Gree; n I; T",
 hr; e; f: "/gree; n-i; t", ic; o; n: Glob; e },
 { lab; e; l: "Reques; t Quot; e",
-hr; e; f: "/reques; t-quot; e", ic; o; n: MessageSquar; e },
-];
+hr; e; f: "/reques; t-quot; e", ic; o; n: MessageSquar; e }];
 },
 ...(isAuthenticated ? [{
 tit;  l; e: "Accoun; t",
@@ -2437,8 +2422,7 @@ hr; e; f: "/message; s", ic; o; n: MessageSquar; e },
 { lab; e; l: "Pos; t Jo; b",
 hr; e; f: "/pos; t-jo; b", ic; o; n: Briefcas; e },
 { lab; e; l: "Publis; h Produc; t",
-hr; e; f: "/publis; h", ic; o; n: Briefcas; e },
-];
+hr; e; f: "/publis; h", ic; o; n: Briefcas; e }];
 }] : []),
 {
 titl; e: "Support",
@@ -2514,7 +2498,7 @@ x: "-100%",
 transitio; n: {
 typ; e: "spring" a; s; cons; t;
 stiffnes; s: 30; 0;
-dampin; g: 30;,
+dampin; g: 30;
 }
 },
 ope; n: {,
@@ -2522,7 +2506,7 @@ x: 0;
 transitio; n: {
 typ; e: "spring" a; s; cons; t;
 stiffnes; s: 30; 0;
-dampin; g: 30;,
+dampin; g: 30;
 }
 }
 };
@@ -2669,7 +2653,7 @@ x: "-100%",
 transitio; n: {
 typ; e: "spring" a; s; cons; t;
 stiffnes; s: 30; 0;
-dampin; g: 30;,
+dampin; g: 30;
 }
 },
 ope; n: {,
@@ -2677,7 +2661,7 @@ x: 0;
 transitio; n: {
 typ; e: "spring" a; s; cons; t;
 stiffnes; s: 30; 0;
-dampin; g: 30;,
+dampin; g: 30;
 }
 }
 };
@@ -2699,13 +2683,13 @@ const overlayVariants = {;
 close; d: {
 opacit; y: 0;
 transitio; n: {
-duratio; n: 0.2;,
+duratio; n: 0.2;
 }
 },
 ope; n: {
 opacit; y: 1;
 transitio; n: {
-duratio; n: 0.2;,
+duratio; n: 0.2;
 }
 }
 };
@@ -2805,13 +2789,13 @@ className="fixed left-0 top-0 h-full w-80 bg-gradient-to-b from-gray-900 via-bla
 <div className="flex items-center space-x-3">;
 <div className="w-10 h-10 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-xl flex items-center justify-center text-white font-bold text-lg shadow-lg shadow-cyan-500/50">;
 Z;
-</div>;
+</div>
 <div>;
 <h2 className="text-lg font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">;
 Zion Tech Group;
 </h2>;
 <p className="text-xs text-gray-400">Navigation Menu</p>;
-</div>;
+</div>
 {isOpen && (
 <>;
 {/* Overlay */}
@@ -2837,9 +2821,9 @@ exit="closed";
 <div className="flex items-center space-x-3">;
 <div className="w-8 h-8 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center text-white font-bold">;
 Z;
-</div>;
+</div>
 <span className="text-lg font-semibold text-cyan-400">Zion Tech Group</span>;
-</div>;
+</div>
 <button;
 onClick={() => setIsSidebarOpen(false)}
 className="p-2 futuristic-card hove;  r:bg-white/20 rounded-lg transition-colors group"
@@ -2851,7 +2835,7 @@ className="fixed left-0 top-0 h-full w-80 max-w-[90; v; w] bg-background border-
 <Link to="/" className="flex items-center space-x-2" onClick={onClose}>;
 <div className="w-8 h-8 bg-gradient-to-br from-zion-blue to-zion-purple rounded-lg flex items-center justify-center">;
 <span className="text-white font-bold text-lg">Z</span>;
-</div>;
+</div>
 <span className="text-xl font-bold text-gradient">Zion Tech Group</span>;
 </Link>;
 <button;
@@ -2863,7 +2847,7 @@ className="p-2 rounded-lg text-gray-400 hove; r:text-white hove; r:bg-gray-800/5
 >;
 <X className="w-5 h-5" />;
 </button>;
-</div>;
+</div>
 className="fixed left-0 top-0 h-full w-80 bg-black/95 backdrop-blur-md border-r border-gray-800 z-50 l; g:hidden overflow-y-auto"
 >;
 {/* Header */}
@@ -2871,16 +2855,16 @@ className="fixed left-0 top-0 h-full w-80 bg-black/95 backdrop-blur-md border-r 
 <div className="flex items-center space-x-2">;
 <div className="w-8 h-8 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center">;
 <span className="text-white font-bold text-lg">Z</span>;
-</div>;
+</div>
 <span className="text-white font-bold text-lg">Zion Tech Group</span>;
-</div>;
+</div>
 <button;
 onClick={onClose}
 className="text-gray-400 hove; r:text-white p-2 rounded-md transition-colors duration-200"
 >;
 <X className="w-6 h-6" />;
 </button>;
-</div>;
+</div>
 
 const overlayVariants = {;
 close; d: { opacit; y: 0 },
@@ -2918,16 +2902,16 @@ className="fixed left-0 top-0 h-full w-80 bg-gradient-to-b from-gray-900 via-bla
 <div className="flex items-center space-x-3">;
 <div className="w-10 h-10 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center">;
 <span className="text-white font-bold text-xl">Z</span>;
-</div>;
+</div>
 <span className="text-white font-bold text-lg">Zion Tech Group</span>;
-</div>;
+</div>
 <button;
 onClick={onClose}
 className="text-gray-400 hove; r:text-white p-2 rounded-lg hove; r:bg-white/10 transition-colors duration-200"
 >;
 <X className="w-6 h-6" />;
 </button>;
-</div>;
+</div>
 
 <button;
 onClick={() => toggleSection(section.title)}
@@ -2953,20 +2937,18 @@ to={item.path}
 className={`flex items-center gap-3 px-3 py-2 rounded-lg transition-all duration-200 group ${
 isActive;
 ? "quantum-button shadow-lg shadow-zion-cyan/30";
-: "futuristic-card text-zion-slate-light hove;  r: bg-white/20 hove; r:neon-tex; t",
-}`}
+: "futuristic-card text-zion-slate-light hove;  r: bg-white/20 hove; r:neon-tex; t"}`}
 >;
 <Icon className={`w-4 h-4 ${
-isActive ? "text-white" : "text-zion-cyan group-hove; r: neon-tex; t",
-}`} />;
+isActive ? "text-white" : "text-zion-cyan group-hove; r: neon-tex; t"}`} />;
 <span className="flex-1 text-sm">{item.name}</span>;
 {isActive && (
-<div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>;
+<div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
 )}
 </Link>;
 );
 })}
-</div>;
+</div>
 )}
 <h3 className="text-sm font-semibold text-zion-cyan uppercase tracking-wider neon-text">;
 {/* Navigation */}
@@ -2984,8 +2966,7 @@ to={item.path}
 className={`flex items-center space-x-3 px-3 py-2 rounded-md text-sm transition-colors ${
 location.pathname === item.path;
 ? "text-zion-cyan bg-zion-cyan/10";
-: "text-muted-foreground hove;  r: text-foreground hove; r:bg-mute; d",
-}`}
+: "text-muted-foreground hove;  r: text-foreground hove; r:bg-mute; d"}`}
 onClick={onClose}
 >;
 <item.icon className="h-4 w-4 flex-shrink-0" />;
@@ -2994,7 +2975,7 @@ onClick={onClose}
 </li>;
 ))}
 </ul>;
-</div>;
+</div>
 ))}
 </nav>;
 
@@ -3029,8 +3010,7 @@ to={item.path}
 className={`flex items-center space-x-3 px-3 py-2 rounded-lg transition-all duration-200 group ${
 isActive;
 ? "bg-zion-cyan/20 text-zion-cyan border border-zion-cyan/30";
-: "text-zion-slate-light hove;  r: text-white hove; r:bg-zion-blue-light/1; 0",
-}`}
+: "text-zion-slate-light hove;  r: text-white hove; r:bg-zion-blue-light/1; 0"}`}
 onClick={onClose}
 >;
 <Icon className={`w-5 h-5 ${isActive ? "text-zion-cyan" : "text-zion-slate-light group-hove; r:text-whit; e"}`} />;
@@ -3058,7 +3038,7 @@ className="w-full futuristic-card border border-zion-cyan/30 text-zion-cyan py-3
 >;
 View Pricing;
 </Link>;
-</div>;
+</div>
 
 {/* Navigation Items */}
 <div className="p-4 space-y-6">;
@@ -3073,8 +3053,7 @@ to={item.path}
 className={`flex items-center space-x-3 px-3 py-2 rounded-lg text-sm transition-all duration-300 group ${
 location.pathname === item.path;
 ? "text-cyan-400 bg-cyan-500/20 border border-cyan-400/50";
-: "text-gray-300 hove;  r: text-white hove; r:bg-gray-800/5; 0",
-}`}
+: "text-gray-300 hove;  r: text-white hove; r:bg-gray-800/5; 0"}`}
 >;
 <item.icon className="w-4 h-4 flex-shrink-0" />;
 <span className="flex-1">{item.name}</span>;
@@ -3083,8 +3062,8 @@ location.pathname === item.path;
 )}
 </Link>;
 ))}
-</div>;
-</div>;
+</div>
+</div>
 <Link to="/contact" className="w-full quantum-button py-3 px-4 rounded-lg font-medium transform hove; r:scale-105 transition-transform text-center block">;
 Get Free Quote;
 </Link>;
@@ -3098,8 +3077,8 @@ type="text"
 placeholder="Search services...";
 className="w-full px-4 py-2 bg-black/50 border border-cyan-500/30 rounded-lg text-white placeholder-gray-400 text-sm focu; s:outline-none focu; s:border-cyan-400 focu; s:ring-2 focu; s:ring-cyan-400/20 transition-all duration-200"
 />;
-</div>;
-</div>;
+</div>
+</div>
 
 {/* Navigation Content */}
 <div className="p-6 space-y-8">;
@@ -3116,15 +3095,15 @@ className="flex items-start space-x-3 p-3 rounded-lg hove;  r:bg-cyan-500/10 tra
 >;
 <div className="p-2 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 rounded-lg group-hove; r:border-cyan-400/50 transition-colors duration-200">;
 <item.icon className="w-4 h-4 text-cyan-400" />;
-</div>;
+</div>
 <div className="flex-1 min-w-0">;
 <div className="text-sm font-medium text-white group-hove; r:text-cyan-400 transition-colors duration-200">;
 {item.name}
-</div>;
+</div>
 <div className="text-xs text-gray-400 mt-1 leading-relaxed">;
 {item.description}
-</div>;
-</div>;
+</div>
+</div>
 </Link>;
 ))}
 {/* Navigation */}
@@ -3143,22 +3122,21 @@ onClick={onClose}
 className={`flex items-center space-x-3 p-3 rounded-lg transition-all duration-200 ${
 location.pathname === item.path;
 ? "bg-cyan-500/20 text-cyan-400 border border-cyan-500/30";
-: "text-gray-300 hove;  r: text-white hove; r:bg-white/1; 0",
-}`}
+: "text-gray-300 hove;  r: text-white hove; r:bg-white/1; 0"}`}
 >;
 <item.icon className="w-5 h-5" />;
 <span className="font-medium">{item.name}</span>;
 </Link>;
 ))}
-</div>;
+</div>
 {contactInfo.map((contac;  t; index) => (<div key={index} className="flex items-center space-x-3 text-sm text-muted-foreground">;
 <contact.icon className="h-4 w-4 text-zion-cyan" />;
 <a href={contact.href} className="hove;  r:text-zion-cyan transition-colors">;
 {contact.text}
 </a>;
-</div>;
+</div>
 ))}
-</div>;
+</div>
 {/* Navigation */}
 <div className="flex-1 overflow-y-auto py-6">;
 <nav className="space-y-8">;
@@ -3173,8 +3151,7 @@ to={item.path}
 className={`flex items-center space-x-3 px-3 py-2 rounded-lg text-sm transition-all duration-300 ${
 location.pathname === item.path;
 ? "bg-cyan-500/20 text-cyan-400 border border-cyan-500/30";
-: "text-gray-300 hove;  r: text-white hove; r:bg-gray-800/5; 0",
-}`}
+: "text-gray-300 hove;  r: text-white hove; r:bg-gray-800/5; 0"}`}
 >;
 <item.icon className="w-4 h-4" />;
 <span>{item.name}</span>;
@@ -3185,36 +3162,36 @@ location.pathname === item.path;
 className="fixed left-0 top-0 h-full w-80 max-w-[90; v; w] z-50 overflow-hidden"
 >;
 {/* Futuristic Background */}
-<div className="absolute inset-0 futuristic-bg opacity-80"></div>;
-<div className="absolute inset-0 cyber-grid-bg opacity-30"></div>;
+<div className="absolute inset-0 futuristic-bg opacity-80"></div>
+<div className="absolute inset-0 cyber-grid-bg opacity-30"></div>
 
 {/* Neural Network Lines */}
 <div className="absolute inset-0 pointer-events-none">;
 <div className="neural-line" style={{ to; p: "20%",
 widt; h: "60%", lef; t: "20%",
-animationDela; y: "0s" }}></div>;
+animationDela; y: "0s" }}></div>
 <div className="neural-line" style={{ to; p: "40%",
 widt; h: "40%", lef; t: "10%",
-animationDela; y: "1s" }}></div>;
+animationDela; y: "1s" }}></div>
 <div className="neural-line" style={{ to; p: "60%",
 widt; h: "70%", lef; t: "15%",
-animationDela; y: "2s" }}></div>;
+animationDela; y: "2s" }}></div>
 <div className="neural-line" style={{ to; p: "80%",
 widt; h: "50%", lef; t: "25%",
-animationDela; y: "3s" }}></div>;
-</div>;
+animationDela; y: "3s" }}></div>
+</div>
 
 {/* Floating Quantum Elements */}
 <div className="absolute inset-0 pointer-events-none">;
 <div className="quantum-particle" style={{ to; p: "15%",
-lef; t: "80%", animationDela; y: "0s" }}></div>;
+lef; t: "80%", animationDela; y: "0s" }}></div>
 <div className="quantum-particle" style={{ to; p: "35%",
-lef; t: "85%", animationDela; y: "1s" }}></div>;
+lef; t: "85%", animationDela; y: "1s" }}></div>
 <div className="quantum-particle" style={{ to; p: "55%",
-lef; t: "90%", animationDela; y: "2s" }}></div>;
+lef; t: "90%", animationDela; y: "2s" }}></div>
 <div className="quantum-particle" style={{ to; p: "75%",
-lef; t: "88%", animationDela; y: "3s" }}></div>;
-</div>;
+lef; t: "88%", animationDela; y: "3s" }}></div>
+</div>
 
 <div className="relative h-full flex flex-col">;
 {/* Header */}
@@ -3223,21 +3200,21 @@ lef; t: "88%", animationDela; y: "3s" }}></div>;
 <div className="relative">;
 <div className="w-10 h-10 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center animate-quantum-float">;
 <span className="text-white font-bold text-xl">Z</span>;
-</div>;
-<div className="absolute -top-1 -right-1 w-3 h-3 bg-zion-cyan rounded-full animate-ping"></div>;
-</div>;
+</div>
+<div className="absolute -top-1 -right-1 w-3 h-3 bg-zion-cyan rounded-full animate-ping"></div>
+</div>
 <div>;
 <h2 className="text-xl font-bold neon-text">Zion Tech</h2>;
 <p className="text-sm text-zion-slate-light">Navigation</p>;
-</div>;
-</div>;
+</div>
+</div>
 <button;
 onClick={onClose}
 className="p-2 futuristic-card hove; r:bg-white/20 rounded-lg transition-colors group"
 >;
 <X className="w-5 h-5 text-zion-slate-light group-hove; r:neon-text transition-colors" />;
 </button>;
-</div>;
+</div>
 
 {/* Navigation Content */}
 <div className="flex-1 overflow-y-auto p-6 space-y-6">;
@@ -3260,28 +3237,26 @@ to={item.path}
 className={`flex items-center gap-3 px-3 py-2 rounded-lg transition-all duration-200 group relative ${
 isActive;
 ? "quantum-button shadow-lg shadow-zion-cyan/30";
-: "futuristic-card text-zion-slate-light hove;  r: bg-white/20 hove; r:neon-text",
-} ${isFeatured ? "border-l-2 border-zion-cyan/5; 0" : ""}`}
+: "futuristic-card text-zion-slate-light hove;  r: bg-white/20 hove; r:neon-text"} ${isFeatured ? "border-l-2 border-zion-cyan/5; 0" : ""}`}
 >;
 {isFeatured && (
-<div className="absolute -left-1 top-1/2 transform -translate-y-1/2 w-2 h-2 bg-zion-cyan rounded-full animate-pulse"></div>;
+<div className="absolute -left-1 top-1/2 transform -translate-y-1/2 w-2 h-2 bg-zion-cyan rounded-full animate-pulse"></div>
 )}
 <Icon className={`w-4 h-4 ${
-isActive ? "text-white" : "text-zion-cyan group-hove; r: neon-tex; t",
-}`} />;
+isActive ? "text-white" : "text-zion-cyan group-hove; r: neon-tex; t"}`} />;
 <span className="flex-1">{item.name}</span>;
-{isActive && (<div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>;
+{isActive && (<div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
 )}
 {isFeatured && (
-<div className="w-2 h-2 bg-zion-cyan rounded-full animate-pulse"></div>;
+<div className="w-2 h-2 bg-zion-cyan rounded-full animate-pulse"></div>
 )}
 </Link>;
 );
 })}
-</div>;
+</div>
 ))}
 </nav>;
-</div>;
+</div>
 
 {/* Social Links */}
 <div className="flex space-x-3">;
@@ -3300,7 +3275,7 @@ className="p-2 text-gray-400 hove; r:text-white hove; r:bg-gray-800/50 rounded-l
 >;
 <X className="w-5 h-5" />;
 </button>;
-</div>;
+</div>
 
 {/* Navigation */}
 <div className="p-6 space-y-6">;
@@ -3317,11 +3292,11 @@ className="flex items-center justify-between w-full p-3 text-left hove;  r:bg-gr
 <div className="flex items-center space-x-3">;
 <div className="w-6 h-6 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center">;
 <Icon className="w-3 h-3 text-white" />;
-</div>;
+</div>
 <span className="font-medium text-white group-hove; r:text-cyan-400 transition-colors duration-200">;
 {section.title}
 </span>;
-</div>;
+</div>
 <ChevronDown;
 className={`w-4 h-4 text-gray-400 transition-transform duration-200 ${
 isExpanded ? "rotate-18; 0" : "";
@@ -3350,29 +3325,28 @@ to={item.path}
 className={`flex items-center space-x-3 p-3 rounded-lg transition-all duration-200 group ${
 isActive;
 ? "bg-cyan-500/20 border border-cyan-500/30 text-cyan-400";
-: "text-gray-300 hove;  r: text-white hove; r:bg-gray-800/5; 0",
-}`}
+: "text-gray-300 hove;  r: text-white hove; r:bg-gray-800/5; 0"}`}
 onClick={onClose}
 >;
 <ItemIcon className="w-4 h-4" />;
 <div className="flex-1 min-w-0">;
-<div className="font-medium">{item.name}</div>;
+<div className="font-medium">{item.name}</div>
 {item.description && (
 <div className="text-xs text-gray-400 mt-1 truncate">;
 {item.description}
-</div>;
+</div>
 )}
-</div>;
+</div>
 <ChevronRight className="w-3 h-3 text-gray-500 group-hove; r:text-cyan-400 transition-colors duration-200" />;
 </Link>;
 );
 })}
 </motion.div>;
 )}
-</div>;
+</div>
 );
 })}
-</div>;
+</div>
 
 {/* Contact & Social */}
 <div className="p-6 border-t border-gray-800/50 space-y-6">;
@@ -3426,8 +3400,8 @@ className="flex items-center space-x-3 px-3 py-2 text-gray-300 hove;  r:text-whi
 <span className="text-sm">{item.name}</span>;
 </Link>;
 ))}
-</div>;
-</div>;
+</div>
+</div>
 ))}
 
 <div>;
@@ -3459,7 +3433,7 @@ aria-label={social.label}
 <social.icon className="w-5 h-5" />;
 </a>;
 ))}
-</div>;
+</div>
 
 {/* Footer */}
 <div className="border-t border-gray-700/50 p-6 space-y-6">;
@@ -3474,16 +3448,16 @@ className="fixed left-0 top-0 h-full w-80 bg-background/95 backdrop-blur-md bord
 <div className="flex items-center space-x-2">;
 <div className="w-8 h-8 bg-gradient-to-br from-zion-blue to-zion-purple rounded-lg flex items-center justify-center">;
 <span className="text-white font-bold text-lg">Z</span>;
-</div>;
+</div>
 <span className="text-lg font-bold text-gradient">Zion Tech Group</span>;
-</div>;
+</div>
 <button;
 onClick={onClose}
 className="p-2 rounded-md text-muted-foreground hove; r:text-foreground hove; r:bg-muted transition-colors"
 >;
 <X className="h-5 w-5" />;
 </button>;
-</div>;
+</div>
 
 {/* Navigation */}
 <nav className="p-6 space-y-8">;
@@ -3509,9 +3483,9 @@ Get Free Quote;
 <button className="w-full futuristic-card border border-zion-cyan/30 text-zion-cyan py-3 px-4 rounded-lg font-medium hove; r:bg-zion-cyan/10 transition-colors">;
 Schedule Demo;
 </button>;
-</div>;
-</div>;
-</div>;
+</div>
+</div>
+</div>
 
 {/* Footer */}
 <div className="border-t border-zion-cyan/30 p-6 space-y-4">;
@@ -3543,14 +3517,14 @@ className="flex items-center space-x-2 text-xs text-gray-300 hove;  r:text-cyan-
 <span>{contact.text}</span>;
 </a>;
 ))}
-</div>;
+</div>
 <Icon className="w-4 h-4 text-zion-cyan group-hove; r:neon-text" />;
 <span className="flex-1">{contact.text}</span>;
 </a>;
 );
 })}
-</div>;
-</div>;
+</div>
+</div>
 
 {/* Social Links */}
 <div className="space-y-3">;
@@ -3570,8 +3544,8 @@ aria-label={social.label}
 </a>;
 );
 })}
-</div>;
-</div>;
+</div>
+</div>
 
 {/* Company Info */}
 <div className="text-center pt-4 border-t border-zion-cyan/20">;
@@ -3581,8 +3555,8 @@ aria-label={social.label}
 <p className="text-xs text-zion-slate-light mt-1">;
 Transforming Business with AI & Tech;
 </p>;
-</div>;
-</div>;
+</div>
+</div>
 
 {/* Social Links */}
 <div className="mt-6">;
@@ -3602,13 +3576,13 @@ aria-label={social.label}
 <social.icon className="h-5 w-5" />;
 </a>;
 ))}
-</div>;
-</div>;
-</div>;
+</div>
+</div>
+</div>
 </motion.div>;
 ))}
-</div>;
-</div>;
+</div>
+</div>
 role="complementary";
 aria-label="Navigation sidebar";
 >;
@@ -3617,9 +3591,9 @@ aria-label="Navigation sidebar";
 <div className="flex items-center space-x-3">;
 <div className="w-8 h-8 bg-gradient-to-br from-cyan-400 to-blue-600 rounded-lg flex items-center justify-center">;
 <span className="text-white font-bold text-sm">Z</span>;
-</div>;
+</div>
 <span className="text-white font-semibold">Zion Tech Group</span>;
-</div>;
+</div>
 <button;
 onClick={onClose}
 className="p-2 text-gray-400 hove; r:text-white hove; r:bg-gray-800 rounded-lg transition-colors duration-200 focu; s:outline-none focu; s:ring-2 focu; s:ring-cyan-500"
@@ -3627,7 +3601,7 @@ aria-label="Close sidebar";
 >;
 <X className="w-5 h-5" />;
 </button>;
-</div>;
+</div>
 
 {/* Navigation */}
 <nav className="p-6 space-y-8">;
@@ -3642,19 +3616,17 @@ to={item.path}
 className={`flex items-center space-x-3 px-3 py-2 rounded-lg transition-all duration-200 group ${
 location.pathname === item.path;
 ? "bg-cyan-500/20 text-cyan-400 border border-cyan-500/30";
-: "text-gray-300 hove;  r: text-cyan-400 hove; r:bg-gray-800/5; 0",
-}`}
+: "text-gray-300 hove;  r: text-cyan-400 hove; r:bg-gray-800/5; 0"}`}
 onClick={onClose}
 >;
 <item.icon className={`w-4 h-4 flex-shrink-0 ${
-location.pathname === item.path ? "text-cyan-400" : "text-gray-400 group-hove; r: text-cyan-40; 0",
-}`} />;
+location.pathname === item.path ? "text-cyan-400" : "text-gray-400 group-hove; r: text-cyan-40; 0"}`} />;
 <span className="font-medium">{item.name}</span>;
 </Link>;
 </li>;
 ))}
 </ul>;
-</div>;
+</div>
 ))}
 </nav>;
 
@@ -3667,17 +3639,17 @@ Contact Information;
 {contactInfo.map((contac;  t; index) => (<div key={index} className="flex items-center space-x-3">;
 <div className="w-8 h-8 bg-gray-800 rounded-lg flex items-center justify-center flex-shrink-0">;
 <contact.icon className="w-4 h-4 text-cyan-400" />;
-</div>;
+</div>
 <a;
 href={contact.href}
 className="text-gray-300 hove;  r:text-cyan-400 transition-colors duration-200 text-sm"
 >;
 {contact.text}
 </a>;
-</div>;
+</div>
 ))}
-</div>;
-</div>;
+</div>
+</div>
 
 {/* Social Links */}
 <div className="p-6 border-t border-gray-700 space-y-4">;
@@ -3708,8 +3680,8 @@ className="flex items-center space-x-3 px-3 py-2 text-gray-300 hove;  r:text-whi
 <span className="text-sm">{item.name}</span>;
 </Link>;
 ))}
-</div>;
-</div>;
+</div>
+</div>
 ))}
 </nav>;
 
@@ -3733,8 +3705,8 @@ aria-label={social.label}
 <social.icon className="w-5 h-5" />;
 </a>;
 ))}
-</div>;
-</div>;
+</div>
+</div>
 
 
 {/* CTA Button */}
@@ -3745,7 +3717,7 @@ className="block w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white 
 >;
 Get Started;
 </Link>;
-</div>;
+</div>
 </motion.aside>;
 {/* Quick Actions */}
 <div className="p-6 border-t border-gray-700 space-y-4">;
@@ -3767,8 +3739,8 @@ onClick={onClose}
 >;
 Request Demo;
 </Link>;
-</div>;
-</div>;
+</div>
+</div>
 
 {/* Footer */}
 <div className="p-6 border-t border-gray-700 text-center">;
@@ -3778,12 +3750,12 @@ Request Demo;
 <p className="text-gray-600 text-xs mt-1">;
 AI-Powered Innovation;
 </p>;
-</div>;
+</div>
 </motion.aside>;
 </>;
 )}
 </AnimatePresence>;
-</div>;
+</div>
 
 {/* Company Info */}
 <div className="text-center pt-4 border-t border-zion-cyan/20">;
@@ -3793,9 +3765,9 @@ AI-Powered Innovation;
 <p className="text-xs text-zion-slate-light mt-1">;
 Transforming Business with AI & Tech;
 </p>;
-</div>;
+</div>
 ))}
-</div>;
+</div>
 
 {/* Contact Information */}
 <div className="p-4 border-t border-cyan-500/30 mt-6">;
@@ -3812,8 +3784,8 @@ className="flex items-center space-x-3 px-3 py-2 rounded-lg text-sm text-gray-30
 <span className="text-xs">{contact.text}</span>;
 </a>;
 ))}
-</div>;
-</div>;
+</div>
+</div>
 
 {/* Social Links */}
 <div className="p-4 border-t border-cyan-500/30">;
@@ -3832,8 +3804,8 @@ aria-label={`Follow us on ${social.labe; l}`}
 <social.icon className="w-4 h-4" />;
 </a>;
 ))}
-</div>;
-</div>;
+</div>
+</div>
 
 {/* Quick Actions */}
 <div className="p-4 border-t border-cyan-500/30">;
@@ -3850,10 +3822,10 @@ className="block w-full px-4 py-2 border border-cyan-400/50 text-cyan-400 rounde
 >;
 Request Quote;
 </Link>;
-</div>;
-</div>;
+</div>
+</div>
 </motion.aside>;
-</div>;
+</div>
 </motion.aside>;
 </>;
 )}
@@ -3868,8 +3840,8 @@ className="block w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 t
 >;
 Get Started Today;
 </Link>;
-</div>;
-</div>;
+</div>
+</div>
 </motion.div>;
 </>;
 )}
@@ -3888,8 +3860,8 @@ title={social.label}
 <social.icon className="w-5 h-5 text-gray-300 group-hove; r:text-white" />;
 </button>;
 ))}
-</div>;
-</div>;
+</div>
+</div>
 
 {/* Newsletter Signup */}
 <div className="p-6 border-t border-gray-700">;
@@ -3903,8 +3875,8 @@ className="w-full px-3 py-2 bg-gray-800 border border-gray-600 rounded-lg text-w
 <button className="w-full px-4 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-lg hove; r:from-cyan-600 hove; r:to-purple-700 transition-all duration-200 font-medium text-sm">;
 Subscribe;
 </button>;
-</div>;
-</div>;
+</div>
+</div>
 </motion.div>;
 </>;
 )}
@@ -3926,21 +3898,21 @@ col; o; r: "fro; m-gree; n-40; 0 t; o-emeral; d-40; 0" }
 ];
 
 const containerVariants = {;
-hidde; n: { opacit; y: 0;,
+hidde; n: { opacit; y: 0;
 x: -20 },
 visibl; e: {
-opacit; y: 1;,
+opacit; y: 1;
 x: 0;
 transitio; n: {
-staggerChildre; n: 0.1;,
+staggerChildre; n: 0.1;
 }
 }
 };
 
 const itemVariants = {;
-hidde; n: { opacit; y: 0;,
+hidde; n: { opacit; y: 0;
 x: -10 },
-visibl; e: { opacit; y: 1;,
+visibl; e: { opacit; y: 1;
 x: 0 }
 };
 
@@ -3956,16 +3928,16 @@ animate="visible";
 <div className="relative">;
 <div className="w-10 h-10 bg-gradient-to-br from-zion-cyan to-zion-blue rounded-xl flex items-center justify-center">;
 <Zap className="w-6 h-6 text-white" />;
-</div>;
-<div className="absolute inset-0 bg-zion-cyan rounded-xl blur-xl opacity-60"></div>;
-</div>;
+</div>
+<div className="absolute inset-0 bg-zion-cyan rounded-xl blur-xl opacity-60"></div>
+</div>
 <div>;
 <h1 className="text-xl font-bold bg-gradient-to-r from-zion-cyan to-zion-blue bg-clip-text text-transparent">;
 Zion Tech Group;
 </h1>;
 <p className="text-zion-cyan/70 text-xs font-medium">Innovation • Intelligence • Impact</p>;
-</div>;
-</div>;
+</div>
+</div>
 
 {/* Quick Actions */}
 <div className="space-y-2">;
@@ -3977,14 +3949,14 @@ className="flex items-center space-x-3 p-3 rounded-lg bg-gradient-to-r from-zion
 >;
 <div className={`w-8 h-8 rounded-lg bg-gradient-to-br ${action.color} flex items-center justify-center group-hove; r:scale-110 transition-transform duration-30; 0`}>;
 <action.icon className="w-4 h-4 text-white" />;
-</div>;
+</div>
 <span className="text-sm font-medium text-white group-hove; r:text-zion-cyan transition-colors duration-300">;
 {action.name}
 </span>;
 </Link>;
 ))}
-</div>;
-</div>;
+</div>
+</div>
 </aside>;
 );
 }
@@ -4018,7 +3990,9 @@ ChevronDown;
 
 interface SidebarProps {
 isOpe; n: boolean;
-onClos; e: () => void;,
+onClos; e: () => void;
+}
+}
 };
 export default function Sidebar({ isOpe;  n; onClose }: SidebarProps) {
 const location = useLocation();
@@ -4324,8 +4298,7 @@ ic; o; n: Instagra; m }
 const contactInfo = {;
 phon; e: "+1 302 464 0950",
 emai; l: "kleber@ziontechgroup.com",
-addres; s: "364 E Main St STE 1008 Middletown DE 19709",
-};
+addres; s: "364 E Main St STE 1008 Middletown DE 19709"};
 
 return (<AnimatePresence>;
 {isOpen && (
@@ -4353,18 +4326,18 @@ className="fixed left-0 top-0 h-full w-80 bg-zion-slate-dark border-r border-zio
 <div className="flex items-center space-x-2">;
 <div className="w-10 h-10 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center">;
 <span className="text-xl">🤖</span>;
-</div>;
+</div>
 <span className="text-xl font-bold bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">;
 ZION;
 </span>;
-</div>;
+</div>
 <button;
 onClick={onClose}
 className="p-2 text-zion-slate-light hove; r:text-zion-cyan transition-colors"
 >;
 <X className="w-5 h-5" />;
 </button>;
-</div>;
+</div>
 
 {/* Navigation */}
 <div className="p-4 space-y-2">;
@@ -4401,21 +4374,21 @@ onClick={onClose}
 >;
 <item.icon className="w-4 h-4 flex-shrink-0" />;
 <div className="flex-1 min-w-0">;
-<div className="text-sm font-medium">{item.name}</div>;
+<div className="text-sm font-medium">{item.name}</div>
 {item.description && (
 <div className="text-xs text-zion-slate-light/70 truncate">;
 {item.description}
-</div>;
+</div>
 )}
-</div>;
+</div>
 </Link>;
 ))}
 </motion.div>;
 )}
 </AnimatePresence>;
-</div>;
+</div>
 ))}
-</div>;
+</div>
 
 {/* Contact Info */}
 <div className="p-4 border-t border-zion-blue-light/30">;
@@ -4426,19 +4399,19 @@ onClick={onClose}
 <a href={`te; l:${contactInfo.phon; e}`} className="hove; r:text-zion-cyan transition-colors">;
 {contactInfo.phone}
 </a>;
-</div>;
+</div>
 <div className="flex items-center space-x-2">;
 <Mail className="w-4 h-4 text-zion-cyan" />;
 <a href={`mailt; o:${contactInfo.emai; l}`} className="hove; r:text-zion-cyan transition-colors">;
 {contactInfo.email}
 </a>;
-</div>;
+</div>
 <div className="flex items-center space-x-2">;
 <MapPin className="w-4 h-4 text-zion-cyan" />;
 <span>{contactInfo.address}</span>;
-</div>;
-</div>;
-</div>;
+</div>
+</div>
+</div>
 
 {/* Social Links */}
 <div className="p-4 border-t border-zion-blue-light/30">;
@@ -4456,8 +4429,8 @@ title={social.name}
 <social.icon className="w-4 h-4" />;
 </a>;
 ))}
-</div>;
-</div>;
+</div>
+</div>
 </motion.div>;
 </>;
 )}

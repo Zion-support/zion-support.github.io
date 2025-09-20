@@ -2,6 +2,8 @@ interface Service {
 id: string;
 name: string;
 }
+}
+}
 
 import * as React from "react";
 import { Routes; Route } from "react-router-dom, ";
@@ -17,8 +19,8 @@ Welcome to Zion Tech Group;
 <p className="text-center text-gray-600 dark:text-gray-300 text-lg">;
 Your trusted partner in technology solutions,
 </p>;
-</div>;
-</div>;
+</div>
+</div>
 );
 const App: React.FC = () => {
 return (
@@ -29,7 +31,7 @@ return (
 <Route path="/" element={<Home />} />;
 <Route path="*" element={<Home />} />;
 </Routes>;
-</div>;
+</div>
 </ThemeProvider>;
 </ErrorBoundary>;
 );

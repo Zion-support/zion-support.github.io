@@ -1,7 +1,6 @@
 export const CYBERSECURITY_SERVICES = [
     // Zero Trust Security Platform;
-    {
-        id: "zero-trust-security-platform";
+    {id: "zero-trust-security-platform";
         title: "Zero Trust Security & Access Management Platform";
         description: "Comprehensive zero trust security platform that provides continuous verification, least privilege access, and advanced threat detection for modern enterprise environments.",
         category: "Cybersecurity";
@@ -45,12 +44,10 @@ export const CYBERSECURITY_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
     };
     // AI-Powered Threat Detection;
-    {
-        id: "ai-threat-detection";
+    {id: "ai-threat-detection";
         title: "AI-Powered Threat Detection & Response Platform";
         description: "Advanced threat detection system that uses machine learning and behavioral analytics to identify and respond to cybersecurity threats in real-time.";
         category: "Cybersecurity";
@@ -94,12 +91,10 @@ export const CYBERSECURITY_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
     };
     // Cloud Security Posture Management;
-    {
-        id: "cloud-security-posture";
+    {id: "cloud-security-posture";
         title: "Cloud Security Posture Management Platform";
         description: "Comprehensive cloud security platform that continuously monitors, assesses, and improves the security posture of multi-cloud environments.",
         category: "Cybersecurity";
@@ -143,12 +138,10 @@ export const CYBERSECURITY_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
     };
     // Privacy Compliance Automation;
-    {
-        id: "privacy-compliance-automation";
+    {id: "privacy-compliance-automation";
         title: "Privacy Compliance & Data Protection Automation Platform";
         description: "Automated privacy compliance platform that helps organizations manage GDPR, CCPA, and other privacy regulations while protecting sensitive data.",
         category: "Cybersecurity";
@@ -192,12 +185,10 @@ export const CYBERSECURITY_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
     };
     // IoT Security Management;
-    {
-        id: "iot-security-management";
+    {id: "iot-security-management";
         title: "IoT Security & Device Management Platform";
         description: "Comprehensive IoT security platform that protects connected devices, monitors network traffic, and manages device lifecycle security.",
         category: "Cybersecurity";
@@ -241,7 +232,6 @@ export const CYBERSECURITY_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        }
+            website: "https://ziontechgroup.com"}
     }
 ];

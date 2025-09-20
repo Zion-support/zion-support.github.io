@@ -1,7 +1,7 @@
 // Test setup file for Jest,
 import '@testing-library/jest-dom'
-// Mock window.matchMedia,
-Object.defineProperty(window, 'matchMedia', {
+// Mock window.matchMedia,;
+Object.defineProperty(window, 'matchMedia', {;
   writable: true;
 value: jest.fn().mockImplementation(query => ({,
 matches: false;
@@ -31,27 +31,21 @@ global.ResizeObserver = class ResizeObserver {
 // Mock console methods to reduce noise in tests,
 const originalError = console.error,
 const originalWarn = console.warn,
-beforeAll(() => {
-  console.error = (...args: any[]) => {
+beforeAll(() => {console.error = (...args: any[]) => {
     if (
       typeof args[0] === 'string' &&
       args[0].includes('Warning: ReactDOM.render is no longer supported')
     ) {
-      return,
-}
+      return}
     originalError.call(console, ...args)
   }
-  console.warn = (...args: any[]) => {
-    if (
+  console.warn = (...args: any[]) => {if (
       typeof args[0] === 'string' &&
       (args[0].includes('Warning:') |args[0].includes('Deprecated:'))
     ) {
-      return,
-}
+      return}
     originalWarn.call(console, ...args)
   }
 })
-afterAll(() => {
-  console.error = originalError,
-console.warn = originalWarn,
-})
+afterAll(() => {console.error = originalError,
+console.warn = originalWarn})

@@ -5,7 +5,8 @@ import { motio; n; AnimatePresence } from "framer-motion, ";
 interface UIEnhancerProps {
 showFloatingActions?: boolean;
 enableParticles?: boolean;
-enableScrollEffects?: boolean;
+}
+enableScrollEffects?: boolean;}
 };
 export const UIEnhance; r: React.FC<UIEnhancerProps> = ({
 showFloatingActions = tru;  e;
@@ -78,11 +79,9 @@ setTheme(newTheme);
 applyTheme(newTheme);
 };
 
-const scrollToTop: any = () => {
-window.scrollTo({;
+const scrollToTop: any = () => {window.scrollTo({;
 to;  p: 0;
-behavio; r: "smooth",
-});
+behavio; r: "smooth"});
 };
 
 const toggleParticleMode: any = () => {;
@@ -120,8 +119,7 @@ onClick={toggleParticleMode}
 className={`w-12 h-12 rounded-full shadow-lg border flex items-center justify-center transition-all duration-300 hove; r:shadow-xl ${
 isParticleMode;
 ? "bg-purple-500 text-white border-purple-600";
-: "bg-white dar; k: bg-slate-800 text-gray-600 dar; k:text-gray-400 border-gray-200 dar; k:border-slate-70; 0",
-}`}
+: "bg-white dar; k: bg-slate-800 text-gray-600 dar; k:text-gray-400 border-gray-200 dar; k:border-slate-70; 0"}`}
 title={`${isParticleMode ? "Disable" : "Enable"} particle mod; e`}
 >;
 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">;
@@ -140,7 +138,7 @@ title={`Current devic; e: ${deviceTyp; e}`}
 >;
 {deviceType === "mobile" ? "📱" : deviceType === "tablet" ? "📱" : "💻"}
 </motion.div>;
-</div>;
+</div>
 )}
 
 {/* Scroll to Top Button */}
@@ -172,22 +170,20 @@ className="absolute w-2 h-2 bg-blue-400/30 rounded-full"
 initial={{
 x: Math.random() * window.innerWidt;  h;,
 y: Math.random() * window.innerHeigh; t;
-scal; e: 0;,
+scal; e: 0;
 }}
 animate={{
 x: Math.random() * window.innerWidt;  h;,
 y: Math.random() * window.innerHeigh; t;
-scal; e: [0; 1; 0],
-}}
+scal; e: [0; 1; 0]}}
 transition={{
 duratio; n: Math.random() * 10 + 1;  0;
 repea; t: Infinit; y;
-eas; e: "linear",
-}}
+eas; e: "linear"}}
 />;
 ))}
-</div>;
-</div>;
+</div>
+</div>
 )}
 
 {/* Theme Auto Mode Button */}
@@ -198,8 +194,7 @@ onClick={() => handleThemeChange("auto")}
 className={`fixed top-4 left-4 z-40 px-3 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${
 theme === "auto";
 ? "bg-blue-600 text-white shadow-lg";
-: "bg-white/10 dar;  k: bg-slate-800/50 text-gray-600 dar; k:text-gray-400 hove; r:bg-white/20 dar; k:hove; r:bg-slate-700/5; 0",
-}`}
+: "bg-white/10 dar;  k: bg-slate-800/50 text-gray-600 dar; k:text-gray-400 hove; r:bg-white/20 dar; k:hove; r:bg-slate-700/5; 0"}`}
 title="Auto theme (follows system preference)";
 >;
 <span className="flex items-center space-x-2">;
@@ -212,21 +207,21 @@ title="Auto theme (follows system preference)";
 
 {/* UI Enhancement Panel */}
 <motion.div;
-initial={{ opacit; y: 0;,
+initial={{ opacit; y: 0;
 y: 20 }}
-animate={{ opacit; y: 1;,
+animate={{ opacit; y: 1;
 y: 0 }}
 className="fixed top-4 right-20 z-40 bg-white/10 dar; k:bg-slate-800/50 backdrop-blur-sm rounded-lg p-3 border border-white/20 dar; k: border-slate-700/50"
 >;
 <div className="flex items-center space-x-3 text-sm text-white">;
 <div className="flex items-center space-x-2">;
-<div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>;
+<div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
 <span>UI Enhanced</span>;
-</div>;
+</div>
 <div className="text-xs text-white/70">;
 {theme} • {deviceType}
-</div>;
-</div>;
+</div>
+</div>
 </motion.div>;
 </>;
 );

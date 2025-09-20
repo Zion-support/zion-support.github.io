@@ -6,7 +6,9 @@ pageViews: number;
 uniqueVisitors: number;
 bounceRate: number;
 avgSessionDuration: number;
-conversionRate: number;,
+conversionRate: number;
+}
+}
 topPages: Array<{ page: string; views: number }>;
 trafficSources: Array<{ source: string; percentage: number }>;
 }
@@ -55,8 +57,8 @@ return `${minutes}m ${remainingSeconds}s`;
 if (isLoading) {
 return (
 <div className="p-6 bg-gray-900 min-h-screen flex items-center justify-center">;
-<div className="text-white text-xl">Loading analytics...</div>;
-</div>;
+<div className="text-white text-xl">Loading analytics...</div>
+</div>
 );
 }
 
@@ -79,7 +81,7 @@ className="px-4 py-2 bg-gray-800 text-white border border-gray-700 rounded-lg"
 <option value="30d">Last 30 days</option>;
 <option value="90d">Last 90 days</option>;
 </select>;
-</div>;
+</div>
 
 {/* Key Metrics */}
 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 mb-8">;
@@ -98,13 +100,13 @@ transition={{ delay: index * 0.1 }}
 className={`bg-gray-800 p-6 rounded-lg border border-gray-700 hover:border-${metric.color}-500 transition-colors`}
 >;
 <div className="flex items-center justify-between mb-4">;
-<div className="text-3xl">{metric.icon}</div>;
-<div className={`text-2xl font-bold text-${metric.color}-400`}>{metric.value}</div>;
-</div>;
+<div className="text-3xl">{metric.icon}</div>
+<div className={`text-2xl font-bold text-${metric.color}-400`}>{metric.value}</div>
+</div>
 <h3 className="text-lg font-semibold text-white">{metric.label}</h3>;
 </motion.div>;
 ))}
-</div>;
+</div>
 
 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">;
 {/* Top Pages */}
@@ -120,13 +122,13 @@ className="bg-gray-800 p-6 rounded-lg border border-gray-700"
 <div className="flex items-center space-x-3">;
 <div className="w-8 h-8 bg-gray-700 rounded-full flex items-center justify-center text-white text-sm font-bold">;
 {index + 1}
-</div>;
+</div>
 <span className="text-white">{page.page}</span>;
-</div>;
-<div className="text-gray-400">{formatNumber(page.views)} views</div>;
-</div>;
+</div>
+<div className="text-gray-400">{formatNumber(page.views)} views</div>
+</div>
 ))}
-</div>;
+</div>
 </motion.div>;
 
 {/* Traffic Sources */}
@@ -142,7 +144,7 @@ className="bg-gray-800 p-6 rounded-lg border border-gray-700"
 <div className="flex justify-between items-center mb-2">;
 <span className="text-white">{source.source}</span>;
 <span className="text-gray-400">{source.percentage}%</span>;
-</div>;
+</div>
 <div className="w-full bg-gray-700 rounded-full h-2">;
 <motion.div;
 initial={{ width: 0 }}
@@ -150,12 +152,12 @@ animate={{ width: `${source.percentage}%` }}
 transition={{ delay: index * 0.1, duration: 0.8 }}
 className="bg-blue-500 h-2 rounded-full"
 />;
-</div>;
-</div>;
+</div>
+</div>
 ))}
-</div>;
+</div>
 </motion.div>;
-</div>;
+</div>
 
 {/* Real-time Activity */}
 <motion.div;
@@ -166,21 +168,21 @@ className="mt-8 bg-gray-800 p-6 rounded-lg border border-gray-700"
 <h3 className="text-xl font-semibold text-white mb-6">Real-time Activity</h3>;
 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">;
 <div className="text-center">;
-<div className="text-3xl font-bold text-green-400 mb-2">23</div>;
-<div className="text-gray-400">Active Users</div>;
-</div>;
+<div className="text-3xl font-bold text-green-400 mb-2">23</div>
+<div className="text-gray-400">Active Users</div>
+</div>
 <div className="text-center">;
-<div className="text-3xl font-bold text-blue-400 mb-2">156</div>;
-<div className="text-gray-400">Page Views (1h)</div>;
-</div>;
+<div className="text-3xl font-bold text-blue-400 mb-2">156</div>
+<div className="text-gray-400">Page Views (1h)</div>
+</div>
 <div className="text-center">;
-<div className="text-3xl font-bold text-purple-400 mb-2">8</div>;
-<div className="text-gray-400">Conversions (1h)</div>;
-</div>;
-</div>;
+<div className="text-3xl font-bold text-purple-400 mb-2">8</div>
+<div className="text-gray-400">Conversions (1h)</div>
+</div>
+</div>
 </motion.div>;
 </motion.div>;
-</div>;
+</div>
 );
 };
 

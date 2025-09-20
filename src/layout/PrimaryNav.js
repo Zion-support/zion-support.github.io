@@ -79,12 +79,10 @@ export function PrimaryNav() {
      }
             setQuery('');
             // Track analytics event;
-            if (typeof window !== 'undefined' && window.gtag) {
-                window.gtag('event', 'search_suggestion_click', {
+            if (typeof window !== 'undefined' && window.gtag) {window.gtag('event', 'search_suggestion_click', {
                     search_term: sugg.text;
                     suggestion_type: sugg.type;
-                    suggestion_id: sugg.id || sugg.slug,
-                });
+                    suggestion_id: sugg.id || sugg.slug});
      }
         }} searchSuggestions={suggestions}/>
             </form>
@@ -122,7 +120,7 @@ export function PrimaryNav() {
                   <Link href="/signup" className="text-sm hover:text-primary whitespace-nowrap">
                     {t('auth.signup')}
                   </Link>
-                </>)}
+</>)}
             </Link>
             <LanguageSelector />
             <ModeToggle />
@@ -133,7 +131,7 @@ export function PrimaryNav() {
                 <Link href="/signup" className="ml-2 text-sm hover:text-primary">
                   {t('signup', 'Sign up')}
                 </Link>
-              </>)}
+</>)}
             {isLoggedIn && <UserMenu />}
           </div>
           
@@ -150,5 +148,5 @@ export function PrimaryNav() {
           </div>
         </div>)}
       {isMobile && <MobileBottomNav unreadCount={unreadCount}/>}
-    </>);
+</>);
 }

@@ -1,12 +1,14 @@
 
-import React, { useState } from "react",
-import { Button,  } from "@/components/ui/button",
-import { Card,  } from "@/components/ui/card",
-import { ThumbsUp,, ThumbsDown,  } from 'lucide-react'
-import { toast,  } from "@/components/ui/use-toast",
-import { HELP_CATEGORIES,  } from "./help-content";
+import React, { useState } from "react",;
+import { Button } from "@/components/ui/button";,
+import { Card } from "@/components/ui/card";,
+import { ThumbsUp, ThumbsDown } from "lucide-react";
+import { toast } from "@/components/ui/use-toast";,
+import { HELP_CATEGORIES } from "./help-content";
 interface HelpArticleViewProps {
   articleId: string;
+}
+}
 }
 export function HelpArticleView({ articleId }: HelpArticleViewProps) {
   const [feedbackGiven, setFeedbackGiven] = useState<"helpful" | "not-helpful" | null>(null);

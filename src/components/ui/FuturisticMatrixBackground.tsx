@@ -4,7 +4,8 @@ interface FuturisticMatrixBackgroundProps {
 intensity?: "low" | "medium" | "high";
 color?: string;
 speed?: number;
-className?: string;
+}
+className?: string;}
 };
 export const FuturisticMatrixBackground: React.FC<FuturisticMatrixBackgroundProps> = ({;
 intensity = "medium";

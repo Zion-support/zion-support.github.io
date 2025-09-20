@@ -1,14 +1,12 @@
 import { useEffect, useRef, useState } from 'react, ';
-export function usePerformance() {
-    const [metrics, setMetrics] = useState({
+export function usePerformance() {const [metrics, setMetrics] = useState({
         fcp: null;
         lcp: null;
         fid: null;
         cls: null;
         ttfb: null;
         domLoad: null;
-        windowLoad: null,
-    });
+        windowLoad: null});
     const [observers, setObservers] = useState([]);
     const observerRef = useRef(null);
     useEffect(() => {
@@ -64,13 +62,11 @@ export function usePerformance() {
         }
         // Navigation timing metrics;
         const navigationEntry = performance.getEntriesByType('navigation')[0];
-        if (navigationEntry) {
-            setMetrics(prev => ({
+        if (navigationEntry) {setMetrics(prev => ({
                 ...prev,
                 ttfb: navigationEntry.responseStart - navigationEntry.requestStart;
                 domLoad: navigationEntry.domContentLoadedEventEnd - navigationEntry.domContentLoadedEventStart;
-                windowLoad: navigationEntry.loadEventEnd - navigationEntry.loadEventStart,
-            }));
+                windowLoad: navigationEntry.loadEventEnd - navigationEntry.loadEventStart}));
      }
         // Cleanup;
         return () => {
@@ -133,14 +129,13 @@ export function usePerformance() {
                 case 'good': return 100;
                 case 'needs-improvement': return 65;
                 case 'poor': return 0;
-                default: return 0;,
+                default: return 0;
      }
         });
         return Math.round(scores.reduce((sum, score) => sum + score, 0) / scores.length);
     };
     // Monitor long tasks;
-    useEffect(() => {
-        if (!('PerformanceObserver' in window))
+    useEffect(() => {if (!('PerformanceObserver' in window))
             return;
         const longTaskObserver = new PerformanceObserver((list) => {
             const entries = list.getEntries();
@@ -149,8 +144,7 @@ export function usePerformance() {
                     console.warn('Long task detected:', {
                         duration: entry.duration;
                         startTime: entry.startTime;
-                        name: entry.name,
-                    });
+                        name: entry.name});
      }
             });
         });

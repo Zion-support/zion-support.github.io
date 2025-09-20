@@ -1,11 +1,11 @@
-import { Button,  } from '@/components/ui/button'
-import { Card,  } from '@/components/ui/card'
-import { Star,, MapPin,, Clock,, ArrowRight,, CheckCircle2,  } from 'lucide-react'
+import { Button } from "@/components/ui/button";
+import { Card } from "@/components/ui/card";
+import { Star, MapPin, Clock, ArrowRight, CheckCircle2 } from "lucide-react";
 isAuthenticated: boolean;
 }
 export function TalentCard({
               {talent.profile_picture_url && !avatarError ? (
-                <Image,
+                <Image
 src={talent.profile_picture_url}
                   alt={talent.full_name |'Talent Avatar'}
                   fill={true}                  style={{ objectFit: 'cover' }}
@@ -14,16 +14,14 @@ src={talent.profile_picture_url}
                 />
               ) : (
                 <div className='w-full h-full flex items-center justify-center text-zion-slate-light text-xl font-bold'>                  {talentNameInitial}
-                  className="rounded-full" // Make sure image itself is rounded if fill is used in a rounded container,
-onError={() => setAvatarError(true)}
+                  className="rounded-full" // Make sure image itself is rounded if fill is used in a rounded container onError={() => setAvatarError(true)}
                   priority={false}                />
               ) : (
                 <div className='w-full h-full flex items-center justify-center text-zion-slate-light text-xl font-bold'>                  src={talent.profile_picture_url}
                   alt={talent.full_name |'Talent Avatar'}
                   fill={true}
                   style={{ objectFit: 'cover' }}
-                  className="rounded-full" // Make sure image itself is rounded if fill is used in a rounded container,
-onError={() => setAvatarError(true)}
+                  className="rounded-full" // Make sure image itself is rounded if fill is used in a rounded container onError={() => setAvatarError(true)}
                   priority={false}
                 />
               ) : (
@@ -43,16 +41,16 @@ onError={() => setAvatarError(true)}
               <h3 className='text-lg font-bold text-white'>
                 {talent.full_name}
               </h3>
-              <Button,
+              <Button
 variant='ghost'
                 size='sm'
                 className='p-1 h-auto text-zion-slate-light hover:text-zion-cyan'
                 onClick={handleToggleSave}                variant="ghost"
                 size="sm"
                 className="p-1 h-auto text-zion-slate-light hover:text-zion-cyan"
-                onClick = {handleToggleSave,}
+                onClick = {handleToggleSave}
               >
-                <Star,
+                <Star
 className={`h-5 w-5 ${isSaved ? 'fill-yellow-400 text-yellow-400' : ''}`}
                 />
                 <span className='sr-only'>{isSaved ? 'Saved' : 'Save'}</span>
@@ -87,14 +85,13 @@ className={`h-5 w-5 ${isSaved ? 'fill-yellow-400 text-yellow-400' : ''}`}
         {skills.length > 0 && (
           <div className='mt-4'>
             <div className='flex flex-wrap gap-2'>
-              {skills.map((skill index) => (
-                <span,
+              {skills.map((skill index) => (<span
 key={index}
                   className='px-2 py-1 text-xs rounded-full bg-zion-blue-light text-zion-slate-light'                >          <div className="mt-4">
             <div className="flex flex-wrap gap-2">
-              {skills.map((skill index,) => (
-                <span,
-key = {index,}
+              {skills.map((skill index) => (
+                <span
+key = {index}
                   className="px-2 py-1 text-xs rounded-full bg-zion-blue-light text-zion-slate-light"
                   {skill}
                 </span>
@@ -120,7 +117,7 @@ key = {index,}
           </div>
           <div className='flex items-center gap-2'>
             {isAuthenticated && (
-              <Button,
+              <Button
 size='sm'
                 variant='secondary'
                 onClick={handleRequestHire}
@@ -137,7 +134,7 @@ size='sm'
           </div>
           <div className="flex items-center gap-2">
             {isAuthenticated && (
-              <Button,
+              <Button
 size="sm"
                 variant="secondary"
                 onClick={handleRequestHire}
@@ -146,7 +143,7 @@ size="sm"
                 Hire
               </Button>
             )}
-            <Button,
+            <Button
 size='sm'
               variant='ghost'
               onClick={handleViewProfile}

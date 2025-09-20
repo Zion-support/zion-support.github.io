@@ -1,6 +1,6 @@
-import { Search,  } from 'lucide-react'
-import { fetchWithRetry,, ,  } from '@/utils/fetchWithRetry';
-import { logInfo,, logErrorToProduction,  } from '@/utils/productionLogger';
+import { Search } from 'lucide-react';
+import { fetchWithRetry } from '@/utils/fetchWithRetry';
+import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
 // Categories for filtering
               >
                 Clear all filters
@@ -9,7 +9,7 @@ import { logInfo,, logErrorToProduction,  } from '@/utils/productionLogger';
           )}
         </div>
       </div>
-    </>
+</>
   )
 }, [query])
 //Filter blog posts based on selected category only. //Search filtering is handled server-side. return matchesCategory,
@@ -30,14 +30,10 @@ min-h-screen bg-zion-blue pt-12 pb-20 px-4"> <h1>Blog</h1> <div className=" cont
 }"
 }/> <div> <p className="text-white font-medium" > {
   featuredPost.author.name "
-}</p> <p className="text-sm text-zion-slate-light" > {
-  featuredPost.publishedDate,
-}• {
+}</p> <p className="text-sm text-zion-slate-light" > {featuredPost.publishedDate}• {
   featuredPost.readTime "
-}bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple w-fit"> <Link href= {
-  `/blog/$ {
-  featuredPost.slug,
-}`
+}bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple w-fit"> <Link href= {`/blog/$ {
+  featuredPost.slug}`
 }> Read Article </Link> </Button> </div> </div> </div>)
 }) ()
 }</SelectItem>) )
@@ -48,9 +44,7 @@ min-h-screen bg-zion-blue pt-12 pb-20 px-4"> <h1>Blog</h1> <div className=" cont
 }"
 }/> </div> <CardContent className=" p-6"> <div className=" flex items-center justify-between mb-3"> <span className=" text-xs text-zion-cyan bg-zion-blue px-3 py-1 rounded-full"> {
   post.category "
-}</span> <div className=" text-xs text-zion-slate-light"> {
-  post.publishedDate,
-}• {
+}</span> <div className=" text-xs text-zion-slate-light"> {post.publishedDate}• {
   post.readTime "
 }</div> </div> <h3 className=" text-xl font-bold text-white mb-3"> {
   post.title "
@@ -200,10 +194,8 @@ featured: false}
         description="&quot;Stay" updated with the latest insights on AI quantum computing cybersecurity and emerging technologies from Zion Tech Group&apos;s expert team.&quot;"
         keywords="&quot;technology" blog AI insights quantum computing cybersecurity digital transformation tech news&quot>
      />&quot;"
-        title = "Blog - Zion Tech Group | Technology Insights & Industry News,
-description="Stay updated with the latest insights on AI quantum computing cybersecurity and emerging technologies from Zion Tech Group&apos;s expert team.
-        keywords = "technology blog AI insights quantum computing cybersecurity digital transformation tech news,
-description="Stay updated with the latest insights on AI quantum computing cybersecurity and emerging technologies from Zion Tech Group"s expert team. "
+        title = "Blog - Zion Tech Group | Technology Insights & Industry News description="Stay updated with the latest insights on AI quantum computing cybersecurity and emerging technologies from Zion Tech Group&apos;s expert team.
+        keywords = "technology blog AI insights quantum computing cybersecurity digital transformation tech news description="Stay updated with the latest insights on AI quantum computing cybersecurity and emerging technologies from Zion Tech Group"s expert team. "
         keywords="technology blog AI insights quantum computing cybersecurity digital transformation tech news" />
       "
       <div className="&quot;min-h-screen" bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900&quot;>
@@ -220,10 +212,10 @@ initial = "{{" opacity: 0 y: 20 }}"
 transition="{{" duration: 0.8 }}"
               className="&quot;text-center" max-w-4xl mx-auto&quot
             >&quot;"
-              <h1 className="&quot;text-5xl" md: text-6xl font-bold text-white mb-6&quot,>
+              <h1 className="&quot;text-5xl" md: text-6xl font-bold text-white mb-6&quot>
                 Technology Insights&quot
               </h1>"
-              <p className = "&quottext-xl" text-gray-300 mb-8&quot,>
+              <p className = "&quottext-xl" text-gray-300 mb-8&quot>
                 Stay ahead of the curve with expert insights on AI quantum computing,
 cybersecurity and the latest technology trends shaping our future.&quot;"
               <p className = "text-xl text-gray-300 mb-8">
@@ -257,9 +249,9 @@ cybersecurity and the latest technology trends shaping our future.&quot;"
                     {featuredPosts.map((post index) => (
                       <motion.article;"
         <div className="&quot;container" mx-auto px-4 py-16&quot;>&quot
-          <div className="&quot;grid" grid-cols-1 lg: grid-cols-4 gap-12&quot,>
+          <div className="&quot;grid" grid-cols-1 lg: grid-cols-4 gap-12&quot>
             {/* comment */}&quot;"
-            <div className="&quot;lg:" col-span-3&quot,>"
+            <div className="&quot;lg:" col-span-3&quot>"
         <div className = "container mx-auto px-4 py-16">"
           <div className="grid grid-cols-1 lg: grid-cols-4 gap-12">
             {/* comment */}"
@@ -271,7 +263,7 @@ cybersecurity and the latest technology trends shaping our future.&quot;"
                     <TrendingUp className="&quot;w-8" h-8 mr-3 text-blue-400&quot;       />
                     Featured Articles&quot
                   </h2>"
-                  <div className="&quot;grid" grid-cols-1 md: grid-cols-2 gap-8&quot,>
+                  <div className="&quot;grid" grid-cols-1 md: grid-cols-2 gap-8&quot>
                     {featuredPosts.map((post index) => (&quot}
                       <motion.article,"
 key = "{post.id}
@@ -287,14 +279,14 @@ key = "{post.id}
                             {post.category === "Micro SaaS" && <Rocket  />}"
                             {post.category === "Cybersecurity" && <Shield  />}
                           </div>
-                        </div>;"
+                        </div>"
                         <div className="p-6">;"
                           <div className="flex items-center gap-4 mb-3">;"
                             <span className="px-3 py-1 bg-blue-600/20 border border-blue-400/30 rounded-full text-blue-300 text-xs">
                               {post.category}
                             </span>;"
                             <span className="text-yellow-400 text-xs font-medium">Featured</span>
-                          </div>;"
+                          </div>"
                           <h3 className = "{"text-xl" font-bold text-white mb-3 hover: text-blue-400 transition-colors">,"
                             <Link to="{"/blog/${post.id}"}">{post.title}</Link>
                           </h3>;"
@@ -309,7 +301,7 @@ key = "{post.id}
                                 <Calendar className="w-4 h-4 mr-1"  />
                                 {new Date(post.date).toLocaleDateString()}
                               </span>
-                            </div>;"
+                            </div>"
                             <span className="flex items-center">;"
                               <Clock className="w-4 h-4 mr-1"  />
                               {post.readTime}
@@ -319,7 +311,7 @@ key = "{post.id}
                         className="&quot;bg-gradient-to-br" from-slate-800/50 to-slate-700/50 rounded-xl overflow-hidden border border-slate-600/50 hover:border-blue-400/50 transition-all duration-300 hover: scale-105&quot
                       >&quot;"
                         <div className="&quot;h-48" bg-gradient-to-br from-blue-500/20 to-purple-500/20 flex items-center justify-center&quot;>&quot
-                          <div className="&quottext-6xl" opacity-20&quot,>"
+                          <div className="&quottext-6xl" opacity-20&quot>"
                             {post.category === &quotAI & Machine Learning&quot, &&"}&quot <Brain  />}"
                             {post.category === &quot;Quantum Computing&quot; &&"}&quot <Atom  />}"
                             {post.category === &quot;Micro SaaS&quot; &&"}&quot <Rocket  />}"
@@ -333,7 +325,7 @@ key = "{post.id}
                             </span>"
                             <span className="&quot;text-yellow-400" text-xs font-medium&quot;>Featured&quot </span>
                           </div>"
-                          <h3 className="&quot;text-xl" font-bold text-white mb-3 hover: text-blue-400 transition-colors&quot,>&quot
+                          <h3 className="&quot;text-xl" font-bold text-white mb-3 hover: text-blue-400 transition-colors&quot>&quot
                             <Link to = "{"/blog/${post.id}"}">{post.title}</Link>
                           </h3>"
                           <p className="&quot;text-gray-300" mb-4 line-clamp-3&quot;>{post.excerpt}&quot </p>"
@@ -385,13 +377,13 @@ key = "{post.id}
                             {post.category === "Digital Transformation" && <Globe  />}"
                             {post.category === "Cloud Computing" && <Code  />}
                           </div>
-                        </div>;"
+                        </div>"
                         <div className="flex-1">;"
                           <div className="flex items-center gap-4 mb-3">;"
                             <span className="px-3 py-1 bg-blue-600/20 border border-blue-400/30 rounded-full text-blue-300 text-xs">
                               {post.category}
                             </span>
-                          </div>;"
+                          </div>"
                           <h3 className = "{"text-xl" font-bold text-white mb-3 hover: text-blue-400 transition-colors">,"
                             <Link to="{"/blog/${post.id}"}">{post.title}</Link>
                           </h3>;"
@@ -422,9 +414,9 @@ key = "{post.id}
                     </motion.article>;"
                       className="&quot;bg-gradient-to-br" from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50 hover: border-blue-400/50 transition-all duration-300&quot
                     >&quot,"
-                      <div className="&quot;flex" flex-col md: flex-row gap-6&quot,>&quot
+                      <div className="&quot;flex" flex-col md: flex-row gap-6&quot>&quot
                         <div className="&quotmd: " w-48 h-32 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-lg flex items-center justify-center flex-shrink-0&quot;>&quot
-                          <div className="&quottext-4xl" opacity-20&quot,>"
+                          <div className="&quottext-4xl" opacity-20&quot>"
                             {post.category === &quotAI & Machine Learning&quot, &&"}&quot <Brain  />}"
                             {post.category === &quot;Quantum Computing&quot; &&"}&quot <Atom  />}"
                             {post.category === &quot;Micro SaaS&quot; &&"}&quot <Rocket  />}"
@@ -439,7 +431,7 @@ key = "{post.id}
                               {post.category}&quot
                             </span>
                           </div>"
-                          <h3 className="&quot;text-xl" font-bold text-white mb-3 hover: text-blue-400 transition-colors&quot,>&quot
+                          <h3 className="&quot;text-xl" font-bold text-white mb-3 hover: text-blue-400 transition-colors&quot>&quot
                             <Link to = "{"/blog/${post.id}"}">{post.title}</Link>
                           </h3>"
                           <p className="&quot;text-gray-300" mb-4&quot;>{post.excerpt}&quot </p>"
@@ -474,7 +466,7 @@ key = "{post.id}
             <div className="lg: col-span-1">;"
               <div className="sticky top-8 space-y-8">;"
             <div className="&quotlg:col-span-1&quot,">&quot,"
-              <div className = "&quotsticky" top-8 space-y-8&quot,>
+              <div className = "&quotsticky" top-8 space-y-8&quot>
                 {/* comment */}&quot;"
                 <div className="&quot;bg-gradient-to-br" from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50&quot;>&quot
                   <h3 className="&quot;text-xl" font-bold text-white mb-4&quot;>Categories&quot </h3>"
@@ -484,9 +476,9 @@ key = "{post.id}
                         to="{"/blog/category/${category.name.toLowerCase().replace(/\s+/g," &apos;-&apos)}"}"
                         className="&quot;flex" items-center justify-between p-3 rounded-lg hover: bg-slate-700/50 transition-colors group&quot>
                       >&quot;&apos;"
-                        <div className="&quotflex" items-center&quot,>&quot,"
+                        <div className="&quotflex" items-center&quot>&quot,"
                           <category.icon className="&quot;w-5" h-5 text-blue-400 mr-3 group-hover: text-blue-300&quot, />&quot,"
-                          <span className="&quottext-gray-300" group-hover: text-white&quot,>{category.name}&quot </span>"
+                          <span className="&quottext-gray-300" group-hover: text-white&quot>{category.name}&quot </span>"
             <div className = "lg: col-span-1">"
               <div className="sticky top-8 space-y-8">
                 {/* comment */}"
@@ -502,7 +494,7 @@ key = "{post.id}
                         <div className="flex items-center">;"
                           <category.icon className = "w-5 h-5 text-blue-400 mr-3 group-hover: text-blue-300" />,"
                           <span className="text-gray-300 group-hover:text-white">{category.name}</span>
-                        </div>;"
+                        </div>"
                         <span className="{"text-sm" text-gray-400">{category.count}</span>
                       </Link>;"
                         to = "{"/blog/category/${category.name.toLowerCase().replace(/\s+/g," "-')}"}"
@@ -532,22 +524,19 @@ key = "{post.id}
                       Subscribe
                     </button>
                   </div>
-    </>"
+</>"
                 <div className="&quot;bg-gradient-to-br" from-blue-600/20 to-purple-600/20 rounded-xl p-6 border border-blue-400/30&quot;>&quot
                   <h3 className="&quot;text-xl" font-bold text-white mb-4&quot;>Stay Updated&quot </h3>"
-                  <p className="&quottext-gray-300" mb-4&quot,>
+                  <p className="&quottext-gray-300" mb-4&quot>
                     Get the latest technology insights delivered to your inbox.&quot
                   </p>"
                   <div className="&quot;space-y-3&quot;">&quot
-                    <input type="&quot;email&quot,
-placeholder="&quot;Enter" your email&quot;"
-                      className="&quot;w-full" px-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-blue-500&quot,>
+                    <input type="&quot;email&quot placeholder="&quot;Enter" your email&quot;"
+                      className="&quot;w-full" px-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-blue-500&quot>
                    />&quot,"
-                    <button className = "&quotw-full" px-4 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover: to-purple-700 transition-all duration-200&quot,>
+                    <button className = "&quotw-full" px-4 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover: to-purple-700 transition-all duration-200&quot>
                       Subscribe&quot,"
-                      type="email,
-placeholder="Enter your email,
-className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-blue-500" />"
+                      type="email placeholder="Enter your email className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-blue-500" />"
                     <button className="w-full px-4 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-200">
                       Subscribe
                     </button>

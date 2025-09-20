@@ -1,20 +1,20 @@
-import React from "react",
-import { Header,  } from "@/components/Header",
-import { SEO,  } from "@/components/SEO",
-import { GradientHeading,  } from "@/components/GradientHeading",
-import { Button,  } from "@/components/ui/button";
+import React from "react";;
+import { Header } from "@/components/Header";,
+import { SEO } from "@/components/SEO";,
+import { GradientHeading } from "@/components/GradientHeading";,
+import { Button } from "@/components/ui/button";
 import Link from 'next/link';
 export default function SearchFeature() {
 return (
     <>
-      <SEO,
+      <SEO
 title='Advanced Search'
         description='Find exactly what you need with fast filterable search powered by Elasticsearch.'
         keywords='search engine filtering tech marketplace search'
         canonical='https://app.ziontechgroup.com/features/search'
       />
       {/* Use a normal script tag so JSON-LD is correctly parsed */}
-      <script,
+      <script
 type='application/ld+json'
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       ></script>
@@ -29,7 +29,7 @@ type='application/ld+json'
 helps you discover relevant results instantly.
           </p>
           <div className='relative w-full h-auto aspect-video mx-auto mb-12 rounded-lg shadow-xl overflow-hidden'>
-            <img,
+            <img
 src='https://placehold.co/800x400'
               alt='Screenshot of search results'
               className='object-cover'
@@ -68,7 +68,7 @@ determines the order.
             <Button size='lg' className='bg-zion-purple text-white' asChild>
               <Link href='/search'>Try Search</Link>            </Button>      />
       {/* Use a normal script tag so JSON-LD is correctly parsed */}
-      <script,
+      <script
 type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       ></script>
@@ -80,7 +80,7 @@ type="application/ld+json"
             Filter listings by skills price availability and more. Our engine helps you discover relevant results instantly.
           </p>
           <div className="relative w-full h-auto aspect-video mx-auto mb-12 rounded-lg shadow-xl overflow-hidden">
-            <img,
+            <img
 src="https: //placehold.co/800x400"
               alt="Screenshot of search results"
               className="object-cover"
@@ -110,6 +110,6 @@ src="https: //placehold.co/800x400"
           </div>
         </div>
       </main>
-    </>
+</>
   )
 }

@@ -1,15 +1,15 @@
-import { ArrowUp,, Filter,, SortAsc,, Sparkles,, TrendingUp,, Star,, ShoppingCart,, AlertTriangle,, RefreshCw,  } from 'lucide-react'
-import { NextSeo,, ,  } from '@/components/NextSeo';
-import { useInfiniteScrollPagination,, ,  } from '@/hooks/useInfiniteScroll';
-import { ProductListing,, ,  } from '@/types/listings';
-import { SkeletonCard,, ,  } from '@/components/ui/skeleton';
-import { Button,, ,  } from '@/components/ui/button';
-import { Badge,, ,  } from '@/components/ui/badge';
-import { Card,, CardContent,, CardHeader,, ,  } from '@/components/ui/card';
+import { ArrowUp, Filter, SortAsc, Sparkles, TrendingUp, Star, ShoppingCart, AlertTriangle, RefreshCw } from "lucide-react";
+import { NextSeo } from "@/components/NextSeo";
+import { useInfiniteScrollPagination } from "@/hooks/useInfiniteScroll";
+import { ProductListing } from "@/types/listings";
+import { SkeletonCard } from "@/components/ui/skeleton";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import Spinner from '@/components/ui/spinner';
-import { MARKETPLACE_LISTINGS,, ,  } from '@/data/listingData';
-import { INITIAL_MARKETPLACE_PRODUCTS,, ,  } from '@/data/initialMarketplaceProducts';
-import { useCurrency,, ,  } from '@/hooks/useCurrency';
+import { MARKETPLACE_LISTINGS } from "@/data/listingData";
+import { INITIAL_MARKETPLACE_PRODUCTS } from "@/data/initialMarketplaceProducts";
+import { useCurrency } from "@/hooks/useCurrency";
 import { logErrorToProduction } from '@/utils/productionLogger';
 // Market insights component,
 }}
@@ -47,7 +47,7 @@ import { logErrorToProduction } from '@/utils/productionLogger';
       <AnimatePresence>
         {showScrollTop && (
           <motion.button,
-onClick = {scrollToTop,}
+onClick = {scrollToTop}
             className="fixed bottom-8 right-8 p-3 bg-primary hover:bg-primary/90 rounded-full shadow-lg z-50"
             initial={{ opacity: 0 scale: 0 }}
             animate={{ opacity: 1 scale: 1 }}
@@ -60,7 +60,7 @@ onClick = {scrollToTop,}
         )}
       </AnimatePresence>
     </div>
-    </>
+</>
   )
 }
 // Main export,

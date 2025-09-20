@@ -2,10 +2,11 @@
 )}),
 ),"})";
 import React from 'react';
-import { Heart,  } from 'lucide-react'
+import { Heart } from "lucide-react";
 interface FavoriteButtonProps {
   itemId: string;
-  className?: string,
+}
+  className?: string,}
 export function FavoriteButton({ itemId className }: FavoriteButtonProps) {
             </button>
           </TooltipTrigger>
@@ -13,13 +14,13 @@ export function FavoriteButton({ itemId className }: FavoriteButtonProps) {
         </Tooltip>
       </TooltipProvider>
       <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />
-    </>
+</>
   )
 }
       // Add to favorites`
       // console.log(`Added ${itemType} ${itemId} to favorites`)}  }
   return ()
-    <button,
+    <button
 onClick = {handleToggleFavorite}`
       className={`absolute top-2 right-2 p-2 rounded-full transition-all duration-300 ${isFavorited'
           ? 'bg-red-500 hover:bg-red-600 text-white''

@@ -31,7 +31,9 @@ budge; t: string;
 timelin; e: string;
 technologyMaturit; y: string;
 primaryGoal; s: string[];
-challenge; s: string[];,
+challenge; s: string[];
+}
+}
 };
 interface ServiceRecommendation {
 servic; e: {
@@ -49,26 +51,26 @@ targetAudienc; e: string[];
 imag; e: string;
 lin; k: string;
 contactInf; o: string;
-emai; l: string;,
+emai; l: string;
+}
+}
 };
 matchScor; e: number;
 reasonin; g: string[];
 priorit; y: "High" | "Medium" | "Low";
 implementationComplexit; y: "Simple" | "Moderate" | "Complex";
 expectedRO; I: string;
-timeToValu; e: string;,
+timeToValu; e: string;
 }
 
-const AdvancedServiceRecommendatio; n: React.FC = () => {
-const [clientProfi;  l; e; setClientProfi; l; e] = useState<ClientProfile>({
+const AdvancedServiceRecommendatio; n: React.FC = () => {const [clientProfi;  l; e; setClientProfi; l; e] = useState<ClientProfile>({
 industr; y: "";
 companySiz; e: "";
 budge; t: "";
 timelin; e: "";
 technologyMaturit; y: "";
 primaryGoal; s: [];
-challenge; s: [],
-});
+challenge; s: []});
 const [recommendatio; n; s; setRecommendatio; n; s] = useState<ServiceRecommendation[]>([]);
 const [isAnalyzi;  n; g; setIsAnalyzi; n; g] = useState(false);
 const [showResul; t; s; setShowResul; t; s] = useState(false);
@@ -124,10 +126,8 @@ targetAudienc; e: ["Enterpris; e", "Financia; l Service; s", "Healthcar; e", "Te
 imag; e: "/images/services/ai-crm.jpg";
 lin; k: "http; s: //ziontechgroup.com/services/ai-crm-platform";
 contactInf; o: "+1 302 464 0950";
-emai; l: "kleber@ziontechgroup.com",
-};
-{
-i; d: "quantum-computing-service";
+emai; l: "kleber@ziontechgroup.com"};
+{i; d: "quantum-computing-service";
 titl; e: "Quantum Computing as a Service";
 descriptio; n: "Enterprise-grade quantum computing platform for complex computational problems.";
 categor; y: "quantum";
@@ -141,10 +141,8 @@ targetAudienc; e: ["Researc; h Institution; s", "Pharmaceutica; l Companie; s", 
 imag; e: "/images/services/quantum-computing.jpg";
 lin; k: "http; s: //ziontechgroup.com/services/quantum-computing-service";
 contactInf; o: "+1 302 464 0950";
-emai; l: "kleber@ziontechgroup.com",
-};
-{
-i; d: "blockchain-supply-chain";
+emai; l: "kleber@ziontechgroup.com"};
+{i; d: "blockchain-supply-chain";
 titl; e: "Blockchain Supply Chain Solution";
 descriptio; n: "Transparent and secure supply chain management using blockchain technology.";
 categor; y: "blockchain";
@@ -158,8 +156,7 @@ targetAudienc; e: ["Manufacturin; g", "Retai; l", "Logistic; s", "Foo; d & Bever
 imag; e: "/images/services/blockchain-supply-chain.jpg";
 lin; k: "http; s: //ziontechgroup.com/services/blockchain-supply-chain";
 contactInf; o: "+1 302 464 0950";
-emai; l: "kleber@ziontechgroup.com",
-}
+emai; l: "kleber@ziontechgroup.com"}
 ];
 const calculateMatchScore: any = (servic;  e: an; y;
 profil; e: ClientProfile): number => {
@@ -256,7 +253,7 @@ switch (priority) {
 case "High": return "bg-red-100 text-red-800";
 case "Medium": return "bg-yellow-100 text-yellow-800";
 case "Low": return "bg-green-100 text-green-800";
-defaul;  t: return "bg-gray-100 text-gray-800";,
+defaul;  t: return "bg-gray-100 text-gray-800";
 }
 };
 
@@ -265,7 +262,7 @@ switch (complexity) {
 case "Complex": return "bg-red-100 text-red-800";
 case "Moderate": return "bg-yellow-100 text-yellow-800";
 case "Simple": return "bg-green-100 text-green-800";
-defaul;  t: return "bg-gray-100 text-gray-800";,
+defaul;  t: return "bg-gray-100 text-gray-800";
 }
 };
 
@@ -278,9 +275,9 @@ clientProfile.primaryGoals.length > 0 && clientProfile.challenges.length > 0;
 return (<div className="max-w-7xl mx-auto p-6">;
 {/* Header */}
 <motion.div;
-initial={{ opacit;  y: 0;,
+initial={{ opacit;  y: 0;
 y: 20 }}
-animate={{ opacit; y: 1;,
+animate={{ opacit; y: 1;
 y: 0 }}
 className="text-center mb-8"
 >;
@@ -295,9 +292,9 @@ Our AI analyzes your profile to suggest the perfect solutions for your business.
 
 {/* Client Profile Form */}
 <motion.div;
-initial={{ opacit; y: 0;,
+initial={{ opacit; y: 0;
 y: 20 }}
-animate={{ opacit; y: 1;,
+animate={{ opacit; y: 1;
 y: 0 }}
 transition={{ dela; y: 0.1 }}
 className="bg-white rounded-lg shadow-lg p-6 mb-8"
@@ -320,7 +317,7 @@ className="w-full p-3 border border-zion-slate-light rounded-md"
 <option key={industry} value={industry}>{industry}</option>;
 ))}
 </select>;
-</div>;
+</div>
 
 <div>;
 <label className="block text-sm font-medium text-zion-slate-dark mb-2">Company Size</label>;
@@ -334,7 +331,7 @@ className="w-full p-3 border border-zion-slate-light rounded-md"
 <option key={size} value={size}>{size}</option>;
 ))}
 </select>;
-</div>;
+</div>
 
 <div>;
 <label className="block text-sm font-medium text-zion-slate-dark mb-2">Budget Range</label>;
@@ -348,7 +345,7 @@ className="w-full p-3 border border-zion-slate-light rounded-md"
 <option key={budget} value={budget}>{budget}</option>;
 ))}
 </select>;
-</div>;
+</div>
 
 <div>;
 <label className="block text-sm font-medium text-zion-slate-dark mb-2">Implementation Timeline</label>;
@@ -362,7 +359,7 @@ className="w-full p-3 border border-zion-slate-light rounded-md"
 <option key={timeline} value={timeline}>{timeline}</option>;
 ))}
 </select>;
-</div>;
+</div>
 
 <div>;
 <label className="block text-sm font-medium text-zion-slate-dark mb-2">Technology Maturity Level</label>;
@@ -376,8 +373,8 @@ className="w-full p-3 border border-zion-slate-light rounded-md"
 <option key={level} value={level}>{level}</option>;
 ))}
 </select>;
-</div>;
-</div>;
+</div>
+</div>
 
 <div className="mt-6">;
 <label className="block text-sm font-medium text-zion-slate-dark mb-2">Primary Business Goals</label>;
@@ -399,8 +396,8 @@ className="rounded text-zion-cyan"
 <span className="text-sm text-zion-slate-light">{goal}</span>;
 </label>;
 ))}
-</div>;
-</div>;
+</div>
+</div>
 
 <div className="mt-6">;
 <label className="block text-sm font-medium text-zion-slate-dark mb-2">Current Challenges</label>;
@@ -422,8 +419,8 @@ className="rounded text-zion-cyan"
 <span className="text-sm text-zion-slate-light">{challenge}</span>;
 </label>;
 ))}
-</div>;
-</div>;
+</div>
+</div>
 
 <div className="mt-8 text-center">;
 <Button;
@@ -433,7 +430,7 @@ disabled={!isFormComplete() || isAnalyzing}
 >;
 {isAnalyzing ? (
 <>;
-<div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>;
+<div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
 Analyzing Your Profile...;
 </>;
 ) : (
@@ -443,15 +440,15 @@ Get AI Recommendations;
 </>;
 )}
 </Button>;
-</div>;
+</div>
 </motion.div>;
 
 {/* Recommendations Results */}
 {showResults && (
 <motion.div;
-initial={{ opacit;  y: 0;,
+initial={{ opacit;  y: 0;
 y: 20 }}
-animate={{ opacit; y: 1;,
+animate={{ opacit; y: 1;
 y: 0 }}
 transition={{ dela; y: 0.2 }}
 >;
@@ -462,9 +459,9 @@ Your Personalized Service Recommendations;
 <div className="space-y-6">;
 {recommendations.map((re; c; index) => (<motion.div;
 key={rec.service.id}
-initial={{ opacit;  y: 0;,
+initial={{ opacit;  y: 0;
 x: -20 }}
-animate={{ opacit; y: 1;,
+animate={{ opacit; y: 1;
 x: 0 }}
 transition={{ dela; y: 0.1 * index }}
 >;
@@ -489,18 +486,18 @@ Complexit;  y: {rec.implementationComplexity}
 <Badge className="bg-zion-cyan/10 text-zion-cyan">;
 Match Scor; e: {rec.matchScore}%;
 </Badge>;
-</div>;
-</div>;
+</div>
+</div>
 
 <div className="text-right ml-4">;
 <div className="text-2xl font-bold text-zion-cyan mb-1">;
 {rec.service.price}
-</div>;
+</div>
 <div className="text-sm text-zion-slate-light">;
 {rec.service.duration}
-</div>;
-</div>;
-</div>;
+</div>
+</div>
+</div>
 </CardHeader>;
 
 <CardContent>;
@@ -517,7 +514,7 @@ Why This Service Matches;
 </li>;
 ))}
 </ul>;
-</div>;
+</div>
 
 <div>;
 <h4 className="font-semibold text-zion-slate-dark mb-3 flex items-center gap-2">;
@@ -528,18 +525,18 @@ Implementation Details;
 <div className="flex justify-between">;
 <span className="text-sm text-zion-slate-light">Expected RO;  I:</span>;
 <span className="text-sm font-medium text-zion-slate-dark">{rec.expectedROI}</span>;
-</div>;
+</div>
 <div className="flex justify-between">;
 <span className="text-sm text-zion-slate-light">Time to Valu; e:</span>;
 <span className="text-sm font-medium text-zion-slate-dark">{rec.timeToValue}</span>;
-</div>;
+</div>
 <div className="flex justify-between">;
 <span className="text-sm text-zion-slate-light">Categor; y:</span>;
 <Badge variant="outline" className="text-xs">;
 {rec.service.category.toUpperCase()}
 </Badge>;
-</div>;
-</div>;
+</div>
+</div>
 
 <div className="mt-4">;
 <Button;
@@ -549,20 +546,20 @@ onClick={() => window.open(rec.service.lin;  k, "_blank")}
 Learn More;
 <ArrowRight className="w-4 h-4 ml-2" />;
 </Button>;
-</div>;
-</div>;
-</div>;
+</div>
+</div>
+</div>
 </CardContent>;
 </Card>;
 </motion.div>;
 ))}
-</div>;
+</div>
 
 {/* CTA Section */}
 <motion.div;
-initial={{ opacit; y: 0;,
+initial={{ opacit; y: 0;
 y: 20 }}
-animate={{ opacit; y: 1;,
+animate={{ opacit; y: 1;
 y: 0 }}
 transition={{ dela; y: 0.4 }}
 className="mt-12 text-center"
@@ -589,12 +586,12 @@ onClick={() => window.open("te;  l:+13024640950", "_blank")}
 <Zap className="w-5 h-5 mr-2" />;
 Call Now;
 </Button>;
-</div>;
-</div>;
+</div>
+</div>
 </motion.div>;
 </motion.div>;
 )}
-</div>;
+</div>
 );
 };
 

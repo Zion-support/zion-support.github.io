@@ -1,7 +1,7 @@
 action?: string,
 }
 interface OnboardingTrackerProps {
-return (
+return (}
     <div className={cn("rounded-lg border border-zion-blue-light bg-zion-blue-dark/60 p-4 md:p-6", className)}>
       <div className="flex items-center justify-between mb-4">
         <h3 className="text-lg font-medium text-white">{title}</h3>
@@ -9,14 +9,14 @@ return (
       </div>
       {/* Progress bar */}
       <div className="w-full h-2 bg-zion-blue rounded-full mb-5">
-        <div,
+        <div
 className="h-2 bg-gradient-to-r from-zion-purple to-zion-cyan rounded-full transition-all duration-500 ease-out"
           style={{ width: `${progress}%` }}
         ></div>
       </div>
       {/* Steps list */}
       <div className="space-y-3">
-        {steps.map((step,) => (
+        {steps.map((step) => (
           <div key={step.id} className="flex items-center">
             <div className="mr-3">
               {step.completed ? (
@@ -29,7 +29,7 @@ className="h-2 bg-gradient-to-r from-zion-purple to-zion-cyan rounded-full trans
               <div className="text-sm font-medium text-white">{step.label}</div>
             </div>
             {!step.completed && step.action && (
-              <Button,
+              <Button
 asChild
                 variant="ghost"
                 size="sm"
@@ -54,8 +54,7 @@ asChild
   step.completed ? (<CheckCircle className="h-5 w-5 text-zion-cyan" /> h-5 w-5 text-zion-slate-light"/>)
 }</div> </div> {"
   !step.completed && step.action && (<Button asChild variant=" ghost"size=" sm"className=" text-zion-purple hover:text-zion-cyan hover:bg-zion-blue" > <Link href= {
-  step.link,
-}> </Link> </Button>)
+  step.link}> </Link> </Button>)
 }</div>) )
 }</div> </div>)
 }"}

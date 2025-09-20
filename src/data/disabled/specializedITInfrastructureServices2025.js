@@ -1,7 +1,6 @@
 export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2025 = [
     // AI-Powered Edge Computing Platform;
-    {
-        id: "edge-computing-ai-platform";
+    {id: "edge-computing-ai-platform";
         name: "EdgeAI Computing Platform";
         category: "Edge Computing";
         subcategory: "AI-Powered Infrastructure";
@@ -46,8 +45,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2025 = [
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com";
-            address: "364 E Main St STE 1008 Middletown DE 19709",
-        };
+            address: "364 E Main St STE 1008 Middletown DE 19709"};
         demoUrl: "https://ziontechgroup.com/demo/edge-computing-ai";
         documentationUrl: "https://ziontechgroup.com/docs/edge-computing-ai";
         freeTrial: true;
@@ -57,8 +55,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2025 = [
         growthPotential: "400% annual growth expected",
     };
     // AI-Powered Zero Trust Security Platform;
-    {
-        id: "zero-trust-security-ai";
+    {id: "zero-trust-security-ai";
         name: "ZeroTrust AI Security Platform";
         category: "Cybersecurity";
         subcategory: "Zero Trust Architecture";
@@ -103,8 +100,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2025 = [
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com";
-            address: "364 E Main St STE 1008 Middletown DE 19709",
-        };
+            address: "364 E Main St STE 1008 Middletown DE 19709"};
         demoUrl: "https://ziontechgroup.com/demo/zero-trust-security";
         documentationUrl: "https://ziontechgroup.com/docs/zero-trust-security";
         freeTrial: true;
@@ -114,8 +110,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2025 = [
         growthPotential: "500% annual growth expected",
     };
     // AI-Powered Hybrid Cloud Management Platform;
-    {
-        id: "hybrid-cloud-management-ai";
+    {id: "hybrid-cloud-management-ai";
         name: "HybridCloud AI Management";
         category: "Cloud Management";
         subcategory: "Hybrid Cloud";
@@ -160,8 +155,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2025 = [
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com";
-            address: "364 E Main St STE 1008 Middletown DE 19709",
-        };
+            address: "364 E Main St STE 1008 Middletown DE 19709"};
         demoUrl: "https://ziontechgroup.com/demo/hybrid-cloud-management";
         documentationUrl: "https://ziontechgroup.com/docs/hybrid-cloud-management";
         freeTrial: true;
@@ -171,8 +165,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2025 = [
         growthPotential: "450% annual growth expected",
     };
     // AI-Powered Data Center Automation Platform;
-    {
-        id: "data-center-automation-ai";
+    {id: "data-center-automation-ai";
         name: "DataCenter AI Automation";
         category: "Data Center";
         subcategory: "Automation & AI";
@@ -217,8 +210,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2025 = [
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com";
-            address: "364 E Main St STE 1008 Middletown DE 19709",
-        };
+            address: "364 E Main St STE 1008 Middletown DE 19709"};
         demoUrl: "https://ziontechgroup.com/demo/data-center-automation";
         documentationUrl: "https://ziontechgroup.com/docs/data-center-automation";
         freeTrial: true;
@@ -228,8 +220,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2025 = [
         growthPotential: "600% annual growth expected",
     };
     // AI-Powered Network Performance Optimization Platform;
-    {
-        id: "network-performance-optimization-ai";
+    {id: "network-performance-optimization-ai";
         name: "NetworkAI Performance";
         category: "Network Management";
         subcategory: "Performance Optimization";
@@ -274,8 +265,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2025 = [
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com";
-            address: "364 E Main St STE 1008 Middletown DE 19709",
-        };
+            address: "364 E Main St STE 1008 Middletown DE 19709"};
         demoUrl: "https://ziontechgroup.com/demo/network-performance";
         documentationUrl: "https://ziontechgroup.com/docs/network-performance";
         freeTrial: true;

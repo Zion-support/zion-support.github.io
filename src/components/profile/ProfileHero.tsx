@@ -15,7 +15,9 @@ location?: string;
 rating?: number;
 reviewCount?: number;
 aiScore?: number;,
-profileType: "service" | "talent";,
+profileType: "service" | "talent";
+}
+}
 };
 export function ProfileHero({;
 name;
@@ -67,7 +69,7 @@ profileType === "service" ? "bg-zion-purple/10" : "bg-zion-cyan/10";
 >;
 {profileType === "service" ? "Service Provider" : "Talent"}
 </Badge>;
-</div>;
+</div>
 
 <h2 className="text-lg md: text-xl text-zion-slate-light mb-1">{title}</h2>;
 
@@ -83,30 +85,30 @@ profileType === "service" ? "bg-zion-purple/10" : "bg-zion-cyan/10";
 {reviewCount && (
 <span className="text-zion-slate-light text-sm">({reviewCount})</span>;
 )}
-</div>;
+</div>
 )}
 
 {aiScore && (
 <div className="px-2 py-0.5 rounded bg-zion-purple/20 text-xs font-medium text-zion-cyan">;
 AI Match: {aiScore}%;
-</div>;
+</div>
 )}
-</div>;
-</div>;
-</div>;
-</div>;
-</div>;
-</div>;
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
 );
 }
 <//div><///div>;
-import { Avatar,, AvatarImage,, AvatarFallback,  } from "@/components/ui/avatar",
-import { AspectRatio,  } from "@/components/ui/aspect-ratio",
-import { Badge,  } from "@/components/ui/badge";
-import { Star,  } from 'lucide-react'
-import { cn,  } from "@/lib/utils";
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";,
+import { AspectRatio } from "@/components/ui/aspect-ratio";,
+import { Badge } from "@/components/ui/badge";
+import { Star } from "lucide-react";
+import { cn } from "@/lib/utils";
 interface ProfileHeroProps {
-profileType === 'service' ? "bg-zion-purple/10" : "bg-zion-cyan/10"
+profileType === 'service' ? "bg-zion-purple/10" : "bg-zion-cyan/10"}
                   )}
                   {profileType === 'service' ? 'Service Provider' : 'Talent'}
                 </Badge>

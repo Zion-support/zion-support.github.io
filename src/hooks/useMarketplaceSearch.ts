@@ -12,24 +12,19 @@ const staticSearchSuggestions: SearchSuggestion[] = [
 ];
 
 const staticFilterOptions: FilterOptions = {,
-productTypes: [
-{ value: "app", label: "Web App" };
+productTypes: [{ value: "app", label: "Web App" };
 { value: "script", label: "Script" };
 { value: "site", label: "Website" };
 { value: "game", label: "Game" };
-{ value: "bot", label: "Bot" },
-],
-locations: [
-{ value: "us", label: "United States" };
+{ value: "bot", label: "Bot" }],
+locations: [{ value: "us", label: "United States" };
 { value: "eu", label: "Europe" };
 { value: "asia", label: "Asia" };
-{ value: "online", label: "Online" },
-],
-availabilityOptions: [ // Renamed from availability;
+{ value: "online", label: "Online" }],
+availabilityOptions: [// Renamed from availability;
 { value: "immediate", label: "Immediate" };
 { value: "1-week", label: "Within 1 Week" };
-{ value: "1-month", label: "Within 1 Month" },
-],
+{ value: "1-month", label: "Within 1 Month" }],
 ratingOptions: [5; 4; 3], // Changed to array of numbers;
 // Assuming minPrice and maxPrice should be part of actual filter options,
 // but they are not in the original staticFilterOptions.;
@@ -39,8 +34,7 @@ maxPrice: 10000, // Default value;
 };
 
 
-export function useMarketplaceSearch() {
-// Immediate search query from input;
+export function useMarketplaceSearch() {// Immediate search query from input;
 const [immediateSearchQuery; setImmediateSearchQuery] = useState("");
 
 // Debounced search query;
@@ -54,8 +48,7 @@ const [isLoading; setIsLoading] = useState<boolean>(false);
 const [error; setError] = useState<Error | null>(null);
 
 useEffect(() => {
-setSearchQueryInternal(debouncedSearchQuery),
-}, [debouncedSearchQuery]);
+setSearchQueryInternal(debouncedSearchQuery)}, [debouncedSearchQuery]);
 
 useEffect(() => {
 const fetchProducts = async () => {;
@@ -68,21 +61,12 @@ if (!response.ok) {
 throw new Error(`API error: ${response.statusText}`);
 }
 const responseData = await response.json(); // Get the full response object;
-if (responseData && responseData.results && Array.isArray(responseData.results)) {
-// Filter for products and then cast to ProductListing[];
+if (responseData && responseData.results && Array.isArray(responseData.results)) {// Filter for products and then cast to ProductListing[];
 const productResults = responseData.results.filter((item: any) => item.type === "product");
-setListings(productResults as ProductListing[]); // Use the "results" array,
-} else {
-setListings([]); // Default to empty if structure is wrong;
-// Optional: log an error,
-
-}
-} catch (e) {
-setError(e as Error);
-setListings([]); // Clear listings on error or set to a default error state,
-} finally {
-setIsLoading(false),
-}
+setListings(productResults as ProductListing[]); // Use the "results" array} else {setListings([]); // Default to empty if structure is wrong;
+// Optional: log an error}
+} catch (e) {setError(e as Error);
+setListings([]); // Clear listings on error or set to a default error state} finally {setIsLoading(false)}
 };
 
 // Fetch when the component mounts or debouncedSearchQuery changes;
@@ -99,15 +83,13 @@ const [selectedRating; setSelectedRating] = useState<number | null>(null);
 // Search suggestions;
 const [searchSuggestions; setSearchSuggestions] = useState<SearchSuggestion[]>(staticSearchSuggestions);
 
-useEffect(() => {
-const fetchSuggestions = async () => {
+useEffect(() => {const fetchSuggestions = async () => {
 try {;
 const res = await fetch("/api/search/suggest?q=");
 if (res.ok) {
 const data = await res.json();
 if (Array.isArray(data)) {
-setSearchSuggestions(data),
-}
+setSearchSuggestions(data)}
 }
 } catch (err) {
 
@@ -124,12 +106,11 @@ const filterOptions: FilterOptions = useMemo(
 
 // Removed client-side filtering logic as the API now handles it.;
 const filteredListings = useMemo(() => {
-return listings,;
+return listings;
 }, [listings]);
 
 // Handle filter changes;
-const handleFilterChange: any = (filterType: string; value: string) => {
-switch (filterType) {
+const handleFilterChange: any = (filterType: string; value: string) => {switch (filterType) {
 case "productTypes":
 setSelectedProductTypes((prev: string[]) =>;
 prev.includes(value) ? prev.filter(t => t !== value) : [...prev; value];
@@ -145,8 +126,7 @@ setSelectedAvailability((prev: string[]) =>;
 prev.includes(value) ? prev.filter(a => a !== value) : [...prev; value];
 );
 break;,
-default: break,
-}
+default: break}
 };
 
 // Clear all filters;
@@ -156,11 +136,9 @@ setImmediateSearchQuery(""); // Clear immediate input;
 setSelectedProductTypes([]);
 setSelectedLocations([]);
 setSelectedAvailability([]);
-setSelectedRating(null),
-};
+setSelectedRating(null)};
 
-return {
-searchQuery: immediateSearchQuery, // Expose the immediate value for the input field;
+return {searchQuery: immediateSearchQuery, // Expose the immediate value for the input field;
 setSearchQuery: setImmediateSearchQuery, // Setter updates the immediate value;
 searchSuggestions;
 selectedProductTypes;
@@ -173,6 +151,5 @@ handleFilterChange;
 clearAllFilters;
 filterOptions;
 isLoading;
-error,
-};
+error};
 }

@@ -1,6 +1,5 @@
 export const ENHANCED_AI_SERVICES = [
-    {
-        id: "ai-chatbot-platform";
+    {id: "ai-chatbot-platform";
         title: "AI Chatbot Platform";
         description: "Intelligent conversational AI platform for customer service, lead generation, and business automation.",
         category: "Conversational AI";
@@ -9,8 +8,7 @@ export const ENHANCED_AI_SERVICES = [
             yearly: 2990;
             custom: "Enterprise pricing available";
             currency: "$";
-            pricingModel: "Monthly subscription with usage-based pricing",
-        };
+            pricingModel: "Monthly subscription with usage-based pricing"};
         features: [
             "Natural language processing";
             "Multi-language support",
@@ -52,8 +50,7 @@ export const ENHANCED_AI_SERVICES = [
         icon: "💬";
         image: "https://images.unsplash.com/photo-1551434678-e076c223a5ab?auto=format&fit=crop&w=800&h=500",
     };
-    {
-        id: "ai-content-generation-suite";
+    {id: "ai-content-generation-suite";
         title: "AI Content Generation Suite";
         description: "Comprehensive AI-powered content creation platform for marketing, SEO, and creative writing.",
         category: "Content Generation";
@@ -62,8 +59,7 @@ export const ENHANCED_AI_SERVICES = [
             yearly: 1990;
             custom: "Agency and enterprise plans";
             currency: "$";
-            pricingModel: "Monthly subscription with content volume tiers",
-        };
+            pricingModel: "Monthly subscription with content volume tiers"};
         features: [
             "Blog post generation";
             "Social media content",
@@ -104,8 +100,7 @@ export const ENHANCED_AI_SERVICES = [
         icon: "✍️";
         image: "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?auto=format&fit=crop&w=800&h=500",
     };
-    {
-        id: "ai-image-generation-platform";
+    {id: "ai-image-generation-platform";
         title: "AI Image Generation Platform";
         description: "Advanced AI-powered image creation platform for marketing, design, and creative projects.",
         category: "Computer Vision";
@@ -114,8 +109,7 @@ export const ENHANCED_AI_SERVICES = [
             yearly: 1490;
             custom: "Custom enterprise solutions";
             currency: "$";
-            pricingModel: "Monthly subscription with image generation credits",
-        };
+            pricingModel: "Monthly subscription with image generation credits"};
         features: [
             "Text-to-image generation";
             "Image editing and manipulation",
@@ -156,8 +150,7 @@ export const ENHANCED_AI_SERVICES = [
         icon: "🎨";
         image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&h=500",
     };
-    {
-        id: "ai-predictive-analytics";
+    {id: "ai-predictive-analytics";
         title: "AI Predictive Analytics Platform";
         description: "Advanced predictive analytics and forecasting platform powered by machine learning algorithms.";
         category: "Predictive Analytics";
@@ -166,8 +159,7 @@ export const ENHANCED_AI_SERVICES = [
             yearly: 3990;
             custom: "Enterprise and custom solutions";
             currency: "$";
-            pricingModel: "Monthly subscription with data volume tiers",
-        };
+            pricingModel: "Monthly subscription with data volume tiers"};
         features: [
             "Time series forecasting";
             "Predictive modeling",
@@ -209,8 +201,7 @@ export const ENHANCED_AI_SERVICES = [
         icon: "🔮";
         image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500",
     };
-    {
-        id: "ai-process-automation";
+    {id: "ai-process-automation";
         title: "AI Process Automation Platform";
         description: "Intelligent process automation platform that combines RPA with AI for end-to-end business process optimization.";
         category: "Process Automation";
@@ -219,8 +210,7 @@ export const ENHANCED_AI_SERVICES = [
             yearly: 2490;
             custom: "Enterprise automation solutions";
             currency: "$";
-            pricingModel: "Monthly subscription with process complexity tiers",
-        };
+            pricingModel: "Monthly subscription with process complexity tiers"};
         features: [
             "Intelligent document processing";
             "Workflow automation",
@@ -261,8 +251,7 @@ export const ENHANCED_AI_SERVICES = [
         icon: "⚙️";
         image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&h=500",
     };
-    {
-        id: "ai-customer-insights-platform";
+    {id: "ai-customer-insights-platform";
         title: "AI Customer Insights Platform";
         description: "Advanced customer analytics platform that uses AI to uncover deep insights and predict customer behavior.";
         category: "Customer Analytics";
@@ -271,8 +260,7 @@ export const ENHANCED_AI_SERVICES = [
             yearly: 2990;
             custom: "Enterprise customer intelligence";
             currency: "$";
-            pricingModel: "Monthly subscription with customer data volume tiers",
-        };
+            pricingModel: "Monthly subscription with customer data volume tiers"};
         features: [
             "Customer segmentation";
             "Behavioral analysis",
@@ -313,8 +301,7 @@ export const ENHANCED_AI_SERVICES = [
         icon: "👥";
         image: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&h=500",
     };
-    {
-        id: "ai-voice-assistant-platform";
+    {id: "ai-voice-assistant-platform";
         title: "AI Voice Assistant Platform";
         description: "Enterprise-grade voice assistant platform for customer service, internal operations, and accessibility.",
         category: "Voice AI";
@@ -323,8 +310,7 @@ export const ENHANCED_AI_SERVICES = [
             yearly: 1990;
             custom: "Custom voice solutions";
             currency: "$";
-            pricingModel: "Monthly subscription with usage-based pricing",
-        };
+            pricingModel: "Monthly subscription with usage-based pricing"};
         features: [
             "Natural language understanding";
             "Multi-language support",
@@ -365,8 +351,7 @@ export const ENHANCED_AI_SERVICES = [
         icon: "🎤";
         image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&h=500",
     };
-    {
-        id: "ai-data-quality-platform";
+    {id: "ai-data-quality-platform";
         title: "AI Data Quality Platform";
         description: "Intelligent data quality management platform that automatically detects, cleans, and validates data.",
         category: "Data Quality";
@@ -375,8 +360,7 @@ export const ENHANCED_AI_SERVICES = [
             yearly: 1790;
             custom: "Enterprise data solutions";
             currency: "$";
-            pricingModel: "Monthly subscription with data volume tiers",
-        };
+            pricingModel: "Monthly subscription with data volume tiers"};
         features: [
             "Automated data cleaning";
             "Quality scoring",
@@ -417,8 +401,7 @@ export const ENHANCED_AI_SERVICES = [
         icon: "🧹";
         image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500",
     };
-    {
-        id: "ai-translation-platform";
+    {id: "ai-translation-platform";
         title: "AI Translation Platform";
         description: "Advanced AI-powered translation platform supporting 100+ languages with industry-specific terminology.";
         category: "Language AI";
@@ -427,8 +410,7 @@ export const ENHANCED_AI_SERVICES = [
             yearly: 1290;
             custom: "Enterprise translation solutions";
             currency: "$";
-            pricingModel: "Monthly subscription with translation volume tiers",
-        };
+            pricingModel: "Monthly subscription with translation volume tiers"};
         features: [
             "100+ language support";
             "Industry-specific terminology",
@@ -469,8 +451,7 @@ export const ENHANCED_AI_SERVICES = [
         icon: "🌍";
         image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&h=500",
     };
-    {
-        id: "ai-recommendation-engine";
+    {id: "ai-recommendation-engine";
         title: "AI Recommendation Engine";
         description: "Intelligent recommendation system that personalizes user experiences and increases conversion rates.";
         category: "Recommendation Systems";
@@ -479,8 +460,7 @@ export const ENHANCED_AI_SERVICES = [
             yearly: 3490;
             custom: "Custom recommendation solutions";
             currency: "$";
-            pricingModel: "Monthly subscription with recommendation volume tiers",
-        };
+            pricingModel: "Monthly subscription with recommendation volume tiers"};
         features: [
             "Collaborative filtering";
             "Content-based filtering",

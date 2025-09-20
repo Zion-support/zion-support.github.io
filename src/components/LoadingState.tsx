@@ -6,7 +6,8 @@ interface LoadingStateProps {
 type?: 'spinner' | 'skeleton' | 'pulse' | 'dots';
 size?: 'sm' | 'md' | 'lg';
 color?: string;
-text?: string;
+}
+text?: string;}
 };
 export const LoadingState: React.FC<LoadingStateProps> = ({
 type = 'spinner',
@@ -15,9 +16,9 @@ color = 'blue',
 text;
 }) => {
 const sizeClasses = {
-sm: 'w-4 h-4',;
+sm: 'w-4 h-4';
 md: 'w-8 h-8',;
-lg: 'w-12 h-12';,
+lg: 'w-12 h-12';
 };
 
 const colorClasses = {
@@ -41,9 +42,9 @@ transition={{ duration: 1, repeat: Infinity, ease: 'linear' }}
 case 'skeleton':
 return (
 <div className="animate-pulse">;
-<div className="h-4 bg-gray-300 rounded w-3/4 mb-2"></div>;
-<div className="h-4 bg-gray-300 rounded w-1/2"></div>;
-</div>;
+<div className="h-4 bg-gray-300 rounded w-3/4 mb-2"></div>
+<div className="h-4 bg-gray-300 rounded w-1/2"></div>
+</div>
 );
 
 case 'pulse':
@@ -66,14 +67,13 @@ animate={{ scale: [1, 1.2, 1] }}
 transition={{
 duration: 0.6,
 repeat: Infinity,
-delay: i * 0.2,
-}}
+delay: i * 0.2}}
 />;
 ))}
-</div>;
+</div>
 );
 
-default: return null;,
+default: return null;
 }
 };
 
@@ -89,7 +89,7 @@ className="text-gray-600 text-sm"
 {text}
 </motion.p>;
 )}
-</div>;
+</div>
 );
 };
 

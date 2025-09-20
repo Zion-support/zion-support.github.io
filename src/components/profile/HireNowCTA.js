@@ -10,26 +10,22 @@ import { Card, CardContent, CardHeader, CardTitle } from '../ui/Card';
 import { Input } from '../ui/Input';
 import { Textarea } from '../ui/Textarea';
 import { DollarSign, MessageSquare } from 'lucide-react';
-export function HireNowCTA({ talentName, hourlyRate, onHire }) {
-    const [isFormOpen, setIsFormOpen] = useState(false);
+export function HireNowCTA({ talentName, hourlyRate, onHire }) {const [isFormOpen, setIsFormOpen] = useState(false);
     const [formData, setFormData] = useState({
         projectDescription: '',
         budget: '',
         startDate: '',
-        message: '',
-    });
+        message: ''});
     const handleSubmit = (e) => {
         e.preventDefault();
         if (onHire) {
             onHire(formData);
         }
         // Reset form and close;
-        setFormData({
-            projectDescription: '',
+        setFormData({projectDescription: '',
             budget: '',
             startDate: '',
-            message: '',
-        });
+            message: ''});
         setIsFormOpen(false);
     };
     const handleChange = (e) => {

@@ -1,7 +1,7 @@
-import { CategoryCard,  } from "@/components/CategoryCard";
-import { GradientHeading,  } from "@/components/GradientHeading";
-import ErrorBoundary from "@/components/GlobalErrorBoundary", // Import ErrorBoundary,
-import { Briefcase,, HardDrive,, Lightbulb,, Users,  } from 'lucide-react'
+import { CategoryCard } from "@/components/CategoryCard";
+import { GradientHeading } from "@/components/GradientHeading";
+import ErrorBoundary from "@/components/GlobalErrorBoundary";
+import { Briefcase, HardDrive, Lightbulb, Users } from 'lucide-react';
 // Reusing the categories array from CategoriesSection.tsx
 // Ideally this would come from a shared data source or API;
 
@@ -10,7 +10,7 @@ export default function AllCategoriesPage() {
     <div className='min-h-screen bg-zion-blue'>
       <div className='container mx-auto px-4 py-12'>
         <div className='text-center mb-12'>
-          <GradientHeading,
+          <GradientHeading
 level='h1'
             className='text-4xl md:text-5xl font-bold mb-4'
           >
@@ -24,7 +24,7 @@ projects.          </p>
         <ErrorBoundary>
           <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6'>
             {categories.map(category => (
-              <CategoryCard,
+              <CategoryCard
 key={category.id}
                 title={category.title}
                 description={category.description}
@@ -36,18 +36,17 @@ key={category.id}
         <ErrorBoundary>
           <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6'>
             {categories.map(category => (          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {categories.map((category) => (
-              <CategoryCard,
+            {categories.map((category) => (<CategoryCard
 key={category.title}
                 title={category.title}
                 description={category.description}
                 icon={category.icon}
-            {categories.map((category,) => (
-              <CategoryCard,
-key = {category.title,}
-                title = {category.title,}
-                description = {category.description,}
-                icon = {category.icon,}
+            {categories.map((category) => (
+              <CategoryCard
+key = {category.title}
+                title = {category.title}
+                description = {category.description}
+                icon = {category.icon}
                 // The CategoryCard itself is a Link to its specific category page
                 // So we don't pass the category.link to a 'to' prop here directly
                 // The 'link' in the categories array above is used by CategoryCard's internal Link

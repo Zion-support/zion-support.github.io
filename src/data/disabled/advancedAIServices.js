@@ -1,7 +1,6 @@
 export const ADVANCED_AI_SERVICES = [
     // AI-Powered Financial Trading Platform;
-    {
-        id: "ai-financial-trading-platform";
+    {id: "ai-financial-trading-platform";
         title: "AI Financial Trading Platform";
         description: "Advanced algorithmic trading platform that uses machine learning to analyze market data, predict trends, and execute trades with high accuracy and minimal risk.",
         category: "AI & Financial Technology";
@@ -47,8 +46,7 @@ export const ADVANCED_AI_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         technology: ["Python", "TensorFlow", "PyTorch", "Redis", "PostgreSQL", "Apache Kafka"],
         integrations: ["Bloomberg Terminal", "Reuters", "Interactive Brokers", "TD Ameritrade", "E*TRADE"],
         compliance: ["SEC", "FINRA", "MiFID II", "GDPR"],
@@ -58,8 +56,7 @@ export const ADVANCED_AI_SERVICES = [
         growthRate: "23.5% annually",
     };
     // AI-Powered Healthcare Diagnostics;
-    {
-        id: "ai-healthcare-diagnostics";
+    {id: "ai-healthcare-diagnostics";
         title: "AI Healthcare Diagnostics Platform";
         description: "Comprehensive medical diagnostics platform that uses deep learning to analyze medical images, patient data, and symptoms to provide accurate diagnoses and treatment recommendations.",
         category: "AI & Healthcare";
@@ -105,8 +102,7 @@ export const ADVANCED_AI_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         technology: ["TensorFlow", "PyTorch", "OpenCV", "DICOM", "HL7 FHIR", "React"],
         integrations: ["Epic", "Cerner", "Allscripts", "Practice Fusion", "eClinicalWorks"],
         compliance: ["HIPAA", "FDA", "SOC 2", "HITECH"],
@@ -116,8 +112,7 @@ export const ADVANCED_AI_SERVICES = [
         growthRate: "28.7% annually",
     };
     // AI-Powered Supply Chain Optimization;
-    {
-        id: "ai-supply-chain-optimization";
+    {id: "ai-supply-chain-optimization";
         title: "AI Supply Chain Optimization Platform";
         description: "Intelligent supply chain management platform that uses AI to predict demand, optimize inventory, reduce costs, and improve efficiency across the entire supply chain.",
         category: "AI & Supply Chain";
@@ -163,8 +158,7 @@ export const ADVANCED_AI_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         technology: ["Python", "TensorFlow", "Apache Spark", "PostgreSQL", "Redis", "React"],
         integrations: ["SAP", "Oracle", "NetSuite", "Salesforce", "Shopify", "WMS systems"],
         compliance: ["ISO 28000", "C-TPAT", "GDPR", "SOC 2"],
@@ -174,8 +168,7 @@ export const ADVANCED_AI_SERVICES = [
         growthRate: "18.9% annually",
     };
     // AI-Powered Cybersecurity Threat Detection;
-    {
-        id: "ai-cybersecurity-threat-detection";
+    {id: "ai-cybersecurity-threat-detection";
         title: "AI Cybersecurity Threat Detection Platform";
         description: "Advanced cybersecurity platform that uses machine learning to detect, analyze, and respond to cyber threats in real-time, providing comprehensive protection for organizations.",
         category: "AI & Cybersecurity";
@@ -221,8 +214,7 @@ export const ADVANCED_AI_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         technology: ["Python", "TensorFlow", "Elasticsearch", "Kafka", "PostgreSQL", "React"],
         integrations: ["SIEM systems", "EDR solutions", "Firewalls", "Identity providers", "Cloud platforms"],
         compliance: ["SOC 2", "ISO 27001", "NIST", "GDPR", "HIPAA"],
@@ -232,8 +224,7 @@ export const ADVANCED_AI_SERVICES = [
         growthRate: "31.2% annually",
     };
     // AI-Powered Content Creation Studio;
-    {
-        id: "ai-content-creation-studio";
+    {id: "ai-content-creation-studio";
         title: "AI Content Creation Studio";
         description: "Comprehensive content creation platform that uses AI to generate high-quality articles, videos, graphics, and social media content with human-like creativity and accuracy.",
         category: "AI & Content Creation";
@@ -279,8 +270,7 @@ export const ADVANCED_AI_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         technology: ["GPT-4", "DALL-E", "Stable Diffusion", "React", "Node.js", "PostgreSQL"],
         integrations: ["WordPress", "Shopify", "HubSpot", "Mailchimp", "Social platforms"],
         compliance: ["GDPR", "SOC 2", "Content guidelines"],
@@ -290,8 +280,7 @@ export const ADVANCED_AI_SERVICES = [
         growthRate: "26.4% annually",
     };
     // AI-Powered Legal Document Analysis;
-    {
-        id: "ai-legal-document-analysis";
+    {id: "ai-legal-document-analysis";
         title: "AI Legal Document Analysis Platform";
         description: "Intelligent legal document review and analysis platform that uses AI to extract key information, identify risks, and provide insights from contracts, agreements, and legal documents.",
         category: "AI & Legal Technology";
@@ -337,8 +326,7 @@ export const ADVANCED_AI_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         technology: ["NLP", "Machine Learning", "Python", "React", "PostgreSQL", "Elasticsearch"],
         integrations: ["DocuSign", "Adobe Acrobat", "Microsoft Office", "Legal databases", "Case management systems"],
         compliance: ["GDPR", "SOC 2", "Legal ethics", "Data privacy"],
@@ -348,8 +336,7 @@ export const ADVANCED_AI_SERVICES = [
         growthRate: "22.1% annually",
     };
     // AI-Powered Real Estate Analytics;
-    {
-        id: "ai-real-estate-analytics";
+    {id: "ai-real-estate-analytics";
         title: "AI Real Estate Analytics Platform";
         description: "Advanced real estate analytics platform that uses AI to predict property values, analyze market trends, and provide investment insights for real estate professionals and investors.",
         category: "AI & Real Estate";
@@ -395,8 +382,7 @@ export const ADVANCED_AI_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         technology: ["Python", "TensorFlow", "PostgreSQL", "React", "Redis", "Machine Learning"],
         integrations: ["MLS systems", "Zillow API", "Redfin API", "Property databases", "Financial data sources"],
         compliance: ["GDPR", "SOC 2", "Real estate regulations"],
@@ -406,8 +392,7 @@ export const ADVANCED_AI_SERVICES = [
         growthRate: "19.8% annually",
     };
     // AI-Powered Energy Management;
-    {
-        id: "ai-energy-management";
+    {id: "ai-energy-management";
         title: "AI Energy Management Platform";
         description: "Intelligent energy management platform that uses AI to optimize energy consumption, predict demand, and reduce costs for commercial and industrial facilities.",
         category: "AI & Energy";
@@ -453,8 +438,7 @@ export const ADVANCED_AI_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         technology: ["IoT sensors", "Machine Learning", "Python", "React", "PostgreSQL", "Time series databases"],
         integrations: ["Building management systems", "Smart meters", "Solar panels", "Battery storage", "Utility APIs"],
         compliance: ["ISO 50001", "LEED", "Energy Star", "SOC 2"],

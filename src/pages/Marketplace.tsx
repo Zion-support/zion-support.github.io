@@ -1,20 +1,21 @@
-import { useRouter,, ,  } from 'next/router';
-import { useApiErrorHandling,, ,  } from '@/hooks/useApiErrorHandling';
+import { useRouter } from "next/router";
+import { useApiErrorHandling } from "@/hooks/useApiErrorHandling";
 import ProductCard from '@/components/ProductCard';
 import Spinner from '@/components/ui/spinner';
-import { ProductListing,, ,  } from '@/types/listings';
-import { useInfiniteScrollPagination,, ,  } from '@/hooks/useInfiniteScroll';
-import { useToast,, ,  } from '@/hooks/use-toast';
-import { useAuth,, ,  } from '@/context/auth/AuthProvider';
-import { MARKETPLACE_LISTINGS,, ,  } from '@/data/listingData';
-import { MAX_PRICE,, MIN_PRICE,, ,  } from '@/data/marketplaceData';
-import { logInfo,, logErrorToProduction,  } from '@/utils/productionLogger';
+import { ProductListing } from "@/types/listings";
+import { useInfiniteScrollPagination } from "@/hooks/useInfiniteScroll";
+import { useToast } from "@/hooks/use-toast";
+import { useAuth } from "@/context/auth/AuthProvider";
+import { MARKETPLACE_LISTINGS } from "@/data/listingData";
+import { MAX_PRICE, MIN_PRICE } from "@/data/marketplaceData";
+import { logInfo, logErrorToProduction } from "@/utils/productionLogger";
 /**
  * Marketplace component props
  */
 export interface MarketplaceProps {
   // All props removed - component now fetches data independently
-// Market insights component,
+}
+// Market insights component,}
 const MarketInsights: React.FC<{ stats: any }> = ({ stats }) => (
                     // though ProductCard will reset its state in .finally() regardless.
                     throw error;
@@ -42,8 +43,7 @@ const MarketInsights: React.FC<{ stats: any }> = ({ stats }) => (
       </motion.div>
       {/* Loading More Indicator */}
       {(isFetching |loading) && (
-        <motion.div,
-className='mt-8'
+        <motion.div className='mt-8'
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
         >
@@ -55,8 +55,7 @@ className='mt-8'
       )}
       {/* End of Results */}
       {!hasMore && products.length > 0 && (
-        <motion.div,
-className='text-center mt-12 py-8 border-t'
+        <motion.div className='text-center mt-12 py-8 border-t'
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
         >
@@ -71,8 +70,7 @@ className='text-center mt-12 py-8 border-t'
       {/* Scroll to Top Button */}
       <AnimatePresence>
         {showScrollTop && (
-          <motion.button,
-onClick={scrollToTop}
+          <motion.button onClick={scrollToTop}
             className='fixed bottom-8 right-8 p-3 bg-primary hover:bg-primary/90 rounded-full shadow-lg z-50'            initial={{ opacity: 0 scale: 0 }}
             animate={{ opacity: 1 scale: 1 }}
             exit={{ opacity: 0 scale: 0 }}
@@ -113,7 +111,7 @@ case 'newest': ;
   t ('marketplace.hero title') ";
 }</h1> <p className="text-muted-foreground text-lg"> {';
   t ('marketplace.hero subtitle') ";
-}</p> </motion.div> <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"> {Array.from ({;,
+}</p> </motion.div> <div className="grid grid-cols-1 sm: grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"> {Array.from ({;
 length: 12 ;
 }) .map ( (, i) => (<SkeletonCard key= {i ;
 }/>) ) ;
@@ -205,7 +203,7 @@ length: 12 ;
 }animate= {{;
   opacity: 1 ;
 }";
-}> <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"> {Array.from ({;,
+}> <div className="grid grid-cols-1 sm: grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"> {Array.from ({;
 length: 4 ;
 }) .map ( (, i) => (<SkeletonCard key= {`loading-$ {;
   i ;
@@ -224,7 +222,7 @@ length: 4 ;
 }{/* Scroll to Top Button */ ;
 }<AnimatePresence> {showScrollTop && (<motion.button onClick={;
   scrollToTop ";
-}className="fixed bottom-8 right-8 p-3 bg-primary hover:bg-primary/90 rounded-full shadow-lg z-50"initial= {{;,
+}className="fixed bottom-8 right-8 p-3 bg-primary hover: bg-primary/90 rounded-full shadow-lg z-50"initial= {{;
 opacity: 0 scale: 0 ;
 }animate= {{;
   opacity: 1 scale: 1 ;
@@ -266,7 +264,7 @@ const Marketplace = () => {return (;
                   <li>• 24/7 Support</li>;
                   <li>• Custom Development</li>;
                 </ul>;
-              </div>;
+              </div>
               <div className="bg-white p-6 rounded-lg shadow-md">;
                 <h2 className="text-2xl font-semibold mb-4">Why Choose Us</h2>;
                 <ul className="text-gray-600 space-y-2">;
@@ -275,7 +273,7 @@ const Marketplace = () => {return (;
                   <li>• Scalable Solutions</li>;
                   <li>• Competitive Pricing</li>;
                 </ul>;
-              </div>;
+              </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">;
               <Link href="/pricing/" className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors">;
                 View Pricing;
@@ -283,7 +281,7 @@ const Marketplace = () => {return (;
               <Link href="/contact/" className="bg-gray-600 text-white px-6 py-3 rounded-lg hover:bg-gray-700 transition-colors">;
                 Contact Us;
               </Link>;
-            </div>;
-    </>;
+            </div>
+</>;
   );
 }

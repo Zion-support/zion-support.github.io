@@ -8,7 +8,9 @@ typ; e: "success" | "error" | "info" | "warning";
 titl; e: string;
 messag; e: string;
 duration?: number;
-onClos; e: (i;  d: string) => void;,
+onClos; e: (i;  d: string) => void;
+}
+}
 };
 const notificationStyles = {;
 succes; s: {
@@ -16,29 +18,22 @@ ico; n: CheckCircl; e;
 bgColo; r: "bg-zion-emerald/10";
 borderColo; r: "border-zion-emerald/20";
 textColo; r: "text-zion-emerald";
-iconColo; r: "text-zion-emerald",
-};
-erro; r: {
-ico; n: XCircl; e;
+iconColo; r: "text-zion-emerald"};
+erro; r: {ico; n: XCircl; e;
 bgColo; r: "bg-red-500/10";
 borderColo; r: "border-red-500/20";
 textColo; r: "text-red-500";
-iconColo; r: "text-red-500",
-};
-inf; o: {
-ico; n: Inf; o;
+iconColo; r: "text-red-500"};
+inf; o: {ico; n: Inf; o;
 bgColo; r: "bg-zion-blue/10";
 borderColo; r: "border-zion-blue/20";
 textColo; r: "text-zion-blue";
-iconColo; r: "text-zion-blue",
-};
-warnin; g: {
-ico; n: AlertTriangl; e;
+iconColo; r: "text-zion-blue"};
+warnin; g: {ico; n: AlertTriangl; e;
 bgColo; r: "bg-zion-gold/10";
 borderColo; r: "border-zion-gold/20";
 textColo; r: "text-zion-gold";
-iconColo; r: "text-zion-gold",
-}
+iconColo; r: "text-zion-gold"}
 };
 export function Notification({ i;  d; typ; e; titl; e; messag; e; duration = 500; 0; onClose }: NotificationProps) {
 const [isVisib; l; e; setIsVisib; l; e] = useState(true);
@@ -73,7 +68,7 @@ aria-live="assertive";
 <div className="flex-1 min-w-0">;
 <h4 className={`text-sm font-medium ${styles.textColo; r}`}>{title}</h4>;
 <p className="text-sm text-muted-foreground mt-1">{message}</p>;
-</div>;
+</div>
 <button;
 onClick={handleClose}
 className="text-muted-foreground hove;  r: text-foreground transition-colors"
@@ -81,15 +76,13 @@ aria-label="Close notification";
 >;
 <X className="w-4 h-4" />;
 </button>;
-</div>;
-</div>;
+</div>
+</div>
 );
 }
 
-export function NotificationContainer({ notification;  s; onClose }: {
-notification; s: NotificationProps[];
-onClos; e: (i; d: string) => void; ,
-}) {
+export function NotificationContainer({ notification;  s; onClose }: {notification; s: NotificationProps[];
+onClos; e: (i; d: string) => void; }) {
 return (
 <div className="fixed top-20 right-4 z-50 space-y-2">;
 {notifications.map((notification) => (
@@ -99,6 +92,6 @@ key={notification.id}
 onClose={onClose}
 />;
 ))}
-</div>;
+</div>
 );
 }<//div><///div>;

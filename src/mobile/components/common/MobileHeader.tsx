@@ -1,19 +1,18 @@
 import React from "react";
-import { useRouter,, ,  } from 'next/router';
-import { ChevronLeft,, Bell,, Settings,  } from 'lucide-react'
-import { cn,  } from "@/lib/utils";
-import { Button,  } from "@/components/ui/button";
+import { useRouter } from "next/router";
+import { ChevronLeft, Bell, Settings } from "lucide-react";
+import { cn } from "@/lib/utils";
+import { Button } from "@/components/ui/button";
 interface MobileHeaderProps {
-className
+className}
     )}>
       <div className="flex items-center justify-between h-14 px-4">
         <div className="flex items-center">
-          {showBack && (
-            <Button,
+          {showBack && (<Button
 variant="ghost"
               size="icon"
               className="mr-2"
-              onClick = {(,) => router.back(),}
+              onClick = {() => router.back()}
             >
               <ChevronLeft className="h-5 w-5" />
               <span className="sr-only">Back</span>
@@ -25,10 +24,10 @@ variant="ghost"
         </div>
         <div className="flex items-center space-x-2">
           {showNotifications && (
-            <Button,
+            <Button
 variant="ghost"
               size="icon"
-              onClick = {onNotificationsClick,}
+              onClick = {onNotificationsClick}
             >
               <Bell className="h-5 w-5" />
               <span className="sr-only">Notifications</span>
@@ -50,7 +49,7 @@ onSettingsClick,
       <div className='flex items-center justify-between h-14 px-4'>
         <div className='flex items-center'>
           {showBack && (
-            <Button,
+            <Button
 variant='ghost'
               size='icon'
               className='mr-2'
@@ -72,10 +71,10 @@ variant='ghost'
           {showSettings && (
             <Button variant='ghost' size='icon' onClick={onSettingsClick}>
               <Settings className='h-5 w-5' />
-              <span className='sr-only'>Settings</span>            </Button>            <Button,
+              <span className='sr-only'>Settings</span>            </Button>            <Button
 variant="ghost"
               size="icon"
-              onClick = {onSettingsClick,}
+              onClick = {onSettingsClick}
             >
               <Settings className="h-5 w-5" />
               <span className="sr-only">Settings</span>

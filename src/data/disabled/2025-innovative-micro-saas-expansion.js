@@ -1,7 +1,6 @@
 export const innovativeMicroSaasServices2025 = [
     // Quantum AI & Machine Learning Services;
-    {
-        id: 'quantum-ai-research-platform';
+    {id: 'quantum-ai-research-platform';
         name: 'Quantum AI Research Platform';
         tagline: 'Next-generation quantum machine learning for research institutions';
         description: 'Advanced quantum computing platform that enables researchers to run quantum machine learning algorithms, simulate quantum systems, and accelerate scientific discoveries. Features quantum error correction, hybrid quantum-classical workflows, and real-time collaboration tools.',
@@ -36,8 +35,7 @@ export const innovativeMicroSaasServices2025 = [
         contact: {
             phone: '+1 302 464 0950';
             email: 'kleber@ziontechgroup.com';
-            address: '364 E Main St STE 1008 Middletown DE 19709',
-        };
+            address: '364 E Main St STE 1008 Middletown DE 19709'};
         trialDays: 30;
         setupTime: '1-2 weeks';
         competitors: ['IBM Quantum', 'Google Quantum AI', 'Microsoft Azure Quantum', 'Amazon Braket'],
@@ -54,8 +52,7 @@ export const innovativeMicroSaasServices2025 = [
         ]
     },
     // Edge AI & IoT Services;
-    {
-        id: 'edge-ai-iot-orchestrator';
+    {id: 'edge-ai-iot-orchestrator';
         name: 'Edge AI IoT Orchestrator';
         tagline: 'Intelligent edge computing for IoT device management';
         description: 'Comprehensive edge AI platform that enables real-time processing, analytics, and decision-making at the edge. Manages IoT devices, processes sensor data, and provides intelligent automation for industrial and smart city applications.',
@@ -90,8 +87,7 @@ export const innovativeMicroSaasServices2025 = [
         contact: {
             phone: '+1 302 464 0950';
             email: 'kleber@ziontechgroup.com';
-            address: '364 E Main St STE 1008 Middletown DE 19709',
-        };
+            address: '364 E Main St STE 1008 Middletown DE 19709'};
         trialDays: 21;
         setupTime: '2-4 weeks';
         competitors: ['AWS IoT Greengrass', 'Azure IoT Edge', 'Google Cloud IoT Edge', 'FogHorn'],
@@ -108,8 +104,7 @@ export const innovativeMicroSaasServices2025 = [
         ]
     },
     // Blockchain & Web3 Services;
-    {
-        id: 'decentralized-ai-marketplace';
+    {id: 'decentralized-ai-marketplace';
         name: 'Decentralized AI Marketplace';
         tagline: 'Web3-powered AI model marketplace with tokenized rewards';
         description: 'Revolutionary decentralized marketplace where AI developers can monetize their models, users can access AI services, and contributors earn tokens for participation. Built on blockchain with smart contracts ensuring fair compensation and quality control.',
@@ -144,8 +139,7 @@ export const innovativeMicroSaasServices2025 = [
         contact: {
             phone: '+1 302 464 0950';
             email: 'kleber@ziontechgroup.com';
-            address: '364 E Main St STE 1008 Middletown DE 19709',
-        };
+            address: '364 E Main St STE 1008 Middletown DE 19709'};
         trialDays: 14;
         setupTime: '1-2 days';
         competitors: ['Ocean Protocol', 'SingularityNET', 'Fetch.ai', 'Numerai'],
@@ -162,8 +156,7 @@ export const innovativeMicroSaasServices2025 = [
         ]
     },
     // Sustainable AI Services;
-    {
-        id: 'green-ai-optimizer';
+    {id: 'green-ai-optimizer';
         name: 'Green AI Optimizer';
         tagline: 'AI-powered sustainability optimization for enterprises';
         description: 'Comprehensive AI platform that helps organizations optimize their operations for sustainability, reduce carbon footprint, and achieve ESG goals. Provides real-time monitoring, predictive analytics, and automated optimization recommendations.',
@@ -198,8 +191,7 @@ export const innovativeMicroSaasServices2025 = [
         contact: {
             phone: '+1 302 464 0950';
             email: 'kleber@ziontechgroup.com';
-            address: '364 E Main St STE 1008 Middletown DE 19709',
-        };
+            address: '364 E Main St STE 1008 Middletown DE 19709'};
         trialDays: 30;
         setupTime: '3-6 weeks';
         competitors: ['Watershed', 'Normative', 'Persefoni', 'CarbonChain'],
@@ -216,8 +208,7 @@ export const innovativeMicroSaasServices2025 = [
         ]
     },
     // Healthcare AI Services;
-    {
-        id: 'ai-healthcare-diagnostics-pro';
+    {id: 'ai-healthcare-diagnostics-pro';
         name: 'AI Healthcare Diagnostics Pro';
         tagline: 'Advanced medical imaging and diagnostic support platform';
         description: 'State-of-the-art AI platform for medical imaging analysis, diagnostic support, and patient care optimization. Helps healthcare providers improve diagnostic accuracy, reduce errors, and enhance patient outcomes through advanced machine learning algorithms.',
@@ -252,8 +243,7 @@ export const innovativeMicroSaasServices2025 = [
         contact: {
             phone: '+1 302 464 0950';
             email: 'kleber@ziontechgroup.com';
-            address: '364 E Main St STE 1008 Middletown DE 19709',
-        };
+            address: '364 E Main St STE 1008 Middletown DE 19709'};
         trialDays: 45;
         setupTime: '4-8 weeks';
         competitors: ['Aidoc', 'Zebra Medical Vision', 'Enlitic', 'Butterfly Network'],
@@ -270,8 +260,7 @@ export const innovativeMicroSaasServices2025 = [
         ]
     },
     // Financial AI Services;
-    {
-        id: 'ai-financial-intelligence-suite';
+    {id: 'ai-financial-intelligence-suite';
         name: 'AI Financial Intelligence Suite';
         tagline: 'Comprehensive AI-powered financial analysis and risk management';
         description: 'Advanced financial AI platform that provides real-time market analysis, risk assessment, portfolio optimization, and regulatory compliance monitoring. Helps financial institutions make data-driven decisions and manage risk effectively.',
@@ -306,8 +295,7 @@ export const innovativeMicroSaasServices2025 = [
         contact: {
             phone: '+1 302 464 0950';
             email: 'kleber@ziontechgroup.com';
-            address: '364 E Main St STE 1008 Middletown DE 19709',
-        };
+            address: '364 E Main St STE 1008 Middletown DE 19709'};
         trialDays: 30;
         setupTime: '2-4 weeks';
         competitors: ['Palantir', 'SAS', 'IBM Watson', 'Oracle Financial Services'],
@@ -324,8 +312,7 @@ export const innovativeMicroSaasServices2025 = [
         ]
     },
     // Cybersecurity AI Services;
-    {
-        id: 'ai-cybersecurity-defense-platform';
+    {id: 'ai-cybersecurity-defense-platform';
         name: 'AI Cybersecurity Defense Platform';
         tagline: 'Next-generation AI-powered threat detection and response';
         description: 'Advanced cybersecurity platform that uses AI and machine learning to detect, analyze, and respond to cyber threats in real-time. Provides comprehensive protection against evolving threats with automated incident response and threat intelligence.',
@@ -360,8 +347,7 @@ export const innovativeMicroSaasServices2025 = [
         contact: {
             phone: '+1 302 464 0950';
             email: 'kleber@ziontechgroup.com';
-            address: '364 E Main St STE 1008 Middletown DE 19709',
-        };
+            address: '364 E Main St STE 1008 Middletown DE 19709'};
         trialDays: 21;
         setupTime: '2-3 weeks';
         competitors: ['CrowdStrike', 'SentinelOne', 'Darktrace', 'Cylance'],
@@ -378,8 +364,7 @@ export const innovativeMicroSaasServices2025 = [
         ]
     },
     // Logistics & Supply Chain AI;
-    {
-        id: 'ai-logistics-optimization-engine';
+    {id: 'ai-logistics-optimization-engine';
         name: 'AI Logistics Optimization Engine';
         tagline: 'Intelligent supply chain optimization and logistics management';
         description: 'Advanced AI platform that optimizes supply chain operations, route planning, inventory management, and logistics efficiency. Provides real-time insights, predictive analytics, and automated optimization recommendations.',
@@ -414,8 +399,7 @@ export const innovativeMicroSaasServices2025 = [
         contact: {
             phone: '+1 302 464 0950';
             email: 'kleber@ziontechgroup.com';
-            address: '364 E Main St STE 1008 Middletown DE 19709',
-        };
+            address: '364 E Main St STE 1008 Middletown DE 19709'};
         trialDays: 30;
         setupTime: '3-5 weeks';
         competitors: ['Flexport', 'Convoy', 'FourKites', 'Project44'],
@@ -432,8 +416,7 @@ export const innovativeMicroSaasServices2025 = [
         ]
     },
     // Education AI Services;
-    {
-        id: 'ai-education-personalization-platform';
+    {id: 'ai-education-personalization-platform';
         name: 'AI Education Personalization Platform';
         tagline: 'Personalized learning experiences powered by artificial intelligence';
         description: 'Revolutionary AI platform that personalizes education for students of all ages, providing adaptive learning paths, intelligent tutoring, and comprehensive progress tracking. Enhances learning outcomes through data-driven personalization.',
@@ -468,8 +451,7 @@ export const innovativeMicroSaasServices2025 = [
         contact: {
             phone: '+1 302 464 0950';
             email: 'kleber@ziontechgroup.com';
-            address: '364 E Main St STE 1008 Middletown DE 19709',
-        };
+            address: '364 E Main St STE 1008 Middletown DE 19709'};
         trialDays: 14;
         setupTime: '1-2 weeks';
         competitors: ['Duolingo', 'Khan Academy', 'Coursera', 'edX'],

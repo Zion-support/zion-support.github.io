@@ -1,12 +1,10 @@
 export class LinkHealthChecker {
     config;
-    constructor(config = {}) {
-        this.config = {
+    constructor(config = {}) {this.config = {
             timeout: config.timeout || 10000,
             retries: config.retries || 3,
             userAgent: config.userAgent || 'Zion-Tech-Group-Link-Checker/1.0',
-            followRedirects: config.followRedirects !== false,
-        };
+            followRedirects: config.followRedirects !== false};
     }
     async checkLink(url) {
         const startTime = Date.now();
@@ -20,14 +18,12 @@ export class LinkHealthChecker {
                 redirect: this.config.followRedirects ? 'follow' : 'manual',
             });
             const responseTime = Date.now() - startTime;
-            if (response.ok || response.status < 400) {
-                return {
+            if (response.ok || response.status < 400) {return {
                     url,
                     status: 'healthy',
                     statusCode: response.status,
                     responseTime,
-                    lastChecked: new Date(),
-                };
+                    lastChecked: new Date()};
             }
             else {
                 return {
@@ -40,13 +36,11 @@ export class LinkHealthChecker {
                 };
             }
         }
-        catch (error) {
-            return {
+        catch (error) {return {
                 url,
                 status: 'error',
                 error: error instanceof Error ? error.message : 'Unknown error',
-                lastChecked: new Date(),
-            };
+                lastChecked: new Date()};
         }
     }
     async checkMultipleLinks(urls) {
@@ -56,13 +50,11 @@ export class LinkHealthChecker {
                 const result = await this.checkLink(url);
                 results.push(result);
             }
-            catch (error) {
-                results.push({
+            catch (error) {results.push({
                     url,
                     status: 'error',
                     error: error instanceof Error ? error.message : 'Unknown error',
-                    lastChecked: new Date(),
-                });
+                    lastChecked: new Date()});
             }
         }
         return results;

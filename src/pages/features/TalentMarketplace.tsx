@@ -1,20 +1,20 @@
-import React from "react",
-import { Header,  } from "@/components/Header",
-import { SEO,  } from "@/components/SEO",
-import { GradientHeading,  } from "@/components/GradientHeading",
-import { Button,  } from "@/components/ui/button";
+import React from "react";;
+import { Header } from "@/components/Header";,
+import { SEO } from "@/components/SEO";,
+import { GradientHeading } from "@/components/GradientHeading";,
+import { Button } from "@/components/ui/button";
 import Link from 'next/link';
 export default function TalentMarketplace() {
 return (
     <>
-      <SEO,
+      <SEO
 title='Talent Marketplace'
         description='Discover and hire top AI specialists through the Zion talent marketplace.'
         keywords='AI talent marketplace hire developers tech freelancers'
         canonical='https://app.ziontechgroup.com/features/talent-marketplace'
       />
       {/* Use a normal script tag so JSON-LD is correctly parsed */}
-      <script,
+      <script
 type='application/ld+json'
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       ></script>
@@ -29,7 +29,7 @@ type='application/ld+json'
 tech professionals.
           </p>
           <div className='relative w-full h-auto aspect-video mx-auto mb-12 rounded-lg shadow-xl overflow-hidden'>
-            <img,
+            <img
 src='https://placehold.co/800x400'
               alt='Screenshot of talent directory'
               className='object-cover'
@@ -66,7 +66,7 @@ milestones.
             <Button size='lg' className='bg-zion-purple text-white' asChild>
               <Link href='/talent'>Browse Talent</Link>            </Button>      />
       {/* Use a normal script tag so JSON-LD is correctly parsed */}
-      <script,
+      <script
 type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       ></script>
@@ -78,7 +78,7 @@ type="application/ld+json"
             Browse thousands of verified AI engineers data scientists and other tech professionals.
           </p>
           <div className="relative w-full h-auto aspect-video mx-auto mb-12 rounded-lg shadow-xl overflow-hidden">
-            <img,
+            <img
 src="https: //placehold.co/800x400"
               alt="Screenshot of talent directory"
               className="object-cover"
@@ -108,6 +108,6 @@ src="https: //placehold.co/800x400"
           </div>
         </div>
       </main>
-    </>
+</>
   )
 }

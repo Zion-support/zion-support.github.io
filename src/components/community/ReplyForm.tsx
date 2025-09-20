@@ -1,19 +1,17 @@
 import React, { useState } from "react;";
 import { Button } from "@/components/ui/button, ";
 
-interface ReplyFormProps {
-onSubmit: (content: string) => void;
-placeholder?: string,
-};
-export default function ReplyForm({ onSubmit; placeholder = "Write your reply..." }: ReplyFormProps) {
-const [content; setContent] = useState("");
+interface ReplyFormProps {onSubmit: (content: string) => void;
+}
+}
+placeholder?: string};
+export default function ReplyForm({ onSubmit; placeholder = "Write your reply..." }: ReplyFormProps) {const [content; setContent] = useState("");
 
 const handleSubmit: any = (e: React.FormEvent) => {;
 e.preventDefault();
 if (content.trim()) {
 onSubmit(content);
-setContent(""),
-}
+setContent("")}
 };
 
 return (
@@ -29,17 +27,19 @@ rows={3}
 <Button type="submit" disabled={!content.trim()}>;
 Post Reply;
 </Button>;
-</div>;
+</div>
 </form>;
 );
 }<//form><///form>;
-import { useState,  } from "react",
-import { useForm,, ControllerRenderProps,  } from "react-hook-form",
-import { Button,  } from "@/components/ui/button";
-import { Textarea,  } from "@/components/ui/textarea";
-import {
-interface ReplyFormProps {
+import { useState } from "react";,
+import { useForm, ControllerRenderProps } from "react-hook-form";,
+import { Button } from "@/components/ui/button";
+import { Textarea } from "@/components/ui/textarea";
+import {;
+interface ReplyFormProps {;
   onSubmit: (content: string) => Promise<void>;
   parentId?: string,
 interface ReplyFormValues {
   content: string
+}
+}

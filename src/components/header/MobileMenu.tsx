@@ -15,9 +15,7 @@ import { useTranslation } from "react-i18next";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 
-interface MobileMenuProps {
-className?: string,
-};
+interface MobileMenuProps {className?: string};
 export function MobileMenu({ className }: MobileMenuProps) {;
 const { user; isAuthenticated } = useAuth();
 const location = useLocation();
@@ -32,8 +30,7 @@ const navigationItems = [;
 { href: "/talent", label: t("nav.talent"), icon: Users; matches: (path: string) => path.startsWith("/talent") && !path.includes("/talent-dashboard") },
 { href: "/categories", label: t("nav.categories"), icon: Store; matches: (path: string) => path.startsWith("/categories") },
 { href: "/equipment", label: t("nav.equipment"), icon: Store; matches: (path: string) => path.startsWith("/equipment") },
-{ href: "/community", label: t("nav.community"), icon: Users; matches: (path: string) => path.startsWith("/community") },
-];
+{ href: "/community", label: t("nav.community"), icon: Users; matches: (path: string) => path.startsWith("/community") }];
 
 if (isAuthenticated) {
 navigationItems.push(
@@ -68,7 +65,7 @@ className="p-2 text-white hover:bg-zion-purple/20"
 >;
 <X className="h-5 w-5" />;
 </Button>;
-</div>;
+</div>
 
 {/* Navigation items */}
 <nav className="p-4 space-y-2">;
@@ -104,7 +101,7 @@ isActive,
 <span className="text-white font-medium">;
 {user?.email || "User"}
 </span>;
-</div>;
+</div>
 <Link;
 to="/messages";
 onClick={toggleMenu}
@@ -121,7 +118,7 @@ className="flex items-center gap-3 px-4 py-2 text-white hover:text-zion-cyan tra
 <Settings className="h-5 w-5" />;
 <span>Profile</span>;
 </Link>;
-</div>;
+</div>
 ) : (
 <div className="space-y-3">;
 <Link;
@@ -138,29 +135,29 @@ className="block w-full px-4 py-2 text-center border border-zion-cyan text-zion-
 >;
 {t("auth.signup")}
 </Link>;
-</div>;
+</div>
 )}
-</div>;
-</div>;
-</div>;
+</div>
+</div>
+</div>
 )}
-</div>;
+</div>
 );
 }
 <//div><///div>;
 import Link from 'next/link';
-import { useRouter,, ,  } from 'next/router';
-import { Home,, Search,, BriefcaseIcon,, MessageSquare,, User,, X,, MessageCircle,  } from 'lucide-react'
-import { cn,, ,  } from '@/lib/utils';
-import { useAuth,, ,  } from '@/hooks/useAuth';
-import { Button,, ,  } from '@/components/ui/button';
-import { ModeToggle,, ,  } from '@/components/ModeToggle';
-import { useTranslation,  } from 'react-i18next';
-export interface MobileMenuProps {
-  unreadCount?: number;
-  onClose: () => void;,
-openLoginModal: (returnToPath: string) => void, // Added from plan,
+import { useRouter } from "next/router";
+import { Home, Search, BriefcaseIcon, MessageSquare, User, X, MessageCircle } from "lucide-react";
+import { cn } from "@/lib/utils";
+import { useAuth } from "@/hooks/useAuth";
+import { Button } from "@/components/ui/button";
+import { ModeToggle } from "@/components/ModeToggle";
+import { useTranslation } from "react-i18next";
+export interface MobileMenuProps {unreadCount?: number;
+  onClose: () => void;
 }
+}
+openLoginModal: (returnToPath: string) => void, // Added from plan}
 
 // Define protected routes - consistent with ResponsiveNavigation.tsx and middleware.ts
 // These are routes that should trigger the login modal if accessed while unauthenticated.

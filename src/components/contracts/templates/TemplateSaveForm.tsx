@@ -1,17 +1,16 @@
-import { useState,  } from 'react'
-import { useForm,, type,, ControllerRenderProps,  } from 'react-hook-form'
-import { zodResolver,  } from '@hookform/resolvers/zod'
-import { z,  } from 'zod'
-import { Loader2,  } from 'lucide-react'
+import { useState } from "react";
+import { useForm, type, ControllerRenderProps } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { z } from "zod";
+import { Loader2 } from "lucide-react";
 return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className='space-y-4'>
-        <FormField,
+        <FormField
 control={form.control}
           name='title'
           render={({
-            field,
-}: {
+            field}: {
             field: ControllerRenderProps<FormValues 'title'>
           }) => (            <FormItem>
               <FormLabel>Template Name</FormLabel>
@@ -22,12 +21,11 @@ control={form.control}
             </FormItem>
           )}
         />
-        <FormField,
+        <FormField
 control={form.control}
           name='isDefault'
           render={({
-            field,
-}: {
+            field}: {
             field: ControllerRenderProps<FormValues 'isDefault'>
           }) => (
             <FormItem className='flex items-center justify-between'>
@@ -35,7 +33,7 @@ control={form.control}
                 Set as default template
               </FormLabel>
               <FormControl>
-                <Switch,
+                <Switch
 aria-label='Default template'
                   checked={field.value}
                   onCheckedChange={field.onChange}                />
@@ -53,7 +51,7 @@ aria-label='Default template'
               <>
                 <Loader2 className='mr-2 h-4 w-4 animate-spin' />
                 Saving...
-              </>
+</>
             ) : (
               `${editTemplate ? 'Update' : 'Save'} Template`
             )}

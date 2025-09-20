@@ -2,6 +2,8 @@ interface Service {
 id: string;
 name: string;
 }
+}
+}
 
 import React from "react;";
 
@@ -13,7 +15,7 @@ return (
 <p className="text-zion-slate-light text-lg">;
 Last updated: {new Date().toLocaleDateString()}
 </p>;
-</div>;
+</div>
 <div className="max-w-4xl mx-auto">;
 <h1 className="text-3xl font-bold text-white mb-8">Terms of Service</h1>;
 
@@ -94,7 +96,7 @@ legal@ziontechgroup.com;
 The materials appearing on Zion Tech Group's website could include technical; typographical; or photographic errors. Zion Tech Group does not warrant that any of the materials on its website are accurate; complete or current.;
 </p>;
 </section>;
-</div>;
-</div>;
+</div>
+</div>
 );
 }<//div><///div>;

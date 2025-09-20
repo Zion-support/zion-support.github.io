@@ -2,6 +2,8 @@ interface Service {
 id: string;
 name: string;
 }
+}
+}
 
 // API; base; URL - will; use; proxy in development;
 direct; URL; in production;

@@ -7,7 +7,9 @@ visitors: number;
 pageViews: number;
 conversionRate: number;
 bounceRate: number;
-avgSessionDuration: number;,
+avgSessionDuration: number;
+}
+}
 topPages: Array<{ page: string; views: number }>;
 trafficSources: Array<{ source: string; percentage: number }>;
 }
@@ -20,7 +22,7 @@ conversionRate: 0,
 bounceRate: 0,
 avgSessionDuration: 0,
 topPages: [],;
-trafficSources: [];,
+trafficSources: [];
 });
 
 useEffect(() => {
@@ -73,7 +75,7 @@ className={\`\${metric.color} p-6 rounded-lg text-white\`}
 <p className="text-3xl font-bold mt-2">{metric.value}</p>;
 </motion.div>;
 ))}
-</div>;
+</div>
 
 {/* Charts and Data Visualization */}
 <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">;
@@ -89,9 +91,9 @@ className="bg-gray-800 p-6 rounded-lg"
 <div key={page.page} className="flex justify-between items-center">;
 <span className="text-gray-300">{page.page}</span>;
 <span className="text-white font-semibold">{page.views.toLocaleString()} views</span>;
-</div>;
+</div>
 ))}
-</div>;
+</div>
 </motion.div>;
 
 {/* Traffic Sources */}
@@ -106,13 +108,13 @@ className="bg-gray-800 p-6 rounded-lg"
 <div key={source.source} className="flex justify-between items-center">;
 <span className="text-gray-300">{source.source}</span>;
 <span className="text-white font-semibold">{source.percentage}%</span>;
-</div>;
+</div>
 ))}
-</div>;
+</div>
 </motion.div>;
-</div>;
+</div>
 </motion.div>;
-</div>;
+</div>
 );
 };
 

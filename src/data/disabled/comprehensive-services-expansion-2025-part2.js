@@ -1,7 +1,6 @@
 // Additional Advanced AI Services;
 export const additionalAdvancedAIServices2025 = [
-    {
-        id: 1;
+    {id: 1;
         name: "Quantum Neural Networks Pro";
         category: "Quantum AI";
         description: "Revolutionary quantum neural network platform that leverages quantum computing principles for unprecedented AI performance";
@@ -32,8 +31,7 @@ export const additionalAdvancedAIServices2025 = [
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com/quantum-neural-networks";
-            address: "364 E Main St STE 1008 Middletown DE 19709",
-        };
+            address: "364 E Main St STE 1008 Middletown DE 19709"};
         marketPrice: "$4,500-15,000/month",
         aiModels: ["Quantum Neural Networks", "Hybrid models", "Quantum ML", "Custom algorithms"],
         accuracy: "Quantum advantage";
@@ -42,8 +40,7 @@ export const additionalAdvancedAIServices2025 = [
         aiScore: 98;
         useCases: ["Drug discovery", "Financial modeling", "Climate prediction", "Cryptography"]
     },
-    {
-        id: 2;
+    {id: 2;
         name: "Autonomous AI Agents";
         category: "Autonomous Systems";
         description: "Next-generation autonomous AI agents that can independently execute complex tasks and make decisions in dynamic environments";
@@ -74,8 +71,7 @@ export const additionalAdvancedAIServices2025 = [
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com/autonomous-ai-agents";
-            address: "364 E Main St STE 1008 Middletown DE 19709",
-        };
+            address: "364 E Main St STE 1008 Middletown DE 19709"};
         marketPrice: "$3,200-10,000/month",
         aiModels: ["Reinforcement Learning", "Multi-agent systems", "Decision trees", "Neural networks"],
         accuracy: "95.3%";
@@ -87,8 +83,7 @@ export const additionalAdvancedAIServices2025 = [
 ];
 // Advanced Blockchain Services;
 export const advancedBlockchainServices2025 = [
-    {
-        id: 1;
+    {id: 1;
         name: "Cross-Chain Bridge Platform";
         category: "Blockchain Infrastructure";
         pricing: "Professional";
@@ -120,8 +115,7 @@ export const advancedBlockchainServices2025 = [
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com/cross-chain-bridge";
-            address: "364 E Main St STE 1008 Middletown DE 19709",
-        };
+            address: "364 E Main St STE 1008 Middletown DE 19709"};
         marketPrice: "$399-1,299/month",
         competitors: ["Multichain", "Stargate", "Hop Protocol"],
         roi: "600% within 12 months";
@@ -130,8 +124,7 @@ export const advancedBlockchainServices2025 = [
         freeTier: false;
         trialPeriod: "7 days",
     };
-    {
-        id: 2;
+    {id: 2;
         name: "Decentralized Identity Platform";
         category: "Identity Management";
         pricing: "Professional";
@@ -163,8 +156,7 @@ export const advancedBlockchainServices2025 = [
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com/decentralized-identity";
-            address: "364 E Main St STE 1008 Middletown DE 19709",
-        };
+            address: "364 E Main St STE 1008 Middletown DE 19709"};
         marketPrice: "$249-799/month";
         competitors: ["Microsoft", "IBM", "Sovrin"],
         roi: "400% within 10 months";
@@ -176,8 +168,7 @@ export const advancedBlockchainServices2025 = [
 ];
     // Advanced Cybersecurity Services;
 export const advancedCybersecurityServices2025 = [
-    {
-        id: 1;
+    {id: 1;
         name: "AI-Powered SOC Platform";
         category: "Security Operations";
         description: "Intelligent Security Operations Center platform with AI-driven threat detection, automated response, and advanced analytics",
@@ -207,8 +198,7 @@ export const advancedCybersecurityServices2025 = [
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com/ai-soc-platform";
-            address: "364 E Main St STE 1008 Middletown DE 19709",
-        };
+            address: "364 E Main St STE 1008 Middletown DE 19709"};
         marketPrice: "$20,000-60,000/project",
         responseTime: "30 minutes";
         sla: "99.99% uptime";
@@ -216,8 +206,7 @@ export const advancedCybersecurityServices2025 = [
         deliveryTime: "8-10 weeks";
         support: "24/7",
     };
-    {
-        id: 2;
+    {id: 2;
         name: "Quantum-Safe Cryptography";
         category: "Cryptography";
         description: "Post-quantum cryptography solutions to protect against future quantum computing threats to current encryption standards";
@@ -247,8 +236,7 @@ export const advancedCybersecurityServices2025 = [
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com/quantum-safe-cryptography";
-            address: "364 E Main St STE 1008 Middletown DE 19709",
-        };
+            address: "364 E Main St STE 1008 Middletown DE 19709"};
         marketPrice: "$30,000-80,000/project",
         responseTime: "4 hours";
         sla: "99.9% uptime";
@@ -259,8 +247,7 @@ export const advancedCybersecurityServices2025 = [
 ];
     // Advanced Cloud & DevOps Services;
 export const advancedCloudDevOpsServices2025 = [
-    {
-        id: 1;
+    {id: 1;
         name: "AI-Powered DevOps Automation";
         category: "DevOps";
         description: "Intelligent DevOps automation platform that uses AI to optimize CI/CD pipelines, infrastructure management, and deployment strategies",
@@ -290,8 +277,7 @@ export const advancedCloudDevOpsServices2025 = [
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com/ai-devops-automation";
-            address: "364 E Main St STE 1008 Middletown DE 19709",
-        };
+            address: "364 E Main St STE 1008 Middletown DE 19709"};
         marketPrice: "$18,000-50,000/project",
         responseTime: "6 hours";
         sla: "99.5% uptime";
@@ -302,8 +288,7 @@ export const advancedCloudDevOpsServices2025 = [
 ];
     // Advanced Healthcare Services;
 export const advancedHealthcareServices2025 = [
-    {
-        id: 1;
+    {id: 1;
         name: "Genomic AI Platform";
         category: "Genomics";
         description: "Advanced AI platform for genomic analysis, personalized medicine, and drug discovery with cutting-edge machine learning algorithms",
@@ -334,8 +319,7 @@ export const advancedHealthcareServices2025 = [
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com/genomic-ai-platform";
-            address: "364 E Main St STE 1008 Middletown DE 19709",
-        };
+            address: "364 E Main St STE 1008 Middletown DE 19709"};
         marketPrice: "$4,200-15,000/month",
         aiModels: ["Deep learning", "Neural networks", "Custom ML", "Bioinformatics"],
         accuracy: "97.1%";
@@ -347,8 +331,7 @@ export const advancedHealthcareServices2025 = [
 ];
 // Advanced IoT Services;
 export const advancedIoTServices2025 = [
-    {
-        id: 1;
+    {id: 1;
         name: "Industrial IoT Analytics";
         category: "Industrial IoT";
         pricing: "Enterprise";
@@ -380,8 +363,7 @@ export const advancedIoTServices2025 = [
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com/industrial-iot-analytics";
-            address: "364 E Main St STE 1008 Middletown DE 19709",
-        };
+            address: "364 E Main St STE 1008 Middletown DE 19709"};
         marketPrice: "$1,500-6,000/month",
         competitors: ["Siemens", "GE Digital", "PTC"],
         roi: "350% within 18 months";
@@ -393,8 +375,7 @@ export const advancedIoTServices2025 = [
 ];
     // Advanced Quantum Services;
 export const advancedQuantumServices2025 = [
-    {
-        id: 1;
+    {id: 1;
         name: "Quantum Machine Learning Suite";
         category: "Quantum ML";
         description: "Comprehensive quantum machine learning platform that combines quantum computing with advanced ML algorithms for breakthrough applications";
@@ -425,8 +406,7 @@ export const advancedQuantumServices2025 = [
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com/quantum-ml-suite";
-            address: "364 E Main St STE 1008 Middletown DE 19709",
-        };
+            address: "364 E Main St STE 1008 Middletown DE 19709"};
         marketPrice: "$6,000-25,000/month",
         aiModels: ["Quantum ML", "Hybrid models", "Quantum algorithms", "Custom models"],
         accuracy: "Quantum advantage";
@@ -438,8 +418,7 @@ export const advancedQuantumServices2025 = [
 ];
 // Advanced Space Services;
 export const advancedSpaceServices2025 = [
-    {
-        id: 1;
+    {id: 1;
         name: "Space Traffic Management";
         category: "Space Operations";
         pricing: "Enterprise";
@@ -471,8 +450,7 @@ export const advancedSpaceServices2025 = [
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com/space-traffic-management";
-            address: "364 E Main St STE 1008 Middletown DE 19709",
-        };
+            address: "364 E Main St STE 1008 Middletown DE 19709"};
         marketPrice: "$2,500-10,000/month",
         competitors: ["LeoLabs", "Space-Track", "ESA"],
         roi: "500% within 24 months";
@@ -484,8 +462,7 @@ export const advancedSpaceServices2025 = [
 ];
     // Advanced Sustainability Services;
 export const advancedSustainabilityServices2025 = [
-    {
-        id: 1;
+    {id: 1;
         name: "Circular Economy Platform";
         category: "Circular Economy";
         pricing: "Professional";
@@ -517,8 +494,7 @@ export const advancedSustainabilityServices2025 = [
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com/circular-economy-platform";
-            address: "364 E Main St STE 1008 Middletown DE 19709",
-        };
+            address: "364 E Main St STE 1008 Middletown DE 19709"};
         marketPrice: "$299-999/month";
         competitors: ["Ellen MacArthur Foundation", "Circularity Capital", "Circle Economy"],
         roi: "250% within 12 months";
@@ -530,8 +506,7 @@ export const advancedSustainabilityServices2025 = [
 ];
     // Advanced Fintech Services;
 export const advancedFintechServices2025 = [
-    {
-        id: 1;
+    {id: 1;
         name: "RegTech Compliance Platform";
         category: "RegTech";
         pricing: "Enterprise";
@@ -563,8 +538,7 @@ export const advancedFintechServices2025 = [
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com/regtech-compliance";
-            address: "364 E Main St STE 1008 Middletown DE 19709",
-        };
+            address: "364 E Main St STE 1008 Middletown DE 19709"};
         marketPrice: "$1,200-4,000/month",
         competitors: ["ComplyAdvantage", "RegTech", "Compliance.ai"],
         roi: "400% within 15 months";
@@ -575,8 +549,7 @@ export const advancedFintechServices2025 = [
     }
 ];
     // Export all additional services;
-export const allAdditionalServices2025 = {
-    advancedAI: additionalAdvancedAIServices2025;
+export const allAdditionalServices2025 = {advancedAI: additionalAdvancedAIServices2025;
     blockchain: advancedBlockchainServices2025;
     cybersecurity: advancedCybersecurityServices2025;
     cloudDevOps: advancedCloudDevOpsServices2025;
@@ -585,8 +558,7 @@ export const allAdditionalServices2025 = {
     quantum: advancedQuantumServices2025;
     space: advancedSpaceServices2025;
     sustainability: advancedSustainabilityServices2025;
-    fintech: advancedFintechServices2025,
-};
+    fintech: advancedFintechServices2025};
     // Combined services export;
 export const allComprehensiveServices2025 = {
     ...allAdditionalServices2025;

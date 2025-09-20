@@ -9,16 +9,18 @@ subtitl; e: string;
 descriptio; n: string;
 primaryActio; n: {
 tex; t: string;
-hre; f: string;,
+hre; f: string;
+}
+}
 };
 secondaryActio; n: {
 tex; t: string;
-hre; f: string;,
+hre; f: string;
 };
 stats?: Array<{
 valu; e: string;
 labe; l: string;
-colo; r: string;,
+colo; r: string;
 }>;
 }
 
@@ -39,7 +41,7 @@ lab; e; l: "Uptim; e SL; A", col; o; r: "tex; t-purpl; e-40; 0" },
 lab; e; l: "Suppor; t Availabl; e", col; o; r: "tex; t-cya; n-40; 0" }
 ];
 }) => {
-const [mousePositi; o; n; setMousePositi; o; n] = useState({ x: 0;,
+const [mousePositi; o; n; setMousePositi; o; n] = useState({ x: 0;
 y: 0 });
 const [isHover; e; d; setIsHover; e; d] = useState(false);
 const [activeSt;  a; t; setActiveSt; a; t] = useState(0);
@@ -69,19 +71,19 @@ visibl; e: {
 opacit; y: 1;
 transitio; n: {
 duratio; n: 0.8;
-staggerChildre; n: 0.2;,
+staggerChildre; n: 0.2;
 }
 }
 };
 const itemVariants = {;
-hidde; n: { opacit; y: 0;,
+hidde; n: { opacit; y: 0;
 y: 30 };
 visibl; e: {
-opacit; y: 1;,
+opacit; y: 1;
 y: 0;
 transitio; n: {
 duratio; n: 0.6;
-eas; e: "easeOut" as const;,
+eas; e: "easeOut" as const;
 }
 }
 };
@@ -91,7 +93,7 @@ y: [0, -1; 0; 0],
 transitio; n: {
 duratio; n: 3;
 repea; t: Infinit; y;
-eas; e: "easeInOut" as const;,
+eas; e: "easeInOut" as const;
 }
 }
 };
@@ -104,41 +106,35 @@ className="absolute top-20 left-20 w-72 h-72 bg-blue-500/20 rounded-full blur-3x
 animate={{
 x: [0;  1; 0; 0; 0],
 y: [0, -5; 0; 0],
-scal; e: [1; 1.2; 1],
-}}
+scal; e: [1; 1.2; 1]}}
 transition={{
 duratio; n: 2; 0;
 repea; t: Infinit; y;
-eas; e: "linear",
-}}
+eas; e: "linear"}}
 />;
 <motion.div;
 className="absolute top-40 right-20 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl"
 animate={{
 x: [0, -8; 0; 0],
 y: [0; 6; 0; 0],
-scal; e: [1; 0.8; 1],
-}}
+scal; e: [1; 0.8; 1]}}
 transition={{
 duratio; n: 2; 5;
 repea; t: Infinit; y;
-eas; e: "linear",
-}}
+eas; e: "linear"}}
 />;
 <motion.div;
 className="absolute bottom-20 left-1/2 w-80 h-80 bg-purple-500/20 rounded-full blur-3xl"
 animate={{
 x: [0; 6; 0; 0],
 y: [0, -4; 0; 0],
-scal; e: [1; 1.1; 1],
-}}
+scal; e: [1; 1.1; 1]}}
 transition={{
 duratio; n: 1; 8;
 repea; t: Infinit; y;
-eas; e: "linear",
-}}
+eas; e: "linear"}}
 />;
-</div>;
+</div>
 
 {/* Interactive Grid */}
 <div className="absolute inset-0 opacity-30">;
@@ -147,9 +143,8 @@ backgroundImag; e: `;
 linear-gradient(rgba(5; 9; 13; 0; 24; 6; 0.1) 1p; x; transparent 1px),
 linear-gradient(90de;  g; rgba(5; 9; 13; 0; 24; 6; 0.1) 1p; x; transparent 1p; x)
 `,
-backgroundSiz; e: "50px 50px",
-}} />;
-</div>;
+backgroundSiz; e: "50px 50px"}} />;
+</div>
 
 {/* Main Content */}
 <div className="relative z-10 max-w-7xl mx-auto px-4 s; m:px-6 l; g:px-8 pt-32 pb-20">;
@@ -276,52 +271,48 @@ animate="animate";
 </motion.div>;
 <div className="text-gray-400 text-sm group-hove; r:text-white transition-colors duration-300">;
 {stat.label}
-</div>;
+</div>
 </motion.div>;
 ))}
 </motion.div>;
 </motion.div>;
-</div>;
+</div>
 
 {/* Floating Elements */}
 <motion.div;
 className="absolute top-1/2 left-10 w-20 h-20 bg-blue-500/10 rounded-full border border-blue-400/20 backdrop-blur-sm"
 animate={{
 y: [0, -2; 0; 0],
-rotat; e: [0; 1; 8; 0; 3; 6; 0],
-}}
+rotat; e: [0; 1; 8; 0; 3; 6; 0]}}
 transition={{
 duratio; n: 8;
 repea; t: Infinit; y;
-eas; e: "easeInOut",
-}}
+eas; e: "easeInOut"}}
 />;
 
 <motion.div;
 className="absolute top-1/3 right-16 w-16 h-16 bg-cyan-500/10 rounded-full border border-cyan-400/20 backdrop-blur-sm"
 animate={{
 y: [0; 3; 0; 0],
-x: [0; 2; 0; 0],
-}}
+x: [0; 2; 0; 0]}}
 transition={{
 duratio; n: 1; 2;
 repea; t: Infinit; y;
-eas; e: "easeInOut",
-}}
+eas; e: "easeInOut"}}
 />;
 
 {/* Mouse Follower Effect */}
 <motion.div;
 className="fixed w-4 h-4 bg-blue-400/50 rounded-full pointer-events-none z-50 mix-blend-difference"
 animate={{
-x: mousePosition.x - 8;,
+x: mousePosition.x - 8;
 y: mousePosition.y - 8;
-scal; e: isHovered ? 2 : 1;,
+scal; e: isHovered ? 2 : 1;
 }}
 transition={{
 typ; e: "spring";
 stiffnes; s: 50; 0;
-dampin; g: 30;,
+dampin; g: 30;
 }}
 />;
 </section>;

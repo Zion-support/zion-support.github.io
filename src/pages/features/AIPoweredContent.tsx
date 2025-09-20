@@ -1,22 +1,22 @@
-import React, { useEffect } from "react",
-import { Header,  } from "@/components/Header",
-import { SEO,  } from "@/components/SEO",
-import { GradientHeading,  } from "@/components/GradientHeading",
-import { Button,  } from "@/components/ui/button",
-import Link from 'next/link',
-import { useFeatureUsage,  } from "@/hooks/useFeatureUsage";
-import { useAdvancedOnboardingStatus,  } from "@/hooks/useAdvancedOnboardingStatus";
+import React, { useEffect } from "react",;
+import { Header } from "@/components/Header";,
+import { SEO } from "@/components/SEO";,
+import { GradientHeading } from "@/components/GradientHeading";,
+import { Button } from "@/components/ui/button";,
+import Link from 'next/link',;
+import { useFeatureUsage } from "@/hooks/useFeatureUsage";
+import { useAdvancedOnboardingStatus } from "@/hooks/useAdvancedOnboardingStatus";
 export default function AIPoweredContent() {
 return (
     <>
-      <SEO,
+      <SEO
 title='AI Content Generation'
         description='Generate SEO-optimized blog posts service descriptions and FAQs with ZionGPT.'
         keywords='AI content generation ZionGPT SEO tools'
         canonical='https://app.ziontechgroup.com/features/ai-content-generation'
       />
       {/* Use a normal script tag so JSON-LD is correctly parsed */}
-      <script,
+      <script
 type='application/ld+json'
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       ></script>
@@ -31,7 +31,7 @@ type='application/ld+json'
 and FAQs in minutes.
           </p>
           <div className='relative w-full h-auto aspect-video mb-12 mx-auto rounded-lg shadow-xl overflow-hidden'>
-            <img,
+            <img
 src='https://placehold.co/800x400'
               alt='Screenshot of ZionGPT content tool'
               className='object-cover'
@@ -76,6 +76,6 @@ publishing.
           </div>
         </div>
       </main>
-    </>
+</>
   )
 }

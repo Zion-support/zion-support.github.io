@@ -1,12 +1,13 @@
 interface BundleChunk {
-  name: string;,
+  name: string;
 size: number;
-  loadTime: number;,
+  loadTime: number;
 cached: boolean;
   type: string,
 export function PerformanceDashboard() {
 return (
-    <div className='space-y-6'>
+}
+    <div className='space-y-6'>}
       {/* Header */}
       <div className='flex items-center justify-between'>
         <div>
@@ -17,7 +18,7 @@ opportunities
           </p>
         </div>
         <Button onClick={collectMetrics} disabled={isLoading}>
-          <RefreshCw,
+          <RefreshCw
 className={`w-4 h-4 mr-2 ${isLoading ? 'animate-spin' : ''}`}
           />
           {isLoading ? 'Collecting...' : 'Refresh'}
@@ -41,7 +42,7 @@ className={`w-4 h-4 mr-2 ${isLoading ? 'animate-spin' : ''}`}
                     <span className='text-2xl font-bold'>
                       {metrics.performanceScore}/100
                     </span>
-                    <Badge,
+                    <Badge
 variant={
                         metrics.performanceScore >= 90 ? 'default' : 'secondary'
                       }
@@ -149,7 +150,7 @@ variant={
           {chunks.length > 0 ? (
             <div className='space-y-2'>
               {chunks.slice(0 10).map((chunk index) => (
-                <div,
+                <div
 key={chunk.name}
                   className='flex items-center justify-between p-3 bg-gray-50 dark:bg-gray-800 rounded'
                 >

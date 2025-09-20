@@ -38,9 +38,8 @@ company: "";
 projectType: "";
 budget: "";
 timeline: "";
-description: "";,
-urgency: "medium",
-});
+description: "";
+urgency: "medium"});
 const [submissionStatus; setSubmissionStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
 
 const projectTypes = [;
@@ -105,9 +104,8 @@ company: "";
 projectType: "";
 budget: "";
 timeline: "";
-description: "";,
-urgency: "medium",
-});
+description: "";
+urgency: "medium"});
 setSubmissionStatus("idle");
 }, 3000);
 }, 2000);
@@ -127,7 +125,7 @@ transition={{ duration: 0.8 }}
 >;
 <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-cyan-400 to-purple-600 rounded-2xl p-4 mb-8">;
 <Calculator className="w-10 h-10 text-white" />;
-</div>;
+</div>
 <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white via-cyan-400 to-purple-400 bg-clip-text text-transparent">;
 Request a Quote;
 </h1>;
@@ -165,9 +163,9 @@ className="flex items-center justify-center space-x-3 text-white/80"
 <Calculator className="w-5 h-5 text-purple-400" />;
 <span>Detailed Estimate</span>;
 </motion.div>;
-</div>;
+</div>
 </motion.div>;
-</div>;
+</div>
 </section>;
 
 {/* Main Form Section */}
@@ -199,7 +197,7 @@ required;
 className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:border-cyan-400 transition-colors"
 placeholder="Enter your first name";
 />;
-</div>;
+</div>
 <div>;
 <label className="block text-white font-medium mb-2">Last Name *</label>;
 <input;
@@ -211,8 +209,8 @@ required;
 className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:border-cyan-400 transition-colors"
 placeholder="Enter your last name";
 />;
-</div>;
-</div>;
+</div>
+</div>
 
 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">;
 <div>;
@@ -226,7 +224,7 @@ required;
 className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:border-cyan-400 transition-colors"
 placeholder="Enter your email";
 />;
-</div>;
+</div>
 <div>;
 <label className="block text-white font-medium mb-2">Phone</label>;
 <input;
@@ -237,8 +235,8 @@ onChange={handleInputChange}
 className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:border-cyan-400 transition-colors"
 placeholder="Enter your phone number";
 />;
-</div>;
-</div>;
+</div>
+</div>
 
 <div>;
 <label className="block text-white font-medium mb-2">Company</label>;
@@ -250,7 +248,7 @@ onChange={handleInputChange}
 className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:border-cyan-400 transition-colors"
 placeholder="Enter your company name";
 />;
-</div>;
+</div>
 
 {/* Project Type */}
 <div>;
@@ -262,8 +260,7 @@ key={type.value}
 className={`flex items-start p-4 rounded-lg border cursor-pointer transition-all duration-300 ${
 formData.projectType === type.value;
 ? "border-cyan-400 bg-cyan-400/20";
-: "border-white/20 hover: border-cyan-400/50",
-}`}
+: "border-white/20 hover: border-cyan-400/50"}`}
 >;
 <input;
 type="radio"
@@ -276,16 +273,16 @@ className="sr-only"
 <div className="flex items-start space-x-3">;
 <div className="w-8 h-8 bg-gradient-to-r from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center flex-shrink-0">;
 <type.icon className="w-4 h-4 text-white" />;
-</div>;
+</div>
 <div>;
-<div className="text-white font-medium">{type.label}</div>;
-<div className="text-white/60 text-sm">{type.description}</div>;
-</div>;
-</div>;
+<div className="text-white font-medium">{type.label}</div>
+<div className="text-white/60 text-sm">{type.description}</div>
+</div>
+</div>
 </label>;
 ))}
-</div>;
-</div>;
+</div>
+</div>
 
 {/* Budget and Timeline */}
 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">;
@@ -304,7 +301,7 @@ className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-w
 </option>;
 ))}
 </select>;
-</div>;
+</div>
 <div>;
 <label className="block text-white font-medium mb-4">Timeline</label>;
 <select;
@@ -320,8 +317,8 @@ className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-w
 </option>;
 ))}
 </select>;
-</div>;
-</div>;
+</div>
+</div>
 
 {/* Urgency */}
 <div>;
@@ -333,8 +330,7 @@ key={level.value}
 className={`flex items-center p-3 rounded-lg border cursor-pointer transition-all duration-300 ${
 formData.urgency === level.value;
 ? "border-cyan-400 bg-cyan-400/20";
-: "border-white/20 hover: border-cyan-400/50",
-}`}
+: "border-white/20 hover: border-cyan-400/50"}`}
 >;
 <input;
 type="radio"
@@ -345,13 +341,13 @@ onChange={handleInputChange}
 className="sr-only"
 />;
 <div className="text-center w-full">;
-<div className={`font-medium ${level.color}`}>{level.label}</div>;
-<div className="text-white/60 text-xs">{level.description}</div>;
-</div>;
+<div className={`font-medium ${level.color}`}>{level.label}</div>
+<div className="text-white/60 text-xs">{level.description}</div>
+</div>
 </label>;
 ))}
-</div>;
-</div>;
+</div>
+</div>
 
 {/* Project Description */}
 <div>;
@@ -365,7 +361,7 @@ rows={6}
 className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:border-cyan-400 transition-colors resize-none"
 placeholder="Describe your project requirements; goals; and any specific features you need...";
 />;
-</div>;
+</div>
 
 {/* Submit Button */}
 <button;
@@ -374,12 +370,11 @@ disabled={!isFormValid || submissionStatus === "submitting"}
 className={`w-full py-4 px-6 rounded-lg font-semibold text-lg transition-all duration-300 flex items-center justify-center space-x-2 ${
 !isFormValid || submissionStatus === "submitting";
 ? "bg-gray-600 text-gray-400 cursor-not-allowed";
-: "bg-gradient-to-r from-cyan-400 to-purple-600 text-white hover: from-cyan-500 hover:to-purple-700 hover:shadow-lg hover:shadow-cyan-400/25",
-}`}
+: "bg-gradient-to-r from-cyan-400 to-purple-600 text-white hover: from-cyan-500 hover:to-purple-700 hover:shadow-lg hover:shadow-cyan-400/25"}`}
 >;
 {submissionStatus === "submitting" ? (
 <>;
-<div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin"></div>;
+<div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin"></div>
 <span>Submitting...</span>;
 </>;
 ) : submissionStatus === "success" ? (
@@ -423,7 +418,7 @@ Something went wrong. Please try again or contact us directly.;
 )}
 </form>;
 </motion.div>;
-</div>;
+</div>
 
 {/* Sidebar */}
 <div className="space-y-8">;
@@ -454,8 +449,8 @@ kleber@ziontechgroup.com;
 <div className="flex items-start text-white/80">;
 <MapPin className="w-5 h-5 mr-3 text-green-400 mt-1" />;
 <span>Delaware; United States</span>;
-</div>;
-</div>;
+</div>
+</div>
 </motion.div>;
 
 {/* Why Choose Us */}
@@ -471,32 +466,32 @@ className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20"
 <div className="flex items-start">;
 <Star className="w-5 h-5 text-yellow-400 mr-3 mt-1 flex-shrink-0" />;
 <div>;
-<div className="text-white font-medium">Expert Team</div>;
-<div className="text-white/60 text-sm">Certified professionals</div>;
-</div>;
-</div>;
+<div className="text-white font-medium">Expert Team</div>
+<div className="text-white/60 text-sm">Certified professionals</div>
+</div>
+</div>
 <div className="flex items-start">;
 <Users className="w-5 h-5 text-cyan-400 mr-3 mt-1 flex-shrink-0" />;
 <div>;
-<div className="text-white font-medium">Proven Track Record</div>;
-<div className="text-white/60 text-sm">500+ successful projects</div>;
-</div>;
-</div>;
+<div className="text-white font-medium">Proven Track Record</div>
+<div className="text-white/60 text-sm">500+ successful projects</div>
+</div>
+</div>
 <div className="flex items-start">;
 <Zap className="w-5 h-5 text-purple-400 mr-3 mt-1 flex-shrink-0" />;
 <div>;
-<div className="text-white font-medium">Fast Delivery</div>;
-<div className="text-white/60 text-sm">Quick turnaround times</div>;
-</div>;
-</div>;
+<div className="text-white font-medium">Fast Delivery</div>
+<div className="text-white/60 text-sm">Quick turnaround times</div>
+</div>
+</div>
 <div className="flex items-start">;
 <Shield className="w-5 h-5 text-green-400 mr-3 mt-1 flex-shrink-0" />;
 <div>;
-<div className="text-white font-medium">Quality Guarantee</div>;
-<div className="text-white/60 text-sm">100% satisfaction</div>;
-</div>;
-</div>;
-</div>;
+<div className="text-white font-medium">Quality Guarantee</div>
+<div className="text-white/60 text-sm">100% satisfaction</div>
+</div>
+</div>
+</div>
 </motion.div>;
 
 {/* Process */}
@@ -510,40 +505,40 @@ className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20"
 <h3 className="text-xl font-bold text-white mb-4">Our Process</h3>;
 <div className="space-y-4">;
 <div className="flex items-start">;
-<div className="w-6 h-6 bg-cyan-400 rounded-full flex items-center justify-center text-black text-xs font-bold mr-3 mt-1">1</div>;
+<div className="w-6 h-6 bg-cyan-400 rounded-full flex items-center justify-center text-black text-xs font-bold mr-3 mt-1">1</div>
 <div>;
-<div className="text-white font-medium">Quote Request</div>;
-<div className="text-white/60 text-sm">Submit your requirements</div>;
-</div>;
-</div>;
+<div className="text-white font-medium">Quote Request</div>
+<div className="text-white/60 text-sm">Submit your requirements</div>
+</div>
+</div>
 <div className="flex items-start">;
-<div className="w-6 h-6 bg-purple-400 rounded-full flex items-center justify-center text-black text-xs font-bold mr-3 mt-1">2</div>;
+<div className="w-6 h-6 bg-purple-400 rounded-full flex items-center justify-center text-black text-xs font-bold mr-3 mt-1">2</div>
 <div>;
-<div className="text-white font-medium">Analysis</div>;
-<div className="text-white/60 text-sm">We review your needs</div>;
-</div>;
-</div>;
+<div className="text-white font-medium">Analysis</div>
+<div className="text-white/60 text-sm">We review your needs</div>
+</div>
+</div>
 <div className="flex items-start">;
-<div className="w-6 h-6 bg-green-400 rounded-full flex items-center justify-center text-black text-xs font-bold mr-3 mt-1">3</div>;
+<div className="w-6 h-6 bg-green-400 rounded-full flex items-center justify-center text-black text-xs font-bold mr-3 mt-1">3</div>
 <div>;
-<div className="text-white font-medium">Detailed Quote</div>;
-<div className="text-white/60 text-sm">Get comprehensive estimate</div>;
-</div>;
-</div>;
+<div className="text-white font-medium">Detailed Quote</div>
+<div className="text-white/60 text-sm">Get comprehensive estimate</div>
+</div>
+</div>
 <div className="flex items-start">;
-<div className="w-6 h-6 bg-yellow-400 rounded-full flex items-center justify-center text-black text-xs font-bold mr-3 mt-1">4</div>;
+<div className="w-6 h-6 bg-yellow-400 rounded-full flex items-center justify-center text-black text-xs font-bold mr-3 mt-1">4</div>
 <div>;
-<div className="text-white font-medium">Project Start</div>;
-<div className="text-white/60 text-sm">Begin development</div>;
-</div>;
-</div>;
-</div>;
+<div className="text-white font-medium">Project Start</div>
+<div className="text-white/60 text-sm">Begin development</div>
+</div>
+</div>
+</div>
 </motion.div>;
-</div>;
-</div>;
-</div>;
+</div>
+</div>
+</div>
 </section>;
-</div>;
+</div>
 );
 }
 

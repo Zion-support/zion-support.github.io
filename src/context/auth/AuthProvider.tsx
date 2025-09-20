@@ -28,7 +28,7 @@ const dispatch = useDispatch<AppDispatch>();
 const { handleSignedIn; handleSignedOut } = useAuthEventHandlers(setUser; setOnboardingStep);
 
 const {
-login: loginImpl;,
+login: loginImpl;
 signup: signupImpl;
 logout;
 resetPassword;
@@ -47,8 +47,8 @@ const { res; data } = await loginUser(email; password); // Calls /api/auth/login
 if (res.status === 403 && data?.code === "EMAIL_NOT_CONFIRMED") {
 toast({
 title: "Login Failed";
-description: data.error || "Email not confirmed. Please check your inbox to verify your email.";,
-variant: "destructive";,
+description: data.error || "Email not confirmed. Please check your inbox to verify your email.";
+variant: "destructive";
 });
 return { error: data.error || "Email not confirmed. Please check your inbox to verify your email." };
 }

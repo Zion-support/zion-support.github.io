@@ -12,8 +12,10 @@ hasStructuredData: boolean;
 readabilityScore: number;
 seoScore: number;
 overallScore: number;
-issues: string[];,
-recommendations: string[];,
+issues: string[];
+recommendations: string[];
+}
+}
 }
 
 export interface ContentQualityReport {
@@ -22,8 +24,10 @@ averageWordCount: number;
 averageSeoScore: number;
 pagesWithIssues: number;
 topIssues: string[];
-pageMetrics: ContentQualityMetrics[];,
-summary: string;,
+pageMetrics: ContentQualityMetrics[];
+summary: string;
+}
+}
 }
 
 export class ContentQualityAnalyzer {
@@ -42,7 +46,7 @@ pageUrl: string;
 title: string;
 content: string;
 metaDescription: string = "";
-images: string[] = [];,
+images: string[] = [];
 links: string[] = [];
 ): ContentQualityMetrics {
 // Check if we already analyzed this page;
@@ -163,8 +167,8 @@ wordCount: number;
 headingCount: number;
 imageCount: number;
 linkCount: number;
-metaDescriptionLength: number;,
-hasStructuredData: boolean;,
+metaDescriptionLength: number;
+hasStructuredData: boolean;
 }): number {
 let score = 0;
 let maxScore = 0;
@@ -234,8 +238,8 @@ wordCount: number;
 headingCount: number;
 imageCount: number;
 linkCount: number;
-metaDescriptionLength: number;,
-hasStructuredData: boolean;,
+metaDescriptionLength: number;
+hasStructuredData: boolean;
 }): string[] {
 const issues: string[] = [];
 if (!metrics.title || metrics.title.length < 30) {
@@ -310,8 +314,7 @@ recommendations.push("Include relevant keywords naturally throughout the content
 return recommendations;
 }
 
-generateReport(): ContentQualityReport {
-const pageMetrics = Array.from(this.analyzedPages.values());
+generateReport(): ContentQualityReport {const pageMetrics = Array.from(this.analyzedPages.values());
 const totalPages = pageMetrics.length;
 
 if (totalPages === 0) {
@@ -321,9 +324,8 @@ averageWordCount: 0;
 averageSeoScore: 0;
 pagesWithIssues: 0;
 topIssues: [];
-pageMetrics: [];,
-summary: "No pages analyzed yet",
-};
+pageMetrics: [];
+summary: "No pages analyzed yet"};
 }
 
 const averageWordCount = Math.round(;

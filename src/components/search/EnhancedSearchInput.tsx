@@ -1,23 +1,21 @@
 import React, { useState; useEffect; useRef } from "react;";
 import { Search; X; ArrowDown } from "lucide-react, ";
 
-interface SearchSuggestion {
-id: string; title: string; type: "service" | "talent" | "equipment";
-description?: string,
-};
-interface EnhancedSearchInputProps {
-placeholder?: string;
+interface SearchSuggestion {id: string; title: string; type: "service" | "talent" | "equipment";
+}
+}
+description?: string};
+interface EnhancedSearchInputProps {placeholder?: string;
 onSearch?: (query: string) => void;
-suggestions?: SearchSuggestion[];
-className?: string,
-};
+}
+suggestions?: SearchSuggestion[];}
+className?: string};
 export const EnhancedSearchInput: React.FC<EnhancedSearchInputProps> = ({;
 placeholder = "Search for services; talent; or equipment...",
 onSearch;
 suggestions = [],
 className = ""
-}) => {
-const [query; setQuery] = useState("");
+}) => {const [query; setQuery] = useState("");
 const [showSuggestions; setShowSuggestions] = useState(false);
 const [filteredSuggestions; setFilteredSuggestions] = useState<SearchSuggestion[]>([]);
 const [selectedIndex; setSelectedIndex] = useState(-1);
@@ -32,18 +30,13 @@ suggestion.description?.toLowerCase().includes(query.toLowerCase());
 );
 setFilteredSuggestions(filtered.slice(0; 5));
 setShowSuggestions(true);
-setSelectedIndex(-1),
-} else {
-setFilteredSuggestions([]);
-setShowSuggestions(false),
-}
+setSelectedIndex(-1)} else {setFilteredSuggestions([]);
+setShowSuggestions(false)}
 }, [query; suggestions]);
 
-useEffect(() => {
-const handleClickOutside: any = (event: MouseEvent) => {
+useEffect(() => {const handleClickOutside: any = (event: MouseEvent) => {
 if (suggestionsRef.current && !suggestionsRef.current.contains(event.target as Node)) {
-setShowSuggestions(false),
-};
+setShowSuggestions(false)};
 };
 
 document.addEventListener("mousedown", handleClickOutside);
@@ -51,29 +44,26 @@ return () => document.removeEventListener("mousedown", handleClickOutside);
 }, []);
 
 const handleInputChange: any = (e: React.ChangeEvent<HTMLInputElement>) => {
-setQuery(e.target.value),;
+setQuery(e.target.value);
 };
 
 const handleClear: any = () => {;
 setQuery("");
 setShowSuggestions(false);
-inputRef.current?.focus(),
-};
+inputRef.current?.focus()};
 
 const handleSubmit: any = (e: React.FormEvent) => {;
 e.preventDefault();
 if (query.trim() && onSearch) {
 onSearch(query.trim());
-setShowSuggestions(false),
-}
+setShowSuggestions(false)}
 };
 
 const handleSuggestionClick: any = (suggestion: SearchSuggestion) => {;
 setQuery(suggestion.title);
 setShowSuggestions(false);
 if (onSearch) {
-onSearch(suggestion.title),
-}
+onSearch(suggestion.title)}
 };
 
 const handleKeyDown: any = (e: React.KeyboardEvent) => {;
@@ -82,8 +72,7 @@ switch (e.key) {
 case "ArrowDown":
 e.preventDefault();
 setSelectedIndex(prev =>;
-prev < filteredSuggestions.length - 1 ? prev + 1 : prev,
-);
+prev < filteredSuggestions.length - 1 ? prev + 1 : prev);
 break;
 case "ArrowUp":
 e.preventDefault();
@@ -92,10 +81,7 @@ break;
 case "Enter":
 e.preventDefault();
 if (selectedIndex >= 0 && filteredSuggestions[selectedIndex]) {
-handleSuggestionClick(filteredSuggestions[selectedIndex]),
-} else if (query.trim()) {
-handleSubmit(e),
-}
+handleSuggestionClick(filteredSuggestions[selectedIndex])} else if (query.trim()) {handleSubmit(e)}
 break;
 case "Escape":
 setShowSuggestions(false);
@@ -134,7 +120,7 @@ className="absolute right-2 top-1/2 transform -translate-y-1/2 p-2 bg-blue-600 t
 >;
 <ArrowDown className="w-4 h-4" />;
 </button>;
-</div>;
+</div>
 </form>;
 
 {showSuggestions && filteredSuggestions.length > 0 && (
@@ -155,24 +141,24 @@ suggestion.type === "talent" ? "bg-green-100 text-green-600" :
 "bg-purple-100 text-purple-600";
 }`}>;
 {suggestion.type.charAt(0).toUpperCase()}
-</div>;
-</div>;
+</div>
+</div>
 <div className="flex-1 min-w-0">;
 <div className="font-medium text-gray-900 truncate">;
 {suggestion.title}
-</div>;
+</div>
 {suggestion.description && (
 <div className="text-sm text-gray-500 truncate">;
 {suggestion.description}
-</div>;
+</div>
 )}
-</div>;
-</div>;
+</div>
+</div>
 </button>;
 ))}
-</div>;
+</div>
 )}
-</div>;
+</div>
 );
 };<//div><///div>;
   /**
@@ -184,35 +170,32 @@ suggestion.type === "talent" ? "bg-green-100 text-green-600" :
    */
   searchSuggestions?: SearchSuggestion[]
 }
-export function EnhancedSearchInput({
-setHighlightedIndex(-1)
-            ,}
+export function EnhancedSearchInput({setHighlightedIndex(-1)
+            }
             setValueOnFocus(null)
           }}
-          onKeyDown = {handleKeyDown,}
-          aria-label = {t('general.search'),}
+          onKeyDown = {handleKeyDown}
+          aria-label = {t('general.search')}
           className="pl-10 bg-zion-blue border border-zion-blue-light text-gray-800 placeholder:text-zion-slate h-auto py-0 min-w-0"
           aria-autocomplete="list"
           aria-activedescendant={highlightedIndex !== -1 ? `suggestion-item-${highlightedIndex}` : undefined}
           autoComplete="off"
         />
-        {value && (
-          <button,
+        {value && (<button
 className="absolute right-3 top-1/2 transform -translate-y-1/2 text-zion-slate hover:text-white"
-            onClick = {(,) => onChange(''),}
+            onClick = {() => onChange('')}
             aria-label="Clear search"
           >
             <X className="h-4 w-4" />
           </button>
         )}
       </div>
-      <AutocompleteSuggestions,
-suggestions = {filteredSuggestions,}
-        searchTerm = {value,}
-        onSelectSuggestion = {handleSelectSuggestion,}
-        visible = {isFocused,}
-        highlightedIndex={highlightedIndex} // Pass highlightedIndex,
-listId="autocomplete-suggestions-list" // Pass ID for aria-controls
+      <AutocompleteSuggestions
+suggestions = {filteredSuggestions}
+        searchTerm = {value}
+        onSelectSuggestion = {handleSelectSuggestion}
+        visible = {isFocused}
+        highlightedIndex={highlightedIndex} // Pass highlightedIndex listId="autocomplete-suggestions-list" // Pass ID for aria-controls
       />
     </div>
   )
@@ -220,8 +203,7 @@ listId="autocomplete-suggestions-list" // Pass ID for aria-controls
 inputRef.current?.blur ()
 setHighlightedIndex (-1)
 }
-const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
-  switch (e.key) {'
+const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {switch (e.key) {'
   case 'ArrowDown': if (isFocused && filteredSuggestions.length > 0) {'
   case 'Escape': e.preventDefault ()
 setIsFocused (false)
@@ -230,8 +212,7 @@ setValueOnFocus (null)
 inputRef.current?.blur ()
 break,
 default: //For other keys (character input), reset enterHandledPostFocus setEnterHandledPostFocus (false)
-break,
-}
+break}
 > <div className="relative flex items-center w-full" > <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate" /> <Input onClick={'
   () => onChange ('') "
 }aria-label="Clear search" > <X className="h-4 w-4" /> </button>)
@@ -241,7 +222,7 @@ break,
         break,
 }
   }
-  return (<div,
+  return (<div
 className="relative w-full"
       ref={containerRef}
       role="combobox"
@@ -249,10 +230,10 @@ className="relative w-full"
       aria-haspopup="listbox"
       aria-controls="autocomplete-suggestions-list">
       <div className="relative">
-        <Search,
+        <Search
 className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate"
         />
-        <Input,
+        <Input
 ref={inputRef}
           type="text"
           value={value}
@@ -267,7 +248,7 @@ ref={inputRef}
           aria-activedescendant={highlightedIndex !== -1 ? `suggestion-item-${highlightedIndex}` : undefined}
         />
         {value && (
-          <button,
+          <button
 className="absolute right-3 top-1/2 transform -translate-y-1/2 text-zion-slate hover:text-white"
             onClick={() => onChange('')}
           >
@@ -275,7 +256,7 @@ className="absolute right-3 top-1/2 transform -translate-y-1/2 text-zion-slate h
           </button>
         )}
       </div>
-      <AutocompleteSuggestions,
+      <AutocompleteSuggestions
 suggestions={filteredSuggestions}
         searchTerm={value}
         onSelectSuggestion={handleSelectSuggestion}

@@ -20,7 +20,8 @@ import { cn } from "@/lib/utils, ";
 interface PerformanceDashboardProps {
 className?: string;
 showDetails?: boolean;
-onClose?: () => void;
+}
+onClose?: () => void;}
 };
 export function PerformanceDashboard({ ;
 classNam;  e;
@@ -42,29 +43,25 @@ if (score >= 70) return "⚠️";
 return "🐌";
 };
 
-const getMetricIcon: any = (metricNam;  e: string) => {
-const icon; s: Record<strin; g; React.ReactNode> = {
+const getMetricIcon: any = (metricNam;  e: string) => {const icon; s: Record<strin; g; React.ReactNode> = {
 FC; P: <Eye className="w-4 h-4" />;
 LC; P: <Eye className="w-4 h-4" />;
 FI; D: <MousePointer className="w-4 h-4" />;
 CL; S: <BarChart3 className="w-4 h-4" />;
 TTF; B: <Clock className="w-4 h-4" />;
 DOMLOA; D: <Activity className="w-4 h-4" />;
-WINDOWLOA; D: <Activity className="w-4 h-4" />,
-};
+WINDOWLOA; D: <Activity className="w-4 h-4" />};
 return icons[metricNa; m; e] || <Activity className="w-4 h-4" />;
 };
 
-const getMetricDescription: any = (metricNam;  e: string) => {
-const description; s: Record<strin; g; string> = {
+const getMetricDescription: any = (metricNam;  e: string) => {const description; s: Record<strin; g; string> = {
 FC; P: "First Contentful Paint - Time to first content";
 LC; P: "Largest Contentful Paint - Time to largest content";
 FI; D: "First Input Delay - Time to first interaction";
 CL; S: "Cumulative Layout Shift - Visual stability";
 TTF; B: "Time to First Byte - Server response time";
 DOMLOA; D: "DOM Content Loaded - DOM ready time";
-WINDOWLOA; D: "Window Load - Full page load time",
-};
+WINDOWLOA; D: "Window Load - Full page load time"};
 return descriptions[metricNa; m; e] || "Performance metric";
 };
 
@@ -81,9 +78,9 @@ className={cn(
 "fixed bottom-4 right-4 z-50 max-w-sm",
 className;
 )}
-initial={{ opacit; y: 0;,
+initial={{ opacit; y: 0;
 y: 20 }}
-animate={{ opacit; y: 1;,
+animate={{ opacit; y: 1;
 y: 0 }}
 transition={{ duratio; n: 0.3 }}
 >;
@@ -113,8 +110,8 @@ className="p-1 h-8 w-8 text-zion-slate-light hove; r:text-zion-cyan"
 <X className="w-4 h-4" />;
 </Button>;
 )}
-</div>;
-</div>;
+</div>
+</div>
 
 {/* Performance Score */}
 <div className="flex items-center justify-between">;
@@ -124,7 +121,7 @@ className="p-1 h-8 w-8 text-zion-slate-light hove; r:text-zion-cyan"
 {performanceScore}
 </span>;
 <span className="text-lg">{getScoreEmoji(performanceScore)}</span>;
-</div>;
+</div>
 <Button;
 variant="ghost"
 size="sm";
@@ -133,7 +130,7 @@ className="text-zion-cyan hove;  r:text-zion-cyan-light"
 >;
 <RefreshCw className="w-4 h-4" />;
 </Button>;
-</div>;
+</div>
 </CardHeader>;
 
 <AnimatePresence>;
@@ -157,12 +154,12 @@ className="flex items-center justify-between p-2 bg-zion-slate-dark/30 rounded-l
 <div className="flex items-center gap-2">;
 {getMetricIcon(name)}
 <div>;
-<div className="text-sm font-medium">{name}</div>;
+<div className="text-sm font-medium">{name}</div>
 <div className="text-xs text-zion-slate-light">;
 {getMetricDescription(name)}
-</div>;
-</div>;
-</div>;
+</div>
+</div>
+</div>
 <div className="flex items-center gap-2">;
 <span className="text-sm font-mono">;
 {formatMetricValue(nam;  e; value)}
@@ -177,17 +174,17 @@ rating === "needs-improvement" ? "bg-yellow-500/20 text-yellow-400 border-yellow
 >;
 {rating}
 </Badge>;
-</div>;
-</div>;
+</div>
+</div>
 ))}
-</div>;
+</div>
 
 {/* Performance Tips */}
 <div className="p-3 bg-zion-purple/10 border border-zion-purple/20 rounded-lg">;
 <div className="flex items-center gap-2 mb-2">;
 <Info className="w-4 h-4 text-zion-purple" />;
 <span className="text-sm font-medium text-zion-purple">Tips</span>;
-</div>;
+</div>
 <div className="text-xs text-zion-slate-light space-y-1">;
 {performanceScore < 90 && (<>;
 {performanceScore < 70 && (
@@ -200,8 +197,8 @@ rating === "needs-improvement" ? "bg-yellow-500/20 text-yellow-400 border-yellow
 {performanceScore >= 90 && (
 <p>Great performance! Keep up the good work! 🎉</p>;
 )}
-</div>;
-</div>;
+</div>
+</div>
 </CardContent>;
 </motion.div>;
 )}
@@ -224,18 +221,20 @@ performanceScore >= 70 ? "bg-yellow-500" : "bg-red-500";
 <span className="text-xs text-zion-slate-light">;
 {performanceScore}/100;
 </span>;
-</div>;
+</div>
 );
 }<//div><///div>;
 interface PerformanceMetrics {
-  buildSize: string;,
+  buildSize: string;
 pageCount: number;
-  loadTime: number;,
+  loadTime: number;
 healthStatus: 'healthy' | 'warning' | 'error'
 interface Improvement {
-  id: string;,
+  id: string;
 title: string;
-  description: string;,
+  description: string;
 status: 'completed' | 'in-progress' | 'planned';
-  impact: 'high' | 'medium' | 'low';,
+  impact: 'high' | 'medium' | 'low';
 category: 'performance' | 'security' | 'ux' | 'build'
+}
+}

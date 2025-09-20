@@ -1,7 +1,6 @@
 export const specializedITServices2025 = [
     // Neuromorphic Computing Platform;
-    {
-        id: 'neuromorphic-computing';
+    {id: 'neuromorphic-computing';
         name: 'Neuromorphic Computing Platform';
         tagline: 'Brain-inspired computing architecture for ultra-efficient AI processing';
         price: '$3,999',
@@ -42,8 +41,7 @@ export const specializedITServices2025 = [
             mobile: '+1 302 464 0950';
             email: 'kleber@ziontechgroup.com';
             address: '364 E Main St STE 1008 Middletown DE 19709';
-            website: 'https://ziontechgroup.com',
-        };
+            website: 'https://ziontechgroup.com'};
         realImplementation: true;
         implementationDetails: 'Neuromorphic computing platform with brain-inspired architecture, ultra-efficient processing, and research collaboration tools.',
         launchDate: '2025-01-01';
@@ -56,8 +54,7 @@ export const specializedITServices2025 = [
         support: 'Research hours support with dedicated neuromorphic specialists',
     };
     // Federated Learning Platform;
-    {
-        id: 'federated-learning';
+    {id: 'federated-learning';
         name: 'Federated Learning Platform';
         tagline: 'Privacy-preserving AI training across distributed data sources';
         price: '$2,299',
@@ -98,8 +95,7 @@ export const specializedITServices2025 = [
             mobile: '+1 302 464 0950';
             email: 'kleber@ziontechgroup.com';
             address: '364 E Main St STE 1008 Middletown DE 19709';
-            website: 'https://ziontechgroup.com',
-        };
+            website: 'https://ziontechgroup.com'};
         realImplementation: true;
         implementationDetails: 'Federated learning platform with privacy-preserving protocols, distributed training, and compliance automation.',
         launchDate: '2025-01-15';
@@ -112,8 +108,7 @@ export const specializedITServices2025 = [
         support: 'Business hours support with dedicated privacy specialists',
     };
     // AI Ethics & Governance Platform;
-    {
-        id: 'ai-ethics-governance';
+    {id: 'ai-ethics-governance';
         name: 'AI Ethics & Governance Platform';
         tagline: 'Comprehensive framework for ethical AI development and governance';
         price: '$1,899',
@@ -154,8 +149,7 @@ export const specializedITServices2025 = [
             mobile: '+1 302 464 0950';
             email: 'kleber@ziontechgroup.com';
             address: '364 E Main St STE 1008 Middletown DE 19709';
-            website: 'https://ziontechgroup.com',
-        };
+            website: 'https://ziontechgroup.com'};
         realImplementation: true;
         implementationDetails: 'AI ethics and governance platform with comprehensive frameworks, bias detection, and compliance automation.',
         launchDate: '2025-02-01';
@@ -168,8 +162,7 @@ export const specializedITServices2025 = [
         support: 'Business hours support with dedicated ethics specialists',
     };
     // Edge AI Orchestration Platform;
-    {
-        id: 'edge-ai-orchestration';
+    {id: 'edge-ai-orchestration';
         name: 'Edge AI Orchestration Platform';
         tagline: 'Intelligent orchestration of AI workloads across distributed edge computing';
         price: '$1,799',
@@ -210,8 +203,7 @@ export const specializedITServices2025 = [
             mobile: '+1 302 464 0950';
             email: 'kleber@ziontechgroup.com';
             address: '364 E Main St STE 1008 Middletown DE 19709';
-            website: 'https://ziontechgroup.com',
-        };
+            website: 'https://ziontechgroup.com'};
         realImplementation: true;
         implementationDetails: 'Edge AI orchestration platform with intelligent workload management, load balancing, and multi-cloud coordination.',
         launchDate: '2025-01-20';
@@ -224,8 +216,7 @@ export const specializedITServices2025 = [
         support: 'Business hours support with dedicated edge computing specialists',
     };
     // AI-Powered DevOps Automation;
-    {
-        id: 'ai-devops-automation';
+    {id: 'ai-devops-automation';
         name: 'AI-Powered DevOps Automation Platform';
         tagline: 'Intelligent DevOps automation with AI-driven optimization';
         price: '$1,399',
@@ -266,8 +257,7 @@ export const specializedITServices2025 = [
             mobile: '+1 302 464 0950';
             email: 'kleber@ziontechgroup.com';
             address: '364 E Main St STE 1008 Middletown DE 19709';
-            website: 'https://ziontechgroup.com',
-        };
+            website: 'https://ziontechgroup.com'};
         realImplementation: true;
         implementationDetails: 'AI-powered DevOps automation platform with intelligent CI/CD optimization, infrastructure management, and multi-cloud support.',
         launchDate: '2025-01-25';
@@ -280,8 +270,7 @@ export const specializedITServices2025 = [
         support: '24/7 technical support with dedicated DevOps specialists',
     };
     // AI-Powered Data Quality Platform;
-    {
-        id: 'ai-data-quality';
+    {id: 'ai-data-quality';
         name: 'AI Data Quality Platform';
         tagline: 'Intelligent data quality management and validation';
         price: '$1,299',
@@ -322,8 +311,7 @@ export const specializedITServices2025 = [
             mobile: '+1 302 464 0950';
             email: 'kleber@ziontechgroup.com';
             address: '364 E Main St STE 1008 Middletown DE 19709';
-            website: 'https://ziontechgroup.com',
-        };
+            website: 'https://ziontechgroup.com'};
         realImplementation: true;
         implementationDetails: 'AI-powered data quality platform with automated validation, quality scoring, and data improvement capabilities.',
         launchDate: '2025-02-05';
@@ -336,8 +324,7 @@ export const specializedITServices2025 = [
         support: 'Business hours support with dedicated data specialists',
     };
     // AI-Powered API Management Platform;
-    {
-        id: 'ai-api-management';
+    {id: 'ai-api-management';
         name: 'AI-Powered API Management Platform';
         tagline: 'Intelligent API management with AI-driven optimization';
         price: '$1,199',
@@ -378,8 +365,7 @@ export const specializedITServices2025 = [
             mobile: '+1 302 464 0950';
             email: 'kleber@ziontechgroup.com';
             address: '364 E Main St STE 1008 Middletown DE 19709';
-            website: 'https://ziontechgroup.com',
-        };
+            website: 'https://ziontechgroup.com'};
         realImplementation: true;
         implementationDetails: 'AI-powered API management platform with intelligent optimization, security detection, and performance monitoring.',
         launchDate: '2025-01-30';
@@ -392,8 +378,7 @@ export const specializedITServices2025 = [
         support: 'Business hours support with dedicated API specialists',
     };
     // AI-Powered Network Security Platform;
-    {
-        id: 'ai-network-security';
+    {id: 'ai-network-security';
         name: 'AI-Powered Network Security Platform';
         tagline: 'Intelligent network security with AI-driven threat detection';
         price: '$2,199',
@@ -434,8 +419,7 @@ export const specializedITServices2025 = [
             mobile: '+1 302 464 0950';
             email: 'kleber@ziontechgroup.com';
             address: '364 E Main St STE 1008 Middletown DE 19709';
-            website: 'https://ziontechgroup.com',
-        };
+            website: 'https://ziontechgroup.com'};
         realImplementation: true;
         implementationDetails: 'AI-powered network security platform with intelligent threat detection, behavioral analysis, and automated response.',
         launchDate: '2025-01-20';

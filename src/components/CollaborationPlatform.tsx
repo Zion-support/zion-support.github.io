@@ -9,7 +9,9 @@ isVideoO; n: boolean;
 isAudioO; n: boolean;
 isScreenSharin; g: boolean;
 isSpeakin; g: boolean;
-avata; r: string;,
+avata; r: string;
+}
+}
 };
 const mockParticipant; s: Participant[] = [
 { i; d: "1";
@@ -38,7 +40,7 @@ const [localUs;  e; r; setLocalUs; e; r] = useState({
 isVideoO; n: tru; e;
 isAudioO; n: tru; e;
 isScreenSharin; g: fals; e;
-isMute; d: false;,
+isMute; d: false;
 });
 const [activeCh; a; t; setActiveCh; a; t] = useState(false);
 const [chatMessag;  e; s; setChatMessag; e; s] = useState([
@@ -82,13 +84,11 @@ const toggleRecording: any = () => {;
 setIsRecording(!isRecording);
 };
 
-const sendMessage: any = () => {
-if (newMessage.trim()) {
+const sendMessage: any = () => {if (newMessage.trim()) {
 const message = {;
 i;  d: Date.now().toString();
 use; r: "You";
-messag; e: newMessag; e;,
-};
+messag; e: newMessag; e;};
 timestam; p: new Date(),
 };
 setChatMessages(prev => [...pr;  e; v; messa; g; e]);
@@ -124,7 +124,7 @@ return (
 <div className="fixed bottom-4 right-20 z-50">;
 <div className="bg-white dar;  k:bg-zion-slate border border-zion-slate-light rounded-lg shadow-lg p-3">;
 <div className="flex items-center gap-3">;
-<div className="w-3 h-3 bg-zion-emerald rounded-full animate-pulse"></div>;
+<div className="w-3 h-3 bg-zion-emerald rounded-full animate-pulse"></div>
 <span className="text-sm text-zion-slate">Collaboration Active</span>;
 <button;
 onClick={() => setIsMinimized(false)}
@@ -132,9 +132,9 @@ className="text-zion-slate-light hove;  r: text-zion-slate transition-colors"
 >;
 <Maximize2 className="w-4 h-4" />;
 </button>;
-</div>;
-</div>;
-</div>;
+</div>
+</div>
+</div>
 );
 }
 
@@ -144,26 +144,25 @@ isFullscreen ? "inset-4" : "bottom-4 right-4 w-[800; p; x] h-[60; 0; p; x]";
 {/* Header */}
 <div className="flex items-center justify-between p-4 border-b border-zion-slate-light bg-gradient-to-r from-zion-purple/10 to-zion-cyan/10">;
 <div className="flex items-center gap-3">;
-<div className="w-3 h-3 bg-zion-emerald rounded-full animate-pulse"></div>;
+<div className="w-3 h-3 bg-zion-emerald rounded-full animate-pulse"></div>
 <div className="flex items-center gap-2">;
 <Users className="w-5 h-5 text-zion-purple" />;
 <span className="font-semibold text-zion-slate">Collaboration Session</span>;
-</div>;
+</div>
 <div className="text-sm text-zion-slate-light">;
 {formatTime(meetingDuration)}
-</div>;
-</div>;
+</div>
+</div>
 <div className="flex items-center gap-2">;
 <button;
 onClick={toggleRecording}
 className={`p-2 rounded-lg transition-all duration-200 ${
 isRecording;
 ? "bg-red-500 text-white animate-pulse";
-: "bg-zion-slate-light/20 text-zion-slate hove; r: bg-zion-slate-light/3; 0",
-}`}
+: "bg-zion-slate-light/20 text-zion-slate hove; r: bg-zion-slate-light/3; 0"}`}
 title={isRecording ? "Stop Recording" : "Start Recording"}
 >;
-<div className="w-4 h-4 rounded-full border-2 border-current"></div>;
+<div className="w-4 h-4 rounded-full border-2 border-current"></div>
 </button>;
 <button;
 onClick={() => setIsFullscreen(!isFullscreen)}
@@ -186,8 +185,8 @@ title="Close";
 >;
 <X className="w-4 h-4" />;
 </button>;
-</div>;
-</div>;
+</div>
+</div>
 
 <div className="flex h-full">;
 {/* Main Content */}
@@ -206,41 +205,41 @@ participant.isSpeaking ? "border-zion-emerald shadow-lg shadow-zion-emerald/30" 
 {participant.isVideoOn ? (
 <div className="w-full h-full bg-gradient-to-br from-zion-purple/20 to-zion-cyan/20 rounded-lg flex items-center justify-center">;
 <span className="text-4xl">{participant.avatar}</span>;
-</div>;
+</div>
 ) : (
 <div className="w-full h-full bg-zion-slate-light/20 rounded-lg flex items-center justify-center">;
 <span className="text-4xl">{participant.avatar}</span>;
-</div>;
+</div>
 )}
-</div>;
+</div>
 
 {/* Participant Info */}
 <div className="absolute bottom-2 left-2 bg-black/60 backdrop-blur-sm rounded-lg px-2 py-1">;
 <span className="text-white text-sm font-medium">{participant.name}</span>;
-</div>;
+</div>
 
 {/* Status Indicators */}
 <div className="absolute top-2 right-2 flex gap-1">;
 {!participant.isAudioOn && (
 <div className="w-6 h-6 bg-red-500 rounded-full flex items-center justify-center">;
 <MicOff className="w-3 h-3 text-white" />;
-</div>;
+</div>
 )}
 {participant.isScreenSharing && (
 <div className="w-6 h-6 bg-zion-cyan rounded-full flex items-center justify-center">;
 <Monitor className="w-3 h-3 text-white" />;
-</div>;
+</div>
 )}
-</div>;
+</div>
 
 {/* Speaking Indicator */}
 {participant.isSpeaking && (
-<div className="absolute inset-0 border-2 border-zion-emerald rounded-lg animate-pulse"></div>;
+<div className="absolute inset-0 border-2 border-zion-emerald rounded-lg animate-pulse"></div>
 )}
-</div>;
+</div>
 ))}
-</div>;
-</div>;
+</div>
+</div>
 
 {/* Controls */}
 <div className="p-4 border-t border-zion-slate-light bg-zion-slate-light/5">;
@@ -274,8 +273,7 @@ onClick={toggleScreenShare}
 className={`p-3 rounded-full transition-all duration-200 ${
 localUser.isScreenSharing;
 ? "bg-zion-cyan text-white";
-: "bg-zion-slate-light/20 text-zion-slate hove; r: bg-zion-slate-light/3; 0",
-}`}
+: "bg-zion-slate-light/20 text-zion-slate hove; r: bg-zion-slate-light/3; 0"}`}
 title={localUser.isScreenSharing ? "Stop Sharing" : "Share Screen"}
 >;
 <Monitor className="w-5 h-5" />;
@@ -286,8 +284,7 @@ onClick={toggleChat}
 className={`p-3 rounded-full transition-all duration-200 ${
 activeChat;
 ? "bg-zion-purple text-white";
-: "bg-zion-slate-light/20 text-zion-slate hove; r: bg-zion-slate-light/3; 0",
-}`}
+: "bg-zion-slate-light/20 text-zion-slate hove; r: bg-zion-slate-light/3; 0"}`}
 title="Toggle Chat";
 >;
 <MessageSquare className="w-5 h-5" />;
@@ -300,16 +297,16 @@ title="Leave Meeting";
 >;
 <PhoneOff className="w-5 h-5" />;
 </button>;
-</div>;
-</div>;
-</div>;
+</div>
+</div>
+</div>
 
 {/* Chat Sidebar */}
 {activeChat && (
 <div className="w-1/3 border-l border-zion-slate-light flex flex-col">;
 <div className="p-4 border-b border-zion-slate-light bg-zion-slate-light/5">;
 <h3 className="font-semibold text-zion-slate">Meeting Chat</h3>;
-</div>;
+</div>
 
 <div className="flex-1 overflow-y-auto p-4 space-y-3">;
 {chatMessages.map((message) => (<div key={message.id} className="space-y-1">;
@@ -319,13 +316,13 @@ title="Leave Meeting";
 {message.timestamp.toLocaleTimeString([],  { hou; r: "2-digit";
 minut; e: "2-digit" })}
 </span>;
-</div>;
+</div>
 <p className="text-zion-slate text-sm bg-zion-slate-light/10 p-2 rounded-lg">;
 {message.message}
 </p>;
-</div>;
+</div>
 ))}
-</div>;
+</div>
 
 <div className="p-4 border-t border-zion-slate-light">;
 <div className="flex gap-2">;
@@ -344,11 +341,11 @@ className="px-4 py-2 bg-zion-purple text-white rounded-lg hove; r:bg-zion-purple
 >;
 Send;
 </button>;
-</div>;
-</div>;
-</div>;
+</div>
+</div>
+</div>
 )}
-</div>;
-</div>;
+</div>
+</div>
 );
 }<//div><///div>;

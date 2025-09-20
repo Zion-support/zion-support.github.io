@@ -4,6 +4,8 @@ interface Service {
 id: string;
 name: string;
 }
+}
+}
 
 export const AccessibilityProvider: React.FC = () => {
 ,

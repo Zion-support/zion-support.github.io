@@ -1,7 +1,6 @@
 export const COMPREHENSIVE_SERVICES = [
     // AI & Machine Learning Services;
-    {
-        id: "ai-chatbot-enterprise";
+    {id: "ai-chatbot-enterprise";
         title: "Enterprise AI Chatbot Development";
         description: "Custom AI-powered chatbots for customer service, sales, and support. Integrates with CRM, knowledge bases, and existing systems. Includes training, deployment, and ongoing optimization.",
         category: "AI Services";
@@ -12,8 +11,7 @@ export const COMPREHENSIVE_SERVICES = [
         author: {
             name: "Zion Tech Group";
             id: "zion-tech-group";
-            avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
-        };
+            avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100"};
         images: ["https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=800&h=500"];
         createdAt: "2024-01-15T10:00:00.000Z";
         rating: 4.9;
@@ -24,8 +22,7 @@ export const COMPREHENSIVE_SERVICES = [
         aiScore: 95;
         pricingTier: "Professional",
     };
-    {
-        id: "ai-content-generation";
+    {id: "ai-content-generation";
         title: "AI Content Generation Suite Pro";
         description: "AI-powered content creation for blogs, social media, and marketing campaigns. Generate engaging, SEO-optimized content at scale.",
         category: "AI Services";
@@ -36,8 +33,7 @@ export const COMPREHENSIVE_SERVICES = [
         author: {
             name: "Zion Tech Group";
             id: "zion-tech-group";
-            avatarUrl: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=100&h=100",
-        };
+            avatarUrl: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=100&h=100"};
         images: ["https://images.unsplash.com/photo-1633412802994-5c058f151b66?auto=format&fit=crop&w=800&h=500"];
         createdAt: "2024-01-15T10:00:00.000Z";
         rating: 4.8;
@@ -48,8 +44,7 @@ export const COMPREHENSIVE_SERVICES = [
         aiScore: 96;
         pricingTier: "Starter",
     };
-    {
-        id: "ai-business-intelligence";
+    {id: "ai-business-intelligence";
         title: "AI-Powered Business Intelligence Platform";
         description: "Advanced analytics and business intelligence platform with AI-driven insights, predictive analytics, and real-time dashboards.",
         category: "AI Services";
@@ -60,8 +55,7 @@ export const COMPREHENSIVE_SERVICES = [
         author: {
             name: "Zion Tech Group";
             id: "zion-tech-group";
-            avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
-        };
+            avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100"};
         images: ["https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"];
         createdAt: "2024-01-15T10:00:00.000Z";
         rating: 4.9;
@@ -73,8 +67,7 @@ export const COMPREHENSIVE_SERVICES = [
         pricingTier: "Enterprise",
     };
     // IT Infrastructure & Cloud Services;
-    {
-        id: "cloud-migration-expert";
+    {id: "cloud-migration-expert";
         title: "Cloud Migration & Optimization Expert";
         description: "Complete cloud migration services with cost optimization, security implementation, and performance tuning for AWS, Azure, and Google Cloud.",
         category: "IT Services";
@@ -85,8 +78,7 @@ export const COMPREHENSIVE_SERVICES = [
         author: {
             name: "Zion Tech Group";
             id: "zion-tech-group";
-            avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
-        };
+            avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100"};
         images: ["https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&h=500"];
         createdAt: "2024-01-15T10:00:00.000Z";
         rating: 4.7;
@@ -97,8 +89,7 @@ export const COMPREHENSIVE_SERVICES = [
         aiScore: 92;
         pricingTier: "Professional",
     };
-    {
-        id: "cybersecurity-audit";
+    {id: "cybersecurity-audit";
         title: "Complete Cybersecurity Audit & Implementation";
         description: "Comprehensive security assessment, penetration testing, and security infrastructure implementation with compliance reporting.",
         category: "IT Services";
@@ -109,8 +100,7 @@ export const COMPREHENSIVE_SERVICES = [
         author: {
             name: "Zion Tech Group";
             id: "zion-tech-group";
-            avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
-        };
+            avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100"};
         images: ["https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&w=800&h=500"];
         createdAt: "2024-01-15T10:00:00.000Z";
         rating: 4.9;
@@ -121,8 +111,7 @@ export const COMPREHENSIVE_SERVICES = [
         aiScore: 97;
         pricingTier: "Enterprise",
     };
-    {
-        id: "devops-automation";
+    {id: "devops-automation";
         title: "DevOps Automation & CI/CD Suite";
         description: "Complete DevOps automation with CI/CD pipelines, infrastructure as code, monitoring, and deployment automation.",
         category: "IT Services";
@@ -133,8 +122,7 @@ export const COMPREHENSIVE_SERVICES = [
         author: {
             name: "Zion Tech Group";
             id: "zion-tech-group";
-            avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
-        };
+            avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100"};
         images: ["https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500"];
         createdAt: "2024-01-15T10:00:00.000Z";
         rating: 4.8;
@@ -146,8 +134,7 @@ export const COMPREHENSIVE_SERVICES = [
         pricingTier: "Professional",
     };
     // Business Process Automation;
-    {
-        id: "workflow-automation";
+    {id: "workflow-automation";
         title: "Business Workflow Automation Platform";
         description: "Custom workflow automation solution to streamline business processes, reduce manual work, and improve efficiency.",
         category: "Business Solutions";
@@ -158,8 +145,7 @@ export const COMPREHENSIVE_SERVICES = [
         author: {
             name: "Zion Tech Group";
             id: "zion-tech-group";
-            avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
-        };
+            avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100"};
         images: ["https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&h=500"];
         createdAt: "2024-01-15T10:00:00.000Z";
         rating: 4.7;
@@ -170,8 +156,7 @@ export const COMPREHENSIVE_SERVICES = [
         aiScore: 93;
         pricingTier: "Professional",
     };
-    {
-        id: "customer-support-ai";
+    {id: "customer-support-ai";
         title: "AI-Powered Customer Support Automation";
         description: "Intelligent customer support system with ticket routing, automated responses, and customer satisfaction tracking.",
         category: "Business Solutions";
@@ -182,8 +167,7 @@ export const COMPREHENSIVE_SERVICES = [
         author: {
             name: "Zion Tech Group";
             id: "zion-tech-group";
-            avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
-        };
+            avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100"};
         images: ["https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=800&h=500"];
         createdAt: "2024-01-15T10:00:00.000Z";
         rating: 4.6;
@@ -195,8 +179,7 @@ export const COMPREHENSIVE_SERVICES = [
         pricingTier: "Starter",
     };
     // E-commerce & Digital Marketing;
-    {
-        id: "ecommerce-ai-optimization";
+    {id: "ecommerce-ai-optimization";
         title: "E-commerce AI Optimization Suite";
         description: "AI-powered e-commerce optimization including product recommendations, pricing optimization, and customer behavior analysis.",
         category: "E-commerce";
@@ -207,8 +190,7 @@ export const COMPREHENSIVE_SERVICES = [
         author: {
             name: "Zion Tech Group";
             id: "zion-tech-group";
-            avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
-        };
+            avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100"};
         images: ["https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=800&h=500"];
         createdAt: "2024-01-15T10:00:00.000Z";
         rating: 4.8;
@@ -219,8 +201,7 @@ export const COMPREHENSIVE_SERVICES = [
         aiScore: 95;
         pricingTier: "Professional",
     };
-    {
-        id: "digital-marketing-automation";
+    {id: "digital-marketing-automation";
         title: "Digital Marketing Automation Platform";
         description: "Comprehensive marketing automation platform with email campaigns, social media management, and lead nurturing.",
         category: "Digital Marketing";
@@ -231,8 +212,7 @@ export const COMPREHENSIVE_SERVICES = [
         author: {
             name: "Zion Tech Group";
             id: "zion-tech-group";
-            avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
-        };
+            avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100"};
         images: ["https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&h=500"];
         createdAt: "2024-01-15T10:00:00.000Z";
         rating: 4.7;
@@ -244,8 +224,7 @@ export const COMPREHENSIVE_SERVICES = [
         pricingTier: "Starter",
     };
     // Healthcare & FinTech Solutions;
-    {
-        id: "healthcare-ai-diagnostics";
+    {id: "healthcare-ai-diagnostics";
         title: "Healthcare AI Diagnostic Platform";
         description: "AI-powered medical diagnostic platform with image analysis, patient data management, and clinical decision support.",
         category: "Healthcare";
@@ -256,8 +235,7 @@ export const COMPREHENSIVE_SERVICES = [
         author: {
             name: "Zion Tech Group";
             id: "zion-tech-group";
-            avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
-        };
+            avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100"};
         images: ["https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?auto=format&fit=crop&w=800&h=500"];
         createdAt: "2024-01-15T10:00:00.000Z";
         rating: 4.9;
@@ -268,8 +246,7 @@ export const COMPREHENSIVE_SERVICES = [
         aiScore: 99;
         pricingTier: "Enterprise",
     };
-    {
-        id: "fintech-compliance-security";
+    {id: "fintech-compliance-security";
         title: "FinTech Compliance & Security Suite";
         description: "Complete financial technology compliance solution with security protocols, regulatory reporting, and audit trails.",
         category: "FinTech";
@@ -280,8 +257,7 @@ export const COMPREHENSIVE_SERVICES = [
         author: {
             name: "Zion Tech Group";
             id: "zion-tech-group";
-            avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
-        };
+            avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100"};
         images: ["https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=800&h=500"];
         createdAt: "2024-01-15T10:00:00.000Z";
         rating: 4.8;
@@ -293,8 +269,7 @@ export const COMPREHENSIVE_SERVICES = [
         pricingTier: "Enterprise",
     };
     // IoT & Smart Solutions;
-    {
-        id: "iot-management-platform";
+    {id: "iot-management-platform";
         title: "Enterprise IoT Management Platform";
         description: "Comprehensive IoT platform for device management, data collection, and real-time monitoring across multiple locations.",
         category: "IoT Solutions";
@@ -305,8 +280,7 @@ export const COMPREHENSIVE_SERVICES = [
         author: {
             name: "Zion Tech Group";
             id: "zion-tech-group";
-            avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
-        };
+            avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100"};
         images: ["https://images.unsplash.com/photo-1518709268805-4e9042af2176?auto=format&fit=crop&w=800&h=500"];
         createdAt: "2024-01-15T10:00:00.000Z";
         rating: 4.7;
@@ -317,8 +291,7 @@ export const COMPREHENSIVE_SERVICES = [
         aiScore: 94;
         pricingTier: "Professional",
     };
-    {
-        id: "smart-building-automation";
+    {id: "smart-building-automation";
         title: "Smart Building Automation System";
         description: "Intelligent building management system with energy optimization, security monitoring, and automated controls.",
         category: "IoT Solutions";
@@ -329,8 +302,7 @@ export const COMPREHENSIVE_SERVICES = [
         author: {
             name: "Zion Tech Group";
             id: "zion-tech-group";
-            avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
-        };
+            avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100"};
         images: ["https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&h=500"];
         createdAt: "2024-01-15T10:00:00.000Z";
         rating: 4.6;
@@ -355,7 +327,7 @@ export const COMPREHENSIVE_SERVICES = [
             name: "Zion Tech Group";
             id: "zion-tech-group";
             email: "kleber@ziontechgroup.com";
-            avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100";,
+            avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100";
         },
         images: ["https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&h=500"];
         createdAt: "2024-01-15T10:00:00.000Z";
@@ -379,7 +351,7 @@ export const COMPREHENSIVE_SERVICES = [
         author: {
             name: "Zion Tech Group";
             id: "zion-tech-group";
-            email: "kleber@ziontechgroup.com";,
+            email: "kleber@ziontechgroup.com";
         },
         images: ["https://images.unsplash.com/photo-1593508512255-86ab42a8e620?auto=format&fit=crop&w=800&h=500"];
         createdAt: "2024-01-15T10:00:00.000Z";

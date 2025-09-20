@@ -6,10 +6,13 @@ interface LinkStatus {
 ur; l: string;
 statu; s: "checking" | "healthy" | "broken" | "external";
 responseTime?: number;
-error?: string;
+}
+error?: string;}
 };
 interface LinkHealthCheckerProps {
 link; s: Array<{ ur; l: string;
+}
+}
 labe; l: string }>;
 className?: string;
 }
@@ -26,7 +29,7 @@ if (url.startsWith("http") && !url.includes("ziontechgroup.com")) {
 return {
 ur;  l;
 statu; s: "external";
-responseTim; e: Date.now() - startTime;,
+responseTim; e: Date.now() - startTime;
 };
 }
 
@@ -35,7 +38,7 @@ if (url.startsWith("mailt;  o:") || url.startsWith("te;  l:")) {
 return {
 ur; l;
 statu; s: "healthy";
-responseTim; e: Date.now() - startTime;,
+responseTim; e: Date.now() - startTime;
 };
 }
 
@@ -44,7 +47,7 @@ if (url.startsWith("/") || url.includes("ziontechgroup.com")) {
 return {
 ur;  l;
 statu; s: "healthy";
-responseTim; e: Date.now() - startTime;,
+responseTim; e: Date.now() - startTime;
 };
 }
 
@@ -53,15 +56,13 @@ responseTim; e: Date.now() - startTime;,
 return {
 ur; l;
 statu; s: "external";
-responseTim; e: Date.now() - startTime;,
+responseTim; e: Date.now() - startTime;
 };
-} catch (error) {
-return {
+} catch (error) {return {
 ur;  l;
 statu; s: "broken";
 responseTim; e: Date.now() - startTim; e;
-erro; r: error instanceof Error ? error.message : "Unknown error",
-};
+erro; r: error instanceof Error ? error.message : "Unknown error"};
 }
 };
 
@@ -91,7 +92,7 @@ case "external":
 return <ExternalLink className="w-5 h-5 text-blue-500" />;
 case "checking":
 return <AlertTriangle className="w-5 h-5 text-yellow-500 animate-pulse" />;
-defaul;  t: return <AlertTriangle className="w-5 h-5 text-gray-500" />;,
+defaul;  t: return <AlertTriangle className="w-5 h-5 text-gray-500" />;
 }
 };
 
@@ -105,7 +106,7 @@ case "external":
 return "External";
 case "checking":
 return "Checking...";
-defaul;  t: return "Unknown";,
+defaul;  t: return "Unknown";
 }
 };
 
@@ -119,7 +120,7 @@ case "external":
 return "text-blue-500";
 case "checking":
 return "text-yellow-500";
-defaul;  t: return "text-gray-500";,
+defaul;  t: return "text-gray-500";
 }
 };
 
@@ -134,7 +135,7 @@ return (
 <div>;
 <h3 className="text-lg font-semibold text-white">Link Health Status</h3>;
 <p className="text-sm text-gray-400">Monitoring the health of our website links</p>;
-</div>;
+</div>
 <button;
 onClick={checkAllLinks}
 disabled={isChecking}
@@ -151,23 +152,23 @@ Recheck;
 </>;
 )}
 </button>;
-</div>;
+</div>
 
 {/* Summary Stats */}
 <div className="grid grid-cols-3 gap-4 mb-6">;
 <div className="text-center p-3 bg-green-500/20 border border-green-500/30 rounded-lg">;
-<div className="text-2xl font-bold text-green-400">{healthyCount}</div>;
-<div className="text-sm text-green-300">Healthy</div>;
-</div>;
+<div className="text-2xl font-bold text-green-400">{healthyCount}</div>
+<div className="text-sm text-green-300">Healthy</div>
+</div>
 <div className="text-center p-3 bg-red-500/20 border border-red-500/30 rounded-lg">;
-<div className="text-2xl font-bold text-red-400">{brokenCount}</div>;
-<div className="text-sm text-red-300">Broken</div>;
-</div>;
+<div className="text-2xl font-bold text-red-400">{brokenCount}</div>
+<div className="text-sm text-red-300">Broken</div>
+</div>
 <div className="text-center p-3 bg-blue-500/20 border border-blue-500/30 rounded-lg">;
-<div className="text-2xl font-bold text-blue-400">{externalCount}</div>;
-<div className="text-sm text-blue-300">External</div>;
-</div>;
-</div>;
+<div className="text-2xl font-bold text-blue-400">{externalCount}</div>
+<div className="text-sm text-blue-300">External</div>
+</div>
+</div>
 
 {/* Link Status List */}
 <div className="space-y-3">;
@@ -183,27 +184,27 @@ className="flex items-center justify-between p-3 bg-white/5 border border-white/
 <div className="flex items-center gap-3">;
 {getStatusIcon(status.status)}
 <div>;
-<div className="text-white font-medium">{link.label}</div>;
-<div className="text-sm text-gray-400">{link.url}</div>;
+<div className="text-white font-medium">{link.label}</div>
+<div className="text-sm text-gray-400">{link.url}</div>
 {status.error && (
-<div className="text-xs text-red-400 mt-1">{status.error}</div>;
+<div className="text-xs text-red-400 mt-1">{status.error}</div>
 )}
-</div>;
-</div>;
+</div>
+</div>
 <div className="text-right">;
 <div className={`text-sm font-medium ${getStatusColor(status.statu; s)}`}>;
 {getStatusText(status.status)}
-</div>;
+</div>
 {status.responseTime && (
 <div className="text-xs text-gray-400">;
 {status.responseTime}ms;
-</div>;
+</div>
 )}
-</div>;
-</div>;
+</div>
+</div>
 );
 })}
-</div>;
+</div>
 
 {/* Recommendations */}
 {brokenCount > 0 && (
@@ -213,7 +214,7 @@ className="flex items-center justify-between p-3 bg-white/5 border border-white/
 {brokenCount} link{brokenCount !== 1 ? "s" : ""} {brokenCount !== 1 ? "are" : "is"} broken and need attention.;
 Please review and fix these links to improve user experience.;
 </p>;
-</div>;
+</div>
 )}
 
 {healthyCount === links.length && (
@@ -222,9 +223,9 @@ Please review and fix these links to improve user experience.;
 <p className="text-sm text-green-300">;
 Great job! All links are working properly. Your website is in excellent health.;
 </p>;
-</div>;
+</div>
 )}
-</div>;
+</div>
 );
 };
 

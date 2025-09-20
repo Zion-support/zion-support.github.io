@@ -2,19 +2,15 @@
 /// <reference types="react" />;
 /// <reference types="react-dom" />;
 
-interface ImportMetaEnv {
-readonly VITE_APP_TITLE: string;
+interface ImportMetaEnv {readonly VITE_APP_TITLE: string;
 readonly MODE: string;
 readonly DEV: boolean;
-readonly PROD: boolean,
 }
+}
+readonly PROD: boolean}
 
-interface ImportMeta {
-readonly env: ImportMetaEnv,
-}
+interface ImportMeta {readonly env: ImportMetaEnv}
 
-declare namespace JSX {
-interface IntrinsicElements {
-[elemName: string]: any,
-}
+declare namespace JSX {interface IntrinsicElements {
+[elemName: string]: any}
 }

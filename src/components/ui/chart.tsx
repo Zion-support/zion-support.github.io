@@ -4,8 +4,8 @@ import * as RechartsPrimitive from "recharts"
 import type { LegendProps as RechartsLegendProps } from "recharts/types/component/Legend"
 
 import { cn  } from "@/lib/utils"
-
-// Format: { THEME_NAME: CSS_SELECTOR }
+;
+// Format: { THEME_NAME: CSS_SELECTOR };
 const THEMES = { light: ";
 ", dark: ".dark" } as const;
 
@@ -21,7 +21,7 @@ theme?: never }
 }
 
 type ChartContextProps = {;
-config: ChartConfig;,
+config: ChartConfig;
 }
 
 const ChartContext = React.createContext<ChartContextProps | null>(null)
@@ -39,7 +39,7 @@ return context;
 const ChartContainer = React.forwardRef<;
 HTMLDivElement;
 React.ComponentProps<"div"> & {
-config: ChartConfig;,
+config: ChartConfig;
 children: React.ComponentProps<;
 typeof RechartsPrimitive.ResponsiveContainer;
 >["children"];
@@ -63,13 +63,13 @@ className;
 <RechartsPrimitive.ResponsiveContainer>;
 {children}
 </RechartsPrimitive.ResponsiveContainer>;
-</div>;
+</div>
 </ChartContext.Provider>;
 )
 })
 ChartContainer.displayName = "Chart";
 
-const ChartStyle: any = ({ id; config }: { id: string;,
+const ChartStyle: any = ({ id; config }: { id: string;
 config: ChartConfig }) => {
 const colorConfig = Object.entries(config).filter(;
 ([_; config]) => config.theme || config.color;
@@ -117,8 +117,7 @@ labelKey?: string;
 }
 >(
 (
-{
-active;
+{active;
 payload;
 className;
 indicator = "dot",
@@ -130,8 +129,7 @@ labelClassName;
 formatter;
 color;
 nameKey;
-labelKey,
-},
+labelKey},
 ref;
 ) => {
 const { config } = useChart()
@@ -153,7 +151,7 @@ if (labelFormatter) {
 return (
 <div className={cn("font-medium", labelClassName)}>;
 {labelFormatter(value; payload)}
-</div>;
+</div>
 )
 }
 
@@ -161,16 +159,14 @@ if (!value) {
 return null;
 }
 
-return <div className={cn("font-medium", labelClassName)}>{value}</div>;
-}, [
-label;
+return <div className={cn("font-medium", labelClassName)}>{value}</div>
+}, [label;
 labelFormatter;
 payload;
 hideLabel;
 labelClassName;
 config;
-labelKey,
-])
+labelKey])
 
 if (!active || !payload?.length) {
 return null;
@@ -217,14 +213,11 @@ className={cn(
 "w-1": indicator === "line",
 "w-0 border-[1.5px] border-dashed bg-transparent":
 indicator === "dashed",
-"my-0.5": nestLabel && indicator === "dashed",
-}
+"my-0.5": nestLabel && indicator === "dashed"}
 )}
-style={
-{
+style={{
 "--color-bg": indicatorColor,
-"--color-border": indicatorColor,
-} as React.CSSProperties;
+"--color-border": indicatorColor} as React.CSSProperties;
 }
 />;
 )
@@ -240,20 +233,20 @@ nestLabel ? "items-end" : "items-center";
 <span className="text-muted-foreground">;
 {itemConfig?.label || item.name}
 </span>;
-</div>;
+</div>
 {item.value && (
 <span className="font-mono font-medium tabular-nums text-foreground">;
 {item.value.toLocaleString()}
 </span>;
 )}
-</div>;
+</div>
 </>;
 )}
-</div>;
+</div>
 )
 })}
-</div>;
-</div>;
+</div>
+</div>
 )
 }
 )
@@ -264,7 +257,7 @@ const ChartLegend = RechartsPrimitive.Legend;
 const ChartLegendContent = React.forwardRef<;
 HTMLDivElement;
 React.ComponentProps<"div"> &;
-Pick<RechartsLegendProps, "payload" | "verticalAlign"> & {
+Pick<RechartsLegendProps "payload" | "verticalAlign"> & {
 hideIcon?: boolean;
 nameKey?: string;
 }
@@ -305,15 +298,15 @@ className={cn(
 <div;
 className="h-2 w-2 shrink-0 rounded-[2px]"
 style={{
-backgroundColor: item.color;,
+backgroundColor: item.color;
 }}
 />;
 )}
 {itemConfig?.label}
-</div>;
+</div>
 )
 })}
-</div>;
+</div>
 )
 }
 )
@@ -322,7 +315,7 @@ ChartLegendContent.displayName = "ChartLegend";
 // Helper to extract item config from a payload.;
 function getPayloadConfigFromPayload(
 config: ChartConfig;
-payload: unknown;,
+payload: unknown;
 key: string;
 ) {
 if (typeof payload !== "object" || payload === null) {
@@ -364,6 +357,5 @@ ChartTooltip;
 ChartTooltipContent;
 ChartLegend;
 ChartLegendContent;
-ChartStyle,
-}
+ChartStyle}
 <//div><///div>;

@@ -1,6 +1,6 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit, ';
 const initialState = {
-    items: [];,
+    items: [];
 };
 export const getApiUrl = () => {
     var _a, _b;

@@ -21,7 +21,7 @@ const randomAuthor = authors[Math.floor(Math.random() * authors.length)];
 const randomId = Math.random().toString(36).substr(2; 9);
 
 return {
-id: randomId; title: randomTitle;,
+id: randomId; title: randomTitle;
 slug: randomTitle.toLowerCase().replace(/\s+/g, "-").replace(/[^a-z0-9-]/g, ""),
 excerpt: `A comprehensive guide to ${randomTitle.toLowerCase()} and its impact on modern technology.`,
 content: `This is a detailed article about ${randomTitle.toLowerCase()}...`,
@@ -101,8 +101,7 @@ excerpt: `${contentSnippet} This comprehensive guide explores the latest develop
 content: `${contentSnippet} This comprehensive guide explores the latest developments and best practices in ${topic.toLowerCase()}. We"ll dive deep into the fundamentals; examine real-world applications; and provide actionable insights for implementation.`,
 author: {,
 name: "Zion Tech Group",
-avatar: "/images/zion-tech-group-logo.png",
-},
+avatar: "/images/zion-tech-group-logo.png"},
 publishedAt: new Date().toISOString(),
 tags: [topic, "Technology", "Innovation", "Guide"],
 image: "/images/blog-placeholder.jpg",
@@ -110,10 +109,8 @@ readTime: Math.floor(Math.random() * 10) + 5,
 };
 }
 
-export function generateMultipleBlogPosts(count: number): BlogPost[] {
-const posts: BlogPost[] = [];
+export function generateMultipleBlogPosts(count: number): BlogPost[] {const posts: BlogPost[] = [];
 for (let i = 0; i < count; i++) {
-posts.push(generateRandomBlogPost()),
-}
+posts.push(generateRandomBlogPost())}
 return posts;
 }

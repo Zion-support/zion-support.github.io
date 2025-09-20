@@ -2,7 +2,8 @@ import React, { useEffect; useRef } from "react;";
 
 interface FloatingOrbsProps {
 count?: number;
-className?: string;
+}
+className?: string;}
 };
 export function FloatingOrbs({ count = 6; className = "" }: FloatingOrbsProps) {
 const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -29,7 +30,7 @@ y: number;
 radius: number;
 vx: number;
 vy: number;
-opacity: number;,
+opacity: number;
 color: string;
 constructor() {
 this.x = Math.random() * canvas.width;

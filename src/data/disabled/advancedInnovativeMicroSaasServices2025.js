@@ -1,7 +1,6 @@
 export const ADVANCED_INNOVATIVE_MICRO_SAAS_SERVICES_2025 = [
     // AI-Powered Autonomous Business Operations;
-    {
-        id: "ai-autonomous-business-operations-platform";
+    {id: "ai-autonomous-business-operations-platform";
         title: "AI Autonomous Business Operations Platform";
         description: "Next-generation autonomous business platform that uses advanced AI to manage, optimize, and scale business operations without human intervention.",
         category: "AI & Autonomous Systems";
@@ -52,8 +51,7 @@ export const ADVANCED_INNOVATIVE_MICRO_SAAS_SERVICES_2025 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         websiteUrl: "https://ziontechgroup.com/ai-autonomous-business-operations";
         technologyStack: ["Python", "TensorFlow", "Kubernetes", "AWS", "PostgreSQL", "Redis", "Apache Kafka"],
         integrationCapabilities: ["ERP Systems", "CRM Platforms", "Payment Gateways", "Analytics Tools", "Communication Platforms"],
@@ -61,8 +59,7 @@ export const ADVANCED_INNOVATIVE_MICRO_SAAS_SERVICES_2025 = [
         scalabilityFeatures: ["Auto-scaling", "Load balancing", "Multi-region deployment", "Microservices architecture"]
     },
     // Quantum-Enhanced AI Platform;
-    {
-        id: "quantum-enhanced-ai-platform";
+    {id: "quantum-enhanced-ai-platform";
         title: "Quantum-Enhanced AI Platform";
         description: "Revolutionary platform combining quantum computing principles with AI to solve complex optimization problems and accelerate machine learning.";
         category: "Quantum Technology";
@@ -113,8 +110,7 @@ export const ADVANCED_INNOVATIVE_MICRO_SAAS_SERVICES_2025 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         websiteUrl: "https://ziontechgroup.com/quantum-enhanced-ai";
         technologyStack: ["Qiskit", "Cirq", "PennyLane", "Python", "C++", "CUDA", "TensorFlow"],
         integrationCapabilities: ["Cloud Quantum Services", "HPC Clusters", "AI Frameworks", "Research Tools", "Simulation Software"],
@@ -122,8 +118,7 @@ export const ADVANCED_INNOVATIVE_MICRO_SAAS_SERVICES_2025 = [
         scalabilityFeatures: ["Quantum cloud access", "Hybrid computing", "Scalable algorithms", "Multi-qubit expansion"]
     },
     // Advanced Cybersecurity AI Platform;
-    {
-        id: "advanced-cybersecurity-ai-platform";
+    {id: "advanced-cybersecurity-ai-platform";
         title: "Advanced Cybersecurity AI Platform";
         description: "State-of-the-art cybersecurity platform using AI to predict, detect, and respond to threats in real-time with zero false positives.",
         category: "Cybersecurity";
@@ -174,8 +169,7 @@ export const ADVANCED_INNOVATIVE_MICRO_SAAS_SERVICES_2025 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         websiteUrl: "https://ziontechgroup.com/advanced-cybersecurity-ai";
         technologyStack: ["Python", "TensorFlow", "Elasticsearch", "Kafka", "Redis", "Docker", "Kubernetes"],
         integrationCapabilities: ["SIEM Systems", "EDR Solutions", "Firewalls", "Identity Providers", "Cloud Platforms"],
@@ -183,8 +177,7 @@ export const ADVANCED_INNOVATIVE_MICRO_SAAS_SERVICES_2025 = [
         scalabilityFeatures: ["Cloud-native", "Auto-scaling", "Multi-tenant", "Global distribution"]
     },
     // IoT Edge AI Platform;
-    {
-        id: "iot-edge-ai-platform";
+    {id: "iot-edge-ai-platform";
         title: "IoT Edge AI Platform";
         description: "Intelligent IoT platform that processes data at the edge using AI, reducing latency and enabling real-time decision making.",
         category: "Internet of Things";
@@ -235,8 +228,7 @@ export const ADVANCED_INNOVATIVE_MICRO_SAAS_SERVICES_2025 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         websiteUrl: "https://ziontechgroup.com/iot-edge-ai";
         technologyStack: ["Python", "TensorFlow Lite", "MQTT", "Node.js", "Docker", "Kubernetes", "Redis"],
         integrationCapabilities: ["IoT Devices", "Cloud Platforms", "Analytics Tools", "Business Systems", "Mobile Apps"],
@@ -244,8 +236,7 @@ export const ADVANCED_INNOVATIVE_MICRO_SAAS_SERVICES_2025 = [
         scalabilityFeatures: ["Edge deployment", "Cloud integration", "Device scaling", "Geographic distribution"]
     },
     // Blockchain DeFi Platform;
-    {
-        id: "blockchain-defi-platform";
+    {id: "blockchain-defi-platform";
         title: "Blockchain DeFi Platform";
         description: "Comprehensive DeFi platform offering lending, borrowing, trading, and yield farming with advanced security and compliance features.",
         category: "Blockchain & Web3";
@@ -296,8 +287,7 @@ export const ADVANCED_INNOVATIVE_MICRO_SAAS_SERVICES_2025 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         websiteUrl: "https://ziontechgroup.com/blockchain-defi";
         technologyStack: ["Solidity", "Web3.js", "React", "Node.js", "PostgreSQL", "Redis", "Ethereum"],
         integrationCapabilities: ["Multiple Blockchains", "DEX Protocols", "Wallet Providers", "Oracle Services", "Analytics Tools"],
@@ -305,8 +295,7 @@ export const ADVANCED_INNOVATIVE_MICRO_SAAS_SERVICES_2025 = [
         scalabilityFeatures: ["Layer 2 solutions", "Sharding", "Cross-chain", "Multi-chain deployment"]
     },
     // AI-Powered Content Creation Suite;
-    {
-        id: "ai-powered-content-creation-suite";
+    {id: "ai-powered-content-creation-suite";
         title: "AI-Powered Content Creation Suite";
         description: "Comprehensive AI platform for creating, optimizing, and managing content across all digital channels with human-like quality.",
         category: "AI & Content Creation";
@@ -357,8 +346,7 @@ export const ADVANCED_INNOVATIVE_MICRO_SAAS_SERVICES_2025 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         websiteUrl: "https://ziontechgroup.com/ai-content-creation";
         technologyStack: ["OpenAI GPT", "Claude", "Python", "React", "Node.js", "PostgreSQL", "Redis"],
         integrationCapabilities: ["CMS Platforms", "Social Media APIs", "Email Marketing Tools", "Analytics Platforms", "SEO Tools"],
@@ -366,8 +354,7 @@ export const ADVANCED_INNOVATIVE_MICRO_SAAS_SERVICES_2025 = [
         scalabilityFeatures: ["Cloud hosting", "Auto-scaling", "CDN distribution", "Multi-tenant architecture"]
     },
     // Autonomous Data Management Platform;
-    {
-        id: "autonomous-data-management-platform";
+    {id: "autonomous-data-management-platform";
         title: "Autonomous Data Management Platform";
         description: "Self-managing data platform that automatically organizes, cleans, and optimizes data while ensuring compliance and security.",
         category: "Data Management";
@@ -418,8 +405,7 @@ export const ADVANCED_INNOVATIVE_MICRO_SAAS_SERVICES_2025 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         websiteUrl: "https://ziontechgroup.com/autonomous-data-management";
         technologyStack: ["Python", "Apache Airflow", "Apache Kafka", "PostgreSQL", "Redis", "Docker", "Kubernetes"],
         integrationCapabilities: ["Data Sources", "Analytics Tools", "Business Systems", "Cloud Platforms", "Compliance Tools"],
@@ -427,8 +413,7 @@ export const ADVANCED_INNOVATIVE_MICRO_SAAS_SERVICES_2025 = [
         scalabilityFeatures: ["Distributed processing", "Auto-scaling", "Multi-region", "Real-time processing"]
     },
     // Advanced IT Infrastructure Automation;
-    {
-        id: "advanced-it-infrastructure-automation";
+    {id: "advanced-it-infrastructure-automation";
         title: "Advanced IT Infrastructure Automation Platform";
         description: "Comprehensive IT infrastructure automation platform that manages, monitors, and optimizes all aspects of IT operations.",
         category: "IT Infrastructure";
@@ -479,8 +464,7 @@ export const ADVANCED_INNOVATIVE_MICRO_SAAS_SERVICES_2025 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         websiteUrl: "https://ziontechgroup.com/advanced-it-automation";
         technologyStack: ["Terraform", "Ansible", "Kubernetes", "Docker", "Python", "Go", "AWS/Azure/GCP"],
         integrationCapabilities: ["Cloud Providers", "Monitoring Tools", "Security Tools", "CI/CD Platforms", "Business Systems"],
@@ -488,8 +472,7 @@ export const ADVANCED_INNOVATIVE_MICRO_SAAS_SERVICES_2025 = [
         scalabilityFeatures: ["Auto-scaling", "Multi-cloud", "Global distribution", "Load balancing"]
     },
     // AI-Powered Customer Experience Platform;
-    {
-        id: "ai-powered-customer-experience-platform";
+    {id: "ai-powered-customer-experience-platform";
         title: "AI-Powered Customer Experience Platform";
         description: "Intelligent customer experience platform that personalizes interactions, predicts needs, and optimizes customer journeys.",
         category: "Customer Experience";
@@ -540,8 +523,7 @@ export const ADVANCED_INNOVATIVE_MICRO_SAAS_SERVICES_2025 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         websiteUrl: "https://ziontechgroup.com/ai-customer-experience";
         technologyStack: ["Python", "TensorFlow", "React", "Node.js", "PostgreSQL", "Redis", "Kafka"],
         integrationCapabilities: ["CRM Systems", "E-commerce Platforms", "Communication Tools", "Analytics Platforms", "Marketing Tools"],

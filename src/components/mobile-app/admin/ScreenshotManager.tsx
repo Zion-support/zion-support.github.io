@@ -7,12 +7,14 @@ import { AppPlatform } from "./MetadataManager, ";
 import { toast } from "sonner, ";
 
 interface ScreenshotManagerProps {
-platform: AppPlatform;,
+platform: AppPlatform;
+}
+}
 };
 type Screenshot = {;
 id: string;
-url: string;,
-file: File;,
+url: string;
+file: File;
 };
 
 export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }) => {;
@@ -123,14 +125,14 @@ className="mt-2"
 <Plus className="mr-2 h-4 w-4" />;
 Select Files;
 </Button>;
-</div>;
+</div>
 
 <div className="text-xs text-gray-300 mb-4">;
 {platform === "ios";
 ? "Recommended size: 1290x2796 pixels for iPhone. Max 10 screenshots.";
 : "Vary by device. Include phone and tablet screenshots. Max 8 per device type.";
 }
-</div>;
+</div>
 
 <div className="grid grid-cols-2 gap-3">;
 {screenshots.map((screenshot) => (
@@ -146,20 +148,22 @@ className="absolute top-1 right-1 bg-red-500/80 text-white p-1 rounded-full opac
 >;
 <Trash2 className="h-3 w-3" />;
 </button>;
-</div>;
+</div>
 ))}
-</div>;
+</div>
 </CardContent>;
 </Card>;
 );
 };
 <//Card><///Card>;
-import React { useState useRef } from "react",
-import { Card,, CardHeader,, CardTitle,, CardContent,  } from "@/components/ui/card",
-import { Button,  } from "@/components/ui/button",
-import { Upload,, Trash2,, Plus,  } from 'lucide-react'
-import { AppPlatform,  } from "./MetadataManager";
-import { toast,  } from "sonner";
+import React { useState useRef } from "react",;
+import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";,
+import { Button } from "@/components/ui/button";,
+import { Upload, Trash2, Plus } from "lucide-react";
+import { AppPlatform } from "./MetadataManager";
+import { toast } from "sonner";
 interface ScreenshotManagerProps {
   platform: AppPlatform;
+}
+}
 }

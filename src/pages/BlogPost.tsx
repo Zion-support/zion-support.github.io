@@ -1,16 +1,16 @@
-import { ArrowLeft,, Calendar,, Clock,, ChevronLeft,, ChevronRight,, Share2,, Facebook,, Twitter,, Linkedin,  } from 'lucide-react'
-import type { BlogPost as BlogPostType } from "@/types/blog",
-import { Separator,  } from "@/components/ui/separator";
+import { ArrowLeft, Calendar, Clock, ChevronLeft, ChevronRight, Share2, Facebook, Twitter, Linkedin } from "lucide-react";
+import type { BlogPost as BlogPostType } from "@/types/blog",;
+import { Separator } from "@/components/ui/separator";
 import ReactMarkdown from 'react-markdown';
-import { logErrorToProduction,  } from '@/utils/productionLogger';
+import { logErrorToProduction } from "@/utils/productionLogger";
 // Importing the sample blog posts - in a real app you would fetch this from an API,
-import { BLOG_POSTS,  } from "@/data/blog-posts";
-import { useSkeletonTimeout,  } from '@/hooks/useSkeletonTimeout';
-import { fetchWithRetry,  } from '@/utils/fetchWithRetry';
+import { BLOG_POSTS } from "@/data/blog-posts";
+import { useSkeletonTimeout } from "@/hooks/useSkeletonTimeout";
+import { fetchWithRetry } from "@/utils/fetchWithRetry";
 export default function BlogPost() {
 return (
     <>
-      <SEO,
+      <SEO
 title={post.title}
         description={post.excerpt}
         keywords={post.tags.join(', ')}
@@ -21,7 +21,7 @@ title={post.title}
         <div className='container mx-auto'>
           {/* Back to blog button */}
           <div className='mb-8'>
-            <Button,
+            <Button
 variant='outline'
               className='border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white'
               asChild
@@ -44,7 +44,7 @@ variant='outline'
             {/* Author and metadata */}
             <div className='flex flex-col sm:flex-row sm:items-center justify-between mb-8'>
               <div className='flex items-center mb-4 sm:mb-0'>
-                <ImageWithRetry,
+                <ImageWithRetry
 src={post.author.avatarUrl}
                   alt={post.author.name}
                   className='w-12 h-12 rounded-full mr-3'
@@ -66,7 +66,7 @@ src={post.author.avatarUrl}
                   <span className='text-sm'>{post.readTime}</span>
                 </div>
                 <div className='relative'>
-                  <Button,
+                  <Button
 variant='ghost'
                     size='sm'
                     className='text-zion-slate-light hover:text-white hover:bg-zion-blue-dark'
@@ -76,7 +76,7 @@ variant='ghost'
                   </Button>
                   {showShareMenu && (
                     <div className='absolute right-0 top-full mt-2 bg-zion-blue-dark border border-zion-blue-light rounded-md p-2 z-10'>
-                      <a,
+                      <a
 href={getShareUrl('facebook')}
                         target='_blank'
                         rel='noopener noreferrer'
@@ -86,7 +86,7 @@ href={getShareUrl('facebook')}
                         <Facebook className='h-4 w-4 mr-2' />
                         <span>Facebook</span>
                       </a>
-                      <a,
+                      <a
 href={getShareUrl('twitter')}
                         target='_blank'
                         rel='noopener noreferrer'
@@ -96,7 +96,7 @@ href={getShareUrl('twitter')}
                         <Twitter className='h-4 w-4 mr-2' />
                         <span>Twitter</span>
                       </a>
-                      <a,
+                      <a
 href={getShareUrl('linkedin')}
                         target='_blank'
                         rel='noopener noreferrer'
@@ -115,7 +115,7 @@ href={getShareUrl('linkedin')}
           {/* Featured image */}
           <div className='mb-12 max-w-5xl mx-auto'>
             <div className='aspect-[21/9] rounded-lg overflow-hidden'>
-              <ImageWithRetry,
+              <ImageWithRetry
 src={post.featuredImage}
                 alt={post.featuredImageAlt |post.title}
                 className='object-cover w-full h-full'
@@ -130,7 +130,7 @@ src={post.featuredImage}
             {/* Tags */}
             <div className='flex flex-wrap gap-2 mt-12'>
               {post.tags.map(tag => (
-                <span,
+                <span
 key={tag}
                   className='text-xs text-zion-slate-light bg-zion-blue-dark px-3 py-1 rounded-full'                >
                   #{tag}
@@ -146,16 +146,14 @@ key={tag}
                 </h3>
                 <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
                   {relatedPosts.map(relatedPost => (
-                    <Link,
+                    <Link
 key={relatedPost.id}                      href={`/blog/${relatedPost.slug}`}
                       className='bg-zion-blue-dark border border-zion-blue-light rounded-lg overflow-hidden hover:border-zion-purple transition-all duration-300'
                     >
                       <div className='aspect-[16/9] relative'>
-                        <ImageWithRetry,
+                        <ImageWithRetry
 src={relatedPost.featuredImage}
-                          alt={
-                            relatedPost.featuredImageAlt |relatedPost.title,
-}
+                          alt={relatedPost.featuredImageAlt |relatedPost.title}
                           className='object-cover w-full h-full'
                           fallbackSrc='/images/blog-placeholder.svg'                        />
                       </div>
@@ -187,7 +185,7 @@ src={relatedPost.featuredImage}
             </div>
             {/* Navigation */}
             <div className='flex justify-between items-center mt-12'>
-              <Button,
+              <Button
 variant='outline'
                 className='border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white'
                 asChild
@@ -201,33 +199,25 @@ variant='outline'
           </div>
         </div>
       </div>
-    </>
+</>
   )
 }
 outline"className=" border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white"asChild > <Link href=" /blog"> <ArrowLeft className=" mr-2 h-4 w-4"/> Back to all articles </Link> </Button> </div> </div> <div className=" relative"> <Button > <Share2 className=" h-4 w-4 mr-1"/> <span className=" text-sm">Share</span> </Button> <a href= {'
   getShareUrl ('facebook') "
 }target=" blank"rel=" noopener noreferrer"className=" flex items-center p-2 hover:bg-zion-blue rounded transition-colors text-zion-slate-light hover:text-white"aria-label=" Share on Facebook"title=" Share on Facebook"> <Facebook className=" h-4 w-4 mr-2"/> <span>Facebook</span> </Link> <a > <Twitter className=" h-4 w-4 mr-2"/> <span>Twitter</span> </Link> <a > <Linkedin className=" h-4 w-4 mr-2"/> <span>LinkedIn</span> </Link> </div>)
-}</div> </div> </div> </div> /> </div> </div> <ReactMarkdown> {
-  post.content,
-}</ReactMarkdown> </div> <span key= {
+}</div> </div> </div> </div> /> </div> </div> <ReactMarkdown> {post.content}</ReactMarkdown> </div> <span key= {
   tag "
-}className=" text-xs text-zion-slate-light bg-zion-blue-dark px-3 py-1 rounded-full"> # {
-  tag,
-}</span>) ) "
+}className=" text-xs text-zion-slate-light bg-zion-blue-dark px-3 py-1 rounded-full"> # {tag}</span>) ) "
 }</div> <Separator className=" my-12 bg-zion-blue-light"/> > <div className=" aspect-[16/9] relative"> <ImageWithRetry </div> </Link>) )
 }</div> </div>) "
 }<Button asChild > <Link href=" /blog"> <ChevronLeft className=" mr-2 h-4 w-4" /> All Articles </Link> </Button> </div> </div> </div> </div> </>)
-}'"import React from 'react'
-import { SEO,  } from '@/components / SEO'
-export default function Page() {
-    ],
-}
-  const formatDate = (dateString: string) => {
-    return new Date(dateString) .toLocaleDateString('en - US', {
+}'"import React from 'react';
+import { SEO } from "@/components / SEO";
+export default function Page() {]}
+  const formatDate = (dateString: string) => {return new Date(dateString) .toLocaleDateString('en - US', {
       year: 'numeric',
 month: 'long'
-      day: 'numeric',
-})
+      day: 'numeric'})
 }
   const getCategoryIcon = (category: string) => {
     const categoryIcons: { [key: string]: any } = {,
@@ -249,19 +239,18 @@ security: 'Cybersecurity'
       cloud: 'Cloud & DevOps',
 business: 'Business Insights'
       iot: 'IoT & Edge',
-emerging: 'Emerging Tech',
-}
+emerging: 'Emerging Tech'}
     return categoryNames[category] |'Uncategorized'
 }
   return (<div className="min - h-screen bg-gradient - to - br from - slate - 900 via - slate - 800 to - slate -900">
-      <SEO,
+      <SEO
 title={`${blogPost.title} - Zion Tech Group Blog`}
         description={blogPost.excerpt}
       />
       {/* Navigation */}
       <section className="py-6 bg-slate -800 / 50">
         <div className="container mx - auto px-4">
-          <Link,
+          <Link
 to="/blog"
             className="inline - flex items - center space - x-2 text-cyan - 400 hover:text-cyan - 300 transition - colors duration -200">
             <ArrowLeft className="w-4 h-4" />
@@ -272,8 +261,7 @@ to="/blog"
       {/* Article Header */}
       <section className="py-12">
         <div className="container mx - auto px-4">
-          <motion.div,
-initial={{ opacity: 0 y: 20 }}
+          <motion.div initial={{ opacity: 0 y: 20 }}
             animate={{ opacity: 1 y: 0 }}
             transition={{ duration: 0.8 }}
             className="max - w-4xl mx -auto">
@@ -281,8 +269,7 @@ initial={{ opacity: 0 y: 20 }}
             <div className="flex items - center space - x-3 mb-6">
               <span className="px-4 py-2 bg-cyan - 500 / 20 text-cyan - 400 text-sm rounded-full font - medium flex items - center space - x-2">
                 {React.createElement (getCategoryIcon (blogPost.category) , {
-                  className: 'w-4 h-4',
-}) }
+                  className: 'w-4 h-4'}) }
                 <span>{getCategoryName(blogPost.category) }</span>
               </span>
               {blogPost.featured && (<span className="px-4 py-2 bg-yellow-500 / 20 text-yellow-400 text-sm rounded-full font -medium">
@@ -342,8 +329,7 @@ initial={{ opacity: 0 y: 20 }}
       <section className="py-12">
         <div className="container mx - auto px-4">
           <div className="max - w-4xl mx -auto">
-            <motion.div,
-initial={{ opacity: 0 y: 20 }}
+            <motion.div initial={{ opacity: 0 y: 20 }}
               whileInView={{ opacity: 1 y: 0 }}
               transition={{ duration: 0.8 }}
               className="prose prose - invert prose - lg max - w-none">
@@ -355,7 +341,7 @@ initial={{ opacity: 0 y: 20 }}
                 </div>
               </div>
               {/* Article Content */}
-              <div,
+              <div
 className="text-gray - 300 leading -relaxed"
                 // TODO: Sanitize content before using dangerouslySetInnerHTML={{ __html: blogPost.content }}
               />
@@ -371,7 +357,7 @@ className="text-gray - 300 leading -relaxed"
               <Tag className="w-5 h-5 text-cyan -400" />
               <span className="text-white font -medium">Tags:</span>
               <div className="flex flex - wrap gap-2">
-                {blogPost.tags.map(tag => (<span,
+                {blogPost.tags.map(tag => (<span
 key={tag}
                     className="px-3 py-1 bg-slate - 700 / 50 text-cyan - 400 text-sm rounded-full border border-slate - 600 / 50 hover:border-cyan - 400 / 50 transition - all duration -200">
                     {tag}
@@ -385,8 +371,7 @@ key={tag}
       <section className="py-12">
         <div className="container mx - auto px-4">
           <div className="max - w-4xl mx -auto">
-            <motion.div,
-initial={{ opacity: 0 y: 20 }}
+            <motion.div initial={{ opacity: 0 y: 20 }}
               whileInView={{ opacity: 1 y: 0 }}
               transition={{ duration: 0.8 }}
               className="bg-slate - 800 / 50 p - 8 rounded-2xl border border-slate -700 / 50">
@@ -412,8 +397,7 @@ initial={{ opacity: 0 y: 20 }}
       {/* Related Posts */}
       <section className="py-20 bg-slate -800 / 50">
         <div className="container mx - auto px-4">
-          <motion.div,
-initial={{ opacity: 0 y: 20 }}
+          <motion.div initial={{ opacity: 0 y: 20 }}
             whileInView={{ opacity: 1 y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16">
@@ -425,8 +409,7 @@ initial={{ opacity: 0 y: 20 }}
             </p>
           </motion.div>
           <div className="grid md:grid - cols - 3 gap-8 max - w-6xl mx -auto">
-            {blogPost.relatedPosts.map((post index) => (<motion.article,
-key={post.id}
+            {blogPost.relatedPosts.map((post index) => (<motion.article key={post.id}
                 initial={{ opacity: 0 y: 20 }}
                 whileInView={{ opacity: 1 y: 0 }}
                 transition={{ duration: 0.5 delay: index * 0.1 }}
@@ -464,8 +447,7 @@ key={post.id}
       {/* CTA Section */}
       <section className="py-20">
         <div className="container mx - auto px-4">
-          <motion.div,
-initial={{ opacity: 0 y: 20 }}
+          <motion.div initial={{ opacity: 0 y: 20 }}
             whileInView={{ opacity: 1 y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center max - w-4xl mx -auto">
@@ -476,12 +458,12 @@ initial={{ opacity: 0 y: 20 }}
               Let's discuss how our AI - powered solutions can drive innovation,
 and growth for your organization.</p>
             <div className="flex flex - wrap justify - center gap-4">
-              <Link,
+              <Link
 to="/contact"
                 className="px-8 py-3 bg-gradient - to - r from - cyan - 500 to - blue - 500 text-white font - semibold rounded-lg hover:from - cyan - 600 hover:to - blue - 600 transition - all duration -300">
                 Get Started Today
               </Link>
-              <Link,
+              <Link
 to="/services"
                 className="px-8 py-3 border border-cyan - 400 text-cyan - 400 font - semibold rounded-lg hover:bg-cyan - 400 hover:text-white transition - all duration -300">
                 Explore Our Services

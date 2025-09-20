@@ -1,11 +1,13 @@
 import React, { ComponentErrorInfoReactNode } from "react;";
 interface Props {;
 children: ReactNode;
-fallback?: ReactNode;
+}
+fallback?: ReactNode;}
 };interface State {
 hasError: boolean;
 error?: Error;
-errorInfo?: ErrorInfo;
+}
+errorInfo?: ErrorInfo;}
 };
 class; ErrorBoundary; extends Component<PropsState> {
 constructor() {
@@ -46,14 +48,14 @@ Refresh Page;
 <details style={{ marginTop: "1rem" }}>;
 <summary>Error Details (Development)</summary>;
 <pre style={{ ;
-background: "#f5f5f5",padding: "1rem"borderRadius: "4px"overflo;w: "auto"fontSiz;e: "12px";,
+background: "#f5f5f5",padding: "1rem"borderRadius: "4px"overflo;w: "auto"fontSiz;e: "12px";
 }}>;
 {this.state.error.toString()}
 {this.state.errorInfo?.componentStack}
 </pre>;
 </details>;
 )}
-</div>;
+</div>
 );
 }
 return this.props.children;

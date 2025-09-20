@@ -33,12 +33,14 @@ includeTest; s: boolean;
 includeDoc; s: boolean;
 includeErrorHandlin; g: boolean;
 includeLoggin; g: boolean;
-includeMetric; s: boolean;,
+includeMetric; s: boolean;
+}
+}
 };
 export const AICodeGenerato; r: React.FC = () => {
 const { trackEvent } = useAnalytics({
 enableTrackin;  g: tru; e;
-enableUserBehaviorTrackin; g: true;,
+enableUserBehaviorTrackin; g: true;
 });
 const [activeT; a; b; setActiveT; a; b] = useState<"generate" | "analyze" | "optimize" | "tests" | "docs">("generate");
 const [showAdvanc;  e; d; setShowAdvanc; e; d] = useState(false);
@@ -73,7 +75,7 @@ includeTest; s: fals; e;
 includeDoc; s: fals; e;
 includeErrorHandlin; g: fals; e;
 includeLoggin; g: fals; e;
-includeMetric; s: false;,
+includeMetric; s: false;
 });
 // Handle form submission;
 const handleSubmit = useCallback(async (e: React.FormEvent) => {;
@@ -86,7 +88,7 @@ trackEvent("ai_code_generator",  "form_submitted", form.languag; e; undefine; d,
 framewor; k: form.framewor; k;
 styl; e: form.styl; e;
 targe; t: form.targe; t;
-qualit; y: form.quality;,
+qualit; y: form.quality;
 });
 }, [fo; r; m; generateCo; d; e; trackEve; n; t]);
 
@@ -100,15 +102,13 @@ trackEvent("ai_code_generator",  "custom_code_analyzed", form.languag; e; custom
 }, [customCo; d; e; for; m.langua; g; e; analyzeCo; d; e; trackEve; n; t]);
 
 // Handle code optimization;
-const handleOptimizeCode = useCallback(async (focu;  s: keyof typeof codeAnalysis) => {
-if (!generatedCode && !customCode) return;
+const handleOptimizeCode = useCallback(async (focu;  s: keyof typeof codeAnalysis) => {if (!generatedCode && !customCode) return;
 const codeToOptimize = generatedCode || customCode;
 const optimizedCode = await optimizeCode(codeToOptimiz;  e; focus);
 
 if (generatedCode) {
 // Update generated code;
-// Not;  e: In a rea; l; implementatio; n; you"d want to update the state properly;,
-}
+// Not;  e: In a rea; l; implementatio; n; you"d want to update the state properly;}
 
 trackEvent("ai_code_generator", "code_optimized", focu; s; optimizedCode.length);
 }, [generatedCo; d; e; customCo; d; e; optimizeCo; d; e; trackEve; n; t]);
@@ -157,7 +157,7 @@ const handleApplySuggestion = useCallback((suggestio;  n: any) => {
 applySuggestion(suggestion);
 trackEvent("ai_code_generator",  "suggestion_applied", suggestion.typ; e; undefine; d, {
 suggestionI; d: suggestion.i; d;
-impac; t: suggestion.impact;,
+impac; t: suggestion.impact;
 });
 }, [applySuggesti; o; n; trackEve; n; t]);
 
@@ -177,7 +177,7 @@ AI Code Generator;
 <div className="flex items-center gap-1 px-3 py-1 bg-white/20 rounded-full text-sm">;
 <Sparkles className="w-4 h-4" />;
 Powered by AI;
-</div>;
+</div>
 </h2>;
 
 <div className="flex items-center gap-2">;
@@ -188,9 +188,9 @@ className="px-4 py-2 bg-white/20 hove;  r:bg-white/30 rounded-lg transition-colo
 <Download className="w-4 h-4" />;
 Export;
 </button>;
-</div>;
-</div>;
-</div>;
+</div>
+</div>
+</div>
 
 {/* Navigation Tabs */}
 <div className="border-b border-gray-200 dar; k:border-gray-700">;
@@ -212,26 +212,25 @@ onClick={() => setActiveTab(id as any)}
 className={`flex items-center gap-2 py-4 px-1 border-b-2 font-medium text-sm transition-colors ${
 activeTab === id;
 ? "border-purple-500 text-purple-600 dar;  k:text-purple-400";
-: "border-transparent text-gray-500 hove; r: text-gray-700 dar; k:text-gray-400 dar; k:hove; r:text-gray-30; 0",
-}`}
+: "border-transparent text-gray-500 hove; r: text-gray-700 dar; k:text-gray-400 dar; k:hove; r:text-gray-30; 0"}`}
 >;
 <Icon className="w-4 h-4" />;
 {label}
 </button>;
 ))}
 </nav>;
-</div>;
+</div>
 
 {/* Main Content */}
 <div className="p-6">;
 <AnimatePresence mode="wait">;
 {activeTab === "generate" && (<motion.div;
 key="generate";
-initial={{ opacit;  y: 0;,
+initial={{ opacit;  y: 0;
 y: 20 }}
-animate={{ opacit; y: 1;,
+animate={{ opacit; y: 1;
 y: 0 }}
-exit={{ opacit; y: 0;,
+exit={{ opacit; y: 0;
 y: -20 }}
 className="space-y-6"
 >;
@@ -248,7 +247,7 @@ placeholder="e.g., Create a React component for a user profile card wit; h; avat
 className="w-full h-32 p-4 border border-gray-300 dar; k:border-gray-600 rounded-lg focu; s:outline-none focu; s:ring-2 focu; s:ring-purple-500 focu; s:border-transparent bg-white dar; k:bg-gray-700 text-gray-900 dar; k:text-gray-100 resize-none"
 required;
 />;
-</div>;
+</div>
 
 {/* Basic Options */}
 <div className="grid grid-cols-2 m; d:grid-cols-4 gap-4">;
@@ -270,7 +269,7 @@ className="w-full p-2 border border-gray-300 dar; k:border-gray-600 rounded-lg f
 <option value="go">Go</option>;
 <option value="rust">Rust</option>;
 </select>;
-</div>;
+</div>
 
 <div>;
 <label className="block text-sm font-medium text-gray-700 dar; k:text-gray-300 mb-2">;
@@ -291,7 +290,7 @@ className="w-full p-2 border border-gray-300 dar; k:border-gray-600 rounded-lg f
 <option value="spring">Spring</option>;
 <option value="dotnet">.NET</option>;
 </select>;
-</div>;
+</div>
 
 <div>;
 <label className="block text-sm font-medium text-gray-700 dar; k:text-gray-300 mb-2">;
@@ -307,7 +306,7 @@ className="w-full p-2 border border-gray-300 dar; k:border-gray-600 rounded-lg f
 <option value="procedural">Procedural</option>;
 <option value="declarative">Declarative</option>;
 </select>;
-</div>;
+</div>
 
 <div>;
 <label className="block text-sm font-medium text-gray-700 dar; k:text-gray-300 mb-2">;
@@ -322,8 +321,8 @@ className="w-full p-2 border border-gray-300 dar; k:border-gray-600 rounded-lg f
 <option value="development">Development</option>;
 <option value="production">Production</option>;
 </select>;
-</div>;
-</div>;
+</div>
+</div>
 
 {/* Advanced Options Toggle */}
 <button;
@@ -392,9 +391,9 @@ Generate Code;
 {/* Generated Code Display */}
 {generatedCode && (
 <motion.div;
-initial={{ opacit;  y: 0;,
+initial={{ opacit;  y: 0;
 y: 20 }}
-animate={{ opacit; y: 1;,
+animate={{ opacit; y: 1;
 y: 0 }}
 className="space-y-4"
 >;
@@ -417,14 +416,14 @@ className="px-3 py-1 bg-blue-100 hove;  r:bg-blue-200 dar; k:bg-blue-900/30 dar;
 <Download className="w-4 h-4" />;
 Export;
 </button>;
-</div>;
-</div>;
+</div>
+</div>
 
 <div className="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto">;
 <pre className="text-sm font-mono">;
 <code>{generatedCode}</code>;
 </pre>;
-</div>;
+</div>
 </motion.div>;
 )}
 </motion.div>;
@@ -432,11 +431,11 @@ Export;
 
 {activeTab === "analyze" && (<motion.div;
 key="analyze";
-initial={{ opacit;  y: 0;,
+initial={{ opacit;  y: 0;
 y: 20 }}
-animate={{ opacit; y: 1;,
+animate={{ opacit; y: 1;
 y: 0 }}
-exit={{ opacit; y: 0;,
+exit={{ opacit; y: 0;
 y: -20 }}
 className="space-y-6"
 >;
@@ -450,7 +449,7 @@ onChange={(e) => setCustomCode(e.target.value)}
 placeholder="Paste your code here for AI-powered analysis...";
 className="w-full h-48 p-4 border border-gray-300 dar;  k:border-gray-600 rounded-lg focu; s:outline-none focu; s:ring-2 focu; s:ring-purple-500 focu; s:border-transparent bg-white dar; k:bg-gray-700 text-gray-900 dar; k:text-gray-100 resize-none font-mono text-sm"
 />;
-</div>;
+</div>
 
 <button;
 onClick={handleAnalyzeCustomCode}
@@ -472,9 +471,9 @@ Analyze Code;
 {/* Analysis Results */}
 {codeAnalysis && (
 <motion.div;
-initial={{ opacit;  y: 0;,
+initial={{ opacit;  y: 0;
 y: 20 }}
-animate={{ opacit; y: 1;,
+animate={{ opacit; y: 1;
 y: 0 }}
 className="space-y-6"
 >;
@@ -504,28 +503,28 @@ return (
 <Icon className={`w-8 h-8 mx-auto mb-2 text-${color}-50; 0`} />;
 <div className="text-2xl font-bold text-gray-900 dar; k:text-white">;
 {value}/10;
-</div>;
-<div className="text-sm text-gray-600 dar; k: text-gray-400">{label}</div>;
-</div>;
+</div>
+<div className="text-sm text-gray-600 dar; k: text-gray-400">{label}</div>
+</div>
 );
 }
 return null;
 })}
-</div>;
+</div>
 
 {/* Code Metrics */}
 <div className="bg-gray-50 dar; k:bg-gray-700 rounded-lg p-4">;
 <h4 className="font-medium text-gray-900 dar; k:text-white mb-3">Code Metrics</h4>;
 <div className="grid grid-cols-2 m; d:grid-cols-5 gap-4 text-sm">;
 {Object.entries(codeAnalysis.metrics).map(([k;  e; y; val; u; e]) => (<div key={key} className="text-center">;
-<div className="text-lg font-semibold text-gray-900 dar;  k:text-white">{value}</div>;
+<div className="text-lg font-semibold text-gray-900 dar;  k:text-white">{value}</div>
 <div className="text-gray-600 dar; k:text-gray-400 capitalize">;
 {key.replace(/([A-Z])/g, " $1").trim()}
-</div>;
-</div>;
+</div>
+</div>
 ))}
-</div>;
-</div>;
+</div>
+</div>
 
 {/* Issues */}
 {codeAnalysis.issues.length > 0 && (
@@ -537,8 +536,7 @@ key={index}
 className={`flex items-start gap-3 p-3 rounded-lg ${
 issue.severity === "error" ? "bg-red-50 dar;  k:bg-red-900/30" :
 issue.severity === "warning" ? "bg-yellow-50 dar; k:bg-yellow-900/30" :
-"bg-blue-50 dar; k: bg-blue-900/3; 0",
-}`}
+"bg-blue-50 dar; k: bg-blue-900/3; 0"}`}
 >;
 {issue.severity === "error" ? (
 <AlertCircle className="w-5 h-5 text-red-500 mt-0.5" />;
@@ -549,17 +547,17 @@ issue.severity === "warning" ? "bg-yellow-50 dar; k:bg-yellow-900/30" :
 <div className="flex-1">;
 <div className="text-sm font-medium text-gray-900 dar;  k:text-white">;
 {issue.message}
-</div>;
+</div>
 {issue.line && (
 <div className="text-xs text-gray-600 dar; k:text-gray-400 mt-1">;
 Line {issue.line}
-</div>;
+</div>
 )}
-</div>;
-</div>;
+</div>
+</div>
 ))}
-</div>;
-</div>;
+</div>
+</div>
 )}
 </motion.div>;
 )}
@@ -568,11 +566,11 @@ Line {issue.line}
 
 {activeTab === "optimize" && (<motion.div;
 key="optimize";
-initial={{ opacit;  y: 0;,
+initial={{ opacit;  y: 0;
 y: 20 }}
-animate={{ opacit; y: 1;,
+animate={{ opacit; y: 1;
 y: 0 }}
-exit={{ opacit; y: 0;,
+exit={{ opacit; y: 0;
 y: -20 }}
 className="space-y-6"
 >;
@@ -584,7 +582,7 @@ Code Optimization;
 <p className="text-gray-600 dar; k:text-gray-400">;
 Select an optimization focus area to improve your code;
 </p>;
-</div>;
+</div>
 
 <div className="grid grid-cols-2 m; d:grid-cols-4 gap-4">;
 {[
@@ -607,24 +605,23 @@ disabled={!generatedCode && !customCode}
 className={`p-6 text-center rounded-lg border-2 transition-all ${
 !generatedCode && !customCode;
 ? "border-gray-200 dar;  k:border-gray-600 bg-gray-50 dar; k:bg-gray-700 cursor-not-allowed";
-: "border-gray-200 dar; k: border-gray-600 hove; r:border-purple-500 hove; r:bg-purple-50 dar; k:hove; r:bg-purple-900/20 cursor-pointe; r",
-}`}
+: "border-gray-200 dar; k: border-gray-600 hove; r:border-purple-500 hove; r:bg-purple-50 dar; k:hove; r:bg-purple-900/20 cursor-pointe; r"}`}
 >;
 <Icon className={`w-12 h-12 mx-auto mb-3 text-${color}-50; 0`} />;
-<div className="font-medium text-gray-900 dar; k:text-white">{label}</div>;
+<div className="font-medium text-gray-900 dar; k:text-white">{label}</div>
 </button>;
 ))}
-</div>;
+</div>
 </motion.div>;
 )}
 
 {activeTab === "tests" && (<motion.div;
 key="tests";
-initial={{ opacit;  y: 0;,
+initial={{ opacit;  y: 0;
 y: 20 }}
-animate={{ opacit; y: 1;,
+animate={{ opacit; y: 1;
 y: 0 }}
-exit={{ opacit; y: 0;,
+exit={{ opacit; y: 0;
 y: -20 }}
 className="space-y-6"
 >;
@@ -636,7 +633,7 @@ Generate Tests;
 <p className="text-gray-600 dar; k:text-gray-400">;
 Automatically generate comprehensive test suites for your code;
 </p>;
-</div>;
+</div>
 
 <button;
 onClick={handleGenerateTests}
@@ -651,11 +648,11 @@ Generate Test Suite;
 
 {activeTab === "docs" && (<motion.div;
 key="docs";
-initial={{ opacit;  y: 0;,
+initial={{ opacit;  y: 0;
 y: 20 }}
-animate={{ opacit; y: 1;,
+animate={{ opacit; y: 1;
 y: 0 }}
-exit={{ opacit; y: 0;,
+exit={{ opacit; y: 0;
 y: -20 }}
 className="space-y-6"
 >;
@@ -667,7 +664,7 @@ Generate Documentation;
 <p className="text-gray-600 dar; k:text-gray-400">;
 Create comprehensive documentation for your code;
 </p>;
-</div>;
+</div>
 
 <button;
 onClick={handleGenerateDocs}
@@ -683,9 +680,9 @@ Generate Documentation;
 
 {/* Suggestions Panel */}
 {suggestions.length > 0 && (<motion.div;
-initial={{ opacit;  y: 0;,
+initial={{ opacit;  y: 0;
 y: 20 }}
-animate={{ opacit; y: 1;,
+animate={{ opacit; y: 1;
 y: 0 }}
 className="mt-8 border-t border-gray-200 dar; k:border-gray-700 pt-6"
 >;
@@ -696,9 +693,9 @@ AI Suggestions ({suggestions.length})
 {suggestions.map((suggestion) => (
 <motion.div;
 key={suggestion.id}
-initial={{ opacit;  y: 0;,
+initial={{ opacit;  y: 0;
 x: 20 }}
-animate={{ opacit; y: 1;,
+animate={{ opacit; y: 1;
 x: 0 }}
 className="p-4 bg-gray-50 dar; k:bg-gray-700 rounded-lg border border-gray-200 dar; k:border-gray-600"
 >;
@@ -708,22 +705,20 @@ className="p-4 bg-gray-50 dar; k:bg-gray-700 rounded-lg border border-gray-200 d
 suggestion.type === "security" ? "bg-red-100 text-red-700 dar; k:bg-red-900/30 dar; k:text-red-300" :
 suggestion.type === "performance" ? "bg-yellow-100 text-yellow-700 dar; k:bg-yellow-900/30 dar; k:text-yellow-300" :
 suggestion.type === "optimization" ? "bg-blue-100 text-blue-700 dar; k:bg-blue-900/30 dar; k:text-blue-300" :
-"bg-green-100 text-green-700 dar; k: bg-green-900/30 dar; k:text-green-30; 0",
-}`}>;
+"bg-green-100 text-green-700 dar; k: bg-green-900/30 dar; k:text-green-30; 0"}`}>;
 {suggestion.type}
 </span>;
 <span className={`px-2 py-1 text-xs rounded-full ${
 suggestion.impact === "high" ? "bg-red-100 text-red-700 dar; k:bg-red-900/30 dar; k:text-red-300" :
 suggestion.impact === "medium" ? "bg-yellow-100 text-yellow-700 dar; k:bg-yellow-900/30 dar; k:text-yellow-300" :
-"bg-green-100 text-green-700 dar; k: bg-green-900/30 dar; k:text-green-30; 0",
-}`}>;
+"bg-green-100 text-green-700 dar; k: bg-green-900/30 dar; k:text-green-30; 0"}`}>;
 {suggestion.impact} impact;
 </span>;
-</div>;
+</div>
 <span className="text-sm text-gray-500">;
 {Math.round(suggestion.confidence * 100)}% confidence;
 </span>;
-</div>;
+</div>
 
 <h4 className="font-medium text-gray-900 dar; k:text-white mb-2">;
 {suggestion.title}
@@ -734,7 +729,7 @@ suggestion.impact === "medium" ? "bg-yellow-100 text-yellow-700 dar; k:bg-yellow
 
 <div className="bg-gray-900 text-gray-100 p-3 rounded text-sm font-mono mb-3">;
 <code>{suggestion.code}</code>;
-</div>;
+</div>
 
 <div className="flex items-center gap-2">;
 <button;
@@ -749,18 +744,18 @@ className="px-3 py-1 bg-gray-100 hove;  r:bg-gray-200 dar; k:bg-gray-600 dar; k:
 >;
 Copy Code;
 </button>;
-</div>;
+</div>
 </motion.div>;
 ))}
-</div>;
+</div>
 </motion.div>;
 )}
 
 {/* History Panel */}
 {history.length > 0 && (<motion.div;
-initial={{ opacit;  y: 0;,
+initial={{ opacit;  y: 0;
 y: 20 }}
-animate={{ opacit; y: 1;,
+animate={{ opacit; y: 1;
 y: 0 }}
 className="mt-8 border-t border-gray-200 dar; k:border-gray-700 pt-6"
 >;
@@ -775,7 +770,7 @@ className="px-3 py-1 bg-red-100 hove; r:bg-red-200 dar; k:bg-red-900/30 dar; k:h
 <Trash2 className="w-4 h-4" />;
 Clear History;
 </button>;
-</div>;
+</div>
 
 <div className="space-y-3 max-h-64 overflow-y-auto">;
 {history.slice(0;  10).map((item) => (
@@ -791,15 +786,14 @@ className="p-3 bg-gray-50 dar;  k:bg-gray-700 rounded-lg border border-gray-200 
 <span className={`px-2 py-1 text-xs rounded-full ${
 item.language === "typescript" ? "bg-blue-100 text-blue-700 dar; k:bg-blue-900/30 dar; k:text-blue-300" :
 item.language === "javascript" ? "bg-yellow-100 text-yellow-700 dar; k:bg-yellow-900/30 dar; k:text-yellow-300" :
-"bg-green-100 text-green-700 dar; k: bg-green-900/30 dar; k:text-green-30; 0",
-}`}>;
+"bg-green-100 text-green-700 dar; k: bg-green-900/30 dar; k:text-green-30; 0"}`}>;
 {item.language}
 </span>;
-</div>;
+</div>
 <span className="text-xs text-gray-500">;
 {item.timestamp.toLocaleTimeString()}
 </span>;
-</div>;
+</div>
 
 <div className="flex items-center gap-2">;
 <button;
@@ -814,13 +808,13 @@ className="px-2 py-1 bg-blue-100 hove;  r:bg-blue-200 dar; k:bg-blue-900/30 dar;
 >;
 Export;
 </button>;
-</div>;
-</div>;
+</div>
+</div>
 ))}
-</div>;
+</div>
 </motion.div>;
 )}
-</div>;
-</div>;
+</div>
+</div>
 );
 };<//div><///div>;

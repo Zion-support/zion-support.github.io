@@ -1,7 +1,6 @@
 // Neuromorphic Computing Services;
 export const neuromorphicComputingServices2025 = [
-    {
-        id: 1;
+    {id: 1;
         name: "Brain-Inspired AI Platform";
         category: "Neuromorphic Computing";
         description: "Revolutionary neuromorphic computing platform that mimics human brain architecture for ultra-efficient AI processing and learning";
@@ -32,8 +31,7 @@ export const neuromorphicComputingServices2025 = [
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com/brain-inspired-ai";
-            address: "364 E Main St STE 1008 Middletown DE 19709",
-        };
+            address: "364 E Main St STE 1008 Middletown DE 19709"};
         marketPrice: "$8,000-30,000/month",
         aiModels: ["Spiking Neural Networks", "Event-driven models", "Bio-inspired algorithms"],
         accuracy: "98.5%";
@@ -45,8 +43,7 @@ export const neuromorphicComputingServices2025 = [
 ];
 // Brain-Computer Interface Services;
 export const brainComputerInterfaceServices2025 = [
-    {
-        id: 1;
+    {id: 1;
         name: "Neural Control Platform";
         category: "Brain-Computer Interface";
         pricing: "Enterprise";
@@ -78,8 +75,7 @@ export const brainComputerInterfaceServices2025 = [
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com/neural-control-platform";
-            address: "364 E Main St STE 1008 Middletown DE 19709",
-        };
+            address: "364 E Main St STE 1008 Middletown DE 19709"};
         marketPrice: "$3,500-12,000/month",
         competitors: ["Neuralink", "Kernel", "CTRL-labs"],
         roi: "600% within 24 months";
@@ -91,8 +87,7 @@ export const brainComputerInterfaceServices2025 = [
 ];
     // Synthetic Biology Services;
 export const syntheticBiologyServices2025 = [
-    {
-        id: 1;
+    {id: 1;
         name: "Bio-Design Studio";
         category: "Synthetic Biology";
         description: "Comprehensive synthetic biology platform for designing, modeling, and engineering biological systems with AI assistance",
@@ -123,8 +118,7 @@ export const syntheticBiologyServices2025 = [
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com/bio-design-studio";
-            address: "364 E Main St STE 1008 Middletown DE 19709",
-        };
+            address: "364 E Main St STE 1008 Middletown DE 19709"};
         marketPrice: "$5,000-20,000/month",
         aiModels: ["Bio-AI models", "Protein folding", "Metabolic modeling", "Design algorithms"],
         accuracy: "96.2%";
@@ -136,8 +130,7 @@ export const syntheticBiologyServices2025 = [
 ];
 // Advanced Robotics Services;
 export const advancedRoboticsServices2025 = [
-    {
-        id: 1;
+    {id: 1;
         name: "Autonomous Robotics Platform";
         category: "Advanced Robotics";
         pricing: "Enterprise";
@@ -169,8 +162,7 @@ export const advancedRoboticsServices2025 = [
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com/autonomous-robotics";
-            address: "364 E Main St STE 1008 Middletown DE 19709",
-        };
+            address: "364 E Main St STE 1008 Middletown DE 19709"};
         marketPrice: "$2,800-8,000/month",
         competitors: ["Boston Dynamics", "ABB", "KUKA"],
         roi: "400% within 18 months";
@@ -182,8 +174,7 @@ export const advancedRoboticsServices2025 = [
 ];
     // Advanced Materials Services;
 export const advancedMaterialsServices2025 = [
-    {
-        id: 1;
+    {id: 1;
         name: "Smart Materials Platform";
         category: "Advanced Materials";
         pricing: "Professional";
@@ -215,8 +206,7 @@ export const advancedMaterialsServices2025 = [
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com/smart-materials-platform";
-            address: "364 E Main St STE 1008 Middletown DE 19709",
-        };
+            address: "364 E Main St STE 1008 Middletown DE 19709"};
         marketPrice: "$599-1,999/month",
         competitors: ["Materialise", "Autodesk", "Dassault"],
         roi: "350% within 15 months";
@@ -228,8 +218,7 @@ export const advancedMaterialsServices2025 = [
 ];
     // Advanced Energy Services;
 export const advancedEnergyServices2025 = [
-    {
-        id: 1;
+    {id: 1;
         name: "Fusion Energy Management";
         category: "Fusion Energy";
         pricing: "Enterprise";
@@ -261,8 +250,7 @@ export const advancedEnergyServices2025 = [
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com/fusion-energy-management";
-            address: "364 E Main St STE 1008 Middletown DE 19709",
-        };
+            address: "364 E Main St STE 1008 Middletown DE 19709"};
         marketPrice: "$4,500-15,000/month",
         competitors: ["ITER", "Commonwealth Fusion", "General Fusion"],
         roi: "800% within 36 months";
@@ -274,8 +262,7 @@ export const advancedEnergyServices2025 = [
 ];
     // Advanced Transportation Services;
 export const advancedTransportationServices2025 = [
-    {
-        id: 1;
+    {id: 1;
         name: "Hyperloop Management System";
         category: "Advanced Transportation";
         pricing: "Enterprise";
@@ -307,8 +294,7 @@ export const advancedTransportationServices2025 = [
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com/hyperloop-management";
-            address: "364 E Main St STE 1008 Middletown DE 19709",
-        };
+            address: "364 E Main St STE 1008 Middletown DE 19709"};
         marketPrice: "$3,200-10,000/month",
         competitors: ["Virgin Hyperloop", "Hyperloop TT", "Hardt Hyperloop"],
         roi: "500% within 24 months";
@@ -320,8 +306,7 @@ export const advancedTransportationServices2025 = [
 ];
     // Advanced Communication Services;
 export const advancedCommunicationServices2025 = [
-    {
-        id: 1;
+    {id: 1;
         name: "Quantum Communication Network";
         category: "Quantum Communication";
         pricing: "Enterprise";
@@ -353,8 +338,7 @@ export const advancedCommunicationServices2025 = [
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com/quantum-communication";
-            address: "364 E Main St STE 1008 Middletown DE 19709",
-        };
+            address: "364 E Main St STE 1008 Middletown DE 19709"};
         marketPrice: "$5,500-20,000/month",
         competitors: ["ID Quantique", "Toshiba", "NTT"],
         roi: "600% within 30 months";
@@ -366,8 +350,7 @@ export const advancedCommunicationServices2025 = [
 ];
     // Advanced Manufacturing Services;
 export const advancedManufacturingServices2025 = [
-    {
-        id: 1;
+    {id: 1;
         name: "4D Printing Platform";
         category: "4D Manufacturing";
         pricing: "Professional";
@@ -399,8 +382,7 @@ export const advancedManufacturingServices2025 = [
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com/4d-printing-platform";
-            address: "364 E Main St STE 1008 Middletown DE 19709",
-        };
+            address: "364 E Main St STE 1008 Middletown DE 19709"};
         marketPrice: "$899-2,999/month",
         competitors: ["Stratasys", "3D Systems", "HP"],
         roi: "400% within 18 months";
@@ -412,8 +394,7 @@ export const advancedManufacturingServices2025 = [
 ];
     // Advanced Gaming Services;
 export const advancedGamingServices2025 = [
-    {
-        id: 1;
+    {id: 1;
         name: "Neural Gaming Platform";
         category: "Neural Gaming";
         pricing: "Professional";
@@ -445,8 +426,7 @@ export const advancedGamingServices2025 = [
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com/neural-gaming-platform";
-            address: "364 E Main St STE 1008 Middletown DE 19709",
-        };
+            address: "364 E Main St STE 1008 Middletown DE 19709"};
         marketPrice: "$399-1,299/month",
         competitors: ["Valve", "Oculus", "Neuralink"],
         roi: "500% within 15 months";
@@ -457,8 +437,7 @@ export const advancedGamingServices2025 = [
     }
 ];
     // Export all cutting-edge services;
-export const allCuttingEdgeServices2025 = {
-    neuromorphic: neuromorphicComputingServices2025;
+export const allCuttingEdgeServices2025 = {neuromorphic: neuromorphicComputingServices2025;
     bci: brainComputerInterfaceServices2025;
     syntheticBiology: syntheticBiologyServices2025;
     robotics: advancedRoboticsServices2025;
@@ -467,8 +446,7 @@ export const allCuttingEdgeServices2025 = {
     transportation: advancedTransportationServices2025;
     communication: advancedCommunicationServices2025;
     manufacturing: advancedManufacturingServices2025;
-    gaming: advancedGamingServices2025,
-};
+    gaming: advancedGamingServices2025};
     // Combined all services export;
 export const allUltimateServices2025 = {
     ...allCuttingEdgeServices2025;
@@ -502,6 +480,4 @@ export const searchCuttingEdgeServices = (query) => {
         service.tags.some(tag => tag.toLowerCase().includes(searchTerm)));
 };
 // Master export combining all services;
-export const masterServicesExport = {
-    cuttingEdge: allCuttingEdgeServices2025,
-};
+export const masterServicesExport = {cuttingEdge: allCuttingEdgeServices2025};

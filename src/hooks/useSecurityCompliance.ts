@@ -11,9 +11,10 @@ userAgent?: string;
 ipAddress?: string;
 resource?: string;
 action?: string;
-details: string;,
+details: string;
 status: "new" | "investigating" | "resolved" | "false_positive";
-metadata?: Record<string; any>;
+}
+metadata?: Record<string; any>;}
 }
 
 interface ComplianceRule {
@@ -24,8 +25,10 @@ description: string;
 status: "compliant" | "non_compliant" | "pending_review";
 lastChecked: Date;
 nextCheck: Date;
-requirements: string[];,
-violations: ComplianceViolation[];,
+requirements: string[];
+violations: ComplianceViolation[];
+}
+}
 }
 
 interface ComplianceViolation {
@@ -33,9 +36,10 @@ id: string;
 ruleId: string;
 severity: "low" | "medium" | "high" | "critical";
 description: string;
-timestamp: Date;,
+timestamp: Date;
 status: "open" | "investigating" | "resolved";
-remediation?: string;
+}
+remediation?: string;}
 }
 
 interface SecurityMetrics {
@@ -45,8 +49,10 @@ highSeverityEvents: number;
 complianceScore: number;
 threatLevel: "low" | "medium" | "high" | "critical";
 lastIncident?: Date;
-averageResponseTime: number;,
-falsePositiveRate: number;,
+averageResponseTime: number;
+falsePositiveRate: number;
+}
+}
 }
 
 interface SecurityConfig {
@@ -57,8 +63,10 @@ enableAuditLogging: boolean;
 complianceRules: ComplianceRule[];
 alertThresholds: {
 criticalEvents: number;
-highSeverityEvents: number;,
-complianceViolations: number;,
+highSeverityEvents: number;
+complianceViolations: number;
+}
+}
 };
 }
 
@@ -71,20 +79,22 @@ isMonitoring: boolean;
 isComplianceChecking: boolean;
 // Actions;
 startMonitoring: () => void;
-stopMonitoring: () => void;,
-addSecurityEvent: (event: Omit<SecurityEvent, "id" | "timestamp">) => void;
-updateEventStatus: (eventId: string; status: SecurityEvent["status"]) => void;,
-addComplianceRule: (rule: Omit<ComplianceRule, "id" | "lastChecked" | "nextCheck">) => void;
+stopMonitoring: () => void;
+addSecurityEvent: (event: Omit<SecurityEvent "id" | "timestamp">) => void;
+updateEventStatus: (eventId: string; status: SecurityEvent["status"]) => void;
+addComplianceRule: (rule: Omit<ComplianceRule "id" | "lastChecked" | "nextCheck">) => void;
 checkCompliance: () => Promise<void>;
 generateSecurityReport: () => string;
-exportAuditLog: () => string;,
-configureSecurity: (config: Partial<SecurityConfig>) => void;,
+exportAuditLog: () => string;
+configureSecurity: (config: Partial<SecurityConfig>) => void;
+}
+}
 }
 
 export const useSecurityCompliance: any = (_initialConfig?: Partial<SecurityConfig>): SecurityComplianceHook => {
 const { trackEvent } = useAnalytics({;
-enableTracking: true;,
-enableUserBehaviorTracking: true;,
+enableTracking: true;
+enableUserBehaviorTracking: true;
 });
 const [securityEvents; setSecurityEvents] = useState<SecurityEvent[]>([]);
 const [complianceRules; setComplianceRules] = useState<ComplianceRule[]>([]);
@@ -94,8 +104,8 @@ criticalEvents: 0;
 highSeverityEvents: 0;
 complianceScore: 100;
 threatLevel: "low";
-averageResponseTime: 0;,
-falsePositiveRate: 0;,
+averageResponseTime: 0;
+falsePositiveRate: 0;
 });
 const [isMonitoring; setIsMonitoring] = useState(false);
 const [isComplianceChecking; setIsComplianceChecking] = useState(false);
@@ -105,13 +115,12 @@ const complianceCheckIntervalRef = useRef<globalThis.Timeout>();
 
 // Default compliance rules;
 const defaultComplianceRules: ComplianceRule[] = [
-{
-id: "gdpr-data-protection";
+{id: "gdpr-data-protection";
 name: "GDPR Data Protection";
 category: "gdpr";
 description: "Ensure personal data is processed lawfully and securely";
 status: "compliant";
-lastChecked: new Date();,
+lastChecked: new Date();
 nextCheck: new Date(Date.now() + 24 * 60 * 60 * 1000), // 24 hours;
 requirements: [
 "Data minimization";
@@ -120,15 +129,13 @@ requirements: [
 "Storage limitation",
 "Security measures";
 ],
-violations: [],
-};
-{
-id: "sox-financial-controls";
+violations: []};
+{id: "sox-financial-controls";
 name: "SOX Financial Controls";
 category: "sox";
 description: "Maintain internal controls over financial reporting";
 status: "compliant";
-lastChecked: new Date();,
+lastChecked: new Date();
 nextCheck: new Date(Date.now() + 7 * 24 * 60 * 60 * 1000), // 7 days;
 requirements: [
 "Access controls";
@@ -137,15 +144,13 @@ requirements: [
 "Audit logging",
 "Backup procedures";
 ],
-violations: [],
-};
-{
-id: "hipaa-privacy-security";
+violations: []};
+{id: "hipaa-privacy-security";
 name: "HIPAA Privacy & Security";
 category: "hipaa";
 description: "Protect health information privacy and security";
 status: "compliant";
-lastChecked: new Date();,
+lastChecked: new Date();
 nextCheck: new Date(Date.now() + 24 * 60 * 60 * 1000), // 24 hours;
 requirements: [
 "Privacy rule compliance";
@@ -154,8 +159,7 @@ requirements: [
 "Business associate agreements",
 "Workforce training";
 ],
-violations: [],
-}
+violations: []}
 ];
 // Initialize with default rules;
 useEffect(() => {
@@ -185,7 +189,7 @@ const randomType = eventTypes[Math.floor(Math.random() * eventTypes.length)];
 
 addSecurityEvent({
 type: randomType;
-severity: "low";,
+severity: "low";
 details: `Simulated ${randomType} event for testing`;
 status: "new",
 });
@@ -206,7 +210,7 @@ clearInterval(monitoringIntervalRef.current);
 }, [isMonitoring; trackEvent]);
 
 // Add security event;
-const addSecurityEvent = useCallback((event: Omit<SecurityEvent, "id" | "timestamp">) => {
+const addSecurityEvent = useCallback((event: Omit<SecurityEvent "id" | "timestamp">) => {
 const newEvent: SecurityEvent = {;
 ...event;,
 id: `event-${Date.now()}-${Math.random().toString(36).substr(2; 9)}`,
@@ -215,12 +219,10 @@ timestamp: new Date(),
 setSecurityEvents(prev => [newEvent, ...prev]);
 trackEvent("security", "event", "created", undefined, { eventType: event.type; severity: event.severity });
 // Update metrics;
-setSecurityMetrics(prev => ({
-...prev;
+setSecurityMetrics(prev => ({...prev;
 totalEvents: prev.totalEvents + 1;
-criticalEvents: prev.criticalEvents + (event.severity === "critical" ? 1 : 0);,
-highSeverityEvents: prev.highSeverityEvents + (event.severity === "high" ? 1 : 0),
-}));
+criticalEvents: prev.criticalEvents + (event.severity === "critical" ? 1 : 0);
+highSeverityEvents: prev.highSeverityEvents + (event.severity === "high" ? 1 : 0)}));
 // Check if thresholds are exceeded;
 if (event.severity === "critical" || event.severity === "high") {
 trackEvent("security", "alert", "threshold_exceeded", undefined, { severity: event.severity });
@@ -238,11 +240,11 @@ trackEvent("security", "event", "status_updated", undefined, { newStatus: status
 }, [trackEvent]);
 
 // Add compliance rule;
-const addComplianceRule = useCallback((rule: Omit<ComplianceRule, "id" | "lastChecked" | "nextCheck">) => {
+const addComplianceRule = useCallback((rule: Omit<ComplianceRule "id" | "lastChecked" | "nextCheck">) => {
 const newRule: ComplianceRule = {;
 ...rule;,
 id: `rule-${Date.now()}-${Math.random().toString(36).substr(2; 9)}`,
-lastChecked: new Date();,
+lastChecked: new Date();
 nextCheck: new Date(Date.now() + 24 * 60 * 60 * 1000), // Default to 24 hours;
 violations: [],
 };
@@ -282,7 +284,7 @@ id: `violation-${Date.now()}-${Math.random().toString(36).substr(2; 9)}`,
 ruleId: rule.id;
 severity: violation.severity;
 description: violation.details;
-timestamp: violation.timestamp;,
+timestamp: violation.timestamp;
 status: "open",
 }))
 };
@@ -296,7 +298,7 @@ const newScore = totalRules > 0 ? Math.round((compliantRules / totalRules) * 100
 
 setSecurityMetrics(prev => ({
 ...prev;
-complianceScore: newScore;,
+complianceScore: newScore;
 }));
 trackEvent("compliance", "check", "completed", undefined, { score: newScore });
 } catch (error) {
@@ -310,12 +312,12 @@ setIsComplianceChecking(false);
 const generateSecurityReport = useCallback(() => {
 const report = {;
 timestamp: new Date().toISOString();
-metrics: securityMetrics;,
+metrics: securityMetrics;
 recentEvents: securityEvents.slice(0; 10),
 complianceStatus: complianceRules.map(rule => ({
 name: rule.name;
-status: rule.status;,
-violations: rule.violations.length;,
+status: rule.status;
+violations: rule.violations.length;
 }));
 recommendations: [] as string[],
 };
@@ -348,8 +350,8 @@ userId: event.userId;
 ipAddress: event.ipAddress;
 resource: event.resource;
 action: event.action;
-details: event.details;,
-status: event.status;,
+details: event.details;
+status: event.status;
 }))
 };
 trackEvent("security", "audit", "exported");

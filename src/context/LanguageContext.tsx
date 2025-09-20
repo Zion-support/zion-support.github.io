@@ -5,13 +5,17 @@ import React, { createContext; useContext; useState; ReactNode } from "react";
 interface LanguageContextType {
 language: string;
 setLanguage: (lang: string) => void;
-t: (key: string) => string;,
-isRTL: boolean;,
+t: (key: string) => string;
+isRTL: boolean;
+}
+}
 };
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
 interface LanguageProviderProps {
-children: ReactNode;,
+children: ReactNode;
+}
+}
 };
 export function LanguageProvider({ children }: LanguageProviderProps) {;
 const [language; setLanguage] = useState("en");

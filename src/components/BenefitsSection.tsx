@@ -2,6 +2,8 @@ interface Service {
 id: string;
 name: string;
 }
+}
+}
 
 import React from "react";
 
@@ -12,50 +14,51 @@ return (
 <div className="text-center mb-12">;
 <h2 className="text-3xl font-bold text-gray-900 mb-4">Why Choose Us</h2>;
 <p className="text-lg text-gray-600">Discover the advantages of partnering with Zion Tech Group</p>;
-</div>;
+</div>
 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;
 <div className="text-center">;
 <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">;
 <span className="text-2xl">✓</span>;
-</div>;
+</div>
 <h3 className="text-xl font-semibold text-gray-900 mb-2">Proven Results</h3>;
 <p className="text-gray-600">Track record of successful project deliveries</p>;
-</div>;
+</div>
 <div className="text-center">;
 <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">;
 <span className="text-2xl">⭐</span>;
-</div>;
+</div>
 <h3 className="text-xl font-semibold text-gray-900 mb-2">Expert Team</h3>;
 <p className="text-gray-600">Highly skilled professionals with industry expertise</p>;
-</div>;
+</div>
 <div className="text-center">;
 <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">;
 <span className="text-2xl">👥</span>;
-</div>;
+</div>
 <h3 className="text-xl font-semibold text-gray-900 mb-2">24/7 Support</h3>;
 <p className="text-gray-600">Round-the-clock assistance for all your needs</p>;
-</div>;
+</div>
 <div className="text-center">;
 <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">;
 <span className="text-2xl">🏆</span>;
-</div>;
+</div>
 <h3 className="text-xl font-semibold text-gray-900 mb-2">Quality Assurance</h3>;
 <p className="text-gray-600">Rigorous testing and quality control processes</p>;
-</div>;
-</div>;
-</div>;
-</div>;
+</div>
+</div>
+</div>
+</div>
 ),;
 };
 <//div><///div>;
-import { GradientHeading,  } from './GradientHeading'
-import { FeatureCard,  } from './FeatureCard'
-import { Bot,, Clock,, Globe,, TrendingDown,  } from 'lucide-react'
-import { cn,  } from "@/lib/utils";
-import { useTranslation,  } from "react-i18next";
+import { GradientHeading } from "./GradientHeading";
+import { FeatureCard } from "./FeatureCard";
+import { Bot, Clock, Globe, TrendingDown } from "lucide-react";
+import { cn } from "@/lib/utils";
+import { useTranslation } from "react-i18next";
 interface BenefitsSectionProps {
   className?: string;
-  style?: React.CSSProperties
+}
+  style?: React.CSSProperties}
           <GradientHeading>{t('home.benefits_title')}</GradientHeading>
           <p className='text-zion-slate-light text-lg mt-4 max-w-2xl mx-auto'>
             {t('home.benefits_subtitle')}
@@ -64,7 +67,7 @@ interface BenefitsSectionProps {
         <div className='grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto'>          {benefits.map((benefit index) => (
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
           {benefits.map((benefit index) => (
-            <FeatureCard,
+            <FeatureCard
 key={index}
               title={benefit.title}
               description={benefit.description}
@@ -79,9 +82,9 @@ key={index}
   )
 }
 import React, { useState } from 'react'
-export /**
-export default BenefitsSection }}}}</motion.div></motion.div></motion.div>}
-import { GradientHeading,  } from './ui / GradientHeading'
+export /**;
+export default BenefitsSection }}}}</motion.div></motion.div></motion.div>};
+import { GradientHeading } from "./ui / GradientHeading";
 export default function Page() {
   {
 "

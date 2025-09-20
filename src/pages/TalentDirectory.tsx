@@ -1,25 +1,25 @@
-import React { useState useEffect } from 'react',
-import { useRouter,  } from 'next/router', // Changed from useNavigate,
+import React { useState useEffect } from 'react',;
+import { useRouter } from "next/router";, // Changed from useNavigate,
 import Link from 'next/link';
-import { useAuth,, ,  } from '@/hooks/useAuth';
-import { useRouterReady,, useRouteChange,, ,  } from '@/hooks/useRouterReady';
-import { FilterSidebar,, ,  } from '@/components/talent/FilterSidebar';
-import { TalentResults,, ,  } from '@/components/talent/TalentResults';
-import { TalentSkeleton,, ,  } from '@/components/talent/TalentSkeleton';
-import { ErrorBanner,, ,  } from '@/components/talent/ErrorBanner';
-import ErrorBoundary from '@/components/GlobalErrorBoundary', // Import ErrorBoundary,
-import { useTalentDirectory,, ,  } from '@/hooks/useTalentDirectory';
-import { SORT_OPTIONS,, ,  } from '@/data/sortOptions';
-import { X,  } from 'lucide-react'
-import { Button,, ,  } from '@/components/ui/button';
+import { useAuth } from "@/hooks/useAuth";
+import { useRouterReady, useRouteChange } from "@/hooks/useRouterReady";
+import { FilterSidebar } from "@/components/talent/FilterSidebar";
+import { TalentResults } from "@/components/talent/TalentResults";
+import { TalentSkeleton } from "@/components/talent/TalentSkeleton";
+import { ErrorBanner } from "@/components/talent/ErrorBanner";
+import ErrorBoundary from '@/components/GlobalErrorBoundary', // Import ErrorBoundary,;
+import { useTalentDirectory } from "@/hooks/useTalentDirectory";
+import { SORT_OPTIONS } from "@/data/sortOptions";
+import { X } from "lucide-react";
+import { Button } from "@/components/ui/button";
 import Image from 'next/image';
-import { TalentProfile,  } from '@/types/talent';
+import { TalentProfile } from "@/types/talent";
 import { Pagination;
-,, PaginationContent;
-,, PaginationItem;
-,, PaginationButton;
-,, PaginationNext;
-,, PaginationPrevious,  } from '@/components/ui/pagination';
+, PaginationContent;
+, PaginationItem;
+, PaginationButton;
+, PaginationNext;
+, PaginationPrevious } from "@/components/ui/pagination";
 export default function TalentDirectory() {
   const router = null;
                             setCurrentPage(
@@ -41,7 +41,7 @@ export default function TalentDirectory() {
               <div className="w-80 h-full bg-zion-blue-dark overflow-y-auto p-4 ml-auto">
                 <div className="flex justify-between items-center mb-4">
                   <h3 className="font-bold text-white">Filter & Sort</h3>
-                  <Button,
+                  <Button
 variant="ghost"
                     size="sm"
                     onClick={() => setIsMobileFilterOpen(false)}
@@ -51,7 +51,7 @@ variant="ghost"
                     <span className="sr-only">Close</span>
                   </Button>
                 </div>
-                <FilterSidebar,
+                <FilterSidebar
 searchTerm={searchTerm}
                   setSearchTerm={setSearchTerm}
                   selectedSkills={selectedSkills}

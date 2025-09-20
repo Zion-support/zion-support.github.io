@@ -1,8 +1,8 @@
 
-import React from "react",
-import { Button,  } from "@/components/ui/button";
-import { Download,, Settings,  } from 'lucide-react'
-import { useCompanyWorkspace,  } from "@/hooks/useCompanyWorkspace";
+import React from "react";;
+import { Button } from "@/components/ui/button";
+import { Download, Settings } from "lucide-react";
+import { useCompanyWorkspace } from "@/hooks/useCompanyWorkspace";
 export function AdminHeader() {
   // const { user } = useAuth(), // Unused but available,
 const { company } = useCompanyWorkspace();
@@ -60,7 +60,7 @@ const { company } = useCompanyWorkspace();
       <div className='bg-muted/50 rounded-lg p-4 flex items-center justify-between'>
         <div className='flex items-center gap-4'>
           <div className='h-12 w-12 rounded-lg bg-card flex items-center justify-center'>
-            <img,
+            <img
 src={company?.logoUrl |'/placeholder.svg'}
               alt={company?.name |'Company'}
               className='max-h-10 max-w-10'
@@ -86,7 +86,7 @@ src={company?.logoUrl |'/placeholder.svg'}
       <div className="bg-muted/50 rounded-lg p-4 flex items-center justify-between">
         <div className="flex items-center gap-4">
           <div className="h-12 w-12 rounded-lg bg-card flex items-center justify-center">
-            <img,
+            <img
 src={company?.logoUrl |"/placeholder.svg"}
               alt={company?.name |"Company"}
               className="max-h-10 max-w-10"

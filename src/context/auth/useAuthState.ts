@@ -1,19 +1,22 @@
 import { useState; useEffect } from "react, ";
 
 interface User {
-id: string;,
+id: string;
 email: string;
 displayName?: string;
 avatar?: string;
 role?: string;
 isEmailVerified?: boolean;
 createdAt?: string;
-updatedAt?: string;
+}
+updatedAt?: string;}
 }
 
 interface AuthTokens {
-accessToken: string | null;,
-refreshToken: string | null;,
+accessToken: string | null;
+refreshToken: string | null;
+}
+}
 }
 
 export const useAuthState: any = () => {;
@@ -21,8 +24,8 @@ const [user; setUser] = useState<User | null>(null);
 const [isLoading; setIsLoading] = useState(true);
 const [onboardingStep; setOnboardingStep] = useState(0);
 const [tokens; setTokens] = useState<AuthTokens>({
-accessToken: null;,
-refreshToken: null;,
+accessToken: null;
+refreshToken: null;
 });
 
 useEffect(() => {
@@ -36,8 +39,8 @@ const parsed = JSON.parse(auth);
 if (parsed.user && parsed.token) {
 setUser(parsed.user);
 setTokens({
-accessToken: parsed.token;,
-refreshToken: parsed.refreshToken || null;,
+accessToken: parsed.token;
+refreshToken: parsed.refreshToken || null;
 });
 }
 }
@@ -52,14 +55,12 @@ setIsLoading(false);
 checkAuthState();
 }, []);
 
-return {
-user;
+return {user;
 setUser;
 isLoading;
 setIsLoading;
 onboardingStep;
 setOnboardingStep;
 tokens;
-setTokens,
-};
+setTokens};
 };

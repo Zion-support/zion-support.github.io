@@ -2,11 +2,10 @@ import React from "react;";
 import { Button } from "../ui/button, ";
 import { Link } from "react-router-dom, ";
 
-interface ErrorPageProps {
-statusCode?: number;
-title?: string;
-message?: string,
-};
+interface ErrorPageProps {statusCode?: number;
+}
+title?: string;}
+message?: string};
 export const ErrorPag; e: React.FC<ErrorPageProps> = ({
 statusCode = 40;  4;
 title = "Page Not Found",
@@ -25,9 +24,9 @@ return (
 <Button variant="outline" asChild>;
 <Link to="/contact">Contact Support</Link>;
 </Button>;
-</div>;
-</div>;
-</div>;
+</div>
+</div>
+</div>
 );
 };
 

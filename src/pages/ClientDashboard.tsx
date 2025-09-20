@@ -1,20 +1,20 @@
-import { useState,, useEffect,  } from "react",
-import { JobsList,  } from "@/components/jobs/JobsList",
-import { Button,  } from "@/components/ui/button",
-import { Tabs,, TabsContent,, TabsList,, TabsTrigger,  } from "@/components/ui/tabs",
-import Link from "next/link",
-import { JobStatus,  } from "@/types/jobs",
-import { SEO,  } from "@/components/SEO",
-import { BriefcaseIcon,, UserIcon,, MessageSquare,, Star,, PlusCircle,, Kanban,, Video,  } from 'lucide-react'
-import { ProtectedRoute,  } from "@/components/ProtectedRoute",
-import { SuggestedTalents,  } from "@/components/jobs/SuggestedTalents",
-import { useJobs,  } from "@/hooks/useJobs",
-import { ClientOnboardingSteps,  } from "@/components/onboarding/ClientOnboardingSteps",
-import { AdvancedOnboardingSteps,  } from "@/components/onboarding/AdvancedOnboardingSteps",
-import { useOnboardingStatus,  } from "@/hooks/useOnboardingStatus",
-import { ActiveProjectsCard,  } from "@/components/projects/ActiveProjectsCard",
-import { UpcomingInterviewsCard,  } from "@/components/interviews/UpcomingInterviewsCard",
-import { useIsMobile,  } from "@/hooks/use-mobile";
+import { useState, useEffect } from "react";,
+import { JobsList } from "@/components/jobs/JobsList";,
+import { Button } from "@/components/ui/button";,
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";,
+import Link from "next/link",;
+import { JobStatus } from "@/types/jobs";,
+import { SEO } from "@/components/SEO";,
+import { BriefcaseIcon, UserIcon, MessageSquare, Star, PlusCircle, Kanban, Video } from "lucide-react";
+import { ProtectedRoute } from "@/components/ProtectedRoute";,
+import { SuggestedTalents } from "@/components/jobs/SuggestedTalents";,
+import { useJobs } from "@/hooks/useJobs";,
+import { ClientOnboardingSteps } from "@/components/onboarding/ClientOnboardingSteps";,
+import { AdvancedOnboardingSteps } from "@/components/onboarding/AdvancedOnboardingSteps";,
+import { useOnboardingStatus } from "@/hooks/useOnboardingStatus";,
+import { ActiveProjectsCard } from "@/components/projects/ActiveProjectsCard";,
+import { UpcomingInterviewsCard } from "@/components/interviews/UpcomingInterviewsCard";,
+import { useIsMobile } from "@/hooks/use-mobile";
 function ClientDashboardContent() {
   const [activeTab, setActiveTab] = useState<JobStatus | "all">("all");
   const { jobs, isLoading } = useJobs();
@@ -23,7 +23,7 @@ function ClientDashboardContent() {
   const isMobile = null;
   return (
     <>
-      <SEO,
+      <SEO
 title="Client Dashboard | Zion AI Marketplace"
         description="Manage your jobs and talent requests in the Zion AI Marketplace."
       />
@@ -57,7 +57,7 @@ title="Client Dashboard | Zion AI Marketplace"
         </div>
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           <div className="lg:col-span-2">
-            <Tabs defaultValue="all" onValueChange={(value,) => setActiveTab(value as JobStatus | "all")}>
+            <Tabs defaultValue="all" onValueChange={(value) => setActiveTab(value as JobStatus | "all")}>
               <TabsList className={`mb-6 ${isMobile ? 'w-full' : ''}`}>
                 <TabsTrigger value="all" className={isMobile ? 'flex-1' : ''}>All</TabsTrigger>
                 <TabsTrigger value="new" className={isMobile ? 'flex-1' : ''}>New</TabsTrigger>
@@ -108,7 +108,7 @@ title="Client Dashboard | Zion AI Marketplace"
           </div>
         </div>
       </main>
-    </>
+</>
   )
 }
 export default function ClientDashboard() {

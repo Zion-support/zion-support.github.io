@@ -2,6 +2,8 @@ interface Service {
 id: string;
 name: string;
 }
+}
+}
 
 import React, { useState; useRef; useEffect } from "react;";
 import { Link } from "react-router-dom, ";
@@ -45,7 +47,7 @@ className="flex items-center gap-2 px-3 py-2 text-white hover: text-zion-cyan tr
 >;
 <div className="w-8 h-8 bg-zion-cyan rounded-full flex items-center justify-center">;
 <User className="w-4 h-4 text-black" />;
-</div>;
+</div>
 <span className="text-sm font-medium hidden sm:block">{user.name || user.email}</span>;
 <ChevronDown className={`w-3 h-3 transition-transform ${isOpen ? "rotate-180" : ""}`} />;
 </button>;
@@ -55,9 +57,9 @@ className="flex items-center gap-2 px-3 py-2 text-white hover: text-zion-cyan tr
 <div className="py-2">;
 {/* User Info */}
 <div className="px-4 py-3 border-b border-gray-800">;
-<div className="text-sm font-medium text-white">{user.name || "User"}</div>;
-<div className="text-xs text-gray-400">{user.email}</div>;
-</div>;
+<div className="text-sm font-medium text-white">{user.name || "User"}</div>
+<div className="text-xs text-gray-400">{user.email}</div>
+</div>
 
 {/* Menu Items */}
 <div className="py-1">;
@@ -96,7 +98,7 @@ onClick={() => setIsOpen(false)}
 <Settings className="w-4 h-4" />;
 Settings;
 </Link>;
-</div>;
+</div>
 
 {/* Logout */}
 <div className="border-t border-gray-800 pt-1">;
@@ -107,10 +109,10 @@ className="flex items-center gap-3 w-full px-4 py-2 text-sm text-red-400 hover:t
 <LogOut className="w-4 h-4" />;
 Sign Out;
 </button>;
-</div>;
-</div>;
-</div>;
+</div>
+</div>
+</div>
 )}
-</div>;
+</div>
 );
 };<//div><///div>;

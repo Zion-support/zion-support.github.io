@@ -1,13 +1,13 @@
 
-import { SEO,  } from "@/components/SEO",
-import { GradientHeading,  } from "@/components/GradientHeading",
-import { Button,  } from "@/components/ui/button";
-import { Leaf,, Server,, Cloud,  } from 'lucide-react'
+import { SEO } from "@/components/SEO";,
+import { GradientHeading } from "@/components/GradientHeading";,
+import { Button } from "@/components/ui/button";
+import { Leaf, Server, Cloud } from "lucide-react";
 import Link from "next/link";
 export default function GreenIT() {
 return (
     <>
-      <SEO,
+      <SEO
 title="Green IT Solutions - Sustainable Technology"
         description="Explore eco-friendly IT solutions and sustainable technology practices that reduce environmental impact while maintaining performance."
         keywords="green IT sustainable technology eco-friendly computing energy efficient hardware"
@@ -42,14 +42,14 @@ for reducing your carbon footprint.
                   </div>
                 </div>
                 <div className='rounded-lg overflow-hidden relative w-full h-full'>
-                  <img,
+                  <img
 src='https://images.unsplash.com/photo-1473876637954-4b493d59fd97?auto=format&fit=crop&w=800&h=600&q=80'
                     alt='Green IT sustainability'
                     className='object-cover'                  />
                 </div>
               </div>
             </div>                <div className="rounded-lg overflow-hidden relative w-full h-full">
-                  <img,
+                  <img
 src="https://images.unsplash.com/photo-1473876637954-4b493d59fd97?auto=format&fit=crop&w=800&h=600&q=80"
                     alt="Green IT sustainability"
                     className="object-cover"
@@ -62,7 +62,7 @@ src="https://images.unsplash.com/photo-1473876637954-4b493d59fd97?auto=format&fi
               </h2>
               <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
                 {greenITSolutions.map((solution index) => (
-                  <div,
+                  <div
 key={index}
                     className='bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 hover:border-zion-purple transition-colors'
                   >
@@ -72,119 +72,119 @@ key={index}
                       {solution.title}
                     </h3>
                     <p className='text-zion-slate-light text-center'>
-import React, { useState } from 'react'
-import { motion,  } from 'framer-motion'
-import { SEO,  } from '../components/SEO'
+import React, { useState } from 'react';
+import { motion } from "framer-motion";
+import { SEO } from "../components/SEO";
 import { Leaf,
 Zap
-, , Sun,
+, Sun,
 Wind
-, , Droplets,
+, Droplets,
 Recycle
-, , TreePine,
+, TreePine,
 Globe
-, , TrendingUp,
+, TrendingUp,
 Target
-, , CheckCircle,
+, CheckCircle,
 Award
-, , Users,
+, Users,
 Building2
-, , Server,
+, Server,
 Monitor
-, , Smartphone,
+, Smartphone,
 Cloud
-, , Database,
+, Database,
 Shield
-, , BarChart3,
+, BarChart3,
 Settings
-, , ChevronDown,
+, ChevronDown,
 ChevronUp
-, , Lightbulb,
+, Lightbulb,
 Cpu
-, , HardDrive,
+, HardDrive,
 Network
-, , Smartphone, as, Mobile,
+, Smartphone, as, Mobile,
 Laptop
-, , Tablet,
+, Tablet,
 Printer
-, , Router,
+, Router,
 Camera
-, , Speaker,
+, Speaker,
 Headphones
-, , Keyboard,
+, Keyboard,
 Mouse
-, , ExternalHardDrive,
+, ExternalHardDrive,
 Usb
-, , Wifi,
+, Wifi,
 Bluetooth
-, , Battery,
+, Battery,
 Power
-, , Save,
+, Save,
 Eco
-, , Plant,
+, Plant,
 Mountain
-, , Ocean,
+, Ocean,
 Forest
-, , MountainSnow,
+, MountainSnow,
 Thermometer
-, , Gauge,
+, Gauge,
 Activity
-, , LineChart,
+, LineChart,
 PieChart
-, , Calculator,
+, Calculator,
 FileText
-, , Calendar,
+, Calendar,
 Clock
-, , Star,
+, Star,
 Heart
-, , Eye,
+, Eye,
 Search
-, , Filter,
+, Filter,
 ArrowRight
-, , Mail,
+, Mail,
 Phone
-, , MapPin,
+, MapPin,
 Clock, as, Time,
 DollarSign
-, , Percent,
+, Percent,
 Plus
-, , Minus,
+, Minus,
 X
-, , Check,
+, Check,
 AlertTriangle
-, , Info,
+, Info,
 HelpCircle
-, , ExternalLink,
+, ExternalLink,
 Download
-, , BookOpen,
+, BookOpen,
 Video
-, , Play,
+, Play,
 Pause
-, , SkipBack,
+, SkipBack,
 SkipForward
-, , Volume2,
+, Volume2,
 VolumeX
-, , Maximize2,
+, Maximize2,
 Minimize2
-, , RotateCcw,
+, RotateCcw,
 RefreshCw
-, , PowerOff,
+, PowerOff,
 PowerOn
-, , BatteryCharging,
+, BatteryCharging,
 BatteryFull
-, , BatteryLow,
+, BatteryLow,
 BatteryMedium
-, , BatteryEmpty,
+, BatteryEmpty,
 WifiOff
-, , WifiLow,
+, WifiLow,
 WifiMedium
-, , WifiHigh,
+, WifiHigh,
 Signal
-, , SignalLow,
+, SignalLow,
 SignalMedium
-, , SignalHigh,
+, SignalHigh,
 SignalOff
-, , WifiHigh, as, WifiStrong,
+, WifiHigh, as, WifiStrong,
 WifiMedium, as, WifiMedium2,
 WifiLow, as, WifiWeak,
 WifiOff, as, WifiNone,
@@ -242,10 +242,9 @@ BatteryMedium, as, BatteryMedium9,
 BatteryEmpty, as, BatteryEmpty9,
 BatteryCharging, as, BatteryCharging10,
 BatteryFull, as, BatteryFull10,
-BatteryLow, as, BatteryLow10,
-BatteryMedium, as, BatteryMedium10,
-BatteryEmpty, as, BatteryEmpty10,
- } from 'lucide-react'
+BatteryLow, as, BatteryLow10,;
+BatteryMedium, as, BatteryMedium10,;
+BatteryEmpty, as, BatteryEmpty10 } from "lucide-react";
 export default function GreenIT(...args: unknown[]): unknown {
   const [expandedSection, setExpandedSection] = useState<string | null>(null)
   const [selectedCategory, setSelectedCategory] = useState('all')
@@ -546,8 +545,7 @@ export default function GreenIT(...args: any[]): any {): unknown {): unknown {}
       {/* Hero Section */}""
       <section className="relative py-20 overflow-hidden">""
         <div className="absolute inset-0 bg-gradient-to-r from-green-500/10 via-blue-500/10 to-purple-500/10"></div>"        <div className="container mx-auto px-6 relative z-10">
-          <motion.div,
-initial={{ opacity: 0 y: 20 }}
+          <motion.div initial={{ opacity: 0 y: 20 }}
             animate={{ opacity: 1 y: 0 }}"
             transition={{ duration: 0.8 }}""
             className="text-center"">""
@@ -579,8 +577,7 @@ minimize environmental impact."
       {/* Environmental Impact */}""
       <section className="py-20">""
         <div className="container mx-auto px-6">
-          <motion.div,
-initial={{ opacity: 0 y: 20 }}
+          <motion.div initial={{ opacity: 0 y: 20 }}
             whileInView={{ opacity: 1 y: 0 }}"
             transition={{ duration: 0.8 }}""
             className="text-center mb-16"">""
@@ -594,8 +591,7 @@ initial={{ opacity: 0 y: 20 }}
 ""
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {environmentalImpact.map((impact index) => (
-              <motion.div,
-key={impact.label}
+              <motion.div key={impact.label}
                 initial={{ opacity: 0 y: 20 }}
                 whileInView={{ opacity: 1 y: 0 }}"
                 transition={{ duration: 0.8 delay: index * 0.1 }}""
@@ -619,8 +615,7 @@ key={impact.label}
       {/* Green IT Solutions */}""
       <section className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50">""
         <div className="container mx-auto px-6">
-          <motion.div,
-initial={{ opacity: 0 y: 20 }}
+          <motion.div initial={{ opacity: 0 y: 20 }}
             whileInView={{ opacity: 1 y: 0 }}"
             transition={{ duration: 0.8 }}""
             className="text-center mb-16"">""
@@ -636,7 +631,7 @@ organization
           {/* Category Filter */}""
           <div className="flex flex-wrap justify-center gap-4 mb-12">
             {categories.map(category => (
-              <button,
+              <button
 key={category.id}
                 onClick={() => setSelectedCategory(category.id)}
                 className={`px-6 py-3 rounded-lg font-medium transition-all duration-200 ${}
@@ -653,8 +648,7 @@ key={category.id}
 ""
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredSolutions.map((solution index) => (
-              <motion.div,
-key={solution.id}
+              <motion.div key={solution.id}
                 initial={{ opacity: 0 y: 20 }}
                 whileInView={{ opacity: 1 y: 0 }}"
                 transition={{ duration: 0.8 delay: index * 0.1 }}""
@@ -765,7 +759,7 @@ management
               Connect with our experts to discuss how we can help you build a,
 more sustainable IT infrastructure.
             </p>
-            <Button,
+            <Button
 className='bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple'
               asChild
             >
@@ -780,11 +774,10 @@ className='bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion
           </div>
         </div>
       </main>
-    </>
+</>
   )
 "                    {expandedSection === solution.id && (
-                      <motion.div,
-initial={{ opacity: 0 height: 0 }}'
+                      <motion.div initial={{ opacity: 0 height: 0 }}'
                         animate={{ opacity: 1 height: 'auto' }}
                         exit={{ opacity: 0 height: 0 }}"
                         transition={{ duration: 0.3 }}""
@@ -827,8 +820,7 @@ initial={{ opacity: 0 height: 0 }}'
       {/* Certifications */}""
       <section className="py-20">""
         <div className="container mx-auto px-6">
-          <motion.div,
-initial={{ opacity: 0 y: 20 }}
+          <motion.div initial={{ opacity: 0 y: 20 }}
             whileInView={{ opacity: 1 y: 0 }}"
             transition={{ duration: 0.8 }}""
             className="text-center mb-16"">""
@@ -842,8 +834,7 @@ initial={{ opacity: 0 y: 20 }}
 ""
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {certifications.map((cert index) => (
-              <motion.div,
-key={cert.name}
+              <motion.div key={cert.name}
                 initial={{ opacity: 0 y: 20 }}
                 whileInView={{ opacity: 1 y: 0 }}"
                 transition={{ duration: 0.8 delay: index * 0.1 }}""
@@ -865,8 +856,7 @@ key={cert.name}
       {/* Case Studies */}""
       <section className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50">""
         <div className="container mx-auto px-6">
-          <motion.div,
-initial={{ opacity: 0 y: 20 }}
+          <motion.div initial={{ opacity: 0 y: 20 }}
             whileInView={{ opacity: 1 y: 0 }}"
             transition={{ duration: 0.8 }}""
             className="text-center mb-16"">""
@@ -881,8 +871,7 @@ solutions
 ""
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {caseStudies.map((study index) => (
-              <motion.div,
-key={study.title}
+              <motion.div key={study.title}
                 initial={{ opacity: 0 y: 20 }}
                 whileInView={{ opacity: 1 y: 0 }}"
                 transition={{ duration: 0.8 delay: index * 0.1 }}""
@@ -949,8 +938,7 @@ key={study.title}
       {/* Call to Action */}""
       <section className="py-20">""
         <div className="container mx-auto px-6 text-center">
-          <motion.div,
-initial={{ opacity: 0 y: 20 }}
+          <motion.div initial={{ opacity: 0 y: 20 }}
             whileInView={{ opacity: 1 y: 0 }}
             transition={{ duration: 0.8 }}">""
             <h2 className="text-4xl font-bold text-white mb-6">

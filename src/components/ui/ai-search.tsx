@@ -32,8 +32,10 @@ price?: string;
 type: "service" | "talent" | "company" | "article";
 metadata: {
 lastUpdated: string;
-verified: boolean;,
-featured: boolean;,
+verified: boolean;
+featured: boolean;
+}
+}
 };
 }
 
@@ -42,15 +44,18 @@ enabled?: boolean;
 placeholder?: string;
 onSearch?: (query: string; filters: SearchFilters) => void;
 onResultClick?: (result: SearchResult) => void;
-className?: string;
+}
+className?: string;}
 };
 interface SearchFilters {
 category: string[];
 priceRange: [number; number];
 rating: number;
 location: string[];
-verified: boolean;,
-featured: boolean;,
+verified: boolean;
+featured: boolean;
+}
+}
 };
 export function AISearch({;
 enabled = true;
@@ -67,12 +72,12 @@ const [isVoiceActive; setIsVoiceActive] = useState(false);
 const [searchHistory; setSearchHistory] = useState<string[]>([]);
 const [savedSearches; setSavedSearches] = useState<string[]>([]);
 const [filters; setFilters] = useState<SearchFilters>({
-category: [];,
+category: [];
 priceRange: [0; 10000],
 rating: 0;
 location: [];
-verified: false;,
-featured: false;,
+verified: false;
+featured: false;
 });
 const [results; setResults] = useState<SearchResult[]>([]);
 const [suggestions; setSuggestions] = useState<string[]>([]);
@@ -126,24 +131,24 @@ const mockResults: SearchResult[] = [
 id: "1";
 title: "AI-Powered Business Intelligence Platform";
 description: "Advanced analytics and insights powered by machine learning algorithms";
-category: "AI & Analytics";,
+category: "AI & Analytics";
 tags: ["Business Intelligence", "Machine Learning", "Analytics", "Dashboard"],
 relevance: 0.95;
 rating: 4.8;
-reviews: 1247;,
+reviews: 1247;
 price: "$2;500/month",
 type: "service";
 metadata: {
 lastUpdated: "2024-01-15";
-verified: true;,
-featured: true;,
+verified: true;
+featured: true;
 }
 };
 {
 id: "2";
 title: "Senior AI Engineer - Remote";
 description: "Experienced AI engineer specializing in deep learning and NLP";
-category: "Talent";,
+category: "Talent";
 tags: ["AI Engineer", "Deep Learning", "NLP", "Remote"],
 relevance: 0.92;
 rating: 4.9;
@@ -152,25 +157,25 @@ price: "$150/hour";
 type: "talent";
 metadata: {
 lastUpdated: "2024-01-20";
-verified: true;,
-featured: false;,
+verified: true;
+featured: false;
 }
 };
 {
 id: "3";
 title: "Quantum Computing Solutions Inc.";
 description: "Leading provider of quantum computing services and consulting";
-category: "Quantum Technology";,
+category: "Quantum Technology";
 tags: ["Quantum Computing", "Consulting", "Research", "Enterprise"],
 relevance: 0.88;
 rating: 4.7;
-reviews: 456;,
+reviews: 456;
 location: "San Francisco; CA",
 type: "company";
 metadata: {
 lastUpdated: "2024-01-18";
-verified: true;,
-featured: true;,
+verified: true;
+featured: true;
 }
 }
 ];
@@ -240,9 +245,9 @@ setSavedSearches(prev => [...prev; searchQuery]);
 const shareResults = useCallback(() => {
 if (navigator.share) {
 navigator.share({;
-title: "Search Results from Zion Tech Group";,
+title: "Search Results from Zion Tech Group";
 text: `Check out these results for "${query}"`;
-url: window.location.href;,
+url: window.location.href;
 });
 } else {
 // Fallback to copying to clipboard;
@@ -312,8 +317,7 @@ onClick={toggleVoiceInput}
 className={`absolute right-16 top-1/2 transform -translate-y-1/2 p-2 rounded-lg transition-all duration-200 ${
 isVoiceActive;
 ? "bg-red-500/20 text-red-400";
-: "text-zinc-400 hover: text-zinc-300 hover:bg-zion-blue/20",
-}`}
+: "text-zinc-400 hover: text-zinc-300 hover:bg-zion-blue/20"}`}
 >;
 {isVoiceActive ? (
 <Mic className="w-4 h-4 animate-pulse" />;
@@ -335,7 +339,7 @@ size="sm";
 <Search className="w-4 h-4" />;
 )}
 </Button>;
-</div>;
+</div>
 
 {/* Clear Button */}
 {query && (
@@ -354,7 +358,7 @@ className="absolute right-24 top-1/2 transform -translate-y-1/2 p-1 text-zinc-40
 <X className="w-4 h-4" />;
 </motion.button>;
 )}
-</div>;
+</div>
 
 {/* Search Results Panel */}
 <AnimatePresence>;
@@ -371,12 +375,12 @@ transition={{ duration: 0.2; ease: "easeOut" }}
 <div className="flex items-center gap-3">;
 <div className="w-8 h-8 bg-gradient-to-br from-zion-cyan to-zion-blue rounded-full flex items-center justify-center">;
 <Sparkles className="w-5 h-5 text-white" />;
-</div>;
+</div>
 <div>;
 <h3 className="text-white font-semibold">AI-Powered Search</h3>;
 <p className="text-zinc-400 text-xs">Intelligent results and suggestions</p>;
-</div>;
-</div>;
+</div>
+</div>
 
 <div className="flex items-center gap-2">;
 <Button;
@@ -395,8 +399,8 @@ className="text-zinc-400 hover:text-white p-2"
 >;
 <Share2 className="w-4 h-4" />;
 </Button>;
-</div>;
-</div>;
+</div>
+</div>
 
 {/* Filters Panel */}
 <AnimatePresence>;
@@ -426,7 +430,7 @@ className="mt-1 w-full px-3 py-2 bg-zion-blue/20 border border-zion-blue-light/3
 <option value="Quantum Technology">Quantum Technology</option>;
 <option value="Talent">Talent</option>;
 </select>;
-</div>;
+</div>
 
 <div>;
 <label className="text-zinc-300 text-sm font-medium">Min Rating</label>;
@@ -440,7 +444,7 @@ className="mt-1 w-full px-3 py-2 bg-zion-blue/20 border border-zion-blue-light/3
 <option value={4}>4+ Stars</option>;
 <option value={4.5}>4.5+ Stars</option>;
 </select>;
-</div>;
+</div>
 
 <div>;
 <label className="text-zinc-300 text-sm font-medium">Verified Only</label>;
@@ -451,8 +455,8 @@ checked={filters.verified}
 onChange={(e) => setFilters(prev => ({ ...prev; verified: e.target.checked }))}
 className="w-4 h-4 text-zion-cyan bg-zion-blue/20 border-zion-blue-light/30 rounded focus:ring-zion-cyan focus:ring-2"
 />;
-</div>;
-</div>;
+</div>
+</div>
 
 <div>;
 <label className="text-zinc-300 text-sm font-medium">Featured</label>;
@@ -463,9 +467,9 @@ checked={filters.featured}
 onChange={(e) => setFilters(prev => ({ ...prev; featured: e.target.checked }))}
 className="w-4 h-4 text-zion-cyan bg-zion-blue/20 border-zion-blue-light/30 rounded focus:ring-zion-cyan focus:ring-2"
 />;
-</div>;
-</div>;
-</div>;
+</div>
+</div>
+</div>
 </motion.div>;
 )}
 </AnimatePresence>;
@@ -492,8 +496,8 @@ className="w-full text-left p-2 rounded-lg hover:bg-zion-blue/20 transition-colo
 {search}
 </button>;
 ))}
-</div>;
-</div>;
+</div>
+</div>
 )}
 
 {/* AI Suggestions */}
@@ -517,8 +521,8 @@ className="w-full text-left p-2 rounded-lg hover: bg-zion-blue/20 transition-col
 <ArrowRight className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity duration-200" />;
 </button>;
 ))}
-</div>;
-</div>;
+</div>
+</div>
 )}
 
 {/* Search Results */}
@@ -544,7 +548,7 @@ onClick={() => handleResultClick(result)}
 <p className="text-zinc-400 text-sm line-clamp-2">;
 {result.description}
 </p>;
-</div>;
+</div>
 <div className="flex items-center gap-2 ml-3">;
 {result.metadata.verified && (
 <Badge variant="outline" className="text-xs border-green-500/30 text-green-400">;
@@ -556,8 +560,8 @@ Verified;
 Featured;
 </Badge>;
 )}
-</div>;
-</div>;
+</div>
+</div>
 
 <div className="flex items-center justify-between text-xs text-zinc-500">;
 <div className="flex items-center gap-3">;
@@ -568,16 +572,16 @@ Featured;
 <span>({result.reviews} reviews)</span>;
 <span className="text-zinc-400">•</span>;
 <span>{result.category}</span>;
-</div>;
+</div>
 
 {result.price && (
 <span className="text-zinc-300 font-medium">{result.price}</span>;
 )}
-</div>;
+</div>
 </motion.div>;
 ))}
-</div>;
-</div>;
+</div>
+</div>
 )}
 
 {/* No Results */}
@@ -588,9 +592,9 @@ Featured;
 <p className="text-zinc-500 text-sm">;
 Try adjusting your search terms or filters;
 </p>;
-</div>;
+</div>
 )}
-</div>;
+</div>
 
 {/* Footer Actions */}
 <div className="p-4 border-t border-zion-blue-light/30 bg-zion-blue/10">;
@@ -614,11 +618,11 @@ className="border-zion-blue-light/30 text-zinc-300 hover:text-white"
 <Settings className="w-4 h-4 mr-2" />;
 Advanced Filters;
 </Button>;
-</div>;
-</div>;
+</div>
+</div>
 </motion.div>;
 )}
 </AnimatePresence>;
-</div>;
+</div>
 );
 }<//div><///div>;

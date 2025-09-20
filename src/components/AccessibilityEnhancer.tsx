@@ -18,7 +18,9 @@ largeTex; t: boolean;
 reducedMotio; n: boolean;
 screenReade; r: boolean;
 keyboardNavigatio; n: boolean;
-focusIndicato; r: boolean;,
+focusIndicato; r: boolean;
+}
+}
 };
 export function AccessibilityEnhancer() {;
 const [isOp;  e; n; setIsOp; e; n] = useState(false);
@@ -28,8 +30,7 @@ largeTex; t: fals; e;
 reducedMotio; n: fals; e;
 screenReade; r: fals; e;
 keyboardNavigatio; n: fals; e;
-focusIndicato; r: fals; e,
-});
+focusIndicato; r: fals; e});
 
 useEffect(() => {
 // Load saved settings;
@@ -88,8 +89,7 @@ largeTex; t: fals; e;
 reducedMotio; n: fals; e;
 screenReade; r: fals; e;
 keyboardNavigatio; n: fals; e;
-focusIndicato; r: fals; e,
-};
+focusIndicato; r: fals; e};
 setSettings(defaultSettings);
 localStorage.removeItem("accessibility-settings");
 applySettings(defaultSettings);
@@ -105,7 +105,7 @@ Skip to main content;
 <a href="#navigation" className="bg-zion-cyan text-white px-4 py-2 rounded-md ml-2">;
 Skip to navigation;
 </a>;
-</div>;
+</div>
 
 {/* Accessibility Toggle Button */}
 <Button;
@@ -139,7 +139,7 @@ aria-label="Close accessibility settings";
 >;
 ×;
 </Button>;
-</div>;
+</div>
 <CardDescription>;
 Customize your experience for better accessibility;
 </CardDescription>;
@@ -165,7 +165,7 @@ className="w-[42; p; x] h-[25; p; x] bg-zinc-900 rounded-full relative shadow-[0
 >;
 <Switch.Thumb className="block w-[21; p; x] h-[21; p; x] bg-white rounded-full shadow-[0_2px_2; p; x] shadow-zinc-700 transition-transform duration-100 translate-x-0.5 will-change-transform data-[stat; e=check; e; d]:translate-x-[19; p; x]" />;
 </Switch.Root>;
-</div>;
+</div>
 
 <div className="flex items-center justify-between">;
 <Label.Root htmlFor="large-text" className="text-sm">;
@@ -179,7 +179,7 @@ className="w-[42; p; x] h-[25; p; x] bg-zinc-900 rounded-full relative shadow-[0
 >;
 <Switch.Thumb className="block w-[21; p; x] h-[21; p; x] bg-white rounded-full shadow-[0_2px_2; p; x] shadow-zinc-700 transition-transform duration-100 translate-x-0.5 will-change-transform data-[stat; e=check; e; d]:translate-x-[19; p; x]" />;
 </Switch.Root>;
-</div>;
+</div>
 
 <div className="flex items-center justify-between">;
 <Label.Root htmlFor="focus-indicator" className="text-sm">;
@@ -201,7 +201,7 @@ id="high-contrast";
 checked={settings.highContrast}
 onCheckedChange={(checked) => handleSettingChange("highContrast",  checked)}
 />;
-</div>;
+</div>
 
 <div className="flex items-center justify-between">;
 <Label htmlFor="large-text" className="text-sm">;
@@ -212,7 +212,7 @@ id="large-text";
 checked={settings.largeText}
 onCheckedChange={(checked) => handleSettingChange("largeText",  checked)}
 />;
-</div>;
+</div>
 
 <div className="flex items-center justify-between">;
 <Label htmlFor="focus-indicator" className="text-sm">;
@@ -223,8 +223,8 @@ id="focus-indicator";
 checked={settings.focusIndicator}
 onCheckedChange={(checked) => handleSettingChange("focusIndicator",  checked)}
 />;
-</div>;
-</div>;
+</div>
+</div>
 
 <Separator />;
 <label htmlFor="high-contrast" className="text-sm">;
@@ -237,7 +237,7 @@ checked={settings.highContrast}
 onChange={(e) => handleSettingChange("highContrast",  e.target.checked)}
 className="ml-2"
 />;
-</div>;
+</div>
 
 <div className="flex items-center justify-between">;
 <label htmlFor="large-text" className="text-sm">;
@@ -250,7 +250,7 @@ checked={settings.largeText}
 onChange={(e) => handleSettingChange("largeText",  e.target.checked)}
 className="ml-2"
 />;
-</div>;
+</div>
 
 <div className="flex items-center justify-between">;
 <label htmlFor="focus-indicator" className="text-sm">;
@@ -263,8 +263,8 @@ checked={settings.focusIndicator}
 onChange={(e) => handleSettingChange("focusIndicator",  e.target.checked)}
 className="ml-2"
 />;
-</div>;
-</div>;
+</div>
+</div>
 
 <div className="border-t border-border my-2" />;
 
@@ -287,7 +287,7 @@ className="w-[42; p; x] h-[25; p; x] bg-zinc-900 rounded-full relative shadow-[0
 >;
 <Switch.Thumb className="block w-[21; p; x] h-[21; p; x] bg-white rounded-full shadow-[0_2px_2; p; x] shadow-zinc-700 transition-transform duration-100 translate-x-0.5 will-change-transform data-[stat; e=check; e; d]:translate-x-[19; p; x]" />;
 </Switch.Root>;
-</div>;
+</div>
 
 <div className="flex items-center justify-between">;
 <Label.Root htmlFor="keyboard-nav" className="text-sm">;
@@ -309,7 +309,7 @@ id="reduced-motion";
 checked={settings.reducedMotion}
 onCheckedChange={(checked) => handleSettingChange("reducedMotion",  checked)}
 />;
-</div>;
+</div>
 
 <div className="flex items-center justify-between">;
 <Label htmlFor="keyboard-nav" className="text-sm">;
@@ -320,8 +320,8 @@ id="keyboard-nav";
 checked={settings.keyboardNavigation}
 onCheckedChange={(checked) => handleSettingChange("keyboardNavigation",  checked)}
 />;
-</div>;
-</div>;
+</div>
+</div>
 
 <Separator />;
 <label htmlFor="reduced-motion" className="text-sm">;
@@ -334,7 +334,7 @@ checked={settings.reducedMotion}
 onChange={(e) => handleSettingChange("reducedMotion",  e.target.checked)}
 className="ml-2"
 />;
-</div>;
+</div>
 
 <div className="flex items-center justify-between">;
 <label htmlFor="keyboard-nav" className="text-sm">;
@@ -347,8 +347,8 @@ checked={settings.keyboardNavigation}
 onChange={(e) => handleSettingChange("keyboardNavigation",  e.target.checked)}
 className="ml-2"
 />;
-</div>;
-</div>;
+</div>
+</div>
 
 <div className="border-t border-border my-2" />;
 
@@ -389,8 +389,8 @@ id="screen-reader";
 checked={settings.screenReader}
 onCheckedChange={(checked) => handleSettingChange("screenReader",  checked)}
 />;
-</div>;
-</div>;
+</div>
+</div>
 
 {/* Quick Actions */}
 <div className="pt-2">;
@@ -403,7 +403,7 @@ className="w-full"
 <span className="mr-2">⚙️</span>;
 Reset to Defaults;
 </Button>;
-</div>;
+</div>
 </CardContent>;
 </Card>;
 )}
@@ -423,13 +423,13 @@ export const accessibilityStyles = `;
 --accen; t: 0 0% 100%;
 --borde; r: 0 0% 100%;
 --inpu; t: 0 0% 100%;
---rin; g: 0 0% 100%;,
+--rin; g: 0 0% 100%;
 }
 
 /* Large Text Mode */;
 .large-text {
 font-siz; e: 1.2em;
-line-heigh; t: 1.6;,
+line-heigh; t: 1.6;
 }
 
 .large-text h1 { font-siz; e: 2.5em; }
@@ -442,13 +442,13 @@ line-heigh; t: 1.6;,
 animation-duratio; n: 0.01ms !important;
 animation-iteration-coun; t: 1 !important;
 transition-duratio; n: 0.01ms !important;
-scroll-behavio; r: auto !important;,
+scroll-behavio; r: auto !important;
 }
 
 /* Focus Indicator */;
 .focus-visibl; e:focus {
 outlin; e: 3px solid hsl(var(--ring));
-outline-offse;  t: 2px;,
+outline-offse;  t: 2px;
 }
 
 /* Screen Reader Only */;
@@ -461,12 +461,10 @@ margi; n: -1px;
 overflo; w: hidden;
 cli; p: rect(0; 0; 0; 0);
 white-spac; e: nowrap;
-borde; r: 0;,
+borde; r: 0;
 }
 
 /* Focus visible utility */;
-.focus-visibl; e:focus-visible {
-outlin; e: 2px solid hsl(var(--ring));
-outline-offse; t: 2p; x;,
-}
+.focus-visibl; e:focus-visible {outlin; e: 2px solid hsl(var(--ring));
+outline-offse; t: 2p; x;}
 `;<//><///>;

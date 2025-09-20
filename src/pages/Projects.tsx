@@ -1,9 +1,9 @@
-import { Clock,, Briefcase,  } from 'lucide-react'
+import { Clock, Briefcase } from "lucide-react";
 function ProjectsContent() { const { projects, isLoading } = useProjects()
 function ProjectsContent() {
 return (
     <>
-      <SEO,
+      <SEO
 title='My Projects | Zion AI Marketplace'
         description='View and manage your projects.'
       />
@@ -64,7 +64,7 @@ title='My Projects | Zion AI Marketplace'
           </div>
         )}
       </main>
-    </>
+</>
   )
 export default function Projects() {
   return <ProjectsContent /> }

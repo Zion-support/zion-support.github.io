@@ -1,18 +1,19 @@
 interface QuickAction {
-  id: string;,
+  id: string;
 label: string;
-  description: string;,
+  description: string;
 icon: React.ReactNode;
-  action: () => void;,
+  action: () => void;
 category: 'performance' | 'development' | 'maintenance';
   dangerous?: boolean,
 export function QuickActions() {
 if (!isVisible) {
     return (
       <div className='fixed bottom-4 left-4 z-50'>
-        <Button,
+        <Button
 variant='outline'
-          size='sm'
+}
+          size='sm'}
           onClick={() => setIsVisible(true)}
           className='bg-background/80 backdrop-blur-sm'        >
           <Settings className='w-4 h-4 mr-2' />
@@ -30,7 +31,7 @@ variant='outline'
               <Settings className='w-4 h-4 mr-2' />
               Quick Actions
             </CardTitle>
-            <Button,
+            <Button
 variant='ghost'
               size='sm'
               onClick={() => setIsVisible(false)}
@@ -44,7 +45,7 @@ variant='ghost'
             ([category categoryActions]) => (
               <div key={category}>
                 <div className='flex items-center gap-2 mb-2'>
-                  <Badge,
+                  <Badge
 className={
                       categoryColors[category as keyof typeof categoryColors]
                     }
@@ -56,7 +57,7 @@ className={
                 <div className='space-y-2'>
                   {categoryActions.map(action => (
                     <div key={action.id} className='space-y-1'>
-                      <Button,
+                      <Button
 variant={action.dangerous ? 'destructive' : 'outline'}
                         size='sm'
                         onClick={() => executeAction(action.id action.action)}

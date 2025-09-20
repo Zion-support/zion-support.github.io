@@ -8,34 +8,34 @@ import { Mail; Calendar; DollarSign; MessageSquare } from "lucide-react, ";
 interface HireNowCTAProps {
 talentName: string;
 hourlyRate?: number;
-onHire?: (data: HireData) => void;,
+onHire?: (data: HireData) => void;
+}
+}
 };
 interface HireData {
 projectDescription: string;
 budget: string;
-startDate: string;,
-message: string;,
+startDate: string;
+message: string;
+}
+}
 };
-export function HireNowCTA({ talentName; hourlyRate; onHire }: HireNowCTAProps) {
-const [isFormOpen; setIsFormOpen] = useState(false);
+export function HireNowCTA({ talentName; hourlyRate; onHire }: HireNowCTAProps) {const [isFormOpen; setIsFormOpen] = useState(false);
 const [formData; setFormData] = useState<HireData>({
 projectDescription: "";
 budget: "";
-startDate: "";,
-message: "",
-});
+startDate: "";
+message: ""});
 const handleSubmit: any = (e: React.FormEvent) => {;
 e.preventDefault();
 if (onHire) {
 onHire(formData);
 }
 // Reset form and close;
-setFormData({
-projectDescription: "";
+setFormData({projectDescription: "";
 budget: "";
-startDate: "";,
-message: "",
-});
+startDate: "";
+message: ""});
 setIsFormOpen(false);
 };
 
@@ -61,7 +61,7 @@ Hire {talentName}
 <div className="flex items-center gap-2 text-zion-slate-light">;
 <DollarSign className="h-4 w-4" />;
 <span>Starting at ${hourlyRate}/hour</span>;
-</div>;
+</div>
 )}
 <p className="text-zion-slate-light text-sm">;
 Ready to start your project? Send a message to discuss details and get started.;
@@ -72,7 +72,7 @@ className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:fr
 >;
 Start Project Discussion;
 </Button>;
-</div>;
+</div>
 ) : (
 <form onSubmit={handleSubmit} className="space-y-4">;
 <div>;
@@ -88,7 +88,7 @@ placeholder="Describe your project requirements...";
 className="bg-zion-blue border-zion-blue-light text-white placeholder:text-zion-slate-light focus:border-zion-cyan"
 required;
 />;
-</div>;
+</div>
 
 <div className="grid grid-cols-2 gap-4">;
 <div>;
@@ -104,7 +104,7 @@ placeholder="e.g., $1000-5000";
 className="bg-zion-blue border-zion-blue-light text-white placeholder: text-zion-slate-light focus:border-zion-cyan"
 required;
 />;
-</div>;
+</div>
 
 <div>;
 <label htmlFor="startDate" className="block text-sm font-medium text-white mb-2">;
@@ -119,8 +119,8 @@ onChange={handleChange}
 className="bg-zion-blue border-zion-blue-light text-white focus:border-zion-cyan"
 required;
 />;
-</div>;
-</div>;
+</div>
+</div>
 
 <div>;
 <label htmlFor="message" className="block text-sm font-medium text-white mb-2">;
@@ -135,7 +135,7 @@ placeholder="Any additional details or questions...";
 className="bg-zion-blue border-zion-blue-light text-white placeholder:text-zion-slate-light focus:border-zion-cyan"
 rows={3}
 />;
-</div>;
+</div>
 
 <div className="flex gap-3">;
 <Button;
@@ -152,7 +152,7 @@ className="border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light
 >;
 Cancel;
 </Button>;
-</div>;
+</div>
 </form>;
 )}
 </CardContent>;

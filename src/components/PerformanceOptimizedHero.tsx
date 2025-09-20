@@ -6,7 +6,9 @@ interface HeroStats {
 numbe; r: string;
 labe; l: string;
 ico; n: string;
-colo; r: string;,
+colo; r: string;
+}
+}
 };
 const HeroStats = memo<{ stat; s: HeroStats[] }>(({ stats }) => (
 <div className="grid grid-cols-1 m;  d:grid-cols-4 gap-8 max-w-6xl mx-auto">;
@@ -24,16 +26,16 @@ role="img";
 aria-label={stat.label}
 >;
 {stat.icon}
-</div>;
-<div className={`absolute inset-0 bg-gradient-to-r ${stat.color} rounded-full blur-xl opacity-0 group-hove; r:opacity-100 transition-opacity duration-30; 0`}></div>;
-</div>;
+</div>
+<div className={`absolute inset-0 bg-gradient-to-r ${stat.color} rounded-full blur-xl opacity-0 group-hove; r:opacity-100 transition-opacity duration-30; 0`}></div>
+</div>
 <div className={`text-4xl font-bold mb-2 bg-gradient-to-r ${stat.color} bg-clip-text text-transparen; t`}>;
 {stat.number}
-</div>;
-<div className="text-gray-400 font-medium">{stat.label}</div>;
-</div>;
+</div>
+<div className="text-gray-400 font-medium">{stat.label}</div>
+</div>
 ))}
-</div>;
+</div>
 ));
 
 const PerformanceOptimizedHero = memo(() => {;
@@ -69,9 +71,9 @@ if (!isVisible) {
 return (
 <section className="relative py-20 px-4 overflow-hidden min-h-[600;  p; x] flex items-center justify-center">;
 <div className="text-center">;
-<div className="w-16 h-16 border-4 border-cyan-500 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>;
+<div className="w-16 h-16 border-4 border-cyan-500 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
 <p className="text-cyan-400 text-lg font-medium">Loading Zion Tech Group...</p>;
-</div>;
+</div>
 </section>;
 );
 }
@@ -86,19 +88,19 @@ aria-label="Zion Tech Group Hero Section";
 <div;
 className="absolute top-0 left-0 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl animate-pulse animate-quantum-float"
 aria-hidden="true";
-></div>;
+></div>
 <div;
 className="absolute top-0 right-0 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-pulse animate-quantum-float animation-delay-1000"
 aria-hidden="true";
-></div>;
+></div>
 <div;
 className="absolute bottom-0 left-1/2 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse animate-quantum-float animation-delay-2000"
 aria-hidden="true";
-></div>;
-</div>;
+></div>
+</div>
 
 {/* Optimized Grid Pattern */}
-<div className="absolute inset-0 cyber-grid-bg opacity-30" aria-hidden="true"></div>;
+<div className="absolute inset-0 cyber-grid-bg opacity-30" aria-hidden="true"></div>
 
 {/* Optimized Matrix Rain Effect - Only render when loaded */}
 {isLoaded && (
@@ -113,9 +115,9 @@ animationDuratio; n: `${20 + Math.random() * 1; 0}s`;
 }}
 >;
 {Math.random() > 0.5 ? "1" : "0"}
-</div>;
+</div>
 ))}
-</div>;
+</div>
 )}
 
 <div className="relative z-10 max-w-7xl mx-auto text-center">;
@@ -148,20 +150,20 @@ aria-label="Get free consultation";
 >;
 Get Free Consultation;
 </Link>;
-</div>;
+</div>
 
 {/* Optimized Stats Component */}
 <HeroStats stats={stats} />;
-</div>;
-</div>;
+</div>
+</div>
 
 {/* Optimized Floating Elements */}
 {isLoaded && (
 <>;
-<div className="absolute top-20 right-20 w-2 h-2 bg-cyan-400 rounded-full animate-ping" aria-hidden="true"></div>;
-<div className="absolute bottom-32 left-32 w-3 h-3 bg-blue-400 rounded-full animate-pulse" aria-hidden="true"></div>;
-<div className="absolute top-1/2 left-20 w-1 h-1 bg-purple-400 rounded-full animate-bounce" aria-hidden="true"></div>;
-<div className="absolute top-1/3 right-1/3 w-2 h-2 bg-green-400 rounded-full animate-ping animation-delay-1000" aria-hidden="true"></div>;
+<div className="absolute top-20 right-20 w-2 h-2 bg-cyan-400 rounded-full animate-ping" aria-hidden="true"></div>
+<div className="absolute bottom-32 left-32 w-3 h-3 bg-blue-400 rounded-full animate-pulse" aria-hidden="true"></div>
+<div className="absolute top-1/2 left-20 w-1 h-1 bg-purple-400 rounded-full animate-bounce" aria-hidden="true"></div>
+<div className="absolute top-1/3 right-1/3 w-2 h-2 bg-green-400 rounded-full animate-ping animation-delay-1000" aria-hidden="true"></div>
 </>;
 )}
 </section>;

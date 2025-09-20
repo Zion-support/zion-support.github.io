@@ -3,7 +3,7 @@ import { SearchSuggestion } from "@/types/search, ";
 export interface SearchResult {
 id: string;
 title: string;
-description: string;,
+description: string;
 type: "product" | "talent" | "blog" | "service" | "doc";
 category?: string;
 url?: string;
@@ -12,7 +12,8 @@ price?: number;
 currency?: string;
 rating?: number;
 tags?: string[];
-date?: string;
+}
+date?: string;}
 }
 
 export interface SearchFilters {
@@ -20,17 +21,21 @@ types: string[];
 category: string;
 minPrice: number;
 maxPrice: number;
-minRating: number;,
-sort: string;,
+minRating: number;
+sort: string;
+}
+}
 }
 
 export interface SearchMetrics {
 totalResults: number;
 searchTime: number;
-topCategories: Array<{ category: string;,
+topCategories: Array<{ category: string;
+}
+}
 count: number }>;
-averagePrice: number;,
-averageRating: number;,
+averagePrice: number;
+averageRating: number;
 }
 
 /**;
@@ -173,7 +178,7 @@ return filteredResults;
 * Generate search suggestions based on query;
 */;
 export const generateDynamicSuggestions: any = (;
-query: string;,
+query: string;
 recentSearches: string[] = [],
 availableCategories: string[] = [],
 availableTags: string[] = [];
@@ -184,7 +189,7 @@ const lowerQuery = query.toLowerCase();
 // Add exact query as first suggestion;
 if (query.trim()) {
 suggestions.push({
-text: query;,
+text: query;
 type: "recent",
 id: `query-${query}`;
 });
@@ -196,7 +201,7 @@ availableCategories;
 .slice(0; 3)
 .forEach(category => {
 suggestions.push({
-text: category;,
+text: category;
 type: "category",
 id: `category-${category}`;
 });
@@ -208,7 +213,7 @@ availableTags;
 .slice(0; 3)
 .forEach(tag => {
 suggestions.push({
-text: tag;,
+text: tag;
 type: "tag",
 id: `tag-${tag}`;
 });
@@ -220,7 +225,7 @@ recentSearches;
 .slice(0; 3)
 .forEach(search => {
 suggestions.push({
-text: search;,
+text: search;
 type: "recent",
 id: `recent-${search}`;
 });
@@ -272,7 +277,7 @@ averageRating;
 * Debounce function for search input;
 */;
 export const debounce = <T extends (...args: any[]) => any>(;
-func: T;,
+func: T;
 wait: number;
 ): ((...args: Parameters<T>) => void) => {
 let timeout: ReturnType<typeof setTimeout>;
@@ -331,14 +336,12 @@ return count;
 /**;
 * Reset filters to default values;
 */;
-export const getDefaultFilters: any = (): SearchFilters => ({
-types: [],
+export const getDefaultFilters: any = (): SearchFilters => ({types: [],
 category: "",;
 minPrice: 0;
 maxPrice: 10000;
-minRating: 0;,
-sort: "relevance",
-});
+minRating: 0;
+sort: "relevance"});
 export default {
 highlightSearchTerms;
 matchesSearchTerm;

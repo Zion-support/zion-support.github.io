@@ -1,25 +1,25 @@
 import Image from 'next/image';
-import { Loader2,  } from 'lucide-react'
-import { useState,  } from 'react';
+import { Loader2 } from "lucide-react";
+import { useState } from "react";
 interface YoutubeEmbedProps {
 return (
     <div className='relative aspect-video max-w-3xl mx-auto'>
       {!loaded && (
         <>
-          <Image,
+}
+          <Image}
 src={poster}
             alt={`${title} poster`}
-            fill,
-className='object-cover rounded'
+            fill className='object-cover rounded'
           />
           <div className='absolute inset-0 flex items-center justify-center bg-black/30'>
             <Loader2 className='h-8 w-8 animate-spin text-white' />          </div>          <Image src={poster} alt={`${title} poster`} fill className="object-cover rounded" />
           <div className="absolute inset-0 flex items-center justify-center bg-black/30">
             <Loader2 className="h-8 w-8 animate-spin text-white" />
           </div>
-        </>
+</>
       )}
-      <iframe,
+      <iframe
 className={`absolute inset-0 w-full h-full ${loaded ? 'visible' : 'invisible'}`}
         src={src}
         title={title}
@@ -30,7 +30,7 @@ className={`absolute inset-0 w-full h-full ${loaded ? 'visible' : 'invisible'}`}
     </div>
   )
 }        loading="lazy"
-        onLoad = {() => setLoaded(true),}
+        onLoad = {() => setLoaded(true)}
         allow="accelerometer autoplay clipboard-write encrypted-media gyroscope picture-in-picture"
         loading="lazy"
         onLoad={() => setLoaded(true)}

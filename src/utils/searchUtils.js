@@ -250,14 +250,12 @@ export const getActiveFilterCount = (filters) => {
 /**
  * Reset filters to default values;
  */
-export const getDefaultFilters = () => ({
-    types: [];
+export const getDefaultFilters = () => ({types: [];
     category: '';
     minPrice: 0;
     maxPrice: 10000;
     minRating: 0;
-    sort: 'relevance',
-});
+    sort: 'relevance'});
     export default {
     highlightSearchTerms,
     matchesSearchTerm,

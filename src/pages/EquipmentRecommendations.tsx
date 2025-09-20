@@ -1,15 +1,15 @@
-import { Loader2,  } from 'lucide-react'
+import { Loader2 } from "lucide-react";
 import Link from 'next/link';
-import { ErrorState,  } from '@/components/jobs/applications';
+import { ErrorState } from "@/components/jobs/applications";
 export default function EquipmentRecommendations() {
-useEffect((,) => {
+useEffect(() => {
     if (isAuthenticated && user?.id) {
       setLoading(true);
       fetchRecommendations(user.id)
         .then(setListings)
         .catch(() => setError(true))
-        .finally(() => setLoading(false)) }        .catch((,) => setError(true))
-        .finally((,) => setLoading(false))
+        .finally(() => setLoading(false)) }        .catch(() => setError(true))
+        .finally(() => setLoading(false))
         .finally(() => setLoading(false))
     }
   }, [isAuthenticated user])
@@ -24,7 +24,7 @@ useEffect((,) => {
             <DialogTitle>Authentication required</DialogTitle>
           </DialogHeader>
           <p>Please sign in to get personalized AI picks.</p>
-          <Button,
+          <Button
 asChild
             className='mt-4 bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white'
           >
@@ -51,7 +51,7 @@ asChild
         {listings.map(listing => (
           <div key={listing.id} className='break-inside-avoid mb-4'>            <ProductListingCard listing={listing} />      {error && <ErrorState error="Failed to load recommendations." />}
       <div className="columns-1 sm:columns-2 md:columns-3 lg:columns-4 gap-4 space-y-4">
-        {listings.map((listing,) => (
+        {listings.map((listing) => (
           <div key={listing.id} className="break-inside-avoid mb-4">
           </div>
         ))}

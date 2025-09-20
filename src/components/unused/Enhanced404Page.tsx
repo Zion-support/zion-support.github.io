@@ -5,13 +5,10 @@ import { motion } from "framer-motion, ";
 import { HomeIcon;
 MagnifyingGlassIcon;
 ArrowLeftIcon;
-ExclamationTriangleIcon,
-} from "@heroicons/react/24/outline, ";
+ExclamationTriangleIcon } from "@heroicons/react/24/outline, ";
 
-interface Enhanced404PageProps {
-requestedPath?: string;
-suggestedRoutes?: string[],
-};
+interface Enhanced404PageProps {requestedPath?: string;}
+suggestedRoutes?: string[]};
 export const Enhanced404Page: React.FC<Enhanced404PageProps> = ({ ;
 requestedPath;
 suggestedRoutes = [];
@@ -43,8 +40,8 @@ className="mb-8"
 >;
 <div className="relative">;
 <ExclamationTriangleIcon className="w-32 h-32 text-red-400 mx-auto" />;
-<div className="absolute inset-0 bg-red-400/20 rounded-full blur-3xl"></div>;
-</div>;
+<div className="absolute inset-0 bg-red-400/20 rounded-full blur-3xl"></div>
+</div>
 </motion.div>;
 
 {/* Main Error Message */}
@@ -153,7 +150,7 @@ route.charAt(1).toUpperCase() + route.slice(2).replace(/-/g, " ")
 </Link>;
 </motion.div>;
 ))}
-</div>;
+</div>
 </motion.div>;
 
 {/* Help Section */}
@@ -174,7 +171,7 @@ Contact our support team;
 </Link>;
 </motion.div>;
 </motion.div>;
-</div>;
+</div>
 );
 };
 

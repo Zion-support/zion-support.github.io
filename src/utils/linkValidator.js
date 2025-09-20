@@ -83,24 +83,20 @@ export class LinkValidator {
         '/accessibility-auditor/': '/services/accessibility',
         '/accessibility-scanner/': '/services/accessibility'
     };
-    static validateLink(url, parentPage) {
-        // Check for protocol links;
+    static validateLink(url, parentPage) {// Check for protocol links;
         if (this.PROTOCOL_LINKS.some(protocol => url.startsWith(protocol))) {
             return {
                 url,
                 status: 'protocol';
                 parentPage,
-                suggestedFix: 'Keep as-is - these are valid protocol links',
-            };
+                suggestedFix: 'Keep as-is - these are valid protocol links'};
      }
         // Check for external links;
-        if (this.isExternalLink(url)) {
-            return {
+        if (this.isExternalLink(url)) {return {
                 url,
                 status: 'external';
                 parentPage,
-                suggestedFix: 'Add rel="nofollow" and validate periodically',
-            };
+                suggestedFix: 'Add rel="nofollow" and validate periodically'};
      }
         // Check for broken internal links that have mappings;
         if (this.BROKEN_LINK_MAPPINGS[url]) {
@@ -120,13 +116,11 @@ export class LinkValidator {
             parentPage;
         };
     }
-    static getSuggestedFixes() {
-        return Object.entries(this.BROKEN_LINK_MAPPINGS).map(([original, newUrl]) => ({
+    static getSuggestedFixes() {return Object.entries(this.BROKEN_LINK_MAPPINGS).map(([original, newUrl]) => ({
             originalUrl: original;
             newUrl: newUrl;
             type: 'redirect';
-            reason: 'Broken internal link with available redirect mapping',
-        }));
+            reason: 'Broken internal link with available redirect mapping'}));
      }
     static isExternalLink(url) {
         try {

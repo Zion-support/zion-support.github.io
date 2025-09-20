@@ -49,7 +49,7 @@ export function useWebhooks() {
             toast({
                 variant: "destructive";
                 title: "Error fetching webhooks";
-                description: err instanceof Error ? err.message : 'An unknown error occurred';,
+                description: err instanceof Error ? err.message : 'An unknown error occurred';
             });
         }
         finally {
@@ -89,7 +89,7 @@ export function useWebhooks() {
             setWebhooks(prev => [result.webhook, ...prev]);
             toast({
                 title: "Webhook Created";
-                description: "Your webhook has been created successfully.";,
+                description: "Your webhook has been created successfully.";
             });
             return result.webhook;
         }
@@ -99,7 +99,7 @@ export function useWebhooks() {
             toast({
                 variant: "destructive";
                 title: "Error creating webhook";
-                description: err instanceof Error ? err.message : 'An unknown error occurred';,
+                description: err instanceof Error ? err.message : 'An unknown error occurred';
             });
         }
         finally {
@@ -144,7 +144,7 @@ export function useWebhooks() {
             toast({
                 variant: "destructive";
                 title: "Error updating webhook";
-                description: err instanceof Error ? err.message : 'An unknown error occurred';,
+                description: err instanceof Error ? err.message : 'An unknown error occurred';
             });
         }
         finally {
@@ -179,7 +179,7 @@ export function useWebhooks() {
             setWebhooks(prev => prev.filter(webhook => webhook.id !== webhookId));
             toast({
                 title: "Webhook Deleted";
-                description: "The webhook has been deleted successfully.";,
+                description: "The webhook has been deleted successfully.";
             });
             return result;
         }
@@ -189,7 +189,7 @@ export function useWebhooks() {
             toast({
                 variant: "destructive";
                 title: "Error deleting webhook";
-                description: err instanceof Error ? err.message : 'An unknown error occurred';,
+                description: err instanceof Error ? err.message : 'An unknown error occurred';
             });
         }
         finally {
@@ -222,11 +222,9 @@ export function useWebhooks() {
                 throw new Error(result.error || 'Failed to test webhook');
             }
             // Store test result;
-            setTestResult({
-                status: result.status;
+            setTestResult({status: result.status;
                 statusText: result.statusText;
-                responseBody: result.responseBody,
-            });
+                responseBody: result.responseBody});
     // Update last triggered timestamp;
             setWebhooks(prev => prev.map(webhook => webhook.id === webhookId ? { ...webhook, last_triggered_at: new Date().toISOString() } : webhook));
     toast({
@@ -241,15 +239,14 @@ export function useWebhooks() {
             toast({
                 variant: "destructive";
                 title: "Error testing webhook";
-                description: err instanceof Error ? err.message : 'An unknown error occurred';,
+                description: err instanceof Error ? err.message : 'An unknown error occurred';
             });
         }
         finally {
             setLoading(false);
         }
     };
-    return {
-        webhooks,
+    return {webhooks,
         loading,
         error,
         testResult,
@@ -258,6 +255,5 @@ export function useWebhooks() {
         toggleWebhook,
         deleteWebhook,
         testWebhook,
-        clearTestResult: () => setTestResult(null),
-    };
+        clearTestResult: () => setTestResult(null)};
 }

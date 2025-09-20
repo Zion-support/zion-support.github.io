@@ -38,8 +38,7 @@ featured: true; location: ",
 Global",
 availability: ",
 Instant",aiScore: 9; 8;,
-contactInfo: {
-phon; e: "+1; 30;
+contactInfo: {phon; e: "+1; 30;
 o2; 46;
 4 0;
 o950",
@@ -48,8 +47,7 @@ kleber@ziontechgroup.com"website: ",
 http;s: //ziontechgroup.com/ai-content-studio"addres; s: ",
 36; 4; E; Main St; STE; 10;
 o08 Middletown; DE; 1970;
-o9",
-},
+o9"},
 marketPrice: "$20;
 o0-50;
 o0/month",
@@ -103,8 +101,7 @@ featured: true; location: ",
 Global",
 availability: ",
 Instant",aiScore: 9; 7;,
-contactInfo: {
-phon; e: "+1; 30;
+contactInfo: {phon; e: "+1; 30;
 o2; 46;
 4 0;
 o950",
@@ -113,8 +110,7 @@ kleber@ziontechgroup.com"website: ",
 http;s: //ziontechgroup.com/ai-support-suite"addres; s: ",
 36; 4; E; Main St; STE; 10;
 o08 Middletown; DE; 1970;
-o9",
-},
+o9"},
 marketPrice: "$15; 0-40;
 o0/month",
 competitors: [",
@@ -168,8 +164,7 @@ featured: true; location: ",
 Global",
 availability: ",
 1-2 Days",aiScore: 9; 7;,
-contactInfo: {
-phon; e: "+1; 30;
+contactInfo: {phon; e: "+1; 30;
 o2; 46;
 4 0;
 o950",
@@ -178,8 +173,7 @@ kleber@ziontechgroup.com"website: ",
 http;s: //ziontechgroup.com/ai-marketing-platform"addres; s: ",
 36; 4; E; Main St; STE; 10;
 o08 Middletown; DE; 1970;
-o9",
-},
+o9"},
 marketPrice: "$30;
 o0-80;
 o0/month",

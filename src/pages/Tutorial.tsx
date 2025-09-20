@@ -1,21 +1,21 @@
-import Link from 'next/link'
-import { useRouter,  } from 'next/router'
-import { TUTORIALS,  } from '@/data/tutorials'
-import { SEO,  } from '@/components/SEO'
-import { Button,  } from '@/components/ui/button'
-import { ArrowLeft,  } from 'lucide-react'
+import Link from 'next/link';
+import { useRouter } from "next/router";
+import { TUTORIALS } from "@/data/tutorials";
+import { SEO } from "@/components/SEO";
+import { Button } from "@/components/ui/button";
+import { ArrowLeft } from "lucide-react";
 import ReactMarkdown from "react-markdown";
 import type { Tutorial as TutorialType } from "@/types/tutorial";
 interface TutorialPageProps {
   tutorial?: TutorialType,
 export default function Tutorial({
   tutorial: initialTutorial;
-}: TutorialPageProps) {
-  const router = useRouter()
+}
+}
+}: TutorialPageProps) {const router = useRouter()
   const slug = router.query.slug as string | undefined,
 const tutorial = initialTutorial |TUTORIALS.find(t => t.slug === slug);interface TutorialPageProps {
-  tutorial?: TutorialType,
-}
+  tutorial?: TutorialType}
 export default function Tutorial({ tutorial: initialTutorial }: TutorialPageProps) {
 if (!tutorial) {
     return (
@@ -29,7 +29,7 @@ if (!tutorial) {
       <SEO title={tutorial.title} description={tutorial.excerpt} />
       <div className='min-h-screen bg-zion-blue pt-12 pb-20 px-4'>
         <div className='container mx-auto max-w-3xl'>
-          <Button,
+          <Button
 variant='outline'
             className='mb-8 border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white'
             asChild
@@ -55,6 +55,6 @@ variant='outline'
           )}
         </div>
       </div>
-    </>
+</>
   )
 }

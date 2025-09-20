@@ -1,9 +1,9 @@
 interface ResourceItem {
-  id: string;,
+  id: string;
 title: string;
-  description: string;,
+  description: string;
 type: 'image' | 'video' | 'document' | 'link';
-  icon: JSX.Element;,
+  icon: JSX.Element;
 url: string,
 export function PartnerResources() {
   const resources: ResourceItem[] = [
@@ -20,7 +20,8 @@ return (
         <CardContent>
           <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-4'>
             {resources.map(resource => (
-              <Card,
+}
+              <Card}
 key={resource.id}
                 className='bg-zion-blue border-zion-blue-light overflow-hidden'
               >
@@ -32,7 +33,7 @@ key={resource.id}
                   <p className='text-xs text-zion-slate-light mb-4'>
                     {resource.description}
                   </p>
-                  <Button,
+                  <Button
 onClick={() => handleDownload(resource)}
                     size='sm'
                     variant='outline'

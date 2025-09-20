@@ -7,13 +7,15 @@ import { TalentProfile } from "@/types/talent, ";
 export interface TalentGridProps {;
 talents: TalentProfile[];
 isLoading: boolean;
-onTalentClick: (id: string) => void;,
+onTalentClick: (id: string) => void;
 isAuthenticated: boolean;
 viewProfile?: (id: string) => void;
 // unused but kept for backward compatibility;
 clearFilters?: () => void;
 handleBook?: (talent: TalentProfile) => void;
-handleMessage?: (talent: TalentProfile) => void;,
+handleMessage?: (talent: TalentProfile) => void;
+}
+}
 };
 export function TalentGrid({ ;
 talents;
@@ -56,7 +58,7 @@ className="px-4 py-2 bg-zion-purple text-white rounded hover: bg-zion-purple-dar
 Clear Filters;
 </button>;
 )}
-</div>;
+</div>
 }
 
 return (
@@ -70,7 +72,7 @@ onBook={() => handleBookInternal(talent)}
 isAuthenticated={isAuthenticated}
 />;
 ))}
-</div>;
+</div>
 );
 }
 <//div><///div>;

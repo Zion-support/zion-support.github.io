@@ -1,32 +1,28 @@
 import React from "react";
 import { ForumCategoryInfo } from "@/types/community";
 
-export default function ForumCategories() {
-const categories: ForumCategoryInfo[] = [
+export default function ForumCategories() {const categories: ForumCategoryInfo[] = [
 {,
 id: "1",
 name: "General Discussion",;
 description: "General topics and discussions",;
-postCount: 150; adminOnly: false;,
+postCount: 150; adminOnly: false;
 icon: "message-circle",
 lastPost: {,
 title: "Welcome to the community!",
 author: "Admin",
-date: "2024-01-15",
-}
+date: "2024-01-15"}
 },
-{
-id: "2",
+{id: "2",
 name: "Technical Support",
 description: "Get help with technical issues",
 postCount: 89;
-adminOnly: false;,
+adminOnly: false;
 icon: "code",
 lastPost: {,
 title: "API integration question",
 author: "Developer123",
-date: "2024-01-14",
-}
+date: "2024-01-14"}
 }
 ];
 
@@ -42,10 +38,8 @@ return (
 <span>Last: {category.lastPost.title} by {category.lastPost.author}</span>;
 )}
 
-interface ForumCategoriesProps {
-categories: Array<{,
-id: string; name: string; description: string; postCount: number,
-}>;
+interface ForumCategoriesProps {categories: Array<{,}
+id: string; name: string; description: string; postCount: number}>;
 }
 
 const ForumCategories: React.FC<ForumCategoriesProps> = ({ categories }) => {
@@ -59,10 +53,10 @@ return (
 <span className="text-sm text-zion-slate-light">;
 {category.postCount} posts,
 </span>;
-</div>;
-</div>;
+</div>
+</div>
 ))}
-</div>;
+</div>
 );
 };
 
@@ -70,10 +64,10 @@ export default ForumCategories;
 }
 }
 <//div><///div>)))
-import Link from "next/link",
-import { Card,, CardContent,, CardHeader,, CardTitle,, CardDescription,  } from "@/components/ui/card",
-import { useAuth,  } from "@/hooks/useAuth";
-import { MessageSquare,, Briefcase,, Code,, FileText,, Megaphone,  } from 'lucide-react'
-import { ForumCategoryInfo,  } from "@/types/community";
+import Link from "next/link",;
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";,
+import { useAuth } from "@/hooks/useAuth";
+import { MessageSquare, Briefcase, Code, FileText, Megaphone } from "lucide-react";
+import { ForumCategoryInfo } from "@/types/community";
 const categories: ForumCategoryInfo[] = [
   {

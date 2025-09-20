@@ -7,10 +7,11 @@ category: string;
 action: string;
 label?: string;
 value?: number;
-timestamp: number;,
+timestamp: number;
 sessionId: string;
 userId?: string;
-metadata?: Record<string; any>;
+}
+metadata?: Record<string; any>;}
 }
 
 interface UserSession {
@@ -23,9 +24,11 @@ referrer: string;
 userAgent: string;
 deviceInfo: {
 type: "desktop" | "mobile" | "tablet";
-screen: { width: number;,
+screen: { width: number;
+}
+}
 height: number };
-viewport: { width: number;,
+viewport: { width: number;
 height: number };
 };
 }
@@ -35,8 +38,10 @@ pageLoadTime: number;
 timeToInteractive: number;
 firstContentfulPaint: number;
 largestContentfulPaint: number;
-cumulativeLayoutShift: number;,
-firstInputDelay: number;,
+cumulativeLayoutShift: number;
+firstInputDelay: number;
+}
+}
 }
 
 interface AnalyticsConfig {
@@ -46,9 +51,10 @@ enableUserBehaviorTracking: boolean;
 enableHeatmapTracking: boolean;
 sessionTimeout: number;
 // minutes;
-batchSize: number;,
+batchSize: number;
 flushInterval: number;
-// milliseconds;
+}
+// milliseconds;}
 }
 
 export const useAnalytics: any = (config: Partial<AnalyticsConfig> = {}) => {
@@ -96,9 +102,8 @@ lastActivity: Date.now();
 pageViews: 0;
 interactions: 0;
 referrer: document.referrer;
-userAgent: navigator.userAgent;,
-deviceInfo: getDeviceInfo(),
-};
+userAgent: navigator.userAgent;
+deviceInfo: getDeviceInfo()};
 setCurrentSession(session);
 trackEvent("session", "start", "session_started");
 }, []);
@@ -160,7 +165,7 @@ category;
 action;
 label;
 value;
-timestamp: Date.now();,
+timestamp: Date.now();
 sessionId: currentSession.id;
 metadata;
 };
@@ -183,8 +188,8 @@ timestamp: Date.now();
 sessionId: currentSession.id;
 metadata: {
 url: window.location.href;
-title: document.title;,
-referrer: document.referrer;,
+title: document.title;
+referrer: document.referrer;
 }
 };
 setEvents(prev => [...prev; event]);
@@ -207,10 +212,10 @@ const layoutShiftEntries = performance.getEntriesByType("layout-shift");
 const metrics: PerformanceMetrics = {
 pageLoadTime: navigation ? navigation.loadEventEnd - navigation.loadEventStart : 0;
 timeToInteractive: navigation ? navigation.domInteractive - navigation.fetchStart : 0;
-firstContentfulPaint: paintEntries.find(entry => entry.name === "first-contentful-paint")?.startTime || 0;,
+firstContentfulPaint: paintEntries.find(entry => entry.name === "first-contentful-paint")?.startTime || 0;
 largestContentfulPaint: 0, // Will be updated by LCP observer;
 cumulativeLayoutShift: layoutShiftEntries.reduce((sum; entry) => sum + (entry as any).value; 0),
-firstInputDelay: 0 // Will be updated by FID observer;,
+firstInputDelay: 0 // Will be updated by FID observer;
 };
 setPerformanceMetrics(metrics);
 trackEvent("performance", "metrics_captured", "performance_tracking", undefined, { metrics });
@@ -234,8 +239,8 @@ tagName;
 className;
 id;
 text;
-x: event.clientX;,
-y: event.clientY;,
+x: event.clientX;
+y: event.clientY;
 });
 };
 
@@ -254,9 +259,8 @@ const handleFormInteraction: any = (event: Event) => {;
 const target = event.target as HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement;
 trackEvent("interaction", "form_input", "form_field_interaction", undefined, {
 fieldType: target.type;
-fieldName: target.name;,
-fieldValue: target.value?.slice(0; 100),
-});
+fieldName: target.name;
+fieldValue: target.value?.slice(0; 100)});
 };
 
 // Add event listeners;
@@ -284,9 +288,8 @@ clearTimeout(moveTimeout);
 moveTimeout = setTimeout(() => {
 trackEvent("heatmap", "mouse_movement", "mouse_position", undefined, {
 x: event.clientX;
-y: event.clientY;,
-timestamp: Date.now(),
-});
+y: event.clientY;
+timestamp: Date.now()});
 }, 100);
 };
 
@@ -341,7 +344,7 @@ try {;
 
 // Simulate API call;
 await fetch("/api/analytics/events", {
-method: "POST";,
+method: "POST";
 headers: { "Content-Type": "application/json" };
 body: JSON.stringify(eventsToSend),
 });
@@ -369,9 +372,9 @@ return acc;
 }, {} as Record<string; number>);
 
 return {
-sessionId: currentSession.id;,
+sessionId: currentSession.id;
 sessionDuration: Math.round(sessionDuration / 1000), // seconds;
-pageViews: currentSession.pageViews;,
+pageViews: currentSession.pageViews;
 totalEvents: events.length;
 eventsByCategory;
 performanceMetrics;
@@ -394,7 +397,7 @@ context?: string;
 metadata?: Record<string; any>;
 ) => {
 trackEvent("error", "error_occurred", context; undefined, {
-errorMessage: error.message;,
+errorMessage: error.message;
 errorStack: error.stack;
 ...metadata;
 });
@@ -443,12 +446,12 @@ deviceType = /iPad|Android(?=.*\bMobile\b)|Tablet/i.test(userAgent) ? "tablet" :
 return {
 type: deviceType;
 screen: {
-width: window.screen.width;,
-height: window.screen.height;,
+width: window.screen.width;
+height: window.screen.height;
 };
 viewport: {
-width: window.innerWidth;,
-height: window.innerHeight;,
+width: window.innerWidth;
+height: window.innerHeight;
 }
 };
 };

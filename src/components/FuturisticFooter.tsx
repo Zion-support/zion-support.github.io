@@ -43,8 +43,7 @@
             viewport={{ once: true }}
             transition={{ duration: 0.6 staggerChildren: 0.1 }}
           >
-</motion> <motion.div,
-key={stat.label}"
+</motion> <motion.div key={stat.label}"
                 className="text-center"";                initial={{ opacity: 0 y: 20 }}
                 whileInView={{ opacity: 1 y: 0 }}
                 viewport={{ once: true }}
@@ -64,8 +63,7 @@ key={stat.label}"
           {/* Main Footer Content */}"
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-8 mb-12">" </div>"
             <div className="lg: col-span-2">" </div>
-              <motion.div,
-initial={{ opacity: 0 y: 20 }}
+              <motion.div initial={{ opacity: 0 y: 20 }}
                 whileInView={{ opacity: 1 y: 0 }}
                 transition={{ duration: 0.6 }}"
                 className="flex items-center space-x-3 mb-6""
@@ -124,7 +122,7 @@ initial={{ opacity: 0 y: 20 }}
 </ul>
                     <li key={link.name}>
 </li>
-                      <Link,
+                      <Link
 href={link.href}"
                         className="flex items-center text-slate-400 hover: text-cyan-400 transition-colors duration-200 group"", >
 </Link>"

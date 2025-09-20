@@ -1,14 +1,13 @@
 
 import React from 'react';
-import { Button,  } from "@/components/ui/button";
-import { Upload,, FileText,  } from 'lucide-react'
-interface UploadSectionProps {
-  customFile: File | null;,
+import { Button } from "@/components/ui/button";
+import { Upload, FileText } from "lucide-react";
+interface UploadSectionProps {customFile: File | null;
 onFileUpload: (e: React.ChangeEvent<HTMLInputElement>) => void,
 export function UploadSection({
-  customFile,
-onFileUpload,
-}: UploadSectionProps) {
+}
+  customFile,}
+onFileUpload}: UploadSectionProps) {
   return (
     <div className='space-y-3'>
       <div className='flex flex-col items-center justify-center border-2 border-dashed border-zion-purple/30 rounded-lg p-6 bg-zion-blue-dark/30'>
@@ -20,7 +19,7 @@ onFileUpload,
         </p>
         <Button variant='outline' className='relative'>
           Browse Files
-          <input,
+          <input
 type='file'
             className='absolute inset-0 w-full h-full opacity-0 cursor-pointer'
             accept='.pdf'            onChange={onFileUpload}
@@ -30,7 +29,7 @@ type='file'
             type="file"
             className="absolute inset-0 w-full h-full opacity-0 cursor-pointer"
             accept=".pdf"
-            onChange = {onFileUpload,}
+            onChange = {onFileUpload}
           />
         </Button>
       </div>

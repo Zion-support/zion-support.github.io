@@ -1,7 +1,7 @@
-import { ChevronDown,, ChevronUp,  } from 'lucide-react'
+import { ChevronDown, ChevronUp } from "lucide-react";
 return (
     <div className="mb-6 border-b border-zion-blue-light pb-6">
-      <button,
+      <button
 onClick={toggleSection}
         className="flex w-full items-center justify-between text-white font-medium"
       >
@@ -18,7 +18,7 @@ onClick={toggleSection}
             <span>${priceRange[0]}/hr</span>
             <span>${priceRange[1]}/hr</span>
           </div>
-          <Slider,
+          <Slider
 aria-label='Hourly rate range'            aria-label="Hourly rate range"
             value={[priceRange[0], priceRange[1]]}
             min={50}

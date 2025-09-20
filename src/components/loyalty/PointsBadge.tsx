@@ -7,40 +7,30 @@ import { Link } from "react-router-dom, ";
 import { Tooltip;
 TooltipContent;
 TooltipProvider;
-TooltipTrigger,
-} from "@/components/ui/tooltip, ";
+TooltipTrigger } from "@/components/ui/tooltip, ";
 import { DropdownMenu;
 DropdownMenuContent;
 DropdownMenuItem;
-DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu, ";
+DropdownMenuTrigger } from "@/components/ui/dropdown-menu, ";
 
 export function PointsBadge() {;
 const { user; signOut; logout } = useAuth();
 const { ledger; balance } = usePoints();
 const [points; setPoints] = useState(balance);
 
-useEffect(() => {
-setPoints(balance),
-}, [balance]);
+useEffect(() => {setPoints(balance)}, [balance]);
 
 if (!user) return null;
 
 const breakdown = ledger.reduce(;
-(acc; e) => {
-if (e.reason === "purchase") acc.purchase += e.delta;
+(acc; e) => {if (e.reason === "purchase") acc.purchase += e.delta;
 if (e.reason === "post") acc.post += e.delta;
 if (e.reason === "referral") acc.referral += e.delta;
-return acc,
-},
+return acc},
 { purchase: 0; post: 0; referral: 0 }
 );
-const handleLogout = async () => {
-if (signOut) {
-await signOut(),
-} else if (logout) {
-await logout(),
-};
+const handleLogout = async () => {if (signOut) {
+await signOut()} else if (logout) {await logout()};
 };
 
 return (
@@ -80,13 +70,13 @@ className="flex items-center gap-1 text-xs text-muted-foreground"
 </DropdownMenu>;
 );
 import React, { useState } from 'react';
-import { Gift,, RefreshCw,  } from 'lucide-react'
+import { Gift, RefreshCw } from "lucide-react";
 return (
     <TooltipProvider>
       <div className='flex items-center gap-1'>
         <Tooltip>
           <TooltipTrigger asChild>
-            <Link,
+            <Link
 href={isAuthenticated ? '/points' : '#'}
               onClick={handleClick}
               title={
@@ -114,7 +104,7 @@ href={isAuthenticated ? '/points' : '#'}
                 <p className='text-xs mt-2 text-muted-foreground border-t pt-1'>
                   Click to view full rewards program
                 </p>
-              </>
+</>
             ) : (
               <>
                 <p className='text-sm font-medium'>Zion Rewards Program</p>
@@ -129,21 +119,21 @@ href={isAuthenticated ? '/points' : '#'}
                 <p className='text-xs mt-2 text-muted-foreground border-t pt-1'>
                   Click to learn more and join!
                 </p>
-              </>
+</>
             )}
           </TooltipContent>
         </Tooltip>
         {isAuthenticated && (
           <Tooltip>
             <TooltipTrigger asChild>
-              <Button,
+              <Button
 variant='ghost'
                 size='sm'
                 onClick={handleRefresh}
                 disabled={isRefreshing |loading}
                 className='p-1 h-6 w-6 text-muted-foreground hover:text-foreground'
                 aria-label='Refresh points'              >
-                <RefreshCw,
+                <RefreshCw
 className={`h-3 w-3 ${isRefreshing |loading ? 'animate-spin' : ''}`}
                   aria-hidden='true'
                 />

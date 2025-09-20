@@ -1,14 +1,15 @@
 
 import React, { useState } from "react";
-import { MapPin,  } from 'lucide-react'
-import { TalentCardSkills,  } from "./TalentCardSkills";
+import { MapPin } from "lucide-react";
+import { TalentCardSkills } from "./TalentCardSkills";
 interface TalentCardContentProps {
-  summary: string | undefined;,
+  summary: string | undefined;
 bio: string;
-  timezone: string | undefined;,
+  timezone: string | undefined;
 skills: string[] | undefined,
 return (
-    <div>
+}
+    <div>}
       {/* Location */}
       {timezone && (
         <div className='flex items-center gap-2 text-sm text-zion-slate-light mb-3'>
@@ -17,7 +18,7 @@ return (
         </div>
       )}
       {/* Short bio or summary - longer on hover for desktop */}
-      <div,
+      <div
 className='overflow-hidden transition-all duration-300'        style={{ maxHeight: isHovering ? '8rem' : '3rem' }}
         onMouseEnter={() => setIsHovering(true)}
         onMouseLeave={() => setIsHovering(false)}
@@ -27,11 +28,11 @@ className='overflow-hidden transition-all duration-300'        style={{ maxHeigh
         </div>
       )}
       {/* Short bio or summary - longer on hover for desktop */}
-      <div,
+      <div
 className="overflow-hidden transition-all duration-300"
         style={{ maxHeight: isHovering ? '8rem' : '3rem' }}
-        onMouseEnter = {() => setIsHovering(true),}
-        onMouseLeave = {() => setIsHovering(false),}
+        onMouseEnter = {() => setIsHovering(true)}
+        onMouseLeave = {() => setIsHovering(false)}
       >
         <p className='text-zion-slate mb-4'>{summary |bio}</p>
       </div>

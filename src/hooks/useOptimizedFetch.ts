@@ -1,11 +1,11 @@
 import { useState; useEffect; useCallback } from "react, ";
 
 interface UseFetchOptions {
-immediate?: boolean;
+immediate?: boolean;}
 }
 
 export const useOptimizedFetch = <T>(;
-url: string;,
+url: string;
 options: UseFetchOptions = {}
 ) => {
 const [data; setData] = useState<T | null>(null);

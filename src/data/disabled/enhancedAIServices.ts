@@ -1,15 +1,13 @@
 import React from "react";
 
-export interface AIService {
-id: string; title: string; description: string; category: string; pricing: {,
-monthly: number; yearly: number; custom: string; currency: string; pricingModel: string,
-};
-features: string[], benefits: string[];,
-useCases: string[], targetAudience: string[];,
-technologies: string[], integrations: string[];,
+export interface AIService {id: string; title: string; description: string; category: string; pricing: {,}
+monthly: number; yearly: number; custom: string; currency: string; pricingModel: string};
+features: string[], benefits: string[];
+useCases: string[], targetAudience: string[];
+technologies: string[], integrations: string[];
 support: string[], link: string;
 badge?: string;,
-icon: string; image: string;,
+icon: string; image: string;
 }
 
 export const ENHANCED_AI_SERVICES: AIService[] = [
@@ -20,11 +18,10 @@ description: "Intelligent conversational AI platform for customer service; lead 
 category: "Conversational AI",
 pricing: {
 monthly: 299;
-yearly: 2990;,
+yearly: 2990;
 custom: "Enterprise pricing available",
 currency: "$",
-pricingModel: "Monthly subscription with usage-based pricing",
-},
+pricingModel: "Monthly subscription with usage-based pricing"},
 features: [
 "Natural language processing",
 "Multi-language support",
@@ -66,17 +63,15 @@ badge: "Popular",
 icon: "💬",
 image: "https://images.unsplash.com/photo-1551434678-e076c223a5ab?auto=format&fit=crop&w=800&h=500",
 },
-{
-id: "ai-content-generation-suite",
+{id: "ai-content-generation-suite",
 title: "AI Content Generation Suite",
 description: "Comprehensive AI-powered content creation platform for marketing; SEO; and creative writing.",
 category: "Content Generation",
 pricing: {
-monthly: 199; yearly: 1990;,
+monthly: 199; yearly: 1990;
 custom: "Agency and enterprise plans",
 currency: "$",
-pricingModel: "Monthly subscription with content volume tiers",
-},
+pricingModel: "Monthly subscription with content volume tiers"},
 features: [
 "Blog post generation",
 "Social media content",
@@ -117,17 +112,15 @@ link: "https://ziontechgroup.com/ai-content-generation-suite",
 icon: "✍️",
 image: "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?auto=format&fit=crop&w=800&h=500",
 },
-{
-id: "ai-image-generation-platform",
+{id: "ai-image-generation-platform",
 title: "AI Image Generation Platform",
 description: "Advanced AI-powered image creation platform for marketing; design; and creative projects.",
 category: "Computer Vision",
 pricing: {
-monthly: 149; yearly: 1490;,
+monthly: 149; yearly: 1490;
 custom: "Custom enterprise solutions",
 currency: "$",
-pricingModel: "Monthly subscription with image generation credits",
-},
+pricingModel: "Monthly subscription with image generation credits"},
 features: [
 "Text-to-image generation",
 "Image editing and manipulation",
@@ -168,17 +161,15 @@ link: "https://ziontechgroup.com/ai-image-generation-platform",
 icon: "🎨",
 image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&h=500",
 },
-{
-id: "ai-predictive-analytics",
+{id: "ai-predictive-analytics",
 title: "AI Predictive Analytics Platform",
 description: "Advanced predictive analytics and forecasting platform powered by machine learning algorithms.",
 category: "Predictive Analytics",
 pricing: {
-monthly: 399; yearly: 3990;,
+monthly: 399; yearly: 3990;
 custom: "Enterprise and custom solutions",
 currency: "$",
-pricingModel: "Monthly subscription with data volume tiers",
-},
+pricingModel: "Monthly subscription with data volume tiers"},
 features: [
 "Time series forecasting",
 "Predictive modeling",
@@ -220,17 +211,15 @@ badge: "Featured",
 icon: "🔮",
 image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500",
 },
-{
-id: "ai-process-automation",
+{id: "ai-process-automation",
 title: "AI Process Automation Platform",
 description: "Intelligent process automation platform that combines RPA with AI for end-to-end business process optimization.",
 category: "Process Automation",
 pricing: {
-monthly: 249; yearly: 2490;,
+monthly: 249; yearly: 2490;
 custom: "Enterprise automation solutions",
 currency: "$",
-pricingModel: "Monthly subscription with process complexity tiers",
-},
+pricingModel: "Monthly subscription with process complexity tiers"},
 features: [
 "Intelligent document processing",
 "Workflow automation",
@@ -271,17 +260,15 @@ link: "https://ziontechgroup.com/ai-process-automation",
 icon: "⚙️",
 image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&h=500",
 },
-{
-id: "ai-customer-insights-platform",
+{id: "ai-customer-insights-platform",
 title: "AI Customer Insights Platform",
 description: "Advanced customer analytics platform that uses AI to uncover deep insights and predict customer behavior.",
 category: "Customer Analytics",
 pricing: {
-monthly: 299; yearly: 2990;,
+monthly: 299; yearly: 2990;
 custom: "Enterprise customer intelligence",
 currency: "$",
-pricingModel: "Monthly subscription with customer data volume tiers",
-},
+pricingModel: "Monthly subscription with customer data volume tiers"},
 features: [
 "Customer segmentation",
 "Behavioral analysis",
@@ -322,17 +309,15 @@ link: "https://ziontechgroup.com/ai-customer-insights-platform",
 icon: "👥",
 image: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&h=500",
 },
-{
-id: "ai-voice-assistant-platform",
+{id: "ai-voice-assistant-platform",
 title: "AI Voice Assistant Platform",
 description: "Enterprise-grade voice assistant platform for customer service; internal operations; and accessibility.",
 category: "Voice AI",
 pricing: {
-monthly: 199; yearly: 1990;,
+monthly: 199; yearly: 1990;
 custom: "Custom voice solutions",
 currency: "$",
-pricingModel: "Monthly subscription with usage-based pricing",
-},
+pricingModel: "Monthly subscription with usage-based pricing"},
 features: [
 "Natural language understanding",
 "Multi-language support",
@@ -373,17 +358,15 @@ link: "https://ziontechgroup.com/ai-voice-assistant-platform",
 icon: "🎤",
 image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&h=500",
 },
-{
-id: "ai-data-quality-platform",
+{id: "ai-data-quality-platform",
 title: "AI Data Quality Platform",
 description: "Intelligent data quality management platform that automatically detects; cleans; and validates data.",
 category: "Data Quality",
 pricing: {
-monthly: 179; yearly: 1790;,
+monthly: 179; yearly: 1790;
 custom: "Enterprise data solutions",
 currency: "$",
-pricingModel: "Monthly subscription with data volume tiers",
-},
+pricingModel: "Monthly subscription with data volume tiers"},
 features: [
 "Automated data cleaning",
 "Quality scoring",
@@ -424,17 +407,15 @@ link: "https://ziontechgroup.com/ai-data-quality-platform",
 icon: "🧹",
 image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500",
 },
-{
-id: "ai-translation-platform",
+{id: "ai-translation-platform",
 title: "AI Translation Platform",
 description: "Advanced AI-powered translation platform supporting 100+ languages with industry-specific terminology.",
 category: "Language AI",
 pricing: {
-monthly: 129; yearly: 1290;,
+monthly: 129; yearly: 1290;
 custom: "Enterprise translation solutions",
 currency: "$",
-pricingModel: "Monthly subscription with translation volume tiers",
-},
+pricingModel: "Monthly subscription with translation volume tiers"},
 features: [
 "100+ language support",
 "Industry-specific terminology",
@@ -475,17 +456,15 @@ link: "https://ziontechgroup.com/ai-translation-platform",
 icon: "🌍",
 image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&h=500",
 },
-{
-id: "ai-recommendation-engine",
+{id: "ai-recommendation-engine",
 title: "AI Recommendation Engine",
 description: "Intelligent recommendation system that personalizes user experiences and increases conversion rates.",
 category: "Recommendation Systems",
 pricing: {
-monthly: 349; yearly: 3490;,
+monthly: 349; yearly: 3490;
 custom: "Custom recommendation solutions",
 currency: "$",
-pricingModel: "Monthly subscription with recommendation volume tiers",
-},
+pricingModel: "Monthly subscription with recommendation volume tiers"},
 features: [
 "Collaborative filtering",
 "Content-based filtering",
@@ -530,13 +509,13 @@ image: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fi
 ];
 
 export const getAIServiceById: any = (id: string): AIService | undefined => {
-return ENHANCED_AI_SERVICES.find(service => service.id === id),;
+return ENHANCED_AI_SERVICES.find(service => service.id === id);
 };
 
 export const getAIServicesByCategory: any = (category: string): AIService[] => {
-return ENHANCED_AI_SERVICES.filter(service => service.category === category),;
+return ENHANCED_AI_SERVICES.filter(service => service.category === category);
 };
 
 export const getAIServiceCategories: any = (): string[] => {
-return [...new Set(ENHANCED_AI_SERVICES.map(service => service.category))],;
+return [...new Set(ENHANCED_AI_SERVICES.map(service => service.category))];
 };

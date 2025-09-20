@@ -6,16 +6,18 @@ import { Button } from "./button, ";
 interface AccessibilitySettings {
 fontSize: "small" | "medium" | "large";
 highContrast: boolean;
-reducedMotion: boolean;,
-soundEnabled: boolean;,
+reducedMotion: boolean;
+soundEnabled: boolean;
+}
+}
 };
 export function AccessibilityMenu() {;
 const [isOpen; setIsOpen] = useState(false);
 const [settings; setSettings] = useState<AccessibilitySettings>({
 fontSize: "medium";
 highContrast: false;
-reducedMotion: false;,
-soundEnabled: true;,
+reducedMotion: false;
+soundEnabled: true;
 });
 useEffect(() => {
 // Load settings from localStorage;
@@ -70,8 +72,8 @@ const resetSettings: any = () => {
 const defaultSettings: AccessibilitySettings = {;
 fontSize: "medium";
 highContrast: false;
-reducedMotion: false;,
-soundEnabled: true;,
+reducedMotion: false;
+soundEnabled: true;
 };
 setSettings(defaultSettings);
 };
@@ -111,7 +113,7 @@ className="text-zion-cyan hover:text-zion-cyan-light text-sm"
 >;
 Reset;
 </Button>;
-</div>;
+</div>
 
 {/* Font Size */}
 <div className="mb-6">;
@@ -129,14 +131,13 @@ onClick={() => updateFontSize(size)}
 className={`text-xs capitalize ${
 settings.fontSize === size;
 ? "bg-zion-cyan text-zion-blue-dark";
-: "text-zion-slate-light hover: text-white",
-}`}
+: "text-zion-slate-light hover: text-white"}`}
 >;
 {size}
 </Button>;
 ))}
-</div>;
-</div>;
+</div>
+</div>
 
 {/* High Contrast */}
 <div className="mb-6">;
@@ -151,12 +152,11 @@ onClick={() => toggleSetting("highContrast")}
 className={`w-full ${
 settings.highContrast;
 ? "bg-zion-cyan text-zion-blue-dark";
-: "text-zion-slate-light hover: text-white",
-}`}
+: "text-zion-slate-light hover: text-white"}`}
 >;
 {settings.highContrast ? "Enabled" : "Disabled"}
 </Button>;
-</div>;
+</div>
 
 {/* Reduced Motion */}
 <div className="mb-6">;
@@ -171,12 +171,11 @@ onClick={() => toggleSetting("reducedMotion")}
 className={`w-full ${
 settings.reducedMotion;
 ? "bg-zion-cyan text-zion-blue-dark";
-: "text-zion-slate-light hover: text-white",
-}`}
+: "text-zion-slate-light hover: text-white"}`}
 >;
 {settings.reducedMotion ? "Enabled" : "Disabled"}
 </Button>;
-</div>;
+</div>
 
 {/* Sound Toggle */}
 <div className="mb-6">;
@@ -195,18 +194,17 @@ onClick={() => toggleSetting("soundEnabled")}
 className={`w-full ${
 settings.soundEnabled;
 ? "bg-zion-cyan text-zion-blue-dark";
-: "text-zion-slate-light hover: text-white",
-}`}
+: "text-zion-slate-light hover: text-white"}`}
 >;
 {settings.soundEnabled ? "Enabled" : "Disabled"}
 </Button>;
-</div>;
+</div>
 
 {/* Info */}
 <div className="text-xs text-zion-slate-light text-center">;
 Settings are automatically saved and applied across your session;
-</div>;
-</div>;
+</div>
+</div>
 </motion.div>;
 )}
 </AnimatePresence>;

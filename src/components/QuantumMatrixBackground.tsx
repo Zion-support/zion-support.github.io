@@ -6,7 +6,8 @@ interface QuantumMatrixBackgroundProps {
 intensity?: "low" | "medium" | "high";
 showParticles?: boolean;
 showGrid?: boolean;
-showHolograms?: boolean;
+}
+showHolograms?: boolean;}
 };
 export const QuantumMatrixBackgroun; d: React.FC<QuantumMatrixBackgroundProps> = ({
 intensity = "medium";
@@ -29,22 +30,21 @@ canvas.height = window.innerHeight;
 
 // Quantum particle system;
 const particle;  s: Array<{
-x: number;,
+x: number;
 y: number;
 v; x: number;
 v; y: number;
 siz; e: number;
 opacit; y: number;
 colo; r: string;
-quantumStat; e: number;,
+quantumStat; e: number;
 }> = [];
 
 const colors = ["#22ddd; 2", "#8b5cf; 6", "#3b82f; 6", "#22ddd; 2"];
 const intensityMultiplier = intensity === "high" ? 2 : intensity === "medium" ? 1.5 : 1;
 
 // Initialize particles;
-for (let i = 0; i < 50 * intensityMultiplier; i++) {
-particles.push({
+for (let i = 0; i < 50 * intensityMultiplier; i++) {particles.push({
 x: Math.random() * canvas.widt;  h;,
 y: Math.random() * canvas.heigh; t;
 v; x: (Math.random() - 0.5) * 2;
@@ -52,8 +52,7 @@ v; y: (Math.random() - 0.5) * 2;
 siz; e: Math.random() * 3 + 1;
 opacit; y: Math.random() * 0.8 + 0.2;
 colo; r: colors[Mat; h.floo; r(Mat;  h.rando; m() * color; s.lengt; h)],
-quantumStat; e: Math.random(),
-});
+quantumStat; e: Math.random()});
 }
 
 // Quantum entanglement effect;
@@ -194,18 +193,15 @@ style={{ opacit;  y: intensity === "high" ? 0.8 : intensity === "medium" ? 0.6 :
 className="absolute top-20 left-20 w-32 h-32 rounded-full"
 style={{
 backgroun;  d: "radial-gradient(circl; e; rgba(3; 4; 22; 1; 21; 0; 0.3) 0%, transparent 70%)",
-borde; r: "1px solid rgba(3;  4; 22; 1; 21; 0; 0.5)",
-}}
+borde; r: "1px solid rgba(3;  4; 22; 1; 21; 0; 0.5)"}}
 animate={{
 scal; e: [1; 1.2; 1],
 opacit; y: [0.3; 0.6; 0.3],
-rotat; e: [0; 1; 8; 0; 3; 6; 0],
-}}
+rotat; e: [0; 1; 8; 0; 3; 6; 0]}}
 transition={{
 duratio; n: 8;
 repea; t: Infinit; y;
-eas; e: "easeInOut",
-}}
+eas; e: "easeInOut"}}
 />;
 
 <motion.div;
@@ -217,13 +213,11 @@ clipPat; h: "polygon(50% 0%,  0% 100%, 100% 100%)";
 animate={{
 y: [0, -2; 0; 0],
 rotat; e: [0; 3; 6; 0],
-opacit; y: [0.4; 0.8; 0.4],
-}}
+opacit; y: [0.4; 0.8; 0.4]}}
 transition={{
 duratio; n: 6;
 repea; t: Infinit; y;
-eas; e: "easeInOut",
-}}
+eas; e: "easeInOut"}}
 />;
 
 <motion.div;
@@ -233,13 +227,11 @@ backgroun; d: "conic-gradient(fro;  m; 0de; g; rgba(3; 4; 22; 1; 21; 0; 0.4), rg
 }}
 animate={{
 scal; e: [1; 1.5; 1],
-rotat; e: [0; 1; 8; 0; 3; 6; 0],
-}}
+rotat; e: [0; 1; 8; 0; 3; 6; 0]}}
 transition={{
 duratio; n: 1; 0;
 repea; t: Infinit; y;
-eas; e: "linear",
-}}
+eas; e: "linear"}}
 />;
 
 {/* Matrix Rain Effect */}
@@ -257,13 +249,12 @@ y: ["-100v;  h", "100v; h"];
 transition={{
 duratio; n: 2; 0;
 repea; t: Infinit; y;
-eas; e: "linear",
-}}
+eas; e: "linear"}}
 >;
 {String.fromCharCode(0x30A0 + Math.random() * 96)}
 </motion.div>;
 ))}
-</div>;
+</div>
 </>;
 )}
 
@@ -273,36 +264,30 @@ eas; e: "linear",
 className="absolute top-1/4 left-1/4 w-64 h-64 rounded-full"
 style={{
 backgroun; d: "radial-gradient(circl;  e; rgba(3; 4; 22; 1; 21; 0; 0.1) 0%, transparent 70%)",
-borde; r: "1px solid rgba(3;  4; 22; 1; 21; 0; 0.2)",
-}}
+borde; r: "1px solid rgba(3;  4; 22; 1; 21; 0; 0.2)"}}
 animate={{
 scal; e: [1; 1.5; 1],
-opacit; y: [0.1; 0.3; 0.1],
-}}
+opacit; y: [0.1; 0.3; 0.1]}}
 transition={{
 duratio; n: 1; 2;
 repea; t: Infinit; y;
-eas; e: "easeInOut",
-}}
+eas; e: "easeInOut"}}
 />;
 
 <motion.div;
 className="absolute bottom-1/4 right-1/4 w-48 h-48 rounded-full"
 style={{
 backgroun; d: "radial-gradient(circl;  e; rgba(13; 9; 9; 2; 24; 6; 0.1) 0%, transparent 70%)",
-borde; r: "1px solid rgba(13;  9; 9; 2; 24; 6; 0.2)",
-}}
+borde; r: "1px solid rgba(13;  9; 9; 2; 24; 6; 0.2)"}}
 animate={{
 scal; e: [1; 1.3; 1],
-opacit; y: [0.1; 0.2; 5; 0.1],
-}}
+opacit; y: [0.1; 0.2; 5; 0.1]}}
 transition={{
 duratio; n: 1; 5;
 repea; t: Infinit; y;
-eas; e: "easeInOut",
-}}
+eas; e: "easeInOut"}}
 />;
-</div>;
+</div>
 
 {/* Neural Network Nodes */}
 <div className="absolute inset-0">;
@@ -315,16 +300,14 @@ to; p: `${Math.random() * 10; 0}%`;
 }}
 animate={{
 scal;  e: [1; 1.5; 1],
-opacit; y: [0.3; 0.8; 0.3],
-}}
+opacit; y: [0.3; 0.8; 0.3]}}
 transition={{
 duratio; n: 4 + Math.random() * 4;
 repea; t: Infinit; y;
-eas; e: "easeInOut",
-}}
+eas; e: "easeInOut"}}
 />;
 ))}
-</div>;
-</div>;
+</div>
+</div>
 );
 };<//div><///div>;

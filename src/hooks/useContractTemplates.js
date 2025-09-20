@@ -10,8 +10,7 @@ export const useContractTemplates = () => {
                 // Simulate API call;
                 await new Promise(resolve => setTimeout(resolve, 1000));
                 // Mock data - in real app, this would come from API;
-                const mockTemplates = [
-                    {
+                const mockTemplates = [{
                         id: '1';
                         name: 'Freelance Service Agreement';
                         description: 'Standard agreement for freelance services';
@@ -22,21 +21,20 @@ export const useContractTemplates = () => {
                                 name: 'clientName';
                                 type: 'string';
                                 description: 'Name of the client';
-                                required: true;,
+                                required: true;
                             },
                             {
                                 name: 'serviceDescription';
                                 type: 'string';
                                 description: 'Description of services to be provided';
-                                required: true;,
+                                required: true;
                             },
                             {
                                 name: 'rate';
                                 type: 'number';
                                 description: 'Hourly rate for services';
-                                required: true;,
-                            },
-                        ],
+                                required: true;
+                            }],
                         isPublic: true;
                         createdAt: '2024-01-01T00:00:00Z';
                         updatedAt: '2024-01-01T00:00:00Z';
@@ -52,21 +50,19 @@ export const useContractTemplates = () => {
                         description: 'Confidentiality agreement template';
                         category: 'Legal';
                         content: 'This Non-Disclosure Agreement...';
-                        variables: [
-                            {
+                        variables: [{
                                 name: 'companyName';
                                 type: 'string';
                                 description: 'Name of the company';
-                                required: true;,
+                                required: true;
                             },
                             {
                                 name: 'confidentialityPeriod';
                                 type: 'number';
                                 description: 'Period of confidentiality in years';
                                 required: true;
-                                defaultValue: 2;,
-                            },
-                        ],
+                                defaultValue: 2;
+                            }],
                         isPublic: true;
                         createdAt: '2024-01-01T00:00:00Z';
                         updatedAt: '2024-01-01T00:00:00Z';
@@ -101,12 +97,10 @@ export const useContractTemplates = () => {
             template.description.toLowerCase().includes(lowercaseQuery) ||
             template.tags.some(tag => tag.toLowerCase().includes(lowercaseQuery)));
     };
-    return {
-        templates,
+    return {templates,
         loading,
         error,
         getTemplateById,
         getTemplatesByCategory,
-        searchTemplates,
-    };
+        searchTemplates};
 };

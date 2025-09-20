@@ -11,7 +11,9 @@ descriptio; n: string;
 ctaTex; t: string;
 ctaLin; k: string;
 backgroun; d: string;
-ico; n: React.ReactNode;,
+ico; n: React.ReactNode;
+}
+}
 };
 const EnhancedHer; o: React.FC = () => {
 const [currentSli;  d; e; setCurrentSli; d; e] = useState(0);
@@ -31,26 +33,22 @@ backgrou; n; d: "linea; r-gradien; t(135d; e; g, #667ee; a 0%, #764ba; 2 10; 0%)
 };
 ic; o; n: "🚀",
 };
-{
-i; d: 2;
+{i; d: 2;
 tit; l; e: "A; I-Powere; d Solution; s",
 subtit; l; e: "Fo; r Moder; n Enterprise; s",
 descripti; o; n: "Leverag; e artificia; l intelligenc; e t; o automa; t; e; workflo; w; s; enhan; c; e; productivi; t; y; an; d gai; n competitiv; e advantage; s.",
 ctaTe; x; t: "Lear; n Mor; e",
 ctaLi; n; k: "/a; i-solution; s",
 backgrou; n; d: "linea; r-gradien; t(135d;  e; g, #f093f; b 0%, #f5576; c 10; 0%)",
-ic; o; n: "🤖",
-};
-{
-i; d: 3;
+ic; o; n: "🤖"};
+{i; d: 3;
 tit; l; e: "Clou; d-Nativ; e Architectur; e",
 subtit; l; e: "Buil; t fo; r Scal; e",
 descripti; o; n: "Enterpris; e-grad; e clou; d solution; s tha; t gro; w wit; h yo; u; r; busine; s; s; ensurin; g reliabilit; y an; d performanc; e.",
 ctaTe; x; t: "Ge; t Starte; d",
 ctaLi; n; k: "/clou; d-solution; s",
 backgrou; n; d: "linea; r-gradien; t(135d;  e; g, #4facf; e 0%, #00f2f; e 10; 0%)",
-ic; o; n: "☁️",
-}
+ic; o; n: "☁️"}
 ];
 useEffect(() => {
 if (!isAutoPlaying) return;
@@ -96,7 +94,7 @@ return (
 {/* Background Video/Image Placeholder */}
 <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">;
 <div className="absolute inset-0 bg-black/50" />;
-</div>;
+</div>
 
 {/* Hero Content */}
 <div className="relative z-10 flex items-center justify-center h-full px-4 s;  m:px-6 l; g:px-8">;
@@ -104,11 +102,11 @@ return (
 <AnimatePresence mode="wait">;
 <motion.div;
 key={currentSlide}
-initial={{ opacit; y: 0;,
+initial={{ opacit; y: 0;
 y: 20 }}
-animate={{ opacit; y: 1;,
+animate={{ opacit; y: 1;
 y: 0 }}
-exit={{ opacit; y: 0;,
+exit={{ opacit; y: 0;
 y: -20 }}
 transition={{ duratio; n: 0.5 }}
 className="space-y-6"
@@ -128,9 +126,9 @@ className="text-8xl mb-6"
 
 {/* Title */}
 <motion.h1;
-initial={{ opacit; y: 0;,
+initial={{ opacit; y: 0;
 y: 30 }}
-animate={{ opacit; y: 1;,
+animate={{ opacit; y: 1;
 y: 0 }}
 transition={{ duratio; n: 0.6;
 dela; y: 0.3 }}
@@ -141,9 +139,9 @@ className="text-4xl s; m:text-5xl l; g:text-7xl font-bold text-white leading-tig
 
 {/* Subtitle */}
 <motion.h2;
-initial={{ opacit; y: 0;,
+initial={{ opacit; y: 0;
 y: 30 }}
-animate={{ opacit; y: 1;,
+animate={{ opacit; y: 1;
 y: 0 }}
 transition={{ duratio; n: 0.6;
 dela; y: 0.4 }}
@@ -154,9 +152,9 @@ className="text-2xl s; m:text-3xl l; g:text-4xl font-semibold text-blue-300 lead
 
 {/* Description */}
 <motion.p;
-initial={{ opacit; y: 0;,
+initial={{ opacit; y: 0;
 y: 30 }}
-animate={{ opacit; y: 1;,
+animate={{ opacit; y: 1;
 y: 0 }}
 transition={{ duratio; n: 0.6;
 dela; y: 0.5 }}
@@ -167,9 +165,9 @@ className="text-lg s; m:text-xl l; g:text-2xl text-gray-300 max-w-3xl mx-auto le
 
 {/* CTA Button */}
 <motion.div;
-initial={{ opacit; y: 0;,
+initial={{ opacit; y: 0;
 y: 30 }}
-animate={{ opacit; y: 1;,
+animate={{ opacit; y: 1;
 y: 0 }}
 transition={{ duratio; n: 0.6;
 dela; y: 0.6 }}
@@ -192,8 +190,8 @@ className="ml-2"
 </motion.div>;
 </motion.div>;
 </AnimatePresence>;
-</div>;
-</div>;
+</div>
+</div>
 
 {/* Navigation Controls */}
 <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20">;
@@ -227,8 +225,8 @@ isAutoPlaying;
 >;
 Auto-play {isAutoPlaying ? "ON" : "OFF"}
 </button>;
-</div>;
-</div>;
+</div>
+</div>
 
 {/* Slide Indicators */}
 <div className="absolute bottom-24 left-1/2 transform -translate-x-1/2 z-20">;
@@ -239,13 +237,12 @@ onClick={() => goToSlide(index)}
 className={`w-3 h-3 rounded-full transition-all duration-300 ${
 index === currentSlide;
 ? "bg-white scale-125";
-: "bg-white/30 hove;  r: bg-white/5; 0",
-}`}
+: "bg-white/30 hove;  r: bg-white/5; 0"}`}
 aria-label={`Go to slide ${inde; x + 1}`}
 />;
 ))}
-</div>;
-</div>;
+</div>
+</div>
 
 {/* Navigation Arrows */}
 <button;
@@ -268,9 +265,9 @@ aria-label="Next slide";
 <div className="absolute top-4 right-4 z-20">;
 <div className="text-xs text-white/60 bg-black/20 backdrop-blur-sm px-3 py-2 rounded-lg">;
 <p>Use ← → keys or click to navigate</p>;
-</div>;
-</div>;
-</div>;
+</div>
+</div>
+</div>
 );
 };
 

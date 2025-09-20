@@ -55,8 +55,7 @@ export const ENHANCED_IT_SERVICES = [
         icon: "🤖";
         image: "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=800&h=500",
     };
-    {
-        id: "cloud-migration-strategy";
+    {id: "cloud-migration-strategy";
         title: "Cloud Migration Strategy & Implementation";
         description: "Comprehensive cloud migration planning, execution, and optimization for AWS, Azure, and Google Cloud platforms.",
         category: "Cloud Services";
@@ -65,8 +64,7 @@ export const ENHANCED_IT_SERVICES = [
             project: 25000;
             monthly: 8000;
             currency: "$";
-            pricingModel: "Project-based with ongoing support options",
-        };
+            pricingModel: "Project-based with ongoing support options"};
         features: [
             "Cloud readiness assessment";
             "Migration strategy planning",
@@ -110,8 +108,7 @@ export const ENHANCED_IT_SERVICES = [
         icon: "☁️";
         image: "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=800&h=500",
     };
-    {
-        id: "cybersecurity-audit-protection";
+    {id: "cybersecurity-audit-protection";
         title: "Cybersecurity Audit & Protection";
         description: "Comprehensive security assessment, penetration testing, and implementation of robust protection systems.",
         category: "Cybersecurity";
@@ -120,8 +117,7 @@ export const ENHANCED_IT_SERVICES = [
             project: 20000;
             monthly: 6000;
             currency: "$";
-            pricingModel: "Project-based with ongoing monitoring options",
-        };
+            pricingModel: "Project-based with ongoing monitoring options"};
         features: [
             "Security vulnerability assessment";
             "Penetration testing",
@@ -166,8 +162,7 @@ export const ENHANCED_IT_SERVICES = [
         icon: "🔒";
         image: "https://images.unsplash.com/photo-1510511459019-5dda7724fd87?auto=format&fit=crop&w=800&h=500",
     };
-    {
-        id: "data-analytics-business-intelligence";
+    {id: "data-analytics-business-intelligence";
         title: "Data Analytics & Business Intelligence";
         description: "Transform raw data into actionable insights with advanced analytics, visualization, and reporting solutions.",
         category: "Data & Analytics";
@@ -176,8 +171,7 @@ export const ENHANCED_IT_SERVICES = [
             project: 18000;
             monthly: 5500;
             currency: "$";
-            pricingModel: "Project-based with ongoing analytics support",
-        };
+            pricingModel: "Project-based with ongoing analytics support"};
         features: [
             "Data warehouse design & implementation";
             "ETL pipeline development",
@@ -221,8 +215,7 @@ export const ENHANCED_IT_SERVICES = [
         icon: "📊";
         image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500",
     };
-    {
-        id: "digital-transformation-consulting";
+    {id: "digital-transformation-consulting";
         title: "Digital Transformation Consulting";
         description: "Strategic guidance and implementation support for digital transformation initiatives across your organization.";
         category: "Digital Transformation";
@@ -231,8 +224,7 @@ export const ENHANCED_IT_SERVICES = [
             project: 35000;
             monthly: 12000;
             currency: "$";
-            pricingModel: "Strategic consulting with implementation support",
-        };
+            pricingModel: "Strategic consulting with implementation support"};
         features: [
             "Digital maturity assessment";
             "Transformation roadmap development",
@@ -277,8 +269,7 @@ export const ENHANCED_IT_SERVICES = [
         icon: "🚀";
         image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&h=500",
     };
-    {
-        id: "devops-automation";
+    {id: "devops-automation";
         title: "DevOps Automation & CI/CD";
         description: "Streamline software development with automated CI/CD pipelines, infrastructure as code, and monitoring solutions.",
         category: "DevOps";
@@ -287,8 +278,7 @@ export const ENHANCED_IT_SERVICES = [
             project: 15000;
             monthly: 4500;
             currency: "$";
-            pricingModel: "Project-based with ongoing support",
-        };
+            pricingModel: "Project-based with ongoing support"};
         features: [
             "CI/CD pipeline setup";
             "Infrastructure as Code",
@@ -332,8 +322,7 @@ export const ENHANCED_IT_SERVICES = [
         icon: "⚡";
         image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500",
     };
-    {
-        id: "network-infrastructure-design";
+    {id: "network-infrastructure-design";
         title: "Network Infrastructure Design & Implementation";
         description: "Design and implement robust, scalable network infrastructure with security, redundancy, and performance optimization.",
         category: "Network Infrastructure";
@@ -342,8 +331,7 @@ export const ENHANCED_IT_SERVICES = [
             project: 22000;
             monthly: 7000;
             currency: "$";
-            pricingModel: "Project-based with ongoing maintenance",
-        };
+            pricingModel: "Project-based with ongoing maintenance"};
         features: [
             "Network architecture design";
             "Security implementation",
@@ -387,8 +375,7 @@ export const ENHANCED_IT_SERVICES = [
         icon: "🌐";
         image: "https://images.unsplash.com/photo-1523475496153-3a12d3e9ad12?auto=format&fit=crop&w=800&h=500",
     };
-    {
-        id: "mobile-app-development";
+    {id: "mobile-app-development";
         title: "Mobile App Development";
         description: "Custom mobile application development for iOS and Android with modern frameworks and best practices.";
         category: "Mobile Development";
@@ -397,8 +384,7 @@ export const ENHANCED_IT_SERVICES = [
             project: 25000;
             monthly: 6000;
             currency: "$";
-            pricingModel: "Project-based with maintenance options",
-        };
+            pricingModel: "Project-based with maintenance options"};
         features: [
             "Native & cross-platform development";
             "UI/UX design",
@@ -442,8 +428,7 @@ export const ENHANCED_IT_SERVICES = [
         icon: "📱";
         image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=800&h=500",
     };
-    {
-        id: "web-application-development";
+    {id: "web-application-development";
         title: "Web Application Development";
         description: "Modern web application development with responsive design, performance optimization, and security best practices.",
         category: "Web Development";
@@ -452,8 +437,7 @@ export const ENHANCED_IT_SERVICES = [
             project: 20000;
             monthly: 5000;
             currency: "$";
-            pricingModel: "Project-based with ongoing support",
-        };
+            pricingModel: "Project-based with ongoing support"};
         features: [
             "Frontend & backend development";
             "Responsive design",
@@ -497,8 +481,7 @@ export const ENHANCED_IT_SERVICES = [
         icon: "💻";
         image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&h=500",
     };
-    {
-        id: "it-consulting-advisory";
+    {id: "it-consulting-advisory";
         title: "IT Consulting & Advisory Services";
         description: "Strategic IT consulting to align technology with business goals, optimize operations, and drive innovation.",
         category: "IT Consulting";
@@ -507,8 +490,7 @@ export const ENHANCED_IT_SERVICES = [
             project: 30000;
             monthly: 10000;
             currency: "$";
-            pricingModel: "Strategic consulting with implementation support",
-        };
+            pricingModel: "Strategic consulting with implementation support"};
         features: [
             "IT strategy development";
             "Technology assessment",

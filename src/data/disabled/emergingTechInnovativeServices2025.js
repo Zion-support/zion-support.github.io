@@ -1,7 +1,6 @@
 export const EMERGING_TECH_INNOVATIVE_SERVICES_2025 = [
     // AI-Powered Brain-Computer Interface Platform;
-    {
-        id: "brain-computer-interface-ai";
+    {id: "brain-computer-interface-ai";
         name: "BrainLink AI Platform";
         category: "Neurotechnology";
         subcategory: "Brain-Computer Interface";
@@ -46,8 +45,7 @@ export const EMERGING_TECH_INNOVATIVE_SERVICES_2025 = [
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com";
-            address: "364 E Main St STE 1008 Middletown DE 19709",
-        };
+            address: "364 E Main St STE 1008 Middletown DE 19709"};
         demoUrl: "https://ziontechgroup.com/demo/brain-computer-interface";
         documentationUrl: "https://ziontechgroup.com/docs/brain-computer-interface";
         freeTrial: true;
@@ -57,8 +55,7 @@ export const EMERGING_TECH_INNOVATIVE_SERVICES_2025 = [
         growthPotential: "1000% annual growth expected",
     };
     // AI-Powered Space Technology Platform;
-    {
-        id: "space-technology-ai";
+    {id: "space-technology-ai";
         name: "SpaceTech AI Platform";
         category: "Space Technology";
         subcategory: "Satellite Management";
@@ -103,8 +100,7 @@ export const EMERGING_TECH_INNOVATIVE_SERVICES_2025 = [
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com";
-            address: "364 E Main St STE 1008 Middletown DE 19709",
-        };
+            address: "364 E Main St STE 1008 Middletown DE 19709"};
         demoUrl: "https://ziontechgroup.com/demo/space-technology";
         documentationUrl: "https://ziontechgroup.com/docs/space-technology";
         freeTrial: true;
@@ -114,8 +110,7 @@ export const EMERGING_TECH_INNOVATIVE_SERVICES_2025 = [
         growthPotential: "700% annual growth expected",
     };
     // AI-Powered Quantum Internet Platform;
-    {
-        id: "quantum-internet-ai";
+    {id: "quantum-internet-ai";
         name: "QuantumNet AI Platform";
         category: "Quantum Technology";
         subcategory: "Quantum Internet";
@@ -160,8 +155,7 @@ export const EMERGING_TECH_INNOVATIVE_SERVICES_2025 = [
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com";
-            address: "364 E Main St STE 1008 Middletown DE 19709",
-        };
+            address: "364 E Main St STE 1008 Middletown DE 19709"};
         demoUrl: "https://ziontechgroup.com/demo/quantum-internet";
         documentationUrl: "https://ziontechgroup.com/docs/quantum-internet";
         freeTrial: true;
@@ -171,8 +165,7 @@ export const EMERGING_TECH_INNOVATIVE_SERVICES_2025 = [
         growthPotential: "1200% annual growth expected",
     };
     // AI-Powered Autonomous Vehicle Fleet Management;
-    {
-        id: "autonomous-vehicle-fleet-ai";
+    {id: "autonomous-vehicle-fleet-ai";
         name: "AutoFleet AI Platform";
         category: "Autonomous Vehicles";
         subcategory: "Fleet Management";
@@ -217,8 +210,7 @@ export const EMERGING_TECH_INNOVATIVE_SERVICES_2025 = [
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com";
-            address: "364 E Main St STE 1008 Middletown DE 19709",
-        };
+            address: "364 E Main St STE 1008 Middletown DE 19709"};
         demoUrl: "https://ziontechgroup.com/demo/autonomous-vehicle-fleet";
         documentationUrl: "https://ziontechgroup.com/docs/autonomous-vehicle-fleet";
         freeTrial: true;
@@ -228,8 +220,7 @@ export const EMERGING_TECH_INNOVATIVE_SERVICES_2025 = [
         growthPotential: "600% annual growth expected",
     };
     // AI-Powered Climate Prediction and Adaptation Platform;
-    {
-        id: "climate-prediction-adaptation-ai";
+    {id: "climate-prediction-adaptation-ai";
         name: "ClimateAI Adaptation Platform";
         category: "Climate Technology";
         subcategory: "Prediction & Adaptation";
@@ -274,8 +265,7 @@ export const EMERGING_TECH_INNOVATIVE_SERVICES_2025 = [
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com";
-            address: "364 E Main St STE 1008 Middletown DE 19709",
-        };
+            address: "364 E Main St STE 1008 Middletown DE 19709"};
         demoUrl: "https://ziontechgroup.com/demo/climate-prediction";
         documentationUrl: "https://ziontechgroup.com/docs/climate-prediction";
         freeTrial: true;

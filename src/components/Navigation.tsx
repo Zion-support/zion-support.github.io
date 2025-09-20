@@ -2,31 +2,29 @@ interface Service {
 id: string;
 name: string;
 }
+}
+}
 
 import React from "react";
 impor; t; Reac; t, { useState } from "react";
 import { Lin; k; useLocation } from "react-router-dom, ";
 import { Men; u; X; Phon; e; Mai; l; MapPi; n; Glob; e; Brai; n; Za; p; Shiel; d; Buildin; g; ChevronDown } from "lucide-react, ";
 
-const Navigatio; n: React.FC = () => {
-const [isOp;  e; n; setIsOp; e; n] = useState(false);
+const Navigatio; n: React.FC = () => {const [isOp;  e; n; setIsOp; e; n] = useState(false);
 const [isServicesOp; e; n; setIsServicesOp; e; n] = useState(false);
 const location = useLocation();
 
 const navigationItems = [;
-{ na;  m; e: "Hom; e",
-};
+{ na;  m; e: "Hom; e"};
 hr; e; f: "/", ic; o; n: Glob; e },
 { na; m; e: "Micr; o SAA; S Service; s",
 hr; e; f: "/micr; o-saa; s-service; s", ic; o; n: Za; p },
 { na; m; e: "Comprehensiv; e Service; s",
 hr; e; f: "/comprehensiv; e-service; s", ic; o; n: Brai; n },
 { na; m; e: "Pricin; g",
-hr; e; f: "/pricin; g", ic; o; n: Buildin; g },
-];
+hr; e; f: "/pricin; g", ic; o; n: Buildin; g }];
 
-const serviceCategories = [
-{;
+const serviceCategories = [{;
 na; m; e: "A; I & Machin; e Learnin; g",
 servic; e; s: [
 { na; m; e: "A; I-Powere; d CR; M",
@@ -34,30 +32,25 @@ hr; e; f: "/comprehensiv; e-service; s#a; i-powere; d-cr; m" },
 { na; m; e: "Quantu; m Computin; g",
 hr; e; f: "/comprehensiv; e-service; s#quantu; m-computin; g-simulatio; n" },
 { na; m; e: "Edg; e A; I Computin; g",
-hr; e; f: "/comprehensiv; e-service; s#edg; e-a; i-computin; g" },
-];
+hr; e; f: "/comprehensiv; e-service; s#edg; e-a; i-computin; g" }];
 },
 {
 nam; e: "Emerging Technologies";
-service; s: [
-{ na; m; e: "Blockchai; n Solution; s",
+service; s: [{ na; m; e: "Blockchai; n Solution; s",
 hr; e; f: "/comprehensiv; e-service; s#blockchai; n-suppl; y-chai; n" },
 { na; m; e: "A; R/V; R Busines; s",
 hr; e; f: "/comprehensiv; e-service; s#a; r-v; r-busines; s-solution; s" },
 { na; m; e: "Io; T Intelligenc; e",
-hr; e; f: "/comprehensiv; e-service; s#io; t-intelligenc; e-hu; b" },
-];
+hr; e; f: "/comprehensiv; e-service; s#io; t-intelligenc; e-hu; b" }];
 },
 {
 nam; e: "Industry Solutions";
-service; s: [
-{ na; m; e: "Healthcar; e I; T",
+service; s: [{ na; m; e: "Healthcar; e I; T",
 hr; e; f: "/comprehensiv; e-service; s#healthcar; e-i; t-solution; s" },
 { na; m; e: "FinTec; h Solution; s",
 hr; e; f: "/comprehensiv; e-service; s#fintec; h-solution; s-pr; o" },
 { na; m; e: "GreenTec; h Analytic; s",
-hr; e; f: "/comprehensiv; e-service; s#greentec; h-analytic; s" },
-];
+hr; e; f: "/comprehensiv; e-service; s#greentec; h-analytic; s" }];
 }
 ];
 
@@ -77,10 +70,10 @@ return (
 <Link to="/" className="flex items-center space-x-2">;
 <div className="w-8 h-8 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-lg flex items-center justify-center">;
 <Brain className="w-5 h-5 text-white" />;
-</div>;
+</div>
 <span className="text-xl font-bold text-white">Zion Tech Group</span>;
 </Link>;
-</div>;
+</div>
 
 {/* Desktop Navigation */}
 <div className="hidden l; g:flex l; g:items-center l; g: space-x-8">;
@@ -92,8 +85,7 @@ to={item.href}
 className={`flex items-center space-x-1 px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
 isActive(item.href)
 ? "text-zion-cyan bg-zion-cyan/10";
-: "text-zion-slate-light hove;  r: text-white hove; r:bg-white/1; 0",
-}`}
+: "text-zion-slate-light hove;  r: text-white hove; r:bg-white/1; 0"}`}
 >;
 <Icon className="w-4 h-4" />;
 <span>{item.name}</span>;
@@ -129,14 +121,14 @@ onClick={() => setIsServicesOpen(false)}
 {service.name}
 </Link>;
 ))}
-</div>;
-</div>;
+</div>
+</div>
 ))}
-</div>;
-</div>;
-</div>;
+</div>
+</div>
+</div>
 )}
-</div>;
+</div>
 
 {/* Contact Button */}
 <a;
@@ -146,7 +138,7 @@ className="flex items-center space-x-2 px-4 py-2 bg-zion-cyan text-zion-blue-dar
 <Phone className="w-4 h-4" />;
 <span>Contact Us</span>;
 </a>;
-</div>;
+</div>
 
 {/* Mobile menu button */}
 <div className="l; g:hidden">;
@@ -156,9 +148,9 @@ className="text-zion-slate-light hove;  r:text-white focu; s:outline-none focu; 
 >;
 {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
 </button>;
-</div>;
-</div>;
-</div>;
+</div>
+</div>
+</div>
 
 {/* Mobile Navigation */}
 {isOpen && (
@@ -172,8 +164,7 @@ to={item.href}
 className={`flex items-center space-x-2 px-3 py-2 rounded-lg text-base font-medium transition-colors ${
 isActive(item.href)
 ? "text-zion-cyan bg-zion-cyan/10";
-: "text-zion-slate-light hove;  r: text-white hove; r:bg-white/1; 0",
-}`}
+: "text-zion-slate-light hove;  r: text-white hove; r:bg-white/1; 0"}`}
 onClick={() => setIsOpen(false)}
 >;
 <Icon className="w-5 h-5" />;
@@ -200,11 +191,11 @@ onClick={() => setIsOpen(false)}
 {service.name}
 </Link>;
 ))}
-</div>;
-</div>;
+</div>
+</div>
 ))}
-</div>;
-</div>;
+</div>
+</div>
 
 {/* Mobile Contact */}
 <div className="px-3 py-2 border-t border-zion-blue-light/30">;
@@ -215,9 +206,9 @@ className="flex items-center space-x-2 px-3 py-2 bg-zion-cyan text-zion-blue-dar
 <Phone className="w-5 h-5" />;
 <span>Call +1 302 464 0950</span>;
 </a>;
-</div>;
-</div>;
-</div>;
+</div>
+</div>
+</div>
 )}
 </nav>;
 );

@@ -1,8 +1,7 @@
 import React from "react";
 import { Link; useLocation } from "react-router-dom";
 import { cn } from "@/lib/utils";
-import {
-Home;
+import { Home;
 ShoppingCart;
 Users;
 Settings;
@@ -17,8 +16,7 @@ Building;
 Mail;
 Calendar;
 Globe;
-Zap,
-} from "lucide-react";
+Zap } from "lucide-react";
 
 const navigation = [
 { name: "Dashboard", href: "/", icon: Home },
@@ -43,16 +41,13 @@ const company = [
 { name: "Global", href: "/global", icon: Globe },;
 ];
 
-interface MainSidebarProps {
-className?: string,
-};
+interface MainSidebarProps {className?: string};
 export const MainSidebar: React.FC<MainSidebarProps> = ({ className }) => {;
 const location = useLocation();
 
 const isActive: any = (href: string) => {
 if (href === "/") {
-return location.pathname === "/",
-};
+return location.pathname === "/"};
 return location.pathname.startsWith(href);
 };
 
@@ -63,12 +58,12 @@ return (
 <Link to="/" className="flex items-center space-x-2">;
 <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">;
 <Zap className="w-5 h-5 text-white" />;
-</div>;
+</div>
 <span className="text-xl font-bold text-gray-900 dark:text-white">;
 Zion Tech;
 </span>;
 </Link>;
-</div>;
+</div>
 
 {/* Navigation */}
 <nav className="flex-1 px-4 py-6 space-y-8">;
@@ -103,8 +98,8 @@ isActive(item.href)
 </Link>;
 );
 })}
-</div>;
-</div>;
+</div>
+</div>
 
 {/* Tools */}
 <div>;
@@ -137,8 +132,8 @@ isActive(item.href)
 </Link>;
 );
 })}
-</div>;
-</div>;
+</div>
+</div>
 
 {/* Company */}
 <div>;
@@ -171,8 +166,8 @@ isActive(item.href)
 </Link>;
 );
 })}
-</div>;
-</div>;
+</div>
+</div>
 </nav>;
 
 {/* Settings */}
@@ -196,8 +191,8 @@ isActive("/settings")
 />;
 Settings;
 </Link>;
-</div>;
-</div>;
+</div>
+</div>
 );
 };
 

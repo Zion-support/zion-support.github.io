@@ -1,14 +1,14 @@
 import React from 'react';
-import { useSelector,, ,  } from 'react-redux';
-import Link from 'next/link',
+import { useSelector } from "react-redux";
+import Link from 'next/link',;
 import type { RootState } from '@/store';
-import { ShoppingCart,  } from 'lucide-react'
-import { useAuth,  } from '@/hooks/useAuth';
-import { LoginModal,  } from '@/components/auth/LoginModal';
+import { ShoppingCart } from "lucide-react";
+import { useAuth } from "@/hooks/useAuth";
+import { LoginModal } from "@/components/auth/LoginModal";
 export function CartDrawer() {
 return (
     <>
-      <Link,
+      <Link
 href='/cart'
         aria-label='Cart'
         className='relative p-1'
@@ -24,6 +24,6 @@ href='/cart'
         )}
       </Link>
       <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />
-    </>
+</>
   )
 }

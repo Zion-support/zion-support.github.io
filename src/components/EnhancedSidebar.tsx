@@ -2,8 +2,10 @@ interface Service {
 id: string;
 name: string;
 }
+}
+}
 
-import { import { motion; AnimatePresence   } from "framer-motion",
+import { import { motion; AnimatePresence   } from "framer-motion";
 ,
 export default function Page("props": "any) {,
 setExpandedSections(newExpanded)"},
@@ -57,8 +59,7 @@ transition = {,
 <item.icon className="w-4 h-4" />,
 <span>{item.name}</span>,
 {isActive(item.href) && (",
-<div className="w-2 h-2 bg-cyan-400 rounded-full ml-auto"></div>,
-)}
+<div className="w-2 h-2 bg-cyan-400 rounded-full ml-auto"></div>)}
 </Link>,
 ))}
 </motion.div>,
@@ -79,8 +80,7 @@ animate = {,
 "}}
 transition = {,
 { "duration": "0.5",
-"delay": "0.5,
-}}
+"delay": "0.5}}
 >",
 <h3 className="text-sm font-semibold text-zion-cyan mb-3">Need Help?",
 <div className="space-y-2 text-xs text-zion-slate-light">",
@@ -100,5 +100,5 @@ transition = {,
 </div>,
 </aside>,) },
 '"`,
-</motion, >,
+</motion>,
 </motion>]]<//motion><///motion>;

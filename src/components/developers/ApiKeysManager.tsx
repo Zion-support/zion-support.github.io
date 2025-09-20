@@ -1,5 +1,5 @@
-import { useState,  } from 'react'
-import { Check,, Clock,, Key,, MoreVertical,, RefreshCw,, X,  } from 'lucide-react'
+import { useState } from "react";
+import { Check, Clock, Key, MoreVertical, RefreshCw, X } from "lucide-react";
   // Create key form state,
 const [keyName, setKeyName] = useState("");
   const [selectedScopes, setSelectedScopes] = useState<ApiKeyScope[]>([]),
@@ -36,7 +36,7 @@ return (
               <div className='space-y-4 py-4'>
                 <div className='space-y-2'>
                   <Label htmlFor='key-name'>Key Name</Label>
-                  <Input,
+                  <Input
 id='key-name'
                     value={keyName}
                     onChange={e => setKeyName(e.target.value)}
@@ -47,19 +47,19 @@ id='key-name'
                   <Label>Scopes</Label>
                   <div className='grid gap-2 pt-2'>
                     {scopeOptions.map(scope => (
-                      <div,
+                      <div
 key={scope.value}
                         className='flex items-center space-x-2'
                       >
-                        <Checkbox,
+                        <Checkbox
 id={scope.value}                          checked={selectedScopes.includes(scope.value)}                  <div className="grid gap-2 pt-2">
-                    {scopeOptions.map((scope,) => (
+                    {scopeOptions.map((scope) => (
                       <div key={scope.value} className="flex items-center space-x-2">
-                        <Checkbox,
+                        <Checkbox
 id={scope.value}
                           onCheckedChange={() => toggleScope(scope.value)}
                         />
-                        <Label,
+                        <Label
 htmlFor={scope.value}
                           className='text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70'
                         >
@@ -79,11 +79,9 @@ htmlFor={scope.value}
                 <Button variant='outline' onClick={handleDialogClose}>
                   Cancel
                 </Button>
-                <Button,
+                <Button
 onClick={handleCreateKey}
-                  disabled={
-                    keyName.trim() === '' |selectedScopes.length === 0,
-}
+                  disabled={keyName.trim() === '' |selectedScopes.length === 0}
                 >                  Create Key
               <DialogFooter>
                 <Button variant="outline" onClick={handleDialogClose}>Cancel</Button>
@@ -101,7 +99,7 @@ onClick={handleCreateKey}
                 <Check size={16} className='mr-2 text-green-500' /> New API Key,
 Generated
               </span>
-              <Button,
+              <Button
 variant='ghost'
                 size='icon'
                 className='h-6 w-6'                onClick={clearNewApiKey}        {/* New API Key Alert */}
@@ -111,12 +109,12 @@ variant='ghost'
               <span className="font-medium flex items-center">
                 <Check size={16} className="mr-2 text-green-500" /> New API Key Generated
               </span>
-              <Button,
+              <Button
 variant="ghost"
                 size="icon"
                 className="h-6 w-6"
                 onClick={clearNewApiKey}
-                onClick = {clearNewApiKey,}
+                onClick = {clearNewApiKey}
               >
                 <X size={14} />
               </Button>
@@ -147,7 +145,7 @@ variant="ghost"
             </div>
           ) : (
             keys.map(key => (
-              <div,
+              <div
 key={key.id}
                 className='p-4 border border-zinc-800 rounded-lg'
               >
@@ -163,7 +161,7 @@ key={key.id}
                             Active
                           </Badge>
                         ) : (
-                          <Badge,
+                          <Badge
 variant='secondary'
                             className='bg-red-900 text-white border-red-800'
                           >
@@ -211,7 +209,7 @@ variant='secondary'
                   </div>
                   <DropdownMenu>
                     <DropdownMenuTrigger asChild>
-                      <Button,
+                      <Button
 variant='ghost'
                         size='icon'
                         aria-label='More options'
@@ -219,21 +217,21 @@ variant='ghost'
                         <MoreVertical size={16} />
                       </Button>
                     </DropdownMenuTrigger>
-                    <DropdownMenuContent,
+                    <DropdownMenuContent
 align='end'
                       className='bg-zinc-900 border-zinc-800 text-white'
                     >
-                      <DropdownMenuItem,
+                      <DropdownMenuItem
 onClick={() => setShowRegenerateConfirm(key.id)}
                         className='cursor-pointer'
                         disabled={!key.is_active}
-                        onClick = {() => setShowRegenerateConfirm(key.id),}
+                        onClick = {() => setShowRegenerateConfirm(key.id)}
                         className="cursor-pointer"
-                        disabled = {!key.is_active,}
+                        disabled = {!key.is_active}
                       >
                         <RefreshCw size={14} className='mr-2' /> Regenerate
                       </DropdownMenuItem>
-                      <DropdownMenuItem,
+                      <DropdownMenuItem
 onClick={() => setShowDeleteConfirm(key.id)}
                         className='cursor-pointer text-red-500'
                         disabled={!key.is_active}                      >
@@ -247,14 +245,14 @@ onClick={() => setShowDeleteConfirm(key.id)}
                 </div>
                 <div className='mt-3 flex flex-wrap gap-2'>
                   {key.scopes.map(scope => (
-                    <Badge,
+                    <Badge
 key={scope}
                       variant='secondary'
                       className='bg-zinc-800 text-zinc-300 hover:bg-zinc-800'                    >
                 <div className="mt-3 flex flex-wrap gap-2">
-                  {key.scopes.map((scope,) => (
-                    <Badge,
-key = {scope,}
+                  {key.scopes.map((scope) => (
+                    <Badge
+key = {scope}
                       variant="secondary"
                       className="bg-zinc-800 text-zinc-300 hover:bg-zinc-800"
                       {scope}
@@ -312,7 +310,7 @@ account.
         </Button>
       </CardFooter>
       {/* Regenerate Key Confirmation Dialog */}
-      <AlertDialog,
+      <AlertDialog
 open={showRegenerateConfirm !== null}
         onOpenChange={open => !open && setShowRegenerateConfirm(null)}
         <AlertDialogContent className='bg-zinc-900 border-zinc-800 text-white'>
@@ -327,14 +325,14 @@ one. Any applications using this key will need to be updated.
             <AlertDialogCancel className='bg-transparent text-white hover:bg-zinc-800 border-zinc-700'>
               Cancel
             </AlertDialogCancel>
-            <AlertDialogAction,
+            <AlertDialogAction
 onClick={() =>
                 showRegenerateConfirm &&
                 handleRegenerateKey(showRegenerateConfirm)
               }
               className='bg-blue-600 hover:bg-blue-700'            >
-            <AlertDialogAction,
-onClick = {() => showRegenerateConfirm && handleRegenerateKey(showRegenerateConfirm),}
+            <AlertDialogAction
+onClick = {() => showRegenerateConfirm && handleRegenerateKey(showRegenerateConfirm)}
               className="bg-blue-600 hover:bg-blue-700"
       >
         <AlertDialogContent className="bg-zinc-900 border-zinc-800 text-white">
@@ -349,7 +347,7 @@ onClick = {() => showRegenerateConfirm && handleRegenerateKey(showRegenerateConf
             <AlertDialogCancel className="bg-transparent text-white hover:bg-zinc-800 border-zinc-700">
               Cancel
             </AlertDialogCancel>
-            <AlertDialogAction,
+            <AlertDialogAction
 onClick={() => showRegenerateConfirm && handleRegenerateKey(showRegenerateConfirm)}
               className="bg-blue-600 hover:bg-blue-700"
             >
@@ -359,7 +357,7 @@ onClick={() => showRegenerateConfirm && handleRegenerateKey(showRegenerateConfir
         </AlertDialogContent>
       </AlertDialog>
       {/* Delete Key Confirmation Dialog */}
-      <AlertDialog,
+      <AlertDialog
 open={showDeleteConfirm !== null}
         onOpenChange={open => !open && setShowDeleteConfirm(null)}
         <AlertDialogContent className='bg-zinc-900 border-zinc-800 text-white'>
@@ -374,13 +372,13 @@ to access the API. This action cannot be undone.
             <AlertDialogCancel className='bg-transparent text-white hover:bg-zinc-800 border-zinc-700'>
               Cancel
             </AlertDialogCancel>
-            <AlertDialogAction,
+            <AlertDialogAction
 onClick={() =>
                 showDeleteConfirm && handleRevokeKey(showDeleteConfirm)
               }
               className='bg-red-600 hover:bg-red-700'            >
-            <AlertDialogAction,
-onClick = {() => showDeleteConfirm && handleRevokeKey(showDeleteConfirm),}
+            <AlertDialogAction
+onClick = {() => showDeleteConfirm && handleRevokeKey(showDeleteConfirm)}
               className="bg-red-600 hover: bg-red-700"
       >
         <AlertDialogContent className="bg-zinc-900 border-zinc-800 text-white">
@@ -395,7 +393,7 @@ onClick = {() => showDeleteConfirm && handleRevokeKey(showDeleteConfirm),}
             <AlertDialogCancel className="bg-transparent text-white hover:bg-zinc-800 border-zinc-700">
               Cancel
             </AlertDialogCancel>
-            <AlertDialogAction,
+            <AlertDialogAction
 onClick={() => showDeleteConfirm && handleRevokeKey(showDeleteConfirm)}
               className="bg-red-600 hover: bg-red-700"
             >

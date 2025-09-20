@@ -1,17 +1,15 @@
 
-import React from "react",
-import { ClickableBadge,  } from "@/components/ui/clickable-badge";
-import { Button,  } from "@/components/ui/button";
-import { X,  } from 'lucide-react'
-interface ActiveFiltersProps {
-clearFilters: () => void,
-}
+import React from "react";;
+import { ClickableBadge } from "@/components/ui/clickable-badge";
+import { Button } from "@/components/ui/button";
+import { X } from "lucide-react";
+interface ActiveFiltersProps {clearFilters: () => void}
 export function ActiveFilters({
 return (
     <div className='mb-6 flex flex-wrap gap-2 items-center'>
       <span className='text-zion-slate-light text-sm'>Active filters:</span>
       {selectedSkills.map(skill => (
-        <ClickableBadge,
+        <ClickableBadge
 key={skill}
           className='bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2'
           onClick={() => toggleSkill(skill)}        >
@@ -20,7 +18,7 @@ key={skill}
         </ClickableBadge>
       ))}
       {selectedAvailability.map(status => (
-        <ClickableBadge,
+        <ClickableBadge
 key={status}
           className='bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2'
           onClick={() => toggleAvailability(status)}        >
@@ -33,7 +31,7 @@ key={status}
         </ClickableBadge>
       ))}
       {selectedRegions.map(region => (
-        <ClickableBadge,
+        <ClickableBadge
 key={region}
           className='bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2'
           onClick={() => toggleRegion(region)}        >
@@ -42,7 +40,7 @@ key={region}
         </ClickableBadge>
       ))}
       {(priceRange[0] !== 50 |priceRange[1] !== 200) && (
-        <ClickableBadge,
+        <ClickableBadge
 className='bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2'
           onClick={() => setPriceRange([50 200])}        >
           ${priceRange[0]}-${priceRange[1]}/hr
@@ -50,14 +48,14 @@ className='bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-non
         </ClickableBadge>
       )}
       {(experienceRange[0] !== 0 |experienceRange[1] !== 15) && (
-        <ClickableBadge,
+        <ClickableBadge
 className='bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2'
           onClick={() => setExperienceRange([0 15])}        >
           {experienceRange[0]}-{experienceRange[1]} years
           <X className='h-3 w-3' />
         </ClickableBadge>
       )}
-      <Button,
+      <Button
 variant='ghost'
         size='sm'
         onClick={clearFilters}

@@ -1,9 +1,9 @@
 interface AIMilestoneGeneratorProps {
-  scope: string;,
+  scope: string;
 startDate: string;
-  endDate: string | null;,
+  endDate: string | null;
 projectType: string;
-  onAddMilestones: (milestones: GeneratedMilestone[]) => void;,
+  onAddMilestones: (milestones: GeneratedMilestone[]) => void;
 onAddMilestone: (milestone: GeneratedMilestone) => void,
 export function AIMilestoneGenerator({
                     >
@@ -11,7 +11,8 @@ export function AIMilestoneGenerator({
                     </Button>
                   </div>
                   <AccordionContent>
-                    <div className='pl-6 space-y-2'>
+}
+                    <div className='pl-6 space-y-2'>}
                       <p className='text-sm'>{milestone.description}</p>
                       <div className='flex items-center text-sm text-muted-foreground'>
                         <Calendar className='w-4 h-4 mr-1' />

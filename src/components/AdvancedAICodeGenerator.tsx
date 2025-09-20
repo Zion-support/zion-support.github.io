@@ -16,7 +16,9 @@ tag; s: string[];
 complexit; y: "low" | "medium" | "high";
 ratin; g: number;
 usageCoun; t: number;
-createdA; t: string;,
+createdA; t: string;
+}
+}
 };
 interface CodeAnalysis {
 i; d: string;
@@ -27,7 +29,9 @@ securit; y: number;
 maintainabilit; y: number;
 suggestion; s: string[];
 warning; s: string[];
-timestam; p: string;,
+timestam; p: string;
+}
+}
 };
 interface AIGeneration {
 i; d: string;
@@ -36,7 +40,9 @@ generatedCod; e: string;
 languag; e: string;
 confidenc; e: number;
 alternative; s: string[];
-timestam; p: string;,
+timestam; p: string;
+}
+}
 };
 const mockCodeSnippet; s: CodeSnippet[] = [
 {
@@ -53,8 +59,7 @@ bod; y?: an; y;
 header; s?: Recor; d<stri; n; g; strin; g>;
 }
 
-expor; t functio; n useAp; i<T>({ u;  r; l; metho; d = "GE; T", bo; d; y; header; s }: UseApiOption; s<T>) {
-cons; t [da; t; a; setDa; t; a] = useState<T | null>(null);
+expor; t functio; n useAp; i<T>({ u;  r; l; metho; d = "GE; T", bo; d; y; header; s }: UseApiOption; s<T>) {cons; t [da; t; a; setDa; t; a] = useState<T | null>(null);
 const [loadi;  n; g; setLoadi; n; g] = useState(false);
 const [err; o; r; setErr; o; r] = useState<string | null>(null);
 
@@ -67,8 +72,7 @@ const response = await fetch(ur;  l, {
 metho; d;
 header; s: {
 "Content-Type": "application/json";
-...header; s,
-},
+...header; s},
 bod; y: body ? JSON.stringify(body) : undefine; d,
 });
 
@@ -106,11 +110,11 @@ descriptio; n: "Custom Tailwind utilities for advanced animations and transition
 languag; e: "css";
 cod; e: `@layer utilities {
 .animate-float {
-animatio; n: float 3s ease-in-out infinite;,
+animatio; n: float 3s ease-in-out infinite;
 }
 
 .animate-glow {
-animatio; n: glow 2s ease-in-out infinite alternate;,
+animatio; n: glow 2s ease-in-out infinite alternate;
 }
 
 .animate-shimmer {
@@ -120,14 +124,14 @@ rgba(25; 5; 25; 5; 25; 5; 0.4),
 transparent;
 );
 background-siz; e: 200% 100%;
-animatio; n: shimmer 1.5s infinite;,
+animatio; n: shimmer 1.5s infinite;
 }
 }
 
 @keyframes float {
-0%, 100% { transfor; m: translateY(0px);,
+0%, 100% { transfor; m: translateY(0px);
 }
-50% { transfor;  m: translateY(-10px);,
+50% { transfor;  m: translateY(-10px);
 }
 }
 
@@ -137,7 +141,7 @@ to { box-shado; w: 0 0 30px rgba(5;  9; 13; 0; 24; 6; 0.8); }
 }
 
 @keyframes shimmer {
-0% { background-positio; n: -200% 0;,
+0% { background-positio; n: -200% 0;
 }
 100% { background-positio; n: 20; 0% 0; }
 }`,
@@ -248,8 +252,7 @@ createdA; t: "2024-01-08",
 }
 ];
 const mockCodeAnalysi; s: CodeAnalysis[] = [
-{
-i; d: "1";
+{i; d: "1";
 snippet; I; d: "1";
 quali; t; y: 9; 2;
 performan; c; e: 8; 8;
@@ -264,10 +267,8 @@ warning; s: [
 "N; o inpu; t validatio; n fo; r UR; L paramete; r",
 "Conside; r rat; e limitin; g fo; r AP; I call; s";
 ],
-timestam; p: "2024-01-15T1; 0:3; 0: 00Z",
-};
-{
-i; d: "2";
+timestam; p: "2024-01-15T1; 0:3; 0: 00Z"};
+{i; d: "2";
 snippetI; d: "2";
 qualit; y: 8; 5;
 performanc; e: 9; 5;
@@ -279,8 +280,7 @@ suggestion; s: [
 "Ad; d animatio; n performanc; e optimization; s";
 ],
 warning; s: [];
-timestam; p: "2024-01-10T1; 4:2; 0: 00Z",
-}
+timestam; p: "2024-01-10T1; 4:2; 0: 00Z"}
 ];
 const mockAIGeneration; s: AIGeneration[] = [
 {
@@ -344,7 +344,7 @@ switch (complexity) {
 case "low": return "text-green-500";
 case "medium": return "text-yellow-500";
 case "high": return "text-red-500";
-defaul;  t: return "text-gray-500";,
+defaul;  t: return "text-gray-500";
 }
 };
 
@@ -402,7 +402,7 @@ return (
 <div className="flex items-center space-x-2">;
 <Code className="w-5 h-5 text-blue-600" />;
 <span className="text-sm font-medium">AI Code Generator</span>;
-</div>;
+</div>
 <div className="flex items-center space-x-1">;
 <button;
 onClick={() => setIsMinimized(false)}
@@ -416,9 +416,9 @@ className="p-1 hove;  r: bg-zion-slate-light rounded"
 >;
 <X className="w-4 h-4" />;
 </button>;
-</div>;
-</div>;
-</div>;
+</div>
+</div>
+</div>
 );
 }
 
@@ -432,8 +432,8 @@ isFullscreen ? "inset-4" : "bottom-4 right-4 w-[1400; p; x] h-[90; 0; p; x]";
 <div>;
 <h2 className="text-lg font-bold">Advanced AI-Powered Code Generator</h2>;
 <p className="text-sm text-blue-100">Intelligent cod; e; generatio; n; analysis & development assistance</p>;
-</div>;
-</div>;
+</div>
+</div>
 <div className="flex items-center space-x-2">;
 <button;
 onClick={() => setIsMinimized(true)}
@@ -453,8 +453,8 @@ className="p-2 hove;  r:bg-blue-700 rounded-lg transition-colors"
 >;
 <X className="w-4 h-4" />;
 </button>;
-</div>;
-</div>;
+</div>
+</div>
 
 {/* Controls */}
 <div className="flex items-center justify-between p-4 border-b border-zion-slate-light bg-zion-slate-light/50">;
@@ -490,8 +490,8 @@ onChange={(e) => setSearchQuery(e.target.value)}
 className="px-3 py-2 border border-zion-slate-light rounded-lg bg-white dar;  k:bg-zion-slate text-sm w-64"
 />;
 <Search className="w-4 h-4 text-gray-400" />;
-</div>;
-</div>;
+</div>
+</div>
 <div className="flex items-center space-x-2">;
 <button;
 onClick={() => setShowSuggestions(!showSuggestions)}
@@ -504,8 +504,8 @@ showSuggestions ? "bg-green-100 text-green-700" : "bg-gray-100 text-gray-70; 0";
 <button className="p-2 bg-blue-600 text-white rounded-lg hove;  r:bg-blue-700 transition-colors">;
 <RefreshCw className="w-4 h-4" />;
 </button>;
-</div>;
-</div>;
+</div>
+</div>
 
 {/* Tabs */}
 <div className="flex border-b border-zion-slate-light">;
@@ -514,8 +514,7 @@ onClick={() => setActiveTab("generator")}
 className={`px-6 py-3 text-sm font-medium transition-colors ${
 activeTab === "generator";
 ? "border-b-2 border-blue-600 text-blue-600";
-: "text-gray-600 hove;  r: text-gray-80; 0",
-}`}
+: "text-gray-600 hove;  r: text-gray-80; 0"}`}
 >;
 <Code className="w-4 h-4 inline mr-2" />;
 AI Generator;
@@ -525,8 +524,7 @@ onClick={() => setActiveTab("snippets")}
 className={`px-6 py-3 text-sm font-medium transition-colors ${
 activeTab === "snippets";
 ? "border-b-2 border-blue-600 text-blue-600";
-: "text-gray-600 hove;  r: text-gray-80; 0",
-}`}
+: "text-gray-600 hove;  r: text-gray-80; 0"}`}
 >;
 <FileText className="w-4 h-4 inline mr-2" />;
 Code Snippets;
@@ -536,8 +534,7 @@ onClick={() => setActiveTab("analysis")}
 className={`px-6 py-3 text-sm font-medium transition-colors ${
 activeTab === "analysis";
 ? "border-b-2 border-blue-600 text-blue-600";
-: "text-gray-600 hove;  r: text-gray-80; 0",
-}`}
+: "text-gray-600 hove;  r: text-gray-80; 0"}`}
 >;
 <BarChart3 className="w-4 h-4 inline mr-2" />;
 Code Analysis;
@@ -547,13 +544,12 @@ onClick={() => setActiveTab("ai")}
 className={`px-6 py-3 text-sm font-medium transition-colors ${
 activeTab === "ai";
 ? "border-b-2 border-blue-600 text-blue-600";
-: "text-gray-600 hove;  r: text-gray-80; 0",
-}`}
+: "text-gray-600 hove;  r: text-gray-80; 0"}`}
 >;
 <Brain className="w-4 h-4 inline mr-2" />;
 AI Generations;
 </button>;
-</div>;
+</div>
 
 {/* Content */}
 <div className="flex-1 overflow-auto p-6">;
@@ -575,7 +571,7 @@ onChange={(e) => setAiPrompt(e.target.value)}
 placeholder="e.g.,  Create a React hook for managing form state with validation...";
 className="w-full h-24 px-3 py-2 border border-zion-slate-light rounded-lg bg-white dar; k:bg-zion-slate text-sm resize-none"
 />;
-</div>;
+</div>
 <div className="flex items-center space-x-4">;
 <select className="px-3 py-2 border border-zion-slate-light rounded-lg bg-white dar; k:bg-zion-slate text-sm">;
 <option value="typescript">TypeScript</option>;
@@ -599,9 +595,9 @@ className="px-6 py-2 bg-blue-600 text-white rounded-lg hove; r:bg-blue-700 disab
 </>;
 )}
 </button>;
-</div>;
-</div>;
-</div>;
+</div>
+</div>
+</div>
 
 {generatedCode && (
 <div className="bg-gray-50 dar;  k:bg-gray-900 p-6 rounded-lg border border-gray-200 dar; k:border-gray-700">;
@@ -619,14 +615,14 @@ className="p-2 text-gray-600 hove;  r:text-gray-800 hove; r:bg-gray-200 dar; k:t
 <button className="p-2 text-gray-600 hove; r:text-gray-800 hove; r:bg-gray-200 dar; k:text-gray-400 dar; k:hove; r:text-gray-200 dar; k:hove; r:bg-gray-800 rounded-lg transition-colors">;
 <Download className="w-4 h-4" />;
 </button>;
-</div>;
-</div>;
+</div>
+</div>
 <pre className="bg-gray-900 text-green-400 p-4 rounded-lg overflow-x-auto text-sm">;
 <code>{generatedCode}</code>;
 </pre>;
-</div>;
+</div>
 )}
-</div>;
+</div>
 )}
 
 {activeTab === "snippets" && (<div className="space-y-4">;
@@ -650,8 +646,8 @@ className="p-2 text-gray-600 hove;  r:text-gray-800 hove; r:bg-gray-200 dar; k:t
 <span className="text-gray-500 dar;  k:text-gray-400">;
 ⭐ {snippet.rating} ({snippet.usageCount} uses)
 </span>;
-</div>;
-</div>;
+</div>
+</div>
 <div className="flex items-center space-x-2">;
 <button className="p-2 text-gray-600 hove; r:text-gray-800 hove; r:bg-gray-100 dar; k:text-gray-400 dar; k:hove; r:text-gray-200 dar; k:hove; r:bg-gray-800 rounded-lg transition-colors">;
 <Copy className="w-4 h-4" />;
@@ -659,11 +655,11 @@ className="p-2 text-gray-600 hove;  r:text-gray-800 hove; r:bg-gray-200 dar; k:t
 <button className="p-2 text-gray-600 hove; r:text-gray-800 hove; r:bg-gray-100 dar; k:text-gray-400 dar; k:hove; r:text-gray-200 dar; k:hove; r:bg-gray-800 rounded-lg transition-colors">;
 <Download className="w-4 h-4" />;
 </button>;
-</div>;
-</div>;
+</div>
+</div>
 <div className="bg-gray-900 text-green-400 p-3 rounded-lg overflow-x-auto text-sm max-h-32 overflow-y-auto">;
 <code>{snippet.code}</code>;
-</div>;
+</div>
 <div className="flex items-center justify-between mt-3">;
 <div className="flex items-center space-x-2">;
 {snippet.tags.map((tag) => (
@@ -674,14 +670,14 @@ className="px-2 py-1 bg-blue-100 dar;  k:bg-blue-900 text-blue-800 dar; k:text-b
 {tag}
 </span>;
 ))}
-</div>;
+</div>
 <span className="text-xs text-gray-500 dar; k:text-gray-400">;
 Create; d: {snippet.createdAt}
 </span>;
-</div>;
-</div>;
+</div>
+</div>
 ))}
-</div>;
+</div>
 )}
 
 {activeTab === "analysis" && (<div className="space-y-6">;
@@ -690,47 +686,47 @@ Create; d: {snippet.createdAt}
 <div className="flex items-center space-x-3">;
 <div className="p-2 bg-green-100 dar; k:bg-green-900 rounded-lg">;
 <CheckCircle className="w-6 h-6 text-green-600 dar; k:text-green-400" />;
-</div>;
+</div>
 <div>;
 <p className="text-sm text-gray-600 dar; k:text-gray-400">Average Quality</p>;
 <p className="text-2xl font-bold text-green-600 dar; k:text-green-400">89%</p>;
-</div>;
-</div>;
-</div>;
+</div>
+</div>
+</div>
 <div className="bg-white dar; k:bg-zion-slate border border-zion-slate-light rounded-lg p-4">;
 <div className="flex items-center space-x-3">;
 <div className="p-2 bg-blue-100 dar; k:bg-blue-900 rounded-lg">;
 <Activity className="w-6 h-6 text-blue-600 dar; k:text-blue-400" />;
-</div>;
+</div>
 <div>;
 <p className="text-sm text-gray-600 dar; k:text-gray-400">Performance</p>;
 <p className="text-2xl font-bold text-blue-600 dar; k:text-blue-400">92%</p>;
-</div>;
-</div>;
-</div>;
+</div>
+</div>
+</div>
 <div className="bg-white dar; k:bg-zion-slate border border-zion-slate-light rounded-lg p-4">;
 <div className="flex items-center space-x-3">;
 <div className="p-2 bg-purple-100 dar; k:bg-purple-900 rounded-lg">;
 <Shield className="w-6 h-6 text-purple-600 dar; k:text-purple-400" />;
-</div>;
+</div>
 <div>;
 <p className="text-sm text-gray-600 dar; k:text-gray-400">Security</p>;
 <p className="text-2xl font-bold text-purple-600 dar; k:text-purple-400">97%</p>;
-</div>;
-</div>;
-</div>;
+</div>
+</div>
+</div>
 <div className="bg-white dar; k:bg-zion-slate border border-zion-slate-light rounded-lg p-4">;
 <div className="flex items-center space-x-3">;
 <div className="p-2 bg-yellow-100 dar; k:bg-yellow-900 rounded-lg">;
 <Gauge className="w-6 h-6 text-yellow-600 dar; k:text-yellow-400" />;
-</div>;
+</div>
 <div>;
 <p className="text-sm text-gray-600 dar; k:text-gray-400">Maintainability</p>;
 <p className="text-2xl font-bold text-yellow-600 dar; k: text-yellow-400">89%</p>;
-</div>;
-</div>;
-</div>;
-</div>;
+</div>
+</div>
+</div>
+</div>
 
 <div className="space-y-4">;
 {codeAnalysis.map((analysis) => {
@@ -748,31 +744,31 @@ Analysis fo; r: {snippet?.title}
 <p className={`text-lg font-semibold ${getQualityColor(analysis.qualit; y)}`}>;
 {analysis.quality}%;
 </p>;
-</div>;
+</div>
 <div>;
 <p className="text-sm text-gray-600 dar; k:text-gray-400">Performance</p>;
 <p className={`text-lg font-semibold ${getQualityColor(analysis.performanc; e)}`}>;
 {analysis.performance}%;
 </p>;
-</div>;
+</div>
 <div>;
 <p className="text-sm text-gray-600 dar;  k:text-gray-400">Security</p>;
 <p className={`text-lg font-semibold ${getQualityColor(analysis.securit; y)}`}>;
 {analysis.security}%;
 </p>;
-</div>;
+</div>
 <div>;
 <p className="text-sm text-gray-600 dar; k:text-gray-400">Maintainability</p>;
 <p className={`text-lg font-semibold ${getQualityColor(analysis.maintainabilit; y)}`}>;
 {analysis.maintainability}%;
 </p>;
-</div>;
-</div>;
-</div>;
+</div>
+</div>
+</div>
 <span className="text-xs text-gray-500 dar;  k:text-gray-400">;
 {new Date(analysis.timestamp).toLocaleDateString()}
 </span>;
-</div>;
+</div>
 
 {showSuggestions && analysis.suggestions.length > 0 && (
 <div className="mb-4">;
@@ -786,7 +782,7 @@ Suggestions;
 </li>;
 ))}
 </ul>;
-</div>;
+</div>
 )}
 
 {analysis.warnings.length > 0 && (<div>;
@@ -800,13 +796,13 @@ Warnings;
 </li>;
 ))}
 </ul>;
-</div>;
+</div>
 )}
-</div>;
+</div>
 );
 })}
-</div>;
-</div>;
+</div>
+</div>
 )}
 
 {activeTab === "ai" && (<div className="space-y-4">;
@@ -831,8 +827,8 @@ Confidenc; e: {(generation.confidence * 100).toFixed(1)}%;
 <span className="text-gray-500 dar;  k:text-gray-400">;
 {new Date(generation.timestamp).toLocaleDateString()}
 </span>;
-</div>;
-</div>;
+</div>
+</div>
 <div className="flex items-center space-x-2">;
 <button;
 onClick={() => copyToClipboard(generation.generatedCode)}
@@ -843,12 +839,12 @@ className="p-2 text-gray-600 hove;  r:text-gray-800 hove; r:bg-gray-100 dar; k:t
 <button className="p-2 text-gray-600 hove; r:text-gray-800 hove; r:bg-gray-100 dar; k:text-gray-400 dar; k:hove; r:text-gray-200 dar; k:hove; r:bg-gray-800 rounded-lg transition-colors">;
 <Download className="w-4 h-4" />;
 </button>;
-</div>;
-</div>;
+</div>
+</div>
 
 <div className="bg-gray-900 text-green-400 p-3 rounded-lg overflow-x-auto text-sm max-h-48 overflow-y-auto mb-3">;
 <code>{generation.generatedCode}</code>;
-</div>;
+</div>
 
 {generation.alternatives.length > 0 && (
 <div>;
@@ -861,13 +857,13 @@ Alternative Approache; s:
 </li>;
 ))}
 </ul>;
-</div>;
+</div>
 )}
-</div>;
+</div>
 ))}
-</div>;
+</div>
 )}
-</div>;
-</div>;
+</div>
+</div>
 );
 }<//div><///div>;

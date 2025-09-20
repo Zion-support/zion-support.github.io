@@ -1,7 +1,6 @@
 export const INNOVATIVE_IT_SERVICES = [
     // Quantum Computing as a Service (QCaaS)
-    {
-        id: "quantum-computing-as-a-service";
+    {id: "quantum-computing-as-a-service";
         title: "Quantum Computing as a Service (QCaaS)";
         description: "Enterprise-grade quantum computing platform that provides access to quantum processors, quantum algorithms, and quantum software development tools through the cloud.",
         category: "Quantum Technology";
@@ -48,8 +47,7 @@ export const INNOVATIVE_IT_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         technology: ["IBM Q", "Google Quantum", "Microsoft Q#", "Qiskit", "Cirq", "PennyLane"],
         integrations: ["AWS", "Azure", "Google Cloud", "Research databases", "Scientific computing tools"],
         compliance: ["ISO 27001", "SOC 2", "Research ethics", "Data security"],
@@ -59,8 +57,7 @@ export const INNOVATIVE_IT_SERVICES = [
         growthRate: "56.7% annually",
     };
     // Edge Computing Infrastructure;
-    {
-        id: "edge-computing-infrastructure";
+    {id: "edge-computing-infrastructure";
         title: "Edge Computing Infrastructure Platform";
         description: "Distributed edge computing platform that brings computation and data storage closer to data sources, reducing latency and improving real-time processing capabilities.",
         category: "Edge Computing";
@@ -107,8 +104,7 @@ export const INNOVATIVE_IT_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         technology: ["Kubernetes", "Docker", "Node.js", "Python", "Redis", "PostgreSQL"],
         integrations: ["AWS IoT", "Azure IoT", "Google Cloud IoT", "5G networks", "IoT platforms"],
         compliance: ["ISO 27001", "SOC 2", "GDPR", "IoT security standards"],
@@ -118,8 +114,7 @@ export const INNOVATIVE_IT_SERVICES = [
         growthRate: "37.4% annually",
     };
     // Zero Trust Security Architecture;
-    {
-        id: "zero-trust-security-architecture";
+    {id: "zero-trust-security-architecture";
         title: "Zero Trust Security Architecture Platform";
         description: "Comprehensive zero trust security platform that implements continuous verification, least privilege access, and micro-segmentation to protect modern IT environments.",
         category: "Cybersecurity";
@@ -166,8 +161,7 @@ export const INNOVATIVE_IT_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         technology: ["OAuth 2.0", "SAML", "OIDC", "Zero Trust Network Access", "Identity providers", "SIEM"],
         integrations: ["Active Directory", "Okta", "Azure AD", "Google Workspace", "CrowdStrike", "Palo Alto"],
         compliance: ["SOC 2", "ISO 27001", "NIST", "GDPR", "HIPAA", "PCI DSS"],
@@ -177,8 +171,7 @@ export const INNOVATIVE_IT_SERVICES = [
         growthRate: "17.4% annually",
     };
     // Multi-Cloud Management Platform;
-    {
-        id: "multi-cloud-management-platform";
+    {id: "multi-cloud-management-platform";
         title: "Multi-Cloud Management Platform";
         description: "Unified platform for managing multiple cloud providers, optimizing costs, ensuring compliance, and providing seamless workload portability across different cloud environments.",
         category: "Cloud Management";
@@ -225,8 +218,7 @@ export const INNOVATIVE_IT_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         technology: ["Terraform", "Kubernetes", "Docker", "Python", "React", "PostgreSQL"],
         integrations: ["AWS", "Azure", "Google Cloud", "Oracle Cloud", "IBM Cloud", "Monitoring tools"],
         compliance: ["SOC 2", "ISO 27001", "GDPR", "Cloud security standards"],
@@ -236,8 +228,7 @@ export const INNOVATIVE_IT_SERVICES = [
         growthRate: "28.9% annually",
     };
     // API Management and Governance;
-    {
-        id: "api-management-governance";
+    {id: "api-management-governance";
         title: "API Management and Governance Platform";
         description: "Comprehensive API management platform that provides design, development, security, monitoring, and governance capabilities for enterprise API ecosystems.",
         category: "API Management";
@@ -284,8 +275,7 @@ export const INNOVATIVE_IT_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         technology: ["Kong", "Apigee", "AWS API Gateway", "Azure API Management", "Node.js", "React"],
         integrations: ["CI/CD pipelines", "Identity providers", "Monitoring tools", "Documentation platforms"],
         compliance: ["SOC 2", "ISO 27001", "GDPR", "API security standards"],
@@ -295,8 +285,7 @@ export const INNOVATIVE_IT_SERVICES = [
         growthRate: "32.7% annually",
     };
     // DevOps Automation Platform;
-    {
-        id: "devops-automation-platform";
+    {id: "devops-automation-platform";
         title: "DevOps Automation Platform";
         description: "Comprehensive DevOps automation platform that streamlines software development, testing, deployment, and operations through intelligent automation and orchestration.",
         category: "DevOps";
@@ -343,8 +332,7 @@ export const INNOVATIVE_IT_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         technology: ["Jenkins", "GitLab CI", "GitHub Actions", "Terraform", "Ansible", "Kubernetes"],
         integrations: ["Git repositories", "Cloud platforms", "Monitoring tools", "Security scanners", "Chat platforms"],
         compliance: ["SOC 2", "ISO 27001", "DevOps best practices", "Security standards"],
@@ -354,8 +342,7 @@ export const INNOVATIVE_IT_SERVICES = [
         growthRate: "24.3% annually",
     };
     // Data Mesh Architecture Platform;
-    {
-        id: "data-mesh-architecture-platform";
+    {id: "data-mesh-architecture-platform";
         title: "Data Mesh Architecture Platform";
         description: "Modern data architecture platform that implements data mesh principles, enabling decentralized data ownership, self-service data infrastructure, and domain-driven data products.",
         category: "Data Architecture";
@@ -402,8 +389,7 @@ export const INNOVATIVE_IT_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         technology: ["Apache Kafka", "Apache Airflow", "DataHub", "Amundsen", "Great Expectations", "dbt"],
         integrations: ["Data warehouses", "Data lakes", "Streaming platforms", "BI tools", "ML platforms"],
         compliance: ["GDPR", "CCPA", "SOC 2", "Data governance standards"],
@@ -413,8 +399,7 @@ export const INNOVATIVE_IT_SERVICES = [
         growthRate: "21.4% annually",
     };
     // Green IT Infrastructure;
-    {
-        id: "green-it-infrastructure";
+    {id: "green-it-infrastructure";
         title: "Green IT Infrastructure Platform";
         description: "Sustainable IT infrastructure platform that optimizes energy consumption, reduces carbon footprint, and implements green computing practices for environmentally conscious organizations.",
         category: "Green IT";
@@ -461,8 +446,7 @@ export const INNOVATIVE_IT_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         technology: ["IoT sensors", "Energy monitoring", "Sustainability analytics", "Green computing tools", "Reporting platforms"],
         integrations: ["Building management systems", "Energy providers", "Sustainability platforms", "ESG reporting tools"],
         compliance: ["ISO 14001", "ISO 50001", "LEED", "Energy Star", "ESG standards"],

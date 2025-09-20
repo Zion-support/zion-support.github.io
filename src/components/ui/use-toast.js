@@ -1,6 +1,5 @@
 import { useState, useCallback } from 'react';
-export function useToast() {
-    const [toasts, setToasts] = useState([]);
+export function useToast() {const [toasts, setToasts] = useState([]);
     const toast = useCallback((options) => {
         const id = Math.random().toString(36).substr(2, 9);
         const newToast = {
@@ -8,8 +7,7 @@ export function useToast() {
             title: options.title,
             description: options.description,
             variant: options.variant || 'default',
-            duration: options.duration || 5000,
-        };
+            duration: options.duration || 5000};
         setToasts(prev => [...prev, newToast]);
         // Auto-remove toast after duration;
         setTimeout(() => {
@@ -55,12 +53,10 @@ export function useToast() {
     const info = (title, description) => {
         return toast({ title, description, type: 'info' });
     };
-    return {
-        toasts,
+    return {toasts,
         toast,
         dismiss,
-        dismissAll,
-    };
+        dismissAll};
 }
 // Export a default toast function for backward compatibility;
 export const toast = (options) => {

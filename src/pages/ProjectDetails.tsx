@@ -1,18 +1,18 @@
-import React { useState useEffect } from "react",
+import React { useState useEffect } from "react",;
 import Link from 'next/link';
-import { useRouter,, ,  } from 'next/router';
-import { format,  } from "date-fns",
-import { useAuth,  } from "@/hooks/useAuth",
-import { useProjects,  } from "@/hooks/useProjects",
-import { SEO,  } from "@/components/SEO",
-import { ProtectedRoute,  } from "@/components/ProtectedRoute",
-import { Project,, ProjectStatus,  } from "@/types/projects",
-import { Button,  } from "@/components/ui/button";
+import { useRouter } from "next/router";
+import { format } from "date-fns";,
+import { useAuth } from "@/hooks/useAuth";,
+import { useProjects } from "@/hooks/useProjects";,
+import { SEO } from "@/components/SEO";,
+import { ProtectedRoute } from "@/components/ProtectedRoute";,
+import { Project, ProjectStatus } from "@/types/projects";,
+import { Button } from "@/components/ui/button";
 import { logErrorToProduction } from '@/utils/productionLogger';
 import {
 return (
     <>
-      <SEO,
+      <SEO
 title={`Project: ${project.job?.title |'Project Details'} | Zion AI Marketplace`}
         description='View and manage your project details and collaboration.'
       />
@@ -53,20 +53,20 @@ and start the project.
                       </AlertDialogHeader>
                       <AlertDialogFooter>
                         <AlertDialogCancel>Cancel</AlertDialogCancel>
-                        <AlertDialogAction,
+                        <AlertDialogAction
 onClick={() => handleStatusChange('offer_accepted')}
                         >                          Accept Offer
                         </AlertDialogAction>
                       </AlertDialogFooter>
                     </AlertDialogContent>
                   </AlertDialog>
-                  <Button,
+                  <Button
 variant='outline'
                     onClick={() => handleStatusChange('changes_requested')}
                   >
                     <MessageSquare className='mr-2 h-4 w-4' /> Request Changes
                   </Button>
-                </>
+</>
               )}
               {(isClient |isTalent) && project.status === 'in_progress' && (
                 <AlertDialog>
@@ -89,7 +89,7 @@ approved.
                     </AlertDialogHeader>
                     <AlertDialogFooter>
                       <AlertDialogCancel>Cancel</AlertDialogCancel>
-                      <AlertDialogAction,
+                      <AlertDialogAction
 onClick={() => handleStatusChange('completed')}
                       >                        Mark as Completed
                       </AlertDialogAction>
@@ -115,7 +115,7 @@ onClick={() => handleStatusChange('completed')}
                 ['offer_sent', 'offer_accepted', 'in_progress'].includes(
                   project.status
                 ) && (
-                  <Button,
+                  <Button
 variant='outline'
                     onClick={() =>
                       router.push(
@@ -130,7 +130,7 @@ variant='outline'
         </div>
         <div className='grid grid-cols-1 lg:grid-cols-3 gap-8'>
           <div className='order-2 lg:order-1 lg:col-span-2'>
-            <Tabs,
+            <Tabs
 defaultValue='details'
               value={activeTab}
               onValueChange={setActiveTab}
@@ -231,7 +231,7 @@ defaultValue='details'
                           </div>
                         </div>
                         <Button variant='outline' size='sm' asChild>
-                          <a,
+                          <a
 href={project.agreement_url}
                             target='_blank'
                             rel='noopener noreferrer'
@@ -263,14 +263,14 @@ href={project.agreement_url}
                       <div className='space-y-4 max-h-[400px] overflow-y-auto mb-4'>
                         {notes.length > 0 ? (
                           notes.map(note => (
-                            <div,
+                            <div
 key={note.id}
                               className='bg-muted/30 p-3 rounded-md'
                             >
                               <div className='flex items-center gap-2 mb-2'>
                                 <Avatar className='h-6 w-6'>
                                   {note.created_by_profile?.avatar_url ? (
-                                    <img,
+                                    <img
 src={note.created_by_profile.avatar_url}
                                       alt={note.created_by_profile.display_name}
                                       loading='lazy'                                    />
@@ -302,14 +302,14 @@ src={note.created_by_profile.avatar_url}
                       </div>
                       {isOfferAccepted && (
                         <div>
-                          <Textarea,
+                          <Textarea
 placeholder='Add a note or update to the project...'
                             value={newNote}
                             onChange={e => setNewNote(e.target.value)}
                             className='min-h-[100px] mb-2'                          />
-                          <Button,
-onClick = {handleSubmitNote,}
-                            disabled = {!newNote.trim() |isSubmittingNote,}
+                          <Button
+onClick = {handleSubmitNote}
+                            disabled = {!newNote.trim() |isSubmittingNote}
                           >
                             {isSubmittingNote ? 'Posting...' : 'Post Note'}
                           </Button>
@@ -334,7 +334,7 @@ onClick = {handleSubmitNote,}
                   <div className='flex items-start gap-4'>
                     <Avatar className='h-10 w-10'>
                       {project.talent_profile?.profile_picture_url ? (
-                        <img,
+                        <img
 src={project.talent_profile.profile_picture_url}
                           alt={project.talent_profile.full_name}
                           loading='lazy'                        />
@@ -351,7 +351,7 @@ src={project.talent_profile.profile_picture_url}
                           'Professional'}
                       </p>
                       {isClient && (
-                        <Button,
+                        <Button
 variant='outline'
                           size='sm'
                           className='mt-2'
@@ -368,7 +368,7 @@ variant='outline'
                   <div className='flex items-start gap-4'>
                     <Avatar className='h-10 w-10'>
                       {project.talent_profile?.profile_picture_url ? (
-                        <img,
+                        <img
 src={project.talent_profile.profile_picture_url}
                           alt={project.talent_profile.full_name}
                           loading='lazy'                        />
@@ -384,7 +384,7 @@ src={project.talent_profile.profile_picture_url}
                         Project Owner
                       </p>
                       {isTalent && (
-                        <Button,
+                        <Button
 variant='outline'
                           size='sm'
                           className='mt-2'
@@ -433,7 +433,7 @@ variant='outline'
                     <AlertCircle className='h-4 w-4' /> The talent has requested,
 changes to this offer.
                   </p>
-                  <Button,
+                  <Button
 variant='outline'
                     onClick={() =>
                       router.push(`/messages?talentId=${project.talent_id}`)
@@ -470,15 +470,13 @@ canceled.
           </div>
         </div>
       </main>
-    </>
+</>
   )
 }
 setIsSubmittingNote (true)
-try {
-  if (error) throw error
-//Refresh notes,
-}catch (err: any) {'
-  logErrorToProduction ('Error adding note:', {
+try {if (error) throw error
+//Refresh notes}catch (err: any) {';
+  logErrorToProduction ('Error adding note:', {;
   data: err;
 })
 toast ({
@@ -501,9 +499,7 @@ case "changes requested": return <Badge variant="secondary">Changes Requested</B
 case "in progress": return <Badge className="bg-blue-100 text-blue-800">In Progress</Badge>;"
 case "completed": return <Badge variant="default">Completed</Badge>;"
 case "canceled": return <Badge variant="destructive">Canceled</Badge>;"
-default: return <Badge variant="outline"> {
-  status,
-}</Badge>
+default: return <Badge variant="outline"> {status}</Badge>
 };'"
 <p>Loading project details...</p> </div> </div> </div> <Card> <CardContent className="flex flex-col items-center justify-center py-10" > <AlertCircle className="h-10 w-10 text-muted-foreground mb-4" /> <h2 className="text-xl font-bold mb-2" >Project Not Found</h2> <p className="text-muted-foreground mb-4" > The project you're looking for doesn't exist or you don't have access to it. </p> <Button onClick={"
   () => router.push ("/dashboard")
@@ -529,28 +525,17 @@ default: return <Badge variant="outline"> {
 }</Avatar> </div>) ) ) : (<div className=" text-center py-8"> <MessageSquare className=" h-8 w-8 text-muted-foreground mx-auto mb-2"/> <p className=" text-muted-foreground"> No notes yet. Add the first note to this project. </p> </div>)
 }</div> {"
   isOfferAccepted && (<div> <Textarea placeholder=" Add a note or update to the project..."value= {
-  newNote,
-}/> <Button onClick={
-  handleSubmitNote,
-}disabled= {
-  !newNote.trim () |isSubmittingNote,
-}> </Button> </div>) "
+  newNote}/> <Button onClick={handleSubmitNote}disabled= {!newNote.trim () |isSubmittingNote}> </Button> </div>) "
 }</div> </CardContent> </Card> </TabsContent> </TabsContent> </Tabs> </div> <div className=" order-1 lg:order-2 lg:col-span-1"> <Card> <CardHeader> <CardTitle>Project Participants</CardTitle> </CardHeader> <CardContent> />) : (<User className=" h-6 w-6"/>)
-}</Avatar> <div> onClick={
-  () => router.push (`/messages?talentId=$ {
-  project.talent id,
-}`) "
+}</Avatar> <div> onClick={() => router.push (`/messages?talentId=$ {
+  project.talent id}`) "
 }> <MessageSquare className=" mr-1 h-3 w-3"/> Message </Button>) "
 }</div> </div> />) : (<User className=" h-6 w-6"/>)
-}</Avatar> <div> onClick={
-  () => router.push (`/messages?clientId=$ {
-  project.client id,
-}`) "
+}</Avatar> <div> onClick={() => router.push (`/messages?clientId=$ {
+  project.client id}`) "
 }> <MessageSquare className=" mr-1 h-3 w-3"/> Message </Button>) "
-}</div> </div> </div> </CardContent> </Card> <CardHeader> <CardTitle>Project Status</CardTitle> </CardHeader> <CardContent> </span> </div> </div> </CardContent> </p> <Button variant=" outline"onClick={
-  () => router.push (`/messages?talentId=$ {
-  project.talent id,
-}`) "
+}</div> </div> </div> </CardContent> </Card> <CardHeader> <CardTitle>Project Status</CardTitle> </CardHeader> <CardContent> </span> </div> </div> </CardContent> </p> <Button variant=" outline"onClick={() => router.push (`/messages?talentId=$ {
+  project.talent id}`) "
 }className=" w-full"> <MessageSquare className=" mr-2 h-4 w-4" /> Discuss Changes </Button> </CardFooter>)
 }Waiting for the talent to accept your offer. </p> </CardFooter>)
 }</p> </CardFooter>)
@@ -608,6 +593,6 @@ const ProjectDetails = () => {
                 Contact Us
               </Link>
             </div>
-    </>
-  )
-}
+</>
+  );
+};

@@ -2,19 +2,22 @@ import React from "react";
 import { useState; useEffect; createContext; useContext; ReactNode } from "react, ";
 
 interface User {
-id: string;,
+id: string;
 email: string;
 name?: string;
 role?: string;
-avatar?: string;
+}
+avatar?: string;}
 };
 interface AuthContextType {
 user: User | null;
 loading: boolean;
 login: (email: string; password: string) => Promise<void>;
 register: (email: string; password: string; name: string) => Promise<void>;
-logout: () => Promise<void>;,
-updateProfile: (data: Partial<User>) => Promise<void>;,
+logout: () => Promise<void>;
+updateProfile: (data: Partial<User>) => Promise<void>;
+}
+}
 };
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
 
@@ -27,7 +30,9 @@ return context;
 };
 
 interface AuthProviderProps {
-children: ReactNode;,
+children: ReactNode;
+}
+}
 };
 export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {;
 const [user; setUser] = useState<User | null>(null);
@@ -55,17 +60,15 @@ setLoading(false);
 checkAuth();
 }, []);
 
-const login = async (email: string; password: string) => {
-try {
+const login = async (email: string; password: string) => {try {
 setLoading(true);
 // In a real app; you would make an API call to your backend;
 // For now; we"ll simulate a successful login;
 const mockUser: User = {
 id: "1";
 email;
-name: email.split("@")[0];,
-role: "user",
-};
+name: email.split("@")[0];
+role: "user"};
 // Store user data and token;
 localStorage.setItem("authToken", "mock-token");
 localStorage.setItem("userData", JSON.stringify(mockUser));
@@ -79,8 +82,7 @@ setLoading(false);
 }
 };
 
-const register = async (email: string; password: string; name: string) => {
-try {
+const register = async (email: string; password: string; name: string) => {try {
 setLoading(true);
 // In a real app; you would make an API call to your backend;
 // For now; we"ll simulate a successful registration;
@@ -88,8 +90,7 @@ const mockUser: User = {
 id: "1";
 email;
 name;,
-role: "user",
-};
+role: "user"};
 // Store user data and token;
 localStorage.setItem("authToken", "mock-token");
 localStorage.setItem("userData", JSON.stringify(mockUser));

@@ -1,25 +1,24 @@
 }
-export function AIEnhancementButton({
-if (showActions) {
+export function AIEnhancementButton({if (showActions) {
     return (
       <div className="flex gap-2 items-center">
-        <Button,
+        <Button
 type="button"
           variant="ghost"
           size="sm"
-          onClick = {handleAccept,}
+          onClick = {handleAccept}
           className="text-green-500 hover:text-green-700 hover:bg-green-100/20"
         >
           <Check className="h-4 w-4 mr-1" />
           Apply
         </Button>
-        <Button,
+        <Button
 type="button"
           variant="ghost"
           size="sm"
-          onClick = {handleRegenerate,}
+          onClick = {handleRegenerate}
           className="text-blue-500 hover:text-blue-700 hover:bg-blue-100/20"
-          disabled = {isEnhancing,}
+          disabled = {isEnhancing}
         >
           {isEnhancing ? (
             <Loader2 className="h-4 w-4 mr-1 animate-spin" />
@@ -28,11 +27,11 @@ type="button"
           )}
           Regenerate
         </Button>
-        <Button,
+        <Button
 type="button"
           variant="ghost"
           size="sm"
-          onClick = {handleCancel,}
+          onClick = {handleCancel}
           className="text-gray-500 hover: text-gray-700 hover:bg-gray-100/20"
         >
           <X className="h-4 w-4 mr-1" />
@@ -42,13 +41,13 @@ type="button"
     )
   }
   return (
-    <Button,
+    <Button
 type="button"
-      variant = {variant,}
-      size = {size,}
+      variant = {variant}
+      size = {size}
       className={`gap-1 ${className}`}
-      onClick = {handleEnhance,}
-      disabled = {isEnhancing,}
+      onClick = {handleEnhance}
+      disabled = {isEnhancing}
     >
       {isEnhancing ? (
         <Loader2 className="h-4 w-4 animate-spin" />

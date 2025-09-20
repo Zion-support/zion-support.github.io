@@ -1,6 +1,6 @@
-import { Project,, ,  } from '@/types/projects';
-import { useState,  } from "react",
-import { Star,  } from 'lucide-react'
+import { Project } from "@/types/projects";
+import { useState } from "react";,
+import { Star } from "lucide-react";
 return (
     <Card className='mt-6'>
       <CardHeader>
@@ -16,15 +16,14 @@ submit feedback
       <CardContent>
         {isCompleted ? (
           <div className='space-y-6'>
-            {(isClient |isTalent) && (
-              <div className='border-b pb-4 mb-4'>
+            {(isClient |isTalent) && (<div className='border-b pb-4 mb-4'>
                 {canLeaveReview ? (
                   <div className='bg-muted/20 rounded-lg p-4 text-center'>
                     <h3 className='font-medium mb-2'>Share your experience</h3>
                     <p className='text-sm text-muted-foreground mb-3'>
                       Your review will help build a trustworthy community
                     </p>
-                    <Button onClick={(,) => setIsReviewModalOpen(true)}>
+                    <Button onClick={() => setIsReviewModalOpen(true)}>
                       Leave Review
                     </Button>
                   </div>
@@ -40,7 +39,7 @@ submit feedback
                         : 'pending approval'}
                     </p>
                     {userReview.status === 'pending' && (
-                      <Button,
+                      <Button
 variant='outline'
                         onClick={() => setIsReviewModalOpen(true)}
                       >                        Edit Review
@@ -50,10 +49,10 @@ variant='outline'
                 ) : null}
               </div>
             )}
-            <ReviewsList,
-reviews = {reviews,}
-              isLoading = {isLoading,}
-              onReportReview = {reportReview,}
+            <ReviewsList
+reviews = {reviews}
+              isLoading = {isLoading}
+              onReportReview = {reportReview}
             />
           </div>
         ) : (
@@ -69,13 +68,12 @@ able to leave reviews
         )}
       </CardContent>
       {/* Review Modal */}
-      {(isClient |isTalent) && (
-        <LeaveReviewModal,
-projectId = {project.id,}
-          revieweeId = {revieweeId,}
-          revieweeName = {revieweeName,}
-          isOpen = {isReviewModalOpen,}
-          onClose = {(,) => setIsReviewModalOpen(false),}
+      {(isClient |isTalent) && (<LeaveReviewModal
+projectId = {project.id}
+          revieweeId = {revieweeId}
+          revieweeName = {revieweeName}
+          isOpen = {isReviewModalOpen}
+          onClose = {() => setIsReviewModalOpen(false)}
         />
       )}
     </Card>

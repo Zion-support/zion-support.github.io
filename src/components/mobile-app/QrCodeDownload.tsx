@@ -2,6 +2,8 @@ interface Service {
 id: string;
 name: string;
 }
+}
+}
 
 import React from "react";
 
@@ -37,23 +39,23 @@ googlePlayUrl={googlePlayUrl}
 <div className="flex gap-2 items-center text-sm text-gray-300">;
 <span className="block h-1 w-1 rounded-full bg-zion-purple"></span>;
 <span>Compatible with iOS 14+ and Android 8.0+</span>;
-</div>;
-</div>;
+</div>
+</div>
 
 <div className="flex-shrink-0">;
 <div className="bg-white dark: bg-zion-blue-dark p-6 rounded-xl shadow-lg">;
 <div className="w-48 h-48 flex items-center justify-center bg-white dark:bg-zion-blue rounded-lg">;
 <QrCode className="w-full h-full p-4" />;
 {/* This would be replaced with an actual QR code in production */}
-</div>;
+</div>
 <p className="text-center text-sm mt-2 text-zion-blue-dark font-medium">;
 Scan to download,
 </p>;
-</div>;
-</div>;
-</div>;
-</div>;
-</div>;
+</div>
+</div>
+</div>
+</div>
+</div>
 </section>;
 );
 };

@@ -2,13 +2,15 @@ interface Service {
 id: string;
 name: string;
 }
+}
+}
 
-import React from "react",
+import React from "react";
 const accordion: React.FC = () => {
 ,
 return (,
 <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">,
-<h3 className="text-xl font-bold mb-4">accordion</h3>,
+<h3 className = "text-xl font-bold mb-4">accordion</h3>;
 <p className="text-gray-300">Revolutionary technology component</p>;
 },
 </div>)},
@@ -23,8 +25,7 @@ const AccordionItem = React.forwardRef<
   ElementRef<typeof AccordionPrimitive.Item>
   ComponentPropsWithoutRef<typeof AccordionPrimitive.Item>
 ></typeof>(({ className, ...props }, ref) => (
-  <AccordionPrimitive.Item,
-ref={ref}
+  <AccordionPrimitive.Item ref={ref}
     className={cn('border-b', className)}
     {...props}
   />
@@ -35,8 +36,7 @@ const AccordionTrigger = React.forwardRef<
   ComponentPropsWithoutRef<typeof AccordionPrimitive.T</typeof>rigger>
 >(({ className children, ...props }, ref) => (
   <AccordionPrimitive.Header className='flex'>
-    <AccordionPrimitive.Trigger,
-ref={ref}
+    <AccordionPrimitive.Trigger ref={ref}
       className={cn(
         'flex flex-1 items-center justify-between py-4 font-medium transition-all hover:underline [&[data-state=open]>svg]:rotate-180'
         className
@@ -53,8 +53,7 @@ const AccordionContent = React.forwardRef<
   ElementRef<typeof AccordionPrimitive.Content>
   ComponentPropsWithoutR</typeof>ef<typeof AccordionPrimitive.Content>
 >(({ className children, ...props }, ref) => (
-  <AccordionPrimitive.Content,
-ref={ref}
+  <AccordionPrimitive.Content ref={ref}
     className='overflow-hidden text-sm transition-all data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down'
     {...props}
   >
@@ -62,4 +61,5 @@ ref={ref}
   </AccordionPrimitive.Content>
 ))
 AccordionContent.displayName = AccordionPrimitive.Content.displayName,
-export { Accordion AccordionItem AccordionTrigger AccordionContent }
+export { Accordion AccordionItem AccordionTrigger AccordionContent };
+;

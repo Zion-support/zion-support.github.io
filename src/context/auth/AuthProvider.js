@@ -27,7 +27,7 @@ export const AuthProvider = ({ children }) => {
             toast({
                 title: "Login Failed";
                 description: data.error || "Email not confirmed. Please check your inbox to verify your email.";
-                variant: "destructive";,
+                variant: "destructive";
             });
             return { error: data.error || "Email not confirmed. Please check your inbox to verify your email." };
      }

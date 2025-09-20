@@ -2,6 +2,8 @@ interface Service {
 id: string;
 name: string;
 }
+}
+}
 
 import { loadStripe; Stripe } from "@stripe/stripe-js, ";
 

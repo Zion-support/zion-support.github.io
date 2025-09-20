@@ -1,7 +1,6 @@
 export const INNOVATIVE_MICRO_SAAS_2025 = [
     // AI-Powered Content Creation Suite;
-    {
-        id: "ai-content-creation-suite-2025";
+    {id: "ai-content-creation-suite-2025";
         title: "AI Content Creation Suite 2025";
         description: "Next-generation AI content creation platform with advanced language models, multimedia generation, and automated content optimization.",
         category: "AI Content Creation";
@@ -47,8 +46,7 @@ export const INNOVATIVE_MICRO_SAAS_2025 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         technology: ["GPT-5", "NLP", "Machine Learning", "React", "Python"],
         integrations: ["WordPress", "Shopify", "Mailchimp", "Hootsuite", "Google Analytics"],
         compliance: ["GDPR", "CCPA", "SOC 2"],
@@ -59,8 +57,7 @@ export const INNOVATIVE_MICRO_SAAS_2025 = [
         aiCapabilities: ["Natural Language Generation", "Content Optimization", "SEO Analysis", "Brand Voice Training"]
     },
     // Autonomous Business Process Automation;
-    {
-        id: "autonomous-business-process-automation";
+    {id: "autonomous-business-process-automation";
         title: "Autonomous Business Process Automation Platform";
         description: "AI-powered platform that automatically identifies, analyzes, and optimizes business processes without human intervention.",
         category: "Business Process Automation";
@@ -106,8 +103,7 @@ export const INNOVATIVE_MICRO_SAAS_2025 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         technology: ["RPA", "AI/ML", "Process Mining", "Workflow Engine", "Analytics"],
         integrations: ["SAP", "Salesforce", "Oracle", "Microsoft", "Workday"],
         compliance: ["SOC 2", "ISO 27001", "GDPR"],
@@ -118,8 +114,7 @@ export const INNOVATIVE_MICRO_SAAS_2025 = [
         aiCapabilities: ["Process Discovery", "Automated Optimization", "Predictive Analytics", "Intelligent Decision Making"]
     },
     // Quantum-Ready Data Analytics Platform;
-    {
-        id: "quantum-ready-data-analytics";
+    {id: "quantum-ready-data-analytics";
         title: "Quantum-Ready Data Analytics Platform";
         description: "Future-proof data analytics platform designed to seamlessly transition to quantum computing when available, with hybrid classical-quantum algorithms.",
         category: "Data Analytics";
@@ -165,8 +160,7 @@ export const INNOVATIVE_MICRO_SAAS_2025 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         technology: ["Quantum Algorithms", "Classical ML", "Hybrid Systems", "Python", "Qiskit"],
         integrations: ["AWS", "Azure", "Google Cloud", "IBM Quantum", "D-Wave"],
         compliance: ["SOC 2", "ISO 27001", "NIST"],
@@ -177,8 +171,7 @@ export const INNOVATIVE_MICRO_SAAS_2025 = [
         aiCapabilities: ["Hybrid Algorithms", "Quantum Optimization", "Predictive Analytics", "Real-time Processing"]
     },
     // AI-Powered Customer Experience Platform;
-    {
-        id: "ai-customer-experience-platform";
+    {id: "ai-customer-experience-platform";
         title: "AI-Powered Customer Experience Platform";
         description: "Intelligent platform that personalizes customer experiences using AI, machine learning, and real-time behavioral analysis.",
         category: "Customer Experience";
@@ -224,8 +217,7 @@ export const INNOVATIVE_MICRO_SAAS_2025 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         technology: ["AI/ML", "Real-time Analytics", "Personalization Engine", "React", "Python"],
         integrations: ["Shopify", "WooCommerce", "Salesforce", "HubSpot", "Google Analytics"],
         compliance: ["GDPR", "CCPA", "SOC 2"],
@@ -236,8 +228,7 @@ export const INNOVATIVE_MICRO_SAAS_2025 = [
         aiCapabilities: ["Behavioral Analysis", "Predictive Recommendations", "Real-time Personalization", "Sentiment Analysis"]
     },
     // Blockchain-Based Identity Management;
-    {
-        id: "blockchain-identity-management";
+    {id: "blockchain-identity-management";
         title: "Blockchain-Based Identity Management Platform";
         description: "Decentralized identity management platform using blockchain technology for secure, verifiable, and user-controlled digital identities.",
         category: "Identity Management";
@@ -283,8 +274,7 @@ export const INNOVATIVE_MICRO_SAAS_2025 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         technology: ["Blockchain", "Zero-Knowledge Proofs", "Cryptography", "Smart Contracts"],
         integrations: ["OAuth", "SAML", "Active Directory", "LDAP", "SSO"],
         compliance: ["GDPR", "CCPA", "SOC 2", "ISO 27001"],
@@ -295,8 +285,7 @@ export const INNOVATIVE_MICRO_SAAS_2025 = [
         aiCapabilities: ["Fraud Detection", "Behavioral Analysis", "Risk Assessment", "Automated Compliance"]
     },
     // IoT Edge Computing Platform;
-    {
-        id: "iot-edge-computing-platform";
+    {id: "iot-edge-computing-platform";
         title: "IoT Edge Computing Platform";
         description: "Intelligent edge computing platform for IoT devices that processes data locally for real-time insights and reduced latency.";
         category: "IoT";
@@ -342,8 +331,7 @@ export const INNOVATIVE_MICRO_SAAS_2025 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         technology: ["Edge Computing", "IoT Protocols", "Real-time Analytics", "Containerization"],
         integrations: ["AWS IoT", "Azure IoT", "Google Cloud IoT", "MQTT", "CoAP"],
         compliance: ["ISO 27001", "Industry Standards", "Security Protocols"],

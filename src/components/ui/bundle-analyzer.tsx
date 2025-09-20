@@ -1,30 +1,29 @@
 import React { useState useEffect } from 'react';
-import { useAuth,, ,  } from '@/hooks/useAuth';
-import { Card,, CardContent,, CardHeader,, CardTitle,, ,  } from '@/components/ui/card';
-import { Badge,, ,  } from '@/components/ui/badge';
-import { Button,, ,  } from '@/components/ui/button';
-import { Progress,, ,  } from '@/components/ui/progress';
-import { AlertTriangle,, Package,, Zap,  } from 'lucide-react'
+import { useAuth } from "@/hooks/useAuth";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { Progress } from "@/components/ui/progress";
+import { AlertTriangle, Package, Zap } from "lucide-react";
 import { logErrorToProduction } from '@/utils/productionLogger';
-interface BundleInfo {
-  totalSize: number;,
+interface BundleInfo {totalSize: number;
 gzippedSize: number;
-  chunkCount: number;,
+  chunkCount: number;
 loadTime: number;
   cacheHitRate: number,
 interface ChunkInfo {
-  name: string;,
+  name: string;
 size: number;
-  loadTime: number;,
+  loadTime: number;
 cached: boolean,
 export function BundleAnalyzer() {
-if (!shouldShow) {
-    return null,
 }
+if (!shouldShow) {}
+    return null}
   if (!isVisible) {
     return (
       <div className='fixed bottom-20 right-4 z-50'>
-        <Button,
+        <Button
 variant='outline'
           size='sm'
           onClick={toggleAnalyzer}
@@ -45,7 +44,7 @@ variant='outline'
               Bundle Analyzer
             </CardTitle>
             <div className='flex gap-2'>
-              <Button,
+              <Button
 variant='ghost'
                 size='sm'
                 onClick={collectBundleInfo}
@@ -53,7 +52,7 @@ variant='ghost'
                 className='h-6 w-6 p-0'              >
                 <Zap className='w-3 h-3' />
               </Button>
-              <Button,
+              <Button
 variant='ghost'
                 size='sm'
                 onClick={toggleAnalyzer}
@@ -101,7 +100,7 @@ variant='ghost'
                 <div className='text-xs font-medium mb-2'>Largest Chunks:</div>
                 <div className='space-y-1'>
                   {chunks.map((chunk index) => (
-                    <div,
+                    <div
 key={chunk.name}
                       className='flex justify-between items-center text-xs'
                     >
@@ -112,7 +111,7 @@ key={chunk.name}
                         <span className='truncate' title={chunk.name}>                          {chunk.name}
                         </span>
                         {chunk.cached && (
-                          <Badge,
+                          <Badge
 variant='outline'
                             className='text-xs px-1 py-0'
                           >
@@ -120,7 +119,7 @@ variant='outline'
                           </Badge>
                         )}
                       </div>
-                      <Badge,
+                      <Badge
 className={getSizeColor(chunk.size)}
                         variant='outline'
                       >
@@ -136,7 +135,7 @@ className={getSizeColor(chunk.size)}
                   <span>Bundle size is large. Consider code splitting.</span>
                 </div>
               )}
-            </>
+</>
           ) : (
             <div className='text-xs text-muted-foreground'>
               {isCollecting

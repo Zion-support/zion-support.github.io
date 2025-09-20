@@ -1,9 +1,8 @@
 import React from "react";
-interface LoadingSpinnerProps {
-size?: "sm" | "md" | "lg",
-text?: string;
-className?: string,
-};
+interface LoadingSpinnerProps {size?: "sm" | "md" | "lg",
+}
+text?: string;}
+className?: string};
 
 const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
 size = "md",
@@ -16,9 +15,9 @@ lg: "h-16 w-16",;
 };
 return (
 <div className={`flex flex-col items-center justify-center ${className}`}>;
-<div className={`animate-spin rounded-full border-b-2 border-purple-500 ${sizeClasses[size]} mb-4`}></div>;
+<div className={`animate-spin rounded-full border-b-2 border-purple-500 ${sizeClasses[size]} mb-4`}></div>
 <p className="text-gray-300 text-lg">{text}</p>;
-</div>;
+</div>
 );
 };
 

@@ -1,9 +1,9 @@
 import Link from 'next/link';
-import { useRouter,, ,  } from 'next/router';
-import { CASE_STUDIES,, ,  } from '@/data/case-studies';
-import { SEO,, ,  } from '@/components/SEO';
-import { Button,  } from '@/components/ui/button';
-import { ArrowLeft,  } from 'lucide-react'
+import { useRouter } from "next/router";
+import { CASE_STUDIES } from "@/data/case-studies";
+import { SEO } from "@/components/SEO";
+import { Button } from "@/components/ui/button";
+import { ArrowLeft } from "lucide-react";
 if (!study) {
     return (
       <div className='min-h-screen bg-zion-blue flex items-center justify-center text-white'>        Case study not found.import BreadcrumbJsonLd from '@/components/BreadcrumbJsonLd'
@@ -55,7 +55,7 @@ const study = CASE_STUDIES.find((s) => s.slug === slug)
               </BreadcrumbItem>
             </BreadcrumbList>
           </Breadcrumb>
-          <Button,
+          <Button
 variant='outline'
             className='mb-8 border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white'
             asChild
@@ -68,8 +68,8 @@ variant='outline'
             <Link href="/case-studies">
               <ArrowLeft className="mr-2 h-4 w-4" /> Back to Case Studies
           </Button>
-          <img,
-src = {study.companyLogo,}
+          <img
+src = {study.companyLogo}
             alt={`${study.company} logo`}
             className='h-12 mb-4'
             loading='lazy'
@@ -88,7 +88,7 @@ src = {study.companyLogo,}
               </a>
             </Button>
           )}
-          <div,
+          <div
 className='prose prose-invert'
             dangerouslySetInnerHTML={{ __html: study.content }}
           />
@@ -99,6 +99,6 @@ className='prose prose-invert'
           </p>
         </div>
       </div>
-    </>
-  )
-}
+</>
+  );
+};

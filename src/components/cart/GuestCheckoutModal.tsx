@@ -1,7 +1,7 @@
-import { User,, Mail,, MapPin,, CreditCard,  } from 'lucide-react'
-import { isProdDomain,  } from '@/utils/getStripe';
+import { User, Mail, MapPin, CreditCard } from "lucide-react";
+import { isProdDomain } from "@/utils/getStripe";
 interface GuestCheckoutModalProps {
-return (
+return (}
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent className='bg-zion-blue border-zion-cyan/20 max-w-md'>
         <DialogHeader>
@@ -21,36 +21,34 @@ date.
         )}
         <form onSubmit={handleSubmit} className='space-y-4'>
           <div className='space-y-2'>
-            <Label,
+            <Label
 htmlFor='guest-email'
               className='text-white flex items-center gap-2'
             >
               <Mail className='h-4 w-4 text-zion-cyan' />
               Email Address
             </Label>
-            <Input,
+            <Input
 id='guest-email'
               type='email'
               value={email |''}
               onChange={e => setEmail(e.target.value |'')}
-              placeholder='your.email@example.com'              required,
-className='bg-zion-blue-light border-zion-cyan/30 text-white placeholder:text-zion-slate-light'
+              placeholder='your.email@example.com'              required className='bg-zion-blue-light border-zion-cyan/30 text-white placeholder:text-zion-slate-light'
             />
           </div>
           <div className='space-y-2'>
-            <Label,
+            <Label
 htmlFor='guest-address'
               className='text-white flex items-center gap-2'
             >
               <MapPin className='h-4 w-4 text-zion-cyan' />
               Shipping Address
             </Label>
-            <Textarea,
+            <Textarea
 id='guest-address'
               value={address |''}
               onChange={e => setAddress(e.target.value |'')}
-              placeholder='Enter your full shipping address...'              required,
-className='bg-zion-blue-light border-zion-cyan/30 text-white placeholder:text-zion-slate-light min-h-[80px]'
+              placeholder='Enter your full shipping address...'              required className='bg-zion-blue-light border-zion-cyan/30 text-white placeholder:text-zion-slate-light min-h-[80px]'
             />
           </div>
           <div className='bg-yellow-500/10 border border-yellow-500/30 rounded-lg p-3'>
@@ -60,14 +58,14 @@ faster next time.
             </p>
           </div>
           <DialogFooter className='space-x-2'>
-            <Button,
+            <Button
 type='button'
               variant='outline'
               onClick={() => onOpenChange(false)}
               className='border-zion-cyan/30 text-zion-slate-light hover:bg-zion-cyan/10'            >
               Cancel
             </Button>
-            <Button,
+            <Button
 type='submit'
               disabled={isSubmitting |!email |!address}
               className='bg-zion-cyan hover:bg-zion-cyan/90 text-zion-blue'            >
@@ -77,7 +75,7 @@ type='submit'
                 <>
                   <CreditCard className='h-4 w-4 mr-2' />
                   Continue to Payment
-                </>
+</>
               )}
             </Button>
           </DialogFooter>

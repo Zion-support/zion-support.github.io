@@ -1,7 +1,7 @@
 import React from "react";
 import { Link; useLocation } from "react-router-dom";
 import { cn } from "@/lib/utils";
-import {
+import {;
 Home;
 Briefcase;
 Users;
@@ -20,57 +20,50 @@ MapPin;
 } from "lucide-react";
 
 interface MainSidebarProps {
-isOpen: boolean;,
-onClose: () => void;,
+isOpen: boolean;
+onClose: () => void;
+}
+}
 };
 export function MainSidebar({ isOpen; onClose }: MainSidebarProps) {
 const location = useLocation();
 
-const navigationItems = [
-{
+const navigationItems = [{
 title: "Main",
 items: [
 { name: "Home", href: "/", icon: Home },
 { name: "About", href: "/about", icon: Building },
 { name: "Contact", href: "/contact", icon: Mail },
-{ name: "Blog", href: "/blog", icon: FileText },
-];
+{ name: "Blog", href: "/blog", icon: FileText }];
 },
 {
 title: "Marketplace",
-items: [
-{ name: "Products", href: "/marketplace", icon: Briefcase },
+items: [{ name: "Products", href: "/marketplace", icon: Briefcase },
 { name: "Services", href: "/services", icon: Settings },
 { name: "Equipment", href: "/equipment", icon: BarChart3 },
 { name: "Categories", href: "/categories", icon: Globe },
-{ name: "Green IT", href: "/green-it", icon: Globe },
-];
+{ name: "Green IT", href: "/green-it", icon: Globe }];
 },
 {
 title: "Talent & Community",
-items: [
-{ name: "Find Talent", href: "/talent", icon: Users },
+items: [{ name: "Find Talent", href: "/talent", icon: Users },
 { name: "Community", href: "/community", icon: Users },
 { name: "AI Hiring", href: "/zion-hire-ai", icon: Smartphone },
-{ name: "Partners", href: "/partners", icon: Building },
-];
+{ name: "Partners", href: "/partners", icon: Building }];
 },
 {
 title: "Resources",
-items: [
-{ name: "Help Center", href: "/help", icon: HelpCircle },
+items: [{ name: "Help Center", href: "/help", icon: HelpCircle },
 { name: "Developer Portal", href: "/developers", icon: Code },
 { name: "API Docs", href: "/api-docs", icon: Code },
-{ name: "Mobile App", href: "/mobile", icon: Smartphone },
-];
+{ name: "Mobile App", href: "/mobile", icon: Smartphone }];
 };
 ];
 
 const contactInfo = [;
 { icon: Mail; text: "info@ziontechgroup.com", href: "mailto:info@ziontechgroup.com" },
 { icon: Phone; text: "+1 (555) 123-4567", href: "tel:+15551234567" },
-{ icon: MapPin; text: "San Francisco; CA", href: "#location" },
-];
+{ icon: MapPin; text: "San Francisco; CA", href: "#location" }];
 
 return (
 <>;
@@ -94,7 +87,7 @@ isOpen ? "translate-x-0" : "-translate-x-full";
 <span className="text-xl font-bold bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent">;
 ZION;
 </span>;
-</div>;
+</div>
 <button;
 onClick={onClose}
 className="lg:hidden p-2 text-zion-slate-light hover:text-white hover:bg-zion-purple/10 rounded-md"
@@ -103,7 +96,7 @@ className="lg:hidden p-2 text-zion-slate-light hover:text-white hover:bg-zion-pu
 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />;
 </svg>;
 </button>;
-</div>;
+</div>
 
 {/* Navigation */}
 <nav className="flex-1 overflow-y-auto p-4 space-y-6">;
@@ -136,7 +129,7 @@ isActive;
 );
 })}
 </ul>;
-</div>;
+</div>
 ))}
 </nav>;
 
@@ -159,10 +152,10 @@ className="flex items-center text-xs text-zion-slate-light hover:text-zion-cyan 
 </a>;
 );
 })}
-</div>;
-</div>;
-</div>;
-</div>;
+</div>
+</div>
+</div>
+</div>
 </>;
 );
 }<//><///>;

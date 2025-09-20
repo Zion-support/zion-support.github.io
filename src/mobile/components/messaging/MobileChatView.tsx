@@ -1,7 +1,6 @@
-interface Message {
-  id: string;,
+interface Message {id: string;
 content: string;
-  timestamp: string;,
+  timestamp: string;
 isMe: boolean;
   sender?: string;
   avatar?: string;
@@ -10,10 +9,10 @@ interface MobileChatViewProps {
   contact: {,
 id: string;
     name: string;
-    avatar?: string;
-    status?: string,
-},
-  messages: Message[];,
+}
+    avatar?: string;}
+    status?: string},
+  messages: Message[];
 onBack: () => void;
   onSendMessage: (content: string) => void
                 {message.timestamp}
@@ -32,13 +31,13 @@ onBack: () => void;
           <Button variant='ghost' size='icon' aria-label='Attach file'>
             <PaperclipIcon className='h-5 w-5' />
           </Button>
-          <Input,
+          <Input
 value={newMessage}
             onChange={e => setNewMessage(e.target.value)}
             onKeyDown={handleKeyDown}
             placeholder='Type a message...'
             className='flex-1'          />
-          <Button,
+          <Button
 size='icon'
             onClick={handleSend}
             disabled={!newMessage.trim()}

@@ -1,30 +1,29 @@
 import React { useState useEffect } from "react";
-import { useRouter,, ,  } from 'next/router';
-import { TalentProfile,  } from "@/components/profile/TalentProfile",
-import { ProfileLoadingState,  } from "@/components/profile/ProfileLoadingState",
-import { ProfileErrorState,  } from "@/components/profile/ProfileErrorState",
-import { BackToDirectoryButton,  } from "@/components/profile/BackToDirectoryButton",
-import { useTalentProfile,  } from "@/hooks/useTalentProfile",
-import { HireRequestModal,  } from "@/components/profile/hire-request",
-import { useAuthStatus,  } from "@/hooks/talent",
-import { MessageTalentModal,  } from "@/components/messaging/MessageTalentModal",
-import { StickyAction,  } from "@/components/ui/sticky-action",
-import { Handshake,, MessageSquare,  } from 'lucide-react'
-import { Button,  } from "@/components/ui/button",
-import { useAuth,  } from "@/hooks/useAuth",
-import { UserProfile,  } from "@/types/auth",
-import { toast,  } from "@/hooks/use-toast";
-import { SEO,  } from "@/components/SEO";
-export default function TalentProfilePage() {
-return (
+import { useRouter } from "next/router";
+import { TalentProfile } from "@/components/profile/TalentProfile";,
+import { ProfileLoadingState } from "@/components/profile/ProfileLoadingState";,
+import { ProfileErrorState } from "@/components/profile/ProfileErrorState";,
+import { BackToDirectoryButton } from "@/components/profile/BackToDirectoryButton";,
+import { useTalentProfile } from "@/hooks/useTalentProfile";,
+import { HireRequestModal } from "@/components/profile/hire-request";,
+import { useAuthStatus } from "@/hooks/talent";,
+import { MessageTalentModal } from "@/components/messaging/MessageTalentModal";,
+import { StickyAction } from "@/components/ui/sticky-action";,
+import { Handshake, MessageSquare } from "lucide-react";
+import { Button } from "@/components/ui/button";,
+import { useAuth } from "@/hooks/useAuth";,
+import { UserProfile } from "@/types/auth";,
+import { toast } from "@/hooks/use-toast";
+import { SEO } from "@/components/SEO";
+export default function TalentProfilePage() {return (
     <>
-      <SEO,
-title = {profile.full_name,}
-        description = {profile.bio |'Talent profile',}
-        ogImage = {profile.profile_picture_url,}
+      <SEO
+title = {profile.full_name}
+        description = {profile.bio |'Talent profile'}
+        ogImage = {profile.profile_picture_url}
       />
       <div className='min-h-screen bg-zion-blue pb-12'>
-        <TalentProfile,
+        <TalentProfile
 profile={profile}
           onRequestHire={handleRequestHire}
           onMessageTalent={handleMessageTalent}
@@ -33,7 +32,7 @@ profile={profile}
         {/* Sticky action buttons that appear when scrolling */}
         <StickyAction>
           <div className='p-2 flex gap-2'>
-            <Button,
+            <Button
 size='sm'
               className='bg-zion-purple text-white hover:bg-zion-purple-dark'
               onClick={handleRequestHire}
@@ -41,7 +40,7 @@ size='sm'
               <Handshake className='mr-2 h-4 w-4' />
               Hire Now
             </Button>
-            <Button,
+            <Button
 size='sm'
               variant='outline'
               className='border-zion-purple text-zion-purple hover:bg-zion-purple/10'
@@ -53,87 +52,65 @@ size='sm'
           </div>
         </StickyAction>
         {/* Request to Hire Modal */}
-        <HireRequestModal,
+        <HireRequestModal
 talent={profile}
           isOpen={isHireModalOpen}
           onClose={() => setIsHireModalOpen(false)}
           userDetails={userProfile}
         />
         {/* Message Talent Modal */}
-        <MessageTalentModal,
+        <MessageTalentModal
 talent={profile}
           isOpen={isMessageModalOpen}
           onClose={() => setIsMessageModalOpen(false)}
         />
       </div>
-    </>
+</>
   )
 }, [error])
 return,
 }setIsHireModalOpen (true)
 }
-const handleMessageTalent = () => {
-  if (!isAuthenticated) {
+const handleMessageTalent = () => {if (!isAuthenticated) {
   toast ({
-  return,
-}setIsMessageModalOpen (true)
+  return}setIsMessageModalOpen (true)
 }
-return (<> <SEO title= {
-  profile.full name,
-}description= {'
+return (<> <SEO title= {profile.full name}description= {'
   profile.bio |'Talent profile'
-}ogImage= {
-  profile.profile picture url,
-}/> <div className="min-h-screen bg-zion-blue pb-12" > <TalentProfile profile= {
-  profile,
-}onRequestHire= {
-  handleRequestHire,
-}onMessageTalent= {
-  handleMessageTalent,
-}/> <BackToDirectoryButton /> {
+}ogImage= {profile.profile picture url}/> <div className="min-h-screen bg-zion-blue pb-12" > <TalentProfile profile= {profile}onRequestHire= {handleRequestHire}onMessageTalent= {handleMessageTalent}/> <BackToDirectoryButton /> {
   /* Sticky action buttons that appear when scrolling */ "
 }<StickyAction> <div className="p-2 flex gap-2" > <Button > <Handshake className="mr-2 h-4 w-4" /> Hire Now </Button> <Button > <MessageSquare className="mr-2 h-4 w-4" /> Message </Button> </div> </StickyAction> {
   /* Request to Hire Modal */
-}<HireRequestModal talent= {
-  profile,
-}isOpen= {
-  isHireModalOpen,
-}onClose= {
+}<HireRequestModal talent= {profile}isOpen= {isHireModalOpen}onClose= {
   () => setIsHireModalOpen (false)
-}userDetails= {
-  userProfile,
-}/> {
+}userDetails= {userProfile}/> {
   /* Message Talent Modal */
-}<MessageTalentModal talent= {
-  profile,
-}isOpen= {
-  isMessageModalOpen,
-}onClose= {
+}<MessageTalentModal talent= {profile}isOpen= {isMessageModalOpen}onClose= {
   () => setIsMessageModalOpen (false)
 }/> </div> </>)
 }'"      <div className="min-h-screen bg-zion-blue pb-12">
-      <TalentProfile,
-profile = {profile,}
-        onRequestHire = {handleRequestHire,}
-        onMessageTalent = {handleMessageTalent,}
+      <TalentProfile
+profile = {profile}
+        onRequestHire = {handleRequestHire}
+        onMessageTalent = {handleMessageTalent}
       />
       <BackToDirectoryButton />
       {/* Sticky action buttons that appear when scrolling */}
       <StickyAction>
         <div className="p-2 flex gap-2">
-          <Button,
+          <Button
 size="sm"
             className="bg-zion-purple text-white hover:bg-zion-purple-dark"
-            onClick = {handleRequestHire,}
+            onClick = {handleRequestHire}
           >
             <Handshake className="mr-2 h-4 w-4" />
             Hire Now
           </Button>
-          <Button,
+          <Button
 size="sm"
             variant="outline"
             className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
-            onClick = {handleMessageTalent,}
+            onClick = {handleMessageTalent}
           >
             <MessageSquare className="mr-2 h-4 w-4" />
             Message
@@ -141,18 +118,18 @@ size="sm"
         </div>
       </StickyAction>
       {/* Request to Hire Modal */}
-      <HireRequestModal,
-talent = {profile,}
-        isOpen = {isHireModalOpen,}
-        onClose = {(,) => setIsHireModalOpen(false),}
-        userDetails = {userProfile,}
+      <HireRequestModal
+talent = {profile}
+        isOpen = {isHireModalOpen}
+        onClose = {(,) => setIsHireModalOpen(false)}
+        userDetails = {userProfile}
       />
       {/* Message Talent Modal */}
-      <MessageTalentModal,
-talent = {profile,}
-        isOpen = {isMessageModalOpen,}
-        onClose = {() => setIsMessageModalOpen(false),}      />
+      <MessageTalentModal
+talent = {profile}
+        isOpen = {isMessageModalOpen}
+        onClose = {() => setIsMessageModalOpen(false)}      />
     </div>
-    </>
+</>
   )
 }

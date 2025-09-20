@@ -7,8 +7,10 @@ isLargeText: boolean;
 toggleHighContrast: () => void;
 toggleReducedMotion: () => void;
 toggleLargeText: () => void;
-focusTrap: (element: HTMLElement | null) => void;,
-announceToScreenReader: (message: string) => void;,
+focusTrap: (element: HTMLElement | null) => void;
+announceToScreenReader: (message: string) => void;
+}
+}
 };
 const AccessibilityContext = createContext<AccessibilityContextType | undefined>(undefined);
 
@@ -21,7 +23,9 @@ return context;
 };
 
 interface AccessibilityProviderProps {
-children: ReactNode;,
+children: ReactNode;
+}
+}
 };
 export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ children }) => {;
 const [isHighContrast; setIsHighContrast] = useState(false);
@@ -164,16 +168,14 @@ const toggleHighContrast: any = () => setIsHighContrast(prev => !prev);
 const toggleReducedMotion: any = () => setIsReducedMotion(prev => !prev);
 const toggleLargeText: any = () => setIsLargeText(prev => !prev);
 
-const value: AccessibilityContextType = {
-isHighContrast;
+const value: AccessibilityContextType = {isHighContrast;
 isReducedMotion;
 isLargeText;
 toggleHighContrast;
 toggleReducedMotion;
 toggleLargeText;
 focusTrap;
-announceToScreenReader,
-};
+announceToScreenReader};
 
 return (
 <AccessibilityContext.Provider value={value}>;
@@ -204,8 +206,7 @@ onClick={toggleHighContrast}
 className={`w-full px-3 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
 isHighContrast;
 ? "bg-zion-cyan text-zion-blue-dark";
-: "bg-zion-blue-light/20 text-zion-slate-light hover: bg-zion-blue-light/30",
-}`}
+: "bg-zion-blue-light/20 text-zion-slate-light hover: bg-zion-blue-light/30"}`}
 aria-label={`${isHighContrast ? "Disable" : "Enable"} high contrast mode`}
 >;
 High Contrast;
@@ -216,8 +217,7 @@ onClick={toggleReducedMotion}
 className={`w-full px-3 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
 isReducedMotion;
 ? "bg-zion-cyan text-zion-blue-dark";
-: "bg-zion-blue-light/20 text-zion-slate-light hover: bg-zion-blue-light/30",
-}`}
+: "bg-zion-blue-light/20 text-zion-slate-light hover: bg-zion-blue-light/30"}`}
 aria-label={`${isReducedMotion ? "Disable" : "Enable"} reduced motion`}
 >;
 Reduced Motion;
@@ -228,8 +228,7 @@ onClick={toggleLargeText}
 className={`w-full px-3 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
 isLargeText;
 ? "bg-zion-cyan text-zion-blue-dark";
-: "bg-zion-blue-light/20 text-zion-slate-light hover: bg-zion-blue-light/30",
-}`}
+: "bg-zion-blue-light/20 text-zion-slate-light hover: bg-zion-blue-light/30"}`}
 aria-label={`${isLargeText ? "Disable" : "Enable"} large text`}
 >;
 Large Text;
@@ -240,9 +239,9 @@ Large Text;
 <p>Ctrl/Cmd + K: High Contrast</p>;
 <p>Ctrl/Cmd + M: Reduced Motion</p>;
 <p>Ctrl/Cmd + L: Large Text</p>;
-</div>;
-</div>;
-</div>;
+</div>
+</div>
+</div>
 );
 };
 

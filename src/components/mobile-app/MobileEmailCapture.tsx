@@ -24,14 +24,11 @@ setIsSuccess(true);
 setEmail("");
 
 setTimeout(() => {
-setIsSuccess(false),
-}, 5000);
+setIsSuccess(false)}, 5000);
 } catch (error: any) {
 
 enqueueSnackbar(error?.response?.data?.message || error.message, { variant: "error" });
-} finally {
-setIsSubmitting(false),
-}
+} finally {setIsSubmitting(false)}
 };
 
 return (
@@ -67,8 +64,8 @@ className="bg-zion-cyan hover:bg-zion-cyan/80 text-zion-blue-dark font-medium"
 <p className="text-sm text-gray-300 mt-4">;
 We respect your privacy and will never share your information.;
 </p>;
-</div>;
-</div>;
+</div>
+</div>
 </section>;
 );
 };

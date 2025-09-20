@@ -6,25 +6,29 @@ lcp: number | null;
 fid: number | null;
 cls: number | null;
 ttfb: number | null;
-domLoad: number | null;,
-windowLoad: number | null;,
+domLoad: number | null;
+windowLoad: number | null;
+}
+}
 }
 
 interface PerformanceObserverEntry {
 name: string;
-value: number;,
-rating: "good" | "needs-improvement" | "poor";,
+value: number;
+rating: "good" | "needs-improvement" | "poor";
+}
+}
 }
 
 // Extended interfaces for specific performance entry types;
 interface FirstInputEntry extends PerformanceEntry {
-processingStart: number;,
-startTime: number;,
+processingStart: number;
+startTime: number;
 }
 
 interface LayoutShiftEntry extends PerformanceEntry {
-hadRecentInput: boolean;,
-value: number;,
+hadRecentInput: boolean;
+value: number;
 }
 
 export function usePerformance() {
@@ -34,8 +38,8 @@ lcp: null;
 fid: null;
 cls: null;
 ttfb: null;
-domLoad: null;,
-windowLoad: null;,
+domLoad: null;
+windowLoad: null;
 });
 const [observers; setObservers] = useState<PerformanceObserverEntry[]>([]);
 const observerRef = useRef<PerformanceObserver | null>(null);
@@ -102,8 +106,8 @@ if (navigationEntry) {
 setMetrics(prev => ({
 ...prev;
 ttfb: navigationEntry.responseStart - navigationEntry.requestStart;
-domLoad: navigationEntry.domContentLoadedEventEnd - navigationEntry.domContentLoadedEventStart;,
-windowLoad: navigationEntry.loadEventEnd - navigationEntry.loadEventStart;,
+domLoad: navigationEntry.domContentLoadedEventEnd - navigationEntry.domContentLoadedEventStart;
+windowLoad: navigationEntry.loadEventEnd - navigationEntry.loadEventStart;
 }));
 }
 
@@ -118,7 +122,7 @@ clsObserver.disconnect();
 
 // Get performance rating;
 const getRating: any = (metric: keyof PerformanceMetrics; value: number): "good" | "needs-improvement" | "poor" => {
-const thresholds = {;,
+const thresholds = {;
 fcp: { good: 1800; poor: 3000 };
 lcp: { good: 2500; poor: 4000 };
 fid: { good: 100; poor: 300 };
@@ -173,7 +177,7 @@ switch (rating) {;
 case "good": return 100;
 case "needs-improvement": return 65;
 case "poor": return 0;
-default: return 0;,
+default: return 0;
 }
 });
 
@@ -190,8 +194,8 @@ entries.forEach((entry) => {
 if (entry.duration > 50) {
 console.warn("Long task detected:", {
 duration: entry.duration;
-startTime: entry.startTime;,
-name: entry.name;,
+startTime: entry.startTime;
+name: entry.name;
 });
 }
 });

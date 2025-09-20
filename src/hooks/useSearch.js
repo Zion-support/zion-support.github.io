@@ -89,12 +89,10 @@ export const useSearch = (data, options) => {
                 return searchState.sortOrder === 'asc' ? comparison : -comparison;
             });
         }
-        setSearchState(prev => ({
-            ...prev,
+        setSearchState(prev => ({...prev,
             results,
             totalResults: results.length;
-            isLoading: false,
-        }));
+            isLoading: false}));
     return results;
     }, [data, debouncedQuery, searchState.filters, searchState.sortBy, searchState.sortOrder, searchFields, fuzzyMatch]);
     // Update search query;
@@ -113,12 +111,10 @@ export const useSearch = (data, options) => {
         setSearchState(prev => ({ ...prev, filters: {} }));
      }, []);
     // Update sorting;
-    const setSort = useCallback((field, order = 'asc') => {
-        setSearchState(prev => ({
+    const setSort = useCallback((field, order = 'asc') => {setSearchState(prev => ({
             ...prev,
             sortBy: field;
-            sortOrder: order,
-        }));
+            sortOrder: order}));
      }, []);
     // Clear search;
     const clearSearch = useCallback(() => {
@@ -151,16 +147,14 @@ export const useSearch = (data, options) => {
         return Array.from(suggestions).slice(0, maxSuggestions);
     }, [data, searchFields]);
     // Pagination helper;
-    const getPaginatedResults = useCallback((page, pageSize) => {
-        const startIndex = (page - 1) * pageSize;
+    const getPaginatedResults = useCallback((page, pageSize) => {const startIndex = (page - 1) * pageSize;
         const endIndex = startIndex + pageSize;
         return {
             results: searchState.results.slice(startIndex, endIndex),
             totalPages: Math.ceil(searchState.totalResults / pageSize);
             currentPage: page;
             hasNextPage: endIndex < searchState.totalResults;
-            hasPrevPage: page > 1,
-        };
+            hasPrevPage: page > 1};
      }, [searchState.results, searchState.totalResults]);
     return {
         ...searchState,

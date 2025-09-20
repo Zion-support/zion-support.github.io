@@ -6,7 +6,9 @@ import { SEO } from '@/components/SEO';
 import { useAuth } from '@/hooks/useAuth';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-import { Wallet, Database, Save } from 'lucide-react'
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Label } from '@/components/ui/label';
+import { Wallet, Database, Save } from 'lucide-react';
 
 export default function AccountSettings() {
   return (
@@ -26,26 +28,28 @@ export default function AccountSettings() {
             <CardContent className='space-y-6'>
               <div className='space-y-2'>
                 <Label htmlFor='email'>Email Address</Label>
-                <Input,
-id='email'
-                  value={user?.email |''}                  disabled,
-className='bg-gray-100'
+                <Input
+                  id='email'
+                  value={user?.email || ''}
+                  disabled
+                  className='bg-gray-100'
                 />
               </div>
               <div className='space-y-2'>
                 <Label htmlFor='didHandle'>Web3 Identity Handle</Label>
                 <div className='flex gap-2'>
-                  <Input,
-id='didHandle'
+                  <Input
+                    id='didHandle'
                     value={didHandle}
                     onChange={e => setDidHandle(e.target.value)}
                     placeholder='ENS / Lens / Ceramic / Farcaster'
                   />
-                  <Button,
-variant='outline'
+                  <Button
+                    variant='outline'
                     onClick={handleConnectWallet}
                     type='button'
-                    className='flex items-center gap-1'                  >
+                    className='flex items-center gap-1'
+                  >
                     <Wallet className='h-4 w-4' />
                     Connect
                   </Button>
@@ -61,7 +65,7 @@ variant='outline'
                     Show your Web3 handle instead of email
                   </p>
                 </div>
-                <Switch,
+                <Switch
 id='displayWeb3'
                   checked={displayWeb3}
                   onCheckedChange={setDisplayWeb3}                />
@@ -77,7 +81,7 @@ id='displayWeb3'
                     Backup your profile data to IPFS/Arweave
                   </p>
                 </div>
-                <Switch,
+                <Switch
 id='backup'
                   checked={enableBackup}
                   onCheckedChange={setEnableBackup}                />
@@ -88,7 +92,7 @@ id='backup'
 is in beta.
                 </div>
               )}
-              <Button,
+              <Button
 onClick={handleSave}
                 disabled={isSubmitting}
                 className='w-full'              >
@@ -109,7 +113,7 @@ onClick={handleSave}
                 <h3 className='font-medium'>Connected Wallet</h3>
                 {didHandle ? (
                   <div className='flex items-center gap-2 bg-gray-100 p-3 rounded-md'>
-                    <svg,
+                    <svg
 xmlns='http://www.w3.org/2000/svg'
                       width='20'
                       height='20'
@@ -128,7 +132,7 @@ xmlns='http://www.w3.org/2000/svg'
                   </div>
                 ) : (
                   <div className='flex items-center gap-2 bg-gray-100 p-3 rounded-md'>
-                    <svg,
+                    <svg
 xmlns='http://www.w3.org/2000/svg'
                       width='20'
                       height='20'
@@ -178,7 +182,7 @@ xmlns='http://www.w3.org/2000/svg'
               </div>
               <div>
                 <h3 className='font-medium mb-2'>Recovery Options</h3>
-                <Button,
+                <Button
 variant='outline'
                   className='w-full'
                   disabled={!enableBackup}                >
@@ -194,6 +198,6 @@ variant='outline'
           </Card>
         </div>
       </main>
-    </>
+</>
   )
 }

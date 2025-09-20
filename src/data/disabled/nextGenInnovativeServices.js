@@ -1,6 +1,5 @@
 export const NEXT_GEN_INNOVATIVE_SERVICES = [
-    {
-        id: "ai-credit-risk-assessment";
+    {id: "ai-credit-risk-assessment";
         title: "AI-Powered Credit Risk Assessment Platform";
         description: "Advanced credit scoring system using machine learning to analyze alternative data sources and provide real-time credit risk assessments for underserved markets.";
         category: "AI & Financial Services";
@@ -46,8 +45,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         websiteUrl: "https://ziontechgroup.com/ai-credit-risk";
         demoUrl: "https://ziontechgroup.com/ai-credit-risk/demo";
         documentationUrl: "https://ziontechgroup.com/ai-credit-risk/docs";
@@ -56,8 +54,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES = [
         roi: "300% ROI within 6 months";
         implementationTime: "3-4 weeks",
     };
-    {
-        id: "ai-medical-imaging";
+    {id: "ai-medical-imaging";
         title: "AI Medical Imaging Diagnosis Assistant";
         description: "Advanced medical imaging analysis platform using deep learning to assist radiologists in detecting and diagnosing diseases from X-rays, CT scans, and MRIs.",
         category: "AI & Healthcare";
@@ -103,8 +100,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         websiteUrl: "https://ziontechgroup.com/ai-medical-imaging";
         demoUrl: "https://ziontechgroup.com/ai-medical-imaging/demo";
         documentationUrl: "https://ziontechgroup.com/ai-medical-imaging/docs";
@@ -113,8 +109,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES = [
         roi: "400% ROI within 12 months";
         implementationTime: "6-8 weeks",
     };
-    {
-        id: "ai-supply-chain-optimization";
+    {id: "ai-supply-chain-optimization";
         title: "AI Supply Chain Optimization Platform";
         description: "Intelligent supply chain management system that uses AI to optimize inventory, predict demand, and streamline logistics operations across global networks.",
         category: "AI & Supply Chain";
@@ -160,8 +155,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         websiteUrl: "https://ziontechgroup.com/ai-supply-chain";
         demoUrl: "https://ziontechgroup.com/ai-supply-chain/demo";
         documentationUrl: "https://ziontechgroup.com/ai-supply-chain/docs";
@@ -170,8 +164,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES = [
         roi: "250% ROI within 8 months";
         implementationTime: "4-6 weeks",
     };
-    {
-        id: "ai-energy-optimization";
+    {id: "ai-energy-optimization";
         title: "AI Energy Optimization Platform";
         description: "Smart energy management system that uses AI to optimize power consumption, integrate renewable energy sources, and reduce operational costs for commercial buildings.",
         category: "AI & Energy Management";
@@ -217,8 +210,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         websiteUrl: "https://ziontechgroup.com/ai-energy-optimization";
         demoUrl: "https://ziontechgroup.com/ai-energy-optimization/demo";
         documentationUrl: "https://ziontechgroup.com/ai-energy-optimization/docs";
@@ -227,8 +219,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES = [
         roi: "280% ROI within 10 months";
         implementationTime: "5-7 weeks",
     };
-    {
-        id: "ai-legal-document-analysis";
+    {id: "ai-legal-document-analysis";
         title: "AI Legal Document Analysis Platform";
         description: "Intelligent legal document review system that uses natural language processing to analyze contracts, identify risks, and ensure compliance with legal requirements.",
         category: "AI & Legal Tech";
@@ -274,8 +265,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         websiteUrl: "https://ziontechgroup.com/ai-legal-analysis";
         demoUrl: "https://ziontechgroup.com/ai-legal-analysis/demo";
         documentationUrl: "https://ziontechgroup.com/ai-legal-analysis/docs";
@@ -284,8 +274,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES = [
         roi: "320% ROI within 9 months";
         implementationTime: "4-5 weeks",
     };
-    {
-        id: "ai-real-estate-analytics";
+    {id: "ai-real-estate-analytics";
         title: "AI Real Estate Analytics Platform";
         description: "Comprehensive real estate intelligence platform that uses AI to analyze market trends, property valuations, and investment opportunities across multiple markets.",
         category: "AI & Real Estate";
@@ -331,8 +320,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         websiteUrl: "https://ziontechgroup.com/ai-real-estate";
         demoUrl: "https://ziontechgroup.com/ai-real-estate/demo";
         documentationUrl: "https://ziontechgroup.com/ai-real-estate/docs";
@@ -341,8 +329,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES = [
         roi: "260% ROI within 7 months";
         implementationTime: "3-4 weeks",
     };
-    {
-        id: "ai-personalized-learning";
+    {id: "ai-personalized-learning";
         title: "AI Personalized Learning Platform";
         description: "Adaptive learning system that personalizes educational content and learning paths based on individual student performance, preferences, and learning styles.",
         category: "AI & Education";
@@ -388,8 +375,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         websiteUrl: "https://ziontechgroup.com/ai-personalized-learning";
         demoUrl: "https://ziontechgroup.com/ai-personalized-learning/demo";
         documentationUrl: "https://ziontechgroup.com/ai-personalized-learning/docs";
@@ -398,8 +384,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES = [
         roi: "240% ROI within 8 months";
         implementationTime: "4-6 weeks",
     };
-    {
-        id: "ai-predictive-maintenance";
+    {id: "ai-predictive-maintenance";
         title: "AI Predictive Maintenance Platform";
         description: "Industrial IoT platform that uses AI to predict equipment failures, optimize maintenance schedules, and reduce downtime in manufacturing and industrial operations.",
         category: "AI & Industrial IoT";
@@ -445,8 +430,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         websiteUrl: "https://ziontechgroup.com/ai-predictive-maintenance";
         demoUrl: "https://ziontechgroup.com/ai-predictive-maintenance/demo";
         documentationUrl: "https://ziontechgroup.com/ai-predictive-maintenance/docs";
@@ -455,8 +439,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES = [
         roi: "350% ROI within 12 months";
         implementationTime: "6-8 weeks",
     };
-    {
-        id: "ai-retail-optimization";
+    {id: "ai-retail-optimization";
         title: "AI Retail Optimization Platform";
         description: "Intelligent retail management system that optimizes pricing, inventory, and customer experience using AI-powered analytics and machine learning.",
         category: "AI & Retail";
@@ -502,8 +485,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         websiteUrl: "https://ziontechgroup.com/ai-retail-optimization";
         demoUrl: "https://ziontechgroup.com/ai-retail-optimization/demo";
         documentationUrl: "https://ziontechgroup.com/ai-retail-optimization/docs";
@@ -512,8 +494,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES = [
         roi: "270% ROI within 9 months";
         implementationTime: "4-5 weeks",
     };
-    {
-        id: "ai-logistics-optimization";
+    {id: "ai-logistics-optimization";
         title: "AI Logistics Optimization Platform";
         description: "Advanced logistics management system that uses AI to optimize routes, reduce fuel costs, and improve delivery efficiency for transportation and logistics companies.",
         category: "AI & Transportation";
@@ -559,8 +540,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         websiteUrl: "https://ziontechgroup.com/ai-logistics";
         demoUrl: "https://ziontechgroup.com/ai-logistics/demo";
         documentationUrl: "https://ziontechgroup.com/ai-logistics/docs";
@@ -569,8 +549,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES = [
         roi: "290% ROI within 10 months";
         implementationTime: "5-6 weeks",
     };
-    {
-        id: "ai-hr-talent-management";
+    {id: "ai-hr-talent-management";
         title: "AI HR Talent Management Platform";
         description: "Intelligent human resources platform that uses AI to streamline recruitment, improve employee engagement, and optimize workforce planning and development.",
         category: "AI & Human Resources";
@@ -616,8 +595,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         websiteUrl: "https://ziontechgroup.com/ai-hr-talent";
         demoUrl: "https://ziontechgroup.com/ai-hr-talent/demo";
         documentationUrl: "https://ziontechgroup.com/ai-hr-talent/docs";
@@ -626,8 +604,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES = [
         roi: "250% ROI within 8 months";
         implementationTime: "4-6 weeks",
     };
-    {
-        id: "ai-marketing-automation";
+    {id: "ai-marketing-automation";
         title: "AI Marketing Automation Pro";
         description: "Advanced marketing automation platform that uses AI to personalize campaigns, optimize customer journeys, and maximize marketing ROI across all channels.",
         category: "AI & Marketing";
@@ -673,8 +650,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         websiteUrl: "https://ziontechgroup.com/ai-marketing-automation";
         demoUrl: "https://ziontechgroup.com/ai-marketing-automation/demo";
         documentationUrl: "https://ziontechgroup.com/ai-marketing-automation/docs";

@@ -1,5 +1,5 @@
 interface ApplicationCardProps {
-  application: JobApplication,
+  application: JobApplication,}
 export function ApplicationCard({ application }: ApplicationCardProps) {
   const [expanded, setExpanded] = useState(false)
   const handleDownloadResume = () => {
@@ -8,6 +8,8 @@ toast.info('Resume download functionality will be implemented soon') }
   const renderActionButtons = () => {
     switch (application.status) {interface ApplicationCardProps {
   application: JobApplication;
+}
+}
 }
 export function ApplicationCard({ application }: ApplicationCardProps) {
 return (
@@ -49,7 +51,7 @@ return (
                       {application.resume.title |'Resume'}
                     </span>
                   </div>
-                  <Button,
+                  <Button
 variant='ghost'
                     size='sm'
                     onClick={handleDownloadResume}
@@ -104,7 +106,7 @@ variant='ghost'
       </CardContent>
       <CardFooter className='flex flex-col gap-3 pt-0'>
         <div className='flex justify-between items-center w-full'>
-          <Button,
+          <Button
 variant='ghost'
             size='sm'
             onClick={() => setExpanded(!expanded)}
@@ -124,7 +126,7 @@ variant='ghost'
             <MessageSquare className='h-4 w-4 mr-1' /> Message Client          </Link>          </Button>
           <div className="flex gap-2">
             {renderActionButtons()}
-            <Button,
+            <Button
 variant="outline"
               size="sm"
               asChild
@@ -138,7 +140,7 @@ variant="outline"
         <Button variant='secondary' size='sm' className='w-full' asChild>
           <Link href={`/messages?jobId=${application.job_id}`}>
             <MessageSquare className='h-4 w-4 mr-1' /> Message Client
-        <Button,
+        <Button
 variant="secondary"
           size="sm"
           className="w-full"
@@ -150,12 +152,9 @@ variant="secondary"
       </CardFooter>
     </Card>
   )
-default: return (<Card className="overflow-hidden" > <CardHeader className="pb-3" > <div className="flex justify-between items-start" > <div> </div> </div> <StatusBadge status= {
-  application.status,
-}/> </div> </CardHeader> {"
+default: return (<Card className="overflow-hidden" > <CardHeader className="pb-3" > <div className="flex justify-between items-start" > <div> </div> </div> <StatusBadge status= {application.status}/> </div> </CardHeader> {"
   application.cover letter && (<div> <h4 className="text-sm font-medium mb-1" >Your Cover Letter</h4> <p className="text-sm text-muted-foreground" > {
-  application.cover letter,
-}</p> </div>)
+  application.cover letter}</p> </div>)
 }</Button> </div> </div>)
 }{"
   application.match score && (<div> <h4 className="text-sm font-medium mb-1" >Match Score</h4> <div className="flex items-center" > <div className="h-6 w-6 rounded-full bg-blue-100 text-blue-800 flex items-center justify-center text-xs font-medium" > {

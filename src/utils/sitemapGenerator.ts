@@ -1,22 +1,19 @@
 import React from "react";
 
-interface SitemapUrl {
-url: string;
+interface SitemapUrl {url: string;
 lastmod?: string;
-changefreq?: "always" | "hourly" | "daily" | "weekly" | "monthly" | "yearly" | "never";
-priority?: number,
 }
+changefreq?: "always" | "hourly" | "daily" | "weekly" | "monthly" | "yearly" | "never";}
+priority?: number}
 
-interface SitemapConfig {
-baseUrl: string; urls: SitemapUrl[];
-outputPath?: string,
+interface SitemapConfig {baseUrl: string; urls: SitemapUrl[];
 }
+}
+outputPath?: string}
 
-export class SitemapGenerator {
-private config: SitemapConfig;
+export class SitemapGenerator {private config: SitemapConfig;
 constructor(config: SitemapConfig) {
-this.config = config,
-}
+this.config = config}
 
 /**;
 * Generate XML sitemap content;
@@ -55,14 +52,12 @@ Sitemap: ${baseUrl}/sitemap.xml; Sitemap: ${baseUrl}/sitemap-index.xml`;
 /**;
 * Save sitemap to file;
 */;
-async saveSitemap(): Promise<void> {
-const xml = this.generateXML();
+async saveSitemap(): Promise<void> {const xml = this.generateXML();
 const outputPath = this.config.outputPath || "./public/sitemap.xml";
 
 // In a real implementation; you would write to file system;
 // For now; we"ll just return the content;
-console.log("Sitemap generated:", outputPath),
-}
+console.log("Sitemap generated:", outputPath)}
 }
 
 // Default sitemap configuration;
@@ -98,13 +93,9 @@ urls: [
 };
 
 // Utility function to generate sitemap;
-export function generateSitemap(config: SitemapConfig = defaultSitemapConfig): string {
-const generator = new SitemapGenerator(config);
-return generator.generateXML(),
-}
+export function generateSitemap(config: SitemapConfig = defaultSitemapConfig): string {const generator = new SitemapGenerator(config);
+return generator.generateXML()}
 
 // Utility function to generate robots.txt;
-export function generateRobotsTxt(config: SitemapConfig = defaultSitemapConfig): string {
-const generator = new SitemapGenerator(config);
-return generator.generateRobotsTxt(),
-}
+export function generateRobotsTxt(config: SitemapConfig = defaultSitemapConfig): string {const generator = new SitemapGenerator(config);
+return generator.generateRobotsTxt()}

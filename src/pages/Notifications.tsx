@@ -1,18 +1,19 @@
 import React { useState useEffect } from 'react';
-import { Bell,, Check,, X,, AlertCircle,, Info,, CheckCircle,  } from 'lucide-react';
-import { Badge,  } from '@/components/ui/badge';
-import { Button,  } from '@/components/ui/button';
-import { Card,, CardContent,, CardHeader,, CardTitle,  } from '@/components/ui/card';
-import { useAuth,  } from '@/hooks/useAuth';
-import { toast,  } from '@/hooks/use-toast';
+import { Bell, Check, X, AlertCircle, Info, CheckCircle } from "lucide-react";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { useAuth } from "@/hooks/useAuth";
+import { toast } from "@/hooks/use-toast";
 interface Notification {
-  id: string;,
+  id: string;
 type: 'message' | 'order' | 'system' | 'promotion';
-  title: string;,
+  title: string;
 message: string;
-  timestamp: Date;,
+  timestamp: Date;
 read: boolean;
-  actionUrl?: string;
+}
+  actionUrl?: string;}
 }
 const getNotificationIcon = (type: string) => {
   switch (type) {
@@ -133,7 +134,7 @@ return (
       ) : (
         <div className="space-y-4">
           {notifications.map((notification) => (
-            <Card,
+            <Card
 key={notification.id}
               className={`transition-all hover:shadow-md ${
                 !notification.read ? 'border-l-4 border-l-blue-500 bg-blue-50' : ''
@@ -163,7 +164,7 @@ key={notification.id}
                   </div>
                   <div className="flex items-center space-x-2 ml-4">
                     {!notification.read && (
-                      <Button,
+                      <Button
 size="sm"
                         variant="ghost"
                         onClick={() => markAsRead(notification.id)}
@@ -171,7 +172,7 @@ size="sm"
                         <Check className="h-4 w-4" />
                       </Button>
                     )}
-                    <Button,
+                    <Button
 size="sm"
                       variant="ghost"
                       onClick={() => deleteNotification(notification.id)}

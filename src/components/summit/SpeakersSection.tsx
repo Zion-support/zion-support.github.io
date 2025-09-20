@@ -1,21 +1,17 @@
 import Image from "next/image";
-import { Twitter,, Linkedin,  } from 'lucide-react'
-interface Speaker {
-  name: string,
+import { Twitter, Linkedin } from "lucide-react";
+interface Speaker {name: string,
 title: string,
 avatar: string,
 twitter?: string,
-linkedin?: string,
-linkedin?: string,
 }
-interface Speaker {
-linkedin?: string,
-}
+linkedin?: string,}
+linkedin?: string}
+interface Speaker {linkedin?: string}
 const speakers: Speaker[] = [
   {
 export function SpeakersSection() {
-  return (
-    <section className='py-12 bg-zion-blue-dark text-white' id='speakers'>
+  return (<section className='py-12 bg-zion-blue-dark text-white' id='speakers'>
       <div className='container mx-auto px-4'>
         <h2 className='text-3xl font-bold mb-8 text-center'>Speakers</h2>
         <div className='grid gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 justify-items-center'>
@@ -24,7 +20,7 @@ export function SpeakersSection() {
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold mb-8 text-center">Speakers</h2>
         <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 justify-items-center">
-          {speakers.map((sp,) => (
+          {speakers.map((sp) => (
             <div key={sp.name} className="text-center space-y-2">
                 src={sp.avatar}
                 alt={sp.name}
@@ -36,13 +32,13 @@ export function SpeakersSection() {
               <p className='text-sm opacity-80'>{sp.title}</p>
               <div className='flex justify-center gap-3 text-zion-cyan'>
                 {sp.twitter && (
-                  <a,
+                  <a
 href={sp.twitter}
                     aria-label='Twitter'
                     target='_blank'
                     rel='noopener noreferrer'
                     className='flex items-center'
-                    href = {sp.twitter,}
+                    href = {sp.twitter}
                     aria-label="Twitter"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -54,7 +50,7 @@ href={sp.twitter}
                   </a>
                 )}
                 {sp.linkedin && (
-                  <a,
+                  <a
 href={sp.linkedin}
                     aria-label='LinkedIn'
                     target='_blank'

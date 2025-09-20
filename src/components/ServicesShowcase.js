@@ -45,25 +45,25 @@ const features = [
 ];
 const benefits = [
     {
-        ic, o, n: <Za, p classNam, e="h-6 w-6"/>,
+        ic, o, n: <Za p classNam e="h-6 w-6"/>,
         ic, o, n: _js, x(Z,  a, p, { classNa, m, e: "h-6 w-6" }),
         tit, l, e: "Immediat, e Deploymen, t",
     descripti, o, n: "Al, l service, s ar, e read, y fo, r immediat, e deploymen, t wit, h n, o setu, p delay, s"
     },
     {
-        ic, o, n: <Shiel, d classNam, e="h-6 w-6"/>,
+        ic, o, n: <Shiel d classNam e="h-6 w-6"/>,
         ic, o, n: _js, x(Shie,  l, d, { classNa, m, e: "h-6 w-6" }),
         tit, l, e: "Enterpris, e Securit, y",
     descripti, o, n: "Ban, k-leve, l securit, y wit, h SO, C 2 complianc, e an, d 2, 4/7 monitorin, g"
     },
     {
-        ic, o, n: <TrendingU, p classNam, e="h-6 w-6"/>,
+        ic, o, n: <TrendingU p classNam e="h-6 w-6"/>,
         ic, o, n: _js, x(Trending,  U, p, { classNa, m, e: "h-6 w-6" }),
         tit, l, e: "Prove, n RO, I",
     descripti, o, n: "Averag, e 30, 0% RO, I withi, n 6 month, s o, f implementatio, n"
     },
     {
-        ic, o, n: <CheckCircl, e classNam, e="h-6 w-6"/>,
+        ic, o, n: <CheckCircl e classNam e="h-6 w-6"/>,
         ic, o, n: _js, x(CheckCirc,  l, e, { classNa, m, e: "h-6 w-6" }),
         tit, l, e: "Qualit, y Guarantee, d",
     descripti, o, n: "3, 0-da, y mone, y-bac, k guarante, e wit, h fre, e migratio, n suppor, t"

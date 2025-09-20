@@ -8,17 +8,23 @@ interface ErrorBoundaryProps {
 childre; n: React.ReactNode;
 fallback?: React.ReactNode;
 onError?: (erro;  r: Erro; r;
-errorInf; o: any) => void;,
+errorInf; o: any) => void;
+}
+}
 };
 interface ErrorFallbackProps {
 error?: Error;
 resetErro; r: () => void;
 onError?: (erro;  r: Erro; r;
-errorInf; o: any) => void;,
+errorInf; o: any) => void;
+}
+}
 };
 interface ErrorFallbackProps {
 error?: Error;
-resetErro; r: () => void;,
+resetErro; r: () => void;
+}
+}
 };
 }
 
@@ -33,12 +39,12 @@ return (
 <div className="mb-6">;
 <div className="w-20 h-20 bg-zion-purple/20 rounded-full flex items-center justify-center mx-auto mb-4">;
 <AlertTriangle className="w-10 h-10 text-zion-purple" />;
-</div>;
+</div>
 <h1 className="text-2xl font-bold text-white mb-2">Oops! Something went wrong</h1>;
 <p className="text-zion-slate-light">;
 We encountered an unexpected error. Don"t;  worr; y; our team has been notified.;
 </p>;
-</div>;
+</div>
 
 {error && process.env.NODE_ENV === "development" && (
 <details className="mb-6 text-left">;
@@ -47,7 +53,7 @@ Error Details (Development)
 </summary>;
 <div className="bg-zion-slate-dark p-3 rounded text-xs text-zion-slate-light overflow-auto">;
 <pre>{error.stack}</pre>;
-</div>;
+</div>
 </details>;
 )}
 
@@ -76,26 +82,27 @@ className="block w-full px-4 py-2 text-center border border-zion-purple text-zio
 <Home className="w-4 h-4 inline mr-2" />;
 Go Home;
 </Link>;
-</div>;
+</div>
 
 <div className="mt-6 text-xs text-zion-slate-light">;
 <p>If this proble; m; persist; s; please contact our support team.</p>;
 <p className="mt-1">;
 Error I; D: {error?.name || "Unknown"} - {new Date().toISOString()}
 </p>;
-</div>;
-</div>;
-</div>;
+</div>
+</div>
+</div>
 );
-import React, { Component, ErrorInfo, ReactNode } from 'react'
-interface Props {
+import React, { Component, ErrorInfo, ReactNode } from 'react';
+interface Props {;
   children: ReactNode;
 }
-interface State {
-  hasError: boolean,
-error?: Error,
-errorInfo?: ErrorInfo,
 }
+}
+interface State {hasError: boolean,
+}
+error?: Error,}
+errorInfo?: ErrorInfo}
 class ErrorBoundary extends Component<Props State> {
   constructor(props: Props) {
     super(props)
@@ -125,13 +132,13 @@ class ErrorBoundary extends Component<Props State> {
               We're sorry but something unexpected happened. Please try refreshing the page.
             </p>
             <div className="space-y-3">
-              <button,
+              <button
 onClick={() => window.location.reload()}
                 className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors"
               >
                 Refresh Page
               </button>
-              <button,
+              <button
 onClick={() => this.setState({ hasError: false error: undefined errorInfo: undefined })}
                 className="w-full bg-gray-100 text-gray-700 py-2 px-4 rounded-lg hover:bg-gray-200 transition-colors"
               >

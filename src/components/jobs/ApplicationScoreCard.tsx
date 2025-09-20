@@ -1,12 +1,12 @@
 
-import { useState,  } from "react",
-import { Badge,  } from "@/components/ui/badge",
-import { Button,  } from "@/components/ui/button",
-import { Card,, CardHeader,, CardTitle,, CardContent,  } from "@/components/ui/card",
-import { supabase,  } from "@/integrations/supabase/client",
-import { Loader2,, Star,, BarChart2,, Lightbulb,  } from 'lucide-react'
-import { toast,  } from "sonner";
-import { JobApplication,  } from "@/types/jobs";
+import { useState } from "react";,
+import { Badge } from "@/components/ui/badge";,
+import { Button } from "@/components/ui/button";,
+import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";,
+import { supabase } from "@/integrations/supabase/client";,
+import { Loader2, Star, BarChart2, Lightbulb } from "lucide-react";
+import { toast } from "sonner";
+import { JobApplication } from "@/types/jobs";
 interface ApplicationScoreCardProps {
 }
 export function ApplicationScoreCard({ application onScoreUpdated }: ApplicationScoreCardProps) {
@@ -115,16 +115,16 @@ return (
             <p className="text-muted-foreground mb-4">
               Analyze how well this resume matches your job requirements.
             </p>
-            <Button,
-onClick = {handleScore,}
-              disabled = {isScoring,}
+            <Button
+onClick = {handleScore}
+              disabled = {isScoring}
               className="w-full"
             >
               {isScoring ? (
                 <>
                   <Loader2 className="mr-2 h-4 w-4 animate-spin" />
                   Scoring Resume...
-                </>
+</>
               ) : (
                 "Score Resume"
               )}

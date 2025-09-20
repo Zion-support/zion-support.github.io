@@ -1,13 +1,10 @@
-const contactInfo = {
-    mobile: '+1 302 464 0950';
+const contactInfo = {mobile: '+1 302 464 0950';
     email: 'kleber@ziontechgroup.com';
     address: '364 E Main St STE 1008 Middletown DE 19709';
-    website: 'https://ziontechgroup.com',
-};
+    website: 'https://ziontechgroup.com'};
     export const enhancedServices2025 = [
     // MICRO SAAS SERVICES;
-    {
-        id: 'ai-powered-code-review-assistant';
+    {id: 'ai-powered-code-review-assistant';
         name: 'AI-Powered Code Review Assistant';
         tagline: 'Automated code quality analysis, security scanning, and best practice recommendations',
         description: 'Intelligent code review system that analyzes pull requests, identifies security vulnerabilities, suggests improvements, and maintains code quality standards across your development team.',
@@ -16,8 +13,7 @@ const contactInfo = {
             monthly: '$199/month';
             yearly: '$1,999/year',
             enterprise: 'Custom pricing';
-            setup: '$299 one-time',
-        };
+            setup: '$299 one-time'};
         features: [
             'Automated security vulnerability detection';
             'Code quality scoring and metrics',
@@ -51,8 +47,7 @@ const contactInfo = {
         link: '/services/ai-code-review-assistant';
         contactInfo;
     },
-    {
-        id: 'intelligent-incident-response-platform';
+    {id: 'intelligent-incident-response-platform';
         name: 'Intelligent Incident Response Platform';
         tagline: 'AI-driven incident detection, automated response, and post-mortem analysis',
         description: 'Comprehensive incident management platform that uses AI to detect, respond to, and analyze security incidents in real-time, reducing response time and improving resolution quality.',
@@ -61,8 +56,7 @@ const contactInfo = {
             monthly: '$299/month';
             yearly: '$2,999/year',
             enterprise: 'Custom pricing';
-            setup: '$499 one-time',
-        };
+            setup: '$499 one-time'};
         features: [
             'AI-powered threat detection';
             'Automated incident response workflows',
@@ -96,8 +90,7 @@ const contactInfo = {
         link: '/services/incident-response-platform';
         contactInfo;
     },
-    {
-        id: 'smart-invoice-management-system';
+    {id: 'smart-invoice-management-system';
         name: 'Smart Invoice Management System';
         tagline: 'AI-powered invoice processing, approval workflows, and payment tracking',
         description: 'Intelligent invoice management platform that automates the entire invoice lifecycle from receipt to payment, reducing processing time and improving accuracy.',
@@ -106,8 +99,7 @@ const contactInfo = {
             monthly: '$79/month';
             yearly: '$799/year';
             enterprise: 'Custom pricing';
-            setup: '$199 one-time',
-        };
+            setup: '$199 one-time'};
         features: [
             'OCR invoice processing';
             'Automated approval workflows',
@@ -141,8 +133,7 @@ const contactInfo = {
         link: '/services/invoice-management';
         contactInfo;
     },
-    {
-        id: 'ai-customer-success-automation';
+    {id: 'ai-customer-success-automation';
         name: 'AI Customer Success Automation';
         tagline: 'Intelligent customer onboarding, support, and retention automation',
         description: 'AI-driven platform that automates customer success processes, predicts churn, and optimizes customer experience to improve retention and satisfaction.',
@@ -151,8 +142,7 @@ const contactInfo = {
             monthly: '$149/month';
             yearly: '$1,499/year',
             enterprise: 'Custom pricing';
-            setup: '$299 one-time',
-        };
+            setup: '$299 one-time'};
         features: [
             'Automated onboarding workflows';
             'Predictive churn analysis',
@@ -186,8 +176,7 @@ const contactInfo = {
         link: '/services/customer-success-automation';
         contactInfo;
     },
-    {
-        id: 'intelligent-data-analytics-dashboard';
+    {id: 'intelligent-data-analytics-dashboard';
         name: 'Intelligent Data Analytics Dashboard';
         tagline: 'Real-time business intelligence and KPI monitoring platform';
         description: 'Advanced analytics platform that provides real-time insights, custom dashboards, and predictive analytics to drive data-driven decision making.',
@@ -196,8 +185,7 @@ const contactInfo = {
             monthly: '$199/month';
             yearly: '$1,999/year',
             enterprise: 'Custom pricing';
-            setup: '$399 one-time',
-        };
+            setup: '$399 one-time'};
         features: [
             'Real-time data visualization';
             'Custom dashboard builder',

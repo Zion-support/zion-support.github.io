@@ -1,19 +1,19 @@
 
-import React, { useState } from "react",
-import { Header,  } from "@/components/Header",
-import { SEO,  } from "@/components/SEO",
-import { useAuth,  } from "@/hooks/useAuth",
-import { useRouter,  } from "next/router",
-import { Card,, CardContent,, CardDescription,, CardHeader,, CardTitle,  } from "@/components/ui/card",
-import { Input,  } from "@/components/ui/input",
-import { Label,  } from "@/components/ui/label",
-import { Button,  } from "@/components/ui/button",
-import { Tabs,, TabsContent,, TabsList,, TabsTrigger,  } from "@/components/ui/tabs",
-import { Select,, SelectContent,, SelectItem,, SelectTrigger,, SelectValue,  } from "@/components/ui/select",
-import { toast,  } from "sonner",
-import { supabase,  } from "@/integrations/supabase/client",
-import { Switch,  } from "@/components/ui/switch";
-import { logErrorToProduction,  } from '@/utils/productionLogger';
+import React, { useState } from "react",;
+import { Header } from "@/components/Header";,
+import { SEO } from "@/components/SEO";,
+import { useAuth } from "@/hooks/useAuth";,
+import { useRouter } from "next/router";,
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";,
+import { Input } from "@/components/ui/input";,
+import { Label } from "@/components/ui/label";,
+import { Button } from "@/components/ui/button";,
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";,
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";,
+import { toast } from "sonner";,
+import { supabase } from "@/integrations/supabase/client";,
+import { Switch } from "@/components/ui/switch";
+import { logErrorToProduction } from "@/utils/productionLogger";
 export default function TenantOnboarding() {
   const { user } = useAuth();
   const [activeTab, setActiveTab] = useState("company");
@@ -25,7 +25,7 @@ is_co_branded: true;
 const isAdmin = null;
   return (
     <>
-      <SEO,
+      <SEO
 title="Tenant Onboarding - Zion AI Marketplace"
         description="Onboard a new white-label tenant to the Zion AI Marketplace platform."
       />
@@ -58,7 +58,7 @@ title="Tenant Onboarding - Zion AI Marketplace"
                   <TabsContent value="company" className="space-y-4">
                     <div className="space-y-2">
                       <Label htmlFor="brand_name">Company Name</Label>
-                      <Input,
+                      <Input
 id="brand_name"
                         name="brand_name"
                         value={formData.brand_name}
@@ -70,7 +70,7 @@ id="brand_name"
                     
                     <div className="space-y-2">
                       <Label htmlFor="industry">Industry</Label>
-                      <Select,
+                      <Select
 name="industry" 
                         value={formData.industry} 
                         onValueChange={(value) => handleSelectChange("industry", value)}
@@ -93,7 +93,7 @@ name="industry"
                     
                     <div className="space-y-2">
                       <Label htmlFor="company_size">Company Size</Label>
-                      <Select,
+                      <Select
 name="company_size" 
                         value={formData.company_size} 
                         onValueChange={(value) => handleSelectChange("company_size", value)}
@@ -116,7 +116,7 @@ name="company_size"
                   <TabsContent value="branding" className="space-y-4">
                     <div className="space-y-2">
                       <Label htmlFor="logo_url">Logo URL</Label>
-                      <Input,
+                      <Input
 id="logo_url"
                         name="logo_url"
                         value={formData.logo_url}
@@ -131,7 +131,7 @@ id="logo_url"
                     <div className="space-y-2">
                       <Label htmlFor="primary_color">Primary Brand Color</Label>
                       <div className="flex items-center gap-2">
-                        <Input,
+                        <Input
 id="primary_color"
                           name="primary_color"
                           type="color"
@@ -139,7 +139,7 @@ id="primary_color"
                           onChange={handleInputChange}
                           className="w-12 p-1 h-10"
                         />
-                        <Input,
+                        <Input
 name="primary_color"
                           value={formData.primary_color}
                           onChange={handleInputChange}
@@ -150,7 +150,7 @@ name="primary_color"
                     
                     <div className="space-y-2">
                       <Label htmlFor="theme_preset">Theme Preset</Label>
-                      <Select,
+                      <Select
 name="theme_preset" 
                         value={formData.theme_preset} 
                         onValueChange={(value) => handleSelectChange("theme_preset", value)}
@@ -175,7 +175,7 @@ name="theme_preset"
                           Show "Powered by Zion AI" in the footer and elsewhere
                         </p>
                       </div>
-                      <Switch,
+                      <Switch
 id="is_co_branded"
                         checked={formData.is_co_branded}
                         onCheckedChange={(checked) => handleSwitchChange("is_co_branded", checked)}
@@ -187,7 +187,7 @@ id="is_co_branded"
                     <div className="space-y-2">
                       <Label htmlFor="subdomain">Subdomain</Label>
                       <div className="flex items-center">
-                        <Input,
+                        <Input
 id="subdomain"
                           name="subdomain"
                           value={formData.subdomain}
@@ -205,7 +205,7 @@ id="subdomain"
                     
                     <div className="space-y-2">
                       <Label htmlFor="custom_domain">Custom Domain (Optional)</Label>
-                      <Input,
+                      <Input
 id="custom_domain"
                         name="custom_domain"
                         value={formData.custom_domain}
@@ -232,6 +232,6 @@ id="custom_domain"
           </Card>
         </div>
       </main>
-    </>
+</>
   )
 }

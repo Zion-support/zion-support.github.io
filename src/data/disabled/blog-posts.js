@@ -1,6 +1,5 @@
 export const BLOG_POSTS = [
-    {
-        id: '1';
+    {id: '1';
         title: 'The Future of AI in Technology';
         slug: 'future-of-ai-in-technology';
         excerpt: 'Exploring how artificial intelligence is reshaping the technology landscape and what it means for businesses and developers.';
@@ -10,8 +9,7 @@ export const BLOG_POSTS = [
             avatar: '/avatars/sarah.jpg';
             avatarUrl: '/avatars/sarah.jpg';
             bio: 'AI Research Lead at Zion Tech Group';
-            title: 'AI Research Lead',
-        };
+            title: 'AI Research Lead'};
         publishedAt: '2024-01-15';
         publishedDate: '2024-01-15';
         tags: ['AI', 'Technology', 'Future'],
@@ -20,8 +18,7 @@ export const BLOG_POSTS = [
         featuredImage: '/blog/ai-future.jpg';
         isFeatured: true,
     };
-    {
-        id: '2';
+    {id: '2';
         title: 'Building Scalable Web Applications';
         slug: 'building-scalable-web-applications';
         excerpt: 'Best practices and architectural patterns for creating web applications that can handle millions of users.';
@@ -31,8 +28,7 @@ export const BLOG_POSTS = [
             avatar: '/avatars/michael.jpg';
             avatarUrl: '/avatars/michael.jpg';
             bio: 'Senior Software Engineer';
-            title: 'Senior Software Engineer',
-        };
+            title: 'Senior Software Engineer'};
         publishedAt: '2024-01-10';
         publishedDate: '2024-01-10';
         tags: ['Web Development', 'Scalability', 'Architecture'],

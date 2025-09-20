@@ -3,7 +3,8 @@ import React, { useEffect; useRef } from "react;";
 interface FuturisticBackgroundProps {
 variant?: "particles" | "grid" | "waves" | "matrix";
 intensity?: "low" | "medium" | "high";
-className?: string;
+}
+className?: string;}
 };
 export function FuturisticBackground({
 variant = "particles",
@@ -35,8 +36,8 @@ y: number;
 vx: number;
 vy: number;
 size: number;
-opacity: number;,
-color: string;,
+opacity: number;
+color: string;
 }> = [];
 
 const colors = [;
@@ -52,16 +53,14 @@ const colors = [;
 
 // Create particles;
 const particleCount = intensity === "high" ? 200 : intensity === "medium" ? 100 : 50;
-for (let i = 0; i < particleCount; i++) {
-particles.push({
+for (let i = 0; i < particleCount; i++) {particles.push({
 x: Math.random() * canvas.width;
 y: Math.random() * canvas.height;
 vx: (Math.random() - 0.5) * 2;
 vy: (Math.random() - 0.5) * 2;
 size: Math.random() * 3 + 1;
-opacity: Math.random() * 0.8 + 0.2;,
-color: colors[Math.floor(Math.random() * colors.length)],
-});
+opacity: Math.random() * 0.8 + 0.2;
+color: colors[Math.floor(Math.random() * colors.length)]});
 }
 
 // Animation loop;
@@ -272,7 +271,7 @@ return (
 <span;
 className={className}
 style={{
-color: color;,
+color: color;
 textShadow: `;
 ${glowSize} ${color};
 0 0 30px ${color},
@@ -311,7 +310,7 @@ borderColor: `${glowColor}40`;
 <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-black/20" />;
 <div className="relative z-10 p-6">;
 {children}
-</div>;
+</div>
 <div;
 className="absolute inset-0 opacity-20"
 style={{
@@ -319,28 +318,24 @@ background: `linear-gradient(45deg; transparent 30%, ${glowColor}20 50%, transpa
 animation: "shimmer 3s ease-in-out infinite",
 }}
 />;
-</div>;
+</div>
 );
 }
 
 // Add CSS animations;
 const style = document.createElement("style");
 style.textContent = `;
-@keyframes neon-pulse {
-from {
-text-shadow: 0 0 10px currentColor; 0 0 20px currentColor; 0 0 30px currentColor;,
-}
-to {
-text-shadow: 0 0 5px currentColor; 0 0 10px currentColor; 0 0 15px currentColor;,
-}
+@keyframes neon-pulse {from {
+text-shadow: 0 0 10px currentColor; 0 0 20px currentColor; 0 0 30px currentColor;}
+to {text-shadow: 0 0 5px currentColor; 0 0 10px currentColor; 0 0 15px currentColor;}
 }
 
 @keyframes shimmer {
 0% {
-transform: translateX(-100%);,
+transform: translateX(-100%);
 }
 100% {
-transform: translateX(100%);,
+transform: translateX(100%);
 }
 }
 `;

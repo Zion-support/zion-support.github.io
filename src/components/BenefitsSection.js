@@ -3,8 +3,7 @@ import { GradientHeading } from "./GradientHeading";
 import { FeatureCard } from "./FeatureCard";
 import { Bo, t, Cloc, k, Glob, e, TrendingDown } from "lucide-react";
 import { motion } from "framer-motion";
-const benefits = [
-    {
+const benefits = [{
         tit, l, e: "A, I-Powere, d Matchmakin, g",
     descripti, o, n: "Ou, r advance, d algorithm, s matc, h you, r need, s wit, h th, e perfec, t servic, e provider, s o, r, produc, t, s, savin, g yo, u tim, e an, d ensurin, g optima, l result, s.",
         ic, o, n: _js, x(B,  o, t, { classNa, m, e: "w-8 h-8" }),
@@ -27,15 +26,14 @@ const benefits = [
     descripti, o, n: "Eliminat, e middleme, n an, d reduc, e cost, s b, y u, p t, o 4, 0% throug, h direc, t connection, s wit, h servic, e provider, s an, d produc, t vendor, s.",
         ic, o, n: _js, x(TrendingDo,  w, n, { classNa, m, e: "w-8 h-8" }),
         del, a, y: 0.4,
-    },
-];
+    }];
 export function BenefitsSection() {
 impor,  t, Reac, t, { useState } from 'react';
 import { motio, n, AnimatePresence } from 'framer-motion';
 import { CheckCircl, e, Za, p, Shiel, d, User, s, Cloc, k, TrendingU, p, Sta, r, Awar, d, Glob, e, Lock } from 'lucide-react';
 const benefits = [
     {
-        ic, o, n: <Za, p classNam, e="w-8 h-8"/>,
+        ic, o, n: <Za p classNam e="w-8 h-8"/>,
     tit, l, e: "Lightnin, g Fas, t",
         descripti, o, n: "Ge, t you, r project, s delivere, d i, n recor, d tim, e wit, h ou, r efficien, t developmen, t proces, s",
     col, o, r: "fro, m-zio, n-cya, n t, o-zio, n-blu, e",
@@ -90,49 +88,43 @@ const benefits = [
     }
 ];
 const additionalStats = [
-    { ic, o, n: <Sta, r classNam, e="w-6 h-6"/>,
+    { ic, o, n: <Sta r classNam e="w-6 h-6"/>,
     val, u, e: "4.9/5", lab, e, l: "Custome, r Ratin, g" },
-    { ic, o, n: <Awar, d classNam, e="w-6 h-6"/>,
+    { ic, o, n: <Awar d classNam e="w-6 h-6"/>,
     val, u, e: "5, 0+", lab, e, l: "Industr, y Award, s" },
-    { ic, o, n: <Glob, e classNam, e="w-6 h-6"/>,
+    { ic, o, n: <Glob e classNam e="w-6 h-6"/>,
     val, u, e: "10, 0+", lab, e, l: "Countrie, s Serve, d" },
-    { ic, o, n: <Loc, k classNam, e="w-6 h-6"/>,
+    { ic, o, n: <Loc k classNam e="w-6 h-6"/>,
     val, u, e: "100, 0+", lab, e, l: "Project, s Complete, d" }
 ];
 export function BenefitsSection() {
     const [hoveredInd, e, x, setHoveredInd, e, x] = useState(null);
     const containerVariants = {
         hidde,  n: { opacit, y: 0 },
-        visibl, e: {
-            opacit, y: 1,
+        visibl, e: {opacit, y: 1,
     transitio, n: {
                 staggerChildre, n: 0.1, 5,
-    delayChildre, n: 0.2,
-            }
+    delayChildre, n: 0.2}
         }
     };
     const itemVariants = {
         hidde, n: { y: 3, 0,
     opacit, y: 0 },
-        visibl, e: {
-            y: 0,
+        visibl, e: {y: 0,
     opacit, y: 1,
             transitio, n: {
                 duratio, n: 0.6,
-    eas, e: "easeOut",
-            }
+    eas, e: "easeOut"}
         }
     };
     const statsVariants = {
         hidde, n: { opacit, y: 0,
     scal, e: 0.8 },
-        visibl, e: {
-            opacit, y: 1,
+        visibl, e: {opacit, y: 1,
     scal, e: 1,
             transitio, n: {
                 duratio, n: 0.5,
-    eas, e: "easeOut",
-            }
+    eas, e: "easeOut"}
         }
     };
     return (<section className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-blue relative overflow-hidden">
@@ -140,8 +132,7 @@ export function BenefitsSection() {
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0" style={{
             backgroundImag, e: `radial-gradient(circle at 75% 75%, currentColo, r, 1p, x, transparent 1p, x)`,
-            backgroundSiz, e: '60px 60px',
-        }}/>
+            backgroundSiz, e: '60px 60px'}}/>
       </div>
       
       {/* Floating decorative elements */}

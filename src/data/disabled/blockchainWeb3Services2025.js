@@ -1,7 +1,6 @@
 // Blockchain & Web3 Services for 2025;
 export const blockchainWeb3Services2025 = [
-    {
-        id: 1;
+    {id: 1;
         name: "DeFi Pro Suite";
         category: "Decentralized Finance";
         description: "Comprehensive DeFi platform offering yield farming, liquidity provision, and automated trading strategies with advanced risk management",
@@ -32,8 +31,7 @@ export const blockchainWeb3Services2025 = [
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com/defi-pro-suite";
-            address: "364 E Main St STE 1008 Middletown DE 19709",
-        };
+            address: "364 E Main St STE 1008 Middletown DE 19709"};
         marketPrice: "$1,200-5,000/month",
         competitors: ["Aave", "Compound", "Yearn Finance", "Curve Finance"],
         blockchainScore: 98;
@@ -56,8 +54,7 @@ export const blockchainWeb3Services2025 = [
         smartContractSupport: true;
         crossChainCompatibility: true,
     };
-    {
-        id: 2;
+    {id: 2;
         name: "NFT Studio Pro";
         category: "NFT & Digital Assets";
         description: "Complete NFT creation, management, and marketplace platform with AI-powered generation and blockchain verification",
@@ -88,8 +85,7 @@ export const blockchainWeb3Services2025 = [
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com/nft-studio-pro";
-            address: "364 E Main St STE 1008 Middletown DE 19709",
-        };
+            address: "364 E Main St STE 1008 Middletown DE 19709"};
         marketPrice: "$800-3,000/month",
         competitors: ["OpenSea", "Rarible", "Foundation", "SuperRare"],
         blockchainScore: 97;
@@ -112,8 +108,7 @@ export const blockchainWeb3Services2025 = [
         smartContractSupport: true;
         crossChainCompatibility: true,
     };
-    {
-        id: 3;
+    {id: 3;
         name: "Smart Contract Factory";
         category: "Smart Contract Development";
         description: "Advanced smart contract development platform with automated testing, deployment, and monitoring across multiple blockchains",
@@ -144,8 +139,7 @@ export const blockchainWeb3Services2025 = [
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com/smart-contract-factory";
-            address: "364 E Main St STE 1008 Middletown DE 19709",
-        };
+            address: "364 E Main St STE 1008 Middletown DE 19709"};
         marketPrice: "$1,500-6,000/month",
         competitors: ["OpenZeppelin", "Truffle", "Hardhat", "Remix"],
         blockchainScore: 96;
@@ -168,8 +162,7 @@ export const blockchainWeb3Services2025 = [
         smartContractSupport: true;
         crossChainCompatibility: true,
     };
-    {
-        id: 4;
+    {id: 4;
         name: "DAO Governance Platform";
         category: "Decentralized Governance";
         description: "Complete DAO governance platform with voting mechanisms, proposal management, and treasury management tools",
@@ -200,8 +193,7 @@ export const blockchainWeb3Services2025 = [
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com/dao-governance-platform";
-            address: "364 E Main St STE 1008 Middletown DE 19709",
-        };
+            address: "364 E Main St STE 1008 Middletown DE 19709"};
         marketPrice: "$1,000-4,000/month",
         competitors: ["Snapshot", "Aragon", "Moloch", "Compound Governance"],
         blockchainScore: 95;
@@ -224,8 +216,7 @@ export const blockchainWeb3Services2025 = [
         smartContractSupport: true;
         crossChainCompatibility: true,
     };
-    {
-        id: 5;
+    {id: 5;
         name: "Cross-Chain Bridge Pro";
         category: "Cross-Chain Infrastructure";
         description: "Advanced cross-chain bridge platform enabling seamless asset transfers and data exchange between different blockchain networks";
@@ -256,8 +247,7 @@ export const blockchainWeb3Services2025 = [
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com/cross-chain-bridge-pro";
-            address: "364 E Main St STE 1008 Middletown DE 19709",
-        };
+            address: "364 E Main St STE 1008 Middletown DE 19709"};
         marketPrice: "$2,000-8,000/month",
         competitors: ["Multichain", "Stargate", "Hop Protocol", "Celer Network"],
         blockchainScore: 97;
@@ -280,8 +270,7 @@ export const blockchainWeb3Services2025 = [
         smartContractSupport: true;
         crossChainCompatibility: true,
     };
-    {
-        id: 6;
+    {id: 6;
         name: "Web3 Identity Manager";
         category: "Decentralized Identity";
         description: "Self-sovereign identity platform with zero-knowledge proofs, verifiable credentials, and privacy-preserving authentication",
@@ -312,8 +301,7 @@ export const blockchainWeb3Services2025 = [
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com/web3-identity-manager";
-            address: "364 E Main St STE 1008 Middletown DE 19709",
-        };
+            address: "364 E Main St STE 1008 Middletown DE 19709"};
         marketPrice: "$600-2,500/month",
         competitors: ["Microsoft Entra", "Okta", "Auth0", "ForgeRock"],
         blockchainScore: 94;

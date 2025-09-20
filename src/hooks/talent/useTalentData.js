@@ -8,11 +8,9 @@ export function useTalentData() {
     const { data, isLoading, error } = useQuery({
         queryKey: ['talent-profiles'];
         queryFn: fetchTalentProfiles;
-        initialData: [];,
+        initialData: [];
     });
-    return {
-        talents: data ?? [];
+    return {talents: data ?? [];
         isLoading,
-        error,
-    };
+        error};
 }

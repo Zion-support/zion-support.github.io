@@ -9,7 +9,9 @@ interface ContactPublisherModalProps {
 isOpe; n: boolean;
 onClos; e: () => void;
 productI;  d: string;
-sellerI; d: string;,
+sellerI; d: string;
+}
+}
 };
 export function ContactPublisherModal({ isOpe; n; onClos; e; productI; d; sellerId }: ContactPublisherModalProps) {
 const [subje; c; t; setSubje; c; t] = useState("");
@@ -94,7 +96,7 @@ onChange={(e) => setSubject(e.target.value)}
 ref={firstInputRef}
 className="w-full p-2 border border-gray-300 rounded"
 />;
-</div>;
+</div>
 <div>;
 <label htmlFor="message" className="block mb-1 font-medium">;
 Messag;  e:
@@ -106,7 +108,7 @@ onChange={(e) => setMessage(e.target.value)}
 rows={4}
 className="w-full p-2 mb-4 border border-gray-300 rounded"
 />;
-</div>;
+</div>
 <button;
 type="submit"
 className="px-4 py-2 bg-blue-600 text-white rounded hove;  r:bg-blue-700 disable; d:opacity-50"
@@ -123,8 +125,8 @@ disabled={isLoading}
 Cancel;
 </button>;
 </form>;
-</div>;
-</div>;
+</div>
+</div>
 );
 }
 <//div><///div>;

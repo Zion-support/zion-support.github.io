@@ -1,7 +1,6 @@
 export const EXPANDED_MICRO_SAAS_SERVICES_2025 = [
     // AI-Powered Financial Compliance Automation;
-    {
-        id: "ai-financial-compliance-automation-2025";
+    {id: "ai-financial-compliance-automation-2025";
         title: "AI Financial Compliance Automation Platform";
         description: "Intelligent financial compliance automation that continuously monitors regulatory changes, automates reporting, and ensures real-time compliance across all financial operations.",
         category: "AI & Financial Services";
@@ -52,8 +51,7 @@ export const EXPANDED_MICRO_SAAS_SERVICES_2025 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         websiteUrl: "https://ziontechgroup.com/ai-financial-compliance-automation-2025";
         technologyStack: ["GPT-5", "Claude 3.5 Sonnet", "Regulatory APIs", "Machine Learning", "Blockchain"],
         complianceStandards: ["SOX", "Basel III", "Dodd-Frank", "GDPR", "PCI DSS", "SOC2"],
@@ -62,8 +60,7 @@ export const EXPANDED_MICRO_SAAS_SERVICES_2025 = [
         competitiveAdvantages: ["Real-time compliance", "AI-powered automation", "Multi-jurisdiction support", "Regulatory intelligence"]
     },
     // Quantum-Resistant Blockchain Identity Platform;
-    {
-        id: "quantum-resistant-blockchain-identity-2025";
+    {id: "quantum-resistant-blockchain-identity-2025";
         title: "Quantum-Resistant Blockchain Identity Platform";
         description: "Next-generation digital identity platform using quantum-resistant cryptography and blockchain technology for secure, decentralized identity management and verification.",
         category: "Blockchain & Identity";
@@ -114,8 +111,7 @@ export const EXPANDED_MICRO_SAAS_SERVICES_2025 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         websiteUrl: "https://ziontechgroup.com/quantum-resistant-blockchain-identity-2025";
         technologyStack: ["Quantum-Resistant Algorithms", "Blockchain", "Zero-Knowledge Proofs", "Cryptography", "Smart Contracts"],
         complianceStandards: ["eIDAS", "GDPR", "SOC2", "ISO 27001", "NIST", "W3C DID"],
@@ -124,8 +120,7 @@ export const EXPANDED_MICRO_SAAS_SERVICES_2025 = [
         competitiveAdvantages: ["Quantum-resistant security", "Decentralized architecture", "Privacy-preserving", "Future-proof technology"]
     },
     // AI-Powered Supply Chain Optimization;
-    {
-        id: "ai-supply-chain-optimization-2025";
+    {id: "ai-supply-chain-optimization-2025";
         title: "AI Supply Chain Optimization Platform";
         description: "Intelligent supply chain optimization platform that uses AI to predict demand, optimize inventory, reduce costs, and improve supply chain resilience.",
         category: "AI & Supply Chain";
@@ -176,8 +171,7 @@ export const EXPANDED_MICRO_SAAS_SERVICES_2025 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         websiteUrl: "https://ziontechgroup.com/ai-supply-chain-optimization-2025";
         technologyStack: ["Machine Learning", "Predictive Analytics", "IoT Sensors", "Cloud Computing", "Big Data Analytics"],
         complianceStandards: ["ISO 28000", "C-TPAT", "GDPR", "SOC2", "ISO 9001"],
@@ -186,8 +180,7 @@ export const EXPANDED_MICRO_SAAS_SERVICES_2025 = [
         competitiveAdvantages: ["AI-powered optimization", "Real-time monitoring", "Predictive analytics", "Multi-tier visibility"]
     },
     // Edge Computing AI Platform;
-    {
-        id: "edge-computing-ai-platform-2025";
+    {id: "edge-computing-ai-platform-2025";
         title: "Edge Computing AI Platform";
         description: "Distributed AI platform that brings machine learning capabilities to edge devices, enabling real-time AI processing without cloud dependency.",
         category: "AI & Edge Computing";
@@ -238,8 +231,7 @@ export const EXPANDED_MICRO_SAAS_SERVICES_2025 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         websiteUrl: "https://ziontechgroup.com/edge-computing-ai-platform-2025";
         technologyStack: ["TensorFlow Lite", "ONNX Runtime", "Edge ML Frameworks", "Container Technology", "Kubernetes"],
         complianceStandards: ["ISO 27001", "SOC2", "GDPR", "HIPAA", "NIST"],
@@ -248,8 +240,7 @@ export const EXPANDED_MICRO_SAAS_SERVICES_2025 = [
         competitiveAdvantages: ["Real-time edge processing", "Offline AI capabilities", "Distributed architecture", "Low latency"]
     },
     // AI-Powered Legal Document Analysis;
-    {
-        id: "ai-legal-document-analysis-2025";
+    {id: "ai-legal-document-analysis-2025";
         title: "AI Legal Document Analysis Platform";
         description: "Intelligent legal document analysis platform that uses AI to review contracts, identify risks, extract key terms, and provide legal insights.",
         category: "AI & Legal Tech";
@@ -300,8 +291,7 @@ export const EXPANDED_MICRO_SAAS_SERVICES_2025 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         websiteUrl: "https://ziontechgroup.com/ai-legal-document-analysis-2025";
         technologyStack: ["Natural Language Processing", "Machine Learning", "Document AI", "Legal Databases", "Cloud Computing"],
         complianceStandards: ["GDPR", "SOC2", "ISO 27001", "Legal Industry Standards", "Data Privacy"],
@@ -310,8 +300,7 @@ export const EXPANDED_MICRO_SAAS_SERVICES_2025 = [
         competitiveAdvantages: ["AI-powered analysis", "Legal expertise", "Risk scoring", "Compliance automation"]
     },
     // Quantum Machine Learning Platform;
-    {
-        id: "quantum-machine-learning-platform-2025";
+    {id: "quantum-machine-learning-platform-2025";
         title: "Quantum Machine Learning Platform";
         description: "Revolutionary quantum machine learning platform that leverages quantum computing to solve complex optimization problems and accelerate AI training.";
         category: "Quantum Computing & AI";
@@ -362,8 +351,7 @@ export const EXPANDED_MICRO_SAAS_SERVICES_2025 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         websiteUrl: "https://ziontechgroup.com/quantum-machine-learning-platform-2025";
         technologyStack: ["Quantum Computing", "Qiskit", "Cirq", "PennyLane", "Classical ML Frameworks"],
         complianceStandards: ["ISO 27001", "SOC2", "Research Standards", "Data Security", "Intellectual Property"],
@@ -372,8 +360,7 @@ export const EXPANDED_MICRO_SAAS_SERVICES_2025 = [
         competitiveAdvantages: ["Quantum advantage", "Cutting-edge technology", "Research leadership", "Future-proof investment"]
     },
     // AI-Powered Healthcare Diagnostics;
-    {
-        id: "ai-healthcare-diagnostics-2025";
+    {id: "ai-healthcare-diagnostics-2025";
         title: "AI Healthcare Diagnostics Platform";
         description: "Advanced AI-powered healthcare diagnostics platform that provides accurate disease detection, treatment recommendations, and patient monitoring.",
         category: "AI & Healthcare";
@@ -424,8 +411,7 @@ export const EXPANDED_MICRO_SAAS_SERVICES_2025 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         websiteUrl: "https://ziontechgroup.com/ai-healthcare-diagnostics-2025";
         technologyStack: ["Deep Learning", "Computer Vision", "Natural Language Processing", "Medical AI Models", "Cloud Computing"],
         complianceStandards: ["HIPAA", "FDA", "CE Mark", "ISO 13485", "SOC2", "GDPR"],
@@ -434,8 +420,7 @@ export const EXPANDED_MICRO_SAAS_SERVICES_2025 = [
         competitiveAdvantages: ["FDA-approved algorithms", "Clinical validation", "Multi-modality support", "Real-time processing"]
     },
     // Autonomous Cybersecurity Operations;
-    {
-        id: "autonomous-cybersecurity-operations-2025";
+    {id: "autonomous-cybersecurity-operations-2025";
         title: "Autonomous Cybersecurity Operations Platform";
         description: "Fully autonomous cybersecurity operations platform that continuously monitors, detects, and responds to threats without human intervention.",
         category: "Cybersecurity & AI";
@@ -486,8 +471,7 @@ export const EXPANDED_MICRO_SAAS_SERVICES_2025 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         websiteUrl: "https://ziontechgroup.com/autonomous-cybersecurity-operations-2025";
         technologyStack: ["AI/ML", "Threat Intelligence", "Security Orchestration", "Behavioral Analytics", "Cloud Security"],
         complianceStandards: ["SOC2", "ISO 27001", "NIST", "GDPR", "HIPAA", "PCI DSS"],
@@ -496,8 +480,7 @@ export const EXPANDED_MICRO_SAAS_SERVICES_2025 = [
         competitiveAdvantages: ["Fully autonomous", "Zero human error", "24/7 protection", "Proactive defense"]
     },
     // AI-Powered Marketing Automation;
-    {
-        id: "ai-marketing-automation-2025";
+    {id: "ai-marketing-automation-2025";
         title: "AI Marketing Automation Platform";
         description: "Intelligent marketing automation platform that uses AI to personalize campaigns, optimize customer journeys, and maximize marketing ROI.",
         category: "AI & Marketing";
@@ -548,8 +531,7 @@ export const EXPANDED_MICRO_SAAS_SERVICES_2025 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         websiteUrl: "https://ziontechgroup.com/ai-marketing-automation-2025";
         technologyStack: ["Machine Learning", "Predictive Analytics", "Marketing APIs", "CRM Integration", "Data Analytics"],
         complianceStandards: ["GDPR", "CCPA", "SOC2", "ISO 27001", "Marketing Compliance"],
@@ -558,8 +540,7 @@ export const EXPANDED_MICRO_SAAS_SERVICES_2025 = [
         competitiveAdvantages: ["AI personalization", "Predictive analytics", "Multi-channel orchestration", "Automated optimization"]
     },
     // Quantum-Secure Communication Platform;
-    {
-        id: "quantum-secure-communication-2025";
+    {id: "quantum-secure-communication-2025";
         title: "Quantum-Secure Communication Platform";
         description: "Future-proof communication platform using quantum key distribution and post-quantum cryptography for ultra-secure communications.";
         category: "Quantum & Communication";
@@ -610,8 +591,7 @@ export const EXPANDED_MICRO_SAAS_SERVICES_2025 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         websiteUrl: "https://ziontechgroup.com/quantum-secure-communication-2025";
         technologyStack: ["Quantum Key Distribution", "Post-Quantum Algorithms", "Encryption", "Secure Protocols", "Quantum Hardware"],
         complianceStandards: ["FIPS 140-2", "Common Criteria", "SOC2", "ISO 27001", "Government Standards"],

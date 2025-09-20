@@ -20,8 +20,7 @@ export const useAnalytics = (config = {}) => {
         };
     }, [enableTracking]);
     // Initialize user session;
-    const initializeSession = useCallback(() => {
-        const sessionId = generateSessionId();
+    const initializeSession = useCallback(() => {const sessionId = generateSessionId();
         sessionRef.current = sessionId;
         const session = {
             id: sessionId;
@@ -31,8 +30,7 @@ export const useAnalytics = (config = {}) => {
             interactions: 0;
             referrer: document.referrer;
             userAgent: navigator.userAgent;
-            deviceInfo: getDeviceInfo(),
-        };
+            deviceInfo: getDeviceInfo()};
     setCurrentSession(session);
         trackEvent('session', 'start', 'session_started');
     }, []);
@@ -86,8 +84,7 @@ export const useAnalytics = (config = {}) => {
         updateSessionActivity();
     }, [isTracking, currentSession]);
     // Track page view;
-    const trackPageView = useCallback(() => {
-        if (!isTracking || !currentSession)
+    const trackPageView = useCallback(() => {if (!isTracking || !currentSession)
             return;
         const event = {
             id: generateEventId();
@@ -100,16 +97,14 @@ export const useAnalytics = (config = {}) => {
             metadata: {
                 url: window.location.href;
                 title: document.title;
-                referrer: document.referrer,
-            }
+                referrer: document.referrer}
         };
     setEvents(prev => [...prev, event]);
         setCurrentSession(prev => prev ? { ...prev, pageViews: prev.pageViews + 1 } : null);
     updateSessionActivity();
     }, [isTracking, currentSession]);
     // Track performance metrics;
-    const trackPerformanceMetrics = useCallback(async () => {
-        if (!enablePerformanceTracking)
+    const trackPerformanceMetrics = useCallback(async () => {if (!enablePerformanceTracking)
             return;
         try {
             // Wait for performance metrics to be available;
@@ -123,8 +118,7 @@ export const useAnalytics = (config = {}) => {
                 firstContentfulPaint: paintEntries.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0;
                 largestContentfulPaint: 0, // Will be updated by LCP observer;
                 cumulativeLayoutShift: layoutShiftEntries.reduce((sum, entry) => sum + entry.value, 0),
-                firstInputDelay: 0 // Will be updated by FID observer,
-            };
+                firstInputDelay: 0 // Will be updated by FID observer};
     setPerformanceMetrics(metrics);
             trackEvent('performance', 'metrics_captured', 'performance_tracking', undefined, { metrics });
         }
@@ -141,14 +135,12 @@ export const useAnalytics = (config = {}) => {
             const className = target.className;
             const id = target.id;
             const text = target.textContent?.slice(0, 50);
-            trackEvent('interaction', 'click', `${tagName}_clicked`, undefined, {
-                tagName,
+            trackEvent('interaction', 'click', `${tagName}_clicked`, undefined, {tagName,
                 className,
                 id,
                 text,
                 x: event.clientX;
-                y: event.clientY,
-            });
+                y: event.clientY});
      };
         // Scroll tracking;
         let scrollTimeout;
@@ -181,8 +173,7 @@ export const useAnalytics = (config = {}) => {
         };
     }, []);
     // Setup heatmap tracking;
-    const setupHeatmapTracking = useCallback(() => {
-        if (!enableHeatmapTracking)
+    const setupHeatmapTracking = useCallback(() => {if (!enableHeatmapTracking)
             return;
         // Track mouse movements for heatmap;
         let moveTimeout;
@@ -192,8 +183,7 @@ export const useAnalytics = (config = {}) => {
                 trackEvent('heatmap', 'mouse_movement', 'mouse_position', undefined, {
                     x: event.clientX;
                     y: event.clientY;
-                    timestamp: Date.now(),
-                });
+                    timestamp: Date.now()});
      }, 100);
         };
         document.addEventListener('mousemove', handleMouseMove);
@@ -315,15 +305,11 @@ const getDeviceInfo = () => {
     if (/Mobile|Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent)) {
         deviceType = /iPad|Android(?=.*\bMobile\b)|Tablet/i.test(userAgent) ? 'tablet' : 'mobile';
     }
-    return {
-        type: deviceType;
+    return {type: deviceType;
         screen: {
             width: window.screen.width;
-            height: window.screen.height,
-        };
-        viewport: {
-            width: window.innerWidth;
-            height: window.innerHeight,
-        }
+            height: window.screen.height};
+        viewport: {width: window.innerWidth;
+            height: window.innerHeight}
     };
 };

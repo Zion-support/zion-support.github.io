@@ -1,6 +1,5 @@
 export const enhancedITInfrastructureServices2025 = [
-    {
-        id: 201;
+    {id: 201;
         name: "Zero-Trust Network Architecture";
         category: "Network Security";
         subcategory: "Zero-Trust Security";
@@ -32,8 +31,7 @@ export const enhancedITInfrastructureServices2025 = [
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com";
-            address: "364 E Main St STE 1008 Middletown DE 19709",
-        };
+            address: "364 E Main St STE 1008 Middletown DE 19709"};
         marketPrice: "$4,500/month (Industry average: $8,500/month)",
         competitors: ["Cisco", "Palo Alto Networks", "Fortinet", "Check Point"],
         roi: "400% ROI within 15 months";
@@ -43,8 +41,7 @@ export const enhancedITInfrastructureServices2025 = [
         support: "24/7 dedicated support team";
         certifications: ["CISSP", "CISM", "CCSP", "NIST", "ISO 27001"]
     },
-    {
-        id: 202;
+    {id: 202;
         name: "Hyperconverged Infrastructure Pro";
         category: "Infrastructure";
         subcategory: "Hyperconvergence";
@@ -76,8 +73,7 @@ export const enhancedITInfrastructureServices2025 = [
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com";
-            address: "364 E Main St STE 1008 Middletown DE 19709",
-        };
+            address: "364 E Main St STE 1008 Middletown DE 19709"};
         marketPrice: "$3,200/month (Industry average: $6,200/month)",
         competitors: ["Nutanix", "VMware vSAN", "HPE SimpliVity", "Dell EMC VxRail"],
         roi: "350% ROI within 12 months";
@@ -87,8 +83,7 @@ export const enhancedITInfrastructureServices2025 = [
         support: "24/7 technical support";
         certifications: ["VMware", "Microsoft", "Red Hat", "AWS", "Azure"]
     },
-    {
-        id: 203;
+    {id: 203;
         name: "5G Private Network Solutions";
         category: "Wireless Infrastructure";
         subcategory: "5G Networks";
@@ -120,8 +115,7 @@ export const enhancedITInfrastructureServices2025 = [
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com";
-            address: "364 E Main St STE 1008 Middletown DE 19709",
-        };
+            address: "364 E Main St STE 1008 Middletown DE 19709"};
         marketPrice: "$2,800/month (Industry average: $5,500/month)",
         competitors: ["Ericsson", "Nokia", "Huawei", "Cisco", "Samsung"],
         roi: "300% ROI within 18 months";
@@ -131,8 +125,7 @@ export const enhancedITInfrastructureServices2025 = [
         support: "24/7 network operations center";
         certifications: ["3GPP", "5G Americas", "GSMA", "IEEE"]
     },
-    {
-        id: 204;
+    {id: 204;
         name: "Quantum-Ready Data Center";
         category: "Data Center";
         subcategory: "Quantum Computing";
@@ -164,8 +157,7 @@ export const enhancedITInfrastructureServices2025 = [
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com";
-            address: "364 E Main St STE 1008 Middletown DE 19709",
-        };
+            address: "364 E Main St STE 1008 Middletown DE 19709"};
         marketPrice: "$5,500/month (Industry average: $10,000/month)",
         competitors: ["IBM Quantum", "Google Quantum", "Microsoft Quantum", "Amazon Braket"],
         roi: "500% ROI within 24 months";
@@ -175,8 +167,7 @@ export const enhancedITInfrastructureServices2025 = [
         support: "24/7 research support team";
         certifications: ["Quantum Computing", "Research", "Academic", "Government"]
     },
-    {
-        id: 205;
+    {id: 205;
         name: "Edge Computing Fabric";
         category: "Edge Computing";
         subcategory: "Distributed Infrastructure";
@@ -208,8 +199,7 @@ export const enhancedITInfrastructureServices2025 = [
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com";
-            address: "364 E Main St STE 1008 Middletown DE 19709",
-        };
+            address: "364 E Main St STE 1008 Middletown DE 19709"};
         marketPrice: "$2,400/month (Industry average: $4,800/month)",
         competitors: ["AWS Greengrass", "Azure IoT Edge", "Google Edge TPU", "Cisco Edge"],
         roi: "350% ROI within 10 months";
@@ -219,8 +209,7 @@ export const enhancedITInfrastructureServices2025 = [
         support: "24/7 edge operations support";
         certifications: ["Kubernetes", "Docker", "IoT", "Edge Computing"]
     },
-    {
-        id: 206;
+    {id: 206;
         name: "Sustainable Green Data Center";
         category: "Data Center";
         subcategory: "Sustainability";
@@ -252,8 +241,7 @@ export const enhancedITInfrastructureServices2025 = [
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com";
-            address: "364 E Main St STE 1008 Middletown DE 19709",
-        };
+            address: "364 E Main St STE 1008 Middletown DE 19709"};
         marketPrice: "$3,800/month (Industry average: $7,200/month)",
         competitors: ["Google Cloud", "Microsoft Azure", "AWS", "Equinix", "Digital Realty"],
         roi: "300% ROI within 15 months";
@@ -263,8 +251,7 @@ export const enhancedITInfrastructureServices2025 = [
         support: "24/7 green operations support";
         certifications: ["LEED", "Energy Star", "ISO 14001", "Green Building Council"]
     },
-    {
-        id: 207;
+    {id: 207;
         name: "AI-Powered IT Operations";
         category: "IT Operations";
         subcategory: "AI Operations";
@@ -296,8 +283,7 @@ export const enhancedITInfrastructureServices2025 = [
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com";
-            address: "364 E Main St STE 1008 Middletown DE 19709",
-        };
+            address: "364 E Main St STE 1008 Middletown DE 19709"};
         marketPrice: "$2,600/month (Industry average: $5,200/month)",
         competitors: ["ServiceNow", "BMC", "BMC Helix", "IBM Watson AIOps", "Splunk"],
         roi: "400% ROI within 12 months";
@@ -307,8 +293,7 @@ export const enhancedITInfrastructureServices2025 = [
         support: "24/7 AI operations support";
         certifications: ["ITIL", "ISO 20000", "AI Operations", "Machine Learning"]
     },
-    {
-        id: 208;
+    {id: 208;
         name: "Blockchain Infrastructure Platform";
         category: "Blockchain";
         subcategory: "Infrastructure";
@@ -340,8 +325,7 @@ export const enhancedITInfrastructureServices2025 = [
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com";
-            address: "364 E Main St STE 1008 Middletown DE 19709",
-        };
+            address: "364 E Main St STE 1008 Middletown DE 19709"};
         marketPrice: "$3,200/month (Industry average: $6,400/month)",
         competitors: ["IBM Blockchain", "Microsoft Azure Blockchain", "Amazon Managed Blockchain", "ConsenSys"],
         roi: "350% ROI within 15 months";
@@ -351,8 +335,7 @@ export const enhancedITInfrastructureServices2025 = [
         support: "24/7 blockchain support";
         certifications: ["Blockchain", "Smart Contracts", "Cryptocurrency", "Web3"]
     },
-    {
-        id: 209;
+    {id: 209;
         name: "IoT Infrastructure Management";
         category: "IoT";
         subcategory: "Infrastructure";
@@ -384,8 +367,7 @@ export const enhancedITInfrastructureServices2025 = [
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com";
-            address: "364 E Main St STE 1008 Middletown DE 19709",
-        };
+            address: "364 E Main St STE 1008 Middletown DE 19709"};
         marketPrice: "$1,800/month (Industry average: $3,600/month)",
         competitors: ["AWS IoT", "Azure IoT", "Google Cloud IoT", "IBM Watson IoT", "Cisco IoT"],
         roi: "300% ROI within 8 months";
@@ -395,8 +377,7 @@ export const enhancedITInfrastructureServices2025 = [
         support: "24/7 IoT support";
         certifications: ["IoT", "Edge Computing", "Device Management", "Data Analytics"]
     },
-    {
-        id: 210;
+    {id: 210;
         name: "Hybrid Cloud Orchestration";
         category: "Cloud Computing";
         subcategory: "Hybrid Cloud";
@@ -428,8 +409,7 @@ export const enhancedITInfrastructureServices2025 = [
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com";
-            address: "364 E Main St STE 1008 Middletown DE 19709",
-        };
+            address: "364 E Main St STE 1008 Middletown DE 19709"};
         marketPrice: "$2,900/month (Industry average: $5,800/month)",
         competitors: ["VMware Cloud", "Red Hat OpenShift", "HashiCorp", "CloudBolt", "RightScale"],
         roi: "350% ROI within 12 months";

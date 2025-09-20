@@ -1,13 +1,13 @@
 
 import React, { useMemo } from 'react';
-import { User,  } from 'lucide-react'
-import { Conversation,, ,  } from '@/types/messaging';
-import { ConversationItem,, ,  } from './ConversationItem';
-import { FixedSizeList,, as,, List,, ListChildComponentProps,  } from 'react-window';
+import { User } from "lucide-react";
+import { Conversation } from "@/types/messaging";
+import { ConversationItem } from "./ConversationItem";
+import { FixedSizeList, as, List, ListChildComponentProps } from "react-window";
 interface ConversationsListProps {
-  conversations: Conversation[];,
+  conversations: Conversation[];
 activeConversation: Conversation | null;
-  setActiveConversation: (conversation: Conversation) => void;,
+  setActiveConversation: (conversation: Conversation) => void;
 markAsRead: (conversationId: string) => Promise<void>
 export function ConversationsList({
 return (
@@ -24,7 +24,8 @@ return (
           </p>
         </div>
       ) : (
-        <List,
+}
+        <List}
 height={listHeight}
           itemCount={conversations.length}
           itemSize={itemSize}

@@ -1,10 +1,12 @@
-import { BadgeCheck,  } from 'lucide-react'
-import { Card,, CardContent,, CardHeader,, CardTitle,  } from "@/components/ui/card";
+import { BadgeCheck } from "lucide-react";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 export interface Achievement {
 achieved: boolean;
 }
+}
+}
 interface AchievementBadgesProps {
-  achievements: Achievement[]
+  achievements: Achievement[]}
 }
 export function AchievementBadges({ achievements }: AchievementBadgesProps) {
   return (
@@ -22,7 +24,7 @@ export function AchievementBadges({ achievements }: AchievementBadgesProps) {
               <p className='text-sm text-muted-foreground'>{a.description}</p>            </div>
               <p className="font-medium">{a.title}</p>
               <p className="text-sm text-muted-foreground">{a.description}</p>
-            <BadgeCheck,
+            <BadgeCheck
 className={`h-5 w-5 mt-1 ${a.achieved ? "text-green-600" : "text-muted-foreground"}`}
             />
             <div>

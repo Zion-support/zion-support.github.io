@@ -1,12 +1,12 @@
 
-import { useState,, useEffect,, ,  } from 'react';
-import { Card,, CardContent,, ,  } from '@/components/ui/card';
-import { Button,, ,  } from '@/components/ui/button';
-import { FilePlus,, Loader2,  } from 'lucide-react'
-import { ProjectCard,, ,  } from './ProjectCard';
-import { ProjectForm,, ,  } from './ProjectForm';
-import { PortfolioProject,, ,  } from '@/types/resume';
-import { usePortfolio,  } from '@/hooks/usePortfolio';
+import { useState, useEffect } from "react";
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { FilePlus, Loader2 } from "lucide-react";
+import { ProjectCard } from "./ProjectCard";
+import { ProjectForm } from "./ProjectForm";
+import { PortfolioProject } from "@/types/resume";
+import { usePortfolio } from "@/hooks/usePortfolio";
 export function PortfolioBuilder() {
 setEditingProject(null)
               }}
@@ -26,12 +26,11 @@ setEditingProject(null)
               project={project}
               onEdit={() => setEditingProject(project)}
               onDelete={handleDeleteProject}
-          {projects.map((project,) => (
-            <ProjectCard,
-key = {project.id,}
-              project = {project,}
-              onEdit = {(,) => setEditingProject(project),}
-              onDelete = {handleDeleteProject,}
+          {projects.map((project) => (<ProjectCard
+key = {project.id}
+              project = {project}
+              onEdit = {() => setEditingProject(project)}
+              onDelete = {handleDeleteProject}
             />
           ))}
         </div>
@@ -50,7 +49,7 @@ key = {project.id,}
                   Add your best work to showcase your skills and experience to,
 potential employers.
                 </p>
-                <Button,
+                <Button
 onClick={() => setShowAddProject(true)}
                   className='mt-2'                >            <CardContent>
               <div className="flex flex-col items-center gap-4">
@@ -61,7 +60,7 @@ onClick={() => setShowAddProject(true)}
                 <p className="text-muted-foreground max-w-md mx-auto">
                   Add your best work to showcase your skills and experience to potential employers.
                 </p>
-                <Button,
+                <Button
 onClick={() => setShowAddProject(true)}
                   className="mt-2"
                 >

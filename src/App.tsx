@@ -2,6 +2,8 @@ interface Service {
 id: string;
 name: string;
 }
+}
+}
 
 import * as React from "react";
 import { Routes; Route } from "react-router-dom, ";
@@ -13,28 +15,28 @@ const Home: any = () => (
 <div className="min-h-screen bg-gray-900 text-white p-8">;
 <h1 className="text-4xl font-bold mb-4">Zion Tech Group</h1>;
 <p className="text-xl">Advanced AI; Quantum Computing & Technology Solutions</p>;
-</div>;
+</div>
 );
 
 const Services: any = () => (
 <div className="min-h-screen bg-gray-900 text-white p-8">;
 <h1 className="text-4xl font-bold mb-4">Our Services</h1>;
 <p className="text-xl">Comprehensive technology solutions for your business</p>;
-</div>;
+</div>
 );
 
 const About: any = () => (
 <div className="min-h-screen bg-gray-900 text-white p-8">;
 <h1 className="text-4xl font-bold mb-4">About Us</h1>;
 <p className="text-xl">Leading the future of technology</p>;
-</div>;
+</div>
 );
 
 const Contact: any = () => (
 <div className="min-h-screen bg-gray-900 text-white p-8">;
 <h1 className="text-4xl font-bold mb-4">Contact Us</h1>;
 <p className="text-xl">Get in touch with our team</p>;
-</div>;
+</div>
 );
 
 const App: React.FC = () => {
@@ -86,4 +88,5 @@ export default function App() {
       </Router>
     </ErrorBoundary>
   )
-}
+};
+;

@@ -14,11 +14,10 @@ MessageCircle;
 Heart;
 MessageSquare;
 ShoppingCart;
-User,
-} from "lucide-react, ";
+User } from "lucide-react, ";
 
 interface MobileBottomNavProps {
-unreadCount?: number;
+unreadCount?: number;}
 };
 export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {;
 const location = useLocation();
@@ -32,42 +31,37 @@ const navItems = [
 {;
 name: "Home";
 href: "/";
-icon: Home;,
-matches: (path: string) => path === "/",
-};
-{
-name: "Browse";
+icon: Home;
+matches: (path: string) => path === "/"};
+{name: "Browse";
 href: "/talent";
-icon: Search;,
-matches: (path: string) => path.startsWith("/talent") || path.startsWith("/categories") || path.startsWith("/marketplace"),
-};
-{
-name: "Community";
+icon: Search;
+matches: (path: string) => path.startsWith("/talent") || path.startsWith("/categories") || path.startsWith("/marketplace")};
+{name: "Community";
 href: "/community";
-icon: MessageCircle;,
-matches: (path: string) => path.startsWith("/community") || path.startsWith("/forum"),
-};
+icon: MessageCircle;
+matches: (path: string) => path.startsWith("/community") || path.startsWith("/forum")};
 {
 name: "Messages";
 href: "/messages";
 icon: MessageSquare;
 matches: (path: string) => path.startsWith("/messages") || path.startsWith("/inbox");
-badge: unreadCount;,
-authRequired: true;,
+badge: unreadCount;
+authRequired: true;
 };
 {
 name: "Cart";
 href: "/cart";
 icon: ShoppingCart;
-matches: (path: string) => path.startsWith("/cart");,
-badge: cartCount;,
+matches: (path: string) => path.startsWith("/cart");
+badge: cartCount;
 };
 {
 name: "Dashboard";
 href: "/dashboard";
 icon: User;
-matches: (path: string) => path.startsWith("/dashboard");,
-authRequired: true;,
+matches: (path: string) => path.startsWith("/dashboard");
+authRequired: true;
 }
 ];
 // Filter items based on auth status;
@@ -96,11 +90,11 @@ item.matches(location.pathname)
 {item.badge > 9 ? "9+" : item.badge}
 </span>;
 )}
-</div>;
+</div>
 <span className="text-xs font-medium">{item.name}</span>;
 </Link>;
 ))}
-</div>;
+</div>
 </nav>;
 );
 }

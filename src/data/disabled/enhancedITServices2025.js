@@ -1,7 +1,6 @@
 // Enhanced IT Services for 2025;
 export const enhancedITServices2025 = [
-    {
-        id: 1;
+    {id: 1;
         name: "Cloud Migration & Strategy";
         category: "Cloud Services";
         description: "Comprehensive cloud migration services with strategy planning, implementation, and optimization for modern businesses",
@@ -31,8 +30,7 @@ export const enhancedITServices2025 = [
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com/cloud-migration";
-            address: "364 E Main St STE 1008 Middletown DE 19709",
-        };
+            address: "364 E Main St STE 1008 Middletown DE 19709"};
         marketPrice: "$150-250/hour, $25K-100K per project",
         competitors: ["Accenture", "Deloitte", "AWS Professional Services"],
         responseTime: "4 hours";
@@ -55,8 +53,7 @@ export const enhancedITServices2025 = [
         monitoringTools: true;
         reportingCapabilities: true,
     };
-    {
-        id: 2;
+    {id: 2;
         name: "Cybersecurity Assessment & Implementation";
         category: "Cybersecurity";
         description: "Comprehensive cybersecurity services including assessment, implementation, and ongoing monitoring for enterprise security",
@@ -86,8 +83,7 @@ export const enhancedITServices2025 = [
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com/cybersecurity";
-            address: "364 E Main St STE 1008 Middletown DE 19709",
-        };
+            address: "364 E Main St STE 1008 Middletown DE 19709"};
         marketPrice: "$175-300/hour, $35K-150K per project",
         competitors: ["PwC", "KPMG", "Deloitte Cyber"],
         responseTime: "2 hours for critical issues";
@@ -110,8 +106,7 @@ export const enhancedITServices2025 = [
         monitoringTools: true;
         reportingCapabilities: true,
     };
-    {
-        id: 3;
+    {id: 3;
         name: "DevOps Implementation & Automation";
         category: "DevOps";
         description: "End-to-end DevOps implementation with CI/CD pipelines, automation, and infrastructure as code for modern development teams",
@@ -141,8 +136,7 @@ export const enhancedITServices2025 = [
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com/devops";
-            address: "364 E Main St STE 1008 Middletown DE 19709",
-        };
+            address: "364 E Main St STE 1008 Middletown DE 19709"};
         marketPrice: "$140-200/hour, $20K-80K per project",
         competitors: ["ThoughtWorks", "Red Hat", "Atlassian"],
         responseTime: "8 hours";
@@ -165,8 +159,7 @@ export const enhancedITServices2025 = [
         monitoringTools: true;
         reportingCapabilities: true,
     };
-    {
-        id: 4;
+    {id: 4;
         name: "Data Center Design & Implementation";
         category: "Infrastructure";
         description: "Comprehensive data center services including design, implementation, and management for enterprise-grade infrastructure",
@@ -196,8 +189,7 @@ export const enhancedITServices2025 = [
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com/data-center";
-            address: "364 E Main St STE 1008 Middletown DE 19709",
-        };
+            address: "364 E Main St STE 1008 Middletown DE 19709"};
         marketPrice: "$160-250/hour, $50K-500K per project",
         competitors: ["HPE", "Dell", "Cisco", "IBM"],
         responseTime: "4 hours";
@@ -220,8 +212,7 @@ export const enhancedITServices2025 = [
         monitoringTools: true;
         reportingCapabilities: true,
     };
-    {
-        id: 5;
+    {id: 5;
         name: "Network Security & Firewall Implementation";
         category: "Network Security";
         description: "Advanced network security services with next-generation firewall implementation and comprehensive security architecture";
@@ -251,8 +242,7 @@ export const enhancedITServices2025 = [
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com/network-security";
-            address: "364 E Main St STE 1008 Middletown DE 19709",
-        };
+            address: "364 E Main St STE 1008 Middletown DE 19709"};
         marketPrice: "$145-200/hour, $18K-75K per project",
         competitors: ["Cisco", "Palo Alto Networks", "Fortinet", "Check Point"],
         responseTime: "4 hours";
@@ -275,8 +265,7 @@ export const enhancedITServices2025 = [
         monitoringTools: true;
         reportingCapabilities: true,
     };
-    {
-        id: 6;
+    {id: 6;
         name: "Business Intelligence & Analytics Implementation";
         category: "Data & Analytics";
         description: "Comprehensive BI and analytics implementation with data warehousing, reporting, and advanced analytics capabilities",
@@ -306,8 +295,7 @@ export const enhancedITServices2025 = [
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com/bi-analytics";
-            address: "364 E Main St STE 1008 Middletown DE 19709",
-        };
+            address: "364 E Main St STE 1008 Middletown DE 19709"};
         marketPrice: "$155-225/hour, $30K-120K per project",
         competitors: ["Deloitte", "Accenture", "PwC", "Tableau Professional Services"],
         responseTime: "8 hours";
@@ -330,8 +318,7 @@ export const enhancedITServices2025 = [
         monitoringTools: true;
         reportingCapabilities: true,
     };
-    {
-        id: 7;
+    {id: 7;
         name: "Mobile App Development & Integration";
         category: "Mobile Development";
         description: "End-to-end mobile application development with native and cross-platform solutions for iOS and Android";
@@ -361,8 +348,7 @@ export const enhancedITServices2025 = [
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com/mobile-development";
-            address: "364 E Main St STE 1008 Middletown DE 19709",
-        };
+            address: "364 E Main St STE 1008 Middletown DE 19709"};
         marketPrice: "$120-180/hour, $15K-100K per project",
         competitors: ["Appinventiv", "Fueled", "Y Media Labs", "Dom & Tom"],
         responseTime: "24 hours";
@@ -385,8 +371,7 @@ export const enhancedITServices2025 = [
         monitoringTools: true;
         reportingCapabilities: true,
     };
-    {
-        id: 8;
+    {id: 8;
         name: "IT Consulting & Digital Transformation";
         category: "Consulting";
         description: "Strategic IT consulting services for digital transformation, technology assessment, and strategic planning",
@@ -416,8 +401,7 @@ export const enhancedITServices2025 = [
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com/it-consulting";
-            address: "364 E Main St STE 1008 Middletown DE 19709",
-        };
+            address: "364 E Main St STE 1008 Middletown DE 19709"};
         marketPrice: "$200-300/hour, $40K-200K per project",
         competitors: ["McKinsey", "BCG", "Bain", "Deloitte Digital"],
         responseTime: "24 hours";
@@ -440,8 +424,7 @@ export const enhancedITServices2025 = [
         monitoringTools: false;
         reportingCapabilities: true,
     };
-    {
-        id: 9;
+    {id: 9;
         name: "Managed IT Services & Support";
         category: "Managed Services";
         description: "Comprehensive managed IT services including 24/7 monitoring, support, and proactive maintenance for businesses",
@@ -471,8 +454,7 @@ export const enhancedITServices2025 = [
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com/managed-services";
-            address: "364 E Main St STE 1008 Middletown DE 19709",
-        };
+            address: "364 E Main St STE 1008 Middletown DE 19709"};
         marketPrice: "$85-150/hour, $12K-60K per month",
         competitors: ["Datto", "ConnectWise", "Kaseya", "SolarWinds"],
         responseTime: "1 hour for critical issues";
@@ -495,8 +477,7 @@ export const enhancedITServices2025 = [
         monitoringTools: true;
         reportingCapabilities: true,
     };
-    {
-        id: 10;
+    {id: 10;
         name: "Web Application Development & Hosting";
         category: "Web Development";
         description: "Full-stack web application development with modern technologies and enterprise-grade hosting solutions";
@@ -526,8 +507,7 @@ export const enhancedITServices2025 = [
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com/web-development";
-            address: "364 E Main St STE 1008 Middletown DE 19709",
-        };
+            address: "364 E Main St STE 1008 Middletown DE 19709"};
         marketPrice: "$110-170/hour, $18K-80K per project",
         competitors: ["Toptal", "Upwork", "Freelancer", "Agency rates"],
         responseTime: "24 hours";

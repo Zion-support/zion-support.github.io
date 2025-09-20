@@ -1,7 +1,7 @@
-import { ShieldAlert,  } from 'lucide-react'
+import { ShieldAlert } from "lucide-react";
   DialogDescription} from "@/components/ui/dialog"
-import { DisputeForm,  } from "./DisputeForm"
-import { useRouter,  } from 'next/router'
+import { DisputeForm } from "./DisputeForm";
+import { useRouter } from "next/router";
 interface RaiseDisputeButtonProps {
   projectId: string;
   milestoneId?: string;
@@ -10,7 +10,8 @@ interface RaiseDisputeButtonProps {
   className?: string,
 return (
     <>
-      <Button,
+}
+      <Button}
 variant={variant}
         size={size}
         className={className}
@@ -27,13 +28,13 @@ variant={variant}
 this project.
             </DialogDescription>
           </DialogHeader>
-          <DisputeForm,
+          <DisputeForm
 projectId={projectId}
             milestoneId={milestoneId}
             onDisputeCreated={handleDisputeCreated}
             onCancel={() => setIsDialogOpen(false)}          />
         </DialogContent>
       </Dialog>
-    </>
+</>
   )
 }

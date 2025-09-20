@@ -1,14 +1,13 @@
 
 import React from "react";
 import {
-return (
-    <div className="space-y-6">
+return (<div className="space-y-6">
       <div className="flex items-center justify-between">
         <h3 className="text-xl font-medium">Recent Team Activity</h3>
         <div className="flex items-center gap-2">
           <div className="relative">
             <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground" />
-            <Input,
+            <Input
 type="search"
               placeholder="Search activities..."
               className="w-[200px] md:w-[300px] pl-9"
@@ -31,7 +30,7 @@ type="search"
             </TableRow>
           </TableHeader>
           <TableBody>
-            {activities.map((activity,) => (
+            {activities.map((activity) => (
               <TableRow key={activity.id}>
                 <TableCell className="font-medium">{activity.user}</TableCell>
                 <TableCell>{activity.action}</TableCell>
@@ -60,11 +59,9 @@ type="search"
       </div>
     </div>
   )
-}
-const getCategoryBadge = (category: string) => {
+};
+const getCategoryBadge = (category: string) => {;
 };"
-  activities.map ( (activity) => (<TableRow key= {
-  activity.id,
-}> </TableCell> </TableRow>) ) "
+  activities.map ( (activity) => (<TableRow key= {activity.id}> </TableCell> </TableRow>) ) "
 }</TableBody> </Table> </div> <div className="flex items-center justify-between" > <Button variant="outline" size="sm" > Previous </Button> <div className="text-sm text-muted-foreground" > Page 1 of 10 </div> <Button variant="outline" size="sm" > Next </Button> </div> </div>)
 }"}

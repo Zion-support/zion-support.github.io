@@ -2,27 +2,29 @@ interface Service {
 id: string;
 name: string;
 }
+}
+}
 
-import React from "react",
+import React from "react";
 const ListingScoreCard: React.FC = () => {
 ,
 return (,
 <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">,
-<h3 className="text-xl font-bold mb-4">ListingScoreCard</h3>,
+<h3 className = "text-xl font-bold mb-4">ListingScoreCard</h3>;
 <p className="text-gray-300">Revolutionary technology component</p>;
 },
 </div>)},
 export default ListingScoreCard,;<//div><///div>
-import { cn,  } from "@/lib/utils",
-import { Badge,  } from "@/components/ui/badge";
-import { Button,  } from "@/components/ui/button";
-import { StarIcon,  } from 'lucide-react'
+import { cn } from "@/lib/utils";,
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { StarIcon } from "lucide-react";
 import Image from 'next/image'; // Import next/image,
 import React, { useState } from 'react'; // Import useStateimport Image from 'next/image'; // Import next/image,
 import React, { useState } from 'react'; // Import useState,
-import { Star,  } from 'lucide-react'
+import { Star } from "lucide-react";
 interface ListingScoreCardProps {
-  title: string;,
+  title: string;
 description: string;
   image?: string;
   category: string;
@@ -32,7 +34,8 @@ description: string;
   aiScore?: number;
   rating?: number;
   reviewCount?: number;
-  className?: string
+}
+  className?: string}
               ))}
             </div>
             <span className='text-sm text-zion-slate-light ml-1'>
@@ -43,7 +46,7 @@ description: string;
         {tags && tags.length > 0 && (
           <div className='flex flex-wrap gap-2 mb-4'>
             {tags.map((tag i) => (
-              <Badge,
+              <Badge
 key={i}
                 variant='outline'
                 className='border-zion-slate-dark text-zion-slate-light'
@@ -61,7 +64,7 @@ key={i}
               <div className='relative h-8 w-8 rounded-full mr-2 overflow-hidden'>
                 {' '}
                 {/* Added relative and overflow-hidden */}
-                <Image,
+                <Image
 src={authorImage}
                   alt={author}
                   className='object-cover rounded-full'

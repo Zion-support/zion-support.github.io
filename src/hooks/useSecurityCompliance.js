@@ -1,29 +1,24 @@
 import { useState, useEffect, useCallback, useRef } from 'react, ';
 import { useAnalytics } from './useAnalytics, ';
 export const useSecurityCompliance = (_initialConfig) => {
-    const { trackEvent } = useAnalytics({
-        enableTracking: true;
-        enableUserBehaviorTracking: true,
-    });
+    const { trackEvent } = useAnalytics({enableTracking: true;
+        enableUserBehaviorTracking: true});
     const [securityEvents, setSecurityEvents] = useState([]);
     const [complianceRules, setComplianceRules] = useState([]);
-    const [securityMetrics, setSecurityMetrics] = useState({
-        totalEvents: 0;
+    const [securityMetrics, setSecurityMetrics] = useState({totalEvents: 0;
         criticalEvents: 0;
         highSeverityEvents: 0;
         complianceScore: 100;
         threatLevel: 'low';
         averageResponseTime: 0;
-        falsePositiveRate: 0,
-    });
+        falsePositiveRate: 0});
     const [isMonitoring, setIsMonitoring] = useState(false);
     const [isComplianceChecking, setIsComplianceChecking] = useState(false);
     const monitoringIntervalRef = useRef();
     const complianceCheckIntervalRef = useRef();
     // Default compliance rules;
     const defaultComplianceRules = [
-        {
-            id: 'gdpr-data-protection';
+        {id: 'gdpr-data-protection';
             name: 'GDPR Data Protection';
             category: 'gdpr';
             description: 'Ensure personal data is processed lawfully and securely';
@@ -37,10 +32,8 @@ export const useSecurityCompliance = (_initialConfig) => {
                 'Storage limitation',
                 'Security measures'
             ],
-            violations: [],
-        };
-        {
-            id: 'sox-financial-controls';
+            violations: []};
+        {id: 'sox-financial-controls';
             name: 'SOX Financial Controls';
             category: 'sox';
             description: 'Maintain internal controls over financial reporting';
@@ -54,10 +47,8 @@ export const useSecurityCompliance = (_initialConfig) => {
                 'Audit logging',
                 'Backup procedures'
             ],
-            violations: [],
-        };
-        {
-            id: 'hipaa-privacy-security';
+            violations: []};
+        {id: 'hipaa-privacy-security';
             name: 'HIPAA Privacy & Security';
             category: 'hipaa';
             description: 'Protect health information privacy and security';
@@ -71,8 +62,7 @@ export const useSecurityCompliance = (_initialConfig) => {
                 'Business associate agreements',
                 'Workforce training'
             ],
-            violations: [],
-        }
+            violations: []}
     ];
     // Initialize with default rules;
     useEffect(() => {
@@ -126,12 +116,10 @@ export const useSecurityCompliance = (_initialConfig) => {
     setSecurityEvents(prev => [newEvent, ...prev]);
         trackEvent('security', 'event', 'created', undefined, { eventType: event.type, severity: event.severity });
     // Update metrics;
-        setSecurityMetrics(prev => ({
-            ...prev,
+        setSecurityMetrics(prev => ({...prev,
             totalEvents: prev.totalEvents + 1;
             criticalEvents: prev.criticalEvents + (event.severity === 'critical' ? 1 : 0);
-            highSeverityEvents: prev.highSeverityEvents + (event.severity === 'high' ? 1 : 0),
-        }));
+            highSeverityEvents: prev.highSeverityEvents + (event.severity === 'high' ? 1 : 0)}));
     // Check if thresholds are exceeded;
         if (event.severity === 'critical' || event.severity === 'high') {
             trackEvent('security', 'alert', 'threshold_exceeded', undefined, { severity: event.severity });
@@ -187,10 +175,8 @@ export const useSecurityCompliance = (_initialConfig) => {
             const compliantRules = complianceRules.filter(rule => rule.status === 'compliant').length;
             const totalRules = complianceRules.length;
             const newScore = totalRules > 0 ? Math.round((compliantRules / totalRules) * 100) : 100;
-            setSecurityMetrics(prev => ({
-                ...prev,
-                complianceScore: newScore,
-            }));
+            setSecurityMetrics(prev => ({...prev,
+                complianceScore: newScore}));
     trackEvent('compliance', 'check', 'completed', undefined, { score: newScore });
      }
         catch (error) {
@@ -201,16 +187,14 @@ export const useSecurityCompliance = (_initialConfig) => {
         }
     }, [securityEvents, complianceRules, trackEvent]);
     // Generate security report;
-    const generateSecurityReport = useCallback(() => {
-        const report = {
+    const generateSecurityReport = useCallback(() => {const report = {
             timestamp: new Date().toISOString();
             metrics: securityMetrics;
             recentEvents: securityEvents.slice(0, 10),
             complianceStatus: complianceRules.map(rule => ({
                 name: rule.name;
                 status: rule.status;
-                violations: rule.violations.length,
-            }));
+                violations: rule.violations.length}));
             recommendations: [],
         };
     // Generate recommendations;
@@ -227,8 +211,7 @@ export const useSecurityCompliance = (_initialConfig) => {
         return JSON.stringify(report, null, 2);
     }, [securityMetrics, securityEvents, complianceRules, trackEvent]);
     // Export audit log;
-    const exportAuditLog = useCallback(() => {
-        const auditLog = {
+    const exportAuditLog = useCallback(() => {const auditLog = {
             exportTimestamp: new Date().toISOString();
             totalEvents: securityEvents.length;
             events: securityEvents.map(event => ({
@@ -241,8 +224,7 @@ export const useSecurityCompliance = (_initialConfig) => {
                 resource: event.resource;
                 action: event.action;
                 details: event.details;
-                status: event.status,
-            }))
+                status: event.status}))
         };
     trackEvent('security', 'audit', 'exported');
         return JSON.stringify(auditLog, null, 2);

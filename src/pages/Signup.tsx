@@ -1,16 +1,16 @@
-import { useState,, useEffect,, ,  } from 'react';
-import { useRouter,  } from 'next/router', // Changed from react-router-dom,
-import { useFormik,, ,  } from 'formik';
-import * as Yup from 'yup',
-import axios from 'axios',
+import { useState, useEffect } from "react";
+import { useRouter } from "next/router";, // Changed from react-router-dom,
+import { useFormik } from "formik";
+import * as Yup from 'yup',;
+import axios from 'axios',;
 import Link from 'next/link';
-import { Input,, ,  } from '@/components/ui/input';
-import { Button,, ,  } from '@/components/ui/button';
-import { LoadingSpinner,, ,  } from '@/components/ui/enhanced-loading-states';
-import { Alert,, AlertDescription,, ,  } from '@/components/ui/alert';
-import { PasswordStrengthMeter,, ,  } from '@/components/PasswordStrengthMeter';
-import { AuthButtons,, ,  } from '@/components/AuthButtons';
-import { AlertCircle,, CheckCircle,, Mail,  } from 'lucide-react'
+import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
+import { LoadingSpinner } from "@/components/ui/enhanced-loading-states";
+import { Alert, AlertDescription } from "@/components/ui/alert";
+import { PasswordStrengthMeter } from "@/components/PasswordStrengthMeter";
+import { AuthButtons } from "@/components/AuthButtons";
+import { AlertCircle, CheckCircle, Mail } from "lucide-react";
           </form>
           {!emailVerificationRequired && (
             <div className='mt-6'>
@@ -44,12 +44,8 @@ request: err.request ? 'Request made but no response': 'No request'
 }> {'
   healthCheckLoading ? 'Checking...': 'Retry'
 }</Button> </AlertDescription> </Alert>)
-}<AlertDescription> {
-  errorMessage,
-}</AlertDescription> </Alert>)
-}<AlertDescription> Before you can log in please click the verification link in the email we sent to <strong> {
-  formik.values.email,
-}</strong>. </AlertDescription> </Alert>) "
+}<AlertDescription> {errorMessage}</AlertDescription> </Alert>)
+}<AlertDescription> Before you can log in please click the verification link in the email we sent to <strong> {formik.values.email}</strong>. </AlertDescription> </Alert>) "
 }<div> <label htmlFor="name" className="block text-sm font-medium" > Full Name </label> <Input) "
 }</div> <div> <label htmlFor="email" className="block text-sm font-medium" > Email address </label> <Input) "
 }</div> <div> <label htmlFor="password" className="block text-sm font-medium" > Password </label> <Input) "
@@ -57,8 +53,7 @@ request: err.request ? 'Request made but no response': 'No request'
 }</div> <div className="flex items-center space-x-2" > <input)
 }{"
   !emailVerificationRequired ? (<Button type="submit" disabled= {
-  loading,
-}> {'"
+  loading}> {'"
   loading ? (<> <LoadingSpinner size="sm" className="mr-2" /> Creating Account... </>) : (healthCheckError ? 'Try Creating Account': 'Create Account')
 }</Button> > Go to Login </Button> <Button router.push (`/verify-status?email=$ {
   encodeURIComponent (formik.values.email)
@@ -69,31 +64,29 @@ request: err.request ? 'Request made but no response': 'No request'
 }</div> </div> </AuthLayout>)
 }'"
 }
-import { useState,  } from "react"
-import { Link,, Navigate,, useNavigate,  } from "react-router-dom"
-import { useForm,, type,, UseFormReturn,  } from "react-hook-form"
-import { zodResolver,  } from "@hookform/resolvers/zod"
-import { z,  } from "zod"
-import { User,, Mail,, Lock,, Eye,, EyeOff,, Facebook,, Twitter,, Loader2,  } from "lucide-react"
-import { useAuth,  } from "@/hooks/useAuth"
-import { register,  } from "@/services/auth"
-import { toast,  } from "@/hooks/use-toast"
-import { Button,  } from "@/components/ui/button"
-import { Input,  } from "@/components/ui/input"
-import { Checkbox,  } from "@/components/ui/checkbox"
-import { Alert,, AlertDescription,  } from "@/components/ui/alert"
-import { PasswordStrengthMeter,  } from "@/components/PasswordStrengthMeter"
+import { useState } from "react";
+import { Link, Navigate, useNavigate } from "react-router-dom";
+import { useForm, type, UseFormReturn } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { z } from "zod";
+import { User, Mail, Lock, Eye, EyeOff, Facebook, Twitter, Loader2 } from "lucide-react";
+import { useAuth } from "@/hooks/useAuth";
+import { register } from "@/services/auth";
+import { toast } from "@/hooks/use-toast";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Checkbox } from "@/components/ui/checkbox";
+import { Alert, AlertDescription } from "@/components/ui/alert";
+import { PasswordStrengthMeter } from "@/components/PasswordStrengthMeter";
 import { Form,
 FormControl
-, , FormField,
-FormItem
-, , FormLabel,
-FormMessage,
- } from "@/components/ui/form"
+, FormField,
+FormItem;
+, FormLabel,;
+FormMessage } from "@/components/ui/form";
 // Form validation schema,
 const signupSchema = z
-  .object({
-    displayName: z.string().min(2, "Name must be at least 2 characters")
+  .object({displayName: z.string().min(2, "Name must be at least 2 characters")
     email: z.string().email("Please enter a valid email"),
 password: z.string()
       .min(8, "Password must be at least 8 characters")
@@ -102,13 +95,10 @@ password: z.string()
       .regex(/[0-9]/, "Password must contain at least one number")
     confirmPassword: z.string(),
 termsAccepted: z.boolean().refine(val => val === true {
-      message: "You must accept the terms and conditions",
-}),
+      message: "You must accept the terms and conditions"}),
 })
-  .refine(data => data.password === data.confirmPassword {
-    message: "Passwords do not match",
-path: ["confirmPassword"],
-})
+  .refine(data => data.password === data.confirmPassword {message: "Passwords do not match",
+path: ["confirmPassword"]})
 type SignupFormValues = z.infer<typeof signupSchema>
 export default function Signup() {
   const { signup loginWithGoogle loginWithFacebook loginWithTwitter isLoading isAuthenticated user } = useAuth()
@@ -153,10 +143,8 @@ safeStorage.setItem('authToken', resData.token)
         setUser(resData.user)
         setTokens({ accessToken: resData.token refreshToken: resData.refreshToken |null })
       // Handle email verification required case,
-if (resData?.emailVerificationRequired) {
-        setShowVerificationMessage(true)
-        // Do not proceed to set session or navigate,
-} else if (resData?.session) {
+if (resData?.emailVerificationRequired) {setShowVerificationMessage(true)
+        // Do not proceed to set session or navigate} else if (resData?.session) {
         // Set the session directly if verification is not required,
 const { error: sessionError } = await supabase.auth.setSession(resData.session)
         if (sessionError) {
@@ -186,10 +174,8 @@ return,
 mergeFields: { FNAME: data.displayName }
           })
           await mailchimpService.sendWelcomeEmail(data.email, 'NEW10')
-} catch (err) {
-          console.error('Mailchimp subscription failed', err)
-          // Non-critical error don't block user flow,
-}
+} catch (err) {console.error('Mailchimp subscription failed', err)
+          // Non-critical error don't block user flow}
       }
       // Toast and navigation are handled above if session is present
       // If emailVerificationRequired no toast/navigation here message is shown,
@@ -260,7 +246,7 @@ const Signup = () => {
                 Contact Us
               </Link>
             </div>
-    </>  )
+</>  )
 }
-}}
-}
+}};
+};

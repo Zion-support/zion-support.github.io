@@ -1,7 +1,6 @@
 export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES = [
     // Edge Computing Infrastructure Platform;
-    {
-        id: "edge-computing-infrastructure-platform";
+    {id: "edge-computing-infrastructure-platform";
         title: "Edge Computing Infrastructure Platform";
         description: "Distributed edge computing platform that brings computation and data storage closer to data sources, reducing latency and improving performance for IoT and real-time applications.",
         category: "IT Infrastructure";
@@ -49,8 +48,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         technology: ["Kubernetes", "Docker", "React", "Node.js", "Redis", "AWS Edge"],
         integrations: ["AWS", "Azure", "Google Cloud", "IoT platforms", "Monitoring tools"],
         compliance: ["ISO 27001", "SOC 2", "GDPR", "HIPAA"],
@@ -60,8 +58,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES = [
         innovationLevel: "Advanced edge computing with AI capabilities",
     };
     // Zero-Trust Security Architecture;
-    {
-        id: "zero-trust-security-architecture";
+    {id: "zero-trust-security-architecture";
         title: "Zero-Trust Security Architecture Platform";
         description: "Comprehensive zero-trust security platform that implements continuous verification and least-privilege access controls across all network resources and applications.";
         category: "Cybersecurity";
@@ -109,8 +106,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         technology: ["React", "Node.js", "PostgreSQL", "Redis", "OAuth 2.0", "SAML"],
         integrations: ["Active Directory", "LDAP", "SAML providers", "SIEM systems", "Firewalls"],
         compliance: ["NIST", "SOC 2", "ISO 27001", "GDPR", "HIPAA"],
@@ -120,8 +116,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES = [
         innovationLevel: "Advanced zero-trust with AI-powered threat detection",
     };
     // Hybrid Cloud Management Platform;
-    {
-        id: "hybrid-cloud-management-platform";
+    {id: "hybrid-cloud-management-platform";
         title: "Hybrid Cloud Management Platform";
         description: "Unified platform for managing and orchestrating workloads across multiple cloud providers and on-premises infrastructure with seamless integration and optimization.";
         category: "Cloud Computing";
@@ -169,8 +164,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         technology: ["Kubernetes", "Terraform", "React", "Node.js", "MongoDB", "Docker"],
         integrations: ["AWS", "Azure", "Google Cloud", "VMware", "OpenStack"],
         compliance: ["SOC 2", "ISO 27001", "GDPR", "HIPAA"],
@@ -180,8 +174,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES = [
         innovationLevel: "Advanced hybrid cloud with AI-powered optimization",
     };
     // Software-Defined Networking (SDN) Platform;
-    {
-        id: "software-defined-networking-platform";
+    {id: "software-defined-networking-platform";
         title: "Software-Defined Networking (SDN) Platform";
         description: "Intelligent networking platform that centralizes network control and management through software, enabling dynamic configuration and automation of network resources.",
         category: "Networking";
@@ -229,8 +222,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         technology: ["OpenFlow", "React", "Node.js", "PostgreSQL", "Redis", "Docker"],
         integrations: ["Cisco", "Juniper", "VMware", "OpenStack", "Kubernetes"],
         compliance: ["ISO 27001", "SOC 2", "GDPR"],
@@ -240,8 +232,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES = [
         innovationLevel: "Advanced SDN with AI-powered traffic optimization",
     };
     // Container Orchestration Platform;
-    {
-        id: "container-orchestration-platform";
+    {id: "container-orchestration-platform";
         title: "Container Orchestration Platform";
         description: "Enterprise-grade container orchestration platform that automates deployment, scaling, and management of containerized applications across distributed environments.",
         category: "DevOps & Containers";
@@ -289,8 +280,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         technology: ["Kubernetes", "Docker", "React", "Node.js", "MongoDB", "Redis"],
         integrations: ["AWS EKS", "Azure AKS", "Google GKE", "Docker Swarm", "OpenShift"],
         compliance: ["SOC 2", "ISO 27001", "GDPR"],

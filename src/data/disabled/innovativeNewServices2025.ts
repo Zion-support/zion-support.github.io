@@ -19,21 +19,22 @@ supportLevel: string;
 marketPrice: string;
 contactInfo: {
 phone: string;
-email: string;,
-website: string;,
+email: string;
+website: string;
+}
+}
 };
 }
 
 export const INNOVATIVE_NEW_SERVICES_2025: InnovativeService2025[] = [
-{
-id: "ai-predictive-business-intelligence";
-title: "AI-Powered Predictive Business Intelligence Platform";,
+{id: "ai-predictive-business-intelligence";
+title: "AI-Powered Predictive Business Intelligence Platform";
 description: "Advanced business intelligence platform that uses machine learning to predict market trends; customer behavior; and business outcomes with 95% accuracy.",
 category: "AI & Analytics";
 subcategory: "Business Intelligence";
 price: 3500;
 currency: "$";
-pricingModel: "monthly";,
+pricingModel: "monthly";
 features: [
 "Real-time predictive analytics";
 "AI-powered forecasting models",
@@ -63,23 +64,21 @@ targetAudience: [
 ],
 tags: ["AI", "Business Intelligence", "Predictive Analytics", "Machine Learning", "Data Science"],
 estimatedDelivery: "3-4 weeks";
-supportLevel: "enterprise";,
+supportLevel: "enterprise";
 marketPrice: "$3;500 - $12;000/month",
 contactInfo: {
 phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";,
-website: "https://ziontechgroup.com",
-}
+email: "kleber@ziontechgroup.com";
+website: "https://ziontechgroup.com"}
 };
-{
-id: "autonomous-ai-development-platform";
-title: "Autonomous AI Development & Deployment Platform";,
+{id: "autonomous-ai-development-platform";
+title: "Autonomous AI Development & Deployment Platform";
 description: "Self-evolving AI platform that automatically designs; trains; and deploys machine learning models without human intervention; continuously improving performance.",
 category: "AI & Development";
 subcategory: "Autonomous Systems";
 price: 5000;
 currency: "$";
-pricingModel: "monthly";,
+pricingModel: "monthly";
 features: [
 "AutoML model generation";
 "Continuous learning and optimization",
@@ -109,13 +108,12 @@ targetAudience: [
 ],
 tags: ["AI", "AutoML", "Machine Learning", "DevOps", "Automation"],
 estimatedDelivery: "4-6 weeks";
-supportLevel: "premium";,
+supportLevel: "premium";
 marketPrice: "$5;000 - $15;000/month",
 contactInfo: {
 phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";,
-website: "https://ziontechgroup.com",
-}
+email: "kleber@ziontechgroup.com";
+website: "https://ziontechgroup.com"}
 }
 ];
 export const getServicesByCategory: any = (category: string) => {;

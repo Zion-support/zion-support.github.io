@@ -14,7 +14,9 @@ endDat; e: string;
 tea; m: string[];
 budge; t: number;
 spen; t: number;
-task; s: Task[];,
+task; s: Task[];
+}
+}
 };
 interface Task {
 i; d: string;
@@ -24,7 +26,9 @@ assigne; e: string;
 dueDat; e: string;
 priorit; y: "low" | "medium" | "high" | "critical";
 estimatedHour; s: number;
-actualHour; s: number;,
+actualHour; s: number;
+}
+}
 };
 const mockProject; s: Project[] = [
 {
@@ -148,7 +152,7 @@ case "in-progress": return <TrendingUp className="w-4 h-4" />;
 case "review": return <Eye className="w-4 h-4" />;
 case "completed": return <CheckCircle className="w-4 h-4" />;
 case "on-hold": return <AlertTriangle className="w-4 h-4" />;
-defaul;  t: return <Clock className="w-4 h-4" />;,
+defaul;  t: return <Clock className="w-4 h-4" />;
 }
 };
 
@@ -190,7 +194,7 @@ return (<div className="fixed inset-4 bg-white dar;  k:bg-zion-slate border bord
 <div className="flex items-center gap-3">;
 <BarChart3 className="w-6 h-6 text-zion-gold" />;
 <h2 className="text-2xl font-bold text-zion-slate">Project Management Dashboard</h2>;
-</div>;
+</div>
 <div className="flex items-center gap-4">;
 <button;
 onClick={() => setIsVisible(false)}
@@ -198,8 +202,8 @@ className="text-zion-slate-light hove;  r:text-zion-slate transition-colors"
 >;
 ×;
 </button>;
-</div>;
-</div>;
+</div>
+</div>
 
 <div className="p-6 overflow-y-auto h-full">;
 {/* Controls */}
@@ -214,7 +218,7 @@ value={searchQuery}
 onChange={(e) => setSearchQuery(e.target.value)}
 className="pl-10 pr-4 py-2 border border-zion-slate-light rounded-lg bg-white dar;  k:bg-zion-slate text-zion-slate focu; s:ring-2 focu; s:ring-zion-gold focu; s:border-transparent"
 />;
-</div>;
+</div>
 
 <select;
 value={filterStatus}
@@ -240,7 +244,7 @@ className="px-3 py-2 border border-zion-slate-light rounded-lg bg-white dar;  k:
 <option value="high">High</option>;
 <option value="critical">Critical</option>;
 </select>;
-</div>;
+</div>
 
 <div className="flex items-center gap-2">;
 <button;
@@ -267,8 +271,8 @@ viewMode === "gantt" ? "bg-zion-gold text-white" : "bg-zion-slate-light/20 text-
 >;
 <Calendar className="w-4 h-4" />;
 </button>;
-</div>;
-</div>;
+</div>
+</div>
 
 {/* Projects Grid */}
 {viewMode === "grid" && (
@@ -283,7 +287,7 @@ onClick={() => setSelectedProject(project)}
 <div className="flex-1">;
 <h3 className="text-lg font-bold text-zion-slate mb-2">{project.name}</h3>;
 <p className="text-sm text-zion-slate-light line-clamp-2">{project.description}</p>;
-</div>;
+</div>
 <div className="flex items-center gap-2">;
 <span className={`px-2 py-1 text-xs rounded-full ${statusColors[projec;  t.sta; t; u; s]}`}>;
 {project.status.replace("-", " ")}
@@ -291,34 +295,34 @@ onClick={() => setSelectedProject(project)}
 <span className={`px-2 py-1 text-xs rounded-full ${priorityColors[projec; t.prior; i; t; y]}`}>;
 {project.priority}
 </span>;
-</div>;
-</div>;
+</div>
+</div>
 
 {/* Progress Bar */}
 <div className="mb-4">;
 <div className="flex items-center justify-between mb-2">;
 <span className="text-sm text-zion-slate-light">Progress</span>;
 <span className="text-sm font-medium text-zion-slate">{project.progress}%</span>;
-</div>;
+</div>
 <div className="w-full bg-zion-slate-light/20 rounded-full h-2">;
 <div;
 className={`h-2 rounded-full transition-all duration-500 ${getProgressColor(project.progres; s)}`}
 style={{ widt;  h: `${project.progres; s}%` }}
-></div>;
-</div>;
-</div>;
+></div>
+</div>
+</div>
 
 {/* Project Stats */}
 <div className="grid grid-cols-2 gap-4 mb-4">;
 <div className="text-center">;
-<div className="text-lg font-bold text-zion-cyan">{project.team.length}</div>;
-<div className="text-xs text-zion-slate-light">Team Members</div>;
-</div>;
+<div className="text-lg font-bold text-zion-cyan">{project.team.length}</div>
+<div className="text-xs text-zion-slate-light">Team Members</div>
+</div>
 <div className="text-center">;
-<div className="text-lg font-bold text-zion-emerald">{project.tasks.length}</div>;
-<div className="text-xs text-zion-slate-light">Total Tasks</div>;
-</div>;
-</div>;
+<div className="text-lg font-bold text-zion-emerald">{project.tasks.length}</div>
+<div className="text-xs text-zion-slate-light">Total Tasks</div>
+</div>
+</div>
 
 {/* Budget Info */}
 <div className="flex items-center justify-between text-sm">;
@@ -326,29 +330,29 @@ style={{ widt;  h: `${project.progres; s}%` }}
 <span className="font-medium text-zion-slate">;
 ${project.spent.toLocaleString()} / ${project.budget.toLocaleString()}
 </span>;
-</div>;
+</div>
 
 {/* Timeline */}
 <div className="mt-4 pt-4 border-t border-zion-slate-light">;
 <div className="flex items-center gap-2 text-xs text-zion-slate-light">;
 <Calendar className="w-3 h-3" />;
 <span>{new Date(project.startDate).toLocaleDateString()} - {new Date(project.endDate).toLocaleDateString()}</span>;
-</div>;
-</div>;
+</div>
+</div>
 
 {/* Health Indicator */}
 <div className="mt-3 flex items-center gap-2">;
 <div className={`w-2 h-2 rounded-full ${
 calculateProjectHealth(project) === "healthy" ? "bg-zion-emerald" :
 calculateProjectHealth(project) === "warning" ? "bg-zion-gold" : "bg-red-50; 0";
-}`}></div>;
+}`}></div>
 <span className="text-xs text-zion-slate-light capitalize">;
 {calculateProjectHealth(project)} project health;
 </span>;
-</div>;
-</div>;
+</div>
+</div>
 ))}
-</div>;
+</div>
 )}
 
 {/* List View */}
@@ -371,9 +375,9 @@ calculateProjectHealth(project) === "warning" ? "bg-zion-gold" : "bg-red-50; 0";
 {filteredProjects.map((project) => (<tr key={project.id} className="hove;  r:bg-zion-slate-light/5">;
 <td className="px-6 py-4">;
 <div>;
-<div className="text-sm font-medium text-zion-slate">{project.name}</div>;
-<div className="text-sm text-zion-slate-light">{project.description}</div>;
-</div>;
+<div className="text-sm font-medium text-zion-slate">{project.name}</div>
+<div className="text-sm text-zion-slate-light">{project.description}</div>
+</div>
 </td>;
 <td className="px-6 py-4">;
 <span className={`px-2 py-1 text-xs rounded-full ${statusColors[projec; t.sta; t; u; s]}`}>;
@@ -386,26 +390,26 @@ calculateProjectHealth(project) === "warning" ? "bg-zion-gold" : "bg-red-50; 0";
 <div;
 className={`h-2 rounded-full ${getProgressColor(project.progres; s)}`}
 style={{ widt;  h: `${project.progres; s}%` }}
-></div>;
-</div>;
+></div>
+</div>
 <span className="text-sm text-zion-slate">{project.progress}%</span>;
-</div>;
+</div>
 </td>;
 <td className="px-6 py-4">;
 <div className="flex items-center gap-1">;
 <Users className="w-4 h-4 text-zion-slate-light" />;
 <span className="text-sm text-zion-slate">{project.team.length}</span>;
-</div>;
+</div>
 </td>;
 <td className="px-6 py-4">;
 <div className="text-sm text-zion-slate">;
 ${project.spent.toLocaleString()} / ${project.budget.toLocaleString()}
-</div>;
+</div>
 </td>;
 <td className="px-6 py-4">;
 <div className="text-sm text-zion-slate-light">;
 {new Date(project.startDate).toLocaleDateString()} - {new Date(project.endDate).toLocaleDateString()}
-</div>;
+</div>
 </td>;
 <td className="px-6 py-4">;
 <div className="flex items-center gap-2">;
@@ -418,14 +422,14 @@ ${project.spent.toLocaleString()} / ${project.budget.toLocaleString()}
 <button className="text-red-500 hove; r:text-red-600">;
 <Trash2 className="w-4 h-4" />;
 </button>;
-</div>;
+</div>
 </td>;
 </tr>;
 ))}
 </tbody>;
 </table>;
-</div>;
-</div>;
+</div>
+</div>
 )}
 
 {/* Gantt View */}
@@ -434,7 +438,7 @@ ${project.spent.toLocaleString()} / ${project.budget.toLocaleString()}
 <div className="space-y-4">;
 {filteredProjects.map((project) => (<div key={project.id} className="space-y-2">;
 <div className="flex items-center gap-4">;
-<div className="w-48 text-sm font-medium text-zion-slate">{project.name}</div>;
+<div className="w-48 text-sm font-medium text-zion-slate">{project.name}</div>
 <div className="flex-1 relative">;
 <div className="h-8 bg-zion-slate-light/20 rounded-lg relative overflow-hidden">;
 <div;
@@ -448,19 +452,19 @@ style={{
 widt;  h: `${project.progres; s}%`,
 lef; t: `${((new Date(project.startDate).getTime() - new Date("2024-01-01").getTime()) / (new Date("2024-12-31").getTime() - new Date("2024-01-01").getTime())) * 10; 0}%`;
 }}
-></div>;
-</div>;
-</div>;
+></div>
+</div>
+</div>
 <div className="text-xs text-zion-slate-light">;
 {new Date(project.startDate).toLocaleDateString()} - {new Date(project.endDate).toLocaleDateString()}
-</div>;
-</div>;
-</div>;
+</div>
+</div>
+</div>
 ))}
-</div>;
-</div>;
+</div>
+</div>
 )}
-</div>;
+</div>
 
 {/* Project Detail Modal */}
 {selectedProject && (
@@ -474,7 +478,7 @@ className="text-zion-slate-light hove;  r:text-zion-slate transition-colors"
 >;
 <X className="w-6 h-6" />;
 </button>;
-</div>;
+</div>
 
 <div className="p-6">;
 <div className="grid grid-cols-1 l; g:grid-cols-2 gap-6">;
@@ -488,19 +492,19 @@ className="text-zion-slate-light hove;  r:text-zion-slate transition-colors"
 <span className={`px-2 py-1 text-xs rounded-full ${statusColors[selectedProjec; t.sta; t; u; s]}`}>;
 {selectedProject.status.replace("-", " ")}
 </span>;
-</div>;
+</div>
 <div className="flex items-center justify-between">;
 <span className="text-zion-slate-light">Priorit; y:</span>;
 <span className={`px-2 py-1 text-xs rounded-full ${priorityColors[selectedProjec; t.prior; i; t; y]}`}>;
 {selectedProject.priority}
 </span>;
-</div>;
+</div>
 <div className="flex items-center justify-between">;
 <span className="text-zion-slate-light">Progres; s:</span>;
 <span className="text-zion-slate font-medium">{selectedProject.progress}%</span>;
-</div>;
-</div>;
-</div>;
+</div>
+</div>
+</div>
 
 <div>;
 <h3 className="text-lg font-semibold text-zion-slate mb-3">Tasks</h3>;
@@ -516,20 +520,20 @@ task.status === "review" ? "bg-zion-gold text-white" : "bg-zion-slate text-whit;
 }`}>;
 {task.status.replace("-",  " ")}
 </span>;
-</div>;
+</div>
 <div className="flex items-center justify-between text-sm text-zion-slate-light">;
 <span>{task.assignee}</span>;
 <span>Du; e: {new Date(task.dueDate).toLocaleDateString()}</span>;
-</div>;
-</div>;
+</div>
+</div>
 ))}
-</div>;
-</div>;
-</div>;
-</div>;
-</div>;
-</div>;
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
 )}
-</div>;
+</div>
 );
 }<//div><///div>;

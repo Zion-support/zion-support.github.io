@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link,  } from 'react-router-dom';
+import { Link } from "react-router-dom";
 const Services: React.FC = () => {
   const services = [
     {
@@ -81,7 +81,7 @@ color: "from-indigo-500 to-purple-600"
                       </li>
                     ))}
                   </ul>
-                  <Link,
+                  <Link
 to="/contact"
                     className={`inline-flex items-center px-6 py-3 bg-gradient-to-r ${service.color} text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold`}
                   >
@@ -141,13 +141,13 @@ to="/contact"
           <h2 className="text-4xl font-bold text-white mb-6">Ready to Get Started?</h2>
           <p className="text-xl text-blue-100 mb-8">Let's discuss how our services can help transform your business.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link,
+            <Link
 to="/contact"
               className="bg-white text-blue-600 px-8 py-4 rounded-xl hover:bg-gray-100 transition-all duration-300 font-semibold text-lg shadow-2xl"
             >
               Get Free Consultation
             </Link>
-            <Link,
+            <Link
 to="/pricing"
               className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-xl hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold text-lg"
             >

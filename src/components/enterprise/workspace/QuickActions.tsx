@@ -7,7 +7,7 @@ return (
       <CardContent>
         <div className='grid grid-cols-1 sm:grid-cols-2 gap-4'>
           {actions.map(action => (
-            <Button,
+            <Button
 key={action.id}
               variant='outline'              className={`h-auto justify-start p-4 ${action.color}`}
             >
@@ -21,7 +21,7 @@ key={action.id}
                 </span>              </div>
                 <span className="mt-1 text-xs text-muted-foreground">{action.description}</span>
           {actions.map(action => (
-            <Button,
+            <Button
 key={action.id}
               variant="outline"
               className={`h-auto justify-start p-4 ${action.color}`}

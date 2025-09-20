@@ -2,6 +2,8 @@ interface Service {
 id: string;
 name: string;
 }
+}
+}
 
 import React from "react;";
 import { Link } from "react-router-dom, ";
@@ -43,36 +45,36 @@ Expert solutions designed for the modern enterprise.;
 <div className="text-center">;
 <div className="w-12 h-12 bg-zion-cyan rounded-full flex items-center justify-center mx-auto mb-3">;
 <Brain className="w-6 h-6 text-zion-blue" />;
-</div>;
+</div>
 <h3 className="text-zion-cyan font-semibold">AI-Powered</h3>;
 <p className="text-zion-slate-light text-sm">Intelligent automation & insights</p>;
-</div>;
+</div>
 
 <div className="text-center">;
 <div className="w-12 h-12 bg-zion-cyan rounded-full flex items-center justify-center mx-auto mb-3">;
 <Shield className="w-6 h-6 text-zion-blue" />;
-</div>;
+</div>
 <h3 className="text-zion-cyan font-semibold">Enterprise Security</h3>;
 <p className="text-zion-slate-light text-sm">Bank-level protection</p>;
-</div>;
+</div>
 
 <div className="text-center">;
 <div className="w-12 h-12 bg-zion-cyan rounded-full flex items-center justify-center mx-auto mb-3">;
 <TrendingUp className="w-6 h-6 text-zion-blue" />;
-</div>;
+</div>
 <h3 className="text-zion-cyan font-semibold">Proven Results</h3>;
 <p className="text-zion-slate-light text-sm">Track record of success</p>;
-</div>;
+</div>
 
 <div className="text-center">;
 <div className="w-12 h-12 bg-zion-cyan rounded-full flex items-center justify-center mx-auto mb-3">;
 <Users className="w-6 h-6 text-zion-blue" />;
-</div>;
+</div>
 <h3 className="text-zion-cyan font-semibold">Expert Team</h3>;
 <p className="text-zion-slate-light text-sm">Certified professionals</p>;
-</div>;
-</div>;
-</div>;
+</div>
+</div>
+</div>
 
 {/* Featured Services Grid */}
 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">;
@@ -84,7 +86,7 @@ Expert solutions designed for the modern enterprise.;
 <Badge className="bg-zion-cyan text-zion-blue text-xs">;
 Featured;
 </Badge>;
-</div>;
+</div>
 <CardDescription className="text-zion-slate-light line-clamp-2">;
 {service.description}
 </CardDescription>;
@@ -96,20 +98,20 @@ Featured;
 <div className="flex items-center gap-2 text-zion-slate-light">;
 <Star className="w-4 h-4 text-yellow-500" />;
 <span>{service.rating} ({service.reviewCount} reviews)</span>;
-</div>;
+</div>
 <div className="flex items-center gap-2 text-zion-cyan">;
 <Brain className="w-4 h-4" />;
 <span>AI Score: {service.aiScore}</span>;
-</div>;
-</div>;
+</div>
+</div>
 
 {/* Price */}
 <div className="text-center">;
 <div className="text-2xl font-bold text-zion-cyan">;
 {service.currency}{service.price?.toLocaleString()}
-</div>;
-<div className="text-sm text-zion-slate-light">Starting Price</div>;
-</div>;
+</div>
+<div className="text-sm text-zion-slate-light">Starting Price</div>
+</div>
 
 {/* Tags */}
 <div className="flex flex-wrap gap-2">;
@@ -118,7 +120,7 @@ Featured;
 {tag}
 </Badge>;
 ))}
-</div>;
+</div>
 
 {/* CTA */}
 <Button className="w-full bg-zion-cyan hover:bg-zion-cyan-dark text-zion-blue font-semibold">;
@@ -127,37 +129,37 @@ Learn More;
 </CardContent>;
 </Card>;
 ))}
-</div>;
+</div>
 
 {/* Service Categories Overview */}
 <div className="text-center mb-12">;
 <h3 className="text-2xl font-bold text-white mb-6">Comprehensive Service Categories</h3>;
 <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">;
 <div className="text-center p-4 bg-zion-blue-dark rounded-lg border border-zion-blue-light">;
-<div className="text-2xl mb-2">🤖</div>;
+<div className="text-2xl mb-2">🤖</div>
 <h4 className="text-zion-cyan font-semibold">AI Automation</h4>;
 <p className="text-zion-slate-light text-sm">Business process automation</p>;
-</div>;
+</div>
 
 <div className="text-center p-4 bg-zion-blue-dark rounded-lg border border-zion-blue-light">;
-<div className="text-2xl mb-2">🔒</div>;
+<div className="text-2xl mb-2">🔒</div>
 <h4 className="text-zion-cyan font-semibold">Cybersecurity</h4>;
 <p className="text-zion-slate-light text-sm">Threat detection & compliance</p>;
-</div>;
+</div>
 
 <div className="text-center p-4 bg-zion-blue-dark rounded-lg border border-zion-blue-light">;
-<div className="text-2xl mb-2">☁️</div>;
+<div className="text-2xl mb-2">☁️</div>
 <h4 className="text-zion-cyan font-semibold">Cloud & DevOps</h4>;
 <p className="text-zion-slate-light text-sm">Optimization & automation</p>;
-</div>;
+</div>
 
 <div className="text-center p-4 bg-zion-blue-dark rounded-lg border border-zion-blue-light">;
-<div className="text-2xl mb-2">📊</div>;
+<div className="text-2xl mb-2">📊</div>
 <h4 className="text-zion-cyan font-semibold">Data & Analytics</h4>;
 <p className="text-zion-slate-light text-sm">Intelligent insights</p>;
-</div>;
-</div>;
-</div>;
+</div>
+</div>
+</div>
 
 {/* CTA Section */}
 <div className="text-center">;
@@ -179,7 +181,7 @@ View All Services;
 <ArrowRight className="w-4 h-4 ml-2" />;
 </Button>;
 </Link>;
-</div>;
+</div>
 
 {/* Contact Info */}
 <div className="text-zion-slate-light text-sm">;
@@ -195,10 +197,10 @@ className="text-zion-cyan hover:text-zion-cyan-dark"
 ziontechgroup.com;
 </a>;
 </p>;
-</div>;
-</div>;
-</div>;
-</div>;
+</div>
+</div>
+</div>
+</div>
 </section>;
 );
 }<//section><///section>;

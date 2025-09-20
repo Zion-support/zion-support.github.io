@@ -1,7 +1,6 @@
 export const INNOVATIVE_MICRO_SAAS_SERVICES_2024 = [
     // AI-Powered Video Content Creation;
-    {
-        id: "ai-video-content-creation";
+    {id: "ai-video-content-creation";
         title: "AI Video Content Creation Studio";
         description: "Revolutionary video creation platform that uses AI to generate professional-quality videos from text, images, and audio inputs, perfect for marketing, education, and entertainment.",
         category: "AI & Content Creation";
@@ -48,8 +47,7 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2024 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         technology: ["GPT-4", "Stable Video Diffusion", "ElevenLabs", "React", "Node.js", "PostgreSQL"],
         integrations: ["YouTube", "TikTok", "Instagram", "LinkedIn", "Facebook", "Twitter"],
         compliance: ["GDPR", "Content guidelines", "Copyright compliance"],
@@ -60,8 +58,7 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2024 = [
         fundingTrends: "High investor interest in AI video tools",
     };
     // AI-Powered Customer Success Platform;
-    {
-        id: "ai-customer-success-platform";
+    {id: "ai-customer-success-platform";
         title: "AI Customer Success Platform";
         description: "Intelligent customer success platform that predicts churn, automates onboarding, and provides personalized recommendations to improve customer retention and satisfaction.",
         category: "AI & Customer Success";
@@ -107,8 +104,7 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2024 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         technology: ["Machine Learning", "Python", "React", "PostgreSQL", "Redis", "Analytics"],
         integrations: ["Salesforce", "HubSpot", "Intercom", "Zendesk", "Slack", "Email platforms"],
         compliance: ["GDPR", "SOC 2", "Data privacy"],
@@ -119,8 +115,7 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2024 = [
         fundingTrends: "Growing focus on customer retention tools",
     };
     // AI-Powered Email Marketing Automation;
-    {
-        id: "ai-email-marketing-automation";
+    {id: "ai-email-marketing-automation";
         title: "AI Email Marketing Automation Platform";
         description: "Advanced email marketing platform that uses AI to optimize send times, personalize content, and predict customer behavior for maximum engagement and conversion rates.",
         category: "AI & Marketing";
@@ -167,8 +162,7 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2024 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         technology: ["Machine Learning", "Python", "React", "PostgreSQL", "Redis", "Email APIs"],
         integrations: ["Shopify", "WooCommerce", "Salesforce", "HubSpot", "Zapier", "Webhooks"],
         compliance: ["GDPR", "CAN-SPAM", "Email compliance"],
@@ -179,8 +173,7 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2024 = [
         fundingTrends: "AI-powered marketing tools gaining traction",
     };
     // AI-Powered Social Media Management;
-    {
-        id: "ai-social-media-management";
+    {id: "ai-social-media-management";
         title: "AI Social Media Management Platform";
         description: "Intelligent social media management platform that automates content creation, scheduling, and engagement while providing AI-driven insights for optimal performance.",
         category: "AI & Social Media";
@@ -227,8 +220,7 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2024 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         technology: ["GPT-4", "Machine Learning", "React", "Node.js", "PostgreSQL", "Social APIs"],
         integrations: ["Instagram", "Facebook", "Twitter", "LinkedIn", "TikTok", "YouTube"],
         compliance: ["GDPR", "Social media policies", "Content guidelines"],
@@ -239,8 +231,7 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2024 = [
         fundingTrends: "High demand for AI-powered social tools",
     };
     // AI-Powered SEO Optimization;
-    {
-        id: "ai-seo-optimization";
+    {id: "ai-seo-optimization";
         title: "AI SEO Optimization Platform";
         description: "Advanced SEO platform that uses AI to analyze content, optimize keywords, track rankings, and provide actionable insights to improve search engine visibility.",
         category: "AI & SEO";
@@ -287,8 +278,7 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2024 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         technology: ["Machine Learning", "NLP", "Python", "React", "PostgreSQL", "SEO APIs"],
         integrations: ["Google Analytics", "Google Search Console", "WordPress", "Shopify", "WooCommerce"],
         compliance: ["GDPR", "SEO best practices", "Search guidelines"],
@@ -299,8 +289,7 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2024 = [
         fundingTrends: "AI SEO tools in high demand",
     };
     // AI-Powered Customer Support Chatbot;
-    {
-        id: "ai-customer-support-chatbot";
+    {id: "ai-customer-support-chatbot";
         title: "AI Customer Support Chatbot Platform";
         description: "Intelligent chatbot platform that provides 24/7 customer support, answers questions, resolves issues, and escalates complex problems to human agents seamlessly.",
         category: "AI & Customer Support";
@@ -347,8 +336,7 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2024 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         technology: ["GPT-4", "NLP", "React", "Node.js", "PostgreSQL", "WebSocket"],
         integrations: ["Zendesk", "Intercom", "Freshdesk", "Shopify", "WooCommerce", "Slack"],
         compliance: ["GDPR", "Data privacy", "Support standards"],
@@ -359,8 +347,7 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2024 = [
         fundingTrends: "AI chatbots gaining significant investment",
     };
     // AI-Powered Project Management;
-    {
-        id: "ai-project-management";
+    {id: "ai-project-management";
         title: "AI Project Management Platform";
         description: "Intelligent project management platform that uses AI to predict project timelines, identify risks, optimize resource allocation, and automate routine project tasks.",
         category: "AI & Project Management";
@@ -407,8 +394,7 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2024 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         technology: ["Machine Learning", "Python", "React", "Node.js", "PostgreSQL", "Analytics"],
         integrations: ["Slack", "Microsoft Teams", "Google Workspace", "GitHub", "Jira", "Trello"],
         compliance: ["GDPR", "Project standards", "Data security"],
@@ -419,8 +405,7 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2024 = [
         fundingTrends: "AI project management tools attracting investors",
     };
     // AI-Powered Financial Planning;
-    {
-        id: "ai-financial-planning";
+    {id: "ai-financial-planning";
         title: "AI Financial Planning Platform";
         description: "Intelligent financial planning platform that uses AI to analyze spending patterns, create budgets, provide investment advice, and help users achieve their financial goals.",
         category: "AI & Financial Technology";
@@ -467,8 +452,7 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2024 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         technology: ["Machine Learning", "Python", "React", "Node.js", "PostgreSQL", "Financial APIs"],
         integrations: ["Bank accounts", "Credit cards", "Investment platforms", "Tax software", "Budgeting apps"],
         compliance: ["FINRA", "SEC", "Financial regulations", "Data security"],

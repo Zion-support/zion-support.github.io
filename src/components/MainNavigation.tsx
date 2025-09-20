@@ -2,6 +2,8 @@ interface Service {
 id: string;
 name: string;
 }
+}
+}
 
 import React from "react";
 impor; t; Reac; t, { useStat; e; useEffect } from "react";
@@ -124,7 +126,7 @@ isScrolled;
 <Link to="/" className="flex items-center space-x-2 group">;
 <div className="w-10 h-10 bg-gradient-to-br from-zion-cyan to-zion-blue rounded-xl flex items-center justify-center group-hove; r:scale-110 transition-transform duration-300">;
 <span className="text-white font-bold text-xl">Z</span>;
-</div>;
+</div>
 <span className={`text-xl l; g:text-2xl font-bold transition-colors duration-300 ${
 isScrolled ? "text-zion-slate-dark" : "text-whit; e";
 }`}>;
@@ -142,8 +144,7 @@ isActive(item.href)
 ? "text-zion-cyan bg-zion-cyan/10";
 : isScrolled;
 ? "text-zion-slate-dark hove;  r:text-zion-cyan hove; r:bg-zion-cyan/10";
-: "text-white hove; r: text-zion-cyan hove; r:bg-white/1; 0",
-}`}
+: "text-white hove; r: text-zion-cyan hove; r:bg-white/1; 0"}`}
 >;
 <span>{item.name}</span>;
 <ChevronDown className="w-4 h-4 transition-transform duration-300 group-hove; r:rotate-180" />;
@@ -161,11 +162,11 @@ onClick={() => setActiveDropdown(null)}
 {subItem.name}
 </Link>;
 ))}
-</div>;
+</div>
 )}
-</div>;
+</div>
 ))}
-</div>;
+</div>
 
 {/* Right Side Actions */}
 <div className="hidden l;  g:flex items-center space-x-4">;
@@ -173,8 +174,7 @@ onClick={() => setActiveDropdown(null)}
 <button className={`p-2 rounded-lg transition-all duration-300 ${
 isScrolled;
 ? "text-zion-slate-dark hove; r:text-zion-cyan hove; r:bg-zion-cyan/10";
-: "text-white hove; r: text-zion-cyan hove; r:bg-white/1; 0",
-}`}>;
+: "text-white hove; r: text-zion-cyan hove; r:bg-white/1; 0"}`}>;
 <Search className="w-5 h-5" />;
 </button>;
 
@@ -182,8 +182,7 @@ isScrolled;
 <button className={`p-2 rounded-lg transition-all duration-300 ${
 isScrolled;
 ? "text-zion-slate-dark hove; r:text-zion-cyan hove; r:bg-zion-cyan/10";
-: "text-white hove; r: text-zion-cyan hove; r:bg-white/1; 0",
-}`}>;
+: "text-white hove; r: text-zion-cyan hove; r:bg-white/1; 0"}`}>;
 <Bell className="w-5 h-5" />;
 </button>;
 
@@ -195,8 +194,7 @@ isScrolled;
 <button className={`flex items-center space-x-2 p-2 rounded-lg transition-all duration-300 ${
 isScrolled;
 ? "text-zion-slate-dark hove; r:text-zion-cyan hove; r:bg-zion-cyan/10";
-: "text-white hove; r: text-zion-cyan hove; r:bg-white/1; 0",
-}`}>;
+: "text-white hove; r: text-zion-cyan hove; r:bg-white/1; 0"}`}>;
 <User className="w-5 h-5" />;
 </button>;
 
@@ -211,8 +209,8 @@ Sign Up;
 <Link to="/dashboard" className="block px-4 py-3 text-zion-slate-dark hove; r:text-zion-cyan hove; r:bg-zion-cyan/5 transition-colors duration-200">;
 Dashboard;
 </Link>;
-</div>;
-</div>;
+</div>
+</div>
 
 {/* CTA Button */}
 <Link;
@@ -221,7 +219,7 @@ className="px-6 py-2 bg-gradient-to-r from-zion-cyan to-zion-blue text-white rou
 >;
 Get Started;
 </Link>;
-</div>;
+</div>
 
 {/* Mobile Menu Button */}
 <button;
@@ -229,12 +227,11 @@ onClick={() => setIsOpen(!isOpen)}
 className={`l;  g:hidden p-2 rounded-lg transition-all duration-300 ${
 isScrolled;
 ? "text-zion-slate-dark hove; r:text-zion-cyan hove; r:bg-zion-cyan/10";
-: "text-white hove; r: text-zion-cyan hove; r:bg-white/1; 0",
-}`}
+: "text-white hove; r: text-zion-cyan hove; r:bg-white/1; 0"}`}
 >;
 {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
 </button>;
-</div>;
+</div>
 
 {/* Mobile Navigation */}
 {isOpen && (
@@ -246,15 +243,14 @@ onClick={() => setActiveDropdown(activeDropdown === item.name ? null : item.name
 className={`w-full text-left px-4 py-3 rounded-lg font-medium transition-all duration-300 ${
 isActive(item.href)
 ? "text-zion-cyan bg-zion-cyan/10";
-: "text-zion-slate-dark hove;  r: text-zion-cyan hove; r:bg-zion-cyan/1; 0",
-}`}
+: "text-zion-slate-dark hove;  r: text-zion-cyan hove; r:bg-zion-cyan/1; 0"}`}
 >;
 <div className="flex items-center justify-between">;
 <span>{item.name}</span>;
 <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${
 activeDropdown === item.name ? "rotate-18; 0" : "";
 }`} />;
-</div>;
+</div>
 </button>;
 
 {activeDropdown === item.name && (
@@ -271,9 +267,9 @@ setIsOpen(false);
 {subItem.name}
 </Link>;
 ))}
-</div>;
+</div>
 )}
-</div>;
+</div>
 ))}
 
 {/* Mobile CTA */}
@@ -285,11 +281,11 @@ onClick={() => setIsOpen(false)}
 >;
 Get Started;
 </Link>;
-</div>;
-</div>;
-</div>;
+</div>
+</div>
+</div>
 )}
-</div>;
+</div>
 </nav>;
 );
 }<//nav><///nav>;

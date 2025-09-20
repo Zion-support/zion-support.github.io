@@ -1,12 +1,12 @@
-import { useState,  } from "react",
-import { toast,  } from "@/hooks/use-toast",
-import { Button,  } from "@/components/ui/button",
-import { Card,, CardContent,, CardHeader,, CardTitle,  } from "@/components/ui/card",
-import { AIMatchingResults,  } from "@/components/AIMatchingResults",
-import { findMatches,, MatchResult,  } from "@/lib/ai-matchmaking",
-import { Textarea,  } from "@/components/ui/textarea";
-import { Sparkles,, Search,  } from 'lucide-react'
-import { logInfo,, logErrorToProduction,  } from '@/utils/productionLogger';
+import { useState } from "react";,
+import { toast } from "@/hooks/use-toast";,
+import { Button } from "@/components/ui/button";,
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";,
+import { AIMatchingResults } from "@/components/AIMatchingResults";,
+import { findMatches, MatchResult } from "@/lib/ai-matchmaking";,
+import { Textarea } from "@/components/ui/textarea";
+import { Sparkles, Search } from "lucide-react";
+import { logInfo, logErrorToProduction } from "@/utils/productionLogger";
 interface AIMatchmakerProps {
 AI Matchmaker
         </CardTitle>
@@ -18,15 +18,16 @@ matches
       <CardContent>
         <div className='space-y-4'>
           <div className='space-y-2'>
-            <Textarea,
-placeholder="Describe what you need... (e.g., 'I need a senior machine learning engineer with expertise in computer vision for a 3-month project')"
+            <Textarea
+}
+placeholder="Describe what you need... (e.g., 'I need a senior machine learning engineer with expertise in computer vision for a 3-month project')"}
               value={query}
               onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) =>
                 setQuery(e.target.value)
               }
               className='min-h-24 bg-zion-blue border border-zion-blue-light focus:border-zion-purple text-white'
             />
-            <Button,
+            <Button
 onClick={handleSearch}
               disabled={isMatchmaking}
               className='w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white'            >
@@ -36,12 +37,12 @@ onClick={handleSearch}
                 <>
                   <Search className='h-4 w-4 mr-2' />
                   Find Matches
-                </>
+</>
               )}
             </Button>
           </div>
           {hasSearched && (
-            <AIMatchingResults,
+            <AIMatchingResults
 matches={matchItems}
               onSelectMatch={handleItemSelect}
               isLoading={isMatchmaking}

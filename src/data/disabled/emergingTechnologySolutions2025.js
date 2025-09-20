@@ -1,7 +1,6 @@
 export const EMERGING_TECHNOLOGY_SOLUTIONS_2025 = [
     // Blockchain & Web3 Solutions;
-    {
-        id: "blockchain-web3-enterprise-platform";
+    {id: "blockchain-web3-enterprise-platform";
         title: "Blockchain & Web3 Enterprise Platform - Decentralized Business Solutions";
         description: "Comprehensive blockchain and Web3 platform that enables enterprises to build decentralized applications, implement smart contracts, and leverage blockchain technology for business transformation and innovation.",
         category: "Blockchain & Web3";
@@ -49,8 +48,7 @@ export const EMERGING_TECHNOLOGY_SOLUTIONS_2025 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         technology: ["Ethereum", "Polygon", "Solana", "React", "Node.js", "Web3.js"],
         integrations: ["Enterprise systems", "Payment gateways", "Cloud platforms", "Financial systems", "IoT platforms"],
         compliance: ["SOC 2", "GDPR", "Financial regulations", "Blockchain compliance"],
@@ -65,8 +63,7 @@ export const EMERGING_TECHNOLOGY_SOLUTIONS_2025 = [
         innovationLevel: "Cutting-edge Web3 and blockchain technology",
     };
     // Quantum Computing Solutions;
-    {
-        id: "quantum-computing-solutions-platform";
+    {id: "quantum-computing-solutions-platform";
         title: "Quantum Computing Solutions Platform - Next-Generation Computing Power";
         description: "Advanced quantum computing platform that provides quantum algorithms, quantum machine learning, and quantum optimization solutions for complex computational problems that are impossible to solve with classical computers.",
         category: "Quantum Computing";
@@ -114,8 +111,7 @@ export const EMERGING_TECHNOLOGY_SOLUTIONS_2025 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         technology: ["Qiskit", "Cirq", "PennyLane", "Python", "Quantum simulators", "Cloud quantum platforms"],
         integrations: ["Research platforms", "Scientific computing tools", "Financial modeling systems", "Cloud platforms", "HPC systems"],
         compliance: ["Research standards", "Data security", "Intellectual property protection"],
@@ -130,8 +126,7 @@ export const EMERGING_TECHNOLOGY_SOLUTIONS_2025 = [
         innovationLevel: "Revolutionary quantum computing technology",
     };
     // Edge Computing & IoT Solutions;
-    {
-        id: "edge-computing-iot-platform";
+    {id: "edge-computing-iot-platform";
         title: "Edge Computing & IoT Platform - Intelligent Edge Intelligence";
         description: "Comprehensive edge computing and IoT platform that processes data at the edge, reduces latency, improves performance, and enables real-time decision making for connected devices and smart systems.",
         category: "Edge Computing & IoT";
@@ -179,8 +174,7 @@ export const EMERGING_TECHNOLOGY_SOLUTIONS_2025 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         technology: ["Kubernetes", "Docker", "MQTT", "React", "Python", "Edge frameworks"],
         integrations: ["Cloud platforms", "IoT devices", "Data centers", "Network infrastructure", "Security systems"],
         compliance: ["SOC 2", "ISO 27001", "IoT security standards", "Data privacy regulations"],
@@ -195,8 +189,7 @@ export const EMERGING_TECHNOLOGY_SOLUTIONS_2025 = [
         innovationLevel: "Advanced edge computing and IoT technology",
     };
     // 5G & Advanced Connectivity Solutions;
-    {
-        id: "5g-advanced-connectivity-platform";
+    {id: "5g-advanced-connectivity-platform";
         title: "5G & Advanced Connectivity Platform - Next-Generation Network Solutions";
         description: "Advanced 5G and connectivity platform that provides ultra-fast wireless communication, low-latency networking, and advanced connectivity solutions for businesses, IoT devices, and emerging technologies.",
         category: "5G & Connectivity";
@@ -244,8 +237,7 @@ export const EMERGING_TECHNOLOGY_SOLUTIONS_2025 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         technology: ["5G NR", "Network slicing", "Edge computing", "React", "Python", "Network protocols"],
         integrations: ["Network infrastructure", "Cloud platforms", "IoT platforms", "Security systems", "Analytics platforms"],
         compliance: ["5G standards", "Network security", "Data privacy", "Telecommunications regulations"],
@@ -260,8 +252,7 @@ export const EMERGING_TECHNOLOGY_SOLUTIONS_2025 = [
         innovationLevel: "Cutting-edge 5G and connectivity technology",
     };
     // Augmented Reality & Virtual Reality Solutions;
-    {
-        id: "ar-vr-enterprise-platform";
+    {id: "ar-vr-enterprise-platform";
         title: "AR/VR Enterprise Platform - Immersive Business Solutions";
         description: "Comprehensive augmented reality and virtual reality platform that provides immersive experiences, training simulations, virtual collaboration, and AR/VR solutions for enterprise applications and business transformation.",
         category: "AR/VR & Immersive Technology";
@@ -309,8 +300,7 @@ export const EMERGING_TECHNOLOGY_SOLUTIONS_2025 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         technology: ["Unity", "Unreal Engine", "WebXR", "React", "Three.js", "AR/VR frameworks"],
         integrations: ["Learning management systems", "Video conferencing platforms", "3D modeling tools", "Analytics platforms", "Content management systems"],
         compliance: ["Data privacy", "Accessibility standards", "Security requirements"],
@@ -325,8 +315,7 @@ export const EMERGING_TECHNOLOGY_SOLUTIONS_2025 = [
         innovationLevel: "Advanced immersive technology solutions",
     };
     // Robotics & Automation Solutions;
-    {
-        id: "robotics-automation-platform";
+    {id: "robotics-automation-platform";
         title: "Robotics & Automation Platform - Intelligent Automation Solutions";
         description: "Advanced robotics and automation platform that provides intelligent automation, robotic process automation (RPA), and autonomous systems for manufacturing, logistics, healthcare, and other industries.",
         category: "Robotics & Automation";
@@ -374,8 +363,7 @@ export const EMERGING_TECHNOLOGY_SOLUTIONS_2025 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         technology: ["ROS", "Computer Vision", "Machine Learning", "Python", "C++", "Robotics frameworks"],
         integrations: ["Manufacturing systems", "ERP platforms", "Quality management systems", "Safety systems", "Analytics platforms"],
         compliance: ["Safety standards", "ISO certifications", "Industry regulations", "Quality standards"],
@@ -390,8 +378,7 @@ export const EMERGING_TECHNOLOGY_SOLUTIONS_2025 = [
         innovationLevel: "Advanced robotics and automation technology",
     };
     // Digital Twin & Simulation Solutions;
-    {
-        id: "digital-twin-simulation-platform";
+    {id: "digital-twin-simulation-platform";
         title: "Digital Twin & Simulation Platform - Virtual Replica Solutions";
         description: "Comprehensive digital twin and simulation platform that creates virtual replicas of physical systems, enables predictive modeling, and provides real-time monitoring and optimization for complex systems and processes.",
         category: "Digital Twin & Simulation";
@@ -439,8 +426,7 @@ export const EMERGING_TECHNOLOGY_SOLUTIONS_2025 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         technology: ["Unity", "Unreal Engine", "Python", "React", "3D modeling", "Simulation engines"],
         integrations: ["IoT platforms", "CAD systems", "PLM platforms", "Analytics platforms", "Cloud platforms"],
         compliance: ["Data security", "Industry standards", "Quality requirements"],
@@ -455,8 +441,7 @@ export const EMERGING_TECHNOLOGY_SOLUTIONS_2025 = [
         innovationLevel: "Advanced digital twin and simulation technology",
     };
     // Green Technology & Sustainability Solutions;
-    {
-        id: "green-technology-sustainability-platform";
+    {id: "green-technology-sustainability-platform";
         title: "Green Technology & Sustainability Platform - Eco-Friendly Solutions";
         description: "Comprehensive green technology and sustainability platform that provides renewable energy solutions, carbon footprint tracking, environmental monitoring, and sustainable business practices for organizations committed to environmental responsibility.",
         category: "Green Technology & Sustainability";
@@ -504,8 +489,7 @@ export const EMERGING_TECHNOLOGY_SOLUTIONS_2025 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com",
-        };
+            website: "https://ziontechgroup.com"};
         technology: ["IoT sensors", "Machine Learning", "React", "Python", "Analytics platforms", "Green tech APIs"],
         integrations: ["Energy management systems", "Environmental monitoring", "Sustainability platforms", "Reporting systems", "Compliance platforms"],
         compliance: ["Environmental regulations", "Sustainability standards", "Carbon reporting", "Green certifications"],

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link,  } from 'react-router-dom';
+import { Link } from "react-router-dom";
 const Pricing: React.FC = () => {
   const [isAnnual, setIsAnnual] = useState(false);
   const plans = [
@@ -70,13 +70,13 @@ popular: false;
           {/* Billing Toggle */}
           <div className="flex items-center justify-center space-x-4 mb-8">
             <span className={`text-lg ${!isAnnual ? 'text-white font-semibold' : 'text-blue-200'}`}>Monthly</span>
-            <button,
+            <button
 onClick={() => setIsAnnual(!isAnnual)}
               className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
                 isAnnual ? 'bg-white' : 'bg-blue-200'
               }`}
             >
-              <span,
+              <span
 className={`inline-block h-4 w-4 transform rounded-full bg-blue-600 transition-transform ${
                   isAnnual ? 'translate-x-6' : 'translate-x-1'
                 }`}
@@ -93,7 +93,7 @@ className={`inline-block h-4 w-4 transform rounded-full bg-blue-600 transition-t
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {plans.map((plan index) => (
-              <div,
+              <div
 key={index}
                 className={`relative bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 ${
                   plan.popular ? 'ring-2 ring-blue-500 scale-105' : ''
@@ -132,7 +132,7 @@ key={index}
                       </li>
                     ))}
                   </ul>
-                  <Link,
+                  <Link
 to="/contact"
                     className={`w-full py-4 px-6 rounded-lg font-semibold text-lg text-center transition-all duration-300 transform hover:scale-105 ${
                       plan.popular
@@ -185,13 +185,13 @@ to="/contact"
           <h2 className="text-4xl font-bold text-white mb-6">Ready to Get Started?</h2>
           <p className="text-xl text-blue-100 mb-8">Join thousands of businesses already using Zion Tech to accelerate their growth.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link,
+            <Link
 to="/contact"
               className="bg-white text-blue-600 px-8 py-4 rounded-xl hover:bg-gray-100 transition-all duration-300 font-semibold text-lg shadow-2xl"
             >
               Start Free Trial
             </Link>
-            <Link,
+            <Link
 to="/contact"
               className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-xl hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold text-lg"
             >

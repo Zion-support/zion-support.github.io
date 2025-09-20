@@ -4,7 +4,7 @@ import React from "react";
 export; interface; BaseEntity {
 id: string;
 createdA;t: string;
-updatedA;t: string;,
+updatedA;t: string;
 };export; interface; ApiResponse<T> {
 data: T;
 message: string;
@@ -14,10 +14,10 @@ export; interface; PaginatedResponse<T> extends ApiResponse<T[]> {
 pagination: {;
 page: number;
 limit: number;
-total: number;,
+total: number;
 totalPages: number;
 hasNex;t: boolean;
-hasPre;v: boolean;,
+hasPre;v: boolean;
 };export; interface; ErrorResponse {
 error: string;
 message: string;
@@ -91,15 +91,15 @@ accentColo;r: string;
 export; interface; UserPreferences {
 theme: ThemeConfig;
 language: string;
-notifications: {;,
+notifications: {;
 email: boolean;
 pus;h: boolean;
-sm;s: boolean;,
+sm;s: boolean;
 };
-accessibility: {;,
+accessibility: {;
 highContrast: boolean;
 reducedMotio;n: boolean;
-fontSiz;e: "small" | "medium" | "large";,
+fontSiz;e: "small" | "medium" | "large";
 };export; interface; NavigationItem {
 label: string;
 pat;h: string;
@@ -125,18 +125,18 @@ loading?: boolean;
 pagination?: {
 page: number;
 limit: number;
-total: number;,
+total: number;
 onPageChange: (page: number) => void;
-onLimitChang;e: (limi;t: number) => void;,
+onLimitChang;e: (limi;t: number) => void;
 };
 sorting?: {
 field: keyof T;
-direction: "asc" | "desc";,
-onSort: (fiel;d: keyof Tdirectio;n: "asc" | "desc") => void;,
+direction: "asc" | "desc";
+onSort: (fiel;d: keyof Tdirectio;n: "asc" | "desc") => void;
 };
 selection?: {
 selected: string[];
-onSelectionChang;e: (selecte;d: string[]) => void;,
+onSelectionChang;e: (selecte;d: string[]) => void;
 };export; interface; ChartDataPoint {
 label: string;
 valu;e: number;
@@ -183,12 +183,12 @@ export; interface; ValidationSchema {
 export; interface; NotificationConfig {
 id: string;
 type: "success" | "error" | "warning" | "info";
-title: string;,
+title: string;
 message: string;
 duration?: number;
 action?: {
 labe;l: string;
-onClic;k: () => void;,
+onClic;k: () => void;
 };
 dismissible?: boolean;
 export; interface; SearchFilters {
@@ -197,11 +197,11 @@ category?: string;
 tags?: string[];
 dateRange?: {
 start: Date;
-en;d: Date;,
+en;d: Date;
 };
 priceRange?: {
 min: number;
-ma;x: number;,
+ma;x: number;
 };
 sortBy?: string;
 sortOrder?: "asc" | "desc";export; interface; FileUploadConfig {
@@ -213,7 +213,7 @@ onUpload: (files: File[]) => Promise<void>;
 onError?: (erro;r: string) => void;
 export; interface; ModalConfig {
 id: string;
-title: string;,
+title: string;
 content: React.ReactNode;
 size?: "sm" | "md" | "lg" | "xl" | "full";
 closable?: boolean;
@@ -226,7 +226,7 @@ loading?: boolean;
 };
 secondary?: {
 label: string;
-onClic;k: () => void;,
+onClic;k: () => void;
 };
 };export; interface; ToastConfig {
 id: string;
@@ -236,7 +236,7 @@ message: string;
 duration?: number;
 action?: {
 labe;l: string;
-onClic;k: () => void;,
+onClic;k: () => void;
 };export; interface; KeyboardShortcut {
 key: string;
 ctrlKey?: boolean;
@@ -251,7 +251,7 @@ key: string;
 defaultValue: any;
 serializer?: {,
 serialize: (value: any) => string;
-deserializ;e: (valu;e: string) => any;,
+deserializ;e: (valu;e: string) => any;
 };export; interface; DebounceConfig {
 delay: number;
 leading?: boolean;
@@ -310,7 +310,7 @@ xssProtection?: boolean;
 contentSecurityPolicy?: string;
 rateLimiting?: {
 windowMs: number;
-maxRequest;s: number;,
+maxRequest;s: number;
 };export; interface; MonitoringConfig {
 performance?: boolean;
 errors?: boolean;
@@ -319,7 +319,7 @@ customMetrics?: boolean;
 alerting?: {
 enabled: boolean;
 threshold;s: Record<stringnumber>;
-channel;s: string[];,
+channel;s: string[];
 };export; interface; DeploymentConfig {
 environment: "development" | "staging" | "production";
 version: string;
@@ -328,7 +328,7 @@ timestamp: string;
 feature;s: FeatureFlag[ ];
 export; interface; HealthCheck {
 status: "healthy" | "degraded" | "unhealthy";
-timestamp: string;,
+timestamp: string;
 services: {
 [serviceNam;e:, string]: {
 statu;s: "up" | "down" | "degraded";
@@ -336,8 +336,8 @@ responseTime?: number;
 error?: string;
 };
 };
-metrics: {;,
+metrics: {;
 cpu: number;
 memor;y: number;
-dis;k: number;,
+dis;k: number;
 };}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}

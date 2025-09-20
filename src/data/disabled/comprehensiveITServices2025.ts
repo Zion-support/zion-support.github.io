@@ -1,18 +1,17 @@
 import React from "react";
 
-export interface ComprehensiveITService {
-id: string; title: string; description: string; id: string; title: string; description: string; id: string; title: string; description: string; category: string; subcategory: string; description: string; pricing: string; price: number; pricingModel: string; features: string[], benefits: string[];,
+export interface ComprehensiveITService {id: string; title: string; description: string; id: string; title: string; description: string; id: string; title: string; description: string; category: string; subcategory: string; description: string; pricing: string; price: number; pricingModel: string; features: string[], benefits: string[];
 targetAudience: string[], tags: string[];
-contactInfo: {,
-phone: string; email: string; website: string; address: string,
-};
-technology: string[], technology: string[];,
+}
+contactInfo: {,}
+phone: string; email: string; website: string; address: string};
+technology: string[], technology: string[];
 integrations: string[], compliance: string[];
 roi: string; competitors: string[];
 demoUrl?: string;
 caseStudies?: string[];
 websiteUrl?: string;,
-marketTrend: string; industryFocus: string[], scalability: string; customizationLevel: string; serviceLevel: string;,
+marketTrend: string; industryFocus: string[], scalability: string; customizationLevel: string; serviceLevel: string;
 }
 
 export const comprehensiveITServices2025: ComprehensiveITService[] = [
@@ -26,7 +25,7 @@ title: "Cloud Infrastructure & Migration Services - Seamless Cloud Transformatio
 description: "Comprehensive cloud infrastructure and migration services that help businesses transition to the cloud; optimize cloud performance; and manage multi-cloud environments for improved scalability and cost efficiency.",
 category: "Cloud Services",
 subcategory: "Infrastructure & Migration",
-price: 2499;,
+price: 2499;
 currency: "$",
 pricingModel: "monthly",
 features: [
@@ -70,8 +69,7 @@ contactInfo: {,
 phone: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
 website: "https://ziontechgroup.com",
-address: "364 E Main St STE 1008 Middletown DE 19709",
-},
+address: "364 E Main St STE 1008 Middletown DE 19709"},
 technology: ["AWS", "Azure", "Google Cloud", "Kubernetes", "Docker", "Terraform"],
 integrations: ["On-premises systems", "Legacy applications", "Database systems", "Security platforms", "Monitoring tools"],
 compliance: ["SOC 2", "ISO 27001", "GDPR", "HIPAA", "Industry-specific regulations"],
@@ -87,8 +85,7 @@ serviceLevel: "24/7 managed cloud services",
 },
 
 // Cybersecurity & Information Security Services;
-{
-id: "cybersecurity-information-security-services",
+{id: "cybersecurity-information-security-services",
 title: "Cybersecurity & Information Security Services - Comprehensive Protection",
 description: "Advanced cybersecurity and information security services that provide comprehensive protection against cyber threats; implement security frameworks; and ensure compliance with industry regulations and standards.",
 category: "Cybersecurity",
@@ -135,8 +132,7 @@ marketPrice: "$1; 899 - $7;500/month",
 contactInfo: {,
 phone: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com",
-},
+website: "https://ziontechgroup.com"},
 technology: ["SIEM platforms", "EDR solutions", "Firewall systems", "Identity management", "Security frameworks"],
 integrations: ["Security tools", "Monitoring systems", "Compliance platforms", "Incident response systems", "Training platforms"],
 compliance: ["SOC 2", "ISO 27001", "NIST", "GDPR", "Industry-specific regulations"],
@@ -152,8 +148,7 @@ serviceLevel: "24/7 security monitoring and response",
 },
 
 // DevOps & CI/CD Pipeline Services;
-{
-id: "devops-cicd-pipeline-services",
+{id: "devops-cicd-pipeline-services",
 title: "DevOps & CI/CD Pipeline Services - Streamlined Development Operations",
 description: "Comprehensive DevOps and CI/CD pipeline services that automate software development processes; improve deployment efficiency; and enable continuous delivery for faster time-to-market and higher quality software.",
 category: "DevOps & Development",
@@ -200,8 +195,7 @@ marketPrice: "$1; 599 - $6;000/month",
 contactInfo: {,
 phone: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com",
-},
+website: "https://ziontechgroup.com"},
 technology: ["Jenkins", "GitLab CI", "GitHub Actions", "Docker", "Kubernetes", "Terraform"],
 integrations: ["Version control systems", "Testing frameworks", "Monitoring tools", "Cloud platforms", "Security tools"],
 compliance: ["Security best practices", "Quality standards", "Development standards"],
@@ -217,8 +211,7 @@ serviceLevel: "24/7 DevOps support and monitoring",
 },
 
 // Data Management & Analytics Services;
-{
-id: "data-management-analytics-services",
+{id: "data-management-analytics-services",
 title: "Data Management & Analytics Services - Data-Driven Business Intelligence",
 description: "Comprehensive data management and analytics services that help businesses collect; process; analyze; and visualize data to make informed decisions; optimize operations; and gain competitive advantages.",
 category: "Data Services",
@@ -277,8 +270,7 @@ marketPrice: "$1; 299 - $5;000/month",
 contactInfo: {,
 phone: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com",
-},
+website: "https://ziontechgroup.com"},
 technology: ["Python", "R", "SQL", "Tableau", "Power BI", "Apache Spark"],
 integrations: ["Data sources", "Business systems", "Cloud platforms", "Analytics tools", "Reporting systems"],
 compliance: ["GDPR", "CCPA", "Data privacy", "Industry regulations"],
@@ -294,8 +286,7 @@ serviceLevel: "24/7 data monitoring and support",
 },
 
 // Network Infrastructure & Management Services;
-{
-id: "network-infrastructure-management-services",
+{id: "network-infrastructure-management-services",
 title: "Network Infrastructure & Management Services - Reliable Network Solutions",
 description: "Comprehensive network infrastructure and management services that design; implement; and maintain reliable; secure; and high-performance network solutions for businesses of all sizes.",
 category: "Network Services",
@@ -342,8 +333,7 @@ marketPrice: "$999 - $4;000/month",
 contactInfo: {,
 phone: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com",
-},
+website: "https://ziontechgroup.com"},
 technology: ["Cisco", "Juniper", "Aruba", "Network monitoring tools", "Security appliances"],
 integrations: ["Network devices", "Security systems", "Monitoring tools", "Cloud platforms", "Business systems"],
 compliance: ["Network security standards", "Industry regulations", "Best practices"],
@@ -359,13 +349,12 @@ serviceLevel: "24/7 network monitoring and support",
 },
 
 // IT Consulting & Strategic Planning Services;
-{
-id: "it-consulting-strategic-planning-services",
+{id: "it-consulting-strategic-planning-services",
 title: "IT Consulting & Strategic Planning Services - Technology Strategy Excellence",
 description: "Strategic IT consulting and planning services that help businesses align technology with business objectives; optimize IT investments; and create roadmaps for digital transformation and technology innovation.",
 category: "IT Consulting",
 subcategory: "Strategic Planning",
-price: 299;,
+price: 299;
 currency: "$",
 pricingModel: "hourly",
 features: [
@@ -408,8 +397,7 @@ marketPrice: "$299 - $500/hour",
 contactInfo: {,
 phone: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com",
-},
+website: "https://ziontechgroup.com"},
 technology: ["Strategic frameworks", "Planning tools", "Analytics platforms", "Governance frameworks"],
 integrations: ["Business systems", "Technology platforms", "Analytics tools", "Governance systems"],
 compliance: ["Industry best practices", "Governance standards", "Regulatory requirements"],
@@ -425,8 +413,7 @@ serviceLevel: "Flexible consulting engagement models",
 },
 
 // IT Support & Help Desk Services;
-{
-id: "it-support-help-desk-services",
+{id: "it-support-help-desk-services",
 title: "IT Support & Help Desk Services - Reliable Technical Support",
 description: "Comprehensive IT support and help desk services that provide reliable technical assistance; problem resolution; and ongoing support for businesses to ensure smooth technology operations and user productivity.",
 category: "IT Support",
@@ -473,8 +460,7 @@ marketPrice: "$799 - $3;000/month",
 contactInfo: {,
 phone: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com",
-},
+website: "https://ziontechgroup.com"},
 technology: ["Help desk platforms", "Remote support tools", "Monitoring systems", "Knowledge management", "Reporting tools"],
 integrations: ["Business systems", "User management", "Monitoring tools", "Communication platforms"],
 compliance: ["Service level agreements", "Support standards", "User privacy"],
@@ -490,8 +476,7 @@ serviceLevel: "24/7 technical support and monitoring",
 },
 
 // Software Development & Custom Solutions;
-{
-id: "software-development-custom-solutions",
+{id: "software-development-custom-solutions",
 title: "Software Development & Custom Solutions - Tailored Technology Solutions",
 description: "Comprehensive software development and custom solution services that create tailored applications; integrate existing systems; and develop innovative technology solutions to meet specific business needs and objectives.",
 category: "Software Development",
@@ -538,8 +523,7 @@ marketPrice: "$1; 999 - $8;000/month",
 contactInfo: {,
 phone: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com",
-},
+website: "https://ziontechgroup.com"},
 technology: ["React", "Node.js", "Python", "Java", "C#", "Cloud platforms"],
 integrations: ["Business systems", "Databases", "APIs", "Cloud services", "Third-party platforms"],
 compliance: ["Security standards", "Quality standards", "Industry regulations"],
@@ -555,8 +539,7 @@ serviceLevel: "Comprehensive development and ongoing support",
 },
 
 // IT Project Management & Implementation Services;
-{
-id: "it-project-management-implementation-services",
+{id: "it-project-management-implementation-services",
 title: "IT Project Management & Implementation Services - Successful Project Delivery",
 description: "Professional IT project management and implementation services that ensure successful delivery of technology projects; manage resources effectively; and deliver projects on time and within budget.",
 category: "Project Management",
@@ -603,8 +586,7 @@ marketPrice: "$1; 499 - $6;000/month",
 contactInfo: {,
 phone: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com",
-},
+website: "https://ziontechgroup.com"},
 technology: ["Help desk platforms", "Remote support tools", "Monitoring systems", "Knowledge management", "Reporting tools"],
 integrations: ["Business systems", "User management", "Monitoring tools", "Communication platforms"],
 compliance: ["Service level agreements", "Support standards", "User privacy"],
@@ -620,8 +602,7 @@ serviceLevel: "24/7 technical support and monitoring",
 },
 
 // Software Development & Custom Solutions;
-{
-id: "software-development-custom-solutions",
+{id: "software-development-custom-solutions",
 title: "Software Development & Custom Solutions - Tailored Technology Solutions",
 description: "Comprehensive software development and custom solution services that create tailored applications; integrate existing systems; and develop innovative technology solutions to meet specific business needs and objectives.",
 category: "Software Development",
@@ -668,8 +649,7 @@ marketPrice: "$1; 999 - $8;000/month",
 contactInfo: {,
 phone: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com",
-},
+website: "https://ziontechgroup.com"},
 technology: ["React", "Node.js", "Python", "Java", "C#", "Cloud platforms"],
 integrations: ["Business systems", "Databases", "APIs", "Cloud services", "Third-party platforms"],
 compliance: ["Security standards", "Quality standards", "Industry regulations"],
@@ -685,8 +665,7 @@ serviceLevel: "Comprehensive development and ongoing support",
 },
 
 // IT Project Management & Implementation Services;
-{
-id: "it-project-management-implementation-services",
+{id: "it-project-management-implementation-services",
 title: "IT Project Management & Implementation Services - Successful Project Delivery",
 description: "Professional IT project management and implementation services that ensure successful delivery of technology projects; manage resources effectively; and deliver projects on time and within budget.",
 category: "Project Management",
@@ -733,8 +712,7 @@ marketPrice: "$1; 499 - $6;000/month",
 contactInfo: {,
 phone: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com",
-},
+website: "https://ziontechgroup.com"},
 technology: ["Project management tools", "Collaboration platforms", "Monitoring systems", "Reporting tools"],
 integrations: ["Business systems", "Project tools", "Communication platforms", "Analytics tools"],
 compliance: ["Project standards", "Quality standards", "Industry best practices"],
@@ -767,13 +745,12 @@ scalability: "Unlimited network devices",
 support: "Network automation expert support",
 certifications: ["Cisco", "Juniper", "VMware", "Network Automation"];
 },
-{
-id: 7; name: "Digital Workplace Platform",
+{id: 7; name: "Digital Workplace Platform",
 category: "Digital Transformation",
 subcategory: "Workplace Modernization",
 description: "Comprehensive digital workplace platform for remote work; collaboration; and productivity enhancement",
 pricing: "Professional",
-price: 18000;,
+price: 18000;
 pricingModel: "monthly",
 features: [
 "Unified communication",
@@ -806,8 +783,7 @@ contactInfo: {,
 phone: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
 website: "https://ziontechgroup.com",
-address: "364 E Main St STE 1008 Middletown DE 19709",
-},
+address: "364 E Main St STE 1008 Middletown DE 19709"},
 marketPrice: "$18; 000/month (Industry average: $35;000/month)",
 competitors: ["Microsoft 365", "Google Workspace", "Slack", "Zoom"],
 roi: "350% ROI within 8 months",
@@ -828,13 +804,12 @@ scalability: "Unlimited users",
 support: "Digital workplace expert support",
 certifications: ["Microsoft 365", "Google Workspace", "Change Management", "Digital Transformation"];
 },
-{
-id: 8; name: "API Management Platform",
+{id: 8; name: "API Management Platform",
 category: "Integration",
 subcategory: "API Management",
 description: "Enterprise-grade API management platform for design; development; security; and analytics",
 pricing: "Professional",
-price: 10000;,
+price: 10000;
 pricingModel: "monthly",
 features: [
 "API design and development",
@@ -867,8 +842,7 @@ contactInfo: {,
 phone: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
 website: "https://ziontechgroup.com",
-address: "364 E Main St STE 1008 Middletown DE 19709",
-},
+address: "364 E Main St STE 1008 Middletown DE 19709"},
 marketPrice: "$10; 000/month (Industry average: $20;000/month)",
 competitors: ["Apigee", "Kong", "AWS API Gateway", "Azure API Management"],
 roi: "300% ROI within 5 months",
@@ -889,13 +863,12 @@ scalability: "Unlimited APIs",
 support: "API management expert support",
 certifications: ["API Management", "Security", "Cloud Platforms", "Integration"];
 },
-{
-id: 9; name: "Intelligent Backup & Recovery",
+{id: 9; name: "Intelligent Backup & Recovery",
 category: "Data Protection",
 subcategory: "Backup & Recovery",
 description: "AI-powered backup and disaster recovery platform with intelligent automation and predictive analytics",
 pricing: "Professional",
-price: 8000;,
+price: 8000;
 pricingModel: "monthly",
 features: [
 "Intelligent backup scheduling",
@@ -928,8 +901,7 @@ contactInfo: {,
 phone: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
 website: "https://ziontechgroup.com",
-address: "364 E Main St STE 1008 Middletown DE 19709",
-},
+address: "364 E Main St STE 1008 Middletown DE 19709"},
 marketPrice: "$8; 000/month (Industry average: $15;000/month)",
 competitors: ["Veeam", "Commvault", "Rubrik", "Cohesity"],
 roi: "400% ROI within 4 months",
@@ -950,8 +922,7 @@ scalability: "Unlimited data",
 support: "Backup expert support",
 certifications: ["Veeam", "VMware", "Cloud Platforms", "Data Protection"];
 },
-{
-id: 10; name: "Performance Monitoring Platform",
+{id: 10; name: "Performance Monitoring Platform",
 category: "Monitoring",
 subcategory: "Performance Management",
 description: "Comprehensive performance monitoring platform for applications; infrastructure; and user experience",
@@ -984,13 +955,12 @@ targetAudience: [
 "Technology companies";
 ],
 tags: ["Performance Monitoring", "APM", "Infrastructure", "User Experience", "Analytics", "Optimization"],
-technology: string[], integrations: string[];,
+technology: string[], integrations: string[];
 compliance: string[], roi: string; competitors: string[];
 demoUrl?: string;
 caseStudies?: string[];
 websiteUrl?: string;,
-marketTrend: string; industryFocus: string[], scalability: string; customizationLevel: string; serviceLevel: string,
-}
+marketTrend: string; industryFocus: string[], scalability: string; customizationLevel: string; serviceLevel: string}
 
 export const COMPREHENSIVE_IT_SERVICES_2025: ComprehensiveITService[] = [
 // Cloud Infrastructure & Migration Services;
@@ -1000,7 +970,7 @@ title: "Cloud Infrastructure & Migration Services - Seamless Cloud Transformatio
 description: "Comprehensive cloud infrastructure and migration services that help businesses transition to the cloud; optimize cloud performance; and manage multi-cloud environments for improved scalability and cost efficiency.",
 category: "Cloud Services",
 subcategory: "Infrastructure & Migration",
-price: 2499;,
+price: 2499;
 currency: "$",
 pricingModel: "monthly",
 features: [
@@ -1044,8 +1014,7 @@ contactInfo: {,
 phone: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
 website: "https://ziontechgroup.com",
-address: "364 E Main St STE 1008 Middletown DE 19709",
-},
+address: "364 E Main St STE 1008 Middletown DE 19709"},
 technology: ["AWS", "Azure", "Google Cloud", "Kubernetes", "Docker", "Terraform"],
 integrations: ["On-premises systems", "Legacy applications", "Database systems", "Security platforms", "Monitoring tools"],
 compliance: ["SOC 2", "ISO 27001", "GDPR", "HIPAA", "Industry-specific regulations"],
@@ -1061,8 +1030,7 @@ serviceLevel: "24/7 managed cloud services",
 },
 
 // Cybersecurity & Information Security Services;
-{
-id: "cybersecurity-information-security-services",
+{id: "cybersecurity-information-security-services",
 title: "Cybersecurity & Information Security Services - Comprehensive Protection",
 description: "Advanced cybersecurity and information security services that provide comprehensive protection against cyber threats; implement security frameworks; and ensure compliance with industry regulations and standards.",
 category: "Cybersecurity",
@@ -1109,8 +1077,7 @@ marketPrice: "$1; 899 - $7;500/month",
 contactInfo: {,
 phone: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com",
-},
+website: "https://ziontechgroup.com"},
 technology: ["SIEM platforms", "EDR solutions", "Firewall systems", "Identity management", "Security frameworks"],
 integrations: ["Security tools", "Monitoring systems", "Compliance platforms", "Incident response systems", "Training platforms"],
 compliance: ["SOC 2", "ISO 27001", "NIST", "GDPR", "Industry-specific regulations"],
@@ -1126,8 +1093,7 @@ serviceLevel: "24/7 security monitoring and response",
 },
 
 // DevOps & CI/CD Pipeline Services;
-{
-id: "devops-cicd-pipeline-services",
+{id: "devops-cicd-pipeline-services",
 title: "DevOps & CI/CD Pipeline Services - Streamlined Development Operations",
 description: "Comprehensive DevOps and CI/CD pipeline services that automate software development processes; improve deployment efficiency; and enable continuous delivery for faster time-to-market and higher quality software.",
 category: "DevOps & Development",
@@ -1174,8 +1140,7 @@ marketPrice: "$1; 599 - $6;000/month",
 contactInfo: {,
 phone: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com",
-},
+website: "https://ziontechgroup.com"},
 technology: ["Jenkins", "GitLab CI", "GitHub Actions", "Docker", "Kubernetes", "Terraform"],
 integrations: ["Version control systems", "Testing frameworks", "Monitoring tools", "Cloud platforms", "Security tools"],
 compliance: ["Security best practices", "Quality standards", "Development standards"],
@@ -1191,8 +1156,7 @@ serviceLevel: "24/7 DevOps support and monitoring",
 },
 
 // Data Management & Analytics Services;
-{
-id: "data-management-analytics-services",
+{id: "data-management-analytics-services",
 title: "Data Management & Analytics Services - Data-Driven Business Intelligence",
 description: "Comprehensive data management and analytics services that help businesses collect; process; analyze; and visualize data to make informed decisions; optimize operations; and gain competitive advantages.",
 category: "Data Services",
@@ -1239,8 +1203,7 @@ marketPrice: "$1; 299 - $5;000/month",
 contactInfo: {,
 phone: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com",
-},
+website: "https://ziontechgroup.com"},
 technology: ["Python", "R", "SQL", "Tableau", "Power BI", "Apache Spark"],
 integrations: ["Data sources", "Business systems", "Cloud platforms", "Analytics tools", "Reporting systems"],
 compliance: ["GDPR", "CCPA", "Data privacy", "Industry regulations"],
@@ -1256,8 +1219,7 @@ serviceLevel: "24/7 data monitoring and support",
 },
 
 // Network Infrastructure & Management Services;
-{
-id: "network-infrastructure-management-services",
+{id: "network-infrastructure-management-services",
 title: "Network Infrastructure & Management Services - Reliable Network Solutions",
 description: "Comprehensive network infrastructure and management services that design; implement; and maintain reliable; secure; and high-performance network solutions for businesses of all sizes.",
 category: "Network Services",
@@ -1304,8 +1266,7 @@ marketPrice: "$999 - $4;000/month",
 contactInfo: {,
 phone: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com",
-},
+website: "https://ziontechgroup.com"},
 technology: ["Cisco", "Juniper", "Aruba", "Network monitoring tools", "Security appliances"],
 integrations: ["Network devices", "Security systems", "Monitoring tools", "Cloud platforms", "Business systems"],
 compliance: ["Network security standards", "Industry regulations", "Best practices"],
@@ -1321,13 +1282,12 @@ serviceLevel: "24/7 network monitoring and support",
 },
 
 // IT Consulting & Strategic Planning Services;
-{
-id: "it-consulting-strategic-planning-services",
+{id: "it-consulting-strategic-planning-services",
 title: "IT Consulting & Strategic Planning Services - Technology Strategy Excellence",
 description: "Strategic IT consulting and planning services that help businesses align technology with business objectives; optimize IT investments; and create roadmaps for digital transformation and technology innovation.",
 category: "IT Consulting",
 subcategory: "Strategic Planning",
-price: 299;,
+price: 299;
 currency: "$",
 pricingModel: "hourly",
 features: [
@@ -1370,8 +1330,7 @@ marketPrice: "$299 - $500/hour",
 contactInfo: {,
 phone: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com",
-},
+website: "https://ziontechgroup.com"},
 technology: ["Strategic frameworks", "Planning tools", "Analytics platforms", "Governance frameworks"],
 integrations: ["Business systems", "Technology platforms", "Analytics tools", "Governance systems"],
 compliance: ["Industry best practices", "Governance standards", "Regulatory requirements"],
@@ -1387,8 +1346,7 @@ serviceLevel: "Flexible consulting engagement models",
 },
 
 // IT Support & Help Desk Services;
-{
-id: "it-support-help-desk-services",
+{id: "it-support-help-desk-services",
 title: "IT Support & Help Desk Services - Reliable Technical Support",
 description: "Comprehensive IT support and help desk services that provide reliable technical assistance; problem resolution; and ongoing support for businesses to ensure smooth technology operations and user productivity.",
 category: "IT Support",
@@ -1435,8 +1393,7 @@ marketPrice: "$799 - $3;000/month",
 contactInfo: {,
 phone: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com",
-},
+website: "https://ziontechgroup.com"},
 technology: ["Help desk platforms", "Remote support tools", "Monitoring systems", "Knowledge management", "Reporting tools"],
 integrations: ["Business systems", "User management", "Monitoring tools", "Communication platforms"],
 compliance: ["Service level agreements", "Support standards", "User privacy"],
@@ -1452,8 +1409,7 @@ serviceLevel: "24/7 technical support and monitoring",
 },
 
 // Software Development & Custom Solutions;
-{
-id: "software-development-custom-solutions",
+{id: "software-development-custom-solutions",
 title: "Software Development & Custom Solutions - Tailored Technology Solutions",
 description: "Comprehensive software development and custom solution services that create tailored applications; integrate existing systems; and develop innovative technology solutions to meet specific business needs and objectives.",
 category: "Software Development",
@@ -1500,8 +1456,7 @@ marketPrice: "$1; 999 - $8;000/month",
 contactInfo: {,
 phone: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com",
-},
+website: "https://ziontechgroup.com"},
 technology: ["React", "Node.js", "Python", "Java", "C#", "Cloud platforms"],
 integrations: ["Business systems", "Databases", "APIs", "Cloud services", "Third-party platforms"],
 compliance: ["Security standards", "Quality standards", "Industry regulations"],
@@ -1517,8 +1472,7 @@ serviceLevel: "Comprehensive development and ongoing support",
 },
 
 // IT Project Management & Implementation Services;
-{
-id: "it-project-management-implementation-services",
+{id: "it-project-management-implementation-services",
 title: "IT Project Management & Implementation Services - Successful Project Delivery",
 description: "Professional IT project management and implementation services that ensure successful delivery of technology projects; manage resources effectively; and deliver projects on time and within budget.",
 category: "Project Management",
@@ -1565,8 +1519,7 @@ marketPrice: "$1; 499 - $6;000/month",
 contactInfo: {,
 phone: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com",
-},
+website: "https://ziontechgroup.com"},
 technology: ["Project management tools", "Collaboration platforms", "Monitoring systems", "Reporting tools"],
 integrations: ["Business systems", "Project tools", "Communication platforms", "Analytics tools"],
 compliance: ["Project standards", "Quality standards", "Industry best practices"],

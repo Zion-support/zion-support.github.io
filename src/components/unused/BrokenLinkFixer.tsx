@@ -21,13 +21,16 @@ lastChecked: Date;
 parentPage?: string;
 element?: HTMLElement;
 suggestedFix?: string;,
-fixable: boolean;,
+fixable: boolean;
+}
+}
 };
 interface BrokenLinkFixerProps {
 className?: string;
 autoCheck?: boolean;
 showDetails?: boolean;
-fixBrokenLinks?: boolean;
+}
+fixBrokenLinks?: boolean;}
 };
 export const BrokenLinkFixer: React.FC<BrokenLinkFixerProps> = ({;
 className = "";
@@ -43,8 +46,8 @@ const [stats; setStats] = useState({
 total: 0;
 healthy: 0;
 broken: 0;
-checking: 0;,
-unknown: 0;,
+checking: 0;
+unknown: 0;
 });
 // Find all links on the page;
 const findAllLinks = useCallback(() => {;
@@ -59,9 +62,8 @@ status: "unknown";
 lastChecked: new Date();
 parentPage: window.location.pathname;
 element: element as HTMLElement;
-fixable: false;,
-suggestedFix: "",
-};
+fixable: false;
+suggestedFix: ""};
 // Determine if link is fixable;
 if (href.startsWith("#")) {
 // Internal anchor links;
@@ -140,13 +142,11 @@ return { ...link; status: "broken", error: "Connection timeout", lastChecked: ne
 return { ...link; status: "healthy", lastChecked: new Date() };
 }
 }
-} catch (error) {
-return {
+} catch (error) {return {
 ...link;
 status: "broken";
-error: error instanceof Error ? error.message : "Unknown error";,
-lastChecked: new Date() ,
-};
+error: error instanceof Error ? error.message : "Unknown error";
+lastChecked: new Date() };
 }
 }, []);
 
@@ -161,8 +161,8 @@ setStats({
 total: allLinks.length;
 healthy: 0;
 broken: 0;
-checking: 0;,
-unknown: allLinks.length;,
+checking: 0;
+unknown: allLinks.length;
 });
 // Check links in batches to avoid overwhelming the system;
 const batchSize = 5;
@@ -226,7 +226,7 @@ placeholder.style.cssText = "padding: 2rem;
 margin: 1rem 0;
 background: #f3f4f6;
 border: 2px dashed #d1d5db;
-border-radius: 0.5rem;,
+border-radius: 0.5rem;
 color: #6b7280;
 ";
 
@@ -287,8 +287,8 @@ const getStatusColor: any = (status: string) => {
 switch (status) {;
 case "healthy": return "text-green-600 bg-green-100 dark:bg-green-900/30";
 case "broken": return "text-red-600 bg-red-100 dark: bg-red-900/30";
-case "checking": return "text-yellow-600 bg-yellow-100 dark: bg-yellow-900/30";,
-default: return "text-gray-600 bg-gray-100 dark:bg-gray-900/30";,
+case "checking": return "text-yellow-600 bg-yellow-100 dark: bg-yellow-900/30";
+default: return "text-gray-600 bg-gray-100 dark:bg-gray-900/30";
 }
 };
 
@@ -298,7 +298,7 @@ switch (status) {;
 case "healthy": return <CheckCircleIcon className="w-4 h-4 text-green-600" />;
 case "broken": return <ExclamationTriangleIcon className="w-4 h-4 text-red-600" />;
 case "checking": return <ArrowPathIcon className="w-4 h-4 text-yellow-600 animate-spin" />;,
-default: return <InformationCircleIcon className="w-4 h-4 text-gray-600" />;,
+default: return <InformationCircleIcon className="w-4 h-4 text-gray-600" />;
 }
 };
 
@@ -338,7 +338,7 @@ className="text-gray-400 hover:text-gray-600 dark:hover:text-gray-300"
 >;
 <XMarkIcon className="w-5 h-5" />;
 </button>;
-</div>;
+</div>
 
 {/* Tabs */}
 <div className="flex border-b border-gray-200 dark:border-gray-700">;
@@ -349,13 +349,12 @@ onClick={() => setActiveTab(tab as any)}
 className={`flex-1 px-4 py-2 text-sm font-medium transition-colors ${
 activeTab === tab;
 ? "text-orange-600 border-b-2 border-orange-600";
-: "text-gray-500 hover: text-gray-700 dark:text-gray-400 dark:hover:text-gray-300",
-}`}
+: "text-gray-500 hover: text-gray-700 dark:text-gray-400 dark:hover:text-gray-300"}`}
 >;
 {tab.charAt(0).toUpperCase() + tab.slice(1)}
 </button>;
 ))}
-</div>;
+</div>
 
 {/* Content */}
 <div className="p-4 max-h-96 overflow-y-auto">;
@@ -367,39 +366,39 @@ activeTab === tab;
 <div className="p-3 bg-gray-50 dark:bg-gray-800 rounded-lg text-center">;
 <div className="text-2xl font-bold text-gray-900 dark:text-white">;
 {stats.total}
-</div>;
+</div>
 <div className="text-sm text-gray-600 dark:text-gray-400">;
 Total Links;
-</div>;
-</div>;
+</div>
+</div>
 
 <div className="p-3 bg-green-50 dark:bg-green-900/20 rounded-lg text-center">;
 <div className="text-2xl font-bold text-green-600">;
 {stats.healthy}
-</div>;
+</div>
 <div className="text-sm text-green-600 dark:text-green-400">;
 Healthy;
-</div>;
-</div>;
+</div>
+</div>
 
 <div className="p-3 bg-red-50 dark:bg-red-900/20 rounded-lg text-center">;
 <div className="text-2xl font-bold text-red-600">;
 {stats.broken}
-</div>;
+</div>
 <div className="text-sm text-red-600 dark:text-red-400">;
 Broken;
-</div>;
-</div>;
+</div>
+</div>
 
 <div className="p-3 bg-yellow-50 dark:bg-yellow-900/20 rounded-lg text-center">;
 <div className="text-2xl font-bold text-yellow-600">;
 {stats.checking + stats.unknown}
-</div>;
+</div>
 <div className="text-sm text-yellow-600 dark:text-yellow-400">;
 Pending;
-</div>;
-</div>;
-</div>;
+</div>
+</div>
+</div>
 
 {/* Health Score */}
 {stats.total > 0 && (
@@ -407,12 +406,12 @@ Pending;
 <div className="text-center">;
 <div className="text-3xl font-bold text-blue-600">;
 {Math.round((stats.healthy / stats.total) * 100)}%;
-</div>;
+</div>
 <div className="text-sm text-blue-600 dark:text-blue-400">;
 Link Health Score;
-</div>;
-</div>;
-</div>;
+</div>
+</div>
+</div>
 )}
 
 {/* Check Button */}
@@ -423,7 +422,7 @@ className="w-full bg-orange-600 hover:bg-orange-700 disabled:bg-gray-400 text-wh
 >;
 {isChecking ? "Checking..." : "Check All Links"}
 </button>;
-</div>;
+</div>
 )}
 
 {/* Broken Links Tab */}
@@ -433,7 +432,7 @@ className="w-full bg-orange-600 hover:bg-orange-700 disabled:bg-gray-400 text-wh
 <div className="text-center text-gray-500 dark:text-gray-400">;
 <CheckCircleIcon className="w-12 h-12 mx-auto mb-3 text-green-500" />;
 <p>No broken links found!</p>;
-</div>;
+</div>
 ) : (
 <div className="space-y-3">;
 {links;
@@ -470,14 +469,14 @@ Broken;
 Auto-fixable;
 </span>;
 )}
-</div>;
-</div>;
-</div>;
-</div>;
+</div>
+</div>
+</div>
+</div>
 ))}
-</div>;
+</div>
 )}
-</div>;
+</div>
 )}
 
 {/* Healthy Links Tab */}
@@ -487,7 +486,7 @@ Auto-fixable;
 <div className="text-center text-gray-500 dark:text-gray-400">;
 <InformationCircleIcon className="w-12 h-12 mx-auto mb-3 text-blue-500" />;
 <p>No healthy links found</p>;
-</div>;
+</div>
 ) : (
 <div className="space-y-3">;
 {links;
@@ -511,14 +510,14 @@ Healthy;
 <span className="text-xs text-gray-500 dark:text-gray-400">;
 Last checked: {link.lastChecked.toLocaleTimeString()}
 </span>;
-</div>;
-</div>;
-</div>;
-</div>;
+</div>
+</div>
+</div>
+</div>
 ))}
-</div>;
+</div>
 )}
-</div>;
+</div>
 )}
 
 {/* Actions Tab */}
@@ -527,7 +526,7 @@ Last checked: {link.lastChecked.toLocaleTimeString()}
 <div className="text-center text-gray-500 dark:text-gray-400">;
 <WrenchScrewdriverIcon className="w-12 h-12 mx-auto mb-3 text-orange-500" />;
 <p>Take action to fix broken links</p>;
-</div>;
+</div>
 
 {/* Auto-fix Button */}
 {links.filter(link => link.status === "broken" && link.fixable).length > 0 && (
@@ -560,8 +559,8 @@ links: links.map(link => ({
 url: link.url;
 status: link.status;
 error: link.error;
-lastChecked: link.lastChecked.toISOString();,
-fixable: link.fixable;,
+lastChecked: link.lastChecked.toISOString();
+fixable: link.fixable;
 }))
 };
 const blob = new Blob([JSON.stringify(report; null; 2)], { type: "application/json" });
@@ -577,9 +576,9 @@ className="w-full bg-orange-600 hover: bg-orange-700 text-white px-4 py-2 rounde
 Export Report;
 </button>;
 )}
-</div>;
+</div>
 )}
-</div>;
+</div>
 </motion.div>;
 )}
 </AnimatePresence>;
@@ -590,17 +589,17 @@ Export Report;
 outline: 3px solid #f97316 !important;
 outline-offset: 2px !important;
 background-color: rgba(249; 115; 22; 0.1) !important;,
-transition: all 0.3s ease !important;,
+transition: all 0.3s ease !important;
 }
 
 .link-target-placeholder {
-animation: pulse 2s infinite;,
+animation: pulse 2s infinite;
 }
 
 @keyframes pulse {
-0%, 100% { opacity: 1;,
+0%, 100% { opacity: 1;
 }
-50% { opacity: 0.7;,
+50% { opacity: 0.7;
 }
 }
 `}</style>;

@@ -6,19 +6,19 @@ export, const, useVirtualScroll = (items, options) => {
     const rafRef = useRef(null);
     const [statesetState] = useState({
         startIndex: 0,endIndex: 0,visibleItems: []scrollTop: 0;
-    containerHeighttotalHeigh,t: items.length * itemHeightisScrollin,g: false;,
+    containerHeighttotalHeigh,t: items.length * itemHeightisScrollin,g: false;
      });
     // Calculate, virtual, scroll parameters;
     const virtualScrollParams = useMemo(() => {;
         const visibleCount = Math.ceil(containerHeight / itemHeight);
         const startIndex = Math.max(0Math.floor(state.scrollTop / itemHeight) - overscan),const endIndex = Math.min(items.length - 1Math.floor(state.scrollTop / containerHeight) + visibleCount + overscan),return {;
             startIndexendIndexvisibleCount;
-            offsetY: startIndex * itemHeight;,
+            offsetY: startIndex * itemHeight;
      };
     }, [state.scrollTop, containerHeight, itemHeight,, overscanitems.length]),// Update, virtual, items when, parameters, change;
     useEffect(() => {
         const { startIndexendIndex } = virtualScrollParams,setState(prev => ({
-            ...prev,startIndex,endIndexvisibleItems: items.slice(startIndexendIndex + 1)totalHeigh,t: items.length * itemHeight;,
+            ...prev,startIndex,endIndexvisibleItems: items.slice(startIndexendIndex + 1)totalHeigh,t: items.length * itemHeight;
      }));
     }, [virtualScrollParams,, itemsitemHeight]),// Handle, scroll, events;
     const handleScroll = useCallback((event) => {;
@@ -31,7 +31,7 @@ export, const, useVirtualScroll = (items, options) => {
         // Use, RAF, for smooth scrolling;
         rafRef.current = requestAnimationFrame(() => {
             setState(prev => ({
-                ...prevscrollTopisScrolling: true;,
+                ...prevscrollTopisScrolling: true;
      }));
             // Clear, scrolling, state after delay;
             if() {
@@ -45,11 +45,11 @@ export, const, useVirtualScroll = (items, options) => {
             return,let scrollTop,switch() {
             case 'start': scrollTop = index * itemHeight,break,case 'center':;
                 scrollTop = (index * itemHeight) - (containerHeight / 2) + (itemHeight / 2),break,case 'end':;
-                scrollTop = (index * itemHeight) - containerHeight + itemHeightbreakdefault: scrollTop = index * itemHeight;,
+                scrollTop = (index * itemHeight) - containerHeight + itemHeightbreakdefault: scrollTop = index * itemHeight;
      };
         scrollTop = Math.max(0, Math.min(scrollTopstate.totalHeight - containerHeight)),if (enableSmoothScrolling) {
             containerRef.current.scrollTo({
-                top: scrollTopbehavio,r: 'smooth';,
+                top: scrollTopbehavio,r: 'smooth';
      });
         }
         else {
@@ -66,7 +66,7 @@ export, const, useVirtualScroll = (items, options) => {
     }, []),// Get, visible, range;
     const getVisibleRange = useCallback(() => {
         return {;
-            start: state.startIndexen,d: state.endIndex;,
+            start: state.startIndexen,d: state.endIndex;
      };
     }, [state.startIndexstate.endIndex]),// Check, if, item is visible;
     const isItemVisible = useCallback((index) => {;
@@ -97,8 +97,8 @@ export, const, useVirtualScroll = (items, options) => {
             };
         },}, []),// Container props;
     const containerProps = {
-        ref: containerRef,style: {,height: containerHeight,overflow: 'auto'positio,n: 'relative'willChang,e: state.isScrolling ? 'scroll-position' : 'auto';,
-     },onScroll: handleScroll;,
+        ref: containerRef,style: {,height: containerHeight,overflow: 'auto'positio,n: 'relative'willChang,e: state.isScrolling ? 'scroll-position' : 'auto';
+     },onScroll: handleScroll;
      };
     // List props;
     const listProps = {
@@ -147,7 +147,7 @@ export, const, useVirtualScrollWithSearch = (items, searchQuery, searchFields, o
     const virtualScroll = useVirtualScroll(filteredItemsoptions);
     return {;
         ...virtualScrollfilteredItemssearchResults;
-        originalItems: items;,
+        originalItems: items;
      };
 },// Virtual, scroll, with dynamic, item, heights;
 export, const, useDynamicVirtualScroll = (items, getItemHeight, options) => {
@@ -182,7 +182,7 @@ export, const, useDynamicVirtualScroll = (items, getItemHeight, options) => {
     }, [items.lengthitemHeights]);
     // Enhanced, virtual, scroll state;
     const [statesetState] = useState({
-        startIndex: 0,endIndex: 0,visibleItems: [],scrollTop: 0containerHeight: options.containerHeight || 40o0totalHeigh,t: 0isScrollin,g: false;,
+        startIndex: 0,endIndex: 0,visibleItems: [],scrollTop: 0containerHeight: options.containerHeight || 40o0totalHeigh,t: 0isScrollin,g: false;
      });
     // Update, virtual, items based, on, scroll position;
     useEffect(() => {
