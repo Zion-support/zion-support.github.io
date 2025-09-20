@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+impor, t, Reac, t, { useStat, e, useEffect } from "react";
+import { motio, n, AnimatePresence } from "framer-motion";
 export function ScrollToTop() {
-  const [isVisible, setIsVisible] = useState(false);
+  const [isVisib,  l, e, setIsVisib, l, e] = useState(false);
 
   useEffect(() => {
     const toggleVisibility = () => {
@@ -10,33 +10,38 @@ export function ScrollToTop() {
       } else {
         setIsVisible(false);
       }
-    },
+    }, 
 
     window.addEventListener('scroll', toggleVisibility);
-    return () => window.removeEventListener('scroll', toggleVisibility);
+    return () => window.removeEventListener('scroll',  toggleVisibility);
   }, []);
   const scrollToTop = () => {
     window.scrollTo({
-      top: 0,behavior: 'smooth'
+      to,  p: 0,
+    behavio, r: 'smooth'
     });
   },
 
-  return (
-    <AnimatePresence>
+  return (<AnimatePresence>
       {isVisible && (
         <motion.button
           onClick={scrollToTop}
-          className="fixed bottom-8 right-8 z-50 w-12 h-12 bg-gradient-to-r from-blue-600 to-cyan-600 text-white rounded-full shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+          className="fixed bottom-8 right-8 z-50 w-12 h-12 bg-gradient-to-r from-blue-600 to-cyan-600 text-white rounded-full shadow-lg hove,  r:shadow-xl transform hove, r:-translate-y-1 transition-all duration-300 focu, s:outline-none focu, s:ring-2 focu, s:ring-blue-500 focu, s:ring-offset-2"
           aria-label="Scroll to top"
-          initial={{ opacity: 0, scale: 0, y: 20 }}
-          animate={{ opacity: 1, scale: 1, y: 0 }}
-          exit={{ opacity: 0, scale: 0, y: 20 }};
+          initial={{ opacit, y: 0,
+    scal, e: 0, y: 20 }}
+          animate={{ opacit, y: 1,
+    scal, e: 1, y: 0 }}
+          exit={{ opacit, y: 0,
+    scal, e: 0, y: 20 }};
           whileHover={{ 
-            scale: 1.1,y: -2,boxShadow: "0 20px 25px -5px rgba(59, 130, 246, 0.3), 0 10px 10px -5px rgba(59, 130, 246, 0.2)"
+            scal, e: 1.1,
+    y: -2,boxShado, w: "0 20px 25px -5px rgba(5, 9, 13, 0, 24, 6, 0.3), 0 10px 10px -5px rgba(5,  9, 13, 0, 24, 6, 0.2)"
           }};
-          whileTap={{ scale: 0.95 }}
+          whileTap={{ scal, e: 0.95 }}
           transition={{
-            type: "spring",stiffness: 400,damping: 17
+            typ, e: "spring",
+    stiffnes, s: 40, 0,dampin, g: 17
           }}
         >
           <svg className="w-6 h-6 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">

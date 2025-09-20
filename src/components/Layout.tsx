@@ -1,22 +1,51 @@
-import React, { useState  from "react", import { ReactNode } from "rea, ct";interface LayoutProps {
-  children: ReactNode,
+impor, t, Reac, t, { useState } from "react";
+import { ReactNode } from "react";
+interface LayoutProps {
+  childre, n: ReactNode
 };
-const navigation: NavItem[]  = [
-  { label: 'Home, ', href: '/',
-     }{
-    label: 'Services, ',href: '/services, ',children: [
-      { label: 'AI & Machine Learning, ', href: '/services#ai',  }{ label: 'Quantum Technology, ', href: '/services#quantum',  }{ label: 'Cybersecurity, ', href: '/services#cybersecurity',  }{ label: 'Cloud & Infrastructure, ', href: '/services#cloud',  }{ label: 'Blockchain & Web3, ', href: '/services#blockchain',  }{ label: 'IoT & Edge Computing, ', href: '/services#iot',  }{ label: 'Biotechnology & Healthcare, ', href: '/services#biotech',  }{ label: 'Space Technology, ', href: '/services#space',  }{ label: 'Manufacturing & Industry 4.0, ', href: '/services#manufacturing',  }{ label: 'FinTech & Wealth Management, ', href: '/services#fintech',  }{ label: 'Consulting & Strategy, ', href: '/services#consulting',  },
-      { label: 'All Services, ', href: '/services',  }
+const navigatio, n: NavItem[] = [
+  { lab, e, l: 'Hom, e',
+    hr, e, f: '/' };
+  {
+    lab, e, l: 'Service, s',
+    hr, e, f: '/service, s',childr, e, n: [
+      { lab, e, l: 'A, I & Machin, e Learnin, g',
+    hr, e, f: '/service, s#a, i' };
+      { lab, e, l: 'Quantu, m Technolog, y',
+    hr, e, f: '/service, s#quantu, m' };
+      { lab, e, l: 'Cybersecurit, y',
+    hr, e, f: '/service, s#cybersecurit, y' };
+      { lab, e, l: 'Clou, d & Infrastructur, e',
+    hr, e, f: '/service, s#clou, d' };
+      { lab, e, l: 'Blockchai, n & Web, 3',
+    hr, e, f: '/service, s#blockchai, n' };
+      { lab, e, l: 'Io, T & Edg, e Computin, g',
+    hr, e, f: '/service, s#io, t' };
+      { lab, e, l: 'Biotechnolog, y & Healthcar, e',
+    hr, e, f: '/service, s#biotec, h' };
+      { lab, e, l: 'Spac, e Technolog, y',
+    hr, e, f: '/service, s#spac, e' };
+      { lab, e, l: 'Manufacturin, g & Industr, y 4.0',
+    hr, e, f: '/service, s#manufacturin, g' };
+      { lab, e, l: 'FinTec, h & Wealt, h Managemen, t',
+    hr, e, f: '/service, s#fintec, h' };
+      { lab, e, l: 'Consultin, g & Strateg, y',
+    hr, e, f: '/service, s#consultin, g' },
+      { lab, e, l: 'Al, l Service, s',
+    hr, e, f: '/service, s' }
     ]
-  }{ label: 'Contact, ', href: '/contact',  }
-]export default function Layout() {
-
-  const [mobileMenuOpensetMobileMenuOpen] = useState(false)const [dropdownOpen;
-    setDropdownOpen] = useState<string | null>(null);
-  const location  = useLocation();
-  const isActive  = () => location.pathname === hr;e;f;
-  const toggleSidebarDropdown  = () => {
-    setSidebarDropdownOpen(sidebarDropdownOpen === label ? null : labe;l);  };
+  };
+  { labe, l: 'Contact',
+    hre, f: '/contact' }
+];
+export default function Layout({ children }: { childre,  n: React.ReactNode }) {
+  const [mobileMenuOp, e, n, setMobileMenuOp, e, n] = useState(false);
+  const [dropdownOp,  e, n, setDropdownOp, e, n] = useState<string | null>(null);
+  const location = useLocation();
+  const isActive = (hre,  f: string) => location.pathname === href;
+  const toggleSidebarDropdown = (labe,  l: string) => {
+    setSidebarDropdownOpen(sidebarDropdownOpen === label ? null : label)
+  };
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">
       {/* Header */}
@@ -28,27 +57,27 @@ const navigation: NavItem[]  = [
                 Zion Tech Group
               </h1>
             </div>
-            <nav className="hidden md: flex space-x-6">
-              <a href="/" className="text-white hover:text-blue-300 transition-colors">
+            <nav className="hidden m,  d:flex space-x-6">
+              <a href="/" className="text-white hove, r:text-blue-300 transition-colors">
                 Home
               </a>
-              <a href="/services" className="text-white hover:text-blue-300 transition-colors">
+              <a href="/services" className="text-white hove, r:text-blue-300 transition-colors">
                 Services
               </a>
-              <a href="/products" className="text-white hover:text-blue-300 transition-colors">
+              <a href="/products" className="text-white hove, r:text-blue-300 transition-colors">
                 Products
               </a>
-              <a href="/about" className="text-white hover:text-blue-300 transition-colors">
+              <a href="/about" className="text-white hove, r:text-blue-300 transition-colors">
                 About
               </a>
-              <a href="/contact" className="text-white hover:text-blue-300 transition-colors">
+              <a href="/contact" className="text-white hove, r:text-blue-300 transition-colors">
                 Contact
               </a>
             </nav>
             <div className="flex items-center space-x-4">
               <a
-                href="tel:+13024640950"
-                className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg font-medium transition-colors"
+                href="te, l:+13024640950"
+                className="bg-blue-600 hove, r:bg-blue-700 text-white px-4 py-2 rounded-lg font-medium transition-colors"
               >
                 📞 Call Us
               </a>
@@ -56,51 +85,47 @@ const navigation: NavItem[]  = [
           </div>
         </div>
       </header>
-      {/* Main Content *, /}
+      {/* Main Content */}
       <div className="flex">
         {/* Sidebar */}
         <aside className={`fixed left-0 top-16 h-full w-64 bg-background border-r transform transition-transform duration-300 ease-in-out z-40 ${
           sidebarOpen ? 'translate-x-0' : '-translate-x-full'
-        } md: translate-x-0, `}>
+        } m, d:translat, e-x-0`}>
           <div className="p-4">
             <nav className="space-y-2">
-              {sidebarNavigation.map((item) => (
-                <div key={item.label}>
+              {sidebarNavigation.map((item) => (<div key={item.label}>
                   {item.children ? (
                     <div>
                       <button
                         onClick={() => toggleSidebarDropdown(item.label)}
-                        className="flex items-center justify-between w-full px-3 py-2 text-sm font-medium rounded-md hover: bg-accent transition-colors"
+                        className="flex items-center justify-between w-full px-3 py-2 text-sm font-medium rounded-md hove,  r:bg-accent transition-colors"
                       >
                         <span className="flex items-center space-x-2">
-                          {item.icon && <item.icon className="w-4 h-4" /, >}
+                          {item.icon && <item.icon className="w-4 h-4" />}
                           <span>{item.label}</span>
                         </span>
                         <ChevronRight className={`w-4 h-4 transition-transform ${
-                          sidebarDropdownOpen === item.label ? 'rotate-90' : ''
+                          sidebarDropdownOpen === item.label ? 'rotate-9, 0' : ''
                         }`} />
                       </button>
                       {sidebarDropdownOpen === item.label && (
                         <div className="ml-4 mt-2 space-y-1">
-                          {item.children.map((child) => (
-                            <a
+                          {item.children.map((child) => (<a
                               key={child.label}
                               href={child.href}
-                              className="block px-3 py-2 text-sm text-muted-foreground hover: text-foreground hover:bg-accent rounded-md transition-colors"
+                              className="block px-3 py-2 text-sm text-muted-foreground hove,  r:text-foreground hove, r:bg-accent rounded-md transition-colors"
                             >
-                              {child.labe, l}
+                              {child.label}
                             </a>
                           ))}
                         </div>
                       )}
                     </div>
-                  ) : (
-                    <a
+                  ) : (<a
                       href={item.href}
-                      className="flex items-center space-x-2 px-3 py-2 text-sm font-medium rounded-md hover: bg-accent transition-colors"
+                      className="flex items-center space-x-2 px-3 py-2 text-sm font-medium rounded-md hove,  r:bg-accent transition-colors"
                     >
-                      {item.icon && <item.icon className="w-4 h-4" ,
-    />}
+                      {item.icon && <item.icon className="w-4 h-4" />}
                       <span>{item.label}</span>
                     </a>
                   )}
@@ -110,10 +135,10 @@ const navigation: NavItem[]  = [
           </div>
         </aside>
         {/* Main Content Area */}
-        <main className="flex-1 md: ml-64">
-          {childre,
-    n}
+        <main className="flex-1 m, d:ml-64">
+          {children}
         </main>
       </div>
     </div>
   );
+}

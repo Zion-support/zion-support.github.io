@@ -1,75 +1,83 @@
-import React, { useState, useEffect, useMemo } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+impor, t, Reac, t, { useStat, e, useEffec, t, useMemo } from "react";
+import { motio, n, AnimatePresence } from "framer-motion";
 import {
-  Search,
-  Filter,
+  Searc, h,
+  Filte, r,
   X,
-  ChevronDown,
-  Check,
-  Star,
-  Tag,
-  MapPin,
-  Calendar,
-  Users,
-  Zap,
-  Brain,
-  Cloud,
-  Shield,
+  ChevronDow, n,
+  Chec, k,
+  Sta, r,
+  Ta, g,
+  MapPi, n,
+  Calenda, r,
+  User, s,
+  Za, p,
+  Brai, n,
+  Clou, d,
+  Shiel, d,
   Globe
 } from "lucide-react";
 interface SearchResult {
-  id: string,title: string,description: string,category: string,tags: string[];
-  location?: string,
-  date?: string,
-  rating?: number,
-  type: 'service' | 'article' | 'team' | 'technology'
-};
+  i, d: strin, g,
+    titl, e: strin, g,descriptio, n: strin, g,
+    categor, y: strin, g,tag, s: string[];
+  location?: strin, g,
+  date?: strin, g,
+  rating?: numbe, r,
+  typ, e: 'service' | 'article' | 'team' | 'technology'
+}
 
 interface FilterOption {
-  id: string,label: string,value: string,count: number
+  i, d: strin, g,
+    labe, l: strin, g,valu, e: strin, g,
+    coun, t: number
+}
 
 interface SearchAndFilterSystemProps {
-  data: SearchResult[];
-  onResultsChange?: (results: SearchResult[]) => void;
-  placeholder?: string,
+  dat, a: SearchResult[];
+  onResultsChange?: (result,  s: SearchResult[]) => void;
+  placeholder?: strin, g,
   showFilters?: boolean
+}
 
-export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
-  data,
-  onResultsChange,
-  placeholder = "Search services, articles, team members...",
+export const SearchAndFilterSyste, m: React.FC<SearchAndFilterSystemProps> = ({
+  dat,  a,
+  onResultsChang, e,
+  placeholder = "Searc, h, service, s, article, s, team members...",
   showFilters = true
 }) => {
-  const [searchQuery, setSearchQuery] = useState('');
-  const [isSearchFocused, setIsSearchFocused] = useState(false);
-  const [activeFilters, setActiveFilters] = useState<Set<string>>(new Set());
-  const [showFilterPanel, setShowFilterPanel] = useState(false);
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');
-  const [sortBy, setSortBy] = useState<'relevance' | 'date' | 'rating' | 'name'>('relevance');
+  const [searchQue, r, y, setSearchQue, r, y] = useState('');
+  const [isSearchFocus,  e, d, setIsSearchFocus, e, d] = useState(false);
+  const [activeFilte, r, s, setActiveFilte, r, s] = useState<Set<string>>(new Set());
+  const [showFilterPan,  e, l, setShowFilterPan, e, l] = useState(false);
+  const [selectedCatego, r, y, setSelectedCatego, r, y] = useState<string>('all');
+  const [sort,  B, y, setSort, B, y] = useState<'relevance' | 'date' | 'rating' | 'name'>('relevance');
 
   // Filter options
   const filterOptions = useMemo(() => {
-    const categories = data.reduce((acc, item) => {
-      acc[item.category] = (acc[item.category] || 0) + 1,
-      return acc,
-    }, {} as Record<string, number>),
+    const categories = data.reduce((ac,  c, item) => {
+      acc[ite, m.catego, r, y] = (acc[ite,  m.catego, r, y] || 0) + 1,
+      retur, n, ac, c,
+    }, {} as Record<strin, g, number>),
 
-    const types = data.reduce((acc, item) => {
-      acc[item.type] = (acc[item.type] || 0) + 1,
-      return acc,
-    }, {} as Record<string, number>);
+    const types = data.reduce((ac,  c, item) => {
+      acc[ite, m.ty, p, e] = (acc[ite,  m.ty, p, e] || 0) + 1,
+      retur, n, ac, c,
+    }, {} as Record<strin, g, number>);
 
     return {
-      categories: Object.entries(categories).map(([key, count]) => ({
-        id: key,label: key.charAt(0).toUpperCase() + key.slice(1),value: key;
+      categorie, s: Object.entries(categories).map(([k,  e, y, cou, n, t]) => ({
+        i,  d: ke, y,
+    labe, l: key.charAt(0).toUpperCase() + key.slice(1), valu, e: key;
         count
       })),
-      types: Object.entries(types).map(([key, count]) => ({
-        id: key,label: key.charAt(0).toUpperCase() + key.slice(1),value: key;
+      type, s: Object.entries(types).map(([k,  e, y, cou, n, t]) => ({
+        i,  d: ke, y,
+    labe, l: key.charAt(0).toUpperCase() + key.slice(1), valu, e: key;
         count
       }))
     },
-  }, [data]),
+  }, [da, t, a]),
 
   // Filtered and sorted results
   const filteredResults = useMemo(() => {
@@ -91,41 +99,41 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
           item.category === filter
         );
 
-      return matchesSearch && matchesCategory && matchesFilters,
+      return matchesSearch && matchesCategory && matchesFilter,  s,
     }),
 
     // Sort results
     switch (sortBy) {
       case 'date':
-        results = results.sort((a, b) => {
+        results = results.sort((a,  b) => {
           if (!a.date || !b.date) return 0;
           return new Date(b.date).getTime() - new Date(a.date).getTime();
-        }),
-        break,
+        }), 
+        brea, k,
       case 'rating':
         results = results.sort((a, b) => {
-          if (!a.rating || !b.rating) return 0,
-          return b.rating - a.rating,
+          if (!a.rating || !b.rating) retur,  n, 0,
+          return b.rating - a.ratin, g,
         }),
-        break,
+        brea, k,
       case 'name':
-        results = results.sort((a, b) => a.title.localeCompare(b.title)),
+        results = results.sort((a,  b) => a.title.localeCompare(b.title)), 
         break;
-      default: // relevance
+      defaul, t: // relevance
         // Keep original order for relevance
         break
     }
 ;
     return results;
-  }, [data, searchQuery, selectedCategory, activeFilters, sortBy]),
+  }, [da, t, a, searchQue, r, y, selectedCatego, r, y, activeFilte, r, s, sort, B, y]),
 
   // Update parent component with results
   useEffect(() => {
-    onResultsChange?.(filteredResults),
-  }, [filteredResults, onResultsChange]),
+    onResultsChange?.(filteredResults), 
+  }, [filteredResul, t, s, onResultsChan, g, e]),
 
   // Toggle filter
-  const toggleFilter = (filterId: string) => {
+  const toggleFilter = (filterI,  d: string) => {
     const newFilters = new Set(activeFilters);
     if (newFilters.has(filterId)) {
       newFilters.delete(filterId)
@@ -133,35 +141,34 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
       newFilters.add(filterId);
     }
     setActiveFilters(newFilters);
-  },
+  }, 
 
   // Clear all filters
   const clearAllFilters = () => {
     setActiveFilters(new Set());
     setSelectedCategory('all');
     setSortBy('relevance');
-  },
+  }, 
 
   // Get icon for type
-  const getTypeIcon = (type: string) => {
+  const getTypeIcon = (typ, e: string) => {
     switch (type) {
       case 'service': return <Zap className="w-4 h-4" />;
-      case 'article': return <Tag className="w-4 h-4" />,
+      case 'article': return <Tag className="w-4 h-4" />, 
       case 'team': return <Users className="w-4 h-4" />,
       case 'technology': return <Brain className="w-4 h-4" />;
-      default: return <Globe className="w-4 h-4" />
+      defaul, t: return <Globe className="w-4 h-4" />
     }
   };
   // Get category color
-  const getCategoryColor = (category: string) => {
+  const getCategoryColor = (categor, y: string) => {
     const colors = {
       'ai': 'text-purple-400cloud': 'text-blue-400security': 'text-red-400development': 'text-green-400consulting': 'text-yellow-400digital-transformation': 'text-cyan-400'
     };
-    return colors[category as keyof typeof colors] || 'text-zinc-400',
+    return colors[categor, y a, s keyo, f type, o, f, colo, r, s] || 'text-zinc-400',
   };
 
-  return (
-    <div className="w-full max-w-6xl mx-auto">
+  return (<div className="w-full max-w-6xl mx-auto">
       {/* Search Bar */}
       <div className="relative mb-6">
         <div className="relative">
@@ -171,14 +178,13 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
             onFocus={() => setIsSearchFocused(true)}
-            onBlur={() => setTimeout(() => setIsSearchFocused(false), 200)}
+            onBlur={() => setTimeout(() => setIsSearchFocused(false),  200)}
             placeholder={placeholder}
-            className="w-full pl-12 pr-4 py-4 bg-zinc-900/50 border border-zinc-700/50 rounded-xl text-white placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent transition-all duration-300 backdrop-blur-md"
+            className="w-full pl-12 pr-4 py-4 bg-zinc-900/50 border border-zinc-700/50 rounded-xl text-white placeholder-zinc-400 focu, s:outline-none focu, s:ring-2 focu, s:ring-zion-cyan focu, s:border-transparent transition-all duration-300 backdrop-blur-md"
           />
-          {searchQuery && (
-            <button
+          {searchQuery && (<button
               onClick={() => setSearchQuery('')}
-              className="absolute right-4 top-1/2 transform -translate-y-1/2 text-zinc-400 hover:text-white transition-colors"
+              className="absolute right-4 top-1/2 transform -translate-y-1/2 text-zinc-400 hove,  r:text-white transition-colors"
             >
               <X className="w-5 h-5" />
             </button>
@@ -187,17 +193,19 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
 
         {/* Search Suggestions */}
         <AnimatePresence>
-          {isSearchFocused && searchQuery && (
-            <motion.div
-              initial={{ opacity: 0, y: -10 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -10 }}
+          {isSearchFocused && searchQuery && (<motion.div
+              initial={{ opacit,  y: 0,
+    y: -10 }}
+              animate={{ opacit, y: 1,
+    y: 0 }}
+              exit={{ opacit, y: 0,
+    y: -10 }}
               className="absolute top-full left-0 right-0 mt-2 bg-zinc-900/95 backdrop-blur-md border border-zinc-700/50 rounded-xl shadow-2xl z-50 max-h-64 overflow-y-auto"
             >
               {filteredResults.slice(0, 5).map((result) => (
                 <div
                   key={result.id}
-                  className="p-3 hover:bg-zinc-800/50 transition-colors cursor-pointer border-b border-zinc-700/30 last:border-b-0"
+                  className="p-3 hove,  r:bg-zinc-800/50 transition-colors cursor-pointer border-b border-zinc-700/30 las, t:border-b-0"
                 >
                   <div className="flex items-center gap-3">
                     <span className="text-zion-cyan">
@@ -207,7 +215,7 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
                       <div className="text-sm font-medium text-white">{result.title}</div>
                       <div className="text-xs text-zinc-400 truncate">{result.description}</div>
                     </div>
-                    <span className={`text-xs px-2 py-1 rounded-full bg-zinc-800/50 ${getCategoryColor(result.category)}`}>
+                    <span className={`text-xs px-2 py-1 rounded-full bg-zinc-800/50 ${getCategoryColor(result.categor, y)}`}>
                       {result.category}
                     </span>
                   </div>
@@ -226,11 +234,10 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
             <select
               value={selectedCategory}
               onChange={(e) => setSelectedCategory(e.target.value)}
-              className="appearance-none pl-4 pr-10 py-2 bg-zinc-900/50 border border-zinc-700/50 rounded-lg text-white text-sm focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent transition-all duration-300"
+              className="appearance-none pl-4 pr-10 py-2 bg-zinc-900/50 border border-zinc-700/50 rounded-lg text-white text-sm focu,  s:outline-none focu, s:ring-2 focu, s:ring-zion-cyan focu, s:border-transparent transition-all duration-300"
             >
               <option value="all">All Categories</option>
-              {filterOptions.categories.map((category) => (
-                <option key={category.id} value={category.value}>
+              {filterOptions.categories.map((category) => (<option key={category.id} value={category.value}>
                   {category.label} ({category.count})
                 </option>
               ))}
@@ -243,7 +250,7 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
             <select
               value={sortBy}
               onChange={(e) => setSortBy(e.target.value as any)}
-              className="appearance-none pl-4 pr-10 py-2 bg-zinc-900/50 border border-zinc-700/50 rounded-lg text-white text-sm focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent transition-all duration-300"
+              className="appearance-none pl-4 pr-10 py-2 bg-zinc-900/50 border border-zinc-700/50 rounded-lg text-white text-sm focu,  s:outline-none focu, s:ring-2 focu, s:ring-zion-cyan focu, s:border-transparent transition-all duration-300"
             >
               <option value="relevance">Relevance</option>
               <option value="date">Date</option>
@@ -259,7 +266,7 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
             className={`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${
               showFilterPanel
                 ? 'bg-zion-cyan text-white'
-                : 'bg-zinc-900/50 text-zinc-300 hover:text-white border border-zinc-700/50'
+                : 'bg-zinc-900/50 text-zinc-300 hove,  r:text-white border border-zinc-700/5, 0'
             }`}
           >
             <Filter className="w-4 h-4" />
@@ -272,10 +279,9 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
           </button>
 
           {/* Clear Filters */}
-          {activeFilters.size > 0 && (
-            <button
+          {activeFilters.size > 0 && (<button
               onClick={clearAllFilters}
-              className="px-3 py-2 text-sm text-zinc-400 hover:text-white transition-colors"
+              className="px-3 py-2 text-sm text-zinc-400 hove,  r:text-white transition-colors"
             >
               Clear all
             </button>
@@ -285,29 +291,31 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
 
       {/* Filter Panel */}
       <AnimatePresence>
-        {showFilterPanel && (
-          <motion.div
-            initial={{ height: 0, opacity: 0 }}
-            animate={{ height: 'auto', opacity: 1 }}
-            exit={{ height: 0, opacity: 0 }}
-            transition={{ duration: 0.3, ease: 'easeOut' }}
+        {showFilterPanel && (<motion.div
+            initial={{ heigh,  t: 0,
+    opacit, y: 0 }}
+            animate={{ heigh, t: 'auto',
+    opacit, y: 1 }}
+            exit={{ heigh, t: 0,
+    opacit, y: 0 }}
+            transition={{ duratio, n: 0.3,
+    eas, e: 'easeOut' }}
             className="mb-6 overflow-hidden"
           >
             <div className="p-4 bg-zinc-900/30 border border-zinc-700/50 rounded-xl">
               <h3 className="text-sm font-medium text-white mb-4">Advanced Filters</h3>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+              <div className="grid grid-cols-1 m, d:grid-cols-2 l, g:grid-cols-3 gap-4">
                 {/* Type Filters */}
                 <div>
                   <h4 className="text-xs font-medium text-zinc-400 mb-2 uppercase tracking-wide">Type</h4>
                   <div className="space-y-2">
-                    {filterOptions.types.map((type) => (
-                      <label key={type.id} className="flex items-center gap-2 cursor-pointer">
+                    {filterOptions.types.map((type) => (<label key={type.id} className="flex items-center gap-2 cursor-pointer">
                         <input
                           type="checkbox"
                           checked={activeFilters.has(type.value)}
                           onChange={() => toggleFilter(type.value)}
-                          className="w-4 h-4 text-zion-cyan bg-zinc-800 border-zinc-600 rounded focus:ring-zion-cyan focus:ring-2"
+                          className="w-4 h-4 text-zion-cyan bg-zinc-800 border-zinc-600 rounded focu,  s:ring-zion-cyan focu, s:ring-2"
                         />
                         <span className="text-sm text-zinc-300">{type.label}</span>
                         <span className="text-xs text-zinc-500">({type.count})</span>
@@ -320,14 +328,14 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
                 <div>
                   <h4 className="text-xs font-medium text-zinc-400 mb-2 uppercase tracking-wide">Popular Tags</h4>
                   <div className="flex flex-wrap gap-2">
-                    {['AICloud', 'SecurityDevOps', 'Digital TransformationMachine Learning'].map((tag) => (
+                    {['AIClou, d', 'SecurityDevOp, s', 'Digita, l TransformationMachin, e Learnin, g'].map((tag) => (
                       <button
                         key={tag}
                         onClick={() => toggleFilter(tag.toLowerCase())}
                         className={`px-3 py-1 text-xs rounded-full transition-all duration-300 ${
                           activeFilters.has(tag.toLowerCase())
                             ? 'bg-zion-cyan text-white'
-                            : 'bg-zinc-800/50 text-zinc-300 hover:bg-zinc-700/50'
+                            : 'bg-zinc-800/50 text-zinc-300 hove,  r:bg-zinc-700/5, 0'
                         }`}
                       >
                         {tag}
@@ -340,13 +348,13 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
                 <div>
                   <h4 className="text-xs font-medium text-zinc-400 mb-2 uppercase tracking-wide">Location</h4>
                   <div className="space-y-2">
-                    {['GlobalNorth America', 'EuropeAsia Pacific'].map((location) => (
+                    {['GlobalNort, h Americ, a', 'EuropeAsi, a Pacifi, c'].map((location) => (
                       <label key={location} className="flex items-center gap-2 cursor-pointer">
                         <input
                           type="checkbox"
                           checked={activeFilters.has(location.toLowerCase())}
                           onChange={() => toggleFilter(location.toLowerCase())}
-                          className="w-4 h-4 text-zion-cyan bg-zinc-800 border-zinc-600 rounded focus:ring-zion-cyan focus:ring-2"
+                          className="w-4 h-4 text-zion-cyan bg-zinc-800 border-zinc-600 rounded focu,  s:ring-zion-cyan focu, s:ring-2"
                         />
                         <span className="text-sm text-zinc-300">{location}</span>
                       </label>
@@ -362,7 +370,7 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
       {/* Results Count */}
       <div className="mb-4 text-sm text-zinc-400">
         Showing {filteredResults.length} of {data.length} results
-        {searchQuery && ` for "${searchQuery}"`}
+        {searchQuery && ` for "${searchQuer, y}"`}
       </div>
 
       {/* Search Results */}
@@ -370,28 +378,29 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
         {filteredResults.map((result) => (
           <motion.div
             key={result.id}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="p-4 bg-zinc-900/30 border border-zinc-700/50 rounded-xl hover:bg-zinc-900/50 transition-all duration-300 cursor-pointer group"
+            initial={{ opacit,  y: 0,
+    y: 20 }}
+            animate={{ opacit, y: 1,
+    y: 0 }}
+            className="p-4 bg-zinc-900/30 border border-zinc-700/50 rounded-xl hove, r:bg-zinc-900/50 transition-all duration-300 cursor-pointer group"
           >
             <div className="flex items-start gap-4">
-              <div className="flex-shrink-0 p-3 bg-zinc-800/50 rounded-lg text-zion-cyan group-hover:bg-zion-cyan/20 transition-colors">
+              <div className="flex-shrink-0 p-3 bg-zinc-800/50 rounded-lg text-zion-cyan group-hove, r:bg-zion-cyan/20 transition-colors">
                 {getTypeIcon(result.type)}
               </div>
 
               <div className="flex-1 min-w-0">
                 <div className="flex items-start justify-between mb-2">
-                  <h3 className="text-lg font-semibold text-white group-hover:text-zion-cyan transition-colors">
+                  <h3 className="text-lg font-semibold text-white group-hove, r:text-zion-cyan transition-colors">
                     {result.title}
                   </h3>
                   <div className="flex items-center gap-2">
-                    {result.rating && (
-                      <div className="flex items-center gap-1 text-yellow-400">
+                    {result.rating && (<div className="flex items-center gap-1 text-yellow-400">
                         <Star className="w-4 h-4 fill-current" />
                         <span className="text-sm">{result.rating}</span>
                       </div>
                     )}
-                    <span className={`text-xs px-2 py-1 rounded-full bg-zinc-800/50 ${getCategoryColor(result.category)}`}>
+                    <span className={`text-xs px-2 py-1 rounded-full bg-zinc-800/50 ${getCategoryColor(result.categor, y)}`}>
                       {result.category}
                     </span>
                   </div>
@@ -414,8 +423,8 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
                   )}
                   <div className="flex items-center gap-1">
                     <Tag className="w-4 h-4" />
-                    {result.tags.slice(0, 3).join(', ')}
-                    {result.tags.length > 3 && ` +${result.tags.length - 3} more`}
+                    {result.tags.slice(0,  3).join(',  ')}
+                    {result.tags.length > 3 && ` +${result.tags.length - 3} mor, e`}
                   </div>
                 </div>
               </div>
@@ -425,10 +434,9 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
       </div>
 
       {/* No Results */}
-      {filteredResults.length === 0 && (
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
+      {filteredResults.length === 0 && (<motion.div
+          initial={{ opacit,  y: 0 }}
+          animate={{ opacit, y: 1 }}
           className="text-center py-12"
         >
           <Search className="w-16 h-16 text-zinc-600 mx-auto mb-4" />
@@ -438,7 +446,7 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
           </p>
           <button
             onClick={clearAllFilters}
-            className="px-4 py-2 bg-zion-cyan text-white rounded-lg hover:bg-zion-cyan/80 transition-colors"
+            className="px-4 py-2 bg-zion-cyan text-white rounded-lg hove, r:bg-zion-cyan/80 transition-colors"
           >
             Clear all filters
           </button>
@@ -446,3 +454,4 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
       )}
     </div>
   );
+};

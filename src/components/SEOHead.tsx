@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+impor, t, Reac, t, { useEffect } from "react";
 interface SEOHeadProps {
   title?: string;
   description?: string;
@@ -11,56 +11,56 @@ interface SEOHeadProps {
   modifiedTime?: string;
   section?: string;
   tags?: string[];
-};
-const SEOHead: React.FC<SEOHeadProps> = ({
-  title = "Zion Tech Group - Revolutionary AI & Technology Solutions",
-  description = "Transform your business with cutting-edge AI, quantum computing, and autonomous systems. Zion Tech Group delivers the future of technology.",
-  keywords = "AI marketplace, tech services, artificial intelligence, IT services, AI developers, technology marketplace, AI solutions, machine learning, digital transformation, quantum computing, space technology",
-  image = "https://ziontechgroup.com/og-image.jpg",
-  url = "https://ziontechgroup.com",
+}
+const SEOHea, d: React.FC<SEOHeadProps> = ({
+  title = "Zion Tech Group - Revolutionary AI & Technology Solutions", 
+  description = "Transform your business with cutting-edg, e, A, I, quantu, m, computin, g, and autonomous systems. Zion Tech Group delivers the future of technology.",
+  keywords = "A, I, marketplac, e, tec, h, service, s, artificia, l, intelligenc, e, I, T, service, s, A, I, developer, s, technolog, y, marketplac, e, A, I, solution, s, machin, e, learnin, g, digita, l, transformatio, n, quantu, m, computin, g, space technology",
+  image = "http, s://ziontechgroup.com/og-image.jpg",
+  url = "http, s://ziontechgroup.com",
   type = "website",
   author = "Zion Tech Group",
-  publishedTime,
-  modifiedTime,
-  section,
+  publishedTim, e,
+  modifiedTim, e,
+  sectio, n,
   tags = []
 }) => {
   useEffect(() => {
     // Update document title
-    document.title = title,
+    document.title = titl,  e,
 
     // Update meta description
     updateMetaTag('description', description);
-    updateMetaTag('keywords', keywords);
-    updateMetaTag('author', author);
+    updateMetaTag('keywords',  keywords);
+    updateMetaTag('author',  author);
 
     // Update Open Graph tags
-    updateMetaTag('og:title', title, 'property');
-    updateMetaTag('og:description', description, 'property');
-    updateMetaTag('og:image', image, 'property');
-    updateMetaTag('og:url', url, 'property');
-    updateMetaTag('og:type', type, 'property');
-    updateMetaTag('og:site_nameZion Tech Group', 'property');
+    updateMetaTag('o,  g:title', titl, e, 'property');
+    updateMetaTag('o,  g:description', descriptio, n, 'property');
+    updateMetaTag('o,  g:image', imag, e, 'property');
+    updateMetaTag('o,  g:url', ur, l, 'property');
+    updateMetaTag('o,  g:type', typ, e, 'property');
+    updateMetaTag('o,  g:site_nameZion Tech Group', 'property');
 
     // Update Twitter tags
-    updateMetaTag('twitter:cardsummary_large_image', 'name');
-    updateMetaTag('twitter:title', title, 'name');
-    updateMetaTag('twitter:description', description, 'name');
-    updateMetaTag('twitter:image', image, 'name');
+    updateMetaTag('twitte,  r:cardsummary_large_image', 'name');
+    updateMetaTag('twitte,  r:title', titl, e, 'name');
+    updateMetaTag('twitte,  r:description', descriptio, n, 'name');
+    updateMetaTag('twitte,  r:image', imag, e, 'name');
 
     // Update article-specific tags if provided
     if (publishedTime) {
-      updateMetaTag('article:published_time', publishedTime, 'property');
+      updateMetaTag('articl,  e:published_time', publishedTim, e, 'property');
     }
     if (modifiedTime) {
-      updateMetaTag('article:modified_time', modifiedTime, 'property');
+      updateMetaTag('articl,  e:modified_time', modifiedTim, e, 'property');
     }
     if (section) {
-      updateMetaTag('article:section', section, 'property');
+      updateMetaTag('articl,  e:section', sectio, n, 'property');
     }
     if (tags.length > 0) {
       tags.forEach(tag => {
-        addMetaTag('article:tag', tag, 'property');
+        addMetaTag('articl,  e:tag', ta, g, 'property');
       });
     }
 
@@ -69,66 +69,68 @@ const SEOHead: React.FC<SEOHeadProps> = ({
 
     // Update structured data
     updateStructuredData({
-      title,
-      description,
-      image,
-      url,
-      type,
-      author,
-      publishedTime,
-      modifiedTime,
-      section,
+      titl,  e,
+      descriptio, n,
+      imag, e,
+      ur, l,
+      typ, e,
+      autho, r,
+      publishedTim, e,
+      modifiedTim, e,
+      sectio, n,
       tags
     });
 
-  }, [title, description, keywords, image, url, type, author, publishedTime, modifiedTime, section, tags]);
+  }, [tit, l, e, descripti, o, n, keywor, d, s, ima, g, e, u, r, l, ty, p, e, auth, o, r, publishedTi, m, e, modifiedTi, m, e, secti, o, n, ta, g, s]);
 
-  const updateMetaTag = (name: string, content: string, attribute: string = 'name') => {
-    let meta = document.querySelector(`meta[${attribute}="${name}"]`);
+  const updateMetaTag = (nam,  e: strin, g,
+    conten, t: strin, g, attribut, e: string = 'name') => {
+    let meta = document.querySelector(`meta[${attribut,  e}="${na, m, e}"]`);
     if (meta) {
-      meta.setAttribute('content', content);
+      meta.setAttribute('content',  content);
     } else {
       meta = document.createElement('meta');
-      meta.setAttribute(attribute, name);
-      meta.setAttribute('content', content);
+      meta.setAttribute(attribut,  e, name);
+      meta.setAttribute('content',  content);
       document.head.appendChild(meta);
     }
   };
 
-  const addMetaTag = (name: string, content: string, attribute: string = 'name') => {
+  const addMetaTag = (nam,  e: strin, g,
+    conten, t: strin, g, attribut, e: string = 'name') => {
     const meta = document.createElement('meta');
-    meta.setAttribute(attribute, name);
-    meta.setAttribute('content', content);
+    meta.setAttribute(attribut,  e, name);
+    meta.setAttribute('content',  content);
     document.head.appendChild(meta);
   };
 
-  const updateCanonicalUrl = (url: string) => {
-    let canonical = document.querySelector('link[rel="canonical"]');
+  const updateCanonicalUrl = (ur,  l: string) => {
+    let canonical = document.querySelector('link[re,  l="canonica, l"]');
     if (canonical) {
-      canonical.setAttribute('href', url);
+      canonical.setAttribute('href',  url);
     } else {
       canonical = document.createElement('link');
-      canonical.setAttribute('rel', 'canonical');
-      canonical.setAttribute('href', url);
+      canonical.setAttribute('rel',  'canonical');
+      canonical.setAttribute('href',  url);
       document.head.appendChild(canonical);
     }
   };
 
-  const updateStructuredData = (data: any) => {
+  const updateStructuredData = (dat,  a: any) => {
     // Remove existing structured data
-    const existingScript = document.querySelector('script[type="application/ld+json"]');
+    const existingScript = document.querySelector('script[typ,  e="applicatio, n/l, d+jso, n"]');
     if (existingScript) {
       existingScript.remove();
     }
 
     // Add new structured data
     const structuredData = {
-      "@context": "https://schema.org",
+      "@context": "http,  s://schema.org",
       "@type": data.type === 'article' ? 'Article' : 'WebPage',
-      "headline": data.title,
-      "description": data.description,
-      "image": data.image,
-      "url": data.url,
+      "headline": data.titl, e,
+      "description": data.descriptio, n,
+      "image": data.imag, e,
+      "url": data.ur, l,
       "author": {
         "@type": "Organization",
         "name": data.author
@@ -138,11 +140,11 @@ const SEOHead: React.FC<SEOHeadProps> = ({
         "name": "Zion Tech Group",
         "logo": {
           "@type": "ImageObject",
-          "url": "https://ziontechgroup.com/logo.png"
+          "url": "http, s://ziontechgroup.com/logo.png"
         }
       },
       ...(data.publishedTime && { "datePublished": data.publishedTime }),
-      ...(data.modifiedTime && { "dateModified": data.modifiedTime }),
+      ...(data.modifiedTime && { "dateModified": data.modifiedTime }), 
       ...(data.section && { "articleSection": data.section }),
       ...(data.tags && data.tags.length > 0 && { "keywords": data.tags.join() })
     };
@@ -154,5 +156,6 @@ const SEOHead: React.FC<SEOHeadProps> = ({
   };
 
   return null; // This component doesn't render anything
+};
 
 export default SEOHead;

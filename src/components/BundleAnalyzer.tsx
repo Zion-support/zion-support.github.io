@@ -1,94 +1,122 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { Package, Eye, EyeOff, AlertTriangle, CheckCircle, XCircle } from 'lucide-react';
 
 interface BundleInfo {
   name: string;
   size: number;
-  gzipSize: number;
-  chunks: string[];
-  modules: ModuleInfo[];
-};
-
-interface ModuleInfo {
-  name: string;
-  size: number;
-  percentage: number;
-  chunks: string[];
+  gzippedSize: number;
+  type: 'module' | 'chunk' | 'asset';
+  dependencies: string[];
 }
 
 interface BundleAnalysis {
   totalSize: number;
-  totalGzipSize: number;
-  bundles: BundleInfo[];
-  largestModules: ModuleInfo[];
-  duplicateModules: ModuleInfo[];
-  unusedModules: ModuleInfo[];
+  totalGzippedSize: number;
+  moduleCount: number;
+  chunkCount: number;
+  assetCount: number;
+  largestModules: BundleInfo[];
+  duplicateModules: string[];
+  unusedModules: string[];
 }
 
-const BundleAnalyzer: React.FC = () => {
+export default function BundleAnalyzer() {
+  const [bundleInfo, setBundleInfo] = useState<BundleInfo[]>([]);
   const [analysis, setAnalysis] = useState<BundleAnalysis | null>(null);
   const [isVisible, setIsVisible] = useState(false);
-  const [selectedBundle, setSelectedBundle] = useState<string | null>(null);
   const [isAnalyzing, setIsAnalyzing] = useState(false);
 
-  const analyzeBundles = async () => {
+  const analyzeBundle = async () => {
     setIsAnalyzing(true);
     
     try {
-      // Simulate bundle analysis (in real app, this would analyze actual bundle)
-      const mockAnalysis: BundleAnalysis = {
-        totalSize: 2048576, // 2MB
-        totalGzipSize: 512000, // 500KB
-        bundles: [
-          {
-            name: 'main',
-            size: 1048576, // 1MB
-            gzipSize: 256000, // 250KB
-            chunks: ['main', 'vendor'],
-            modules: [
-              { name: 'react', size: 524288, percentage: 50, chunks: ['vendor'] },
-              { name: 'react-dom', size: 262144, percentage: 25, chunks: ['vendor'] },
-              { name: './src/App.tsx', size: 131072, percentage: 12.5, chunks: ['main'] },
-              { name: './src/components/Home.tsx', size: 65536, percentage: 6.25, chunks: ['main'] },
-              { name: 'lodash', size: 65536, percentage: 6.25, chunks: ['vendor'] }
-            ]
-          },
-          {
-            name: 'vendor',
-            size: 1000000, // 1MB
-            gzipSize: 256000, // 250KB
-            chunks: ['vendor'],
-            modules: [
-              { name: 'react', size: 524288, percentage: 52.4, chunks: ['vendor'] },
-              { name: 'react-dom', size: 262144, percentage: 26.2, chunks: ['vendor'] },
-              { name: 'lodash', size: 65536, percentage: 6.6, chunks: ['vendor'] },
-              { name: 'moment', size: 65536, percentage: 6.6, chunks: ['vendor'] },
-              { name: 'axios', size: 32768, percentage: 3.3, chunks: ['vendor'] },
-              { name: 'framer-motion', size: 49152, percentage: 4.9, chunks: ['vendor'] }
-            ]
-          }
-        ],
-        largestModules: [
-          { name: 'react', size: 524288, percentage: 25.6, chunks: ['vendor'] },
-          { name: 'react-dom', size: 262144, percentage: 12.8, chunks: ['vendor'] },
-          { name: './src/App.tsx', size: 131072, percentage: 6.4, chunks: ['main'] },
-          { name: 'lodash', size: 131072, percentage: 6.4, chunks: ['vendor'] },
-          { name: 'moment', size: 65536, percentage: 3.2, chunks: ['vendor'] }
-        ],
-        duplicateModules: [
-          { name: 'lodash', size: 65536, percentage: 3.2, chunks: ['main', 'vendor'] },
-          { name: 'react', size: 0, percentage: 0, chunks: ['main', 'vendor'] } // Duplicate but same instance
-        ],
-        unusedModules: [
-          { name: 'moment', size: 65536, percentage: 3.2, chunks: ['vendor'] },
-          { name: 'jquery', size: 32768, percentage: 1.6, chunks: ['vendor'] }
-        ]
-      };
+      // Simulate bundle analysis - in a real app, this would use webpack-bundle-analyzer or similar
+      const mockBundleInfo: BundleInfo[] = [
+        {
+          name: 'react',
+          size: 1024 * 1024 * 2.5, // 2.5MB
+          gzippedSize: 1024 * 1024 * 0.8, // 0.8MB
+          type: 'module',
+          dependencies: []
+        },
+        {
+          name: 'react-dom',
+          size: 1024 * 1024 * 1.2, // 1.2MB
+          gzippedSize: 1024 * 1024 * 0.4, // 0.4MB
+          type: 'module',
+          dependencies: ['react']
+        },
+        {
+          name: 'framer-motion',
+          size: 1024 * 1024 * 1.8, // 1.8MB
+          gzippedSize: 1024 * 1024 * 0.6, // 0.6MB
+          type: 'module',
+          dependencies: []
+        },
+        {
+          name: 'lucide-react',
+          size: 1024 * 1024 * 0.5, // 0.5MB
+          gzippedSize: 1024 * 1024 * 0.2, // 0.2MB
+          type: 'module',
+          dependencies: []
+        },
+        {
+          name: 'main.chunk.js',
+          size: 1024 * 1024 * 0.8, // 0.8MB
+          gzippedSize: 1024 * 1024 * 0.3, // 0.3MB
+          type: 'chunk',
+          dependencies: ['react', 'react-dom', 'framer-motion']
+        },
+        {
+          name: 'vendor.chunk.js',
+          size: 1024 * 1024 * 1.5, // 1.5MB
+          gzippedSize: 1024 * 1024 * 0.5, // 0.5MB
+          type: 'chunk',
+          dependencies: ['react', 'react-dom']
+        },
+        {
+          name: 'styles.css',
+          size: 1024 * 0.2, // 200KB
+          gzippedSize: 1024 * 0.05, // 50KB
+          type: 'asset',
+          dependencies: []
+        },
+        {
+          name: 'images/logo.png',
+          size: 1024 * 0.1, // 100KB
+          gzippedSize: 1024 * 0.1, // 100KB
+          type: 'asset',
+          dependencies: []
+        }
+      ];
+
+      setBundleInfo(mockBundleInfo);
+
+      // Analyze the bundle
+      const totalSize = mockBundleInfo.reduce((sum, item) => sum + item.size, 0);
+      const totalGzippedSize = mockBundleInfo.reduce((sum, item) => sum + item.gzippedSize, 0);
+      const moduleCount = mockBundleInfo.filter(item => item.type === 'module').length;
+      const chunkCount = mockBundleInfo.filter(item => item.type === 'chunk').length;
+      const assetCount = mockBundleInfo.filter(item => item.type === 'asset').length;
       
-      // Simulate analysis delay
-      await new Promise(resolve => setTimeout(resolve, 2000));
+      const largestModules = [...mockBundleInfo]
+        .sort((a, b) => b.size - a.size)
+        .slice(0, 5);
       
-      setAnalysis(mockAnalysis);
+      const duplicateModules = ['react', 'react-dom']; // Simulated duplicates
+      const unusedModules = ['lodash', 'moment']; // Simulated unused modules
+
+      setAnalysis({
+        totalSize,
+        totalGzippedSize,
+        moduleCount,
+        chunkCount,
+        assetCount,
+        largestModules,
+        duplicateModules,
+        unusedModules
+      });
     } catch (error) {
       console.error('Bundle analysis failed:', error);
     } finally {
@@ -97,10 +125,10 @@ const BundleAnalyzer: React.FC = () => {
   };
 
   useEffect(() => {
-    if (isVisible && !analysis) {
-      analyzeBundles();
+    if (isVisible) {
+      analyzeBundle();
     }
-  }, [isVisible, analysis]);
+  }, [isVisible]);
 
   const formatBytes = (bytes: number) => {
     if (bytes === 0) return '0 Bytes';
@@ -110,213 +138,135 @@ const BundleAnalyzer: React.FC = () => {
     return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
   };
 
-  const getSizeColor = (size: number, total: number) => {
-    const percentage = (size / total) * 100;
-    if (percentage > 20) return 'text-red-400';
-    if (percentage > 10) return 'text-yellow-400';
-    return 'text-green-400';
+  const getSizeColor = (size: number, threshold: number) => {
+    if (size <= threshold) return 'text-green-500';
+    if (size <= threshold * 2) return 'text-yellow-500';
+    return 'text-red-500';
   };
 
-  const selectedBundleData = useMemo(() => {
-    if (!selectedBundle || !analysis) return null;
-    return analysis.bundles.find(bundle => bundle.name === selectedBundle);
-  }, [selectedBundle, analysis]);
+  const getSizeIcon = (size: number, threshold: number) => {
+    if (size <= threshold) return <CheckCircle className="w-4 h-4 text-green-500" />;
+    if (size <= threshold * 2) return <AlertTriangle className="w-4 h-4 text-yellow-500" />;
+    return <XCircle className="w-4 h-4 text-red-500" />;
+  };
+
+  if (!isVisible) {
+    return (
+      <button
+        onClick={() => setIsVisible(true)}
+        className="fixed bottom-20 right-4 bg-purple-600 text-white p-3 rounded-full shadow-lg hover:bg-purple-700 transition-colors z-50"
+        title="Show Bundle Analyzer"
+      >
+        <Package className="w-5 h-5" />
+      </button>
+    );
+  }
 
   return (
     <AnimatePresence>
-      {isVisible && (
-        <motion.div
-          className="fixed top-4 left-4 bg-black bg-opacity-95 text-white rounded-lg shadow-xl z-50 border border-gray-700 max-w-2xl max-h-[80vh] overflow-hidden"
-          initial={{ opacity: 0, x: -100, scale: 0.9 }}
-          animate={{ opacity: 1, x: 0, scale: 1 }}
-          exit={{ opacity: 0, x: -100, scale: 0.9 }}
-        >
-          {/* Header */}
-          <div className="flex items-center justify-between p-3 border-b border-gray-700">
-            <h3 className="text-sm font-semibold text-blue-400">Bundle Analyzer</h3>
-            <div className="flex gap-2">
-              <button
-                onClick={analyzeBundles}
-                disabled={isAnalyzing}
-                className="text-gray-400 hover:text-white transition-colors disabled:opacity-50"
-              >
-                {isAnalyzing ? '⏳' : '🔄'}
-              </button>
-              <button
-                onClick={() => setIsVisible(false)}
-                className="text-gray-400 hover:text-white transition-colors"
-              >
-                ✕
-              </button>
-            </div>
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0, y: 20 }}
+        className="fixed bottom-20 right-4 bg-gray-900 text-white p-4 rounded-lg shadow-lg max-w-sm z-50"
+      >
+        <div className="flex items-center justify-between mb-3">
+          <h3 className="text-lg font-semibold">Bundle Analyzer</h3>
+          <button
+            onClick={() => setIsVisible(false)}
+            className="text-gray-400 hover:text-white"
+          >
+            <EyeOff className="w-4 h-4" />
+          </button>
+        </div>
+        
+        {isAnalyzing ? (
+          <div className="flex items-center justify-center py-8">
+            <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-purple-500"></div>
           </div>
-
-          {/* Content */}
-          <div className="p-3 overflow-y-auto max-h-[calc(80vh-60px)]">
-            {isAnalyzing ? (
-              <div className="flex items-center justify-center py-8">
-                <div className="text-center">
-                  <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-400 mx-auto mb-2"></div>
-                  <p className="text-sm text-gray-400">Analyzing bundles...</p>
+        ) : analysis ? (
+          <div className="space-y-3 text-sm">
+            <div className="grid grid-cols-2 gap-2">
+              <div className="flex items-center justify-between">
+                <span>Total Size:</span>
+                <div className="flex items-center gap-1">
+                  {getSizeIcon(analysis.totalSize, 1024 * 1024 * 5)}
+                  <span className={getSizeColor(analysis.totalSize, 1024 * 1024 * 5)}>
+                    {formatBytes(analysis.totalSize)}
+                  </span>
                 </div>
               </div>
-            ) : analysis ? (
-              <div className="space-y-4">
-                {/* Summary */}
-                <div className="bg-gray-800 rounded-lg p-3">
-                  <h4 className="text-sm font-semibold mb-2">Bundle Summary</h4>
-                  <div className="grid grid-cols-2 gap-2 text-xs">
-                    <div className="flex justify-between">
-                      <span className="text-gray-400">Total Size:</span>
-                      <span className="text-white">{formatBytes(analysis.totalSize)}</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span className="text-gray-400">Gzipped:</span>
-                      <span className="text-green-400">{formatBytes(analysis.totalGzipSize)}</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span className="text-gray-400">Compression:</span>
-                      <span className="text-green-400">
-                        {Math.round((1 - analysis.totalGzipSize / analysis.totalSize) * 100)}%
-                      </span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span className="text-gray-400">Bundles:</span>
-                      <span className="text-white">{analysis.bundles.length}</span>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Bundle Selection */}
-                <div>
-                  <h4 className="text-sm font-semibold mb-2">Bundles</h4>
-                  <div className="grid grid-cols-2 gap-2">
-                    {analysis.bundles.map((bundle) => (
-                      <button
-                        key={bundle.name}
-                        onClick={() => setSelectedBundle(bundle.name)}
-                        className={`p-2 rounded text-xs text-left transition-colors ${
-                          selectedBundle === bundle.name
-                            ? 'bg-blue-600 text-white'
-                            : 'bg-gray-800 hover:bg-gray-700 text-gray-300'
-                        }`}
-                      >
-                        <div className="font-semibold">{bundle.name}</div>
-                        <div className="text-gray-400">{formatBytes(bundle.size)}</div>
-                      </button>
-                    ))}
-                  </div>
-                </div>
-
-                {/* Bundle Details */}
-                {selectedBundleData && (
-                  <div className="bg-gray-800 rounded-lg p-3">
-                    <h4 className="text-sm font-semibold mb-2">
-                      {selectedBundleData.name} Bundle Details
-                    </h4>
-                    <div className="space-y-2 max-h-40 overflow-y-auto">
-                      {selectedBundleData.modules.map((module, index) => (
-                        <div key={index} className="flex justify-between items-center text-xs">
-                          <span className="text-gray-300 truncate flex-1 mr-2">
-                            {module.name}
-                          </span>
-                          <span className={getSizeColor(module.size, selectedBundleData.size)}>
-                            {formatBytes(module.size)} ({module.percentage.toFixed(1)}%)
-                          </span>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                )}
-
-                {/* Issues */}
-                <div className="grid grid-cols-1 gap-3">
-                  {/* Largest Modules */}
-                  <div className="bg-gray-800 rounded-lg p-3">
-                    <h4 className="text-sm font-semibold mb-2 text-yellow-400">
-                      🔍 Largest Modules
-                    </h4>
-                    <div className="space-y-1">
-                      {analysis.largestModules.slice(0, 3).map((module, index) => (
-                        <div key={index} className="flex justify-between text-xs">
-                          <span className="text-gray-300 truncate flex-1 mr-2">
-                            {module.name}
-                          </span>
-                          <span className="text-yellow-400">
-                            {formatBytes(module.size)}
-                          </span>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-
-                  {/* Duplicate Modules */}
-                  {analysis.duplicateModules.length > 0 && (
-                    <div className="bg-gray-800 rounded-lg p-3">
-                      <h4 className="text-sm font-semibold mb-2 text-red-400">
-                        🔄 Duplicate Modules
-                      </h4>
-                      <div className="space-y-1">
-                        {analysis.duplicateModules.map((module, index) => (
-                          <div key={index} className="flex justify-between text-xs">
-                            <span className="text-gray-300 truncate flex-1 mr-2">
-                              {module.name}
-                            </span>
-                            <span className="text-red-400">
-                              {formatBytes(module.size)}
-                            </span>
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-                  )}
-
-                  {/* Unused Modules */}
-                  {analysis.unusedModules.length > 0 && (
-                    <div className="bg-gray-800 rounded-lg p-3">
-                      <h4 className="text-sm font-semibold mb-2 text-orange-400">
-                        🗑️ Unused Modules
-                      </h4>
-                      <div className="space-y-1">
-                        {analysis.unusedModules.map((module, index) => (
-                          <div key={index} className="flex justify-between text-xs">
-                            <span className="text-gray-300 truncate flex-1 mr-2">
-                              {module.name}
-                            </span>
-                            <span className="text-orange-400">
-                              {formatBytes(module.size)}
-                            </span>
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-                  )}
+              
+              <div className="flex items-center justify-between">
+                <span>Gzipped Size:</span>
+                <div className="flex items-center gap-1">
+                  {getSizeIcon(analysis.totalGzippedSize, 1024 * 1024 * 2)}
+                  <span className={getSizeColor(analysis.totalGzippedSize, 1024 * 1024 * 2)}>
+                    {formatBytes(analysis.totalGzippedSize)}
+                  </span>
                 </div>
               </div>
-            ) : (
-              <div className="text-center py-8">
-                <p className="text-gray-400">Click refresh to analyze bundles</p>
+              
+              <div className="flex items-center justify-between">
+                <span>Modules:</span>
+                <span>{analysis.moduleCount}</span>
+              </div>
+              
+              <div className="flex items-center justify-between">
+                <span>Chunks:</span>
+                <span>{analysis.chunkCount}</span>
+              </div>
+              
+              <div className="flex items-center justify-between">
+                <span>Assets:</span>
+                <span>{analysis.assetCount}</span>
+              </div>
+            </div>
+            
+            <div className="border-t border-gray-700 pt-3">
+              <h4 className="font-semibold mb-2">Largest Modules</h4>
+              <div className="space-y-1 text-xs">
+                {analysis.largestModules.map((module, index) => (
+                  <div key={index} className="flex justify-between">
+                    <span className="truncate">{module.name}</span>
+                    <span>{formatBytes(module.size)}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+            
+            {analysis.duplicateModules.length > 0 && (
+              <div className="border-t border-gray-700 pt-3">
+                <h4 className="font-semibold mb-2 text-yellow-500">Duplicate Modules</h4>
+                <div className="space-y-1 text-xs">
+                  {analysis.duplicateModules.map((module, index) => (
+                    <div key={index} className="text-yellow-500">
+                      {module}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+            
+            {analysis.unusedModules.length > 0 && (
+              <div className="border-t border-gray-700 pt-3">
+                <h4 className="font-semibold mb-2 text-red-500">Unused Modules</h4>
+                <div className="space-y-1 text-xs">
+                  {analysis.unusedModules.map((module, index) => (
+                    <div key={index} className="text-red-500">
+                      {module}
+                    </div>
+                  ))}
+                </div>
               </div>
             )}
           </div>
-        </motion.div>
-      )}
-
-      {/* Toggle Button */}
-      {!isVisible && (
-        <motion.button
-          onClick={() => setIsVisible(true)}
-          className="fixed top-4 left-4 bg-purple-600 hover:bg-purple-700 text-white p-2 rounded-full shadow-lg z-50"
-          initial={{ opacity: 0, scale: 0 }}
-          animate={{ opacity: 1, scale: 1 }}
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.9 }}
-        >
-          📦
-        </motion.button>
-      )}
+        ) : (
+          <div className="text-center py-8 text-gray-400">
+            No bundle analysis available
+          </div>
+        )}
+      </motion.div>
     </AnimatePresence>
   );
-};
-
-export default BundleAnalyzer;
+}

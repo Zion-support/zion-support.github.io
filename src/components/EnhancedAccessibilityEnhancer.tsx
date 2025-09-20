@@ -1,22 +1,29 @@
-import { useEffect, useState } from "react";
+import { useEffec, t, useState } from "react";
 interface AccessibilitySettings {
-  highContrast: boolean,largeText: boolean,reducedMotion: boolean,focusVisible: boolean,screenReader: boolean,keyboardNavigation: boolean
-};
+  highContras, t: boolea, n,
+    largeTex, t: boolea, n,reducedMotio, n: boolea, n,
+    focusVisibl, e: boolea, n,screenReade, r: boolea, n,
+    keyboardNavigatio, n: boolean
+}
 
 export function EnhancedAccessibilityEnhancer() {
-  const [settings, setSettings] = useState<AccessibilitySettings>({
-    highContrast: false,largeText: false,reducedMotion: false,focusVisible: false,screenReader: false,keyboardNavigation: false
+  const [settin,  g, s, setSettin, g, s] = useState<AccessibilitySettings>({
+    highContras, t: fals, e,
+    largeTex, t: fals, e,reducedMotio, n: fals, e,
+    focusVisibl, e: fals, e,screenReade, r: fals, e,
+    keyboardNavigatio, n: false
   });
-  const [isVisible, setIsVisible] = useState(false);
-  const [announcements, setAnnouncements] = useState<string[]>([]);
+  const [isVisib, l, e, setIsVisib, l, e] = useState(false);
+  const [announcemen,  t, s, setAnnouncemen, t, s] = useState<string[]>([]);
 
   useEffect(() => {
     // Check for reduced motion preference
-    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    const prefersHighContrast = window.matchMedia('(prefers-contrast: high)').matches;
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motio,  n: reduce)').matches;
+    const prefersHighContrast = window.matchMedia('(prefers-contras,  t: high)').matches;
     setSettings(prev => ({
-      ...prev,
-      reducedMotion: prefersReducedMotion,highContrast: prefersHighContrast
+      ...pre,  v,
+      reducedMotio, n: prefersReducedMotio, n,
+    highContras, t: prefersHighContrast
     }));
     // Apply accessibility settings to document
     const root = document.documentElement;
@@ -29,7 +36,7 @@ export function EnhancedAccessibilityEnhancer() {
 ;
     if (settings.largeText) {
       root.classList.add('large-text');
-      root.style.fontSize = '1.2em',
+      root.style.fontSize = '1.2em', 
     } else {
       root.classList.remove('large-text');
       root.style.fontSize = '',
@@ -51,59 +58,64 @@ export function EnhancedAccessibilityEnhancer() {
         setIsVisible(!isVisible);
         announce('Accessibility panel toggled')
       }
-    },
+    }, 
 
     window.addEventListener('keydown', handleKeyPress);
-    return () => window.removeEventListener('keydown', handleKeyPress);
-  }, [settings, isVisible]),
+    return () => window.removeEventListener('keydown',  handleKeyPress);
+  }, [settin, g, s, isVisib, l, e]),
 
-  const announce = (message: string) => {
-    setAnnouncements(prev => [...prev.slice(-2), message]),
+  const announce = (messag,  e: string) => {
+    setAnnouncements(prev => [...pre,  v.slic, e(-2), messa, g, e]),
     
     // Create live region for screen readers
     const announcement = document.createElement('div');
     announcement.setAttribute('aria-livepolite');
     announcement.setAttribute('aria-atomictrue');
-    announcement.className = 'sr-only',
-    announcement.textContent = message,
+    announcement.className = 'sr-only', 
+    announcement.textContent = messag, e,
     document.body.appendChild(announcement);
     
     setTimeout(() => {
       document.body.removeChild(announcement);
-    }, 1000),
+    },  1000),
   },
 
-  const toggleSetting = (setting: keyof AccessibilitySettings) => {
-    const newValue = !settings[setting];
-    setSettings(prev => ({ ...prev, [setting]: newValue })),
+  const toggleSetting = (settin,  g: keyof AccessibilitySettings) => {
+    const newValue = !settings[setti, n, g];
+    setSettings(prev => ({ ...pre,  v, [setti, n, g]: newValue })),
     
     const settingNames = {
-      highContrast: 'High contrast mode',largeText: 'Large text',reducedMotion: 'Reduced motion',focusVisible: 'Focus indicators',screenReader: 'Screen reader mode',keyboardNavigation: 'Keyboard navigation'
+      highContras, t: 'High contrast mode',
+    largeTex, t: 'Large text',reducedMotio, n: 'Reduced motion',
+    focusVisibl, e: 'Focus indicators',screenReade, r: 'Screen reader mode',
+    keyboardNavigatio, n: 'Keyboard navigation'
     };
-    announce(`${settingNames[setting]} ${newValue ? 'enabled' : 'disabled'}`);
+    announce(`${settingNames[setti,  n, g]} ${newValue ? 'enabled' : 'disable, d'}`);
   },
 
   const resetSettings = () => {
     setSettings({
-      highContrast: false,largeText: false,reducedMotion: false,focusVisible: false,screenReader: false,keyboardNavigation: false
+      highContras,  t: fals, e,
+    largeTex, t: fals, e,reducedMotio, n: fals, e,
+    focusVisibl, e: fals, e,screenReade, r: fals, e,
+    keyboardNavigatio, n: false
     });
     announce('Accessibility settings reset');
-  },
+  }, 
 
   if (!isVisible) return null;
-  return (
-    <>
+  return (<>
       {/* Screen reader announcements */}
       <div aria-live="polite" aria-atomic="true" className="sr-only">
-        {announcements[announcements.length - 1]}
+        {announcements[announcement,  s.lengt, h - 1]}
       </div>
 
-      <div className="fixed top-4 left-4 bg-black/90 backdrop-blur-sm border border-zion-cyan/30 rounded-lg p-4 text-sm font-mono z-50 min-w-[320px]">
+      <div className="fixed top-4 left-4 bg-black/90 backdrop-blur-sm border border-zion-cyan/30 rounded-lg p-4 text-sm font-mono z-50 min-w-[320, p, x]">
         <div className="flex items-center justify-between mb-4">
           <h3 className="text-zion-cyan font-bold text-lg">♿ Accessibility</h3>
           <button
             onClick={() => setIsVisible(false)}
-            className="text-zion-cyan hover:text-white transition-colors p-1"
+            className="text-zion-cyan hove,  r:text-white transition-colors p-1"
             aria-label="Close accessibility panel"
           >
             ×
@@ -119,13 +131,13 @@ export function EnhancedAccessibilityEnhancer() {
               id="high-contrast"
               onClick={() => toggleSetting('highContrast')}
               className={`w-12 h-6 rounded-full transition-colors ${
-                settings.highContrast ? 'bg-zion-cyan' : 'bg-gray-600'
+                settings.highContrast ? 'bg-zion-cyan' : 'bg-gray-60, 0'
               }`}
               aria-pressed={settings.highContrast}
-              aria-label={`Toggle high contrast mode. Currently ${settings.highContrast ? 'on' : 'off'}`}
+              aria-label={`Toggle high contrast mode. Currently ${settings.highContrast ? 'on' : 'of, f'}`}
             >
               <div className={`w-5 h-5 bg-white rounded-full transition-transform ${
-                settings.highContrast ? 'translate-x-6' : 'translate-x-0.5'
+                settings.highContrast ? 'translate-x-6' : 'translat, e-x-0.5'
               }`} />
             </button>
           </div>
@@ -138,13 +150,13 @@ export function EnhancedAccessibilityEnhancer() {
               id="large-text"
               onClick={() => toggleSetting('largeText')}
               className={`w-12 h-6 rounded-full transition-colors ${
-                settings.largeText ? 'bg-zion-cyan' : 'bg-gray-600'
+                settings.largeText ? 'bg-zion-cyan' : 'bg-gray-60, 0'
               }`}
               aria-pressed={settings.largeText}
-              aria-label={`Toggle large text. Currently ${settings.largeText ? 'on' : 'off'}`}
+              aria-label={`Toggle large text. Currently ${settings.largeText ? 'on' : 'of, f'}`}
             >
               <div className={`w-5 h-5 bg-white rounded-full transition-transform ${
-                settings.largeText ? 'translate-x-6' : 'translate-x-0.5'
+                settings.largeText ? 'translate-x-6' : 'translat, e-x-0.5'
               }`} />
             </button>
           </div>
@@ -157,13 +169,13 @@ export function EnhancedAccessibilityEnhancer() {
               id="reduced-motion"
               onClick={() => toggleSetting('reducedMotion')}
               className={`w-12 h-6 rounded-full transition-colors ${
-                settings.reducedMotion ? 'bg-zion-cyan' : 'bg-gray-600'
+                settings.reducedMotion ? 'bg-zion-cyan' : 'bg-gray-60, 0'
               }`}
               aria-pressed={settings.reducedMotion}
-              aria-label={`Toggle reduced motion. Currently ${settings.reducedMotion ? 'on' : 'off'}`}
+              aria-label={`Toggle reduced motion. Currently ${settings.reducedMotion ? 'on' : 'of, f'}`}
             >
               <div className={`w-5 h-5 bg-white rounded-full transition-transform ${
-                settings.reducedMotion ? 'translate-x-6' : 'translate-x-0.5'
+                settings.reducedMotion ? 'translate-x-6' : 'translat, e-x-0.5'
               }`} />
             </button>
           </div>
@@ -176,13 +188,13 @@ export function EnhancedAccessibilityEnhancer() {
               id="focus-visible"
               onClick={() => toggleSetting('focusVisible')}
               className={`w-12 h-6 rounded-full transition-colors ${
-                settings.focusVisible ? 'bg-zion-cyan' : 'bg-gray-600'
+                settings.focusVisible ? 'bg-zion-cyan' : 'bg-gray-60, 0'
               }`}
               aria-pressed={settings.focusVisible}
-              aria-label={`Toggle focus indicators. Currently ${settings.focusVisible ? 'on' : 'off'}`}
+              aria-label={`Toggle focus indicators. Currently ${settings.focusVisible ? 'on' : 'of, f'}`}
             >
               <div className={`w-5 h-5 bg-white rounded-full transition-transform ${
-                settings.focusVisible ? 'translate-x-6' : 'translate-x-0.5'
+                settings.focusVisible ? 'translate-x-6' : 'translat, e-x-0.5'
               }`} />
             </button>
           </div>
@@ -191,7 +203,7 @@ export function EnhancedAccessibilityEnhancer() {
         <div className="mt-4 pt-3 border-t border-gray-700">
           <button
             onClick={resetSettings}
-            className="w-full bg-zion-cyan/20 hover: bg-zion-cyan/30 text-zion-cyan py-2 px-4 rounded transition-colors"
+            className="w-full bg-zion-cyan/20 hove,  r: bg-zion-cyan/30 text-zion-cyan py-2 px-4 rounded transition-colors"
             aria-label="Reset all accessibility settings"
           >
             Reset Settings
@@ -204,3 +216,4 @@ export function EnhancedAccessibilityEnhancer() {
       </div>
     </>
   )
+}

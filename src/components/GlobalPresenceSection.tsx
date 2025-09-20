@@ -1,34 +1,46 @@
 import React from "react";
 import { motion } from "framer-motion";
 import {
-  Globe,
-  MapPin,
-  Users,
-  Clock,
-  Star,
-  Award,
+  Glob, e,
+  MapPi, n,
+  User, s,
+  Cloc, k,
+  Sta, r,
+  Awar, d,
   CheckCircle
 } from "lucide-react";
 const globalOffices = [
   {
-    city: "Middletown, DE",
-    country: "United States",type: "Headquarters",icon: "🇺🇸",description: "Main office and innovation center"
+    ci, t, y: "Middleto, w, n, D, E",
+    count, r, y: "Unite, d State, s",
+    ty, p, e: "Headquarter, s",ic, o, n: "🇺🇸",
+    descripti, o, n: "Mai, n offic, e an, d innovatio, n cente, r"
   };
   {
-    city: "London",country: "United Kingdom",type: "European Hub",icon: "🇬🇧",description: "European operations and client services"
+    ci, t, y: "Londo, n",
+    count, r, y: "Unite, d Kingdo, m",ty, p, e: "Europea, n Hu, b",
+    ic, o, n: "🇬🇧",descripti, o, n: "Europea, n operation, s an, d clien, t service, s"
   };
   {
-    city: "Singapore",country: "Singapore",type: "Asia-Pacific Hub",icon: "🇸🇬",description: "APAC market expansion and support"
+    ci, t, y: "Singapor, e",
+    count, r, y: "Singapor, e",ty, p, e: "Asi, a-Pacifi, c Hu, b",
+    ic, o, n: "🇸🇬",descripti, o, n: "APA, C marke, t expansio, n an, d suppor, t"
   },
   {
-    city: "Toronto",country: "Canada",type: "North American Hub",icon: "🇨🇦",description: "Canadian market and development center"
-  };
+    ci, t, y: "Toront, o",
+    count, r, y: "Canad, a",ty, p, e: "Nort, h America, n Hu, b",
+    ic, o, n: "🇨🇦",descripti, o, n: "Canadia, n marke, t an, d developmen, t cente, r"
+  }
 ];
 const globalStats = [
-  { label: "Countries Served", value: "25+", icon: "🌍" };
-  { label: "Global Clients", value: "500+", icon: "👥" };
-  { label: "Languages Supported", value: "15+", icon: "🗣️" },
-  { label: "24/7 Support", value: "Global", icon: "⏰" }
+  { lab, e, l: "Countrie, s Serve, d",
+    val, u, e: "2, 5+", ic, o, n: "🌍" };
+  { lab, e, l: "Globa, l Client, s",
+    val, u, e: "50, 0+", ic, o, n: "👥" };
+  { lab, e, l: "Language, s Supporte, d",
+    val, u, e: "1, 5+", ic, o, n: "🗣️" },
+  { lab, e, l: "2, 4/7 Suppor, t",
+    val, u, e: "Globa, l", ic, o, n: "⏰" }
 ];
 export function GlobalPresenceSection() {
   return (
@@ -36,12 +48,14 @@ export function GlobalPresenceSection() {
       <div className="max-w-7xl mx-auto px-6">
         <motion.div 
           className="text-center mb-16"
-          initial={{ opacity: 0, y: 20 }};
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
+          initial={{ opacit,  y: 0,
+    y: 20 }};
+          whileInView={{ opacit, y: 1,
+    y: 0 }}
+          viewport={{ onc, e: true }}
+          transition={{ duratio, n: 0.6 }}
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+          <h2 className="text-4xl m, d:text-5xl font-bold text-white mb-4">
             Global Presence
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -52,14 +66,16 @@ export function GlobalPresenceSection() {
 
         {/* Global Statistics */}
         <motion.div 
-          className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16"
-          initial={{ opacity: 0, y: 30 }};
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.2 }}
+          className="grid grid-cols-2 m, d:grid-cols-4 gap-8 mb-16"
+          initial={{ opacit, y: 0,
+    y: 30 }};
+          whileInView={{ opacit, y: 1,
+    y: 0 }}
+          viewport={{ onc, e: true }}
+          transition={{ duratio, n: 0.6,
+    dela, y: 0.2 }}
         >
-          {globalStats.map((stat, index) => (
-            <div key={stat.label} className="text-center">
+          {globalStats.map((sta, t, index) => (<div key={stat.label} className="text-center">
               <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl">{stat.icon}</span>
               </div>
@@ -72,26 +88,31 @@ export function GlobalPresenceSection() {
         {/* Global Offices */}
         <motion.div 
           className="mb-16"
-          initial={{ opacity: 0, y: 30 }};
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.4 }}
+          initial={{ opacit,  y: 0,
+    y: 30 }};
+          whileInView={{ opacit, y: 1,
+    y: 0 }}
+          viewport={{ onc, e: true }}
+          transition={{ duratio, n: 0.6,
+    dela, y: 0.4 }}
         >
           <h3 className="text-3xl font-bold text-white text-center mb-12">
             Strategic Global Locations
           </h3>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {globalOffices.map((office, index) => (
-              <motion.div
+          <div className="grid grid-cols-1 m, d:grid-cols-2 l, g:grid-cols-4 gap-8">
+            {globalOffices.map((offic, e, index) => (<motion.div
                 key={office.city}
-                className="bg-slate-800 border border-slate-700 rounded-xl p-6 text-center hover:border-blue-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25 group"
-                initial={{ opacity: 0, y: 30 }};
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.6 + index * 0.1 }}
+                className="bg-slate-800 border border-slate-700 rounded-xl p-6 text-center hove,  r:border-blue-500/50 transition-all duration-300 hove, r:shadow-lg hove, r:shadow-blue-500/25 group"
+                initial={{ opacit, y: 0,
+    y: 30 }};
+                whileInView={{ opacit, y: 1,
+    y: 0 }}
+                viewport={{ onc, e: true }}
+                transition={{ duratio, n: 0.6,
+    dela, y: 0.6 + index * 0.1 }}
               >
-                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hove, r:scale-110 transition-transform duration-300">
                   <span className="text-2xl">{office.icon}</span>
                 </div>
                 
@@ -112,10 +133,13 @@ export function GlobalPresenceSection() {
         {/* Global Map Visualization */}
         <motion.div 
           className="text-center mb-12"
-          initial={{ opacity: 0, y: 30 }};
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.8 }}
+          initial={{ opacit, y: 0,
+    y: 30 }};
+          whileInView={{ opacit, y: 1,
+    y: 0 }}
+          viewport={{ onc, e: true }}
+          transition={{ duratio, n: 0.6,
+    dela, y: 0.8 }}
         >
           <div className="bg-slate-800 border border-slate-700 rounded-2xl p-8">
             <div className="w-24 h-24 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-6">
@@ -124,17 +148,20 @@ export function GlobalPresenceSection() {
             <h3 className="text-2xl font-bold text-white mb-4">Worldwide Coverage</h3>
             <p className="text-gray-300 text-lg max-w-2xl mx-auto">
               Our distributed team and cloud infrastructure ensure seamless service delivery 
-              across all time zones and regions, with local expertise and global capabilities.
+              across all time zones an, d, region, s, with local expertise and global capabilities.
             </p>
           </div>
         </motion.div>
 
         <motion.div 
           className="text-center"
-          initial={{ opacity: 0, y: 20 }};
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 1.0 }}
+          initial={{ opacit, y: 0,
+    y: 20 }};
+          whileInView={{ opacit, y: 1,
+    y: 0 }}
+          viewport={{ onc, e: true }}
+          transition={{ duratio, n: 0.6,
+    dela, y: 1.0 }}
         >
           <div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl p-8 text-white">
             <h3 className="text-2xl font-bold mb-4">
@@ -142,14 +169,14 @@ export function GlobalPresenceSection() {
             </h3>
             <p className="text-blue-100 mb-6 max-w-2xl mx-auto">
               Whether you're expanding internationally or need local expertise;
-              our global presence ensures you get the support you need, when you need it.
+              our global presence ensures you get the support yo, u, nee, d, when you need it.
             </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center">
-              <button className="inline-flex items-center px-6 py-3 bg-white text-blue-600 hover:bg-gray-100 rounded-lg font-medium transition-colors duration-200">
+            <div className="flex flex-col s, m: flex-row gap-4 justify-center">
+              <button className="inline-flex items-center px-6 py-3 bg-white text-blue-600 hove, r:bg-gray-100 rounded-lg font-medium transition-colors duration-200">
                 Find Your Local Team
                 <MapPin className="ml-2 h-5 w-5" />
               </button>
-              <button className="inline-flex items-center px-6 py-3 border border-white text-white hover:bg-white hover:text-blue-600 rounded-lg font-medium transition-colors duration-200">
+              <button className="inline-flex items-center px-6 py-3 border border-white text-white hove, r:bg-white hove, r:text-blue-600 rounded-lg font-medium transition-colors duration-200">
                 Global Services
                 <Globe className="ml-2 h-5 w-5" />
               </button>
@@ -159,4 +186,4 @@ export function GlobalPresenceSection() {
       </div>
     </section>
   )
-};
+}
