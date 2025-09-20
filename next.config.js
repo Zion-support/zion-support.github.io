@@ -1,42 +1,5 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-<<<<<<< HEAD
-  output: 'export',
-  trailingSlash: true,
-  images: {
-    unoptimized: true,
-    domains: ['images.unsplash.com', 'via.placeholder.com'],
-    formats: ['image/webp', 'image/avif'],
-  },
-  experimental: {
-    optimizePackageImports: ['@radix-ui/react-icons'],
-  },
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
-  async headers() {
-    return [
-      {
-        source: '/(.*)',
-        headers: [
-          {
-            key: 'X-Frame-Options',
-            value: 'DENY',
-          },
-          {
-            key: 'X-Content-Type-Options',
-            value: 'nosniff',
-          },
-          {
-            key: 'Referrer-Policy',
-            value: 'origin-when-cross-origin',
-          },
-        ],
-      },
-    ]
-  },
-}
-=======
   reactStrictMode: true,
   trailingSlash: true,
   output: 'export',
@@ -67,6 +30,7 @@ const nextConfig = {
   experimental: {
     optimizeCss: true,
     scrollRestoration: true,
+    optimizePackageImports: ['@radix-ui/react-icons'],
   },
   
   // Webpack optimizations
@@ -100,6 +64,5 @@ const nextConfig = {
     return config;
   }
 };
->>>>>>> pr-22703
 
 module.exports = nextConfig

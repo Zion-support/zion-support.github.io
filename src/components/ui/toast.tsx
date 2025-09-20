@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-import * as React from 'react'
-import * as ToastPrimitives from '@radix-ui/react-toast'
-import { cva,, type, VariantProps,  } from 'class-variance-authority'
-import { X,  } from 'lucide-react'
-//   }
-// }
-=======
 "use client";
 
 import * as React from "react";
@@ -135,4 +127,3 @@ export {
   ToastClose,
   ToastAction,
 };
->>>>>>> pr-22703
