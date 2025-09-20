@@ -1,15 +1,34 @@
-interface Service {
-id: string;,
-name: string;
+import React from "react";
+import * as SwitchPrimitive from "@radix-ui/react-switch";
+import { cva, type VariantProps } from "class-variance-authority";
+
+const switchVariants = cva(
+  "peer inline-flex h-6 w-11 shrink-0 cursor-pointer items-center rounded-full border-2 border-transparent transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:cursor-not-allowed disabled:opacity-50 data-[state=checked]:bg-primary data-[state=unchecked]:bg-input"
+);
+
+const thumbVariants = cva(
+  "pointer-events-none block h-5 w-5 rounded-full bg-background shadow-lg ring-0 transition-transform data-[state=checked]:translate-x-5 data-[state=unchecked]:translate-x-0"
+);
+
+interface SwitchProps
+  extends React.ComponentPropsWithoutRef<typeof SwitchPrimitive.Root>,
+    VariantProps<typeof switchVariants> {
+  className?: string;
 }
 
-import React from "react",
-const switch: React.FC = () => {
-,
-return (,
-<div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">,
-<h3 className="text-xl font-bold mb-4">switch</h3>,
-<p className="text-gray-300">Revolutionary technology component</p>;
-},
-</div>)},
-export default switch,;<//div><///div>
+const Switch = React.forwardRef<
+  React.ElementRef<typeof SwitchPrimitive.Root>,
+  SwitchProps
+>(({ className, ...props }, ref) => (
+  <SwitchPrimitive.Root
+    className={switchVariants({ className })}
+    {...props}
+    ref={ref}
+  >
+    <SwitchPrimitive.Thumb className={thumbVariants()} />
+  </SwitchPrimitive.Root>
+));
+
+Switch.displayName = SwitchPrimitive.Root.displayName;
+
+export { Switch };

@@ -1,20 +1,35 @@
 #!/bin/bash
 
-echo "Fixing syntax errors in components..."
+echo "Fixing syntax errors in TypeScript/JSX files..."
 
-# Fix duplicate "use client" directives
-find components -name "*.tsx" -exec sed -i 's/"use client";\s*'"'"'use client'"'"';/'"'"'use client'"'"';/g' {} \;
+# Find all TypeScript and JSX files
+find /workspace/src -name "*.tsx" -o -name "*.ts" | while read file; do
+    echo "Processing: $file"
+    
+    # Fix interface definitions with trailing commas
+    sed -i 's/\([a-zA-Z_][a-zA-Z0-9_]*: [^,]*\);,/\1;/g' "$file"
+    
+    # Fix JSX elements ending with semicolons
+    sed -i 's/\(<[^>]*>\);/ \1/g' "$file"
+    
+    # Fix object properties with trailing commas
+    sed -i 's/\([a-zA-Z_][a-zA-Z0-9_]*:[^,]*\);,/\1;/g' "$file"
+    
+    # Fix array elements with trailing commas
+    sed -i 's/\([^,]*\);,/\1;/g' "$file"
+    
+    # Fix JSX closing tags with semicolons
+    sed -i 's/\(<\/[^>]*>\);/ \1/g' "$file"
+    
+    # Fix function parameters with trailing commas
+    sed -i 's/\([a-zA-Z_][a-zA-Z0-9_]*\);/ \1/g' "$file"
+    
+    # Fix import statements with trailing commas
+    sed -i 's/import { \([^}]*\),  }/import { \1 }/g' "$file"
+    
+    # Fix missing spaces in JSX
+    sed -i 's/\([a-zA-Z_][a-zA-Z0-9_]*\)=\([^=]\)/\1=\2/g' "$file"
+    
+done
 
-# Fix malformed React imports
-find components -name "*.tsx" -exec sed -i 's/import React{ useStateuseEffect }/import React, { useState, useEffect }/g' {} \;
-
-# Fix malformed motion imports
-find components -name "*.tsx" -exec sed -i 's/import { motionAnimatePresence }/import { motion, AnimatePresence }/g' {} \;
-
-# Fix missing commas in object properties
-find components -name "*.tsx" -exec sed -i 's/\([a-zA-Z_][a-zA-Z0-9_]*\)'\''\([a-zA-Z_][a-zA-Z0-9_]*\)/'\''\1'\'', '\''\2/g' {} \;
-
-# Fix missing commas in icon imports
-find components -name "*.tsx" -exec sed -i 's/\([a-zA-Z_][a-zA-Z0-9_]*\)\n\([a-zA-Z_][a-zA-Z0-9_]*\)/\1,\n\2/g' {} \;
-
-echo "Syntax errors fixed!"
+echo "Syntax error fixes completed!"
