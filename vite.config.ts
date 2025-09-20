@@ -48,7 +48,7 @@ export default defineConfig({
           'utils-vendor': ['clsx', 'tailwind-merge', 'class-variance-authority'],
           'icons-vendor': ['lucide-react'],
           'charts-vendor': ['recharts'],
-          'date-vendor': ['date-fns', 'react-day-picker'],
+          'date-vendor': ['date-fns'],
         },
         chunkFileNames: `js/[name]-[hash].js`,
         entryFileNames: 'js/[name]-[hash].js',
