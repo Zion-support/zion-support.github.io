@@ -1,8 +1,3 @@
-import Link from 'next/link';
-
-export default function Footer() {
-  const currentYear = new Date().getFullYear();
-
   const footerSections = [
     {
       title: 'Company',
@@ -196,10 +191,3 @@ export default function Footer() {
               <Link href="/accessibility" className="text-gray-400 hover:text-white transition-colors duration-200">
                 Accessibility
               </Link>
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer>
-  );
-}

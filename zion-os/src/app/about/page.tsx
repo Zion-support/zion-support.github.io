@@ -9,10 +9,6 @@ export default function AboutPage() {
           </h1>
           <p className="text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto">
             Pioneering the future of AI-powered technology solutions and autonomous business operations.
-          </p>
-        </div>
-      </section>
-
       {/* Company Overview */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -67,11 +63,6 @@ export default function AboutPage() {
                   </div>
                 </div>
               </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Mission & Values */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -120,10 +111,6 @@ export default function AboutPage() {
                 Working together with clients, partners, and communities to create lasting impact.
               </p>
             </div>
-          </div>
-        </div>
-      </section>
-
       {/* Company Stats */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -150,10 +137,6 @@ export default function AboutPage() {
               <div className="text-4xl font-bold text-blue-600 mb-2">$50M+</div>
               <div className="text-gray-600">Revenue Generated</div>
             </div>
-          </div>
-        </div>
-      </section>
-
       {/* Leadership Team */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -192,12 +175,6 @@ export default function AboutPage() {
               <p className="text-gray-600 text-center">
                 Leading researcher in autonomous systems and AI consciousness evolution
               </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
       <section className="py-20 bg-blue-600 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
@@ -213,9 +190,3 @@ export default function AboutPage() {
             <a href="/careers" className="border-2 border-white text-white px-8 py-3 rounded-lg text-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
               View Careers
             </a>
-          </div>
-        </div>
-      </section>
-    </div>
-  );
-}

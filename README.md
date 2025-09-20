@@ -82,6 +82,13 @@ zion.app/
 └── 📁 .husky/              # Git hooks and automation
 ```
 
+<<<<<<< HEAD
+### **Key Directories**
+- **`automation/`**: 227+ autonomous systems (redundancy, monitoring, deployment)
+- **`scripts/`**: Utility scripts (sitemap, SEO, automation orchestration)
+- **`pages/`**: Next.js application with 2960+ AI-generated pages
+- **`components/`**: 12 reusable UI components and libraries
+=======
 ## 🎯 Key Features
 
 ### AI Innovation Showcase
@@ -177,6 +184,7 @@ For support and questions:
 - Progressive Web App improvements
 - Performance monitoring dashboard
 - Advanced analytics integration
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
 
 ---
 

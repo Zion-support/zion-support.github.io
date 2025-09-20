@@ -113,8 +113,7 @@ const aiConversations: AIConversation[] = [
     id: '1',
     type: 'chat',
     title: 'Project Optimization Analysis',
-    description:'
-      'AI-powered analysis of project performance and optimization recommendations',
+    description: 'AI-powered analysis of project performance and optimization recommendations',
     status: 'active',
     priority: 'high',
     createdAt: '2025-01-27 10:00',
@@ -124,26 +123,25 @@ const aiConversations: AIConversation[] = [
 
         id: '1',
         type: 'user',
-        content:'
-          'Analyze our current project portfolio and identify optimization opportunities',
+        content: 'Analyze our current project portfolio and identify optimization opportunities',
         timestamp: '2025-01-27 10:00'},
       {
 
         id: '2',
         type: 'assistant',
-        content:'
-          "I've analyzed your project portfolio and identified several optimization opportunities. Based on the data, I recommend focusing on resource allocation optimization and timeline compression for the E-commerce Platform project.",
+        content: "I've analyzed your project portfolio and identified several optimization opportunities. Based on the data, I recommend focusing on resource allocation optimization and timeline compression for the E-commerce Platform project.",
         timestamp: '2025-01-27 10:02',
         confidence: 0.94,
-        suggestions: ['
-          'Optimize team allocation',Compress timeline by 15%',Implement automated testing',
+        suggestions: [
+          'Optimize team allocation',
+          'Compress timeline by 15%',
+          'Implement automated testing'
         ]},
       {
 
         id: '3',
         type: 'user',
-        content:'
-          'What specific actions should we take for the E-commerce project?',
+        content: 'What specific actions should we take for the E-commerce project?',
         timestamp: '2025-01-27 15:30'},
     ],
     insights: [
@@ -194,12 +192,13 @@ const aiConversations: AIConversation[] = [
 
         id: '2',
         type: 'assistant',
-        content:'"
-          "I've configured automated client communication for all active projects. The system will now send personalized updates when milestones are reached, with smart timing based on client preferences.",
+        content: "I've configured automated client communication for all active projects. The system will now send personalized updates when milestones are reached, with smart timing based on client preferences.",
         timestamp: '2025-01-27 09:05',
         confidence: 0.97,
-        suggestions: ['
-          'Customize message templates',Set up escalation rules',Configure delivery preferences',
+        suggestions: [
+          'Customize message templates',
+          'Set up escalation rules',
+          'Configure delivery preferences'
         ]},
     ],
     insights: [

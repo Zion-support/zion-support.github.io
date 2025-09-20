@@ -1,4 +1,3 @@
-import { <<<<<<< HEAD import { motion  } from 'framer-motion';
 
 export default function Page() {
         <motion.div"

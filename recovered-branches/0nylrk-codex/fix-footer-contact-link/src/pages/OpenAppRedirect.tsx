@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
@@ -104,14 +103,3 @@ const OpenAppRedirect: React.FC = () => {
 };
 
 export default OpenAppRedirect;
-=======
-import React from 'react';
-export function OpenAppRedirect() {
-  return (
-    <div>
-      <h1>Component</h1>
-      <p>Component placeholder</p>
-    </div>
-  );
-}
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3

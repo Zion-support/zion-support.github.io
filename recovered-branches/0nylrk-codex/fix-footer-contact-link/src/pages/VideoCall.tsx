@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 import { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
@@ -110,14 +109,3 @@ export default function VideoCall() {
       </main>
       <Footer />
     </>
-=======
-import React from 'react';
-export function LoginCard() {
-  return (
-    <div>
-      <h1>Component</h1>
-      <p>Component placeholder</p>
-    </div>
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
-  );
-}

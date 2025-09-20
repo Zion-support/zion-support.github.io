@@ -1,5 +1,3 @@
-import Link from 'next/link';
-
 export default function ServicesPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-900 text-white">
@@ -37,10 +35,6 @@ export default function ServicesPage() {
             <h2 className="text-4xl font-bold mb-4">🤖 AI Services & Solutions</h2>
             <p className="text-xl text-zinc-300 max-w-2xl mx-auto">
               Cutting-edge artificial intelligence solutions to transform your business operations
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* ZionGPT Core */}
             <div className="bg-zinc-800 rounded-xl p-6 border border-zinc-700 hover:border-blue-500 transition-all">
               <div className="text-3xl mb-4">🧠</div>
@@ -166,10 +160,6 @@ export default function ServicesPage() {
             <a href="/services/ai" className="inline-block bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
               View All AI Services
             </a>
-          </div>
-        </div>
-      </section>
-
       {/* IT Services Section */}
       <section className="py-20 bg-zinc-800">
         <div className="container mx-auto px-6">
@@ -306,10 +296,6 @@ export default function ServicesPage() {
             <a href="/services/it" className="inline-block bg-green-600 hover:bg-green-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
               View All IT Services
             </a>
-          </div>
-        </div>
-      </section>
-
       {/* Blockchain & Web3 Services Section */}
       <section className="py-20">
         <div className="container mx-auto px-6">
@@ -609,9 +595,3 @@ export default function ServicesPage() {
             <p className="text-blue-100 text-sm">
               📍 364 E Main St STE 1008, Middletown DE 19709 | 🌐 https://ziontechgroup.com
             </p>
-          </div>
-        </div>
-      </section>
-    </div>
-  );
-}

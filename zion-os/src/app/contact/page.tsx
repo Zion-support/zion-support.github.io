@@ -9,10 +9,6 @@ export default function ContactPage() {
           </h1>
           <p className="text-xl md:text-2xl text-indigo-100 max-w-3xl mx-auto">
             Ready to transform your business? Let's discuss how our AI-powered solutions can drive your success.
-          </p>
-        </div>
-      </section>
-
       {/* Contact Form & Info */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -46,10 +42,6 @@ export default function ContactPage() {
                       required
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                       placeholder="Enter your last name"
-                    />
-                  </div>
-                </div>
-
                 <div>
                   <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
                     Email Address *
@@ -88,15 +80,6 @@ export default function ContactPage() {
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     placeholder="Enter your phone number"
                   />
-                </div>
-
-                <div>
-                  <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-2">
-                    Service of Interest
-                  </label>
-                  <select
-                    id="service"
-                    name="service"
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   >
                     <option value="">Select a service</option>
@@ -106,32 +89,14 @@ export default function ContactPage() {
                     <option value="research-development">Research & Development</option>
                     <option value="quantum-computing">Quantum Computing</option>
                     <option value="other">Other</option>
-                  </select>
-                </div>
-
-                <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
-                    Message *
-                  </label>
-                  <textarea
-                    id="message"
-                    name="message"
                     rows={5}
                     required
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     placeholder="Tell us about your project or inquiry..."
                   ></textarea>
-                </div>
-
-                <button
-                  type="submit"
                   className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
                 >
                   Send Message
-                </button>
-              </form>
-            </div>
-
             {/* Contact Information */}
             <div className="space-y-8">
               <div>
@@ -214,10 +179,6 @@ export default function ContactPage() {
                   </a>
                 </div>
               </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* FAQ Section */}
       <section className="py-20 bg-gray-50">
@@ -290,6 +251,3 @@ export default function ContactPage() {
           </div>
         </div>
       </section>
-    </div>
-  );
-}
