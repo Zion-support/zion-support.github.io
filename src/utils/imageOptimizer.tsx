@@ -1,12 +1,16 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useState, useEffect, useRef, useCallback } from 'react';
 
-import React from 'react';
-
-interface ImageOptimizationOptions {
+interface ImageOptimizerProps {
+  src: string;
+  alt: string;
   width?: number;
   height?: number;
   quality?: number;
-  format?: 'webp' | 'jpeg' | 'png';
+  placeholder?: string;
+  className?: string;
+  lazy?: boolean;
+  onLoad?: () => void;
+  onError?: () => void;
 }
 
 interface OptimizedImageProps {
@@ -14,237 +18,127 @@ interface OptimizedImageProps {
   alt: string;
   width?: number;
   height?: number;
+  quality?: number;
   className?: string;
-  priority?: boolean;
-  loading?: 'lazy' | 'eager';
-  placeholder?: 'blur' | 'empty';
-  blurDataURL?: string;
+  onLoad?: () => void;
+  onError?: () => void;
 }
 
-class ImageOptimizer {
-  private static instance: ImageOptimizer;
-  private observer?: IntersectionObserver;
-  private loadedImages = new Set<string>();
-
-  static getInstance(): ImageOptimizer {
-    if (!ImageOptimizer.instance) {
-      ImageOptimizer.instance = new ImageOptimizer();
-    }
-    return ImageOptimizer.instance;
-  }
-
-  constructor() {
-    if (typeof window === "undefined" || !("IntersectionObserver" in window)) {
-      return;
-    }
-
-    this.observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            const img = entry.target as HTMLImageElement;
-            this.loadImage(img);
-          }
-        });
-      },
-      {
-        rootMargin: "50px 0px",
-        threshold: 0.01
-      }
-    );
-  }
-
-  private loadImage(img: HTMLImageElement): void {
-    const src = img.dataset.src;
-    if (!src || this.loadedImages.has(src)) {
-      return;
-    }
-
-    this.loadedImages.add(src);
-    const imageLoader = new Image();
-    imageLoader.onload = () => {
-      img.src = src;
-      img.classList.remove("opacity-0");
-      img.classList.add("opacity-100");
-      this.observer?.unobserve(img);
-    };
-    imageLoader.onerror = () => {
-      img.classList.add("error");
-    };
-    imageLoader.src = src;
-  }
-
-  public optimizeImageUrl(src: string, options: ImageOptimizationOptions = {}): string {
-    const { width, height, quality = 80, format = "webp" } = options;
-
-    // If it's an external URL or data URL, return as is
-    if (src.startsWith("http") || src.startsWith("data:")) {
-      return src;
-    }
-
-    // For local images, you might want to implement server-side optimization
-    // This is a placeholder for the optimization logic
-    let optimizedUrl = src;
-    if (width || height || quality !== 80 || format !== "webp") {
-      const params = new URLSearchParams();
-      if (width) params.append("w", width.toString());
-      if (height) params.append("h", height.toString());
-      if (quality !== 80) params.append("q", quality.toString());
-      if (format !== "webp") params.append("f", format);
-      optimizedUrl = `${src}?${params.toString()}`;
-    }
-
-    return optimizedUrl;
-  }
-
-  public observeImage(img: HTMLImageElement): void {
-    if (this.observer) {
-      this.observer.observe(img);
-    }
-  }
-
-  public generateBlurDataURL(width: number = 10, height: number = 10): string {
-    // Generate a simple blur placeholder
-    const canvas = document.createElement("canvas");
-    canvas.width = width;
-    canvas.height = height;
-    const ctx = canvas.getContext("2d");
-    if (ctx) {
-      // Create a gradient background
-      const gradient = ctx.createLinearGradient(0, 0, width, height);
-      gradient.addColorStop(0, "#f3f4f6");
-      gradient.addColorStop(1, "#e5e7eb");
-      ctx.fillStyle = gradient;
-      ctx.fillRect(0, 0, width, height);
-    }
-    return canvas.toDataURL("image/jpeg", 0.1);
-  }
-
-  public preloadImage(src: string): Promise<void> {
-    return new Promise((resolve, reject) => {
-      const img = new Image();
-      img.onload = () => resolve();
-      img.onerror = reject;
-      img.src = src;
-    });
-  }
-
-  public preloadImages(srcs: string[]): Promise<void[]> {
-    return Promise.all(srcs.map(src => this.preloadImage(src)));
-  }
-
-  public cleanup(): void {
-    this.observer?.disconnect();
-    this.loadedImages.clear();
-  }
-}
-
-// React hook for image optimization
-export const useImageOptimization = () => {
-  const optimizer = ImageOptimizer.getInstance();
-  return {
-    optimizeUrl: optimizer.optimizeImageUrl.bind(optimizer),
-    observeImage: optimizer.observeImage.bind(optimizer),
-    generateBlurDataURL: optimizer.generateBlurDataURL.bind(optimizer),
-    preloadImage: optimizer.preloadImage.bind(optimizer),
-    preloadImages: optimizer.preloadImages.bind(optimizer)
-  };
-};
-
-// React component for optimized images
 export const OptimizedImage: React.FC<OptimizedImageProps> = ({
   src,
   alt,
   width,
   height,
-  className = "",
-  priority = false,
-  loading = "lazy",
-  placeholder = "blur",
-  blurDataURL
+  quality = 80,
+  className,
+  onLoad,
+  onError
 }) => {
-  const { optimizeUrl, observeImage, generateBlurDataURL } = useImageOptimization();
-  const [imageRef, setImageRef] = React.useState<HTMLImageElement | null>(null);
-  const [isLoaded, setIsLoaded] = React.useState(false);
+  const [isLoaded, setIsLoaded] = useState(false);
+  const [hasError, setHasError] = useState(false);
 
-  const optimizedSrc = optimizeUrl(src, {
-    width,
-    height,
-    format: "webp"
-  });
-
-  const placeholderDataURL = blurDataURL || generateBlurDataURL();
-
-  React.useEffect(() => {
-    if (imageRef) {
-      observeImage(imageRef);
-    }
-  }, [imageRef, loading, priority, observeImage]);
-
-  const handleLoad = () => {
+  const handleLoad = useCallback(() => {
     setIsLoaded(true);
-  };
+    onLoad?.();
+  }, [onLoad]);
 
-  const handleError = () => {
-    // Handle error state
-  };
+  const handleError = useCallback(() => {
+    setHasError(true);
+    onError?.();
+  }, [onError]);
 
-  if (priority || loading === "eager") {
+  const optimizedSrc = React.useMemo(() => {
+    if (!src) return src;
+    
+    // If it's already an optimized URL, return as is
+    if (src.includes('w_') || src.includes('h_') || src.includes('q_')) {
+      return src;
+    }
+
+    // For external images, we can't optimize them
+    if (src.startsWith('http') && !src.includes('your-cdn-domain.com')) {
+      return src;
+    }
+
+    // For local images or CDN images, add optimization parameters
+    const url = new URL(src, window.location.origin);
+    if (width) url.searchParams.set('w', width.toString());
+    if (height) url.searchParams.set('h', height.toString());
+    url.searchParams.set('q', quality.toString());
+    url.searchParams.set('f', 'auto'); // Auto format
+    url.searchParams.set('fit', 'crop'); // Crop to fit
+
+    return url.toString();
+  }, [src, width, height, quality]);
+
+  if (hasError) {
     return (
-      <img
-        src={optimizedSrc}
-        alt={alt}
-        width={width}
-        height={height}
-        className={`transition-opacity duration-300 ${isLoaded ? "opacity-100" : "opacity-0"} ${className}`}
-        onLoad={handleLoad}
-        onError={handleError}
-      />
+      <div 
+        className={`image-error ${className || ''}`}
+        style={{ width, height }}
+      >
+        <div className="error-content">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path
+              d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
+              fill="currentColor"
+            />
+          </svg>
+          <span>Failed to load image</span>
+        </div>
+      </div>
     );
   }
 
   return (
-    <div className={`relative overflow-hidden ${className}`}>
-      {placeholder === "blur" && !isLoaded && (
-        <div
-          className="absolute inset-0 bg-gray-200"
-          style={{
-            backgroundImage: `url(${placeholderDataURL})`,
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-            filter: "blur(10px)",
-            transform: "scale(1.1)"
-          }}
-        />
-      )}
-      <img
-        ref={setImageRef}
-        data-src={optimizedSrc}
-        alt={alt}
-        width={width}
-        height={height}
-        className={`transition-opacity duration-300 ${isLoaded ? "opacity-100" : "opacity-0"}`}
-        onLoad={handleLoad}
-        onError={handleError}
-      />
-    </div>
+    <img
+      src={optimizedSrc}
+      alt={alt}
+      width={width}
+      height={height}
+      className={`optimized-image ${isLoaded ? 'loaded' : 'loading'} ${className || ''}`}
+      onLoad={handleLoad}
+      onError={handleError}
+      style={{
+        opacity: isLoaded ? 1 : 0,
+        transition: 'opacity 0.3s ease-in-out'
+      }}
+    />
   );
 };
 
-export default ImageOptimizer;
+export const LazyImage: React.FC<ImageOptimizerProps> = ({
+  src,
+  alt,
+  width,
+  height,
+  quality = 80,
+  placeholder,
+  className,
+  lazy = true,
+  onLoad,
+  onError
+}) => {
+  const [isLoaded, setIsLoaded] = useState(false);
+  const [isInView, setIsInView] = useState(!lazy);
+  const imgRef = useRef<HTMLImageElement>(null);
+
+  useEffect(() => {
+    if (!lazy) {
+      setIsInView(true);
+      return;
+    }
 
     const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setIsInView(true);
-            observer.disconnect();
-          }
-        });
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsInView(true);
+          observer.disconnect();
+        }
       },
       {
-        rootMargin: "50px 0px",
-        threshold: 0.01
+        threshold: 0.1,
+        rootMargin: '50px'
       }
     );
 
@@ -253,28 +147,104 @@ export default ImageOptimizer;
     }
 
     return () => observer.disconnect();
-  }, []);
+  }, [lazy]);
 
-  const handleLoad = () => {
+  const handleLoad = useCallback(() => {
     setIsLoaded(true);
-  };
+    onLoad?.();
+  }, [onLoad]);
+
+  const handleError = useCallback(() => {
+    onError?.();
+  }, [onError]);
 
   return (
-    <div className={`image-container ${className || ""}`}>
+    <div className={`lazy-image-container ${className || ''}`}>
       {!isLoaded && placeholder && (
-        <div className="placeholder">
+        <div className="image-placeholder">
           <img src={placeholder} alt="Loading..." />
         </div>
       )}
       {isInView && (
-        <img
-          ref={imgRef}
+        <OptimizedImage
           src={src}
           alt={alt}
+          width={width}
+          height={height}
+          quality={quality}
           onLoad={handleLoad}
-          style={{ opacity: isLoaded ? 1 : 0 }}
+          onError={handleError}
         />
       )}
     </div>
   );
-}
+};
+
+export const ImageGallery: React.FC<{
+  images: string[];
+  alt: string;
+  className?: string;
+}> = ({ images, alt, className }) => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const nextImage = useCallback(() => {
+    setCurrentIndex((prev) => (prev + 1) % images.length);
+  }, [images.length]);
+
+  const prevImage = useCallback(() => {
+    setCurrentIndex((prev) => (prev - 1 + images.length) % images.length);
+  }, [images.length]);
+
+  if (images.length === 0) return null;
+
+  return (
+    <div className={`image-gallery ${className || ''}`}>
+      <div className="gallery-main">
+        <LazyImage
+          src={images[currentIndex]}
+          alt={`${alt} ${currentIndex + 1}`}
+          className="gallery-image"
+        />
+        {images.length > 1 && (
+          <>
+            <button
+              className="gallery-nav gallery-prev"
+              onClick={prevImage}
+              aria-label="Previous image"
+            >
+              ‹
+            </button>
+            <button
+              className="gallery-nav gallery-next"
+              onClick={nextImage}
+              aria-label="Next image"
+            >
+              ›
+            </button>
+          </>
+        )}
+      </div>
+      {images.length > 1 && (
+        <div className="gallery-thumbnails">
+          {images.map((image, index) => (
+            <button
+              key={index}
+              className={`thumbnail ${index === currentIndex ? 'active' : ''}`}
+              onClick={() => setCurrentIndex(index)}
+            >
+              <LazyImage
+                src={image}
+                alt={`${alt} thumbnail ${index + 1}`}
+                width={80}
+                height={80}
+                quality={60}
+              />
+            </button>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+};
+
+export default OptimizedImage;

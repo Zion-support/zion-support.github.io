@@ -1,66 +1,186 @@
+import jsPDF from 'jspdf';
+import 'jspdf-autotable';
 
-const itemsTable = [;
-["Item", "Qty", "Price"],;
-...order.items.map(i => [i.name, String(i.quantity), `$${i.price.toFixed(2)}`])
-];
-
-const docDef: any = {
-content: [
-{ text: `Invoice #${order.orderId}` style: "header" };
-{ text: `Date: ${new Date(order.date).toLocaleDateString()}` };
-{ text: "Shipping Address", style: "subheader" margin: [0; 10; 0; 4] },
-`${order.shippingAddress.name}\n${order.shippingAddress.street}\n${order.shippingAddress.city}, ${order.shippingAddress.state} ${order.shippingAddress.zip}`,
-{ text: "Items", style: "subheader" margin: [0; 10; 0; 4] },
-{ table: { widths: ["*" 40; 60], body: itemsTable } };
-{ text: `Total: $${order.total.toFixed(2)}` margin: [0; 10; 0; 0] }
-],
-styles: {
-header: { fontSize: 18; bold: true } subheader: { fontSize: 14; bold: true }
-}
-};
-return new Promise((resolve) => {pdfMake.createPdf(docDef).getBlob((blob: Blob) => resolve(blob))});
-return new Promise((resolve) => {
-pdfMake.createPdf(docDef).getBlob((blob: Blob) => resolve(blob))});}
-
-interface Order {
-  orderId: string;
+interface InvoiceData {
+  invoiceNumber: string;
   date: string;
-  items: OrderItem[];
-  total: number;
-  shippingAddress: {
+  dueDate: string;
+  client: {
     name: string;
-    street: string;
-    city: string;
-    state: string;
-    zip: string;
+    email: string;
+    address: string;
   };
+  company: {
+    name: string;
+    email: string;
+    address: string;
+    phone: string;
+  };
+  items: Array<{
+    description: string;
+    quantity: number;
+    rate: number;
+    amount: number;
+  }>;
+  subtotal: number;
+  tax: number;
+  total: number;
+  notes?: string;
 }
 
-export async function generateInvoicePdf(order: Order): Promise<Blob> {
-  const itemsTable = [
-    ["Item", "Qty", "Price"],
-    ...order.items.map(i => [i.name, String(i.quantity), `$${i.price.toFixed(2)}`])
-  ];
+export class InvoicePDFGenerator {
+  private doc: jsPDF;
 
-  const docDef: any = {
-    content: [
-      { text: `Invoice #${order.orderId}`, style: "header" },
-      { text: `Date: ${new Date(order.date).toLocaleDateString()}` },
-      { text: "Shipping Address", style: "subheader", margin: [0, 10, 0, 4] },
-      `${order.shippingAddress.name}\n${order.shippingAddress.street}\n${order.shippingAddress.city}, ${order.shippingAddress.state} ${order.shippingAddress.zip}`,
-      { text: "Items", style: "subheader", margin: [0, 10, 0, 4] },
-      { table: { widths: ["*", 40, 60], body: itemsTable } },
-      { text: `Total: $${order.total.toFixed(2)}`, margin: [0, 10, 0, 0] }
-    ],
-    styles: {
-      header: { fontSize: 18, bold: true },
-      subheader: { fontSize: 14, bold: true }
+  constructor() {
+    this.doc = new jsPDF();
+  }
+
+  generateInvoice(data: InvoiceData): void {
+    this.setupDocument();
+    this.addHeader(data);
+    this.addClientInfo(data);
+    this.addInvoiceDetails(data);
+    this.addItemsTable(data);
+    this.addTotals(data);
+    this.addNotes(data);
+    this.addFooter();
+  }
+
+  private setupDocument(): void {
+    this.doc.setFontSize(12);
+    this.doc.setTextColor(0, 0, 0);
+  }
+
+  private addHeader(data: InvoiceData): void {
+    // Company name
+    this.doc.setFontSize(24);
+    this.doc.setFont(undefined, 'bold');
+    this.doc.text(data.company.name, 20, 30);
+
+    // Company details
+    this.doc.setFontSize(10);
+    this.doc.setFont(undefined, 'normal');
+    this.doc.text(data.company.address, 20, 40);
+    this.doc.text(data.company.email, 20, 45);
+    this.doc.text(data.company.phone, 20, 50);
+
+    // Invoice title
+    this.doc.setFontSize(20);
+    this.doc.setFont(undefined, 'bold');
+    this.doc.text('INVOICE', 150, 30);
+  }
+
+  private addClientInfo(data: InvoiceData): void {
+    const startY = 80;
+    
+    this.doc.setFontSize(12);
+    this.doc.setFont(undefined, 'bold');
+    this.doc.text('Bill To:', 20, startY);
+
+    this.doc.setFontSize(10);
+    this.doc.setFont(undefined, 'normal');
+    this.doc.text(data.client.name, 20, startY + 10);
+    this.doc.text(data.client.email, 20, startY + 15);
+    this.doc.text(data.client.address, 20, startY + 20);
+  }
+
+  private addInvoiceDetails(data: InvoiceData): void {
+    const startY = 80;
+    const rightAlign = 150;
+
+    this.doc.setFontSize(10);
+    this.doc.text(`Invoice #: ${data.invoiceNumber}`, rightAlign, startY);
+    this.doc.text(`Date: ${data.date}`, rightAlign, startY + 5);
+    this.doc.text(`Due Date: ${data.dueDate}`, rightAlign, startY + 10);
+  }
+
+  private addItemsTable(data: InvoiceData): void {
+    const startY = 120;
+
+    const tableData = data.items.map(item => [
+      item.description,
+      item.quantity.toString(),
+      `$${item.rate.toFixed(2)}`,
+      `$${item.amount.toFixed(2)}`
+    ]);
+
+    (this.doc as any).autoTable({
+      startY: startY,
+      head: [['Description', 'Quantity', 'Rate', 'Amount']],
+      body: tableData,
+      theme: 'grid',
+      headStyles: {
+        fillColor: [41, 128, 185],
+        textColor: 255,
+        fontStyle: 'bold'
+      },
+      styles: {
+        fontSize: 10,
+        cellPadding: 5
+      },
+      columnStyles: {
+        1: { halign: 'center' },
+        2: { halign: 'right' },
+        3: { halign: 'right' }
+      }
+    });
+  }
+
+  private addTotals(data: InvoiceData): void {
+    const finalY = (this.doc as any).lastAutoTable.finalY + 20;
+    const rightAlign = 150;
+
+    this.doc.setFontSize(10);
+    this.doc.text(`Subtotal: $${data.subtotal.toFixed(2)}`, rightAlign, finalY);
+    this.doc.text(`Tax: $${data.tax.toFixed(2)}`, rightAlign, finalY + 5);
+    
+    this.doc.setFont(undefined, 'bold');
+    this.doc.text(`Total: $${data.total.toFixed(2)}`, rightAlign, finalY + 10);
+  }
+
+  private addNotes(data: InvoiceData): void {
+    if (data.notes) {
+      const finalY = (this.doc as any).lastAutoTable.finalY + 40;
+      
+      this.doc.setFontSize(10);
+      this.doc.setFont(undefined, 'normal');
+      this.doc.text('Notes:', 20, finalY);
+      this.doc.text(data.notes, 20, finalY + 10);
     }
-  };
+  }
 
-  return new Promise((resolve) => {
-    // Mock PDF generation - replace with actual pdfMake implementation
-    const mockBlob = new Blob(['Mock PDF content'], { type: 'application/pdf' });
-    resolve(mockBlob);
-  });
+  private addFooter(): void {
+    const pageHeight = this.doc.internal.pageSize.height;
+    
+    this.doc.setFontSize(8);
+    this.doc.setTextColor(128, 128, 128);
+    this.doc.text('Thank you for your business!', 20, pageHeight - 20);
+    this.doc.text('Generated by Zion Tech Group', 20, pageHeight - 15);
+  }
+
+  save(filename: string = 'invoice.pdf'): void {
+    this.doc.save(filename);
+  }
+
+  getBlob(): Blob {
+    return this.doc.output('blob');
+  }
+
+  getDataURL(): string {
+    return this.doc.output('dataurlstring');
+  }
 }
+
+export function generateInvoicePDF(data: InvoiceData, filename?: string): void {
+  const generator = new InvoicePDFGenerator();
+  generator.generateInvoice(data);
+  generator.save(filename);
+}
+
+export function generateInvoiceBlob(data: InvoiceData): Blob {
+  const generator = new InvoicePDFGenerator();
+  generator.generateInvoice(data);
+  return generator.getBlob();
+}
+
+export default InvoicePDFGenerator;
