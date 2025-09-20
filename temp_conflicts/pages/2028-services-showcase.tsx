@@ -2,10 +2,10 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import {,
-  Rocket, Brain, Atom, Shield, Cloud, Database, Code;
-  BarChart3, Star, Zap, Sparkles, ArrowRight, CheckCircle;
-  TrendingUp, Users, Globe, Cpu, Lock, Target, Award, Phone,
+import { 
+  Rocket, Brain, Atom, Shield, Cloud, Database, Code, 
+  BarChart3, Star, Zap, Sparkles, ArrowRight, CheckCircle,
+  TrendingUp, Users, Globe, Cpu, Lock, Target, Award, Phone
 } from 'lucide-react';
 import UltraFuturisticNavigation2028 from '../components/layout/UltraFuturisticNavigation2028';
 import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFooter2028';

@@ -1,6 +1,3 @@
-import React from 'react';
-import { Loader2 export const LoadingOverlay = ({ visible = false }) => {
-
 <<<<<<< HEAD
     if(!visible) return null;
     return (<div className="fixed inset - 0 z - 50 flex items - center justify - center bg-black / 50">
@@ -8,6 +5,9 @@ import { Loader2 export const LoadingOverlay = ({ visible = false }) => {
     </div>) };
 }
 =======
+import React from 'react';
+import { Loader2 export const LoadingOverlay = ({ visible = false }) => {
+
     if(!visible)
         return null;
     return (<div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50">"
@@ -15,4 +15,4 @@ import { Loader2 export const LoadingOverlay = ({ visible = false }) => {
     </div>)};
 export default LoadingOverlay;
 }'"
->>>>>>> main
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

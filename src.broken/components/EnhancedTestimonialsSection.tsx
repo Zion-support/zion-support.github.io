@@ -1,5 +1,4 @@
 <<<<<<< HEAD
-import { <<<<<<< HEAD import { motion, AnimatePresence  } from 'framer-motion';
  from 'lucide-react';
 
 interface Testimonial {
@@ -93,7 +92,6 @@ export default function EnhancedTestimonialsSection(...args[]):  {
       setCurrentTestimonial((prev) => (prev + 1) % testimonials.length) }, 8000) ;
 
 =======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     return () => clearInterval(interval) }, [isAutoPlaying, testimonials.length]) ;
 
     setCurrentTestimonial((prev) => (prev + 1) % testimonials.length) ;
@@ -311,3 +309,4 @@ export default function EnhancedTestimonialsSection(...args[]):  {
       </div>;
     </section>;) }
 '"`
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

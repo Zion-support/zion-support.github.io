@@ -1,31 +1,56 @@
 <<<<<<< HEAD
 
-=======
-slug: "ai-trends-2025",
-    excerpt: "From multimodal AI to neuromorphic computing, discover the technologies that will shape the artificial intelligence landscape in 2025.";
-    content: `<p>As we move further into 2025, artificial intelligence continues to evolve at an unprecedented pace. This article explores the most significant trends that are reshaping the AI landscape this year.</p>
->>>>>>> aaa4dbfa8914e015974b0b47997c74f299c51923
-
-    slug: "ai-trends-2025",
-    excerpt: "From multimodal AI to neuromorphic computing, discover the technologies that will shape the artificial intelligence landscape in 2025.";
-    content: `<p>As we move further into 2025, artificial intelligence continues to evolve at an unprecedented pace. This article explores the most significant trends that are reshaping the AI landscape this year.</p>
-<<<<<<< HEAD
 
     id: 'ai-trends-2025'
     title: '10 Emerging AI Trends to Watch in 2025'
     slug: 'ai-trends-2025'
     excerpt:
 
-<<<<<<< HEAD
+
+      'From multimodal AI to neuromorphic computing, discover the technologies that will shape the artificial intelligence landscape in 2025.',    content: `<p>As we move further into 2025, artificial intelligence continues to evolve at an unprecedented pace. This article explores the most significant trends that are reshaping the AI landscape this year.</p>    id: "ai-trends-2025";
+
+
+
+    slug: 'green-it',
+
+<h2>Energy-Efficient Hardware Selection</h2>
+<p>The foundation of any green IT strategy begins with your hardware choices. Modern processors, storage solutions, and networking equipment can deliver significant performance improvements while consuming less power. Look for Energy Star ratings and power usage effectiveness (PUE) metrics when evaluating options.</p>
+<h2>Optimizing Cooling Systems</h2>
+<p>Cooling typically represents 40% of data center energy consumption. Implementing hot/cold aisle containment, raising ambient temperature setpoints within ASHRAE guidelines, and deploying liquid cooling for high-density racks can dramatically reduce this energy burden.</p>
+<h2>Renewable Energy Integration</h2>
+<p>Many organizations are now leveraging on-site renewable generation or virtual power purchase agreements (VPPAs) to offset their carbon footprint. These approaches not only reduce emissions but can provide long-term cost stability as energy markets fluctuate.</p>
+<h2>Workload Optimization and Consolidation</h2>
+<p>Right-sizing infrastructure and implementing dynamic workload management ensures computing resources are used efficiently. Modern orchestration tools can automatically balance workloads to maximize utilization while powering down unused capacity.</p>
+<h2>Measuring and Reporting Impact</h2>
+
+
+    },
+  },
+  {
+      name: 'Michael Wong'
+      title: 'ML Infrastructure Architect'
+      name: 'Michael Wong',
+      title: 'ML Infrastructure Architect',
+      avatarUrl:
+        'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=200&h=200',    author: {
+      name: "Michael Wong";
+      title: "ML Infrastructure Architect"
+      avatarUrl: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=200&h=200"
+    }
 =======
+slug: "ai-trends-2025",
+    excerpt: "From multimodal AI to neuromorphic computing, discover the technologies that will shape the artificial intelligence landscape in 2025.";
+    content: `<p>As we move further into 2025, artificial intelligence continues to evolve at an unprecedented pace. This article explores the most significant trends that are reshaping the AI landscape this year.</p>
+
+    slug: "ai-trends-2025",
+    excerpt: "From multimodal AI to neuromorphic computing, discover the technologies that will shape the artificial intelligence landscape in 2025.";
+    content: `<p>As we move further into 2025, artificial intelligence continues to evolve at an unprecedented pace. This article explores the most significant trends that are reshaping the AI landscape this year.</p>
 
 =======
     id: "id",
     title: '10 Emerging AI Trends to Watch in 2025'
     slug: 'ai-trends-2025'
     excerpt:
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
->>>>>>> aaa4dbfa8914e015974b0b47997c74f299c51923
 import { BlogPost } from '@/types/blog';
 // Sample blog data - in a real app this would come from an API or CMS
 export const BLOG_POSTS: BlogPost[] = [
@@ -34,20 +59,10 @@ export const BLOG_POSTS: BlogPost[] = [
     title: '10 Emerging AI Trends to Watch in 2025',
     slug: 'ai-trends-2025',
     excerpt:;
-<<<<<<< HEAD
-
-      'From multimodal AI to neuromorphic computing, discover the technologies that will shape the artificial intelligence landscape in 2025.',    content: `<p>As we move further into 2025, artificial intelligence continues to evolve at an unprecedented pace. This article explores the most significant trends that are reshaping the AI landscape this year.</p>    id: "ai-trends-2025";
-=======
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     title: "10 Emerging AI Trends to Watch in 2025";
     slug: "ai-trends-2025"
     excerpt: "From multimodal AI to neuromorphic computing, discover the technologies that will shape the artificial intelligence landscape in 2025.";
     content: `<p>As we move further into 2025, artificial intelligence continues to evolve at an unprecedented pace. This article explores the most significant trends that are reshaping the AI landscape this year.</p>
-<<<<<<< HEAD
-
-
-=======
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     },
     published_date: 'Apr 15, 2025',
     read_time: '5 min read',
@@ -199,11 +214,6 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     id: "green-it",
     title: "Green IT: Reducing Your Data Center's Carbon Footprint",
-<<<<<<< HEAD
-
-    slug: 'green-it',
-=======
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     excerpt:
       'Practical steps for implementing sustainable practices in your IT infrastructure while maintaining performance and reliability.',    content: `<p>As AI and cloud computing demand grows exponentially, so does the environmental impact of data centers. This article explores practical approaches to make your IT infrastructure more sustainable without compromising performance.</p>    id: "green-it";
     title: "Green IT: Reducing Your Data Center's Carbon Footprint";
@@ -213,22 +223,6 @@ export const BLOG_POSTS: BlogPost[] = [
     slug: "green-it",
     excerpt: "Practical steps for implementing sustainable practices in your IT infrastructure while maintaining performance and reliability.",
     content: `<p>As AI and cloud computing demand grows exponentially, so does the environmental impact of data centers. This article explores practical approaches to make your IT infrastructure more sustainable without compromising window.window.window.performance.</p>
-<<<<<<< HEAD
-
-<h2>Energy-Efficient Hardware Selection</h2>
-<p>The foundation of any green IT strategy begins with your hardware choices. Modern processors, storage solutions, and networking equipment can deliver significant performance improvements while consuming less power. Look for Energy Star ratings and power usage effectiveness (PUE) metrics when evaluating options.</p>
-<h2>Optimizing Cooling Systems</h2>
-<p>Cooling typically represents 40% of data center energy consumption. Implementing hot/cold aisle containment, raising ambient temperature setpoints within ASHRAE guidelines, and deploying liquid cooling for high-density racks can dramatically reduce this energy burden.</p>
-<h2>Renewable Energy Integration</h2>
-<p>Many organizations are now leveraging on-site renewable generation or virtual power purchase agreements (VPPAs) to offset their carbon footprint. These approaches not only reduce emissions but can provide long-term cost stability as energy markets fluctuate.</p>
-<h2>Workload Optimization and Consolidation</h2>
-<p>Right-sizing infrastructure and implementing dynamic workload management ensures computing resources are used efficiently. Modern orchestration tools can automatically balance workloads to maximize utilization while powering down unused capacity.</p>
-<h2>Measuring and Reporting Impact</h2>
-
-
-    },
-=======
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
     published_date: 'Apr 5, 2025',
     read_time: '6 min read',
     category: 'Sustainability',
@@ -332,6 +326,7 @@ export const BLOG_POSTS: BlogPost[] = [
 
   },
   {
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1
 
     id: 'ai - compute - optimization',
     title: 'AI Compute Optimization: Balancing Performance and Cost',
@@ -339,96 +334,6 @@ export const BLOG_POSTS: BlogPost[] = [
     excerpt:;
       'Strategies for optimizing AI infrastructure costs while maintaining model performance and development velocity.',    content: `<p > As AI models grow in complexity, so do their computational requirements. This practical guide explores strategies for optimizing AI infrastructure for the optimal balance between performance, cost, and development efficiency.</p>    id: "ai - compute - optimization";
 
-<p>Create clear advancement opportunities that don't force technical experts into management tracks. Dual-ladder career paths that equally value technical depth and leadership skills ensure AI professionals can progress while playing to their strengths.</p>`
-      name: 'Elena Rodriguez'
-      title: 'Head of AI Talent'
-      avatarUrl:
-        'https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=200&h=200'
-    }
-    publishedDate: 'Mar 22, 2025'
-    readTime: '9 min read'
-    category: 'Recruitment'
-    tags: ['AI Talent', 'Recruitment', 'Tech Hiring', 'Retention']
-    featuredImage:
-      'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1200&h=630'
-  }
-  {
-    id: 'ai-compute-optimization'
-    title: 'AI Compute Optimization: Balancing Performance and Cost'
-    slug: 'ai-compute-optimization'
-    excerpt:
-      'Strategies for optimizing AI infrastructure costs while maintaining model performance and development velocity.',    content: `<p>As AI models grow in complexity, so do their computational requirements. This practical guide explores strategies for optimizing AI infrastructure for the optimal balance between performance, cost, and development efficiency.</p>    id: "ai-compute-optimization";
-    title: "AI Compute Optimization: Balancing Performance and Cost";
-    slug: "ai-compute-optimization";
-    excerpt: "Strategies for optimizing AI infrastructure costs while maintaining model performance and development velocity.";
-<<<<<<< HEAD
-  },
-  {
-      name: 'Michael Wong'
-      title: 'ML Infrastructure Architect'
-      name: 'Michael Wong',
-      title: 'ML Infrastructure Architect',
-      avatarUrl:
-        'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=200&h=200',    author: {
-      name: "Michael Wong";
-      title: "ML Infrastructure Architect"
-      avatarUrl: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=200&h=200"
-    }
-
-    id: 'ai - compute - optimization',
-    title: 'AI Compute Optimization: Balancing Performance and Cost',
-    slug: 'ai - compute - optimization',
-    excerpt:;
-      'Strategies for optimizing AI infrastructure costs while maintaining model performance and development velocity.',    content: `<p > As AI models grow in complexity, so do their computational requirements. This practical guide explores strategies for optimizing AI infrastructure for the optimal balance between performance, cost, and development efficiency.</p>    id: "ai - compute - optimization";
-
-=======
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
-    title: "AI Compute Optimization: Balancing Performance and Cost";
-    slug: "ai - compute - optimization";
-    excerpt: "Strategies for optimizing AI infrastructure costs while maintaining model performance and development velocity.";
-
-
-    title: "AI Compute Optimization: Balancing Performance and Cost";
-    slug: "ai - compute - optimization";
-    excerpt: "Strategies for optimizing AI infrastructure costs while maintaining model performance and development velocity.";
-    content: `<p>As AI models grow in complexity, so do their computational requirements. This practical guide explores strategies for optimizing AI infrastructure for the optimal balance between performance, cost, and development efficiency.</p>
-<h2>Right-sizing Compute Resources</h2>
-<p>Many organizations overprovision computing resources for AI workloads. Implementing proper benchmarking and profiling helps identify true requirements and eliminate waste. Consider different compute profiles for development, training, and inference stages.</p>
-<h2>Model Compression Techniques</h2>
-<p>Recent advances in quantization, pruning, and knowledge distillation allow teams to reduce model size without significant performance loss. These compressed models require less compute for inference and can often run on less expensive hardware.</p>
-<h2>Strategic Cloud vs. On-Premise Decisions</h2>
-<p>While cloud platforms offer flexibility, organizations with consistent AI workloads often benefit from hybrid approaches. Analyze workload patterns to determine which components should remain in the cloud and which warrant dedicated hardware investments.</p>
-<h2>Training Efficiency Optimization</h2>
-<p>Implementing techniques like mixed precision training, gradient accumulation, and efficient hyperparameter optimization can significantly reduce training time and costs. Modern frameworks provide many of these optimizations with minimal configuration.</p>
-<h2>Inference Serving Architecture</h2>
-    author: {
-      name: 'Michael Wong'
-      title: 'ML Infrastructure Architect'
-      avatarUrl:
-        'https://images && images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=200&h=200',    author: {
-      name: "Michael Wong";
-      avatarUrl: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=200&h=200"
-    }
-      title: "ML Infrastructure Architect",
-      avatarUrl: "https://images && images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=200&h=200"
-    };
-    publishedDate: "Mar 15, 2025";
-    readTime: "6 min read";
-    category: "Infrastructure"
-    tags: ["AI Infrastructure", "Cost Optimization", "Machine Learning", "Computing"];
-      'https://images && images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&h=630',
-    },
-    published_date: 'Mar 15, 2025',
-    read_time: '6 min read',
-    category: 'Infrastructure',
-    tags: [;
-      'AI Infrastructure',
-      'Cost Optimization',
-      'Machine Learning',
-      'Computing',
-    ],
-    featured_image:;
-      'https://images.unsplash.com / photo - 1558494949 - ef010cbdcc31?auto = format & fit = crop & w=1200 & h=630',
 <<<<<<< HEAD
 
   },
@@ -625,8 +530,75 @@ export const BLOG_POSTS: BlogPost[] = [;
 
 
 ;
-<<<<<<< HEAD
 =======
+<p>Create clear advancement opportunities that don't force technical experts into management tracks. Dual-ladder career paths that equally value technical depth and leadership skills ensure AI professionals can progress while playing to their strengths.</p>`
+      name: 'Elena Rodriguez'
+      title: 'Head of AI Talent'
+      avatarUrl:
+        'https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=200&h=200'
+    }
+    publishedDate: 'Mar 22, 2025'
+    readTime: '9 min read'
+    category: 'Recruitment'
+    tags: ['AI Talent', 'Recruitment', 'Tech Hiring', 'Retention']
+    featuredImage:
+      'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1200&h=630'
+  }
+  {
+    id: 'ai-compute-optimization'
+    title: 'AI Compute Optimization: Balancing Performance and Cost'
+    slug: 'ai-compute-optimization'
+    excerpt:
+      'Strategies for optimizing AI infrastructure costs while maintaining model performance and development velocity.',    content: `<p>As AI models grow in complexity, so do their computational requirements. This practical guide explores strategies for optimizing AI infrastructure for the optimal balance between performance, cost, and development efficiency.</p>    id: "ai-compute-optimization";
+    title: "AI Compute Optimization: Balancing Performance and Cost";
+    slug: "ai-compute-optimization";
+    excerpt: "Strategies for optimizing AI infrastructure costs while maintaining model performance and development velocity.";
+    title: "AI Compute Optimization: Balancing Performance and Cost";
+    slug: "ai - compute - optimization";
+    excerpt: "Strategies for optimizing AI infrastructure costs while maintaining model performance and development velocity.";
+
+
+    title: "AI Compute Optimization: Balancing Performance and Cost";
+    slug: "ai - compute - optimization";
+    excerpt: "Strategies for optimizing AI infrastructure costs while maintaining model performance and development velocity.";
+    content: `<p>As AI models grow in complexity, so do their computational requirements. This practical guide explores strategies for optimizing AI infrastructure for the optimal balance between performance, cost, and development efficiency.</p>
+<h2>Right-sizing Compute Resources</h2>
+<p>Many organizations overprovision computing resources for AI workloads. Implementing proper benchmarking and profiling helps identify true requirements and eliminate waste. Consider different compute profiles for development, training, and inference stages.</p>
+<h2>Model Compression Techniques</h2>
+<p>Recent advances in quantization, pruning, and knowledge distillation allow teams to reduce model size without significant performance loss. These compressed models require less compute for inference and can often run on less expensive hardware.</p>
+<h2>Strategic Cloud vs. On-Premise Decisions</h2>
+<p>While cloud platforms offer flexibility, organizations with consistent AI workloads often benefit from hybrid approaches. Analyze workload patterns to determine which components should remain in the cloud and which warrant dedicated hardware investments.</p>
+<h2>Training Efficiency Optimization</h2>
+<p>Implementing techniques like mixed precision training, gradient accumulation, and efficient hyperparameter optimization can significantly reduce training time and costs. Modern frameworks provide many of these optimizations with minimal configuration.</p>
+<h2>Inference Serving Architecture</h2>
+    author: {
+      name: 'Michael Wong'
+      title: 'ML Infrastructure Architect'
+      avatarUrl:
+        'https://images && images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=200&h=200',    author: {
+      name: "Michael Wong";
+      avatarUrl: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=200&h=200"
+    }
+      title: "ML Infrastructure Architect",
+      avatarUrl: "https://images && images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=200&h=200"
+    };
+    publishedDate: "Mar 15, 2025";
+    readTime: "6 min read";
+    category: "Infrastructure"
+    tags: ["AI Infrastructure", "Cost Optimization", "Machine Learning", "Computing"];
+      'https://images && images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&h=630',
+    },
+    published_date: 'Mar 15, 2025',
+    read_time: '6 min read',
+    category: 'Infrastructure',
+    tags: [;
+      'AI Infrastructure',
+      'Cost Optimization',
+      'Machine Learning',
+      'Computing',
+    ],
+    featured_image:;
+      'https://images.unsplash.com / photo - 1558494949 - ef010cbdcc31?auto = format & fit = crop & w=1200 & h=630',
 
 
 
@@ -643,5 +615,4 @@ export const BLOG_POSTS: BlogPost[] = [;
   },
 ];
 }];
->>>>>>> e15e3610cc22066f202cb51e47d89615c0f05f38
->>>>>>> aaa4dbfa8914e015974b0b47997c74f299c51923
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

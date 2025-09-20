@@ -55,3 +55,5 @@ export default function Page() {
             // Handle special category mappings
             const categoryMappings = {
 '"
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

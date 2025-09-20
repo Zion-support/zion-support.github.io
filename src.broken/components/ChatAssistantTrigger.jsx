@@ -19,16 +19,15 @@ export default function Page() {
       <Button onClick={() => setIsOpen(true)} size="icon" variant="outline" className="fixed bottom-4 right-4 h-12 w-12 rounded-full shadow-lg bg-zion-purple text-white hover:bg-zion-purple-light z-50" >"
         <MessageSquare aria-hidden="true" className="h-5 w-5"/>
       </Button>
-<<<<<<< HEAD
 
       {isOpen && (<ChatAssistant isOpen={isOpen} onClose={ () => setIsOpen(false) } recipient = {
 =======
       
       {isOpen && (<ChatAssistant isOpen={isOpen} onClose={() => setIsOpen(false)} recipient = {
 
->>>>>>> main
   {
 
                 id: 'ai-assistant',
                 name: 'AI Assistant',
                 avatarUrl: 'https://placehold.co/64x64?text=AI',"
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

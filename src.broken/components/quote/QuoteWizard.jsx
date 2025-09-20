@@ -1,7 +1,6 @@
 <<<<<<< HEAD
 import React, { useState } from 'react';
 =======
->>>>>>> main
 import { useState, useMemo, useEffect } from 'react';
 import { useQuoteWizard } from '@/hooks/useQuoteWizard';
 import { useDelayedError } from '@/hooks/useDelayedError';
@@ -279,3 +278,4 @@ export function QuoteWizard({ category }) {
   return null;
 }
 '"`
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

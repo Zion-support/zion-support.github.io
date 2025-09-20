@@ -1,5 +1,3 @@
-import React from 'react';
-import Head from 'next/head';
 <<<<<<< HEAD
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 import Card from '../components/ui/Card';
@@ -77,6 +75,8 @@ export default function SmartCrmIntelligenceSuitePage() {
 			</div>
 		</UltraFuturisticBackground>
 =======
+import React from 'react';
+import Head from 'next/head';
 import Link from 'next/link';
 
 export default function SmartCRMSuite() {
@@ -99,6 +99,6 @@ export default function SmartCRMSuite() {
 				</div>
 			</section>
 		</>
->>>>>>> origin/cursor/expand-services-and-deploy-updates-e066
 	);
 }
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

@@ -1,4 +1,4 @@
-import { ChevronDown, Zap, Brain, Shield, Users, HardDrive, TrendingUp, Building2, FileText, <<<<<<< HEAD HelpCircle, BarChart3  } from 'lucide-react';
+<<<<<<< HEAD
 
 import React from 'react';
 import { Link, NavLink } from 'react-router-dom';
@@ -37,7 +37,6 @@ export function MainNavigation({ className }: MainNavigationProps) {
 =======
   HelpCircle,'
   BarChart3} from 'lucide-react';          <ChevronDown className="w-3 h-3"  />
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
         </button>
         {isServicesOpen && (
           <div
@@ -527,3 +526,4 @@ export function MainNavigation({ className }: MainNavigationProps) {
     </nav>
   )}
 '"
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

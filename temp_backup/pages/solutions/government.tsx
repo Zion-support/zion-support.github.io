@@ -1,9 +1,9 @@
 import React from 'react';
 import Layout from '../../components/layout/Layout';
 import { motion } from 'framer-motion';
-import {,
-  Building, Shield, Brain, Zap, Cpu, Globe;
-  Lock, CheckCircle, ArrowRight, BarChart3, Users,
+import { 
+  Building, Shield, Brain, Zap, Cpu, Globe, 
+  Lock, CheckCircle, ArrowRight, BarChart3, Users
 } from 'lucide-react';
 export default function GovernmentSolutions() {,
   return (,

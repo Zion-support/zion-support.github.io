@@ -18,7 +18,6 @@ import { cn } from '@/lib/utils';"
 import { apiClient } from '@/utils/apiClient';"
 import { Loader2, Send import { useEffect, useRef, useState } from 'react';"
 import { ChatMessage } from './ChatMessage';"
->>>>>>> main
 import { QuickReplyButton } from './QuickReplyButton';
 ,"
     { id: "match", text: "How do I get matched?" },"
@@ -256,16 +255,20 @@ export function ChatBotPanel() {
             </Button>
           </div>
         </div>)}
-<<<<<<< HEAD
 
       <div className={
   cn("p-4 border-t",
+
+}} className="flex items-center gap-2">
+          <Input ref={inputRef} value={inputValue} onChange={(e) => setInputValue(e.target.value)} placeholder="Type your question..." className={
+  cn("flex-1",
+}/>
+          <Button type="submit" size="icon" disabled={isLoading || !inputValue.trim()} className="bg-zion-cyan hover:bg-zion-cyan/80 text-white">
 =======
       
       <div className = {
 "
   cn("p-4 border-t","
->>>>>>> main
   theme === "dark" ? "border-zion-blue-light" : "border-gray-200")
 
 }>
@@ -273,34 +276,23 @@ export function ChatBotPanel() {
 
             e.preventDefault();
             handleSendMessage();
-<<<<<<< HEAD
-
-}} className="flex items-center gap-2">
-          <Input ref={inputRef} value={inputValue} onChange={(e) => setInputValue(e.target.value)} placeholder="Type your question..." className={
-  cn("flex-1",
-=======
         
 "
 }} className="flex items-center gap-2">"
           <Input ref={inputRef} value={inputValue} onChange={(e) => setInputValue(e.target.value)} placeholder="Type your question..." className = {
 "
   cn("flex-1","
->>>>>>> main
   theme === "dark"
             ? "bg-zion-blue border-zion-blue-light focus-visible:ring-zion-purple"
             : "bg-white border-gray-200")
 
-<<<<<<< HEAD
-}/>
-          <Button type="submit" size="icon" disabled={isLoading || !inputValue.trim()} className="bg-zion-cyan hover:bg-zion-cyan/80 text-white">
-=======
 
 }/>"
           <Button type="submit" size="icon" disabled={isLoading || !inputValue.trim()} className="bg-zion-cyan hover:bg-zion-cyan/80 text-white">"
->>>>>>> main
             <Send className="h-4 w-4"/>
           </Button>
         </form>
       </div>
     </div>)}
 '"`
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

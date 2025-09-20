@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+};
+
+// Innovative Micro SAAS Services 2030
+=======
 // Innovative Micro SAAS Services 2030 - Zion Tech Group
 // Cutting-edge, real-world micro SAAS solutions with market data and pricing
 ;
@@ -54,13 +59,7 @@ const zionContact: ServiceContact = {
   ;"
   address: "364 E Main St STE 1008 Middletown DE 19709"};
 
-<<<<<<< HEAD
-};
-
-// Innovative Micro SAAS Services 2030
-=======
 // Innovative Micro SAAS Services 2030;
->>>>>>> main
 export const innovativeMicroSaasServices2030: MicroSaasService[] = [{
 
     id: 1,"
@@ -615,3 +614,4 @@ export const innovativeMicroSaasServices2030: MicroSaasService[] = [{
 ];
 
 export default innovativeMicroSaasServices2030}}}"
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

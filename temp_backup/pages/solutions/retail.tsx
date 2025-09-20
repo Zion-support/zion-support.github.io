@@ -1,9 +1,9 @@
 import React from 'react';
 import Layout from '../../components/layout/Layout';
 import { motion } from 'framer-motion';
-import {,
-  ShoppingCart, Globe, Brain, Shield, Zap, Cpu;
-  TrendingUp, CheckCircle, ArrowRight, BarChart3, Users,
+import { 
+  ShoppingCart, Globe, Brain, Shield, Zap, Cpu, 
+  TrendingUp, CheckCircle, ArrowRight, BarChart3, Users
 } from 'lucide-react';
 export default function RetailSolutions() {,
   return (,

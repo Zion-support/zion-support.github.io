@@ -1,5 +1,3 @@
-import React from 'react';
-import Link from 'next/link';
 export default function Home() {,
   return (,
     <div>,
@@ -17,6 +15,3 @@ export default function Home() {,
         <Link href="/services">View Our Services</Link>,
       </main>,
     </div>,
-  );
-}
-,

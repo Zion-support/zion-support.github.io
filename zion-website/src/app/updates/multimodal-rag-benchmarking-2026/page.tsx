@@ -3,5 +3,3 @@ export default function MultimodalRAGBenchmarkingPage() {,
     <div className="bg-black min-h-screen">,
       <h1>Multimodal RAG Benchmarking 2026</h1>,
     </div>,
-  );
-}

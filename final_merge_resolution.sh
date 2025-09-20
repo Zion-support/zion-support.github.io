@@ -1,59 +1,5 @@
 #!/bin/bash
 
-<<<<<<< HEAD
-# Final Merge Resolution Script
-set -e
-
-echo "🚀 Starting final merge resolution process..."
-
-# Function to merge specific branches
-merge_specific_branches() {
-    local branches=(
-        "origin/cursor/create-and-deploy-new-content-144c"
-        "origin/cursor/create-and-deploy-new-content-998e"
-        "origin/cursor/create-and-deploy-new-content-3db9"
-        "origin/cursor/create-and-deploy-new-content-c287"
-        "origin/cursor/create-and-deploy-new-content-3a26"
-        "origin/cursor/create-and-deploy-new-content-8a2c"
-        "origin/cursor/create-and-deploy-new-content-9be6"
-        "origin/cursor/create-and-deploy-new-content-4b60"
-        "origin/cursor/create-and-deploy-new-content-9583"
-        "origin/cursor/create-and-deploy-new-content-7da4"
-    )
-    
-    successful_merges=0
-    failed_merges=0
-    already_merged=0
-    
-    for branch in "${branches[@]}"; do
-        echo ""
-        echo "🔄 Processing: $branch"
-        
-        # Check if branch exists
-        if ! git show-ref --verify --quiet "refs/$branch"; then
-            echo "⚠️  Branch $branch not found, skipping..."
-            continue
-        fi
-        
-        # Check if already merged
-        if git merge-base --is-ancestor "$branch" HEAD 2>/dev/null; then
-            echo "✅ Already merged: ${branch#origin/}"
-            ((already_merged++))
-            continue
-        fi
-        
-        # Try to merge
-        if git merge "$branch" --no-ff -m "Merge ${branch#origin/} into main"; then
-            echo "✅ Successfully merged ${branch#origin/}"
-            ((successful_merges++))
-        else
-            echo "⚠️  Conflicts detected, resolving..."
-            
-            # Resolve conflicts by keeping our version
-            git status --porcelain | grep "^UU\|^AA\|^DD" | cut -c4- | while read file; do
-                if [ -f "$file" ]; then
-                    git checkout --ours "$file" 2>/dev/null || true
-                    sed -i '/^<<<<<<< HEAD$/d; /^=======$/d; /^>>>>>>> .*/d' "$file" 2>/dev/null || true
                 fi
             done
             
@@ -136,4 +82,3 @@ done
 
 echo "Committing merge..."
 git commit -m "Resolve all merge conflicts by accepting our clean version"
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-133c

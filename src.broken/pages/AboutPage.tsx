@@ -1,5 +1,3 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
 <<<<<<< HEAD
 
 export default function AboutPage() {
@@ -22,12 +20,9 @@ export default function AboutPage() {
           >
             Get Started
           </Link>
-        </div>
-      </div>
-    </div>
-  );
-}
 =======
+import React from 'react';
+import { Link } from 'react-router-dom';
 import {
   Users,
   Target,
@@ -424,9 +419,9 @@ export function AboutPage() {
               Explore Services
             </Link>
           </div>
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1
         </div>
       </div>
     </div>
   );
 }
->>>>>>> 555b9ffae2e68b00750b91675d62a559987674d9

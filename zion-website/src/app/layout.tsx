@@ -1,12 +1,3 @@
-import React from 'react',
-import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
-import './globals.css';
-import SEO from '@/components/SEO';
-import PerformanceMonitor from '@/components/PerformanceMonitor';
-import ErrorBoundary from '@/components/ErrorBoundary';
-import Analytics from '@/components/Analytics';
-import ProgressiveWebApp from '@/components/ProgressiveWebApp';
 const inter = Inter({,
   subsets: ['latin'];
   display: 'swap';
@@ -84,24 +75,3 @@ export default function RootLayout({,
         <meta name="theme-color" content="#1a1a2e" />,
         <meta name="msapplication-TileColor" content="#1a1a2e" />,
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />,
-        {/* Preconnect to external domains */}
-        <link rel="preconnect" href="https: //fonts.googleapis.com" />,
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />,
-        {/* DNS prefetch for performance */,}
-        <link rel="dns-prefetch" href="//www.google-analytics.com" />,
-        <link rel="dns-prefetch" href="//www.googletagmanager.com" />,
-        {/* Preload critical resources */}
-        <link rel="preload" href="/fonts/inter-var.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />,
-      </head>,
-      <body className="antialiased">,
-        <ErrorBoundary>,
-          <SEO />,
-          <PerformanceMonitor />,
-          <Analytics />,
-          <ProgressiveWebApp />,
-          {children}
-        </ErrorBoundary>,
-      </body>,
-    </html>,
-  );
-}

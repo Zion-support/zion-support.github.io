@@ -1,3 +1,23 @@
+<<<<<<< HEAD
+
+          <div>
+            <h4 className="font - medium mb-2">Main Pages:</h4>
+            <div className="space - y-1 text-sm">
+              {sitemapData.pages.map((page, index) => (<div key={index} className="flex justify - between items -center">
+                  <span className="text-gray -700">{page.url}</span>
+                  <span className="text-gray -500">Priority: {page.priority}</span>
+                </div>) ) }
+            </div>
+          </div>
+
+          <div>
+            <h4 className="font - medium mb-2">Service Pages:</h4>
+            <div className="space - y-1 text-sm">
+              {sitemapData.services.map((service, index) => (<div key={index} className="flex justify - between items -center">
+                  <span className="text-gray -700">{service.url}</span>
+                  <span className="text-gray -500">Priority: {service.priority}</span>
+                </div>) ) }
+=======
 import React, { useState, useEffect } from 'react';
 import { motion  } from 'framer-motion';
 
@@ -114,26 +134,6 @@ Sitemap: ${baseUrl}/sitemap.xml
 };
             </div>
           </div>
-<<<<<<< HEAD
-
-          <div>
-            <h4 className="font - medium mb-2">Main Pages:</h4>
-            <div className="space - y-1 text-sm">
-              {sitemapData.pages.map((page, index) => (<div key={index} className="flex justify - between items -center">
-                  <span className="text-gray -700">{page.url}</span>
-                  <span className="text-gray -500">Priority: {page.priority}</span>
-                </div>) ) }
-            </div>
-          </div>
-
-          <div>
-            <h4 className="font - medium mb-2">Service Pages:</h4>
-            <div className="space - y-1 text-sm">
-              {sitemapData.services.map((service, index) => (<div key={index} className="flex justify - between items -center">
-                  <span className="text-gray -700">{service.url}</span>
-                  <span className="text-gray -500">Priority: {service.priority}</span>
-                </div>) ) }
-=======
           
           <div>"
             <h4 className="font-medium mb-2">Main Pages:</h4>"
@@ -156,7 +156,6 @@ Sitemap: ${baseUrl}/sitemap.xml
                   <span className="text-gray-500">Priority: {service.priority}</span>
                 </div>
               ))}
->>>>>>> main
             </div>
           </div>
         </motion.div>) }
@@ -168,3 +167,4 @@ export default SitemapGenerator;
 export default to;
 export default to;
 '"`
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

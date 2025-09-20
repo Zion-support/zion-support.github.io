@@ -34,16 +34,3 @@ if [ -n "$FIRST_BRANCH" ]; then
         git diff --name-only --diff-filter=U | while read file; do
             if [ -f "$file" ]; then
                 echo "Resolving: $file"
-                sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
-                sed -i '/>>>>>>> /d' "$file"
-            fi
-        done
-        git add .
-        git commit -m "Resolve conflicts for $FIRST_BRANCH"
-    fi
-fi
-
-echo "Step 7: Push changes"
-git push origin main
-
-echo "Done"

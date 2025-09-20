@@ -1,4 +1,3 @@
-import React, { useState } from 'react';
 <<<<<<< HEAD
 export default EnhancedServicesShowcase;
 import { enhancedServices2025 } from '../data/enhanced - services -2025';
@@ -78,6 +77,11 @@ export default function Page() {
 
           {/* Contact Information */}"
           <motion.div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 mb-8 max-w-2xl mx-auto" initial = {
+=======
+import React, { useState } from 'react';
+          "
+          <motion.div className="flex flex-col sm:flex-row gap-4 justify-center mb-8" initial = {
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1
 
   { opacity: 0,
   y: 20
@@ -93,6 +97,7 @@ export default function Page() {
   delay: 0.4
 
 }}>"
+<<<<<<< HEAD
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">"
               <div className="text-center">"
                 <div className="text-blue-400 font-semibold">📱 Contact</div>"
@@ -111,6 +116,17 @@ export default function Page() {
 
           {/* Search and Filter */}"
           <motion.div className="flex flex-col md:flex-row gap-4 justify-center items-center mb-12" initial = {
+=======
+            <Link to="/contact" className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300">
+              Contact Us Today
+            </Link>"
+            <a href="tel:+13024640950" className="inline-flex items-center px-8 py-3 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-300">
+              Call: +1 302 464 0950
+            </a>
+          </motion.div>
+"
+          <motion.div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 max-w-2xl mx-auto" initial = {
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1
 
   { opacity: 0,
   y: 20
@@ -126,6 +142,7 @@ export default function Page() {
   delay: 0.6
 
 }}>"
+<<<<<<< HEAD
             <input type="text" placeholder="Search services..." value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} className="px-6 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-400/20 w-full md:w-80"/>"
             <div className="flex flex-wrap gap-2">
               {categories.map((category) => (<button key={category.id} onClick={() => setSelectedCategory(category.id)} className={`px-4 py-2 rounded-lg border transition-all duration-300 ${selectedCategory === category.id'
@@ -255,52 +272,9 @@ export default function Page() {
 }}>
             Let's discuss how our innovative services can help drive your success and competitive advantage
           </motion.p>
-<<<<<<< HEAD
 
           <motion.div className="flex flex - col sm:flex - row gap-4 justify - center mb-8" initial = {
 =======
-          "
-          <motion.div className="flex flex-col sm:flex-row gap-4 justify-center mb-8" initial = {
-
->>>>>>> main
-  { opacity: 0,
-  y: 20
-
-}} whileInView = {
-
-  { opacity: 1,
-  y: 0
-
-}} transition = {
-
-  { duration: 0.6,
-  delay: 0.4
-
-}}>"
-            <Link to="/contact" className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300">
-              Contact Us Today
-            </Link>"
-            <a href="tel:+13024640950" className="inline-flex items-center px-8 py-3 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-300">
-              Call: +1 302 464 0950
-            </a>
-          </motion.div>
-"
-          <motion.div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 max-w-2xl mx-auto" initial = {
-
-  { opacity: 0,
-  y: 20
-
-}} whileInView = {
-
-  { opacity: 1,
-  y: 0
-
-}} transition = {
-
-  { duration: 0.6,
-  delay: 0.6
-
-}}>"
             <h3 className="text-lg font-semibold text-white mb-4">Why Choose Zion Tech Group?</h3>"
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-gray-300">"
               <div className="flex items-center">"
@@ -337,3 +311,4 @@ export default function Page() {
     </div>)};
 export default EnhancedServicesShowcase;
 }}}'"`
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

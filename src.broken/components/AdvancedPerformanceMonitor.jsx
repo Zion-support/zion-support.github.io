@@ -1,9 +1,7 @@
-import React, { useState, useRef, useEffect } from 'react';
-import { <<<<<<< HEAD Activity, BarChart3, TrendingUp, Zap, Database, Network, Cpu, HardDrive, X, Maximize2, Minimize2, RefreshCw, AlertTriangle, CheckCircle, Download,  } from 'lucide-react';
+<<<<<<< HEAD
  from 'lucide-react';
 
 const mockSystemMetrics = [{
->>>>>>> main
 
     id: '1',
     name: 'CPU Usage',
@@ -371,3 +369,6 @@ export function AdvancedPerformanceMonitor({ enabled = true }) {
     </div>) ;
 }
 '"`
+=======
+import React, { useState, useRef, useEffect } from 'react';
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

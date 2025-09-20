@@ -1,13 +1,34 @@
-<<<<<<< HEAD
-import { <<<<<<< HEAD import { motion  } from 'framer-motion';
 
+<<<<<<< HEAD
  params - Function parameters
  * @returns {*} Function return value
  */
 function TechSolutionsSection () {
-=======
->>>>>>> main
+  return (<section className="py-20 bg-gradient - to - br from - slate - 900 via - slate - 800 to - slate -900">
+      <div className="max - w-7xl mx - auto px-6">
+        <motion.div
+          className="text-center mb-16"
 
+              <h3 className="text-xl font - bold text-white mb-3 group - hover:text-blue - 400 transition - colors duration -200">
+                {solution.title}
+              </h3>
+
+              <p className="text-gray - 400 text-sm mb-6 leading -relaxed">
+                {solution.description}
+              </p>
+
+              <ul className="space - y-2">
+                {solution.benefits.map((benefit, benefitIndex) => (<li key={benefitIndex} className="flex items - center gap-2 text-sm">
+                    <div className="w-2 h-2 bg-blue - 400 rounded-full"></div>
+                    <span className="text-gray -300">{benefit}</span>
+                  </li>) ) }
+              </ul>
+
+              <div className="mt-6 pt - 4 border-t border-slate -700">
+                <div className="text-blue - 400 text-sm font - semibold group - hover:text-blue - 300 transition - colors duration -200">
+        <motion.div
+          className="mt-16 text-center"
+=======
   Brain,
   Shield,
   Cloud,
@@ -27,12 +48,6 @@ function TechSolutionsSection () {
   ];
 const techSolutions = [{
 
-<<<<<<< HEAD
-  return (<section className="py-20 bg-gradient - to - br from - slate - 900 via - slate - 800 to - slate -900">
-      <div className="max - w-7xl mx - auto px-6">
-        <motion.div
-          className="text-center mb-16"
-=======
     icon: "🤖","
     title: "AI & Machine Learning","
     description: "Intelligent automation, predictive analytics, and cognitive computing solutions","
@@ -79,7 +94,6 @@ const techSolutions = [{
     color: "from-yellow-500 to-orange-500"};
 ];
 =======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
 export function TechSolutionsSection() {
   return ("
@@ -87,7 +101,6 @@ export function TechSolutionsSection() {
       <div className="max-w-7xl mx-auto px-6">
         <motion.div "
           className="text-center mb-16"
->>>>>>> main
           initial = {
 
   { opacity: 0,
@@ -139,26 +152,6 @@ export function TechSolutionsSection() {
               <div className={`w-16 h-16 bg-gradient-to-br ${solution.color} rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>"
                 <span className="text-3xl">{solution.icon}</span>
               </div>
-<<<<<<< HEAD
-
-              <h3 className="text-xl font - bold text-white mb-3 group - hover:text-blue - 400 transition - colors duration -200">
-                {solution.title}
-              </h3>
-
-              <p className="text-gray - 400 text-sm mb-6 leading -relaxed">
-                {solution.description}
-              </p>
-
-              <ul className="space - y-2">
-                {solution.benefits.map((benefit, benefitIndex) => (<li key={benefitIndex} className="flex items - center gap-2 text-sm">
-                    <div className="w-2 h-2 bg-blue - 400 rounded-full"></div>
-                    <span className="text-gray -300">{benefit}</span>
-                  </li>) ) }
-              </ul>
-
-              <div className="mt-6 pt - 4 border-t border-slate -700">
-                <div className="text-blue - 400 text-sm font - semibold group - hover:text-blue - 300 transition - colors duration -200">
-=======
               "
               <h3 className="text-xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors duration-200">
                 {solution.title}
@@ -179,7 +172,6 @@ export function TechSolutionsSection() {
               "
               <div className="mt-6 pt-4 border-t border-slate-700">"
                 <div className="text-blue-400 text-sm font-semibold group-hover:text-blue-300 transition-colors duration-200">
->>>>>>> main
                   Learn More →
                 </div>
 "
@@ -204,13 +196,8 @@ export function TechSolutionsSection() {
               </motion.div>) }) }
         </div>
 
-<<<<<<< HEAD
-        <motion.div
-          className="mt-16 text-center"
-=======
         <motion.div "
           className="mt-16 text-center"
->>>>>>> main
           initial = {
 
   { opacity: 0,
@@ -267,3 +254,4 @@ export default TechSolutionsSection;"
 export default TechSolutionsSection;
 export default TechSolutionsSection;
 '"`
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

@@ -6,6 +6,3 @@
         </div>,
       </div>,
     </div>,
-  );
-};
-export default AIServicesPricingComparison2025;

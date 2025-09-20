@@ -1,18 +1,14 @@
-
 <<<<<<< HEAD
   Plus,
   MessageCircle,
   Phone,
   Mail,
   MapPin,
-=======
-<<<<<<< HEAD
   Plus, 
   MessageCircle, 
   Phone, 
   Mail, 
   MapPin, 
->>>>>>> main
   ArrowUp,
   X,
   Settings,
@@ -352,9 +348,9 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
       `}</style>
     </>) ;
 =======
+
 type FloatingActionButtonProps = {
   enabled?: boolean;
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 };
 
 const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({ enabled = true }) => {
@@ -371,3 +367,4 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({ enabled = t
   )};
 
 export default FloatingActionButton;
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

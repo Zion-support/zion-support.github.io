@@ -1,5 +1,3 @@
-const Skeleton: React.FC<SkeletonProps> = ({
-
 <<<<<<< HEAD
 interface SkeletonProps extends React.PropsWithChildren<{}> {
   className?: string;
@@ -11,7 +9,8 @@ interface SkeletonProps extends React.PropsWithChildren<{}> {
 
 const Skeleton: React.FC < SkeletonProps> = ({
 =======
->>>>>>> main
+const Skeleton: React.FC<SkeletonProps> = ({
+
   className = '',
   height = 'h-4',
   width = 'w-full', 
@@ -142,3 +141,4 @@ export const FormSkeleton: React.FC<{ count?: number }> = ({ count = 4 }) => ("
   <LoadingSkeleton type="form" count={count}  />);
 
 export default LoadingSkeleton;'"`
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

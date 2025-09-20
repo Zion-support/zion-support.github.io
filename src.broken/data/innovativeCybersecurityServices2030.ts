@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+
+};
+
+=======
 // Innovative Cybersecurity Services 2030 - Zion Tech Group
 // Advanced security solutions for the digital age
 ;
@@ -61,12 +66,6 @@ const zionContact = {
   ;"
   address: "364 E Main St STE 1008 Middletown DE 19709"};
 ;
-<<<<<<< HEAD
-
-};
-
-=======
->>>>>>> main
 export const innovativeCybersecurityServices2030: CybersecurityService[] = [{
 "
     id: "quantum-resistant-encryption","
@@ -543,3 +542,4 @@ export const innovativeCybersecurityServices2030: CybersecurityService[] = [{
 ];
 
 export default innovativeCybersecurityServices2030}}"
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

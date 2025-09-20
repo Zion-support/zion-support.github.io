@@ -1,186 +1,115 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cda06a3c5d3475d06f40e71025b543e956cbd2db
-=======
->>>>>>> 31cc1573ab846ce7dcfbe0085aaa9595e93df4ee
->>>>>>> 3441e9d6a0ae777ba99028aadbff2beb86775349
-=======
->>>>>>> cda06a3c5d3475d06f40e71025b543e956cbd2db
->>>>>>> aaa4dbfa8914e015974b0b47997c74f299c51923
-src
-src.disabled
-src.pages.disabled
-src.pages.disabled.auto
-components.disabled
-**/*.js.jsx
-**/*.d.tsx
-<<<<<<< HEAD
-=======
+# Dependencies
 node_modules/
+.serverless/
 .next/
-out/
+.nuxt/
 dist/
 build/
-coverage/
-temp_exclude/
+
+# Backup and temporary files
+src_backup_temp/
 temp_*/
-temp-backup/
+*_backup*/
+*.backup*
+backup*/
+backups/
+recovered/
+recovered-branches/
+broken_components/
+broken_files_backup/
+temp_broken_files/
+temp_conflicts/
+temp_exclude/
+test_build/
+zion-os.disabled/
+zion-os/
+zion-website/
+zion_academy/
+
+# Build artifacts
+*.min.js
+*.bundle.js
+chunks/
+static/
+public/sw.js
+
+# Configuration files that don't need linting
 *.config.js
 *.config.cjs
-*.config.mjs
-fix-*.js
-fix-*.cjs
-*-fix*.cjs
-*-fix*.js
-advanced-*.cjs
-aggressive-*.cjs
-aggressive-*.js
-app-improvement-*.cjs
-analyze-*.cjs
-code-quality-*.js
-automation/
-automation_backup/
-backup/
-lib_backup/
-data_backup/
-styles_backup/
-api-backup/
-temp_backup/
-corrupted_files_backup_2/
-ai-optimization-backups/
-optimization-reports/
-test-generation-reports/
-test-reports/
-test-results/
-security-reports/
-pages.__backup/
-pages-disabled/
-pages.disabled_auto/
-zion_academy/
-pm2-automation/
-scripts/
-*.report.json
-test_build/
-tests.disabled/
-pages.disabled/
-src.disabled/
-components.disabled/
-hooks.disabled/
-types.disabled/
-contracts.disabled/
-solutions.disabled/
-zion-os.disabled/
-src_backup_temp/
-tests/
-supabase/
+postcss.config.js
+tailwind.config.js
+next.config.js
+vite.config.js
+babel.config.js
+jest.config.js
+hardhat.config.js
+ecosystem.config.js
+
+# Test files
+__tests__/
 *.test.js
-*.test.ts
-*.test.tsx
 *.spec.js
-*.spec.ts
-*.spec.tsx
-temp_footer_start.tsx
-test-simple.js
-test-utils.js
-ultimate-automation-runner.js
-vite.config-backup.ts
-vite.config.ts
-types/empty.ts
-types/index.ts
-pages_backup_conflicts/
-pages_disabled/
-src.broken/
-src.corrupted/
-src.pages.disabled/
-performance-monitor.js
-performance-optimization.js
-playwright.config.ts
-postcss.config-backup.js
-public/
-resolve-conflicts.js
-resolve-merge-conflicts.js
-run-automation-safely.js
-run-automation.js
-run-complete-automation.js
-security-config.js
-server/
-setupTests.ts
-simple-test.js
-src/components/layout/
-types/
+test-*.js
+tests/
+
+# Generated files
+*.generated.js
+*.auto.js
+
+# Logs
+*.log
+logs/
+
+# Cache
+.cache/
+.parcel-cache/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Utils and scripts
 utils/
-pages_backup/
-pages_backup_before_cleanup/
-services/
-components.disabled_full/
-comprehensive-automation-runner.js
-comprehensive-automation.js
-comprehensive-merge-resolver.js
-corrupted-files-backup/
-cypress.config.ts
-cypress_backup/
-data.disabled/
-database/
-ecosystem.simple.js
-ecosystem.working.js
-execute-automation.js
-fix_all_function_names.js
-fix_corrupted_files.js
-fix_empty_pages.js
-fix_utils_files.js
-fix_variable_names.js
-git-ops.js
-health-endpoint.js
-hooks/
-improve-app.js
-jest.config.ts
-jest.setup.js
-lib.broken/
-lib.disabled/
-lib/
-lint-stub.js
-lint-target/
-maintenance-scheduler.js
-merge-prs.js
-merge-resolver.js
-middleware.security.ts
-middleware/
-monitoring-system.js
-netlify/
-next-env.d.ts
-next.config.analyze.js
-next.config.analyzer.js
-next.config.optimized.js
-next.config.resolved.js
-optimized-build.js
-pages-backup/
-pages._quarantine/
-pages.disabled_full/
-pages.old/
-App.tsx
-advanced-app-improvements.js
-analyze-missing-pages.js
-api-disabled/
-api.disabled/
+scripts/
+token/
+dao/
+automation/
 api/
-automation-runner.js
-basic-test.js
-broken_files_backup/
-build-verification.js
-check-syntax.js
-clean-conflicts.js
-commit-and-push.js
->>>>>>> 5d0bfd029486ab7d4285b084fd1f13e833405bec
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cda06a3c5d3475d06f40e71025b543e956cbd2db
-=======
->>>>>>> 31cc1573ab846ce7dcfbe0085aaa9595e93df4ee
->>>>>>> 3441e9d6a0ae777ba99028aadbff2beb86775349
-=======
->>>>>>> cda06a3c5d3475d06f40e71025b543e956cbd2db
->>>>>>> aaa4dbfa8914e015974b0b47997c74f299c51923
+admin/
+app/
+apps/
+ai_core/
+ai-services/
+ai-solutions/
+ai-optimization-backups/
+automation_backup/
+automation_logs/
+automation-reports/
+ci-cd-reports/
+cache/
+chain-config/
+components/
+deployments/
+deployment/
+netlify/
+server/
+zion-ai-assistant/
+zion-os/
+zion-website/
+
+# Root level files that don't need linting
+*.md
+*.txt
+*.json
+*.tsv
+*.py
+*.sh
+*.cjs
+
+# Disabled components and utils
+components-disabled/
+utils-disabled/

@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import {,
-  Phone, Mail, MapPin, ArrowRight, Globe, Shield, Rocket, Brain, Atom, Cpu;
-  Facebook, Twitter, Linkedin, Instagram, Youtube, Github, Zap, Heart, Star;
-  Users, Lock, Cloud, Code, Server, Database, Network, Settings, Target, Play, FileText, ArrowUp, HelpCircle;
-  Home, Info, Briefcase, BookOpen, Calendar, MessageCircle, ShieldCheck, Building, Heart as HeartIcon;
-  Target as TargetIcon, Star as StarIcon, Lightbulb, Wrench, Cog, BarChart, PieChart, DollarSign, Monitor,
+import { 
+  Phone, Mail, MapPin, ArrowRight, Globe, Shield, Rocket, Brain, Atom, Cpu,
+  Facebook, Twitter, Linkedin, Instagram, Youtube, Github, Zap, Heart, Star,
+  Users, Lock, Cloud, Code, Server, Database, Network, Settings, Target, Play, FileText, ArrowUp, HelpCircle,
+  Home, Info, Briefcase, BookOpen, Calendar, MessageCircle, ShieldCheck, Building, Heart as HeartIcon,
+  Target as TargetIcon, Star as StarIcon, Lightbulb, Wrench, Cog, BarChart, PieChart, DollarSign, Monitor
 } from 'lucide-react';
 const EnhancedFooter2025: React.FC = () => {,
   const [email, setEmail] = useState('');

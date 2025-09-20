@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
 <<<<<<< HEAD
 import { Link  } from 'react-router-dom';
 
 export default function Page() {
 =======
+import React, { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { cn } from '@/lib/utils';
 import {
@@ -36,7 +36,6 @@ export function MainNavigation({ className }) {
             isActive ? 'text-zion-cyan' : 'text-muted-foreground'
           )
         }
->>>>>>> 555b9ffae2e68b00750b91675d62a559987674d9
       >
         <Home className="w-4 h-4 mr-1" />
         Home
@@ -343,3 +342,4 @@ export function MainNavigation({ className }) {
     </nav>
   );
 }
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

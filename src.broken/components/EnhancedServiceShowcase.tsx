@@ -1,5 +1,4 @@
 <<<<<<< HEAD
-import { <<<<<<< HEAD import { motion, AnimatePresence  } from 'framer-motion';
 
 export default function Page() {
 ,
@@ -110,20 +109,18 @@ export default function Page() {
   'Digital Transformation',;
   'Micro SAAS',;
   'Healthcare AI';
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1
 ]}
       },
       { threshold: 0.1 }
     );
+<<<<<<< HEAD
 
     if(element) {
 =======
-]}
-      },
-      { threshold: 0.1 }
-    );
 '
     const element = document.getElementById('service-showcase');    if(element) {
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       observer.observe(element)}
 
@@ -343,3 +340,4 @@ export default function Page() {
       </div>;
     </section>;) };
 '"`
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

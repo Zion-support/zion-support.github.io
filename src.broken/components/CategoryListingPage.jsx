@@ -7,7 +7,7 @@ import { GradientHeading } from '@/components / GradientHeading';
 import { Input } from '@/components / ui / input';
 import { ListingScoreCard } from '@/components / ListingScoreCard';
 import { Select, SelectTrigger, SelectContent, SelectItem } from '@/components / ui / select';
-import { Search, Filter, ArrowDownAZ, ArrowUpZA, Loader2 export function CategoryListingPage({ title, description, listings: initialListings, sortOptions = [; ======= import { useState, useEffect } from 'react';"
+=======
 import { Footer } from '@/components/Footer';"
 import { GradientHeading } from '@/components/GradientHeading';"
 import { ListingScoreCard } from '@/components/ListingScoreCard';"
@@ -156,3 +156,4 @@ import { Select, SelectTrigger, SelectContent, SelectItem } from '@/components/u
       <Footer />
     </>)}
 '"`
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

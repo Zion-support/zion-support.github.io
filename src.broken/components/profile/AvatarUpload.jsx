@@ -1,7 +1,6 @@
 <<<<<<< HEAD
 import React, { useState } from 'react';
 =======
->>>>>>> main
 import { useState } from 'react';
 export default function Page() {
 "
@@ -24,3 +23,4 @@ export default function Page() {
   );
 }
 '"
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

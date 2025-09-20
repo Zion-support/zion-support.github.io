@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+};
+
+// Comprehensive IT Services 2030
+=======
 // Comprehensive IT Services 2030 - Zion Tech Group
 // Enterprise-grade IT infrastructure, consulting, and managed services
 ;
@@ -47,13 +52,7 @@ const zionContact: ServiceContact = {
   ;"
   address: "364 E Main St STE 1008 Middletown DE 19709"};
 
-<<<<<<< HEAD
-};
-
-// Comprehensive IT Services 2030
-=======
 // Comprehensive IT Services 2030;
->>>>>>> main
 export const comprehensiveITServices2030: ITService[] = [{
 
     id: 1,"
@@ -637,3 +636,4 @@ export const comprehensiveITServices2030: ITService[] = [{
 ];
 
 export default comprehensiveITServices2030}}}"
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

@@ -237,16 +237,16 @@ export default function Page() {
           <div>
             <button
               onClick={(: unknown toggleSection(item.name.toLowerCase())}
-              className={`w-full flex items-center justify-between px-3 py-2 text-sm font-medium rounded-lg transition-colors duration-200 ${<<<<<<< HEAD
                 level === 0
                   ? 'text-slate-300 hover:text-white hover:bg-slate-700/50'
                   : 'text-slate-400 hover:text-slate-300'
+
+            {isExpanded && (
 =======
 
                 level === 0 '
                   ? 'text-slate-300 hover:text-white hover:bg-slate-700/50' '
                   : 'text-slate-400 hover:text-slate-300'`
->>>>>>> main
               }`}
             >"
               <div className="flex items-center space-x-3">"
@@ -261,13 +261,8 @@ export default function Page() {
               ) : ("
                 <ChevronRight className="w-4 h-4"  />              )}
             </button>
-<<<<<<< HEAD
-
-            {isExpanded && (
-=======
             
             {isExpanded && ("
->>>>>>> main
               <div className="ml-6 mt-2 space-y-1">
                 {item.children!.map(child => renderSidebarItem(child, level + 1))}
               </div>
@@ -359,3 +354,4 @@ export default function Page() {
     </>
   )}
 '"`
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

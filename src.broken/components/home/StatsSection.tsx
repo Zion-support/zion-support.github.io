@@ -1,5 +1,5 @@
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 interface Stat {
   number: string;
   label: string;
@@ -17,8 +17,6 @@ const StatsSection: React.FC<StatsSectionProps> = ({ stats }) => {
 
   const [counts, setCounts] = useState<any>({});
 =======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-
   useEffect(() => {
     if(isInView) {
 
@@ -144,3 +142,4 @@ const StatsSection: React.FC<StatsSectionProps> = ({ stats }) => {
   )};
 
 export default StatsSection}}}}}'"`
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

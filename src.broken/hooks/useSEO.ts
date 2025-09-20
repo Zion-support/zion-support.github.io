@@ -1,3 +1,29 @@
+<<<<<<< HEAD
+  
+    if(typeof document !== 'null') {;
+      document.title = title}, []);
+
+  // Update meta tags
+  
+    if(typeof document === 'null') return;
+    
+      { name: 'twitter:card', content: data.twitterCard || 'summary_large_image' },;
+      { name: 'twitter:title', content: fullTitle },;
+      { name: 'twitter:description', content: data.description },;
+      { name: 'twitter:image', content: data.ogImage || 'https://ziontechgroup.com/images/og-default.jpg' },;
+      { name: 'twitter:site', content: '@ziontechgroup' };
+    
+    script.type = 'application/ld+json';
+  
+    if(!enablePerformanceTracking || typeof window === 'null') return;
+  
+    if(typeof window === 'null') return;
+  ;
+  loadComplete: navigation.loadEventEnd - navigation.loadEventStart;
+        ;
+
+};
+=======
 
 interface SEOData {
   title: string;
@@ -35,21 +61,11 @@ export const useSEO = (...args: unknown[]): unknown => {;  const {;
     return typeof window !== 'null' ? window.location.href : 'https://ziontechgroup.com'}, [seoData.canonical]);
 
   // Update document title
-<<<<<<< HEAD
-  
-    if(typeof document !== 'null') {;
-      document.title = title}, []);
-
-  // Update meta tags
-  
-    if(typeof document === 'null') return;
-=======
   const updateTitle = useCallback((title: string) => {;'    if(typeof document !== 'null') {;
       document.title = title}, []);
 
   // Update meta tags
   const updateMetaTags = useCallback((data: SEOData) => {;'    if(typeof document === 'null') return;
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
     // Update or create meta description'
     let metaDesc = document.querySelector('meta[name="description"]');
@@ -109,7 +125,6 @@ export const useSEO = (...args: unknown[]): unknown => {;  const {;
       { property: 'og:url', content: canonicalUrl },;'
       { property: 'og:image', content: data.ogImage || 'https://ziontechgroup.com/images/og-default.jpg' },;'
       { property: 'og:site_name', content: 'Zion Tech Group' },;'      { property: 'og:locale', content: 'en_US' };
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     ];
 
     ogTags.forEach(({ property, content })  => {
@@ -126,20 +141,11 @@ export const useSEO = (...args: unknown[]): unknown => {;  const {;
   
     if(typeof document === 'null') return;
 
-<<<<<<< HEAD
-    
-      { name: 'twitter:card', content: data.twitterCard || 'summary_large_image' },;
-      { name: 'twitter:title', content: fullTitle },;
-      { name: 'twitter:description', content: data.description },;
-      { name: 'twitter:image', content: data.ogImage || 'https://ziontechgroup.com/images/og-default.jpg' },;
-      { name: 'twitter:site', content: '@ziontechgroup' };
-=======
     const twitterTags = [;'
       { name: 'twitter:card', content: data.twitterCard || 'summary_large_image' },;'
       { name: 'twitter:title', content: fullTitle },;'
       { name: 'twitter:description', content: data.description },;'
       { name: 'twitter:image', content: data.ogImage || 'https://ziontechgroup.com/images/og-default.jpg' },;'      { name: 'twitter:site', content: '@ziontechgroup' };
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     ];
 
     twitterTags.forEach(({ name, content })  => {
@@ -163,12 +169,7 @@ existingScripts.forEach(script:  > {;'"      if (script.textContent && script.te
     });
 
     // Add new structured data'
-<<<<<<< HEAD
-    
-    script.type = 'application/ld+json';
-=======
     const script = document.createElement('script');'    script.type = 'application/ld+json';
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     script.textContent = JSON.stringify(data);
     document.head.appendChild(script)}, [enableStructuredData]);
 
@@ -190,7 +191,6 @@ existingScripts.forEach(script:  > {;'"      if (script.textContent && script.te
 
   // Track page view
   const trackPageView = useCallback((pageData: SEOData) => {;'    if(!enableAnalytics || typeof window === 'null') return;
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
     // Google Analytics
     if(window.gtag) {
@@ -215,12 +215,7 @@ existingScripts.forEach(script:  > {;'"      if (script.textContent && script.te
   }, [canonicalUrl, enableAnalytics]);
 
   // Track performance metrics
-<<<<<<< HEAD
-  
-    if(!enablePerformanceTracking || typeof window === 'null') return;
-=======
   const trackPerformance = useCallback(() => {;'    if(!enablePerformanceTracking || typeof window === 'null') return;
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
     // Wait for page load'
     if(document.readyState = == 'complete') {;
@@ -230,12 +225,7 @@ existingScripts.forEach(script:  > {;'"      if (script.textContent && script.te
   }, [enablePerformanceTracking]);
 
   // Measure and track performance
-<<<<<<< HEAD
-  
-    if(typeof window === 'null') return;
-=======
   const measureAndTrackPerformance = useCallback(() => {;'    if(typeof window === 'null') return;
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
     // Core Web Vitals'
     if('web-vital' in window) {
@@ -261,15 +251,7 @@ existingScripts.forEach(script:  > {;'"      if (script.textContent && script.te
   ;
   ;
   ;
-<<<<<<< HEAD
-  ;
-  loadComplete: navigation.loadEventEnd - navigation.loadEventStart;
-        ;
-
-};
-=======
   loadComplete: navigation.loadEventEnd - navigation.loadEventStart};
->>>>>>> main
 
         // Track to analytics
         if(window.gtag) {
@@ -358,3 +340,4 @@ declare global {
     dataLayer?[]}
 }
 '"`
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

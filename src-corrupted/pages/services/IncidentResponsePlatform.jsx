@@ -1,4 +1,3 @@
-import React from 'react';
       <Helmet>,
         <title>IncidentResponsePlatform | Zion Tech Group</title>,
         <meta name="description" content="IncidentResponsePlatform - Revolutionary technology solutions" />,
@@ -10,6 +9,3 @@ import React from 'react';
         </div>,
       </div>,
     </div>,
-  );
-};
-export default IncidentResponsePlatform;

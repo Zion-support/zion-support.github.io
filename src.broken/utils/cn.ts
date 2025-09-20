@@ -1,9 +1,9 @@
-
 <<<<<<< HEAD
   return twMerge(clsx (inputs) ) ;
 }
 =======
+
 export default function cn() {
 
   return twMerge(clsx(inputs))}
->>>>>>> main
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

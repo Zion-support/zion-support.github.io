@@ -1,4 +1,3 @@
-import React, { useState } from 'react';
 <<<<<<< HEAD
 import { Badge } from '@/components / ui / badge';
 export default function Page() {
@@ -185,3 +184,6 @@ export default function Page() {
   );
 }
 '"`
+=======
+import React, { useState } from 'react';
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

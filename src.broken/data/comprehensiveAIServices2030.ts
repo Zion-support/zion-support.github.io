@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+};
+
+// Comprehensive AI Services 2030
+=======
 // Comprehensive AI Services 2030 - Zion Tech Group
 // Cutting-edge artificial intelligence and machine learning solutions
 ;
@@ -51,13 +56,7 @@ const zionContact: ServiceContact = {
   ;"
   address: "364 E Main St STE 1008 Middletown DE 19709"};
 
-<<<<<<< HEAD
-};
-
-// Comprehensive AI Services 2030
-=======
 // Comprehensive AI Services 2030;
->>>>>>> main
 export const comprehensiveAIServices2030: AIService[] = [{
 
     id: 1,"
@@ -658,3 +657,4 @@ export const comprehensiveAIServices2030: AIService[] = [{
 ];
 
 export default comprehensiveAIServices2030}}}"
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

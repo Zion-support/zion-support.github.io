@@ -1,2 +1,0 @@
-};
-export default 3d-card-gallery;

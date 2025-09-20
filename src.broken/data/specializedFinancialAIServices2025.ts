@@ -1,3 +1,12 @@
+<<<<<<< HEAD
+  ;
+  ;
+  address: "364 E Main St STE 1008 Middletown DE 19709";
+;
+
+};
+
+=======
 // Specialized Financial AI Services 2025 - Zion Tech Group
 // Advanced AI-powered financial technology solutions
 ;
@@ -38,21 +47,12 @@ const zionContact = {
   website: "https://ziontechgroup.com",;  ;
   ;
   ;
-<<<<<<< HEAD
-  ;
-  ;
-  address: "364 E Main St STE 1008 Middletown DE 19709";
-;
-
-};
-
-=======
   ;"
   address: "364 E Main St STE 1008 Middletown DE 19709"};
 "
->>>>>>> main
     technologies["AI/ML", "Robo-advisory", "Portfolio Optimization", "Financial Planning"]
   }
 ];
 
 export default specializedFinancialAIServices2025}}"
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

@@ -1,13 +1,17 @@
-<<<<<<< HEAD
-import { <<<<<<< HEAD import { motion  } from 'framer-motion';
 
+<<<<<<< HEAD
  params - Function parameters
  * @returns {*} Function return value
  */
 function InnovationResearchSection () {
+  return (<section className="py-20 bg-gradient - to - br from - slate - 900 via - slate - 800 to - slate -900">
+      <div className="max - w-7xl mx - auto px-6">
+        <motion.div
+          className="text-center mb-16"
+        <motion.div
+          className="grid grid - cols - 2 md:grid - cols - 4 gap-8 mb-16"
+        <motion.div
 =======
->>>>>>> main
-
   Lightbulb,
   TestTube,
   BookOpen,
@@ -54,21 +58,13 @@ const researchAreas = [{
     color: "from-orange-500 to-red-500"};
 ];
 
-<<<<<<< HEAD
-  return (<section className="py-20 bg-gradient - to - br from - slate - 900 via - slate - 800 to - slate -900">
-      <div className="max - w-7xl mx - auto px-6">
-        <motion.div
-          className="text-center mb-16"
 =======
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 export function InnovationResearchSection() {
   return ("
     <section className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"
       <div className="max-w-7xl mx-auto px-6">
         <motion.div "
           className="text-center mb-16"
->>>>>>> main
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -83,13 +79,8 @@ export function InnovationResearchSection() {
         </motion.div>
 
         {/* Innovation Metrics */}
-<<<<<<< HEAD
-        <motion.div
-          className="grid grid - cols - 2 md:grid - cols - 4 gap-8 mb-16"
-=======
         <motion.div "
           className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16"
->>>>>>> main
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -108,29 +99,14 @@ export function InnovationResearchSection() {
 
         {/* Research Areas */}
         <motion.div "
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1
           className="mb-16"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
         >
-          {innovationMetrics.map((metric, index) => ("
-            <div key={metric.label} className="text-center">"
-              <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-4">"
-                <span className="text-2xl">{metric.icon}</span>
-              </div>
-            )})}
-        </motion.div>
-
-        {/* Research Areas */}
 <<<<<<< HEAD
-        <motion.div
-          className="mb-16"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-        >
           {innovationMetrics.map((metric, index) => (<div key={metric.label} className="text-center">
               <div className="w-16 h-16 bg-gradient - to - br from - blue - 500 to - purple - 600 rounded-2xl flex items - center justify - center mx - auto mb-4">
                 <span className="text-2xl">{metric.icon}</span>
@@ -140,72 +116,11 @@ export function InnovationResearchSection() {
         {/* Research Areas */}
         <motion.div
           className="mb-16";
-=======
-        <motion.div "
-          className="mb-16";
->>>>>>> main
-          initial = {
-
-  { opacity: 0,
-  y: 30
-
-}}
-          whileInView = {
-
-  { opacity: 1,
-  y: 0
-
-}}
-          viewport={{ once: true }}
-          transition = {
-
-  { duration: 0.6,
-  delay: 0.4
-
-}}
-        >"
-          <h3 className="text-3xl font-bold text-white text-center mb-12">
-            Active Research Areas
-          </h3>
-<<<<<<< HEAD
 
           <div className="grid grid - cols - 1 md:grid - cols - 2 gap-8">
             {researchAreas.map((area, index) => (<motion.div
                 key={area.title}
                 className="bg-slate - 800 border border-slate - 700 rounded-xl p - 6 hover:border-blue - 500 / 50 transition - all duration - 300 hover:shadow-lg hover:shadow-blue -500 / 25"
-=======
-          "
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {researchAreas.map((area, index) => (
-              <motion.div
-                key={area.title}"
-                className="bg-slate-800 border border-slate-700 rounded-xl p-6 hover:border-blue-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25"
->>>>>>> main
-                initial = {
-
-  { opacity: 0,
-  y: 30
-
-}}
-                whileInView = {
-
-  { opacity: 1,
-  y: 0
-
-}}
-                viewport={{ once: true }}
-                transition = {
-
-  { duration: 0.6,
-  delay: 0.6 + index * 0.1
-
-}}
-              >"
-                <div className="flex items-start gap-4">
-                  <div className={`w-16 h-16 bg-gradient-to-br ${area.color} rounded-xl flex items-center justify-center flex-shrink-0`}>"
-                    <span className="text-2xl">{area.icon}</span>
-                  </div>
-<<<<<<< HEAD
 
                   <div className="flex -1">
                     <h4 className="text-xl font - bold text-white mb-2">{area.title}</h4>
@@ -214,71 +129,8 @@ export function InnovationResearchSection() {
                     <div className="mb-2">
                       <div className="flex justify - between text-sm text-gray - 300 mb-1">
                         <span > Research Progress</span>
-=======
-                  "
-                  <div className="flex-1">"
-                    <h4 className="text-xl font-bold text-white mb-2">{area.title}</h4>"
-                    <p className="text-gray-400 text-sm mb-4">{area.description}</p>
-                    "
-                    <div className="mb-2">"
-                      <div className="flex justify-between text-sm text-gray-300 mb-1">
-                        <span>Research Progress</span>
->>>>>>> main
-                        <span>{area.progress}%</span>
-                      </div>"
-                      <div className="w-full bg-slate-700 rounded-full h-2">
-                        <motion.div`
-                          className={`h-2 bg-gradient-to-r ${area.color} rounded-full`}
-                          initial={{ width: 0 }}`
-                          whileInView={{ width: `${area.progress}%` }}
-                          viewport={{ once: true }}
-                          transition = {
-
-  { duration: 1,
-  delay: 0.8 + index * 0.1
-
-}}
-                        />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </motion.div>) }) }
-        </div>
-
-        {/* Research Highlights */}
-<<<<<<< HEAD
         <motion.div
           className="mb-12"
-=======
-        <motion.div "
-          className="mb-12"
->>>>>>> main
-          initial = {
-
-  { opacity: 0,
-  y: 30
-
-}}
-          whileInView = {
-
-  { opacity: 1,
-  y: 0
-
-}}
-          viewport={{ once: true }}
-          transition = {
-
-  { duration: 0.6,
-  delay: 0.8
-
-}}
-        >"
-          <div className="bg-slate-800 border border-slate-700 rounded-2xl p-8">"
-            <h3 className="text-2xl font-bold text-white text-center mb-6">
-              Latest Research Breakthroughs
-            </h3>
-<<<<<<< HEAD
 
             <div className="grid grid - cols - 1 md:grid - cols - 3 gap-6">
               <div className="text-center">
@@ -303,7 +155,130 @@ export function InnovationResearchSection() {
                 </div>
                 <h4 className="text-lg font - bold text-white mb-2">Sustainable Tech</h4>
                 <p className="text-gray - 400 text-sm">Green computing and energy - efficient algorithms</p>
+        <motion.div
+          className="text-center"
 =======
+          {innovationMetrics.map((metric, index) => ("
+            <div key={metric.label} className="text-center">"
+              <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-4">"
+                <span className="text-2xl">{metric.icon}</span>
+              </div>
+            )})}
+        </motion.div>
+
+        {/* Research Areas */}
+        <motion.div "
+          className="mb-16";
+          initial = {
+
+  { opacity: 0,
+  y: 30
+
+}}
+          whileInView = {
+
+  { opacity: 1,
+  y: 0
+
+}}
+          viewport={{ once: true }}
+          transition = {
+
+  { duration: 0.6,
+  delay: 0.4
+
+}}
+        >"
+          <h3 className="text-3xl font-bold text-white text-center mb-12">
+            Active Research Areas
+          </h3>
+          "
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {researchAreas.map((area, index) => (
+              <motion.div
+                key={area.title}"
+                className="bg-slate-800 border border-slate-700 rounded-xl p-6 hover:border-blue-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25"
+                initial = {
+
+  { opacity: 0,
+  y: 30
+
+}}
+                whileInView = {
+
+  { opacity: 1,
+  y: 0
+
+}}
+                viewport={{ once: true }}
+                transition = {
+
+  { duration: 0.6,
+  delay: 0.6 + index * 0.1
+
+}}
+              >"
+                <div className="flex items-start gap-4">
+                  <div className={`w-16 h-16 bg-gradient-to-br ${area.color} rounded-xl flex items-center justify-center flex-shrink-0`}>"
+                    <span className="text-2xl">{area.icon}</span>
+                  </div>
+                  "
+                  <div className="flex-1">"
+                    <h4 className="text-xl font-bold text-white mb-2">{area.title}</h4>"
+                    <p className="text-gray-400 text-sm mb-4">{area.description}</p>
+                    "
+                    <div className="mb-2">"
+                      <div className="flex justify-between text-sm text-gray-300 mb-1">
+                        <span>Research Progress</span>
+                        <span>{area.progress}%</span>
+                      </div>"
+                      <div className="w-full bg-slate-700 rounded-full h-2">
+                        <motion.div`
+                          className={`h-2 bg-gradient-to-r ${area.color} rounded-full`}
+                          initial={{ width: 0 }}`
+                          whileInView={{ width: `${area.progress}%` }}
+                          viewport={{ once: true }}
+                          transition = {
+
+  { duration: 1,
+  delay: 0.8 + index * 0.1
+
+}}
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </motion.div>) }) }
+        </div>
+
+        {/* Research Highlights */}
+        <motion.div "
+          className="mb-12"
+          initial = {
+
+  { opacity: 0,
+  y: 30
+
+}}
+          whileInView = {
+
+  { opacity: 1,
+  y: 0
+
+}}
+          viewport={{ once: true }}
+          transition = {
+
+  { duration: 0.6,
+  delay: 0.8
+
+}}
+        >"
+          <div className="bg-slate-800 border border-slate-700 rounded-2xl p-8">"
+            <h3 className="text-2xl font-bold text-white text-center mb-6">
+              Latest Research Breakthroughs
+            </h3>
             "
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">"
               <div className="text-center">"
@@ -328,19 +303,13 @@ export function InnovationResearchSection() {
                 </div>"
                 <h4 className="text-lg font-bold text-white mb-2">Sustainable Tech</h4>"
                 <p className="text-gray-400 text-sm">Green computing and energy-efficient algorithms</p>
->>>>>>> main
               </div>
             </div>
           </div>
         </motion.div>
 
-<<<<<<< HEAD
-        <motion.div
-          className="text-center"
-=======
         <motion.div "
           className="text-center"
->>>>>>> main
           initial = {
 
   { opacity: 0,
@@ -391,3 +360,4 @@ export default InnovationResearchSection;"
 export default IconComponent;
 export default IconComponent;
 '"`
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

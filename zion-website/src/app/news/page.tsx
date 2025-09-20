@@ -5,4 +5,3 @@ export default function NewsPage() {,
       <h1>News</h1>,
     </div>,
   ),
-}

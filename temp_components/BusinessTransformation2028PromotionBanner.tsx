@@ -1,10 +1,81 @@
-import React from 'react',
+'use client';
 
-const BusinessTransformation2028PromotionBanner: React.FC = () => {,
-  return (,
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">,
-      <h3 className="text-xl font-bold mb-4">BusinessTransformation2028PromotionBanner</h3>,
-      <p className="text-gray-300">Revolutionary technology component</p>,
-    </div>,
-  ),};
+import React{ useStateuseEffect } from 'react';
+import { motionAnimatePresence } from 'framer-motion';
+import { 
+  ArrowRight
+  TrendingUp
+  DollarSign
+  Building2
+  Brain
+  Zap
+  Target,
+  X,
+  PlayCircle,
+  Users,
+  Award,
+  BarChart3
+} from 'lucide-react';
+
+const BusinessTransformation2028PromotionBanner = () => {
+  const [isVisiblesetIsVisible] = useState(false);
+  const [isDismissedsetIsDismissed] = useState(false);
+  const [currentMetricsetCurrentMetric] = useState(0);
+
+  useEffect(() => {
+    setIsVisible(true);
+    
+    // Auto-rotate metrics
+    const interval = setInterval(() => {
+      setCurrentMetric((prev) => (prev + 1) % metrics.length);
+    }2500);
+
+    return () => clearInterval(interval);
+  }[]);
+
+  const metrics = [
+    {
+      icon: TrendingUp,
+      value: '500%+',
+      label: 'Average ROI',
+      color: 'text-green-400'
+    },
+    {
+      icon: DollarSign,
+      value: '$2.5M',
+      label: 'Average Savings',
+      color: 'text-blue-400'
+    },
+    {
+      icon: BarChart3,
+      value: '300%',
+      label: 'Efficiency Gain',
+      color: 'text-purple-400'
+    },
+    {
+      icon: Users,
+      value: '10K+',
+      label: 'Businesses Transformed',
+      color: 'text-cyan-400'
+    }
+  ];
+
+  const solutions = [
+    { icon: Brainlabel: 'AI Automation' },
+    { icon: Zaplabel: 'Quantum Optimization' },
+    { icon: Targetlabel: 'Neural Business' },
+    { icon: Building2label: 'Future Operations' }
+  ];
+
+  if (isDismissed) return null;
+
+const BusinessTransformation2028PromotionBanner: React.FC = () => {
+  return (
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">BusinessTransformation2028PromotionBanner</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
+  );
+};
+
 export default BusinessTransformation2028PromotionBanner;

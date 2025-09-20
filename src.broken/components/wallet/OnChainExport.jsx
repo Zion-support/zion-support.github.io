@@ -7,7 +7,6 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Button } from '@/components/ui/button';"
 import { Wallet, Info, Check, ArrowUpRight import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';"
 import { useToast } from '@/hooks/use-toast';"import { useAuth } from '@/hooks/useAuth';
->>>>>>> main
 export function OnChainExport() {
     const [isConnected, setIsConnected] = useState(false);
     const [isExporting, setIsExporting] = useState(false);
@@ -114,3 +113,5 @@ export function OnChainExport() {
       </CardContent>
     </Card>)}
 '"`
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

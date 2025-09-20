@@ -1,4 +1,4 @@
-import { <<<<<<< HEAD ======= Activity, Zap, Clock, <<<<<<< HEAD TrendingUp, AlertTriangle  } from 'lucide-react';
+<<<<<<< HEAD
 
 export default function Page() {
 );
@@ -54,10 +54,11 @@ export default function Page() {
         color = 'text-red-500'}
     });
 
+      });
+      clsObserver.observe({ entryTypes: ['layout-shift'] });
 =======
   TrendingUp,'
   AlertTriangle} from 'lucide-react';    
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     let grade: 'A' | 'B' | 'C' | 'D' | 'F';
     let color: string;
 
@@ -119,12 +120,7 @@ export default function Page() {
             clsValue += entry.value}
         });
         setMetrics(prev => ({ ...prev, cls: clsValue }));
-<<<<<<< HEAD
-      });
-      clsObserver.observe({ entryTypes: ['layout-shift'] });
-=======
       });'      clsObserver.observe({ entryTypes: ['layout-shift'] });
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       return () => {
         lcpObserver.disconnect();
@@ -302,3 +298,4 @@ export default function Page() {
     </div>) };
 export default AdvancedPerformanceMonitor;
 '"`
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

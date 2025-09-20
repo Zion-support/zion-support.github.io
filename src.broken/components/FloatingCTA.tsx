@@ -2,7 +2,6 @@
 import { Link  } from 'react-router-dom';
 export default function Page() {
  from 'lucide-react';
->>>>>>> main
 
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
@@ -30,7 +29,6 @@ export function FloatingCTA() {
   if(!isVisible) return null;
 
 =======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   const [isExpanded, setIsExpanded] = useState(false);
 
   return ()
@@ -87,3 +85,4 @@ export function FloatingCTA() {
     </>
   )}
 '"
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

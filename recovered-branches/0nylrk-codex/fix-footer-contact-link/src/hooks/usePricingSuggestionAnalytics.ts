@@ -100,4 +100,4 @@ export const useUsePricingSuggestionAnalytics: unknown = () => {
   // TODO: Implement hook logic;
   return {};
 };
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

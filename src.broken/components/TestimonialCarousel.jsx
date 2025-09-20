@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+}} dragElastic={1} onDragEnd = { (e, { offset,
+  velocity
+=======
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence  } from 'framer-motion';
 export default function Page() {
@@ -93,16 +97,11 @@ export default function Page() {
   { left: 0,
   right: 0
 
-<<<<<<< HEAD
-}} dragElastic={1} onDragEnd = { (e, { offset,
-  velocity
-=======
 
 }} dragElastic={1} onDragEnd = {
 
   (e, { offset,
   velocity 
->>>>>>> main
 
 }) => {
 
@@ -217,3 +216,4 @@ export default function Page() {
       </div>
     </section>)}
 '"`
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

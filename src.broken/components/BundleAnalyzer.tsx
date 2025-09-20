@@ -18,79 +18,17 @@ largestChunk: {;
     size: number;
 
 };
-=======
-export const BundleAnalyzer: React.FC < BundleAnalyzerProps> = ({ 
->>>>>>> main
-  averageChunkSize: number;
-  gzipSavings: number}
-
-export const BundleAnalyzer: React.FC<BundleAnalyzerProps> = ({
-
-  enabled = true,
-  showUI = false}) => {
-
-  const [metrics, setMetrics] = useState<any>({
-
-    totalSize: 0,
-    chunkCount: 0,
-    largestChunk: { name: '', size: 0 },
-    averageChunkSize: 0,
-    gzipSavings: 0
-  }) ;
-
-    try {
-<<<<<<< HEAD
       // Get performance entries
       const navigationEntries = performance.getEntriesByType('navigation') ;
       const resourceEntries = performance.getEntriesByType('resource') ;
 
-=======
-      // Get performance entries'
-
->>>>>>> main
-      // Calculate bundle metrics
-      let totalSize = 0;
-<<<<<<< HEAD
       let chunkCount = 0;
-<<<<<<< HEAD
       let largestChunk = { name: any'', size: 0 };
 
       resourceEntries.forEach((entry:) => {
         if(entry.name.includes ('.js') || entry.name.includes('.css') ) {
           const size = entry.transferSize || entry.encodedBodySize || 0;
           totalSize += size;
-=======
-      let largestChunk = { name: any', size: 0 };
-      
-=======
-      let chunkCount = 0;'
-      let largestChunk = { name: any', size: 0 };      
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-      resourceEntries.forEach((entry: )  => {
-
-        if(entry.name.includes('.js') || entry.name.includes('.css')) {
-
-          const size = entry.transferSize || entry.encodedBodySize || 0;          totalSize += size;
->>>>>>> main
-          chunkCount++;
-
-          if(size > largestChunk.size) {
-
-            largestChunk = { name: entry.name, size }}        }
-      }) ;
-
-      const gzipSavings = totalSize * 0.7; // Estimate 70% savings with gzip
-
-      setMetrics({
-
-        totalSize,
-        chunkCount,
-        largestChunk,
-        averageChunkSize,
-        gzipSavings
-      }) ;
-
-<<<<<<< HEAD
       // Log performance insights
       console.group('🚀 Bundle Analysis') ;
       console.log(`Total Bundle Size: ${(totalSize / 1024 / 1024) .toFixed(2) } MB`) ;
@@ -116,7 +54,67 @@ export const BundleAnalyzer: React.FC<BundleAnalyzerProps> = ({
     } catch(error) {
       console.error('Bundle analysis failed:', error) ;
     }
+    const timer = setTimeout(analyzeBundle, 2000) ;
+
+    return () => clearTimeout(timer) ;
+  }, [enabled, analyzeBundle]) ;
+    const optimizations = optimizeBundle () ;
+
+    }
+  }, [enabled, optimizeBundle]);
+
 =======
+export const BundleAnalyzer: React.FC < BundleAnalyzerProps> = ({ 
+  averageChunkSize: number;
+  gzipSavings: number}
+
+export const BundleAnalyzer: React.FC<BundleAnalyzerProps> = ({
+
+  enabled = true,
+  showUI = false}) => {
+
+  const [metrics, setMetrics] = useState<any>({
+
+    totalSize: 0,
+    chunkCount: 0,
+    largestChunk: { name: '', size: 0 },
+    averageChunkSize: 0,
+    gzipSavings: 0
+  }) ;
+
+    try {
+      // Get performance entries'
+
+      // Calculate bundle metrics
+      let totalSize = 0;
+      let largestChunk = { name: any', size: 0 };
+      
+=======
+      let chunkCount = 0;'
+      let largestChunk = { name: any', size: 0 };      
+      resourceEntries.forEach((entry: )  => {
+
+        if(entry.name.includes('.js') || entry.name.includes('.css')) {
+
+          const size = entry.transferSize || entry.encodedBodySize || 0;          totalSize += size;
+          chunkCount++;
+
+          if(size > largestChunk.size) {
+
+            largestChunk = { name: entry.name, size }}        }
+      }) ;
+
+      const gzipSavings = totalSize * 0.7; // Estimate 70% savings with gzip
+
+      setMetrics({
+
+        totalSize,
+        chunkCount,
+        largestChunk,
+        averageChunkSize,
+        gzipSavings
+      }) ;
+
       // Log performance insights'
       console.group('🚀 Bundle Analysis');
       // console.log(`Total Bundle Size: ${(totalSize / 1024 / 1024).toFixed(2)} MB`);`
@@ -139,7 +137,6 @@ export const BundleAnalyzer: React.FC<BundleAnalyzerProps> = ({
       console.groupEnd () } catch(error) {
 
       // console.error('Bundle analysis failed:', error)}
->>>>>>> main
   }, [enabled]) ;
 
     // Implement bundle optimization strategies
@@ -171,37 +168,19 @@ export const BundleAnalyzer: React.FC<BundleAnalyzerProps> = ({
     if(!enabled) return;
 
     // Analyze bundle after page load
-<<<<<<< HEAD
-    const timer = setTimeout(analyzeBundle, 2000) ;
-
-    return () => clearTimeout(timer) ;
-  }, [enabled, analyzeBundle]) ;
-=======
     
     return () => clearTimeout(timer) }, [enabled, analyzeBundle]) ;
->>>>>>> main
 
   useEffect(() => {
     if(!enabled) return;
 
     // Run optimization analysis
-<<<<<<< HEAD
-    const optimizations = optimizeBundle () ;
-
-=======
     
->>>>>>> main
     if(optimizations && optimizations.length > 0) {
 
       // console.log('📊 Bundle optimization recommendations:', optimizations);
-<<<<<<< HEAD
-    }
-  }, [enabled, optimizeBundle]);
-
-=======
     }  }, [enabled, optimizeBundle]);
 '
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   // Don't render UI unless explicitly requested
   if(!showUI) {
 
@@ -217,3 +196,4 @@ export const BundleAnalyzer: React.FC<BundleAnalyzerProps> = ({
       </div>
     </div>
   )};'"`
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

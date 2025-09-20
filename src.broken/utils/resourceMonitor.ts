@@ -1,3 +1,18 @@
+<<<<<<< HEAD
+
+      if(!contentType) {
+
+        this.handleResourceError(url,other',No content-type header');
+        return}
+      this.handleResourceError(url,other', `Fetch error: ${error}`)}
+  }
+    ); // Exponential backoff
+  }
+
+    }
+  }
+
+=======
 interface ResourceError {
   url: string;
   type: 'script' | 'stylesheet' | 'image' | 'font' | 'other';
@@ -110,19 +125,11 @@ class ResourceMonitor {
           `HTTP ${response.status}: ${response.statusText}`
         );
         return}
-<<<<<<< HEAD
-
-      if(!contentType) {
-
-        this.handleResourceError(url,other',No content-type header');
-        return}
-=======
 '
       const contentType = response.headers.get('content-type');      if(!contentType) {
 '
         this.handleResourceError(url, 'other', 'No content-type header');
         return}
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       // Check for MIME type issues'
       if(url.endsWith('.js') && !contentType.includes('javascript')) {
@@ -140,12 +147,7 @@ class ResourceMonitor {
         )}
     } catch(error) {
 '`
-<<<<<<< HEAD
-      this.handleResourceError(url,other', `Fetch error: ${error}`)}
-  }
-=======
       this.handleResourceError(url, 'other', `Fetch error: ${error}`)}  }
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
   private handleResourceError()
     url: string,
@@ -182,14 +184,8 @@ class ResourceMonitor {
       () => {
         this.retryResource(url, type)},
       Math.pow(2, attempts) * 1000
-<<<<<<< HEAD
-    ); // Exponential backoff
-  }
-
-=======
     ); // Exponential backoff  }
 '
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   private retryResource(url: string, type: ResourceError['type']) {
 `
     // console.log(`🔄 Retrying resource: ${url} (attempt ${this.retryAttempts.get(url)})`);
@@ -233,14 +229,8 @@ class ResourceMonitor {
 
       // Example: Sentry, LogRocket, etc.'
       // console.log('📊 Reporting error to monitoring service:', error);
-<<<<<<< HEAD
-    }
-  }
-
-=======
     }  }
 '
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   private getResourceType(element: HTMLElement): ResourceError['type'] {
 
     if(element.tagName === 'SCRIPT') return 'script';
@@ -276,3 +266,4 @@ class ResourceMonitor {
 
 export default resourceMonitor;
 '`
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

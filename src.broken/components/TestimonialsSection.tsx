@@ -167,7 +167,6 @@ export const TestimonialsSection: React.FC = props {
                       <Star key={i} className="w-5 h-5 text-yellow-400 fill-current"  />
                     ))}
                   </div>
-<<<<<<< HEAD
 
                   <Quote className="w-8 h-8 text-cyan - 400 mb-4" />
 
@@ -192,7 +191,6 @@ export const TestimonialsSection: React.FC = props {
                     <p className="text-cyan-400">{current.position}</p>"
                     <p className="text-gray-300">{current.company}</p>"
                     <p className="text-sm text-gray-400">{current.industry} Industry</p>
->>>>>>> main
                   </div>
                 </div>
 
@@ -297,3 +295,4 @@ export const TestimonialsSection: React.FC = props {
       </div>;
     </section>;) };
 '"`
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

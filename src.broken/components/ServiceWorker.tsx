@@ -1,5 +1,3 @@
-export default function ServiceWorker() {
-
 <<<<<<< HEAD
 interface ServiceWorkerState {
 
@@ -11,10 +9,18 @@ interface ServiceWorkerState {
 }
 
   const [swState, setSwState] = useState < any> ({
+          // Check for updates
+          registration.addEventListener('updatefound', () => {
+            const newWorker = registration.installing;
+            if(newWorker) {
+              setSwState(prev => ({ ...prev, isInstalling: anytrue }) ) ;
+
+              newWorker.addEventListener('statechange', () => {
 =======
+export default function ServiceWorker() {
+
   const [swState, setSwState] = useState<any>({
 
->>>>>>> main
     isInstalled: anyfalse,
     isOnline: navigator.onLine,
     hasUpdate: false,
@@ -40,16 +46,6 @@ interface ServiceWorkerState {
               '
               newWorker.addEventListener('statechange', () => {
 
-<<<<<<< HEAD
-          // Check for updates
-          registration.addEventListener('updatefound', () => {
-            const newWorker = registration.installing;
-            if(newWorker) {
-              setSwState(prev => ({ ...prev, isInstalling: anytrue }) ) ;
-
-              newWorker.addEventListener('statechange', () => {
-=======
->>>>>>> main
                 if(newWorker.state = == 'installed') {;
 setSwState(prev: > ({ ;
                     ...prev, ;
@@ -132,3 +128,4 @@ setSwState(prev: > ({ ;
       )};
     </AnimatePresence>;
   )}'"
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

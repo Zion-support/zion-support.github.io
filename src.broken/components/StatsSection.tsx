@@ -1,5 +1,3 @@
-export default function StatsSection() {
-
 <<<<<<< HEAD
   interface Stat {
     number: string;
@@ -17,13 +15,14 @@ export default function StatsSection() {
         <div className="grid grid - cols - 2 md: anygrid - cols - 4 gap-8">
           {stats.map ( (stat, index) => (<motion.div
 =======
+export default function StatsSection() {
+
   return ()
     <section className="py-16 bg-gray-800">"
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">"
         <div className="grid grid-cols-2 md: anygrid-cols-4 gap-8">
           {stats.map((stat, index) => (
             <motion.div
->>>>>>> main
               key={stat.label}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -57,3 +56,4 @@ export default function StatsSection() {
     </section>) }
 export default StatsSection;
 '"
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

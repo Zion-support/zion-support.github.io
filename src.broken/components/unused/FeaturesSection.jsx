@@ -1,32 +1,13 @@
-import { motion  } from 'framer-motion';
-export default function Page() {
-,
-        {
-
-            icon: RocketLaunchIcon,"
-            title: "Scalable Solutions","
-            description: "Architected for growth with cloud-native and microservices approaches","
-            color: "text-zion-cyan"
-        },
-        {
-
-            icon: CogIcon,"
-            title: "24/7 Support","
-            description: "Round-the-clock technical support and maintenance services","
-            color: "text-zion-purple"
-
-    ];
-    const containerVariants = {
-
-        hidden: { opacity: 0 },
-        visible: {
-
-            opacity: 1,
-            transition: {
-
-                staggerChildren: 0.1
-
     };
+<<<<<<< HEAD
+  y: 0
+
+}} viewport={{ once: true }} transition={{ duration: 0.8 }} className="text-center mb-16">
+  delay: 0.5
+
+}} className="mt-16 text-center">
+          <div className="bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10 rounded-2xl p-8 border border-zion-cyan/20">
+=======
     const itemVariants = {
 
   hidden: { y: 20,
@@ -41,12 +22,8 @@ export default function Page() {
 
                 duration: 0.5
 
-<<<<<<< HEAD
-    };
-=======
 
     };"
->>>>>>> main
     return (<section className="py-20 bg-white relative overflow-hidden">;
       {/* Background Elements */}"
       <div className="absolute inset-0 bg-gradient-to-br from-zion-slate-light to-white opacity-50"></div>;"
@@ -63,16 +40,10 @@ export default function Page() {
 }} whileInView = {
 
   { opacity: 1,
-<<<<<<< HEAD
-  y: 0
-
-}} viewport={{ once: true }} transition={{ duration: 0.8 }} className="text-center mb-16">
-=======
   y: 0 
 
 "
 }} viewport={{ once: true }} transition={{ duration: 0.8 }} className="text-center mb-16">"
->>>>>>> main
           <h2 className="text-4xl md:text-5xl font-bold text-zion-blue-dark mb-6">
             Why Choose Zion Tech Group?
           </h2>"
@@ -115,18 +86,11 @@ export default function Page() {
 }} viewport={{ once: true }} transition = {
 
   { duration: 0.8,
-<<<<<<< HEAD
-  delay: 0.5
-
-}} className="mt-16 text-center">
-          <div className="bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10 rounded-2xl p-8 border border-zion-cyan/20">
-=======
   delay: 0.5 
 
 "
 }} className="mt-16 text-center">"
           <div className="bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10 rounded-2xl p-8 border border-zion-cyan/20">"
->>>>>>> main
             <h3 className="text-2xl font-bold text-zion-blue-dark mb-4">
               Ready to Experience the Difference?
             </h3>"
@@ -146,3 +110,4 @@ export default function Page() {
       </div>
     </section>)}
 '"`
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

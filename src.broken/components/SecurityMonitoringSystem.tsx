@@ -1,5 +1,4 @@
 <<<<<<< HEAD
-import { <<<<<<< HEAD import { motion, AnimatePresence  } from 'framer-motion';
  from 'lucide-react';
 
 interface SecurityThreat {
@@ -14,7 +13,6 @@ interface SecurityThreat {
   recommendations: string[]}
 
 =======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 interface VulnerabilityAssessment {
   id: string;
   category: 'network' | 'application' | 'infrastructure' | 'data';
@@ -636,3 +634,4 @@ export function SecurityMonitoringSystem({
     </>
   )}
 '"`
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

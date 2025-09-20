@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-UsersBriefcaseAwardMapPinClockCheckCircleArrowRightStarGlobeTarget,
+UsersBriefcaseAwardMapPinClockCheckCircleArrowRightStarGlobeTarget
 import Layout from '../components/Layout';
 const positions = [,
   {,

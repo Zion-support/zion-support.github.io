@@ -1,4 +1,4 @@
-import { <<<<<<< HEAD import { motion, AnimatePresence  } from 'framer-motion';
+<<<<<<< HEAD
 
 export default function Page() {
 > {
@@ -161,3 +161,5 @@ showStats:  true,;
 
   // Calculate resource stats
   const resourceStats = {
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

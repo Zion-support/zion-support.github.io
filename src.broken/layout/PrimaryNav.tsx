@@ -1,3 +1,14 @@
+<<<<<<< HEAD
+      router.push(`/search/${slugify(query)}`);
+      setQuery('');
+
+
+                <div className="pt-4 border-t border-white/10 space-y-2">
+                  <Link
+                  <Link
+                  <Link
+                  <Link
+=======
 import { useState } from 'react';
 import { logDev, logError } from '@/utils/productionLogger';
 import Link from 'next/link';
@@ -22,14 +33,8 @@ import { CartDrawer } from '@/components/cart/CartDrawer';
 import { LoginModal } from '@/components/auth/LoginModal';
 
       // // // // // // // // console.log('PrimaryNav search submit:', query);
-<<<<<<< HEAD
-      router.push(`/search/${slugify(query)}`);
-      setQuery('');
-
-=======
       router.push(`/search/${slugify(query)}`);'      setQuery('');
 '
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       // // // // // console.log('PrimaryNav search submit:', query);`
       router.push(`/search/${slugify(query)}`);
       setQuery('')}
@@ -215,48 +220,30 @@ import { LoginModal } from '@/components/auth/LoginModal';
                     </div>
                   </div>
                 ))}
-<<<<<<< HEAD
-
-                <div className="pt-4 border-t border-white/10 space-y-2">
-                  <Link
-=======
                 "
                 <div className="pt-4 border-t border-white/10 space-y-2">
                   <Link "
->>>>>>> main
                     to="/solutions"
                     className="block text-gray-300 hover:text-white transition-colors duration-200"
                     onClick={: unknown setIsOpen(false)}
                   >
                     Solutions
                   </Link>
-<<<<<<< HEAD
-                  <Link
-=======
                   <Link "
->>>>>>> main
                     to="/about"
                     className="block text-gray-300 hover:text-white transition-colors duration-200"
                     onClick={: unknown setIsOpen(false)}
                   >
                     About
                   </Link>
-<<<<<<< HEAD
-                  <Link
-=======
                   <Link "
->>>>>>> main
                     to="/blog"
                     className="block text-gray-300 hover:text-white transition-colors duration-200"
                     onClick={: unknown setIsOpen(false)}
                   >
                     Blog
                   </Link>
-<<<<<<< HEAD
-                  <Link
-=======
                   <Link "
->>>>>>> main
                     to="/contact"
                     className="block text-gray-300 hover:text-white transition-colors duration-200"
                     onClick={: unknown setIsOpen(false)}
@@ -272,3 +259,4 @@ import { LoginModal } from '@/components/auth/LoginModal';
     </header>;
   )}
 '"`
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

@@ -80,6 +80,7 @@
     "h1": "2025 Pricing & Services"
   },
   {
+<<<<<<< HEAD
     "route": "/pricing",
     "title": "Pricing - Zion Tech Group | Transparent AI & IT Solutions Pricing",
     "h1": ""
@@ -108,5 +109,7 @@
     "route": "/solutions",
     "title": "Solutions - Zion Tech Group | Industry & Technology Solutions",
     "h1": ""
+=======
+>>>>>>> 9de841a86934bc4a418b22e98c02b56496dc2aa9
   }
 ]

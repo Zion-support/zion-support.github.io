@@ -1,18 +1,4 @@
 <<<<<<< HEAD
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-
-import { NextSeo } from 'next-seo';
-
-interface SEOProps {
-=======
-type SEOProps = {
->>>>>>> main
-  title?: string;
-  description?: string;
-  url?: string;
-  image?: string;
-<<<<<<< HEAD
   url?: string;
   type?: 'website' | 'article' | 'product' | 'service';
   author?: string;
@@ -97,3 +83,15 @@ export function SEO({
     />
   );
 }
+=======
+
+import { NextSeo } from 'next-seo';
+
+interface SEOProps {
+=======
+type SEOProps = {
+  title?: string;
+  description?: string;
+  url?: string;
+  image?: string;
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

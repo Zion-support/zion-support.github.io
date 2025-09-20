@@ -1,3 +1,14 @@
+<<<<<<< HEAD
+  y: 20 ;
+
+}}
+  y: 0 ;
+
+}}
+  delay: 0.4 ;
+
+}}
+=======
   return ()
     <section className="py-20 bg-gradient-to-b from-zion-slate to-zion-slate-dark" role="region" aria-labelledby="testimonials-heading">"
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -129,33 +140,15 @@
           initial = {
 
   { opacity: 0,
-<<<<<<< HEAD
-  y: 20 ;
-
-}}
-=======
   y: 20 }}
->>>>>>> main
           whileInView = {
 
   { opacity: 1,
-<<<<<<< HEAD
-  y: 0 ;
-
-}}
-=======
   y: 0 }}
->>>>>>> main
           transition = {
 
   { duration: 0.8,
-<<<<<<< HEAD
-  delay: 0.4 ;
-
-}}
-=======
   delay: 0.4 }}
->>>>>>> main
           viewport={{ once: true }}
 "
           <p className="text-zion-slate-light text-sm mb-6">Join our growing list of satisfied clients</p>"
@@ -183,3 +176,4 @@
   )};
 
 export default Testimonials}}}'"`
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

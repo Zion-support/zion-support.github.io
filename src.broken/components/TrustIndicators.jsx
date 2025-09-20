@@ -1,10 +1,9 @@
-import React from 'react';
 <<<<<<< HEAD
 export function TrustIndicatorsCompact({ className }) {
 import { Shield, Lock, Award, Users, Globe, CheckCircle, Star, Zap export function TrustIndicators({ className, showStats = true, showCertifications = true }) {
 =======
+import React from 'react';
 import { Shield, Lock, Award, Users, Globe, CheckCircle, Star, Zap export function TrustIndicators({ className, showStats = true, showCertifications = true }) {
->>>>>>> main
 
     const indicators = [{
 
@@ -142,3 +141,4 @@ export function TrustIndicatorsCompact({ className }) {
       </div>
     </div>)}
 '"`
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

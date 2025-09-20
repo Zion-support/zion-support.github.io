@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+;
+export interface ServiceListing extends Listing {
+
+=======
 export interface Listing {
   id: string;
   title: string;
@@ -23,7 +28,6 @@ export interface Listing {
   location: string;
 =======
     reviews: number};  location: string;
->>>>>>> main
   createdAt: string;
   updatedAt: string;
   status: 'active' | 'inactive' | 'sold' | 'pending';
@@ -41,14 +45,8 @@ export interface Listing {
     cost: number;
     method: string;
     estimatedDays: number}}
-<<<<<<< HEAD
-;
-export interface ServiceListing extends Listing {
-
-=======
 ;export interface ServiceListing extends Listing {
 '
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   serviceType: 'consulting' | 'development' | 'maintenance' | 'training' | 'support';
   duration?: string;
   availability: string[];
@@ -79,3 +77,4 @@ export interface ServiceListing extends Listing {
   listingId: string;
   type: 'product' | 'service' | 'talent';
   addedAt: string}
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

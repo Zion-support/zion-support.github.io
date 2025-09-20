@@ -1,5 +1,4 @@
 <<<<<<< HEAD
-import { <<<<<<< HEAD import { motion, useAnimation  } from 'framer-motion';
  from 'lucide-react';
 
 interface Stat {
@@ -85,7 +84,6 @@ export default function EnhancedStatsSection(...args[]):  {
   }) ;
 
 =======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   useEffect(() => {
     if(inView) {
 
@@ -311,3 +309,4 @@ className: {`w-20 h-20 rounded-3xl bg-gradient-to-r ${stat.gradient} bg-opacity-
       </div>;
     </section>;) }
 '"`
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

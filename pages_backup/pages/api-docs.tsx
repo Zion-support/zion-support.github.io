@@ -11,6 +11,3 @@
         </div>,
       </div>,
     </div>,
-  );
-};
-export default api-docs;

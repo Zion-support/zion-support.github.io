@@ -1,3 +1,28 @@
+<<<<<<< HEAD
+                  </label>
+                  <input type="text" value={nftForm.name} onChange = { (e) => setNftForm(prev => ({ ...prev,
+  name: e.target.value
+                  <textarea value={nftForm.description} onChange = { (e) => setNftForm(prev => ({ ...prev,
+  description: e.target.value
+                <div>
+                  <label className="block text-sm font - medium text-gray - 700 dark:text-gray - 300 mb-1">
+                    Image URL(optional) </label>
+                  <input type="url" value={nftForm.image} onChange = { (e) => setNftForm(prev => ({ ...prev,
+  image: e.target.value
+                  </label>
+                  <input type="text" value={transactionForm.to} onChange = { (e) => setTransactionForm(prev => ({ ...prev,
+  to: e.target.value
+                <div>
+                  <label className="block text-sm font - medium text-gray - 700 dark:text-gray - 300 mb-1">
+                    Amount(ETH) </label>
+                  <input type="number" step="0.001" value={transactionForm.value} onChange = { (e) => setTransactionForm(prev => ({ ...prev,
+  value: e.target.value
+                <div>
+                  <label className="block text-sm font - medium text-gray - 700 dark:text-gray - 300 mb-1">
+                    Data(optional) </label>
+                  <textarea value={transactionForm.data} onChange = { (e) => setTransactionForm(prev => ({ ...prev,
+  data: e.target.value
+=======
 import { useState, useCallback } from 'react';
 export default function Page() {
 );
@@ -393,17 +418,11 @@ export default function Page() {
                 <div>"
                   <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
                     Name
-<<<<<<< HEAD
-                  </label>
-                  <input type="text" value={nftForm.name} onChange = { (e) => setNftForm(prev => ({ ...prev,
-  name: e.target.value
-=======
                   </label>"
                   <input type="text" value={nftForm.name} onChange = {
 
   (e) => setNftForm(prev => ({ ...prev,
   name: e.target.value 
->>>>>>> main
 
 "
 }))} className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white" placeholder="NFT Name"/>
@@ -413,27 +432,15 @@ export default function Page() {
                   <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
                     Description
                   </label>
-<<<<<<< HEAD
-                  <textarea value={nftForm.description} onChange = { (e) => setNftForm(prev => ({ ...prev,
-  description: e.target.value
-=======
                   <textarea value={nftForm.description} onChange = {
 
   (e) => setNftForm(prev => ({ ...prev,
   description: e.target.value 
->>>>>>> main
 
 "
 }))} className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white" placeholder="NFT Description" rows={3}/>
                 </div>
 
-<<<<<<< HEAD
-                <div>
-                  <label className="block text-sm font - medium text-gray - 700 dark:text-gray - 300 mb-1">
-                    Image URL(optional) </label>
-                  <input type="url" value={nftForm.image} onChange = { (e) => setNftForm(prev => ({ ...prev,
-  image: e.target.value
-=======
                 <div>"
                   <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
                     Image URL (optional)
@@ -442,7 +449,6 @@ export default function Page() {
 
   (e) => setNftForm(prev => ({ ...prev,
   image: e.target.value 
->>>>>>> main
 
 "
 }))} className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white" placeholder="https://example.com/image.jpg"/>
@@ -491,29 +497,16 @@ export default function Page() {
                 <div>"
                   <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
                     To Address
-<<<<<<< HEAD
-                  </label>
-                  <input type="text" value={transactionForm.to} onChange = { (e) => setTransactionForm(prev => ({ ...prev,
-  to: e.target.value
-=======
                   </label>"
                   <input type="text" value={transactionForm.to} onChange = {
 
   (e) => setTransactionForm(prev => ({ ...prev,
   to: e.target.value 
->>>>>>> main
 
 "
 }))} className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white" placeholder="0x..."/>
                 </div>
 
-<<<<<<< HEAD
-                <div>
-                  <label className="block text-sm font - medium text-gray - 700 dark:text-gray - 300 mb-1">
-                    Amount(ETH) </label>
-                  <input type="number" step="0.001" value={transactionForm.value} onChange = { (e) => setTransactionForm(prev => ({ ...prev,
-  value: e.target.value
-=======
                 <div>"
                   <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
                     Amount (ETH)
@@ -522,19 +515,11 @@ export default function Page() {
 
   (e) => setTransactionForm(prev => ({ ...prev,
   value: e.target.value 
->>>>>>> main
 
 "
 }))} className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white" placeholder="0.1"/>
                 </div>
 
-<<<<<<< HEAD
-                <div>
-                  <label className="block text-sm font - medium text-gray - 700 dark:text-gray - 300 mb-1">
-                    Data(optional) </label>
-                  <textarea value={transactionForm.data} onChange = { (e) => setTransactionForm(prev => ({ ...prev,
-  data: e.target.value
-=======
                 <div>"
                   <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
                     Data (optional)
@@ -543,7 +528,6 @@ export default function Page() {
 
   (e) => setTransactionForm(prev => ({ ...prev,
   data: e.target.value 
->>>>>>> main
 
 "
 }))} className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white" placeholder="0x..." rows={3}/>
@@ -564,3 +548,4 @@ export default function Page() {
       </AnimatePresence>
     </div>)};
 '"`
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

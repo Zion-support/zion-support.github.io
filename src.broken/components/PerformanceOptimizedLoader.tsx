@@ -6,4 +6,5 @@ import { motion  } from 'framer-motion';
 export default function Page() {
 ;  const textSizes = {
 '
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

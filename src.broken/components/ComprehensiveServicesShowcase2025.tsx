@@ -1,5 +1,4 @@
 <<<<<<< HEAD
-import { <<<<<<< HEAD import { INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from '../data/innovativeMicroSaasServices2025';
 export default function Page() {
 ,;
     { id: 'Metaverse', name: 'Metaverse', count: allServices.filter(s => s.category === 'Metaverse').length, icon: '🌍' },;
@@ -13,54 +12,12 @@ export default function Page() {
     { id: 'Revolutionary', name: 'Revolutionary', icon: '💫' };
   ];
 
-=======
-  ];
-
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-                         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
-                         service.category.toLowerCase().includes(searchTerm.toLowerCase()) ||;
-                         service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
-    
-    return matchesCategory && matchesSearch && matchesPrice && matchesInnovation}) ;
-
-<<<<<<< HEAD
     switch(sortBy) {;
       case 'price':;
         return a.price - b.price;
-=======
-    switch(sortBy) {;'      case 'price':;
-        return a.price - b.price;'
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-      case 'name':;
-        return a.title.localeCompare(b.title);
-      case 'innovation':;
-        
-  ;
-  ;
-=======
-'
-  'Advanced': 1, 'Cutting-edge': 2,;  ;
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-  ;
-  ;
-  ;
-  'Revolutionary': 3 ;
-
-<<<<<<< HEAD
 };
         return (innovationOrder[a.innovationLevel as keyof typeof innovationOrder] || 0) - ;
                (innovationOrder[b.innovationLevel as keyof typeof innovationOrder] || 0);
-=======
-};        return (innovationOrder[a.innovationLevel as keyof typeof innovationOrder] || 0) - ;
-               (innovationOrder[b.innovationLevel as keyof typeof innovationOrder] || 0);'
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-      case 'category':;
-        return a.category.localeCompare(b.category) ;
-      default:;
-        return 0}) ;
-
-    hidden: { opacity: 0 },;
-<<<<<<< HEAD
     visible: {;
       opacity: 1,;
       transition: {;
@@ -74,8 +31,41 @@ export default function Page() {
   opacity: 0
 
 },
+                type="text"
+                placeholder="Search services, categories, or features..."
 =======
->>>>>>> main
+  ];
+
+                         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
+                         service.category.toLowerCase().includes(searchTerm.toLowerCase()) ||;
+                         service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
+    
+    return matchesCategory && matchesSearch && matchesPrice && matchesInnovation}) ;
+
+    switch(sortBy) {;'      case 'price':;
+        return a.price - b.price;'
+      case 'name':;
+        return a.title.localeCompare(b.title);
+      case 'innovation':;
+        
+  ;
+  ;
+=======
+'
+  'Advanced': 1, 'Cutting-edge': 2,;  ;
+  ;
+  ;
+  ;
+  'Revolutionary': 3 ;
+
+};        return (innovationOrder[a.innovationLevel as keyof typeof innovationOrder] || 0) - ;
+               (innovationOrder[b.innovationLevel as keyof typeof innovationOrder] || 0);'
+      case 'category':;
+        return a.category.localeCompare(b.category) ;
+      default:;
+        return 0}) ;
+
+    hidden: { opacity: 0 },;
     visible: {
       opacity: 1,;
       transition: {
@@ -181,12 +171,7 @@ export default function Page() {
             <div className="relative mb-6">"
               <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-zion-slate-400 w-5 h-5"  />
               <input"
-<<<<<<< HEAD
-                type="text"
-                placeholder="Search services, categories, or features..."
-=======
                 type="text""                placeholder="Search services, categories, or features..."
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}"
                 className="w-full bg-zion-slate-900/50 border border-zion-slate-600 rounded-xl pl-12 pr-4 py-3 text-white placeholder-zion-slate-400 focus:outline-none focus:ring-2 focus:ring-zion-cyan/50 focus:border-zion-cyan"
@@ -642,3 +627,4 @@ export default function Page() {
 </div></div></div></div></div></div></div>};
 
 export default ComprehensiveServicesShowcase2025}}}}}}}}}}'"`
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

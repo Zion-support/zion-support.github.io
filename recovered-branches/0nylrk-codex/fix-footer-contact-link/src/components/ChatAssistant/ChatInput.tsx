@@ -55,8 +55,6 @@ export function ChatInput({ onSend, disabled = false }: ChatInputProps) {
         <Send className="h-5 w-5" />
       </Button>
     </form>
-  );
-}
 =======
 import React from 'react';
 export function LoginForm() {
@@ -65,6 +63,6 @@ export function LoginForm() {
       <h1>Component</h1>
       <p>Component placeholder</p>
     </div>
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1
   );
 }
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3

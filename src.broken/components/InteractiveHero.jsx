@@ -1,4 +1,3 @@
-import React, { useState, useEffect } from 'react';
 <<<<<<< HEAD
 export const InteractiveHero = ({ title, subtitle, description, primaryAction, secondaryAction, stats = [import { motion  } from 'framer-motion';
 
@@ -7,10 +6,10 @@ export const InteractiveHero = ({ title, subtitle, description, primaryAction, s
     { value: '99.9%', label: 'Uptime SLA', color: 'text-purple - 400' },
     { value: '24 / 7', label: 'Support Available', color: 'text-cyan - 400' }
 =======
+import React, { useState, useEffect } from 'react';
 import { motion  } from 'framer-motion';
 
 export default function Page() {
->>>>>>> main
 ] }) => {
 
     const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -58,3 +57,4 @@ export default function Page() {
     };
     const floatingVariants = {
 '"
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

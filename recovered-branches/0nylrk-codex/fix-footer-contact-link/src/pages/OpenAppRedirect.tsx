@@ -114,4 +114,4 @@ export function OpenAppRedirect() {
     </div>
   );
 }
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

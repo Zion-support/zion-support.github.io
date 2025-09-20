@@ -1,5 +1,4 @@
 <<<<<<< HEAD
-import { <<<<<<< HEAD import { motion, AnimatePresence  } from 'framer-motion';
  from 'lucide-react';
 
   id: string;
@@ -23,12 +22,6 @@ import { <<<<<<< HEAD import { motion, AnimatePresence  } from 'framer-motion';
 interface SmartNotificationSystemProps {
   // Add your props here
 
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-
-type SmartNotificationSystemProps = {
-  enabled?: boolean;
-<<<<<<< HEAD
   maxNotifications?: number;
   autoDismiss?: boolean;
   autoDismissDelay?: number;
@@ -560,7 +553,9 @@ export function SmartNotificationSystem({
 // Export the addNotification function for external use
 export 
 =======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
+
+type SmartNotificationSystemProps = {
+  enabled?: boolean;
 };
 
 const SmartNotificationSystem: React.FC<SmartNotificationSystemProps> = ({ enabled = true }) => {
@@ -568,3 +563,4 @@ const SmartNotificationSystem: React.FC<SmartNotificationSystemProps> = ({ enabl
   return <div className="hidden" aria-hidden="true" />};
 
 export default SmartNotificationSystem;
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

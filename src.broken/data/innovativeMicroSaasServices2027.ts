@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+
+      id: 'quantum-neural-network-platform',
+=======
 export interface InnovativeMicroSaasService2027 {
   id: string;
   title: string;
@@ -35,12 +39,7 @@ export interface InnovativeMicroSaasService2027 {
 export const INNOVATIVE_MICRO_SAAS_SERVICES_2027: InnovativeMicroSaasService2027[] =
   [// AI-Powered Business Solutions
     {
-<<<<<<< HEAD
-
-      id: 'quantum-neural-network-platform',
-=======
       id: 'quantum-neural-network-platform','
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       title: 'Quantum Neural Network Platform Pro',
       description:'
         'Revolutionary quantum computing platform that leverages quantum entanglement and superposition for advanced AI model training and optimization.Enables 1000x faster training times and breakthrough accuracy improvements.',
@@ -835,3 +834,4 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2027: InnovativeMicroSaasService2027
   ];
 
 export default INNOVATIVE_MICRO_SAAS_SERVICES_2027;
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

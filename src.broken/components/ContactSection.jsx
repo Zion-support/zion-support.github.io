@@ -1,6 +1,6 @@
-import React from 'react';
 <<<<<<< HEAD
-import { Mail, Phone, MapPin, Clock, MessageSquare, ArrowRight, Globe, Shield, Users export function ContactSection () { ======= import { Link  } from 'react-router-dom';
+=======
+import React from 'react';
 ,
         {
 "
@@ -184,3 +184,4 @@ import { Mail, Phone, MapPin, Clock, MessageSquare, ArrowRight, Globe, Shield, U
       </div>
     </section>)}
 '"`
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

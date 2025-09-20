@@ -23,7 +23,6 @@ export default function Page() {
     setIsVisible(true) ;
 
       setCurrentFeature((prev) => (prev + 1) % features.length) }, 3000) ;
->>>>>>> main
 
     return () => clearInterval(interval)}, [features.length]);
 
@@ -199,3 +198,4 @@ export default function Page() {
 ;
 ;
 ;
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

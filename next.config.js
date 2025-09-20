@@ -1,11 +1,5 @@
-const os = require('os');
-
+/** @type {import('next').NextConfig} */
 const nextConfig = {
-  assetPrefix: process.env.NODE_ENV === 'production' ? process.env.NEXT_PUBLIC_ASSET_PREFIX || '' : '',
-  poweredByHeader: false,
-  trailingSlash: false,
-  reactStrictMode: true,
-  
   // Environment configuration
   env: {
     NEXT_PUBLIC_APP_URL: process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:3000',

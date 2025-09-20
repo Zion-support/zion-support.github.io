@@ -10,14 +10,8 @@ interface ImportMeta {
   readonly env: ImportMetaEnv;
 }
 
-// Global type declarations
-declare namespace React {
-  type ReactNode = React.ReactNode;
-  type FC<P = Record<string, unknown>> = React.FC<P>;
-  type FormEvent<T = Element> = React.FormEvent<T>;
-  type KeyboardEvent<T = Element> = React.KeyboardEvent<T>;
-  type ChangeEvent<T = Element> = React.ChangeEvent<T>;
-}
+// Import React types properly
+import * as React from 'react';
 
 // Type declarations for modules used in Vite configuration
 declare module 'vitest/config' {

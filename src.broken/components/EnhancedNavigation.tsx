@@ -4,7 +4,6 @@ import { Link, useLocation  } from 'react-router-dom';
 export default function Page() {
 ,
   {
-<<<<<<< HEAD
     label: 'AI & Machine Learning',
     href: '/ai - services',
     icon: <Brain className="w-4 h-4" />,
@@ -105,7 +104,96 @@ export default function Page() {
     label: 'Comp',
     href: '/about',
     icon: <Users className="w-4 h-4" />,
-    children: [=======
+      { label: 'About Us', href: '/about' },
+      { label: 'Team', href: '/team' },
+      { label: 'Leadership', href: '/leadership' },
+      { label: 'Careers', href: '/careers' },
+      { label: 'Partners', href: '/partners' },
+      { label: 'News', href: '/news' },
+      { label: 'Case Studies', href: '/case-studies' },
+      { label: 'Blog', href: '/blog' }
+    label: 'Resources',
+    href: '/resources',
+    icon: <BarChart3 className="w-4 h-4" />,
+    const handleScroll = () => {;
+      setIsScrolled(window.scrollY > 10) ;
+    };
+
+    window.addEventListener('scroll', handleScroll) ;
+    return () => window.removeEventListener('scroll', handleScroll) ;
+  }, []) ;
+
+  useEffect(() => {
+    setIsOpen(false) ;
+    setActiveDropdown(null) ;
+  }, [location]) ;
+
+  const handleThemeChange = useCallback((newTheme: any'light' | 'dark' | 'system') => {;
+    setTheme(newTheme) ;
+    onThemeChange?.(newTheme) ;
+
+    const root = document.documentElement;
+    root.classList.remove('light', 'dark') ;
+
+    if(newTheme = == 'system') {;
+      const systemTheme = window.matchMedia(' (prefers - color - scheme: dark) ') .matches ? 'dark' : 'light';
+      root.classList.add(systemTheme) ;
+    } else {
+      root.classList.add(newTheme) ;
+    }
+
+    localStorage.setItem('zion - theme', newTheme) ;
+  }, [onThemeChange]) ;
+  const contactInfo = {
+    phone: "+1 302 464 0950",
+    email: "kleber@ziontechgroup.com",
+    website: "https://ziontechgroup.com",
+    address: "364 E Main St STE 1008 Middletown DE 19709"
+  };
+
+  return (<nav className = {`fixed top - 0 left - 0 right - 0 z - 50 transition - all duration - 300 ${isScrolled
+        ? 'bg-white / 95 dark:bg-slate - 900 / 95 backdrop - blur - md shadow-lg'
+        : 'bg-transparent'
+    } ${className}`}>
+      <div  className="max - w-7xl mx - auto px-4 sm:px-6 lg:px-8">
+        <div  className="flex justify - between items - center h-16">
+          {/* Logo */}
+          <div  className="flex - shrink -0">
+            <Link to="/" className="flex items - center space - x-2">
+              <div  className="w-8 h-8 bg-gradient - to - r from - blue - 600 to - purple - 600 rounded-lg flex items - center justify -center">
+                <Zap className="w-5 h-5 text-white" />
+              </div>
+              <span className="text-xl font - bold text-gray - 900 dark:text-white">
+          {/* Right Side Actions */}
+          <div  className="hidden lg:flex items - center space - x-4">
+            {/* Theme Toggle */}
+            <div  className="flex items - center space - x-2 bg-gray - 100 dark:bg-slate - 800 rounded-lg p -1">
+              <button     onClick={ () => handleThemeChange('light') }
+                className={`p - 2 rounded-md transition - colors ${theme === 'light'
+                    ? 'bg-white dark:bg-slate - 700 text-blue - 600 shadow-sm'
+                    : 'text-gray - 500 dark:text-gray - 400 hover:text-gray - 700 dark:hover:text-gray - 300'
+                }`}
+              >
+                <Sun className="w-4 h-4" />
+              </button>
+              <button     onClick={ () => handleThemeChange('dark') }
+                className={`p - 2 rounded-md transition - colors ${theme === 'dark'
+                    ? 'bg-white dark:bg-slate - 700 text-blue - 600 shadow-sm'
+                    : 'text-gray - 500 dark:text-gray - 400 hover:text-gray - 700 dark:hover:text-gray - 300'
+                }`}
+              >
+                <Moon className="w-4 h-4" />
+              </button>
+              <button     onClick={ () => handleThemeChange('system') }
+                className={`p - 2 rounded-md transition - colors ${theme === 'system'
+                    ? 'bg-white dark:bg-slate - 700 text-blue - 600 shadow-sm'
+                    : 'text-gray - 500 dark:text-gray - 400 hover:text-gray - 700 dark:hover:text-gray - 300'
+                                </div>
+                                <ChevronDown className={`w-5 h-5 transition - transform duration - 200 ${activeDropdown === item.label ? 'rotate - 180' : ''
+                                }`} />
+                              </button>
+
+=======
 
     label: 'AI & Machine Learning',
     href: '/ai-services',
@@ -219,17 +307,6 @@ export default function Page() {
     href: '/about',"
     icon: <Users className="w-4 h-4"  />,
     children: ['
-<<<<<<< HEAD
->>>>>>> main
-      { label: 'About Us', href: '/about' },
-      { label: 'Team', href: '/team' },
-      { label: 'Leadership', href: '/leadership' },
-      { label: 'Careers', href: '/careers' },
-      { label: 'Partners', href: '/partners' },
-      { label: 'News', href: '/news' },
-      { label: 'Case Studies', href: '/case-studies' },
-      { label: 'Blog', href: '/blog' }
-=======
       { label: 'About Us', href: '/about' },'
       { label: 'Team', href: '/team' },'
       { label: 'Leadership', href: '/leadership' },'
@@ -237,21 +314,14 @@ export default function Page() {
       { label: 'Partners', href: '/partners' },'
       { label: 'News', href: '/news' },'
       { label: 'Case Studies', href: '/case-studies' },'      { label: 'Blog', href: '/blog' }
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     ]
   },
   {
-<<<<<<< HEAD
-    label: 'Resources',
-    href: '/resources',
-    icon: <BarChart3 className="w-4 h-4" />,
-    children: [=======
 
     label: 'Resources',
     href: '/resources',"
     icon: <BarChart3 className="w-4 h-4" />,
     children: ['
->>>>>>> main
       { label: 'Pricing', href: '/pricing' },
       { label: 'FAQ', href: '/faq' },
       { label: 'Help Center', href: '/help' },
@@ -277,37 +347,6 @@ className:  '',;
   const [isScrolled, setIsScrolled] = useState(false);
   
   useEffect(() => {
-<<<<<<< HEAD
-    const handleScroll = () => {;
-      setIsScrolled(window.scrollY > 10) ;
-    };
-
-    window.addEventListener('scroll', handleScroll) ;
-    return () => window.removeEventListener('scroll', handleScroll) ;
-  }, []) ;
-
-  useEffect(() => {
-    setIsOpen(false) ;
-    setActiveDropdown(null) ;
-  }, [location]) ;
-
-  const handleThemeChange = useCallback((newTheme: any'light' | 'dark' | 'system') => {;
-    setTheme(newTheme) ;
-    onThemeChange?.(newTheme) ;
-
-    const root = document.documentElement;
-    root.classList.remove('light', 'dark') ;
-
-    if(newTheme = == 'system') {;
-      const systemTheme = window.matchMedia(' (prefers - color - scheme: dark) ') .matches ? 'dark' : 'light';
-      root.classList.add(systemTheme) ;
-    } else {
-      root.classList.add(newTheme) ;
-    }
-
-    localStorage.setItem('zion - theme', newTheme) ;
-  }, [onThemeChange]) ;
-=======
     
       setIsScrolled(window.scrollY > 10) };
 
@@ -326,34 +365,11 @@ className:  '',;
     if(newTheme = == 'system') {;
       
       root.classList.add(systemTheme)} else {
->>>>>>> main
 
       root.classList.add(newTheme)}
     '
     localStorage.setItem('zion-theme', newTheme)}, [onThemeChange])}};
 
-  return ()    <nav className = {`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${<<<<<<< HEAD
-  const contactInfo = {
-    phone: "+1 302 464 0950",
-    email: "kleber@ziontechgroup.com",
-    website: "https://ziontechgroup.com",
-    address: "364 E Main St STE 1008 Middletown DE 19709"
-  };
-
-  return (<nav className = {`fixed top - 0 left - 0 right - 0 z - 50 transition - all duration - 300 ${isScrolled
-        ? 'bg-white / 95 dark:bg-slate - 900 / 95 backdrop - blur - md shadow-lg'
-        : 'bg-transparent'
-    } ${className}`}>
-      <div  className="max - w-7xl mx - auto px-4 sm:px-6 lg:px-8">
-        <div  className="flex justify - between items - center h-16">
-          {/* Logo */}
-          <div  className="flex - shrink -0">
-            <Link to="/" className="flex items - center space - x-2">
-              <div  className="w-8 h-8 bg-gradient - to - r from - blue - 600 to - purple - 600 rounded-lg flex items - center justify -center">
-                <Zap className="w-5 h-5 text-white" />
-              </div>
-              <span className="text-xl font - bold text-gray - 900 dark:text-white">
-=======
       isScrolled '
         ? 'bg-white/95 dark:bg-slate-900/95 backdrop-blur-md shadow-lg' '
         : 'bg-transparent'`
@@ -366,7 +382,6 @@ className:  '',;
               <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">"
                 <Zap className="w-5 h-5 text-white"  />
               </div>"              <span className="text-xl font-bold text-gray-900 dark:text-white">
->>>>>>> main
                 Zion Tech Group
               </span>
             </Link>
@@ -438,32 +453,6 @@ className:  '',;
               </div>) ) }
           </div>
 
-<<<<<<< HEAD
-          {/* Right Side Actions */}
-          <div  className="hidden lg:flex items - center space - x-4">
-            {/* Theme Toggle */}
-            <div  className="flex items - center space - x-2 bg-gray - 100 dark:bg-slate - 800 rounded-lg p -1">
-              <button     onClick={ () => handleThemeChange('light') }
-                className={`p - 2 rounded-md transition - colors ${theme === 'light'
-                    ? 'bg-white dark:bg-slate - 700 text-blue - 600 shadow-sm'
-                    : 'text-gray - 500 dark:text-gray - 400 hover:text-gray - 700 dark:hover:text-gray - 300'
-                }`}
-              >
-                <Sun className="w-4 h-4" />
-              </button>
-              <button     onClick={ () => handleThemeChange('dark') }
-                className={`p - 2 rounded-md transition - colors ${theme === 'dark'
-                    ? 'bg-white dark:bg-slate - 700 text-blue - 600 shadow-sm'
-                    : 'text-gray - 500 dark:text-gray - 400 hover:text-gray - 700 dark:hover:text-gray - 300'
-                }`}
-              >
-                <Moon className="w-4 h-4" />
-              </button>
-              <button     onClick={ () => handleThemeChange('system') }
-                className={`p - 2 rounded-md transition - colors ${theme === 'system'
-                    ? 'bg-white dark:bg-slate - 700 text-blue - 600 shadow-sm'
-                    : 'text-gray - 500 dark:text-gray - 400 hover:text-gray - 700 dark:hover:text-gray - 300'
-=======
           {/* Right Side Actions */}"
           <div className="hidden lg:flex items-center space-x-4">
             {/* Theme Toggle */}"
@@ -489,7 +478,6 @@ className:  '',;
                 className={`p-2 rounded-md transition-colors ${theme === 'system' '
                     ? 'bg-white dark:bg-slate-700 text-blue-600 shadow-sm' '
                     : 'text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300'`
->>>>>>> main
                 }`}
               >"
                 <Monitor className="w-4 h-4"  />              </button>
@@ -539,18 +527,10 @@ className:  '',;
                                 <div className="flex items-center space-x-2">
                                   {item.icon}
                                   <span>{item.label}</span>
-<<<<<<< HEAD
-                                </div>
-                                <ChevronDown className={`w-5 h-5 transition - transform duration - 200 ${activeDropdown === item.label ? 'rotate - 180' : ''
-                                }`} />
-                              </button>
-
-=======
                                 </div>`
                                 <ChevronDown className={`w-5 h-5 transition-transform duration-200 ${activeDropdown === item.label ? 'rotate-180' : ''`
                                 }`}  />                              </button>
                               
->>>>>>> main
                               {activeDropdown === item.label && (<motion.div
                                   initial={{ opacity: 0, y: -10 }}
                                   animate={{ opacity: 1, y: 0 }}
@@ -604,3 +584,4 @@ className:  '',;
       </AnimatePresence>
     </nav>
   )};'"`
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

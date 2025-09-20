@@ -1,28 +1,4 @@
-import React, { useState } from 'react';
-import { Link, useLocation  } from 'react-router-dom';
 
-export default function Page() {
->
-  const { user, isAuthenticated } = useAuth();
-  const location = useLocation();
-  const [isOpen, setIsOpen] = useState(false);
-
-  const toggleMenu = () => setIsOpen(!isOpen);
-<<<<<<< HEAD
-
-  const navigationItems = [=======
-  
-  const navigationItems = ['
->>>>>>> main
-    { href: '/', label: 'Home', icon: Home, matches: (path) => path === '/' },;
-    { href: '/marketplace', label: 'Marketplace', icon: Store, matches: (path) => path.startsWith('/marketplace') },;
-    { href: '/talent', label: 'Talent', icon: Users, matches: (path) => path.startsWith('/talent') && !path.includes('/talent-dashboard') },;
-    { href: '/categories', label: 'Categories', icon: Store, matches: (path) => path.startsWith('/categories') },;
-    { href: '/equipment', label: 'Equipment', icon: Store, matches: (path) => path.startsWith('/equipment') },;
-    { href: '/community', label: 'Community', icon: Users, matches: (path) => path.startsWith('/community') },;
-  ];
-
-  if(isAuthenticated) {
 <<<<<<< HEAD
     navigationItems.push({
       href: '/dashboard',
@@ -39,7 +15,45 @@ export default function Page() {
         size="sm"
         onClick={toggleMenu}
         className="p-2 text-white hover:bg-zion-purple/20"
+              <Button
+                variant="ghost"
+                size="sm"
+                onClick={toggleMenu}
+                return (<Link
+                    key={item.href}
+                    to={item.href}
+                    onClick={toggleMenu}
+                  <Link
+                    to="/messages"
+                    onClick={toggleMenu}
+                  <Link
+                    to="/profile"
+                    onClick={toggleMenu}
+                  <Link
+                    to="/login"
+                    onClick={toggleMenu}
+                  <Link
+                    to="/signup"
+                    onClick={toggleMenu}
 =======
+export default function Page() {
+>
+  const { user, isAuthenticated } = useAuth();
+  const location = useLocation();
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => setIsOpen(!isOpen);
+  
+  const navigationItems = ['
+    { href: '/', label: 'Home', icon: Home, matches: (path) => path === '/' },;
+    { href: '/marketplace', label: 'Marketplace', icon: Store, matches: (path) => path.startsWith('/marketplace') },;
+    { href: '/talent', label: 'Talent', icon: Users, matches: (path) => path.startsWith('/talent') && !path.includes('/talent-dashboard') },;
+    { href: '/categories', label: 'Categories', icon: Store, matches: (path) => path.startsWith('/categories') },;
+    { href: '/equipment', label: 'Equipment', icon: Store, matches: (path) => path.startsWith('/equipment') },;
+    { href: '/community', label: 'Community', icon: Users, matches: (path) => path.startsWith('/community') },;
+  ];
+
+  if(isAuthenticated) {
 
     navigationItems.push({
 
@@ -58,7 +72,6 @@ export default function Page() {
         size="sm" 
         onClick={toggleMenu} "
         className="p-2 text-white hover:bg-zion-purple/20" '
->>>>>>> main
         aria-label={isOpen ? 'Close menu' : 'Open menu'}
       >"
         {isOpen ? <X className="h-6 w-6"/> : <Menu className="h-6 w-6"/>}
@@ -70,17 +83,10 @@ export default function Page() {
           <div className="fixed inset-y-0 right-0 w-80 bg-zion-blue-dark border-l border-zion-purple/20">"
             <div className="flex items-center justify-between p-4 border-b border-zion-purple/20">"
               <h2 className="text-lg font-semibold text-white">Menu</h2>
-<<<<<<< HEAD
-              <Button
-                variant="ghost"
-                size="sm"
-                onClick={toggleMenu}
-=======
               <Button "
                 variant="ghost"
                 size="sm" 
                 onClick={toggleMenu} "
->>>>>>> main
                 className="p-2 text-white hover:bg-zion-purple/20"
               >"
                 <X className="h-5 w-5"/>
@@ -93,18 +99,11 @@ export default function Page() {
 
                 const Icon = item.icon;
                 const isActive = item.matches(location.pathname);
-<<<<<<< HEAD
-                return (<Link
-                    key={item.href}
-                    to={item.href}
-                    onClick={toggleMenu}
-=======
                 return ()
                   <Link 
                     key={item.href} 
                     to={item.href} 
                     onClick={toggleMenu} 
->>>>>>> main
                     className = {
 
   cn("
@@ -134,29 +133,17 @@ export default function Page() {
                     </span>
                   </div>
     </div>)}
-<<<<<<< HEAD
-                  <Link
-                    to="/messages"
-                    onClick={toggleMenu}
-=======
                   <Link "
                     to="/messages" 
                     onClick={toggleMenu} "
->>>>>>> main
                     className="flex items-center gap-3 px-4 py-2 text-white hover:text-zion-cyan transition-colors"
                   >"
                     <MessageSquare className="h-5 w-5"/>
                     <span>Messages</span>
                   </Link>
-<<<<<<< HEAD
-                  <Link
-                    to="/profile"
-                    onClick={toggleMenu}
-=======
                   <Link "
                     to="/profile" 
                     onClick={toggleMenu} "
->>>>>>> main
                     className="flex items-center gap-3 px-4 py-2 text-white hover:text-zion-cyan transition-colors"
                   >"
                     <Settings className="h-5 w-5"/>
@@ -165,28 +152,16 @@ export default function Page() {
                 </div>
               ) : ("
                 <div className="space-y-3">
-<<<<<<< HEAD
-                  <Link
-                    to="/login"
-                    onClick={toggleMenu}
-=======
                   <Link "
                     to="/login" 
                     onClick={toggleMenu} "
->>>>>>> main
                     className="block w-full px-4 py-2 text-center bg-zion-purple text-white rounded-lg hover:bg-zion-purple-dark transition-colors"
                   >
                     Login
                   </Link>
-<<<<<<< HEAD
-                  <Link
-                    to="/signup"
-                    onClick={toggleMenu}
-=======
                   <Link "
                     to="/signup" 
                     onClick={toggleMenu} "
->>>>>>> main
                     className="block w-full px-4 py-2 text-center border border-zion-cyan text-zion-cyan rounded-lg hover:bg-zion-cyan hover:text-zion-blue-dark transition-colors"
                   >
                     Sign Up
@@ -201,3 +176,4 @@ export default function Page() {
   );
 }
 '"
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

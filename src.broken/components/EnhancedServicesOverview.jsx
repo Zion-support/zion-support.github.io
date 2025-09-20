@@ -1,4 +1,3 @@
-import React from 'react';
 <<<<<<< HEAD
 import { Badge } from '@/components / ui / badge';
  from '@/components / ui / button';
@@ -30,3 +29,6 @@ export default function Page() {
             'Supply Chain & Logistics': <Truck className="w-6 h-6"/>,"
             'Real Estate & Property': <Home className="w-6 h-6"/>,"
             'Legal & Compliance': <Lock className="w-6 h-6"/>,"
+=======
+import React from 'react';
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

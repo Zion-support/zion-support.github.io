@@ -1,3 +1,16 @@
+<<<<<<< HEAD
+    MessageCircle,
+    Mic,
+    MicOff,
+    Send,
+    Bot,
+    User,
+    Sparkles,
+    X,
+    Minimize2,
+    Maximize2,
+  } from 'lucide - react';
+=======
 import React, { useState, useRef, useEffect } from 'react';
 import { MessageCircle, Mic, MicOff, Send, Bot, User, Sparkles, X, Minimize2, Maximize2 const mockAIResponses = [;
     "I'd be happy to help you with that! Let me provide you with some information about our AI development services.","
@@ -37,21 +50,7 @@ export function AIChatAssistant() {
             content: inputValue,
   timestamp: new Date()
 
-<<<<<<< HEAD
-    MessageCircle,
-    Mic,
-    MicOff,
-    Send,
-    Bot,
-    User,
-    Sparkles,
-    X,
-    Minimize2,
-    Maximize2,
-  } from 'lucide - react';
-=======
 
->>>>>>> main
 
 };
         setMessages(prev => [...prev, userMessage]);
@@ -205,3 +204,4 @@ export function AIChatAssistant() {
       </div>
     </div>)}
 '"`
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

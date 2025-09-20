@@ -133,9 +133,6 @@ export function ChatAssistant({
           <ChatInput onSend={handleSendMessage} />
         </div>
       </div>
-    </div>
-  );
-}
 =======
 import React from 'react';
 export function ErrorBoundary() {
@@ -143,7 +140,7 @@ export function ErrorBoundary() {
     <div>
       <h1>Component</h1>
       <p>Component placeholder - needs implementation</p>;
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1
     </div>
   );
 }
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3

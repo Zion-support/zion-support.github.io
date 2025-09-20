@@ -1,4 +1,4 @@
-import { <<<<<<< HEAD FileText, Download, Globe, Zap, Brain, Shield, Cloud, Users, ShoppingCart, BookOpen, MessageCircle, HelpCircle, Star, Atom, Network, Eye, PenTool, TrendingUp, Rocket, Heart, Crown, Sparkles, Flame, DollarSign, Workflow, Settings, Lock, BarChart3, Cpu, Building, Server, Activity, GraduationCap, Newspaper, Target, Briefcase, Phone, MapPin, Mail,  } from 'lucide-react';
+<<<<<<< HEAD
 
 export default function Page() {
 , []);
@@ -204,3 +204,5 @@ const Video = () => <MessageCircle className="w-4 h-4"  />;"
 
 export default SitemapGenerator;
 '"`
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

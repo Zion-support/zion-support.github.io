@@ -1,4 +1,4 @@
-import { <<<<<<< HEAD import { motion  } from 'framer-motion';
+<<<<<<< HEAD
 
 export default function Page() {
 -${Math.random().toString(36).substr(2, 9)}`}}
@@ -19,7 +19,6 @@ export default function Page() {
   private async reportError(error: Error, errorInfo: ErrorInfo) {
 
     try {
-      // You can integrate with services like Sentry, LogRocket, etc.<<<<<<< HEAD
       // Send to your error reporting endpoint'
       await fetch('/api/error-report', {
 
@@ -28,7 +27,6 @@ export default function Page() {
       // Send to your error reporting endpoint'      await fetch('/api/error-report', {
 '
         method: 'POST','
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(errorReport)})} catch(reportError) {
 
@@ -252,3 +250,4 @@ export default function Page() {
     return this.props.children}
 }
 '"`
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

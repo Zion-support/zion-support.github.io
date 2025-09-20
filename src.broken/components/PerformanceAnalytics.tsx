@@ -1,5 +1,4 @@
 <<<<<<< HEAD
-import { <<<<<<< HEAD import { motion  } from 'framer-motion';
 export default function Page() {
 ,
       {
@@ -27,16 +26,22 @@ export default function Page() {
       'Error rate spike detected in last 5 minutes';
     ];
 
-<<<<<<< HEAD
     
       'Consider implementing lazy loading for images',;
       'Optimize database queries for better performance',;
       'Enable CDN for static assets delivery';
+          transition={{ delay: 0.6 }}
+          className="bg-white / 5 backdrop - blur - sm border border-white / 10 rounded-xl p - 8 text-center"
+        >
+          <BarChart3 className="w-16 h-16 text-gray - 400 mx - auto mb-4" />
+          <h3 className="text-xl font - semibold text-white mb-2">Performance Trends</h3>
+          <p className="text-gray -400">
+            {isMonitoring
+              ? 'Real - time performance data is being collected and analyzed...'
 =======
     const recommendations = [;'
       'Consider implementing lazy loading for images',;'
       'Optimize database queries for better performance',;'      'Enable CDN for static assets delivery';
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     ];
 
     return {
@@ -272,16 +277,6 @@ export default function Page() {
   y: 0
 
 }}
-<<<<<<< HEAD
-          transition={{ delay: 0.6 }}
-          className="bg-white / 5 backdrop - blur - sm border border-white / 10 rounded-xl p - 8 text-center"
-        >
-          <BarChart3 className="w-16 h-16 text-gray - 400 mx - auto mb-4" />
-          <h3 className="text-xl font - semibold text-white mb-2">Performance Trends</h3>
-          <p className="text-gray -400">
-            {isMonitoring
-              ? 'Real - time performance data is being collected and analyzed...'
-=======
           transition={{ delay: 0.6 }}"
           className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-8 text-center"
         >"
@@ -290,7 +285,6 @@ export default function Page() {
           <p className="text-gray-400">
             {isMonitoring '
               ? 'Real-time performance data is being collected and analyzed...''
->>>>>>> main
               : 'Start monitoring to view performance trends and historical data'
             }
           </p>
@@ -329,3 +323,4 @@ export default function Page() {
 </div>};
 
 export default PerformanceAnalytics}}}}}}}}'"`
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

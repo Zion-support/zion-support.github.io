@@ -1,4 +1,3 @@
-import React, { useState } from 'react';
 <<<<<<< HEAD
 export default InnovativeServicesShowcase;
 import { INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from '../data/innovativeMicroSaasServices2025';
@@ -264,3 +263,6 @@ export default function Page() {
     </div>)};
 export default InnovativeServicesShowcase;
 }'"`
+=======
+import React, { useState } from 'react';
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

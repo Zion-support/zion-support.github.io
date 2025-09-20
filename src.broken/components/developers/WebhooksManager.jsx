@@ -13,7 +13,6 @@ import { Switch } from '@/components/ui/switch';"
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from '@/components/ui/dropdown-menu';"
 import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle } from '@/components/ui/alert-dialog';"
 import { ScrollArea } from '@/components/ui/scroll-area';"
->>>>>>> main
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 export default function Page() {
 ;
@@ -98,57 +97,10 @@ export default function Page() {
                           <span className="block text-xs text-zinc-400 mt-1">{event.description}</span>
                         </Label>
                       </div>))}
-                  </div>
-                </div>
-              </div>
-
-              <DialogFooter>"
-                <Button variant="outline" onClick={() => {
-            setShowCreateDialog(false);
-            resetWebhookForm()}}>
-                  Cancel
-                </Button>"
-                <Button onClick={handleCreateWebhook} disabled={webhookName.trim() === "" ||"
-            webhookUrl.trim() === "" ||
-            selectedEvents.length === 0}>
-                  Create Webhook
-                </Button>
-              </DialogFooter>
-            </DialogContent>
-          </Dialog>
-        </div>
-
-        {/* Webhooks List */}"
-        <div className="space-y-4">"
-          {loading ? (<div className="text-center py-8 text-zinc-500">Loading webhooks...</div>) : webhooks.length === 0 ? (<div className="text-center py-8 text-zinc-500">"
-              <Webhook className="mx-auto mb-2 opacity-30" size={24}/>
-              <p>No webhooks found.</p>"
-              <p className="text-sm mt-1">Create one to receive event notifications.</p>"
-            </div>) : (webhooks.map((webhook) => (<div key={webhook.id} className="p-4 border border-zinc-800 rounded-lg">"
-                <div className="flex items-center justify-between">
-                  <div>"
-                    <h3 className="font-medium">{webhook.name}</h3>"
-                    <div className="flex items-center text-sm text-zinc-400 mt-1">"
-                      <Globe size={14} className="mr-1"/>"
-                      <span className="max-w-md truncate">{webhook.url}</span>
-                    </div>
-                  </div>
-"
-                  <div className="flex items-center space-x-2">"
-                    <div className="flex items-center mr-2">"
-                      <Switch  checked={webhook.is_active} onCheckedChange = {
-
-  () => handleToggleStatus(webhook.id,
-  webhook.is_active)
-
-<<<<<<< HEAD
-}/>
-                      <span className="ml-2 text-sm">
 =======
 
 }/>"
                       <span className="ml-2 text-sm">"
->>>>>>> main
                         {webhook.is_active ? "Active" : "Inactive"}
                       </span>
                     </div>
@@ -259,11 +211,54 @@ export default function Page() {
                         {testResult?.responseBody || "No response body"}
                       </pre>
                     </ScrollArea>
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1
                   </div>
                 </div>
               </div>
 
               <DialogFooter>"
+<<<<<<< HEAD
+                <Button variant="outline" onClick={() => {
+            setShowCreateDialog(false);
+            resetWebhookForm()}}>
+                  Cancel
+                </Button>"
+                <Button onClick={handleCreateWebhook} disabled={webhookName.trim() === "" ||"
+            webhookUrl.trim() === "" ||
+            selectedEvents.length === 0}>
+                  Create Webhook
+                </Button>
+              </DialogFooter>
+            </DialogContent>
+          </Dialog>
+        </div>
+
+        {/* Webhooks List */}"
+        <div className="space-y-4">"
+          {loading ? (<div className="text-center py-8 text-zinc-500">Loading webhooks...</div>) : webhooks.length === 0 ? (<div className="text-center py-8 text-zinc-500">"
+              <Webhook className="mx-auto mb-2 opacity-30" size={24}/>
+              <p>No webhooks found.</p>"
+              <p className="text-sm mt-1">Create one to receive event notifications.</p>"
+            </div>) : (webhooks.map((webhook) => (<div key={webhook.id} className="p-4 border border-zinc-800 rounded-lg">"
+                <div className="flex items-center justify-between">
+                  <div>"
+                    <h3 className="font-medium">{webhook.name}</h3>"
+                    <div className="flex items-center text-sm text-zinc-400 mt-1">"
+                      <Globe size={14} className="mr-1"/>"
+                      <span className="max-w-md truncate">{webhook.url}</span>
+                    </div>
+                  </div>
+"
+                  <div className="flex items-center space-x-2">"
+                    <div className="flex items-center mr-2">"
+                      <Switch  checked={webhook.is_active} onCheckedChange = {
+
+  () => handleToggleStatus(webhook.id,
+  webhook.is_active)
+
+}/>
+                      <span className="ml-2 text-sm">
+=======
                 <Button variant="default" onClick={() => {
                 setShowTestDialog(null);
                 setShowTestResult(false);
@@ -300,3 +295,4 @@ export default function Page() {
       </AlertDialog>
     </Card>)}
 '"
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

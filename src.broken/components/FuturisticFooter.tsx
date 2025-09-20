@@ -1,5 +1,4 @@
 <<<<<<< HEAD
-import { <<<<<<< HEAD import { motion  } from 'framer-motion';
 export default function Page() {
 ,"
         { name: "Micro SAAS Solutions", href: "/micro-saas" },"
@@ -10,7 +9,6 @@ export default function Page() {
         { name: "DevOps & Automation", href: "/it-services/devops" },"
         { name: "Data Management", href: "/it-services/data" }
 =======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       ]
     },;
     {
@@ -288,3 +286,4 @@ export default function Page() {
     </footer>;
   )};
 '"
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

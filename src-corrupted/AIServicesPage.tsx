@@ -1,4 +1,1 @@
     </div>,
-  );
-};
-export default AIServicesPage;

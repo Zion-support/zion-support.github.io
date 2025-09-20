@@ -1,4 +1,4 @@
-import { <<<<<<< HEAD import { motion, AnimatePresence  } from 'framer-motion';
+<<<<<<< HEAD
 
 export default function Page() {
       // Apply large text
@@ -66,10 +66,13 @@ export default function Page() {
           
           (focusableElements[prevIndex] as HTMLElement)?.focus();
           break;
+      }
+    };
+
+    document.addEventListener('focusin', handleFocusChange);
 =======
             currentIndex <= 0 ? focusableElements.length-1 : currentIndex - 1;          (focusableElements[prevIndex] as HTMLElement)?.focus();
           break;'
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
         case 'Home':
           event.preventDefault();
           (focusableElements[0] as HTMLElement)?.focus();
@@ -100,16 +103,9 @@ export default function Page() {
 
         target.style.outline = '';
         target.style.outlineOffset = '';
-<<<<<<< HEAD
-      }
-    };
-
-    document.addEventListener('focusin', handleFocusChange);
-=======
       }    };
 '
     document.addEventListener('focusin', handleFocusChange);'
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     document.addEventListener('focusout', handleFocusOut);
 
     return () => {
@@ -452,3 +448,4 @@ export default function Page() {
 
 export default EnhancedAccessibilityEnhancer;
 '"`
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

@@ -1,9 +1,8 @@
-export const logErrorToProduction = (message, error) => {
-
 <<<<<<< HEAD
 // Simple production logger utility
 =======
->>>>>>> main
+export const logErrorToProduction = (message, error) => {
+
   // In production, you might want to send this to a logging service
   // For now, we'll just log to console in development'
   if(process.env.NODE_ENV === 'development') {
@@ -36,3 +35,4 @@ export default {
   logErrorToProduction,
   logInfoToProduction,
   logWarningToProduction};
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

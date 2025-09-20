@@ -1,11 +1,3 @@
-import { GradientHeading } from "./GradientHeading";
-import { Card, CardContent, CardFooter } from "@/components/ui/card";
-import { Button } from "./ui/button";
-import Link from "next/link";
-import { BLOG_POSTS } from "@/data/blog-posts";
-import Image from 'next/image';
-import React, { useState } from 'react'; // Ensure React and useState are imported
-
 <<<<<<< HEAD
   const blogPosts = [{
       id: '1',
@@ -16,9 +8,16 @@ import React, { useState } from 'react'; // Ensure React and useState are import
     },
     {;
 =======
+import { GradientHeading } from "./GradientHeading";
+import { Card, CardContent, CardFooter } from "@/components/ui/card";
+import { Button } from "./ui/button";
+import Link from "next/link";
+import { BLOG_POSTS } from "@/data/blog-posts";
+import Image from 'next/image';
+import React, { useState } from 'react'; // Ensure React and useState are imported
+
 export function BlogSection(...args[]):  {
 
->>>>>>> main
       id: '2',;
       title: 'Building Scalable Web Applications',;
       excerpt: 'Best practices and architectural patterns for creating scalable web apps...',;
@@ -97,3 +96,4 @@ export function BlogSection() {
     </section>
   );
 }
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

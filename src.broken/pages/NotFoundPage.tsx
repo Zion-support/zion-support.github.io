@@ -1,5 +1,3 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
 <<<<<<< HEAD
 
 export default function NotFoundPage() {
@@ -23,6 +21,8 @@ export default function NotFoundPage() {
             Get Started
           </Link>
 =======
+import React from 'react';
+import { Link } from 'react-router-dom';
 import {
   Home,
   Search,
@@ -233,13 +233,9 @@ export function NotFoundPage() {
               <span>24/7 Support</span>
             </div>
           </div>
->>>>>>> 555b9ffae2e68b00750b91675d62a559987674d9
         </div>
       </div>
     </div>
   );
-<<<<<<< HEAD
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1
 }
-=======
-}
->>>>>>> 555b9ffae2e68b00750b91675d62a559987674d9

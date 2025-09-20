@@ -1,48 +1,42 @@
-import React, { Component, ReactNode } from 'react';
+import React, { Component, ErrorInfo, ReactNode } from 'react';
 
-interface ErrorBoundaryState {
-  hasError: boolean;
-  error?: Error;
-}
-
-interface ErrorBoundaryProps {
+interface Props {
   children: ReactNode;
   fallback?: ReactNode;
 }
 
-class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
-  constructor(props: ErrorBoundaryProps) {
+interface State {
+  hasError: boolean;
+  error?: Error;
+}
+
+class ErrorBoundary extends Component<Props, State> {
+  constructor(props: Props) {
     super(props);
     this.state = { hasError: false };
   }
 
-  static getDerivedStateFromError(error: Error): ErrorBoundaryState {
+  static getDerivedStateFromError(error: Error): State {
     return { hasError: true, error };
   }
 
-  componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     console.error('ErrorBoundary caught an error:', error, errorInfo);
   }
 
   render() {
     if (this.state.hasError) {
       return this.props.fallback || (
-        <div className="error-boundary">
-          <div className="error-content">
-            <h2>Oops! Something went wrong</h2>
-            <p>We&apos;re sorry, but something unexpected happened. Please try refreshing the page.</p>
-            <button 
+        <div className="min-h-screen bg-gray-900 flex items-center justify-center">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-red-400 mb-4">Something went wrong</h1>
+            <p className="text-gray-300 mb-8">We're sorry, but something unexpected happened.</p>
+            <button
               onClick={() => window.location.reload()}
-              className="retry-button"
+              className="bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-lg transition-colors duration-300"
             >
-              Refresh Page
+              Reload Page
             </button>
-            {process.env.NODE_ENV === 'development' && this.state.error && (
-              <details className="error-details">
-                <summary>Error Details (Development)</summary>
-                <pre>{this.state.error.stack}</pre>
-              </details>
-            )}
           </div>
         </div>
       );

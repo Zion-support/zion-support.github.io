@@ -1,4 +1,4 @@
-import { <<<<<<< HEAD import { motion, AnimatePresence  } from 'framer-motion';
+<<<<<<< HEAD
 export default function Page() {
 ;
   performance: {
@@ -49,14 +49,16 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
       function gtag(...args: any[]) {
 
         window.dataLayer.push(args);
-<<<<<<< HEAD
       }
       gtag('js', new Date());
       gtag('config', trackingId, {
+
+        trackEvent('performance_metrics', {
+
+      trackEvent('session_end', {
 =======
       }'
       gtag('js', new Date());'      gtag('config', trackingId, {
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
         page_title: document.title,
         page_location: window.location.href,
@@ -129,7 +131,6 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
 =======
       setUserInteractions(prev => prev + 1);'      trackEvent('user_interaction', {
 '
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
         interaction_type: 'click',
         page_path: currentPage,
         timestamp: Date.now()})};
@@ -181,12 +182,7 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
   useEffect(() => {
     if(!enabled) return;
 
-<<<<<<< HEAD
-
-        trackEvent('performance_metrics', {
-=======
 '        trackEvent('performance_metrics', {
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
           load_time: loadTime,
           fcp: fcp,
@@ -205,12 +201,7 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
   useEffect(() => {
     if(!enabled) return;
 
-<<<<<<< HEAD
-
-      trackEvent('session_end', {
-=======
 '      trackEvent('session_end', {
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
         session_duration: sessionDuration,
         pages_viewed: 1, // Simplified
@@ -505,3 +496,4 @@ export const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
     </>) };
 export default EnhancedAnalytics;
 '"`
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

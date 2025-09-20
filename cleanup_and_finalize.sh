@@ -10,17 +10,6 @@ cleanup_conflicts() {
     echo "🔍 Checking for any remaining merge conflicts..."
     
     # Find files with conflict markers
-    conflict_files=$(find . -type f \( -name "*.tsx" -o -name "*.ts" -o -name "*.jsx" -o -name "*.js" -o -name "*.json" -o -name "*.md" -o -name "*.html" \) -exec grep -l "<<<<<<< HEAD\|=======\|>>>>>>> " {} \; 2>/dev/null || true)
-    
-    if [ -n "$conflict_files" ]; then
-        echo "⚠️  Found files with conflict markers, cleaning up..."
-        echo "$conflict_files"
-        
-        # Remove conflict markers from files
-        echo "$conflict_files" | while read file; do
-            if [ -f "$file" ]; then
-                echo "🧹 Cleaning conflicts in: $file"
-                sed -i '/^<<<<<<< HEAD$/d; /^=======$/d; /^>>>>>>> .*/d' "$file" 2>/dev/null || true
             fi
         done
         

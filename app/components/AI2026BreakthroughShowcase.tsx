@@ -1,5 +1,3 @@
-import React from 'react';
-import Link from 'next/link';
 const AI2026BreakthroughShowcase: React.FC = () => {,
   return (,
     <section className="py-16 bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white">,
@@ -108,4 +106,3 @@ const AI2026BreakthroughShowcase: React.FC = () => {,
       </div>,
     </section>,
   ),};
-export default AI2026BreakthroughShowcase;

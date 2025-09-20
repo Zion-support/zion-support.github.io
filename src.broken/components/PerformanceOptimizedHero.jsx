@@ -1,4 +1,3 @@
-import React, { memo, useEffect, useState } from 'react';
 <<<<<<< HEAD
 export default PerformanceOptimizedHero;
 
@@ -7,12 +6,12 @@ const HeroStats = memo(({ stats }) => (<div className="grid grid - cols - 1 md:g
         <div className="relative mb-4">
           <div className="text-5xl mb-2 group - hover:scale - 110 transition - transform duration -300" role="img" aria-label={stat.label}>
 =======
+import React, { memo, useEffect, useState } from 'react';
 import { Link  } from 'react-router-dom';
 export default function Page() {
 } role="region" aria-label={`${stat.label} statistics`}>"
         <div className="relative mb-4">"
           <div className="text-5xl mb-2 group-hover:scale-110 transition-transform duration-300" role="img" aria-label={stat.label}>
->>>>>>> main
             {stat.icon}
           </div>`
           <div className={`absolute inset-0 bg-gradient-to-r ${stat.color} rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300`}></div>
@@ -108,3 +107,4 @@ const PerformanceOptimizedHero = memo(() => {
 PerformanceOptimizedHero.displayName = 'PerformanceOptimizedHero';
 export default PerformanceOptimizedHero;
 }'"`
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

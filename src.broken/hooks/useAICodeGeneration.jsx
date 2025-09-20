@@ -1,3 +1,73 @@
+<<<<<<< HEAD
+                quality: options.quality
+            // // // // // // // // // console.error('Failed to generate code:', error);
+            trackEvent('ai_code_generation', 'generation_failed', 'error', undefined, {
+            // // // // // // // // console.error('Failed to generate code:', error);
+            trackEvent('ai_code_generation',generation_failed',error', undefined, {
+
+            // // console.error('Failed to generate code:', error);
+            trackEvent('ai_code_generation', 'generation_failed', 'error', null, {
+
+            // console.error('Failed to generate code:', error);
+            trackEvent('ai_code_generation',generation_failed',error', null, {
+
+                performance: analysis.performance
+            // // // // // // // // // console.error('Failed to analyze code:', error);
+            trackEvent('ai_code_analysis', 'analysis_failed', 'error', undefined, {
+            // // // // // // // // console.error('Failed to analyze code:', error);
+            trackEvent('ai_code_analysis',analysis_failed',error', undefined, {
+
+            // // console.error('Failed to analyze code:', error);
+            trackEvent('ai_code_analysis', 'analysis_failed', 'error', null, {
+
+            // console.error('Failed to analyze code:', error);
+            trackEvent('ai_code_analysis',analysis_failed',error', null, {
+
+                    optimizedCode = optimizeForAccessibility(code);
+            // // // // // // // // // console.error('Failed to optimize code:', error);
+            trackEvent('ai_code_generation', 'optimization_failed', 'error', undefined, {
+            // // console.error('Failed to optimize code:', error);
+            trackEvent('ai_code_generation', 'optimization_failed', 'error', null, {
+
+            // console.error('Failed to optimize code:', error);
+            trackEvent('ai_code_generation',optimization_failed',error', null, {
+
+            // // // // // // // // // console.error('Failed to generate tests:', error);
+            trackEvent('ai_code_generation', 'test_generation_failed', 'error', undefined, {
+
+            // // // // // // // // console.error('Failed to generate tests:', error);
+            trackEvent('ai_code_generation',test_generation_failed',error', undefined, {
+
+            // // console.error('Failed to generate tests:', error);
+            trackEvent('ai_code_generation', 'test_generation_failed', 'error', null, {
+
+            // console.error('Failed to generate tests:', error);
+            trackEvent('ai_code_generation',test_generation_failed',error', null, {
+
+            // // // // // // // // // console.error('Failed to generate documentation:', error);
+            trackEvent('ai_code_generation', 'doc_generation_failed', 'error', undefined, {
+
+            // // // // // // // // console.error('Failed to generate documentation:', error);
+            trackEvent('ai_code_generation',doc_generation_failed',error', undefined, {
+
+            // // console.error('Failed to generate documentation:', error);
+            trackEvent('ai_code_generation', 'doc_generation_failed', 'error', null, {
+
+            // console.error('Failed to generate documentation:', error);
+            trackEvent('ai_code_generation',doc_generation_failed',error', null, {
+
+  // // // // // // // // // console.log(\`Server running on port \${PORT}\`);
+});`;
+
+// // // // // // // // // console.log("Generated code placeholder");
+// // // // // // // // // console.log("Prompt:", "${prompt}");
+// // // // // // // // // console.log("Language:", "${options.language}");`;
+    };
+// // console.log("Generated code placeholder");
+// // console.log("Prompt:", "${prompt}");
+// // console.log("Language:", "${options.language}");`};
+    // Helper functions for code analysis
+=======
 import { useState, useCallback, useRef, useEffect } from 'react';
 
 export default function Page() {
@@ -26,21 +96,9 @@ export default function Page() {
                 framework: options.framework,
                 style: options.style,
                 target: options.target,
-<<<<<<< HEAD
-                quality: options.quality
-            // // // // // // // // // console.error('Failed to generate code:', error);
-            trackEvent('ai_code_generation', 'generation_failed', 'error', undefined, {
-=======
                 quality: options.quality'
-<<<<<<< HEAD
-            // // // // // // // // console.error('Failed to generate code:', error);
-            trackEvent('ai_code_generation',generation_failed',error', undefined, {
-
-=======
             // // // // // // // // console.error('Failed to generate code:', error);'            trackEvent('ai_code_generation', 'generation_failed', 'error', undefined, {
 '
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
->>>>>>> main
                 error: error instanceof Error ? error.message : 'Unknown error';
             });
 
@@ -50,21 +108,9 @@ export default function Page() {
 
             })}
         catch(error) {
-<<<<<<< HEAD
-            // // console.error('Failed to generate code:', error);
-            trackEvent('ai_code_generation', 'generation_failed', 'error', null, {
-=======
-<<<<<<< HEAD
-
-            // console.error('Failed to generate code:', error);
-            trackEvent('ai_code_generation',generation_failed',error', null, {
-
-=======
 '
             // console.error('Failed to generate code:', error);'            trackEvent('ai_code_generation', 'generation_failed', 'error', null, {
 '
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
->>>>>>> main
                 error: error instanceof Error ? error.message : 'Unknown error'
             })}
         finally {
@@ -98,21 +144,9 @@ export default function Page() {
                 complexity: analysis.complexity,
                 maintainability: analysis.maintainability,
                 security: analysis.security,
-<<<<<<< HEAD
-                performance: analysis.performance
-            // // // // // // // // // console.error('Failed to analyze code:', error);
-            trackEvent('ai_code_analysis', 'analysis_failed', 'error', undefined, {
-=======
                 performance: analysis.performance'
-<<<<<<< HEAD
-            // // // // // // // // console.error('Failed to analyze code:', error);
-            trackEvent('ai_code_analysis',analysis_failed',error', undefined, {
-
-=======
             // // // // // // // // console.error('Failed to analyze code:', error);'            trackEvent('ai_code_analysis', 'analysis_failed', 'error', undefined, {
 '
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
->>>>>>> main
                 error: error instanceof Error ? error.message : 'Unknown error';
             });
 
@@ -122,21 +156,9 @@ export default function Page() {
 
             })}
         catch(error) {
-<<<<<<< HEAD
-            // // console.error('Failed to analyze code:', error);
-            trackEvent('ai_code_analysis', 'analysis_failed', 'error', null, {
-=======
-<<<<<<< HEAD
-
-            // console.error('Failed to analyze code:', error);
-            trackEvent('ai_code_analysis',analysis_failed',error', null, {
-
-=======
 '
             // console.error('Failed to analyze code:', error);'            trackEvent('ai_code_analysis', 'analysis_failed', 'error', null, {
 '
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
->>>>>>> main
                 error: error instanceof Error ? error.message : 'Unknown error'
             })}
         finally {
@@ -172,12 +194,6 @@ export default function Page() {
                     optimizedCode = optimizeForMaintainability(code);
                     break;
                 case 'accessibility':
-<<<<<<< HEAD
-                    optimizedCode = optimizeForAccessibility(code);
-<<<<<<< HEAD
-            // // // // // // // // // console.error('Failed to optimize code:', error);
-            trackEvent('ai_code_generation', 'optimization_failed', 'error', undefined, {
-=======
             // // // // // // // // console.error('Failed to optimize code:', error);
             trackEvent('ai_code_generation',optimization_failed',error', undefined, {
 
@@ -185,8 +201,6 @@ export default function Page() {
                     optimizedCode = optimizeForAccessibility(code);'
             // // // // // // // // console.error('Failed to optimize code:', error);'            trackEvent('ai_code_generation', 'optimization_failed', 'error', undefined, {
 '
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
->>>>>>> main
                 error: error instanceof Error ? error.message : 'Unknown error'
             });
             return code;
@@ -195,21 +209,9 @@ export default function Page() {
             trackEvent('ai_code_generation',code_optimized', focus, optimizedCode.length);
             return optimizedCode}
         catch(error) {
-<<<<<<< HEAD
-            // // console.error('Failed to optimize code:', error);
-            trackEvent('ai_code_generation', 'optimization_failed', 'error', null, {
-=======
-<<<<<<< HEAD
-
-            // console.error('Failed to optimize code:', error);
-            trackEvent('ai_code_generation',optimization_failed',error', null, {
-
-=======
 '
             // console.error('Failed to optimize code:', error);'            trackEvent('ai_code_generation', 'optimization_failed', 'error', null, {
 '
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
->>>>>>> main
                 error: error instanceof Error ? error.message : 'Unknown error'
             });
             return code}
@@ -222,21 +224,9 @@ export default function Page() {
             await new Promise(resolve => setTimeout(resolve, 2000));
             let testCode = '';
             if(language === 'typescript' || language === 'javascript') {
-<<<<<<< HEAD
-            // // // // // // // // // console.error('Failed to generate tests:', error);
-            trackEvent('ai_code_generation', 'test_generation_failed', 'error', undefined, {
-=======
-<<<<<<< HEAD
-
-            // // // // // // // // console.error('Failed to generate tests:', error);
-            trackEvent('ai_code_generation',test_generation_failed',error', undefined, {
-
-=======
 '
             // // // // // // // // console.error('Failed to generate tests:', error);'            trackEvent('ai_code_generation', 'test_generation_failed', 'error', undefined, {
 '
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
->>>>>>> main
                 error: error instanceof Error ? error.message : 'Unknown error'
             });
             return '// Failed to generate tests';
@@ -251,21 +241,9 @@ export default function Page() {
             trackEvent('ai_code_generation',tests_generated', language, testCode.length);
             return testCode}
         catch(error) {
-<<<<<<< HEAD
-            // // console.error('Failed to generate tests:', error);
-            trackEvent('ai_code_generation', 'test_generation_failed', 'error', null, {
-=======
-<<<<<<< HEAD
-
-            // console.error('Failed to generate tests:', error);
-            trackEvent('ai_code_generation',test_generation_failed',error', null, {
-
-=======
 '
             // console.error('Failed to generate tests:', error);'            trackEvent('ai_code_generation', 'test_generation_failed', 'error', null, {
 '
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
->>>>>>> main
                 error: error instanceof Error ? error.message : 'Unknown error'
             });
             return '// Failed to generate tests'}
@@ -278,21 +256,9 @@ export default function Page() {
             await new Promise(resolve => setTimeout(resolve, 1500));
             let docs = '';
             if(language === 'typescript' || language === 'javascript') {
-<<<<<<< HEAD
-            // // // // // // // // // console.error('Failed to generate documentation:', error);
-            trackEvent('ai_code_generation', 'doc_generation_failed', 'error', undefined, {
-=======
-<<<<<<< HEAD
-
-            // // // // // // // // console.error('Failed to generate documentation:', error);
-            trackEvent('ai_code_generation',doc_generation_failed',error', undefined, {
-
-=======
 '
             // // // // // // // // console.error('Failed to generate documentation:', error);'            trackEvent('ai_code_generation', 'doc_generation_failed', 'error', undefined, {
 '
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
->>>>>>> main
                 error: error instanceof Error ? error.message : 'Unknown error'
             });
             return '// Failed to generate documentation';
@@ -307,21 +273,9 @@ export default function Page() {
             trackEvent('ai_code_generation',docs_generated', language, docs.length);
             return docs}
         catch(error) {
-<<<<<<< HEAD
-            // // console.error('Failed to generate documentation:', error);
-            trackEvent('ai_code_generation', 'doc_generation_failed', 'error', null, {
-=======
-<<<<<<< HEAD
-
-            // console.error('Failed to generate documentation:', error);
-            trackEvent('ai_code_generation',doc_generation_failed',error', null, {
-
-=======
 '
             // console.error('Failed to generate documentation:', error);'            trackEvent('ai_code_generation', 'doc_generation_failed', 'error', null, {
 '
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
->>>>>>> main
                 error: error instanceof Error ? error.message : 'Unknown error'
             });
             return '// Failed to generate documentation'}
@@ -423,13 +377,8 @@ app.get('/', (req, res) => {
 // TODO: Implement additional routes based on prompt
 
 app.listen(PORT, () => {
-<<<<<<< HEAD
-  // // // // // // // // // console.log(\`Server running on port \${PORT}\`);
-});`;
-=======
 `
   // // // // // // // // console.log(\`Server running on port \${PORT}\`);`});`;
->>>>>>> main
     };
     const generatePythonCode = (prompt, _options) => {
 `
@@ -472,17 +421,6 @@ if __name__ == "__main__":`
 
 // TODO: Implement code based on prompt requirements
 // This is a placeholder implementation
-<<<<<<< HEAD
-
-// // // // // // // // // console.log("Generated code placeholder");
-// // // // // // // // // console.log("Prompt:", "${prompt}");
-// // // // // // // // // console.log("Language:", "${options.language}");`;
-    };
-// // console.log("Generated code placeholder");
-// // console.log("Prompt:", "${prompt}");
-// // console.log("Language:", "${options.language}");`};
-    // Helper functions for code analysis
-=======
 "
 // // // // // // // // console.log("Generated code placeholder");"
 // // // // // // // // console.log("Prompt:", "${prompt}");"`
@@ -491,7 +429,6 @@ if __name__ == "__main__":`
 // console.log("Generated code placeholder");"
 // console.log("Prompt:", "${prompt}");"`
 // console.log("Language:", "${options.language}");`};    // Helper functions for code analysis
->>>>>>> main
     const cyclomaticComplexity = (code.match(/if|else|for|while|switch|case|catch|&&|\|\||\?/g) || []).length + 1;
         return Math.min(10, Math.max(1, Math.floor(cyclomaticComplexity / 5)));
     };
@@ -722,3 +659,4 @@ export default with;
 export default with;
 export default with;
 '"`
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

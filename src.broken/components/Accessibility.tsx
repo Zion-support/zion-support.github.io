@@ -14,8 +14,31 @@ function Accessibility () {
   Eye,
   Volume2,
   Keyboard,
+        {isOpen && (<motion.div
+            initial = {
+  { opacity: 0,
+  x: -400
+
+}}
+            animate = {
+  { opacity: 1,
+  x: 0
+
+}}
+            exit = {
+  { opacity: 0,
+  x: -400
+
+}}
+            transition = {
+  { duration: 0.3,
+  ease: "easeOut"
+
+}}
+            className="fixed left - 4 bottom - 20 z - 50 w-80 bg-slate - 900 border border-cyan - 400 / 20 rounded-lg shadow-2xl backdrop - blur -xl"
+
+            <div  className="p -6">
 =======
-import { Accessibility as AccessibilityIcon, Type, Eye, Volume2, Keyboard, >>>>>>> main X, Plus, Minus, Contrast, Sun, Moon, Settings  } from 'lucide-react';
 
 export function Accessibility() {
   const [isOpen, setIsOpen] = useState(false);
@@ -98,32 +121,6 @@ export function Accessibility() {
 
       {/* Accessibility Panel */}
       <AnimatePresence>
-<<<<<<< HEAD
-        {isOpen && (<motion.div
-            initial = {
-  { opacity: 0,
-  x: -400
-
-}}
-            animate = {
-  { opacity: 1,
-  x: 0
-
-}}
-            exit = {
-  { opacity: 0,
-  x: -400
-
-}}
-            transition = {
-  { duration: 0.3,
-  ease: "easeOut"
-
-}}
-            className="fixed left - 4 bottom - 20 z - 50 w-80 bg-slate - 900 border border-cyan - 400 / 20 rounded-lg shadow-2xl backdrop - blur -xl"
-
-            <div  className="p -6">
-=======
         {isOpen && (
           <motion.div
             initial={{ opacity: 0, x: -400 }}
@@ -133,7 +130,6 @@ export function Accessibility() {
             className="fixed left-4 bottom-20 z-50 w-80 bg-slate-900 border border-cyan-400/20 rounded-lg shadow-2xl backdrop-blur-xl"
           >
             <div className="p-6">
->>>>>>> main
               {/* Header */}
               <div className="flex items-center justify-between mb-6">
                 <h2 className="text-lg font-semibold text-white flex items-center gap-2">
@@ -300,3 +296,4 @@ export function Accessibility() {
       </AnimatePresence>
     </>
   )}
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

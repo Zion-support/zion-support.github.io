@@ -1,25 +1,3 @@
-
-import React from 'react';
-import { completeSitemap, dynamicPaths } from '@/config/sitemap';
-import Link from 'next/link';
-import { ChevronRight } from 'lucide-react'
-import { SEO } from './SEO';
-
-        { name: 'White Papers', url: '/white-papers' },;
->>>>>>> main
-        { name: 'Webinars', url: '/webinars' },;
-        { name: 'Documentation', url: '/docs' },;
-        { name: 'API Reference', url: '/api' },;
-      ]};
-=======
-        { name: 'Case Studies', url: '/case-studies' },;'
-        { name: 'White Papers', url: '/white-papers' },;'
-        { name: 'Webinars', url: '/webinars' },;'
-        { name: 'Documentation', url: '/docs' },;'        { name: 'API Reference', url: '/api' },;
-      ]};
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-  ];
-
 <<<<<<< HEAD
   return (<div className="min - h-screen bg-slate - 900 text-white py-16">
       <SEO
@@ -172,7 +150,6 @@ import { SEO } from './SEO';
             <div key={sectionIndex} className="bg-slate-800/50 rounded-lg p-6 border border-slate-700">"
               <h2 className="text-xl font-semibold mb-4 text-cyan-400">
                 {section.title}
-<<<<<<< HEAD
               </h2>
               <ul className="space - y-2">
                 {section.links.map((link, linkIndex) => (<li key={linkIndex}>
@@ -180,6 +157,26 @@ import { SEO } from './SEO';
                       href={link.url}
                       className="text-zinc - 300 hover:text-cyan - 400 transition - colors duration - 200 block py-1"
 =======
+
+import React from 'react';
+import { completeSitemap, dynamicPaths } from '@/config/sitemap';
+import Link from 'next/link';
+import { ChevronRight } from 'lucide-react'
+import { SEO } from './SEO';
+
+        { name: 'White Papers', url: '/white-papers' },;
+        { name: 'Webinars', url: '/webinars' },;
+        { name: 'Documentation', url: '/docs' },;
+        { name: 'API Reference', url: '/api' },;
+      ]};
+=======
+        { name: 'Case Studies', url: '/case-studies' },;'
+        { name: 'White Papers', url: '/white-papers' },;'
+        { name: 'Webinars', url: '/webinars' },;'
+        { name: 'Documentation', url: '/docs' },;'        { name: 'API Reference', url: '/api' },;
+      ]};
+  ];
+
               </h2>"
               <ul className="space-y-2">
                 {section.links.map((link, linkIndex) => (
@@ -187,7 +184,6 @@ import { SEO } from './SEO';
                     <a 
                       href={link.url}"
                       className="text-zinc-300 hover:text-cyan-400 transition-colors duration-200 block py-1"
->>>>>>> main
                     >
                       {link.name}
                     </a>
@@ -208,3 +204,4 @@ import { SEO } from './SEO';
       </div>;
     </div>;) }
 '"
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

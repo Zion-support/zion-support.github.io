@@ -1,5 +1,3 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
 <<<<<<< HEAD
 
 export default function ComprehensiveSitemap() {
@@ -22,7 +20,10 @@ export default function ComprehensiveSitemap() {
           >
             Get Started
           </Link>
+}
 =======
+import React from 'react';
+import { Link } from 'react-router-dom';
 import {
   Home,
   Rocket,
@@ -365,16 +366,12 @@ export function ComprehensiveSitemap() {
               </Link>
             </div>
           </div>
->>>>>>> 555b9ffae2e68b00750b91675d62a559987674d9
         </div>
       </div>
     </div>
   );
-<<<<<<< HEAD
-}
-=======
 }
 
 export default ComprehensiveSitemap;
 
->>>>>>> 555b9ffae2e68b00750b91675d62a559987674d9
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1
