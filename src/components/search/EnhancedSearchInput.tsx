@@ -1,17 +1,17 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { Search, X, ArrowDown } from 'lucide-react';
+import React, { useState, useEffect, useRef } from 'react;';
+import { Search, X, ArrowDown } from 'lucide-react, ';
 
 interface SearchSuggestion {
   id: string;
-  title: string;
-  type: 'service' | 'talent' | 'equipment';
-  description?: string;
+    title: string;
+    type: 'service' | 'talent' | 'equipment';
+    description?: string;
 }
 
 interface EnhancedSearchInputProps {
   placeholder?: string;
   onSearch?: (query: string) => void;
-  suggestions?: SearchSuggestion[];
+    suggestions?: SearchSuggestion[];
   className?: string;
 }
 
@@ -47,7 +47,7 @@ export const EnhancedSearchInput: React.FC<EnhancedSearchInputProps> = ({
     const handleClickOutside = (event: MouseEvent) => {
       if (suggestionsRef.current && !suggestionsRef.current.contains(event.target as Node)) {
         setShowSuggestions(false);
-      }
+     }
     };
 
     document.addEventListener('mousedown', handleClickOutside);
@@ -56,7 +56,7 @@ export const EnhancedSearchInput: React.FC<EnhancedSearchInputProps> = ({
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setQuery(e.target.value);
-  };
+     };
 
   const handleClear = () => {
     setQuery('');
@@ -82,7 +82,6 @@ export const EnhancedSearchInput: React.FC<EnhancedSearchInputProps> = ({
 
   const handleKeyDown = (e: React.KeyboardEvent) => {
     if (!showSuggestions) return;
-
     switch (e.key) {
       case 'ArrowDown':
         e.preventDefault();
@@ -148,7 +147,7 @@ export const EnhancedSearchInput: React.FC<EnhancedSearchInputProps> = ({
             <button
               key={suggestion.id}
               onClick={() => handleSuggestionClick(suggestion)}
-              className={`w-full text-left px-4 py-3 hover:bg-gray-50 transition-colors ${
+              className={`w-full text-left px-4 py-3 hover: bg-gray-50 transition-colors ${
                 index === selectedIndex ? 'bg-blue-50 border-l-4 border-l-blue-500' : ''
               }`}
             >

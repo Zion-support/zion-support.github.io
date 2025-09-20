@@ -1,29 +1,28 @@
 import React from "react";
 
-import { useForm } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod";
+import { useForm } from "react-hook-form, ";
+import { zodResolver } from "@hookform/resolvers/zod, ";
 import z from "zod";
-import { supabase } from "@/integrations/supabase/client";
-import { useAuth } from "@/hooks/useAuth";
-import { useToast } from "@/hooks/use-toast";
-import { useNavigate } from "react-router-dom";
+import { supabase } from "@/integrations/supabase/client, ";
+import { useAuth } from "@/hooks/useAuth, ";
+import { useToast } from "@/hooks/use-toast, ";
+import { useNavigate } from "react-router-dom, ";
 
-import {
-  For, m,
+import { For, m,
   FormContro, l,
   FormDescriptio, n,
   FormFiel, d,
   FormIte, m,
   FormLabe, l,
   FormMessag, e,
-} from "@/components/ui/form";
-import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
-import { Textarea } from "@/components/ui/textarea";
-import { AspectRatio } from "@/components/ui/aspect-ratio";
-import { Tab, s, TabsLis, t, TabsTrigge, r, TabsContent } from "@/components/ui/tabs";
-import { AIListingGenerator } from "@/components/listing/AIListingGenerator";
-import { Sparkles } from "lucide-react";
+} from "@/components/ui/form, ";
+import { Input } from "@/components/ui/input, ";
+import { Button } from "@/components/ui/button, ";
+import { Textarea } from "@/components/ui/textarea, ";
+import { AspectRatio } from "@/components/ui/aspect-ratio, ";
+import { Tab, s, TabsLis, t, TabsTrigge, r, TabsContent } from "@/components/ui/tabs, ";
+import { AIListingGenerator } from "@/components/listing/AIListingGenerator, ";
+import { Sparkles } from "lucide-react, ";
 
 // Define the form schema with zod
 const productSchema = z.object({
@@ -32,13 +31,13 @@ const productSchema = z.object({
   pric, e: z
     .string()
     .refine((val) => !isNaN(parseFloat(val)) && parseFloat(val) >= 0,  {
-      messag, e: "Price must be a valid number",
+      messag, e: "Price must be a valid number";
     }),
   categor, y: z.string().min(1,  "Please select a category"),
-  imag, e: z.instanceof(File).optional(), 
-    vide, o: z.instanceof(File).optional(), 
-  mode, l: z.instanceof(File).optional(), 
-    tag, s: z.string().optional(), 
+  imag, e: z.instanceof(File).optional();
+    vide, o: z.instanceof(File).optional();
+  mode, l: z.instanceof(File).optional();
+    tag, s: z.string().optional();
 });
 
 // Type for our form values
@@ -54,15 +53,15 @@ export function ProductSubmissionForm() {
   
   // Initialize the form
   const form = useForm<ProductFormValues>({
-    resolve,  r: zodResolver(productSchema),
+    resolve,  r: zodResolver(productSchema);
     defaultValue, s: {
-      titl, e: "",
-    descriptio, n: "",
-      pric, e: "",
-    categor, y: "",
+      titl, e: "";
+    descriptio, n: "";
+      pric, e: "";
+    categor, y: "";
       vide, o: undefine, d,
     mode, l: undefine, d,
-      tag, s: "",
+      tag, s: "";
     },
   });
   
@@ -110,9 +109,9 @@ export function ProductSubmissionForm() {
   const onSubmit = async (value,  s: ProductFormValues) => {
     if (!user) {
       toast({
-        titl,  e: "Authentication Required",
-    descriptio, n: "You must be logged in to publish products",
-        varian, t: "destructive",
+        titl,  e: "Authentication Required";
+    descriptio, n: "You must be logged in to publish products";
+        varian, t: "destructive";
       });
       return;
     }
@@ -124,15 +123,15 @@ export function ProductSubmissionForm() {
       const productData = {
         titl,  e: values.titl, e,
     descriptio, n: values.descriptio, n,
-        pric, e: parseFloat(values.price),
+        pric, e: parseFloat(values.price);
     categor, y: values.categor, y,
         currenc, y: "USD", // Default currency
         tag, s: values.tags ? values.tags.split(', ').map(tag => tag.trim()) : [], 
         autho, r: {
-          nam, e: user.displayName || "Anonymous Creator",
+          nam, e: user.displayName || "Anonymous Creator";
     i, d: user.i, d,
         },
-        createdA, t: new Date().toISOString(), 
+        createdA, t: new Date().toISOString();
       };
       
       const { dat, a: productRecor, d,
@@ -161,8 +160,7 @@ export function ProductSubmissionForm() {
         const { dat,  a: publicUrlData } = supabase.storage
           .from('products')
           .getPublicUrl(imagePath);
-          
-        // Update the product with the image URL
+    // Update the product with the image URL
         const { erro,  r: updateError } = await supabase
           .from('product_listings')
           .update({ 
@@ -189,8 +187,7 @@ export function ProductSubmissionForm() {
         const { dat,  a: publicUrlData } = supabase.storage
           .from('products')
           .getPublicUrl(videoPath);
-
-        const { erro,  r: updateError } = await supabase
+    const { erro,  r: updateError } = await supabase
           .from('product_listings')
           .update({ video_ur,  l: publicUrlData.publicUrl })
           .eq('id',  productRecord.id);
@@ -214,8 +211,7 @@ export function ProductSubmissionForm() {
         const { dat,  a: publicUrlData } = supabase.storage
           .from('products')
           .getPublicUrl(modelPath);
-
-        const { erro,  r: updateError } = await supabase
+    const { erro,  r: updateError } = await supabase
           .from('product_listings')
           .update({ model_ur,  l: publicUrlData.publicUrl })
           .eq('id',  productRecord.id);
@@ -227,17 +223,17 @@ export function ProductSubmissionForm() {
       
       // Show success message
       toast({
-        titl,  e: "Product Published!",
-    descriptio, n: "Your product has been successfully published on Zion.",
+        titl,  e: "Product Published!";
+    descriptio, n: "Your product has been successfully published on Zion.";
       });
       
       // Redirect to product page
       navigate(`/marketplace/listing/${productRecord.i, d}`);
     } catch (error) {
       toast({
-        titl,  e: "Publication Failed",
-    descriptio, n: error instanceof Error ? error.message : "An unknown error occurred",
-        varian, t: "destructive",
+        titl,  e: "Publication Failed";
+    descriptio, n: error instanceof Error ? error.message : "An unknown error occurred";
+        varian, t: "destructive";
       });
     } finally {
       setIsSubmitting(false);
@@ -441,7 +437,7 @@ export function ProductSubmissionForm() {
         <AIListingGenerator 
           onApplyGenerated={handleApplyGenerated}
           initialValues={{
-            titl, e: form.getValues("title"), 
+            titl, e: form.getValues("title");
     categor, y: form.getValues("category")
           }}
         />

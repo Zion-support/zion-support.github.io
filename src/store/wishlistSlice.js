@@ -1,6 +1,6 @@
-import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
+import { createSlice, createAsyncThunk } from '@reduxjs/toolkit, ';
 const initialState = {
-    items: [],
+    items: [];
 };
 export const getApiUrl = () => {
     var _a, _b;
@@ -14,7 +14,7 @@ export const loadWishlistFromDB = createAsyncThunk('wishlist/loadFromDB', async 
     return (await res.json());
 });
 const wishlistSlice = createSlice({
-    name: 'wishlist',
+    name: 'wishlist';
     initialState,
     reducers: {
         addToWishlist(state, action) {

@@ -1,36 +1,34 @@
 import React from "react";
 
-import { useState } from "react";
-import { Draggable } from "@hello-pangea/dnd";
-import { formatDistanceToNow } from "date-fns";
-import { Link } from "react-router-dom";
-import { JobApplication } from "@/types/jobs";
-import { Card, CardContent } from "@/components/ui/card";
-import { Avatar } from "@/components/ui/avatar";
-import { Button } from "@/components/ui/button";
-import { Textarea } from "@/components/ui/textarea";
-import { 
-  MessageSquare, 
+import { useState } from "react, ";
+import { Draggable } from "@hello-pangea/dnd, ";
+import { formatDistanceToNow } from "date-fns, ";
+import { Link } from "react-router-dom, ";
+import { JobApplication } from "@/types/jobs, ";
+import { Card, CardContent } from "@/components/ui/card, ";
+import { Avatar } from "@/components/ui/avatar, ";
+import { Button } from "@/components/ui/button, ";
+import { Textarea } from "@/components/ui/textarea, ";
+import { MessageSquare, 
   User, 
   FileText, 
   MoreVertical, 
   Calendar,
   AlertTriangle,
   BriefcaseIcon
-} from "lucide-react";
-import {
-  DropdownMenu,
+} from "lucide-react, ";
+import { DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
-import { ScoreBadge } from "@/components/jobs/applications/ScoreBadge";
-import { toast } from "@/hooks/use-toast";
-import { HireConfirmationModal } from "./HireConfirmationModal";
+} from "@/components/ui/dropdown-menu, ";
+import { ScoreBadge } from "@/components/jobs/applications/ScoreBadge, ";
+import { toast } from "@/hooks/use-toast, ";
+import { HireConfirmationModal } from "./HireConfirmationModal, ";
 
 interface CandidateCardProps {
   application: JobApplication;
-  index: number;
+    index: number;
 }
 
 export function CandidateCard({ application, index }: CandidateCardProps) {
@@ -47,7 +45,7 @@ export function CandidateCard({ application, index }: CandidateCardProps) {
     // Here you would save the notes to the database
     // For now, we'll just show a toast
     toast({
-      title: "Notes saved",
+      title: "Notes saved";
       description: "Your notes have been saved"
     });
     setShowNotes(false);
@@ -56,10 +54,10 @@ export function CandidateCard({ application, index }: CandidateCardProps) {
   const handleHireConfirmed = () => {
     // Hiring process completed via the modal
     toast({
-      title: "Hiring process initiated",
+      title: "Hiring process initiated";
       description: "Offer has been sent to the talent."
     });
-  };
+     };
   
   return (
     <>

@@ -1,14 +1,12 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { 
-  MICRO_SAAS_SERVICES, 
+import React from 'react;';
+import { Link } from 'react-router-dom, ';
+import { Button } from '@/components/ui/button, ';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card, ';
+import { Badge } from '@/components/ui/badge, ';
+import { MICRO_SAAS_SERVICES, 
   SERVICE_CATEGORIES 
-} from '@/data/microSaasServices';
-import { 
-  Sparkles, 
+} from '@/data/microSaasServices, ';
+import { Sparkles, 
   Zap, 
   TrendingUp, 
   ArrowRight, 
@@ -16,7 +14,7 @@ import {
   CheckCircle,
   Globe,
   MessageCircle
-} from 'lucide-react';
+} from 'lucide-react, ';
 
 export function NewServicesShowcase() {
   // Get featured services from each category
@@ -147,7 +145,7 @@ export function NewServicesShowcase() {
           {SERVICE_CATEGORIES.map((category, index) => (
             <div 
               key={category.name}
-              className="text-center p-6 rounded-lg bg-zion-blue-dark/30 border border-zion-blue-light/20 hover:border-zion-cyan/30 transition-all duration-300 hover:scale-105"
+              className="text-center p-6 rounded-lg bg-zion-blue-dark/30 border border-zion-blue-light/20 hover: border-zion-cyan/30 transition-all duration-300 hover:scale-105"
               style={{ animationDelay: `${index * 300}ms` }}
             >
               <div className="text-4xl mb-4">{category.icon}</div>

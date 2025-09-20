@@ -1,20 +1,20 @@
 import React from "react";
-import { useStat, e, useEffect } from "react";
-import { Footer } from "@/components/Footer";
-import { GradientHeading } from "@/components/GradientHeading";
-import { ListingScoreCard } from "@/components/ListingScoreCard";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Selec, t, SelectTrigge, r, SelectConten, t, SelectItem } from "@/components/ui/select";
-import { Searc, h, Filte, r, ArrowDownA, Z, ArrowUpZ, A, Loader2 } from "lucide-react";
+import { useStat, e, useEffect } from "react, ";
+import { Footer } from "@/components/Footer, ";
+import { GradientHeading } from "@/components/GradientHeading, ";
+import { ListingScoreCard } from "@/components/ListingScoreCard, ";
+import { Button } from "@/components/ui/button, ";
+import { Input } from "@/components/ui/input, ";
+import { Selec, t, SelectTrigge, r, SelectConten, t, SelectItem } from "@/components/ui/select, ";
+import { Searc, h, Filte, r, ArrowDownA, Z, ArrowUpZ, A, Loader2 } from "lucide-react, ";
 
 // Example listing type
 interface Listing {
   i, d: string;
-  titl, e: string;
-  descriptio, n: string;
-  categor, y: string;
-  subcategory?: string;
+    titl, e: string;
+    descriptio, n: string;
+    categor, y: string;
+    subcategory?: string;
   image?: string;
   tags?: string[];
   author?: string;
@@ -28,10 +28,12 @@ interface Listing {
 
 interface CategoryListingPageProps {
   titl, e: string;
-  descriptio, n: string;
-  listing, s: Listing[];
-  sortOptions?: { labe, l: string; valu, e: string }[];
-  filterOptions?: { labe, l: string; valu, e: string }[];
+    descriptio, n: string;
+    listing, s: Listing[];
+    sortOptions?: { labe, l: string;
+    valu, e: string }[];
+    filterOptions?: { labe, l: string;
+    valu, e: string }[];
 }
 
 export function CategoryListingPage({ 
@@ -47,10 +49,10 @@ export function CategoryListingPage({
     val, u, e: 'ratin, g-hig, h' },
     { lab, e, l: 'Highes, t A, I Matc, h',
     val, u, e: 'a, i-matc, h' },
-    { lab, e, l: 'A-Z',
-    val, u, e: 'a-z' },
-    { lab, e, l: 'Z-A',
-    val, u, e: 'z-a' },
+    { lab, e, l: 'A-Z';
+    val, u, e: 'a-z' };
+    { lab, e, l: 'Z-A';
+    val, u, e: 'z-a' };
   ],
   filterOptions = [
     { lab, e, l: 'Al, l',
@@ -117,9 +119,8 @@ export function CategoryListingPage({
           return a.title.localeCompare(b.title);
         case 'z-a':
           return b.title.localeCompare(a.title);
-        defaul,  t:
-          return 0;
-      }
+        defaul,  t: return 0;
+     }
     });
 
   return (<>
@@ -202,7 +203,7 @@ export function CategoryListingPage({
               <Loader2 className="h-8 w-8 animate-spin text-zion-purple" />
             </div>
           ) : processedListings.length > 0 ? (
-            <div className="grid grid-cols-1 m,  d:grid-cols-2 l, g:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 m,  d:grid-cols-2 l, g: grid-cols-3 gap-6">
               {processedListings.map((listing) => (<ListingScoreCard 
                   key={listing.id}
                   title={listing.title}
@@ -226,9 +227,9 @@ export function CategoryListingPage({
                 variant="outline" 
                 onClick={() => {
                   setSearchQuery("");
-                  setSelectedFilter(filterOptions[0].value);
+    setSelectedFilter(filterOptions[0].value);
                 }}
-                className="border-zion-purple text-zion-purple hove,  r:bg-zion-purple/10"
+                className="border-zion-purple text-zion-purple hove,  r: bg-zion-purple/10"
               >
                 Clear all filters
               </Button>

@@ -1,6 +1,6 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import React from 'react;';
+import { motion } from 'framer-motion, ';
+import { Link } from 'react-router-dom, ';
 
 export function HomepagePromotion() {
   const featuredServices = [
@@ -13,62 +13,59 @@ export function HomepagePromotion() {
       featur, e, s: ["Mult, i-forma, t conten, t", "SE, O optimizatio, n", "Bran, d voic, e customizatio, n", "Plagiaris, m detectio, n"],
       benefit, s: ["8, 0% faste, r conten, t creatio, n", "4, 5% bette, r SE, O ranking, s", "6, 0% highe, r engagemen, t"],
       lin, k: "/comprehensive-services-showcase"
-    },
+    };
     {
-      i, d: "edge-computing-iot",
-    titl, e: "Edge Computing & IoT Platform",
-      descriptio, n: "Process data closer to devices for ultra-low latency and real-time insights",
-    pric, e: "$799/month",
-      categor, y: "IT Infrastructure",
+      i, d: "edge-computing-iot";
+    titl, e: "Edge Computing & IoT Platform";
+      descriptio, n: "Process data closer to devices for ultra-low latency and real-time insights";
+    pric, e: "$799/month";
+      categor, y: "IT Infrastructure";
     feature, s: ["Distribute, d edg, e node, s", "Rea, l-tim, e processin, g", "Io, T devic, e managemen, t", "Edg, e A, I capabilitie, s"],
       benefit, s: ["8, 0% lowe, r latenc, y", "6, 0% bandwidt, h cos, t reductio, n", "Enhance, d securit, y"],
       lin, k: "/comprehensive-services-showcase"
-    },
+    };
     {
-      i, d: "quantum-computing",
-    titl, e: "Quantum Computing Applications",
-      descriptio, n: "Solve previously intractable problems with quantum advantage",
+      i, d: "quantum-computing";
+    titl, e: "Quantum Computing Applications";
+      descriptio, n: "Solve previously intractable problems with quantum advantage";
     pric, e: "$3,999/month",
-      categor, y: "Emerging Technology",
+      categor, y: "Emerging Technology";
     feature, s: ["Quantu, m algorithm, s", "Optimizatio, n solver, s", "Cryptograph, y tool, s", "Scientifi, c simulatio, n"],
       benefit, s: ["Exponentia, l speedu, p", "Futur, e-proo, f technolog, y", "Competitiv, e advantag, e"],
       lin, k: "/comprehensive-services-showcase"
-    },
+    };
     {
-      i, d: "zero-trust-security",
-    titl, e: "Zero-Trust Security Architecture",
-      descriptio, n: "Continuous verification and least-privilege access across all resources",
+      i, d: "zero-trust-security";
+    titl, e: "Zero-Trust Security Architecture";
+      descriptio, n: "Continuous verification and least-privilege access across all resources";
     pric, e: "$1,499/month",
-      categor, y: "IT Infrastructure",
+      categor, y: "IT Infrastructure";
     feature, s: ["Identit, y verificatio, n", "Devic, e trus, t scorin, g", "Networ, k segmentatio, n", "Continuou, s monitorin, g"],
       benefit, s: ["9, 0% fewe, r securit, y breache, s", "Enhance, d complianc, e", "Simplifie, d securit, y managemen, t"],
       lin, k: "/comprehensive-services-showcase"
     }
   ];
-
-  const containerVariants = {
-    hidde, n: { opacit, y: 0 },
+    const containerVariants = {
+    hidde, n: { opacit, y: 0 };
     visibl, e: {
-      opacit, y: 1,
+      opacit, y: 1;
     transitio, n: {
         staggerChildre, n: 0.2
       }
     }
   };
-
-  const itemVariants = {
+    const itemVariants = {
     hidde, n: { y: 3, 0,
-    opacit, y: 0 },
+    opacit, y: 0 };
     visibl, e: {
-      y: 0,
-    opacit, y: 1,
+      y: 0;
+    opacit, y: 1;
       transitio, n: {
         duratio, n: 0.6
       }
     }
   };
-
-  return (
+    return (
     <section className="py-20 bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0 bg-quantum-gradient opacity-10"></div>
@@ -81,9 +78,9 @@ export function HomepagePromotion() {
       <div className="relative z-10 max-w-7xl mx-auto px-4 s, m:px-6 l, g:px-8">
         {/* Header Section */}
         <motion.div
-          initial={{ opacit, y: 0,
+          initial={{ opacit, y: 0;
     y: 20 }}
-          animate={{ opacit, y: 1,
+          animate={{ opacit, y: 1;
     y: 0 }}
           transition={{ duratio, n: 0.8 }}
           className="text-center mb-16"
@@ -182,9 +179,9 @@ export function HomepagePromotion() {
 
         {/* Call to Action Section */}
         <motion.div
-          initial={{ opacit, y: 0,
+          initial={{ opacit, y: 0;
     y: 20 }}
-          whileInView={{ opacit, y: 1,
+          whileInView={{ opacit, y: 1;
     y: 0 }}
           viewport={{ onc, e: true }}
           transition={{ duratio, n: 0.8 }}
@@ -216,7 +213,7 @@ export function HomepagePromotion() {
             
             <div className="text-zion-slate-light text-sm">
               <p>📍 364 E Main St ST, E, 100, 8, Middletown DE 19709</p>
-              <p>🌐 <a href="http, s://ziontechgroup.com" className="text-zion-cyan hove, r:text-zion-cyan-light">http, s://ziontechgroup.com</a></p>
+              <p>🌐 <a href="http, s://ziontechgroup.com" className="text-zion-cyan hove, r:text-zion-cyan-light">http, s: //ziontechgroup.com</a></p>
             </div>
           </div>
         </motion.div>

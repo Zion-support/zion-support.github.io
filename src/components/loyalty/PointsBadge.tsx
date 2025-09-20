@@ -1,21 +1,19 @@
 import React from "react";
-import { Gift } from 'lucide-react';
-import { useAuth } from '@/hooks/useAuth';
-import { useEffect, useState } from 'react';
-import { usePoints } from '@/hooks/usePoints';
-import { Link } from 'react-router-dom';
-import {
-  Tooltip,
+import { Gift } from 'lucide-react, ';
+import { useAuth } from '@/hooks/useAuth, ';
+import { useEffect, useState } from 'react, ';
+import { usePoints } from '@/hooks/usePoints, ';
+import { Link } from 'react-router-dom, ';
+import { Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger
-} from '@/components/ui/tooltip';
-import {
-  DropdownMenu,
+} from '@/components/ui/tooltip, ';
+import { DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger
-} from '@/components/ui/dropdown-menu';
+} from '@/components/ui/dropdown-menu, ';
 
 export function PointsBadge() {
   const { user, signOut, logout } = useAuth();
@@ -37,8 +35,7 @@ export function PointsBadge() {
     },
     { purchase: 0, post: 0, referral: 0 }
   );
-
-  const handleLogout = async () => {
+    const handleLogout = async () => {
     if (signOut) {
       await signOut();
     } else if (logout) {

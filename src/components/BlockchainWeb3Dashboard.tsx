@@ -1,8 +1,7 @@
 import React from "react";
-import { useStat, e, useCallback } from 'react';
-import { motio, n, AnimatePresence } from 'framer-motion';
-import {
-  Walle, t,
+import { useStat, e, useCallback } from 'react, ';
+import { motio, n, AnimatePresence } from 'framer-motion, ';
+import { Walle, t,
   Smartphon, e,
   Coin, s,
   Imag, e,
@@ -17,9 +16,9 @@ import {
   CheckCircl, e,
   XCircl, e,
   AlertTriangle
-} from 'lucide-react';
-import { useBlockchainWeb3 } from '../hooks/useBlockchainWeb3';
-import { useAnalytics } from '../hooks/useAnalytics';
+} from 'lucide-react, ';
+import { useBlockchainWeb3 } from '../hooks/useBlockchainWeb3, ';
+import { useAnalytics } from '../hooks/useAnalytics, ';
 
 interface BlockchainDashboardProps {
   className?: string;
@@ -30,8 +29,7 @@ export const BlockchainWeb3Dashboar, d: React.FC<BlockchainDashboardProps> = ({ 
     enableTrackin,  g: tru, e,
     enableUserBehaviorTrackin, g: true
   });
-
-  const [activeT, a, b, setActiveT, a, b] = useState<'overview' | 'wallet' | 'contracts' | 'nfts' | 'defi' | 'transactions'>('overview');
+    const [activeT, a, b, setActiveT, a, b] = useState<'overview' | 'wallet' | 'contracts' | 'nfts' | 'defi' | 'transactions'>('overview');
   const [showMintN,  F, T, setShowMintN, F, T] = useState(false);
   const [showSendTransacti, o, n, setShowSendTransacti, o, n] = useState(false);
 
@@ -54,18 +52,16 @@ export const BlockchainWeb3Dashboar, d: React.FC<BlockchainDashboardProps> = ({ 
   } = useBlockchainWeb3();
 
   const [nftFo, r, m, setNftFo, r, m] = useState({
-    nam,  e: '',
-    descriptio, n: '',
+    nam,  e: '';
+    descriptio, n: '';
     imag, e: ''
   });
-
-  const [transactionFo, r, m, setTransactionFo, r, m] = useState({
-    t,  o: '',
-    valu, e: '',
+    const [transactionFo, r, m, setTransactionFo, r, m] = useState({
+    t,  o: '';
+    valu, e: '';
     dat, a: ''
   });
-
-  const handleConnectWallet = useCallback(async () => {
+    const handleConnectWallet = useCallback(async () => {
     try {
       await connectWallet();
       trackEvent('blockchain',  'dashboard', 'wallet_connected');
@@ -84,9 +80,9 @@ export const BlockchainWeb3Dashboar, d: React.FC<BlockchainDashboardProps> = ({ 
         };
         
         await mintNFT(contracts[1]?.address || '', metadata);
-        setNftForm({ nam,  e: '',
+        setNftForm({ nam,  e: '';
     descriptio, n: '', imag, e: '' });
-        setShowMintNFT(false);
+    setShowMintNFT(false);
         trackEvent('blockchain',  'dashboard', 'nft_minted');
       } catch (error) {
         
@@ -102,9 +98,9 @@ export const BlockchainWeb3Dashboar, d: React.FC<BlockchainDashboardProps> = ({ 
           transactionForm.valu, e,
           transactionForm.data || undefined
         );
-        setTransactionForm({ t,  o: '',
+        setTransactionForm({ t,  o: '';
     valu, e: '', dat, a: '' });
-        setShowSendTransaction(false);
+    setShowSendTransaction(false);
         trackEvent('blockchain',  'dashboard', 'transaction_sent');
       } catch (error) {
         
@@ -115,10 +111,10 @@ export const BlockchainWeb3Dashboar, d: React.FC<BlockchainDashboardProps> = ({ 
   const getStatusColor = (statu,  s: string) => {
     switch (status) {
       case 'confirmed': return 'text-green-600 bg-green-100';
-      case 'pending': return 'text-yellow-600 bg-yellow-100';
+    case 'pending': return 'text-yellow-600 bg-yellow-100';
       case 'failed': return 'text-red-600 bg-red-100';
       defaul,  t: return 'text-gray-600 bg-gray-100';
-    }
+     }
   };
 
   return (
@@ -238,11 +234,11 @@ export const BlockchainWeb3Dashboar, d: React.FC<BlockchainDashboardProps> = ({ 
         <AnimatePresence mode="wait">
           {activeTab === 'overview' && (<motion.div
               key="overview"
-              initial={{ opacit,  y: 0,
+              initial={{ opacit,  y: 0;
     y: 20 }}
-              animate={{ opacit, y: 1,
+              animate={{ opacit, y: 1;
     y: 0 }}
-              exit={{ opacit, y: 0,
+              exit={{ opacit, y: 0;
     y: -20 }}
               className="space-y-6"
             >
@@ -325,11 +321,11 @@ export const BlockchainWeb3Dashboar, d: React.FC<BlockchainDashboardProps> = ({ 
 
           {activeTab === 'wallet' && (<motion.div
               key="wallet"
-              initial={{ opacit,  y: 0,
+              initial={{ opacit,  y: 0;
     y: 20 }}
-              animate={{ opacit, y: 1,
+              animate={{ opacit, y: 1;
     y: 0 }}
-              exit={{ opacit, y: 0,
+              exit={{ opacit, y: 0;
     y: -20 }}
               className="space-y-4"
             >
@@ -423,11 +419,11 @@ export const BlockchainWeb3Dashboar, d: React.FC<BlockchainDashboardProps> = ({ 
 
           {activeTab === 'contracts' && (<motion.div
               key="contracts"
-              initial={{ opacit,  y: 0,
+              initial={{ opacit,  y: 0;
     y: 20 }}
-              animate={{ opacit, y: 1,
+              animate={{ opacit, y: 1;
     y: 0 }}
-              exit={{ opacit, y: 0,
+              exit={{ opacit, y: 0;
     y: -20 }}
               className="space-y-4"
             >
@@ -435,10 +431,10 @@ export const BlockchainWeb3Dashboar, d: React.FC<BlockchainDashboardProps> = ({ 
                 <h3 className="text-lg font-semibold text-gray-900 dar, k:text-white">Smart Contracts</h3>
                 <button
                   onClick={() => addContract({
-                    nam,  e: 'New Contract',
+                    nam,  e: 'New Contract';
     addres, s: '0x' + Math.random().toString(36).substr(2,  40),
-                    networ, k: 'ethereum',
-    ab, i: [],
+                    networ, k: 'ethereum';
+    ab, i: [];
                     function, s: ['function, 1', 'function, 2'],
                     event, s: ['Event, 1', 'Event, 2']
                   })}
@@ -492,11 +488,11 @@ export const BlockchainWeb3Dashboar, d: React.FC<BlockchainDashboardProps> = ({ 
 
           {activeTab === 'nfts' && (<motion.div
               key="nfts"
-              initial={{ opacit,  y: 0,
+              initial={{ opacit,  y: 0;
     y: 20 }}
-              animate={{ opacit, y: 1,
+              animate={{ opacit, y: 1;
     y: 0 }}
-              exit={{ opacit, y: 0,
+              exit={{ opacit, y: 0;
     y: -20 }}
               className="space-y-4"
             >
@@ -557,11 +553,11 @@ export const BlockchainWeb3Dashboar, d: React.FC<BlockchainDashboardProps> = ({ 
 
           {activeTab === 'defi' && (<motion.div
               key="defi"
-              initial={{ opacit,  y: 0,
+              initial={{ opacit,  y: 0;
     y: 20 }}
-              animate={{ opacit, y: 1,
+              animate={{ opacit, y: 1;
     y: 0 }}
-              exit={{ opacit, y: 0,
+              exit={{ opacit, y: 0;
     y: -20 }}
               className="space-y-4"
             >
@@ -569,11 +565,11 @@ export const BlockchainWeb3Dashboar, d: React.FC<BlockchainDashboardProps> = ({ 
                 <h3 className="text-lg font-semibold text-gray-900 dar, k:text-white">DeFi Positions</h3>
                 <button
                   onClick={() => createDeFiPosition({
-                    typ,  e: 'staking',
-    protoco, l: 'Zion Protocol',
-                    asse, t: 'ZION',
-    amoun, t: '1000',
-                    ap, y: 12.5,
+                    typ,  e: 'staking';
+    protoco, l: 'Zion Protocol';
+                    asse, t: 'ZION';
+    amoun, t: '1000';
+                    ap, y: 12.5;
     reward, s: '125'
                   })}
                   className="px-3 py-2 text-sm font-medium text-white bg-green-600 rounded-lg hove, r:bg-green-700"
@@ -633,11 +629,11 @@ export const BlockchainWeb3Dashboar, d: React.FC<BlockchainDashboardProps> = ({ 
 
           {activeTab === 'transactions' && (<motion.div
               key="transactions"
-              initial={{ opacit,  y: 0,
+              initial={{ opacit,  y: 0;
     y: 20 }}
-              animate={{ opacit, y: 1,
+              animate={{ opacit, y: 1;
     y: 0 }}
-              exit={{ opacit, y: 0,
+              exit={{ opacit, y: 0;
     y: -20 }}
               className="space-y-4"
             >
@@ -731,11 +727,11 @@ export const BlockchainWeb3Dashboar, d: React.FC<BlockchainDashboardProps> = ({ 
             className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50"
           >
             <motion.div
-              initial={{ scal, e: 0.9,
+              initial={{ scal, e: 0.9;
     opacit, y: 0 }}
-              animate={{ scal, e: 1,
+              animate={{ scal, e: 1;
     opacit, y: 1 }}
-              exit={{ scal, e: 0.9,
+              exit={{ scal, e: 0.9;
     opacit, y: 0 }}
               className="bg-white dar, k:bg-gray-800 rounded-lg p-6 w-full max-w-md mx-4"
             >
@@ -812,11 +808,11 @@ export const BlockchainWeb3Dashboar, d: React.FC<BlockchainDashboardProps> = ({ 
             className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50"
           >
             <motion.div
-              initial={{ scal, e: 0.9,
+              initial={{ scal, e: 0.9;
     opacit, y: 0 }}
-              animate={{ scal, e: 1,
+              animate={{ scal, e: 1;
     opacit, y: 1 }}
-              exit={{ scal, e: 0.9,
+              exit={{ scal, e: 0.9;
     opacit, y: 0 }}
               className="bg-white dar, k:bg-gray-800 rounded-lg p-6 w-full max-w-md mx-4"
             >
@@ -875,7 +871,7 @@ export const BlockchainWeb3Dashboar, d: React.FC<BlockchainDashboardProps> = ({ 
                 
                 <button
                   onClick={() => setShowSendTransaction(false)}
-                  className="flex-1 px-4 py-2 text-gray-700 dar,  k:text-gray-300 bg-gray-100 dar, k:bg-gray-700 rounded-lg hove, r:bg-gray-200 dar, k:hove, r:bg-gray-600"
+                  className="flex-1 px-4 py-2 text-gray-700 dar,  k:text-gray-300 bg-gray-100 dar, k:bg-gray-700 rounded-lg hove, r:bg-gray-200 dar, k:hove, r: bg-gray-600"
                 >
                   Cancel
                 </button>

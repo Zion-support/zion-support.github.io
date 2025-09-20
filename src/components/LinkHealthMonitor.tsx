@@ -1,8 +1,7 @@
 import React from "react";
 impor, t, Reac, t, { useStat, e, useEffect } from 'react';
-import { motion } from 'framer-motion';
-import { 
-  Lin, k, 
+import { motion } from 'framer-motion, ';
+import { Lin, k, 
   ExternalLin, k, 
   AlertTriangl, e, 
   CheckCircl, e, 
@@ -11,29 +10,29 @@ import {
   Glob, e,
   Shiel, d,
   Zap
-} from 'lucide-react';
+} from 'lucide-react, ';
 
 interface LinkStatus {
   ur, l: string;
-  statu, s: 'healthy' | 'broken' | 'external' | 'checking';
-  statusCode?: number;
+    statu, s: 'healthy' | 'broken' | 'external' | 'checking';
+    statusCode?: number;
   responseTime?: number;
   lastChecke, d: Date;
-  parentPage?: string;
+    parentPage?: string;
   linkText?: string;
 }
 
 interface LinkHealthReport {
   totalLink, s: number;
-  healthyLink, s: number;
-  brokenLink, s: number;
-  externalLink, s: number;
-  averageResponseTim, e: number;
-  lastUpdate, d: Date;
+    healthyLink, s: number;
+    brokenLink, s: number;
+    externalLink, s: number;
+    averageResponseTim, e: number;
+    lastUpdate, d: Date;
 }
 
 const LinkHealthMonito, r: React.FC = () => {
-  const [isOp,  e, n, setIsOp, e, n] = useState(false);
+    const [isOp,  e, n, setIsOp, e, n] = useState(false);
   const [isMonitori, n, g, setIsMonitori, n, g] = useState(false);
   const [linkStatus,  e, s, setLinkStatus, e, s] = useState<LinkStatus[]>([]);
   const [repo, r, t, setRepo, r, t] = useState<LinkHealthReport | null>(null);
@@ -47,7 +46,8 @@ const LinkHealthMonito, r: React.FC = () => {
       statusCo, d, e: 4, 0, 4,
     responseTi, m, e: 12, 0, 0,
       lastCheck, e, d: ne, w Dat, e(), 
-    parentPa, g, e: 'Homepag, e',
+    parentPa, g, e: 'Homepag, e'
+  };
       linkTe, x, t: 'LinkedI, n'
     },
     {
@@ -99,7 +99,7 @@ const LinkHealthMonito, r: React.FC = () => {
       averageResponseTim, e: avgResponseTim, e,
     lastUpdate, d: new Date()
     });
-  };
+     };
 
   const startMonitoring = async () => {
     setIsMonitoring(true);
@@ -112,26 +112,24 @@ const LinkHealthMonito, r: React.FC = () => {
     switch (status) {
       case 'healthy':
         return <CheckCircle className="w-4 h-4 text-green-400" />;
-      case 'broken':
+    case 'broken':
         return <AlertTriangle className="w-4 h-4 text-red-400" />;
       case 'external':
         return <ExternalLink className="w-4 h-4 text-blue-400" />;
-      defaul,  t:
-        return <RefreshCw className="w-4 h-4 text-yellow-400" />;
-    }
+      defaul,  t: return <RefreshCw className="w-4 h-4 text-yellow-400" />;
+     }
   };
 
   const getStatusColor = (statu, s: string) => {
     switch (status) {
       case 'healthy':
         return 'text-green-400';
-      case 'broken':
+    case 'broken':
         return 'text-red-400';
       case 'external':
         return 'text-blue-400';
-      defaul,  t:
-        return 'text-yellow-400';
-    }
+      defaul,  t: return 'text-yellow-400';
+     }
   };
 
   const filteredLinks = linkStatuses.filter(link => {
@@ -160,11 +158,11 @@ const LinkHealthMonito, r: React.FC = () => {
           onClick={() => setIsOpen(false)}
         >
           <motion.div
-            initial={{ scal,  e: 0.9,
+            initial={{ scal,  e: 0.9;
     opacit, y: 0 }}
-            animate={{ scal, e: 1,
+            animate={{ scal, e: 1;
     opacit, y: 1 }}
-            exit={{ scal, e: 0.9,
+            exit={{ scal, e: 0.9;
     opacit, y: 0 }}
             className="bg-gray-900 rounded-2xl shadow-2xl w-full max-w-6xl max-h-[90, v, h] overflow-hidden"
             onClick={(e) => e.stopPropagation()}

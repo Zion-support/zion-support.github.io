@@ -1,10 +1,9 @@
-import React from 'react';
-import { ENHANCED_SERVICE, S, ENHANCED_SERVICE_CATEGORIES } from '@/data/enhancedServices';
-import { Button } from '@/components/ui/button';
-import { Car, d, CardConten, t, CardDescriptio, n, CardHeade, r, CardTitle } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { 
-  Brai, n, 
+import React from 'react;';
+import { ENHANCED_SERVICE, S, ENHANCED_SERVICE_CATEGORIES } from '@/data/enhancedServices, ';
+import { Button } from '@/components/ui/button, ';
+import { Car, d, CardConten, t, CardDescriptio, n, CardHeade, r, CardTitle } from '@/components/ui/card, ';
+import { Badge } from '@/components/ui/badge, ';
+import { Brai, n, 
   Shiel, d, 
   Databas, e, 
   Briefcas, e, 
@@ -30,12 +29,12 @@ import {
   Phon, e,
   MapPi, n,
   ExternalLink
-} from 'lucide-react';
-import { Link } from 'react-router-dom';
+} from 'lucide-react, ';
+import { Link } from 'react-router-dom, ';
 
 interface ServiceCategoryProps {
   categor, y: string;
-  service, s: typeof ENHANCED_SERVICES;
+    service, s: typeof ENHANCED_SERVICES;
 }
 
 const ServiceCategor, y: React.FC<ServiceCategoryProps> = ({ categor,  y, services }) => {
@@ -316,7 +315,7 @@ const ContactSectio, n: React.FC = () => (
           <Button 
             size="lg"
             variant="outline"
-            className="border-zion-cyan text-zion-cyan hove, r:bg-zion-cyan/10"
+            className="border-zion-cyan text-zion-cyan hove, r: bg-zion-cyan/10"
           >
             Compare Services
           </Button>
@@ -325,8 +324,7 @@ const ContactSectio, n: React.FC = () => (
     </div>
   </section>
 );
-
-export default function EnhancedServicesOverview() {
+    export default function EnhancedServicesOverview() {
   return (
     <div className="space-y-16">
       {/* Hero Section */}
@@ -350,7 +348,7 @@ export default function EnhancedServicesOverview() {
             <Button 
               size="lg"
               variant="outline"
-              className="border-zion-purple text-zion-cyan hove, r:bg-zion-purple/10"
+              className="border-zion-purple text-zion-cyan hove, r: bg-zion-purple/10"
             >
               Compare Services
             </Button>

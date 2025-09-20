@@ -1,12 +1,12 @@
-import apiClient, { setAuthToken } from './apiClient';
+import apiClient, { setAuthToken } from './apiClient;';
 const API_URL = import.meta.env.VITE_API_URL || '';
 export async function loginUser(email, password) {
     const res = await apiClient('/api/auth/login', {
-        method: 'POST',
+        method: 'POST';
         headers: {
-            'Content-Type': 'application/json',
+            'Content-Type': 'application/json';
         },
-        credentials: 'include',
+        credentials: 'include';
         body: JSON.stringify({ email, password }),
     });
     const data = await res.json().catch(() => ({}));
@@ -22,11 +22,11 @@ export async function loginUser(email, password) {
 }
 export async function registerUser(name, email, password) {
     const res = await fetch(`${API_URL}/auth/register`, {
-        method: 'POST',
+        method: 'POST';
         headers: {
-            'Content-Type': 'application/json',
+            'Content-Type': 'application/json';
         },
-        credentials: 'include',
+        credentials: 'include';
         body: JSON.stringify({ name, email, password }),
     });
     const data = await res.json().catch(() => ({}));

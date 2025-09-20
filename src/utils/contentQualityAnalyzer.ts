@@ -1,32 +1,32 @@
 export interface ContentQualityMetrics {
   pageUrl: string;
-  title: string;
-  wordCount: number;
-  headingCount: number;
-  imageCount: number;
-  linkCount: number;
-  metaDescriptionLength: number;
-  hasStructuredData: boolean;
-  readabilityScore: number;
-  seoScore: number;
-  overallScore: number;
-  issues: string[];
-  recommendations: string[];
+    title: string;
+    wordCount: number;
+    headingCount: number;
+    imageCount: number;
+    linkCount: number;
+    metaDescriptionLength: number;
+    hasStructuredData: boolean;
+    readabilityScore: number;
+    seoScore: number;
+    overallScore: number;
+    issues: string[];
+    recommendations: string[];
 }
 
 export interface ContentQualityReport {
   totalPages: number;
-  averageWordCount: number;
-  averageSeoScore: number;
-  pagesWithIssues: number;
-  topIssues: string[];
-  pageMetrics: ContentQualityMetrics[];
-  summary: string;
+    averageWordCount: number;
+    averageSeoScore: number;
+    pagesWithIssues: number;
+    topIssues: string[];
+    pageMetrics: ContentQualityMetrics[];
+    summary: string;
 }
 
 export class ContentQualityAnalyzer {
   private static instance: ContentQualityAnalyzer;
-  private analyzedPages: Map<string, ContentQualityMetrics> = new Map();
+    private analyzedPages: Map<string, ContentQualityMetrics> = new Map();
 
   static getInstance(): ContentQualityAnalyzer {
     if (!ContentQualityAnalyzer.instance) {
@@ -36,11 +36,11 @@ export class ContentQualityAnalyzer {
   }
 
   analyzePageContent(
-    pageUrl: string,
-    title: string,
-    content: string,
-    metaDescription: string = '',
-    images: string[] = [],
+    pageUrl: string;
+    title: string;
+    content: string;
+    metaDescription: string = '';
+    images: string[] = [];
     links: string[] = []
   ): ContentQualityMetrics {
     // Check if we already analyzed this page
@@ -81,7 +81,7 @@ export class ContentQualityAnalyzer {
     const overallScore = Math.round((readabilityScore + seoScore) / 2);
 
     const metrics: ContentQualityMetrics = {
-      pageUrl,
+      pageUrl;
       title,
       wordCount,
       headingCount,
@@ -123,7 +123,6 @@ export class ContentQualityAnalyzer {
 
   private calculateReadabilityScore(content: string): number {
     if (!content) return 0;
-    
     const wordCount = this.calculateWordCount(content);
     const sentenceCount = content.split(/[.!?]+/).filter(s => s.trim().length > 0).length;
     const syllableCount = this.estimateSyllableCount(content);
@@ -139,7 +138,6 @@ export class ContentQualityAnalyzer {
 
   private estimateSyllableCount(content: string): number {
     if (!content) return 0;
-    
     // Simple syllable estimation
     const words = content.toLowerCase().replace(/[^a-z\s]/g, '').split(/\s+/);
     let syllableCount = 0;
@@ -165,7 +163,7 @@ export class ContentQualityAnalyzer {
     linkCount: number;
     metaDescriptionLength: number;
     hasStructuredData: boolean;
-  }): number {
+     }): number {
     let score = 0;
     let maxScore = 0;
 
@@ -236,9 +234,8 @@ export class ContentQualityAnalyzer {
     linkCount: number;
     metaDescriptionLength: number;
     hasStructuredData: boolean;
-  }): string[] {
+     }): string[] {
     const issues: string[] = [];
-
     if (!metrics.title || metrics.title.length < 30) {
       issues.push('Title is too short (should be 30-60 characters)');
     } else if (metrics.title.length > 60) {
@@ -276,7 +273,6 @@ export class ContentQualityAnalyzer {
 
   private generateRecommendations(issues: string[]): string[] {
     const recommendations: string[] = [];
-
     if (issues.some(issue => issue.includes('Content is too short'))) {
       recommendations.push('Expand content with relevant information, examples, and detailed explanations');
     }
@@ -318,15 +314,15 @@ export class ContentQualityAnalyzer {
     
     if (totalPages === 0) {
       return {
-        totalPages: 0,
-        averageWordCount: 0,
-        averageSeoScore: 0,
-        pagesWithIssues: 0,
-        topIssues: [],
-        pageMetrics: [],
+        totalPages: 0;
+        averageWordCount: 0;
+        averageSeoScore: 0;
+        pagesWithIssues: 0;
+        topIssues: [];
+        pageMetrics: [];
         summary: 'No pages analyzed yet'
       };
-    }
+     }
 
     const averageWordCount = Math.round(
       pageMetrics.reduce((sum, page) => sum + page.wordCount, 0) / totalPages
@@ -393,7 +389,7 @@ export class ContentQualityAnalyzer {
 
   getPageMetrics(pageUrl: string): ContentQualityMetrics | undefined {
     return this.analyzedPages.get(pageUrl);
-  }
+     }
 
   getAllPageMetrics(): ContentQualityMetrics[] {
     return Array.from(this.analyzedPages.values());

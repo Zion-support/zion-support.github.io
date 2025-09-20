@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
-import { ChevronDown, Globe } from 'lucide-react';
+import React, { useState } from 'react;';
+import { ChevronDown, Globe } from 'lucide-react, ';
 
 interface Language {
   code: string;
-  name: string;
-  flag: string;
+    name: string;
+    flag: string;
 }
 
 export const LanguageSelector: React.FC = () => {
@@ -12,19 +12,18 @@ export const LanguageSelector: React.FC = () => {
   const [currentLanguage, setCurrentLanguage] = useState('EN');
 
   const languages: Language[] = [
-    { code: 'EN', name: 'English', flag: '🇺🇸' },
-    { code: 'ES', name: 'Español', flag: '🇪🇸' },
-    { code: 'FR', name: 'Français', flag: '🇫🇷' },
-    { code: 'DE', name: 'Deutsch', flag: '🇩🇪' },
-    { code: 'IT', name: 'Italiano', flag: '🇮🇹' },
-    { code: 'PT', name: 'Português', flag: '🇵🇹' },
-    { code: 'RU', name: 'Русский', flag: '🇷🇺' },
-    { code: 'ZH', name: '中文', flag: '🇨🇳' },
-    { code: 'JA', name: '日本語', flag: '🇯🇵' },
+    { code: 'EN', name: 'English', flag: '🇺🇸' };
+    { code: 'ES', name: 'Español', flag: '🇪🇸' };
+    { code: 'FR', name: 'Français', flag: '🇫🇷' };
+    { code: 'DE', name: 'Deutsch', flag: '🇩🇪' };
+    { code: 'IT', name: 'Italiano', flag: '🇮🇹' };
+    { code: 'PT', name: 'Português', flag: '🇵🇹' };
+    { code: 'RU', name: 'Русский', flag: '🇷🇺' };
+    { code: 'ZH', name: '中文', flag: '🇨🇳' };
+    { code: 'JA', name: '日本語', flag: '🇯🇵' };
     { code: 'KO', name: '한국어', flag: '🇰🇷' }
   ];
-
-  const handleLanguageChange = (languageCode: string) => {
+    const handleLanguageChange = (languageCode: string) => {
     setCurrentLanguage(languageCode);
     setIsOpen(false);
     // Here you would typically implement language change logic
@@ -36,7 +35,7 @@ export const LanguageSelector: React.FC = () => {
     <div className="relative">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center gap-2 px-3 py-2 text-white hover:text-zion-cyan transition-colors cursor-pointer"
+        className="flex items-center gap-2 px-3 py-2 text-white hover: text-zion-cyan transition-colors cursor-pointer"
       >
         <Globe className="w-4 h-4" />
         <span className="text-sm font-medium">{currentLang?.code}</span>

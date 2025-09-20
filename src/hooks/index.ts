@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react;';
 export function useScrollToTop() {
   // Simple hook to scroll to top
   React.useEffect(() => {
@@ -9,7 +9,7 @@ export function useScrollToTop() {
 export function useAuth() {
   // Simple auth hook
   return {
-    user: null,
+    user: null;
     isAuthenticated: false
   };
 }

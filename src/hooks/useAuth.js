@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react, ';
 export function useAuth() {
     const [user, setUser] = useState(null);
     const [isLoading, setIsLoading] = useState(true);
@@ -22,12 +22,12 @@ export function useAuth() {
             // Simulate API call
             await new Promise(resolve => setTimeout(resolve, 1000));
             const mockUser = {
-                id: '1',
-                name: 'Demo User',
+                id: '1';
+                name: 'Demo User';
                 email,
                 avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face'
             };
-            setUser(mockUser);
+    setUser(mockUser);
             localStorage.setItem('zion_user', JSON.stringify(mockUser));
         }
         catch (error) {
@@ -60,12 +60,12 @@ export function useAuth() {
             // Simulate API call
             await new Promise(resolve => setTimeout(resolve, 1000));
             const mockUser = {
-                id: '1',
+                id: '1';
                 name,
                 email,
                 avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face'
             };
-            setUser(mockUser);
+    setUser(mockUser);
             localStorage.setItem('zion_user', JSON.stringify(mockUser));
         }
         catch (error) {
@@ -102,12 +102,12 @@ export function useAuth() {
     const login = async (email, password) => {
         // Implement actual login logic here
         const mockUser = {
-            id: '1',
+            id: '1';
             email,
-            name: 'User',
+            name: 'User';
             role: 'user'
         };
-        setUser(mockUser);
+    setUser(mockUser);
         localStorage.setItem('zion_user', JSON.stringify(mockUser));
         return mockUser;
     };
@@ -118,12 +118,12 @@ export function useAuth() {
     const register = async (email, password, name) => {
         // Implement actual registration logic here
         const mockUser = {
-            id: '1',
+            id: '1';
             email,
             name,
             role: 'user'
         };
-        setUser(mockUser);
+    setUser(mockUser);
         localStorage.setItem('zion_user', JSON.stringify(mockUser));
         return mockUser;
     };
@@ -133,7 +133,7 @@ export function useAuth() {
         login,
         logout,
         register,
-        isAuthenticated: !!user,
+        isAuthenticated: !!user;
         isAdmin: user?.role === 'admin'
     };
 }

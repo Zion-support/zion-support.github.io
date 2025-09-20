@@ -1,11 +1,11 @@
-import { jsx as _jsx, Fragment as _Fragment, jsxs as _jsxs } from "react/jsx-runtime";
-import { Route } from 'react-router-dom';
-import Blog from '@/pages/Blog';
-import BlogPost from '@/pages/BlogPost';
+import { jsx as _jsx, Fragment as _Fragment, jsxs as _jsxs } from "react/jsx-runtime, ";
+import { Route } from 'react-router-dom, ';
+import Blog from '@/pages/Blog;';
+import BlogPost from '@/pages/BlogPost;';
 export default function ContentRoutes() {
     return (_jsxs(_Fragment, { children: [_jsx(Route, { path: "blog", element: _jsx(Blog, {}) }), _jsx(Route, { path: "blog/:slug", element: _jsx(BlogPost, {}) })] }));
 }
-import { Route, Routes, Navigate } from "react-router-dom";
+import { Route, Routes, Navigate } from "react-router-dom, ";
 import Home from "@/pages/Home";
 import About from "@/pages/About";
 import Contact from "@/pages/Contact";
@@ -17,7 +17,7 @@ import Careers from "@/pages/Careers";
 import FAQ from "@/pages/FAQ";
 import Enterprise from "@/pages/Enterprise";
 import SearchPage from "@/pages/SearchPage";
-import { SitemapPage } from "@/components/SitemapPage";
+import { SitemapPage } from "@/components/SitemapPage, ";
 import Sitemap from "@/pages/Sitemap";
 import Terms from "@/pages/Terms";
 import Cookies from "@/pages/Cookies";

@@ -1,7 +1,6 @@
-import React, { useState, useEffect, useCallback } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Eye, 
+import React, { useState, useEffect, useCallback } from 'react;';
+import { motion, AnimatePresence } from 'framer-motion, ';
+import { Eye, 
   Volume2, 
   VolumeX, 
   Type, 
@@ -11,16 +10,16 @@ import {
   Settings,
   Accessibility,
   X
-} from 'lucide-react';
-import { Button } from './button';
+} from 'lucide-react, ';
+import { Button } from './button, ';
 
 interface AccessibilitySettings {
   highContrast: boolean;
-  largeText: boolean;
-  reducedMotion: boolean;
-  screenReader: boolean;
-  fontSize: number;
-  colorBlindMode: 'normal' | 'protanopia' | 'deuteranopia' | 'tritanopia';
+    largeText: boolean;
+    reducedMotion: boolean;
+    screenReader: boolean;
+    fontSize: number;
+    colorBlindMode: 'normal' | 'protanopia' | 'deuteranopia' | 'tritanopia';
 }
 
 interface AccessibilityProps {
@@ -36,15 +35,14 @@ export function AccessibilityPanel({
 }: AccessibilityProps) {
   const [isOpen, setIsOpen] = useState(false);
   const [settings, setSettings] = useState<AccessibilitySettings>({
-    highContrast: false,
-    largeText: false,
-    reducedMotion: false,
-    screenReader: false,
-    fontSize: 16,
+    highContrast: false;
+    largeText: false;
+    reducedMotion: false;
+    screenReader: false;
+    fontSize: 16;
     colorBlindMode: 'normal'
   });
-
-  // Apply accessibility settings to document
+    // Apply accessibility settings to document
   useEffect(() => {
     if (!enabled) return;
 
@@ -112,11 +110,11 @@ export function AccessibilityPanel({
   // Reset to defaults
   const resetSettings = useCallback(() => {
     const defaults: AccessibilitySettings = {
-      highContrast: false,
-      largeText: false,
-      reducedMotion: false,
-      screenReader: false,
-      fontSize: 16,
+      highContrast: false;
+      largeText: false;
+      reducedMotion: false;
+      screenReader: false;
+      fontSize: 16;
       colorBlindMode: 'normal'
     };
     saveSettings(defaults);
@@ -135,7 +133,7 @@ export function AccessibilityPanel({
   const announceToScreenReader = useCallback((message: string) => {
     if (settings.screenReader) {
       const announcement = document.createElement('div');
-      announcement.setAttribute('aria-live', 'polite');
+    announcement.setAttribute('aria-live', 'polite');
       announcement.setAttribute('aria-atomic', 'true');
       announcement.className = 'sr-only';
       announcement.textContent = message;
@@ -365,61 +363,61 @@ export function AccessibilityPanel({
         __html: `
           .sr-only {
             position: absolute;
-            width: 1px;
-            height: 1px;
-            padding: 0;
-            margin: -1px;
-            overflow: hidden;
-            clip: rect(0, 0, 0, 0);
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
             white-space: nowrap;
-            border: 0;
-          }
+    border: 0;
+     }
 
           .high-contrast {
             --zion-cyan: #00ffff;
-            --zion-blue: #0066ff;
-            --zion-purple: #9900ff;
-            --zion-blue-dark: #000033;
-            --zion-blue-light: #3399ff;
-            --zion-cyan-light: #33ffff;
-            --zion-purple-dark: #6600cc;
-            --zion-purple-light: #cc33ff;
-          }
+    --zion-blue: #0066ff;
+    --zion-purple: #9900ff;
+    --zion-blue-dark: #000033;
+    --zion-blue-light: #3399ff;
+    --zion-cyan-light: #33ffff;
+    --zion-purple-dark: #6600cc;
+    --zion-purple-light: #cc33ff;
+     }
 
           [data-color-blind="protanopia"] {
             filter: url('#protanopia-filter');
-          }
+     }
 
           [data-color-blind="deuteranopia"] {
             filter: url('#deuteranopia-filter');
-          }
+     }
 
           [data-color-blind="tritanopia"] {
             filter: url('#tritanopia-filter');
-          }
+     }
 
           :root {
             --font-size: 16px;
-            --reduced-motion: no-preference;
-          }
+    --reduced-motion: no-preference;
+     }
 
           * {
             font-size: var(--font-size);
-          }
+     }
 
           @media (prefers-reduced-motion: reduce) {
             * {
               animation-duration: 0.01ms !important;
-              animation-iteration-count: 1 !important;
-              transition-duration: 0.01ms !important;
-            }
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+     }
           }
 
           [style*="--reduced-motion: reduce"] * {
             animation-duration: 0.01ms !important;
-            animation-iteration-count: 1 !important;
-            transition-duration: 0.01ms !important;
-          }
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+     }
         `
       }} />
 

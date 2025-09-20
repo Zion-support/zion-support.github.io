@@ -1,4 +1,4 @@
-import { toast as hotToast } from 'react-hot-toast';
+import { toast as hotToast } from 'react-hot-toast, ';
 export const useToast = () => ({ toast });
 function toast(options) {
     const message = options.description || options.title || '';

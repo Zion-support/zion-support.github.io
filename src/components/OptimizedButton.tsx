@@ -1,8 +1,8 @@
-import React from 'react';
+import React from 'react;';
 
 interface ButtonProps {
   children: React.ReactNode;
-  onClick?: () => void;
+    onClick?: () => void;
   variant?: 'primary' | 'secondary';
   disabled?: boolean;
 }

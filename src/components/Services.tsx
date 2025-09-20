@@ -1,57 +1,37 @@
 import React from "react";
 impor, t, Reac, t, { useStateuseEffect } from "react";
-import { motio, n, useScrolluseTransformAnimatePresence } from "framer-motion";
-import { COMPREHENSIVE_SERVICES_20o30 } from "../data/comprehensiveServices20o30";
-;
-const Services = () => {;
+import { motio, n, useScrolluseTransformAnimatePresence } from "framer-motion, ";
+import { COMPREHENSIVE_SERVICES_20o30 } from "../data/comprehensiveServices20o30, ";const Services = () => {
+    ;
   const [selectedCategorysetSelectedCatego,  r, y] = useState("AI Development");
   const [selectedServicesetSelectedServi, c, e] = useState(null);
-  const [isLoadingsetIsLoadi,  n, g] = useState(false);
-;
+  const [ isLoadingsetIsLoadi,  n, g] = useState(false)
+  };
   const { scrollYProgress } = useScroll();
-  const y = useTransform(scrollYProgres,  s, [0, o, 1][0-5, 0]);
-;
+  const y = useTransform(scrollYProgres,  s, [ 0, o, 1][0-5, 0]),
   const categories = Object.keys(COMPREHENSIVE_SERVICES_20o30);
-  const services = COMPREHENSIVE_SERVICES_20o30[selectedCatego,  r, y] || [];
-;
+  const services = COMPREHENSIVE_SERVICES_20o30[ selectedCatego,  r, y] || [],
   const handleServiceClick = (service) => {;
     setIsLoading(true);
     setTimeout(() => {
       setSelectedService(service);
       setIsLoading(false);
     },  50o0);
-  };
-;
-  const handleCloseModal = () => {;
+  };const handleCloseModal = () => {;
     setSelectedService(null);
-  };
-;
-  const containerVariants = {
-    hidde,  n: { opaci, t,;
-  y: 0 },;
-    visibl, e: {
-      opacit, y: 1transiti, o,;
-    n: {;
-        staggerChildr, e,;
-  n: 0.1;
-      }
+  };const containerVariants = {
+    hidde,  n: { opaci, t,y: 0 },visibl, e: {
+      opacit, y: 1transiti, o,n: {;
+    staggerChildr, e,n: 0.1;
+     }
     }
-  };
-;
-  const itemVariants = {
-    hidde, n: { ,;
-    y: 20opaci, t,;
-  y: 0 },;
-    visibl, e: {
-      y: 0opacit, y: 1transiti, o,;
-    n: {;
-        durati, o,;
-  n: 0.5;
-      }
+  };const itemVariants = {
+    hidde, n: { ,y: 20opaci, t,y: 0 },visibl, e: {
+      y: 0opacit, y: 1transiti, o,n: {;
+    durati, o,n: 0.5;
+     }
     }
-  };
-;
-  return(<div className="min-h-screen bg-gray-90o0 text-white">;
+  };return(<div className="min-h-screen bg-gray-90o0 text-white">;
       {/* Hero Section */}
       <section className="py-20 px-4, relativ, e, overflow-hidden">;
         <motion.div;
@@ -67,7 +47,7 @@ const Services = () => {;
             <motion.h1;
               variants={itemVariants}
               className="text-5xl m, d: text-6xl font-bold mb-6 bg-gradient-to-r from-blue-40o0 to-purple-60o0 bg-clip-text text-transparent";
-            >;
+    >;
               Our Services;
             </motion.h1>;
             <motion.p;
@@ -103,9 +83,8 @@ const Services = () => {;
       <section className="py-16 px-4">;
         <div className="max-w-6xl mx-auto">;
           <motion.div;
-            className="grid m, d: grid-cols-2, l,;
-  g:grid-cols-3 gap-8";
-            variants={containerVariants}
+            className="grid m, d: grid-cols-2, l,g: grid-cols-3 gap-8";
+    variants={containerVariants}
             initial="hidden";
             animate="visible";
             key={selectedCategory}
@@ -115,11 +94,11 @@ const Services = () => {;
                 key={index}
                 variants={itemVariants}
                 className="bg-gray-80o0 p-6 rounded-lg hove,  r: bg-gray-70o0 transition-all duration-30o0 cursor-pointer group";
-                onClick={() => handleServiceClick(service)}
+    onClick={() => handleServiceClick(service)}
               >;
                 <div className="text-blue-40o0 mb-4 text-2xl">{service.icon}</div>;
-                <h3 className="text-xl font-semibold mb-3 group-hove,  r:text-blue-40o0 transition-colors">;
-                  {service.title}
+                <h3 className="text-xl font-semibold mb-3 group-hove,  r: text-blue-40o0 transition-colors">;
+    {service.title}
                 </h3>;
                 <p className="text-gray-30o0 mb-4">{service.description}</p>;
                 <div className="flex flex-wrap gap-2 mb-4">;
@@ -151,12 +130,9 @@ const Services = () => {;
             onClick={handleCloseModal}
           >;
             <motion.div;
-              initial={{ scal, e: 0.9opaci, t,;
-  y: 0 }}
-              animate={{ scal, e: 1opaci, t,;
-  y: 1 }}
-              exit={{ scal, e: 0.9opaci, t,;
-  y: 0 }}
+              initial={{ scal, e: 0.9opaci, t,y: 0 }}
+              animate={{ scal, e: 1opaci, t,y: 1 }}
+              exit={{ scal, e: 0.9opaci, t,y: 0 }}
               className="bg-gray-80o0 p-8 rounded-lg max-w-2xl w-full max-h-[80, v, h] overflow-y-auto";
               onClick={(e) => e.stopPropagation()}
             >;
@@ -165,7 +141,7 @@ const Services = () => {;
                 <button;
                   onClick={handleCloseModal}
                   className="text-gray-40o0 hove,  r: text-white text-2xl";
-                >;
+    >;
                   ×;
                 </button>;
               </div>;
@@ -177,7 +153,7 @@ const Services = () => {;
                 <div>;
                   <h3 className="text-xl font-semibold mb-3">Features</h3>;
                   <ul className="grid m, d: grid-cols-2 gap-2">;
-                    {selectedService.features.map((featureindex) => (;
+    {selectedService.features.map((featureindex) => (;
                       <li key={index} className="flex items-center text-gray-30o0">;
                         <span className="text-blue-40o0 mr-2">✓</span>;
                         {feature}
@@ -200,11 +176,10 @@ const Services = () => {;
                 </div>;
                 <div className="flex gap-4">;
                   <button className="bg-blue-60o0 text-white px-6 py-3 rounded-lg hove,  r: bg-blue-70o0 transition-colors">;
-                    Get Started;
+    Get Started;
                   </button>;
-                  <button className="bg-gray-60o0 text-white px-6 py-3 rounded-l, g, hov, e,;
-  r: bg-gray-70o0 transition-colors">;
-                    Learn More;
+                  <button className="bg-gray-60o0 text-white px-6 py-3 rounded-l, g, hov, e,r: bg-gray-70o0 transition-colors">;
+    Learn More;
                   </button>;
                 </div>;
               </div>;
@@ -230,7 +205,4 @@ const Services = () => {;
       </AnimatePresence>;
     </div>;
   );
-};
-;
-expor, t, defaul, t, Services;
-;
+};expor, t, defaul, t, Services,

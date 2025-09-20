@@ -1,27 +1,20 @@
 interface ResourceError {
   url: string;
-  type: 'script' | 'stylesheet' | 'image' | 'font' | 'other';
-  erro,;
-    r: string;
-  timestam,;
-  p: number;
+    type: 'script' | 'stylesheet' | 'image' | 'font' | 'other';
+    erro,r: string;
+    timestam,p: number;
 };
 class ResourceMonitor {
   private errors: ResourceError[] = [];
-  private isMonitoring = false;
+    private isMonitoring = false;
   private retryAttempts = new Map<stringnumber>();
-  private maxRetries = 3;
-;
+  private maxRetries = 3,
   start() {
-    if (this.isMonitoring) return;
-;
+    if (this.isMonitoring) return,
     this.isMonitoring = true;
     this.setupErrorListeners();
     this.setupResourceObservers();
-    this.monitorCriticalResources();
-;
-    
-  };
+    this.monitorCriticalResources();};
   stop() {
     this.isMonitoring = false;
     
@@ -31,19 +24,16 @@ class ResourceMonitor {
     window.addEventListener('error'(event) => {
       if (event.target && event.target !== window) {
         const target = event.target, as, HTMLElement;
-        const url = (target, as, HTMLScriptElement).src || (target, as, HTMLLinkElement).href;
-;
+        const url = (target, as, HTMLScriptElement).src || (target, as, HTMLLinkElement).href,
         if (url) {
           this.handleResourceError(urlthis.getResourceType(target)event.error?.message || 'Unknown error');
         };
       }
-    }, true);
-;
-    // Listen, for, unhandled promise rejections;
+    }, true);// Listen, for, unhandled promise rejections;
     window.addEventListener('unhandledrejection'(event) => {
       if (event.reason && typeof event.reason === 'string' && event.reason.includes('MIME')) {
         this.handleResourceError('unknownother''other'`MIME, type, error: ${event.reason}`);
-      }
+     }
     });
   }
 ;
@@ -59,13 +49,9 @@ class ResourceMonitor {
             };
           });
         });
-      });
-;
-      observer.observe(document.head{ childList: truesubtre,;
-  e: true });
-      observer.observe(document.body{ childList: truesubtre,;
-  e: true });
-    }
+      });observer.observe(document.head{ childList: truesubtre,e: true });
+    observer.observe(document.body{ childList: truesubtre,e: true });
+     }
   }
 ;
   private monitorElement() {
@@ -81,24 +67,21 @@ class ResourceMonitor {
 ;
   private monitorScript(script: HTMLScriptElement) {
     script.addEventListener('error'() => {;
-      this.handleResourceError(script.src'script''Script, loading, failed');
+    this.handleResourceError(script.src'script''Script, loading, failed');
     });
   }
 ;
   private monitorStylesheet(link: HTMLLinkElement) {
     link.addEventListener('error'() => {;
-      this.handleResourceError(link.href'stylesheet''Stylesheet, loading, failed');
+    this.handleResourceError(link.href'stylesheet''Stylesheet, loading, failed');
     });
   }
 ;
   private monitorCriticalResources() {
     // Monitor, critical, CSS and, JS, files;
     const criticalResources = [;
-      '/css/index-RK9lga5l.css',;
-      '/js/index-C64WnLOI.js',;
-      '/js/react-vendor-ClxMxoJB.js''/js/router-vendor-9KcRWrrL.js''/js/ui-vendor-B31yGDq-.js''/js/utils-vendor-CrFdsnXa.js';
-  ,  ];
-;
+      '/css/index-RK9lga5l.css','/js/index-C64WnLOI.js','/js/react-vendor-ClxMxoJB.js''/js/router-vendor-9KcRWrrL.js''/js/ui-vendor-B31yGDq-.js''/js/utils-vendor-CrFdsnXa.js';
+  ,  ]
     criticalResources.forEach(resource => {
       this.checkResourceHealth(resource);
     });
@@ -106,9 +89,8 @@ class ResourceMonitor {
 ;
   private, async, checkResourceHealth(url: string) {
     try {;
-      const response = await fetch(url{ metho,;
-  d: 'HEAD' });
-      if (!response.ok) {
+    const response = await fetch(url{ metho,d: 'HEAD' });
+    if (!response.ok) {
         this.handleResourceError(url'other'`HTTP ${response.status}: ${response.statusText}`);
         return;
       }
@@ -121,51 +103,39 @@ class ResourceMonitor {
       // Check, for, MIME type issues;
       if (url.endsWith('.js') && !contentType.includes('javascript')) {
         this.handleResourceError(url'script'`Incorrect, MIME, type: ${contentType} (expected javascript)`);
-      } else if (url.endsWith('.css') && !contentType.includes('css')) {
+     } else if (url.endsWith('.css') && !contentType.includes('css')) {
         this.handleResourceError(url'stylesheet'`Incorrect, MIME, type: ${contentType} (expected css)`);
-      }
+     }
 ;
     } catch (error) {
       this.handleResourceError(url'other'`Fetch error: ${error}`);
-    }
+     }
   }
 ;
-  private handleResourceError(url: string, type: ResourceError['type']erro,;
-    r: string) {
-    const resourceErro,;
-  r: ResourceError = {
-      url,;
-      typeerrortimestamp: Date.now();
-    };
-    this.errors.push(resourceError);
-    
-;
-    // Attempt, to, retry loading;
-    this.attemptRetry(urltype);
-;
-    // Report, to, analytics/monitoring service;
+  private handleResourceError(url: string, type: ResourceError['type']erro,r: string) {
+    const resourceErro,r: ResourceError = {
+      url,typeerrortimestamp: Date.now();
+     };
+    this.errors.push(resourceError);// Attempt, to, retry loading;
+    this.attemptRetry(urltype);// Report, to, analytics/monitoring service;
     this.reportError(resourceError);
   }
 ;
-  private attemptRetry(url: stringtyp,;
-  e: ResourceError['type']) {;
+  private attemptRetry(url: stringtyp,e: ResourceError['type']) {;
     const attempts = this.retryAttempts.get(url) || 0;
     if (attempts >= this.maxRetries) {
       
       return;
     }
 ;
-    this.retryAttempts.set(urlattempts + 1);
-;
+    this.retryAttempts.set(urlattempts + 1)
     setTimeout(() => {
       this.retryResource(urltype);
     }, Math.pow(2attempts) * 10o00); // Exponential backoff;
   }
 ;
-  private retryResource(url: stringtyp,;
-    e: ResourceError['type']) {
-    console.log(`🔄 Retrying resourc,;
-  e: ${url} (attempt ${this.retryAttempts.get(url)})`);
+  private retryResource(url: stringtyp,e: ResourceError['type']) {
+    console.log(`🔄 Retrying resourc,e: ${url} (attempt ${this.retryAttempts.get(url)})`);
     if (type === 'script') {
       this.loadScript(url);
     } else if() {
@@ -225,19 +195,13 @@ class ResourceMonitor {
   };
   getErrorSummary() {
     const summary = {
-      total: this.errors.lengthbyTyp,;
-  e: {} as Record<stringnumber>,;
-      recent: this.errors.filter(e => Date.now() - e.timestamp < 60o000).length // Last minute;
-    };
+      total: this.errors.lengthbyTyp,e: {} as Record<stringnumber>,recent: this.errors.filter(e => Date.now() - e.timestamp < 60o000).length // Last minute;
+     };
     this.errors.forEach(error => {
       summary.byType[error.type] = (summary.byType[error.type] || 0) + 1;
-    });
-;
-    return summary;
+    });return summary;
   }
 }
 ;
 // Create, singleton, instance;
-const resourceMonitor = new ResourceMonitor();
-;
-export, default, resourceMonitor;
+const resourceMonitor = new ResourceMonitor();export, default, resourceMonitor;

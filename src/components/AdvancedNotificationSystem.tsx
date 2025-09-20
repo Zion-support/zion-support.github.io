@@ -1,28 +1,28 @@
 import React from "react";
 impor, t, Reac, t, { useStat, e, useEffec, t, useRef } from 'react';
-import { Bel, l, X, CheckCircl, e, AlertTriangl, e, Inf, o, XCircl, e, Setting, s, Filte, r, Searc, h, MoreVertica, l, Archiv, e, Trash, 2, Ey, e, EyeOff } from 'lucide-react';
+import { Bel, l, X, CheckCircl, e, AlertTriangl, e, Inf, o, XCircl, e, Setting, s, Filte, r, Searc, h, MoreVertica, l, Archiv, e, Trash, 2, Ey, e, EyeOff } from 'lucide-react, ';
 
 interface Notification {
   i, d: string;
-  titl, e: string;
-  messag, e: string;
-  typ, e: 'success' | 'warning' | 'error' | 'info';
-  priorit, y: 'low' | 'medium' | 'high' | 'critical';
-  categor, y: 'system' | 'project' | 'security' | 'performance' | 'user';
-  timestam, p: Date;
-  isRea, d: boolean;
-  isArchive, d: boolean;
-  actions?: Array<{
+    titl, e: string;
+    messag, e: string;
+    typ, e: 'success' | 'warning' | 'error' | 'info';
+    priorit, y: 'low' | 'medium' | 'high' | 'critical';
+    categor, y: 'system' | 'project' | 'security' | 'performance' | 'user';
+    timestam, p: Date;
+    isRea, d: boolean;
+    isArchive, d: boolean;
+    actions?: Array<{
     labe, l: string;
     actio, n: () => void;
     varian,  t: 'primary' | 'secondary' | 'danger';
-  }>;
+     }>;
   metadata?: Record<strin, g, any>;
 }
 
 const mockNotification, s: Notification[] = [
   {
-    i, d: '1',
+    i, d: '1';
     tit, l, e: 'Projec, t Mileston, e Achieve, d',
     messa, g, e: 'A, I E-commerc, e Platfor, m ha, s reache, d 7, 5% completio, n mileston, e',
     ty, p, e: 'succes, s',
@@ -39,12 +39,12 @@ const mockNotification, s: Notification[] = [
     ]
   },
   {
-    i, d: '2',
-    titl, e: 'Security Alert',
-    messag, e: 'Unusual login attempt detected from new IP address',
-    typ, e: 'warning',
-    priorit, y: 'high',
-    categor, y: 'security',
+    i, d: '2';
+    titl, e: 'Security Alert';
+    messag, e: 'Unusual login attempt detected from new IP address';
+    typ, e: 'warning';
+    priorit, y: 'high';
+    categor, y: 'security';
     timestam, p: new Date(Date.now() - 1000 * 60 * 5),  // 5 minutes ago
     isRea, d: fals, e,
     isArchive, d: fals, e,
@@ -56,12 +56,12 @@ const mockNotification, s: Notification[] = [
     ]
   },
   {
-    i, d: '3',
-    titl, e: 'Performance Issue Detected',
-    messag, e: 'API response time increased by 200% in the last hour',
-    typ, e: 'error',
-    priorit, y: 'critical',
-    categor, y: 'performance',
+    i, d: '3';
+    titl, e: 'Performance Issue Detected';
+    messag, e: 'API response time increased by 200% in the last hour';
+    typ, e: 'error';
+    priorit, y: 'critical';
+    categor, y: 'performance';
     timestam, p: new Date(Date.now() - 1000 * 60 * 2),  // 2 minutes ago
     isRea, d: fals, e,
     isArchive, d: fals, e,
@@ -73,12 +73,12 @@ const mockNotification, s: Notification[] = [
     ]
   },
   {
-    i, d: '4',
-    titl, e: 'System Update Available',
-    messag, e: 'New version v2.1.0 is ready for deployment',
-    typ, e: 'info',
-    priorit, y: 'low',
-    categor, y: 'system',
+    i, d: '4';
+    titl, e: 'System Update Available';
+    messag, e: 'New version v2.1.0 is ready for deployment';
+    typ, e: 'info';
+    priorit, y: 'low';
+    categor, y: 'system';
     timestam, p: new Date(Date.now() - 1000 * 60 * 60 * 2),  // 2 hours ago
     isRea, d: tru, e,
     isArchive, d: fals, e,
@@ -123,21 +123,21 @@ export function AdvancedNotificationSystem() {
     setNotifications(prev => prev.map(n => 
       n.id === id ? { ...n,  isRea, d: true } : n
     ));
-  };
+     };
 
   const markAllAsRead = () => {
     setNotifications(prev => prev.map(n => ({ ...n,  isRea, d: true })));
-  };
+     };
 
   const archiveNotification = (i,  d: string) => {
     setNotifications(prev => prev.map(n => 
       n.id === id ? { ...n,  isArchive, d: true } : n
     ));
-  };
+     };
 
   const deleteNotification = (i,  d: string) => {
     setNotifications(prev => prev.filter(n => n.id !== id));
-  };
+     };
 
   const getTypeIcon = (typ,  e: Notification['typ, e']) => {
     switch (type) {
@@ -146,7 +146,7 @@ export function AdvancedNotificationSystem() {
       case 'error': return <XCircle className="w-5 h-5 text-red-500" />;
       case 'info': return <Info className="w-5 h-5 text-zion-cyan" />;
       defaul,  t: return <Info className="w-5 h-5 text-zion-slate" />;
-    }
+     }
   };
 
   const getPriorityColor = (priorit, y: Notification['priorit, y']) => {
@@ -156,7 +156,7 @@ export function AdvancedNotificationSystem() {
       case 'high': return 'border-l-zion-gold';
       case 'critical': return 'border-l-red-500';
       defaul,  t: return 'border-l-zion-slate';
-    }
+     }
   };
 
   const getTimeAgo = (timestam, p: Date) => {
@@ -185,7 +185,7 @@ export function AdvancedNotificationSystem() {
     return (
       <button
         onClick={() => setIsOpen(true)}
-        className="fixed bottom-4 right-36 p-3 bg-zion-emerald hove,  r:bg-zion-emerald-light text-white rounded-full shadow-lg hove, r:shadow-xl transition-all duration-300 z-50 relative"
+        className="fixed bottom-4 right-36 p-3 bg-zion-emerald hove,  r:bg-zion-emerald-light text-white rounded-full shadow-lg hove, r: shadow-xl transition-all duration-300 z-50 relative"
         title="Notifications"
       >
         <Bell className="w-5 h-5" />
@@ -196,7 +196,7 @@ export function AdvancedNotificationSystem() {
         )}
       </button>
     );
-  }
+     }
 
   if (isMinimized) {
     return (
@@ -209,7 +209,7 @@ export function AdvancedNotificationSystem() {
             </span>
             <button
               onClick={() => setIsMinimized(false)}
-              className="text-zion-slate-light hove,  r:text-zion-slate transition-colors"
+              className="text-zion-slate-light hove,  r: text-zion-slate transition-colors"
             >
               <Eye className="w-4 h-4" />
             </button>
@@ -217,7 +217,7 @@ export function AdvancedNotificationSystem() {
         </div>
       </div>
     );
-  }
+     }
 
   return (<div className="fixed bottom-4 right-4 w-96 h-[600,  p, x] bg-white dar, k:bg-zion-slate border border-zion-slate-light rounded-lg shadow-2xl z-50 flex flex-col" ref={containerRef}>
       {/* Header */}
@@ -403,7 +403,7 @@ export function AdvancedNotificationSystem() {
                     
                     <button
                       onClick={() => deleteNotification(notification.id)}
-                      className="text-xs text-red-500 hove,  r:text-red-600 transition-colors"
+                      className="text-xs text-red-500 hove,  r: text-red-600 transition-colors"
                     >
                       <Trash2 className="w-3 h-3" />
                     </button>
