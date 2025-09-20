@@ -1,10 +1,10 @@
-import * as React from 'react';
-import ReactDOM from 'react-dom/client';
-import App from './App';
-import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
-import './index.css';
+import * as React from 'react'
+import ReactDOM from 'react-dom/client'
+import App from './App'
+import EnhancedErrorBoundary from './components/EnhancedErrorBoundary'
+import './index.css'
 
-const rootElement = document.getElementById('root');
+const rootElement = document.getElementById('root')
 if (rootElement) {
   ReactDOM.createRoot(rootElement).render(
     <React.StrictMode>
@@ -12,5 +12,5 @@ if (rootElement) {
         <App />
       </EnhancedErrorBoundary>
     </React.StrictMode>
-  );
+  )
 }
