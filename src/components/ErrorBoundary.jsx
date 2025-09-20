@@ -160,38 +160,38 @@ const [retryCount, setRetryCount] = useState(0);
             setHasError(true);
             setError(event.error);
             if (onError) {
-                onError(event.error, { componentStack: event.error?.stack })
-}
+                onError(event.error, { componentStack: event.error?.stack });
+            }
             // Log error to console in development
             if (process.env.NODE_ENV === 'development') {
-                console.error('ErrorBoundary caught an error:', event.error)
-},
-  };
-const handleUnhandledRejection = (event) => {
+                console.error('ErrorBoundary caught an error:', event.error);
+            }
+        };
+        const handleUnhandledRejection = (event) => {
             setHasError(true);
             setError(new Error(event.reason));
             if (onError) {
-                onError(new Error(event.reason), { componentStack: event.reason?.stack })
-}
+                onError(new Error(event.reason), { componentStack: event.reason?.stack });
+            }
             // Log error to console in development
             if (process.env.NODE_ENV === 'development') {
-                console.error('ErrorBoundary caught an unhandled rejection:', event.reason)
-},
-  };
+                console.error('ErrorBoundary caught an unhandled rejection:', event.reason);
+            }
+        };
 
         window.addEventListener('error', handleError);
         window.addEventListener('unhandledrejection', handleUnhandledRejection);
         
         return () => {
             window.removeEventListener('error', handleError);
-            window.removeEventListener('unhandledrejection', handleUnhandledRejection)
-},
-  }, [onError]);
-const resetError = () => {
+            window.removeEventListener('unhandledrejection', handleUnhandledRejection);
+        };
+    }, [onError]);
+    const resetError = () => {
         setHasError(false);
         setError(null);
-        setRetryCount(prev => prev + 1)
-};
+        setRetryCount(prev => prev + 1);
+    };
 
     if (hasError) {
         if (fallback) {
@@ -212,16 +212,16 @@ const resetError = () => {
 // Hook for functional components to handle errors
 export function useErrorHandler() {
     const [error, setError] = useState(null);
-const handleError = (error) => {
+    const handleError = (error) => {
         setError(error);
-        console.error('useErrorHandler caught an error:', error)
-};
-const clearError = () => {
-        setError(null)
-};
+        console.error('useErrorHandler caught an error:', error);
+    };
+    const clearError = () => {
+        setError(null);
+    };
 
-    return { error, handleError, clearError },
-  }
+    return { error, handleError, clearError };
+}
 
 // Higher-order component for error handling
 export function withErrorBoundary(Component, fallback = null) {
@@ -230,9 +230,9 @@ export function withErrorBoundary(Component, fallback = null) {
             <ErrorBoundary fallback={fallback}>
                 <Component {...props} />
             </ErrorBoundary>
-        )
-},
-  }
+        );
+    };
+}
 
 // Default export
 export default ErrorBoundary;
