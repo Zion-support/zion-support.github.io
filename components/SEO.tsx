@@ -38,11 +38,7 @@ export function generateMetadata({
   noindex, 
   nofollow, 
   jsonLd 
-<<<<<<< HEAD
 }: SEOProps) {
-=======
-}: SEOProps): Metadata {
->>>>>>> 3fc2a955f123ed886687073091dfb0346a1dae99
   const pathname = usePathname();
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || DEFAULTS.url;
   const pageTitle = title || DEFAULTS.title;
