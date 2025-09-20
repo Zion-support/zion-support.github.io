@@ -1,10 +1,14 @@
 import React, { useState, useEffect, useCallback, useMemo } from 'react';
 import './App.css';
+import './styles/accessibility.css';
 import PerformanceMonitor from './components/PerformanceMonitor';
 import LazyImage from './components/LazyImage';
 import VirtualList from './components/VirtualList';
 import MemoizedComponent from './components/MemoizedComponent';
 import ErrorBoundary from './components/ErrorBoundary';
+import AccessibilityEnhancer from './components/AccessibilityEnhancer';
+import LoadingSpinner from './components/LoadingSpinner';
+import SkeletonLoader from './components/SkeletonLoader';
 import { useTheme } from './context/ThemeContext';
 
 // Service data with more details
@@ -196,9 +200,11 @@ function App() {
 
   return (
     <ErrorBoundary>
-      <div className={`App ${isDarkMode ? 'dark-mode' : ''}`}>
+      <AccessibilityEnhancer>
+        <div className={`App ${isDarkMode ? 'dark-mode' : ''}`}>
         <PerformanceMonitor />
       
+      <main id="main-content">
       <header className="App-header">
         <div className="header-controls">
           <div className="current-time">
@@ -438,7 +444,9 @@ function App() {
           </div>
         </div>
       </footer>
-      </div>
+      </main>
+        </div>
+      </AccessibilityEnhancer>
     </ErrorBoundary>
   );
 }
