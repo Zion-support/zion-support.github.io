@@ -29,7 +29,7 @@ const specialServices = [
   }
 ];
 interface CategoriesSectionProps {
-  showTitle?: boolean,
+  showTitle?: boolean;
 }
 
 const containerVariants = {

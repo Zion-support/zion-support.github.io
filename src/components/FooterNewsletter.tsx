@@ -6,25 +6,22 @@ export const FooterNewsletter: React.FC = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!email.trim()) return,
-
+    if (!email.trim()) return;
     setIsSubmitting(true),
 
     try {
       // Simulate API call
       await new Promise(resolve => setTimeout(resolve, 1000)),
-
-      setIsSubmitted(true),
+      setIsSubmitted(true);
       setEmail(''),
-
       // Reset after 3 seconds
-      setTimeout(() => setIsSubmitted(false), 3000),
+      setTimeout(() => setIsSubmitted(false), 3000);
     } catch (error) {
-      console.error('Newsletter subscription failed:', error),
+      console.error('Newsletter subscription failed:', error);
     } finally {
-      setIsSubmitting(false),
+      setIsSubmitting(false);
     }
-  },
+  };
 
   return (
     <div className="bg-gradient-to-r from-zion-cyan/10 to-blue-500/10 border border-zion-cyan/20 rounded-xl p-6">

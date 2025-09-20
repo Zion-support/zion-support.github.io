@@ -1,18 +1,18 @@
 import React, { useState, useCallback, useEffect } from "react";
 import { 
-  Plus,
-  MessageCircle, 
-  Phone, 
-  Mail, 
-  MapPin, 
-  ArrowUp,
-  X,
-  Settings,
-  HelpCircle,
-  Star,
-  Share2,
-  Bookmark,
-  Download,
+  Plus;
+  MessageCircle;
+  Phone;
+  Mail;
+  MapPin;
+  ArrowUp;
+  X;
+  Settings;
+  HelpCircle;
+  Star;
+  Share2;
+  Bookmark;
+  Download;
   Printer
 } from "lucide-react";
 interface FloatingAction {
@@ -24,47 +24,45 @@ interface FloatingActionButtonProps {
   actions?: FloatingAction[];
   position?: 'bottom-right' | 'bottom-left' | 'top-right' | 'top-left',
   theme?: 'light' | 'dark' | 'auto',
-  showScrollToTop?: boolean,
-  showContactActions?: boolean,
-  showUtilityActions?: boolean,
+  showScrollToTop?: boolean;
+  showContactActions?: boolean;
+  showUtilityActions?: boolean;
 }
 
 const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
   actions = [];
   position = 'bottom-right',
   theme = 'auto',
-  showScrollToTop = true,
-  showContactActions = true,
+  showScrollToTop = true;
+  showContactActions = true;
   showUtilityActions = true
 }) => {
-  const [isExpanded, setIsExpanded] = useState(false),
-  const [showScrollButton, setShowScrollButton] = useState(false),
+  const [isExpanded, setIsExpanded] = useState(false);
+  const [showScrollButton, setShowScrollButton] = useState(false);
   const [currentTheme, setCurrentTheme] = useState<'light' | 'dark'>('light'),
-
   // Detect theme
   useEffect(() => {
     if (theme === 'auto') {
       const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
-      setCurrentTheme(mediaQuery.matches ? 'dark' : 'light'),
+      setCurrentTheme(mediaQuery.matches ? 'dark' : 'light');
       
       const handleChange = (e: MediaQueryListEvent) => {
         setCurrentTheme(e.matches ? 'dark' : 'light')
       };
-      mediaQuery.addEventListener('change', handleChange),
-      return () => mediaQuery.removeEventListener('change', handleChange),
+      mediaQuery.addEventListener('change', handleChange);
+      return () => mediaQuery.removeEventListener('change', handleChange);
     } else {
-      setCurrentTheme(theme),
+      setCurrentTheme(theme);
     }
   }, [theme]),
-
   // Show scroll to top button when scrolled down
   useEffect(() => {
     const handleScroll = () => {
-      setShowScrollButton(window.scrollY > 300),
+      setShowScrollButton(window.scrollY > 300);
     },
 
-    window.addEventListener('scroll', handleScroll),
-    return () => window.removeEventListener('scroll', handleScroll),
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []),
 
   // Default actions
@@ -108,11 +106,11 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
             });
           } else {
             // Fallback for browsers without share API
-            const url = window.location.href,
+            const url = window.location.href;
             navigator.clipboard.writeText(url).then(() => {
               // Show success message
-              showNotification('Page URL copied to clipboard!'),
-            }),
+              showNotification('Page URL copied to clipboard!');
+            });
           }
         },
         color: 'bg-yellow-500 hover:bg-yellow-600',priority: 'low' as const
@@ -125,10 +123,10 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
             });
           } else {
             // Fallback for browsers without share API
-            const url = window.location.href,
+            const url = window.location.href;
             navigator.clipboard.writeText(url).then(() => {
-              showNotification('Page URL copied to clipboard!'),
-            }),
+              showNotification('Page URL copied to clipboard!');
+            });
           }
         },
         color: 'bg-indigo-500 hover:bg-indigo-600',priority: 'low' as const
@@ -159,19 +157,16 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
   // Sort actions by priority
   const sortedActions = defaultActions.sort((a, b) => {
     const priorityOrder = { high: 3, medium: 2, low: 1 };
-    return priorityOrder[b.priority] - priorityOrder[a.priority],
+    return priorityOrder[b.priority] - priorityOrder[a.priority];
   }),
-
   // Toggle expansion
   const toggleExpansion = useCallback(() => {
-    setIsExpanded(prev => !prev),
+    setIsExpanded(prev => !prev);
   }, []),
-
   // Scroll to top
   const scrollToTop = useCallback(() => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }, []),
-
   // Show notification
   const showNotification = useCallback((message: string) => {
     // Create notification element
@@ -180,33 +175,30 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
       fixed top-4 right-4 z-50 px-4 py-2 bg-green-500 text-white rounded-lg shadow-lg
       transform translate-x-full transition-transform duration-300 ease-in-out
     `,
-    notification.textContent = message,
-    
+    notification.textContent = message;
     document.body.appendChild(notification),
     
     // Animate in
     setTimeout(() => {
       notification.classList.remove('translate-x-full')
     }, 100),
-    
     // Remove after 3 seconds
     setTimeout(() => {
-      notification.classList.add('translate-x-full'),
+      notification.classList.add('translate-x-full');
       setTimeout(() => {
-        document.body.removeChild(notification),
-      }, 300),
-    }, 3000),
+        document.body.removeChild(notification);
+      }, 300);
+    }, 3000);
   }, []),
-
   // Get position classes
   const getPositionClasses = () => {
     switch (position) {
       case 'bottom-left':
-        return 'bottom-6 left-6',
+        return 'bottom-6 left-6';
       case 'top-right':
-        return 'top-6 right-6',
+        return 'top-6 right-6';
       case 'top-left':
-        return 'top-6 left-6',
+        return 'top-6 left-6';
       default: return 'bottom-6 right-6'
     }
   };
@@ -214,8 +206,8 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
   const getThemeClasses = () => {
     return currentTheme === 'dark' 
       ? 'bg-zion-slate-dark text-zion-slate-light border-zion-slate/20' 
-      : 'bg-zion-slate-light text-zion-slate-dark border-zion-slate/20',
-  },
+      : 'bg-zion-slate-light text-zion-slate-dark border-zion-slate/20';
+  };
 
   return (
     <>
@@ -293,16 +285,16 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
         
         @keyframes bounce {
           0%, 20%, 53%, 80%, 100% {
-            transform: translate3d(0,0,0),
+            transform: translate3d(0,0,0);
           }
           40%, 43% {
-            transform: translate3d(0, -30px, 0),
+            transform: translate3d(0, -30px, 0);
           }
           70% {
-            transform: translate3d(0, -15px, 0),
+            transform: translate3d(0, -15px, 0);
           }
           90% {
-            transform: translate3d(0, -4px, 0),
+            transform: translate3d(0, -4px, 0);
           }
         }
         
@@ -312,6 +304,6 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
       `}</style>
     </>
   );
-},
+};
 
 export default FloatingActionButton;

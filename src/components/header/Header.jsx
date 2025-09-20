@@ -14,14 +14,13 @@ import { Button } from "@/components/ui/button";
 import { Menu, X, Sparkles } from "lucide-react";
 import { Search as SearchIcon } from "lucide-react";
 export function Header({ hideLogin = false, customLogo, customTheme }) {
-  const { user } = useAuth(),
-  const { isWhitelabel, primaryColor } = useWhitelabel(),
-  const navigate = useNavigate(),
-  const [query, setQuery] = useState(""),
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false),
-  const [isScrolled, setIsScrolled] = useState(false),
+  const { user } = useAuth();
+  const { isWhitelabel, primaryColor } = useWhitelabel();
+  const navigate = useNavigate();
+  const [query, setQuery] = useState("");
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
   const searchSuggestions = generateSearchSuggestions(),
-
   // If we have a white-label tenant and no specific customTheme is provided;
   // use the tenant's primary color
   const effectiveTheme = customTheme || (isWhitelabel ? {
@@ -35,23 +34,23 @@ export function Header({ hideLogin = false, customLogo, customTheme }) {
   // Handle scroll effect
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20),
+      setIsScrolled(window.scrollY > 20);
     },
-    window.addEventListener('scroll', handleScroll),
-    return () => window.removeEventListener('scroll', handleScroll),
-  }, []),
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const handleSubmit = (e) => {
-    e.preventDefault(),
+    e.preventDefault();
     if (query.trim()) {
       navigate(`/search?q=${encodeURIComponent(query)}`),
-      setQuery(""),
+      setQuery("");
     }
-  },
+  };
 
   const toggleMobileMenu = () => {
-    setIsMobileMenuOpen(!isMobileMenuOpen),
-  },
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
 
   return (
     <header 
@@ -85,7 +84,7 @@ export function Header({ hideLogin = false, customLogo, customTheme }) {
               onChange={setQuery} 
               onSelectSuggestion={(text) => {
                 navigate(`/search?q=${encodeURIComponent(text)}`);
-                setQuery(""),
+                setQuery("");
               }} 
               searchSuggestions={searchSuggestions}
             />
@@ -125,7 +124,7 @@ export function Header({ hideLogin = false, customLogo, customTheme }) {
               onChange={setQuery} 
               onSelectSuggestion={(text) => {
                 navigate(`/search?q=${encodeURIComponent(text)}`);
-                setQuery(""),
+                setQuery("");
               }} 
               searchSuggestions={searchSuggestions} 
               placeholder="Search services, talent, equipment..."

@@ -1,50 +1,50 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
-  Brain,
-  Atom,
-  Rocket,
-  Shield,
-  Dna,
-  Microscope,
-  Cpu,
-  Zap,
-  Globe,
-  Lock,
-  Eye,
-  Network,
-  TrendingUp,
-  Star,
-  ArrowRight,
-  ChevronDown,
-  ChevronUp,
-  ExternalLink,
-  Phone,
-  Mail,
+  Brain;
+  Atom;
+  Rocket;
+  Shield;
+  Dna;
+  Microscope;
+  Cpu;
+  Zap;
+  Globe;
+  Lock;
+  Eye;
+  Network;
+  TrendingUp;
+  Star;
+  ArrowRight;
+  ChevronDown;
+  ChevronUp;
+  ExternalLink;
+  Phone;
+  Mail;
   MapPin
 } from "lucide-react";
 import { innovativeServices2027, serviceCategories2027, getServicesByCategory } from "../data/innovativeServices2027";
 const categoryIcons: { [key: string]: React.ComponentType<any> } = {
   'AI & Consciousness': Brain;
-  'Quantum AI': Atom,
-  'Autonomous AI': Cpu,
-  'Quantum Computing': Atom,
-  'Quantum Finance': TrendingUp,
-  'Space Technology': Rocket,
-  'Quantum Space': Rocket,
-  'Biotechnology': Dna,
-  'Quantum Medicine': Dna,
-  'Quantum Security': Shield,
-  'Nanotechnology': Microscope,
+  'Quantum AI': Atom;
+  'Autonomous AI': Cpu;
+  'Quantum Computing': Atom;
+  'Quantum Finance': TrendingUp;
+  'Space Technology': Rocket;
+  'Quantum Space': Rocket;
+  'Biotechnology': Dna;
+  'Quantum Medicine': Dna;
+  'Quantum Security': Shield;
+  'Nanotechnology': Microscope;
   'Neural Technology': Eye
-},
+};
 
 const categoryColors: { [key: string]: string } = {
   'AI & Consciousness': 'from-purple-500 to-pink-500Quantum AI': 'from-blue-500 to-cyan-500Autonomous AI': 'from-green-500 to-emerald-500Quantum Computing': 'from-indigo-500 to-purple-500Quantum Finance': 'from-yellow-500 to-orange-500Space Technology': 'from-purple-500 to-blue-500Quantum Space': 'from-cyan-500 to-blue-500Biotechnology': 'from-green-500 to-teal-500Quantum Medicine': 'from-teal-500 to-blue-500Quantum Security': 'from-red-500 to-pink-500Nanotechnology': 'from-gray-500 to-slate-500Neural Technology': 'from-violet-500 to-purple-500'
 };
 export const InnovativeServicesShowcase2027: React.FC = () => {
-  const [selectedCategory, setSelectedCategory] = useState<string>('All'),
-  const [expandedService, setExpandedService] = useState<string | null>(null),
+  const [selectedCategory, setSelectedCategory] = useState<string>('All');
+  const [expandedService, setExpandedService] = useState<string | null>(null);
   const [isVisible, setIsVisible] = useState(false);
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -55,17 +55,17 @@ export const InnovativeServicesShowcase2027: React.FC = () => {
       };
       { threshold: 0.1 }
     );
-    const element = document.getElementById('innovative-services-2027'),
+    const element = document.getElementById('innovative-services-2027');
     if (element) {
-      observer.observe(element),
+      observer.observe(element);
     }
 
-    return () => observer.disconnect(),
-  }, []),
+    return () => observer.disconnect();
+  }, []);
 
   const filteredServices = selectedCategory === 'All'
     ? innovativeServices2027
-    : getServicesByCategory(selectedCategory),
+    : getServicesByCategory(selectedCategory);
 
   const toggleServiceExpansion = (serviceId: string) => {
     setExpandedService(expandedService === serviceId ? null : serviceId)

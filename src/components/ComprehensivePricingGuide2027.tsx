@@ -1,35 +1,35 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
-  DollarSign,
-  TrendingUp,
-  Clock,
-  Users,
-  Star,
-  CheckCircle,
-  ArrowRight,
-  ExternalLink,
-  Search,
-  Filter,
-  Download,
-  Phone,
-  Mail,
-  MapPin,
-  Calculator,
-  BarChart3,
-  Target,
-  Zap,
-  Shield,
-  Brain,
+  DollarSign;
+  TrendingUp;
+  Clock;
+  Users;
+  Star;
+  CheckCircle;
+  ArrowRight;
+  ExternalLink;
+  Search;
+  Filter;
+  Download;
+  Phone;
+  Mail;
+  MapPin;
+  Calculator;
+  BarChart3;
+  Target;
+  Zap;
+  Shield;
+  Brain;
   Rocket
 } from "lucide-react";
 import { servicesCatalog } from "../data/servicesCatalog";
 import { innovativeServices2027 } from "../data/innovativeServices2027";
 export const ComprehensivePricingGuide2027: React.FC = () => {
-  const [searchQuery, setSearchQuery] = useState(''),
-  const [selectedCategory, setSelectedCategory] = useState<string>('All'),
-  const [priceRange, setPriceRange] = useState<string>('All'),
-  const [sortBy, setSortBy] = useState<string>('name'),
+  const [searchQuery, setSearchQuery] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState<string>('All');
+  const [priceRange, setPriceRange] = useState<string>('All');
+  const [sortBy, setSortBy] = useState<string>('name');
   const [isVisible, setIsVisible] = useState(false);
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -40,24 +40,23 @@ export const ComprehensivePricingGuide2027: React.FC = () => {
       };
       { threshold: 0.1 }
     );
-    const element = document.getElementById('comprehensive-pricing-guide'),
+    const element = document.getElementById('comprehensive-pricing-guide');
     if (element) {
-      observer.observe(element),
+      observer.observe(element);
     }
 
-    return () => observer.disconnect(),
+    return () => observer.disconnect();
   }, []),
-
   // Combine all services
   const allServices = [
     ...servicesCatalog.flatMap(category =>
       category.items.map(item => ({
-        ...item,
+        ...item;
         source: 'catalog',category: category.name
       }))
     );
     ...innovativeServices2027.map(service => ({
-      ...service,
+      ...service;
       source: 'innovative',category: service.category,features: service.features || [],ctaLabel: service.ctaLabel || 'Get Started',href: service.href || '/contact'
     }))
   ];
@@ -65,77 +64,77 @@ export const ComprehensivePricingGuide2027: React.FC = () => {
   const filteredServices = allServices.filter(service => {
     const matchesSearch = service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         service.category.toLowerCase().includes(searchQuery.toLowerCase()),
+                         service.category.toLowerCase().includes(searchQuery.toLowerCase());
 
-    const matchesCategory = selectedCategory === 'All' || service.category === selectedCategory,
+    const matchesCategory = selectedCategory === 'All' || service.category === selectedCategory;
 
     const matchesPrice = priceRange === 'All' ||
       (priceRange === 'Low' && parseFloat(service.price.replace(/[^0-9.]/g, '')) < 100) ||
       (priceRange === 'Medium' && parseFloat(service.price.replace(/[^0-9.]/g, '')) >= 100 && parseFloat(service.price.replace(/[^0-9.]/g, '')) < 1000) ||
-      (priceRange === 'High' && parseFloat(service.price.replace(/[^0-9.]/g, '')) >= 1000),
+      (priceRange === 'High' && parseFloat(service.price.replace(/[^0-9.]/g, '')) >= 1000);
 
-    return matchesSearch && matchesCategory && matchesPrice,
+    return matchesSearch && matchesCategory && matchesPrice;
   }),
 
   // Sort services
   const sortedServices = [...filteredServices].sort((a, b) => {
     switch (sortBy) {
       case 'name':
-        return a.title.localeCompare(b.title),
+        return a.title.localeCompare(b.title);
       case 'price':
         return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(/[^0-9.]/g, '')),
       case 'category':
-        return a.category.localeCompare(b.category),
+        return a.category.localeCompare(b.category);
       default: return 0
     }
   });
-  const categories = ['All', ...Array.from(new Set(allServices.map(s => s.category)))],
-  const priceRanges = ['AllLow (<$100)', 'Medium ($100-$999)High ($1000+)'],
+  const categories = ['All', ...Array.from(new Set(allServices.map(s => s.category)))];
+  const priceRanges = ['AllLow (<$100)', 'Medium ($100-$999)High ($1000+)'];
 
   const contactInfo = {
     phone: '+1 302 464 0950',email: 'kleber@ziontechgroup.com',address: '364 E Main St STE 1008 Middletown DE 19709'
   };
   const getPriceRange = (price: string) => {
-    const numPrice = parseFloat(price.replace(/[^0-9.]/g, '')),
-    if (numPrice < 100) return 'Low',
-    if (numPrice < 1000) return 'Medium',
-    return 'High',
-  },
+    const numPrice = parseFloat(price.replace(/[^0-9.]/g, ''));
+    if (numPrice < 100) return 'Low';
+    if (numPrice < 1000) return 'Medium';
+    return 'High';
+  };
 
   const getPriceColor = (price: string) => {
     const range = getPriceRange(price);
     switch (range) {
-      case 'Low': return 'text-green-400',
-      case 'Medium': return 'text-yellow-400',
-      case 'High': return 'text-red-400',
+      case 'Low': return 'text-green-400';
+      case 'Medium': return 'text-yellow-400';
+      case 'High': return 'text-red-400';
       default: return 'text-white'
     }
   };
   const getCategoryIcon = (category: string) => {
     const iconMap: { [key: string]: React.ComponentType<any> } = {
       'AI Solutions': Brain;
-      'Micro SaaS': Zap,
-      'IT Services': Shield,
-      'Cybersecurity': Shield,
-      'Data & Analytics': BarChart3,
-      'Cloud & DevOps': Cloud,
-      'Quantum Computing': Atom,
-      'Blockchain Solutions': Lock,
-      'IoT & Edge Computing': Network,
-      'FinTech Solutions': DollarSign,
-      'HealthTech Solutions': Heart,
-      'EdTech Solutions': BookOpen,
-      'GreenTech Solutions': Leaf,
-      'SpaceTech Solutions': Rocket,
-      'Robotics & Automation': Cpu,
-      'AR/VR Solutions': Eye,
-      'Biotech Solutions': Dna,
-      'LegalTech Solutions': Scale,
-      'Real Estate Tech': Home,
+      'Micro SaaS': Zap;
+      'IT Services': Shield;
+      'Cybersecurity': Shield;
+      'Data & Analytics': BarChart3;
+      'Cloud & DevOps': Cloud;
+      'Quantum Computing': Atom;
+      'Blockchain Solutions': Lock;
+      'IoT & Edge Computing': Network;
+      'FinTech Solutions': DollarSign;
+      'HealthTech Solutions': Heart;
+      'EdTech Solutions': BookOpen;
+      'GreenTech Solutions': Leaf;
+      'SpaceTech Solutions': Rocket;
+      'Robotics & Automation': Cpu;
+      'AR/VR Solutions': Eye;
+      'Biotech Solutions': Dna;
+      'LegalTech Solutions': Scale;
+      'Real Estate Tech': Home;
       'Supply Chain Solutions': Truck
-    },
-    return iconMap[category] || Target,
-  },
+    };
+    return iconMap[category] || Target;
+  };
 
   return (
     <section id="comprehensive-pricing-guide" className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light relative overflow-hidden">

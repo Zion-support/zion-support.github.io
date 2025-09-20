@@ -13,7 +13,7 @@ interface SearchSuggestion {
 
 interface EnhancedSearchProps {
   className?: string;
-  placeholder?: string,
+  placeholder?: string;
   onSearch?: (query: string) => void;
   variant?: 'default' | 'futuristic' | 'minimal'
 }
@@ -21,14 +21,14 @@ interface EnhancedSearchProps {
 export function EnhancedSearch({ 
   className = '',
   placeholder = 'Search for AI services, quantum solutions...',
-  onSearch,
+  onSearch;
   variant = 'default'
 }: EnhancedSearchProps) {
-  const [isOpen, setIsOpen] = useState(false),
-  const [query, setQuery] = useState(''),
-  const [results, setResults] = useState<SearchResult[]>([]),
-  const [suggestions, setSuggestions] = useState<SearchSuggestion[]>([]),
-  const [isLoading, setIsLoading] = useState(false),
+  const [isOpen, setIsOpen] = useState(false);
+  const [query, setQuery] = useState('');
+  const [results, setResults] = useState<SearchResult[]>([]);
+  const [suggestions, setSuggestions] = useState<SearchSuggestion[]>([]);
+  const [isLoading, setIsLoading] = useState(false);
   const [selectedIndex, setSelectedIndex] = useState(-1);
   const searchRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
@@ -59,11 +59,9 @@ export function EnhancedSearch({
         setSelectedIndex(-1)
       }
     },
-
-    document.addEventListener('mousedown', handleClickOutside),
-    return () => document.removeEventListener('mousedown', handleClickOutside),
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []),
-
   // Handle keyboard navigation
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
@@ -74,74 +72,72 @@ export function EnhancedSearch({
           setSelectedIndex(prev => 
             prev < results.length - 1 ? prev + 1 : 0
           ),
-          break,
+          break;
         case 'ArrowUp':
           event.preventDefault(),
           setSelectedIndex(prev => 
             prev > 0 ? prev - 1 : results.length - 1
           ),
-          break,
+          break;
         case 'Enter':
-          event.preventDefault(),
+          event.preventDefault();
           if (selectedIndex >= 0 && results[selectedIndex]) {
             handleResultClick(results[selectedIndex])
           } else if (query.trim()) {
-            handleSearch(),
+            handleSearch();
           }
-          break,
+          break;
         case 'Escape':
-          setIsOpen(false),
+          setIsOpen(false);
           setSelectedIndex(-1),
-          break,
+          break;
       }
     },
 
-    document.addEventListener('keydown', handleKeyDown),
-    return () => document.removeEventListener('keydown', handleKeyDown),
-  }, [isOpen, results, selectedIndex, query]),
+    document.addEventListener('keydown', handleKeyDown);
+    return () => document.removeEventListener('keydown', handleKeyDown);
+  }, [isOpen, results, selectedIndex, query]);
 
   const handleSearch = useCallback(async () => {
-    if (!query.trim()) return,
-
+    if (!query.trim()) return;
     setIsLoading(true),
     
     // Simulate API call
     await new Promise(resolve => setTimeout(resolve, 500)),
-    
     // Filter results based on query
     const filteredResults = mockSearchResults.filter(result =>
       result.title.toLowerCase().includes(query.toLowerCase()) ||
       result.description.toLowerCase().includes(query.toLowerCase())
     ),
 
-    setResults(filteredResults),
+    setResults(filteredResults);
     setSuggestions(mockSuggestions),
-    setIsLoading(false),
-    setIsOpen(true),
+    setIsLoading(false);
+    setIsOpen(true);
     
     if (onSearch) {
-      onSearch(query),
+      onSearch(query);
     }
-  }, [query, onSearch]),
+  }, [query, onSearch]);
 
   const handleResultClick = (result: SearchResult) => {
     window.location.href = result.url;
-    setIsOpen(false),
+    setIsOpen(false);
     setQuery('')
-  },
+  };
 
   const handleSuggestionClick = (suggestion: SearchSuggestion) => {
     setQuery(suggestion.text);
     handleSearch()
-  },
+  };
 
   const clearSearch = () => {
-    setQuery(''),
+    setQuery('');
     setResults([]),
-    setIsOpen(false),
+    setIsOpen(false);
     setSelectedIndex(-1),
-    inputRef.current?.focus(),
-  },
+    inputRef.current?.focus();
+  };
 
   const getSearchIcon = () => {
     if (isLoading) {
@@ -154,8 +150,8 @@ export function EnhancedSearch({
         </motion.div>
       );
     }
-    return <Search className="w-5 h-5" />,
-  },
+    return <Search className="w-5 h-5" />;
+  };
 
   const getVariantClasses = () => {
     switch (variant) {

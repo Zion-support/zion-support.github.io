@@ -40,7 +40,7 @@ const benefits: Benefit[] = [
       "Transparent cost structure"
     ]
   }
-],
+];
 
 export function BenefitsSection() {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);

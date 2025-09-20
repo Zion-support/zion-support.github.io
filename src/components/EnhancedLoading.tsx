@@ -1,21 +1,21 @@
 import React, { useState, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
-  Loader2,
-  CheckCircle,
-  AlertCircle,
-  Zap,
-  Sparkles,
-  TrendingUp,
-  Cpu,
-  Database,
-  Network,
+  Loader2;
+  CheckCircle;
+  AlertCircle;
+  Zap;
+  Sparkles;
+  TrendingUp;
+  Cpu;
+  Database;
+  Network;
   Shield
 } from "lucide-react";
 interface LoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg',
-  text?: string,
-  fullScreen?: boolean,
+  text?: string;
+  fullScreen?: boolean;
 }
 
 export function LoadingSpinner({
@@ -28,7 +28,7 @@ export function LoadingSpinner({
   };
   const containerClasses = fullScreen
     ? 'fixed inset-0 flex items-center justify-center bg-zion-slate-dark/95 backdrop-blur-sm z-50'
-    : 'flex items-center justify-center p-8',
+    : 'flex items-center justify-center p-8';
 
   return (
     <div className={containerClasses}>
@@ -97,7 +97,7 @@ export function LoadingSpinner({
 }
 
 interface PageLoaderProps {
-  pageName?: string,
+  pageName?: string;
 }
 
 export function PageLoader({ pageName = 'Page' }: PageLoaderProps) {
@@ -177,8 +177,8 @@ export function PageLoader({ pageName = 'Page' }: PageLoaderProps) {
 }
 
 interface SkeletonLoaderProps {
-  lines?: number,
-  className?: string,
+  lines?: number;
+  className?: string;
 }
 
 export function SkeletonLoader({ lines = 3, className = '' }: SkeletonLoaderProps) {

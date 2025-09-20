@@ -5,33 +5,33 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Link } from "react-router-dom";
 import {
-  ArrowRight,
-  Users,
-  Zap,
-  Settings,
-  Search,
-  MessageSquare,
-  Smartphone,
-  Calendar,
-  BookOpen,
-  Code,
-  Building,
-  Clock,
-  Brain,
-  Server,
-  TrendingUp,
-  CheckCircle,
-  Network,
-  Monitor,
-  Bot,
-  FileText,
-  Video,
-  BarChart3,
-  AlertTriangle,
-  Eye,
-  PieChart,
-  PenTool,
-  Shield,
+  ArrowRight;
+  Users;
+  Zap;
+  Settings;
+  Search;
+  MessageSquare;
+  Smartphone;
+  Calendar;
+  BookOpen;
+  Code;
+  Building;
+  Clock;
+  Brain;
+  Server;
+  TrendingUp;
+  CheckCircle;
+  Network;
+  Monitor;
+  Bot;
+  FileText;
+  Video;
+  BarChart3;
+  AlertTriangle;
+  Eye;
+  PieChart;
+  PenTool;
+  Shield;
   Cloud
 } from "lucide-react";
 export function FeatureCTAs() {

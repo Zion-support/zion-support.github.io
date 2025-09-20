@@ -1,13 +1,13 @@
 import React from "react";
 import { motion } from "framer-motion";
 import {
-  Star,
-  Quote,
-  TrendingUp,
-  Users,
-  Award,
-  CheckCircle,
-  ArrowRight,
+  Star;
+  Quote;
+  TrendingUp;
+  Users;
+  Award;
+  CheckCircle;
+  ArrowRight;
   Heart
 } from "lucide-react";
 const successStories = [

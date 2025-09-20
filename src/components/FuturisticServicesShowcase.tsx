@@ -1,19 +1,19 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
-	Rocket,
-	Brain,
-	Zap,
-	Shield,
-	Globe,
-	TrendingUp,
-	Heart,
-	DollarSign,
-	Eye,
-	Bot,
-	ArrowRight,
-	Star,
-	Play,
+	Rocket;
+	Brain;
+	Zap;
+	Shield;
+	Globe;
+	TrendingUp;
+	Heart;
+	DollarSign;
+	Eye;
+	Bot;
+	ArrowRight;
+	Star;
+	Play;
 	Pause
 } from "lucide-react";
 interface ServiceShowcase {
@@ -52,28 +52,28 @@ const futuristicServices: ServiceShowcase[] = [
 	}
 ];
 export default function FuturisticServicesShowcase() {
-	const [currentService, setCurrentService] = useState(0),
-	const [isPlaying, setIsPlaying] = useState(true),
+	const [currentService, setCurrentService] = useState(0);
+	const [isPlaying, setIsPlaying] = useState(true);
 	useEffect(() => {
-		if (!isPlaying) return,
+		if (!isPlaying) return;
 		const interval = setInterval(() => {
-			setCurrentService((prev) => (prev + 1) % futuristicServices.length),
+			setCurrentService((prev) => (prev + 1) % futuristicServices.length);
 		}, 5000);
 		return () => clearInterval(interval);
 	}, [isPlaying]);
 	const getStatusColor = (status: string) => {
 		switch (status) {
 			case 'new': return 'bg-green-500';
-			case 'beta': return 'bg-yellow-500',
-			case 'active': return 'bg-blue-500',
+			case 'beta': return 'bg-yellow-500';
+			case 'active': return 'bg-blue-500';
 			default: return 'bg-gray-500'
 		}
 	};
 	const getStatusText = (status: string) => {
 		switch (status) {
 			case 'new': return 'NEW';
-			case 'beta': return 'BETA',
-			case 'active': return 'ACTIVE',
+			case 'beta': return 'BETA';
+			case 'active': return 'ACTIVE';
 			default: return 'UNKNOWN'
 		}
 	};

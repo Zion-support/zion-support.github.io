@@ -1,17 +1,17 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { 
-  Brain,
-  Zap, 
-  Shield, 
-  TrendingUp, 
-  Users, 
-  Globe, 
-  Cpu, 
-  Database,
-  ArrowRight,
-  Star,
-  CheckCircle,
+  Brain;
+  Zap;
+  Shield;
+  TrendingUp;
+  Users;
+  Globe;
+  Cpu;
+  Database;
+  ArrowRight;
+  Star;
+  CheckCircle;
   Rocket
 } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -23,9 +23,9 @@ interface AIService {
 }
 
 const AdvancedAIServicesHub: React.FC = () => {
-  const [selectedCategory, setSelectedCategory] = useState<string>('all'),
-  const [searchQuery, setSearchQuery] = useState(''),
-  const [sortBy, setSortBy] = useState<'name' | 'category' | 'status'>('name'),
+  const [selectedCategory, setSelectedCategory] = useState<string>('all');
+  const [searchQuery, setSearchQuery] = useState('');
+  const [sortBy, setSortBy] = useState<'name' | 'category' | 'status'>('name');
 
   const aiServices: AIService[] = [
     {
@@ -63,39 +63,39 @@ const AdvancedAIServicesHub: React.FC = () => {
       icon: Cpu,route: '/services/ai-healthcare',status: 'coming-soon'
     }
   ];
-  const categories = ['all', ...Array.from(new Set(aiServices.map(service => service.category)))],
+  const categories = ['all', ...Array.from(new Set(aiServices.map(service => service.category)))];
 
   const filteredServices = aiServices.filter(service => {
-    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory,
+    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
     const matchesSearch = service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         service.description.toLowerCase().includes(searchQuery.toLowerCase()),
-    return matchesCategory && matchesSearch,
-  }),
+                         service.description.toLowerCase().includes(searchQuery.toLowerCase());
+    return matchesCategory && matchesSearch;
+  });
 
   const sortedServices = [...filteredServices].sort((a, b) => {
     switch (sortBy) {
       case 'name':
-        return a.name.localeCompare(b.name),
+        return a.name.localeCompare(b.name);
       case 'category':
-        return a.category.localeCompare(b.category),
+        return a.category.localeCompare(b.category);
       case 'status':
-        return a.status.localeCompare(b.status),
+        return a.status.localeCompare(b.status);
       default: return 0
     }
   });
   const getStatusColor = (status: string) => {
     switch (status) {
       case 'active': return 'bg-green-500';
-      case 'beta': return 'bg-yellow-500',
-      case 'coming-soon': return 'bg-blue-500',
+      case 'beta': return 'bg-yellow-500';
+      case 'coming-soon': return 'bg-blue-500';
       default: return 'bg-gray-500'
     }
   };
   const getStatusText = (status: string) => {
     switch (status) {
       case 'active': return 'Live';
-      case 'beta': return 'Beta',
-      case 'coming-soon': return 'Coming Soon',
+      case 'beta': return 'Beta';
+      case 'coming-soon': return 'Coming Soon';
       default: return 'Unknown'
     }
   };

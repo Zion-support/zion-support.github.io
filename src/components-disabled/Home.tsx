@@ -1,18 +1,17 @@
 import React, { useState, useEffect, useCallback, useMemo } from "react";
 const Home: React.FC = () => {
-  const [isLoaded, setIsLoaded] = useState(false),
-  const [scrollY, setScrollY] = useState(0),
-  const [hoveredService, setHoveredService] = useState<number | null>(null),
+  const [isLoaded, setIsLoaded] = useState(false);
+  const [scrollY, setScrollY] = useState(0);
+  const [hoveredService, setHoveredService] = useState<number | null>(null);
 
   const handleScroll = useCallback(() => {
-    setScrollY(window.scrollY),
+    setScrollY(window.scrollY);
   }, []),
-
   useEffect(() => {
     setIsLoaded(true),
     window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll),
-  }, [handleScroll]),
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [handleScroll]);
 
   const services = useMemo(() => [
     {
@@ -39,7 +38,7 @@ const Home: React.FC = () => {
       title: "Space Technology",description: "Advanced aerospace and satellite solutions.",icon: "🚀",features: ["Satellite Systems", "Space Analytics", "Launch Services", "Orbital Mechanics"],
       gradient: "from-sky-500 to-blue-500",price: "Starting at $15,000/month"
     }
-  ], []),
+  ], []);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-gray-900 text-white">

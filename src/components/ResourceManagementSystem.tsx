@@ -1,44 +1,44 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
-  Users,
-  Calendar,
-  Clock,
-  Target,
-  TrendingUp,
-  AlertCircle,
-  CheckCircle,
-  XCircle,
-  Plus,
-  Edit,
-  Trash2,
-  Eye,
-  Download,
-  Share2,
-  Filter,
-  Search,
-  BarChart3,
-  PieChart,
-  Activity,
-  Zap,
-  Brain,
-  Cloud,
-  Shield,
-  Globe,
-  Settings,
-  RefreshCw,
-  ArrowUp,
-  ArrowDown,
-  Minus,
-  Star,
-  Award,
-  Briefcase,
-  Home,
-  Building,
-  Wifi,
-  Server,
-  Database,
-  Lock,
+  Users;
+  Calendar;
+  Clock;
+  Target;
+  TrendingUp;
+  AlertCircle;
+  CheckCircle;
+  XCircle;
+  Plus;
+  Edit;
+  Trash2;
+  Eye;
+  Download;
+  Share2;
+  Filter;
+  Search;
+  BarChart3;
+  PieChart;
+  Activity;
+  Zap;
+  Brain;
+  Cloud;
+  Shield;
+  Globe;
+  Settings;
+  RefreshCw;
+  ArrowUp;
+  ArrowDown;
+  Minus;
+  Star;
+  Award;
+  Briefcase;
+  Home;
+  Building;
+  Wifi;
+  Server;
+  Database;
+  Lock;
   Unlock
 } from "lucide-react";
 interface Resource {
@@ -50,26 +50,26 @@ interface ResourceStats {
 }
 
 interface ResourceManagementSystemProps {
-  showStats?: boolean,
-  showFilters?: boolean,
-  showCharts?: boolean,
-  maxResources?: number,
+  showStats?: boolean;
+  showFilters?: boolean;
+  showCharts?: boolean;
+  maxResources?: number;
 }
 
 export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> = ({
   showStats = true;
-  showFilters = true,
-  showCharts = true,
+  showFilters = true;
+  showCharts = true;
   maxResources = 20
 }) => {
-  const [resources, setResources] = useState<Resource[]>([]),
-  const [filteredResources, setFilteredResources] = useState<Resource[]>([]),
-  const [selectedType, setSelectedType] = useState<string>('all'),
-  const [selectedStatus, setSelectedStatus] = useState<string>('all'),
-  const [selectedPriority, setSelectedPriority] = useState<string>('all'),
-  const [searchQuery, setSearchQuery] = useState(''),
-  const [viewMode, setViewMode] = useState<'grid' | 'list' | 'timeline'>('grid'),
-  const [showResourceForm, setShowResourceForm] = useState(false),
+  const [resources, setResources] = useState<Resource[]>([]);
+  const [filteredResources, setFilteredResources] = useState<Resource[]>([]);
+  const [selectedType, setSelectedType] = useState<string>('all');
+  const [selectedStatus, setSelectedStatus] = useState<string>('all');
+  const [selectedPriority, setSelectedPriority] = useState<string>('all');
+  const [searchQuery, setSearchQuery] = useState('');
+  const [viewMode, setViewMode] = useState<'grid' | 'list' | 'timeline'>('grid');
+  const [showResourceForm, setShowResourceForm] = useState(false);
   const [editingResource, setEditingResource] = useState<Resource | null>(null),
 
   // Sample resource data
@@ -97,24 +97,23 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
         description: 'Complete DevOps toolchain for continuous integration and deployment',manager: 'Alex Wong',utilization: 90
       }
     ];
-    setResources(sampleResources),
-    setFilteredResources(sampleResources),
+    setResources(sampleResources);
+    setFilteredResources(sampleResources);
   }, []),
-
   // Filter resources
   useEffect(() => {
-    let filtered = resources,
+    let filtered = resources;
 
     if (selectedType !== 'all') {
-      filtered = filtered.filter(r => r.type === selectedType),
+      filtered = filtered.filter(r => r.type === selectedType);
     }
 
     if (selectedStatus !== 'all') {
-      filtered = filtered.filter(r => r.status === selectedStatus),
+      filtered = filtered.filter(r => r.status === selectedStatus);
     }
 
     if (selectedPriority !== 'all') {
-      filtered = filtered.filter(r => r.priority === selectedPriority),
+      filtered = filtered.filter(r => r.priority === selectedPriority);
     }
 
     if (searchQuery) {
@@ -123,34 +122,32 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
         r.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
         r.department.toLowerCase().includes(searchQuery.toLowerCase()) ||
         r.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))
-      ),
+      );
     }
 
-    setFilteredResources(filtered.slice(0, maxResources)),
+    setFilteredResources(filtered.slice(0, maxResources));
   }, [resources, selectedType, selectedStatus, selectedPriority, searchQuery, maxResources]),
-
   // Calculate resource stats
   const resourceStats = {
     totalResources: resources.length,availableResources: resources.filter(r => r.status === 'available').length,allocatedResources: resources.filter(r => r.status === 'allocated').length,maintenanceResources: resources.filter(r => r.status === 'maintenance').length,totalCapacity: resources.reduce((sum, r) => sum + r.capacity, 0),
-    currentUtilization: resources.reduce((sum, r) => sum + r.utilization, 0) / resources.length || 0,
-    averageCost: resources.reduce((sum, r) => sum + r.cost, 0) / resources.length || 0,
+    currentUtilization: resources.reduce((sum, r) => sum + r.utilization, 0) / resources.length || 0;
+    averageCost: resources.reduce((sum, r) => sum + r.cost, 0) / resources.length || 0;
     topDepartments: (() => {
       const deptCounts = resources.reduce((acc, r) => {
-        acc[r.department] = (acc[r.department] || 0) + 1,
-        return acc,
-      }, {} as Record<string, number>),
+        acc[r.department] = (acc[r.department] || 0) + 1;
+        return acc;
+      }, {} as Record<string, number>);
 
       return Object.entries(deptCounts)
         .map(([name, count]) => ({
-          name,
-          count,
+          name;
+          count;
           percentage: (count / resources.length) * 100
         }))
         .sort((a, b) => b.count - a.count)
-        .slice(0, 5),
+        .slice(0, 5);
     })()
   },
-
   // Get status color and icon
   const getStatusDisplay = (status: string) => {
     switch (status) {
@@ -166,15 +163,14 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
         return { color: 'text-zinc-400 bg-zinc-400/20', icon: <Circle className="w-4 h-4" /> };
     }
   },
-
   // Get type icon
   const getTypeIcon = (type: string) => {
     switch (type) {
       case 'human': return <Users className="w-5 h-5" />;
-      case 'infrastructure': return <Server className="w-5 h-5" />,
-      case 'software': return <Database className="w-5 h-5" />,
-      case 'equipment': return <Briefcase className="w-5 h-5" />,
-      case 'facility': return <Building className="w-5 h-5" />,
+      case 'infrastructure': return <Server className="w-5 h-5" />;
+      case 'software': return <Database className="w-5 h-5" />;
+      case 'equipment': return <Briefcase className="w-5 h-5" />;
+      case 'facility': return <Building className="w-5 h-5" />;
       default: return <Globe className="w-5 h-5" />
     }
   };
@@ -182,9 +178,9 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
   const getPriorityColor = (priority: string) => {
     switch (priority) {
       case 'low': return 'text-green-400 bg-green-400/20';
-      case 'medium': return 'text-yellow-400 bg-yellow-400/20',
-      case 'high': return 'text-orange-400 bg-orange-400/20',
-      case 'critical': return 'text-red-400 bg-red-400/20',
+      case 'medium': return 'text-yellow-400 bg-yellow-400/20';
+      case 'high': return 'text-orange-400 bg-orange-400/20';
+      case 'critical': return 'text-red-400 bg-red-400/20';
       default: return 'text-zinc-400 bg-zinc-400/20'
     }
   };
@@ -194,14 +190,13 @@ export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> =
       style: 'currency',currency: 'USD',minimumFractionDigits: 0,maximumFractionDigits: 0
     }).format(amount);
   },
-
   // Get utilization color
   const getUtilizationColor = (utilization: number) => {
     if (utilization >= 90) return 'text-red-400';
-    if (utilization >= 75) return 'text-yellow-400',
-    if (utilization >= 50) return 'text-blue-400',
+    if (utilization >= 75) return 'text-yellow-400';
+    if (utilization >= 50) return 'text-blue-400';
     return 'text-green-400'
-  },
+  };
 
   return (
     <div className="w-full max-w-7xl mx-auto p-6">

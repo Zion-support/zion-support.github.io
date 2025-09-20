@@ -1,59 +1,59 @@
 import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { 
-  Menu,
-  X, 
-  ChevronDown, 
-  ChevronRight,
-  Home,
-  Zap,
-  Brain,
-  Shield,
-  Cloud,
-  Cpu,
-  Users,
-  ShoppingCart,
-  BookOpen,
-  MessageCircle,
-  HelpCircle,
-  DollarSign,
-  Star,
-  Target,
-  TrendingUp,
-  Award,
-  Settings,
-  Globe,
-  Rocket,
-  Heart,
-  Lock,
-  Database,
-  Network,
-  Palette,
-  Video,
-  PenTool,
-  Atom,
-  Server,
-  Smartphone,
-  BarChart3,
-  Search,
-  FileText,
-  Calendar,
-  Briefcase,
-  Info,
-  Phone,
-  Mail,
+  Menu;
+  X;
+  ChevronDown;
+  ChevronRight;
+  Home;
+  Zap;
+  Brain;
+  Shield;
+  Cloud;
+  Cpu;
+  Users;
+  ShoppingCart;
+  BookOpen;
+  MessageCircle;
+  HelpCircle;
+  DollarSign;
+  Star;
+  Target;
+  TrendingUp;
+  Award;
+  Settings;
+  Globe;
+  Rocket;
+  Heart;
+  Lock;
+  Database;
+  Network;
+  Palette;
+  Video;
+  PenTool;
+  Atom;
+  Server;
+  Smartphone;
+  BarChart3;
+  Search;
+  FileText;
+  Calendar;
+  Briefcase;
+  Info;
+  Phone;
+  Mail;
   MapPin
 } from "lucide-react";
 interface SidebarItem {
   name: string,href: string,icon: React.ComponentType<any>;
   children?: SidebarItem[],
-  featured?: boolean,
+  featured?: boolean;
   description?: string
 }
 
 export function MainSidebar() {
-  const [isOpen, setIsOpen] = useState(false),
-  const [expandedSections, setExpandedSections] = useState<string[]>(['services']),
+  const [isOpen, setIsOpen] = useState(false);
+  const [expandedSections, setExpandedSections] = useState<string[]>(['services']);
   const location = useLocation();
   const toggleSection = (section: string) => {
     setExpandedSections(prev => 
@@ -180,9 +180,9 @@ export function MainSidebar() {
   ];
   const renderSidebarItem = (item: SidebarItem, level: number = 0) => {
     const isActive = location.pathname === item.href;
-    const hasChildren = item.children && item.children.length > 0,
-    const isExpanded = expandedSections.includes(item.name.toLowerCase()),
-    const isFeatured = item.featured,
+    const hasChildren = item.children && item.children.length > 0;
+    const isExpanded = expandedSections.includes(item.name.toLowerCase());
+    const isFeatured = item.featured;
 
     return (
       <div key={item.name} className="mb-1">
@@ -237,7 +237,7 @@ export function MainSidebar() {
         )}
       </div>
     );
-  },
+  };
 
   return (
     <>

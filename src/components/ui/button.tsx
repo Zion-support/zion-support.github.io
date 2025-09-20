@@ -3,17 +3,17 @@ interface ButtonProps {
   children: React.ReactNode;
   variant?: 'default' | 'outline' | 'ghost' | 'link',
   size?: 'sm' | 'md' | 'lg' | 'icon',
-  asChild?: boolean,
-  className?: string,
-  onClick?: () => void,
+  asChild?: boolean;
+  className?: string;
+  onClick?: () => void;
   type?: 'button' | 'submit' | 'reset',
   disabled?: boolean
 }
 export function Button({
-  children,
+  children;
   variant = 'default',
   size = 'md',
-  asChild = false,
+  asChild = false;
   className = '';
   onClick;
   type = 'button';
@@ -26,9 +26,9 @@ export function Button({
   const sizeClasses = {
     sm: 'px-3 py-1.5 text-sm',md: 'px-4 py-2 text-sm',lg: 'px-6 py-3 text-base',icon: 'w-10 h-10 p-0'
   };
-  const classes = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className}`,
+  const classes = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className}`;
   if (asChild) {
-    return <span className={classes}>{children}</span>,
+    return <span className={classes}>{children}</span>;
   }
   return (
     <button
@@ -39,7 +39,7 @@ export function Button({
     >
       {children}
     </button>
-  ),
+  );
 }
 // Export button variants for use in other components
 export const buttonVariants = {

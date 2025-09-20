@@ -3,9 +3,9 @@ import { motion } from "framer-motion";
 interface LoaderProps {
   size?: 'sm' | 'md' | 'lg',
   color?: 'primary' | 'secondary' | 'white',
-  text?: string,
-  fullScreen?: boolean,
-  showLogo?: boolean,
+  text?: string;
+  fullScreen?: boolean;
+  showLogo?: boolean;
 }
 export const PerformanceOptimizedLoader = memo<LoaderProps>(({
   size = 'md';
@@ -54,12 +54,11 @@ export const PerformanceOptimizedLoader = memo<LoaderProps>(({
     </div>
   );
 }),
-
 PerformanceOptimizedLoader.displayName = 'PerformanceOptimizedLoader',
 // Skeleton loader for content
 export function SkeletonLoader({
   className = "",
-  lines = 3,
+  lines = 3;
   height = "h-4"
 }: {
   className?: string;
@@ -103,15 +102,15 @@ export function CardSkeleton({ className = "" }: { className?: string }) {
         </div>
       </div>
     </div>
-  ),
+  );
 }
 // Grid skeleton loader
 export function GridSkeleton({
-  columns = 3,
-  rows = 2,
+  columns = 3;
+  rows = 2;
   className = ""
 }: {
-  columns?: number,
+  columns?: number;
   rows?: number;
   className?: string;
 }) {

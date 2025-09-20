@@ -2,11 +2,11 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Loader2, Zap, Brain, Cloud, Atom } from "lucide-react";
 interface LoadingSpinnerProps {
-  size?: 'sm' | 'md' | 'lg',
+  size?: 'sm' | 'md' | 'lg';
   variant?: 'default' | 'futuristic' | 'ai' | 'quantum',
-  text?: string,
-  showProgress?: boolean,
-  progress?: number,
+  text?: string;
+  showProgress?: boolean;
+  progress?: number;
 }
 
 const iconVariants = {
@@ -28,7 +28,7 @@ const pulseVariants = {
   }
 };
 export function EnhancedLoadingSpinner({ 
-  size = 'md', 
+  size = 'md'; 
   variant = 'default';
   text = 'Loading...';
   showProgress = false;
@@ -43,22 +43,22 @@ export function EnhancedLoadingSpinner({
   const getIcon = () => {
     switch (variant) {
       case 'ai':
-        return <Brain className="w-full h-full text-cyan-400" />,
+        return <Brain className="w-full h-full text-cyan-400" />;
       case 'quantum':
-        return <Atom className="w-full h-full text-purple-400" />,
+        return <Atom className="w-full h-full text-purple-400" />;
       case 'futuristic':
-        return <Zap className="w-full h-full text-blue-400" />,
+        return <Zap className="w-full h-full text-blue-400" />;
       default: return <Loader2 className="w-full h-full text-gray-400" />
     }
   };
   const getBackground = () => {
     switch (variant) {
       case 'ai':
-        return 'bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border-cyan-400/30',
+        return 'bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border-cyan-400/30';
       case 'quantum':
-        return 'bg-gradient-to-r from-purple-500/20 to-pink-500/20 border-purple-400/30',
+        return 'bg-gradient-to-r from-purple-500/20 to-pink-500/20 border-purple-400/30';
       case 'futuristic':
-        return 'bg-gradient-to-r from-blue-500/20 to-indigo-500/20 border-blue-400/30',
+        return 'bg-gradient-to-r from-blue-500/20 to-indigo-500/20 border-blue-400/30';
       default: return 'bg-gray-100 border-gray-200'
     }
   };

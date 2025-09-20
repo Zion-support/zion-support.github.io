@@ -42,12 +42,15 @@ export default function PerformanceMonitor() {
     measureFPS();
 
     // Calculate Lighthouse score (simplified)
-    const lighthouseScore = Math.max(0, Math.min(100, 
+    const lighthouseScore = Math.max(0, Math.min(100,
       100 - (loadTime / 10) - (memoryUsage * 2) - (networkLatency / 10)
     ));
 
       setMetrics({
-        loadTime: Math.round(loadTime),renderTime: Math.round(renderTime),memoryUsage: Math.round(memoryUsage * 100) / 100,networkLatency: Math.round(networkLatency);
+        loadTime: Math.round(loadTime),
+        renderTime: Math.round(renderTime),
+        memoryUsage: Math.round(memoryUsage * 100) / 100,
+        networkLatency: Math.round(networkLatency),
         fps,
         lighthouseScore: Math.round(lighthouseScore)
       });

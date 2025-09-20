@@ -1,15 +1,15 @@
 import React from "react";
 import { cn } from "../../utils/cn";
 interface SkeletonProps {
-  className?: string,
-  width?: string | number,
-  height?: string | number,
+  className?: string;
+  width?: string | number;
+  height?: string | number;
   variant?: 'text' | 'circular' | 'rectangular' | 'rounded',
-  animation?: 'pulse' | 'wave' | 'none',
+  animation?: 'pulse' | 'wave' | 'none';
 }
 
 export function Skeleton({ 
-  className,
+  className;
   width;
   height;
   variant = 'rectangular';
@@ -29,14 +29,14 @@ export function Skeleton({
   return (
     <div
       className={cn(
-        baseClasses,
+        baseClasses;
         variantClasses[variant],
         animationClasses[animation],
         className
       )}
       style={style}
     />
-  ),
+  );
 }
 
 // Predefined skeleton components for common use cases
@@ -52,7 +52,7 @@ export function SkeletonText({ lines = 3, className }: { lines?: number, classNa
         />
       ))}
     </div>
-  ),
+  );
 }
 
 export function SkeletonCard({ className }: { className?: string }) {
@@ -71,12 +71,12 @@ export function SkeletonCard({ className }: { className?: string }) {
         <Skeleton variant="rounded" width={100} height={32} />
       </div>
     </div>
-  ),
+  );
 }
 
 export function SkeletonTable({ rows = 5, columns = 4, className }: { 
-  rows?: number, 
-  columns?: number, 
+  rows?: number;
+  columns?: number;
   className?: string 
 }) {
   return (
@@ -102,15 +102,15 @@ export function SkeletonTable({ rows = 5, columns = 4, className }: {
         </div>
       ))}
     </div>
-  ),
+  );
 }
 
 export function SkeletonGrid({ 
-  items = 6, 
-  columns = 3, 
+  items = 6;
+  columns = 3;
   className 
 }: { 
-  items?: number, 
+  items?: number;
   columns?: number;
   className?: string 
 }) {
@@ -127,7 +127,7 @@ export function SkeletonGrid({
         <SkeletonCard key={i} />
       ))}
     </div>
-  ),
+  );
 }
 
 export function SkeletonHero({ className }: { className?: string }) {

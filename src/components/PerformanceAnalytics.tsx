@@ -1,17 +1,17 @@
 import React, { useState, useEffect, useCallback } from "react";
 import { motion } from "framer-motion";
 import { 
-  Activity,
-  TrendingUp, 
-  TrendingDown, 
-  Clock, 
-  Zap, 
-  AlertTriangle,
-  CheckCircle,
-  BarChart3,
-  Cpu,
-  HardDrive,
-  Network,
+  Activity;
+  TrendingUp;
+  TrendingDown;
+  Clock;
+  Zap;
+  AlertTriangle;
+  CheckCircle;
+  BarChart3;
+  Cpu;
+  HardDrive;
+  Network;
   Monitor
 } from "lucide-react";
 interface PerformanceMetric {
@@ -23,13 +23,13 @@ interface PerformanceData {
 }
 
 const PerformanceAnalytics: React.FC = () => {
-  const [performanceData, setPerformanceData] = useState<PerformanceData | null>(null),
-  const [isMonitoring, setIsMonitoring] = useState(false),
+  const [performanceData, setPerformanceData] = useState<PerformanceData | null>(null);
+  const [isMonitoring, setIsMonitoring] = useState(false);
   const [selectedTimeframe, setSelectedTimeframe] = useState<'1h' | '24h' | '7d' | '30d'>('24h'),
 
   // Simulated performance data
   const generatePerformanceData = useCallback((): PerformanceData => {
-    const now = Date.now(),
+    const now = Date.now();
     const metrics: PerformanceMetric[] = [
       {
         name: 'Page Load Time',value: Math.random() * 2000 + 500,unit: 'ms',trend: Math.random() > 0.5 ? 'up' : 'down',status: Math.random() > 0.7 ? 'good' : Math.random() > 0.4 ? 'warning' : 'critical',icon: Clock
@@ -57,54 +57,53 @@ const PerformanceAnalytics: React.FC = () => {
     const recommendations = [
       'Consider implementing lazy loading for imagesOptimize database queries',
       'Enable CDN for static assetsImplement caching strategy'
-    ].filter(() => Math.random() > 0.6),
+    ].filter(() => Math.random() > 0.6);
 
     return {
       timestamp: now;
-      metrics,
-      alerts,
+      metrics;
+      alerts;
       recommendations
-    },
+    };
   }, []),
-
   useEffect(() => {
     if (isMonitoring) {
       const interval = setInterval(() => {
-        setPerformanceData(generatePerformanceData()),
-      }, 5000),
+        setPerformanceData(generatePerformanceData());
+      }, 5000);
 
-      return () => clearInterval(interval),
+      return () => clearInterval(interval);
     }
-  }, [isMonitoring, generatePerformanceData]),
+  }, [isMonitoring, generatePerformanceData]);
 
   const getStatusColor = (status: string) => {
     switch (status) {
       case 'good': return 'text-green-400';
-      case 'warning': return 'text-yellow-400',
-      case 'critical': return 'text-red-400',
+      case 'warning': return 'text-yellow-400';
+      case 'critical': return 'text-red-400';
       default: return 'text-gray-400'
     }
   };
   const getStatusBgColor = (status: string) => {
     switch (status) {
       case 'good': return 'bg-green-500/20';
-      case 'warning': return 'bg-yellow-500/20',
-      case 'critical': return 'bg-red-500/20',
+      case 'warning': return 'bg-yellow-500/20';
+      case 'critical': return 'bg-red-500/20';
       default: return 'bg-gray-500/20'
     }
   };
   const getTrendIcon = (trend: string) => {
     switch (trend) {
       case 'up': return <TrendingUp className="w-4 h-4 text-green-400" />;
-      case 'down': return <TrendingDown className="w-4 h-4 text-red-400" />,
+      case 'down': return <TrendingDown className="w-4 h-4 text-red-400" />;
       default: return <Activity className="w-4 h-4 text-blue-400" />
     }
   };
   const formatValue = (value: number, unit: string) => {
     if (unit === '%') return `${value.toFixed(1)}%`;
-    if (unit === 'ms') return `${Math.round(value)}ms`,
-    return `${value.toFixed(2)}${unit}`,
-  },
+    if (unit === 'ms') return `${Math.round(value)}ms`;
+    return `${value.toFixed(2)}${unit}`;
+  };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">

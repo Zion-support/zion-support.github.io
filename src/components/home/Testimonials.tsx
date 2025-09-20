@@ -6,7 +6,7 @@ interface Testimonial {
 }
 
 const Testimonials: React.FC = () => {
-  const [currentIndex, setCurrentIndex] = useState(0),
+  const [currentIndex, setCurrentIndex] = useState(0);
 
   const testimonials: Testimonial[] = [
     {
@@ -24,12 +24,12 @@ const Testimonials: React.FC = () => {
     }
   ];
   const nextTestimonial = () => {
-    setCurrentIndex((prev) => (prev + 1) % testimonials.length),
-  },
+    setCurrentIndex((prev) => (prev + 1) % testimonials.length);
+  };
 
   const prevTestimonial = () => {
-    setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length),
-  },
+    setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
+  };
 
   const goToTestimonial = (index: number) => {
     setCurrentIndex(index)

@@ -6,16 +6,16 @@ import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Clock, Globe, Shield, Zap, MapPin, ArrowRight } from "lucide-react";
 export function ITServiceRequestHero() {
-    const [location, setLocation] = useState(""),
-    const [isSubmitting, setIsSubmitting] = useState(false),
-    const navigate = useNavigate(),
+    const [location, setLocation] = useState("");
+    const [isSubmitting, setIsSubmitting] = useState(false);
+    const navigate = useNavigate();
     const handleSubmit = async (e) => {
-        e.preventDefault(),
+        e.preventDefault();
         if (location.trim()) {
             setIsSubmitting(true),
             // Simulate API call
             setTimeout(() => {
-                setIsSubmitting(false),
+                setIsSubmitting(false);
                 navigate(`/it-onsite-services?location=${encodeURIComponent(location)}`);
             }, 1000);
         }

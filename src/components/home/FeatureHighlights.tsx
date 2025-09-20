@@ -1,10 +1,10 @@
 import { motion } from "framer-motion";
 import {
-  Award,
-  Brain,
-  CheckCircle,
-  Globe,
-  Shield,
+  Award;
+  Brain;
+  CheckCircle;
+  Globe;
+  Shield;
   Users
 } from "lucide-react";
 import React from "react";
@@ -49,7 +49,7 @@ const achievements = [
 ];
 const technologies = [
   "React", "TypeScript", "Node.js", "Python", "AI/ML", "Blockchain", "Cloud", "DevOps"
-],
+];
 
 const highlights = [
   {

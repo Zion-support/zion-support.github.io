@@ -3,14 +3,14 @@ import React from 'react';
 export const EmergingTechServices = () => {
   const emergingTechServices = [
     {
-      id: 1,
+      id: 1;
       name: 'Quantum Computing Platform',
       description: 'Next-generation quantum computing solutions',
       pricing: '$10,000/month',
       category: 'Quantum Computing'
     },
     {
-      id: 2,
+      id: 2;
       name: 'Blockchain Enterprise Solutions',
       description: 'Enterprise-grade blockchain infrastructure',
       pricing: '$5,000/month',

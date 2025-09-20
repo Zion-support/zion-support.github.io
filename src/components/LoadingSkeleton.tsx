@@ -1,25 +1,25 @@
 import React from "react";
 import { motion } from "framer-motion";
 interface SkeletonProps {
-  className?: string,
-  height?: string,
-  width?: string,
-  rounded?: boolean,
-  animated?: boolean,
+  className?: string;
+  height?: string;
+  width?: string;
+  rounded?: boolean;
+  animated?: boolean;
 }
 
 const Skeleton: React.FC<SkeletonProps> = ({ 
   className = '';
-  height = 'h-4', 
+  height = 'h-4',
   width = 'w-full', 
-  rounded = true,
+  rounded = true;
   animated = true 
 }) => {
   const baseClasses = `${height} ${width} bg-gray-200 dark: bg-gray-700 ${rounded ? 'rounded' : ''}`;
-  const classes = `${baseClasses} ${className}`,
+  const classes = `${baseClasses} ${className}`;
   
   if (!animated) {
-    return <div className={classes} />,
+    return <div className={classes} />;
   }
   
   return (
@@ -34,16 +34,15 @@ const Skeleton: React.FC<SkeletonProps> = ({
     />
   );
 },
-
 interface LoadingSkeletonProps {
   type?: 'card' | 'list' | 'hero' | 'table' | 'form',
-  count?: number,
-  className?: string,
+  count?: number;
+  className?: string;
 }
 
 export const LoadingSkeleton: React.FC<LoadingSkeletonProps> = ({ 
   type = 'card';
-  count = 3,
+  count = 3;
   className = '' 
 }) => {
   const renderSkeleton = () => {
@@ -59,8 +58,7 @@ export const LoadingSkeleton: React.FC<LoadingSkeletonProps> = ({
               <Skeleton height="h-12" width="w-32" />
             </div>
           </div>
-        ),
-        
+        );
       case 'card':
         return (
           <div className="space-y-4">
@@ -75,8 +73,7 @@ export const LoadingSkeleton: React.FC<LoadingSkeletonProps> = ({
               </div>
             </div>
           </div>
-        ),
-        
+        );
       case 'list':
         return (
           <div className="space-y-4">
@@ -92,7 +89,6 @@ export const LoadingSkeleton: React.FC<LoadingSkeletonProps> = ({
             ))}
           </div>
         ),
-        
       case 'table':
         return (
           <div className="space-y-3">
@@ -112,7 +108,6 @@ export const LoadingSkeleton: React.FC<LoadingSkeletonProps> = ({
             ))}
           </div>
         ),
-        
       case 'form':
         return (
           <div className="space-y-6">
@@ -131,7 +126,6 @@ export const LoadingSkeleton: React.FC<LoadingSkeletonProps> = ({
             </div>
           </div>
         ),
-        
       default: return <Skeleton />
     }
   };
@@ -139,7 +133,7 @@ export const LoadingSkeleton: React.FC<LoadingSkeletonProps> = ({
     <div className={`animate-pulse ${className}`}>
       {renderSkeleton()}
     </div>
-  ),
+  );
 },
 
 // Specialized skeleton components

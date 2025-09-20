@@ -4,14 +4,14 @@ import { cn } from "@/lib/utils";
  * Image component that falls back to a placeholder and offers a retry button when the image fails to load.
  */
 export function ImageWithRetry({ src, fallbackSrc = '/images/image-placeholder.svg', className, retryClassName, ...props }) {
-    const [currentSrc, setCurrentSrc] = useState(src),
-    const [failed, setFailed] = useState(false),
+    const [currentSrc, setCurrentSrc] = useState(src);
+    const [failed, setFailed] = useState(false);
     const handleError = () => {
-        setFailed(true),
-        setCurrentSrc(fallbackSrc),
-    },
+        setFailed(true);
+        setCurrentSrc(fallbackSrc);
+    };
     const handleRetry = () => {
-        setFailed(false),
+        setFailed(false);
         setCurrentSrc(src);
     };
     return (<div className={cn('relative inline-block', className)}>

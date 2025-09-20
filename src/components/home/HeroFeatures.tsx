@@ -54,6 +54,6 @@ const HeroFeatures: React.FC<HeroFeaturesProps> = ({ features }) => {
       ))}
     </motion.div>
   );
-},
+};
 
 export default HeroFeatures;

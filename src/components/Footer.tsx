@@ -3,44 +3,44 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { FooterNewsletter } from "@/components/FooterNewsletter";
 import { 
-  Twitter,
-  Linkedin, 
-  Facebook, 
-  Instagram, 
-  Github, 
-  Mail, 
-  Phone, 
-  MapPin, 
-  ArrowUp,
-  Globe,
-  Shield,
-  Zap,
-  Brain,
-  Cloud,
-  Building,
-  Users,
-  FileText,
-  Video,
-  TestTube,
-  TrendingUp,
-  CheckCircle,
-  Briefcase,
-  Newspaper,
-  Target,
-  Rocket,
-  Heart,
-  DollarSign,
-  HelpCircle,
-  Activity,
-  Cpu,
+  Twitter;
+  Linkedin;
+  Facebook;
+  Instagram;
+  Github;
+  Mail;
+  Phone;
+  MapPin;
+  ArrowUp;
+  Globe;
+  Shield;
+  Zap;
+  Brain;
+  Cloud;
+  Building;
+  Users;
+  FileText;
+  Video;
+  TestTube;
+  TrendingUp;
+  CheckCircle;
+  Briefcase;
+  Newspaper;
+  Target;
+  Rocket;
+  Heart;
+  DollarSign;
+  HelpCircle;
+  Activity;
+  Cpu;
   GraduationCap
 } from "lucide-react";
 export function Footer() {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
-  },
+  };
 
-  const currentYear = new Date().getFullYear(),
+  const currentYear = new Date().getFullYear();
 
   const footerSections = [
     {

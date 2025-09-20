@@ -1,15 +1,15 @@
 import { AnimatePresence, motion } from "framer-motion";
 import {
-    BarChart3,
-    Clock,
-    Eye,
-    Monitor,
-    RefreshCw,
-    Smartphone,
-    Tablet,
-    Target,
-    Users,
-    X,
+    BarChart3;
+    Clock;
+    Eye;
+    Monitor;
+    RefreshCw;
+    Smartphone;
+    Tablet;
+    Target;
+    Users;
+    X;
     Zap
 } from "lucide-react";
 import { useCallback, useEffect, useRef, useState } from "react";
@@ -27,15 +27,15 @@ interface AnalyticsData {
 
 interface AdvancedAnalyticsProps {
   enabled: boolean;
-  trackingId?: string,
-  enableHeatmap?: boolean,
-  enableSessionRecording?: boolean,
+  trackingId?: string;
+  enableHeatmap?: boolean;
+  enableSessionRecording?: boolean;
   enableAITesting?: boolean
 }
 
 export function AdvancedAnalytics({ 
-  enabled, 
-  trackingId,
+  enabled;
+  trackingId;
   enableHeatmap = false;
   enableSessionRecording = false;
   enableAITesting = false
@@ -49,10 +49,10 @@ export function AdvancedAnalytics({
       clicks: 0,scrolls: 0,formSubmissions: 0,errors: 0
     }
   });
-  const [isTracking, setIsTracking] = useState(false),
-  const [sessionStart, setSessionStart] = useState<number>(Date.now()),
-  const [currentPage, setCurrentPage] = useState<string>(window.location.pathname),
-  const [userSession, setUserSession] = useState<string>(''),
+  const [isTracking, setIsTracking] = useState(false);
+  const [sessionStart, setSessionStart] = useState<number>(Date.now());
+  const [currentPage, setCurrentPage] = useState<string>(window.location.pathname);
+  const [userSession, setUserSession] = useState<string>('');
   const [heatmapData, setHeatmapData] = useState<Array<{ x: number, y: number, type: 'click' | 'scroll' | 'hover' }>>([]);
   const trackingRef = useRef<{
     pageViews: number,clicks: number,scrolls: number,formSubmissions: number,errors: number,startTime: number
@@ -63,81 +63,75 @@ export function AdvancedAnalytics({
   useEffect(() => {
     const sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
     setUserSession(sessionId),
-    localStorage.setItem('analytics_session_id', sessionId),
+    localStorage.setItem('analytics_session_id', sessionId);
   }, []),
-
   // Track page views
   const trackPageView = useCallback((path: string) => {
     if (!enabled) return;
     setCurrentPage(path),
-    trackingRef.current.pageViews++,
+    trackingRef.current.pageViews++;
     
     const pageViewData = {
       sessionId: userSession;
-      path,
+      path;
       timestamp: new Date().toISOString(),referrer: document.referrer,userAgent: navigator.userAgent,screenResolution: `${screen.width}x${screen.height}`;
       viewport: `${window.innerWidth}x${window.innerHeight}`;
       language: navigator.language,timezone: Intl.DateTimeFormat().resolvedOptions().timeZone
     };
     // Send to analytics service
     this.sendAnalyticsData('pageview', pageViewData),
-    
     // Update local state
     setAnalyticsData(prev => ({
-      ...prev,
+      ...prev;
       pageViews: prev.pageViews + 1
     }));
   }, [enabled, userSession]),
-
   // Track user interactions
   const trackInteraction = useCallback((type: 'click' | 'scroll' | 'form' | 'error', data?: any) => {
-    if (!enabled) return,
+    if (!enabled) return;
 
     const interactionData = {
       sessionId: userSession;
-      type,
+      type;
       timestamp: new Date().toISOString(),page: currentPage;
-      data,
+      data;
       element: data?.target?.tagName || 'unknown',position: data?.position || null
     };
     // Update tracking ref
     switch (type) {
       case 'click':
         trackingRef.current.clicks++,
-        break,
+        break;
       case 'scroll':
         trackingRef.current.scrolls++,
-        break,
+        break;
       case 'form':
         trackingRef.current.formSubmissions++,
-        break,
+        break;
       case 'error':
         trackingRef.current.errors++,
-        break,
+        break;
     }
 
     // Send to analytics service
     this.sendAnalyticsData('interaction', interactionData),
-
     // Update local state
     setAnalyticsData(prev => ({
-      ...prev,
+      ...prev;
       interactions: {
         ...prev.interactions;
         [type === 'form' ? 'formSubmissions' : type === 'error' ? 'errors' : `${type}s`]: 
           prev.interactions[type === 'form' ? 'formSubmissions' : type === 'error' ? 'errors' : `${type}s`] + 1
       }
-    })),
+    }));
   }, [enabled, userSession, currentPage]),
-
   // Track performance metrics
   const trackPerformance = useCallback(() => {
-    if (!enabled) return,
-
+    if (!enabled) return;
     // Use Performance API to get metrics
     if ('performance' in window) {
-      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming,
-      const paint = performance.getEntriesByType('paint'),
+      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+      const paint = performance.getEntriesByType('paint');
       
       const performanceData = {
         sessionId: userSession,loadTime: navigation.loadEventEnd - navigation.loadEventStart,firstPaint: paint.find(entry => entry.name === 'first-paint')?.startTime || 0,firstContentfulPaint: paint.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0,largestContentfulPaint: 0, // Will be updated by observer
@@ -145,40 +139,34 @@ export function AdvancedAnalytics({
       };
       // Update local state
       setAnalyticsData(prev => ({
-        ...prev,
+        ...prev;
         performance: {
           loadTime: performanceData.loadTime,firstPaint: performanceData.firstPaint,firstContentfulPaint: performanceData.firstContentfulPaint,largestContentfulPaint: performanceData.largestContentfulPaint
         }
       }));
       // Send to analytics service
-      this.sendAnalyticsData('performance', performanceData),
+      this.sendAnalyticsData('performance', performanceData);
     }
   }, [enabled, userSession]),
-
   // Setup event listeners
   useEffect(() => {
-    if (!enabled) return,
-
+    if (!enabled) return;
     setIsTracking(true),
-
     // Track initial page view
     trackPageView(window.location.pathname),
 
     // Track performance metrics
     trackPerformance(),
-
     // Setup click tracking
     const handleClick = (e: MouseEvent) => {
       const target = e.target as HTMLElement;
       const position = { x: e.clientX, y: e.clientY };
       trackInteraction('click', { target, position }),
-      
       // Add to heatmap data
       if (enableHeatmap) {
         setHeatmapData(prev => [...prev, { x: position.x, y: position.y, type: 'click' }]);
       }
     },
-
     // Setup scroll tracking
     let scrollTimeout: NodeJS.Timeout;
     const handleScroll = () => {
@@ -187,9 +175,8 @@ export function AdvancedAnalytics({
         trackInteraction('scroll', { 
           scrollY: window.scrollY,scrollHeight: document.documentElement.scrollHeight 
         });
-      }, 100),
+      }, 100);
     },
-
     // Setup form submission tracking
     const handleFormSubmit = (e: Event) => {
       const form = e.target as HTMLFormElement;
@@ -197,45 +184,40 @@ export function AdvancedAnalytics({
         formId: form.id || form.className,formAction: form.action,formMethod: form.method
       });
     },
-
     // Setup error tracking
     const handleError = (e: ErrorEvent) => {
       trackInteraction('error', {
         message: e.message,filename: e.filename,lineno: e.lineno,colno: e.colno,error: e.error?.stack
       });
     },
-
     // Setup unhandled promise rejection tracking
     const handleUnhandledRejection = (e: PromiseRejectionEvent) => {
       trackInteraction('error', {
         message: e.reason?.message || 'Unhandled Promise Rejection',reason: e.reason
       });
     },
-
     // Add event listeners
     document.addEventListener('click', handleClick),
     document.addEventListener('scroll', handleScroll),
     document.addEventListener('submit', handleFormSubmit),
     window.addEventListener('error', handleError),
     window.addEventListener('unhandledrejection', handleUnhandledRejection),
-
     // Track page visibility changes
     const handleVisibilityChange = () => {
       if (document.hidden) {
         // Page hidden - track session end
-        const sessionDuration = Date.now() - sessionStart,
+        const sessionDuration = Date.now() - sessionStart;
         setAnalyticsData(prev => ({
-          ...prev,
+          ...prev;
           sessionDuration: sessionDuration / 1000 // Convert to seconds
         }));
       } else {
         // Page visible - track session resume
-        setSessionStart(Date.now()),
+        setSessionStart(Date.now());
       }
     },
 
     document.addEventListener('visibilitychange', handleVisibilityChange),
-
     // Cleanup
     return () => {
       document.removeEventListener('click', handleClick),
@@ -243,22 +225,20 @@ export function AdvancedAnalytics({
       document.removeEventListener('submit', handleFormSubmit),
       window.removeEventListener('error', handleError),
       window.removeEventListener('unhandledrejection', handleUnhandledRejection),
-      document.removeEventListener('visibilitychange', handleVisibilityChange),
-      clearTimeout(scrollTimeout),
-    },
+      document.removeEventListener('visibilitychange', handleVisibilityChange);
+      clearTimeout(scrollTimeout);
+    };
   }, [enabled, trackPageView, trackPerformance, trackInteraction, sessionStart, enableHeatmap]),
-
   // Setup performance observer for LCP
   useEffect(() => {
-    if (!enabled || !('PerformanceObserver' in window)) return,
-
+    if (!enabled || !('PerformanceObserver' in window)) return;
     try {
       const lcpObserver = new PerformanceObserver((list) => {
-        const entries = list.getEntries(),
-        const lastEntry = entries[entries.length - 1],
+        const entries = list.getEntries();
+        const lastEntry = entries[entries.length - 1];
         if (lastEntry) {
           setAnalyticsData(prev => ({
-            ...prev,
+            ...prev;
             performance: {
               ...prev.performance;
               largestContentfulPaint: lastEntry.startTime
@@ -268,51 +248,48 @@ export function AdvancedAnalytics({
       }),
 
       lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
-      return () => lcpObserver.disconnect(),
+      return () => lcpObserver.disconnect();
     } catch (error) {
-      console.warn('PerformanceObserver not supported:', error),
+      console.warn('PerformanceObserver not supported:', error);
     }
   }, [enabled]),
-
   // Send analytics data to service
   const sendAnalyticsData = useCallback(async (eventType: string, data: any) => {
     if (!trackingId) return;
     try {
       const analyticsPayload = {
-        trackingId,
-        eventType,
-        data,
+        trackingId;
+        eventType;
+        data;
         timestamp: new Date().toISOString(),sessionId: userSession
       };
       // Store analytics data locally instead of sending to non-existent API
       try {
-        const storedAnalytics = localStorage.getItem('analytics-data') || '[]',
+        const storedAnalytics = localStorage.getItem('analytics-data') || '[]';
         const analytics = JSON.parse(storedAnalytics),
         analytics.push(analyticsPayload),
         
         // Keep only last 100 analytics records
         if (analytics.length > 100) {
-          analytics.splice(0, analytics.length - 100),
+          analytics.splice(0, analytics.length - 100);
         }
         
         localStorage.setItem('analytics-data', JSON.stringify(analytics)),
         
         // Log analytics for debugging (remove in production)
         if (process.env['NODE_ENV'] === 'development') {
-          console.log('Analytics data stored locally:', analyticsPayload),
+          console.log('Analytics data stored locally:', analyticsPayload);
         }
       } catch (error) {
-        console.warn('Failed to store analytics data locally:', error),
+        console.warn('Failed to store analytics data locally:', error);
       }
     } catch (error) {
-      console.warn('Failed to send analytics data:', error),
+      console.warn('Failed to send analytics data:', error);
     }
   }, [trackingId, userSession]),
-
   // Generate mock data for demonstration
   useEffect(() => {
-    if (!enabled) return,
-
+    if (!enabled) return;
     // Simulate data collection
     const mockData: AnalyticsData = {
       pageViews: Math.floor(Math.random() * 1000) + 500,uniqueVisitors: Math.floor(Math.random() * 500) + 200,sessionDuration: Math.floor(Math.random() * 300) + 120,bounceRate: Math.random() * 40 + 20,conversionRate: Math.random() * 5 + 1,topPages: [
@@ -339,10 +316,10 @@ export function AdvancedAnalytics({
         clicks: Math.floor(Math.random() * 500) + 200,scrolls: Math.floor(Math.random() * 1000) + 500,formSubmissions: Math.floor(Math.random() * 50) + 20,errors: Math.floor(Math.random() * 10) + 2
       }
     };
-    setAnalyticsData(mockData),
-  }, [enabled]),
+    setAnalyticsData(mockData);
+  }, [enabled]);
 
-  if (!enabled) return null,
+  if (!enabled) return null;
 
   return (
     <>

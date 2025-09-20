@@ -1,15 +1,15 @@
 import React from "react";
 import { motion } from "framer-motion";
 import {
-  Shield,
-  Lock,
-  CheckCircle,
-  AlertTriangle,
-  Users,
-  Award,
-  FileText,
-  Globe,
-  Server,
+  Shield;
+  Lock;
+  CheckCircle;
+  AlertTriangle;
+  Users;
+  Award;
+  FileText;
+  Globe;
+  Server;
   Eye
 } from "lucide-react";
 const securityFeatures = [
@@ -59,7 +59,7 @@ const complianceFeatures = [
       "Automated compliance reporting"
     ]
   }
-],
+];
 
 export function SecurityComplianceSection() {
   return (

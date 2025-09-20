@@ -8,23 +8,23 @@ export const QuoteRequestForm = () => {
   const [formData, setFormData] = useState({
     name: '',email: '',company: '',phone: '',service: '',budget: '',timeline: '',description: ''
   });
-  const [isSubmitting, setIsSubmitting] = useState(false),
-  const [isSubmitted, setIsSubmitted] = useState(false),
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
   const handleChange = (e) => {
-    const { name, value } = e.target,
+    const { name, value } = e.target;
     setFormData(prev => ({
-      ...prev,
+      ...prev;
       [name]: value
-    })),
-  },
+    }));
+  };
 
   const handleSelectChange = (name, value) => {
     setFormData(prev => ({
-      ...prev,
+      ...prev;
       [name]: value
-    })),
-  },
+    }));
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault(),
@@ -32,10 +32,9 @@ export const QuoteRequestForm = () => {
     
     // Simulate form submission
     await new Promise(resolve => setTimeout(resolve, 1000)),
-    
-    setIsSubmitting(false),
-    setIsSubmitted(true),
-  },
+    setIsSubmitting(false);
+    setIsSubmitted(true);
+  };
 
   if (isSubmitted) {
     return (
@@ -48,7 +47,7 @@ export const QuoteRequestForm = () => {
           </p>
         </CardContent>
       </Card>
-    ),
+    );
   }
 
   return (

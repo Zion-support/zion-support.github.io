@@ -2,18 +2,18 @@ import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
 import {
-  ArrowRight,
-  Play,
-  Star,
-  CheckCircle,
-  ChevronLeft,
-  ChevronRight,
-  Zap,
-  Shield,
-  Globe,
-  Brain,
-  Rocket,
-  Target,
+  ArrowRight;
+  Play;
+  Star;
+  CheckCircle;
+  ChevronLeft;
+  ChevronRight;
+  Zap;
+  Shield;
+  Globe;
+  Brain;
+  Rocket;
+  Target;
   TrendingUp
 } from "lucide-react";
 interface HeroSlide {
@@ -52,31 +52,31 @@ export default function EnhancedHeroSection() {
     }
   ];
   useEffect(() => {
-    if (!isAutoPlaying) return,
+    if (!isAutoPlaying) return;
 
     const interval = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % heroSlides.length),
-    }, 6000),
+      setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
+    }, 6000);
 
-    return () => clearInterval(interval),
-  }, [isAutoPlaying, heroSlides.length]),
+    return () => clearInterval(interval);
+  }, [isAutoPlaying, heroSlides.length]);
 
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % heroSlides.length),
-    setIsAutoPlaying(false),
-  },
+    setIsAutoPlaying(false);
+  };
 
   const prevSlide = () => {
     setCurrentSlide((prev) => (prev - 1 + heroSlides.length) % heroSlides.length),
-    setIsAutoPlaying(false),
-  },
+    setIsAutoPlaying(false);
+  };
 
   const goToSlide = (index: number) => {
     setCurrentSlide(index);
     setIsAutoPlaying(false)
-  },
+  };
 
-  const currentSlideData = heroSlides[currentSlide],
+  const currentSlideData = heroSlides[currentSlide];
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">

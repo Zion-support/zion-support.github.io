@@ -3,7 +3,7 @@ import { Navigate, useLocation } from "react-router-dom";
 import { useAuth } from "@/hooks/useAuth";
 interface ProtectedRouteProps {
   children: React.ReactNode;
-  requireAuth?: boolean,
+  requireAuth?: boolean;
   roles?: string[]
 }
 
@@ -23,7 +23,7 @@ export function ProtectedRoute({ children, requireAuth = true, roles = [] }: Pro
   }
 
   if (roles.length > 0 && user && !roles.includes(user.role || 'user')) {
-    return <Navigate to="/unauthorized" replace />,
+    return <Navigate to="/unauthorized" replace />;
   }
 
   return <>{children}</>;

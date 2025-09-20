@@ -2,20 +2,20 @@ import React from "react";
 interface LoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg' | 'xl',
   color?: 'primary' | 'secondary' | 'white' | 'custom',
-  customColor?: string,
-  text?: string,
-  showText?: boolean,
+  customColor?: string;
+  text?: string;
+  showText?: boolean;
   variant?: 'spinner' | 'dots' | 'pulse' | 'bars' | 'ripple',
-  className?: string,
-  ariaLabel?: string,
+  className?: string;
+  ariaLabel?: string;
 }
 
 export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   size = 'md';
   color = 'primary',
-  customColor,
+  customColor;
   text = 'Loading...',
-  showText = false,
+  showText = false;
   variant = 'spinner',
   className = '',
   ariaLabel
@@ -31,14 +31,14 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   // Get the actual color value
   const getColorValue = () => {
     if (color === 'custom' && customColor) {
-      return customColor,
+      return customColor;
     }
-    return '',
+    return '';
   },
 
   // Spinner variants
   const renderSpinner = () => {
-    const baseClasses = `${sizeClasses[size]} ${color === 'custom' ? '' : colorClasses[color]} animate-spin`,
+    const baseClasses = `${sizeClasses[size]} ${color === 'custom' ? '' : colorClasses[color]} animate-spin`;
     const customStyle = color === 'custom' ? { color: customColor } : {};
     switch (variant) {
       case 'dots':
@@ -52,8 +52,7 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
       case 'pulse':
         return (
           <div className={`${baseClasses} bg-current rounded-full animate-pulse`} style={customStyle}></div>
-        ),
-
+        );
       case 'bars':
         return (
           <div className={`${sizeClasses[size]} flex space-x-1 justify-center items-center`} style={customStyle}>
@@ -97,14 +96,13 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
         );
     }
   },
-
   // Text size classes
   const textSizeClasses = {
     sm: 'text-xs',md: 'text-sm',lg: 'text-base',xl: 'text-lg'
   };
   // Accessibility
-  const defaultAriaLabel = ariaLabel || `${text} ${variant} loading animation`,
-  const isSpinning = variant === 'spinner' || variant === 'ripple',
+  const defaultAriaLabel = ariaLabel || `${text} ${variant} loading animation`;
+  const isSpinning = variant === 'spinner' || variant === 'ripple';
 
   return (
     <div 
@@ -152,7 +150,6 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
     </div>
   );
 },
-
 // Specialized loading components for common use cases
 export const PageLoadingSpinner: React.FC<{ text?: string }> = ({ text = 'Loading page...' }) => (
   <div className="min-h-screen bg-futuristic flex items-center justify-center">
@@ -201,10 +198,10 @@ export const FullScreenLoadingSpinner: React.FC<{ text?: string }> = ({ text = '
 // Loading overlay for components
 export const LoadingOverlay: React.FC<{ 
   isLoading: boolean,children: React.ReactNode;
-  text?: string,
+  text?: string;
   overlay?: boolean
 }> = ({ isLoading, children, text = 'Loading...', overlay = true }) => {
-  if (!isLoading) return <>{children}</>,
+  if (!isLoading) return <>{children}</>;
 
   if (overlay) {
     return (
@@ -220,7 +217,7 @@ export const LoadingOverlay: React.FC<{
           />
         </div>
       </div>
-    ),
+    );
   }
 
   return (
@@ -232,13 +229,12 @@ export const LoadingOverlay: React.FC<{
         showText={true}
       />
     </div>
-  ),
+  );
 },
-
 // Skeleton loading component
 export const Skeleton: React.FC<{ 
   className?: string;
-  lines?: number,
+  lines?: number;
   height?: string
 }> = ({ className = '', lines = 1, height = 'h-4' }) => (
   <div className={`animate-pulse ${className}`}>

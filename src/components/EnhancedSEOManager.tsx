@@ -2,9 +2,9 @@ import React, { useEffect } from "react";
 import { Helmet } from "react-helmet-async";
 interface SEOData {
   title: string,description: string,keywords: string[];
-  ogImage?: string,
-  ogType?: string,
-  canonicalUrl?: string,
+  ogImage?: string;
+  ogType?: string;
+  canonicalUrl?: string;
   structuredData?: object
 }
 
@@ -17,29 +17,27 @@ const EnhancedSEOManager: React.FC<EnhancedSEOManagerProps> = ({ seoData, childr
     // Update meta tags dynamically
     const updateMetaTags = () => {
       // Update title
-      document.title = seoData.title,
-      
+      document.title = seoData.title;
       // Update meta description
-      let metaDesc = document.querySelector('meta[name="description"]'),
+      let metaDesc = document.querySelector('meta[name="description"]');
       if (!metaDesc) {
         metaDesc = document.createElement('meta'),
         metaDesc.setAttribute('namedescription'),
-        document.head.appendChild(metaDesc),
+        document.head.appendChild(metaDesc);
       }
       metaDesc.setAttribute('content', seoData.description),
       
       // Update keywords
-      let metaKeywords = document.querySelector('meta[name="keywords"]'),
+      let metaKeywords = document.querySelector('meta[name="keywords"]');
       if (!metaKeywords) {
         metaKeywords = document.createElement('meta'),
         metaKeywords.setAttribute('namekeywords'),
-        document.head.appendChild(metaKeywords),
+        document.head.appendChild(metaKeywords);
       }
-      metaKeywords.setAttribute('content', seoData.keywords.join()),
+      metaKeywords.setAttribute('content', seoData.keywords.join());
     },
-
-    updateMetaTags(),
-  }, [seoData]),
+    updateMetaTags();
+  }, [seoData]);
 
   return (
     <>
@@ -81,7 +79,7 @@ const EnhancedSEOManager: React.FC<EnhancedSEOManagerProps> = ({ seoData, childr
       
       {children}
     </>
-  ),
-},
+  );
+};
 
 export default EnhancedSEOManager;

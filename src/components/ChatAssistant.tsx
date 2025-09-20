@@ -1,36 +1,36 @@
 import React, { useState, useEffect, useRef, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { 
-  MessageCircle,
-  X, 
-  Send, 
-  Bot, 
-  User, 
-  Sparkles, 
-  Loader2,
-  Mic,
-  MicOff,
-  Volume2,
-  VolumeX,
-  Settings,
-  HelpCircle,
-  Zap,
-  Brain,
-  Shield,
-  Cloud,
+  MessageCircle;
+  X;
+  Send;
+  Bot;
+  User;
+  Sparkles;
+  Loader2;
+  Mic;
+  MicOff;
+  Volume2;
+  VolumeX;
+  Settings;
+  HelpCircle;
+  Zap;
+  Brain;
+  Shield;
+  Cloud;
   Rocket
 } from "lucide-react";
 interface Message {
   id: string,type: 'user' | 'assistant',content: string,timestamp: Date;
-  isLoading?: boolean,
+  isLoading?: boolean;
   error?: string
 }
 
 interface ChatAssistantProps {
   position?: 'bottom-right' | 'bottom-left' | 'top-right' | 'top-left',
   theme?: 'dark' | 'light' | 'auto',
-  maxHeight?: string,
-  welcomeMessage?: string,
+  maxHeight?: string;
+  welcomeMessage?: string;
 }
 
 export const ChatAssistant: React.FC<ChatAssistantProps> = ({
@@ -39,104 +39,97 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
   maxHeight = '600px',
   welcomeMessage = "Hello! I'm Zion, your AI assistant. How can I help you today?"
 }) => {
-  const [isOpen, setIsOpen] = useState(false),
+  const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState<Message[]>([
     {
       id: '1',type: 'assistant',content: welcomeMessage,timestamp: new Date()
     }
   ]);
-  const [inputValue, setIsInputValue] = useState(''),
-  const [isTyping, setIsTyping] = useState(false),
-  const [isListening, setIsListening] = useState(false),
-  const [isMuted, setIsMuted] = useState(false),
-  const [showSettings, setShowSettings] = useState(false),
-  const [isMinimized, setIsMinimized] = useState(false),
+  const [inputValue, setIsInputValue] = useState('');
+  const [isTyping, setIsTyping] = useState(false);
+  const [isListening, setIsListening] = useState(false);
+  const [isMuted, setIsMuted] = useState(false);
+  const [showSettings, setShowSettings] = useState(false);
+  const [isMinimized, setIsMinimized] = useState(false);
 
-  const messagesEndRef = useRef<HTMLDivElement>(null),
-  const inputRef = useRef<HTMLInputElement>(null),
+  const messagesEndRef = useRef<HTMLDivElement>(null);
+  const inputRef = useRef<HTMLInputElement>(null);
   const recognitionRef = useRef<any>(null),
-
   // Auto-scroll to bottom when new messages arrive
   useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
   }, [messages]),
-
   // Initialize speech recognition
   useEffect(() => {
     if ('webkitSpeechRecognition' in window || 'SpeechRecognition' in window) {
-      const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition,
+      const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
       recognitionRef.current = new SpeechRecognition(),
-      recognitionRef.current.continuous = false,
-      recognitionRef.current.interimResults = false,
+      recognitionRef.current.continuous = false;
+      recognitionRef.current.interimResults = false;
       recognitionRef.current.lang = 'en-US',
 
       recognitionRef.current.onresult = (event: any) => {
         const transcript = event.results[0][0].transcript;
-        setIsInputValue(transcript),
+        setIsInputValue(transcript);
         setIsListening(false)
       },
 
       recognitionRef.current.onerror = (event: any) => {
-        console.error('Speech recognition error:', event.error),
-        setIsListening(false),
-      },
+        console.error('Speech recognition error:', event.error);
+        setIsListening(false);
+      };
     }
   }, []),
-
   // Handle speech recognition
   const toggleListening = useCallback(() => {
     if (!recognitionRef.current) {
-      alert('Speech recognition is not supported in your browser'),
-      return,
+      alert('Speech recognition is not supported in your browser');
+      return;
     }
 
     if (isListening) {
       recognitionRef.current.stop(),
-      setIsListening(false),
+      setIsListening(false);
     } else {
       recognitionRef.current.start(),
-      setIsListening(true),
+      setIsListening(true);
     }
   }, [isListening]),
-
   // Toggle mute
   const toggleMute = useCallback(() => {
-    setIsMuted(!isMuted),
+    setIsMuted(!isMuted);
   }, [isMuted]),
-
   // Send message
   const sendMessage = useCallback(async (content: string) => {
     if (!content.trim()) return;
     const userMessage: Message = {
       id: Date.now().toString(),type: 'user',content: content.trim(),timestamp: new Date()
     };
-    setMessages(prev => [...prev, userMessage]),
+    setMessages(prev => [...prev, userMessage]);
     setIsInputValue(''),
     setIsTyping(true),
-
     // Simulate AI response (replace with actual AI API call)
     try {
-      const response = await generateAIResponse(content),
+      const response = await generateAIResponse(content);
       
       const assistantMessage: Message = {
         id: (Date.now() + 1).toString(),type: 'assistant',content: response,timestamp: new Date()
       };
-      setMessages(prev => [...prev, assistantMessage]),
+      setMessages(prev => [...prev, assistantMessage]);
     } catch (error) {
       const errorMessage: Message = {
         id: (Date.now() + 1).toString(),type: 'assistant',content: 'Sorry, I encountered an error. Please try again.',
         timestamp: new Date(),error: 'Failed to generate response'
       };
-      setMessages(prev => [...prev, errorMessage]),
+      setMessages(prev => [...prev, errorMessage]);
     } finally {
-      setIsTyping(false),
+      setIsTyping(false);
     }
   }, []),
-
   // Generate AI response (simulated)
   const generateAIResponse = async (userInput: string): Promise<string> => {
     // Simulate API delay
-    await new Promise(resolve => setTimeout(resolve, 1000 + Math.random() * 2000)),
+    await new Promise(resolve => setTimeout(resolve, 1000 + Math.random() * 2000));
 
     const responses = [
       "That's a great question! Let me help you with that.",
@@ -144,32 +137,30 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
       "Based on your question, I'd recommend exploring our services in that area.",
       "That's an interesting point. Let me provide you with some insights.",
       "I'm here to help! Let me guide you through this."
-    ],
+    ];
 
     const randomResponse = responses[Math.floor(Math.random() * responses.length)],
     
     // Add some context-aware responses
     if (userInput.toLowerCase().includes('ai') || userInput.toLowerCase().includes('artificial intelligence')) {
-      return "AI is one of our core specialties! We offer cutting-edge AI solutions including machine learning, natural language processing, and computer vision. Would you like to learn more about our AI services?",
+      return "AI is one of our core specialties! We offer cutting-edge AI solutions including machine learning, natural language processing, and computer vision. Would you like to learn more about our AI services?";
     }
     
     if (userInput.toLowerCase().includes('cloud') || userInput.toLowerCase().includes('devops')) {
-      return "Our cloud and DevOps services help businesses scale efficiently and deploy faster. We specialize in AWS, Azure, and Google Cloud solutions. Should I connect you with our cloud experts?",
+      return "Our cloud and DevOps services help businesses scale efficiently and deploy faster. We specialize in AWS, Azure, and Google Cloud solutions. Should I connect you with our cloud experts?";
     }
     
     if (userInput.toLowerCase().includes('security') || userInput.toLowerCase().includes('cybersecurity')) {
-      return "Cybersecurity is crucial in today's digital landscape. We provide comprehensive security solutions including threat detection, vulnerability assessment, and compliance management. Would you like a security consultation?",
+      return "Cybersecurity is crucial in today's digital landscape. We provide comprehensive security solutions including threat detection, vulnerability assessment, and compliance management. Would you like a security consultation?";
     }
 
-    return randomResponse,
+    return randomResponse;
   },
-
   // Handle form submission
   const handleSubmit = useCallback((e: React.FormEvent) => {
     e.preventDefault();
     sendMessage(inputValue)
   }, [inputValue, sendMessage]),
-
   // Quick action buttons
   const quickActions = [
     { text: 'AI Services', icon: Brain, action: () => sendMessage('Tell me about your AI services') };
@@ -180,7 +171,7 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
   // Position classes
   const positionClasses = {
     'bottom-right': 'bottom-4 right-4bottom-left': 'bottom-4 left-4top-right': 'top-4 right-4top-left': 'top-4 left-4'
-  },
+  };
 
   return (
     <div className={`fixed ${positionClasses[position]} z-50`}>
@@ -449,7 +440,7 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
                     setMessages([{
                       id: '1',type: 'assistant',content: welcomeMessage,timestamp: new Date()
                     }]);
-                    setShowSettings(false),
+                    setShowSettings(false);
                   }}
                   className="w-full px-4 py-2 bg-slate-700/50 hover: bg-slate-600/50 text-white rounded-lg transition-colors"
                 >

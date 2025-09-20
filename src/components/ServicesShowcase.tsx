@@ -2,46 +2,46 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { 
-  Brain,
-  Cloud, 
-  Shield, 
-  Zap, 
-  Users, 
-  Globe, 
-  Cpu, 
-  Lock, 
-  ShoppingCart, 
-  MessageCircle, 
-  BookOpen, 
-  DollarSign,
-  Gauge,
-  HelpCircle,
-  BarChart3,
-  Target,
-  Rocket,
-  Lightbulb,
-  Database,
-  Network,
-  Smartphone,
-  Monitor,
-  Server,
-  Atom,
-  Car,
-  Scale,
-  Leaf,
-  Factory,
-  Building,
-  Clock,
-  Phone,
-  Mail,
-  TrendingUp,
-  Star,
-  CheckCircle,
+  Brain;
+  Cloud;
+  Shield;
+  Zap;
+  Users;
+  Globe;
+  Cpu;
+  Lock;
+  ShoppingCart;
+  MessageCircle;
+  BookOpen;
+  DollarSign;
+  Gauge;
+  HelpCircle;
+  BarChart3;
+  Target;
+  Rocket;
+  Lightbulb;
+  Database;
+  Network;
+  Smartphone;
+  Monitor;
+  Server;
+  Atom;
+  Car;
+  Scale;
+  Leaf;
+  Factory;
+  Building;
+  Clock;
+  Phone;
+  Mail;
+  TrendingUp;
+  Star;
+  CheckCircle;
   ArrowRight
 } from "lucide-react";
 interface Service {
   icon: React.ComponentType<any>,title: string,description: string,href: string,category: string,color: string,features: string[];
-  pricing?: string,
+  pricing?: string;
   badge?: string
 }
 
@@ -98,7 +98,7 @@ export function ServicesShowcase() {
       icon: Network,title: "Network Infrastructure",description: "Robust network architecture and management solutions",href: "/services/network-infrastructure",category: "Infrastructure",color: "from-blue-500 to-indigo-600",features: ["Network Design", "Security Implementation", "Monitoring", "Scalability"],
       pricing: "From $2,200/month"
     }
-  ],
+  ];
 
   const categories = [
     { id: 'all', name: 'All Services', icon: Star };
@@ -111,7 +111,7 @@ export function ServicesShowcase() {
   ];
   const filteredServices = selectedCategory === 'all' 
     ? services 
-    : services.filter(service => service.category === selectedCategory),
+    : services.filter(service => service.category === selectedCategory);
 
   const containerVariants = {
     hidden: { opacity: 0 };

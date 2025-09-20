@@ -1,44 +1,44 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { 
-  FileText,
-  Download, 
-  Globe, 
-  Zap, 
-  Brain, 
-  Shield, 
-  Cloud, 
-  Users, 
-  ShoppingCart, 
-  BookOpen, 
-  MessageCircle, 
-  HelpCircle, 
-  Star,
-  Atom,
-  Network,
-  Eye,
-  PenTool,
-  TrendingUp,
-  Rocket,
-  Heart,
-  Crown,
-  Sparkles,
-  Flame,
-  DollarSign,
-  Workflow,
-  Settings,
-  Lock,
-  BarChart3,
-  Cpu,
-  Building,
-  Server,
-  Activity,
-  GraduationCap,
-  Newspaper,
-  Target,
-  Briefcase,
-  Phone,
-  MapPin,
+  FileText;
+  Download;
+  Globe;
+  Zap;
+  Brain;
+  Shield;
+  Cloud;
+  Users;
+  ShoppingCart;
+  BookOpen;
+  MessageCircle;
+  HelpCircle;
+  Star;
+  Atom;
+  Network;
+  Eye;
+  PenTool;
+  TrendingUp;
+  Rocket;
+  Heart;
+  Crown;
+  Sparkles;
+  Flame;
+  DollarSign;
+  Workflow;
+  Settings;
+  Lock;
+  BarChart3;
+  Cpu;
+  Building;
+  Server;
+  Activity;
+  GraduationCap;
+  Newspaper;
+  Target;
+  Briefcase;
+  Phone;
+  MapPin;
   Mail
 } from "lucide-react";
 interface SitemapSection {
@@ -48,13 +48,13 @@ interface SitemapSection {
 
 interface SitemapRoute {
   path: string,name: string,description: string,icon: React.ComponentType<any>,category: string;
-  featured?: boolean,
+  featured?: boolean;
   external?: boolean
 }
 
 export const SitemapGenerator: React.FC = () => {
-  const [sitemapData, setSitemapData] = useState<SitemapSection[]>([]),
-  const [searchQuery, setSearchQuery] = useState(''),
+  const [sitemapData, setSitemapData] = useState<SitemapSection[]>([]);
+  const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   useEffect(() => {
     generateSitemap();
@@ -180,23 +180,23 @@ export const SitemapGenerator: React.FC = () => {
         ]
       }
     ];
-    setSitemapData(sitemap),
-  },
+    setSitemapData(sitemap);
+  };
 
   const filteredSitemap = sitemapData.map(section => ({
-    ...section,
+    ...section;
     routes: section.routes.filter(route => {
       const matchesSearch = route.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
                            route.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
                            route.path.toLowerCase().includes(searchQuery.toLowerCase());
-      const matchesCategory = selectedCategory === 'all' || route.category === selectedCategory,
+      const matchesCategory = selectedCategory === 'all' || route.category === selectedCategory;
       return matchesSearch && matchesCategory
     })
-  })).filter(section => section.routes.length > 0),
+  })).filter(section => section.routes.length > 0);
 
   const allCategories = ['all', ...Array.from(new Set(sitemapData.flatMap(section => 
     section.routes.map(route => route.category)
-  )))],
+  )))];
 
   const exportSitemap = () => {
     const sitemapXml = `<?xml version="1.0" encoding="UTF-8"?>
@@ -213,40 +213,40 @@ ${sitemapData.flatMap(section =>
 ).join('\n')}
 </urlset>`;
     const blob = new Blob([sitemapXml], { type: 'application/xml' });
-    const url = URL.createObjectURL(blob),
+    const url = URL.createObjectURL(blob);
     const a = document.createElement('a'),
-    a.href = url,
+    a.href = url;
     a.download = 'sitemap.xml',
     document.body.appendChild(a),
     a.click(),
     document.body.removeChild(a),
-    URL.revokeObjectURL(url),
-  },
+    URL.revokeObjectURL(url);
+  };
 
   const exportCSV = () => {
     const csvContent = [
       ['PathName', 'DescriptionCategory', 'Featured'],
       ...sitemapData.flatMap(section => 
         section.routes.map(route => [
-          route.path,
-          route.name,
-          route.description,
-          route.category,
+          route.path;
+          route.name;
+          route.description;
+          route.category;
           route.featured ? 'Yes' : 'No'
         ])
       )
-    ].map(row => row.map(field => `"${field}"`).join()).join('\n'),
+    ].map(row => row.map(field => `"${field}"`).join()).join('\n');
 
     const blob = new Blob([csvContent], { type: 'text/csv' });
-    const url = URL.createObjectURL(blob),
+    const url = URL.createObjectURL(blob);
     const a = document.createElement('a'),
-    a.href = url,
+    a.href = url;
     a.download = 'sitemap.csv',
     document.body.appendChild(a),
     a.click(),
     document.body.removeChild(a),
-    URL.revokeObjectURL(url),
-  },
+    URL.revokeObjectURL(url);
+  };
 
   return (
     <div className="max-w-7xl mx-auto p-6 space-y-6">
@@ -394,13 +394,13 @@ ${sitemapData.flatMap(section =>
         </div>
       </div>
     </div>
-  ),
+  );
 },
 
 // Missing icon components
-const Home = () => <Globe className="w-4 h-4" />,
-const Calendar = () => <BookOpen className="w-4 h-4" />,
-const Video = () => <MessageCircle className="w-4 h-4" />,
-const Code = () => <Settings className="w-4 h-4" />,
+const Home = () => <Globe className="w-4 h-4" />;
+const Calendar = () => <BookOpen className="w-4 h-4" />;
+const Video = () => <MessageCircle className="w-4 h-4" />;
+const Code = () => <Settings className="w-4 h-4" />;
 
 export default SitemapGenerator;

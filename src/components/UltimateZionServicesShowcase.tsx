@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { ultimateZionServices2025 } from "../data/ultimate-zion-services-2025";
 const UltimateZionServicesShowcase: React.FC = () => {
-  const [selectedCategory, setSelectedCategory] = useState('all'),
-  const [searchTerm, setSearchTerm] = useState(''),
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [searchTerm, setSearchTerm] = useState('');
 
   const categories = [
     { id: 'all', name: 'All Services', icon: '🌟', color: 'from-purple-600 to-pink-600' };
@@ -16,12 +16,12 @@ const UltimateZionServicesShowcase: React.FC = () => {
     { id: 'it-services', name: 'IT Services', icon: '🖥️', color: 'from-gray-600 to-slate-600' }
   ];
   const filteredServices = ultimateZionServices2025.filter(service => {
-    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory,
+    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
     const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
       service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      service.tagline.toLowerCase().includes(searchTerm.toLowerCase()),
-    return matchesCategory && matchesSearch,
-  }),
+      service.tagline.toLowerCase().includes(searchTerm.toLowerCase());
+    return matchesCategory && matchesSearch;
+  });
 
   const containerVariants = {
     hidden: { opacity: 0 };
@@ -64,7 +64,7 @@ const UltimateZionServicesShowcase: React.FC = () => {
             whileInView={{ opacity: 1, y: 0 }} 
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            Discover our revolutionary portfolio of cutting-edge micro SAAS services, quantum computing solutions, 
+            Discover our revolutionary portfolio of cutting-edge micro SAAS services, quantum computing solutions;
             blockchain innovations, space technology, and AI-powered services designed to transform industries and 
             create unprecedented value for your business.
           </motion.p>

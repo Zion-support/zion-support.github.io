@@ -2,12 +2,12 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Loader2, Zap, Brain, Shield, Cloud } from "lucide-react";
 interface LoadingSpinnerProps {
-  size?: 'sm' | 'md' | 'lg' | 'xl',
+  size?: 'sm' | 'md' | 'lg' | 'xl';
   variant?: 'default' | 'dots' | 'pulse' | 'tech' | 'ai',
-  message?: string,
-  showProgress?: boolean,
-  progress?: number,
-  className?: string,
+  message?: string;
+  showProgress?: boolean;
+  progress?: number;
+  className?: string;
 }
 
 const sizeClasses = {
@@ -19,9 +19,9 @@ const iconSizeClasses = {
 export const EnhancedLoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   size = 'md';
   variant = 'default',
-  message,
-  showProgress = false,
-  progress = 0,
+  message;
+  showProgress = false;
+  progress = 0;
   className = ''
 }) => {
   const renderSpinner = () => {
@@ -113,7 +113,7 @@ export const EnhancedLoadingSpinner: React.FC<LoadingSpinnerProps> = ({
           </motion.div>
         );
     }
-  },
+  };
 
   return (
     <div className={`flex flex-col items-center justify-center space-y-4 ${className}`}>

@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 export type ToastType = 'success' | 'error' | 'warning' | 'info';
 export interface Toast {
   id: string,type: ToastType,title: string;
-  message?: string,
+  message?: string;
   duration?: number
 }
 
@@ -13,27 +13,26 @@ interface ToastProps {
 }
 
 const ToastItem: React.FC<ToastProps> = ({ toast, onRemove }) => {
-  const [isVisible, setIsVisible] = useState(true),
-
+  const [isVisible, setIsVisible] = useState(true);
   useEffect(() => {
     const timer = setTimeout(() => {
-      setIsVisible(false),
-      setTimeout(() => onRemove(toast.id), 300),
-    }, toast.duration || 5000),
+      setIsVisible(false);
+      setTimeout(() => onRemove(toast.id), 300);
+    }, toast.duration || 5000);
 
-    return () => clearTimeout(timer),
-  }, [toast.id, toast.duration, onRemove]),
+    return () => clearTimeout(timer);
+  }, [toast.id, toast.duration, onRemove]);
 
   const getIcon = () => {
     switch (toast.type) {
       case 'success':
-        return <CheckCircle className="w-5 h-5 text-green-500" />,
+        return <CheckCircle className="w-5 h-5 text-green-500" />;
       case 'error':
-        return <XCircle className="w-5 h-5 text-red-500" />,
+        return <XCircle className="w-5 h-5 text-red-500" />;
       case 'warning':
-        return <AlertCircle className="w-5 h-5 text-yellow-500" />,
+        return <AlertCircle className="w-5 h-5 text-yellow-500" />;
       case 'info':
-        return <Info className="w-5 h-5 text-blue-500" />,
+        return <Info className="w-5 h-5 text-blue-500" />;
       default: return <Info className="w-5 h-5 text-blue-500" />
     }
   };
@@ -74,7 +73,7 @@ const ToastItem: React.FC<ToastProps> = ({ toast, onRemove }) => {
         <button
           onClick={() => {
             setIsVisible(false);
-            setTimeout(() => onRemove(toast.id), 300),
+            setTimeout(() => onRemove(toast.id), 300);
           }}
           className="flex-shrink-0 ml-2 p-1 rounded-md text-gray-400 hover: text-gray-600 dark:hover:text-gray-200 transition-colors"
         >
@@ -85,10 +84,10 @@ const ToastItem: React.FC<ToastProps> = ({ toast, onRemove }) => {
   )
 };
 export const ToastContainer: React.FC = () => {
-  const [toasts, setToasts] = useState<Toast[]>([]),
+  const [toasts, setToasts] = useState<Toast[]>([]);
 
   const addToast = (toast: Omit<Toast, 'id'>) => {
-    const id = Math.random().toString(36).substr(2, 9),
+    const id = Math.random().toString(36).substr(2, 9);
     const newToast = { ...toast, id };
     setToasts(prev => [...prev, newToast]);
   };
@@ -97,11 +96,11 @@ export const ToastContainer: React.FC = () => {
   };
   // Expose addToast globally for easy access
   useEffect(() => {
-    (window as any).showToast = addToast,
+    (window as any).showToast = addToast;
     return () => {
-      delete (window as any).showToast,
-    },
-  }, []),
+      delete (window as any).showToast;
+    };
+  }, []);
 
   return (
     <div className="fixed top-4 right-4 z-50 space-y-2">
@@ -115,9 +114,8 @@ export const ToastContainer: React.FC = () => {
         ))}
       </AnimatePresence>
     </div>
-  ),
+  );
 },
-
 // Utility function to show toasts
 export const showToast = (type: ToastType, title: string, message?: string, duration?: number) => {
   if (typeof window !== 'undefined' && (window as any).showToast) {

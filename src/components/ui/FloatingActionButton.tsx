@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Plus, MessageCircle, Phone, Mail, ArrowUp, X } from "lucide-react";
 interface FloatingActionButtonProps {
-  className?: string,
+  className?: string;
 }
 
 export const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({ className = '' }) => {
@@ -20,7 +20,7 @@ export const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({ clas
   ];
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
-  },
+  };
 
   return (
     <div className={`fixed bottom-6 right-6 z-50 ${className}`}>

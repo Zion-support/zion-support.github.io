@@ -2,34 +2,34 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import {
-  Phone,
-  Mail,
-  MapPin,
-  Globe,
-  Linkedin,
-  Twitter,
-  Facebook,
-  Instagram,
-  ArrowUp,
-  Heart,
-  Shield,
-  Zap,
-  Brain,
-  Cloud,
-  Server,
-  Rocket,
-  Users,
-  Briefcase,
-  FileText,
-  HelpCircle,
-  MessageCircle,
+  Phone;
+  Mail;
+  MapPin;
+  Globe;
+  Linkedin;
+  Twitter;
+  Facebook;
+  Instagram;
+  ArrowUp;
+  Heart;
+  Shield;
+  Zap;
+  Brain;
+  Cloud;
+  Server;
+  Rocket;
+  Users;
+  Briefcase;
+  FileText;
+  HelpCircle;
+  MessageCircle;
   Zap as ZapIcon
 } from "lucide-react";
 export const FuturisticFooter: React.FC = () => {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
-  },
-  const currentYear = new Date().getFullYear(),
+  };
+  const currentYear = new Date().getFullYear();
   const footerSections = [
     {
       title: "Services",links: [
@@ -109,7 +109,7 @@ export const FuturisticFooter: React.FC = () => {
                   <span className="text-2xl font-bold text-white">ZION TECH GROUP</span>
                 </div>
                 <p className="text-zion-slate-light mb-6 leading-relaxed">
-                  Leading the future of technology with cutting-edge AI solutions, innovative micro SAAS platforms,
+                  Leading the future of technology with cutting-edge AI solutions, innovative micro SAAS platforms;
                   and next-generation IT infrastructure that transforms businesses and drives innovation.
                 </p>
                 {/* Contact Information */}

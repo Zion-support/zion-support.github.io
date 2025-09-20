@@ -1,13 +1,13 @@
 import { motion } from "framer-motion";
 import {
-  ArrowRight,
-  Calendar,
-  CheckCircle,
-  Clock,
-  Mail,
-  MessageCircle,
-  Phone,
-  Star,
+  ArrowRight;
+  Calendar;
+  CheckCircle;
+  Clock;
+  Mail;
+  MessageCircle;
+  Phone;
+  Star;
   Users
 } from "lucide-react";
 import React, { useState } from "react";

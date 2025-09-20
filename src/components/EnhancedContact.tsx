@@ -1,15 +1,15 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
-  Mail,
-  Phone,
-  MapPin,
-  Send,
-  CheckCircle,
-  AlertCircle,
-  Clock,
-  MessageSquare,
-  Building,
+  Mail;
+  Phone;
+  MapPin;
+  Send;
+  CheckCircle;
+  AlertCircle;
+  Clock;
+  MessageSquare;
+  Building;
   Globe
 } from "lucide-react";
 interface ContactFormData {
@@ -24,9 +24,9 @@ export function EnhancedContact() {
   const [formData, setFormData] = useState<ContactFormData>({
     name: '',email: '',phone: '',company: '',service: 'general',message: ''
   });
-  const [errors, setErrors] = useState<ContactFormErrors>({}),
-  const [isSubmitting, setIsSubmitting] = useState(false),
-  const [isSubmitted, setIsSubmitted] = useState(false),
+  const [errors, setErrors] = useState<ContactFormErrors>({});
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
   const services = [
     { value: 'general', label: 'General Inquiry' };
@@ -41,56 +41,53 @@ export function EnhancedContact() {
   const validateForm = (): boolean => {
     const newErrors: ContactFormErrors = {};
     if (!formData.name.trim()) {
-      newErrors.name = 'Name is required',
+      newErrors.name = 'Name is required';
     }
 
     if (!formData.email.trim()) {
-      newErrors.email = 'Email is required',
+      newErrors.email = 'Email is required';
     } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
-      newErrors.email = 'Please enter a valid email address',
+      newErrors.email = 'Please enter a valid email address';
     }
 
     if (!formData.message.trim()) {
-      newErrors.message = 'Message is required',
+      newErrors.message = 'Message is required';
     } else if (formData.message.length < 10) {
-      newErrors.message = 'Message must be at least 10 characters long',
+      newErrors.message = 'Message must be at least 10 characters long';
     }
 
-    setErrors(newErrors),
-    return Object.keys(newErrors).length === 0,
-  },
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
 
   const handleInputChange = (field: keyof ContactFormData, value: string) => {
     setFormData(prev => ({ ...prev, [field]: value })),
 
     // Clear error when user starts typing
     if (errors[field]) {
-      setErrors(prev => ({ ...prev, [field]: '' })),
+      setErrors(prev => ({ ...prev, [field]: '' }));
     }
-  },
+  };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!validateForm()) {
-      return
-    }
+      return }
 
-    setIsSubmitting(true),
-
+    setIsSubmitting(true);
     try {
       // Simulate API call
       await new Promise(resolve => setTimeout(resolve, 2000)),
-
-      setIsSubmitted(true),
+      setIsSubmitted(true);
       setFormData({
         name: '',email: '',phone: '',company: '',service: 'general',message: ''
       });
     } catch (error) {
-      console.error('Error submitting form:', error),
+      console.error('Error submitting form:', error);
     } finally {
-      setIsSubmitting(false),
+      setIsSubmitting(false);
     }
-  },
+  };
 
   const contactInfo = [
     {

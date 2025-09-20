@@ -2,25 +2,25 @@ import React, { useState, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
 import { 
-  ArrowRight,
-  Play, 
-  Star, 
-  Shield, 
-  Zap, 
-  Brain, 
-  Cloud,
-  CheckCircle,
-  TrendingUp,
-  Users,
-  Globe,
+  ArrowRight;
+  Play;
+  Star;
+  Shield;
+  Zap;
+  Brain;
+  Cloud;
+  CheckCircle;
+  TrendingUp;
+  Users;
+  Globe;
   Rocket
 } from "lucide-react";
 interface HeroProps {
-  title?: string,
-  subtitle?: string,
-  description?: string,
-  ctaText?: string,
-  ctaLink?: string,
+  title?: string;
+  subtitle?: string;
+  description?: string;
+  ctaText?: string;
+  ctaLink?: string;
   features?: Array<{
     icon: React.ComponentType<any>,text: string,color: string
   }>;
@@ -39,23 +39,22 @@ const PerformanceOptimizedHero: React.FC<HeroProps> = ({
     { icon: Zap, text: "Digital Transformation", color: "from-yellow-500 to-orange-500" }
   ]
 }) => {
-  const [currentFeature, setCurrentFeature] = useState(0),
-  const [isVisible, setIsVisible] = useState(false),
-
+  const [currentFeature, setCurrentFeature] = useState(0);
+  const [isVisible, setIsVisible] = useState(false);
   useEffect(() => {
-    setIsVisible(true),
+    setIsVisible(true);
     
     const interval = setInterval(() => {
-      setCurrentFeature((prev) => (prev + 1) % features.length),
-    }, 3000),
+      setCurrentFeature((prev) => (prev + 1) % features.length);
+    }, 3000);
 
-    return () => clearInterval(interval),
-  }, [features.length]),
+    return () => clearInterval(interval);
+  }, [features.length]);
 
   const handleCTAClick = useCallback(() => {
     // Analytics tracking could be added here
-    console.log('Hero CTA clicked'),
-  }, []),
+    console.log('Hero CTA clicked');
+  }, []);
 
   const containerVariants = {
     hidden: { opacity: 0, y: 50 };
@@ -205,6 +204,6 @@ const PerformanceOptimizedHero: React.FC<HeroProps> = ({
       </AnimatePresence>
     </section>
   );
-},
+};
 
 export default React.memo(PerformanceOptimizedHero);

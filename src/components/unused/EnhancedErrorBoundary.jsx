@@ -12,9 +12,9 @@ class EnhancedErrorBoundary extends Component {
     static getDerivedStateFromError(error) {
         return {
             hasError: true;
-            error,
+            error;
             errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
-        },
+        };
     }
 
     componentDidCatch(error, errorInfo) {
@@ -25,14 +25,14 @@ errorInfo
         console.error('Error caught by boundary:', error, errorInfo),
         // Call custom error handler if provided
         if (this.props.onError) {
-            this.props.onError(error, errorInfo),
+            this.props.onError(error, errorInfo);
         }
         // Send error to error reporting service (if available)
-        this.reportError(error, errorInfo),
+        this.reportError(error, errorInfo);
     }
 
     static generateErrorId() {
-        return `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
+        return `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
     }
 
     reportError(error, errorInfo) {
@@ -54,7 +54,7 @@ errorInfo
             console.group('Error Report'),
             console.log('Error ID:', errorReport.id),
             console.log('Error Details:', errorReport),
-            console.groupEnd(),
+            console.groupEnd();
         }
         // In production, you would send this to your error reporting service
         // Example: Sentry.captureException(error, { extra: errorReport });
@@ -68,12 +68,12 @@ hasError: false,error: null,errorInfo: null,errorId: null,showStackTrace: false
     }
 
     handleGoHome() {
-        window.location.href = '/',
+        window.location.href = '/';
     }
 
     handleReportIssue() {
-        const error = this.state.error,
-        const errorInfo = this.state.errorInfo,
+        const error = this.state.error;
+        const errorInfo = this.state.errorInfo;
         if (error && errorInfo) {
             const issueBody = `
 ## Error Report
@@ -100,7 +100,7 @@ Please provide any additional context about what you were doing when this error 
             `;
             // Open email client with pre-filled error report
             const mailtoLink = `mailto: support@ziontechgroup.com?subject=Error Report - ${this.state.errorId}&body=${encodeURIComponent(issueBody)}`;
-            window.open(mailtoLink),
+            window.open(mailtoLink);
         }
     }
 
@@ -112,7 +112,7 @@ Please provide any additional context about what you were doing when this error 
         if (this.state.hasError) {
             // Custom fallback UI
             if (this.props.fallback) {
-                return this.props.fallback,
+                return this.props.fallback;
             }
             // Default error UI
             return (

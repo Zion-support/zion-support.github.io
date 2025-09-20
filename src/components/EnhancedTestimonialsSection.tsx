@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
-  Star,
-  Quote,
-  ChevronLeft,
-  ChevronRight,
-  Globe,
-  Building,
-  Users,
+  Star;
+  Quote;
+  ChevronLeft;
+  ChevronRight;
+  Globe;
+  Building;
+  Users;
   Award
 } from "lucide-react";
 interface Testimonial {
@@ -37,23 +37,22 @@ const testimonials: Testimonial[] = [
   }
 ];
 export default function EnhancedTestimonialsSection() {
-  const [currentTestimonial, setCurrentTestimonial] = useState(0),
-  const [isAutoPlaying, setIsAutoPlaying] = useState(true),
-
+  const [currentTestimonial, setCurrentTestimonial] = useState(0);
+  const [isAutoPlaying, setIsAutoPlaying] = useState(true);
   useEffect(() => {
-    if (!isAutoPlaying) return,
+    if (!isAutoPlaying) return;
 
     const interval = setInterval(() => {
-      setCurrentTestimonial((prev) => (prev + 1) % testimonials.length),
-    }, 8000),
+      setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
+    }, 8000);
 
-    return () => clearInterval(interval),
-  }, [isAutoPlaying, testimonials.length]),
+    return () => clearInterval(interval);
+  }, [isAutoPlaying, testimonials.length]);
 
   const nextTestimonial = () => {
     setCurrentTestimonial((prev) => (prev + 1) % testimonials.length),
-    setIsAutoPlaying(false),
-  },
+    setIsAutoPlaying(false);
+  };
 
   const prevTestimonial = () => {
     setCurrentTestimonial((prev) => (prev - 1 + testimonials.length) % testimonials.length);
@@ -62,9 +61,9 @@ export default function EnhancedTestimonialsSection() {
   const goToTestimonial = (index: number) => {
     setCurrentTestimonial(index);
     setIsAutoPlaying(false)
-  },
+  };
 
-  const currentTestimonialData = testimonials[currentTestimonial],
+  const currentTestimonialData = testimonials[currentTestimonial];
 
   return (
     <section className="py-20 relative overflow-hidden bg-gradient-to-br from-zion-slate via-zion-slate-dark to-zion-slate">

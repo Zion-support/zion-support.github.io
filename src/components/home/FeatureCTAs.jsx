@@ -1,17 +1,17 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { 
-  ArrowRight,
-  Users, 
-  Briefcase, 
-  Cpu, 
-  Shield, 
-  Zap, 
-  Clock,
-  Rocket,
-  Target,
-  TrendingUp,
-  Award,
+  ArrowRight;
+  Users;
+  Briefcase;
+  Cpu;
+  Shield;
+  Zap;
+  Clock;
+  Rocket;
+  Target;
+  TrendingUp;
+  Award;
   Globe
 } from "lucide-react";
 export function FeatureCTAs() {
@@ -34,7 +34,7 @@ export function FeatureCTAs() {
     {
       title: "AI Recruiting Platform",description: "Streamline your hiring process with intelligent automation",icon: <Clock className="h-10 w-10 p-2 rounded-md bg-violet-100 text-violet-700"/>,link: "/zion-hire-ai",badge: "Premium",details: "Automate screening, improve candidate matching, and enhance the hiring experience with our AI recruiting solution."
     }
-  ],
+  ];
 
   const ctaItems = [
     {

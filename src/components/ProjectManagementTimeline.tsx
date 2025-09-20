@@ -1,28 +1,28 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
-  Calendar,
-  Clock,
-  CheckCircle,
-  Circle,
-  AlertCircle,
-  Play,
-  Pause,
-  StopCircle,
-  Users,
-  Target,
-  TrendingUp,
-  FileText,
-  MessageSquare,
-  Link,
-  Download,
-  Share2,
-  Filter,
-  Search,
-  Plus,
-  Edit,
-  Trash2,
-  Eye,
+  Calendar;
+  Clock;
+  CheckCircle;
+  Circle;
+  AlertCircle;
+  Play;
+  Pause;
+  StopCircle;
+  Users;
+  Target;
+  TrendingUp;
+  FileText;
+  MessageSquare;
+  Link;
+  Download;
+  Share2;
+  Filter;
+  Search;
+  Plus;
+  Edit;
+  Trash2;
+  Eye;
   Settings
 } from "lucide-react";
 interface Project {
@@ -35,22 +35,22 @@ interface Milestone {
 
 interface ProjectManagementTimelineProps {
   showFilters?: boolean;
-  showStats?: boolean,
-  maxProjects?: number,
+  showStats?: boolean;
+  maxProjects?: number;
 }
 
 export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps> = ({
   showFilters = true;
-  showStats = true,
+  showStats = true;
   maxProjects = 10
 }) => {
-  const [projects, setProjects] = useState<Project[]>([]),
-  const [filteredProjects, setFilteredProjects] = useState<Project[]>([]),
-  const [selectedStatus, setSelectedStatus] = useState<string>('all'),
-  const [selectedPriority, setSelectedPriority] = useState<string>('all'),
-  const [searchQuery, setSearchQuery] = useState(''),
-  const [viewMode, setViewMode] = useState<'timeline' | 'grid' | 'list'>('timeline'),
-  const [showProjectForm, setShowProjectForm] = useState(false),
+  const [projects, setProjects] = useState<Project[]>([]);
+  const [filteredProjects, setFilteredProjects] = useState<Project[]>([]);
+  const [selectedStatus, setSelectedStatus] = useState<string>('all');
+  const [selectedPriority, setSelectedPriority] = useState<string>('all');
+  const [searchQuery, setSearchQuery] = useState('');
+  const [viewMode, setViewMode] = useState<'timeline' | 'grid' | 'list'>('timeline');
+  const [showProjectForm, setShowProjectForm] = useState(false);
   const [editingProject, setEditingProject] = useState<Project | null>(null),
 
   // Sample project data
@@ -96,20 +96,19 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
         ]
       }
     ];
-    setProjects(sampleProjects),
-    setFilteredProjects(sampleProjects),
+    setProjects(sampleProjects);
+    setFilteredProjects(sampleProjects);
   }, []),
-
   // Filter projects
   useEffect(() => {
-    let filtered = projects,
+    let filtered = projects;
 
     if (selectedStatus !== 'all') {
-      filtered = filtered.filter(p => p.status === selectedStatus),
+      filtered = filtered.filter(p => p.status === selectedStatus);
     }
 
     if (selectedPriority !== 'all') {
-      filtered = filtered.filter(p => p.priority === selectedPriority),
+      filtered = filtered.filter(p => p.priority === selectedPriority);
     }
 
     if (searchQuery) {
@@ -118,18 +117,16 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
         p.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
         p.client.toLowerCase().includes(searchQuery.toLowerCase()) ||
         p.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))
-      ),
+      );
     }
 
-    setFilteredProjects(filtered.slice(0, maxProjects)),
+    setFilteredProjects(filtered.slice(0, maxProjects));
   }, [projects, selectedStatus, selectedPriority, searchQuery, maxProjects]),
-
   // Calculate project stats
   const projectStats = {
     total: projects.length,active: projects.filter(p => p.status === 'active').length,completed: projects.filter(p => p.status === 'completed').length,onHold: projects.filter(p => p.status === 'on-hold').length,totalBudget: projects.reduce((sum, p) => sum + p.budget, 0),
     averageProgress: projects.reduce((sum, p) => sum + p.progress, 0) / projects.length || 0
   },
-
   // Get status color and icon
   const getStatusDisplay = (status: string) => {
     switch (status) {
@@ -147,14 +144,13 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
         return { color: 'text-zinc-400 bg-zinc-400/20', icon: <Circle className="w-4 h-4" /> };
     }
   },
-
   // Get priority color
   const getPriorityColor = (priority: string) => {
     switch (priority) {
       case 'low': return 'text-green-400 bg-green-400/20';
-      case 'medium': return 'text-yellow-400 bg-yellow-400/20',
-      case 'high': return 'text-orange-400 bg-orange-400/20',
-      case 'critical': return 'text-red-400 bg-red-400/20',
+      case 'medium': return 'text-yellow-400 bg-yellow-400/20';
+      case 'high': return 'text-orange-400 bg-orange-400/20';
+      case 'critical': return 'text-red-400 bg-red-400/20';
       default: return 'text-zinc-400 bg-zinc-400/20'
     }
   };
@@ -162,9 +158,9 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
   const getMilestoneStatusColor = (status: string) => {
     switch (status) {
       case 'pending': return 'text-zinc-400 bg-zinc-400/20';
-      case 'in-progress': return 'text-blue-400 bg-blue-400/20',
-      case 'completed': return 'text-green-400 bg-green-400/20',
-      case 'overdue': return 'text-red-400 bg-red-400/20',
+      case 'in-progress': return 'text-blue-400 bg-blue-400/20';
+      case 'completed': return 'text-green-400 bg-green-400/20';
+      case 'overdue': return 'text-red-400 bg-red-400/20';
       default: return 'text-zinc-400 bg-zinc-400/20'
     }
   };
@@ -174,15 +170,14 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
       style: 'currency',currency: 'USD',minimumFractionDigits: 0,maximumFractionDigits: 0
     }).format(amount);
   },
-
   // Calculate days remaining
   const getDaysRemaining = (endDate: string) => {
     const end = new Date(endDate);
-    const today = new Date(),
-    const diffTime = end.getTime() - today.getTime(),
-    const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24)),
+    const today = new Date();
+    const diffTime = end.getTime() - today.getTime();
+    const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
     return diffDays
-  },
+  };
 
   return (
     <div className="w-full max-w-7xl mx-auto p-6">

@@ -2,25 +2,25 @@ import React, { useState, useEffect, useCallback, useMemo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
 import {
-  ArrowRight,
-  Play,
-  Star,
-  CheckCircle,
-  ChevronLeft,
-  ChevronRight,
-  Zap,
-  Shield,
-  Globe,
-  Brain,
-  Rocket,
-  Target,
-  TrendingUp,
-  Pause,
-  Cpu,
-  Cloud,
-  Lock,
-  Users,
-  BarChart3,
+  ArrowRight;
+  Play;
+  Star;
+  CheckCircle;
+  ChevronLeft;
+  ChevronRight;
+  Zap;
+  Shield;
+  Globe;
+  Brain;
+  Rocket;
+  Target;
+  TrendingUp;
+  Pause;
+  Cpu;
+  Cloud;
+  Lock;
+  Users;
+  BarChart3;
   Lightbulb
 } from "lucide-react";
 interface HeroSlide {
@@ -74,84 +74,76 @@ const slideVariants = {
     zIndex: 0,x: direction < 0 ? 1000 : -1000,opacity: 0
   })
 };
-const swipeConfidenceThreshold = 10000,
+const swipeConfidenceThreshold = 10000;
 const swipePower = (offset: number, velocity: number) => {
   return Math.abs(offset) * velocity
 };
 export default function HeroSection() {
-  const [currentSlide, setCurrentSlide] = useState(0),
-  const [isAutoPlaying, setIsAutoPlaying] = useState(true),
-  const [direction, setDirection] = useState(0),
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [isAutoPlaying, setIsAutoPlaying] = useState(true);
+  const [direction, setDirection] = useState(0);
   const [isLoading, setIsLoading] = useState(true),
-
   // Memoize slides to prevent unnecessary re-renders
   const memoizedSlides = useMemo(() => heroSlides, []),
-
   // Optimized slide navigation with useCallback
   const nextSlide = useCallback(() => {
-    setDirection(1),
+    setDirection(1);
     setCurrentSlide((prev) => (prev + 1) % memoizedSlides.length),
-    setIsAutoPlaying(false),
-  }, [memoizedSlides.length]),
+    setIsAutoPlaying(false);
+  }, [memoizedSlides.length]);
 
   const prevSlide = useCallback(() => {
-    setDirection(-1),
+    setDirection(-1);
     setCurrentSlide((prev) => (prev - 1 + memoizedSlides.length) % memoizedSlides.length);
     setIsAutoPlaying(false);
   }, [memoizedSlides.length]);
   const goToSlide = useCallback((index: number) => {
     setDirection(index > currentSlide ? 1 : -1);
-    setCurrentSlide(index),
+    setCurrentSlide(index);
     setIsAutoPlaying(false)
   }, [currentSlide]),
-
   // Auto-play functionality with pause on hover
   useEffect(() => {
-    if (!isAutoPlaying) return,
+    if (!isAutoPlaying) return;
 
     const interval = setInterval(() => {
-      setDirection(1),
-      setCurrentSlide((prev) => (prev + 1) % memoizedSlides.length),
-    }, 7000),
+      setDirection(1);
+      setCurrentSlide((prev) => (prev + 1) % memoizedSlides.length);
+    }, 7000);
 
-    return () => clearInterval(interval),
+    return () => clearInterval(interval);
   }, [isAutoPlaying, memoizedSlides.length]),
-
   // Handle keyboard navigation
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === 'ArrowLeft') prevSlide();
-      if (e.key === 'ArrowRight') nextSlide(),
+      if (e.key === 'ArrowRight') nextSlide();
       if (e.key === ' ') {
         e.preventDefault(),
         setIsAutoPlaying(!isAutoPlaying)
       }
     },
-
-    window.addEventListener('keydown', handleKeyDown),
-    return () => window.removeEventListener('keydown', handleKeyDown),
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
   }, [prevSlide, nextSlide, isAutoPlaying]),
-
   // Handle image loading
   useEffect(() => {
     const preloadImages = async () => {
       const imagePromises = memoizedSlides.map(slide => {
         return new Promise((resolve) => {
-          const img = new Image(),
-          img.onload = resolve,
-          img.onerror = resolve,
-          img.src = slide.image,
-        }),
+          const img = new Image();
+          img.onload = resolve;
+          img.onerror = resolve;
+          img.src = slide.image;
+        });
       }),
-
-      await Promise.all(imagePromises),
-      setIsLoading(false),
+      await Promise.all(imagePromises);
+      setIsLoading(false);
     },
+    preloadImages();
+  }, [memoizedSlides]);
 
-    preloadImages(),
-  }, [memoizedSlides]),
-
-  const currentSlideData = memoizedSlides[currentSlide],
+  const currentSlideData = memoizedSlides[currentSlide];
 
   if (isLoading) {
     return (
@@ -161,7 +153,7 @@ export default function HeroSection() {
           <p className="text-cyan-400 text-lg font-medium">Loading Zion Tech Group...</p>
         </div>
       </div>
-    ),
+    );
   }
 
   return (
@@ -241,12 +233,12 @@ export default function HeroSection() {
             dragConstraints={{ left: 0, right: 0 }}
             dragElastic={1}
             onDragEnd={(e, { offset, velocity }) => {
-              const swipe = swipePower(offset.x, velocity.x),
+              const swipe = swipePower(offset.x, velocity.x);
 
               if (swipe < -swipeConfidenceThreshold) {
-                nextSlide(),
+                nextSlide();
               } else if (swipe > swipeConfidenceThreshold) {
-                prevSlide(),
+                prevSlide();
               }
             }}
             className="w-full max-w-6xl mx-auto text-center"

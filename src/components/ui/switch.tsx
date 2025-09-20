@@ -1,20 +1,20 @@
 import React from "react";
 import { cn } from "../../utils/cn";
 interface SwitchProps {
-  checked?: boolean,
+  checked?: boolean;
   onCheckedChange?: (checked: boolean) => void;
-  disabled?: boolean,
-  className?: string,
-  id?: string,
+  disabled?: boolean;
+  className?: string;
+  id?: string;
   'aria-label'?: string
 }
 
 export function Switch({
-  checked = false,
-  onCheckedChange,
-  disabled = false,
-  className,
-  id,
+  checked = false;
+  onCheckedChange;
+  disabled = false;
+  className;
+  id;
   'aria-label': ariaLabel;
   ...props
 }: SwitchProps) {

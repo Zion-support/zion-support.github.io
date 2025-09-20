@@ -2,41 +2,41 @@ import React, { useState, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link, useLocation } from "react-router-dom";
 import { 
-  Menu,
-  X, 
-  ChevronDown, 
-  Search, 
-  User, 
-  Settings,
-  Bell,
-  Sun,
-  Moon,
-  Monitor,
-  Globe,
-  Phone,
-  Mail,
-  MapPin,
-  Brain,
-  Cloud,
-  Shield,
-  Zap,
-  Atom,
-  ShoppingCart,
-  BarChart3,
-  Users,
-  Building,
-  Rocket,
+  Menu;
+  X;
+  ChevronDown;
+  Search;
+  User;
+  Settings;
+  Bell;
+  Sun;
+  Moon;
+  Monitor;
+  Globe;
+  Phone;
+  Mail;
+  MapPin;
+  Brain;
+  Cloud;
+  Shield;
+  Zap;
+  Atom;
+  ShoppingCart;
+  BarChart3;
+  Users;
+  Building;
+  Rocket;
   Star
 } from "lucide-react";
 interface NavigationItem {
   label: string,href: string;
-  icon?: React.ReactNode,
+  icon?: React.ReactNode;
   children?: NavigationItem[],
   featured?: boolean
 }
 
 interface EnhancedNavigationProps {
-  className?: string,
+  className?: string;
   onThemeChange?: (theme: 'light' | 'dark' | 'system') => void
 }
 
@@ -158,49 +158,47 @@ export const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
   className = '';
   onThemeChange 
 }) => {
-  const [isOpen, setIsOpen] = useState(false),
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null),
-  const [theme, setTheme] = useState<'light' | 'dark' | 'system'>('system'),
-  const [isScrolled, setIsScrolled] = useState(false),
+  const [isOpen, setIsOpen] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const [theme, setTheme] = useState<'light' | 'dark' | 'system'>('system');
+  const [isScrolled, setIsScrolled] = useState(false);
   const location = useLocation(),
-
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10),
+      setIsScrolled(window.scrollY > 10);
     },
 
-    window.addEventListener('scroll', handleScroll),
-    return () => window.removeEventListener('scroll', handleScroll),
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []),
-
   useEffect(() => {
-    setIsOpen(false),
-    setActiveDropdown(null),
-  }, [location]),
+    setIsOpen(false);
+    setActiveDropdown(null);
+  }, [location]);
 
   const handleThemeChange = useCallback((newTheme: 'light' | 'dark' | 'system') => {
     setTheme(newTheme);
-    onThemeChange?.(newTheme),
+    onThemeChange?.(newTheme);
     
-    const root = document.documentElement,
-    root.classList.remove('lightdark'),
+    const root = document.documentElement;
+    root.classList.remove('lightdark');
     
     if (newTheme === 'system') {
       const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
       root.classList.add(systemTheme)
     } else {
-      root.classList.add(newTheme),
+      root.classList.add(newTheme);
     }
     
-    localStorage.setItem('zion-theme', newTheme),
-  }, [onThemeChange]),
+    localStorage.setItem('zion-theme', newTheme);
+  }, [onThemeChange]);
 
   const toggleDropdown = (label: string) => {
     setActiveDropdown(activeDropdown === label ? null : label)
   };
   const closeDropdown = () => {
-    setActiveDropdown(null),
-  },
+    setActiveDropdown(null);
+  };
 
   const contactInfo = {
     phone: "+1 302 464 0950",email: "kleber@ziontechgroup.com",website: "https://ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709"

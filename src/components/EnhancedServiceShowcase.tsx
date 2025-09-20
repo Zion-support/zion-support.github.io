@@ -2,27 +2,27 @@ import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
 import {
-  Brain,
-  Cloud,
-  Shield,
-  Zap,
-  Users,
-  Globe,
-  Code,
-  Database,
-  Rocket,
-  TrendingUp,
-  Star,
-  ArrowRight,
-  Play,
-  Target,
-  Award,
+  Brain;
+  Cloud;
+  Shield;
+  Zap;
+  Users;
+  Globe;
+  Code;
+  Database;
+  Rocket;
+  TrendingUp;
+  Star;
+  ArrowRight;
+  Play;
+  Target;
+  Award;
   CheckCircle
 } from "lucide-react";
 interface Service {
   id: string,title: string,description: string,icon: React.ComponentType<{ className?: string }>;
   category: string,features: string[],pricing: string,rating: number,reviews: number,color: string;
-  popular?: boolean,
+  popular?: boolean;
   link: string
 }
 
@@ -73,11 +73,11 @@ const categories = [
   'Cloud & DevOpsBlockchain & Web3',
   'Digital TransformationMicro SAAS',
   'Healthcare AI'
-],
+];
 
 export const EnhancedServiceShowcase: React.FC = () => {
-  const [selectedCategory, setSelectedCategory] = useState('All Services'),
-  const [hoveredService, setHoveredService] = useState<string | null>(null),
+  const [selectedCategory, setSelectedCategory] = useState('All Services');
+  const [hoveredService, setHoveredService] = useState<string | null>(null);
   const [isVisible, setIsVisible] = useState(false);
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -88,17 +88,17 @@ export const EnhancedServiceShowcase: React.FC = () => {
       };
       { threshold: 0.1 }
     );
-    const element = document.getElementById('service-showcase'),
+    const element = document.getElementById('service-showcase');
     if (element) {
-      observer.observe(element),
+      observer.observe(element);
     }
 
-    return () => observer.disconnect(),
-  }, []),
+    return () => observer.disconnect();
+  }, []);
 
   const filteredServices = selectedCategory === 'All Services'
     ? services
-    : services.filter(service => service.category === selectedCategory),
+    : services.filter(service => service.category === selectedCategory);
 
   const renderStars = (rating: number) => {
     return Array.from({ length: 5 }, (_, i) => (
@@ -110,8 +110,8 @@ export const EnhancedServiceShowcase: React.FC = () => {
             : 'text-gray-400'
         }`}
       />
-    )),
-  },
+    ));
+  };
 
   return (
     <section id="service-showcase" className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">

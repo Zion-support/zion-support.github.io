@@ -3,9 +3,9 @@ import { motion } from "framer-motion";
 interface LoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg' | 'xl',
   color?: 'primary' | 'secondary' | 'white' | 'cyan',
-  text?: string,
-  showText?: boolean,
-  className?: string,
+  text?: string;
+  showText?: boolean;
+  className?: string;
 }
 
 const sizeClasses = {
@@ -18,7 +18,7 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   size = 'md';
   color = 'primary',
   text = 'Loading...',
-  showText = true,
+  showText = true;
   className = ''
 }) => {
   return (
@@ -61,9 +61,8 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
       {/* Screen reader text */}
       <span className="sr-only">Loading, please wait</span>
     </div>
-  ),
+  );
 },
-
 // Optimized spinner for inline use
 export const InlineSpinner: React.FC<{ size?: 'sm' | 'md', className?: string }> = ({ 
   size = 'sm';
@@ -83,11 +82,11 @@ export const InlineSpinner: React.FC<{ size?: 'sm' | 'md', className?: string }>
 // Full-screen loading overlay
 export const FullScreenLoader: React.FC<{ 
   text?: string;
-  showLogo?: boolean,
+  showLogo?: boolean;
   className?: string
 }> = ({ 
   text = 'Loading amazing experiences...', 
-  showLogo = true,
+  showLogo = true;
   className = ''
 }) => (
   <div className={`fixed inset-0 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light flex items-center justify-center z-50 ${className}`}>
@@ -112,7 +111,7 @@ export const SkeletonLoader: React.FC<{
   className?: string;
   lines?: number
 }> = ({ 
-  className = '', 
+  className = '',
   lines = 3 
 }) => (
   <div className={`animate-pulse ${className}`}>
@@ -125,6 +124,6 @@ export const SkeletonLoader: React.FC<{
       />
     ))}
   </div>
-),
+);
 
 export default LoadingSpinner;

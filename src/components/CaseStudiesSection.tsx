@@ -2,12 +2,12 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import {
-  TrendingUp,
-  Users,
-  DollarSign,
-  Clock,
-  ArrowRight,
-  Star,
+  TrendingUp;
+  Users;
+  DollarSign;
+  Clock;
+  ArrowRight;
+  Star;
   CheckCircle
 } from "lucide-react";
 const caseStudies = [

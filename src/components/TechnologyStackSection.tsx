@@ -1,15 +1,15 @@
 import React from "react";
 import { motion } from "framer-motion";
 import {
-  Code,
-  Database,
-  Cloud,
-  Shield,
-  Brain,
-  Zap,
-  Globe,
-  Server,
-  Cpu,
+  Code;
+  Database;
+  Cloud;
+  Shield;
+  Brain;
+  Zap;
+  Globe;
+  Server;
+  Cpu;
   Network
 } from "lucide-react";
 const technologyCategories = [

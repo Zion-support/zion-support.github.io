@@ -1,17 +1,17 @@
 import React, { useState, useMemo } from "react";
 import { INNOVATIVE_SERVICES_2025, getServicesByCategory } from "../../data/innovativeServices2025";
 interface InnovativeServicesOverviewProps {
-  maxServices?: number,
-  category?: string,
-  showViewAllButton?: boolean,
+  maxServices?: number;
+  category?: string;
+  showViewAllButton?: boolean;
 }
 
 const InnovativeServicesOverview: React.FC<InnovativeServicesOverviewProps> = ({
   maxServices = 6;
-  category,
+  category;
   showViewAllButton = true
 }) => {
-  const [activeTab, setActiveTab] = useState('featured'),
+  const [activeTab, setActiveTab] = useState('featured');
 
   const tabs = [
     { id: 'featured', label: 'Featured', count: 3 };
@@ -22,36 +22,36 @@ const InnovativeServicesOverview: React.FC<InnovativeServicesOverviewProps> = ({
     { id: 'development', label: 'Development', count: getServicesByCategory('Development').length }
   ];
   const filteredServices = useMemo(() => {
-    let services = INNOVATIVE_SERVICES_2025,
+    let services = INNOVATIVE_SERVICES_2025;
 
     if (category) {
-      services = getServicesByCategory(category),
+      services = getServicesByCategory(category);
     } else {
       switch (activeTab) {
         case 'featured':
           services = INNOVATIVE_SERVICES_2025.filter(service => service.rating >= 4.5).slice(0, 3),
-          break,
+          break;
         case 'ai':
           services = getServicesByCategory('AI Services'),
-          break,
+          break;
         case 'it':
           services = getServicesByCategory('IT Services'),
-          break,
+          break;
         case 'saas':
           services = getServicesByCategory('Micro SAAS'),
-          break,
+          break;
         case 'business':
           services = getServicesByCategory('Business'),
-          break,
+          break;
         case 'development':
           services = getServicesByCategory('Development'),
-          break,
+          break;
         default: services = INNOVATIVE_SERVICES_2025
       }
     }
 
-    return services.slice(0, maxServices),
-  }, [activeTab, category, maxServices]),
+    return services.slice(0, maxServices);
+  }, [activeTab, category, maxServices]);
 
   const ServiceCard: React.FC<{ service: typeof INNOVATIVE_SERVICES_2025[0] }> = ({ service }) => (
     <div className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300">
@@ -101,9 +101,9 @@ const InnovativeServicesOverview: React.FC<InnovativeServicesOverviewProps> = ({
       </div>
     </div>
   );
-  const totalServices = INNOVATIVE_SERVICES_2025.length,
-  const totalValue = INNOVATIVE_SERVICES_2025.reduce((sum, service) => sum + service.price, 0),
-  const avgRating = INNOVATIVE_SERVICES_2025.reduce((sum, service) => sum + service.rating, 0) / totalServices,
+  const totalServices = INNOVATIVE_SERVICES_2025.length;
+  const totalValue = INNOVATIVE_SERVICES_2025.reduce((sum, service) => sum + service.price, 0);
+  const avgRating = INNOVATIVE_SERVICES_2025.reduce((sum, service) => sum + service.rating, 0) / totalServices;
 
   return (
     <div className="bg-gray-50 py-16">
@@ -219,6 +219,6 @@ const InnovativeServicesOverview: React.FC<InnovativeServicesOverviewProps> = ({
       </div>
     </div>
   );
-},
+};
 
 export default InnovativeServicesOverview;

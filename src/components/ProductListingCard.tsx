@@ -23,30 +23,30 @@ interface ProductListingCardProps {
 }
 
 export function ProductListingCard({
-  listing,
+  listing;
   view = 'grid',
-  onRequestQuote,
+  onRequestQuote;
   detailBasePath = '/marketplace/listing'
 }: ProductListingCardProps) {
-  const isGrid = view === 'grid',
-  const navigate = useNavigate(),
-  const [loading, setLoading] = useState(false),
+  const isGrid = view === 'grid';
+  const navigate = useNavigate();
+  const [loading, setLoading] = useState(false);
   const [imageSrc, setImageSrc] = useState(
     listing.images && listing.images.length > 0
     ? listing.images[0]
     : '/placeholder.svg'
-  ),
-  const [imageError, setImageError] = useState(false),
+  );
+  const [imageError, setImageError] = useState(false);
 
   const formatPrice = () => {
-    if (listing.price === null) return "Custom pricing",
-    return `${listing.currency}${listing.price.toLocaleString()}`,
-  },
+    if (listing.price === null) return "Custom pricing";
+    return `${listing.currency}${listing.price.toLocaleString()}`;
+  };
 
   const handleImageError = () => {
     if (!imageError) { // Prevent infinite loops if placeholder also fails
-      setImageSrc('/placeholder.svg'),
-      setImageError(true),
+      setImageSrc('/placeholder.svg');
+      setImageError(true);
     }
   };
   const handleViewListing = () => {
@@ -54,16 +54,16 @@ export function ProductListingCard({
   };
   const handleRequestQuote = (e: React.MouseEvent) => {
     e.preventDefault();
-    e.stopPropagation(),
+    e.stopPropagation();
 
     if (onRequestQuote) {
       onRequestQuote(listing.id)
     } else {
-      navigate(`/request-quote?listing=${listing.id}`),
+      navigate(`/request-quote?listing=${listing.id}`);
     }
-  },
+  };
 
-  const imageContainerClasses = isGrid ? 'h-48' : 'h-32 w-48',
+  const imageContainerClasses = isGrid ? 'h-48' : 'h-32 w-48';
 
   return (
     <div
@@ -75,7 +75,7 @@ export function ProductListingCard({
       onKeyDown={(e) => {
         if (e.key === 'Enter' || e.key === ' ') {
           e.preventDefault();
-          handleViewListing(),
+          handleViewListing();
         }
       }}
     >
@@ -88,7 +88,7 @@ export function ProductListingCard({
         onKeyDown={(e) => {
           if (e.key === 'Enter' || e.key === ' ') {
             e.preventDefault(),
-            handleViewListing(),
+            handleViewListing();
           }
         }}
       >
@@ -167,7 +167,7 @@ export function ProductListingCard({
               className="bg-primary hover: bg-primary/80 text-primary-foreground"
               onClick={(e) => {
                 e.stopPropagation();
-                navigate(`${detailBasePath}/${listing.id}`),
+                navigate(`${detailBasePath}/${listing.id}`);
               }}
               disabled={loading}
             >

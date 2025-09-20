@@ -2,13 +2,13 @@ import React, { useState } from "react";
 import { ChevronDown } from "lucide-react";
 interface AccordionProps {
   children: React.ReactNode;
-  className?: string,
+  className?: string;
   type?: 'single' | 'multiple',
   defaultValue?: string | string[]
 }
 
 export function Accordion({
-  children,
+  children;
   className = '',
   type = 'single',
   defaultValue
@@ -35,23 +35,23 @@ export function Accordion({
             isOpen: openItems.includes(child.props.value),onToggle: () => handleToggle(child.props.value)
           });
         }
-        return child,
+        return child;
       })}
     </div>
-  ),
+  );
 }
 
 interface AccordionItemProps {
   children: React.ReactNode,value: string;
-  className?: string,
-  isOpen?: boolean,
+  className?: string;
+  isOpen?: boolean;
   onToggle?: () => void
 }
 
 export function AccordionItem({
-  children,
+  children;
   className = '',
-  isOpen = false,
+  isOpen = false;
   onToggle
 }: AccordionItemProps) {
   return (
@@ -68,8 +68,8 @@ export function AccordionItem({
 
 interface AccordionTriggerProps {
   children: React.ReactNode;
-  className?: string,
-  isOpen?: boolean,
+  className?: string;
+  isOpen?: boolean;
   onToggle?: () => void
 }
 
@@ -96,7 +96,7 @@ export function AccordionTrigger({
 
 interface AccordionContentProps {
   children: React.ReactNode;
-  className?: string,
+  className?: string;
   isOpen?: boolean
 }
 

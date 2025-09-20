@@ -4,7 +4,7 @@ interface PostCardProps {
     id: string,title: string,content: string,authorName: string,createdAt: string,likes: number,replies: number,views: number,author: {
       name: string,avatar: string
     };
-  },
+  };
 }
 
 export default function PostCard({ post }: PostCardProps) {

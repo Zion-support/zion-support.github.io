@@ -1,30 +1,30 @@
 import React, { useState, useEffect, useCallback, useRef } from "react";
 import { motion, AnimatePresence, PanInfo } from "framer-motion";
 import { 
-  Smartphone,
-  Tablet, 
-  Monitor, 
-  Wifi, 
-  WifiOff, 
-  Battery, 
-  BatteryCharging,
-  Volume2,
-  VolumeX,
-  RotateCcw,
-  Settings,
-  X,
-  CheckCircle,
-  AlertTriangle,
-  Smartphone as Touch,
-  Gesture,
-  Eye,
-  EyeOff,
-  Zap,
-  Shield,
-  Globe,
-  Clock,
-  Activity,
-  TrendingUp,
+  Smartphone;
+  Tablet;
+  Monitor;
+  Wifi;
+  WifiOff;
+  Battery;
+  BatteryCharging;
+  Volume2;
+  VolumeX;
+  RotateCcw;
+  Settings;
+  X;
+  CheckCircle;
+  AlertTriangle;
+  Smartphone as Touch;
+  Gesture;
+  Eye;
+  EyeOff;
+  Zap;
+  Shield;
+  Globe;
+  Clock;
+  Activity;
+  TrendingUp;
   Smartphone as PhoneIcon
 } from "lucide-react";
 interface MobileMetrics {
@@ -33,35 +33,34 @@ interface MobileMetrics {
 
 interface MobileExperienceEnhancerProps {
   enabled?: boolean;
-  showControls?: boolean,
-  autoOptimize?: boolean,
+  showControls?: boolean;
+  autoOptimize?: boolean;
 }
 
 export function MobileExperienceEnhancer({ 
-  enabled = true, 
-  showControls = false, 
+  enabled = true;
+  showControls = false;
   autoOptimize = true 
 }: MobileExperienceEnhancerProps) {
-  const [isVisible, setIsVisible] = useState(false),
-  const [metrics, setMetrics] = useState<MobileMetrics | null>(null),
-  const [optimizations, setOptimizations] = useState<string[]>([]),
-  const [isOptimizing, setIsOptimizing] = useState(false),
-  const [mobileScore, setMobileScore] = useState(85),
+  const [isVisible, setIsVisible] = useState(false);
+  const [metrics, setMetrics] = useState<MobileMetrics | null>(null);
+  const [optimizations, setOptimizations] = useState<string[]>([]);
+  const [isOptimizing, setIsOptimizing] = useState(false);
+  const [mobileScore, setMobileScore] = useState(85);
   const [gestureMode, setGestureMode] = useState(false);
   const [touchFeedback, setTouchFeedback] = useState(true);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const touchStartRef = useRef<{ x: number, y: number, time: number } | null>(null);
-  const swipeThreshold = 50,
-  const swipeTimeThreshold = 300,
-
+  const swipeThreshold = 50;
+  const swipeTimeThreshold = 300;
   // Detect mobile device and gather metrics
   const detectMobileMetrics = useCallback(() => {
-    if (!enabled) return,
+    if (!enabled) return;
 
-    const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent),
-    const isTablet = /iPad|Android(?=.*\bMobile\b)(?=.*\bSafari\b)/i.test(navigator.userAgent),
+    const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    const isTablet = /iPad|Android(?=.*\bMobile\b)(?=.*\bSafari\b)/i.test(navigator.userAgent);
 
-    if (!isMobile && !isTablet) return,
+    if (!isMobile && !isTablet) return;
 
     const metrics: MobileMetrics = {
       screenWidth: window.innerWidth,screenHeight: window.innerHeight,pixelRatio: window.devicePixelRatio || 1,orientation: window.innerWidth > window.innerHeight ? 'landscape' : 'portrait',touchSupport: 'ontouchstart' in window || navigator.maxTouchPoints > 0,connectionType: (navigator as any).connection?.effectiveType || 'unknown',batteryLevel: 0,isCharging: false
@@ -70,27 +69,25 @@ export function MobileExperienceEnhancer({
     if ('getBattery' in navigator) {
       (navigator as any).getBattery().then((battery: any) => {
         metrics.batteryLevel = Math.round(battery.level * 100);
-        metrics.isCharging = battery.charging,
-        setMetrics(prev => prev ? { ...prev, ...metrics } : metrics),
-      }),
+        metrics.isCharging = battery.charging;
+        setMetrics(prev => prev ? { ...prev, ...metrics } : metrics);
+      });
     }
 
     // Get connection information if available
     if ('connection' in navigator) {
-      const connection = (navigator as any).connection,
+      const connection = (navigator as any).connection;
       if (connection) {
-        metrics.connectionType = connection.effectiveType || 'unknown',
+        metrics.connectionType = connection.effectiveType || 'unknown';
       }
     }
 
-    setMetrics(metrics),
+    setMetrics(metrics);
   }, [enabled]),
-
   // Mobile-specific optimizations
   const performMobileOptimizations = useCallback(async () => {
-    if (!autoOptimize || !metrics) return,
-    
-    setIsOptimizing(true),
+    if (!autoOptimize || !metrics) return;
+    setIsOptimizing(true);
     const newOptimizations: string[] = [];
     try {
       // Optimize images for mobile
@@ -100,92 +97,88 @@ export function MobileExperienceEnhancer({
           // High DPI display optimization
           if (img.src.includes('@1x')) {
             img.src = img.src.replace('@1x', `@${Math.min(3, Math.ceil(metrics.pixelRatio))}x`),
-            newOptimizations.push('High DPI images optimized'),
+            newOptimizations.push('High DPI images optimized');
           }
         }
         
         // Lazy loading for mobile
         if (!img.loading) {
           img.loading = 'lazy',
-          newOptimizations.push('Lazy loading enabled for images'),
+          newOptimizations.push('Lazy loading enabled for images');
         }
       }),
-
       // Touch-friendly button sizing
       const buttons = document.querySelectorAll('button, a[role="button"]'),
       buttons.forEach(button => {
-        const element = button as HTMLElement,
-        const computedStyle = window.getComputedStyle(element),
-        const minHeight = parseInt(computedStyle.minHeight) || 0,
-        const minWidth = parseInt(computedStyle.minWidth) || 0,
+        const element = button as HTMLElement;
+        const computedStyle = window.getComputedStyle(element);
+        const minHeight = parseInt(computedStyle.minHeight) || 0;
+        const minWidth = parseInt(computedStyle.minWidth) || 0;
         
         if (minHeight < 44 || minWidth < 44) {
           element.style.minHeight = '44px',
           element.style.minWidth = '44px',
-          newOptimizations.push('Touch-friendly button sizing applied'),
+          newOptimizations.push('Touch-friendly button sizing applied');
         }
       }),
 
       // Optimize viewport for mobile
-      const viewport = document.querySelector('meta[name="viewport"]'),
+      const viewport = document.querySelector('meta[name="viewport"]');
       if (!viewport) {
         const meta = document.createElement('meta'),
         meta.name = 'viewport',
         meta.content = 'width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes',
         document.head.appendChild(meta),
-        newOptimizations.push('Mobile viewport meta tag added'),
+        newOptimizations.push('Mobile viewport meta tag added');
       }
 
       // Enable touch gestures
       if (metrics.touchSupport) {
         enableTouchGestures(),
-        newOptimizations.push('Touch gestures enabled'),
+        newOptimizations.push('Touch gestures enabled');
       }
 
       // Optimize animations for mobile
       if (metrics.screenWidth < 768) {
         document.documentElement.style.setProperty('--animation-duration0.2s'),
         document.documentElement.style.setProperty('--transition-duration0.15s'),
-        newOptimizations.push('Animations optimized for mobile'),
+        newOptimizations.push('Animations optimized for mobile');
       }
 
       // Enable service worker for offline support
       if ('serviceWorker' in navigator) {
         try {
           await navigator.serviceWorker.register('/sw.js'),
-          newOptimizations.push('Service worker registered for offline support'),
+          newOptimizations.push('Service worker registered for offline support');
         } catch (error) {
           // Service worker not available
         }
       }
 
     } catch (error) {
-      console.warn('Mobile optimization failed:', error),
+      console.warn('Mobile optimization failed:', error);
     } finally {
-      setIsOptimizing(false),
-      setOptimizations(newOptimizations),
+      setIsOptimizing(false);
+      setOptimizations(newOptimizations);
     }
   }, [autoOptimize, metrics]),
-
   // Enable touch gestures
   const enableTouchGestures = useCallback(() => {
-    if (!metrics?.touchSupport) return,
-
+    if (!metrics?.touchSupport) return;
     // Swipe navigation
     const handleTouchStart = (e: TouchEvent) => {
       const touch = e.touches[0];
       touchStartRef.current = {
         x: touch.clientX,y: touch.clientY,time: Date.now()
       };
-    },
+    };
 
     const handleTouchEnd = (e: TouchEvent) => {
       if (!touchStartRef.current) return;
-      const touch = e.changedTouches[0],
-      const deltaX = touch.clientX - touchStartRef.current.x,
-      const deltaY = touch.clientY - touchStartRef.current.y,
-      const deltaTime = Date.now() - touchStartRef.current.time,
-
+      const touch = e.changedTouches[0];
+      const deltaX = touch.clientX - touchStartRef.current.x;
+      const deltaY = touch.clientY - touchStartRef.current.y;
+      const deltaTime = Date.now() - touchStartRef.current.time;
       // Horizontal swipe
       if (Math.abs(deltaX) > swipeThreshold && Math.abs(deltaY) < swipeThreshold && deltaTime < swipeTimeThreshold) {
         if (deltaX > 0) {
@@ -195,7 +188,7 @@ export function MobileExperienceEnhancer({
           }
         } else {
           // Swipe left - go forward
-          window.history.forward(),
+          window.history.forward();
         }
       }
 
@@ -203,28 +196,28 @@ export function MobileExperienceEnhancer({
       if (Math.abs(deltaY) > swipeThreshold && Math.abs(deltaX) < swipeThreshold && deltaTime < swipeTimeThreshold) {
         if (deltaY > 0) {
           // Swipe down - refresh
-          window.location.reload(),
+          window.location.reload();
         }
       }
 
-      touchStartRef.current = null,
+      touchStartRef.current = null;
     },
 
     // Double tap to zoom
-    let lastTap = 0,
+    let lastTap = 0;
     const handleDoubleTap = (e: TouchEvent) => {
       const currentTime = new Date().getTime();
-      const tapLength = currentTime - lastTap,
+      const tapLength = currentTime - lastTap;
       
       if (tapLength < 500 && tapLength > 0) {
         // Double tap detected
-        const target = e.target as HTMLElement,
+        const target = e.target as HTMLElement;
         if (target.tagName === 'IMG') {
           target.style.transform = target.style.transform === 'scale(1.5)' ? 'scale(1)' : 'scale(1.5)',
           target.style.transition = 'transform 0.3s ease'
         }
       }
-      lastTap = currentTime,
+      lastTap = currentTime;
     },
 
     document.addEventListener('touchstart', handleTouchStart, { passive: true });
@@ -234,16 +227,14 @@ export function MobileExperienceEnhancer({
     return () => {
       document.removeEventListener('touchstart', handleTouchStart),
       document.removeEventListener('touchend', handleTouchEnd),
-      document.removeEventListener('touchend', handleDoubleTap),
-    },
+      document.removeEventListener('touchend', handleDoubleTap);
+    };
   }, [metrics?.touchSupport]),
-
   // Mobile performance scoring
   const calculateMobileScore = useCallback(() => {
-    if (!metrics) return 0,
+    if (!metrics) return 0;
 
-    let score = 100,
-
+    let score = 100;
     // Screen size scoring
     if (metrics.screenWidth < 375) score -= 10, // Very small screens
     else if (metrics.screenWidth < 768) score -= 5, // Small screens
@@ -253,58 +244,51 @@ export function MobileExperienceEnhancer({
     else if (metrics.pixelRatio < 1) score -= 10, // Low DPI screens
 
     // Connection scoring
-    if (metrics.connectionType === 'slow-2g' || metrics.connectionType === '2g') score -= 20,
-    else if (metrics.connectionType === '3g') score -= 10,
-
+    if (metrics.connectionType === 'slow-2g' || metrics.connectionType === '2g') score -= 20;
+    else if (metrics.connectionType === '3g') score -= 10;
     // Battery scoring
-    if (metrics.batteryLevel < 20) score -= 15,
-    else if (metrics.batteryLevel < 50) score -= 5,
-
+    if (metrics.batteryLevel < 20) score -= 15;
+    else if (metrics.batteryLevel < 50) score -= 5;
     // Touch support scoring
-    if (!metrics.touchSupport) score -= 10,
+    if (!metrics.touchSupport) score -= 10;
 
-    return Math.max(0, score),
+    return Math.max(0, score);
   }, [metrics]),
-
   // Initialize mobile detection
   useEffect(() => {
-    if (!enabled) return,
-
-    detectMobileMetrics(),
+    if (!enabled) return;
+    detectMobileMetrics();
 
     const handleResize = () => {
-      detectMobileMetrics(),
-    },
+      detectMobileMetrics();
+    };
 
     const handleOrientationChange = () => {
-      setTimeout(detectMobileMetrics, 100),
+      setTimeout(detectMobileMetrics, 100);
     },
-
     window.addEventListener('resize', handleResize),
-    window.addEventListener('orientationchange', handleOrientationChange),
+    window.addEventListener('orientationchange', handleOrientationChange);
 
     return () => {
       window.removeEventListener('resize', handleResize),
-      window.removeEventListener('orientationchange', handleOrientationChange),
-    },
+      window.removeEventListener('orientationchange', handleOrientationChange);
+    };
   }, [enabled, detectMobileMetrics]),
-
   // Apply optimizations when metrics change
   useEffect(() => {
     if (metrics && autoOptimize) {
-      performMobileOptimizations(),
+      performMobileOptimizations();
     }
   }, [metrics, autoOptimize, performMobileOptimizations]),
-
   // Update mobile score
   useEffect(() => {
     if (metrics) {
       const score = calculateMobileScore(),
-      setMobileScore(score),
+      setMobileScore(score);
     }
-  }, [metrics, calculateMobileScore]),
+  }, [metrics, calculateMobileScore]);
 
-  if (!enabled || !metrics) return null,
+  if (!enabled || !metrics) return null;
 
   return (
     <>

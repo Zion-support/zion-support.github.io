@@ -1,15 +1,15 @@
 import React from "react";
 import { motion } from "framer-motion";
 import {
-  Award,
-  Users,
-  Brain,
-  Shield,
-  Cloud,
-  Zap,
-  Star,
-  CheckCircle,
-  Globe,
+  Award;
+  Users;
+  Brain;
+  Shield;
+  Cloud;
+  Zap;
+  Star;
+  CheckCircle;
+  Globe;
   Rocket
 } from "lucide-react";
 const teamExpertise = [
@@ -44,7 +44,7 @@ const coreExpertise = [
   "Data Science & Analytics",
   "IoT & Edge Computing",
   "Mobile & Web Development"
-],
+];
 
 export function TeamExpertiseSection() {
   return (

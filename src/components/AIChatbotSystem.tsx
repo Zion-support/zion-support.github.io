@@ -1,57 +1,56 @@
 import React, { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
-  MessageCircle,
-  Send,
-  Bot,
-  User,
-  Sparkles,
-  X,
-  Settings,
-  Mic,
-  MicOff,
-  Paperclip,
-  RefreshCw,
-  ThumbsUp,
-  ThumbsDown,
-  Clock,
-  CheckCircle,
+  MessageCircle;
+  Send;
+  Bot;
+  User;
+  Sparkles;
+  X;
+  Settings;
+  Mic;
+  MicOff;
+  Paperclip;
+  RefreshCw;
+  ThumbsUp;
+  ThumbsDown;
+  Clock;
+  CheckCircle;
   AlertCircle
 } from "lucide-react";
 interface ChatMessage {
   id: string,content: string,sender: 'user' | 'bot',timestamp: Date,type: 'text' | 'image' | 'file' | 'system',status: 'sending' | 'sent' | 'error';
   metadata?: {
-    confidence?: number,
+    confidence?: number;
     suggestions?: string[],
     relatedServices?: string[],
     estimatedResponseTime?: number
-  },
+  };
 }
 
 interface AIChatbotSystemProps {
-  showHeader?: boolean,
-  showSettings?: boolean,
-  maxMessages?: number,
-  autoScroll?: boolean,
+  showHeader?: boolean;
+  showSettings?: boolean;
+  maxMessages?: number;
+  autoScroll?: boolean;
 }
 
 export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
   showHeader = true;
-  showSettings = true,
+  showSettings = true;
   autoScroll = true
 }) => {
-  const [messages, setMessages] = useState<ChatMessage[]>([]),
-  const [inputValue, setInputValue] = useState(''),
-  const [isTyping, setIsTyping] = useState(false),
-  const [isOpen, setIsOpen] = useState(false),
-  const [showSettingsPanel, setShowSettingsPanel] = useState(false),
+  const [messages, setMessages] = useState<ChatMessage[]>([]);
+  const [inputValue, setInputValue] = useState('');
+  const [isTyping, setIsTyping] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+  const [showSettingsPanel, setShowSettingsPanel] = useState(false);
   const [settings, setSettings] = useState({
     voiceEnabled: false,autoResponse: true,language: 'en',theme: 'dark',responseSpeed: 'normal'
   });
-  const [isListening, setIsListening] = useState(false),
+  const [isListening, setIsListening] = useState(false);
 
   const messagesEndRef = useRef<HTMLDivElement>(null),
-
   // Sample welcome message
   useEffect(() => {
     if (isOpen && messages.length === 0) {
@@ -62,22 +61,20 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
           estimatedResponseTime: 2
         }
       };
-      setMessages([welcomeMessage]),
+      setMessages([welcomeMessage]);
     }
   }, [isOpen, messages.length]),
-
   // Auto-scroll to bottom
   useEffect(() => {
     if (autoScroll && messagesEndRef.current) {
       messagesEndRef.current.scrollIntoView({ behavior: 'smooth' });
     }
   }, [messages, autoScroll]),
-
   // Simulate AI response
   const simulateAIResponse = async (userMessage: string) => {
     setIsTyping(true);
     // Simulate processing time
-    await new Promise(resolve => setTimeout(resolve, 1000 + Math.random() * 2000)),
+    await new Promise(resolve => setTimeout(resolve, 1000 + Math.random() * 2000));
 
     const responses = [
       {
@@ -100,34 +97,33 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
         suggestions: ['Strategy developmentImplementation process', 'Change managementROI examples'],
         relatedServices: ['Digital TransformationProcess Optimization', 'Change Management']
       }
-    ],
+    ];
 
-    const randomResponse = responses[Math.floor(Math.random() * responses.length)],
+    const randomResponse = responses[Math.floor(Math.random() * responses.length)];
 
     const botMessage: ChatMessage = {
       id: Date.now().toString(),content: randomResponse.content,sender: 'bot',timestamp: new Date(),type: 'text',status: 'sent',metadata: {
         confidence: 0.85 + Math.random() * 0.1,suggestions: randomResponse.suggestions,relatedServices: randomResponse.relatedServices,estimatedResponseTime: 1 + Math.random() * 2
       }
     };
-    setMessages(prev => [...prev, botMessage]),
-    setIsTyping(false),
+    setMessages(prev => [...prev, botMessage]);
+    setIsTyping(false);
   },
 
   // Handle message submission
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!inputValue.trim() || isTyping) return,
+    if (!inputValue.trim() || isTyping) return;
 
     const userMessage: ChatMessage = {
       id: Date.now().toString(),content: inputValue,sender: 'user',timestamp: new Date(),type: 'text',status: 'sent'
     };
-    setMessages(prev => [...prev, userMessage]),
+    setMessages(prev => [...prev, userMessage]);
     setInputValue(''),
 
     // Generate AI response
-    await simulateAIResponse(inputValue),
+    await simulateAIResponse(inputValue);
   },
-
   // Handle voice input
   const toggleVoiceInput = () => {
     setIsListening(!isListening),
@@ -142,10 +138,9 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
         id: Date.now().toString(),content: `Uploaded: ${file.name}`;
         sender: 'user',timestamp: new Date(),type: 'file',status: 'sent'
       };
-      setMessages(prev => [...prev, fileMessage]),
+      setMessages(prev => [...prev, fileMessage]);
     }
   },
-
   // Handle suggestion click
   const handleSuggestionClick = (suggestion: string) => {
     setInputValue(suggestion)
@@ -161,9 +156,9 @@ export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
 
   // Clear chat
   const clearChat = () => {
-    setMessages([]),
-    setChatHistory([]),
-  },
+    setMessages([]);
+    setChatHistory([]);
+  };
 
   return (
     <>

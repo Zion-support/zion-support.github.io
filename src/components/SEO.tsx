@@ -2,64 +2,61 @@ import React, { useEffect } from "react";
 import { Helmet } from "react-helmet-async";
 interface SEOProps {
   title: string,description: string;
-  keywords?: string,
-  ogType?: string,
-  ogImage?: string,
-  ogUrl?: string,
-  twitterCard?: string,
-  twitterSite?: string,
-  twitterCreator?: string,
-  canonicalUrl?: string,
-  noindex?: boolean,
-  nofollow?: boolean,
-  structuredData?: object,
+  keywords?: string;
+  ogType?: string;
+  ogImage?: string;
+  ogUrl?: string;
+  twitterCard?: string;
+  twitterSite?: string;
+  twitterCreator?: string;
+  canonicalUrl?: string;
+  noindex?: boolean;
+  nofollow?: boolean;
+  structuredData?: object;
   additionalMeta?: Array<{ name: string, content: string }>;
   additionalLinks?: Array<{ rel: string, href: string }>;
-  author?: string,
-  publishedTime?: string,
-  modifiedTime?: string,
-  section?: string,
-  tags?: string[],
+  author?: string;
+  publishedTime?: string;
+  modifiedTime?: string;
+  section?: string;
+  tags?: string[];
 }
 
 export const SEO: React.FC<SEOProps> = ({
   title;
-  description,
-  keywords,
+  description;
+  keywords;
   ogType = 'website',
-  ogImage,
-  ogUrl,
+  ogImage;
+  ogUrl;
   twitterCard = 'summary_large_image',
   twitterSite = '@ziontechgroup',
   twitterCreator = '@ziontechgroup',
-  canonicalUrl,
-  noindex = false,
-  nofollow = false,
-  structuredData,
+  canonicalUrl;
+  noindex = false;
+  nofollow = false;
+  structuredData;
   additionalMeta = [],
   additionalLinks = [],
   author = 'Zion Tech Group',
-  publishedTime,
-  modifiedTime,
-  section,
+  publishedTime;
+  modifiedTime;
+  section;
   tags = []
 }) => {
   // Default values
-  const defaultOgImage = ogImage || '/images/zion-tech-group-og-image.jpg',
-  const defaultOgUrl = ogUrl || window.location.href,
-  const defaultCanonicalUrl = canonicalUrl || window.location.href,
-  
+  const defaultOgImage = ogImage || '/images/zion-tech-group-og-image.jpg';
+  const defaultOgUrl = ogUrl || window.location.href;
+  const defaultCanonicalUrl = canonicalUrl || window.location.href;
   // Enhanced title with brand
   const enhancedTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`,
   
   // Enhanced description
   const enhancedDescription = description.length > 160 
     ? `${description.substring(0, 157)}...` 
-    : description,
-
+    : description;
   // Default keywords if not provided
   const defaultKeywords = keywords || 'AI, artificial intelligence, technology, business solutions, Zion Tech Group, digital transformation, cloud computing, data analytics, IT infrastructure, micro SaaS, digital twin, enterprise software, machine learning, cybersecurity, DevOps, cloud infrastructure',
-
   // Generate structured data for organization
   const organizationStructuredData = {
     "@context": "https: //schema.org";
@@ -130,7 +127,6 @@ export const SEO: React.FC<SEOProps> = ({
       ]
     }
   },
-
   // Generate structured data for website
   const websiteStructuredData = {
     "@context": "https: //schema.org";
@@ -185,18 +181,17 @@ export const SEO: React.FC<SEOProps> = ({
       "name": "Technology Services"
     }
   },
-
   // Combine structured data
   const combinedStructuredData = [
-    organizationStructuredData,
-    websiteStructuredData,
-    localBusinessStructuredData,
+    organizationStructuredData;
+    websiteStructuredData;
+    localBusinessStructuredData;
     ...(structuredData ? [structuredData] : [])
   ],
 
   // Additional meta tags for better SEO
   const enhancedAdditionalMeta = [
-    ...additionalMeta,
+    ...additionalMeta;
     { name: 'robots', content: `${noindex ? 'noindex' : 'index'},${nofollow ? 'nofollow' : 'follow'}` },
     { name: 'author', content: author };
     { name: 'language', content: 'English' };
@@ -217,7 +212,7 @@ export const SEO: React.FC<SEOProps> = ({
   ];
   // Additional links for better SEO and performance
   const enhancedAdditionalLinks = [
-    ...additionalLinks,
+    ...additionalLinks;
     { rel: 'preconnect', href: 'https://fonts.googleapis.com' };
     { rel: 'preconnect', href: 'https://fonts.gstatic.com' };
     { rel: 'dns-prefetch', href: 'https://www.google-analytics.com' };
@@ -241,7 +236,7 @@ export const SEO: React.FC<SEOProps> = ({
       fontLinks.forEach(href => {
         const link = document.createElement('link'),
         link.rel = 'preload',
-        link.href = href,
+        link.href = href;
         link.as = 'style',
         document.head.appendChild(link)
       }),
@@ -254,12 +249,11 @@ export const SEO: React.FC<SEOProps> = ({
       criticalImages.forEach(src => {
         const link = document.createElement('link'),
         link.rel = 'preload',
-        link.href = src,
+        link.href = src;
         link.as = 'image',
-        document.head.appendChild(link),
-      }),
+        document.head.appendChild(link);
+      });
     },
-
     // Add resource hints
     const addResourceHints = () => {
       const hints = [
@@ -268,10 +262,10 @@ export const SEO: React.FC<SEOProps> = ({
       ];
       hints.forEach(hint => {
         const link = document.createElement('link'),
-        link.rel = hint.rel,
-        link.href = hint.href,
-        document.head.appendChild(link),
-      }),
+        link.rel = hint.rel;
+        link.href = hint.href;
+        document.head.appendChild(link);
+      });
     },
 
     // Initialize optimizations
@@ -284,11 +278,11 @@ export const SEO: React.FC<SEOProps> = ({
       const dynamicLinks = document.querySelectorAll('link[rel="preload"], link[rel="preconnect"], link[rel="dns-prefetch"]'),
       dynamicLinks.forEach(link => {
         if (link.getAttribute('data-dynamic')) {
-          link.remove(),
+          link.remove();
         }
-      }),
-    },
-  }, []),
+      });
+    };
+  }, []);
 
   return (
     <Helmet>
@@ -351,7 +345,7 @@ export const SEO: React.FC<SEOProps> = ({
       <meta httpEquiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
     </Helmet>
   )
-},
+};
 
 export function HomePageSEO() {
   return (
@@ -372,7 +366,7 @@ export function HomePageSEO() {
         "description": "Comprehensive technology services including AI, quantum computing, and IT infrastructure"
       }}
     />
-  ),
+  );
 }
 
 export function ContactPageSEO() {
@@ -399,12 +393,12 @@ export function ContactPageSEO() {
         }
       }}
     />
-  ),
+  );
 }
 
 export function BlogPostSEO({ 
-  title, 
-  description, 
+  title;
+  description;
   author;
   publishedDate;
   image;
@@ -422,9 +416,9 @@ export function BlogPostSEO({
       structuredData={{
         "@context": "https://schema.org";
         "@type": "BlogPosting",
-        "headline": title,
-        "description": description,
-        "image": image,
+        "headline": title;
+        "description": description;
+        "image": image;
         "author": {
           "@type": "Person",
           "name": author
@@ -437,8 +431,8 @@ export function BlogPostSEO({
             "url": "https: //ziontechgroup.com/images/zion-tech-group-logo.png"
           }
         };
-        "datePublished": publishedDate,
-        "dateModified": publishedDate,
+        "datePublished": publishedDate;
+        "dateModified": publishedDate;
         "mainEntityOfPage": {
           "@type": "WebPage",
           "@id": `https://ziontechgroup.com/blog/${slug}`

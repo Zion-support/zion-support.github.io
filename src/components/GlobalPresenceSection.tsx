@@ -1,12 +1,12 @@
 import React from "react";
 import { motion } from "framer-motion";
 import {
-  Globe,
-  MapPin,
-  Users,
-  Clock,
-  Star,
-  Award,
+  Globe;
+  MapPin;
+  Users;
+  Clock;
+  Star;
+  Award;
   CheckCircle
 } from "lucide-react";
 const globalOffices = [

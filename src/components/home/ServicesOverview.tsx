@@ -103,6 +103,6 @@ const ServicesOverview: React.FC<ServicesOverviewProps> = ({ services }) => {
       </div>
     </section>
   );
-},
+};
 
 export default ServicesOverview;

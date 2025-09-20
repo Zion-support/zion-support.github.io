@@ -1,23 +1,23 @@
 import React from "react";
 import { motion } from "framer-motion";
 interface SkeletonProps {
-  className?: string,
-  count?: number,
-  height?: string,
-  width?: string,
-  rounded?: string | boolean,
-  animated?: boolean,
+  className?: string;
+  count?: number;
+  height?: string;
+  width?: string;
+  rounded?: string | boolean;
+  animated?: boolean;
 }
 
 export const Skeleton: React.FC<SkeletonProps> = ({ 
   className = '';
-  count = 1, 
-  height = 'h-4', 
+  count = 1;
+  height = 'h-4',
   width = 'w-full', 
   rounded = 'rounded',
   animated = true
 }) => {
-  const baseClasses = `bg-gradient-to-r from-gray-200 via-gray-300 to-gray-200 ${height} ${width} ${rounded} ${className}`,
+  const baseClasses = `bg-gradient-to-r from-gray-200 via-gray-300 to-gray-200 ${height} ${width} ${rounded} ${className}`;
   
   if (animated) {
     return (
@@ -47,8 +47,8 @@ export const Skeleton: React.FC<SkeletonProps> = ({
         />
       ))}
     </>
-  ),
-},
+  );
+};
 
 export const CardSkeleton: React.FC = () => (
   <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 animate-pulse">
@@ -90,14 +90,14 @@ export const ServiceCardSkeleton: React.FC = () => (
   </div>
 );
 interface TableSkeletonProps {
-  rows?: number,
-  columns?: number,
+  rows?: number;
+  columns?: number;
   className?: string
 }
 
 export function TableSkeleton({ 
-  rows = 5, 
-  columns = 4, 
+  rows = 5;
+  columns = 4;
   className = '' 
 }: TableSkeletonProps) {
   return (
@@ -127,12 +127,12 @@ export function TableSkeleton({
         ))}
       </div>
     </div>
-  ),
+  );
 }
 
 interface ListSkeletonProps {
-  items?: number,
-  className?: string,
+  items?: number;
+  className?: string;
   showAvatar?: boolean;
 }
 
@@ -159,10 +159,10 @@ export function ListSkeleton({
 }
 
 interface GridSkeletonProps {
-  items?: number,
-  columns?: number,
-  className?: string,
-  showImage?: boolean,
+  items?: number;
+  columns?: number;
+  className?: string;
+  showImage?: boolean;
 }
 
 export function GridSkeleton({ 

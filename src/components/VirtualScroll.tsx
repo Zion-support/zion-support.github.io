@@ -2,37 +2,35 @@ import React, { useState, useEffect, useRef, useCallback, useMemo } from "react"
 import { motion, AnimatePresence } from "framer-motion";
 interface VirtualScrollProps<T> {
   items: T[],height: number,itemHeight: number,renderItem: (item: T, index: number) => React.ReactNode;
-  overscan?: number,
-  className?: string,
+  overscan?: number;
+  className?: string;
   onScroll?: (scrollTop: number) => void
 }
 
 export function VirtualScroll<T>({
   items;
-  height,
-  itemHeight,
-  renderItem,
-  overscan = 5,
+  height;
+  itemHeight;
+  renderItem;
+  overscan = 5;
   className = '',
   onScroll
 }: VirtualScrollProps<T>) {
-  const [scrollTop, setScrollTop] = useState(0),
+  const [scrollTop, setScrollTop] = useState(0);
   const containerRef = useRef<HTMLDivElement>(null),
-
   // Calculate visible range
   const visibleRange = useMemo(() => {
-    const start = Math.floor(scrollTop / itemHeight),
-    const visibleCount = Math.ceil(height / itemHeight),
-    const end = start + visibleCount + overscan,
+    const start = Math.floor(scrollTop / itemHeight);
+    const visibleCount = Math.ceil(height / itemHeight);
+    const end = start + visibleCount + overscan;
     
     return {
       start: Math.max(0, start - overscan),
       end: Math.min(items.length, end)
-    },
+    };
   }, [scrollTop, itemHeight, height, overscan, items.length]),
-
   // Calculate total height and transform
-  const totalHeight = items.length * itemHeight,
+  const totalHeight = items.length * itemHeight;
   const transform = `translateY(${visibleRange.start * itemHeight}px)`,
 
   // Handle scroll
@@ -41,7 +39,6 @@ export function VirtualScroll<T>({
     setScrollTop(newScrollTop),
     onScroll?.(newScrollTop)
   }, [onScroll]),
-
   // Scroll to specific item
   const scrollToItem = useCallback((index: number) => {
     if (containerRef.current) {
@@ -49,19 +46,17 @@ export function VirtualScroll<T>({
       containerRef.current.scrollTop = scrollTop
     }
   }, [itemHeight]),
-
   // Scroll to top
   const scrollToTop = useCallback(() => {
-    scrollToItem(0),
+    scrollToItem(0);
   }, [scrollToItem]),
-
   // Auto-scroll to specific item on mount if needed
   useEffect(() => {
     if (items.length > 0 && containerRef.current) {
       // You can add logic here to scroll to a specific item on mount
       // For example, scroll to the last viewed item
     }
-  }, [items.length]),
+  }, [items.length]);
 
   return (
     <div className={`relative ${className}`}>
@@ -113,7 +108,7 @@ export function VirtualScroll<T>({
         {Math.round((scrollTop / (totalHeight - height)) * 100)}%
       </div>
     </div>
-  ),
+  );
 }
 
 // Specialized virtual scroll for service cards
@@ -124,13 +119,13 @@ interface ServiceCard {
 
 interface ServiceVirtualScrollProps {
   services: ServiceCard[];
-  height?: number,
+  height?: number;
   onServiceClick?: (service: ServiceCard) => void;
   className?: string
 }
 
 export function ServiceVirtualScroll({
-  services,
+  services;
   height = 600;
   onServiceClick;
   className = ''

@@ -17,30 +17,30 @@ const StatsSection: React.FC<StatsSectionProps> = ({ stats }) => {
     if (isInView) {
       const timer = setTimeout(() => {
         stats.forEach((stat, index) => {
-          const targetNumber = parseInt(stat.number.replace(/[^0-9]/g, '')),
-          const suffix = stat.number.replace(/[0-9]/g, ''),
+          const targetNumber = parseInt(stat.number.replace(/[^0-9]/g, ''));
+          const suffix = stat.number.replace(/[0-9]/g, '');
 
-          let current = 0,
-          const increment = targetNumber / 50,
+          let current = 0;
+          const increment = targetNumber / 50;
 
           const countTimer = setInterval(() => {
-            current += increment,
+            current += increment;
             if (current >= targetNumber) {
-              current = targetNumber,
-              clearInterval(countTimer),
+              current = targetNumber;
+              clearInterval(countTimer);
             }
 
             setCounts(prev => ({
-              ...prev,
+              ...prev;
               [stat.label]: Math.floor(current)
-            })),
-          }, 50),
-        }),
-      }, 500),
+            }));
+          }, 50);
+        });
+      }, 500);
 
-      return () => clearTimeout(timer),
+      return () => clearTimeout(timer);
     }
-  }, [isInView, stats]),
+  }, [isInView, stats]);
 
   return (
     <section className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate-dark/80 to-zion-slate-dark" role="region" aria-labelledby="stats-heading">
@@ -111,6 +111,6 @@ const StatsSection: React.FC<StatsSectionProps> = ({ stats }) => {
       </div>
     </section>
   );
-},
+};
 
 export default StatsSection;

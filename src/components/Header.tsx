@@ -2,26 +2,26 @@ import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { 
-  Menu,
-  X, 
-  ChevronDown, 
-  Brain, 
-  Shield, 
-  Cpu, 
-  Heart, 
-  Rocket, 
-  Sparkles,
-  BarChart3,
-  Network,
-  Globe,
-  Users,
-  FileText,
-  Phone,
-  Mail,
-  MapPin,
-  Search,
-  Bell,
-  User,
+  Menu;
+  X;
+  ChevronDown;
+  Brain;
+  Shield;
+  Cpu;
+  Heart;
+  Rocket;
+  Sparkles;
+  BarChart3;
+  Network;
+  Globe;
+  Users;
+  FileText;
+  Phone;
+  Mail;
+  MapPin;
+  Search;
+  Bell;
+  User;
   Settings
 } from "lucide-react";
 export function Header() {

@@ -1,17 +1,17 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { 
-  Accessibility as AccessibilityIcon,
-  Type, 
-  Eye, 
-  Volume2, 
-  Keyboard, 
-  X,
-  Plus,
-  Minus,
-  Contrast,
-  Sun,
-  Moon,
+  Accessibility as AccessibilityIcon;
+  Type;
+  Eye;
+  Volume2;
+  Keyboard;
+  X;
+  Plus;
+  Minus;
+  Contrast;
+  Sun;
+  Moon;
   Settings
 } from "lucide-react";
 interface AccessibilitySettings {
@@ -25,11 +25,11 @@ export function Accessibility() {
   });
   useEffect(() => {
     // Load settings from localStorage
-    const savedSettings = localStorage.getItem('accessibility-settings'),
+    const savedSettings = localStorage.getItem('accessibility-settings');
     if (savedSettings) {
-      const parsed = JSON.parse(savedSettings),
+      const parsed = JSON.parse(savedSettings);
       setSettings(parsed),
-      applySettings(parsed),
+      applySettings(parsed);
     }
 
     // Add keyboard shortcuts
@@ -40,11 +40,11 @@ export function Accessibility() {
           case '+':
             e.preventDefault();
             increaseFontSize(),
-            break,
+            break;
           case '-':
             e.preventDefault(),
             decreaseFontSize(),
-            break,
+            break;
           case '0':
             e.preventDefault(),
             resetSettings(),
@@ -53,68 +53,67 @@ export function Accessibility() {
       }
     },
 
-    document.addEventListener('keydown', handleKeyDown),
-    return () => document.removeEventListener('keydown', handleKeyDown),
-  }, []),
+    document.addEventListener('keydown', handleKeyDown);
+    return () => document.removeEventListener('keydown', handleKeyDown);
+  }, []);
 
   const applySettings = (newSettings: AccessibilitySettings) => {
     const root = document.documentElement;
     // Apply font size
     root.style.fontSize = `${newSettings.fontSize}px`,
-    
     // Apply high contrast
     if (newSettings.highContrast) {
-      root.classList.add('high-contrast'),
+      root.classList.add('high-contrast');
     } else {
-      root.classList.remove('high-contrast'),
+      root.classList.remove('high-contrast');
     }
     
     // Apply reduced motion
     if (newSettings.reducedMotion) {
-      root.classList.add('reduced-motion'),
+      root.classList.add('reduced-motion');
     } else {
-      root.classList.remove('reduced-motion'),
+      root.classList.remove('reduced-motion');
     }
     
     // Apply theme
     if (newSettings.theme === 'light') {
       root.classList.add('light-theme'),
-      root.classList.remove('dark-theme'),
+      root.classList.remove('dark-theme');
     } else if (newSettings.theme === 'dark') {
       root.classList.add('dark-theme'),
-      root.classList.remove('light-theme'),
+      root.classList.remove('light-theme');
     } else {
-      root.classList.remove('light-themedark-theme'),
+      root.classList.remove('light-themedark-theme');
     }
-  },
+  };
 
   const updateSetting = (key: keyof AccessibilitySettings, value: any) => {
     const newSettings = { ...settings, [key]: value },
-    setSettings(newSettings),
+    setSettings(newSettings);
     applySettings(newSettings),
-    localStorage.setItem('accessibility-settings', JSON.stringify(newSettings)),
-  },
+    localStorage.setItem('accessibility-settings', JSON.stringify(newSettings));
+  };
 
   const increaseFontSize = () => {
     if (settings.fontSize < 24) {
-      updateSetting('fontSize', settings.fontSize + 2),
+      updateSetting('fontSize', settings.fontSize + 2);
     }
-  },
+  };
 
   const decreaseFontSize = () => {
     if (settings.fontSize > 12) {
-      updateSetting('fontSize', settings.fontSize - 2),
+      updateSetting('fontSize', settings.fontSize - 2);
     }
-  },
+  };
 
   const resetSettings = () => {
     const defaultSettings: AccessibilitySettings = {
       fontSize: 16,highContrast: false,reducedMotion: false,soundEnabled: true,theme: 'auto'
     };
-    setSettings(defaultSettings),
+    setSettings(defaultSettings);
     applySettings(defaultSettings),
-    localStorage.removeItem('accessibility-settings'),
-  },
+    localStorage.removeItem('accessibility-settings');
+  };
 
   return (
     <>

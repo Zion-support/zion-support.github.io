@@ -2,46 +2,46 @@ import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import {
-  Home,
-  Brain,
-  Cloud,
-  Server,
-  Rocket,
-  Users,
-  Briefcase,
-  FileText,
-  HelpCircle,
-  MessageCircle,
-  Settings,
-  BarChart3,
-  Shield,
-  Zap,
-  Globe,
-  Cpu,
-  Database,
-  Network,
-  Lock,
-  Code,
-  ShoppingCart,
-  Target,
-  Lightbulb,
-  Award,
-  TrendingUp,
-  BookOpen,
-  Calendar,
-  MapPin,
-  Phone,
-  Mail,
-  ChevronRight,
-  ChevronDown,
-  Handshake,
-  Atom,
-  Link as LinkIcon,
-  Wifi,
-  HeartPulse,
-  DollarSign,
-  Leaf,
-  Building,
+  Home;
+  Brain;
+  Cloud;
+  Server;
+  Rocket;
+  Users;
+  Briefcase;
+  FileText;
+  HelpCircle;
+  MessageCircle;
+  Settings;
+  BarChart3;
+  Shield;
+  Zap;
+  Globe;
+  Cpu;
+  Database;
+  Network;
+  Lock;
+  Code;
+  ShoppingCart;
+  Target;
+  Lightbulb;
+  Award;
+  TrendingUp;
+  BookOpen;
+  Calendar;
+  MapPin;
+  Phone;
+  Mail;
+  ChevronRight;
+  ChevronDown;
+  Handshake;
+  Atom;
+  Link as LinkIcon;
+  Wifi;
+  HeartPulse;
+  DollarSign;
+  Leaf;
+  Building;
   User
 } from "lucide-react";
 export const EnhancedSidebar: React.FC = () => {
@@ -52,10 +52,10 @@ export const EnhancedSidebar: React.FC = () => {
     if (newExpanded.has(section)) {
       newExpanded.delete(section)
     } else {
-      newExpanded.add(section),
+      newExpanded.add(section);
     }
-    setExpandedSections(newExpanded),
-  },
+    setExpandedSections(newExpanded);
+  };
 
   const isActive = (path: string) => location.pathname === path;
   const navigationSections = [
@@ -248,5 +248,5 @@ export const EnhancedSidebar: React.FC = () => {
         </motion.div>
       </div>
     </aside>
-  ),
+  );
 };

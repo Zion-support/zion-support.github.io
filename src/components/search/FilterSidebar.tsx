@@ -16,10 +16,10 @@ interface FilterSidebarProps {
 
 export function FilterSidebar({
   filters;
-  selectedFilters,
-  onFilterChange,
-  onClearFilters,
-  isOpen,
+  selectedFilters;
+  onFilterChange;
+  onClearFilters;
+  isOpen;
   onClose
 }: FilterSidebarProps) {
   return (

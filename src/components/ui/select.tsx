@@ -1,14 +1,14 @@
 import React from "react";
 interface SelectProps {
   children: React.ReactNode;
-  className?: string,
-  value?: string,
+  className?: string;
+  value?: string;
   onChange?: (e: React.ChangeEvent<HTMLSelectElement>) => void;
   disabled?: boolean
 }
 
 export function Select({
-  children,
+  children;
   className = '';
   value;
   onChange;
@@ -24,7 +24,7 @@ export function Select({
     >
       {children}
     </select>
-  ),
+  );
 }
 
 interface SelectItemProps {
@@ -53,7 +53,7 @@ export function SelectTrigger({ children, className = '' }: SelectTriggerProps) 
 }
 
 interface SelectValueProps {
-  placeholder?: string,
+  placeholder?: string;
 }
 
 export function SelectValue({ placeholder }: SelectValueProps) {

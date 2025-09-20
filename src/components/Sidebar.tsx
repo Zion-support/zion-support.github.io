@@ -2,29 +2,29 @@ import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { 
-  Menu,
-  X, 
-  Home, 
-  Zap, 
-  Brain, 
-  Shield, 
-  Cloud, 
-  Cpu, 
-  Rocket, 
-  Users, 
-  ShoppingCart, 
-  BookOpen, 
-  MessageCircle, 
-  HelpCircle, 
-  DollarSign, 
-  Gauge, 
-  Workflow, 
-  Atom, 
-  Star, 
-  Target, 
-  TrendingUp, 
-  Globe,
-  ChevronDown,
+  Menu;
+  X;
+  Home;
+  Zap;
+  Brain;
+  Shield;
+  Cloud;
+  Cpu;
+  Rocket;
+  Users;
+  ShoppingCart;
+  BookOpen;
+  MessageCircle;
+  HelpCircle;
+  DollarSign;
+  Gauge;
+  Workflow;
+  Atom;
+  Star;
+  Target;
+  TrendingUp;
+  Globe;
+  ChevronDown;
   ChevronRight
 } from "lucide-react";
 interface SidebarItem {
@@ -99,20 +99,20 @@ export const Sidebar: React.FC = () => {
       prev.includes(sectionName) 
         ? prev.filter(name => name !== sectionName)
         : [...prev, sectionName]
-    ),
-  },
+    );
+  };
 
   const isActive = (href: string) => {
     if (href === '/') {
       return location.pathname === '/'
     }
     return location.pathname.startsWith(href);
-  },
+  };
 
   const renderNavItem = (item: SidebarItem, level: number = 0) => {
     const hasChildren = item.children && item.children.length > 0;
-    const isExpanded = expandedSections.includes(item.name.toLowerCase()),
-    const active = isActive(item.href),
+    const isExpanded = expandedSections.includes(item.name.toLowerCase());
+    const active = isActive(item.href);
 
     return (
       <div key={item.name}>
@@ -175,7 +175,7 @@ export const Sidebar: React.FC = () => {
         )}
       </div>
     );
-  },
+  };
 
   return (
     <>

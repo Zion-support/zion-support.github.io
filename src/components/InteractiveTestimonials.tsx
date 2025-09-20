@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
-  Star,
-  Quote,
-  ChevronLeft,
-  ChevronRight,
-  Play,
-  Pause,
-  Users,
-  Award,
+  Star;
+  Quote;
+  ChevronLeft;
+  ChevronRight;
+  Play;
+  Pause;
+  Users;
+  Award;
   TrendingUp
 } from "lucide-react";
 const testimonials = [
@@ -32,24 +32,24 @@ const testimonials = [
     id: 5,name: "Lisa Wang",position: "Security Director, SecureNet",
     company: "SecureNet",avatar: "👩‍💻",rating: 5,content: "Their zero-trust security architecture and SOC 2 compliance automation have made our security posture bulletproof. We've achieved 100% compliance with all industry standards and zero security incidents.",category: "Cybersecurity",results: ["100% compliance", "Zero incidents", "Automated security"]
   }
-],
+];
 
-const categories = ["All", "AI & Infrastructure", "Quantum Computing", "AI Research", "Manufacturing IoT", "Cybersecurity"],
+const categories = ["All", "AI & Infrastructure", "Quantum Computing", "AI Research", "Manufacturing IoT", "Cybersecurity"];
 
 export function InteractiveTestimonials() {
-  const [selectedCategory, setSelectedCategory] = useState("All"),
-  const [selectedTestimonial, setSelectedTestimonial] = useState(0),
+  const [selectedCategory, setSelectedCategory] = useState("All");
+  const [selectedTestimonial, setSelectedTestimonial] = useState(0);
 
   const filteredTestimonials = selectedCategory === "All" 
     ? testimonials 
-    : testimonials.filter(t => t.category === selectedCategory),
+    : testimonials.filter(t => t.category === selectedCategory);
 
-  const currentTestimonial = filteredTestimonials[selectedTestimonial],
+  const currentTestimonial = filteredTestimonials[selectedTestimonial];
 
   const nextTestimonial = () => {
     setSelectedTestimonial((prev) => 
       prev === filteredTestimonials.length - 1 ? 0 : prev + 1
-    ),
+    );
   };
   const prevTestimonial = () => {
     setSelectedTestimonial((prev) => 
@@ -60,19 +60,18 @@ export function InteractiveTestimonials() {
     setCurrentIndex(index)
   };
   const togglePlayPause = () => {
-    setIsPlaying(!isPlaying),
+    setIsPlaying(!isPlaying);
   },
-
   // Auto-advance testimonials
   React.useEffect(() => {
-    if (!isPlaying) return,
+    if (!isPlaying) return;
 
     const interval = setInterval(() => {
-      nextTestimonial(),
-    }, 5000),
+      nextTestimonial();
+    }, 5000);
 
-    return () => clearInterval(interval),
-  }, [isPlaying, currentIndex]),
+    return () => clearInterval(interval);
+  }, [isPlaying, currentIndex]);
 
   const currentTestimonial = testimonials[currentIndex];
   return (

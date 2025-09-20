@@ -3,109 +3,104 @@ import { motion, AnimatePresence } from "framer-motion";
 import { ImageIcon, AlertCircle, Loader2 } from "lucide-react";
 interface OptimizedImageProps {
   src: string,alt: string;
-  width?: number | string,
-  height?: number | string,
-  className?: string,
-  priority?: boolean,
+  width?: number | string;
+  height?: number | string;
+  className?: string;
+  priority?: boolean;
   placeholder?: 'blur' | 'shimmer' | 'none',
-  fallbackSrc?: string,
-  onLoad?: () => void,
+  fallbackSrc?: string;
+  onLoad?: () => void;
   onError?: (error: Error) => void;
-  lazy?: boolean,
-  quality?: number,
-  sizes?: string,
+  lazy?: boolean;
+  quality?: number;
+  sizes?: string;
   objectFit?: 'cover' | 'contain' | 'fill' | 'none' | 'scale-down',
-  rounded?: boolean,
-  shadow?: boolean,
+  rounded?: boolean;
+  shadow?: boolean;
   hover?: boolean
 }
 
 export const OptimizedImage: React.FC<OptimizedImageProps> = ({
   src;
-  alt,
-  width,
-  height,
+  alt;
+  width;
+  height;
   className = '',
-  priority = false,
+  priority = false;
   placeholder = 'shimmer',
   fallbackSrc = '/images/placeholder.jpg',
-  onLoad,
-  onError,
-  lazy = true,
-  quality = 75,
+  onLoad;
+  onError;
+  lazy = true;
+  quality = 75;
   sizes = '100vw',
   objectFit = 'cover',
-  rounded = false,
-  shadow = false,
+  rounded = false;
+  shadow = false;
   hover = false
 }) => {
-  const [imageSrc, setImageSrc] = useState<string>(src),
-  const [isLoading, setIsLoading] = useState(true),
-  const [hasError, setHasError] = useState(false),
-  const [isIntersecting, setIsIntersecting] = useState(priority),
-  const [isLoaded, setIsLoaded] = useState(false),
+  const [imageSrc, setImageSrc] = useState<string>(src);
+  const [isLoading, setIsLoading] = useState(true);
+  const [hasError, setHasError] = useState(false);
+  const [isIntersecting, setIsIntersecting] = useState(priority);
+  const [isLoaded, setIsLoaded] = useState(false);
   
-  const imgRef = useRef<HTMLImageElement>(null),
+  const imgRef = useRef<HTMLImageElement>(null);
   const observerRef = useRef<IntersectionObserver | null>(null),
-
   // Intersection Observer for lazy loading
   useEffect(() => {
     if (priority || !lazy) {
-      setIsIntersecting(true),
-      return,
+      setIsIntersecting(true);
+      return;
     }
 
-    if (!imgRef.current) return,
-
+    if (!imgRef.current) return;
     observerRef.current = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
           setIsIntersecting(true),
-          observerRef.current?.disconnect(),
+          observerRef.current?.disconnect();
         }
       },
       {
         rootMargin: '50px',threshold: 0.1
       }
     );
-    observerRef.current.observe(imgRef.current),
+    observerRef.current.observe(imgRef.current);
 
     return () => {
       if (observerRef.current) {
-        observerRef.current.disconnect(),
+        observerRef.current.disconnect();
       }
-    },
+    };
   }, [priority, lazy]),
-
   // Handle image load
   const handleImageLoad = () => {
-    setIsLoading(false),
+    setIsLoading(false);
     setIsLoaded(true),
-    onLoad?.(),
+    onLoad?.();
   },
 
   // Handle image error
   const handleImageError = () => {
     if (imageSrc !== fallbackSrc) {
-      setImageSrc(fallbackSrc),
+      setImageSrc(fallbackSrc);
       setHasError(false),
-      setIsLoading(true),
+      setIsLoading(true);
     } else {
-      setHasError(true),
+      setHasError(true);
       setIsLoading(false),
       onError?.(new Error(`Failed to load image: ${src}`));
     }
   },
-
   // Cleanup on unmount
   useEffect(() => {
     return () => {
       if (observerRef.current) {
-        observerRef.current.disconnect(),
+        observerRef.current.disconnect();
       }
-    },
+    };
   }, []),
-
   // Generate optimized src with quality parameter
   const getOptimizedSrc = (src: string) => {
     if (src.startsWith('data:') || src.startsWith('blob:')) {
@@ -116,17 +111,16 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
     try {
       const url = new URL(src);
       if (url.searchParams.has('quality')) {
-        return src,
+        return src;
       }
-      url.searchParams.set('quality', quality.toString()),
-      return url.toString(),
+      url.searchParams.set('quality', quality.toString());
+      return url.toString();
     } catch {
-      return src,
+      return src;
     }
-  },
+  };
 
   const optimizedSrc = getOptimizedSrc(imageSrc),
-
   // Base classes
   const baseClasses = [
     'transition-all duration-300',
@@ -140,7 +134,6 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
     objectFit === 'scale-down' ? 'object-scale-down' : '',
     className
   ].filter(Boolean).join(' '),
-
   // Loading skeleton
   if (!isIntersecting) {
     return (
@@ -152,7 +145,7 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
           <Loader2 className="w-8 h-8 text-gray-400 animate-spin" />
         </div>
       </div>
-    ),
+    );
   }
 
   // Error state
@@ -218,7 +211,6 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
     </div>
   );
 },
-
 // Specialized image components
 export const AvatarImage: React.FC<Omit<OptimizedImageProps, 'rounded' | 'objectFit'> & { size?: 'sm' | 'md' | 'lg' | 'xl' }> = ({ 
   size = 'md';
@@ -234,8 +226,8 @@ export const AvatarImage: React.FC<Omit<OptimizedImageProps, 'rounded' | 'object
       rounded={false}
       objectFit="cover"
     />
-  ),
-},
+  );
+};
 
 export const CardImage: React.FC<OptimizedImageProps> = (props) => (
   <OptimizedImage

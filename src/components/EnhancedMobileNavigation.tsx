@@ -2,42 +2,42 @@ import React, { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link, useLocation } from "react-router-dom";
 import {
-  Menu,
-  X,
-  ChevronDown,
-  Home,
-  Users,
-  Briefcase,
-  Phone,
-  Info,
-  Settings,
-  HelpCircle,
-  FileText,
-  Globe,
-  Zap,
-  Shield,
-  Cloud,
-  Brain,
-  Smartphone,
-  Monitor,
-  Server,
-  Database,
-  Lock,
-  Code,
-  Rocket,
-  Star,
-  TrendingUp,
-  Award,
-  BookOpen,
-  MessageCircle,
-  Mail,
-  MapPin,
+  Menu;
+  X;
+  ChevronDown;
+  Home;
+  Users;
+  Briefcase;
+  Phone;
+  Info;
+  Settings;
+  HelpCircle;
+  FileText;
+  Globe;
+  Zap;
+  Shield;
+  Cloud;
+  Brain;
+  Smartphone;
+  Monitor;
+  Server;
+  Database;
+  Lock;
+  Code;
+  Rocket;
+  Star;
+  TrendingUp;
+  Award;
+  BookOpen;
+  MessageCircle;
+  Mail;
+  MapPin;
   Clock
 } from "lucide-react";
 interface NavigationItem {
   label: string,path: string,icon: React.ComponentType<{ size?: number, className?: string }>,
   children?: NavigationItem[],
-  description?: string,
+  description?: string;
 }
 
 const navigationItems: NavigationItem[] = [
@@ -88,10 +88,10 @@ const quickActions = [
   }
 ];
 export const EnhancedMobileNavigation: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false),
-  const [expandedItems, setExpandedItems] = useState<Set<string>>(new Set()),
-  const [activePath, setActivePath] = useState('/'),
-  const location = useLocation(),
+  const [isOpen, setIsOpen] = useState(false);
+  const [expandedItems, setExpandedItems] = useState<Set<string>>(new Set());
+  const [activePath, setActivePath] = useState('/');
+  const location = useLocation();
   const menuRef = useRef<HTMLDivElement>(null);
   useEffect(() => {
     setActivePath(location.pathname);
@@ -104,14 +104,14 @@ export const EnhancedMobileNavigation: React.FC = () => {
     };
     if (isOpen) {
       document.addEventListener('mousedown', handleClickOutside),
-      document.body.style.overflow = 'hidden',
+      document.body.style.overflow = 'hidden';
     }
 
     return () => {
       document.removeEventListener('mousedown', handleClickOutside),
-      document.body.style.overflow = 'unset',
-    },
-  }, [isOpen]),
+      document.body.style.overflow = 'unset';
+    };
+  }, [isOpen]);
 
   const toggleExpanded = (label: string) => {
     setExpandedItems(prev => {
@@ -119,28 +119,28 @@ export const EnhancedMobileNavigation: React.FC = () => {
       if (newSet.has(label)) {
         newSet.delete(label)
       } else {
-        newSet.add(label),
+        newSet.add(label);
       }
-      return newSet,
-    }),
-  },
+      return newSet;
+    });
+  };
 
   const handleNavigation = (path: string) => {
     setIsOpen(false);
     setExpandedItems(new Set())
-  },
+  };
 
   const isActive = (path: string) => {
     if (path === '/') {
       return activePath === '/'
     }
     return activePath.startsWith(path);
-  },
+  };
 
   const renderNavigationItem = (item: NavigationItem, depth: number = 0) => {
     const isExpanded = expandedItems.has(item.label);
-    const hasChildren = item.children && item.children.length > 0,
-    const isItemActive = isActive(item.path),
+    const hasChildren = item.children && item.children.length > 0;
+    const isItemActive = isActive(item.path);
 
     return (
       <div key={item.label} className="w-full">
@@ -214,8 +214,8 @@ export const EnhancedMobileNavigation: React.FC = () => {
           </AnimatePresence>
         )}
       </div>
-    ),
-  },
+    );
+  };
 
   return (
     <>

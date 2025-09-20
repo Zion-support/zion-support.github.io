@@ -21,7 +21,7 @@ const featuredListings = [
   }
 ];
 export function FeaturedListingsSection() {
-  const [selectedCategory, setSelectedCategory] = useState("All"),
+  const [selectedCategory, setSelectedCategory] = useState("All");
   const [hoveredListing, setHoveredListing] = useState<number | null>(null);
   const [showFilters, setShowFilters] = useState(false);
   const filteredListings = selectedCategory === "All"
@@ -40,7 +40,7 @@ export function FeaturedListingsSection() {
       <span key={i} className={i < rating ? 'text-yellow-400' : 'text-gray-300'}>
         ★
       </span>
-    )),
+    ));
   };
   return (
     <section className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">

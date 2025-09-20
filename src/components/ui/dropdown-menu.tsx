@@ -25,7 +25,7 @@ interface DropdownMenuTriggerProps {
 }
 
 export function DropdownMenuTrigger({ children, asChild = false }: DropdownMenuTriggerProps) {
-  const context = useContext(DropdownMenuContext),
+  const context = useContext(DropdownMenuContext);
   if (!context) {
     throw new Error('DropdownMenuTrigger must be used within DropdownMenu');
   }
@@ -68,20 +68,20 @@ export function DropdownMenuContent({ children, align = 'start', className = '' 
     <div className={`absolute z-50 mt-2 w-48 bg-white rounded-md shadow-lg py-1 border border-gray-200 ${alignClasses[align]} ${className}`}>
       {children}
     </div>
-  ),
+  );
 }
 
 interface DropdownMenuItemProps {
   children: ReactNode;
-  onClick?: () => void,
-  asChild?: boolean,
+  onClick?: () => void;
+  asChild?: boolean;
   className?: string
 }
 
 export function DropdownMenuItem({ children, onClick, asChild = false, className = '' }: DropdownMenuItemProps) {
-  const context = useContext(DropdownMenuContext),
+  const context = useContext(DropdownMenuContext);
   if (!context) {
-    throw new Error('DropdownMenuItem must be used within DropdownMenu'),
+    throw new Error('DropdownMenuItem must be used within DropdownMenu');
   }
   
   const handleClick = () => {

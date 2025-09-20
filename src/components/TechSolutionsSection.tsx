@@ -2,17 +2,17 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import {
-  Brain,
-  Shield,
-  Cloud,
-  Zap,
-  Globe,
-  Rocket,
-  Cpu,
-  Database,
-  Lock,
-  Network,
-  Code,
+  Brain;
+  Shield;
+  Cloud;
+  Zap;
+  Globe;
+  Rocket;
+  Cpu;
+  Database;
+  Lock;
+  Network;
+  Code;
   Server
 } from "lucide-react";
 const techSolutions = [
