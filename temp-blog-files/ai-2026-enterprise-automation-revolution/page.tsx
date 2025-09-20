@@ -1,8 +1,8 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
 export const metadata: Metadata = {
-  title: 'AI 2026: Enterprise Automation Revolution - Zion Tech Group',
-  description: 'Discover the revolutionary AI automation solutions that will transform enterprises in 2026. Advanced workflows, intelligent process automation, and autonomous business operations.',
+  title: 'AI 2026: Enterprise Automation Revolution - Zion Tech Group'
+  description: 'Discover the revolutionary AI automation solutions that will transform enterprises in 2026. Advanced workflows, intelligent process automation, and autonomous business operations.'
   keywords: ['AI automation 2026enterprise automationintelligent workflowsautonomous business', 'AI transformation']
 }
 export default function AI2026EnterpriseAutomationRevolution() {
@@ -13,23 +13,23 @@ export default function AI2026EnterpriseAutomationRevolution() {
           {/* Header */}
           <div>
             <div>
-              🚀 Latest Research • December 2025,
+              🚀 Latest Research • December 2025
             </div>
             <h1 className="text-4xl md: text-5xl font-bold text-gray-900 mb-6">
-              AI 2026: Enterprise Automation Revolution,
+              AI 2026: Enterprise Automation Revolution
             </h1>
             <p>
-              The complete guide to transforming your enterprise with next-generation AI automation,
-              intelligent workflows, and autonomous business operations.,
+              The complete guide to transforming your enterprise with next-generation AI automation
+              intelligent workflows, and autonomous business operations.
             </p>
           </div>
           {/* Executive Summary */}
           <div>
             <h2 className="text-2xl font-bold text-gray-900 mb-4">Executive Summary</h2>
             <p>
-              By 2026, enterprises will experience an automation revolution powered by advanced AI systems.,
-              This comprehensive guide explores the key technologies, implementation strategies, and business,
-              outcomes that will define the next era of enterprise automation.,
+              By 2026, enterprises will experience an automation revolution powered by advanced AI systems.
+              This comprehensive guide explores the key technologies, implementation strategies, and business
+              outcomes that will define the next era of enterprise automation.
             </p>
             <div>
               <div>
@@ -54,8 +54,8 @@ export default function AI2026EnterpriseAutomationRevolution() {
                 <div className="text-4xl mb-4">🧠</div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3">Autonomous AI Agents</h3>
                 <p>
-                  Self-managing AI systems that can execute complex business processes with minimal human intervention,
-                  learning and adapting in real-time.,
+                  Self-managing AI systems that can execute complex business processes with minimal human intervention
+                  learning and adapting in real-time.
                 </p>
                 <ul className="text-sm text-gray-600 space-y-1">
                   <li>• Multi-modal processing capabilities</li>
@@ -67,8 +67,8 @@ export default function AI2026EnterpriseAutomationRevolution() {
                 <div className="text-4xl mb-4">⚡</div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3">Intelligent Workflow Orchestration</h3>
                 <p>
-                  Advanced workflow engines that can dynamically adapt processes based on real-time conditions,
-                  resource availability, and business priorities.,
+                  Advanced workflow engines that can dynamically adapt processes based on real-time conditions
+                  resource availability, and business priorities.
                 </p>
                 <ul className="text-sm text-gray-600 space-y-1">
                   <li>• Dynamic process optimization</li>
@@ -80,8 +80,8 @@ export default function AI2026EnterpriseAutomationRevolution() {
                 <div className="text-4xl mb-4">🔮</div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3">Predictive Process Intelligence</h3>
                 <p>
-                  AI systems that can predict bottlenecks, optimize resource allocation, and prevent process failures,
-                  before they occur.,
+                  AI systems that can predict bottlenecks, optimize resource allocation, and prevent process failures
+                  before they occur.
                 </p>
                 <ul className="text-sm text-gray-600 space-y-1">
                   <li>• Anomaly detection and prevention</li>
@@ -93,8 +93,8 @@ export default function AI2026EnterpriseAutomationRevolution() {
                 <div className="text-4xl mb-4">🌐</div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3">Hyper-Connected Ecosystems</h3>
                 <p>
-                  Seamless integration across all enterprise systems, enabling unified automation across,
-                  departments, partners, and external services.,
+                  Seamless integration across all enterprise systems, enabling unified automation across
+                  departments, partners, and external services.
                 </p>
                 <ul className="text-sm text-gray-600 space-y-1">
                   <li>• API-first architecture</li>
@@ -184,20 +184,20 @@ export default function AI2026EnterpriseAutomationRevolution() {
           <div>
             <h2 className="text-2xl font-bold mb-4">Ready to Transform Your Enterprise?</h2>
             <p>
-              Join the automation revolution and unlock unprecedented efficiency and growth.,
+              Join the automation revolution and unlock unprecedented efficiency and growth.
             </p>
             <div>
-              <Link,
-                href="/services/ai-automation",
+              <Link
+                href="/services/ai-automation"
                 className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
               >
-                Explore Our AI Solutions,
+                Explore Our AI Solutions
               </Link>
-              <Link,
-                href="/contact",
+              <Link
+                href="/contact"
                 className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
               >
-                Schedule Consultation,
+                Schedule Consultation
               </Link>
             </div>
           </div>

@@ -8,24 +8,24 @@ export default function NewMultimodalAgents2025Banner(): JSX.Element {;
 					<div>
 						<p className="uppercase tracking-widest text-white/80 text-sm mb-2">New on the blog</p>
 						<h2 className="text-2xl md:text-3xl font-bold leading-snug">
-							AI 2025: Multimodal Agents in the Enterprise — Practical Guide,
+							AI 2025: Multimodal Agents in the Enterprise — Practical Guide
 						</h2>
 						<p>
-							A step-by-step 2025 playbook for deploying multimodal AI agents that drive ROI across customer operations, marketing, and field service.,
+							A step-by-step 2025 playbook for deploying multimodal AI agents that drive ROI across customer operations, marketing, and field service.
 						</p>
 					</div>
 					<div>
-						<Link,
-							href="/blog/ai-2025-multimodal-agents-practical-guide",
+						<Link
+							href="/blog/ai-2025-multimodal-agents-practical-guide"
 							className="bg-white text-indigo-700 px-6 py-3 rounded-lg font-semibold hover: bg-gray-100 transition-colors"
 						>
-							Read the guide →,
+							Read the guide →
 						</Link>
-						<Link,
-							href="/blog",
+						<Link
+							href="/blog"
 							className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-700 transition-colors"
 						>
-							More articles,
+							More articles
 						</Link>
 					</div>
 				</div>

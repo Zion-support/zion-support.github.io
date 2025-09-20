@@ -2,7 +2,7 @@ import Link from 'next/link'
 import React from 'react'
 import SEO from '../../components/SEO';
 export const metadata = {
-  title: 'AI 2026: Agents‑On‑Call Automation',
+  title: 'AI 2026: Agents‑On‑Call Automation'
   description: 'Autonomous triage, mitigation, and escalation with eval‑gated playbooks and deep observability.'
 }
 export default function AgentsOnCallAutomationPage() {
@@ -10,8 +10,8 @@ export default function AgentsOnCallAutomationPage() {
     <main className="max-w-3xl mx-auto px-4 sm: px-6 lg:px-8 py-16">
       <h1 className="text-4xl font-bold text-gray-900 mb-4">AI 2026: Agents‑On‑Call Automation</h1>
       <p>
-        How to design agents that respond to incidents with safety, speed, and accountability using evaluation‑gated,
-        workflows and comprehensive telemetry.,
+        How to design agents that respond to incidents with safety, speed, and accountability using evaluation‑gated
+        workflows and comprehensive telemetry.
       </p>
       <div>
         <h2>Design Principles</h2>
@@ -23,30 +23,30 @@ export default function AgentsOnCallAutomationPage() {
         </ol>
         <h3>Implementation Pattern</h3>
         <p>
-          Start with a small set of automated runbooks, instrument them with eval gates, and scale safely with strong,
-          operational guardrails and post‑incident learning loops.,
+          Start with a small set of automated runbooks, instrument them with eval gates, and scale safely with strong
+          operational guardrails and post‑incident learning loops.
         </p>
         <h3>Continue Reading</h3>
         <ul>
           <li>
             <Link href="/content/ai-2026-agent-incident-response-playbook" className="text-purple-700 hover: underline">
-              Agent Incident Response Playbook,
+              Agent Incident Response Playbook
             </Link>
           </li>
           <li>
             <Link href="/content/ai-2026-operational-guardrails" className="text-purple-700 hover:underline">
-              Operational Guardrails,
+              Operational Guardrails
             </Link>
           </li>
         </ul>
       </div>
     </main>)}
 export const metadata = {
-  title: 'AI 2026: Agents‑On‑Call Automation',
+  title: 'AI 2026: Agents‑On‑Call Automation'
   description:
-    'Autonomous incident triage, mitigation, and escalation with eval‑gated playbooks and deep observability.',
-  keywords: [,
-    'agents on callautonomous incident responseai opsobservability',
+    'Autonomous incident triage, mitigation, and escalation with eval‑gated playbooks and deep observability.'
+  keywords: [
+    'agents on callautonomous incident responseai opsobservability'
     'evalsplaybooks'
   ]
 }

@@ -1,9 +1,15 @@
 import React from 'react'
-const SEO: React.FC = () => {
+
+interface SEOProps {
+  title?: string
+  description?: string
+}
+
+const SEO: React.FC<SEOProps> = ({ title, description }) => {
   return (
     <div>
-      <h3 className="text-xl font-bold mb-4">SEO</h3>
-      <p className="text-gray-300">Revolutionary technology component</p>
+      {title && <h1 className="text-2xl font-bold mb-4">{title}</h1>}
+      {description && <p className="text-gray-600 mb-4">{description}</p>}
     </div>
   )
 }

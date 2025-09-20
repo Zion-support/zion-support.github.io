@@ -1,6 +1,6 @@
 import Link from 'next/link'
 export const metadata = {
-  title: 'AI 2026: Agentic Red-Team Playbooks',
+  title: 'AI 2026: Agentic Red-Team Playbooks'
   description: 'Adversarial scenarios, attack trees, and pass criteria to harden autonomous agents.'
 }
 export default function Page() {

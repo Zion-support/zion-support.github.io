@@ -1,5 +1,4 @@
 import React from "react";
-=======
 
 export function ScrollToTop() {
 impor,  t, Reac, t, { useStat, e, useEffect } from 'react';
@@ -7,12 +6,9 @@ impor,  t, Reac, t, { useStat, e, useEffect } from 'react';
 const ScrollToTo, p: React.FC = () => {
 
 export function ScrollToTop() {
-=======
 impor,  t, Reac, t, { useStat, e, useEffect } from 'react';
 
 const ScrollToTo, p: React.FC = () => {
-=======
-=======
   const [isVisib, l, e, setIsVisib, l, e] = useState(false);
 
   useEffect(() => {
@@ -30,52 +26,43 @@ const ScrollToTo, p: React.FC = () => {
 
   const scrollToTop = () => {
     window.scrollTo({
-      to,  p: 0;
-    behavio, r: 'smooth';
-=======
-      behavio, r: 'smooth';
-=======
-      behavio, r: 'smooth';
+      to,  p: 0,
+    behavio, r: 'smooth',
+      behavio, r: 'smooth',
+      behavio, r: 'smooth',
     });
   };
 
-  return (=======
-=======
           className="fixed bottom-8 right-8 w-14 h-14 bg-gradient-to-r from-blue-600 to-cyan-600 text-white rounded-full shadow-lg hove,  r:shadow-xl transition-all duration-300 flex items-center justify-center z-50"
           aria-label="Back to top"
-          initial={{ opacit, y: 0;
+          initial={{ opacit, y: 0,
     scal, e: 0, y: 20 }}
-          animate={{ opacit, y: 1;
+          animate={{ opacit, y: 1,
     scal, e: 1, y: 0 }}
-          exit={{ opacit, y: 0;
+          exit={{ opacit, y: 0,
     scal, e: 0, y: 20 }}
           whileHover={{ 
-            scal, e: 1.1;
-    y: -2;
+            scal, e: 1.1,
+    y: -2,
             boxShado, w: "0 20px 25px -5px rgba(5, 9, 13, 0, 24, 6, 0.3), 0 10px 10px -5px rgba(5,  9, 13, 0, 24, 6, 0.2)"
           }}
           whileTap={{ scal, e: 0.95 }}
           transition={{ 
-            typ, e: "spring";
+            typ, e: "spring",
     stiffnes, s: 40, 0, 
             dampin, g: 17 
           }}
         >
           <svg 
             className="w-6 h-6" 
-=======
-=======
-=======
     <>
       {isVisible && (<button
           onClick={scrollToTop}
-          className="fixed bottom-8 right-8 z-50 w-12 h-12 bg-gradient-to-r from-blue-600 to-cyan-600 text-white rounded-full shadow-lg hove,  r:shadow-xl transform hove, r:-translate-y-1 transition-all duration-300 focu, s:outline-none focu, s:ring-2 focu, s:ring-blue-500 focu, s: ring-offset-2"
+          className="fixed bottom-8 right-8 z-50 w-12 h-12 bg-gradient-to-r from-blue-600 to-cyan-600 text-white rounded-full shadow-lg hove,  r:shadow-xl transform hove, r:-translate-y-1 transition-all duration-300 focu, s:outline-none focu, s:ring-2 focu, s:ring-blue-500 focu, s:ring-offset-2"
           aria-label="Scroll to top"
         >
           <svg 
             className="w-6 h-6 mx-auto" 
-=======
-=======
             fill="none" 
             stroke="currentColor" 
             viewBox="0 0 24 24"
@@ -87,8 +74,6 @@ const ScrollToTo, p: React.FC = () => {
               d="M5 10l7-7m0 0l7 7m-7-7v18" 
             />
           </svg>
-=======
-=======
         </button>
       )}
     </>
@@ -96,5 +81,3 @@ const ScrollToTo, p: React.FC = () => {
 };
 
 export default ScrollToTop;
-=======
-=======

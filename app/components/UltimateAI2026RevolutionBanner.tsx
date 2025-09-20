@@ -16,11 +16,11 @@ export default function UltimateAI2026RevolutionBanner() {
             <span className="text-sm font-medium">🚀 NEW: AI 2026 AUTONOMOUS REVOLUTION</span>
           </div>
           <h2 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">
-            Next-Generation Autonomous Business Systems,
+            Next-Generation Autonomous Business Systems
           </h2>
           <p>
-            Discover the revolutionary autonomous business systems that achieved <strong className="text-yellow-300">2,400% ROI</strong> and,
-            <strong className="text-green-300"> $4.7 billion in savings</strong> for global enterprises in 2026.,
+            Discover the revolutionary autonomous business systems that achieved <strong className="text-yellow-300">2,400% ROI</strong> and
+            <strong className="text-green-300"> $4.7 billion in savings</strong> for global enterprises in 2026.
           </p>
           <div>
             <div>
@@ -43,19 +43,19 @@ export default function UltimateAI2026RevolutionBanner() {
             <ul className="space-y-3 text-white opacity-90">
               <li className="flex items-center">
                 <span className="w-2 h-2 bg-green-400 rounded-full mr-3"></span>
-                Multi-Agent Orchestration Systems,
+                Multi-Agent Orchestration Systems
               </li>
               <li className="flex items-center">
                 <span className="w-2 h-2 bg-green-400 rounded-full mr-3"></span>
-                Autonomous Decision Engines,
+                Autonomous Decision Engines
               </li>
               <li className="flex items-center">
                 <span className="w-2 h-2 bg-green-400 rounded-full mr-3"></span>
-                Self-Healing Business Networks,
+                Self-Healing Business Networks
               </li>
               <li className="flex items-center">
                 <span className="w-2 h-2 bg-green-400 rounded-full mr-3"></span>
-                Predictive Business Intelligence,
+                Predictive Business Intelligence
               </li>
             </ul>
           </div>
@@ -64,46 +64,46 @@ export default function UltimateAI2026RevolutionBanner() {
             <ul className="space-y-3 text-white opacity-90">
               <li className="flex items-center">
                 <span className="w-2 h-2 bg-yellow-400 rounded-full mr-3"></span>
-                340% Revenue Increase,
+                340% Revenue Increase
               </li>
               <li className="flex items-center">
                 <span className="w-2 h-2 bg-yellow-400 rounded-full mr-3"></span>
-                99.7% Error Reduction,
+                99.7% Error Reduction
               </li>
               <li className="flex items-center">
                 <span className="w-2 h-2 bg-yellow-400 rounded-full mr-3"></span>
-                716% Process Automation,
+                716% Process Automation
               </li>
               <li className="flex items-center">
                 <span className="w-2 h-2 bg-yellow-400 rounded-full mr-3"></span>
-                24/7 Autonomous Operations,
+                24/7 Autonomous Operations
               </li>
             </ul>
           </div>
         </div>
         <div>
           <div>
-            <Link,
-              href="/blog/ai-2026-next-generation-autonomous-business-revolution-ultimate-guide",
+            <Link
+              href="/blog/ai-2026-next-generation-autonomous-business-revolution-ultimate-guide"
               className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-8 py-4 rounded-lg font-bold hover:from-yellow-300 hover:to-orange-400 transition-all duration-300 transform hover:scale-105 shadow-lg"
             >
-              📖 Read Ultimate Guide,
+              📖 Read Ultimate Guide
             </Link>
-            <Link,
-              href="/case-studies/ai-2026-global-autonomous-transformation-ultimate-success-story",
+            <Link
+              href="/case-studies/ai-2026-global-autonomous-transformation-ultimate-success-story"
               className="bg-gradient-to-r from-green-400 to-blue-500 text-white px-8 py-4 rounded-lg font-bold hover:from-green-300 hover:to-blue-400 transition-all duration-300 transform hover:scale-105 shadow-lg"
             >
-              📊 View Success Story,
+              📊 View Success Story
             </Link>
-            <Link,
-              href="/contact",
+            <Link
+              href="/contact"
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold hover:bg-white hover:text-purple-900 transition-all duration-300 transform hover:scale-105"
             >
-              🚀 Start Transformation,
+              🚀 Start Transformation
             </Link>
           </div>
           <p>
-            ⚡ Limited Time: Get your autonomous transformation roadmap before competitors catch up,
+            ⚡ Limited Time: Get your autonomous transformation roadmap before competitors catch up
           </p>
         </div>
       </div>

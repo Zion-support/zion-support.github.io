@@ -27,7 +27,5 @@ const Badge: React.FC<BadgeProps> = ({
 };
 
 export { Badge };
-=======
 }
-=======
 }

@@ -4,9 +4,9 @@ export default function Page() {
       <h1>AI 2026: Autonomous Change Management Blueprint</h1>
       <p className="text-gray-600">Date: 2025-09-16 • Tags: Agents, Governance, Release Engineering, 2026</p>
       <p>
-        A practical guide to implementing safe, auditable, and reversible change management for,
-        autonomous agents in production. Wire evaluation gates, policy-as-code, and runtime guardrails,
-        directly into change workflows so every update is evidence-backed and regulator-ready.,
+        A practical guide to implementing safe, auditable, and reversible change management for
+        autonomous agents in production. Wire evaluation gates, policy-as-code, and runtime guardrails
+        directly into change workflows so every update is evidence-backed and regulator-ready.
       </p>
       <h2>Core Capabilities</h2>
       <ul>
@@ -22,7 +22,7 @@ export default function Page() {
         <li>Audit readiness: continuous via evidence hub</li>
       </ul>
       <p>
-        Need an implementation plan tailored to your stack? Our team can help you ship governed,
-        autonomy with confidence.,
+        Need an implementation plan tailored to your stack? Our team can help you ship governed
+        autonomy with confidence.
       </p>
     </main>)}

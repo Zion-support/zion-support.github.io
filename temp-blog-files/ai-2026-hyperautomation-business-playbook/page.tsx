@@ -3,8 +3,8 @@ import Link from 'next/link'
 import SEO from '../../components/SEO';
 import ErrorBoundary from '../../components/ErrorBoundary';
 export const metadata = {
-  title: 'AI 2026: Hyperautomation Business Playbook - Complete Implementation Guide',
-  description: 'A comprehensive playbook to design, deploy, and scale AI-driven hyperautomation across the enterprise.',
+  title: 'AI 2026: Hyperautomation Business Playbook - Complete Implementation Guide'
+  description: 'A comprehensive playbook to design, deploy, and scale AI-driven hyperautomation across the enterprise.'
   keywords: ['hyperautomationAI automationbusiness transformationenterprise AI']
 }
 export default function AI2026HyperautomationPlaybook() {
@@ -24,23 +24,23 @@ export default function AI2026HyperautomationPlaybook() {
                 <span className="text-sm font-medium">📚 COMPLETE PLAYBOOK</span>
               </div>
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                AI 2026: Hyperautomation Business Playbook,
+                AI 2026: Hyperautomation Business Playbook
               </h1>
               <p>
-                Your comprehensive guide to designing, deploying, and scaling AI-driven hyperautomation across the enterprise.,
+                Your comprehensive guide to designing, deploying, and scaling AI-driven hyperautomation across the enterprise.
               </p>
               <div>
-                <Link,
-                  href="/services",
+                <Link
+                  href="/services"
                   className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
                 >
-                  Start Implementation,
+                  Start Implementation
                 </Link>
-                <Link,
-                  href="/contact",
+                <Link
+                  href="/contact"
                   className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
                 >
-                  Get Expert Help,
+                  Get Expert Help
                 </Link>
               </div>
             </div>
@@ -51,7 +51,7 @@ export default function AI2026HyperautomationPlaybook() {
             <div>
               <h2 className="text-3xl font-bold text-blue-900 mb-4">Introduction to Hyperautomation</h2>
               <p>
-                Hyperautomation represents the next evolution of business process automation, combining AI, machine learning, and advanced analytics to create intelligent, self-optimizing workflows.,
+                Hyperautomation represents the next evolution of business process automation, combining AI, machine learning, and advanced analytics to create intelligent, self-optimizing workflows.
               </p>
             </div>
             <h2 className="text-3xl font-bold text-gray-900 mb-6">Key Benefits</h2>
@@ -99,20 +99,20 @@ export default function AI2026HyperautomationPlaybook() {
             <div>
               <h3 className="text-2xl font-bold mb-4">Ready to Transform Your Business?</h3>
               <p>
-                Start your hyperautomation journey today with expert guidance and proven methodologies.,
+                Start your hyperautomation journey today with expert guidance and proven methodologies.
               </p>
               <div>
-                <Link,
-                  href="/services/ai-automation",
+                <Link
+                  href="/services/ai-automation"
                   className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
                 >
-                  Explore Our Services,
+                  Explore Our Services
                 </Link>
-                <Link,
-                  href="/contact",
+                <Link
+                  href="/contact"
                   className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
                 >
-                  Schedule Consultation,
+                  Schedule Consultation
                 </Link>
               </div>
             </div>

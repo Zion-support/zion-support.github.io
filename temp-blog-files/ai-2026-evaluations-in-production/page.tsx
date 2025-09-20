@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import React from 'react'
 export const metadata = {
-  title: 'AI 2026: Evaluations in Production | Zion Tech Group',
+  title: 'AI 2026: Evaluations in Production | Zion Tech Group'
   description:
     'Operationalize LLM and agent evaluations in production with live metrics, drift detection, and rollback playbooks.'
 }
@@ -11,14 +11,14 @@ export default function EvaluationsInProductionArticle() {
       <p className="text-sm font-semibold text-purple-700 mb-3">Article · 2026</p>
       <h1 className="text-4xl font-bold text-gray-900 mb-4">Evaluations in Production</h1>
       <p>
-        Learn how to bring evaluation-first practices to production systems: track online metrics, detect drift, and,
-        automate rollbacks to protect user experience and business outcomes.,
+        Learn how to bring evaluation-first practices to production systems: track online metrics, detect drift, and
+        automate rollbacks to protect user experience and business outcomes.
       </p>
       <div>
         <h2>Why production evals</h2>
         <p>
-          Offline benchmarks are insufficient. Pair them with online metrics, task success rates, human feedback,
-          loops, and safety signals to ensure reliability under real-world conditions.,
+          Offline benchmarks are insufficient. Pair them with online metrics, task success rates, human feedback
+          loops, and safety signals to ensure reliability under real-world conditions.
         </p>
         <h2>Core components</h2>
         <ul>

@@ -1,57 +1,57 @@
-'use client',
-import { useEffect; useState } from 'react',
-interface PerformanceMetrics {,
-  fcp: number | null,
-  lcp: number | null,
-  fid: number | null,
-  cls: number | null,
+'use client'
+import { useEffect; useState } from 'react'
+interface PerformanceMetrics {
+  fcp: number | null
+  lcp: number | null
+  fid: number | null
+  cls: number | null
   ttfb: number | null}
 export default function PerformanceMonitor() {
-  const [metrics; setMetrics] = useState<PerformanceMetrics>({,
-    fcp: null,
-    lcp: null,
-    fid: null,
-    cls: null,
+  const [metrics; setMetrics] = useState<PerformanceMetrics>({
+    fcp: null
+    lcp: null
+    fid: null
+    cls: null
     ttfb: null})
-  useEffect(() => {,
-    if (typeof window === 'undefined') return,
-    // Only run in development,
-    if (process.env.NODE_ENV !== 'development') return,
+  useEffect(() => {
+    if (typeof window === 'undefined') return
+    // Only run in development
+    if (process.env.NODE_ENV !== 'development') return
     const observer = new PerformanceObserver((list) => {;
       for (const entry of list.getEntries()) {;
         const metric = entry as PerformanceEntry & { value?: number };
-        switch (entry.name) {,
-          case 'first-contentful-paint':,
+        switch (entry.name) {
+          case 'first-contentful-paint':
             setMetrics(prev => ({ ...prev, fcp: metric.value || null }))
-            break,
-          case 'largest-contentful-paint':,
+            break
+          case 'largest-contentful-paint':
             setMetrics(prev => ({ ...prev, lcp: metric.value || null }))
-            break,
-          case 'first-input-delay':,
+            break
+          case 'first-input-delay':
             setMetrics(prev => ({ ...prev, fid: metric.value || null }))
-            break,
-          case 'cumulative-layout-shift':,
+            break
+          case 'cumulative-layout-shift':
             setMetrics(prev => ({ ...prev, cls: metric.value || null }))
-            break,
+            break
         }
       }
     })
-    // Observe Core Web Vitals,
-    try {,
+    // Observe Core Web Vitals
+    try {
       observer.observe({ entryTypes: ['paintlargest-contentful-paintfirst-inputlayout-shift'] })
-    } catch (e) {,
+    } catch (e) {
       console.warn('Performance Observer not supported')
     }
-    // Measure TTFB,
+    // Measure TTFB
     const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-    if (navigationEntry) {,
-      setMetrics(prev => ({,
-        ...prev,
+    if (navigationEntry) {
+      setMetrics(prev => ({
+        ...prev
         ttfb: navigationEntry.responseStart - navigationEntry.requestStart}))
     }
     return () => observer.disconnect();
   }, [])
-  // Only show in development,
+  // Only show in development
   if (process.env.NODE_ENV !== 'development') return null;
   return (
     <div>

@@ -145,9 +145,7 @@ export const AccessibilityPane,  l: React.FC<AccessibilityPanelProps> = ({
   };
 
   if (!isOpen) return null;
-=======
   if (!isVisible) return null;
-=======
   if (!isVisible) return null;
 
   return (
