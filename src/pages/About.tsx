@@ -93,8 +93,7 @@ const About: React.FC = () => {
               to businesses of all sizes.
             </p>
           </div>
-        </div>
-      </section>
+        </section>
 
       {/* Stats Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5 backdrop-blur-sm">
@@ -140,7 +139,6 @@ const About: React.FC = () => {
               </p>
             </div>
           </div>
-        </motion.div>
 
       {/* Values Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5 backdrop-blur-sm">
@@ -205,6 +203,7 @@ const About: React.FC = () => {
         </div>
       </section>
     </div>
+    </>
   );
 };
 

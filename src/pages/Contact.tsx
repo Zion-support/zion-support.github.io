@@ -203,6 +203,9 @@ const ContactPage: React.FC = () => {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
               </svg>
             </div>
+            <h3 className="text-lg font-semibold text-gray-900 mb-2">Email Us</h3>
+            <p className="text-gray-600">kleber@ziontechgroup.com</p>
+          </div>
 
           <div className="text-center">
             <div className="bg-green-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
@@ -211,7 +214,7 @@ const ContactPage: React.FC = () => {
               </svg>
             </div>
             <h3 className="text-lg font-semibold text-gray-900 mb-2">Call Us</h3>
-            <p className="text-gray-600">+1 (555) 123-4567</p>
+            <p className="text-gray-600">+1 (302) 464-0950</p>
           </div>
 
           <div className="text-center">
@@ -222,7 +225,7 @@ const ContactPage: React.FC = () => {
               </svg>
             </div>
             <h3 className="text-lg font-semibold text-gray-900 mb-2">Visit Us</h3>
-            <p className="text-gray-600">123 Tech Street, Innovation City</p>
+            <p className="text-gray-600">364 E Main St STE 1008, Middletown, DE 19709</p>
           </div>
         </div>
       </div>

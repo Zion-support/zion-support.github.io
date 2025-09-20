@@ -9,7 +9,7 @@ import { ThemeProvider } from "./components/ThemeProvider";
 import { useScrollToTop } from "./hooks";
 import { WhitelabelProvider } from "./context/WhitelabelContext";
 import { Toaster as SonnerToaster } from "./components/ui/sonner";
-import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
+import ErrorBoundary from './components/ErrorBoundary';
 import { SidebarProvider } from './context/SidebarContext';
 
 // Core pages - minimal set for working build
@@ -24,7 +24,7 @@ const AboutPage = lazy(() => import('./pages/About'));
 const App = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   return (
-    <EnhancedErrorBoundary>
+    <ErrorBoundary>
       <ThemeProvider>
         <WhitelabelProvider>
           <Router>
@@ -56,7 +56,7 @@ const App = () => {
           </Router>
         </WhitelabelProvider>
       </ThemeProvider>
-    </EnhancedErrorBoundary>
+    </ErrorBoundary>
   );
 
   const TestimonialCard = useMemo(() => 
