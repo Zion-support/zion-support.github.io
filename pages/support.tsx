@@ -446,14 +446,13 @@ export default function Support() {
                 <h3 className="text-lg font-semibold mb-3 text-white">{faq.question}</h3>
                 <p className="text-gray-300 leading-relaxed">{faq.answer}</p>
               </div>
-=======
-      {/* FAQs */}
-      <section className="py-20 bg-gradient-to-r from-gray-900/50 to-black/50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-=======
-      {/* Popular Articles */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
+            ))}
+          </div>
+        </section>
+
+        {/* Popular Articles */}
+        <section className="py-20">
+          <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -554,13 +553,6 @@ export default function Support() {
                 </motion.div>
               ))}
             </div>
-=======
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-              Popular Help Articles
-            </h2>
-            <p className="text-xl text-gray-400">Most viewed and helpful support content</p>
           </motion.div>
           
           <div className="max-w-4xl mx-auto space-y-4">
@@ -726,11 +718,6 @@ export default function Support() {
   );
 };
 
-export default Support;
-=======
-          </div>
-        </section>
-
         {/* Contact Support */}
         <section id="contact-support" className="py-20 px-4 bg-gradient-to-r from-cyan-900/20 via-purple-900/20 to-pink-900/20">
           <div className="max-w-4xl mx-auto text-center">
@@ -777,4 +764,4 @@ export default Support;
   );
 };
 
-export default SupportPage;
+export default Support;
