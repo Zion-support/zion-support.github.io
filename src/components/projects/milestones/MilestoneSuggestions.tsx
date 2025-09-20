@@ -4,7 +4,7 @@ export function MilestoneSuggestions({
   startDate;
   endDate;
   projectType;
-  onMilestonesGenerated}: MilestoneSuggestionsProps) {origin/main
+  onMilestonesGenerated}: MilestoneSuggestionsProps) {
 return (
 <div className="space-y-4">;
 {!showSuggestions && (

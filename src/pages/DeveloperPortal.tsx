@@ -8,5 +8,5 @@ export default function DeveloperPortal() {
         <p className="text-lg text-gray-600">API documentation and tools...</p>
       </div>
     </div>
-  );origin/main
+  );
 }

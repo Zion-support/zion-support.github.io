@@ -1,3 +1,33 @@
+import React, { useState, useEffect } from 'react';
+import Header from '@/components/Header';
+
+// Mock data
+const BLOG_POSTS = [
+  {
+    id: '1',
+    title: 'Sample Blog Post',
+    excerpt: 'This is a sample blog post excerpt.',
+    tags: ['AI', 'Technology'],
+    content: 'Full blog post content...'
+  }
+];
+
+// Mock functions
+const fetchWithRetry = async (fn: () => Promise<any>, retries: number, delay: number) => {
+  try {
+    return await fn();
+  } catch (error) {
+    if (retries > 0) {
+      await new Promise(resolve => setTimeout(resolve, delay));
+      return fetchWithRetry(fn, retries - 1, delay);
+    }
+    throw error;
+  }
+};
+
+const logInfo = (message: string) => console.log(message);
+const logErrorToProduction = (message: string, error: any) => console.error(message, error);
+
 export default function Blog() {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategories, setSelectedCategories] = useState<string[]>([]);

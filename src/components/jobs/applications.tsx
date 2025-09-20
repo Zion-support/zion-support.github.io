@@ -14,7 +14,7 @@ interface Application {
   salary?: string;
 }
 
-export default function ApplicationsPage() {
+export function ApplicationsTracker() {
   const applications: Application[] = [
     {
       id: '1',
