@@ -1,8 +1,16 @@
 import React from 'react'
 import Link from 'next/link'
 import Script from 'next/script'
+import { Inter } from 'next/font/google'
+import type { Metadata } from 'next'
+import { ThemeProvider } from 'next-themes'
+import { ToastContainer } from 'react-toastify'
+import { Toaster as SonnerToaster } from 'sonner'
+import Header from '../src/components/Header'
+import Footer from '../src/components/Footer'
 // import './globals.css'
 import '../src/app/globals.css'
+
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -46,7 +54,7 @@ export default function RootLayout({
             </main>
             <Footer />
           </div>
-          <Toaster />
+          <ToastContainer />
           <SonnerToaster />
         </ThemeProvider>
       </body>
