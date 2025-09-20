@@ -1,6 +1,6 @@
 [build]
   # Use npm for dependency installation and build (skip linting for now)
-  command = "npm ci && npm run build"
+  command = "npm ci && npm run build:no-lint"
   publish = "dist"
   # Explicitly specify this is a Vite static site, not a framework
   base = "."
