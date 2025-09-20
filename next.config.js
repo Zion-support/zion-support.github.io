@@ -6,12 +6,8 @@ const nextConfig = {
   output: 'export',
   trailingSlash: true,
   
-  // Disable static optimization temporarily to fix build issues
-  experimental: {
-    missingSuspenseWithCSRBailout: false,
-  },
-  
-  // Disable static generation temporarily - removed invalid option
+  // Configure pages directory
+  pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
 
   // Performance optimizations
   compress: true,
@@ -62,11 +58,8 @@ const nextConfig = {
   eslint: {
     ignoreDuringBuilds: true,
   },
-  
-  // Force static export even with TypeScript errors
-  generateBuildId: async () => {
-    return 'build-' + Date.now()
-  },
+  // Force static export
+  distDir: 'out',
 };
 
 module.exports = nextConfig;

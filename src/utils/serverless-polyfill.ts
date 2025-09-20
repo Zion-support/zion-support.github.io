@@ -13,9 +13,9 @@
  *
  * This runs as the VERY FIRST script before any other code loads.
  */
-// Type declarations for global augmentation
+// Type declarations for global augmentation,
 declare global {
-  var webpackChunk_N_E: any[];
+  var webpackChunk_N_E: any[][];
   var __webpack_require__: any;
   var __webpack_exports__: any;
   var __non_webpack_require__: any;
@@ -37,7 +37,7 @@ if (process.env.NODE_ENV === 'development') {
 }
 
 function verifyPolyfills() {
-  console.log('Serverless polyfills loaded successfully');
+  console.log('Polyfills verified');
 }
 
 export default {}; // Ensure this can be imported as a module
