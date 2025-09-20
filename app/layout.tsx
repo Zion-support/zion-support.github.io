@@ -1,10 +1,12 @@
 import React from 'react'
 import Link from 'next/link'
+import Script from 'next/script'
+import './globals.css'
 
 function Header() {
   return (
     <header className="border-b border-gray-200 sticky top-0 z-50 bg-white/95 backdrop-blur-sm shadow-sm">
-      <nav className="flex items-center justify-between px-4 py-3 max-w-6xl mx-auto" role="navigation" aria-label="Main navigation">
+      <nav id="navigation" className="flex items-center justify-between px-4 py-3 max-w-6xl mx-auto" role="navigation" aria-label="Main navigation">
         <Link
           href="/"
           className="font-bold text-lg text-gray-900 hover:text-blue-600 transition-colors focus-visible:focus"
@@ -60,7 +62,7 @@ function Header() {
 }
 function Footer() {
   return (
-    <footer className="border-t border-gray-200 mt-10 py-12 bg-gray-50">
+    <footer id="footer" className="border-t border-gray-200 mt-10 py-12 bg-gray-50" role="contentinfo">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-4 gap-8">
           <div>
@@ -184,16 +186,50 @@ export default function RootLayout({
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="theme-color" content="#1e40af" />
+        <meta name="color-scheme" content="light dark" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="referrer" content="strict-origin-when-cross-origin" />
         <meta property="og:url" content="https://ziontechgroup.com" />
         <meta property="og:site_name" content="Zion Tech Group" />
         <link rel="icon" href="/favicon.ico" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <link rel="manifest" href="/manifest.json" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link rel="dns-prefetch" href="https://www.google-analytics.com" />
+        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
       </head>
       <body className="min-h-screen bg-white">
+        {/* Skip Links for Accessibility */}
+        <div className="skip-links">
+          <a href="#main-content" className="skip-link">Skip to main content</a>
+          <a href="#navigation" className="skip-link">Skip to navigation</a>
+          <a href="#footer" className="skip-link">Skip to footer</a>
+        </div>
+        
         <Header />
-        <main className="flex-1">{children}</main>
+        <main id="main-content" className="flex-1" role="main">{children}</main>
         <Footer />
+        
+        {/* Advanced Improvements Script */}
+        <Script
+          src="/comprehensive-improvements-advanced.js"
+          strategy="afterInteractive"
+        />
+        
+        {/* Google Analytics */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'GA_MEASUREMENT_ID');
+          `}
+        </Script>
       </body>
     </html>
   )
