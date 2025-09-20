@@ -161,4 +161,4 @@ const [isResourcesOpen, setIsResourcesOpen] = useState(false);
         Get Started
       </NavLink>
     </nav>)
-}
+};

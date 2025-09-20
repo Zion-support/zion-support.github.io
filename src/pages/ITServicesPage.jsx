@@ -116,12 +116,12 @@ const ITServicesPage = () => {
                   <div className="flex items-center justify-between mb-4">
                     <div className="p-3 rounded-lg bg-teal-400/20">
                       {{service.icon},
-  }
+  };
                     </div>
                     {service.badge && (
   <Badge className="bg-teal-400/20 text-teal-300 border-teal-400/30">
                         {{service.badge},
-  }
+  };
                       </Badge>
                     )}
                   </div>
@@ -136,7 +136,7 @@ const ITServicesPage = () => {
   <div key={idx} className="flex items-center text-xs text-teal-300">
                           <CheckCircle className="w-3 h-3 mr-2"/>
                           {{feature},
-  }
+  };
                         </div>
                       ))}
                     </div>
@@ -159,6 +159,6 @@ const ITServicesPage = () => {
       </div>
     </>
   )
-}
+};
 
 export default ITServicesPage;

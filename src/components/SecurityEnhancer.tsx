@@ -4,11 +4,10 @@ interface SecurityEvent {
   ipAddress?: string,
   payload?: string,
   blocked: boolean
-}
+};
 
 interface SecurityConfig {
   enableXSSProtection: boolean,enableCSRFProtection: boolean,enableInputValidation: boolean,enableRateLimiting: boolean,enableSecurityHeaders: boolean,enableContentSecurityPolicy: boolean
-}
 
 export const SecurityEnhancer: React.FC = () => {
   const [securityEvents, setSecurityEvents] = useState<SecurityEvent[]>([]);
@@ -73,12 +72,10 @@ const xssPatterns = useRef<RegExp[]>([]);
       setThreatLevel('high')
 } else if (event.severity === 'medium') {
       setThreatLevel('medium')
-}
 
     // Log to console in development
     if (process.env['NODE_ENV'] === 'development') {
       console.warn('Security Event:', securityEvent)
-}
 
     // Store security event locally instead of sending to non-existent API
     try {
@@ -88,7 +85,6 @@ const events = JSON.parse(storedEvents);
       // Keep only last 100 events
       if (events.length > 100) {
         events.splice(0, events.length - 100)
-}
       
       localStorage.setItem('security-events', JSON.stringify(events)),
     } catch (error) {
@@ -107,7 +103,6 @@ const events = JSON.parse(storedEvents);
       // Keep only last 100 events
       if (events.length > 100) {
         events.splice(0, events.length - 100)
-}
       
       localStorage.setItem('security-events', JSON.stringify(events)),
       
@@ -143,7 +138,6 @@ let sanitized = input,
         type: 'xss_attempt',severity: 'high',description: 'XSS attempt detected and sanitized',userAgent: navigator.userAgent,payload: input,blocked: true
       });
       setBlockedRequests(prev => prev + 1)
-}
 
     return sanitized
 }, [config.enableXSSProtection, logSecurityEvent]),
@@ -174,7 +168,6 @@ let isValid = true,
         userAgent: navigator.userAgent,payload: input,blocked: true
       });
       setBlockedRequests(prev => prev + 1)
-}
 
     // Check for suspicious patterns
     suspiciousPatterns.current.forEach(pattern => {
@@ -189,7 +182,6 @@ let isValid = true,
 
     if (isValid) {
       setAllowedRequests(prev => prev + 1)
-}
 
     return isValid
 }, [config.enableInputValidation, logSecurityEvent]),
@@ -204,7 +196,6 @@ const current = rateLimitMap.current.get(identifier);
         count: 1,resetTime: now + windowMs
       });
       return true
-}
 
     if (current.count >= limit) {
       logSecurityEvent({
@@ -213,7 +204,6 @@ const current = rateLimitMap.current.get(identifier);
       });
       setBlockedRequests(prev => prev + 1);
       return false
-}
 
     current.count++,
     return true
@@ -236,7 +226,6 @@ const storedToken = sessionStorage.getItem('csrf_token');
       });
       setBlockedRequests(prev => prev + 1);
       return false
-}
 
     return true
 }, [config.enableCSRFProtection, logSecurityEvent]),
@@ -457,4 +446,3 @@ const a = document.createElement('a');
       </div>
     </div>
   ),
-};

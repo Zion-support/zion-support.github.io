@@ -20,7 +20,7 @@ interface SEOProps {
   modifiedTime?: string,
   section?: string,
   tags?: string[],
-}
+};
 
 export const SEO: React.FC<SEOProps> = ({
   title,
@@ -263,7 +263,6 @@ const defaultCanonicalUrl = canonicalUrl || window.location.href;
         link.as = 'image';
         document.head.appendChild(link)
 })
-};
 
     // Add resource hints
     const addResourceHints = () => {
@@ -277,7 +276,6 @@ const defaultCanonicalUrl = canonicalUrl || window.location.href;
         link.href = hint.href;
         document.head.appendChild(link)
 })
-};
 
     // Initialize optimizations
     preloadCriticalResources();
@@ -357,7 +355,6 @@ const defaultCanonicalUrl = canonicalUrl || window.location.href;
       <meta httpEquiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
     </Helmet>
   )
-};
 export function HomePageSEO() {
   return (
     <SEO
@@ -376,10 +373,9 @@ export function HomePageSEO() {
         "serviceType": "AI Solutions, Quantum Computing, IT Services",
         "description": "Comprehensive technology services including AI, quantum computing, and IT infrastructure"
       },
-  }
+  };
     />
   )
-}
 
 export function ContactPageSEO() {
   return (
@@ -404,10 +400,9 @@ export function ContactPageSEO() {
           },
   },
   },
-  }
+  };
     />
   )
-}
 
 export function BlogPostSEO({ 
   title, 
@@ -456,7 +451,6 @@ export function BlogPostSEO({
           "@id": `https://ziontechgroup.com/blog/${slug}`
         },
   },
-  }
+  };
     />
   )
-}

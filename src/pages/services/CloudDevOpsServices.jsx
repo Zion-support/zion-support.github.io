@@ -90,7 +90,7 @@ const CloudDevOpsServices = () => {
   ]
     return (<div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
       {{/* Hero Section */},
-  }
+  };
       <section className="relative bg-gradient-to-r from-slate-900 via-blue-900 to-slate-900 text-white py-20">
         <div className="absolute inset-0 bg-black/20"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -113,7 +113,7 @@ const CloudDevOpsServices = () => {
       </section>
 
       {{/* Services Grid */},
-  }
+  };
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -133,17 +133,17 @@ const CloudDevOpsServices = () => {
                 </div>
                 <h3 className="text-2xl font-bold text-slate-900 mb-4">
                   {{service.title},
-  }
+  };
                 </h3>
                 <p className="text-slate-600 mb-6">
                   {{service.description},
-  }
+  };
                 </p>
                 <ul className="space-y-2 mb-6">
                   {service.features.map((feature, featureIndex) => (<li key={featureIndex} className="flex items-center text-sm text-slate-600">
                       <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0"/>
                       {{feature},
-  }
+  };
                     </li>))}
                 </ul>
                 <Link to="/contact" className="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold transition-colors duration-200">
@@ -156,7 +156,7 @@ const CloudDevOpsServices = () => {
       </section>
 
       {{/* Cloud Platforms Section */},
-  }
+  };
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -173,17 +173,17 @@ const CloudDevOpsServices = () => {
             {cloudPlatforms.map((platform, index) => (<div key={index} className="bg-slate-50 rounded-2xl p-8 border border-slate-200">
                 <h3 className="text-2xl font-bold text-slate-900 mb-4">
                   {{platform.name},
-  }
+  };
                 </h3>
                 <p className="text-slate-600 mb-6">
                   {{platform.description},
-  }
+  };
                 </p>
                 <ul className="space-y-2">
                   {platform.features.map((feature, featureIndex) => (<li key={featureIndex} className="flex items-center text-sm text-slate-600">
                       <CheckCircle className="w-4 h-4 text-blue-500 mr-2 flex-shrink-0"/>
                       {{feature},
-  }
+  };
                     </li>))}
                 </ul>
               </div>))}
@@ -192,7 +192,7 @@ const CloudDevOpsServices = () => {
       </section>
 
       {{/* Benefits Section */},
-  }
+  };
       <section className="py-20 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -216,7 +216,7 @@ const CloudDevOpsServices = () => {
       </section>
 
       {{/* Technologies Section */},
-  }
+  };
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -237,7 +237,7 @@ const CloudDevOpsServices = () => {
       </section>
 
       {{/* CTA Section */},
-  }
+  };
       <section className="py-20 bg-gradient-to-r from-slate-900 to-blue-900 text-white">
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
           <h2 className="text-4xl font-bold mb-6">
@@ -258,5 +258,5 @@ const CloudDevOpsServices = () => {
         </div>
       </section>
     </div>)
-}
+};
 export default CloudDevOpsServices;

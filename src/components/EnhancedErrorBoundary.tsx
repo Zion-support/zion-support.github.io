@@ -4,7 +4,7 @@ interface Props {
   children: ReactNode;
   fallback?: ReactNode;
   onError?: (error: Error, errorInfo: ErrorInfo) => void;
-}
+};
 
 interface State {
   hasError: boolean;
@@ -22,7 +22,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       errorInfo: null,
       errorId: null
     };
-  }
+  };
 
   static getDerivedStateFromError(error: Error): Partial<State> {
     return { 
@@ -30,7 +30,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       error,
       errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
     };
-  }
+  };
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.setState({
@@ -53,7 +53,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       // Example: Send to error reporting service
       // errorReportingService.captureException(error, { extra: errorInfo })
     }
-  }
+  };
 
   handleRetry = () => {
     this.setState({

@@ -110,16 +110,16 @@ export default function AIContentCreation() {
       ;
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
         {{/* Hero Section */},
-  }
+  };
         <section className="relative overflow-hidden py-20 lg:py-32">
           <div className="container-responsive">
             <motion.div;
               initial={{ opacity: 0, y: 30 },
-  }
+  };
               animate={{ opacity: 1, y: 0 },
-  }
+  };
               transition={{ duration: 0.8 },
-  }
+  };
               className="className="text-center max-w-4xl mx-auto";"
             >
               <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-blue-500/20 to-indigo-500/20 border border-blue-500/30 rounded-full text-blue-400 text-sm font-medium mb-6">
@@ -143,18 +143,18 @@ export default function AIContentCreation() {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <motion.button;
                   whileHover={{ scale: 1.05 },
-  }
+  };
                   whileTap={{ scale: 0.95 },
-  }
+  };
                   className="className="px-8 py-4 bg-gradient-to-r from-blue-500 to-indigo-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-indigo-700 transition-all duration-300 shadow-lg hover:shadow-blue-500/25";"
                 >
                   Start Creating;
                 </motion.button>
                 <motion.button;
                   whileHover={{ scale: 1.05 },
-  }
+  };
                   whileTap={{ scale: 0.95 },
-  }
+  };
                   className="className="px-8 py-4 border border-gray-600 text-white font-semibold rounded-lg hover:border-gray-500 hover:bg-gray-800/50 transition-all duration-300";"
                 >
                   View Demo;
@@ -164,7 +164,7 @@ export default function AIContentCreation() {
           </div>
           ;
           {{/* Background Elements */},
-  }
+  };
           <div className="absolute inset-0 overflow-hidden pointer-events-none">
             <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl"></div>
             <div className="absolute bottom-20 right-10 w-96 h-96 bg-indigo-500/10 rounded-full blur-3xl"></div>
@@ -172,18 +172,18 @@ export default function AIContentCreation() {
         </section>
 
         {{/* Features Section */},
-  }
+  };
         <section className="py-20">
           <div className="container-responsive">
             <motion.div;
               initial={{ opacity: 0, y: 30 },
-  }
+  };
               whileInView={{ opacity: 1, y: 0 },
-  }
+  };
               transition={{ duration: 0.8 },
-  }
+  };
               viewport={{ once: true },
-  }
+  };
               className="className="text-center mb-16";"
             >
               <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
@@ -199,15 +199,15 @@ export default function AIContentCreation() {
               {features.map((feature, index) => (
   <motion.div;
                   key={{feature.title},
-  }
+  };
                   initial={{ opacity: 0, y: 30 },
-  }
+  };
                   whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                   transition={{ duration: 0.6, delay: index * 0.1 },
-  }
+  };
                   viewport={{ once: true },
-  }
+  };
                   className="className="group p-6 bg-slate-800/50 rounded-2xl border border-slate-700/50 hover:border-blue-500/30 transition-all duration-300 hover:bg-slate-800/70";"
                 >
                   <div className={`w-16 h-16 bg-gradient-to-br ${feature.color} rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
@@ -216,12 +216,12 @@ export default function AIContentCreation() {
                   ;
                   <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-blue-400 transition-colors">
                     {{feature.title},
-  }
+  };
                   </h3>
                   ;
                   <p className="text-gray-400 leading-relaxed">
                     {{feature.description},
-  }
+  };
                   </p>
                 </motion.div>
               ))}
@@ -230,19 +230,19 @@ export default function AIContentCreation() {
         </section>
 
         {{/* Benefits Section */},
-  }
+  };
         <section className="py-20 bg-slate-800/30">
           <div className="container-responsive">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
               <motion.div;
                 initial={{ opacity: 0, x: -30 },
-  }
+  };
                 whileInView={{ opacity: 1, x: 0 },
-  }
+  };
                 transition={{ duration: 0.8 },
-  }
+  };
                 viewport={{ once: true },
-  }
+  };
               >
                 <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
                   Transform Your Content Strategy;
@@ -258,15 +258,15 @@ export default function AIContentCreation() {
                   {benefits.map((benefit, index) => (
   <motion.div;
                       key={{benefit},
-  }
+  };
                       initial={{ opacity: 0, x: -20 },
-  }
+  };
                       whileInView={{ opacity: 1, x: 0 },
-  }
+  };
                       transition={{ duration: 0.5, delay: index * 0.1 },
-  }
+  };
                       viewport={{ once: true },
-  }
+  };
                       className="className="flex items-center gap-3";"
                     >
                       <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
@@ -278,13 +278,13 @@ export default function AIContentCreation() {
               ;
               <motion.div;
                 initial={{ opacity: 0, x: 30 },
-  }
+  };
                 whileInView={{ opacity: 1, x: 0 },
-  }
+  };
                 transition={{ duration: 0.8 },
-  }
+  };
                 viewport={{ once: true },
-  }
+  };
                 className="className="relative";"
               >
                 <div className="bg-gradient-to-br from-blue-500/20 to-indigo-500/20 rounded-3xl p-8 border border-blue-500/30">
@@ -323,18 +323,18 @@ export default function AIContentCreation() {
         </section>
 
         {{/* Content Types Section */},
-  }
+  };
         <section className="py-20">
           <div className="container-responsive">
             <motion.div;
               initial={{ opacity: 0, y: 30 },
-  }
+  };
               whileInView={{ opacity: 1, y: 0 },
-  }
+  };
               transition={{ duration: 0.8 },
-  }
+  };
               viewport={{ once: true },
-  }
+  };
               className="className="text-center mb-16";"
             >
               <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
@@ -350,25 +350,25 @@ export default function AIContentCreation() {
               {contentTypes.map((contentType, index) => (
   <motion.div;
                   key={{contentType.name},
-  }
+  };
                   initial={{ opacity: 0, y: 30 },
-  }
+  };
                   whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                   transition={{ duration: 0.6, delay: index * 0.1 },
-  }
+  };
                   viewport={{ once: true },
-  }
+  };
                   className="className="p-6 bg-slate-800/50 rounded-2xl border border-slate-700/50 hover:border-blue-500/30 transition-all duration-300 group";"
                 >
                   <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-blue-400 transition-colors">
                     {{contentType.name},
-  }
+  };
                   </h3>
                   ;
                   <p className="text-gray-400 mb-4 leading-relaxed">
                     {{contentType.description},
-  }
+  };
                   </p>
                   ;
                   <div className="space-y-2">
@@ -376,7 +376,7 @@ export default function AIContentCreation() {
   <div key={idx} className="flex items-center gap-2 text-sm text-gray-500">
                         <div className="w-1.5 h-1.5 bg-blue-400 rounded-full"></div>
                         {{example},
-  }
+  };
                       </div>
                     ))}
                   </div>
@@ -387,18 +387,18 @@ export default function AIContentCreation() {
         </section>
 
         {{/* Use Cases Section */},
-  }
+  };
         <section className="py-20 bg-slate-800/30">
           <div className="container-responsive">
             <motion.div;
               initial={{ opacity: 0, y: 30 },
-  }
+  };
               whileInView={{ opacity: 1, y: 0 },
-  }
+  };
               transition={{ duration: 0.8 },
-  }
+  };
               viewport={{ once: true },
-  }
+  };
               className="className="text-center mb-16";"
             >
               <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
@@ -414,15 +414,15 @@ export default function AIContentCreation() {
               {useCases.map((useCase, index) => (
   <motion.div;
                   key={{useCase.title},
-  }
+  };
                   initial={{ opacity: 0, y: 30 },
-  }
+  };
                   whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                   transition={{ duration: 0.6, delay: index * 0.1 },
-  }
+  };
                   viewport={{ once: true },
-  }
+  };
                   className="className="p-6 bg-slate-800/50 rounded-2xl border border-slate-700/50 hover:border-blue-500/30 transition-all duration-300 group";"
                 >
                   <div className="flex items-start gap-4">
@@ -433,11 +433,11 @@ export default function AIContentCreation() {
                     <div className="flex-1">
                       <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-blue-400 transition-colors">
                         {{useCase.title},
-  }
+  };
                       </h3>
                       <p className="text-gray-400 leading-relaxed">
                         {{useCase.description},
-  }
+  };
                       </p>
                     </div>
                   </div>
@@ -448,18 +448,18 @@ export default function AIContentCreation() {
         </section>
 
         {{/* CTA Section */},
-  }
+  };
         <section className="py-20 bg-gradient-to-r from-blue-500/10 to-indigo-500/10">
           <div className="container-responsive">
             <motion.div;
               initial={{ opacity: 0, y: 30 },
-  }
+  };
               whileInView={{ opacity: 1, y: 0 },
-  }
+  };
               transition={{ duration: 0.8 },
-  }
+  };
               viewport={{ once: true },
-  }
+  };
               className="className="text-center max-w-4xl mx-auto";"
             >
               <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
@@ -474,18 +474,18 @@ export default function AIContentCreation() {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <motion.button;
                   whileHover={{ scale: 1.05 },
-  }
+  };
                   whileTap={{ scale: 0.95 },
-  }
+  };
                   className="className="px-8 py-4 bg-gradient-to-r from-blue-500 to-indigo-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-indigo-700 transition-all duration-300 shadow-lg hover:shadow-blue-500/25";"
                 >
                   Start Creating Today;
                 </motion.button>
                 <motion.button;
                   whileHover={{ scale: 1.05 },
-  }
+  };
                   whileTap={{ scale: 0.95 },
-  }
+  };
                   className="className="px-8 py-4 border border-gray-600 text-white font-semibold rounded-lg hover: border-gray-500 hover:bg-gray-800/50 transition-all duration-300";"
                 >
                   Schedule Demo;
@@ -497,4 +497,4 @@ export default function AIContentCreation() {
       </div>
     </>
   )
-}
+};

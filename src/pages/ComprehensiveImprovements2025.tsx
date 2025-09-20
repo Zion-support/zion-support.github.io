@@ -117,7 +117,7 @@ export default function ComprehensiveImprovements2025() {
   const const contactInfo = {
   = {
     phone: '+1 302 464 0950',email: 'kleber@ziontechgroup.com',address: '364 E Main St STE 1008 Middletown DE 19709'
-}
+};
   return (
     <EnhancedSEOManager;
       seoData={{
@@ -125,22 +125,22 @@ export default function ComprehensiveImprovements2025() {
         keywords: ['AI servicesperformance analytics', 'SEO optimizationUI/UX', 'security featuresintegrations']
         ogType: 'website',canonicalUrl: 'https://ziontechgroup.com/comprehensive-improvements-2025'
 },
-  }
+  };
     >
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
         {{/* Hero Section */},
-  }
+  };
         <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
           <div className="absolute inset-0 bg-[linear-gradient(rgba(6,182,212,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(6,182,212,0.1)_1px,transparent_1px)] bg-[size:50px_50px]"></div>
           ;
           <div className="relative max-w-7xl mx-auto text-center">
             <motion.div;
               initial={{ opacity: 0, y: 20 },
-  }
+  };
               animate={{ opacity: 1, y: 0 },
-  }
+  };
               transition={{ duration: 0.8 },
-  }
+  };
             >
               <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-zion-cyan to-zion-purple text-white text-sm font-medium mb-6">
                 <Star className="w-4 h-4 mr-2" />
@@ -176,18 +176,18 @@ export default function ComprehensiveImprovements2025() {
         </section>
 
         {{/* Improvements Overview */},
-  }
+  };
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <motion.div;
               initial={{ opacity: 0, y: 20 },
-  }
+  };
               whileInView={{ opacity: 1, y: 0 },
-  }
+  };
               transition={{ duration: 0.8 },
-  }
+  };
               viewport={{ once: true },
-  }
+  };
               className="className="text-center mb-16";"
             >
               <h2 className="text-3xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
@@ -202,15 +202,15 @@ export default function ComprehensiveImprovements2025() {
               {features.map((feature, index) => (
   <motion.div;
                   key={{index},
-  }
+  };
                   initial={{ opacity: 0, y: 20 },
-  }
+  };
                   whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                   transition={{ duration: 0.8, delay: index * 0.1 },
-  }
+  };
                   viewport={{ once: true },
-  }
+  };
                   className="className="relative group";"
                 >
                   <div className={`p-6 rounded-xl bg-gradient-to-br ${feature.color} bg-opacity-10 border border-opacity-20 backdrop-blur-sm hover:bg-opacity-20 transition-all duration-300 transform group-hover:scale-105`}>
@@ -227,18 +227,18 @@ export default function ComprehensiveImprovements2025() {
         </section>
 
         {{/* Service Categories */},
-  }
+  };
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <motion.div;
               initial={{ opacity: 0, y: 20 },
-  }
+  };
               whileInView={{ opacity: 1, y: 0 },
-  }
+  };
               transition={{ duration: 0.8 },
-  }
+  };
               viewport={{ once: true },
-  }
+  };
               className="className="text-center mb-16";"
             >
               <h2 className="text-3xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
@@ -253,15 +253,15 @@ export default function ComprehensiveImprovements2025() {
               {improvements.map((category, index) => (
   <motion.div;
                   key={{index},
-  }
+  };
                   initial={{ opacity: 0, x: -20 },
-  }
+  };
                   whileInView={{ opacity: 1, x: 0 },
-  }
+  };
                   transition={{ duration: 0.8, delay: index * 0.1 },
-  }
+  };
                   viewport={{ once: true },
-  }
+  };
                   className="className="relative";"
                 >
                   <div className={`p-8 rounded-2xl bg-gradient-to-r ${category.color} bg-opacity-10 border border-opacity-20 backdrop-blur-sm`}>
@@ -288,18 +288,18 @@ export default function ComprehensiveImprovements2025() {
         </section>
 
         {{/* Contact Section */},
-  }
+  };
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <motion.div;
               initial={{ opacity: 0, y: 20 },
-  }
+  };
               whileInView={{ opacity: 1, y: 0 },
-  }
+  };
               transition={{ duration: 0.8 },
-  }
+  };
               viewport={{ once: true },
-  }
+  };
               className="className="text-center mb-16";"
             >
               <h2 className="text-3xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
@@ -313,13 +313,13 @@ export default function ComprehensiveImprovements2025() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
               <motion.div;
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.8, delay: 0.1 },
-  }
+  };
                 viewport={{ once: true },
-  }
+  };
                 className="className="text-center p-6 rounded-xl bg-gradient-to-br from-zion-cyan to-zion-purple bg-opacity-10 border border-opacity-20 backdrop-blur-sm";"
               >
                 <PhoneCall className="w-12 h-12 text-zion-cyan mx-auto mb-4" />
@@ -329,13 +329,13 @@ export default function ComprehensiveImprovements2025() {
 
               <motion.div;
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.8, delay: 0.2 },
-  }
+  };
                 viewport={{ once: true },
-  }
+  };
                 className="className="text-center p-6 rounded-xl bg-gradient-to-br from-zion-purple to-zion-cyan bg-opacity-10 border border-opacity-20 backdrop-blur-sm";"
               >
                 <MailIcon className="w-12 h-12 text-zion-purple mx-auto mb-4" />
@@ -345,13 +345,13 @@ export default function ComprehensiveImprovements2025() {
 
               <motion.div;
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.8, delay: 0.3 },
-  }
+  };
                 viewport={{ once: true },
-  }
+  };
                 className="className="text-center p-6 rounded-xl bg-gradient-to-br from-zion-cyan to-zion-purple bg-opacity-10 border border-opacity-20 backdrop-blur-sm";"
               >
                 <MapPinIcon className="w-12 h-12 text-zion-cyan mx-auto mb-4" />
@@ -362,13 +362,13 @@ export default function ComprehensiveImprovements2025() {
 
             <motion.div;
               initial={{ opacity: 0, y: 20 },
-  }
+  };
               whileInView={{ opacity: 1, y: 0 },
-  }
+  };
               transition={{ duration: 0.8, delay: 0.4 },
-  }
+  };
               viewport={{ once: true },
-  }
+  };
               className="className="text-center";"
             >
               <Link;
@@ -383,18 +383,18 @@ export default function ComprehensiveImprovements2025() {
         </section>
 
         {{/* Footer CTA */},
-  }
+  };
         <section className="py-16 px-4 sm:px-6 lg:px-8 border-t border-gray-700">
           <div className="max-w-7xl mx-auto text-center">
             <motion.div;
               initial={{ opacity: 0, y: 20 },
-  }
+  };
               whileInView={{ opacity: 1, y: 0 },
-  }
+  };
               transition={{ duration: 0.8 },
-  }
+  };
               viewport={{ once: true },
-  }
+  };
             >
               <h3 className="text-2xl md: text-3xl font-bold mb-4 bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
                 Experience the Future of Technology;
@@ -424,4 +424,3 @@ export default function ComprehensiveImprovements2025() {
       </div>
     </EnhancedSEOManager>
   )
-}

@@ -89,7 +89,7 @@ const matchesInnovationLevel = selectedInnovationLevel === 'All' || service.inno
         return <Network className="w-6 h-6" />;
       default: return <Rocket className="w-6 h-6" />
     },
-  }
+  };
   const getInnovationLevelColor = (level: string) => {
   switch (level) {
   case 'Revolutionary':;
@@ -100,7 +100,7 @@ const matchesInnovationLevel = selectedInnovationLevel === 'All' || service.inno
         return 'bg-gradient-to-r from-green-600 to-emerald-600';
       default: return 'bg-gradient-to-r from-gray-600 to-slate-600'
 },
-  }
+  };
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO ;
@@ -109,18 +109,18 @@ const matchesInnovationLevel = selectedInnovationLevel === 'All' || service.inno
       />
       ;
       {{/* Hero Section */},
-  }
+  };
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
           <div className="text-center">
             <motion.h1 ;
               initial={{ opacity: 0, y: 20 },
-  }
+  };
               animate={{ opacity: 1, y: 0 },
-  }
+  };
               transition={{ duration: 0.8 },
-  }
+  };
               className="className="text-5xl md:text-6xl font-bold text-white mb-6";"
             >
               2028 Innovative Services;
@@ -130,22 +130,22 @@ const matchesInnovationLevel = selectedInnovationLevel === 'All' || service.inno
             </motion.h1>
             <motion.p ;
               initial={{ opacity: 0, y: 20 },
-  }
+  };
               animate={{ opacity: 1, y: 0 },
-  }
+  };
               transition={{ duration: 0.8, delay: 0.2 },
-  }
+  };
               className="className="text-xl text-gray-300 max-w-3xl mx-auto mb-8";"
             >
               Discover our revolutionary micro SAAS services, AI-powered solutions, and cutting-edge emerging technologies that will transform your business in 2028 and beyond.;
             </motion.p>
             <motion.div ;
               initial={{ opacity: 0, y: 20 },
-  }
+  };
               animate={{ opacity: 1, y: 0 },
-  }
+  };
               transition={{ duration: 0.8, delay: 0.4 },
-  }
+  };
               className="className="flex flex-col sm:flex-row gap-4 justify-center items-center";"
             >
               <div className="flex items-center gap-2 text-green-400">
@@ -166,60 +166,60 @@ const matchesInnovationLevel = selectedInnovationLevel === 'All' || service.inno
       </div>
 
       {{/* Search and Filters */},
-  }
+  };
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {{/* Search */},
-  }
+  };
             <div className="relative">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
               <input;
                 type="text";
                 placeholder="Search services...";
                 value={{searchTerm},
-  }
+  };
                 onChange={{(e) => setSearchTerm(e.target.value)},
-  }
+  };
                 className="className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent";"
               />
             </div>
 
             {{/* Category Filter */},
-  }
+  };
             <div className="relative">
               <Filter className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
               <select;
                 value={{selectedCategory},
-  }
+  };
                 onChange={{(e) => setSelectedCategory(e.target.value)},
-  }
+  };
                 className="className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent appearance-none cursor-pointer";"
               >
                 {categories.map(category => (
   <option key={category} value={category} className="bg-slate-800 text-white">
                     {{category},
-  }
+  };
                   </option>
                 ))}
               </select>
             </div>
 
             {{/* Innovation Level Filter */},
-  }
+  };
             <div className="relative">
               <Star className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
               <select;
                 value={{selectedInnovationLevel},
-  }
+  };
                 onChange={{(e) => setSelectedInnovationLevel(e.target.value)},
-  }
+  };
                 className="className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent appearance-none cursor-pointer";"
               >
                 {innovationLevels.map(level => (
   <option key={level} value={level} className="bg-slate-800 text-white">
                     {{level},
-  }
+  };
                   </option>
                 ))}
               </select>
@@ -229,52 +229,52 @@ const matchesInnovationLevel = selectedInnovationLevel === 'All' || service.inno
       </div>
 
       {{/* Services Grid */},
-  }
+  };
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredServices.map((service, index) => (
   <motion.div;
               key={{service.id},
-  }
+  };
               initial={{ opacity: 0, y: 20 },
-  }
+  };
               animate={{ opacity: 1, y: 0 },
-  }
+  };
               transition={{ duration: 0.5, delay: index * 0.1 },
-  }
+  };
               className="className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:border-blue-500/50 transition-all duration-300 hover:transform hover:scale-105 group";"
             >
               {{/* Service Header */},
-  }
+  };
               <div className="flex items-start justify-between mb-4">
                 <div className="flex items-center gap-3">
                   <div className="p-2 bg-blue-500/20 rounded-lg">
                     {{getCategoryIcon(service.category)},
-  }
+  };
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold text-white group-hover:text-blue-400 transition-colors">
                       {{service.title},
-  }
+  };
                     </h3>
                     <p className="text-sm text-gray-400">{service.category}</p>
                   </div>
                 </div>
                 <span className={`px-3 py-1 rounded-full text-xs font-medium text-white ${getInnovationLevelColor(service.innovationLevel)}`}>
                   {{service.innovationLevel},
-  }
+  };
                 </span>
               </div>
 
               {{/* Description */},
-  }
+  };
               <p className="text-gray-300 text-sm mb-4 line-clamp-3">
                 {{service.description},
-  }
+  };
               </p>
 
               {{/* Key Features */},
-  }
+  };
               <div className="mb-4">
                 <h4 className="text-sm font-medium text-white mb-2">Key Features</h4>
                 <div className="space-y-1">
@@ -293,7 +293,7 @@ const matchesInnovationLevel = selectedInnovationLevel === 'All' || service.inno
               </div>
 
               {{/* Benefits */},
-  }
+  };
               <div className="mb-4">
                 <h4 className="text-sm font-medium text-white mb-2">Key Benefits</h4>
                 <div className="space-y-1">
@@ -307,12 +307,12 @@ const matchesInnovationLevel = selectedInnovationLevel === 'All' || service.inno
               </div>
 
               {{/* Pricing and ROI */},
-  }
+  };
               <div className="flex items-center justify-between mb-4">
                 <div>
                   <div className="text-2xl font-bold text-white">
                     ${{service.price.toLocaleString()},
-  }
+  };
                     <span className="text-sm text-gray-400">/month</span>
                   </div>
                   <div className="text-xs text-gray-400">Market: {service.marketPrice}</div>
@@ -324,21 +324,21 @@ const matchesInnovationLevel = selectedInnovationLevel === 'All' || service.inno
               </div>
 
               {{/* Technical Specs */},
-  }
+  };
               <div className="mb-4">
                 <h4 className="text-sm font-medium text-white mb-2">Technology Stack</h4>
                 <div className="flex flex-wrap gap-1">
                   {service.technicalSpecs?.technology.slice(0, 4).map((tech, idx) => (
   <span key={idx} className="px-2 py-1 bg-blue-500/20 text-blue-300 text-xs rounded">
                       {{tech},
-  }
+  };
                     </span>
                   ))}
                 </div>
               </div>
 
               {{/* Contact and Action */},
-  }
+  };
               <div className="flex items-center justify-between pt-4 border-t border-white/20">
                 <div className="flex items-center gap-4 text-sm text-gray-400">
                   <div className="flex items-center gap-1">
@@ -352,7 +352,7 @@ const matchesInnovationLevel = selectedInnovationLevel === 'All' || service.inno
                 </div>
                 <a;
                   href={{service.contactInfo.website},
-  }
+  };
                   target="_blank";
                   rel="noopener noreferrer";
                   className="className="flex items-center gap-2 px-4 py-2 bg-blue-600 hover: bg-blue-700 text-white text-sm font-medium rounded-lg transition-colors group";"
@@ -376,7 +376,7 @@ const matchesInnovationLevel = selectedInnovationLevel === 'All' || service.inno
       </div>
 
       {{/* Contact Section */},
-  }
+  };
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-2xl p-8 border border-white/20">
           <div className="text-center">
@@ -416,4 +416,4 @@ const matchesInnovationLevel = selectedInnovationLevel === 'All' || service.inno
       </div>
     </div>
   )
-}
+};

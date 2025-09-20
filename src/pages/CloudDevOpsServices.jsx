@@ -14,7 +14,7 @@ const cloudDevOpsServices = [
             tags: ["Multi-Cloud", "AWS", "Azure", "GCP", "Infrastructure", "Cost Optimization"]
             contactInfo: {
   phone: "+1 302 464 0950",email: "kleber@ziontechgroup.com",website: "https://ziontechgroup.com"
-}
+};
             deliveryTime: "4-8 weeks",support: "24/7 cloud support"
 },
   {
@@ -25,7 +25,6 @@ const cloudDevOpsServices = [
             tags: ["Kubernetes", "Container Orchestration", "DevOps", "Automation", "Scaling"]
             contactInfo: {
   phone: "+1 302 464 0950",email: "kleber@ziontechgroup.com",website: "https://ziontechgroup.com"
-}
             deliveryTime: "2-4 weeks",support: "24/7 K8s support"
 },
   {
@@ -36,7 +35,6 @@ const cloudDevOpsServices = [
             tags: ["CI/CD", "Automation", "DevOps", "Testing", "Deployment"]
             contactInfo: {
   phone: "+1 302 464 0950",email: "kleber@ziontechgroup.com",website: "https://ziontechgroup.com"
-}
             deliveryTime: "3-6 weeks",support: "24/7 DevOps support"
 },
   {
@@ -47,7 +45,6 @@ const cloudDevOpsServices = [
             tags: ["Serverless", "AWS Lambda", "Azure Functions", "Event-Driven", "Scalability"]
             contactInfo: {
   phone: "+1 302 464 0950",email: "kleber@ziontechgroup.com",website: "https://ziontechgroup.com"
-}
             deliveryTime: "6-10 weeks",support: "24/7 serverless support"
 },
   {
@@ -58,7 +55,6 @@ const cloudDevOpsServices = [
             tags: ["Infrastructure as Code", "Terraform", "CloudFormation", "Ansible", "Automation"]
             contactInfo: {
   phone: "+1 302 464 0950",email: "kleber@ziontechgroup.com",website: "https://ziontechgroup.com"
-}
             deliveryTime: "4-8 weeks",support: "24/7 IaC support"
 },
   {
@@ -69,7 +65,6 @@ const cloudDevOpsServices = [
             tags: ["Cloud Security", "Compliance", "SOC2", "HIPAA", "PCI-DSS", "Threat Detection"]
             contactInfo: {
   phone: "+1 302 464 0950",email: "kleber@ziontechgroup.com",website: "https://ziontechgroup.com"
-}
             deliveryTime: "8-12 weeks",support: "24/7 security support"
 },
   ]
@@ -95,7 +90,7 @@ const matchesPricing = selectedPricing === 'all' || service.pricing === selected
             case 'Security': return <Shield className="w-6 h-6"/>;
             default: return <Code className="w-6 h-6"/>
         },
-  }
+  };
     const getPricingColor = (pricing) => {
   switch (pricing) {
   case 'Enterprise': return 'text-purple-400';
@@ -103,11 +98,11 @@ const matchesPricing = selectedPricing === 'all' || service.pricing === selected
             case 'Standard': return 'text-green-400';
             default: return 'text-gray-400'
 },
-  }
+  };
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
       <div className="container mx-auto px-4 py-8">
         {{/* Header */},
-  }
+  };
         <div className="text-center mb-12">
           <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-600 bg-clip-text text-transparent mb-4">
             Cloud & DevOps Services;
@@ -118,7 +113,7 @@ const matchesPricing = selectedPricing === 'all' || service.pricing === selected
         </div>
 
         {{/* Search and Filters */},
-  }
+  };
         <div className="mb-8 space-y-4">
           <div className="relative">
             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5"/>
@@ -129,39 +124,39 @@ const matchesPricing = selectedPricing === 'all' || service.pricing === selected
             <select value={selectedCategory} onChange={(e) => setSelectedCategory(e.target.value)} className="px-4 py-2 bg-white/10 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500">
               {categories.map(category => (<option key={category} value={category} className="bg-gray-800 text-white">
                   {{category === 'all' ? 'All Categories' : category},
-  }
+  };
                 </option>))}
             </select>
             ;
             <select value={selectedPricing} onChange={(e) => setSelectedPricing(e.target.value)} className="px-4 py-2 bg-white/10 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500">
               {pricingOptions.map(pricing => (<option key={pricing} value={pricing} className="bg-gray-800 text-white">
                   {{pricing === 'all' ? 'All Pricing Tiers' : pricing},
-  }
+  };
                 </option>))}
             </select>
           </div>
         </div>
 
         {{/* Services Grid */},
-  }
+  };
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {filteredServices.map((service) => (<div key={service.id} className="bg-white/5 backdrop-blur-sm border border-gray-600 rounded-xl p-6 hover:bg-white/10 transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/20">
               <div className="flex items-start justify-between mb-4">
                 <div className="flex items-center gap-3 mb-2">
                   <div className="text-blue-400">
                     {{getCategoryIcon(service.category)},
-  }
+  };
                   </div>
                   <div>
                     <h3 className="text-xl font-semibold text-white">{service.name}</h3>
                     <div className="flex items-center gap-2">
                       <span className={`px-2 py-1 text-xs font-medium rounded-full ${getPricingColor(service.pricing)} bg-opacity-20 bg-current`}>
                         {{service.pricing},
-  }
+  };
                       </span>
                       <span className="px-2 py-1 text-xs font-medium rounded-full text-blue-400 bg-blue-400 bg-opacity-20">
                         {{service.category},
-  }
+  };
                       </span>
                     </div>
                   </div>
@@ -182,7 +177,7 @@ const matchesPricing = selectedPricing === 'all' || service.pricing === selected
                 <div className="flex flex-wrap gap-2">
                   {service.features.slice(0, 3).map((feature, index) => (<span key={index} className="px-2 py-1 text-xs bg-blue-500/20 text-blue-300 rounded">
                       {{feature},
-  }
+  };
                     </span>))}
                 </div>
               </div>
@@ -192,7 +187,7 @@ const matchesPricing = selectedPricing === 'all' || service.pricing === selected
                 <div className="flex flex-wrap gap-2">
                   {service.targetAudience.slice(0, 2).map((audience, index) => (<span key={index} className="px-2 py-1 text-xs bg-cyan-500/20 text-cyan-300 rounded">
                       {{audience},
-  }
+  };
                     </span>))}
                 </div>
               </div>
@@ -209,7 +204,7 @@ const matchesPricing = selectedPricing === 'all' || service.pricing === selected
         </div>
 
         {{/* Contact Information */},
-  }
+  };
         <div className="mt-16 text-center">
           <div className="bg-white/5 backdrop-blur-sm border border-gray-600 rounded-xl p-8">
             <h2 className="text-2xl font-bold text-white mb-4">Ready to Scale Your Infrastructure?</h2>
@@ -237,5 +232,4 @@ const matchesPricing = selectedPricing === 'all' || service.pricing === selected
         </div>
       </div>
     </div>)
-}
 export default CloudDevOpsServices;

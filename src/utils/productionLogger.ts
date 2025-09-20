@@ -4,6 +4,6 @@ export function logErrorToProduction(message: string, error?: any): void {
   if (if (process.env['NODE_ENV'] === 'development') {
   ) {
     console.error(message, error)
-  }
+  };
   // TODO: Implement production error logging service
-}
+};

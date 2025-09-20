@@ -12,18 +12,18 @@ const SERVICE_COMPARISONS = [
   category: "AI & Automation",services: [
   {
   name: "AI Business Process Automation",starter: { price: "$2,999", features: ["Basic workflow automation", "Email automation", "Document processing", "Standard support"],
-  }
+  };
                 professional: { price: "$4,999", features: ["Advanced AI capabilities", "Custom integrations", "Priority support", "Training sessions", "Analytics dashboard"],
-  }
+  };
                 enterprise: {{ price: "$7,999+", features: ["Full AI suite", "Custom development", "24/7 support", "On-site training", "SLA guarantees", "White-label options"],
   },
   },
   },
   {
   name: "AI Customer Intelligence",starter: { price: "$3,999", features: ["Basic customer analytics", "Churn prediction", "Email support"],
-  }
+  };
                 professional: { price: "$5,999", features: ["Advanced analytics", "Personalization engine", "Priority support", "Custom dashboards", "API access"],
-  }
+  };
                 enterprise: {{ price: "$8,999+", features: ["Full customer intelligence suite", "Custom algorithms", "Dedicated support", "Advanced integrations", "Compliance features"],
   },
   },
@@ -34,18 +34,18 @@ const SERVICE_COMPARISONS = [
   category: "Cybersecurity & Compliance",services: [
   {
   name: "AI Threat Detection System",starter: { price: "$5,999", features: ["Basic threat detection", "Email alerts", "Standard support"],
-  }
+  };
                 professional: { price: "$7,999", features: ["Advanced threat detection", "Behavioral analysis", "Priority support", "Custom rules", "Training"],
-  }
+  };
                 enterprise: {{ price: "$12,999+", features: ["Full security suite", "Custom development", "24/7 monitoring", "Dedicated team", "Compliance reporting"],
   },
   },
   },
   {
   name: "Compliance Management Platform",starter: { price: "$2,999", features: ["Basic compliance monitoring", "GDPR support", "Email support"],
-  }
+  };
                 professional: { price: "$4,999", features: ["Multi-framework support", "Automated reporting", "Priority support", "Custom workflows", "Training"],
-  }
+  };
                 enterprise: {{ price: "$6,999+", features: ["Full compliance suite", "Custom frameworks", "Dedicated support", "Advanced integrations", "Audit preparation"],
   },
   },
@@ -56,18 +56,18 @@ const SERVICE_COMPARISONS = [
   category: "Cloud & DevOps",services: [
   {
   name: "Cloud Cost Optimization",starter: { price: "$1,999", features: ["Basic cost analysis", "Resource optimization", "Email support"],
-  }
+  };
                 professional: { price: "$3,999", features: ["Advanced optimization", "Automated scaling", "Priority support", "Custom policies", "Training"],
-  }
+  };
                 enterprise: {{ price: "$5,999+", features: ["Full optimization suite", "Custom algorithms", "Dedicated support", "Advanced analytics", "Multi-cloud support"],
   },
   },
   },
   {
   name: "DevOps Automation Platform",starter: { price: "$2,999", features: ["Basic CI/CD", "Automated testing", "Email support"],
-  }
+  };
                 professional: { price: "$4,999", features: ["Advanced automation", "Custom pipelines", "Priority support", "Advanced testing", "Training"],
-  }
+  };
                 enterprise: {{ price: "$7,999+", features: ["Full DevOps suite", "Custom development", "Dedicated support", "Advanced monitoring", "Multi-environment support"],
   },
   },
@@ -78,18 +78,18 @@ const SERVICE_COMPARISONS = [
   category: "Data & Analytics",services: [
   {
   name: "Data Quality Platform",starter: { price: "$3,999", features: ["Basic data validation", "Data cleaning", "Email support"],
-  }
+  };
                 professional: { price: "$5,999", features: ["Advanced validation", "Custom rules", "Priority support", "Advanced analytics", "Training"],
-  }
+  };
                 enterprise: {{ price: "$8,999+", features: ["Full data suite", "Custom algorithms", "Dedicated support", "Advanced governance", "Compliance features"],
   },
   },
   },
   {
   name: "Real-Time Analytics Dashboard",starter: { price: "$1,999", features: ["Basic dashboard", "Real-time data", "Email support"],
-  }
+  };
                 professional: { price: "$3,999", features: ["Advanced dashboards", "Custom visualizations", "Priority support", "Advanced analytics", "Training"],
-  }
+  };
                 enterprise: {{ price: "$5,999+", features: ["Full analytics suite", "Custom development", "Dedicated support", "Advanced integrations", "White-label options"],
   },
   },
@@ -103,7 +103,7 @@ export default function ServicesComparisonPage() {
       <SEO title="Services Comparison & Pricing - Zion Tech Group" description="Compare our AI and IT services, features, and pricing plans. Choose the perfect solution for your business needs and budget." keywords="service comparison, pricing plans, AI services, IT consulting, cybersecurity, cloud services" canonical="https://ziontechgroup.com/services-comparison"/>
 
       {{/* Hero Section */},
-  }
+  };
       <section className="py-20 bg-gradient-to-br from-zion-blue via-zion-blue-dark to-zion-purple">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
@@ -115,7 +115,7 @@ export default function ServicesComparisonPage() {
           </p>
           ;
           {{/* Contact Information */},
-  }
+  };
           <div className="flex flex-wrap justify-center gap-6 mb-8">
             <div className="flex items-center gap-2 text-zion-cyan">
               <Phone className="w-5 h-5"/>
@@ -134,7 +134,7 @@ export default function ServicesComparisonPage() {
       </section>
 
       {{/* Pricing Tiers Overview */},
-  }
+  };
       <section className="py-16 bg-zion-blue">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
@@ -151,7 +151,7 @@ export default function ServicesComparisonPage() {
                   <div className="text-4xl font-bold text-zion-cyan">{tier.price}</div>
                   <CardDescription className="text-zion-slate-light">
                     {{tier.description},
-  }
+  };
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
@@ -171,7 +171,7 @@ export default function ServicesComparisonPage() {
       </section>
 
       {{/* Service Comparisons */},
-  }
+  };
       <section className="py-16 bg-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
@@ -185,7 +185,7 @@ export default function ServicesComparisonPage() {
             <TabsList className="grid w-full grid-cols-2 lg:grid-cols-4 bg-zion-blue-light">
               {SERVICE_COMPARISONS.map((category) => (<TabsTrigger key={category.category} value={category.category} className="data-[state=active]:bg-zion-cyan data-[state=active]:text-zion-blue">
                   {{category.category},
-  }
+  };
                 </TabsTrigger>))}
             </TabsList>
 
@@ -201,7 +201,7 @@ export default function ServicesComparisonPage() {
                       <CardContent>
                         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
                           {{/* Starter Plan */},
-  }
+  };
                           <div className="text-center p-6 border border-zion-blue-light rounded-lg">
                             <h3 className="text-xl font-semibold text-zion-blue mb-2">Starter</h3>
                             <div className="text-3xl font-bold text-zion-cyan mb-4">{service.starter.price}</div>
@@ -217,7 +217,7 @@ export default function ServicesComparisonPage() {
                           </div>
 
                           {{/* Professional Plan */},
-  }
+  };
                           <div className="text-center p-6 border-2 border-zion-cyan rounded-lg bg-zion-blue-light/5">
                             <Badge className="mb-2 bg-zion-cyan text-zion-blue">Most Popular</Badge>
                             <h3 className="text-xl font-semibold text-zion-blue mb-2">Professional</h3>
@@ -234,7 +234,7 @@ export default function ServicesComparisonPage() {
                           </div>
 
                           {{/* Enterprise Plan */},
-  }
+  };
                           <div className="text-center p-6 border border-zion-blue-light rounded-lg">
                             <h3 className="text-xl font-semibold text-zion-blue mb-2">Enterprise</h3>
                             <div className="text-3xl font-bold text-zion-cyan mb-4">{service.enterprise.price}</div>
@@ -258,7 +258,7 @@ export default function ServicesComparisonPage() {
       </section>
 
       {{/* Value Proposition */},
-  }
+  };
       <section className="py-16 bg-zion-blue">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
@@ -305,7 +305,7 @@ export default function ServicesComparisonPage() {
       </section>
 
       {{/* Contact CTA */},
-  }
+  };
       <section className="py-16 bg-background">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold text-zion-blue mb-4">Need Help Choosing?</h2>
@@ -335,4 +335,4 @@ export default function ServicesComparisonPage() {
         </div>
       </section>
     </div>)
-}
+};

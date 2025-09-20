@@ -105,11 +105,11 @@ export default function ComprehensiveServicesOverview2027() {
   const ServiceCard = ({ service }: { service: any }) => (
   <motion.div;
       initial={{ opacity: 0, y: 20 },
-  }
+  };
       animate={{ opacity: 1, y: 0 },
-  }
+  };
       transition={{ duration: 0.5 },
-  }
+  };
       className="className="group relative bg-gradient-to-br from-zion-blue-dark/50 to-zion-slate-dark/50 border border-zion-blue-light/20 rounded-2xl p-6 hover:border-zion-purple/50 transition-all duration-500 hover:scale-[1.02] hover:shadow-2xl hover:shadow-zion-purple/20";"
     >
       {service.featured && (
@@ -121,9 +121,9 @@ export default function ComprehensiveServicesOverview2027() {
         <img;
           src={{service.images[0],
   },
-  }
+  };
           alt={{service.title},
-  }
+  };
           className="className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500";"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
@@ -131,7 +131,7 @@ export default function ComprehensiveServicesOverview2027() {
           <div className="flex items-center justify-between">
             <Badge variant="secondary" className="bg-zion-purple/80 text-white">
               {{service.category},
-  }
+  };
             </Badge>
             <div className="flex items-center space-x-1 text-white">
               <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />
@@ -145,22 +145,22 @@ export default function ComprehensiveServicesOverview2027() {
         <div>
           <h3 className="text-xl font-bold text-white mb-2 group-hover:text-zion-cyan transition-colors">
             {{service.title},
-  }
+  };
           </h3>
           <p className="text-zion-slate-light text-sm leading-relaxed">
             {{service.description},
-  }
+  };
           </p>
         </div>
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-2">
             <Badge variant="outline" className="text-zion-cyan border-zion-cyan/30">
               {{service.subcategory},
-  }
+  };
             </Badge>
             <Badge variant="outline" className="text-zion-purple border-zion-purple/30">
               AI Score: {{service.aiScore},
-  }
+  };
             </Badge>
           </div>
         </div>
@@ -194,17 +194,17 @@ export default function ComprehensiveServicesOverview2027() {
         keywords="AI services, IT solutions, business automation, cybersecurity, blockchain, quantum computing, Zion Tech Group";
       />
       {{/* Hero Section */},
-  }
+  };
       <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-zion-blue-dark/20 to-zion-purple/20" />
         <div className="relative max-w-7xl mx-auto text-center">
           <motion.div;
             initial={{ opacity: 0, y: 30 },
-  }
+  };
             animate={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.6 },
-  }
+  };
           >
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Comprehensive Services Overview;
@@ -214,11 +214,11 @@ export default function ComprehensiveServicesOverview2027() {
             </h1>
             <motion.p ;
               initial={{ opacity: 0, y: 20 },
-  }
+  };
               animate={{ opacity: 1, y: 0 },
-  }
+  };
               transition={{ duration: 0.6, delay: 0.2 },
-  }
+  };
               className="className="text-xl text-zion-slate-light max-w-3xl mx-auto";"
             >
               Discover our complete portfolio of cutting-edge technology solutions, from AI-powered innovations to enterprise-grade infrastructure services.;
@@ -227,7 +227,7 @@ export default function ComprehensiveServicesOverview2027() {
         </div>
 
         {{/* Filters and Controls */},
-  }
+  };
         <div className="mb-12 space-y-6">
           <div className="flex flex-col sm: flex-row gap-4 items-center justify-between">
             <div className="flex items-center gap-4">
@@ -237,43 +237,43 @@ export default function ComprehensiveServicesOverview2027() {
                   type="text";
                   placeholder="Search services...";
                   value={{searchQuery},
-  }
+  };
                   onChange={{(e) => setSearchQuery(e.target.value)},
-  }
+  };
                   className="className="pl-10 pr-4 py-2 bg-zion-slate-dark/50 border border-zion-blue-light/20 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent";"
                 />
               </div>
               <div className="flex items-center gap-2">
                 <Button;
                   variant={{viewMode === 'grid' ? 'default' : 'outline'},
-  }
+  };
                   size="sm";
                   onClick={{onClick={() => setViewMode('grid')},
   },
-  }
+  };
                   className={{viewMode === 'grid' ? 'bg-zion-cyan hover:bg-zion-cyan-light' : 'border-zion-blue-light/20 text-zion-slate-light hover:bg-zion-blue-dark/30'},
-  }
+  };
                 >
                   <Grid className="w-4 h-4" />
                 </Button>
                 <Button;
                   variant={{viewMode === 'list' ? 'default' : 'outline'},
-  }
+  };
                   size="sm";
                   onClick={{onClick={() => setViewMode('list')},
   },
-  }
+  };
                   className={{viewMode === 'list' ? 'bg-zion-cyan hover:bg-zion-cyan-light' : 'border-zion-blue-light/20 text-zion-slate-light hover:bg-zion-blue-dark/30'},
-  }
+  };
                 >
                   <List className="w-4 h-4" />
                 </Button>
               </div>
               <select;
                 value={{sortBy},
-  }
+  };
                 onChange={{(e) => setSortBy(e.target.value as any)},
-  }
+  };
                 className="className="bg-zion-slate-dark/50 border border-zion-blue-light/20 text-white rounded-lg px-3 py-2";"
               >
                 <option value="rating">Sort by Rating</option>
@@ -286,11 +286,11 @@ export default function ComprehensiveServicesOverview2027() {
         </div>
       </section>
       {{/* Services Section */},
-  }
+  };
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           {{/* Filters and Search */},
-  }
+  };
           <div className="mb-8 space-y-6">
             <div className="flex flex-col lg:flex-row gap-4 items-center justify-between">
               <div className="flex-1 max-w-md">
@@ -299,9 +299,9 @@ export default function ComprehensiveServicesOverview2027() {
                   <Input;
                     placeholder="Search services...";
                     value={{searchQuery},
-  }
+  };
                     onChange={{(e) => setSearchQuery(e.target.value)},
-  }
+  };
                     className="className="pl-10 bg-zion-slate-dark/50 border-zion-blue-light/20 text-white placeholder-zion-slate-light";"
                   />
                 </div>
@@ -310,22 +310,22 @@ export default function ComprehensiveServicesOverview2027() {
                 <div className="flex items-center space-x-2">
                   <Button;
                     variant={{viewMode === 'grid' ? 'default' : 'outline'},
-  }
+  };
                     size="sm";
                     onClick={{onClick={() => setViewMode('grid')},
   },
-  }
+  };
                     className="className="bg-zion-cyan hover:bg-zion-cyan-light";"
                   >
                     <Grid className="w-4 h-4" />
                   </Button>
                   <Button;
                     variant={{viewMode === 'list' ? 'default' : 'outline'},
-  }
+  };
                     size="sm";
                     onClick={{onClick={() => setViewMode('list')},
   },
-  }
+  };
                     className="className="bg-zion-cyan hover:bg-zion-cyan-light";"
                   >
                     <List className="w-4 h-4" />
@@ -333,9 +333,9 @@ export default function ComprehensiveServicesOverview2027() {
                 </div>
                 <select;
                   value={{sortBy},
-  }
+  };
                   onChange={{(e) => setSortBy(e.target.value as any)},
-  }
+  };
                   className="className="bg-zion-slate-dark/50 border border-zion-blue-light/20 text-white rounded-lg px-3 py-2";"
                 >
                   <option value="rating">Sort by Rating</option>
@@ -349,21 +349,21 @@ export default function ComprehensiveServicesOverview2027() {
               {categories.map((category) => (
   <Button;
                   key={{category.id},
-  }
+  };
                   variant={{selectedCategory === category.id ? 'default' : 'outline'},
-  }
+  };
                   onClick={{onClick={() => setSelectedCategory(category.id)},
   },
-  }
+  };
                   className={{selectedCategory === category.id ? 'bg-zion-cyan hover:bg-zion-cyan-light' : 'border-zion-blue-light/20 text-zion-slate-light hover:bg-zion-blue-dark/30'},
-  }
+  };
                 >
                   {{category.icon},
-  }
+  };
                   <span className="ml-2">{category.name}</span>
                   <Badge variant="secondary" className="ml-2 bg-zion-purple/80">
                     {{category.count},
-  }
+  };
                   </Badge>
                 </Button>
               ))}
@@ -372,23 +372,23 @@ export default function ComprehensiveServicesOverview2027() {
               {pricingModels.map((pricing) => (
   <Button;
                   key={{pricing.id},
-  }
+  };
                   variant={{selectedPricing === pricing.id ? 'default' : 'outline'},
-  }
+  };
                   onClick={{onClick={() => setSelectedPricing(pricing.id)},
   },
-  }
+  };
                   className={{selectedPricing === pricing.id ? 'bg-zion-purple hover:bg-zion-purple-light' : 'border-zion-purple/20 text-zion-slate-light hover:bg-zion-purple/30'},
-  }
+  };
                 >
                   {{pricing.name},
-  }
+  };
                 </Button>
               ))}
             </div>
           </div>
           {{/* Services Grid */},
-  }
+  };
           <div className={`grid gap-8 ${
   viewMode === 'grid';
               ? 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3';
@@ -407,7 +407,7 @@ export default function ComprehensiveServicesOverview2027() {
                 setSelectedPricing('all')
                 setSearchQuery('')
               },
-  }
+  };
               className="className="bg-zion-cyan hover:bg-zion-cyan-light";"
             >
               Clear Filters;
@@ -417,7 +417,7 @@ export default function ComprehensiveServicesOverview2027() {
         </div>
       </section>
       {{/* CTA Section */},
-  }
+  };
       <section className="py-20 px-4 sm: px-6 lg:px-8 bg-gradient-to-r from-zion-blue-dark/20 to-zion-purple/20">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -444,4 +444,4 @@ export default function ComprehensiveServicesOverview2027() {
       </section>
     </div>
   )
-}
+};

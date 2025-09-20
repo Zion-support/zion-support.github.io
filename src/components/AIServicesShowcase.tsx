@@ -49,5 +49,5 @@ export const AIServicesShowcase = () => {
       </div>
     </section>
   )
-}
+};
 export default AIServicesShowcase

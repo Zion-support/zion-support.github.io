@@ -65,7 +65,7 @@ const Tutorials = () => {
   return (
     <div className="min-h-screen bg-futuristic">
       {{/* Hero Section */},
-  }
+  };
       <section className="relative py-32 bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-blue overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-20 left-20 w-64 h-64 border border-zion-cyan rounded-full animate-pulse"></div>
@@ -81,7 +81,7 @@ const Tutorials = () => {
 
           <h1 className="text-6xl md: text-7xl font-bold text-white mb-8 leading-tight">
             Interactive{{' '},
-  }
+  };
             <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
               Tutorials;
             </span>
@@ -103,7 +103,7 @@ const Tutorials = () => {
       </section>
 
       {{/* Featured Tutorials */},
-  }
+  };
       <section className="py-20 bg-zion-slate-dark">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -120,51 +120,51 @@ const Tutorials = () => {
             {featuredTutorials.map((tutorial, index) => (
   <div;
                 key={{index},
-  }
+  };
                 className="className="bg-zion-blue-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl overflow-hidden hover:border-zion-cyan/40 transition-all duration-300 group";"
               >
                 {{/* Tutorial Image Placeholder */},
-  }
+  };
                 <div className="h-48 bg-gradient-to-br from-zion-cyan/20 to-zion-purple/20 flex items-center justify-center">
                   <BookOpen className="w-16 h-16 text-zion-cyan" />
                 </div>
 
                 <div className="p-6">
                   {{/* Category Badge */},
-  }
+  };
                   <div className="mb-4">
                     <span className="bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-3 py-1 rounded-full text-sm font-medium">
                       {{tutorial.category},
-  }
+  };
                     </span>
                   </div>
 
                   {{/* Title */},
-  }
+  };
                   <h3 className="text-xl font-bold text-white mb-3 group-hover:text-zion-cyan transition-colors duration-300">
                     {{tutorial.title},
-  }
+  };
                   </h3>
 
                   {{/* Description */},
-  }
+  };
                   <p className="text-zion-slate-light mb-4 leading-relaxed">
                     {{tutorial.description},
-  }
+  };
                   </p>
 
                   {{/* Tutorial Details */},
-  }
+  };
                   <div className="space-y-2 mb-6">
                     <div className="flex items-center text-zion-slate-light text-sm">
                       <Users className="w-4 h-4 mr-2" />
                       {{tutorial.instructor},
-  }
+  };
                     </div>
                     <div className="flex items-center text-zion-cyan text-sm">
                       <Clock className="w-4 h-4 mr-2" />
                       {{tutorial.duration},
-  }
+  };
                     </div>
                     <div className="flex items-center text-zion-slate-light text-sm">
                       <Users className="w-4 h-4 mr-2" />
@@ -173,12 +173,12 @@ const Tutorials = () => {
                   </div>
 
                   {{/* Rating */},
-  }
+  };
                   <div className="flex items-center justify-between mb-6">
                     <div className="flex items-center text-zion-cyan text-sm">
                       <Star className="w-4 h-4 mr-1 fill-current" />
                       {{tutorial.rating},
-  }
+  };
                     </div>
                     <button className="text-zion-cyan hover:text-white transition-colors duration-300">
                       Start Learning;
@@ -192,7 +192,7 @@ const Tutorials = () => {
       </section>
 
       {{/* Learning Paths */},
-  }
+  };
       <section className="py-20 bg-zion-blue-dark">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -209,7 +209,7 @@ const Tutorials = () => {
             {learningPaths.map((path, index) => (
   <div;
                 key={{index},
-  }
+  };
                 className="className="bg-zion-slate-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-8 text-center hover:border-zion-cyan/40 transition-all duration-300";"
               >
                 <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-6">
@@ -227,12 +227,12 @@ const Tutorials = () => {
                   <div className="flex items-center justify-center gap-2">
                     <Clock className="w-4 h-4" />
                     {{path.duration},
-  }
+  };
                   </div>
                   <div className="flex items-center justify-center gap-2">
                     <Target className="w-4 h-4" />
                     {{path.level},
-  }
+  };
                   </div>
                 </div>
 
@@ -246,7 +246,7 @@ const Tutorials = () => {
       </section>
 
       {{/* CTA Section */},
-  }
+  };
       <section className="py-20 bg-gradient-to-r from-zion-slate-dark to-zion-blue-dark">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
@@ -269,6 +269,6 @@ const Tutorials = () => {
       </section>
     </div>
   )
-}
+};
 
 export default Tutorials;

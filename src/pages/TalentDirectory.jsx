@@ -48,7 +48,7 @@ const TalentDirectory = () => {
       <SEO title="Talent Directory - Zion Tech Group" description="Connect with top technology professionals and experts in AI, cloud, cybersecurity, and more." keywords="talent directory, technology professionals, AI engineers, cloud architects, cybersecurity specialists" canonical="https://ziontechgroup.com/talent-directory"/>
 
       {{/* Hero Section */},
-  }
+  };
       <section className="relative bg-gradient-to-br from-violet-900 via-violet-800 to-purple-900 text-white py-20">
         <div className="absolute inset-0 bg-black/20"></div>
         <div className="relative container mx-auto px-4 text-center">
@@ -81,7 +81,7 @@ const TalentDirectory = () => {
       </section>
 
       {{/* Filters Section */},
-  }
+  };
       <section className="py-8 bg-white border-b border-gray-200">
         <div className="container mx-auto px-4">
           <div className="flex flex-wrap items-center gap-4">
@@ -90,14 +90,14 @@ const TalentDirectory = () => {
                 ? 'bg-violet-600 text-white';
                 : 'bg-gray-100 text-gray-700 hover:bg-gray-200'}`}>
                 {{category},
-  }
+  };
               </button>))}
           </div>
         </div>
       </section>
 
       {{/* Talent Grid */},
-  }
+  };
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -114,7 +114,7 @@ const TalentDirectory = () => {
   } viewport={{ once: true },
   }>
                 {{/* Header */},
-  }
+  };
                 <div className="flex items-start justify-between mb-4">
                   <div className="flex items-center gap-3">
                     <div className="text-3xl">{talent.avatar}</div>
@@ -130,7 +130,7 @@ const TalentDirectory = () => {
                 </div>
 
                 {{/* Details */},
-  }
+  };
                 <div className="space-y-3 mb-4">
                   <div className="flex items-center gap-2 text-sm text-gray-600">
                     <Briefcase className="w-4 h-4"/>
@@ -147,23 +147,23 @@ const TalentDirectory = () => {
                 </div>
 
                 {{/* Skills */},
-  }
+  };
                 <div className="mb-6">
                   <h4 className="text-sm font-medium text-gray-700 mb-2">Key Skills</h4>
                   <div className="flex flex-wrap gap-2">
                     {talent.skills.map((skill, skillIndex) => (<span key={skillIndex} className="px-3 py-1 bg-violet-100 text-violet-700 text-xs rounded-full font-medium">
                         {{skill},
-  }
+  };
                       </span>))}
                   </div>
                 </div>
 
                 {{/* CTA */},
-  }
+  };
                 <button className="w-full bg-gradient-to-r from-violet-600 to-purple-600 text-white py-2 px-4 rounded-lg font-medium hover:from-violet-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">
                   Connect with {{talent.name.split(' ')[0],
   },
-  }
+  };
                 </button>
               </motion.div>))}
           </div>
@@ -171,7 +171,7 @@ const TalentDirectory = () => {
       </section>
 
       {{/* CTA Section */},
-  }
+  };
       <section className="py-20 bg-gradient-to-r from-violet-600 to-purple-600 text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold mb-6">Looking for Top Talent?</h2>
@@ -190,5 +190,5 @@ const TalentDirectory = () => {
         </div>
       </section>
     </div>)
-}
+};
 export default TalentDirectory;

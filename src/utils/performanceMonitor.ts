@@ -2,7 +2,7 @@ interface PerformanceMetric {
   name: string,startTime: number;
   endTime?: number;
   duration?: number
-}
+};
 
 class PerformanceMonitor {
   private metrics: Map<string, PerformanceMetric> = new Map()
@@ -10,7 +10,7 @@ class PerformanceMonitor {
   ]
   constructor() {
   this.initializeObservers()
-  }
+  };
 
   private initializeObservers() {
   // Monitor Core Web Vitals;
@@ -66,14 +66,14 @@ const entries = list.getEntries()
   console.warn('CLS observer not supported')
       },
   },
-  }
+  };
 
   startTiming(name: string): void {
   this.metrics.set(name, {
   name;
       startTime: performance.now()
     })
-  }
+  };
 
   endTiming(name: string): number | null {
   const metric = this.metrics.get(name)
@@ -81,7 +81,6 @@ const entries = list.getEntries()
   ) {
       console.warn(`No timing found for metric: ${name}`)
       return null
-}
 
     const endTime = performance.now()
     const duration = endTime - metric.startTime;
@@ -91,7 +90,6 @@ const entries = list.getEntries()
 
     this.logMetric(name, duration)
     return duration
-}
 
   measureFunction<T>(name: string, fn: () => T): T {
   this.startTiming(name)
@@ -103,7 +101,7 @@ const entries = list.getEntries()
   this.endTiming(name)
       throw error
 },
-  }
+  };
 
   async measureAsync<T>(name: string, fn: () => Promise<T>): Promise<T> {
   this.startTiming(name)
@@ -115,7 +113,7 @@ const entries = list.getEntries()
   this.endTiming(name)
       throw error
 },
-  }
+  };
 
   private logMetric(name: string, value: number): void {
   if (if (process.env.NODE_ENV === 'development') {
@@ -129,7 +127,7 @@ const entries = list.getEntries()
   ) {
       this.sendToAnalytics(name, value)
     },
-  }
+  };
 
   private sendToAnalytics(name: string, value: number): void {
   // Implement analytics integration here;
@@ -141,7 +139,7 @@ const entries = list.getEntries()
 },
   })
     },
-  }
+  };
 
   getMetrics(): Record<string, PerformanceMetric> {
   const result: Record<string, PerformanceMetric> = {}
@@ -149,17 +147,16 @@ const entries = list.getEntries()
   result[name] = { ...metric },
   })
     return result
-}
 
   clearMetrics(): void {
   this.metrics.clear()
-  }
+  };
 
   disconnect(): void {
   this.observers.forEach(observer => observer.disconnect())
     this.observers = [],
   },
-  }
+  };
 
 // Create singleton instance;
 export const performanceMonitor = new PerformanceMonitor()
@@ -168,6 +165,6 @@ export const usePerformanceMonitor = () => {
   return {
   startTiming: performanceMonitor.startTiming.bind(performanceMonitor),endTiming: performanceMonitor.endTiming.bind(performanceMonitor),measureFunction: performanceMonitor.measureFunction.bind(performanceMonitor),measureAsync: performanceMonitor.measureAsync.bind(performanceMonitor)
   },
-  }
+  };
 
 export default performanceMonitor;

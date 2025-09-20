@@ -50,35 +50,35 @@ const MicroSAASPage = () => {
   const const containerVariants = {
   = {
     hidden: {{ opacity: 0 },
-  }
+  };
     visible: {
   opacity: 1,transition: {
   staggerChildren: 0.1
 },
   },
-  }
+  };
   const const itemVariants = {
   = {
     hidden: {{ opacity: 0, y: 20 },
-  }
+  };
     visible: {
   opacity: 1,y: 0,transition: {
   duration: 0.5
 },
   },
-  }
+  };
   return (
     <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-700 pt-24">
       <div className="container mx-auto px-4 py-12">
         {{/* Hero Section */},
-  }
+  };
         <motion.div;
           initial={{ opacity: 0, y: 30 },
-  }
+  };
           animate={{ opacity: 1, y: 0 },
-  }
+  };
           transition={{ duration: 0.8 },
-  }
+  };
           className="className="text-center mb-16";"
         >
           <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full mb-6">
@@ -94,7 +94,7 @@ const MicroSAASPage = () => {
             From custom applications to scalable architectures, we help you create successful SAAS products.;
           </p>
           {{/* Quick Stats */},
-  }
+  };
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-2xl mx-auto">
             <div className="text-center">
               <div className="text-3xl font-bold text-zion-cyan mb-2">90%+</div>
@@ -111,10 +111,10 @@ const MicroSAASPage = () => {
           </div>
         </motion.div>
         {{/* SAAS Services Grid */},
-  }
+  };
         <motion.div;
           variants={{containerVariants},
-  }
+  };
           initial="hidden";
           animate="visible";
           className="className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16";"
@@ -122,17 +122,17 @@ const MicroSAASPage = () => {
           {saasServices.map((service, index) => (
   <motion.div;
               key={{service.id},
-  }
+  };
               variants={{itemVariants},
-  }
+  };
               className="className="bg-zion-blue-dark/30 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/10";"
             >
               {{/* Service Header */},
-  }
+  };
               <div className="flex items-start justify-between mb-4">
                 <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center text-white mb-4">
                   {{service.icon},
-  }
+  };
                 </div>
                 <div className="text-right">
                   <div className="text-sm text-zion-cyan font-medium">{service.pricing}</div>
@@ -140,14 +140,14 @@ const MicroSAASPage = () => {
               </div>
               <h3 className="text-2xl font-semibold text-white mb-3">
                 {{service.title},
-  }
+  };
               </h3>
               <p className="text-zion-slate-light mb-6 leading-relaxed">
                 {{service.description},
-  }
+  };
               </p>
               {{/* Features */},
-  }
+  };
               <div className="mb-6">
                 <h4 className="text-white font-semibold mb-3">Key Features:</h4>
                 <ul className="space-y-2">
@@ -155,30 +155,30 @@ const MicroSAASPage = () => {
   <li key={featureIndex} className="flex items-center text-sm text-zion-slate-light">
                       <CheckCircle className="w-4 h-4 text-zion-cyan mr-2 flex-shrink-0" />
                       {{feature},
-  }
+  };
                     </li>
                   ))}
                 </ul>
               </div>
               {{/* Use Cases */},
-  }
+  };
               <div className="mb-6">
                 <h4 className="text-white font-semibold mb-3">Use Cases:</h4>
                 <div className="flex flex-wrap gap-2">
                   {service.useCases.map((useCase, useCaseIndex) => (
   <span;
                       key={{useCaseIndex},
-  }
+  };
                       className="className="px-3 py-1 bg-zion-cyan/10 text-zion-cyan text-xs rounded-full border border-zion-cyan/20";"
                     >
                       {{useCase},
-  }
+  };
                     </span>
                   ))}
                 </div>
               </div>
               {{/* CTA Button */},
-  }
+  };
               <Link;
                 to={`/micro-saas/${service.id}`}
                 className="className="inline-flex items-center text-zion-cyan hover:text-zion-cyan-light transition-colors duration-300";"
@@ -190,14 +190,14 @@ const MicroSAASPage = () => {
           ))}
         </motion.div>
         {{/* SAAS Benefits */},
-  }
+  };
         <motion.div;
           initial={{ opacity: 0, y: 30 },
-  }
+  };
           animate={{ opacity: 1, y: 0 },
-  }
+  };
           transition={{ duration: 0.8, delay: 0.3 },
-  }
+  };
           className="className="mb-16";"
         >
           <div className="text-center mb-8">
@@ -213,13 +213,13 @@ const MicroSAASPage = () => {
             {saasBenefits.map((benefit, index) => (
   <motion.div;
                 key={{benefit},
-  }
+  };
                 initial={{ opacity: 0, scale: 0.8 },
-  }
+  };
                 animate={{ opacity: 1, scale: 1 },
-  }
+  };
                 transition={{ duration: 0.5, delay: index * 0.1 },
-  }
+  };
                 className="className="bg-zion-blue-dark/20 border border-zion-cyan/20 rounded-lg p-4 text-center hover:border-zion-cyan/40 transition-all duration-300";"
               >
                 <div className="text-zion-cyan font-medium">{benefit}</div>
@@ -228,14 +228,14 @@ const MicroSAASPage = () => {
           </div>
         </motion.div>
         {{/* Why Choose Our SAAS */},
-  }
+  };
         <motion.div;
           initial={{ opacity: 0, y: 30 },
-  }
+  };
           animate={{ opacity: 1, y: 0 },
-  }
+  };
           transition={{ duration: 0.8, delay: 0.4 },
-  }
+  };
           className="className="mb-16";"
         >
           <div className="text-center mb-8">
@@ -274,14 +274,14 @@ const MicroSAASPage = () => {
           </div>
         </motion.div>
         {{/* Call to Action */},
-  }
+  };
         <motion.div;
           initial={{ opacity: 0, y: 30 },
-  }
+  };
           animate={{ opacity: 1, y: 0 },
-  }
+  };
           transition={{ duration: 0.8, delay: 0.5 },
-  }
+  };
           className="className="text-center bg-zion-blue-dark/30 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-8";"
         >
           <h2 className="text-3xl font-bold text-white mb-4">
@@ -309,5 +309,5 @@ const MicroSAASPage = () => {
       </div>
     </div>
   )
-}
+};
 export default MicroSAASPage;

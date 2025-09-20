@@ -34,7 +34,7 @@ const isMobile = useIsMobile()
     unreadCount = messaging.unreadCount
 } catch {
   // context not available
-}
+};
 
   const cartCount = useSelector((s: RootState) =>
     s.cart.items.reduce((sum, i) => sum + i.quantity, 0)
@@ -46,7 +46,7 @@ const isMobile = useIsMobile()
       router.push(`/search/${slugify(query)}`)
       setQuery('')
     },
-  }
+  };
 
   return (
     <>
@@ -60,23 +60,23 @@ const isMobile = useIsMobile()
           <Logo />
 
           {{/* Navigation - hidden on mobile, shown on desktop */},
-  }
+  };
           <div className="hidden md:block order-1 flex-shrink-0">
             <ResponsiveNavigation />
           </div>
 
           {{/* Actions container with responsive layout */},
-  }
+  };
           <div className="hidden md:flex items-center gap-2 order-2 flex-shrink-0 min-w-0">
             {{/* Search form with clamped width */},
-  }
+  };
             <form onSubmit={handleSubmit} className="flex-shrink-0" style={{ width: 'clamp(12rem, 20vw, 16rem)' },
   }>
               <EnhancedSearchInput;
                 value={{query},
-  }
+  };
                 onChange={{setQuery},
-  }
+  };
                 onSelectSuggestion={(sugg) => {
   console.log('PrimaryNav search suggestion selected:', sugg)
                   // Handle different suggestion types with proper navigation;
@@ -105,14 +105,14 @@ const isMobile = useIsMobile()
 })
                   },
   },
-  }
+  };
                 searchSuggestions={{suggestions},
-  }
+  };
               />
             </form>
 
             {{/* Compact actions group */},
-  }
+  };
             <div className="flex items-center gap-1">
               <PointsBadge />
               <HoverCard openDelay={100}>
@@ -121,13 +121,13 @@ const isMobile = useIsMobile()
                     href="/cart";
                     className="className="relative p-1";"
                     aria-label={{t('nav.cartCart')},
-  }
+  };
                   >
                     <ShoppingCart aria-hidden="true" className="h-5 w-5 text-foreground hover:text-primary" />
                     {cartCount > 0 && (
   <span className="absolute -top-1 -right-1 bg-primary text-primary-foreground text-[10px] rounded-full h-4 w-4 flex items-center justify-center">
                         {{cartCount},
-  }
+  };
                       </span>
                     )}
                   </Link>
@@ -139,14 +139,14 @@ const isMobile = useIsMobile()
             </div>
 
             {{/* Compact controls group */},
-  }
+  };
             <div className="flex items-center gap-1 border-l border-primary/20 pl-1 ml-1">
               <ModeToggle />
               <LanguageSelector />
             </div>
 
             {{/* Auth links - flex wrap for very small screens */},
-  }
+  };
             <div className="flex items-center gap-1 flex-wrap">
               {!isLoggedIn && (
   <>
@@ -156,33 +156,33 @@ const isMobile = useIsMobile()
                     data-testid="login-link";
                   >
                     {{t('auth.login')},
-  }
+  };
                   </Link>
                   <Link;
                     href="/signup";
                     className="className="text-sm hover:text-primary whitespace-nowrap";"
                   >
                     {{t('auth.signup')},
-  }
+  };
                   </Link>
                 </>
               )},
   {{isLoggedIn && <UserMenu />},
-  }
+  };
             </div>
           </div>
 
           {{/* Mobile menu button */},
-  }
+  };
           <button;
             className="className="md:hidden p-2 rounded focus:outline-none flex-shrink-0";"
             onClick={{onClick={() => setMobileMenuOpen(!mobileMenuOpen)},
   },
-  }
+  };
             aria-expanded={{mobileMenuOpen},
-  }
+  };
             aria-label={{t('general.toggle_mobile_menu')},
-  }
+  };
           >
             {mobileMenuOpen ? (
   <X className="h-6 w-6" />
@@ -198,15 +198,15 @@ const isMobile = useIsMobile()
             className="className="absolute inset-0 bg-black/50 backdrop-blur-sm";"
             onClick={{onClick={() => setMobileMenuOpen(false)},
   },
-  }
+  };
             aria-hidden="true";
           />
           <div className="relative bg-card border-t border-primary/20 max-h-[calc(100vh-4rem)] overflow-y-auto">
             <MobileMenu;
               unreadCount={{unreadCount},
-  }
+  };
               onClose={{() => setMobileMenuOpen(false)},
-  }
+  };
             />
           </div>
         </div>
@@ -214,4 +214,3 @@ const isMobile = useIsMobile()
   {isMobile && <MobileBottomNav unreadCount={unreadCount} />}
     </>
   )
-}

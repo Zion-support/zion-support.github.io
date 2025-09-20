@@ -613,4 +613,4 @@ const matchesSearch = process.name.toLowerCase().includes(searchQuery.toLowerCas
           </div>)}
       </div>
     </div>)
-}
+};

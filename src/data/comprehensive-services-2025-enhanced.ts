@@ -1,7 +1,7 @@
 export interface EnhancedService {
   id: string,name: string,tagline: string,description: string,category: 'micro-saas' | 'it-services' | 'ai-services' | 'emerging-tech' | 'fintech' | 'healthtech' | 'edutech' | 'martech',pricing: {
   monthly: string,yearly: string,enterprise: string,setup: string
-}
+};
     features: string[],benefits: string[],roi: string,trialDays: number,setupTime: string,icon: string,color: string,link: string;
     technology?: string[]
     integrations?: string[]
@@ -12,18 +12,17 @@ export interface EnhancedService {
     contactInfo: {
   mobile: string,email: string,address: string,website: string
 },
-  }
+  };
 
 const const CONTACT = {
   = {
     mobile: '+1 302 464 0950',email: 'kleber@ziontechgroup.com',address: '364 E Main St STE 1008 Middletown DE 19709',website: 'https://ziontechgroup.com'
-}
 export const comprehensiveServices2025Enhanced: EnhancedService[] = [
   // NEW MICRO SAAS SERVICES - FINANCIAL TECHNOLOGY;
     {
   id: 'ai-powered-invoice-factoring-platform',name: 'AI-Powered Invoice Factoring Platform',tagline: 'Instant cash flow with intelligent risk assessment',description: 'Automated invoice factoring platform that uses AI to assess credit risk, approve funding in minutes, and provide instant cash flow solutions for small businesses.';
         category: 'fintech',pricing: {{ monthly: '$299/month', yearly: '$2,999/year', enterprise: 'Custom', setup: '$499 one-time' },
-  }
+  };
         features: [
   'AI credit risk assessmentInstant funding approval';
             'Automated collectionsReal-time reporting dashboard';
@@ -43,7 +42,7 @@ export const comprehensiveServices2025Enhanced: EnhancedService[] = [
   {
   id: 'crypto-payment-gateway-saas',name: 'Crypto Payment Gateway SaaS',tagline: 'Accept 100+ cryptocurrencies with zero volatility risk',description: 'Enterprise-grade crypto payment gateway that automatically converts crypto to fiat, handles compliance, and provides real-time settlement with fraud protection.';
         category: 'fintech',pricing: {{ monthly: '$199/month', yearly: '$1,999/year', enterprise: 'Custom', setup: '$299 one-time' },
-  }
+  };
         features: [
   '100+ cryptocurrency supportInstant fiat conversion';
             'Regulatory compliance toolsFraud detection system';
@@ -63,7 +62,7 @@ export const comprehensiveServices2025Enhanced: EnhancedService[] = [
   {
   id: 'ai-expense-management-automation',name: 'AI Expense Management Automation',tagline: 'Smart receipt processing and policy enforcement',description: 'Intelligent expense management platform that automatically categorizes expenses, enforces company policies, and provides real-time insights into spending patterns.';
         category: 'fintech',pricing: {{ monthly: '$89/month', yearly: '$899/year', enterprise: 'Custom', setup: '$199 one-time' },
-  }
+  };
         features: [
   'OCR receipt processingAI-powered categorization';
             'Policy compliance checkingReal-time approval workflows';
@@ -79,12 +78,11 @@ export const comprehensiveServices2025Enhanced: EnhancedService[] = [
         targetAudience: 'Medium to large enterprises, accounting firms';
         marketPosition: 'AI-powered expense automation leader',competitors: ['ExpensifyConcur', 'Rydoo']
         contactInfo: CONTACT
-}
     // NEW MICRO SAAS SERVICES - HEALTHCARE TECHNOLOGY;
     {
   id: 'ai-telemedicine-platform',name: 'AI Telemedicine Platform',tagline: 'Intelligent virtual care with symptom analysis',description: 'Advanced telemedicine platform that uses AI to pre-screen patients, provide initial assessments, and connect them with appropriate healthcare providers.';
         category: 'healthtech',pricing: {{ monthly: '$399/month', yearly: '$3,999/year', enterprise: 'Custom', setup: '$999 one-time' },
-  }
+  };
         features: [
   'AI symptom checkerVideo consultation platform';
             'Electronic health records integrationPrescription management';
@@ -104,7 +102,7 @@ export const comprehensiveServices2025Enhanced: EnhancedService[] = [
   {
   id: 'healthcare-workflow-automation',name: 'Healthcare Workflow Automation',tagline: 'Streamline clinical processes and reduce administrative burden',description: 'Comprehensive workflow automation platform for healthcare organizations that automates patient scheduling, billing, and administrative tasks.';
         category: 'healthtech',pricing: {{ monthly: '$299/month', yearly: '$2,999/year', enterprise: 'Custom', setup: '$799 one-time' },
-  }
+  };
         features: [
   'Intelligent scheduling systemAutomated billing workflows';
             'Patient communication automationStaff management tools';
@@ -120,12 +118,11 @@ export const comprehensiveServices2025Enhanced: EnhancedService[] = [
         targetAudience: 'Healthcare administrators, practice managers';
         marketPosition: 'Healthcare workflow optimization leader',competitors: ['KareoAdvancedMD', 'DrChrono']
         contactInfo: CONTACT
-}
     // NEW MICRO SAAS SERVICES - EDUCATION TECHNOLOGY;
     {
   id: 'ai-personalized-learning-platform',name: 'AI Personalized Learning Platform',tagline: 'Adaptive learning paths for every student',description: 'Intelligent learning platform that creates personalized educational experiences, tracks progress, and adapts content based on individual learning styles and performance.';
         category: 'edutech',pricing: {{ monthly: '$149/month', yearly: '$1,499/year', enterprise: 'Custom', setup: '$399 one-time' },
-  }
+  };
         features: [
   'Adaptive learning algorithmsPersonalized content delivery';
             'Progress tracking analyticsMulti-modal learning support';
@@ -145,7 +142,7 @@ export const comprehensiveServices2025Enhanced: EnhancedService[] = [
   {
   id: 'virtual-classroom-saas',name: 'Virtual Classroom SaaS',tagline: 'Immersive online learning experiences',description: 'Advanced virtual classroom platform with 3D environments, interactive tools, and real-time collaboration features for engaging remote learning.';
         category: 'edutech',pricing: {{ monthly: '$199/month', yearly: '$1,999/year', enterprise: 'Custom', setup: '$499 one-time' },
-  }
+  };
         features: [
   '3D virtual environmentsInteractive whiteboards';
             'Real-time collaboration toolsBreakout room management';
@@ -161,12 +158,11 @@ export const comprehensiveServices2025Enhanced: EnhancedService[] = [
         targetAudience: 'Educational institutions, training companies, event organizers';
         marketPosition: 'Immersive virtual learning solution',competitors: ['EngageVRAltspaceVR', 'VRChat']
         contactInfo: CONTACT
-}
     // NEW MICRO SAAS SERVICES - MARKETING TECHNOLOGY;
     {
   id: 'ai-content-optimization-engine',name: 'AI Content Optimization Engine',tagline: 'Optimize content for maximum engagement and conversion',description: 'Intelligent content optimization platform that analyzes performance data, suggests improvements, and automatically A/B tests content variations.';
         category: 'martech',pricing: {{ monthly: '$179/month', yearly: '$1,799/year', enterprise: 'Custom', setup: '$299 one-time' },
-  }
+  };
         features: [
   'Content performance analyticsAI-powered optimization suggestions';
             'Automated A/B testingSEO optimization tools';
@@ -186,7 +182,7 @@ export const comprehensiveServices2025Enhanced: EnhancedService[] = [
   {
   id: 'predictive-customer-segmentation',name: 'Predictive Customer Segmentation',tagline: 'AI-powered customer behavior prediction and segmentation',description: 'Advanced customer segmentation platform that uses machine learning to predict customer behavior, identify high-value segments, and optimize marketing campaigns.';
         category: 'martech',pricing: {{ monthly: '$249/month', yearly: '$2,499/year', enterprise: 'Custom', setup: '$599 one-time' },
-  }
+  };
         features: [
   'Behavioral pattern analysisPredictive modeling';
             'Dynamic segmentationCampaign optimization';
@@ -202,12 +198,11 @@ export const comprehensiveServices2025Enhanced: EnhancedService[] = [
         targetAudience: 'Marketing teams, e-commerce businesses, SaaS companies';
         marketPosition: 'Predictive marketing intelligence platform',competitors: ['SegmentMixpanel', 'Amplitude']
         contactInfo: CONTACT
-}
     // NEW MICRO SAAS SERVICES - OPERATIONS & PRODUCTIVITY;
     {
   id: 'ai-project-resource-optimizer',name: 'AI Project Resource Optimizer',tagline: 'Intelligent resource allocation and project optimization',description: 'AI-powered project management platform that optimizes resource allocation, predicts project timelines, and identifies potential bottlenecks before they occur.';
         category: 'micro-saas',pricing: {{ monthly: '$199/month', yearly: '$1,999/year', enterprise: 'Custom', setup: '$399 one-time' },
-  }
+  };
         features: [
   'Resource allocation optimizationProject timeline prediction';
             'Risk assessment and mitigationTeam performance analytics';
@@ -227,7 +222,7 @@ export const comprehensiveServices2025Enhanced: EnhancedService[] = [
   {
   id: 'intelligent-inventory-management',name: 'Intelligent Inventory Management',tagline: 'AI-powered demand forecasting and inventory optimization',description: 'Smart inventory management system that predicts demand, optimizes stock levels, and automates reordering to minimize costs and maximize availability.';
         category: 'micro-saas',pricing: {{ monthly: '$159/month', yearly: '$1,599/year', enterprise: 'Custom', setup: '$299 one-time' },
-  }
+  };
         features: [
   'AI demand forecastingAutomated reordering';
             'Multi-location managementSupplier management';
@@ -243,12 +238,11 @@ export const comprehensiveServices2025Enhanced: EnhancedService[] = [
         targetAudience: 'Retailers, manufacturers, distributors, e-commerce businesses';
         marketPosition: 'AI-powered inventory optimization platform',competitors: ['TradeGeckoZoho Inventory', 'Fishbowl']
         contactInfo: CONTACT
-}
     // NEW MICRO SAAS SERVICES - SECURITY & COMPLIANCE;
     {
   id: 'ai-threat-intelligence-platform',name: 'AI Threat Intelligence Platform',tagline: 'Proactive cybersecurity threat detection and response',description: 'Advanced threat intelligence platform that uses AI to detect, analyze, and respond to cybersecurity threats in real-time across multiple attack vectors.';
         category: 'ai-services',pricing: {{ monthly: '$399/month', yearly: '$3,999/year', enterprise: 'Custom', setup: '$999 one-time' },
-  }
+  };
         features: [
   'Real-time threat detectionAI-powered threat analysis';
             'Automated response actionsThreat intelligence sharing';
@@ -268,7 +262,7 @@ export const comprehensiveServices2025Enhanced: EnhancedService[] = [
   {
   id: 'automated-compliance-monitoring',name: 'Automated Compliance Monitoring',tagline: 'Continuous compliance monitoring and automated reporting',description: 'Intelligent compliance monitoring platform that automatically tracks regulatory requirements, generates reports, and alerts on compliance violations.';
         category: 'it-services',pricing: {{ monthly: '$299/month', yearly: '$2,999/year', enterprise: 'Custom', setup: '$799 one-time' },
-  }
+  };
         features: [
   'Multi-regulation supportAutomated compliance checking';
             'Real-time violation alertsAutomated report generation';

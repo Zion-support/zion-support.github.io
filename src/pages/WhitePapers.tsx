@@ -51,16 +51,16 @@ export const WhitePapers: React.FC = () => {
       />
       ;
       {{/* Hero Section */},
-  }
+  };
       <section className="relative py-20 overflow-hidden">
         <div className="container-responsive">
           <motion.div;
             initial={{ opacity: 0, y: 30 },
-  }
+  };
             animate={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             className="className="text-center max-w-4xl mx-auto";"
           >
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-cyan-500/20 border border-cyan-400/30 rounded-full text-cyan-400 text-sm font-medium mb-6">
@@ -98,7 +98,7 @@ export const WhitePapers: React.FC = () => {
         </div>
         ;
         {{/* Background Elements */},
-  }
+  };
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div className="absolute top-20 left-10 w-72 h-72 bg-cyan-500/10 rounded-full blur-3xl"></div>
           <div className="absolute bottom-20 right-10 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl"></div>
@@ -106,14 +106,14 @@ export const WhitePapers: React.FC = () => {
       </section>
 
       {{/* Categories Filter */},
-  }
+  };
       <section className="py-12 border-b border-slate-700/50">
         <div className="container-responsive">
           <div className="flex flex-wrap justify-center gap-3">
             {categories.map((category) => (
   <button;
                 key={{category.name},
-  }
+  };
                 className={`px-6 py-3 rounded-full border transition-all duration-300 ${
   category.active;
                     ? 'border-cyan-400 bg-cyan-400/20 text-cyan-400';
@@ -121,7 +121,7 @@ export const WhitePapers: React.FC = () => {
 }`}
               >
                 {{category.name},
-  }
+  };
                 <span className="ml-2 text-sm opacity-75">({category.count})</span>
               </button>
             ))}
@@ -130,7 +130,7 @@ export const WhitePapers: React.FC = () => {
       </section>
 
       {{/* Featured White Papers */},
-  }
+  };
       <section className="py-16">
         <div className="container-responsive">
           <div className="mb-12">
@@ -142,15 +142,15 @@ export const WhitePapers: React.FC = () => {
             {whitePapers.filter(wp => wp.featured).map((paper) => (
   <motion.div;
                 key={{paper.id},
-  }
+  };
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.6 },
-  }
+  };
                 viewport={{ once: true },
-  }
+  };
                 className="className="group bg-slate-800/50 border border-slate-700/50 rounded-2xl p-6 hover:border-cyan-400/50 transition-all duration-300 hover:bg-slate-800/70";"
               >
                 <div className={`inline-flex items-center justify-center w-12 h-12 rounded-xl bg-gradient-to-br ${paper.color} mb-4`}>
@@ -160,15 +160,15 @@ export const WhitePapers: React.FC = () => {
                 <div className="mb-4">
                   <span className="inline-block px-3 py-1 bg-slate-700/50 text-cyan-400 text-xs font-medium rounded-full mb-3">
                     {{paper.category},
-  }
+  };
                   </span>
                   <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-cyan-400 transition-colors">
                     {{paper.title},
-  }
+  };
                   </h3>
                   <p className="text-gray-400 text-sm leading-relaxed">
                     {{paper.description},
-  }
+  };
                   </p>
                 </div>
                 ;
@@ -195,7 +195,7 @@ export const WhitePapers: React.FC = () => {
       </section>
 
       {{/* All White Papers */},
-  }
+  };
       <section className="py-16">
         <div className="container-responsive">
           <div className="mb-12">
@@ -207,15 +207,15 @@ export const WhitePapers: React.FC = () => {
             {whitePapers.map((paper) => (
   <motion.div;
                 key={{paper.id},
-  }
+  };
                 initial={{ opacity: 0, x: -20 },
-  }
+  };
                 whileInView={{ opacity: 1, x: 0 },
-  }
+  };
                 transition={{ duration: 0.6 },
-  }
+  };
                 viewport={{ once: true },
-  }
+  };
                 className="className="group bg-slate-800/30 border border-slate-700/30 rounded-xl p-6 hover:border-slate-600/50 transition-all duration-300 hover:bg-slate-800/50";"
               >
                 <div className="flex flex-col lg:flex-row lg:items-center gap-6">
@@ -227,7 +227,7 @@ export const WhitePapers: React.FC = () => {
                     <div className="flex flex-wrap items-center gap-3 mb-3">
                       <span className="inline-block px-3 py-1 bg-slate-700/50 text-cyan-400 text-xs font-medium rounded-full">
                         {{paper.category},
-  }
+  };
                       </span>
                       {paper.featured && (
   <span className="inline-block px-3 py-1 bg-cyan-500/20 text-cyan-400 text-xs font-medium rounded-full border border-cyan-400/30">
@@ -238,24 +238,24 @@ export const WhitePapers: React.FC = () => {
                     ;
                     <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-cyan-400 transition-colors">
                       {{paper.title},
-  }
+  };
                     </h3>
                     ;
                     <p className="text-gray-400 text-sm leading-relaxed mb-4">
                       {{paper.description},
-  }
+  };
                     </p>
                     ;
                     <div className="flex flex-wrap items-center gap-6 text-sm text-gray-500">
                       <span className="flex items-center gap-2">
                         <User className="w-4 h-4" />
                         {{paper.author},
-  }
+  };
                       </span>
                       <span className="flex items-center gap-2">
                         <Calendar className="w-4 h-4" />
                         {{new Date(paper.date).toLocaleDateString()},
-  }
+  };
                       </span>
                       <span className="flex items-center gap-2">
                         <Download className="w-4 h-4" />
@@ -278,18 +278,18 @@ export const WhitePapers: React.FC = () => {
       </section>
 
       {{/* CTA Section */},
-  }
+  };
       <section className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50">
         <div className="container-responsive text-center">
           <motion.div;
             initial={{ opacity: 0, y: 30 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             viewport={{ once: true },
-  }
+  };
           >
             <h2 className="text-4xl font-bold text-white mb-6">
               Stay Updated with Latest Research;
@@ -318,5 +318,5 @@ export const WhitePapers: React.FC = () => {
       </section>
     </div>
   )
-}
+};
 export default WhitePapers;

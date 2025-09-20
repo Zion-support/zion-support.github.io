@@ -285,7 +285,7 @@ export default function AICybersecurityThreatIntelligence() {
       />
       ;
       {{/* Hero Section */},
-  }
+  };
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <div className="mb-8">
@@ -305,7 +305,7 @@ export default function AICybersecurityThreatIntelligence() {
             </p>
             ;
             {{/* Contact Information */},
-  }
+  };
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-8 text-slate-300">
               <div className="flex items-center gap-2">
                 <Phone className="w-5 h-5 text-cyan-400" />
@@ -346,7 +346,7 @@ export default function AICybersecurityThreatIntelligence() {
       </section>
 
       {{/* Security Metrics Section */},
-  }
+  };
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -363,7 +363,7 @@ export default function AICybersecurityThreatIntelligence() {
   <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-600 rounded-xl p-6 text-center hover:border-red-500/50 transition-all duration-300">
                 <div className="w-12 h-12 bg-gradient-to-br from-red-500 to-orange-500 rounded-lg flex items-center justify-center text-white mx-auto mb-4">
                   {{metric.icon},
-  }
+  };
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">{metric.title}</h3>
                 <div className="mb-2">
@@ -380,7 +380,7 @@ export default function AICybersecurityThreatIntelligence() {
       </section>
 
       {{/* Features Section */},
-  }
+  };
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -398,7 +398,7 @@ export default function AICybersecurityThreatIntelligence() {
   <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-600 rounded-xl p-6 hover:border-red-500/50 transition-all duration-300">
                 <div className="w-12 h-12 bg-gradient-to-br from-red-500 to-orange-500 rounded-lg flex items-center justify-center text-white mb-4">
                   {{feature.icon},
-  }
+  };
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-slate-300">{feature.description}</p>
@@ -409,7 +409,7 @@ export default function AICybersecurityThreatIntelligence() {
       </section>
 
       {{/* Threat Types Section */},
-  }
+  };
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -426,7 +426,7 @@ export default function AICybersecurityThreatIntelligence() {
   <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-600 rounded-xl p-6 text-center hover:border-red-500/50 transition-all duration-300">
                 <div className="w-12 h-12 bg-gradient-to-br from-red-500 to-orange-500 rounded-lg flex items-center justify-center text-white mx-auto mb-4">
                   {{threat.icon},
-  }
+  };
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-3">{threat.title}</h3>
                 <p className="text-slate-300 text-sm">{threat.description}</p>
@@ -437,7 +437,7 @@ export default function AICybersecurityThreatIntelligence() {
       </section>
 
       {{/* Compliance Section */},
-  }
+  };
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -454,7 +454,7 @@ export default function AICybersecurityThreatIntelligence() {
   <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-600 rounded-xl p-6 hover:border-red-500/50 transition-all duration-300">
                 <div className="w-12 h-12 bg-gradient-to-br from-red-500 to-orange-500 rounded-lg flex items-center justify-center text-white mb-4">
                   {{standard.icon},
-  }
+  };
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{standard.name}</h3>
                 <p className="text-slate-300">{standard.description}</p>
@@ -465,7 +465,7 @@ export default function AICybersecurityThreatIntelligence() {
       </section>
 
       {{/* Pricing Section */},
-  }
+  };
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -526,7 +526,7 @@ export default function AICybersecurityThreatIntelligence() {
       </section>
 
       {{/* Benefits Section */},
-  }
+  };
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -543,7 +543,7 @@ export default function AICybersecurityThreatIntelligence() {
   <div key={index} className="text-center">
                 <div className="w-16 h-16 bg-gradient-to-br from-red-500 to-orange-500 rounded-xl flex items-center justify-center text-white mx-auto mb-4">
                   {{benefit.icon},
-  }
+  };
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{benefit.title}</h3>
                 <p className="text-slate-300">{benefit.description}</p>
@@ -554,7 +554,7 @@ export default function AICybersecurityThreatIntelligence() {
       </section>
 
       {{/* Market Comparison Section */},
-  }
+  };
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -627,7 +627,7 @@ export default function AICybersecurityThreatIntelligence() {
       </section>
 
       {{/* CTA Section */},
-  }
+  };
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -655,7 +655,7 @@ export default function AICybersecurityThreatIntelligence() {
           </div>
           ;
           {{/* Quick Contact Info */},
-  }
+  };
           <div className="bg-slate-800/50 rounded-xl p-6 border border-slate-600">
             <h3 className="text-lg font-semibold text-white mb-4">Get Started Today</h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
@@ -677,7 +677,7 @@ export default function AICybersecurityThreatIntelligence() {
       </section>
 
       {{/* Contact Information Footer */},
-  }
+  };
       <section className="py-16 px-4 sm: px-6 lg:px-8 bg-slate-800/50">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
@@ -714,4 +714,4 @@ export default function AICybersecurityThreatIntelligence() {
       </section>
     </div>
   )
-}
+};

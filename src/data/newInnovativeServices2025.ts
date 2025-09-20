@@ -1,14 +1,13 @@
 export interface NewInnovativeService {
   id: string,title: string,description: string,category: string,subcategory: string,price: number,currency: string,pricingModel: string,features: string[],benefits: string[],useCases: string[],targetAudience: string[],tags: string[],estimatedDelivery: string,supportLevel: string,marketPrice: string,roi: string,innovationLevel: string,contactInfo: {
   phone: string,email: string,website: string
-}
+};
   technicalSpecs?: {
   technology: string[],integrations: string[],apiEndpoints: number,uptime: string,security: string[[],
   ],
-  }
+  };
   competitors?: string[]
   marketSize?: string
-}
 
 export const NEW_INNOVATIVE_SERVICES_2025: NewInnovativeService[] = [
   // AI Legal Document Automation;
@@ -52,16 +51,14 @@ export const NEW_INNOVATIVE_SERVICES_2025: NewInnovativeService[] = [
     estimatedDelivery: "4-6 weeks",supportLevel: "enterprise",marketPrice: "$799 - $1,999/month";
     roi: "300-500%",innovationLevel: "Advanced",contactInfo: {
   phone: "+1 302 464 0950",email: "kleber@ziontechgroup.com",website: "https://ziontechgroup.com"
-}
     technicalSpecs: {
   technology: ["Python", "Natural Language Processing", "Machine Learning", "React", "Node.js", "PostgreSQL"]
       integrations: ["Clio", "LexisNexis", "Westlaw", "DocuSign", "ContractPodAi", "Practice Management Systems"]
       apiEndpoints: 200,uptime: "99.9%",security: [["SOC 2", "GDPR", "HIPAA", "End-to-end encryption", "Audit trails"],
   ],
-  }
+  };
     competitors: ["ContractPodAi", "Evisort", "Ironclad", "PandaDoc", "DocuSign"]
     marketSize: "$15.8 billion by 2025"
-}
   // AI Healthcare Analytics Platform;
   {
   id: "ai-healthcare-analytics",title: "AI Healthcare Analytics Platform",description: "Comprehensive AI-powered healthcare analytics platform that transforms patient care, operational efficiency, and clinical decision-making through data-driven insights.";
@@ -103,16 +100,14 @@ export const NEW_INNOVATIVE_SERVICES_2025: NewInnovativeService[] = [
     estimatedDelivery: "8-12 weeks",supportLevel: "enterprise",marketPrice: "$1,299 - $2,999/month";
     roi: "250-400%",innovationLevel: "Advanced",contactInfo: {
   phone: "+1 302 464 0950",email: "kleber@ziontechgroup.com",website: "https://ziontechgroup.com"
-}
     technicalSpecs: {
   technology: ["Python", "TensorFlow", "PyTorch", "React", "Node.js", "PostgreSQL", "Apache Spark"]
       integrations: ["Epic", "Cerner", "Allscripts", "Meditech", "Athenahealth", "HL7 FHIR"]
       apiEndpoints: 300,uptime: "99.99%",security: [["HIPAA", "HITECH", "SOC 2", "ISO 27001", "FDA 21 CFR Part 11", "End-to-end encryption"],
   ],
-  }
+  };
     competitors: ["IBM Watson Health", "Cerner HealtheIntent", "Epic Cogito", "SAS Healthcare Analytics", "Tableau Healthcare"]
     marketSize: "$84.2 billion by 2025"
-}
   // AI Financial Trading Platform;
   {
   id: "ai-financial-trading",title: "AI Financial Trading Platform",description: "Advanced AI-powered financial trading platform that revolutionizes trading through intelligent market analysis, automated execution, and sophisticated risk management.";
@@ -154,13 +149,12 @@ export const NEW_INNOVATIVE_SERVICES_2025: NewInnovativeService[] = [
     estimatedDelivery: "6-10 weeks",supportLevel: "enterprise",marketPrice: "$599 - $1,999/month";
     roi: "200-350%",innovationLevel: "Advanced",contactInfo: {
   phone: "+1 302 464 0950",email: "kleber@ziontechgroup.com",website: "https://ziontechgroup.com"
-}
     technicalSpecs: {
   technology: ["Python", "TensorFlow", "PyTorch", "React", "Node.js", "PostgreSQL", "Redis", "Apache Kafka"]
       integrations: ["MetaTrader", "TradingView", "Interactive Brokers", "Bloomberg Terminal", "Reuters Eikon"]
       apiEndpoints: 500,uptime: "99.99%",security: [["SOC 2", "ISO 27001", "PCI DSS", "End-to-end encryption", "Multi-factor authentication"],
   ],
-  }
+  };
     competitors: ["Alpaca", "QuantConnect", "Zerodha", "Robinhood", "Interactive Brokers"]
     marketSize: "$12.5 billion by 2025"
 },

@@ -1,14 +1,13 @@
 export interface EmergingTechService {
   id: string,title: string,description: string,category: string,subcategory: string,price: number,currency: string,pricingModel: string,features: string[],benefits: string[],useCases: string[],targetAudience: string[],tags: string[],estimatedDelivery: string,supportLevel: string,marketPrice: string,roi: string,innovationLevel: string,contactInfo: {
   phone: string,email: string,website: string
-}
+};
   technicalSpecs?: {
   technology: string[],integrations: string[],apiEndpoints: number,uptime: string,security: string[[],
   ],
-  }
+  };
   competitors?: string[]
   marketSize?: string
-}
 
 export const EMERGING_TECH_SERVICES_2025: EmergingTechService[] = [
   // AI-Powered Neuromorphic Computing Platform;
@@ -50,16 +49,14 @@ export const EMERGING_TECH_SERVICES_2025: EmergingTechService[] = [
     estimatedDelivery: "16-20 weeks",supportLevel: "enterprise",marketPrice: "$7,999 - $25,000/month";
     roi: "800-1500%",innovationLevel: "Revolutionary",contactInfo: {
   phone: "+1 302 464 0950",email: "kleber@ziontechgroup.com",website: "https://ziontechgroup.com"
-}
     technicalSpecs: {
   technology: ["Neuromorphic chips", "AI/ML", "Python", "C++", "Hardware acceleration"]
       integrations: ["IoT platforms", "Edge devices", "Cloud services", "AI frameworks"]
       apiEndpoints: 100,uptime: "99.9%",security: [["Hardware security", "Encryption", "Access controls", "Secure boot"],
   ],
-  }
+  };
     competitors: ["Intel Loihi", "IBM TrueNorth", "BrainChip", "SpiNNaker"]
     marketSize: "$8.9 billion by 2027"
-}
   // AI-Powered Synthetic Biology Platform;
   {
   id: "ai-synthetic-biology-platform",title: "AI Synthetic Biology Platform",description: "Advanced platform combining AI and synthetic biology to design, simulate, and optimize biological systems for healthcare, agriculture, and industrial applications.";
@@ -100,16 +97,14 @@ export const EMERGING_TECH_SERVICES_2025: EmergingTechService[] = [
     estimatedDelivery: "14-18 weeks",supportLevel: "enterprise",marketPrice: "$5,999 - $18,000/month";
     roi: "500-1000%",innovationLevel: "Revolutionary",contactInfo: {
   phone: "+1 302 464 0950",email: "kleber@ziontechgroup.com",website: "https://ziontechgroup.com"
-}
     technicalSpecs: {
   technology: ["AI/ML", "Bioinformatics", "Python", "Molecular modeling", "CRISPR tools"]
       integrations: ["Lab equipment", "DNA synthesis", "Sequencing platforms", "Bioinformatics tools"]
       apiEndpoints: 150,uptime: "99.9%",security: [["Biosafety protocols", "Data encryption", "Access controls", "Audit trails"],
   ],
-  }
+  };
     competitors: ["Ginkgo Bioworks", "Twist Bioscience", "Zymergen", "Benchling"]
     marketSize: "$23.7 billion by 2028"
-}
   // AI-Powered Quantum Internet Platform;
   {
   id: "ai-quantum-internet-platform",title: "AI Quantum Internet Platform",description: "Next-generation quantum internet platform that enables ultra-secure communication, quantum networking, and distributed quantum computing across global networks.";
@@ -150,13 +145,12 @@ export const EMERGING_TECH_SERVICES_2025: EmergingTechService[] = [
     estimatedDelivery: "20-24 weeks",supportLevel: "enterprise",marketPrice: "$9,999 - $35,000/month";
     roi: "1000-2000%",innovationLevel: "Revolutionary",contactInfo: {
   phone: "+1 302 464 0950",email: "kleber@ziontechgroup.com",website: "https://ziontechgroup.com"
-}
     technicalSpecs: {
   technology: ["Quantum hardware", "Quantum algorithms", "Python", "Qiskit", "Quantum protocols"]
       integrations: ["Classical networks", "Quantum computers", "Security systems", "Cloud platforms"]
       apiEndpoints: 50,uptime: "99.5%",security: [["Quantum encryption", "Quantum key distribution", "Quantum security", "Post-quantum crypto"],
   ],
-  }
+  };
     competitors: ["Quantum Xchange", "ID Quantique", "Quantum Machines", "Rigetti"]
     marketSize: "$15.8 billion by 2030"
 },

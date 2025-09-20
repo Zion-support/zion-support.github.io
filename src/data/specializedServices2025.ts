@@ -2,7 +2,7 @@ export interface SpecializedService {
   id: string,title: string,description: string,category: string,subcategory: string,price: number,marketPrice: string,features: string[],benefits: string[],useCases: string[],targetAudience: string[],tags: string[],estimatedDelivery: string,supportLevel: string,innovationLevel: string,contactInfo: {
   phone: string,email: string,website: string
 },
-  }
+  };
 
 export const SPECIALIZED_SERVICES_2025: SpecializedService[] = [
   // AI-Powered Education Platform;
@@ -46,7 +46,7 @@ export const SPECIALIZED_SERVICES_2025: SpecializedService[] = [
     estimatedDelivery: "6-10 weeks",supportLevel: "premium",innovationLevel: "Advanced",contactInfo: {
   phone: "+1 302 464 0950",email: "kleber@ziontechgroup.com",website: "https://ziontechgroup.com"
 },
-  }
+  };
   // Quantum Cryptography Platform;
   {
   id: "quantum-cryptography-platform",title: "Quantum Cryptography Platform",description: "Next-generation cryptography platform using quantum key distribution and post-quantum algorithms for ultra-secure communications and data protection.",category: "Quantum Security",subcategory: "Cryptography",price: 12000,marketPrice: "$12,000 - $35,000/month";
@@ -87,7 +87,7 @@ export const SPECIALIZED_SERVICES_2025: SpecializedService[] = [
     estimatedDelivery: "12-16 weeks",supportLevel: "enterprise",innovationLevel: "Cutting-edge",contactInfo: {
   phone: "+1 302 464 0950",email: "kleber@ziontechgroup.com",website: "https://ziontechgroup.com"
 },
-  }
+  };
   // AI-Powered Manufacturing Platform;
   {
   id: "ai-manufacturing-platform",title: "AI Manufacturing Platform",description: "Intelligent manufacturing platform that optimizes production processes, predicts equipment failures, and automates quality control using AI and IoT.";
@@ -129,7 +129,7 @@ export const SPECIALIZED_SERVICES_2025: SpecializedService[] = [
     estimatedDelivery: "8-12 weeks",supportLevel: "enterprise",innovationLevel: "Advanced",contactInfo: {
   phone: "+1 302 464 0950",email: "kleber@ziontechgroup.com",website: "https://ziontechgroup.com"
 },
-  }
+  };
   // Blockchain Identity Management;
   {
   id: "blockchain-identity-management",title: "Blockchain Identity Management",description: "Decentralized identity management platform using blockchain technology for secure, verifiable, and privacy-preserving digital identities.";
@@ -171,7 +171,7 @@ export const SPECIALIZED_SERVICES_2025: SpecializedService[] = [
     estimatedDelivery: "8-12 weeks",supportLevel: "premium",innovationLevel: "Advanced",contactInfo: {
   phone: "+1 302 464 0950",email: "kleber@ziontechgroup.com",website: "https://ziontechgroup.com"
 },
-  }
+  };
   // AI-Powered Real Estate Platform;
   {
   id: "ai-real-estate-platform",title: "AI Real Estate Platform",description: "Intelligent real estate platform that uses AI for property valuation, market analysis, investment recommendations, and automated property management.";
@@ -213,7 +213,7 @@ export const SPECIALIZED_SERVICES_2025: SpecializedService[] = [
     estimatedDelivery: "6-10 weeks",supportLevel: "premium",innovationLevel: "Advanced",contactInfo: {
   phone: "+1 302 464 0950",email: "kleber@ziontechgroup.com",website: "https://ziontechgroup.com"
 },
-  }
+  };
   // Quantum Internet Infrastructure;
   {
   id: "quantum-internet-infrastructure",title: "Quantum Internet Infrastructure",description: "Revolutionary quantum internet infrastructure that enables ultra-secure, high-speed quantum communication networks for the future of the internet.";

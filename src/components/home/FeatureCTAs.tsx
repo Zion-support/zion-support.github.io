@@ -121,21 +121,21 @@ export function FeatureCTAs() {
   {feature.badge && (
   <Badge variant="secondary" className="bg-blue-100 text-blue-800 hover:bg-blue-200">
                       {{feature.badge},
-  }
+  };
                     </Badge>
                   )}
                 </div>
                 <CardTitle className="text-lg text-white">{feature.title}</CardTitle>
                 <CardDescription className="text-gray-400">
                   {{feature.description},
-  }
+  };
                 </CardDescription>
               </CardHeader>
 
               <CardContent className="pb-4">
                 <p className="text-sm text-gray-300 leading-relaxed">
                   {{feature.details},
-  }
+  };
                 </p>
               </CardContent>
 
@@ -177,4 +177,4 @@ export function FeatureCTAs() {
       </div>
     </section>
   )
-}
+};

@@ -24,18 +24,16 @@ import {
 } from "lucide-react";
 interface ReportData {
   id: string,title: string,type: 'financial' | 'operational' | 'performance' | 'security' | 'customer' | 'technical',category: string,data: any,lastUpdated: string,status: 'active' | 'archived' | 'draft',priority: 'low' | 'medium' | 'high' | 'critical',tags: string[],description: string,author: string,views: number,downloads: number,rating: number
-}
+};
 
 interface ReportMetrics {
   totalReports: number,activeReports: number,totalViews: number,totalDownloads: number,averageRating: number,topCategories: Array<{ name: string, count: number, percentage: number }>;
   recentActivity: Array<{ action: string, timestamp: string, user: string }>
-}
 
 interface AdvancedReportingDashboardProps {
   showMetrics?: boolean,
   showFilters?: boolean,
   maxReports?: number,
-}
 
 export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProps> = ({
   showMetrics = true;
@@ -108,15 +106,12 @@ const [sortBy, setSortBy] = useState<'date' | 'views' | 'rating' | 'priority' | 
 
     if (selectedType !== 'all') {
       filtered = filtered.filter(r => r.type === selectedType)
-}
 
     if (selectedCategory !== 'all') {
       filtered = filtered.filter(r => r.category === selectedCategory)
-}
 
     if (selectedStatus !== 'all') {
       filtered = filtered.filter(r => r.status === selectedStatus)
-}
 
     if (searchQuery) {
       filtered = filtered.filter(r =>
@@ -303,9 +298,9 @@ const [sortBy, setSortBy] = useState<'date' | 'views' | 'rating' | 'priority' | 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
           <motion.div
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             animate={{ opacity: 1, y: 0 },
-  }
+  };
             className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center"
           >
             <div className="text-3xl font-bold text-white mb-2">{reportMetrics.totalReports}</div>
@@ -314,11 +309,11 @@ const [sortBy, setSortBy] = useState<'date' | 'views' | 'rating' | 'priority' | 
 
           <motion.div
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             animate={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ delay: 0.1 },
-  }
+  };
             className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center"
           >
             <div className="text-3xl font-bold text-green-400 mb-2">{reportMetrics.totalViews.toLocaleString()}</div>
@@ -327,11 +322,11 @@ const [sortBy, setSortBy] = useState<'date' | 'views' | 'rating' | 'priority' | 
 
           <motion.div
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             animate={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ delay: 0.2 },
-  }
+  };
             className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center"
           >
             <div className="text-3xl font-bold text-blue-400 mb-2">{reportMetrics.totalDownloads.toLocaleString()}</div>
@@ -340,11 +335,11 @@ const [sortBy, setSortBy] = useState<'date' | 'views' | 'rating' | 'priority' | 
 
           <motion.div
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             animate={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ delay: 0.3 },
-  }
+  };
             className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center"
           >
             <div className="text-3xl font-bold text-zion-cyan mb-2">{reportMetrics.averageRating.toFixed(1)}</div>
@@ -357,11 +352,11 @@ const [sortBy, setSortBy] = useState<'date' | 'views' | 'rating' | 'priority' | 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
           <motion.div
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             animate={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ delay: 0.4 },
-  }
+  };
             className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl"
           >
             <h3 className="text-lg font-semibold text-white mb-4">Top Categories</h3>
@@ -373,11 +368,11 @@ const [sortBy, setSortBy] = useState<'date' | 'views' | 'rating' | 'priority' | 
                     <div className="w-20 bg-zinc-700 rounded-full h-2">
                       <motion.div
                         initial={{ width: 0 },
-  }
+  };
                         animate={{ width: `${category.percentage}%` },
-  }
+  };
                         transition={{ delay: index * 0.1, duration: 0.8 },
-  }
+  };
                         className="h-2 bg-zion-cyan rounded-full"
                       />
                     </div>
@@ -390,11 +385,11 @@ const [sortBy, setSortBy] = useState<'date' | 'views' | 'rating' | 'priority' | 
 
           <motion.div
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             animate={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ delay: 0.5 },
-  }
+  };
             className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl"
           >
             <h3 className="text-lg font-semibold text-white mb-4">Recent Activity</h3>
@@ -413,11 +408,11 @@ const [sortBy, setSortBy] = useState<'date' | 'views' | 'rating' | 'priority' | 
 
           <motion.div
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             animate={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ delay: 0.6 },
-  }
+  };
             className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl"
           >
             <h3 className="text-lg font-semibold text-white mb-4">Quick Actions</h3>
@@ -519,11 +514,11 @@ const [sortBy, setSortBy] = useState<'date' | 'views' | 'rating' | 'priority' | 
           <motion.div
             key={report.id}
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             animate={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ delay: index * 0.1 },
-  }
+  };
             className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl hover:bg-zinc-900/50 transition-all duration-300"
           >
             {/* Report Header */}
@@ -666,9 +661,9 @@ const [sortBy, setSortBy] = useState<'date' | 'views' | 'rating' | 'priority' | 
   {filteredReports.length === 0 && (
         <motion.div
           initial={{ opacity: 0 },
-  }
+  };
           animate={{ opacity: 1 },
-  }
+  };
           className="text-center py-12"
         >
           <FileText className="w-16 h-16 text-zinc-600 mx-auto mb-4" />
@@ -689,21 +684,21 @@ const [sortBy, setSortBy] = useState<'date' | 'views' | 'rating' | 'priority' | 
         {showReportDetails && selectedReport && (
           <motion.div
             initial={{ opacity: 0 },
-  }
+  };
             animate={{ opacity: 1 },
-  }
+  };
             exit={{ opacity: 0 },
-  }
+  };
             className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4"
             onClick={() => setShowReportDetails(false)}
           >
             <motion.div
               initial={{ scale: 0.9, opacity: 0 },
-  }
+  };
               animate={{ scale: 1, opacity: 1 },
-  }
+  };
               exit={{ scale: 0.9, opacity: 0 },
-  }
+  };
               className="bg-zinc-900 border border-zinc-700 rounded-xl p-6 max-w-4xl w-full max-h-[90vh] overflow-y-auto"
               onClick={(e) => e.stopPropagation()}
             >
@@ -749,4 +744,3 @@ const [sortBy, setSortBy] = useState<'date' | 'views' | 'rating' | 'priority' | 
       </AnimatePresence>
     </div>
   )
-};

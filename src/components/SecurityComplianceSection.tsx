@@ -68,13 +68,13 @@ export function SecurityComplianceSection() {
         <motion.div ;
           className="className="text-center mb-16";"
           initial={{ opacity: 0, y: 20 },
-  }
+  };
           whileInView={{ opacity: 1, y: 0 },
-  }
+  };
           viewport={{ once: true },
-  }
+  };
           transition={{ duration: 0.6 },
-  }
+  };
         >
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
             Security & Compliance;
@@ -86,21 +86,21 @@ export function SecurityComplianceSection() {
         </motion.div>
 
         {{/* Security Certifications */},
-  }
+  };
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
           {securityFeatures.map((feature, index) => (
   <motion.div;
               key={{feature.title},
-  }
+  };
               className="className="bg-slate-800 border border-slate-700 rounded-xl p-6 hover:border-blue-500/50 transition-all duration-300";"
               initial={{ opacity: 0, y: 30 },
-  }
+  };
               whileInView={{ opacity: 1, y: 0 },
-  }
+  };
               viewport={{ once: true },
-  }
+  };
               transition={{ duration: 0.6, delay: index * 0.1 },
-  }
+  };
             >
               <div className="flex items-start gap-4">
                 <div className={`w-12 h-12 bg-gradient-to-br ${feature.color} rounded-lg flex items-center justify-center flex-shrink-0`}>
@@ -123,17 +123,17 @@ export function SecurityComplianceSection() {
         </div>
 
         {{/* Compliance Features */},
-  }
+  };
         <motion.div ;
           className="className="mb-16";"
           initial={{ opacity: 0, y: 30 },
-  }
+  };
           whileInView={{ opacity: 1, y: 0 },
-  }
+  };
           viewport={{ once: true },
-  }
+  };
           transition={{ duration: 0.6, delay: 0.4 },
-  }
+  };
         >
           <h3 className="text-3xl font-bold text-white text-center mb-8">
             Comprehensive Security Features;
@@ -144,7 +144,7 @@ export function SecurityComplianceSection() {
   <div key={category.category} className="bg-slate-800 border border-slate-700 rounded-xl p-6">
                 <h4 className="text-xl font-bold text-white mb-4 text-center">
                   {{category.category},
-  }
+  };
                 </h4>
                 <ul className="space-y-3">
                   {category.features.map((feature, featureIndex) => (
@@ -160,17 +160,17 @@ export function SecurityComplianceSection() {
         </motion.div>
 
         {{/* Security Metrics */},
-  }
+  };
         <motion.div ;
           className="className="mb-16";"
           initial={{ opacity: 0, y: 30 },
-  }
+  };
           whileInView={{ opacity: 1, y: 0 },
-  }
+  };
           viewport={{ once: true },
-  }
+  };
           transition={{ duration: 0.6, delay: 0.6 },
-  }
+  };
         >
           <div className="bg-slate-800 border border-slate-700 rounded-2xl p-8">
             <h3 className="text-2xl font-bold text-white text-center mb-8">
@@ -199,17 +199,17 @@ export function SecurityComplianceSection() {
         </motion.div>
 
         {{/* Call to Action */},
-  }
+  };
         <motion.div ;
           className="className="text-center";"
           initial={{ opacity: 0, y: 20 },
-  }
+  };
           whileInView={{ opacity: 1, y: 0 },
-  }
+  };
           viewport={{ once: true },
-  }
+  };
           transition={{ duration: 0.6, delay: 0.8 },
-  }
+  };
         >
           <div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl p-8">
             <h3 className="text-2xl font-bold mb-4">
@@ -234,4 +234,4 @@ export function SecurityComplianceSection() {
       </div>
     </section>
   )
-}
+};

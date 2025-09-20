@@ -126,16 +126,16 @@ const AIBusinessIntelligenceDashboard = () => {
       />
       ;
       {{/* Hero Section */},
-  }
+  };
       <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
         <div className="max-w-7xl mx-auto">
           <motion.div;
             initial={{ opacity: 0, y: 30 },
-  }
+  };
             animate={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             className="className="text-center relative z-10";"
           >
             <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-400/30 rounded-full text-sm font-medium mb-8 backdrop-blur-sm">
@@ -176,7 +176,7 @@ const AIBusinessIntelligenceDashboard = () => {
         </div>
         ;
         {{/* Background Elements */},
-  }
+  };
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div className="absolute top-20 left-20 w-72 h-72 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full blur-3xl"></div>
           <div className="absolute bottom-20 right-20 w-96 h-96 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-full blur-3xl"></div>
@@ -184,19 +184,19 @@ const AIBusinessIntelligenceDashboard = () => {
       </section>
 
       {{/* Features Section */},
-  }
+  };
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5 relative">
         <div className="max-w-7xl mx-auto">
           <motion.div ;
             className="className="text-center mb-16";"
             initial={{ opacity: 0, y: 30 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             viewport={{ once: true },
-  }
+  };
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
@@ -212,15 +212,15 @@ const AIBusinessIntelligenceDashboard = () => {
             {features.map((feature, index) => (
   <motion.div;
                 key={{index},
-  }
+  };
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.6, delay: index * 0.1 },
-  }
+  };
                 viewport={{ once: true },
-  }
+  };
                 className="className="group";"
               >
                 <div className="glass rounded-2xl p-8 border border-white/20 hover:border-cyan-400/40 transition-all duration-300 group-hover:transform group-hover:scale-105 backdrop-blur-sm h-full">
@@ -229,11 +229,11 @@ const AIBusinessIntelligenceDashboard = () => {
                   </div>
                   <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-300 transition-colors duration-300">
                     {{feature.title},
-  }
+  };
                   </h3>
                   <p className="text-gray-300 leading-relaxed">
                     {{feature.description},
-  }
+  };
                   </p>
                 </div>
               </motion.div>
@@ -243,19 +243,19 @@ const AIBusinessIntelligenceDashboard = () => {
       </section>
 
       {{/* Use Cases Section */},
-  }
+  };
       <section className="py-20 px-4 sm:px-6 lg:px-8 relative">
         <div className="max-w-7xl mx-auto">
           <motion.div ;
             className="className="text-center mb-16";"
             initial={{ opacity: 0, y: 30 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             viewport={{ once: true },
-  }
+  };
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
@@ -271,15 +271,15 @@ const AIBusinessIntelligenceDashboard = () => {
             {useCases.map((useCase, index) => (
   <motion.div;
                 key={{index},
-  }
+  };
                 initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 },
-  }
+  };
                 whileInView={{ opacity: 1, x: 0 },
-  }
+  };
                 transition={{ duration: 0.6, delay: index * 0.1 },
-  }
+  };
                 viewport={{ once: true },
-  }
+  };
                 className="className="group";"
               >
                 <div className="glass rounded-2xl p-8 border border-white/20 hover:border-cyan-400/40 transition-all duration-300 group-hover:transform group-hover:scale-105 backdrop-blur-sm">
@@ -288,11 +288,11 @@ const AIBusinessIntelligenceDashboard = () => {
                   </div>
                   <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-300 transition-colors duration-300">
                     {{useCase.title},
-  }
+  };
                   </h3>
                   <p className="text-gray-300 leading-relaxed">
                     {{useCase.description},
-  }
+  };
                   </p>
                 </div>
               </motion.div>
@@ -302,19 +302,19 @@ const AIBusinessIntelligenceDashboard = () => {
       </section>
 
       {{/* Pricing Section */},
-  }
+  };
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5 relative">
         <div className="max-w-7xl mx-auto">
           <motion.div ;
             className="className="text-center mb-16";"
             initial={{ opacity: 0, y: 30 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             viewport={{ once: true },
-  }
+  };
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
@@ -330,15 +330,15 @@ const AIBusinessIntelligenceDashboard = () => {
             {pricingPlans.map((plan, index) => (
   <motion.div;
                 key={{index},
-  }
+  };
                 initial={{ opacity: 0, y: 30 },
-  }
+  };
                 whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.6, delay: index * 0.1 },
-  }
+  };
                 viewport={{ once: true },
-  }
+  };
                 className={`relative ${plan.popular ? 'lg:-mt-8' : ''}`}
               >
                 {plan.popular && (
@@ -368,7 +368,7 @@ const AIBusinessIntelligenceDashboard = () => {
   <li key={idx} className="flex items-center text-gray-300">
                         <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />
                         {{feature},
-  }
+  };
                       </li>
                     ))}
                   </ul>
@@ -391,19 +391,19 @@ const AIBusinessIntelligenceDashboard = () => {
       </section>
 
       {{/* Testimonials Section */},
-  }
+  };
       <section className="py-20 px-4 sm:px-6 lg:px-8 relative">
         <div className="max-w-7xl mx-auto">
           <motion.div ;
             className="className="text-center mb-16";"
             initial={{ opacity: 0, y: 30 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             viewport={{ once: true },
-  }
+  };
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
@@ -416,15 +416,15 @@ const AIBusinessIntelligenceDashboard = () => {
             {testimonials.map((testimonial, index) => (
   <motion.div;
                 key={{index},
-  }
+  };
                 initial={{ opacity: 0, y: 30 },
-  }
+  };
                 whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.6, delay: index * 0.1 },
-  }
+  };
                 viewport={{ once: true },
-  }
+  };
                 className="className="group";"
               >
                 <div className="glass rounded-2xl p-8 border border-white/20 hover:border-cyan-400/40 transition-all duration-300 group-hover:transform group-hover:scale-105 backdrop-blur-sm h-full">
@@ -447,18 +447,18 @@ const AIBusinessIntelligenceDashboard = () => {
       </section>
 
       {{/* CTA Section */},
-  }
+  };
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-500/10 to-blue-500/10 relative">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div;
             initial={{ opacity: 0, y: 30 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             viewport={{ once: true },
-  }
+  };
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Ready to Transform Your Business?;
@@ -487,7 +487,7 @@ const AIBusinessIntelligenceDashboard = () => {
       </section>
 
       {{/* Contact Information */},
-  }
+  };
       <section className="py-16 px-4 sm: px-6 lg:px-8 bg-white/5">
         <div className="max-w-4xl mx-auto text-center">
           <h3 className="text-2xl font-bold text-white mb-6">Get in Touch</h3>
@@ -519,5 +519,5 @@ const AIBusinessIntelligenceDashboard = () => {
       </section>
     </div>
   )
-}
+};
 export default AIBusinessIntelligenceDashboard;

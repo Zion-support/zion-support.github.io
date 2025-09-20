@@ -43,7 +43,7 @@ const selectedServices = getServicesByCategory(selectedCategory);
             whileInView={{ opacity: 1, y: 0 },
   } 
             transition={{ duration: 0.6 },
-  }
+  };
           >
             Zion Technology Group
             <br />
@@ -59,7 +59,7 @@ const selectedServices = getServicesByCategory(selectedCategory);
             whileInView={{ opacity: 1, y: 0 },
   } 
             transition={{ duration: 0.6, delay: 0.2 },
-  }
+  };
           >
             Leading the future with revolutionary quantum computing, AI-powered solutions, blockchain innovations, 
             and cutting-edge technology services that transform industries and create unprecedented value.
@@ -73,7 +73,7 @@ const selectedServices = getServicesByCategory(selectedCategory);
             whileInView={{ opacity: 1, y: 0 },
   } 
             transition={{ duration: 0.6, delay: 0.4 },
-  }
+  };
           >
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-4 border border-white/20">
               <div className="text-3xl mb-2">🚀</div>
@@ -105,7 +105,7 @@ const selectedServices = getServicesByCategory(selectedCategory);
             whileInView={{ opacity: 1, y: 0 },
   } 
             transition={{ duration: 0.6, delay: 0.6 },
-  }
+  };
           >
             <h3 className="text-2xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">
               🚀 Ready to Transform Your Business?
@@ -151,7 +151,7 @@ const selectedServices = getServicesByCategory(selectedCategory);
             whileInView={{ opacity: 1, y: 0 },
   } 
             transition={{ duration: 0.6 },
-  }
+  };
           >
             {categories.map((category) => (
               <button 
@@ -182,11 +182,11 @@ const selectedServices = getServicesByCategory(selectedCategory);
                 <motion.div 
                   className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-lg rounded-2xl p-8 border border-purple-400/30"
                   initial={{ opacity: 0, y: 20 },
-  }
+  };
                   whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                   transition={{ duration: 0.6 },
-  }
+  };
                 >
                   <div className="text-center mb-8">
                     <div className="text-6xl mb-4">{category.icon}</div>
@@ -219,11 +219,11 @@ const selectedServices = getServicesByCategory(selectedCategory);
           <motion.h2 
             className="text-3xl md:text-4xl font-bold text-center mb-12 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400"
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.6 },
-  }
+  };
           >
             {selectedCategory === 'all' ? 'All Revolutionary Services' : `${categories.find(c => c.id === selectedCategory)?.name} Services`}
           </motion.h2>
@@ -242,7 +242,7 @@ const selectedServices = getServicesByCategory(selectedCategory);
             initial="hidden" 
             whileInView="visible" 
             viewport={{ once: true },
-  }
+  };
           >
             {selectedServices.map((service, index) => (
               <motion.div 
@@ -253,7 +253,7 @@ const selectedServices = getServicesByCategory(selectedCategory);
                     opacity: 1,y: 0,transition: { duration: 0.5 },
   },
   },
-  }
+  };
                 className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300 hover:transform hover:scale-105 group"
               >
                 {/* Service Header */}
@@ -387,11 +387,11 @@ const selectedServices = getServicesByCategory(selectedCategory);
           <motion.div 
             className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-lg rounded-2xl p-8 border border-purple-400/30"
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.6 },
-  }
+  };
           >
             <h2 className="text-3xl md: text-4xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">
               Ready to Lead the Future?

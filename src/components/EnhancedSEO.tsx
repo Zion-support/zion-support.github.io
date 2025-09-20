@@ -7,7 +7,7 @@ interface SEOProps {
   ogUrl?: string,
   canonicalUrl?: string,
   structuredData?: object
-}
+};
 
 export const EnhancedSEO: React.FC<SEOProps> = ({
   title;
@@ -60,4 +60,3 @@ const defaultKeywords = 'AI, Technology, Business Solutions, Digital Transformat
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
     </Helmet>
   )
-};

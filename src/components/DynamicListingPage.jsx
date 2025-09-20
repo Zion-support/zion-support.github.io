@@ -282,4 +282,4 @@ const listing = allListings.find(item => item.id === listingId);
         </div>
       </div>
     </div>)
-}
+};

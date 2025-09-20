@@ -124,7 +124,7 @@ export default function CaseStudies() {
       />
       ;
       {{/* Hero Section */},
-  }
+  };
       <section className="relative overflow-hidden py-20">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 via-purple-500/10 to-cyan-500/10"></div>
         <div className="container-responsive relative z-10">
@@ -156,7 +156,7 @@ export default function CaseStudies() {
       </section>
 
       {{/* Industry Overview */},
-  }
+  };
       <section className="py-20">
         <div className="container-responsive">
           <div className="text-center mb-16">
@@ -183,18 +183,18 @@ export default function CaseStudies() {
       </section>
 
       {{/* Featured Case Studies */},
-  }
+  };
       <section className="py-20">
         <div className="container-responsive">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             viewport={{ once: true },
-  }
+  };
             className="className="text-center mb-16";"
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
@@ -210,20 +210,20 @@ export default function CaseStudies() {
             {caseStudies.filter(cs => cs.featured).map((caseStudy, index) => (
   <motion.div;
                 key={{caseStudy.id},
-  }
+  };
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.6, delay: index * 0.1 },
-  }
+  };
                 viewport={{ once: true },
-  }
+  };
                 className="className="bg-slate-800/30 rounded-2xl border border-slate-700/50 overflow-hidden";"
               >
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
                   {{/* Left Side - Content */},
-  }
+  };
                   <div className="p-8 lg:p-12">
                     <div className="flex items-center gap-3 mb-4">
                       <div className={`p-2 rounded-lg bg-gradient-to-br ${caseStudy.color}`}>
@@ -231,7 +231,7 @@ export default function CaseStudies() {
                       </div>
                       <span className="text-sm text-cyan-400 font-medium">{caseStudy.industry}</span>
                       {{caseStudy.featured && <Star className="w-5 h-5 text-cyan-400" />},
-  }
+  };
                     </div>
                     ;
                     <h3 className="text-3xl font-bold text-white mb-2">{caseStudy.title}</h3>
@@ -270,7 +270,7 @@ export default function CaseStudies() {
                   </div>
                   ;
                   {{/* Right Side - Results & Technologies */},
-  }
+  };
                   <div className="p-8 lg:p-12 bg-slate-700/20">
                     <h4 className="text-lg font-semibold text-white mb-4">Key Results</h4>
                     <ul className="space-y-3 mb-6">
@@ -287,11 +287,11 @@ export default function CaseStudies() {
                       {caseStudy.technologies.map((tech, techIndex) => (
   <span;
                           key={{techIndex},
-  }
+  };
                           className="className="px-3 py-1 bg-slate-700/50 text-cyan-400 text-xs rounded-full border border-cyan-400/20";"
                         >
                           {{tech},
-  }
+  };
                         </span>
                       ))}
                     </div>
@@ -304,18 +304,18 @@ export default function CaseStudies() {
       </section>
 
       {{/* Industry Solutions */},
-  }
+  };
       <section className="py-20 bg-slate-800/30">
         <div className="container-responsive">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             viewport={{ once: true },
-  }
+  };
             className="className="text-center mb-16";"
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
@@ -331,15 +331,15 @@ export default function CaseStudies() {
             {industries.map((industry, index) => (
   <motion.div;
                 key={{industry.name},
-  }
+  };
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.6, delay: index * 0.1 },
-  }
+  };
                 viewport={{ once: true },
-  }
+  };
                 className="className="p-6 rounded-xl border border-slate-700/50 bg-slate-800/30 hover:border-slate-600/50 transition-all duration-300 hover:scale-105";"
               >
                 <div className={`p-3 rounded-lg bg-gradient-to-br ${industry.color} w-fit mb-4`}>
@@ -361,18 +361,18 @@ export default function CaseStudies() {
       </section>
 
       {{/* All Case Studies Grid */},
-  }
+  };
       <section className="py-20">
         <div className="container-responsive">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             viewport={{ once: true },
-  }
+  };
             className="className="text-center mb-16";"
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
@@ -388,15 +388,15 @@ export default function CaseStudies() {
             {caseStudies.map((caseStudy, index) => (
   <motion.div;
                 key={{caseStudy.id},
-  }
+  };
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.6, delay: index * 0.1 },
-  }
+  };
                 viewport={{ once: true },
-  }
+  };
                 className="className="bg-slate-800/30 rounded-xl border border-slate-700/50 overflow-hidden hover:border-slate-600/50 transition-all duration-300 hover:scale-105";"
               >
                 <div className="p-6">
@@ -406,7 +406,7 @@ export default function CaseStudies() {
                     </div>
                     <span className="text-sm text-cyan-400 font-medium">{caseStudy.industry}</span>
                     {{caseStudy.featured && <Star className="w-5 h-5 text-cyan-400" />},
-  }
+  };
                   </div>
                   ;
                   <h3 className="text-xl font-bold text-white mb-2">{caseStudy.title}</h3>
@@ -432,11 +432,11 @@ export default function CaseStudies() {
                     {caseStudy.technologies.slice(0, 3).map((tech, techIndex) => (
   <span;
                         key={{techIndex},
-  }
+  };
                         className="className="px-2 py-1 bg-slate-700/50 text-cyan-400 text-xs rounded-md";"
                       >
                         {{tech},
-  }
+  };
                       </span>
                     ))}
                   </div>
@@ -456,7 +456,7 @@ export default function CaseStudies() {
       </section>
 
       {{/* Testimonials */},
-  }
+  };
       <section className="py-20 bg-slate-800/30">
         <div className="container-responsive">
           <div className="text-center mb-16">
@@ -489,18 +489,18 @@ export default function CaseStudies() {
       </section>
 
       {{/* CTA Section */},
-  }
+  };
       <section className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50">
         <div className="container-responsive text-center">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             viewport={{ once: true },
-  }
+  };
           >
             <h2 className="text-3xl lg: text-4xl font-bold text-white mb-6">
               Ready to Create Your Success Story?;
@@ -529,4 +529,4 @@ export default function CaseStudies() {
       </section>
     </div>
   )
-}
+};

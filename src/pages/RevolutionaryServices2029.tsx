@@ -42,7 +42,7 @@ export default function RevolutionaryServices2029() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
       {{/* Animated Background */},
-  }
+  };
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute -inset-[10px] opacity-50">
           <div className="absolute top-0 -left-4 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob"></div>
@@ -52,12 +52,12 @@ export default function RevolutionaryServices2029() {
       </div>
 
       {{/* Floating Particles */},
-  }
+  };
       <div className="absolute inset-0">
         {[...Array(50)].map((_, i) => (
   <motion.div;
             key={{i},
-  }
+  };
             className="className="absolute w-2 h-2 bg-cyan-400 rounded-full opacity-20";"
             animate={{
   x: [0, 100, 0]
@@ -65,16 +65,16 @@ export default function RevolutionaryServices2029() {
               opacity: [[0.2, 0.8, 0.2],
   ],
   },
-  }
+  };
             transition={{
   duration: Math.random() * 10 + 10,repeat: Infinity,delay: Math.random() * 5
 },
-  }
+  };
             style={{
   left: `${Math.random() * 100}%`;
               top: `${Math.random() * 100}%`
 },
-  }
+  };
           />
         ))}
       </div>
@@ -87,16 +87,16 @@ export default function RevolutionaryServices2029() {
         />
 
         {{/* Hero Section */},
-  }
+  };
         <section className="relative py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
             <motion.div;
               initial={{ opacity: 0, y: 20 },
-  }
+  };
               animate={{ opacity: 1, y: 0 },
-  }
+  };
               transition={{ duration: 0.8 },
-  }
+  };
               className="className="mb-8";"
             >
               <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6">
@@ -112,20 +112,20 @@ export default function RevolutionaryServices2029() {
             </motion.div>
 
             {{/* Audio Controls */},
-  }
+  };
             <motion.div;
               initial={{ opacity: 0, scale: 0.8 },
-  }
+  };
               animate={{ opacity: 1, scale: 1 },
-  }
+  };
               transition={{ duration: 0.8, delay: 0.2 },
-  }
+  };
               className="className="flex items-center justify-center space-x-4 mb-8";"
             >
               <button;
                 onClick={{onClick={togglePlay},
   },
-  }
+  };
                 className="className="p-3 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full text-white hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-110";"
               >
                 {isPlaying ? <Pause size={24} /> : <Play size={24} />}
@@ -133,7 +133,7 @@ export default function RevolutionaryServices2029() {
               <button;
                 onClick={{onClick={toggleMute},
   },
-  }
+  };
                 className="className="p-3 bg-gradient-to-r from-cyan-600 to-blue-600 rounded-full text-white hover:from-cyan-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-110";"
               >
                 {volume > 0 ? <Volume2 size={24} /> : <VolumeX size={24} />}
@@ -144,22 +144,22 @@ export default function RevolutionaryServices2029() {
                 max="1";
                 step="0.1";
                 value={{volume},
-  }
+  };
                 onChange={{(e) => setVolume(parseFloat(e.target.value))},
-  }
+  };
                 className="className="w-24 h-2 bg-gray-600 rounded-lg appearance-none cursor-pointer slider";"
               />
             </motion.div>
 
             {{/* Stats */},
-  }
+  };
             <motion.div;
               initial={{ opacity: 0, y: 20 },
-  }
+  };
               animate={{ opacity: 1, y: 0 },
-  }
+  };
               transition={{ duration: 0.8, delay: 0.4 },
-  }
+  };
               className="className="grid grid-cols-1 md:grid-cols-4 gap-6 max-w-4xl mx-auto";"
             >
               {[
@@ -185,13 +185,13 @@ export default function RevolutionaryServices2029() {
         </section>
 
         {{/* Search and Filters */},
-  }
+  };
         <section className="py-8 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20">
               <div className="flex flex-col lg:flex-row gap-6">
                 {{/* Search */},
-  }
+  };
                 <div className="flex-1">
                   <div className="relative">
                     <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
@@ -199,41 +199,41 @@ export default function RevolutionaryServices2029() {
                       type="text";
                       placeholder="Search revolutionary services...";
                       value={{searchQuery},
-  }
+  };
                       onChange={{(e) => setSearchQuery(e.target.value)},
-  }
+  };
                       className="className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent";"
                     />
                   </div>
                 </div>
 
                 {{/* Category Filter */},
-  }
+  };
                 <div className="flex-shrink-0">
                   <select;
                     value={{selectedCategory},
-  }
+  };
                     onChange={{(e) => setSelectedCategory(e.target.value)},
-  }
+  };
                     className="className="px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent";"
                   >
                     {categories.map(category => (
   <option key={category} value={category} className="bg-slate-800 text-white">
                         {{category},
-  }
+  };
                       </option>
                     ))}
                   </select>
                 </div>
 
                 {{/* Sort */},
-  }
+  };
                 <div className="flex-shrink-0">
                   <select;
                     value={{sortBy},
-  }
+  };
                     onChange={{(e) => setSortBy(e.target.value)},
-  }
+  };
                     className="className="px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent";"
                   >
                     <option value="popularity" className="bg-slate-800 text-white">Most Popular</option>
@@ -249,7 +249,7 @@ export default function RevolutionaryServices2029() {
         </section>
 
         {{/* Services Grid */},
-  }
+  };
         <section className="py-12 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -257,15 +257,15 @@ export default function RevolutionaryServices2029() {
                 {sortedServices.map((service, index) => (
   <motion.div;
                     key={{service.id},
-  }
+  };
                     initial={{ opacity: 0, y: 20 },
-  }
+  };
                     animate={{ opacity: 1, y: 0 },
-  }
+  };
                     exit={{ opacity: 0, y: -20 },
-  }
+  };
                     transition={{ duration: 0.5, delay: index * 0.1 },
-  }
+  };
                     className="className="group relative";"
                   >
                     <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:border-purple-500/50 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/25">
@@ -277,15 +277,15 @@ export default function RevolutionaryServices2029() {
                         </div>
                       )},
   {{/* Service Icon */},
-  }
+  };
                       <div className="text-6xl mb-4">{service.icon}</div>
 
                       {{/* Service Info */},
-  }
+  };
                       <div className="mb-4">
                         <h3 className="text-xl font-bold text-white mb-2 group-hover:text-purple-400 transition-colors duration-300">
                           {{service.name},
-  }
+  };
                         </h3>
                         <p className="text-gray-300 text-sm mb-3">{service.tagline}</p>
                         <div className="flex items-center justify-between mb-4">
@@ -301,11 +301,11 @@ export default function RevolutionaryServices2029() {
                       </div>
 
                       {{/* Description */},
-  }
+  };
                       <p className="text-gray-300 text-sm mb-4 line-clamp-3">{service.description}</p>
 
                       {{/* Features */},
-  }
+  };
                       <div className="mb-4">
                         <h4 className="text-white font-semibold mb-2">Key Features:</h4>
                         <div className="space-y-1">
@@ -313,7 +313,7 @@ export default function RevolutionaryServices2029() {
   <div key={idx} className="flex items-center text-gray-300 text-sm">
                               <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                               {{feature},
-  }
+  };
                             </div>
                           ))},
   {service.features.length > 3 && (
@@ -325,7 +325,7 @@ export default function RevolutionaryServices2029() {
                       </div>
 
                       {{/* Benefits */},
-  }
+  };
                       <div className="mb-6">
                         <h4 className="text-white font-semibold mb-2">Key Benefits:</h4>
                         <div className="space-y-1">
@@ -333,14 +333,14 @@ export default function RevolutionaryServices2029() {
   <div key={idx} className="flex items-center text-gray-300 text-sm">
                               <TrendingUp className="w-4 h-4 text-blue-400 mr-2 flex-shrink-0" />
                               {{benefit},
-  }
+  };
                             </div>
                           ))}
                         </div>
                       </div>
 
                       {{/* Market Info */},
-  }
+  };
                       <div className="mb-6 p-3 bg-white/5 rounded-lg">
                         <div className="grid grid-cols-2 gap-2 text-xs">
                           <div>
@@ -363,11 +363,11 @@ export default function RevolutionaryServices2029() {
                       </div>
 
                       {{/* CTA Button */},
-  }
+  };
                       <div className="flex space-x-3">
                         <a;
                           href={{service.link},
-  }
+  };
                           className="className="flex-1 bg-gradient-to-r from-purple-600 to-pink-600 text-white text-center py-3 px-4 rounded-xl font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105";"
                         >
                           Learn More;
@@ -378,7 +378,7 @@ export default function RevolutionaryServices2029() {
                       </div>
 
                       {{/* Contact Info */},
-  }
+  };
                       <div className="mt-4 pt-4 border-t border-white/10">
                         <div className="text-xs text-gray-400">
                           <div>📞 {service.contactInfo.mobile}</div>
@@ -395,18 +395,18 @@ export default function RevolutionaryServices2029() {
         </section>
 
         {{/* Call to Action */},
-  }
+  };
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div;
               initial={{ opacity: 0, y: 20 },
-  }
+  };
               whileInView={{ opacity: 1, y: 0 },
-  }
+  };
               transition={{ duration: 0.8 },
-  }
+  };
               viewport={{ once: true },
-  }
+  };
             >
               <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
                 Ready to Transform Your Business?;
@@ -436,13 +436,11 @@ export default function RevolutionaryServices2029() {
       <style jsx>{`;
         .animate-blob {
   animation: blob 7s infinite
-}
+};
         .animation-delay-2000 {
   animation-delay: 2s
-}
         .animation-delay-4000 {
   animation-delay: 4s
-}
         @keyframes blob {
   0% {
   transform: translate(0px, 0px) scale(1)
@@ -456,21 +454,17 @@ export default function RevolutionaryServices2029() {
           100% {
   transform: translate(0px, 0px) scale(1)
           },
-  }
+  };
         .line-clamp-3 {
   display: -webkit-box;
           -webkit-line-clamp: 3;
           -webkit-box-orient: vertical,overflow: hidden
-}
         .slider: :-webkit-slider-thumb {
   appearance: none,height: 20px,width: 20px;
           border-radius: 50%,background: #8b5cf6,cursor: pointer
-}
         .slider: :-moz-range-thumb {
   height: 20px,width: 20px;
           border-radius: 50%,background: #8b5cf6,cursor: pointer,border: none
-}
       `}</style>
     </div>
   )
-}

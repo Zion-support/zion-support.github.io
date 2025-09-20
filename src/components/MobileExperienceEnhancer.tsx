@@ -29,13 +29,12 @@ import {
 } from "lucide-react";
 interface MobileMetrics {
   screenWidth: number,screenHeight: number,pixelRatio: number,orientation: 'portrait' | 'landscape',touchSupport: boolean,connectionType: string,batteryLevel: number,isCharging: boolean
-}
+};
 
 interface MobileExperienceEnhancerProps {
   enabled?: boolean;
   showControls?: boolean,
   autoOptimize?: boolean,
-}
 
 export function MobileExperienceEnhancer({ 
   enabled = true, 
@@ -78,7 +77,7 @@ const isTablet = /iPad|Android(?=.*\bMobile\b)(?=.*\bSafari\b)/i.test(navigator.
       if (connection) {
         metrics.connectionType = connection.effectiveType || 'unknown',
       },
-  }
+  };
 
     setMetrics(metrics)
 }, [enabled]),
@@ -98,7 +97,7 @@ const newOptimizations: string[] = [];
             img.src = img.src.replace('@1x', `@${Math.min(3, Math.ceil(metrics.pixelRatio))}x`),
             newOptimizations.push('High DPI images optimized')
 },
-  }
+  };
         
         // Lazy loading for mobile
         if (!img.loading) {
@@ -129,20 +128,17 @@ const minWidth = parseInt(computedStyle.minWidth) || 0;
         meta.content = 'width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes',
         document.head.appendChild(meta);
         newOptimizations.push('Mobile viewport meta tag added')
-}
 
       // Enable touch gestures
       if (metrics.touchSupport) {
         enableTouchGestures();
         newOptimizations.push('Touch gestures enabled')
-}
 
       // Optimize animations for mobile
       if (metrics.screenWidth < 768) {
         document.documentElement.style.setProperty('--animation-duration0.2s');
         document.documentElement.style.setProperty('--transition-duration0.15s');
         newOptimizations.push('Animations optimized for mobile')
-}
 
       // Enable service worker for offline support
       if ('serviceWorker' in navigator) {
@@ -189,7 +185,7 @@ const deltaTime = Date.now() - touchStartRef.current.time;
           // Swipe left - go forward
           window.history.forward()
 },
-  }
+  };
 
       // Vertical swipe
       if (Math.abs(deltaY) > swipeThreshold && Math.abs(deltaX) < swipeThreshold && deltaTime < swipeTimeThreshold) {
@@ -197,7 +193,7 @@ const deltaTime = Date.now() - touchStartRef.current.time;
           // Swipe down - refresh
           window.location.reload()
 },
-  }
+  };
 
       touchStartRef.current = null,
     },
@@ -214,7 +210,7 @@ const tapLength = currentTime - lastTap;
           target.style.transform = target.style.transform === 'scale(1.5)' ? 'scale(1)' : 'scale(1.5)',
           target.style.transition = 'transform 0.3s ease'
         },
-  }
+  };
       lastTap = currentTime,
     },
 
@@ -300,9 +296,9 @@ const handleResize = () => {
         className="fixed bottom-4 left-20 z-50 p-3 bg-green-600 hover:bg-green-700 text-white rounded-full shadow-lg transition-all duration-200"
         onClick={() => setIsVisible(!isVisible)}
         whileHover={{ scale: 1.1 },
-  }
+  };
         whileTap={{ scale: 0.9 },
-  }
+  };
         aria-label="Mobile Experience Settings"
         aria-expanded={isVisible}
         aria-controls="mobile-experience-panel"
@@ -317,13 +313,13 @@ const handleResize = () => {
             id="mobile-experience-panel"
             className="fixed bottom-20 left-4 w-96 bg-white dark:bg-gray-900 rounded-lg shadow-2xl border border-gray-200 dark:border-gray-700 z-50 max-h-[80vh] overflow-y-auto"
             initial={{ opacity: 0, y: 20, scale: 0.95 },
-  }
+  };
             animate={{ opacity: 1, y: 0, scale: 1 },
-  }
+  };
             exit={{ opacity: 0, y: 20, scale: 0.95 },
-  }
+  };
             transition={{ duration: 0.2 },
-  }
+  };
             role="dialog"
             aria-labelledby="mobile-experience-title"
           >
@@ -353,7 +349,7 @@ const handleResize = () => {
                       const score = calculateMobileScore();
                       setMobileScore(score)
                     },
-  }
+  };
                     className="text-xs text-green-600 hover:text-green-700 dark:text-green-400 dark:hover:text-green-300"
                   >
                     Refresh
@@ -373,7 +369,7 @@ const handleResize = () => {
                         mobileScore >= 70 ? 'bg-yellow-500' : 'bg-red-500'
                       }`}
                       style={{ width: `${mobileScore}%` },
-  }
+  };
                     />
                   </div>
                 </div>
@@ -544,4 +540,3 @@ const handleResize = () => {
       )}
     </>
   )
-}

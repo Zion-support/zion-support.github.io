@@ -19,17 +19,15 @@ import {
 } from "lucide-react";
 interface Feedback {
   id: string,customerName: string,rating: number,comment: string,category: 'service' | 'product' | 'support' | 'overall',sentiment: 'positive' | 'neutral' | 'negative',date: string,helpful: number,unhelpful: number,tags: string[],verified: boolean
-}
+};
 
 interface FeedbackStats {
   totalFeedback: number,averageRating: number,positivePercentage: number,responseRate: number,topCategories: Array<{ category: string, count: number, percentage: number }>
-}
 
 interface CustomerFeedbackSystemProps {
   showStats?: boolean,
   showFilters?: boolean,
   maxFeedback?: number,
-}
 
 export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
   showStats = true;
@@ -113,11 +111,9 @@ const responseRate = 95, // Simulated response rate
 
     if (selectedCategory !== 'all') {
       filtered = filtered.filter(f => f.category === selectedCategory)
-}
 
     if (selectedRating > 0) {
       filtered = filtered.filter(f => f.rating === selectedRating)
-}
 
     if (searchQuery) {
       filtered = filtered.filter(f =>
@@ -149,7 +145,7 @@ const feedback: Feedback = {
           ...f,
           helpful: type === 'helpful' ? f.helpful + 1 : f.helpful,unhelpful: type === 'unhelpful' ? f.unhelpful + 1 : f.unhelpful
         },
-  }
+  };
       return f
 })),
   },
@@ -183,9 +179,9 @@ const feedback: Feedback = {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
           <motion.div
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             animate={{ opacity: 1, y: 0 },
-  }
+  };
             className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center"
           >
             <div className="text-3xl font-bold text-white mb-2">{stats.totalFeedback}</div>
@@ -194,11 +190,11 @@ const feedback: Feedback = {
 
           <motion.div
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             animate={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ delay: 0.1 },
-  }
+  };
             className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center"
           >
             <div className="flex items-center justify-center gap-2 mb-2">
@@ -219,11 +215,11 @@ const feedback: Feedback = {
 
           <motion.div
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             animate={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ delay: 0.2 },
-  }
+  };
             className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center"
           >
             <div className="text-3xl font-bold text-green-400 mb-2">{stats.positivePercentage.toFixed(1)}%</div>
@@ -232,11 +228,11 @@ const feedback: Feedback = {
 
           <motion.div
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             animate={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ delay: 0.3 },
-  }
+  };
             className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center"
           >
             <div className="text-3xl font-bold text-zion-cyan mb-2">{stats.responseRate}%</div>
@@ -253,11 +249,11 @@ const feedback: Feedback = {
               <motion.div
                 key={category.category}
                 initial={{ opacity: 0, scale: 0.9 },
-  }
+  };
                 animate={{ opacity: 1, scale: 1 },
-  }
+  };
                 transition={{ delay: index * 0.1 },
-  }
+  };
                 className="p-4 bg-zinc-900/30 border border-zinc-700/50 rounded-lg text-center"
               >
                 <div className="text-2xl font-bold text-white mb-1">{category.count}</div>
@@ -325,13 +321,13 @@ const feedback: Feedback = {
         {showFeedbackForm && (
           <motion.div
             initial={{ height: 0, opacity: 0 },
-  }
+  };
             animate={{ height: 'auto', opacity: 1 },
-  }
+  };
             exit={{ height: 0, opacity: 0 },
-  }
+  };
             transition={{ duration: 0.3 },
-  }
+  };
             className="mb-6 overflow-hidden"
           >
             <div className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl">
@@ -415,11 +411,11 @@ const feedback: Feedback = {
           <motion.div
             key={item.id}
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             animate={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ delay: index * 0.1 },
-  }
+  };
             className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl hover:bg-zinc-900/50 transition-all duration-300"
           >
             {/* Header */}
@@ -516,9 +512,9 @@ const feedback: Feedback = {
   {filteredFeedback.length === 0 && (
         <motion.div
           initial={{ opacity: 0 },
-  }
+  };
           animate={{ opacity: 1 },
-  }
+  };
           className="text-center py-12"
         >
           <MessageCircle className="w-16 h-16 text-zinc-600 mx-auto mb-4" />
@@ -536,4 +532,3 @@ const feedback: Feedback = {
       )}
     </div>
   )
-};

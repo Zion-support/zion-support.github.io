@@ -197,7 +197,7 @@ export default function RequestQuote() {
   ...prev;
       [field]: value
 }))
-  }
+  };
 
   const toggleService = (serviceId: string) => {
   setFormData(prev => ({
@@ -207,24 +207,24 @@ export default function RequestQuote() {
         : [[...prev.services, serviceId],
   ],
   }))
-  }
+  };
 
   const toggleServiceExpansion = (serviceId: string) => {
   setExpandedService(expandedService === serviceId ? null : serviceId)
-  }
+  };
   const nextStep = () => {
     if (if (formStep < 3) {
   ) {
       setFormStep(formStep + 1)
     },
-  }
+  };
 
   const prevStep = () => {
     if (if (formStep > 1) {
   ) {
       setFormStep(formStep - 1)
     },
-  }
+  };
 
   const handleSubmit = async (e: React.FormEvent) => {
   e.preventDefault()
@@ -235,7 +235,7 @@ export default function RequestQuote() {
     ;
     setSubmitting(false)
     setSubmitted(true)
-  }
+  };
 
   const resetForm = () => {
     setFormData({
@@ -243,7 +243,7 @@ export default function RequestQuote() {
 })
     setFormStep(1)
     setSubmitted(false)
-  }
+  };
 
   if (if (submitted) {
   ) {
@@ -256,11 +256,11 @@ export default function RequestQuote() {
         ;
         <motion.div;
           initial={{ opacity: 0, scale: 0.9 },
-  }
+  };
           animate={{ opacity: 1, scale: 1 },
-  }
+  };
           transition={{ duration: 0.5 },
-  }
+  };
           className="className="text-center max-w-2xl mx-auto px-6";"
         >
           <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-green-500/20 to-blue-500/20 rounded-full mb-8">
@@ -308,7 +308,7 @@ export default function RequestQuote() {
             <button;
               onClick={{onClick={resetForm},
   },
-  }
+  };
               className="className="px-8 py-3 bg-gradient-to-r from-green-400 to-blue-500 text-white font-semibold rounded-lg hover: from-green-500 hover:to-blue-600 transition-all duration-200 hover:scale-105";"
             >
               Request Another Quote;
@@ -323,7 +323,7 @@ export default function RequestQuote() {
         </motion.div>
       </div>
     )
-  }
+  };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -333,17 +333,17 @@ export default function RequestQuote() {
       />
       ;
       {{/* Hero Section */},
-  }
+  };
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-green-500/10 via-blue-500/10 to-purple-500/10"></div>
         <div className="container mx-auto px-6 relative z-10">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             animate={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             className="className="text-center";"
           >
             <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-green-500/20 to-blue-500/20 rounded-2xl mb-6">
@@ -361,20 +361,20 @@ export default function RequestQuote() {
       </section>
 
       {{/* Benefits */},
-  }
+  };
       <section className="py-16">
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit, index) => (
   <motion.div;
                 key={{benefit.title},
-  }
+  };
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.8, delay: index * 0.1 },
-  }
+  };
                 className="className="text-center";"
               >
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-xl mb-4">
@@ -389,25 +389,25 @@ export default function RequestQuote() {
       </section>
 
       {{/* Main Form Section */},
-  }
+  };
       <section className="py-20">
         <div className="container mx-auto px-6">
           <div className="max-w-6xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
               {{/* Form */},
-  }
+  };
               <div className="lg:col-span-2">
                 <motion.div;
                   initial={{ opacity: 0, x: -20 },
-  }
+  };
                   whileInView={{ opacity: 1, x: 0 },
-  }
+  };
                   transition={{ duration: 0.8 },
-  }
+  };
                   className="className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-2xl border border-slate-600/50 p-8";"
                 >
                   {{/* Progress Steps */},
-  }
+  };
                   <div className="flex items-center justify-between mb-8">
                     {[1, 2, 3].map((step) => (
   <div key={step} className="flex items-center">
@@ -417,7 +417,7 @@ export default function RequestQuote() {
                             : 'bg-slate-700 text-gray-400'
 }`}>
                           {{step},
-  }
+  };
                         </div>
                         {step < 3 && (
   <div className={`w-16 h-1 mx-2 ${
@@ -434,11 +434,11 @@ export default function RequestQuote() {
   {formStep === 1 && (
   <motion.div;
                         initial={{ opacity: 0, y: 20 },
-  }
+  };
                         animate={{ opacity: 1, y: 0 },
-  }
+  };
                         transition={{ duration: 0.5 },
-  }
+  };
                         className="className="space-y-6";"
                       >
                         <h3 className="text-2xl font-bold text-white mb-6">Basic Information</h3>
@@ -450,9 +450,9 @@ export default function RequestQuote() {
                               type="text";
                               required;
                               value={{formData.companyName},
-  }
+  };
                               onChange={{(e) => handleInputChange('companyName', e.target.value)},
-  }
+  };
                               className="className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-green-400 focus:ring-2 focus:ring-green-400/20 transition-all duration-200";"
                               placeholder="Your company name";
                             />
@@ -464,9 +464,9 @@ export default function RequestQuote() {
                               type="text";
                               required;
                               value={{formData.contactName},
-  }
+  };
                               onChange={{(e) => handleInputChange('contactName', e.target.value)},
-  }
+  };
                               className="className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-green-400 focus:ring-2 focus:ring-green-400/20 transition-all duration-200";"
                               placeholder="Your full name";
                             />
@@ -480,9 +480,9 @@ export default function RequestQuote() {
                               type="email";
                               required;
                               value={{formData.email},
-  }
+  };
                               onChange={{(e) => handleInputChange('email', e.target.value)},
-  }
+  };
                               className="className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-green-400 focus:ring-2 focus:ring-green-400/20 transition-all duration-200";"
                               placeholder="your.email@company.com";
                             />
@@ -493,9 +493,9 @@ export default function RequestQuote() {
                             <input;
                               type="tel";
                               value={{formData.phone},
-  }
+  };
                               onChange={{(e) => handleInputChange('phone', e.target.value)},
-  }
+  };
                               className="className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-green-400 focus:ring-2 focus:ring-green-400/20 transition-all duration-200";"
                               placeholder="+1 (555) 123-4567";
                             />
@@ -507,9 +507,9 @@ export default function RequestQuote() {
                             <label className="block text-white font-medium mb-2">Company Size</label>
                             <select;
                               value={{formData.companySize},
-  }
+  };
                               onChange={{(e) => handleInputChange('companySize', e.target.value)},
-  }
+  };
                               className="className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white focus:outline-none focus:border-green-400 focus:ring-2 focus:ring-green-400/20 transition-all duration-200";"
                             >
                               <option value="">Select company size</option>
@@ -523,9 +523,9 @@ export default function RequestQuote() {
                             <label className="block text-white font-medium mb-2">Industry</label>
                             <select;
                               value={{formData.industry},
-  }
+  };
                               onChange={{(e) => handleInputChange('industry', e.target.value)},
-  }
+  };
                               className="className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white focus:outline-none focus:border-green-400 focus:ring-2 focus:ring-green-400/20 transition-all duration-200";"
                             >
                               <option value="">Select industry</option>
@@ -542,11 +542,11 @@ export default function RequestQuote() {
   {formStep === 2 && (
   <motion.div;
                         initial={{ opacity: 0, y: 20 },
-  }
+  };
                         animate={{ opacity: 1, y: 0 },
-  }
+  };
                         transition={{ duration: 0.5 },
-  }
+  };
                         className="className="space-y-6";"
                       >
                         <h3 className="text-2xl font-bold text-white mb-6">Project Details</h3>
@@ -556,9 +556,9 @@ export default function RequestQuote() {
                             <label className="block text-white font-medium mb-2">Project Type</label>
                             <select;
                               value={{formData.projectType},
-  }
+  };
                               onChange={{(e) => handleInputChange('projectType', e.target.value)},
-  }
+  };
                               className="className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white focus:outline-none focus:border-green-400 focus:ring-2 focus:ring-green-400/20 transition-all duration-200";"
                             >
                               <option value="">Select project type</option>
@@ -572,9 +572,9 @@ export default function RequestQuote() {
                             <label className="block text-white font-medium mb-2">Budget Range</label>
                             <select;
                               value={{formData.budget},
-  }
+  };
                               onChange={{(e) => handleInputChange('budget', e.target.value)},
-  }
+  };
                               className="className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white focus:outline-none focus:border-green-400 focus:ring-2 focus:ring-green-400/20 transition-all duration-200";"
                             >
                               <option value="">Select budget range</option>
@@ -590,9 +590,9 @@ export default function RequestQuote() {
                             <label className="block text-white font-medium mb-2">Timeline</label>
                             <select;
                               value={{formData.timeline},
-  }
+  };
                               onChange={{(e) => handleInputChange('timeline', e.target.value)},
-  }
+  };
                               className="className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white focus:outline-none focus:border-green-400 focus:ring-2 focus:ring-green-400/20 transition-all duration-200";"
                             >
                               <option value="">Select timeline</option>
@@ -606,15 +606,15 @@ export default function RequestQuote() {
                             <label className="block text-white font-medium mb-2">Urgency Level</label>
                             <select;
                               value={{formData.urgency},
-  }
+  };
                               onChange={{(e) => handleInputChange('urgency', e.target.value)},
-  }
+  };
                               className="className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white focus:outline-none focus:border-green-400 focus:ring-2 focus:ring-green-400/20 transition-all duration-200";"
                             >
                               {urgencyLevels.map((level) => (
   <option key={level.value} value={level.value}>
                                   {level.label} - {{level.description},
-  }
+  };
                                 </option>
                               ))}
                             </select>
@@ -626,11 +626,11 @@ export default function RequestQuote() {
                           <textarea;
                             required;
                             rows={{4},
-  }
+  };
                             value={{formData.description},
-  }
+  };
                             onChange={{(e) => handleInputChange('description', e.target.value)},
-  }
+  };
                             className="className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-green-400 focus:ring-2 focus:ring-green-400/20 transition-all duration-200";"
                             placeholder="Describe your project requirements, goals, and any specific features you need...";
                           />
@@ -642,11 +642,11 @@ export default function RequestQuote() {
   {formStep === 3 && (
   <motion.div;
                         initial={{ opacity: 0, y: 20 },
-  }
+  };
                         animate={{ opacity: 1, y: 0 },
-  }
+  };
                         transition={{ duration: 0.5 },
-  }
+  };
                         className="className="space-y-6";"
                       >
                         <h3 className="text-2xl font-bold text-white mb-6">Services & Preferences</h3>
@@ -659,16 +659,16 @@ export default function RequestQuote() {
                                 <input;
                                   type="checkbox";
                                   id={{service.id},
-  }
+  };
                                   checked={{formData.services.includes(service.id)},
-  }
+  };
                                   onChange={{() => toggleService(service.id)},
-  }
+  };
                                   className="className="sr-only";"
                                 />
                                 <label;
                                   htmlFor={{service.id},
-  }
+  };
                                   className={`block p-4 rounded-lg border-2 cursor-pointer transition-all duration-200 ${
   formData.services.includes(service.id)
                                       ? 'border-green-400 bg-green-400/10';
@@ -699,19 +699,19 @@ export default function RequestQuote() {
                                 <input;
                                   type="radio";
                                   id={{method.value},
-  }
+  };
                                   name="preferredContact";
                                   value={{method.value},
-  }
+  };
                                   checked={{formData.preferredContact === method.value},
-  }
+  };
                                   onChange={{(e) => handleInputChange('preferredContact', e.target.value)},
-  }
+  };
                                   className="className="sr-only";"
                                 />
                                 <label;
                                   htmlFor={{method.value},
-  }
+  };
                                   className={`block p-4 rounded-lg border-2 cursor-pointer transition-all duration-200 ${
   formData.preferredContact === method.value;
                                       ? 'border-green-400 bg-green-400/10';
@@ -731,14 +731,14 @@ export default function RequestQuote() {
                       </motion.div>
                     )},
   {{/* Navigation Buttons */},
-  }
+  };
                     <div className="flex justify-between mt-8">
                       {formStep > 1 && (
   <button;
                           type="button";
                           onClick={{onClick={prevStep},
   },
-  }
+  };
                           className="className="px-6 py-3 border border-slate-600 text-gray-300 font-semibold rounded-lg hover:border-slate-500 hover:text-white transition-all duration-200";"
                         >
                           Previous;
@@ -751,7 +751,7 @@ export default function RequestQuote() {
                             type="button";
                             onClick={{onClick={nextStep},
   },
-  }
+  };
                             className="className="px-8 py-3 bg-gradient-to-r from-green-400 to-blue-500 text-white font-semibold rounded-lg hover:from-green-500 hover:to-blue-600 transition-all duration-200 hover:scale-105";"
                           >
                             Next Step;
@@ -760,11 +760,11 @@ export default function RequestQuote() {
   <button;
                             type="submit";
                             disabled={{isSubmitting},
-  }
+  };
                             className="className="px-8 py-3 bg-gradient-to-r from-green-400 to-blue-500 text-white font-semibold rounded-lg hover:from-green-500 hover:to-blue-600 transition-all duration-200 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed";"
                           >
                             {{isSubmitting ? 'Submitting...' : 'Submit Quote Request'},
-  }
+  };
                           </button>
                         )}
                       </div>
@@ -774,15 +774,15 @@ export default function RequestQuote() {
               </div>
 
               {{/* Services Sidebar */},
-  }
+  };
               <div className="lg:col-span-1">
                 <motion.div;
                   initial={{ opacity: 0, x: 20 },
-  }
+  };
                   whileInView={{ opacity: 1, x: 0 },
-  }
+  };
                   transition={{ duration: 0.8 },
-  }
+  };
                   className="className="space-y-6";"
                 >
                   <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-2xl border border-slate-600/50 p-6">
@@ -797,7 +797,7 @@ export default function RequestQuote() {
                           <button;
                             onClick={{onClick={() => toggleServiceExpansion(service.id)},
   },
-  }
+  };
                             className="className="w-full p-3 text-left hover:bg-slate-700/50 transition-colors duration-200";"
                           >
                             <div className="flex items-center justify-between">
@@ -816,13 +816,13 @@ export default function RequestQuote() {
                           {expandedService === service.id && (
   <motion.div;
                               initial={{ opacity: 0, height: 0 },
-  }
+  };
                               animate={{ opacity: 1, height: 'auto' },
-  }
+  };
                               exit={{ opacity: 0, height: 0 },
-  }
+  };
                               transition={{ duration: 0.3 },
-  }
+  };
                               className="className="px-3 pb-3 border-t border-slate-600/50";"
                             >
                               <p className="text-gray-300 text-sm mt-3 mb-3">{service.description}</p>
@@ -831,7 +831,7 @@ export default function RequestQuote() {
   <div key={index} className="flex items-center text-gray-300 text-sm">
                                     <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
                                     {{feature},
-  }
+  };
                                   </div>
                                 ))}
                               </div>
@@ -886,16 +886,16 @@ export default function RequestQuote() {
       </section>
 
       {{/* Contact Information */},
-  }
+  };
       <section className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50">
         <div className="container mx-auto px-6 text-center">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
           >
             <h2 className="text-4xl font-bold text-white mb-6">
               Need Immediate Assistance?;
@@ -950,4 +950,4 @@ export default function RequestQuote() {
       </section>
     </div>
   )
-}
+};

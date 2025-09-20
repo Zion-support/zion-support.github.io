@@ -104,7 +104,7 @@ export default function CloudCostOptimizer() {
       <SEO title="Cloud Cost Optimizer - Zion Tech Group" description="AI-driven cloud cost optimization and resource management across AWS, Azure, and Google Cloud. Reduce costs by up to 40%." keywords="cloud cost optimization, AWS cost management, Azure cost reduction, GCP optimization, cloud savings" canonical="https://ziontechgroup.com/cloud-optimizer"/>
 
       {{/* Hero Section */},
-  }
+  };
       <section className="pt-20 pb-16 px-4">
         <div className="container mx-auto text-center">
           <div className="mb-8">
@@ -132,7 +132,7 @@ export default function CloudCostOptimizer() {
       </section>
 
       {{/* Cost Savings Metrics */},
-  }
+  };
       <section className="py-16 px-4">
         <div className="container mx-auto">
           <div className="text-center mb-12">
@@ -157,7 +157,7 @@ export default function CloudCostOptimizer() {
       </section>
 
       {{/* Optimization Services */},
-  }
+  };
       <section className="py-16 px-4">
         <div className="container mx-auto">
           <div className="text-center mb-12">
@@ -174,7 +174,7 @@ export default function CloudCostOptimizer() {
                 <CardContent className="p-6">
                   <div className="mb-4 flex justify-center">
                     {{service.icon},
-  }
+  };
                   </div>
                   <h3 className="text-lg font-semibold mb-2 text-white">{service.title}</h3>
                   <p className="text-zion-slate-light text-sm">{service.description}</p>
@@ -185,7 +185,7 @@ export default function CloudCostOptimizer() {
       </section>
 
       {{/* Supported Cloud Providers */},
-  }
+  };
       <section className="py-16 px-4 bg-zion-slate/30">
         <div className="container mx-auto">
           <div className="text-center mb-12">
@@ -209,7 +209,7 @@ export default function CloudCostOptimizer() {
       </section>
 
       {{/* Features Grid */},
-  }
+  };
       <section className="py-16 px-4">
         <div className="container mx-auto">
           <div className="text-center mb-12">
@@ -235,7 +235,7 @@ export default function CloudCostOptimizer() {
       </section>
 
       {{/* Pricing Section */},
-  }
+  };
       <section className="py-16 px-4">
         <div className="container mx-auto">
           <div className="text-center mb-12">
@@ -279,7 +279,7 @@ export default function CloudCostOptimizer() {
       </section>
 
       {{/* Contact Section */},
-  }
+  };
       <section className="py-16 px-4 bg-zion-slate/30">
         <div className="container mx-auto text-center">
           <h2 className="text-3xl md: text-4xl font-bold mb-4 text-white">
@@ -306,4 +306,4 @@ export default function CloudCostOptimizer() {
         </div>
       </section>
     </div>)
-}
+};

@@ -59,7 +59,7 @@ export default function AIHealthcareDiagnostics() {
       />
       ;
       {{/* Hero Section */},
-  }
+  };
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -77,7 +77,7 @@ export default function AIHealthcareDiagnostics() {
           </p>
           ;
           {{/* Contact Information */},
-  }
+  };
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-8 text-slate-300">
             <div className="flex items-center gap-2">
               <Phone className="w-5 h-5 text-cyan-400" />
@@ -113,7 +113,7 @@ export default function AIHealthcareDiagnostics() {
       </section>
 
       {{/* Features Section */},
-  }
+  };
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -127,7 +127,7 @@ export default function AIHealthcareDiagnostics() {
   <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-600 rounded-xl p-6 hover:border-pink-500/50 transition-all duration-300">
                 <div className="w-12 h-12 bg-gradient-to-br from-pink-500 to-red-500 rounded-lg flex items-center justify-center text-white mb-4">
                   {{feature.icon},
-  }
+  };
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-slate-300">{feature.description}</p>
@@ -138,7 +138,7 @@ export default function AIHealthcareDiagnostics() {
       </section>
 
       {{/* Pricing Section */},
-  }
+  };
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -183,7 +183,7 @@ export default function AIHealthcareDiagnostics() {
       </section>
 
       {{/* CTA Section */},
-  }
+  };
       <section className="py-20 px-4 sm: px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -213,4 +213,4 @@ export default function AIHealthcareDiagnostics() {
       </section>
     </div>
   )
-}
+};

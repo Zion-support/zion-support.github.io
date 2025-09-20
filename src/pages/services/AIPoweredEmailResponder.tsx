@@ -90,6 +90,6 @@ const,
       </div>
     </div>
   )
-}
+};
 
 export default AIPoweredEmailResponder

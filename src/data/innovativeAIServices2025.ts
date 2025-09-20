@@ -1,14 +1,13 @@
 export interface InnovativeAIService {
   id: string,title: string,description: string,category: string,subcategory: string,price: number,currency: string,pricingModel: string,features: string[],benefits: string[],useCases: string[],targetAudience: string[],tags: string[],estimatedDelivery: string,supportLevel: string,marketPrice: string,roi: string,innovationLevel: string,contactInfo: {
   phone: string,email: string,website: string
-}
+};
   technicalSpecs?: {
   technology: string[],integrations: string[],apiEndpoints: number,uptime: string,security: string[[],
   ],
-  }
+  };
   competitors?: string[]
   marketSize?: string
-}
 
 export const INNOVATIVE_AI_SERVICES_2025: InnovativeAIService[] = [
   // AI-Powered Quantum Machine Learning Platform;
@@ -51,15 +50,13 @@ export const INNOVATIVE_AI_SERVICES_2025: InnovativeAIService[] = [
     estimatedDelivery: "20-24 weeks",supportLevel: "enterprise",marketPrice: "$12,999 - $35,000/month";
     roi: "500-1000%",innovationLevel: "Revolutionary",contactInfo: {
   phone: "+1 302 464 0950",email: "kleber@ziontechgroup.com",website: "https://ziontechgroup.com"
-}
     technicalSpecs: {
   technology: ["Quantum Algorithms", "Python", "Qiskit", "TensorFlow", "PyTorch", "React"]
       integrations: ["Quantum hardware", "Cloud platforms", "Scientific software", "ML frameworks"]
       apiEndpoints: 400,uptime: "99.99%",security: [["SOC 2", "ISO 27001", "Quantum-resistant encryption", "Secure model deployment"],
   ],
-  }
+  };
     competitors: ["None - First quantum ML platform"],marketSize: "$67.3 billion by 2027"
-}
   // AI-Powered Natural Language Processing Suite;
   {
   id: "ai-natural-language-processing-suite",title: "AI Natural Language Processing Suite",description: "Comprehensive NLP platform that provides advanced text analysis, language understanding, translation, and generation capabilities using state-of-the-art AI models.";
@@ -100,16 +97,14 @@ export const INNOVATIVE_AI_SERVICES_2025: InnovativeAIService[] = [
     estimatedDelivery: "12-16 weeks",supportLevel: "enterprise",marketPrice: "$5,999 - $18,000/month";
     roi: "300-500%",innovationLevel: "Advanced",contactInfo: {
   phone: "+1 302 464 0950",email: "kleber@ziontechgroup.com",website: "https://ziontechgroup.com"
-}
     technicalSpecs: {
   technology: ["GPT-4", "BERT", "Transformer Models", "Python", "React", "Node.js"]
       integrations: ["Chat platforms", "CMS systems", "Translation services", "Content platforms"]
       apiEndpoints: 250,uptime: "99.9%",security: [["SOC 2", "ISO 27001", "Data encryption", "Content filtering"],
   ],
-  }
+  };
     competitors: ["OpenAI", "Google", "Microsoft", "Amazon"]
     marketSize: "$43.7 billion by 2027"
-}
   // AI-Powered Computer Vision & Image Recognition;
   {
   id: "ai-computer-vision-image-recognition",title: "AI Computer Vision & Image Recognition Platform",description: "Advanced computer vision platform that provides image recognition, object detection, facial recognition, and visual analytics capabilities for various industries.";
@@ -150,17 +145,16 @@ export const INNOVATIVE_AI_SERVICES_2025: InnovativeAIService[] = [
     estimatedDelivery: "14-18 weeks",supportLevel: "enterprise",marketPrice: "$6,999 - $20,000/month";
     roi: "300-600%",innovationLevel: "Advanced",contactInfo: {
   phone: "+1 302 464 0950",email: "kleber@ziontechgroup.com",website: "https://ziontechgroup.com"
-}
     technicalSpecs: {
   technology: ["TensorFlow", "PyTorch", "OpenCV", "Python", "React", "Node.js"]
       integrations: ["Camera systems", "IoT devices", "Cloud platforms", "Analytics tools"]
       apiEndpoints: 300,uptime: "99.9%",security: [["SOC 2", "ISO 27001", "Data encryption", "Privacy protection"],
   ],
-  }
+  };
     competitors: ["Google Vision", "Amazon Rekognition", "Microsoft Azure Vision", "IBM Watson"]
     marketSize: [["$51.3 billion by 2027"],
   ],
-  }
+  };
   // AI-Powered Predictive Analytics & Forecasting;
   {
   id: "ai-predictive-analytics-forecasting",title: "AI Predictive Analytics & Forecasting Platform",description: "Comprehensive predictive analytics platform that uses AI and machine learning to forecast trends, predict outcomes, and provide actionable insights for business decision-making.";
@@ -201,16 +195,14 @@ export const INNOVATIVE_AI_SERVICES_2025: InnovativeAIService[] = [
     estimatedDelivery: "10-14 weeks",supportLevel: "enterprise",marketPrice: "$5,499 - $15,000/month";
     roi: "250-450%",innovationLevel: "Advanced",contactInfo: {
   phone: "+1 302 464 0950",email: "kleber@ziontechgroup.com",website: "https://ziontechgroup.com"
-}
     technicalSpecs: {
   technology: ["Python", "TensorFlow", "Scikit-learn", "React", "Node.js", "PostgreSQL"]
       integrations: ["Data warehouses", "ERP systems", "CRM platforms", "Analytics tools"]
       apiEndpoints: 200,uptime: "99.9%",security: [["SOC 2", "ISO 27001", "Data encryption", "Access control"],
   ],
-  }
+  };
     competitors: ["SAS", "IBM SPSS", "RapidMiner", "Alteryx"]
     marketSize: "$28.9 billion by 2027"
-}
   // AI-Powered Autonomous Systems & Robotics;
   {
   id: "ai-autonomous-systems-robotics",title: "AI Autonomous Systems & Robotics Platform",description: "Advanced platform for developing and managing autonomous systems and robotics applications, including navigation, decision-making, and human-robot interaction.";
@@ -251,17 +243,16 @@ export const INNOVATIVE_AI_SERVICES_2025: InnovativeAIService[] = [
     estimatedDelivery: "18-22 weeks",supportLevel: "enterprise",marketPrice: "$8,999 - $25,000/month";
     roi: "300-600%",innovationLevel: "Advanced",contactInfo: {
   phone: "+1 302 464 0950",email: "kleber@ziontechgroup.com",website: "https://ziontechgroup.com"
-}
     technicalSpecs: {
   technology: ["ROS", "Python", "TensorFlow", "PyTorch", "React", "Node.js"]
       integrations: ["Robot hardware", "Sensors", "Control systems", "Monitoring tools"]
       apiEndpoints: 350,uptime: "99.95%",security: [["SOC 2", "ISO 27001", "Secure communication", "Access control"],
   ],
-  }
+  };
     competitors: ["Boston Dynamics", "ABB", "KUKA", "FANUC"]
     marketSize: [["$74.1 billion by 2027"],
   ],
-  }
+  };
   // AI-Powered Healthcare Diagnostics & Treatment;
   {
   id: "ai-healthcare-diagnostics-treatment",title: "AI Healthcare Diagnostics & Treatment Platform",description: "Revolutionary healthcare platform that uses AI to assist in medical diagnostics, treatment planning, and patient care, improving accuracy and outcomes.";
@@ -302,17 +293,16 @@ export const INNOVATIVE_AI_SERVICES_2025: InnovativeAIService[] = [
     estimatedDelivery: "20-24 weeks",supportLevel: "enterprise",marketPrice: "$11,999 - $35,000/month";
     roi: "400-800%",innovationLevel: "Revolutionary",contactInfo: {
   phone: "+1 302 464 0950",email: "kleber@ziontechgroup.com",website: "https://ziontechgroup.com"
-}
     technicalSpecs: {
   technology: ["TensorFlow", "PyTorch", "Python", "React", "Node.js", "PostgreSQL"]
       integrations: ["PACS systems", "EHR platforms", "Medical devices", "Telemedicine platforms"]
       apiEndpoints: 400,uptime: "99.99%",security: [["SOC 2", "HIPAA", "GDPR", "Medical data encryption"],
   ],
-  }
+  };
     competitors: ["IBM Watson Health", "Google Health", "Microsoft Healthcare", "Siemens Healthineers"]
     marketSize: [["$95.6 billion by 2027"],
   ],
-  }
+  };
   // AI-Powered Financial Technology & Trading;
   {
   id: "ai-fintech-trading-platform",title: "AI Financial Technology & Trading Platform",description: "Advanced fintech platform that uses AI for algorithmic trading, risk management, fraud detection, and financial analysis, providing competitive advantages in financial markets.";
@@ -353,17 +343,16 @@ export const INNOVATIVE_AI_SERVICES_2025: InnovativeAIService[] = [
     estimatedDelivery: "16-20 weeks",supportLevel: "enterprise",marketPrice: "$9,999 - $28,000/month";
     roi: "400-700%",innovationLevel: "Advanced",contactInfo: {
   phone: "+1 302 464 0950",email: "kleber@ziontechgroup.com",website: "https://ziontechgroup.com"
-}
     technicalSpecs: {
   technology: ["Python", "TensorFlow", "React", "Node.js", "PostgreSQL", "Redis"]
       integrations: ["Trading platforms", "Market data feeds", "Risk systems", "Compliance tools"]
       apiEndpoints: 300,uptime: "99.99%",security: [["SOC 2", "PCI DSS", "GDPR", "Financial data encryption"],
   ],
-  }
+  };
     competitors: ["Bloomberg", "Thomson Reuters", "FactSet", "Refinitiv"]
     marketSize: [["$156.8 billion by 2027"],
   ],
-  }
+  };
   // AI-Powered Creative Content Generation;
   {
   id: "ai-creative-content-generation",title: "AI Creative Content Generation Platform",description: "Innovative platform that uses AI to generate creative content including text, images, music, and video, revolutionizing content creation and marketing.";
@@ -404,17 +393,16 @@ export const INNOVATIVE_AI_SERVICES_2025: InnovativeAIService[] = [
     estimatedDelivery: "8-12 weeks",supportLevel: "professional",marketPrice: "$3,999 - $12,000/month";
     roi: "200-400%",innovationLevel: "Advanced",contactInfo: {
   phone: "+1 302 464 0950",email: "kleber@ziontechgroup.com",website: "https://ziontechgroup.com"
-}
     technicalSpecs: {
   technology: ["GPT-4", "DALL-E", "Stable Diffusion", "React", "Node.js", "PostgreSQL"]
       integrations: ["CMS platforms", "Social media APIs", "Marketing tools", "Content platforms"]
       apiEndpoints: 180,uptime: "99.9%",security: [["SOC 2", "Content filtering", "Copyright protection", "Data encryption"],
   ],
-  }
+  };
     competitors: ["OpenAI", "Jasper", "Copy.ai", "Writesonic"]
     marketSize: [["$15.7 billion by 2027"],
   ],
-  }
+  };
   // AI-Powered Energy Management & Optimization;
   {
   id: "ai-energy-management-optimization",title: "AI Energy Management & Optimization Platform",description: "Intelligent energy management platform that uses AI to optimize energy consumption, predict demand, and manage renewable energy systems for maximum efficiency.";
@@ -455,13 +443,12 @@ export const INNOVATIVE_AI_SERVICES_2025: InnovativeAIService[] = [
     estimatedDelivery: "14-18 weeks",supportLevel: "enterprise",marketPrice: "$6,499 - $18,000/month";
     roi: "250-450%",innovationLevel: "Advanced",contactInfo: {
   phone: "+1 302 464 0950",email: "kleber@ziontechgroup.com",website: "https://ziontechgroup.com"
-}
     technicalSpecs: {
   technology: ["Python", "TensorFlow", "React", "Node.js", "PostgreSQL", "IoT platforms"]
       integrations: ["Smart meters", "Energy management systems", "Weather APIs", "Building automation"]
       apiEndpoints: 250,uptime: "99.9%",security: [["SOC 2", "ISO 27001", "Grid security", "Data encryption"],
   ],
-  }
+  };
     competitors: ["Schneider Electric", "Siemens", "GE Digital", "ABB"]
     marketSize: [["$38.9 billion by 2027"],
   ],

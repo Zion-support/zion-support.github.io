@@ -50,18 +50,18 @@ const EmergingTech: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {{/* Header */},
-  }
+  };
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-[linear-gradient(rgba(6,182,212,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(6,182,212,0.1)_1px,transparent_1px)] bg-[size:50px_50px]"></div>
         ;
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-16">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             animate={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             className="className="text-center";"
           >
             <div className="flex justify-center mb-6">
@@ -81,19 +81,19 @@ const EmergingTech: React.FC = () => {
       </div>
 
       {{/* Technologies Grid */},
-  }
+  };
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {technologies.map((tech, index) => (
   <motion.div;
               key={{tech.title},
-  }
+  };
               initial={{ opacity: 0, y: 20 },
-  }
+  };
               animate={{ opacity: 1, y: 0 },
-  }
+  };
               transition={{ duration: 0.6, delay: index * 0.1 },
-  }
+  };
               className="className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-2xl p-6 hover:border-cyan-400/50 transition-all duration-300 group";"
             >
               <div className="flex items-center space-x-3 mb-4">
@@ -105,7 +105,7 @@ const EmergingTech: React.FC = () => {
               ;
               <p className="text-gray-300 mb-4 leading-relaxed">
                 {{tech.description},
-  }
+  };
               </p>
               ;
               <div className="mb-6">
@@ -122,7 +122,7 @@ const EmergingTech: React.FC = () => {
               ;
               <Link;
                 to={{tech.path},
-  }
+  };
                 className="className="inline-flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors duration-200 group";"
               >
                 <span className="font-medium">Learn More</span>
@@ -134,15 +134,15 @@ const EmergingTech: React.FC = () => {
       </div>
 
       {{/* Call to Action */},
-  }
+  };
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <motion.div;
           initial={{ opacity: 0, y: 20 },
-  }
+  };
           animate={{ opacity: 1, y: 0 },
-  }
+  };
           transition={{ duration: 0.8, delay: 0.5 },
-  }
+  };
           className="className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-400/20 rounded-2xl p-8 text-center";"
         >
           <h2 className="text-3xl font-bold text-white mb-4">
@@ -169,5 +169,5 @@ const EmergingTech: React.FC = () => {
       </div>
     </div>
   )
-}
+};
 export default EmergingTech;

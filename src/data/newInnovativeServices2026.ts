@@ -1,17 +1,17 @@
 export interface NewInnovativeService2026 {
   id: string,title: string,description: string,category: string,subcategory: string,price: number,currency: string,pricingModel: string,features: string[],benefits: string[],useCases: string[],targetAudience: string[],tags: string[],estimatedDelivery: string,supportLevel: string,marketPrice: string,roi: string,innovationLevel: string,contactInfo: {
   phone: string,email: string,website: string
-}
+};
   technicalSpecs?: {
   technology: string[],integrations: string[],apiEndpoints: number,uptime: string,security: string[[],
   ],
-  }
+  };
   competitors?: string[]
   marketSize?: string;
   aiCapabilities?: string[]
   complianceFeatures?: string[]
   scalabilityFeatures?: string[],
-  }
+  };
 
 export const NEW_INNOVATIVE_SERVICES_2026: NewInnovativeService2026[] = [
   // AI Project Management Platform;
@@ -63,19 +63,18 @@ export const NEW_INNOVATIVE_SERVICES_2026: NewInnovativeService2026[] = [
     estimatedDelivery: "4-6 weeks",supportLevel: "enterprise",marketPrice: "$799 - $2,499/month";
     roi: "300-500%",innovationLevel: "Revolutionary",contactInfo: {
   phone: "+1 302 464 0950",email: "kleber@ziontechgroup.com",website: "https://ziontechgroup.com"
-}
     technicalSpecs: {
   technology: ["GPT-4", "Machine Learning", "Predictive Analytics", "Real-time Processing", "Cloud-native Architecture"]
       integrations: ["Jira", "Slack", "Microsoft Teams", "Asana", "Trello", "GitHub", "Azure DevOps"]
       apiEndpoints: 150,uptime: "99.9%",security: [["SOC 2 Type II", "GDPR Compliance", "End-to-end Encryption", "Multi-factor Authentication"],
   ],
-  }
+  };
     competitors: ["Monday.com", "Asana", "ClickUp", "Wrike", "TeamGantt"]
     marketSize: "$45.2 billion by 2026",aiCapabilities: ["Natural Language Processing", "Predictive Analytics", "Machine Learning", "Computer Vision", "Sentiment Analysis"]
     complianceFeatures: ["GDPR", "SOC 2", "ISO 27001", "HIPAA", "SOX"]
     scalabilityFeatures: [["Auto-scaling", "Multi-tenant Architecture", "Global CDN", "Load Balancing", "Database Sharding"],
   ],
-  }
+  };
 
   // AI Supply Chain Optimization;
   {
@@ -126,19 +125,18 @@ export const NEW_INNOVATIVE_SERVICES_2026: NewInnovativeService2026[] = [
     estimatedDelivery: "8-12 weeks",supportLevel: "enterprise",marketPrice: "$1,299 - $2,999/month";
     roi: "400-800%",innovationLevel: "Revolutionary",contactInfo: {
   phone: "+1 302 464 0950",email: "kleber@ziontechgroup.com",website: "https://ziontechgroup.com"
-}
     technicalSpecs: {
   technology: ["Machine Learning", "IoT Integration", "Real-time Analytics", "Predictive Modeling", "Blockchain"]
       integrations: ["SAP", "Oracle", "Salesforce", "Shopify", "WooCommerce", "QuickBooks", "NetSuite"]
       apiEndpoints: 200,uptime: "99.9%",security: [["End-to-end Encryption", "Multi-factor Authentication", "Role-based Access Control", "Audit Logging"],
   ],
-  }
+  };
     competitors: ["Oracle SCM", "SAP Supply Chain", "Blue Yonder", "Manhattan Associates", "Kinaxis"]
     marketSize: "$67.2 billion by 2026",aiCapabilities: ["Predictive Analytics", "Machine Learning", "Computer Vision", "Natural Language Processing", "Optimization Algorithms"]
     complianceFeatures: ["ISO 28000", "C-TPAT", "GDPR", "SOX", "Industry-specific Regulations"]
     scalabilityFeatures: [["Cloud-native Architecture", "Auto-scaling", "Multi-region Deployment", "Load Balancing", "Data Replication"],
   ],
-  }
+  };
 
   // AI Cybersecurity Platform;
   {
@@ -189,19 +187,18 @@ export const NEW_INNOVATIVE_SERVICES_2026: NewInnovativeService2026[] = [
     estimatedDelivery: "6-8 weeks",supportLevel: "enterprise",marketPrice: "$1,599 - $3,999/month";
     roi: "400-800%",innovationLevel: "Revolutionary",contactInfo: {
   phone: "+1 302 464 0950",email: "kleber@ziontechgroup.com",website: "https://ziontechgroup.com"
-}
     technicalSpecs: {
   technology: ["Machine Learning", "Deep Learning", "Behavioral Analytics", "Threat Intelligence", "Automation"]
       integrations: ["SIEM Systems", "EDR Solutions", "Firewalls", "Identity Providers", "Cloud Platforms"]
       apiEndpoints: 300,uptime: "99.99%",security: [["SOC 2 Type II", "ISO 27001", "FedRAMP", "Zero Trust Architecture", "End-to-end Encryption"],
   ],
-  }
+  };
     competitors: ["CrowdStrike", "SentinelOne", "Palo Alto Networks", "Fortinet", "Trend Micro"]
     marketSize: "$376.3 billion by 2026",aiCapabilities: ["Machine Learning", "Deep Learning", "Behavioral Analytics", "Threat Intelligence", "Automated Response"]
     complianceFeatures: ["SOC 2", "ISO 27001", "FedRAMP", "GDPR", "HIPAA", "SOX", "PCI DSS"]
     scalabilityFeatures: [["Cloud-native", "Auto-scaling", "Multi-tenant", "Global Distribution", "High Availability"],
   ],
-  }
+  };
 
   // AI Customer Experience Platform;
   {
@@ -252,19 +249,18 @@ export const NEW_INNOVATIVE_SERVICES_2026: NewInnovativeService2026[] = [
     estimatedDelivery: "6-8 weeks",supportLevel: "enterprise",marketPrice: "$999 - $2,499/month";
     roi: "300-500%",innovationLevel: "Revolutionary",contactInfo: {
   phone: "+1 302 464 0950",email: "kleber@ziontechgroup.com",website: "https://ziontechgroup.com"
-}
     technicalSpecs: {
   technology: ["Natural Language Processing", "Machine Learning", "Predictive Analytics", "Real-time Processing", "AI/ML"]
       integrations: ["CRM Systems", "Help Desk Platforms", "E-commerce Platforms", "Social Media", "Analytics Tools"]
       apiEndpoints: 250,uptime: "99.9%",security: [["GDPR Compliance", "Data Encryption", "Access Control", "Audit Logging", "Privacy Protection"],
   ],
-  }
+  };
     competitors: ["Intercom", "Zendesk", "Freshdesk", "HubSpot", "Salesforce Service Cloud"]
     marketSize: "$109.5 billion by 2026",aiCapabilities: ["Natural Language Processing", "Machine Learning", "Predictive Analytics", "Sentiment Analysis", "Personalization"]
     complianceFeatures: ["GDPR", "CCPA", "SOC 2", "ISO 27001", "Privacy Regulations"]
     scalabilityFeatures: [["Cloud-native", "Auto-scaling", "Multi-tenant", "Global CDN", "High Availability"],
   ],
-  }
+  };
 
   // AI FinTech Platform;
   {
@@ -315,13 +311,12 @@ export const NEW_INNOVATIVE_SERVICES_2026: NewInnovativeService2026[] = [
     estimatedDelivery: "8-12 weeks",supportLevel: "enterprise",marketPrice: "$2,499 - $5,999/month";
     roi: "300-500%",innovationLevel: "Revolutionary",contactInfo: {
   phone: "+1 302 464 0950",email: "kleber@ziontechgroup.com",website: "https://ziontechgroup.com"
-}
     technicalSpecs: {
   technology: ["Machine Learning", "Blockchain", "Real-time Processing", "Predictive Analytics", "AI/ML"]
       integrations: ["Core Banking Systems", "Payment Gateways", "CRM Platforms", "Accounting Software", "Regulatory Systems"]
       apiEndpoints: 400,uptime: "99.99%",security: [["PCI DSS", "SOC 2", "ISO 27001", "End-to-end Encryption", "Multi-factor Authentication"],
   ],
-  }
+  };
     competitors: ["Stripe", "Plaid", "Adyen", "Square", "PayPal"]
     marketSize: "$245.8 billion by 2026",aiCapabilities: ["Machine Learning", "Predictive Analytics", "Natural Language Processing", "Computer Vision", "Fraud Detection"]
     complianceFeatures: ["PCI DSS", "SOC 2", "ISO 27001", "GDPR", "SOX", "Regulatory Compliance"]

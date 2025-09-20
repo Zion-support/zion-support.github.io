@@ -21,7 +21,7 @@ export default function AIContentGenerator() {
       />
       ;
       {{/* Hero Section */},
-  }
+  };
       <section className="relative py-20 lg:py-32 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-blue-900 via-purple-900 to-slate-900"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -47,7 +47,7 @@ export default function AIContentGenerator() {
       </section>
 
       {{/* Features Section */},
-  }
+  };
       <section className="py-20 bg-white/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -124,7 +124,7 @@ export default function AIContentGenerator() {
       </section>
 
       {{/* CTA Section */},
-  }
+  };
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-8">
@@ -143,4 +143,4 @@ export default function AIContentGenerator() {
       </section>
     </div>
   )
-}
+};

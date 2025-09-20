@@ -30,11 +30,10 @@ interface Service {
     mobile: string,email: string,address: string,website: string
   };
   realImplementation: boolean,implementationDetails: string,launchDate: string,customers: number,rating: number,reviews: number,innovationLevel: 'Revolutionary' | 'Breakthrough' | 'Advanced' | 'Emerging',patentStatus: 'Patented' | 'Patent Pending' | 'Trade Secret' | 'Open Source',aiCapabilities: string[],marketDisruption: string
-}
+};
 
 const contact = {
   mobile: '+1 302 464 0950',email: 'kleber@ziontechgroup.com',address: '364 E Main St STE 1008 Middletown DE 19709',website: 'https://ziontechgroup.com'
-};
 const categories = [
   {
     id: 'ai-services',name: 'AI & Autonomous Systems',description: 'Revolutionary AI solutions that transform business operations',icon: <Brain className="w-8 h-8" />,color: 'from-purple-600 to-pink-700',services: ultimateInnovativeServices2025.filter(s => s.category.includes('AI'))
@@ -48,10 +47,8 @@ const categories = [
   ];
 const innovationLevelColors = {
   'Revolutionary': 'from-red-600 to-pink-700Breakthrough': 'from-purple-600 to-violet-700Advanced': 'from-blue-600 to-cyan-700Emerging': 'from-green-600 to-emerald-700'
-};
 const patentStatusColors = {
   'Patented': 'from-green-600 to-emerald-700Patent Pending': 'from-yellow-600 to-orange-700Trade Secret': 'from-blue-600 to-indigo-700Open Source': 'from-purple-600 to-violet-700'
-};
 export function UltimateServicesShowcase() {
   const [selectedCategory, setSelectedCategory] = useState('all');
 const [selectedService, setSelectedService] = useState<Service | null>(null),
@@ -87,11 +84,11 @@ const itemVariants = {
         <motion.div
           className="text-center mb-16"
           initial={{ opacity: 0, y: 20 },
-  }
+  };
           animate={{ opacity: 1, y: 0 },
-  }
+  };
           transition={{ duration: 0.8 },
-  }
+  };
         >
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
             <span className="bg-gradient-to-r from-zion-cyan via-zion-blue to-zion-purple bg-clip-text text-transparent">
@@ -126,11 +123,11 @@ const itemVariants = {
         <motion.div
           className="flex flex-wrap justify-center gap-4 mb-12"
           initial={{ opacity: 0, y: 20 },
-  }
+  };
           animate={{ opacity: 1, y: 0 },
-  }
+  };
           transition={{ duration: 0.8, delay: 0.2 },
-  }
+  };
         >
           <button
             onClick={() => setSelectedCategory('all')}
@@ -277,11 +274,11 @@ const itemVariants = {
         <motion.div
           className="text-center mt-16"
           initial={{ opacity: 0, y: 20 },
-  }
+  };
           animate={{ opacity: 1, y: 0 },
-  }
+  };
           transition={{ duration: 0.8, delay: 0.4 },
-  }
+  };
         >
           <div className="bg-gradient-to-r from-zion-slate to-zion-slate-light rounded-2xl p-8 border border-zion-cyan">
             <h2 className="text-3xl font-bold text-white mb-4">
@@ -431,6 +428,5 @@ const itemVariants = {
       )}
     </section>
   )
-}
 
 export default UltimateServicesShowcase;

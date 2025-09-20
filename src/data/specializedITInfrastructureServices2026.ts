@@ -1,14 +1,13 @@
 export interface SpecializedITInfrastructureService2026 {
   id: string,title: string,description: string,category: string,subcategory: string,price: number,currency: string,pricingModel: string,features: string[],benefits: string[],useCases: string[],targetAudience: string[],tags: string[],estimatedDelivery: string,supportLevel: string,marketPrice: string,roi: string,innovationLevel: string,contactInfo: {
   phone: string,email: string,website: string
-}
+};
   technicalSpecs?: {
   technology: string[],integrations: string[],apiEndpoints: number,uptime: string,security: string[[],
   ],
-  }
+  };
   competitors?: string[]
   marketSize?: string
-}
 
 export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2026: SpecializedITInfrastructureService2026[] = [
   // 5G Enterprise Network Solutions;
@@ -51,16 +50,14 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2026: SpecializedITInfrastru
     estimatedDelivery: "8-12 weeks",supportLevel: "enterprise",marketPrice: "$4,500 - $12,000/month";
     roi: "250-400%",innovationLevel: "Advanced",contactInfo: {
   phone: "+1 302 464 0950",email: "kleber@ziontechgroup.com",website: "https://ziontechgroup.com"
-}
     technicalSpecs: {
   technology: ["5G Core", "RAN", "Network Slicing", "Edge Computing", "SDN/NFV"]
       integrations: ["AWS", "Azure", "Google Cloud", "IoT Platforms", "Security Systems"]
       apiEndpoints: 200,uptime: "99.99%",security: [["Zero Trust", "Network Security", "Encryption", "DDoS Protection"],
   ],
-  }
+  };
     competitors: ["Verizon", "AT&T", "T-Mobile", "Ericsson", "Nokia"]
     marketSize: "$67.8 billion by 2026"
-}
   // Zero Trust Network Architecture;
   {
   id: "zero-trust-network-architecture-2026",title: "Zero Trust Network Architecture 2026",description: "Comprehensive zero trust security framework that implements strict access controls, continuous monitoring, and least-privilege access across all network resources.";
@@ -101,16 +98,14 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2026: SpecializedITInfrastru
     estimatedDelivery: "6-10 weeks",supportLevel: "enterprise",marketPrice: "$3,200 - $8,500/month";
     roi: "300-500%",innovationLevel: "Advanced",contactInfo: {
   phone: "+1 302 464 0950",email: "kleber@ziontechgroup.com",website: "https://ziontechgroup.com"
-}
     technicalSpecs: {
   technology: ["Identity Management", "Network Segmentation", "Monitoring Tools", "Policy Engine"]
       integrations: ["Active Directory", "LDAP", "SIEM", "EDR", "Firewalls"]
       apiEndpoints: 150,uptime: "99.9%",security: [["SOC 2", "ISO 27001", "NIST", "Zero Trust Architecture"],
   ],
-  }
+  };
     competitors: ["Palo Alto Networks", "Cisco", "Fortinet", "VMware", "Microsoft"]
     marketSize: "$51.6 billion by 2026"
-}
   // Hybrid Cloud Infrastructure;
   {
   id: "hybrid-cloud-infrastructure-2026",title: "Hybrid Cloud Infrastructure 2026",description: "Seamless hybrid cloud solution that combines on-premises infrastructure with public and private cloud services for optimal performance, cost, and security.";
@@ -151,16 +146,14 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2026: SpecializedITInfrastru
     estimatedDelivery: "8-12 weeks",supportLevel: "enterprise",marketPrice: "$3,800 - $10,000/month";
     roi: "250-400%",innovationLevel: "Advanced",contactInfo: {
   phone: "+1 302 464 0950",email: "kleber@ziontechgroup.com",website: "https://ziontechgroup.com"
-}
     technicalSpecs: {
   technology: ["AWS", "Azure", "GCP", "VMware", "OpenStack", "Kubernetes"]
       integrations: ["On-premise Systems", "Cloud Services", "Storage Systems", "Networking"]
       apiEndpoints: 300,uptime: "99.9%",security: [["SOC 2", "ISO 27001", "Encryption", "Access Control"],
   ],
-  }
+  };
     competitors: ["AWS", "Microsoft Azure", "Google Cloud", "VMware", "IBM"]
     marketSize: "$145.8 billion by 2026"
-}
   // Software-Defined Networking (SDN)
   {
   id: "software-defined-networking-sdn-2026",title: "Software-Defined Networking (SDN) 2026",description: "Advanced SDN solution that centralizes network control, automates configuration, and provides programmatic network management for improved agility and efficiency.";
@@ -201,16 +194,14 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2026: SpecializedITInfrastru
     estimatedDelivery: "6-10 weeks",supportLevel: "enterprise",marketPrice: "$2,800 - $7,500/month";
     roi: "200-350%",innovationLevel: "Advanced",contactInfo: {
   phone: "+1 302 464 0950",email: "kleber@ziontechgroup.com",website: "https://ziontechgroup.com"
-}
     technicalSpecs: {
   technology: ["OpenFlow", "OpenDaylight", "OVS", "Linux", "Python", "Java"]
       integrations: ["Network Devices", "Management Systems", "Security Tools", "Monitoring"]
       apiEndpoints: 200,uptime: "99.9%",security: [["Network Security", "Access Control", "Encryption", "Audit Logging"],
   ],
-  }
+  };
     competitors: ["Cisco", "VMware", "Juniper", "Arista", "Brocade"]
     marketSize: "$32.7 billion by 2026"
-}
   // Edge Computing Infrastructure;
   {
   id: "edge-computing-infrastructure-2026",title: "Edge Computing Infrastructure 2026",description: "Distributed edge computing platform that brings computation and data storage closer to data sources, reducing latency and improving real-time processing capabilities.";
@@ -251,16 +242,14 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2026: SpecializedITInfrastru
     estimatedDelivery: "6-8 weeks",supportLevel: "professional",marketPrice: "$2,200 - $6,000/month";
     roi: "200-350%",innovationLevel: "Advanced",contactInfo: {
   phone: "+1 302 464 0950",email: "kleber@ziontechgroup.com",website: "https://ziontechgroup.com"
-}
     technicalSpecs: {
   technology: ["Docker", "Kubernetes", "Edge Runtime", "Message Queues", "Databases"]
       integrations: ["Cloud Platforms", "IoT Devices", "Monitoring Tools", "Security Systems"]
       apiEndpoints: 150,uptime: "99.8%",security: [["Edge Security", "Data Encryption", "Access Control", "Device Authentication"],
   ],
-  }
+  };
     competitors: ["AWS Greengrass", "Azure IoT Edge", "Google Cloud IoT", "FogHorn", "ClearBlade"]
     marketSize: "$43.4 billion by 2026"
-}
   // Network Function Virtualization (NFV)
   {
   id: "network-function-virtualization-nfv-2026",title: "Network Function Virtualization (NFV) 2026",description: "NFV platform that virtualizes network functions, enabling flexible deployment, scaling, and management of network services on standard hardware.";
@@ -301,16 +290,14 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2026: SpecializedITInfrastru
     estimatedDelivery: "8-12 weeks",supportLevel: "enterprise",marketPrice: "$3,500 - $9,500/month";
     roi: "250-400%",innovationLevel: "Advanced",contactInfo: {
   phone: "+1 302 464 0950",email: "kleber@ziontechgroup.com",website: "https://ziontechgroup.com"
-}
     technicalSpecs: {
   technology: ["OpenStack", "Kubernetes", "Docker", "OVS", "DPDK", "SR-IOV"]
       integrations: ["Network Equipment", "Management Systems", "Orchestration Platforms"]
       apiEndpoints: 250,uptime: "99.9%",security: [["Network Security", "Virtualization Security", "Access Control", "Encryption"],
   ],
-  }
+  };
     competitors: ["VMware", "Cisco", "Juniper", "Nokia", "Ericsson"]
     marketSize: "$28.9 billion by 2026"
-}
   // Intent-Based Networking;
   {
   id: "intent-based-networking-2026",title: "Intent-Based Networking 2026",description: "AI-powered networking solution that translates business intent into network configuration, automatically implementing policies and ensuring compliance across the network.";
@@ -351,16 +338,14 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2026: SpecializedITInfrastru
     estimatedDelivery: "8-12 weeks",supportLevel: "enterprise",marketPrice: "$4,200 - $11,000/month";
     roi: "300-500%",innovationLevel: "Revolutionary",contactInfo: {
   phone: "+1 302 464 0950",email: "kleber@ziontechgroup.com",website: "https://ziontechgroup.com"
-}
     technicalSpecs: {
   technology: ["Machine Learning", "AI", "Network APIs", "Policy Engine", "Analytics"]
       integrations: ["Network Devices", "Management Systems", "Security Tools", "Monitoring"]
       apiEndpoints: 300,uptime: "99.9%",security: [["AI Security", "Policy Enforcement", "Access Control", "Audit Logging"],
   ],
-  }
+  };
     competitors: ["Cisco", "Juniper", "VMware", "Arista", "Extreme Networks"]
     marketSize: "$18.7 billion by 2026"
-}
   // Network Automation Platform;
   {
   id: "network-automation-platform-2026",title: "Network Automation Platform 2026",description: "Comprehensive network automation solution that streamlines network operations, reduces manual tasks, and improves network reliability through intelligent automation.";
@@ -401,16 +386,14 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2026: SpecializedITInfrastru
     estimatedDelivery: "4-6 weeks",supportLevel: "professional",marketPrice: "$1,800 - $5,000/month";
     roi: "200-350%",innovationLevel: "Advanced",contactInfo: {
   phone: "+1 302 464 0950",email: "kleber@ziontechgroup.com",website: "https://ziontechgroup.com"
-}
     technicalSpecs: {
   technology: ["Python", "Ansible", "Terraform", "Jenkins", "Git", "APIs"]
       integrations: ["Network Devices", "Management Systems", "Monitoring Tools", "Security"]
       apiEndpoints: 120,uptime: "99.8%",security: [["Access Control", "Audit Logging", "Encryption", "Role-based Security"],
   ],
-  }
+  };
     competitors: ["Ansible", "Terraform", "Chef", "Puppet", "SaltStack"]
     marketSize: "$15.3 billion by 2026"
-}
   // Network Performance Monitoring;
   {
   id: "network-performance-monitoring-2026",title: "Network Performance Monitoring 2026",description: "Advanced network monitoring solution that provides real-time visibility into network performance, identifies bottlenecks, and optimizes network operations.";
@@ -451,13 +434,12 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2026: SpecializedITInfrastru
     estimatedDelivery: "3-4 weeks",supportLevel: "professional",marketPrice: "$1,200 - $3,500/month";
     roi: "150-250%",innovationLevel: "Standard",contactInfo: {
   phone: "+1 302 464 0950",email: "kleber@ziontechgroup.com",website: "https://ziontechgroup.com"
-}
     technicalSpecs: {
   technology: ["SNMP", "NetFlow", "Packet Analysis", "Analytics Engine", "Web Technologies"]
       integrations: ["Network Devices", "Management Systems", "Ticketing Systems", "APIs"]
       apiEndpoints: 80,uptime: "99.8%",security: [["Access Control", "Data Encryption", "Audit Logging", "Secure Communication"],
   ],
-  }
+  };
     competitors: ["SolarWinds", "PRTG", "Nagios", "Zabbix", "Datadog"]
     marketSize: "$12.8 billion by 2026"
 },

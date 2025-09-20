@@ -93,16 +93,16 @@ export default function Helpdesk() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       {{/* Hero Section */},
-  }
+  };
       <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
         <div className="max-w-7xl mx-auto">
           <motion.div;
             initial={{ opacity: 0, y: 30 },
-  }
+  };
             animate={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             className="className="text-center mb-16";"
           >
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
@@ -133,18 +133,18 @@ export default function Helpdesk() {
       </section>
 
       {{/* Features Section */},
-  }
+  };
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div;
             initial={{ opacity: 0, y: 30 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             viewport={{ once: true },
-  }
+  };
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -159,15 +159,15 @@ export default function Helpdesk() {
             {features.map((feature, index) => (
   <motion.div;
                 key={{index},
-  }
+  };
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.5, delay: index * 0.1 },
-  }
+  };
                 viewport={{ once: true },
-  }
+  };
                 className="className="bg-white/5 backdrop-blur-sm border border-cyan-400/20 rounded-2xl p-6 hover:bg-white/10 hover:border-cyan-400/40 transition-all duration-300";"
               >
                 <div className={`w-16 h-16 bg-gradient-to-r ${feature.color} rounded-2xl flex items-center justify-center mb-6`}>
@@ -182,18 +182,18 @@ export default function Helpdesk() {
       </section>
 
       {{/* Capabilities Section */},
-  }
+  };
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
           <motion.div;
             initial={{ opacity: 0, y: 30 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             viewport={{ once: true },
-  }
+  };
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -208,15 +208,15 @@ export default function Helpdesk() {
             {capabilities.map((capability, index) => (
   <motion.div;
                 key={{index},
-  }
+  };
                 initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 },
-  }
+  };
                 whileInView={{ opacity: 1, x: 0 },
-  }
+  };
                 transition={{ duration: 0.6, delay: index * 0.1 },
-  }
+  };
                 viewport={{ once: true },
-  }
+  };
                 className="className="bg-white/5 backdrop-blur-sm border border-cyan-400/20 rounded-2xl p-8 hover:bg-white/10 hover:border-cyan-400/40 transition-all duration-300";"
               >
                 <div className="flex items-center mb-6">
@@ -231,7 +231,7 @@ export default function Helpdesk() {
   <li key={benefitIndex} className="flex items-center text-gray-300">
                       <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />
                       {{benefit},
-  }
+  };
                     </li>
                   ))}
                 </ul>
@@ -242,18 +242,18 @@ export default function Helpdesk() {
       </section>
 
       {{/* Integrations Section */},
-  }
+  };
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div;
             initial={{ opacity: 0, y: 30 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             viewport={{ once: true },
-  }
+  };
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -268,15 +268,15 @@ export default function Helpdesk() {
             {integrations.map((integration, index) => (
   <motion.div;
                 key={{index},
-  }
+  };
                 initial={{ opacity: 0, scale: 0.8 },
-  }
+  };
                 whileInView={{ opacity: 1, scale: 1 },
-  }
+  };
                 transition={{ duration: 0.5, delay: index * 0.1 },
-  }
+  };
                 viewport={{ once: true },
-  }
+  };
                 className="className="bg-white/5 backdrop-blur-sm border border-cyan-400/20 rounded-xl p-4 text-center hover:bg-white/10 hover:border-cyan-400/40 transition-all duration-300";"
               >
                 <span className="text-white font-medium">{integration}</span>
@@ -287,18 +287,18 @@ export default function Helpdesk() {
       </section>
 
       {{/* CTA Section */},
-  }
+  };
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto text-center">
           <motion.div;
             initial={{ opacity: 0, y: 30 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             viewport={{ once: true },
-  }
+  };
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Ready to Transform Your Support?;
@@ -328,4 +328,4 @@ export default function Helpdesk() {
       </section>
     </div>
   )
-}
+};

@@ -129,7 +129,7 @@ export default function ComprehensiveServicesOverview2026() {
 
   const toggleCategoryExpansion = (categoryId: string) => {
   setExpandedCategory(expandedCategory === categoryId ? null : categoryId)
-  }
+  };
   const totalServices = ULTIMATE_INNOVATIVE_SERVICES_2026.length;
 const totalMarketSize = '$3.2+ trillion';
 const avgROI = '400-1500%';
@@ -142,17 +142,17 @@ const avgROI = '400-1500%';
       />
 
       {{/* Hero Section */},
-  }
+  };
       <section className="relative overflow-hidden bg-gradient-to-r from-zion-cyan via-zion-blue to-zion-purple py-20">
         <div className="absolute inset-0 bg-black/20"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             animate={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
           >
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
               Comprehensive Services;
@@ -166,11 +166,11 @@ const avgROI = '400-1500%';
             </p>
 
             {{/* Stats Grid */},
-  }
+  };
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
               <motion.div;
                 whileHover={{ scale: 1.05 },
-  }
+  };
                 className="className="bg-white/20 backdrop-blur-sm rounded-xl p-6";"
               >
                 <div className="text-4xl font-bold text-white mb-2">{totalServices}</div>
@@ -178,7 +178,7 @@ const avgROI = '400-1500%';
               </motion.div>
               <motion.div;
                 whileHover={{ scale: 1.05 },
-  }
+  };
                 className="className="bg-white/20 backdrop-blur-sm rounded-xl p-6";"
               >
                 <div className="text-4xl font-bold text-white mb-2">{totalMarketSize}</div>
@@ -186,7 +186,7 @@ const avgROI = '400-1500%';
               </motion.div>
               <motion.div;
                 whileHover={{ scale: 1.05 },
-  }
+  };
                 className="className="bg-white/20 backdrop-blur-sm rounded-xl p-6";"
               >
                 <div className="text-4xl font-bold text-white mb-2">{avgROI}</div>
@@ -198,7 +198,7 @@ const avgROI = '400-1500%';
       </section>
 
       {{/* Category Filter */},
-  }
+  };
       <section className="py-12 bg-white/5 backdrop-blur-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8">
@@ -210,7 +210,7 @@ const avgROI = '400-1500%';
             <button;
               onClick={{onClick={() => setSelectedCategory('all')},
   },
-  }
+  };
               className={`px-6 py-3 rounded-lg transition-all duration-200 ${
   selectedCategory === 'all';
                   ? 'bg-zion-cyan text-white';
@@ -222,10 +222,10 @@ const avgROI = '400-1500%';
             {serviceCategories.map(category => (
   <button;
                 key={{category.id},
-  }
+  };
                 onClick={{onClick={() => setSelectedCategory(category.id)},
   },
-  }
+  };
                 className={`px-6 py-3 rounded-lg transition-all duration-200 ${
   selectedCategory === category.id;
                     ? 'bg-zion-cyan text-white';
@@ -233,7 +233,7 @@ const avgROI = '400-1500%';
 }`}
               >
                 {{category.name},
-  }
+  };
               </button>
             ))}
           </div>
@@ -241,7 +241,7 @@ const avgROI = '400-1500%';
       </section>
 
       {{/* Services Overview */},
-  }
+  };
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
@@ -258,19 +258,19 @@ const avgROI = '400-1500%';
               {filteredCategories.map((category, index) => (
   <motion.div;
                   key={{category.id},
-  }
+  };
                   initial={{ opacity: 0, y: 20 },
-  }
+  };
                   animate={{ opacity: 1, y: 0 },
-  }
+  };
                   exit={{ opacity: 0, y: -20 },
-  }
+  };
                   transition={{ duration: 0.5, delay: index * 0.1 },
-  }
+  };
                   className="className="bg-white/5 backdrop-blur-sm border border-zion-slate-300/20 rounded-2xl p-6";"
                 >
                   {{/* Category Header */},
-  }
+  };
                   <div className="flex items-start justify-between mb-6">
                     <div className="flex items-center gap-4">
                       <div className={`p-4 rounded-xl bg-gradient-to-r ${category.color}`}>
@@ -289,7 +289,7 @@ const avgROI = '400-1500%';
                   </div>
 
                   {{/* Innovation Level Badge */},
-  }
+  };
                   <div className="flex items-center gap-4 mb-6">
                     <div className={`px-4 py-2 rounded-full text-sm font-semibold ${
   category.innovationLevel === 'Revolutionary';
@@ -299,27 +299,27 @@ const avgROI = '400-1500%';
                         : 'bg-blue-500/20 text-blue-400 border border-blue-500/30'
 }`}>
                       {{category.innovationLevel},
-  }
+  };
                     </div>
                     <div className="text-zion-slate-400">
                       {category.services.length} service{{category.services.length !== 1 ? 's' : ''},
-  }
+  };
                     </div>
                   </div>
 
                   {{/* Services Preview */},
-  }
+  };
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-6">
                     {category.services.slice(0, 3).map((service, serviceIndex) => (
   <div key={service.id} className="bg-zion-slate-800/50 rounded-lg p-4">
                         <h4 className="font-semibold text-white mb-2">{service.title}</h4>
                         <div className="text-zion-cyan font-bold text-lg mb-2">
                           ${{service.price.toLocaleString()},
-  }
+  };
                         </div>
                         <div className="text-xs text-zion-slate-400 line-clamp-2">
                           {{service.description},
-  }
+  };
                         </div>
                       </div>
                     ))},
@@ -328,7 +328,7 @@ const avgROI = '400-1500%';
                         <div className="text-center">
                           <div className="text-2xl text-zion-cyan font-bold mb-2">
                             +{{category.services.length - 3},
-  }
+  };
                           </div>
                           <div className="text-sm text-zion-slate-400">More Services</div>
                         </div>
@@ -337,11 +337,11 @@ const avgROI = '400-1500%';
                   </div>
 
                   {{/* Expand/Collapse Button */},
-  }
+  };
                   <button;
                     onClick={{onClick={() => toggleCategoryExpansion(category.id)},
   },
-  }
+  };
                     className="className="w-full flex items-center justify-center gap-2 py-3 text-zion-cyan hover:text-white transition-colors border-t border-zion-slate-600/30";"
                   >
                     {expandedCategory === category.id ? (
@@ -358,18 +358,18 @@ const avgROI = '400-1500%';
                   </button>
 
                   {{/* Expanded Services Details */},
-  }
+  };
                   <AnimatePresence>
                     {expandedCategory === category.id && (
   <motion.div;
                         initial={{ opacity: 0, height: 0 },
-  }
+  };
                         animate={{ opacity: 1, height: 'auto' },
-  }
+  };
                         exit={{ opacity: 0, height: 0 },
-  }
+  };
                         transition={{ duration: 0.3 },
-  }
+  };
                         className="className="mt-6 pt-6 border-t border-zion-slate-600/30";"
                       >
                         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
@@ -380,11 +380,11 @@ const avgROI = '400-1500%';
                                 <div className="text-right">
                                   <div className="text-xl font-bold text-zion-cyan">
                                     ${{service.price.toLocaleString()},
-  }
+  };
                                   </div>
                                   <div className="text-sm text-zion-slate-400">
                                     {{service.pricingModel},
-  }
+  };
                                   </div>
                                 </div>
                               </div>
@@ -400,11 +400,11 @@ const avgROI = '400-1500%';
                                     : 'bg-blue-500/20 text-blue-400 border border-blue-500/30'
 }`}>
                                   {{service.innovationLevel},
-  }
+  };
                                 </div>
                                 <div className="text-xs text-zion-slate-400">
                                   ROI: {{service.roi},
-  }
+  };
                                 </div>
                               </div>
 
@@ -412,11 +412,11 @@ const avgROI = '400-1500%';
                                 {service.tags.slice(0, 3).map((tag, tagIndex) => (
   <span;
                                     key={{tagIndex},
-  }
+  };
                                     className="className="px-2 py-1 bg-zion-slate-700/50 text-zion-slate-300 text-xs rounded-md";"
                                   >
                                     {{tag},
-  }
+  };
                                   </span>
                                 ))}
                               </div>
@@ -442,18 +442,18 @@ const avgROI = '400-1500%';
       </section>
 
       {{/* Contact CTA */},
-  }
+  };
       <section className="py-20 bg-gradient-to-r from-zion-cyan/10 via-zion-blue/10 to-zion-purple/10">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             viewport={{ once: true },
-  }
+  };
           >
             <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
               Ready to Explore the Future?;
@@ -487,4 +487,4 @@ const avgROI = '400-1500%';
       </section>
     </div>
   )
-}
+};

@@ -124,7 +124,7 @@ export default function InvestorRelations() {
   const const contactInfo = {
   = {
     investorRelations: 'investors@ziontechgroup.com',phone: '+1 (302) 464-0950',address: '364 E Main St STE 1008 Middletown DE 19709'
-}
+};
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO ;
@@ -133,16 +133,16 @@ export default function InvestorRelations() {
       />
       ;
       {{/* Hero Section */},
-  }
+  };
       <section className="relative py-20 overflow-hidden">
         <div className="container-responsive">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             animate={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.6 },
-  }
+  };
             className="className="text-center max-w-4xl mx-auto";"
           >
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
@@ -154,18 +154,18 @@ export default function InvestorRelations() {
             </p>
             ;
             {{/* Financial Highlights */},
-  }
+  };
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
               {financialHighlights.map((highlight, index) => (
   <motion.div;
                   key={{highlight.metric},
-  }
+  };
                   initial={{ opacity: 0, y: 20 },
-  }
+  };
                   animate={{ opacity: 1, y: 0 },
-  }
+  };
                   transition={{ duration: 0.6, delay: index * 0.1 },
-  }
+  };
                   className="className="text-center";"
                 >
                   <div className={`text-3xl font-bold ${highlight.color} mb-2`}>{highlight.value}</div>
@@ -180,18 +180,18 @@ export default function InvestorRelations() {
       </section>
 
       {{/* Quarterly Results */},
-  }
+  };
       <section className="py-16">
         <div className="container-responsive">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.6 },
-  }
+  };
             viewport={{ once: true },
-  }
+  };
             className="className="mb-12";"
           >
             <h2 className="text-3xl font-bold text-white text-center mb-4">Quarterly Performance</h2>
@@ -227,7 +227,7 @@ export default function InvestorRelations() {
                         'bg-blue-500/20 text-blue-300'
 }`}>
                         {{quarter.status},
-  }
+  };
                       </span>
                     </td>
                   </tr>
@@ -239,18 +239,18 @@ export default function InvestorRelations() {
       </section>
 
       {{/* Strategic Initiatives */},
-  }
+  };
       <section className="py-16 bg-slate-800/20">
         <div className="container-responsive">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.6 },
-  }
+  };
             viewport={{ once: true },
-  }
+  };
             className="className="mb-12";"
           >
             <h2 className="text-3xl font-bold text-white text-center mb-4">Strategic Initiatives</h2>
@@ -263,15 +263,15 @@ export default function InvestorRelations() {
             {strategicInitiatives.map((initiative, index) => (
   <motion.div;
                 key={{initiative.title},
-  }
+  };
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.6, delay: index * 0.1 },
-  }
+  };
                 viewport={{ once: true },
-  }
+  };
                 className="className="bg-slate-800/50 backdrop-blur-xl rounded-xl border border-slate-700/50 p-6";"
               >
                 <div className="flex items-start justify-between mb-4">
@@ -282,7 +282,7 @@ export default function InvestorRelations() {
                     'bg-blue-500/20 text-blue-300'
 }`}>
                     {{initiative.impact},
-  }
+  };
                   </span>
                 </div>
                 ;
@@ -309,18 +309,18 @@ export default function InvestorRelations() {
       </section>
 
       {{/* Investor Resources */},
-  }
+  };
       <section className="py-16">
         <div className="container-responsive">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.6 },
-  }
+  };
             viewport={{ once: true },
-  }
+  };
             className="className="mb-12";"
           >
             <h2 className="text-3xl font-bold text-white text-center mb-4">Investor Resources</h2>
@@ -333,15 +333,15 @@ export default function InvestorRelations() {
             {investorResources.map((resource, index) => (
   <motion.div;
                 key={{resource.title},
-  }
+  };
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.6, delay: index * 0.1 },
-  }
+  };
                 viewport={{ once: true },
-  }
+  };
                 className="className="bg-slate-800/50 backdrop-blur-xl rounded-xl border border-slate-700/50 overflow-hidden hover:border-cyan-400/30 transition-all duration-300";"
               >
                 <div className="p-6">
@@ -366,7 +366,7 @@ export default function InvestorRelations() {
 
                   <div className="text-xs text-gray-500 mb-4">
                     Updated: {{resource.date},
-  }
+  };
                   </div>
 
                   <button className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-medium py-2 px-4 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25 flex items-center justify-center gap-2">
@@ -381,18 +381,18 @@ export default function InvestorRelations() {
       </section>
 
       {{/* Upcoming Events */},
-  }
+  };
       <section className="py-16 bg-slate-800/20">
         <div className="container-responsive">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.6 },
-  }
+  };
             viewport={{ once: true },
-  }
+  };
             className="className="mb-12";"
           >
             <h2 className="text-3xl font-bold text-white text-center mb-4">Upcoming Events</h2>
@@ -405,15 +405,15 @@ export default function InvestorRelations() {
             {upcomingEvents.map((event, index) => (
   <motion.div;
                 key={{event.title},
-  }
+  };
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.6, delay: index * 0.1 },
-  }
+  };
                 viewport={{ once: true },
-  }
+  };
                 className="className="bg-slate-800/50 backdrop-blur-xl rounded-xl border border-slate-700/50 p-6";"
               >
                 <div className="flex items-start justify-between mb-4">
@@ -423,7 +423,7 @@ export default function InvestorRelations() {
                     'bg-green-500/20 text-green-300'
 }`}>
                     {{event.registration},
-  }
+  };
                   </span>
                 </div>
                 ;
@@ -431,17 +431,17 @@ export default function InvestorRelations() {
                   <div className="flex items-center gap-2">
                     <Calendar className="w-4 h-4" />
                     {{event.date},
-  }
+  };
                   </div>
                   <div className="flex items-center gap-2">
                     <Clock className="w-4 h-4" />
                     {{event.time},
-  }
+  };
                   </div>
                   <div className="flex items-center gap-2">
                     <Briefcase className="w-4 h-4" />
                     {{event.type},
-  }
+  };
                   </div>
                 </div>
 
@@ -455,18 +455,18 @@ export default function InvestorRelations() {
       </section>
 
       {{/* Contact Information */},
-  }
+  };
       <section className="py-16">
         <div className="container-responsive">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.6 },
-  }
+  };
             viewport={{ once: true },
-  }
+  };
             className="className="text-center";"
           >
             <h2 className="text-3xl font-bold text-white mb-8">Contact Investor Relations</h2>
@@ -482,7 +482,7 @@ export default function InvestorRelations() {
                   className="className="text-cyan-400 hover:text-cyan-300 transition-colors font-medium";"
                 >
                   {{contactInfo.investorRelations},
-  }
+  };
                 </a>
               </div>
 
@@ -497,7 +497,7 @@ export default function InvestorRelations() {
                   className="className="text-blue-400 hover:text-blue-300 transition-colors font-medium";"
                 >
                   {{contactInfo.phone},
-  }
+  };
                 </a>
               </div>
 
@@ -509,7 +509,7 @@ export default function InvestorRelations() {
                 <p className="text-gray-300 mb-3">Corporate headquarters</p>
                 <span className="text-green-400 font-medium text-sm">
                   {{contactInfo.address},
-  }
+  };
                 </span>
               </div>
             </div>
@@ -518,4 +518,3 @@ export default function InvestorRelations() {
       </section>
     </div>
   )
-}

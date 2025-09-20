@@ -5,7 +5,7 @@ const [storedValue, setStoredValue] = useState<T>(() => {
     if (if (typeof window === 'undefined') {
   ) {
       return initialValue
-}
+};
     try {
   const item = window.localStorage.getItem(key)
       return item ? JSON.parse(item) : initialValue
@@ -27,7 +27,6 @@ const valueToStore = value instanceof Function ? value(storedValue) : value;
   } catch (error) {
   console.error(`Error setting localStorage key "${key}":`, error)
     },
-  }
+  };
 
   return [storedValue, setValue] as const
-}

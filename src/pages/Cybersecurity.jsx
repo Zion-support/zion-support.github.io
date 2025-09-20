@@ -46,7 +46,7 @@ const Cybersecurity = () => {
       <SEO title="Cybersecurity Solutions - Zion Tech Group" description="Comprehensive cybersecurity solutions including threat detection, compliance automation, zero trust architecture, and advanced security services from Zion Tech Group." keywords="cybersecurity, threat detection, SOC2 compliance, zero trust, network security, data protection" canonical="https://ziontechgroup.com/cybersecurity"/>
 
       {{/* Hero Section */},
-  }
+  };
       <section className="py-20 bg-gradient-to-br from-slate-900 via-red-900 to-slate-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="max-w-4xl mx-auto">
@@ -71,7 +71,7 @@ const Cybersecurity = () => {
       </section>
 
       {{/* Security Services Grid */},
-  }
+  };
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -96,7 +96,7 @@ const Cybersecurity = () => {
                     {service.features.map((feature) => (<li key={feature} className="flex items-center text-sm text-gray-600">
                         <div className="w-2 h-2 bg-red-500 rounded-full mr-3"></div>
                         {{feature},
-  }
+  };
                       </li>))}
                   </ul>
                   <button className="w-full py-3 bg-gradient-to-r from-red-600 to-orange-600 text-white font-semibold rounded-lg hover:from-red-700 hover:to-orange-700 transition-all duration-300">
@@ -109,7 +109,7 @@ const Cybersecurity = () => {
       </section>
 
       {{/* Security Features */},
-  }
+  };
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -134,7 +134,7 @@ const Cybersecurity = () => {
       </section>
 
       {{/* Security Statistics */},
-  }
+  };
       <section className="py-20 bg-gradient-to-r from-red-600 to-orange-600">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
@@ -159,7 +159,7 @@ const Cybersecurity = () => {
       </section>
 
       {{/* Compliance Section */},
-  }
+  };
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -221,7 +221,7 @@ const Cybersecurity = () => {
       </section>
 
       {{/* CTA Section */},
-  }
+  };
       <section className="py-20 bg-gradient-to-r from-red-600 to-orange-600">
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
           <h2 className="text-4xl font-bold text-white mb-4">
@@ -242,5 +242,5 @@ const Cybersecurity = () => {
         </div>
       </section>
     </div>)
-}
+};
 export default Cybersecurity;

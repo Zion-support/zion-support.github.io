@@ -56,7 +56,7 @@ export default function AIAutonomousBusinessPlatform() {
       <SEO title="AI Autonomous Business Platform - Zion Tech Group" description="Transform your business with our cloud-native AI platform. Scalable, secure, and intelligent business management for the modern enterprise." keywords="AI business platform, cloud AI platform, autonomous business platform, enterprise AI, business intelligence platform" canonical="https://ziontechgroup.com/ai-services/ai-autonomous-business-platform/"/>
 
       {{/* Hero Section */},
-  }
+  };
       <section className="relative pt-32 pb-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-blue-900/50 via-purple-900/50 to-cyan-900/50"></div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -97,7 +97,7 @@ export default function AIAutonomousBusinessPlatform() {
       </section>
 
       {{/* Features Section */},
-  }
+  };
       <section className="py-20 bg-gray-900/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div initial={{ opacity: 0, y: 20 },
@@ -131,7 +131,7 @@ export default function AIAutonomousBusinessPlatform() {
       </section>
 
       {{/* Benefits Section */},
-  }
+  };
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div initial={{ opacity: 0, y: 20 },
@@ -159,7 +159,7 @@ export default function AIAutonomousBusinessPlatform() {
       </section>
 
       {{/* Use Cases Section */},
-  }
+  };
       <section className="py-20 bg-gray-900/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div initial={{ opacity: 0, y: 20 },
@@ -193,7 +193,7 @@ export default function AIAutonomousBusinessPlatform() {
       </section>
 
       {{/* Testimonials Section */},
-  }
+  };
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div initial={{ opacity: 0, y: 20 },
@@ -229,7 +229,7 @@ export default function AIAutonomousBusinessPlatform() {
       </section>
 
       {{/* CTA Section */},
-  }
+  };
       <section className="py-20 bg-gradient-to-r from-cyan-500/20 via-purple-500/20 to-cyan-500/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div initial={{ opacity: 0, y: 20 },
@@ -256,4 +256,4 @@ export default function AIAutonomousBusinessPlatform() {
         </div>
       </section>
     </div>)
-}
+};

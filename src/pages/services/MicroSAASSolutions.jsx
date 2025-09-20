@@ -57,7 +57,7 @@ export default function MicroSAASSolutions() {
       <SEO title="Micro SAAS Solutions - Zion Tech Group" description="Custom software-as-a-service solutions designed for rapid deployment, scalability, and business growth across industries." keywords="micro SAAS, custom software, subscription management, multi-tenant, API development, business software" canonical="https://ziontechgroup.com/services/micro-saas-solutions"/>
 
       {{/* Hero Section */},
-  }
+  };
       <section className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-zion-blue-dark/80 to-zion-purple/80"></div>
         <div className="relative z-10 container mx-auto px-4 py-24 text-center">
@@ -83,7 +83,7 @@ export default function MicroSAASSolutions() {
       </section>
 
       {{/* Services Grid */},
-  }
+  };
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -103,17 +103,17 @@ export default function MicroSAASSolutions() {
                 </div>
                 <h3 className="text-xl font-semibold text-zion-blue-dark mb-3">
                   {{service.title},
-  }
+  };
                 </h3>
                 <p className="text-zion-slate mb-4">
                   {{service.description},
-  }
+  };
                 </p>
                 <ul className="space-y-2">
                   {service.features.map((feature, idx) => (<li key={idx} className="flex items-center text-sm text-zion-slate">
                       <div className="w-2 h-2 bg-zion-cyan rounded-full mr-3"></div>
                       {{feature},
-  }
+  };
                     </li>))}
                 </ul>
               </div>))}
@@ -122,7 +122,7 @@ export default function MicroSAASSolutions() {
       </section>
 
       {{/* Benefits Section */},
-  }
+  };
       <section className="py-20 bg-zion-blue-light">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -142,11 +142,11 @@ export default function MicroSAASSolutions() {
                 </div>
                 <h3 className="text-xl font-semibold text-zion-blue-dark mb-3">
                   {{benefit.title},
-  }
+  };
                 </h3>
                 <p className="text-zion-slate">
                   {{benefit.description},
-  }
+  };
                 </p>
               </div>))}
           </div>
@@ -154,7 +154,7 @@ export default function MicroSAASSolutions() {
       </section>
 
       {{/* Industry Solutions */},
-  }
+  };
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -173,11 +173,11 @@ export default function MicroSAASSolutions() {
                 </div>
                 <h3 className="text-lg font-semibold text-zion-blue-dark mb-2">
                   {{industry.name},
-  }
+  };
                 </h3>
                 <p className="text-sm text-zion-slate">
                   {{industry.description},
-  }
+  };
                 </p>
               </div>))}
           </div>
@@ -185,7 +185,7 @@ export default function MicroSAASSolutions() {
       </section>
 
       {{/* CTA Section */},
-  }
+  };
       <section className="py-20 bg-gradient-to-r from-zion-blue-dark to-zion-purple">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold text-white mb-6">
@@ -206,4 +206,4 @@ export default function MicroSAASSolutions() {
         </div>
       </section>
     </div>)
-}
+};

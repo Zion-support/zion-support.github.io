@@ -243,13 +243,13 @@ const matchesPrice = selectedPriceRange === 'all' || ;
   return new Intl.NumberFormat('en-US', {
   style: 'currency',currency: currency
 }).format(price)
-  }
+  };
 
   const renderStars = (rating: number) => {
   return Array.from({ length: 5 }, (_, i) => (
   <Star;
         key={{i},
-  }
+  };
         className={`w-4 h-4 ${
   i < Math.floor(rating) ;
             ? 'text-yellow-400 fill-current' ;
@@ -259,7 +259,7 @@ const matchesPrice = selectedPriceRange === 'all' || ;
 }`}
       />
     ))
-  }
+  };
 
   return (
     <div className="min-h-screen bg-futuristic">
@@ -269,27 +269,27 @@ const matchesPrice = selectedPriceRange === 'all' || ;
       />
       ;
       {{/* Hero Section */},
-  }
+  };
       <section className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-blue to-zion-slate-dark">
         <div className="container mx-auto px-4 text-center">
           <motion.h1 ;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             animate={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.6 },
-  }
+  };
             className="className="text-5xl md:text-7xl font-bold text-white mb-6";"
           >
             Marketplace <span className="text-zion-cyan">Products</span>
           </motion.h1>
           <motion.p ;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             animate={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.6, delay: 0.2 },
-  }
+  };
             className="className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto";"
           >
             Discover cutting-edge technology products, software solutions, and tools ;
@@ -299,35 +299,35 @@ const matchesPrice = selectedPriceRange === 'all' || ;
       </section>
 
       {{/* Search and Filters */},
-  }
+  };
       <section className="py-8 bg-zion-slate-dark border-b border-zion-slate-light/20">
         <div className="container mx-auto px-4">
           <div className="flex flex-col lg:flex-row gap-6 items-center justify-between">
             {{/* Search */},
-  }
+  };
             <div className="relative w-full lg:w-96">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-zion-slate-light" />
               <input;
                 type="text";
                 placeholder="Search products...";
                 value={{searchQuery},
-  }
+  };
                 onChange={{(e) => setSearchQuery(e.target.value)},
-  }
+  };
                 className="className="w-full pl-10 pr-4 py-3 bg-zion-slate-light/10 border border-zion-slate-light/20 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:border-zion-cyan focus:ring-2 focus:ring-zion-cyan/20 transition-all duration-200";"
               />
             </div>
 
             {{/* Controls */},
-  }
+  };
             <div className="flex flex-wrap gap-4 items-center">
               {{/* View Mode Toggle */},
-  }
+  };
               <div className="flex bg-zion-slate-light/10 rounded-lg p-1 border border-zion-slate-light/20">
                 <button;
                   onClick={{onClick={() => setViewMode('grid')},
   },
-  }
+  };
                   className={`p-2 rounded-md transition-all duration-200 ${
   viewMode === 'grid';
                       ? 'bg-zion-cyan text-white';
@@ -339,7 +339,7 @@ const matchesPrice = selectedPriceRange === 'all' || ;
                 <button;
                   onClick={{onClick={() => setViewMode('list')},
   },
-  }
+  };
                   className={`p-2 rounded-md transition-all duration-200 ${
   viewMode === 'list';
                       ? 'bg-zion-cyan text-white';
@@ -351,34 +351,34 @@ const matchesPrice = selectedPriceRange === 'all' || ;
               </div>
 
               {{/* Sort */},
-  }
+  };
               <select;
                 value={{sortBy},
-  }
+  };
                 onChange={{(e) => setSortBy(e.target.value)},
-  }
+  };
                 className="className="bg-zion-slate-light/10 border border-zion-slate-light/20 rounded-lg px-3 py-2 text-white focus:outline-none focus:border-zion-cyan";"
               >
                 {sortOptions.map((option) => (
   <option key={option.id} value={option.id}>
                     {{option.name},
-  }
+  };
                   </option>
                 ))}
               </select>
 
               {{/* Filters Toggle */},
-  }
+  };
               <button;
                 onClick={{onClick={() => setShowFilters(!showFilters)},
   },
-  }
+  };
                 className="className="flex items-center gap-2 px-4 py-2 bg-zion-cyan/20 text-zion-cyan border border-zion-cyan/30 rounded-lg hover:bg-zion-cyan/30 transition-all duration-200";"
               >
                 <Filter className="w-4 h-4" />
                 Filters;
                 {{showFilters ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />},
-  }
+  };
               </button>
             </div>
           </div>
@@ -388,25 +388,25 @@ const matchesPrice = selectedPriceRange === 'all' || ;
   {showFilters && (
   <motion.div;
               initial={{ opacity: 0, height: 0 },
-  }
+  };
               animate={{ opacity: 1, height: 'auto' },
-  }
+  };
               exit={{ opacity: 0, height: 0 },
-  }
+  };
               transition={{ duration: 0.3 },
-  }
+  };
               className="className="mt-6 pt-6 border-t border-zion-slate-light/20";"
             >
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {{/* Category Filter */},
-  }
+  };
                 <div>
                   <label className="block text-white font-medium mb-2">Category</label>
                   <select;
                     value={{selectedCategory},
-  }
+  };
                     onChange={{(e) => setSelectedCategory(e.target.value)},
-  }
+  };
                     className="className="w-full bg-zion-slate-light/10 border border-zion-slate-light/20 rounded-lg px-3 py-2 text-white focus:outline-none focus:border-zion-cyan";"
                   >
                     {categories.map((category) => (
@@ -418,27 +418,27 @@ const matchesPrice = selectedPriceRange === 'all' || ;
                 </div>
 
                 {{/* Price Range Filter */},
-  }
+  };
                 <div>
                   <label className="block text-white font-medium mb-2">Price Range</label>
                   <select;
                     value={{selectedPriceRange},
-  }
+  };
                     onChange={{(e) => setSelectedPriceRange(e.target.value)},
-  }
+  };
                     className="className="w-full bg-zion-slate-light/10 border border-zion-slate-light/20 rounded-lg px-3 py-2 text-white focus:outline-none focus:border-zion-cyan";"
                   >
                     {priceRanges.map((range) => (
   <option key={range.id} value={range.id}>
                         {{range.name},
-  }
+  };
                       </option>
                     ))}
                   </select>
                 </div>
 
                 {{/* Clear Filters */},
-  }
+  };
                 <div className="flex items-end">
                   <button;
                     onClick={() => {
@@ -446,7 +446,7 @@ const matchesPrice = selectedPriceRange === 'all' || ;
                       setSelectedPriceRange('all')
                       setSearchQuery('')
                     },
-  }
+  };
                     className="className="w-full px-4 py-2 bg-zion-slate-light/20 text-zion-slate-light border border-zion-slate-light/30 rounded-lg hover:bg-zion-slate-light/30 hover:text-white transition-all duration-200";"
                   >
                     Clear All Filters;
@@ -459,7 +459,7 @@ const matchesPrice = selectedPriceRange === 'all' || ;
       </section>
 
       {{/* Results Summary */},
-  }
+  };
       <section className="py-4 bg-zion-slate-dark">
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between text-zion-slate-light">
@@ -470,7 +470,7 @@ const matchesPrice = selectedPriceRange === 'all' || ;
       </section>
 
       {{/* Products Grid/List */},
-  }
+  };
       <section className="py-16 bg-zion-slate-dark">
         <div className="container mx-auto px-4">
           {sortedProducts.length === 0 ? (
@@ -484,24 +484,24 @@ const matchesPrice = selectedPriceRange === 'all' || ;
               {sortedProducts.map((product, index) => (
   <motion.article;
                   key={{product.id},
-  }
+  };
                   initial={{ opacity: 0, y: 20 },
-  }
+  };
                   whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                   transition={{ duration: 0.6, delay: index * 0.1 },
-  }
+  };
                   className={`bg-gradient-to-br from-zion-slate-dark/50 to-zion-blue/10 backdrop-blur-sm rounded-xl overflow-hidden border border-zion-cyan/20 hover:border-zion-cyan/40 transition-all duration-300 hover:scale-105 group ${
   viewMode === 'list' ? 'flex' : ''
 }`}
                 >
                   {{/* Product Image */},
-  }
+  };
                   <div className={`relative ${viewMode === 'list' ? 'w-48 flex-shrink-0' : ''}`}>
                     <img ;
                       src={product.image} ;
                       alt={{product.name},
-  }
+  };
                       className={`w-full object-cover group-hover:scale-105 transition-transform duration-300 ${
   viewMode === 'list' ? 'h-full' : 'h-48'
 }`}
@@ -532,14 +532,14 @@ const matchesPrice = selectedPriceRange === 'all' || ;
                   </div>
                   ;
                   {{/* Product Content */},
-  }
+  };
                   <div className={`p-6 ${viewMode === 'list' ? 'flex-1' : ''}`}>
                     {{/* Category and Vendor */},
-  }
+  };
                     <div className="flex items-center justify-between mb-3">
                       <span className="inline-flex items-center px-3 py-1 bg-zion-cyan/20 text-zion-cyan text-xs rounded-full">
                         {{categories.find(cat => cat.id === product.category)?.name},
-  }
+  };
                       </span>
                       <div className="flex items-center gap-2">
                         <span className="text-zion-slate-light text-sm">{product.vendor}</span>
@@ -550,18 +550,18 @@ const matchesPrice = selectedPriceRange === 'all' || ;
                     </div>
                     ;
                     {{/* Product Name */},
-  }
+  };
                     <h3 className="text-xl font-bold text-white mb-3 leading-tight group-hover:text-zion-cyan transition-colors duration-200">
                       {{product.name},
-  }
+  };
                     </h3>
                     ;
                     {{/* Rating */},
-  }
+  };
                     <div className="flex items-center gap-2 mb-3">
                       <div className="flex items-center">
                         {{renderStars(product.rating)},
-  }
+  };
                       </div>
                       <span className="text-zion-slate-light text-sm">
                         {product.rating} ({product.reviewCount} reviews)
@@ -569,28 +569,28 @@ const matchesPrice = selectedPriceRange === 'all' || ;
                     </div>
                     ;
                     {{/* Description */},
-  }
+  };
                     <p className="text-zion-slate-light mb-4 leading-relaxed">
                       {{product.description},
-  }
+  };
                     </p>
                     ;
                     {{/* Features */},
-  }
+  };
                     <div className="mb-4">
                       <h4 className="text-white font-semibold mb-2">Key Features</h4>
                       <div className="flex flex-wrap gap-2">
                         {product.features.slice(0, 3).map((feature) => (
   <span key={feature} className="px-2 py-1 bg-zion-cyan/10 text-zion-cyan text-xs rounded">
                             {{feature},
-  }
+  };
                           </span>
                         ))}
                       </div>
                     </div>
                     ;
                     {{/* Price and Actions */},
-  }
+  };
                     <div className="flex items-center justify-between mb-4">
                       <div className="text-2xl font-bold text-white">
                         {product.discount > 0 ? (
@@ -598,7 +598,7 @@ const matchesPrice = selectedPriceRange === 'all' || ;
                             <span className="text-zion-cyan">{formatPrice(product.price, product.currency)}</span>
                             <span className="text-zion-slate-light text-lg line-through ml-2">
                               {{formatPrice(product.originalPrice, product.currency)},
-  }
+  };
                             </span>
                           </div>
                         ) : (
@@ -617,18 +617,18 @@ const matchesPrice = selectedPriceRange === 'all' || ;
                     </div>
                     ;
                     {{/* Tags */},
-  }
+  };
                     <div className="flex flex-wrap gap-2 mb-4">
                       {product.tags.slice(0, 3).map((tag) => (
   <span key={tag} className="px-2 py-1 bg-zion-cyan/10 text-zion-cyan text-xs rounded">
                           {{tag},
-  }
+  };
                         </span>
                       ))}
                     </div>
                     ;
                     {{/* Action Buttons */},
-  }
+  };
                     <div className="flex gap-3">
                       <button className="flex-1 inline-flex items-center justify-center px-4 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-medium rounded-lg hover:from-zion-cyan/80 hover:to-zion-purple/80 transition-all duration-300 group-hover:scale-105">
                         <ShoppingCart className="w-5 h-5 mr-2" />
@@ -647,16 +647,16 @@ const matchesPrice = selectedPriceRange === 'all' || ;
       </section>
 
       {{/* Call to Action */},
-  }
+  };
       <section className="py-16 bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10">
         <div className="container mx-auto px-4 text-center">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.6 },
-  }
+  };
             className="className="max-w-2xl mx-auto";"
           >
             <h2 className="text-3xl font-bold text-white mb-4">
@@ -687,4 +687,4 @@ const matchesPrice = selectedPriceRange === 'all' || ;
       </section>
     </div>
   )
-}
+};

@@ -104,10 +104,10 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
   })
   const handleServiceClick = (service: any) => {
   setSelectedService(service)
-  }
+  };
   const closeModal = () => {
     setSelectedService(null)
-  }
+  };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -119,17 +119,17 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
       />
 
       {{/* Hero Section */},
-  }
+  };
       <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
         <div className="relative max-w-7xl mx-auto text-center">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             animate={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
           >
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Innovative Micro SAAS Services;
@@ -160,13 +160,13 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
       </section>
 
       {{/* Filters and Search */},
-  }
+  };
       <section className="px-4 sm:px-6 lg:px-8 py-8">
         <div className="max-w-7xl mx-auto">
           <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 mb-8">
             <div className="flex flex-col lg:flex-row gap-6 items-center justify-between">
               {{/* Search */},
-  }
+  };
               <div className="flex-1 max-w-md">
                 <div className="relative">
                   <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
@@ -174,22 +174,22 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
                     type="text";
                     placeholder="Search services...";
                     value={{searchTerm},
-  }
+  };
                     onChange={{(e) => setSearchTerm(e.target.value)},
-  }
+  };
                     className="className="w-full pl-10 pr-4 py-3 bg-white/20 border border-white/30 rounded-xl text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent";"
                   />
                 </div>
               </div>
 
               {{/* Sort */},
-  }
+  };
               <div className="flex items-center gap-4">
                 <select;
                   value={{sortBy},
-  }
+  };
                   onChange={{(e) => setSortBy(e.target.value)},
-  }
+  };
                   className="className="bg-white/20 border border-white/30 rounded-xl px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-blue-500";"
                 >
                   <option value="rating">Sort by Rating</option>
@@ -199,12 +199,12 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
                 </select>
 
                 {{/* View Mode Toggle */},
-  }
+  };
                 <div className="flex bg-white/20 rounded-xl p-1">
                   <button;
                     onClick={{onClick={() => setViewMode('grid')},
   },
-  }
+  };
                     className={`p-2 rounded-lg transition-colors ${
   viewMode === 'grid' ? 'bg-white/30 text-white' : 'text-gray-300 hover:text-white'
 }`}
@@ -214,7 +214,7 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
                   <button;
                     onClick={{onClick={() => setViewMode('list')},
   },
-  }
+  };
                     className={`p-2 rounded-lg transition-colors ${
   viewMode === 'list' ? 'bg-white/30 text-white' : 'text-gray-300 hover:text-white'
 }`}
@@ -226,16 +226,16 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
             </div>
 
             {{/* Category Filters */},
-  }
+  };
             <div className="mt-6">
               <div className="flex flex-wrap gap-3">
                 {categories.map((category) => (
   <button;
                     key={{category.id},
-  }
+  };
                     onClick={{onClick={() => setActiveCategory(category.id)},
   },
-  }
+  };
                     className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
   activeCategory === category.id;
                         ? 'bg-gradient-to-r ' + category.color + ' text-white shadow-lg';
@@ -244,10 +244,10 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
                   >
                     <span className="mr-2">{category.icon}</span>
                     {{category.name},
-  }
+  };
                     <span className="ml-2 bg-white/20 px-2 py-1 rounded-full text-xs">
                       {{category.count},
-  }
+  };
                     </span>
                   </button>
                 ))}
@@ -258,7 +258,7 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
       </section>
 
       {{/* Services Grid/List */},
-  }
+  };
       <section className="px-4 sm:px-6 lg:px-8 pb-20">
         <div className="max-w-7xl mx-auto">
           {viewMode === 'grid' ? (
@@ -266,28 +266,28 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
               {sortedServices.map((service, index) => (
   <motion.div;
                   key={{service.id},
-  }
+  };
                   initial={{ opacity: 0, y: 20 },
-  }
+  };
                   animate={{ opacity: 1, y: 0 },
-  }
+  };
                   transition={{ duration: 0.5, delay: index * 0.1 },
-  }
+  };
                   className="className="group cursor-pointer";"
                   onClick={{onClick={() => handleServiceClick(service)},
   },
-  }
+  };
                 >
                   <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 h-full border border-white/20 hover:border-blue-500/50 transition-all duration-300 hover:transform hover:scale-105">
                     <div className="flex items-start justify-between mb-4">
                       <div className="flex-1">
                         <h3 className="text-xl font-bold text-white mb-2 group-hover:text-blue-400 transition-colors">
                           {{service.title},
-  }
+  };
                         </h3>
                         <p className="text-gray-300 text-sm line-clamp-3">
                           {{service.description},
-  }
+  };
                         </p>
                       </div>
                     </div>
@@ -296,7 +296,7 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
                       <div className="flex items-center justify-between">
                         <span className="text-2xl font-bold text-blue-400">
                           ${{service.price.toLocaleString()},
-  }
+  };
                         </span>
                         <div className="flex items-center text-yellow-400">
                           <Star className="w-4 h-4 fill-current" />
@@ -326,11 +326,11 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
                         {service.tags.slice(0, 3).map((tag, tagIndex) => (
   <span;
                             key={{tagIndex},
-  }
+  };
                             className="className="px-2 py-1 bg-blue-500/20 text-blue-300 text-xs rounded-full";"
                           >
                             {{tag},
-  }
+  };
                           </span>
                         ))},
   {service.tags.length > 3 && (
@@ -359,28 +359,28 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
               {sortedServices.map((service, index) => (
   <motion.div;
                   key={{service.id},
-  }
+  };
                   initial={{ opacity: 0, x: -20 },
-  }
+  };
                   animate={{ opacity: 1, x: 0 },
-  }
+  };
                   transition={{ duration: 0.5, delay: index * 0.1 },
-  }
+  };
                   className="className="group cursor-pointer";"
                   onClick={{onClick={() => handleServiceClick(service)},
   },
-  }
+  };
                 >
                   <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:border-blue-500/50 transition-all duration-300">
                     <div className="flex flex-col lg:flex-row gap-6">
                       <div className="flex-1">
                         <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors">
                           {{service.title},
-  }
+  };
                         </h3>
                         <p className="text-gray-300 mb-4">
                           {{service.description},
-  }
+  };
                         </p>
                         ;
                         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-4">
@@ -406,11 +406,11 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
                           {service.tags.map((tag, tagIndex) => (
   <span;
                               key={{tagIndex},
-  }
+  };
                               className="className="px-3 py-1 bg-blue-500/20 text-blue-300 text-sm rounded-full";"
                             >
                               {{tag},
-  }
+  };
                             </span>
                           ))}
                         </div>
@@ -452,18 +452,18 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
       </section>
 
       {{/* Contact CTA */},
-  }
+  };
       <section className="px-4 sm:px-6 lg:px-8 py-20">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             viewport={{ once: true },
-  }
+  };
             className="className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 backdrop-blur-sm rounded-3xl p-12 border border-white/20";"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -510,32 +510,32 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
       </section>
 
       {{/* Service Detail Modal */},
-  }
+  };
       <AnimatePresence>
         {selectedService && (
   <motion.div;
             initial={{ opacity: 0 },
-  }
+  };
             animate={{ opacity: 1 },
-  }
+  };
             exit={{ opacity: 0 },
-  }
+  };
             className="className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4";"
             onClick={{onClick={closeModal},
   },
-  }
+  };
           >
             <motion.div;
               initial={{ scale: 0.9, opacity: 0 },
-  }
+  };
               animate={{ scale: 1, opacity: 1 },
-  }
+  };
               exit={{ scale: 0.9, opacity: 0 },
-  }
+  };
               className="className="bg-slate-800 rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto";"
               onClick={{onClick={(e) => e.stopPropagation()},
   },
-  }
+  };
             >
               <div className="p-8">
                 <div className="flex items-start justify-between mb-6">
@@ -543,7 +543,7 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
                   <button;
                     onClick={{onClick={closeModal},
   },
-  }
+  };
                     className="className="text-gray-400 hover:text-white transition-colors";"
                   >
                     <X className="w-6 h-6" />
@@ -617,11 +617,11 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
                           {selectedService.tags.map((tag: string, index: number) => (
   <span;
                               key={{index},
-  }
+  };
                               className="className="px-3 py-1 bg-blue-500/20 text-blue-300 text-sm rounded-full";"
                             >
                               {{tag},
-  }
+  };
                             </span>
                           ))}
                         </div>
@@ -633,11 +633,11 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
                           {selectedService.integrations.slice(0, 6).map((integration: string, index: number) => (
   <span;
                               key={{index},
-  }
+  };
                               className="className="px-3 py-1 bg-green-500/20 text-green-300 text-sm rounded-full";"
                             >
                               {{integration},
-  }
+  };
                             </span>
                           ))},
   {selectedService.integrations.length > 6 && (
@@ -652,7 +652,7 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
                         <h4 className="text-lg font-semibold text-white mb-3">Competitors</h4>
                         <div className="text-gray-300 text-sm">
                           {{selectedService.competitors.join(', ')},
-  }
+  };
                         </div>
                       </div>
                     </div>
@@ -690,4 +690,4 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
       </AnimatePresence>
     </div>
   )
-}
+};

@@ -6,15 +6,14 @@ interface AnalyticsEvent {
   timestamp: number,sessionId: string;
   userId?: string,
   pageUrl: string,userAgent: string,referrer: string
-}
+};
 
 interface PerformanceMetrics {
   fcp: number,lcp: number,fid: number,cls: number,ttfb: number,domLoad: number,windowLoad: number
-}
 
 interface UserBehavior {
   pageViews: number,sessionDuration: number,bounceRate: number,conversionRate: number,topPages: string[],userJourney: string[],
-  }
+  };
 
 export const AnalyticsMonitor: React.FC = () => {
   const [events, setEvents] = useState<AnalyticsEvent[]>([]);
@@ -28,7 +27,6 @@ const [sessionId] = useState(() => generateSessionId()),
   // Generate unique session ID
   function generateSessionId(): string {
     return 'session_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9)
-}
 
   // Track custom event
   const trackEvent = useCallback((category: string, action: string, label?: string, value?: number) => {
@@ -52,7 +50,6 @@ const [sessionId] = useState(() => generateSessionId()),
   // Generate unique event ID
   function generateEventId(): string {
     return 'event_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9)
-}
 
   // Send event to analytics service
   const sendToAnalytics = useCallback(async (event: AnalyticsEvent) => {
@@ -78,7 +75,6 @@ const events = storedEvents ? JSON.parse(storedEvents) : [];
       // Keep only last 1000 events
       if (events.length > 1000) {
         events.splice(0, events.length - 1000)
-}
       
       localStorage.setItem('analytics-events', JSON.stringify(events)),
     } catch (error) {
@@ -186,7 +182,7 @@ const lastEntry = entries[entries.length - 1];
       } catch (error) {
         console.warn('Performance monitoring not supported:', error)
 },
-  }
+  };
 
     // Fallback performance metrics
     const measurePerformance = () => {
@@ -375,4 +371,3 @@ const a = document.createElement('a');
       </div>
     </div>
   )
-};

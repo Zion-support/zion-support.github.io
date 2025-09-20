@@ -47,7 +47,7 @@ const handleChange = (e) => {
         </CardContent>
       </Card>
     )
-}
+};
 
   return (
     <Card className="bg-zion-blue-dark border-zion-purple/20 text-white">
@@ -216,4 +216,3 @@ const handleChange = (e) => {
       </CardContent>
     </Card>
   )
-};

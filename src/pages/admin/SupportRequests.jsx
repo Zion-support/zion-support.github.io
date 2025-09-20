@@ -45,22 +45,19 @@ const filteredRequests = MOCK_SUPPORT_REQUESTS.filter(request => {
             !request.user.toLowerCase().includes(searchQuery.toLowerCase()) &&;
             !request.id.toLowerCase().includes(searchQuery.toLowerCase())) {
   return false
-}
+};
         // Apply status filter;
         if (if (statusFilter && request.status !== statusFilter) {
   ) {
             return false
-}
         // Apply priority filter;
         if (if (priorityFilter && request.priority !== priorityFilter) {
   ) {
             return false
-}
         // Apply category filter;
         if (if (categoryFilter && request.category !== categoryFilter) {
   ) {
             return false
-}
         return true
 })
     // Count by status for the summary dashboard;
@@ -95,7 +92,7 @@ const resetFilters = () => {
         </div>
         ;
         {{/* Status Cards */},
-  }
+  };
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
           <Card>
             <CardHeader className="pb-2">
@@ -136,7 +133,7 @@ const resetFilters = () => {
           ;
           <TabsContent value="all" className="mt-6">
             {{/* Search and Filters */},
-  }
+  };
             <div className="flex flex-col md:flex-row gap-4 mb-6">
               <div className="relative flex-1">
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400"/>
@@ -188,7 +185,7 @@ const resetFilters = () => {
             </div>
             ;
             {{/* Support Requests Table */},
-  }
+  };
             <Card>
               <CardContent className="p-0">
                 <Table>
@@ -217,7 +214,7 @@ const resetFilters = () => {
                             ? 'secondary';
                             : 'outline'}>
                             {{request.status},
-  }
+  };
                           </Badge>
                         </TableCell>
                         <TableCell>
@@ -227,7 +224,7 @@ const resetFilters = () => {
                             ? 'default';
                             : 'outline'}>
                             {{request.priority},
-  }
+  };
                           </Badge>
                         </TableCell>
                         <TableCell>{request.category}</TableCell>
@@ -272,4 +269,3 @@ const resetFilters = () => {
           </TabsContent>
         </Tabs>
       </div>)
-}

@@ -81,10 +81,10 @@ const AIContentMarketingSuite: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-purple-dark">
       {{/* Hero Section */},
-  }
+  };
       <div className="relative overflow-hidden">
         {{/* Animated Background */},
-  }
+  };
         <div className="absolute inset-0">
           <div className="absolute inset-0 bg-[linear-gradient(rgba(34,221,210,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(34,221,210,0.1)_1px,transparent_1px)] bg-[size:50px_50px] animate-pulse"></div>
           <motion.div ;
@@ -94,22 +94,22 @@ const AIContentMarketingSuite: React.FC = () => {
               opacity: [[0.1, 0.3, 0.1],
   ],
   },
-  }
+  };
             transition={{
   duration: 4,repeat: Infinity,ease: "easeInOut"
 },
-  }
+  };
           />
         </div>
 
         <div className="relative container mx-auto px-4 py-24 text-center text-white">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             animate={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
           >
             <div className="flex items-center justify-center mb-6">
               <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mr-4">
@@ -144,18 +144,18 @@ const AIContentMarketingSuite: React.FC = () => {
       </div>
 
       {{/* Features Section */},
-  }
+  };
       <div className="relative py-24">
         <div className="container mx-auto px-4">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             viewport={{ once: true },
-  }
+  };
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
@@ -170,13 +170,13 @@ const AIContentMarketingSuite: React.FC = () => {
             {features.map((feature, index) => (
   <motion.div;
                 key={{index},
-  }
+  };
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.8, delay: index * 0.1 },
-  }
+  };
                 className="className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-zion-cyan/20 hover:border-zion-cyan/40 transition-all duration-300 group";"
               >
                 <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
@@ -189,7 +189,7 @@ const AIContentMarketingSuite: React.FC = () => {
   <li key={idx} className="flex items-center text-sm text-zion-cyan">
                       <CheckCircle className="w-4 h-4 mr-2" />
                       {{benefit},
-  }
+  };
                     </li>
                   ))}
                 </ul>
@@ -200,18 +200,18 @@ const AIContentMarketingSuite: React.FC = () => {
       </div>
 
       {{/* Content Types Section */},
-  }
+  };
       <div className="relative py-24">
         <div className="container mx-auto px-4">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             viewport={{ once: true },
-  }
+  };
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
@@ -226,13 +226,13 @@ const AIContentMarketingSuite: React.FC = () => {
             {contentTypes.map((content, index) => (
   <motion.div;
                 key={{index},
-  }
+  };
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.8, delay: index * 0.1 },
-  }
+  };
                 className="className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-zion-cyan/20 hover:border-zion-cyan/40 transition-all duration-300";"
               >
                 <div className="flex items-center mb-6">
@@ -247,7 +247,7 @@ const AIContentMarketingSuite: React.FC = () => {
   <li key={idx} className="flex items-center text-zion-cyan">
                       <CheckCircle className="w-4 h-4 mr-2" />
                       {{feature},
-  }
+  };
                     </li>
                   ))}
                 </ul>
@@ -258,16 +258,16 @@ const AIContentMarketingSuite: React.FC = () => {
       </div>
 
       {{/* Pricing Section */},
-  }
+  };
       <div className="relative py-24">
         <div className="container mx-auto px-4">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
@@ -282,13 +282,13 @@ const AIContentMarketingSuite: React.FC = () => {
             {pricingPlans.map((plan, index) => (
   <motion.div;
                 key={{index},
-  }
+  };
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.8, delay: index * 0.1 },
-  }
+  };
                 className={`relative bg-white/5 backdrop-blur-sm rounded-2xl p-8 border transition-all duration-300 ${
   plan.popular ;
                     ? 'border-zion-cyan/40 scale-105 shadow-lg shadow-zion-cyan/25' ;
@@ -317,7 +317,7 @@ const AIContentMarketingSuite: React.FC = () => {
   <li key={idx} className="flex items-center text-zion-slate-light">
                       <CheckCircle className="w-5 h-5 text-zion-cyan mr-3 flex-shrink-0" />
                       {{feature},
-  }
+  };
                     </li>
                   ))}
                 </ul>
@@ -339,16 +339,16 @@ const AIContentMarketingSuite: React.FC = () => {
       </div>
 
       {{/* CTA Section */},
-  }
+  };
       <div className="relative py-24">
         <div className="container mx-auto px-4">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             className="className="bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10 backdrop-blur-sm rounded-3xl p-12 border border-zion-cyan/20 text-center";"
           >
             <h3 className="text-3xl lg: text-4xl font-bold text-white mb-6">
@@ -381,5 +381,5 @@ const AIContentMarketingSuite: React.FC = () => {
       </div>
     </div>
   )
-}
+};
 export default AIContentMarketingSuite;

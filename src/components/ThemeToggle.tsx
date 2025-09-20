@@ -5,7 +5,7 @@ type Theme = 'light' | 'dark' | 'system',
 
 interface ThemeToggleProps {
   className?: string,
-}
+};
 
 export const ThemeToggle: React.FC<ThemeToggleProps> = ({ className = '' }) => {
   const [theme, setTheme] = useState<Theme>('system'),
@@ -25,7 +25,6 @@ const root = window.document.documentElement;
       root.classList.toggle('dark', systemTheme === 'dark')
 } else {
       root.classList.toggle('dark', theme === 'dark')
-}
     
     localStorage.setItem('theme', theme)
 }, [theme, mounted]),
@@ -47,7 +46,7 @@ const handleChange = () => {
     return (
       <div className="w-10 h-10 rounded-lg bg-gray-200 dark: bg-gray-700 animate-pulse" />
     )
-  }
+  };
 
   const themes: { value: Theme, label: string, icon: React.ComponentType<any> },
   [] = [
@@ -59,16 +58,16 @@ const handleChange = () => {
     <div className="relative">
       <motion.button
         whileHover={{ scale: 1.05 },
-  }
+  };
         whileTap={{ scale: 0.95 },
-  }
+  };
         className="relative w-10 h-10 rounded-lg bg-gray-100 dark: bg-gray-800 border border-gray-200 dark:border-gray-700 flex items-center justify-center text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
         onClick={() => {
           const currentIndex = themes.findIndex(t => t.value === theme);
 const nextIndex = (currentIndex + 1) % themes.length;
           setTheme(themes[nextIndex].value)
         },
-  }
+  };
         aria-label={`Current theme: ${theme}. Click to cycle through themes.`}
         title={`Current theme: ${theme}. Click to cycle through themes.`}
       >
@@ -76,13 +75,13 @@ const nextIndex = (currentIndex + 1) % themes.length;
           <motion.div
             key={theme}
             initial={{ opacity: 0, rotate: -90 },
-  }
+  };
             animate={{ opacity: 1, rotate: 0 },
-  }
+  };
             exit={{ opacity: 0, rotate: 90 },
-  }
+  };
             transition={{ duration: 0.2 },
-  }
+  };
             className="flex items-center justify-center"
           >
             {themes.find(t => t.value === theme)?.icon({ className: 'w-5 h-5' })}
@@ -96,7 +95,6 @@ const nextIndex = (currentIndex + 1) % themes.length;
       </div>
     </div>
   )
-}
 
 // Alternative dropdown version for more explicit theme selection
 export function ThemeToggleDropdown() {
@@ -118,7 +116,6 @@ const root = window.document.documentElement;
       root.classList.toggle('dark', systemTheme === 'dark')
 } else {
       root.classList.toggle('dark', theme === 'dark')
-}
     
     localStorage.setItem('theme', theme)
 }, [theme, mounted]),
@@ -127,7 +124,7 @@ const root = window.document.documentElement;
     return (
       <div className="w-32 h-10 rounded-lg bg-gray-200 dark: bg-gray-700 animate-pulse" />
     )
-  }
+  };
 
   const themes: { value: Theme, label: string, icon: React.ComponentType<any> },
   [] = [
@@ -152,13 +149,13 @@ const root = window.document.documentElement;
         {isOpen && (
           <motion.div
             initial={{ opacity: 0, y: -10, scale: 0.95 },
-  }
+  };
             animate={{ opacity: 1, y: 0, scale: 1 },
-  }
+  };
             exit={{ opacity: 0, y: -10, scale: 0.95 },
-  }
+  };
             transition={{ duration: 0.15 },
-  }
+  };
             className="absolute top-full right-0 mt-2 w-32 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg shadow-lg z-50"
           >
             {themes.map((themeOption) => (
@@ -168,7 +165,7 @@ const root = window.document.documentElement;
                   setTheme(themeOption.value);
                   setIsOpen(false)
 },
-  }
+  };
                 className={`w-full flex items-center space-x-2 px-3 py-2 text-left text-sm hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors ${
                   theme === themeOption.value
                     ? 'bg-blue-50 dark:bg-blue-900/20 text-blue-600 dark:text-blue-400'
@@ -184,4 +181,3 @@ const root = window.document.documentElement;
       </AnimatePresence>
     </div>
   )
-}

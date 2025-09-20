@@ -47,5 +47,5 @@ const AISEOAuditor: React.FC = () => {
       </section>
     </div>
   )
-}
+};
 export default AISEOAuditor;

@@ -138,7 +138,7 @@ export default function ServicesPricing() {
       <SEO title="Micro SAAS Services Pricing - Zion Tech Group" description="Transparent pricing for our comprehensive micro SAAS services. Choose from Starter, Professional, or Enterprise tiers to match your business needs and budget." keywords="micro SAAS pricing, service costs, AI services pricing, IT solutions pricing" url="https://ziontechgroup.com/services-pricing"/>
 
       {{/* Hero Section */},
-  }
+  };
       <div className="bg-gradient-to-r from-zion-purple to-zion-purple-dark py-20 px-4">
         <div className="container mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -162,7 +162,7 @@ export default function ServicesPricing() {
       </div>
 
       {{/* Contact Info Banner */},
-  }
+  };
       <div className="bg-zion-blue-dark py-4 px-4 border-b border-zion-blue-light">
         <div className="container mx-auto">
           <div className="flex flex-wrap items-center justify-center gap-6 text-zion-cyan text-sm">
@@ -189,7 +189,7 @@ export default function ServicesPricing() {
       </div>
 
       {{/* Pricing Tiers */},
-  }
+  };
       <div className="py-20 px-4">
         <div className="container mx-auto">
           <div className="text-center mb-16">
@@ -213,7 +213,7 @@ export default function ServicesPricing() {
                   <CardTitle className="text-2xl text-white mb-2">{tier.name}</CardTitle>
                   <CardDescription className="text-zion-slate-light mb-4">
                     {{tier.description},
-  }
+  };
                   </CardDescription>
                   <div className="mb-4">
                     <div className="text-3xl font-bold text-white">{tier.price}</div>
@@ -249,7 +249,7 @@ export default function ServicesPricing() {
       </div>
 
       {{/* Service Category Pricing */},
-  }
+  };
       <div className="py-20 px-4 bg-zion-blue-dark">
         <div className="container mx-auto">
           <div className="text-center mb-16">
@@ -280,7 +280,7 @@ export default function ServicesPricing() {
                     <div className="flex items-center gap-3 mb-6">
                       <div className="text-zion-cyan">
                         {{category.icon},
-  }
+  };
                       </div>
                       <h3 className="text-xl font-bold text-white">{category.name}</h3>
                     </div>
@@ -292,7 +292,7 @@ export default function ServicesPricing() {
                             <DollarSign className="w-4 h-4 text-zion-cyan"/>
                             <span className="text-white font-semibold">
                               {{service[selectedTier]?.toLocaleString()},
-  }
+  };
                             </span>
                           </div>
                         </div>))}
@@ -305,7 +305,7 @@ export default function ServicesPricing() {
       </div>
 
       {{/* Benefits Section */},
-  }
+  };
       <div className="py-20 px-4">
         <div className="container mx-auto">
           <div className="text-center mb-16">
@@ -321,7 +321,7 @@ export default function ServicesPricing() {
             {benefits.map((benefit, index) => (<div key={index} className="text-center p-6 rounded-lg border border-zion-blue-light bg-zion-blue-dark">
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-purple to-zion-purple-dark rounded-full flex items-center justify-center mx-auto mb-4 text-zion-cyan">
                   {{benefit.icon},
-  }
+  };
                 </div>
                 <h3 className="text-white font-semibold mb-3">{benefit.title}</h3>
                 <p className="text-zion-slate-light text-sm leading-relaxed">{benefit.description}</p>
@@ -331,7 +331,7 @@ export default function ServicesPricing() {
       </div>
 
       {{/* CTA Section */},
-  }
+  };
       <div className="bg-gradient-to-r from-zion-purple to-zion-purple-dark py-16 px-4">
         <div className="container mx-auto text-center">
           <h2 className="text-3xl font-bold text-white mb-4">
@@ -353,4 +353,4 @@ export default function ServicesPricing() {
         </div>
       </div>
     </div>)
-}
+};

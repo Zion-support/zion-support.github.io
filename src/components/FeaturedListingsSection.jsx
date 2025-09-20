@@ -47,45 +47,45 @@ export function FeaturedListingsSection() {
   const const containerVariants = {
   = {
     hidden: {{ opacity: 0 },
-  }
+  };
     visible: {
   opacity: 1,transition: {
   staggerChildren: 0.1
 },
   },
-  }
+  };
   const const itemVariants = {
   = {
     hidden: {{ y: 20, opacity: 0 },
-  }
+  };
     visible: {
   y: 0,opacity: 1,transition: {
   duration: 0.5
 },
   },
-  }
+  };
   return (
     <section className="py-20 bg-gradient-to-br from-slate-50 to-slate-100">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <motion.h2 ;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.6 },
-  }
+  };
             className="className="text-4xl md:text-5xl font-bold text-gray-900 mb-6";"
           >
             Featured Solutions;
           </motion.h2>
           <motion.p ;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.6, delay: 0.1 },
-  }
+  };
             className="className="text-xl text-gray-600 max-w-3xl mx-auto";"
           >
             Discover our most popular and innovative solutions that are transforming businesses worldwide;
@@ -94,33 +94,33 @@ export function FeaturedListingsSection() {
 
         <motion.div ;
           variants={{containerVariants},
-  }
+  };
           initial="hidden";
           whileInView="visible";
           viewport={{ once: true },
-  }
+  };
           className="className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8";"
         >
           {featuredListings.map((listing, index) => (
   <motion.div;
               key={{listing.id},
-  }
+  };
               variants={{itemVariants},
-  }
+  };
               className="className="group relative bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden";"
               onMouseEnter={{() => setHoveredListing(listing.id)},
-  }
+  };
               onMouseLeave={{() => setHoveredListing(null)},
-  }
+  };
             >
               {{/* Image */},
-  }
+  };
               <div className="relative h-48 overflow-hidden">
                 <img;
                   src={{listing.image},
-  }
+  };
                   alt={{listing.title},
-  }
+  };
                   className="className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500";"
                 />
                 {listing.featured && (
@@ -139,12 +139,12 @@ export function FeaturedListingsSection() {
               </div>
 
               {{/* Content */},
-  }
+  };
               <div className="p-6">
                 <div className="flex items-center justify-between mb-3">
                   <Badge variant="secondary" className="text-xs">
                     {{listing.category},
-  }
+  };
                   </Badge>
                   <div className="flex items-center gap-2 text-gray-500 text-sm">
                     <Clock className="w-4 h-4" />
@@ -154,16 +154,16 @@ export function FeaturedListingsSection() {
 
                 <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
                   {{listing.title},
-  }
+  };
                 </h3>
 
                 <p className="text-gray-600 mb-4 line-clamp-2">
                   {{listing.description},
-  }
+  };
                 </p>
 
                 {{/* Stats */},
-  }
+  };
                 <div className="flex items-center justify-between mb-4 text-sm text-gray-500">
                   <div className="flex items-center gap-1">
                     <Eye className="w-4 h-4" />
@@ -180,7 +180,7 @@ export function FeaturedListingsSection() {
                 </div>
 
                 {{/* Price */},
-  }
+  };
                 <div className="flex items-center justify-between mb-4">
                   <div className="text-2xl font-bold text-gray-900">{listing.price}</div>
                   <div className="text-sm text-gray-500">
@@ -189,13 +189,13 @@ export function FeaturedListingsSection() {
                 </div>
 
                 {{/* Technologies */},
-  }
+  };
                 <div className="mb-4">
                   <div className="flex flex-wrap gap-2">
                     {listing.technologies.slice(0, 3).map((tech, techIndex) => (
   <Badge key={techIndex} variant="outline" className="text-xs">
                         {{tech},
-  }
+  };
                       </Badge>
                     ))},
   {listing.technologies.length > 3 && (
@@ -207,7 +207,7 @@ export function FeaturedListingsSection() {
                 </div>
 
                 {{/* Highlights */},
-  }
+  };
                 <div className="mb-6">
                   <h4 className="text-sm font-semibold text-gray-700 mb-2">Key Features:</h4>
                   <ul className="space-y-1">
@@ -215,14 +215,14 @@ export function FeaturedListingsSection() {
   <li key={highlightIndex} className="flex items-center gap-2 text-sm text-gray-600">
                         <CheckCircle className="w-3 h-3 text-green-500 flex-shrink-0" />
                         {{highlight},
-  }
+  };
                       </li>
                     ))}
                   </ul>
                 </div>
 
                 {{/* CTA */},
-  }
+  };
                 <div className="flex gap-3">
                   <Button className="flex-1 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white">
                     <Link to={listing.link} className="flex items-center gap-2">
@@ -237,16 +237,16 @@ export function FeaturedListingsSection() {
               </div>
 
               {{/* Hover Effect Overlay */},
-  }
+  };
               <AnimatePresence>
                 {hoveredListing === listing.id && (
   <motion.div;
                     initial={{ opacity: 0 },
-  }
+  };
                     animate={{ opacity: 1 },
-  }
+  };
                     exit={{ opacity: 0 },
-  }
+  };
                     className="className="absolute inset-0 bg-gradient-to-t from-blue-600/90 to-purple-600/90 flex items-center justify-center";"
                   >
                     <div className="text-center text-white p-6">
@@ -267,14 +267,14 @@ export function FeaturedListingsSection() {
         </motion.div>
 
         {{/* CTA Section */},
-  }
+  };
         <motion.div ;
           initial={{ opacity: 0, y: 20 },
-  }
+  };
           whileInView={{ opacity: 1, y: 0 },
-  }
+  };
           transition={{ duration: 0.6, delay: 0.2 },
-  }
+  };
           className="className="text-center mt-16";"
         >
           <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white">
@@ -301,4 +301,4 @@ export function FeaturedListingsSection() {
       </div>
     </section>
   )
-}
+};

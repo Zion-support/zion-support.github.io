@@ -7,5 +7,5 @@ const,
       <UltimateZionServicesShowcase />
     </div>
   )
-}
+};
 export default UltimateZionServicesLanding

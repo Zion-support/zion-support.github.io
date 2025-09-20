@@ -187,7 +187,7 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
       'Robotics & Automation': <Bot className="w-6 h-6" />
     }
     return iconMap[category] || <Star className="w-6 h-6" />
-}
+};
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -198,17 +198,17 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
       />
 
       {{/* Hero Section */},
-  }
+  };
       <section className="relative py-20 px-4 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
         <div className="relative max-w-7xl mx-auto text-center">
           <motion.h1 ;
             initial={{ opacity: 0, y: 30 },
-  }
+  };
             animate={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             className="className="text-5xl md:text-7xl font-bold text-white mb-6";"
           >
             <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
@@ -220,11 +220,11 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
           ;
           <motion.p ;
             initial={{ opacity: 0, y: 30 },
-  }
+  };
             animate={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8, delay: 0.2 },
-  }
+  };
             className="className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto";"
           >
             Discover the future of technology with our cutting-edge AI, quantum computing, space technology, and emerging tech services. Transform your business with Zion Tech Group's innovative solutions.;
@@ -232,11 +232,11 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
 
           <motion.div ;
             initial={{ opacity: 0, y: 30 },
-  }
+  };
             animate={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8, delay: 0.4 },
-  }
+  };
             className="className="flex flex-col sm:flex-row gap-4 justify-center items-center";"
           >
             <Link;
@@ -255,14 +255,14 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
           </motion.div>
 
           {{/* Contact Information */},
-  }
+  };
           <motion.div ;
             initial={{ opacity: 0, y: 30 },
-  }
+  };
             animate={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8, delay: 0.6 },
-  }
+  };
             className="className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto";"
           >
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
@@ -292,18 +292,18 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
       </section>
 
       {{/* Services Overview */},
-  }
+  };
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <motion.div ;
             initial={{ opacity: 0, y: 30 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             viewport={{ once: true },
-  }
+  };
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -316,24 +316,24 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
           </motion.div>
 
           {{/* Service Categories */},
-  }
+  };
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mb-16">
             {categories.slice(1).map((category, index) => (
   <motion.div;
                 key={{category.id},
-  }
+  };
                 initial={{ opacity: 0, y: 30 },
-  }
+  };
                 whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.6, delay: index * 0.1 },
-  }
+  };
                 viewport={{ once: true },
-  }
+  };
                 className={`bg-gradient-to-br ${category.color} p-6 rounded-2xl text-white cursor-pointer transform transition-all duration-300 hover:scale-105 hover:shadow-2xl`}
                 onClick={{onClick={() => setActiveCategory(category.id)},
   },
-  }
+  };
               >
                 <div className="text-4xl mb-3">{category.icon}</div>
                 <h3 className="font-semibold text-lg mb-2">{category.name}</h3>
@@ -343,16 +343,16 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
           </div>
 
           {{/* Search and Filter */},
-  }
+  };
           <motion.div ;
             initial={{ opacity: 0, y: 30 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             viewport={{ once: true },
-  }
+  };
             className="className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 mb-12";"
           >
             <div className="flex flex-col md:flex-row gap-4">
@@ -362,17 +362,17 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
                   type="text";
                   placeholder="Search services...";
                   value={{searchTerm},
-  }
+  };
                   onChange={{(e) => setSearchTerm(e.target.value)},
-  }
+  };
                   className="className="w-full pl-10 pr-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent";"
                 />
               </div>
               <select;
                 value={{sortBy},
-  }
+  };
                 onChange={{(e) => setSortBy(e.target.value)},
-  }
+  };
                 className="className="px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent";"
               >
                 <option value="rating">Sort by Rating</option>
@@ -384,29 +384,29 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
           </motion.div>
 
           {{/* Services Grid */},
-  }
+  };
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {sortedServices.map((service, index) => (
   <motion.div;
                 key={{service.id},
-  }
+  };
                 initial={{ opacity: 0, y: 30 },
-  }
+  };
                 whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.6, delay: index * 0.1 },
-  }
+  };
                 viewport={{ once: true },
-  }
+  };
                 className="className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:border-cyan-500/50 transition-all duration-300 transform hover:scale-105";"
               >
                 <div className="flex items-center justify-between mb-4">
                   <div className="flex items-center gap-3">
                     {{getCategoryIcon(service.category)},
-  }
+  };
                     <span className="text-sm text-gray-300 bg-white/10 px-2 py-1 rounded-full">
                       {{service.category},
-  }
+  };
                     </span>
                   </div>
                   <div className="flex items-center gap-1">
@@ -424,7 +424,7 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
                     <span className="text-cyan-400 font-semibold">
                       {service.currency},
   {{service.price.toLocaleString()},
-  }
+  };
                     </span>
                   </div>
                   <div className="flex items-center justify-between">
@@ -445,11 +445,11 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
                   {service.tags.slice(0, 3).map((tag, tagIndex) => (
   <span;
                       key={{tagIndex},
-  }
+  };
                       className="className="text-xs bg-white/10 text-gray-300 px-2 py-1 rounded-full";"
                     >
                       {{tag},
-  }
+  };
                     </span>
                   ))}
                 </div>
@@ -473,16 +473,16 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
           </div>
 
           {{/* Call to Action */},
-  }
+  };
           <motion.div ;
             initial={{ opacity: 0, y: 30 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             viewport={{ once: true },
-  }
+  };
             className="className="text-center mt-20";"
           >
             <div className="bg-gradient-to-r from-cyan-600/20 to-purple-600/20 rounded-3xl p-12 border border-white/20">
@@ -515,7 +515,6 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
       </section>
     </div>
   )
-}
 
 // Helper component for DNA icon;
 function Dna({ className }: { className?: string }) {
@@ -524,4 +523,3 @@ function Dna({ className }: { className?: string }) {
       <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
     </svg>
   )
-}

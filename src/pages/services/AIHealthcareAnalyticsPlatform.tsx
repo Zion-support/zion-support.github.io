@@ -427,16 +427,16 @@ const AIHealthcareAnalyticsPlatform = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       {{/* Hero Section */},
-  }
+  };
       <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             animate={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             className="className="text-center";"
           >
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-pink-500 to-red-600 text-white text-sm font-medium mb-6">
@@ -456,9 +456,9 @@ const AIHealthcareAnalyticsPlatform = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button;
                 whileHover={{ scale: 1.05 },
-  }
+  };
                 whileTap={{ scale: 0.95 },
-  }
+  };
                 className="className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-pink-500 to-red-600 text-white font-semibold rounded-lg hover:from-pink-600 hover:to-red-700 transition-all duration-200";"
               >
                 <Play className="w-5 h-5 mr-2" />
@@ -466,9 +466,9 @@ const AIHealthcareAnalyticsPlatform = () => {
               </motion.button>
               <motion.button;
                 whileHover={{ scale: 1.05 },
-  }
+  };
                 whileTap={{ scale: 0.95 },
-  }
+  };
                 className="className="inline-flex items-center px-8 py-4 border-2 border-zion-slate-light text-zion-slate-light font-semibold rounded-lg hover:bg-zion-slate-light hover:text-zion-slate-dark transition-all duration-200";"
               >
                 <Settings className="w-5 h-5 mr-2" />
@@ -480,20 +480,20 @@ const AIHealthcareAnalyticsPlatform = () => {
       </section>
 
       {{/* Key Metrics Section */},
-  }
+  };
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-zion-slate-dark/50">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {keyMetrics.map((item, index) => (
   <motion.div;
                 key={{index},
-  }
+  };
                 initial={{ opacity: 0, scale: 0.8 },
-  }
+  };
                 whileInView={{ opacity: 1, scale: 1 },
-  }
+  };
                 transition={{ duration: 0.6, delay: index * 0.1 },
-  }
+  };
                 className="className="text-center";"
               >
                 <div className="text-4xl md:text-5xl font-bold text-pink-400 mb-2">{item.metric}</div>
@@ -505,16 +505,16 @@ const AIHealthcareAnalyticsPlatform = () => {
       </section>
 
       {{/* Features Section */},
-  }
+  };
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             className="className="text-center mb-16";"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -529,13 +529,13 @@ const AIHealthcareAnalyticsPlatform = () => {
             {features.map((feature, index) => (
   <motion.div;
                 key={{index},
-  }
+  };
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.6, delay: index * 0.1 },
-  }
+  };
                 className="className="bg-zion-slate-dark/80 backdrop-blur-sm rounded-xl p-6 border border-zion-slate-light/20 hover:border-zion-slate-light/40 transition-all duration-300";"
               >
                 <div className="w-12 h-12 bg-gradient-to-r from-pink-500 to-red-600 rounded-lg flex items-center justify-center mb-4">
@@ -550,16 +550,16 @@ const AIHealthcareAnalyticsPlatform = () => {
       </section>
 
       {{/* Benefits Section */},
-  }
+  };
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-zion-slate-dark/50">
         <div className="max-w-7xl mx-auto">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             className="className="text-center mb-16";"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -574,13 +574,13 @@ const AIHealthcareAnalyticsPlatform = () => {
             {benefits.map((benefit, index) => (
   <motion.div;
                 key={{index},
-  }
+  };
                 initial={{ opacity: 0, x: -20 },
-  }
+  };
                 whileInView={{ opacity: 1, x: 0 },
-  }
+  };
                 transition={{ duration: 0.6, delay: index * 0.1 },
-  }
+  };
                 className="className="flex items-start space-x-3";"
               >
                 <CheckCircle className="w-6 h-6 text-pink-400 mt-1 flex-shrink-0" />
@@ -592,16 +592,16 @@ const AIHealthcareAnalyticsPlatform = () => {
       </section>
 
       {{/* Use Cases Section */},
-  }
+  };
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             className="className="text-center mb-16";"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -616,13 +616,13 @@ const AIHealthcareAnalyticsPlatform = () => {
             {useCases.map((useCase, index) => (
   <motion.div;
                 key={{index},
-  }
+  };
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.6, delay: index * 0.1 },
-  }
+  };
                 className="className="bg-zion-slate-dark/80 backdrop-blur-sm rounded-xl p-6 border border-zion-slate-light/20";"
               >
                 <h3 className="text-xl font-semibold text-white mb-3">{useCase.industry}</h3>
@@ -634,16 +634,16 @@ const AIHealthcareAnalyticsPlatform = () => {
       </section>
 
       {{/* Compliance Standards Section */},
-  }
+  };
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-zion-slate-dark/50">
         <div className="max-w-7xl mx-auto">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             className="className="text-center mb-16";"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -658,13 +658,13 @@ const AIHealthcareAnalyticsPlatform = () => {
             {complianceStandards.map((standard, index) => (
   <motion.div;
                 key={{index},
-  }
+  };
                 initial={{ opacity: 0, scale: 0.8 },
-  }
+  };
                 whileInView={{ opacity: 1, scale: 1 },
-  }
+  };
                 transition={{ duration: 0.6, delay: index * 0.1 },
-  }
+  };
                 className="className="bg-zion-slate-dark/80 backdrop-blur-sm rounded-lg p-3 border border-zion-slate-light/20 text-center hover:border-pink-400/40 transition-all duration-300";"
               >
                 <span className="text-zion-slate-light font-medium text-sm">{standard}</span>
@@ -675,16 +675,16 @@ const AIHealthcareAnalyticsPlatform = () => {
       </section>
 
       {{/* Pricing Section */},
-  }
+  };
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             className="className="text-center mb-16";"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -699,13 +699,13 @@ const AIHealthcareAnalyticsPlatform = () => {
             {pricing.map((plan, index) => (
   <motion.div;
                 key={{index},
-  }
+  };
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.6, delay: index * 0.1 },
-  }
+  };
                 className={`bg-zion-slate-dark/80 backdrop-blur-sm rounded-xl p-6 border ${
   index === 1 ;
                     ? 'border-pink-500/50 bg-gradient-to-b from-pink-500/10 to-transparent' ;
@@ -739,16 +739,16 @@ const AIHealthcareAnalyticsPlatform = () => {
       </section>
 
       {{/* Integrations Section */},
-  }
+  };
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-zion-slate-dark/50">
         <div className="max-w-7xl mx-auto">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             className="className="text-center mb-16";"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -763,13 +763,13 @@ const AIHealthcareAnalyticsPlatform = () => {
             {integrations.map((integration, index) => (
   <motion.div;
                 key={{index},
-  }
+  };
                 initial={{ opacity: 0, scale: 0.8 },
-  }
+  };
                 whileInView={{ opacity: 1, scale: 1 },
-  }
+  };
                 transition={{ duration: 0.6, delay: index * 0.1 },
-  }
+  };
                 className="className="bg-zion-slate-dark/80 backdrop-blur-sm rounded-lg p-4 border border-zion-slate-light/20 text-center hover:border-zion-slate-light/40 transition-all duration-300";"
               >
                 <span className="text-zion-slate-light font-medium text-sm">{integration}</span>
@@ -780,16 +780,16 @@ const AIHealthcareAnalyticsPlatform = () => {
       </section>
 
       {{/* CTA Section */},
-  }
+  };
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Ready to Transform Healthcare?;
@@ -800,9 +800,9 @@ const AIHealthcareAnalyticsPlatform = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button;
                 whileHover={{ scale: 1.05 },
-  }
+  };
                 whileTap={{ scale: 0.95 },
-  }
+  };
                 className="className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-pink-500 to-red-600 text-white font-semibold rounded-lg hover:from-pink-600 hover:to-red-700 transition-all duration-200";"
               >
                 <ArrowRight className="w-5 h-5 mr-2" />
@@ -810,9 +810,9 @@ const AIHealthcareAnalyticsPlatform = () => {
               </motion.button>
               <motion.button;
                 whileHover={{ scale: 1.05 },
-  }
+  };
                 whileTap={{ scale: 0.95 },
-  }
+  };
                 className="className="inline-flex items-center px-8 py-4 border-2 border-zion-slate-light text-zion-slate-light font-semibold rounded-lg hover:bg-zion-slate-light hover:text-zion-slate-dark transition-all duration-200";"
               >
                 <MessageSquare className="w-5 h-5 mr-2" />
@@ -824,16 +824,16 @@ const AIHealthcareAnalyticsPlatform = () => {
       </section>
 
       {{/* Contact Section */},
-  }
+  };
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-zion-slate-dark/50">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
           >
             <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">
               Get in Touch;
@@ -876,5 +876,5 @@ const AIHealthcareAnalyticsPlatform = () => {
       </section>
     </div>
   )
-}
+};
 export default AIHealthcareAnalyticsPlatform;

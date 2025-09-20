@@ -71,22 +71,22 @@ export function ServicesOverview() {
   return (
     <div className="py-20 bg-futuristic relative overflow-hidden">
       {{/* Background effects */},
-  }
+  };
       <div className="absolute inset-0 opacity-10">
         <div className="cyber-grid w-full h-full"></div>
       </div>
 
       <div className="container-responsive relative z-10">
         {{/* Header */},
-  }
+  };
         <motion.div;
           className="className="text-center mb-16";"
           initial={{ opacity: 0, y: 20 },
-  }
+  };
           whileInView={{ opacity: 1, y: 0 },
-  }
+  };
           transition={{ duration: 0.6 },
-  }
+  };
         >
           <h1 className="heading-responsive font-bold mb-6">
             <span className="text-gradient neon-text-cyan">Comprehensive Technology</span>
@@ -101,48 +101,48 @@ export function ServicesOverview() {
         </motion.div>
 
         {{/* Service Categories Grid */},
-  }
+  };
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mb-16">
           {serviceCategories.map((category, index) => (
   <motion.div;
               key={{category.id},
-  }
+  };
               className="className="group";"
               initial={{ opacity: 0, y: 30 },
-  }
+  };
               whileInView={{ opacity: 1, y: 0 },
-  }
+  };
               transition={{ duration: 0.6, delay: index * 0.1 },
-  }
+  };
               whileHover={{ y: -10 },
-  }
+  };
             >
               <Link to={`/services/${category.id}`} className="block">
                 <div className="card-futuristic h-full hover:border-zion-cyan/50 transition-all duration-300">
                   {{/* Category Icon */},
-  }
+  };
                   <div className={`w-16 h-16 bg-gradient-to-r ${category.color} rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300`}>
                     <category.icon className="w-8 h-8 text-white" />
                   </div>
 
                   {{/* Category Info */},
-  }
+  };
                   <h3 className="text-lg font-bold text-white mb-2 group-hover:text-zion-cyan transition-colors duration-300 text-center">
                     {{category.name},
-  }
+  };
                   </h3>
 
                   <p className="text-zion-slate-light text-sm text-center mb-4 leading-relaxed">
                     {{category.description},
-  }
+  };
                   </p>
 
                   {{/* Service Count */},
-  }
+  };
                   <div className="text-center">
                     <div className="text-2xl font-bold text-zion-cyan mb-1">
                       {{category.services.length},
-  }
+  };
                     </div>
                     <div className="text-xs text-zion-slate-light">
                       Services Available;
@@ -150,7 +150,7 @@ export function ServicesOverview() {
                   </div>
 
                   {{/* Hover Arrow */},
-  }
+  };
                   <div className="absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     <ArrowRight className="w-5 h-5 text-zion-cyan" />
                   </div>
@@ -161,15 +161,15 @@ export function ServicesOverview() {
         </div>
 
         {{/* Featured Services */},
-  }
+  };
         <motion.div;
           className="className="mb-16";"
           initial={{ opacity: 0, y: 20 },
-  }
+  };
           whileInView={{ opacity: 1, y: 0 },
-  }
+  };
           transition={{ duration: 0.6 },
-  }
+  };
         >
           <h2 className="heading-responsive font-bold mb-8 text-center">
             <span className="text-gradient neon-text-purple">Featured Services</span>
@@ -179,26 +179,26 @@ export function ServicesOverview() {
             {INNOVATIVE_MICRO_SAAS_SERVICES_2025.slice(0, 6).map((service, index) => (
   <motion.div;
                 key={{service.id},
-  }
+  };
                 className="className="card-futuristic group";"
                 initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 },
-  }
+  };
                 whileInView={{ opacity: 1, x: 0 },
-  }
+  };
                 transition={{ duration: 0.6, delay: index * 0.1 },
-  }
+  };
                 whileHover={{ y: -5 },
-  }
+  };
               >
                 <div className="flex items-start justify-between mb-4">
                   <div className="flex-1">
                     <h3 className="text-xl font-bold text-white mb-2 group-hover:text-zion-cyan transition-colors duration-300">
                       {{service.title},
-  }
+  };
                     </h3>
                     <p className="text-zion-slate-light leading-relaxed mb-3">
                       {{service.description},
-  }
+  };
                     </p>
                   </div>
                   <div className="text-right ml-4">
@@ -216,7 +216,7 @@ export function ServicesOverview() {
                         : 'bg-zion-purple/20 text-zion-purple'
 }`}>
                       {{service.innovationLevel},
-  }
+  };
                     </span>
                   </div>
 
@@ -227,7 +227,7 @@ export function ServicesOverview() {
                     </div>
                     <div className="text-zion-slate-light">
                       Market: {{service.marketPrice},
-  }
+  };
                     </div>
                   </div>
                 </div>
@@ -258,15 +258,15 @@ export function ServicesOverview() {
         </motion.div>
 
         {{/* CTA Section */},
-  }
+  };
         <motion.div;
           className="className="text-center";"
           initial={{ opacity: 0, y: 30 },
-  }
+  };
           whileInView={{ opacity: 1, y: 0 },
-  }
+  };
           transition={{ duration: 0.8 },
-  }
+  };
         >
           <div className="bg-gradient-to-r from-zion-cyan/10 via-zion-purple/10 to-zion-blue/10 rounded-2xl p-12 border border-zion-cyan/20">
             <h2 className="heading-responsive font-bold mb-6">
@@ -296,7 +296,7 @@ export function ServicesOverview() {
             </div>
 
             {{/* Contact Info Grid */},
-  }
+  };
             <div className="grid grid-cols-1 md: grid-cols-3 gap-6 max-w-4xl mx-auto">
               <div className="text-center p-4 rounded-xl bg-zion-slate-light/5 border border-zion-cyan/20">
                 <MapPin className="w-8 h-8 text-zion-cyan mx-auto mb-2" />
@@ -326,4 +326,4 @@ export function ServicesOverview() {
       </div>
     </div>
   )
-}
+};

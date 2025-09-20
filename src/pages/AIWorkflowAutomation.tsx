@@ -408,7 +408,7 @@ export default function AIWorkflowAutomation() {
   return (
     <div className="min-h-screen bg-futuristic">
       {{/* Hero Section */},
-  }
+  };
       <section className="relative pt-32 pb-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-zion-cyan/20 via-zion-purple/20 to-zion-blue/20"></div>
         <div className="absolute inset-0">
@@ -419,20 +419,20 @@ export default function AIWorkflowAutomation() {
         <div className="container-responsive relative z-10">
           <motion.div;
             initial={{ opacity: 0, y: 30 },
-  }
+  };
             animate={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             className="className="text-center max-w-4xl mx-auto";"
           >
             <motion.div;
               initial={{ opacity: 0, scale: 0.8 },
-  }
+  };
               animate={{ opacity: 1, scale: 1 },
-  }
+  };
               transition={{ duration: 0.8, delay: 0.2 },
-  }
+  };
               className="className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl mb-8";"
             >
               <Brain className="w-10 h-10 text-white" />
@@ -467,16 +467,16 @@ export default function AIWorkflowAutomation() {
       </section>
 
       {{/* Workflow Benefits */},
-  }
+  };
       <section className="py-20 bg-zion-blue-dark/50">
         <div className="container-responsive">
           <motion.div;
             initial={{ opacity: 0, y: 30 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">AI Workflow Automation Benefits</h2>
@@ -489,13 +489,13 @@ export default function AIWorkflowAutomation() {
             {workflowBenefits.map((benefit, index) => (
   <motion.div;
                 key={{benefit.title},
-  }
+  };
                 initial={{ opacity: 0, y: 30 },
-  }
+  };
                 whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.6, delay: index * 0.1 },
-  }
+  };
                 className="className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-8 hover:border-zion-cyan/40 transition-all duration-300";"
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-6">
@@ -521,16 +521,16 @@ export default function AIWorkflowAutomation() {
       </section>
 
       {{/* Workflow Technologies */},
-  }
+  };
       <section className="py-20">
         <div className="container-responsive">
           <motion.div;
             initial={{ opacity: 0, y: 30 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">Workflow Technologies We Support</h2>
@@ -543,13 +543,13 @@ export default function AIWorkflowAutomation() {
             {workflowTechnologies.map((technology, index) => (
   <motion.div;
                 key={{technology.name},
-  }
+  };
                 initial={{ opacity: 0, y: 30 },
-  }
+  };
                 whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.6, delay: index * 0.1 },
-  }
+  };
                 className="className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 text-center hover:border-zion-cyan/40 transition-all duration-300";"
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-6">
@@ -576,16 +576,16 @@ export default function AIWorkflowAutomation() {
       </section>
 
       {{/* Process Section */},
-  }
+  };
       <section className="py-20 bg-zion-blue-dark/50">
         <div className="container-responsive">
           <motion.div;
             initial={{ opacity: 0, y: 30 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">Our AI Workflow Implementation Process</h2>
@@ -598,13 +598,13 @@ export default function AIWorkflowAutomation() {
             {processSteps.map((step, index) => (
   <motion.div;
                 key={{step.step},
-  }
+  };
                 initial={{ opacity: 0, y: 30 },
-  }
+  };
                 whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.6, delay: index * 0.1 },
-  }
+  };
                 className="className="text-center";"
               >
                 <div className="relative mb-6">
@@ -613,7 +613,7 @@ export default function AIWorkflowAutomation() {
                   </div>
                   <div className="absolute -top-2 -right-2 w-8 h-8 bg-zion-blue rounded-full flex items-center justify-center text-white text-sm font-bold">
                     {{step.step},
-  }
+  };
                   </div>
                 </div>
 
@@ -621,7 +621,7 @@ export default function AIWorkflowAutomation() {
                 <p className="text-zion-slate-light mb-4 leading-relaxed">{step.description}</p>
                 <span className="inline-block px-3 py-1 bg-zion-cyan/20 text-zion-cyan text-sm rounded-full border border-zion-cyan/30">
                   {{step.duration},
-  }
+  };
                 </span>
               </motion.div>
             ))}
@@ -630,16 +630,16 @@ export default function AIWorkflowAutomation() {
       </section>
 
       {{/* Solutions Section */},
-  }
+  };
       <section className="py-20">
         <div className="container-responsive">
           <motion.div;
             initial={{ opacity: 0, y: 30 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">AI Workflow Automation Solutions</h2>
@@ -649,15 +649,15 @@ export default function AIWorkflowAutomation() {
           </motion.div>
 
           {{/* Category Filter */},
-  }
+  };
           <div className="flex flex-wrap justify-center gap-4 mb-12">
             {categories.map((category) => (
   <button;
                 key={{category},
-  }
+  };
                 onClick={{onClick={() => setSelectedCategory(category)},
   },
-  }
+  };
                 className={`px-6 py-3 rounded-xl font-semibold transition-all duration-300 ${
   selectedCategory === category;
                     ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg shadow-zion-cyan/25';
@@ -665,7 +665,7 @@ export default function AIWorkflowAutomation() {
 }`}
               >
                 {{category},
-  }
+  };
               </button>
             ))}
           </div>
@@ -674,17 +674,17 @@ export default function AIWorkflowAutomation() {
             {filteredSolutions.map((solution, index) => (
   <motion.div;
                 key={{solution.id},
-  }
+  };
                 initial={{ opacity: 0, y: 30 },
-  }
+  };
                 whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.6, delay: index * 0.1 },
-  }
+  };
                 className="className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300 cursor-pointer";"
                 onClick={{onClick={() => setSelectedSolution(solution)},
   },
-  }
+  };
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mb-6">
                   <solution.icon className="w-8 h-8 text-white" />
@@ -706,11 +706,11 @@ export default function AIWorkflowAutomation() {
                   {solution.technologies.slice(0, 2).map((tech, techIndex) => (
   <span;
                       key={{techIndex},
-  }
+  };
                       className="className="px-2 py-1 bg-zion-purple/20 text-zion-purple text-xs rounded border border-zion-purple/30";"
                     >
                       {{tech},
-  }
+  };
                     </span>
                   ))}
                 </div>
@@ -723,7 +723,7 @@ export default function AIWorkflowAutomation() {
                 <div className="flex items-center justify-between">
                   <span className="px-3 py-1 bg-zion-cyan/20 text-zion-cyan text-xs rounded-full border border-zion-cyan/30">
                     {{solution.category},
-  }
+  };
                   </span>
                   <button className="inline-flex items-center gap-2 text-zion-cyan hover:text-white transition-colors duration-300">
                     <span className="text-sm font-medium">Learn More</span>
@@ -737,16 +737,16 @@ export default function AIWorkflowAutomation() {
       </section>
 
       {{/* Success Stories */},
-  }
+  };
       <section className="py-20 bg-zion-blue-dark/50">
         <div className="container-responsive">
           <motion.div;
             initial={{ opacity: 0, y: 30 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">AI Workflow Automation Success Stories</h2>
@@ -759,19 +759,19 @@ export default function AIWorkflowAutomation() {
             {successStories.map((story, index) => (
   <motion.div;
                 key={{story.id},
-  }
+  };
                 initial={{ opacity: 0, y: 30 },
-  }
+  };
                 whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.6, delay: index * 0.1 },
-  }
+  };
                 className="className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300";"
               >
                 <div className="flex items-center gap-4 mb-6">
                   <div className="w-12 h-12 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center text-white font-bold text-lg">
                     {{story.logo},
-  }
+  };
                   </div>
                   <div>
                     <h3 className="text-xl font-bold text-white">{story.company}</h3>
@@ -807,16 +807,16 @@ export default function AIWorkflowAutomation() {
       </section>
 
       {{/* CTA Section */},
-  }
+  };
       <section className="py-20 bg-gradient-to-r from-zion-cyan/10 via-zion-purple/10 to-zion-blue/10">
         <div className="container-responsive">
           <motion.div;
             initial={{ opacity: 0, y: 30 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             className="className="text-center max-w-4xl mx-auto";"
           >
             <h2 className="text-4xl font-bold text-white mb-6">Ready to Automate Your Workflows?</h2>
@@ -844,4 +844,4 @@ export default function AIWorkflowAutomation() {
       </section>
     </div>
   )
-}
+};

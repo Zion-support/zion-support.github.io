@@ -1,16 +1,15 @@
 export interface SpecializedITInfrastructureService {
   id: string,title: string,description: string,category: string,subcategory: string,price: number,currency: string,pricingModel: string,features: string[],benefits: string[],useCases: string[],targetAudience: string[],tags: string[],estimatedDelivery: string,supportLevel: string,marketPrice: string,roi: string,innovationLevel: string,contactInfo: {
   phone: string,email: string,website: string
-}
+};
   technicalSpecs?: {
   technology: string[],integrations: string[],apiEndpoints: number,uptime: string,security: string[[],
   ],
-  }
+  };
   competitors?: string[]
   marketSize?: string;
   demoUrl?: string;
   documentationUrl?: string
-}
 
 export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2025: SpecializedITInfrastructureService[] = [
   // Cloud-Native Infrastructure Platform;
@@ -53,16 +52,14 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2025: SpecializedITInfrastru
     estimatedDelivery: "8-12 weeks",supportLevel: "enterprise",marketPrice: "$2,499 - $7,999/month";
     roi: "250-400%",innovationLevel: "Advanced",contactInfo: {
   phone: "+1 302 464 0950",email: "kleber@ziontechgroup.com",website: "https://ziontechgroup.com"
-}
     technicalSpecs: {
   technology: ["Kubernetes", "Docker", "Terraform", "Ansible", "Prometheus", "Grafana"]
       integrations: ["AWS", "Azure", "Google Cloud", "GitHub", "GitLab", "Jenkins"]
       apiEndpoints: 200,uptime: "99.95%",security: [["RBAC", "Network policies", "Secrets management", "Compliance tools"],
   ],
-  }
+  };
     competitors: ["AWS EKS", "Azure AKS", "Google GKE", "Red Hat OpenShift"]
     marketSize: "$42.8B (2025)",demoUrl: "https://ziontechgroup.com/demo/cloud-native-infrastructure",documentationUrl: "https://ziontechgroup.com/docs/cloud-native-infrastructure"
-}
   // Edge Computing Infrastructure;
   {
   id: "edge-computing-infrastructure",title: "Edge Computing Infrastructure Platform",description: "Advanced edge computing platform that brings computation and data storage closer to data sources, reducing latency and improving performance.";
@@ -103,16 +100,14 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2025: SpecializedITInfrastru
     estimatedDelivery: "10-16 weeks",supportLevel: "premium",marketPrice: "$1,899 - $5,999/month";
     roi: "200-350%",innovationLevel: "Advanced",contactInfo: {
   phone: "+1 302 464 0950",email: "kleber@ziontechgroup.com",website: "https://ziontechgroup.com"
-}
     technicalSpecs: {
   technology: ["Kubernetes Edge", "Docker", "MQTT", "WebRTC", "React", "Node.js"]
       integrations: ["IoT platforms", "Cloud services", "5G networks", "Edge devices", "Custom protocols"]
       apiEndpoints: 150,uptime: "99.9%",security: [["TLS 1.3", "Edge authentication", "Data encryption", "Access control"],
   ],
-  }
+  };
     competitors: ["AWS Greengrass", "Azure IoT Edge", "Google Cloud IoT Edge", "FogHorn"]
     marketSize: "$28.9B (2025)",demoUrl: "https://ziontechgroup.com/demo/edge-computing",documentationUrl: "https://ziontechgroup.com/docs/edge-computing"
-}
   // Hybrid Cloud Management Platform;
   {
   id: "hybrid-cloud-management",title: "Hybrid Cloud Management Platform",description: "Comprehensive platform for managing and orchestrating workloads across multiple cloud environments and on-premises infrastructure.",category: "IT Infrastructure",subcategory: "Cloud Management",price: 2999,currency: "$",pricingModel: "monthly",features: [
@@ -152,16 +147,14 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2025: SpecializedITInfrastru
     estimatedDelivery: "12-20 weeks",supportLevel: "enterprise",marketPrice: "$2,999 - $9,999/month";
     roi: "300-500%",innovationLevel: "Advanced",contactInfo: {
   phone: "+1 302 464 0950",email: "kleber@ziontechgroup.com",website: "https://ziontechgroup.com"
-}
     technicalSpecs: {
   technology: ["Kubernetes", "Terraform", "Ansible", "Prometheus", "React", "Node.js"]
       integrations: ["AWS", "Azure", "Google Cloud", "VMware", "OpenStack", "Custom platforms"]
       apiEndpoints: 250,uptime: "99.95%",security: [["Zero-trust architecture", "Multi-cloud security", "Compliance automation", "Audit logging"],
   ],
-  }
+  };
     competitors: ["VMware vRealize", "Red Hat CloudForms", "RightScale", "Scalr"]
     marketSize: "$35.6B (2025)",demoUrl: "https://ziontechgroup.com/demo/hybrid-cloud-management",documentationUrl: "https://ziontechgroup.com/docs/hybrid-cloud-management"
-}
   // Network Security Infrastructure;
   {
   id: "network-security-infrastructure",title: "Advanced Network Security Infrastructure",description: "Comprehensive network security platform that provides next-generation firewall, intrusion detection, and threat prevention capabilities.";
@@ -202,16 +195,14 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2025: SpecializedITInfrastru
     estimatedDelivery: "8-12 weeks",supportLevel: "enterprise",marketPrice: "$2,199 - $6,999/month";
     roi: "250-400%",innovationLevel: "Advanced",contactInfo: {
   phone: "+1 302 464 0950",email: "kleber@ziontechgroup.com",website: "https://ziontechgroup.com"
-}
     technicalSpecs: {
   technology: ["Linux", "Snort", "Suricata", "React", "Node.js", "PostgreSQL"]
       integrations: ["SIEM systems", "Active Directory", "LDAP", "RADIUS", "Custom platforms"]
       apiEndpoints: 180,uptime: "99.99%",security: [["SOC 2", "ISO 27001", "FIPS 140-2", "Real-time monitoring"],
   ],
-  }
+  };
     competitors: ["Palo Alto Networks", "Cisco", "Fortinet", "Check Point"]
     marketSize: "$38.9B (2025)",demoUrl: "https://ziontechgroup.com/demo/network-security",documentationUrl: "https://ziontechgroup.com/docs/network-security"
-}
   // Data Center Infrastructure Management;
   {
   id: "data-center-infrastructure-management",title: "Data Center Infrastructure Management Platform",description: "Intelligent platform for managing data center operations, optimizing resource utilization, and ensuring high availability and performance.";
@@ -252,16 +243,14 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2025: SpecializedITInfrastru
     estimatedDelivery: "16-24 weeks",supportLevel: "enterprise",marketPrice: "$3,499 - $12,999/month";
     roi: "300-500%",innovationLevel: "Advanced",contactInfo: {
   phone: "+1 302 464 0950",email: "kleber@ziontechgroup.com",website: "https://ziontechgroup.com"
-}
     technicalSpecs: {
   technology: ["Python", "Kubernetes", "Prometheus", "Grafana", "React", "Node.js"]
       integrations: ["VMware", "Hyper-V", "OpenStack", "Hardware APIs", "Monitoring tools"]
       apiEndpoints: 300,uptime: "99.99%",security: [["SOC 2 Type II", "Data center security", "Access control", "Audit logging"],
   ],
-  }
+  };
     competitors: ["VMware vCenter", "Microsoft System Center", "OpenStack", "CloudStack"]
     marketSize: "$52.3B (2025)",demoUrl: "https://ziontechgroup.com/demo/data-center-management",documentationUrl: "https://ziontechgroup.com/docs/data-center-management"
-}
   // Storage Infrastructure Platform;
   {
   id: "storage-infrastructure-platform",title: "Intelligent Storage Infrastructure Platform",description: "Advanced storage platform that provides intelligent data management, automated tiering, and high-performance storage solutions.";
@@ -302,16 +291,14 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2025: SpecializedITInfrastru
     estimatedDelivery: "12-20 weeks",supportLevel: "enterprise",marketPrice: "$2,799 - $8,999/month";
     roi: "250-400%",innovationLevel: "Advanced",contactInfo: {
   phone: "+1 302 464 0950",email: "kleber@ziontechgroup.com",website: "https://ziontechgroup.com"
-}
     technicalSpecs: {
   technology: ["Python", "Ceph", "ZFS", "React", "Node.js", "PostgreSQL"]
       integrations: ["VMware", "Hyper-V", "Cloud platforms", "Backup software", "Custom systems"]
       apiEndpoints: 220,uptime: "99.99%",security: [["SOC 2", "Data encryption", "Access control", "Audit trails"],
   ],
-  }
+  };
     competitors: ["NetApp", "Dell EMC", "HPE", "Pure Storage"]
     marketSize: "$45.7B (2025)",demoUrl: "https://ziontechgroup.com/demo/storage-infrastructure",documentationUrl: "https://ziontechgroup.com/docs/storage-infrastructure"
-}
   // Network Performance Monitoring;
   {
   id: "network-performance-monitoring",title: "Network Performance Monitoring Platform",description: "Comprehensive network monitoring platform that provides real-time visibility, performance analytics, and automated troubleshooting.";
@@ -352,16 +339,14 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2025: SpecializedITInfrastru
     estimatedDelivery: "6-10 weeks",supportLevel: "premium",marketPrice: "$1,599 - $4,999/month";
     roi: "200-350%",innovationLevel: "Advanced",contactInfo: {
   phone: "+1 302 464 0950",email: "kleber@ziontechgroup.com",website: "https://ziontechgroup.com"
-}
     technicalSpecs: {
   technology: ["Python", "SNMP", "NetFlow", "React", "Node.js", "Time-series databases"]
       integrations: ["Network devices", "SNMP agents", "NetFlow collectors", "Monitoring tools", "Custom APIs"]
       apiEndpoints: 140,uptime: "99.9%",security: [["SOC 2", "Data encryption", "Access control", "Network security"],
   ],
-  }
+  };
     competitors: ["SolarWinds", "PRTG", "Nagios", "Zabbix"]
     marketSize: "$24.8B (2025)",demoUrl: "https://ziontechgroup.com/demo/network-monitoring",documentationUrl: "https://ziontechgroup.com/docs/network-monitoring"
-}
   // Infrastructure Automation Platform;
   {
   id: "infrastructure-automation-platform",title: "Infrastructure Automation Platform",description: "Comprehensive platform for automating infrastructure provisioning, configuration management, and operational tasks across hybrid environments.";
@@ -402,16 +387,14 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2025: SpecializedITInfrastru
     estimatedDelivery: "10-16 weeks",supportLevel: "enterprise",marketPrice: "$1,999 - $6,999/month";
     roi: "250-400%",innovationLevel: "Advanced",contactInfo: {
   phone: "+1 302 464 0950",email: "kleber@ziontechgroup.com",website: "https://ziontechgroup.com"
-}
     technicalSpecs: {
   technology: ["Ansible", "Terraform", "Chef", "Puppet", "React", "Node.js"]
       integrations: ["Cloud platforms", "Virtualization", "Configuration tools", "Monitoring systems", "Custom APIs"]
       apiEndpoints: 180,uptime: "99.9%",security: [["SOC 2", "Access control", "Audit logging", "Policy enforcement"],
   ],
-  }
+  };
     competitors: ["Ansible", "Terraform", "Chef", "Puppet"]
     marketSize: "$31.2B (2025)",demoUrl: "https://ziontechgroup.com/demo/infrastructure-automation",documentationUrl: "https://ziontechgroup.com/docs/infrastructure-automation"
-}
   // Disaster Recovery Infrastructure;
   {
   id: "disaster-recovery-infrastructure",title: "Disaster Recovery Infrastructure Platform",description: "Comprehensive disaster recovery platform that provides automated backup, replication, and recovery capabilities for business continuity.";
@@ -452,13 +435,12 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2025: SpecializedITInfrastru
     estimatedDelivery: "12-20 weeks",supportLevel: "enterprise",marketPrice: "$2,599 - $8,999/month";
     roi: "300-500%",innovationLevel: "Advanced",contactInfo: {
   phone: "+1 302 464 0950",email: "kleber@ziontechgroup.com",website: "https://ziontechgroup.com"
-}
     technicalSpecs: {
   technology: ["Python", "Backup software", "Replication tools", "React", "Node.js", "PostgreSQL"]
       integrations: ["Backup systems", "Storage platforms", "Cloud services", "Monitoring tools", "Custom APIs"]
       apiEndpoints: 200,uptime: "99.99%",security: [["SOC 2", "Data encryption", "Access control", "Audit logging"],
   ],
-  }
+  };
     competitors: ["Veeam", "Commvault", "Veritas", "Dell EMC"]
     marketSize: "$38.9B (2025)",demoUrl: "https://ziontechgroup.com/demo/disaster-recovery",documentationUrl: "https://ziontechgroup.com/docs/disaster-recovery"
 },

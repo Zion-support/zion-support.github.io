@@ -8,7 +8,7 @@ interface ApiResponse<T = any> {
   error?: string;
   message?: string;
   count?: number
-}
+};
 
 // Generic API error;
 class ApiError extends Error {
@@ -16,7 +16,7 @@ class ApiError extends Error {
   super(message)
     this.name = 'ApiError'
 },
-  }
+  };
 
 
 
@@ -24,7 +24,6 @@ interface ApiClientOptions {
   method?: string;
   body?: string;
   headers: Record<string, string>
-}
 
 export async function apiClient(endpoint: string, options: ApiClientOptions = { headers: {},
   }) {
@@ -37,12 +36,11 @@ const const config: RequestInit = {
   'Content-Type': 'application/json';
       ...headers
 },
-  }
+  };
 
   if (if (body) {
   ) {
     config.body = body
-}
 
   try {
   const response = await fetch(endpoint, config)
@@ -57,7 +55,7 @@ const const config: RequestInit = {
   console.error('API request failed:', error)
     throw error
 },
-  }
+  };
 
 export const const api = {
   = {
@@ -73,9 +71,8 @@ export const const api = {
   delete: (endpoint: string, headers?: Record<string, string>) => ;
     apiClient(endpoint, { method: 'DELETE', headers: headers || {},
   })
-}
 // Export types for use in components;
 export type {{ ApiResponse },
-  }
+  };
 export {{ ApiError },
-  }
+  };

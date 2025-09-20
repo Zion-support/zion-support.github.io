@@ -73,7 +73,7 @@ const priceRange = getPriceRange(service.price)
     if (price < 5000) return 'medium';
     if (price < 15000) return 'high';
     return 'premium'
-}
+};
 
   const getPriceRangeColor = (range: string) => {
   switch (range) {
@@ -83,7 +83,7 @@ const priceRange = getPriceRange(service.price)
       case 'premium': return 'bg-purple-100 text-purple-800';
       default: return 'bg-gray-100 text-gray-800'
 },
-  }
+  };
   const getInnovationColor = (level: string) => {
   switch (level) {
   case 'high': return 'from-purple-500 to-pink-500';
@@ -91,7 +91,7 @@ const priceRange = getPriceRange(service.price)
       case 'low': return 'from-green-500 to-emerald-500';
       default: return 'from-gray-500 to-slate-500'
 },
-  }
+  };
   const getCategoryIcon = (category: string) => {
   switch (category) {
   case 'AI/ML': return Brain;
@@ -102,7 +102,7 @@ const priceRange = getPriceRange(service.price)
       case 'Development': return Code;
       default: return Globe
 },
-  }
+  };
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO ;
@@ -111,17 +111,17 @@ const priceRange = getPriceRange(service.price)
       />
       ;
       {{/* Hero Section */},
-  }
+  };
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             animate={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             className="className="text-center";"
           >
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
@@ -153,58 +153,58 @@ const priceRange = getPriceRange(service.price)
       </div>
 
       {{/* Search and Filters */},
-  }
+  };
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {{/* Search */},
-  }
+  };
             <div className="relative">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
               <input;
                 type="text";
                 placeholder="Search services...";
                 value={{searchTerm},
-  }
+  };
                 onChange={{(e) => setSearchTerm(e.target.value)},
-  }
+  };
                 className="className="w-full pl-10 pr-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent";"
               />
             </div>
 
             {{/* Category Filter */},
-  }
+  };
             <div>
               <select;
                 value={{selectedCategory},
-  }
+  };
                 onChange={{(e) => setSelectedCategory(e.target.value)},
-  }
+  };
                 className="className="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent";"
               >
                 {categories.map(category => (
   <option key={category} value={category} className="bg-slate-800 text-white">
                     {{category === 'all' ? 'All Categories' : category},
-  }
+  };
                   </option>
                 ))}
               </select>
             </div>
 
             {{/* Price Range Filter */},
-  }
+  };
             <div>
               <select;
                 value={{selectedPriceRange},
-  }
+  };
                 onChange={{(e) => setSelectedPriceRange(e.target.value)},
-  }
+  };
                 className="className="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent";"
               >
                 {priceRanges.map(range => (
   <option key={range.value} value={range.value} className="bg-slate-800 text-white">
                     {{range.label},
-  }
+  };
                   </option>
                 ))}
               </select>
@@ -214,7 +214,7 @@ const priceRange = getPriceRange(service.price)
       </div>
 
       {{/* Services Grid */},
-  }
+  };
       <section id="services" className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -230,17 +230,17 @@ const priceRange = getPriceRange(service.price)
             {filteredServices.map((service, index) => (
   <motion.div;
                 key={{service.id},
-  }
+  };
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 animate={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.5, delay: index * 0.1 },
-  }
+  };
                 className="className="bg-slate-800/50 border border-white/10 rounded-xl p-6 hover:border-indigo-500/50 transition-all duration-300 group";"
               >
                 {{/* Service Header */},
-  }
+  };
                 <div className="flex items-start justify-between mb-4">
                   <div className="flex items-center space-x-3">
                     <div className={`w-12 h-12 bg-gradient-to-r ${getInnovationColor(service.innovationLevel)} rounded-lg flex items-center justify-center`}>
@@ -248,7 +248,7 @@ const priceRange = getPriceRange(service.price)
                     </div>
                     <div>
                       <span className="text-gray-400">APIs:</span> {{service.technicalSpecs.apiEndpoints},
-  }
+  };
                     </div>
                   </div>
                 </div>
@@ -259,26 +259,26 @@ const priceRange = getPriceRange(service.price)
   <div className="mb-4 p-3 bg-white/5 rounded-lg">
                     <div className="text-xs text-gray-300">
                       <span className="text-gray-400">Market Size:</span> {{service.marketSize},
-  }
+  };
                     </div>
                   </div>
                 )},
   {{/* Contact and CTA */},
-  }
+  };
                 <div className="border-t border-white/20 pt-4">
                   <div className="flex items-center justify-between mb-3">
                     <div className="text-sm text-gray-400">
                       <div className="flex items-center">
                         <Clock className="w-4 h-4 mr-1" />
                         {{service.estimatedDelivery},
-  }
+  };
                       </div>
                     </div>
                     <div className="text-sm text-gray-400">
                       <div className="flex items-center">
                         <Target className="w-4 h-4 mr-1" />
                         {{service.supportLevel},
-  }
+  };
                       </div>
                     </div>
                   </div>
@@ -299,7 +299,7 @@ const priceRange = getPriceRange(service.price)
       </section>
 
       {{/* Contact Information */},
-  }
+  };
       <section className="py-16 px-4 sm: px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -362,4 +362,3 @@ const priceRange = getPriceRange(service.price)
       </section>
     </div>
   )
-}

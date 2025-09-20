@@ -81,13 +81,13 @@ export default function EnhancedServicesPage() {
         return <Zap className="w-5 h-5" />;
       default: return <Code className="w-5 h-5" />
     },
-  }
+  };
   const getPriceRange = (price: number) => {
   if (price <= 2000) return 'basic';
     if (price <= 8000) return 'professional';
     if (price <= 25000) return 'enterprise';
     return 'premium'
-}
+};
 
   return (
     <div className="min-h-screen bg-background">
@@ -99,7 +99,7 @@ export default function EnhancedServicesPage() {
       />
 
       {{/* Hero Section */},
-  }
+  };
       <div className="bg-gradient-to-r from-zion-blue to-zion-purple text-white py-20">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-6xl font-bold mb-6">
@@ -129,7 +129,7 @@ export default function EnhancedServicesPage() {
       </div>
 
       {{/* Pricing Tiers Overview */},
-  }
+  };
       <section className="py-16 bg-zion-blue-dark">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-white text-center mb-12">
@@ -142,7 +142,7 @@ export default function EnhancedServicesPage() {
                   <CardTitle className="text-zion-cyan capitalize">{tier}</CardTitle>
                   <CardDescription className="text-zion-slate-light">
                     {{info.range},
-  }
+  };
                   </CardDescription>
                 </CardHeader>
                 <CardContent className="text-center">
@@ -155,7 +155,7 @@ export default function EnhancedServicesPage() {
       </section>
 
       {{/* Services Overview & Benefits */},
-  }
+  };
       <section className="py-16 bg-zion-blue">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-white text-center mb-12">
@@ -238,7 +238,7 @@ export default function EnhancedServicesPage() {
       </section>
 
       {{/* Search and Filters */},
-  }
+  };
       <section className="py-8 bg-zion-blue">
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row gap-4">
@@ -247,9 +247,9 @@ export default function EnhancedServicesPage() {
               <Input;
                 placeholder="Search services, technologies, or keywords...";
                 value={{searchTerm},
-  }
+  };
                 onChange={{(e) => setSearchTerm(e.target.value)},
-  }
+  };
                 className="className="pl-10 bg-zion-blue-dark border-zion-blue-light text-white placeholder:text-zion-slate-light";"
               />
             </div>
@@ -262,7 +262,7 @@ export default function EnhancedServicesPage() {
                 {ENHANCED_SERVICE_CATEGORIES.map(category => (
   <SelectItem key={category.value} value={category.value}>
                     {{category.label},
-  }
+  };
                   </SelectItem>
                 ))}
               </SelectContent>
@@ -284,7 +284,7 @@ export default function EnhancedServicesPage() {
       </section>
 
       {{/* Services Grid */},
-  }
+  };
       <section id="services-grid" className="py-16 bg-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
@@ -303,10 +303,10 @@ export default function EnhancedServicesPage() {
                   <div className="flex items-start justify-between mb-4">
                     <div className="flex items-center gap-2">
                       {{getCategoryIcon(service.category)},
-  }
+  };
                       <Badge variant={getPriceRange(service.price) === 'enterprise' ? 'default' : 'secondary'}>
                         {{getPriceRange(service.price)},
-  }
+  };
                       </Badge>
                     </div>
                     {service.featured && (
@@ -318,7 +318,7 @@ export default function EnhancedServicesPage() {
                   <CardTitle className="text-xl mb-2">{service.title}</CardTitle>
                   <CardDescription className="text-sm text-zion-slate">
                     {{service.description},
-  }
+  };
                   </CardDescription>
                 </CardHeader>
                 <CardContent className="space-y-4">
@@ -332,11 +332,11 @@ export default function EnhancedServicesPage() {
                       <div className="text-2xl font-bold text-zion-blue">
                         {service.currency},
   {{service.price?.toLocaleString()},
-  }
+  };
                       </div>
                       <div className="text-sm text-zion-slate">
                         {{service.availability},
-  }
+  };
                       </div>
                     </div>
                   </div>
@@ -345,7 +345,7 @@ export default function EnhancedServicesPage() {
                     {service.tags.slice(0, 3).map((tag, index) => (
   <Badge key={index} variant="outline" className="text-xs">
                         {{tag},
-  }
+  };
                       </Badge>
                     ))}
                   </div>
@@ -354,12 +354,12 @@ export default function EnhancedServicesPage() {
                     <div className="flex items-center gap-1">
                       <Globe className="w-4 h-4" />
                       {{service.location},
-  }
+  };
                     </div>
                     <div className="flex items-center gap-1">
                       <TrendingUp className="w-4 h-4" />
                       AI Score: {{service.aiScore},
-  }
+  };
                     </div>
                   </div>
 
@@ -383,7 +383,7 @@ export default function EnhancedServicesPage() {
       </section>
 
       {{/* Service Categories Tabs */},
-  }
+  };
       <section className="py-16 bg-zion-blue">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-white text-center mb-12">
@@ -394,13 +394,13 @@ export default function EnhancedServicesPage() {
               {ENHANCED_SERVICE_CATEGORIES.slice(0, 6).map(category => (
   <TabsTrigger;
                   key={{category.value},
-  }
+  };
                   value={{category.value},
-  }
+  };
                   className="className="text-zion-slate-light data-[state=active]:text-zion-cyan";"
                 >
                   {{category.label},
-  }
+  };
                 </TabsTrigger>
               ))}
             </TabsList>
@@ -424,7 +424,7 @@ export default function EnhancedServicesPage() {
                             <span className="text-zion-cyan font-bold">
                               {service.currency},
   {{service.price?.toLocaleString()},
-  }
+  };
                             </span>
                             <Button;
                               size="sm";
@@ -445,7 +445,7 @@ export default function EnhancedServicesPage() {
       </section>
 
       {{/* Benefits Section */},
-  }
+  };
       <section className="py-16 bg-zion-blue-dark">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-white text-center mb-12">
@@ -493,7 +493,7 @@ export default function EnhancedServicesPage() {
       </section>
 
       {{/* Contact Section */},
-  }
+  };
       <section id="contact-section" className="py-16 bg-zion-blue">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
@@ -552,7 +552,7 @@ export default function EnhancedServicesPage() {
                 className="className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10";"
                 onClick={{onClick={() => window.open(CONTACT_INFO.website, '_blank')},
   },
-  }
+  };
               >
                 <ExternalLink className="w-5 h-5 mr-2" />
                 Visit Website;
@@ -576,4 +576,3 @@ export default function EnhancedServicesPage() {
       </section>
     </div>
   )
-}

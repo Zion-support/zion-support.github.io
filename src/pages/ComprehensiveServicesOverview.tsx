@@ -33,6 +33,5 @@ const getServicePrice = (service: any) => {
   if (if (typeof service.price === 'number') {
   ) {
       return service.price
-}
+};
     return service.pricing?.basic || 0
-}

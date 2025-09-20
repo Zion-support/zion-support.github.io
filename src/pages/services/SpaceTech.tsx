@@ -133,17 +133,17 @@ const SpaceTech = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {{/* Hero Section */},
-  }
+  };
       <section className="relative pt-32 pb-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 to-pink-500/10"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             animate={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             className="className="text-center";"
           >
             <div className="inline-flex items-center px-4 py-2 bg-purple-500/10 border border-purple-500/20 rounded-full text-purple-400 text-sm font-medium mb-6">
@@ -176,16 +176,16 @@ const SpaceTech = () => {
       </section>
 
       {{/* Features Section */},
-  }
+  };
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
@@ -201,13 +201,13 @@ const SpaceTech = () => {
             {features.map((feature, index) => (
   <motion.div;
                 key={{index},
-  }
+  };
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.5, delay: index * 0.1 },
-  }
+  };
                 className="className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-purple-500/30 transition-all duration-200";"
               >
                 <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mb-4">
@@ -222,16 +222,16 @@ const SpaceTech = () => {
       </section>
 
       {{/* Services Section */},
-  }
+  };
       <section className="py-20 bg-slate-800/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
@@ -256,7 +256,7 @@ const SpaceTech = () => {
       </section>
 
       {{/* Benefits Section */},
-  }
+  };
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -273,7 +273,7 @@ const SpaceTech = () => {
   <li key={index} className="flex items-center text-gray-300">
                     <div className="w-2 h-2 bg-purple-400 rounded-full mr-3"></div>
                     {{benefit},
-  }
+  };
                   </li>
                 ))}
               </ul>
@@ -298,7 +298,7 @@ const SpaceTech = () => {
       </section>
 
       {{/* CTA Section */},
-  }
+  };
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -320,16 +320,16 @@ const SpaceTech = () => {
       </section>
 
       {{/* CTA Section */},
-  }
+  };
       <section className="py-20 bg-gradient-to-r from-purple-500/10 to-pink-500/10">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
           >
             <h2 className="text-4xl font-bold text-white mb-4">
               Launch Your Space Project Today;
@@ -352,5 +352,5 @@ const SpaceTech = () => {
       </section>
     </div>
   )
-}
+};
 export default SpaceTech;

@@ -6,4 +6,4 @@ export default function CommunityRoutes() {
       <Route path="" element={<CommunityPage />} />
     </>
   )
-}
+};

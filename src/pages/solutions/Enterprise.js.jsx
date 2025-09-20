@@ -57,7 +57,7 @@ const EnterpriseSolutions = () => {
   ]
     return (<div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
       {{/* Header Section */},
-  }
+  };
       <div className="pt-32 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent mb-6">
@@ -79,7 +79,7 @@ const EnterpriseSolutions = () => {
       </div>
 
       {{/* Core Solutions */},
-  }
+  };
       <div className="px-4 sm:px-6 lg:px-8 pb-16">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
@@ -119,7 +119,7 @@ const EnterpriseSolutions = () => {
       </div>
 
       {{/* Industry Solutions */},
-  }
+  };
       <div className="px-4 sm:px-6 lg:px-8 pb-16">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
@@ -151,7 +151,7 @@ const EnterpriseSolutions = () => {
       </div>
 
       {{/* Benefits Section */},
-  }
+  };
       <div className="px-4 sm: px-6 lg:px-8 pb-16">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
@@ -185,7 +185,7 @@ const EnterpriseSolutions = () => {
       </div>
 
       {{/* CTA Section */},
-  }
+  };
       <div className="px-4 sm: px-6 lg:px-8 pb-16">
         <div className="max-w-4xl mx-auto text-center">
           <div className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 rounded-2xl p-12 border border-cyan-500/30">
@@ -207,5 +207,5 @@ const EnterpriseSolutions = () => {
         </div>
       </div>
     </div>)
-}
+};
 export default EnterpriseSolutions;

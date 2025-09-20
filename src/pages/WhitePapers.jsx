@@ -29,18 +29,18 @@ const WhitePapers = () => {
 						{whitePapers.map((paper, index) => (
   <div;
 								key={{index},
-  }
+  };
 								className="className="bg-slate-800/50 border border-white/10 rounded-xl p-6 hover: border-blue-500/50 transition-all duration-300";"
 							>
 								<div className="flex items-center justify-between mb-4">
 									<span className="px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full text-sm font-medium">
 										{{paper.category},
-  }
+  };
 									</span>
 									<div className="flex items-center text-gray-400 text-sm">
 										<Download className="w-4 h-4 mr-1" />
 										{{paper.downloadCount},
-  }
+  };
 									</div>
 								</div>
 								<h3 className="text-xl font-semibold text-white mb-3">{paper.title}</h3>
@@ -49,12 +49,12 @@ const WhitePapers = () => {
 									<div className="flex items-center">
 										<User className="w-4 h-4 mr-1" />
 										{{paper.author},
-  }
+  };
 									</div>
 									<div className="flex items-center">
 										<Calendar className="w-4 h-4 mr-1" />
 										{{paper.date},
-  }
+  };
 									</div>
 								</div>
 								<Link;
@@ -71,6 +71,6 @@ const WhitePapers = () => {
 			</section>
 		</div>
 	)
-}
+};
 
 export default WhitePapers;

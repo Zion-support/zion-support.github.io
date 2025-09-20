@@ -59,17 +59,17 @@ export default function AffiliateTracking() {
       />
 
       {{/* Hero */},
-  }
+  };
       <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-zion-blue-dark/20 to-zion-purple/20" />
         <div className="relative max-w-7xl mx-auto">
           <motion.h1;
             initial={{ opacity: 0, y: 30 },
-  }
+  };
             animate={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.6 },
-  }
+  };
             className="className="text-4xl md:text-6xl font-bold text-white mb-6";"
           >
             Affiliate Tracking Platform;
@@ -95,22 +95,22 @@ export default function AffiliateTracking() {
       </section>
 
       {{/* Feature grid */},
-  }
+  };
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((f) => (
   <motion.div;
                 key={{f.title},
-  }
+  };
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                 viewport={{ once: true },
-  }
+  };
                 transition={{ duration: 0.4 },
-  }
+  };
                 className="className="bg-zion-slate-dark/30 border border-zion-blue-light/20 rounded-2xl p-6 hover:border-zion-purple/50";"
               >
                 <div className="flex items-start gap-3">
@@ -127,7 +127,7 @@ export default function AffiliateTracking() {
       </section>
 
       {{/* Market context */},
-  }
+  };
       <section className="py-8 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto bg-gradient-to-br from-zion-blue-dark/30 to-zion-purple/30 border border-zion-blue-light/20 rounded-2xl p-6">
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
@@ -143,33 +143,33 @@ export default function AffiliateTracking() {
           </div>
           <p className="text-zion-slate-light mt-3 text-sm">
             Typical affiliate platforms range from $49–$299/month for SMBs and $500–$1,500+/month for enterprise, depending on partner counts and features. For reference, see pricing from providers like{{' '},
-  }
+  };
             <a className="text-zion-cyan hover:text-zion-cyan-light" href="https://tapfiliate.com/pricing/" target="_blank" rel="noreferrer">Tapfiliate</a>,{{' '},
-  }
+  };
             <a className="text-zion-cyan hover:text-zion-cyan-light" href="https://firstpromoter.com/pricing" target="_blank" rel="noreferrer">FirstPromoter</a> and{{' '},
-  }
+  };
             <a className="text-zion-cyan hover:text-zion-cyan-light" href="https://postaffiliatepro.com/pricing/" target="_blank" rel="noreferrer">Post Affiliate Pro</a>.;
           </p>
         </div>
       </section>
 
       {{/* Plans */},
-  }
+  };
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {plans.map((plan, i) => (
   <motion.div;
                 key={{plan.name},
-  }
+  };
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                 viewport={{ once: true },
-  }
+  };
                 transition={{ duration: 0.5, delay: i * 0.05 },
-  }
+  };
                 className={`relative rounded-2xl p-8 ${i === 1 ? 'bg-gradient-to-br from-zion-purple/20 to-zion-cyan/20 border-2 border-zion-purple' : 'bg-zion-slate-dark/30 border border-zion-blue-light/20'}`}
               >
                 {i === 1 && (
@@ -205,7 +205,7 @@ export default function AffiliateTracking() {
       </section>
 
       {{/* CTA */},
-  }
+  };
       <section className="py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto bg-zion-purple/20 border border-zion-purple/30 rounded-2xl p-6 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
           <div>
@@ -224,7 +224,7 @@ export default function AffiliateTracking() {
       </section>
 
       {{/* References */},
-  }
+  };
       <section className="py-8 px-4 sm: px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <h3 className="text-white text-lg font-semibold mb-4">Helpful links</h3>
@@ -249,6 +249,6 @@ export default function AffiliateTracking() {
       </section>
     </div>
   )
-}
+};
 
 // Duplicate leftover block removed;

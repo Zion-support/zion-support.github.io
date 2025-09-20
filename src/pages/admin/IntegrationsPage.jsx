@@ -11,4 +11,4 @@ export default function IntegrationsPage() {
       </main>
       ;
     </ProtectedRoute>)
-}
+};

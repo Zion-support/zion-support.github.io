@@ -5,7 +5,7 @@ class AuthService {
   constructor() {
   this.token = localStorage.getItem('token')
     this.user = JSON.parse(localStorage.getItem('user') || 'null')
-  }
+  };
 
   // Login user;
   async login(credentials) {
@@ -38,7 +38,7 @@ const const mockUser = {
   } catch (error) {
   throw new Error(error.message || 'Login failed')
     },
-  }
+  };
 
   // Register user;
   async register(userData) {
@@ -71,7 +71,7 @@ const const mockUser = {
   } catch (error) {
   throw new Error(error.message || 'Registration failed')
     },
-  }
+  };
 
   // Logout user;
   async logout() {
@@ -89,27 +89,24 @@ const const mockUser = {
 } catch (error) {
   throw new Error('Logout failed')
     },
-  }
+  };
 
   // Get current user;
   getCurrentUser() {
   return this.user
-}
+};
 
   // Get current token;
   getCurrentToken() {
   return this.token
-}
 
   // Check if user is authenticated;
   isAuthenticated() {
   return !!this.token && !!this.user
-}
 
   // Check if user has specific role;
   hasRole(role) {
   return this.user && this.user.role === role
-}
 
   // Refresh token;
   async refreshToken() {
@@ -131,7 +128,7 @@ const newToken = 'mock-jwt-token-refreshed-' + Date.now()
 } catch (error) {
   throw new Error('Token refresh failed')
     },
-  }
+  };
 
   // Forgot password;
   async forgotPassword(email) {
@@ -151,7 +148,7 @@ const newToken = 'mock-jwt-token-refreshed-' + Date.now()
   } catch (error) {
   throw new Error(error.message || 'Password reset request failed')
     },
-  }
+  };
 
   // Reset password;
   async resetPassword(token, newPassword) {
@@ -171,7 +168,7 @@ const newToken = 'mock-jwt-token-refreshed-' + Date.now()
   } catch (error) {
   throw new Error(error.message || 'Password reset failed')
     },
-  }
+  };
 
   // Update user profile;
   async updateProfile(profileData) {
@@ -197,7 +194,7 @@ const const updatedUser = {
 } catch (error) {
   throw new Error(error.message || 'Profile update failed')
     },
-  }
+  };
 
   // Change password;
   async changePassword(currentPassword, newPassword) {
@@ -221,7 +218,7 @@ const const updatedUser = {
   } catch (error) {
   throw new Error(error.message || 'Password change failed')
     },
-  }
+  };
 
   // Verify email;
   async verifyEmail(token) {
@@ -248,7 +245,7 @@ const const updatedUser = {
   } catch (error) {
   throw new Error(error.message || 'Email verification failed')
     },
-  }
+  };
 
   // Get user permissions;
   getUserPermissions() {
@@ -259,16 +256,16 @@ const const permissions = {
   = {
       user: ['read:ownwrite:own'],admin: ['read:allwrite:all', 'delete: allmanage:users'],moderator: [['read:allwrite:all', 'moderate: content'],
   ],
-  }
+  };
     return permissions[this.user.role] || [],
-  }
+  };
 
   // Check if user has specific permission;
   hasPermission(permission) {
   const permissions = this.getUserPermissions()
     return permissions.includes(permission)
   },
-  }
+  };
 
 // Create singleton instance;
 const authService = new AuthService()

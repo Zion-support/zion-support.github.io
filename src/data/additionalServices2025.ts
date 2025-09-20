@@ -14,7 +14,7 @@ export interface AdditionalService {
   contactInfo?: {
   phone: string,email: string,website: string
 },
-  }
+  };
 
 export const ADDITIONAL_MICRO_SAAS_SERVICES_2025: AdditionalService[] = [
   {

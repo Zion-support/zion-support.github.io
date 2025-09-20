@@ -1,16 +1,15 @@
 export interface SpecializedAIService {
   id: string,title: string,description: string,category: string,subcategory: string,price: number,currency: string,pricingModel: string,features: string[],benefits: string[],useCases: string[],targetAudience: string[],tags: string[],estimatedDelivery: string,supportLevel: string,marketPrice: string,roi: string,innovationLevel: string,contactInfo: {
   phone: string,email: string,website: string
-}
+};
   technicalSpecs?: {
   technology: string[],integrations: string[],apiEndpoints: number,uptime: string,security: string[[],
   ],
-  }
+  };
   competitors?: string[]
   marketSize?: string;
   demoUrl?: string;
   documentationUrl?: string
-}
 
 export const SPECIALIZED_AI_SERVICES_2025: SpecializedAIService[] = [
   // AI-Powered Autonomous Business Operations;
@@ -53,16 +52,14 @@ export const SPECIALIZED_AI_SERVICES_2025: SpecializedAIService[] = [
     estimatedDelivery: "12-16 weeks",supportLevel: "enterprise",marketPrice: "$3,999 - $12,999/month";
     roi: "300-500%",innovationLevel: "Revolutionary",contactInfo: {
   phone: "+1 302 464 0950",email: "kleber@ziontechgroup.com",website: "https://ziontechgroup.com"
-}
     technicalSpecs: {
   technology: ["Python", "TensorFlow", "PyTorch", "React", "Node.js", "Kubernetes"]
       integrations: ["ERP systems", "CRM platforms", "Cloud services", "IoT devices", "Custom APIs"]
       apiEndpoints: 250,uptime: "99.99%",security: [["SOC 2 Type II", "Zero-trust architecture", "AI model security", "Data encryption"],
   ],
-  }
+  };
     competitors: ["UiPath", "Automation Anywhere", "Blue Prism", "Microsoft Power Automate"]
     marketSize: "$45.8B (2025)",demoUrl: "https://ziontechgroup.com/demo/ai-autonomous-business",documentationUrl: "https://ziontechgroup.com/docs/ai-autonomous-business"
-}
   // AI-Powered Research Assistant;
   {
   id: "ai-research-assistant",title: "AI Research Assistant Platform",description: "Advanced AI platform that accelerates research processes, automates literature reviews, and provides intelligent insights for academic and corporate research.";
@@ -103,16 +100,14 @@ export const SPECIALIZED_AI_SERVICES_2025: SpecializedAIService[] = [
     estimatedDelivery: "8-12 weeks",supportLevel: "premium",marketPrice: "$2,499 - $7,999/month";
     roi: "250-400%",innovationLevel: "Advanced",contactInfo: {
   phone: "+1 302 464 0950",email: "kleber@ziontechgroup.com",website: "https://ziontechgroup.com"
-}
     technicalSpecs: {
   technology: ["Python", "NLP", "Machine Learning", "React", "Node.js", "PostgreSQL"]
       integrations: ["PubMed", "Google Scholar", "Research databases", "Citation tools", "Cloud storage"]
       apiEndpoints: 150,uptime: "99.9%",security: [["SOC 2", "Data encryption", "Access control", "Research privacy"],
   ],
-  }
+  };
     competitors: ["Mendeley", "Zotero", "EndNote", "RefWorks"]
     marketSize: "$18.7B (2025)",demoUrl: "https://ziontechgroup.com/demo/ai-research-assistant",documentationUrl: "https://ziontechgroup.com/docs/ai-research-assistant"
-}
   // AI-Powered Code Review;
   {
   id: "ai-code-review",title: "AI Code Review Assistant",description: "Intelligent code review platform that automatically analyzes code quality, identifies bugs, suggests improvements, and ensures coding standards compliance.";
@@ -153,16 +148,14 @@ export const SPECIALIZED_AI_SERVICES_2025: SpecializedAIService[] = [
     estimatedDelivery: "6-8 weeks",supportLevel: "enterprise",marketPrice: "$1,799 - $5,999/month";
     roi: "200-350%",innovationLevel: "Advanced",contactInfo: {
   phone: "+1 302 464 0950",email: "kleber@ziontechgroup.com",website: "https://ziontechgroup.com"
-}
     technicalSpecs: {
   technology: ["Python", "Machine Learning", "Static analysis", "React", "Node.js", "Docker"]
       integrations: ["GitHub", "GitLab", "Bitbucket", "CI/CD platforms", "IDE plugins"]
       apiEndpoints: 120,uptime: "99.9%",security: [["SOC 2", "Code security", "Access control", "Audit logging"],
   ],
-  }
+  };
     competitors: ["SonarQube", "CodeClimate", "DeepCode", "Snyk"]
     marketSize: "$12.4B (2025)",demoUrl: "https://ziontechgroup.com/demo/ai-code-review",documentationUrl: "https://ziontechgroup.com/docs/ai-code-review"
-}
   // AI-Powered Customer Experience Optimization;
   {
   id: "ai-customer-experience-optimization",title: "AI Customer Experience Optimization Platform",description: "Comprehensive platform that uses AI to analyze customer behavior, personalize experiences, and optimize customer journey across all touchpoints.";
@@ -203,16 +196,14 @@ export const SPECIALIZED_AI_SERVICES_2025: SpecializedAIService[] = [
     estimatedDelivery: "8-12 weeks",supportLevel: "premium",marketPrice: "$2,199 - $6,999/month";
     roi: "250-400%",innovationLevel: "Advanced",contactInfo: {
   phone: "+1 302 464 0950",email: "kleber@ziontechgroup.com",website: "https://ziontechgroup.com"
-}
     technicalSpecs: {
   technology: ["Python", "TensorFlow", "React", "Node.js", "Redis", "PostgreSQL"]
       integrations: ["Shopify", "WooCommerce", "Salesforce", "Google Analytics", "Custom platforms"]
       apiEndpoints: 180,uptime: "99.9%",security: [["SOC 2", "GDPR compliance", "Data encryption", "Privacy protection"],
   ],
-  }
+  };
     competitors: ["Optimizely", "VWO", "AB Tasty", "Dynamic Yield"]
     marketSize: "$28.9B (2025)",demoUrl: "https://ziontechgroup.com/demo/ai-customer-experience",documentationUrl: "https://ziontechgroup.com/docs/ai-customer-experience"
-}
   // AI-Powered Customer Success Analytics;
   {
   id: "ai-customer-success-analytics",title: "AI Customer Success Analytics Platform",description: "Intelligent platform that predicts customer churn, identifies expansion opportunities, and provides actionable insights for customer success teams.";
@@ -253,16 +244,14 @@ export const SPECIALIZED_AI_SERVICES_2025: SpecializedAIService[] = [
     estimatedDelivery: "6-10 weeks",supportLevel: "enterprise",marketPrice: "$1,899 - $5,999/month";
     roi: "200-350%",innovationLevel: "Advanced",contactInfo: {
   phone: "+1 302 464 0950",email: "kleber@ziontechgroup.com",website: "https://ziontechgroup.com"
-}
     technicalSpecs: {
   technology: ["Python", "Machine Learning", "React", "Node.js", "PostgreSQL", "Redis"]
       integrations: ["Salesforce", "HubSpot", "Intercom", "Zendesk", "Custom CRMs"]
       apiEndpoints: 140,uptime: "99.9%",security: [["SOC 2", "Data encryption", "Access control", "Audit trails"],
   ],
-  }
+  };
     competitors: ["Gainsight", "Totango", "ClientSuccess", "ChurnZero"]
     marketSize: "$22.1B (2025)",demoUrl: "https://ziontechgroup.com/demo/ai-customer-success",documentationUrl: "https://ziontechgroup.com/docs/ai-customer-success"
-}
   // AI-Powered Energy Optimization;
   {
   id: "ai-energy-optimization",title: "AI Energy Optimization Platform",description: "Advanced platform that uses AI and IoT to optimize energy consumption, predict demand, and reduce costs for commercial and industrial facilities.";
@@ -303,16 +292,14 @@ export const SPECIALIZED_AI_SERVICES_2025: SpecializedAIService[] = [
     estimatedDelivery: "10-16 weeks",supportLevel: "enterprise",marketPrice: "$2,999 - $8,999/month";
     roi: "200-400%",innovationLevel: "Advanced",contactInfo: {
   phone: "+1 302 464 0950",email: "kleber@ziontechgroup.com",website: "https://ziontechgroup.com"
-}
     technicalSpecs: {
   technology: ["Python", "TensorFlow", "IoT protocols", "React", "Node.js", "Time-series databases"]
       integrations: ["Building management systems", "IoT sensors", "Smart meters", "Utility APIs", "Cloud platforms"]
       apiEndpoints: 200,uptime: "99.9%",security: [["SOC 2", "IoT security", "Data encryption", "Access control"],
   ],
-  }
+  };
     competitors: ["Schneider Electric", "Siemens", "Honeywell", "Johnson Controls"]
     marketSize: "$34.7B (2025)",demoUrl: "https://ziontechgroup.com/demo/ai-energy-optimization",documentationUrl: "https://ziontechgroup.com/docs/ai-energy-optimization"
-}
   // AI-Powered Fraud Detection;
   {
   id: "ai-fraud-detection",title: "AI Fraud Detection Platform",description: "Intelligent fraud detection system that uses machine learning to identify fraudulent transactions, activities, and behaviors in real-time.";
@@ -353,16 +340,14 @@ export const SPECIALIZED_AI_SERVICES_2025: SpecializedAIService[] = [
     estimatedDelivery: "8-12 weeks",supportLevel: "enterprise",marketPrice: "$2,499 - $7,999/month";
     roi: "250-400%",innovationLevel: "Advanced",contactInfo: {
   phone: "+1 302 464 0950",email: "kleber@ziontechgroup.com",website: "https://ziontechgroup.com"
-}
     technicalSpecs: {
   technology: ["Python", "TensorFlow", "PyTorch", "React", "Node.js", "Apache Kafka"]
       integrations: ["Payment gateways", "Banking systems", "E-commerce platforms", "CRM systems", "Custom APIs"]
       apiEndpoints: 160,uptime: "99.99%",security: [["SOC 2 Type II", "PCI DSS", "Data encryption", "Real-time monitoring"],
   ],
-  }
+  };
     competitors: ["Sift", "Signifyd", "Forter", "Kount"]
     marketSize: "$38.9B (2025)",demoUrl: "https://ziontechgroup.com/demo/ai-fraud-detection",documentationUrl: "https://ziontechgroup.com/docs/ai-fraud-detection"
-}
   // AI-Powered HR Recruitment;
   {
   id: "ai-hr-recruitment",title: "AI HR Recruitment Suite",description: "Comprehensive AI-powered recruitment platform that automates candidate sourcing, screening, and matching to optimize hiring processes.";
@@ -403,16 +388,14 @@ export const SPECIALIZED_AI_SERVICES_2025: SpecializedAIService[] = [
     estimatedDelivery: "6-10 weeks",supportLevel: "premium",marketPrice: "$1,599 - $4,999/month";
     roi: "200-350%",innovationLevel: "Advanced",contactInfo: {
   phone: "+1 302 464 0950",email: "kleber@ziontechgroup.com",website: "https://ziontechgroup.com"
-}
     technicalSpecs: {
   technology: ["Python", "NLP", "Machine Learning", "React", "Node.js", "PostgreSQL"]
       integrations: ["ATS systems", "Job boards", "LinkedIn", "Email platforms", "Calendar systems"]
       apiEndpoints: 120,uptime: "99.9%",security: [["SOC 2", "GDPR compliance", "Data encryption", "Access control"],
   ],
-  }
+  };
     competitors: ["HireVue", "Pymetrics", "HiredScore", "Entelo"]
     marketSize: "$26.8B (2025)",demoUrl: "https://ziontechgroup.com/demo/ai-hr-recruitment",documentationUrl: "https://ziontechgroup.com/docs/ai-hr-recruitment"
-}
   // AI-Powered Logistics Optimization;
   {
   id: "ai-logistics-optimization",title: "AI Logistics Optimization Platform",description: "Intelligent logistics platform that optimizes routes, predicts demand, and automates supply chain operations using AI and machine learning.";
@@ -453,16 +436,14 @@ export const SPECIALIZED_AI_SERVICES_2025: SpecializedAIService[] = [
     estimatedDelivery: "10-16 weeks",supportLevel: "enterprise",marketPrice: "$2,799 - $8,999/month";
     roi: "250-400%",innovationLevel: "Advanced",contactInfo: {
   phone: "+1 302 464 0950",email: "kleber@ziontechgroup.com",website: "https://ziontechgroup.com"
-}
     technicalSpecs: {
   technology: ["Python", "TensorFlow", "Optimization algorithms", "React", "Node.js", "PostgreSQL"]
       integrations: ["WMS", "TMS", "ERP systems", "GPS tracking", "Custom platforms"]
       apiEndpoints: 180,uptime: "99.9%",security: [["SOC 2", "Data encryption", "Access control", "Real-time monitoring"],
   ],
-  }
+  };
     competitors: ["Flexport", "Project44", "FourKites", "ClearMetal"]
     marketSize: "$31.2B (2025)",demoUrl: "https://ziontechgroup.com/demo/ai-logistics",documentationUrl: "https://ziontechgroup.com/docs/ai-logistics"
-}
   // AI-Powered Predictive Maintenance;
   {
   id: "ai-predictive-maintenance",title: "AI Predictive Maintenance Platform",description: "Advanced platform that uses AI and IoT sensors to predict equipment failures, optimize maintenance schedules, and reduce downtime.";
@@ -503,13 +484,12 @@ export const SPECIALIZED_AI_SERVICES_2025: SpecializedAIService[] = [
     estimatedDelivery: "8-12 weeks",supportLevel: "enterprise",marketPrice: "$2,299 - $6,999/month";
     roi: "200-350%",innovationLevel: "Advanced",contactInfo: {
   phone: "+1 302 464 0950",email: "kleber@ziontechgroup.com",website: "https://ziontechgroup.com"
-}
     technicalSpecs: {
   technology: ["Python", "Machine Learning", "IoT protocols", "React", "Node.js", "Time-series databases"]
       integrations: ["IoT sensors", "SCADA systems", "Equipment APIs", "Maintenance software", "Cloud platforms"]
       apiEndpoints: 160,uptime: "99.9%",security: [["SOC 2", "IoT security", "Data encryption", "Access control"],
   ],
-  }
+  };
     competitors: ["Uptake", "C3.ai", "Sight Machine", "Augury"]
     marketSize: "$29.8B (2025)",demoUrl: "https://ziontechgroup.com/demo/ai-predictive-maintenance",documentationUrl: "https://ziontechgroup.com/docs/ai-predictive-maintenance"
 },

@@ -39,22 +39,22 @@ export default function ComprehensiveServicesShowcase2029() {
   const const categories = {
   = {
     'all': {{ name: 'All Services', icon: <Rocket className="w-6 h-6" />, color: 'from-cyan-500 to-blue-500' },
-  }
+  };
     'ai-ml': {{ name: 'AI & Machine Learning', icon: <Brain className="w-6 h-6" />, color: 'from-purple-500 to-pink-500' },
-  }
+  };
     'quantum': {{ name: 'Quantum Computing', icon: <Atom className="w-6 h-6" />, color: 'from-indigo-500 to-purple-500' },
-  }
+  };
     'devops': {{ name: 'DevOps & Automation', icon: <Workflow className="w-6 h-6" />, color: 'from-blue-500 to-cyan-500' },
-  }
+  };
     'cybersecurity': {{ name: 'Cybersecurity', icon: <Shield className="w-6 h-6" />, color: 'from-red-500 to-orange-500' },
-  }
+  };
     'analytics': {{ name: 'Analytics & BI', icon: <BarChart3 className="w-6 h-6" />, color: 'from-green-500 to-emerald-500' },
-  }
+  };
     'cloud': {{ name: 'Cloud & Infrastructure', icon: <Cloud className="w-6 h-6" />, color: 'from-sky-500 to-blue-500' },
-  }
+  };
     'micro-saas': {{ name: 'Micro SAAS', icon: <Code className="w-6 h-6" />, color: 'from-yellow-500 to-orange-500' },
   },
-  }
+  };
   const services = [
   // AI & Machine Learning;
     {
@@ -133,7 +133,7 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
   = {
     phone: '+1 302 464 0950',email: 'kleber@ziontechgroup.com',address: '364 E Main St STE 1008, Middletown DE 19709';
     website: 'https://ziontechgroup.com'
-}
+};
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
       <SEO ;
@@ -143,17 +143,17 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
       />
 
       {{/* Hero Section */},
-  }
+  };
       <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
         <div className="relative max-w-7xl mx-auto">
           <motion.div;
             initial={{ opacity: 0, y: 30 },
-  }
+  };
             animate={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             className="className="text-center";"
           >
             <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-2xl mb-8 border border-cyan-400/30">
@@ -194,35 +194,35 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
       </section>
 
       {{/* Search and Filter Section */},
-  }
+  };
       <section className="py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col lg:flex-row gap-6 items-center justify-between">
             {{/* Search */},
-  }
+  };
             <div className="relative flex-1 max-w-md">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
               <input;
                 type="text";
                 placeholder="Search services...";
                 value={{searchTerm},
-  }
+  };
                 onChange={{(e) => setSearchTerm(e.target.value)},
-  }
+  };
                 className="className="w-full pl-10 pr-4 py-3 bg-white/5 backdrop-blur-sm border border-cyan-400/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400/50 focus:ring-2 focus:ring-cyan-400/20";"
               />
             </div>
 
             {{/* Category Filter */},
-  }
+  };
             <div className="flex flex-wrap gap-2">
               {Object.entries(categories).map(([key, category]) => (
   <button;
                   key={{key},
-  }
+  };
                   onClick={{onClick={() => setSelectedCategory(key)},
   },
-  }
+  };
                   className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 ${
   selectedCategory === key;
                       ? `bg-gradient-to-r ${category.color} text-white shadow-lg`;
@@ -231,7 +231,7 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
                 >
                   <div className="flex items-center space-x-2">
                     {{category.icon},
-  }
+  };
                     <span>{category.name}</span>
                   </div>
                 </button>
@@ -242,18 +242,18 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
       </section>
 
       {{/* Services Grid */},
-  }
+  };
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div;
             initial={{ opacity: 0, y: 30 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             viewport={{ once: true },
-  }
+  };
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -268,15 +268,15 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
             {filteredServices.map((service, index) => (
   <motion.div;
                 key={{service.id},
-  }
+  };
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.5, delay: index * 0.1 },
-  }
+  };
                 viewport={{ once: true },
-  }
+  };
                 className={`group cursor-pointer ${
   service.featured ? 'ring-2 ring-cyan-400/50' : ''
 }`}
@@ -293,17 +293,17 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
                     ;
                     <div className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
                       {{service.icon},
-  }
+  };
                     </div>
                     ;
                     <h3 className="text-xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors duration-300">
                       {{service.title},
-  }
+  };
                     </h3>
                     ;
                     <p className="text-gray-300 mb-6 leading-relaxed">
                       {{service.description},
-  }
+  };
                     </p>
                     ;
                     <div className="mb-6">
@@ -315,7 +315,7 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
   <li key={featureIndex} className="flex items-center text-sm text-gray-400">
                           <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />
                           {{feature},
-  }
+  };
                         </li>
                       ))}
                     </ul>
@@ -333,9 +333,9 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
           {filteredServices.length === 0 && (
   <motion.div;
               initial={{ opacity: 0 },
-  }
+  };
               animate={{ opacity: 1 },
-  }
+  };
               className="className="text-center py-20";"
             >
               <div className="w-24 h-24 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-6 border border-cyan-400/30">
@@ -348,7 +348,7 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
                   setSearchTerm('')
                   setSelectedCategory('all')
                 },
-  }
+  };
                 className="className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300";"
               >
                 Clear Filters;
@@ -359,18 +359,18 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
       </section>
 
       {{/* Contact Section */},
-  }
+  };
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
           <motion.div;
             initial={{ opacity: 0, y: 30 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             viewport={{ once: true },
-  }
+  };
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -384,13 +384,13 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <motion.div;
               initial={{ opacity: 0, y: 20 },
-  }
+  };
               whileInView={{ opacity: 1, y: 0 },
-  }
+  };
               transition={{ duration: 0.5, delay: 0.1 },
-  }
+  };
               viewport={{ once: true },
-  }
+  };
               className="className="text-center";"
             >
               <div className="w-16 h-16 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-xl flex items-center justify-center mx-auto mb-4 border border-cyan-400/30">
@@ -408,13 +408,13 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
 
             <motion.div;
               initial={{ opacity: 0, y: 20 },
-  }
+  };
               whileInView={{ opacity: 1, y: 0 },
-  }
+  };
               transition={{ duration: 0.5, delay: 0.2 },
-  }
+  };
               viewport={{ once: true },
-  }
+  };
               className="className="text-center";"
             >
               <div className="w-16 h-16 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-xl flex items-center justify-center mx-auto mb-4 border border-cyan-400/30">
@@ -432,13 +432,13 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
 
             <motion.div;
               initial={{ opacity: 0, y: 20 },
-  }
+  };
               whileInView={{ opacity: 1, y: 0 },
-  }
+  };
               transition={{ duration: 0.5, delay: 0.3 },
-  }
+  };
               viewport={{ once: true },
-  }
+  };
               className="className="text-center";"
             >
               <div className="w-16 h-16 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-xl flex items-center justify-center mx-auto mb-4 border border-cyan-400/30">
@@ -460,5 +460,4 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
       </section>
     </div>
   )
-}
 export default ComprehensiveServicesShowcase2029;

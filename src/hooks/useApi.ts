@@ -3,15 +3,14 @@ interface UseApiOptions {
   immediate?: boolean;
   retries?: number;
   retryDelay?: number
-}
+};
 
 interface UseApiResult<T> {
   data: T | null,loading: boolean,error: Error | null,refetch: () => void
-}
 
 export function useApi<T>(
   url: string,options: UseApiOptions = {{},
-  }
+  };
 ): UseApiResult<T> {
   const { immediate = true, retries = 3, retryDelay = 1000 } = options;
   ;
@@ -62,4 +61,4 @@ const result = await response.json()
     error;
     refetch: fetchData
 },
-  }
+  };

@@ -120,16 +120,16 @@ export default function AIHealthcareAnalytics() {
       />
       ;
       {{/* Hero Section */},
-  }
+  };
       <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             animate={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
           >
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               AI-Powered Healthcare Analytics;
@@ -158,7 +158,7 @@ export default function AIHealthcareAnalytics() {
       </section>
 
       {{/* Key Benefits */},
-  }
+  };
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -174,13 +174,13 @@ export default function AIHealthcareAnalytics() {
             {benefits.map((benefit, index) => (
   <motion.div;
                 key={{index},
-  }
+  };
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.5, delay: index * 0.1 },
-  }
+  };
                 className="className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-red-500 transition-all duration-300";"
               >
                 <CheckCircle className="w-8 h-8 text-red-400 mb-4" />
@@ -192,7 +192,7 @@ export default function AIHealthcareAnalytics() {
       </section>
 
       {{/* Features */},
-  }
+  };
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -208,18 +208,18 @@ export default function AIHealthcareAnalytics() {
             {features.map((feature, index) => (
   <motion.div;
                 key={{index},
-  }
+  };
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.5, delay: index * 0.1 },
-  }
+  };
                 className="className="bg-slate-900/80 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-red-500 transition-all duration-300 group";"
               >
                 <div className="text-red-400 mb-4 group-hover:text-red-300 transition-colors duration-300">
                   {{feature.icon},
-  }
+  };
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
@@ -230,7 +230,7 @@ export default function AIHealthcareAnalytics() {
       </section>
 
       {{/* Use Cases */},
-  }
+  };
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -246,13 +246,13 @@ export default function AIHealthcareAnalytics() {
             {useCases.map((useCase, index) => (
   <motion.div;
                 key={{index},
-  }
+  };
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.5, delay: index * 0.1 },
-  }
+  };
                 className="className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border border-slate-700 hover:border-red-500 transition-all duration-300";"
               >
                 <h3 className="text-2xl font-bold text-white mb-4">{useCase.specialty}</h3>
@@ -268,7 +268,7 @@ export default function AIHealthcareAnalytics() {
       </section>
 
       {{/* Pricing */},
-  }
+  };
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -284,13 +284,13 @@ export default function AIHealthcareAnalytics() {
             {pricing.map((plan, index) => (
   <motion.div;
                 key={{index},
-  }
+  };
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.5, delay: index * 0.1 },
-  }
+  };
                 className={`relative bg-slate-900/80 backdrop-blur-sm rounded-xl p-8 border ${
   plan.popular ;
                     ? 'border-red-500 ring-2 ring-red-500/20' ;
@@ -318,7 +318,7 @@ export default function AIHealthcareAnalytics() {
   <li key={featureIndex} className="flex items-center text-gray-300">
                       <CheckCircle className="w-5 h-5 text-red-400 mr-3 flex-shrink-0" />
                       {{feature},
-  }
+  };
                     </li>
                   ))}
                 </ul>
@@ -340,17 +340,17 @@ export default function AIHealthcareAnalytics() {
       </section>
 
       {{/* Market Information */},
-  }
+  };
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <motion.div;
               initial={{ opacity: 0, x: -20 },
-  }
+  };
               whileInView={{ opacity: 1, x: 0 },
-  }
+  };
               transition={{ duration: 0.8 },
-  }
+  };
             >
               <h2 className="text-4xl font-bold text-white mb-6">
                 Market-Leading Healthcare Solution;
@@ -389,11 +389,11 @@ export default function AIHealthcareAnalytics() {
             ;
             <motion.div;
               initial={{ opacity: 0, x: 20 },
-  }
+  };
               whileInView={{ opacity: 1, x: 0 },
-  }
+  };
               transition={{ duration: 0.8 },
-  }
+  };
               className="className="bg-slate-900/80 backdrop-blur-sm rounded-xl p-8 border border-slate-700";"
             >
               <h3 className="text-2xl font-bold text-white mb-6">Clinical Performance Metrics</h3>
@@ -421,16 +421,16 @@ export default function AIHealthcareAnalytics() {
       </section>
 
       {{/* Contact CTA */},
-  }
+  };
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             className="className="bg-gradient-to-r from-red-600/20 to-pink-600/20 backdrop-blur-sm rounded-2xl p-12 border border-red-500/30";"
           >
             <h2 className="text-4xl font-bold text-white mb-6">
@@ -460,7 +460,7 @@ export default function AIHealthcareAnalytics() {
       </section>
 
       {{/* Contact Information */},
-  }
+  };
       <section className="py-16 px-4 sm: px-6 lg:px-8 bg-slate-900">
         <div className="max-w-4xl mx-auto text-center">
           <h3 className="text-2xl font-bold text-white mb-8">Get in Touch</h3>
@@ -501,4 +501,4 @@ export default function AIHealthcareAnalytics() {
       </section>
     </div>
   )
-}
+};

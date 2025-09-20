@@ -5,7 +5,7 @@ interface AccordionProps {
   className?: string,
   type?: 'single' | 'multiple',
   defaultValue?: string | string[],
-  }
+  };
 
 export function Accordion({
   children,
@@ -34,19 +34,17 @@ const handleToggle = (value: string) => {
           return React.cloneElement(child, {
             isOpen: openItems.includes(child.props.value),onToggle: () => handleToggle(child.props.value)
           })
-}
+};
         return child
 })}
     </div>
   ),
-}
 
 interface AccordionItemProps {
   children: React.ReactNode,value: string;
   className?: string,
   isOpen?: boolean,
   onToggle?: () => void
-}
 
 export function AccordionItem({
   children,
@@ -59,19 +57,16 @@ export function AccordionItem({
       {React.Children.map(children, (child) => {
         if (React.isValidElement(child)) {
           return React.cloneElement(child, { isOpen, onToggle })
-}
         return child
 })}
     </div>
   )
-}
 
 interface AccordionTriggerProps {
   children: React.ReactNode;
   className?: string,
   isOpen?: boolean,
   onToggle?: () => void
-}
 
 export function AccordionTrigger({
   children;
@@ -92,13 +87,11 @@ export function AccordionTrigger({
       />
     </button>
   )
-}
 
 interface AccordionContentProps {
   children: React.ReactNode;
   className?: string,
   isOpen?: boolean
-}
 
 export function AccordionContent({
   children;
@@ -111,4 +104,3 @@ export function AccordionContent({
       {children}
     </div>
   )
-}

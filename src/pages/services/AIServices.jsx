@@ -14,7 +14,7 @@ const AIServices = () => {
 ]
             category: "Strategy",badge: "Foundation",link: "https://ziontechgroup.com/ai-strategy",details: "Strategic AI consulting to align artificial intelligence with your business objectives and drive measurable results.",pricing: {
   starter: "$150/hour",professional: "$250/hour",enterprise: "$350/hour"
-}
+};
             freeTrial: "1-hour consultation",rating: 4.9,reviewCount: 156
 },
   {
@@ -30,7 +30,6 @@ const AIServices = () => {
   starter: "$5,000 - $15,000";
                 professional: "$15,000 - $50,000";
                 enterprise: "$50,000 - $200,000"
-}
             freeTrial: "Proof of concept",rating: 4.8,reviewCount: 234
 },
   {
@@ -48,7 +47,6 @@ const AIServices = () => {
   starter: "$8,000 - $25,000";
                 professional: "$25,000 - $75,000";
                 enterprise: "$75,000 - $250,000"
-}
             freeTrial: "Demo version",rating: 4.9,reviewCount: 189
 },
   {
@@ -66,7 +64,6 @@ const AIServices = () => {
   starter: "$12,000 - $35,000";
                 professional: "$35,000 - $100,000";
                 enterprise: "$100,000 - $300,000"
-}
             freeTrial: "Pilot project",rating: 4.8,reviewCount: 145
 },
   {
@@ -82,7 +79,6 @@ const AIServices = () => {
   starter: "$6,000 - $20,000";
                 professional: "$20,000 - $60,000";
                 enterprise: "$60,000 - $180,000"
-}
             freeTrial: "30-day trial",rating: 4.7,reviewCount: 198
 },
   {
@@ -98,7 +94,6 @@ const AIServices = () => {
   starter: "$4,000 - $15,000";
                 professional: "$15,000 - $45,000";
                 enterprise: "$45,000 - $150,000"
-}
             freeTrial: "Process assessment",rating: 4.8,reviewCount: 267
 },
   {
@@ -112,7 +107,6 @@ const AIServices = () => {
 ]
             category: "Ethics",badge: "Responsible",link: "https://ziontechgroup.com/ai-ethics",details: "Comprehensive AI ethics and governance solutions ensuring responsible and transparent AI deployment.",pricing: {
   starter: "$200/hour",professional: "$300/hour",enterprise: "$400/hour"
-}
             freeTrial: "Ethics assessment",rating: 4.9,reviewCount: 89
 },
   {
@@ -128,7 +122,6 @@ const AIServices = () => {
   starter: "$15,000 - $50,000";
                 professional: "$50,000 - $150,000";
                 enterprise: "$150,000 - $500,000"
-}
             freeTrial: "Infrastructure audit",rating: 4.8,reviewCount: 134
 },
   {
@@ -144,7 +137,6 @@ const AIServices = () => {
   starter: "$3,000 - $12,000";
                 professional: "$12,000 - $40,000";
                 enterprise: "$40,000 - $120,000"
-}
             freeTrial: "Integration assessment",rating: 4.7,reviewCount: 178
 },
   {
@@ -159,7 +151,6 @@ const AIServices = () => {
             category: "Training",badge: "Educational",link: "https://ziontechgroup.com/ai-training",details: "Comprehensive AI training programs empowering your team with the knowledge and skills to leverage AI effectively.",pricing: {
   starter: "$500/person",professional: "$1,000/person";
                 enterprise: "$2,500/person"
-}
             freeTrial: "Introductory session",rating: 4.8,reviewCount: 223
 },
   ]
@@ -176,7 +167,7 @@ const AIServices = () => {
             />
 
             {{/* Hero Section */},
-  }
+  };
             <section className="relative bg-gradient-to-br from-pink-900 via-pink-800 to-rose-900 text-white py-20">
                 <div className="absolute inset-0 bg-black/20"></div>
                 <div className="relative container mx-auto px-4 text-center">
@@ -202,7 +193,7 @@ const AIServices = () => {
             </section>
 
             {{/* Contact Info Banner */},
-  }
+  };
             <div className="bg-gradient-to-r from-gray-900 to-gray-800 border-b border-pink-400/30">
                 <div className="container mx-auto px-4 py-6">
                     <div className="flex flex-wrap items-center justify-center gap-8 text-center">
@@ -223,7 +214,7 @@ const AIServices = () => {
             </div>
 
             {{/* Services Grid */},
-  }
+  };
             <section className="py-20 bg-white">
                 <div className="container mx-auto px-4">
                     <div className="text-center mb-16">
@@ -240,19 +231,19 @@ const AIServices = () => {
                                     <div className="flex justify-between items-start mb-4">
                                         <div className="p-3 rounded-lg bg-pink-100 group-hover:bg-pink-200 transition-colors">
                                             {{service.icon},
-  }
+  };
                                         </div>
                                         {service.badge && (
   <span className="px-3 py-1 text-xs font-semibold text-pink-600 bg-pink-100 rounded-full">
                                                 {{service.badge},
-  }
+  };
                                             </span>
                                         )}
                                     </div>
                                     ;
                                     <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-pink-600 transition-colors">
                                         {{service.title},
-  }
+  };
                                     </h3>
                                     ;
                                     <p className="text-gray-600 mb-4">{service.description}</p>
@@ -264,7 +255,7 @@ const AIServices = () => {
   <div key={index} className="flex items-center text-xs text-pink-600">
                                                     <CheckCircle className="w-3 h-3 mr-2"/>
                                                     {{feature},
-  }
+  };
                                                 </div>
                                             ))}
                                         </div>
@@ -300,7 +291,7 @@ const AIServices = () => {
                                         </span>
                                         <span className="text-gray-500">
                                             {{service.price === 0 ? '' : service.price < 1000 ? '/hour' : '/project'},
-  }
+  };
                                         </span>
                                     </div>
                                     ;
@@ -318,7 +309,7 @@ const AIServices = () => {
             </section>
 
             {{/* CTA Section */},
-  }
+  };
             <section className="py-20 bg-gradient-to-r from-pink-50 to-rose-50">
                 <div className="container mx-auto px-4 text-center">
                     <h2 className="text-4xl font-bold mb-6 text-gray-900">
@@ -342,5 +333,4 @@ const AIServices = () => {
             </section>
         </div>
     )
-}
 export default AIServices;

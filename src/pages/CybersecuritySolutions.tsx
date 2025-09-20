@@ -135,22 +135,22 @@ export default function CybersecuritySolutions() {
   const const containerVariants = {
   = {
     hidden: {{ opacity: 0 },
-  }
+  };
     visible: {
   opacity: 1,transition: {
   staggerChildren: 0.1
 },
   },
-  }
+  };
   const const itemVariants = {
   = {
     hidden: {{ opacity: 0, y: 20 },
-  }
+  };
     visible: {
   opacity: 1,y: 0,transition: {{ duration: 0.6 },
   },
   },
-  }
+  };
   const filteredThreats = selectedThreat === 'all';
     ? securityThreats;
     : securityThreats.filter(threat => threat.type === selectedThreat)
@@ -158,7 +158,7 @@ export default function CybersecuritySolutions() {
   return (
     <div className="min-h-screen bg-futuristic">
       {{/* Hero Section */},
-  }
+  };
       <section className="relative py-32 bg-gradient-to-br from-zion-slate-dark via-zion-red-dark to-zion-red overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-20 left-20 w-64 h-64 border border-zion-red rounded-full animate-pulse"></div>
@@ -168,11 +168,11 @@ export default function CybersecuritySolutions() {
         <div className="container mx-auto px-4 text-center relative z-10">
           <motion.div;
             initial={{ opacity: 0, y: 30 },
-  }
+  };
             animate={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
           >
             <div className="flex justify-center mb-8">
               <div className="w-24 h-24 bg-gradient-to-r from-zion-red to-zion-orange rounded-2xl flex items-center justify-center">
@@ -182,7 +182,7 @@ export default function CybersecuritySolutions() {
 
             <h1 className="text-6xl md:text-7xl font-bold text-white mb-8 leading-tight">
               Cybersecurity{{' '},
-  }
+  };
               <span className="bg-gradient-to-r from-zion-red to-zion-orange bg-clip-text text-transparent">
                 Solutions;
               </span>
@@ -196,9 +196,9 @@ export default function CybersecuritySolutions() {
               <motion.button;
                 className="className="px-8 py-4 bg-gradient-to-r from-zion-red to-zion-orange text-white rounded-xl font-semibold text-lg hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-zion-red/25";"
                 whileHover={{ scale: 1.05 },
-  }
+  };
                 whileTap={{ scale: 0.95 },
-  }
+  };
               >
                 Security Assessment;
               </motion.button>
@@ -211,19 +211,19 @@ export default function CybersecuritySolutions() {
       </section>
 
       {{/* Security Services Overview */},
-  }
+  };
       <section className="py-20 bg-zion-slate-dark">
         <div className="container mx-auto px-4">
           <motion.div;
             className="className="text-center mb-16";"
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.6 },
-  }
+  };
             viewport={{ once: true },
-  }
+  };
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Comprehensive Security Services;
@@ -237,21 +237,21 @@ export default function CybersecuritySolutions() {
           <motion.div;
             className="className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8";"
             variants={{containerVariants},
-  }
+  };
             initial="hidden";
             whileInView="visible";
             viewport={{ once: true },
-  }
+  };
           >
             {securityServices.map((service, index) => (
   <motion.div;
                 key={{index},
-  }
+  };
                 className="className="bg-zion-blue-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-8 hover:border-zion-cyan/40 transition-all duration-300 group";"
                 variants={{itemVariants},
-  }
+  };
                 whileHover={{ y: -5, scale: 1.02 },
-  }
+  };
               >
                 <div className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
                   <service.icon className="w-8 h-8 text-white" />
@@ -265,7 +265,7 @@ export default function CybersecuritySolutions() {
   <li key={idx} className="flex items-center text-zion-slate-light">
                       <CheckCircle className="w-4 h-4 text-zion-cyan mr-3 flex-shrink-0" />
                       {{feature},
-  }
+  };
                     </li>
                   ))}
                 </ul>
@@ -276,19 +276,19 @@ export default function CybersecuritySolutions() {
       </section>
 
       {{/* Threat Landscape */},
-  }
+  };
       <section className="py-20 bg-zion-blue-dark">
         <div className="container mx-auto px-4">
           <motion.div;
             className="className="text-center mb-16";"
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.6 },
-  }
+  };
             viewport={{ once: true },
-  }
+  };
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Understanding Cyber Threats;
@@ -300,27 +300,27 @@ export default function CybersecuritySolutions() {
           </motion.div>
 
           {{/* Threat Filter */},
-  }
+  };
           <motion.div;
             className="className="flex flex-wrap justify-center gap-4 mb-12";"
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.6 },
-  }
+  };
             viewport={{ once: true },
-  }
+  };
           >
             {threatTypes.map((threat) => {
   const Icon = threat.icon;
               return (
                 <button;
                   key={{threat.id},
-  }
+  };
                   onClick={{onClick={() => setSelectedThreat(threat.id)},
   },
-  }
+  };
                   className={`flex items-center gap-3 px-6 py-3 rounded-xl font-medium transition-all duration-300 ${
   selectedThreat === threat.id;
                       ? 'bg-zion-red text-white shadow-lg shadow-zion-red/25';
@@ -329,32 +329,32 @@ export default function CybersecuritySolutions() {
                 >
                   <Icon className="w-5 h-5" />
                   {{threat.name},
-  }
+  };
                 </button>
               )
             })}
           </motion.div>
 
           {{/* Threats Grid */},
-  }
+  };
           <motion.div;
             className="className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8";"
             variants={{containerVariants},
-  }
+  };
             initial="hidden";
             whileInView="visible";
             viewport={{ once: true },
-  }
+  };
           >
             {filteredThreats.map((threat, index) => (
   <motion.div;
                 key={{index},
-  }
+  };
                 className="className="bg-zion-slate-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300";"
                 variants={{itemVariants},
-  }
+  };
                 whileHover={{ y: -5, scale: 1.02 },
-  }
+  };
               >
                 <div className="flex items-center justify-between mb-4">
                   <div className="flex items-center gap-4">
@@ -369,7 +369,7 @@ export default function CybersecuritySolutions() {
                     'bg-yellow-500/20 text-yellow-400'
 }`}>
                     {{threat.impact},
-  }
+  };
                   </span>
                 </div>
 
@@ -382,7 +382,7 @@ export default function CybersecuritySolutions() {
   <li key={idx} className="text-zion-slate-light text-sm flex items-center">
                         <div className="w-1.5 h-1.5 bg-zion-cyan rounded-full mr-2 flex-shrink-0"></div>
                         {{solution},
-  }
+  };
                       </li>
                     ))}
                   </ul>
@@ -394,19 +394,19 @@ export default function CybersecuritySolutions() {
       </section>
 
       {{/* Compliance & Standards */},
-  }
+  };
       <section className="py-20 bg-zion-slate-dark">
         <div className="container mx-auto px-4">
           <motion.div;
             className="className="text-center mb-16";"
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.6 },
-  }
+  };
             viewport={{ once: true },
-  }
+  };
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Compliance & Standards;
@@ -420,21 +420,21 @@ export default function CybersecuritySolutions() {
           <motion.div;
             className="className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8";"
             variants={{containerVariants},
-  }
+  };
             initial="hidden";
             whileInView="visible";
             viewport={{ once: true },
-  }
+  };
           >
             {complianceFrameworks.map((framework, index) => (
   <motion.div;
                 key={{index},
-  }
+  };
                 className="className="bg-zion-blue-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300 group";"
                 variants={{itemVariants},
-  }
+  };
                 whileHover={{ y: -5, scale: 1.02 },
-  }
+  };
               >
                 <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
                   <framework.icon className="w-8 h-8 text-white" />
@@ -450,7 +450,7 @@ export default function CybersecuritySolutions() {
   <li key={idx} className="text-zion-slate-light text-sm flex items-center">
                         <div className="w-1.5 h-1.5 bg-zion-cyan rounded-full mr-2 flex-shrink-0"></div>
                         {{req},
-  }
+  };
                       </li>
                     ))}
                   </ul>
@@ -462,19 +462,19 @@ export default function CybersecuritySolutions() {
       </section>
 
       {{/* Security Metrics */},
-  }
+  };
       <section className="py-20 bg-gradient-to-r from-zion-red-dark to-zion-orange">
         <div className="container mx-auto px-4">
           <motion.div;
             className="className="text-center mb-16";"
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.6 },
-  }
+  };
             viewport={{ once: true },
-  }
+  };
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Security Performance Metrics;
@@ -488,19 +488,19 @@ export default function CybersecuritySolutions() {
           <motion.div;
             className="className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8";"
             variants={{containerVariants},
-  }
+  };
             initial="hidden";
             whileInView="visible";
             viewport={{ once: true },
-  }
+  };
           >
             {securityMetrics.map((metric, index) => (
   <motion.div;
                 key={{index},
-  }
+  };
                 className="className="text-center";"
                 variants={{itemVariants},
-  }
+  };
               >
                 <div className="w-24 h-24 bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl flex items-center justify-center mx-auto mb-6">
                   <div className="text-3xl font-bold text-white">{metric.metric}</div>
@@ -514,19 +514,19 @@ export default function CybersecuritySolutions() {
       </section>
 
       {{/* Security Process */},
-  }
+  };
       <section className="py-20 bg-zion-slate-dark">
         <div className="container mx-auto px-4">
           <motion.div;
             className="className="text-center mb-16";"
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.6 },
-  }
+  };
             viewport={{ once: true },
-  }
+  };
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Our Security Implementation Process;
@@ -540,11 +540,11 @@ export default function CybersecuritySolutions() {
           <motion.div;
             className="className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8";"
             variants={{containerVariants},
-  }
+  };
             initial="hidden";
             whileInView="visible";
             viewport={{ once: true },
-  }
+  };
           >
             {[
   {
@@ -562,10 +562,10 @@ export default function CybersecuritySolutions() {
   ].map((phase, index) => (
   <motion.div;
                 key={{index},
-  }
+  };
                 className="className="relative";"
                 variants={{itemVariants},
-  }
+  };
               >
                 <div className="bg-zion-blue-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6 text-center">
                   <div className="w-16 h-16 bg-gradient-to-r from-zion-red to-zion-orange rounded-2xl flex items-center justify-center mx-auto mb-4">
@@ -588,18 +588,18 @@ export default function CybersecuritySolutions() {
       </section>
 
       {{/* CTA Section */},
-  }
+  };
       <section className="py-20 bg-gradient-to-r from-zion-slate-dark to-zion-red-dark">
         <div className="container mx-auto px-4 text-center">
           <motion.div;
             initial={{ opacity: 0, y: 30 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             viewport={{ once: true },
-  }
+  };
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Ready to Secure Your Business?;
@@ -613,9 +613,9 @@ export default function CybersecuritySolutions() {
               <motion.button;
                 className="className="px-8 py-4 bg-gradient-to-r from-zion-red to-zion-orange text-white rounded-xl font-semibold text-lg hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-zion-red/25";"
                 whileHover={{ scale: 1.05 },
-  }
+  };
                 whileTap={{ scale: 0.95 },
-  }
+  };
               >
                 Security Assessment;
               </motion.button>
@@ -628,4 +628,4 @@ export default function CybersecuritySolutions() {
       </section>
     </div>
   )
-}
+};

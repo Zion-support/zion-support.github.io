@@ -7,23 +7,21 @@ export interface PricingTier {
   savings?: string;
   setupFee?: number;
   contractLength?: string
-}
+};
 
 export interface ServicePricing {
   serviceId: string,serviceName: string,category: string,description: string,pricingTiers: PricingTier[],marketComparison: {
   averagePrice: string,competitors: string[],valueProposition: string
-}
   roi: {
   timeframe: string,percentage: string,savings: string
-}
   features: {
   core: string[],advanced: string[],enterprise: string[[],
   ],
-  }
+  };
   integrations: string[],support: {
   responseTime: string,channels: string[],sla: string
 },
-  }
+  };
 
 export const COMPREHENSIVE_PRICING_GUIDE_2025: ServicePricing[] = [
   {
@@ -72,10 +70,8 @@ export const COMPREHENSIVE_PRICING_GUIDE_2025: ServicePricing[] = [
   averagePrice: "$2,500-8,000/month";
       competitors: ["Gainsight", "ProfitWell", "ChartMogul"]
       valueProposition: "40% better ROI than competitors with AI-powered insights and faster implementation"
-}
     roi: {
   timeframe: "4 months",percentage: "400%",savings: "$50,000+ annually"
-}
     features: {
   core: [
   "Revenue analytics dashboard";
@@ -95,7 +91,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2025: ServicePricing[] = [
         "Dedicated support team";
         "SLA guarantees"
 ],
-  }
+  };
     integrations: ["Salesforce", "HubSpot", "QuickBooks", "NetSuite", "AWS", "Google Analytics"]
     support: {
   responseTime: "2 hours",channels: ["Email", "Phone", "Chat", "Video"]
@@ -144,10 +140,8 @@ export const COMPREHENSIVE_PRICING_GUIDE_2025: ServicePricing[] = [
   averagePrice: "$3,000-12,000/month";
       competitors: ["Segment", "Amplitude", "Mixpanel"]
       valueProposition: "30% better customer engagement with AI-powered journey optimization"
-}
     roi: {
   timeframe: "5 months",percentage: "350%",savings: "$75,000+ annually"
-}
     features: {
   core: [
   "Customer journey mapping";
@@ -167,7 +161,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2025: ServicePricing[] = [
         "Enterprise integrations";
         "Dedicated support"
 ],
-  }
+  };
     integrations: ["Intercom", "Zendesk", "HubSpot", "Salesforce", "Shopify", "WooCommerce", "Google Analytics"]
     support: {
   responseTime: "4 hours",channels: ["Email", "Phone", "Chat", "Video"]
@@ -215,10 +209,8 @@ export const COMPREHENSIVE_PRICING_GUIDE_2025: ServicePricing[] = [
   averagePrice: "$2,000-6,000/month";
       competitors: ["AppsFlyer", "Branch", "Adjust"]
       valueProposition: "25% more accurate attribution with AI-powered machine learning models"
-}
     roi: {
   timeframe: "3 months",percentage: "300%",savings: "$40,000+ annually"
-}
     features: {
   core: [
   "Multi-touch attribution";
@@ -238,7 +230,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2025: ServicePricing[] = [
         "Enterprise integrations";
         "Dedicated support"
 ],
-  }
+  };
     integrations: ["Google Ads", "Facebook Ads", "LinkedIn Ads", "TikTok Ads", "Google Analytics", "HubSpot", "Salesforce"]
     support: {
   responseTime: "6 hours",channels: ["Email", "Phone", "Chat"]
@@ -287,10 +279,8 @@ export const COMPREHENSIVE_PRICING_GUIDE_2025: ServicePricing[] = [
   averagePrice: "$1,500-4,500/month";
       competitors: ["Clearscope", "Frase", "MarketMuse"]
       valueProposition: "35% better content performance with AI-powered optimization"
-}
     roi: {
   timeframe: "2 months",percentage: "250%",savings: "$30,000+ annually"
-}
     features: {
   core: [
   "Content performance tracking";
@@ -310,7 +300,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2025: ServicePricing[] = [
         "Enterprise integrations";
         "Dedicated support"
 ],
-  }
+  };
     integrations: ["WordPress", "Shopify", "HubSpot", "Mailchimp", "Google Analytics", "SEMrush", "Ahrefs"]
     support: {
   responseTime: "8 hours",channels: ["Email", "Chat", "Video"]
@@ -359,10 +349,8 @@ export const COMPREHENSIVE_PRICING_GUIDE_2025: ServicePricing[] = [
   averagePrice: "$2,800-8,000/month";
       competitors: ["HireVue", "Pymetrics", "HiredScore"]
       valueProposition: "50% faster hiring with 40% better candidate quality using AI"
-}
     roi: {
   timeframe: "4 months",percentage: "400%",savings: "$100,000+ annually"
-}
     features: {
   core: [
   "AI candidate screening";
@@ -382,7 +370,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2025: ServicePricing[] = [
         "Enterprise integrations";
         "Dedicated support"
 ],
-  }
+  };
     integrations: ["Workday", "BambooHR", "Greenhouse", "Lever", "LinkedIn", "Indeed", "ZipRecruiter"]
     support: {
   responseTime: "4 hours",channels: ["Email", "Phone", "Chat", "Video"]
@@ -430,10 +418,8 @@ export const COMPREHENSIVE_PRICING_GUIDE_2025: ServicePricing[] = [
   averagePrice: "$4,500-15,000/month";
       competitors: ["Sift", "Signifyd", "Forter"]
       valueProposition: "99.9% fraud detection accuracy with 80% fewer false positives"
-}
     roi: {
   timeframe: "6 months",percentage: "500%",savings: "$500,000+ annually"
-}
     features: {
   core: [
   "Real-time fraud detection";
@@ -453,7 +439,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2025: ServicePricing[] = [
         "Enterprise integrations";
         "Dedicated support"
 ],
-  }
+  };
     integrations: ["Stripe", "PayPal", "Square", "Adyen", "Shopify", "WooCommerce", "Magento"]
     support: {
   responseTime: "2 hours",channels: ["Email", "Phone", "Chat", "Video"]

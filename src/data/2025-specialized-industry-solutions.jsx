@@ -35,7 +35,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
       "Better patient outcomes"
 ]
     link: "/services/precision-medicine",image: "/images/precision-medicine.jpg",technology: "AI + Genomics",marketSize: "$3.2B by 2025",targetIndustry: "Hospitals, Research Institutions, Pharma"
-}
+};
   ;
   // Financial Services;
   {
@@ -73,7 +73,6 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
       "Competitive edge"
 ]
     link: "/services/quantum-trading",image: "/images/quantum-trading.jpg",technology: "Quantum Computing + AI",marketSize: "$2.8B by 2025",targetIndustry: "Hedge Funds, Investment Banks, Trading Firms"
-}
   ;
   // Manufacturing & Industry 4.0;
   {
@@ -111,7 +110,6 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
       "Quality improvement"
 ]
     link: "/services/3d-printing-ai",image: "/images/3d-printing-ai.jpg",technology: "AI + 3D Printing",marketSize: "$2.1B by 2025",targetIndustry: "Manufacturing, Prototyping, Research"
-}
   ;
   // Energy & Sustainability;
   {
@@ -149,7 +147,6 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
       "Environmental impact"
 ]
     link: "/services/carbon-capture-ai",image: "/images/carbon-capture-ai.jpg",technology: "AI + Environmental Tech",marketSize: "$2.8B by 2025",targetIndustry: "Energy, Manufacturing, Environmental"
-}
   ;
   // Transportation & Logistics;
   {
@@ -187,7 +184,6 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
       "Citizen satisfaction"
 ]
     link: "/services/smart-city-mobility",image: "/images/smart-city-mobility.jpg",technology: "AI + IoT + Mobility",marketSize: "$4.2B by 2025",targetIndustry: "Cities, Transportation, Government"
-}
   ;
   // Education & Training;
   {
@@ -207,7 +203,6 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
       "Scalable education"
 ]
     link: "/services/ai-education",image: "/images/ai-education.jpg",technology: "AI + EdTech",marketSize: "$3.8B by 2025",targetIndustry: "Schools, Universities, Corporate Training"
-}
   ;
   // Retail & E-commerce;
   {
@@ -247,19 +242,18 @@ export const const INDUSTRY_PRICING = {
     basic: {
   price: 299,currency: "$",period: "month",features: [["Core platform access", "Basic analytics", "Standard support"],
   ],
-  }
+  };
     professional: {
   price: 799,currency: "$",period: "month",features: [["Advanced features", "Custom integrations", "Priority support", "Advanced analytics"],
   ],
-  }
+  };
     enterprise: {
   price: 1999,currency: "$",period: "month",features: [["Full platform access", "White-label options", "24/7 support", "Custom development"],
   ],
   },
-  }
+  };
 
 export const const INDUSTRY_CONTACT = {
   = {
     phone: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008, Middletown DE 19709";
     website: "https://ziontechgroup.com",supportHours: "24/7",responseTime: "< 2 hours"
-}

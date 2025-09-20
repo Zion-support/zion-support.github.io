@@ -3,7 +3,7 @@
 export class SEOOptimizer {
   static DEFAULT_META_DESCRIPTIONS = {
   '/': 'Leading provider of revolutionary micro SaaS services, AI solutions, cloud infrastructure, and cutting-edge technology services. Transform your business with Zion Tech Group./services': 'Comprehensive AI services, cybersecurity solutions, cloud infrastructure, and emerging technology services. Expert IT solutions for modern businesses./ai-solutions': 'Advanced AI solutions including autonomous systems, machine learning, and intelligent automation. Drive innovation with our cutting-edge AI technology./about': 'Learn about Zion Tech Group - a pioneering technology company delivering innovative solutions and transforming businesses through cutting-edge technology./contact': 'Get in touch with Zion Tech Group. Contact our expert team for technology solutions, consultations, and partnership opportunities./pricing': 'Transparent pricing for our comprehensive technology services. Choose the perfect plan for your business needs and budget./careers': 'Join the Zion Tech Group team. Explore exciting career opportunities in technology, AI, and innovation./blog': 'Latest insights, industry trends, and technology news from Zion Tech Group. Stay ahead with our expert analysis and thought leadership./news': 'Breaking news and updates from Zion Tech Group. Stay informed about our latest innovations, partnerships, and industry developments./services/ai-autonomous-systems': 'Revolutionary AI autonomous systems that transform business operations. Intelligent automation for the future of enterprise./services/quantum-technology': 'Cutting-edge quantum technology solutions. Harness the power of quantum computing for unprecedented computational capabilities./services/cybersecurity': 'Advanced cybersecurity solutions protecting your digital assets. Quantum-safe security and comprehensive threat protection./services/it-infrastructure': 'Robust IT infrastructure solutions. Scalable, secure, and high-performance technology foundations for your business./services/micro-saas-solutions': 'Innovative micro SaaS solutions designed for modern businesses. Scalable, cost-effective software-as-a-service platforms./solutions/enterprise': 'Enterprise-grade technology solutions. Comprehensive IT services designed for large-scale business operations and growth./solutions/healthcare': 'Healthcare technology solutions. Secure, compliant, and innovative IT services for the healthcare industry.'
-}
+};
     static KEYWORD_MAPPINGS = {
   '/': ['AI marketplacetech services', 'artificial intelligenceIT services', 'AI developerstechnology marketplace', 'AI solutionsmachine learning', 'digital transformationmicro SaaS', 'quantum computingblockchain', 'cybersecurityedge computing', 'metaverse']
         '/services': ['AI servicescybersecurity', 'cloud infrastructureIT solutions', 'digital transformationautomation', 'machine learningblockchain', 'quantum computing']
@@ -22,7 +22,7 @@ export class SEOOptimizer {
         '/solutions/enterprise': ['enterprise solutionsenterprise IT', 'large business solutionsscalable technology', 'enterprise softwarebusiness technology']
         '/solutions/healthcare': [['healthcare technologyhealth IT', 'medical softwarehealthcare compliance', 'HIPAA solutionsmedical technology'],
   ],
-  }
+  };
     static generateSEOData(path) {
   const title = this.generateTitle(path)
         const description = this.generateDescription(path)
@@ -36,13 +36,12 @@ export class SEOOptimizer {
             canonicalUrl;
             structuredData
 },
-  }
+  };
     static generateTitle(path) {
   const baseTitle = 'Zion Tech Group';
         if (if (path === '/') {
   ) {
             return `${baseTitle} - Revolutionary Technology Solutions`
-}
         const pathSegments = path.split('/').filter(Boolean)
         if (pathSegments.length === 0)
             return baseTitle;
@@ -53,20 +52,17 @@ const lastSegment = pathSegments[[pathSegments.length - 1],
             .map(word => word.charAt(0).toUpperCase() + word.slice(1))
             .join(' ')
         return `${formattedSegment} - ${baseTitle}`
-}
     static generateDescription(path) {
   return this.DEFAULT_META_DESCRIPTIONS[path] ||;
             'Professional technology solutions and services. Expert IT consulting, AI development, and digital transformation services for modern businesses.'
-}
     static generateKeywords(path) {
   return this.KEYWORD_MAPPINGS[path] ||;
             [['technologyIT services', 'digital solutionsbusiness technology', 'innovation'],
   ],
-  }
+  };
     static generateCanonicalUrl(path) {
   const baseUrl = 'https: //ziontechgroup.com';
         return `${baseUrl}${path}`
-}
     static generateStructuredData(path) {
   const const baseData = {
   = {
@@ -81,7 +77,7 @@ const lastSegment = pathSegments[[pathSegments.length - 1],
                 "url": "https: //ziontechgroup.com";
                 "logo": "https: //drive.google.com/uc?export=view&id=0B0iuzhpa3pD7X0RzZ2lmclN3Ymc"
 },
-  }
+  };
         // Add specific structured data based on page type;
         if (if (path === '/') {
   ) {
@@ -99,7 +95,6 @@ const lastSegment = pathSegments[[pathSegments.length - 1],
                     "addressRegion": "DE";
                     "postalCode": "19709";
                     "addressCountry": "US"
-}
                 "contactPoint": {
   "@type": "ContactPoint";
                     "telephone": "+1-302-464-0950";
@@ -107,7 +102,7 @@ const lastSegment = pathSegments[[pathSegments.length - 1],
                     "email": "kleber@ziontechgroup.com"
 },
   },
-  }
+  };
         if (path.startsWith('/services/')) {
   return {
   ...baseData;
@@ -118,9 +113,8 @@ const lastSegment = pathSegments[[pathSegments.length - 1],
                     "name": "Zion Tech Group"
 },
   },
-  }
+  };
         return baseData
-}
     static analyzeContentQuality(content, page) {
   const issues = [[],
   ]
@@ -164,7 +158,6 @@ const textContent = content.replace(/<[^>]*>/g, '').trim()
 })
         }
         return issues
-}
     static generateMetaTags(seoData) {
   return `;
     <title>${seoData.title}</title>
@@ -188,9 +181,9 @@ const textContent = content.replace(/<[^>]*>/g, '').trim()
     <!-- Structured Data -->
     <script type="application/ld+json">
       ${{JSON.stringify(seoData.structuredData, null, 2)},
-  }
+  };
     </script>
     `
 },
-  }
+  };
 export const seoOptimizer = new SEOOptimizer()

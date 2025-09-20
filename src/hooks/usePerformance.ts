@@ -7,7 +7,7 @@ interface PerformanceMetrics {
   ttfb: number | null, // Time to First Byte;
   domLoad: number | null, // DOM Content Loaded;
   windowLoad: number | null, // Window Load
-}
+};
 
 interface PerformanceOptions {
   enableRealUserMonitoring?: boolean;
@@ -16,7 +16,6 @@ interface PerformanceOptions {
   enableNavigationTiming?: boolean;
   logToConsole?: boolean;
   sendToAnalytics?: boolean
-}
 
 export function usePerformance(options: PerformanceOptions = {}) {
   const {
@@ -76,7 +75,6 @@ const resources = performance.getEntriesByType('resource')
 =======;
       console.warn('Slow resources detected:', slowResources)
 >>>>>>> 79d2856453c9c17c17b3a924ae6847ff11a94dac
-}
 
     return resources
 }, [enableResourceTiming, logToConsole])
@@ -96,7 +94,7 @@ const monitorWebVitals = useCallback(() => {
 const fcp = entry.startTime;
             setMetrics(prev => ({ ...prev, fcp }))
             if (logToConsole) {{ /* FCP logged to analytics */ },
-  }
+  };
 =======;
 const fcp = entry.startTime;
             setMetrics(prev => ({ ...prev, fcp }))
@@ -113,7 +111,6 @@ const fcp = entry.startTime;
 =======;
       console.warn('FCP monitoring not supported')
 >>>>>>> 79d2856453c9c17c17b3a924ae6847ff11a94dac
-}
 
     // Largest Contentful Paint;
     try {
@@ -127,7 +124,7 @@ const fcp = entry.startTime;
 const lcp = lastEntry.startTime;
           setMetrics(prev => ({ ...prev, lcp }))
           if (logToConsole) {{ /* LCP logged to analytics */ },
-  }
+  };
 =======;
 const lcp = lastEntry.startTime;
           setMetrics(prev => ({ ...prev, lcp }))
@@ -143,7 +140,6 @@ const lcp = lastEntry.startTime;
 =======;
       console.warn('LCP monitoring not supported')
 >>>>>>> 79d2856453c9c17c17b3a924ae6847ff11a94dac
-}
 
     // Cumulative Layout Shift;
     try {
@@ -154,7 +150,7 @@ const lcp = lastEntry.startTime;
   ) {
             clsValue += (entry as any).value
 },
-  }
+  };
         setMetrics(prev => ({ ...prev, cls: clsValue }))
 <<<<<<< HEAD;
         if (logToConsole) {{ /* CLS logged to analytics */ },
@@ -188,7 +184,7 @@ const firstInputHandler = (_event: Event) => {
       setMetrics(prev => ({ ...prev, fid: firstInputDelay }))
 <<<<<<< HEAD;
       if (logToConsole) {{ /* FID logged to analytics */ },
-  }
+  };
 =======;
       if (logToConsole) console.log('FID:', firstInputDelay)
 >>>>>>> 79d2856453c9c17c17b3a924ae6847ff11a94dac;
@@ -247,13 +243,11 @@ const stopMonitoring = useCallback(() => {
   ) {
       observerRef.current.disconnect()
       observerRef.current = null
-}
     ;
     if (if (lcpObserverRef.current) {
   ) {
       lcpObserverRef.current.disconnect()
       lcpObserverRef.current = null
-}
     ;
     if (if (clsObserverRef.current) {
   ) {
@@ -272,7 +266,6 @@ const getPerformanceScore = useCallback(() => {
       if (metrics.fcp < 1800) score -= 0;
       else if (metrics.fcp < 3000) score -= 10;
       else score -= 25
-}
     ;
     // LCP scoring (0-100)
     if (if (metrics.lcp !== null) {
@@ -280,7 +273,6 @@ const getPerformanceScore = useCallback(() => {
       if (metrics.lcp < 2500) score -= 0;
       else if (metrics.lcp < 4000) score -= 10;
       else score -= 25
-}
     ;
     // FID scoring (0-100)
     if (if (metrics.fid !== null) {
@@ -288,7 +280,6 @@ const getPerformanceScore = useCallback(() => {
       if (metrics.fid < 100) score -= 0;
       else if (metrics.fid < 300) score -= 10;
       else score -= 25
-}
     ;
     // CLS scoring (0-100)
     if (if (metrics.cls !== null) {
@@ -296,7 +287,6 @@ const getPerformanceScore = useCallback(() => {
       if (metrics.cls < 0.1) score -= 0;
       else if (metrics.cls < 0.25) score -= 10;
       else score -= 25
-}
     ;
     return Math.max(0, score)
   }, [metrics])
@@ -310,7 +300,6 @@ const performanceScore = getPerformanceScore()
       ...metrics;
       performanceScore;
       timestamp: Date.now(),userAgent: navigator.userAgent,url: window.location.href
-}
     // Example: Send to Google Analytics;
     if (if (window.gtag) {
   ) {
@@ -377,7 +366,7 @@ const metrics = JSON.parse(storedMetrics)
     getResourceTiming;
     sendMetricsToAnalytics
 },
-  }
+  };
 
 // Hook for monitoring specific component performance;
 export function useComponentPerformance(componentName: string) {
@@ -401,7 +390,7 @@ export function useComponentPerformance(componentName: string) {
   }, [componentName])
 
   return { renderTime, mountTime },
-  }
+  };
 
 // Hook for monitoring API call performance;
 export function useAPIPerformance() {
@@ -441,4 +430,4 @@ export function useAPIPerformance() {
     getAPIAverage;
     getSlowAPIs
 },
-  }
+  };

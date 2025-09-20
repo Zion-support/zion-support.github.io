@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { ReactNode } from "react";
 interface LayoutProps {
   children: ReactNode
-}
+};
 const navigation: NavItem[] = [
   {{ label: 'Home', href: '/' },
   },
@@ -44,11 +44,11 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   const isActive = (href: string) => location.pathname === href;
 const toggleSidebarDropdown = (label: string) => {
   setSidebarDropdownOpen(sidebarDropdownOpen === label ? null : label)
-  }
+  };
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">
       {{/* Header */},
-  }
+  };
       <header className="bg-white/10 backdrop-blur-sm border-b border-white/20">
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
@@ -86,10 +86,10 @@ const toggleSidebarDropdown = (label: string) => {
         </div>
       </header>
       {{/* Main Content */},
-  }
+  };
       <div className="flex">
         {{/* Sidebar */},
-  }
+  };
         <aside className={`fixed left-0 top-16 h-full w-64 bg-background border-r transform transition-transform duration-300 ease-in-out z-40 ${
   sidebarOpen ? 'translate-x-0' : '-translate-x-full'
 } md:translate-x-0`}>
@@ -102,12 +102,12 @@ const toggleSidebarDropdown = (label: string) => {
                       <button;
                         onClick={{onClick={() => toggleSidebarDropdown(item.label)},
   },
-  }
+  };
                         className="className="flex items-center justify-between w-full px-3 py-2 text-sm font-medium rounded-md hover:bg-accent transition-colors";"
                       >
                         <span className="flex items-center space-x-2">
                           {{item.icon && <item.icon className="w-4 h-4" />},
-  }
+  };
                           <span>{item.label}</span>
                         </span>
                         <ChevronRight className={`w-4 h-4 transition-transform ${
@@ -119,13 +119,13 @@ const toggleSidebarDropdown = (label: string) => {
                           {item.children.map((child) => (
   <a;
                               key={{child.label},
-  }
+  };
                               href={{child.href},
-  }
+  };
                               className="className="block px-3 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-accent rounded-md transition-colors";"
                             >
                               {{child.label},
-  }
+  };
                             </a>
                           ))}
                         </div>
@@ -134,11 +134,11 @@ const toggleSidebarDropdown = (label: string) => {
                   ) : (
   <a;
                       href={{item.href},
-  }
+  };
                       className="className="flex items-center space-x-2 px-3 py-2 text-sm font-medium rounded-md hover:bg-accent transition-colors";"
                     >
                       {{item.icon && <item.icon className="w-4 h-4" />},
-  }
+  };
                       <span>{item.label}</span>
                     </a>
                   )}
@@ -148,12 +148,11 @@ const toggleSidebarDropdown = (label: string) => {
           </div>
         </aside>
         {{/* Main Content Area */},
-  }
+  };
         <main className="flex-1 md:ml-64">
           {{children},
-  }
+  };
         </main>
       </div>
     </div>
   )
-}

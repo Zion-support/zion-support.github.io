@@ -18,7 +18,7 @@ const NewsletterSignup: React.FC = () => {
     } finally {
   setIsSubmitting(false)
     },
-  }
+  };
 
   return (
     <section className="py-20 px-4 bg-gradient-to-r from-purple-900/50 to-pink-900/50">
@@ -48,9 +48,9 @@ const NewsletterSignup: React.FC = () => {
               <input;
                 type="email";
                 value={{email},
-  }
+  };
                 onChange={{(e) => setEmail(e.target.value)},
-  }
+  };
                 placeholder="Enter your email address";
                 required;
                 className="className="flex-1 px-6 py-4 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-300";"
@@ -58,7 +58,7 @@ const NewsletterSignup: React.FC = () => {
               <button;
                 type="submit";
                 disabled={{isSubmitting},
-  }
+  };
                 className="className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-gray-800 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300 transform hover:scale-105";"
               >
                 {isSubmitting ? (
@@ -80,6 +80,6 @@ const NewsletterSignup: React.FC = () => {
       </div>
     </section>
   )
-}
+};
 
 export default NewsletterSignup;

@@ -3,7 +3,7 @@ const TransdimensionalAI2026: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white">
       {{/* Hero Section */},
-  }
+  };
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/30 to-pink-600/30"></div>
         <div className="absolute inset-0 opacity-20" style={{
@@ -37,7 +37,7 @@ const TransdimensionalAI2026: React.FC = () => {
       </div>
 
       {{/* Dimensional Capabilities */},
-  }
+  };
       <div className="container mx-auto px-4 py-16">
         <h2 className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
           Dimensional AI Capabilities;
@@ -113,7 +113,7 @@ const TransdimensionalAI2026: React.FC = () => {
       </div>
 
       {{/* Technology Deep Dive */},
-  }
+  };
       <div className="bg-gradient-to-r from-gray-900/50 to-gray-800/50 backdrop-blur-sm py-16">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-yellow-400 to-orange-400 bg-clip-text text-transparent">
@@ -173,7 +173,7 @@ const TransdimensionalAI2026: React.FC = () => {
       </div>
 
       {{/* Applications Section */},
-  }
+  };
       <div className="container mx-auto px-4 py-16">
         <h2 className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
           Revolutionary Applications;
@@ -235,7 +235,7 @@ const TransdimensionalAI2026: React.FC = () => {
       </div>
 
       {{/* Call to Action */},
-  }
+  };
       <div className="container mx-auto px-4 py-20">
         <div className="text-center">
           <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">
@@ -260,7 +260,7 @@ const TransdimensionalAI2026: React.FC = () => {
       </div>
 
       {{/* Footer */},
-  }
+  };
       <div className="bg-black/50 backdrop-blur-sm py-8">
         <div className="container mx-auto px-4 text-center">
           <p className="text-gray-400">
@@ -270,7 +270,7 @@ const TransdimensionalAI2026: React.FC = () => {
       </div>
     </div>
   )
-}
+};
 
 export default TransdimensionalAI2026;
         <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%239C92AC%22%20fill-opacity%3D%220.1%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>

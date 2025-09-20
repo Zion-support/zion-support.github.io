@@ -16,7 +16,7 @@ export default function AIPoweredContent() {
         "name": "AI Content Generation";
         "description": "Generate SEO-optimized content using ZionGPT to boost your online visibility.";
         "url": "https: //app.ziontechgroup.com/features/ai-content-generation"
-}
+};
     const { markAiExplored } = useAdvancedOnboardingStatus()
     useEffect(() => {
         markAiExplored()
@@ -24,7 +24,7 @@ export default function AIPoweredContent() {
     return (<>
       <SEO title="AI Content Generation" description="Generate SEO-optimized blog posts, service descriptions and FAQs with ZionGPT." keywords="AI content generation, ZionGPT, SEO tools" canonical="https://app.ziontechgroup.com/features/ai-content-generation"/>
       {{/* Use a normal script tag so JSON-LD is correctly parsed */},
-  }
+  };
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) },
   }></script>
       <Header />
@@ -61,4 +61,3 @@ export default function AIPoweredContent() {
       </main>
       <Footer />
     </>)
-}

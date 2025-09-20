@@ -183,10 +183,10 @@ const Home2026: React.FC = () => {
       />
 
       {{/* Hero Section */},
-  }
+  };
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         {{/* Animated Background Elements */},
-  }
+  };
         <div className="absolute inset-0">
           <div className="absolute top-0 left-0 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl animate-pulse"></div>
           <div className="absolute top-0 right-0 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl animate-bounce"></div>
@@ -195,12 +195,12 @@ const Home2026: React.FC = () => {
         </div>
 
         {{/* Floating Icons */},
-  }
+  };
         <div className="absolute inset-0 pointer-events-none">
           {[...Array(20)].map((_, i) => (
   <motion.div;
               key={{i},
-  }
+  };
               className="className="absolute text-cyan-400/20";"
               style={{
   left: `${Math.random() * 100}%`;
@@ -208,18 +208,18 @@ const Home2026: React.FC = () => {
                 animationDelay: `${Math.random() * 5}s`;
                 animationDuration: `${3 + Math.random() * 4}s`
 },
-  }
+  };
               animate={{
   y: [0, -20, 0]
                 opacity: [0.2, 0.5, 0.2]
                 rotate: [[0, 360],
   ],
   },
-  }
+  };
               transition={{
   duration: 4,repeat: Infinity,ease: "easeInOut"
 },
-  }
+  };
             >
               {[Brain, Zap, Shield, Cloud, Cpu, Rocket, Heart, Users],
   [i % 8] &&;
@@ -233,14 +233,14 @@ const Home2026: React.FC = () => {
         <div className="container mx-auto px-4 relative z-10 text-center">
           <motion.div;
             initial={{ opacity: 0, y: 30 },
-  }
+  };
             animate={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 1 },
-  }
+  };
           >
             {{/* Logo and Company Name */},
-  }
+  };
             <div className="mb-8">
               <div className="inline-flex items-center justify-center w-24 h-24 bg-gradient-to-br from-cyan-400 via-blue-500 to-purple-600 rounded-3xl mb-6 shadow-2xl shadow-cyan-400/30">
                 <Zap className="w-12 h-12 text-white" />
@@ -254,7 +254,7 @@ const Home2026: React.FC = () => {
             </div>
 
             {{/* Innovation Badges */},
-  }
+  };
             <div className="flex flex-wrap justify-center gap-4 mb-12">
               <div className="flex items-center gap-2 bg-slate-800/50 px-6 py-3 rounded-full border border-cyan-400/30 backdrop-blur">
                 <Brain className="w-6 h-6 text-cyan-400" />
@@ -275,7 +275,7 @@ const Home2026: React.FC = () => {
             </div>
 
             {{/* CTA Buttons */},
-  }
+  };
             <div className="flex flex-wrap justify-center gap-6 mb-16">
               <Link;
                 to="/services2026";
@@ -295,7 +295,7 @@ const Home2026: React.FC = () => {
             </div>
 
             {{/* Contact Info */},
-  }
+  };
             <div className="flex flex-wrap justify-center gap-8 text-sm text-slate-400">
               <div className="flex items-center gap-2">
                 <Phone className="w-4 h-4 text-cyan-400" />
@@ -318,43 +318,43 @@ const Home2026: React.FC = () => {
         </div>
 
         {{/* Scroll Indicator */},
-  }
+  };
         <motion.div;
           className="className="absolute bottom-8 left-1/2 transform -translate-x-1/2";"
           animate={{ y: [0, 10, 0],
   },
-  }
+  };
           transition={{ duration: 2, repeat: Infinity },
-  }
+  };
         >
           <div className="w-6 h-10 border-2 border-cyan-400/50 rounded-full flex justify-center">
             <motion.div;
               className="className="w-1 h-3 bg-cyan-400 rounded-full mt-2";"
               animate={{ y: [0, 12, 0],
   },
-  }
+  };
               transition={{ duration: 2, repeat: Infinity },
-  }
+  };
             />
           </div>
         </motion.div>
       </section>
 
       {{/* Stats Section */},
-  }
+  };
       <section className="py-20 relative">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
   <motion.div;
                 key={{stat.label},
-  }
+  };
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.6, delay: index * 0.1 },
-  }
+  };
                 className="className="text-center";"
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
@@ -369,16 +369,16 @@ const Home2026: React.FC = () => {
       </section>
 
       {{/* Service Categories */},
-  }
+  };
       <section className="py-20 relative">
         <div className="container mx-auto px-4">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">
@@ -393,13 +393,13 @@ const Home2026: React.FC = () => {
             {serviceCategories.map((category, index) => (
   <motion.div;
                 key={{category.title},
-  }
+  };
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.6, delay: index * 0.1 },
-  }
+  };
                 className="className="group bg-slate-900/60 backdrop-blur border border-slate-700/50 hover:border-cyan-400/40 rounded-3xl p-8 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-400/20";"
               >
                 <div className={`w-16 h-16 bg-gradient-to-br ${category.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
@@ -408,12 +408,12 @@ const Home2026: React.FC = () => {
 
                 <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-300 transition-colors">
                   {{category.title},
-  }
+  };
                 </h3>
 
                 <p className="text-slate-300 mb-6 leading-relaxed">
                   {{category.description},
-  }
+  };
                 </p>
 
                 <div className="flex items-center justify-between">
@@ -436,16 +436,16 @@ const Home2026: React.FC = () => {
       </section>
 
       {{/* Featured Services Carousel */},
-  }
+  };
       <section className="py-20 relative">
         <div className="container mx-auto px-4">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">
@@ -461,13 +461,13 @@ const Home2026: React.FC = () => {
               {featuredServices.map((service, index) => (
   <motion.div;
                   key={{service.id},
-  }
+  };
                   initial={{ opacity: 0, y: 20 },
-  }
+  };
                   whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                   transition={{ duration: 0.6, delay: index * 0.1 },
-  }
+  };
                   className={`group bg-gradient-to-br from-slate-900/80 to-slate-800/80 backdrop-blur border border-cyan-400/30 hover:border-cyan-400/60 rounded-3xl p-8 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-400/20 ${
   index === currentServiceIndex ? 'ring-2 ring-cyan-400/50' : ''
 }`}
@@ -475,7 +475,7 @@ const Home2026: React.FC = () => {
                   <div className="flex items-center justify-between mb-4">
                     <div className="text-xs uppercase tracking-wide text-cyan-300/80 font-semibold">
                       {{service.category},
-  }
+  };
                     </div>
                     <div className="flex items-center gap-1 text-yellow-400">
                       <Star className="w-4 h-4 fill-current" />
@@ -485,12 +485,12 @@ const Home2026: React.FC = () => {
 
                   <h3 className="text-xl font-bold text-white group-hover:text-cyan-300 transition-colors mb-3">
                     {{service.title},
-  }
+  };
                   </h3>
 
                   <p className="text-slate-300 text-sm leading-relaxed mb-4 line-clamp-3">
                     {{service.description},
-  }
+  };
                   </p>
 
                   <div className="space-y-3 mb-6">
@@ -519,7 +519,7 @@ const Home2026: React.FC = () => {
 
                     <div className="text-xs text-slate-500">
                       ID: {{service.id},
-  }
+  };
                     </div>
                   </div>
                 </motion.div>
@@ -530,16 +530,16 @@ const Home2026: React.FC = () => {
       </section>
 
       {{/* Why Choose Zion Tech Group */},
-  }
+  };
       <section className="py-20 bg-gradient-to-r from-slate-900/50 to-slate-800/50 relative">
         <div className="container mx-auto px-4">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">
@@ -576,13 +576,13 @@ const Home2026: React.FC = () => {
   ].map((feature, index) => (
   <motion.div;
                 key={{feature.title},
-  }
+  };
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.6, delay: index * 0.1 },
-  }
+  };
                 className="className="text-center group";"
               >
                 <div className={`w-20 h-20 bg-gradient-to-br ${feature.color} rounded-3xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
@@ -591,12 +591,12 @@ const Home2026: React.FC = () => {
 
                 <h3 className="text-xl font-bold text-white mb-4 group-hover:text-cyan-300 transition-colors">
                   {{feature.title},
-  }
+  };
                 </h3>
 
                 <p className="text-slate-300 leading-relaxed">
                   {{feature.description},
-  }
+  };
                 </p>
               </motion.div>
             ))}
@@ -605,16 +605,16 @@ const Home2026: React.FC = () => {
       </section>
 
       {{/* Call to Action */},
-  }
+  };
       <section className="py-20 relative">
         <div className="container mx-auto px-4">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             className="className="max-w-4xl mx-auto text-center";"
           >
             <h2 className="text-4xl sm: text-5xl font-bold text-white mb-6">
@@ -681,5 +681,5 @@ const Home2026: React.FC = () => {
       </section>
     </div>
   )
-}
+};
 export default Home2026;

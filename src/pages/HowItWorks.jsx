@@ -91,7 +91,7 @@ export default function HowItWorks() {
           </div>
 
           {{/* Platform Overview */},
-  }
+  };
           <div className="bg-zion-blue-dark border border-zion-blue-light rounded-xl p-8 md:p-12 mb-16">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>
@@ -117,7 +117,7 @@ export default function HowItWorks() {
           </div>
 
           {{/* How It Works for Clients */},
-  }
+  };
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8 text-center">For Clients</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -133,7 +133,7 @@ export default function HowItWorks() {
                   <CardContent>
                     <CardDescription className="text-zion-slate-light">
                       {{step.description},
-  }
+  };
                     </CardDescription>
                   </CardContent>
                 </Card>))}
@@ -141,7 +141,7 @@ export default function HowItWorks() {
           </div>
 
           {{/* How It Works for Talent */},
-  }
+  };
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8 text-center">For Talent</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -157,7 +157,7 @@ export default function HowItWorks() {
                   <CardContent>
                     <CardDescription className="text-zion-slate-light">
                       {{step.description},
-  }
+  };
                     </CardDescription>
                   </CardContent>
                 </Card>))}
@@ -165,7 +165,7 @@ export default function HowItWorks() {
           </div>
 
           {{/* Platform Features */},
-  }
+  };
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8 text-center">Platform Features</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -179,7 +179,7 @@ export default function HowItWorks() {
                   <CardContent>
                     <CardDescription className="text-zion-slate-light">
                       {{feature.description},
-  }
+  };
                     </CardDescription>
                   </CardContent>
                 </Card>))}
@@ -187,7 +187,7 @@ export default function HowItWorks() {
           </div>
 
           {{/* Benefits Section */},
-  }
+  };
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8 text-center">Why Choose Zion?</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -211,7 +211,7 @@ export default function HowItWorks() {
           </div>
 
           {{/* CTA Section */},
-  }
+  };
           <div className="text-center bg-zion-blue-dark border border-zion-blue-light rounded-xl p-8">
             <h2 className="text-3xl font-bold text-white mb-6">Ready to Get Started?</h2>
             <p className="text-zion-slate-light text-lg mb-8 max-w-2xl mx-auto">
@@ -229,4 +229,4 @@ export default function HowItWorks() {
         </div>
       </main>
     </>)
-}
+};

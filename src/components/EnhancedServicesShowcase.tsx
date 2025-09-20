@@ -69,33 +69,33 @@ export const EnhancedServicesShowcase: React.FC = () => {
   const const containerVariants = {
   = {
     hidden: {{ opacity: 0 },
-  }
+  };
     visible: {
   opacity: 1,transition: {
   staggerChildren: 0.1
 },
   },
-  }
+  };
   const const itemVariants = {
   = {
     hidden: {{ y: 20, opacity: 0 },
-  }
+  };
     visible: {
   y: 0,opacity: 1,transition: {
   duration: 0.5
 },
   },
-  }
+  };
   return (
     <section className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div;
           initial={{ opacity: 0, y: 20 },
-  }
+  };
           whileInView={{ opacity: 1, y: 0 },
-  }
+  };
           transition={{ duration: 0.6 },
-  }
+  };
           className="className="text-center mb-16";"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -109,19 +109,19 @@ export const EnhancedServicesShowcase: React.FC = () => {
 
         <motion.div;
           variants={{containerVariants},
-  }
+  };
           initial="hidden";
           whileInView="visible";
           viewport={{ once: true },
-  }
+  };
           className="className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8";"
         >
           {services.map((service, index) => (
   <motion.div;
               key={{index},
-  }
+  };
               variants={{itemVariants},
-  }
+  };
               className="className="group relative";"
             >
               <Link to={service.href} className="block">
@@ -132,12 +132,12 @@ export const EnhancedServicesShowcase: React.FC = () => {
                   ;
                   <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors duration-300">
                     {{service.title},
-  }
+  };
                   </h3>
                   ;
                   <p className="text-gray-300 mb-6 leading-relaxed">
                     {{service.description},
-  }
+  };
                   </p>
                   ;
                   <ul className="space-y-2 mb-6">
@@ -145,7 +145,7 @@ export const EnhancedServicesShowcase: React.FC = () => {
   <li key={featureIndex} className="flex items-center text-gray-400 group-hover:text-gray-300 transition-colors duration-300">
                         <div className="w-2 h-2 bg-cyan-400 rounded-full mr-3 group-hover:bg-cyan-300 transition-colors duration-300" />
                         {{feature},
-  }
+  };
                       </li>
                     ))}
                   </ul>
@@ -164,11 +164,11 @@ export const EnhancedServicesShowcase: React.FC = () => {
 
         <motion.div;
           initial={{ opacity: 0, y: 20 },
-  }
+  };
           whileInView={{ opacity: 1, y: 0 },
-  }
+  };
           transition={{ duration: 0.6, delay: 0.3 },
-  }
+  };
           className="className="text-center mt-16";"
         >
           <Link;
@@ -182,4 +182,4 @@ export const EnhancedServicesShowcase: React.FC = () => {
       </div>
     </section>
   )
-}
+};

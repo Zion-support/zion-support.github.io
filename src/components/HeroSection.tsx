@@ -26,7 +26,7 @@ import {
 interface HeroSlide {
   id: string,title: string,subtitle: string,description: string,image: string,cta: string,path: string,features: string[],gradient: string,icon: React.ComponentType<any>,stats: { label: string, value: string, icon: React.ComponentType<any> },
   [],
-  }
+  };
 
 const heroSlides: HeroSlide[] = [
   {
@@ -90,7 +90,6 @@ const slideVariants = {
 const swipeConfidenceThreshold = 10000;
 const swipePower = (offset: number, velocity: number) => {
   return Math.abs(offset) * velocity
-};
 export default function HeroSection() {
   const [currentSlide, setCurrentSlide] = useState(0);
 const [isAutoPlaying, setIsAutoPlaying] = useState(true);
@@ -173,7 +172,6 @@ const goToSlide = useCallback((index: number) => {
         </div>
       </div>
     )
-}
 
   return (
     <section className="relative min-h-screen overflow-hidden bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -186,9 +184,9 @@ const goToSlide = useCallback((index: number) => {
       <div className="absolute top-1/2 left-4 z-20 transform -translate-y-1/2">
         <motion.button
           whileHover={{ scale: 1.1 },
-  }
+  };
           whileTap={{ scale: 0.9 },
-  }
+  };
           onClick={prevSlide}
           className="p-3 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-white hover:bg-white/20 transition-all duration-300"
         >
@@ -199,9 +197,9 @@ const goToSlide = useCallback((index: number) => {
       <div className="absolute top-1/2 right-4 z-20 transform -translate-y-1/2">
         <motion.button
           whileHover={{ scale: 1.1 },
-  }
+  };
           whileTap={{ scale: 0.9 },
-  }
+  };
           onClick={nextSlide}
           className="p-3 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-white hover:bg-white/20 transition-all duration-300"
         >
@@ -213,9 +211,9 @@ const goToSlide = useCallback((index: number) => {
       <div className="absolute top-4 right-4 z-20">
         <motion.button
           whileHover={{ scale: 1.1 },
-  }
+  };
           whileTap={{ scale: 0.9 },
-  }
+  };
           onClick={() => setIsAutoPlaying(!isAutoPlaying)}
           className="p-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-white hover:bg-white/20 transition-all duration-300"
         >
@@ -229,9 +227,9 @@ const goToSlide = useCallback((index: number) => {
           <motion.button
             key={index}
             whileHover={{ scale: 1.2 },
-  }
+  };
             whileTap={{ scale: 0.8 },
-  }
+  };
             onClick={() => goToSlide(index)}
             className={`w-3 h-3 rounded-full transition-all duration-300 ${
               index === currentSlide 
@@ -256,10 +254,10 @@ const goToSlide = useCallback((index: number) => {
               x: { type: "spring", stiffness: 300, damping: 30 };
               opacity: { duration: 0.2 },
   },
-  }
+  };
             drag="x"
             dragConstraints={{ left: 0, right: 0 },
-  }
+  };
             dragElastic={1}
             onDragEnd={(e, { offset, velocity }) => {
               const swipe = swipePower(offset.x, velocity.x);
@@ -269,28 +267,28 @@ const goToSlide = useCallback((index: number) => {
                 prevSlide()
 },
   },
-  }
+  };
             className="w-full max-w-6xl mx-auto text-center"
           >
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               {/* Content */}
               <motion.div 
                 initial={{ opacity: 0, y: 50 },
-  }
+  };
                 animate={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.8, delay: 0.2 },
-  }
+  };
                 className="space-y-8"
               >
                 <div className="space-y-4">
                   <motion.div
                     initial={{ opacity: 0, scale: 0.8 },
-  }
+  };
                     animate={{ opacity: 1, scale: 1 },
-  }
+  };
                     transition={{ duration: 0.6, delay: 0.3 },
-  }
+  };
                     className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 text-cyan-300 text-sm font-medium"
                   >
                     <currentSlideData.icon className="w-4 h-4 mr-2" />
@@ -299,11 +297,11 @@ const goToSlide = useCallback((index: number) => {
 
                   <motion.h1
                     initial={{ opacity: 0, y: 30 },
-  }
+  };
                     animate={{ opacity: 1, y: 0 },
-  }
+  };
                     transition={{ duration: 0.8, delay: 0.4 },
-  }
+  };
                     className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight"
                   >
                     {currentSlideData.title}
@@ -311,11 +309,11 @@ const goToSlide = useCallback((index: number) => {
 
                   <motion.p
                     initial={{ opacity: 0, y: 30 },
-  }
+  };
                     animate={{ opacity: 1, y: 0 },
-  }
+  };
                     transition={{ duration: 0.8, delay: 0.6 },
-  }
+  };
                     className="text-xl text-gray-300 leading-relaxed max-w-2xl mx-auto"
                   >
                     {currentSlideData.description}
@@ -325,11 +323,11 @@ const goToSlide = useCallback((index: number) => {
                 {/* Features */}
                 <motion.div
                   initial={{ opacity: 0, y: 30 },
-  }
+  };
                   animate={{ opacity: 1, y: 0 },
-  }
+  };
                   transition={{ duration: 0.8, delay: 0.8 },
-  }
+  };
                   className="grid grid-cols-2 gap-4"
                 >
                   {currentSlideData.features.map((feature, index) => (
@@ -343,11 +341,11 @@ const goToSlide = useCallback((index: number) => {
                 {/* CTA Button */}
                 <motion.div
                   initial={{ opacity: 0, y: 30 },
-  }
+  };
                   animate={{ opacity: 1, y: 0 },
-  }
+  };
                   transition={{ duration: 0.8, delay: 1 },
-  }
+  };
                 >
                   <Link
                     to={currentSlideData.path}
@@ -362,11 +360,11 @@ const goToSlide = useCallback((index: number) => {
               {/* Visual Content */}
               <motion.div
                 initial={{ opacity: 0, x: 50 },
-  }
+  };
                 animate={{ opacity: 1, x: 0 },
-  }
+  };
                 transition={{ duration: 0.8, delay: 0.4 },
-  }
+  };
                 className="relative"
               >
                 <div className={`relative p-8 rounded-3xl bg-gradient-to-br ${currentSlideData.gradient} shadow-2xl`}>
@@ -382,11 +380,11 @@ const goToSlide = useCallback((index: number) => {
                         <motion.div
                           key={index}
                           initial={{ opacity: 0, scale: 0.8 },
-  }
+  };
                           animate={{ opacity: 1, scale: 1 },
-  }
+  };
                           transition={{ duration: 0.6, delay: 0.8 + index * 0.1 },
-  }
+  };
                           className="text-center"
                         >
                           <div className="text-2xl font-bold text-white">{stat.value}</div>
@@ -403,6 +401,5 @@ const goToSlide = useCallback((index: number) => {
       </div>
     </section>
   )
-}
 
 export { HeroSection };

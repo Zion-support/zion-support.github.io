@@ -2,14 +2,13 @@ import React, { useEffect, useCallback, useState } from "react";
 interface BundleAnalyzerProps {
   enabled?: boolean,
   showUI?: boolean,
-}
+};
 
 interface BundleMetrics {
   totalSize: number,chunkCount: number,largestChunk: {
     name: string,size: number
   };
   averageChunkSize: number,gzipSavings: number
-}
 
 export const BundleAnalyzer: React.FC<BundleAnalyzerProps> = ({ 
   enabled = true;
@@ -61,15 +60,12 @@ const gzipSavings = totalSize * 0.7, // Estimate 70% savings with gzip
       // Performance recommendations
       if (totalSize > 5 * 1024 * 1024) { // 5MB
         console.warn('⚠️ Bundle size is large. Consider code splitting and lazy loading.')
-}
       
       if (chunkCount > 20) {
         console.warn('⚠️ Too many chunks. Consider consolidating small chunks.')
-}
       
       if (largestChunk.size > 2 * 1024 * 1024) { // 2MB
         console.warn('⚠️ Largest chunk is too big. Consider splitting it further.')
-}
       
       console.groupEnd()
 } catch (error) {
@@ -90,12 +86,10 @@ const gzipSavings = totalSize * 0.7, // Estimate 70% savings with gzip
     if (metrics.chunkCount > 20) {
       optimizations.push('Consolidate small chunks');
       optimizations.push('Use webpack chunk optimization')
-}
 
     if (metrics.largestChunk.size > 2 * 1024 * 1024) {
       optimizations.push('Split large components');
       optimizations.push('Implement tree shaking')
-}
 
     // Apply optimizations
     optimizations.forEach(optimization => {
@@ -125,7 +119,6 @@ const gzipSavings = totalSize * 0.7, // Estimate 70% savings with gzip
   // Don't render UI unless explicitly requested
   if (!showUI) {
     return null
-}
 
   return (
     <div className="fixed bottom-4 left-4 z-50 bg-white/95 backdrop-blur-md rounded-lg shadow-lg border border-gray-200 p-4 max-w-sm">
@@ -138,4 +131,3 @@ const gzipSavings = totalSize * 0.7, // Estimate 70% savings with gzip
       </div>
     </div>
   )
-};

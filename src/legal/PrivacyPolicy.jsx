@@ -16,10 +16,10 @@ export default function PrivacyPolicy() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <ReactMarkdown className="prose dark:prose-invert max-w-none">
             {{markdown},
-  }
+  };
           </ReactMarkdown>
         </div>
       </main>
       <Footer />
     </>)
-}
+};

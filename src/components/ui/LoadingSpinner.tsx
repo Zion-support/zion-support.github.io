@@ -8,7 +8,7 @@ interface LoadingSpinnerProps {
   variant?: 'spinner' | 'dots' | 'pulse' | 'bars' | 'ripple',
   className?: string,
   ariaLabel?: string,
-}
+};
 
 export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   size = 'md';
@@ -32,7 +32,6 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   const getColorValue = () => {
     if (color === 'custom' && customColor) {
       return customColor
-}
     return ''
 },
 
@@ -128,7 +127,7 @@ const isSpinning = variant === 'spinner' || variant === 'ripple';
       <div 
         className="relative"
         style={color === 'custom' ? { color: customColor } : {},
-  }
+  };
       >
         {renderSpinner()},
   {/* Screen reader text */}
@@ -143,7 +142,7 @@ const isSpinning = variant === 'spinner' || variant === 'ripple';
           className={`${textSizeClasses[size],
   } text-center font-medium`}
           style={color === 'custom' ? { color: customColor } : {},
-  }
+  };
         >
           <span className={color === 'custom' ? '' : colorClasses[color],
   }>
@@ -158,7 +157,7 @@ const isSpinning = variant === 'spinner' || variant === 'ripple';
             <div 
               className="bg-gradient-to-r from-cyan-400 to-purple-400 h-1 rounded-full animate-pulse"
               style={{ width: '60%' },
-  }
+  };
             ></div>
           </div>
         </div>
@@ -234,7 +233,6 @@ export const LoadingOverlay: React.FC<{
         </div>
       </div>
     )
-}
 
   return (
     <div className="flex items-center justify-center p-8">

@@ -129,7 +129,7 @@ let matchesPrice = true;
 } else if (if (priceRange === 'enterprise') {
   ) {
       matchesPrice = service.price >= 50000
-}
+};
     ;
     return matchesCategory && matchesPrice
 })
@@ -162,15 +162,15 @@ let matchesPrice = true;
       case 'AI & Entertainment': return <Sparkles className="w-6 h-6" />;
       default: return <Star className="w-6 h-6" />
     },
-  }
+  };
   const getPriceTier = (price: number) => {
   if (price < 10000) return {{ tier: 'Budget', icon: <StarIcon className="w-4 h-4" />, color: 'text-green-400' },
-  }
+  };
     if (price < 50000) return {{ tier: 'Mid-Range', icon: <Gem className="w-4 h-4" />, color: 'text-blue-400' },
-  }
+  };
     return {{ tier: 'Enterprise', icon: <Crown className="w-4 h-4" />, color: 'text-purple-400' },
   },
-  }
+  };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -180,17 +180,17 @@ let matchesPrice = true;
       />
       ;
       {{/* Hero Section */},
-  }
+  };
       <section className="relative py-20 px-4 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-green-600/20 to-blue-600/20"></div>
         <div className="relative max-w-7xl mx-auto text-center">
           <motion.h1 ;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             animate={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             className="className="text-5xl md:text-7xl font-bold text-white mb-6";"
           >
             <span className="bg-gradient-to-r from-green-400 via-emerald-500 to-blue-600 bg-clip-text text-transparent">
@@ -206,11 +206,11 @@ let matchesPrice = true;
           ;
           <motion.p ;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             animate={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8, delay: 0.2 },
-  }
+  };
             className="className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto";"
           >
             Transparent pricing for our comprehensive portfolio of revolutionary AI and technology services. ;
@@ -218,14 +218,14 @@ let matchesPrice = true;
           </motion.p>
 
           {{/* Pricing Summary */},
-  }
+  };
           <motion.div ;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             animate={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8, delay: 0.4 },
-  }
+  };
             className="className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto";"
           >
             <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20">
@@ -245,16 +245,16 @@ let matchesPrice = true;
       </section>
 
       {{/* Pricing Overview */},
-  }
+  };
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <motion.div ;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -270,18 +270,18 @@ let matchesPrice = true;
           </motion.div>
 
           {{/* Pricing Tiers */},
-  }
+  };
           <motion.div ;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8, delay: 0.2 },
-  }
+  };
             className="className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16";"
           >
             {{/* Budget Tier */},
-  }
+  };
             <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-green-500/30 hover:border-green-500/50 transition-all duration-300">
               <div className="text-center mb-6">
                 <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-600 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -324,7 +324,7 @@ let matchesPrice = true;
             </div>
 
             {{/* Mid-Range Tier */},
-  }
+  };
             <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-blue-500/30 hover:border-blue-500/50 transition-all duration-300 transform scale-105">
               <div className="text-center mb-6">
                 <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -367,7 +367,7 @@ let matchesPrice = true;
             </div>
 
             {{/* Enterprise Tier */},
-  }
+  };
             <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-purple-500/30 hover:border-purple-500/50 transition-all duration-300">
               <div className="text-center mb-6">
                 <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -411,24 +411,24 @@ let matchesPrice = true;
           </motion.div>
 
           {{/* Filters */},
-  }
+  };
           <motion.div ;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8, delay: 0.4 },
-  }
+  };
             className="className="mb-12";"
           >
             <div className="flex flex-wrap justify-center gap-4 mb-8">
               {categories.map((category) => (
   <button;
                   key={{category.id},
-  }
+  };
                   onClick={{onClick={() => setActiveCategory(category.id)},
   },
-  }
+  };
                   className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 ${
   activeCategory === category.id;
                       ? 'bg-gradient-to-r from-emerald-500 to-blue-600 text-white shadow-lg';
@@ -445,10 +445,10 @@ let matchesPrice = true;
               {priceRanges.map((range) => (
   <button;
                   key={{range.id},
-  }
+  };
                   onClick={{onClick={() => setPriceRange(range.id)},
   },
-  }
+  };
                   className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 ${
   priceRange === range.id;
                       ? 'bg-gradient-to-r from-blue-500 to-purple-600 text-white shadow-lg';
@@ -456,21 +456,21 @@ let matchesPrice = true;
 }`}
                 >
                   {{range.name},
-  }
+  };
                 </button>
               ))}
             </div>
           </motion.div>
 
           {{/* Services Grid */},
-  }
+  };
           <motion.div ;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8, delay: 0.6 },
-  }
+  };
             className="className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8";"
           >
             {filteredServices.map((service, index) => {
@@ -478,27 +478,27 @@ let matchesPrice = true;
               return (
                 <motion.div;
                   key={{service.id},
-  }
+  };
                   initial={{ opacity: 0, y: 20 },
-  }
+  };
                   whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                   transition={{ duration: 0.6, delay: index * 0.1 },
-  }
+  };
                   className="className="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:border-emerald-500/50 transition-all duration-300 transform hover:scale-105 group";"
                 >
                   {{/* Service Header */},
-  }
+  };
                   <div className="flex items-start justify-between mb-4">
                     <div className="flex items-center gap-3">
                       <div className="p-2 bg-gradient-to-r from-emerald-500 to-blue-600 rounded-lg">
                         {{getCategoryIcon(service.category)},
-  }
+  };
                       </div>
                       <div>
                         <h3 className="text-lg font-semibold text-white group-hover:text-emerald-400 transition-colors duration-300">
                           {{service.title},
-  }
+  };
                         </h3>
                         <p className="text-sm text-gray-400">{service.category}</p>
                       </div>
@@ -510,37 +510,37 @@ let matchesPrice = true;
                   </div>
 
                   {{/* Price Tier Badge */},
-  }
+  };
                   <div className="flex items-center gap-2 mb-4">
                     {{priceTier.icon},
-  }
+  };
                     <span className={`text-sm font-semibold ${priceTier.color}`}>
                       {{priceTier.tier},
-  }
+  };
                     </span>
                   </div>
 
                   {{/* Service Description */},
-  }
+  };
                   <p className="text-gray-300 mb-4 line-clamp-3">{service.description}</p>
 
                   {{/* Service Tags */},
-  }
+  };
                   <div className="flex flex-wrap gap-2 mb-4">
                     {service.tags.slice(0, 3).map((tag, tagIndex) => (
   <span;
                         key={{tagIndex},
-  }
+  };
                         className="className="px-2 py-1 bg-white/10 text-xs text-emerald-400 rounded-full border border-emerald-500/30";"
                       >
                         {{tag},
-  }
+  };
                       </span>
                     ))}
                   </div>
 
                   {{/* Pricing Information */},
-  }
+  };
                   <div className="bg-white/5 rounded-lg p-4 mb-6">
                     <div className="text-center mb-3">
                       <div className="text-3xl font-bold text-emerald-400">${service.price.toLocaleString()}</div>
@@ -568,11 +568,11 @@ let matchesPrice = true;
                   </div>
 
                   {{/* Contact & Action */},
-  }
+  };
                   <div className="space-y-3">
                     <a;
                       href={{`tel:+13024640950`},
-  }
+  };
                       className="className="w-full bg-gradient-to-r from-emerald-500 to-blue-600 hover:from-emerald-600 hover:to-blue-700 text-white py-3 px-4 rounded-lg font-semibold text-center block transition-all duration-300 transform hover:scale-105";"
                     >
                       <Phone className="w-4 h-4 inline mr-2" />
@@ -588,7 +588,7 @@ let matchesPrice = true;
                   </div>
 
                   {{/* Additional Info */},
-  }
+  };
                   <div className="mt-4 pt-4 border-t border-white/10">
                     <div className="flex justify-between items-center text-sm">
                       <span className="text-gray-400">Reviews: {service.reviewCount}</span>
@@ -603,16 +603,16 @@ let matchesPrice = true;
       </section>
 
       {{/* Call to Action */},
-  }
+  };
       <section className="py-20 px-4 bg-gradient-to-r from-emerald-600/20 to-blue-600/20">
         <div className="max-w-4xl mx-auto text-center">
           <motion.h2 ;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             className="className="text-4xl md:text-5xl font-bold text-white mb-6";"
           >
             Ready to Get Started?;
@@ -620,11 +620,11 @@ let matchesPrice = true;
           ;
           <motion.p ;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8, delay: 0.2 },
-  }
+  };
             className="className="text-xl text-gray-300 mb-8";"
           >
             Contact us today for a personalized quote and consultation. Our team of experts will help ;
@@ -633,11 +633,11 @@ let matchesPrice = true;
 
           <motion.div ;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8, delay: 0.4 },
-  }
+  };
             className="className="flex flex-col sm:flex-row gap-4 justify-center items-center";"
           >
             <a ;
@@ -657,14 +657,14 @@ let matchesPrice = true;
           </motion.div>
 
           {{/* Contact Details */},
-  }
+  };
           <motion.div ;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8, delay: 0.6 },
-  }
+  };
             className="className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8";"
           >
             <div className="text-center">
@@ -698,7 +698,7 @@ let matchesPrice = true;
       </section>
 
       {{/* Footer */},
-  }
+  };
       <footer className="py-12 px-4 bg-black/50">
         <div className="max-w-7xl mx-auto text-center">
           <p className="text-gray-400">
@@ -711,4 +711,3 @@ let matchesPrice = true;
       </footer>
     </div>
   )
-}

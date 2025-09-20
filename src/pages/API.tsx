@@ -87,7 +87,7 @@ const createInstance = async () => {
 def check_threat(ip_address):;
     url = "https://api.ziontechgroup.com/v1/security/threat-check";
     headers = {{"Authorization": "Bearer YOUR_API_KEY"},
-  }
+  };
 
     response = requests.post(url, json={
   "ip": ip_address;
@@ -117,7 +117,7 @@ def check_threat(ip_address):;
       />
       ;
       {{/* Hero Section */},
-  }
+  };
       <section className="relative pt-32 pb-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-zion-slate via-zion-slate-dark to-black" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(34,221,210,0.1),transparent_50%)]" />
@@ -125,11 +125,11 @@ def check_threat(ip_address):;
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             animate={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.6 },
-  }
+  };
             className="className="text-center";"
           >
             <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 rounded-full border border-blue-400/30 mb-6">
@@ -161,16 +161,16 @@ def check_threat(ip_address):;
       </section>
 
       {{/* Features Section */},
-  }
+  };
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.6 },
-  }
+  };
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
@@ -185,13 +185,13 @@ def check_threat(ip_address):;
             {features.map((feature, index) => (
   <motion.div;
                 key={{feature.title},
-  }
+  };
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.6, delay: index * 0.1 },
-  }
+  };
                 className="className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-blue-400/30 transition-all duration-200 hover:scale-105";"
               >
                 <div className="w-12 h-12 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-lg flex items-center justify-center mb-4">
@@ -206,16 +206,16 @@ def check_threat(ip_address):;
       </section>
 
       {{/* Code Examples Section */},
-  }
+  };
       <section className="py-16 px-4 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.6 },
-  }
+  };
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
@@ -230,23 +230,23 @@ def check_threat(ip_address):;
             {codeExamples.map((example, index) => (
   <motion.div;
                 key={{example.title},
-  }
+  };
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.6, delay: index * 0.1 },
-  }
+  };
                 className="className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-blue-400/30 transition-all duration-200";"
               >
                 <div className="flex items-center justify-between mb-4">
                   <span className="px-3 py-1 bg-blue-500/20 text-blue-300 text-sm rounded-full border border-blue-400/30">
                     {{example.language},
-  }
+  };
                   </span>
                   <span className="px-3 py-1 bg-slate-600/50 text-slate-300 text-sm rounded-full">
                     {{example.category},
-  }
+  };
                   </span>
                 </div>
                 ;
@@ -263,16 +263,16 @@ def check_threat(ip_address):;
       </section>
 
       {{/* SDKs Section */},
-  }
+  };
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.6 },
-  }
+  };
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
@@ -287,13 +287,13 @@ def check_threat(ip_address):;
             {sdks.map((sdk, index) => (
   <motion.div;
                 key={{sdk.name},
-  }
+  };
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.6, delay: index * 0.1 },
-  }
+  };
                 className="className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-blue-400/30 transition-all duration-200 hover:scale-105";"
               >
                 <div className="w-12 h-12 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-lg flex items-center justify-center mb-4">
@@ -302,7 +302,7 @@ def check_threat(ip_address):;
                 <h3 className="text-xl font-semibold text-white mb-2">{sdk.name}</h3>
                 <a;
                   href={{sdk.link},
-  }
+  };
                   target="_blank";
                   rel="noopener noreferrer";
                   className="className="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors duration-200";"
@@ -316,16 +316,16 @@ def check_threat(ip_address):;
       </section>
 
       {{/* CTA Section */},
-  }
+  };
       <section className="py-20 px-4 bg-gradient-to-r from-blue-500/10 to-cyan-500/10">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.6 },
-  }
+  };
           >
             <h2 className="text-4xl font-bold text-white mb-6">
               Ready to Get Started?;
@@ -346,5 +346,5 @@ def check_threat(ip_address):;
       </section>
     </div>
   )
-}
+};
 export default API;

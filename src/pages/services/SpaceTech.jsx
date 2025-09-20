@@ -27,5 +27,5 @@ const $service = () () => {
         </div>
       </section>
     </div>)
-}
+};
 export default $service

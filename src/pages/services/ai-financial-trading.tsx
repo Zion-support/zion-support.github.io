@@ -116,16 +116,16 @@ export default function AIFinancialTrading() {
       />
       ;
       {{/* Hero Section */},
-  }
+  };
       <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             animate={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
           >
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               AI-Powered Financial Trading Platform;
@@ -154,7 +154,7 @@ export default function AIFinancialTrading() {
       </section>
 
       {{/* Key Benefits */},
-  }
+  };
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -170,13 +170,13 @@ export default function AIFinancialTrading() {
             {benefits.map((benefit, index) => (
   <motion.div;
                 key={{index},
-  }
+  };
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.5, delay: index * 0.1 },
-  }
+  };
                 className="className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-yellow-500 transition-all duration-300";"
               >
                 <CheckCircle className="w-8 h-8 text-yellow-400 mb-4" />
@@ -188,7 +188,7 @@ export default function AIFinancialTrading() {
       </section>
 
       {{/* Features */},
-  }
+  };
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -204,18 +204,18 @@ export default function AIFinancialTrading() {
             {features.map((feature, index) => (
   <motion.div;
                 key={{index},
-  }
+  };
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.5, delay: index * 0.1 },
-  }
+  };
                 className="className="bg-slate-900/80 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-yellow-500 transition-all duration-300 group";"
               >
                 <div className="text-yellow-400 mb-4 group-hover:text-yellow-300 transition-colors duration-300">
                   {{feature.icon},
-  }
+  };
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
@@ -226,7 +226,7 @@ export default function AIFinancialTrading() {
       </section>
 
       {{/* Trading Strategies */},
-  }
+  };
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -242,13 +242,13 @@ export default function AIFinancialTrading() {
             {tradingStrategies.map((strategy, index) => (
   <motion.div;
                 key={{index},
-  }
+  };
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.5, delay: index * 0.1 },
-  }
+  };
                 className="className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border border-slate-700 hover:border-yellow-500 transition-all duration-300";"
               >
                 <h3 className="text-2xl font-bold text-white mb-4">{strategy.strategy}</h3>
@@ -264,7 +264,7 @@ export default function AIFinancialTrading() {
       </section>
 
       {{/* Pricing */},
-  }
+  };
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -280,13 +280,13 @@ export default function AIFinancialTrading() {
             {pricing.map((plan, index) => (
   <motion.div;
                 key={{index},
-  }
+  };
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.5, delay: index * 0.1 },
-  }
+  };
                 className={`relative bg-slate-900/80 backdrop-blur-sm rounded-xl p-8 border ${
   plan.popular ;
                     ? 'border-yellow-500 ring-2 ring-yellow-500/20' ;
@@ -314,7 +314,7 @@ export default function AIFinancialTrading() {
   <li key={featureIndex} className="flex items-center text-gray-300">
                       <CheckCircle className="w-5 h-5 text-yellow-400 mr-3 flex-shrink-0" />
                       {{feature},
-  }
+  };
                     </li>
                   ))}
                 </ul>
@@ -336,17 +336,17 @@ export default function AIFinancialTrading() {
       </section>
 
       {{/* Market Information */},
-  }
+  };
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <motion.div;
               initial={{ opacity: 0, x: -20 },
-  }
+  };
               whileInView={{ opacity: 1, x: 0 },
-  }
+  };
               transition={{ duration: 0.8 },
-  }
+  };
             >
               <h2 className="text-4xl font-bold text-white mb-6">
                 Market-Leading Trading Solution;
@@ -385,11 +385,11 @@ export default function AIFinancialTrading() {
             ;
             <motion.div;
               initial={{ opacity: 0, x: 20 },
-  }
+  };
               whileInView={{ opacity: 1, x: 0 },
-  }
+  };
               transition={{ duration: 0.8 },
-  }
+  };
               className="className="bg-slate-900/80 backdrop-blur-sm rounded-xl p-8 border border-slate-700";"
             >
               <h3 className="text-2xl font-bold text-white mb-6">Performance Metrics</h3>
@@ -417,16 +417,16 @@ export default function AIFinancialTrading() {
       </section>
 
       {{/* Contact CTA */},
-  }
+  };
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             className="className="bg-gradient-to-r from-yellow-600/20 to-orange-600/20 backdrop-blur-sm rounded-2xl p-12 border border-yellow-500/30";"
           >
             <h2 className="text-4xl font-bold text-white mb-6">
@@ -456,7 +456,7 @@ export default function AIFinancialTrading() {
       </section>
 
       {{/* Contact Information */},
-  }
+  };
       <section className="py-16 px-4 sm: px-6 lg:px-8 bg-slate-900">
         <div className="max-w-4xl mx-auto text-center">
           <h3 className="text-2xl font-bold text-white mb-8">Get in Touch</h3>
@@ -497,4 +497,4 @@ export default function AIFinancialTrading() {
       </section>
     </div>
   )
-}
+};

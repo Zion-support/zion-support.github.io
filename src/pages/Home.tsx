@@ -72,24 +72,21 @@ const ServicesShowcase = React.lazy(() => import("@/components/ServicesShowcase"
 
 interface StatItem {
   value: string,label: string,description: string,icon: React.ComponentType<any>,color: string
-}
+};
 
 interface AIService {
   title: string,description: string,icon: React.ComponentType<any>,features: string[],href: string,color: string
-}
 
 interface ServiceCategory {
   name: string,description: string,icon: React.ComponentType<any>,href: string,count: number,color: string,services: string[[],
   ],
-  }
+  };
 
 interface EmergingTech {
   title: string,description: string,icon: React.ComponentType<any>,href: string,price: string,category: string
-}
 
 interface MicroSaasService {
   title: string,description: string,icon: React.ComponentType<any>,href: string,price: string,category: string
-}
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true)
@@ -202,7 +199,7 @@ const timer = setTimeout(() => {
         </div>
       </div>
     )
-  }
+  };
 
   if (if (error) {
   ) {
@@ -214,7 +211,7 @@ const timer = setTimeout(() => {
           <button ;
             onClick={{onClick={() => setError(null)},
   },
-  }
+  };
             className="className="mt-4 px-4 py-2 bg-blue-600 text-white rounded-lg hover: bg-blue-700 transition-colors";"
           >
             Try Again;
@@ -222,7 +219,7 @@ const timer = setTimeout(() => {
         </div>
       </div>
     )
-  }
+  };
 
   return (
     <ErrorBoundary onError={handleError}>
@@ -234,37 +231,37 @@ const timer = setTimeout(() => {
       ;
       <div className="min-h-screen bg-futuristic">
         {{/* Hero Section */},
-  }
+  };
         <HeroSection />
 
         {{/* Stats Section */},
-  }
+  };
         <motion.section ;
           className="className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30";"
           initial={{ opacity: 0, y: 50 },
-  }
+  };
           whileInView={{ opacity: 1, y: 0 },
-  }
+  };
           viewport={{ once: true },
-  }
+  };
           transition={{ duration: 0.6 },
-  }
+  };
         >
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {stats.map((stat, index) => (
   <motion.div;
                   key={{stat.label},
-  }
+  };
                   className="className="text-center";"
                   initial={{ opacity: 0, y: 20 },
-  }
+  };
                   whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                   viewport={{ once: true },
-  }
+  };
                   transition={{ duration: 0.6, delay: index * 0.1 },
-  }
+  };
                 >
                   <div className={`inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r ${stat.color} mb-4`}>
                     <stat.icon className="w-8 h-8 text-white" />
@@ -279,17 +276,17 @@ const timer = setTimeout(() => {
         </motion.section>
 
         {{/* AI Services Section */},
-  }
+  };
         <motion.section ;
           className="className="py-20 px-4 sm:px-6 lg:px-8";"
           initial={{ opacity: 0, y: 50 },
-  }
+  };
           whileInView={{ opacity: 1, y: 0 },
-  }
+  };
           viewport={{ once: true },
-  }
+  };
           transition={{ duration: 0.6 },
-  }
+  };
         >
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
@@ -305,16 +302,16 @@ const timer = setTimeout(() => {
               {aiServices.map((service, index) => (
   <motion.div;
                   key={{service.title},
-  }
+  };
                   className="className="bg-slate-800/50 rounded-xl p-8 border border-slate-700/50 hover:border-zion-cyan/50 transition-all duration-300 hover:transform hover:scale-105";"
                   initial={{ opacity: 0, y: 20 },
-  }
+  };
                   whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                   viewport={{ once: true },
-  }
+  };
                   transition={{ duration: 0.6, delay: index * 0.1 },
-  }
+  };
                 >
                   <div className={`inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r ${service.color} mb-6`}>
                     <service.icon className="w-8 h-8 text-white" />
@@ -326,13 +323,13 @@ const timer = setTimeout(() => {
   <li key={feature} className="flex items-center text-gray-300">
                         <CheckCircle className="w-5 h-5 text-zion-cyan mr-3 flex-shrink-0" />
                         {{feature},
-  }
+  };
                       </li>
                     ))}
                   </ul>
                   <Link;
                     to={{service.href},
-  }
+  };
                     className="className="inline-flex items-center text-zion-cyan hover:text-zion-cyan-light transition-colors duration-200";"
                   >
                     Learn More <ArrowRight className="w-4 h-4 ml-2" />
@@ -344,17 +341,17 @@ const timer = setTimeout(() => {
         </motion.section>
 
         {{/* Service Categories */},
-  }
+  };
         <motion.section ;
           className="className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30";"
           initial={{ opacity: 0, y: 50 },
-  }
+  };
           whileInView={{ opacity: 1, y: 0 },
-  }
+  };
           viewport={{ once: true },
-  }
+  };
           transition={{ duration: 0.6 },
-  }
+  };
         >
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
@@ -370,16 +367,16 @@ const timer = setTimeout(() => {
               {serviceCategories.map((category, index) => (
   <motion.div;
                   key={{category.name},
-  }
+  };
                   className="className="group cursor-pointer";"
                   initial={{ opacity: 0, y: 20 },
-  }
+  };
                   whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                   viewport={{ once: true },
-  }
+  };
                   transition={{ duration: 0.6, delay: index * 0.1 },
-  }
+  };
                 >
                   <Link to={category.href}>
                     <div className="bg-slate-800/50 rounded-xl p-8 border border-slate-700/50 group-hover:border-zion-cyan/50 transition-all duration-300 hover:transform hover:scale-105">
@@ -401,17 +398,17 @@ const timer = setTimeout(() => {
         </motion.section>
 
         {{/* Emerging Technology Solutions */},
-  }
+  };
         <motion.section ;
           className="className="py-20 px-4 sm:px-6 lg:px-8";"
           initial={{ opacity: 0, y: 50 },
-  }
+  };
           whileInView={{ opacity: 1, y: 0 },
-  }
+  };
           viewport={{ once: true },
-  }
+  };
           transition={{ duration: 0.6 },
-  }
+  };
         >
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
@@ -427,16 +424,16 @@ const timer = setTimeout(() => {
               {emergingTech.map((tech, index) => (
   <motion.div;
                   key={{tech.title},
-  }
+  };
                   className="className="bg-slate-800/50 rounded-xl p-6 border border-slate-700/50 hover:border-zion-cyan/50 transition-all duration-300 hover:transform hover:scale-105";"
                   initial={{ opacity: 0, y: 20 },
-  }
+  };
                   whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                   viewport={{ once: true },
-  }
+  };
                   transition={{ duration: 0.6, delay: index * 0.1 },
-  }
+  };
                 >
                   <div className="text-center">
                     <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-gradient-to-r from-zion-cyan to-zion-blue mb-4">
@@ -447,7 +444,7 @@ const timer = setTimeout(() => {
                     <div className="space-y-2">
                       <span className="inline-block px-3 py-1 bg-zion-cyan/20 text-zion-cyan text-xs rounded-full">
                         {{tech.category},
-  }
+  };
                       </span>
                       <p className="text-lg font-bold text-white">{tech.price}</p>
                     </div>
@@ -459,17 +456,17 @@ const timer = setTimeout(() => {
         </motion.section>
 
         {{/* Micro-SaaS Solutions */},
-  }
+  };
         <motion.section ;
           className="className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30";"
           initial={{ opacity: 0, y: 50 },
-  }
+  };
           whileInView={{ opacity: 1, y: 0 },
-  }
+  };
           viewport={{ once: true },
-  }
+  };
           transition={{ duration: 0.6 },
-  }
+  };
         >
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
@@ -485,16 +482,16 @@ const timer = setTimeout(() => {
               {microSaasServices.map((service, index) => (
   <motion.div;
                   key={{service.title},
-  }
+  };
                   className="className="bg-slate-800/50 rounded-xl p-8 border border-slate-700/50 hover:border-zion-cyan/50 transition-all duration-300 hover:transform hover:scale-105";"
                   initial={{ opacity: 0, y: 20 },
-  }
+  };
                   whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                   viewport={{ once: true },
-  }
+  };
                   transition={{ duration: 0.6, delay: index * 0.1 },
-  }
+  };
                 >
                   <div className="text-center">
                     <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-zion-cyan to-zion-blue mb-6">
@@ -505,7 +502,7 @@ const timer = setTimeout(() => {
                     <div className="space-y-3">
                       <span className="inline-block px-4 py-2 bg-zion-cyan/20 text-zion-cyan text-sm rounded-full">
                         {{service.category},
-  }
+  };
                       </span>
                       <p className="text-2xl font-bold text-white">{service.price}</p>
                     </div>
@@ -517,7 +514,7 @@ const timer = setTimeout(() => {
         </motion.section>
 
         {{/* Lazy Loaded Components */},
-  }
+  };
         <Suspense fallback={<div className="py-20 text-center"><LoadingSpinner /></div>}>
           <CategoriesSection />
           <BenefitsSection />
@@ -545,4 +542,3 @@ const timer = setTimeout(() => {
       </div>
     </ErrorBoundary>
   )
-}

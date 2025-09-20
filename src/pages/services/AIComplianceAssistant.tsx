@@ -100,17 +100,17 @@ export default function AIComplianceAssistant() {
       />
       ;
       {{/* Hero Section */},
-  }
+  };
       <section className="relative overflow-hidden py-20 lg:py-32">
         <div className="absolute inset-0 bg-gradient-to-r from-green-500/10 via-emerald-500/10 to-teal-500/10"></div>
         <div className="container mx-auto px-4 relative z-10">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             animate={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             className="className="text-center max-w-4xl mx-auto";"
           >
             <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-full border border-green-400/30 mb-6">
@@ -133,18 +133,18 @@ export default function AIComplianceAssistant() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button;
                 whileHover={{ scale: 1.05 },
-  }
+  };
                 whileTap={{ scale: 0.95 },
-  }
+  };
                 className="className="px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-500 text-white font-semibold rounded-lg hover:from-green-600 hover:to-emerald-600 transition-all duration-300 shadow-lg hover:shadow-green-500/25";"
               >
                 Start Compliance Audit;
               </motion.button>
               <motion.button;
                 whileHover={{ scale: 1.05 },
-  }
+  };
                 whileTap={{ scale: 0.95 },
-  }
+  };
                 className="className="px-8 py-4 border border-green-400/30 text-green-300 font-semibold rounded-lg hover:bg-green-400/10 transition-all duration-300";"
               >
                 Schedule Demo;
@@ -155,16 +155,16 @@ export default function AIComplianceAssistant() {
       </section>
 
       {{/* Features Section */},
-  }
+  };
       <section className="py-20 bg-slate-800/50">
         <div className="container mx-auto px-4">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             className="className="text-center mb-16";"
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
@@ -180,13 +180,13 @@ export default function AIComplianceAssistant() {
             {features.map((feature, index) => (
   <motion.div;
                 key={{feature.title},
-  }
+  };
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.6, delay: index * 0.1 },
-  }
+  };
                 className="className="bg-slate-700/50 p-6 rounded-xl border border-slate-600/30 hover:border-green-400/30 transition-all duration-300 hover:transform hover:scale-105";"
               >
                 <div className="w-12 h-12 bg-gradient-to-br from-green-400/20 to-emerald-500/20 rounded-lg flex items-center justify-center mb-4">
@@ -201,16 +201,16 @@ export default function AIComplianceAssistant() {
       </section>
 
       {{/* Benefits Section */},
-  }
+  };
       <section className="py-20">
         <div className="container mx-auto px-4">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             className="className="text-center mb-16";"
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
@@ -229,13 +229,13 @@ export default function AIComplianceAssistant() {
                 {benefits.map((benefit, index) => (
   <motion.div;
                     key={{index},
-  }
+  };
                     initial={{ opacity: 0, x: -20 },
-  }
+  };
                     whileInView={{ opacity: 1, x: 0 },
-  }
+  };
                     transition={{ duration: 0.6, delay: index * 0.1 },
-  }
+  };
                     className="className="flex items-start space-x-3";"
                   >
                     <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0" />
@@ -275,16 +275,16 @@ export default function AIComplianceAssistant() {
       </section>
 
       {{/* Regulations Section */},
-  }
+  };
       <section className="py-20 bg-slate-800/50">
         <div className="container mx-auto px-4">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             className="className="text-center mb-16";"
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
@@ -300,13 +300,13 @@ export default function AIComplianceAssistant() {
             {regulations.map((regulation, index) => (
   <motion.div;
                 key={{regulation.name},
-  }
+  };
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.6, delay: index * 0.1 },
-  }
+  };
                 className="className="bg-slate-700/30 p-6 rounded-xl border border-slate-600/20 hover:border-green-400/30 transition-all duration-300";"
               >
                 <div className="flex items-center space-x-3 mb-4">
@@ -323,16 +323,16 @@ export default function AIComplianceAssistant() {
       </section>
 
       {{/* Use Cases Section */},
-  }
+  };
       <section className="py-20">
         <div className="container mx-auto px-4">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             className="className="text-center mb-16";"
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
@@ -348,13 +348,13 @@ export default function AIComplianceAssistant() {
             {useCases.map((useCase, index) => (
   <motion.div;
                 key={{useCase.industry},
-  }
+  };
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.6, delay: index * 0.1 },
-  }
+  };
                 className="className="bg-slate-700/30 p-6 rounded-xl border border-slate-600/20 hover:border-green-400/30 transition-all duration-300";"
               >
                 <div className="flex items-center space-x-3 mb-4">
@@ -371,16 +371,16 @@ export default function AIComplianceAssistant() {
       </section>
 
       {{/* CTA Section */},
-  }
+  };
       <section className="py-20">
         <div className="container mx-auto px-4">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             className="className="bg-gradient-to-r from-green-500/10 via-emerald-500/10 to-teal-500/10 p-12 rounded-2xl border border-green-400/20 text-center";"
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
@@ -393,18 +393,18 @@ export default function AIComplianceAssistant() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button;
                 whileHover={{ scale: 1.05 },
-  }
+  };
                 whileTap={{ scale: 0.95 },
-  }
+  };
                 className="className="px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-500 text-white font-semibold rounded-lg hover:from-green-600 hover:to-emerald-600 transition-all duration-300 shadow-lg hover:shadow-green-500/25";"
               >
                 Start Free Trial;
               </motion.button>
               <motion.button;
                 whileHover={{ scale: 1.05 },
-  }
+  };
                 whileTap={{ scale: 0.95 },
-  }
+  };
                 className="className="px-8 py-4 border border-green-400/30 text-green-300 font-semibold rounded-lg hover: bg-green-400/10 transition-all duration-300";"
               >
                 Contact Sales;
@@ -415,5 +415,5 @@ export default function AIComplianceAssistant() {
       </section>
     </div>
   )
-}
+};
 

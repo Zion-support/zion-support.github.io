@@ -44,5 +44,5 @@ const DigitalTransformation = () () => {
         </div>
       </section>
     </div>)
-}
+};
 export default DigitalTransformation

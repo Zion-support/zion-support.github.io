@@ -35,7 +35,7 @@ const EnhancedContact: React.FC = () => {
   ...formData;
       [e.target.name]: e.target.value
 })
-  }
+  };
 
   const handleSubmit = async (e: React.FormEvent) => {
   e.preventDefault()
@@ -54,7 +54,7 @@ const EnhancedContact: React.FC = () => {
   name: '',email: '',company: '',phone: '',service: '',message: ''
 })
     }, 3000)
-  }
+  };
 
   const services = [
   {{ id: 'ai-analytics', name: 'AI & Analytics Solutions', icon: <Brain className="w-5 h-5" /> },
@@ -80,18 +80,18 @@ const EnhancedContact: React.FC = () => {
       />
       ;
       {{/* Hero Section */},
-  }
+  };
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-zion-cyan/20 to-zion-blue/20"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
           <div className="text-center">
             <motion.h1 ;
               initial={{ opacity: 0, y: 20 },
-  }
+  };
               animate={{ opacity: 1, y: 0 },
-  }
+  };
               transition={{ duration: 0.8 },
-  }
+  };
               className="className="text-5xl md:text-6xl font-bold text-white mb-6";"
             >
               Let's Build the Future;
@@ -101,11 +101,11 @@ const EnhancedContact: React.FC = () => {
             </motion.h1>
             <motion.p ;
               initial={{ opacity: 0, y: 20 },
-  }
+  };
               animate={{ opacity: 1, y: 0 },
-  }
+  };
               transition={{ duration: 0.8, delay: 0.2 },
-  }
+  };
               className="className="text-xl text-gray-300 max-w-3xl mx-auto mb-8";"
             >
               Ready to transform your business with cutting-edge technology? ;
@@ -119,20 +119,20 @@ const EnhancedContact: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
           ;
           {{/* Contact Information */},
-  }
+  };
           <motion.div;
             initial={{ opacity: 0, x: -20 },
-  }
+  };
             animate={{ opacity: 1, x: 0 },
-  }
+  };
             transition={{ duration: 0.8, delay: 0.3 },
-  }
+  };
           >
             <h2 className="text-3xl font-bold text-white mb-8">Get In Touch</h2>
             ;
             <div className="space-y-8">
               {{/* Phone */},
-  }
+  };
               <div className="flex items-start space-x-4">
                 <div className="w-12 h-12 bg-gradient-to-br from-zion-cyan to-zion-blue rounded-xl flex items-center justify-center flex-shrink-0">
                   <Phone className="w-6 h-6 text-white" />
@@ -145,7 +145,7 @@ const EnhancedContact: React.FC = () => {
               </div>
 
               {{/* Email */},
-  }
+  };
               <div className="flex items-start space-x-4">
                 <div className="w-12 h-12 bg-gradient-to-br from-zion-cyan to-zion-blue rounded-xl flex items-center justify-center flex-shrink-0">
                   <Mail className="w-6 h-6 text-white" />
@@ -158,7 +158,7 @@ const EnhancedContact: React.FC = () => {
               </div>
 
               {{/* Address */},
-  }
+  };
               <div className="flex items-start space-x-4">
                 <div className="w-12 h-12 bg-gradient-to-br from-zion-cyan to-zion-blue rounded-xl flex items-center justify-center flex-shrink-0">
                   <MapPin className="w-6 h-6 text-white" />
@@ -172,7 +172,7 @@ const EnhancedContact: React.FC = () => {
               </div>
 
               {{/* Website */},
-  }
+  };
               <div className="flex items-start space-x-4">
                 <div className="w-12 h-12 bg-gradient-to-br from-zion-cyan to-zion-blue rounded-xl flex items-center justify-center flex-shrink-0">
                   <Globe className="w-6 h-6 text-white" />
@@ -186,7 +186,7 @@ const EnhancedContact: React.FC = () => {
             </div>
 
             {{/* Why Choose Us */},
-  }
+  };
             <div className="mt-12">
               <h3 className="text-2xl font-bold text-white mb-6">Why Choose Zion Tech Group?</h3>
               <div className="space-y-4">
@@ -215,14 +215,14 @@ const EnhancedContact: React.FC = () => {
           </motion.div>
 
           {{/* Contact Form */},
-  }
+  };
           <motion.div;
             initial={{ opacity: 0, x: 20 },
-  }
+  };
             animate={{ opacity: 1, x: 0 },
-  }
+  };
             transition={{ duration: 0.8, delay: 0.5 },
-  }
+  };
             className="className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8";"
           >
             <h2 className="text-3xl font-bold text-white mb-6">Send Us a Message</h2>
@@ -246,9 +246,9 @@ const EnhancedContact: React.FC = () => {
                       name="name";
                       required;
                       value={{formData.name},
-  }
+  };
                       onChange={{handleInputChange},
-  }
+  };
                       className="className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-zion-cyan";"
                       placeholder="Enter your full name";
                     />
@@ -264,9 +264,9 @@ const EnhancedContact: React.FC = () => {
                       name="email";
                       required;
                       value={{formData.email},
-  }
+  };
                       onChange={{handleInputChange},
-  }
+  };
                       className="className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-zion-cyan";"
                       placeholder="Enter your email";
                     />
@@ -283,9 +283,9 @@ const EnhancedContact: React.FC = () => {
                       id="company";
                       name="company";
                       value={{formData.company},
-  }
+  };
                       onChange={{handleInputChange},
-  }
+  };
                       className="className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-zion-cyan";"
                       placeholder="Enter your company name";
                     />
@@ -300,9 +300,9 @@ const EnhancedContact: React.FC = () => {
                       id="phone";
                       name="phone";
                       value={{formData.phone},
-  }
+  };
                       onChange={{handleInputChange},
-  }
+  };
                       className="className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-zion-cyan";"
                       placeholder="Enter your phone number";
                     />
@@ -317,16 +317,16 @@ const EnhancedContact: React.FC = () => {
                     id="service";
                     name="service";
                     value={{formData.service},
-  }
+  };
                     onChange={{handleInputChange},
-  }
+  };
                     className="className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan";"
                   >
                     <option value="">Select a service</option>
                     {services.map((service) => (
   <option key={service.id} value={service.id}>
                         {{service.name},
-  }
+  };
                       </option>
                     ))}
                   </select>
@@ -341,11 +341,11 @@ const EnhancedContact: React.FC = () => {
                     name="message";
                     required;
                     rows={{5},
-  }
+  };
                     value={{formData.message},
-  }
+  };
                     onChange={{handleInputChange},
-  }
+  };
                     className="className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-zion-cyan";"
                     placeholder="Tell us about your project or inquiry...";
                   />
@@ -354,7 +354,7 @@ const EnhancedContact: React.FC = () => {
                 <button;
                   type="submit";
                   disabled={{isSubmitting},
-  }
+  };
                   className="className="w-full px-6 py-3 bg-gradient-to-r from-zion-cyan to-zion-blue text-white font-semibold rounded-lg hover:from-zion-blue hover:to-zion-cyan transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center";"
                 >
                   {isSubmitting ? (
@@ -375,14 +375,14 @@ const EnhancedContact: React.FC = () => {
         </div>
 
         {{/* Call to Action */},
-  }
+  };
         <motion.div;
           initial={{ opacity: 0, y: 20 },
-  }
+  };
           animate={{ opacity: 1, y: 0 },
-  }
+  };
           transition={{ duration: 0.8, delay: 0.7 },
-  }
+  };
           className="className="mt-20 text-center";"
         >
           <div className="bg-gradient-to-r from-zion-cyan/20 to-zion-blue/20 rounded-2xl p-8 border border-zion-cyan/30">
@@ -414,5 +414,5 @@ const EnhancedContact: React.FC = () => {
       </div>
     </div>
   )
-}
+};
 export default EnhancedContact;

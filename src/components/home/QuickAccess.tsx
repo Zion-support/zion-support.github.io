@@ -127,22 +127,22 @@ export function QuickAccess() {
         <div className="text-center mb-12">
           <motion.h2;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.6 },
-  }
+  };
             className="className="text-3xl md:text-4xl font-bold text-white mb-4";"
           >
             Quick Access to Our Services;
           </motion.h2>
           <motion.p;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.6, delay: 0.2 },
-  }
+  };
             className="className="text-lg text-gray-300 max-w-2xl mx-auto";"
           >
             Find the perfect solution for your business needs with our organized service categories;
@@ -153,19 +153,19 @@ export function QuickAccess() {
           {quickLinks.map((link, index) => (
   <motion.div;
               key={{link.title},
-  }
+  };
               initial={{ opacity: 0, y: 20 },
-  }
+  };
               whileInView={{ opacity: 1, y: 0 },
-  }
+  };
               viewport={{ once: true },
-  }
+  };
               transition={{ duration: 0.6, delay: index * 0.1 },
-  }
+  };
             >
               <Link ;
                 to={{link.link},
-  }
+  };
                 className="className="block group";"
               >
                 <div className="bg-slate-800 border border-slate-700 rounded-lg p-6 h-full transition-all duration-300 hover:border-blue-500/50 hover:bg-slate-700 hover:shadow-lg hover:shadow-blue-500/25">
@@ -175,12 +175,12 @@ export function QuickAccess() {
 
                   <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300">
                     {{link.title},
-  }
+  };
                   </h3>
 
                   <p className="text-gray-300 text-sm leading-relaxed">
                     {{link.description},
-  }
+  };
                   </p>
 
                   <div className="mt-4 flex items-center text-cyan-400 text-sm font-medium group-hover:text-cyan-300 transition-colors duration-300">
@@ -194,16 +194,16 @@ export function QuickAccess() {
         </div>
 
         {{/* Service Categories Overview */},
-  }
+  };
         <motion.div;
           initial={{ opacity: 0, y: 20 },
-  }
+  };
           whileInView={{ opacity: 1, y: 0 },
-  }
+  };
           viewport={{ once: true },
-  }
+  };
           transition={{ duration: 0.6, delay: 0.4 },
-  }
+  };
         >
           <div className="text-center mb-8">
             <h3 className="text-2xl font-bold text-white mb-2">Service Categories</h3>
@@ -214,13 +214,13 @@ export function QuickAccess() {
             {serviceCategories.map((category, index) => (
   <motion.div;
                 key={{index},
-  }
+  };
                 initial={{ opacity: 0, scale: 0.8 },
-  }
+  };
                 whileInView={{ opacity: 1, scale: 1 },
-  }
+  };
                 transition={{ duration: 0.4, delay: index * 0.1 },
-  }
+  };
                 className="className="text-center group cursor-pointer";"
               >
                 <div className={`w-16 h-16 bg-gradient-to-br ${category.color} rounded-full flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform duration-300`}>
@@ -228,7 +228,7 @@ export function QuickAccess() {
                 </div>
                 <div className="text-sm font-medium text-white group-hover:text-cyan-400 transition-colors duration-300">
                   {{category.name},
-  }
+  };
                 </div>
               </motion.div>
             ))}
@@ -236,14 +236,14 @@ export function QuickAccess() {
         </motion.div>
 
         {{/* CTA Section */},
-  }
+  };
         <motion.div;
           initial={{ opacity: 0, y: 20 },
-  }
+  };
           whileInView={{ opacity: 1, y: 0 },
-  }
+  };
           transition={{ duration: 0.6, delay: 0.6 },
-  }
+  };
           className="className="text-center mt-12";"
         >
           <div className="bg-gradient-to-r from-cyan-500/10 to-blue-600/10 rounded-2xl p-8 border border-cyan-500/20">
@@ -270,4 +270,4 @@ export function QuickAccess() {
       </div>
     </section>
   )
-}
+};

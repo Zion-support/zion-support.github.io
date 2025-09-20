@@ -101,17 +101,17 @@ const AIQuantumFinancialTrading = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {{/* Hero Section */},
-  }
+  };
       <section className="relative pt-32 pb-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-purple-900/20 to-cyan-900/20"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             animate={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
           >
             <div className="flex items-center justify-center mb-6">
               <Atom className="w-12 h-12 text-purple-400 mr-3" />
@@ -143,18 +143,18 @@ const AIQuantumFinancialTrading = () => {
       </section>
 
       {{/* Features Section */},
-  }
+  };
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             viewport={{ once: true },
-  }
+  };
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
@@ -170,15 +170,15 @@ const AIQuantumFinancialTrading = () => {
             {features.map((feature, index) => (
   <motion.div;
                 key={{index},
-  }
+  };
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.6, delay: index * 0.1 },
-  }
+  };
                 viewport={{ once: true },
-  }
+  };
                 className="className="bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-2xl border border-slate-600 hover:border-purple-400 transition-all duration-300 hover:transform hover:scale-105";"
               >
                 <div className={`w-16 h-16 bg-gradient-to-r ${feature.color} rounded-2xl flex items-center justify-center mb-6`}>
@@ -193,18 +193,18 @@ const AIQuantumFinancialTrading = () => {
       </section>
 
       {{/* Benefits Section */},
-  }
+  };
       <section className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             viewport={{ once: true },
-  }
+  };
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
@@ -219,15 +219,15 @@ const AIQuantumFinancialTrading = () => {
             {benefits.map((benefit, index) => (
   <motion.div;
                 key={{index},
-  }
+  };
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.6, delay: index * 0.1 },
-  }
+  };
                 viewport={{ once: true },
-  }
+  };
                 className="className="text-center";"
               >
                 <div className="text-4xl font-bold text-purple-400 mb-4">{benefit.metric}</div>
@@ -240,18 +240,18 @@ const AIQuantumFinancialTrading = () => {
       </section>
 
       {{/* Pricing Section */},
-  }
+  };
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             viewport={{ once: true },
-  }
+  };
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
@@ -266,15 +266,15 @@ const AIQuantumFinancialTrading = () => {
             {pricingPlans.map((plan, index) => (
   <motion.div;
                 key={{index},
-  }
+  };
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.6, delay: index * 0.1 },
-  }
+  };
                 viewport={{ once: true },
-  }
+  };
                 className={`relative bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-2xl border-2 ${
   plan.popular ;
                     ? 'border-purple-400 shadow-2xl shadow-purple-500/20' ;
@@ -324,18 +324,18 @@ const AIQuantumFinancialTrading = () => {
       </section>
 
       {{/* CTA Section */},
-  }
+  };
       <section className="py-20 bg-gradient-to-r from-purple-900/20 to-cyan-900/20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             viewport={{ once: true },
-  }
+  };
           >
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
               Ready to Transform Your Trading?;
@@ -364,7 +364,7 @@ const AIQuantumFinancialTrading = () => {
       </section>
 
       {{/* Contact Information */},
-  }
+  };
       <section className="py-16 bg-slate-800">
         <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
           <h3 className="text-2xl font-bold text-white mb-8">Contact Zion Tech Group</h3>
@@ -393,5 +393,5 @@ const AIQuantumFinancialTrading = () => {
       </section>
     </div>
   )
-}
+};
 export default AIQuantumFinancialTrading;

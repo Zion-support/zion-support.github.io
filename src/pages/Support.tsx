@@ -110,7 +110,7 @@ const Support: React.FC = () => {
       />
       ;
       {{/* Hero Section */},
-  }
+  };
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-900/20 via-purple-900/20 to-cyan-900/20"></div>
         <div className="container-responsive relative z-10">
@@ -139,7 +139,7 @@ const Support: React.FC = () => {
       </section>
 
       {{/* Search Section */},
-  }
+  };
       <section className="py-12 bg-slate-800/20">
         <div className="container-responsive">
           <div className="max-w-2xl mx-auto">
@@ -149,9 +149,9 @@ const Support: React.FC = () => {
                 type="text";
                 placeholder="Search for help articles, tutorials, or common issues...";
                 value={{searchQuery},
-  }
+  };
                 onChange={{(e) => setSearchQuery(e.target.value)},
-  }
+  };
                 className="className="w-full pl-12 pr-4 py-4 bg-slate-700/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 transition-all duration-200 text-lg";"
               />
             </div>
@@ -160,7 +160,7 @@ const Support: React.FC = () => {
       </section>
 
       {{/* Support Channels Section */},
-  }
+  };
       <section className="py-20">
         <div className="container-responsive">
           <div className="text-center mb-16">
@@ -186,12 +186,12 @@ const Support: React.FC = () => {
                   <div className="flex items-center text-gray-400">
                     <Clock className="w-4 h-4 mr-2" />
                     {{channel.availability},
-  }
+  };
                   </div>
                   <div className="flex items-center text-gray-400">
                     <Zap className="w-4 h-4 mr-2" />
                     {{channel.responseTime},
-  }
+  };
                   </div>
                 </div>
                 ;
@@ -205,7 +205,7 @@ const Support: React.FC = () => {
       </section>
 
       {{/* Quick Solutions Section */},
-  }
+  };
       <section className="py-20 bg-slate-800/20">
         <div className="container-responsive">
           <div className="text-center mb-16">
@@ -229,7 +229,7 @@ const Support: React.FC = () => {
                 ;
                 <div className="text-sm text-cyan-400 mb-4 font-medium">
                   {{solution.articles || solution.videos || solution.questions || solution.members},
-  }
+  };
                 </div>
                 ;
                 <button className="w-full px-4 py-2 bg-slate-700/50 text-white font-medium rounded-lg hover:bg-slate-600/50 transition-all duration-200 hover:scale-105">
@@ -242,7 +242,7 @@ const Support: React.FC = () => {
       </section>
 
       {{/* Common Issues Section */},
-  }
+  };
       <section className="py-20">
         <div className="container-responsive">
           <div className="text-center mb-16">
@@ -255,15 +255,15 @@ const Support: React.FC = () => {
           </div>
           ;
           {{/* Category Filter */},
-  }
+  };
           <div className="flex flex-wrap gap-2 justify-center mb-8">
             {categories.map((category) => (
   <button;
                 key={{category.id},
-  }
+  };
                 onClick={{onClick={() => setSelectedCategory(category.id)},
   },
-  }
+  };
                 className={`flex items-center px-4 py-2 rounded-lg border transition-all duration-200 ${
   selectedCategory === category.id;
                     ? 'bg-cyan-400/20 border-cyan-400/40 text-cyan-400';
@@ -272,7 +272,7 @@ const Support: React.FC = () => {
               >
                 <category.icon className="w-4 h-4 mr-2" />
                 {{category.name},
-  }
+  };
               </button>
             ))}
           </div>
@@ -283,7 +283,7 @@ const Support: React.FC = () => {
                 <div className="flex items-start justify-between mb-3">
                   <span className="inline-flex items-center px-2 py-1 bg-cyan-400/10 border border-cyan-400/20 rounded text-xs text-cyan-400">
                     {{issue.category},
-  }
+  };
                   </span>
                   <CheckCircle className="w-5 h-5 text-green-400" />
                 </div>
@@ -295,7 +295,7 @@ const Support: React.FC = () => {
                   {issue.tags.map((tag, tagIndex) => (
   <span key={tagIndex} className="inline-flex items-center px-2 py-1 bg-slate-700/50 rounded text-xs text-gray-300">
                       {{tag},
-  }
+  };
                     </span>
                   ))}
                 </div>
@@ -313,7 +313,7 @@ const Support: React.FC = () => {
       </section>
 
       {{/* Contact Support Section */},
-  }
+  };
       <section className="py-20 bg-gradient-to-r from-blue-900/20 via-purple-900/20 to-cyan-900/20">
         <div className="container-responsive text-center">
           <h2 className="text-4xl font-bold text-white mb-6">
@@ -335,5 +335,5 @@ const Support: React.FC = () => {
       </section>
     </div>
   )
-}
+};
 export default Support;

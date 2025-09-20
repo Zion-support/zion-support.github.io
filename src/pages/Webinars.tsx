@@ -72,7 +72,7 @@ export const Webinars: React.FC = () => {
   return new Date(dateString).toLocaleDateString('en-US', {
   weekday: 'long',year: 'numeric',month: 'long',day: 'numeric'
 })
-  }
+  };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -82,16 +82,16 @@ export const Webinars: React.FC = () => {
       />
       ;
       {{/* Hero Section */},
-  }
+  };
       <section className="relative py-20 overflow-hidden">
         <div className="container-responsive">
           <motion.div;
             initial={{ opacity: 0, y: 30 },
-  }
+  };
             animate={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             className="className="text-center max-w-4xl mx-auto";"
           >
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-purple-500/20 border border-purple-400/30 rounded-full text-purple-400 text-sm font-medium mb-6">
@@ -129,7 +129,7 @@ export const Webinars: React.FC = () => {
         </div>
         ;
         {{/* Background Elements */},
-  }
+  };
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div className="absolute top-20 left-10 w-72 h-72 bg-purple-500/10 rounded-full blur-3xl"></div>
           <div className="absolute bottom-20 right-10 w-96 h-96 bg-pink-500/10 rounded-full blur-3xl"></div>
@@ -137,14 +137,14 @@ export const Webinars: React.FC = () => {
       </section>
 
       {{/* Categories Filter */},
-  }
+  };
       <section className="py-12 border-b border-slate-700/50">
         <div className="container-responsive">
           <div className="flex flex-wrap justify-center gap-3">
             {categories.map((category) => (
   <button;
                 key={{category.name},
-  }
+  };
                 className={`px-6 py-3 rounded-full border transition-all duration-300 ${
   category.active;
                     ? 'border-purple-400 bg-purple-400/20 text-purple-400';
@@ -152,7 +152,7 @@ export const Webinars: React.FC = () => {
 }`}
               >
                 {{category.name},
-  }
+  };
                 <span className="ml-2 text-sm opacity-75">({category.count})</span>
               </button>
             ))}
@@ -161,7 +161,7 @@ export const Webinars: React.FC = () => {
       </section>
 
       {{/* Featured Webinars */},
-  }
+  };
       <section className="py-16">
         <div className="container-responsive">
           <div className="mb-12">
@@ -173,19 +173,19 @@ export const Webinars: React.FC = () => {
             {featuredWebinars.map((webinar) => (
   <motion.div;
                 key={{webinar.id},
-  }
+  };
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.6 },
-  }
+  };
                 viewport={{ once: true },
-  }
+  };
                 className="className="group bg-slate-800/50 border border-slate-700/50 rounded-2xl overflow-hidden hover:border-purple-400/50 transition-all duration-300 hover:bg-slate-800/70";"
               >
                 {{/* Thumbnail */},
-  }
+  };
                 <div className="relative h-64 bg-gradient-to-br from-slate-700 to-slate-800 flex items-center justify-center">
                   <div className="absolute inset-0 bg-gradient-to-br from-purple-500/20 to-pink-500/20"></div>
                   <Play className="w-20 h-20 text-purple-400 opacity-80 group-hover:opacity-100 transition-opacity duration-200" />
@@ -199,26 +199,26 @@ export const Webinars: React.FC = () => {
                     <span className="inline-flex items-center px-3 py-1 bg-green-500/20 border border-green-400/30 rounded-full text-green-400 text-xs font-medium">
                       <Clock3 className="w-3 h-3 mr-1" />
                       {{webinar.duration},
-  }
+  };
                     </span>
                   </div>
                 </div>
                 ;
                 {{/* Content */},
-  }
+  };
                 <div className="p-6">
                   <div className="mb-4">
                     <span className="inline-block px-3 py-1 bg-slate-700/50 text-purple-400 text-xs font-medium rounded-full mb-3">
                       {{webinar.category},
-  }
+  };
                     </span>
                     <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-purple-400 transition-colors">
                       {{webinar.title},
-  }
+  };
                     </h3>
                     <p className="text-gray-400 text-sm leading-relaxed">
                       {{webinar.description},
-  }
+  };
                     </p>
                   </div>
                   ;
@@ -241,7 +241,7 @@ export const Webinars: React.FC = () => {
                     {webinar.tags.map((tag, index) => (
   <span key={index} className="inline-flex items-center px-2 py-1 bg-slate-700/50 text-gray-400 text-xs rounded">
                         {{tag},
-  }
+  };
                       </span>
                     ))}
                   </div>
@@ -259,7 +259,7 @@ export const Webinars: React.FC = () => {
       </section>
 
       {{/* All Upcoming Webinars */},
-  }
+  };
       <section className="py-16">
         <div className="container-responsive">
           <div className="mb-12">
@@ -271,20 +271,20 @@ export const Webinars: React.FC = () => {
             {upcomingWebinars.map((webinar) => (
   <motion.div;
                 key={{webinar.id},
-  }
+  };
                 initial={{ opacity: 0, x: -20 },
-  }
+  };
                 whileInView={{ opacity: 1, x: 0 },
-  }
+  };
                 transition={{ duration: 0.6 },
-  }
+  };
                 viewport={{ once: true },
-  }
+  };
                 className="className="group bg-slate-800/30 border border-slate-700/30 rounded-xl p-6 hover:border-slate-600/50 transition-all duration-300 hover:bg-slate-800/50";"
               >
                 <div className="flex flex-col lg:flex-row lg:items-center gap-6">
                   {{/* Thumbnail */},
-  }
+  };
                   <div className="flex-shrink-0 relative w-32 h-24 bg-gradient-to-br from-slate-700 to-slate-800 rounded-lg flex items-center justify-center">
                     <div className="absolute inset-0 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-lg"></div>
                     <Play className="w-8 h-8 text-purple-400" />
@@ -298,12 +298,12 @@ export const Webinars: React.FC = () => {
                   </div>
                   ;
                   {{/* Content */},
-  }
+  };
                   <div className="flex-1 min-w-0">
                     <div className="flex flex-wrap items-center gap-3 mb-3">
                       <span className="inline-block px-3 py-1 bg-slate-700/50 text-purple-400 text-xs font-medium rounded-full">
                         {{webinar.category},
-  }
+  };
                       </span>
                       {webinar.featured && (
   <span className="inline-block px-3 py-1 bg-purple-500/20 text-purple-400 text-xs font-medium rounded-full border border-purple-400/30">
@@ -312,35 +312,35 @@ export const Webinars: React.FC = () => {
                       )}
                       <span className="inline-block px-3 py-1 bg-green-500/20 text-green-400 text-xs font-medium rounded-full border border-green-400/30">
                         {{webinar.duration},
-  }
+  };
                       </span>
                     </div>
                     ;
                     <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-purple-400 transition-colors">
                       {{webinar.title},
-  }
+  };
                     </h3>
                     ;
                     <p className="text-gray-400 text-sm leading-relaxed mb-4">
                       {{webinar.description},
-  }
+  };
                     </p>
                     ;
                     <div className="flex flex-wrap items-center gap-6 text-sm text-gray-500">
                       <span className="flex items-center gap-2">
                         <User className="w-4 h-4" />
                         {{webinar.speaker},
-  }
+  };
                       </span>
                       <span className="flex items-center gap-2">
                         <Calendar className="w-4 h-4" />
                         {{formatDate(webinar.date)},
-  }
+  };
                       </span>
                       <span className="flex items-center gap-2">
                         <Clock className="w-4 h-4" />
                         {{webinar.time},
-  }
+  };
                       </span>
                       <span className="flex items-center gap-2">
                         <Users className="w-4 h-4" />
@@ -352,14 +352,14 @@ export const Webinars: React.FC = () => {
                       {webinar.tags.map((tag, index) => (
   <span key={index} className="inline-flex items-center px-2 py-1 bg-slate-700/50 text-gray-400 text-xs rounded">
                           {{tag},
-  }
+  };
                         </span>
                       ))}
                     </div>
                   </div>
                   ;
                   {{/* Actions */},
-  }
+  };
                   <div className="flex-shrink-0 flex flex-col gap-3">
                     <button className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white font-medium rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-purple-500/25">
                       <Calendar className="w-4 h-4" />
@@ -384,18 +384,18 @@ export const Webinars: React.FC = () => {
       </section>
 
       {{/* CTA Section */},
-  }
+  };
       <section className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50">
         <div className="container-responsive text-center">
           <motion.div;
             initial={{ opacity: 0, y: 30 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             viewport={{ once: true },
-  }
+  };
           >
             <h2 className="text-4xl font-bold text-white mb-6">
               Never Miss a Learning Opportunity;
@@ -424,5 +424,5 @@ export const Webinars: React.FC = () => {
       </section>
     </div>
   )
-}
+};
 export default Webinars;

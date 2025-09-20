@@ -17,9 +17,9 @@ export const ThemeProvider = ({ children }) => {
     return (<ThemeContext.Provider value={{ theme, setTheme },
   }>
       {{children},
-  }
+  };
     </ThemeContext.Provider>)
-}
+};
 export const useTheme = () => {
     const context = React.useContext(ThemeContext)
     if (if (context === undefined) {
@@ -27,4 +27,3 @@ export const useTheme = () => {
         throw new Error('useTheme must be used within a ThemeProvider')
     }
     return context
-}

@@ -31,7 +31,7 @@ const gridCtx = gridCanvas.getContext('2d');
         gridCtx.moveTo(x, 0);
         gridCtx.lineTo(x, gridCanvas.height);
         gridCtx.stroke()
-}
+};
       
       for (let y = 0, y < gridCanvas.height, y += 40) {
         gridCtx.beginPath();
@@ -39,7 +39,7 @@ const gridCtx = gridCanvas.getContext('2d');
         gridCtx.lineTo(gridCanvas.width, y);
         gridCtx.stroke()
 },
-  }
+  };
 
     // Animation variables
     let animationId: number;
@@ -72,7 +72,6 @@ const speed = Math.random() * 0.5 + 0.1;
       // Create new particles
       if (particles.length < 100) {
         createParticle()
-}
 
       // Update and draw particles
       for (let i = particles.length - 1, i >= 0, i--) {
@@ -105,7 +104,6 @@ const size = particle.size * (1 - alpha * 0.5);
         ctx.beginPath();
         ctx.arc(particle.x, particle.y, size, 0, Math.PI * 2);
         ctx.fill()
-}
 
       // Draw grid pattern
       ctx.strokeStyle = 'rgba(56, 189, 248, 0.1)',
@@ -121,7 +119,6 @@ const offsetY = (time * 5) % gridSize;
         ctx.moveTo(x, 0);
         ctx.lineTo(x, canvas.height);
         ctx.stroke()
-}
 
       // Horizontal lines
       for (let y = offsetY, y < canvas.height, y += gridSize) {
@@ -129,7 +126,6 @@ const offsetY = (time * 5) % gridSize;
         ctx.moveTo(0, y);
         ctx.lineTo(canvas.width, y);
         ctx.stroke()
-}
 
       // Draw floating geometric shapes
       ctx.globalAlpha = 0.1,
@@ -174,7 +170,6 @@ const waveY = canvas.height * 0.5 + Math.sin(time + i) * 50;
         ctx.lineTo(waveOffset, waveY + 20);
         ctx.lineTo(waveOffset + 100, waveY);
         ctx.stroke()
-}
 
       animationId = requestAnimationFrame(animate)
 },
@@ -191,7 +186,7 @@ const waveY = canvas.height * 0.5 + Math.sin(time + i) * 50;
       ref={canvasRef}
       className="fixed inset-0 w-full h-full pointer-events-none z-0"
       style={{ background: 'radial-gradient(1200px 600px at 10% -10%, rgba(56,189,248,0.05); transparent 60%), radial-gradient(900px 500px at 110% 10%, rgba(168,85,247,0.03); transparent 60%)' },
-  }
+  };
     />
   ),
 },

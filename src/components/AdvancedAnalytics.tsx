@@ -23,7 +23,7 @@ interface AnalyticsData {
   interactions: {
     clicks: number,scrolls: number,formSubmissions: number,errors: number
   },
-  }
+  };
 
 interface AdvancedAnalyticsProps {
   enabled: boolean;
@@ -31,7 +31,7 @@ interface AdvancedAnalyticsProps {
   enableHeatmap?: boolean,
   enableSessionRecording?: boolean,
   enableAITesting?: boolean
-}
+};
 
 export function AdvancedAnalytics({ 
   enabled, 
@@ -284,7 +284,6 @@ const analytics = JSON.parse(storedAnalytics);
         // Keep only last 100 analytics records
         if (analytics.length > 100) {
           analytics.splice(0, analytics.length - 100)
-}
         
         localStorage.setItem('analytics-data', JSON.stringify(analytics)),
         
@@ -341,9 +340,9 @@ const analytics = JSON.parse(storedAnalytics);
         onClick={() => setIsOpen(!isOpen)}
         className="fixed bottom-20 left-4 z-50 p-3 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 text-white"
         whileHover={{ scale: 1.1 },
-  }
+  };
         whileTap={{ scale: 0.9 },
-  }
+  };
         aria-label="Analytics Dashboard"
         aria-expanded={isOpen}
         aria-controls="analytics-panel"
@@ -356,11 +355,11 @@ const analytics = JSON.parse(storedAnalytics);
         {isOpen && (
           <motion.div
             initial={{ opacity: 0, x: -100 },
-  }
+  };
             animate={{ opacity: 1, x: 0 },
-  }
+  };
             exit={{ opacity: 0, x: -100 },
-  }
+  };
             className="fixed left-4 bottom-32 z-50 w-96 bg-white/95 backdrop-blur-md rounded-2xl shadow-2xl border border-gray-200/50 p-6 max-h-[80vh] overflow-y-auto"
             id="analytics-panel"
             role="dialog"
@@ -490,4 +489,3 @@ const analytics = JSON.parse(storedAnalytics);
       </AnimatePresence>
     </>
   )
-}

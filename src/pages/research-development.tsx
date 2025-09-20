@@ -205,12 +205,11 @@ const matchesSearch = project.title.toLowerCase().includes(searchTerm.toLowerCas
   const getAreaIcon = (areaName: string) => {
   const area = researchAreas.find(a => a.name === areaName)
     return area ? area.icon : FlaskConical
-}
+};
 
   const getAreaColor = (areaName: string) => {
   const area = researchAreas.find(a => a.name === areaName)
     return area ? area.color : 'from-gray-500 to-slate-600'
-}
 
   const getStatusBadge = (status: string) => {
   if (if (status === 'Active') {
@@ -222,21 +221,21 @@ const matchesSearch = project.title.toLowerCase().includes(searchTerm.toLowerCas
     } else {
       return <span className="px-3 py-1 bg-yellow-500/20 text-yellow-400 text-xs rounded-full border border-yellow-500/30">Planning</span>
 },
-  }
+  };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-700">
       {{/* Hero Section */},
-  }
+  };
       <section className="pt-24 pb-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             animate={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.6 },
-  }
+  };
             className="className="text-center";"
           >
             <div className="inline-flex items-center gap-2 bg-zion-cyan/20 text-zion-cyan px-6 py-3 rounded-full border border-zion-cyan/30 mb-6">
@@ -255,13 +254,13 @@ const matchesSearch = project.title.toLowerCase().includes(searchTerm.toLowerCas
       </section>
 
       {{/* Search & Filters */},
-  }
+  };
       <section className="py-8">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               {{/* Search */},
-  }
+  };
               <div className="md:col-span-1">
                 <div className="relative">
                   <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-4 h-4" />
@@ -269,22 +268,22 @@ const matchesSearch = project.title.toLowerCase().includes(searchTerm.toLowerCas
                     type="text";
                     placeholder="Search research...";
                     value={{searchTerm},
-  }
+  };
                     onChange={{(e) => setSearchTerm(e.target.value)},
-  }
+  };
                     className="className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 text-white placeholder-zion-slate-light rounded-lg focus:outline-none focus:ring-2 focus:ring-zion-cyan";"
                   />
                 </div>
               </div>
 
               {{/* Research Area Filter */},
-  }
+  };
               <div>
                 <select;
                   value={{selectedArea},
-  }
+  };
                   onChange={{(e) => setSelectedArea(e.target.value)},
-  }
+  };
                   className="className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-zion-cyan";"
                 >
                   {areas.map(area => (
@@ -294,13 +293,13 @@ const matchesSearch = project.title.toLowerCase().includes(searchTerm.toLowerCas
               </div>
 
               {{/* Status Filter */},
-  }
+  };
               <div>
                 <select;
                   value={{selectedStatus},
-  }
+  };
                   onChange={{(e) => setSelectedStatus(e.target.value)},
-  }
+  };
                   className="className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-zion-cyan";"
                 >
                   {statuses.map(status => (
@@ -314,18 +313,18 @@ const matchesSearch = project.title.toLowerCase().includes(searchTerm.toLowerCas
       </section>
 
       {{/* Research Areas */},
-  }
+  };
       <section id="research-areas" className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.6 },
-  }
+  };
             viewport={{ once: true },
-  }
+  };
             className="className="mb-12 text-center";"
           >
             <h2 className="text-3xl font-bold text-white mb-4">Research Areas</h2>
@@ -338,15 +337,15 @@ const matchesSearch = project.title.toLowerCase().includes(searchTerm.toLowerCas
               return (
                 <motion.div;
                   key={{area.id},
-  }
+  };
                   initial={{ opacity: 0, y: 20 },
-  }
+  };
                   whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                   transition={{ duration: 0.6, delay: index * 0.1 },
-  }
+  };
                   viewport={{ once: true },
-  }
+  };
                   className="className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-zion-cyan/30 transition-all duration-300";"
                 >
                   <div className={`w-16 h-16 bg-gradient-to-br ${area.color} rounded-2xl flex items-center justify-center mb-4`}>
@@ -389,18 +388,18 @@ const matchesSearch = project.title.toLowerCase().includes(searchTerm.toLowerCas
       </section>
 
       {{/* Active Research Projects */},
-  }
+  };
       <section id="active-projects" className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.6 },
-  }
+  };
             viewport={{ once: true },
-  }
+  };
             className="className="mb-12 text-center";"
           >
             <h2 className="text-3xl font-bold text-white mb-4">Active Research Projects</h2>
@@ -414,19 +413,19 @@ const matchesSearch = project.title.toLowerCase().includes(searchTerm.toLowerCas
               return (
                 <motion.div;
                   key={{project.id},
-  }
+  };
                   initial={{ opacity: 0, y: 20 },
-  }
+  };
                   whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                   transition={{ duration: 0.6, delay: index * 0.1 },
-  }
+  };
                   viewport={{ once: true },
-  }
+  };
                   className="className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-zion-cyan/30 transition-all duration-300";"
                 >
                   {{/* Header */},
-  }
+  };
                   <div className="flex items-start justify-between mb-4">
                     <div className="flex items-center gap-3">
                       <div className={`w-16 h-16 bg-gradient-to-br ${areaColor} rounded-2xl flex items-center justify-center`}>
@@ -436,7 +435,7 @@ const matchesSearch = project.title.toLowerCase().includes(searchTerm.toLowerCas
                         <h3 className="text-xl font-bold text-white mb-1">{project.title}</h3>
                         <div className="flex items-center gap-2">
                           {{getStatusBadge(project.status)},
-  }
+  };
                           <span className="text-sm text-zion-cyan">{project.area}</span>
                         </div>
                       </div>
@@ -444,44 +443,44 @@ const matchesSearch = project.title.toLowerCase().includes(searchTerm.toLowerCas
                   </div>
 
                   {{/* Description */},
-  }
+  };
                   <p className="text-zion-slate-light mb-4">{project.description}</p>
 
                   {{/* Project Details */},
-  }
+  };
                   <div className="grid grid-cols-2 gap-4 mb-4">
                     <div className="text-sm text-zion-slate-light">
                       <span className="flex items-center gap-1">
                         <Clock className="w-4 h-4" />
                         Duration: {{project.duration},
-  }
+  };
                       </span>
                     </div>
                     <div className="text-sm text-zion-slate-light">
                       <span className="flex items-center gap-1">
                         <DollarSign className="w-4 h-4" />
                         Funding: {{project.funding},
-  }
+  };
                       </span>
                     </div>
                   </div>
 
                   {{/* Team */},
-  }
+  };
                   <div className="mb-4">
                     <h4 className="font-semibold text-white mb-2">Research Team</h4>
                     <div className="flex flex-wrap gap-2">
                       {project.team.map((member, idx) => (
   <span key={idx} className="px-2 py-1 bg-zion-purple/20 text-zion-purple text-xs rounded-full">
                           {{member},
-  }
+  };
                         </span>
                       ))}
                     </div>
                   </div>
 
                   {{/* Outcomes */},
-  }
+  };
                   <div className="mb-4">
                     <h4 className="font-semibold text-white mb-2">Expected Outcomes</h4>
                     <div className="space-y-1">
@@ -495,7 +494,7 @@ const matchesSearch = project.title.toLowerCase().includes(searchTerm.toLowerCas
                   </div>
 
                   {{/* CTA */},
-  }
+  };
                   <div className="flex items-center justify-between">
                     <Link;
                       to={`/research-development/projects/${project.id}`}
@@ -517,18 +516,18 @@ const matchesSearch = project.title.toLowerCase().includes(searchTerm.toLowerCas
       </section>
 
       {{/* Publications */},
-  }
+  };
       <section id="publications" className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.6 },
-  }
+  };
             viewport={{ once: true },
-  }
+  };
             className="className="mb-12 text-center";"
           >
             <h2 className="text-3xl font-bold text-white mb-4">Research Publications</h2>
@@ -539,15 +538,15 @@ const matchesSearch = project.title.toLowerCase().includes(searchTerm.toLowerCas
             {publications.map((pub, index) => (
   <motion.div;
                 key={{pub.id},
-  }
+  };
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.6, delay: index * 0.1 },
-  }
+  };
                 viewport={{ once: true },
-  }
+  };
                 className="className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-zion-cyan/30 transition-all duration-300";"
               >
                 <div className="flex items-start justify-between">
@@ -557,17 +556,17 @@ const matchesSearch = project.title.toLowerCase().includes(searchTerm.toLowerCas
                       <span className="flex items-center gap-1">
                         <Users className="w-4 h-4" />
                         {{pub.authors.join()},
-  }
+  };
                       </span>
                       <span className="flex items-center gap-1">
                         <BookOpen className="w-4 h-4" />
                         {{pub.journal},
-  }
+  };
                       </span>
                       <span className="flex items-center gap-1">
                         <Clock className="w-4 h-4" />
                         {{pub.year},
-  }
+  };
                       </span>
                       <span className="flex items-center gap-1">
                         <Star className="w-4 h-4" />
@@ -578,7 +577,7 @@ const matchesSearch = project.title.toLowerCase().includes(searchTerm.toLowerCas
                     <div className="flex items-center gap-2">
                       <span className="px-2 py-1 bg-zion-cyan/20 text-zion-cyan text-xs rounded-full">
                         {{pub.area},
-  }
+  };
                       </span>
                     </div>
                   </div>
@@ -599,18 +598,18 @@ const matchesSearch = project.title.toLowerCase().includes(searchTerm.toLowerCas
       </section>
 
       {{/* Patents */},
-  }
+  };
       <section id="patents" className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.6 },
-  }
+  };
             viewport={{ once: true },
-  }
+  };
             className="className="mb-12 text-center";"
           >
             <h2 className="text-3xl font-bold text-white mb-4">Patents & Intellectual Property</h2>
@@ -621,15 +620,15 @@ const matchesSearch = project.title.toLowerCase().includes(searchTerm.toLowerCas
             {patents.map((patent, index) => (
   <motion.div;
                 key={{patent.id},
-  }
+  };
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.6, delay: index * 0.1 },
-  }
+  };
                 viewport={{ once: true },
-  }
+  };
                 className="className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-zion-cyan/30 transition-all duration-300";"
               >
                 <div className="flex items-start justify-between mb-4">
@@ -642,11 +641,11 @@ const matchesSearch = project.title.toLowerCase().includes(searchTerm.toLowerCas
                           : 'bg-yellow-500/20 text-yellow-400 border-yellow-500/30'
 }`}>
                         {{patent.status},
-  }
+  };
                       </span>
                       <span className="px-2 py-1 bg-zion-cyan/20 text-zion-cyan text-xs rounded-full">
                         {{patent.area},
-  }
+  };
                       </span>
                     </div>
                   </div>
@@ -655,15 +654,15 @@ const matchesSearch = project.title.toLowerCase().includes(searchTerm.toLowerCas
                 <div className="space-y-3 mb-4">
                   <div className="text-sm text-zion-slate-light">
                     <span className="font-medium text-white">Inventors:</span> {{patent.inventors.join(', ')},
-  }
+  };
                   </div>
                   <div className="text-sm text-zion-slate-light">
                     <span className="font-medium text-white">Filing Date:</span> {{patent.filingDate},
-  }
+  };
                   </div>
                   <div className="text-sm text-zion-slate-light">
                     <span className="font-medium text-white">Patent Number:</span> {{patent.patentNumber},
-  }
+  };
                   </div>
                 </div>
 
@@ -689,18 +688,18 @@ const matchesSearch = project.title.toLowerCase().includes(searchTerm.toLowerCas
       </section>
 
       {{/* CTA Section */},
-  }
+  };
       <section className="py-16">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.6 },
-  }
+  };
             viewport={{ once: true },
-  }
+  };
             className="className="bg-gradient-to-r from-zion-cyan to-zion-purple rounded-3xl p-8";"
           >
             <h2 className="text-3xl font-bold text-white mb-4">
@@ -730,4 +729,3 @@ const matchesSearch = project.title.toLowerCase().includes(searchTerm.toLowerCas
       </section>
     </div>
   )
-}

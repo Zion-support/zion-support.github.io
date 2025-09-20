@@ -142,7 +142,7 @@ export default function DevOpsCloudServices() {
       <SEO title="DevOps & Cloud Services - Zion Tech Group" description="Comprehensive DevOps consulting, cloud migration, CI/CD pipelines, and infrastructure automation services for modern software delivery." keywords="DevOps services, cloud migration, CI/CD, Kubernetes, infrastructure as code, cloud consulting, automation" canonical="https://ziontechgroup.com/services/devops-cloud"/>
 
       {{/* Hero Section */},
-  }
+  };
       <section className="relative bg-gradient-to-br from-orange-900 via-red-900 to-pink-900 text-white py-20">
         <div className="absolute inset-0 bg-black/20"></div>
         <div className="relative container mx-auto px-4 text-center">
@@ -157,7 +157,7 @@ export default function DevOpsCloudServices() {
       </section>
 
       {{/* Services Overview */},
-  }
+  };
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -183,13 +183,13 @@ export default function DevOpsCloudServices() {
                   {service.features.slice(0, 4).map((feature, featureIndex) => (<li key={featureIndex} className="flex items-center text-sm text-gray-700">
                       <Check className="w-4 h-4 text-green-500 mr-2 flex-shrink-0"/>
                       {{feature},
-  }
+  };
                     </li>))}
                 </ul>
                 <div className="space-y-2">
                   {service.benefits.slice(0, 2).map((benefit, benefitIndex) => (<div key={benefitIndex} className="text-sm text-gray-600">
                       <span className="font-medium">✓</span> {{benefit},
-  }
+  };
                     </div>))}
                 </div>
               </div>))}
@@ -198,7 +198,7 @@ export default function DevOpsCloudServices() {
       </section>
 
       {{/* Cloud Providers Section */},
-  }
+  };
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -231,7 +231,7 @@ export default function DevOpsCloudServices() {
       </section>
 
       {{/* Use Cases Section */},
-  }
+  };
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -261,7 +261,7 @@ export default function DevOpsCloudServices() {
       </section>
 
       {{/* Benefits Section */},
-  }
+  };
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -307,7 +307,7 @@ export default function DevOpsCloudServices() {
       </section>
 
       {{/* Industries Section */},
-  }
+  };
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -330,7 +330,7 @@ export default function DevOpsCloudServices() {
       </section>
 
       {{/* Technologies Section */},
-  }
+  };
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -350,7 +350,7 @@ export default function DevOpsCloudServices() {
       </section>
 
       {{/* Process Section */},
-  }
+  };
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -427,7 +427,7 @@ export default function DevOpsCloudServices() {
       </section>
 
       {{/* CTA Section */},
-  }
+  };
       <section className="py-20 bg-gradient-to-r from-orange-600 to-red-600 text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold mb-6">Ready to Accelerate Your Delivery?</h2>
@@ -446,4 +446,4 @@ export default function DevOpsCloudServices() {
         </div>
       </section>
     </div>)
-}
+};

@@ -154,17 +154,17 @@ const AIBusinessIntelligenceAnalytics = () => {
       />
 
       {{/* Hero Section */},
-  }
+  };
       <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
         <div className="absolute inset-0 bg-gradient-to-r from-green-600/20 to-emerald-600/20"></div>
         <div className="relative max-w-7xl mx-auto">
           <motion.div;
             initial={{ opacity: 0, y: 30 },
-  }
+  };
             animate={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             className="className="text-center";"
           >
             <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-2xl mb-8 border border-green-400/30">
@@ -204,18 +204,18 @@ const AIBusinessIntelligenceAnalytics = () => {
       </section>
 
       {{/* Features Section */},
-  }
+  };
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div;
             initial={{ opacity: 0, y: 30 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             viewport={{ once: true },
-  }
+  };
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -230,15 +230,15 @@ const AIBusinessIntelligenceAnalytics = () => {
             {features.map((feature, index) => (
   <motion.div;
                 key={{feature},
-  }
+  };
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.5, delay: index * 0.1 },
-  }
+  };
                 viewport={{ once: true },
-  }
+  };
                 className="className="bg-white/5 backdrop-blur-sm border border-green-400/20 rounded-2xl p-6 hover:bg-white/10 hover:border-green-400/40 transition-all duration-300";"
               >
                 <div className="w-16 h-16 bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-xl flex items-center justify-center mb-6 border border-green-400/30">
@@ -252,18 +252,18 @@ const AIBusinessIntelligenceAnalytics = () => {
       </section>
 
       {{/* Benefits Section */},
-  }
+  };
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
           <motion.div;
             initial={{ opacity: 0, y: 30 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             viewport={{ once: true },
-  }
+  };
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -278,15 +278,15 @@ const AIBusinessIntelligenceAnalytics = () => {
             {benefits.map((benefit, index) => (
   <motion.div;
                 key={{benefit},
-  }
+  };
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 },
-  }
+  };
                 whileInView={{ opacity: 1, x: 0 },
-  }
+  };
                 transition={{ duration: 0.5, delay: index * 0.1 },
-  }
+  };
                 viewport={{ once: true },
-  }
+  };
                 className="className="flex items-start space-x-4";"
               >
                 <div className="w-8 h-8 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
@@ -300,18 +300,18 @@ const AIBusinessIntelligenceAnalytics = () => {
       </section>
 
       {{/* Capabilities Section */},
-  }
+  };
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div;
             initial={{ opacity: 0, y: 30 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             viewport={{ once: true },
-  }
+  };
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -326,15 +326,15 @@ const AIBusinessIntelligenceAnalytics = () => {
             {capabilities.map((category, index) => (
   <motion.div;
                 key={{category.category},
-  }
+  };
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.5, delay: index * 0.1 },
-  }
+  };
                 viewport={{ once: true },
-  }
+  };
                 className="className="bg-white/5 backdrop-blur-sm border border-green-400/20 rounded-2xl p-8 hover:bg-white/10 hover:border-green-400/40 transition-all duration-300";"
               >
                 <div className="flex items-center mb-6">
@@ -346,7 +346,7 @@ const AIBusinessIntelligenceAnalytics = () => {
   {{index === 2 && <Database className="w-6 h-6 text-green-400" />},
   },
   {{index === 3 && <Brain className="w-6 h-6 text-green-400" />},
-  }
+  };
                   </div>
                   <h3 className="text-2xl font-bold text-white">{category.category}</h3>
                 </div>
@@ -355,7 +355,7 @@ const AIBusinessIntelligenceAnalytics = () => {
   <li key={itemIndex} className="flex items-start text-gray-300">
                       <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0 mt-0.5" />
                       {{item},
-  }
+  };
                     </li>
                   ))}
                 </ul>
@@ -366,18 +366,18 @@ const AIBusinessIntelligenceAnalytics = () => {
       </section>
 
       {{/* Use Cases Section */},
-  }
+  };
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
           <motion.div;
             initial={{ opacity: 0, y: 30 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             viewport={{ once: true },
-  }
+  };
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -392,15 +392,15 @@ const AIBusinessIntelligenceAnalytics = () => {
             {useCases.map((useCase, index) => (
   <motion.div;
                 key={{useCase},
-  }
+  };
                 initial={{ opacity: 0, scale: 0.9 },
-  }
+  };
                 whileInView={{ opacity: 1, scale: 1 },
-  }
+  };
                 transition={{ duration: 0.5, delay: index * 0.1 },
-  }
+  };
                 viewport={{ once: true },
-  }
+  };
                 className="className="bg-white/5 backdrop-blur-sm border border-green-400/20 rounded-xl p-6 hover:bg-white/10 hover:border-green-400/40 transition-all duration-300 text-center";"
               >
                 <div className="w-12 h-12 bg-gradient-to-r from-emerald-500/20 to-green-500/20 rounded-lg flex items-center justify-center mx-auto mb-4 border border-emerald-400/30">
@@ -414,18 +414,18 @@ const AIBusinessIntelligenceAnalytics = () => {
       </section>
 
       {{/* Pricing Section */},
-  }
+  };
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div;
             initial={{ opacity: 0, y: 30 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             viewport={{ once: true },
-  }
+  };
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -440,15 +440,15 @@ const AIBusinessIntelligenceAnalytics = () => {
             {pricing.map((plan, index) => (
   <motion.div;
                 key={{plan.name},
-  }
+  };
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.5, delay: index * 0.1 },
-  }
+  };
                 viewport={{ once: true },
-  }
+  };
                 className={`bg-white/5 backdrop-blur-sm border rounded-2xl p-8 ${
   plan.name === 'Professional' ;
                     ? 'border-green-400/50 bg-gradient-to-b from-green-500/10 to-transparent' ;
@@ -472,7 +472,7 @@ const AIBusinessIntelligenceAnalytics = () => {
   <li key={featureIndex} className="flex items-center text-gray-300">
                       <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                       {{feature},
-  }
+  };
                     </li>
                   ))}
                 </ul>
@@ -490,18 +490,18 @@ const AIBusinessIntelligenceAnalytics = () => {
       </section>
 
       {{/* Contact Section */},
-  }
+  };
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
           <motion.div;
             initial={{ opacity: 0, y: 30 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             viewport={{ once: true },
-  }
+  };
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -515,13 +515,13 @@ const AIBusinessIntelligenceAnalytics = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <motion.div;
               initial={{ opacity: 0, y: 20 },
-  }
+  };
               whileInView={{ opacity: 1, y: 0 },
-  }
+  };
               transition={{ duration: 0.5, delay: 0.1 },
-  }
+  };
               viewport={{ once: true },
-  }
+  };
               className="className="text-center";"
             >
               <div className="w-16 h-16 bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-xl flex items-center justify-center mx-auto mb-4 border border-green-400/30">
@@ -539,13 +539,13 @@ const AIBusinessIntelligenceAnalytics = () => {
 
             <motion.div;
               initial={{ opacity: 0, y: 20 },
-  }
+  };
               whileInView={{ opacity: 1, y: 0 },
-  }
+  };
               transition={{ duration: 0.5, delay: 0.2 },
-  }
+  };
               viewport={{ once: true },
-  }
+  };
               className="className="text-center";"
             >
               <div className="w-16 h-16 bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-xl flex items-center justify-center mx-auto mb-4 border border-green-400/30">
@@ -563,13 +563,13 @@ const AIBusinessIntelligenceAnalytics = () => {
 
             <motion.div;
               initial={{ opacity: 0, y: 20 },
-  }
+  };
               whileInView={{ opacity: 1, y: 0 },
-  }
+  };
               transition={{ duration: 0.5, delay: 0.3 },
-  }
+  };
               viewport={{ once: true },
-  }
+  };
               className="className="text-center";"
             >
               <div className="w-16 h-16 bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-xl flex items-center justify-center mx-auto mb-4 border border-green-400/30">
@@ -591,5 +591,5 @@ const AIBusinessIntelligenceAnalytics = () => {
       </section>
     </div>
   )
-}
+};
 export default AIBusinessIntelligenceAnalytics;

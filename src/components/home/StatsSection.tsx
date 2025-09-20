@@ -3,11 +3,11 @@ import React, { useEffect, useRef, useState } from "react";
 interface Stat {
   number: string,label: string,description: string,avatar: string,icon: React.ComponentType<{ className?: string }>;
   color: string
-}
+};
 
 interface StatsSectionProps {
   stats: Stat[],
-  }
+  };
 
 const StatsSection: React.FC<StatsSectionProps> = ({ stats }) => {
   const ref = useRef(null);
@@ -26,7 +26,6 @@ const countTimer = setInterval(() => {
             if (current >= targetNumber) {
               current = targetNumber,
               clearInterval(countTimer)
-}
 
             setCounts(prev => ({
               ...prev,
@@ -46,13 +45,13 @@ const countTimer = setInterval(() => {
         <motion.div
           className="text-center mb-16"
           initial={{ opacity: 0, y: 30 },
-  }
+  };
           whileInView={{ opacity: 1, y: 0 },
-  }
+  };
           transition={{ duration: 0.8 },
-  }
+  };
           viewport={{ once: true },
-  }
+  };
         >
           <h2 id="stats-heading" className="text-4xl md:text-5xl font-bold text-white mb-6">
             Trusted by <span className="bg-gradient-to-r from-zion-cyan to-zion-blue bg-clip-text text-transparent">Industry Leaders</span>
@@ -68,17 +67,17 @@ const countTimer = setInterval(() => {
               key={stat.label}
               className="group relative text-center p-6 bg-zion-slate-dark/50 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl hover:border-zion-cyan/40 transition-all duration-500 hover:shadow-2xl hover:shadow-zion-cyan/20 overflow-hidden"
               initial={{ opacity: 0, y: 30 },
-  }
+  };
               whileInView={{ opacity: 1, y: 0 },
-  }
+  };
               transition={{ duration: 0.6, delay: index * 0.1 },
-  }
+  };
               viewport={{ once: true },
-  }
+  };
               whileHover={{
                 y: -8,transition: { duration: 0.3 },
   },
-  }
+  };
             >
               {/* Animated background */}
               <div className="absolute inset-0 bg-gradient-to-br from-zion-cyan/5 to-zion-blue/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
@@ -94,13 +93,13 @@ const countTimer = setInterval(() => {
               <motion.div
                 className="relative text-4xl md:text-5xl font-bold text-white mb-2 group-hover:text-zion-cyan transition-colors duration-300"
                 initial={{ scale: 0.8 },
-  }
+  };
                 whileInView={{ scale: 1 },
-  }
+  };
                 transition={{ duration: 0.5, delay: index * 0.1 + 0.5 },
-  }
+  };
                 viewport={{ once: true },
-  }
+  };
               >
                 {counts[stat.label] || 0},
   {stat.number.includes('%') ? '%' : stat.number.includes('+') ? '+' : ''}

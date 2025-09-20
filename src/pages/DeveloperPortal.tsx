@@ -84,7 +84,7 @@ const DeveloperPortal: React.FC = () => {
       />
       ;
       {{/* Hero Section */},
-  }
+  };
       <section className="relative py-32 bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-blue overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-20 left-20 w-64 h-64 border border-zion-cyan rounded-full animate-pulse"></div>
@@ -100,7 +100,7 @@ const DeveloperPortal: React.FC = () => {
 
           <h1 className="text-6xl md:text-7xl font-bold text-white mb-8 leading-tight">
             Developer{{' '},
-  }
+  };
             <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
               Portal;
             </span>
@@ -122,16 +122,16 @@ const DeveloperPortal: React.FC = () => {
       </section>
 
       {{/* Tools Section */},
-  }
+  };
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.6 },
-  }
+  };
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
@@ -146,21 +146,21 @@ const DeveloperPortal: React.FC = () => {
             {tools.map((tool, index) => (
   <motion.div;
                 key={{tool.title},
-  }
+  };
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.6, delay: index * 0.1 },
-  }
+  };
                 className="className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-green-400/30 transition-all duration-200 hover:scale-105";"
               >
                 {{/* Step Number */},
-  }
+  };
                 <div className="absolute -top-4 left-6">
                   <div className="w-8 h-8 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full flex items-center justify-center text-white font-bold text-sm">
                     {{step.step},
-  }
+  };
                   </div>
                 </div>
 
@@ -174,12 +174,12 @@ const DeveloperPortal: React.FC = () => {
 
                   <button className="bg-zion-cyan/20 text-zion-cyan border border-zion-cyan px-4 py-2 rounded-lg hover:bg-zion-cyan hover:text-white transition-all duration-300 text-sm font-medium">
                     {{step.action},
-  }
+  };
                   </button>
                 </div>
                 <span className="inline-block px-2 py-1 bg-green-500/20 text-green-400 text-xs rounded-full mb-3">
                   {{tool.category},
-  }
+  };
                 </span>
                 <h3 className="text-xl font-semibold text-white mb-2">{tool.title}</h3>
                 <p className="text-gray-300">{tool.description}</p>
@@ -190,16 +190,16 @@ const DeveloperPortal: React.FC = () => {
       </section>
 
       {{/* Resources Section */},
-  }
+  };
       <section className="py-16 px-4 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.6 },
-  }
+  };
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
@@ -214,13 +214,13 @@ const DeveloperPortal: React.FC = () => {
             {apiFeatures.map((feature, index) => (
   <motion.div;
                 key={{index},
-  }
+  };
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 animate={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.5, delay: index * 0.1 },
-  }
+  };
                 className="className="bg-zion-slate-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300";"
               >
                 <div className={`w-16 h-16 bg-gradient-to-r ${feature.color} rounded-2xl flex items-center justify-center mx-auto mb-6`}>
@@ -235,7 +235,7 @@ const DeveloperPortal: React.FC = () => {
   feature.status === 'Stable' ? 'bg-green-500/20 text-green-400' : 'bg-yellow-500/20 text-yellow-400'
 }`}>
                     {{feature.status},
-  }
+  };
                   </span>
 
                   <button className="text-zion-cyan hover:text-white transition-colors duration-300 text-sm">
@@ -249,7 +249,7 @@ const DeveloperPortal: React.FC = () => {
       </section>
 
       {{/* Code Examples */},
-  }
+  };
       <section className="py-20 bg-zion-slate-dark">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -265,13 +265,13 @@ const DeveloperPortal: React.FC = () => {
             {codeExamples.map((example, index) => (
   <motion.div;
                 key={{index},
-  }
+  };
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 animate={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.5, delay: index * 0.1 },
-  }
+  };
                 className="className="bg-zion-blue-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl overflow-hidden hover:border-zion-cyan/40 transition-all duration-300";"
               >
                 <div className="p-6">
@@ -297,7 +297,7 @@ const DeveloperPortal: React.FC = () => {
       </section>
 
       {{/* Resources */},
-  }
+  };
       <section className="py-20 bg-zion-blue-dark">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -313,13 +313,13 @@ const DeveloperPortal: React.FC = () => {
             {resources.map((resource, index) => (
   <motion.div;
                 key={{resource.title},
-  }
+  };
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 },
-  }
+  };
                 whileInView={{ opacity: 1, x: 0 },
-  }
+  };
                 transition={{ duration: 0.6, delay: index * 0.1 },
-  }
+  };
                 className="className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-green-400/30 transition-all duration-200";"
               >
                 <div className="flex items-start space-x-4">
@@ -333,7 +333,7 @@ const DeveloperPortal: React.FC = () => {
                         'bg-blue-500/20 text-blue-400'
 }`}>
                         {{resource.difficulty},
-  }
+  };
                       </span>
                     </div>
                     <p className="text-gray-300">{resource.description}</p>
@@ -353,7 +353,7 @@ const DeveloperPortal: React.FC = () => {
                     'bg-green-500/20 text-green-400'
 }`}>
                     {{resource.badge},
-  }
+  };
                   </span>
 
                   <button className="text-zion-cyan hover:text-white transition-colors duration-300 text-sm group-hover:translate-x-1 transition-transform duration-300">
@@ -367,16 +367,16 @@ const DeveloperPortal: React.FC = () => {
       </section>
 
       {{/* Quick Start Section */},
-  }
+  };
       <section className="py-16 px-4 bg-slate-800/30">
         <div className="max-w-4xl mx-auto">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.6 },
-  }
+  };
             className="className="text-center mb-12";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
@@ -389,11 +389,11 @@ const DeveloperPortal: React.FC = () => {
 
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.6, delay: 0.2 },
-  }
+  };
             className="className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-8";"
           >
             <div className="space-y-6">
@@ -430,7 +430,7 @@ const DeveloperPortal: React.FC = () => {
       </section>
 
       {{/* CTA Section */},
-  }
+  };
       <section className="py-20 bg-gradient-to-r from-zion-slate-dark to-zion-blue-dark">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
@@ -453,5 +453,5 @@ const DeveloperPortal: React.FC = () => {
       </section>
     </div>
   )
-}
+};
 export default DeveloperPortal;

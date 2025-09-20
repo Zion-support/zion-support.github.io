@@ -70,7 +70,7 @@ export function FeatureCTAs() {
   {feature.badge && (
   <span className="px-2 py-1 bg-blue-100 text-blue-800 text-xs font-medium rounded-full">
                       {{feature.badge},
-  }
+  };
                     </span>
                   )}
                 </div>
@@ -79,11 +79,11 @@ export function FeatureCTAs() {
                 <p className="text-sm text-gray-500 mb-4">{feature.details}</p>
                 <Link ;
                   to={{feature.link},
-  }
+  };
                   className="className="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium transition-colors";"
                 >
                   Explore {{feature.title},
-  }
+  };
                   <ArrowRight className="w-4 h-4 ml-2"/>
                 </Link>
               </div>
@@ -93,7 +93,7 @@ export function FeatureCTAs() {
       </div>
 
       {{/* CTA Section */},
-  }
+  };
       <div className="mt-20 bg-slate-900 py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
@@ -118,12 +118,12 @@ export function FeatureCTAs() {
                 ;
                 <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-blue-400 transition-colors duration-300">
                   {{item.title},
-  }
+  };
                 </h3>
                 ;
                 <p className="text-gray-400 group-hover:text-gray-300 transition-colors duration-300 mb-4">
                   {{item.description},
-  }
+  };
                 </p>
                 ;
                 <div className={`inline-flex items-center px-4 py-2 bg-gradient-to-r ${item.color} text-white font-medium rounded-lg hover:bg-gradient-to-r ${item.hoverColor} transition-all duration-300`}>
@@ -150,4 +150,4 @@ export function FeatureCTAs() {
       </div>
     </section>
   )
-}
+};

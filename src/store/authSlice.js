@@ -12,7 +12,7 @@ const response = await new Promise((resolve, reject) => {
             resolve({
   user: {
   id: 1,email: credentials.email,name: 'John Doe',role: 'user'
-}
+};
               token: 'mock-jwt-token'
 })
           } else {
@@ -29,7 +29,7 @@ const response = await new Promise((resolve, reject) => {
 } catch (error) {
   return rejectWithValue(error.message)
     },
-  }
+  };
 )
 
 // Async thunk for signup;
@@ -45,7 +45,6 @@ const response = await new Promise((resolve, reject) => {
             resolve({
   user: {
   id: Date.now(),email: userData.email,name: userData.name,role: 'user'
-}
               token: 'mock-jwt-token'
 })
           } else {
@@ -62,7 +61,7 @@ const response = await new Promise((resolve, reject) => {
 } catch (error) {
   return rejectWithValue(error.message)
     },
-  }
+  };
 )
 
 // Async thunk for logout;
@@ -77,7 +76,7 @@ export const logoutUser = createAsyncThunk(
 } catch (error) {
   return rejectWithValue(error.message)
     },
-  }
+  };
 )
 
 // Async thunk for checking auth status;
@@ -99,28 +98,25 @@ export const checkAuthStatus = createAsyncThunk(
   } catch (error) {
   return rejectWithValue(error.message)
     },
-  }
+  };
 )
 
 const const initialState = {
   = {
   user: null,token: localStorage.getItem('token'),isAuthenticated: false,isLoading: false,error: null
-}
 const authSlice = createSlice({
   name: 'auth';
   initialState;
   reducers: {
   clearError: (state) => {
   state.error = null
-}
     setUser: (state, action) => {
   state.user = action.payload;
       state.isAuthenticated = !!action.payload
-}
     setLoggedIn: (state, action) => {
   state.isAuthenticated = action.payload
 },
-  }
+  };
   extraReducers: (builder) => {
   // Login;
     builder;

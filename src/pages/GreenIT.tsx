@@ -407,7 +407,7 @@ export default function GreenIT() {
   ]
   const toggleSection = (sectionId: string) => {
   setExpandedSection(expandedSection === sectionId ? null : sectionId)
-  }
+  };
   const filteredSolutions = selectedCategory === 'all' ;
     ? greenSolutions ;
     : greenSolutions.filter(solution => solution.category === selectedCategory)
@@ -419,17 +419,17 @@ export default function GreenIT() {
       />
       ;
       {{/* Hero Section */},
-  }
+  };
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-green-500/10 via-blue-500/10 to-purple-500/10"></div>
         <div className="container mx-auto px-6 relative z-10">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             animate={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             className="className="text-center";"
           >
             <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-green-500/20 to-blue-500/20 rounded-2xl mb-6">
@@ -455,16 +455,16 @@ export default function GreenIT() {
       </section>
 
       {{/* Environmental Impact */},
-  }
+  };
       <section className="py-20">
         <div className="container mx-auto px-6">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">Our Environmental Impact</h2>
@@ -477,13 +477,13 @@ export default function GreenIT() {
             {environmentalImpact.map((impact, index) => (
   <motion.div;
                 key={{impact.label},
-  }
+  };
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.8, delay: index * 0.1 },
-  }
+  };
                 className="className="text-center";"
               >
                 <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-green-500/20 to-blue-500/20 rounded-2xl mb-6">
@@ -499,16 +499,16 @@ export default function GreenIT() {
       </section>
 
       {{/* Green IT Solutions */},
-  }
+  };
       <section className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50">
         <div className="container mx-auto px-6">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">Green IT Solutions</h2>
@@ -518,15 +518,15 @@ export default function GreenIT() {
           </motion.div>
 
           {{/* Category Filter */},
-  }
+  };
           <div className="flex flex-wrap justify-center gap-4 mb-12">
             {categories.map((category) => (
   <button;
                 key={{category.id},
-  }
+  };
                 onClick={{onClick={() => setSelectedCategory(category.id)},
   },
-  }
+  };
                 className={`px-6 py-3 rounded-lg font-medium transition-all duration-200 ${
   selectedCategory === category.id;
                     ? 'bg-gradient-to-r from-green-400 to-blue-500 text-white';
@@ -542,13 +542,13 @@ export default function GreenIT() {
             {filteredSolutions.map((solution, index) => (
   <motion.div;
                 key={{solution.id},
-  }
+  };
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.8, delay: index * 0.1 },
-  }
+  };
                 className="className="group";"
               >
                 <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-2xl border border-slate-600/50 hover:border-green-400/50 transition-all duration-300 hover:scale-105 overflow-hidden">
@@ -561,7 +561,7 @@ export default function GreenIT() {
                         'bg-orange-500/20 text-orange-400'
 }`}>
                         {{categories.find(c => c.id === solution.category)?.name},
-  }
+  };
                       </span>
                     </div>
                     ;
@@ -571,13 +571,13 @@ export default function GreenIT() {
                       </div>
                       <h3 className="text-xl font-bold text-white group-hover:text-green-400 transition-colors duration-200">
                         {{solution.name},
-  }
+  };
                       </h3>
                     </div>
                     ;
                     <p className="text-gray-300 text-sm mb-4 leading-relaxed">
                       {{solution.description},
-  }
+  };
                     </p>
                     ;
                     <div className="grid grid-cols-2 gap-4 mb-4 text-sm">
@@ -598,23 +598,23 @@ export default function GreenIT() {
                     <button;
                       onClick={{onClick={() => toggleSection(solution.id)},
   },
-  }
+  };
                       className="className="w-full px-4 py-2 bg-gradient-to-r from-green-400 to-blue-500 text-white font-semibold rounded-lg hover:from-green-500 hover:to-blue-600 transition-all duration-200 hover:scale-105";"
                     >
                       {{expandedSection === solution.id ? 'Show Less' : 'Learn More'},
-  }
+  };
                     </button>
                     ;
                     {expandedSection === solution.id && (
   <motion.div;
                         initial={{ opacity: 0, height: 0 },
-  }
+  };
                         animate={{ opacity: 1, height: 'auto' },
-  }
+  };
                         exit={{ opacity: 0, height: 0 },
-  }
+  };
                         transition={{ duration: 0.3 },
-  }
+  };
                         className="className="mt-4 pt-4 border-t border-slate-600/50";"
                       >
                         <div className="mb-4">
@@ -624,7 +624,7 @@ export default function GreenIT() {
   <li key={featureIndex} className="flex items-center text-gray-300 text-sm">
                                 <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
                                 {{feature},
-  }
+  };
                               </li>
                             ))}
                           </ul>
@@ -637,7 +637,7 @@ export default function GreenIT() {
   <li key={benefitIndex} className="flex items-center text-gray-300 text-sm">
                                 <Star className="w-3 h-3 text-blue-400 mr-2 flex-shrink-0" />
                                 {{benefit},
-  }
+  };
                               </li>
                             ))}
                           </ul>
@@ -653,16 +653,16 @@ export default function GreenIT() {
       </section>
 
       {{/* Certifications */},
-  }
+  };
       <section className="py-20">
         <div className="container mx-auto px-6">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">Our Certifications</h2>
@@ -675,13 +675,13 @@ export default function GreenIT() {
             {certifications.map((cert, index) => (
   <motion.div;
                 key={{cert.name},
-  }
+  };
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.8, delay: index * 0.1 },
-  }
+  };
                 className="className="text-center";"
               >
                 <div className={`inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r ${cert.color} rounded-2xl mb-6`}>
@@ -696,16 +696,16 @@ export default function GreenIT() {
       </section>
 
       {{/* Case Studies */},
-  }
+  };
       <section className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50">
         <div className="container mx-auto px-6">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">Success Stories</h2>
@@ -718,26 +718,26 @@ export default function GreenIT() {
             {caseStudies.map((study, index) => (
   <motion.div;
                 key={{study.title},
-  }
+  };
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.8, delay: index * 0.1 },
-  }
+  };
                 className="className="group";"
               >
                 <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-2xl border border-slate-600/50 hover:border-green-400/50 transition-all duration-300 hover:scale-105 p-6">
                   <div className="flex items-center gap-3 mb-4">
                     <span className="px-3 py-1 rounded-full text-xs font-medium bg-blue-500/20 text-blue-400">
                       {{study.industry},
-  }
+  };
                     </span>
                   </div>
                   ;
                   <h3 className="text-xl font-bold text-white mb-3 group-hover:text-green-400 transition-colors duration-200">
                     {{study.title},
-  }
+  };
                   </h3>
                   ;
                   <div className="mb-4">
@@ -757,7 +757,7 @@ export default function GreenIT() {
   <li key={resultIndex} className="flex items-center text-gray-300 text-sm">
                           <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
                           {{result},
-  }
+  };
                         </li>
                       ))}
                     </ul>
@@ -781,16 +781,16 @@ export default function GreenIT() {
       </section>
 
       {{/* Call to Action */},
-  }
+  };
       <section className="py-20">
         <div className="container mx-auto px-6 text-center">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
           >
             <h2 className="text-4xl font-bold text-white mb-6">
               Ready to Go Green?;
@@ -822,4 +822,4 @@ export default function GreenIT() {
       </section>
     </div>
   )
-}
+};

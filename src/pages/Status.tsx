@@ -26,7 +26,7 @@ export default function Status() {
 const const systemStatus = {
   = {
     overall: 'operational',lastChecked: new Date(),uptime: '99.99%',responseTime: '45ms'
-}
+};
   const services = [
   {
   name: 'Website',status: 'operational',uptime: '99.99%',responseTime: '45ms',lastIncident: null
@@ -115,7 +115,7 @@ const const systemStatus = {
         return 'text-blue-400 bg-blue-500/20';
       default: return 'text-gray-400 bg-gray-500/20'
 },
-  }
+  };
   const getStatusIcon = (status: string) => {
   switch (status) {
   case 'operational':;
@@ -128,7 +128,7 @@ const const systemStatus = {
         return <Clock className="w-5 h-5 text-blue-400" />;
       default: return <Info className="w-5 h-5 text-gray-400" />
     },
-  }
+  };
   const getSeverityColor = (severity: string) => {
   switch (severity) {
   case 'low':;
@@ -141,14 +141,14 @@ const const systemStatus = {
         return 'bg-red-600/20 text-red-500';
       default: return 'bg-gray-500/20 text-gray-400'
 },
-  }
+  };
   const refreshStatus = () => {
     setIsRefreshing(true)
     setTimeout(() => {
       setLastUpdated(new Date())
       setIsRefreshing(false)
     }, 1000)
-  }
+  };
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -165,17 +165,17 @@ const const systemStatus = {
       />
       ;
       {{/* Hero Section */},
-  }
+  };
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-green-500/10 via-blue-500/10 to-purple-500/10"></div>
         <div className="container mx-auto px-6 relative z-10">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             animate={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             className="className="text-center";"
           >
             <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-green-500/20 to-blue-500/20 rounded-2xl mb-6">
@@ -193,31 +193,31 @@ const const systemStatus = {
       </section>
 
       {{/* Overall Status */},
-  }
+  };
       <section className="py-12">
         <div className="container mx-auto px-6">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             className="className="max-w-4xl mx-auto";"
           >
             <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-2xl p-8 border border-slate-600/50">
               <div className="flex items-center justify-between mb-6">
                 <div className="flex items-center">
                   {{getStatusIcon(systemStatus.overall)},
-  }
+  };
                   <h2 className="text-2xl font-bold text-white ml-3">All Systems Operational</h2>
                 </div>
                 <button;
                   onClick={{onClick={refreshStatus},
   },
-  }
+  };
                   disabled={{isRefreshing},
-  }
+  };
                   className="className="flex items-center px-4 py-2 bg-slate-700/50 text-gray-300 rounded-lg hover:bg-slate-600/50 transition-colors duration-200 disabled:opacity-50";"
                 >
                   <RefreshCw className={`w-4 h-4 mr-2 ${isRefreshing ? 'animate-spin' : ''}`} />
@@ -237,7 +237,7 @@ const const systemStatus = {
                 <div className="text-center">
                   <div className="text-3xl font-bold text-purple-400 mb-2">
                     {{lastUpdated.toLocaleTimeString()},
-  }
+  };
                   </div>
                   <div className="text-gray-300">Last Updated</div>
                 </div>
@@ -248,16 +248,16 @@ const const systemStatus = {
       </section>
 
       {{/* Performance Metrics */},
-  }
+  };
       <section className="py-16">
         <div className="container mx-auto px-6">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             className="className="text-center mb-12";"
           >
             <h2 className="text-3xl font-bold text-white mb-4">Performance Metrics</h2>
@@ -268,13 +268,13 @@ const const systemStatus = {
             {performanceMetrics.map((metric, index) => (
   <motion.div;
                 key={{metric.metric},
-  }
+  };
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.8, delay: index * 0.1 },
-  }
+  };
                 className="className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50";"
               >
                 <div className="flex items-center justify-between mb-4">
@@ -285,7 +285,7 @@ const const systemStatus = {
                     'bg-gray-500/20 text-gray-400'
 }`}>
                     {{metric.change},
-  }
+  };
                   </span>
                 </div>
                 ;
@@ -299,16 +299,16 @@ const const systemStatus = {
       </section>
 
       {{/* Service Status */},
-  }
+  };
       <section className="py-20">
         <div className="container mx-auto px-6">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">Service Status</h2>
@@ -321,19 +321,19 @@ const const systemStatus = {
             {services.map((service, index) => (
   <motion.div;
                 key={{service.name},
-  }
+  };
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.8, delay: index * 0.1 },
-  }
+  };
                 className="className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50";"
               >
                 <div className="flex items-center justify-between mb-4">
                   <h3 className="text-lg font-bold text-white">{service.name}</h3>
                   {{getStatusIcon(service.status)},
-  }
+  };
                 </div>
                 ;
                 <div className="space-y-3">
@@ -358,16 +358,16 @@ const const systemStatus = {
       </section>
 
       {{/* Regional Status */},
-  }
+  };
       <section className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50">
         <div className="container mx-auto px-6">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">Regional Performance</h2>
@@ -380,13 +380,13 @@ const const systemStatus = {
             {regions.map((region, index) => (
   <motion.div;
                 key={{region.name},
-  }
+  };
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.8, delay: index * 0.1 },
-  }
+  };
                 className="className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50";"
               >
                 <div className="flex items-center justify-between mb-4">
@@ -395,7 +395,7 @@ const const systemStatus = {
                     <h3 className="text-lg font-bold text-white">{region.name}</h3>
                   </div>
                   {{getStatusIcon(region.status)},
-  }
+  };
                 </div>
                 ;
                 <div className="grid grid-cols-2 gap-4">
@@ -415,16 +415,16 @@ const const systemStatus = {
       </section>
 
       {{/* Recent Incidents */},
-  }
+  };
       <section className="py-20">
         <div className="container mx-auto px-6">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">Recent Incidents</h2>
@@ -437,13 +437,13 @@ const const systemStatus = {
             {recentIncidents.map((incident, index) => (
   <motion.div;
                 key={{incident.id},
-  }
+  };
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.8, delay: index * 0.1 },
-  }
+  };
                 className="className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl border border-slate-600/50 overflow-hidden";"
               >
                 <div className="p-6">
@@ -452,13 +452,13 @@ const const systemStatus = {
                       <div className="flex items-center gap-3 mb-2">
                         <span className={`px-3 py-1 rounded-full text-xs font-medium ${getSeverityColor(incident.severity)}`}>
                           {{incident.severity.toUpperCase()},
-  }
+  };
                         </span>
                         <span className={`px-3 py-1 rounded-full text-xs font-medium ${
   incident.status === 'resolved' ? 'bg-green-500/20 text-green-400' : 'bg-yellow-500/20 text-yellow-400'
 }`}>
                           {{incident.status.toUpperCase()},
-  }
+  };
                         </span>
                       </div>
                       <h3 className="text-xl font-bold text-white mb-2">{incident.title}</h3>
@@ -468,12 +468,12 @@ const const systemStatus = {
                         <div className="flex items-center">
                           <Calendar className="w-4 h-4 mr-2" />
                           {{incident.startTime.toLocaleDateString()},
-  }
+  };
                         </div>
                         <div className="flex items-center">
                           <Clock className="w-4 h-4 mr-2" />
                           {incident.startTime.toLocaleTimeString()} - {{incident.endTime.toLocaleTimeString()},
-  }
+  };
                         </div>
                       </div>
                     </div>
@@ -501,16 +501,16 @@ const const systemStatus = {
       </section>
 
       {{/* Status Page Links */},
-  }
+  };
       <section className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50">
         <div className="container mx-auto px-6 text-center">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
           >
             <h2 className="text-4xl font-bold text-white mb-6">
               Stay Informed;
@@ -542,4 +542,3 @@ const const systemStatus = {
       </section>
     </div>
   )
-}

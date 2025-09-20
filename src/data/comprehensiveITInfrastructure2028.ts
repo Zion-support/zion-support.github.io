@@ -1,13 +1,12 @@
 export interface ComprehensiveITInfrastructureService2028 {
   id: string,title: string,description: string,category: string,subcategory: string,price: number,currency: string,pricingModel: string,features: string[],benefits: string[],useCases: string[],targetAudience: string[],tags: string[],estimatedDelivery: string,supportLevel: string,marketPrice: string,roi: string,innovationLevel: string,contactInfo: {
   phone: string,email: string,website: string
-}
+};
   technicalSpecs: {
   technology: string[],integrations: string[],apiEndpoints: number,uptime: string,security: string[[],
   ],
-  }
+  };
   competitors: string[],marketSize: string
-}
 
 export const COMPREHENSIVE_IT_INFRASTRUCTURE_2028: ComprehensiveITInfrastructureService2028[] = [
   // Next-Generation Cloud Infrastructure;
@@ -50,16 +49,14 @@ export const COMPREHENSIVE_IT_INFRASTRUCTURE_2028: ComprehensiveITInfrastructure
     estimatedDelivery: "16-20 weeks",supportLevel: "enterprise",marketPrice: "$25,000 - $75,000/month";
     roi: "400-700%",innovationLevel: "Revolutionary",contactInfo: {
   phone: "+1 302 464 0950",email: "kleber@ziontechgroup.com",website: "https://ziontechgroup.com"
-}
     technicalSpecs: {
   technology: ["Kubernetes", "Docker", "Terraform", "Ansible", "Prometheus"]
       integrations: ["AWS", "Azure", "Google Cloud", "IBM Cloud", "Oracle Cloud"]
       apiEndpoints: 800,uptime: "99.999%",security: [["SOC 2", "ISO 27001", "FedRAMP", "Zero-trust architecture"],
   ],
-  }
+  };
     competitors: ["AWS", "Microsoft Azure", "Google Cloud", "IBM Cloud", "Oracle Cloud"]
     marketSize: "$1.3 trillion by 2028"
-}
   // Zero-Trust Network Architecture;
   {
   id: "zero-trust-network-architecture",title: "Zero-Trust Network Architecture Platform",description: "Advanced network security platform that implements zero-trust principles with AI-powered threat detection, continuous authentication, and micro-segmentation.";
@@ -100,16 +97,14 @@ export const COMPREHENSIVE_IT_INFRASTRUCTURE_2028: ComprehensiveITInfrastructure
     estimatedDelivery: "8-12 weeks",supportLevel: "enterprise",marketPrice: "$12,000 - $35,000/month";
     roi: "300-500%",innovationLevel: "Advanced",contactInfo: {
   phone: "+1 302 464 0950",email: "kleber@ziontechgroup.com",website: "https://ziontechgroup.com"
-}
     technicalSpecs: {
   technology: ["Python", "TensorFlow", "Elasticsearch", "Kafka", "Docker"]
       integrations: ["Cisco", "Palo Alto", "Fortinet", "Check Point", "Juniper"]
       apiEndpoints: 350,uptime: "99.99%",security: [["SOC 2", "ISO 27001", "NIST", "Zero-trust architecture"],
   ],
-  }
+  };
     competitors: ["Cisco", "Palo Alto Networks", "Fortinet", "Check Point", "Juniper"]
     marketSize: "$51.6 billion by 2028"
-}
   // Sustainable Green IT Infrastructure;
   {
   id: "sustainable-green-it-infrastructure",title: "Sustainable Green IT Infrastructure Platform",description: "Eco-friendly IT infrastructure that maximizes energy efficiency, reduces carbon footprint, and implements sustainable computing practices while maintaining high performance.";
@@ -150,16 +145,14 @@ export const COMPREHENSIVE_IT_INFRASTRUCTURE_2028: ComprehensiveITInfrastructure
     estimatedDelivery: "10-14 weeks",supportLevel: "enterprise",marketPrice: "$15,000 - $45,000/month";
     roi: "250-400%",innovationLevel: "Advanced",contactInfo: {
   phone: "+1 302 464 0950",email: "kleber@ziontechgroup.com",website: "https://ziontechgroup.com"
-}
     technicalSpecs: {
   technology: ["Python", "TensorFlow", "IoT sensors", "Energy monitoring", "Analytics"]
       integrations: ["Solar panels", "Wind turbines", "Battery storage", "Smart grids", "Energy management"]
       apiEndpoints: 200,uptime: "99.9%",security: [["SOC 2", "ISO 14001", "Energy Star", "LEED certification"],
   ],
-  }
+  };
     competitors: ["Schneider Electric", "Siemens", "HPE GreenLake", "Dell Technologies", "IBM"]
     marketSize: "$89.2 billion by 2028"
-}
   // Edge Computing and IoT Infrastructure;
   {
   id: "edge-computing-iot-infrastructure",title: "Edge Computing and IoT Infrastructure Platform",description: "Comprehensive edge computing platform that brings computation and data storage closer to data sources, enabling real-time processing and reduced latency for IoT applications.";
@@ -200,16 +193,14 @@ export const COMPREHENSIVE_IT_INFRASTRUCTURE_2028: ComprehensiveITInfrastructure
     estimatedDelivery: "12-16 weeks",supportLevel: "enterprise",marketPrice: "$18,000 - $55,000/month";
     roi: "350-600%",innovationLevel: "Advanced",contactInfo: {
   phone: "+1 302 464 0950",email: "kleber@ziontechgroup.com",website: "https://ziontechgroup.com"
-}
     technicalSpecs: {
   technology: ["Kubernetes Edge", "Docker", "MQTT", "WebRTC", "5G"]
       integrations: ["AWS Greengrass", "Azure IoT Edge", "Google Cloud IoT", "IBM Edge", "Cisco Edge"]
       apiEndpoints: 500,uptime: "99.9%",security: [["Edge encryption", "Device authentication", "Secure boot", "Zero-trust edge"],
   ],
-  }
+  };
     competitors: ["AWS Greengrass", "Azure IoT Edge", "Google Cloud IoT", "IBM Edge", "Cisco Edge"]
     marketSize: "$155.9 billion by 2028"
-}
   // Hybrid Multi-Cloud Management;
   {
   id: "hybrid-multi-cloud-management",title: "Hybrid Multi-Cloud Management Platform",description: "Unified platform for managing hybrid and multi-cloud environments with AI-powered optimization, cost management, and seamless workload migration across different cloud providers.";
@@ -250,13 +241,12 @@ export const COMPREHENSIVE_IT_INFRASTRUCTURE_2028: ComprehensiveITInfrastructure
     estimatedDelivery: "14-18 weeks",supportLevel: "enterprise",marketPrice: "$22,000 - $65,000/month";
     roi: "400-700%",innovationLevel: "Advanced",contactInfo: {
   phone: "+1 302 464 0950",email: "kleber@ziontechgroup.com",website: "https://ziontechgroup.com"
-}
     technicalSpecs: {
   technology: ["Terraform", "Kubernetes", "Ansible", "Python", "React"]
       integrations: ["AWS", "Azure", "Google Cloud", "IBM Cloud", "Oracle Cloud"]
       apiEndpoints: 600,uptime: "99.99%",security: [["SOC 2", "ISO 27001", "FedRAMP", "Multi-cloud security"],
   ],
-  }
+  };
     competitors: ["VMware", "Red Hat", "HashiCorp", "CloudBolt", "RightScale"]
     marketSize: "$8.6 billion by 2028"
 },

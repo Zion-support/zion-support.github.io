@@ -116,28 +116,28 @@ export default function ServicesOverview() {
     const const containerVariants = {
   = {
         hidden: {{ opacity: 0 },
-  }
+  };
         visible: {
   opacity: 1,transition: {
   staggerChildren: 0.1
 },
   },
-  }
+  };
     const const itemVariants = {
   = {
         hidden: {{ y: 20, opacity: 0 },
-  }
+  };
         visible: {
   y: 0,opacity: 1,transition: {
   duration: 0.5,ease: "easeOut"
 },
   },
-  }
+  };
     return (<div className="min-h-screen bg-background">
       <SEO title="All Services - Zion Tech Group Comprehensive Technology Solutions" description="Explore our complete range of technology services including AI, data analytics, IoT, blockchain, DevOps, and cybersecurity solutions." keywords="technology services, AI services, data analytics, IoT solutions, blockchain development, DevOps consulting, cybersecurity services" canonical="https://ziontechgroup.com/services"/>
 
       {{/* Hero Section */},
-  }
+  };
       <section className="relative bg-gradient-to-br from-slate-900 via-blue-900 to-purple-900 text-white py-20">
         <div className="absolute inset-0 bg-black/20"></div>
         <div className="relative container mx-auto px-4 text-center">
@@ -152,7 +152,7 @@ export default function ServicesOverview() {
       </section>
 
       {{/* Stats Section */},
-  }
+  };
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <motion.div className="grid grid-cols-2 md:grid-cols-4 gap-8" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true },
@@ -169,7 +169,7 @@ export default function ServicesOverview() {
       </section>
 
       {{/* Services Overview */},
-  }
+  };
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
           <motion.div className="text-center mb-16" variants={itemVariants} initial="hidden" whileInView="visible" viewport={{ once: true },
@@ -223,7 +223,7 @@ export default function ServicesOverview() {
       </section>
 
       {{/* Why Choose Us Section */},
-  }
+  };
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <motion.div className="text-center mb-16" variants={itemVariants} initial="hidden" whileInView="visible" viewport={{ once: true },
@@ -270,7 +270,7 @@ export default function ServicesOverview() {
       </section>
 
       {{/* CTA Section */},
-  }
+  };
       <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
         <div className="container mx-auto px-4 text-center">
           <motion.h2 className="text-4xl font-bold mb-6" variants={itemVariants} initial="hidden" whileInView="visible" viewport={{ once: true },
@@ -293,4 +293,4 @@ export default function ServicesOverview() {
         </div>
       </section>
     </div>)
-}
+};

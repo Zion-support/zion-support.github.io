@@ -60,7 +60,7 @@ export default function Dashboard() {
       />
       ;
       {{/* Header */},
-  }
+  };
       <header className="bg-white shadow-sm border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
@@ -74,9 +74,9 @@ export default function Dashboard() {
                   type="text";
                   placeholder="Search...";
                   value={{searchQuery},
-  }
+  };
                   onChange={{(e) => setSearchQuery(e.target.value)},
-  }
+  };
                   className="className="pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent";"
                 />
               </div>
@@ -92,10 +92,10 @@ export default function Dashboard() {
       </header>
 
       {{/* Main Content */},
-  }
+  };
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {{/* Stats Overview */},
-  }
+  };
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
           {[
   {{ label: 'Active Projects', value: '12', icon: TrendingUp, color: 'from-blue-500 to-cyan-500' },
@@ -109,13 +109,13 @@ export default function Dashboard() {
   ].map((stat, index) => (
   <motion.div;
               key={{stat.label},
-  }
+  };
               initial={{ opacity: 0, y: 20 },
-  }
+  };
               animate={{ opacity: 1, y: 0 },
-  }
+  };
               transition={{ delay: index * 0.1 },
-  }
+  };
               className="className="bg-white rounded-xl shadow-sm border border-gray-200 p-6";"
             >
               <div className="flex items-center">
@@ -132,10 +132,10 @@ export default function Dashboard() {
         </div>
 
         {{/* Main Dashboard Grid */},
-  }
+  };
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {{/* Recent Projects */},
-  }
+  };
           <div className="lg:col-span-2">
             <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
               <div className="flex items-center justify-between mb-6">
@@ -149,13 +149,13 @@ export default function Dashboard() {
                 {recentProjects.map((project, index) => (
   <motion.div;
                     key={{project.name},
-  }
+  };
                     initial={{ opacity: 0, x: -20 },
-  }
+  };
                     animate={{ opacity: 1, x: 0 },
-  }
+  };
                     transition={{ delay: index * 0.1 },
-  }
+  };
                     className="className="flex items-center justify-between p-4 border border-gray-100 rounded-lg hover:border-gray-200 transition-colors";"
                   >
                     <div className="flex-1">
@@ -170,7 +170,7 @@ export default function Dashboard() {
                           <div;
                             className="className="bg-zion-cyan h-2 rounded-full transition-all duration-300";"
                             style={{ width: `${project.progress}%` },
-  }
+  };
                           ></div>
                         </div>
                       </div>
@@ -186,48 +186,48 @@ export default function Dashboard() {
           </div>
 
           {{/* Quick Actions & Events */},
-  }
+  };
           <div className="space-y-6">
             {{/* Quick Actions */},
-  }
+  };
             <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
               <h3 className="text-lg font-semibold text-gray-900 mb-4">Quick Actions</h3>
               <div className="grid grid-cols-2 gap-3">
                 {quickActions.map((action, index) => (
   <motion.button;
                     key={{action.name},
-  }
+  };
                     initial={{ opacity: 0, scale: 0.9 },
-  }
+  };
                     animate={{ opacity: 1, scale: 1 },
-  }
+  };
                     transition={{ delay: index * 0.1 },
-  }
+  };
                     className={`p-3 rounded-lg bg-gradient-to-r ${action.color} text-white text-sm font-medium hover:shadow-lg transition-shadow flex flex-col items-center`}
                   >
                     <action.icon className="h-5 w-5 mb-1" />
                     {{action.name},
-  }
+  };
                   </motion.button>
                 ))}
               </div>
             </div>
 
             {{/* Upcoming Events */},
-  }
+  };
             <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
               <h3 className="text-lg font-semibold text-gray-900 mb-4">Upcoming Events</h3>
               <div className="space-y-3">
                 {upcomingEvents.map((event, index) => (
   <motion.div;
                     key={{event.title},
-  }
+  };
                     initial={{ opacity: 0, y: 10 },
-  }
+  };
                     animate={{ opacity: 1, y: 0 },
-  }
+  };
                     transition={{ delay: index * 0.1 },
-  }
+  };
                     className="className="flex items-start p-3 rounded-lg border border-gray-100 hover:border-gray-200 transition-colors";"
                   >
                     <div className="p-2 rounded-lg bg-blue-100 mr-3">
@@ -239,12 +239,12 @@ export default function Dashboard() {
                         <span className="flex items-center">
                           <Calendar className="h-3 w-3 mr-1" />
                           {{event.date},
-  }
+  };
                         </span>
                         <span>{event.time}</span>
                         <span className="px-2 py-1 bg-blue-100 text-blue-700 rounded-full text-xs">
                           {{event.type},
-  }
+  };
                         </span>
                       </div>
                     </div>
@@ -256,7 +256,7 @@ export default function Dashboard() {
         </div>
 
         {{/* Service Performance Chart */},
-  }
+  };
         <div className="mt-8 bg-white rounded-xl shadow-sm border border-gray-200 p-6">
           <div className="flex items-center justify-between mb-6">
             <h2 className="text-xl font-semibold text-gray-900">Service Performance</h2>
@@ -277,7 +277,7 @@ export default function Dashboard() {
           </div>
           ;
           {{/* Placeholder for chart */},
-  }
+  };
           <div className="h-64 bg-gray-50 rounded-lg flex items-center justify-center">
             <div className="text-center">
               <BarChart3 className="h-12 w-12 text-gray-400 mx-auto mb-2" />
@@ -289,4 +289,4 @@ export default function Dashboard() {
       </main>
     </div>
   )
-}
+};

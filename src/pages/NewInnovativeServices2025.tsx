@@ -191,7 +191,7 @@ export default function NewInnovativeServices2025() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-900 via-zion-slate-800 to-zion-slate-900">
       {{/* Futuristic Animated Background */},
-  }
+  };
       <div className="fixed inset-0 overflow-hidden pointer-events-none" aria-hidden="true">
         <div className="absolute inset-0 bg-[linear-gradient(rgba(34,221,210,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(34,221,210,0.1)_1px,transparent_1px)] bg-[size:50px_50px] animate-pulse"></div>
         <div className="absolute inset-0 bg-gradient-to-r from-zion-cyan/5 via-transparent to-zion-purple/5"></div>
@@ -199,16 +199,16 @@ export default function NewInnovativeServices2025() {
 
       <div className="relative z-10">
         {{/* Hero Section */},
-  }
+  };
         <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
             <motion.div;
               initial={{ opacity: 0, y: 20 },
-  }
+  };
               animate={{ opacity: 1, y: 0 },
-  }
+  };
               transition={{ duration: 0.8 },
-  }
+  };
             >
               <div className="inline-flex items-center px-4 py-2 rounded-full bg-zion-cyan/10 border border-zion-cyan/20 text-zion-cyan text-sm font-medium mb-8">
                 <Sparkles className="w-4 h-4 mr-2" />
@@ -227,9 +227,9 @@ export default function NewInnovativeServices2025() {
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                 <motion.button;
                   whileHover={{ scale: 1.05 },
-  }
+  };
                   whileTap={{ scale: 0.95 },
-  }
+  };
                   className="className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 flex items-center";"
                 >
                   <Play className="w-5 h-5 mr-2" />
@@ -237,9 +237,9 @@ export default function NewInnovativeServices2025() {
                 </motion.button>
                 <motion.button;
                   whileHover={{ scale: 1.05 },
-  }
+  };
                   whileTap={{ scale: 0.95 },
-  }
+  };
                   className="className="px-8 py-4 border border-zion-cyan/30 text-zion-cyan font-semibold rounded-lg hover:bg-zion-cyan/10 transition-all duration-300 flex items-center";"
                 >
                   <MessageCircle className="w-5 h-5 mr-2" />
@@ -251,18 +251,18 @@ export default function NewInnovativeServices2025() {
         </section>
 
         {{/* Featured Services */},
-  }
+  };
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <motion.div;
               initial={{ opacity: 0, y: 20 },
-  }
+  };
               whileInView={{ opacity: 1, y: 0 },
-  }
+  };
               transition={{ duration: 0.8 },
-  }
+  };
               viewport={{ once: true },
-  }
+  };
               className="className="text-center mb-16";"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -277,15 +277,15 @@ export default function NewInnovativeServices2025() {
               {featuredServices.map((service, index) => (
   <motion.div;
                   key={{index},
-  }
+  };
                   initial={{ opacity: 0, y: 20 },
-  }
+  };
                   whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                   transition={{ duration: 0.8, delay: index * 0.1 },
-  }
+  };
                   viewport={{ once: true },
-  }
+  };
                   className={`relative bg-zion-slate-800/50 backdrop-blur-sm border rounded-xl p-8 hover:border-zion-cyan/40 transition-all duration-300 ${
   service.popular ? 'border-zion-cyan/50 bg-zion-cyan/5' : 'border-zion-slate-600/50'
 }`}
@@ -304,7 +304,7 @@ export default function NewInnovativeServices2025() {
                     </div>
                     <div className="inline-flex items-center px-3 py-1 rounded-full bg-zion-slate-700 text-zion-cyan text-xs font-medium mb-3">
                       {{service.category},
-  }
+  };
                     </div>
                     <h3 className="text-2xl font-bold text-white mb-3">{service.title}</h3>
                     <p className="text-zion-slate-300 mb-4">{service.description}</p>
@@ -316,7 +316,7 @@ export default function NewInnovativeServices2025() {
   <li key={idx} className="flex items-center text-zion-slate-300">
                         <CheckCircle className="w-4 h-4 text-zion-cyan mr-3 flex-shrink-0" />
                         {{feature},
-  }
+  };
                       </li>
                     ))}
                   </ul>
@@ -324,9 +324,9 @@ export default function NewInnovativeServices2025() {
                   <Link to={service.link}>
                     <motion.button;
                       whileHover={{ scale: 1.02 },
-  }
+  };
                       whileTap={{ scale: 0.98 },
-  }
+  };
                       className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
   service.popular;
                           ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white hover:shadow-lg hover:shadow-zion-cyan/25';
@@ -343,18 +343,18 @@ export default function NewInnovativeServices2025() {
         </section>
 
         {{/* Service Categories */},
-  }
+  };
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-zion-slate-800/30">
           <div className="max-w-7xl mx-auto">
             <motion.div;
               initial={{ opacity: 0, y: 20 },
-  }
+  };
               whileInView={{ opacity: 1, y: 0 },
-  }
+  };
               transition={{ duration: 0.8 },
-  }
+  };
               viewport={{ once: true },
-  }
+  };
               className="className="text-center mb-16";"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -369,15 +369,15 @@ export default function NewInnovativeServices2025() {
               {serviceCategories.map((category, index) => (
   <motion.div;
                   key={{index},
-  }
+  };
                   initial={{ opacity: 0, y: 20 },
-  }
+  };
                   whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                   transition={{ duration: 0.8, delay: index * 0.1 },
-  }
+  };
                   viewport={{ once: true },
-  }
+  };
                   className="className="bg-zion-slate-800/50 backdrop-blur-sm border border-zion-slate-600/50 rounded-xl p-8 hover:border-zion-cyan/40 transition-all duration-300";"
                 >
                   <div className="flex items-center mb-6">
@@ -394,7 +394,7 @@ export default function NewInnovativeServices2025() {
   <li key={idx} className="flex items-center text-zion-slate-300">
                           <ArrowRight className="w-4 h-4 text-zion-cyan mr-2 flex-shrink-0" />
                           {{service},
-  }
+  };
                         </li>
                       ))}
                     </ul>
@@ -406,18 +406,18 @@ export default function NewInnovativeServices2025() {
         </section>
 
         {{/* Benefits */},
-  }
+  };
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <motion.div;
               initial={{ opacity: 0, y: 20 },
-  }
+  };
               whileInView={{ opacity: 1, y: 0 },
-  }
+  };
               transition={{ duration: 0.8 },
-  }
+  };
               viewport={{ once: true },
-  }
+  };
               className="className="text-center mb-16";"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -432,15 +432,15 @@ export default function NewInnovativeServices2025() {
               {benefits.map((benefit, index) => (
   <motion.div;
                   key={{index},
-  }
+  };
                   initial={{ opacity: 0, y: 20 },
-  }
+  };
                   whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                   transition={{ duration: 0.8, delay: index * 0.1 },
-  }
+  };
                   viewport={{ once: true },
-  }
+  };
                   className="className="bg-zion-slate-800/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300 text-center";"
                 >
                   <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center mx-auto mb-4">
@@ -455,18 +455,18 @@ export default function NewInnovativeServices2025() {
         </section>
 
         {{/* CTA Section */},
-  }
+  };
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-zion-cyan/10 via-zion-purple/10 to-zion-cyan/10">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div;
               initial={{ opacity: 0, y: 20 },
-  }
+  };
               whileInView={{ opacity: 1, y: 0 },
-  }
+  };
               transition={{ duration: 0.8 },
-  }
+  };
               viewport={{ once: true },
-  }
+  };
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Ready to Transform Your Business?;
@@ -479,9 +479,9 @@ export default function NewInnovativeServices2025() {
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                 <motion.button;
                   whileHover={{ scale: 1.05 },
-  }
+  };
                   whileTap={{ scale: 0.95 },
-  }
+  };
                   className="className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 flex items-center";"
                 >
                   <Rocket className="w-5 h-5 mr-2" />
@@ -489,9 +489,9 @@ export default function NewInnovativeServices2025() {
                 </motion.button>
                 <motion.button;
                   whileHover={{ scale: 1.05 },
-  }
+  };
                   whileTap={{ scale: 0.95 },
-  }
+  };
                   className="className="px-8 py-4 border border-zion-cyan/30 text-zion-cyan font-semibold rounded-lg hover:bg-zion-cyan/10 transition-all duration-300 flex items-center";"
                 >
                   <MessageCircle className="w-5 h-5 mr-2" />
@@ -503,7 +503,7 @@ export default function NewInnovativeServices2025() {
         </section>
 
         {{/* Contact Information */},
-  }
+  };
         <section className="py-16 px-4 sm: px-6 lg:px-8 bg-zion-slate-800/50">
           <div className="max-w-4xl mx-auto text-center">
             <h3 className="text-2xl font-bold text-white mb-8">Get in Touch</h3>
@@ -526,4 +526,4 @@ export default function NewInnovativeServices2025() {
       </div>
     </div>
   )
-}
+};

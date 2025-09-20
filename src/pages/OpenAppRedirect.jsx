@@ -27,7 +27,7 @@ let timeout;
                     if (if (isAndroid) {
   ) {
                         window.location.href = androidAppUrl
-}
+};
                     else if (if (isiOS) {
   ) {
                         window.location.href = iosAppUrl
@@ -35,7 +35,6 @@ let timeout;
   }, 2500), // Wait 2.5 seconds before redirecting to store;
                 // Try to open the app;
                 window.location.href = appScheme
-}
             else {
                 // Not on mobile, redirect to mobile launch page;
                 setStatus('failed')
@@ -59,5 +58,4 @@ let timeout;
   }))],
   })],
   }))
-}
 export default OpenAppRedirect;

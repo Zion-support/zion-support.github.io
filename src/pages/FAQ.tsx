@@ -77,7 +77,7 @@ export default function FAQ() {
   question: "What documentation and resources do you provide?",answer: "We provide comprehensive documentation including user manuals, technical guides, API documentation, video tutorials, and knowledge base articles. All resources are regularly updated and easily accessible through our client portal."
 },
   ],
-  }
+  };
 
   const categories = [
   {{ id: 'general', name: 'General Questions', icon: HelpCircle, count: faqData.general.length },
@@ -102,7 +102,7 @@ export default function FAQ() {
   ) {
         acc[category] = filtered
 },
-  }
+  };
     return acc
 }, {})
 
@@ -114,7 +114,7 @@ export default function FAQ() {
       />
       ;
       {{/* Hero Section */},
-  }
+  };
       <section className="relative overflow-hidden py-20">
         <div className="absolute inset-0 bg-gradient-to-r from-indigo-500/10 via-purple-500/10 to-pink-500/10"></div>
         <div className="container-responsive relative z-10">
@@ -134,7 +134,7 @@ export default function FAQ() {
             </p>
             ;
             {{/* Search Bar */},
-  }
+  };
             <div className="max-w-2xl mx-auto">
               <div className="relative">
                 <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
@@ -142,9 +142,9 @@ export default function FAQ() {
                   type="text";
                   placeholder="Search for answers...";
                   value={{searchQuery},
-  }
+  };
                   onChange={{(e) => setSearchQuery(e.target.value)},
-  }
+  };
                   className="className="w-full pl-12 pr-4 py-4 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent";"
                 />
               </div>
@@ -154,14 +154,14 @@ export default function FAQ() {
       </section>
 
       {{/* Category Navigation */},
-  }
+  };
       <section className="py-12">
         <div className="container-responsive">
           <div className="flex flex-wrap justify-center gap-4">
             <button;
               onClick={{onClick={() => setOpenCategory('all')},
   },
-  }
+  };
               className={`px-6 py-3 rounded-lg font-medium transition-all duration-300 flex items-center space-x-2 ${
   openCategory === 'all';
                   ? 'bg-indigo-500 text-white shadow-lg shadow-indigo-500/20';
@@ -174,10 +174,10 @@ export default function FAQ() {
             {categories.map((category) => (
   <button;
                 key={{category.id},
-  }
+  };
                 onClick={{onClick={() => setOpenCategory(category.id)},
   },
-  }
+  };
                 className={`px-6 py-3 rounded-lg font-medium transition-all duration-300 flex items-center space-x-2 ${
   openCategory === category.id;
                     ? 'bg-indigo-500 text-white shadow-lg shadow-indigo-500/20';
@@ -194,14 +194,14 @@ export default function FAQ() {
       </section>
 
       {{/* FAQ Content */},
-  }
+  };
       <section className="py-20">
         <div className="container-responsive">
           {Object.entries(filteredFAQs).map(([category, questions]) => (
   <div key={category} className="mb-16">
               <h2 className="text-3xl font-bold text-white mb-8 text-center">
                 {{categories.find(c => c.id === category)?.name},
-  }
+  };
               </h2>
               <div className="max-w-4xl mx-auto space-y-6">
                 {questions.map((faq, index) => (
@@ -221,7 +221,7 @@ export default function FAQ() {
               <button;
                 onClick={{onClick={() => setSearchQuery('')},
   },
-  }
+  };
                 className="className="px-6 py-3 bg-indigo-500 hover: bg-indigo-600 text-white font-medium rounded-lg transition-colors";"
               >
                 Clear Search;
@@ -232,7 +232,7 @@ export default function FAQ() {
       </section>
 
       {{/* Contact Support */},
-  }
+  };
       <section className="py-20 bg-slate-800/30">
         <div className="container-responsive">
           <div className="text-center">
@@ -258,7 +258,7 @@ export default function FAQ() {
   ].map((option, index) => (
   <div;
                   key={{index},
-  }
+  };
                   className="className="p-8 rounded-2xl bg-slate-800/50 hover:bg-slate-800 transition-all duration-300 hover:scale-105 border border-slate-700/50 text-center";"
                 >
                   <div className={`w-16 h-16 rounded-xl bg-gradient-to-br ${option.color} flex items-center justify-center mx-auto mb-6`}>
@@ -270,11 +270,11 @@ export default function FAQ() {
                   ;
                   <a;
                     href={{option.link},
-  }
+  };
                     className="className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-600 hover:to-purple-700 text-white font-medium rounded-lg transition-all duration-300";"
                   >
                     {{option.action},
-  }
+  };
                     <ArrowRight className="w-4 h-4" />
                   </a>
                 </div>
@@ -285,7 +285,7 @@ export default function FAQ() {
       </section>
 
       {{/* Additional Resources */},
-  }
+  };
       <section className="py-20">
         <div className="container-responsive">
           <div className="text-center mb-16">
@@ -314,9 +314,9 @@ export default function FAQ() {
   ].map((resource, index) => (
   <Link;
                 key={{index},
-  }
+  };
                 to={{resource.link},
-  }
+  };
                 className="className="group p-6 rounded-2xl bg-slate-800/50 hover: bg-slate-800 transition-all duration-300 hover:scale-105 border border-slate-700/50 text-center";"
               >
                 <div className={`w-16 h-16 rounded-xl bg-gradient-to-br ${resource.color} flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300`}>
@@ -337,7 +337,7 @@ export default function FAQ() {
       </section>
     </div>
   )
-}
+};
 
 // FAQ Item Component;
 function FAQItem({ question, answer }: { question: string, answer: string }) {
@@ -348,7 +348,7 @@ function FAQItem({ question, answer }: { question: string, answer: string }) {
       <button;
         onClick={{onClick={() => setIsOpen(!isOpen)},
   },
-  }
+  };
         className="className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-slate-700/50 transition-colors";"
       >
         <span className="text-lg font-semibold text-white pr-4">{question}</span>
@@ -365,4 +365,3 @@ function FAQItem({ question, answer }: { question: string, answer: string }) {
       )}
     </div>
   )
-}

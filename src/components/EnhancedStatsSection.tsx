@@ -13,7 +13,7 @@ import {
 } from "lucide-react";
 interface Stat {
   id: string,icon: React.ComponentType<any>,value: string,label: string,description: string,color: string,gradient: string
-}
+};
 
 const stats: Stat[] = [
   {
@@ -58,7 +58,6 @@ const increment = numericValue / (duration / 16), // 60fps
       if (current >= numericValue) {
         current = numericValue,
         clearInterval(timer)
-}
       setCountedValues(prev => ({
         ...prev,
         [target]: Math.floor(current)
@@ -93,7 +92,7 @@ const increment = numericValue / (duration / 16), // 60fps
         <motion.div
           ref={ref}
           initial={{ opacity: 0, y: 30 },
-  }
+  };
           animate={controls}
           variants={{
             visible: {
@@ -102,7 +101,7 @@ const increment = numericValue / (duration / 16), // 60fps
               },
   },
   },
-  }
+  };
           className="text-center mb-16"
         >
           <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">
@@ -119,7 +118,7 @@ const increment = numericValue / (duration / 16), // 60fps
             <motion.div
               key={stat.id}
               initial={{ opacity: 0, y: 30 },
-  }
+  };
               animate={controls}
               variants={{
                 visible: {
@@ -128,7 +127,7 @@ const increment = numericValue / (duration / 16), // 60fps
                   },
   },
   },
-  }
+  };
               className="group relative"
             >
               <motion.div
@@ -136,9 +135,9 @@ const increment = numericValue / (duration / 16), // 60fps
                 whileHover={{
                   y: -10,scale: 1.02,borderColor: `rgba(34, 221, 210, 0.5)`
                 },
-  }
+  };
                 transition={{ duration: 0.3 },
-  }
+  };
               >
                 {/* Background gradient overlay */}
                 <div className={`absolute inset-0 bg-gradient-to-br ${stat.gradient} opacity-5 group-hover:opacity-10 transition-opacity duration-300`}></div>
@@ -149,9 +148,9 @@ const increment = numericValue / (duration / 16), // 60fps
                   whileHover={{
                     rotate: 360,scale: 1.1
                   },
-  }
+  };
                   transition={{ duration: 0.6 },
-  }
+  };
                 >
                   {React.createElement(stat.icon, { className: `w-10 h-10 text-${stat.color}` })}
                 </motion.div>
@@ -160,17 +159,17 @@ const increment = numericValue / (duration / 16), // 60fps
                 <motion.div
                   className="mb-4 relative z-10"
                   initial={{ scale: 0.8 },
-  }
+  };
                   animate={{ scale: 1 },
-  }
+  };
                   transition={{ duration: 0.5, delay: index * 0.1 },
-  }
+  };
                 >
                   <span className="text-5xl font-bold bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
                     {countedValues[stat.value] || 0},
   {stat.value.includes('%') && '%'},
   {stat.value.includes('/') && stat.value.split('/')[1],
-  }
+  };
                   </span>
                 </motion.div>
 
@@ -197,7 +196,7 @@ const increment = numericValue / (duration / 16), // 60fps
         {/* Bottom Achievement Section */}
         <motion.div
           initial={{ opacity: 0, y: 30 },
-  }
+  };
           animate={controls}
           variants={{
             visible: {
@@ -206,16 +205,16 @@ const increment = numericValue / (duration / 16), // 60fps
               },
   },
   },
-  }
+  };
           className="mt-16"
         >
           <div className="bg-gradient-to-r from-zion-cyan/20 to-zion-purple/20 border border-zion-cyan/30 rounded-3xl p-8 lg:p-12 text-center">
             <motion.div
               className="w-20 h-20 rounded-full bg-gradient-to-r from-zion-cyan to-zion-purple flex items-center justify-center mx-auto mb-6"
               whileHover={{ rotate: 360 },
-  }
+  };
               transition={{ duration: 0.6 },
-  }
+  };
             >
               <Award className="w-10 h-10 text-white" />
             </motion.div>
@@ -246,4 +245,3 @@ const increment = numericValue / (duration / 16), // 60fps
       </div>
     </section>
   )
-}

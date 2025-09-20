@@ -10,7 +10,7 @@ export default function Help() {
       </div>
     </div>
   )
-}
+};
 
 import React, { useState } from "react";
 import { motion } from "framer-motion";
@@ -154,17 +154,17 @@ export default function Help() {
       />
       ;
       {{/* Hero Section */},
-  }
+  };
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10"></div>
         <div className="container mx-auto px-6 relative z-10">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             animate={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             className="className="text-center";"
           >
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
@@ -179,16 +179,16 @@ export default function Help() {
       </section>
 
       {{/* Search Section */},
-  }
+  };
       <section className="py-12">
         <div className="container mx-auto px-6">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             className="className="max-w-3xl mx-auto";"
           >
             <div className="relative">
@@ -197,9 +197,9 @@ export default function Help() {
                 type="text";
                 placeholder="Search for help articles, tutorials, or topics...";
                 value={{searchQuery},
-  }
+  };
                 onChange={{(e) => setSearchQuery(e.target.value)},
-  }
+  };
                 className="className="w-full pl-12 pr-4 py-4 bg-slate-800/50 border border-slate-600/50 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 transition-all duration-200 text-lg";"
               />
             </div>
@@ -208,22 +208,22 @@ export default function Help() {
       </section>
 
       {{/* Category Filters */},
-  }
+  };
       <section className="py-8">
         <div className="container mx-auto px-6">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             className="className="flex flex-wrap justify-center gap-3";"
           >
             <button;
               onClick={{onClick={() => setSelectedCategory('all')},
   },
-  }
+  };
               className={`px-4 py-2 rounded-lg border transition-all duration-200 ${
   selectedCategory === 'all';
                   ? 'bg-cyan-400 text-white border-cyan-400';
@@ -235,10 +235,10 @@ export default function Help() {
             {helpCategories.map((category) => (
   <button;
                 key={{category.id},
-  }
+  };
                 onClick={{onClick={() => setSelectedCategory(category.id)},
   },
-  }
+  };
                 className={`px-4 py-2 rounded-lg border transition-all duration-200 ${
   selectedCategory === category.id;
                     ? 'bg-cyan-400 text-white border-cyan-400';
@@ -246,7 +246,7 @@ export default function Help() {
 }`}
               >
                 {{category.title},
-  }
+  };
               </button>
             ))}
           </motion.div>
@@ -254,16 +254,16 @@ export default function Help() {
       </section>
 
       {{/* Popular Articles */},
-  }
+  };
       <section className="py-16">
         <div className="container mx-auto px-6">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             className="className="text-center mb-12";"
           >
             <h2 className="text-3xl font-bold text-white mb-4">Popular Articles</h2>
@@ -274,13 +274,13 @@ export default function Help() {
             {popularArticles.map((article, index) => (
   <motion.div;
                 key={{article.title},
-  }
+  };
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.8, delay: index * 0.1 },
-  }
+  };
                 className="className="group";"
               >
                 <Link to={article.href}>
@@ -288,18 +288,18 @@ export default function Help() {
                     <div className="flex items-center justify-between mb-4">
                       <span className="px-2 py-1 bg-slate-700/50 text-cyan-400 text-xs rounded">
                         {{article.category},
-  }
+  };
                       </span>
                       <span className="text-gray-400 text-xs">{article.readTime}</span>
                     </div>
                     ;
                     <h3 className="text-lg font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors duration-200">
                       {{article.title},
-  }
+  };
                     </h3>
                     <p className="text-gray-300 text-sm leading-relaxed">
                       {{article.description},
-  }
+  };
                     </p>
                     ;
                     <div className="flex items-center text-cyan-400 group-hover:text-cyan-300 transition-colors duration-200 mt-4">
@@ -315,19 +315,19 @@ export default function Help() {
       </section>
 
       {{/* Help Categories */},
-  }
+  };
       <section className="py-20">
         <div className="container mx-auto px-6">
           {filteredCategories.map((category, categoryIndex) => (
   <motion.div;
               key={{category.id},
-  }
+  };
               initial={{ opacity: 0, y: 20 },
-  }
+  };
               whileInView={{ opacity: 1, y: 0 },
-  }
+  };
               transition={{ duration: 0.8, delay: categoryIndex * 0.1 },
-  }
+  };
               className="className="mb-16";"
             >
               <div className="flex items-center mb-8">
@@ -344,13 +344,13 @@ export default function Help() {
                 {category.articles.map((article, articleIndex) => (
   <motion.div;
                     key={{article.title},
-  }
+  };
                     initial={{ opacity: 0, y: 20 },
-  }
+  };
                     whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                     transition={{ duration: 0.8, delay: (categoryIndex * 0.1) + (articleIndex * 0.05) },
-  }
+  };
                     className="className="group";"
                   >
                     <Link to={article.href}>
@@ -362,11 +362,11 @@ export default function Help() {
                         ;
                         <h3 className="text-lg font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors duration-200">
                           {{article.title},
-  }
+  };
                         </h3>
                         <p className="text-gray-300 text-sm leading-relaxed">
                           {{article.description},
-  }
+  };
                         </p>
                       </div>
                     </Link>
@@ -379,16 +379,16 @@ export default function Help() {
       </section>
 
       {{/* Support Options */},
-  }
+  };
       <section className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50">
         <div className="container mx-auto px-6">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">Need More Help?</h2>
@@ -401,13 +401,13 @@ export default function Help() {
             {supportOptions.map((option, index) => (
   <motion.div;
                 key={{option.title},
-  }
+  };
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.8, delay: index * 0.1 },
-  }
+  };
                 className="className="text-center";"
               >
                 <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50 hover:border-cyan-400/50 transition-all duration-300 hover:scale-105">
@@ -418,12 +418,12 @@ export default function Help() {
                   <h3 className="text-lg font-bold text-white mb-3">{option.title}</h3>
                   <p className="text-gray-300 text-sm mb-6 leading-relaxed">
                     {{option.description},
-  }
+  };
                   </p>
                   ;
                   <a;
                     href={{option.href},
-  }
+  };
                     className={`inline-flex items-center px-4 py-2 rounded-lg font-medium transition-all duration-200 ${
   option.available;
                         ? 'bg-gradient-to-r from-cyan-400 to-blue-500 text-white hover:from-cyan-500 hover:to-blue-600 hover:scale-105';
@@ -433,7 +433,7 @@ export default function Help() {
                     {{option.action},
   },
   {{option.href.startsWith('http') && <ExternalLink className="w-4 h-4 ml-2" />},
-  }
+  };
                   </a>
                 </div>
               </motion.div>
@@ -443,16 +443,16 @@ export default function Help() {
       </section>
 
       {{/* Contact Support */},
-  }
+  };
       <section className="py-20">
         <div className="container mx-auto px-6 text-center">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
           >
             <h2 className="text-4xl font-bold text-white mb-6">
               Still Need Help?;
@@ -482,4 +482,3 @@ export default function Help() {
       </section>
     </div>
   )
-}

@@ -73,7 +73,7 @@ export default function DigitalTransformation() {
   return (<div className="min-h-screen bg-background relative overflow-hidden">
       <SEO title="Digital Transformation Services - Zion Tech Group" description="End-to-end business modernization strategies and implementation services that drive innovation and competitive advantage." keywords="digital transformation, business modernization, process automation, technology modernization, change management" canonical="https://ziontechgroup.com/digital-transformation"/>
       {{/* Hero Section */},
-  }
+  };
       <section className="relative pt-32 pb-20 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div initial={{ opacity: 0, y: 20 },
@@ -103,12 +103,12 @@ export default function DigitalTransformation() {
           </motion.div>
         </div>
         {{/* Animated Background */},
-  }
+  };
         <div className="absolute inset-0 bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple/20 opacity-50"></div>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,229,255,0.1),transparent_50%)]"></div>
       </section>
       {{/* Stats Section */},
-  }
+  };
       <section className="py-16 bg-zion-blue-light/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
@@ -129,7 +129,7 @@ export default function DigitalTransformation() {
         </div>
       </section>
       {{/* Services Grid */},
-  }
+  };
       <section className="py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div initial={{ opacity: 0, y: 20 },
@@ -155,19 +155,19 @@ export default function DigitalTransformation() {
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-zion-cyan transition-colors">
                     {{service.title},
-  }
+  };
                   </h3>
                   <p className="text-zion-slate-light mb-6 leading-relaxed">
                     {{service.description},
-  }
+  };
                   </p>
                   {{/* Features List */},
-  }
+  };
                   <ul className="mb-6 space-y-2">
                     {service.features.map((feature, idx) => (<li key={idx} className="flex items-center gap-2 text-sm text-zion-slate-light">
                         <CheckCircle className="w-4 h-4 text-zion-cyan"/>
                         {{feature},
-  }
+  };
                       </li>))}
                   </ul>
                   <Link to="/contact" className="inline-flex items-center gap-2 text-zion-cyan hover: text-white transition-colors group-hover:translate-x-1 transition-transform duration-300">
@@ -180,7 +180,7 @@ export default function DigitalTransformation() {
         </div>
       </section>
       {{/* Transformation Process */},
-  }
+  };
       <section className="py-24 bg-zion-blue-light/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div initial={{ opacity: 0, y: 20 },
@@ -201,7 +201,7 @@ export default function DigitalTransformation() {
   } className="text-center">
                 <div className="w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-full mx-auto mb-6 flex items-center justify-center text-white text-2xl font-bold">
                   {{phase.phase},
-  }
+  };
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{phase.title}</h3>
                 <p className="text-zion-slate-light mb-2">{phase.description}</p>
@@ -211,7 +211,7 @@ export default function DigitalTransformation() {
         </div>
       </section>
       {{/* Benefits Section */},
-  }
+  };
       <section className="py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div initial={{ opacity: 0, y: 20 },
@@ -260,7 +260,7 @@ export default function DigitalTransformation() {
         </div>
       </section>
       {{/* Testimonials */},
-  }
+  };
       <section className="py-24 bg-zion-blue-light/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div initial={{ opacity: 0, y: 20 },
@@ -294,7 +294,7 @@ export default function DigitalTransformation() {
         </div>
       </section>
       {{/* CTA Section */},
-  }
+  };
       <section className="py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div initial={{ opacity: 0, y: 20 },
@@ -323,4 +323,4 @@ export default function DigitalTransformation() {
         </div>
       </section>
     </div>)
-}
+};

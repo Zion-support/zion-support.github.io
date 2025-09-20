@@ -118,16 +118,16 @@ const QuantumComputingElite: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       {{/* Hero Section */},
-  }
+  };
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             animate={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
           >
             <div className="flex justify-center mb-6">
               <div className="p-4 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full">
@@ -162,18 +162,18 @@ const QuantumComputingElite: React.FC = () => {
       </section>
 
       {{/* Features Section */},
-  }
+  };
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             viewport={{ once: true },
-  }
+  };
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
@@ -189,15 +189,15 @@ const QuantumComputingElite: React.FC = () => {
             {features.map((feature, index) => (
   <motion.div;
                 key={{index},
-  }
+  };
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.8, delay: index * 0.1 },
-  }
+  };
                 viewport={{ once: true },
-  }
+  };
                 className="className="bg-zion-slate p-8 rounded-xl border border-zion-slate-light hover:border-blue-500 transition-all duration-300";"
               >
                 <div className="p-3 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg w-fit mb-6">
@@ -212,18 +212,18 @@ const QuantumComputingElite: React.FC = () => {
       </section>
 
       {{/* Quantum Applications Section */},
-  }
+  };
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-zion-slate">
         <div className="max-w-7xl mx-auto">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             viewport={{ once: true },
-  }
+  };
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
@@ -239,15 +239,15 @@ const QuantumComputingElite: React.FC = () => {
             {quantumApplications.map((app, index) => (
   <motion.div;
                 key={{index},
-  }
+  };
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.8, delay: index * 0.1 },
-  }
+  };
                 viewport={{ once: true },
-  }
+  };
                 className="className="bg-zion-slate-dark p-8 rounded-xl border border-zion-slate-light";"
               >
                 <h3 className="text-xl font-semibold text-white mb-4">{app.title}</h3>
@@ -259,18 +259,18 @@ const QuantumComputingElite: React.FC = () => {
       </section>
 
       {{/* Quantum Technologies Section */},
-  }
+  };
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             viewport={{ once: true },
-  }
+  };
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
@@ -286,15 +286,15 @@ const QuantumComputingElite: React.FC = () => {
             {quantumTechnologies.map((tech, index) => (
   <motion.div;
                 key={{index},
-  }
+  };
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.8, delay: index * 0.1 },
-  }
+  };
                 viewport={{ once: true },
-  }
+  };
                 className="className="bg-zion-slate p-6 rounded-xl border border-zion-slate-light text-center";"
               >
                 <div className="p-3 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg w-fit mx-auto mb-4">
@@ -308,18 +308,18 @@ const QuantumComputingElite: React.FC = () => {
       </section>
 
       {{/* Pricing Section */},
-  }
+  };
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-zion-slate">
         <div className="max-w-7xl mx-auto">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             viewport={{ once: true },
-  }
+  };
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
@@ -335,15 +335,15 @@ const QuantumComputingElite: React.FC = () => {
             {pricing.map((plan, index) => (
   <motion.div;
                 key={{index},
-  }
+  };
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.8, delay: index * 0.1 },
-  }
+  };
                 viewport={{ once: true },
-  }
+  };
                 className={`relative bg-zion-slate-dark p-8 rounded-xl border-2 ${
   plan.popular ;
                     ? 'border-blue-500 shadow-2xl shadow-blue-500/25' ;
@@ -389,18 +389,18 @@ const QuantumComputingElite: React.FC = () => {
       </section>
 
       {{/* Contact Section */},
-  }
+  };
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             viewport={{ once: true },
-  }
+  };
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
@@ -464,7 +464,7 @@ const QuantumComputingElite: React.FC = () => {
       </section>
 
       {{/* Footer */},
-  }
+  };
       <footer className="py-12 px-4 sm: px-6 lg:px-8 border-t border-zion-slate-light">
         <div className="max-w-7xl mx-auto text-center">
           <p className="text-zion-slate-light mb-4">
@@ -495,5 +495,5 @@ const QuantumComputingElite: React.FC = () => {
       </footer>
     </div>
   )
-}
+};
 export default QuantumComputingElite;

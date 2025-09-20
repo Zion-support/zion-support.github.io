@@ -88,7 +88,7 @@ const securityTechnologies = [
   const getCategoryIcon = (category: string) => {
   const categoryData = SECURITY_SERVICE_CATEGORIES.find(cat => cat.id === category)
     return categoryData?.icon || Shield
-}
+};
   const getPricingModelLabel = (model: string) => {
   switch (model) {
   case 'one-time': return 'One-time';
@@ -97,7 +97,7 @@ const securityTechnologies = [
       case 'project-based': return 'Project-based';
       default: return model
 },
-  }
+  };
   return (
     <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-black">
       <SEOHead;
@@ -105,7 +105,7 @@ const securityTechnologies = [
         description="Comprehensive cybersecurity solutions including zero trust security, threat detection, and compliance services to protect your business.";
         keywords={{['cybersecuritysecurity services', 'threat detectioncompliance', 'zero trust'],
   },
-  }
+  };
         structuredData={{
   "@context": "https: //schema.org";
           "@type": "Service";
@@ -117,13 +117,13 @@ const securityTechnologies = [
             "name": "Zion Tech Group"
 },
   },
-  }
+  };
       />
         {{/* Hero Section */},
-  }
+  };
         <section className="py-32 px-4 relative overflow-hidden">
           {{/* Background Elements */},
-  }
+  };
           <div className="absolute inset-0">
             <div className="absolute top-20 left-10 w-32 h-32 bg-red-500/10 rounded-full blur-xl animate-pulse" />
             <div className="absolute top-40 right-20 w-24 h-24 bg-orange-500/10 rounded-full blur-xl animate-pulse" style={{ animationDelay: '2s' },
@@ -161,7 +161,7 @@ const securityTechnologies = [
           </div>
         </section>
         {{/* Security Service Categories */},
-  }
+  };
         <section className="py-16 bg-zion-blue-dark">
           <div className="container mx-auto px-4 md: px-6">
             <div className="text-center mb-12">
@@ -194,7 +194,7 @@ const securityTechnologies = [
           </div>
         </section>
         {{/* Security Services Showcase */},
-  }
+  };
         <section className="py-16 bg-zion-blue">
           <div className="container mx-auto px-4 md:px-6">
             <div className="text-center mb-12">
@@ -209,7 +209,7 @@ const securityTechnologies = [
                 {SECURITY_SERVICE_CATEGORIES.map((category) => (
   <TabsTrigger key={category.id} value={category.id}>
                     {{category.name},
-  }
+  };
                   </TabsTrigger>
                 ))}
               </TabsList>
@@ -233,7 +233,7 @@ const securityTechnologies = [
           </div>
         </section>
         {{/* Security Benefits Section */},
-  }
+  };
         <section className="py-16 bg-background">
           <div className="container mx-auto px-4 md:px-6">
             <div className="text-center mb-12">
@@ -283,7 +283,7 @@ const securityTechnologies = [
           </div>
         </section>
         {{/* Security Implementation Process */},
-  }
+  };
         <section className="py-16 bg-muted/50">
           <div className="container mx-auto px-4 md:px-6">
             <div className="text-center mb-12">
@@ -333,7 +333,7 @@ const securityTechnologies = [
           </div>
         </section>
         {{/* Compliance & Standards */},
-  }
+  };
         <section className="py-16 bg-background">
           <div className="container mx-auto px-4 md:px-6">
             <div className="text-center mb-12">
@@ -364,11 +364,11 @@ const securityTechnologies = [
                     </div>
                     <CardTitle className="text-xl text-white">
                       {{service.title},
-  }
+  };
                     </CardTitle>
                     <CardDescription className="text-gray-400">
                       {{service.description},
-  }
+  };
                     </CardDescription>
                   </CardHeader>
                   <CardContent>
@@ -377,13 +377,13 @@ const securityTechnologies = [
   <li key={featureIndex} className="flex items-center text-gray-300 text-sm">
                           <CheckCircle className="h-4 w-4 text-green-400 mr-2 flex-shrink-0" />
                           {{feature},
-  }
+  };
                         </li>
                       ))}
                     </ul>
                     <div className="text-2xl font-bold text-red-400 mb-4">
                       {{service.price},
-  }
+  };
                     </div>
                     <Button className="w-full bg-gradient-to-r from-red-500 to-orange-500 hover:from-red-600 hover:to-orange-600">
                       Get Started;
@@ -395,7 +395,7 @@ const securityTechnologies = [
           </div>
         </section>
         {{/* Contact CTA */},
-  }
+  };
         <section className="py-16 bg-zion-blue">
           <div className="container mx-auto px-4 md:px-6 text-center">
             <h2 className="text-3xl font-bold text-white mb-4">
@@ -422,7 +422,7 @@ const securityTechnologies = [
           </div>
         </section>
       {{/* Hero Section */},
-  }
+  };
       <div className="bg-gradient-to-r from-red-600 via-red-700 to-red-800 text-white">
         <div className="container mx-auto px-4 py-20">
           <div className="text-center max-w-4xl mx-auto">
@@ -452,7 +452,7 @@ const securityTechnologies = [
         </div>
       </div>
       {{/* Contact Information Banner */},
-  }
+  };
       <div className="bg-white border-b border-gray-200">
         <div className="container mx-auto px-4 py-6">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
@@ -485,7 +485,7 @@ const securityTechnologies = [
         </div>
       </div>
       {{/* Security Threats Overview */},
-  }
+  };
       <div className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -529,7 +529,7 @@ const securityTechnologies = [
         </div>
       </div>
       {{/* Cybersecurity Services Grid */},
-  }
+  };
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -547,9 +547,9 @@ const securityTechnologies = [
                   <img;
                     src={{service.images[0],
   },
-  }
+  };
                     alt={{service.title},
-  }
+  };
                     className="className="w-full h-64 object-cover rounded-t-lg";"
                   />
                   {service.featured && (
@@ -562,7 +562,7 @@ const securityTechnologies = [
                   <div className="flex items-start justify-between mb-2">
                     <Badge className="bg-red-100 text-red-800 border-red-200">
                       {{service.category},
-  }
+  };
                     </Badge>
                     <div className="flex items-center gap-1 text-sm text-gray-600">
                       <Star className="h-4 w-4 fill-yellow-400 text-yellow-400" />
@@ -573,7 +573,7 @@ const securityTechnologies = [
                   <CardTitle className="text-xl leading-tight">{service.title}</CardTitle>
                   <CardDescription className="text-base leading-relaxed">
                     {{service.description},
-  }
+  };
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
@@ -581,7 +581,7 @@ const securityTechnologies = [
                     <div className="text-3xl font-bold text-red-600">
                       {service.currency},
   {{service.price?.toLocaleString()},
-  }
+  };
                     </div>
                     <div className="flex items-center gap-2 text-sm text-gray-600">
                       <Clock className="h-4 w-4" />
@@ -592,7 +592,7 @@ const securityTechnologies = [
                     {service.tags.map((tag) => (
   <Badge key={tag} variant="secondary" className="text-xs">
                         {{tag},
-  }
+  };
                       </Badge>
                     ))}
                   </div>
@@ -628,7 +628,7 @@ const securityTechnologies = [
         </div>
       </section>
       {{/* Security Statistics */},
-  }
+  };
       <section className="py-16 bg-zion-blue">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
@@ -662,7 +662,7 @@ const securityTechnologies = [
         </div>
       </section>
       {{/* Security Services Grid */},
-  }
+  };
       <section className="py-20 bg-zion-blue-dark">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -681,7 +681,7 @@ const securityTechnologies = [
                   <div className="p-3 bg-gradient-to-br from-zion-purple to-zion-purple-dark rounded-lg mr-4">
                     <div className="text-white">
                       {{service.icon},
-  }
+  };
                     </div>
                   </div>
                   <div>
@@ -697,7 +697,7 @@ const securityTechnologies = [
   <li key={index} className="text-zion-slate-light text-sm flex items-center">
                         <CheckCircle className="w-4 h-4 text-zion-cyan mr-2 flex-shrink-0" />
                         {{feature},
-  }
+  };
                       </li>
                     ))}
                   </ul>
@@ -726,7 +726,7 @@ const securityTechnologies = [
         </div>
       </section>
       {{/* Security Technologies */},
-  }
+  };
       <section className="py-20 bg-zion-blue">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -751,7 +751,7 @@ const securityTechnologies = [
         </div>
       </section>
       {{/* Compliance Standards */},
-  }
+  };
       <section className="py-20 bg-zion-blue-dark">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -776,7 +776,7 @@ const securityTechnologies = [
         </div>
       </section>
       {{/* Threat Intelligence */},
-  }
+  };
       <section className="py-20 bg-zion-blue">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -801,7 +801,7 @@ const securityTechnologies = [
         </div>
       </section>
       {{/* Why Choose ZionTech for Security */},
-  }
+  };
       <section className="py-20 bg-zion-blue-dark">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -848,7 +848,7 @@ const securityTechnologies = [
         </div>
       </section>
       {{/* Security Pricing */},
-  }
+  };
       <section className="py-20 bg-zion-blue">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -921,7 +921,7 @@ const securityTechnologies = [
         </div>
       </section>
       {{/* Contact Information */},
-  }
+  };
       <section className="py-20 bg-zion-blue-dark">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -978,7 +978,7 @@ const securityTechnologies = [
       <TrustedBySection />
       <QuoteFormSection />
       {{/* Security Framework */},
-  }
+  };
       <div className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -1022,7 +1022,7 @@ const securityTechnologies = [
         </div>
       </div>
       {{/* Security Process */},
-  }
+  };
       <div className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -1066,7 +1066,7 @@ const securityTechnologies = [
         </div>
       </div>
       {{/* Security Tools & Technologies */},
-  }
+  };
       <div className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -1226,7 +1226,7 @@ const securityTechnologies = [
         </div>
       </div>
       {{/* Call to Action */},
-  }
+  };
       <div className="py-16 bg-gradient-to-r from-red-600 to-red-800 text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
@@ -1252,7 +1252,7 @@ const securityTechnologies = [
         </div>
       </div>
       {{/* Footer Contact */},
-  }
+  };
       <div className="bg-gray-900 text-white py-12">
         <div className="container mx-auto px-4">
           <div className="grid md: grid-cols-2 gap-8">
@@ -1294,4 +1294,3 @@ const securityTechnologies = [
       <TrustedBySection />
     </div>
   )
-}

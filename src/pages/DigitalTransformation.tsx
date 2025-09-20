@@ -123,7 +123,7 @@ const DigitalTransformation = () => {
   return (
     <div className="min-h-screen bg-futuristic">
       {{/* Hero Section */},
-  }
+  };
       <section className="relative py-32 bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-blue overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-20 left-20 w-64 h-64 border border-zion-cyan rounded-full animate-pulse"></div>
@@ -139,7 +139,7 @@ const DigitalTransformation = () => {
 
           <h1 className="text-6xl md:text-7xl font-bold text-white mb-8 leading-tight">
             Digital{{' '},
-  }
+  };
             <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
               Transformation;
             </span>
@@ -161,20 +161,20 @@ const DigitalTransformation = () => {
       </section>
 
       {{/* Stats Section */},
-  }
+  };
       <section className="py-16 bg-zion-slate-dark">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
             {stats.map((stat, index) => (
   <motion.div;
                 key={{index},
-  }
+  };
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 animate={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.5, delay: index * 0.1 },
-  }
+  };
                 className="className="text-center";"
               >
                 <div className="text-4xl md:text-5xl font-bold text-zion-cyan mb-2">{stat.number}</div>
@@ -186,7 +186,7 @@ const DigitalTransformation = () => {
       </section>
 
       {{/* Services Section */},
-  }
+  };
       <section className="py-20 bg-zion-blue-dark">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -203,13 +203,13 @@ const DigitalTransformation = () => {
             {transformationServices.map((service, index) => (
   <motion.div;
                 key={{index},
-  }
+  };
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 animate={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.5, delay: index * 0.1 },
-  }
+  };
                 className="className="bg-zion-slate-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300";"
               >
                 <div className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-2xl flex items-center justify-center mx-auto mb-6`}>
@@ -234,7 +234,7 @@ const DigitalTransformation = () => {
       </section>
 
       {{/* Transformation Process */},
-  }
+  };
       <section className="py-20 bg-zion-slate-dark">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -252,26 +252,26 @@ const DigitalTransformation = () => {
               {transformationPhases.map((phase, index) => (
   <motion.div;
                   key={{index},
-  }
+  };
                   initial={{ opacity: 0, y: 20 },
-  }
+  };
                   animate={{ opacity: 1, y: 0 },
-  }
+  };
                   transition={{ duration: 0.5, delay: index * 0.1 },
-  }
+  };
                   className={`relative bg-zion-blue-dark/50 backdrop-blur-sm border rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300 cursor-pointer ${
   selectedPhase === index ? 'border-zion-cyan' : 'border-zion-cyan/20'
 }`}
                   onClick={{onClick={() => setSelectedPhase(index)},
   },
-  }
+  };
                 >
                   {{/* Phase Number */},
-  }
+  };
                   <div className="absolute -top-4 left-6">
                     <div className="w-8 h-8 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full flex items-center justify-center text-white font-bold text-sm">
                       {{phase.phase},
-  }
+  };
                     </div>
                   </div>
 
@@ -282,7 +282,7 @@ const DigitalTransformation = () => {
                     <div className="flex items-center gap-2 text-zion-cyan text-sm mb-4">
                       <Clock className="w-4 h-4" />
                       {{phase.duration},
-  }
+  };
                     </div>
 
                     {{/* Activities */},
@@ -290,11 +290,11 @@ const DigitalTransformation = () => {
   {selectedPhase === index && (
   <motion.div;
                         initial={{ opacity: 0, height: 0 },
-  }
+  };
                         animate={{ opacity: 1, height: 'auto' },
-  }
+  };
                         transition={{ duration: 0.3 },
-  }
+  };
                         className="className="space-y-2";"
                       >
                         <div className="text-sm font-medium text-zion-slate-light mb-2">Key Activities:</div>
@@ -302,7 +302,7 @@ const DigitalTransformation = () => {
   <div key={activityIndex} className="flex items-center gap-2 text-zion-slate-light text-xs">
                             <Check className="w-3 h-3 text-zion-cyan" />
                             {{activity},
-  }
+  };
                           </div>
                         ))}
                       </motion.div>
@@ -316,7 +316,7 @@ const DigitalTransformation = () => {
       </section>
 
       {{/* Testimonials */},
-  }
+  };
       <section className="py-20 bg-zion-blue-dark">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -332,13 +332,13 @@ const DigitalTransformation = () => {
             {testimonials.map((testimonial, index) => (
   <motion.div;
                 key={{index},
-  }
+  };
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 animate={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.5, delay: index * 0.1 },
-  }
+  };
                 className="className="bg-zion-slate-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300";"
               >
                 <div className="flex items-center gap-1 mb-4">
@@ -360,7 +360,7 @@ const DigitalTransformation = () => {
       </section>
 
       {{/* CTA Section */},
-  }
+  };
       <section className="py-20 bg-gradient-to-r from-zion-slate-dark to-zion-blue-dark">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
@@ -383,5 +383,5 @@ const DigitalTransformation = () => {
       </section>
     </div>
   )
-}
+};
 export default DigitalTransformation;

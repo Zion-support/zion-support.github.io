@@ -11,7 +11,7 @@ const rootElement = document.getElementById('root')
 if (if (!rootElement) {
   ) {
     throw new Error('Root element not found')
-}
+};
 const root = createRoot(rootElement)
 root.render(_jsx(React.StrictMode, { children: _jsx(BrowserRouter, { children: _jsx(App, {}) }) }))
 >>>>>>> origin/zion-enhancements-v6;

@@ -77,11 +77,11 @@ const team = [
         <div className="container mx-auto px-6 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             animate={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             className="text-center"
           >
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
@@ -101,11 +101,11 @@ const team = [
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <motion.div
               initial={{ opacity: 0, x: -20 },
-  }
+  };
               whileInView={{ opacity: 1, x: 0 },
-  }
+  };
               transition={{ duration: 0.8 },
-  }
+  };
             >
               <div className="flex items-center mb-6">
                 <Target className="w-8 h-8 text-cyan-400 mr-3" />
@@ -124,11 +124,11 @@ const team = [
 
             <motion.div
               initial={{ opacity: 0, x: 20 },
-  }
+  };
               whileInView={{ opacity: 1, x: 0 },
-  }
+  };
               transition={{ duration: 0.8 },
-  }
+  };
               className="relative"
             >
               <div className="bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-2xl p-8 border border-cyan-400/20">
@@ -165,11 +165,11 @@ const team = [
         <div className="container mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">Our Impact in Numbers</h2>
@@ -181,11 +181,11 @@ const team = [
               <motion.div
                 key={stat.label}
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.8, delay: index * 0.1 },
-  }
+  };
                 className="text-center"
               >
                 <div className="bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-xl p-6 border border-cyan-400/20">
@@ -204,11 +204,11 @@ const team = [
         <div className="container mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">Our Core Values</h2>
@@ -220,11 +220,11 @@ const team = [
               <motion.div
                 key={value.title}
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.8, delay: index * 0.1 },
-  }
+  };
                 className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50 hover:border-cyan-400/50 transition-all duration-300 hover:scale-105"
               >
                 <value.icon className="w-12 h-12 text-cyan-400 mb-4" />
@@ -241,11 +241,11 @@ const team = [
         <div className="container mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">Meet Our Team</h2>
@@ -257,11 +257,11 @@ const team = [
               <motion.div
                 key={member.name}
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.8, delay: index * 0.1 },
-  }
+  };
                 className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50 text-center hover:border-cyan-400/50 transition-all duration-300 hover:scale-105"
               >
                 <div className="w-24 h-24 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-full mx-auto mb-4 flex items-center justify-center">
@@ -283,11 +283,11 @@ const team = [
         <div className="container mx-auto px-6 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
           >
             <h2 className="text-4xl font-bold text-white mb-6">
               Ready to Transform Your Business?

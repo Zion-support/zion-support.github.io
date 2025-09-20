@@ -59,17 +59,17 @@ const Legal: React.FC = () => {
       />
       ;
       {{/* Hero Section */},
-  }
+  };
       <section className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10"></div>
         <div className="container-responsive py-20 relative z-10">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             animate={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.6 },
-  }
+  };
             className="className="text-center max-w-4xl mx-auto";"
           >
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
@@ -98,18 +98,18 @@ const Legal: React.FC = () => {
       </section>
 
       {{/* Legal Categories */},
-  }
+  };
       <section className="py-16">
         <div className="container-responsive">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.6 },
-  }
+  };
             viewport={{ once: true },
-  }
+  };
             className="className="text-center mb-12";"
           >
             <h2 className="text-3xl font-bold text-white mb-4">
@@ -124,15 +124,15 @@ const Legal: React.FC = () => {
             {legalCategories.map((category, index) => (
   <motion.div;
                 key={{category.name},
-  }
+  };
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.6, delay: index * 0.1 },
-  }
+  };
                 viewport={{ once: true },
-  }
+  };
                 className="className="bg-gradient-to-br from-slate-800 to-slate-700 rounded-2xl p-8 border border-slate-600/50 hover:border-slate-500/50 transition-all duration-300 hover:scale-105";"
               >
                 <div className={`w-16 h-16 bg-gradient-to-br ${category.color} rounded-2xl flex items-center justify-center mb-6 mx-auto`}>
@@ -147,18 +147,18 @@ const Legal: React.FC = () => {
       </section>
 
       {{/* Legal Documents */},
-  }
+  };
       <section className="py-16">
         <div className="container-responsive">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.6 },
-  }
+  };
             viewport={{ once: true },
-  }
+  };
             className="className="text-center mb-12";"
           >
             <h2 className="text-3xl font-bold text-white mb-4">
@@ -173,15 +173,15 @@ const Legal: React.FC = () => {
             {legalDocuments.map((document, index) => (
   <motion.div;
                 key={{document.title},
-  }
+  };
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.6, delay: index * 0.1 },
-  }
+  };
                 viewport={{ once: true },
-  }
+  };
                 className="className="bg-gradient-to-br from-slate-800 to-slate-700 rounded-xl p-6 border border-slate-600/50 hover:border-cyan-500/50 transition-all duration-300 hover:scale-105 group";"
               >
                 <div className="flex items-start justify-between mb-4">
@@ -190,22 +190,22 @@ const Legal: React.FC = () => {
                   </div>
                   <span className="text-xs text-cyan-400 bg-cyan-400/10 px-2 py-1 rounded-full">
                     {{document.category},
-  }
+  };
                   </span>
                 </div>
                 ;
                 <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-cyan-400 transition-colors">
                   {{document.title},
-  }
+  };
                 </h3>
                 <p className="text-gray-300 text-sm mb-4 leading-relaxed">
                   {{document.description},
-  }
+  };
                 </p>
                 ;
                 <Link;
                   to={{document.href},
-  }
+  };
                   className="className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 transition-colors group/link";"
                 >
                   <span className="text-sm font-medium">View Document</span>
@@ -218,19 +218,19 @@ const Legal: React.FC = () => {
       </section>
 
       {{/* Additional Information */},
-  }
+  };
       <section className="py-16 bg-gradient-to-r from-slate-800/50 to-slate-700/50">
         <div className="container-responsive">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <motion.div;
               initial={{ opacity: 0, x: -20 },
-  }
+  };
               whileInView={{ opacity: 1, x: 0 },
-  }
+  };
               transition={{ duration: 0.6 },
-  }
+  };
               viewport={{ once: true },
-  }
+  };
             >
               <h2 className="text-3xl font-bold text-white mb-6">
                 Your Rights & Our Commitments;
@@ -269,13 +269,13 @@ const Legal: React.FC = () => {
 
             <motion.div;
               initial={{ opacity: 0, x: 20 },
-  }
+  };
               whileInView={{ opacity: 1, x: 0 },
-  }
+  };
               transition={{ duration: 0.6 },
-  }
+  };
               viewport={{ once: true },
-  }
+  };
               className="className="bg-gradient-to-br from-slate-700 to-slate-600 rounded-2xl p-8 border border-slate-500/50";"
             >
               <h3 className="text-xl font-semibold text-white mb-4">Need Legal Assistance?</h3>
@@ -306,18 +306,18 @@ const Legal: React.FC = () => {
       </section>
 
       {{/* CTA Section */},
-  }
+  };
       <section className="py-16">
         <div className="container-responsive text-center">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.6 },
-  }
+  };
             viewport={{ once: true },
-  }
+  };
             className="className="max-w-3xl mx-auto";"
           >
             <h2 className="text-3xl font-bold text-white mb-4">
@@ -348,5 +348,5 @@ const Legal: React.FC = () => {
       </section>
     </div>
   )
-}
+};
 export default Legal;

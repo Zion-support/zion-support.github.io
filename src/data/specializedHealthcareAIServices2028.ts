@@ -1,15 +1,15 @@
 export interface HealthcareAIService2028 {
   id: string,title: string,description: string,category: string,subcategory: string,price: number,currency: string,pricingModel: string,features: string[],benefits: string[],useCases: string[],targetAudience: string[],tags: string[],estimatedDelivery: string,supportLevel: string,marketPrice: string,roi: string,innovationLevel: string,contactInfo: {
   phone: string,email: string,website: string
-}
+};
   technicalSpecs?: {
   technology: string[],integrations: string[],apiEndpoints: number,uptime: string,security: string[[],
   ],
-  }
+  };
   competitors?: string[]
   marketSize?: string;
   regulatoryCompliance?: string[],
-  }
+  };
 
 export const SPECIALIZED_HEALTHCARE_AI_SERVICES_2028: HealthcareAIService2028[] = [
   // AI-Powered Medical Imaging Analysis;
@@ -52,17 +52,16 @@ export const SPECIALIZED_HEALTHCARE_AI_SERVICES_2028: HealthcareAIService2028[] 
     estimatedDelivery: "16-20 weeks",supportLevel: "enterprise",marketPrice: "$12,999 - $35,999/month";
     roi: "400-700%",innovationLevel: "Revolutionary",contactInfo: {
   phone: "+1 302 464 0950",email: "kleber@ziontechgroup.com",website: "https://ziontechgroup.com"
-}
     technicalSpecs: {
   technology: ["Python", "TensorFlow", "PyTorch", "OpenCV", "DICOM", "Kubernetes"]
       integrations: ["PACS", "EMR systems", "RIS", "Hospital information systems"]
       apiEndpoints: 500,uptime: "99.99%",security: [["HIPAA", "SOC 2", "GDPR", "End-to-end encryption", "Audit trails"],
   ],
-  }
+  };
     competitors: ["IBM Watson Health", "Google Health", "Microsoft Healthcare", "NVIDIA Clara"]
     marketSize: "$45.8 billion by 2028",regulatoryCompliance: [["FDA", "CE Mark", "HIPAA", "GDPR", "SOC 2"],
   ],
-  }
+  };
 
   // AI-Powered Drug Discovery Platform;
   {
@@ -104,17 +103,16 @@ export const SPECIALIZED_HEALTHCARE_AI_SERVICES_2028: HealthcareAIService2028[] 
     estimatedDelivery: "20-24 weeks",supportLevel: "enterprise",marketPrice: "$19,999 - $50,000/month";
     roi: "500-1000%",innovationLevel: "Revolutionary",contactInfo: {
   phone: "+1 302 464 0950",email: "kleber@ziontechgroup.com",website: "https://ziontechgroup.com"
-}
     technicalSpecs: {
   technology: ["Python", "TensorFlow", "PyTorch", "RDKit", "OpenMM", "Docker"]
       integrations: ["Lab information systems", "Chemical databases", "Clinical trial platforms"]
       apiEndpoints: 300,uptime: "99.9%",security: [["SOC 2", "GDPR", "Data encryption", "Access controls"],
   ],
-  }
+  };
     competitors: ["Insilico Medicine", "Atomwise", "BenevolentAI", "Exscientia"]
     marketSize: "$67.3 billion by 2028",regulatoryCompliance: [["FDA", "EMA", "GMP", "GLP", "SOC 2"],
   ],
-  }
+  };
 
   // AI-Powered Patient Monitoring System;
   {
@@ -156,17 +154,16 @@ export const SPECIALIZED_HEALTHCARE_AI_SERVICES_2028: HealthcareAIService2028[] 
     estimatedDelivery: "12-16 weeks",supportLevel: "enterprise",marketPrice: "$8,999 - $22,999/month";
     roi: "300-500%",innovationLevel: "Advanced",contactInfo: {
   phone: "+1 302 464 0950",email: "kleber@ziontechgroup.com",website: "https://ziontechgroup.com"
-}
     technicalSpecs: {
   technology: ["Python", "TensorFlow", "IoT platforms", "React Native", "PostgreSQL"]
       integrations: ["Medical devices", "EMR systems", "Hospital information systems", "Wearable devices"]
       apiEndpoints: 400,uptime: "99.99%",security: [["HIPAA", "SOC 2", "End-to-end encryption", "Device authentication"],
   ],
-  }
+  };
     competitors: ["Philips Healthcare", "GE Healthcare", "Medtronic", "Siemens Healthineers"]
     marketSize: "$89.2 billion by 2028",regulatoryCompliance: [["FDA", "CE Mark", "HIPAA", "SOC 2", "ISO 13485"],
   ],
-  }
+  };
 
   // AI-Powered Clinical Decision Support;
   {
@@ -208,17 +205,16 @@ export const SPECIALIZED_HEALTHCARE_AI_SERVICES_2028: HealthcareAIService2028[] 
     estimatedDelivery: "18-22 weeks",supportLevel: "enterprise",marketPrice: "$15,999 - $40,000/month";
     roi: "350-600%",innovationLevel: "Advanced",contactInfo: {
   phone: "+1 302 464 0950",email: "kleber@ziontechgroup.com",website: "https://ziontechgroup.com"
-}
     technicalSpecs: {
   technology: ["Python", "TensorFlow", "Natural Language Processing", "Knowledge Graphs", "PostgreSQL"]
       integrations: ["EMR systems", "Clinical databases", "Medical literature", "Drug databases"]
       apiEndpoints: 250,uptime: "99.9%",security: [["HIPAA", "SOC 2", "Data encryption", "Access controls"],
   ],
-  }
+  };
     competitors: ["IBM Watson Health", "Epic Systems", "Cerner", "Allscripts"]
     marketSize: "$56.7 billion by 2028",regulatoryCompliance: [["FDA", "HIPAA", "SOC 2", "ISO 27001"],
   ],
-  }
+  };
 
   // AI-Powered Population Health Management;
   {
@@ -260,13 +256,12 @@ export const SPECIALIZED_HEALTHCARE_AI_SERVICES_2028: HealthcareAIService2028[] 
     estimatedDelivery: "14-18 weeks",supportLevel: "enterprise",marketPrice: "$11,999 - $30,000/month";
     roi: "300-500%",innovationLevel: "Advanced",contactInfo: {
   phone: "+1 302 464 0950",email: "kleber@ziontechgroup.com",website: "https://ziontechgroup.com"
-}
     technicalSpecs: {
   technology: ["Python", "TensorFlow", "PostgreSQL", "Redis", "Kubernetes", "Docker"]
       integrations: ["EMR systems", "Claims data", "Social determinants data", "Public health databases"]
       apiEndpoints: 200,uptime: "99.9%",security: [["HIPAA", "SOC 2", "Data encryption", "Privacy controls"],
   ],
-  }
+  };
     competitors: ["Optum", "Cerner", "Epic Systems", "Allscripts"]
     marketSize: "$78.9 billion by 2028",regulatoryCompliance: [["HIPAA", "SOC 2", "GDPR", "ISO 27001"],
   ],

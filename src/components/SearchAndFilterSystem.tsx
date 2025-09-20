@@ -23,18 +23,16 @@ interface SearchResult {
   date?: string,
   rating?: number,
   type: 'service' | 'article' | 'team' | 'technology'
-}
+};
 
 interface FilterOption {
   id: string,label: string,value: string,count: number
-}
 
 interface SearchAndFilterSystemProps {
   data: SearchResult[];
   onResultsChange?: (results: SearchResult[]) => void;
   placeholder?: string,
   showFilters?: boolean
-}
 
 export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
   data;
@@ -130,7 +128,6 @@ const [selectedCategory, setSelectedCategory] = useState<string>('all'),
       newFilters.delete(filterId)
     } else {
       newFilters.add(filterId)
-}
     setActiveFilters(newFilters)
 },
 
@@ -189,11 +186,11 @@ const [selectedCategory, setSelectedCategory] = useState<string>('all'),
           {isSearchFocused && searchQuery && (
             <motion.div
               initial={{ opacity: 0, y: -10 },
-  }
+  };
               animate={{ opacity: 1, y: 0 },
-  }
+  };
               exit={{ opacity: 0, y: -10 },
-  }
+  };
               className="absolute top-full left-0 right-0 mt-2 bg-zinc-900/95 backdrop-blur-md border border-zinc-700/50 rounded-xl shadow-2xl z-50 max-h-64 overflow-y-auto"
             >
               {filteredResults.slice(0, 5).map((result) => (
@@ -289,13 +286,13 @@ const [selectedCategory, setSelectedCategory] = useState<string>('all'),
         {showFilterPanel && (
           <motion.div
             initial={{ height: 0, opacity: 0 },
-  }
+  };
             animate={{ height: 'auto', opacity: 1 },
-  }
+  };
             exit={{ height: 0, opacity: 0 },
-  }
+  };
             transition={{ duration: 0.3, ease: 'easeOut' },
-  }
+  };
             className="mb-6 overflow-hidden"
           >
             <div className="p-4 bg-zinc-900/30 border border-zinc-700/50 rounded-xl">
@@ -376,9 +373,9 @@ const [selectedCategory, setSelectedCategory] = useState<string>('all'),
           <motion.div
             key={result.id}
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             animate={{ opacity: 1, y: 0 },
-  }
+  };
             className="p-4 bg-zinc-900/30 border border-zinc-700/50 rounded-xl hover:bg-zinc-900/50 transition-all duration-300 cursor-pointer group"
           >
             <div className="flex items-start gap-4">
@@ -435,9 +432,9 @@ const [selectedCategory, setSelectedCategory] = useState<string>('all'),
   {filteredResults.length === 0 && (
         <motion.div
           initial={{ opacity: 0 },
-  }
+  };
           animate={{ opacity: 1 },
-  }
+  };
           className="text-center py-12"
         >
           <Search className="w-16 h-16 text-zinc-600 mx-auto mb-4" />
@@ -455,4 +452,3 @@ const [selectedCategory, setSelectedCategory] = useState<string>('all'),
       )}
     </div>
   )
-};

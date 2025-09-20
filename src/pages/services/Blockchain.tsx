@@ -93,17 +93,17 @@ export default function Blockchain() {
   return (
     <div className="min-h-screen bg-futuristic">
       {{/* Hero Section */},
-  }
+  };
       <section className="relative pt-32 pb-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-green-900/20 via-slate-900 to-slate-900"></div>
         <div className="container-responsive relative z-10">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             animate={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.6 },
-  }
+  };
             className="className="text-center max-w-4xl mx-auto";"
           >
             <div className="inline-flex items-center space-x-2 bg-green-500/10 border border-green-500/20 rounded-full px-4 py-2 mb-6">
@@ -139,17 +139,17 @@ export default function Blockchain() {
 
       <div className="relative z-10">
         {{/* Hero Section */},
-  }
+  };
         <section className="pt-32 pb-20">
           <div className="container-responsive">
             <motion.div ;
               className="className="text-center max-w-4xl mx-auto";"
               initial={{ opacity: 0, y: 30 },
-  }
+  };
               animate={{ opacity: 1, y: 0 },
-  }
+  };
               transition={{ duration: 0.8 },
-  }
+  };
             >
               <div className="inline-flex items-center px-4 py-2 rounded-full bg-orange-500/10 border border-orange-500/20 text-orange-400 text-sm font-medium mb-6">
                 <Link className="w-4 h-4 mr-2" />
@@ -182,19 +182,19 @@ export default function Blockchain() {
         </section>
 
         {{/* Use Cases Section */},
-  }
+  };
         <section className="py-20">
           <div className="container-responsive">
             <motion.div ;
               className="className="text-center mb-16";"
               initial={{ opacity: 0, y: 30 },
-  }
+  };
               whileInView={{ opacity: 1, y: 0 },
-  }
+  };
               transition={{ duration: 0.8 },
-  }
+  };
               viewport={{ once: true },
-  }
+  };
             >
               <h2 className="text-4xl font-bold text-white mb-4">
                 Blockchain Applications;
@@ -208,16 +208,16 @@ export default function Blockchain() {
               {useCases.map((useCase, index) => (
   <motion.div;
                   key={{index},
-  }
+  };
                   className="className="p-6 rounded-xl bg-white/5 border border-white/10 backdrop-blur-sm hover:border-orange-500/30 transition-all duration-300";"
                   initial={{ opacity: 0, y: 30 },
-  }
+  };
                   whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                   transition={{ duration: 0.6, delay: index * 0.1 },
-  }
+  };
                   viewport={{ once: true },
-  }
+  };
                 >
                   <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-500 rounded-lg flex items-center justify-center mb-4">
                     <useCase.icon className="w-6 h-6 text-white" />
@@ -229,7 +229,7 @@ export default function Blockchain() {
   <li key={exampleIndex} className="flex items-center text-zinc-300 text-sm">
                         <CheckCircle className="w-4 h-4 text-orange-400 mr-2 flex-shrink-0" />
                         {{example},
-  }
+  };
                       </li>
                     ))}
                   </ul>
@@ -240,19 +240,19 @@ export default function Blockchain() {
         </section>
 
         {{/* Features Section */},
-  }
+  };
         <section className="py-20 bg-white/5">
           <div className="container-responsive">
             <motion.div ;
               className="className="text-center mb-16";"
               initial={{ opacity: 0, y: 30 },
-  }
+  };
               whileInView={{ opacity: 1, y: 0 },
-  }
+  };
               transition={{ duration: 0.8 },
-  }
+  };
               viewport={{ once: true },
-  }
+  };
             >
               <h2 className="text-4xl font-bold text-white mb-4">
                 Why Choose Our Blockchain?;
@@ -266,16 +266,16 @@ export default function Blockchain() {
               {features.map((feature, index) => (
   <motion.div;
                   key={{index},
-  }
+  };
                   className="className="p-6 rounded-xl bg-white/5 border border-white/10 backdrop-blur-sm hover:border-orange-500/30 transition-all duration-300";"
                   initial={{ opacity: 0, y: 30 },
-  }
+  };
                   whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                   transition={{ duration: 0.6, delay: index * 0.1 },
-  }
+  };
                   viewport={{ once: true },
-  }
+  };
                 >
                   <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-500 rounded-lg flex items-center justify-center mb-4">
                     <feature.icon className="w-6 h-6 text-white" />
@@ -289,19 +289,19 @@ export default function Blockchain() {
         </section>
 
         {{/* Pricing Section */},
-  }
+  };
         <section className="py-20">
           <div className="container-responsive">
             <motion.div ;
               className="className="text-center mb-16";"
               initial={{ opacity: 0, y: 30 },
-  }
+  };
               whileInView={{ opacity: 1, y: 0 },
-  }
+  };
               transition={{ duration: 0.8 },
-  }
+  };
               viewport={{ once: true },
-  }
+  };
             >
               <h2 className="text-4xl font-bold text-white mb-4">
                 Transparent Pricing;
@@ -315,20 +315,20 @@ export default function Blockchain() {
               {pricing.map((plan, index) => (
   <motion.div;
                   key={{index},
-  }
+  };
                   className={`relative p-8 rounded-2xl ${
   plan.popular ;
                       ? 'bg-gradient-to-br from-orange-500/20 to-red-500/20 border-2 border-orange-500/50' ;
                       : 'bg-white/5 border border-white/10'
 } backdrop-blur-sm`}
                   initial={{ opacity: 0, y: 30 },
-  }
+  };
                   whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                   transition={{ duration: 0.6, delay: index * 0.1 },
-  }
+  };
                   viewport={{ once: true },
-  }
+  };
                 >
                   {plan.popular && (
   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
@@ -352,14 +352,14 @@ export default function Blockchain() {
   <li key={featureIndex} className="flex items-center text-zinc-300">
                         <CheckCircle className="w-5 h-5 text-orange-400 mr-3 flex-shrink-0" />
                         {{feature},
-  }
+  };
                       </li>
                     ))}
                   </ul>
 
                   <RouterLink;
                     to={{plan.name === "Enterprise" ? "/contact" : "/request-quote"},
-  }
+  };
                     className={`w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 ${
   plan.popular;
                         ? 'bg-gradient-to-r from-orange-500 to-red-500 text-white hover:from-orange-600 hover:to-red-600';
@@ -367,7 +367,7 @@ export default function Blockchain() {
 }`}
                   >
                     {{plan.cta},
-  }
+  };
                   </RouterLink>
                 </motion.div>
               ))}
@@ -376,19 +376,19 @@ export default function Blockchain() {
         </section>
 
         {{/* Benefits Section */},
-  }
+  };
         <section className="py-20 bg-white/5">
           <div className="container-responsive">
             <motion.div ;
               className="className="text-center mb-16";"
               initial={{ opacity: 0, y: 30 },
-  }
+  };
               whileInView={{ opacity: 1, y: 0 },
-  }
+  };
               transition={{ duration: 0.8 },
-  }
+  };
               viewport={{ once: true },
-  }
+  };
             >
               <h2 className="text-4xl font-bold text-white mb-4">
                 Business Benefits;
@@ -402,16 +402,16 @@ export default function Blockchain() {
               {benefits.map((benefit, index) => (
   <motion.div;
                   key={{index},
-  }
+  };
                   className="className="flex items-start space-x-4 p-6 rounded-xl bg-white/5 border border-white/10 backdrop-blur-sm";"
                   initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 },
-  }
+  };
                   whileInView={{ opacity: 1, x: 0 },
-  }
+  };
                   transition={{ duration: 0.6, delay: index * 0.1 },
-  }
+  };
                   viewport={{ once: true },
-  }
+  };
                 >
                   <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-500 rounded-lg flex items-center justify-center flex-shrink-0">
                     <benefit.icon className="w-6 h-6 text-white" />
@@ -427,18 +427,18 @@ export default function Blockchain() {
         </section>
 
         {{/* CTA Section */},
-  }
+  };
         <section className="py-20 bg-gradient-to-r from-orange-500/10 to-red-500/10">
           <div className="container-responsive text-center">
             <motion.div;
               initial={{ opacity: 0, y: 30 },
-  }
+  };
               whileInView={{ opacity: 1, y: 0 },
-  }
+  };
               transition={{ duration: 0.8 },
-  }
+  };
               viewport={{ once: true },
-  }
+  };
             >
               <h2 className="text-4xl font-bold text-white mb-6">
                 Ready to Go Blockchain?;
@@ -467,4 +467,4 @@ export default function Blockchain() {
       </div>
     </div>
   )
-}
+};

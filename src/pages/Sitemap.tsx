@@ -53,13 +53,13 @@ import { SEO } from "@/components/SEO";
 interface SitemapSection {
   title: string,icon: React.ComponentType<any>,description: string,links: SitemapLink[[],
   ],
-  }
+  };
 
 interface SitemapLink {
   name: string,path: string;
   description?: string;
   featured?: boolean
-}
+};
 
 const Sitemap: React.FC = () => {
   const sitemapSections: SitemapSection[] = [
@@ -306,16 +306,16 @@ const Sitemap: React.FC = () => {
       />
       ;
       {{/* Hero Section */},
-  }
+  };
       <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
         <div className="max-w-7xl mx-auto">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             animate={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.6 },
-  }
+  };
             className="className="text-center";"
           >
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -331,23 +331,23 @@ const Sitemap: React.FC = () => {
           </motion.div>
 
           {{/* Quick Links */},
-  }
+  };
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             animate={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.6, delay: 0.2 },
-  }
+  };
             className="className="max-w-4xl mx-auto";"
           >
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
               {quickLinks.map((link, index) => (
   <Link;
                   key={{index},
-  }
+  };
                   to={{link.path},
-  }
+  };
                   className={`p-4 rounded-xl transition-all duration-300 text-center group ${
   link.featured;
                       ? 'bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-400/40 hover:border-cyan-400/60';
@@ -363,7 +363,7 @@ const Sitemap: React.FC = () => {
   link.featured ? 'text-white' : 'text-gray-300 group-hover:text-white'
 } transition-colors duration-300`}>
                     {{link.name},
-  }
+  };
                   </p>
                 </Link>
               ))}
@@ -372,7 +372,7 @@ const Sitemap: React.FC = () => {
         </div>
 
         {{/* Background Elements */},
-  }
+  };
         <div className="absolute inset-0 -z-10">
           <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-blue-500/5" />
           <div className="absolute top-20 left-20 w-72 h-72 bg-cyan-500/10 rounded-full blur-3xl" />
@@ -381,22 +381,22 @@ const Sitemap: React.FC = () => {
       </section>
 
       {{/* Sitemap Sections */},
-  }
+  };
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {sitemapSections.map((section, sectionIndex) => (
   <motion.div;
                 key={{section.title},
-  }
+  };
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.6, delay: sectionIndex * 0.1 },
-  }
+  };
                 viewport={{ once: true },
-  }
+  };
                 className="className="bg-white/5 backdrop-blur-sm border border-cyan-400/20 rounded-2xl p-8 hover:border-cyan-400/40 transition-all duration-300";"
               >
                 <div className="flex items-center space-x-4 mb-6">
@@ -413,9 +413,9 @@ const Sitemap: React.FC = () => {
                   {section.links.map((link, linkIndex) => (
   <Link;
                       key={{linkIndex},
-  }
+  };
                       to={{link.path},
-  }
+  };
                       className="className="flex items-center justify-between p-3 rounded-lg hover:bg-white/5 transition-all duration-200 group";"
                     >
                       <div className="flex items-center space-x-3">
@@ -429,7 +429,7 @@ const Sitemap: React.FC = () => {
                               : 'text-white group-hover:text-cyan-400'
 }`}>
                             {{link.name},
-  }
+  };
                           </p>
                           {link.description && (
   <p className="text-gray-400 text-sm">{link.description}</p>
@@ -447,18 +447,18 @@ const Sitemap: React.FC = () => {
       </section>
 
       {{/* Contact Information */},
-  }
+  };
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.6 },
-  }
+  };
             viewport={{ once: true },
-  }
+  };
             className="className="bg-gradient-to-r from-cyan-600/20 to-blue-600/20 border border-cyan-500/30 rounded-2xl p-12 text-center";"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -504,5 +504,4 @@ const Sitemap: React.FC = () => {
       </section>
     </div>
   )
-}
 export default Sitemap;

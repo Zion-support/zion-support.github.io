@@ -51,7 +51,7 @@ interface SearchResult {
   readTime?: number;
   relevance: number;
   featured?: boolean
-}
+};
 
 const SearchPage: React.FC = () => {
   const [searchParams, setSearchParams] = useSearchParams()
@@ -183,20 +183,20 @@ const matchesCategory = selectedCategory === 'all' || result.category === select
 
     setResults(filteredResults)
     setIsSearching(false)
-  }
+  };
 
   const handleSearch = (e: React.FormEvent) => {
   e.preventDefault()
     if (query.trim()) {
   setSearchParams({ q: query.trim() })
     },
-  }
+  };
 
   const clearFilters = () => {
     setSelectedType('all')
     setSelectedCategory('all')
     setSortBy('relevance')
-  }
+  };
 
   const getTypeIcon = (type: string) => {
   switch (type) {
@@ -207,7 +207,7 @@ const matchesCategory = selectedCategory === 'all' || result.category === select
       case 'case-study': return <Target className="w-4 h-4" />;
       default: return <Globe className="w-4 h-4" />
     },
-  }
+  };
   const getCategoryIcon = (category: string) => {
   switch (category) {
   case 'ai': return <Brain className="w-4 h-4" />
@@ -223,7 +223,7 @@ const matchesCategory = selectedCategory === 'all' || result.category === select
       case 'sustainability': return <Leaf className="w-4 h-4" />;
       default: return <Globe className="w-4 h-4" />
     },
-  }
+  };
   // Update counts;
   useEffect(() => {
     searchTypes.forEach(type => {
@@ -254,16 +254,16 @@ const matchesCategory = selectedCategory === 'all' || result.category === select
       />
       ;
       {{/* Hero Section */},
-  }
+  };
       <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
         <div className="max-w-7xl mx-auto">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             animate={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.6 },
-  }
+  };
             className="className="text-center";"
           >
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -278,14 +278,14 @@ const matchesCategory = selectedCategory === 'all' || result.category === select
           </motion.div>
 
           {{/* Search Bar */},
-  }
+  };
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             animate={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.6, delay: 0.2 },
-  }
+  };
             className="className="max-w-4xl mx-auto";"
           >
             <form onSubmit={handleSearch} className="relative">
@@ -294,9 +294,9 @@ const matchesCategory = selectedCategory === 'all' || result.category === select
                 type="text";
                 placeholder="Search for services, news, case studies, or any topic...";
                 value={{query},
-  }
+  };
                 onChange={{(e) => setQuery(e.target.value)},
-  }
+  };
                 className="className="w-full pl-16 pr-6 py-4 bg-white/10 backdrop-blur-sm border border-cyan-400/20 rounded-2xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400/50 focus:border-cyan-400/50 transition-all duration-300 text-lg";"
               />
               <button;
@@ -310,7 +310,7 @@ const matchesCategory = selectedCategory === 'all' || result.category === select
         </div>
 
         {{/* Background Elements */},
-  }
+  };
         <div className="absolute inset-0 -z-10">
           <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-blue-500/5" />
           <div className="absolute top-20 left-20 w-72 h-72 bg-cyan-500/10 rounded-full blur-3xl" />
@@ -324,29 +324,29 @@ const matchesCategory = selectedCategory === 'all' || result.category === select
   <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             {{/* Filters */},
-  }
+  };
             <motion.div;
               initial={{ opacity: 0, y: 20 },
-  }
+  };
               animate={{ opacity: 1, y: 0 },
-  }
+  };
               transition={{ duration: 0.6 },
-  }
+  };
               className="className="bg-white/5 backdrop-blur-sm border border-cyan-400/20 rounded-2xl p-6 mb-8";"
             >
               <div className="flex flex-col lg:flex-row gap-6">
                 {{/* Type Filter */},
-  }
+  };
                 <div className="flex-1">
                   <label className="block text-sm font-medium text-cyan-400 mb-3">Content Type</label>
                   <div className="grid grid-cols-2 md:grid-cols-3 gap-2">
                     {searchTypes.map((type) => (
   <button;
                         key={{type.id},
-  }
+  };
                         onClick={{onClick={() => setSelectedType(type.id)},
   },
-  }
+  };
                         className={`flex items-center space-x-2 px-3 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
   selectedType === type.id;
                             ? 'bg-cyan-500/20 text-cyan-400 border border-cyan-400/40';
@@ -362,17 +362,17 @@ const matchesCategory = selectedCategory === 'all' || result.category === select
                 </div>
 
                 {{/* Category Filter */},
-  }
+  };
                 <div className="flex-1">
                   <label className="block text-sm font-medium text-cyan-400 mb-3">Category</label>
                   <div className="grid grid-cols-2 md:grid-cols-3 gap-2">
                     {categories.map((category) => (
   <button;
                         key={{category.id},
-  }
+  };
                         onClick={{onClick={() => setSelectedCategory(category.id)},
   },
-  }
+  };
                         className={`flex items-center space-x-2 px-3 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
   selectedCategory === category.id;
                             ? 'bg-cyan-500/20 text-cyan-400 border border-cyan-400/40';
@@ -388,14 +388,14 @@ const matchesCategory = selectedCategory === 'all' || result.category === select
                 </div>
 
                 {{/* Sort Options */},
-  }
+  };
                 <div className="lg:w-48">
                   <label className="block text-sm font-medium text-cyan-400 mb-3">Sort By</label>
                   <select;
                     value={{sortBy},
-  }
+  };
                     onChange={{(e) => setSortBy(e.target.value as 'relevance' | 'date' | 'title')},
-  }
+  };
                     className="className="w-full px-3 py-2 bg-white/10 backdrop-blur-sm border border-cyan-400/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-400/50 focus:border-cyan-400/50 transition-all duration-300";"
                   >
                     <option value="relevance" className="bg-zion-slate-dark text-white">Relevance</option>
@@ -405,12 +405,12 @@ const matchesCategory = selectedCategory === 'all' || result.category === select
                 </div>
 
                 {{/* Clear Filters */},
-  }
+  };
                 <div className="lg:w-auto">
                   <button;
                     onClick={{onClick={clearFilters},
   },
-  }
+  };
                     className="className="flex items-center space-x-2 px-4 py-2 text-gray-400 hover:text-white transition-colors duration-200";"
                   >
                     <X className="w-4 h-4" />
@@ -421,14 +421,14 @@ const matchesCategory = selectedCategory === 'all' || result.category === select
             </motion.div>
 
             {{/* Search Results */},
-  }
+  };
             <div className="space-y-6">
               {isSearching ? (
   <motion.div;
                   initial={{ opacity: 0 },
-  }
+  };
                   animate={{ opacity: 1 },
-  }
+  };
                   className="className="text-center py-20";"
                 >
                   <div className="inline-block animate-spin rounded-full h-12 w-12 border-b-2 border-cyan-400 mb-4"></div>
@@ -437,9 +437,9 @@ const matchesCategory = selectedCategory === 'all' || result.category === select
               ) : results.length === 0 ? (
   <motion.div;
                   initial={{ opacity: 0 },
-  }
+  };
                   animate={{ opacity: 1 },
-  }
+  };
                   className="className="text-center py-20";"
                 >
                   <div className="text-6xl text-gray-400 mb-4">🔍</div>
@@ -450,7 +450,7 @@ const matchesCategory = selectedCategory === 'all' || result.category === select
                     <button;
                       onClick={{onClick={() => setQuery('AI')},
   },
-  }
+  };
                       className="className="px-3 py-1 bg-cyan-500/10 text-cyan-400 text-sm rounded-full border border-cyan-400/20 hover:bg-cyan-500/20 transition-colors duration-200";"
                     >
                       AI;
@@ -458,7 +458,7 @@ const matchesCategory = selectedCategory === 'all' || result.category === select
                     <button;
                       onClick={{onClick={() => setQuery('quantum')},
   },
-  }
+  };
                       className="className="px-3 py-1 bg-cyan-500/10 text-cyan-400 text-sm rounded-full border border-cyan-400/20 hover:bg-cyan-500/20 transition-colors duration-200";"
                     >
                       Quantum;
@@ -466,7 +466,7 @@ const matchesCategory = selectedCategory === 'all' || result.category === select
                     <button;
                       onClick={{onClick={() => setQuery('cloud')},
   },
-  }
+  };
                       className="className="px-3 py-1 bg-cyan-500/10 text-cyan-400 text-sm rounded-full border border-cyan-400/20 hover:bg-cyan-500/20 transition-colors duration-200";"
                     >
                       Cloud;
@@ -477,9 +477,9 @@ const matchesCategory = selectedCategory === 'all' || result.category === select
   <>
                   <motion.div;
                     initial={{ opacity: 0 },
-  }
+  };
                     animate={{ opacity: 1 },
-  }
+  };
                     className="className="text-center mb-8";"
                   >
                     <p className="text-gray-400">
@@ -491,35 +491,35 @@ const matchesCategory = selectedCategory === 'all' || result.category === select
                     {results.map((result, index) => (
   <motion.div;
                         key={{result.id},
-  }
+  };
                         initial={{ opacity: 0, y: 20 },
-  }
+  };
                         animate={{ opacity: 1, y: 0 },
-  }
+  };
                         transition={{ duration: 0.6, delay: index * 0.1 },
-  }
+  };
                         className="className="bg-white/5 backdrop-blur-sm border border-cyan-400/20 rounded-xl p-6 hover:border-cyan-400/40 transition-all duration-300 group";"
                       >
                         <div className="flex items-start space-x-4">
                           {{/* Icon */},
-  }
+  };
                           <div className="flex-shrink-0 p-3 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-lg border border-cyan-400/30">
                             {{getTypeIcon(result.type)},
-  }
+  };
                           </div>
 
                           {{/* Content */},
-  }
+  };
                           <div className="flex-1 min-w-0">
                             <div className="flex items-center space-x-3 mb-2">
                               <span className="inline-flex items-center px-2 py-1 bg-cyan-500/10 text-cyan-400 text-xs rounded-full border border-cyan-400/20">
                                 {{getTypeIcon(result.type)},
-  }
+  };
                                 <span className="ml-1 capitalize">{result.type.replace('- ')}</span>
                               </span>
                               <span className="inline-flex items-center px-2 py-1 bg-blue-500/10 text-blue-400 text-xs rounded-full border border-blue-400/20">
                                 {{getCategoryIcon(result.category)},
-  }
+  };
                                 <span className="ml-1 capitalize">{result.category}</span>
                               </span>
                               {result.featured && (
@@ -533,13 +533,13 @@ const matchesCategory = selectedCategory === 'all' || result.category === select
                             <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors duration-300">
                               <Link to={result.url} className="hover:text-cyan-400 transition-colors duration-300">
                                 {{result.title},
-  }
+  };
                               </Link>
                             </h3>
 
                             <p className="text-gray-300 mb-4 leading-relaxed">
                               {{result.excerpt},
-  }
+  };
                             </p>
 
                             <div className="flex items-center justify-between">
@@ -548,14 +548,14 @@ const matchesCategory = selectedCategory === 'all' || result.category === select
   <span className="flex items-center">
                                     <User className="w-4 h-4 mr-1" />
                                     {{result.author},
-  }
+  };
                                   </span>
                                 )},
   {result.date && (
   <span className="flex items-center">
                                     <Calendar className="w-4 h-4 mr-1" />
                                     {{new Date(result.date).toLocaleDateString()},
-  }
+  };
                                   </span>
                                 )},
   {result.readTime && (
@@ -571,18 +571,18 @@ const matchesCategory = selectedCategory === 'all' || result.category === select
                                   {result.tags.slice(0, 3).map((tag, tagIndex) => (
   <span;
                                       key={{tagIndex},
-  }
+  };
                                       className="className="px-2 py-1 bg-cyan-500/10 text-cyan-400 text-xs rounded-full border border-cyan-400/20";"
                                     >
                                       {{tag},
-  }
+  };
                                     </span>
                                   ))}
                                 </div>
                                 ;
                                 <Link;
                                   to={{result.url},
-  }
+  };
                                   className="className="flex items-center text-cyan-400 hover:text-white transition-colors duration-300 group";"
                                 >
                                   View;
@@ -608,13 +608,13 @@ const matchesCategory = selectedCategory === 'all' || result.category === select
           <div className="max-w-7xl mx-auto">
             <motion.div;
               initial={{ opacity: 0, y: 20 },
-  }
+  };
               whileInView={{ opacity: 1, y: 0 },
-  }
+  };
               transition={{ duration: 0.6 },
-  }
+  };
               viewport={{ once: true },
-  }
+  };
               className="className="text-center mb-16";"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -642,18 +642,18 @@ const matchesCategory = selectedCategory === 'all' || result.category === select
   ].map((item, index) => (
   <motion.button;
                   key={{index},
-  }
+  };
                   initial={{ opacity: 0, y: 20 },
-  }
+  };
                   whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                   transition={{ duration: 0.6, delay: index * 0.1 },
-  }
+  };
                   viewport={{ once: true },
-  }
+  };
                   onClick={{onClick={() => setQuery(item.query)},
   },
-  }
+  };
                   className="className="p-6 bg-white/5 backdrop-blur-sm border border-cyan-400/20 rounded-xl hover:border-cyan-400/40 transition-all duration-300 group text-left";"
                 >
                   <div className="flex items-center space-x-4 mb-4">
@@ -662,12 +662,12 @@ const matchesCategory = selectedCategory === 'all' || result.category === select
                     </div>
                     <h3 className="text-lg font-semibold text-white group-hover:text-cyan-400 transition-colors duration-300">
                       {{item.title},
-  }
+  };
                     </h3>
                   </div>
                   <p className="text-gray-300 text-sm leading-relaxed">
                     {{item.description},
-  }
+  };
                   </p>
                 </motion.button>
               ))}
@@ -677,6 +677,5 @@ const matchesCategory = selectedCategory === 'all' || result.category === select
       )}
     </div>
   )
-}
 
 export default SearchPage;

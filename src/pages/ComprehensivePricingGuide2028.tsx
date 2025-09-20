@@ -64,7 +64,7 @@ const const pricingData2028 = {
       targetAudience: 'Development teams, DevOps engineers, Technology companies'
 },
   ],
-  }
+  };
 
 const ComprehensivePricingGuide2028: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('all')
@@ -96,7 +96,7 @@ const ComprehensivePricingGuide2028: React.FC = () => {
       ...pricingData2028.microSAAS.map(service => ({ ...service, type: 'Micro SAAS' }))
       ...pricingData2028.itServices.map(service => ({ ...service, type: 'IT Services' }))
     ],
-  }
+  };
 
   const filteredServices = getAllServices().filter(service => {
   const matchesCategory = selectedCategory === 'all' ||;
@@ -113,46 +113,46 @@ const ComprehensivePricingGuide2028: React.FC = () => {
 
   const calculateROI = (roi: string) => {
   return parseInt(roi.replace('%', ''))
-  }
+  };
 
   const sortedServices = filteredServices.sort((a, b) => calculateROI(b.roi) - calculateROI(a.roi))
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       {{/* Hero Section */},
-  }
+  };
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-zion-cyan/10 via-zion-purple/10 to-zion-blue/10"></div>
         <div className="relative z-10 container mx-auto px-6 text-center">
           <motion.h1;
             initial={{ opacity: 0, y: 30 },
-  }
+  };
             animate={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             className="className="text-5xl md:text-7xl font-bold mb-6 text-gradient";"
           >
             Comprehensive Pricing Guide 2028;
           </motion.h1>
           <motion.p;
             initial={{ opacity: 0, y: 30 },
-  }
+  };
             animate={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8, delay: 0.2 },
-  }
+  };
             className="className="text-xl md:text-2xl text-zion-slate-light mb-8 max-w-4xl mx-auto";"
           >
             Complete pricing analysis, ROI calculations, and market positioning for all our innovative services;
           </motion.p>
           <motion.div;
             initial={{ opacity: 0, y: 30 },
-  }
+  };
             animate={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8, delay: 0.4 },
-  }
+  };
             className="className="flex flex-wrap justify-center gap-4";"
           >
             <div className="bg-zion-cyan/20 backdrop-blur-sm border border-zion-cyan/30 rounded-full px-6 py-3 text-zion-cyan font-semibold">
@@ -169,16 +169,16 @@ const ComprehensivePricingGuide2028: React.FC = () => {
       </section>
 
       {{/* Market Overview */},
-  }
+  };
       <section className="py-20 bg-zion-slate-dark/50">
         <div className="container mx-auto px-6">
           <motion.h2;
             initial={{ opacity: 0, y: 30 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             className="className="text-4xl font-bold text-center mb-12 text-gradient";"
           >
             Market Overview & Growth Potential;
@@ -186,11 +186,11 @@ const ComprehensivePricingGuide2028: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <motion.div;
               initial={{ opacity: 0, y: 30 },
-  }
+  };
               whileInView={{ opacity: 1, y: 0 },
-  }
+  };
               transition={{ duration: 0.8, delay: 0.1 },
-  }
+  };
               className="className="text-center";"
             >
               <div className="w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-blue rounded-full flex items-center justify-center mx-auto mb-4">
@@ -202,11 +202,11 @@ const ComprehensivePricingGuide2028: React.FC = () => {
             </motion.div>
             <motion.div;
               initial={{ opacity: 0, y: 30 },
-  }
+  };
               whileInView={{ opacity: 1, y: 0 },
-  }
+  };
               transition={{ duration: 0.8, delay: 0.2 },
-  }
+  };
               className="className="text-center";"
             >
               <div className="w-20 h-20 bg-gradient-to-br from-zion-purple to-zion-pink rounded-full flex items-center justify-center mx-auto mb-4">
@@ -218,11 +218,11 @@ const ComprehensivePricingGuide2028: React.FC = () => {
             </motion.div>
             <motion.div;
               initial={{ opacity: 0, y: 30 },
-  }
+  };
               whileInView={{ opacity: 1, y: 0 },
-  }
+  };
               transition={{ duration: 0.8, delay: 0.3 },
-  }
+  };
               className="className="text-center";"
             >
               <div className="w-20 h-20 bg-gradient-to-br from-zion-green to-zion-emerald rounded-full flex items-center justify-center mx-auto mb-4">
@@ -237,24 +237,24 @@ const ComprehensivePricingGuide2028: React.FC = () => {
       </section>
 
       {{/* Filters */},
-  }
+  };
       <section className="py-12 bg-zion-slate-dark/30">
         <div className="container mx-auto px-6">
           <div className="flex flex-col lg:flex-row gap-6 items-center justify-between">
             {{/* Category Filter */},
-  }
+  };
             <div className="flex flex-wrap gap-3">
               {categories.map((category) => (
   <motion.button;
                   key={{category.id},
-  }
+  };
                   whileHover={{ scale: 1.05 },
-  }
+  };
                   whileTap={{ scale: 0.95 },
-  }
+  };
                   onClick={{onClick={() => setSelectedCategory(category.id)},
   },
-  }
+  };
                   className={`flex items-center gap-2 px-4 py-2 rounded-lg transition-all duration-300 ${
   selectedCategory === category.id;
                       ? 'bg-gradient-to-r ' + category.color + ' text-white shadow-lg';
@@ -263,25 +263,25 @@ const ComprehensivePricingGuide2028: React.FC = () => {
                 >
                   <category.icon className="w-4 h-4" />
                   {{category.name},
-  }
+  };
                 </motion.button>
               ))}
             </div>
 
             {{/* Price Range Filter */},
-  }
+  };
             <div className="flex flex-wrap gap-3">
               {priceRanges.map((range) => (
   <motion.button;
                   key={{range.id},
-  }
+  };
                   whileHover={{ scale: 1.05 },
-  }
+  };
                   whileTap={{ scale: 0.95 },
-  }
+  };
                   onClick={{onClick={() => setPriceRange(range.id)},
   },
-  }
+  };
                   className={`px-4 py-2 rounded-lg transition-all duration-300 ${
   priceRange === range.id;
                       ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg';
@@ -289,7 +289,7 @@ const ComprehensivePricingGuide2028: React.FC = () => {
 }`}
                 >
                   {{range.name},
-  }
+  };
                 </motion.button>
               ))}
             </div>
@@ -298,7 +298,7 @@ const ComprehensivePricingGuide2028: React.FC = () => {
       </section>
 
       {{/* Services Grid */},
-  }
+  };
       <section className="py-20">
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
@@ -306,35 +306,35 @@ const ComprehensivePricingGuide2028: React.FC = () => {
   <motion.div;
                 key={`${service.type}-${service.name}`}
                 initial={{ opacity: 0, y: 30 },
-  }
+  };
                 animate={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.6, delay: index * 0.1 },
-  }
+  };
                 className="className="group relative bg-zion-slate/30 backdrop-blur-sm border border-zion-slate/40 rounded-2xl p-8 hover:border-zion-cyan/50 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/20";"
               >
                 {{/* Service Type Badge */},
-  }
+  };
                 <div className="absolute -top-3 -left-3 bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-3 py-1 rounded-full text-sm font-semibold shadow-lg">
                   {{service.type},
-  }
+  };
                 </div>
 
                 {{/* Service Header */},
-  }
+  };
                 <div className="mb-6">
                   <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-zion-cyan transition-colors duration-300">
                     {{service.name},
-  }
+  };
                   </h3>
                   <p className="text-zion-slate-light text-sm mb-4">
                     {{service.category},
-  }
+  };
                   </p>
                 </div>
 
                 {{/* Pricing */},
-  }
+  };
                 <div className="mb-6">
                   <div className="flex items-baseline gap-2 mb-2">
                     <span className="text-4xl font-bold text-zion-cyan">{service.price}</span>
@@ -347,7 +347,7 @@ const ComprehensivePricingGuide2028: React.FC = () => {
                 </div>
 
                 {{/* Market Info */},
-  }
+  };
                 <div className="grid grid-cols-3 gap-4 mb-6">
                   <div className="text-center">
                     <div className="text-lg font-bold text-zion-cyan">{service.marketSize}</div>
@@ -364,7 +364,7 @@ const ComprehensivePricingGuide2028: React.FC = () => {
                 </div>
 
                 {{/* Features */},
-  }
+  };
                 <div className="mb-6">
                   <h4 className="font-semibold text-white mb-3">Key Features</h4>
                   <div className="space-y-2">
@@ -372,21 +372,21 @@ const ComprehensivePricingGuide2028: React.FC = () => {
   <div key={idx} className="flex items-center gap-2 text-sm text-zion-slate-light">
                         <CheckCircle className="w-4 h-4 text-zion-cyan" />
                         {{feature},
-  }
+  };
                       </div>
                     ))}
                   </div>
                 </div>
 
                 {{/* Target Audience */},
-  }
+  };
                 <div className="mb-6">
                   <h4 className="font-semibold text-white mb-3">Target Audience</h4>
                   <p className="text-sm text-zion-slate-light">{service.targetAudience}</p>
                 </div>
 
                 {{/* CTA */},
-  }
+  };
                 <div className="text-center">
                   <button className="w-full bg-gradient-to-r from-zion-cyan to-zion-purple text-white py-3 px-6 rounded-lg font-semibold group-hover:shadow-lg group-hover:shadow-zion-cyan/25 transition-all duration-300 flex items-center justify-center gap-2">
                     Get Started;
@@ -400,16 +400,16 @@ const ComprehensivePricingGuide2028: React.FC = () => {
       </section>
 
       {{/* ROI Calculator */},
-  }
+  };
       <section className="py-20 bg-zion-slate-dark/50">
         <div className="container mx-auto px-6">
           <motion.h2;
             initial={{ opacity: 0, y: 30 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             className="className="text-4xl font-bold text-center mb-12 text-gradient";"
           >
             ROI Calculator;
@@ -472,38 +472,38 @@ const ComprehensivePricingGuide2028: React.FC = () => {
       </section>
 
       {{/* Contact Section */},
-  }
+  };
       <section className="py-20">
         <div className="container mx-auto px-6 text-center">
           <motion.h2;
             initial={{ opacity: 0, y: 30 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             className="className="text-4xl md:text-5xl font-bold mb-6 text-gradient";"
           >
             Ready to Maximize Your ROI?;
           </motion.h2>
           <motion.p;
             initial={{ opacity: 0, y: 30 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8, delay: 0.2 },
-  }
+  };
             className="className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto";"
           >
             Contact our team to discuss how our innovative services can deliver exceptional returns on your investment;
           </motion.p>
           <motion.div;
             initial={{ opacity: 0, y: 30 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8, delay: 0.4 },
-  }
+  };
             className="className="flex flex-col sm: flex-row gap-4 justify-center";"
           >
             <a;
@@ -525,5 +525,5 @@ const ComprehensivePricingGuide2028: React.FC = () => {
       </section>
     </div>
   )
-}
+};
 export default ComprehensivePricingGuide2028;

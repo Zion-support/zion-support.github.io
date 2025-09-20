@@ -83,17 +83,17 @@ export default function ComprehensivePricingGuide2029() {
       />
       ;
       {{/* Hero Section */},
-  }
+  };
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             animate={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             className="className="text-center";"
           >
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
@@ -105,13 +105,13 @@ export default function ComprehensivePricingGuide2029() {
             </p>
             ;
             {{/* Billing Toggle */},
-  }
+  };
             <div className="flex items-center justify-center gap-4 mb-8">
               <span className={`text-lg ${billingCycle === 'monthly' ? 'text-white' : 'text-gray-400'}`}>Monthly</span>
               <button;
                 onClick={{onClick={() => setBillingCycle(billingCycle === 'monthly' ? 'yearly' : 'monthly')},
   },
-  }
+  };
                 className={`relative inline-flex h-8 w-16 items-center rounded-full transition-colors ${
   billingCycle === 'yearly' ? 'bg-blue-600' : 'bg-gray-600'
 }`}
@@ -134,19 +134,19 @@ export default function ComprehensivePricingGuide2029() {
       </div>
 
       {{/* Pricing Plans */},
-  }
+  };
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {pricingPlans.map((plan, index) => (
   <motion.div;
               key={{plan.id},
-  }
+  };
               initial={{ opacity: 0, y: 20 },
-  }
+  };
               whileInView={{ opacity: 1, y: 0 },
-  }
+  };
               transition={{ duration: 0.6, delay: index * 0.1 },
-  }
+  };
               className={`relative ${plan.popular ? 'scale-105' : ''}`}
             >
               {plan.popular && (
@@ -163,7 +163,7 @@ export default function ComprehensivePricingGuide2029() {
 } hover:border-white/20 transition-all duration-300`}>
                 ;
                 {{/* Plan Header */},
-  }
+  };
                 <div className="text-center mb-8">
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                   <p className="text-gray-400 mb-4">{plan.description}</p>
@@ -177,7 +177,7 @@ export default function ComprehensivePricingGuide2029() {
                 </div>
 
                 {{/* Features */},
-  }
+  };
                 <div className="space-y-4 mb-8">
                   {plan.features.map((feature, idx) => (
   <div key={idx} className="flex items-center gap-3">
@@ -188,7 +188,7 @@ export default function ComprehensivePricingGuide2029() {
                 </div>
 
                 {{/* CTA Button */},
-  }
+  };
                 <button className={`w-full bg-gradient-to-r ${plan.buttonColor} text-white py-3 px-6 rounded-lg font-semibold hover:opacity-90 transition-all duration-300`}>
                   Get Started;
                 </button>
@@ -199,15 +199,15 @@ export default function ComprehensivePricingGuide2029() {
       </div>
 
       {{/* Service Categories Pricing */},
-  }
+  };
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <motion.div;
           initial={{ opacity: 0, y: 20 },
-  }
+  };
           whileInView={{ opacity: 1, y: 0 },
-  }
+  };
           transition={{ duration: 0.8 },
-  }
+  };
           className="className="text-center mb-16";"
         >
           <h2 className="text-4xl font-bold text-white mb-6">
@@ -222,13 +222,13 @@ export default function ComprehensivePricingGuide2029() {
           {serviceCategories.map((category, index) => (
   <motion.div;
               key={{category.name},
-  }
+  };
               initial={{ opacity: 0, y: 20 },
-  }
+  };
               whileInView={{ opacity: 1, y: 0 },
-  }
+  };
               transition={{ duration: 0.6, delay: index * 0.1 },
-  }
+  };
               className="className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10";"
             >
               <div className="flex items-center gap-3 mb-6">
@@ -256,7 +256,7 @@ export default function ComprehensivePricingGuide2029() {
                       <div className="flex items-center justify-between mb-3">
                         <div className="text-xl font-bold text-white">
                           {{service.price},
-  }
+  };
                           <span className="text-gray-400 text-sm">{service.period}</span>
                         </div>
                         <div className="flex items-center gap-1 text-sm text-gray-400">
@@ -270,14 +270,14 @@ export default function ComprehensivePricingGuide2029() {
   <div key={idx} className="flex items-center gap-2 text-gray-300 text-sm">
                             <div className="w-1 h-1 bg-blue-400 rounded-full"></div>
                             {{feature},
-  }
+  };
                           </div>
                         ))}
                       </div>
 
                       <a;
                         href={{service.link},
-  }
+  };
                         className="className="block w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white text-center py-2 px-4 rounded-lg text-sm font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300";"
                       >
                         Learn More;
@@ -296,15 +296,15 @@ export default function ComprehensivePricingGuide2029() {
       </div>
 
       {{/* Enterprise Custom Pricing */},
-  }
+  };
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <motion.div;
           initial={{ opacity: 0, y: 20 },
-  }
+  };
           whileInView={{ opacity: 1, y: 0 },
-  }
+  };
           transition={{ duration: 0.8 },
-  }
+  };
           className="className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-3xl p-12 text-center";"
         >
           <h2 className="text-4xl font-bold text-white mb-6">
@@ -335,18 +335,18 @@ export default function ComprehensivePricingGuide2029() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <motion.button;
               whileHover={{ scale: 1.05 },
-  }
+  };
               whileTap={{ scale: 0.95 },
-  }
+  };
               className="className="bg-white text-slate-900 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-all duration-300";"
             >
               Request Custom Quote;
             </motion.button>
             <motion.button;
               whileHover={{ scale: 1.05 },
-  }
+  };
               whileTap={{ scale: 0.95 },
-  }
+  };
               className="className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white/10 transition-all duration-300";"
             >
               Schedule Consultation;
@@ -356,15 +356,15 @@ export default function ComprehensivePricingGuide2029() {
       </div>
 
       {{/* FAQ Section */},
-  }
+  };
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <motion.div;
           initial={{ opacity: 0, y: 20 },
-  }
+  };
           whileInView={{ opacity: 1, y: 0 },
-  }
+  };
           transition={{ duration: 0.8 },
-  }
+  };
           className="className="text-center mb-12";"
         >
           <h2 className="text-4xl font-bold text-white mb-6">
@@ -392,13 +392,13 @@ export default function ComprehensivePricingGuide2029() {
   ].map((faq, index) => (
   <motion.div;
               key={{index},
-  }
+  };
               initial={{ opacity: 0, x: -20 },
-  }
+  };
               whileInView={{ opacity: 1, x: 0 },
-  }
+  };
               transition={{ duration: 0.6, delay: index * 0.1 },
-  }
+  };
               className="className="bg-white/5 backdrop-blur-sm rounded-lg p-6 border border-white/10";"
             >
               <h3 className="text-lg font-semibold text-white mb-3">{faq.question}</h3>
@@ -409,7 +409,7 @@ export default function ComprehensivePricingGuide2029() {
       </div>
 
       {{/* Contact Section */},
-  }
+  };
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
         <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-3xl p-12 text-center">
           <h2 className="text-4xl font-bold text-white mb-6">
@@ -421,18 +421,18 @@ export default function ComprehensivePricingGuide2029() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
             <motion.button;
               whileHover={{ scale: 1.05 },
-  }
+  };
               whileTap={{ scale: 0.95 },
-  }
+  };
               className="className="bg-white text-slate-900 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-all duration-300";"
             >
               Start Free Trial;
             </motion.button>
             <motion.button;
               whileHover={{ scale: 1.05 },
-  }
+  };
               whileTap={{ scale: 0.95 },
-  }
+  };
               className="className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover: bg-white/10 transition-all duration-300";"
             >
               Contact Sales;
@@ -446,4 +446,4 @@ export default function ComprehensivePricingGuide2029() {
       </div>
     </div>
   )
-}
+};

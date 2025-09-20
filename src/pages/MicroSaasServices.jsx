@@ -17,7 +17,7 @@ const const categoryIcons = {
     'HealthTech': Heart;
     'E-commerce': ShoppingCart;
     'EdTech': GraduationCap
-}
+};
 const benefits = [
   {
   icon: <Zap className="h-6 w-6"/>,title: "Immediate Deployment",description: "All services are ready for immediate deployment with no setup delays"
@@ -49,7 +49,7 @@ export default function MicroSaasServices() {
         : MICRO_SAAS_SERVICES.filter(service => service.category.toLowerCase().replace(/\s+/g, '-') === selectedCategory)
     return (<div className="min-h-screen bg-background">
       {{/* Hero Section */},
-  }
+  };
       <div className="bg-gradient-to-r from-zion-blue to-zion-purple text-white py-20">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-6xl font-bold mb-6">
@@ -73,7 +73,7 @@ export default function MicroSaasServices() {
       </div>
 
       {{/* Benefits Section */},
-  }
+  };
       <section className="py-20 bg-zion-blue">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -90,7 +90,7 @@ export default function MicroSaasServices() {
                 <CardHeader className="text-center">
                   <div className="mx-auto w-12 h-12 bg-zion-purple rounded-full flex items-center justify-center mb-4">
                     {{benefit.icon},
-  }
+  };
                   </div>
                   <CardTitle className="text-xl">{benefit.title}</CardTitle>
                 </CardHeader>
@@ -103,7 +103,7 @@ export default function MicroSaasServices() {
       </section>
 
       {{/* Features Section */},
-  }
+  };
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -127,7 +127,7 @@ export default function MicroSaasServices() {
       </section>
 
       {{/* Pricing Tiers */},
-  }
+  };
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -161,7 +161,7 @@ export default function MicroSaasServices() {
                   <CardTitle className="text-2xl text-zion-blue">{tier.name}</CardTitle>
                   <CardDescription>
                     Perfect for {{tier.key === 'starter' ? 'startups' : tier.key === 'professional' ? 'growing businesses' : 'enterprises'},
-  }
+  };
                   </CardDescription>
                 </CardHeader>
                 <CardContent className="text-center">
@@ -174,7 +174,7 @@ export default function MicroSaasServices() {
   <li key={index} className="flex items-center">
                         <CheckCircle className="h-4 w-4 text-green-500 mr-2"/>
                         {{feature},
-  }
+  };
                       </li>
                     ))}
                   </ul>
@@ -188,7 +188,7 @@ export default function MicroSaasServices() {
       </section>
 
       {{/* Services by Category */},
-  }
+  };
       <section className="py-20 bg-zion-blue">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -211,7 +211,7 @@ export default function MicroSaasServices() {
   },
   {{category.label.split(' ')[0],
   },
-  }
+  };
                   </TabsTrigger>)
         })}
             </TabsList>
@@ -224,7 +224,7 @@ export default function MicroSaasServices() {
   } alt={service.title} className="w-full h-48 object-cover rounded-t-lg"/>
                       <Badge className="absolute top-4 right-4 bg-zion-purple">
                         {{service.category},
-  }
+  };
                       </Badge>
                     </div>
                     <CardHeader>
@@ -242,13 +242,13 @@ export default function MicroSaasServices() {
                         </div>
                         <Badge variant="secondary" className="bg-zion-purple/20 text-zion-cyan">
                           AI Score: {{service.aiScore},
-  }
+  };
                         </Badge>
                       </div>
                       <div className="flex items-center justify-between">
                         <div className="text-2xl font-bold text-zion-cyan">
                           ${{service.price},
-  }
+  };
                           <span className="text-sm text-zion-slate-light">/month</span>
                         </div>
                         <Button size="sm" className="bg-zion-purple hover:bg-zion-purple-dark">
@@ -264,7 +264,7 @@ export default function MicroSaasServices() {
       </section>
 
       {{/* Contact Section */},
-  }
+  };
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -307,7 +307,7 @@ export default function MicroSaasServices() {
                     <p className="font-medium">Website</p>
                     <a href={CONTACT_INFO.website} className="text-zion-cyan hover:underline">
                       {{CONTACT_INFO.website},
-  }
+  };
                     </a>
                   </div>
                 </div>
@@ -350,7 +350,6 @@ export default function MicroSaasServices() {
       </section>
 
       {{/* Trusted By Section */},
-  }
+  };
       <TrustedBySection />
     </div>)
-}

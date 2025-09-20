@@ -43,7 +43,7 @@ const [selectedCategory, setSelectedCategory] = useState<string>('All'),
 const element = document.getElementById('comprehensive-pricing-guide');
     if (element) {
       observer.observe(element)
-}
+};
 
     return () => observer.disconnect()
 }, []),
@@ -147,11 +147,11 @@ const getCategoryIcon = (category: string) => {
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 },
-  }
+  };
           animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 },
-  }
+  };
           transition={{ duration: 0.8 },
-  }
+  };
           className="text-center mb-16"
         >
           <div className="inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-zion-cyan/20 to-zion-purple/20 rounded-full border border-zion-cyan/30 mb-6">
@@ -176,11 +176,11 @@ const getCategoryIcon = (category: string) => {
         {/* Search and Filters */}
         <motion.div
           initial={{ opacity: 0, y: 20 },
-  }
+  };
           animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 },
-  }
+  };
           transition={{ duration: 0.8, delay: 0.2 },
-  }
+  };
           className="mb-12"
         >
           <div className="bg-gradient-to-r from-zion-slate-light/50 to-zion-slate-dark/50 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-6">
@@ -252,22 +252,22 @@ const getCategoryIcon = (category: string) => {
         {/* Services Grid */}
         <motion.div
           initial={{ opacity: 0, y: 30 },
-  }
+  };
           animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 },
-  }
+  };
           transition={{ duration: 0.8, delay: 0.4 },
-  }
+  };
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16"
         >
           {sortedServices.map((service, index) => (
             <motion.div
               key={`${service.source}-${service.id}`}
               initial={{ opacity: 0, y: 20 },
-  }
+  };
               animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 },
-  }
+  };
               transition={{ duration: 0.6, delay: index * 0.05 },
-  }
+  };
               className="group relative"
             >
               <div className="bg-gradient-to-br from-zion-slate-light/50 to-zion-slate-dark/50 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-6 h-full transition-all duration-500 hover:scale-105 hover:border-zion-cyan/40 hover:shadow-2xl hover:shadow-zion-cyan/25">
@@ -354,11 +354,11 @@ const getCategoryIcon = (category: string) => {
         {/* Contact Section */}
         <motion.div
           initial={{ opacity: 0, y: 30 },
-  }
+  };
           animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 },
-  }
+  };
           transition={{ duration: 0.8, delay: 0.6 },
-  }
+  };
           className="text-center"
         >
           <div className="bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-8">
@@ -408,4 +408,3 @@ const getCategoryIcon = (category: string) => {
       </div>
     </section>
   )
-};

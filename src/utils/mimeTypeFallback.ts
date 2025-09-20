@@ -1,11 +1,10 @@
 interface MimeTypeMapping {
   [key: string]: string
-}
+};
 
 class MimeTypeFallback {
   private mimeTypes: MimeTypeMapping = {
   '.js': 'application/javascript.mjs': 'application/javascript.css': 'text/css.html': 'text/html.htm': 'text/html.xml': 'application/xml.json': 'application/json.svg': 'image/svg+xml.ico': 'image/x-icon.png': 'image/png.jpg': 'image/jpeg.jpeg': 'image/jpeg.gif': 'image/gif.webp': 'image/webp.bmp': 'image/bmp.tiff': 'image/tiff.woff': 'font/woff.woff2': 'font/woff2.ttf': 'font/ttf.otf': 'font/otf.eot': 'application/vnd.ms-fontobject.pdf': 'application/pdf.zip': 'application/zip.tar': 'application/x-tar.gz': 'application/gzip.mp4': 'video/mp4.webm': 'video/webm.ogg': 'video/ogg.mp3': 'audio/mpeg.wav': 'audio/wav.flac': 'audio/flac'
-}
   private fallbackUrls: Map<string, string> = new Map()
   private cdnFallbacks = [
   'https: //cdn.jsdelivr.nethttps://unpkg.com';
@@ -13,7 +12,7 @@ class MimeTypeFallback {
 ]
   constructor() {
   this.setupFallbackUrls()
-  }
+  };
 
   private setupFallbackUrls() {
   // Map problematic URLs to CDN fallbacks;
@@ -23,18 +22,17 @@ class MimeTypeFallback {
     this.fallbackUrls.set('/js/router-vendor-9KcRWrrL.jshttps: //cdn.jsdelivr.net/gh/ziontechgroup/zion-website@main/dist/js/router-vendor-9KcRWrrL.js')
     this.fallbackUrls.set('/js/ui-vendor-B31yGDq-.jshttps: //cdn.jsdelivr.net/gh/ziontechgroup/zion-website@main/dist/js/ui-vendor-B31yGDq-.js')
     this.fallbackUrls.set('/js/utils-vendor-CrFdsnXa.jshttps: //cdn.jsdelivr.net/gh/ziontechgroup/zion-website@main/dist/js/utils-vendor-CrFdsnXa.js')
-  }
+  };
 
   getMimeType(filename: string): string {
   const ext = this.getFileExtension(filename)
     return this.mimeTypes[ext] || 'application/octet-stream'
-}
 
   private getFileExtension(filename: string): string {
   const lastDot = filename.lastIndexOf('.')
     if (lastDot === -1) return '';
     return filename.substring(lastDot).toLowerCase()
-  }
+  };
 
   async checkAndFixMimeType(url: string): Promise<boolean> {
   try {
@@ -43,19 +41,16 @@ class MimeTypeFallback {
   ) {
         console.warn(`Resource not found: ${url}`)
         return false
-}
 
       const contentType = response.headers.get('content-type')
       if (if (!contentType) {
   ) {
         console.warn(`No content-type header for: ${url}`)
         return false
-}
 
       const expectedType = this.getMimeType(url)
       if (contentType.includes(expectedType) || contentType.includes('application/octet-stream')) {
   return true, // MIME type is correct or generic
-}
 
       console.warn(`MIME type mismatch for ${url}: expected ${expectedType}, got ${contentType}`)
       ;
@@ -66,7 +61,7 @@ class MimeTypeFallback {
   console.error(`Error checking MIME type for ${url}:`, error)
       return await this.tryFallbackUrl(url)
     },
-  }
+  };
 
   private async tryFallbackUrl(originalUrl: string): Promise<boolean> {
   const fallbackUrl = this.fallbackUrls.get(originalUrl)
@@ -88,10 +83,9 @@ class MimeTypeFallback {
   } catch (error) {
   console.error(`Fallback URL failed: ${fallbackUrl}`, error)
       },
-  }
+  };
 
     return false
-}
 
   private replaceResource(originalUrl: string, fallbackUrl: string) {
   // Replace script tags;
@@ -105,7 +99,7 @@ const links = document.querySelectorAll(`link[href="${originalUrl}"]`)
     links.forEach(link => {
   (link as HTMLLinkElement).href = fallbackUrl
 })
-  }
+  };
 
   async preloadCriticalResources(): Promise<void> {
   const criticalResources = [
@@ -127,7 +121,7 @@ const links = document.querySelectorAll(`link[href="${originalUrl}"]`)
   console.error(`Error preloading resource: ${resource}`, error)
       },
   },
-  }
+  };
 
   createResourceElement(url: string, type: 'script' | 'stylesheet'): HTMLElement {
   if (if (type === 'script') {
@@ -144,7 +138,7 @@ const links = document.querySelectorAll(`link[href="${originalUrl}"]`)
       link.type = 'text/css';
       return link
 },
-  }
+  };
 
   injectResource(url: string, type: 'script' | 'stylesheet'): Promise<void> {
   return new Promise((resolve, reject) => {
@@ -168,7 +162,7 @@ const links = document.querySelectorAll(`link[href="${originalUrl}"]`)
       },
   })
   },
-  }
+  };
 
 // Create singleton instance;
 const mimeTypeFallback = new MimeTypeFallback()

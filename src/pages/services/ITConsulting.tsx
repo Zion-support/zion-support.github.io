@@ -217,18 +217,18 @@ const ITConsulting = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {{/* Hero Section */},
-  }
+  };
       <section className="relative overflow-hidden py-20">
         <div className="absolute inset-0 bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10"></div>
         <div className="container mx-auto px-4 relative z-10">
           <motion.div;
             className="className="text-center max-w-4xl mx-auto";"
             initial={{ opacity: 0, y: 30 },
-  }
+  };
             animate={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             className="className="text-center";"
           >
             <div className="inline-flex items-center px-4 py-2 bg-blue-500/10 border border-blue-500/20 rounded-full text-blue-400 text-sm font-medium mb-6">
@@ -264,17 +264,17 @@ const ITConsulting = () => {
       </section>
 
       {{/* Features Section */},
-  }
+  };
       <section className="py-20">
         <div className="container mx-auto px-4">
           <motion.div;
             className="className="text-center mb-16";"
             initial={{ opacity: 0, y: 30 },
-  }
+  };
             animate={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
@@ -290,13 +290,13 @@ const ITConsulting = () => {
             {services.map((service, index) => (
   <motion.div;
                 key={{index},
-  }
+  };
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.5, delay: index * 0.1 },
-  }
+  };
                 className="className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-blue-500/30 transition-all duration-200";"
               >
                 <div className="flex items-start gap-4 mb-6">
@@ -316,7 +316,7 @@ const ITConsulting = () => {
   <li key={featureIndex} className="flex items-center gap-2 text-zion-slate-light">
                         <CheckCircle className="w-4 h-4 text-zion-cyan flex-shrink-0" />
                         {{feature},
-  }
+  };
                       </li>
                     ))}
                   </ul>
@@ -330,17 +330,17 @@ const ITConsulting = () => {
       </section>
 
       {{/* Expertise Areas */},
-  }
+  };
       <section className="py-20 bg-zion-slate-dark/30">
         <div className="container mx-auto px-4">
           <motion.div;
             className="className="text-center mb-16";"
             initial={{ opacity: 0, y: 30 },
-  }
+  };
             animate={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
@@ -356,13 +356,13 @@ const ITConsulting = () => {
             {expertise.map((area, index) => (
   <motion.div;
                 key={{index},
-  }
+  };
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 },
-  }
+  };
                 whileInView={{ opacity: 1, x: 0 },
-  }
+  };
                 transition={{ duration: 0.5, delay: index * 0.1 },
-  }
+  };
                 className="className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-blue-500/30 transition-all duration-200";"
               >
                 <div className="flex items-start space-x-4">
@@ -384,17 +384,17 @@ const ITConsulting = () => {
       </section>
 
       {{/* Benefits Section */},
-  }
+  };
       <section className="py-20">
         <div className="container mx-auto px-4">
           <motion.div;
             className="className="text-center mb-16";"
             initial={{ opacity: 0, y: 30 },
-  }
+  };
             animate={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
@@ -409,14 +409,14 @@ const ITConsulting = () => {
             {benefits.map((benefit, index) => (
   <motion.div;
                 key={{index},
-  }
+  };
                 className="className="bg-zion-slate-dark/50 border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300";"
                 initial={{ opacity: 0, y: 30 },
-  }
+  };
                 animate={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.6, delay: index * 0.1 },
-  }
+  };
               >
                 <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-lg flex items-center justify-center mb-6">
                   <benefit.icon className="w-8 h-8 text-white" />
@@ -430,17 +430,17 @@ const ITConsulting = () => {
       </section>
 
       {{/* Industries Section */},
-  }
+  };
       <section className="py-20 bg-zion-slate-dark/30">
         <div className="container mx-auto px-4">
           <motion.div;
             className="className="text-center mb-16";"
             initial={{ opacity: 0, y: 30 },
-  }
+  };
             animate={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
@@ -456,13 +456,13 @@ const ITConsulting = () => {
             {industries.map((industry, index) => (
   <motion.div;
                 key={{index},
-  }
+  };
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.5, delay: index * 0.1 },
-  }
+  };
                 className="className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 text-center hover:border-blue-500/30 transition-all duration-200";"
               >
                 <div className="text-zion-cyan font-semibold">{industry}</div>
@@ -473,17 +473,17 @@ const ITConsulting = () => {
       </section>
 
       {{/* Process Section */},
-  }
+  };
       <section className="py-20">
         <div className="container mx-auto px-4">
           <motion.div;
             className="className="text-center mb-16";"
             initial={{ opacity: 0, y: 30 },
-  }
+  };
             animate={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
           >
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
               Our Consulting Process;
@@ -506,18 +506,18 @@ const ITConsulting = () => {
   ].map((phase, index) => (
   <motion.div;
                 key={{index},
-  }
+  };
                 className="className="text-center";"
                 initial={{ opacity: 0, y: 30 },
-  }
+  };
                 animate={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.6, delay: index * 0.1 },
-  }
+  };
               >
                 <div className="w-20 h-20 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold text-white">
                   {{phase.step},
-  }
+  };
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-2">{useCase.industry}</h3>
                 <p className="text-gray-300 text-sm">{useCase.description}</p>
@@ -528,17 +528,17 @@ const ITConsulting = () => {
       </section>
 
       {{/* CTA Section */},
-  }
+  };
       <section className="py-20 bg-zion-slate-dark/30">
         <div className="container mx-auto px-4">
           <motion.div;
             className="className="bg-gradient-to-r from-zion-cyan/20 to-zion-purple/20 border border-zion-cyan/30 rounded-2xl p-12 text-center";"
             initial={{ opacity: 0, y: 30 },
-  }
+  };
             animate={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
           >
             <h2 className="text-4xl font-bold text-white mb-4">
               Start Your IT Consultation Today;
@@ -566,5 +566,5 @@ const ITConsulting = () => {
       </section>
     </div>
   )
-}
+};
 export default ITConsulting;

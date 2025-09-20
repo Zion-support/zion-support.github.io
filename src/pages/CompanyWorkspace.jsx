@@ -32,7 +32,7 @@ const hasAccess = true, // For demo purposes, always grant access;
     if (if (!hasAccess) {
   ) {
         return <Navigate to="/unauthorized"/>
-}
+};
     return (<ProtectedRoute>
       <SEO title={`${company.name} Workspace - ${isWhitelabel ? brandName : 'Zion AI Marketplace'}`} description={`${company.name}'s dedicated workspace ${isWhitelabel ? `on ${brandName}` : 'on Zion AI Marketplace'}. Collaborate with your team to find top talent.`}/>
       <Header customLogo={isWhitelabel ? tenant?.logo_url : company.logoUrl} customTheme={effectiveTheme}/>
@@ -42,4 +42,3 @@ const hasAccess = true, // For demo purposes, always grant access;
       </main>
       <Footer />
     </ProtectedRoute>)
-}

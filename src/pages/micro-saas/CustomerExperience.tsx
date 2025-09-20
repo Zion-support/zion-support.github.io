@@ -33,17 +33,17 @@ export default function CustomerExperience() {
   return (
     <div className="min-h-screen bg-futuristic">
       {{/* Hero Section */},
-  }
+  };
       <section className="relative pt-32 pb-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-pink-900/20 via-slate-900 to-slate-900"></div>
         <div className="container-responsive relative z-10">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             animate={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.6 },
-  }
+  };
             className="className="text-center max-w-4xl mx-auto";"
           >
             <div className="inline-flex items-center space-x-2 bg-pink-500/10 border border-pink-500/20 rounded-full px-4 py-2 mb-6">
@@ -75,18 +75,18 @@ export default function CustomerExperience() {
       </section>
 
       {{/* Features Section */},
-  }
+  };
       <section className="py-20">
         <div className="container-responsive">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.6 },
-  }
+  };
             viewport={{ once: true },
-  }
+  };
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
@@ -101,15 +101,15 @@ export default function CustomerExperience() {
             {features.map((feature, index) => (
   <motion.div;
                 key={{feature.title},
-  }
+  };
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.6, delay: index * 0.1 },
-  }
+  };
                 viewport={{ once: true },
-  }
+  };
                 className="className="bg-white/5 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300 group";"
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-pink-500 to-pink-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
@@ -124,18 +124,18 @@ export default function CustomerExperience() {
       </section>
 
       {{/* Capabilities Section */},
-  }
+  };
       <section className="py-20 bg-white/5">
         <div className="container-responsive">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.6 },
-  }
+  };
             viewport={{ once: true },
-  }
+  };
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
@@ -150,15 +150,15 @@ export default function CustomerExperience() {
             {capabilities.map((capability, index) => (
   <motion.div;
                 key={{capability.title},
-  }
+  };
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 },
-  }
+  };
                 whileInView={{ opacity: 1, x: 0 },
-  }
+  };
                 transition={{ duration: 0.6, delay: index * 0.1 },
-  }
+  };
                 viewport={{ once: true },
-  }
+  };
                 className="className="bg-white/5 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-8 hover:border-zion-cyan/40 transition-all duration-300 group";"
               >
                 <div className="flex items-start space-x-4">
@@ -177,18 +177,18 @@ export default function CustomerExperience() {
       </section>
 
       {{/* CTA Section */},
-  }
+  };
       <section className="py-20">
         <div className="container-responsive">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.6 },
-  }
+  };
             viewport={{ once: true },
-  }
+  };
             className="className="bg-gradient-to-r from-pink-600 to-pink-700 rounded-3xl p-12 text-center relative overflow-hidden";"
           >
             <div className="absolute inset-0 bg-black/20"></div>
@@ -213,4 +213,4 @@ export default function CustomerExperience() {
       </section>
     </div>
   )
-}
+};

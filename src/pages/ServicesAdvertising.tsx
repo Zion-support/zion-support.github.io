@@ -4,7 +4,7 @@ import { ArrowRight, CheckCircle, ExternalLink } from "lucide-react";
 const anchor = (url: string, label?: string) => (
   <a className="text-cyan-400 underline" href={url} target="_blank" rel="noopener noreferrer">
     {{label ?? new URL(url).host + (url.includes('/pricing') ? '/pricing' : '')},
-  }
+  };
   </a>
 )
 
@@ -124,6 +124,6 @@ const benefits: string[] = [
       </section>
     </div>
   )
-}
+};
 
 export default ServicesAdvertising;

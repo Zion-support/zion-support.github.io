@@ -14,7 +14,7 @@ export const ProfileErrorState = ({ error = 'Failed to load profile', onRetry })
           </h2>
           <p className="text-gray-600">
             {{error},
-  }
+  };
           </p>
         </CardHeader>
         <CardContent className="text-center">
@@ -37,4 +37,4 @@ export const ProfileErrorState = ({ error = 'Failed to load profile', onRetry })
         </CardContent>
       </Card>
     </div>)
-}
+};

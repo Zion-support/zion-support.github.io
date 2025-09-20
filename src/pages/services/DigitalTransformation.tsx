@@ -81,7 +81,7 @@ export default function DigitalTransformation() {
   const const contactInfo = {
   = {
     phone: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008, Middletown DE 19709"
-}
+};
   const industries = [
   'HealthcareFinance';
     'ManufacturingRetail';
@@ -92,18 +92,18 @@ export default function DigitalTransformation() {
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
       <SEO title="Digital Transformation - Zion Tech Group" description="Modernize processes with cloud-native platforms, automation, and data-driven operations." />
       {{/* Hero Section */},
-  }
+  };
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-900/20 to-purple-900/20"></div>
         <div className="relative z-10 container mx-auto px-4 text-center">
           <motion.div;
             className="className="text-center";"
             initial={{ opacity: 0, y: 30 },
-  }
+  };
             animate={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
           >
             <div className="inline-flex items-center px-4 py-2 bg-orange-500/10 border border-orange-500/20 rounded-full text-orange-400 text-sm font-medium mb-6">
               <Zap className="w-4 h-4 mr-2" />
@@ -137,17 +137,17 @@ export default function DigitalTransformation() {
         </div>
       </section>
       {{/* Services Grid */},
-  }
+  };
       <section className="py-20 px-4">
         <div className="container mx-auto">
           <motion.div;
             className="className="text-center mb-16";"
             initial={{ opacity: 0, y: 30 },
-  }
+  };
             animate={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
@@ -162,13 +162,13 @@ export default function DigitalTransformation() {
             {services.map((service, index) => (
   <motion.div;
                 key={{index},
-  }
+  };
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.5, delay: index * 0.1 },
-  }
+  };
                 className="className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-orange-500/30 transition-all duration-200";"
               >
                 <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-500 rounded-lg flex items-center justify-center mb-4">
@@ -183,16 +183,16 @@ export default function DigitalTransformation() {
       </section>
 
       {{/* Services Section */},
-  }
+  };
       <section className="py-20 bg-slate-800/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
@@ -208,13 +208,13 @@ export default function DigitalTransformation() {
             {services.map((service, index) => (
   <motion.div;
                 key={{index},
-  }
+  };
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 },
-  }
+  };
                 whileInView={{ opacity: 1, x: 0 },
-  }
+  };
                 transition={{ duration: 0.5, delay: index * 0.1 },
-  }
+  };
                 className="className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-orange-500/30 transition-all duration-200";"
               >
                 <div className="flex items-start space-x-4">
@@ -233,17 +233,17 @@ export default function DigitalTransformation() {
       </section>
 
       {{/* Benefits Section */},
-  }
+  };
       <section className="py-20 bg-zion-slate-dark/30">
         <div className="container mx-auto px-4">
           <motion.div;
             className="className="text-center mb-16";"
             initial={{ opacity: 0, y: 30 },
-  }
+  };
             animate={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
@@ -257,14 +257,14 @@ export default function DigitalTransformation() {
             {benefits.map((benefit, index) => (
   <motion.div;
                 key={{index},
-  }
+  };
                 className="className="bg-zion-slate-dark/50 border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300";"
                 initial={{ opacity: 0, y: 30 },
-  }
+  };
                 animate={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.6, delay: index * 0.1 },
-  }
+  };
               >
                 <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-lg flex items-center justify-center mb-6">
                   <benefit.icon className="w-8 h-8 text-white" />
@@ -277,17 +277,17 @@ export default function DigitalTransformation() {
         </div>
       </section>
       {{/* Industries Section */},
-  }
+  };
       <section className="py-20">
         <div className="container mx-auto px-4">
           <motion.div;
             className="className="text-center mb-16";"
             initial={{ opacity: 0, y: 30 },
-  }
+  };
             animate={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
@@ -302,13 +302,13 @@ export default function DigitalTransformation() {
             {industries.map((industry, index) => (
   <motion.div;
                 key={{index},
-  }
+  };
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.5, delay: index * 0.1 },
-  }
+  };
                 className="className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 text-center hover:border-orange-500/30 transition-all duration-200";"
               >
                 <div className="text-zion-cyan font-semibold">{industry}</div>
@@ -318,17 +318,17 @@ export default function DigitalTransformation() {
         </div>
       </section>
       {{/* Process Section */},
-  }
+  };
       <section className="py-20 bg-zion-slate-dark/30">
         <div className="container mx-auto px-4">
           <motion.div;
             className="className="text-center mb-16";"
             initial={{ opacity: 0, y: 30 },
-  }
+  };
             animate={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
           >
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
               Our Transformation Process;
@@ -350,18 +350,18 @@ export default function DigitalTransformation() {
   ].map((phase, index) => (
   <motion.div;
                 key={{index},
-  }
+  };
                 className="className="text-center";"
                 initial={{ opacity: 0, y: 30 },
-  }
+  };
                 animate={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.6, delay: index * 0.1 },
-  }
+  };
               >
                 <div className="w-20 h-20 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold text-white">
                   {{phase.step},
-  }
+  };
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-2">{useCase.industry}</h3>
                 <p className="text-gray-300 text-sm">{useCase.description}</p>
@@ -372,17 +372,17 @@ export default function DigitalTransformation() {
       </section>
 
       {{/* CTA Section */},
-  }
+  };
       <section className="py-20">
         <div className="container mx-auto px-4">
           <motion.div;
             className="className="bg-gradient-to-r from-zion-cyan/20 to-zion-purple/20 border border-zion-cyan/30 rounded-2xl p-12 text-center";"
             initial={{ opacity: 0, y: 30 },
-  }
+  };
             animate={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
           >
             <h2 className="text-4xl font-bold text-white mb-4">
               Start Your Digital Transformation Today;
@@ -410,4 +410,3 @@ export default function DigitalTransformation() {
       </section>
     </div>
   )
-}

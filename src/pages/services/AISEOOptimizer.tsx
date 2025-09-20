@@ -69,6 +69,6 @@ const,
       </div>
     </div>
   )
-}
+};
 
 export default AISEOOptimizer

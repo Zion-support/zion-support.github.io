@@ -131,7 +131,7 @@ export default function Security() {
   ]
   const toggleCompliance = (name: string) => {
   setExpandedCompliance(expandedCompliance === name ? null : name)
-  }
+  };
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO ;
@@ -140,17 +140,17 @@ export default function Security() {
       />
       ;
       {{/* Hero Section */},
-  }
+  };
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-red-500/10 via-orange-500/10 to-yellow-500/10"></div>
         <div className="container mx-auto px-6 relative z-10">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             animate={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             className="className="text-center";"
           >
             <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-red-500/20 to-orange-500/20 rounded-2xl mb-6">
@@ -168,20 +168,20 @@ export default function Security() {
       </section>
 
       {{/* Security Metrics */},
-  }
+  };
       <section className="py-16">
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {securityMetrics.map((metric, index) => (
   <motion.div;
                 key={{metric.label},
-  }
+  };
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.8, delay: index * 0.1 },
-  }
+  };
                 className="className="text-center";"
               >
                 <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50">
@@ -196,16 +196,16 @@ export default function Security() {
       </section>
 
       {{/* Security Features */},
-  }
+  };
       <section className="py-20">
         <div className="container mx-auto px-6">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">Comprehensive Security Features</h2>
@@ -218,13 +218,13 @@ export default function Security() {
             {securityFeatures.map((feature, index) => (
   <motion.div;
                 key={{feature.title},
-  }
+  };
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.8, delay: index * 0.1 },
-  }
+  };
                 className="className="group";"
               >
                 <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50 hover:border-red-400/50 transition-all duration-300 hover:scale-105 h-full">
@@ -235,7 +235,7 @@ export default function Security() {
                   <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
                   <p className="text-gray-300 text-sm mb-6 leading-relaxed">
                     {{feature.description},
-  }
+  };
                   </p>
                   ;
                   <ul className="space-y-2">
@@ -243,7 +243,7 @@ export default function Security() {
   <li key={itemIndex} className="flex items-center text-gray-300 text-sm">
                         <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                         {{item},
-  }
+  };
                       </li>
                     ))}
                   </ul>
@@ -255,16 +255,16 @@ export default function Security() {
       </section>
 
       {{/* Compliance Frameworks */},
-  }
+  };
       <section className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50">
         <div className="container mx-auto px-6">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">Compliance & Certifications</h2>
@@ -277,20 +277,20 @@ export default function Security() {
             {complianceFrameworks.map((framework, index) => (
   <motion.div;
                 key={{framework.name},
-  }
+  };
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.8, delay: index * 0.1 },
-  }
+  };
                 className="className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl border border-slate-600/50 overflow-hidden";"
               >
                 <div ;
                   className="className="p-6 cursor-pointer hover:bg-slate-700/30 transition-colors duration-200";"
                   onClick={{onClick={() => toggleCompliance(framework.name)},
   },
-  }
+  };
                 >
                   <div className="flex items-center justify-between">
                     <div className="flex items-center">
@@ -303,7 +303,7 @@ export default function Security() {
                     <div className="flex items-center">
                       <span className="px-3 py-1 bg-green-500/20 text-green-400 text-xs rounded-full mr-4">
                         {{framework.status},
-  }
+  };
                       </span>
                       {expandedCompliance === framework.name ? (
   <ChevronUp className="w-5 h-5 text-gray-400" />
@@ -317,13 +317,13 @@ export default function Security() {
                 {expandedCompliance === framework.name && (
   <motion.div;
                     initial={{ opacity: 0, height: 0 },
-  }
+  };
                     animate={{ opacity: 1, height: 'auto' },
-  }
+  };
                     exit={{ opacity: 0, height: 0 },
-  }
+  };
                     transition={{ duration: 0.3 },
-  }
+  };
                     className="className="px-6 pb-6 border-t border-slate-600/50";"
                   >
                     <div className="pt-4">
@@ -333,7 +333,7 @@ export default function Security() {
   <li key={detailIndex} className="flex items-center text-gray-300 text-sm">
                             <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                             {{detail},
-  }
+  };
                           </li>
                         ))}
                       </ul>
@@ -347,16 +347,16 @@ export default function Security() {
       </section>
 
       {{/* Best Practices */},
-  }
+  };
       <section className="py-20">
         <div className="container mx-auto px-6">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">Security Best Practices</h2>
@@ -369,13 +369,13 @@ export default function Security() {
             {bestPractices.map((practice, index) => (
   <motion.div;
                 key={{practice.title},
-  }
+  };
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.8, delay: index * 0.1 },
-  }
+  };
                 className="className="flex items-start";"
               >
                 <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r from-red-500/20 to-orange-500/20 rounded-xl mr-4 flex-shrink-0">
@@ -385,7 +385,7 @@ export default function Security() {
                   <h3 className="text-lg font-bold text-white mb-2">{practice.title}</h3>
                   <p className="text-gray-300 text-sm leading-relaxed">
                     {{practice.description},
-  }
+  };
                   </p>
                 </div>
               </motion.div>
@@ -395,16 +395,16 @@ export default function Security() {
       </section>
 
       {{/* Security Resources */},
-  }
+  };
       <section className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50">
         <div className="container mx-auto px-6">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">Security Resources</h2>
@@ -416,11 +416,11 @@ export default function Security() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <motion.div;
               initial={{ opacity: 0, y: 20 },
-  }
+  };
               whileInView={{ opacity: 1, y: 0 },
-  }
+  };
               transition={{ duration: 0.8, delay: 0.1 },
-  }
+  };
               className="className="group";"
             >
               <a href="/help/security/whitepaper" className="block">
@@ -444,11 +444,11 @@ export default function Security() {
 
             <motion.div;
               initial={{ opacity: 0, y: 20 },
-  }
+  };
               whileInView={{ opacity: 1, y: 0 },
-  }
+  };
               transition={{ duration: 0.8, delay: 0.2 },
-  }
+  };
               className="className="group";"
             >
               <a href="/help/security/checklist" className="block">
@@ -472,11 +472,11 @@ export default function Security() {
 
             <motion.div;
               initial={{ opacity: 0, y: 20 },
-  }
+  };
               whileInView={{ opacity: 1, y: 0 },
-  }
+  };
               transition={{ duration: 0.8, delay: 0.3 },
-  }
+  };
               className="className="group";"
             >
               <a href="/help/security/incident-response" className="block">
@@ -502,16 +502,16 @@ export default function Security() {
       </section>
 
       {{/* Contact Security Team */},
-  }
+  };
       <section className="py-20">
         <div className="container mx-auto px-6 text-center">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
           >
             <h2 className="text-4xl font-bold text-white mb-6">
               Questions About Security?;
@@ -541,4 +541,4 @@ export default function Security() {
       </section>
     </div>
   )
-}
+};

@@ -30,7 +30,7 @@ export function AppHeader() {
   setIsSearching(false)
       },
   },
-  }
+  };
 
   const navigation = [
   {{ name: 'Home', href: '/', current: true },
@@ -61,94 +61,76 @@ export function AppHeader() {
 },
   {
   name: 'AI Autonomous Sales Intelligence',href: '/services/ai-autonomous-sales-intelligence',icon: Target,description: 'Autonomous Sales & Lead Generation',featured: true,color: 'from-green-500 to-emerald-500'
-}
+};
     // AI & Healthcare;
     {
   name: 'AI Healthcare Platform',href: '/services/ai-healthcare-platform',icon: Heart,description: 'Medical AI & Diagnostics',featured: true,color: 'from-red-500 to-pink-500'
 },
   {
   name: 'Quantum AI Drug Discovery',href: '/services/quantum-ai-drug-discovery-platform',icon: Atom,description: 'Quantum Drug Discovery',featured: true,color: 'from-purple-500 to-pink-500'
-}
     // AI & Legal Tech;
     {
   name: 'AI Legal Contract Analyzer',href: '/services/ai-autonomous-legal-contract-analyzer',icon: Scale,description: 'Autonomous Legal Analysis',featured: true,color: 'from-blue-500 to-indigo-500'
-}
     // AI & Content;
     {
   name: 'AI Creative Studio',href: '/services/ai-autonomous-creative-studio',icon: PenTool,description: 'Autonomous Content Creation',featured: true,color: 'from-orange-500 to-red-500'
 },
   {
   name: 'AI Content Creation',href: '/services/ai-content-creation',icon: FileText,description: 'Content Generation & Optimization',featured: true,color: 'from-blue-500 to-indigo-500'
-}
     // AI & Customer Support;
     {
   name: 'AI Customer Success Platform',href: '/services/ai-autonomous-customer-success-platform',icon: MessageCircle,description: 'Autonomous Customer Success',featured: true,color: 'from-blue-500 to-purple-500'
 },
   {
   name: 'AI Customer Support',href: '/services/ai-customer-support',icon: HelpCircle,description: 'AI-Powered Support',featured: true,color: 'from-green-500 to-blue-500'
-}
     // AI & Research;
     {
   name: 'AI Research Assistant',href: '/services/ai-autonomous-research-assistant',icon: BookOpen,description: 'Autonomous Research Automation',featured: true,color: 'from-purple-500 to-violet-500'
-}
     // AI & Education;
     {
   name: 'AI Education Platform',href: '/services/ai-autonomous-education-platform',icon: Users,description: 'Autonomous Learning Management',featured: true,color: 'from-blue-500 to-indigo-500'
-}
     // AI & HR;
     {
   name: 'AI HR Platform',href: '/services/ai-autonomous-hr-platform',icon: Users,description: 'Autonomous HR Management',featured: true,color: 'from-indigo-500 to-blue-500'
-}
     // AI & Entertainment;
     {
   name: 'AI Entertainment Platform',href: '/services/ai-autonomous-entertainment-platform',icon: Play,description: 'Autonomous Entertainment Creation',featured: true,color: 'from-purple-500 to-pink-500'
-}
     // AI & Metaverse;
     {
   name: 'AI Metaverse Platform',href: '/services/ai-autonomous-metaverse-platform',icon: Globe,description: 'Autonomous Virtual Worlds',featured: true,color: 'from-purple-500 to-indigo-500'
-}
     // AI & Space Tech;
     {
   name: 'AI Space Technology',href: '/services/ai-autonomous-space-technology-platform',icon: Rocket,description: 'Autonomous Space Operations',featured: true,color: 'from-indigo-500 to-purple-500'
-}
     // AI & Green Tech;
     {
   name: 'AI Green Technology',href: '/services/ai-autonomous-green-technology-platform',icon: Leaf,description: 'Autonomous Environmental Management',featured: true,color: 'from-green-500 to-emerald-500'
-}
     // Cybersecurity;
     {
   name: 'AI Autonomous Cybersecurity',href: '/services/ai-autonomous-cybersecurity-operations',icon: ShieldCheck,description: 'Autonomous Security Operations',featured: true,color: 'from-red-500 to-orange-500'
 },
   {
   name: 'AI Cybersecurity',href: '/services/ai-cybersecurity',icon: Shield,description: 'AI-Powered Security',featured: true,color: 'from-green-500 to-blue-500'
-}
     // Quantum Computing;
     {
   name: 'Quantum AI Trading Platform',href: '/services/quantum-ai-trading-platform',icon: Atom,description: 'Quantum-Powered Trading',featured: true,color: 'from-purple-500 to-pink-500'
 },
   {
   name: 'Quantum Computing',href: '/services/quantum-computing',icon: Atom,description: 'Quantum AI & Optimization',featured: true,color: 'from-purple-500 to-pink-500'
-}
     // Blockchain & Web3;
     {
   name: 'Blockchain Governance Platform',href: '/services/blockchain-autonomous-governance-platform',icon: GitFork,description: 'Decentralized Autonomous Governance',featured: true,color: 'from-yellow-500 to-orange-500'
-}
     // Cloud & DevOps;
     {
   name: 'Cloud Infrastructure',href: '/services/cloud-devops',icon: Cloud,description: 'Cloud & DevOps Solutions',featured: true,color: 'from-blue-500 to-cyan-500'
-}
     // IoT & Edge Computing;
     {
   name: 'IoT Edge Computing',href: '/services/iot-edge-computing',icon: Cpu,description: 'IoT & Real-time Processing',featured: true,color: 'from-blue-500 to-cyan-500'
-}
     // Digital Twin;
     {
   name: 'Digital Twin Platform',href: '/services/digital-twin',icon: Globe,description: 'Virtual Replicas & Simulation',featured: true,color: 'from-blue-500 to-indigo-500'
-}
     // Data Analytics;
     {
   name: 'Data Analytics',href: '/services/data-analytics',icon: BarChart3,description: 'Advanced Analytics & BI',featured: true,color: 'from-green-500 to-emerald-500'
-}
     // IT Infrastructure;
     {
   name: 'IT Infrastructure',href: '/services/it-infrastructure',icon: Server,description: 'Infrastructure & Management',featured: true,color: 'from-gray-500 to-slate-500'
@@ -252,7 +234,6 @@ export function AppHeader() {
   const const contactInfo = {
   = {
     phone: '+1 302 464 0950',email: 'kleber@ziontechgroup.com',address: '364 E Main St STE 1008 Middletown DE 19709'
-}
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
   scrolled ;
@@ -262,7 +243,7 @@ export function AppHeader() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {{/* Logo */},
-  }
+  };
           <div className="flex-shrink-0">
             <Link to="/" className="flex items-center space-x-2">
               <div className="w-8 h-8 bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
@@ -275,13 +256,13 @@ export function AppHeader() {
           </div>
 
           {{/* Desktop Navigation */},
-  }
+  };
           <nav className="hidden md:flex space-x-8">
             {navigation.map((item) => (
   <div key={item.name} className="relative">
                 <Link;
                   to={{item.href},
-  }
+  };
                   className="className="text-gray-700 hover: text-blue-600 dark:text-gray-300 dark:hover:text-blue-400 px-3 py-2 text-sm font-medium transition-colors duration-200";"
                   onMouseEnter={() => {
                     if (if (item.hasDropdown) {
@@ -291,12 +272,12 @@ export function AppHeader() {
                       if (item.name === 'Resources') setResourcesDropdownOpen(true)
                     },
   },
-  }
+  };
                 >
                   {{item.name},
   },
   {{item.hasDropdown && <ChevronDown className="inline-block w-4 h-4 ml-1" />},
-  }
+  };
                 </Link>
 
                 {{/* Services Dropdown */},
@@ -305,15 +286,15 @@ export function AppHeader() {
   <div ;
                     className="className="absolute top-full left-0 w-screen max-w-6xl bg-white dark:bg-gray-900 shadow-xl rounded-lg border border-gray-200 dark:border-gray-800 mt-2";"
                     onMouseLeave={{() => setServicesDropdownOpen(false)},
-  }
+  };
                   >
                     <div className="p-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                       {services.map((service) => (
   <Link;
                           key={{service.name},
-  }
+  };
                           to={{service.href},
-  }
+  };
                           className="className="group p-4 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-all duration-200";"
                         >
                           <div className="flex items-center space-x-3">
@@ -323,11 +304,11 @@ export function AppHeader() {
                             <div className="flex-1">
                               <h3 className="font-semibold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-200">
                                 {{service.name},
-  }
+  };
                               </h3>
                               <p className="text-sm text-gray-600 dark:text-gray-400">
                                 {{service.description},
-  }
+  };
                               </p>
                             </div>
                           </div>
@@ -351,30 +332,30 @@ export function AppHeader() {
   <div ;
                     className="className="absolute top-full left-0 w-80 bg-white dark:bg-gray-900 shadow-xl rounded-lg border border-gray-200 dark:border-gray-800 mt-2";"
                     onMouseLeave={{() => setSolutionsDropdownOpen(false)},
-  }
+  };
                   >
                     <div className="p-4">
                       {solutions.map((section, sectionIndex) => (
   <div key={section.title} className={sectionIndex > 0 ? 'mt-6' : ''}>
                           <h3 className="text-sm font-semibold text-gray-900 dark:text-white mb-2">
                             {{section.title},
-  }
+  };
                           </h3>
                           {section.items.map((solution) => (
   <Link;
                               key={{solution.name},
-  }
+  };
                               to={{solution.href},
-  }
+  };
                               className="className="block p-2 rounded hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors duration-200";"
                             >
                               <div className="font-medium text-gray-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200">
                                 {{solution.name},
-  }
+  };
                               </div>
                               <div className="text-sm text-gray-600 dark:text-gray-400">
                                 {{solution.description},
-  }
+  };
                               </div>
                             </Link>
                           ))}
@@ -389,30 +370,30 @@ export function AppHeader() {
   <div ;
                     className="className="absolute top-full left-0 w-80 bg-white dark:bg-gray-900 shadow-xl rounded-lg border border-gray-200 dark:border-gray-800 mt-2";"
                     onMouseLeave={{() => setResourcesDropdownOpen(false)},
-  }
+  };
                   >
                     <div className="p-4">
                       {resources.map((section, sectionIndex) => (
   <div key={section.title} className={sectionIndex > 0 ? 'mt-6' : ''}>
                           <h3 className="text-sm font-semibold text-gray-900 dark:text-white mb-2">
                             {{section.title},
-  }
+  };
                           </h3>
                           {section.items.map((resource) => (
   <Link;
                               key={{resource.name},
-  }
+  };
                               to={{resource.href},
-  }
+  };
                               className="className="block p-2 rounded hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors duration-200";"
                             >
                               <div className="font-medium text-gray-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200">
                                 {{resource.name},
-  }
+  };
                               </div>
                               <div className="text-sm text-gray-600 dark:text-gray-400">
                                 {{resource.description},
-  }
+  };
                               </div>
                             </Link>
                           ))}
@@ -426,18 +407,18 @@ export function AppHeader() {
           </nav>
 
           {{/* Right side - Search, Theme, Contact */},
-  }
+  };
           <div className="flex items-center space-x-4">
             {{/* Search */},
-  }
+  };
             <form onSubmit={handleSearch} className="hidden lg:flex relative">
               <input;
                 type="text";
                 placeholder="Search services...";
                 value={{searchQuery},
-  }
+  };
                 onChange={{(e) => setSearchQuery(e.target.value)},
-  }
+  };
                 className="className="w-64 px-4 py-2 pl-10 pr-4 text-sm bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:text-white";"
               />
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />
@@ -449,11 +430,11 @@ export function AppHeader() {
             </form>
 
             {{/* Theme Toggle */},
-  }
+  };
             <ThemeToggle />
 
             {{/* Contact Button */},
-  }
+  };
             <Link;
               to="/contact";
               className="className="hidden md:inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-lg text-white bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-all duration-200";"
@@ -463,11 +444,11 @@ export function AppHeader() {
             </Link>
 
             {{/* Mobile menu button */},
-  }
+  };
             <button;
               onClick={{onClick={() => setMobileMenuOpen(!mobileMenuOpen)},
   },
-  }
+  };
               className="className="md:hidden inline-flex items-center justify-center p-2 rounded-md text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500";"
             >
               {mobileMenuOpen ? (
@@ -486,15 +467,15 @@ export function AppHeader() {
   <div className="md:hidden">
           <div className="px-2 pt-2 pb-3 space-y-1 bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800">
             {{/* Mobile Search */},
-  }
+  };
             <form onSubmit={handleSearch} className="relative mb-4">
               <input;
                 type="text";
                 placeholder="Search services...";
                 value={{searchQuery},
-  }
+  };
                 onChange={{(e) => setSearchQuery(e.target.value)},
-  }
+  };
                 className="className="w-full px-4 py-2 pl-10 pr-4 text-sm bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:text-white";"
               />
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />
@@ -505,26 +486,26 @@ export function AppHeader() {
   {navigation.map((item) => (
   <Link;
                 key={{item.name},
-  }
+  };
                 to={{item.href},
-  }
+  };
                 className="className="block px-3 py-2 text-base font-medium text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-md transition-colors duration-200";"
                 onClick={{onClick={() => setMobileMenuOpen(false)},
   },
-  }
+  };
               >
                 {{item.name},
-  }
+  };
               </Link>
             ))},
   {{/* Mobile Contact Button */},
-  }
+  };
             <Link;
               to="/contact";
               className="className="mt-4 block w-full text-center px-4 py-2 border border-transparent text-sm font-medium rounded-lg text-white bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-all duration-200";"
               onClick={{onClick={() => setMobileMenuOpen(false)},
   },
-  }
+  };
             >
               <Phone className="w-4 h-4 inline mr-2" />
               Contact Us;
@@ -534,4 +515,3 @@ export function AppHeader() {
       )}
     </header>
   )
-}

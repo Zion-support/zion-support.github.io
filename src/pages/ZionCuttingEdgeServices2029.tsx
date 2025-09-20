@@ -51,7 +51,7 @@ let matchesPrice = true;
 } else {
         matchesPrice = service.pricing.starter >= min
 },
-  }
+  };
     ;
     return matchesSearch && matchesCategory && matchesPrice
 })
@@ -64,7 +64,7 @@ let matchesPrice = true;
       case '5000+': return '$5,000+/month';
       default: return 'All Prices'
 },
-  }
+  };
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <SEO ;
@@ -74,16 +74,16 @@ let matchesPrice = true;
       />
 
       {{/* Hero Section */},
-  }
+  };
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             animate={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
           >
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
@@ -117,7 +117,7 @@ let matchesPrice = true;
       </section>
 
       {{/* Contact Information Banner */},
-  }
+  };
       <section id="contact" className="bg-gradient-to-r from-blue-600 to-purple-600 py-8">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
@@ -138,50 +138,50 @@ let matchesPrice = true;
       </section>
 
       {{/* Search and Filter Section */},
-  }
+  };
       <section className="py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               {{/* Search */},
-  }
+  };
               <div className="relative">
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                 <input;
                   type="text";
                   placeholder="Search services...";
                   value={{searchTerm},
-  }
+  };
                   onChange={{(e) => setSearchTerm(e.target.value)},
-  }
+  };
                   className="className="w-full pl-10 pr-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent";"
                 />
               </div>
 
               {{/* Category Filter */},
-  }
+  };
               <select;
                 value={{selectedCategory},
-  }
+  };
                 onChange={{(e) => setSelectedCategory(e.target.value)},
-  }
+  };
                 className="className="px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent";"
               >
                 {categories.map(category => (
   <option key={category} value={category} className="bg-slate-800 text-white">
                     {{category === 'all' ? 'All Categories' : category},
-  }
+  };
                   </option>
                 ))}
               </select>
 
               {{/* Price Range Filter */},
-  }
+  };
               <select;
                 value={{priceRange},
-  }
+  };
                 onChange={{(e) => setPriceRange(e.target.value)},
-  }
+  };
                 className="className="px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent";"
               >
                 <option value="all">All Prices</option>
@@ -196,7 +196,7 @@ let matchesPrice = true;
       </section>
 
       {{/* Services Grid */},
-  }
+  };
       <section id="services" className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
@@ -213,17 +213,17 @@ let matchesPrice = true;
             {filteredServices.map((service, index) => (
   <motion.div;
                 key={{service.id},
-  }
+  };
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 animate={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.5, delay: index * 0.1 },
-  }
+  };
                 className="className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300 hover:transform hover:scale-105";"
               >
                 {{/* Service Header */},
-  }
+  };
                 <div className="text-center mb-6">
                   <div className="text-4xl mb-4">{service.icon}</div>
                   <h3 className="text-xl font-bold text-white mb-2">{service.name}</h3>
@@ -233,7 +233,7 @@ let matchesPrice = true;
                       {[...Array(5)].map((_, i) => (
   <Star;
                           key={{i},
-  }
+  };
                           className={`w-4 h-4 ${
   i < Math.floor(service.rating)
                               ? 'text-yellow-400 fill-current';
@@ -247,18 +247,18 @@ let matchesPrice = true;
                 </div>
 
                 {{/* Price */},
-  }
+  };
                 <div className="text-center mb-4">
                   <div className="text-3xl font-bold text-white">{service.price}</div>
                   <div className="text-gray-300">{service.period}</div>
                 </div>
 
                 {{/* Description */},
-  }
+  };
                 <p className="text-gray-300 text-sm mb-6 line-clamp-3">{service.description}</p>
 
                 {{/* Features */},
-  }
+  };
                 <div className="mb-6">
                   <h4 className="text-white font-semibold mb-3 flex items-center gap-2">
                     <CheckCircle className="w-4 h-4 text-green-400" />
@@ -269,14 +269,14 @@ let matchesPrice = true;
   <li key={idx} className="text-gray-300 text-sm flex items-start gap-2">
                         <div className="w-1.5 h-1.5 bg-blue-400 rounded-full mt-2 flex-shrink-0"></div>
                         {{feature},
-  }
+  };
                       </li>
                     ))}
                   </ul>
                 </div>
 
                 {{/* Benefits */},
-  }
+  };
                 <div className="mb-6">
                   <h4 className="text-white font-semibold mb-3 flex items-center gap-2">
                     <TrendingUp className="w-4 h-4 text-green-400" />
@@ -287,14 +287,14 @@ let matchesPrice = true;
   <li key={idx} className="text-gray-300 text-sm flex items-start gap-2">
                         <div className="w-1.5 h-1.5 bg-green-400 rounded-full mt-2 flex-shrink-0"></div>
                         {{benefit},
-  }
+  };
                       </li>
                     ))}
                   </ul>
                 </div>
 
                 {{/* Market Info */},
-  }
+  };
                 <div className="mb-6 space-y-2">
                   <div className="flex items-center justify-between text-sm">
                     <span className="text-gray-400">Market Size: </span>
@@ -311,7 +311,7 @@ let matchesPrice = true;
                 </div>
 
                 {{/* Setup Info */},
-  }
+  };
                 <div className="mb-6 space-y-2">
                   <div className="flex items-center justify-between text-sm">
                     <span className="text-gray-400">Setup Time:</span>
@@ -324,18 +324,18 @@ let matchesPrice = true;
                 </div>
 
                 {{/* ROI */},
-  }
+  };
                 <div className="mb-6 p-3 bg-green-500/20 rounded-lg border border-green-500/30">
                   <h4 className="text-green-400 font-semibold text-sm mb-1">ROI Promise</h4>
                   <p className="text-green-300 text-xs">{service.roi}</p>
                 </div>
 
                 {{/* Action Buttons */},
-  }
+  };
                 <div className="space-y-3">
                   <a;
                     href={{service.link},
-  }
+  };
                     target="_blank";
                     rel="noopener noreferrer";
                     className="className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 px-4 rounded-lg font-semibold text-center hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-center gap-2";"
@@ -374,7 +374,7 @@ let matchesPrice = true;
                   setSelectedCategory('all')
                   setPriceRange('all')
                 },
-  }
+  };
                 className="className="mt-4 text-blue-400 hover:text-blue-300 underline";"
               >
                 Clear filters;
@@ -385,7 +385,7 @@ let matchesPrice = true;
       </section>
 
       {{/* Why Choose Zion Tech Group */},
-  }
+  };
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -401,11 +401,11 @@ let matchesPrice = true;
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <motion.div;
               initial={{ opacity: 0, y: 20 },
-  }
+  };
               whileInView={{ opacity: 1, y: 0 },
-  }
+  };
               transition={{ duration: 0.5 },
-  }
+  };
               className="className="text-center";"
             >
               <div className="bg-gradient-to-br from-blue-600 to-purple-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -419,11 +419,11 @@ let matchesPrice = true;
 
             <motion.div;
               initial={{ opacity: 0, y: 20 },
-  }
+  };
               whileInView={{ opacity: 1, y: 0 },
-  }
+  };
               transition={{ duration: 0.5, delay: 0.1 },
-  }
+  };
               className="className="text-center";"
             >
               <div className="bg-gradient-to-br from-green-600 to-teal-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -437,11 +437,11 @@ let matchesPrice = true;
 
             <motion.div;
               initial={{ opacity: 0, y: 20 },
-  }
+  };
               whileInView={{ opacity: 1, y: 0 },
-  }
+  };
               transition={{ duration: 0.5, delay: 0.2 },
-  }
+  };
               className="className="text-center";"
             >
               <div className="bg-gradient-to-br from-purple-600 to-pink-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -455,11 +455,11 @@ let matchesPrice = true;
 
             <motion.div;
               initial={{ opacity: 0, y: 20 },
-  }
+  };
               whileInView={{ opacity: 1, y: 0 },
-  }
+  };
               transition={{ duration: 0.5, delay: 0.3 },
-  }
+  };
               className="className="text-center";"
             >
               <div className="bg-gradient-to-br from-yellow-500 to-orange-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -475,16 +475,16 @@ let matchesPrice = true;
       </section>
 
       {{/* Call to Action */},
-  }
+  };
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Ready to Transform Your Business?;
@@ -514,7 +514,7 @@ let matchesPrice = true;
       </section>
 
       {{/* Footer Contact */},
-  }
+  };
       <footer className="bg-slate-900 py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -548,4 +548,4 @@ let matchesPrice = true;
       </footer>
     </div>
   )
-}
+};

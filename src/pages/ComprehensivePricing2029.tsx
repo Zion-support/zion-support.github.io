@@ -102,26 +102,25 @@ const sortedServices = [...filteredServices].sort((a, b) => {
       'Network Optimization': BarChart3;
       'Disaster Recovery': Shield;
       'Quantum Security': Lock
-}
+};
     return iconMap[category] || Cpu
-}
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
       {{/* Animated Background */},
-  }
+  };
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(120,119,198,0.1),transparent_50%)]"></div>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(120,119,198,0.1),transparent_50%)]"></div>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(120,119,198,0.1),transparent_50%)]"></div>
         ;
         {{/* Floating Particles */},
-  }
+  };
         <div className="absolute inset-0">
           {[...Array(50)].map((_, i) => (
   <motion.div;
               key={{i},
-  }
+  };
               className="className="absolute w-1 h-1 bg-cyan-400 rounded-full opacity-30";"
               animate={{
   x: [0, 100, 0]
@@ -129,40 +128,40 @@ const sortedServices = [...filteredServices].sort((a, b) => {
                 opacity: [[0.3, 0.8, 0.3],
   ],
   },
-  }
+  };
               transition={{
   duration: Math.random() * 10 + 10,repeat: Infinity,delay: Math.random() * 5
 },
-  }
+  };
               style={{
   left: `${Math.random() * 100}%`;
                 top: `${Math.random() * 100}%`
 },
-  }
+  };
             />
           ))}
         </div>
       </div>
 
       {{/* Header Section */},
-  }
+  };
       <div className="relative z-10 pt-20 pb-16 px-4 sm:px-6 lg:px-8">
         <motion.div;
           initial={{ opacity: 0, y: 20 },
-  }
+  };
           animate={{ opacity: 1, y: 0 },
-  }
+  };
           transition={{ duration: 0.8 },
-  }
+  };
           className="className="max-w-7xl mx-auto text-center";"
         >
           <motion.div;
             initial={{ scale: 0.8 },
-  }
+  };
             animate={{ scale: 1 },
-  }
+  };
             transition={{ duration: 1, delay: 0.2 },
-  }
+  };
             className="className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 text-cyan-300 text-sm font-medium mb-6";"
           >
             <Crown className="w-4 h-4 mr-2 text-yellow-400" />
@@ -171,11 +170,11 @@ const sortedServices = [...filteredServices].sort((a, b) => {
           ;
           <motion.h1;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             animate={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8, delay: 0.3 },
-  }
+  };
             className="className="text-4xl md:text-6xl font-bold text-white mb-6";"
           >
             <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
@@ -187,11 +186,11 @@ const sortedServices = [...filteredServices].sort((a, b) => {
           ;
           <motion.p;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             animate={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8, delay: 0.4 },
-  }
+  };
             className="className="text-xl text-gray-300 max-w-3xl mx-auto mb-8";"
           >
             Discover our complete portfolio of revolutionary micro SAAS, AI, and IT services. ;
@@ -199,14 +198,14 @@ const sortedServices = [...filteredServices].sort((a, b) => {
           </motion.p>
 
           {{/* Stats */},
-  }
+  };
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             animate={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8, delay: 0.5 },
-  }
+  };
             className="className="grid grid-cols-1 md:grid-cols-4 gap-6 max-w-4xl mx-auto";"
           >
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-4 border border-white/20">
@@ -230,44 +229,44 @@ const sortedServices = [...filteredServices].sort((a, b) => {
       </div>
 
       {{/* Search and Filter Section */},
-  }
+  };
       <div className="relative z-10 px-4 sm:px-6 lg:px-8 mb-12">
         <div className="max-w-7xl mx-auto">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             animate={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8, delay: 0.6 },
-  }
+  };
             className="className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20";"
           >
             <div className="flex flex-col lg:flex-row gap-6 items-center">
               {{/* Search */},
-  }
+  };
               <div className="flex-1 relative">
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                 <input;
                   type="text";
                   placeholder="Search services by name, description, or features...";
                   value={{searchQuery},
-  }
+  };
                   onChange={{(e) => setSearchQuery(e.target.value)},
-  }
+  };
                   className="className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent";"
                 />
               </div>
 
               {{/* Category Filter */},
-  }
+  };
               <div className="flex flex-wrap gap-2">
                 {categories.map((category) => (
   <button;
                     key={{category},
-  }
+  };
                     onClick={{onClick={() => setSelectedCategory(category)},
   },
-  }
+  };
                     className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${
   selectedCategory === category;
                         ? 'bg-gradient-to-r from-cyan-500 to-purple-500 text-white shadow-lg';
@@ -275,20 +274,20 @@ const sortedServices = [...filteredServices].sort((a, b) => {
 }`}
                   >
                     {{category},
-  }
+  };
                   </button>
                 ))}
               </div>
 
               {{/* Sort Options */},
-  }
+  };
               <div className="flex items-center space-x-2">
                 <span className="text-gray-400 text-sm">Sort by:</span>
                 <select;
                   value={{sortBy},
-  }
+  };
                   onChange={{(e) => setSortBy(e.target.value as any)},
-  }
+  };
                   className="className="bg-white/10 border border-white/20 rounded-lg px-3 py-2 text-white text-sm focus:outline-none focus:ring-2 focus:ring-cyan-500";"
                 >
                   <option value="popularity">Popularity</option>
@@ -298,12 +297,12 @@ const sortedServices = [...filteredServices].sort((a, b) => {
               </div>
 
               {{/* View Mode Toggle */},
-  }
+  };
               <div className="flex bg-white/10 rounded-lg p-1 border border-white/20">
                 <button;
                   onClick={{onClick={() => setViewMode('grid')},
   },
-  }
+  };
                   className={`p-2 rounded-md transition-all duration-300 ${
   viewMode === 'grid' ? 'bg-gradient-to-r from-cyan-500 to-purple-500 text-white' : 'text-gray-400 hover:text-white'
 }`}
@@ -313,7 +312,7 @@ const sortedServices = [...filteredServices].sort((a, b) => {
                 <button;
                   onClick={{onClick={() => setViewMode('list')},
   },
-  }
+  };
                   className={`p-2 rounded-md transition-all duration-300 ${
   viewMode === 'list' ? 'bg-gradient-to-r from-cyan-500 to-purple-500 text-white' : 'text-gray-400 hover:text-white'
 }`}
@@ -327,16 +326,16 @@ const sortedServices = [...filteredServices].sort((a, b) => {
       </div>
 
       {{/* Services Grid */},
-  }
+  };
       <div className="relative z-10 px-4 sm:px-6 lg:px-8 pb-20">
         <div className="max-w-7xl mx-auto">
           <motion.div;
             initial={{ opacity: 0 },
-  }
+  };
             animate={{ opacity: 1 },
-  }
+  };
             transition={{ duration: 0.8, delay: 0.7 },
-  }
+  };
             className={`grid gap-6 ${
   viewMode === 'grid' ;
                 ? 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3' ;
@@ -347,15 +346,15 @@ const sortedServices = [...filteredServices].sort((a, b) => {
               {sortedServices.map((service, index) => (
   <motion.div;
                   key={{service.id},
-  }
+  };
                   initial={{ opacity: 0, y: 20 },
-  }
+  };
                   animate={{ opacity: 1, y: 0 },
-  }
+  };
                   exit={{ opacity: 0, y: -20 },
-  }
+  };
                   transition={{ duration: 0.5, delay: index * 0.05 },
-  }
+  };
                   className={`group relative ${
   viewMode === 'list' ? 'flex flex-col lg:flex-row' : ''
 }`}
@@ -364,7 +363,7 @@ const sortedServices = [...filteredServices].sort((a, b) => {
   viewMode === 'list' ? 'flex-1' : ''
 }`}>
                     {{/* Service Header */},
-  }
+  };
                     <div className={`p-6 ${service.popular ? 'bg-gradient-to-r from-yellow-500/20 to-orange-500/20' : ''}`}>
                       <div className="flex items-start justify-between mb-4">
                         <div className="flex items-center space-x-3">
@@ -372,12 +371,12 @@ const sortedServices = [...filteredServices].sort((a, b) => {
                           <div>
                             <h3 className="text-xl font-bold text-white group-hover:text-cyan-300 transition-colors duration-300">
                               {{service.name},
-  }
+  };
                             </h3>
                             <p className="text-gray-400 text-sm flex items-center">
                               {React.createElement(getCategoryIcon(service.category), { className: "w-4 h-4 mr-2" })},
   {{service.category},
-  }
+  };
                             </p>
                           </div>
                         </div>
@@ -391,7 +390,7 @@ const sortedServices = [...filteredServices].sort((a, b) => {
                       ;
                       <p className="text-gray-300 mb-4 leading-relaxed">
                         {{service.tagline},
-  }
+  };
                       </p>
                       ;
                       <div className="flex items-center justify-between mb-4">
@@ -408,15 +407,15 @@ const sortedServices = [...filteredServices].sort((a, b) => {
                     </div>
 
                     {{/* Service Content */},
-  }
+  };
                     <div className="p-6 pt-0">
                       <p className="text-gray-300 mb-6 leading-relaxed">
                         {{service.description},
-  }
+  };
                       </p>
 
                       {{/* Features */},
-  }
+  };
                       <div className="mb-6">
                         <h4 className="text-white font-semibold mb-3 flex items-center">
                           <CheckCircle className="w-4 h-4 mr-2 text-cyan-400" />
@@ -427,14 +426,14 @@ const sortedServices = [...filteredServices].sort((a, b) => {
   <div key={idx} className="flex items-center text-sm text-gray-400">
                               <div className="w-1.5 h-1.5 bg-cyan-400 rounded-full mr-2"></div>
                               {{feature},
-  }
+  };
                             </div>
                           ))}
                         </div>
                       </div>
 
                       {{/* Market Info */},
-  }
+  };
                       <div className="grid grid-cols-2 gap-4 mb-6 text-sm">
                         <div>
                           <p className="text-gray-400">Market Size</p>
@@ -447,18 +446,18 @@ const sortedServices = [...filteredServices].sort((a, b) => {
                       </div>
 
                       {{/* ROI */},
-  }
+  };
                       <div className="mb-6 p-4 bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-xl border border-green-500/30">
                         <p className="text-green-300 text-sm font-medium">ROI Impact</p>
                         <p className="text-white font-semibold">{service.roi}</p>
                       </div>
 
                       {{/* Action Buttons */},
-  }
+  };
                       <div className="flex space-x-3">
                         <a;
                           href={{service.link},
-  }
+  };
                           className="className="flex-1 bg-gradient-to-r from-cyan-500 to-purple-500 hover:from-cyan-600 hover:to-purple-600 text-white font-medium py-3 px-4 rounded-xl transition-all duration-300 transform hover:scale-105 flex items-center justify-center group";"
                         >
                           Learn More;
@@ -480,9 +479,9 @@ const sortedServices = [...filteredServices].sort((a, b) => {
   {sortedServices.length === 0 && (
   <motion.div;
               initial={{ opacity: 0 },
-  }
+  };
               animate={{ opacity: 1 },
-  }
+  };
               className="className="text-center py-20";"
             >
               <div className="text-gray-400 text-xl mb-4">No services found</div>
@@ -493,16 +492,16 @@ const sortedServices = [...filteredServices].sort((a, b) => {
       </div>
 
       {{/* Contact CTA */},
-  }
+  };
       <div className="relative z-10 px-4 sm:px-6 lg:px-8 pb-20">
         <div className="max-w-4xl mx-auto">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             animate={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8, delay: 0.8 },
-  }
+  };
             className="className="bg-gradient-to-r from-cyan-500/20 to-purple-500/20 backdrop-blur-lg rounded-3xl p-8 border border-cyan-500/30 text-center";"
           >
             <h2 className="text-3xl font-bold text-white mb-4">
@@ -535,4 +534,3 @@ const sortedServices = [...filteredServices].sort((a, b) => {
       </div>
     </div>
   )
-}

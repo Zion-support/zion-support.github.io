@@ -114,16 +114,16 @@ const AIWorkflowOrchestrator = () => {
 
       <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-slate-50">
         {{/* Hero Section */},
-  }
+  };
         <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
           <div className="max-w-7xl mx-auto">
             <motion.div;
               initial={{ opacity: 0, y: 20 },
-  }
+  };
               animate={{ opacity: 1, y: 0 },
-  }
+  };
               transition={{ duration: 0.6 },
-  }
+  };
               className="className="text-center";"
             >
               <div className="w-20 h-20 bg-gradient-to-r from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
@@ -152,16 +152,16 @@ const AIWorkflowOrchestrator = () => {
         </section>
 
         {{/* Features Section */},
-  }
+  };
         <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
           <div className="max-w-7xl mx-auto">
             <motion.div;
               initial={{ opacity: 0, y: 20 },
-  }
+  };
               animate={{ opacity: 1, y: 0 },
-  }
+  };
               transition={{ duration: 0.6, delay: 0.2 },
-  }
+  };
             >
               <h2 className="text-3xl font-bold text-slate-900 text-center mb-12">
                 Powerful Features for Modern Workflows;
@@ -171,13 +171,13 @@ const AIWorkflowOrchestrator = () => {
                 {features.map((feature, index) => (
   <motion.div;
                     key={{feature.title},
-  }
+  };
                     initial={{ opacity: 0, y: 20 },
-  }
+  };
                     animate={{ opacity: 1, y: 0 },
-  }
+  };
                     transition={{ duration: 0.6, delay: 0.1 * index },
-  }
+  };
                     className="className="bg-white rounded-xl p-6 shadow-sm hover:shadow-lg transition-all duration-300 border border-slate-100 hover:border-blue-200";"
                   >
                     <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
@@ -193,16 +193,16 @@ const AIWorkflowOrchestrator = () => {
         </section>
 
         {{/* Benefits Section */},
-  }
+  };
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <motion.div;
               initial={{ opacity: 0, y: 20 },
-  }
+  };
               animate={{ opacity: 1, y: 0 },
-  }
+  };
               transition={{ duration: 0.6, delay: 0.4 },
-  }
+  };
             >
               <h2 className="text-3xl font-bold text-slate-900 text-center mb-12">
                 Why Choose AI Workflow Orchestrator?;
@@ -212,13 +212,13 @@ const AIWorkflowOrchestrator = () => {
                 {benefits.map((benefit, index) => (
   <motion.div;
                     key={{benefit},
-  }
+  };
                     initial={{ opacity: 0, x: -20 },
-  }
+  };
                     animate={{ opacity: 1, x: 0 },
-  }
+  };
                     transition={{ duration: 0.6, delay: 0.05 * index },
-  }
+  };
                     className="className="flex items-center gap-3";"
                   >
                     <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />
@@ -231,16 +231,16 @@ const AIWorkflowOrchestrator = () => {
         </section>
 
         {{/* Use Cases Section */},
-  }
+  };
         <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
           <div className="max-w-7xl mx-auto">
             <motion.div;
               initial={{ opacity: 0, y: 20 },
-  }
+  };
               animate={{ opacity: 1, y: 0 },
-  }
+  };
               transition={{ duration: 0.6, delay: 0.6 },
-  }
+  };
             >
               <h2 className="text-3xl font-bold text-slate-900 text-center mb-12">
                 Industry Applications;
@@ -250,13 +250,13 @@ const AIWorkflowOrchestrator = () => {
                 {useCases.map((useCase, index) => (
   <motion.div;
                     key={{useCase.title},
-  }
+  };
                     initial={{ opacity: 0, y: 20 },
-  }
+  };
                     animate={{ opacity: 1, y: 0 },
-  }
+  };
                     transition={{ duration: 0.6, delay: 0.1 * index },
-  }
+  };
                     className="className="text-center";"
                   >
                     <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -272,16 +272,16 @@ const AIWorkflowOrchestrator = () => {
         </section>
 
         {{/* Pricing Section */},
-  }
+  };
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <motion.div;
               initial={{ opacity: 0, y: 20 },
-  }
+  };
               animate={{ opacity: 1, y: 0 },
-  }
+  };
               transition={{ duration: 0.6, delay: 0.8 },
-  }
+  };
             >
               <h2 className="text-3xl font-bold text-slate-900 text-center mb-12">
                 Simple, Transparent Pricing;
@@ -291,13 +291,13 @@ const AIWorkflowOrchestrator = () => {
                 {pricing.map((plan, index) => (
   <motion.div;
                     key={{plan.name},
-  }
+  };
                     initial={{ opacity: 0, y: 20 },
-  }
+  };
                     animate={{ opacity: 1, y: 0 },
-  }
+  };
                     transition={{ duration: 0.6, delay: 0.1 * index },
-  }
+  };
                     className={`relative bg-white rounded-xl p-6 shadow-sm hover:shadow-lg transition-all duration-300 border ${
   plan.popular ;
                         ? 'border-blue-500 ring-2 ring-blue-500/20' ;
@@ -336,7 +336,7 @@ const AIWorkflowOrchestrator = () => {
                         : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
 }`}>
                       {{plan.name === 'Enterprise' ? 'Contact Sales' : 'Get Started'},
-  }
+  };
                     </button>
                   </motion.div>
                 ))}
@@ -346,16 +346,16 @@ const AIWorkflowOrchestrator = () => {
         </section>
 
         {{/* CTA Section */},
-  }
+  };
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-600 to-indigo-700">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div;
               initial={{ opacity: 0, y: 20 },
-  }
+  };
               animate={{ opacity: 1, y: 0 },
-  }
+  };
               transition={{ duration: 0.6, delay: 1.0 },
-  }
+  };
             >
               <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">
                 Ready to Transform Your Workflows?;
@@ -378,5 +378,5 @@ const AIWorkflowOrchestrator = () => {
       </div>
     </>
   )
-}
+};
 export default AIWorkflowOrchestrator;

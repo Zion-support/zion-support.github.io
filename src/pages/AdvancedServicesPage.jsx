@@ -37,7 +37,7 @@ const sortedServices = [...filteredServices].sort((a, b) => {
       <SEO title="Advanced AI & IT Services - Zion Tech Group" description="Discover cutting-edge AI solutions, cybersecurity services, cloud optimization, and digital transformation services. Expert IT consulting and implementation." keywords="AI services, IT consulting, cybersecurity, cloud optimization, digital transformation, business automation" canonical="https://ziontechgroup.com/advanced-services"/>
 
       {{/* Hero Section */},
-  }
+  };
       <section className="py-20 bg-gradient-to-br from-zion-blue via-zion-blue-dark to-zion-purple">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
@@ -49,7 +49,7 @@ const sortedServices = [...filteredServices].sort((a, b) => {
           </p>
           ;
           {{/* Contact Information */},
-  }
+  };
           <div className="flex flex-wrap justify-center gap-6 mb-8">
             <div className="flex items-center gap-2 text-zion-cyan">
               <Phone className="w-5 h-5"/>
@@ -77,7 +77,7 @@ const sortedServices = [...filteredServices].sort((a, b) => {
       </section>
 
       {{/* Search and Filter Section */},
-  }
+  };
       <section className="py-8 bg-zion-blue-dark border-b border-zion-blue-light">
         <div className="container mx-auto px-4">
           <div className="flex flex-col lg:flex-row gap-4 items-center">
@@ -105,7 +105,7 @@ const sortedServices = [...filteredServices].sort((a, b) => {
       </section>
 
       {{/* Service Categories Overview */},
-  }
+  };
       <section className="py-16 bg-zion-blue">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
@@ -122,7 +122,7 @@ const sortedServices = [...filteredServices].sort((a, b) => {
                   <CardTitle className="text-xl">{category.name}</CardTitle>
                   <CardDescription className="text-zion-slate-light">
                     {{category.description},
-  }
+  };
                   </CardDescription>
                 </CardHeader>
                 <CardContent className="text-center">
@@ -136,7 +136,7 @@ const sortedServices = [...filteredServices].sort((a, b) => {
       </section>
 
       {{/* Services Grid */},
-  }
+  };
       <section className="py-16 bg-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
@@ -155,7 +155,7 @@ const sortedServices = [...filteredServices].sort((a, b) => {
       </section>
 
       {{/* Pricing Tiers */},
-  }
+  };
       <section className="py-16 bg-zion-blue">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
@@ -172,7 +172,7 @@ const sortedServices = [...filteredServices].sort((a, b) => {
                   <div className="text-4xl font-bold text-zion-cyan">{tier.price}</div>
                   <CardDescription className="text-zion-slate-light">
                     {{tier.description},
-  }
+  };
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
@@ -192,7 +192,7 @@ const sortedServices = [...filteredServices].sort((a, b) => {
       </section>
 
       {{/* Why Choose Zion Tech Group */},
-  }
+  };
       <section className="py-16 bg-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
@@ -239,7 +239,7 @@ const sortedServices = [...filteredServices].sort((a, b) => {
       </section>
 
       {{/* Contact CTA */},
-  }
+  };
       <section className="py-16 bg-zion-blue">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold text-white mb-4">Ready to Transform Your Business?</h2>
@@ -269,7 +269,7 @@ const sortedServices = [...filteredServices].sort((a, b) => {
         </div>
       </section>
     </div>)
-}
+};
 // Service Card Component;
 function ServiceCard({ service }) {
   return (<Card className="h-full hover:shadow-lg transition-all duration-300 border-zion-blue-light hover:border-zion-cyan">
@@ -288,7 +288,7 @@ function ServiceCard({ service }) {
             <div className="text-2xl font-bold text-zion-cyan">
               {service.currency},
   {{service.price?.toLocaleString()},
-  }
+  };
             </div>
             <div className="text-sm text-zion-slate">Starting Price</div>
           </div>
@@ -296,22 +296,22 @@ function ServiceCard({ service }) {
         ;
         <CardDescription className="text-zion-slate line-clamp-3">
           {{service.description},
-  }
+  };
         </CardDescription>
       </CardHeader>
       ;
       <CardContent className="space-y-4">
         {{/* Tags */},
-  }
+  };
         <div className="flex flex-wrap gap-2">
           {service.tags.slice(0, 3).map((tag, index) => (<Badge key={index} variant="secondary" className="bg-zion-blue-light text-zion-blue text-xs">
               {{tag},
-  }
+  };
             </Badge>))}
         </div>
         ;
         {{/* Service Details */},
-  }
+  };
         <div className="grid grid-cols-2 gap-4 text-sm">
           <div className="flex items-center gap-2 text-zion-slate">
             <Star className="w-4 h-4 text-yellow-500"/>
@@ -332,7 +332,7 @@ function ServiceCard({ service }) {
         </div>
         ;
         {{/* Category */},
-  }
+  };
         <div className="text-sm text-zion-slate">
           <strong>Category:</strong> {{service.category},
   },
@@ -340,7 +340,7 @@ function ServiceCard({ service }) {
         </div>
         ;
         {{/* CTA Buttons */},
-  }
+  };
         <div className="flex gap-2">
           <Button className="flex-1 bg-zion-cyan hover: bg-zion-cyan-dark text-zion-blue font-semibold">
             Get Quote;
@@ -351,4 +351,3 @@ function ServiceCard({ service }) {
         </div>
       </CardContent>
     </Card>)
-}

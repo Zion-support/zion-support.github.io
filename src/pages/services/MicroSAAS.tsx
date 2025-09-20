@@ -79,7 +79,7 @@ const MicroSAAS = () => {
   return (
     <div className="min-h-screen bg-slate-900 text-white">
       {{/* Hero Section */},
-  }
+  };
       <section className="relative pt-24 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <div className="mb-8">
@@ -108,7 +108,7 @@ const MicroSAAS = () => {
       </section>
 
       {{/* MicroSAAS Services Grid */},
-  }
+  };
       <section id="services" className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -135,7 +135,7 @@ const MicroSAAS = () => {
   <li key={idx} className="text-sm text-gray-400 flex items-start">
                       <div className="w-1.5 h-1.5 bg-indigo-400 rounded-full mr-2 mt-2 flex-shrink-0"></div>
                       {{feature},
-  }
+  };
                     </li>
                   ))}
                 </ul>
@@ -146,7 +146,7 @@ const MicroSAAS = () => {
       </section>
 
       {{/* Technologies */},
-  }
+  };
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -171,7 +171,7 @@ const MicroSAAS = () => {
                   {tech.features.map((feature, idx) => (
   <li key={idx} className="text-sm text-gray-400">
                       {{feature},
-  }
+  };
                     </li>
                   ))}
                 </ul>
@@ -182,7 +182,7 @@ const MicroSAAS = () => {
       </section>
 
       {{/* Industries */},
-  }
+  };
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -210,7 +210,7 @@ const MicroSAAS = () => {
       </section>
 
       {{/* Benefits Section */},
-  }
+  };
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -227,7 +227,7 @@ const MicroSAAS = () => {
   <li key={index} className="flex items-center text-gray-300">
                     <div className="w-2 h-2 bg-indigo-400 rounded-full mr-3"></div>
                     {{benefit},
-  }
+  };
                   </li>
                 ))}
               </ul>
@@ -252,7 +252,7 @@ const MicroSAAS = () => {
       </section>
 
       {{/* CTA Section */},
-  }
+  };
       <section className="py-16 px-4 sm: px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -274,5 +274,5 @@ const MicroSAAS = () => {
       </section>
     </div>
   )
-}
+};
 export default MicroSAAS;

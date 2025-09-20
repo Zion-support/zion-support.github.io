@@ -7,9 +7,9 @@ export function LanguageSelector() {
       <select;
         id="lang-select";
         value={{lang},
-  }
+  };
         onChange={{(e) => setLang(e.target.value)},
-  }
+  };
         className="className="bg-transparent text-slate-300 border border-zion-purple/30 rounded-md px-2 py-1 text-sm hover: border-zion-purple/50 focus:outline-none focus:ring-2 focus:ring-zion-purple/40";"
         aria-label="Select language";
       >
@@ -18,4 +18,4 @@ export function LanguageSelector() {
       </select>
     </div>
   )
-}
+};

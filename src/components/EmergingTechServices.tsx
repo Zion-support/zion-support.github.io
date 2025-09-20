@@ -36,6 +36,6 @@ export const EmergingTechServices = () => {
       </div>
     </div>
   )
-}
+};
 
 export default EmergingTechServices;

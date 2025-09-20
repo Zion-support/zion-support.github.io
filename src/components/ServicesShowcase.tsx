@@ -43,7 +43,7 @@ interface Service {
   icon: React.ComponentType<any>,title: string,description: string,href: string,category: string,color: string,features: string[];
   pricing?: string,
   badge?: string
-}
+};
 
 export function ServicesShowcase() {
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
@@ -170,13 +170,13 @@ const itemVariants = {
         {/* Header */}
         <motion.div 
           initial={{ opacity: 0, y: 30 },
-  }
+  };
           whileInView={{ opacity: 1, y: 0 },
-  }
+  };
           transition={{ duration: 0.8 },
-  }
+  };
           viewport={{ once: true },
-  }
+  };
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -192,13 +192,13 @@ const itemVariants = {
         {/* Category Filter */}
         <motion.div 
           initial={{ opacity: 0, y: 20 },
-  }
+  };
           whileInView={{ opacity: 1, y: 0 },
-  }
+  };
           transition={{ duration: 0.6 },
-  }
+  };
           viewport={{ once: true },
-  }
+  };
           className="flex flex-wrap justify-center gap-4 mb-12"
         >
           {categories.map((category) => {
@@ -226,7 +226,7 @@ const itemVariants = {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true },
-  }
+  };
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
         >
           {filteredServices.map((service, index) => (
@@ -234,7 +234,7 @@ const itemVariants = {
               key={service.title}
               variants={itemVariants}
               whileHover={{ y: -10, scale: 1.02 },
-  }
+  };
               className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:border-cyan-500/50 transition-all duration-300"
             >
               {/* Badge */},
@@ -288,13 +288,13 @@ const itemVariants = {
         {/* CTA Section */}
         <motion.div 
           initial={{ opacity: 0, y: 30 },
-  }
+  };
           whileInView={{ opacity: 1, y: 0 },
-  }
+  };
           transition={{ duration: 0.8 },
-  }
+  };
           viewport={{ once: true },
-  }
+  };
           className="text-center mt-16"
         >
           <div className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/30 rounded-2xl p-8">
@@ -325,4 +325,3 @@ const itemVariants = {
       </div>
     </section>
   )
-}

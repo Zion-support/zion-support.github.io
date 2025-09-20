@@ -38,7 +38,7 @@ interface NavigationItem {
   label: string,path: string,icon: React.ComponentType<{ size?: number, className?: string }>,
   children?: NavigationItem[],
   description?: string,
-}
+};
 
 const navigationItems: NavigationItem[] = [
   {
@@ -120,7 +120,6 @@ const menuRef = useRef<HTMLDivElement>(null);
         newSet.delete(label)
       } else {
         newSet.add(label)
-}
       return newSet
 }),
   },
@@ -146,7 +145,7 @@ const isItemActive = isActive(item.path);
         <motion.div
           initial={false}
           animate={{ backgroundColor: isItemActive ? 'rgba(34, 221, 210, 0.1)' : 'transparent' },
-  }
+  };
           className={`relative ${depth > 0 ? 'ml-4' : ''}`}
         >
           <Link
@@ -201,13 +200,13 @@ const isItemActive = isActive(item.path);
             {isExpanded && (
               <motion.div
                 initial={{ height: 0, opacity: 0 },
-  }
+  };
                 animate={{ height: 'auto', opacity: 1 },
-  }
+  };
                 exit={{ height: 0, opacity: 0 },
-  }
+  };
                 transition={{ duration: 0.3, ease: 'easeInOut' },
-  }
+  };
                 className="overflow-hidden"
               >
                 <div className="border-l border-zion-slate-light/20 ml-4">
@@ -237,25 +236,25 @@ const isItemActive = isActive(item.path);
         {isOpen && (
           <motion.div
             initial={{ opacity: 0 },
-  }
+  };
             animate={{ opacity: 1 },
-  }
+  };
             exit={{ opacity: 0 },
-  }
+  };
             transition={{ duration: 0.2 },
-  }
+  };
             className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 lg:hidden"
           >
             <motion.div
               ref={menuRef}
               initial={{ x: '100%' },
-  }
+  };
               animate={{ x: 0 },
-  }
+  };
               exit={{ x: '100%' },
-  }
+  };
               transition={{ duration: 0.3, ease: 'easeOut' },
-  }
+  };
               className="absolute right-0 top-0 h-full w-full max-w-sm bg-zion-slate-dark border-l border-zion-cyan/30 shadow-2xl"
             >
               {/* Header */}
@@ -356,4 +355,3 @@ const isItemActive = isActive(item.path);
       </AnimatePresence>
     </>
   )
-};

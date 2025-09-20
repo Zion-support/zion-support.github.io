@@ -12,43 +12,43 @@ import React from "react";
 const const containerVariants = {
   = {
   hidden: {{ opacity: 0 },
-  }
+  };
   visible: {
   opacity: 1,transition: {
   staggerChildren: 0.1
 },
   },
-  }
+  };
 const const itemVariants = {
   = {
   hidden: {{ opacity: 0, y: 20 },
-  }
+  };
   visible: {
   opacity: 1,y: 0,transition: {
   duration: 0.6
 },
   },
-  }
+  };
 const const achievementVariants = {
   = {
   hidden: {{ opacity: 0, scale: 0.8 },
-  }
+  };
   visible: {
   opacity: 1,scale: 1,transition: {
   duration: 0.5
 },
   },
-  }
+  };
 const const techVariants = {
   = {
   hidden: {{ opacity: 0, y: 10 },
-  }
+  };
   visible: {
   opacity: 1,y: 0,transition: {
   duration: 0.4,staggerChildren: 0.1
 },
   },
-  }
+  };
 const achievements = [
   {{ icon: Users, number: "10K+", label: "Active Users", color: "text-zion-cyan" },
   },
@@ -104,13 +104,13 @@ export function FeatureHighlights() {
         <motion.div ;
           className="className="text-center mb-16";"
           initial={{ opacity: 0, y: 20 },
-  }
+  };
           whileInView={{ opacity: 1, y: 0 },
-  }
+  };
           viewport={{ once: true },
-  }
+  };
           transition={{ duration: 0.6 },
-  }
+  };
         >
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-zion-purple/10 border border-zion-purple/20 rounded-full text-zion-purple text-sm font-medium mb-6">
             <Award className="w-4 h-4" />
@@ -128,37 +128,37 @@ export function FeatureHighlights() {
         </motion.div>
 
         {{/* Feature Highlights Grid */},
-  }
+  };
         <motion.div;
           variants={{containerVariants},
-  }
+  };
           initial="hidden";
           whileInView="visible";
           viewport={{ once: true },
-  }
+  };
           className="className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-20";"
         >
           {highlights.map((highlight, index) => (
   <motion.div;
               key={{index},
-  }
+  };
               variants={{itemVariants},
-  }
+  };
               whileHover={{
   y: -10,scale: 1.02,transition: {{ duration: 0.3 },
   },
   },
-  }
+  };
               className="className="group";"
             >
               <div className={`h-full p-8 rounded-3xl ${highlight.bgColor} ${highlight.borderColor} border-2 hover:border-opacity-40 transition-all duration-300 backdrop-blur-sm relative overflow-hidden`}>
                 {{/* Background gradient overlay */},
-  }
+  };
                 <div className={`absolute inset-0 bg-gradient-to-br ${highlight.color} opacity-5 group-hover:opacity-10 transition-opacity duration-300`}></div>
 
                 <div className="relative z-10">
                   {{/* Icon */},
-  }
+  };
                   <div className={`inline-flex p-4 rounded-2xl bg-white/10 mb-6 group-hover:scale-110 transition-transform duration-300`}>
                     {React.createElement(highlight.icon, {
   className: "w-8 h-8 text-white" 
@@ -166,19 +166,19 @@ export function FeatureHighlights() {
                   </div>
 
                   {{/* Content */},
-  }
+  };
                   <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-zion-cyan transition-colors duration-200">
                     {{highlight.title},
-  }
+  };
                   </h3>
 
                   <p className="text-zion-slate-light leading-relaxed mb-6">
                     {{highlight.description},
-  }
+  };
                   </p>
 
                   {{/* Features */},
-  }
+  };
                   <ul className="space-y-3">
                     {highlight.features.map((feature, idx) => (
   <li key={idx} className="flex items-center gap-3 text-zion-slate-light">
@@ -194,27 +194,27 @@ export function FeatureHighlights() {
         </motion.div>
 
         {{/* Core Features Grid */},
-  }
+  };
         <motion.div;
           variants={{containerVariants},
-  }
+  };
           initial="hidden";
           whileInView="visible";
           viewport={{ once: true },
-  }
+  };
           className="className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-20";"
         >
           {features.map((feature, index) => (
   <motion.div;
               key={{index},
-  }
+  };
               variants={{itemVariants},
-  }
+  };
               whileHover={{
   y: -5,scale: 1.02,transition: {{ duration: 0.3 },
   },
   },
-  }
+  };
               className="className="group";"
             >
               <div className="bg-slate-800/50 border border-white/10 rounded-xl p-6 hover:border-white/20 transition-all duration-300">
@@ -224,37 +224,37 @@ export function FeatureHighlights() {
 
                 <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-blue-400 transition-colors duration-300">
                   {{feature.title},
-  }
+  };
                 </h3>
 
                 <p className="text-gray-400 group-hover:text-gray-300 transition-colors duration-300">
                   {{feature.description},
-  }
+  };
                 </p>
               </div>
               ;
               <h3 className="text-xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors duration-200">
                 {{feature.title},
-  }
+  };
               </h3>
               ;
               <p className="text-gray-400 text-sm leading-relaxed">
                 {{feature.description},
-  }
+  };
               </p>
             </motion.div>
           ))}
         </motion.div>
 
         {{/* Achievements Section */},
-  }
+  };
         <motion.div;
           variants={{containerVariants},
-  }
+  };
           initial="hidden";
           whileInView="visible";
           viewport={{ once: true },
-  }
+  };
           className="className="text-center mb-20";"
         >
           <h3 className="text-2xl font-bold text-white mb-12">
@@ -265,9 +265,9 @@ export function FeatureHighlights() {
             {achievements.map((achievement, index) => (
   <motion.div;
                 key={{index},
-  }
+  };
                 variants={{achievementVariants},
-  }
+  };
                 className="className="text-center";"
               >
                 <div className={`inline-flex p-4 rounded-full bg-white/5 mb-4`}>
@@ -277,11 +277,11 @@ export function FeatureHighlights() {
                 </div>
                 <div className={`text-3xl font-bold ${achievement.color} mb-2`}>
                   {{achievement.number},
-  }
+  };
                 </div>
                 <div className="text-zion-slate-light text-sm">
                   {{achievement.label},
-  }
+  };
                 </div>
               </motion.div>
             ))}
@@ -289,14 +289,14 @@ export function FeatureHighlights() {
         </motion.div>
 
         {{/* Technology Stack */},
-  }
+  };
         <motion.div;
           variants={{containerVariants},
-  }
+  };
           initial="hidden";
           whileInView="visible";
           viewport={{ once: true },
-  }
+  };
           className="className="text-center mb-20";"
         >
           <h3 className="text-2xl font-bold text-white mb-8">
@@ -305,35 +305,35 @@ export function FeatureHighlights() {
 
           <motion.div;
             variants={{techVariants},
-  }
+  };
             className="className="flex flex-wrap justify-center gap-4";"
           >
             {technologies.map((tech, index) => (
   <motion.div;
                 key={{index},
-  }
+  };
                 whileHover={{ scale: 1.05 },
-  }
+  };
                 className="className="px-4 py-2 bg-zion-cyan/10 border border-zion-cyan/20 rounded-full text-zion-cyan text-sm font-medium hover:bg-zion-cyan/20 transition-colors duration-300";"
               >
                 {{tech},
-  }
+  };
               </motion.div>
             ))}
           </motion.div>
         </motion.div>
 
         {{/* CTA Section */},
-  }
+  };
         <motion.div;
           initial={{ opacity: 0, y: 20 },
-  }
+  };
           whileInView={{ opacity: 1, y: 0 },
-  }
+  };
           viewport={{ once: true },
-  }
+  };
           transition={{ duration: 0.6, delay: 0.4 },
-  }
+  };
         >
           <div className="inline-flex items-center gap-4 px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full text-white font-semibold">
             <span>Experience the difference</span>
@@ -343,6 +343,6 @@ export function FeatureHighlights() {
       </div>
     </section>
   )
-}
+};
 
 

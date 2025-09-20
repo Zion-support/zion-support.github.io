@@ -67,17 +67,17 @@ export default function InterviewAssessmentAI() {
       />
       ;
       {{/* Hero Section */},
-  }
+  };
       <section className="relative overflow-hidden py-20 lg:py-32">
         <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 via-pink-500/10 to-red-500/10"></div>
         <div className="container mx-auto px-4 relative z-10">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             animate={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             className="className="text-center max-w-4xl mx-auto";"
           >
             <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full border border-purple-400/30 mb-6">
@@ -102,9 +102,9 @@ export default function InterviewAssessmentAI() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button;
                 whileHover={{ scale: 1.05 },
-  }
+  };
                 whileTap={{ scale: 0.95 },
-  }
+  };
                 className="className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-300 flex items-center justify-center";"
               >
                 <Rocket className="w-5 h-5 mr-2" />
@@ -112,9 +112,9 @@ export default function InterviewAssessmentAI() {
               </motion.button>
               <motion.button;
                 whileHover={{ scale: 1.05 },
-  }
+  };
                 whileTap={{ scale: 0.95 },
-  }
+  };
                 className="className="px-8 py-4 border border-purple-400/30 text-purple-300 font-semibold rounded-lg hover:bg-purple-400/10 transition-all duration-300 flex items-center justify-center";"
               >
                 <Video className="w-5 h-5 mr-2" />
@@ -126,16 +126,16 @@ export default function InterviewAssessmentAI() {
       </section>
 
       {{/* Features Section */},
-  }
+  };
       <section className="py-20">
         <div className="container mx-auto px-4">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
@@ -151,13 +151,13 @@ export default function InterviewAssessmentAI() {
             {features.map((feature, index) => (
   <motion.div;
                 key={{index},
-  }
+  };
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.6, delay: index * 0.1 },
-  }
+  };
                 className="className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-purple-400/30 transition-all duration-300 group";"
               >
                 <div className="w-12 h-12 bg-gradient-to-br from-purple-400/20 to-pink-500/20 rounded-lg flex items-center justify-center mb-4 group-hover:from-purple-400/40 group-hover:to-pink-500/40 transition-all duration-300">
@@ -172,16 +172,16 @@ export default function InterviewAssessmentAI() {
       </section>
 
       {{/* Benefits Section */},
-  }
+  };
       <section className="py-20 bg-slate-800/30">
         <div className="container mx-auto px-4">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
@@ -197,13 +197,13 @@ export default function InterviewAssessmentAI() {
             {benefits.map((benefit, index) => (
   <motion.div;
                 key={{index},
-  }
+  };
                 initial={{ opacity: 0, x: -20 },
-  }
+  };
                 whileInView={{ opacity: 1, x: 0 },
-  }
+  };
                 transition={{ duration: 0.6, delay: index * 0.1 },
-  }
+  };
                 className="className="flex items-center space-x-4 bg-slate-700/30 rounded-lg p-4";"
               >
                 <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0" />
@@ -215,16 +215,16 @@ export default function InterviewAssessmentAI() {
       </section>
 
       {{/* Assessment Types */},
-  }
+  };
       <section className="py-20">
         <div className="container mx-auto px-4">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
@@ -240,13 +240,13 @@ export default function InterviewAssessmentAI() {
             {assessmentTypes.map((assessment, index) => (
   <motion.div;
                 key={{index},
-  }
+  };
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.6, delay: index * 0.1 },
-  }
+  };
                 className="className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-purple-400/30 transition-all duration-300";"
               >
                 <h3 className="text-xl font-semibold text-white mb-3">{assessment.title}</h3>
@@ -254,7 +254,7 @@ export default function InterviewAssessmentAI() {
                 <div className="flex items-center text-sm text-gray-400 mb-3">
                   <Clock className="w-4 h-4 mr-2" />
                   {{assessment.duration},
-  }
+  };
                 </div>
                 <div className="text-2xl font-bold text-purple-400 mb-4">{assessment.price}</div>
                 <button className="w-full py-3 px-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-300">
@@ -267,16 +267,16 @@ export default function InterviewAssessmentAI() {
       </section>
 
       {{/* Industries Section */},
-  }
+  };
       <section className="py-20 bg-slate-800/30">
         <div className="container mx-auto px-4">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
@@ -292,13 +292,13 @@ export default function InterviewAssessmentAI() {
             {industries.map((industry, index) => (
   <motion.div;
                 key={{index},
-  }
+  };
                 initial={{ opacity: 0, scale: 0.8 },
-  }
+  };
                 whileInView={{ opacity: 1, scale: 1 },
-  }
+  };
                 transition={{ duration: 0.6, delay: index * 0.1 },
-  }
+  };
                 className="className="bg-slate-700/30 rounded-lg p-4 text-center hover:bg-slate-700/50 transition-all duration-300";"
               >
                 <div className="w-12 h-12 bg-gradient-to-br from-purple-400/20 to-pink-500/20 rounded-lg flex items-center justify-center mx-auto mb-3">
@@ -312,16 +312,16 @@ export default function InterviewAssessmentAI() {
       </section>
 
       {{/* CTA Section */},
-  }
+  };
       <section className="py-20 bg-gradient-to-r from-purple-500/10 via-pink-500/10 to-red-500/10">
         <div className="container mx-auto px-4 text-center">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
           >
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
               Ready to Transform Your Hiring Process?;
@@ -333,9 +333,9 @@ export default function InterviewAssessmentAI() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button;
                 whileHover={{ scale: 1.05 },
-  }
+  };
                 whileTap={{ scale: 0.95 },
-  }
+  };
                 className="className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-300 flex items-center justify-center";"
               >
                 <ArrowRight className="w-5 h-5 mr-2" />
@@ -343,9 +343,9 @@ export default function InterviewAssessmentAI() {
               </motion.button>
               <motion.button;
                 whileHover={{ scale: 1.05 },
-  }
+  };
                 whileTap={{ scale: 0.95 },
-  }
+  };
                 className="className="px-8 py-4 border border-purple-400/30 text-purple-300 font-semibold rounded-lg hover: bg-purple-400/10 transition-all duration-300 flex items-center justify-center";"
               >
                 <Phone className="w-5 h-5 mr-2" />
@@ -357,4 +357,4 @@ export default function InterviewAssessmentAI() {
       </section>
     </div>
   )
-}
+};

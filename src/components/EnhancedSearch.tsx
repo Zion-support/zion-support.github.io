@@ -5,18 +5,16 @@ interface SearchResult {
   id: string,title: string,description: string,type: 'service' | 'page' | 'article' | 'ai-suggestion',url: string;
   icon?: React.ComponentType<any>,
   relevance: number
-}
+};
 
 interface SearchSuggestion {
   text: string,type: 'recent' | 'trending' | 'ai'
-}
 
 interface EnhancedSearchProps {
   className?: string;
   placeholder?: string,
   onSearch?: (query: string) => void;
   variant?: 'default' | 'futuristic' | 'minimal'
-}
 
 export function EnhancedSearch({ 
   className = '',
@@ -87,7 +85,6 @@ const inputRef = useRef<HTMLInputElement>(null);
             handleResultClick(results[selectedIndex])
           } else if (query.trim()) {
             handleSearch()
-}
           break,
         case 'Escape':
           setIsOpen(false);
@@ -144,14 +141,13 @@ const inputRef = useRef<HTMLInputElement>(null);
       return (
         <motion.div
           animate={{ rotate: 360 },
-  }
+  };
           transition={{ duration: 1, repeat: Infinity, ease: "linear" },
-  }
+  };
         >
           <Search className="w-5 h-5" />
         </motion.div>
       )
-}
     return <Search className="w-5 h-5" />
 },
 
@@ -185,15 +181,15 @@ const inputRef = useRef<HTMLInputElement>(null);
         {query && (
           <motion.button
             initial={{ scale: 0 },
-  }
+  };
             animate={{ scale: 1 },
-  }
+  };
             onClick={clearSearch}
             className="p-2 text-gray-400 hover:text-gray-600 transition-colors"
             whileHover={{ scale: 1.1 },
-  }
+  };
             whileTap={{ scale: 0.9 },
-  }
+  };
           >
             <X className="w-4 h-4" />
           </motion.button>
@@ -203,9 +199,9 @@ const inputRef = useRef<HTMLInputElement>(null);
           onClick={handleSearch}
           className="px-4 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-r-xl hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 font-medium"
           whileHover={{ scale: 1.02 },
-  }
+  };
           whileTap={{ scale: 0.98 },
-  }
+  };
         >
           Search
         </button>
@@ -216,13 +212,13 @@ const inputRef = useRef<HTMLInputElement>(null);
         {isOpen && (
           <motion.div
             initial={{ opacity: 0, y: -10, scale: 0.95 },
-  }
+  };
             animate={{ opacity: 1, y: 0, scale: 1 },
-  }
+  };
             exit={{ opacity: 0, y: -10, scale: 0.95 },
-  }
+  };
             transition={{ duration: 0.2 },
-  }
+  };
             className="absolute top-full left-0 right-0 mt-2 bg-white dark:bg-gray-800 rounded-xl shadow-2xl border border-gray-200 dark:border-gray-700 max-h-96 overflow-y-auto z-50"
           >
             {/* Search Results */},
@@ -237,11 +233,11 @@ const inputRef = useRef<HTMLInputElement>(null);
                     <motion.div
                       key={result.id}
                       initial={{ opacity: 0, x: -20 },
-  }
+  };
                       animate={{ opacity: 1, x: 0 },
-  }
+  };
                       transition={{ delay: index * 0.1 },
-  }
+  };
                       className={`p-3 rounded-lg cursor-pointer transition-all duration-200 ${
                         selectedIndex === index
                           ? 'bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-700'
@@ -282,11 +278,11 @@ const inputRef = useRef<HTMLInputElement>(null);
                     <motion.button
                       key={index}
                       initial={{ opacity: 0, x: -20 },
-  }
+  };
                       animate={{ opacity: 1, x: 0 },
-  }
+  };
                       transition={{ delay: (index + results.length) * 0.1 },
-  }
+  };
                       onClick={() => handleSuggestionClick(suggestion)}
                       className="w-full text-left p-2 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors flex items-center space-x-2"
                     >
@@ -318,4 +314,3 @@ const inputRef = useRef<HTMLInputElement>(null);
       </AnimatePresence>
     </div>
   )
-}

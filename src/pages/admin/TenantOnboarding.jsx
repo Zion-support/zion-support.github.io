@@ -23,7 +23,7 @@ const isAdmin = user?.role === "admin";
     if (if (!isAdmin) {
   ) {
         return <Navigate to="/unauthorized"/>
-}
+};
     const handleInputChange = (e) => {
   const { name, value } = e.target;
         setFormData(prev => ({ ...prev, [name]: value }))
@@ -45,7 +45,6 @@ const const landingPageCopy = {
   = {
                 headline: "AI Hiring Assistant",subtitle: `Find the best talent for your ${formData.industry || "company"}`;
                 cta: "Get Started"
-}
             // Submit to Supabase;
 const { data, error } = await supabase;
                 .from('whitelabel_tenants')
@@ -73,7 +72,7 @@ const { data, error } = await supabase;
         finally {
   setIsSubmitting(false)
         },
-  }
+  };
     return (<>
       <SEO title="Tenant Onboarding - Zion AI Marketplace" description="Onboard a new white-label tenant to the Zion AI Marketplace platform."/>
       ;
@@ -219,7 +218,7 @@ const { data, error } = await supabase;
                   </Button>
                   <Button type="submit" disabled={isSubmitting}>
                     {{isSubmitting ? "Creating..." : "Create Tenant"},
-  }
+  };
                   </Button>
                 </div>
               </form>
@@ -229,4 +228,3 @@ const { data, error } = await supabase;
       </main>
       ;
     </>)
-}

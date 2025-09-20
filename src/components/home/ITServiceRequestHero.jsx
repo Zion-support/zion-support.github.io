@@ -158,4 +158,4 @@ const features = [
         </div>
       </motion.div>
     </section>)
-}
+};

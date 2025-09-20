@@ -9,9 +9,9 @@ export const showApiError = (error: any, fallbackMessage?: string) => {
   ) {
     console.error('API Error:', error)
   },
-  }
+  };
 export const handleApiError = (error: any, fallbackMessage?: string) => {
   showApiError(error, fallbackMessage)
   return {{ error: error?.message || fallbackMessage || 'An unexpected error occurred' },
   },
-  }
+  };

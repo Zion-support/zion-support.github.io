@@ -7,7 +7,7 @@ interface SkeletonProps {
   width?: string,
   rounded?: string | boolean,
   animated?: boolean,
-}
+};
 
 export const Skeleton: React.FC<SkeletonProps> = ({ 
   className = '';
@@ -28,16 +28,15 @@ export const Skeleton: React.FC<SkeletonProps> = ({
             animate={{
               opacity: [0.5, 1, 0.5],
   },
-  }
+  };
             transition={{
               duration: 1.5,repeat: Infinity,ease: "easeInOut"
             },
-  }
+  };
           />
         ))}
       </>
     )
-}
   
   return (
     <>
@@ -94,7 +93,6 @@ interface TableSkeletonProps {
   rows?: number,
   columns?: number,
   className?: string
-}
 
 export function TableSkeleton({ 
   rows = 5, 
@@ -129,13 +127,11 @@ export function TableSkeleton({
       </div>
     </div>
   ),
-}
 
 interface ListSkeletonProps {
   items?: number,
   className?: string,
   showAvatar?: boolean
-}
 
 export function ListSkeleton({ 
   items = 5;
@@ -157,14 +153,12 @@ export function ListSkeleton({
       ))}
     </div>
   )
-}
 
 interface GridSkeletonProps {
   items?: number,
   columns?: number,
   className?: string,
   showImage?: boolean,
-}
 
 export function GridSkeleton({ 
   items = 6;
@@ -181,4 +175,3 @@ export function GridSkeleton({
       ))}
     </div>
   )
-}

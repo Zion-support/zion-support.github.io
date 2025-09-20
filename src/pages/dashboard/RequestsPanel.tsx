@@ -39,7 +39,7 @@ export default function RequestsPanel() {
   ) {
       markAsViewed(quote.id)
     },
-  }
+  };
 
   // Filter quotes by archive status;
 const activeQuotes = quotes.filter((q: QuoteRequest) => !q.is_archived)
@@ -52,19 +52,19 @@ const activeQuotes = quotes.filter((q: QuoteRequest) => !q.is_archived)
           <div className="container mx-auto">
             <RequestsHeader;
               unreadCount={{unreadCount},
-  }
+  };
               statusFilter={{statusFilter},
-  }
+  };
               setStatusFilter={{setStatusFilter},
-  }
+  };
               archiveFilter={{archiveFilter},
-  }
+  };
               setArchiveFilter={{setArchiveFilter},
-  }
+  };
             />
 
             {{/* Main Content */},
-  }
+  };
             <Tabs defaultValue="active" className="mb-6">
               <TabsList className="bg-zion-blue-dark border border-zion-blue-light">
                 <TabsTrigger value="active">Active Requests</TabsTrigger>
@@ -74,34 +74,34 @@ const activeQuotes = quotes.filter((q: QuoteRequest) => !q.is_archived)
               <TabsContent value="active">
                 <QuoteRequestsList;
                   quotes={{activeQuotes},
-  }
+  };
                   isLoading={{isLoading},
-  }
+  };
                   isArchived={{false},
-  }
+  };
                   onViewDetails={{handleViewDetails},
-  }
+  };
                   onMarkAsResponded={{markAsResponded},
-  }
+  };
                   onToggleArchive={{toggleArchive},
-  }
+  };
                 />
               </TabsContent>
 
               <TabsContent value="archived">
                 <QuoteRequestsList;
                   quotes={{archivedQuotes},
-  }
+  };
                   isLoading={{isLoading},
-  }
+  };
                   isArchived={{true},
-  }
+  };
                   onViewDetails={{handleViewDetails},
-  }
+  };
                   onMarkAsResponded={{markAsResponded},
-  }
+  };
                   onToggleArchive={{toggleArchive},
-  }
+  };
                 />
               </TabsContent>
             </Tabs>
@@ -109,21 +109,21 @@ const activeQuotes = quotes.filter((q: QuoteRequest) => !q.is_archived)
         </div>
 
         {{/* Quote Details Modal */},
-  }
+  };
         <QuoteDetails;
           quote={{selectedQuote},
-  }
+  };
           isOpen={{showDetails},
-  }
+  };
           onClose={() => {
             setShowDetails(false)
             setSelectedQuote(null)
           },
-  }
+  };
         />
 
 
       </div>
     </ProtectedRoute>
   )
-}
+};

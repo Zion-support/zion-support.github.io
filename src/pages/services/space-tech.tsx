@@ -96,7 +96,7 @@ export default function SpaceTechnology() {
       />
       ;
       {{/* Hero Section */},
-  }
+  };
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-blue-900/20 to-purple-900/20"></div>
         <div className="absolute inset-0 bg-[url('data: image/svg+xml,base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wMiI+PGNpcmNsZSBjeD0iMzAiIGN5PSIzMCIgcj0iMiIvPjwvZz48L2c+PC9zdmc+')] opacity-30"></div>
@@ -104,11 +104,11 @@ export default function SpaceTechnology() {
         <div className="container-responsive relative z-10">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             animate={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             className="className="text-center max-w-4xl mx-auto";"
           >
             <div className="flex justify-center mb-6">
@@ -129,18 +129,18 @@ export default function SpaceTechnology() {
             <div className="flex flex-wrap justify-center gap-4">
               <motion.button;
                 whileHover={{ scale: 1.05 },
-  }
+  };
                 whileTap={{ scale: 0.95 },
-  }
+  };
                 className="className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-xl hover:from-blue-600 hover:to-purple-700 transition-all duration-300";"
               >
                 Explore Services;
               </motion.button>
               <motion.button;
                 whileHover={{ scale: 1.05 },
-  }
+  };
                 whileTap={{ scale: 0.95 },
-  }
+  };
                 className="className="px-8 py-4 border-2 border-blue-400/30 text-blue-400 font-semibold rounded-xl hover:bg-blue-400/10 transition-all duration-300";"
               >
                 Contact Us;
@@ -151,16 +151,16 @@ export default function SpaceTechnology() {
       </section>
 
       {{/* Features Section */},
-  }
+  };
       <section className="py-20 bg-slate-900/50">
         <div className="container-responsive">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">Revolutionary Space Solutions</h2>
@@ -174,13 +174,13 @@ export default function SpaceTechnology() {
             {features.map((feature, index) => (
   <motion.div;
                 key={{feature.title},
-  }
+  };
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.8, delay: index * 0.1 },
-  }
+  };
                 className="className="bg-slate-800/50 border border-slate-700/50 rounded-2xl p-6 hover:border-blue-400/30 transition-all duration-300";"
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-xl flex items-center justify-center mb-4">
@@ -193,7 +193,7 @@ export default function SpaceTechnology() {
   <li key={idx} className="flex items-center text-sm text-slate-400">
                       <Star className="w-4 h-4 text-blue-400 mr-2" />
                       {{benefit},
-  }
+  };
                     </li>
                   ))}
                 </ul>
@@ -204,16 +204,16 @@ export default function SpaceTechnology() {
       </section>
 
       {{/* Applications Section */},
-  }
+  };
       <section className="py-20">
         <div className="container-responsive">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">Space Applications</h2>
@@ -227,26 +227,26 @@ export default function SpaceTechnology() {
             {applications.map((app, index) => (
   <motion.div;
                 key={{app.category},
-  }
+  };
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 },
-  }
+  };
                 whileInView={{ opacity: 1, x: 0 },
-  }
+  };
                 transition={{ duration: 0.8, delay: index * 0.1 },
-  }
+  };
                 className="className="bg-slate-800/50 border border-slate-700/50 rounded-2xl p-8";"
               >
                 <h3 className="text-2xl font-semibold text-white mb-6 flex items-center">
                   <Target className="w-6 h-6 text-blue-400 mr-3" />
                   {{app.category},
-  }
+  };
                 </h3>
                 <ul className="space-y-3">
                   {app.services.map((service, idx) => (
   <li key={idx} className="flex items-center text-slate-300">
                       <div className="w-2 h-2 bg-blue-400 rounded-full mr-3"></div>
                       {{service},
-  }
+  };
                     </li>
                   ))}
                 </ul>
@@ -257,16 +257,16 @@ export default function SpaceTechnology() {
       </section>
 
       {{/* Technologies Section */},
-  }
+  };
       <section className="py-20 bg-slate-900/50">
         <div className="container-responsive">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">Cutting-Edge Technologies</h2>
@@ -280,13 +280,13 @@ export default function SpaceTechnology() {
             {technologies.map((tech, index) => (
   <motion.div;
                 key={{tech.name},
-  }
+  };
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.8, delay: index * 0.1 },
-  }
+  };
                 className="className="bg-slate-800/50 border border-slate-700/50 rounded-2xl p-6 hover:border-blue-400/30 transition-all duration-300";"
               >
                 <div className="flex items-center mb-4">
@@ -303,16 +303,16 @@ export default function SpaceTechnology() {
       </section>
 
       {{/* CTA Section */},
-  }
+  };
       <section className="py-20">
         <div className="container-responsive">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             className="className="text-center";"
           >
             <div className="bg-gradient-to-r from-blue-900/50 to-purple-900/50 border border-blue-400/30 rounded-3xl p-12">
@@ -324,18 +324,18 @@ export default function SpaceTechnology() {
               <div className="flex flex-wrap justify-center gap-4">
                 <motion.button;
                   whileHover={{ scale: 1.05 },
-  }
+  };
                   whileTap={{ scale: 0.95 },
-  }
+  };
                   className="className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-xl hover:from-blue-600 hover:to-purple-700 transition-all duration-300";"
                 >
                   Get Started;
                 </motion.button>
                 <motion.button;
                   whileHover={{ scale: 1.05 },
-  }
+  };
                   whileTap={{ scale: 0.95 },
-  }
+  };
                   className="className="px-8 py-4 border-2 border-blue-400/30 text-blue-400 font-semibold rounded-xl hover:bg-blue-400/10 transition-all duration-300";"
                 >
                   Learn More;
@@ -347,7 +347,7 @@ export default function SpaceTechnology() {
       </section>
 
       {{/* Contact Info */},
-  }
+  };
       <section className="py-16 bg-slate-900/50">
         <div className="container-responsive">
           <div className="text-center">
@@ -374,4 +374,4 @@ export default function SpaceTechnology() {
       </section>
     </div>
   )
-}
+};

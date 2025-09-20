@@ -60,18 +60,18 @@ const ManufacturingSolutions: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {{/* Header */},
-  }
+  };
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-[linear-gradient(rgba(6,182,212,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(6,182,212,0.1)_1px,transparent_1px)] bg-[size:50px_50px]"></div>
         ;
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-16">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             animate={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             className="className="text-center";"
           >
             <div className="flex justify-center mb-6">
@@ -91,15 +91,15 @@ const ManufacturingSolutions: React.FC = () => {
       </div>
 
       {{/* Benefits Section */},
-  }
+  };
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <motion.div;
           initial={{ opacity: 0, y: 20 },
-  }
+  };
           animate={{ opacity: 1, y: 0 },
-  }
+  };
           transition={{ duration: 0.8, delay: 0.2 },
-  }
+  };
           className="className="text-center mb-12";"
         >
           <h2 className="text-3xl font-bold text-white mb-4">
@@ -114,13 +114,13 @@ const ManufacturingSolutions: React.FC = () => {
           {benefits.map((benefit, index) => (
   <motion.div;
               key={{benefit.title},
-  }
+  };
               initial={{ opacity: 0, y: 20 },
-  }
+  };
               animate={{ opacity: 1, y: 0 },
-  }
+  };
               transition={{ duration: 0.6, delay: 0.3 + index * 0.1 },
-  }
+  };
               className="className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-xl p-6 text-center hover:border-cyan-400/50 transition-all duration-300";"
             >
               <div className="w-16 h-16 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-xl flex items-center justify-center mx-auto mb-4">
@@ -134,15 +134,15 @@ const ManufacturingSolutions: React.FC = () => {
       </div>
 
       {{/* Solutions Grid */},
-  }
+  };
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <motion.div;
           initial={{ opacity: 0, y: 20 },
-  }
+  };
           animate={{ opacity: 1, y: 0 },
-  }
+  };
           transition={{ duration: 0.8, delay: 0.4 },
-  }
+  };
           className="className="text-center mb-12";"
         >
           <h2 className="text-3xl font-bold text-white mb-4">
@@ -157,13 +157,13 @@ const ManufacturingSolutions: React.FC = () => {
           {solutions.map((solution, index) => (
   <motion.div;
               key={{solution.title},
-  }
+  };
               initial={{ opacity: 0, y: 20 },
-  }
+  };
               animate={{ opacity: 1, y: 0 },
-  }
+  };
               transition={{ duration: 0.6, delay: 0.5 + index * 0.1 },
-  }
+  };
               className="className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-2xl p-6 hover:border-cyan-400/50 transition-all duration-300 group";"
             >
               <div className="flex items-center space-x-3 mb-4">
@@ -175,7 +175,7 @@ const ManufacturingSolutions: React.FC = () => {
               ;
               <p className="text-gray-300 mb-4 leading-relaxed">
                 {{solution.description},
-  }
+  };
               </p>
               ;
               <div className="mb-6">
@@ -195,15 +195,15 @@ const ManufacturingSolutions: React.FC = () => {
       </div>
 
       {{/* Call to Action */},
-  }
+  };
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <motion.div;
           initial={{ opacity: 0, y: 20 },
-  }
+  };
           animate={{ opacity: 1, y: 0 },
-  }
+  };
           transition={{ duration: 0.8, delay: 0.6 },
-  }
+  };
           className="className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-400/20 rounded-2xl p-8 text-center";"
         >
           <h2 className="text-3xl font-bold text-white mb-4">
@@ -230,5 +230,5 @@ const ManufacturingSolutions: React.FC = () => {
       </div>
     </div>
   )
-}
+};
 export default ManufacturingSolutions;

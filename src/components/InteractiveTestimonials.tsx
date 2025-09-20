@@ -52,7 +52,6 @@ const prevTestimonial = () => {
     setSelectedTestimonial((prev) => 
       prev === 0 ? filteredTestimonials.length - 1 : prev - 1
     )
-};
 const goToTestimonial = (index: number) => {
     setCurrentIndex(index)
   };
@@ -78,13 +77,13 @@ const togglePlayPause = () => {
         <motion.div 
           className="text-center mb-16"
           initial={{ opacity: 0, y: 20 },
-  }
+  };
           whileInView={{ opacity: 1, y: 0 },
-  }
+  };
           viewport={{ once: true },
-  }
+  };
           transition={{ duration: 0.6 },
-  }
+  };
         >
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
             Client Success Stories
@@ -99,13 +98,13 @@ const togglePlayPause = () => {
         <motion.div 
           className="flex flex-wrap justify-center gap-3 mb-12"
           initial={{ opacity: 0, y: 20 },
-  }
+  };
           whileInView={{ opacity: 1, y: 0 },
-  }
+  };
           viewport={{ once: true },
-  }
+  };
           transition={{ duration: 0.6, delay: 0.2 },
-  }
+  };
         >
           <div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl p-8 text-white">
             <h3 className="text-2xl font-bold mb-4">
@@ -130,4 +129,3 @@ const togglePlayPause = () => {
       </div>
     </section>
   )
-}

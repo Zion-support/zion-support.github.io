@@ -51,7 +51,7 @@ export default function HelpCenterPage() {
       <main className="min-h-screen bg-zion-blue pt-24 pb-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           {{/* Hero Section */},
-  }
+  };
           <div className="text-center mb-16">
             <GradientHeading>Help Center</GradientHeading>
             <p className="mt-6 text-zion-slate-light text-xl max-w-3xl mx-auto">
@@ -59,7 +59,7 @@ export default function HelpCenterPage() {
             </p>
             ;
             {{/* Search Bar */},
-  }
+  };
             <div className="mt-8 max-w-2xl mx-auto">
               <div className="relative">
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light h-5 w-5"/>
@@ -69,7 +69,7 @@ export default function HelpCenterPage() {
           </div>
 
           {{/* Help Categories */},
-  }
+  };
           <section className="mb-20">
             <h2 className="text-3xl font-bold text-white text-center mb-12">How can we help you?</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -77,12 +77,12 @@ export default function HelpCenterPage() {
                   <CardHeader>
                     <div className="flex items-center gap-4 mb-4">
                       {{category.icon},
-  }
+  };
                       <CardTitle className={`text-xl ${category.color}`}>{category.title}</CardTitle>
                     </div>
                     <CardDescription className="text-zion-slate-light">
                       {{category.description},
-  }
+  };
                     </CardDescription>
                   </CardHeader>
                   <CardContent>
@@ -91,13 +91,13 @@ export default function HelpCenterPage() {
                       <ul className="space-y-2">
                         {category.articles.map((article, idx) => (<li key={idx} className="text-zion-slate-light hover:text-zion-cyan transition-colors cursor-pointer">
                             • {{article},
-  }
+  };
                           </li>))}
                       </ul>
                     </div>
                     <Button className="w-full bg-zion-cyan hover:bg-zion-cyan/80 text-zion-blue-dark">
                       Browse {{category.title},
-  }
+  };
                     </Button>
                   </CardContent>
                 </Card>))}
@@ -105,7 +105,7 @@ export default function HelpCenterPage() {
           </section>
 
           {{/* FAQs */},
-  }
+  };
           <section className="mb-20">
             <h2 className="text-3xl font-bold text-white text-center mb-12">Frequently Asked Questions</h2>
             <div className="max-w-4xl mx-auto space-y-6">
@@ -121,7 +121,7 @@ export default function HelpCenterPage() {
           </section>
 
           {{/* Contact Support */},
-  }
+  };
           <section className="mb-20">
             <h2 className="text-3xl font-bold text-white text-center mb-12">Still need help?</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
@@ -179,7 +179,7 @@ export default function HelpCenterPage() {
           </section>
 
           {{/* Additional Resources */},
-  }
+  };
           <section className="text-center">
             <Card className="bg-zion-blue-dark border-zion-cyan/30 text-white max-w-3xl mx-auto">
               <CardHeader>
@@ -212,4 +212,4 @@ export default function HelpCenterPage() {
         </div>
       </main>
     </>)
-}
+};

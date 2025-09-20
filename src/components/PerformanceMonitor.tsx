@@ -35,9 +35,8 @@ const currentTime = performance.now();
         fps = Math.round((frameCount * 1000) / (currentTime - lastTime));
         frameCount = 0;
         lastTime = currentTime
-}
-      requestAnimationFrame(measureFPS)
 };
+      requestAnimationFrame(measureFPS)
     measureFPS();
 
     // Calculate Lighthouse score (simplified)
@@ -117,7 +116,7 @@ const currentTime = performance.now();
                   'bg-red-400'
                 }`}
                 style={{ width: `${metrics.lighthouseScore}%` },
-  }
+  };
               />
             </div>
             <span className={metrics.lighthouseScore >= 90 ? 'text-green-400' : 
@@ -133,4 +132,3 @@ const currentTime = performance.now();
       </div>
     </div>
   )
-}

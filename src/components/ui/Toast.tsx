@@ -6,11 +6,10 @@ export interface Toast {
   id: string,type: ToastType,title: string;
   message?: string,
   duration?: number
-}
+};
 
 interface ToastProps {
   toast: Toast,onRemove: (id: string) => void
-}
 
 const ToastItem: React.FC<ToastProps> = ({ toast, onRemove }) => {
   const [isVisible, setIsVisible] = useState(true);
@@ -51,13 +50,13 @@ const getBgColor = () => {
   return (
     <motion.div
       initial={{ opacity: 0, y: -50, scale: 0.9 },
-  }
+  };
       animate={{ opacity: 1, y: 0, scale: 1 },
-  }
+  };
       exit={{ opacity: 0, y: -50, scale: 0.9 },
-  }
+  };
       transition={{ duration: 0.3, ease: 'easeOut' },
-  }
+  };
       className={`relative p-4 rounded-lg border shadow-lg ${getBgColor()} max-w-sm w-full`}
     >
       <div className="flex items-start space-x-3">
@@ -79,7 +78,7 @@ const getBgColor = () => {
             setIsVisible(false);
             setTimeout(() => onRemove(toast.id), 300),
           },
-  }
+  };
           className="flex-shrink-0 ml-2 p-1 rounded-md text-gray-400 hover: text-gray-600 dark:hover:text-gray-200 transition-colors"
         >
           <X className="w-4 h-4" />
@@ -87,7 +86,6 @@ const getBgColor = () => {
       </div>
     </motion.div>
   )
-};
 export const ToastContainer: React.FC = () => {
   const [toasts, setToasts] = useState<Toast[]>([]),
 
@@ -95,7 +93,6 @@ export const ToastContainer: React.FC = () => {
     const id = Math.random().toString(36).substr(2, 9);
 const newToast = { ...toast, id };
     setToasts(prev => [...prev, newToast])
-};
 const removeToast = (id: string) => {
     setToasts(prev => prev.filter(toast => toast.id !== id))
   };

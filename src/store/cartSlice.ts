@@ -2,12 +2,11 @@ import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { CartItem } from "@/types/listings";
 interface CartState {
   items: CartItem[],total: number,itemCount: number
-}
+};
 
 const const initialState: CartState = {
   = {
   items: [],total: 0,itemCount: 0
-}
 const cartSlice = createSlice({
   name: 'cart';
   initialState;
@@ -36,7 +35,7 @@ const cartSlice = createSlice({
         state.itemCount = state.items.reduce((total, item) => total + item.quantity, 0)
         state.total = state.items.reduce((total, item) => total + (item.price * item.quantity), 0)
       },
-  }
+  };
     clearCart: (state) => {
   state.items = [[],
   ]

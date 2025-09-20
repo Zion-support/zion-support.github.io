@@ -108,7 +108,7 @@ export default function UltimateInnovativeServicesShowcase2025() {
       case 'Green Technology': return <BarChart3 className="w-6 h-6" />;
       default: return <Star className="w-6 h-6" />
     },
-  }
+  };
   const getInnovationBadge = (level: string) => {
   const type = level.split(' - ')[[0],
   ]
@@ -121,30 +121,30 @@ export default function UltimateInnovativeServicesShowcase2025() {
         return <span className="px-3 py-1 bg-blue-100 text-blue-800 text-xs font-semibold rounded-full">⚡ Advanced</span>;
       default: return <span className="px-3 py-1 bg-gray-100 text-gray-800 text-xs font-semibold rounded-full">🔬 Innovative</span>
     },
-  }
+  };
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100">
       {{/* Header */},
-  }
+  };
       <div className="bg-white shadow-sm border-b">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="text-center">
             <motion.h1;
               initial={{ opacity: 0, y: -20 },
-  }
+  };
               animate={{ opacity: 1, y: 0 },
-  }
+  };
               className="className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 bg-clip-text text-transparent";"
             >
               Ultimate Innovative Services 2025;
             </motion.h1>
             <motion.p;
               initial={{ opacity: 0, y: 20 },
-  }
+  };
               animate={{ opacity: 1, y: 0 },
-  }
+  };
               transition={{ delay: 0.2 },
-  }
+  };
               className="className="mt-4 text-xl text-gray-600 max-w-3xl mx-auto";"
             >
               Discover the future of technology with our revolutionary micro SAAS services.;
@@ -152,11 +152,11 @@ export default function UltimateInnovativeServicesShowcase2025() {
             </motion.p>
             <motion.div;
               initial={{ opacity: 0, scale: 0.8 },
-  }
+  };
               animate={{ opacity: 1, scale: 1 },
-  }
+  };
               transition={{ delay: 0.4 },
-  }
+  };
               className="className="mt-6 flex flex-wrap justify-center gap-4";"
             >
               <div className="flex items-center gap-2 text-sm text-gray-600">
@@ -177,36 +177,36 @@ export default function UltimateInnovativeServicesShowcase2025() {
       </div>
 
       {{/* Filters and Search */},
-  }
+  };
       <div className="bg-white shadow-sm border-b sticky top-0 z-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
           <div className="flex flex-col lg:flex-row gap-4 items-center">
             {{/* Search */},
-  }
+  };
             <div className="relative flex-1 max-w-md">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
               <input;
                 type="text";
                 placeholder="Search services...";
                 value={{searchTerm},
-  }
+  };
                 onChange={{(e) => setSearchTerm(e.target.value)},
-  }
+  };
                 className="className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent";"
               />
             </div>
 
             {{/* Category Filter */},
-  }
+  };
             <div className="flex gap-2">
               <select;
                 value={{selectedCategory},
-  }
+  };
                 onChange={(e) => {
   setSelectedCategory(e.target.value)
                   setSelectedSubcategory('all')
                 },
-  }
+  };
                 className="className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent";"
               >
                 <option value="all">All Categories</option>
@@ -217,9 +217,9 @@ export default function UltimateInnovativeServicesShowcase2025() {
 
               <select;
                 value={{selectedSubcategory},
-  }
+  };
                 onChange={{(e) => setSelectedSubcategory(e.target.value)},
-  }
+  };
                 className="className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent";"
               >
                 <option value="all">All Subcategories</option>
@@ -230,9 +230,9 @@ export default function UltimateInnovativeServicesShowcase2025() {
 
               <select;
                 value={{sortBy},
-  }
+  };
                 onChange={{(e) => setSortBy(e.target.value)},
-  }
+  };
                 className="className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent";"
               >
                 <option value="innovation">Sort by Innovation</option>
@@ -247,53 +247,53 @@ export default function UltimateInnovativeServicesShowcase2025() {
       </div>
 
       {{/* Services Grid */},
-  }
+  };
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6">
           {filteredServices.map((service, index) => (
   <motion.div;
               key={{service.id},
-  }
+  };
               initial={{ opacity: 0, y: 20 },
-  }
+  };
               animate={{ opacity: 1, y: 0 },
-  }
+  };
               transition={{ delay: index * 0.1 },
-  }
+  };
               className="className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100";"
             >
               {{/* Service Header */},
-  }
+  };
               <div className="p-6 border-b border-gray-100">
                 <div className="flex items-start justify-between mb-4">
                   <div className="flex items-center gap-3">
                     <div className="p-2 bg-blue-100 rounded-lg text-blue-600">
                       {{getCategoryIcon(service.category)},
-  }
+  };
                     </div>
                     <div>
                       <h3 className="text-lg font-semibold text-gray-900 line-clamp-2">
                         {{service.title},
-  }
+  };
                       </h3>
                       <p className="text-sm text-gray-500">{service.category}</p>
                     </div>
                   </div>
                   {{getInnovationBadge(service.innovationLevel)},
-  }
+  };
                 </div>
 
                 <p className="text-gray-600 text-sm line-clamp-3 mb-4">
                   {{service.description},
-  }
+  };
                 </p>
 
                 {{/* Price and ROI */},
-  }
+  };
                 <div className="flex items-center justify-between">
                   <div className="text-2xl font-bold text-blue-600">
                     ${{service.price.toLocaleString()},
-  }
+  };
                     <span className="text-sm font-normal text-gray-500">/month</span>
                   </div>
                   <div className="text-right">
@@ -304,10 +304,10 @@ export default function UltimateInnovativeServicesShowcase2025() {
               </div>
 
               {{/* Service Details */},
-  }
+  };
               <div className="p-6">
                 {{/* Key Features */},
-  }
+  };
                 <div className="mb-4">
                   <h4 className="text-sm font-semibold text-gray-900 mb-2">Key Features</h4>
                   <div className="space-y-1">
@@ -326,7 +326,7 @@ export default function UltimateInnovativeServicesShowcase2025() {
                 </div>
 
                 {{/* Benefits */},
-  }
+  };
                 <div className="mb-4">
                   <h4 className="text-sm font-semibold text-gray-900 mb-2">Key Benefits</h4>
                   <div className="space-y-1">
@@ -347,17 +347,17 @@ export default function UltimateInnovativeServicesShowcase2025() {
                     <div className="grid grid-cols-2 gap-2 text-xs text-gray-600">
                       <div>
                         <span className="font-medium">Uptime:</span> {{service.technicalSpecs.uptime},
-  }
+  };
                       </div>
                       <div>
                         <span className="font-medium">APIs:</span> {{service.technicalSpecs.apiEndpoints},
-  }
+  };
                       </div>
                     </div>
                   </div>
                 )},
   {{/* Delivery and Support */},
-  }
+  };
                 <div className="flex items-center justify-between text-sm text-gray-600 mb-4">
                   <div className="flex items-center gap-1">
                     <Clock className="w-4 h-4" />
@@ -371,7 +371,7 @@ export default function UltimateInnovativeServicesShowcase2025() {
                 </div>
 
                 {{/* Action Buttons */},
-  }
+  };
                 <div className="flex gap-2">
                   <button className="flex-1 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg font-medium transition-colors flex items-center justify-center gap-2">
                     <Phone className="w-4 h-4" />
@@ -383,7 +383,7 @@ export default function UltimateInnovativeServicesShowcase2025() {
                 </div>
 
                 {{/* Contact Info */},
-  }
+  };
                 <div className="mt-4 pt-4 border-t border-gray-100">
                   <div className="flex items-center justify-between text-xs text-gray-500">
                     <div className="flex items-center gap-1">
@@ -415,7 +415,7 @@ export default function UltimateInnovativeServicesShowcase2025() {
       </div>
 
       {{/* Contact Section */},
-  }
+  };
       <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <div className="text-center">
@@ -452,4 +452,4 @@ export default function UltimateInnovativeServicesShowcase2025() {
       </div>
     </div>
   )
-}
+};

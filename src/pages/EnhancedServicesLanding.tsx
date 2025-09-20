@@ -200,7 +200,7 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
       'AI & Entertainment': <Gamepad2 className="w-6 h-6" />
     }
     return iconMap[category] || <Sparkles className="w-6 h-6" />
-}
+};
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -210,16 +210,16 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
       />
       ;
       {{/* Hero Section */},
-  }
+  };
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             animate={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
           >
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
@@ -253,7 +253,7 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
       </section>
 
       {{/* Contact Information Banner */},
-  }
+  };
       <section className="bg-gradient-to-r from-cyan-600 to-blue-600 py-8 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center text-white">
@@ -277,16 +277,16 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
       </section>
 
       {{/* Services Overview */},
-  }
+  };
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             animate={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8, delay: 0.2 },
-  }
+  };
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -299,22 +299,22 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
           </motion.div>
 
           {{/* Service Categories Grid */},
-  }
+  };
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mb-16">
             {categories.slice(1).map((category, index) => (
   <motion.div;
                 key={{category.id},
-  }
+  };
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 animate={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.5, delay: index * 0.1 },
-  }
+  };
                 className={`bg-gradient-to-br ${category.color} p-6 rounded-xl text-white cursor-pointer transform hover:scale-105 transition-all duration-300`}
                 onClick={{onClick={() => setActiveCategory(category.id)},
   },
-  }
+  };
               >
                 <div className="text-3xl mb-3">{category.icon}</div>
                 <h3 className="text-lg font-semibold mb-2">{category.name}</h3>
@@ -324,7 +324,7 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
           </div>
 
           {{/* Search and Filter */},
-  }
+  };
           <div className="flex flex-col md:flex-row gap-4 mb-8">
             <div className="flex-1 relative">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
@@ -332,17 +332,17 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
                 type="text";
                 placeholder="Search services...";
                 value={{searchTerm},
-  }
+  };
                 onChange={{(e) => setSearchTerm(e.target.value)},
-  }
+  };
                 className="className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500";"
               />
             </div>
             <select;
               value={{sortBy},
-  }
+  };
               onChange={{(e) => setSortBy(e.target.value)},
-  }
+  };
               className="className="px-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500";"
             >
               <option value="rating">Sort by Rating</option>
@@ -353,28 +353,28 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
           </div>
 
           {{/* Services Grid */},
-  }
+  };
           <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
             {sortedServices.map((service, index) => (
   <motion.div;
                 key={{service.id},
-  }
+  };
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 animate={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.5, delay: index * 0.1 },
-  }
+  };
                 className="className="bg-slate-800 rounded-xl p-6 border border-slate-700 hover:border-cyan-500 transition-all duration-300 transform hover:scale-105";"
               >
                 <div className="flex items-start justify-between mb-4">
                   <div className="flex items-center space-x-3">
                     {{getCategoryIcon(service.category)},
-  }
+  };
                     <div>
                       <span className="inline-block px-2 py-1 text-xs font-medium bg-cyan-900 text-cyan-300 rounded-full">
                         {{service.category},
-  }
+  };
                       </span>
                     </div>
                   </div>
@@ -413,11 +413,11 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
                     {service.tags.slice(0, 4).map((tag, tagIndex) => (
   <span;
                         key={{tagIndex},
-  }
+  };
                         className="className="px-2 py-1 text-xs bg-slate-700 text-gray-300 rounded-full";"
                       >
                         {{tag},
-  }
+  };
                       </span>
                     ))}
                   </div>
@@ -443,16 +443,16 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
       </section>
 
       {{/* Why Choose Zion Tech Group */},
-  }
+  };
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800">
         <div className="max-w-7xl mx-auto">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             animate={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8, delay: 0.4 },
-  }
+  };
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -487,13 +487,13 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
   ].map((feature, index) => (
   <motion.div;
                 key={{index},
-  }
+  };
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 animate={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.5, delay: 0.6 + index * 0.1 },
-  }
+  };
                 className="className="text-center p-6";"
               >
                 <div className="flex justify-center mb-4">{feature.icon}</div>
@@ -506,16 +506,16 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
       </section>
 
       {{/* Call to Action */},
-  }
+  };
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             animate={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8, delay: 0.6 },
-  }
+  };
           >
             <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
               Ready to Transform Your Business?;
@@ -545,7 +545,6 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
       </section>
     </div>
   )
-}
 
 // Settings icon component;
 const Settings = ({ className }: { className?: string }) => (

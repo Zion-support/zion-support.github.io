@@ -12,7 +12,7 @@ export interface ComprehensivePricingPlan2028 {
   contactInfo: {
   phone: string,email: string,website: string
 },
-  }
+  };
 
 export interface ServiceCategory2028 {
   id: string,name: string,description: string,services: {
@@ -21,7 +21,7 @@ export interface ServiceCategory2028 {
   },
   [[],
   ],
-  }
+  };
 
 export const COMPREHENSIVE_PRICING_PLANS_2028: ComprehensivePricingPlan2028[] = [
   {
@@ -394,4 +394,4 @@ export const const MARKET_ANALYSIS_2028 = {
     "Strategic partnerships";
     "Customer success focus"
 ],
-  }
+  };

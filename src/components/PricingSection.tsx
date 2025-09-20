@@ -54,13 +54,13 @@ export function PricingSection() {
         <motion.div 
           className="text-center mb-16"
           initial={{ opacity: 0, y: 20 },
-  }
+  };
           whileInView={{ opacity: 1, y: 0 },
-  }
+  };
           viewport={{ once: true },
-  }
+  };
           transition={{ duration: 0.6 },
-  }
+  };
         >
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
             Transparent Pricing
@@ -77,13 +77,13 @@ export function PricingSection() {
               key={tier.name}
               className={`relative ${tier.popular ? 'scale-105' : ''}`}
               initial={{ opacity: 0, y: 30 },
-  }
+  };
               whileInView={{ opacity: 1, y: 0 },
-  }
+  };
               viewport={{ once: true },
-  }
+  };
               transition={{ duration: 0.6, delay: index * 0.1 },
-  }
+  };
             >
               {tier.popular && (
                 <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
@@ -131,13 +131,13 @@ export function PricingSection() {
         <motion.div 
           className="mt-16 text-center"
           initial={{ opacity: 0, y: 20 },
-  }
+  };
           whileInView={{ opacity: 1, y: 0 },
-  }
+  };
           viewport={{ once: true },
-  }
+  };
           transition={{ duration: 0.6, delay: 0.4 },
-  }
+  };
         >
           <p className="text-gray-400 mb-6">
             Need a custom solution? Contact us for a personalized quote.
@@ -153,4 +153,4 @@ export function PricingSection() {
       </div>
     </section>
   )
-}
+};

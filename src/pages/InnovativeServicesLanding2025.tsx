@@ -68,16 +68,16 @@ export default function InnovativeServicesLanding2025() {
       />
       ;
       {{/* Hero Section */},
-  }
+  };
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             animate={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
           >
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">
@@ -102,16 +102,16 @@ export default function InnovativeServicesLanding2025() {
       </section>
 
       {{/* Featured Services */},
-  }
+  };
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             animate={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8, delay: 0.2 },
-  }
+  };
             className="className="text-center mb-16";"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -126,13 +126,13 @@ export default function InnovativeServicesLanding2025() {
             {featuredServices.map((service, index) => (
   <motion.div;
                 key={{service.name},
-  }
+  };
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 animate={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.8, delay: 0.1 * index },
-  }
+  };
                 className="className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300 group hover:scale-105";"
               >
                 <div className="flex items-center mb-6">
@@ -158,7 +158,7 @@ export default function InnovativeServicesLanding2025() {
                 ;
                 <a;
                   href={{service.href},
-  }
+  };
                   className="className="inline-flex items-center text-blue-400 hover:text-blue-300 text-sm font-medium transition-colors group-hover:text-blue-300";"
                 >
                   Learn More <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
@@ -170,7 +170,7 @@ export default function InnovativeServicesLanding2025() {
       </section>
 
       {{/* Contact Section */},
-  }
+  };
       <section className="px-4 sm:px-6 lg:px-8 mb-20">
         <div className="max-w-7xl mx-auto">
           <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-center">
@@ -193,16 +193,16 @@ export default function InnovativeServicesLanding2025() {
       </section>
 
       {{/* Emerging Technologies */},
-  }
+  };
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             animate={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8, delay: 0.4 },
-  }
+  };
             className="className="text-center mb-16";"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -217,13 +217,13 @@ export default function InnovativeServicesLanding2025() {
             {emergingTechnologies.map((tech, index) => (
   <motion.div;
                 key={{tech.name},
-  }
+  };
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 animate={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.8, delay: 0.1 * index },
-  }
+  };
                 className="className="text-center group";"
               >
                 <div className={`p-6 bg-gradient-to-r ${tech.color} rounded-2xl mb-4 group-hover:scale-110 transition-transform duration-300`}>
@@ -238,16 +238,16 @@ export default function InnovativeServicesLanding2025() {
       </section>
 
       {{/* Final CTA */},
-  }
+  };
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             animate={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8, delay: 0.6 },
-  }
+  };
           >
             <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
               Start Your Digital Transformation Today;
@@ -263,4 +263,4 @@ export default function InnovativeServicesLanding2025() {
       </section>
     </div>
   )
-}
+};

@@ -188,11 +188,11 @@ const getCategoryIcon = (category: string) => {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             animate={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.6 },
-  }
+  };
             className="text-center"
           >
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -295,24 +295,24 @@ const getCategoryIcon = (category: string) => {
                 <motion.div
                   key={`${activeCategory}-${searchTerm}-${sortBy}-${currentPage}`}
                   initial={{ opacity: 0, y: 20 },
-  }
+  };
                   animate={{ opacity: 1, y: 0 },
-  }
+  };
                   exit={{ opacity: 0, y: -20 },
-  }
+  };
                   transition={{ duration: 0.3 },
-  }
+  };
                   className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
                 >
                   {currentServices.map((service, index) => (
                     <motion.div
                       key={service.id}
                       initial={{ opacity: 0, y: 20 },
-  }
+  };
                       animate={{ opacity: 1, y: 0 },
-  }
+  };
                       transition={{ duration: 0.3, delay: index * 0.1 },
-  }
+  };
                       className="group relative bg-slate-800/50 backdrop-blur-md rounded-2xl border border-slate-700/50 overflow-hidden hover:border-cyan-500/50 transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/10"
                     >
                       {/* Featured Badge */},
@@ -397,7 +397,7 @@ const getCategoryIcon = (category: string) => {
                                 <div
                                   className="h-full bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full"
                                   style={{ width: `${service.aiScore}%` },
-  }
+  };
                                 ></div>
                               </div>
                               <span className="text-sm font-bold text-cyan-400">{service.aiScore}%</span>
@@ -480,4 +480,3 @@ const getCategoryIcon = (category: string) => {
       </section>
     </div>
   )
-}

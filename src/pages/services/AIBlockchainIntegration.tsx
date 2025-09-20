@@ -88,17 +88,17 @@ export default function AIBlockchainIntegration() {
       />
       ;
       {{/* Hero Section */},
-  }
+  };
       <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-purple-500/10"></div>
         <div className="relative max-w-7xl mx-auto text-center">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             animate={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
           >
             <div className="flex items-center justify-center mb-6">
               <Brain className="w-12 h-12 text-cyan-400 mr-3" />
@@ -113,18 +113,18 @@ export default function AIBlockchainIntegration() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button;
                 whileHover={{ scale: 1.05 },
-  }
+  };
                 whileTap={{ scale: 0.95 },
-  }
+  };
                 className="className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg hover:shadow-cyan-500/25 transition-all duration-300";"
               >
                 Get Started Today;
               </motion.button>
               <motion.button;
                 whileHover={{ scale: 1.05 },
-  }
+  };
                 whileTap={{ scale: 0.95 },
-  }
+  };
                 className="className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-400/10 transition-all duration-300";"
               >
                 Watch Demo;
@@ -135,16 +135,16 @@ export default function AIBlockchainIntegration() {
       </section>
 
       {{/* Features Section */},
-  }
+  };
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             className="className="text-center mb-16";"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -160,13 +160,13 @@ export default function AIBlockchainIntegration() {
             {features.map((feature, index) => (
   <motion.div;
                 key={{index},
-  }
+  };
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.8, delay: index * 0.1 },
-  }
+  };
                 className="className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 p-6 rounded-xl border border-slate-600/50 hover:border-cyan-400/50 transition-all duration-300 group";"
               >
                 <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
@@ -181,16 +181,16 @@ export default function AIBlockchainIntegration() {
       </section>
 
       {{/* Benefits Section */},
-  }
+  };
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-slate-700/50">
         <div className="max-w-7xl mx-auto">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             className="className="text-center mb-16";"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -205,13 +205,13 @@ export default function AIBlockchainIntegration() {
             {benefits.map((benefit, index) => (
   <motion.div;
                 key={{index},
-  }
+  };
                 initial={{ opacity: 0, x: -20 },
-  }
+  };
                 whileInView={{ opacity: 1, x: 0 },
-  }
+  };
                 transition={{ duration: 0.8, delay: index * 0.1 },
-  }
+  };
                 className="className="flex items-start space-x-3";"
               >
                 <CheckCircle className="w-6 h-6 text-cyan-400 mt-1 flex-shrink-0" />
@@ -223,16 +223,16 @@ export default function AIBlockchainIntegration() {
       </section>
 
       {{/* Pricing Section */},
-  }
+  };
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             className="className="text-center mb-16";"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -247,13 +247,13 @@ export default function AIBlockchainIntegration() {
             {pricing.map((plan, index) => (
   <motion.div;
                 key={{index},
-  }
+  };
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.8, delay: index * 0.1 },
-  }
+  };
                 className={`bg-gradient-to-br from-slate-800/50 to-slate-700/50 p-8 rounded-xl border ${
   index === 1 ;
                     ? 'border-cyan-400/50 shadow-lg shadow-cyan-500/25' ;
@@ -287,9 +287,9 @@ export default function AIBlockchainIntegration() {
 
                 <motion.button;
                   whileHover={{ scale: 1.05 },
-  }
+  };
                   whileTap={{ scale: 0.95 },
-  }
+  };
                   className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
   index === 1;
                       ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white hover:shadow-lg hover:shadow-cyan-500/25';
@@ -305,16 +305,16 @@ export default function AIBlockchainIntegration() {
       </section>
 
       {{/* CTA Section */},
-  }
+  };
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-500/10 to-purple-500/10">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Ready to Transform Your Blockchain Operations?;
@@ -325,18 +325,18 @@ export default function AIBlockchainIntegration() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button;
                 whileHover={{ scale: 1.05 },
-  }
+  };
                 whileTap={{ scale: 0.95 },
-  }
+  };
                 className="className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg hover:shadow-cyan-500/25 transition-all duration-300";"
               >
                 Start Free Trial;
               </motion.button>
               <motion.button;
                 whileHover={{ scale: 1.05 },
-  }
+  };
                 whileTap={{ scale: 0.95 },
-  }
+  };
                 className="className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover: bg-cyan-400/10 transition-all duration-300";"
               >
                 Contact Sales;
@@ -347,4 +347,4 @@ export default function AIBlockchainIntegration() {
       </section>
     </div>
   )
-}
+};

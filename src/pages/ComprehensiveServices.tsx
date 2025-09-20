@@ -17,7 +17,7 @@ const Section: React.FC<{
       <div className="text-center mb-16">
         <div className="inline-flex items-center justify-center w-16 h-16 bg-cyan-500/20 rounded-full mb-6">
           {{icon},
-  }
+  };
         </div>
         <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">{title}</h2>
         <p className="text-xl text-gray-300 max-w-3xl mx-auto">{description}</p>
@@ -36,7 +36,7 @@ const Section: React.FC<{
             className="className="inline-flex items-center px-6 py-3 border border-cyan-500/30 text-cyan-400 font-semibold rounded-lg hover: bg-cyan-500/10 transition-all duration-300";"
           >
             View All {{title},
-  }
+  };
             <ArrowRight className="w-4 h-4 ml-2" />
           </Link>
         </div>
@@ -48,13 +48,13 @@ const Section: React.FC<{
 const ServiceCard: React.FC<{ service: any, index: number }> = ({ service, index }) => (
   <motion.div;
     initial={{ opacity: 0, y: 20 },
-  }
+  };
     whileInView={{ opacity: 1, y: 0 },
-  }
+  };
     transition={{ duration: 0.5, delay: index * 0.1 },
-  }
+  };
     viewport={{ once: true },
-  }
+  };
     className="className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-cyan-400/30 transition-all duration-200";"
   >
     <div className="flex items-center justify-between mb-4">
@@ -84,14 +84,14 @@ const ServiceCard: React.FC<{ service: any, index: number }> = ({ service, index
   <div key={idx} className="flex items-center text-sm text-gray-300">
             <div className="w-1.5 h-1.5 bg-cyan-400 rounded-full mr-2"></div>
             {{feature},
-  }
+  };
           </div>
         ))}
       </div>
     </div>
     <Link;
       to={{service.cta || '#'},
-  }
+  };
       className="className="inline-flex items-center justify-center w-full px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover: from-cyan-600 hover:to-blue-600 transition-all duration-300 text-sm font-medium";"
     >
       Learn More;
@@ -149,7 +149,7 @@ const microSaaS = allServices.filter(service => service.category === 'Micro SaaS
       />
       ;
       {{/* Hero Section */},
-  }
+  };
       <section className="relative pt-32 pb-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900" />
         <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%239C92AC%22%20fill-opacity%3D%220.1%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20" />
@@ -158,11 +158,11 @@ const microSaaS = allServices.filter(service => service.category === 'Micro SaaS
           <motion.div ;
             className="className="text-center";"
             initial={{ opacity: 0, y: 30 },
-  }
+  };
             animate={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
           >
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
@@ -197,39 +197,39 @@ const microSaaS = allServices.filter(service => service.category === 'Micro SaaS
       </section>
 
       {{/* Sections */},
-  }
+  };
       <Section;
         icon={{<Sparkles className="h-6 w-6" />},
-  }
+  };
         title="Micro SaaS Products";
         description="Subscription software for security, legal, revenue, and operations with fast time-to-value.";
         items={{microSaaS},
-  }
+  };
         gradient="from-violet-900/60 to-indigo-900/40";
       />
 
       <Section;
         icon={{<CloudIcon className="h-6 w-6" />},
-  }
+  };
         title="IT Services";
         description="Cloud, platform, and security engagements by seasoned architects and SREs.";
         items={{itServices},
-  }
+  };
         gradient="from-sky-900/60 to-teal-900/40";
       />
 
       <Section;
         icon={{<Cpu className="h-6 w-6" />},
-  }
+  };
         title="AI Solutions";
         description="Applied AI with governance, privacy, and business outcomes at the core.";
         items={{aiSolutions},
-  }
+  };
         gradient="from-fuchsia-900/60 to-rose-900/40";
       />
 
       {{/* Contact CTA */},
-  }
+  };
       <section className="py-16">
         <motion.div className="max-w-5xl mx-auto px-6">
           <div className="rounded-2xl border border-white/10 p-8 bg-white/5">
@@ -264,4 +264,4 @@ const microSaaS = allServices.filter(service => service.category === 'Micro SaaS
       </section>
     </>
   )
-}
+};

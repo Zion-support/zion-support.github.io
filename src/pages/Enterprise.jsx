@@ -58,7 +58,7 @@ export default function Enterprise() {
       <SEO title="Enterprise Solutions - Zion Tech Group" description="Enterprise-grade AI and tech solutions for large organizations. Scale your tech operations with Zion Tech Group's comprehensive enterprise platform." keywords="enterprise solutions, enterprise AI, tech consulting, team management, Zion Tech Group" canonical="https://ziontechgroup.com/enterprise"/>
 
       {{/* Hero Section */},
-  }
+  };
       <section className="bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple py-20">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-5xl font-bold text-white mb-6">
@@ -80,7 +80,7 @@ export default function Enterprise() {
       </section>
 
       {{/* Features Section */},
-  }
+  };
       <section className="py-20 bg-zion-blue-dark">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -101,7 +101,7 @@ export default function Enterprise() {
                 <CardContent>
                   <CardDescription className="text-zion-slate-light">
                     {{feature.description},
-  }
+  };
                   </CardDescription>
                 </CardContent>
               </Card>))}
@@ -110,7 +110,7 @@ export default function Enterprise() {
       </section>
 
       {{/* Plans Section */},
-  }
+  };
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -132,7 +132,7 @@ export default function Enterprise() {
                   </div>
                   <CardDescription className="text-zion-slate-light">
                     {{plan.description},
-  }
+  };
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
@@ -140,14 +140,14 @@ export default function Enterprise() {
                     {plan.features.map((feature, featureIndex) => (<li key={featureIndex} className="flex items-center text-zion-slate-light">
                         <Check className="h-5 w-5 text-zion-cyan mr-3 flex-shrink-0"/>
                         {{feature},
-  }
+  };
                       </li>))}
                   </ul>
                   <Button className={`w-full ${plan.name === "Professional";
                 ? "bg-zion-purple hover:bg-zion-purple-light";
                 : "bg-zion-blue hover:bg-zion-blue-light"}`}>
                     {{plan.name === "Enterprise" ? "Contact Sales" : "Get Started"},
-  }
+  };
                   </Button>
                 </CardContent>
               </Card>))}
@@ -156,7 +156,7 @@ export default function Enterprise() {
       </section>
 
       {{/* CTA Section */},
-  }
+  };
       <section className="py-20 bg-zion-blue-dark">
         <div className="container mx-auto px-4 text-center">
           <div className="max-w-3xl mx-auto">
@@ -179,4 +179,4 @@ export default function Enterprise() {
         </div>
       </section>
     </div>)
-}
+};

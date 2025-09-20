@@ -79,7 +79,7 @@ export default function Leadership() {
       />
       ;
       {{/* Hero Section */},
-  }
+  };
       <section className="pt-20 pb-16 bg-gradient-to-r from-cyan-900/20 via-blue-900/20 to-purple-900/20">
         <div className="container mx-auto px-4">
           <div className="text-center max-w-4xl mx-auto">
@@ -97,7 +97,7 @@ export default function Leadership() {
       </section>
 
       {{/* Leadership Team */},
-  }
+  };
       <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -117,7 +117,7 @@ export default function Leadership() {
                     <img ;
                       src={leader.image} ;
                       alt={{leader.name},
-  }
+  };
                       className="className="w-32 h-32 rounded-2xl object-cover border-4 border-cyan-400/20";"
                     />
                   </div>
@@ -132,11 +132,11 @@ export default function Leadership() {
                         {leader.expertise.map((skill, skillIndex) => (
   <span ;
                             key={{skillIndex},
-  }
+  };
                             className="className="px-3 py-1 bg-cyan-400/10 text-cyan-400 text-sm rounded-full border border-cyan-400/20";"
                           >
                             {{skill},
-  }
+  };
                           </span>
                         ))}
                       </div>
@@ -145,7 +145,7 @@ export default function Leadership() {
                     <div className="flex items-center space-x-4">
                       <a;
                         href={{leader.linkedin},
-  }
+  };
                         target="_blank";
                         rel="noopener noreferrer";
                         className="className="flex items-center space-x-2 text-slate-300 hover:text-cyan-400 transition-colors";"
@@ -177,7 +177,7 @@ export default function Leadership() {
       </section>
 
       {{/* Company Values */},
-  }
+  };
       <section className="py-16 bg-slate-800/30">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -204,7 +204,7 @@ export default function Leadership() {
       </section>
 
       {{/* Achievements */},
-  }
+  };
       <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -229,7 +229,7 @@ export default function Leadership() {
       </section>
 
       {{/* Company Culture */},
-  }
+  };
       <section className="py-16 bg-slate-800/30">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
@@ -260,7 +260,7 @@ export default function Leadership() {
       </section>
 
       {{/* Contact Information */},
-  }
+  };
       <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto p-8 rounded-2xl bg-gradient-to-r from-cyan-900/20 via-blue-900/20 to-purple-900/20 border border-cyan-400/20">
@@ -310,4 +310,4 @@ export default function Leadership() {
       </section>
     </div>
   )
-}
+};

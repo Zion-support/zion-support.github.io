@@ -55,17 +55,17 @@ export default function AIPoweredSEO() {
       />
       ;
       {{/* Hero Section */},
-  }
+  };
       <section className="relative overflow-hidden py-20 lg:py-32">
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10"></div>
         <div className="container mx-auto px-4 relative z-10">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             animate={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             className="className="text-center max-w-4xl mx-auto";"
           >
             <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full border border-cyan-400/30 mb-6">
@@ -90,9 +90,9 @@ export default function AIPoweredSEO() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button;
                 whileHover={{ scale: 1.05 },
-  }
+  };
                 whileTap={{ scale: 0.95 },
-  }
+  };
                 className="className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 flex items-center justify-center";"
               >
                 <Rocket className="w-5 h-5 mr-2" />
@@ -100,9 +100,9 @@ export default function AIPoweredSEO() {
               </motion.button>
               <motion.button;
                 whileHover={{ scale: 1.05 },
-  }
+  };
                 whileTap={{ scale: 0.95 },
-  }
+  };
                 className="className="px-8 py-4 border border-cyan-400/30 text-cyan-300 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-300 flex items-center justify-center";"
               >
                 <Monitor className="w-5 h-5 mr-2" />
@@ -114,16 +114,16 @@ export default function AIPoweredSEO() {
       </section>
 
       {{/* Features Section */},
-  }
+  };
       <section className="py-20">
         <div className="container mx-auto px-4">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
@@ -139,13 +139,13 @@ export default function AIPoweredSEO() {
             {features.map((feature, index) => (
   <motion.div;
                 key={{index},
-  }
+  };
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.6, delay: index * 0.1 },
-  }
+  };
                 className="className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-cyan-400/30 transition-all duration-300 group";"
               >
                 <div className="w-12 h-12 bg-gradient-to-br from-cyan-400/20 to-blue-500/20 rounded-lg flex items-center justify-center mb-4 group-hover:from-cyan-400/40 group-hover:to-blue-500/40 transition-all duration-300">
@@ -160,16 +160,16 @@ export default function AIPoweredSEO() {
       </section>
 
       {{/* Benefits Section */},
-  }
+  };
       <section className="py-20 bg-slate-800/30">
         <div className="container mx-auto px-4">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
@@ -185,13 +185,13 @@ export default function AIPoweredSEO() {
             {benefits.map((benefit, index) => (
   <motion.div;
                 key={{index},
-  }
+  };
                 initial={{ opacity: 0, x: -20 },
-  }
+  };
                 whileInView={{ opacity: 1, x: 0 },
-  }
+  };
                 transition={{ duration: 0.6, delay: index * 0.1 },
-  }
+  };
                 className="className="flex items-center space-x-4 bg-slate-700/30 rounded-lg p-4";"
               >
                 <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0" />
@@ -203,16 +203,16 @@ export default function AIPoweredSEO() {
       </section>
 
       {{/* Services & Pricing */},
-  }
+  };
       <section className="py-20">
         <div className="container mx-auto px-4">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
@@ -228,13 +228,13 @@ export default function AIPoweredSEO() {
             {services.map((service, index) => (
   <motion.div;
                 key={{index},
-  }
+  };
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.6, delay: index * 0.1 },
-  }
+  };
                 className="className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-cyan-400/30 transition-all duration-300";"
               >
                 <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
@@ -250,16 +250,16 @@ export default function AIPoweredSEO() {
       </section>
 
       {{/* CTA Section */},
-  }
+  };
       <section className="py-20 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10">
         <div className="container mx-auto px-4 text-center">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
           >
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
               Ready to Dominate Search Rankings?;
@@ -271,9 +271,9 @@ export default function AIPoweredSEO() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button;
                 whileHover={{ scale: 1.05 },
-  }
+  };
                 whileTap={{ scale: 0.95 },
-  }
+  };
                 className="className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 flex items-center justify-center";"
               >
                 <ArrowRight className="w-5 h-5 mr-2" />
@@ -281,9 +281,9 @@ export default function AIPoweredSEO() {
               </motion.button>
               <motion.button;
                 whileHover={{ scale: 1.05 },
-  }
+  };
                 whileTap={{ scale: 0.95 },
-  }
+  };
                 className="className="px-8 py-4 border border-cyan-400/30 text-cyan-300 font-semibold rounded-lg hover: bg-cyan-400/10 transition-all duration-300 flex items-center justify-center";"
               >
                 <Phone className="w-5 h-5 mr-2" />
@@ -295,4 +295,4 @@ export default function AIPoweredSEO() {
       </section>
     </div>
   )
-}
+};

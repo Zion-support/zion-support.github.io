@@ -20,7 +20,7 @@ interface AIService {
     starter: number,professional: number,enterprise: number
   };
   icon: React.ComponentType<any>,route: string,status: 'active' | 'beta' | 'coming-soon'
-}
+};
 
 const AdvancedAIServicesHub: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>('all'),
@@ -106,11 +106,11 @@ const getStatusText = (status: string) => {
         <div className="max-w-7xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             animate={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             className="mb-8"
           >
             <div className="inline-flex items-center px-4 py-2 bg-blue-600/20 text-blue-400 rounded-full text-sm font-medium mb-6">
@@ -132,11 +132,11 @@ const getStatusText = (status: string) => {
           {/* Search and Filter Controls */}
           <motion.div
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             animate={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8, delay: 0.2 },
-  }
+  };
             className="flex flex-col lg:flex-row gap-4 justify-center items-center mb-12"
           >
             <div className="relative w-full max-w-md">
@@ -182,24 +182,24 @@ const getStatusText = (status: string) => {
             <motion.div
               key={`${selectedCategory}-${searchQuery}-${sortBy}`}
               initial={{ opacity: 0 },
-  }
+  };
               animate={{ opacity: 1 },
-  }
+  };
               exit={{ opacity: 0 },
-  }
+  };
               transition={{ duration: 0.3 },
-  }
+  };
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
             >
               {sortedServices.map((service, index) => (
                 <motion.div
                   key={service.id}
                   initial={{ opacity: 0, y: 20 },
-  }
+  };
                   animate={{ opacity: 1, y: 0 },
-  }
+  };
                   transition={{ duration: 0.5, delay: index * 0.1 },
-  }
+  };
                   className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:border-blue-500/50 transition-all duration-300 hover:transform hover:scale-105"
                 >
                   {/* Service Header */}
@@ -255,9 +255,9 @@ const getStatusText = (status: string) => {
   {sortedServices.length === 0 && (
             <motion.div
               initial={{ opacity: 0 },
-  }
+  };
               animate={{ opacity: 1 },
-  }
+  };
               className="text-center py-20"
             >
               <Brain className="w-16 h-16 text-gray-500 mx-auto mb-4" />
@@ -273,13 +273,13 @@ const getStatusText = (status: string) => {
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             viewport={{ once: true },
-  }
+  };
           >
             <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">
               Ready to Transform Your Business with AI?
@@ -308,5 +308,4 @@ const getStatusText = (status: string) => {
       </section>
     </div>
   )
-};
 export default AdvancedAIServicesHub;

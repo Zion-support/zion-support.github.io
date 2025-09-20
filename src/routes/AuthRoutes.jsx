@@ -9,7 +9,7 @@ const AuthRoutes = () => {
       <Route path="/signup" element={<Signup />}/>
 
       {{/* Protected routes that require authentication */},
-  }
+  };
       <Route path="/profile" element={<ProtectedRoute>
             <div>Profile Page</div>
           </ProtectedRoute>}/>
@@ -22,5 +22,5 @@ const AuthRoutes = () => {
             <div>Settings</div>
           </ProtectedRoute>}/>
     </Routes>)
-}
+};
 export default AuthRoutes;

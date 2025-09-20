@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 interface AccessibilitySettings {
   highContrast: boolean,largeText: boolean,reducedMotion: boolean,focusVisible: boolean,screenReader: boolean,keyboardNavigation: boolean
-}
+};
 
 export function EnhancedAccessibilityEnhancer() {
   const [settings, setSettings] = useState<AccessibilitySettings>({
@@ -24,7 +24,6 @@ const prefersHighContrast = window.matchMedia('(prefers-contrast: high)').matche
       root.classList.add('high-contrast')
 } else {
       root.classList.remove('high-contrast')
-}
 
     if (settings.largeText) {
       root.classList.add('large-text');
@@ -42,7 +41,6 @@ const prefersHighContrast = window.matchMedia('(prefers-contrast: high)').matche
       root.classList.remove('reduced-motion');
       root.style.removeProperty('--animation-duration');
       root.style.removeProperty('--animation-iteration-count')
-}
 
     // Show accessibility panel on Ctrl+Shift+A
     const handleKeyPress = (e: KeyboardEvent) => {
@@ -95,7 +93,7 @@ const prefersHighContrast = window.matchMedia('(prefers-contrast: high)').matche
       {/* Screen reader announcements */}
       <div aria-live="polite" aria-atomic="true" className="sr-only">
         {announcements[announcements.length - 1],
-  }
+  };
       </div>
 
       <div className="fixed top-4 left-4 bg-black/90 backdrop-blur-sm border border-zion-cyan/30 rounded-lg p-4 text-sm font-mono z-50 min-w-[320px]">
@@ -204,4 +202,3 @@ const prefersHighContrast = window.matchMedia('(prefers-contrast: high)').matche
       </div>
     </>
   )
-}

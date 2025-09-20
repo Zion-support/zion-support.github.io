@@ -1,14 +1,13 @@
 export interface AdvancedMicroSaasService {
   id: string,title: string,description: string,category: string,subcategory: string,price: number,currency: string,pricingModel: string,features: string[],benefits: string[],useCases: string[],targetAudience: string[],tags: string[],estimatedDelivery: string,supportLevel: string,marketPrice: string,roi: string,innovationLevel: string,contactInfo: {
   phone: string,email: string,website: string
-}
+};
   technicalSpecs?: {
   technology: string[],integrations: string[],apiEndpoints: number,uptime: string,security: string[[],
   ],
-  }
+  };
   competitors?: string[]
   marketSize?: string
-}
 
 export const ADVANCED_MICRO_SAAS_SERVICES_2025: AdvancedMicroSaasService[] = [
   // AI-Powered Financial Services;
@@ -51,16 +50,14 @@ export const ADVANCED_MICRO_SAAS_SERVICES_2025: AdvancedMicroSaasService[] = [
     estimatedDelivery: "8-10 weeks",supportLevel: "enterprise",marketPrice: "$1,899 - $4,999/month";
     roi: "300-500%",innovationLevel: "Advanced",contactInfo: {
   phone: "+1 302 464 0950",email: "kleber@ziontechgroup.com",website: "https://ziontechgroup.com"
-}
     technicalSpecs: {
   technology: ["Python", "TensorFlow", "React", "Node.js", "PostgreSQL", "Redis"]
       integrations: ["Experian", "Equifax", "TransUnion", "Plaid", "Stripe", "Square"]
       apiEndpoints: 200,uptime: "99.95%",security: [["SOC 2 Type II", "PCI DSS", "GDPR", "End-to-end encryption", "Multi-factor authentication"],
   ],
-  }
+  };
     competitors: ["FICO", "VantageScore", "Credit Karma", "Experian Boost"]
     marketSize: "$12.4 billion by 2025"
-}
   // AI-Powered Healthcare Solutions;
   {
   id: "ai-medical-imaging-analysis",title: "AI Medical Imaging Analysis Platform",description: "Advanced AI platform for medical image analysis that uses deep learning to detect diseases, analyze scans, and provide diagnostic assistance to healthcare professionals.";
@@ -101,16 +98,14 @@ export const ADVANCED_MICRO_SAAS_SERVICES_2025: AdvancedMicroSaasService[] = [
     estimatedDelivery: "12-16 weeks",supportLevel: "enterprise",marketPrice: "$2,499 - $6,999/month";
     roi: "400-600%",innovationLevel: "Advanced",contactInfo: {
   phone: "+1 302 464 0950",email: "kleber@ziontechgroup.com",website: "https://ziontechgroup.com"
-}
     technicalSpecs: {
   technology: ["Python", "TensorFlow", "PyTorch", "React", "Node.js", "PostgreSQL"]
       integrations: ["DICOM", "PACS", "Epic", "Cerner", "Allscripts", "HL7 FHIR"]
       apiEndpoints: 300,uptime: "99.99%",security: [["HIPAA", "SOC 2", "HITECH", "End-to-end encryption", "Audit logging"],
   ],
-  }
+  };
     competitors: ["IBM Watson Health", "Google Health", "Microsoft Azure Health", "NVIDIA Clara"]
     marketSize: "$45.8 billion by 2025"
-}
   // AI-Powered Legal Services;
   {
   id: "ai-contract-analysis-platform",title: "AI Contract Analysis & Review Platform",description: "Intelligent contract analysis platform that uses NLP and AI to review, analyze, and extract key information from legal documents, contracts, and agreements.";
@@ -151,16 +146,14 @@ export const ADVANCED_MICRO_SAAS_SERVICES_2025: AdvancedMicroSaasService[] = [
     estimatedDelivery: "6-8 weeks",supportLevel: "enterprise",marketPrice: "$1,299 - $3,999/month";
     roi: "250-400%",innovationLevel: "Advanced",contactInfo: {
   phone: "+1 302 464 0950",email: "kleber@ziontechgroup.com",website: "https://ziontechgroup.com"
-}
     technicalSpecs: {
   technology: ["Python", "BERT", "React", "Node.js", "PostgreSQL", "Elasticsearch"]
       integrations: ["DocuSign", "Adobe Sign", "Salesforce", "Microsoft 365", "Google Workspace"]
       apiEndpoints: 150,uptime: "99.9%",security: [["SOC 2", "GDPR", "End-to-end encryption", "Role-based access control"],
   ],
-  }
+  };
     competitors: ["Kira Systems", "Evisort", "ContractPodAi", "Icertis"]
     marketSize: "$8.7 billion by 2025"
-}
   // AI-Powered Supply Chain Optimization;
   {
   id: "ai-supply-chain-optimizer",title: "AI Supply Chain Optimization Platform",description: "Comprehensive supply chain optimization platform that uses AI to predict demand, optimize inventory, reduce costs, and improve operational efficiency across the entire supply chain.";
@@ -201,16 +194,14 @@ export const ADVANCED_MICRO_SAAS_SERVICES_2025: AdvancedMicroSaasService[] = [
     estimatedDelivery: "10-12 weeks",supportLevel: "enterprise",marketPrice: "$2,199 - $5,999/month";
     roi: "300-500%",innovationLevel: "Advanced",contactInfo: {
   phone: "+1 302 464 0950",email: "kleber@ziontechgroup.com",website: "https://ziontechgroup.com"
-}
     technicalSpecs: {
   technology: ["Python", "TensorFlow", "React", "Node.js", "PostgreSQL", "Redis"]
       integrations: ["SAP", "Oracle", "Salesforce", "Shopify", "WMS systems", "TMS systems"]
       apiEndpoints: 250,uptime: "99.9%",security: [["SOC 2", "ISO 27001", "End-to-end encryption", "Multi-factor authentication"],
   ],
-  }
+  };
     competitors: ["Blue Yonder", "Manhattan Associates", "Oracle SCM", "SAP SCM"]
     marketSize: "$15.8 billion by 2025"
-}
   // AI-Powered HR & Talent Management;
   {
   id: "ai-talent-acquisition-platform",title: "AI Talent Acquisition & Management Platform",description: "Intelligent HR platform that uses AI to streamline recruitment, improve candidate matching, automate screening, and optimize the entire talent acquisition process.";
@@ -251,13 +242,12 @@ export const ADVANCED_MICRO_SAAS_SERVICES_2025: AdvancedMicroSaasService[] = [
     estimatedDelivery: "6-8 weeks",supportLevel: "enterprise",marketPrice: "$899 - $2,999/month";
     roi: "200-350%",innovationLevel: "Advanced",contactInfo: {
   phone: "+1 302 464 0950",email: "kleber@ziontechgroup.com",website: "https://ziontechgroup.com"
-}
     technicalSpecs: {
   technology: ["Python", "TensorFlow", "React", "Node.js", "PostgreSQL", "Redis"]
       integrations: ["Workday", "BambooHR", "Greenhouse", "Lever", "Jobvite", "LinkedIn"]
       apiEndpoints: 180,uptime: "99.9%",security: [["SOC 2", "GDPR", "End-to-end encryption", "Role-based access control"],
   ],
-  }
+  };
     competitors: ["Hired", "Pymetrics", "HireVue", "Mya Systems", "Paradox"]
     marketSize: "$18.9 billion by 2025"
 },

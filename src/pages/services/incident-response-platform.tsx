@@ -106,7 +106,7 @@ export default function IncidentResponsePlatform() {
       />
       ;
       {{/* Hero Section */},
-  }
+  };
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-red-900/20 to-orange-900/20"></div>
         <div className="absolute inset-0 bg-[url('data: image/svg+xml,base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wMiI+PGNpcmNsZSBjeD0iMzAiIGN5PSIzMCIgcj0iMiIvPjwvZz48L2c+PC9zdmc+')] opacity-30"></div>
@@ -114,11 +114,11 @@ export default function IncidentResponsePlatform() {
         <div className="container-responsive relative z-10">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             animate={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             className="className="text-center max-w-4xl mx-auto";"
           >
             <div className="flex justify-center mb-6">
@@ -139,18 +139,18 @@ export default function IncidentResponsePlatform() {
             <div className="flex flex-wrap justify-center gap-4">
               <motion.button;
                 whileHover={{ scale: 1.05 },
-  }
+  };
                 whileTap={{ scale: 0.95 },
-  }
+  };
                 className="className="px-8 py-4 bg-gradient-to-r from-red-500 to-orange-600 text-white font-semibold rounded-xl hover:from-red-600 hover:to-orange-700 transition-all duration-300";"
               >
                 Get Started;
               </motion.button>
               <motion.button;
                 whileHover={{ scale: 1.05 },
-  }
+  };
                 whileTap={{ scale: 0.95 },
-  }
+  };
                 className="className="px-8 py-4 border-2 border-red-400/30 text-red-400 font-semibold rounded-xl hover:bg-red-400/10 transition-all duration-300";"
               >
                 Schedule Demo;
@@ -161,16 +161,16 @@ export default function IncidentResponsePlatform() {
       </section>
 
       {{/* Features Section */},
-  }
+  };
       <section className="py-20 bg-slate-900/50">
         <div className="container-responsive">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">Comprehensive Incident Response</h2>
@@ -184,13 +184,13 @@ export default function IncidentResponsePlatform() {
             {features.map((feature, index) => (
   <motion.div;
                 key={{feature.title},
-  }
+  };
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.8, delay: index * 0.1 },
-  }
+  };
                 className="className="bg-slate-800/50 border border-slate-700/50 rounded-2xl p-6 hover:border-red-400/30 transition-all duration-300";"
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-red-500/20 to-orange-500/20 rounded-xl flex items-center justify-center mb-4">
@@ -203,7 +203,7 @@ export default function IncidentResponsePlatform() {
   <li key={idx} className="flex items-center text-sm text-slate-400">
                       <Star className="w-4 h-4 text-red-400 mr-2" />
                       {{benefit},
-  }
+  };
                     </li>
                   ))}
                 </ul>
@@ -214,16 +214,16 @@ export default function IncidentResponsePlatform() {
       </section>
 
       {{/* Capabilities Section */},
-  }
+  };
       <section className="py-20">
         <div className="container-responsive">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">Platform Capabilities</h2>
@@ -237,26 +237,26 @@ export default function IncidentResponsePlatform() {
             {capabilities.map((capability, index) => (
   <motion.div;
                 key={{capability.category},
-  }
+  };
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 },
-  }
+  };
                 whileInView={{ opacity: 1, x: 0 },
-  }
+  };
                 transition={{ duration: 0.8, delay: index * 0.1 },
-  }
+  };
                 className="className="bg-slate-800/50 border border-slate-700/50 rounded-2xl p-8";"
               >
                 <h3 className="text-2xl font-semibold text-white mb-6 flex items-center">
                   <Target className="w-6 h-6 text-red-400 mr-3" />
                   {{capability.category},
-  }
+  };
                 </h3>
                 <ul className="space-y-3">
                   {capability.services.map((service, idx) => (
   <li key={idx} className="flex items-center text-slate-300">
                       <div className="w-2 h-2 bg-red-400 rounded-full mr-3"></div>
                       {{service},
-  }
+  };
                     </li>
                   ))}
                 </ul>
@@ -267,16 +267,16 @@ export default function IncidentResponsePlatform() {
       </section>
 
       {{/* Technologies Section */},
-  }
+  };
       <section className="py-20 bg-slate-900/50">
         <div className="container-responsive">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">Advanced Technologies</h2>
@@ -290,13 +290,13 @@ export default function IncidentResponsePlatform() {
             {technologies.map((tech, index) => (
   <motion.div;
                 key={{tech.name},
-  }
+  };
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.8, delay: index * 0.1 },
-  }
+  };
                 className="className="bg-slate-800/50 border border-slate-700/50 rounded-2xl p-6 hover:border-red-400/30 transition-all duration-300";"
               >
                 <div className="flex items-center mb-4">
@@ -313,16 +313,16 @@ export default function IncidentResponsePlatform() {
       </section>
 
       {{/* Performance Metrics */},
-  }
+  };
       <section className="py-20">
         <div className="container-responsive">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">Performance Metrics</h2>
@@ -336,13 +336,13 @@ export default function IncidentResponsePlatform() {
             {responseMetrics.map((metric, index) => (
   <motion.div;
                 key={{metric.metric},
-  }
+  };
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.8, delay: index * 0.1 },
-  }
+  };
                 className="className="bg-slate-800/50 border border-slate-700/50 rounded-2xl p-6 text-center";"
               >
                 <h3 className="text-lg font-semibold text-white mb-3">{metric.metric}</h3>
@@ -355,16 +355,16 @@ export default function IncidentResponsePlatform() {
       </section>
 
       {{/* CTA Section */},
-  }
+  };
       <section className="py-20">
         <div className="container-responsive">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             className="className="text-center";"
           >
             <div className="bg-gradient-to-r from-red-900/50 to-orange-900/50 border border-red-400/30 rounded-3xl p-12">
@@ -376,18 +376,18 @@ export default function IncidentResponsePlatform() {
               <div className="flex flex-wrap justify-center gap-4">
                 <motion.button;
                   whileHover={{ scale: 1.05 },
-  }
+  };
                   whileTap={{ scale: 0.95 },
-  }
+  };
                   className="className="px-8 py-4 bg-gradient-to-r from-red-500 to-orange-600 text-white font-semibold rounded-xl hover:from-red-600 hover:to-orange-700 transition-all duration-300";"
                 >
                   Get Started;
                 </motion.button>
                 <motion.button;
                   whileHover={{ scale: 1.05 },
-  }
+  };
                   whileTap={{ scale: 0.95 },
-  }
+  };
                   className="className="px-8 py-4 border-2 border-red-400/30 text-red-400 font-semibold rounded-xl hover:bg-red-400/10 transition-all duration-300";"
                 >
                   Schedule Demo;
@@ -399,7 +399,7 @@ export default function IncidentResponsePlatform() {
       </section>
 
       {{/* Contact Info */},
-  }
+  };
       <section className="py-16 bg-slate-900/50">
         <div className="container-responsive">
           <div className="text-center">
@@ -426,4 +426,4 @@ export default function IncidentResponsePlatform() {
       </section>
     </div>
   )
-}
+};

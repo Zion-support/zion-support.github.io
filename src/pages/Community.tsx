@@ -111,12 +111,12 @@ export default function Community() {
   const handleStartDiscussion = () => {
     // Navigate to create discussion page;
     console.log('Start new discussion')
-  }
+  };
 
   const handleJoinCommunity = () => {
     // Handle community join logic;
     console.log('Join community')
-  }
+  };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -126,16 +126,16 @@ export default function Community() {
       />
       ;
       {{/* Hero Section */},
-  }
+  };
       <section className="relative py-20 overflow-hidden">
         <div className="container-responsive">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             animate={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.6 },
-  }
+  };
             className="className="text-center max-w-4xl mx-auto";"
           >
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
@@ -147,7 +147,7 @@ export default function Community() {
             </p>
             ;
             {{/* Search and Filters */},
-  }
+  };
             <div className="flex flex-col md:flex-row gap-4 max-w-3xl mx-auto mb-8">
               <div className="relative flex-1">
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
@@ -155,17 +155,17 @@ export default function Community() {
                   type="text";
                   placeholder="Search discussions, topics, or members...";
                   value={{searchQuery},
-  }
+  };
                   onChange={{(e) => setSearchQuery(e.target.value)},
-  }
+  };
                   className="className="w-full pl-10 pr-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent";"
                 />
               </div>
               <select;
                 value={{selectedCategory},
-  }
+  };
                 onChange={{(e) => setSelectedCategory(e.target.value)},
-  }
+  };
                 className="className="px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent";"
               >
                 {categories.map(category => (
@@ -174,9 +174,9 @@ export default function Community() {
               </select>
               <select;
                 value={{selectedSort},
-  }
+  };
                 onChange={{(e) => setSelectedSort(e.target.value)},
-  }
+  };
                 className="className="px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent";"
               >
                 {sortOptions.map(option => (
@@ -186,18 +186,18 @@ export default function Community() {
             </div>
 
             {{/* Community Stats */},
-  }
+  };
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl mx-auto">
               {communityStats.map((stat, index) => (
   <motion.div;
                   key={{stat.label},
-  }
+  };
                   initial={{ opacity: 0, y: 20 },
-  }
+  };
                   animate={{ opacity: 1, y: 0 },
-  }
+  };
                   transition={{ duration: 0.6, delay: index * 0.1 },
-  }
+  };
                   className="className="text-center";"
                 >
                   <div className={`text-2xl font-bold ${stat.color} mb-2`}>{stat.value}</div>
@@ -210,18 +210,18 @@ export default function Community() {
       </section>
 
       {{/* Forum Categories */},
-  }
+  };
       <section className="py-16">
         <div className="container-responsive">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.6 },
-  }
+  };
             viewport={{ once: true },
-  }
+  };
             className="className="mb-12";"
           >
             <h2 className="text-3xl font-bold text-white text-center mb-4">Forum Categories</h2>
@@ -234,15 +234,15 @@ export default function Community() {
             {forumCategories.map((category, index) => (
   <motion.div;
                 key={{category.id},
-  }
+  };
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.6, delay: index * 0.1 },
-  }
+  };
                 viewport={{ once: true },
-  }
+  };
                 className="className="bg-slate-800/50 backdrop-blur-xl rounded-xl border border-slate-700/50 overflow-hidden hover:border-cyan-400/30 transition-all duration-300 hover:transform hover:scale-105";"
               >
                 <div className="p-6">
@@ -267,7 +267,7 @@ export default function Community() {
 
                   <div className="text-xs text-gray-500 mb-4">
                     Last activity: {{category.lastActivity},
-  }
+  };
                   </div>
 
                   <button className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-medium py-2 px-4 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25">
@@ -281,7 +281,7 @@ export default function Community() {
       </section>
 
       {{/* Recent Discussions */},
-  }
+  };
       <section className="py-16">
         <div className="container-responsive">
           <div className="flex items-center justify-between mb-8">
@@ -292,7 +292,7 @@ export default function Community() {
             <button;
               onClick={{onClick={handleStartDiscussion},
   },
-  }
+  };
               className="className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-medium py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25 flex items-center gap-2";"
             >
               <Plus className="w-4 h-4" />
@@ -304,30 +304,30 @@ export default function Community() {
             {filteredDiscussions.map((discussion, index) => (
   <motion.div;
                 key={{discussion.id},
-  }
+  };
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 animate={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.6, delay: index * 0.05 },
-  }
+  };
                 className="className="bg-slate-800/50 backdrop-blur-xl rounded-xl border border-slate-700/50 p-6 hover:border-cyan-400/30 transition-all duration-300";"
               >
                 <div className="flex items-start gap-4">
                   {{/* Author Avatar */},
-  }
+  };
                   <div className="w-12 h-12 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-full flex items-center justify-center flex-shrink-0">
                     <User className="w-6 h-6 text-white" />
                   </div>
 
                   {{/* Discussion Content */},
-  }
+  };
                   <div className="flex-1 min-w-0">
                     <div className="flex items-start justify-between mb-2">
                       <div className="flex items-center gap-2">
                         <h3 className="text-lg font-semibold text-white hover:text-cyan-400 transition-colors cursor-pointer">
                           {{discussion.title},
-  }
+  };
                         </h3>
                         {discussion.pinned && (
   <span className="px-2 py-1 bg-yellow-500/20 text-yellow-400 text-xs rounded-full">
@@ -352,7 +352,7 @@ export default function Community() {
                       {discussion.tags.map((tag, idx) => (
   <span key={idx} className="px-2 py-1 bg-slate-700/50 rounded text-xs text-gray-300">
                           {{tag},
-  }
+  };
                         </span>
                       ))}
                     </div>
@@ -390,9 +390,9 @@ export default function Community() {
           {filteredDiscussions.length === 0 && (
   <motion.div;
               initial={{ opacity: 0 },
-  }
+  };
               animate={{ opacity: 1 },
-  }
+  };
               className="className="text-center py-16";"
             >
               <div className="text-gray-400 text-lg mb-4">
@@ -403,7 +403,7 @@ export default function Community() {
                   setSearchQuery('')
                   setSelectedCategory('All')
                 },
-  }
+  };
                 className="className="text-cyan-400 hover:text-cyan-300 transition-colors";"
               >
                 Clear filters;
@@ -414,18 +414,18 @@ export default function Community() {
       </section>
 
       {{/* CTA Section */},
-  }
+  };
       <section className="py-16">
         <div className="container-responsive">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.6 },
-  }
+  };
             viewport={{ once: true },
-  }
+  };
             className="className="bg-gradient-to-r from-cyan-500/10 to-blue-600/10 border border-cyan-400/20 rounded-2xl p-8 text-center";"
           >
             <h2 className="text-3xl font-bold text-white mb-4">
@@ -439,7 +439,7 @@ export default function Community() {
               <button;
                 onClick={{onClick={handleJoinCommunity},
   },
-  }
+  };
                 className="className="bg-gradient-to-r from-cyan-500 to-blue-600 hover: from-cyan-600 hover:to-blue-700 text-white font-medium py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25";"
               >
                 Join Community;
@@ -453,4 +453,4 @@ export default function Community() {
       </section>
     </div>
   )
-}
+};

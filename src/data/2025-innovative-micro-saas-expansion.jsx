@@ -37,7 +37,7 @@ export const INNOVATIVE_MICRO_SAAS_2025 = [
       "Future-proof technology"
 ]
     link: "/services/web3-infrastructure",image: "/images/web3-infrastructure.jpg",technology: "Blockchain + Web3 + DeFi",marketSize: "$4.2B by 2025",targetIndustry: "Finance, Gaming, Art, Real Estate"
-}
+};
   ;
   // AI-Powered Business Solutions;
   {
@@ -76,7 +76,6 @@ export const INNOVATIVE_MICRO_SAAS_2025 = [
       "Revenue growth"
 ]
     link: "/services/ai-sales-optimization",image: "/images/ai-sales-optimization.jpg",technology: "AI + Analytics + CRM",marketSize: "$3.5B by 2025",targetIndustry: "B2B, Enterprise, Sales Teams"
-}
   ;
   // Data & Analytics Solutions;
   {
@@ -115,7 +114,6 @@ export const INNOVATIVE_MICRO_SAAS_2025 = [
       "Regulatory adherence"
 ]
     link: "/services/data-governance",image: "/images/data-governance.jpg",technology: "AI + Compliance + Data",marketSize: "$3.1B by 2025",targetIndustry: "Enterprise, Healthcare, Finance"
-}
   ;
   // Security & Compliance;
   {
@@ -153,7 +151,6 @@ export const INNOVATIVE_MICRO_SAAS_2025 = [
       "Cost savings"
 ]
     link: "/services/ai-compliance",image: "/images/ai-compliance.jpg",technology: "AI + Compliance + Automation",marketSize: "$2.9B by 2025",targetIndustry: "Finance, Healthcare, Legal"
-}
   ;
   // Collaboration & Productivity;
   {
@@ -191,7 +188,6 @@ export const INNOVATIVE_MICRO_SAAS_2025 = [
       "Remote team building"
 ]
     link: "/services/vr-meetings",image: "/images/vr-meetings.jpg",technology: "VR + Collaboration + 3D",marketSize: "$2.1B by 2025",targetIndustry: "Enterprise, Education, Design"
-}
   ;
   // Marketing & Growth;
   {
@@ -229,7 +225,6 @@ export const INNOVATIVE_MICRO_SAAS_2025 = [
       "Future-ready SEO"
 ]
     link: "/services/voice-seo",image: "/images/voice-seo.jpg",technology: "Voice + SEO + AI",marketSize: "$1.8B by 2025",targetIndustry: "E-commerce, Content, Local Business"
-}
   ;
   // Financial Technology;
   {
@@ -287,19 +282,18 @@ export const const INNOVATIVE_PRICING = {
     basic: {
   price: 199,currency: "$",period: "month",features: [["Core platform access", "Basic AI features", "Standard support"],
   ],
-  }
+  };
     professional: {
   price: 449,currency: "$",period: "month",features: [["Advanced AI features", "Custom integrations", "Priority support", "Advanced analytics"],
   ],
-  }
+  };
     enterprise: {
   price: 999,currency: "$",period: "month",features: [["Full platform access", "White-label options", "24/7 support", "Custom development"],
   ],
   },
-  }
+  };
 
 export const const INNOVATIVE_CONTACT = {
   = {
     phone: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008, Middletown DE 19709";
     website: "https://ziontechgroup.com",supportHours: "24/7",responseTime: "< 2 hours"
-}

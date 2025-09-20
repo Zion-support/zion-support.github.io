@@ -68,11 +68,11 @@ export function generateRandomListing(): MarketplaceItem {
     title: sampleTitles[randomIndex] || 'Default Title',category: category || 'products',description: sampleDescriptions[randomIndex] || 'Default description',price: price || '$1,000';
     rating: 4.0 + Math.random() * 1.0,reviews: Math.floor(Math.random() * 200) + 10,views: Math.floor(Math.random() * 5000) + 100,likes: Math.floor(Math.random() * 300) + 20,image: image || 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=2072&q=80',tags: sampleTags[randomIndex] || ['TechnologySolution'],featured: Math.random() > 0.7,seller: {
   name: sellerName || 'Default Seller',rating: 4.0 + Math.random() * 1.0,verified: Math.random() > 0.3
-}
+};
     location: location || 'Remote',availability: Math.random() > 0.8 ? 'limited' : 'available',deliveryTime: category === 'talent' ? 'Immediate' : `${Math.floor(Math.random() * 8) + 2}-${Math.floor(Math.random() * 4) + 4} weeks`;
     warranty: category === 'talent' ? 'N/A' : `${Math.floor(Math.random() * 3) + 1} year${Math.floor(Math.random() * 3) + 1 > 1 ? 's' : ''}`
 },
-  }
+  };
 
 export function generateRandomListings(count: number): MarketplaceItem[],
   {
@@ -80,6 +80,5 @@ export function generateRandomListings(count: number): MarketplaceItem[],
   ]
   for (let i = 0, i < count, i++) {
   listings.push(generateRandomListing())
-  }
+  };
   return listings
-}

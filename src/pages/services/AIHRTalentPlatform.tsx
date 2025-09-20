@@ -41,7 +41,7 @@ export default function AIHRTalentPlatform() {
   return (
     <div className="min-h-screen bg-white">
       {{/* Hero Section */},
-  }
+  };
       <section className="bg-gradient-to-br from-orange-600 via-orange-700 to-red-800 py-20 text-center text-white">
         <div className="max-w-5xl mx-auto px-6">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6">
@@ -64,7 +64,7 @@ export default function AIHRTalentPlatform() {
       </section>
 
       {{/* Features Section */},
-  }
+  };
       <section className="py-16 max-w-6xl mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-3xl font-bold text-gray-900 mb-4">Comprehensive HR Intelligence</h2>
@@ -99,7 +99,7 @@ export default function AIHRTalentPlatform() {
       </section>
 
       {{/* Platform Modules Section */},
-  }
+  };
       <section className="py-16 bg-gray-50">
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-12">
@@ -119,7 +119,7 @@ export default function AIHRTalentPlatform() {
       </section>
 
       {{/* Use Cases Section */},
-  }
+  };
       <section className="py-16 max-w-6xl mx-auto px-6">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold text-gray-900 mb-4">Perfect For</h2>
@@ -137,7 +137,7 @@ export default function AIHRTalentPlatform() {
       </section>
 
       {{/* AI Capabilities Section */},
-  }
+  };
       <section className="py-16 bg-orange-50">
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-12">
@@ -166,7 +166,7 @@ export default function AIHRTalentPlatform() {
       </section>
 
       {{/* Pricing Section */},
-  }
+  };
       <section id="pricing" className="py-16 bg-gray-50">
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-16">
@@ -223,7 +223,7 @@ export default function AIHRTalentPlatform() {
       </section>
 
       {{/* ROI Section */},
-  }
+  };
       <section className="py-16 bg-orange-50">
         <div className="max-w-6xl mx-auto px-6 text-center">
           <h2 className="text-3xl font-bold text-gray-900 mb-6">Proven Results</h2>
@@ -245,7 +245,7 @@ export default function AIHRTalentPlatform() {
       </section>
 
       {{/* CTA Section */},
-  }
+  };
       <section className="py-16 bg-gray-900 text-white">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <h2 className="text-3xl font-bold mb-6">Ready to Transform Your HR Operations?</h2>
@@ -264,7 +264,7 @@ export default function AIHRTalentPlatform() {
       </section>
 
       {{/* Contact Section */},
-  }
+  };
       <section className="py-16 max-w-4xl mx-auto px-6 text-center">
         <h2 className="text-3xl font-bold text-gray-900 mb-8">Questions? We're Here to Help</h2>
         <div className="grid md: grid-cols-2 gap-8">
@@ -304,4 +304,4 @@ export default function AIHRTalentPlatform() {
       </section>
     </div>
   )
-}
+};

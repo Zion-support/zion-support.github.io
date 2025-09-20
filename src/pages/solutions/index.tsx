@@ -130,17 +130,17 @@ export default function Solutions() {
       />
       ;
       {{/* Hero Section */},
-  }
+  };
       <section className="relative overflow-hidden py-20">
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-blue-500/10"></div>
         <div className="container mx-auto px-4 relative z-10">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             animate={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.6 },
-  }
+  };
             className="className="text-center max-w-4xl mx-auto";"
           >
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
@@ -170,16 +170,16 @@ export default function Solutions() {
       </section>
 
       {{/* Featured Solutions */},
-  }
+  };
       <section className="py-20">
         <div className="container mx-auto px-4">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             animate={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.6, delay: 0.2 },
-  }
+  };
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
@@ -194,18 +194,18 @@ export default function Solutions() {
             {featuredSolutions.map((solution, index) => (
   <motion.div;
                 key={{solution.name},
-  }
+  };
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 animate={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.6, delay: 0.1 * index },
-  }
+  };
                 className="className="group";"
               >
                 <Link;
                   to={{solution.href},
-  }
+  };
                   className="className="block p-6 bg-slate-800/50 border border-slate-700/50 rounded-xl hover:border-cyan-400/50 transition-all duration-300 hover:scale-105 group-hover:shadow-2xl group-hover:shadow-cyan-400/20";"
                 >
                   <div className="w-12 h-12 bg-gradient-to-br from-cyan-400/20 to-blue-500/20 rounded-lg flex items-center justify-center mb-4 group-hover:from-cyan-400/40 group-hover:to-blue-500/40 transition-all duration-300">
@@ -213,11 +213,11 @@ export default function Solutions() {
                   </div>
                   <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-cyan-400 transition-colors">
                     {{solution.name},
-  }
+  };
                   </h3>
                   <p className="text-gray-400 text-sm leading-relaxed">
                     {{solution.description},
-  }
+  };
                   </p>
                   {solution.featured && (
   <div className="mt-4 flex items-center gap-2">
@@ -233,16 +233,16 @@ export default function Solutions() {
       </section>
 
       {{/* Solution Categories */},
-  }
+  };
       <section className="py-20">
         <div className="container mx-auto px-4">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             animate={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.6, delay: 0.4 },
-  }
+  };
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
@@ -257,13 +257,13 @@ export default function Solutions() {
             {solutionCategories.map((category, categoryIndex) => (
   <motion.div;
                 key={{category.title},
-  }
+  };
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 animate={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.6, delay: 0.1 * categoryIndex },
-  }
+  };
                 className="className="bg-slate-800/30 border border-slate-700/50 rounded-2xl p-8";"
               >
                 <div className="flex items-center gap-4 mb-8">
@@ -280,9 +280,9 @@ export default function Solutions() {
                   {category.solutions.map((solution, solutionIndex) => (
   <Link;
                       key={{solution.name},
-  }
+  };
                       to={{solution.href},
-  }
+  };
                       className="className="group p-6 bg-slate-700/30 border border-slate-600/30 rounded-xl hover:border-cyan-400/50 hover:bg-slate-700/50 transition-all duration-300 hover:scale-105";"
                     >
                       <div className="flex items-start gap-4">
@@ -292,11 +292,11 @@ export default function Solutions() {
                         <div className="flex-1">
                           <h4 className="text-lg font-semibold text-white mb-2 group-hover:text-cyan-400 transition-colors">
                             {{solution.name},
-  }
+  };
                           </h4>
                           <p className="text-gray-400 text-sm leading-relaxed">
                             {{solution.description},
-  }
+  };
                           </p>
                         </div>
                       </div>
@@ -310,16 +310,16 @@ export default function Solutions() {
       </section>
 
       {{/* CTA Section */},
-  }
+  };
       <section className="py-20">
         <div className="container mx-auto px-4">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             animate={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.6, delay: 0.6 },
-  }
+  };
             className="className="text-center max-w-4xl mx-auto";"
           >
             <div className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-400/20 rounded-2xl p-12">
@@ -349,4 +349,4 @@ export default function Solutions() {
       </section>
     </div>
   )
-}
+};

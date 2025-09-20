@@ -79,7 +79,7 @@ export default function AIProjectManager() {
       />
 
       {{/* Hero Section */},
-  }
+  };
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 via-purple-600/20 to-cyan-600/20" />
         <div className="absolute inset-0 bg-[url('/images/grid-pattern.svg')] bg-center opacity-10" />
@@ -88,11 +88,11 @@ export default function AIProjectManager() {
           <motion.div ;
             className="className="text-center";"
             initial={{ opacity: 0, y: 30 },
-  }
+  };
             animate={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
           >
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
               AI Project Manager;
@@ -113,19 +113,19 @@ export default function AIProjectManager() {
       </section>
 
       {{/* Features Section */},
-  }
+  };
       <section className="py-20 relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div ;
             className="className="text-center mb-16";"
             initial={{ opacity: 0, y: 30 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             viewport={{ once: true },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Powered by Advanced AI;
@@ -139,18 +139,18 @@ export default function AIProjectManager() {
             {features.map((feature, index) => (
   <motion.div;
                 key={{index},
-  }
+  };
                 className="className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-white/20 transition-all duration-300";"
                 initial={{ opacity: 0, y: 30 },
-  }
+  };
                 whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                 viewport={{ once: true },
-  }
+  };
                 transition={{ duration: 0.6, delay: index * 0.1 },
-  }
+  };
                 whileHover={{ y: -5, scale: 1.02 },
-  }
+  };
               >
                 <div className={`w-12 h-12 bg-gradient-to-r ${feature.color} rounded-lg flex items-center justify-center mb-4`}>
                   <feature.icon className="w-6 h-6 text-white" />
@@ -164,19 +164,19 @@ export default function AIProjectManager() {
       </section>
 
       {{/* Benefits Section */},
-  }
+  };
       <section className="py-20 bg-gradient-to-r from-white/5 to-white/10 relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div ;
             className="className="text-center mb-16";"
             initial={{ opacity: 0, y: 30 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             viewport={{ once: true },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Proven Results;
@@ -190,16 +190,16 @@ export default function AIProjectManager() {
             {benefits.map((benefit, index) => (
   <motion.div;
                 key={{index},
-  }
+  };
                 className="className="text-center";"
                 initial={{ opacity: 0, y: 30 },
-  }
+  };
                 whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                 viewport={{ once: true },
-  }
+  };
                 transition={{ duration: 0.6, delay: index * 0.2 },
-  }
+  };
               >
                 <div className="w-20 h-20 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-6">
                   <benefit.icon className="w-10 h-10 text-white" />
@@ -214,19 +214,19 @@ export default function AIProjectManager() {
       </section>
 
       {{/* Pricing Section */},
-  }
+  };
       <section className="py-20 relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div ;
             className="className="text-center mb-16";"
             initial={{ opacity: 0, y: 30 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             viewport={{ once: true },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Simple, Transparent Pricing;
@@ -240,20 +240,20 @@ export default function AIProjectManager() {
             {pricingPlans.map((plan, index) => (
   <motion.div;
                 key={{index},
-  }
+  };
                 className={`relative bg-white/5 backdrop-blur-sm rounded-xl p-8 border ${
   plan.popular ? 'border-purple-500/50 bg-purple-500/10' : 'border-white/10'
 }`}
                 initial={{ opacity: 0, y: 30 },
-  }
+  };
                 whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                 viewport={{ once: true },
-  }
+  };
                 transition={{ duration: 0.6, delay: index * 0.1 },
-  }
+  };
                 whileHover={{ y: -5, scale: 1.02 },
-  }
+  };
               >
                 {plan.popular && (
   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
@@ -287,7 +287,7 @@ export default function AIProjectManager() {
                     : 'bg-white/10 text-white border border-white/20 hover:bg-white/20'
 }`}>
                   {{plan.cta},
-  }
+  };
                 </button>
               </motion.div>
             ))}
@@ -296,18 +296,18 @@ export default function AIProjectManager() {
       </section>
 
       {{/* CTA Section */},
-  }
+  };
       <section className="py-20 bg-gradient-to-r from-blue-600/20 to-purple-600/20 relative">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div;
             initial={{ opacity: 0, y: 30 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             viewport={{ once: true },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
           >
             <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
               Ready to Transform Your Project Management?;
@@ -328,4 +328,4 @@ export default function AIProjectManager() {
       </section>
     </div>
   )
-}
+};

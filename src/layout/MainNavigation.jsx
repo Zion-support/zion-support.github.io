@@ -20,4 +20,4 @@ export function MainNavigation() {
       </Link>
     </nav>
   )
-}
+};

@@ -269,11 +269,11 @@ const handleSearch = (e: React.FormEvent) => {
             <motion.div
               className="flex items-center"
               initial={{ opacity: 0, x: -20 },
-  }
+  };
               animate={{ opacity: 1, x: 0 },
-  }
+  };
               transition={{ duration: 0.5 },
-  }
+  };
             >
               <Link to="/" className="flex items-center space-x-3 group">
                 <div className="relative">
@@ -296,11 +296,11 @@ const handleSearch = (e: React.FormEvent) => {
               {/* Main Navigation Links */}
               <motion.div
                 initial={{ opacity: 0, y: -20 },
-  }
+  };
                 animate={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.5, delay: 0.1 },
-  }
+  };
               >
                 <Link
                   to="/about"
@@ -312,11 +312,11 @@ const handleSearch = (e: React.FormEvent) => {
               </motion.div>
               <motion.div
                 initial={{ opacity: 0, y: -20 },
-  }
+  };
                 animate={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.5, delay: 0.15 },
-  }
+  };
               >
                 <Link
                   to="/partners"
@@ -331,11 +331,11 @@ const handleSearch = (e: React.FormEvent) => {
                 <div key={category.name} className="relative">
                   <motion.button
                     initial={{ opacity: 0, y: -20 },
-  }
+  };
                     animate={{ opacity: 1, y: 0 },
-  }
+  };
                     transition={{ duration: 0.5, delay: (index + 2) * 0.1 },
-  }
+  };
                     onClick={() => toggleDropdown(category.name)}
                     className={`nav-link flex items-center space-x-2 px-4 py-2 rounded-lg transition-all duration-300 group ${
                       activeDropdown === category.name
@@ -354,13 +354,13 @@ const handleSearch = (e: React.FormEvent) => {
                     {activeDropdown === category.name && (
                       <motion.div
                         initial={{ opacity: 0, y: -10, scale: 0.95 },
-  }
+  };
                         animate={{ opacity: 1, y: 0, scale: 1 },
-  }
+  };
                         exit={{ opacity: 0, y: -10, scale: 0.95 },
-  }
+  };
                         transition={{ duration: 0.2 },
-  }
+  };
                         className="absolute top-full left-0 mt-2 w-80 bg-zion-slate-dark/95 backdrop-blur-xl border border-zion-cyan/20 rounded-xl shadow-2xl shadow-zion-cyan/20 overflow-hidden"
                       >
                         <div className="p-4">
@@ -373,11 +373,11 @@ const handleSearch = (e: React.FormEvent) => {
                               <motion.div
                                 key={service.name}
                                 initial={{ opacity: 0, x: -20 },
-  }
+  };
                                 animate={{ opacity: 1, x: 0 },
-  }
+  };
                                 transition={{ duration: 0.3, delay: subIndex * 0.05 },
-  }
+  };
                               >
                                 <Link
                                   to={service.href}
@@ -421,27 +421,27 @@ const handleSearch = (e: React.FormEvent) => {
               <div className="flex items-center space-x-2">
                 <motion.button
                   whileHover={{ scale: 1.05 },
-  }
+  };
                   whileTap={{ scale: 0.95 },
-  }
+  };
                   className="p-2 text-zion-slate-light hover:text-zion-cyan hover:bg-zion-cyan/10 rounded-lg transition-all duration-300"
                 >
                   <Bell className="w-5 h-5" />
                 </motion.button>
                 <motion.button
                   whileHover={{ scale: 1.05 },
-  }
+  };
                   whileTap={{ scale: 0.95 },
-  }
+  };
                   className="p-2 text-zion-slate-light hover:text-zion-cyan hover:bg-zion-cyan/10 rounded-lg transition-all duration-300"
                 >
                   <User className="w-5 h-5" />
                 </motion.button>
                 <motion.button
                   whileHover={{ scale: 1.05 },
-  }
+  };
                   whileTap={{ scale: 0.95 },
-  }
+  };
                   className="p-2 text-zion-slate-light hover:text-zion-cyan hover:bg-zion-cyan/10 rounded-lg transition-all duration-300"
                 >
                   <ShoppingCart className="w-5 h-5" />

@@ -9,7 +9,7 @@ const API_CACHE = 'zion-api-v2.0.0';
 const const CACHE_STRATEGIES = {
   = {
   STATIC: 'cache-first',DYNAMIC: 'stale-while-revalidate',API: 'network-first',IMAGES: 'cache-first',FONTS: 'cache-first'
-}
+};
 // Static assets to cache;
 const STATIC_ASSETS = [
   '//index.html';
@@ -80,7 +80,6 @@ const url = new URL(request.url)
   if (if (request.method !== 'GET') {
   ) {
     return
-}
 
   // Handle different types of requests;
   if (isStaticAsset(request)) {
@@ -106,7 +105,6 @@ async function cacheFirst(request: Request, cacheName: string): Promise<Response
   if (if (cachedResponse) {
   ) {
     return cachedResponse
-}
   ;
   try {
   const networkResponse = await fetch(request)
@@ -120,7 +118,7 @@ async function cacheFirst(request: Request, cacheName: string): Promise<Response
 const offlineResponse = await cache.match('/offline.html')
     return offlineResponse || new Response('Offline', { status: 503 })
   },
-  }
+  };
 
 // Stale While Revalidate Strategy;
 async function staleWhileRevalidate(request: Request, cacheName: string): Promise<Response> {
@@ -141,7 +139,6 @@ async function staleWhileRevalidate(request: Request, cacheName: string): Promis
 })
     ;
     return cachedResponse
-}
   ;
   // Fetch from network if no cache;
   try {
@@ -154,7 +151,7 @@ async function staleWhileRevalidate(request: Request, cacheName: string): Promis
 } catch (error) {
   return new Response('Offline', { status: 503 })
   },
-  }
+  };
 
 // Network First Strategy;
 async function networkFirst(request: Request, cacheName: string): Promise<Response> {
@@ -174,35 +171,29 @@ const cache = await caches.open(cacheName)
     if (if (cachedResponse) {
   ) {
       return cachedResponse
-}
     ;
     return new Response('Offline', { status: 503 })
   },
-  }
+  };
 
 // Helper functions to determine request type;
 function isStaticAsset(request: Request): boolean {
   const url = new URL(request.url)
   return STATIC_ASSETS.some(asset => url.pathname === asset)
-}
 
 function isDynamicRoute(request: Request): boolean {
   const url = new URL(request.url)
   return DYNAMIC_ROUTES.some(route => url.pathname === route)
-}
 
 function isAPIRequest(request: Request): boolean {
   const url = new URL(request.url)
   return API_ENDPOINTS.some(endpoint => url.pathname.startsWith(endpoint))
-}
 
 function isImage(request: Request): boolean {
   return request.destination === 'image'
-}
 
 function isFont(request: Request): boolean {
   return request.destination === 'font'
-}
 
 // Background sync for offline actions;
 self.addEventListener('sync', (event: SyncEvent) => {
@@ -222,19 +213,18 @@ const offlineData = await getOfflineData()
   } catch (error) {
   console.error('Background sync failed:', error)
   },
-  }
+  };
 
 // Get offline data from IndexedDB;
 async function getOfflineData(): Promise<any[]> {
   // Implementation would depend on your data storage strategy;
   return [],
-  }
+  };
 
 // Sync offline data with server;
 async function syncOfflineData(data: any[]): Promise<void> {
   // Implementation would depend on your API structure;
   console.log('Syncing offline data:', data)
-}
 
 // Push notification handling;
 self.addEventListener('push', (event: PushEvent) => {
@@ -243,7 +233,6 @@ self.addEventListener('push', (event: PushEvent) => {
     body: event.data?.text() || 'New update from Zion Tech Group',icon: '/logo192.png',badge: '/logo192.png',vibrate: [100, 50, 100]
     data: {
   dateOfArrival: Date.now(),primaryKey: 1
-}
     actions: [
   {
   action: 'explore',title: 'Explore',icon: '/logo192.png'
@@ -252,7 +241,7 @@ self.addEventListener('push', (event: PushEvent) => {
   action: 'close',title: 'Close',icon: '/logo192.png'
 },
   ],
-  }
+  };
   event.waitUntil(
   self.registration.showNotification('Zion Tech Group', options)
   )
@@ -274,12 +263,12 @@ self.addEventListener('message', (event: ExtendableMessageEvent) => {
   if (if (event.data && event.data.type === 'SKIP_WAITING') {
   ) {
     self.skipWaiting()
-  }
+  };
   ;
   if (if (event.data && event.data.type === 'GET_VERSION') {
   ) {
     event.ports[0].postMessage({ version: CACHE_NAME })
-  }
+  };
   ;
   if (if (event.data && event.data.type === 'CLEAR_CACHE') {
   ) {
@@ -294,7 +283,6 @@ async function clearAllCaches(): Promise<void> {
   cacheNames.map(cacheName => caches.delete(cacheName))
   )
   console.log('All caches cleared')
-}
 
 // Periodic cache cleanup;
 setInterval(async () => {
@@ -352,7 +340,7 @@ export function registerServiceWorker(): void {
         })
     })
   },
-  }
+  };
 
 // Unregister service worker;
 export function unregisterServiceWorker(): void {
@@ -362,4 +350,4 @@ export function unregisterServiceWorker(): void {
   registration.unregister()
     })
   },
-  }
+  };

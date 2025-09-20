@@ -65,7 +65,7 @@ export default function Partners() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-700 pt-20">
       {{/* Hero Section */},
-  }
+  };
       <section className="py-16 bg-gradient-to-r from-zion-cyan to-zion-purple">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -89,7 +89,7 @@ export default function Partners() {
         </div>
       </section>
       {{/* Partnership Types */},
-  }
+  };
       <section id="partnership-types" className="py-16">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-white text-center mb-12">
@@ -106,7 +106,7 @@ export default function Partners() {
   <li key={benefitIndex} className="flex items-center text-zion-slate-light text-sm">
                       <CheckCircle className="w-4 h-4 text-zion-cyan mr-2 flex-shrink-0" />
                       {{benefit},
-  }
+  };
                     </li>
                   ))}
                 </ul>
@@ -116,7 +116,7 @@ export default function Partners() {
         </div>
       </section>
       {{/* Benefits */},
-  }
+  };
       <section className="py-16 bg-zion-slate-dark">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-white text-center mb-12">
@@ -136,7 +136,7 @@ export default function Partners() {
         </div>
       </section>
       {{/* Existing Partners */},
-  }
+  };
       <section className="py-16">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-white text-center mb-12">
@@ -149,14 +149,14 @@ export default function Partners() {
                   <img ;
                     src={partner.logo} ;
                     alt={{partner.name},
-  }
+  };
                     className="className="w-16 h-16 rounded-lg object-cover";"
                   />
                   <div>
                     <h3 className="text-lg font-semibold text-white">{partner.name}</h3>
                     <span className="text-sm text-zion-cyan bg-zion-cyan/10 px-2 py-1 rounded-full">
                       {{partner.category},
-  }
+  };
                     </span>
                   </div>
                 </div>
@@ -173,7 +173,7 @@ export default function Partners() {
         </div>
       </section>
       {{/* Partnership Process */},
-  }
+  };
       <section className="py-16 bg-zion-slate-dark">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-white text-center mb-12">
@@ -212,7 +212,7 @@ export default function Partners() {
         </div>
       </section>
       {{/* CTA Section */},
-  }
+  };
       <section className="py-16 bg-gradient-to-r from-zion-cyan to-zion-purple">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold text-white mb-4">
@@ -238,4 +238,4 @@ export default function Partners() {
       </section>
     </div>
   )
-}
+};

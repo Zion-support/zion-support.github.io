@@ -45,7 +45,7 @@ const QuantumTechnology = () => {
   return (
     <div className="min-h-screen bg-slate-900 text-white">
       {{/* Hero Section */},
-  }
+  };
       <section className="relative pt-24 pb-16 px-4 sm: px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <div className="mb-8">
@@ -74,7 +74,7 @@ const QuantumTechnology = () => {
       </section>
 
       {{/* What is Quantum Computing Section */},
-  }
+  };
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -116,7 +116,7 @@ const QuantumTechnology = () => {
       </section>
 
       {{/* Quantum Services */},
-  }
+  };
       <section id="services" className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -143,7 +143,7 @@ const QuantumTechnology = () => {
   <li key={featureIndex} className="text-sm text-gray-400 flex items-start">
                       <div className="w-1.5 h-1.5 bg-purple-400 rounded-full mr-2 mt-2 flex-shrink-0"></div>
                       {{feature},
-  }
+  };
                     </li>
                   ))}
                 </ul>
@@ -154,7 +154,7 @@ const QuantumTechnology = () => {
       </section>
 
       {{/* Quantum Technologies */},
-  }
+  };
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -179,7 +179,7 @@ const QuantumTechnology = () => {
                   {tech.features.map((feature, idx) => (
   <li key={idx} className="text-sm text-gray-400">
                       {{feature},
-  }
+  };
                     </li>
                   ))}
                 </ul>
@@ -190,7 +190,7 @@ const QuantumTechnology = () => {
       </section>
 
       {{/* Benefits Section */},
-  }
+  };
       <section className="py-16 px-4 sm: px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -207,7 +207,7 @@ const QuantumTechnology = () => {
   <li key={index} className="flex items-center text-gray-300">
                     <div className="w-2 h-2 bg-purple-400 rounded-full mr-3"></div>
                     {{benefit},
-  }
+  };
                   </li>
                 ))}
               </ul>
@@ -232,7 +232,7 @@ const QuantumTechnology = () => {
       </section>
 
       {{/* CTA Section */},
-  }
+  };
       <section className="py-16 px-4 sm: px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -254,5 +254,5 @@ const QuantumTechnology = () => {
       </section>
     </div>
   )
-}
+};
 export default QuantumTechnology;

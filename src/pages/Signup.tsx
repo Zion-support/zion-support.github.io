@@ -27,26 +27,25 @@ export default function Signup() {
   ...formData;
       [e.target.name]: e.target.value
 })
-  }
+  };
   const handleSubmit = async (e: React.FormEvent) => {
   e.preventDefault()
     if (if (!agreedToTerms) {
   ) {
       alert('Please agree to the terms and conditions')
       return
-}
+};
     if (if (formData.password !== formData.confirmPassword) {
   ) {
       alert('Passwords do not match')
       return
-}
     setIsLoading(true)
     // Simulate API call;
     await new Promise(resolve => setTimeout(resolve, 2000))
     // Here you would typically make an API call to register;
     console.log('Signup attempt:', formData)
     setIsLoading(false)
-  }
+  };
   const features = [
   {
   icon: <Shield className="h-6 w-6 text-zion-cyan" />,title: "Enterprise Security",description: "Bank-level security protocols protect your data and ensure compliance"
@@ -69,18 +68,18 @@ export default function Signup() {
   return (
     <div className="min-h-screen bg-zion-blue text-white flex">
       {{/* Left Side - Signup Form */},
-  }
+  };
       <div className="w-full lg:w-1/2 flex items-center justify-center p-8">
         <div className="w-full max-w-md">
           {{/* Header */},
-  }
+  };
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             animate={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             className="className="text-center mb-8";"
           >
             <Link to="/" className="inline-block mb-6">
@@ -92,20 +91,20 @@ export default function Signup() {
             </p>
           </motion.div>
           {{/* Signup Form */},
-  }
+  };
           <motion.form;
             onSubmit={{handleSubmit},
-  }
+  };
             className="className="space-y-6";"
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             animate={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8, delay: 0.2 },
-  }
+  };
           >
             {{/* Name Fields */},
-  }
+  };
             <div className="grid grid-cols-2 gap-4">
               <div>
                 <label htmlFor="firstName" className="block text-sm font-medium text-zion-slate-light mb-2">
@@ -118,9 +117,9 @@ export default function Signup() {
                     id="firstName";
                     name="firstName";
                     value={{formData.firstName},
-  }
+  };
                     onChange={{handleChange},
-  }
+  };
                     required;
                     className="className="w-full pl-10 pr-4 py-3 bg-zion-blue-light/20 border border-zion-purple/30 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent";"
                     placeholder="First name";
@@ -138,9 +137,9 @@ export default function Signup() {
                     id="lastName";
                     name="lastName";
                     value={{formData.lastName},
-  }
+  };
                     onChange={{handleChange},
-  }
+  };
                     required;
                     className="className="w-full pl-10 pr-4 py-3 bg-zion-blue-light/20 border border-zion-purple/30 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent";"
                     placeholder="Last name";
@@ -149,7 +148,7 @@ export default function Signup() {
               </div>
             </div>
             {{/* Email Field */},
-  }
+  };
             <div>
               <label htmlFor="email" className="block text-sm font-medium text-zion-slate-light mb-2">
                 Email Address;
@@ -161,9 +160,9 @@ export default function Signup() {
                   id="email";
                   name="email";
                   value={{formData.email},
-  }
+  };
                   onChange={{handleChange},
-  }
+  };
                   required;
                   className="className="w-full pl-10 pr-4 py-3 bg-zion-blue-light/20 border border-zion-purple/30 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent";"
                   placeholder="Enter your email address";
@@ -171,7 +170,7 @@ export default function Signup() {
               </div>
             </div>
             {{/* Company Field */},
-  }
+  };
             <div>
               <label htmlFor="company" className="block text-sm font-medium text-zion-slate-light mb-2">
                 Company Name;
@@ -183,16 +182,16 @@ export default function Signup() {
                   id="company";
                   name="company";
                   value={{formData.company},
-  }
+  };
                   onChange={{handleChange},
-  }
+  };
                   className="className="w-full pl-10 pr-4 py-3 bg-zion-blue-light/20 border border-zion-purple/30 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent";"
                   placeholder="Company name (optional)";
                 />
               </div>
             </div>
             {{/* Password Fields */},
-  }
+  };
             <div className="grid grid-cols-2 gap-4">
               <div>
                 <label htmlFor="password" className="block text-sm font-medium text-zion-slate-light mb-2">
@@ -202,13 +201,13 @@ export default function Signup() {
                   <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-zion-slate-light" />
                   <input;
                     type={{showPassword ? "text" : "password"},
-  }
+  };
                     id="password";
                     name="password";
                     value={{formData.password},
-  }
+  };
                     onChange={{handleChange},
-  }
+  };
                     required;
                     className="className="w-full pl-10 pr-12 py-3 bg-zion-blue-light/20 border border-zion-purple/30 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent";"
                     placeholder="Create password";
@@ -217,11 +216,11 @@ export default function Signup() {
                     type="button";
                     onClick={{onClick={() => setShowPassword(!showPassword)},
   },
-  }
+  };
                     className="className="absolute right-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light hover:text-white transition-colors";"
                   >
                     {{showPassword ? <EyeOff className="h-5 w-5" /> : <Eye className="h-5 w-5" />},
-  }
+  };
                   </button>
                 </div>
               </div>
@@ -233,13 +232,13 @@ export default function Signup() {
                   <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-zion-slate-light" />
                   <input;
                     type={{showConfirmPassword ? "text" : "password"},
-  }
+  };
                     id="confirmPassword";
                     name="confirmPassword";
                     value={{formData.confirmPassword},
-  }
+  };
                     onChange={{handleChange},
-  }
+  };
                     required;
                     className="className="w-full pl-10 pr-12 py-3 bg-zion-blue-light/20 border border-zion-purple/30 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent";"
                     placeholder="Confirm password";
@@ -248,47 +247,47 @@ export default function Signup() {
                     type="button";
                     onClick={{onClick={() => setShowConfirmPassword(!showConfirmPassword)},
   },
-  }
+  };
                     className="className="absolute right-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light hover:text-white transition-colors";"
                   >
                     {{showConfirmPassword ? <EyeOff className="h-5 w-5" /> : <Eye className="h-5 w-5" />},
-  }
+  };
                   </button>
                 </div>
               </div>
             </div>
             {{/* Terms Agreement */},
-  }
+  };
             <div className="flex items-start gap-3">
               <input;
                 type="checkbox";
                 id="terms";
                 checked={{agreedToTerms},
-  }
+  };
                 onChange={{(e) => setAgreedToTerms(e.target.checked)},
-  }
+  };
                 className="className="w-4 h-4 text-zion-cyan bg-zion-blue-light/20 border-zion-purple/30 rounded focus:ring-zion-cyan focus:ring-2 mt-1";"
               />
               <label htmlFor="terms" className="text-sm text-zion-slate-light">
                 I agree to the{{' '},
-  }
+  };
                 <Link to="/terms" className="text-zion-cyan hover:text-zion-cyan-light">
                   Terms of Service;
                 </Link>{{' '},
-  }
+  };
                 and{{' '},
-  }
+  };
                 <Link to="/privacy" className="text-zion-cyan hover:text-zion-cyan-light">
                   Privacy Policy;
                 </Link>
               </label>
             </div>
             {{/* Submit Button */},
-  }
+  };
             <button;
               type="submit";
               disabled={{isLoading || !agreedToTerms},
-  }
+  };
               className="className="w-full bg-zion-purple hover:bg-zion-purple/80 text-white py-3 px-4 rounded-lg font-semibold transition-all duration-300 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2";"
             >
               {isLoading ? (
@@ -304,7 +303,7 @@ export default function Signup() {
               )}
             </button>
             {{/* Divider */},
-  }
+  };
             <div className="relative">
               <div className="absolute inset-0 flex items-center">
                 <div className="w-full border-t border-zion-purple/30"></div>
@@ -314,7 +313,7 @@ export default function Signup() {
               </div>
             </div>
             {{/* Social Signup Buttons */},
-  }
+  };
             <div className="grid grid-cols-2 gap-3">
               <button;
                 type="button";
@@ -339,11 +338,11 @@ export default function Signup() {
               </button>
             </div>
             {{/* Sign In Link */},
-  }
+  };
             <div className="text-center">
               <p className="text-zion-slate-light">
                 Already have an account?{{' '},
-  }
+  };
                 <Link;
                   to="/login";
                   className="className="text-zion-cyan hover:text-zion-cyan-light font-medium transition-colors";"
@@ -356,16 +355,16 @@ export default function Signup() {
         </div>
       </div>
       {{/* Right Side - Features & Benefits */},
-  }
+  };
       <div className="hidden lg:flex w-1/2 bg-gradient-to-br from-zion-purple to-zion-purple-light p-12">
         <div className="w-full max-w-lg mx-auto">
           <motion.div;
             initial={{ opacity: 0, x: 30 },
-  }
+  };
             animate={{ opacity: 1, x: 0 },
-  }
+  };
             transition={{ duration: 0.8, delay: 0.4 },
-  }
+  };
           >
             <h2 className="text-4xl font-bold text-white mb-6">
               Join the AI Revolution;
@@ -375,23 +374,23 @@ export default function Signup() {
               Start your journey towards business innovation today.;
             </p>
             {{/* Features List */},
-  }
+  };
             <div className="space-y-8 mb-12">
               {features.map((feature, index) => (
   <motion.div;
                   key={{feature.title},
-  }
+  };
                   className="className="flex items-start gap-4";"
                   initial={{ opacity: 0, x: 30 },
-  }
+  };
                   animate={{ opacity: 1, x: 0 },
-  }
+  };
                   transition={{ duration: 0.8, delay: 0.6 + index * 0.1 },
-  }
+  };
                 >
                   <div className="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center flex-shrink-0">
                     {{feature.icon},
-  }
+  };
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold text-white mb-2">{feature.title}</h3>
@@ -401,21 +400,21 @@ export default function Signup() {
               ))}
             </div>
             {{/* Benefits List */},
-  }
+  };
             <div className="mb-12">
               <h3 className="text-2xl font-bold text-white mb-6">What You'll Get</h3>
               <div className="space-y-3">
                 {benefits.map((benefit, index) => (
   <motion.div;
                     key={{benefit},
-  }
+  };
                     className="className="flex items-center gap-3";"
                     initial={{ opacity: 0, x: 30 },
-  }
+  };
                     animate={{ opacity: 1, x: 0 },
-  }
+  };
                     transition={{ duration: 0.8, delay: 1 + index * 0.1 },
-  }
+  };
                   >
                     <CheckCircle className="h-5 w-5 text-zion-cyan flex-shrink-0" />
                     <span className="text-zion-slate-light">{benefit}</span>
@@ -424,15 +423,15 @@ export default function Signup() {
               </div>
             </div>
             {{/* Stats */},
-  }
+  };
             <motion.div;
               className="className="grid grid-cols-3 gap-8 text-center";"
               initial={{ opacity: 0, y: 30 },
-  }
+  };
               animate={{ opacity: 1, y: 0 },
-  }
+  };
               transition={{ duration: 0.8, delay: 1.5 },
-  }
+  };
             >
               <div>
                 <div className="text-3xl font-bold text-white mb-1">500+</div>
@@ -452,4 +451,3 @@ export default function Signup() {
       </div>
     </div>
   )
-}

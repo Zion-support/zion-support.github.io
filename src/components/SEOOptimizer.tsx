@@ -21,28 +21,25 @@ import {
 } from "lucide-react";
 interface SEOAnalysis {
   score: number,issues: SEOIssue[],suggestions: SEOSuggestion[],metrics: SEOMetrics,lastUpdated: Date
-}
+};
 
 interface SEOIssue {
   id: string,type: 'error' | 'warning' | 'info',title: string,description: string,impact: 'high' | 'medium' | 'low',fixable: boolean,category: 'content' | 'technical' | 'performance' | 'accessibility'
-}
 
 interface SEOSuggestion {
   id: string,title: string,description: string,priority: 'high' | 'medium' | 'low',effort: 'low' | 'medium' | 'high',estimatedImpact: number
-}
 
 interface SEOMetrics {
   pageSpeed: number,mobileFriendliness: number,accessibility: number,bestPractices: number,seoScore: number,coreWebVitals: {
     lcp: number,fid: number,cls: number
   },
-  }
+  };
 
 interface SEOOptimizerProps {
   url?: string,
   autoAnalyze?: boolean,
   showDetails?: boolean,
   onAnalysisComplete?: (analysis: SEOAnalysis) => void
-}
 
 export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
   url;
@@ -165,7 +162,7 @@ const [selectedCategory, setSelectedCategory] = useState<string>('all'),
         </button>
       </div>
     )
-  }
+  };
 
   return (
     <div className="bg-white/95 backdrop-blur-xl rounded-2xl shadow-2xl border border-zion-cyan/20 p-6">
@@ -325,11 +322,11 @@ const [selectedCategory, setSelectedCategory] = useState<string>('all'),
                   <motion.div
                     key={issue.id}
                     initial={{ opacity: 0, y: 20 },
-  }
+  };
                     animate={{ opacity: 1, y: 0 },
-  }
+  };
                     exit={{ opacity: 0, y: -20 },
-  }
+  };
                     className={`p-4 rounded-lg border-l-4 ${
                       issue.type === 'error' ? 'border-red-500 bg-red-50' :
                       issue.type === 'warning' ? 'border-yellow-500 bg-yellow-50' :
@@ -374,9 +371,9 @@ const [selectedCategory, setSelectedCategory] = useState<string>('all'),
                 <motion.div
                   key={suggestion.id}
                   initial={{ opacity: 0, x: 20 },
-  }
+  };
                   animate={{ opacity: 1, x: 0 },
-  }
+  };
                   className="p-4 bg-gradient-to-r from-zion-cyan/5 to-zion-blue/5 border border-zion-cyan/20 rounded-lg"
                 >
                   <div className="flex items-start justify-between">
@@ -404,11 +401,11 @@ const [selectedCategory, setSelectedCategory] = useState<string>('all'),
             {showAdvanced && (
               <motion.div
                 initial={{ opacity: 0, height: 0 },
-  }
+  };
                 animate={{ opacity: 1, height: 'auto' },
-  }
+  };
                 exit={{ opacity: 0, height: 0 },
-  }
+  };
                 className="border-t border-zion-slate/20 pt-6"
               >
                 <h4 className="text-lg font-semibold text-zion-slate-dark mb-4">Advanced Settings</h4>

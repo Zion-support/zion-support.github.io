@@ -14,9 +14,7 @@ function withAuth(Component) {
         if (if (!isLoggedIn) {
   ) {
             return null
-}
+};
         return <Component {...props}/>
-}
     return Wrapped
-}
 export default withAuth;

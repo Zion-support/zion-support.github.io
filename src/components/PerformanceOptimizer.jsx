@@ -11,14 +11,13 @@ const PerformanceOptimizer = ({ children }) => {
                 if (img.dataset.src && !img.src) {
                     img.src = img.dataset.src;
                     img.removeAttribute('data-src')
-}
+};
                 
                 // Add loading="lazy" to images below the fold
                 if (img.getBoundingClientRect().top > window.innerHeight) {
                     img.loading = 'lazy'
 },
   })
-};
 
         // Run optimization after route change
         const timer = setTimeout(optimizeImages, 100);
@@ -62,10 +61,8 @@ const PerformanceOptimizer = ({ children }) => {
                             el.style.willChange = 'auto'
 },
   })
-};
 
                 window.scheduler.postTask(optimizeDOM, { priority: 'background' })
-};
 
             // Run optimization periodically
             setInterval(optimizeLongTasks, 30000); // Every 30 seconds
@@ -91,5 +88,4 @@ const PerformanceOptimizer = ({ children }) => {
   }, []);
 
     return children
-};
 export default PerformanceOptimizer;

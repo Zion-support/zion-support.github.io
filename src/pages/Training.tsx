@@ -108,13 +108,13 @@ export const Training: React.FC = () => {
       case 'Advanced': return 'bg-red-500/20 text-red-400 border-red-400/30';
       default: return 'bg-gray-500/20 text-gray-400 border-gray-400/30'
 },
-  }
+  };
   const getFormatIcon = (format: string) => {
   if (format.includes('Online')) return Smartphone;
     if (format.includes('Hybrid')) return Laptop;
     if (format.includes('Live')) return Users;
     return Globe
-}
+};
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -124,16 +124,16 @@ export const Training: React.FC = () => {
       />
       ;
       {{/* Hero Section */},
-  }
+  };
       <section className="relative py-20 overflow-hidden">
         <div className="container-responsive">
           <motion.div;
             initial={{ opacity: 0, y: 30 },
-  }
+  };
             animate={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             className="className="text-center max-w-4xl mx-auto";"
           >
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-emerald-500/20 border border-emerald-400/30 rounded-full text-emerald-400 text-sm font-medium mb-6">
@@ -171,7 +171,7 @@ export const Training: React.FC = () => {
         </div>
         ;
         {{/* Background Elements */},
-  }
+  };
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div className="absolute top-20 left-10 w-72 h-72 bg-emerald-500/10 rounded-full blur-3xl"></div>
           <div className="absolute bottom-20 right-10 w-96 h-96 bg-teal-500/10 rounded-full blur-3xl"></div>
@@ -179,17 +179,17 @@ export const Training: React.FC = () => {
       </section>
 
       {{/* Categories Filter */},
-  }
+  };
       <section className="py-12 border-b border-slate-700/50">
         <div className="container-responsive">
           <div className="flex flex-wrap justify-center gap-3">
             {categories.map((category) => (
   <button;
                 key={{category.id},
-  }
+  };
                 onClick={{onClick={() => setSelectedCategory(category.id)},
   },
-  }
+  };
                 className={`px-6 py-3 rounded-full border transition-all duration-300 ${
   selectedCategory === category.id;
                     ? 'border-emerald-400 bg-emerald-400/20 text-emerald-400';
@@ -197,7 +197,7 @@ export const Training: React.FC = () => {
 }`}
               >
                 {{category.name},
-  }
+  };
                 <span className="ml-2 text-sm opacity-75">({category.count})</span>
               </button>
             ))}
@@ -206,7 +206,7 @@ export const Training: React.FC = () => {
       </section>
 
       {{/* Featured Programs */},
-  }
+  };
       <section className="py-16">
         <div className="container-responsive">
           <div className="mb-12">
@@ -218,19 +218,19 @@ export const Training: React.FC = () => {
             {filteredPrograms.filter(program => program.featured).map((program) => (
   <motion.div;
                 key={{program.id},
-  }
+  };
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.6 },
-  }
+  };
                 viewport={{ once: true },
-  }
+  };
                 className="className="group bg-slate-800/50 border border-slate-700/50 rounded-2xl overflow-hidden hover:border-emerald-400/50 transition-all duration-300 hover:bg-slate-800/70";"
               >
                 {{/* Header */},
-  }
+  };
                 <div className="p-6">
                   <div className="flex items-start justify-between mb-4">
                     <div className={`w-16 h-16 rounded-xl bg-gradient-to-br ${program.color} flex items-center justify-center`}>
@@ -245,20 +245,20 @@ export const Training: React.FC = () => {
                   <div className="mb-4">
                     <span className="inline-block px-3 py-1 bg-slate-700/50 text-emerald-400 text-xs font-medium rounded-full mb-3">
                       {{program.category.replace('- ').toUpperCase()},
-  }
+  };
                     </span>
                     <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-emerald-400 transition-colors">
                       {{program.title},
-  }
+  };
                     </h3>
                     <p className="text-gray-400 text-sm leading-relaxed">
                       {{program.description},
-  }
+  };
                     </p>
                   </div>
                   ;
                   {{/* Program Details */},
-  }
+  };
                   <div className="grid grid-cols-2 gap-4 mb-6 text-sm text-gray-400">
                     <div className="flex items-center gap-2">
                       <Clock className="w-4 h-4" />
@@ -279,14 +279,14 @@ export const Training: React.FC = () => {
                   </div>
                   ;
                   {{/* Topics */},
-  }
+  };
                   <div className="mb-6">
                     <h4 className="text-sm font-medium text-white mb-2">What You'll Learn:</h4>
                     <div className="flex flex-wrap gap-2">
                       {program.topics.slice(0, 3).map((topic, index) => (
   <span key={index} className="inline-block px-2 py-1 bg-slate-700/50 text-gray-400 text-xs rounded">
                           {{topic},
-  }
+  };
                         </span>
                       ))},
   {program.topics.length > 3 && (
@@ -298,7 +298,7 @@ export const Training: React.FC = () => {
                   </div>
                   ;
                   {{/* CTA */},
-  }
+  };
                   <button className="w-full px-4 py-3 bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white font-medium rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2">
                     <Play className="w-4 h-4" />
                     Enroll Now;
@@ -312,7 +312,7 @@ export const Training: React.FC = () => {
       </section>
 
       {{/* All Programs */},
-  }
+  };
       <section className="py-16">
         <div className="container-responsive">
           <div className="mb-12">
@@ -324,35 +324,35 @@ export const Training: React.FC = () => {
             {filteredPrograms.map((program) => (
   <motion.div;
                 key={{program.id},
-  }
+  };
                 initial={{ opacity: 0, x: -20 },
-  }
+  };
                 whileInView={{ opacity: 1, x: 0 },
-  }
+  };
                 transition={{ duration: 0.6 },
-  }
+  };
                 viewport={{ once: true },
-  }
+  };
                 className="className="group bg-slate-800/30 border border-slate-700/30 rounded-xl p-6 hover:border-slate-600/50 transition-all duration-300 hover:bg-slate-800/50";"
               >
                 <div className="flex flex-col lg:flex-row lg:items-center gap-6">
                   {{/* Icon */},
-  }
+  };
                   <div className={`flex-shrink-0 w-20 h-20 rounded-xl bg-gradient-to-br ${program.color} flex items-center justify-center`}>
                     <program.icon className="w-10 h-10 text-white" />
                   </div>
                   ;
                   {{/* Content */},
-  }
+  };
                   <div className="flex-1 min-w-0">
                     <div className="flex flex-wrap items-center gap-3 mb-3">
                       <span className="inline-block px-3 py-1 bg-slate-700/50 text-emerald-400 text-xs font-medium rounded-full">
                         {{program.category.replace('- ').toUpperCase()},
-  }
+  };
                       </span>
                       <span className={`inline-block px-3 py-1 text-xs font-medium rounded-full border ${getLevelColor(program.level)}`}>
                         {{program.level},
-  }
+  };
                       </span>
                       {program.featured && (
   <span className="inline-flex items-center gap-1 px-3 py-1 bg-emerald-500/20 text-emerald-400 text-xs rounded-full border border-emerald-400/30">
@@ -364,12 +364,12 @@ export const Training: React.FC = () => {
                     ;
                     <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-emerald-400 transition-colors">
                       {{program.title},
-  }
+  };
                     </h3>
                     ;
                     <p className="text-gray-400 text-sm leading-relaxed mb-4">
                       {{program.description},
-  }
+  };
                     </p>
                     ;
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm text-gray-500 mb-4">
@@ -392,7 +392,7 @@ export const Training: React.FC = () => {
                     </div>
                     ;
                     {{/* Features */},
-  }
+  };
                     <div className="flex flex-wrap gap-2">
                       {program.certification && (
   <span className="inline-flex items-center gap-1 px-2 py-1 bg-emerald-500/20 text-emerald-400 text-xs rounded-full border border-emerald-400/30">
@@ -412,7 +412,7 @@ export const Training: React.FC = () => {
                   </div>
                   ;
                   {{/* Price & CTA */},
-  }
+  };
                   <div className="flex-shrink-0 text-center">
                     <div className="text-3xl font-bold text-emerald-400 mb-3">{program.price}</div>
                     <button className="px-6 py-3 bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white font-medium rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-emerald-500/25">
@@ -427,7 +427,7 @@ export const Training: React.FC = () => {
       </section>
 
       {{/* Training Features */},
-  }
+  };
       <section className="py-16 bg-gradient-to-r from-slate-800/50 to-slate-700/50">
         <div className="container-responsive">
           <div className="text-center mb-12">
@@ -459,15 +459,15 @@ export const Training: React.FC = () => {
   ].map((feature, index) => (
   <motion.div;
                 key={{index},
-  }
+  };
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.6, delay: index * 0.1 },
-  }
+  };
                 viewport={{ once: true },
-  }
+  };
                 className="className="text-center group";"
               >
                 <div className={`w-16 h-16 rounded-xl bg-gradient-to-br ${feature.color} flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300`}>
@@ -482,18 +482,18 @@ export const Training: React.FC = () => {
       </section>
 
       {{/* CTA Section */},
-  }
+  };
       <section className="py-20">
         <div className="container-responsive text-center">
           <motion.div;
             initial={{ opacity: 0, y: 30 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             viewport={{ once: true },
-  }
+  };
           >
             <h2 className="text-4xl font-bold text-white mb-6">
               Ready to Advance Your Career?;
@@ -516,5 +516,4 @@ export const Training: React.FC = () => {
       </section>
     </div>
   )
-}
 export default Training;

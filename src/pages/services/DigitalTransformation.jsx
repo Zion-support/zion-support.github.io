@@ -55,7 +55,7 @@ const DigitalTransformation = () => {
       <SEO title="Digital Transformation - Zion Tech Group" description="Transform your business for the digital age with our comprehensive digital transformation services." keywords="digital transformation, process automation, digital strategy, change management, performance optimization" canonical="https://ziontechgroup.com/services/digital-transformation"/>
 
       {{/* Hero Section */},
-  }
+  };
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <motion.h1 className="text-4xl md:text-6xl font-bold mb-6" initial={{ opacity: 0, y: -20 },
@@ -87,7 +87,7 @@ const DigitalTransformation = () => {
       </section>
 
       {{/* Services Section */},
-  }
+  };
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -115,7 +115,7 @@ const DigitalTransformation = () => {
                     {service.features.map((feature, idx) => (<li key={idx} className="text-sm text-gray-300 flex items-center">
                         <span className="w-2 h-2 bg-blue-400 rounded-full mr-3"></span>
                         {{feature},
-  }
+  };
                       </li>))}
                   </ul>
                 </div>
@@ -125,7 +125,7 @@ const DigitalTransformation = () => {
       </section>
 
       {{/* Benefits Section */},
-  }
+  };
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -184,7 +184,7 @@ const DigitalTransformation = () => {
       </section>
 
       {{/* Process Section */},
-  }
+  };
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -204,7 +204,7 @@ const DigitalTransformation = () => {
   }>
                 <div className="w-20 h-20 bg-gradient-to-br from-blue-600 to-cyan-600 rounded-full flex items-center justify-center mx-auto mb-6 text-3xl">
                   {{step.icon},
-  }
+  };
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{step.step}</h3>
                 <p className="text-gray-300">{step.description}</p>
@@ -214,7 +214,7 @@ const DigitalTransformation = () => {
       </section>
 
       {{/* CTA Section */},
-  }
+  };
       <section className="py-20 bg-gradient-to-r from-blue-900/50 to-cyan-900/50">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">
@@ -230,5 +230,5 @@ const DigitalTransformation = () => {
         </div>
       </section>
     </div>)
-}
+};
 export default DigitalTransformation;

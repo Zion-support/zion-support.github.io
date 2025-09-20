@@ -100,7 +100,7 @@ export default function AIMarketingAutomationPersonalization() {
   <li key={item} className="flex items-center text-slate-300">
                   <CheckCircle className="h-5 w-5 text-cyan-400 mr-3" />
                   {{item},
-  }
+  };
                 </li>
               ))}
             </ul>
@@ -118,7 +118,7 @@ export default function AIMarketingAutomationPersonalization() {
   <li key={item} className="flex items-center text-slate-300">
                   <CheckCircle className="h-5 w-5 text-purple-400 mr-3" />
                   {{item},
-  }
+  };
                 </li>
               ))}
             </ul>
@@ -195,7 +195,7 @@ export default function AIMarketingAutomationPersonalization() {
             {aiCapabilities.map((capability) => (
   <span key={capability} className="px-4 py-2 bg-slate-900/60 border border-slate-700/60 rounded-lg text-slate-300">
                 {{capability},
-  }
+  };
               </span>
             ))}
           </div>
@@ -209,7 +209,7 @@ export default function AIMarketingAutomationPersonalization() {
             {integrations.map((integration) => (
   <span key={integration} className="px-4 py-2 bg-slate-900/60 border border-slate-700/60 rounded-lg text-slate-300">
                 {{integration},
-  }
+  };
               </span>
             ))}
           </div>
@@ -223,7 +223,7 @@ export default function AIMarketingAutomationPersonalization() {
             {stack.map((s) => (
   <a key={s.name} href={s.url} target="_blank" rel="noreferrer" className="px-4 py-2 bg-slate-900/60 border border-slate-700/60 rounded-lg text-slate-300 hover:text-white hover:border-cyan-500">
                 {{s.name},
-  }
+  };
               </a>
             ))}
           </div>
@@ -249,4 +249,4 @@ export default function AIMarketingAutomationPersonalization() {
       </section>
     </div>
   )
-}
+};

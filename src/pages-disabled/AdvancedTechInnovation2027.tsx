@@ -129,7 +129,7 @@ const AdvancedTechInnovation2027: React.FC = () => {
         </div>
 
         {{/* Innovation Timeline */},
-  }
+  };
         <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 backdrop-blur-sm rounded-2xl p-12 mb-16 border border-blue-400/30">
           <h2 className="text-4xl font-bold text-center mb-12">Innovation Timeline 2027</h2>
           <div className="grid md: grid-cols-4 gap-8">
@@ -165,7 +165,7 @@ const AdvancedTechInnovation2027: React.FC = () => {
         </div>
 
         {{/* Technology Showcase */},
-  }
+  };
         <div className="mb-16">
           <h2 className="text-4xl font-bold text-center mb-12">Advanced Technology Showcase</h2>
           <div className="grid md:grid-cols-2 gap-12">
@@ -243,7 +243,7 @@ const AdvancedTechInnovation2027: React.FC = () => {
         </div>
 
         {{/* Call to Action */},
-  }
+  };
         <div className="text-center">
           <h2 className="text-4xl font-bold mb-6">Shape the Future with Us</h2>
           <p className="text-xl opacity-90 mb-8 max-w-3xl mx-auto">
@@ -267,5 +267,5 @@ const AdvancedTechInnovation2027: React.FC = () => {
       </div>
     </div>
   )
-  }
+  };
 export default AdvancedTechInnovation2027;

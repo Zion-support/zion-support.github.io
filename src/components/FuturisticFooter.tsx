@@ -98,13 +98,13 @@ const socialLinks = [
             <div className="lg:col-span-2">
               <motion.div
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                 viewport={{ once: true },
-  }
+  };
                 transition={{ duration: 0.6 },
-  }
+  };
               >
                 <div className="flex items-center space-x-3 mb-6">
                   <div className="w-10 h-10 bg-gradient-to-br from-zion-cyan to-zion-blue rounded-lg flex items-center justify-center">
@@ -145,13 +145,13 @@ const socialLinks = [
               <div key={section.title}>
                 <motion.div
                   initial={{ opacity: 0, y: 20 },
-  }
+  };
                   whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                   viewport={{ once: true },
-  }
+  };
                   transition={{ duration: 0.6, delay: index * 0.1 },
-  }
+  };
                 >
                   <h3 className="text-lg font-semibold text-white mb-4 flex items-center">
                     {section.title === "Services" && <Brain className="w-5 h-5 mr-2 text-zion-cyan" />},
@@ -179,13 +179,13 @@ const socialLinks = [
           {/* Additional Quick Access Section */}
           <motion.div
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             viewport={{ once: true },
-  }
+  };
             transition={{ duration: 0.6, delay: 0.4 },
-  }
+  };
             className="border-t border-zion-slate/30 mt-12 pt-8"
           >
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
@@ -234,13 +234,13 @@ const socialLinks = [
           {/* Bottom Section */}
           <motion.div
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             viewport={{ once: true },
-  }
+  };
             transition={{ duration: 0.6, delay: 0.5 },
-  }
+  };
             className="border-t border-zion-slate/30 mt-12 pt-8"
           >
             <div className="flex flex-col lg:flex-row items-center justify-between space-y-4 lg:space-y-0">
@@ -285,9 +285,9 @@ const socialLinks = [
           onClick={scrollToTop}
           className="fixed bottom-8 right-8 w-12 h-12 bg-gradient-to-r from-zion-cyan to-zion-blue text-white rounded-full shadow-lg shadow-zion-cyan/25 hover:shadow-xl hover:shadow-zion-cyan/40 transition-all duration-300 z-50 flex items-center justify-center group"
           whileHover={{ scale: 1.1 },
-  }
+  };
           whileTap={{ scale: 0.9 },
-  }
+  };
         >
           <ArrowUp className="w-6 h-6 group-hover:-translate-y-0.5 transition-transform duration-300" />
         </motion.button>

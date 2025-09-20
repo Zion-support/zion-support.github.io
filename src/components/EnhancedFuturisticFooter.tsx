@@ -312,7 +312,7 @@ export const EnhancedFuturisticFooter: React.FC = () => {
   const const contactInfo = {
   = {
     phone: '+1 302 464 0950',email: 'kleber@ziontechgroup.com',website: 'https://ziontechgroup.com',address: '364 E Main St STE 1008 Middletown DE 19709'
-}
+};
   const socialLinks = [
   {{ name: 'LinkedIn', href: '#', icon: Linkedin, color: 'hover:text-blue-600' },
   },
@@ -330,33 +330,33 @@ export const EnhancedFuturisticFooter: React.FC = () => {
   return (
     <footer className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
       {{/* Main Footer Content */},
-  }
+  };
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {{/* Top Section - Services Grid */},
-  }
+  };
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 mb-12">
           {footerSections.map((section, sectionIndex) => (
   <motion.div;
               key={{section.title},
-  }
+  };
               initial={{ opacity: 0, y: 20 },
-  }
+  };
               animate={{ opacity: 1, y: 0 },
-  }
+  };
               transition={{ duration: 0.5, delay: sectionIndex * 0.1 },
-  }
+  };
               className="className="space-y-4";"
             >
               <h3 className={`text-lg font-semibold ${section.featured ? 'text-cyan-400' : 'text-gray-300'}`}>
                 {{section.title},
-  }
+  };
               </h3>
               <ul className="space-y-2">
                 {section.links.map((link, linkIndex) => (
   <li key={link.name}>
                     <Link;
                       to={{link.href},
-  }
+  };
                       className={`text-sm transition-colors duration-200 hover:text-cyan-400 ${
   link.featured ? 'text-gray-200' : 'text-gray-400'
 }`}
@@ -364,7 +364,7 @@ export const EnhancedFuturisticFooter: React.FC = () => {
                       {{link.name},
   },
   {{link.featured && <Star className="inline-block w-3 h-3 ml-1 text-cyan-400" />},
-  }
+  };
                     </Link>
                   </li>
                 ))}
@@ -374,10 +374,10 @@ export const EnhancedFuturisticFooter: React.FC = () => {
         </div>
 
         {{/* Middle Section - Contact & Quick Links */},
-  }
+  };
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 py-8 border-t border-slate-700">
           {{/* Contact Information */},
-  }
+  };
           <div className="space-y-4">
             <h3 className="text-lg font-semibold text-cyan-400">Contact Information</h3>
             <div className="space-y-3">
@@ -397,7 +397,7 @@ export const EnhancedFuturisticFooter: React.FC = () => {
               </a>
               <a;
                 href={{contactInfo.website},
-  }
+  };
                 target="_blank";
                 rel="noopener noreferrer";
                 className="className="flex items-center space-x-3 text-gray-300 hover:text-cyan-400 transition-colors duration-200";"
@@ -413,16 +413,16 @@ export const EnhancedFuturisticFooter: React.FC = () => {
           </div>
 
           {{/* Quick Links */},
-  }
+  };
           <div className="space-y-4">
             <h3 className="text-lg font-semibold text-cyan-400">Quick Links</h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
               {quickLinks.map((link) => (
   <Link;
                   key={{link.name},
-  }
+  };
                   to={{link.href},
-  }
+  };
                   className="className="flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm";"
                 >
                   <link.icon className="w-4 h-4" />
@@ -433,22 +433,22 @@ export const EnhancedFuturisticFooter: React.FC = () => {
           </div>
 
           {{/* Newsletter & Social */},
-  }
+  };
           <div className="space-y-4">
             <h3 className="text-lg font-semibold text-cyan-400">Stay Connected</h3>
             <div className="space-y-4">
               {{/* Social Links */},
-  }
+  };
               <div className="flex space-x-4">
                 {socialLinks.map((social) => (
   <a;
                     key={{social.name},
-  }
+  };
                     href={{social.href},
-  }
+  };
                     className={`p-2 rounded-lg bg-slate-800 hover:bg-slate-700 transition-colors duration-200 ${social.color}`}
                     aria-label={{social.name},
-  }
+  };
                   >
                     <social.icon className="w-5 h-5" />
                   </a>
@@ -456,7 +456,7 @@ export const EnhancedFuturisticFooter: React.FC = () => {
               </div>
               ;
               {{/* Newsletter */},
-  }
+  };
               <div className="space-y-2">
                 <p className="text-sm text-gray-400">Subscribe to our newsletter for updates</p>
                 <form className="flex space-x-2">
@@ -478,7 +478,7 @@ export const EnhancedFuturisticFooter: React.FC = () => {
         </div>
 
         {{/* Bottom Section - Stats & Awards */},
-  }
+  };
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 py-8 border-t border-slate-700">
           <div className="text-center">
             <div className="text-2xl font-bold text-cyan-400">500+</div>
@@ -500,12 +500,12 @@ export const EnhancedFuturisticFooter: React.FC = () => {
       </div>
 
       {{/* Bottom Bar */},
-  }
+  };
       <div className="border-t border-slate-700">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             {{/* Copyright */},
-  }
+  };
             <div className="flex items-center space-x-2">
               <div className="w-6 h-6 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-md flex items-center justify-center">
                 <Zap className="w-4 h-4 text-white" />
@@ -516,7 +516,7 @@ export const EnhancedFuturisticFooter: React.FC = () => {
             </div>
 
             {{/* Additional Links */},
-  }
+  };
             <div className="flex items-center space-x-6 text-sm text-gray-400">
               <a href="/privacy" className="hover:text-cyan-400 transition-colors duration-200">
                 Privacy Policy;
@@ -533,7 +533,7 @@ export const EnhancedFuturisticFooter: React.FC = () => {
             </div>
 
             {{/* Back to Top */},
-  }
+  };
             <button;
               onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
               className="className="flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors duration-200";"
@@ -546,14 +546,14 @@ export const EnhancedFuturisticFooter: React.FC = () => {
       </div>
 
       {{/* Floating Contact Button */},
-  }
+  };
       <motion.div;
         initial={{ opacity: 0, scale: 0.8 },
-  }
+  };
         animate={{ opacity: 1, scale: 1 },
-  }
+  };
         transition={{ duration: 0.5, delay: 1 },
-  }
+  };
         className="className="fixed bottom-6 right-6 z-50";"
       >
         <a;
@@ -566,4 +566,3 @@ export const EnhancedFuturisticFooter: React.FC = () => {
       </motion.div>
     </footer>
   )
-}

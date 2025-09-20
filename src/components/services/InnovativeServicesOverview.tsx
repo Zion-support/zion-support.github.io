@@ -4,7 +4,7 @@ interface InnovativeServicesOverviewProps {
   maxServices?: number,
   category?: string,
   showViewAllButton?: boolean,
-}
+};
 
 const InnovativeServicesOverview: React.FC<InnovativeServicesOverviewProps> = ({
   maxServices = 6;
@@ -46,7 +46,7 @@ const filteredServices = useMemo(() => {
           break,
         default: services = INNOVATIVE_SERVICES_2025
       },
-  }
+  };
 
     return services.slice(0, maxServices)
 }, [activeTab, category, maxServices]),

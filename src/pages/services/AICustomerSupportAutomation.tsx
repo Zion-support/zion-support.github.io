@@ -162,16 +162,16 @@ const AICustomerSupportAutomation = () => {
       />
       ;
       {{/* Hero Section */},
-  }
+  };
       <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
         <div className="max-w-7xl mx-auto">
           <motion.div;
             initial={{ opacity: 0, y: 30 },
-  }
+  };
             animate={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             className="className="text-center relative z-10";"
           >
             <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-400/30 rounded-full text-sm font-medium mb-8 backdrop-blur-sm">
@@ -212,7 +212,7 @@ const AICustomerSupportAutomation = () => {
         </div>
         ;
         {{/* Background Elements */},
-  }
+  };
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div className="absolute top-20 left-20 w-72 h-72 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full blur-3xl"></div>
           <div className="absolute bottom-20 right-20 w-96 h-96 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-full blur-3xl"></div>
@@ -220,19 +220,19 @@ const AICustomerSupportAutomation = () => {
       </section>
 
       {{/* Benefits Section */},
-  }
+  };
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5 relative">
         <div className="max-w-7xl mx-auto">
           <motion.div ;
             className="className="text-center mb-16";"
             initial={{ opacity: 0, y: 30 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             viewport={{ once: true },
-  }
+  };
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
@@ -248,15 +248,15 @@ const AICustomerSupportAutomation = () => {
             {benefits.map((benefit, index) => (
   <motion.div;
                 key={{index},
-  }
+  };
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.6, delay: index * 0.1 },
-  }
+  };
                 viewport={{ once: true },
-  }
+  };
                 className="className="group text-center";"
               >
                 <div className="glass rounded-2xl p-8 border border-white/20 hover:border-cyan-400/40 transition-all duration-300 group-hover:transform group-hover:scale-105 backdrop-blur-sm h-full">
@@ -274,19 +274,19 @@ const AICustomerSupportAutomation = () => {
       </section>
 
       {{/* Features Section */},
-  }
+  };
       <section className="py-20 px-4 sm:px-6 lg:px-8 relative">
         <div className="max-w-7xl mx-auto">
           <motion.div ;
             className="className="text-center mb-16";"
             initial={{ opacity: 0, y: 30 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             viewport={{ once: true },
-  }
+  };
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
@@ -302,15 +302,15 @@ const AICustomerSupportAutomation = () => {
             {features.map((feature, index) => (
   <motion.div;
                 key={{index},
-  }
+  };
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.6, delay: index * 0.1 },
-  }
+  };
                 viewport={{ once: true },
-  }
+  };
                 className="className="group";"
               >
                 <div className="glass rounded-2xl p-8 border border-white/20 hover:border-cyan-400/40 transition-all duration-300 group-hover:transform group-hover:scale-105 backdrop-blur-sm h-full">
@@ -319,11 +319,11 @@ const AICustomerSupportAutomation = () => {
                   </div>
                   <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-300 transition-colors duration-300">
                     {{feature.title},
-  }
+  };
                   </h3>
                   <p className="text-gray-300 leading-relaxed">
                     {{feature.description},
-  }
+  };
                   </p>
                 </div>
               </motion.div>
@@ -333,19 +333,19 @@ const AICustomerSupportAutomation = () => {
       </section>
 
       {{/* Use Cases Section */},
-  }
+  };
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5 relative">
         <div className="max-w-7xl mx-auto">
           <motion.div ;
             className="className="text-center mb-16";"
             initial={{ opacity: 0, y: 30 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             viewport={{ once: true },
-  }
+  };
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
@@ -361,15 +361,15 @@ const AICustomerSupportAutomation = () => {
             {useCases.map((useCase, index) => (
   <motion.div;
                 key={{index},
-  }
+  };
                 initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 },
-  }
+  };
                 whileInView={{ opacity: 1, x: 0 },
-  }
+  };
                 transition={{ duration: 0.6, delay: index * 0.1 },
-  }
+  };
                 viewport={{ once: true },
-  }
+  };
                 className="className="group";"
               >
                 <div className="glass rounded-2xl p-8 border border-white/20 hover:border-cyan-400/40 transition-all duration-300 group-hover:transform group-hover:scale-105 backdrop-blur-sm">
@@ -378,11 +378,11 @@ const AICustomerSupportAutomation = () => {
                   </div>
                   <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-300 transition-colors duration-300">
                     {{useCase.title},
-  }
+  };
                   </h3>
                   <p className="text-gray-300 leading-relaxed">
                     {{useCase.description},
-  }
+  };
                   </p>
                 </div>
               </motion.div>
@@ -392,19 +392,19 @@ const AICustomerSupportAutomation = () => {
       </section>
 
       {{/* Integrations Section */},
-  }
+  };
       <section className="py-20 px-4 sm:px-6 lg:px-8 relative">
         <div className="max-w-7xl mx-auto">
           <motion.div ;
             className="className="text-center mb-16";"
             initial={{ opacity: 0, y: 30 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             viewport={{ once: true },
-  }
+  };
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
@@ -420,15 +420,15 @@ const AICustomerSupportAutomation = () => {
             {integrations.map((integration, index) => (
   <motion.div;
                 key={{index},
-  }
+  };
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.6, delay: index * 0.1 },
-  }
+  };
                 viewport={{ once: true },
-  }
+  };
                 className="className="group";"
               >
                 <div className="glass rounded-2xl p-8 border border-white/20 hover:border-cyan-400/40 transition-all duration-300 group-hover:transform group-hover:scale-105 backdrop-blur-sm h-full">
@@ -437,11 +437,11 @@ const AICustomerSupportAutomation = () => {
                   </div>
                   <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-300 transition-colors duration-300">
                     {{integration.name},
-  }
+  };
                   </h3>
                   <p className="text-gray-300 leading-relaxed">
                     {{integration.description},
-  }
+  };
                   </p>
                 </div>
               </motion.div>
@@ -451,19 +451,19 @@ const AICustomerSupportAutomation = () => {
       </section>
 
       {{/* Pricing Section */},
-  }
+  };
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5 relative">
         <div className="max-w-7xl mx-auto">
           <motion.div ;
             className="className="text-center mb-16";"
             initial={{ opacity: 0, y: 30 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             viewport={{ once: true },
-  }
+  };
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
@@ -479,15 +479,15 @@ const AICustomerSupportAutomation = () => {
             {pricingPlans.map((plan, index) => (
   <motion.div;
                 key={{index},
-  }
+  };
                 initial={{ opacity: 0, y: 30 },
-  }
+  };
                 whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.6, delay: index * 0.1 },
-  }
+  };
                 viewport={{ once: true },
-  }
+  };
                 className={`relative ${plan.popular ? 'lg:-mt-8' : ''}`}
               >
                 {plan.popular && (
@@ -517,7 +517,7 @@ const AICustomerSupportAutomation = () => {
   <li key={idx} className="flex items-center text-gray-300">
                         <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />
                         {{feature},
-  }
+  };
                       </li>
                     ))}
                   </ul>
@@ -540,19 +540,19 @@ const AICustomerSupportAutomation = () => {
       </section>
 
       {{/* Testimonials Section */},
-  }
+  };
       <section className="py-20 px-4 sm:px-6 lg:px-8 relative">
         <div className="max-w-7xl mx-auto">
           <motion.div ;
             className="className="text-center mb-16";"
             initial={{ opacity: 0, y: 30 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             viewport={{ once: true },
-  }
+  };
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
@@ -565,15 +565,15 @@ const AICustomerSupportAutomation = () => {
             {testimonials.map((testimonial, index) => (
   <motion.div;
                 key={{index},
-  }
+  };
                 initial={{ opacity: 0, y: 30 },
-  }
+  };
                 whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.6, delay: index * 0.1 },
-  }
+  };
                 viewport={{ once: true },
-  }
+  };
                 className="className="group";"
               >
                 <div className="glass rounded-2xl p-8 border border-white/20 hover:border-cyan-400/40 transition-all duration-300 group-hover:transform group-hover:scale-105 backdrop-blur-sm h-full">
@@ -596,18 +596,18 @@ const AICustomerSupportAutomation = () => {
       </section>
 
       {{/* CTA Section */},
-  }
+  };
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-500/10 to-blue-500/10 relative">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div;
             initial={{ opacity: 0, y: 30 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             viewport={{ once: true },
-  }
+  };
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Ready to Transform Your Customer Support?;
@@ -636,7 +636,7 @@ const AICustomerSupportAutomation = () => {
       </section>
 
       {{/* Contact Information */},
-  }
+  };
       <div className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-4xl mx-auto text-center">
           <h3 className="text-2xl font-bold text-white mb-6">Get in Touch</h3>
@@ -667,16 +667,16 @@ const AICustomerSupportAutomation = () => {
         </div>
 
         {{/* CTA Section */},
-  }
+  };
         <div className="py-20 px-4 bg-slate-800/30">
           <div className="container mx-auto max-w-4xl text-center">
             <motion.div;
               initial={{ opacity: 0, y: 30 },
-  }
+  };
               whileInView={{ opacity: 1, y: 0 },
-  }
+  };
               transition={{ duration: 0.8 },
-  }
+  };
             >
               <h2 className="text-4xl font-bold text-white mb-6">
                 Ready to Transform Your Customer Support?;
@@ -687,9 +687,9 @@ const AICustomerSupportAutomation = () => {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <motion.button;
                   whileHover={{ scale: 1.05 },
-  }
+  };
                   whileTap={{ scale: 0.95 },
-  }
+  };
                   className="className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center";"
                 >
                   Start Free Trial;
@@ -697,9 +697,9 @@ const AICustomerSupportAutomation = () => {
                 </motion.button>
                 <motion.button;
                   whileHover={{ scale: 1.05 },
-  }
+  };
                   whileTap={{ scale: 0.95 },
-  }
+  };
                   className="className="px-8 py-4 border border-blue-400 text-blue-400 font-semibold rounded-lg hover: bg-blue-400 hover:text-white transition-all duration-300";"
                 >
                   Contact Sales;
@@ -711,7 +711,7 @@ const AICustomerSupportAutomation = () => {
       </div>
       </section>
     )
-}
+};
 // Add missing icon components;
 const ShoppingCart = ({ className }: { className?: string }) => (
   <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">

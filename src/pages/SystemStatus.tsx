@@ -4,14 +4,14 @@ import { CheckCircle, AlertCircle, XCircle, Clock, Activity, Server, Database, G
 import SEO from "../components/SEO";
 interface ServiceStatus {
   id: string,name: string,status: 'operational' | 'degraded' | 'outage' | 'maintenance',uptime: number,responseTime: number,lastUpdated: string,description: string,icon: React.ComponentType<any>
-}
+};
 
 interface Incident {
   id: string,title: string,description: string,status: 'investigating' | 'identified' | 'monitoring' | 'resolved',severity: 'low' | 'medium' | 'high' | 'critical',startTime: string;
   endTime?: string;
   affectedServices: string[[],
   ],
-  }
+  };
 
 const services: ServiceStatus[] = [
   {
@@ -51,7 +51,7 @@ const getStatusColor = (status: ServiceStatus['status']) => {
       return 'text-blue-400 bg-blue-400/10 border-blue-400/20';
     default: return 'text-gray-400 bg-gray-400/10 border-gray-400/20'
 },
-  }
+  };
 const getStatusIcon = (status: ServiceStatus['status']) => {
   switch (status) {
   case 'operational':;
@@ -64,7 +64,7 @@ const getStatusIcon = (status: ServiceStatus['status']) => {
       return Clock;
     default: return Clock
 },
-  }
+  };
 const getSeverityColor = (severity: Incident['severity']) => {
   switch (severity) {
   case 'low':;
@@ -77,7 +77,7 @@ const getSeverityColor = (severity: Incident['severity']) => {
       return 'text-red-400 bg-red-400/10 border-red-400/20';
     default: return 'text-gray-400 bg-gray-400/10 border-gray-400/20'
 },
-  }
+  };
 export default function SystemStatus() {
   const [lastUpdated, setLastUpdated] = useState(new Date())
 
@@ -102,16 +102,16 @@ const overallUptime = services.reduce((acc, service) => acc + service.uptime, 0)
       />
       ;
       {{/* Header */},
-  }
+  };
       <div className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <motion.div ;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             animate={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.6 },
-  }
+  };
             className="className="inline-flex items-center px-4 py-2 bg-slate-800/50 rounded-full text-sm font-medium mb-6 border border-slate-700/50";"
           >
             <Activity className="w-4 h-4 mr-2 text-cyan-400" />
@@ -120,11 +120,11 @@ const overallUptime = services.reduce((acc, service) => acc + service.uptime, 0)
           ;
           <motion.h1 ;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             animate={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.6, delay: 0.2 },
-  }
+  };
             className="className="text-4xl md:text-6xl font-bold text-white mb-6";"
           >
             System Status;
@@ -132,11 +132,11 @@ const overallUptime = services.reduce((acc, service) => acc + service.uptime, 0)
           ;
           <motion.p ;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             animate={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.6, delay: 0.4 },
-  }
+  };
             className="className="text-xl text-gray-300 max-w-3xl mx-auto";"
           >
             Real-time monitoring of our services, infrastructure, and performance metrics.;
@@ -145,14 +145,14 @@ const overallUptime = services.reduce((acc, service) => acc + service.uptime, 0)
       </div>
 
       {{/* Overall Status */},
-  }
+  };
       <div className="py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="bg-zion-slate border border-zion-slate-light rounded-2xl p-8 text-center">
               <div className="flex items-center justify-center gap-4 mb-6">
                 {{getStatusIcon(systemStatus.overall)},
-  }
+  };
                 <h2 className="text-3xl font-bold text-white">All Systems Operational</h2>
               </div>
 
@@ -175,7 +175,7 @@ const overallUptime = services.reduce((acc, service) => acc + service.uptime, 0)
             </div>
 
             {{/* Uptime */},
-  }
+  };
             <div className="text-center">
               <div className="text-3xl font-bold text-cyan-400 mb-2">{overallUptime.toFixed(2)}%</div>
               <h3 className="text-xl font-semibold text-white mb-2">Uptime</h3>
@@ -183,12 +183,12 @@ const overallUptime = services.reduce((acc, service) => acc + service.uptime, 0)
             </div>
 
             {{/* Last Updated */},
-  }
+  };
             <div className="text-center">
               <div className="text-sm text-gray-400 mb-2">Last Updated</div>
               <div className="text-lg font-semibold text-white">
                 {{lastUpdated.toLocaleTimeString()},
-  }
+  };
               </div>
               <p className="text-gray-400">Updates every 30s</p>
             </div>
@@ -197,27 +197,27 @@ const overallUptime = services.reduce((acc, service) => acc + service.uptime, 0)
       </div>
 
       {{/* Service Status Grid */},
-  }
+  };
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
         <motion.div ;
           initial={{ opacity: 0, y: 20 },
-  }
+  };
           animate={{ opacity: 1, y: 0 },
-  }
+  };
           transition={{ duration: 0.6, delay: 0.8 },
-  }
+  };
           className="className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6";"
         >
           {services.map((service, index) => (
   <motion.div;
               key={{service.id},
-  }
+  };
               initial={{ opacity: 0, y: 20 },
-  }
+  };
               animate={{ opacity: 1, y: 0 },
-  }
+  };
               transition={{ duration: 0.6, delay: 1.0 + index * 0.1 },
-  }
+  };
               className="className="bg-slate-800/50 rounded-xl p-6 backdrop-blur-sm border border-slate-700/50 hover:border-slate-600/50 transition-all duration-200";"
             >
               <div className="flex items-start justify-between mb-4">
@@ -242,7 +242,7 @@ const overallUptime = services.reduce((acc, service) => acc + service.uptime, 0)
                 <div className={`px-3 py-1 rounded-full text-xs font-medium border ${getStatusColor(service.status)}`}>
                   {React.createElement(getStatusIcon(service.status), { className: "w-3 h-3 inline mr-1" })},
   {{service.status.charAt(0).toUpperCase() + service.status.slice(1)},
-  }
+  };
                 </div>
               </div>
 
@@ -259,7 +259,7 @@ const overallUptime = services.reduce((acc, service) => acc + service.uptime, 0)
                   <span className="text-gray-400 text-sm">Last Updated</span>
                   <span className="text-white font-medium text-sm">
                     {{new Date(service.lastUpdated).toLocaleTimeString()},
-  }
+  };
                   </span>
                 </div>
               </div>
@@ -274,24 +274,24 @@ const overallUptime = services.reduce((acc, service) => acc + service.uptime, 0)
   <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
           <motion.div ;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             animate={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.6, delay: 1.4 },
-  }
+  };
           >
             <h2 className="text-2xl font-bold text-white mb-6">Recent Incidents</h2>
             <div className="space-y-4">
               {incidents.map((incident, index) => (
   <motion.div;
                   key={{incident.id},
-  }
+  };
                   initial={{ opacity: 0, y: 20 },
-  }
+  };
                   animate={{ opacity: 1, y: 0 },
-  }
+  };
                   transition={{ duration: 0.6, delay: 1.6 + index * 0.1 },
-  }
+  };
                   className="className="bg-slate-800/50 rounded-xl p-6 backdrop-blur-sm border border-slate-700/50";"
                 >
                   <div className="flex items-start justify-between mb-4">
@@ -299,7 +299,7 @@ const overallUptime = services.reduce((acc, service) => acc + service.uptime, 0)
                       <div className="flex items-center space-x-3 mb-2">
                         <div className={`px-3 py-1 rounded-full text-xs font-medium border ${getSeverityColor(incident.severity)}`}>
                           {{incident.severity.charAt(0).toUpperCase() + incident.severity.slice(1)},
-  }
+  };
                         </div>
                         <div className={`px-3 py-1 rounded-full text-xs font-medium ${
   incident.status === 'resolved' ;
@@ -309,7 +309,7 @@ const overallUptime = services.reduce((acc, service) => acc + service.uptime, 0)
                             : 'text-yellow-400 bg-yellow-400/10 border border-yellow-400/20'
 }`}>
                           {{incident.status.charAt(0).toUpperCase() + incident.status.slice(1)},
-  }
+  };
                         </div>
                       </div>
                       <h3 className="text-lg font-semibold text-white mb-2">{incident.title}</h3>
@@ -322,7 +322,7 @@ const overallUptime = services.reduce((acc, service) => acc + service.uptime, 0)
                       <span className="text-gray-400">Start Time:</span>
                       <span className="text-white ml-2">
                         {{new Date(incident.startTime).toLocaleString()},
-  }
+  };
                       </span>
                     </div>
                     {incident.endTime && (
@@ -330,7 +330,7 @@ const overallUptime = services.reduce((acc, service) => acc + service.uptime, 0)
                         <span className="text-gray-400">End Time:</span>
                         <span className="text-white ml-2">
                           {{new Date(incident.endTime).toLocaleString()},
-  }
+  };
                         </span>
                       </div>
                     )}
@@ -340,7 +340,7 @@ const overallUptime = services.reduce((acc, service) => acc + service.uptime, 0)
                         {incident.affectedServices.map(service => (
   <span key={service} className="px-2 py-1 bg-slate-700/50 rounded text-xs text-gray-300">
                             {{service},
-  }
+  };
                           </span>
                         ))}
                       </div>
@@ -353,15 +353,15 @@ const overallUptime = services.reduce((acc, service) => acc + service.uptime, 0)
         </div>
       )},
   {{/* Performance Metrics */},
-  }
+  };
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
         <motion.div ;
           initial={{ opacity: 0, y: 20 },
-  }
+  };
           animate={{ opacity: 1, y: 0 },
-  }
+  };
           transition={{ duration: 0.6, delay: 1.8 },
-  }
+  };
           className="className="bg-slate-800/50 rounded-2xl p-8 backdrop-blur-sm border border-slate-700/50";"
         >
           <h2 className="text-2xl font-bold text-white mb-6">Performance Metrics</h2>
@@ -399,15 +399,15 @@ const overallUptime = services.reduce((acc, service) => acc + service.uptime, 0)
       </div>
 
       {{/* Footer CTA */},
-  }
+  };
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
         <motion.div ;
           initial={{ opacity: 0, y: 20 },
-  }
+  };
           animate={{ opacity: 1, y: 0 },
-  }
+  };
           transition={{ duration: 0.6, delay: 2.0 },
-  }
+  };
           className="className="text-center";"
         >
           <div className="bg-gradient-to-r from-cyan-400/10 to-blue-500/10 rounded-2xl p-8 border border-cyan-400/20">
@@ -436,4 +436,3 @@ const overallUptime = services.reduce((acc, service) => acc + service.uptime, 0)
       </div>
     </motion.div>
   )
-}

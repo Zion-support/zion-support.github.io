@@ -47,36 +47,36 @@ const ComprehensiveServicesLanding2028: React.FC = () => {
   const const containerVariants = {
   = {
     hidden: {{ opacity: 0 },
-  }
+  };
     visible: {
   opacity: 1,transition: {
   staggerChildren: 0.1
 },
   },
-  }
+  };
   const const itemVariants = {
   = {
     hidden: {{ y: 20, opacity: 0 },
-  }
+  };
     visible: {
   y: 0,opacity: 1,transition: {
   duration: 0.5
 },
   },
-  }
+  };
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {{/* Hero Section */},
-  }
+  };
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             animate={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
           >
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-white text-sm font-medium mb-6">
               <Sparkles className="w-4 h-4 mr-2 text-purple-400" />
@@ -114,7 +114,7 @@ const ComprehensiveServicesLanding2028: React.FC = () => {
       </section>
 
       {{/* Contact Information Banner */},
-  }
+  };
       <section className="bg-white/10 backdrop-blur-sm py-6 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
@@ -135,18 +135,18 @@ const ComprehensiveServicesLanding2028: React.FC = () => {
       </section>
 
       {{/* Service Categories Tabs */},
-  }
+  };
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             viewport={{ once: true },
-  }
+  };
             className="className="text-center mb-12";"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -161,10 +161,10 @@ const ComprehensiveServicesLanding2028: React.FC = () => {
             {serviceCategories.map((category) => (
   <button;
                 key={{category.id},
-  }
+  };
                 onClick={{onClick={() => setActiveTab(category.id)},
   },
-  }
+  };
                 className={`flex items-center space-x-3 px-6 py-3 rounded-lg transition-all duration-300 ${
   activeTab === category.id;
                     ? `bg-gradient-to-r ${category.color} text-white shadow-lg`;
@@ -175,23 +175,23 @@ const ComprehensiveServicesLanding2028: React.FC = () => {
                 <span className="font-medium">{category.name}</span>
                 <span className="bg-white/20 px-2 py-1 rounded-full text-xs">
                   {{category.services.length},
-  }
+  };
                 </span>
               </button>
             ))}
           </div>
 
           {{/* Search Bar */},
-  }
+  };
           <div className="max-w-md mx-auto mb-8">
             <div className="relative">
               <input;
                 type="text";
                 placeholder="Search services...";
                 value={{searchTerm},
-  }
+  };
                 onChange={{(e) => setSearchTerm(e.target.value)},
-  }
+  };
                 className="className="w-full px-4 py-3 pl-12 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent";"
               />
               <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
@@ -199,10 +199,10 @@ const ComprehensiveServicesLanding2028: React.FC = () => {
           </div>
 
           {{/* Services Grid */},
-  }
+  };
           <motion.div;
             variants={{containerVariants},
-  }
+  };
             initial="hidden";
             animate="visible";
             className="className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8";"
@@ -210,9 +210,9 @@ const ComprehensiveServicesLanding2028: React.FC = () => {
             {filteredServices.map((service, index) => (
   <motion.div;
                 key={{service.id},
-  }
+  };
                 variants={{itemVariants},
-  }
+  };
                 className="className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-all duration-300 transform hover:scale-105";"
               >
                 <div className="flex items-start justify-between mb-4">
@@ -248,11 +248,11 @@ const ComprehensiveServicesLanding2028: React.FC = () => {
                   {service.tags.slice(0, 3).map((tag) => (
   <span;
                       key={{tag},
-  }
+  };
                       className="className="px-2 py-1 bg-white/10 text-white text-xs rounded-full";"
                     >
                       {{tag},
-  }
+  };
                     </span>
                   ))}
                 </div>
@@ -260,7 +260,7 @@ const ComprehensiveServicesLanding2028: React.FC = () => {
                 <div className="flex space-x-2">
                   <a;
                     href={{`tel:+13024640950`},
-  }
+  };
                     className="className="flex-1 bg-gradient-to-r from-blue-600 to-purple-600 text-white text-center py-2 px-4 rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 text-sm font-medium";"
                   >
                     Get Started;
@@ -279,18 +279,18 @@ const ComprehensiveServicesLanding2028: React.FC = () => {
       </section>
 
       {{/* Market Analysis Section */},
-  }
+  };
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             viewport={{ once: true },
-  }
+  };
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -305,15 +305,15 @@ const ComprehensiveServicesLanding2028: React.FC = () => {
             {comprehensivePricingGuide2028.map((item, index) => (
   <motion.div;
                 key={{item.id},
-  }
+  };
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.8, delay: index * 0.2 },
-  }
+  };
                 viewport={{ once: true },
-  }
+  };
                 className="className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6";"
               >
                 <h3 className="text-xl font-semibold text-white mb-4">{item.title}</h3>
@@ -343,11 +343,11 @@ const ComprehensiveServicesLanding2028: React.FC = () => {
                     {item.marketInfo.competitors.slice(0, 3).map((competitor) => (
   <span;
                         key={{competitor},
-  }
+  };
                         className="className="px-2 py-1 bg-red-500/20 text-red-400 text-xs rounded-full";"
                       >
                         {{competitor},
-  }
+  };
                       </span>
                     ))}
                   </div>
@@ -366,18 +366,18 @@ const ComprehensiveServicesLanding2028: React.FC = () => {
       </section>
 
       {{/* Why Choose Us Section */},
-  }
+  };
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             viewport={{ once: true },
-  }
+  };
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -406,15 +406,15 @@ const ComprehensiveServicesLanding2028: React.FC = () => {
   ].map((feature, index) => (
   <motion.div;
                 key={{index},
-  }
+  };
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.8, delay: index * 0.1 },
-  }
+  };
                 viewport={{ once: true },
-  }
+  };
                 className="className="text-center";"
               >
                 <div className={`w-20 h-20 bg-gradient-to-r ${feature.color} rounded-full flex items-center justify-center mx-auto mb-6`}>
@@ -429,18 +429,18 @@ const ComprehensiveServicesLanding2028: React.FC = () => {
       </section>
 
       {{/* Call to Action Section */},
-  }
+  };
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             viewport={{ once: true },
-  }
+  };
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Ready to Transform Your Business?;
@@ -471,7 +471,7 @@ const ComprehensiveServicesLanding2028: React.FC = () => {
       </section>
 
       {{/* Footer Contact Information */},
-  }
+  };
       <footer className="bg-white/5 backdrop-blur-sm py-12 px-4 sm: px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -529,5 +529,5 @@ const ComprehensiveServicesLanding2028: React.FC = () => {
       </footer>
     </div>
   )
-}
+};
 export default ComprehensiveServicesLanding2028;

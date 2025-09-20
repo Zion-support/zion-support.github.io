@@ -57,17 +57,17 @@ export default function NewInnovativeServicesShowcase() {
       />
 
       {{/* Hero Section */},
-  }
+  };
       <section className="relative py-20 sm:py-32 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20" />
         <div className="relative container mx-auto px-4 text-center">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             animate={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
           >
             <div className="flex justify-center mb-6">
               <div className="p-3 bg-purple-500/20 rounded-2xl">
@@ -103,7 +103,7 @@ export default function NewInnovativeServicesShowcase() {
       </section>
 
       {{/* Service Categories Overview */},
-  }
+  };
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -120,13 +120,13 @@ export default function NewInnovativeServicesShowcase() {
             {serviceCategories.map((category, index) => (
   <motion.div;
                 key={{index},
-  }
+  };
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 animate={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.5, delay: index * 0.1 },
-  }
+  };
                 className="className="bg-slate-800/50 backdrop-blur border border-slate-700/50 rounded-xl p-8 hover:border-purple-500/50 transition-all duration-300";"
               >
                 <div className={`w-16 h-16 bg-gradient-to-r ${category.color} rounded-xl flex items-center justify-center mb-6`}>
@@ -155,7 +155,7 @@ export default function NewInnovativeServicesShowcase() {
       </section>
 
       {{/* Key Benefits Section */},
-  }
+  };
       <section className="py-20 bg-slate-900/50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -172,13 +172,13 @@ export default function NewInnovativeServicesShowcase() {
             {keyBenefits.map((benefit, index) => (
   <motion.div;
                 key={{index},
-  }
+  };
                 initial={{ opacity: 0, x: -20 },
-  }
+  };
                 animate={{ opacity: 1, x: 0 },
-  }
+  };
                 transition={{ duration: 0.5, delay: index * 0.1 },
-  }
+  };
                 className="className="bg-slate-800/30 backdrop-blur border border-slate-700/30 rounded-xl p-8";"
               >
                 <div className="w-12 h-12 bg-purple-500/20 rounded-lg flex items-center justify-center mb-4">
@@ -193,7 +193,7 @@ export default function NewInnovativeServicesShowcase() {
       </section>
 
       {{/* Detailed Services Section */},
-  }
+  };
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -210,13 +210,13 @@ export default function NewInnovativeServicesShowcase() {
             {NEW_INNOVATIVE_SERVICES_2025.map((service, index) => (
   <motion.div;
                 key={{service.id},
-  }
+  };
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 animate={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.5, delay: index * 0.1 },
-  }
+  };
                 className="className="bg-slate-800/50 backdrop-blur border border-slate-700/50 rounded-2xl p-8";"
               >
                 <div className="grid gap-8 lg:grid-cols-2">
@@ -239,7 +239,7 @@ export default function NewInnovativeServicesShowcase() {
                         <div className="text-2xl font-bold text-green-400">
                           {service.currency},
   {{service.price.toLocaleString()},
-  }
+  };
                           <span className="text-sm text-slate-400">/month</span>
                         </div>
                       </div>
@@ -283,11 +283,11 @@ export default function NewInnovativeServicesShowcase() {
                       {service.targetAudience.slice(0, 4).map((audience, audienceIndex) => (
   <span;
                           key={{audienceIndex},
-  }
+  };
                           className="className="px-3 py-1 bg-slate-700/50 text-slate-300 text-xs rounded-full";"
                         >
                           {{audience},
-  }
+  };
                         </span>
                       ))}
                     </div>
@@ -315,16 +315,16 @@ export default function NewInnovativeServicesShowcase() {
       </section>
 
       {{/* CTA Section */},
-  }
+  };
       <section className="py-20 bg-slate-900/50">
         <div className="container mx-auto px-4 text-center">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             animate={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             className="className="max-w-4xl mx-auto";"
           >
             <h2 className="text-3xl sm:text-4xl font-bold mb-6">
@@ -378,4 +378,4 @@ export default function NewInnovativeServicesShowcase() {
       </section>
     </div>
   )
-}
+};

@@ -30,7 +30,7 @@ const queryClient = new QueryClient({
     mutations: {
       retry: 1
     }
-  }
+  };
 })
 const AppOptimized: React.FC = () => {
   return (
@@ -64,6 +64,6 @@ const AppOptimized: React.FC = () => {
       </HelmetProvider>
     </ErrorBoundary>
   )
-}
+};
 
 export default AppOptimized;

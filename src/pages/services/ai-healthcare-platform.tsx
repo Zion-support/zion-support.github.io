@@ -77,7 +77,7 @@ const AIHealthcarePlatform: React.FC = () => {
       />
       ;
       {{/* Hero Section */},
-  }
+  };
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-900/20 via-purple-900/20 to-cyan-900/20"></div>
         <div className="container-responsive relative z-10">
@@ -107,7 +107,7 @@ const AIHealthcarePlatform: React.FC = () => {
       </section>
 
       {{/* Features Section */},
-  }
+  };
       <section className="py-20">
         <div className="container-responsive">
           <div className="text-center mb-16">
@@ -129,7 +129,7 @@ const AIHealthcarePlatform: React.FC = () => {
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-400 group-hover:text-gray-300 transition-colors">
                   {{feature.description},
-  }
+  };
                 </p>
               </div>
             ))}
@@ -138,7 +138,7 @@ const AIHealthcarePlatform: React.FC = () => {
       </section>
 
       {{/* Solutions Section */},
-  }
+  };
       <section className="py-20 bg-slate-800/20">
         <div className="container-responsive">
           <div className="text-center mb-16">
@@ -159,7 +159,7 @@ const AIHealthcarePlatform: React.FC = () => {
                 <h3 className="text-xl font-semibold text-white mb-3">{solution.title}</h3>
                 <p className="text-gray-400 group-hover:text-gray-300 transition-colors">
                   {{solution.description},
-  }
+  };
                 </p>
               </div>
             ))}
@@ -168,7 +168,7 @@ const AIHealthcarePlatform: React.FC = () => {
       </section>
 
       {{/* Benefits Section */},
-  }
+  };
       <section className="py-20">
         <div className="container-responsive">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
@@ -220,7 +220,7 @@ const AIHealthcarePlatform: React.FC = () => {
       </section>
 
       {{/* CTA Section */},
-  }
+  };
       <section className="py-20 bg-gradient-to-r from-blue-900/20 via-purple-900/20 to-cyan-900/20">
         <div className="container-responsive text-center">
           <h2 className="text-4xl font-bold text-white mb-6">
@@ -242,5 +242,5 @@ const AIHealthcarePlatform: React.FC = () => {
       </section>
     </div>
   )
-}
+};
 export default AIHealthcarePlatform;

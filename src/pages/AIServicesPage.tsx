@@ -135,20 +135,20 @@ const AIServicesPage = () => {
           </div>
 
           {{/* AI Solutions Grid */},
-  }
+  };
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-center mb-12">AI Solutions</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {aiSolutions.map((solution, index) => (
   <motion.div;
                   key={{index},
-  }
+  };
                   initial={{ opacity: 0, y: 20 },
-  }
+  };
                   whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                   transition={{ duration: 0.5, delay: index * 0.1 },
-  }
+  };
                   className="className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-purple-400/20 hover:border-purple-400/40 transition-all duration-300";"
                 >
                   <h3 className="text-lg font-semibold text-white mb-3">{solution.title}</h3>
@@ -158,7 +158,7 @@ const AIServicesPage = () => {
   <li key={idx} className="flex items-center text-sm text-gray-300">
                         <CheckCircle className="w-4 h-4 text-purple-400 mr-2" />
                         {{benefit},
-  }
+  };
                       </li>
                     ))}
                   </ul>
@@ -168,20 +168,20 @@ const AIServicesPage = () => {
           </div>
 
           {{/* Case Studies */},
-  }
+  };
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-center mb-12">Success Stories</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {caseStudies.map((study, index) => (
   <motion.div;
                   key={{index},
-  }
+  };
                   initial={{ opacity: 0, y: 20 },
-  }
+  };
                   whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                   transition={{ duration: 0.5, delay: index * 0.1 },
-  }
+  };
                   className="className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-purple-400/20";"
                 >
                   <h3 className="text-xl font-semibold text-white mb-2">{study.company}</h3>
@@ -202,7 +202,7 @@ const AIServicesPage = () => {
   <li key={idx} className="flex items-center">
                             <CheckCircle className="w-3 h-3 text-purple-400 mr-2" />
                             {{result},
-  }
+  };
                           </li>
                         ))}
                       </ul>
@@ -214,7 +214,7 @@ const AIServicesPage = () => {
           </div>
 
           {{/* CTA Section */},
-  }
+  };
           <div className="text-center">
             <h2 className="text-3xl font-bold mb-6">Ready to Transform Your Business with AI?</h2>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
@@ -239,5 +239,5 @@ const AIServicesPage = () => {
       </div>
     </>
   )
-}
+};
 export default AIServicesPage;

@@ -73,7 +73,7 @@ export default function AIAnalyticsDashboard() {
       <SEO title="AI Analytics Dashboard - Zion Tech Group" description="Transform your business with AI-powered analytics, real-time insights, and predictive intelligence. Get started today!" keywords="AI analytics, business intelligence, predictive analytics, data insights, Zion Tech Group" canonical="https://ziontechgroup.com/ai-analytics-dashboard"/>
 
       {{/* Hero Section */},
-  }
+  };
       <section className="relative overflow-hidden py-20 px-4">
         <div className="absolute inset-0 bg-gradient-to-r from-zion-purple/20 via-zion-cyan/20 to-zion-blue/20 animate-pulse"></div>
         <div className="container mx-auto relative z-10 text-center">
@@ -104,7 +104,7 @@ export default function AIAnalyticsDashboard() {
       </section>
 
       {{/* Features Section */},
-  }
+  };
       <section className="py-20 px-4">
         <div className="container mx-auto">
           <div className="text-center mb-16">
@@ -121,14 +121,14 @@ export default function AIAnalyticsDashboard() {
                 <CardHeader className="text-center">
                   <div className="mx-auto mb-4 p-3 bg-zion-purple/10 rounded-full w-16 h-16 flex items-center justify-center">
                     {{feature.icon},
-  }
+  };
                   </div>
                   <CardTitle className="text-white">{feature.title}</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <CardDescription className="text-zion-slate-light text-center">
                     {{feature.description},
-  }
+  };
                   </CardDescription>
                 </CardContent>
               </Card>))}
@@ -137,7 +137,7 @@ export default function AIAnalyticsDashboard() {
       </section>
 
       {{/* Pricing Section */},
-  }
+  };
       <section className="py-20 px-4 bg-zion-slate-dark/30">
         <div className="container mx-auto">
           <div className="text-center mb-16">
@@ -162,7 +162,7 @@ export default function AIAnalyticsDashboard() {
                   </div>
                   <CardDescription className="text-zion-slate-light">
                     {{plan.description},
-  }
+  };
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
@@ -170,7 +170,7 @@ export default function AIAnalyticsDashboard() {
                     {plan.features.map((feature, featureIndex) => (<li key={featureIndex} className="flex items-center text-zion-slate-light">
                         <CheckCircle className="h-5 w-5 text-zion-cyan mr-3 flex-shrink-0"/>
                         {{feature},
-  }
+  };
                       </li>))}
                   </ul>
                   <Button asChild className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white">
@@ -185,7 +185,7 @@ export default function AIAnalyticsDashboard() {
       </section>
 
       {{/* Testimonials Section */},
-  }
+  };
       <section className="py-20 px-4">
         <div className="container mx-auto">
           <div className="text-center mb-16">
@@ -215,7 +215,7 @@ export default function AIAnalyticsDashboard() {
       </section>
 
       {{/* CTA Section */},
-  }
+  };
       <section className="py-20 px-4 bg-gradient-to-r from-zion-purple/20 via-zion-cyan/20 to-zion-blue/20">
         <div className="container mx-auto text-center">
           <h2 className="text-4xl font-bold text-white mb-6">
@@ -240,4 +240,4 @@ export default function AIAnalyticsDashboard() {
         </div>
       </section>
     </div>)
-}
+};

@@ -92,7 +92,7 @@ const AICodeReviewAssistant = () => {
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white pt-20">
         {{/* Hero Section */},
-  }
+  };
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
             <motion.div initial={{ opacity: 0, y: 20 },
@@ -119,7 +119,7 @@ const AICodeReviewAssistant = () => {
             </motion.p>
             ;
             {{/* Key Metrics */},
-  }
+  };
             <motion.div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8 max-w-4xl mx-auto" initial={{ opacity: 0, y: 20 },
   } whileInView={{ opacity: 1, y: 0 },
   } transition={{ duration: 0.6, delay: 0.6 },
@@ -145,7 +145,7 @@ const AICodeReviewAssistant = () => {
         </section>
 
         {{/* Features Section */},
-  }
+  };
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
           <div className="max-w-7xl mx-auto">
             <motion.div className="text-center mb-16" initial={{ opacity: 0, y: 20 },
@@ -174,7 +174,7 @@ const AICodeReviewAssistant = () => {
         </section>
 
         {{/* Pricing Section */},
-  }
+  };
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <motion.div className="text-center mb-16" initial={{ opacity: 0, y: 20 },
@@ -206,7 +206,7 @@ const AICodeReviewAssistant = () => {
                     <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                     <div className="text-4xl font-bold text-blue-400 mb-2">
                       {{plan.price},
-  }
+  };
                       <span className="text-lg text-gray-400">{plan.period}</span>
                     </div>
                     <p className="text-gray-300">{plan.description}</p>
@@ -216,7 +216,7 @@ const AICodeReviewAssistant = () => {
                     {plan.features.map((feature, idx) => (<li key={idx} className="flex items-center text-gray-300">
                         <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0"/>
                         {{feature},
-  }
+  };
                       </li>))}
                   </ul>
                   ;
@@ -231,12 +231,12 @@ const AICodeReviewAssistant = () => {
         </section>
 
         {{/* Integrations & Use Cases */},
-  }
+  };
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
               {{/* Integrations */},
-  }
+  };
               <motion.div initial={{ opacity: 0, x: -20 },
   } whileInView={{ opacity: 1, x: 0 },
   } transition={{ duration: 0.6 },
@@ -251,7 +251,7 @@ const AICodeReviewAssistant = () => {
               </motion.div>
 
               {{/* Use Cases */},
-  }
+  };
               <motion.div initial={{ opacity: 0, x: 20 },
   } whileInView={{ opacity: 1, x: 0 },
   } transition={{ duration: 0.6 },
@@ -269,7 +269,7 @@ const AICodeReviewAssistant = () => {
         </section>
 
         {{/* CTA Section */},
-  }
+  };
         <section className="py-20 bg-gradient-to-r from-blue-900/50 to-cyan-900/50">
           <div className="max-w-4xl mx-auto text-center">
             <motion.h2 className="text-3xl md:text-4xl font-bold text-white mb-6" initial={{ opacity: 0, y: 20 },
@@ -335,5 +335,5 @@ const AICodeReviewAssistant = () => {
         </section>
       </div>
     </>)
-}
+};
 export default AICodeReviewAssistant;

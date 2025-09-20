@@ -37,4 +37,4 @@ export default function PublishProduct() {
       </main>
       ;
     </div>)
-}
+};

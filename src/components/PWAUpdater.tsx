@@ -5,7 +5,7 @@ interface PWAUpdaterProps {
   autoCheck?: boolean,
   checkInterval?: number,
   showUpdatePrompt?: boolean,
-}
+};
 
 const PWAUpdater: React.FC<PWAUpdaterProps> = ({
   autoCheck = true;
@@ -28,7 +28,6 @@ const [registration, setRegistration] = useState<ServiceWorkerRegistration | nul
           // Check for updates
           if (autoCheck) {
             checkForUpdates(reg)
-}
           
           // Listen for updates
           reg.addEventListener('updatefound', () => {
@@ -91,7 +90,6 @@ const newWorker = reg.installing;
       // Send message to service worker to skip waiting
       if (registration.waiting) {
         registration.waiting.postMessage({ type: 'SKIP_WAITING' })
-}
       
       // Reload the page to apply the update
       setTimeout(() => {
@@ -117,7 +115,6 @@ const newWorker = reg.installing;
   // Don't render anything if no update is available
   if (!updateAvailable && !updating && !updateComplete) {
     return null
-}
 
   return (
     <>
@@ -126,13 +123,13 @@ const newWorker = reg.installing;
         {showPrompt && (
           <motion.div
             initial={{ opacity: 0, y: 100, scale: 0.9 },
-  }
+  };
             animate={{ opacity: 1, y: 0, scale: 1 },
-  }
+  };
             exit={{ opacity: 0, y: 100, scale: 0.9 },
-  }
+  };
             transition={{ type: "spring", damping: 25, stiffness: 300 },
-  }
+  };
             className="fixed bottom-6 left-6 w-96 bg-slate-900/95 backdrop-blur-xl border border-cyan-400/20 rounded-2xl shadow-2xl shadow-cyan-400/10 z-50 overflow-hidden"
           >
             <div className="p-6">
@@ -177,13 +174,13 @@ const newWorker = reg.installing;
         {updating && (
           <motion.div
             initial={{ opacity: 0, y: 100, scale: 0.9 },
-  }
+  };
             animate={{ opacity: 1, y: 0, scale: 1 },
-  }
+  };
             exit={{ opacity: 0, y: 100, scale: 0.9 },
-  }
+  };
             transition={{ type: "spring", damping: 25, stiffness: 300 },
-  }
+  };
             className="fixed bottom-6 left-6 w-96 bg-slate-900/95 backdrop-blur-xl border border-cyan-400/20 rounded-2xl shadow-2xl shadow-cyan-400/10 z-50 overflow-hidden"
           >
             <div className="p-6">
@@ -191,9 +188,9 @@ const newWorker = reg.installing;
                 <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center flex-shrink-0">
                   <motion.div
                     animate={{ rotate: 360 },
-  }
+  };
                     transition={{ duration: 1, repeat: Infinity, ease: "linear" },
-  }
+  };
                   >
                     <RefreshCw className="w-5 h-5 text-white" />
                   </motion.div>
@@ -207,11 +204,11 @@ const newWorker = reg.installing;
                     <motion.div
                       className="h-full bg-gradient-to-r from-cyan-400 to-blue-400 rounded-full"
                       initial={{ width: '0%' },
-  }
+  };
                       animate={{ width: '100%' },
-  }
+  };
                       transition={{ duration: 2, ease: 'easeInOut' },
-  }
+  };
                     />
                   </div>
                 </div>
@@ -226,13 +223,13 @@ const newWorker = reg.installing;
         {updateComplete && (
           <motion.div
             initial={{ opacity: 0, y: 100, scale: 0.9 },
-  }
+  };
             animate={{ opacity: 1, y: 0, scale: 1 },
-  }
+  };
             exit={{ opacity: 0, y: 100, scale: 0.9 },
-  }
+  };
             transition={{ type: "spring", damping: 25, stiffness: 300 },
-  }
+  };
             className="fixed bottom-6 left-6 w-96 bg-slate-900/95 backdrop-blur-xl border border-green-400/20 rounded-2xl shadow-2xl shadow-green-400/10 z-50 overflow-hidden"
           >
             <div className="p-6">
@@ -256,9 +253,9 @@ const newWorker = reg.installing;
   {updateAvailable && !showPrompt && !updating && (
         <motion.div
           initial={{ opacity: 0, scale: 0.8 },
-  }
+  };
           animate={{ opacity: 1, scale: 1 },
-  }
+  };
           className="fixed bottom-6 left-6 w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full shadow-2xl shadow-cyan-500/25 z-40 cursor-pointer hover:shadow-cyan-500/40 transition-all duration-300 hover:scale-110"
           onClick={() => setShowPrompt(true)}
           title="Update available - Click to update"

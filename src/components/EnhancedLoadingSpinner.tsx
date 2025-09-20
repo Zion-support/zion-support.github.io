@@ -7,7 +7,7 @@ interface LoadingSpinnerProps {
   text?: string,
   showProgress?: boolean,
   progress?: number,
-}
+};
 
 const iconVariants = {
   animate: {
@@ -89,11 +89,11 @@ const getBackground = () => {
               animate={{
                 rotate: 360
               },
-  }
+  };
               transition={{
                 duration: 3,repeat: Infinity,ease: "linear"
               },
-  }
+  };
             >
               <div className="absolute top-0 left-1/2 w-2 h-2 bg-cyan-400 rounded-full transform -translate-x-1/2 -translate-y-1/2" />
             </motion.div>
@@ -102,11 +102,11 @@ const getBackground = () => {
               animate={{
                 rotate: -360
               },
-  }
+  };
               transition={{
                 duration: 4,repeat: Infinity,ease: "linear"
               },
-  }
+  };
             >
               <div className="absolute bottom-0 left-1/2 w-2 h-2 bg-blue-400 rounded-full transform -translate-x-1/2 translate-y-1/2" />
             </motion.div>
@@ -117,11 +117,11 @@ const getBackground = () => {
       {/* Loading Text */}
       <motion.div
         initial={{ opacity: 0 },
-  }
+  };
         animate={{ opacity: 1 },
-  }
+  };
         transition={{ delay: 0.5 },
-  }
+  };
         className={`text-center ${textSizes[size],
   } text-gray-600 dark:text-gray-300`}
       >
@@ -132,32 +132,32 @@ const getBackground = () => {
   {showProgress && (
         <motion.div
           initial={{ opacity: 0, width: 0 },
-  }
+  };
           animate={{ opacity: 1, width: '100%' },
-  }
+  };
           transition={{ delay: 0.8, duration: 0.5 },
-  }
+  };
           className="w-full max-w-xs bg-gray-200 rounded-full h-2 overflow-hidden"
         >
           <motion.div
             className="h-full bg-gradient-to-r from-blue-500 to-cyan-500"
             initial={{ width: 0 },
-  }
+  };
             animate={{ width: `${progress}%` },
-  }
+  };
             transition={{ duration: 1, ease: "easeOut" },
-  }
+  };
           />
         </motion.div>
       )},
   {/* Loading Dots */}
       <motion.div
         initial={{ opacity: 0 },
-  }
+  };
         animate={{ opacity: 1 },
-  }
+  };
         transition={{ delay: 1 },
-  }
+  };
         className="flex space-x-1"
       >
         {[0, 1, 2].map((i) => (
@@ -168,17 +168,16 @@ const getBackground = () => {
               scale: [1, 1.2, 1],
               opacity: [0.5, 1, 0.5],
   },
-  }
+  };
             transition={{
               duration: 1.5,repeat: Infinity,delay: i * 0.2
             },
-  }
+  };
           />
         ))}
       </motion.div>
     </div>
   )
-}
 
 // Export as ZionLoadingSpinner for backward compatibility
 export const ZionLoadingSpinner = EnhancedLoadingSpinner;

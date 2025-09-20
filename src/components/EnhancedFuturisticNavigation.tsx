@@ -382,13 +382,13 @@ const navigationItems = [
                       {activeDropdown === item.name && (
                         <motion.div
                           initial={{ opacity: 0, y: 10, scale: 0.95 },
-  }
+  };
                           animate={{ opacity: 1, y: 0, scale: 1 },
-  }
+  };
                           exit={{ opacity: 0, y: 10, scale: 0.95 },
-  }
+  };
                           transition={{ duration: 0.2 },
-  }
+  };
                           className="absolute top-full left-0 mt-2 w-80 bg-zion-slate-dark/95 backdrop-blur-xl border border-zion-cyan/20 rounded-xl shadow-2xl shadow-zion-cyan/20 overflow-hidden"
                         >
                           <div className="p-4">
@@ -488,13 +488,13 @@ const navigationItems = [
           {mobileMenuOpen && (
             <motion.div
               initial={{ opacity: 0, height: 0 },
-  }
+  };
               animate={{ opacity: 1, height: 'auto' },
-  }
+  };
               exit={{ opacity: 0, height: 0 },
-  }
+  };
               transition={{ duration: 0.3 },
-  }
+  };
               className="bg-zion-slate-dark/95 backdrop-blur-xl border-b border-zion-cyan/20 overflow-hidden"
             >
               <div className="max-w-7xl mx-auto px-6 py-6">
@@ -538,13 +538,13 @@ const navigationItems = [
                             {activeDropdown === item.name && (
                               <motion.div
                                 initial={{ opacity: 0, height: 0 },
-  }
+  };
                                 animate={{ opacity: 1, height: 'auto' },
-  }
+  };
                                 exit={{ opacity: 0, height: 0 },
-  }
+  };
                                 transition={{ duration: 0.3 },
-  }
+  };
                                 className="ml-6 mt-2 space-y-1 overflow-hidden"
                               >
                                 {item.dropdown.map((dropdownItem) => (

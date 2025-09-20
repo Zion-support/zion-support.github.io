@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 interface PerformanceMetrics {
   fcp: number,lcp: number,fid: number,cls: number,ttfb: number,fmp: number
-}
+};
 
 const PerformanceOptimizer: React.FC = () => {
   const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null),
@@ -38,7 +38,6 @@ const fmp = fcp + Math.random() * 200;
       measurePerformance()
 } else {
       window.addEventListener('load', measurePerformance)
-}
 
     // Keyboard shortcut to toggle visibility
     const handleKeyPress = (e: KeyboardEvent) => {

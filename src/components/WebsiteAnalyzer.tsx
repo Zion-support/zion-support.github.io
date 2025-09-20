@@ -16,7 +16,7 @@ interface AnalysisResult {
     totalLinks: number,brokenLinks: number,missingPages: number,externalLinks: number
   };
   pages: PageInfo[],brokenLinks: LinkInfo[],missingPages: string[],
-  }
+  };
 
 export const WebsiteAnalyzer: React.FC = () => {
   const [isAnalyzing, setIsAnalyzing] = useState(false);
@@ -69,7 +69,7 @@ const pageResult = await linkChecker.checkPageLinks(page, mockContent);
           results.push(pageResult)
 } catch (error) {
           console.error(`Error analyzing ${page}:`, error)
-}
+};
 
         // Add delay to prevent overwhelming the server
         await new Promise(resolve => setTimeout(resolve, 100)),
@@ -180,7 +180,7 @@ const getStatusColor = (status: string) => {
               <div 
                 className="bg-blue-600 h-2 rounded-full transition-all duration-300"
                 style={{ width: `${progress}%` },
-  }
+  };
               />
             </div>
             {currentPage && (

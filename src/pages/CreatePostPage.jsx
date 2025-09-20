@@ -11,7 +11,7 @@ const initialCategory = searchParams.get("category")
     const const initialValues = {
   = {
         categoryId: initialCategory || "project-help"
-}
+};
     const handleSubmit = async (values) => {
   try {
   // Here we would normally save to the database;
@@ -29,7 +29,7 @@ const tagsArray = values.tags.split(",").map(tag => tag.trim())
   title: "Error",description: "There was a problem creating your post",variant: "destructive"
 })
         },
-  }
+  };
     return (<SEO title="Create New Post | Community Forum | Zion AI Marketplace" description="Create a new discussion post in the Zion AI Marketplace community forum." keywords="community, forum, discussion, create post, new thread"/>
         ;
             <div className="container py-8">
@@ -45,4 +45,3 @@ const tagsArray = values.tags.split(",").map(tag => tag.trim())
         ;
         <PostForm initialValues={initialValues} onSubmit={handleSubmit}/>
       </div>)
-}

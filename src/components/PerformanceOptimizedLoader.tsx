@@ -6,7 +6,7 @@ interface LoaderProps {
   text?: string,
   fullScreen?: boolean,
   showLogo?: boolean,
-}
+};
 export const PerformanceOptimizedLoader = memo<LoaderProps>(({
   size = 'md';
   color = 'primary';
@@ -32,11 +32,11 @@ const showLogo = true, // Add this variable
           className={`absolute top-0 left-0 ${sizeClasses[size],
   } border-4 border-zion-cyan border-t-transparent rounded-full`}
           animate={{ rotate: 360 },
-  }
+  };
           transition={{
             duration: 1,repeat: Infinity,ease: "linear"
           },
-  }
+  };
         />
         {/* Logo text */},
   {showLogo && (
@@ -51,9 +51,9 @@ const showLogo = true, // Add this variable
   } animate-pulse`}
             animate={{ opacity: [0.5, 1, 0.5],
   },
-  }
+  };
             transition={{ duration: 2, repeat: Infinity },
-  }
+  };
           >
             {text}
           </motion.div>
@@ -80,21 +80,20 @@ export function SkeletonLoader({
         <motion.div
           key={index}
           initial={{ opacity: 0 },
-  }
+  };
           animate={{ opacity: 1 },
-  }
+  };
           transition={{ delay: index * 0.1 },
-  }
+  };
           className={`${height} bg-zion-blue-light/20 rounded-lg animate-pulse`}
           style={{
             width: `${Math.random() * 40 + 60}%`
           },
-  }
+  };
         />
       ))}
     </div>
   )
-}
 // Card skeleton loader
 export function CardSkeleton({ className = "" }: { className?: string }) {
   return (
@@ -116,7 +115,6 @@ export function CardSkeleton({ className = "" }: { className?: string }) {
       </div>
     </div>
   )
-}
 // Grid skeleton loader
 export function GridSkeleton({
   columns = 3,
@@ -134,7 +132,6 @@ export function GridSkeleton({
       ))}
     </div>
   )
-}
 // Page skeleton loader
 export function PageSkeleton({ className = "" }: { className?: string }) {
   return (
@@ -153,4 +150,3 @@ export function PageSkeleton({ className = "" }: { className?: string }) {
       </div>
     </div>
   )
-}

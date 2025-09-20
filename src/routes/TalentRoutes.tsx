@@ -8,4 +8,4 @@ export default function TalentRoutes() {
       <Route path="list" element={<TalentsPage />} />
     </>
   )
-}
+};

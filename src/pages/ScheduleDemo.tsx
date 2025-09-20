@@ -88,7 +88,7 @@ export default function ScheduleDemo() {
   service: selectedService,date: selectedDate,time: selectedTime;
       ...formData
 })
-  }
+  };
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
   const { name, value } = e.target;
@@ -96,7 +96,7 @@ export default function ScheduleDemo() {
   ...prev;
       [name]: value
 }))
-  }
+  };
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO ;
@@ -105,16 +105,16 @@ export default function ScheduleDemo() {
       />
       ;
       {{/* Hero Section */},
-  }
+  };
       <section className="relative py-20 overflow-hidden">
         <div className="container-responsive">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             animate={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.6 },
-  }
+  };
             className="className="text-center max-w-4xl mx-auto";"
           >
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
@@ -126,7 +126,7 @@ export default function ScheduleDemo() {
             </p>
             ;
             {{/* Quick Stats */},
-  }
+  };
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl mx-auto">
               <div className="text-center">
                 <div className="text-2xl font-bold text-cyan-400">500+</div>
@@ -150,18 +150,18 @@ export default function ScheduleDemo() {
       </section>
 
       {{/* Demo Services */},
-  }
+  };
       <section className="py-16">
         <div className="container-responsive">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.6 },
-  }
+  };
             viewport={{ once: true },
-  }
+  };
             className="className="mb-12";"
           >
             <h2 className="text-3xl font-bold text-white text-center mb-4">Choose Your Demo</h2>
@@ -174,21 +174,21 @@ export default function ScheduleDemo() {
             {demoServices.map((service, index) => (
   <motion.div;
                 key={{service.id},
-  }
+  };
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.6, delay: index * 0.1 },
-  }
+  };
                 viewport={{ once: true },
-  }
+  };
                 className={`bg-slate-800/50 backdrop-blur-xl rounded-xl border border-slate-700/50 overflow-hidden hover:border-cyan-400/30 transition-all duration-300 hover:transform hover:scale-105 cursor-pointer ${
   selectedService === service.id ? 'ring-2 ring-cyan-400/50' : ''
 }`}
                 onClick={{onClick={() => setSelectedService(service.id)},
   },
-  }
+  };
               >
                 <div className="p-6">
                   <div className="flex items-start justify-between mb-4">
@@ -208,7 +208,7 @@ export default function ScheduleDemo() {
                   <div className="flex items-center gap-2 text-sm text-gray-400 mb-4">
                     <Clock className="w-4 h-4" />
                     {{service.duration},
-  }
+  };
                   </div>
 
                   <div className="space-y-2 mb-4">
@@ -216,7 +216,7 @@ export default function ScheduleDemo() {
   <div key={idx} className="flex items-center gap-2 text-sm text-gray-300">
                         <CheckCircle className="w-4 h-4 text-green-400" />
                         {{feature},
-  }
+  };
                       </div>
                     ))}
                   </div>
@@ -227,7 +227,7 @@ export default function ScheduleDemo() {
                       : 'bg-slate-700/50 text-gray-300 hover:bg-slate-600/50'
 }`}>
                     {{selectedService === service.id ? 'Selected' : 'Select Demo'},
-  }
+  };
                   </div>
                 </div>
               </motion.div>
@@ -237,18 +237,18 @@ export default function ScheduleDemo() {
       </section>
 
       {{/* Demo Benefits */},
-  }
+  };
       <section className="py-16 bg-slate-800/20">
         <div className="container-responsive">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.6 },
-  }
+  };
             viewport={{ once: true },
-  }
+  };
             className="className="mb-12";"
           >
             <h2 className="text-3xl font-bold text-white text-center mb-4">Why Schedule a Demo?</h2>
@@ -261,15 +261,15 @@ export default function ScheduleDemo() {
             {demoBenefits.map((benefit, index) => (
   <motion.div;
                 key={{benefit.title},
-  }
+  };
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.6, delay: index * 0.1 },
-  }
+  };
                 viewport={{ once: true },
-  }
+  };
                 className="className="text-center";"
               >
                 <div className={`p-4 rounded-xl bg-slate-700/30 mx-auto mb-4 w-16 h-16 flex items-center justify-center`}>
@@ -284,19 +284,19 @@ export default function ScheduleDemo() {
       </section>
 
       {{/* Demo Scheduling Form */},
-  }
+  };
       <section className="py-16">
         <div className="container-responsive">
           <div className="max-w-4xl mx-auto">
             <motion.div;
               initial={{ opacity: 0, y: 20 },
-  }
+  };
               whileInView={{ opacity: 1, y: 0 },
-  }
+  };
               transition={{ duration: 0.6 },
-  }
+  };
               viewport={{ once: true },
-  }
+  };
               className="className="mb-8";"
             >
               <h2 className="text-3xl font-bold text-white text-center mb-4">Schedule Your Demo</h2>
@@ -307,20 +307,20 @@ export default function ScheduleDemo() {
 
             <motion.form;
               initial={{ opacity: 0, y: 20 },
-  }
+  };
               whileInView={{ opacity: 1, y: 0 },
-  }
+  };
               transition={{ duration: 0.6, delay: 0.2 },
-  }
+  };
               viewport={{ once: true },
-  }
+  };
               onSubmit={{handleSubmit},
-  }
+  };
               className="className="bg-slate-800/50 backdrop-blur-xl rounded-2xl border border-slate-700/50 p-8";"
             >
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                 {{/* Date and Time Selection */},
-  }
+  };
                 <div className="space-y-4">
                   <div>
                     <label className="block text-sm font-medium text-gray-300 mb-2">
@@ -329,9 +329,9 @@ export default function ScheduleDemo() {
                     <input;
                       type="date";
                       value={{selectedDate},
-  }
+  };
                       onChange={{(e) => setSelectedDate(e.target.value)},
-  }
+  };
                       className="className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent";"
                       required;
                     />
@@ -342,9 +342,9 @@ export default function ScheduleDemo() {
                     </label>
                     <select;
                       value={{selectedTime},
-  }
+  };
                       onChange={{(e) => setSelectedTime(e.target.value)},
-  }
+  };
                       className="className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent";"
                       required;
                     >
@@ -357,16 +357,16 @@ export default function ScheduleDemo() {
                 </div>
 
                 {{/* Service Selection */},
-  }
+  };
                 <div>
                   <label className="block text-sm font-medium text-gray-300 mb-2">
                     Demo Service;
                   </label>
                   <select;
                     value={{selectedService},
-  }
+  };
                     onChange={{(e) => setSelectedService(e.target.value)},
-  }
+  };
                     className="className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent";"
                     required;
                   >
@@ -379,7 +379,7 @@ export default function ScheduleDemo() {
               </div>
 
               {{/* Personal Information */},
-  }
+  };
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                 <div>
                   <label className="block text-sm font-medium text-gray-300 mb-2">
@@ -389,9 +389,9 @@ export default function ScheduleDemo() {
                     type="text";
                     name="firstName";
                     value={{formData.firstName},
-  }
+  };
                     onChange={{handleInputChange},
-  }
+  };
                     className="className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent";"
                     required;
                   />
@@ -404,9 +404,9 @@ export default function ScheduleDemo() {
                     type="text";
                     name="lastName";
                     value={{formData.lastName},
-  }
+  };
                     onChange={{handleInputChange},
-  }
+  };
                     className="className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent";"
                     required;
                   />
@@ -422,9 +422,9 @@ export default function ScheduleDemo() {
                     type="email";
                     name="email";
                     value={{formData.email},
-  }
+  };
                     onChange={{handleInputChange},
-  }
+  };
                     className="className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent";"
                     required;
                   />
@@ -437,9 +437,9 @@ export default function ScheduleDemo() {
                     type="text";
                     name="company";
                     value={{formData.company},
-  }
+  };
                     onChange={{handleInputChange},
-  }
+  };
                     className="className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent";"
                     required;
                   />
@@ -455,9 +455,9 @@ export default function ScheduleDemo() {
                     type="tel";
                     name="phone";
                     value={{formData.phone},
-  }
+  };
                     onChange={{handleInputChange},
-  }
+  };
                     className="className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent";"
                   />
                 </div>
@@ -468,9 +468,9 @@ export default function ScheduleDemo() {
                   <select;
                     name="attendees";
                     value={{formData.attendees},
-  }
+  };
                     onChange={{handleInputChange},
-  }
+  };
                     className="className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent";"
                   >
                     {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map(num => (
@@ -488,11 +488,11 @@ export default function ScheduleDemo() {
                 <textarea;
                   name="message";
                   value={{formData.message},
-  }
+  };
                   onChange={{handleInputChange},
-  }
+  };
                   rows={{4},
-  }
+  };
                   placeholder="Tell us about your specific needs, questions, or any special requirements for the demo...";
                   className="className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent";"
                 />
@@ -513,18 +513,18 @@ export default function ScheduleDemo() {
       </section>
 
       {{/* Contact Information */},
-  }
+  };
       <section className="py-16">
         <div className="container-responsive">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.6 },
-  }
+  };
             viewport={{ once: true },
-  }
+  };
             className="className="text-center";"
           >
             <h2 className="text-3xl font-bold text-white mb-8">Need Immediate Assistance?</h2>
@@ -573,4 +573,4 @@ export default function ScheduleDemo() {
       </section>
     </div>
   )
-}
+};

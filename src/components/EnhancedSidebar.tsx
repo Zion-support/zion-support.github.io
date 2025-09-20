@@ -53,7 +53,7 @@ const toggleSection = (section: string) => {
       newExpanded.delete(section)
     } else {
       newExpanded.add(section)
-}
+};
     setExpandedSections(newExpanded)
 },
 
@@ -112,11 +112,11 @@ const quickActions = [
         <motion.div
           className="mb-8"
           initial={{ opacity: 0, y: -20 },
-  }
+  };
           animate={{ opacity: 1, y: 0 },
-  }
+  };
           transition={{ duration: 0.5 },
-  }
+  };
         >
           <Link to="/" className="flex items-center space-x-3 group">
             <div className="relative">
@@ -138,11 +138,11 @@ const quickActions = [
         <motion.div
           className="mb-8"
           initial={{ opacity: 0, y: -20 },
-  }
+  };
           animate={{ opacity: 1, y: 0 },
-  }
+  };
           transition={{ duration: 0.5, delay: 0.1 },
-  }
+  };
         >
           <h3 className="text-sm font-semibold text-zion-slate-light mb-3 uppercase tracking-wide">Quick Actions</h3>
           <div className="space-y-2">
@@ -150,11 +150,11 @@ const quickActions = [
               <motion.div
                 key={action.name}
                 initial={{ opacity: 0, x: -20 },
-  }
+  };
                 animate={{ opacity: 1, x: 0 },
-  }
+  };
                 transition={{ duration: 0.3, delay: index * 0.1 },
-  }
+  };
               >
                 <Link
                   to={action.href}
@@ -178,11 +178,11 @@ const quickActions = [
             <motion.div
               key={section.title}
               initial={{ opacity: 0, y: -20 },
-  }
+  };
               animate={{ opacity: 1, y: 0 },
-  }
+  };
               transition={{ duration: 0.5, delay: sectionIndex * 0.1 },
-  }
+  };
             >
               <button
                 onClick={() => toggleSection(section.title)}
@@ -203,24 +203,24 @@ const quickActions = [
                 {expandedSections.has(section.title) && (
                   <motion.div
                     initial={{ opacity: 0, height: 0 },
-  }
+  };
                     animate={{ opacity: 1, height: 'auto' },
-  }
+  };
                     exit={{ opacity: 0, height: 0 },
-  }
+  };
                     transition={{ duration: 0.3 },
-  }
+  };
                     className="ml-7 mt-2 space-y-1"
                   >
                     {section.items.map((item, itemIndex) => (
                       <motion.div
                         key={item.name}
                         initial={{ opacity: 0, x: -20 },
-  }
+  };
                         animate={{ opacity: 1, x: 0 },
-  }
+  };
                         transition={{ duration: 0.2, delay: itemIndex * 0.05 },
-  }
+  };
                       >
                         <Link
                           to={item.href}
@@ -246,11 +246,11 @@ const quickActions = [
         <motion.div
           className="mt-8 p-4 bg-zion-slate-dark/50 border border-zion-cyan/20 rounded-lg"
           initial={{ opacity: 0, y: 20 },
-  }
+  };
           animate={{ opacity: 1, y: 0 },
-  }
+  };
           transition={{ duration: 0.5, delay: 0.5 },
-  }
+  };
         >
           <h3 className="text-sm font-semibold text-zion-cyan mb-3">Need Help?</h3>
           <div className="space-y-2 text-xs text-zion-slate-light">
@@ -271,4 +271,3 @@ const quickActions = [
       </div>
     </aside>
   ),
-};

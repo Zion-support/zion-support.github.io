@@ -6,7 +6,7 @@ interface SkeletonProps {
   height?: string | number,
   variant?: 'text' | 'circular' | 'rectangular' | 'rounded',
   animation?: 'pulse' | 'wave' | 'none',
-}
+};
 
 export function Skeleton({ 
   className,
@@ -37,7 +37,6 @@ const style = {
       style={style}
     />
   ),
-}
 
 // Predefined skeleton components for common use cases
 export function SkeletonText({ lines = 3, className }: { lines?: number, className?: string }) {
@@ -53,7 +52,6 @@ export function SkeletonText({ lines = 3, className }: { lines?: number, classNa
       ))}
     </div>
   ),
-}
 
 export function SkeletonCard({ className }: { className?: string }) {
   return (
@@ -72,7 +70,6 @@ export function SkeletonCard({ className }: { className?: string }) {
       </div>
     </div>
   ),
-}
 
 export function SkeletonTable({ rows = 5, columns = 4, className }: { 
   rows?: number, 
@@ -103,7 +100,6 @@ export function SkeletonTable({ rows = 5, columns = 4, className }: {
       ))}
     </div>
   ),
-}
 
 export function SkeletonGrid({ 
   items = 6, 
@@ -128,7 +124,6 @@ export function SkeletonGrid({
       ))}
     </div>
   ),
-}
 
 export function SkeletonHero({ className }: { className?: string }) {
   return (
@@ -149,4 +144,3 @@ export function SkeletonHero({ className }: { className?: string }) {
       </div>
     </div>
   )
-}

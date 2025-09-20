@@ -43,12 +43,11 @@ const { jobId } = useParams()
             toast.error("Please log in to apply for this job")
             navigate('/login?redirect=' + encodeURIComponent(`/jobs/${jobId}`))
             return
-}
+};
         if (if (user?.userType !== "jobSeeker" && user?.userType !== "talent") {
   ) {
             toast.error("Only job seekers can apply for jobs")
             return
-}
         setIsApplyModalOpen(true)
     }
     const handleApplySuccess = async (appliedJobId) => {
@@ -59,7 +58,6 @@ const { jobId } = useParams()
   if (!budget)
             return "Not specified";
         return `$${budget.min} - $${budget.max}`
-}
     const isOwnJob = user?.id === job.client_id;
     return (<>
       <SEO title={`${job.title} - ${isWhitelabel ? brandName : 'Zion AI Marketplace'}`} description={job.description.substring(0, 160)}/>
@@ -91,7 +89,7 @@ const { jobId } = useParams()
                   <h3 className="font-semibold text-lg mb-3">Job Description</h3>
                   <div className="whitespace-pre-wrap">
                     {{job.description},
-  }
+  };
                   </div>
                 </div>
                 ;
@@ -100,7 +98,7 @@ const { jobId } = useParams()
                   <div className="flex flex-wrap gap-2">
                     {job.skills?.map((skill, i) => (<Badge key={i} variant="secondary">
                         {{skill},
-  }
+  };
                       </Badge>))}
                   </div>
                 </div>
@@ -125,7 +123,7 @@ const { jobId } = useParams()
                     <p className="text-sm text-muted-foreground">Deadline</p>
                     <p className="font-medium">
                       {{job.deadline ? new Date(job.deadline).toLocaleDateString() : "Flexible"},
-  }
+  };
                     </p>
                   </div>
                 </div>
@@ -159,4 +157,3 @@ const { jobId } = useParams()
 },
   } isOpen={isApplyModalOpen} onClose={() => setIsApplyModalOpen(false)}/>)}
     </>)
-}

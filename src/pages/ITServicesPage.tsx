@@ -46,5 +46,5 @@ const ITServicesPage = () () => {
       </div>
     </>
   )
-}
+};
 export default ITServicesPage

@@ -59,7 +59,7 @@ const CloudDevOps = () => {
       />
 
       {{/* Hero Section */},
-  }
+  };
       <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <div className="mb-8">
@@ -79,7 +79,7 @@ const CloudDevOps = () => {
       </section>
 
       {{/* Services Overview */},
-  }
+  };
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold text-white text-center mb-12">Our Cloud & DevOps Services</h2>
@@ -96,7 +96,7 @@ const CloudDevOps = () => {
   <li key={idx} className="text-gray-400 text-sm flex items-center">
                       <span className="w-2 h-2 bg-blue-400 rounded-full mr-2"></span>
                       {{feature},
-  }
+  };
                     </li>
                   ))}
                 </ul>
@@ -107,7 +107,7 @@ const CloudDevOps = () => {
       </section>
 
       {{/* Cloud Platforms */},
-  }
+  };
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold text-white text-center mb-12">Cloud Platforms We Support</h2>
@@ -124,7 +124,7 @@ const CloudDevOps = () => {
       </section>
 
       {{/* DevOps Tools */},
-  }
+  };
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold text-white text-center mb-12">DevOps Tools & Technologies</h2>
@@ -137,7 +137,7 @@ const CloudDevOps = () => {
   <div key={idx} className="text-gray-300 text-sm flex items-center">
                       <span className="w-2 h-2 bg-green-400 rounded-full mr-2"></span>
                       {{tool},
-  }
+  };
                     </div>
                   ))}
                 </div>
@@ -148,7 +148,7 @@ const CloudDevOps = () => {
       </section>
 
       {{/* CTA Section */},
-  }
+  };
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl font-bold text-white mb-6">Ready to Transform Your Infrastructure?</h2>
@@ -173,5 +173,5 @@ const CloudDevOps = () => {
       </section>
     </div>
   )
-}
+};
 export default CloudDevOps;

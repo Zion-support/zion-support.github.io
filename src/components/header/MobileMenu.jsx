@@ -28,7 +28,7 @@ const navigationItems = [
     navigationItems.push({ 
       href: '/dashboard',label: 'Dashboard',icon: Settings,matches: (path) => path.startsWith('/dashboard') 
     })
-}
+};
   
   return (
     <div className={cn("md:hidden", className)}>
@@ -134,4 +134,3 @@ const isActive = item.matches(location.pathname);
       )}
     </div>
   )
-}

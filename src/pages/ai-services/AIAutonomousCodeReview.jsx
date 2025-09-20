@@ -56,7 +56,7 @@ export default function AIAutonomousCodeReview() {
       <SEO title="AI Autonomous Code Review - Zion Tech Group" description="Revolutionize your code review process with AI-powered analysis. Automated security scanning, performance optimization, and quality assurance." keywords="AI code review, automated code review, code security, code quality, AI development tools, code analysis" canonical="https://ziontechgroup.com/ai-services/ai-autonomous-code-review/"/>
 
       {{/* Hero Section */},
-  }
+  };
       <section className="relative pt-32 pb-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-blue-900/50 via-purple-900/50 to-cyan-900/50"></div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -97,7 +97,7 @@ export default function AIAutonomousCodeReview() {
       </section>
 
       {{/* Features Section */},
-  }
+  };
       <section className="py-20 bg-gray-900/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div initial={{ opacity: 0, y: 20 },
@@ -131,7 +131,7 @@ export default function AIAutonomousCodeReview() {
       </section>
 
       {{/* Benefits Section */},
-  }
+  };
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div initial={{ opacity: 0, y: 20 },
@@ -159,7 +159,7 @@ export default function AIAutonomousCodeReview() {
       </section>
 
       {{/* Use Cases Section */},
-  }
+  };
       <section className="py-20 bg-gray-900/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div initial={{ opacity: 0, y: 20 },
@@ -193,7 +193,7 @@ export default function AIAutonomousCodeReview() {
       </section>
 
       {{/* Testimonials Section */},
-  }
+  };
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div initial={{ opacity: 0, y: 20 },
@@ -229,7 +229,7 @@ export default function AIAutonomousCodeReview() {
       </section>
 
       {{/* CTA Section */},
-  }
+  };
       <section className="py-20 bg-gradient-to-r from-cyan-500/20 via-purple-500/20 to-cyan-500/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div initial={{ opacity: 0, y: 20 },
@@ -256,4 +256,4 @@ export default function AIAutonomousCodeReview() {
         </div>
       </section>
     </div>)
-}
+};

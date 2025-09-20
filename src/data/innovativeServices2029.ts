@@ -1,11 +1,11 @@
 export interface Service {
   id: string,name: string,category: 'ai' | 'it' | 'micro-saas' | 'cybersecurity' | 'cloud' | 'data' | 'automation' | 'compliance' | 'analytics' | 'integration',subcategory: string,description: string,features: string[],benefits: string[],pricing: {
   monthly: string,yearly: string,enterprise: string,setup: string
-}
+};
   targetMarket: string,useCases: string[],technologies: string[],integration: string[],support: string[],compliance: string[],marketPosition: string,competitiveAdvantage: string,roi: string,implementationTime: string,contactInfo: {
   phone: string,email: string,website: string
 },
-  }
+  };
 
 export const innovativeServices2029: Service[] = [
   // AI-Powered Micro SAAS Services;
@@ -25,7 +25,6 @@ export const innovativeServices2029: Service[] = [
     pricing: {
   monthly: '$299/month',yearly: '$2,999/year (17% savings)';
       enterprise: 'Custom pricing',setup: '$500 one-time setup'
-}
     targetMarket: 'Software development teams, DevOps teams, Engineering managers';
     useCases: [
   'Continuous integration pipelinesPull request automation';
@@ -57,7 +56,6 @@ export const innovativeServices2029: Service[] = [
     pricing: {
   monthly: '$199/month',yearly: '$1,999/year (17% savings)';
       enterprise: 'Custom pricing',setup: '$300 one-time setup'
-}
     targetMarket: 'Digital marketers, SEO agencies, Content creators, E-commerce businesses';
     useCases: [
   'Content marketing optimizationE-commerce SEO';
@@ -88,7 +86,6 @@ export const innovativeServices2029: Service[] = [
     pricing: {
   monthly: '$399/month',yearly: '$3,999/year (17% savings)';
       enterprise: 'Custom pricing',setup: '$600 one-time setup'
-}
     targetMarket: 'HR professionals, Recruiters, Hiring managers, Talent acquisition teams';
     useCases: [
   'Technical skill assessmentBehavioral interview automation';
@@ -102,7 +99,7 @@ export const innovativeServices2029: Service[] = [
     marketPosition: 'Leading AI interview platform with 90% accuracy in candidate assessment',competitiveAdvantage: 'Advanced AI algorithms that provide deeper insights into candidate potential and cultural fit',roi: '250% ROI through improved hiring quality and reduced time-to-hire',implementationTime: '2-3 weeks',contactInfo: {
   phone: '+1 302 464 0950',email: 'kleber@ziontechgroup.com',website: 'https://ziontechgroup.com/services/interview-assessment-ai'
 },
-  }
+  };
   // IT Infrastructure & Security Services;
   {
   id: 'zero-trust-network-access',name: 'Zero Trust Network Access Platform',category: 'cybersecurity',subcategory: 'Network Security',description: 'Advanced zero-trust security platform that provides secure access to applications and resources without traditional VPN infrastructure.',features: [
@@ -119,7 +116,6 @@ export const innovativeServices2029: Service[] = [
     pricing: {
   monthly: '$599/month',yearly: '$5,999/year (17% savings)';
       enterprise: 'Custom pricing',setup: '$1,000 one-time setup'
-}
     targetMarket: 'Enterprise IT teams, Security professionals, Compliance officers, Remote work organizations';
     useCases: [
   'Remote workforce securityThird-party vendor access';
@@ -150,7 +146,6 @@ export const innovativeServices2029: Service[] = [
     pricing: {
   monthly: '$799/month',yearly: '$7,999/year (17% savings)';
       enterprise: 'Custom pricing',setup: '$1,500 one-time setup'
-}
     targetMarket: 'Security operations teams, CISO, IT security managers, Managed security providers';
     useCases: [
   'Security operations center (SOC)Incident response automation';
@@ -164,7 +159,7 @@ export const innovativeServices2029: Service[] = [
     marketPosition: 'Leading AI-powered threat intelligence platform with 99.9% detection accuracy',competitiveAdvantage: 'Advanced ML algorithms trained on global threat data with real-time learning capabilities',roi: '350% ROI through improved threat detection and reduced incident response costs',implementationTime: '6-8 weeks',contactInfo: {
   phone: '+1 302 464 0950',email: 'kleber@ziontechgroup.com',website: 'https://ziontechgroup.com/services/ai-cybersecurity-threat-intelligence'
 },
-  }
+  };
   // Cloud & DevOps Services;
   {
   id: 'cloud-finops-optimizer',name: 'Cloud FinOps Optimizer',category: 'cloud',subcategory: 'Cost Optimization',description: 'Intelligent cloud cost optimization platform that uses AI to analyze spending patterns and automatically optimize cloud resources.',features: [
@@ -181,7 +176,6 @@ export const innovativeServices2029: Service[] = [
     pricing: {
   monthly: '$299/month',yearly: '$2,999/year (17% savings)';
       enterprise: 'Custom pricing',setup: '$500 one-time setup'
-}
     targetMarket: 'Cloud architects, DevOps engineers, Finance teams, IT managers';
     useCases: [
   'AWS cost optimizationAzure cost management';
@@ -195,7 +189,7 @@ export const innovativeServices2029: Service[] = [
     marketPosition: 'Leading FinOps platform with proven cost savings across major cloud providers',competitiveAdvantage: 'AI algorithms that learn from your specific usage patterns for optimal cost optimization',roi: '500% ROI through direct cost savings and improved resource utilization',implementationTime: '2-4 weeks',contactInfo: {
   phone: '+1 302 464 0950',email: 'kleber@ziontechgroup.com',website: 'https://ziontechgroup.com/services/cloud-finops-optimizer'
 },
-  }
+  };
   // Data & Analytics Services;
   {
   id: 'ai-business-intelligence-platform',name: 'AI Business Intelligence Platform',category: 'data',subcategory: 'Business Intelligence',description: 'Advanced BI platform that uses AI to transform raw data into actionable insights, predictive analytics, and automated reporting.';
@@ -213,7 +207,6 @@ export const innovativeServices2029: Service[] = [
     pricing: {
   monthly: '$499/month',yearly: '$4,999/year (17% savings)';
       enterprise: 'Custom pricing',setup: '$800 one-time setup'
-}
     targetMarket: 'Data analysts, Business intelligence teams, Executives, Operations managers';
     useCases: [
   'Sales performance analyticsCustomer behavior analysis';
@@ -227,7 +220,7 @@ export const innovativeServices2029: Service[] = [
     marketPosition: 'Next-generation BI platform with AI-powered insights and predictive capabilities',competitiveAdvantage: 'Advanced AI algorithms that provide business context and actionable recommendations',roi: '400% ROI through improved decision making and operational efficiency',implementationTime: '4-6 weeks',contactInfo: {
   phone: '+1 302 464 0950',email: 'kleber@ziontechgroup.com',website: 'https://ziontechgroup.com/services/ai-business-intelligence'
 },
-  }
+  };
   // Automation & Integration Services;
   {
   id: 'ai-workflow-orchestrator',name: 'AI Workflow Orchestrator',category: 'automation',subcategory: 'Process Automation',description: 'Intelligent workflow automation platform that uses AI to design, optimize, and execute complex business processes automatically.';
@@ -245,7 +238,6 @@ export const innovativeServices2029: Service[] = [
     pricing: {
   monthly: '$399/month',yearly: '$3,999/year (17% savings)';
       enterprise: 'Custom pricing',setup: '$600 one-time setup'
-}
     targetMarket: 'Operations managers, Process improvement teams, Business analysts, IT automation teams';
     useCases: [
   'Customer onboardingInvoice processing';
@@ -283,13 +275,11 @@ export const const pricingTiers = {
   starter: {
   name: 'Starter',price: '$199/month',features: ['Basic featuresEmail support', 'Standard integrationsUp to 5 users']
     bestFor: 'Small teams and startups'
-}
   professional: {
   name: 'Professional',price: '$399/month',features: ['Advanced featuresPriority support', 'Custom integrationsUp to 25 users', 'Advanced analytics']
     bestFor: 'Growing businesses'
-}
   enterprise: {
   name: 'Enterprise',price: 'Custom pricing',features: ['Full feature setDedicated support', 'Custom developmentUnlimited users', 'White-label options']
     bestFor: 'Large organizations'
 },
-  }
+  };

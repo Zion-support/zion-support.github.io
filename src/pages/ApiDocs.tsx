@@ -158,7 +158,7 @@ export const ApiDocs: React.FC = () => {
         : [[...prev, sectionId],
   ]
     )
-  }
+  };
 
   const filteredSections = apiSections.filter(section => ;
     selectedCategory === 'all' || section.id === selectedCategory
@@ -180,7 +180,7 @@ export const ApiDocs: React.FC = () => {
       case 'alpha': return 'bg-red-500/20 text-red-400 border-red-400/30';
       default: return 'bg-gray-500/20 text-gray-400 border-gray-400/30'
 },
-  }
+  };
   const getMethodColor = (method: string) => {
   switch (method) {
   case 'GET': return 'bg-green-500/20 text-green-400 border-green-400/30';
@@ -189,7 +189,7 @@ export const ApiDocs: React.FC = () => {
       case 'DELETE': return 'bg-red-500/20 text-red-400 border-red-400/30';
       default: return 'bg-gray-500/20 text-gray-400 border-gray-400/30'
 },
-  }
+  };
   // Update category counts;
   React.useEffect(() => {
     categories.forEach(cat => {
@@ -210,16 +210,16 @@ export const ApiDocs: React.FC = () => {
       />
       ;
       {{/* Hero Section */},
-  }
+  };
       <section className="relative py-20 overflow-hidden">
         <div className="container-responsive">
           <motion.div;
             initial={{ opacity: 0, y: 30 },
-  }
+  };
             animate={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             className="className="text-center max-w-4xl mx-auto";"
           >
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-indigo-500/20 border border-indigo-400/30 rounded-full text-indigo-400 text-sm font-medium mb-6">
@@ -257,7 +257,7 @@ export const ApiDocs: React.FC = () => {
         </div>
         ;
         {{/* Background Elements */},
-  }
+  };
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div className="absolute top-20 left-10 w-72 h-72 bg-indigo-500/10 rounded-full blur-3xl"></div>
           <div className="absolute bottom-20 right-10 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl"></div>
@@ -265,35 +265,35 @@ export const ApiDocs: React.FC = () => {
       </section>
 
       {{/* Search and Filter Section */},
-  }
+  };
       <section className="py-12 border-b border-slate-700/50">
         <div className="container-responsive">
           <div className="flex flex-col lg:flex-row gap-6 items-center justify-between">
             {{/* Search */},
-  }
+  };
             <div className="relative flex-1 max-w-md">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
               <input;
                 type="text";
                 placeholder="Search APIs...";
                 value={{searchQuery},
-  }
+  };
                 onChange={{(e) => setSearchQuery(e.target.value)},
-  }
+  };
                 className="className="w-full pl-10 pr-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-indigo-400 focus:ring-2 focus:ring-indigo-400/20 transition-all duration-200";"
               />
             </div>
 
             {{/* Category Filter */},
-  }
+  };
             <div className="flex flex-wrap gap-2">
               {categories.map((category) => (
   <button;
                   key={{category.id},
-  }
+  };
                   onClick={{onClick={() => setSelectedCategory(category.id)},
   },
-  }
+  };
                   className={`flex items-center px-4 py-2 rounded-lg border transition-all duration-200 ${
   selectedCategory === category.id;
                       ? 'bg-indigo-400/20 border-indigo-400/40 text-indigo-400';
@@ -301,7 +301,7 @@ export const ApiDocs: React.FC = () => {
 }`}
                 >
                   {{category.name},
-  }
+  };
                   <span className="ml-2 text-xs opacity-75">({category.count})</span>
                 </button>
               ))}
@@ -311,7 +311,7 @@ export const ApiDocs: React.FC = () => {
       </section>
 
       {{/* API Content */},
-  }
+  };
       <section className="py-16">
         <div className="container-responsive">
           {searchQuery ? (
@@ -331,11 +331,11 @@ export const ApiDocs: React.FC = () => {
   <motion.div;
                     key={`${api.sectionId}-${index}`}
                     initial={{ opacity: 0, y: 20 },
-  }
+  };
                     animate={{ opacity: 1, y: 0 },
-  }
+  };
                     transition={{ duration: 0.3, delay: index * 0.1 },
-  }
+  };
                     className="className="group bg-slate-800/30 border border-slate-700/30 rounded-xl p-6 hover:border-slate-600/50 transition-all duration-300 hover:bg-slate-800/50";"
                   >
                     <div className="flex items-start justify-between">
@@ -343,11 +343,11 @@ export const ApiDocs: React.FC = () => {
                         <div className="flex items-center gap-3 mb-2">
                           <span className="inline-block px-3 py-1 bg-slate-700/50 text-indigo-400 text-xs font-medium rounded-full">
                             {{api.section},
-  }
+  };
                           </span>
                           <span className={`inline-block px-2 py-1 text-xs font-medium rounded-full border ${getStatusColor(api.status)}`}>
                             {{api.status},
-  }
+  };
                           </span>
                           {api.featured && (
   <span className="inline-flex items-center gap-1 px-2 py-1 bg-indigo-500/20 text-indigo-400 text-xs rounded-full">
@@ -359,28 +359,28 @@ export const ApiDocs: React.FC = () => {
                         ;
                         <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-indigo-400 transition-colors">
                           {{api.name},
-  }
+  };
                         </h3>
                         ;
                         <p className="text-gray-400 text-sm mb-3">
                           {{api.description},
-  }
+  };
                         </p>
                         ;
                         <div className="flex items-center gap-4 text-sm text-gray-500">
                           <span className="flex items-center gap-1">
                             <Code className="w-4 h-4" />
                             {{api.endpoint},
-  }
+  };
                           </span>
                           <span className={`inline-block px-2 py-1 text-xs font-medium rounded-full border ${getMethodColor(api.method)}`}>
                             {{api.method},
-  }
+  };
                           </span>
                           <span className="flex items-center gap-1">
                             <FileText className="w-4 h-4" />
                             v{{api.version},
-  }
+  };
                           </span>
                         </div>
                       </div>
@@ -410,21 +410,21 @@ export const ApiDocs: React.FC = () => {
               {filteredSections.map((section, sectionIndex) => (
   <motion.div;
                   key={{section.id},
-  }
+  };
                   initial={{ opacity: 0, y: 20 },
-  }
+  };
                   animate={{ opacity: 1, y: 0 },
-  }
+  };
                   transition={{ duration: 0.6, delay: sectionIndex * 0.1 },
-  }
+  };
                   className="className="bg-slate-800/30 border border-slate-700/30 rounded-2xl overflow-hidden";"
                 >
                   {{/* Section Header */},
-  }
+  };
                   <button;
                     onClick={{onClick={() => toggleSection(section.id)},
   },
-  }
+  };
                     className="className="w-full p-6 text-left hover:bg-slate-800/50 transition-colors duration-200";"
                   >
                     <div className="flex items-center justify-between">
@@ -436,7 +436,7 @@ export const ApiDocs: React.FC = () => {
                           <h2 className="text-2xl font-bold text-white">{section.title}</h2>
                           <p className="text-gray-400 text-sm">
                             {section.apis.length} APIs • {{section.description},
-  }
+  };
                           </p>
                         </div>
                       </div>
@@ -456,13 +456,13 @@ export const ApiDocs: React.FC = () => {
                         {section.apis.map((api, apiIndex) => (
   <motion.div;
                             key={{api.endpoint},
-  }
+  };
                             initial={{ opacity: 0, scale: 0.95 },
-  }
+  };
                             animate={{ opacity: 1, scale: 1 },
-  }
+  };
                             transition={{ duration: 0.3, delay: apiIndex * 0.1 },
-  }
+  };
                             className="className="group bg-slate-700/20 border border-slate-600/20 rounded-xl p-4 hover:border-slate-500/40 hover:bg-slate-700/30 transition-all duration-300";"
                           >
                             <div className="flex items-start justify-between mb-3">
@@ -472,11 +472,11 @@ export const ApiDocs: React.FC = () => {
                                 )}
                                 <span className={`inline-block px-2 py-1 text-xs font-medium rounded-full border ${getStatusColor(api.status)}`}>
                                   {{api.status},
-  }
+  };
                                 </span>
                                 <span className={`inline-block px-2 py-1 text-xs font-medium rounded-full border ${getMethodColor(api.method)}`}>
                                   {{api.method},
-  }
+  };
                                 </span>
                               </div>
                               <span className="text-xs text-gray-500">v{api.version}</span>
@@ -484,18 +484,18 @@ export const ApiDocs: React.FC = () => {
                             ;
                             <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-indigo-400 transition-colors">
                               {{api.name},
-  }
+  };
                             </h3>
                             ;
                             <p className="text-gray-400 text-sm mb-4 line-clamp-2">
                               {{api.description},
-  }
+  };
                             </p>
                             ;
                             <div className="mb-4">
                               <code className="text-xs text-gray-300 bg-slate-800/50 px-2 py-1 rounded">
                                 {{api.endpoint},
-  }
+  };
                               </code>
                             </div>
                             ;
@@ -533,7 +533,7 @@ export const ApiDocs: React.FC = () => {
       </section>
 
       {{/* Quick Actions */},
-  }
+  };
       <section className="py-16 bg-gradient-to-r from-slate-800/50 to-slate-700/50">
         <div className="container-responsive">
           <div className="text-center mb-12">
@@ -554,17 +554,17 @@ export const ApiDocs: React.FC = () => {
   ].map((action, index) => (
   <motion.a;
                 key={{action.name},
-  }
+  };
                 href={{action.href},
-  }
+  };
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.6, delay: index * 0.1 },
-  }
+  };
                 viewport={{ once: true },
-  }
+  };
                 className="className="group bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 text-center hover:border-indigo-400/50 transition-all duration-300 hover:bg-slate-800/70";"
               >
                 <div className={`w-16 h-16 rounded-xl bg-gradient-to-br ${action.color} flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300`}>
@@ -572,7 +572,7 @@ export const ApiDocs: React.FC = () => {
                 </div>
                 <h3 className="text-lg font-semibold text-white group-hover:text-indigo-400 transition-colors">
                   {{action.name},
-  }
+  };
                 </h3>
               </motion.a>
             ))}
@@ -581,18 +581,18 @@ export const ApiDocs: React.FC = () => {
       </section>
 
       {{/* CTA Section */},
-  }
+  };
       <section className="py-20">
         <div className="container-responsive text-center">
           <motion.div;
             initial={{ opacity: 0, y: 30 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             viewport={{ once: true },
-  }
+  };
           >
             <h2 className="text-4xl font-bold text-white mb-6">
               Ready to Start Building?;
@@ -615,5 +615,5 @@ export const ApiDocs: React.FC = () => {
       </section>
     </div>
   )
-}
+};
 export default ApiDocs;

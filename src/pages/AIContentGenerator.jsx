@@ -104,7 +104,7 @@ export default function AIContentGenerator() {
             />
             ;
             {{/* Hero Section */},
-  }
+  };
             <section className="relative pt-32 pb-20 px-4 sm: px-6 lg:px-8 overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-purple-500/10"></div>
                 <div className="relative max-w-7xl mx-auto text-center">
@@ -133,7 +133,7 @@ export default function AIContentGenerator() {
             </section>
 
             {{/* Features Section */},
-  }
+  };
             <section className="py-20 px-4 sm:px-6 lg:px-8">
                 <div className="max-w-7xl mx-auto">
                     <div className="text-center mb-16">
@@ -152,7 +152,7 @@ export default function AIContentGenerator() {
                                 <CardContent className="p-6 text-center">
                                     <div className="flex justify-center mb-4">
                                         {{feature.icon},
-  }
+  };
                                     </div>
                                     <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
                                     <p className="text-gray-400">{feature.description}</p>
@@ -164,7 +164,7 @@ export default function AIContentGenerator() {
             </section>
 
             {{/* Content Types Section */},
-  }
+  };
             <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
                 <div className="max-w-7xl mx-auto">
                     <div className="text-center mb-16">
@@ -182,7 +182,7 @@ export default function AIContentGenerator() {
                                 <CardContent className="p-6 text-center">
                                     <div className="flex justify-center mb-4">
                                         {{type.icon},
-  }
+  };
                                     </div>
                                     <h3 className="text-xl font-semibold text-white mb-2">{type.title}</h3>
                                     <p className="text-gray-400">{type.description}</p>
@@ -194,7 +194,7 @@ export default function AIContentGenerator() {
             </section>
 
             {{/* Pricing Section */},
-  }
+  };
             <section className="py-20 px-4 sm:px-6 lg:px-8">
                 <div className="max-w-7xl mx-auto">
                     <div className="text-center mb-16">
@@ -232,7 +232,7 @@ export default function AIContentGenerator() {
   <li key={featureIndex} className="flex items-center text-gray-300">
                                                 <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />
                                                 {{feature},
-  }
+  };
                                             </li>
                                         ))}
                                     </ul>
@@ -247,7 +247,7 @@ export default function AIContentGenerator() {
             </section>
 
             {{/* Benefits Section */},
-  }
+  };
             <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
                 <div className="max-w-7xl mx-auto">
                     <div className="text-center mb-16">
@@ -271,7 +271,7 @@ export default function AIContentGenerator() {
             </section>
 
             {{/* CTA Section */},
-  }
+  };
             <section className="py-20 px-4 sm: px-6 lg:px-8">
                 <div className="max-w-4xl mx-auto text-center">
                     <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -294,4 +294,4 @@ export default function AIContentGenerator() {
             </section>
         </div>
     )
-}
+};

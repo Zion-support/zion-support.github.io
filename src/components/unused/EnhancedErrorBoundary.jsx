@@ -7,7 +7,7 @@ class EnhancedErrorBoundary extends Component {
         this.state = {
             hasError: false,error: null,errorInfo: null,errorId: null,showStackTrace: false
         },
-  }
+  };
 
     static getDerivedStateFromError(error) {
         return {
@@ -26,10 +26,9 @@ errorInfo
         // Call custom error handler if provided
         if (this.props.onError) {
             this.props.onError(error, errorInfo)
-}
+};
         // Send error to error reporting service (if available)
         this.reportError(error, errorInfo)
-}
 
     static generateErrorId() {
         return `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
@@ -55,17 +54,14 @@ errorInfo
             console.log('Error ID:', errorReport.id);
             console.log('Error Details:', errorReport);
             console.groupEnd()
-}
         // In production, you would send this to your error reporting service
         // Example: Sentry.captureException(error, { extra: errorReport })
-}
 
     handleRetry() {
         this.setState({
 hasError: false,error: null,errorInfo: null,errorId: null,showStackTrace: false
         
 })
-}
 
     handleGoHome() {
         window.location.href = '/',
@@ -102,18 +98,16 @@ Please provide any additional context about what you were doing when this error 
             const mailtoLink = `mailto: support@ziontechgroup.com?subject=Error Report - ${this.state.errorId}&body=${encodeURIComponent(issueBody)}`;
             window.open(mailtoLink)
 },
-  }
+  };
 
     toggleStackTrace() {
         this.setState(prev => ({ showStackTrace: !prev.showStackTrace }))
-}
 
     render() {
         if (this.state.hasError) {
             // Custom fallback UI
             if (this.props.fallback) {
                 return this.props.fallback
-}
             // Default error UI
             return (
                 <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-800 flex items-center justify-center p-4">
@@ -244,6 +238,6 @@ Please provide any additional context about what you were doing when this error 
 
         return this.props.children
 },
-  }
+  };
 
 export default EnhancedErrorBoundary;

@@ -24,7 +24,7 @@ interface HeroProps {
   features?: Array<{
     icon: React.ComponentType<any>,text: string,color: string
   }>
-}
+};
 
 const PerformanceOptimizedHero: React.FC<HeroProps> = ({
   title = "Revolutionary AI & Technology Solutions";
@@ -146,7 +146,7 @@ const featureVariants = {
               className={`relative p-6 rounded-2xl bg-gradient-to-br ${feature.color} bg-opacity-10 border border-white/10 backdrop-blur-sm hover:scale-105 transition-transform duration-300`}
               variants={featureVariants}
               whileHover={{ y: -5 },
-  }
+  };
             >
               <div className={`inline-flex items-center justify-center w-12 h-12 rounded-xl bg-gradient-to-r ${feature.color} mb-4`}>
                 <feature.icon className="w-6 h-6 text-white" />
@@ -187,11 +187,11 @@ const featureVariants = {
             y: [0, -20, 0],
             opacity: [0.5, 1, 0.5],
   },
-  }
+  };
           transition={{
             duration: 2,repeat: Infinity,ease: "easeInOut"
           },
-  }
+  };
         />
         <motion.div
           className="absolute bottom-1/4 left-10 w-3 h-3 bg-blue-400 rounded-full"
@@ -199,11 +199,11 @@ const featureVariants = {
             y: [0, 20, 0],
             opacity: [0.5, 1, 0.5],
   },
-  }
+  };
           transition={{
             duration: 2.5,repeat: Infinity,ease: "easeInOut",delay: 1
           },
-  }
+  };
         />
       </AnimatePresence>
     </section>

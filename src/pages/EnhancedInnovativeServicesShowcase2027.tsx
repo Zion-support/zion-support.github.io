@@ -86,7 +86,7 @@ const matchesInnovation = selectedInnovationLevel === 'all' || service.innovatio
         return a.price - b.price;
       case 'innovation':;
 const innovationOrder = {{ 'Breakthrough': 3, 'Cutting-edge': 2, 'Advanced': 1, 'Innovative': 0 },
-  }
+  };
         return (innovationOrder[b.innovationLevel as keyof typeof innovationOrder] || 0) -;
                (innovationOrder[a.innovationLevel as keyof typeof innovationOrder] || 0)
       case 'roi':;
@@ -108,7 +108,7 @@ const innovationOrder = {{ 'Breakthrough': 3, 'Cutting-edge': 2, 'Advanced': 1, 
       case 'Quantum & Biology': return <Stethoscope className="w-5 h-5" />;
       default: return <Zap className="w-5 h-5" />
     },
-  }
+  };
   const getInnovationLevelColor = (level: string) => {
   switch (level) {
   case 'Breakthrough': return 'bg-gradient-to-r from-purple-600 to-pink-600';
@@ -116,40 +116,40 @@ const innovationOrder = {{ 'Breakthrough': 3, 'Cutting-edge': 2, 'Advanced': 1, 
       case 'Innovative': return 'bg-gradient-to-r from-green-600 to-emerald-600';
       default: return 'bg-gray-600'
 },
-  }
+  };
   const handleServiceClick = (service: EnhancedInnovativeService2027) => {
   setSelectedService(service)
     setCurrentSlide(0)
-  }
+  };
 
   const nextSlide = () => {
     if (if (selectedService) {
   ) {
       setCurrentSlide((prev) => (prev + 1) % 4)
     },
-  }
+  };
 
   const prevSlide = () => {
     if (if (selectedService) {
   ) {
       setCurrentSlide((prev) => (prev - 1 + 4) % 4)
     },
-  }
+  };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       {{/* Header Section */},
-  }
+  };
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-zion-cyan/20 to-zion-purple/20"></div>
         <div className="relative z-10 container mx-auto px-4 py-16">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             animate={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             className="className="text-center";"
           >
             <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent mb-6">
@@ -162,9 +162,9 @@ const innovationOrder = {{ 'Breakthrough': 3, 'Cutting-edge': 2, 'Advanced': 1, 
             <div className="flex justify-center space-x-4">
               <motion.button;
                 whileHover={{ scale: 1.05 },
-  }
+  };
                 whileTap={{ scale: 0.95 },
-  }
+  };
                 className="className="bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-8 py-3 rounded-lg font-semibold flex items-center space-x-2";"
                 onClick={() => document.getElementById('services-grid')?.scrollIntoView({ behavior: 'smooth' })}
               >
@@ -173,9 +173,9 @@ const innovationOrder = {{ 'Breakthrough': 3, 'Cutting-edge': 2, 'Advanced': 1, 
               </motion.button>
               <motion.button;
                 whileHover={{ scale: 1.05 },
-  }
+  };
                 whileTap={{ scale: 0.95 },
-  }
+  };
                 className="className="border border-zion-cyan text-zion-cyan px-8 py-3 rounded-lg font-semibold flex items-center space-x-2";"
                 onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
               >
@@ -188,66 +188,66 @@ const innovationOrder = {{ 'Breakthrough': 3, 'Cutting-edge': 2, 'Advanced': 1, 
       </div>
 
       {{/* Search and Filter Section */},
-  }
+  };
       <div className="container mx-auto px-4 py-8">
         <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 mb-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
             {{/* Search */},
-  }
+  };
             <div className="relative">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-gray-light w-5 h-5" />
               <input;
                 type="text";
                 placeholder="Search services...";
                 value={{searchTerm},
-  }
+  };
                 onChange={{(e) => setSearchTerm(e.target.value)},
-  }
+  };
                 className="className="w-full pl-10 pr-4 py-3 bg-zion-slate-dark border border-zion-gray-dark rounded-lg text-white placeholder-zion-gray-light focus:outline-none focus:border-zion-cyan";"
               />
             </div>
 
             {{/* Category Filter */},
-  }
+  };
             <select;
               value={{selectedCategory},
-  }
+  };
               onChange={{(e) => setSelectedCategory(e.target.value)},
-  }
+  };
               className="className="px-4 py-3 bg-zion-slate-dark border border-zion-gray-dark rounded-lg text-white focus:outline-none focus:border-zion-cyan";"
             >
               {categories.map(category => (
   <option key={category} value={category}>
                   {{category === 'all' ? 'All Categories' : category},
-  }
+  };
                 </option>
               ))}
             </select>
 
             {{/* Innovation Level Filter */},
-  }
+  };
             <select;
               value={{selectedInnovationLevel},
-  }
+  };
               onChange={{(e) => setSelectedInnovationLevel(e.target.value)},
-  }
+  };
               className="className="px-4 py-3 bg-zion-slate-dark border border-zion-gray-dark rounded-lg text-white focus:outline-none focus:border-zion-cyan";"
             >
               {innovationLevels.map(level => (
   <option key={level} value={level}>
                   {{level === 'all' ? 'All Innovation Levels' : level},
-  }
+  };
                 </option>
               ))}
             </select>
 
             {{/* Sort By */},
-  }
+  };
             <select;
               value={{sortBy},
-  }
+  };
               onChange={{(e) => setSortBy(e.target.value)},
-  }
+  };
               className="className="px-4 py-3 bg-zion-slate-dark border border-zion-gray-dark rounded-lg text-white focus:outline-none focus:border-zion-cyan";"
             >
               <option value="title">Sort by Title</option>
@@ -260,44 +260,44 @@ const innovationOrder = {{ 'Breakthrough': 3, 'Cutting-edge': 2, 'Advanced': 1, 
       </div>
 
       {{/* Services Grid */},
-  }
+  };
       <div id="services-grid" className="container mx-auto px-4 py-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {sortedServices.map((service, index) => (
   <motion.div;
               key={{service.id},
-  }
+  };
               initial={{ opacity: 0, y: 20 },
-  }
+  };
               animate={{ opacity: 1, y: 0 },
-  }
+  };
               transition={{ duration: 0.5, delay: index * 0.1 },
-  }
+  };
               className="className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 hover:bg-white/15 transition-all duration-300 cursor-pointer group";"
               onClick={{onClick={() => handleServiceClick(service)},
   },
-  }
+  };
             >
               <div className="flex items-center justify-between mb-4">
                 <div className="flex items-center space-x-2">
                   {{getCategoryIcon(service.category)},
-  }
+  };
                   <span className="text-zion-gray-light text-sm">{service.category}</span>
                 </div>
                 <span className={`px-3 py-1 rounded-full text-xs font-semibold text-white ${getInnovationLevelColor(service.innovationLevel)}`}>
                   {{service.innovationLevel},
-  }
+  };
                 </span>
               </div>
 
               <h3 className="text-xl font-bold text-white mb-3 group-hover:text-zion-cyan transition-colors">
                 {{service.title},
-  }
+  };
               </h3>
 
               <p className="text-zion-gray-light mb-4 leading-relaxed">
                 {{service.description},
-  }
+  };
               </p>
 
               <div className="flex items-center justify-between mb-4">
@@ -314,17 +314,17 @@ const innovationOrder = {{ 'Breakthrough': 3, 'Cutting-edge': 2, 'Advanced': 1, 
                 {service.tags.slice(0, 3).map((tag, tagIndex) => (
   <span;
                     key={{tagIndex},
-  }
+  };
                     className="className="px-2 py-1 bg-zion-slate-dark text-zion-gray-light text-xs rounded-full";"
                   >
                     {{tag},
-  }
+  };
                   </span>
                 ))},
   {service.tags.length > 3 && (
   <span className="px-2 py-1 bg-zion-slate-dark text-zion-gray-light text-xs rounded-full">
                     +{{service.tags.length - 3},
-  }
+  };
                   </span>
                 )}
               </div>
@@ -347,20 +347,20 @@ const innovationOrder = {{ 'Breakthrough': 3, 'Cutting-edge': 2, 'Advanced': 1, 
   <div className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4">
           <motion.div;
             initial={{ opacity: 0, scale: 0.9 },
-  }
+  };
             animate={{ opacity: 1, scale: 1 },
-  }
+  };
             exit={{ opacity: 0, scale: 0.9 },
-  }
+  };
             className="className="bg-zion-slate-dark rounded-2xl max-w-6xl w-full max-h-[90vh] overflow-y-auto";"
           >
             <div className="p-8">
               {{/* Header */},
-  }
+  };
               <div className="flex items-center justify-between mb-6">
                 <div className="flex items-center space-x-4">
                   {{getCategoryIcon(selectedService.category)},
-  }
+  };
                   <div>
                     <h2 className="text-3xl font-bold text-white">{selectedService.title}</h2>
                     <p className="text-zion-gray-light">{selectedService.category}</p>
@@ -369,7 +369,7 @@ const innovationOrder = {{ 'Breakthrough': 3, 'Cutting-edge': 2, 'Advanced': 1, 
                 <button;
                   onClick={{onClick={() => setSelectedService(null)},
   },
-  }
+  };
                   className="className="text-zion-gray-light hover:text-white transition-colors";"
                 >
                   <X className="w-6 h-6" />
@@ -377,15 +377,15 @@ const innovationOrder = {{ 'Breakthrough': 3, 'Cutting-edge': 2, 'Advanced': 1, 
               </div>
 
               {{/* Navigation Tabs */},
-  }
+  };
               <div className="flex space-x-4 mb-6 border-b border-zion-gray-dark">
                 {['OverviewFeatures', 'Technical SpecsContact'].map((tab, index) => (
   <button;
                     key={{tab},
-  }
+  };
                     onClick={{onClick={() => setCurrentSlide(index)},
   },
-  }
+  };
                     className={`pb-2 px-4 transition-colors ${
   currentSlide === index;
                         ? 'text-zion-cyan border-b-2 border-zion-cyan';
@@ -393,22 +393,22 @@ const innovationOrder = {{ 'Breakthrough': 3, 'Cutting-edge': 2, 'Advanced': 1, 
 }`}
                   >
                     {{tab},
-  }
+  };
                   </button>
                 ))}
               </div>
 
               {{/* Content Slides */},
-  }
+  };
               <div className="relative">
                 {{/* Overview Slide */},
   },
   {currentSlide === 0 && (
   <motion.div;
                     initial={{ opacity: 0, x: 20 },
-  }
+  };
                     animate={{ opacity: 1, x: 0 },
-  }
+  };
                     className="className="space-y-6";"
                   >
                     <div className="bg-white/5 rounded-xl p-6">
@@ -441,11 +441,11 @@ const innovationOrder = {{ 'Breakthrough': 3, 'Cutting-edge': 2, 'Advanced': 1, 
                           {selectedService.targetAudience.map((audience, index) => (
   <span;
                               key={{index},
-  }
+  };
                               className="className="px-3 py-1 bg-zion-slate-light text-zion-gray-light text-sm rounded-full";"
                             >
                               {{audience},
-  }
+  };
                             </span>
                           ))}
                         </div>
@@ -458,9 +458,9 @@ const innovationOrder = {{ 'Breakthrough': 3, 'Cutting-edge': 2, 'Advanced': 1, 
   {currentSlide === 1 && (
   <motion.div;
                     initial={{ opacity: 0, x: 20 },
-  }
+  };
                     animate={{ opacity: 1, x: 0 },
-  }
+  };
                     className="className="space-y-6";"
                   >
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -501,9 +501,9 @@ const innovationOrder = {{ 'Breakthrough': 3, 'Cutting-edge': 2, 'Advanced': 1, 
   {currentSlide === 2 && selectedService.technicalSpecs && (
   <motion.div;
                     initial={{ opacity: 0, x: 20 },
-  }
+  };
                     animate={{ opacity: 1, x: 0 },
-  }
+  };
                     className="className="space-y-6";"
                   >
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -516,11 +516,11 @@ const innovationOrder = {{ 'Breakthrough': 3, 'Cutting-edge': 2, 'Advanced': 1, 
                           {selectedService.technicalSpecs.technology.map((tech, index) => (
   <span;
                               key={{index},
-  }
+  };
                               className="className="px-3 py-1 bg-blue-400/20 text-blue-300 text-sm rounded-full";"
                             >
                               {{tech},
-  }
+  };
                             </span>
                           ))}
                         </div>
@@ -535,11 +535,11 @@ const innovationOrder = {{ 'Breakthrough': 3, 'Cutting-edge': 2, 'Advanced': 1, 
                           {selectedService.technicalSpecs.integrations.map((integration, index) => (
   <span;
                               key={{index},
-  }
+  };
                               className="className="px-3 py-1 bg-green-400/20 text-green-300 text-sm rounded-full";"
                             >
                               {{integration},
-  }
+  };
                             </span>
                           ))}
                         </div>
@@ -567,11 +567,11 @@ const innovationOrder = {{ 'Breakthrough': 3, 'Cutting-edge': 2, 'Advanced': 1, 
                           {selectedService.technicalSpecs.security.map((security, index) => (
   <span;
                               key={{index},
-  }
+  };
                               className="className="px-2 py-1 bg-red-400/20 text-red-300 text-xs rounded-full";"
                             >
                               {{security},
-  }
+  };
                             </span>
                           ))}
                         </div>
@@ -583,11 +583,11 @@ const innovationOrder = {{ 'Breakthrough': 3, 'Cutting-edge': 2, 'Advanced': 1, 
                           {selectedService.technicalSpecs.compliance.map((compliance, index) => (
   <span;
                               key={{index},
-  }
+  };
                               className="className="px-2 py-1 bg-purple-400/20 text-purple-300 text-xs rounded-full";"
                             >
                               {{compliance},
-  }
+  };
                             </span>
                           ))}
                         </div>
@@ -600,9 +600,9 @@ const innovationOrder = {{ 'Breakthrough': 3, 'Cutting-edge': 2, 'Advanced': 1, 
   {currentSlide === 3 && (
   <motion.div;
                     initial={{ opacity: 0, x: 20 },
-  }
+  };
                     animate={{ opacity: 1, x: 0 },
-  }
+  };
                     className="className="space-y-6";"
                   >
                     <div className="bg-gradient-to-r from-zion-cyan/20 to-zion-purple/20 rounded-xl p-8 text-center">
@@ -653,7 +653,7 @@ const innovationOrder = {{ 'Breakthrough': 3, 'Cutting-edge': 2, 'Advanced': 1, 
                               <ExternalLink className="w-5 h-5 text-zion-cyan" />
                               <a;
                                 href={{selectedService.contactInfo.website},
-  }
+  };
                                 target="_blank";
                                 rel="noopener noreferrer";
                                 className="className="text-zion-cyan hover:text-white transition-colors";"
@@ -668,9 +668,9 @@ const innovationOrder = {{ 'Breakthrough': 3, 'Cutting-edge': 2, 'Advanced': 1, 
                       <div className="flex justify-center space-x-4">
                         <motion.button;
                           whileHover={{ scale: 1.05 },
-  }
+  };
                           whileTap={{ scale: 0.95 },
-  }
+  };
                           className="className="bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-8 py-3 rounded-lg font-semibold flex items-center space-x-2";"
                           onClick={() => window.open(`tel:${selectedService.contactInfo.phone}`)}
                         >
@@ -679,9 +679,9 @@ const innovationOrder = {{ 'Breakthrough': 3, 'Cutting-edge': 2, 'Advanced': 1, 
                         </motion.button>
                         <motion.button;
                           whileHover={{ scale: 1.05 },
-  }
+  };
                           whileTap={{ scale: 0.95 },
-  }
+  };
                           className="className="border border-zion-cyan text-zion-cyan px-8 py-3 rounded-lg font-semibold flex items-center space-x-2";"
                           onClick={() => window.open(`mailto:${selectedService.contactInfo.email}`)}
                         >
@@ -695,12 +695,12 @@ const innovationOrder = {{ 'Breakthrough': 3, 'Cutting-edge': 2, 'Advanced': 1, 
               </div>
 
               {{/* Navigation Arrows */},
-  }
+  };
               <div className="flex items-center justify-between mt-8">
                 <button;
                   onClick={{onClick={prevSlide},
   },
-  }
+  };
                   className="className="flex items-center space-x-2 text-zion-gray-light hover:text-white transition-colors";"
                 >
                   <ChevronLeft className="w-5 h-5" />
@@ -711,10 +711,10 @@ const innovationOrder = {{ 'Breakthrough': 3, 'Cutting-edge': 2, 'Advanced': 1, 
                   {[0, 1, 2, 3].map((index) => (
   <button;
                       key={{index},
-  }
+  };
                       onClick={{onClick={() => setCurrentSlide(index)},
   },
-  }
+  };
                       className={`w-2 h-2 rounded-full transition-colors ${
   currentSlide === index ? 'bg-zion-cyan' : 'bg-zion-gray-dark'
 }`}
@@ -725,7 +725,7 @@ const innovationOrder = {{ 'Breakthrough': 3, 'Cutting-edge': 2, 'Advanced': 1, 
                 <button;
                   onClick={{onClick={nextSlide},
   },
-  }
+  };
                   className="className="flex items-center space-x-2 text-zion-gray-light hover: text-white transition-colors";"
                 >
                   <span>Next</span>
@@ -737,7 +737,7 @@ const innovationOrder = {{ 'Breakthrough': 3, 'Cutting-edge': 2, 'Advanced': 1, 
         </div>
       )},
   {{/* Contact Section */},
-  }
+  };
       <div id="contact" className="container mx-auto px-4 py-16">
         <div className="bg-gradient-to-r from-zion-cyan/20 to-zion-purple/20 rounded-2xl p-8 text-center">
           <h2 className="text-3xl font-bold text-white mb-4">Ready to Get Started?</h2>
@@ -767,13 +767,13 @@ const innovationOrder = {{ 'Breakthrough': 3, 'Cutting-edge': 2, 'Advanced': 1, 
 
           <motion.button;
             whileHover={{ scale: 1.05 },
-  }
+  };
             whileTap={{ scale: 0.95 },
-  }
+  };
             className="className="bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-8 py-4 rounded-lg font-semibold text-lg flex items-center space-x-2 mx-auto";"
             onClick={{onClick={() => window.open('https://ziontechgroup.com_blank')},
   },
-  }
+  };
           >
             <ExternalLink className="w-5 h-5" />
             <span>Visit Zion Tech Group</span>
@@ -782,6 +782,6 @@ const innovationOrder = {{ 'Breakthrough': 3, 'Cutting-edge': 2, 'Advanced': 1, 
       </div>
     </div>
   )
-}
+};
 
 export default EnhancedInnovativeServicesShowcase2027;

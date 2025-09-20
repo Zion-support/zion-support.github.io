@@ -76,7 +76,7 @@ const Consulting = () => {
   return (
     <div className="min-h-screen bg-slate-900 text-white">
       {{/* Hero Section */},
-  }
+  };
       <section className="relative pt-24 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <div className="mb-8">
@@ -105,7 +105,7 @@ const Consulting = () => {
       </section>
 
       {{/* Consulting Services */},
-  }
+  };
       <section id="services" className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -131,7 +131,7 @@ const Consulting = () => {
   <li key={idx} className="text-sm text-gray-400 flex items-start">
                       <div className="w-1.5 h-1.5 bg-orange-400 rounded-full mr-2 mt-2 flex-shrink-0"></div>
                       {{feature},
-  }
+  };
                     </li>
                   ))}
                 </ul>
@@ -142,7 +142,7 @@ const Consulting = () => {
       </section>
 
       {{/* Industries */},
-  }
+  };
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -170,7 +170,7 @@ const Consulting = () => {
       </section>
 
       {{/* Benefits Section */},
-  }
+  };
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -187,7 +187,7 @@ const Consulting = () => {
   <li key={index} className="flex items-center text-gray-300">
                     <div className="w-2 h-2 bg-orange-400 rounded-full mr-3"></div>
                     {{benefit},
-  }
+  };
                   </li>
                 ))}
               </ul>
@@ -212,7 +212,7 @@ const Consulting = () => {
       </section>
 
       {{/* Consulting Process */},
-  }
+  };
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -228,7 +228,7 @@ const Consulting = () => {
   <div key={index} className="text-center">
                 <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-red-500 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold text-white">
                   {{index + 1},
-  }
+  };
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-2">{phase.phase}</h3>
                 <p className="text-gray-300 mb-2">{phase.description}</p>
@@ -240,7 +240,7 @@ const Consulting = () => {
       </section>
 
       {{/* CTA Section */},
-  }
+  };
       <section className="py-16 px-4 sm: px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -262,5 +262,5 @@ const Consulting = () => {
       </section>
     </div>
   )
-}
+};
 export default Consulting;

@@ -65,7 +65,6 @@ const benefits = [
   ];
 const contactInfo = {
   mobile: '+1 302 464 0950',email: 'kleber@ziontechgroup.com',address: '364 E Main St STE 1008 Middletown DE 19709',website: 'https://ziontechgroup.com'
-};
 export function ComprehensiveServicesShowcase2027() {
   const [selectedCategory, setSelectedCategory] = useState<string>('all'),
   const [searchQuery, setSearchQuery] = useState<string>(''),
@@ -357,6 +356,5 @@ const featuredServices = allServices.filter(service => service.popular).slice(0,
       </div>
     </div>
   )
-}
 
 export default ComprehensiveServicesShowcase2027;

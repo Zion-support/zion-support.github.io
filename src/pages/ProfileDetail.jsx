@@ -24,7 +24,7 @@ const { profileId } = useParams()
   ) {
                     setError("Profile ID is missing.")
                     return
-}
+};
                 const { data, error } = await supabase;
                     .from("talent_profiles")
                     .select("*")
@@ -38,7 +38,6 @@ const { profileId } = useParams()
   ) {
                     setError("Profile not found.")
                     return
-}
                 setProfileData(data)
             }
             catch (err) {
@@ -50,7 +49,7 @@ const { profileId } = useParams()
             finally {
   setIsLoading(false)
             },
-  }
+  };
         fetchProfile()
     }, [profileId])
     if (if (isLoading) {
@@ -77,10 +76,10 @@ const { profileId } = useParams()
       <div className="container mx-auto px-4 py-8">
         <div className="grid grid-cols-12 gap-6">
           {{/* Main Content */},
-  }
+  };
           <div className="col-span-12 lg:col-span-8">
             {{/* Profile Header */},
-  }
+  };
             <Card className="mb-6 bg-zion-blue border-zion-blue-light">
               <CardHeader>
                 <div className="flex items-center space-x-4">
@@ -92,7 +91,7 @@ const { profileId } = useParams()
                       {{profileData.full_name},
   },
   {{profileData.is_verified && (<CheckCircle2 className="w-5 h-5 text-zion-cyan"/>)},
-  }
+  };
                     </CardTitle>
                     <CardDescription className="text-zion-cyan">{profileData.professional_title}</CardDescription>
                   </div>
@@ -110,7 +109,7 @@ const { profileId } = useParams()
                     </div>)},
   {profileData.hourly_rate && (<div className="text-white font-bold">
                       ${{profileData.hourly_rate},
-  }
+  };
                       <span className="text-zion-slate-light font-normal">/hr</span>
                     </div>)}
                 </div>
@@ -118,7 +117,7 @@ const { profileId } = useParams()
             </Card>
 
             {{/* About Section */},
-  }
+  };
             <Card className="mb-6 bg-zion-blue border-zion-blue-light">
               <CardHeader>
                 <CardTitle className="text-xl font-bold text-white">About Me</CardTitle>
@@ -129,7 +128,7 @@ const { profileId } = useParams()
             </Card>
 
             {{/* Skills Section */},
-  }
+  };
             <Card className="mb-6 bg-zion-blue border-zion-blue-light">
               <CardHeader>
                 <CardTitle className="text-xl font-bold text-white">Skills</CardTitle>
@@ -142,7 +141,7 @@ const { profileId } = useParams()
             </Card>
 
             {{/* Experience Section */},
-  }
+  };
             <Card className="mb-6 bg-zion-blue border-zion-blue-light">
               <CardHeader>
                 <CardTitle className="text-xl font-bold text-white">Experience</CardTitle>
@@ -158,7 +157,7 @@ const { profileId } = useParams()
             </Card>
 
             {{/* Portfolio Section */},
-  }
+  };
             <Card className="mb-6 bg-zion-blue border-zion-blue-light">
               <CardHeader>
                 <CardTitle className="text-xl font-bold text-white">Portfolio</CardTitle>
@@ -168,7 +167,7 @@ const { profileId } = useParams()
                     {profileData.portfolio_links.map((link, index) => (<a key={index} href={link.url} target="_blank" rel="noopener noreferrer" className="text-zion-cyan hover: text-white flex items-center gap-2">
                         <LinkIcon className="h-4 w-4"/>
                         {{link.title || link.url},
-  }
+  };
                       </a>))}
                   </div>) : (<p className="text-zion-slate-light">No portfolio links provided.</p>)}
               </CardContent>
@@ -176,14 +175,14 @@ const { profileId } = useParams()
           </div>
 
           {{/* Sidebar with HireNowCTA */},
-  }
+  };
           <div className="col-span-4 lg:col-span-1">
             <HireNowCTA talentProfile={{
   id: profileData?.id || '',full_name: profileData?.full_name || '',professional_title: profileData?.professional_title || '',hourly_rate: profileData?.hourly_rate || 0
 },
   }/>
             {{/* Contact Information */},
-  }
+  };
             <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mt-6">
               <h3 className="text-xl font-bold mb-4">Contact</h3>
               <div className="flex flex-col space-y-3">
@@ -205,7 +204,7 @@ const { profileId } = useParams()
             </div>
 
             {{/* Social Links */},
-  }
+  };
             <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mt-6">
               <h3 className="text-xl font-bold mb-4">Social</h3>
               <div className="flex flex-col space-y-3">
@@ -228,4 +227,3 @@ const { profileId } = useParams()
       </div>
       ;
     </>)
-}

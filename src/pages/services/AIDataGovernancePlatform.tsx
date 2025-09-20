@@ -83,7 +83,7 @@ const AIDataGovernancePlatform: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
       {{/* Animated Background */},
-  }
+  };
       <div className="fixed inset-0 -z-10">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.1),transparent_50%)]" />
         <div className="absolute top-0 left-0 w-full h-full bg-[linear-gradient(45deg,transparent_25%,rgba(59,130,246,0.1)_25%,rgba(59,130,246,0.1)_50%,transparent_50%,transparent_75%,rgba(59,130,246,0.1)_75%)] bg-[length:20px_20px] animate-pulse" />
@@ -91,25 +91,25 @@ const AIDataGovernancePlatform: React.FC = () => {
 
       <div className="relative z-10">
         {{/* Header Section */},
-  }
+  };
         <motion.header ;
           className="className="pt-20 pb-16 text-center";"
           initial={{ opacity: 0, y: -50 },
-  }
+  };
           animate={{ opacity: 1, y: 0 },
-  }
+  };
           transition={{ duration: 0.8 },
-  }
+  };
         >
           <div className="max-w-4xl mx-auto px-6">
             <motion.div ;
               className="className="inline-flex items-center gap-2 rounded-full border border-blue-500/20 bg-blue-500/10 px-4 py-2 text-sm text-blue-300 mb-6";"
               initial={{ scale: 0.8, opacity: 0 },
-  }
+  };
               animate={{ scale: 1, opacity: 1 },
-  }
+  };
               transition={{ delay: 0.2, duration: 0.5 },
-  }
+  };
             >
               <Database className="w-4 h-4" />
               AI-Powered Data Governance;
@@ -127,9 +127,9 @@ const AIDataGovernancePlatform: React.FC = () => {
               <motion.button ;
                 className="className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-xl hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 shadow-lg hover:shadow-blue-500/25 flex items-center gap-2";"
                 whileHover={{ scale: 1.05 },
-  }
+  };
                 whileTap={{ scale: 0.95 },
-  }
+  };
               >
                 <Play className="w-5 h-5" />
                 Start Free Trial;
@@ -137,9 +137,9 @@ const AIDataGovernancePlatform: React.FC = () => {
               <motion.button ;
                 className="className="px-8 py-4 border border-blue-500/30 text-blue-300 font-semibold rounded-xl hover:bg-blue-500/10 transition-all duration-300 flex items-center gap-2";"
                 whileHover={{ scale: 1.05 },
-  }
+  };
                 whileTap={{ scale: 0.95 },
-  }
+  };
               >
                 <Settings className="w-5 h-5" />
                 Schedule Demo;
@@ -149,17 +149,17 @@ const AIDataGovernancePlatform: React.FC = () => {
         </motion.header>
 
         {{/* Features Grid */},
-  }
+  };
         <motion.section ;
           className="className="py-20 px-6";"
           initial={{ opacity: 0, y: 50 },
-  }
+  };
           whileInView={{ opacity: 1, y: 0 },
-  }
+  };
           transition={{ duration: 0.8 },
-  }
+  };
           viewport={{ once: true },
-  }
+  };
         >
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
@@ -175,18 +175,18 @@ const AIDataGovernancePlatform: React.FC = () => {
               {features.map((feature, index) => (
   <motion.div;
                   key={{feature.title},
-  }
+  };
                   className="className="group relative p-6 rounded-2xl border border-blue-500/20 bg-gradient-to-br from-blue-500/10 to-cyan-500/10 backdrop-blur-sm hover:border-blue-500/40 transition-all duration-300";"
                   initial={{ opacity: 0, y: 30 },
-  }
+  };
                   whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                   transition={{ delay: index * 0.1, duration: 0.6 },
-  }
+  };
                   viewport={{ once: true },
-  }
+  };
                   whileHover={{ y: -5, scale: 1.02 },
-  }
+  };
                 >
                   <div className="absolute inset-0 bg-gradient-to-r from-blue-500/0 via-cyan-500/5 to-blue-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl" />
                   ;
@@ -197,17 +197,17 @@ const AIDataGovernancePlatform: React.FC = () => {
                     ;
                     <h3 className="text-xl font-semibold mb-3 text-white group-hover:text-blue-300 transition-colors">
                       {{feature.title},
-  }
+  };
                     </h3>
                     ;
                     <p className="text-gray-400 mb-4 leading-relaxed">
                       {{feature.description},
-  }
+  };
                     </p>
                     ;
                     <div className="text-2xl font-bold text-blue-400">
                       {{feature.price},
-  }
+  };
                     </div>
                   </div>
                 </motion.div>
@@ -217,17 +217,17 @@ const AIDataGovernancePlatform: React.FC = () => {
         </motion.section>
 
         {{/* Compliance Frameworks */},
-  }
+  };
         <motion.section ;
           className="className="py-20 px-6 bg-gradient-to-br from-blue-900/20 via-slate-900/50 to-cyan-900/20";"
           initial={{ opacity: 0, y: 50 },
-  }
+  };
           whileInView={{ opacity: 1, y: 0 },
-  }
+  };
           transition={{ duration: 0.8 },
-  }
+  };
           viewport={{ once: true },
-  }
+  };
         >
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
@@ -243,16 +243,16 @@ const AIDataGovernancePlatform: React.FC = () => {
               {complianceFrameworks.map((framework, index) => (
   <motion.div;
                   key={{framework},
-  }
+  };
                   className="className="flex items-center gap-4 p-4 rounded-xl border border-blue-500/20 bg-gradient-to-br from-blue-500/10 to-cyan-500/10";"
                   initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 },
-  }
+  };
                   whileInView={{ opacity: 1, x: 0 },
-  }
+  };
                   transition={{ delay: index * 0.1, duration: 0.6 },
-  }
+  };
                   viewport={{ once: true },
-  }
+  };
                 >
                   <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center flex-shrink-0">
                     <Shield className="w-5 h-5 text-white" />
@@ -265,17 +265,17 @@ const AIDataGovernancePlatform: React.FC = () => {
         </motion.section>
 
         {{/* Pricing Section */},
-  }
+  };
         <motion.section ;
           className="className="py-20 px-6";"
           initial={{ opacity: 0, y: 50 },
-  }
+  };
           whileInView={{ opacity: 1, y: 0 },
-  }
+  };
           transition={{ duration: 0.8 },
-  }
+  };
           viewport={{ once: true },
-  }
+  };
         >
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
@@ -291,22 +291,22 @@ const AIDataGovernancePlatform: React.FC = () => {
               {pricingPlans.map((plan, index) => (
   <motion.div;
                   key={{plan.name},
-  }
+  };
                   className={`relative p-8 rounded-2xl border-2 transition-all duration-300 ${
   plan.popular ;
                       ? 'border-blue-500 bg-gradient-to-br from-blue-500/20 to-cyan-500/20' ;
                       : 'border-blue-500/20 bg-gradient-to-br from-slate-800/50 to-slate-900/50'
 }`}
                   initial={{ opacity: 0, y: 30 },
-  }
+  };
                   whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                   transition={{ delay: index * 0.1, duration: 0.6 },
-  }
+  };
                   viewport={{ once: true },
-  }
+  };
                   whileHover={{ y: -5, scale: 1.02 },
-  }
+  };
                 >
                   {plan.popular && (
   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
@@ -341,9 +341,9 @@ const AIDataGovernancePlatform: React.FC = () => {
                         : 'border border-blue-500/30 text-blue-300 hover:bg-blue-500/10'
 }`}
                     whileHover={{ scale: 1.02 },
-  }
+  };
                     whileTap={{ scale: 0.98 },
-  }
+  };
                   >
                     Get Started;
                   </motion.button>
@@ -354,17 +354,17 @@ const AIDataGovernancePlatform: React.FC = () => {
         </motion.section>
 
         {{/* Benefits Section */},
-  }
+  };
         <motion.section ;
           className="className="py-20 px-6 bg-gradient-to-br from-blue-900/20 via-slate-900/50 to-cyan-900/20";"
           initial={{ opacity: 0, y: 50 },
-  }
+  };
           whileInView={{ opacity: 1, y: 0 },
-  }
+  };
           transition={{ duration: 0.8 },
-  }
+  };
           viewport={{ once: true },
-  }
+  };
         >
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
@@ -380,16 +380,16 @@ const AIDataGovernancePlatform: React.FC = () => {
               {benefits.map((benefit, index) => (
   <motion.div;
                   key={{benefit},
-  }
+  };
                   className="className="flex items-start gap-4 p-6 rounded-xl border border-blue-500/20 bg-gradient-to-br from-blue-500/10 to-cyan-500/10";"
                   initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 },
-  }
+  };
                   whileInView={{ opacity: 1, x: 0 },
-  }
+  };
                   transition={{ delay: index * 0.1, duration: 0.6 },
-  }
+  };
                   viewport={{ once: true },
-  }
+  };
                 >
                   <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center flex-shrink-0">
                     <TrendingUp className="w-5 h-5 text-white" />
@@ -402,17 +402,17 @@ const AIDataGovernancePlatform: React.FC = () => {
         </motion.section>
 
         {{/* CTA Section */},
-  }
+  };
         <motion.section ;
           className="className="py-20 px-6 text-center";"
           initial={{ opacity: 0, y: 50 },
-  }
+  };
           whileInView={{ opacity: 1, y: 0 },
-  }
+  };
           transition={{ duration: 0.8 },
-  }
+  };
           viewport={{ once: true },
-  }
+  };
         >
           <div className="max-w-4xl mx-auto">
             <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
@@ -425,9 +425,9 @@ const AIDataGovernancePlatform: React.FC = () => {
               <motion.button ;
                 className="className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-xl hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 shadow-lg hover:shadow-blue-500/25 flex items-center gap-2";"
                 whileHover={{ scale: 1.05 },
-  }
+  };
                 whileTap={{ scale: 0.95 },
-  }
+  };
               >
                 Start Free Trial;
                 <ArrowRight className="w-5 h-5" />
@@ -435,9 +435,9 @@ const AIDataGovernancePlatform: React.FC = () => {
               <motion.button ;
                 className="className="px-8 py-4 border border-blue-500/30 text-blue-300 font-semibold rounded-xl hover:bg-blue-500/10 transition-all duration-300 flex items-center gap-2";"
                 whileHover={{ scale: 1.05 },
-  }
+  };
                 whileTap={{ scale: 0.95 },
-  }
+  };
               >
                 <Users className="w-5 h-5" />
                 Contact Sales;
@@ -448,6 +448,6 @@ const AIDataGovernancePlatform: React.FC = () => {
       </div>
     </div>
   )
-}
+};
 
 export default AIDataGovernancePlatform;

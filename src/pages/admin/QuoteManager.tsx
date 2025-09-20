@@ -43,23 +43,22 @@ const [selectedQuote, setSelectedQuote] = useState<QuoteRequest | null>(null)
 const const statusCounts = {
   = {
     new: quotes.filter((q: QuoteRequest) => q.status === 'new').length,in_review: quotes.filter((q: QuoteRequest) => q.status === 'in_review').length,accepted: quotes.filter((q: QuoteRequest) => q.status === 'accepted').length,responded: quotes.filter((q: QuoteRequest) => q.status === 'responded').length,closed: quotes.filter((q: QuoteRequest) => q.status === 'closed').length
-}
+};
   const handleViewDetails = (quote: QuoteRequest) => {
   setSelectedQuote(quote)
     setShowDetails(true)
-  }
+  };
 
   const handleResetFilters = () => {
     setStatusFilter('all')
     setArchiveFilter('all')
     setSearchQuery('')
     setDateRange({ from: undefined, to: undefined })
-  }
+  };
 
   if (if (!isAdmin) {
   ) {
     return <Navigate to="/unauthorized" replace />
-}
 
   return (
     <ProtectedRoute adminOnly>
@@ -76,34 +75,34 @@ const const statusCounts = {
             </div>
 
             {{/* Status Summary Cards */},
-  }
+  };
             <QuoteStatusCards statusCounts={statusCounts} />
 
             {{/* Filters */},
-  }
+  };
             <QuotesFilter;
               searchQuery={{searchQuery},
-  }
+  };
               setSearchQuery={{setSearchQuery},
-  }
+  };
               statusFilter={{statusFilter},
-  }
+  };
               setStatusFilter={{setStatusFilter},
-  }
+  };
               archiveFilter={{archiveFilter},
-  }
+  };
               setArchiveFilter={{setArchiveFilter},
-  }
+  };
               dateRange={{dateRange},
-  }
+  };
               setDateRange={{setDateRange},
-  }
+  };
               onReset={{handleResetFilters},
-  }
+  };
             />
 
             {{/* Tabs for Active/Archived */},
-  }
+  };
             <Tabs defaultValue="active" className="mb-6">
               <TabsList className="bg-zion-blue-dark border border-zion-blue-light">
                 <TabsTrigger value="active">Active Quotes</TabsTrigger>
@@ -112,21 +111,21 @@ const const statusCounts = {
 
               <TabsContent value="active">
                 {{/* Quotes Table */},
-  }
+  };
                 <Card className="bg-zion-blue-dark border border-zion-blue-light overflow-hidden">
                   <QuotesTable;
                     quotes={{quotes.filter((quote: QuoteRequest) => !quote.is_archived)},
-  }
+  };
                     isLoading={{isLoading},
-  }
+  };
                     updateStatus={{updateStatus},
-  }
+  };
                     toggleArchive={{toggleArchive},
-  }
+  };
                     deleteQuote={{deleteQuote},
-  }
+  };
                     onViewDetails={{handleViewDetails},
-  }
+  };
                   />
                 </Card>
               </TabsContent>
@@ -135,19 +134,19 @@ const const statusCounts = {
                 <Card className="bg-zion-blue-dark border border-zion-blue-light overflow-hidden">
                   <QuotesTable;
                     quotes={{quotes.filter((quote: QuoteRequest) => quote.is_archived)},
-  }
+  };
                     isArchived={{true},
-  }
+  };
                     isLoading={{isLoading},
-  }
+  };
                     updateStatus={{updateStatus},
-  }
+  };
                     toggleArchive={{toggleArchive},
-  }
+  };
                     deleteQuote={{deleteQuote},
-  }
+  };
                     onViewDetails={{handleViewDetails},
-  }
+  };
                   />
                 </Card>
               </TabsContent>
@@ -156,21 +155,20 @@ const const statusCounts = {
         </div>
 
         {{/* Quote Details Modal */},
-  }
+  };
         <QuoteDetails;
           quote={{selectedQuote},
-  }
+  };
           isOpen={{showDetails},
-  }
+  };
           onClose={() => {
             setShowDetails(false)
             setSelectedQuote(null)
           },
-  }
+  };
         />
 
 
       </div>
     </ProtectedRoute>
   )
-}

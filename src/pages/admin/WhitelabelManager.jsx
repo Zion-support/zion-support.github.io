@@ -92,4 +92,4 @@ const isAdmin = user?.role === "admin";
       </main>
       ;
     </>)
-}
+};

@@ -35,7 +35,7 @@ export const CUTTING_EDGE_2025_SERVICES = [
       "Enhanced data protection"
 ]
     link: "/services/quantum-cryptography",image: "/images/quantum-cryptography.jpg",technology: "Quantum Cryptography",marketSize: "$1.8B by 2025",targetIndustry: "Banking, Government, Healthcare"
-}
+};
   ;
   // Advanced AI Solutions;
   {
@@ -73,7 +73,6 @@ export const CUTTING_EDGE_2025_SERVICES = [
       "Research breakthrough potential"
 ]
     link: "/services/ai-brain-interface",image: "/images/ai-brain-interface.jpg",technology: "Neurotechnology + AI",marketSize: "$1.5B by 2025",targetIndustry: "Healthcare, Research, Accessibility"
-}
   ;
   // Advanced Cybersecurity;
   {
@@ -111,7 +110,6 @@ export const CUTTING_EDGE_2025_SERVICES = [
       "Regulatory compliance"
 ]
     link: "/services/quantum-blockchain",image: "/images/quantum-blockchain.jpg",technology: "Quantum + Blockchain",marketSize: "$2.8B by 2025",targetIndustry: "Finance, Supply Chain, Government"
-}
   ;
   // Space Technology;
   {
@@ -132,7 +130,6 @@ export const CUTTING_EDGE_2025_SERVICES = [
       "Commercial space advantage"
 ]
     link: "/services/space-ai-platform",image: "/images/space-ai-platform.jpg",technology: "Space Tech + AI",marketSize: "$3.5B by 2025",targetIndustry: "Aerospace, Research, Government"
-}
   ;
   // Biotechnology & AI;
   {
@@ -152,7 +149,6 @@ export const CUTTING_EDGE_2025_SERVICES = [
       "Breakthrough therapies"
 ]
     link: "/services/ai-drug-discovery",image: "/images/ai-drug-discovery.jpg",technology: "AI + Biotechnology",marketSize: "$5.2B by 2025",targetIndustry: "Pharmaceuticals, Healthcare, Research"
-}
   ;
   // Advanced Robotics;
   {
@@ -173,7 +169,6 @@ export const CUTTING_EDGE_2025_SERVICES = [
       "Enhanced safety"
 ]
     link: "/services/autonomous-robotics",image: "/images/autonomous-robotics.jpg",technology: "AI + Robotics",marketSize: "$3.8B by 2025",targetIndustry: "Manufacturing, Logistics, Healthcare"
-}
   ;
   // Quantum Internet;
   {
@@ -193,7 +188,6 @@ export const CUTTING_EDGE_2025_SERVICES = [
       "Revolutionary security"
 ]
     link: "/services/quantum-internet",image: "/images/quantum-internet.jpg",technology: "Quantum Internet",marketSize: "$1.2B by 2025",targetIndustry: "Telecommunications, Government, Finance"
-}
   ;
   // AI Ethics & Governance;
   {
@@ -233,19 +227,18 @@ export const const CUTTING_EDGE_PRICING = {
     basic: {
   price: 199,currency: "$",period: "month",features: [["Core platform access", "Basic support", "Standard integrations"],
   ],
-  }
+  };
     professional: {
   price: 599,currency: "$",period: "month",features: [["Advanced features", "Priority support", "Custom integrations", "Analytics"],
   ],
-  }
+  };
     enterprise: {
   price: 1499,currency: "$",period: "month",features: [["Full platform access", "24/7 support", "White-label options", "Custom development"],
   ],
   },
-  }
+  };
 
 export const const CUTTING_EDGE_CONTACT = {
   = {
     phone: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008, Middletown DE 19709";
     website: "https://ziontechgroup.com",supportHours: "24/7",responseTime: "< 2 hours"
-}

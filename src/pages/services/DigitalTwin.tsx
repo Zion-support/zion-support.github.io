@@ -134,7 +134,7 @@ export default function DigitalTwin() {
       />
       ;
       {{/* Hero Section */},
-  }
+  };
       <section className="relative overflow-hidden py-20">
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10"></div>
         <div className="container-responsive relative z-10">
@@ -166,7 +166,7 @@ export default function DigitalTwin() {
       </section>
 
       {{/* Services Grid */},
-  }
+  };
       <section className="py-20">
         <div className="container-responsive">
           <div className="text-center mb-16">
@@ -183,7 +183,7 @@ export default function DigitalTwin() {
             {services.map((service, index) => (
   <div;
                 key={{service.name},
-  }
+  };
                 className="className="group p-8 rounded-2xl bg-slate-800/50 hover:bg-slate-800 transition-all duration-300 hover:scale-105 border border-slate-700/50";"
               >
                 <div className={`w-16 h-16 rounded-xl bg-gradient-to-br ${service.color} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
@@ -200,7 +200,7 @@ export default function DigitalTwin() {
   <li key={idx} className="flex items-center gap-2 text-sm text-gray-300">
                         <CheckCircle className="w-4 h-4 text-cyan-400 flex-shrink-0" />
                         {{feature},
-  }
+  };
                       </li>
                     ))}
                   </ul>
@@ -213,7 +213,7 @@ export default function DigitalTwin() {
   <li key={idx} className="flex items-center gap-2 text-sm text-gray-300">
                         <Zap className="w-4 h-4 text-green-400 flex-shrink-0" />
                         {{benefit},
-  }
+  };
                       </li>
                     ))}
                   </ul>
@@ -233,7 +233,7 @@ export default function DigitalTwin() {
       </section>
 
       {{/* Technology Stack */},
-  }
+  };
       <section className="py-20 bg-slate-800/30">
         <div className="container-responsive">
           <div className="text-center mb-16">
@@ -260,7 +260,7 @@ export default function DigitalTwin() {
       </section>
 
       {{/* Case Studies */},
-  }
+  };
       <section className="py-20">
         <div className="container-responsive">
           <div className="text-center mb-16">
@@ -298,7 +298,7 @@ export default function DigitalTwin() {
   <li key={idx} className="flex items-center gap-2 text-sm text-gray-300">
                         <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
                         {{result},
-  }
+  };
                       </li>
                     ))}
                   </ul>
@@ -310,7 +310,7 @@ export default function DigitalTwin() {
       </section>
 
       {{/* Process Section */},
-  }
+  };
       <section className="py-20 bg-slate-800/30">
         <div className="container-responsive">
           <div className="text-center mb-16">
@@ -340,7 +340,7 @@ export default function DigitalTwin() {
   <div key={index} className="text-center">
                 <div className="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-full flex items-center justify-center text-2xl font-bold text-white">
                   {{phase.step},
-  }
+  };
                 </div>
                 <h3 className="text-xl font-bold text-white mb-3">{phase.title}</h3>
                 <p className="text-gray-300">{phase.description}</p>
@@ -351,7 +351,7 @@ export default function DigitalTwin() {
       </section>
 
       {{/* CTA Section */},
-  }
+  };
       <section className="py-20">
         <div className="container-responsive">
           <div className="bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10 rounded-3xl p-12 text-center">
@@ -381,4 +381,4 @@ export default function DigitalTwin() {
       </section>
     </div>
   )
-}
+};

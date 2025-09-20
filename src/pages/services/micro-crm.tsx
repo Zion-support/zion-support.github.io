@@ -44,7 +44,7 @@ export default function MicroCRM() {
       />
       ;
       {{/* Hero Section */},
-  }
+  };
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10"></div>
         <div className="container mx-auto px-4 relative z-10">
@@ -76,7 +76,7 @@ export default function MicroCRM() {
       </section>
 
       {{/* Features Section */},
-  }
+  };
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -104,7 +104,7 @@ export default function MicroCRM() {
       </section>
 
       {{/* Benefits Section */},
-  }
+  };
       <section className="py-20 bg-slate-800/30">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -129,7 +129,7 @@ export default function MicroCRM() {
       </section>
 
       {{/* Use Cases Section */},
-  }
+  };
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -157,7 +157,7 @@ export default function MicroCRM() {
       </section>
 
       {{/* CTA Section */},
-  }
+  };
       <section className="py-20 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold text-white mb-6">
@@ -179,4 +179,4 @@ export default function MicroCRM() {
       </section>
     </div>
   )
-}
+};

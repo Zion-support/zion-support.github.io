@@ -110,7 +110,7 @@ export default function HelpCenter() {
       newExpanded.add(sectionId)
     }
     setExpandedSections(newExpanded)
-  }
+  };
 
   const filteredQuestions = popularQuestions.filter(q => ;
     selectedCategory === 'all' || q.category === selectedCategory
@@ -130,7 +130,7 @@ export default function HelpCenter() {
       />
       ;
       {{/* Hero Section */},
-  }
+  };
       <section className="relative pt-32 pb-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light" />
         <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%239C92AC%22%20fill-opacity%3D%220.1%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20" />
@@ -139,11 +139,11 @@ export default function HelpCenter() {
           <motion.div ;
             className="className="text-center";"
             initial={{ opacity: 0, y: 30 },
-  }
+  };
             animate={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
           >
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-zion-cyan to-blue-400 bg-clip-text text-transparent">
@@ -155,7 +155,7 @@ export default function HelpCenter() {
             </p>
             ;
             {{/* Search Bar */},
-  }
+  };
             <div className="max-w-2xl mx-auto">
               <div className="relative">
                 <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
@@ -163,9 +163,9 @@ export default function HelpCenter() {
                   type="text";
                   placeholder="Search for help articles, tutorials, or FAQs...";
                   value={{searchQuery},
-  }
+  };
                   onChange={{(e) => setSearchQuery(e.target.value)},
-  }
+  };
                   className="className="w-full pl-12 pr-4 py-4 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-zion-cyan/50 focus:ring-2 focus:ring-zion-cyan/20";"
                 />
               </div>
@@ -175,17 +175,17 @@ export default function HelpCenter() {
       </section>
 
       {{/* Quick Help Section */},
-  }
+  };
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div;
             className="className="text-center mb-16";"
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             animate={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8, delay: 0.2 },
-  }
+  };
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Quick Help & Support;
@@ -196,7 +196,7 @@ export default function HelpCenter() {
           </motion.div>
 
           {{/* Support Options Grid */},
-  }
+  };
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
             {[
   {
@@ -214,13 +214,13 @@ export default function HelpCenter() {
   ].map((option, index) => (
   <motion.div;
                 key={{option.title},
-  }
+  };
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 animate={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.6, delay: 0.1 * index },
-  }
+  };
                 className="className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6 text-center hover:bg-white/20 hover:border-white/40 transition-all duration-300 group cursor-pointer";"
               >
                 <div className={`w-16 h-16 bg-gradient-to-r ${option.color} rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300`}>
@@ -233,26 +233,26 @@ export default function HelpCenter() {
           </div>
 
           {{/* FAQ Section */},
-  }
+  };
           <motion.div;
             className="className="mb-16";"
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             animate={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.6, delay: 0.6 },
-  }
+  };
           >
             <div className="max-w-4xl mx-auto">
               <h2 className="text-2xl font-bold text-white mb-8 text-center">Frequently Asked Questions</h2>
 
               {{/* Category Filter */},
-  }
+  };
               <div className="flex flex-wrap justify-center gap-3 mb-8">
                 <button;
                   onClick={{onClick={() => setSelectedCategory('all')},
   },
-  }
+  };
                   className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${
   selectedCategory === 'all';
                       ? 'bg-zion-cyan text-white';
@@ -264,10 +264,10 @@ export default function HelpCenter() {
                 {helpCategories.map(category => (
   <button;
                     key={{category.id},
-  }
+  };
                     onClick={{onClick={() => setSelectedCategory(category.id)},
   },
-  }
+  };
                     className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${
   selectedCategory === category.id;
                         ? 'bg-zion-cyan text-white';
@@ -275,24 +275,24 @@ export default function HelpCenter() {
 }`}
                   >
                     {{category.title},
-  }
+  };
                   </button>
                 ))}
               </div>
 
               {{/* FAQ Items */},
-  }
+  };
               <div className="space-y-4">
                 {filteredQuestions.map((item, index) => (
   <motion.div;
                     key={{index},
-  }
+  };
                     initial={{ opacity: 0, y: 20 },
-  }
+  };
                     animate={{ opacity: 1, y: 0 },
-  }
+  };
                     transition={{ duration: 0.6, delay: 0.1 * index },
-  }
+  };
                     className="className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-6";"
                   >
                     <h3 className="text-lg font-semibold text-white mb-3">{item.question}</h3>
@@ -306,20 +306,20 @@ export default function HelpCenter() {
       </section>
 
       {{/* Main Content */},
-  }
+  };
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-3 gap-8">
             {{/* Help Sections */},
-  }
+  };
             <div className="lg:col-span-2">
               <motion.div;
                 initial={{ opacity: 0, x: -20 },
-  }
+  };
                 animate={{ opacity: 1, x: 0 },
-  }
+  };
                 transition={{ duration: 0.6, delay: 0.3 },
-  }
+  };
               >
                 <h2 className="text-2xl font-bold text-white mb-6">Help Articles & Tutorials</h2>
                 ;
@@ -327,19 +327,19 @@ export default function HelpCenter() {
                   {filteredSections.map((section, index) => (
   <motion.div;
                       key={{section.id},
-  }
+  };
                       initial={{ opacity: 0, y: 20 },
-  }
+  };
                       animate={{ opacity: 1, y: 0 },
-  }
+  };
                       transition={{ duration: 0.6, delay: 0.3 + index * 0.1 },
-  }
+  };
                       className="className="bg-zion-slate-dark/50 backdrop-blur-sm border border-cyan-400/20 rounded-xl overflow-hidden";"
                     >
                       <button;
                         onClick={{onClick={() => toggleSection(section.id)},
   },
-  }
+  };
                         className="className="w-full p-6 text-left hover:bg-zion-slate-dark/70 transition-colors";"
                       >
                         <div className="flex items-center justify-between">
@@ -364,37 +364,37 @@ export default function HelpCenter() {
                         {expandedSections.has(section.id) && (
   <motion.div;
                             initial={{ opacity: 0, height: 0 },
-  }
+  };
                             animate={{ opacity: 1, height: 'auto' },
-  }
+  };
                             exit={{ opacity: 0, height: 0 },
-  }
+  };
                             transition={{ duration: 0.3 },
-  }
+  };
                             className="className="border-t border-cyan-400/20";"
                           >
                             <div className="p-6 space-y-4">
                               {section.articles.map((article, articleIndex) => (
   <motion.div;
                                   key={{article.title},
-  }
+  };
                                   initial={{ opacity: 0, x: -20 },
-  }
+  };
                                   animate={{ opacity: 1, x: 0 },
-  }
+  };
                                   transition={{ duration: 0.3, delay: articleIndex * 0.1 },
-  }
+  };
                                   className="className="group";"
                                 >
                                   <a;
                                     href={{article.url},
-  }
+  };
                                     className="className="flex items-center justify-between p-4 rounded-lg hover:bg-white/5 transition-colors";"
                                   >
                                     <div>
                                       <h4 className="text-lg font-medium text-white group-hover:text-cyan-300 transition-colors">
                                         {{article.title},
-  }
+  };
                                       </h4>
                                       <p className="text-gray-300 text-sm">{article.description}</p>
                                     </div>
@@ -413,19 +413,19 @@ export default function HelpCenter() {
             </div>
 
             {{/* Sidebar */},
-  }
+  };
             <div className="lg:col-span-1">
               <motion.div;
                 initial={{ opacity: 0, x: 20 },
-  }
+  };
                 animate={{ opacity: 1, x: 0 },
-  }
+  };
                 transition={{ duration: 0.6, delay: 0.4 },
-  }
+  };
                 className="className="space-y-6";"
               >
                 {{/* Contact Support */},
-  }
+  };
                 <div className="bg-gradient-to-r from-zion-cyan to-blue-500 rounded-2xl p-6 text-white">
                   <h3 className="text-xl font-bold mb-4">Need More Help?</h3>
                   <p className="text-blue-100 mb-6">
@@ -437,7 +437,7 @@ export default function HelpCenter() {
                 </div>
 
                 {{/* Quick Links */},
-  }
+  };
                 <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6">
                   <h3 className="text-xl font-bold text-white mb-4">Quick Links</h3>
                   <div className="space-y-3">
@@ -453,13 +453,13 @@ export default function HelpCenter() {
   ].map((link, index) => (
   <a;
                         key={{index},
-  }
+  };
                         href={{link.url},
-  }
+  };
                         className="className="block text-cyan-300 hover:text-cyan-200 transition-colors";"
                       >
                         {{link.title},
-  }
+  };
                       </a>
                     ))}
                   </div>
@@ -471,4 +471,4 @@ export default function HelpCenter() {
       </section>
     </div>
   )
-}
+};

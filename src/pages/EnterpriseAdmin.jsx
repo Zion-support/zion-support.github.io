@@ -20,4 +20,4 @@ const isEnterpriseAdmin = user?.role === "enterprise_admin";
       </main>
       ;
     </ProtectedRoute>)
-}
+};

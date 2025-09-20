@@ -2,19 +2,18 @@
 // Revolutionary Micro SAAS, IT Infrastructure, and AI Services;
 export interface PricingTier {
   name: string,price: number,currency: string,billing: string,features: string[],benefits: string[],targetAudience: string[],roi: string,setupTime: string,supportLevel: string,innovationLevel: string
-}
+};
 
 export interface ServicePricing {
   id: string,title: string,description: string,category: string,subcategory: string,pricingTiers: PricingTier[],marketPrice: string,competitors: string[],marketSize: string,growthRate: string,contactInfo: {
   phone: string,email: string,website: string,address: string
-}
   technicalSpecs: {
   technology: string[],integrations: string[],apiEndpoints: number,uptime: string,security: string[[],
   ],
-  }
+  };
   aiCapabilities: string[],complianceFeatures: string[],scalabilityFeatures: string[[],
   ],
-  }
+  };
 
 export const COMPREHENSIVE_PRICING_GUIDE_2026: ServicePricing[] = [
   {
@@ -109,13 +108,12 @@ export const COMPREHENSIVE_PRICING_GUIDE_2026: ServicePricing[] = [
     competitors: ["Tableau", "Power BI", "Looker", "Qlik", "Domo"]
     marketSize: "$45.2 billion by 2026",growthRate: "45% annually",contactInfo: {
   phone: "+1 302 464 0950",email: "kleber@ziontechgroup.com",website: "https://ziontechgroup.com",address: "364 E Main St STE 1008, Middletown DE 19709"
-}
     technicalSpecs: {
   technology: ["GPT-4", "TensorFlow", "PyTorch", "React", "Node.js", "PostgreSQL", "Redis"]
       integrations: ["Salesforce", "HubSpot", "Google Analytics", "Microsoft Power BI", "Tableau", "Slack", "Microsoft Teams"]
       apiEndpoints: 150,uptime: "99.9%",security: [["SOC 2 Type II", "GDPR", "HIPAA", "End-to-end encryption", "Multi-factor authentication"],
   ],
-  }
+  };
     aiCapabilities: ["Natural Language Processing", "Predictive Analytics", "Machine Learning", "Computer Vision", "Sentiment Analysis"]
     complianceFeatures: ["GDPR", "CCPA", "SOC 2", "ISO 27001", "HIPAA"]
     scalabilityFeatures: [["Auto-scaling", "Multi-tenant architecture", "Load balancing", "CDN integration", "Database sharding"],
@@ -212,13 +210,12 @@ export const COMPREHENSIVE_PRICING_GUIDE_2026: ServicePricing[] = [
     competitors: ["Palo Alto Networks", "CrowdStrike", "SentinelOne", "Darktrace", "Cylance"]
     marketSize: "$376.3 billion by 2026",growthRate: "40% annually",contactInfo: {
   phone: "+1 302 464 0950",email: "kleber@ziontechgroup.com",website: "https://ziontechgroup.com",address: "364 E Main St STE 1008, Middletown DE 19709"
-}
     technicalSpecs: {
   technology: ["Quantum-resistant algorithms", "AI/ML", "Blockchain", "Zero-trust architecture", "Cloud-native"]
       integrations: ["AWS Security Hub", "Azure Sentinel", "Google Cloud Security", "Splunk", "CrowdStrike"]
       apiEndpoints: 200,uptime: "99.99%",security: [["SOC 2 Type II", "ISO 27001", "NIST", "FIPS 140-2", "Common Criteria"],
   ],
-  }
+  };
     aiCapabilities: ["Threat Detection", "Behavioral Analytics", "Anomaly Detection", "Predictive Security", "Automated Response"]
     complianceFeatures: ["SOC 2", "ISO 27001", "NIST", "GDPR", "CCPA", "HIPAA"]
     scalabilityFeatures: [["Auto-scaling", "Multi-cloud", "Microservices", "Container security", "Serverless security"],
@@ -316,13 +313,12 @@ export const COMPREHENSIVE_PRICING_GUIDE_2026: ServicePricing[] = [
     competitors: ["SAP Ariba", "Oracle SCM", "Kinaxis", "Blue Yonder", "E2open"]
     marketSize: "$67.2 billion by 2026",growthRate: "30% annually",contactInfo: {
   phone: "+1 302 464 0950",email: "kleber@ziontechgroup.com",website: "https://ziontechgroup.com",address: "364 E Main St STE 1008, Middletown DE 19709"
-}
     technicalSpecs: {
   technology: ["AI/ML", "IoT", "Blockchain", "Cloud computing", "Mobile apps", "APIs"]
       integrations: ["SAP", "Oracle", "Microsoft Dynamics", "Salesforce", "Shopify", "WMS systems"]
       apiEndpoints: 300,uptime: "99.9%",security: [["SOC 2", "ISO 27001", "GDPR", "End-to-end encryption"],
   ],
-  }
+  };
     aiCapabilities: ["Predictive Analytics", "Machine Learning", "Natural Language Processing", "Computer Vision", "Optimization"]
     complianceFeatures: ["ISO 28000", "C-TPAT", "GDPR", "Sustainability reporting", "Trade compliance"]
     scalabilityFeatures: [["Cloud-native", "Microservices", "Auto-scaling", "Multi-tenant", "Global deployment"],
@@ -420,13 +416,12 @@ export const COMPREHENSIVE_PRICING_GUIDE_2026: ServicePricing[] = [
     competitors: ["Bloomberg Terminal", "Thomson Reuters", "Interactive Brokers", "Alpaca", "QuantConnect"]
     marketSize: "$12.3 billion by 2026",growthRate: "50% annually",contactInfo: {
   phone: "+1 302 464 0950",email: "kleber@ziontechgroup.com",website: "https://ziontechgroup.com",address: "364 E Main St STE 1008, Middletown DE 19709"
-}
     technicalSpecs: {
   technology: ["Quantum computing", "AI/ML", "High-performance computing", "Real-time systems", "Blockchain"]
       integrations: ["Bloomberg", "Reuters", "Interactive Brokers", "TD Ameritrade", "E*TRADE"]
       apiEndpoints: 500,uptime: "99.99%",security: [["SOC 2", "ISO 27001", "PCI DSS", "FINRA compliance", "End-to-end encryption"],
   ],
-  }
+  };
     aiCapabilities: ["Predictive Analytics", "Machine Learning", "Natural Language Processing", "Sentiment Analysis", "Risk Modeling"]
     complianceFeatures: ["FINRA", "SEC", "PCI DSS", "GDPR", "SOX compliance"]
     scalabilityFeatures: [["Quantum cloud", "Auto-scaling", "Multi-region", "High availability", "Disaster recovery"],
@@ -524,13 +519,12 @@ export const COMPREHENSIVE_PRICING_GUIDE_2026: ServicePricing[] = [
     competitors: ["IBM Watson Health", "Google Health", "Microsoft Healthcare", "Philips Healthcare", "GE Healthcare"]
     marketSize: "$45.2 billion by 2026",growthRate: "35% annually",contactInfo: {
   phone: "+1 302 464 0950",email: "kleber@ziontechgroup.com",website: "https://ziontechgroup.com",address: "364 E Main St STE 1008, Middletown DE 19709"
-}
     technicalSpecs: {
   technology: ["AI/ML", "Computer Vision", "Cloud computing", "Mobile apps", "APIs", "Security"]
       integrations: ["PACS systems", "EHR systems", "DICOM", "HL7", "Telemedicine platforms"]
       apiEndpoints: 400,uptime: "99.9%",security: [["HIPAA", "SOC 2", "ISO 27001", "End-to-end encryption", "Multi-factor authentication"],
   ],
-  }
+  };
     aiCapabilities: ["Computer Vision", "Machine Learning", "Natural Language Processing", "Predictive Analytics", "Pattern Recognition"]
     complianceFeatures: ["HIPAA", "FDA", "SOC 2", "ISO 27001", "GDPR"]
     scalabilityFeatures: [["Cloud-native", "Multi-tenant", "Auto-scaling", "Global deployment", "High availability"],

@@ -20,5 +20,4 @@ const handleError = () => {
           Retry
         </button>)}
     </div>)
-}
 export default ImageWithRetry;

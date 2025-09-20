@@ -18,7 +18,7 @@ import {
 interface FloatingAction {
   id: string,icon: React.ComponentType<{ size?: number, className?: string }>,
   label: string,action: () => void,color: string,priority: 'high' | 'medium' | 'low'
-}
+};
 
 interface FloatingActionButtonProps {
   actions?: FloatingAction[];
@@ -27,7 +27,6 @@ interface FloatingActionButtonProps {
   showScrollToTop?: boolean,
   showContactActions?: boolean,
   showUtilityActions?: boolean,
-}
 
 const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
   actions = [];
@@ -235,7 +234,7 @@ const handleChange = (e: MediaQueryListEvent) => {
                     animationDelay: `${index * 100}ms`;
                     animation: 'slideInUp 0.3s ease-out forwards'
                   },
-  }
+  };
                 >
                   <action.icon size={20} />
                   <span className="whitespace-nowrap text-sm font-medium">
@@ -286,22 +285,19 @@ const handleChange = (e: MediaQueryListEvent) => {
           to {
             opacity: 1,transform: translateY(0) scale(1)
           },
-  }
+  };
         
         @keyframes bounce {
           0%, 20%, 53%, 80%, 100% {
             transform: translate3d(0,0,0)
-}
           40%, 43% {
             transform: translate3d(0, -30px, 0)
-}
           70% {
             transform: translate3d(0, -15px, 0)
-}
           90% {
             transform: translate3d(0, -4px, 0)
 },
-  }
+  };
         
         .animate-bounce {
           animation: bounce 2s infinite

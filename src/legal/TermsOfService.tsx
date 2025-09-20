@@ -75,7 +75,7 @@ export default function TermsOfService() {
             <h2 className="text-2xl font-semibold text-white mb-4">Contact Information</h2>
             <p className="text-lg leading-relaxed">
               If you have any questions about these Terms of Service, please contact us at{{' '},
-  }
+  };
               <a href="mailto: legal@ziontechgroup.com" className="text-zion-cyan hover:underline">
                 legal@ziontechgroup.com;
               </a>
@@ -85,4 +85,4 @@ export default function TermsOfService() {
       </div>
     </div>
   )
-}
+};

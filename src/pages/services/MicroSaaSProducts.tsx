@@ -5,12 +5,12 @@ import { CheckCircle2, ArrowRight, DollarSign, Globe, Shield, Rocket, Zap, Bot, 
 type Plan = {
   name: string,price: string,features: string[[],
   ],
-  }
+  };
 type Product = {
   id: string,title: string,tagline: string,icon: React.ElementType,category: string,description: string,startingFrom: string,pricing: Plan[],links: { label: string, href: string },
   [[],
   ],
-  }
+  };
 
 const products: Product[] = [
   {
@@ -124,7 +124,7 @@ export default function MicroSaaSProducts() {
                 {p.links.map((l) => (
   <a key={l.href} className="inline-flex items-center gap-2 text-cyan-300 hover:text-cyan-200 underline underline-offset-4" href={l.href} target="_blank" rel="noreferrer">
                     {{l.label},
-  }
+  };
                     <ArrowRight className="w-4 h-4" />
                   </a>
                 ))}
@@ -141,5 +141,5 @@ export default function MicroSaaSProducts() {
       </section>
     </div>
   )
-}
+};
 

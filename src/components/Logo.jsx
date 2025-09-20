@@ -10,4 +10,4 @@ export function Logo({ className = '' }) {
         Zion Tech Group;
       </span>
     </motion.div>)
-}
+};

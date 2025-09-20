@@ -43,7 +43,7 @@ export default function Pricing() {
   const pricingPlans = [
   {
   name: 'Starter',description: 'Perfect for small businesses and startups',price: {{ monthly: 299, annual: 2990 },
-  }
+  };
       features: [
   'AI-powered business intelligence dashboardBasic cloud infrastructure setup';
         'Email supportMonthly reports';
@@ -53,7 +53,7 @@ export default function Pricing() {
 },
   {
   name: 'Professional',description: 'Ideal for growing businesses and teams',price: {{ monthly: 799, annual: 7990 },
-  }
+  };
       features: [
   'Everything in StarterAdvanced AI analytics and insights';
         'Custom dashboard developmentPriority support';
@@ -64,7 +64,7 @@ export default function Pricing() {
 },
   {
   name: 'Enterprise',description: 'For large organizations with complex needs',price: {{ monthly: 1999, annual: 19990 },
-  }
+  };
       features: [
   'Everything in ProfessionalCustom AI model development';
         'Dedicated account manager24/7 priority support';
@@ -143,7 +143,7 @@ const benefits = [
       />
       ;
       {{/* Hero Section */},
-  }
+  };
       <section className="relative overflow-hidden py-20">
         <div className="absolute inset-0 bg-gradient-to-r from-indigo-500/10 via-purple-500/10 to-pink-500/10"></div>
         <div className="container-responsive relative z-10">
@@ -163,7 +163,7 @@ const benefits = [
             </p>
             ;
             {{/* Billing Toggle */},
-  }
+  };
             <div className="flex items-center justify-center gap-4 mb-8">
               <span className={`text-sm font-medium ${billingCycle === 'monthly' ? 'text-white' : 'text-gray-400'}`}>
                 Monthly;
@@ -171,7 +171,7 @@ const benefits = [
               <button;
                 onClick={{onClick={() => setBillingCycle(billingCycle === 'monthly' ? 'annual' : 'monthly')},
   },
-  }
+  };
                 className={`relative w-16 h-8 rounded-full transition-colors duration-300 ${
   billingCycle === 'annual' ? 'bg-indigo-500' : 'bg-slate-600'
 }`}
@@ -193,7 +193,7 @@ const benefits = [
         </div>
         ;
         {{/* Background Elements */},
-  }
+  };
         <div className="absolute inset-0 -z-10">
           <div className="absolute top-20 left-10 w-72 h-72 bg-cyan-500/10 rounded-full blur-3xl"></div>
           <div className="absolute bottom-20 right-10 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl"></div>
@@ -201,7 +201,7 @@ const benefits = [
       </section>
 
       {{/* Pricing Plans */},
-  }
+  };
       <section className="py-20">
         <div className="container-responsive">
           <div className="text-center mb-16">
@@ -217,15 +217,15 @@ const benefits = [
             {pricingPlans.map((plan, index) => (
   <motion.div;
                 key={{plan.name},
-  }
+  };
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.6, delay: index * 0.1 },
-  }
+  };
                 viewport={{ once: true },
-  }
+  };
                 className={`relative p-8 rounded-2xl border transition-all duration-300 hover:scale-105 ${
   plan.popular;
                     ? 'border-cyan-400/50 bg-gradient-to-br from-slate-800/50 to-slate-700/50 ring-2 ring-cyan-400/20';
@@ -255,11 +255,11 @@ const benefits = [
                       {billingCycle === 'annual' ;
                         ? Math.round(plan.price.annual * (1 - savings))
                         : plan.price.monthly
-}
+};
                     </span>
                     <span className="text-gray-400 ml-2">
                       /{{billingCycle === 'annual' ? 'year' : 'month'},
-  }
+  };
                     </span>
                   </div>
                   {billingCycle === 'annual' && (
@@ -274,14 +274,14 @@ const benefits = [
   <li key={idx} className="flex items-center text-gray-300">
                       <Check className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                       {{feature},
-  }
+  };
                     </li>
                   ))}
                 </ul>
 
                 <Link;
                   to={{plan.link},
-  }
+  };
                   className={`w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 ${
   plan.popular;
                       ? 'bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-600 hover:to-purple-700 text-white transform hover:scale-105 shadow-lg hover:shadow-indigo-500/25';
@@ -289,7 +289,7 @@ const benefits = [
 }`}
                 >
                   {{plan.cta},
-  }
+  };
                 </Link>
               </motion.div>
             ))}
@@ -298,7 +298,7 @@ const benefits = [
       </section>
 
       {{/* Service Packages */},
-  }
+  };
       <section className="py-20 bg-slate-800/30">
         <div className="container-responsive">
           <div className="text-center mb-16">
@@ -314,7 +314,7 @@ const benefits = [
             {servicePackages.map((service, index) => (
   <div;
                 key={{index},
-  }
+  };
                 className="className="p-8 rounded-2xl bg-slate-800/50 hover:bg-slate-800 transition-all duration-300 hover:scale-105 border border-slate-700/50";"
               >
                 <div className={`w-16 h-16 rounded-xl bg-gradient-to-br ${service.color} flex items-center justify-center mb-6`}>
@@ -334,7 +334,7 @@ const benefits = [
   <li key={idx} className="flex items-center text-gray-300">
                       <Check className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                       {{feature},
-  }
+  };
                     </li>
                   ))}
                 </ul>
@@ -353,7 +353,7 @@ const benefits = [
       </section>
 
       {{/* Pricing Factors */},
-  }
+  };
       <section className="py-20">
         <div className="container-responsive">
           <div className="text-center mb-16">
@@ -369,7 +369,7 @@ const benefits = [
             {pricingFactors.map((factor, index) => (
   <div;
                 key={{index},
-  }
+  };
                 className="className="text-center p-6 rounded-2xl bg-slate-800/50 hover: bg-slate-800 transition-all duration-300 hover:scale-105 border border-slate-700/50";"
               >
                 <div className={`w-16 h-16 rounded-xl bg-gradient-to-br ${factor.color} flex items-center justify-center mx-auto mb-6`}>
@@ -385,7 +385,7 @@ const benefits = [
       </section>
 
       {{/* Enterprise Features */},
-  }
+  };
       <section className="py-20 bg-slate-800/30">
         <div className="container-responsive">
           <div className="text-center mb-16">
@@ -420,7 +420,7 @@ const benefits = [
   ].map((feature, index) => (
   <div;
                 key={{index},
-  }
+  };
                 className="className="p-6 rounded-2xl bg-slate-800/50 hover:bg-slate-800 transition-all duration-300 hover:scale-105 border border-slate-700/50 text-center";"
               >
                 <div className={`w-16 h-16 rounded-xl bg-gradient-to-br ${feature.color} flex items-center justify-center mx-auto mb-6`}>
@@ -436,18 +436,18 @@ const benefits = [
       </section>
 
       {{/* Benefits Section */},
-  }
+  };
       <section className="py-20 bg-slate-800/30">
         <div className="container-responsive">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             viewport={{ once: true },
-  }
+  };
             className="className="text-center mb-16";"
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
@@ -462,15 +462,15 @@ const benefits = [
             {benefits.map((benefit, index) => (
   <motion.div;
                 key={{benefit.title},
-  }
+  };
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.6, delay: index * 0.1 },
-  }
+  };
                 viewport={{ once: true },
-  }
+  };
                 className="className="text-center";"
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center mx-auto mb-4">
@@ -485,18 +485,18 @@ const benefits = [
       </section>
 
       {{/* FAQ Section */},
-  }
+  };
       <section className="py-20">
         <div className="container-responsive">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             viewport={{ once: true },
-  }
+  };
             className="className="text-center mb-16";"
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
@@ -524,15 +524,15 @@ const benefits = [
   ].map((faq, index) => (
   <motion.div;
                 key={{index},
-  }
+  };
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.6, delay: index * 0.1 },
-  }
+  };
                 viewport={{ once: true },
-  }
+  };
                 className="className="p-6 rounded-xl border border-slate-700/50 bg-slate-800/30";"
               >
                 <h3 className="text-lg font-semibold text-white mb-2">{faq.question}</h3>
@@ -544,18 +544,18 @@ const benefits = [
       </section>
 
       {{/* CTA Section */},
-  }
+  };
       <section className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50">
         <div className="container-responsive text-center">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             viewport={{ once: true },
-  }
+  };
           >
             <h2 className="text-3xl lg: text-4xl font-bold text-white mb-6">
               Ready to Get Started?;
@@ -584,4 +584,3 @@ const benefits = [
       </section>
     </div>
   )
-}

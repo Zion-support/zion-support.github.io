@@ -85,7 +85,7 @@ export default function Accessibility() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       {{/* Hero Section */},
-  }
+  };
       <div className="bg-gradient-to-r from-zion-blue-dark to-zion-purple py-20">
         <div className="container mx-auto px-4 text-center">
           <div className="flex justify-center mb-6">
@@ -103,7 +103,7 @@ export default function Accessibility() {
       </div>
 
       {{/* Commitment Statement */},
-  }
+  };
       <div className="py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
@@ -124,7 +124,7 @@ export default function Accessibility() {
       </div>
 
       {{/* Accessibility Features */},
-  }
+  };
       <div className="py-16 bg-zion-slate-dark">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center text-white mb-12">
@@ -134,7 +134,7 @@ export default function Accessibility() {
             {accessibilityFeatures.map((feature, index) => (
   <div;
                 key={{index},
-  }
+  };
                 className="className="bg-zion-slate border border-zion-slate-light rounded-lg p-6 hover:shadow-lg transition-shadow";"
               >
                 <div className="text-zion-cyan mb-4">{feature.icon}</div>
@@ -145,7 +145,7 @@ export default function Accessibility() {
   <li key={itemIndex} className="flex items-start gap-2 text-zion-slate-light text-sm">
                       <CheckCircle className="w-4 h-4 text-zion-cyan flex-shrink-0 mt-0.5" />
                       {{item},
-  }
+  };
                     </li>))}
                 </ul>
               </div>))}
@@ -154,7 +154,7 @@ export default function Accessibility() {
       </div>
 
       {{/* Compliance Standards */},
-  }
+  };
       <div className="py-16">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center text-white mb-12">
@@ -164,7 +164,7 @@ export default function Accessibility() {
             {complianceStandards.map((standard, index) => (
   <div;
                 key={{index},
-  }
+  };
                 className="className="bg-zion-slate border border-zion-slate-light rounded-lg p-6 text-center";"
               >
                 <div className="flex justify-center mb-4">{standard.icon}</div>
@@ -172,7 +172,7 @@ export default function Accessibility() {
                 <p className="text-zion-slate-light text-sm mb-4">{standard.description}</p>
                 <span className="inline-block px-3 py-1 bg-green-500/20 text-green-400 text-sm rounded-full font-medium">
                   {{standard.status},
-  }
+  };
                 </span>
               </div>
             ))}
@@ -181,7 +181,7 @@ export default function Accessibility() {
       </div>
 
       {{/* Assistive Technology Support */},
-  }
+  };
       <div className="py-16 bg-zion-slate-dark">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center text-white mb-12">
@@ -191,7 +191,7 @@ export default function Accessibility() {
             {assistiveTechnologies.map((tech, index) => (
   <div;
                 key={{index},
-  }
+  };
                 className="className="bg-zion-slate border border-zion-slate-light rounded-lg p-6";"
               >
                 <h3 className="text-lg font-semibold text-white mb-2">{tech.name}</h3>
@@ -200,7 +200,7 @@ export default function Accessibility() {
                   <span className="text-zion-slate-light text-sm">Compatibility:</span>
                   <span className="px-2 py-1 bg-green-500/20 text-green-400 text-xs rounded-full font-medium">
                     {{tech.compatibility},
-  }
+  };
                   </span>
                 </div>
               </div>
@@ -210,7 +210,7 @@ export default function Accessibility() {
       </div>
 
       {{/* Accessibility Tools */},
-  }
+  };
       <div className="py-16">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center text-white mb-12">
@@ -220,7 +220,7 @@ export default function Accessibility() {
             {accessibilityTools.map((tool, index) => (
   <div;
                 key={{index},
-  }
+  };
                 className="className="bg-zion-slate border border-zion-slate-light rounded-lg p-6 hover:shadow-lg transition-shadow";"
               >
                 <div className="text-zion-cyan mb-4">{tool.icon}</div>
@@ -228,7 +228,7 @@ export default function Accessibility() {
                 <p className="text-zion-slate-light text-sm mb-4">{tool.description}</p>
                 <a;
                   href={{tool.link},
-  }
+  };
                   className="className="inline-flex items-center gap-2 text-zion-cyan hover:text-zion-cyan-light transition-colors font-medium text-sm";"
                 >
                   Access Tool;
@@ -241,7 +241,7 @@ export default function Accessibility() {
       </div>
 
       {{/* Feedback and Support */},
-  }
+  };
       <div className="py-16 bg-gradient-to-r from-zion-blue-dark to-zion-purple">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold text-white mb-6">
@@ -315,4 +315,4 @@ export default function Accessibility() {
       </div>
     </div>
   )
-}
+};

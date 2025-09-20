@@ -41,5 +41,5 @@ export default function AIComplianceCopilot() {
       </section>
     </div>
   )
-}
+};
 

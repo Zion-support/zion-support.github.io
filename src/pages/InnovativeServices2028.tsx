@@ -67,48 +67,46 @@ const const iconMap: { [key: string]: any } = {
       'Users': Users;
       'Database': Database;
       'Network': Network
-}
+};
 
     return iconMap[category.icon] || Brain
-}
 
   const getCategoryColor = (categoryName: string) => {
   const category = serviceCategories.find(cat => cat.name === categoryName)
     return category?.color || 'from-purple-500 to-pink-500'
-}
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 relative overflow-hidden">
       {{/* Futuristic Background */},
-  }
+  };
       <div className="fixed inset-0 pointer-events-none z-[-1]">
         {{/* Animated grid */},
-  }
+  };
         <div className="absolute inset-0 bg-[linear-gradient(rgba(6,182,212,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(6,182,212,0.1)_1px,transparent_1px)] bg-[size:50px_50px] animate-pulse-slow"></div>
 
         {{/* Floating particles */},
-  }
+  };
         <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-cyan-400 rounded-full animate-float opacity-60"></div>
         <div className="absolute top-3/4 right-1/4 w-1 h-1 bg-blue-400 rounded-full animate-float animation-delay-1000 opacity-40"></div>
         <div className="absolute top-1/2 left-3/4 w-1.5 h-1.5 bg-purple-400 rounded-full animate-float animation-delay-2000 opacity-50"></div>
 
         {{/* Gradient orbs */},
-  }
+  };
         <div className="absolute top-1/4 right-1/4 w-64 h-64 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full blur-3xl animate-pulse-slow"></div>
         <div className="absolute bottom-1/4 left-1/4 w-96 h-96 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse-slow animation-delay-2000"></div>
       </div>
 
       {{/* Hero Section */},
-  }
+  };
       <section className="pt-32 pb-20 relative z-10">
         <div className="container mx-auto px-4 text-center">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             animate={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             className="className="max-w-6xl mx-auto";"
           >
             <h1 className="text-5xl md:text-7xl font-bold mb-8 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
@@ -124,7 +122,7 @@ const const iconMap: { [key: string]: any } = {
             </p>
 
             {{/* Contact CTA */},
-  }
+  };
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
               <div className="flex items-center space-x-4 text-cyan-400">
                 <Phone className="w-5 h-5" />
@@ -140,41 +138,41 @@ const const iconMap: { [key: string]: any } = {
       </section>
 
       {{/* Filters and Search */},
-  }
+  };
       <section className="py-8 relative z-10">
         <div className="container mx-auto px-4">
           <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {{/* Search */},
-  }
+  };
               <div className="relative">
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                 <input;
                   type="text";
                   placeholder="Search services...";
                   value={{searchTerm},
-  }
+  };
                   onChange={{(e) => setSearchTerm(e.target.value)},
-  }
+  };
                   className="className="w-full pl-10 pr-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent";"
                 />
               </div>
 
               {{/* Category Filter */},
-  }
+  };
               <div className="relative">
                 <select;
                   value={{selectedCategory},
-  }
+  };
                   onChange={{(e) => setSelectedCategory(e.target.value)},
-  }
+  };
                   className="className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent appearance-none";"
                 >
                   <option value="all">All Categories</option>
                   {serviceCategories.map((category) => (
   <option key={category.id} value={category.id}>
                       {{category.name},
-  }
+  };
                     </option>
                   ))}
                 </select>
@@ -182,13 +180,13 @@ const const iconMap: { [key: string]: any } = {
               </div>
 
               {{/* Sort */},
-  }
+  };
               <div className="relative">
                 <select;
                   value={{sortBy},
-  }
+  };
                   onChange={{(e) => setSortBy(e.target.value)},
-  }
+  };
                   className="className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent appearance-none";"
                 >
                   <option value="name">Sort by Name</option>
@@ -203,31 +201,31 @@ const const iconMap: { [key: string]: any } = {
       </section>
 
       {{/* Services Grid */},
-  }
+  };
       <section className="py-20 relative z-10">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
             {sortedServices.map((service, index) => (
   <motion.div;
                 key={{service.id},
-  }
+  };
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 animate={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.5, delay: index * 0.1 },
-  }
+  };
                 className="className="group relative";"
               >
                 {{/* Background glow */},
-  }
+  };
                 <div className={`absolute inset-0 bg-gradient-to-r ${getCategoryColor(service.category)} rounded-2xl blur-xl opacity-20 group-hover:opacity-30 transition-opacity duration-300`}></div>
 
                 {{/* Card content */},
-  }
+  };
                 <div className="relative bg-slate-800/50 p-8 rounded-2xl border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-300 group-hover:bg-slate-800/70 backdrop-blur-sm h-full">
                   {{/* Header */},
-  }
+  };
                   <div className="flex items-start justify-between mb-6">
                     <div className={`inline-flex p-4 rounded-2xl bg-gradient-to-r ${getCategoryColor(service.category)} group-hover:scale-110 transition-transform duration-300`}>
                       {React.createElement(getCategoryIcon(service.category), { className: "w-8 h-8 text-white" })}
@@ -239,27 +237,27 @@ const const iconMap: { [key: string]: any } = {
                   </div>
 
                   {{/* Service Info */},
-  }
+  };
                   <h3 className="text-xl font-semibold text-white mb-4 group-hover:text-cyan-400 transition-colors duration-300">
                     {{service.name},
-  }
+  };
                   </h3>
                   <p className="text-gray-400 mb-6 leading-relaxed">
                     {{service.description},
-  }
+  };
                   </p>
 
                   {{/* Category Badge */},
-  }
+  };
                   <div className="mb-6">
                     <span className={`inline-block px-3 py-1 rounded-full text-xs font-semibold bg-gradient-to-r ${getCategoryColor(service.category)} text-white`}>
                       {{service.category},
-  }
+  };
                     </span>
                   </div>
 
                   {{/* Key Features */},
-  }
+  };
                   <div className="mb-6">
                     <h4 className="text-sm font-semibold text-gray-300 mb-3">Key Features:</h4>
                     <div className="space-y-2">
@@ -267,7 +265,7 @@ const const iconMap: { [key: string]: any } = {
   <div key={idx} className="flex items-center text-gray-400 text-sm">
                           <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />
                           {{feature},
-  }
+  };
                         </div>
                       ))},
   {service.features.length > 3 && (
@@ -280,18 +278,18 @@ const const iconMap: { [key: string]: any } = {
                   </div>
 
                   {{/* Expanded Features */},
-  }
+  };
                   <AnimatePresence>
                     {expandedService === service.id && (
   <motion.div;
                         initial={{ opacity: 0, height: 0 },
-  }
+  };
                         animate={{ opacity: 1, height: 'auto' },
-  }
+  };
                         exit={{ opacity: 0, height: 0 },
-  }
+  };
                         transition={{ duration: 0.3 },
-  }
+  };
                         className="className="mb-6 overflow-hidden";"
                       >
                         <div className="space-y-2">
@@ -299,7 +297,7 @@ const const iconMap: { [key: string]: any } = {
   <div key={idx} className="flex items-center text-gray-400 text-sm">
                               <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />
                               {{feature},
-  }
+  };
                             </div>
                           ))}
                         </div>
@@ -308,7 +306,7 @@ const const iconMap: { [key: string]: any } = {
                   </AnimatePresence>
 
                   {{/* Benefits */},
-  }
+  };
                   <div className="mb-6">
                     <h4 className="text-sm font-semibold text-gray-300 mb-3">Key Benefits:</h4>
                     <div className="space-y-2">
@@ -316,14 +314,14 @@ const const iconMap: { [key: string]: any } = {
   <div key={idx} className="flex items-center text-gray-400 text-sm">
                           <Star className="w-4 h-4 text-yellow-400 mr-2 flex-shrink-0" />
                           {{benefit},
-  }
+  };
                         </div>
                       ))}
                     </div>
                   </div>
 
                   {{/* ROI and Setup */},
-  }
+  };
                   <div className="grid grid-cols-2 gap-4 mb-6">
                     <div className="text-center p-3 bg-slate-700/50 rounded-lg">
                       <div className="text-lg font-bold text-green-400">{service.roi}</div>
@@ -336,7 +334,7 @@ const const iconMap: { [key: string]: any } = {
                   </div>
 
                   {{/* Action Buttons */},
-  }
+  };
                   <div className="flex space-x-3">
                     <button;
                       onClick={() => window.open(`mailto:${contactInfo.email}?subject=Inquiry about ${service.name}`, '_blank')}
@@ -347,16 +345,16 @@ const const iconMap: { [key: string]: any } = {
                     <button;
                       onClick={{onClick={() => setExpandedService(expandedService === service.id ? null : service.id)},
   },
-  }
+  };
                       className="className="px-4 py-3 border border-cyan-500 text-cyan-400 rounded-xl font-semibold hover:bg-cyan-500 hover:text-white transition-all duration-300";"
                     >
                       {{expandedService === service.id ? <ChevronUp className="w-5 h-5" /> : <ChevronDown className="w-5 h-5" />},
-  }
+  };
                     </button>
                   </div>
 
                   {{/* Contact Info */},
-  }
+  };
                   <div className="mt-6 pt-6 border-t border-slate-700/50">
                     <div className="flex items-center justify-between text-sm text-gray-400">
                       <div className="flex items-center space-x-2">
@@ -377,18 +375,18 @@ const const iconMap: { [key: string]: any } = {
       </section>
 
       {{/* Pricing Section */},
-  }
+  };
       <section className="py-20 bg-black/30 relative z-10">
         <div className="container mx-auto px-4">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             viewport={{ once: true },
-  }
+  };
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -403,15 +401,15 @@ const const iconMap: { [key: string]: any } = {
             {pricingTiers.map((tier, index) => (
   <motion.div;
                 key={{tier.name},
-  }
+  };
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.5, delay: index * 0.1 },
-  }
+  };
                 viewport={{ once: true },
-  }
+  };
                 className={`relative p-8 rounded-2xl border-2 transition-all duration-300 ${
   tier.recommended;
                     ? 'bg-gradient-to-br from-cyan-500/10 to-blue-500/10 border-cyan-500/50 scale-105';
@@ -439,7 +437,7 @@ const const iconMap: { [key: string]: any } = {
   <li key={idx} className="flex items-center text-gray-300">
                         <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />
                         {{feature},
-  }
+  };
                       </li>
                     ))}
                   </ul>
@@ -462,19 +460,19 @@ const const iconMap: { [key: string]: any } = {
       </section>
 
       {{/* Contact Section */},
-  }
+  };
       <section className="py-20 relative z-10">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div;
               initial={{ opacity: 0, y: 20 },
-  }
+  };
               whileInView={{ opacity: 1, y: 0 },
-  }
+  };
               transition={{ duration: 0.8 },
-  }
+  };
               viewport={{ once: true },
-  }
+  };
             >
               <h2 className="text-4xl md:text-6xl font-bold text-white mb-8">
                 Ready to Transform Your Business?;
@@ -521,4 +519,3 @@ const const iconMap: { [key: string]: any } = {
       </section>
     </div>
   )
-}

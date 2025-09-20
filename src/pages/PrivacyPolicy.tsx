@@ -112,16 +112,16 @@ const sections = [
 
       <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-slate-50">
         {{/* Hero Section */},
-  }
+  };
         <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
           <div className="max-w-7xl mx-auto">
             <motion.div;
               initial={{ opacity: 0, y: 20 },
-  }
+  };
               animate={{ opacity: 1, y: 0 },
-  }
+  };
               transition={{ duration: 0.6 },
-  }
+  };
               className="className="text-center";"
             >
               <div className="w-20 h-20 bg-gradient-to-r from-green-500 to-emerald-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
@@ -130,16 +130,16 @@ const sections = [
             </motion.div>
 
             {{/* Information We Collect */},
-  }
+  };
             <motion.div;
               initial={{ opacity: 0, y: 20 },
-  }
+  };
               whileInView={{ opacity: 1, y: 0 },
-  }
+  };
               transition={{ duration: 0.8, delay: 0.1 },
-  }
+  };
               viewport={{ once: true },
-  }
+  };
               className="className="mb-12";"
             >
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
@@ -226,16 +226,16 @@ const sections = [
             </motion.div>
 
             {{/* How We Use Your Information */},
-  }
+  };
             <motion.div;
               initial={{ opacity: 0, y: 20 },
-  }
+  };
               whileInView={{ opacity: 1, y: 0 },
-  }
+  };
               transition={{ duration: 0.8, delay: 0.2 },
-  }
+  };
               viewport={{ once: true },
-  }
+  };
               className="className="mb-12";"
             >
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
@@ -280,16 +280,16 @@ const sections = [
             </motion.div>
 
             {{/* Information Sharing and Disclosure */},
-  }
+  };
             <motion.div;
               initial={{ opacity: 0, y: 20 },
-  }
+  };
               whileInView={{ opacity: 1, y: 0 },
-  }
+  };
               transition={{ duration: 0.8, delay: 0.3 },
-  }
+  };
               viewport={{ once: true },
-  }
+  };
               className="className="mb-12";"
             >
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
@@ -322,16 +322,16 @@ const sections = [
             </motion.div>
 
             {{/* Data Security */},
-  }
+  };
             <motion.div;
               initial={{ opacity: 0, y: 20 },
-  }
+  };
               whileInView={{ opacity: 1, y: 0 },
-  }
+  };
               transition={{ duration: 0.8, delay: 0.4 },
-  }
+  };
               viewport={{ once: true },
-  }
+  };
               className="className="mb-12";"
             >
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
@@ -371,16 +371,16 @@ const sections = [
             </motion.div>
 
             {{/* Your Rights and Choices */},
-  }
+  };
             <motion.div;
               initial={{ opacity: 0, y: 20 },
-  }
+  };
               whileInView={{ opacity: 1, y: 0 },
-  }
+  };
               transition={{ duration: 0.8, delay: 0.5 },
-  }
+  };
               viewport={{ once: true },
-  }
+  };
               className="className="mb-12";"
             >
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
@@ -425,16 +425,16 @@ const sections = [
             </motion.div>
 
             {{/* International Data Transfers */},
-  }
+  };
             <motion.div;
               initial={{ opacity: 0, y: 20 },
-  }
+  };
               whileInView={{ opacity: 1, y: 0 },
-  }
+  };
               transition={{ duration: 0.8, delay: 0.6 },
-  }
+  };
               viewport={{ once: true },
-  }
+  };
               className="className="mb-12";"
             >
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
@@ -453,16 +453,16 @@ const sections = [
             </motion.div>
 
             {{/* Children's Privacy */},
-  }
+  };
             <motion.div;
               initial={{ opacity: 0, y: 20 },
-  }
+  };
               whileInView={{ opacity: 1, y: 0 },
-  }
+  };
               transition={{ duration: 0.8, delay: 0.7 },
-  }
+  };
               viewport={{ once: true },
-  }
+  };
               className="className="mb-12";"
             >
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
@@ -481,16 +481,16 @@ const sections = [
             </motion.div>
 
             {{/* Changes to This Policy */},
-  }
+  };
             <motion.div;
               initial={{ opacity: 0, y: 20 },
-  }
+  };
               whileInView={{ opacity: 1, y: 0 },
-  }
+  };
               transition={{ duration: 0.8, delay: 0.8 },
-  }
+  };
               viewport={{ once: true },
-  }
+  };
               className="className="mb-12";"
             >
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
@@ -526,16 +526,16 @@ const sections = [
             </motion.div>
 
             {{/* Contact Information */},
-  }
+  };
             <motion.div;
               initial={{ opacity: 0, y: 20 },
-  }
+  };
               whileInView={{ opacity: 1, y: 0 },
-  }
+  };
               transition={{ duration: 0.8, delay: 0.9 },
-  }
+  };
               viewport={{ once: true },
-  }
+  };
             >
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
                 <Mail className="w-8 h-8 text-zion-cyan" />
@@ -577,16 +577,16 @@ const sections = [
         </section>
 
         {{/* Table of Contents */},
-  }
+  };
         <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
           <div className="max-w-7xl mx-auto">
             <motion.div;
               initial={{ opacity: 0, y: 20 },
-  }
+  };
               animate={{ opacity: 1, y: 0 },
-  }
+  };
               transition={{ duration: 0.6, delay: 0.2 },
-  }
+  };
             >
               <h2 className="text-3xl font-bold text-slate-900 text-center mb-12">
                 Table of Contents;
@@ -596,14 +596,14 @@ const sections = [
                 {sections.map((section, index) => (
   <motion.a;
                     key={{section.id},
-  }
+  };
                     href={`#${section.id}`}
                     initial={{ opacity: 0, y: 20 },
-  }
+  };
                     animate={{ opacity: 1, y: 0 },
-  }
+  };
                     transition={{ duration: 0.6, delay: 0.1 * index },
-  }
+  };
                     className="className="flex items-center gap-3 p-4 bg-slate-50 rounded-lg hover:bg-slate-100 transition-colors border border-slate-200 hover:border-slate-300";"
                   >
                     <div className="w-8 h-8 bg-blue-100 rounded-lg flex items-center justify-center">
@@ -619,16 +619,16 @@ const sections = [
         </section>
 
         {{/* Policy Content */},
-  }
+  };
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <motion.div;
               initial={{ opacity: 0, y: 20 },
-  }
+  };
               animate={{ opacity: 1, y: 0 },
-  }
+  };
               transition={{ duration: 0.6, delay: 0.4 },
-  }
+  };
             >
               {sections.map((section, index) => (
   <div key={section.id} id={section.id} className="mb-16">
@@ -649,16 +649,16 @@ const sections = [
         </section>
 
         {{/* Data Categories Section */},
-  }
+  };
         <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
           <div className="max-w-7xl mx-auto">
             <motion.div;
               initial={{ opacity: 0, y: 20 },
-  }
+  };
               animate={{ opacity: 1, y: 0 },
-  }
+  };
               transition={{ duration: 0.6, delay: 0.6 },
-  }
+  };
             >
               <h2 className="text-3xl font-bold text-slate-900 text-center mb-12">
                 Data Categories and Retention;
@@ -668,13 +668,13 @@ const sections = [
                 {dataCategories.map((category, index) => (
   <motion.div;
                     key={{category.category},
-  }
+  };
                     initial={{ opacity: 0, y: 20 },
-  }
+  };
                     animate={{ opacity: 1, y: 0 },
-  }
+  };
                     transition={{ duration: 0.6, delay: 0.1 * index },
-  }
+  };
                     className="className="bg-slate-50 rounded-xl p-6 border border-slate-200";"
                   >
                     <h3 className="text-xl font-semibold text-slate-900 mb-4">{category.category}</h3>
@@ -707,16 +707,16 @@ const sections = [
         </section>
 
         {{/* Security Measures Section */},
-  }
+  };
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <motion.div;
               initial={{ opacity: 0, y: 20 },
-  }
+  };
               animate={{ opacity: 1, y: 0 },
-  }
+  };
               transition={{ duration: 0.6, delay: 0.8 },
-  }
+  };
             >
               <h2 className="text-3xl font-bold text-slate-900 text-center mb-12">
                 Data Security Measures;
@@ -726,13 +726,13 @@ const sections = [
                 {securityMeasures.map((measure, index) => (
   <motion.div;
                     key={{measure.measure},
-  }
+  };
                     initial={{ opacity: 0, y: 20 },
-  }
+  };
                     animate={{ opacity: 1, y: 0 },
-  }
+  };
                     transition={{ duration: 0.6, delay: 0.1 * index },
-  }
+  };
                     className="className="bg-white rounded-xl p-6 shadow-sm hover:shadow-lg transition-all duration-300 border border-slate-100 hover:border-green-200";"
                   >
                     <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -748,16 +748,16 @@ const sections = [
         </section>
 
         {{/* Contact Section */},
-  }
+  };
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-green-600 to-emerald-700">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div;
               initial={{ opacity: 0, y: 20 },
-  }
+  };
               animate={{ opacity: 1, y: 0 },
-  }
+  };
               transition={{ duration: 0.6, delay: 1.0 },
-  }
+  };
             >
               <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">
                 Questions About Privacy?;
@@ -792,5 +792,5 @@ const sections = [
       </div>
     </>
   )
-}
+};
 export default PrivacyPolicy;

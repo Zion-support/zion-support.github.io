@@ -27,7 +27,7 @@ const DashboardRoutes = () => {
   return (
     <Routes>
       {{/* Dashboard Routes */},
-  }
+  };
       <Route;
         path="/dashboard";
         element={
@@ -222,6 +222,6 @@ const DashboardRoutes = () => {
       />
     </Routes>
   )
-}
+};
 
 export default DashboardRoutes;

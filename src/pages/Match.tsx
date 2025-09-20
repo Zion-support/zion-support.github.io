@@ -106,17 +106,17 @@ const matchesSearch = service.name.toLowerCase().includes(searchQuery.toLowerCas
       />
 
       {{/* Hero Section */},
-  }
+  };
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10"></div>
         <div className="relative z-10 container mx-auto px-4">
           <motion.div;
             initial={{ opacity: 0, y: 30 },
-  }
+  };
             animate={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             className="className="text-center max-w-4xl mx-auto";"
           >
             <div className="flex items-center justify-center mb-6">
@@ -158,35 +158,35 @@ const matchesSearch = service.name.toLowerCase().includes(searchQuery.toLowerCas
       </section>
 
       {{/* Search and Filter Section */},
-  }
+  };
       <section className="py-16 bg-slate-800/50">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             {{/* Search Bar */},
-  }
+  };
             <div className="relative mb-8">
               <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-slate-400" />
               <input;
                 type="text";
                 placeholder="Search for services, features, or use cases...";
                 value={{searchQuery},
-  }
+  };
                 onChange={{(e) => setSearchQuery(e.target.value)},
-  }
+  };
                 className="className="w-full pl-12 pr-4 py-4 bg-slate-700/50 border border-slate-600/50 rounded-xl text-white placeholder-slate-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 transition-all duration-200";"
               />
             </div>
 
             {{/* Category Filters */},
-  }
+  };
             <div className="flex flex-wrap gap-3 justify-center">
               {categories.map((category) => (
   <button;
                   key={{category.id},
-  }
+  };
                   onClick={{onClick={() => setSelectedCategory(category.id)},
   },
-  }
+  };
                   className={`flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-all duration-200 ${
   selectedCategory === category.id;
                       ? 'bg-cyan-500 text-white shadow-lg shadow-cyan-500/25';
@@ -195,10 +195,10 @@ const matchesSearch = service.name.toLowerCase().includes(searchQuery.toLowerCas
                 >
                   <category.icon className="w-4 h-4" />
                   {{category.name},
-  }
+  };
                   <span className="text-xs bg-white/20 px-2 py-1 rounded-full">
                     {{category.count},
-  }
+  };
                   </span>
                 </button>
               ))}
@@ -208,16 +208,16 @@ const matchesSearch = service.name.toLowerCase().includes(searchQuery.toLowerCas
       </section>
 
       {{/* Matched Services Section */},
-  }
+  };
       <section className="py-20">
         <div className="container mx-auto px-4">
           <motion.div;
             initial={{ opacity: 0, y: 30 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-6">
@@ -233,19 +233,19 @@ const matchesSearch = service.name.toLowerCase().includes(searchQuery.toLowerCas
             {filteredServices.map((service, index) => (
   <motion.div;
                 key={{service.id},
-  }
+  };
                 initial={{ opacity: 0, y: 30 },
-  }
+  };
                 whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.6, delay: index * 0.1 },
-  }
+  };
                 className={`bg-slate-800/50 border rounded-xl p-6 hover:border-cyan-400/50 transition-all duration-300 hover:scale-105 ${
   service.featured ? 'border-cyan-400/30 bg-gradient-to-br from-cyan-400/5 to-blue-500/5' : 'border-slate-700/50'
 }`}
               >
                 {{/* Header */},
-  }
+  };
                 <div className="flex items-start justify-between mb-4">
                   <div className="w-12 h-12 bg-gradient-to-br from-cyan-400/20 to-blue-500/20 rounded-lg flex items-center justify-center">
                     <service.icon className="w-6 h-6 text-cyan-400" />
@@ -264,12 +264,12 @@ const matchesSearch = service.name.toLowerCase().includes(searchQuery.toLowerCas
                 </div>
 
                 {{/* Service Info */},
-  }
+  };
                 <h3 className="text-xl font-bold text-white mb-3">{service.name}</h3>
                 <p className="text-slate-300 mb-4 text-sm leading-relaxed">{service.description}</p>
                 ;
                 {{/* Rating and Price */},
-  }
+  };
                 <div className="flex items-center justify-between mb-4">
                   <div className="flex items-center">
                     <div className="flex items-center text-yellow-400 mr-2">
@@ -283,13 +283,13 @@ const matchesSearch = service.name.toLowerCase().includes(searchQuery.toLowerCas
                 </div>
 
                 {{/* Features */},
-  }
+  };
                 <div className="space-y-2 mb-6">
                   {service.features.slice(0, 3).map((feature, featureIndex) => (
   <div key={featureIndex} className="flex items-center text-sm text-slate-400">
                       <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />
                       {{feature},
-  }
+  };
                     </div>
                   ))},
   {service.features.length > 3 && (
@@ -300,7 +300,7 @@ const matchesSearch = service.name.toLowerCase().includes(searchQuery.toLowerCas
                 </div>
 
                 {{/* Actions */},
-  }
+  };
                 <div className="flex gap-2">
                   <Link;
                     to={`/services/${service.name.toLowerCase().replace(/\s+/g, '-')}`}
@@ -322,9 +322,9 @@ const matchesSearch = service.name.toLowerCase().includes(searchQuery.toLowerCas
           {filteredServices.length === 0 && (
   <motion.div;
               initial={{ opacity: 0 },
-  }
+  };
               animate={{ opacity: 1 },
-  }
+  };
               className="className="text-center py-16";"
             >
               <div className="w-24 h-24 bg-slate-700/50 rounded-full flex items-center justify-center mx-auto mb-6">
@@ -347,16 +347,16 @@ const matchesSearch = service.name.toLowerCase().includes(searchQuery.toLowerCas
       </section>
 
       {{/* How It Works Section */},
-  }
+  };
       <section className="py-20 bg-slate-800/50">
         <div className="container mx-auto px-4">
           <motion.div;
             initial={{ opacity: 0, y: 30 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-6">
@@ -383,13 +383,13 @@ const matchesSearch = service.name.toLowerCase().includes(searchQuery.toLowerCas
   ].map((step, index) => (
   <motion.div;
                 key={{index},
-  }
+  };
                 initial={{ opacity: 0, y: 30 },
-  }
+  };
                 whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.6, delay: index * 0.1 },
-  }
+  };
                 className="className="text-center";"
               >
                 <div className="w-20 h-20 bg-gradient-to-br from-cyan-400/20 to-blue-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
@@ -405,16 +405,16 @@ const matchesSearch = service.name.toLowerCase().includes(searchQuery.toLowerCas
       </section>
 
       {{/* CTA Section */},
-  }
+  };
       <section className="py-20 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10">
         <div className="container mx-auto px-4 text-center">
           <motion.div;
             initial={{ opacity: 0, y: 30 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
           >
             <h2 className="text-4xl font-bold text-white mb-6">
               Ready to Find Your Perfect Match?;
@@ -444,5 +444,5 @@ const matchesSearch = service.name.toLowerCase().includes(searchQuery.toLowerCas
       </section>
     </div>
   )
-}
+};
 export default Match;

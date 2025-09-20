@@ -37,7 +37,7 @@ interface Service {
   technicalSpecs?: {
     technology: string[],integrations: string[],apiEndpoints: number,uptime: string,security: string[],
   },
-  }
+  };
 const ComprehensiveServicesShowcase: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>('all'),
   const [selectedInnovationLevel, setSelectedInnovationLevel] = useState<string>('all'),
@@ -238,11 +238,11 @@ const getInnovationLevelColor = (level: string) => {
               <motion.div
                 key={service.id}
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 animate={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.5, delay: index * 0.1 },
-  }
+  };
                 className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100"
               >
                 {/* Service Header */}
@@ -367,7 +367,7 @@ const getInnovationLevelColor = (level: string) => {
                   setSelectedInnovationLevel('all');
                   setSearchTerm('')
 },
-  }
+  };
                 className="text-zion-cyan hover: text-zion-cyan-light font-medium"
               >
                 Clear all filters

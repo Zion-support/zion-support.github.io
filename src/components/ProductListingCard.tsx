@@ -20,7 +20,7 @@ interface ProductListingCardProps {
    * `/marketplace/listing` to preserve existing behaviour.
    */
   detailBasePath?: string
-}
+};
 
 export function ProductListingCard({
   listing,
@@ -50,7 +50,6 @@ const formatPrice = () => {
   };
 const handleViewListing = () => {
     navigate(`${detailBasePath}/${listing.id}`)
-};
 const handleRequestQuote = (e: React.MouseEvent) => {
     e.preventDefault();
     e.stopPropagation();
@@ -75,7 +74,7 @@ const handleRequestQuote = (e: React.MouseEvent) => {
           handleViewListing()
 },
   },
-  }
+  };
     >
       {/* Image */}
       <div
@@ -89,7 +88,7 @@ const handleRequestQuote = (e: React.MouseEvent) => {
             handleViewListing()
 },
   },
-  }
+  };
       >
         <div className={`relative ${imageContainerClasses}`}> {/* Ensure this container has dimensions */}
           <img
@@ -168,7 +167,7 @@ const handleRequestQuote = (e: React.MouseEvent) => {
                 e.stopPropagation();
                 navigate(`${detailBasePath}/${listing.id}`)
 },
-  }
+  };
               disabled={loading}
             >
               {loading ? (
@@ -198,6 +197,5 @@ const handleRequestQuote = (e: React.MouseEvent) => {
       </div>
     </div>
   )
-}
 
 export default React.memo(ProductListingCard);

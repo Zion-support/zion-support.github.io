@@ -24,7 +24,7 @@ interface Service {
   category: string,features: string[],pricing: string,rating: number,reviews: number,color: string;
   popular?: boolean,
   link: string
-}
+};
 
 const services: Service[] = [
   {
@@ -91,7 +91,6 @@ const [hoveredService, setHoveredService] = useState<string | null>(null),
 const element = document.getElementById('service-showcase');
     if (element) {
       observer.observe(element)
-}
 
     return () => observer.disconnect()
 }, []),
@@ -118,11 +117,11 @@ const renderStars = (rating: number) => {
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 },
-  }
+  };
           animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 },
-  }
+  };
           transition={{ duration: 0.6 },
-  }
+  };
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -139,11 +138,11 @@ const renderStars = (rating: number) => {
         {/* Category Filter */}
         <motion.div
           initial={{ opacity: 0, y: 20 },
-  }
+  };
           animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 },
-  }
+  };
           transition={{ duration: 0.6, delay: 0.2 },
-  }
+  };
           className="flex flex-wrap justify-center gap-3 mb-12"
         >
           {categories.map((category, index) => (
@@ -164,11 +163,11 @@ const renderStars = (rating: number) => {
         {/* Services Grid */}
         <motion.div
           initial={{ opacity: 0 },
-  }
+  };
           animate={isVisible ? { opacity: 1 } : { opacity: 0 },
-  }
+  };
           transition={{ duration: 0.6, delay: 0.4 },
-  }
+  };
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
         >
           <AnimatePresence mode="wait">
@@ -176,17 +175,17 @@ const renderStars = (rating: number) => {
               <motion.div
                 key={service.id}
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 animate={{ opacity: 1, y: 0 },
-  }
+  };
                 exit={{ opacity: 0, y: -20 },
-  }
+  };
                 transition={{
                   duration: 0.6,delay: index * 0.1,type: "spring",stiffness: 100
                 },
-  }
+  };
                 whileHover={{ y: -10 },
-  }
+  };
                 onHoverStart={() => setHoveredService(service.id)}
                 onHoverEnd={() => setHoveredService(null)}
                 className="relative group"
@@ -260,11 +259,11 @@ const renderStars = (rating: number) => {
         {/* CTA Section */}
         <motion.div
           initial={{ opacity: 0, y: 20 },
-  }
+  };
           animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 },
-  }
+  };
           transition={{ duration: 0.6, delay: 0.6 },
-  }
+  };
           className="text-center mt-16"
         >
           <div className="bg-gradient-to-r from-zion-slate to-zion-slate-light border border-zion-cyan/20 rounded-2xl p-8">
@@ -296,4 +295,3 @@ const renderStars = (rating: number) => {
       </div>
     </section>
   )
-};

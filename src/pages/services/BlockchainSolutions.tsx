@@ -159,16 +159,16 @@ export default function BlockchainSolutions() {
       ;
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
         {{/* Hero Section */},
-  }
+  };
         <section className="relative overflow-hidden py-20 lg:py-32">
           <div className="container-responsive">
             <motion.div;
               initial={{ opacity: 0, y: 30 },
-  }
+  };
               animate={{ opacity: 1, y: 0 },
-  }
+  };
               transition={{ duration: 0.8 },
-  }
+  };
               className="className="text-center max-w-4xl mx-auto";"
             >
               <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-green-500/20 to-blue-500/20 border border-green-500/30 rounded-full text-green-400 text-sm font-medium mb-6">
@@ -192,18 +192,18 @@ export default function BlockchainSolutions() {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <motion.button;
                   whileHover={{ scale: 1.05 },
-  }
+  };
                   whileTap={{ scale: 0.95 },
-  }
+  };
                   className="className="px-8 py-4 bg-gradient-to-r from-green-500 to-blue-600 text-white font-semibold rounded-lg hover:from-green-600 hover:to-blue-700 transition-all duration-300 shadow-lg hover:shadow-green-500/25";"
                 >
                   Get Started;
                 </motion.button>
                 <motion.button;
                   whileHover={{ scale: 1.05 },
-  }
+  };
                   whileTap={{ scale: 0.95 },
-  }
+  };
                   className="className="px-8 py-4 border border-gray-600 text-white font-semibold rounded-lg hover:border-gray-500 hover:bg-gray-800/50 transition-all duration-300";"
                 >
                   View Demo;
@@ -213,7 +213,7 @@ export default function BlockchainSolutions() {
           </div>
           ;
           {{/* Background Elements */},
-  }
+  };
           <div className="absolute inset-0 overflow-hidden pointer-events-none">
             <div className="absolute top-20 left-10 w-72 h-72 bg-green-500/10 rounded-full blur-3xl"></div>
             <div className="absolute bottom-20 right-10 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl"></div>
@@ -221,18 +221,18 @@ export default function BlockchainSolutions() {
         </section>
 
         {{/* Features Section */},
-  }
+  };
         <section className="py-20">
           <div className="container-responsive">
             <motion.div;
               initial={{ opacity: 0, y: 30 },
-  }
+  };
               whileInView={{ opacity: 1, y: 0 },
-  }
+  };
               transition={{ duration: 0.8 },
-  }
+  };
               viewport={{ once: true },
-  }
+  };
               className="className="text-center mb-16";"
             >
               <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
@@ -248,15 +248,15 @@ export default function BlockchainSolutions() {
               {features.map((feature, index) => (
   <motion.div;
                   key={{feature.title},
-  }
+  };
                   initial={{ opacity: 0, y: 30 },
-  }
+  };
                   whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                   transition={{ duration: 0.6, delay: index * 0.1 },
-  }
+  };
                   viewport={{ once: true },
-  }
+  };
                   className="className="group p-6 bg-slate-800/50 rounded-2xl border border-slate-700/50 hover:border-green-500/30 transition-all duration-300 hover:bg-slate-800/70";"
                 >
                   <div className={`w-16 h-16 bg-gradient-to-br ${feature.color} rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
@@ -265,12 +265,12 @@ export default function BlockchainSolutions() {
                   ;
                   <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-green-400 transition-colors">
                     {{feature.title},
-  }
+  };
                   </h3>
                   ;
                   <p className="text-gray-400 leading-relaxed">
                     {{feature.description},
-  }
+  };
                   </p>
                 </motion.div>
               ))}
@@ -279,19 +279,19 @@ export default function BlockchainSolutions() {
         </section>
 
         {{/* Benefits Section */},
-  }
+  };
         <section className="py-20 bg-slate-800/30">
           <div className="container-responsive">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
               <motion.div;
                 initial={{ opacity: 0, x: -30 },
-  }
+  };
                 whileInView={{ opacity: 1, x: 0 },
-  }
+  };
                 transition={{ duration: 0.8 },
-  }
+  };
                 viewport={{ once: true },
-  }
+  };
               >
                 <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
                   Transform Your Business with Blockchain;
@@ -307,15 +307,15 @@ export default function BlockchainSolutions() {
                   {benefits.map((benefit, index) => (
   <motion.div;
                       key={{benefit},
-  }
+  };
                       initial={{ opacity: 0, x: -20 },
-  }
+  };
                       whileInView={{ opacity: 1, x: 0 },
-  }
+  };
                       transition={{ duration: 0.5, delay: index * 0.1 },
-  }
+  };
                       viewport={{ once: true },
-  }
+  };
                       className="className="flex items-center gap-3";"
                     >
                       <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
@@ -327,13 +327,13 @@ export default function BlockchainSolutions() {
               ;
               <motion.div;
                 initial={{ opacity: 0, x: 30 },
-  }
+  };
                 whileInView={{ opacity: 1, x: 0 },
-  }
+  };
                 transition={{ duration: 0.8 },
-  }
+  };
                 viewport={{ once: true },
-  }
+  };
                 className="className="relative";"
               >
                 <div className="bg-gradient-to-br from-green-500/20 to-blue-500/20 rounded-3xl p-8 border border-green-500/30">
@@ -372,18 +372,18 @@ export default function BlockchainSolutions() {
         </section>
 
         {{/* Blockchain Capabilities Section */},
-  }
+  };
         <section className="py-20">
           <div className="container-responsive">
             <motion.div;
               initial={{ opacity: 0, y: 30 },
-  }
+  };
               whileInView={{ opacity: 1, y: 0 },
-  }
+  };
               transition={{ duration: 0.8 },
-  }
+  };
               viewport={{ once: true },
-  }
+  };
               className="className="text-center mb-16";"
             >
               <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
@@ -399,25 +399,25 @@ export default function BlockchainSolutions() {
               {blockchainCapabilities.map((capability, index) => (
   <motion.div;
                   key={{capability.name},
-  }
+  };
                   initial={{ opacity: 0, y: 30 },
-  }
+  };
                   whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                   transition={{ duration: 0.6, delay: index * 0.1 },
-  }
+  };
                   viewport={{ once: true },
-  }
+  };
                   className="className="p-6 bg-slate-800/50 rounded-2xl border border-slate-700/50 hover:border-green-500/30 transition-all duration-300 group";"
                 >
                   <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-green-400 transition-colors">
                     {{capability.name},
-  }
+  };
                   </h3>
                   ;
                   <p className="text-gray-400 mb-4 leading-relaxed">
                     {{capability.description},
-  }
+  };
                   </p>
                   ;
                   <div className="space-y-2">
@@ -425,7 +425,7 @@ export default function BlockchainSolutions() {
   <div key={idx} className="flex items-center gap-2 text-sm text-gray-500">
                         <div className="w-1.5 h-1.5 bg-green-400 rounded-full"></div>
                         {{example},
-  }
+  };
                       </div>
                     ))}
                   </div>
@@ -436,18 +436,18 @@ export default function BlockchainSolutions() {
         </section>
 
         {{/* Industries Section */},
-  }
+  };
         <section className="py-20 bg-slate-800/30">
           <div className="container-responsive">
             <motion.div;
               initial={{ opacity: 0, y: 30 },
-  }
+  };
               whileInView={{ opacity: 1, y: 0 },
-  }
+  };
               transition={{ duration: 0.8 },
-  }
+  };
               viewport={{ once: true },
-  }
+  };
               className="className="text-center mb-16";"
             >
               <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
@@ -463,15 +463,15 @@ export default function BlockchainSolutions() {
               {industries.map((industry, index) => (
   <motion.div;
                   key={{industry.name},
-  }
+  };
                   initial={{ opacity: 0, y: 30 },
-  }
+  };
                   whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                   transition={{ duration: 0.6, delay: index * 0.1 },
-  }
+  };
                   viewport={{ once: true },
-  }
+  };
                   className="className="p-6 bg-slate-800/50 rounded-2xl border border-slate-700/50 hover:border-green-500/30 transition-all duration-300 group";"
                 >
                   <div className="flex items-start gap-4">
@@ -482,11 +482,11 @@ export default function BlockchainSolutions() {
                     <div className="flex-1">
                       <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-green-400 transition-colors">
                         {{industry.name},
-  }
+  };
                       </h3>
                       <p className="text-gray-400 leading-relaxed">
                         {{industry.description},
-  }
+  };
                       </p>
                     </div>
                   </div>
@@ -497,18 +497,18 @@ export default function BlockchainSolutions() {
         </section>
 
         {{/* Use Cases Section */},
-  }
+  };
         <section className="py-20">
           <div className="container-responsive">
             <motion.div;
               initial={{ opacity: 0, y: 30 },
-  }
+  };
               whileInView={{ opacity: 1, y: 0 },
-  }
+  };
               transition={{ duration: 0.8 },
-  }
+  };
               viewport={{ once: true },
-  }
+  };
               className="className="text-center mb-16";"
             >
               <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
@@ -524,15 +524,15 @@ export default function BlockchainSolutions() {
               {useCases.map((useCase, index) => (
   <motion.div;
                   key={{useCase.title},
-  }
+  };
                   initial={{ opacity: 0, y: 30 },
-  }
+  };
                   whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                   transition={{ duration: 0.6, delay: index * 0.1 },
-  }
+  };
                   viewport={{ once: true },
-  }
+  };
                   className="className="p-6 bg-slate-800/50 rounded-2xl border border-slate-700/50 hover:border-green-500/30 transition-all duration-300 group";"
                 >
                   <div className="flex items-start gap-4">
@@ -543,11 +543,11 @@ export default function BlockchainSolutions() {
                     <div className="flex-1">
                       <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-green-400 transition-colors">
                         {{useCase.title},
-  }
+  };
                       </h3>
                       <p className="text-gray-400 leading-relaxed">
                         {{useCase.description},
-  }
+  };
                       </p>
                     </div>
                   </div>
@@ -558,18 +558,18 @@ export default function BlockchainSolutions() {
         </section>
 
         {{/* CTA Section */},
-  }
+  };
         <section className="py-20 bg-gradient-to-r from-green-500/10 to-blue-500/10">
           <div className="container-responsive">
             <motion.div;
               initial={{ opacity: 0, y: 30 },
-  }
+  };
               whileInView={{ opacity: 1, y: 0 },
-  }
+  };
               transition={{ duration: 0.8 },
-  }
+  };
               viewport={{ once: true },
-  }
+  };
               className="className="text-center max-w-4xl mx-auto";"
             >
               <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
@@ -584,18 +584,18 @@ export default function BlockchainSolutions() {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <motion.button;
                   whileHover={{ scale: 1.05 },
-  }
+  };
                   whileTap={{ scale: 0.95 },
-  }
+  };
                   className="className="px-8 py-4 bg-gradient-to-r from-green-500 to-blue-600 text-white font-semibold rounded-lg hover:from-green-600 hover:to-blue-700 transition-all duration-300 shadow-lg hover:shadow-green-500/25";"
                 >
                   Start Today;
                 </motion.button>
                 <motion.button;
                   whileHover={{ scale: 1.05 },
-  }
+  };
                   whileTap={{ scale: 0.95 },
-  }
+  };
                   className="className="px-8 py-4 border border-gray-600 text-white font-semibold rounded-lg hover: border-gray-500 hover:bg-gray-800/50 transition-all duration-300";"
                 >
                   Schedule Demo;
@@ -607,4 +607,4 @@ export default function BlockchainSolutions() {
       </div>
     </>
   )
-}
+};

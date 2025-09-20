@@ -46,7 +46,7 @@ const const CONTACT_INFO = {
   = {
     phone: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008, Middletown DE 19709";
     website: "https://ziontechgroup.com",supportHours: "24/7",responseTime: "< 2 hours"
-}
+};
 // Benefits section;
 const BENEFITS = [
   {
@@ -100,7 +100,7 @@ const sortedServices = [...filteredServices].sort((a, b) => {
     return (
         <div className="min-h-screen bg-background">
             {{/* Hero Section */},
-  }
+  };
             <div className="bg-gradient-to-r from-zion-blue to-zion-purple text-white py-20">
                 <div className="container mx-auto px-4 text-center">
                     <h1 className="text-4xl md:text-6xl font-bold mb-6">
@@ -125,7 +125,7 @@ const sortedServices = [...filteredServices].sort((a, b) => {
             </div>
 
             {{/* Stats Section */},
-  }
+  };
             <section className="py-16 bg-zion-blue-dark">
                 <div className="container mx-auto px-4">
                     <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center text-white">
@@ -150,7 +150,7 @@ const sortedServices = [...filteredServices].sort((a, b) => {
             </section>
 
             {{/* Benefits Section */},
-  }
+  };
             <section className="py-20 bg-zion-blue">
                 <div className="container mx-auto px-4">
                     <div className="text-center mb-16">
@@ -168,7 +168,7 @@ const sortedServices = [...filteredServices].sort((a, b) => {
                                 <CardHeader className="text-center">
                                     <div className="mx-auto w-12 h-12 bg-zion-purple rounded-full flex items-center justify-center mb-4">
                                         {{benefit.icon},
-  }
+  };
                                     </div>
                                     <CardTitle className="text-xl">{benefit.title}</CardTitle>
                                 </CardHeader>
@@ -182,11 +182,11 @@ const sortedServices = [...filteredServices].sort((a, b) => {
             </section>
 
             {{/* Services Section */},
-  }
+  };
             <section className="py-20">
                 <div className="container mx-auto px-4">
                     {{/* Search and Filter */},
-  }
+  };
                     <div className="mb-8">
                         <div className="flex flex-col md:flex-row gap-4 mb-6">
                             <div className="relative flex-1">
@@ -194,17 +194,17 @@ const sortedServices = [...filteredServices].sort((a, b) => {
                                 <Input;
                                     placeholder="Search services...";
                                     value={{searchQuery},
-  }
+  };
                                     onChange={{(e) => setSearchQuery(e.target.value)},
-  }
+  };
                                     className="className="pl-10";"
                                 />
                             </div>
                             <select;
                                 value={{sortBy},
-  }
+  };
                                 onChange={{(e) => setSortBy(e.target.value)},
-  }
+  };
                                 className="className="px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-zion-blue";"
                             >
                                 <option value="featured">Featured First</option>
@@ -216,7 +216,7 @@ const sortedServices = [...filteredServices].sort((a, b) => {
                         </div>
 
                         {{/* Category Tabs */},
-  }
+  };
                         <Tabs value={selectedCategory} onValueChange={setSelectedCategory}>
                             <TabsList className="grid w-full grid-cols-2 md:grid-cols-7">
                                 {SERVICE_CATEGORIES.map((category) => (
@@ -231,7 +231,7 @@ const sortedServices = [...filteredServices].sort((a, b) => {
                     </div>
 
                     {{/* Services Grid */},
-  }
+  };
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {sortedServices.map((service) => (
   <Card key={service.id} className="hover:shadow-lg transition-shadow duration-300">
@@ -239,7 +239,7 @@ const sortedServices = [...filteredServices].sort((a, b) => {
                                     <div className="flex items-start justify-between mb-2">
                                         <Badge variant="outline" className="text-xs">
                                             {{service.category},
-  }
+  };
                                         </Badge>
                                         {service.featured && (
   <Star className="h-5 w-5 text-yellow-500 fill-current" />
@@ -248,23 +248,23 @@ const sortedServices = [...filteredServices].sort((a, b) => {
                                     <CardTitle className="text-lg">{service.title}</CardTitle>
                                     <CardDescription className="line-clamp-2">
                                         {{service.description},
-  }
+  };
                                     </CardDescription>
                                 </CardHeader>
                                 <CardContent>
                                     <div className="space-y-4">
                                         {{/* Price */},
-  }
+  };
                                         <div className="flex items-center justify-between">
                                             <span className="text-2xl font-bold text-zion-blue">
                                                 ${{service.price},
-  }
+  };
                                             </span>
                                             <span className="text-sm text-gray-500">/month</span>
                                         </div>
 
                                         {{/* Features */},
-  }
+  };
                                         <div className="space-y-2">
                                             <h4 className="font-semibold text-sm">Key Features:</h4>
                                             <ul className="space-y-1">
@@ -272,14 +272,14 @@ const sortedServices = [...filteredServices].sort((a, b) => {
   <li key={index} className="flex items-center text-sm text-gray-600">
                                                         <CheckCircle className="h-4 w-4 text-green-500 mr-2 flex-shrink-0" />
                                                         {{feature},
-  }
+  };
                                                     </li>
                                                 ))}
                                             </ul>
                                         </div>
 
                                         {{/* Benefits */},
-  }
+  };
                                         <div className="space-y-2">
                                             <h4 className="font-semibold text-sm">Benefits:</h4>
                                             <ul className="space-y-1">
@@ -287,14 +287,14 @@ const sortedServices = [...filteredServices].sort((a, b) => {
   <li key={index} className="flex items-center text-sm text-gray-600">
                                                         <TrendingUp className="h-4 w-4 text-blue-500 mr-2 flex-shrink-0" />
                                                         {{benefit},
-  }
+  };
                                                     </li>
                                                 ))}
                                             </ul>
                                         </div>
 
                                         {{/* Rating and AI Score */},
-  }
+  };
                                         <div className="flex items-center justify-between text-sm">
                                             <div className="flex items-center">
                                                 <Star className="h-4 w-4 text-yellow-500 fill-current mr-1" />
@@ -308,14 +308,14 @@ const sortedServices = [...filteredServices].sort((a, b) => {
                                         </div>
 
                                         {{/* Market Price */},
-  }
+  };
                                         <div className="text-sm text-gray-500">
                                             Market Price: {{service.marketPrice},
-  }
+  };
                                         </div>
 
                                         {{/* Action Buttons */},
-  }
+  };
                                         <div className="flex gap-2">
                                             <Button className="flex-1" size="sm">
                                                 <Link to={service.website} target="_blank" className="flex items-center">
@@ -347,7 +347,7 @@ const sortedServices = [...filteredServices].sort((a, b) => {
             </section>
 
             {{/* Contact Section */},
-  }
+  };
             <section className="py-20 bg-gray-50">
                 <div className="container mx-auto px-4">
                     <div className="text-center mb-16">
@@ -362,7 +362,7 @@ const sortedServices = [...filteredServices].sort((a, b) => {
 
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
                         {{/* Contact Information */},
-  }
+  };
                         <div className="space-y-8">
                             <div>
                                 <h3 className="text-2xl font-bold mb-6">Contact Information</h3>
@@ -410,7 +410,7 @@ const sortedServices = [...filteredServices].sort((a, b) => {
                         </div>
 
                         {{/* Contact Form */},
-  }
+  };
                         <div className="bg-white p-8 rounded-lg shadow-lg">
                             <h3 className="text-2xl font-bold mb-6">Get Started Today</h3>
                             <form className="space-y-4">
@@ -434,7 +434,7 @@ const sortedServices = [...filteredServices].sort((a, b) => {
                                     placeholder="Tell us about your project or requirements...";
                                     className="className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-zion-blue";"
                                     rows={{4},
-  }
+  };
                                 />
                                 <Button className="w-full" size="lg">
                                     <Mail className="h-5 w-5 mr-2" />
@@ -447,7 +447,7 @@ const sortedServices = [...filteredServices].sort((a, b) => {
             </section>
 
             {{/* CTA Section */},
-  }
+  };
             <section className="py-20 bg-gradient-to-r from-zion-blue to-zion-purple text-white">
                 <div className="container mx-auto px-4 text-center">
                     <h2 className="text-3xl md:text-4xl font-bold mb-6">
@@ -471,4 +471,3 @@ const sortedServices = [...filteredServices].sort((a, b) => {
             </section>
         </div>
     )
-}

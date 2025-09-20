@@ -79,7 +79,7 @@ const filteredServices = INNOVATIVE_SERVICES_2028;
       'Marketing Automation': <TrendingUp className="w-5 h-5" />
     }
     return icons[category] || <Sparkles className="w-5 h-5" />
-}
+};
 
   const getInnovationLevelColor = (level: string) => {
   switch (level) {
@@ -89,38 +89,38 @@ const filteredServices = INNOVATIVE_SERVICES_2028;
         return 'from-blue-500 to-cyan-500';
       default: return 'from-green-500 to-emerald-500'
 },
-  }
+  };
   const const containerVariants = {
   = {
     hidden: {{ opacity: 0 },
-  }
+  };
     visible: {
   opacity: 1,transition: {
   staggerChildren: 0.1
 },
   },
-  }
+  };
   const const itemVariants = {
   = {
     hidden: {{ y: 20, opacity: 0 },
-  }
+  };
     visible: {
   y: 0,opacity: 1,transition: {
   duration: 0.5,ease: "easeOut"
 },
   },
-  }
+  };
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
       {{/* Futuristic Animated Background */},
-  }
+  };
       <div className="fixed inset-0 overflow-hidden pointer-events-none">
         <div className="absolute inset-0 bg-[linear-gradient(rgba(6,182,212,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(6,182,212,0.1)_1px,transparent_1px)] bg-[size:50px_50px] animate-pulse"></div>
         <div className="absolute inset-0">
           {[...Array(20)].map((_, i) => (
   <motion.div;
               key={{i},
-  }
+  };
               className="className="absolute w-1 h-1 bg-cyan-400 rounded-full opacity-60 shadow-lg shadow-cyan-400/50";"
               animate={{
   x: [0, 100, 0]
@@ -129,32 +129,32 @@ const filteredServices = INNOVATIVE_SERVICES_2028;
                 scale: [[0.5, 1.5, 0.5],
   ],
   },
-  }
+  };
               transition={{
   duration: 6 + i * 0.2,repeat: Infinity,delay: i * 0.1,ease: "easeInOut"
 },
-  }
+  };
               style={{
   left: `${Math.random() * 100}%`;
                 top: `${Math.random() * 100}%`
 },
-  }
+  };
             />
           ))}
         </div>
       </div>
 
       {{/* Hero Section */},
-  }
+  };
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <motion.div;
             initial={{ opacity: 0, y: 30 },
-  }
+  };
             animate={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
           >
             <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
               2028 Services;
@@ -181,40 +181,40 @@ const filteredServices = INNOVATIVE_SERVICES_2028;
       </section>
 
       {{/* Search and Filter Section */},
-  }
+  };
       <section className="px-4 sm:px-6 lg:px-8 mb-12">
         <div className="max-w-7xl mx-auto">
           <div className="bg-slate-800/50 backdrop-blur-xl border border-slate-700/50 rounded-2xl p-6">
             <div className="flex flex-col lg:flex-row gap-4 items-center">
               {{/* Search */},
-  }
+  };
               <div className="flex-1 relative">
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                 <input;
                   type="text";
                   placeholder="Search services, features, or categories...";
                   value={{searchTerm},
-  }
+  };
                   onChange={{(e) => setSearchTerm(e.target.value)},
-  }
+  };
                   className="className="w-full pl-10 pr-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50";"
                 />
               </div>
 
               {{/* Category Filter */},
-  }
+  };
               <div className="relative">
                 <select;
                   value={{selectedCategory},
-  }
+  };
                   onChange={{(e) => setSelectedCategory(e.target.value)},
-  }
+  };
                   className="className="appearance-none bg-slate-700/50 border border-slate-600/50 rounded-xl px-4 py-3 pr-10 text-white focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50";"
                 >
                   {categories.map(category => (
   <option key={category} value={category}>
                       {{category === 'all' ? 'All Categories' : category},
-  }
+  };
                     </option>
                   ))}
                 </select>
@@ -222,13 +222,13 @@ const filteredServices = INNOVATIVE_SERVICES_2028;
               </div>
 
               {{/* Sort */},
-  }
+  };
               <div className="relative">
                 <select;
                   value={{sortBy},
-  }
+  };
                   onChange={{(e) => setSortBy(e.target.value)},
-  }
+  };
                   className="className="appearance-none bg-slate-700/50 border border-slate-600/50 rounded-xl px-4 py-3 pr-10 text-white focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50";"
                 >
                   <option value="name">Sort by Name</option>
@@ -240,12 +240,12 @@ const filteredServices = INNOVATIVE_SERVICES_2028;
               </div>
 
               {{/* View Mode Toggle */},
-  }
+  };
               <div className="flex bg-slate-700/50 border border-slate-600/50 rounded-xl p-1">
                 <button;
                   onClick={{onClick={() => setViewMode('grid')},
   },
-  }
+  };
                   className={`px-3 py-2 rounded-lg transition-colors ${
   viewMode === 'grid' ;
                       ? 'bg-cyan-500/20 text-cyan-400' ;
@@ -257,7 +257,7 @@ const filteredServices = INNOVATIVE_SERVICES_2028;
                 <button;
                   onClick={{onClick={() => setViewMode('list')},
   },
-  }
+  };
                   className={`px-3 py-2 rounded-lg transition-colors ${
   viewMode === 'list' ;
                       ? 'bg-cyan-500/20 text-cyan-400' ;
@@ -273,25 +273,24 @@ const filteredServices = INNOVATIVE_SERVICES_2028;
       </section>
 
       {{/* Services Grid/List */},
-  }
+  };
       <section className="px-4 sm:px-6 lg:px-8 mb-20">
         <div className="max-w-7xl mx-auto">
           <motion.div;
             variants={{containerVariants},
-  }
+  };
             initial="hidden";
             animate="visible";
             className={viewMode === 'grid' ;
               ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6' ;
               : 'space-y-6'
-}
           >
             {filteredServices.map((service) => (
   <motion.div;
                 key={{service.id},
-  }
+  };
                 variants={{itemVariants},
-  }
+  };
                 className={`bg-slate-800/50 backdrop-blur-xl border border-slate-700/50 rounded-2xl overflow-hidden hover:border-cyan-500/50 transition-all duration-300 hover:shadow-2xl hover:shadow-cyan-500/20 ${
   viewMode === 'list' ? 'flex' : ''
 }`}
@@ -303,12 +302,12 @@ const filteredServices = INNOVATIVE_SERVICES_2028;
                       <div className="flex items-center gap-3">
                         <div className={`p-2 rounded-lg bg-gradient-to-r ${getInnovationLevelColor(service.innovationLevel)}`}>
                           {{getCategoryIcon(service.category)},
-  }
+  };
                         </div>
                         <div>
                           <span className={`inline-block px-2 py-1 text-xs font-medium rounded-full bg-gradient-to-r ${getInnovationLevelColor(service.innovationLevel)} text-white`}>
                             {{service.innovationLevel},
-  }
+  };
                           </span>
                         </div>
                       </div>
@@ -316,7 +315,7 @@ const filteredServices = INNOVATIVE_SERVICES_2028;
                         <div className="text-2xl font-bold text-cyan-400">
                           {service.currency},
   {{service.price.toLocaleString()},
-  }
+  };
                         </div>
                         <div className="text-sm text-gray-400">per {service.pricingModel}</div>
                       </div>
@@ -344,11 +343,11 @@ const filteredServices = INNOVATIVE_SERVICES_2028;
                       {service.tags.slice(0, 3).map((tag, index) => (
   <span;
                           key={{index},
-  }
+  };
                           className="className="px-2 py-1 text-xs bg-slate-700/50 text-cyan-400 rounded-lg";"
                         >
                           {{tag},
-  }
+  };
                         </span>
                       ))}
                     </div>
@@ -357,11 +356,11 @@ const filteredServices = INNOVATIVE_SERVICES_2028;
                       <button;
                         onClick={{onClick={() => setExpandedService(expandedService === service.id ? null : service.id)},
   },
-  }
+  };
                         className="className="text-cyan-400 hover:text-cyan-300 text-sm font-medium flex items-center gap-1";"
                       >
                         {{expandedService === service.id ? 'Show Less' : 'Learn More'},
-  }
+  };
                         <ChevronDown className={`w-4 h-4 transition-transform ${expandedService === service.id ? 'rotate-180' : ''}`} />
                       </button>
                       <Link;
@@ -374,18 +373,18 @@ const filteredServices = INNOVATIVE_SERVICES_2028;
                     </div>
 
                     {{/* Expanded Content */},
-  }
+  };
                     <AnimatePresence>
                       {expandedService === service.id && (
   <motion.div;
                           initial={{ opacity: 0, height: 0 },
-  }
+  };
                           animate={{ opacity: 1, height: 'auto' },
-  }
+  };
                           exit={{ opacity: 0, height: 0 },
-  }
+  };
                           transition={{ duration: 0.3 },
-  }
+  };
                           className="className="mt-4 pt-4 border-t border-slate-700/50";"
                         >
                           <div className="space-y-4">
@@ -396,7 +395,7 @@ const filteredServices = INNOVATIVE_SERVICES_2028;
   <li key={index} className="flex items-start gap-2 text-sm text-gray-300">
                                     <CheckCircle className="w-4 h-4 text-green-400 mt-0.5 flex-shrink-0" />
                                     {{feature},
-  }
+  };
                                   </li>
                                 ))}
                               </ul>
@@ -408,7 +407,7 @@ const filteredServices = INNOVATIVE_SERVICES_2028;
   <li key={index} className="flex items-start gap-2 text-sm text-gray-300">
                                     <CheckCircle className="w-4 h-4 text-green-400 mt-0.5 flex-shrink-0" />
                                     {{benefit},
-  }
+  };
                                   </li>
                                 ))}
                               </ul>
@@ -425,7 +424,7 @@ const filteredServices = INNOVATIVE_SERVICES_2028;
                       <div className="flex items-center gap-4">
                         <div className={`p-3 rounded-xl bg-gradient-to-r ${getInnovationLevelColor(service.innovationLevel)}`}>
                           {{getCategoryIcon(service.category)},
-  }
+  };
                         </div>
                         <div>
                           <h3 className="text-xl font-bold text-white mb-1">{service.title}</h3>
@@ -436,7 +435,7 @@ const filteredServices = INNOVATIVE_SERVICES_2028;
                         <div className="text-2xl font-bold text-cyan-400">
                           {service.currency},
   {{service.price.toLocaleString()},
-  }
+  };
                         </div>
                         <div className="text-sm text-gray-400">per {service.pricingModel}</div>
                       </div>
@@ -468,11 +467,11 @@ const filteredServices = INNOVATIVE_SERVICES_2028;
                         {service.tags.slice(0, 4).map((tag, index) => (
   <span;
                             key={{index},
-  }
+  };
                             className="className="px-3 py-1 text-sm bg-slate-700/50 text-cyan-400 rounded-lg";"
                           >
                             {{tag},
-  }
+  };
                           </span>
                         ))}
                       </div>
@@ -501,7 +500,7 @@ const filteredServices = INNOVATIVE_SERVICES_2028;
       </section>
 
       {{/* Contact Section */},
-  }
+  };
       <section className="px-4 sm:px-6 lg:px-8 mb-20">
         <div className="max-w-4xl mx-auto">
           <div className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 rounded-2xl p-8 text-center">
@@ -534,5 +533,4 @@ const filteredServices = INNOVATIVE_SERVICES_2028;
       </section>
     </div>
   )
-}
 export default UltimateServicesShowcase2028;

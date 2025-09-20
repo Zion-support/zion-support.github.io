@@ -13,11 +13,11 @@ export default function InstantMessaging() {
         "name": "Instant Messaging";
         "description": "Chat in real time with clients and freelancers using Socket.IO based messaging.";
         "url": "https: //app.ziontechgroup.com/features/instant-messaging"
-}
+};
     return (<>
       <SEO title="Instant Messaging" description="Negotiate deals and collaborate instantly with real-time chat." keywords="real-time messaging, Socket.IO chat, project communication" canonical="https://app.ziontechgroup.com/features/instant-messaging"/>
       {{/* Use a normal script tag so JSON-LD is correctly parsed */},
-  }
+  };
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) },
   }></script>
       <Header />
@@ -54,4 +54,3 @@ export default function InstantMessaging() {
       </main>
       <Footer />
     </>)
-}

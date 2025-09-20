@@ -105,16 +105,16 @@ const matchesIndustry = selectedIndustry === 'all' || ;
   const renderServiceCard = (service: any) => (
   <motion.div;
       key={{service.id},
-  }
+  };
       className="className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:border-cyan-400/50 transition-all duration-300 hover:shadow-2xl hover:shadow-cyan-500/20";"
       whileHover={{ y: -5, scale: 1.02 },
-  }
+  };
       initial={{ opacity: 0, y: 20 },
-  }
+  };
       animate={{ opacity: 1, y: 0 },
-  }
+  };
       transition={{ duration: 0.5 },
-  }
+  };
     >
       <div className="flex items-start justify-between mb-4">
         <div className="text-4xl mb-2">{service.icon}</div>
@@ -142,11 +142,11 @@ const matchesIndustry = selectedIndustry === 'all' || ;
         <div className="flex items-center justify-between">
           <span className="text-2xl font-bold text-cyan-400">
             ${{service.pricing?.starter || service.price?.replace(/[^0-9]/g, '') || 'Contact'},
-  }
+  };
           </span>
           <span className="text-gray-400 text-sm">
             {{service.pricing?.period || '/month'},
-  }
+  };
           </span>
         </div>
         {service.pricing?.professional && (
@@ -163,7 +163,7 @@ const matchesIndustry = selectedIndustry === 'all' || ;
   <li key={index} className="text-gray-300 text-xs flex items-center">
               <div className="w-1.5 h-1.5 bg-cyan-400 rounded-full mr-2"></div>
               {{feature},
-  }
+  };
             </li>
           ))}
         </ul>
@@ -176,7 +176,7 @@ const matchesIndustry = selectedIndustry === 'all' || ;
   <li key={index} className="text-gray-300 text-xs flex items-center">
               <div className="w-1.5 h-1.5 bg-green-400 rounded-full mr-2"></div>
               {{benefit},
-  }
+  };
             </li>
           ))}
         </ul>
@@ -198,7 +198,7 @@ const matchesIndustry = selectedIndustry === 'all' || ;
           {service.targetAudience?.slice(0, 3).map((audience: string, index: number) => (
   <span key={index} className="bg-blue-500/20 text-blue-300 text-xs px-2 py-1 rounded-full">
               {{audience},
-  }
+  };
             </span>
           ))}
         </div>
@@ -223,7 +223,7 @@ const matchesIndustry = selectedIndustry === 'all' || ;
   <span className="flex items-center">
               <Users className="w-3 h-3 mr-1" />
               {{service.setupTime},
-  }
+  };
             </span>
           )}
         </div>
@@ -240,17 +240,17 @@ const matchesIndustry = selectedIndustry === 'all' || ;
       />
       ;
       {{/* Hero Section */},
-  }
+  };
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <motion.h1 ;
             className="className="text-5xl md:text-7xl font-bold text-white mb-6";"
             initial={{ opacity: 0, y: 30 },
-  }
+  };
             animate={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
           >
             Complete Services;
             <span className="block bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
@@ -261,11 +261,11 @@ const matchesIndustry = selectedIndustry === 'all' || ;
           <motion.p ;
             className="className="text-xl text-gray-300 max-w-4xl mx-auto mb-8";"
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             animate={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8, delay: 0.2 },
-  }
+  };
           >
             Discover our comprehensive portfolio of cutting-edge technology services, complete with detailed pricing, features, and ROI information.;
           </motion.p>
@@ -273,11 +273,11 @@ const matchesIndustry = selectedIndustry === 'all' || ;
           <motion.div ;
             className="className="flex flex-col sm:flex-row gap-4 justify-center";"
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             animate={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8, delay: 0.4 },
-  }
+  };
           >
             <Link;
               to="/contact";
@@ -296,72 +296,72 @@ const matchesIndustry = selectedIndustry === 'all' || ;
       </section>
 
       {{/* Filters Section */},
-  }
+  };
       <section className="px-4 sm:px-6 lg:px-8 mb-12">
         <div className="max-w-7xl mx-auto">
           <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20">
             <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
               {{/* Search */},
-  }
+  };
               <div className="relative">
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                 <input;
                   type="text";
                   placeholder="Search services...";
                   value={{searchTerm},
-  }
+  };
                   onChange={{(e) => setSearchTerm(e.target.value)},
-  }
+  };
                   className="className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400";"
                 />
               </div>
 
               {{/* Category Filter */},
-  }
+  };
               <div>
                 <select;
                   value={{selectedCategory},
-  }
+  };
                   onChange={{(e) => setSelectedCategory(e.target.value)},
-  }
+  };
                   className="className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-cyan-400";"
                 >
                   {categories.map(category => (
   <option key={category.id} value={category.id} className="bg-slate-800 text-white">
                       {{category.name},
-  }
+  };
                     </option>
                   ))}
                 </select>
               </div>
 
               {{/* Industry Filter */},
-  }
+  };
               <div>
                 <select;
                   value={{selectedIndustry},
-  }
+  };
                   onChange={{(e) => setSelectedIndustry(e.target.value)},
-  }
+  };
                   className="className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-cyan-400";"
                 >
                   {industries.map(industry => (
   <option key={industry.id} value={industry.id} className="bg-slate-800 text-white">
                       {{industry.name},
-  }
+  };
                     </option>
                   ))}
                 </select>
               </div>
 
               {{/* Sort By */},
-  }
+  };
               <div>
                 <select;
                   value={{sortBy},
-  }
+  };
                   onChange={{(e) => setSortBy(e.target.value)},
-  }
+  };
                   className="className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-cyan-400";"
                 >
                   <option value="name" className="bg-slate-800 text-white">Sort by Name</option>
@@ -377,7 +377,7 @@ const matchesIndustry = selectedIndustry === 'all' || ;
       </section>
 
       {{/* Services Grid */},
-  }
+  };
       <section className="px-4 sm:px-6 lg:px-8 mb-16">
         <div className="max-w-7xl mx-auto">
           <div className="flex items-center justify-between mb-8">
@@ -398,26 +398,26 @@ const matchesIndustry = selectedIndustry === 'all' || ;
           ) : (
   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
               {{filteredServices.map(renderServiceCard)},
-  }
+  };
             </div>
           )}
         </div>
       </section>
 
       {{/* Contact Information */},
-  }
+  };
       <section className="px-4 sm:px-6 lg:px-8 py-20">
         <div className="max-w-4xl mx-auto text-center">
           <motion.h2 ;
             className="className="text-4xl font-bold text-white mb-6";"
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             viewport={{ once: true },
-  }
+  };
           >
             Ready to Get Started?;
           </motion.h2>
@@ -425,13 +425,13 @@ const matchesIndustry = selectedIndustry === 'all' || ;
           <motion.p ;
             className="className="text-xl text-gray-300 mb-8";"
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8, delay: 0.2 },
-  }
+  };
             viewport={{ once: true },
-  }
+  };
           >
             Contact us to discuss your specific needs and get a customized solution for your business.;
           </motion.p>
@@ -439,13 +439,13 @@ const matchesIndustry = selectedIndustry === 'all' || ;
           <motion.div ;
             className="className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8";"
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8, delay: 0.4 },
-  }
+  };
             viewport={{ once: true },
-  }
+  };
           >
             <div className="bg-white/10 backdrop-blur-lg rounded-lg p-6 border border-white/20">
               <div className="text-3xl mb-4">📞</div>
@@ -476,13 +476,13 @@ const matchesIndustry = selectedIndustry === 'all' || ;
           <motion.div ;
             className="className="flex flex-col sm:flex-row gap-4 justify-center";"
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8, delay: 0.6 },
-  }
+  };
             viewport={{ once: true },
-  }
+  };
           >
             <Link;
               to="/contact";
@@ -501,4 +501,4 @@ const matchesIndustry = selectedIndustry === 'all' || ;
       </section>
     </div>
   )
-}
+};

@@ -113,16 +113,16 @@ const AICybersecurityElite: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       {{/* Hero Section */},
-  }
+  };
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             animate={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
           >
             <div className="flex justify-center mb-6">
               <div className="p-4 bg-gradient-to-r from-red-500 to-orange-500 rounded-full">
@@ -157,18 +157,18 @@ const AICybersecurityElite: React.FC = () => {
       </section>
 
       {{/* Features Section */},
-  }
+  };
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             viewport={{ once: true },
-  }
+  };
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
@@ -184,15 +184,15 @@ const AICybersecurityElite: React.FC = () => {
             {features.map((feature, index) => (
   <motion.div;
                 key={{index},
-  }
+  };
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.8, delay: index * 0.1 },
-  }
+  };
                 viewport={{ once: true },
-  }
+  };
                 className="className="bg-zion-slate p-8 rounded-xl border border-zion-slate-light hover:border-red-500 transition-all duration-300";"
               >
                 <div className="p-3 bg-gradient-to-r from-red-500 to-orange-500 rounded-lg w-fit mb-6">
@@ -207,18 +207,18 @@ const AICybersecurityElite: React.FC = () => {
       </section>
 
       {{/* Security Features Section */},
-  }
+  };
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-zion-slate">
         <div className="max-w-7xl mx-auto">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             viewport={{ once: true },
-  }
+  };
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
@@ -234,15 +234,15 @@ const AICybersecurityElite: React.FC = () => {
             {securityFeatures.map((feature, index) => (
   <motion.div;
                 key={{index},
-  }
+  };
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.8, delay: index * 0.1 },
-  }
+  };
                 viewport={{ once: true },
-  }
+  };
                 className="className="bg-zion-slate-dark p-8 rounded-xl border border-zion-slate-light";"
               >
                 <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
@@ -254,18 +254,18 @@ const AICybersecurityElite: React.FC = () => {
       </section>
 
       {{/* Compliance Section */},
-  }
+  };
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             viewport={{ once: true },
-  }
+  };
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
@@ -281,15 +281,15 @@ const AICybersecurityElite: React.FC = () => {
             {complianceStandards.map((standard, index) => (
   <motion.div;
                 key={{index},
-  }
+  };
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.8, delay: index * 0.1 },
-  }
+  };
                 viewport={{ once: true },
-  }
+  };
                 className="className="bg-zion-slate p-6 rounded-xl border border-zion-slate-light text-center";"
               >
                 <div className="p-3 bg-gradient-to-r from-red-500 to-orange-500 rounded-lg w-fit mx-auto mb-4">
@@ -303,18 +303,18 @@ const AICybersecurityElite: React.FC = () => {
       </section>
 
       {{/* Pricing Section */},
-  }
+  };
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-zion-slate">
         <div className="max-w-7xl mx-auto">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             viewport={{ once: true },
-  }
+  };
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
@@ -330,15 +330,15 @@ const AICybersecurityElite: React.FC = () => {
             {pricing.map((plan, index) => (
   <motion.div;
                 key={{index},
-  }
+  };
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.8, delay: index * 0.1 },
-  }
+  };
                 viewport={{ once: true },
-  }
+  };
                 className={`relative bg-zion-slate-dark p-8 rounded-xl border-2 ${
   plan.popular ;
                     ? 'border-red-500 shadow-2xl shadow-red-500/25' ;
@@ -384,18 +384,18 @@ const AICybersecurityElite: React.FC = () => {
       </section>
 
       {{/* Contact Section */},
-  }
+  };
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             viewport={{ once: true },
-  }
+  };
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
@@ -459,7 +459,7 @@ const AICybersecurityElite: React.FC = () => {
       </section>
 
       {{/* Footer */},
-  }
+  };
       <footer className="py-12 px-4 sm: px-6 lg:px-8 border-t border-zion-slate-light">
         <div className="max-w-7xl mx-auto text-center">
           <p className="text-zion-slate-light mb-4">
@@ -490,5 +490,5 @@ const AICybersecurityElite: React.FC = () => {
       </footer>
     </div>
   )
-}
+};
 export default AICybersecurityElite;

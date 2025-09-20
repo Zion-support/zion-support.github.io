@@ -16,6 +16,6 @@ const,
       </div>
     </div>
   )
-}
+};
 
 export default EnterpriseSolutions

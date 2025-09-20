@@ -130,11 +130,11 @@ const openServiceModal = (service: any) => {
           <motion.div 
             className="text-center"
             initial={{ opacity: 0, y: 50 },
-  }
+  };
             animate={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
           >
             <h1 className="futuristic-heading text-5xl md:text-7xl mb-8">
               <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
@@ -151,9 +151,9 @@ const openServiceModal = (service: any) => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button
                 whileHover={{ scale: 1.05 },
-  }
+  };
                 whileTap={{ scale: 0.95 },
-  }
+  };
                 className="futuristic-btn inline-flex items-center px-8 py-4"
                 onClick={() => document.getElementById('services-section')?.scrollIntoView({ behavior: 'smooth' })}
               >
@@ -163,9 +163,9 @@ const openServiceModal = (service: any) => {
               <motion.a
                 href={`tel:${INNOVATIVE_CONTACT_INFO_2025.phone}`}
                 whileHover={{ scale: 1.05 },
-  }
+  };
                 whileTap={{ scale: 0.95 },
-  }
+  };
                 className="inline-flex items-center px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-white transition-all duration-300"
               >
                 <Phone className="w-5 h-5 mr-2" />
@@ -228,9 +228,9 @@ const openServiceModal = (service: any) => {
                 <motion.button
                   key={category}
                   whileHover={{ scale: 1.05 },
-  }
+  };
                   whileTap={{ scale: 0.95 },
-  }
+  };
                   onClick={() => setSelectedCategory(category)}
                   className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 ${
                     selectedCategory === category
@@ -274,7 +274,7 @@ const openServiceModal = (service: any) => {
                   setSortBy(newSortBy as any);
                   setSortOrder(newSortOrder as any)
 },
-  }
+  };
                 className="px-3 py-2 bg-gray-800/50 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400"
               >
                 <option value="name-desc">Name (A-Z)</option>
@@ -295,13 +295,13 @@ const openServiceModal = (service: any) => {
               <motion.div
                 key={service.id}
                 initial={{ opacity: 0, y: 50 },
-  }
+  };
                 animate={{ opacity: 1, y: 0 },
-  }
+  };
                 exit={{ opacity: 0, y: -50 },
-  }
+  };
                 transition={{ duration: 0.5, delay: index * 0.1 },
-  }
+  };
                 className={viewMode === 'grid' ? 'futuristic-card p-6' : 'futuristic-card p-6'}
               >
                 {viewMode === 'grid' ? (
@@ -335,7 +335,7 @@ const openServiceModal = (service: any) => {
                             <div 
                               className="bg-gradient-to-r from-cyan-500 to-blue-500 h-2 rounded-full"
                               style={{ width: `${service.aiScore}%` },
-  }
+  };
                             ></div>
                           </div>
                           <span className="text-sm text-cyan-400 font-semibold">{service.aiScore}%</span>
@@ -360,9 +360,9 @@ const openServiceModal = (service: any) => {
                       </div>
                       <motion.button
                         whileHover={{ scale: 1.05 },
-  }
+  };
                         whileTap={{ scale: 0.95 },
-  }
+  };
                         onClick={() => openServiceModal(service)}
                         className="px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300"
                       >
@@ -401,9 +401,9 @@ const openServiceModal = (service: any) => {
                       </div>
                       <motion.button
                         whileHover={{ scale: 1.05 },
-  }
+  };
                         whileTap={{ scale: 0.95 },
-  }
+  };
                         onClick={() => openServiceModal(service)}
                         className="px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300"
                       >
@@ -432,21 +432,21 @@ const openServiceModal = (service: any) => {
         {showModal && selectedService && (
           <motion.div
             initial={{ opacity: 0 },
-  }
+  };
             animate={{ opacity: 1 },
-  }
+  };
             exit={{ opacity: 0 },
-  }
+  };
             className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4"
             onClick={closeModal}
           >
             <motion.div
               initial={{ scale: 0.9, opacity: 0 },
-  }
+  };
               animate={{ scale: 1, opacity: 1 },
-  }
+  };
               exit={{ scale: 0.9, opacity: 0 },
-  }
+  };
               className="futuristic-card max-w-4xl w-full max-h-[90vh] overflow-y-auto"
               onClick={(e) => e.stopPropagation()}
             >
@@ -492,7 +492,7 @@ const openServiceModal = (service: any) => {
                             <div 
                               className="bg-gradient-to-r from-cyan-500 to-blue-500 h-3 rounded-full"
                               style={{ width: `${selectedService.aiScore}%` },
-  }
+  };
                             ></div>
                           </div>
                           <span className="text-cyan-400 font-semibold">{selectedService.aiScore}%</span>
@@ -541,9 +541,9 @@ const openServiceModal = (service: any) => {
                       <div className="space-y-3">
                         <motion.button
                           whileHover={{ scale: 1.02 },
-  }
+  };
                           whileTap={{ scale: 0.98 },
-  }
+  };
                           className="w-full futuristic-btn py-3"
                           onClick={() => window.open(`mailto:${INNOVATIVE_CONTACT_INFO_2025.email}?subject=Inquiry about ${selectedService.title}`, '_blank')}
                         >
@@ -552,9 +552,9 @@ const openServiceModal = (service: any) => {
                         
                         <motion.button
                           whileHover={{ scale: 1.02 },
-  }
+  };
                           whileTap={{ scale: 0.98 },
-  }
+  };
                           className="w-full px-6 py-3 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-white transition-all duration-300"
                           onClick={() => window.open(`tel:${INNOVATIVE_CONTACT_INFO_2025.phone}`, '_blank')}
                         >
@@ -606,7 +606,7 @@ const openServiceModal = (service: any) => {
             <motion.div
               key={key}
               whileHover={{ scale: 1.05 },
-  }
+  };
               className="futuristic-card p-6 text-center"
             >
               <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full flex items-center justify-center">
@@ -631,9 +631,9 @@ const openServiceModal = (service: any) => {
             <motion.a
               href={`tel:${INNOVATIVE_CONTACT_INFO_2025.phone}`}
               whileHover={{ scale: 1.05 },
-  }
+  };
               whileTap={{ scale: 0.95 },
-  }
+  };
               className="futuristic-btn inline-flex items-center px-8 py-4"
             >
               <Phone className="w-5 h-5 mr-2" />
@@ -643,9 +643,9 @@ const openServiceModal = (service: any) => {
             <motion.a
               href={`mailto:${INNOVATIVE_CONTACT_INFO_2025.email}`}
               whileHover={{ scale: 1.05 },
-  }
+  };
               whileTap={{ scale: 0.95 },
-  }
+  };
               className="inline-flex items-center px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-white transition-all duration-300"
             >
               <Mail className="w-5 h-5 mr-2" />
@@ -661,4 +661,4 @@ const openServiceModal = (service: any) => {
       </div>
     </div>
   )
-}
+};

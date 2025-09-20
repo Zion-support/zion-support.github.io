@@ -33,12 +33,11 @@ interface NavigationItem {
   icon?: React.ReactNode,
   children?: NavigationItem[],
   featured?: boolean
-}
+};
 
 interface EnhancedNavigationProps {
   className?: string,
   onThemeChange?: (theme: 'light' | 'dark' | 'system') => void
-}
 
 const navigationItems: NavigationItem[] = [
   { label: 'Home', href: '/' };
@@ -188,7 +187,6 @@ const location = useLocation();
       root.classList.add(systemTheme)
     } else {
       root.classList.add(newTheme)
-}
     
     localStorage.setItem('zion-theme', newTheme)
 }, [onThemeChange]),
@@ -249,13 +247,13 @@ const closeDropdown = () => {
                     {activeDropdown === item.label && (
                       <motion.div
                         initial={{ opacity: 0, y: -10 },
-  }
+  };
                         animate={{ opacity: 1, y: 0 },
-  }
+  };
                         exit={{ opacity: 0, y: -10 },
-  }
+  };
                         transition={{ duration: 0.2 },
-  }
+  };
                         className="absolute top-full left-0 mt-2 w-80 bg-slate-800/95 backdrop-blur-md border border-slate-700/50 rounded-xl shadow-2xl py-2 z-50"
                       >
                         <div className="px-4 py-2 border-b border-slate-700/50">
@@ -347,13 +345,13 @@ const closeDropdown = () => {
                 {isOpen && (
                   <motion.div
                     initial={{ opacity: 0, height: 0 },
-  }
+  };
                     animate={{ opacity: 1, height: 'auto' },
-  }
+  };
                     exit={{ opacity: 0, height: 0 },
-  }
+  };
                     transition={{ duration: 0.3 },
-  }
+  };
                     className="lg:hidden bg-slate-900/95 backdrop-blur-md border-t border-slate-700/50"
                   >
                     <div className="px-4 py-6 space-y-4">
@@ -379,13 +377,13 @@ const closeDropdown = () => {
                               {activeDropdown === item.label && (
                                 <motion.div
                                   initial={{ opacity: 0, y: -10 },
-  }
+  };
                                   animate={{ opacity: 1, y: 0 },
-  }
+  };
                                   exit={{ opacity: 0, y: -10 },
-  }
+  };
                                   transition={{ duration: 0.2 },
-  }
+  };
                                   className="ml-4 mt-2 space-y-2 border-l border-slate-700/50 pl-4"
                                 >
                                   {item.children.map((child) => (
@@ -439,4 +437,3 @@ const closeDropdown = () => {
       </AnimatePresence>
     </nav>
   )
-};

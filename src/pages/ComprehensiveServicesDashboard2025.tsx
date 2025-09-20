@@ -71,9 +71,8 @@ const filteredServices = useMemo(() => {
   const const colors: { [key: string]: string } = {
   = {
             'fintech': 'from-green-500 to-emerald-600healthtech': 'from-red-500 to-pink-600edutech': 'from-purple-500 to-violet-600martech': 'from-pink-500 to-rose-600micro-saas': 'from-blue-500 to-indigo-600ai-services': 'from-cyan-500 to-blue-600it-services': 'from-slate-500 to-gray-600emerging-tech': 'from-orange-500 to-yellow-600Fintech': 'from-green-500 to-emerald-600Healthtech': 'from-red-500 to-pink-600Edutech': 'from-purple-500 to-violet-600Martech': 'from-pink-500 to-rose-600Micro SaaS': 'from-blue-500 to-indigo-600AI Services': 'from-cyan-500 to-blue-600IT Services': 'from-slate-500 to-gray-600'
-}
+};
         return colors[category] || 'from-gray-500 to-gray-600'
-}
 
     const getCategoryIcon = (category: string) => {
   const const icons: { [key: string]: React.ReactNode } = {
@@ -95,24 +94,23 @@ const filteredServices = useMemo(() => {
             'IT Services': <Shield className="w-5 h-5" />
         }
         return icons[category] || <Globe className="w-5 h-5" />
-}
 
     const getSourceBadge = (source: string) => {
   const const badges = {
   = {
             'existing': {{ color: 'bg-blue-100 text-blue-800', text: 'Existing' },
-  }
+  };
             'new': {{ color: 'bg-green-100 text-green-800', text: 'New' },
-  }
+  };
             'pricing-guide': {{ color: 'bg-purple-100 text-purple-800', text: 'Pricing Guide' },
   },
-  }
+  };
         const badge = badges[source as keyof typeof badges] || {{ color: 'bg-gray-100 text-gray-800', text: source },
-  }
+  };
         return (
             <span className={`px-2 py-1 rounded-full text-xs font-medium ${badge.color}`}>
                 {{badge.text},
-  }
+  };
             </span>
         )
     }
@@ -127,17 +125,17 @@ const filteredServices = useMemo(() => {
             </Helmet>
 
             {{/* Hero Section */},
-  }
+  };
             <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-600 via-indigo-700 to-purple-800 opacity-90"></div>
                 <div className="relative max-w-7xl mx-auto text-center">
                     <motion.div;
                         initial={{ opacity: 0, y: 20 },
-  }
+  };
                         animate={{ opacity: 1, y: 0 },
-  }
+  };
                         transition={{ duration: 0.8 },
-  }
+  };
                     >
                         <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
                             Comprehensive Services Dashboard 2025;
@@ -164,7 +162,7 @@ const filteredServices = useMemo(() => {
             </section>
 
             {{/* Contact Information Banner */},
-  }
+  };
             <section className="bg-white border-b border-gray-200 py-6">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
@@ -196,18 +194,18 @@ const filteredServices = useMemo(() => {
             </section>
 
             {{/* Statistics Section */},
-  }
+  };
             <section className="py-12 px-4 sm:px-6 lg:px-8">
                 <div className="max-w-7xl mx-auto">
                     <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center">Services Overview</h2>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                         <motion.div;
                             initial={{ opacity: 0, y: 20 },
-  }
+  };
                             animate={{ opacity: 1, y: 0 },
-  }
+  };
                             transition={{ duration: 0.5, delay: 0.1 },
-  }
+  };
                             className="className="bg-white rounded-xl p-6 shadow-lg border border-gray-100";"
                         >
                             <div className="flex items-center space-x-3">
@@ -221,11 +219,11 @@ const filteredServices = useMemo(() => {
 
                         <motion.div;
                             initial={{ opacity: 0, y: 20 },
-  }
+  };
                             animate={{ opacity: 1, y: 0 },
-  }
+  };
                             transition={{ duration: 0.5, delay: 0.2 },
-  }
+  };
                             className="className="bg-white rounded-xl p-6 shadow-lg border border-gray-100";"
                         >
                             <div className="flex items-center space-x-3">
@@ -239,11 +237,11 @@ const filteredServices = useMemo(() => {
 
                         <motion.div;
                             initial={{ opacity: 0, y: 20 },
-  }
+  };
                             animate={{ opacity: 1, y: 0 },
-  }
+  };
                             transition={{ duration: 0.5, delay: 0.3 },
-  }
+  };
                             className="className="bg-white rounded-xl p-6 shadow-lg border border-gray-100";"
                         >
                             <div className="flex items-center space-x-3">
@@ -257,11 +255,11 @@ const filteredServices = useMemo(() => {
 
                         <motion.div;
                             initial={{ opacity: 0, y: 20 },
-  }
+  };
                             animate={{ opacity: 1, y: 0 },
-  }
+  };
                             transition={{ duration: 0.5, delay: 0.4 },
-  }
+  };
                             className="className="bg-white rounded-xl p-6 shadow-lg border border-gray-100";"
                         >
                             <div className="flex items-center space-x-3">
@@ -277,12 +275,12 @@ const filteredServices = useMemo(() => {
             </section>
 
             {{/* Search and Filter Section */},
-  }
+  };
             <section className="py-8 px-4 sm:px-6 lg:px-8">
                 <div className="max-w-7xl mx-auto">
                     <div className="flex flex-col lg:flex-row gap-6">
                         {{/* Search */},
-  }
+  };
                         <div className="flex-1">
                             <div className="relative">
                                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
@@ -290,22 +288,22 @@ const filteredServices = useMemo(() => {
                                     type="text";
                                     placeholder="Search services...";
                                     value={{searchTerm},
-  }
+  };
                                     onChange={{(e) => setSearchTerm(e.target.value)},
-  }
+  };
                                     className="className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent";"
                                 />
                             </div>
                         </div>
 
                         {{/* Category Filter */},
-  }
+  };
                         <div className="flex-shrink-0">
                             <select;
                                 value={{selectedCategory},
-  }
+  };
                                 onChange={{(e) => setSelectedCategory(e.target.value)},
-  }
+  };
                                 className="className="px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent";"
                             >
                                 <option value="all">All Categories</option>
@@ -318,13 +316,13 @@ const filteredServices = useMemo(() => {
                         </div>
 
                         {{/* Source Filter */},
-  }
+  };
                         <div className="flex-shrink-0">
                             <select;
                                 value={{selectedSource},
-  }
+  };
                                 onChange={{(e) => setSelectedSource(e.target.value)},
-  }
+  };
                                 className="className="px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent";"
                             >
                                 <option value="all">All Sources</option>
@@ -335,13 +333,13 @@ const filteredServices = useMemo(() => {
                         </div>
 
                         {{/* View Mode Toggle */},
-  }
+  };
                         <div className="flex-shrink-0">
                             <div className="flex border border-gray-300 rounded-lg">
                                 <button;
                                     onClick={{onClick={() => setViewMode('grid')},
   },
-  }
+  };
                                     className={`px-4 py-3 rounded-l-lg ${
   viewMode === 'grid' ;
                                             ? 'bg-blue-600 text-white' ;
@@ -353,7 +351,7 @@ const filteredServices = useMemo(() => {
                                 <button;
                                     onClick={{onClick={() => setViewMode('list')},
   },
-  }
+  };
                                     className={`px-4 py-3 rounded-r-lg ${
   viewMode === 'list' ;
                                             ? 'bg-blue-600 text-white' ;
@@ -369,7 +367,7 @@ const filteredServices = useMemo(() => {
             </section>
 
             {{/* Services Display */},
-  }
+  };
             <section className="py-12 px-4 sm:px-6 lg:px-8">
                 <div className="max-w-7xl mx-auto">
                     {filteredServices.length === 0 ? (
@@ -394,29 +392,29 @@ const filteredServices = useMemo(() => {
                                     {filteredServices.map((service, index) => (
   <motion.div;
                                             key={{service.id},
-  }
+  };
                                             initial={{ opacity: 0, y: 20 },
-  }
+  };
                                             animate={{ opacity: 1, y: 0 },
-  }
+  };
                                             transition={{ duration: 0.5, delay: index * 0.1 },
-  }
+  };
                                             className="className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100";"
                                         >
                                             {{/* Service Header */},
-  }
+  };
                                             <div className={`bg-gradient-to-r ${getCategoryColor(service.category)} p-6 text-white`}>
                                                 <div className="flex items-center justify-between mb-4">
                                                     <span className="text-2xl">{getCategoryIcon(service.category)}</span>
                                                     {{getSourceBadge(service.source)},
-  }
+  };
                                                 </div>
                                                 <h3 className="text-xl font-bold mb-2">{service.name}</h3>
                                                 <p className="text-blue-100 text-sm">{service.category}</p>
                                             </div>
 
                                             {{/* Service Content */},
-  }
+  };
                                             <div className="p-6">
                                                 <p className="text-gray-600 mb-4 line-clamp-3">{service.description}</p>
                                                 ;
@@ -427,7 +425,7 @@ const filteredServices = useMemo(() => {
 
                                                 <a;
                                                     href={{service.link},
-  }
+  };
                                                     className="className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 text-white py-3 px-4 rounded-lg font-medium hover:from-blue-700 hover:to-indigo-700 transition-all duration-200 flex items-center justify-center space-x-2";"
                                                 >
                                                     <span>Learn More</span>
@@ -442,20 +440,20 @@ const filteredServices = useMemo(() => {
                                     {filteredServices.map((service, index) => (
   <motion.div;
                                             key={{service.id},
-  }
+  };
                                             initial={{ opacity: 0, x: -20 },
-  }
+  };
                                             animate={{ opacity: 1, x: 0 },
-  }
+  };
                                             transition={{ duration: 0.5, delay: index * 0.1 },
-  }
+  };
                                             className="className="bg-white rounded-xl p-6 shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300";"
                                         >
                                             <div className="flex items-center justify-between">
                                                 <div className="flex items-center space-x-4">
                                                     <div className={`p-3 rounded-lg bg-gradient-to-r ${getCategoryColor(service.category)}`}>
                                                         {{getCategoryIcon(service.category)},
-  }
+  };
                                                     </div>
                                                     <div>
                                                         <h3 className="text-xl font-bold text-gray-800 mb-1">{service.name}</h3>
@@ -466,13 +464,13 @@ const filteredServices = useMemo(() => {
                                                             <span>{service.pricing}</span>
                                                             <span>•</span>
                                                             {{getSourceBadge(service.source)},
-  }
+  };
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <a;
                                                     href={{service.link},
-  }
+  };
                                                     className="className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors";"
                                                 >
                                                     View Details;
@@ -488,7 +486,7 @@ const filteredServices = useMemo(() => {
             </section>
 
             {{/* Contact CTA Section */},
-  }
+  };
             <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-600 via-indigo-700 to-purple-800">
                 <div className="max-w-4xl mx-auto text-center">
                     <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -517,7 +515,7 @@ const filteredServices = useMemo(() => {
             </section>
 
             {{/* Footer */},
-  }
+  };
             <footer className="bg-gray-900 text-white py-12 px-4 sm: px-6 lg:px-8">
                 <div className="max-w-7xl mx-auto">
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -556,6 +554,5 @@ const filteredServices = useMemo(() => {
             </footer>
         </div>
     )
-}
 
 export default ComprehensiveServicesDashboard2025;

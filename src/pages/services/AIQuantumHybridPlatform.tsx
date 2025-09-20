@@ -102,10 +102,10 @@ export default function AIQuantumHybridPlatform() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-indigo-900 text-white">
       {{/* Hero Section */},
-  }
+  };
       <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
         {{/* Animated Background */},
-  }
+  };
         <div className="absolute inset-0">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(120,119,198,0.3),transparent_50%)]"></div>
           <div className="absolute inset-0 bg-[linear-gradient(45deg,transparent_30%,rgba(120,119,198,0.1)_50%,transparent_70%)] animate-pulse"></div>
@@ -114,11 +114,11 @@ export default function AIQuantumHybridPlatform() {
         <div className="relative max-w-7xl mx-auto text-center">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             animate={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
           >
             <div className="flex justify-center mb-6">
               <div className="p-3 bg-gradient-to-r from-purple-500 to-indigo-500 rounded-full">
@@ -138,18 +138,18 @@ export default function AIQuantumHybridPlatform() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button;
                 whileHover={{ scale: 1.05 },
-  }
+  };
                 whileTap={{ scale: 0.95 },
-  }
+  };
                 className="className="px-8 py-4 bg-gradient-to-r from-purple-600 to-indigo-600 rounded-full font-semibold text-lg hover:from-purple-700 hover:to-indigo-700 transition-all duration-300 shadow-lg hover:shadow-purple-500/25";"
               >
                 Start Free Trial;
               </motion.button>
               <motion.button;
                 whileHover={{ scale: 1.05 },
-  }
+  };
                 whileTap={{ scale: 0.95 },
-  }
+  };
                 className="className="px-8 py-4 border-2 border-purple-400 rounded-full font-semibold text-lg hover:bg-purple-400 hover:text-gray-900 transition-all duration-300";"
               >
                 Schedule Demo;
@@ -160,16 +160,16 @@ export default function AIQuantumHybridPlatform() {
       </section>
 
       {{/* Features Section */},
-  }
+  };
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-indigo-400 bg-clip-text text-transparent">
@@ -184,13 +184,13 @@ export default function AIQuantumHybridPlatform() {
             {features.map((feature, index) => (
   <motion.div;
                 key={{index},
-  }
+  };
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 },
-  }
+  };
                 whileInView={{ opacity: 1, x: 0 },
-  }
+  };
                 transition={{ duration: 0.8, delay: index * 0.2 },
-  }
+  };
                 className="className="bg-gradient-to-br from-purple-900/50 to-indigo-900/50 backdrop-blur-sm rounded-2xl p-8 border border-purple-500/20 hover:border-purple-400/40 transition-all duration-300";"
               >
                 <div className="flex items-center mb-6">
@@ -202,7 +202,7 @@ export default function AIQuantumHybridPlatform() {
                 ;
                 <p className="text-gray-300 mb-6 text-lg leading-relaxed">
                   {{feature.description},
-  }
+  };
                 </p>
                 ;
                 <ul className="space-y-3">
@@ -210,7 +210,7 @@ export default function AIQuantumHybridPlatform() {
   <li key={idx} className="flex items-center text-gray-200">
                       <CheckCircle className="h-5 w-5 text-green-400 mr-3 flex-shrink-0" />
                       {{benefit},
-  }
+  };
                     </li>
                   ))}
                 </ul>
@@ -221,16 +221,16 @@ export default function AIQuantumHybridPlatform() {
       </section>
 
       {{/* Use Cases Section */},
-  }
+  };
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-purple-900/30 to-indigo-900/30">
         <div className="max-w-7xl mx-auto">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-indigo-400 bg-clip-text text-transparent">
@@ -245,13 +245,13 @@ export default function AIQuantumHybridPlatform() {
             {useCases.map((useCase, index) => (
   <motion.div;
                 key={{index},
-  }
+  };
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.8, delay: index * 0.1 },
-  }
+  };
                 className="className="bg-gradient-to-br from-purple-900/50 to-indigo-900/50 backdrop-blur-sm rounded-xl p-6 border border-purple-500/20 hover:border-purple-400/40 transition-all duration-300";"
               >
                 <div className="flex items-center mb-4">
@@ -263,12 +263,12 @@ export default function AIQuantumHybridPlatform() {
                 ;
                 <p className="text-gray-300 mb-4 text-sm leading-relaxed">
                   {{useCase.description},
-  }
+  };
                 </p>
                 ;
                 <div className="text-purple-400 font-semibold text-lg">
                   {{useCase.price},
-  }
+  };
                 </div>
               </motion.div>
             ))}
@@ -277,16 +277,16 @@ export default function AIQuantumHybridPlatform() {
       </section>
 
       {{/* Pricing Section */},
-  }
+  };
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-indigo-400 bg-clip-text text-transparent">
@@ -301,13 +301,13 @@ export default function AIQuantumHybridPlatform() {
             {pricing.map((plan, index) => (
   <motion.div;
                 key={{index},
-  }
+  };
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.8, delay: index * 0.2 },
-  }
+  };
                 className={`relative bg-gradient-to-br from-purple-900/50 to-indigo-900/50 backdrop-blur-sm rounded-2xl p-8 border ${
   plan.popular ;
                     ? 'border-purple-400/60 shadow-lg shadow-purple-500/25' ;
@@ -336,16 +336,16 @@ export default function AIQuantumHybridPlatform() {
   <li key={idx} className="flex items-center text-gray-200">
                       <CheckCircle className="h-5 w-5 text-green-400 mr-3 flex-shrink-0" />
                       {{feature},
-  }
+  };
                     </li>
                   ))}
                 </ul>
                 ;
                 <motion.button;
                   whileHover={{ scale: 1.05 },
-  }
+  };
                   whileTap={{ scale: 0.95 },
-  }
+  };
                   className={`w-full py-3 rounded-lg font-semibold transition-all duration-300 ${
   plan.popular;
                       ? 'bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700';
@@ -361,16 +361,16 @@ export default function AIQuantumHybridPlatform() {
       </section>
 
       {{/* CTA Section */},
-  }
+  };
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-purple-900/50 to-indigo-900/50">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-indigo-400 bg-clip-text text-transparent">
               Ready to Experience the Future?;
@@ -382,18 +382,18 @@ export default function AIQuantumHybridPlatform() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button;
                 whileHover={{ scale: 1.05 },
-  }
+  };
                 whileTap={{ scale: 0.95 },
-  }
+  };
                 className="className="px-8 py-4 bg-gradient-to-r from-purple-600 to-indigo-600 rounded-full font-semibold text-lg hover:from-purple-700 hover:to-indigo-700 transition-all duration-300 shadow-lg hover:shadow-purple-500/25";"
               >
                 Start Free Trial;
               </motion.button>
               <motion.button;
                 whileHover={{ scale: 1.05 },
-  }
+  };
                 whileTap={{ scale: 0.95 },
-  }
+  };
                 className="className="px-8 py-4 border-2 border-purple-400 rounded-full font-semibold text-lg hover:bg-purple-400 hover:text-gray-900 transition-all duration-300";"
               >
                 Contact Sales;
@@ -404,13 +404,13 @@ export default function AIQuantumHybridPlatform() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <motion.div;
               initial={{ opacity: 0, y: 20 },
-  }
+  };
               whileInView={{ opacity: 1, y: 0 },
-  }
+  };
               transition={{ duration: 0.5, delay: 0.1 },
-  }
+  };
               viewport={{ once: true },
-  }
+  };
               className="className="text-center";"
             >
               <div className="w-16 h-16 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-xl flex items-center justify-center mx-auto mb-4 border border-cyan-400/30">
@@ -428,13 +428,13 @@ export default function AIQuantumHybridPlatform() {
 
             <motion.div;
               initial={{ opacity: 0, y: 20 },
-  }
+  };
               whileInView={{ opacity: 1, y: 0 },
-  }
+  };
               transition={{ duration: 0.5, delay: 0.2 },
-  }
+  };
               viewport={{ once: true },
-  }
+  };
               className="className="text-center";"
             >
               <div className="w-16 h-16 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-xl flex items-center justify-center mx-auto mb-4 border border-cyan-400/30">
@@ -452,13 +452,13 @@ export default function AIQuantumHybridPlatform() {
 
             <motion.div;
               initial={{ opacity: 0, y: 20 },
-  }
+  };
               whileInView={{ opacity: 1, y: 0 },
-  }
+  };
               transition={{ duration: 0.5, delay: 0.3 },
-  }
+  };
               viewport={{ once: true },
-  }
+  };
               className="className="text-center";"
             >
               <div className="w-16 h-16 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-xl flex items-center justify-center mx-auto mb-4 border border-cyan-400/30">
@@ -480,7 +480,7 @@ export default function AIQuantumHybridPlatform() {
       </section>
 
       {{/* Contact Information */},
-  }
+  };
       <section className="py-16 px-4 sm: px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <div className="grid md:grid-cols-3 gap-8">
@@ -504,4 +504,4 @@ export default function AIQuantumHybridPlatform() {
       </section>
     </div>
   )
-}
+};

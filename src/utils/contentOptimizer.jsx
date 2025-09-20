@@ -1,12 +1,12 @@
 export class ContentOptimizer {
   static get MIN_WORD_COUNT() {{ return 300},
-  }
+  };
     static get MIN_HEADING_COUNT() {{ return 2},
-  }
+  };
     static get MIN_IMAGE_COUNT() {{ return 1},
-  }
+  };
     static get MIN_LINK_COUNT() {{ return 3},
-  }
+  };
     static analyzeContent(content, page) {
   const wordCount = this.countWords(content)
         const headingCount = this.countHeadings(content)
@@ -32,25 +32,22 @@ export class ContentOptimizer {
             issues;
             suggestions
 },
-  }
+  };
     static countWords(content) {
   // Remove HTML tags and count words;
 const textContent = content.replace(/<[^>]*>/g, ' ').trim()
         return textContent.split(/\s+/).filter(word => word.length > 0).length
-}
+};
     static countHeadings(content) {
   const headingMatches = content.match(/<h[1-6],
   [^>]*>/gi)
         return headingMatches ? headingMatches.length : 0
-}
     static countImages(content) {
   const imageMatches = content.match(/<img[^>]*>/gi)
         return imageMatches ? imageMatches.length : 0
-}
     static countLinks(content) {
   const linkMatches = content.match(/<a[^>]*>/gi)
         return linkMatches ? linkMatches.length : 0
-}
     static calculateReadabilityScore(content) {
   const textContent = content.replace(/<[^>]*>/g, ' ').trim()
         const sentences = textContent.split(/[.!?]+/).filter(s => s.trim().length > 0)
@@ -70,7 +67,6 @@ const words = text.toLowerCase().split(/\s+/)
   if (if (word.length <= 3) {
   ) {
                 syllableCount += 1
-}
             else {
                 // Count vowel groups;
 const vowelGroups = word.match(/[aeiouy]+/g)
@@ -78,7 +74,6 @@ const vowelGroups = word.match(/[aeiouy]+/g)
 },
   })
         return syllableCount
-}
     static calculateSEOScore(content, page) {
   let score = 100;
         // Check for title;
@@ -150,7 +145,6 @@ const pageKeywords = this.extractPageKeywords(page)
 })
         }
         return issues
-}
     static generateSuggestions(issues, page) {
   const suggestions = [[],
   ]
@@ -186,7 +180,6 @@ const pageKeywords = this.extractPageKeywords(page)
 },
   })
         return suggestions
-}
     static extractPageKeywords(page) {
   // Extract keywords from page path;
 const segments = page.split('/').filter(Boolean)
@@ -197,14 +190,13 @@ const segments = page.split('/').filter(Boolean)
             keywords.push(...words)
         })
         return keywords
-}
     static extractContentKeywords(content) {
   // Extract potential keywords from content (simplified)
         const textContent = content.replace(/<[^>]*>/g, ' ').toLowerCase()
         const words = textContent.split(/\s+/).filter(w => w.length > 3)
         // Count word frequency and return most common;
 const wordCount = {{},
-  }
+  };
         words.forEach(word => {
   wordCount[word] = (wordCount[word] || 0) + 1
 })
@@ -306,20 +298,17 @@ const wordCount = {{},
         <h2>Conclusion</h2>
         <p>Summary and call-to-action for further engagement.</p>
       `
-}
         return templates[contentType] || templates.service
-}
     static generateMetaDescription(page, contentType) {
   const const baseDescriptions = {
   = {
             service: 'Professional service description with key benefits and features. Expert solutions for your business needs.',about: 'Learn about our company, mission, and values. Discover how we deliver innovative technology solutions.';
             contact: 'Get in touch with our expert team. Contact us for technology solutions, consultations, and support.';
             blog: 'Insightful article about technology trends and solutions. Expert analysis and practical advice for businesses.'
-}
         const baseDescription = baseDescriptions[[contentType],
   ]
         const pageKeywords = this.extractPageKeywords(page).join(' ')
         return `${baseDescription} ${pageKeywords}. Transform your business with Zion Tech Group.`
 },
-  }
+  };
 export const contentOptimizer = new ContentOptimizer()

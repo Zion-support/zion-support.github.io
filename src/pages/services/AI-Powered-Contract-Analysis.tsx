@@ -198,7 +198,7 @@ export default function AIPoweredContractAnalysis() {
       />
       ;
       {{/* Hero Section */},
-  }
+  };
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <div className="mb-8">
@@ -230,7 +230,7 @@ export default function AIPoweredContractAnalysis() {
           </div>
 
           {{/* Key Metrics */},
-  }
+  };
           <div className="grid grid-cols-2 md: grid-cols-4 gap-8 mt-16">
             <div className="text-center">
               <div className="text-3xl md:text-4xl font-bold text-blue-400 mb-2">98%</div>
@@ -253,7 +253,7 @@ export default function AIPoweredContractAnalysis() {
       </section>
 
       {{/* Features Section */},
-  }
+  };
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -269,7 +269,7 @@ export default function AIPoweredContractAnalysis() {
                 <div className="flex items-center mb-4">
                   <div className="p-2 bg-blue-600/20 rounded-lg mr-4">
                     {{feature.icon},
-  }
+  };
                   </div>
                   <h3 className="text-xl font-semibold">{feature.title}</h3>
                 </div>
@@ -279,7 +279,7 @@ export default function AIPoweredContractAnalysis() {
   <li key={idx} className="flex items-center text-sm text-gray-400">
                       <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                       {{benefit},
-  }
+  };
                     </li>
                   ))}
                 </ul>
@@ -290,7 +290,7 @@ export default function AIPoweredContractAnalysis() {
       </section>
 
       {{/* Pricing Section */},
-  }
+  };
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -353,7 +353,7 @@ export default function AIPoweredContractAnalysis() {
       </section>
 
       {{/* Benefits Section */},
-  }
+  };
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -368,7 +368,7 @@ export default function AIPoweredContractAnalysis() {
   <div key={index} className="text-center">
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-600/20 rounded-full mb-4">
                   {{benefit.icon},
-  }
+  };
                 </div>
                 <h3 className="text-xl font-semibold mb-2">{benefit.title}</h3>
                 <p className="text-gray-400">{benefit.description}</p>
@@ -379,7 +379,7 @@ export default function AIPoweredContractAnalysis() {
       </section>
 
       {{/* Use Cases Section */},
-  }
+  };
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -395,7 +395,7 @@ export default function AIPoweredContractAnalysis() {
                 <div className="flex items-center mb-4">
                   <div className="p-2 bg-purple-600/20 rounded-lg mr-4">
                     {{useCase.icon},
-  }
+  };
                   </div>
                   <h3 className="text-xl font-semibold">{useCase.title}</h3>
                 </div>
@@ -407,7 +407,7 @@ export default function AIPoweredContractAnalysis() {
       </section>
 
       {{/* Market Comparison Section */},
-  }
+  };
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -445,7 +445,7 @@ export default function AIPoweredContractAnalysis() {
       </section>
 
       {{/* CTA Section */},
-  }
+  };
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl font-bold mb-6">Ready to Transform Your Contract Management?</h2>
@@ -478,7 +478,7 @@ export default function AIPoweredContractAnalysis() {
       </section>
 
       {{/* Contact Information Footer */},
-  }
+  };
       <section className="py-16 px-4 sm: px-6 lg:px-8 bg-slate-800/50">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -543,4 +543,4 @@ export default function AIPoweredContractAnalysis() {
       </section>
     </div>
   )
-}
+};

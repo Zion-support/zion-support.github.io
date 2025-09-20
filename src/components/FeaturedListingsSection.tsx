@@ -48,13 +48,13 @@ const renderStars = (rating: number) => {
         <motion.div 
           className="text-center mb-16"
           initial={{ opacity: 0, y: 20 },
-  }
+  };
           whileInView={{ opacity: 1, y: 0 },
-  }
+  };
           viewport={{ once: true },
-  }
+  };
           transition={{ duration: 0.6 },
-  }
+  };
         >
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
             Featured Services
@@ -70,13 +70,13 @@ const renderStars = (rating: number) => {
               key={listing.id} 
               className="bg-white rounded-xl shadow-lg border border-gray-200 hover:shadow-xl transition-shadow duration-300 overflow-hidden group"
               initial={{ opacity: 0, y: 20 },
-  }
+  };
               whileInView={{ opacity: 1, y: 0 },
-  }
+  };
               viewport={{ once: true },
-  }
+  };
               transition={{ duration: 0.6, delay: index * 0.1 },
-  }
+  };
               onHoverStart={() => setHoveredListing(listing.id)}
               onHoverEnd={() => setHoveredListing(null)}
             >
@@ -145,13 +145,13 @@ const renderStars = (rating: number) => {
         <motion.div 
           className="mt-16 text-center"
           initial={{ opacity: 0, y: 20 },
-  }
+  };
           whileInView={{ opacity: 1, y: 0 },
-  }
+  };
           viewport={{ once: true },
-  }
+  };
           transition={{ duration: 0.6, delay: 0.4 },
-  }
+  };
         >
           <Link 
             to="/services"
@@ -164,4 +164,4 @@ const renderStars = (rating: number) => {
       </div>
     </section>
   )
-}
+};

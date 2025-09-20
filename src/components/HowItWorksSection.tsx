@@ -100,24 +100,24 @@ const statsVariants = {
         <motion.div
           className="absolute top-20 left-20 w-32 h-32 border border-zion-cyan/20 rounded-full opacity-30"
           animate={{ rotate: 360 },
-  }
+  };
           transition={{ duration: 20, repeat: Infinity, ease: "linear" },
-  }
+  };
         />
         <motion.div
           className="absolute bottom-20 right-20 w-24 h-24 border border-zion-purple/20 rounded-full opacity-30"
           animate={{ rotate: -360 },
-  }
+  };
           transition={{ duration: 25, repeat: Infinity, ease: "linear" },
-  }
+  };
         />
         <motion.div
           className="absolute top-1/2 left-1/2 w-16 h-16 border border-zion-cyan-light/20 rounded-full opacity-20"
           animate={{ scale: [1, 1.2, 1],
   },
-  }
+  };
           transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" },
-  }
+  };
         />
       </div>
 
@@ -125,13 +125,13 @@ const statsVariants = {
         <motion.div
           className="text-center mb-20"
           initial={{ opacity: 0, y: 20 },
-  }
+  };
           whileInView={{ opacity: 1, y: 0 },
-  }
+  };
           viewport={{ once: true },
-  }
+  };
           transition={{ duration: 0.6 },
-  }
+  };
         >
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
             How It <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">Works</span>
@@ -149,7 +149,7 @@ const statsVariants = {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true },
-  }
+  };
         >
           {stats.map((stat, index) => (
             <motion.div
@@ -172,7 +172,7 @@ const statsVariants = {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true },
-  }
+  };
         >
           {/* Enhanced connection line */}
           <div className="absolute top-1/2 left-0 right-0 h-1 bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-blue transform -translate-y-1/2 hidden lg:block">
@@ -189,9 +189,9 @@ const statsVariants = {
                 onHoverStart={() => setHoveredStep(index)}
                 onHoverEnd={() => setHoveredStep(null)}
                 whileHover={{ y: -8 },
-  }
+  };
                 transition={{ type: "spring", stiffness: 300 },
-  }
+  };
               >
                 {/* Step card */}
                 <div className="text-center p-6 rounded-2xl bg-gradient-to-br from-zion-blue-dark/80 to-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/30 hover:border-zion-cyan/50 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/20 group-hover:bg-zion-blue-dark h-full">
@@ -232,13 +232,13 @@ const statsVariants = {
                     <motion.div
                       className="absolute top-full left-1/2 transform -translate-x-1/2 mt-4 p-4 bg-zion-blue-dark rounded-xl border border-zion-cyan/30 shadow-2xl shadow-zion-cyan/20 backdrop-blur-sm z-10 min-w-[280px]"
                       initial={{ opacity: 0, y: 10, scale: 0.95 },
-  }
+  };
                       animate={{ opacity: 1, y: 0, scale: 1 },
-  }
+  };
                       exit={{ opacity: 0, y: 10, scale: 0.95 },
-  }
+  };
                       transition={{ duration: 0.2 },
-  }
+  };
                     >
                       <h4 className="text-white font-semibold mb-3">Key Features:</h4>
                       <ul className="space-y-2">
@@ -264,13 +264,13 @@ const statsVariants = {
         <motion.div
           className="text-center mt-16"
           initial={{ opacity: 0, y: 20 },
-  }
+  };
           whileInView={{ opacity: 1, y: 0 },
-  }
+  };
           viewport={{ once: true },
-  }
+  };
           transition={{ duration: 0.6, delay: 0.5 },
-  }
+  };
         >
           <div className="inline-block p-1 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-2xl">
             <div className="px-8 py-4 bg-zion-blue-dark rounded-xl">
@@ -286,4 +286,4 @@ const statsVariants = {
       </div>
     </section>
   )
-}
+};

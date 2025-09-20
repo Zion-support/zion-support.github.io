@@ -101,7 +101,7 @@ export default function AIServices() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {{/* Hero Section */},
-  }
+  };
       <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
@@ -132,7 +132,7 @@ export default function AIServices() {
         </div>
 
         {{/* Background Elements */},
-  }
+  };
         <div className="absolute inset-0 -z-10">
           <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-blue-500/10" />
           <div className="absolute top-20 left-20 w-72 h-72 bg-cyan-500/20 rounded-full blur-3xl" />
@@ -141,7 +141,7 @@ export default function AIServices() {
       </section>
 
       {{/* Services Grid */},
-  }
+  };
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -157,7 +157,7 @@ export default function AIServices() {
             {aiServices.map((service, index) => (
   <div;
                 key={{index},
-  }
+  };
                 className="className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-8 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105";"
               >
                 <div className="flex items-center mb-6">
@@ -175,7 +175,7 @@ export default function AIServices() {
   <li key={featureIndex} className="flex items-center text-slate-300">
                       <CheckCircle className="h-5 w-5 text-cyan-400 mr-3 flex-shrink-0" />
                       {{feature},
-  }
+  };
                     </li>
                   ))}
                 </ul>
@@ -199,7 +199,7 @@ export default function AIServices() {
       </section>
 
       {{/* Technologies Section */},
-  }
+  };
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -215,7 +215,7 @@ export default function AIServices() {
             {aiTechnologies.map((tech, index) => (
   <div;
                 key={{index},
-  }
+  };
                 className="className="text-center p-6 bg-slate-800/50 border border-slate-700/50 rounded-xl hover:border-cyan-500/50 transition-all duration-300";"
               >
                 <div className="p-3 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg w-16 h-16 mx-auto mb-4 flex items-center justify-center">
@@ -230,7 +230,7 @@ export default function AIServices() {
       </section>
 
       {{/* Use Cases Section */},
-  }
+  };
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -246,7 +246,7 @@ export default function AIServices() {
             {useCases.map((useCase, index) => (
   <div;
                 key={{index},
-  }
+  };
                 className="className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-cyan-500/50 transition-all duration-300";"
               >
                 <div className="p-3 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg w-12 h-12 mb-4 flex items-center justify-center">
@@ -258,7 +258,7 @@ export default function AIServices() {
   <li key={appIndex} className="text-slate-300 text-sm flex items-center">
                       <div className="w-2 h-2 bg-cyan-400 rounded-full mr-3" />
                       {{app},
-  }
+  };
                     </li>
                   ))}
                 </ul>
@@ -269,7 +269,7 @@ export default function AIServices() {
       </section>
 
       {{/* CTA Section */},
-  }
+  };
       <section className="py-20 px-4 sm: px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <div className="bg-gradient-to-r from-cyan-600/20 to-blue-600/20 border border-cyan-500/30 rounded-2xl p-12">
@@ -299,4 +299,4 @@ export default function AIServices() {
       </section>
     </div>
   )
-}
+};

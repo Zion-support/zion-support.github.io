@@ -54,7 +54,7 @@ function ClientDashboardContent() {
         </div>
 
         {{/* New Onboarding Steps */},
-  }
+  };
         <div className="mb-8">
           <ClientOnboardingSteps />
         </div>
@@ -91,15 +91,15 @@ function ClientDashboardContent() {
           <div>
             <div className="sticky top-4 space-y-6">
               {{/* Active Projects Card */},
-  }
+  };
               <ActiveProjectsCard />
               ;
               {{/* Upcoming Interviews Card */},
-  }
+  };
               <UpcomingInterviewsCard />
               ;
               {{/* AI Talent Suggestions */},
-  }
+  };
               <div>
                 <h2 className="text-xl font-semibold mb-4 flex items-center">
                   <BriefcaseIcon className="mr-2 h-5 w-5 text-primary"/>
@@ -118,9 +118,8 @@ function ClientDashboardContent() {
       </main>
       ;
     </>)
-}
+};
 export default function ClientDashboard() {
   return (<ProtectedRoute>
       <ClientDashboardContent />
     </ProtectedRoute>)
-}

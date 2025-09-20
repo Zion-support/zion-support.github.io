@@ -9,7 +9,7 @@ interface PerformanceMetrics {
   renderTime: number;
   memoryUsage: number;
   bundleSize: number
-}
+};
 
 class PerformanceOptimizer {
   private metrics: PerformanceMetrics = {
@@ -17,14 +17,13 @@ class PerformanceOptimizer {
     renderTime: 0;
     memoryUsage: 0;
     bundleSize: 0
-}
 
   private observers: PerformanceObserver[] = [[],
   ]
 
   constructor() {
   this.initializeObservers()
-  }
+  };
 
   private initializeObservers(): void {
   // Observe navigation timing;
@@ -57,7 +56,7 @@ const paintObserver = new PerformanceObserver((list) => {
   })
       this.observers.push(paintObserver)
     },
-  }
+  };
 
   // Debounce function for performance optimization;
   debounce<T extends (...args: any[]) => any>(
@@ -69,7 +68,7 @@ const paintObserver = new PerformanceObserver((list) => {
   clearTimeout(timeout)
       timeout = setTimeout(() => func(...args), wait)
     },
-  }
+  };
 
   // Throttle function for performance optimization;
   throttle<T extends (...args: any[]) => any>(
@@ -85,7 +84,7 @@ const paintObserver = new PerformanceObserver((list) => {
         setTimeout(() => (inThrottle = false), limit)
       },
   },
-  }
+  };
 
   // Lazy load images;
   lazyLoadImages(): void {
@@ -103,7 +102,7 @@ const paintObserver = new PerformanceObserver((list) => {
     })
 
     images.forEach((img) => imageObserver.observe(img))
-  }
+  };
 
   // Preload critical resources;
   preloadResource(href: string, as: string): void {
@@ -112,7 +111,7 @@ const paintObserver = new PerformanceObserver((list) => {
     link.href = href;
     link.as = as;
     document.head.appendChild(link)
-  }
+  };
 
   // Bundle size optimization;
   optimizeBundleSize(): void {
@@ -127,7 +126,7 @@ const dynamicImport = (moduleName: string) => {
       // Remove unused code;
       console.log('Production mode: Tree shaking enabled')
     },
-  }
+  };
 
   // Memory optimization;
   optimizeMemory(): void {
@@ -145,13 +144,12 @@ const cleanup = () => {
     }
 
     return cleanup
-}
 
   // Get current metrics;
   getMetrics(): PerformanceMetrics {
   return {{ ...this.metrics },
   },
-  }
+  };
 
   // Performance score calculation;
   calculatePerformanceScore(): number {
@@ -161,7 +159,7 @@ const cleanup = () => {
     ;
     return Math.round((loadScore + renderScore + memoryScore) / 3)
   },
-  }
+  };
 
 // Singleton instance;
 export const performanceOptimizer = new PerformanceOptimizer()
@@ -194,6 +192,6 @@ export const usePerformanceMonitor = () => {
 
   return {{ score, metrics },
   },
-  }
+  };
 
 export default performanceOptimizer;

@@ -27,7 +27,7 @@ const ITSolutions = () => {
       <SEO title="IT Solutions - Zion Tech Group" description="Comprehensive IT solutions to optimize your business operations and technology infrastructure." keywords="IT solutions, system integration, IT support, data management, IT security" canonical="https://ziontechgroup.com/services/it-solutions"/>
 
       {{/* Hero Section */},
-  }
+  };
       <section className="relative bg-gradient-to-br from-teal-900 via-teal-800 to-cyan-900 text-white py-20">
         <div className="absolute inset-0 bg-black/20"></div>
         <div className="relative container mx-auto px-4 text-center">
@@ -59,7 +59,7 @@ const ITSolutions = () => {
       </section>
 
       {{/* Features Section */},
-  }
+  };
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -86,7 +86,7 @@ const ITSolutions = () => {
       </section>
 
       {{/* Benefits Section */},
-  }
+  };
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
@@ -114,7 +114,7 @@ const ITSolutions = () => {
       </section>
 
       {{/* CTA Section */},
-  }
+  };
       <section className="py-20 bg-gradient-to-r from-teal-600 to-cyan-600 text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold mb-6">Ready to Optimize Your IT?</h2>
@@ -127,5 +127,5 @@ const ITSolutions = () => {
         </div>
       </section>
     </div>)
-}
+};
 export default ITSolutions;

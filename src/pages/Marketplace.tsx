@@ -271,7 +271,7 @@ export default function Marketplace() {
 ]
       pricing: '$0.01 per image',rating: 4.7,reviews: 203,downloads: 892,status: 'trending',tags: ['Computer VisionAI', 'Image ProcessingVideo Analysis']
       image: '/api/placeholder/400/300',demo: 'https://demo.ziontechgroup.com/computer-vision',documentation: 'https://docs.ziontechgroup.com/computer-vision'
-}
+};
     // Cloud Solutions;
     {
   id: 'cloud-migration',name: 'Cloud Migration Service',category: 'cloud',type: 'service',icon: Cloud,description: 'Professional cloud migration and optimization services',features: [
@@ -291,7 +291,6 @@ export default function Marketplace() {
 ]
       pricing: '$199/month',rating: 4.8,reviews: 134,downloads: 456,status: 'popular',tags: ['KubernetesContainer Orchestration', 'DevOpsCloud Native']
       image: '/api/placeholder/400/300',demo: 'https://demo.ziontechgroup.com/kubernetes-manager',documentation: 'https://docs.ziontechgroup.com/kubernetes-manager'
-}
     // Security & Compliance;
     {
   id: 'threat-detection',name: 'Advanced Threat Detection',category: 'security',type: 'software',icon: Shield,description: 'AI-powered threat detection and response system',features: [
@@ -311,7 +310,6 @@ export default function Marketplace() {
       pricing: 'Starting from $25,000';
       rating: 4.8,reviews: 45,downloads: 123,status: 'popular',tags: ['ComplianceSecurity', 'AuditCertification']
       image: '/api/placeholder/400/300',demo: 'https://demo.ziontechgroup.com/compliance-audit',documentation: 'https://docs.ziontechgroup.com/compliance-audit'
-}
     // Data & Analytics;
     {
   id: 'data-warehouse',name: 'Data Warehouse Solution',category: 'data',type: 'software',icon: Database,description: 'Scalable data warehouse with advanced analytics',features: [
@@ -330,7 +328,6 @@ export default function Marketplace() {
 ]
       pricing: '$149/month',rating: 4.6,reviews: 167,downloads: 789,status: 'popular',tags: ['Business IntelligenceDashboard', 'Data VisualizationAnalytics']
       image: '/api/placeholder/400/300',demo: 'https://demo.ziontechgroup.com/bi-dashboard',documentation: 'https://docs.ziontechgroup.com/bi-dashboard'
-}
     // Development Tools;
     {
   id: 'code-generator',name: 'AI Code Generator',category: 'development',type: 'software',icon: Code,description: 'AI-powered code generation and assistance tool',features: [
@@ -349,7 +346,6 @@ export default function Marketplace() {
 ]
       pricing: '$299/month',rating: 4.7,reviews: 156,downloads: 567,status: 'featured',tags: ['API GatewayMicroservices', 'API ManagementDeveloper Tools']
       image: '/api/placeholder/400/300',demo: 'https://demo.ziontechgroup.com/api-gateway',documentation: 'https://docs.ziontechgroup.com/api-gateway'
-}
     // Hardware & Equipment;
     {
   id: 'edge-computing',name: 'Edge Computing Device',category: 'hardware',type: 'hardware',icon: Cpu,description: 'High-performance edge computing device for IoT applications',features: [
@@ -377,7 +373,7 @@ export default function Marketplace() {
 
   const toggleItemExpansion = (itemId: string) => {
   setExpandedItem(expandedItem === itemId ? null : itemId)
-  }
+  };
   const filteredItems = marketplaceItems.filter(item => {
   if (selectedCategory !== 'all' && item.category !== selectedCategory) return false;
     if (selectedType !== 'all' && item.type !== selectedType) return false;
@@ -400,7 +396,7 @@ export default function Marketplace() {
       case 'hardware': return 'bg-gray-500/20 text-gray-400';
       default: return 'bg-slate-500/20 text-slate-400'
 },
-  }
+  };
   const getTypeColor = (type: string) => {
   switch (type) {
   case 'software': return 'bg-blue-500/20 text-blue-400';
@@ -408,7 +404,7 @@ export default function Marketplace() {
       case 'hardware': return 'bg-orange-500/20 text-orange-400';
       default: return 'bg-slate-500/20 text-slate-400'
 },
-  }
+  };
   const getStatusColor = (status: string) => {
   switch (status) {
   case 'featured': return 'bg-yellow-500/20 text-yellow-400';
@@ -416,7 +412,7 @@ export default function Marketplace() {
       case 'trending': return 'bg-green-500/20 text-green-400';
       default: return 'bg-slate-500/20 text-slate-400'
 },
-  }
+  };
   const renderStars = (rating: number) => {
   const stars = [[],
   ]
@@ -438,7 +434,6 @@ const emptyStars = 5 - Math.ceil(rating)
     }
     ;
     return stars
-}
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -448,17 +443,17 @@ const emptyStars = 5 - Math.ceil(rating)
       />
       ;
       {{/* Hero Section */},
-  }
+  };
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-green-500/10 via-blue-500/10 to-purple-500/10"></div>
         <div className="container mx-auto px-6 relative z-10">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             animate={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             className="className="text-center";"
           >
             <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-green-500/20 to-blue-500/20 rounded-2xl mb-6">
@@ -476,13 +471,13 @@ const emptyStars = 5 - Math.ceil(rating)
       </section>
 
       {{/* Search and Filters */},
-  }
+  };
       <section className="py-12">
         <div className="container mx-auto px-6">
           <div className="max-w-6xl mx-auto">
             <div className="flex flex-col lg:flex-row gap-6 mb-8">
               {{/* Search */},
-  }
+  };
               <div className="flex-1">
                 <div className="relative">
                   <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
@@ -490,22 +485,22 @@ const emptyStars = 5 - Math.ceil(rating)
                     type="text";
                     placeholder="Search marketplace items...";
                     value={{searchQuery},
-  }
+  };
                     onChange={{(e) => setSearchQuery(e.target.value)},
-  }
+  };
                     className="className="w-full pl-12 pr-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-green-400 focus:ring-2 focus:ring-green-400/20 transition-all duration-200";"
                   />
                 </div>
               </div>
 
               {{/* Category Filter */},
-  }
+  };
               <div className="lg:w-48">
                 <select;
                   value={{selectedCategory},
-  }
+  };
                   onChange={{(e) => setSelectedCategory(e.target.value)},
-  }
+  };
                   className="className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white focus:outline-none focus:border-green-400 focus:ring-2 focus:ring-green-400/20 transition-all duration-200";"
                 >
                   {categories.map((category) => (
@@ -517,13 +512,13 @@ const emptyStars = 5 - Math.ceil(rating)
               </div>
 
               {{/* Type Filter */},
-  }
+  };
               <div className="lg:w-48">
                 <select;
                   value={{selectedType},
-  }
+  };
                   onChange={{(e) => setSelectedType(e.target.value)},
-  }
+  };
                   className="className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white focus:outline-none focus:border-green-400 focus:ring-2 focus:ring-green-400/20 transition-all duration-200";"
                 >
                   {types.map((type) => (
@@ -535,12 +530,12 @@ const emptyStars = 5 - Math.ceil(rating)
               </div>
 
               {{/* View Mode Toggle */},
-  }
+  };
               <div className="flex items-center gap-2">
                 <button;
                   onClick={{onClick={() => setViewMode('grid')},
   },
-  }
+  };
                   className={`p-2 rounded-lg transition-all duration-200 ${
   viewMode === 'grid' ;
                       ? 'bg-green-400/20 text-green-400' ;
@@ -552,7 +547,7 @@ const emptyStars = 5 - Math.ceil(rating)
                 <button;
                   onClick={{onClick={() => setViewMode('list')},
   },
-  }
+  };
                   className={`p-2 rounded-lg transition-all duration-200 ${
   viewMode === 'list' ;
                       ? 'bg-green-400/20 text-green-400' ;
@@ -568,16 +563,16 @@ const emptyStars = 5 - Math.ceil(rating)
       </section>
 
       {{/* Featured Items */},
-  }
+  };
       <section className="py-16">
         <div className="container mx-auto px-6">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             className="className="text-center mb-12";"
           >
             <h2 className="text-3xl font-bold text-white mb-4">Featured Solutions</h2>
@@ -588,13 +583,13 @@ const emptyStars = 5 - Math.ceil(rating)
             {featuredItems.map((item, index) => (
   <motion.div;
                 key={{item.id},
-  }
+  };
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.8, delay: index * 0.1 },
-  }
+  };
                 className="className="group";"
               >
                 <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-2xl border border-slate-600/50 hover:border-green-400/50 transition-all duration-300 hover:scale-105 overflow-hidden">
@@ -602,15 +597,15 @@ const emptyStars = 5 - Math.ceil(rating)
                     <div className="flex items-center gap-3 mb-4">
                       <span className={`px-3 py-1 rounded-full text-xs font-medium ${getCategoryColor(item.category)}`}>
                         {{categories.find(c => c.id === item.category)?.name},
-  }
+  };
                       </span>
                       <span className={`px-3 py-1 rounded-full text-xs font-medium ${getTypeColor(item.type)}`}>
                         {{types.find(t => t.id === item.type)?.name},
-  }
+  };
                       </span>
                       <span className={`px-3 py-1 rounded-full text-xs font-medium ${getStatusColor(item.status)}`}>
                         {{item.status.charAt(0).toUpperCase() + item.status.slice(1)},
-  }
+  };
                       </span>
                     </div>
                     ;
@@ -620,19 +615,19 @@ const emptyStars = 5 - Math.ceil(rating)
                       </div>
                       <h3 className="text-xl font-bold text-white group-hover:text-green-400 transition-colors duration-200">
                         {{item.name},
-  }
+  };
                       </h3>
                     </div>
                     ;
                     <p className="text-gray-300 text-sm mb-4 leading-relaxed">
                       {{item.description},
-  }
+  };
                     </p>
                     ;
                     <div className="flex items-center gap-4 mb-4 text-sm">
                       <div className="flex items-center gap-1">
                         {{renderStars(item.rating)},
-  }
+  };
                         <span className="text-gray-400 ml-1">({item.reviews})</span>
                       </div>
                       <div className="text-gray-400">•</div>
@@ -655,7 +650,7 @@ const emptyStars = 5 - Math.ceil(rating)
                       {item.tags.slice(0, 3).map((tag, tagIndex) => (
   <span key={tagIndex} className="px-2 py-1 bg-slate-700/50 text-gray-300 text-xs rounded">
                           {{tag},
-  }
+  };
                         </span>
                       ))}
                     </div>
@@ -663,23 +658,23 @@ const emptyStars = 5 - Math.ceil(rating)
                     <button;
                       onClick={{onClick={() => toggleItemExpansion(item.id)},
   },
-  }
+  };
                       className="className="w-full px-4 py-2 bg-gradient-to-r from-green-400 to-blue-500 text-white font-semibold rounded-lg hover:from-green-500 hover:to-blue-600 transition-all duration-200 hover:scale-105";"
                     >
                       {{expandedItem === item.id ? 'Show Less' : 'Learn More'},
-  }
+  };
                     </button>
                     ;
                     {expandedItem === item.id && (
   <motion.div;
                         initial={{ opacity: 0, height: 0 },
-  }
+  };
                         animate={{ opacity: 1, height: 'auto' },
-  }
+  };
                         exit={{ opacity: 0, height: 0 },
-  }
+  };
                         transition={{ duration: 0.3 },
-  }
+  };
                         className="className="mt-4 pt-4 border-t border-slate-600/50";"
                       >
                         <div className="mb-4">
@@ -689,7 +684,7 @@ const emptyStars = 5 - Math.ceil(rating)
   <li key={featureIndex} className="flex items-center text-gray-300 text-sm">
                                 <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
                                 {{feature},
-  }
+  };
                               </li>
                             ))}
                           </ul>
@@ -698,7 +693,7 @@ const emptyStars = 5 - Math.ceil(rating)
                         <div className="flex flex-col sm:flex-row gap-2">
                           <a;
                             href={{item.demo},
-  }
+  };
                             target="_blank";
                             rel="noopener noreferrer";
                             className="className="flex-1 px-3 py-2 bg-blue-500/20 text-blue-400 text-sm font-medium rounded-lg hover:bg-blue-500/30 transition-all duration-200 text-center";"
@@ -708,7 +703,7 @@ const emptyStars = 5 - Math.ceil(rating)
                           </a>
                           <a;
                             href={{item.documentation},
-  }
+  };
                             target="_blank";
                             rel="noopener noreferrer";
                             className="className="flex-1 px-3 py-2 bg-purple-500/20 text-purple-400 text-sm font-medium rounded-lg hover:bg-purple-500/30 transition-all duration-200 text-center";"
@@ -728,16 +723,16 @@ const emptyStars = 5 - Math.ceil(rating)
       </section>
 
       {{/* All Marketplace Items */},
-  }
+  };
       <section className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50">
         <div className="container mx-auto px-6">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">All Marketplace Items</h2>
@@ -751,13 +746,13 @@ const emptyStars = 5 - Math.ceil(rating)
               {filteredItems.map((item, index) => (
   <motion.div;
                   key={{item.id},
-  }
+  };
                   initial={{ opacity: 0, y: 20 },
-  }
+  };
                   whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                   transition={{ duration: 0.8, delay: index * 0.05 },
-  }
+  };
                   className="className="group";"
                 >
                   <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl border border-slate-600/50 hover:border-green-400/50 transition-all duration-300 hover:scale-105 overflow-hidden">
@@ -765,11 +760,11 @@ const emptyStars = 5 - Math.ceil(rating)
                       <div className="flex items-center gap-2 mb-3">
                         <span className={`px-2 py-1 rounded-full text-xs font-medium ${getCategoryColor(item.category)}`}>
                           {{categories.find(c => c.id === item.category)?.name},
-  }
+  };
                         </span>
                         <span className={`px-2 py-1 rounded-full text-xs font-medium ${getTypeColor(item.type)}`}>
                           {{types.find(t => t.id === item.type)?.name},
-  }
+  };
                         </span>
                       </div>
                       ;
@@ -779,19 +774,19 @@ const emptyStars = 5 - Math.ceil(rating)
                         </div>
                         <h3 className="text-lg font-bold text-white group-hover:text-green-400 transition-colors duration-200">
                           {{item.name},
-  }
+  };
                         </h3>
                       </div>
                       ;
                       <p className="text-gray-300 text-xs mb-3 leading-relaxed line-clamp-2">
                         {{item.description},
-  }
+  };
                       </p>
                       ;
                       <div className="flex items-center gap-2 mb-3 text-xs">
                         <div className="flex items-center gap-1">
                           {{renderStars(item.rating)},
-  }
+  };
                           <span className="text-gray-400">({item.reviews})</span>
                         </div>
                       </div>
@@ -812,7 +807,7 @@ const emptyStars = 5 - Math.ceil(rating)
                         {item.tags.slice(0, 2).map((tag, tagIndex) => (
   <span key={tagIndex} className="px-2 py-1 bg-slate-700/50 text-gray-300 text-xs rounded">
                             {{tag},
-  }
+  };
                           </span>
                         ))}
                       </div>
@@ -830,13 +825,13 @@ const emptyStars = 5 - Math.ceil(rating)
               {filteredItems.map((item, index) => (
   <motion.div;
                   key={{item.id},
-  }
+  };
                   initial={{ opacity: 0, x: -20 },
-  }
+  };
                   whileInView={{ opacity: 1, x: 0 },
-  }
+  };
                   transition={{ duration: 0.8, delay: index * 0.05 },
-  }
+  };
                   className="className="group";"
                 >
                   <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl border border-slate-600/50 hover:border-green-400/50 transition-all duration-300 p-6">
@@ -851,34 +846,34 @@ const emptyStars = 5 - Math.ceil(rating)
                         <div className="flex items-center gap-3 mb-2">
                           <span className={`px-3 py-1 rounded-full text-xs font-medium ${getCategoryColor(item.category)}`}>
                             {{categories.find(c => c.id === item.category)?.name},
-  }
+  };
                           </span>
                           <span className={`px-3 py-1 rounded-full text-xs font-medium ${getTypeColor(item.type)}`}>
                             {{types.find(t => t.id === item.type)?.name},
-  }
+  };
                           </span>
                           {item.status !== 'regular' && (
   <span className={`px-3 py-1 rounded-full text-xs font-medium ${getStatusColor(item.status)}`}>
                               {{item.status.charAt(0).toUpperCase() + item.status.slice(1)},
-  }
+  };
                             </span>
                           )}
                         </div>
                         ;
                         <h3 className="text-xl font-bold text-white group-hover:text-green-400 transition-colors duration-200 mb-2">
                           {{item.name},
-  }
+  };
                         </h3>
                         ;
                         <p className="text-gray-300 text-sm mb-3 leading-relaxed">
                           {{item.description},
-  }
+  };
                         </p>
                         ;
                         <div className="flex items-center gap-4 text-sm mb-3">
                           <div className="flex items-center gap-1">
                             {{renderStars(item.rating)},
-  }
+  };
                             <span className="text-gray-400 ml-1">({item.reviews})</span>
                           </div>
                           <div className="text-gray-400">•</div>
@@ -889,7 +884,7 @@ const emptyStars = 5 - Math.ceil(rating)
                           {item.tags.map((tag, tagIndex) => (
   <span key={tagIndex} className="px-2 py-1 bg-slate-700/50 text-gray-300 text-xs rounded">
                               {{tag},
-  }
+  };
                             </span>
                           ))}
                         </div>
@@ -922,16 +917,16 @@ const emptyStars = 5 - Math.ceil(rating)
       </section>
 
       {{/* Call to Action */},
-  }
+  };
       <section className="py-20">
         <div className="container mx-auto px-6 text-center">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
           >
             <h2 className="text-4xl font-bold text-white mb-6">
               Can't Find What You're Looking For?;
@@ -957,4 +952,3 @@ const emptyStars = 5 - Math.ceil(rating)
       </section>
     </div>
   )
-}

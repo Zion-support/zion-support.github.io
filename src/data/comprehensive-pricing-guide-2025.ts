@@ -3,18 +3,17 @@ export interface PricingTier {
   ]
     popular?: boolean;
     savings?: string
-}
+};
 
 export interface ServicePricing {
   id: string,name: string,category: string,description: string,pricing: PricingTier[],features: string[],benefits: string[],roi: string,trialDays: number,setupTime: string,marketPosition: string,competitors: string[],contactInfo: {
   mobile: string,email: string,address: string,website: string
 },
-  }
+  };
 
 const const CONTACT = {
   = {
     mobile: '+1 302 464 0950',email: 'kleber@ziontechgroup.com',address: '364 E Main St STE 1008 Middletown DE 19709',website: 'https://ziontechgroup.com'
-}
 export const comprehensivePricingGuide2025: ServicePricing[] = [
   // FINANCIAL TECHNOLOGY SERVICES;
     {
@@ -90,7 +89,6 @@ export const comprehensivePricingGuide2025: ServicePricing[] = [
 ]
         roi: 'Increase revenue by 15-25% through new market access and lower fees',trialDays: 7,setupTime: '48 hours',marketPosition: 'Enterprise crypto payment solution for e-commerce and SaaS companies',competitors: ['Coinbase CommerceBitPay', 'CoinPayments']
         contactInfo: CONTACT
-}
     // HEALTHCARE TECHNOLOGY SERVICES;
     {
   id: 'ai-telemedicine-platform',name: 'AI Telemedicine Platform',category: 'Healthtech',description: 'Advanced telemedicine platform with AI symptom analysis and intelligent patient routing.',pricing: [
@@ -128,7 +126,6 @@ export const comprehensivePricingGuide2025: ServicePricing[] = [
 ]
         roi: 'Increase patient capacity by 3-4x while reducing operational costs',trialDays: 14,setupTime: '2 weeks',marketPosition: 'AI-enhanced telemedicine solution for healthcare providers',competitors: ['TeladocAmwell', 'MDLive']
         contactInfo: CONTACT
-}
     // EDUCATION TECHNOLOGY SERVICES;
     {
   id: 'ai-personalized-learning-platform',name: 'AI Personalized Learning Platform',category: 'Edutech',description: 'Intelligent learning platform with adaptive algorithms and personalized educational experiences.',pricing: [
@@ -166,7 +163,6 @@ export const comprehensivePricingGuide2025: ServicePricing[] = [
 ]
         roi: 'Improve student performance and retention rates significantly',trialDays: 30,setupTime: '1 week',marketPosition: 'AI-powered personalized learning pioneer for educational institutions',competitors: ['DreamBoxKnewton', 'Smart Sparrow']
         contactInfo: CONTACT
-}
     // MARKETING TECHNOLOGY SERVICES;
     {
   id: 'ai-content-optimization-engine',name: 'AI Content Optimization Engine',category: 'Martech',description: 'Intelligent content optimization platform with AI-powered suggestions and A/B testing.',pricing: [
@@ -205,7 +201,6 @@ export const comprehensivePricingGuide2025: ServicePricing[] = [
 ]
         roi: 'Improve marketing ROI by 2-3x through better content performance',trialDays: 21,setupTime: '1 week',marketPosition: 'AI-powered content optimization leader for marketing teams',competitors: ['OptimizelyVWO', 'Google Optimize']
         contactInfo: CONTACT
-}
     // AI SERVICES;
     {
   id: 'ai-threat-intelligence-platform',name: 'AI Threat Intelligence Platform',category: 'AI Services',description: 'Advanced threat intelligence platform with AI-powered detection and automated response.',pricing: [
@@ -244,7 +239,6 @@ export const comprehensivePricingGuide2025: ServicePricing[] = [
 ]
         roi: 'Prevent costly security breaches and reduce incident response costs',trialDays: 14,setupTime: '2 weeks',marketPosition: 'AI-powered threat intelligence leader for enterprise security',competitors: ['Recorded FutureThreatConnect', 'Anomali']
         contactInfo: CONTACT
-}
     // IT SERVICES;
     {
   id: 'automated-compliance-monitoring',name: 'Automated Compliance Monitoring',category: 'IT Services',description: 'Intelligent compliance monitoring platform with automated reporting and violation alerts.',pricing: [
@@ -283,7 +277,6 @@ export const comprehensivePricingGuide2025: ServicePricing[] = [
 ]
         roi: 'Reduce compliance overhead and avoid costly regulatory fines',trialDays: 21,setupTime: '3 weeks',marketPosition: 'Automated compliance monitoring solution for regulated industries',competitors: ['LogicGateMetricStream', 'ServiceNow GRC']
         contactInfo: CONTACT
-}
     // MICRO SAAS SERVICES;
     {
   id: 'ai-project-resource-optimizer',name: 'AI Project Resource Optimizer',category: 'Micro SaaS',description: 'AI-powered project management platform with intelligent resource allocation and optimization.',pricing: [

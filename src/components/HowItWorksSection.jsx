@@ -114,18 +114,18 @@ const statsVariants = {
                     viewport={{ once: true },
   } 
                     transition={{ duration: 0.6 },
-  }
+  };
                 >
                     <motion.div 
                         className="inline-flex items-center gap-2 px-4 py-2 bg-zion-cyan/20 backdrop-blur-sm rounded-full border border-zion-cyan/30 mb-6"
                         initial={{ opacity: 0, scale: 0.8 },
-  }
+  };
                         whileInView={{ opacity: 1, scale: 1 },
-  }
+  };
                         viewport={{ once: true },
-  }
+  };
                         transition={{ duration: 0.6, delay: 0.2 },
-  }
+  };
                     >
                         <Rocket className="h-5 w-5 text-zion-cyan" />
                         <span className="text-zion-cyan text-sm font-medium">How It Works</span>
@@ -134,13 +134,13 @@ const statsVariants = {
                     <motion.h2 
                         className="text-4xl md:text-5xl font-bold text-white mb-6"
                         initial={{ opacity: 0, y: 20 },
-  }
+  };
                         whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                         viewport={{ once: true },
-  }
+  };
                         transition={{ duration: 0.6, delay: 0.3 },
-  }
+  };
                     >
                         Simple 5-Step Process
                     </motion.h2>
@@ -148,13 +148,13 @@ const statsVariants = {
                     <motion.p 
                         className="text-xl text-zion-slate-light max-w-3xl mx-auto"
                         initial={{ opacity: 0, y: 20 },
-  }
+  };
                         whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                         viewport={{ once: true },
-  }
+  };
                         transition={{ duration: 0.6, delay: 0.4 },
-  }
+  };
                     >
                         From discovery to delivery, our streamlined process ensures you get the right 
                         micro SAAS solution quickly and efficiently.
@@ -168,7 +168,7 @@ const statsVariants = {
                     initial="hidden"
                     whileInView="visible"
                     viewport={{ once: true },
-  }
+  };
                 >
                     {steps.map((step, index) => (
                         <motion.div
@@ -206,13 +206,13 @@ const statsVariants = {
                                     {hoveredStep === index && (
                                         <motion.div
                                             initial={{ opacity: 0, height: 0 },
-  }
+  };
                                             animate={{ opacity: 1, height: "auto" },
-  }
+  };
                                             exit={{ opacity: 0, height: 0 },
-  }
+  };
                                             transition={{ duration: 0.3 },
-  }
+  };
                                             className="overflow-hidden"
                                         >
                                             <div className="border-t border-white/20 pt-4 mt-4">
@@ -249,13 +249,13 @@ const statsVariants = {
                 <motion.div 
                     className="text-center mb-16"
                     initial={{ opacity: 0, y: 20 },
-  }
+  };
                     whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                     viewport={{ once: true },
-  }
+  };
                     transition={{ duration: 0.6, delay: 0.5 },
-  }
+  };
                 >
                     <h3 className="text-2xl font-bold text-white mb-8">
                         Why Choose Zion Tech Group?
@@ -267,7 +267,7 @@ const statsVariants = {
                         initial="hidden"
                         whileInView="visible"
                         viewport={{ once: true },
-  }
+  };
                     >
                         {stats.map((stat, index) => (
                             <motion.div
@@ -275,9 +275,9 @@ const statsVariants = {
                                 variants={statsVariants}
                                 className="text-center group"
                                 whileHover={{ scale: 1.05 },
-  }
+  };
                                 transition={{ type: "spring", stiffness: 400 },
-  }
+  };
                             >
                                 <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center text-white mb-4 mx-auto group-hover:shadow-lg group-hover:shadow-zion-cyan/25 transition-all duration-300">
                                     {stat.icon}
@@ -297,13 +297,13 @@ const statsVariants = {
                 <motion.div 
                     className="text-center"
                     initial={{ opacity: 0, y: 20 },
-  }
+  };
                     whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                     viewport={{ once: true },
-  }
+  };
                     transition={{ duration: 0.6, delay: 0.6 },
-  }
+  };
                 >
                     <div className="inline-block p-1 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-2xl">
                         <div className="px-8 py-6 bg-zion-blue-dark rounded-xl">
@@ -326,4 +326,4 @@ const statsVariants = {
             </div>
         </section>
     )
-}
+};

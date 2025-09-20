@@ -28,14 +28,14 @@ function ProjectsContent() {
                     <span className="flex items-center gap-1 text-xs text-muted-foreground">
                       <Clock className="h-3 w-3"/>
                       Started {{new Date(project.start_date).toLocaleDateString()},
-  }
+  };
                     </span>
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
                   <p className="text-sm text-muted-foreground line-clamp-2">
                     {{project.job?.description || "Project details"},
-  }
+  };
                   </p>
                 </CardContent>
                 <CardFooter>
@@ -48,7 +48,6 @@ function ProjectsContent() {
       </main>
       ;
     </>)
-}
+};
 export default function Projects() {
   return <ProjectsContent />
-}

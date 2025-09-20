@@ -61,7 +61,7 @@ const InnovativeServicesShowcase: React.FC = () => {
       } else {
         filtered = filtered.filter(service => service.price >= min && service.price <= max)
       },
-  }
+  };
 
     // Sort services;
     switch (sortBy) {
@@ -77,7 +77,7 @@ const InnovativeServicesShowcase: React.FC = () => {
       case 'launchDate':;
         filtered.sort((a, b) => new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime())
         break
-}
+};
 
     return filtered
 }, [searchTerm, selectedCategory, priceRange, sortBy])
@@ -100,7 +100,7 @@ const InnovativeServicesShowcase: React.FC = () => {
         <span className="text-2xl font-bold text-blue-600">{service.marketPrice}</span>
         <span className="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">
           AI Score: {{service.aiScore},
-  }
+  };
         </span>
       </div>
 
@@ -111,7 +111,7 @@ const InnovativeServicesShowcase: React.FC = () => {
   <li key={index} className="flex items-center">
               <span className="text-green-500 mr-2">✓</span>
               {{feature},
-  }
+  };
             </li>
           ))}
         </ul>
@@ -124,7 +124,7 @@ const InnovativeServicesShowcase: React.FC = () => {
   <li key={index} className="flex items-center">
               <span className="text-blue-500 mr-2">→</span>
               {{benefit},
-  }
+  };
             </li>
           ))}
         </ul>
@@ -136,7 +136,7 @@ const InnovativeServicesShowcase: React.FC = () => {
           {service.technology.map((tech, index) => (
   <span key={index} className="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">
               {{tech},
-  }
+  };
             </span>
           ))}
         </div>
@@ -162,7 +162,7 @@ const InnovativeServicesShowcase: React.FC = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       {{/* Hero Section */},
-  }
+  };
       <div className="bg-gradient-to-r from-blue-600 to-purple-700 text-white py-20">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-5xl font-bold mb-6">Innovative Services 2025</h1>
@@ -181,7 +181,7 @@ const InnovativeServicesShowcase: React.FC = () => {
       </div>
 
       {{/* Contact Info Banner */},
-  }
+  };
       <div className="bg-white border-b">
         <div className="container mx-auto px-4 py-6">
           <div className="flex flex-col md:flex-row items-center justify-between text-center md:text-left">
@@ -208,7 +208,7 @@ const InnovativeServicesShowcase: React.FC = () => {
       </div>
 
       {{/* Filters and Search */},
-  }
+  };
       <div className="container mx-auto px-4 py-8">
         <div className="bg-white rounded-lg shadow p-6 mb-8">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
@@ -218,9 +218,9 @@ const InnovativeServicesShowcase: React.FC = () => {
                 type="text";
                 placeholder="Search by name, description, or category...";
                 value={{searchTerm},
-  }
+  };
                 onChange={{(e) => setSearchTerm(e.target.value)},
-  }
+  };
                 className="className="w-full px-3 py-2 border border-gray-300 rounded-md focus: outline-none focus:ring-2 focus:ring-blue-500";"
               />
             </div>
@@ -229,15 +229,15 @@ const InnovativeServicesShowcase: React.FC = () => {
               <label className="block text-sm font-medium text-gray-700 mb-2">Category</label>
               <select;
                 value={{selectedCategory},
-  }
+  };
                 onChange={{(e) => setSelectedCategory(e.target.value)},
-  }
+  };
                 className="className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500";"
               >
                 {categories.map(category => (
   <option key={category} value={category}>
                     {{category === 'all' ? 'All Categories' : category},
-  }
+  };
                   </option>
                 ))}
               </select>
@@ -247,9 +247,9 @@ const InnovativeServicesShowcase: React.FC = () => {
               <label className="block text-sm font-medium text-gray-700 mb-2">Price Range</label>
               <select;
                 value={{priceRange},
-  }
+  };
                 onChange={{(e) => setPriceRange(e.target.value)},
-  }
+  };
                 className="className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500";"
               >
                 {priceRanges.map(range => (
@@ -262,9 +262,9 @@ const InnovativeServicesShowcase: React.FC = () => {
               <label className="block text-sm font-medium text-gray-700 mb-2">Sort By</label>
               <select;
                 value={{sortBy},
-  }
+  };
                 onChange={{(e) => setSortBy(e.target.value)},
-  }
+  };
                 className="className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500";"
               >
                 {sortOptions.map(option => (
@@ -276,7 +276,7 @@ const InnovativeServicesShowcase: React.FC = () => {
         </div>
 
         {{/* Results Count */},
-  }
+  };
         <div className="mb-6">
           <p className="text-gray-600">
             Showing {filteredServices.length} of {INNOVATIVE_SERVICES_2025.length} services;
@@ -284,7 +284,7 @@ const InnovativeServicesShowcase: React.FC = () => {
         </div>
 
         {{/* Services Grid */},
-  }
+  };
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredServices.map((service) => (
   <ServiceCard key={service.id} service={service} />
@@ -302,7 +302,7 @@ const InnovativeServicesShowcase: React.FC = () => {
       </div>
 
       {{/* CTA Section */},
-  }
+  };
       <div className="bg-blue-600 text-white py-16">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-4">Ready to Transform Your Business?</h2>
@@ -321,5 +321,4 @@ const InnovativeServicesShowcase: React.FC = () => {
       </div>
     </div>
   )
-}
 export default InnovativeServicesShowcase;

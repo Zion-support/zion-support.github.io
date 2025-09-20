@@ -6,7 +6,7 @@ interface Testimonial {
     metric: string,value: string,change: string
   },
   [],
-  }
+  };
 
 const testimonials: Testimonial[] = [
   {
@@ -108,13 +108,13 @@ const renderStars = (rating: number) => {
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 },
-  }
+  };
           whileInView={{ opacity: 1, y: 0 },
-  }
+  };
           transition={{ duration: 0.8 },
-  }
+  };
           viewport={{ once: true },
-  }
+  };
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -129,13 +129,13 @@ const renderStars = (rating: number) => {
         {/* Category Filter */}
         <motion.div
           initial={{ opacity: 0, y: 20 },
-  }
+  };
           whileInView={{ opacity: 1, y: 0 },
-  }
+  };
           transition={{ duration: 0.6 },
-  }
+  };
           viewport={{ once: true },
-  }
+  };
           className="flex flex-wrap justify-center gap-4 mb-12"
         >
           {categories.map((category) => (
@@ -145,7 +145,7 @@ const renderStars = (rating: number) => {
                 setSelectedCategory(category.id);
                 setCurrentTestimonial(0)
 },
-  }
+  };
               className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${
                 selectedCategory === category.id
                   ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white shadow-lg'
@@ -162,13 +162,13 @@ const renderStars = (rating: number) => {
           {/* Video Testimonial */}
           <motion.div
             initial={{ opacity: 0, x: -50 },
-  }
+  };
             whileInView={{ opacity: 1, x: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             viewport={{ once: true },
-  }
+  };
             className="relative"
           >
             <div className="relative rounded-2xl overflow-hidden bg-gradient-to-br from-cyan-500/20 to-blue-500/20 border border-cyan-500/30">
@@ -205,11 +205,11 @@ const renderStars = (rating: number) => {
           <motion.div
             key={currentTestimonial}
             initial={{ opacity: 0, x: 50 },
-  }
+  };
             animate={{ opacity: 1, x: 0 },
-  }
+  };
             transition={{ duration: 0.5 },
-  }
+  };
             className="relative"
           >
             <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8">
@@ -303,13 +303,13 @@ const renderStars = (rating: number) => {
         {/* Stats Section */}
         <motion.div
           initial={{ opacity: 0, y: 30 },
-  }
+  };
           whileInView={{ opacity: 1, y: 0 },
-  }
+  };
           transition={{ duration: 0.8 },
-  }
+  };
           viewport={{ once: true },
-  }
+  };
           className="mt-20"
         >
           <div className="grid grid-cols-2 md: grid-cols-4 gap-8">
@@ -334,4 +334,3 @@ const renderStars = (rating: number) => {
       </div>
     </section>
   )
-}

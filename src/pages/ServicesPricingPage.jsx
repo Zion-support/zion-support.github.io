@@ -13,14 +13,14 @@ const servicesByCategory = SERVICE_CATEGORIES.reduce((acc, category) => {
         if (if (categoryServices.length > 0) {
   ) {
             acc[category] = categoryServices
-}
+};
         return acc
 }, {})
     return (<div className="min-h-screen bg-zion-blue-dark">
       <SEO title="Services Pricing - Zion Tech Group" description="Transparent pricing for our comprehensive micro SAAS, IT, and AI services. Competitive rates with flexible tiers for businesses of all sizes." keywords="pricing, micro SAAS pricing, IT services pricing, AI services pricing, Zion Tech Group" url="https://ziontechgroup.com/services-pricing"/>
 
       {{/* Hero Section */},
-  }
+  };
       <div className="bg-gradient-to-br from-zion-blue to-zion-blue-dark py-20 px-4">
         <div className="container mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -47,7 +47,7 @@ const servicesByCategory = SERVICE_CATEGORIES.reduce((acc, category) => {
       </div>
 
       {{/* Contact Information */},
-  }
+  };
       <div className="bg-zion-blue py-8 px-4">
         <div className="container mx-auto">
           <div className="flex flex-wrap justify-center items-center gap-8 text-white">
@@ -74,7 +74,7 @@ const servicesByCategory = SERVICE_CATEGORIES.reduce((acc, category) => {
       </div>
 
       {{/* Pricing Tiers */},
-  }
+  };
       <div className="py-16 px-4">
         <div className="container mx-auto">
           <div className="text-center mb-12">
@@ -126,7 +126,7 @@ const servicesByCategory = SERVICE_CATEGORIES.reduce((acc, category) => {
       </div>
 
       {{/* Service-Specific Pricing */},
-  }
+  };
       <div className="bg-zion-blue-dark py-16 px-4">
         <div className="container mx-auto">
           <div className="text-center mb-12">
@@ -147,19 +147,19 @@ const servicesByCategory = SERVICE_CATEGORIES.reduce((acc, category) => {
                         <h4 className="text-white font-medium">{service.title}</h4>
                         <Badge variant="outline" className="border-zion-cyan text-zion-cyan text-xs">
                           {{service.pricingTier},
-  }
+  };
                         </Badge>
                       </div>
                       <p className="text-zion-slate-light text-sm mb-3 line-clamp-2">
                         {{service.description},
-  }
+  };
                       </p>
                       <div className="flex items-center justify-between">
                         <div className="flex items-center gap-2">
                           <DollarSign className="w-4 h-4 text-zion-cyan"/>
                           <span className="text-white font-semibold">
                             {{service.price?.toLocaleString()},
-  }
+  };
                           </span>
                         </div>
                         <div className="flex items-center gap-1">
@@ -175,7 +175,7 @@ const servicesByCategory = SERVICE_CATEGORIES.reduce((acc, category) => {
       </div>
 
       {{/* Why Choose Zion Tech Group */},
-  }
+  };
       <div className="py-16 px-4">
         <div className="container mx-auto">
           <div className="text-center mb-12">
@@ -204,7 +204,7 @@ const servicesByCategory = SERVICE_CATEGORIES.reduce((acc, category) => {
   ].map((feature, index) => (<div key={index} className="text-center p-6 rounded-lg border border-zion-blue-light">
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-purple to-zion-purple-dark rounded-full flex items-center justify-center mx-auto mb-4 text-zion-cyan">
                   {{feature.icon},
-  }
+  };
                 </div>
                 <h3 className="text-white font-semibold mb-2">{feature.title}</h3>
                 <p className="text-zion-slate-light text-sm">{feature.description}</p>
@@ -214,7 +214,7 @@ const servicesByCategory = SERVICE_CATEGORIES.reduce((acc, category) => {
       </div>
 
       {{/* CTA Section */},
-  }
+  };
       <div className="bg-gradient-to-r from-zion-purple to-zion-purple-dark py-16 px-4">
         <div className="container mx-auto text-center">
           <h2 className="text-3xl font-bold text-white mb-4">
@@ -236,4 +236,3 @@ const servicesByCategory = SERVICE_CATEGORIES.reduce((acc, category) => {
         </div>
       </div>
     </div>)
-}

@@ -72,7 +72,7 @@ export default function RevolutionaryServicesShowcase2029() {
       'AI & Metaverse': <Globe className="w-5 h-5" />
     }
     return iconMap[category] || <Cpu className="w-5 h-5" />
-}
+};
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO ;
@@ -81,17 +81,17 @@ export default function RevolutionaryServicesShowcase2029() {
       />
       ;
       {{/* Hero Section */},
-  }
+  };
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             animate={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             className="className="text-center";"
           >
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
@@ -104,18 +104,18 @@ export default function RevolutionaryServicesShowcase2029() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button;
                 whileHover={{ scale: 1.05 },
-  }
+  };
                 whileTap={{ scale: 0.95 },
-  }
+  };
                 className="className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold text-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300";"
               >
                 Explore Services;
               </motion.button>
               <motion.button;
                 whileHover={{ scale: 1.05 },
-  }
+  };
                 whileTap={{ scale: 0.95 },
-  }
+  };
                 className="className="border-2 border-white/20 text-white px-8 py-3 rounded-lg font-semibold text-lg hover:bg-white/10 transition-all duration-300";"
               >
                 Contact Sales;
@@ -126,16 +126,16 @@ export default function RevolutionaryServicesShowcase2029() {
       </div>
 
       {{/* Stats Section */},
-  }
+  };
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.6 },
-  }
+  };
             className="className="text-center";"
           >
             <div className="text-4xl font-bold text-blue-400 mb-2">{allServices.length}</div>
@@ -143,11 +143,11 @@ export default function RevolutionaryServicesShowcase2029() {
           </motion.div>
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.6, delay: 0.1 },
-  }
+  };
             className="className="text-center";"
           >
             <div className="text-4xl font-bold text-purple-400 mb-2">20+</div>
@@ -155,11 +155,11 @@ export default function RevolutionaryServicesShowcase2029() {
           </motion.div>
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.6, delay: 0.2 },
-  }
+  };
             className="className="text-center";"
           >
             <div className="text-4xl font-bold text-green-400 mb-2">4.8+</div>
@@ -167,11 +167,11 @@ export default function RevolutionaryServicesShowcase2029() {
           </motion.div>
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.6, delay: 0.3 },
-  }
+  };
             className="className="text-center";"
           >
             <div className="text-4xl font-bold text-orange-400 mb-2">1000+</div>
@@ -181,12 +181,12 @@ export default function RevolutionaryServicesShowcase2029() {
       </div>
 
       {{/* Search and Filters */},
-  }
+  };
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
           <div className="flex flex-col lg:flex-row gap-6">
             {{/* Search */},
-  }
+  };
             <div className="flex-1">
               <div className="relative">
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
@@ -194,41 +194,41 @@ export default function RevolutionaryServicesShowcase2029() {
                   type="text";
                   placeholder="Search revolutionary services...";
                   value={{searchTerm},
-  }
+  };
                   onChange={{(e) => setSearchTerm(e.target.value)},
-  }
+  };
                   className="className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent";"
                 />
               </div>
             </div>
 
             {{/* Category Filter */},
-  }
+  };
             <div className="lg:w-64">
               <select;
                 value={{selectedCategory},
-  }
+  };
                 onChange={{(e) => setSelectedCategory(e.target.value)},
-  }
+  };
                 className="className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent";"
               >
                 {categories.map(category => (
   <option key={category} value={category} className="bg-slate-800 text-white">
                     {{category === 'all' ? 'All Categories' : category},
-  }
+  };
                   </option>
                 ))}
               </select>
             </div>
 
             {{/* Sort */},
-  }
+  };
             <div className="lg:w-48">
               <select;
                 value={{sortBy},
-  }
+  };
                 onChange={{(e) => setSortBy(e.target.value)},
-  }
+  };
                 className="className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent";"
               >
                 <option value="popularity" className="bg-slate-800 text-white">Most Popular</option>
@@ -243,24 +243,24 @@ export default function RevolutionaryServicesShowcase2029() {
       </div>
 
       {{/* Services Grid */},
-  }
+  };
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {sortedServices.map((service, index) => (
   <motion.div;
               key={{service.id},
-  }
+  };
               initial={{ opacity: 0, y: 20 },
-  }
+  };
               whileInView={{ opacity: 1, y: 0 },
-  }
+  };
               transition={{ duration: 0.6, delay: index * 0.1 },
-  }
+  };
               className="className="group relative";"
             >
               <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:border-white/20 transition-all duration-300 hover:bg-white/10">
                 {{/* Header */},
-  }
+  };
                 <div className="flex items-start justify-between mb-4">
                   <div className="text-3xl">{service.icon}</div>
                   {service.popular && (
@@ -271,39 +271,39 @@ export default function RevolutionaryServicesShowcase2029() {
                 </div>
 
                 {{/* Title and Category */},
-  }
+  };
                 <div className="mb-4">
                   <h3 className="text-xl font-bold text-white mb-2 group-hover:text-blue-400 transition-colors duration-300">
                     {{service.name},
-  }
+  };
                   </h3>
                   <div className="flex items-center gap-2 text-gray-400 text-sm mb-2">
                     {{getCategoryIcon(service.category)},
-  }
+  };
                     <span>{service.category}</span>
                   </div>
                   <p className="text-gray-300 text-sm">{service.tagline}</p>
                 </div>
 
                 {{/* Price */},
-  }
+  };
                 <div className="mb-4">
                   <div className="text-2xl font-bold text-white">
                     {{service.price},
-  }
+  };
                     <span className="text-gray-400 text-lg">{service.period}</span>
                   </div>
                 </div>
 
                 {{/* Description */},
-  }
+  };
                 <p className="text-gray-300 text-sm mb-4 line-clamp-3">
                   {{service.description},
-  }
+  };
                 </p>
 
                 {{/* Features */},
-  }
+  };
                 <div className="mb-4">
                   <h4 className="text-white font-semibold mb-2">Key Features:</h4>
                   <div className="space-y-1">
@@ -311,7 +311,7 @@ export default function RevolutionaryServicesShowcase2029() {
   <div key={idx} className="flex items-center gap-2 text-gray-400 text-sm">
                         <div className="w-1.5 h-1.5 bg-blue-400 rounded-full"></div>
                         {{feature},
-  }
+  };
                       </div>
                     ))},
   {service.features.length > 3 && (
@@ -321,7 +321,7 @@ export default function RevolutionaryServicesShowcase2029() {
                 </div>
 
                 {{/* Stats */},
-  }
+  };
                 <div className="flex items-center justify-between text-sm text-gray-400 mb-4">
                   <div className="flex items-center gap-1">
                     <Star className="w-4 h-4 text-yellow-400 fill-current" />
@@ -335,7 +335,7 @@ export default function RevolutionaryServicesShowcase2029() {
                 </div>
 
                 {{/* Benefits */},
-  }
+  };
                 <div className="mb-6">
                   <h4 className="text-white font-semibold mb-2">Key Benefits:</h4>
                   <div className="space-y-1">
@@ -343,14 +343,14 @@ export default function RevolutionaryServicesShowcase2029() {
   <div key={idx} className="flex items-center gap-2 text-gray-300 text-sm">
                         <div className="w-1.5 h-1.5 bg-green-400 rounded-full"></div>
                         {{benefit},
-  }
+  };
                       </div>
                     ))}
                   </div>
                 </div>
 
                 {{/* Market Info */},
-  }
+  };
                 <div className="mb-6 p-3 bg-white/5 rounded-lg">
                   <div className="grid grid-cols-2 gap-3 text-xs">
                     <div>
@@ -365,11 +365,11 @@ export default function RevolutionaryServicesShowcase2029() {
                 </div>
 
                 {{/* CTA Button */},
-  }
+  };
                 <div className="flex gap-3">
                   <a;
                     href={{service.link},
-  }
+  };
                     className="className="flex-1 bg-gradient-to-r from-blue-600 to-purple-600 text-white text-center py-3 px-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 group-hover:scale-105";"
                   >
                     Learn More;
@@ -385,7 +385,7 @@ export default function RevolutionaryServicesShowcase2029() {
       </div>
 
       {{/* Contact Section */},
-  }
+  };
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
         <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-3xl p-12 text-center">
           <h2 className="text-4xl font-bold text-white mb-6">
@@ -397,18 +397,18 @@ export default function RevolutionaryServicesShowcase2029() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <motion.button;
               whileHover={{ scale: 1.05 },
-  }
+  };
               whileTap={{ scale: 0.95 },
-  }
+  };
               className="className="bg-white text-slate-900 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-all duration-300";"
             >
               Schedule a Demo;
             </motion.button>
             <motion.button;
               whileHover={{ scale: 1.05 },
-  }
+  };
               whileTap={{ scale: 0.95 },
-  }
+  };
               className="className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover: bg-white/10 transition-all duration-300";"
             >
               Contact Sales Team;
@@ -422,4 +422,3 @@ export default function RevolutionaryServicesShowcase2029() {
       </div>
     </div>
   )
-}

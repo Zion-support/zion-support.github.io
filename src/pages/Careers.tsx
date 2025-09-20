@@ -137,16 +137,16 @@ const Careers: React.FC = () => {
       />
       ;
       {{/* Hero Section */},
-  }
+  };
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             animate={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.6 },
-  }
+  };
           >
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               Join Our;
@@ -175,18 +175,18 @@ const Careers: React.FC = () => {
       </section>
 
       {{/* Company Values */},
-  }
+  };
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.6 },
-  }
+  };
             viewport={{ once: true },
-  }
+  };
             className="className="text-center mb-12";"
           >
             <h2 className="text-3xl font-bold text-white mb-4">Our Values</h2>
@@ -199,20 +199,20 @@ const Careers: React.FC = () => {
             {companyValues.map((value, index) => (
   <motion.div;
                 key={{value.title},
-  }
+  };
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.6, delay: index * 0.1 },
-  }
+  };
                 viewport={{ once: true },
-  }
+  };
                 className="className="text-center p-6 rounded-lg bg-slate-800/50 border border-slate-700 hover:border-zion-cyan/50 transition-colors";"
               >
                 <div className="flex justify-center mb-4">
                   {{value.icon},
-  }
+  };
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{value.title}</h3>
                 <p className="text-gray-400">{value.description}</p>
@@ -223,18 +223,18 @@ const Careers: React.FC = () => {
       </section>
 
       {{/* Job Listings */},
-  }
+  };
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.6 },
-  }
+  };
             viewport={{ once: true },
-  }
+  };
             className="className="text-center mb-12";"
           >
             <h2 className="text-3xl font-bold text-white mb-4">Open Positions</h2>
@@ -244,15 +244,15 @@ const Careers: React.FC = () => {
           </motion.div>
 
           {{/* Department Filter */},
-  }
+  };
           <div className="flex flex-wrap justify-center gap-2 mb-8">
             {departments.map((dept) => (
   <button;
                 key={{dept.id},
-  }
+  };
                 onClick={{onClick={() => setSelectedDepartment(dept.id)},
   },
-  }
+  };
                 className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
   selectedDepartment === dept.id;
                     ? 'bg-zion-cyan text-slate-900';
@@ -265,20 +265,20 @@ const Careers: React.FC = () => {
           </div>
 
           {{/* Jobs Grid */},
-  }
+  };
           <div className="space-y-6">
             {filteredJobs.map((job, index) => (
   <motion.div;
                 key={{job.id},
-  }
+  };
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.6, delay: index * 0.1 },
-  }
+  };
                 viewport={{ once: true },
-  }
+  };
                 className="className="bg-slate-800/50 border border-slate-700 rounded-lg p-6 hover:border-zion-cyan/50 transition-colors";"
               >
                 <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-4">
@@ -306,11 +306,11 @@ const Careers: React.FC = () => {
                   <button;
                     onClick={{onClick={() => setExpandedJob(expandedJob === job.id ? null : job.id)},
   },
-  }
+  };
                     className="className="mt-4 lg:mt-0 px-4 py-2 bg-zion-cyan text-slate-900 rounded-lg hover:bg-zion-cyan/90 transition-colors flex items-center gap-2";"
                   >
                     {{expandedJob === job.id ? 'Show Less' : 'View Details'},
-  }
+  };
                     <ChevronDown ;
                       className={`w-4 h-4 transition-transform ${
   expandedJob === job.id ? 'rotate-180' : ''
@@ -324,13 +324,13 @@ const Careers: React.FC = () => {
                 {expandedJob === job.id && (
   <motion.div;
                     initial={{ opacity: 0, height: 0 },
-  }
+  };
                     animate={{ opacity: 1, height: 'auto' },
-  }
+  };
                     exit={{ opacity: 0, height: 0 },
-  }
+  };
                     transition={{ duration: 0.3 },
-  }
+  };
                     className="className="border-t border-slate-700 pt-4 space-y-6";"
                   >
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -394,18 +394,18 @@ const Careers: React.FC = () => {
       </section>
 
       {{/* Application Process */},
-  }
+  };
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.6 },
-  }
+  };
             viewport={{ once: true },
-  }
+  };
             className="className="text-center mb-12";"
           >
             <h2 className="text-3xl font-bold text-white mb-4">Application Process</h2>
@@ -431,20 +431,20 @@ const Careers: React.FC = () => {
   ].map((step, index) => (
   <motion.div;
                 key={{step.step},
-  }
+  };
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.6, delay: index * 0.1 },
-  }
+  };
                 viewport={{ once: true },
-  }
+  };
                 className="className="text-center";"
               >
                 <div className="w-16 h-16 bg-zion-cyan text-slate-900 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
                   {{step.step},
-  }
+  };
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-2">{step.title}</h3>
                 <p className="text-gray-400">{step.description}</p>
@@ -455,18 +455,18 @@ const Careers: React.FC = () => {
       </section>
 
       {{/* Contact Section */},
-  }
+  };
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.6 },
-  }
+  };
             viewport={{ once: true },
-  }
+  };
           >
             <h2 className="text-3xl font-bold text-white mb-4">Don't See the Right Fit?</h2>
             <p className="text-gray-400 mb-8 max-w-2xl mx-auto">
@@ -489,5 +489,5 @@ const Careers: React.FC = () => {
       </section>
     </div>
   )
-}
+};
 export default Careers;

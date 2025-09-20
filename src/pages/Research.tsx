@@ -145,7 +145,7 @@ const matchesType = activeType === 'all' || project.type === activeType;
 
   const getCategoryIcon = (categoryId: string) => {
   return categories.find(c => c.id === categoryId)?.icon || <FlaskConical className="w-5 h-5" />
-  }
+  };
   const getStatusColor = (status: string) => {
   switch (status) {
   case 'active': return 'text-green-400';
@@ -154,7 +154,7 @@ const matchesType = activeType === 'all' || project.type === activeType;
       case 'published': return 'text-purple-400';
       default: return 'text-zion-slate-light'
 },
-  }
+  };
   const getImpactColor = (impact: string) => {
   switch (impact) {
   case 'very-high': return 'text-red-400';
@@ -163,12 +163,12 @@ const matchesType = activeType === 'all' || project.type === activeType;
       case 'low': return 'text-green-400';
       default: return 'text-zion-slate-light'
 },
-  }
+  };
   const formatDate = (dateString: string) => {
   return new Date(dateString).toLocaleDateString('en-US', {
   year: 'numeric',month: 'short'
 })
-  }
+  };
 
   const formatFunding = (amount: number) => {
   if (if (amount >= 1000000) {
@@ -177,13 +177,12 @@ const matchesType = activeType === 'all' || project.type === activeType;
 } else if (if (amount >= 1000) {
   ) {
       return `$${(amount / 1000).toFixed(0)}K`
-}
+};
     return `$${amount.toLocaleString()}`
-}
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       {{/* Hero Section */},
-  }
+  };
       <div className="bg-gradient-to-r from-zion-blue-dark to-zion-purple py-20">
         <div className="container mx-auto px-4 text-center">
           <div className="flex justify-center mb-6">
@@ -201,40 +200,40 @@ const matchesType = activeType === 'all' || project.type === activeType;
       </div>
 
       {{/* Search and Filters */},
-  }
+  };
       <div className="py-12">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             {{/* Search Bar */},
-  }
+  };
             <div className="relative mb-8">
               <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-5 h-5" />
               <input;
                 type="text";
                 value={{searchQuery},
-  }
+  };
                 onChange={{(e) => setSearchQuery(e.target.value)},
-  }
+  };
                 placeholder="Search research projects...";
                 className="className="w-full pl-12 pr-4 py-4 bg-zion-slate border border-zion-slate-light rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent";"
               />
             </div>
 
             {{/* Filters */},
-  }
+  };
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
               {{/* Categories */},
-  }
+  };
               <div className="space-y-3">
                 <label className="text-white font-medium">Category</label>
                 <div className="flex flex-wrap gap-2">
                   {categories.slice(0, 4).map((category) => (
   <button;
                       key={{category.id},
-  }
+  };
                       onClick={{onClick={() => setActiveCategory(category.id)},
   },
-  }
+  };
                       className={`flex items-center gap-2 px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
   activeCategory === category.id;
                           ? 'bg-zion-cyan text-zion-slate-dark';
@@ -244,24 +243,24 @@ const matchesType = activeType === 'all' || project.type === activeType;
                       {{category.icon},
   },
   {{category.name},
-  }
+  };
                     </button>
                   ))}
                 </div>
               </div>
 
               {{/* Status */},
-  }
+  };
               <div className="space-y-3">
                 <label className="text-white font-medium">Status</label>
                 <div className="flex flex-wrap gap-2">
                   {statuses.map((status) => (
   <button;
                       key={{status.id},
-  }
+  };
                       onClick={{onClick={() => setActiveStatus(status.id)},
   },
-  }
+  };
                       className={`px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
   activeStatus === status.id;
                           ? 'bg-zion-purple text-white';
@@ -275,17 +274,17 @@ const matchesType = activeType === 'all' || project.type === activeType;
               </div>
 
               {{/* Types */},
-  }
+  };
               <div className="space-y-3">
                 <label className="text-white font-medium">Type</label>
                 <div className="flex flex-wrap gap-2">
                   {types.map((type) => (
   <button;
                       key={{type.id},
-  }
+  };
                       onClick={{onClick={() => setActiveType(type.id)},
   },
-  }
+  };
                       className={`px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
   activeType === type.id;
                           ? 'bg-zion-cyan text-zion-slate-dark';
@@ -314,7 +313,7 @@ const matchesType = activeType === 'all' || project.type === activeType;
               {researchProjects.filter(p => p.featured).map((project) => (
   <div;
                   key={{project.id},
-  }
+  };
                   className="className="bg-zion-slate border border-zion-slate-light rounded-lg overflow-hidden hover:shadow-lg transition-shadow";"
                 >
                   <div className="relative h-48 bg-gradient-to-br from-zion-blue to-zion-purple">
@@ -328,7 +327,7 @@ const matchesType = activeType === 'all' || project.type === activeType;
                       <div className="flex items-center gap-1 text-white">
                         <span className={`text-sm font-medium ${getImpactColor(project.impact)}`}>
                           {{project.impact.replace('- ').toUpperCase()},
-  }
+  };
                         </span>
                       </div>
                     </div>
@@ -349,14 +348,14 @@ const matchesType = activeType === 'all' || project.type === activeType;
                   <div className="p-6">
                     <div className="flex items-center gap-2 mb-3">
                       {{getCategoryIcon(project.category)},
-  }
+  };
                       <span className="text-sm text-zion-slate-light bg-zion-slate-light/20 px-2 py-1 rounded-full">
                         {{categories.find(c => c.id === project.category)?.name},
-  }
+  };
                       </span>
                       <span className={`text-sm font-medium ${getStatusColor(project.status)}`}>
                         {{statuses.find(s => s.id === project.status)?.name},
-  }
+  };
                       </span>
                     </div>
 
@@ -385,7 +384,7 @@ const matchesType = activeType === 'all' || project.type === activeType;
         </div>
       )},
   {{/* All Research Projects */},
-  }
+  };
       <div className="py-16">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center text-white mb-12">
@@ -397,16 +396,16 @@ const matchesType = activeType === 'all' || project.type === activeType;
               {filteredProjects.map((project) => (
   <div;
                   key={{project.id},
-  }
+  };
                   className="className="bg-zion-slate border border-zion-slate-light rounded-lg p-6 hover:shadow-lg transition-shadow";"
                 >
                   <div className="flex items-start justify-between mb-4">
                     <div className="flex items-center gap-2">
                       {{getCategoryIcon(project.category)},
-  }
+  };
                       <span className="text-sm text-zion-slate-light bg-zion-slate-light/20 px-2 py-1 rounded-full">
                         {{categories.find(c => c.id === project.category)?.name},
-  }
+  };
                       </span>
                       {project.featured && (
   <span className="px-2 py-1 bg-zion-cyan text-zion-slate-dark rounded-full text-xs font-medium">
@@ -417,7 +416,7 @@ const matchesType = activeType === 'all' || project.type === activeType;
                     <div className="text-right">
                       <div className={`text-sm font-medium ${getStatusColor(project.status)}`}>
                         {{statuses.find(s => s.id === project.status)?.name},
-  }
+  };
                       </div>
                       <div className={`text-xs font-medium ${getImpactColor(project.impact)}`}>
                         {project.impact.replace('- ').toUpperCase()} Impact;
@@ -432,11 +431,11 @@ const matchesType = activeType === 'all' || project.type === activeType;
                     {project.tags.slice(0, 4).map((tag, index) => (
   <span;
                         key={{index},
-  }
+  };
                         className="className="px-2 py-1 bg-zion-slate-light/20 text-zion-slate-light text-xs rounded-full";"
                       >
                         {{tag},
-  }
+  };
                       </span>
                     ))}
                   </div>
@@ -469,7 +468,7 @@ const matchesType = activeType === 'all' || project.type === activeType;
                       <div;
                         className="className="bg-zion-cyan h-2 rounded-full transition-all duration-300";"
                         style={{ width: `${project.progress}%` },
-  }
+  };
                       ></div>
                     </div>
                   </div>
@@ -479,12 +478,12 @@ const matchesType = activeType === 'all' || project.type === activeType;
                       <div className="flex items-center gap-1 mb-1">
                         <Users className="w-4 h-4" />
                         Lead: {{project.leadResearcher},
-  }
+  };
                       </div>
                       <div className="flex items-center gap-1">
                         <MapPin className="w-4 h-4" />
                         {{project.institution},
-  }
+  };
                       </div>
                     </div>
 
@@ -516,7 +515,7 @@ const matchesType = activeType === 'all' || project.type === activeType;
       </div>
 
       {{/* CTA Section */},
-  }
+  };
       <div className="py-16 bg-gradient-to-r from-zion-blue-dark to-zion-purple">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold text-white mb-6">
@@ -537,4 +536,3 @@ const matchesType = activeType === 'all' || project.type === activeType;
       </div>
     </div>
   )
-}

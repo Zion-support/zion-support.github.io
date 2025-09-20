@@ -12,7 +12,7 @@ import {
 } from "lucide-react";
 interface Testimonial {
   id: string,name: string,position: string,company: string,companyLogo: string,content: string,rating: number,industry: string,results: string[],avatar: string
-}
+};
 
 const testimonials: Testimonial[] = [
   {
@@ -57,7 +57,6 @@ const [isAutoPlaying, setIsAutoPlaying] = useState(true);
   const prevTestimonial = () => {
     setCurrentTestimonial((prev) => (prev - 1 + testimonials.length) % testimonials.length);
     setIsAutoPlaying(false)
-};
 const goToTestimonial = (index: number) => {
     setCurrentTestimonial(index);
     setIsAutoPlaying(false)
@@ -77,13 +76,13 @@ const goToTestimonial = (index: number) => {
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 },
-  }
+  };
           whileInView={{ opacity: 1, y: 0 },
-  }
+  };
           viewport={{ once: true },
-  }
+  };
           transition={{ duration: 0.6 },
-  }
+  };
           className="text-center mb-16"
         >
           <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">
@@ -100,13 +99,13 @@ const goToTestimonial = (index: number) => {
             <motion.div
               key={currentTestimonial}
               initial={{ opacity: 0, x: 100 },
-  }
+  };
               animate={{ opacity: 1, x: 0 },
-  }
+  };
               exit={{ opacity: 0, x: -100 },
-  }
+  };
               transition={{ duration: 0.5 },
-  }
+  };
               className="relative"
             >
               {/* Main Testimonial Card */}
@@ -119,9 +118,9 @@ const goToTestimonial = (index: number) => {
                   className="absolute top-8 right-8 w-16 h-16 bg-zion-cyan/20 rounded-full flex items-center justify-center"
                   animate={{ rotate: [0, 360],
   },
-  }
+  };
                   transition={{ duration: 20, repeat: Infinity },
-  }
+  };
                 >
                   <Quote className="w-8 h-8 text-zion-cyan" />
                 </motion.div>
@@ -133,11 +132,11 @@ const goToTestimonial = (index: number) => {
                       <motion.div
                         key={index}
                         initial={{ scale: 0 },
-  }
+  };
                         animate={{ scale: 1 },
-  }
+  };
                         transition={{ delay: index * 0.1 },
-  }
+  };
                       >
                         <Star className="w-6 h-6 text-yellow-400 fill-current" />
                       </motion.div>
@@ -155,11 +154,11 @@ const goToTestimonial = (index: number) => {
                       <motion.div
                         key={result}
                         initial={{ opacity: 0, y: 20 },
-  }
+  };
                         animate={{ opacity: 1, y: 0 },
-  }
+  };
                         transition={{ delay: 0.3 + index * 0.1 },
-  }
+  };
                         className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-4 text-center"
                       >
                         <p className="text-zion-cyan font-semibold">{result}</p>
@@ -197,9 +196,9 @@ const goToTestimonial = (index: number) => {
               onClick={prevTestimonial}
               className="p-3 rounded-full bg-white/10 hover:bg-white/20 transition-colors duration-200 border border-white/20"
               whileHover={{ scale: 1.1 },
-  }
+  };
               whileTap={{ scale: 0.9 },
-  }
+  };
             >
               <ChevronLeft className="w-6 h-6 text-white" />
             </motion.button>
@@ -215,7 +214,7 @@ const goToTestimonial = (index: number) => {
                       : 'bg-white/30 hover:bg-white/50'
                   }`}
                   whileHover={{ scale: 1.2 },
-  }
+  };
                 />
               ))}
             </div>
@@ -224,9 +223,9 @@ const goToTestimonial = (index: number) => {
               onClick={nextTestimonial}
               className="p-3 rounded-full bg-white/10 hover:bg-white/20 transition-colors duration-200 border border-white/20"
               whileHover={{ scale: 1.1 },
-  }
+  };
               whileTap={{ scale: 0.9 },
-  }
+  };
             >
               <ChevronRight className="w-6 h-6 text-white" />
             </motion.button>
@@ -236,13 +235,13 @@ const goToTestimonial = (index: number) => {
         {/* Trust Indicators */}
         <motion.div
           initial={{ opacity: 0, y: 30 },
-  }
+  };
           whileInView={{ opacity: 1, y: 0 },
-  }
+  };
           viewport={{ once: true },
-  }
+  };
           transition={{ duration: 0.6, delay: 0.3 },
-  }
+  };
           className="mt-20"
         >
           <div className="text-center">
@@ -259,13 +258,13 @@ const goToTestimonial = (index: number) => {
                 <motion.div
                   key={indicator.label}
                   initial={{ opacity: 0, y: 20 },
-  }
+  };
                   whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                   viewport={{ once: true },
-  }
+  };
                   transition={{ duration: 0.6, delay: index * 0.1 },
-  }
+  };
                   className="text-center"
                 >
                   <div className="w-16 h-16 bg-zion-cyan/20 rounded-2xl flex items-center justify-center mx-auto mb-4 border border-zion-cyan/30">
@@ -282,13 +281,13 @@ const goToTestimonial = (index: number) => {
         {/* Bottom CTA */}
         <motion.div
           initial={{ opacity: 0, y: 30 },
-  }
+  };
           whileInView={{ opacity: 1, y: 0 },
-  }
+  };
           viewport={{ once: true },
-  }
+  };
           transition={{ duration: 0.6, delay: 0.5 },
-  }
+  };
           className="text-center mt-16"
         >
           <div className="bg-gradient-to-r from-zion-cyan/20 to-zion-purple/20 border border-zion-cyan/30 rounded-3xl p-8 max-w-4xl mx-auto">
@@ -317,4 +316,3 @@ const goToTestimonial = (index: number) => {
       </div>
     </section>
   )
-}

@@ -2,13 +2,12 @@ interface CacheItem<T> {
   data: T,timestamp: number;
   expiresAt?: number;
   accessCount: number,lastAccessed: number
-}
+};
 
 interface CacheOptions {
   ttl?: number, // Time to live in milliseconds;
   maxSize?: number, // Maximum number of items in cache;
   maxAge?: number, // Maximum age in milliseconds
-}
 
 class CacheManager {
   private static instance: CacheManager;
@@ -20,11 +19,10 @@ class CacheManager {
       maxSize: 100, // 100 items default;
       maxAge: 30 * 60 * 1000, // 30 minutes default;
       ...options
-}
 
     // Clean up expired items periodically;
     this.startCleanupInterval()
-  }
+  };
 
   public static getInstance(options?: CacheOptions): CacheManager {
   if (if (!CacheManager.instance) {
@@ -32,7 +30,6 @@ class CacheManager {
       CacheManager.instance = new CacheManager(options)
     }
     return CacheManager.instance
-}
 
   public set<T>(key: string, data: T, customTTL?: number): void {
   const now = Date.now()
@@ -47,14 +44,13 @@ class CacheManager {
   data;
       timestamp: now,expiresAt: ttl > 0 ? now + ttl : undefined,accessCount: 0,lastAccessed: now
 })
-  }
+  };
 
   public get<T>(key: string): T | null {
   const item = this.cache.get(key)
     if (if (!item) {
   ) {
       return null
-}
 
     const now = Date.now()
 
@@ -63,41 +59,36 @@ class CacheManager {
   ) {
       this.cache.delete(key)
       return null
-}
 
     // Check if item is too old;
     if (this.options.maxAge && (now - item.timestamp) > this.options.maxAge) {
   this.cache.delete(key)
       return null
-}
 
     // Update access statistics;
     item.accessCount++;
     item.lastAccessed = now;
 
     return item.data
-}
 
   public has(key: string): boolean {
   return this.get(key) !== null
-}
 
   public delete(key: string): boolean {
   return this.cache.delete(key)
-  }
+  };
 
   public clear(): void {
   this.cache.clear()
-  }
+  };
 
   public size(): number {
   return this.cache.size
-}
 
   public keys(): string[],
   {
   return Array.from(this.cache.keys())
-  }
+  };
 
   public getStats(): {
   size: number,hitRate: number,items: Array<{
@@ -118,7 +109,7 @@ class CacheManager {
       hitRate;
       items
 },
-  }
+  };
 
   private evictOldest(): void {
   let oldestKey = '';
@@ -130,20 +121,20 @@ let oldestTime = Date.now()
         oldestTime = item.lastAccessed;
         oldestKey = key
 },
-  }
+  };
 
     if (if (oldestKey) {
   ) {
       this.cache.delete(oldestKey)
     },
-  }
+  };
 
   private startCleanupInterval(): void {
   // Clean up expired items every minute;
     setInterval(() => {
       this.cleanup()
     }, 60 * 1000)
-  }
+  };
 
   private cleanup(): void {
   const now = Date.now()
@@ -155,17 +146,16 @@ let oldestTime = Date.now()
   ) {
         keysToDelete.push(key)
         continue
-}
 
       // Check max age;
       if (this.options.maxAge && (now - item.timestamp) > this.options.maxAge) {
   keysToDelete.push(key)
         continue
 },
-  }
+  };
 
     keysToDelete.forEach(key => this.cache.delete(key))
-  }
+  };
 
   // Utility methods for common use cases;
   public async getOrSet<T>(
@@ -176,19 +166,17 @@ let oldestTime = Date.now()
     if (if (cached !== null) {
   ) {
       return cached
-}
 
     const data = await fetcher()
     this.set(key, data, customTTL)
     return data
-}
 
   public invalidatePattern(pattern: string): void {
   const regex = new RegExp(pattern)
     const keysToDelete = this.keys().filter(key => regex.test(key))
     keysToDelete.forEach(key => this.delete(key))
   },
-  }
+  };
 
 // React hook for caching;
 export const useCache = () => {
@@ -196,7 +184,7 @@ export const useCache = () => {
   return {
   get: cache.get.bind(cache),set: cache.set.bind(cache),has: cache.has.bind(cache),delete: cache.delete.bind(cache),clear: cache.clear.bind(cache),getOrSet: cache.getOrSet.bind(cache),invalidatePattern: cache.invalidatePattern.bind(cache)
   },
-  }
+  };
 
 // Specialized cache for API responses;
 export class APICache {
@@ -208,12 +196,10 @@ export class APICache {
       maxSize: 200
 })
     this.baseKey = baseKey
-}
 
   private getKey(endpoint: string, params?: Record<string, any>): string {
   const paramString = params ? JSON.stringify(params) : '';
     return `${this.baseKey}:${endpoint}:${paramString}`
-}
 
   async fetch<T>(
   endpoint: string,fetcher: () => Promise<T>
@@ -222,17 +208,17 @@ export class APICache {
 ): Promise<T> {
   const key = this.getKey(endpoint, params)
     return this.cache.getOrSet(key, fetcher, ttl)
-  }
+  };
 
   invalidateEndpoint(endpoint: string): void {
   const pattern = `${this.baseKey}:${endpoint}:.*`;
     this.cache.invalidatePattern(pattern)
-  }
+  };
 
   invalidateAll(): void {
   this.cache.invalidatePattern(`${this.baseKey}:.*`)
   },
-  }
+  };
 
 // React hook for API caching;
 export const useAPICache = (baseKey?: string) => {
@@ -240,6 +226,6 @@ export const useAPICache = (baseKey?: string) => {
   return {
   fetch: apiCache.fetch.bind(apiCache),invalidateEndpoint: apiCache.invalidateEndpoint.bind(apiCache),invalidateAll: apiCache.invalidateAll.bind(apiCache)
   },
-  }
+  };
 
 export default CacheManager;

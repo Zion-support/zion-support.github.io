@@ -6,4 +6,4 @@ import ForgotPassword from "@/pages/ForgotPassword";
 export default function AuthRoutes() {
   return (_jsxs(_Fragment, { children: [_jsx(Route, { path: "login", element: _jsx(Login, {}) }), _jsx(Route, { path: "signup", element: _jsx(Signup, {}) }), _jsx(Route, { path: "forgot-password", element: _jsx(ForgotPassword, {}) })],
   }))
-}
+};

@@ -13,7 +13,7 @@ const AISupplyChainOptimization: React.FC = () => {
       />
       ;
       {{/* Hero Section */},
-  }
+  };
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <div className="mb-8">
@@ -42,7 +42,7 @@ const AISupplyChainOptimization: React.FC = () => {
       </section>
 
       {{/* Key Benefits */},
-  }
+  };
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">
@@ -86,7 +86,7 @@ const AISupplyChainOptimization: React.FC = () => {
       </section>
 
       {{/* Features */},
-  }
+  };
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">
@@ -166,7 +166,7 @@ const AISupplyChainOptimization: React.FC = () => {
       </section>
 
       {{/* Use Cases */},
-  }
+  };
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">
@@ -226,7 +226,7 @@ const AISupplyChainOptimization: React.FC = () => {
       </section>
 
       {{/* Pricing Section */},
-  }
+  };
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/20">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">
@@ -336,7 +336,7 @@ const AISupplyChainOptimization: React.FC = () => {
       </section>
 
       {{/* Market Information */},
-  }
+  };
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">
@@ -368,7 +368,7 @@ const AISupplyChainOptimization: React.FC = () => {
       </section>
 
       {{/* Contact Section */},
-  }
+  };
       <section className="py-16 px-4 sm: px-6 lg:px-8 bg-slate-800/20">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-8">
@@ -405,5 +405,5 @@ const AISupplyChainOptimization: React.FC = () => {
       </section>
     </div>
   )
-}
+};
 export default AISupplyChainOptimization;

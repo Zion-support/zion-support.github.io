@@ -60,7 +60,7 @@ const FiveGEnterpriseSolutions = () => {
       </Helmet>
 
       {{/* Hero Section */},
-  }
+  };
       <section className="relative overflow-hidden py-20">
         <div className="absolute inset-0 bg-gradient-to-r from-teal-600/20 to-blue-600/20"></div>
         <div className="relative container mx-auto px-4 text-center">
@@ -95,7 +95,7 @@ const FiveGEnterpriseSolutions = () => {
       </section>
 
       {{/* Features Section */},
-  }
+  };
       <section className="py-20 bg-black/20">
         <div className="container mx-auto px-4">
           <motion.div initial={{ opacity: 0, y: 20 },
@@ -126,7 +126,7 @@ const FiveGEnterpriseSolutions = () => {
       </section>
 
       {{/* Solutions Section */},
-  }
+  };
       <section className="py-20">
         <div className="container mx-auto px-4">
           <motion.div initial={{ opacity: 0, y: 20 },
@@ -152,7 +152,7 @@ const FiveGEnterpriseSolutions = () => {
                   {solution.applications.map((app, appIndex) => (<li key={appIndex} className="flex items-center text-gray-300">
                       <div className="w-2 h-2 bg-teal-400 rounded-full mr-3"></div>
                       {{app},
-  }
+  };
                     </li>))}
                 </ul>
               </motion.div>))}
@@ -161,7 +161,7 @@ const FiveGEnterpriseSolutions = () => {
       </section>
 
       {{/* Benefits Section */},
-  }
+  };
       <section className="py-20 bg-gradient-to-r from-teal-600/20 to-blue-600/20">
         <div className="container mx-auto px-4">
           <motion.div initial={{ opacity: 0, y: 20 },
@@ -192,7 +192,7 @@ const FiveGEnterpriseSolutions = () => {
       </section>
 
       {{/* Technology Stack Section */},
-  }
+  };
       <section className="py-20">
         <div className="container mx-auto px-4">
           <motion.div initial={{ opacity: 0, y: 20 },
@@ -232,7 +232,7 @@ const FiveGEnterpriseSolutions = () => {
       </section>
 
       {{/* Implementation Process Section */},
-  }
+  };
       <section className="py-20 bg-gradient-to-r from-teal-600/20 to-blue-600/20">
         <div className="container mx-auto px-4">
           <motion.div initial={{ opacity: 0, y: 20 },
@@ -272,7 +272,7 @@ const FiveGEnterpriseSolutions = () => {
       </section>
 
       {{/* CTA Section */},
-  }
+  };
       <section className="py-20">
         <div className="container mx-auto px-4 text-center">
           <motion.div initial={{ opacity: 0, y: 20 },
@@ -297,5 +297,5 @@ const FiveGEnterpriseSolutions = () => {
         </div>
       </section>
     </div>)
-}
+};
 export default FiveGEnterpriseSolutions;

@@ -6,11 +6,10 @@ interface SEOData {
   ogType?: string,
   canonicalUrl?: string,
   structuredData?: object
-}
+};
 
 interface EnhancedSEOManagerProps {
   seoData: SEOData,children: React.ReactNode
-}
 
 const EnhancedSEOManager: React.FC<EnhancedSEOManagerProps> = ({ seoData, children }) => {
   useEffect(() => {
@@ -24,7 +23,6 @@ const EnhancedSEOManager: React.FC<EnhancedSEOManagerProps> = ({ seoData, childr
         metaDesc = document.createElement('meta');
         metaDesc.setAttribute('namedescription');
         document.head.appendChild(metaDesc)
-}
       metaDesc.setAttribute('content', seoData.description);
       // Update keywords
       let metaKeywords = document.querySelector('meta[name="keywords"]');
@@ -32,7 +30,6 @@ const EnhancedSEOManager: React.FC<EnhancedSEOManagerProps> = ({ seoData, childr
         metaKeywords = document.createElement('meta');
         metaKeywords.setAttribute('namekeywords');
         document.head.appendChild(metaKeywords)
-}
       metaKeywords.setAttribute('content', seoData.keywords.join()),
     },
 

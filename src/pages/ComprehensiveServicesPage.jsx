@@ -24,19 +24,17 @@ const matchesPricing = selectedPricingTier === 'all' || service.pricingTier === 
     }, [searchTerm, selectedCategory, selectedPricingTier])
     const getCategoryIcon = (categoryName) => {
   return '💼'
-}
+};
     const getServiceTypeColor = (type) => {
   const const colorMap = {
   = {
             'Micro SAAS': 'bg-blue-100 text-blue-800IT Services': 'bg-green-100 text-green-800AI Services': 'bg-purple-100 text-purple-800'
-}
         return colorMap[type] || 'bg-gray-100 text-gray-800'
-}
     return (<div className="min-h-screen bg-zion-blue-dark">
               <SEO title="Comprehensive Micro SAAS Solutions - Zion Tech Group" description="Discover our extensive portfolio of innovative micro SAAS, IT, and AI services designed to transform your business operations and drive growth" keywords="micro SAAS, IT services, AI solutions, Zion Tech Group" url="https://ziontechgroup.com/comprehensive-services"/>
 
       {{/* Hero Section */},
-  }
+  };
       <div className="bg-gradient-to-br from-zion-blue to-zion-blue-dark py-20 px-4">
         <div className="container mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -63,7 +61,7 @@ const matchesPricing = selectedPricingTier === 'all' || service.pricingTier === 
       </div>
 
       {{/* Contact Information */},
-  }
+  };
       <div className="bg-zion-blue py-8 px-4">
         <div className="container mx-auto">
           <div className="flex flex-wrap justify-center items-center gap-8 text-white">
@@ -90,7 +88,7 @@ const matchesPricing = selectedPricingTier === 'all' || service.pricingTier === 
       </div>
 
       {{/* Search and Filter Controls */},
-  }
+  };
       <div className="bg-zion-blue-dark py-8 px-4">
         <div className="container mx-auto">
           <div className="flex flex-col md:flex-row gap-4 max-w-4xl mx-auto">
@@ -121,7 +119,7 @@ const matchesPricing = selectedPricingTier === 'all' || service.pricingTier === 
       </div>
 
       {{/* Services Grid */},
-  }
+  };
       <div className="py-16 px-4">
         <div className="container mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -133,33 +131,33 @@ const matchesPricing = selectedPricingTier === 'all' || service.pricingTier === 
                     </div>
                     <Badge variant="outline" className="border-zion-cyan text-zion-cyan">
                       {{service.category},
-  }
+  };
                     </Badge>
                   </div>
                   <CardTitle className="text-white text-lg">{service.title}</CardTitle>
                   <CardDescription className="text-zion-slate-light">
                     {{service.description},
-  }
+  };
                   </CardDescription>
                 </CardHeader>
                 <CardContent className="space-y-4">
                   {{/* Tags */},
-  }
+  };
                   <div className="flex flex-wrap gap-2">
                     {service.tags.slice(0, 3).map((tag, index) => (<Badge key={index} variant="outline" className="text-xs border-zion-blue-light text-zion-slate-light">
                         {{tag},
-  }
+  };
                       </Badge>))}
                   </div>
 
                   {{/* Pricing and Rating */},
-  }
+  };
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-2">
                       <DollarSign className="w-4 h-4 text-zion-cyan"/>
                       <span className="text-2xl font-bold text-white">
                         {{service.price?.toLocaleString()},
-  }
+  };
                       </span>
                     </div>
                     <div className="flex items-center gap-1">
@@ -182,7 +180,7 @@ const matchesPricing = selectedPricingTier === 'all' || service.pricingTier === 
                       </div>
                     </div>)},
   {{/* Availability and Location */},
-  }
+  };
                   <div className="flex items-center justify-between text-sm text-zion-slate-light">
                     <div className="flex items-center gap-1">
                       <Clock className="w-4 h-4"/>
@@ -195,7 +193,7 @@ const matchesPricing = selectedPricingTier === 'all' || service.pricingTier === 
                   </div>
 
                   {{/* Action Buttons */},
-  }
+  };
                   <div className="flex gap-2 pt-2">
                     <Button className="flex-1 bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white">
                       <Phone className="w-4 h-4 mr-2"/>
@@ -226,7 +224,7 @@ const matchesPricing = selectedPricingTier === 'all' || service.pricingTier === 
       </div>
 
       {{/* Why Choose Zion Tech Group */},
-  }
+  };
       <div className="bg-zion-blue-dark py-16 px-4">
         <div className="container mx-auto">
           <div className="text-center mb-12">
@@ -255,7 +253,7 @@ const matchesPricing = selectedPricingTier === 'all' || service.pricingTier === 
   ].map((feature, index) => (<div key={index} className="text-center p-6 rounded-lg border border-zion-blue-light">
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-purple to-zion-purple-dark rounded-full flex items-center justify-center mx-auto mb-4 text-zion-cyan">
                   {{feature.icon},
-  }
+  };
                 </div>
                 <h3 className="text-white font-semibold mb-2">{feature.title}</h3>
                 <p className="text-zion-slate-light text-sm">{feature.description}</p>
@@ -265,7 +263,7 @@ const matchesPricing = selectedPricingTier === 'all' || service.pricingTier === 
       </div>
 
       {{/* CTA Section */},
-  }
+  };
       <div className="bg-gradient-to-r from-zion-purple to-zion-purple-dark py-16 px-4">
         <div className="container mx-auto text-center">
           <h2 className="text-3xl font-bold text-white mb-4">
@@ -287,4 +285,3 @@ const matchesPricing = selectedPricingTier === 'all' || service.pricingTier === 
         </div>
       </div>
     </div>)
-}

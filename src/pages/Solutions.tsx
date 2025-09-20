@@ -174,7 +174,7 @@ export default function Solutions() {
       />
       ;
       {{/* Hero Section */},
-  }
+  };
       <section className="relative overflow-hidden py-20">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 via-purple-500/10 to-cyan-500/10"></div>
         <div className="container-responsive relative z-10">
@@ -212,7 +212,7 @@ export default function Solutions() {
         </div>
         ;
         {{/* Background Elements */},
-  }
+  };
         <div className="absolute inset-0 -z-10">
           <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl"></div>
           <div className="absolute bottom-20 right-10 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl"></div>
@@ -220,7 +220,7 @@ export default function Solutions() {
       </section>
 
       {{/* Solutions Grid */},
-  }
+  };
       <section className="py-20">
         <div className="container-responsive">
           <div className="text-center mb-16">
@@ -236,15 +236,15 @@ export default function Solutions() {
             {solutions.map((solution, index) => (
   <motion.div;
                 key={{solution.name},
-  }
+  };
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.6, delay: index * 0.1 },
-  }
+  };
                 viewport={{ once: true },
-  }
+  };
                 className={`group relative p-8 rounded-2xl transition-all duration-300 hover:scale-105 ${
   solution.featured ;
                     ? 'bg-gradient-to-br from-slate-800 to-slate-700 ring-2 ring-blue-400/50' ;
@@ -275,7 +275,7 @@ export default function Solutions() {
   <li key={idx} className="flex items-center text-gray-300 text-sm">
                           <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                           {{feature},
-  }
+  };
                         </li>
                       ))}
                     </ul>
@@ -288,7 +288,7 @@ export default function Solutions() {
   <li key={idx} className="flex items-center text-gray-300 text-sm">
                           <TrendingUp className="w-4 h-4 text-blue-400 mr-2 flex-shrink-0" />
                           {{benefit},
-  }
+  };
                         </li>
                       ))}
                     </ul>
@@ -309,7 +309,7 @@ export default function Solutions() {
       </section>
 
       {{/* Industry Solutions */},
-  }
+  };
       <section className="py-20 bg-slate-800/30">
         <div className="container-responsive">
           <div className="text-center mb-16">
@@ -325,15 +325,15 @@ export default function Solutions() {
             {industrySolutions.map((solution, index) => (
   <motion.div;
                 key={{solution.title},
-  }
+  };
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.6, delay: index * 0.1 },
-  }
+  };
                 viewport={{ once: true },
-  }
+  };
                 className="className="group p-8 rounded-2xl bg-slate-800/50 hover:bg-slate-800 transition-all duration-300 hover:scale-105 border border-slate-700/50 hover:border-blue-500/50";"
               >
                 <div className={`w-16 h-16 rounded-xl bg-gradient-to-br ${solution.color} flex items-center justify-center mb-6`}>
@@ -342,7 +342,7 @@ export default function Solutions() {
                 ;
                 <h3 className="text-xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors">
                   {{solution.title},
-  }
+  };
                 </h3>
                 <p className="text-gray-300 mb-6">{solution.description}</p>
                 ;
@@ -351,7 +351,7 @@ export default function Solutions() {
   <div key={idx} className="flex items-center text-gray-300 text-sm">
                       <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                       {{item},
-  }
+  };
                     </div>
                   ))}
                 </div>
@@ -370,7 +370,7 @@ export default function Solutions() {
       </section>
 
       {{/* Technology Stack */},
-  }
+  };
       <section className="py-20">
         <div className="container-responsive">
           <div className="text-center mb-16">
@@ -386,15 +386,15 @@ export default function Solutions() {
             {technologyStack.map((tech, index) => (
   <motion.div;
                 key={{tech.category},
-  }
+  };
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.6, delay: index * 0.1 },
-  }
+  };
                 viewport={{ once: true },
-  }
+  };
                 className="className="text-center p-6 rounded-2xl bg-slate-800/50 hover:bg-slate-800 transition-all duration-300 hover:scale-105 border border-slate-700/50";"
               >
                 <div className={`w-16 h-16 rounded-xl bg-gradient-to-br ${tech.color} flex items-center justify-center mx-auto mb-6`}>
@@ -407,7 +407,7 @@ export default function Solutions() {
                   {tech.technologies.map((technology, idx) => (
   <div key={idx} className="text-sm text-gray-300 bg-slate-700/50 px-3 py-2 rounded-lg">
                       {{technology},
-  }
+  };
                     </div>
                   ))}
                 </div>
@@ -418,7 +418,7 @@ export default function Solutions() {
       </section>
 
       {{/* Success Metrics */},
-  }
+  };
       <section className="py-20 bg-slate-800/30">
         <div className="container-responsive">
           <div className="text-center mb-16">
@@ -434,15 +434,15 @@ export default function Solutions() {
             {successMetrics.map((metric, index) => (
   <motion.div;
                 key={{metric.label},
-  }
+  };
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.6, delay: index * 0.1 },
-  }
+  };
                 viewport={{ once: true },
-  }
+  };
                 className="className="text-center";"
               >
                 <div className={`w-20 h-20 rounded-xl bg-gradient-to-br ${metric.color} flex items-center justify-center mx-auto mb-6`}>
@@ -459,18 +459,18 @@ export default function Solutions() {
       </section>
 
       {{/* CTA Section */},
-  }
+  };
       <section className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50">
         <div className="container-responsive text-center">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             viewport={{ once: true },
-  }
+  };
           >
             <h2 className="text-3xl lg: text-4xl font-bold text-white mb-6">
               Ready to Transform Your Business?;
@@ -499,4 +499,4 @@ export default function Solutions() {
       </section>
     </div>
   )
-}
+};

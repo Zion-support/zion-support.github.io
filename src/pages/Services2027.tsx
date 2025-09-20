@@ -143,7 +143,7 @@ const categories = [
       case 'innovation':;
         return filtered.sort((a, b) => {
   const innovationLevels = {{ 'Revolutionary': 3, 'Cutting-Edge': 2, 'Advanced': 1 },
-  }
+  };
           return (innovationLevels[b.innovationLevel as keyof typeof innovationLevels] || 0) - (innovationLevels[a.innovationLevel as keyof typeof innovationLevels] || 0)
         })
       case 'roi':;
@@ -168,17 +168,17 @@ const categories = [
       />
       ;
       {{/* Hero Section */},
-  }
+  };
       <section className="relative pt-32 pb-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 to-pink-500/10"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             animate={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.6 },
-  }
+  };
           >
             <div className="flex items-center justify-center space-x-2 mb-4">
               <Sparkles className="w-8 h-8 text-purple-400" />
@@ -210,13 +210,13 @@ const categories = [
       </section>
 
       {{/* Search and Filter Section */},
-  }
+  };
       <section className="py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-white/5 backdrop-blur-sm border border-purple-400/20 rounded-2xl p-6">
             <div className="flex flex-col lg:flex-row gap-6">
               {{/* Search */},
-  }
+  };
               <div className="flex-1">
                 <div className="relative">
                   <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
@@ -224,22 +224,22 @@ const categories = [
                     type="text";
                     placeholder="Search 2027 services...";
                     value={{query},
-  }
+  };
                     onChange={{(e) => setQuery(e.target.value)},
-  }
+  };
                     className="className="w-full pl-10 pr-4 py-3 bg-white/5 border border-purple-400/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-400/50 focus:border-purple-400/50";"
                   />
                 </div>
               </div>
 
               {{/* Category Filter */},
-  }
+  };
               <div className="flex-shrink-0">
                 <select;
                   value={{selectedCategory},
-  }
+  };
                   onChange={{(e) => setSelectedCategory(e.target.value)},
-  }
+  };
                   className="className="px-4 py-3 bg-white/5 border border-purple-400/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-400/50";"
                 >
                   {categories.map((category) => (
@@ -251,13 +251,13 @@ const categories = [
               </div>
 
               {{/* Sort */},
-  }
+  };
               <div className="flex-shrink-0">
                 <select;
                   value={{sortBy},
-  }
+  };
                   onChange={{(e) => setSortBy(e.target.value)},
-  }
+  };
                   className="className="px-4 py-3 bg-white/5 border border-purple-400/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-400/50";"
                 >
                   <option value="innovation">Sort by Innovation</option>
@@ -271,18 +271,18 @@ const categories = [
       </section>
 
       {{/* Featured Services */},
-  }
+  };
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.6 },
-  }
+  };
             viewport={{ once: true },
-  }
+  };
             className="className="text-center mb-12";"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -297,15 +297,15 @@ const categories = [
             {featuredServices.map((service, index) => (
   <motion.div;
                 key={{service.id},
-  }
+  };
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.6, delay: index * 0.1 },
-  }
+  };
                 viewport={{ once: true },
-  }
+  };
                 className="className="bg-white/5 backdrop-blur-sm border border-purple-400/20 rounded-2xl p-6 hover:border-purple-400/40 transition-all duration-300 group";"
               >
                 <div className={`w-16 h-16 rounded-xl bg-gradient-to-r ${service.color} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
@@ -328,7 +328,7 @@ const categories = [
                   <div className="text-2xl font-bold text-purple-400">${service.price.toLocaleString()}</div>
                   <div className="text-sm text-green-400 bg-green-400/10 px-2 py-1 rounded-full">
                     {{service.innovationLevel},
-  }
+  };
                   </div>
                 </div>
 
@@ -350,18 +350,18 @@ const categories = [
       </section>
 
       {{/* All Services Grid */},
-  }
+  };
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.6 },
-  }
+  };
             viewport={{ once: true },
-  }
+  };
             className="className="text-center mb-12";"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -376,15 +376,15 @@ const categories = [
             {filteredAndSorted.map((service, index) => (
   <motion.div;
                 key={{service.id},
-  }
+  };
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.6, delay: index * 0.05 },
-  }
+  };
                 viewport={{ once: true },
-  }
+  };
                 className="className="bg-white/5 backdrop-blur-sm border border-purple-400/20 rounded-xl p-5 hover:border-purple-400/40 transition-all duration-300 group";"
               >
                 <div className={`w-12 h-12 rounded-lg bg-gradient-to-r ${service.color} flex items-center justify-center mb-3 group-hover:scale-110 transition-transform duration-300`}>
@@ -398,7 +398,7 @@ const categories = [
                   <div className="text-lg font-bold text-purple-400">${service.price.toLocaleString()}</div>
                   <div className="text-xs text-green-400 bg-green-400/10 px-2 py-1 rounded-full">
                     {{service.innovationLevel},
-  }
+  };
                   </div>
                 </div>
 
@@ -416,18 +416,18 @@ const categories = [
       </section>
 
       {{/* CTA Section */},
-  }
+  };
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.6 },
-  }
+  };
             viewport={{ once: true },
-  }
+  };
             className="className="bg-gradient-to-r from-purple-500/10 to-pink-500/10 border border-purple-400/30 rounded-3xl p-12 text-center";"
           >
             <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">
@@ -456,5 +456,5 @@ const categories = [
       </section>
     </div>
   )
-}
+};
 export default Services2027;

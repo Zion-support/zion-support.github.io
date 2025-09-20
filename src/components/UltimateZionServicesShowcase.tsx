@@ -48,7 +48,7 @@ const itemVariants = {
             whileInView={{ opacity: 1, y: 0 },
   } 
             transition={{ duration: 0.6 },
-  }
+  };
           >
             Ultimate
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">
@@ -67,7 +67,7 @@ const itemVariants = {
             whileInView={{ opacity: 1, y: 0 },
   } 
             transition={{ duration: 0.6, delay: 0.2 },
-  }
+  };
           >
             Discover our revolutionary portfolio of cutting-edge micro SAAS services, quantum computing solutions, 
             blockchain innovations, space technology, and AI-powered services designed to transform industries and 
@@ -82,7 +82,7 @@ const itemVariants = {
             whileInView={{ opacity: 1, y: 0 },
   } 
             transition={{ duration: 0.6, delay: 0.4 },
-  }
+  };
           >
             <h3 className="text-2xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">
               🚀 Ready to Transform Your Business?
@@ -124,7 +124,7 @@ const itemVariants = {
             whileInView={{ opacity: 1, y: 0 },
   } 
             transition={{ duration: 0.6, delay: 0.6 },
-  }
+  };
           >
             <input 
               type="text" 
@@ -162,7 +162,7 @@ const itemVariants = {
             initial="hidden" 
             whileInView="visible" 
             viewport={{ once: true },
-  }
+  };
           >
             {filteredServices.map((service, index) => (
               <motion.div 
@@ -301,11 +301,11 @@ const itemVariants = {
           <motion.div 
             className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-lg rounded-2xl p-8 border border-purple-400/30"
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.6 },
-  }
+  };
           >
             <h2 className="text-3xl md: text-4xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">
               Ready to Lead the Future?

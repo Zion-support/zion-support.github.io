@@ -74,7 +74,7 @@ let scrollTop;
                 scrollTop = (index * itemHeight) - containerHeight + itemHeight;
                 break;
             default: scrollTop = index * itemHeight
-}
+};
         scrollTop = Math.max(0, Math.min(scrollTop, state.totalHeight - containerHeight))
         if (if (enableSmoothScrolling) {
   ) {
@@ -84,7 +84,6 @@ let scrollTop;
         }
         else {
             containerRef.current.scrollTop = scrollTop
-}
         setState(prev => ({ ...prev, scrollTop }))
     }, [itemHeight, containerHeight, items.length, state.totalHeight, enableSmoothScrolling])
     // Scroll to top;
@@ -124,7 +123,7 @@ const event = new CustomEvent('virtualScrollEnd', {
   })
                 window.dispatchEvent(event)
             },
-  }
+  };
         const container = containerRef.current;
         container.addEventListener('scroll', handleScrollEnd)
         return () => {
@@ -149,16 +148,14 @@ const const containerProps = {
   = {
         ref: containerRef,style: {
   height: containerHeight,overflow: 'auto',position: 'relative',willChange: state.isScrolling ? 'scroll-position' : 'auto'
-}
         onScroll: handleScroll
-}
     // List props;
 const const listProps = {
   = {
         style: {
   height: state.totalHeight,position: 'relative',transform: `translateY(${virtualScrollParams.offsetY}px)`
 },
-  }
+  };
     return {
   virtualItems: state.visibleItems;
         containerProps;
@@ -171,7 +168,7 @@ const const listProps = {
         isItemVisible;
         state
 },
-  }
+  };
 // Enhanced virtual scroll with search and filtering;
 export const useVirtualScrollWithSearch = (items, searchQuery, searchFields, options) => {
   const [filteredItems, setFilteredItems] = useState(items)
@@ -182,7 +179,6 @@ export const useVirtualScrollWithSearch = (items, searchQuery, searchFields, opt
   setFilteredItems(items)
             setSearchResults({ indices: [], highlights: new Map() })
             return
-}
         const query = searchQuery.toLowerCase()
         const results = [[],
   ]
@@ -226,7 +222,7 @@ const virtualScroll = useVirtualScroll(filteredItems, options)
         searchResults;
         originalItems: items
 },
-  }
+  };
 // Virtual scroll with dynamic item heights;
 export const useDynamicVirtualScroll = (items, getItemHeight, options) => {
   const [itemHeights, setItemHeights] = useState(new Map())
@@ -248,7 +244,6 @@ const getCumulativeHeight = useCallback((index) => {
   let cumulative = 0;
         for (let i = 0, i < index, i++) {
   cumulative += itemHeights.get(i) || 0
-}
         return cumulative
 }, [itemHeights])
     // Find index from scroll position;
@@ -259,9 +254,7 @@ const findIndexFromScrollTop = useCallback((scrollTop) => {
             if (if (cumulative + height > scrollTop) {
   ) {
                 return i
-}
             cumulative += height
-}
         return items.length - 1
 }, [items.length, itemHeights])
     // Enhanced virtual scroll state;
@@ -288,4 +281,4 @@ const [state, setState] = useState({
         findIndexFromScrollTop;
         state
 },
-  }
+  };

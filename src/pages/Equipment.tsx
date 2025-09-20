@@ -504,7 +504,7 @@ export default function Equipment() {
   id: 'dell-poweredge-r750',name: 'Dell PowerEdge R750 Server',category: 'servers',condition: 'new',icon: Server,image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=400&h=300&fit=crop',description: 'High-performance dual-socket server with enterprise-grade reliability and scalability.',specs: {
   processor: '2x Intel Xeon Silver 4314 (16 cores, 32 threads)';
         memory: '128GB DDR4 ECC Registered',storage: '4x 1.92TB SSD + 2x 4TB HDD',networking: '4x 1GbE + 2x 10GbE',power: '750W Platinum PSU'
-}
+};
       features: ['Redundant Power SuppliesiDRAC9 Management', 'Hot-swappable DrivesRAID Support', 'Enterprise Warranty']
       price: '$8,499';
       originalPrice: '$12,999';
@@ -516,57 +516,52 @@ export default function Equipment() {
   id: 'hp-proliant-dl380',name: 'HP ProLiant DL380 Gen10 Plus',category: 'servers',condition: 'refurbished',icon: Server,image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=400&h=300&fit=crop',description: 'Refurbished enterprise server with proven reliability and comprehensive support.',specs: {
   processor: '2x Intel Xeon Gold 6338 (32 cores, 64 threads)';
         memory: '256GB DDR4 ECC Registered',storage: '8x 900GB SAS HDD + 2x 480GB SSD',networking: '4x 1GbE + 2x 25GbE',power: '800W Platinum PSU'
-}
       features: ['HP iLO AdvancedSmart Array Controller', 'Flexible StorageEnergy Efficient', 'Certified Refurbished']
       price: '$6,299';
       originalPrice: '$15,999';
       discount: '61%',availability: 'In Stock',location: 'Dallas, TX';
       warranty: '1 Year',rating: 4.6,reviews: 28,featured: false,tags: [['ServerRefurbished', 'EnterpriseHigh Memory', 'Cost Effective'],
   ],
-  }
+  };
     // Networking;
     {
   id: 'cisco-catalyst-9300',name: 'Cisco Catalyst 9300-48P Switch',category: 'networking',condition: 'new',icon: Network,image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=400&h=300&fit=crop',description: 'Next-generation enterprise switch with PoE+ support and advanced security features.',specs: {
   ports: '48x PoE+ Gigabit + 4x SFP+',poe: '370W PoE+ Budget',switching: '176 Gbps',forwarding: '130 Mpps',power: 'AC Power Supply'
-}
       features: ['PoE+ SupportCisco DNA Ready', 'Advanced SecurityStackable', 'Energy Efficient']
       price: '$4,999';
       originalPrice: '$7,499';
       discount: '33%',availability: 'In Stock',location: 'San Francisco, CA';
       warranty: 'Lifetime',rating: 4.9,reviews: 67,featured: true,tags: [['SwitchPoE+', 'EnterpriseCisco', 'High Performance'],
   ],
-  }
+  };
     // Workstations;
     {
   id: 'dell-precision-5820',name: 'Dell Precision 5820 Workstation',category: 'workstations',condition: 'new',icon: Cpu,image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=400&h=300&fit=crop',description: 'Professional workstation designed for demanding applications and creative workflows.',specs: {
   processor: 'Intel Xeon W-3335 (12 cores, 24 threads)';
         memory: '64GB DDR4 ECC',graphics: 'NVIDIA RTX A4000 (16GB)',storage: '1TB NVMe SSD + 2TB HDD',power: '750W 80+ Gold'
-}
       features: ['ISV CertifiedECC Memory', 'Professional GraphicsFast Storage', 'Expandable']
       price: '$3,299';
       originalPrice: '$4,999';
       discount: '34%',availability: 'In Stock',location: 'Seattle, WA';
       warranty: '3 Years',rating: 4.7,reviews: 35,featured: false,tags: [['WorkstationProfessional', 'GraphicsPerformance', 'Reliable'],
   ],
-  }
+  };
     // Peripherals;
     {
   id: 'dell-ultrasharp-u2720q',name: 'Dell UltraSharp U2720Q Monitor',category: 'peripherals',condition: 'refurbished',icon: Monitor,image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=400&h=300&fit=crop',description: '27-inch 4K monitor with exceptional color accuracy and connectivity options.',specs: {
   resolution: '3840 x 2160 (4K UHD)',panel: 'IPS',color: '99% sRGB, 95% DCI-P3';
         ports: 'HDMI, DisplayPort, USB-C';
         response: '5ms'
-}
       features: ['4K ResolutionColor Accurate', 'USB-C HubVESA Mount', 'Height Adjustable']
       price: '$399',originalPrice: '$699',discount: '43%',availability: 'In Stock',location: 'Chicago, IL';
       warranty: '1 Year',rating: 4.8,reviews: 89,featured: false,tags: [['Monitor4K', 'Color AccurateProfessional', 'USB-C'],
   ],
-  }
+  };
     // Mobile Devices;
     {
   id: 'dell-latitude-5520',name: 'Dell Latitude 5520 Laptop',category: 'mobile',condition: 'refurbished',icon: Laptop,image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=400&h=300&fit=crop',description: 'Business laptop with enterprise security features and long battery life.',specs: {
   processor: 'Intel Core i7-1185G7 (4 cores, 8 threads)';
         memory: '16GB DDR4',storage: '512GB NVMe SSD',display: '15.6" FHD (1920x1080)',battery: '68Whr (up to 12 hours)'
-}
       features: ['Enterprise SecurityLong Battery Life', 'Fast PerformanceDurable Design', 'Windows 11 Pro']
       price: '$799',originalPrice: '$1,499';
       discount: '47%',availability: 'In Stock',location: 'New York, NY';
@@ -577,7 +572,7 @@ export default function Equipment() {
 
   const toggleEquipmentExpansion = (equipmentId: string) => {
   setExpandedEquipment(expandedEquipment === equipmentId ? null : equipmentId)
-  }
+  };
   const filteredEquipment = equipmentInventory.filter(equipment => {
   if (selectedCategory !== 'all' && equipment.category !== selectedCategory) return false;
     if (selectedCondition !== 'all' && equipment.condition !== selectedCondition) return false;
@@ -600,7 +595,7 @@ export default function Equipment() {
       case 'specialized': return 'bg-red-500/20 text-red-400';
       default: return 'bg-slate-500/20 text-slate-400'
 },
-  }
+  };
   const getConditionColor = (condition: string) => {
   switch (condition) {
   case 'new': return 'bg-green-500/20 text-green-400';
@@ -609,18 +604,18 @@ export default function Equipment() {
       case 'good': return 'bg-orange-500/20 text-orange-400';
       default: return 'bg-slate-500/20 text-slate-400'
 },
-  }
+  };
   const renderStars = (rating: number) => {
   return Array.from({ length: 5 }, (_, i) => (
   <Star;
         key={{i},
-  }
+  };
         className={`w-4 h-4 ${
   i < Math.floor(rating) ? 'text-yellow-400 fill-current' : 'text-gray-400'
 }`}
       />
     ))
-  }
+  };
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO ;
@@ -629,17 +624,17 @@ export default function Equipment() {
       />
       ;
       {{/* Hero Section */},
-  }
+  };
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 via-blue-500/10 to-green-500/10"></div>
         <div className="container mx-auto px-6 relative z-10">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             animate={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             className="className="text-center";"
           >
             <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-purple-500/20 to-blue-500/20 rounded-2xl mb-6">
@@ -657,13 +652,13 @@ export default function Equipment() {
       </section>
 
       {{/* Search and Filters */},
-  }
+  };
       <section className="py-12">
         <div className="container mx-auto px-6">
           <div className="max-w-6xl mx-auto">
             <div className="flex flex-col lg:flex-row gap-6 mb-8">
               {{/* Search */},
-  }
+  };
               <div className="flex-1">
                 <div className="relative">
                   <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
@@ -671,22 +666,22 @@ export default function Equipment() {
                     type="text";
                     placeholder="Search equipment by name, specs, or features...";
                     value={{searchQuery},
-  }
+  };
                     onChange={{(e) => setSearchQuery(e.target.value)},
-  }
+  };
                     className="className="w-full pl-12 pr-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-purple-400 focus:ring-2 focus:ring-purple-400/20 transition-all duration-200";"
                   />
                 </div>
               </div>
 
               {{/* Category Filter */},
-  }
+  };
               <div className="lg:w-48">
                 <select;
                   value={{selectedCategory},
-  }
+  };
                   onChange={{(e) => setSelectedCategory(e.target.value)},
-  }
+  };
                   className="className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white focus:outline-none focus:border-purple-400 focus:ring-2 focus:ring-purple-400/20 transition-all duration-200";"
                 >
                   {categories.map((category) => (
@@ -698,13 +693,13 @@ export default function Equipment() {
               </div>
 
               {{/* Condition Filter */},
-  }
+  };
               <div className="lg:w-48">
                 <select;
                   value={{selectedCondition},
-  }
+  };
                   onChange={{(e) => setSelectedCondition(e.target.value)},
-  }
+  };
                   className="className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white focus:outline-none focus:border-purple-400 focus:ring-2 focus:ring-purple-400/20 transition-all duration-200";"
                 >
                   {conditions.map((condition) => (
@@ -716,12 +711,12 @@ export default function Equipment() {
               </div>
 
               {{/* View Mode Toggle */},
-  }
+  };
               <div className="flex items-center gap-2">
                 <button;
                   onClick={{onClick={() => setViewMode('grid')},
   },
-  }
+  };
                   className={`p-2 rounded-lg transition-all duration-200 ${
   viewMode === 'grid' ;
                       ? 'bg-purple-400/20 text-purple-400' ;
@@ -733,7 +728,7 @@ export default function Equipment() {
                 <button;
                   onClick={{onClick={() => setViewMode('list')},
   },
-  }
+  };
                   className={`p-2 rounded-lg transition-all duration-200 ${
   viewMode === 'list' ;
                       ? 'bg-purple-400/20 text-purple-400' ;
@@ -749,16 +744,16 @@ export default function Equipment() {
       </section>
 
       {{/* Featured Equipment */},
-  }
+  };
       <section className="py-16">
         <div className="container mx-auto px-6">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             className="className="text-center mb-12";"
           >
             <h2 className="text-3xl font-bold text-white mb-4">Featured Equipment</h2>
@@ -769,13 +764,13 @@ export default function Equipment() {
             {equipmentInventory.filter(e => e.featured).map((equipment, index) => (
   <motion.div;
                 key={{equipment.id},
-  }
+  };
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.8, delay: index * 0.1 },
-  }
+  };
                 className="className="group";"
               >
                 <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-2xl border border-slate-600/50 hover:border-purple-400/50 transition-all duration-300 hover:scale-105 overflow-hidden">
@@ -783,11 +778,11 @@ export default function Equipment() {
                     <div className="flex items-center gap-3 mb-4">
                       <span className={`px-3 py-1 rounded-full text-xs font-medium ${getCategoryColor(equipment.category)}`}>
                         {{categories.find(c => c.id === equipment.category)?.name},
-  }
+  };
                       </span>
                       <span className={`px-3 py-1 rounded-full text-xs font-medium ${getConditionColor(equipment.condition)}`}>
                         {{conditions.find(con => con.id === equipment.condition)?.name},
-  }
+  };
                       </span>
                       <span className="px-3 py-1 rounded-full text-xs font-medium bg-yellow-500/20 text-yellow-400">
                         Featured;
@@ -800,13 +795,13 @@ export default function Equipment() {
                       </div>
                       <h3 className="text-xl font-bold text-white group-hover:text-purple-400 transition-colors duration-200">
                         {{equipment.name},
-  }
+  };
                       </h3>
                     </div>
                     ;
                     <p className="text-gray-300 text-sm mb-4 leading-relaxed">
                       {{equipment.description},
-  }
+  };
                     </p>
                     ;
                     <div className="mb-4">
@@ -815,7 +810,7 @@ export default function Equipment() {
                         {equipment.features.slice(0, 4).map((feature, featureIndex) => (
   <span key={featureIndex} className="px-2 py-1 bg-slate-700/50 text-gray-300 text-xs rounded">
                             {{feature},
-  }
+  };
                           </span>
                         ))}
                       </div>
@@ -830,7 +825,7 @@ export default function Equipment() {
                         <div className="text-gray-400">Rating</div>
                         <div className="flex items-center gap-1">
                           {{renderStars(equipment.rating)},
-  }
+  };
                           <span className="text-gray-300 text-xs">({equipment.reviews})</span>
                         </div>
                       </div>
@@ -847,23 +842,23 @@ export default function Equipment() {
                     <button;
                       onClick={{onClick={() => toggleEquipmentExpansion(equipment.id)},
   },
-  }
+  };
                       className="className="w-full px-4 py-2 bg-gradient-to-r from-purple-400 to-blue-500 text-white font-semibold rounded-lg hover:from-purple-500 hover:to-blue-600 transition-all duration-200 hover:scale-105";"
                     >
                       {{expandedEquipment === equipment.id ? 'Show Less' : 'View Full Specs'},
-  }
+  };
                     </button>
                     ;
                     {expandedEquipment === equipment.id && (
   <motion.div;
                         initial={{ opacity: 0, height: 0 },
-  }
+  };
                         animate={{ opacity: 1, height: 'auto' },
-  }
+  };
                         exit={{ opacity: 0, height: 0 },
-  }
+  };
                         transition={{ duration: 0.3 },
-  }
+  };
                         className="className="mt-4 pt-4 border-t border-slate-600/50";"
                       >
                         <div className="mb-4">
@@ -884,7 +879,7 @@ export default function Equipment() {
                             {equipment.features.map((feature, featureIndex) => (
   <span key={featureIndex} className="px-2 py-1 bg-purple-500/20 text-purple-400 text-xs rounded">
                                 {{feature},
-  }
+  };
                               </span>
                             ))}
                           </div>
@@ -897,7 +892,7 @@ export default function Equipment() {
                           </div>
                           <div className="text-green-400 font-medium">
                             Save {{equipment.discount},
-  }
+  };
                           </div>
                         </div>
                       </motion.div>
@@ -911,16 +906,16 @@ export default function Equipment() {
       </section>
 
       {{/* All Equipment */},
-  }
+  };
       <section className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50">
         <div className="container mx-auto px-6">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">Complete Equipment Inventory</h2>
@@ -934,13 +929,13 @@ export default function Equipment() {
               {filteredEquipment.map((equipment, index) => (
   <motion.div;
                   key={{equipment.id},
-  }
+  };
                   initial={{ opacity: 0, y: 20 },
-  }
+  };
                   whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                   transition={{ duration: 0.8, delay: index * 0.05 },
-  }
+  };
                   className="className="group";"
                 >
                   <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl border border-slate-600/50 hover:border-purple-400/50 transition-all duration-300 hover:scale-105 overflow-hidden">
@@ -948,11 +943,11 @@ export default function Equipment() {
                       <div className="flex items-center gap-2 mb-3">
                         <span className={`px-2 py-1 rounded-full text-xs font-medium ${getCategoryColor(equipment.category)}`}>
                           {{categories.find(c => c.id === equipment.category)?.name},
-  }
+  };
                         </span>
                         <span className={`px-2 py-1 rounded-full text-xs font-medium ${getConditionColor(equipment.condition)}`}>
                           {{conditions.find(con => con.id === equipment.condition)?.name},
-  }
+  };
                         </span>
                       </div>
                       ;
@@ -962,13 +957,13 @@ export default function Equipment() {
                         </div>
                         <h3 className="text-lg font-bold text-white group-hover:text-purple-400 transition-colors duration-200">
                           {{equipment.name},
-  }
+  };
                         </h3>
                       </div>
                       ;
                       <p className="text-gray-300 text-xs mb-3 leading-relaxed line-clamp-2">
                         {{equipment.description},
-  }
+  };
                       </p>
                       ;
                       <div className="mb-3">
@@ -977,7 +972,7 @@ export default function Equipment() {
                           {equipment.features.slice(0, 3).map((feature, featureIndex) => (
   <span key={featureIndex} className="px-2 py-1 bg-slate-700/50 text-gray-300 text-xs rounded">
                               {{feature},
-  }
+  };
                             </span>
                           ))}
                         </div>
@@ -992,7 +987,7 @@ export default function Equipment() {
                           <div className="text-gray-400">Rating</div>
                           <div className="flex items-center gap-1">
                             {{renderStars(equipment.rating)},
-  }
+  };
                           </div>
                         </div>
                       </div>
@@ -1010,13 +1005,13 @@ export default function Equipment() {
               {filteredEquipment.map((equipment, index) => (
   <motion.div;
                   key={{equipment.id},
-  }
+  };
                   initial={{ opacity: 0, x: -20 },
-  }
+  };
                   whileInView={{ opacity: 1, x: 0 },
-  }
+  };
                   transition={{ duration: 0.8, delay: index * 0.05 },
-  }
+  };
                   className="className="group";"
                 >
                   <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl border border-slate-600/50 hover:border-purple-400/50 transition-all duration-300 p-6">
@@ -1031,11 +1026,11 @@ export default function Equipment() {
                         <div className="flex items-center gap-3 mb-2">
                           <span className={`px-3 py-1 rounded-full text-xs font-medium ${getCategoryColor(equipment.category)}`}>
                             {{categories.find(c => c.id === equipment.category)?.name},
-  }
+  };
                           </span>
                           <span className={`px-3 py-1 rounded-full text-xs font-medium ${getConditionColor(equipment.condition)}`}>
                             {{conditions.find(con => con.id === equipment.condition)?.name},
-  }
+  };
                           </span>
                           {equipment.featured && (
   <span className="px-3 py-1 rounded-full text-xs font-medium bg-yellow-500/20 text-yellow-400">
@@ -1046,12 +1041,12 @@ export default function Equipment() {
                         ;
                         <h3 className="text-xl font-bold text-white group-hover:text-purple-400 transition-colors duration-200 mb-2">
                           {{equipment.name},
-  }
+  };
                         </h3>
                         ;
                         <p className="text-gray-300 text-sm mb-3 leading-relaxed">
                           {{equipment.description},
-  }
+  };
                         </p>
                         ;
                         <div className="mb-3">
@@ -1060,7 +1055,7 @@ export default function Equipment() {
                             {equipment.features.slice(0, 5).map((feature, featureIndex) => (
   <span key={featureIndex} className="px-2 py-1 bg-slate-700/50 text-gray-300 text-xs rounded">
                                 {{feature},
-  }
+  };
                               </span>
                             ))}
                           </div>
@@ -1077,7 +1072,7 @@ export default function Equipment() {
                             <div className="text-gray-400">Rating</div>
                             <div className="flex items-center gap-1">
                               {{renderStars(equipment.rating)},
-  }
+  };
                               <span className="text-gray-300 text-xs">({equipment.reviews})</span>
                             </div>
                           </div>
@@ -1105,16 +1100,16 @@ export default function Equipment() {
       </section>
 
       {{/* Call to Action */},
-  }
+  };
       <section className="py-20">
         <div className="container mx-auto px-6 text-center">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
           >
             <h2 className="text-4xl font-bold text-white mb-6">
               Need Custom Equipment Solutions?;
@@ -1140,4 +1135,3 @@ export default function Equipment() {
       </section>
     </div>
   )
-}

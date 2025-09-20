@@ -24,14 +24,13 @@ interface Message {
   id: string,type: 'user' | 'assistant',content: string,timestamp: Date;
   isLoading?: boolean,
   error?: string
-}
+};
 
 interface ChatAssistantProps {
   position?: 'bottom-right' | 'bottom-left' | 'top-right' | 'top-left',
   theme?: 'dark' | 'light' | 'auto',
   maxHeight?: string,
   welcomeMessage?: string,
-}
 
 export const ChatAssistant: React.FC<ChatAssistantProps> = ({
   position = 'bottom-right';
@@ -183,13 +182,13 @@ const assistantMessage: Message = {
       {/* Chat Toggle Button */}
       <motion.button
         initial={{ scale: 0 },
-  }
+  };
         animate={{ scale: 1 },
-  }
+  };
         whileHover={{ scale: 1.1 },
-  }
+  };
         whileTap={{ scale: 0.9 },
-  }
+  };
         onClick={() => setIsOpen(!isOpen)}
         className="w-14 h-14 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-full shadow-2xl flex items-center justify-center transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-cyan-300/50"
         aria-label="Open chat assistant"
@@ -202,13 +201,13 @@ const assistantMessage: Message = {
         {isOpen && (
           <motion.div
             initial={{ opacity: 0, scale: 0.8, y: 20 },
-  }
+  };
             animate={{ opacity: 1, scale: 1, y: 0 },
-  }
+  };
             exit={{ opacity: 0, scale: 0.8, y: 20 },
-  }
+  };
             transition={{ type: "spring", stiffness: 300, damping: 30 },
-  }
+  };
             className={`absolute bottom-16 right-0 w-96 bg-slate-800/95 backdrop-blur-xl border border-cyan-400/30 rounded-2xl shadow-2xl overflow-hidden ${isMinimized ? 'h-16' : ''}`}
           >
             {/* Header */}
@@ -254,15 +253,15 @@ const assistantMessage: Message = {
                 <div 
                   className="flex-1 overflow-y-auto p-4 space-y-4"
                   style={{ maxHeight: maxHeight },
-  }
+  };
                 >
                   {messages.map((message) => (
                     <motion.div
                       key={message.id}
                       initial={{ opacity: 0, y: 10 },
-  }
+  };
                       animate={{ opacity: 1, y: 0 },
-  }
+  };
                       className={`flex ${message.type === 'user' ? 'justify-end' : 'justify-start'}`}
                     >
                       <div
@@ -296,9 +295,9 @@ const assistantMessage: Message = {
   {isTyping && (
                     <motion.div
                       initial={{ opacity: 0, y: 10 },
-  }
+  };
                       animate={{ opacity: 1, y: 0 },
-  }
+  };
                       className="flex justify-start"
                     >
                       <div className="bg-slate-700/50 text-slate-200 border border-slate-600/50 rounded-2xl p-3">
@@ -328,11 +327,11 @@ const assistantMessage: Message = {
                         <motion.button
                           key={action.text}
                           initial={{ opacity: 0, scale: 0.9 },
-  }
+  };
                           animate={{ opacity: 1, scale: 1 },
-  }
+  };
                           transition={{ delay: index * 0.1 },
-  }
+  };
                           onClick={action.action}
                           className="flex items-center gap-2 p-2 bg-slate-700/50 hover:bg-slate-600/50 text-slate-300 text-xs rounded-lg transition-colors border border-slate-600/50"
                         >
@@ -417,11 +416,11 @@ const assistantMessage: Message = {
         {showSettings && (
           <motion.div
             initial={{ opacity: 0, scale: 0.8 },
-  }
+  };
             animate={{ opacity: 1, scale: 1 },
-  }
+  };
             exit={{ opacity: 0, scale: 0.8 },
-  }
+  };
             className="absolute bottom-16 right-0 w-80 bg-slate-800/95 backdrop-blur-xl border border-cyan-400/30 rounded-2xl shadow-2xl p-4"
           >
             <div className="flex items-center justify-between mb-4">
@@ -467,7 +466,7 @@ const assistantMessage: Message = {
   ]);
                     setShowSettings(false)
 },
-  }
+  };
                   className="w-full px-4 py-2 bg-slate-700/50 hover: bg-slate-600/50 text-white rounded-lg transition-colors"
                 >
                   Clear Chat History
@@ -479,4 +478,3 @@ const assistantMessage: Message = {
       </AnimatePresence>
     </div>
   )
-};

@@ -74,9 +74,8 @@ const ComprehensivePricingShowcase2025: React.FC = () => {
   const const colors: { [key: string]: string } = {
   = {
             'Fintech': 'from-green-500 to-emerald-600Healthtech': 'from-red-500 to-pink-600Edutech': 'from-purple-500 to-violet-600Martech': 'from-pink-500 to-rose-600Micro SaaS': 'from-blue-500 to-indigo-600AI Services': 'from-cyan-500 to-blue-600IT Services': 'from-slate-500 to-gray-600'
-}
+};
         return colors[category] || 'from-gray-500 to-gray-600'
-}
 
     const getCategoryIcon = (category: string) => {
   const const icons: { [key: string]: React.ReactNode } = {
@@ -90,7 +89,6 @@ const ComprehensivePricingShowcase2025: React.FC = () => {
             'IT Services': <Shield className="w-5 h-5" />
         }
         return icons[category] || <Globe className="w-5 h-5" />
-}
 
     return (
         <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
@@ -102,17 +100,17 @@ const ComprehensivePricingShowcase2025: React.FC = () => {
             </Helmet>
 
             {{/* Hero Section */},
-  }
+  };
             <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-600 via-indigo-700 to-purple-800 opacity-90"></div>
                 <div className="relative max-w-7xl mx-auto text-center">
                     <motion.div;
                         initial={{ opacity: 0, y: 20 },
-  }
+  };
                         animate={{ opacity: 1, y: 0 },
-  }
+  };
                         transition={{ duration: 0.8 },
-  }
+  };
                     >
                         <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
                             Comprehensive Pricing Guide 2025;
@@ -139,7 +137,7 @@ const ComprehensivePricingShowcase2025: React.FC = () => {
             </section>
 
             {{/* Contact Information Banner */},
-  }
+  };
             <section className="bg-white border-b border-gray-200 py-6">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
@@ -171,12 +169,12 @@ const ComprehensivePricingShowcase2025: React.FC = () => {
             </section>
 
             {{/* Search and Filter Section */},
-  }
+  };
             <section className="py-8 px-4 sm:px-6 lg:px-8">
                 <div className="max-w-7xl mx-auto">
                     <div className="flex flex-col lg:flex-row gap-6">
                         {{/* Search */},
-  }
+  };
                         <div className="flex-1">
                             <div className="relative">
                                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
@@ -184,22 +182,22 @@ const ComprehensivePricingShowcase2025: React.FC = () => {
                                     type="text";
                                     placeholder="Search services...";
                                     value={{searchTerm},
-  }
+  };
                                     onChange={{(e) => setSearchTerm(e.target.value)},
-  }
+  };
                                     className="className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent";"
                                 />
                             </div>
                         </div>
 
                         {{/* Category Filter */},
-  }
+  };
                         <div className="flex-shrink-0">
                             <select;
                                 value={{selectedCategory},
-  }
+  };
                                 onChange={{(e) => setSelectedCategory(e.target.value)},
-  }
+  };
                                 className="className="px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent";"
                             >
                                 {categories.map(category => (
@@ -214,7 +212,7 @@ const ComprehensivePricingShowcase2025: React.FC = () => {
             </section>
 
             {{/* Services Grid */},
-  }
+  };
             <section className="py-12 px-4 sm:px-6 lg:px-8">
                 <div className="max-w-7xl mx-auto">
                     {filteredServices.length === 0 ? (
@@ -228,25 +226,25 @@ const ComprehensivePricingShowcase2025: React.FC = () => {
                             {filteredServices.map((service, index) => (
   <motion.div;
                                     key={{service.id},
-  }
+  };
                                     initial={{ opacity: 0, y: 20 },
-  }
+  };
                                     animate={{ opacity: 1, y: 0 },
-  }
+  };
                                     transition={{ duration: 0.5, delay: index * 0.1 },
-  }
+  };
                                     className="className="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100";"
                                 >
                                     {{/* Service Header */},
-  }
+  };
                                     <div className={`bg-gradient-to-r ${getCategoryColor(service.category)} p-8 text-white`}>
                                         <div className="flex items-center justify-between mb-4">
                                             <div className="flex items-center space-x-3">
                                                 {{getCategoryIcon(service.category)},
-  }
+  };
                                                 <span className="text-sm font-medium opacity-90 bg-white/20 px-3 py-1 rounded-full">
                                                     {{service.category},
-  }
+  };
                                                 </span>
                                             </div>
                                             <div className="text-right">
@@ -269,14 +267,14 @@ const ComprehensivePricingShowcase2025: React.FC = () => {
                                     </div>
 
                                     {{/* Pricing Tiers */},
-  }
+  };
                                     <div className="p-8">
                                         <h4 className="text-2xl font-bold text-gray-800 mb-6 text-center">Pricing Plans</h4>
                                         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                                             {service.pricing.map((tier, tierIndex) => (
   <div;
                                                     key={{tierIndex},
-  }
+  };
                                                     className={`relative rounded-xl border-2 p-6 ${
   tier.popular;
                                                             ? 'border-blue-500 bg-blue-50 shadow-lg';
@@ -298,7 +296,7 @@ const ComprehensivePricingShowcase2025: React.FC = () => {
                                                             <span className="text-3xl font-bold text-gray-800">{tier.price}</span>
                                                             <span className="text-gray-600 ml-2">
                                                                 /{{tier.billing === 'monthly' ? 'month' : tier.billing === 'yearly' ? 'year' : 'setup'},
-  }
+  };
                                                             </span>
                                                         </div>
                                                         {tier.savings && (
@@ -318,7 +316,7 @@ const ComprehensivePricingShowcase2025: React.FC = () => {
                                                     <button;
                                                         onClick={{onClick={() => setSelectedService(service)},
   },
-  }
+  };
                                                         className="className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 text-white py-3 px-4 rounded-lg font-medium hover:from-blue-700 hover:to-indigo-700 transition-all duration-200 flex items-center justify-center space-x-2";"
                                                     >
                                                         <span>Get Started</span>
@@ -329,7 +327,7 @@ const ComprehensivePricingShowcase2025: React.FC = () => {
                                         </div>
 
                                         {{/* Key Features and Benefits */},
-  }
+  };
                                         <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-8">
                                             <div>
                                                 <h5 className="text-lg font-semibold text-gray-800 mb-4 flex items-center space-x-2">
@@ -362,14 +360,14 @@ const ComprehensivePricingShowcase2025: React.FC = () => {
                                         </div>
 
                                         {{/* Competitors */},
-  }
+  };
                                         <div className="mt-8 p-4 bg-gray-50 rounded-lg">
                                             <h5 className="text-sm font-medium text-gray-600 mb-2">Competitive Alternatives</h5>
                                             <div className="flex flex-wrap gap-2">
                                                 {service.competitors.map((competitor, idx) => (
   <span key={idx} className="px-3 py-1 bg-white border border-gray-200 rounded-full text-sm text-gray-600">
                                                         {{competitor},
-  }
+  };
                                                     </span>
                                                 ))}
                                             </div>
@@ -383,7 +381,7 @@ const ComprehensivePricingShowcase2025: React.FC = () => {
             </section>
 
             {{/* Contact CTA Section */},
-  }
+  };
             <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-600 via-indigo-700 to-purple-800">
                 <div className="max-w-4xl mx-auto text-center">
                     <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -412,7 +410,7 @@ const ComprehensivePricingShowcase2025: React.FC = () => {
             </section>
 
             {{/* Footer */},
-  }
+  };
             <footer className="bg-gray-900 text-white py-12 px-4 sm: px-6 lg:px-8">
                 <div className="max-w-7xl mx-auto">
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -451,6 +449,5 @@ const ComprehensivePricingShowcase2025: React.FC = () => {
             </footer>
         </div>
     )
-}
 
 export default ComprehensivePricingShowcase2025;

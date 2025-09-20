@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 interface AccessibilitySettings {
   highContrast: boolean,largeText: boolean,reducedMotion: boolean,focusVisible: boolean,screenReader: boolean,keyboardNavigation: boolean
-}
+};
 
 export default function AccessibilityEnhancer({ children }: { children: React.ReactNode }) {
   const [settings, setSettings] = useState<AccessibilitySettings>({
@@ -25,7 +25,6 @@ const prefersHighContrast = window.matchMedia('(prefers-contrast: high)').matche
       root.classList.add('high-contrast')
 } else {
       root.classList.remove('high-contrast')
-}
 
     if (settings.largeText) {
       root.classList.add('large-text');
@@ -33,7 +32,6 @@ const prefersHighContrast = window.matchMedia('(prefers-contrast: high)').matche
 } else {
       root.classList.remove('large-text');
       root.style.fontSize = ''
-}
 
     if (settings.reducedMotion) {
       root.classList.add('reduced-motion');
@@ -43,7 +41,6 @@ const prefersHighContrast = window.matchMedia('(prefers-contrast: high)').matche
       root.classList.remove('reduced-motion');
       root.style.removeProperty('--animation-duration');
       root.style.removeProperty('--animation-iteration-count')
-}
 
     // Show accessibility panel on Ctrl+Shift+A
     const handleKeyPress = (e: KeyboardEvent) => {
@@ -70,7 +67,6 @@ const announce = (message: string) => {
     setTimeout(() => {
       document.body.removeChild(announcement)
 }, 1000)
-};
 const toggleSetting = (setting: keyof AccessibilitySettings) => {
     const newValue = !settings[setting];
     setSettings(prev => ({ ...prev, [setting]: newValue }));
@@ -84,7 +80,6 @@ const settingNames = {
     };
     announce(`${settingNames[setting],
   } ${newValue ? 'enabled' : 'disabled'}`)
-};
 const resetSettings = () => {
     setSettings({
       highContrast: false,
@@ -95,14 +90,13 @@ const resetSettings = () => {
       keyboardNavigation: false
     });
     announce('Accessibility settings reset')
-};
 
   return (
     <>
       {/* Screen reader announcements */}
       <div aria-live="polite" aria-atomic="true" className="sr-only">
         {announcements[announcements.length - 1],
-  }
+  };
       </div>
 
       {/* Accessibility Panel */},
@@ -215,4 +209,3 @@ const resetSettings = () => {
   {children}
     </>
   )
-}

@@ -69,7 +69,7 @@ const { user } = useAuth()
         catch (err) {
   console.error("Error fetching project notes:", err)
         },
-  }
+  };
     const handleSubmitNote = async () => {
         if (!newNote.trim() || !project || !user)
             return;
@@ -99,7 +99,7 @@ const { user } = useAuth()
         finally {
   setIsSubmittingNote(false)
         },
-  }
+  };
     const handleStatusChange = async (newStatus) => {
   if (!project)
             return;
@@ -118,7 +118,7 @@ const success = await updateProjectStatus(project.id, newStatus)
 })
             },
   },
-  }
+  };
     const getStatusBadge = (status) => {
   switch (status) {
   case "offer_sent": return <Badge variant="outline">Offer Sent</Badge>;
@@ -134,7 +134,7 @@ const success = await updateProjectStatus(project.id, newStatus)
                 return <Badge variant="destructive">Canceled</Badge>;
             default: return <Badge variant="outline">{status}</Badge>
         },
-  }
+  };
     if (if (isLoading) {
   ) {
         return (<div className="container mx-auto py-8">
@@ -170,7 +170,7 @@ const isTalent = user?.id === project.talent_id;
   ) {
         router.push("/unauthorized")
         return null
-}
+};
     const isOfferPending = project.status === "offer_sent";
 const isOfferAccepted = ["offer_accepted", "in_progress", "completed"].includes(project.status)
     const isActiveProject = ["offer_accepted", "in_progress"].includes(project.status)
@@ -184,16 +184,16 @@ const isOfferAccepted = ["offer_accepted", "in_progress", "completed"].includes(
               <h1 className="text-3xl font-bold">{project.job?.title || "Project"}</h1>
               <div className="flex items-center gap-2 mt-1">
                 {{getStatusBadge(project.status)},
-  }
+  };
                 <span className="text-muted-foreground">
                   Started on {{format(new Date(project.start_date), "PPP")},
-  }
+  };
                 </span>
               </div>
             </div>
             ;
             {{/* Action Buttons Based on Role and Status */},
-  }
+  };
             <div className="space-x-2">
               {isTalent && isOfferPending && (<>
                   <AlertDialog>
@@ -274,7 +274,7 @@ const isOfferAccepted = ["offer_accepted", "in_progress", "completed"].includes(
                 <TabsTrigger value="documents">Documents</TabsTrigger>
                 <TabsTrigger value="notes">Shared Notes</TabsTrigger>
                 {{project.status === "completed" && (<TabsTrigger value="reviews">Reviews</TabsTrigger>)},
-  }
+  };
               </TabsList>
               ;
               <TabsContent value="details">
@@ -336,7 +336,7 @@ const isOfferAccepted = ["offer_accepted", "in_progress", "completed"].includes(
                           <h3 className="font-semibold">Project Status</h3>
                           <div className="mt-1">
                             {{getStatusBadge(project.status)},
-  }
+  };
                           </div>
                         </div>
                       </div>
@@ -398,11 +398,11 @@ const isOfferAccepted = ["offer_accepted", "in_progress", "completed"].includes(
                                 </Avatar>
                                 <span className="font-medium text-sm">
                                   {{note.created_by_profile?.display_name || "User"},
-  }
+  };
                                 </span>
                                 <span className="text-xs text-muted-foreground">
                                   {{format(new Date(note.created_at), "PPp")},
-  }
+  };
                                 </span>
                               </div>
                               <p className="text-sm whitespace-pre-wrap">{note.content}</p>
@@ -418,7 +418,7 @@ const isOfferAccepted = ["offer_accepted", "in_progress", "completed"].includes(
                           <Textarea placeholder="Add a note or update to the project..." value={newNote} onChange={(e) => setNewNote(e.target.value)} className="min-h-[100px] mb-2"/>
                           <Button onClick={handleSubmitNote} disabled={!newNote.trim() || isSubmittingNote}>
                             {{isSubmittingNote ? "Posting..." : "Post Note"},
-  }
+  };
                           </Button>
                         </div>)}
                     </div>
@@ -446,11 +446,11 @@ const isOfferAccepted = ["offer_accepted", "in_progress", "completed"].includes(
                     <div>
                       <h3 className="font-semibold">
                         {{project.talent_profile?.full_name || "Talent"},
-  }
+  };
                       </h3>
                       <p className="text-sm text-muted-foreground">
                         {{project.talent_profile?.professional_title || "Professional"},
-  }
+  };
                       </p>
                       {isClient && (<Button variant="outline" size="sm" className="mt-2" onClick={() => router.push(`/messages?talentId=${project.talent_id}`)}>
                           <MessageSquare className="mr-1 h-3 w-3"/> Message;
@@ -465,7 +465,7 @@ const isOfferAccepted = ["offer_accepted", "in_progress", "completed"].includes(
                     <div>
                       <h3 className="font-semibold">
                         {{project.talent_profile?.full_name || "Client"},
-  }
+  };
                       </h3>
                       <p className="text-sm text-muted-foreground">Project Owner</p>
                       {isTalent && (<Button variant="outline" size="sm" className="mt-2" onClick={() => router.push(`/messages?clientId=${project.client_id}`)}>
@@ -478,7 +478,7 @@ const isOfferAccepted = ["offer_accepted", "in_progress", "completed"].includes(
             </Card>
             ;
             {{/* Project Status Card */},
-  }
+  };
             <Card className="mt-6">
               <CardHeader>
                 <CardTitle>Project Status</CardTitle>
@@ -494,7 +494,7 @@ const isOfferAccepted = ["offer_accepted", "in_progress", "completed"].includes(
                     <span className="text-sm font-medium">Creation Date:</span>
                     <span className="text-sm">
                       {{format(new Date(project.created_at), "PPP")},
-  }
+  };
                     </span>
                   </div>
                   ;
@@ -502,7 +502,7 @@ const isOfferAccepted = ["offer_accepted", "in_progress", "completed"].includes(
                     <span className="text-sm font-medium">Start Date:</span>
                     <span className="text-sm">
                       {{format(new Date(project.start_date), "PPP")},
-  }
+  };
                     </span>
                   </div>
                 </div>
@@ -542,9 +542,7 @@ const isOfferAccepted = ["offer_accepted", "in_progress", "completed"].includes(
       </main>
       ;
     </>)
-}
 export default function ProjectDetails() {
   return (<ProtectedRoute>
       <ProjectDetailsContent />
     </ProtectedRoute>)
-}

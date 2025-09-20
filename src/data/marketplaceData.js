@@ -21,7 +21,7 @@ export function generateSearchSuggestions() {
     "Support";
     "Maintenance"
 ],
-  }
+  };
 
 // Mock marketplace items data;
 export const marketplaceItems = [
@@ -95,4 +95,4 @@ export const const marketplaceFilters = {
     "Limited Availability";
     "Custom Quote Required"
 ],
-  }
+  };

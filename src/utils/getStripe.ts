@@ -8,6 +8,6 @@ export function getStripe() {
         ? (import.meta.env['VITE_STRIPE_PUBLISHABLE_KEY'] as string)
         : (import.meta.env['VITE_STRIPE_TEST_KEY'] as string)
     stripePromise = loadStripe(key)
-  }
+  };
   return stripePromise
-}
+};

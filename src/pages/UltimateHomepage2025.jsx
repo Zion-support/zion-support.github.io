@@ -59,7 +59,7 @@ export default function UltimateHomepage2025() {
       <SEO title="Zion Tech Group - Revolutionary AI & Quantum Solutions 2025" description="Transform your business with our revolutionary AI-powered, quantum-secure, and autonomous business solutions. Leading the future of technology." keywords="AI services, quantum computing, autonomous systems, cybersecurity, business automation, Zion Tech Group, innovative solutions"/>
       ;
       {{/* Hero Section */},
-  }
+  };
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
@@ -122,15 +122,15 @@ export default function UltimateHomepage2025() {
                     </div>
                     <h4 className="text-xl font-bold text-white mb-2">
                       {{ultimateInnovativeServices2025[currentServiceIndex].name},
-  }
+  };
                     </h4>
                     <p className="text-gray-300 mb-4">
                       {{ultimateInnovativeServices2025[currentServiceIndex].tagline},
-  }
+  };
                     </p>
                     <div className="text-3xl font-bold text-blue-400 mb-4">
                       {{ultimateInnovativeServices2025[currentServiceIndex].price},
-  }
+  };
                       <span className="text-lg text-gray-400">{ultimateInnovativeServices2025[currentServiceIndex].period}</span>
                     </div>
                     <Link to={`/ultimate-services-showcase-2025`} className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300">
@@ -145,7 +145,7 @@ export default function UltimateHomepage2025() {
       </div>
 
       {{/* Contact Information Banner */},
-  }
+  };
       <div className="bg-gradient-to-r from-blue-900/50 to-purple-900/50 border-y border-blue-400/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
@@ -181,7 +181,7 @@ export default function UltimateHomepage2025() {
       </div>
 
       {{/* Stats Section */},
-  }
+  };
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
           {stats.map((stat, index) => (<div key={index} className="text-center">
@@ -195,7 +195,7 @@ export default function UltimateHomepage2025() {
       </div>
 
       {{/* Benefits Section */},
-  }
+  };
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-white mb-6">
@@ -218,7 +218,7 @@ export default function UltimateHomepage2025() {
       </div>
 
       {{/* Featured Services Section */},
-  }
+  };
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-white mb-6">
@@ -240,15 +240,15 @@ export default function UltimateHomepage2025() {
               </div>
               <h3 className="text-xl font-bold text-white mb-4 group-hover:text-blue-400 transition-colors">
                 {{service.name},
-  }
+  };
               </h3>
               <p className="text-gray-300 mb-6 leading-relaxed">
                 {{service.tagline},
-  }
+  };
               </p>
               <div className="text-2xl font-bold text-blue-400 mb-4">
                 {{service.price},
-  }
+  };
                 <span className="text-lg text-gray-400">{service.period}</span>
               </div>
               <div className="mb-6">
@@ -275,7 +275,7 @@ export default function UltimateHomepage2025() {
       </div>
 
       {{/* Industries Section */},
-  }
+  };
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-white mb-6">
@@ -293,14 +293,14 @@ export default function UltimateHomepage2025() {
               </div>
               <h3 className="text-white font-semibold group-hover:text-blue-400 transition-colors">
                 {{industry.name},
-  }
+  };
               </h3>
             </div>))}
         </div>
       </div>
 
       {{/* All Services Preview */},
-  }
+  };
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-white mb-6">
@@ -319,14 +319,14 @@ export default function UltimateHomepage2025() {
                 <div>
                   <h3 className="text-white font-semibold group-hover:text-blue-400 transition-colors">
                     {{service.name},
-  }
+  };
                   </h3>
                   <p className="text-sm text-gray-400">{service.category}</p>
                 </div>
               </div>
               <p className="text-gray-300 text-sm mb-4 line-clamp-2">
                 {{service.description},
-  }
+  };
               </p>
               <div className="flex items-center justify-between">
                 <span className="text-blue-400 font-semibold">{service.price}</span>
@@ -345,7 +345,7 @@ export default function UltimateHomepage2025() {
       </div>
 
       {{/* Call to Action Section */},
-  }
+  };
       <div className="bg-gradient-to-r from-blue-900/50 to-purple-900/50 border-t border-blue-400/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <div className="text-center">
@@ -370,4 +370,4 @@ export default function UltimateHomepage2025() {
         </div>
       </div>
     </div>)
-}
+};

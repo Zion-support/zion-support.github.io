@@ -91,5 +91,5 @@ export const EnhancedPricingComparison = () () => {
       </div>
     </section>
   )
-}
+};
 export default EnhancedPricingComparison

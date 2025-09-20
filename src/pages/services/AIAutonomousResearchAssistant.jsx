@@ -4,7 +4,7 @@ import { Search, Lightbulb, BarChart3, Rocket, GraduationCap, Globe } from "luci
 const AIAutonomousResearchAssistant = () => {
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
       {{/* Hero Section */},
-  }
+  };
       <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
@@ -33,7 +33,7 @@ const AIAutonomousResearchAssistant = () => {
       </section>
 
       {{/* What is AI Autonomous Research Assistant */},
-  }
+  };
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -98,7 +98,7 @@ const AIAutonomousResearchAssistant = () => {
       </section>
 
       {{/* Key Features */},
-  }
+  };
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">
@@ -174,7 +174,7 @@ const AIAutonomousResearchAssistant = () => {
       </section>
 
       {{/* How It Works */},
-  }
+  };
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">
@@ -229,7 +229,7 @@ const AIAutonomousResearchAssistant = () => {
       </section>
 
       {{/* Applications */},
-  }
+  };
       <section className="py-16 px-4 sm: px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">
@@ -300,7 +300,7 @@ const AIAutonomousResearchAssistant = () => {
       </section>
 
       {{/* Benefits */},
-  }
+  };
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">
@@ -393,7 +393,7 @@ const AIAutonomousResearchAssistant = () => {
       </section>
 
       {{/* CTA Section */},
-  }
+  };
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-600/20 to-cyan-600/20">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
@@ -414,5 +414,5 @@ const AIAutonomousResearchAssistant = () => {
         </div>
       </section>
     </div>)
-}
+};
 export default AIAutonomousResearchAssistant;

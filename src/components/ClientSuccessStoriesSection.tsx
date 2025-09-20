@@ -52,13 +52,13 @@ export function ClientSuccessStoriesSection() {
         <motion.div 
           className="text-center mb-16"
           initial={{ opacity: 0, y: 20 },
-  }
+  };
           whileInView={{ opacity: 1, y: 0 },
-  }
+  };
           viewport={{ once: true },
-  }
+  };
           transition={{ duration: 0.6 },
-  }
+  };
         >
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
             Client Success Stories
@@ -75,13 +75,13 @@ export function ClientSuccessStoriesSection() {
               key={story.id}
               className="bg-slate-800 border border-slate-700 rounded-xl overflow-hidden hover:border-blue-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25"
               initial={{ opacity: 0, y: 30 },
-  }
+  };
               whileInView={{ opacity: 1, y: 0 },
-  }
+  };
               viewport={{ once: true },
-  }
+  };
               transition={{ duration: 0.6, delay: index * 0.1 },
-  }
+  };
             >
               <div className="relative">
                 <img 
@@ -155,13 +155,13 @@ export function ClientSuccessStoriesSection() {
         <motion.div 
           className="mb-16"
           initial={{ opacity: 0, y: 30 },
-  }
+  };
           whileInView={{ opacity: 1, y: 0 },
-  }
+  };
           viewport={{ once: true },
-  }
+  };
           transition={{ duration: 0.6, delay: 0.4 },
-  }
+  };
         >
           <div className="bg-slate-800 border border-slate-700 rounded-2xl p-8">
             <h3 className="text-2xl font-bold text-white text-center mb-8">
@@ -192,13 +192,13 @@ export function ClientSuccessStoriesSection() {
         <motion.div 
           className="text-center"
           initial={{ opacity: 0, y: 20 },
-  }
+  };
           whileInView={{ opacity: 1, y: 0 },
-  }
+  };
           viewport={{ once: true },
-  }
+  };
           transition={{ duration: 0.6, delay: 0.6 },
-  }
+  };
         >
           <div className="bg-gradient-to-r from-green-600 to-emerald-600 rounded-2xl p-8 text-white">
             <h3 className="text-2xl font-bold mb-4">
@@ -223,4 +223,4 @@ export function ClientSuccessStoriesSection() {
       </div>
     </section>
   )
-}
+};

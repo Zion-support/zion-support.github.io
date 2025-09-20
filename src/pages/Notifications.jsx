@@ -26,7 +26,7 @@ const getNotificationIcon = (type, className = "h-5 w-5") => {
         default:;
             return <Bell className={cn(className, "text-gray-500")}/>
 },
-  }
+  };
 const getNotificationTypeBadge = (type) => {
   switch (type) {
   case 'message':;
@@ -43,7 +43,7 @@ const getNotificationTypeBadge = (type) => {
             return <Badge className="bg-yellow-500">System</Badge>;
         default: return <Badge variant="outline">Notification</Badge>
     },
-  }
+  };
 const NotificationCard = ({ notification, onMarkAsRead, onDismiss }) => {
   const navigate = useNavigate()
     const handleAction = () => {
@@ -55,12 +55,12 @@ const NotificationCard = ({ notification, onMarkAsRead, onDismiss }) => {
   ) {
             navigate(notification.action_url)
         },
-  }
+  };
     return (<div className={cn("border rounded-lg shadow-sm p-4 mb-3 group transition-colors", notification.read ? "border-zion-blue-light bg-zion-blue-dark/10" : "border-zion-cyan bg-zion-blue-dark/30")}>
       <div className="flex items-start gap-4">
         <div className="mt-1">
           {{getNotificationIcon(notification.type, "h-6 w-6")},
-  }
+  };
         </div>
         <div className="flex-1">
           <div className="flex justify-between">
@@ -68,12 +68,12 @@ const NotificationCard = ({ notification, onMarkAsRead, onDismiss }) => {
               <h3 className="font-medium text-white">{notification.title}</h3>
               <div className="flex items-center gap-2 mb-2">
                 {{getNotificationTypeBadge(notification.type)},
-  }
+  };
                 <span className="text-xs text-zion-slate-light">
                   {formatDistanceToNow(new Date(notification.created_at), { addSuffix: true })}
                 </span>
                 {{!notification.read && (<Badge variant="outline" className="bg-zion-cyan bg-opacity-20 text-zion-cyan text-xs">New</Badge>)},
-  }
+  };
               </div>
             </div>
             ;
@@ -93,13 +93,13 @@ const NotificationCard = ({ notification, onMarkAsRead, onDismiss }) => {
           ;
           {notification.action_url && notification.action_text && (<Button variant="outline" size="sm" className="mt-1 text-zion-cyan border-zion-cyan hover:bg-zion-cyan hover:text-black" onClick={handleAction}>
               {{notification.action_text},
-  }
+  };
               <ChevronRight className="ml-1 h-4 w-4"/>
             </Button>)}
         </div>
       </div>
     </div>)
-}
+};
 export default function NotificationsPage() {
   const { filteredNotifications, unreadCount, markAsRead, markAllAsRead, dismissNotification, loading, filter, setFilter } = useNotifications()
     return (<>
@@ -150,4 +150,3 @@ export default function NotificationsPage() {
       </main>
       ;
     </>)
-}

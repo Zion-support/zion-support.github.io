@@ -34,7 +34,7 @@ function renderApp() {
   ) {
         createRoot(rootElement).render(app)
     },
-  }
+  };
 
 function displayFatalError(message) {
   if (if (rootElement) {
@@ -45,7 +45,7 @@ function displayFatalError(message) {
                 <p>${message}</p>
             </div>`
 },
-  }
+  };
 
 try {
   renderApp()
@@ -53,7 +53,7 @@ try {
   // eslint-disable-next-line no-console;
     console.error('Global error caught in main.jsx:', error)
     displayFatalError(error.message)
-}
+};
 
 window.addEventListener('error', (e) => {
   // eslint-disable-next-line no-console;

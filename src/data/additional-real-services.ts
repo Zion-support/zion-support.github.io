@@ -12,7 +12,7 @@ export interface AdditionalService {
 	icon?: string, // emoji or simple text icon;
 	popular?: boolean;
 	launchDate?: string
-}
+};
 
 export const additionalEnhancedServices: AdditionalService[] = [
   // AI Services;
@@ -38,7 +38,6 @@ export const additionalEnhancedServices: AdditionalService[] = [
 ]
 		price: '$1,200';
 		period: '/month',trialDays: 14,rating: 4.7,reviews: 86,marketSize: 'Enterprise search $8B+',growthRate: 'CAGR 18%+',link: '/services/data-analytics',icon: '🔎'
-}
 	// IT Services;
 	{
   id: 'sase-zero-trust',name: 'SASE + Zero Trust Deployment',category: 'Security',tagline: 'Cloud-delivered security with identity-aware access',description:;
@@ -62,7 +61,6 @@ export const additionalEnhancedServices: AdditionalService[] = [
 ]
 		price: '$12,500';
 		period: '/project',link: '/services/cloud-devops',icon: '☁️'
-}
 	// Micro SaaS;
 	{
   id: 'seo-content-orchestrator',name: 'SEO Content Orchestrator',category: 'SAAS',tagline: 'Topic clustering, briefs, on-page audits';
@@ -84,7 +82,6 @@ export const additionalEnhancedServices: AdditionalService[] = [
 			'Fair routing with SLAs'
 ]
 		price: '$149',period: '/month',link: '/services',icon: '🧭'
-}
 	// Vertical AI solutions;
 	{
   id: 'healthcare-doc-copilot',name: 'Healthcare Documentation Copilot',category: 'AI',tagline: 'Ambient scribing with PHI safeguards',description: "Ambient clinical scribing and coding assistance with HIPAA/SOC 2 controls and EHR integration.",features: [
@@ -104,7 +101,6 @@ export const additionalEnhancedServices: AdditionalService[] = [
 			'Jira/Slack notifications'
 ]
 		price: '$79',period: '/month',link: '/services',icon: '💸'
-}
 	// Cybersecurity;
 	{
   id: 'appsec-maturity',name: 'AppSec Maturity + S-SDLC',category: 'Security',tagline: 'Threat modeling, SAST/DAST, SBOM, SCA';
@@ -117,7 +113,6 @@ export const additionalEnhancedServices: AdditionalService[] = [
 ]
 		price: '$6,500';
 		period: '/project',link: '/services/cybersecurity',icon: '🔐'
-}
 	// Data & Analytics;
 	{
   id: 'realtime-analytics-stack',name: 'Real-time Analytics Stack',category: 'Analytics',tagline: 'Event pipelines with low-latency dashboards',description:;
@@ -129,7 +124,6 @@ export const additionalEnhancedServices: AdditionalService[] = [
 ]
 		price: '$9,500';
 		period: '/project',link: '/services/data-analytics',icon: '📊'
-}
 	// More Micro SaaS;
 	{
   id: 'contract-intelligence',name: 'Contract Intelligence & Redlining',category: 'SAAS',tagline: 'Clause extraction, playbooks, approvals';
@@ -152,7 +146,6 @@ export const additionalEnhancedServices: AdditionalService[] = [
 			'Cost and latency tracking'
 ]
 		price: '$249',period: '/month',link: '/services',icon: '🧪'
-}
 	// IT Ops;
 	{
   id: 'm365-hardening',name: 'Microsoft 365 Hardening + DLP',category: 'IT',tagline: 'Email security, DLP, and posture baselines';

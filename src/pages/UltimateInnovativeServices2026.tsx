@@ -114,12 +114,11 @@ export default function UltimateInnovativeServices2026() {
   const getCategoryIcon = (category: string) => {
   const cat = categories.find(c => c.id === category)
     return cat ? cat.icon : Zap
-}
+};
 
   const getCategoryColor = (category: string) => {
   const cat = categories.find(c => c.id === category)
     return cat ? cat.color : 'from-zion-cyan to-zion-blue'
-}
 
   const filteredServices = ULTIMATE_INNOVATIVE_SERVICES_2026.filter(service => {
   const matchesSearch = service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||;
@@ -144,7 +143,7 @@ export default function UltimateInnovativeServices2026() {
         return b.price - a.price;
       case 'innovation':;
 const innovationOrder = {{ 'Revolutionary': 3, 'Cutting-edge': 2, 'Advanced': 1 },
-  }
+  };
         return (innovationOrder[b.innovationLevel as keyof typeof innovationOrder] || 0) -;
                (innovationOrder[a.innovationLevel as keyof typeof innovationOrder] || 0)
       case 'roi':;
@@ -156,7 +155,7 @@ const aROI = parseInt(a.roi.split('-')[0])
   })
   const toggleServiceExpansion = (serviceId: string) => {
   setExpandedService(expandedService === serviceId ? null : serviceId)
-  }
+  };
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       <SEO;
@@ -166,17 +165,17 @@ const aROI = parseInt(a.roi.split('-')[0])
       />
 
       {{/* Hero Section */},
-  }
+  };
       <section className="relative overflow-hidden bg-gradient-to-r from-zion-cyan via-zion-blue to-zion-purple py-20">
         <div className="absolute inset-0 bg-black/20"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             animate={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
           >
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
               Ultimate Innovative Services;
@@ -191,9 +190,9 @@ const aROI = parseInt(a.roi.split('-')[0])
             <div className="flex flex-wrap justify-center gap-4">
               <motion.div;
                 whileHover={{ scale: 1.05 },
-  }
+  };
                 whileTap={{ scale: 0.95 },
-  }
+  };
                 className="className="flex items-center gap-2 bg-white/20 backdrop-blur-sm rounded-full px-6 py-3 text-white";"
               >
                 <Sparkles className="w-5 h-5" />
@@ -201,9 +200,9 @@ const aROI = parseInt(a.roi.split('-')[0])
               </motion.div>
               <motion.div;
                 whileHover={{ scale: 1.05 },
-  }
+  };
                 whileTap={{ scale: 0.95 },
-  }
+  };
                 className="className="flex items-center gap-2 bg-white/20 backdrop-blur-sm rounded-full px-6 py-3 text-white";"
               >
                 <Award className="w-5 h-5" />
@@ -211,9 +210,9 @@ const aROI = parseInt(a.roi.split('-')[0])
               </motion.div>
               <motion.div;
                 whileHover={{ scale: 1.05 },
-  }
+  };
                 whileTap={{ scale: 0.95 },
-  }
+  };
                 className="className="flex items-center gap-2 bg-white/20 backdrop-blur-sm rounded-full px-6 py-3 text-white";"
               >
                 <Target className="w-5 h-5" />
@@ -225,12 +224,12 @@ const aROI = parseInt(a.roi.split('-')[0])
       </section>
 
       {{/* Search and Filters */},
-  }
+  };
       <section className="py-12 bg-white/5 backdrop-blur-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
             {{/* Search */},
-  }
+  };
             <div className="lg:col-span-2">
               <div className="relative">
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-400 w-5 h-5" />
@@ -238,47 +237,47 @@ const aROI = parseInt(a.roi.split('-')[0])
                   type="text";
                   placeholder="Search innovative services...";
                   value={{searchQuery},
-  }
+  };
                   onChange={{(e) => setSearchQuery(e.target.value)},
-  }
+  };
                   className="className="w-full pl-10 pr-4 py-3 bg-white/10 backdrop-blur-sm border border-zion-slate-300 rounded-lg text-white placeholder-zion-slate-400 focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent";"
                 />
               </div>
             </div>
 
             {{/* Category Filter */},
-  }
+  };
             <div>
               <select;
                 value={{selectedCategory},
-  }
+  };
                 onChange={{(e) => setSelectedCategory(e.target.value)},
-  }
+  };
                 className="className="w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-zion-slate-300 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent";"
               >
                 {categories.map(category => (
   <option key={category.id} value={category.id} className="bg-zion-slate-800 text-white">
                     {{category.name},
-  }
+  };
                   </option>
                 ))}
               </select>
             </div>
 
             {{/* Price Filter */},
-  }
+  };
             <div>
               <select;
                 value={{selectedPriceRange},
-  }
+  };
                 onChange={{(e) => setSelectedPriceRange(e.target.value)},
-  }
+  };
                 className="className="w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-zion-slate-300 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent";"
               >
                 {priceRanges.map(range => (
   <option key={range.id} value={range.id} className="bg-zion-slate-800 text-white">
                     {{range.name},
-  }
+  };
                   </option>
                 ))}
               </select>
@@ -286,16 +285,16 @@ const aROI = parseInt(a.roi.split('-')[0])
           </div>
 
           {{/* Sort Options */},
-  }
+  };
           <div className="mt-6 flex flex-wrap items-center gap-4">
             <span className="text-zion-slate-300">Sort by:</span>
             {sortOptions.map(option => (
   <button;
                 key={{option.id},
-  }
+  };
                 onClick={{onClick={() => setSortBy(option.id)},
   },
-  }
+  };
                 className={`px-4 py-2 rounded-lg transition-all duration-200 ${
   sortBy === option.id;
                     ? 'bg-zion-cyan text-white';
@@ -303,7 +302,7 @@ const aROI = parseInt(a.roi.split('-')[0])
 }`}
               >
                 {{option.name},
-  }
+  };
               </button>
             ))}
           </div>
@@ -311,7 +310,7 @@ const aROI = parseInt(a.roi.split('-')[0])
       </section>
 
       {{/* Services Grid */},
-  }
+  };
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
@@ -328,20 +327,20 @@ const aROI = parseInt(a.roi.split('-')[0])
               {sortedServices.map((service, index) => (
   <motion.div;
                   key={{service.id},
-  }
+  };
                   initial={{ opacity: 0, y: 20 },
-  }
+  };
                   animate={{ opacity: 1, y: 0 },
-  }
+  };
                   exit={{ opacity: 0, y: -20 },
-  }
+  };
                   transition={{ duration: 0.5, delay: index * 0.1 },
-  }
+  };
                   className="className="group relative";"
                 >
                   <div className="relative bg-white/5 backdrop-blur-sm border border-zion-slate-300/20 rounded-2xl p-6 h-full transition-all duration-300 hover:bg-white/10 hover:border-zion-cyan/50 hover:shadow-2xl hover:shadow-zion-cyan/20">
                     {{/* Service Header */},
-  }
+  };
                     <div className="flex items-start justify-between mb-4">
                       <div className={`p-3 rounded-xl bg-gradient-to-r ${getCategoryColor(service.category.toLowerCase())}`}>
                         {React.createElement(getCategoryIcon(service.category.toLowerCase()), {
@@ -351,28 +350,28 @@ const aROI = parseInt(a.roi.split('-')[0])
                       <div className="text-right">
                         <div className="text-2xl font-bold text-zion-cyan">
                           ${{service.price.toLocaleString()},
-  }
+  };
                         </div>
                         <div className="text-sm text-zion-slate-400">
                           {{service.pricingModel},
-  }
+  };
                         </div>
                       </div>
                     </div>
 
                     {{/* Service Title and Description */},
-  }
+  };
                     <h3 className="text-xl font-bold text-white mb-3 group-hover:text-zion-cyan transition-colors">
                       {{service.title},
-  }
+  };
                     </h3>
                     <p className="text-zion-slate-300 text-sm mb-4 line-clamp-3">
                       {{service.description},
-  }
+  };
                     </p>
 
                     {{/* Innovation Level Badge */},
-  }
+  };
                     <div className="flex items-center gap-2 mb-4">
                       <div className={`px-3 py-1 rounded-full text-xs font-semibold ${
   service.innovationLevel === 'Revolutionary';
@@ -382,41 +381,41 @@ const aROI = parseInt(a.roi.split('-')[0])
                           : 'bg-blue-500/20 text-blue-400 border border-blue-500/30'
 }`}>
                         {{service.innovationLevel},
-  }
+  };
                       </div>
                       <div className="text-xs text-zion-slate-400">
                         ROI: {{service.roi},
-  }
+  };
                       </div>
                     </div>
 
                     {{/* Tags */},
-  }
+  };
                     <div className="flex flex-wrap gap-2 mb-4">
                       {service.tags.slice(0, 3).map((tag, tagIndex) => (
   <span;
                           key={{tagIndex},
-  }
+  };
                           className="className="px-2 py-1 bg-zion-slate-700/50 text-zion-slate-300 text-xs rounded-md";"
                         >
                           {{tag},
-  }
+  };
                         </span>
                       ))},
   {service.tags.length > 3 && (
   <span className="px-2 py-1 bg-zion-slate-700/50 text-zion-slate-400 text-xs rounded-md">
                           +{{service.tags.length - 3},
-  }
+  };
                         </span>
                       )}
                     </div>
 
                     {{/* Expand/Collapse Button */},
-  }
+  };
                     <button;
                       onClick={{onClick={() => toggleServiceExpansion(service.id)},
   },
-  }
+  };
                       className="className="w-full flex items-center justify-center gap-2 py-2 text-zion-cyan hover:text-white transition-colors";"
                     >
                       {expandedService === service.id ? (
@@ -433,22 +432,22 @@ const aROI = parseInt(a.roi.split('-')[0])
                     </button>
 
                     {{/* Expanded Service Details */},
-  }
+  };
                     <AnimatePresence>
                       {expandedService === service.id && (
   <motion.div;
                           initial={{ opacity: 0, height: 0 },
-  }
+  };
                           animate={{ opacity: 1, height: 'auto' },
-  }
+  };
                           exit={{ opacity: 0, height: 0 },
-  }
+  };
                           transition={{ duration: 0.3 },
-  }
+  };
                           className="className="mt-4 pt-4 border-t border-zion-slate-600/30";"
                         >
                           {{/* Features */},
-  }
+  };
                           <div className="mb-4">
                             <h4 className="text-sm font-semibold text-white mb-2">Key Features:</h4>
                             <ul className="space-y-1">
@@ -456,14 +455,14 @@ const aROI = parseInt(a.roi.split('-')[0])
   <li key={featureIndex} className="flex items-start gap-2 text-xs text-zion-slate-300">
                                   <CheckCircle className="w-3 h-3 text-zion-cyan mt-0.5 flex-shrink-0" />
                                   {{feature},
-  }
+  };
                                 </li>
                               ))}
                             </ul>
                           </div>
 
                           {{/* Benefits */},
-  }
+  };
                           <div className="mb-4">
                             <h4 className="text-sm font-semibold text-white mb-2">Benefits:</h4>
                             <ul className="space-y-1">
@@ -471,14 +470,14 @@ const aROI = parseInt(a.roi.split('-')[0])
   <li key={benefitIndex} className="flex items-start gap-2 text-xs text-zion-slate-300">
                                   <ZapIcon className="w-3 h-3 text-yellow-400 mt-0.5 flex-shrink-0" />
                                   {{benefit},
-  }
+  };
                                 </li>
                               ))}
                             </ul>
                           </div>
 
                           {{/* Market Info */},
-  }
+  };
                           <div className="grid grid-cols-2 gap-4 text-xs">
                             <div>
                               <span className="text-zion-slate-400">Market Size: </span>
@@ -491,7 +490,7 @@ const aROI = parseInt(a.roi.split('-')[0])
                           </div>
 
                           {{/* Contact Button */},
-  }
+  };
                           <div className="mt-4">
                             <Link;
                               to="/contact";
@@ -525,7 +524,7 @@ const aROI = parseInt(a.roi.split('-')[0])
                   setSelectedCategory('all')
                   setSelectedPriceRange('all')
                 },
-  }
+  };
                 className="className="px-6 py-3 bg-zion-cyan text-white rounded-lg hover:bg-zion-blue transition-colors";"
               >
                 Clear Filters;
@@ -536,18 +535,18 @@ const aROI = parseInt(a.roi.split('-')[0])
       </section>
 
       {{/* Contact CTA */},
-  }
+  };
       <section className="py-20 bg-gradient-to-r from-zion-cyan/10 via-zion-blue/10 to-zion-purple/10">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             viewport={{ once: true },
-  }
+  };
           >
             <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
               Ready to Transform Your Business?;
@@ -581,4 +580,3 @@ const aROI = parseInt(a.roi.split('-')[0])
       </section>
     </div>
   )
-}

@@ -133,22 +133,22 @@ export default function QuantumTechnology() {
   const const containerVariants = {
   = {
     hidden: {{ opacity: 0 },
-  }
+  };
     visible: {
   opacity: 1,transition: {
   staggerChildren: 0.1
 },
   },
-  }
+  };
   const const itemVariants = {
   = {
     hidden: {{ opacity: 0, y: 20 },
-  }
+  };
     visible: {
   opacity: 1,y: 0,transition: {{ duration: 0.6 },
   },
   },
-  }
+  };
   const filteredApplications = selectedApplication === 'all';
     ? quantumApplications;
     : quantumApplications.filter(app => app.category === selectedApplication)
@@ -156,7 +156,7 @@ export default function QuantumTechnology() {
   return (
     <div className="min-h-screen bg-futuristic">
       {{/* Hero Section */},
-  }
+  };
       <section className="relative py-32 bg-gradient-to-br from-zion-slate-dark via-zion-purple-dark to-zion-purple overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-20 left-20 w-64 h-64 border border-zion-purple rounded-full animate-pulse"></div>
@@ -166,11 +166,11 @@ export default function QuantumTechnology() {
         <div className="container mx-auto px-4 text-center relative z-10">
           <motion.div;
             initial={{ opacity: 0, y: 30 },
-  }
+  };
             animate={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
           >
             <div className="flex justify-center mb-8">
               <div className="w-24 h-24 bg-gradient-to-r from-zion-purple to-zion-pink rounded-2xl flex items-center justify-center">
@@ -180,7 +180,7 @@ export default function QuantumTechnology() {
 
             <h1 className="text-6xl md:text-7xl font-bold text-white mb-8 leading-tight">
               Quantum{{' '},
-  }
+  };
               <span className="bg-gradient-to-r from-zion-purple to-zion-pink bg-clip-text text-transparent">
                 Technology;
               </span>
@@ -194,9 +194,9 @@ export default function QuantumTechnology() {
               <motion.button;
                 className="className="px-8 py-4 bg-gradient-to-r from-zion-purple to-zion-pink text-white rounded-xl font-semibold text-lg hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-zion-purple/25";"
                 whileHover={{ scale: 1.05 },
-  }
+  };
                 whileTap={{ scale: 0.95 },
-  }
+  };
               >
                 Quantum Consultation;
               </motion.button>
@@ -209,19 +209,19 @@ export default function QuantumTechnology() {
       </section>
 
       {{/* Quantum Services Overview */},
-  }
+  };
       <section className="py-20 bg-zion-slate-dark">
         <div className="container mx-auto px-4">
           <motion.div;
             className="className="text-center mb-16";"
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.6 },
-  }
+  };
             viewport={{ once: true },
-  }
+  };
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Quantum Technology Services;
@@ -235,21 +235,21 @@ export default function QuantumTechnology() {
           <motion.div;
             className="className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8";"
             variants={{containerVariants},
-  }
+  };
             initial="hidden";
             whileInView="visible";
             viewport={{ once: true },
-  }
+  };
           >
             {quantumServices.map((service, index) => (
   <motion.div;
                 key={{index},
-  }
+  };
                 className="className="bg-zion-blue-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-8 hover:border-zion-cyan/40 transition-all duration-300 group";"
                 variants={{itemVariants},
-  }
+  };
                 whileHover={{ y: -5, scale: 1.02 },
-  }
+  };
               >
                 <div className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
                   <service.icon className="w-8 h-8 text-white" />
@@ -263,7 +263,7 @@ export default function QuantumTechnology() {
   <li key={idx} className="flex items-center text-zion-slate-light">
                       <CheckCircle className="w-4 h-4 text-zion-cyan mr-3 flex-shrink-0" />
                       {{feature},
-  }
+  };
                     </li>
                   ))}
                 </ul>
@@ -274,19 +274,19 @@ export default function QuantumTechnology() {
       </section>
 
       {{/* Quantum Applications */},
-  }
+  };
       <section className="py-20 bg-zion-blue-dark">
         <div className="container mx-auto px-4">
           <motion.div;
             className="className="text-center mb-16";"
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.6 },
-  }
+  };
             viewport={{ once: true },
-  }
+  };
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Quantum Applications by Industry;
@@ -298,27 +298,27 @@ export default function QuantumTechnology() {
           </motion.div>
 
           {{/* Application Filter */},
-  }
+  };
           <motion.div;
             className="className="flex flex-wrap justify-center gap-4 mb-12";"
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.6 },
-  }
+  };
             viewport={{ once: true },
-  }
+  };
           >
             {applications.map((app) => {
   const Icon = app.icon;
               return (
                 <button;
                   key={{app.id},
-  }
+  };
                   onClick={{onClick={() => setSelectedApplication(app.id)},
   },
-  }
+  };
                   className={`flex items-center gap-3 px-6 py-3 rounded-xl font-medium transition-all duration-300 ${
   selectedApplication === app.id;
                       ? 'bg-zion-purple text-white shadow-lg shadow-zion-purple/25';
@@ -327,32 +327,32 @@ export default function QuantumTechnology() {
                 >
                   <Icon className="w-5 h-5" />
                   {{app.name},
-  }
+  };
                 </button>
               )
             })}
           </motion.div>
 
           {{/* Applications Grid */},
-  }
+  };
           <motion.div;
             className="className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8";"
             variants={{containerVariants},
-  }
+  };
             initial="hidden";
             whileInView="visible";
             viewport={{ once: true },
-  }
+  };
           >
             {filteredApplications.map((app, index) => (
   <motion.div;
                 key={{index},
-  }
+  };
                 className="className="bg-zion-slate-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300";"
                 variants={{itemVariants},
-  }
+  };
                 whileHover={{ y: -5, scale: 1.02 },
-  }
+  };
               >
                 <div className="flex items-center gap-4 mb-4">
                   <div className="w-12 h-12 bg-gradient-to-r from-zion-purple to-zion-pink rounded-xl flex items-center justify-center">
@@ -370,7 +370,7 @@ export default function QuantumTechnology() {
   <li key={idx} className="text-zion-slate-light text-sm flex items-center">
                         <div className="w-1.5 h-1.5 bg-zion-cyan rounded-full mr-2 flex-shrink-0"></div>
                         {{benefit},
-  }
+  };
                       </li>
                     ))}
                   </ul>
@@ -382,19 +382,19 @@ export default function QuantumTechnology() {
       </section>
 
       {{/* Quantum Technologies */},
-  }
+  };
       <section className="py-20 bg-zion-slate-dark">
         <div className="container mx-auto px-4">
           <motion.div;
             className="className="text-center mb-16";"
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.6 },
-  }
+  };
             viewport={{ once: true },
-  }
+  };
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Quantum Computing Technologies;
@@ -408,21 +408,21 @@ export default function QuantumTechnology() {
           <motion.div;
             className="className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8";"
             variants={{containerVariants},
-  }
+  };
             initial="hidden";
             whileInView="visible";
             viewport={{ once: true },
-  }
+  };
           >
             {quantumTechnologies.map((tech, index) => (
   <motion.div;
                 key={{index},
-  }
+  };
                 className="className="bg-zion-blue-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300 group";"
                 variants={{itemVariants},
-  }
+  };
                 whileHover={{ y: -5, scale: 1.02 },
-  }
+  };
               >
                 <div className="w-16 h-16 bg-gradient-to-r from-zion-purple to-zion-pink rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
                   <tech.icon className="w-8 h-8 text-white" />
@@ -438,7 +438,7 @@ export default function QuantumTechnology() {
   <li key={idx} className="text-zion-slate-light text-sm flex items-center">
                         <div className="w-1.5 h-1.5 bg-zion-cyan rounded-full mr-2 flex-shrink-0"></div>
                         {{advantage},
-  }
+  };
                       </li>
                     ))}
                   </ul>
@@ -450,19 +450,19 @@ export default function QuantumTechnology() {
       </section>
 
       {{/* Quantum Advantages */},
-  }
+  };
       <section className="py-20 bg-gradient-to-r from-zion-purple-dark to-zion-pink">
         <div className="container mx-auto px-4">
           <motion.div;
             className="className="text-center mb-16";"
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.6 },
-  }
+  };
             viewport={{ once: true },
-  }
+  };
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Quantum Computing Advantages;
@@ -476,19 +476,19 @@ export default function QuantumTechnology() {
           <motion.div;
             className="className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8";"
             variants={{containerVariants},
-  }
+  };
             initial="hidden";
             whileInView="visible";
             viewport={{ once: true },
-  }
+  };
           >
             {quantumAdvantages.map((advantage, index) => (
   <motion.div;
                 key={{index},
-  }
+  };
                 className="className="text-center";"
                 variants={{itemVariants},
-  }
+  };
               >
                 <div className="w-24 h-24 bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl flex items-center justify-center mx-auto mb-6">
                   <div className="text-3xl font-bold text-white">{advantage.metric}</div>
@@ -502,19 +502,19 @@ export default function QuantumTechnology() {
       </section>
 
       {{/* Implementation Process */},
-  }
+  };
       <section className="py-20 bg-zion-slate-dark">
         <div className="container mx-auto px-4">
           <motion.div;
             className="className="text-center mb-16";"
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.6 },
-  }
+  };
             viewport={{ once: true },
-  }
+  };
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Quantum Technology Implementation;
@@ -528,11 +528,11 @@ export default function QuantumTechnology() {
           <motion.div;
             className="className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8";"
             variants={{containerVariants},
-  }
+  };
             initial="hidden";
             whileInView="visible";
             viewport={{ once: true },
-  }
+  };
           >
             {[
   {
@@ -550,10 +550,10 @@ export default function QuantumTechnology() {
   ].map((phase, index) => (
   <motion.div;
                 key={{index},
-  }
+  };
                 className="className="relative";"
                 variants={{itemVariants},
-  }
+  };
               >
                 <div className="bg-zion-blue-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6 text-center">
                   <div className="w-16 h-16 bg-gradient-to-r from-zion-purple to-zion-pink rounded-2xl flex items-center justify-center mx-auto mb-4">
@@ -576,18 +576,18 @@ export default function QuantumTechnology() {
       </section>
 
       {{/* CTA Section */},
-  }
+  };
       <section className="py-20 bg-gradient-to-r from-zion-slate-dark to-zion-purple-dark">
         <div className="container mx-auto px-4 text-center">
           <motion.div;
             initial={{ opacity: 0, y: 30 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             viewport={{ once: true },
-  }
+  };
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Ready to Explore Quantum Technology?;
@@ -601,9 +601,9 @@ export default function QuantumTechnology() {
               <motion.button;
                 className="className="px-8 py-4 bg-gradient-to-r from-zion-purple to-zion-pink text-white rounded-xl font-semibold text-lg hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-zion-purple/25";"
                 whileHover={{ scale: 1.05 },
-  }
+  };
                 whileTap={{ scale: 0.95 },
-  }
+  };
               >
                 Start Quantum Journey;
               </motion.button>
@@ -616,4 +616,4 @@ export default function QuantumTechnology() {
       </section>
     </div>
   )
-}
+};

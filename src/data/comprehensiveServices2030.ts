@@ -371,7 +371,7 @@ export,
   o: i: "450% within 10 months",setupTi,
   m: e: "2-3 weeks",integratio,
   n: s: ["Streaming Platforms", "Content Management Systems", "Analytics Tools", "User Databases", "CDN Services"]
-  }
+  };
 ]
 // Export individual categories for easier access
 export const AI_SERVICES_2030 = COMPREHENSIVE_SERVICES_2030.filter(service => 

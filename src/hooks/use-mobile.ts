@@ -14,4 +14,4 @@ const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera
     return () => window.removeEventListener('resize', checkMobile)
   }, [])
   return isMobile
-}
+};

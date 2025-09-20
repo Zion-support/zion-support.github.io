@@ -26,7 +26,7 @@ function ReviewsModerationContent() {
 })
             setIsLoading(false)
         },
-  }
+  };
     useEffect(() => {
         fetchReviews()
     }, [activeTab])
@@ -80,9 +80,8 @@ function ReviewsModerationContent() {
       </main>
       ;
     </>)
-}
+};
 export default function ReviewsModeration() {
   return (<ProtectedRoute>
       <ReviewsModerationContent />
     </ProtectedRoute>)
-}

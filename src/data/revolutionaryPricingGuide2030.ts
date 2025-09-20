@@ -5,25 +5,24 @@ export interface PricingTier {
   ]
   savings?: number;
   popular?: boolean
-}
+};
 
 export interface EnterprisePricing {
   id: string,name: string,description: string,pricing: string,features: string[],benefits: string[],customizations: string[],contactInfo: {
   phone: string,email: string,website: string
 },
-  }
+  };
 
 export interface ServicePricing {
   serviceId: string,serviceName: string,category: string,tiers: PricingTier[],enterprise: EnterprisePricing,marketComparison: {
   competitors: string[],ourAdvantage: string,priceDifference: string
 },
-  }
+  };
 
 // Zion Tech Group Contact Information;
 const const zionContact = {
   = {
   phone: "+1 302 464 0950",email: "kleber@ziontechgroup.com",website: "https://ziontechgroup.com"
-}
 // Revolutionary Micro SAAS Services Pricing;
 export const revolutionaryMicroSaasPricing: ServicePricing[] = [
   {
@@ -105,7 +104,6 @@ export const revolutionaryMicroSaasPricing: ServicePricing[] = [
         "Multi-language support"
 ]
       contactInfo: zionContact
-}
     marketComparison: {
   competitors: ["UiPath", "Automation Anywhere", "Blue Prism"]
       ourAdvantage: "AI-powered learning and optimization that gets smarter over time",priceDifference: "20-40% more value for similar pricing"
@@ -189,7 +187,6 @@ export const revolutionaryMicroSaasPricing: ServicePricing[] = [
         "Multi-qubit management"
 ]
       contactInfo: zionContact
-}
     marketComparison: {
   competitors: ["IBM Quantum", "Google Quantum AI", "Microsoft Azure Quantum"]
       ourAdvantage: "Hybrid quantum-classical processing with enterprise-grade support",priceDifference: "30-50% more value for similar pricing"
@@ -257,7 +254,6 @@ export const revolutionaryITServicesPricing: ServicePricing[] = [
         "Multi-site deployment"
 ]
       contactInfo: zionContact
-}
     marketComparison: {
   competitors: ["IBM", "Microsoft", "Google"]
       ourAdvantage: "End-to-end quantum infrastructure with dedicated support and customization",priceDifference: "25-40% more value for similar pricing"
@@ -343,7 +339,6 @@ export const revolutionaryAIServicesPricing: ServicePricing[] = [
         "Multi-language support"
 ]
       contactInfo: zionContact
-}
     marketComparison: {
   competitors: ["OpenAI", "Google AI", "Microsoft AI"]
       ourAdvantage: "Enterprise-grade multimodal AI with customization and dedicated support",priceDifference: "20-35% more value for similar pricing"
@@ -358,20 +353,17 @@ export const const pricingRecommendations = {
   ]
     estimatedMonthlyCost: "$3,500 - $5,500";
     roi: "200-300% within 12 months"
-}
   mediumBusiness: {
   recommendedServices: ["NeuralFlow Professional", "QuantumSync Professional", "Multimodal AI Professional"]
     estimatedMonthlyCost: "$8,500 - $12,000";
     roi: "300-400% within 12 months"
-}
   enterprise: {
   recommendedServices: ["NeuralFlow Enterprise", "QuantumSync Enterprise", "Multimodal AI Enterprise"]
     estimatedMonthlyCost: "$15,000 - $25,000";
     roi: "400-600% within 18 months"
 },
-  }
+  };
 // Export all pricing data;
 export const const allRevolutionaryPricing2030 = {
   = {
   microSaas: revolutionaryMicroSaasPricing,itServices: revolutionaryITServicesPricing,aiServices: revolutionaryAIServicesPricing,recommendations: pricingRecommendations
-}

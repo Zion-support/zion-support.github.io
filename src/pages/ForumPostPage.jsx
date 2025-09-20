@@ -18,35 +18,30 @@ const const mockPost = {
     id: "1",title: "Best practices for AI model fine-tuning",content: "I've been working on fine-tuning models for specific tasks and wanted to share some approaches that have worked well for me.\n\nFirst, it's important to carefully prepare your training data. Clean, well-structured data makes a huge difference. I typically spend more time on data preparation than on the actual fine-tuning process.\n\nSecond, for parameter optimization, I've found that learning rate scheduling plays a critical role. Starting with a smaller learning rate and using a warm-up period tends to yield more stable results.\n\nThird, regularization techniques like dropout and weight decay help prevent overfitting, especially when working with smaller datasets.\n\nFinally, evaluating your fine-tuned model requires looking beyond standard metrics. I always test with diverse real-world examples to ensure the model generalizes well.\n\nWhat has been your experience with fine-tuning? Any techniques you've found particularly effective?";
     author: {
   id: "user1",name: "Alex Johnson",avatar: "https://i.pravatar.cc/150?img=3",role: "Verified Talent"
-}
+};
     authorId: "user1",category: "ai-tools",categoryId: "ai-tools",tags: ["machine-learning", "fine-tuning", "gpt"]
     createdAt: "2025-04-01T12:00:00Z",updatedAt: "2025-04-01T12:00:00Z",replies: [],likes: 48,views: 120,upvotes: 48,downvotes: 2,replyCount: 4,isPinned: false,isLocked: false,isAnswered: true,authorName: "Alex Johnson",authorAvatar: "https://i.pravatar.cc/150?img=3",authorRole: "Verified Talent"
-}
 // Mock data for replies;
 const mockReplies = [
   {
   id: "reply1",postId: "1",content: "Great post! I've had similar experiences with data preparation being the key to successful fine-tuning. One thing I'd add is that synthetic data augmentation has been really helpful for me when working with limited training samples.",author: {
   id: "user2",name: "Sarah Chen",avatar: "https://i.pravatar.cc/150?img=5",role: "AI Engineer"
-}
         createdAt: "2025-04-01T14:30:00Z",updatedAt: "2025-04-01T14:30:00Z",likes: 12,isSolution: false,isAnswer: false
 },
   {
   id: "reply2",postId: "1",content: "Have you tried using LoRA or QLoRA for efficient fine-tuning? I've found them to be much more resource-friendly while maintaining good performance.",author: {
   id: "user3",name: "Michael Wong",avatar: "https://i.pravatar.cc/150?img=7",role: "AI Engineer"
-}
         createdAt: "2025-04-01T16:15:00Z",updatedAt: "2025-04-01T16:15:00Z",likes: 8,isSolution: false,isAnswer: false
 },
   {
   id: "reply3",postId: "1",content: "A technique that's worked wonders for me is to create a validation set that specifically targets the edge cases and potential biases. This has helped me identify issues early in the fine-tuning process.\n\nAlso, when fine-tuning language models, I've found that carefully crafting your prompts/templates for training can make a huge difference in the quality of the outputs.";
         author: {
   id: "user4",name: "Emma Davis",avatar: "https://i.pravatar.cc/150?img=9",role: "ML Research Lead"
-}
         createdAt: "2025-04-02T09:45:00Z",updatedAt: "2025-04-02T09:45:00Z",likes: 15,isSolution: false,isAnswer: true
 },
   {
   id: "reply4",postId: "1",content: "Could you share more details about how you structure your evaluation process? What metrics do you find most useful beyond the standard ones?",author: {
   id: "user5",name: "David Lin",avatar: "https://i.pravatar.cc/150?img=11",role: "Developer"
-}
         createdAt: "2025-04-02T11:20:00Z",updatedAt: "2025-04-02T11:20:00Z",likes: 4,isSolution: false,isAnswer: false
 },
   ]
@@ -80,7 +75,6 @@ const isAdminOrMod = user?.userType === 'admin' || user?.role === 'admin';
   title: "Authentication required",description: "Please sign in to vote on posts"
 })
             return
-}
         setPost({ ...post, upvotes: post.upvotes + 1 })
         toast({
   title: "Vote recorded",description: "You upvoted this post"
@@ -93,7 +87,6 @@ const isAdminOrMod = user?.userType === 'admin' || user?.role === 'admin';
   title: "Authentication required",description: "Please sign in to vote on posts"
 })
             return
-}
         setPost({ ...post, downvotes: post.downvotes + 1 })
         toast({
   title: "Vote recorded",description: "You downvoted this post"
@@ -106,7 +99,6 @@ const isAdminOrMod = user?.userType === 'admin' || user?.role === 'admin';
   title: "Authentication required",description: "Please sign in to reply"
 })
             return
-}
         // Create a new reply;
 const const newReply = {
   = {
@@ -115,9 +107,7 @@ const const newReply = {
             content;
             author: {
   id: user.id || 'unknown',name: user.displayName || 'Anonymous',avatar: user.avatarUrl || 'https://i.pravatar.cc/150?img=1',role: user.role || 'user'
-}
             createdAt: new Date().toISOString(),updatedAt: new Date().toISOString(),likes: 0,isSolution: false,isAnswer: false
-}
         setReplies([...replies, newReply])
         setPost({ ...post, replyCount: post.replyCount + 1 })
         toast({
@@ -132,7 +122,6 @@ const const newReply = {
   title: "Permission denied",description: "Only the original poster or moderators can mark answers",variant: "destructive"
 })
             return
-}
         // Update the replies;
 const updatedReplies = replies.map(reply => ({
   ...reply;
@@ -151,7 +140,6 @@ const updatedReplies = replies.map(reply => ({
   title: "Authentication required",description: "Please sign in to report content"
 })
             return
-}
         toast({
   title: "Report submitted",description: "A moderator will review this content"
 })
@@ -185,7 +173,7 @@ const updatedReplies = replies.map(reply => ({
           <span className="text-muted-foreground">/</span>
           <Link to={`/community/category/${post.categoryId}`} className="text-sm text-muted-foreground hover:text-foreground">
             {{post.categoryId.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')},
-  }
+  };
           </Link>
           <span className="text-muted-foreground">/</span>
           <span className="text-sm font-medium truncate max-w-[200px]">{post.title}</span>
@@ -203,7 +191,7 @@ const updatedReplies = replies.map(reply => ({
                   <div className="font-medium text-lg">{post.authorName}</div>
                   {post.authorRole && (<Badge variant="outline" className="mt-1">
                       {{post.authorRole},
-  }
+  };
                     </Badge>)}
                 </div>
               </div>
@@ -212,7 +200,7 @@ const updatedReplies = replies.map(reply => ({
                 <Calendar className="h-4 w-4 mr-1"/>
                 <time dateTime={post.createdAt} title={formattedDate}>
                   {{timeAgo},
-  }
+  };
                 </time>
               </div>
             </div>
@@ -222,7 +210,7 @@ const updatedReplies = replies.map(reply => ({
             <div className="flex flex-wrap gap-2 mb-6">
               {post.tags.map(tag => (<Badge key={tag} variant="outline" className="bg-zion-purple/10 hover:bg-zion-purple/20">
                   {{tag},
-  }
+  };
                 </Badge>))}
             </div>
             ;
@@ -254,12 +242,12 @@ const updatedReplies = replies.map(reply => ({
                     <Button variant="ghost" size="sm" onClick={handlePinPost}>
                       <Pin className="h-4 w-4 mr-1"/>
                       {{post.isPinned ? "Unpin" : "Pin"},
-  }
+  };
                     </Button>
                     <Button variant="ghost" size="sm" onClick={handleLockPost}>
                       <Lock className="h-4 w-4 mr-1"/>
                       {{post.isLocked ? "Unlock" : "Lock"},
-  }
+  };
                     </Button>
                   </>)}
                 ;
@@ -307,4 +295,3 @@ const updatedReplies = replies.map(reply => ({
         </div>
       </div>
     </>)
-}

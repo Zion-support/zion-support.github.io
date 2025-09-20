@@ -16,7 +16,7 @@ interface LoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg',
   text?: string,
   fullScreen?: boolean,
-}
+};
 
 export function LoadingSpinner({
   size = 'md';
@@ -38,12 +38,12 @@ const containerClasses = fullScreen
           animate={{
             rotate: 360,scale: [1, 1.1, 1],
   },
-  }
+  };
           transition={{
             rotate: { duration: 2, repeat: Infinity, ease: "linear" };
             scale: { duration: 2, repeat: Infinity, ease: "easeInOut" },
   },
-  }
+  };
         >
           <div className={`${sizeClasses[size],
   } bg-gradient-to-br from-zion-cyan via-zion-purple to-zion-blue rounded-xl flex items-center justify-center relative overflow-hidden`}>
@@ -55,9 +55,9 @@ const containerClasses = fullScreen
                   'linear-gradient(45deg, #0ea5e9, #8b5cf6, #0ea5e9)'
                 ],
   },
-  }
+  };
               transition={{ duration: 3, repeat: Infinity },
-  }
+  };
             />
             <span className="text-2xl font-bold text-white relative z-10">Z</span>
           </div>
@@ -67,9 +67,9 @@ const containerClasses = fullScreen
             className="absolute inset-0 bg-gradient-to-br from-zion-cyan via-zion-purple to-zion-blue rounded-xl blur-lg opacity-50"
             animate={{ opacity: [0.3, 0.6, 0.3],
   },
-  }
+  };
             transition={{ duration: 2, repeat: Infinity },
-  }
+  };
           />
         </motion.div>
 
@@ -78,9 +78,9 @@ const containerClasses = fullScreen
           className="text-zion-cyan font-medium"
           animate={{ opacity: [0.5, 1, 0.5],
   },
-  }
+  };
           transition={{ duration: 1.5, repeat: Infinity },
-  }
+  };
         >
           {text}
         </motion.div>
@@ -95,22 +95,20 @@ const containerClasses = fullScreen
                 scale: [1, 1.5, 1],
                 opacity: [0.5, 1, 0.5],
   },
-  }
+  };
               transition={{
                 duration: 1.5,repeat: Infinity,delay: index * 0.2
               },
-  }
+  };
             />
           ))}
         </div>
       </div>
     </div>
   )
-}
 
 interface PageLoaderProps {
   pageName?: string,
-}
 
 export function PageLoader({ pageName = 'Page' }: PageLoaderProps) {
   return (
@@ -124,9 +122,9 @@ export function PageLoader({ pageName = 'Page' }: PageLoaderProps) {
               scale: [1, 1.5, 1];
               opacity: [0.3, 0.6, 0.3],
   },
-  }
+  };
             transition={{ duration: 4, repeat: Infinity },
-  }
+  };
           />
           <motion.div
             className="absolute bottom-1/4 right-1/4 w-24 h-24 border border-zion-purple/20 rounded-full"
@@ -134,20 +132,20 @@ export function PageLoader({ pageName = 'Page' }: PageLoaderProps) {
               scale: [1.5, 1, 1.5];
               opacity: [0.6, 0.3, 0.6],
   },
-  }
+  };
             transition={{ duration: 4, repeat: Infinity, delay: 1 },
-  }
+  };
           />
         </div>
 
         {/* Main Content */}
         <motion.div
           initial={{ opacity: 0, y: 20 },
-  }
+  };
           animate={{ opacity: 1, y: 0 },
-  }
+  };
           transition={{ duration: 0.5 },
-  }
+  };
           className="relative z-10"
         >
           <div className="relative">
@@ -155,9 +153,9 @@ export function PageLoader({ pageName = 'Page' }: PageLoaderProps) {
             <motion.div
               className="absolute top-0 left-0 w-32 h-32 border-4 border-zion-cyan border-t-transparent rounded-full"
               animate={{ rotate: 360 },
-  }
+  };
               transition={{ duration: 1, repeat: Infinity, ease: "linear" },
-  }
+  };
             />
             <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-zion-cyan font-bold text-xl">
               ZION
@@ -168,9 +166,9 @@ export function PageLoader({ pageName = 'Page' }: PageLoaderProps) {
             className="text-2xl font-bold text-white mb-2"
             animate={{ opacity: [0.7, 1, 0.7],
   },
-  }
+  };
             transition={{ duration: 2, repeat: Infinity },
-  }
+  };
           >
             Loading {pageName}
           </motion.h2>
@@ -179,9 +177,9 @@ export function PageLoader({ pageName = 'Page' }: PageLoaderProps) {
             className="text-zion-slate-light"
             animate={{ opacity: [0.5, 1, 0.5],
   },
-  }
+  };
             transition={{ duration: 2, repeat: Infinity, delay: 0.5 },
-  }
+  };
           >
             Please wait while we prepare everything for you...
           </motion.p>
@@ -192,11 +190,11 @@ export function PageLoader({ pageName = 'Page' }: PageLoaderProps) {
               <motion.div
                 className="h-full bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full"
                 initial={{ width: 0 },
-  }
+  };
                 animate={{ width: "100%" },
-  }
+  };
                 transition={{ duration: 3, ease: "easeInOut" },
-  }
+  };
               />
             </div>
           </div>
@@ -204,12 +202,10 @@ export function PageLoader({ pageName = 'Page' }: PageLoaderProps) {
       </div>
     </div>
   )
-}
 
 interface SkeletonLoaderProps {
   lines?: number,
   className?: string,
-}
 
 export function SkeletonLoader({ lines = 3, className = '' }: SkeletonLoaderProps) {
   return (
@@ -222,18 +218,17 @@ export function SkeletonLoader({ lines = 3, className = '' }: SkeletonLoaderProp
             opacity: [0.5, 1, 0.5];
             backgroundPosition: ['200% 0-200% 0'],
   },
-  }
+  };
           transition={{
             duration: 1.5,repeat: Infinity,delay: index * 0.1
           },
-  }
+  };
           style={{
             background: 'linear-gradient(90deg, transparent, rgba(14, 165, 233, 0.1); transparent)',
             backgroundSize: '200% 100%'
           },
-  }
+  };
         />
       ))}
     </div>
   )
-}

@@ -31,14 +31,13 @@ interface ChatMessage {
     relatedServices?: string[];
     estimatedResponseTime?: number;
   };
-}
+};
 
 interface AIChatbotSystemProps {
   showHeader?: boolean;
   showSettings?: boolean;
   maxMessages?: number;
   autoScroll?: boolean;
-}
 
 export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
   showHeader = true,
@@ -160,7 +159,7 @@ const botMessage: ChatMessage = {
     setMessages(prev => prev.map(msg =>
       msg.id === messageId
         ? { ...msg, metadata: { ...msg.metadata, userRating: rating },
-  }
+  };
         : msg
     ))
 },
@@ -178,9 +177,9 @@ const botMessage: ChatMessage = {
         onClick={() => setIsOpen(!isOpen)}
         className="fixed bottom-4 right-4 z-50 p-4 bg-zion-cyan text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:ring-offset-2 focus:ring-offset-zinc-900"
         whileHover={{ scale: 1.1 },
-  }
+  };
         whileTap={{ scale: 0.95 },
-  }
+  };
         aria-label="Toggle AI chatbot"
       >
         {isOpen ? <X className="w-6 h-6" /> : <MessageCircle className="w-6 h-6" />}
@@ -191,13 +190,13 @@ const botMessage: ChatMessage = {
         {isOpen && (
           <motion.div
             initial={{ opacity: 0, scale: 0.9, y: 20 },
-  }
+  };
             animate={{ opacity: 1, scale: 1, y: 0 },
-  }
+  };
             exit={{ opacity: 0, scale: 0.9, y: 20 },
-  }
+  };
             transition={{ duration: 0.3, ease: 'easeOut' },
-  }
+  };
             className="fixed bottom-20 right-4 z-40 w-96 h-[600px] bg-zinc-900/95 backdrop-blur-md border border-zinc-700/50 rounded-xl shadow-2xl overflow-hidden"
           >
             {/* Header */},
@@ -243,13 +242,13 @@ const botMessage: ChatMessage = {
               {showSettingsPanel && (
                 <motion.div
                   initial={{ height: 0, opacity: 0 },
-  }
+  };
                   animate={{ height: 'auto', opacity: 1 },
-  }
+  };
                   exit={{ height: 0, opacity: 0 },
-  }
+  };
                   transition={{ duration: 0.3 },
-  }
+  };
                   className="border-b border-zinc-700/50 overflow-hidden"
                 >
                   <div className="p-4 space-y-3">
@@ -291,9 +290,9 @@ const botMessage: ChatMessage = {
                 <motion.div
                   key={message.id}
                   initial={{ opacity: 0, y: 10 },
-  }
+  };
                   animate={{ opacity: 1, y: 0 },
-  }
+  };
                   className={`flex ${message.sender === 'user' ? 'justify-end' : 'justify-start'}`}
                 >
                   <div className={`max-w-[80%] ${message.sender === 'user' ? 'order-2' : 'order-1'}`}>
@@ -388,9 +387,9 @@ const botMessage: ChatMessage = {
   {isTyping && (
                 <motion.div
                   initial={{ opacity: 0 },
-  }
+  };
                   animate={{ opacity: 1 },
-  }
+  };
                   className="flex justify-start"
                 >
                   <div className="flex items-center gap-2 p-3 bg-zinc-800/50 rounded-lg">
@@ -477,4 +476,3 @@ const botMessage: ChatMessage = {
       </AnimatePresence>
     </>
   )
-};

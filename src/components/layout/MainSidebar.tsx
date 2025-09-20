@@ -49,7 +49,7 @@ interface SidebarItem {
   children?: SidebarItem[],
   featured?: boolean,
   description?: string
-}
+};
 
 export function MainSidebar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -61,7 +61,6 @@ const toggleSection = (section: string) => {
         ? prev.filter(s => s !== section)
         : [...prev, section]
     )
-};
 const navigation: SidebarItem[] = [
     {
       title: 'Main',items: [
@@ -300,4 +299,3 @@ const isFeatured = item.featured;
       )}
     </>
   )
-}

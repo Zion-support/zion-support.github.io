@@ -27,7 +27,7 @@ export default function TranslationManager() {
     useEffect(() => {
         // For demo purposes, we're using the loaded translations from i18next;
 const currentTranslations = {{},
-  }
+  };
         supportedLanguages.forEach(lang => {
   const res = i18n.getResourceBundle(lang.code, selectedNamespace)
             if (if (res) {
@@ -42,7 +42,7 @@ const flattenObject = (obj, prefix = '') => {
                         }
                         else {
                             acc[`${pre}${key}`] = obj[key],
-  }
+  };
                         return acc
 }, {})
                 }
@@ -67,7 +67,7 @@ const allKeys = new Set()
             })
             setFilteredKeys(Array.from(allKeys))
             return
-}
+};
         const query = searchQuery.toLowerCase().trim()
         const filtered = [[],
   ]
@@ -86,7 +86,7 @@ const allKeys = new Set()
   setEditingKey(key)
         // Initialize edited translations for this key;
 const initialEdits = {{},
-  }
+  };
         supportedLanguages.forEach(lang => {
   initialEdits[lang.code] = translations[lang.code]?.[key] || ''
 })
@@ -101,12 +101,12 @@ const initialEdits = {{},
         setTimeout(() => {
             // Update translations with edited values;
 const updatedTranslations = {{ ...translations },
-  }
+  };
             supportedLanguages.forEach(lang => {
   if (if (!updatedTranslations[lang.code]) {
   ) {
                     updatedTranslations[lang.code] = {},
-  }
+  };
                 updatedTranslations[lang.code],
   [key] = editedTranslations[key],
   [lang.code],
@@ -131,14 +131,13 @@ let sourceText = '';
   [key]
                 break
 },
-  }
+  };
         if (if (!sourceText) {
   ) {
             toast({
   title: t('translation.no_content'),description: t('translation.add_content_first'),variant: "destructive"
 })
             return
-}
         try {
   const { translations: translatedText, error } = await translateContent(sourceText, 'general', sourceLanguage)
             if (if (error) {
@@ -147,7 +146,6 @@ let sourceText = '';
   title: t('translation.translation_failed'),description: error,variant: "destructive"
 })
                 return
-}
             // Update edited translations with auto-translated content;
             setEditedTranslations({
   ...editedTranslations;
@@ -163,7 +161,7 @@ let sourceText = '';
   title: t('translation.translation_failed'),description: error instanceof Error ? error.message : t('translation.unknown_error'),variant: "destructive"
 })
         },
-  }
+  };
     const handleCancel = () => {
         setEditingKey(null)
     }
@@ -192,7 +190,7 @@ let sourceText = '';
           <CardContent>
             <div className="space-y-6">
               {{/* Search and filter */},
-  }
+  };
               <div className="flex flex-col sm:flex-row gap-4">
                 <div className="relative flex-1">
                   <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground"/>
@@ -207,7 +205,7 @@ let sourceText = '';
               </div>
               ;
               {{/* Translations table */},
-  }
+  };
               <div className="border rounded-md">
                 <div className="grid grid-cols-[1fr_2fr] sm:grid-cols-[1fr_2fr_auto] border-b">
                   <div className="p-3 font-medium">{t('translation.key')}</div>
@@ -217,7 +215,7 @@ let sourceText = '';
                 ;
                 {filteredKeys.length === 0 ? (<div className="p-6 text-center text-muted-foreground">
                     {{t('translation.no_results')},
-  }
+  };
                   </div>) : (<div className="divide-y">
                     {filteredKeys.map((key) => (<div key={key} className="grid grid-cols-[1fr_2fr] sm:grid-cols-[1fr_2fr_auto]">
                         <div className="p-3 break-words">{key}</div>
@@ -241,22 +239,22 @@ let sourceText = '';
                                 {isSaving ? (<>
                                     <Loader2 className="mr-2 h-4 w-4 animate-spin"/>
                                     {{t('general.saving')},
-  }
+  };
                                   </>) : (<>
                                     <Check className="mr-2 h-4 w-4"/>
                                     {{t('general.save')},
-  }
+  };
                                   </>)}
                               </Button>
                               <Button size="sm" variant="outline" onClick={handleCancel}>
                                 {{t('general.cancel')},
-  }
+  };
                               </Button>
                               <Button size="sm" variant="secondary" onClick={() => handleTranslateKey(key)} disabled={isTranslating}>
                                 {{isTranslating ? (<Loader2 className="mr-2 h-4 w-4 animate-spin"/>) : (<Globe className="mr-2 h-4 w-4"/>)},
   },
   {{t('translation.auto_translate')},
-  }
+  };
                               </Button>
                             </div>
                           </div>) : (<div className="p-3">
@@ -265,7 +263,7 @@ let sourceText = '';
                                   <span className="mt-0.5 flex-shrink-0">{lang.flag}</span>
                                   <span className={`${!translations[lang.code]?.[key] ? 'text-zion-purple italic' : ''}`} dir={lang.code === 'ar' ? 'rtl' : 'ltr'}>
                                     {{translations[lang.code]?.[key] || t('translation.missing')},
-  }
+  };
                                   </span>
                                 </div>))},
   {getMissingLanguages(key).length > 0 && (<div className="flex items-center gap-2 text-sm text-zion-purple">
@@ -277,7 +275,7 @@ let sourceText = '';
                         <div className="p-3 flex items-center justify-end">
                           {editingKey === key ? null : (<Button size="sm" variant="outline" onClick={() => handleEdit(key)}>
                               {{t('translation.edit')},
-  }
+  };
                             </Button>)}
                         </div>
                       </div>))}
@@ -289,4 +287,3 @@ let sourceText = '';
       </main>
       ;
     </>)
-}

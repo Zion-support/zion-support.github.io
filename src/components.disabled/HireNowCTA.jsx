@@ -12,7 +12,7 @@ export const HireNowCTA = ({ hourlyRate, availability, rating, reviewCount }) =>
         <div className="text-center">
           <div className="text-3xl font-bold text-blue-600 mb-2">
             ${{hourlyRate},
-  }
+  };
           </div>
           <div className="text-gray-600">per hour</div>
         </div>
@@ -31,7 +31,7 @@ export const HireNowCTA = ({ hourlyRate, availability, rating, reviewCount }) =>
             <span className="text-gray-600">Availability</span>
             <Badge variant={availability === 'available' ? 'default' : 'secondary'} className={availability === 'available' ? 'bg-green-100 text-green-800' : ''}>
               {{availability},
-  }
+  };
             </Badge>
           </div>
         </div>
@@ -54,4 +54,4 @@ export const HireNowCTA = ({ hourlyRate, availability, rating, reviewCount }) =>
         </div>
       </CardContent>
     </Card>)
-}
+};

@@ -46,5 +46,5 @@ const PriceIntelligenceService: React.FC = () => {
       </section>
     </div>
   )
-}
+};
 export default PriceIntelligenceService;

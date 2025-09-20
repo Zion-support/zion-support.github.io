@@ -27,17 +27,16 @@ import {
 } from "lucide-react";
 interface Project {
   id: string,name: string,description: string,status: 'planning' | 'active' | 'on-hold' | 'completed' | 'cancelled',priority: 'low' | 'medium' | 'high' | 'critical',startDate: string,endDate: string,progress: number,team: string[],client: string,budget: number,tags: string[],milestones: Milestone[],
-  }
+  };
 
 interface Milestone {
   id: string,title: string,description: string,dueDate: string,status: 'pending' | 'in-progress' | 'completed' | 'overdue',assignee: string,priority: 'low' | 'medium' | 'high'
-}
+};
 
 interface ProjectManagementTimelineProps {
   showFilters?: boolean;
   showStats?: boolean,
   maxProjects?: number,
-}
 
 export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps> = ({
   showFilters = true;
@@ -106,11 +105,9 @@ const [editingProject, setEditingProject] = useState<Project | null>(null),
 
     if (selectedStatus !== 'all') {
       filtered = filtered.filter(p => p.status === selectedStatus)
-}
 
     if (selectedPriority !== 'all') {
       filtered = filtered.filter(p => p.priority === selectedPriority)
-}
 
     if (searchQuery) {
       filtered = filtered.filter(p =>
@@ -231,9 +228,9 @@ const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-4 mb-8">
           <motion.div
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             animate={{ opacity: 1, y: 0 },
-  }
+  };
             className="p-4 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center"
           >
             <div className="text-2xl font-bold text-white mb-1">{projectStats.total}</div>
@@ -242,11 +239,11 @@ const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
 
           <motion.div
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             animate={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ delay: 0.1 },
-  }
+  };
             className="p-4 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center"
           >
             <div className="text-2xl font-bold text-green-400 mb-1">{projectStats.active}</div>
@@ -255,11 +252,11 @@ const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
 
           <motion.div
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             animate={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ delay: 0.2 },
-  }
+  };
             className="p-4 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center"
           >
             <div className="text-2xl font-bold text-purple-400 mb-1">{projectStats.completed}</div>
@@ -268,11 +265,11 @@ const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
 
           <motion.div
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             animate={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ delay: 0.3 },
-  }
+  };
             className="p-4 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center"
           >
             <div className="text-2xl font-bold text-yellow-400 mb-1">{projectStats.onHold}</div>
@@ -281,11 +278,11 @@ const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
 
           <motion.div
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             animate={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ delay: 0.4 },
-  }
+  };
             className="p-4 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center"
           >
             <div className="text-2xl font-bold text-zion-cyan mb-1">{formatCurrency(projectStats.totalBudget)}</div>
@@ -294,11 +291,11 @@ const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
 
           <motion.div
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             animate={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ delay: 0.5 },
-  }
+  };
             className="p-4 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center"
           >
             <div className="text-2xl font-bold text-white mb-1">{projectStats.averageProgress.toFixed(0)}%</div>
@@ -355,11 +352,11 @@ const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
           <motion.div
             key={project.id}
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             animate={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ delay: index * 0.1 },
-  }
+  };
             className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl hover:bg-zinc-900/50 transition-all duration-300"
           >
             {/* Project Header */}
@@ -426,11 +423,11 @@ const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
               <div className="w-full bg-zinc-700 rounded-full h-2">
                 <motion.div
                   initial={{ width: 0 },
-  }
+  };
                   animate={{ width: `${project.progress}%` },
-  }
+  };
                   transition={{ duration: 1, delay: index * 0.1 },
-  }
+  };
                   className="h-2 bg-gradient-to-r from-zion-cyan to-blue-500 rounded-full"
                 />
               </div>
@@ -485,9 +482,9 @@ const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
   {filteredProjects.length === 0 && (
         <motion.div
           initial={{ opacity: 0 },
-  }
+  };
           animate={{ opacity: 1 },
-  }
+  };
           className="text-center py-12"
         >
           <Target className="w-16 h-16 text-zinc-600 mx-auto mb-4" />
@@ -505,4 +502,3 @@ const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
       )}
     </div>
   )
-};

@@ -34,17 +34,17 @@ const Terms: React.FC = () => {
       />
 
       {{/* Hero Section */},
-  }
+  };
       <section className="relative pt-32 pb-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-blue-500/10"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             animate={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.6 },
-  }
+  };
           >
             <div className="flex items-center justify-center space-x-3 mb-6">
               <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center">
@@ -63,16 +63,16 @@ const Terms: React.FC = () => {
       </section>
 
       {{/* Key Terms Overview */},
-  }
+  };
       <section className="py-20">
         <div className="container mx-auto px-6">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.6 },
-  }
+  };
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-6">
@@ -88,13 +88,13 @@ const Terms: React.FC = () => {
             {termsSections.map((section, index) => (
   <motion.div;
                 key={{index},
-  }
+  };
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.6, delay: index * 0.1 },
-  }
+  };
                 className="className="bg-slate-800/50 p-6 rounded-xl border border-slate-700/50 hover:border-blue-400/50 transition-all duration-300 hover:scale-105";"
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-blue-400/20 to-purple-500/20 rounded-xl flex items-center justify-center mb-6">
@@ -109,16 +109,16 @@ const Terms: React.FC = () => {
       </section>
 
       {{/* User Obligations */},
-  }
+  };
       <section className="py-20 bg-slate-800/30">
         <div className="container mx-auto px-6">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.6 },
-  }
+  };
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-6">
@@ -134,13 +134,13 @@ const Terms: React.FC = () => {
             {userObligations.map((obligation, index) => (
   <motion.div;
                 key={{index},
-  }
+  };
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.6, delay: index * 0.1 },
-  }
+  };
                 className="className="bg-slate-800/50 p-6 rounded-xl border border-slate-700/50 hover:border-blue-400/50 transition-all duration-300 hover:scale-105";"
               >
                 <h3 className="text-xl font-semibold text-white mb-4">{obligation.obligation}</h3>
@@ -152,19 +152,19 @@ const Terms: React.FC = () => {
       </section>
 
       {{/* Prohibited Activities */},
-  }
+  };
       <section className="py-20">
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <motion.div;
               initial={{ opacity: 0, y: 20 },
-  }
+  };
               whileInView={{ opacity: 1, y: 0 },
-  }
+  };
               transition={{ duration: 0.6 },
-  }
+  };
               viewport={{ once: true },
-  }
+  };
               className="className="bg-white/5 backdrop-blur-sm border border-cyan-400/20 rounded-2xl p-8 mb-8";"
             >
               <h2 className="text-2xl font-bold text-white mb-4 flex items-center space-x-2">
@@ -187,13 +187,13 @@ const Terms: React.FC = () => {
 
             <motion.div;
               initial={{ opacity: 0, y: 20 },
-  }
+  };
               whileInView={{ opacity: 1, y: 0 },
-  }
+  };
               transition={{ duration: 0.6, delay: 0.1 },
-  }
+  };
               viewport={{ once: true },
-  }
+  };
               className="className="bg-white/5 backdrop-blur-sm border border-cyan-400/20 rounded-2xl p-8 mb-8";"
             >
               <div className="bg-slate-800/50 p-8 rounded-2xl border border-slate-700/50">
@@ -222,16 +222,16 @@ const Terms: React.FC = () => {
       </section>
 
       {{/* Service Levels */},
-  }
+  };
       <section className="py-20 bg-slate-800/30">
         <div className="container mx-auto px-6">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.6 },
-  }
+  };
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-6">
@@ -248,13 +248,13 @@ const Terms: React.FC = () => {
               {serviceLevels.map((level, index) => (
   <motion.div;
                   key={{index},
-  }
+  };
                   initial={{ opacity: 0, y: 20 },
-  }
+  };
                   whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                   transition={{ duration: 0.6, delay: index * 0.1 },
-  }
+  };
                   className={`bg-slate-800/50 p-6 rounded-xl border ${
   level.included ? 'border-blue-400/50' : 'border-slate-700/50'
 } hover:border-blue-400/50 transition-all duration-300 hover:scale-105`}
@@ -280,17 +280,17 @@ const Terms: React.FC = () => {
       </section>
 
       {{/* Intellectual Property */},
-  }
+  };
       <section className="py-20">
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <motion.div;
               initial={{ opacity: 0, x: -20 },
-  }
+  };
               whileInView={{ opacity: 1, x: 0 },
-  }
+  };
               transition={{ duration: 0.6 },
-  }
+  };
             >
               <h2 className="text-4xl font-bold text-white mb-6">
                 Intellectual Property Rights;
@@ -312,13 +312,13 @@ const Terms: React.FC = () => {
 
             <motion.div;
               initial={{ opacity: 0, y: 20 },
-  }
+  };
               whileInView={{ opacity: 1, y: 0 },
-  }
+  };
               transition={{ duration: 0.6, delay: 0.2 },
-  }
+  };
               viewport={{ once: true },
-  }
+  };
               className="className="bg-white/5 backdrop-blur-sm border border-cyan-400/20 rounded-2xl p-8 mb-8";"
             >
               <h2 className="text-2xl font-bold text-white mb-4 flex items-center space-x-2">
@@ -362,13 +362,13 @@ const Terms: React.FC = () => {
 
             <motion.div;
               initial={{ opacity: 0, y: 20 },
-  }
+  };
               whileInView={{ opacity: 1, y: 0 },
-  }
+  };
               transition={{ duration: 0.6, delay: 0.3 },
-  }
+  };
               viewport={{ once: true },
-  }
+  };
               className="className="bg-white/5 backdrop-blur-sm border border-cyan-400/20 rounded-2xl p-8 mb-8";"
             >
               <h2 className="text-2xl font-bold text-white mb-4 flex items-center space-x-2">
@@ -409,13 +409,13 @@ const Terms: React.FC = () => {
 
             <motion.div;
               initial={{ opacity: 0, y: 20 },
-  }
+  };
               whileInView={{ opacity: 1, y: 0 },
-  }
+  };
               transition={{ duration: 0.6, delay: 0.4 },
-  }
+  };
               viewport={{ once: true },
-  }
+  };
               className="className="bg-white/5 backdrop-blur-sm border border-cyan-400/20 rounded-2xl p-8 mb-8";"
             >
               <h2 className="text-2xl font-bold text-white mb-4 flex items-center space-x-2">
@@ -449,13 +449,13 @@ const Terms: React.FC = () => {
 
             <motion.div;
               initial={{ opacity: 0, y: 20 },
-  }
+  };
               whileInView={{ opacity: 1, y: 0 },
-  }
+  };
               transition={{ duration: 0.6, delay: 0.5 },
-  }
+  };
               viewport={{ once: true },
-  }
+  };
               className="className="bg-white/5 backdrop-blur-sm border border-cyan-400/20 rounded-2xl p-8 mb-8";"
             >
               <h2 className="text-2xl font-bold text-white mb-4 flex items-center space-x-2">
@@ -490,13 +490,13 @@ const Terms: React.FC = () => {
 
             <motion.div;
               initial={{ opacity: 0, y: 20 },
-  }
+  };
               whileInView={{ opacity: 1, y: 0 },
-  }
+  };
               transition={{ duration: 0.6, delay: 0.6 },
-  }
+  };
               viewport={{ once: true },
-  }
+  };
               className="className="bg-white/5 backdrop-blur-sm border border-cyan-400/20 rounded-2xl p-8 mb-8";"
             >
               <h2 className="text-2xl font-bold text-white mb-4 flex items-center space-x-2">
@@ -530,13 +530,13 @@ const Terms: React.FC = () => {
 
             <motion.div;
               initial={{ opacity: 0, y: 20 },
-  }
+  };
               whileInView={{ opacity: 1, y: 0 },
-  }
+  };
               transition={{ duration: 0.6, delay: 0.7 },
-  }
+  };
               viewport={{ once: true },
-  }
+  };
               className="className="bg-white/5 backdrop-blur-sm border border-cyan-400/20 rounded-2xl p-8 mb-8";"
             >
               <h2 className="text-2xl font-bold text-white mb-4 flex items-center space-x-2">
@@ -570,13 +570,13 @@ const Terms: React.FC = () => {
 
             <motion.div;
               initial={{ opacity: 0, y: 20 },
-  }
+  };
               whileInView={{ opacity: 1, y: 0 },
-  }
+  };
               transition={{ duration: 0.6, delay: 0.8 },
-  }
+  };
               viewport={{ once: true },
-  }
+  };
               className="className="bg-white/5 backdrop-blur-sm border border-cyan-400/20 rounded-2xl p-8 mb-8";"
             >
               <h2 className="text-2xl font-bold text-white mb-4 flex items-center space-x-2">
@@ -604,13 +604,13 @@ const Terms: React.FC = () => {
 
             <motion.div;
               initial={{ opacity: 0, y: 20 },
-  }
+  };
               whileInView={{ opacity: 1, y: 0 },
-  }
+  };
               transition={{ duration: 0.6, delay: 0.9 },
-  }
+  };
               viewport={{ once: true },
-  }
+  };
               className="className="bg-white/5 backdrop-blur-sm border border-cyan-400/20 rounded-2xl p-8 mb-8";"
             >
               <h2 className="text-2xl font-bold text-white mb-4 flex items-center space-x-2">
@@ -640,16 +640,16 @@ const Terms: React.FC = () => {
       </section>
 
       {{/* Limitation of Liability */},
-  }
+  };
       <section className="py-20 bg-slate-800/30">
         <div className="container mx-auto px-6">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.6 },
-  }
+  };
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-6">
@@ -705,16 +705,16 @@ const Terms: React.FC = () => {
       </section>
 
       {{/* Termination */},
-  }
+  };
       <section className="py-20">
         <div className="container mx-auto px-6">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.6 },
-  }
+  };
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-6">
@@ -768,16 +768,16 @@ const Terms: React.FC = () => {
       </section>
 
       {{/* Contact Information */},
-  }
+  };
       <section className="py-20 bg-slate-800/30">
         <div className="container mx-auto px-6">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.6 },
-  }
+  };
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-6">
@@ -812,16 +812,16 @@ const Terms: React.FC = () => {
       </section>
 
       {{/* CTA Section */},
-  }
+  };
       <section className="py-20 bg-gradient-to-r from-blue-500/10 to-purple-500/10">
         <div className="container mx-auto px-6 text-center">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.6 },
-  }
+  };
           >
             <h2 className="text-4xl font-bold text-white mb-6">
               Ready to Get Started?;
@@ -849,5 +849,5 @@ const Terms: React.FC = () => {
       </section>
     </div>
   )
-}
+};
 export default Terms;

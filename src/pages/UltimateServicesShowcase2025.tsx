@@ -43,7 +43,7 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
     return ULTIMATE_SERVICE_CATEGORIES_2025[category]?.icon ? ;
       <span className="text-2xl">{ULTIMATE_SERVICE_CATEGORIES_2025[category].icon}</span> : ;
       <Rocket className="w-6 h-6" />
-}
+};
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -54,7 +54,7 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
       />
       ;
       {{/* Hero Section */},
-  }
+  };
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
@@ -92,7 +92,7 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
       </div>
 
       {{/* Contact Information Banner */},
-  }
+  };
       <div className="bg-gradient-to-r from-blue-900/50 to-purple-900/50 border-y border-blue-400/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
@@ -128,21 +128,21 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
       </div>
 
       {{/* Search and Filter Section */},
-  }
+  };
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
           <div className="flex flex-col lg:flex-row gap-6">
             {{/* Search */},
-  }
+  };
             <div className="flex-1">
               <div className="relative">
                 <input;
                   type="text";
                   placeholder="Search innovative services...";
                   value={{searchTerm},
-  }
+  };
                   onChange={{(e) => setSearchTerm(e.target.value)},
-  }
+  };
                   className="className="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent";"
                 />
                 <div className="absolute right-3 top-3 text-gray-400">
@@ -152,19 +152,19 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
             </div>
             ;
             {{/* Category Filter */},
-  }
+  };
             <div className="lg:w-64">
               <select;
                 value={{selectedCategory},
-  }
+  };
                 onChange={{(e) => setSelectedCategory(e.target.value)},
-  }
+  };
                 className="className="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent";"
               >
                 {categories.map(category => (
   <option key={category} value={category} className="bg-slate-800 text-white">
                     {{category === 'all' ? 'All Categories' : category},
-  }
+  };
                   </option>
                 ))}
               </select>
@@ -174,7 +174,7 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
       </div>
 
       {{/* Contact Information Banner */},
-  }
+  };
       <div className="bg-gradient-to-r from-blue-900/50 to-purple-900/50 border-y border-blue-400/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -204,7 +204,7 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
       </div>
 
       {{/* Service Guarantees */},
-  }
+  };
       <div className="bg-gradient-to-r from-slate-800/50 to-slate-900/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <div className="text-center mb-12">
@@ -219,7 +219,7 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2 capitalize">
                   {{key.replace(/([A-Z])/g, ' $1').trim()},
-  }
+  };
                 </h3>
                 <p className="text-gray-300 text-sm">{value}</p>
               </div>
@@ -229,7 +229,7 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
       </div>
 
       {{/* Pricing Tiers */},
-  }
+  };
       <div className="bg-gradient-to-r from-purple-900/50 to-blue-900/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <div className="text-center mb-12">
@@ -263,17 +263,17 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
       </div>
 
       {{/* Services Grid */},
-  }
+  };
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-24">
         <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
           {filteredServices.map((service) => (
   <div;
               key={{service.id},
-  }
+  };
               className="className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:border-blue-400/50 transition-all duration-300 transform hover:scale-105 group";"
             >
               {{/* Service Header */},
-  }
+  };
               <div className="flex items-start justify-between mb-6">
                 <div className="flex items-center space-x-3">
                   <div className="p-3 rounded-xl bg-gradient-to-br from-blue-500 to-purple-600">
@@ -282,7 +282,7 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
                   <div>
                     <h3 className="text-xl font-bold text-white group-hover:text-blue-400 transition-colors">
                       {{service.title},
-  }
+  };
                     </h3>
                     <p className="text-sm text-gray-400">{service.category}</p>
                   </div>
@@ -295,31 +295,31 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
               </div>
 
               {{/* Description */},
-  }
+  };
               <p className="text-gray-300 mb-6 leading-relaxed">
                 {{service.description},
-  }
+  };
               </p>
 
               {{/* Tags */},
-  }
+  };
               <div className="mb-6">
                 <div className="flex flex-wrap gap-2">
                   {service.tags.slice(0, 4).map((tag, index) => (
   <span;
                       key={{index},
-  }
+  };
                       className="className="px-2 py-1 bg-blue-500/20 text-blue-300 text-xs rounded-md border border-blue-400/30";"
                     >
                       {{tag},
-  }
+  };
                     </span>
                   ))}
                 </div>
               </div>
 
               {{/* Pricing and ROI */},
-  }
+  };
               <div className="mb-6 p-4 bg-white/5 rounded-lg border border-white/10">
                 <div className="flex items-center justify-between mb-2">
                   <span className="text-2xl font-bold text-white">${service.price.toLocaleString()}</span>
@@ -327,38 +327,38 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
                 </div>
                 <p className="text-sm text-gray-300 mb-2">
                   <strong>Market Price:</strong> {{service.marketPrice},
-  }
+  };
                 </p>
                 <p className="text-sm text-gray-300 mb-2">
                   <strong>ROI:</strong> {{service.roi},
-  }
+  };
                 </p>
                 <p className="text-xs text-gray-400">
                   <strong>Setup Time:</strong> {{service.setupTime},
-  }
+  };
                 </p>
               </div>
 
               {{/* Integrations */},
-  }
+  };
               <div className="mb-6">
                 <h4 className="text-white font-semibold mb-3">Integrations</h4>
                 <div className="flex flex-wrap gap-2">
                   {service.integrations.slice(0, 4).map((integration, index) => (
   <span;
                       key={{index},
-  }
+  };
                       className="className="px-2 py-1 bg-green-500/20 text-green-300 text-xs rounded-md border border-green-400/30";"
                     >
                       {{integration},
-  }
+  };
                     </span>
                   ))}
                 </div>
               </div>
 
               {{/* Contact Information */},
-  }
+  };
               <div className="mb-6 p-4 bg-white/5 rounded-lg border border-white/10">
                 <h4 className="text-white font-semibold mb-3">Contact Information</h4>
                 <div className="space-y-2 text-sm text-gray-300">
@@ -378,7 +378,7 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
               </div>
 
               {{/* Action Buttons */},
-  }
+  };
               <div className="flex flex-col sm: flex-row gap-3">
                 <Link;
                   to={`/services/${service.id}`}
@@ -389,7 +389,7 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
                 </Link>
                 <a;
                   href={{service.contactInfo.website},
-  }
+  };
                   target="_blank";
                   rel="noopener noreferrer";
                   className="className="inline-flex items-center justify-center px-4 py-3 border border-blue-400 text-blue-400 font-semibold rounded-lg hover:bg-blue-400 hover:text-white transition-all duration-300";"
@@ -399,7 +399,7 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
               </div>
 
               {{/* Contact Information */},
-  }
+  };
               <div className="mt-6 pt-6 border-t border-white/10">
                 <div className="text-center">
                   <p className="text-sm text-gray-400 mb-2">Ready to get started?</p>
@@ -437,7 +437,7 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
                 setSearchTerm('')
                 setSelectedCategory('all')
               },
-  }
+  };
               className="className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors";"
             >
               Clear Filters;
@@ -447,7 +447,7 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
       </div>
 
       {{/* Call to Action Section */},
-  }
+  };
       <div className="bg-gradient-to-r from-blue-900/50 to-purple-900/50 border-t border-blue-400/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <div className="text-center">
@@ -479,12 +479,12 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
       </div>
 
       {{/* Comprehensive Footer */},
-  }
+  };
       <div className="bg-gradient-to-r from-slate-900 to-slate-800 border-t border-blue-400/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {{/* Company Info */},
-  }
+  };
             <div className="lg:col-span-2">
               <h3 className="text-2xl font-bold text-white mb-4">Zion Tech Group</h3>
               <p className="text-gray-300 mb-6 max-w-md">
@@ -499,7 +499,7 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
             </div>
 
             {{/* Quick Links */},
-  }
+  };
             <div>
               <h4 className="text-lg font-semibold text-white mb-4">Quick Links</h4>
               <ul className="space-y-2">
@@ -511,7 +511,7 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
             </div>
 
             {{/* Contact Information */},
-  }
+  };
             <div>
               <h4 className="text-lg font-semibold text-white mb-4">Contact Info</h4>
               <div className="space-y-2 text-sm text-gray-300">
@@ -532,7 +532,7 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
           </div>
 
           {{/* Bottom Bar */},
-  }
+  };
           <div className="border-t border-gray-700 mt-12 pt-8">
             <div className="flex flex-col md: flex-row justify-between items-center">
               <p className="text-gray-400 text-sm">
@@ -548,7 +548,6 @@ const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCas
       </div>
     </div>
   )
-}
 
 // Search icon component;
 const Search = ({ className }: { className?: string }) => (

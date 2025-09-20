@@ -26,7 +26,7 @@ export interface Notification {
   priority: 'low' | 'medium' | 'high';
   category?: string,
   icon?: React.ReactNode
-}
+};
 
 interface NotificationSystemProps {
   maxNotifications?: number,
@@ -35,11 +35,9 @@ interface NotificationSystemProps {
   enableVibration?: boolean,
   autoDismiss?: boolean,
   defaultDuration?: number,
-}
 
 interface NotificationSettings {
   sound: boolean,vibration: boolean,autoDismiss: boolean,position: 'top-right' | 'top-left' | 'bottom-right' | 'bottom-left',maxNotifications: number,defaultDuration: number
-}
 
 export const NotificationSystem: React.FC<NotificationSystemProps> = ({
   maxNotifications = 5;
@@ -232,9 +230,9 @@ const audioRef = useRef<HTMLAudioElement | null>(null);
   {unreadCount > 0 && (
             <motion.div
               initial={{ scale: 0 },
-  }
+  };
               animate={{ scale: 1 },
-  }
+  };
               className="absolute -top-1 -right-1 w-6 h-6 bg-gradient-to-r from-zion-cyan to-zion-blue text-white text-xs font-bold rounded-full flex items-center justify-center"
             >
               {unreadCount > 99 ? '99+' : unreadCount}
@@ -257,11 +255,11 @@ const audioRef = useRef<HTMLAudioElement | null>(null);
         {showSettings && (
           <motion.div
             initial={{ opacity: 0, scale: 0.9, y: -10 },
-  }
+  };
             animate={{ opacity: 1, scale: 1, y: 0 },
-  }
+  };
             exit={{ opacity: 0, scale: 0.9, y: -10 },
-  }
+  };
             className={`fixed ${getPositionClasses()} z-40 mt-20 bg-white/95 backdrop-blur-xl rounded-2xl shadow-2xl border border-zion-cyan/20 p-6 w-80`}
           >
             <h3 className="text-lg font-semibold text-zion-slate-dark mb-4">Notification Settings</h3>
@@ -330,11 +328,11 @@ const audioRef = useRef<HTMLAudioElement | null>(null);
         {isOpen && (
           <motion.div
             initial={{ opacity: 0, scale: 0.9, y: -10 },
-  }
+  };
             animate={{ opacity: 1, scale: 1, y: 0 },
-  }
+  };
             exit={{ opacity: 0, scale: 0.9, y: -10 },
-  }
+  };
             className={`fixed ${getPositionClasses()} z-40 mt-20 bg-white/95 backdrop-blur-xl rounded-2xl shadow-2xl border border-zion-cyan/20 p-4 w-96 max-h-96 overflow-hidden`}
           >
             {/* Header */}
@@ -354,9 +352,9 @@ const audioRef = useRef<HTMLAudioElement | null>(null);
                 {notifications.length === 0 ? (
                   <motion.div
                     initial={{ opacity: 0 },
-  }
+  };
                     animate={{ opacity: 1 },
-  }
+  };
                     className="text-center py-8 text-zion-slate/60"
                   >
                     <Bell className="w-12 h-12 mx-auto mb-2 opacity-50" />
@@ -368,11 +366,11 @@ const audioRef = useRef<HTMLAudioElement | null>(null);
                     <motion.div
                       key={notification.id}
                       initial={{ opacity: 0, x: 50 },
-  }
+  };
                       animate={{ opacity: 1, x: 0 },
-  }
+  };
                       exit={{ opacity: 0, x: -50, height: 0 },
-  }
+  };
                       layout
                       className={`p-4 rounded-xl ${getNotificationStyles(notification.type, notification.priority)} ${
                         !notification.read ? 'ring-2 ring-zion-cyan/20' : ''
@@ -416,7 +414,7 @@ const audioRef = useRef<HTMLAudioElement | null>(null);
                                     notification.action!.onClick();
                                     markAsRead(notification.id)
 },
-  }
+  };
                                   className="text-xs px-2 py-1 bg-zion-cyan/10 hover: bg-zion-cyan/20 text-zion-cyan rounded transition-colors"
                                 >
                                   {notification.action.label}

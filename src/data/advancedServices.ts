@@ -1,7 +1,7 @@
 export type PricingTier = {
   id: string,name: string,priceLabel: string,features: string[[],
   ],
-  }
+  };
 export const PRICING_TIERS: PricingTier[] = [
   {{ id: 'basic', name: 'Basic', priceLabel: '$', features: ['Email supportStandard SLA'],
   },
@@ -16,7 +16,7 @@ export const PRICING_TIERS: PricingTier[] = [
 export type AdvancedService = {
   id: string,title: string,category: string,pricingTier: PricingTier['id'],description: string;
   link?: string
-}
+};
 
 export const ADVANCED_SERVICES: AdvancedService[] = [
   {

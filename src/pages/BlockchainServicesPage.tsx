@@ -124,7 +124,7 @@ const BlockchainServicesPage = () => {
   return (
     <div className="min-h-screen bg-futuristic">
       {{/* Hero Section */},
-  }
+  };
       <section className="relative py-32 bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-blue overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-20 left-20 w-64 h-64 border border-zion-cyan rounded-full animate-pulse"></div>
@@ -140,7 +140,7 @@ const BlockchainServicesPage = () => {
 
           <h1 className="text-6xl md: text-7xl font-bold text-white mb-8 leading-tight">
             Blockchain{{' '},
-  }
+  };
             <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
               Services;
             </span>
@@ -162,7 +162,7 @@ const BlockchainServicesPage = () => {
       </section>
 
       {{/* Category Filter */},
-  }
+  };
       <section className="py-16 bg-zion-slate-dark">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
@@ -176,15 +176,15 @@ const BlockchainServicesPage = () => {
             </div>
 
             {{/* Category Tabs */},
-  }
+  };
             <div className="flex flex-wrap gap-3 justify-center mb-8">
               {categories.map((category) => (
   <button;
                   key={{category.id},
-  }
+  };
                   onClick={{onClick={() => setSelectedCategory(category.id)},
   },
-  }
+  };
                   className={`flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-all duration-300 ${
   selectedCategory === category.id;
                       ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg';
@@ -192,10 +192,10 @@ const BlockchainServicesPage = () => {
 }`}
                 >
                   {{category.name},
-  }
+  };
                   <span className="bg-white/20 px-2 py-1 rounded-full text-xs">
                     {{category.count},
-  }
+  };
                   </span>
                 </button>
               ))}
@@ -205,24 +205,24 @@ const BlockchainServicesPage = () => {
       </section>
 
       {{/* Services Grid */},
-  }
+  };
       <section className="py-20 bg-zion-blue-dark">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
             {filteredServices.map((service, index) => (
   <motion.div;
                 key={{service.id},
-  }
+  };
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 animate={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.5, delay: index * 0.1 },
-  }
+  };
                 className="className="bg-zion-slate-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl overflow-hidden hover:border-zion-cyan/40 transition-all duration-300 group";"
               >
                 {{/* Service Image */},
-  }
+  };
                 <div className="h-48 bg-gradient-to-br from-zion-cyan/20 to-zion-purple/20 flex items-center justify-center relative overflow-hidden">
                   <service.icon className="w-16 h-16 text-zion-cyan z-10" />
                   <div className="absolute inset-0 bg-gradient-to-br from-zion-cyan/10 to-zion-purple/10"></div>
@@ -230,22 +230,22 @@ const BlockchainServicesPage = () => {
 
                 <div className="p-6">
                   {{/* Header */},
-  }
+  };
                   <div className="flex items-start justify-between mb-4">
                     <div>
                       <h3 className="text-xl font-bold text-white mb-2 group-hover:text-zion-cyan transition-colors duration-300">
                         {{service.title},
-  }
+  };
                       </h3>
                       <p className="text-zion-slate-light text-sm leading-relaxed">
                         {{service.description},
-  }
+  };
                       </p>
                     </div>
                   </div>
 
                   {{/* Badge */},
-  }
+  };
                   <div className="mb-4">
                     <span className={`px-3 py-1 rounded-full text-sm font-medium ${
   service.badge === 'Popular' ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white' :;
@@ -256,25 +256,25 @@ const BlockchainServicesPage = () => {
                       'bg-gradient-to-r from-zion-cyan to-zion-purple text-white'
 }`}>
                       {{service.badge},
-  }
+  };
                     </span>
                   </div>
 
                   {{/* Price */},
-  }
+  };
                   <div className="mb-6">
                     <div className="flex items-baseline gap-2">
                       <span className="text-3xl font-bold text-zion-cyan">
                         {service.currency},
   {{service.price.toLocaleString()},
-  }
+  };
                       </span>
                       <span className="text-zion-slate-light">{service.period}</span>
                     </div>
                   </div>
 
                   {{/* Features */},
-  }
+  };
                   <div className="space-y-3 mb-6">
                     {service.features.slice(0, 4).map((feature, featureIndex) => (
   <div key={featureIndex} className="flex items-center gap-3">
@@ -290,7 +290,7 @@ const BlockchainServicesPage = () => {
                   </div>
 
                   {{/* CTA */},
-  }
+  };
                   <button className="w-full bg-gradient-to-r from-zion-cyan to-zion-purple text-white py-3 px-6 rounded-lg font-semibold hover: scale-105 transition-all duration-300 flex items-center justify-center gap-2">
                     Get Started;
                     <ArrowRight className="w-4 h-4" />
@@ -303,7 +303,7 @@ const BlockchainServicesPage = () => {
       </section>
 
       {{/* Why Choose Us */},
-  }
+  };
       <section className="py-20 bg-zion-slate-dark">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -339,13 +339,13 @@ const BlockchainServicesPage = () => {
   ].map((feature, index) => (
   <motion.div;
                 key={{index},
-  }
+  };
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 animate={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.5, delay: index * 0.1 },
-  }
+  };
                 className="className="bg-zion-blue-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6 text-center hover:border-zion-cyan/40 transition-all duration-300";"
               >
                 <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-6">
@@ -361,7 +361,7 @@ const BlockchainServicesPage = () => {
       </section>
 
       {{/* CTA Section */},
-  }
+  };
       <section className="py-20 bg-gradient-to-r from-zion-slate-dark to-zion-blue-dark">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
@@ -384,5 +384,5 @@ const BlockchainServicesPage = () => {
       </section>
     </div>
   )
-}
+};
 export default BlockchainServicesPage;

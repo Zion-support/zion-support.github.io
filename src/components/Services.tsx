@@ -30,5 +30,5 @@ const,
       </div>
     </div>
   )
-}
+};
 export default Services

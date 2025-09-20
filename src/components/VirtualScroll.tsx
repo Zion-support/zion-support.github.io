@@ -5,7 +5,7 @@ interface VirtualScrollProps<T> {
   overscan?: number,
   className?: string,
   onScroll?: (scrollTop: number) => void
-}
+};
 
 export function VirtualScroll<T>({
   items;
@@ -66,11 +66,11 @@ const transform = `translateY(${visibleRange.start * itemHeight}px)`;
   {scrollTop > 200 && (
         <motion.button
           initial={{ opacity: 0, scale: 0.8 },
-  }
+  };
           animate={{ opacity: 1, scale: 1 },
-  }
+  };
           exit={{ opacity: 0, scale: 0.8 },
-  }
+  };
           onClick={scrollToTop}
           className="fixed bottom-6 right-6 z-50 bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-full shadow-lg transition-colors"
           aria-label="Scroll to top"
@@ -85,7 +85,7 @@ const transform = `translateY(${visibleRange.start * itemHeight}px)`;
         ref={containerRef}
         className="overflow-auto"
         style={{ height },
-  }
+  };
         onScroll={handleScroll}
       >
         <div style={{ height: totalHeight, position: 'relative' },
@@ -97,15 +97,15 @@ const transform = `translateY(${visibleRange.start * itemHeight}px)`;
                 <motion.div
                   key={visibleRange.start + index}
                   initial={{ opacity: 0, y: 20 },
-  }
+  };
                   animate={{ opacity: 1, y: 0 },
-  }
+  };
                   exit={{ opacity: 0, y: -20 },
-  }
+  };
                   transition={{ duration: 0.2 },
-  }
+  };
                   style={{ height: itemHeight },
-  }
+  };
                 >
                   {renderItem(item, visibleRange.start + index)}
                 </motion.div>
@@ -121,20 +121,17 @@ const transform = `translateY(${visibleRange.start * itemHeight}px)`;
       </div>
     </div>
   ),
-}
 
 // Specialized virtual scroll for service cards
 interface ServiceCard {
   id: string,name: string,description: string,category: string;
   icon?: string
-}
 
 interface ServiceVirtualScrollProps {
   services: ServiceCard[];
   height?: number,
   onServiceClick?: (service: ServiceCard) => void;
   className?: string
-}
 
 export function ServiceVirtualScroll({
   services,
@@ -146,9 +143,9 @@ export function ServiceVirtualScroll({
     <div className="p-4">
       <motion.div
         whileHover={{ scale: 1.02 },
-  }
+  };
         whileTap={{ scale: 0.98 },
-  }
+  };
         className="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-6 cursor-pointer hover:shadow-md transition-shadow"
         onClick={() => onServiceClick?.(service)}
       >
@@ -183,4 +180,3 @@ export function ServiceVirtualScroll({
       className={className}
     />
   )
-}

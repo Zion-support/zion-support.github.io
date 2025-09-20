@@ -41,7 +41,7 @@ const const historyItem = {
                 id: `gen_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
                 prompt;
                 code: generatedCode,timestamp: new Date(),language: options.language,quality: options.quality
-}
+};
             setHistory(prev => [historyItem, ...prev.slice(0, 49)]), // Keep last 50 items;
             // Analyze the generated code;
             await analyzeCode(generatedCode, options.language)
@@ -127,10 +127,8 @@ const optimizeCode = useCallback(async (code, focus) => {
                 case 'accessibility':;
                     optimizedCode = optimizeForAccessibility(code)
                     break
-}
             trackEvent('ai_code_generationcode_optimized', focus, optimizedCode.length)
             return optimizedCode
-}
         catch (error) {
   <<<<<<< HEAD;
             // Failed to optimize code - error handled by trackEvent;
@@ -163,7 +161,6 @@ const generateTests = useCallback(async (code, language) => {
             }
             trackEvent('ai_code_generationtests_generated', language, testCode.length)
             return testCode
-}
         catch (error) {
   <<<<<<< HEAD;
             // Failed to generate tests - error handled by trackEvent;
@@ -196,7 +193,6 @@ const generateDocs = useCallback(async (code, language) => {
             }
             trackEvent('ai_code_generationdocs_generated', language, docs.length)
             return docs
-}
         catch (error) {
   <<<<<<< HEAD;
             // Failed to generate documentation - error handled by trackEvent;
@@ -227,16 +223,13 @@ let filename = '';
                 timestamp: new Date().toISOString()
             }, null, 2)
             filename = 'generated-code.json'
-}
         else if (if (format === 'md') {
   ) {
             exportContent = `# Generated Code\n\n\`\`\`typescript\n${generatedCode}\n\`\`\`\n\n## Analysis\n\n${codeAnalysis ? JSON.stringify(codeAnalysis, null, 2) : 'No analysis available'}`;
             filename = 'generated-code.md'
-}
         else {
             exportContent = generatedCode;
             filename = 'generated-code.txt'
-}
         const blob = new Blob([exportContent], { type: 'text/plain' })
         const url = window.URL.createObjectURL(blob)
         const a = document.createElement('a')
@@ -271,7 +264,7 @@ interface ${options.style === 'oop' ? 'ComponentProps' : 'Props'},
   {
   // TODO: Define props based on prompt: ${{prompt},
   },
-  }
+  };
 
 export const GeneratedComponent: React.FC<${options.style === 'oop' ? 'ComponentProps' : 'Props'}> = (props) => {
   const [state, setState] = useState<any>(null)
@@ -284,9 +277,9 @@ export const GeneratedComponent: React.FC<${options.style === 'oop' ? 'Component
   return (
     <motion.div;
       initial={{ opacity: 0 },
-  }
+  };
       animate={{ opacity: 1 },
-  }
+  };
       className="className="generated-component";"
     >
       {/* TODO: Implement component based on prompt: ${prompt} */}
@@ -294,10 +287,8 @@ export const GeneratedComponent: React.FC<${options.style === 'oop' ? 'Component
       <p>This component was generated based on your prompt.</p>
     </motion.div>
   )
-}
 
 export default GeneratedComponent,`
-}
     const generateExpressCode = (prompt, _options) => {
   return `import express from "express";
 import cors from "cors";
@@ -320,12 +311,11 @@ app.get('/', (req, res) => {
 app.listen(PORT, () => {
   console.log(\`Server running on port \${PORT}\`)
 }),`
-}
     const generatePythonCode = (prompt, _options) => {
   return `#!/usr/bin/env python3;
 """;
 Generated Python code based on prompt: ${{prompt},
-  }
+  };
 """;
 import asyncio;
 from typing import Optional, List, Dict, Any;
@@ -350,23 +340,21 @@ async def main():;
     # TODO: Implement main logic based on prompt;
 
 if __name__ == "__main__": asyncio.run(main())`
-}
     const generateGenericCode = (prompt, options) => {
   return `// Generated ${options.language} code based on prompt: ${{prompt},
-  }
+  };
 // Framework: ${{options.framework || 'none'},
-  }
+  };
 // Style: ${{options.style},
-  }
+  };
 // Target: ${{options.target},
-  }
+  };
 
 // TODO: Implement code based on prompt requirements;
 // This is a placeholder implementation;
 
 console.log("Prompt:", "${prompt}")
 console.log("Language:", "${options.language}"),`
-}
     // Helper functions for code analysis;
 const calculateComplexity = (code) => {
   const cyclomaticComplexity = (code.match(/if|else|for|while|switch|case|catch|&&|\|\||\?/g) || []).length + 1;
@@ -383,7 +371,6 @@ const avgFunctionLength = lines / Math.max(1, functions)
         if (avgFunctionLength < 30)
             return 5;
         return 3
-}
     const calculateSecurityScore = (code) => {
   const securityIssues = (code.match(/eval|innerHTML|document\.write|localStorage|sessionStorage/g) || []).length;
         return Math.max(1, 10 - securityIssues)
@@ -427,7 +414,6 @@ const avgFunctionLength = lines / Math.max(1, functions)
   })
         }
         return suggestions
-}
     const analyzeCodeIssues = (code, _language) => {
   const issues = [[],
   ]
@@ -442,7 +428,6 @@ const avgFunctionLength = lines / Math.max(1, functions)
 })
         }
         return issues
-}
     // Helper functions for code optimization;
 const optimizeForPerformance = (code) => {
   return code;
@@ -483,7 +468,6 @@ describe('GeneratedComponent', () => {
     // TODO: Add specific test cases based on component functionality
 })
 }),`
-}
     const generatePytestTests = (_code) => {
   return `import pytest;
 from generated_module import GeneratedClass;
@@ -498,7 +482,6 @@ class TestGeneratedClass: def test_initialization(self):;
         assert result == "test";
 
     # TODO: Add more specific test cases based on class functionality`
-}
     const generateGenericTests = (_code, language) => {
   return `// Generated tests for ${language} code;
 // TODO: Implement specific test cases based on code functionality;
@@ -509,7 +492,6 @@ describe('Generated Code Tests', () => {
     expect(true).toBe(true)
   })
 }),`
-}
     // Helper functions for documentation generation;
 const generateJSDoc = (_code) => {
   return `/**;
@@ -524,7 +506,6 @@ const generateJSDoc = (_code) => {
 export const GeneratedComponent = () => {
   // Component implementation
 },`
-}
     const generatePythonDoc = (_code) => {
   return `""";
 Generated Module;
@@ -539,7 +520,6 @@ def generated_function():;
     Returns: str: Description of return value;
     """;
     pass`
-}
     const generateGenericDocs = (_code, language) => {
   return `/**;
  * Generated ${language} Code;
@@ -548,7 +528,6 @@ def generated_function():;
  *;
  * TODO: Add specific documentation based on code functionality;
  */`
-}
     // Cleanup timeout on unmount;
     useEffect(() => {
         return () => {
@@ -578,4 +557,4 @@ def generated_function():;
         exportCode;
         getCodeMetrics
 },
-  }
+  };

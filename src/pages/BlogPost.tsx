@@ -150,38 +150,35 @@ const const blogPost = {
   id: 'micro-saas-future',title: 'Micro SaaS: The Future of Niche Software Solutions',excerpt: 'Exploring the rise of micro SaaS platforms and how they\'re changing the software industry landscape.',category: 'business',date: '2024-01-08',readTime: '6 min read'
 },
   ],
-  }
+  };
   const formatDate = (dateString: string) => {
   return new Date(dateString).toLocaleDateString('en-US', {
   year: 'numeric',month: 'long',day: 'numeric'
 })
-  }
+  };
 
   const getCategoryIcon = (category: string) => {
   const const categoryIcons: { [key: string]: any } = {
   = {
       ai: Brain,quantum: Cpu,security: Shield,cloud: Cloud,business: TrendingUp,iot: Network,emerging: Zap
-}
+};
     return categoryIcons[category] || BookOpen
-}
 
   const getCategoryName = (category: string) => {
   const const categoryNames: { [key: string]: string } = {
   = {
       ai: 'Artificial Intelligence',quantum: 'Quantum Computing',security: 'Cybersecurity',cloud: 'Cloud & DevOps',business: 'Business Insights',iot: 'IoT & Edge',emerging: 'Emerging Tech'
-}
     return categoryNames[category] || 'Uncategorized'
-}
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO ;
         title={`${blogPost.title} - Zion Tech Group Blog`}
         description={{blogPost.excerpt},
-  }
+  };
       />
       ;
       {{/* Navigation */},
-  }
+  };
       <section className="py-6 bg-slate-800/50">
         <div className="container mx-auto px-4">
           <Link;
@@ -195,20 +192,20 @@ const const blogPost = {
       </section>
 
       {{/* Article Header */},
-  }
+  };
       <section className="py-12">
         <div className="container mx-auto px-4">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             animate={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             className="className="max-w-4xl mx-auto";"
           >
             {{/* Category and Featured Badge */},
-  }
+  };
             <div className="flex items-center space-x-3 mb-6">
                               <span className="px-4 py-2 bg-cyan-500/20 text-cyan-400 text-sm rounded-full font-medium flex items-center space-x-2">
                   {React.createElement(getCategoryIcon(blogPost.category), { className: "w-4 h-4" })}
@@ -222,21 +219,21 @@ const const blogPost = {
             </div>
 
             {{/* Title */},
-  }
+  };
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
               {{blogPost.title},
-  }
+  };
             </h1>
 
             {{/* Excerpt */},
-  }
+  };
             <p className="text-xl text-gray-300 mb-8 leading-relaxed">
               {{blogPost.excerpt},
-  }
+  };
             </p>
 
             {{/* Article Meta */},
-  }
+  };
             <div className="flex flex-wrap items-center justify-between gap-4 py-6 border-t border-b border-slate-700/50">
               <div className="flex items-center space-x-6">
                 <div className="flex items-center space-x-2">
@@ -274,21 +271,21 @@ const const blogPost = {
       </section>
 
       {{/* Article Content */},
-  }
+  };
       <section className="py-12">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <motion.div;
               initial={{ opacity: 0, y: 20 },
-  }
+  };
               whileInView={{ opacity: 1, y: 0 },
-  }
+  };
               transition={{ duration: 0.8 },
-  }
+  };
               className="className="prose prose-invert prose-lg max-w-none";"
             >
               {{/* Featured Image */},
-  }
+  };
               <div className="w-full h-64 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-2xl border border-cyan-400/30 flex items-center justify-center mb-12">
                 <div className="text-center">
                   <BookOpen className="w-20 h-20 text-cyan-400 mx-auto mb-4" />
@@ -297,11 +294,11 @@ const const blogPost = {
               </div>
 
               {{/* Article Content */},
-  }
+  };
               <div ;
                 className="className="text-gray-300 leading-relaxed";"
                 dangerouslySetInnerHTML={{ __html: blogPost.content },
-  }
+  };
               />
             </motion.div>
           </div>
@@ -309,7 +306,7 @@ const const blogPost = {
       </section>
 
       {{/* Tags */},
-  }
+  };
       <section className="py-8 bg-slate-800/50">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
@@ -320,11 +317,11 @@ const const blogPost = {
                 {blogPost.tags.map((tag) => (
   <span;
                     key={{tag},
-  }
+  };
                     className="className="px-3 py-1 bg-slate-700/50 text-cyan-400 text-sm rounded-full border border-slate-600/50 hover:border-cyan-400/50 transition-all duration-200";"
                   >
                     {{tag},
-  }
+  };
                   </span>
                 ))}
               </div>
@@ -334,17 +331,17 @@ const const blogPost = {
       </section>
 
       {{/* Author Bio */},
-  }
+  };
       <section className="py-12">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <motion.div;
               initial={{ opacity: 0, y: 20 },
-  }
+  };
               whileInView={{ opacity: 1, y: 0 },
-  }
+  };
               transition={{ duration: 0.8 },
-  }
+  };
               className="className="bg-slate-800/50 p-8 rounded-2xl border border-slate-700/50";"
             >
               <h3 className="text-2xl font-bold text-white mb-4">About the Author</h3>
@@ -364,16 +361,16 @@ const const blogPost = {
       </section>
 
       {{/* Related Posts */},
-  }
+  };
       <section className="py-20 bg-slate-800/50">
         <div className="container mx-auto px-4">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">Related Articles</h2>
@@ -386,13 +383,13 @@ const const blogPost = {
             {blogPost.relatedPosts.map((post, index) => (
   <motion.article;
                 key={{post.id},
-  }
+  };
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.5, delay: index * 0.1 },
-  }
+  };
                 className="className="bg-slate-700/50 rounded-xl border border-slate-600/50 overflow-hidden hover:border-cyan-400/50 transition-all duration-300 group";"
               >
                 <div className="h-48 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 flex items-center justify-center">
@@ -403,18 +400,18 @@ const const blogPost = {
                   <div className="flex items-center space-x-2 mb-3">
                     <span className="px-3 py-1 bg-cyan-500/20 text-cyan-400 text-xs rounded-full font-medium">
                       {{getCategoryName(post.category)},
-  }
+  };
                     </span>
                   </div>
                   ;
                   <h3 className="text-lg font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors duration-200">
                     {{post.title},
-  }
+  };
                   </h3>
                   ;
                   <p className="text-gray-300 mb-4 line-clamp-3">
                     {{post.excerpt},
-  }
+  };
                   </p>
                   ;
                   <div className="flex items-center justify-between text-sm text-gray-400">
@@ -435,16 +432,16 @@ const const blogPost = {
       </section>
 
       {{/* CTA Section */},
-  }
+  };
       <section className="py-20">
         <div className="container mx-auto px-4">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             className="className="text-center max-w-4xl mx-auto";"
           >
             <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
@@ -470,4 +467,3 @@ const const blogPost = {
       </section>
     </div>
   )
-}

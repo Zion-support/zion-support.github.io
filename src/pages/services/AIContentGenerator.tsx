@@ -84,17 +84,17 @@ export default function AIContentGenerator() {
       ;
       <div className="min-h-screen bg-futuristic">
         {{/* Hero Section */},
-  }
+  };
         <section className="relative py-20 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 via-pink-600/10 to-red-600/10"></div>
           <div className="container-responsive relative z-10">
             <motion.div;
               initial={{ opacity: 0, y: 20 },
-  }
+  };
               animate={{ opacity: 1, y: 0 },
-  }
+  };
               transition={{ duration: 0.8 },
-  }
+  };
               className="className="text-center max-w-4xl mx-auto";"
             >
               <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-purple-400 via-pink-500 to-red-600 bg-clip-text text-transparent">
@@ -117,16 +117,16 @@ export default function AIContentGenerator() {
         </section>
 
         {{/* Features Section */},
-  }
+  };
         <section className="py-20 bg-black/30">
           <div className="container-responsive">
             <motion.div;
               initial={{ opacity: 0, y: 20 },
-  }
+  };
               whileInView={{ opacity: 1, y: 0 },
-  }
+  };
               transition={{ duration: 0.8 },
-  }
+  };
               className="className="text-center mb-16";"
             >
               <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
@@ -142,13 +142,13 @@ export default function AIContentGenerator() {
               {features.map((feature, index) => (
   <motion.div;
                   key={{index},
-  }
+  };
                   initial={{ opacity: 0, y: 20 },
-  }
+  };
                   whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                   transition={{ duration: 0.6, delay: index * 0.1 },
-  }
+  };
                   className="className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-xl p-6 hover:border-purple-500/50 transition-all duration-300 group";"
                 >
                   <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-600 rounded-lg mb-4 group-hover:scale-110 transition-transform duration-300">
@@ -163,16 +163,16 @@ export default function AIContentGenerator() {
         </section>
 
         {{/* Benefits Section */},
-  }
+  };
         <section className="py-20">
           <div className="container-responsive">
             <motion.div;
               initial={{ opacity: 0, y: 20 },
-  }
+  };
               whileInView={{ opacity: 1, y: 0 },
-  }
+  };
               transition={{ duration: 0.8 },
-  }
+  };
               className="className="text-center mb-16";"
             >
               <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
@@ -188,13 +188,13 @@ export default function AIContentGenerator() {
               {benefits.map((benefit, index) => (
   <motion.div;
                   key={{index},
-  }
+  };
                   initial={{ opacity: 0, x: -20 },
-  }
+  };
                   whileInView={{ opacity: 1, x: 0 },
-  }
+  };
                   transition={{ duration: 0.6, delay: index * 0.1 },
-  }
+  };
                   className="className="flex items-start space-x-3";"
                 >
                   <CheckCircle className="w-6 h-6 text-purple-400 mt-1 flex-shrink-0" />
@@ -206,16 +206,16 @@ export default function AIContentGenerator() {
         </section>
 
         {{/* Pricing Section */},
-  }
+  };
         <section className="py-20 bg-black/30">
           <div className="container-responsive">
             <motion.div;
               initial={{ opacity: 0, y: 20 },
-  }
+  };
               whileInView={{ opacity: 1, y: 0 },
-  }
+  };
               transition={{ duration: 0.8 },
-  }
+  };
               className="className="text-center mb-16";"
             >
               <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
@@ -231,13 +231,13 @@ export default function AIContentGenerator() {
               {pricing.map((plan, index) => (
   <motion.div;
                   key={{index},
-  }
+  };
                   initial={{ opacity: 0, y: 20 },
-  }
+  };
                   whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                   transition={{ duration: 0.6, delay: index * 0.1 },
-  }
+  };
                   className={`relative bg-slate-800/50 backdrop-blur-sm border rounded-xl p-8 ${
   plan.popular ;
                       ? 'border-purple-500/50 shadow-lg shadow-purple-500/20' ;
@@ -276,7 +276,7 @@ export default function AIContentGenerator() {
                       : 'border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white'
 }`}>
                     {{plan.cta},
-  }
+  };
                   </button>
                 </motion.div>
               ))}
@@ -285,16 +285,16 @@ export default function AIContentGenerator() {
         </section>
 
         {{/* CTA Section */},
-  }
+  };
         <section className="py-20">
           <div className="container-responsive">
             <motion.div;
               initial={{ opacity: 0, y: 20 },
-  }
+  };
               whileInView={{ opacity: 1, y: 0 },
-  }
+  };
               transition={{ duration: 0.8 },
-  }
+  };
               className="className="text-center max-w-4xl mx-auto";"
             >
               <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
@@ -318,4 +318,4 @@ export default function AIContentGenerator() {
       </div>
     </>
   )
-}
+};

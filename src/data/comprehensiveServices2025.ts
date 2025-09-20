@@ -2,27 +2,25 @@
 // Real, Innovative Micro SAAS, IT Infrastructure, and AI Services;
 export interface ServiceContact {
   phone: string,email: string,website: string,address: string
-}
+};
 
 export interface MicroSaasService {
   id: number,name: string,category: string,pricing: string,description: string,price: number,pricingModel: string,userLimit: string,features: string[],benefits: string[],targetAudience: string[],tags: string[],contactInfo: ServiceContact,marketPrice: string,competitors: string[],roi: string,setupTime: string,integrations: string[],freeTier: boolean,trialPeriod: string,innovationLevel: string,marketSize: string,growthRate: string
-}
 
 export interface ITService {
   id: number,name: string,category: string,description: string,hourlyRate: number,projectRate: number,features: string[],benefits: string[],targetAudience: string[],tags: string[],contactInfo: ServiceContact,marketPrice: string,responseTime: string,sla: string,certifications: string[],deliveryTime: string,support: string,innovationLevel: string,marketSize: string,compliance: string[[],
   ],
-  }
+  };
 
 export interface AIService {
   id: number,name: string,category: string,description: string,pricing: string,price: number,pricingModel: string,features: string[],benefits: string[],targetAudience: string[],tags: string[],contactInfo: ServiceContact,marketPrice: string,aiModels: string[],accuracy: string,trainingData: string,compliance: string[],aiScore: number,useCases: string[],innovationLevel: string,marketSize: string,ethicalAI: string[[],
   ],
-  }
+  };
 
 // Zion Tech Group Contact Information;
 const const zionContact: ServiceContact = {
   = {
   phone: "+1 302 464 0950",email: "kleber@ziontechgroup.com",website: "https://ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709"
-}
 // Revolutionary Micro SAAS Services 2025;
 export const revolutionaryMicroSaasServices2025: MicroSaasService[] = [
   {
@@ -531,5 +529,4 @@ export const revolutionaryAIServices2025: AIService[] = [
 export const const allServices2025 = {
   = {
   microSaas: revolutionaryMicroSaasServices2025,itInfrastructure: advancedITInfrastructureServices2025,ai: revolutionaryAIServices2025
-}
 export default allServices2025;

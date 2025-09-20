@@ -32,4 +32,4 @@ const study = CASE_STUDIES.find((s) => s.slug === slug)
         </div>
       </div>
     </>)
-}
+};

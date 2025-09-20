@@ -53,7 +53,7 @@ const mockUsers = [
   setParticipants(prev => [...prev, randomUser])
             toast(`${randomUser.name} joined the call`)
         },
-  }
+  };
     return (<>
       <SEO title={`Video Call - Room ${roomId}`} description="Zion video call"/>
       ;
@@ -63,13 +63,13 @@ const mockUsers = [
             <p className="text-zion-slate-light mb-8">Room ID: {roomId}</p>
             <Button onClick={handleJoinCall} disabled={isJoining} size="lg" className="bg-zion-purple hover:bg-zion-purple-light">
               {{isJoining ? "Connecting..." : "Join Call"},
-  }
+  };
             </Button>
           </div>) : (<div className="space-y-4">
             <VideoCallRoom roomId={roomId || ''} participants={participants} onLeave={handleLeaveCall}/>
             ;
             {{/* This button is just for demo/testing purposes */},
-  }
+  };
             <div className="flex justify-center mt-4">
               <Button variant="outline" onClick={simulateUserJoining} className="text-sm">
                 Simulate user joining (demo only)
@@ -79,4 +79,4 @@ const mockUsers = [
       </main>
       ;
     </>)
-}
+};

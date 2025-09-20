@@ -32,7 +32,7 @@ export default function Privacy() {
                 If you have questions about our privacy practices, please contact;
                 us at;
                 {{" "},
-  }
+  };
                 <a href="mailto: support@ziontechgroup.com" className="text-zion-cyan hover:underline">
                   support@ziontechgroup.com;
                 </a>
@@ -44,4 +44,4 @@ export default function Privacy() {
         <Footer />
       </>
     )
-}
+};

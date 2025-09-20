@@ -74,68 +74,68 @@ const InnovativeServicesHub: React.FC = () => {
   const const containerVariants = {
   = {
     hidden: {{ opacity: 0 },
-  }
+  };
     visible: {
   opacity: 1,transition: {
   staggerChildren: 0.1
 },
   },
-  }
+  };
   const const itemVariants = {
   = {
     hidden: {{ y: 20, opacity: 0 },
-  }
+  };
     visible: {
   y: 0,opacity: 1,transition: {
   duration: 0.5
 },
   },
-  }
+  };
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {{/* Hero Section */},
-  }
+  };
       <motion.div;
         className="className="relative overflow-hidden bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 py-20";"
         initial={{ opacity: 0 },
-  }
+  };
         animate={{ opacity: 1 },
-  }
+  };
         transition={{ duration: 0.8 },
-  }
+  };
       >
         <div className="absolute inset-0 bg-black/20"></div>
         <div className="relative z-10 container mx-auto px-4 text-center">
           <motion.h1;
             className="className="text-5xl md:text-7xl font-bold text-white mb-6";"
             initial={{ y: -50, opacity: 0 },
-  }
+  };
             animate={{ y: 0, opacity: 1 },
-  }
+  };
             transition={{ duration: 0.8, delay: 0.2 },
-  }
+  };
           >
             Innovative Services Hub;
           </motion.h1>
           <motion.p;
             className="className="text-xl md:text-2xl text-indigo-100 max-w-4xl mx-auto mb-8";"
             initial={{ y: 50, opacity: 0 },
-  }
+  };
             animate={{ y: 0, opacity: 1 },
-  }
+  };
             transition={{ duration: 0.8, delay: 0.4 },
-  }
+  };
           >
             Discover the future of technology with our comprehensive portfolio of innovative services;
           </motion.p>
           <motion.div;
             className="className="flex flex-wrap justify-center gap-4 text-sm";"
             initial={{ scale: 0.8, opacity: 0 },
-  }
+  };
             animate={{ scale: 1, opacity: 1 },
-  }
+  };
             transition={{ duration: 0.8, delay: 0.6 },
-  }
+  };
           >
             <span className="px-4 py-2 bg-indigo-500/20 border border-indigo-400/30 rounded-full text-indigo-200">
               🚀 40+ Services;
@@ -154,15 +154,15 @@ const InnovativeServicesHub: React.FC = () => {
       </motion.div>
 
       {{/* Statistics Section */},
-  }
+  };
       <motion.div;
         className="className="container mx-auto px-4 py-16";"
         initial={{ opacity: 0, y: 20 },
-  }
+  };
         animate={{ opacity: 1, y: 0 },
-  }
+  };
         transition={{ duration: 0.6, delay: 0.8 },
-  }
+  };
       >
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
           <div className="text-center p-6 bg-slate-800/50 backdrop-blur-sm rounded-2xl border border-slate-700/50">
@@ -185,11 +185,11 @@ const InnovativeServicesHub: React.FC = () => {
       </motion.div>
 
       {{/* Service Categories */},
-  }
+  };
       <motion.div;
         className="className="container mx-auto px-4 py-16";"
         variants={{containerVariants},
-  }
+  };
         initial="hidden";
         animate="visible";
       >
@@ -208,12 +208,12 @@ const InnovativeServicesHub: React.FC = () => {
             return (
               <motion.div;
                 key={{category.id},
-  }
+  };
                 className="className="group bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50 hover:border-blue-500/50 transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/20";"
                 variants={{itemVariants},
-  }
+  };
                 whileHover={{ y: -5, scale: 1.02 },
-  }
+  };
               >
                 <div className="flex items-start gap-4 mb-6">
                   <div className={`p-4 rounded-xl bg-gradient-to-r ${category.color}`}>
@@ -222,31 +222,31 @@ const InnovativeServicesHub: React.FC = () => {
                   <div className="flex-1">
                     <h3 className="text-2xl font-bold text-white group-hover:text-blue-300 transition-colors mb-2">
                       {{category.title},
-  }
+  };
                     </h3>
                     <p className="text-slate-300 leading-relaxed">
                       {{category.description},
-  }
+  };
                     </p>
                   </div>
                 </div>
 
                 {{/* Features */},
-  }
+  };
                 <div className="mb-6">
                   <div className="text-sm text-slate-400 mb-3">Key Features:</div>
                   <div className="flex flex-wrap gap-2">
                     {category.features.map((feature, index) => (
   <span key={index} className="px-3 py-1 bg-slate-700/50 rounded-full text-xs text-slate-300">
                         {{feature},
-  }
+  };
                       </span>
                     ))}
                   </div>
                 </div>
 
                 {{/* Stats */},
-  }
+  };
                 <div className="grid grid-cols-3 gap-4 mb-6">
                   <div className="text-center p-3 bg-slate-700/30 rounded-lg">
                     <div className="text-lg font-bold text-blue-400">{category.stats.services}</div>
@@ -263,14 +263,14 @@ const InnovativeServicesHub: React.FC = () => {
                 </div>
 
                 {{/* CTA */},
-  }
+  };
                 <a;
                   href={{category.route},
-  }
+  };
                   className="className="inline-flex items-center gap-2 w-full justify-center px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 hover: from-blue-700 hover:to-purple-700 text-white font-bold rounded-xl transition-all duration-300 hover:scale-105 group-hover:gap-3";"
                 >
                   Explore {{category.title},
-  }
+  };
                   <ArrowRight className="w-5 h-5" />
                 </a>
               </motion.div>
@@ -280,15 +280,15 @@ const InnovativeServicesHub: React.FC = () => {
       </motion.div>
 
       {{/* Featured Services */},
-  }
+  };
       <motion.div;
         className="className="container mx-auto px-4 py-16";"
         initial={{ opacity: 0, y: 20 },
-  }
+  };
         animate={{ opacity: 1, y: 0 },
-  }
+  };
         transition={{ duration: 0.6, delay: 1.2 },
-  }
+  };
       >
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-white mb-4">
@@ -303,16 +303,16 @@ const InnovativeServicesHub: React.FC = () => {
           {featuredServices.map((service, index) => (
   <motion.div;
               key={{index},
-  }
+  };
               className="className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50 hover:border-blue-500/50 transition-all duration-300";"
               initial={{ opacity: 0, y: 20 },
-  }
+  };
               animate={{ opacity: 1, y: 0 },
-  }
+  };
               transition={{ duration: 0.6, delay: 1.4 + index * 0.1 },
-  }
+  };
               whileHover={{ y: -5, scale: 1.02 },
-  }
+  };
             >
               <div className="flex items-center gap-2 mb-3">
                 <Star className="w-5 h-5 text-yellow-400 fill-current" />
@@ -350,15 +350,15 @@ const InnovativeServicesHub: React.FC = () => {
       </motion.div>
 
       {{/* Contact Section */},
-  }
+  };
       <motion.div;
         className="className="bg-gradient-to-r from-indigo-900/20 via-purple-900/20 to-pink-900/20 border-t border-slate-700/50";"
         initial={{ opacity: 0, y: 50 },
-  }
+  };
         animate={{ opacity: 1, y: 0 },
-  }
+  };
         transition={{ duration: 0.8, delay: 1.6 },
-  }
+  };
       >
         <div className="container mx-auto px-4 py-20">
           <div className="text-center mb-12">
@@ -416,5 +416,5 @@ const InnovativeServicesHub: React.FC = () => {
       </motion.div>
     </div>
   )
-}
+};
 export default InnovativeServicesHub;

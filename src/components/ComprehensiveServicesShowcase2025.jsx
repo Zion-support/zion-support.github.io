@@ -139,33 +139,33 @@ const getCategoryIcon = (category) => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.h1 
             initial={{ y: 30, opacity: 0 },
-  }
+  };
             animate={{ y: 0, opacity: 1 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             className="text-5xl md:text-6xl font-bold mb-6"
           >
             Revolutionary AI & Tech Services
           </motion.h1>
           <motion.p 
             initial={{ y: 30, opacity: 0 },
-  }
+  };
             animate={{ y: 0, opacity: 1 },
-  }
+  };
             transition={{ duration: 0.8, delay: 0.2 },
-  }
+  };
             className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto"
           >
             Discover cutting-edge micro SAAS solutions, IT services, and AI innovations that transform businesses and drive exponential growth
           </motion.p>
           <motion.div 
             initial={{ y: 30, opacity: 0 },
-  }
+  };
             animate={{ y: 0, opacity: 1 },
-  }
+  };
             transition={{ duration: 0.8, delay: 0.4 },
-  }
+  };
             className="flex flex-col sm:flex-row gap-4 justify-center items-center"
           >
             <div className="flex items-center space-x-2 bg-white/20 backdrop-blur-sm rounded-lg px-6 py-3">
@@ -199,11 +199,11 @@ const getCategoryIcon = (category) => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-16">
           <motion.div 
             initial={{ scale: 0.8, opacity: 0 },
-  }
+  };
             whileInView={{ scale: 1, opacity: 1 },
-  }
+  };
             transition={{ duration: 0.5 },
-  }
+  };
             className="text-center p-6 bg-white rounded-xl shadow-lg"
           >
             <div className="text-4xl font-bold text-blue-600 mb-2">{allServices.length}+</div>
@@ -211,11 +211,11 @@ const getCategoryIcon = (category) => {
           </motion.div>
           <motion.div 
             initial={{ scale: 0.8, opacity: 0 },
-  }
+  };
             whileInView={{ scale: 1, opacity: 1 },
-  }
+  };
             transition={{ duration: 0.5, delay: 0.1 },
-  }
+  };
             className="text-center p-6 bg-white rounded-xl shadow-lg"
           >
             <div className="text-4xl font-bold text-purple-600 mb-2">25+</div>
@@ -223,11 +223,11 @@ const getCategoryIcon = (category) => {
           </motion.div>
           <motion.div 
             initial={{ scale: 0.8, opacity: 0 },
-  }
+  };
             whileInView={{ scale: 1, opacity: 1 },
-  }
+  };
             transition={{ duration: 0.5, delay: 0.2 },
-  }
+  };
             className="text-center p-6 bg-white rounded-xl shadow-lg"
           >
             <div className="text-4xl font-bold text-green-600 mb-2">99.9%</div>
@@ -235,11 +235,11 @@ const getCategoryIcon = (category) => {
           </motion.div>
           <motion.div 
             initial={{ scale: 0.8, opacity: 0 },
-  }
+  };
             whileInView={{ scale: 1, opacity: 1 },
-  }
+  };
             transition={{ duration: 0.5, delay: 0.3 },
-  }
+  };
             className="text-center p-6 bg-white rounded-xl shadow-lg"
           >
             <div className="text-4xl font-bold text-orange-600 mb-2">24/7</div>
@@ -301,9 +301,9 @@ const getCategoryIcon = (category) => {
                 key={category.id}
                 onClick={() => setActiveCategory(category.id)}
                 whileHover={{ scale: 1.05 },
-  }
+  };
                 whileTap={{ scale: 0.95 },
-  }
+  };
                 className={`px-6 py-3 rounded-full text-sm font-medium transition-all duration-300 ${
                   activeCategory === category.id
                     ? 'bg-gradient-to-r ' + category.color + ' text-white shadow-lg'
@@ -329,7 +329,7 @@ const getCategoryIcon = (category) => {
               key={service.id}
               variants={itemVariants}
               whileHover={{ y: -5, scale: 1.02 },
-  }
+  };
               className={`bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300 ${
                 viewMode === 'list' ? 'flex' : ''
               }`}
@@ -482,21 +482,21 @@ const getCategoryIcon = (category) => {
         {selectedService && (
           <motion.div
             initial={{ opacity: 0 },
-  }
+  };
             animate={{ opacity: 1 },
-  }
+  };
             exit={{ opacity: 0 },
-  }
+  };
             className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4"
             onClick={() => setSelectedService(null)}
           >
             <motion.div
               initial={{ scale: 0.8, opacity: 0 },
-  }
+  };
               animate={{ scale: 1, opacity: 1 },
-  }
+  };
               exit={{ scale: 0.8, opacity: 0 },
-  }
+  };
               className="bg-white rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto"
               onClick={(e) => e.stopPropagation()}
             >

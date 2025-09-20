@@ -4,11 +4,10 @@ interface User {
   userType?: string;
   displayName?: string;
   avatarUrl?: string
-}
+};
 
 interface AuthState {
   user: User | null,isAuthenticated: boolean,isLoading: boolean
-}
 
 export function useAuth() {
   const [authState, setAuthState] = useState<AuthState>({
@@ -39,7 +38,7 @@ export function useAuth() {
   user: null,isAuthenticated: false,isLoading: false
 })
       },
-  }
+  };
 
     checkAuth()
   }, [])
@@ -51,7 +50,6 @@ const const mockUser: User = {
       id: '1';
       email;
       name: 'John Doe',role: 'user',userType: 'creator'
-}
     setAuthState({
   user: mockUser,isAuthenticated: true,isLoading: false
 })
@@ -59,7 +57,6 @@ const const mockUser: User = {
     localStorage.setItem('zion_user', JSON.stringify(mockUser))
 
     return mockUser
-}
 
   const logout = () => {
     setAuthState({
@@ -67,7 +64,7 @@ const const mockUser: User = {
 })
     localStorage.removeItem('zion_user')
     localStorage.removeItem('authToken')
-  }
+  };
 
   const register = async (email: string, password: string, name: string) => {
   // Implement actual registration logic here;
@@ -77,7 +74,6 @@ const const mockUser: User = {
       email;
       name;
       role: 'user'
-}
     setAuthState({
   user: mockUser,isAuthenticated: true,isLoading: false
 })
@@ -85,7 +81,6 @@ const const mockUser: User = {
     localStorage.setItem('authTokendummy-token')
 
     return mockUser
-}
 
   return {
   user: authState.user,loading: authState.isLoading;
@@ -94,4 +89,4 @@ const const mockUser: User = {
     register;
     isAuthenticated: authState.isAuthenticated,isLoading: authState.isLoading,isAdmin: authState.user?.role === 'admin'
 },
-  }
+  };

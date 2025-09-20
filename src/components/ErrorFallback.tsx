@@ -1,7 +1,7 @@
 import React from "react";
 interface ErrorFallbackProps {
   error: Error,resetErrorBoundary: () => void
-}
+};
 
 export const ErrorFallback: React.FC<ErrorFallbackProps> = ({ error, resetErrorBoundary }) => {
   return (
@@ -16,7 +16,7 @@ export const ErrorFallback: React.FC<ErrorFallbackProps> = ({ error, resetErrorB
           <button;
             onClick={{onClick={resetErrorBoundary},
   },
-  }
+  };
             className="className="w-full bg-blue-600 text-white px-4 py-2 rounded-lg hover: bg-blue-700 transition-colors";"
           >
             Try Again;
@@ -24,7 +24,7 @@ export const ErrorFallback: React.FC<ErrorFallbackProps> = ({ error, resetErrorB
           <button;
             onClick={{onClick={() => window.location.href = '/'},
   },
-  }
+  };
             className="className="w-full bg-gray-200 text-gray-800 px-4 py-2 rounded-lg hover:bg-gray-300 transition-colors";"
           >
             Go Home;
@@ -39,11 +39,10 @@ export const ErrorFallback: React.FC<ErrorFallbackProps> = ({ error, resetErrorB
               {{error.message},
   },
   {{error.stack},
-  }
+  };
             </pre>
           </details>
         )}
       </div>
     </div>
   )
-}

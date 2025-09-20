@@ -18,7 +18,7 @@ interface OptimizedImageProps {
   rounded?: boolean,
   shadow?: boolean,
   hover?: boolean
-}
+};
 
 export const OptimizedImage: React.FC<OptimizedImageProps> = ({
   src;
@@ -114,7 +114,6 @@ const observerRef = useRef<IntersectionObserver | null>(null);
       const url = new URL(src);
       if (url.searchParams.has('quality')) {
         return src
-}
       url.searchParams.set('quality', quality.toString()),
       return url.toString()
 } catch {
@@ -142,14 +141,14 @@ const observerRef = useRef<IntersectionObserver | null>(null);
       <div 
         className={`${baseClasses} bg-gray-200 dark:bg-gray-700 animate-pulse`}
         style={{ width, height },
-  }
+  };
       >
         <div className="w-full h-full flex items-center justify-center">
           <Loader2 className="w-8 h-8 text-gray-400 animate-spin" />
         </div>
       </div>
     ),
-  }
+  };
 
   // Error state
   if (hasError) {
@@ -157,7 +156,7 @@ const observerRef = useRef<IntersectionObserver | null>(null);
       <div 
         className={`${baseClasses} bg-gray-100 dark:bg-gray-800 flex items-center justify-center`}
         style={{ width, height },
-  }
+  };
       >
         <div className="text-center">
           <AlertCircle className="w-12 h-12 text-gray-400 mx-auto mb-2" />
@@ -165,7 +164,7 @@ const observerRef = useRef<IntersectionObserver | null>(null);
         </div>
       </div>
     )
-  }
+  };
 
   return (
     <div className="relative" style={{ width, height },
@@ -175,9 +174,9 @@ const observerRef = useRef<IntersectionObserver | null>(null);
         {isLoading && (
           <motion.div
             initial={{ opacity: 1 },
-  }
+  };
             exit={{ opacity: 0 },
-  }
+  };
             className="absolute inset-0 bg-gray-200 dark:bg-gray-700 flex items-center justify-center z-10"
           >
             <div className="text-center">
@@ -199,17 +198,17 @@ const observerRef = useRef<IntersectionObserver | null>(null);
         alt={alt}
         className={baseClasses}
         style={{ width: '100%', height: '100%' },
-  }
+  };
         loading={lazy ? 'lazy' : 'eager'}
         sizes={sizes}
         onLoad={handleImageLoad}
         onError={handleImageError}
         initial={{ opacity: 0 },
-  }
+  };
         animate={{ opacity: isLoaded ? 1 : 0 },
-  }
+  };
         transition={{ duration: 0.3 },
-  }
+  };
       />
 
       {/* Fallback icon for broken images */},

@@ -44,5 +44,5 @@ const InfrastructureServices = () () => {
         </div>
       </section>
     </div>)
-}
+};
 export default InfrastructureServices

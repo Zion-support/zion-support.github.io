@@ -34,7 +34,7 @@ const fetchFraudFlags = async () => {
 const const newStats = {
   = {
                 total_flags: data?.length || 0,pending_flags: data?.filter(flag => flag.status === 'pending').length || 0,suspicious_count: data?.filter(flag => flag.severity === 'suspicious').length || 0,dangerous_count: data?.filter(flag => flag.severity === 'dangerous').length || 0,false_positives: data?.filter(flag => flag.is_false_positive).length || 0,actioned_count: data?.filter(flag => flag.action_taken && flag.action_taken !== 'none').length || 0
-}
+};
             setStats(newStats)
         }
         catch (error) {
@@ -46,7 +46,7 @@ const const newStats = {
         finally {
   setIsLoading(false)
         },
-  }
+  };
     useEffect(() => {
         fetchFraudFlags()
     }, [])
@@ -106,7 +106,7 @@ const { error } = await supabase;
   title: "Error",description: "Failed to update flag",variant: "destructive"
 })
         },
-  }
+  };
     const resetFilters = () => {
         setSearchQuery("")
         setStatusFilter(null)
@@ -135,7 +135,7 @@ const { error } = await supabase;
         </div>
         ;
         {{/* Stats Cards */},
-  }
+  };
         <FraudStatsCards stats={stats}/>
         ;
         <Tabs defaultValue="all" className="mb-8">
@@ -148,11 +148,11 @@ const { error } = await supabase;
           ;
           <TabsContent value="all" className="mt-6">
             {{/* Search and Filters */},
-  }
+  };
             <FraudFilters searchQuery={searchQuery} setSearchQuery={setSearchQuery} statusFilter={statusFilter} setStatusFilter={setStatusFilter} severityFilter={severityFilter} setSeverityFilter={setSeverityFilter} contentTypeFilter={contentTypeFilter} setContentTypeFilter={setContentTypeFilter} resetFilters={resetFilters}/>
             ;
             {{/* Flags Table */},
-  }
+  };
             <Card>
               <CardContent className="p-0">
                 <FraudFlagsTable flags={filteredFlags} isLoading={isLoading} hasFilters={hasFilters} resetFilters={resetFilters} onAction={handleAction}/>
@@ -173,4 +173,3 @@ const { error } = await supabase;
           </TabsContent>
         </Tabs>
       </div>)
-}

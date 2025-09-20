@@ -97,10 +97,10 @@ const Leadership = () => {
             "Create sustainable technology solutions";
             "Build the most trusted technology partner network"
 ],
-  }
+  };
     return (<div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
       {{/* Hero Section */},
-  }
+  };
       <section className="relative bg-gradient-to-r from-slate-900 via-blue-900 to-slate-900 text-white py-20">
         <div className="absolute inset-0 bg-black/20"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -123,17 +123,17 @@ const Leadership = () => {
       </section>
 
       {{/* Vision Section */},
-  }
+  };
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-slate-900 mb-4">
               {{vision.title},
-  }
+  };
             </h2>
             <p className="text-xl text-slate-600 max-w-4xl mx-auto mb-12">
               {{vision.description},
-  }
+  };
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
               {vision.goals.map((goal, index) => (<div key={index} className="flex items-start">
@@ -148,7 +148,7 @@ const Leadership = () => {
       </section>
 
       {{/* Leadership Team */},
-  }
+  };
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -173,7 +173,7 @@ const Leadership = () => {
                     <div className="flex items-center justify-center md:justify-start text-sm text-slate-500 mb-4">
                       <MapPin className="w-4 h-4 mr-1"/>
                       {{leader.location},
-  }
+  };
                     </div>
                     <div className="flex justify-center md:justify-start space-x-4">
                       <a href={leader.linkedin} target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-blue-600 text-white rounded-lg flex items-center justify-center hover:bg-blue-700 transition-colors duration-200">
@@ -188,7 +188,7 @@ const Leadership = () => {
                   <div className="md:col-span-2">
                     <p className="text-slate-600 mb-6 leading-relaxed">
                       {{leader.bio},
-  }
+  };
                     </p>
                     ;
                     <div className="grid md:grid-cols-2 gap-6">
@@ -205,7 +205,7 @@ const Leadership = () => {
                         <div className="flex flex-wrap gap-2 mb-4">
                           {leader.expertise.map((skill, skillIndex) => (<span key={skillIndex} className="px-3 py-1 bg-blue-100 text-blue-800 text-xs rounded-full">
                               {{skill},
-  }
+  };
                             </span>))}
                         </div>
                         ;
@@ -214,7 +214,7 @@ const Leadership = () => {
                           {leader.achievements.map((achievement, achievementIndex) => (<li key={achievementIndex} className="flex items-center text-sm text-slate-600">
                               <div className="w-2 h-2 bg-green-500 rounded-full mr-2"></div>
                               {{achievement},
-  }
+  };
                             </li>))}
                         </ul>
                       </div>
@@ -227,7 +227,7 @@ const Leadership = () => {
       </section>
 
       {{/* Company Values */},
-  }
+  };
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -246,11 +246,11 @@ const Leadership = () => {
                 </div>
                 <h3 className="text-2xl font-bold text-slate-900 mb-4">
                   {{value.title},
-  }
+  };
                 </h3>
                 <p className="text-slate-600">
                   {{value.description},
-  }
+  };
                 </p>
               </div>))}
           </div>
@@ -258,7 +258,7 @@ const Leadership = () => {
       </section>
 
       {{/* CTA Section */},
-  }
+  };
       <section className="py-20 bg-gradient-to-r from-slate-900 to-blue-900 text-white">
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
           <h2 className="text-4xl font-bold mb-6">
@@ -279,5 +279,5 @@ const Leadership = () => {
         </div>
       </section>
     </div>)
-}
+};
 export default Leadership;

@@ -26,5 +26,5 @@ export default function Accessibility() {
 			</div>
 		</div>
 	)
-}
+};
 

@@ -30,7 +30,7 @@ import {
 interface SidebarItem {
   name: string,href: string,icon: React.ComponentType<any>;
   children?: SidebarItem[],
-  }
+  };
 
 export const Sidebar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -151,13 +151,13 @@ const active = isActive(item.href);
         {hasChildren && isExpanded && (
           <motion.div
             initial={{ opacity: 0, height: 0 },
-  }
+  };
             animate={{ opacity: 1, height: 'auto' },
-  }
+  };
             exit={{ opacity: 0, height: 0 },
-  }
+  };
             transition={{ duration: 0.2 },
-  }
+  };
             className="ml-4 mt-1 space-y-1"
           >
             {item.children!.map(child => (
@@ -195,11 +195,11 @@ const active = isActive(item.href);
         {isOpen && (
           <motion.div
             initial={{ opacity: 0 },
-  }
+  };
             animate={{ opacity: 1 },
-  }
+  };
             exit={{ opacity: 0 },
-  }
+  };
             className="fixed inset-0 z-50 lg:hidden"
           >
             {/* Backdrop */}
@@ -211,13 +211,13 @@ const active = isActive(item.href);
             {/* Sidebar */}
             <motion.div
               initial={{ x: '-100%' },
-  }
+  };
               animate={{ x: 0 },
-  }
+  };
               exit={{ x: '-100%' },
-  }
+  };
               transition={{ type: 'spring', damping: 25, stiffness: 200 },
-  }
+  };
               className="absolute left-0 top-0 h-full w-80 bg-slate-900/95 border-r border-slate-700/50 backdrop-blur-xl"
             >
               {/* Header */}

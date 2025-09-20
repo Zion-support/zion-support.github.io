@@ -1,7 +1,7 @@
 import React, { useEffect, useCallback, useState } from "react";
 interface ModernUIEnhancerProps {
   enabled?: boolean,
-}
+};
 
 export const ModernUIEnhancer: React.FC<ModernUIEnhancerProps> = ({ 
   enabled = true 
@@ -204,4 +204,3 @@ const root = document.documentElement;
 
   // Don't render anything - this is a utility component
   return null
-};

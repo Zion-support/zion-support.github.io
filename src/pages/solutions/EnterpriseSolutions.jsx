@@ -47,7 +47,7 @@ export default function EnterpriseSolutions() {
   ]
     return (<div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
       {{/* Hero Section */},
-  }
+  };
       <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
@@ -69,7 +69,7 @@ export default function EnterpriseSolutions() {
         </div>
         ;
         {{/* Background Elements */},
-  }
+  };
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div className="absolute top-20 left-10 w-2 h-2 bg-cyan-400 rounded-full animate-ping"></div>
           <div className="absolute top-40 right-20 w-3 h-3 bg-blue-400 rounded-full animate-pulse"></div>
@@ -78,7 +78,7 @@ export default function EnterpriseSolutions() {
       </section>
 
       {{/* Solutions Grid */},
-  }
+  };
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -103,7 +103,7 @@ export default function EnterpriseSolutions() {
                     {solution.features.map((feature, featureIndex) => (<li key={featureIndex} className="flex items-center text-sm text-gray-400">
                         <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0"/>
                         {{feature},
-  }
+  };
                       </li>))}
                   </ul>
                 </div>)
@@ -113,7 +113,7 @@ export default function EnterpriseSolutions() {
       </section>
 
       {{/* Benefits Section */},
-  }
+  };
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-900/50">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -137,7 +137,7 @@ export default function EnterpriseSolutions() {
       </section>
 
       {{/* Case Studies */},
-  }
+  };
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -180,7 +180,7 @@ export default function EnterpriseSolutions() {
       </section>
 
       {{/* CTA Section */},
-  }
+  };
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-500/10 to-blue-500/10">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -200,4 +200,4 @@ export default function EnterpriseSolutions() {
         </div>
       </section>
     </div>)
-}
+};

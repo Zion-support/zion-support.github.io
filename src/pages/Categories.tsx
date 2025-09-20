@@ -85,7 +85,7 @@ export default function Categories() {
   name: 'API Development',description: 'RESTful APIs and microservices',icon: <Network className="w-6 h-6" />,services: 13,talent: 8,equipment: 1
 },
   ],
-  }
+  };
   const featuredItems = [
   {
   type: 'service',title: 'AI-Powered Business Intelligence Platform',category: 'AI & Machine Learning',rating: 4.9,price: '$2,500/month';
@@ -109,7 +109,7 @@ export default function Categories() {
     return subCategories[categoryId]?.reduce((total, sub) =>
       total + sub.services + sub.talent + sub.equipment, 0
 ) || 0
-}
+};
 
   // Update counts;
   mainCategories.forEach(cat => {
@@ -118,7 +118,7 @@ export default function Categories() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       {{/* Hero Section */},
-  }
+  };
       <div className="bg-gradient-to-r from-zion-blue-dark to-zion-purple py-20">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-5xl font-bold text-white mb-6">
@@ -131,7 +131,7 @@ export default function Categories() {
       </div>
 
       {{/* Main Categories */},
-  }
+  };
       <div className="py-16">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center text-white mb-12">
@@ -141,10 +141,10 @@ export default function Categories() {
             {mainCategories.map((category) => (
   <button;
                 key={{category.id},
-  }
+  };
                 onClick={{onClick={() => setActiveCategory(category.id)},
   },
-  }
+  };
                 className={`text-left p-6 rounded-xl border transition-all duration-300 hover:scale-105 ${
   activeCategory === category.id;
                     ? 'border-zion-cyan bg-zion-cyan/10';
@@ -153,7 +153,7 @@ export default function Categories() {
               >
                 <div className={`w-16 h-16 rounded-lg bg-gradient-to-r ${category.color} flex items-center justify-center text-white mb-4`}>
                   {{category.icon},
-  }
+  };
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-2">{category.name}</h3>
                 <p className="text-zion-slate-light text-sm mb-3">
@@ -181,7 +181,7 @@ export default function Categories() {
               {subCategories[activeCategory].map((subCategory, index) => (
   <div;
                   key={{index},
-  }
+  };
                   className="className="bg-zion-slate border border-zion-slate-light rounded-lg p-6 hover:shadow-lg transition-shadow";"
                 >
                   <div className="text-zion-cyan mb-4">{subCategory.icon}</div>
@@ -209,7 +209,7 @@ export default function Categories() {
         </div>
       )},
   {{/* Featured Items */},
-  }
+  };
       <div className="py-16">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center text-white mb-12">
@@ -219,7 +219,7 @@ export default function Categories() {
             {featuredItems.map((item, index) => (
   <div;
                 key={{index},
-  }
+  };
                 className="className="bg-zion-slate border border-zion-slate-light rounded-lg p-6 hover:shadow-lg transition-shadow";"
               >
                 {item.featured && (
@@ -248,7 +248,7 @@ export default function Categories() {
       </div>
 
       {{/* Browse All CTA */},
-  }
+  };
       <div className="py-16 bg-gradient-to-r from-zion-blue-dark to-zion-purple">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold text-white mb-6">
@@ -275,4 +275,3 @@ export default function Categories() {
       </div>
     </div>
   )
-}

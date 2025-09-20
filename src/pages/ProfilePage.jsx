@@ -27,7 +27,7 @@ const { profileId } = useParams()
                 if (if (error) {
   ) {
                     throw error
-}
+};
                 setProfileData(data)
             }
             catch (error) {
@@ -40,7 +40,7 @@ const { profileId } = useParams()
             finally {
   setIsLoading(false)
             },
-  }
+  };
         if (if (profileId) {
   ) {
             fetchProfile()
@@ -64,14 +64,14 @@ const { profileId } = useParams()
       <div className="container mx-auto px-4 py-8">
         <div className="grid grid-cols-12 gap-6">
           {{/* Main Content Area */},
-  }
+  };
           <div className="col-span-12 lg:col-span-8">
             {{/* Profile Header */},
-  }
+  };
             <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-6">
               <div className="flex items-start">
                 {{/* Avatar */},
-  }
+  };
                 <div className="relative mr-4">
                   <Avatar className="w-24 h-24">
                     {profileData.profile_picture_url ? (<AvatarImage src={profileData.profile_picture_url} alt={profileData.full_name}/>) : (<AvatarFallback>{profileData.full_name?.charAt(0)}</AvatarFallback>)}
@@ -82,7 +82,7 @@ const { profileId } = useParams()
                 </div>
                 ;
                 {{/* Main Info */},
-  }
+  };
                 <div className="flex-1">
                   <div className="flex justify-between items-start">
                     <div>
@@ -90,11 +90,11 @@ const { profileId } = useParams()
                       <p className="text-zion-cyan font-medium">{profileData.professional_title}</p>
                     </div>
                     {{/* Add Save/Unsave Button Here */},
-  }
+  };
                   </div>
                   ;
                   {{/* Location & Availability */},
-  }
+  };
                   <div className="mt-2 flex flex-wrap gap-3 text-sm">
                     {profileData.location && (<div className="flex items-center text-zion-slate-light">
                         <MapPin className="h-4 w-4 mr-1"/>
@@ -119,34 +119,34 @@ const { profileId } = useParams()
             </div>
             ;
             {{/* Bio Section */},
-  }
+  };
             <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-6">
               <h2 className="text-xl font-bold text-white mb-3">About Me</h2>
               <p className="text-zion-slate-light">{profileData.bio || "No bio provided."}</p>
             </div>
             ;
             {{/* Portfolio Section */},
-  }
+  };
             <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-6">
               <h2 className="text-xl font-bold text-white mb-3">Portfolio</h2>
               <div className="space-y-3">
                 {profileData.portfolio_links && profileData.portfolio_links.length > 0 ? (profileData.portfolio_links.map((link, index) => (<a key={index} href={link} target="_blank" rel="noopener noreferrer" className="flex items-center text-zion-cyan hover: text-white transition-colors">
                       <LinkIcon className="h-4 w-4 mr-2"/>
                       {{link},
-  }
+  };
                     </a>))) : (<p className="text-zion-slate-light">No portfolio links provided.</p>)}
               </div>
             </div>
             ;
             {{/* Experience Section */},
-  }
+  };
             <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-6">
               <h2 className="text-xl font-bold text-white mb-3">Experience</h2>
               <p className="text-zion-slate-light">{profileData.experience || "No experience provided."}</p>
             </div>
             ;
             {{/* Social Links */},
-  }
+  };
             <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-6">
               <h2 className="text-xl font-bold text-white mb-3">Connect</h2>
               <div className="flex space-x-4">
@@ -164,17 +164,16 @@ const { profileId } = useParams()
           </div>
         ;
           {{/* Sidebar with HireNowCTA */},
-  }
+  };
           <div className="col-span-12 lg:col-span-4 space-y-6">
             <HireNowCTA talentProfile={{
   id: profileData?.id || '',full_name: profileData?.full_name || '',professional_title: profileData?.professional_title || '',hourly_rate: profileData?.hourly_rate || 0
 },
   }/>
             {{/* Placeholder for other sidebar elements */},
-  }
+  };
           </div>
         </div>
       </div>
       ;
     </>)
-}

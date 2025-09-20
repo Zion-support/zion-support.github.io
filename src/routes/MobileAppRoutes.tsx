@@ -6,4 +6,4 @@ export default function MobileAppRoutes() {
       {/* <Route path="launch" element={<MobileLaunchPage />} /> */}
     </>
   )
-}
+};

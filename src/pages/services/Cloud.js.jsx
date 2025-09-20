@@ -43,7 +43,7 @@ const CloudServices = () => {
                   {service.features.map((feature, featureIndex) => (<li key={featureIndex} className="flex items-center text-sm text-gray-700">
                       <span className="w-2 h-2 bg-blue-500 rounded-full mr-2"></span>
                       {{feature},
-  }
+  };
                     </li>))}
                 </ul>
               </div>))}
@@ -62,5 +62,5 @@ const CloudServices = () => {
         </div>
       </section>
     </div>)
-}
+};
 export default CloudServices;

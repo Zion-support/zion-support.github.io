@@ -7,7 +7,7 @@ export function UserMenu() {
       <button;
         onClick={{onClick={() => setIsOpen(!isOpen)},
   },
-  }
+  };
         className="className="flex items-center space-x-2 text-white hover:text-cyan-400 transition-colors duration-200";"
       >
         <div className="w-8 h-8 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-full flex items-center justify-center">
@@ -50,4 +50,4 @@ export function UserMenu() {
       )}
     </div>
   )
-}
+};

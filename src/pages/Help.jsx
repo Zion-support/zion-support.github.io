@@ -27,7 +27,7 @@ export default function Help() {
         : [[...prev, category],
   ]
     )
-  }
+  };
   const helpCategories = [
   {
   id: 'getting-started',title: 'Getting Started',icon: BookOpen,articles: [
@@ -129,7 +129,7 @@ export default function Help() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-700 pt-20">
       {{/* Hero Section */},
-  }
+  };
       <section className="py-16 bg-gradient-to-r from-zion-cyan to-zion-purple">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -139,23 +139,23 @@ export default function Help() {
             Find answers to your questions, learn how to use our services, and get the support you need;
           </p>
           {{/* Search Bar */},
-  }
+  };
           <div className="max-w-2xl mx-auto relative">
             <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-5 h-5" />
             <input;
               type="text";
               placeholder="Search for help articles, guides, or topics...";
               value={{searchQuery},
-  }
+  };
               onChange={{(e) => setSearchQuery(e.target.value)},
-  }
+  };
               className="className="w-full pl-12 pr-4 py-4 bg-white/10 backdrop-blur-md border border-white/20 rounded-lg text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-white/50";"
             />
           </div>
         </div>
       </section>
       {{/* Popular Articles */},
-  }
+  };
       <section className="py-16">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-white text-center mb-12">
@@ -167,7 +167,7 @@ export default function Help() {
                 <div className="flex items-center justify-between mb-3">
                   <span className="text-xs text-zion-cyan bg-zion-cyan/10 px-2 py-1 rounded-full">
                     {{article.category},
-  }
+  };
                   </span>
                   <span className="text-xs text-zion-slate-light">{article.readTime}</span>
                 </div>
@@ -182,7 +182,7 @@ export default function Help() {
         </div>
       </section>
       {{/* Help Categories */},
-  }
+  };
       <section className="py-16 bg-zion-slate-dark">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-white text-center mb-12">
@@ -194,7 +194,7 @@ export default function Help() {
                 <button;
                   onClick={{onClick={() => toggleCategory(category.id)},
   },
-  }
+  };
                   className="className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-zion-cyan/10 transition-colors";"
                 >
                   <div className="flex items-center space-x-3">
@@ -216,7 +216,7 @@ export default function Help() {
                           <p className="text-zion-slate-light text-sm mb-3">{article.description}</p>
                           <Link ;
                             to={{article.url},
-  }
+  };
                             className="className="inline-flex items-center space-x-2 text-zion-cyan hover:text-zion-cyan-light transition-colors text-sm font-medium";"
                           >
                             <span>Read Article</span>
@@ -242,7 +242,7 @@ export default function Help() {
         </div>
       </section>
       {{/* Video Tutorials */},
-  }
+  };
       <section className="py-16">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-white text-center mb-12">
@@ -289,7 +289,7 @@ export default function Help() {
         </div>
       </section>
       {{/* Contact Support */},
-  }
+  };
       <section className="py-16 bg-zion-slate-dark">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold text-white mb-6">
@@ -340,4 +340,4 @@ export default function Help() {
       </section>
     </div>
   )
-}
+};

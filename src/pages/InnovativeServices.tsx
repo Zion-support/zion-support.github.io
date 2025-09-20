@@ -103,17 +103,17 @@ const InnovativeServices: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       {{/* Hero Section */},
-  }
+  };
       <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10"></div>
         <div className="relative max-w-7xl mx-auto text-center">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             animate={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
           >
             <h1 className="text-5xl md:text-7xl font-bold text-gradient mb-6">
               Cutting-Edge;
@@ -126,18 +126,18 @@ const InnovativeServices: React.FC = () => {
             <div className="flex flex-wrap justify-center gap-4">
               <motion.button;
                 whileHover={{ scale: 1.05 },
-  }
+  };
                 whileTap={{ scale: 0.95 },
-  }
+  };
                 className="className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300";"
               >
                 Explore Innovations;
               </motion.button>
               <motion.button;
                 whileHover={{ scale: 1.05 },
-  }
+  };
                 whileTap={{ scale: 0.95 },
-  }
+  };
                 className="className="px-8 py-4 border-2 border-zion-cyan text-zion-cyan font-semibold rounded-xl hover:bg-zion-cyan hover:text-white transition-all duration-300";"
               >
                 Schedule Demo;
@@ -148,20 +148,20 @@ const InnovativeServices: React.FC = () => {
       </section>
 
       {{/* Stats Section */},
-  }
+  };
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
   <motion.div;
                 key={{stat.label},
-  }
+  };
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 animate={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.5, delay: index * 0.1 },
-  }
+  };
                 className="className="text-center";"
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan/20 to-zion-purple/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
@@ -176,16 +176,16 @@ const InnovativeServices: React.FC = () => {
       </section>
 
       {{/* Innovations Grid */},
-  }
+  };
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             animate={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -201,13 +201,13 @@ const InnovativeServices: React.FC = () => {
             {innovations.map((innovation, index) => (
   <motion.div;
                 key={{innovation.id},
-  }
+  };
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 animate={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.5, delay: index * 0.1 },
-  }
+  };
                 className="className="group relative";"
               >
                 <div className="bg-zion-slate-dark/50 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-8 h-full hover:border-zion-cyan/40 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/20">
@@ -217,12 +217,12 @@ const InnovativeServices: React.FC = () => {
 
                   <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-zion-cyan transition-colors duration-300">
                     {{innovation.title},
-  }
+  };
                   </h3>
 
                   <p className="text-zion-slate-light mb-6 leading-relaxed">
                     {{innovation.description},
-  }
+  };
                   </p>
 
                   <div className="mb-6">
@@ -232,7 +232,7 @@ const InnovativeServices: React.FC = () => {
   <li key={idx} className="flex items-center text-zion-slate-light">
                           <div className="w-2 h-2 bg-zion-cyan rounded-full mr-3"></div>
                           {{feature},
-  }
+  };
                         </li>
                       ))}
                     </ul>
@@ -245,7 +245,7 @@ const InnovativeServices: React.FC = () => {
   <li key={idx} className="flex items-center text-zion-slate-light">
                           <TrendingUp className="w-4 h-4 text-zion-green mr-3" />
                           {{benefit},
-  }
+  };
                         </li>
                       ))}
                     </ul>
@@ -253,9 +253,9 @@ const InnovativeServices: React.FC = () => {
 
                   <motion.button;
                     whileHover={{ scale: 1.02 },
-  }
+  };
                     whileTap={{ scale: 0.98 },
-  }
+  };
                     className="className="w-full py-3 bg-gradient-to-r from-zion-cyan/20 to-zion-purple/20 border border-zion-cyan/30 text-zion-cyan font-semibold rounded-xl hover:bg-gradient-to-r hover:from-zion-cyan/30 hover:to-zion-purple/30 transition-all duration-300";"
                   >
                     Learn More;
@@ -268,16 +268,16 @@ const InnovativeServices: React.FC = () => {
       </section>
 
       {{/* CTA Section */},
-  }
+  };
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             animate={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Ready to Innovate?;
@@ -288,18 +288,18 @@ const InnovativeServices: React.FC = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button;
                 whileHover={{ scale: 1.05 },
-  }
+  };
                 whileTap={{ scale: 0.95 },
-  }
+  };
                 className="className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300";"
               >
                 Start Your Project;
               </motion.button>
               <motion.button;
                 whileHover={{ scale: 1.05 },
-  }
+  };
                 whileTap={{ scale: 0.95 },
-  }
+  };
                 className="className="px-8 py-4 border-2 border-zion-cyan text-zion-cyan font-semibold rounded-xl hover: bg-zion-cyan hover:text-white transition-all duration-300";"
               >
                 Contact Our Team;
@@ -310,5 +310,5 @@ const InnovativeServices: React.FC = () => {
       </section>
     </div>
   )
-}
+};
 export default InnovativeServices;

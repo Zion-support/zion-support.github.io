@@ -4,11 +4,10 @@ interface Props {
   children: ReactNode;
   onError?: (error: Error) => void;
   fallback?: ReactNode
-}
+};
 
 interface State {
   hasError: boolean,error: Error | null,errorInfo: ErrorInfo | null
-}
 
 export class ErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
@@ -16,7 +15,7 @@ export class ErrorBoundary extends Component<Props, State> {
     this.state = {
       hasError: false,error: null,errorInfo: null
     },
-  }
+  };
 
   static getDerivedStateFromError(error: Error): State {
     return {
@@ -24,7 +23,7 @@ export class ErrorBoundary extends Component<Props, State> {
       error,
       errorInfo: null
     },
-  }
+  };
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.setState({
@@ -35,13 +34,12 @@ error;
     // Call the onError callback if provided
     if (this.props.onError) {
       this.props.onError(error)
-}
 
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
       console.error('ErrorBoundary caught an error:', error, errorInfo)
 },
-  }
+  };
 
   handleRetry = () => {
     this.setState({
@@ -55,7 +53,6 @@ hasError: false,error: null,errorInfo: null
       // Use custom fallback if provided
       if (this.props.fallback) {
         return this.props.fallback
-}
 
       // Default error UI
       return (
@@ -108,6 +105,6 @@ hasError: false,error: null,errorInfo: null
 
     return this.props.children
 },
-  }
+  };
 
 export default ErrorBoundary;

@@ -54,4 +54,4 @@ const location = useLocation()
                             : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan"), children: [_jsx(MessageSquare, { className: "w-4 h-4 mr-1" }), t('nav.messages'), unreadCount > 0 && (_jsx("span", { className: "absolute -top-1 -right-1 bg-zion-purple text-white text-xs rounded-full h-5 w-5 flex items-center justify-center", children: unreadCount }))],
   }) }))],
   }) }))
-}
+};

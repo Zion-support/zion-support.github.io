@@ -83,21 +83,21 @@ export default function NewServicesShowcase2025() {
   const const contactInfo = {
   = {
     phone: "+1 302 464 0950",email: "kleber@ziontechgroup.com",website: "https://ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709"
-}
+};
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {{/* Hero Section */},
-  }
+  };
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
         <div className="relative max-w-7xl mx-auto px-6 text-center">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             animate={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
           >
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6">
               <Rocket className="w-4 h-4 mr-2" /> 2025 Innovation Showcase;
@@ -118,7 +118,7 @@ export default function NewServicesShowcase2025() {
               >
                 <Phone className="w-4 h-4 mr-2" />
                 {{contactInfo.phone},
-  }
+  };
               </a>
               <a;
                 href={`mailto:${contactInfo.email}`}
@@ -126,7 +126,7 @@ export default function NewServicesShowcase2025() {
               >
                 <Mail className="w-4 h-4 mr-2" />
                 {{contactInfo.email},
-  }
+  };
               </a>
             </div>
           </motion.div>
@@ -134,21 +134,21 @@ export default function NewServicesShowcase2025() {
       </section>
 
       {{/* Services Showcase */},
-  }
+  };
       <section className="py-20 max-w-7xl mx-auto px-6">
         <div className="space-y-20">
           {serviceCategories.map((category, categoryIndex) => (
   <motion.div;
               key={{category.title},
-  }
+  };
               initial={{ opacity: 0, y: 30 },
-  }
+  };
               whileInView={{ opacity: 1, y: 0 },
-  }
+  };
               transition={{ duration: 0.8, delay: categoryIndex * 0.2 },
-  }
+  };
               viewport={{ once: true },
-  }
+  };
             >
               <div className="text-center mb-16">
                 <div className={`inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r ${category.color} mb-6`}>
@@ -164,15 +164,15 @@ export default function NewServicesShowcase2025() {
                 {category.services.map((service, serviceIndex) => (
   <motion.div;
                     key={{service.name},
-  }
+  };
                     initial={{ opacity: 0, scale: 0.9 },
-  }
+  };
                     whileInView={{ opacity: 1, scale: 1 },
-  }
+  };
                     transition={{ duration: 0.6, delay: serviceIndex * 0.1 },
-  }
+  };
                     viewport={{ once: true },
-  }
+  };
                     className="className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-all duration-300 group";"
                   >
                     <div className="flex items-center justify-between mb-4">
@@ -188,11 +188,11 @@ export default function NewServicesShowcase2025() {
 
                     <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-blue-400 transition-colors">
                       {{service.name},
-  }
+  };
                     </h3>
                     <p className="text-gray-400 mb-4 text-sm">
                       {{service.description},
-  }
+  };
                     </p>
 
                     <div className="mb-4">
@@ -207,7 +207,7 @@ export default function NewServicesShowcase2025() {
   <div key={index} className="flex items-center text-sm text-gray-300">
                             <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
                             {{feature},
-  }
+  };
                           </div>
                         ))}
                       </div>
@@ -228,7 +228,7 @@ export default function NewServicesShowcase2025() {
                       </a>
                       <a;
                         href={{contactInfo.website},
-  }
+  };
                         target="_blank";
                         rel="noopener noreferrer";
                         className="className="inline-flex items-center justify-center px-4 py-2 border border-white/20 text-white rounded-lg hover:bg-white/10 transition-colors";"
@@ -245,18 +245,18 @@ export default function NewServicesShowcase2025() {
       </section>
 
       {{/* Market Analysis Section */},
-  }
+  };
       <section className="py-20 bg-white/5">
         <div className="max-w-7xl mx-auto px-6">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             viewport={{ once: true },
-  }
+  };
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">Market Analysis & ROI</h2>
@@ -278,15 +278,15 @@ export default function NewServicesShowcase2025() {
   ].map((stat, index) => (
   <motion.div;
                 key={{stat.label},
-  }
+  };
                 initial={{ opacity: 0, scale: 0.9 },
-  }
+  };
                 whileInView={{ opacity: 1, scale: 1 },
-  }
+  };
                 transition={{ duration: 0.6, delay: index * 0.1 },
-  }
+  };
                 viewport={{ once: true },
-  }
+  };
                 className="className="text-center";"
               >
                 <div className="text-4xl font-bold text-white mb-2">{stat.value}</div>
@@ -299,18 +299,18 @@ export default function NewServicesShowcase2025() {
       </section>
 
       {{/* Contact Section */},
-  }
+  };
       <section className="py-20">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             viewport={{ once: true },
-  }
+  };
           >
             <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
             <p className="text-xl text-gray-400 mb-8">
@@ -362,4 +362,3 @@ export default function NewServicesShowcase2025() {
       </section>
     </div>
   )
-}

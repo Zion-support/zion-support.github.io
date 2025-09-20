@@ -49,7 +49,7 @@ function TalentDashboardContent() {
         </div>
 
         {{/* Project Offer Banner - Show pending offers */},
-  }
+  };
         <ProjectOfferBanner />
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
@@ -61,7 +61,7 @@ function TalentDashboardContent() {
                     <Avatar className="h-12 w-12 border">
                       {user?.avatarUrl ? (<img loading="lazy" src={user.avatarUrl} alt={user.displayName || "User"}/>) : (<div className="flex h-full w-full items-center justify-center bg-muted text-lg font-medium uppercase">
                           {{user?.displayName?.charAt(0) || "U"},
-  }
+  };
                         </div>)}
                     </Avatar>
                     <div>
@@ -99,14 +99,14 @@ function TalentDashboardContent() {
             </Card>
             ;
             {{/* New Onboarding Progress Tracker */},
-  }
+  };
             <TalentOnboardingSteps />
             {showAdvanced && (<div className="mt-6">
                 <AdvancedOnboardingSteps />
               </div>)}
             ;
             {{/* Upcoming Interviews Card */},
-  }
+  };
             <div className="mt-8">
               <UpcomingInterviewsCard />
             </div>
@@ -182,9 +182,8 @@ function TalentDashboardContent() {
       </main>
       ;
     </>)
-}
+};
 export default function TalentDashboard() {
   return (<ProtectedRoute>
       <TalentDashboardContent />
     </ProtectedRoute>)
-}

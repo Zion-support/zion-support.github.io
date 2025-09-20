@@ -26,7 +26,7 @@ import {
 import { SEO } from "@/components/SEO";
 interface NewsArticle {
   id: string,title: string,excerpt: string,content: string,author: string,date: string,category: string,tags: string[],image: string,featured: boolean,readTime: number
-}
+};
 
 const News: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('')
@@ -116,7 +116,6 @@ const News: React.FC = () => {
       } else if (if (sortBy === 'readTime') {
   ) {
         return a.readTime - b.readTime
-}
       return 0
 })
 
@@ -131,16 +130,16 @@ const News: React.FC = () => {
       />
       ;
       {{/* Hero Section */},
-  }
+  };
       <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
         <div className="max-w-7xl mx-auto">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             animate={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.6 },
-  }
+  };
             className="className="text-center";"
           >
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -156,41 +155,41 @@ const News: React.FC = () => {
           </motion.div>
 
           {{/* Search and Filter Bar */},
-  }
+  };
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             animate={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.6, delay: 0.2 },
-  }
+  };
             className="className="max-w-4xl mx-auto";"
           >
             <div className="bg-white/5 backdrop-blur-sm border border-cyan-400/20 rounded-2xl p-6">
               <div className="flex flex-col lg:flex-row gap-4">
                 {{/* Search */},
-  }
+  };
                 <div className="flex-1 relative">
                   <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                   <input;
                     type="text";
                     placeholder="Search news and articles...";
                     value={{searchQuery},
-  }
+  };
                     onChange={{(e) => setSearchQuery(e.target.value)},
-  }
+  };
                     className="className="w-full pl-10 pr-4 py-3 bg-white/10 backdrop-blur-sm border border-cyan-400/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400/50 focus:border-cyan-400/50 transition-all duration-300";"
                   />
                 </div>
 
                 {{/* Category Filter */},
-  }
+  };
                 <div className="flex-shrink-0">
                   <select;
                     value={{selectedCategory},
-  }
+  };
                     onChange={{(e) => setSelectedCategory(e.target.value)},
-  }
+  };
                     className="className="px-4 py-3 bg-white/10 backdrop-blur-sm border border-cyan-400/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-400/50 focus:border-cyan-400/50 transition-all duration-300";"
                   >
                     {categories.map((category) => (
@@ -202,13 +201,13 @@ const News: React.FC = () => {
                 </div>
 
                 {{/* Sort */},
-  }
+  };
                 <div className="flex-shrink-0">
                   <select;
                     value={{sortBy},
-  }
+  };
                     onChange={{(e) => setSortBy(e.target.value)},
-  }
+  };
                     className="className="px-4 py-3 bg-white/10 backdrop-blur-sm border border-cyan-400/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-400/50 focus:border-cyan-400/50 transition-all duration-300";"
                   >
                     <option value="latest" className="bg-zion-slate-dark text-white">Latest First</option>
@@ -222,7 +221,7 @@ const News: React.FC = () => {
         </div>
 
         {{/* Background Elements */},
-  }
+  };
         <div className="absolute inset-0 -z-10">
           <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-blue-500/5" />
           <div className="absolute top-20 left-20 w-72 h-72 bg-cyan-500/10 rounded-full blur-3xl" />
@@ -237,13 +236,13 @@ const News: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             <motion.div;
               initial={{ opacity: 0, y: 20 },
-  }
+  };
               whileInView={{ opacity: 1, y: 0 },
-  }
+  };
               transition={{ duration: 0.6 },
-  }
+  };
               viewport={{ once: true },
-  }
+  };
               className="className="text-center mb-16";"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -258,15 +257,15 @@ const News: React.FC = () => {
               {featuredArticles.map((article, index) => (
   <motion.article;
                   key={{article.id},
-  }
+  };
                   initial={{ opacity: 0, y: 20 },
-  }
+  };
                   whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                   transition={{ duration: 0.6, delay: index * 0.1 },
-  }
+  };
                   viewport={{ once: true },
-  }
+  };
                   className="className="bg-white/5 backdrop-blur-sm border border-cyan-400/20 rounded-2xl overflow-hidden hover:border-cyan-400/40 transition-all duration-300 group";"
                 >
                   <div className="aspect-video bg-gradient-to-br from-cyan-500/20 to-blue-500/20 flex items-center justify-center">
@@ -284,7 +283,7 @@ const News: React.FC = () => {
   {{article.category === 'company' && <Building />},
   },
   {{article.category === 'technology' && <Code />},
-  }
+  };
                     </div>
                   </div>
                   ;
@@ -293,7 +292,7 @@ const News: React.FC = () => {
                       <span className="flex items-center">
                         <Calendar className="w-4 h-4 mr-2" />
                         {{new Date(article.date).toLocaleDateString()},
-  }
+  };
                       </span>
                       <span className="flex items-center">
                         <Clock className="w-4 h-4 mr-2" />
@@ -302,18 +301,18 @@ const News: React.FC = () => {
                       <span className="flex items-center">
                         <User className="w-4 h-4 mr-2" />
                         {{article.author},
-  }
+  };
                       </span>
                     </div>
                     ;
                     <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors duration-300">
                       {{article.title},
-  }
+  };
                     </h3>
                     ;
                     <p className="text-gray-300 mb-6 leading-relaxed">
                       {{article.excerpt},
-  }
+  };
                     </p>
                     ;
                     <div className="flex items-center justify-between">
@@ -321,11 +320,11 @@ const News: React.FC = () => {
                         {article.tags.slice(0, 3).map((tag, tagIndex) => (
   <span;
                             key={{tagIndex},
-  }
+  };
                             className="className="px-3 py-1 bg-cyan-500/10 text-cyan-400 text-sm rounded-full border border-cyan-400/20";"
                           >
                             {{tag},
-  }
+  };
                           </span>
                         ))}
                       </div>
@@ -346,18 +345,18 @@ const News: React.FC = () => {
         </section>
       )},
   {{/* All News Articles */},
-  }
+  };
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.6 },
-  }
+  };
             viewport={{ once: true },
-  }
+  };
             className="className="text-center mb-16";"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -371,9 +370,9 @@ const News: React.FC = () => {
           {filteredArticles.length === 0 ? (
   <motion.div;
               initial={{ opacity: 0 },
-  }
+  };
               animate={{ opacity: 1 },
-  }
+  };
               className="className="text-center py-20";"
             >
               <div className="text-6xl text-gray-400 mb-4">🔍</div>
@@ -385,15 +384,15 @@ const News: React.FC = () => {
               {filteredArticles.map((article, index) => (
   <motion.article;
                   key={{article.id},
-  }
+  };
                   initial={{ opacity: 0, y: 20 },
-  }
+  };
                   whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                   transition={{ duration: 0.6, delay: index * 0.1 },
-  }
+  };
                   viewport={{ once: true },
-  }
+  };
                   className="className="bg-white/5 backdrop-blur-sm border border-cyan-400/20 rounded-xl overflow-hidden hover:border-cyan-400/40 transition-all duration-300 group";"
                 >
                   <div className="aspect-video bg-gradient-to-br from-cyan-500/20 to-blue-500/20 flex items-center justify-center">
@@ -411,7 +410,7 @@ const News: React.FC = () => {
   {{article.category === 'company' && <Building />},
   },
   {{article.category === 'technology' && <Code />},
-  }
+  };
                     </div>
                   </div>
                   ;
@@ -420,7 +419,7 @@ const News: React.FC = () => {
                       <span className="flex items-center">
                         <Calendar className="w-4 h-4 mr-1" />
                         {{new Date(article.date).toLocaleDateString()},
-  }
+  };
                       </span>
                       <span className="flex items-center">
                         <Clock className="w-4 h-4 mr-1" />
@@ -430,12 +429,12 @@ const News: React.FC = () => {
                     ;
                     <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors duration-300 line-clamp-2">
                       {{article.title},
-  }
+  };
                     </h3>
                     ;
                     <p className="text-gray-300 mb-4 text-sm leading-relaxed line-clamp-3">
                       {{article.excerpt},
-  }
+  };
                     </p>
                     ;
                     <div className="flex items-center justify-between">
@@ -443,11 +442,11 @@ const News: React.FC = () => {
                         {article.tags.slice(0, 2).map((tag, tagIndex) => (
   <span;
                             key={{tagIndex},
-  }
+  };
                             className="className="px-2 py-1 bg-cyan-500/10 text-cyan-400 text-xs rounded-full border border-cyan-400/20";"
                           >
                             {{tag},
-  }
+  };
                           </span>
                         ))}
                       </div>
@@ -469,18 +468,18 @@ const News: React.FC = () => {
       </section>
 
       {{/* Newsletter CTA */},
-  }
+  };
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.6 },
-  }
+  };
             viewport={{ once: true },
-  }
+  };
             className="className="bg-gradient-to-r from-cyan-600/20 to-blue-600/20 border border-cyan-500/30 rounded-2xl p-12 text-center";"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -505,5 +504,4 @@ const News: React.FC = () => {
       </section>
     </div>
   )
-}
 export default News;

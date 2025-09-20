@@ -7,11 +7,10 @@ interface User {
   isEmailVerified?: boolean;
   createdAt?: string;
   updatedAt?: string
-}
+};
 
 interface AuthTokens {
   accessToken: string | null,refreshToken: string | null
-}
 
 export const useAuthState = () => {
   const [user, setUser] = useState<User | null>(null)
@@ -48,7 +47,7 @@ const checkAuthState = async () => {
 } finally {
   setIsLoading(false)
       },
-  }
+  };
 
     checkAuthState()
   }, [])
@@ -63,4 +62,4 @@ const checkAuthState = async () => {
     tokens;
     setTokens
 },
-  }
+  };

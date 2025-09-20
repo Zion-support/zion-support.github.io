@@ -4,7 +4,7 @@ import { Box, Cpu, Zap, Globe, Rocket, Shield } from "lucide-react";
 const QuantumTechnology = () => {
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
       {{/* Hero Section */},
-  }
+  };
       <section className="pt-24 pb-16 px-4 sm: px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
@@ -33,7 +33,7 @@ const QuantumTechnology = () => {
       </section>
 
       {{/* What is Quantum Computing Section */},
-  }
+  };
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -75,7 +75,7 @@ const QuantumTechnology = () => {
       </section>
 
       {{/* Quantum Services Section */},
-  }
+  };
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">
@@ -146,7 +146,7 @@ const QuantumTechnology = () => {
       </section>
 
       {{/* Applications Section */},
-  }
+  };
       <section className="py-16 px-4 sm: px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">
@@ -210,7 +210,7 @@ const QuantumTechnology = () => {
       </section>
 
       {{/* Benefits Section */},
-  }
+  };
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">
@@ -292,7 +292,7 @@ const QuantumTechnology = () => {
       </section>
 
       {{/* CTA Section */},
-  }
+  };
       <section className="py-16 px-4 sm: px-6 lg:px-8 bg-gradient-to-r from-purple-600/20 to-pink-600/20">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
@@ -312,5 +312,5 @@ const QuantumTechnology = () => {
         </div>
       </section>
     </div>)
-}
+};
 export default QuantumTechnology;

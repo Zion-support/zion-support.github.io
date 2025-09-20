@@ -109,17 +109,17 @@ export default function DataAnalytics() {
       />
 
       {{/* Hero Section */},
-  }
+  };
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-purple-500/10"></div>
         <div className="container mx-auto px-6 relative z-10">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             animate={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.6 },
-  }
+  };
             className="className="text-center";"
           >
             <div className="inline-flex items-center px-4 py-2 bg-blue-400/20 text-blue-400 rounded-full text-sm font-medium mb-6">
@@ -147,17 +147,17 @@ export default function DataAnalytics() {
       </section>
 
       {{/* What is Data Analytics */},
-  }
+  };
       <section className="py-20">
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <motion.div;
               initial={{ opacity: 0, x: -20 },
-  }
+  };
               whileInView={{ opacity: 1, x: 0 },
-  }
+  };
               transition={{ duration: 0.6 },
-  }
+  };
             >
               <h2 className="text-4xl font-bold text-white mb-6">
                 What is Data Analytics?;
@@ -194,11 +194,11 @@ export default function DataAnalytics() {
 
             <motion.div;
               initial={{ opacity: 0, x: 20 },
-  }
+  };
               whileInView={{ opacity: 1, x: 0 },
-  }
+  };
               transition={{ duration: 0.6 },
-  }
+  };
               className="className="relative";"
             >
               <div className="bg-slate-800/50 p-8 rounded-2xl border border-slate-700/50">
@@ -237,16 +237,16 @@ export default function DataAnalytics() {
       </section>
 
       {{/* Key Features */},
-  }
+  };
       <section className="py-20 bg-slate-800/30">
         <div className="container mx-auto px-6">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.6 },
-  }
+  };
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-6">
@@ -262,13 +262,13 @@ export default function DataAnalytics() {
             {features.map((feature, index) => (
   <motion.div;
                 key={{index},
-  }
+  };
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.6, delay: index * 0.1 },
-  }
+  };
                 className="className="bg-slate-800/50 p-6 rounded-xl border border-slate-700/50 hover:border-blue-400/50 transition-all duration-300 hover:scale-105";"
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-blue-400/20 to-purple-500/20 rounded-xl flex items-center justify-center mb-6">
@@ -283,16 +283,16 @@ export default function DataAnalytics() {
       </section>
 
       {{/* Core Solutions */},
-  }
+  };
       <section className="py-20">
         <div className="container mx-auto px-6">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.6 },
-  }
+  };
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-6">
@@ -308,13 +308,13 @@ export default function DataAnalytics() {
             {solutions.map((solution, index) => (
   <motion.div;
                 key={{index},
-  }
+  };
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.6, delay: index * 0.1 },
-  }
+  };
                 className="className="bg-slate-800/50 p-8 rounded-xl border border-slate-700/50 hover:border-blue-400/50 transition-all duration-300 hover:scale-105";"
               >
                 <div className="flex items-center space-x-4 mb-6">
@@ -329,7 +329,7 @@ export default function DataAnalytics() {
   <div key={benefitIndex} className="flex items-center text-sm text-gray-400">
                       <CheckCircle className="w-4 h-4 text-blue-400 mr-2 flex-shrink-0" />
                       {{benefit},
-  }
+  };
                     </div>
                   ))}
                 </div>
@@ -340,16 +340,16 @@ export default function DataAnalytics() {
       </section>
 
       {{/* Industry Use Cases */},
-  }
+  };
       <section className="py-20 bg-slate-800/30">
         <div className="container mx-auto px-6">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.6 },
-  }
+  };
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-6">
@@ -365,13 +365,13 @@ export default function DataAnalytics() {
             {useCases.map((useCase, index) => (
   <motion.div;
                 key={{index},
-  }
+  };
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.6, delay: index * 0.1 },
-  }
+  };
                 className="className="bg-slate-800/50 p-8 rounded-xl border border-slate-700/50 hover:border-blue-400/50 transition-all duration-300 hover:scale-105";"
               >
                 <div className="flex items-center space-x-4 mb-6">
@@ -386,7 +386,7 @@ export default function DataAnalytics() {
   <div key={metricIndex} className="flex items-center text-sm text-gray-400">
                       <Target className="w-4 h-4 text-blue-400 mr-2 flex-shrink-0" />
                       {{metric},
-  }
+  };
                     </div>
                   ))}
                 </div>
@@ -397,16 +397,16 @@ export default function DataAnalytics() {
       </section>
 
       {{/* Benefits */},
-  }
+  };
       <section className="py-20">
         <div className="container mx-auto px-6">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.6 },
-  }
+  };
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-6">
@@ -422,13 +422,13 @@ export default function DataAnalytics() {
             {benefits.map((benefit, index) => (
   <motion.div;
                 key={{index},
-  }
+  };
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.6, delay: index * 0.1 },
-  }
+  };
                 className="className="bg-slate-800/50 p-6 rounded-xl border border-slate-700/50 hover:border-blue-400/50 transition-all duration-300 hover:scale-105 text-center";"
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-blue-400/20 to-purple-500/20 rounded-xl flex items-center justify-center mx-auto mb-6">
@@ -443,16 +443,16 @@ export default function DataAnalytics() {
       </section>
 
       {{/* Implementation Process */},
-  }
+  };
       <section className="py-20 bg-slate-800/30">
         <div className="container mx-auto px-6">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.6 },
-  }
+  };
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-6">
@@ -480,18 +480,18 @@ export default function DataAnalytics() {
   ].map((phase, index) => (
   <motion.div;
                 key={{index},
-  }
+  };
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.6, delay: index * 0.1 },
-  }
+  };
                 className="className="text-center";"
               >
                 <div className="w-20 h-20 bg-gradient-to-br from-blue-400 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold text-white">
                   {{phase.step},
-  }
+  };
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-4">{phase.title}</h3>
                 <p className="text-gray-300">{phase.description}</p>
@@ -502,16 +502,16 @@ export default function DataAnalytics() {
       </section>
 
       {{/* CTA Section */},
-  }
+  };
       <section className="py-20 bg-gradient-to-r from-blue-500/10 to-purple-500/10">
         <div className="container mx-auto px-6 text-center">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.6 },
-  }
+  };
           >
             <h2 className="text-4xl font-bold text-white mb-6">
               Ready to Transform Your Data?;
@@ -533,4 +533,4 @@ export default function DataAnalytics() {
       </section>
     </div>
   )
-}
+};

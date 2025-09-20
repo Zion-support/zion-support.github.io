@@ -13,4 +13,4 @@ export default function TalentsPage() {
   }) })],
   }) }), _jsx(Footer, {})],
   }))
-}
+};

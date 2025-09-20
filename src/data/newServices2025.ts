@@ -2,7 +2,7 @@ export interface NewService {
   id: string,title: string,description: string,category: string;
   subcategory?: string;
   price: number,currency: string,pricingModel: string,features: string[],benefits: string[],tags: string[],marketPrice: string
-}
+};
 
 export const NEW_SERVICES_2025: NewService[] = [
   {

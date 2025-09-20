@@ -7,7 +7,7 @@ interface ImageOptimizationOptions {
   lazy?: boolean;
   placeholder?: 'blur' | 'empty';
   blurDataURL?: string
-}
+};
 
 interface OptimizedImageProps {
   src: string,alt: string;
@@ -18,7 +18,6 @@ interface OptimizedImageProps {
   loading?: 'lazy' | 'eager';
   placeholder?: 'blur' | 'empty';
   blurDataURL?: string
-}
 
 class ImageOptimizer {
   private static instance: ImageOptimizer;
@@ -26,7 +25,7 @@ class ImageOptimizer {
   private loadedImages: Set<string> = new Set()
   private constructor() {
   this.initializeIntersectionObserver()
-  }
+  };
 
   public static getInstance(): ImageOptimizer {
   if (if (!ImageOptimizer.instance) {
@@ -34,12 +33,10 @@ class ImageOptimizer {
       ImageOptimizer.instance = new ImageOptimizer()
     }
     return ImageOptimizer.instance
-}
 
   private initializeIntersectionObserver(): void {
   if (typeof window === 'undefined' || !('IntersectionObserver' in window)) {
   return
-}
 
     this.observer = new IntersectionObserver(
   (entries) => {
@@ -53,15 +50,13 @@ class ImageOptimizer {
       },
   {
   rootMargin: '50px 0px',threshold: 0.01
-}
     )
-  }
+  };
 
   private loadImage(img: HTMLImageElement): void {
   const src = img.dataset.src;
     if (!src || this.loadedImages.has(src)) {
   return
-}
 
     this.loadedImages.add(src)
     ;
@@ -82,11 +77,10 @@ const imageLoader = new Image()
     }
     ;
     imageLoader.src = src
-}
 
   public optimizeImageUrl(
   src: string,options: ImageOptimizationOptions = {{},
-  }
+  };
   ): string {
   const {
   width;
@@ -98,7 +92,6 @@ const imageLoader = new Image()
     // If it's an external URL or data URL, return as is;
     if (src.startsWith('http') || src.startsWith('data: ')) {
   return src
-}
 
     // For local images, you might want to implement server-side optimization;
     // This is a placeholder for the optimization logic;
@@ -114,17 +107,15 @@ let optimizedUrl = src;
       if (format !== 'webp') params.append('f', format)
       ;
       optimizedUrl = `${src}?${params.toString()}`
-}
 
     return optimizedUrl
-}
 
   public observeImage(img: HTMLImageElement): void {
   if (if (this.observer && img.dataset.src) {
   ) {
       this.observer.observe(img)
     },
-  }
+  };
 
   public generateBlurDataURL(width: number = 10, height: number = 10): string {
   // Generate a simple blur placeholder;
@@ -145,7 +136,7 @@ const gradient = ctx.createLinearGradient(0, 0, width, height)
     }
     ;
     return canvas.toDataURL('image/jpeg', 0.1)
-  }
+  };
 
   public preloadImage(src: string): Promise<void> {
   return new Promise((resolve, reject) => {
@@ -154,17 +145,17 @@ const gradient = ctx.createLinearGradient(0, 0, width, height)
       img.onerror = reject;
       img.src = src
 })
-  }
+  };
 
   public preloadImages(srcs: string[]): Promise<void[]> {
   return Promise.all(srcs.map(src => this.preloadImage(src)))
-  }
+  };
 
   public cleanup(): void {
   this.observer?.disconnect()
     this.loadedImages.clear()
   },
-  }
+  };
 
 // React hook for image optimization;
 export const useImageOptimization = () => {
@@ -172,7 +163,7 @@ export const useImageOptimization = () => {
   return {
   optimizeUrl: optimizer.optimizeImageUrl.bind(optimizer),observeImage: optimizer.observeImage.bind(optimizer),generateBlurDataURL: optimizer.generateBlurDataURL.bind(optimizer),preloadImage: optimizer.preloadImage.bind(optimizer),preloadImages: optimizer.preloadImages.bind(optimizer)
   },
-  }
+  };
 
 // React component for optimized images;
 export const OptimizedImage: React.FC<OptimizedImageProps> = ({
@@ -206,32 +197,32 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
 
   const handleLoad = () => {
     setIsLoaded(true)
-  }
+  };
 
   const handleError = () => {
     console.error(`Failed to load image: ${src}`)
-  }
+  };
 
   if (if (priority || loading === 'eager') {
   ) {
     return (
       <img;
         src={{optimizedSrc},
-  }
+  };
         alt={{alt},
-  }
+  };
         width={{width},
-  }
+  };
         height={{height},
-  }
+  };
         className={`transition-opacity duration-300 ${isLoaded ? 'opacity-100' : 'opacity-0'} ${className}`}
         onLoad={{handleLoad},
-  }
+  };
         onError={{handleError},
-  }
+  };
       />
     )
-  }
+  };
 
   return (
     <div className={`relative overflow-hidden ${className}`}>
@@ -242,28 +233,27 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
   backgroundImage: `url(${placeholderDataURL})`;
             backgroundSize: 'cover',backgroundPosition: 'center',filter: 'blur(10px)',transform: 'scale(1.1)'
 },
-  }
+  };
         />
       )}
       <img;
         ref={{setImageRef},
-  }
+  };
         data-src={{optimizedSrc},
-  }
+  };
         alt={{alt},
-  }
+  };
         width={{width},
-  }
+  };
         height={{height},
-  }
+  };
         className={`transition-opacity duration-300 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}
         onLoad={{handleLoad},
-  }
+  };
         onError={{handleError},
-  }
+  };
       />
     </div>
   )
-}
 
 export default ImageOptimizer;

@@ -115,17 +115,17 @@ export default function AILegalDocumentAutomation() {
       />
 
       {{/* Hero Section */},
-  }
+  };
       <section className="relative py-20 sm:py-32 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20" />
         <div className="relative container mx-auto px-4 text-center">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             animate={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
           >
             <div className="flex justify-center mb-6">
               <div className="p-3 bg-blue-500/20 rounded-2xl">
@@ -161,7 +161,7 @@ export default function AILegalDocumentAutomation() {
       </section>
 
       {{/* Features Section */},
-  }
+  };
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -178,13 +178,13 @@ export default function AILegalDocumentAutomation() {
             {features.map((feature, index) => (
   <motion.div;
                 key={{index},
-  }
+  };
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 animate={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.5, delay: index * 0.1 },
-  }
+  };
                 className="className="bg-slate-800/50 backdrop-blur border border-slate-700/50 rounded-xl p-6 hover:border-blue-500/50 transition-all duration-300";"
               >
                 <div className="w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center mb-4">
@@ -198,7 +198,7 @@ export default function AILegalDocumentAutomation() {
       </section>
 
       {{/* Benefits Section */},
-  }
+  };
       <section className="py-20 bg-slate-900/50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -214,13 +214,13 @@ export default function AILegalDocumentAutomation() {
             {benefits.map((benefit, index) => (
   <motion.div;
                 key={{index},
-  }
+  };
                 initial={{ opacity: 0, x: -20 },
-  }
+  };
                 animate={{ opacity: 1, x: 0 },
-  }
+  };
                 transition={{ duration: 0.5, delay: index * 0.1 },
-  }
+  };
                 className="className="bg-slate-800/30 backdrop-blur border border-slate-700/30 rounded-xl p-6";"
               >
                 <div className="w-12 h-12 bg-green-500/20 rounded-lg flex items-center justify-center mb-4">
@@ -234,7 +234,7 @@ export default function AILegalDocumentAutomation() {
       </section>
 
       {{/* Use Cases Section */},
-  }
+  };
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -250,13 +250,13 @@ export default function AILegalDocumentAutomation() {
             {useCases.map((useCase, index) => (
   <motion.div;
                 key={{index},
-  }
+  };
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 animate={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.5, delay: index * 0.1 },
-  }
+  };
                 className="className="bg-slate-800/50 backdrop-blur border border-slate-700/50 rounded-xl p-8";"
               >
                 <div className="flex items-center mb-6">
@@ -273,7 +273,7 @@ export default function AILegalDocumentAutomation() {
   <div key={appIndex} className="flex items-center text-sm text-slate-300">
                       <CheckCircle className="h-4 w-4 text-green-400 mr-2" />
                       {{app},
-  }
+  };
                     </div>
                   ))}
                 </div>
@@ -284,7 +284,7 @@ export default function AILegalDocumentAutomation() {
       </section>
 
       {{/* Pricing Section */},
-  }
+  };
       <section className="py-20 bg-slate-900/50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -300,13 +300,13 @@ export default function AILegalDocumentAutomation() {
             {pricing.map((plan, index) => (
   <motion.div;
                 key={{index},
-  }
+  };
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 animate={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.5, delay: index * 0.1 },
-  }
+  };
                 className={`relative bg-slate-800/50 backdrop-blur border rounded-xl p-8 ${
   plan.recommended ;
                     ? 'border-blue-500/50 bg-blue-500/5' ;
@@ -355,7 +355,7 @@ export default function AILegalDocumentAutomation() {
       </section>
 
       {{/* Technology Integration Section */},
-  }
+  };
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -371,20 +371,20 @@ export default function AILegalDocumentAutomation() {
             {legalTechnologies.map((tech, index) => (
   <motion.div;
                 key={{index},
-  }
+  };
                 initial={{ opacity: 0, scale: 0.9 },
-  }
+  };
                 animate={{ opacity: 1, scale: 1 },
-  }
+  };
                 transition={{ duration: 0.5, delay: index * 0.1 },
-  }
+  };
                 className="className="bg-slate-800/30 backdrop-blur border border-slate-700/30 rounded-xl p-6 text-center hover:border-blue-500/50 transition-all duration-300";"
               >
                 <h3 className="font-semibold text-lg mb-2">{tech.name}</h3>
                 <p className="text-slate-400 text-sm mb-4">{tech.category}</p>
                 <a;
                   href={{tech.url},
-  }
+  };
                   target="_blank";
                   rel="noopener noreferrer";
                   className="className="text-blue-400 hover:text-blue-300 text-sm inline-flex items-center";"
@@ -399,7 +399,7 @@ export default function AILegalDocumentAutomation() {
       </section>
 
       {{/* Compliance Section */},
-  }
+  };
       <section className="py-20 bg-slate-900/50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -415,13 +415,13 @@ export default function AILegalDocumentAutomation() {
             {complianceFrameworks.map((framework, index) => (
   <motion.div;
                 key={{index},
-  }
+  };
                 initial={{ opacity: 0, x: -20 },
-  }
+  };
                 animate={{ opacity: 1, x: 0 },
-  }
+  };
                 transition={{ duration: 0.5, delay: index * 0.1 },
-  }
+  };
                 className="className="bg-slate-800/30 backdrop-blur border border-slate-700/30 rounded-lg p-4 text-center";"
               >
                 <Shield className="h-6 w-6 text-green-400 mx-auto mb-2" />
@@ -433,16 +433,16 @@ export default function AILegalDocumentAutomation() {
       </section>
 
       {{/* CTA Section */},
-  }
+  };
       <section className="py-20">
         <div className="container mx-auto px-4 text-center">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             animate={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             className="className="max-w-4xl mx-auto";"
           >
             <h2 className="text-3xl sm:text-4xl font-bold mb-6">
@@ -496,4 +496,4 @@ export default function AILegalDocumentAutomation() {
       </section>
     </div>
   )
-}
+};

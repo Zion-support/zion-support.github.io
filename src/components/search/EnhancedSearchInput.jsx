@@ -74,7 +74,7 @@ const handleSearch = (e) => {
                   setQuery(suggestion);
                   if (onSearch) onSearch(suggestion)
 },
-  }
+  };
                 className="w-full px-4 py-2 text-left text-white hover:bg-zion-blue-light/20 transition-colors duration-200"
               >
                 {suggestion}
@@ -85,4 +85,4 @@ const handleSearch = (e) => {
       )}
     </div>
   )
-}
+};

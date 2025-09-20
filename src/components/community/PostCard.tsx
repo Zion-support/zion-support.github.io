@@ -5,7 +5,7 @@ interface PostCardProps {
   name: string,avatar: string
 },
   },
-  }
+  };
 
 export default function PostCard({ post }: PostCardProps) {
   return (
@@ -13,26 +13,26 @@ export default function PostCard({ post }: PostCardProps) {
       <div className="flex items-start space-x-4">
         <img;
           src={{post.author?.avatar || '/default-avatar.png'},
-  }
+  };
           alt={{post.author?.name || post.authorName},
-  }
+  };
           className="className="w-10 h-10 rounded-full object-cover";"
         />
         <div className="flex-1">
           <h3 className="text-xl font-semibold text-white mb-2 hover:text-zion-cyan transition-colors duration-300">
             {{post.title},
-  }
+  };
           </h3>
           <p className="text-zion-slate-light mb-3 line-clamp-3 leading-relaxed">
             {{post.content},
-  }
+  };
           </p>
 
           <div className="flex items-center justify-between text-sm text-zion-slate-light mb-3">
             <span className="flex items-center gap-2">
               <span className="w-2 h-2 bg-zion-cyan rounded-full"></span>
               By {{post.author?.name || post.authorName},
-  }
+  };
             </span>
             <span>{new Date(post.createdAt).toLocaleDateString()}</span>
           </div>
@@ -55,4 +55,4 @@ export default function PostCard({ post }: PostCardProps) {
       </div>
     </div>
   )
-}
+};

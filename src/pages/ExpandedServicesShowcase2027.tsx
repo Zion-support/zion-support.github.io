@@ -97,7 +97,7 @@ const ExpandedServicesShowcase2027: React.FC = () => {
         return Healthcare;
       default: return Rocket
 },
-  }
+  };
   const getCategoryColor = (category: string) => {
   switch (category) {
   case 'Cybersecurity':;
@@ -114,14 +114,13 @@ const ExpandedServicesShowcase2027: React.FC = () => {
         return 'from-teal-500 to-blue-600';
       default: return 'from-gray-500 to-slate-600'
 },
-  }
+  };
   const formatPrice = (pricing: ExpandedService2027['pricing']) => {
   if (if (pricing.model === 'Transaction Fees + Governance') {
   ) {
       return 'Free + Transaction Fees'
-}
+};
     return `$${pricing.basePrice.toLocaleString()}/month`
-}
 
   const renderServiceCard = (service: ExpandedService2027) => {
   const CategoryIcon = getCategoryIcon(service.category)
@@ -130,17 +129,17 @@ const ExpandedServicesShowcase2027: React.FC = () => {
     return (
       <motion.div;
         key={{service.id},
-  }
+  };
         initial={{ opacity: 0, y: 20 },
-  }
+  };
         animate={{ opacity: 1, y: 0 },
-  }
+  };
         transition={{ duration: 0.5 },
-  }
+  };
         className="className="bg-white dark:bg-slate-800 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 dark:border-slate-700 overflow-hidden";"
       >
         {{/* Header */},
-  }
+  };
         <div className={`bg-gradient-to-r ${categoryColor} p-6 text-white`}>
           <div className="flex items-center justify-between mb-4">
             <div className="flex items-center space-x-3">
@@ -160,36 +159,36 @@ const ExpandedServicesShowcase2027: React.FC = () => {
         </div>
 
         {{/* Content */},
-  }
+  };
         <div className="p-6">
           <p className="text-gray-600 dark:text-gray-300 mb-4 line-clamp-3">
             {{service.description},
-  }
+  };
           </p>
 
           {{/* Pricing */},
-  }
+  };
           <div className="bg-gray-50 dark:bg-slate-700 rounded-lg p-4 mb-4">
             <div className="flex items-center justify-between">
               <div>
                 <p className="text-sm text-gray-500 dark:text-gray-400">Starting Price</p>
                 <p className="text-2xl font-bold text-gray-900 dark:text-white">
                   {{formatPrice(service.pricing)},
-  }
+  };
                 </p>
               </div>
               <div className="text-right">
                 <p className="text-sm text-gray-500 dark:text-gray-400">Market Price</p>
                 <p className="text-sm font-semibold text-gray-900 dark:text-white">
                   {{service.marketPrice},
-  }
+  };
                 </p>
               </div>
             </div>
           </div>
 
           {{/* Key Features */},
-  }
+  };
           <div className="mb-4">
             <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Key Features</h4>
             <div className="space-y-1">
@@ -203,7 +202,7 @@ const ExpandedServicesShowcase2027: React.FC = () => {
   <button;
                   onClick={{onClick={() => setExpandedService(expandedService === service.id ? null : service.id)},
   },
-  }
+  };
                   className="className="text-sm text-blue-600 dark:text-blue-400 hover:underline";"
                 >
                   {expandedService === service.id ? 'Show less' : `+${service.features.length - 3} more features`}
@@ -213,16 +212,16 @@ const ExpandedServicesShowcase2027: React.FC = () => {
           </div>
 
           {{/* Expanded Features */},
-  }
+  };
           <AnimatePresence>
             {expandedService === service.id && (
   <motion.div;
                 initial={{ opacity: 0, height: 0 },
-  }
+  };
                 animate={{ opacity: 1, height: 'auto' },
-  }
+  };
                 exit={{ opacity: 0, height: 0 },
-  }
+  };
                 className="className="mb-4";"
               >
                 <div className="space-y-1">
@@ -238,7 +237,7 @@ const ExpandedServicesShowcase2027: React.FC = () => {
           </AnimatePresence>
 
           {{/* Benefits */},
-  }
+  };
           <div className="mb-4">
             <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Benefits</h4>
             <div className="grid grid-cols-2 gap-2">
@@ -247,7 +246,7 @@ const ExpandedServicesShowcase2027: React.FC = () => {
                   <div className="w-2 h-2 bg-green-500 rounded-full"></div>
                   <span className="text-xs text-gray-600 dark: text-gray-300 line-clamp-2">
                     {{benefit},
-  }
+  };
                   </span>
                 </div>
               ))}
@@ -255,7 +254,7 @@ const ExpandedServicesShowcase2027: React.FC = () => {
           </div>
 
           {{/* Technical Specs */},
-  }
+  };
           <div className="mb-4">
             <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Technical Specs</h4>
             <div className="grid grid-cols-2 gap-4 text-sm">
@@ -271,7 +270,7 @@ const ExpandedServicesShowcase2027: React.FC = () => {
           </div>
 
           {{/* ROI and Setup */},
-  }
+  };
           <div className="grid grid-cols-2 gap-4 mb-4 text-sm">
             <div>
               <p className="text-gray-500 dark:text-gray-400">ROI</p>
@@ -284,7 +283,7 @@ const ExpandedServicesShowcase2027: React.FC = () => {
           </div>
 
           {{/* Contact and Actions */},
-  }
+  };
           <div className="border-t border-gray-200 dark:border-slate-700 pt-4">
             <div className="flex items-center justify-between mb-3">
               <div className="flex items-center space-x-2 text-sm text-gray-500 dark:text-gray-400">
@@ -297,7 +296,7 @@ const ExpandedServicesShowcase2027: React.FC = () => {
                 'bg-gray-100 text-gray-800'
 }`}>
                 {{service.status.toUpperCase()},
-  }
+  };
               </span>
             </div>
 
@@ -311,7 +310,7 @@ const ExpandedServicesShowcase2027: React.FC = () => {
               </a>
               <a;
                 href={{service.contactInfo.website},
-  }
+  };
                 target="_blank";
                 rel="noopener noreferrer";
                 className="className="flex-1 bg-gray-100 hover: bg-gray-200 dark:bg-slate-700 dark:hover:bg-slate-600 text-gray-700 dark:text-gray-300 text-center py-2 px-4 rounded-lg transition-colors duration-200 flex items-center justify-center space-x-2";"
@@ -324,7 +323,7 @@ const ExpandedServicesShowcase2027: React.FC = () => {
         </div>
       </motion.div>
     )
-  }
+  };
   const renderServiceList = (service: ExpandedService2027) => {
   const CategoryIcon = getCategoryIcon(service.category)
     const categoryColor = getCategoryColor(service.category)
@@ -332,24 +331,24 @@ const ExpandedServicesShowcase2027: React.FC = () => {
     return (
       <motion.div;
         key={{service.id},
-  }
+  };
         initial={{ opacity: 0, x: -20 },
-  }
+  };
         animate={{ opacity: 1, x: 0 },
-  }
+  };
         transition={{ duration: 0.5 },
-  }
+  };
         className="className="bg-white dark:bg-slate-800 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 border border-gray-200 dark:border-slate-700 p-6";"
       >
         <div className="flex items-start space-x-4">
           {{/* Icon and Category */},
-  }
+  };
           <div className={`bg-gradient-to-r ${categoryColor} p-3 rounded-lg text-white flex-shrink-0`}>
             <CategoryIcon className="w-6 h-6" />
           </div>
 
           {{/* Content */},
-  }
+  };
           <div className="flex-1 min-w-0">
             <div className="flex items-start justify-between mb-2">
               <div>
@@ -365,11 +364,11 @@ const ExpandedServicesShowcase2027: React.FC = () => {
 
             <p className="text-gray-600 dark:text-gray-300 mb-3 line-clamp-2">
               {{service.description},
-  }
+  };
             </p>
 
             {{/* Key Info */},
-  }
+  };
             <div className="grid grid-cols-4 gap-4 mb-3 text-sm">
               <div>
                 <p className="text-gray-500 dark:text-gray-400">Price</p>
@@ -391,13 +390,13 @@ const ExpandedServicesShowcase2027: React.FC = () => {
                   'bg-gray-100 text-gray-800'
 }`}>
                   {{service.status.toUpperCase()},
-  }
+  };
                 </span>
               </div>
             </div>
 
             {{/* Actions */},
-  }
+  };
             <div className="flex items-center space-x-3">
               <a;
                 href={`mailto:${service.contactInfo.email}`}
@@ -408,7 +407,7 @@ const ExpandedServicesShowcase2027: React.FC = () => {
               </a>
               <a;
                 href={{service.contactInfo.website},
-  }
+  };
                 target="_blank";
                 rel="noopener noreferrer";
                 className="className="bg-gray-100 hover: bg-gray-200 dark:bg-slate-700 dark:hover:bg-slate-600 text-gray-700 dark:text-gray-300 px-4 py-2 rounded-lg transition-colors duration-200 flex items-center space-x-2";"
@@ -421,7 +420,7 @@ const ExpandedServicesShowcase2027: React.FC = () => {
         </div>
       </motion.div>
     )
-  }
+  };
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900">
       <SEO;
@@ -431,17 +430,17 @@ const ExpandedServicesShowcase2027: React.FC = () => {
       />
 
       {{/* Hero Section */},
-  }
+  };
       <div className="relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
           <div className="text-center">
             <motion.h1;
               initial={{ opacity: 0, y: 20 },
-  }
+  };
               animate={{ opacity: 1, y: 0 },
-  }
+  };
               transition={{ duration: 0.8 },
-  }
+  };
               className="className="text-4xl md:text-6xl font-bold text-gray-900 dark:text-white mb-6";"
             >
               Expanded Innovative Services;
@@ -451,11 +450,11 @@ const ExpandedServicesShowcase2027: React.FC = () => {
             </motion.h1>
             <motion.p;
               initial={{ opacity: 0, y: 20 },
-  }
+  };
               animate={{ opacity: 1, y: 0 },
-  }
+  };
               transition={{ duration: 0.8, delay: 0.2 },
-  }
+  };
               className="className="text-xl text-gray-600 dark:text-gray-300 mb-8 max-w-3xl mx-auto";"
             >
               Discover our comprehensive portfolio of advanced micro SAAS, IT infrastructure, and AI services.;
@@ -463,14 +462,14 @@ const ExpandedServicesShowcase2027: React.FC = () => {
             </motion.p>
 
             {{/* Contact Info */},
-  }
+  };
             <motion.div;
               initial={{ opacity: 0, y: 20 },
-  }
+  };
               animate={{ opacity: 1, y: 0 },
-  }
+  };
               transition={{ duration: 0.8, delay: 0.4 },
-  }
+  };
               className="className="bg-white dark:bg-slate-800 rounded-2xl shadow-xl p-6 inline-block";"
             >
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -503,14 +502,14 @@ const ExpandedServicesShowcase2027: React.FC = () => {
       </div>
 
       {{/* Services Section */},
-  }
+  };
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         {{/* Filters and Search */},
-  }
+  };
         <div className="bg-white dark:bg-slate-800 rounded-2xl shadow-lg p-6 mb-8">
           <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between space-y-4 lg:space-y-0">
             {{/* Search */},
-  }
+  };
             <div className="flex-1 max-w-md">
               <div className="relative">
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
@@ -518,39 +517,39 @@ const ExpandedServicesShowcase2027: React.FC = () => {
                   type="text";
                   placeholder="Search services...";
                   value={{searchQuery},
-  }
+  };
                   onChange={{(e) => setSearchQuery(e.target.value)},
-  }
+  };
                   className="className="w-full pl-10 pr-4 py-2 border border-gray-300 dark:border-slate-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-slate-700 dark:text-white";"
                 />
               </div>
             </div>
 
             {{/* Category Filter */},
-  }
+  };
             <div className="flex items-center space-x-4">
               <select;
                 value={{selectedCategory},
-  }
+  };
                 onChange={{(e) => setSelectedCategory(e.target.value)},
-  }
+  };
                 className="className="px-4 py-2 border border-gray-300 dark:border-slate-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-slate-700 dark:text-white";"
               >
                 {EXPANDED_SERVICE_CATEGORIES.map((category) => (
   <option key={category} value={category}>
                     {{category},
-  }
+  };
                   </option>
                 ))}
               </select>
 
               {{/* View Mode Toggle */},
-  }
+  };
               <div className="flex items-center space-x-2 bg-gray-100 dark:bg-slate-700 rounded-lg p-1">
                 <button;
                   onClick={{onClick={() => setViewMode('grid')},
   },
-  }
+  };
                   className={`p-2 rounded-md transition-colors duration-200 ${
   viewMode === 'grid';
                       ? 'bg-white dark:bg-slate-600 text-gray-900 dark:text-white shadow-sm';
@@ -562,7 +561,7 @@ const ExpandedServicesShowcase2027: React.FC = () => {
                 <button;
                   onClick={{onClick={() => setViewMode('list')},
   },
-  }
+  };
                   className={`p-2 rounded-md transition-colors duration-200 ${
   viewMode === 'list';
                       ? 'bg-white dark:bg-slate-600 text-gray-900 dark:text-white shadow-sm';
@@ -577,7 +576,7 @@ const ExpandedServicesShowcase2027: React.FC = () => {
         </div>
 
         {{/* Services Count */},
-  }
+  };
         <div className="mb-8">
           <p className="text-gray-600 dark:text-gray-300">
             Showing {filteredServices.length} of {ALL_EXPANDED_SERVICES_2027.length} services;
@@ -606,7 +605,7 @@ const ExpandedServicesShowcase2027: React.FC = () => {
       </div>
 
       {{/* CTA Section */},
-  }
+  };
       <div className="bg-gradient-to-r from-blue-600 to-purple-600 py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -636,5 +635,4 @@ const ExpandedServicesShowcase2027: React.FC = () => {
       </div>
     </div>
   )
-}
 export default ExpandedServicesShowcase2027;

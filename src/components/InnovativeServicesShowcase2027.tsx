@@ -58,7 +58,6 @@ export const InnovativeServicesShowcase2027: React.FC = () => {
 const element = document.getElementById('innovative-services-2027');
     if (element) {
       observer.observe(element)
-}
 
     return () => observer.disconnect()
 }, []),
@@ -85,11 +84,11 @@ const contactInfo = {
         {/* Header Section */}
         <motion.div
           initial={{ opacity: 0, y: 30 },
-  }
+  };
           animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 },
-  }
+  };
           transition={{ duration: 0.8 },
-  }
+  };
           className="text-center mb-16"
         >
           <div className="inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-zion-cyan/20 to-zion-purple/20 rounded-full border border-zion-cyan/30 mb-6">
@@ -114,11 +113,11 @@ const contactInfo = {
         {/* Category Filter */}
         <motion.div
           initial={{ opacity: 0, y: 20 },
-  }
+  };
           animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 },
-  }
+  };
           transition={{ duration: 0.8, delay: 0.2 },
-  }
+  };
           className="mb-12"
         >
           <div className="flex flex-wrap justify-center gap-3">
@@ -155,22 +154,22 @@ const contactInfo = {
         {/* Services Grid */}
         <motion.div
           initial={{ opacity: 0, y: 30 },
-  }
+  };
           animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 },
-  }
+  };
           transition={{ duration: 0.8, delay: 0.4 },
-  }
+  };
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16"
         >
           {filteredServices.map((service, index) => (
             <motion.div
               key={service.id}
               initial={{ opacity: 0, y: 20 },
-  }
+  };
               animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 },
-  }
+  };
               transition={{ duration: 0.6, delay: index * 0.1 },
-  }
+  };
               className="group relative"
             >
               <div className="bg-gradient-to-br from-zion-slate-light/50 to-zion-slate-dark/50 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-6 h-full transition-all duration-500 hover:scale-105 hover:border-zion-cyan/40 hover:shadow-2xl hover:shadow-zion-cyan/25">
@@ -232,13 +231,13 @@ const contactInfo = {
                   {expandedService === service.id && (
                     <motion.div
                       initial={{ opacity: 0, height: 0 },
-  }
+  };
                       animate={{ opacity: 1, height: 'auto' },
-  }
+  };
                       exit={{ opacity: 0, height: 0 },
-  }
+  };
                       transition={{ duration: 0.3 },
-  }
+  };
                       className="overflow-hidden"
                     >
                       <div className="border-t border-zion-cyan/20 pt-4 space-y-4">
@@ -303,11 +302,11 @@ const contactInfo = {
         {/* Contact Section */}
         <motion.div
           initial={{ opacity: 0, y: 30 },
-  }
+  };
           animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 },
-  }
+  };
           transition={{ duration: 0.8, delay: 0.6 },
-  }
+  };
           className="text-center"
         >
           <div className="bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-8">
@@ -357,4 +356,3 @@ const contactInfo = {
       </div>
     </section>
   )
-};

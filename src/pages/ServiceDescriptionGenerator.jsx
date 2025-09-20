@@ -25,7 +25,7 @@ export default function ServiceDescriptionGenerator() {
     const handleDescriptionSave = (editedDescription) => {
   setGeneratedDescription(editedDescription)
         // Here you could also save to database if needed
-}
+};
     return (<div className="min-h-screen flex flex-col bg-zion-blue">
       <SEO title="Service Description Generator" description="Generate professional service descriptions using AI" keywords="service description, AI content, professional description generator"/>
       ;
@@ -45,4 +45,3 @@ export default function ServiceDescriptionGenerator() {
       </main>
       ;
     </div>)
-}

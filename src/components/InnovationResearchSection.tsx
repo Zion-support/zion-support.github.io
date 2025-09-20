@@ -43,13 +43,13 @@ export function InnovationResearchSection() {
         <motion.div ;
           className="className="text-center mb-16";"
           initial={{ opacity: 0, y: 20 },
-  }
+  };
           whileInView={{ opacity: 1, y: 0 },
-  }
+  };
           viewport={{ once: true },
-  }
+  };
           transition={{ duration: 0.6 },
-  }
+  };
         >
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
             Innovation & Research;
@@ -61,17 +61,17 @@ export function InnovationResearchSection() {
         </motion.div>
 
         {{/* Innovation Metrics */},
-  }
+  };
         <motion.div ;
           className="className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16";"
           initial={{ opacity: 0, y: 30 },
-  }
+  };
           whileInView={{ opacity: 1, y: 0 },
-  }
+  };
           viewport={{ once: true },
-  }
+  };
           transition={{ duration: 0.6, delay: 0.2 },
-  }
+  };
         >
           {innovationMetrics.map((metric, index) => (
   <div key={metric.label} className="text-center">
@@ -85,17 +85,17 @@ export function InnovationResearchSection() {
         </motion.div>
 
         {{/* Research Areas */},
-  }
+  };
         <motion.div ;
           className="className="mb-16";"
           initial={{ opacity: 0, y: 30 },
-  }
+  };
           whileInView={{ opacity: 1, y: 0 },
-  }
+  };
           viewport={{ once: true },
-  }
+  };
           transition={{ duration: 0.6, delay: 0.4 },
-  }
+  };
         >
           <h3 className="text-3xl font-bold text-white text-center mb-12">
             Active Research Areas;
@@ -105,16 +105,16 @@ export function InnovationResearchSection() {
             {researchAreas.map((area, index) => (
   <motion.div;
                 key={{area.title},
-  }
+  };
                 className="className="bg-slate-800 border border-slate-700 rounded-xl p-6 hover:border-blue-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25";"
                 initial={{ opacity: 0, y: 30 },
-  }
+  };
                 whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                 viewport={{ once: true },
-  }
+  };
                 transition={{ duration: 0.6, delay: 0.6 + index * 0.1 },
-  }
+  };
               >
                 <div className="flex items-start gap-4">
                   <div className={`w-16 h-16 bg-gradient-to-br ${area.color} rounded-xl flex items-center justify-center flex-shrink-0`}>
@@ -134,13 +134,13 @@ export function InnovationResearchSection() {
                         <motion.div;
                           className={`h-2 bg-gradient-to-r ${area.color} rounded-full`}
                           initial={{ width: 0 },
-  }
+  };
                           whileInView={{ width: `${area.progress}%` },
-  }
+  };
                           viewport={{ once: true },
-  }
+  };
                           transition={{ duration: 1, delay: 0.8 + index * 0.1 },
-  }
+  };
                         />
                       </div>
                     </div>
@@ -152,17 +152,17 @@ export function InnovationResearchSection() {
         </motion.div>
 
         {{/* Research Highlights */},
-  }
+  };
         <motion.div ;
           className="className="mb-12";"
           initial={{ opacity: 0, y: 30 },
-  }
+  };
           whileInView={{ opacity: 1, y: 0 },
-  }
+  };
           viewport={{ once: true },
-  }
+  };
           transition={{ duration: 0.6, delay: 0.8 },
-  }
+  };
         >
           <div className="bg-slate-800 border border-slate-700 rounded-2xl p-8">
             <h3 className="text-2xl font-bold text-white text-center mb-6">
@@ -200,13 +200,13 @@ export function InnovationResearchSection() {
         <motion.div ;
           className="className="text-center";"
           initial={{ opacity: 0, y: 20 },
-  }
+  };
           whileInView={{ opacity: 1, y: 0 },
-  }
+  };
           viewport={{ once: true },
-  }
+  };
           transition={{ duration: 0.6, delay: 1.0 },
-  }
+  };
         >
           <div className="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-2xl p-8 text-white">
             <h3 className="text-2xl font-bold mb-4">
@@ -231,4 +231,4 @@ export function InnovationResearchSection() {
       </div>
     </section>
   )
-}
+};

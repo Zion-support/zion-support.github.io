@@ -17,7 +17,7 @@ export default function InnovativeAIServicesShowcase() {
 ]
       benefits: ['70% faster project planning40% higher success rate', '3x ROI within 6 months']
       pricing: {{ starter: '$99/mo', professional: '$299/mo', enterprise: '$799/mo' },
-  }
+  };
       route: '/services/ai-project-manager'
 },
   {
@@ -28,7 +28,7 @@ export default function InnovativeAIServicesShowcase() {
 ]
       benefits: ['10x more content output60% better SEO rankings', '70% cost reduction']
       pricing: {{ starter: '$79/mo', professional: '$199/mo', enterprise: '$499/mo' },
-  }
+  };
       route: '/services/ai-content-marketing-suite'
 },
   {
@@ -49,7 +49,7 @@ export default function InnovativeAIServicesShowcase() {
 ]
       benefits: ['60% faster time-to-hire40% better candidate quality', '30% reduced hiring costs']
       pricing: {{ starter: '$149/mo', professional: '$399/mo', enterprise: '$999/mo' },
-  }
+  };
       route: '/services/ai-hr-talent-platform'
 },
   {
@@ -71,16 +71,16 @@ export default function InnovativeAIServicesShowcase() {
       />
 
       {{/* Hero Section */},
-  }
+  };
       <section className="relative py-20 sm:py-24">
         <div className="container mx-auto px-4 text-center">
           <motion.div ;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             animate={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.6 },
-  }
+  };
             className="className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-400 to-blue-500 text-slate-900 font-semibold mb-6";"
           >
             <Sparkles className="w-4 h-4 mr-2" />
@@ -89,11 +89,11 @@ export default function InnovativeAIServicesShowcase() {
           ;
           <motion.h1 ;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             animate={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.6, delay: 0.1 },
-  }
+  };
             className="className="text-4xl sm:text-6xl font-extrabold tracking-tight mb-6";"
           >
             AI Services That;
@@ -104,11 +104,11 @@ export default function InnovativeAIServicesShowcase() {
           ;
           <motion.p ;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             animate={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.6, delay: 0.2 },
-  }
+  };
             className="className="text-xl text-slate-300 max-w-3xl mx-auto mb-8";"
           >
             Discover our comprehensive suite of AI-powered micro SaaS solutions designed to revolutionize ;
@@ -118,20 +118,20 @@ export default function InnovativeAIServicesShowcase() {
       </section>
 
       {{/* Services Grid */},
-  }
+  };
       <section className="pb-20">
         <div className="container mx-auto px-4">
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {services.map((service, index) => (
   <motion.div;
                 key={{service.id},
-  }
+  };
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 animate={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.6, delay: index * 0.1 },
-  }
+  };
                 className="className="group bg-slate-900/60 backdrop-blur border border-cyan-400/15 hover:border-cyan-400/40 transition-all duration-300 rounded-2xl p-6 hover:shadow-2xl hover:shadow-cyan-500/10";"
               >
                 <div className={`inline-flex items-center justify-center w-12 h-12 rounded-xl bg-gradient-to-r ${service.color} mb-4`}>
@@ -140,12 +140,12 @@ export default function InnovativeAIServicesShowcase() {
                 ;
                 <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-300 transition-colors">
                   {{service.title},
-  }
+  };
                 </h3>
                 ;
                 <p className="text-slate-300 text-sm mb-4 line-clamp-3">
                   {{service.description},
-  }
+  };
                 </p>
                 ;
                 <div className="mb-4">
@@ -155,7 +155,7 @@ export default function InnovativeAIServicesShowcase() {
   <li key={featureIndex} className="flex items-start text-xs text-slate-300">
                         <CheckCircle className="w-3 h-3 text-cyan-400 mr-2 mt-0.5 flex-shrink-0" />
                         {{feature},
-  }
+  };
                       </li>
                     ))}
                   </ul>
@@ -167,7 +167,7 @@ export default function InnovativeAIServicesShowcase() {
                     {service.benefits.map((benefit, benefitIndex) => (
   <li key={benefitIndex} className="text-xs text-slate-300">
                         • {{benefit},
-  }
+  };
                       </li>
                     ))}
                   </ul>
@@ -180,7 +180,7 @@ export default function InnovativeAIServicesShowcase() {
                 ;
                 <Link ;
                   to={{service.route},
-  }
+  };
                   className="className="inline-flex items-center text-cyan-400 hover:text-cyan-300 text-sm font-semibold group-hover:translate-x-1 transition-all duration-300";"
                 >
                   Learn More <ArrowRight className="w-4 h-4 ml-1" />
@@ -192,7 +192,7 @@ export default function InnovativeAIServicesShowcase() {
       </section>
 
       {{/* Why Choose Zion Tech Group */},
-  }
+  };
       <section className="py-16 bg-slate-900/40">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
@@ -229,7 +229,7 @@ export default function InnovativeAIServicesShowcase() {
       </section>
 
       {{/* CTA Section */},
-  }
+  };
       <section className="py-16 bg-gradient-to-r from-cyan-600 to-blue-600">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
@@ -260,7 +260,7 @@ export default function InnovativeAIServicesShowcase() {
       </section>
 
       {{/* Contact & Website Section */},
-  }
+  };
       <section className="py-16">
         <div className="container mx-auto px-4 text-center">
           <div className="bg-slate-900/40 rounded-2xl p-8 max-w-4xl mx-auto">
@@ -282,4 +282,4 @@ export default function InnovativeAIServicesShowcase() {
       </section>
     </div>
   )
-}
+};

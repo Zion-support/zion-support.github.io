@@ -18,7 +18,7 @@ import {
 } from "lucide-react";
 interface ServiceShowcase {
 	id: string,title: string,description: string,icon: React.ComponentType<any>,color: string,features: string[],price: string,status: 'active' | 'beta' | 'new'
-}
+};
 const futuristicServices: ServiceShowcase[] = [
 	{
 		id: 'quantum-ai-controller',title: 'Quantum AI Controller',description: 'Revolutionary AI controller using quantum computing for autonomous system management.',icon: Brain,color: 'from-purple-500 to-cyan-500',features: ['Quantum decision makingAutonomous learning', 'System optimization'],
@@ -84,11 +84,11 @@ const getStatusText = (status: string) => {
 				<div className="text-center mb-16">
 					<motion.h2
 						initial={{ opacity: 0, y: 20 },
-  }
+  };
 						whileInView={{ opacity: 1, y: 0 },
-  }
+  };
 						transition={{ duration: 0.6 },
-  }
+  };
 						className="text-4xl md:text-6xl font-bold text-white mb-6"
 					>
 						Futuristic
@@ -98,11 +98,11 @@ const getStatusText = (status: string) => {
 					</motion.h2>
 					<motion.p
 						initial={{ opacity: 0, y: 20 },
-  }
+  };
 						whileInView={{ opacity: 1, y: 0 },
-  }
+  };
 						transition={{ duration: 0.6, delay: 0.2 },
-  }
+  };
 						className="text-xl text-zion-slate-light max-w-3xl mx-auto"
 					>
 						Experience the future of technology with our cutting-edge services that push the boundaries of what's possible.
@@ -139,13 +139,13 @@ const getStatusText = (status: string) => {
 						<motion.div
 							key={currentService}
 							initial={{ opacity: 0, x: 100 },
-  }
+  };
 							animate={{ opacity: 1, x: 0 },
-  }
+  };
 							exit={{ opacity: 0, x: -100 },
-  }
+  };
 							transition={{ duration: 0.5 },
-  }
+  };
 							className="bg-white/5 backdrop-blur-sm rounded-3xl p-12 border border-white/10"
 						>
 							<div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -174,11 +174,11 @@ const getStatusText = (status: string) => {
 												<motion.li
 													key={index}
 													initial={{ opacity: 0, x: -20 },
-  }
+  };
 													animate={{ opacity: 1, x: 0 },
-  }
+  };
 													transition={{ delay: index * 0.1 },
-  }
+  };
 													className="flex items-center text-zion-slate-light"
 												>
 													<Star className="w-5 h-5 text-zion-cyan mr-3 flex-shrink-0" />
@@ -210,11 +210,11 @@ const getStatusText = (status: string) => {
 												rotate: [0, 360],
 												scale: [1, 1.1, 1],
   },
-  }
+  };
 											transition={{
 												duration: 20,repeat: Infinity,ease: "linear"
 											},
-  }
+  };
 											className="absolute inset-0"
 										>
 											<div className="absolute top-1/4 left-1/4 w-2 h-2 bg-white/60 rounded-full"></div>
@@ -237,11 +237,11 @@ const getStatusText = (status: string) => {
 							<motion.div
 								key={service.id}
 								initial={{ opacity: 0, y: 20 },
-  }
+  };
 								whileInView={{ opacity: 1, y: 0 },
-  }
+  };
 								transition={{ duration: 0.5, delay: index * 0.1 },
-  }
+  };
 								className="bg-white/5 hover:bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/10 transition-all duration-300 hover:border-zion-cyan/50 cursor-pointer group"
 								onClick={() => setCurrentService(index)}
 							>
@@ -269,4 +269,3 @@ const getStatusText = (status: string) => {
 			</div>
 		</div>
 	)
-}

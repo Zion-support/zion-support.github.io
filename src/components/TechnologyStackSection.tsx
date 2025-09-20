@@ -95,13 +95,13 @@ export function TechnologyStackSection() {
         <motion.div ;
           className="className="text-center mb-16";"
           initial={{ opacity: 0, y: 20 },
-  }
+  };
           whileInView={{ opacity: 1, y: 0 },
-  }
+  };
           viewport={{ once: true },
-  }
+  };
           transition={{ duration: 0.6 },
-  }
+  };
         >
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
             Technology Stack;
@@ -113,28 +113,28 @@ export function TechnologyStackSection() {
         </motion.div>
 
         {{/* Technology Categories */},
-  }
+  };
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
           {technologyCategories.map((category, index) => (
   <motion.div;
               key={{category.category},
-  }
+  };
               className="className="bg-slate-800 border border-slate-700 rounded-xl p-6";"
               initial={{ opacity: 0, y: 30 },
-  }
+  };
               whileInView={{ opacity: 1, y: 0 },
-  }
+  };
               viewport={{ once: true },
-  }
+  };
               transition={{ duration: 0.6, delay: index * 0.1 },
-  }
+  };
             >
               <h3 className="text-xl font-bold text-white mb-6 flex items-center gap-3">
                 <div className={`w-8 h-8 bg-gradient-to-br ${category.color} rounded-lg flex items-center justify-center`}>
                   <span className="text-sm">⚡</span>
                 </div>
                 {{category.category},
-  }
+  };
               </h3>
               ;
               <div className="space-y-4">
@@ -150,13 +150,13 @@ export function TechnologyStackSection() {
                         <motion.div;
                           className={`h-2 bg-gradient-to-r ${category.color} rounded-full`}
                           initial={{ width: 0 },
-  }
+  };
                           whileInView={{ width: `${tech.proficiency}%` },
-  }
+  };
                           viewport={{ once: true },
-  }
+  };
                           transition={{ duration: 1, delay: 0.8 + techIndex * 0.1 },
-  }
+  };
                         />
                       </div>
                       <span className="text-blue-400 text-sm font-semibold w-8 text-right">
@@ -171,17 +171,17 @@ export function TechnologyStackSection() {
         </div>
 
         {{/* Emerging Technologies */},
-  }
+  };
         <motion.div ;
           className="className="mb-16";"
           initial={{ opacity: 0, y: 30 },
-  }
+  };
           whileInView={{ opacity: 1, y: 0 },
-  }
+  };
           viewport={{ once: true },
-  }
+  };
           transition={{ duration: 0.6, delay: 0.4 },
-  }
+  };
         >
           <h3 className="text-3xl font-bold text-white text-center mb-8">
             Emerging Technologies;
@@ -191,16 +191,16 @@ export function TechnologyStackSection() {
             {emergingTech.map((tech, index) => (
   <motion.div;
                 key={{tech.name},
-  }
+  };
                 className="className="bg-slate-800 border border-slate-700 rounded-xl p-6 text-center hover:border-blue-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25";"
                 initial={{ opacity: 0, y: 30 },
-  }
+  };
                 whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                 viewport={{ once: true },
-  }
+  };
                 transition={{ duration: 0.6, delay: 0.6 + index * 0.1 },
-  }
+  };
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
                   <span className="text-2xl">{tech.icon}</span>
@@ -222,17 +222,17 @@ export function TechnologyStackSection() {
         </motion.div>
 
         {{/* Technology Philosophy */},
-  }
+  };
         <motion.div ;
           className="className="mb-12";"
           initial={{ opacity: 0, y: 30 },
-  }
+  };
           whileInView={{ opacity: 1, y: 0 },
-  }
+  };
           viewport={{ once: true },
-  }
+  };
           transition={{ duration: 0.6, delay: 0.8 },
-  }
+  };
         >
           <div className="bg-slate-800 border border-slate-700 rounded-2xl p-8">
             <h3 className="text-2xl font-bold text-white text-center mb-6">
@@ -270,13 +270,13 @@ export function TechnologyStackSection() {
         <motion.div ;
           className="className="text-center";"
           initial={{ opacity: 0, y: 20 },
-  }
+  };
           whileInView={{ opacity: 1, y: 0 },
-  }
+  };
           viewport={{ once: true },
-  }
+  };
           transition={{ duration: 0.6, delay: 1.0 },
-  }
+  };
         >
           <div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl p-8">
             <h3 className="text-2xl font-bold mb-4">
@@ -301,4 +301,4 @@ export function TechnologyStackSection() {
       </div>
     </section>
   )
-}
+};

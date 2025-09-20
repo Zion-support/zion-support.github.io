@@ -22,18 +22,17 @@ interface ChartData {
     label: string,data: number[],backgroundColor: string[],borderColor: string[],borderWidth: number
   },
   [],
-  }
+  };
 
 interface MetricCard {
   title: string,value: string | number,change: number,changeType: 'increase' | 'decrease' | 'neutral',icon: React.ReactNode,color: string
-}
+};
 
 interface DataVisualizationProps {
   title?: string;
   showMetrics?: boolean,
   showCharts?: boolean,
   showActions?: boolean,
-}
 
 export const DataVisualization: React.FC<DataVisualizationProps> = ({
   title = "Data Analytics Dashboard";
@@ -195,11 +194,11 @@ const color = changeType === 'increase' ? 'text-green-400' :
               <motion.div
                 key={metric.title}
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 animate={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ delay: index * 0.1 },
-  }
+  };
                 className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl hover:bg-zinc-900/50 transition-all duration-300"
               >
                 <div className="flex items-center justify-between mb-4">
@@ -265,13 +264,13 @@ const color = changeType === 'increase' ? 'text-green-400' :
                 <motion.div
                   key={activeChart}
                   initial={{ opacity: 0, scale: 0.9 },
-  }
+  };
                   animate={{ opacity: 1, scale: 1 },
-  }
+  };
                   exit={{ opacity: 0, scale: 0.9 },
-  }
+  };
                   transition={{ duration: 0.3 },
-  }
+  };
                   className="w-full h-full flex items-center justify-center"
                 >
                   {activeChart === 'bar' && (
@@ -282,19 +281,19 @@ const color = changeType === 'increase' ? 'text-green-400' :
                           <div className="relative">
                             <motion.div
                               initial={{ height: 0 },
-  }
+  };
                               animate={{ height: `${chartData.datasets[0].data[index],
   }%` },
-  }
+  };
                               transition={{ delay: index * 0.1, duration: 0.8 },
-  }
+  };
                               className="w-12 bg-gradient-to-t from-zion-cyan to-zion-cyan/50 rounded-t-lg"
                               style={{ maxHeight: '200px' },
-  }
+  };
                             />
                             <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 text-xs text-zinc-300 bg-zinc-800 px-2 py-1 rounded">
                               {chartData.datasets[0].data[index],
-  }
+  };
                             </div>
                           </div>
                         </div>
@@ -321,9 +320,9 @@ const largeArcFlag = angle > 180 ? 1 : 0;
                               key={index}
                               d={`M 128 128 L ${x1} ${y1} A 100 100 0 ${largeArcFlag} 1 ${x2} ${y2} Z`}
                               fill={pieChartData.datasets[0].backgroundColor[index],
-  }
+  };
                               stroke={pieChartData.datasets[0].borderColor[index],
-  }
+  };
                               strokeWidth="2"
                             />
                           )
@@ -338,7 +337,7 @@ const largeArcFlag = angle > 180 ? 1 : 0;
                               className="w-3 h-3 rounded"
                               style={{ backgroundColor: pieChartData.datasets[0].backgroundColor[index],
   },
-  }
+  };
                             />
                             <span className="text-sm text-zinc-300">{label}</span>
                             <span className="text-xs text-zinc-500">
@@ -450,4 +449,3 @@ const largeArcFlag = angle > 180 ? 1 : 0;
       </div>
     </div>
   ),
-};

@@ -105,17 +105,17 @@ export default function AIMarketingAutomation() {
       ;
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
         {{/* Hero Section */},
-  }
+  };
         <section className="relative overflow-hidden py-20 lg:py-32">
           <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-blue-500/10"></div>
           <div className="container mx-auto px-4 relative z-10">
             <motion.div;
               initial={{ opacity: 0, y: 20 },
-  }
+  };
               animate={{ opacity: 1, y: 0 },
-  }
+  };
               transition={{ duration: 0.8 },
-  }
+  };
               className="className="text-center max-w-4xl mx-auto";"
             >
               <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full border border-cyan-400/30 mb-6">
@@ -136,18 +136,18 @@ export default function AIMarketingAutomation() {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <motion.button;
                   whileHover={{ scale: 1.05 },
-  }
+  };
                   whileTap={{ scale: 0.95 },
-  }
+  };
                   className="className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 shadow-lg hover:shadow-cyan-500/25";"
                 >
                   Start Free Trial;
                 </motion.button>
                 <motion.button;
                   whileHover={{ scale: 1.05 },
-  }
+  };
                   whileTap={{ scale: 0.95 },
-  }
+  };
                   className="className="px-8 py-4 border border-cyan-400/30 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-300";"
                 >
                   Schedule Demo;
@@ -158,16 +158,16 @@ export default function AIMarketingAutomation() {
         </section>
 
         {{/* Features Section */},
-  }
+  };
         <section className="py-20 bg-slate-800/50">
           <div className="container mx-auto px-4">
             <motion.div;
               initial={{ opacity: 0, y: 20 },
-  }
+  };
               whileInView={{ opacity: 1, y: 0 },
-  }
+  };
               transition={{ duration: 0.8 },
-  }
+  };
               className="className="text-center mb-16";"
             >
               <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
@@ -183,13 +183,13 @@ export default function AIMarketingAutomation() {
               {features.map((feature, index) => (
   <motion.div;
                   key={{feature.title},
-  }
+  };
                   initial={{ opacity: 0, y: 20 },
-  }
+  };
                   whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                   transition={{ duration: 0.8, delay: index * 0.1 },
-  }
+  };
                   className="className="bg-slate-700/50 p-6 rounded-xl border border-slate-600/30 hover:border-cyan-400/30 transition-all duration-300 hover:transform hover:scale-105";"
                 >
                   <div className="w-12 h-12 bg-gradient-to-br from-cyan-400/20 to-blue-500/20 rounded-lg flex items-center justify-center mb-4">
@@ -204,16 +204,16 @@ export default function AIMarketingAutomation() {
         </section>
 
         {{/* Marketing Channels Section */},
-  }
+  };
         <section className="py-20">
           <div className="container mx-auto px-4">
             <motion.div;
               initial={{ opacity: 0, y: 20 },
-  }
+  };
               whileInView={{ opacity: 1, y: 0 },
-  }
+  };
               transition={{ duration: 0.8 },
-  }
+  };
               className="className="text-center mb-16";"
             >
               <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
@@ -229,13 +229,13 @@ export default function AIMarketingAutomation() {
               {marketingChannels.map((channel, index) => (
   <motion.div;
                   key={{channel.title},
-  }
+  };
                   initial={{ opacity: 0, y: 20 },
-  }
+  };
                   whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                   transition={{ duration: 0.8, delay: index * 0.1 },
-  }
+  };
                   className="className="bg-gradient-to-br from-slate-700/50 to-slate-800/50 p-6 rounded-xl border border-slate-600/30 hover:border-cyan-400/30 transition-all duration-300 hover:transform hover:scale-105";"
                 >
                   <div className="w-12 h-12 bg-gradient-to-br from-purple-400/20 to-pink-500/20 rounded-lg flex items-center justify-center mb-4">
@@ -250,16 +250,16 @@ export default function AIMarketingAutomation() {
         </section>
 
         {{/* Use Cases Section */},
-  }
+  };
         <section className="py-20 bg-slate-800/50">
           <div className="container mx-auto px-4">
             <motion.div;
               initial={{ opacity: 0, y: 20 },
-  }
+  };
               whileInView={{ opacity: 1, y: 0 },
-  }
+  };
               transition={{ duration: 0.8 },
-  }
+  };
               className="className="text-center mb-16";"
             >
               <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
@@ -275,13 +275,13 @@ export default function AIMarketingAutomation() {
               {useCases.map((useCase, index) => (
   <motion.div;
                   key={{useCase.title},
-  }
+  };
                   initial={{ opacity: 0, y: 20 },
-  }
+  };
                   whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                   transition={{ duration: 0.8, delay: index * 0.1 },
-  }
+  };
                   className="className="text-center";"
                 >
                   <div className="w-16 h-16 bg-gradient-to-br from-cyan-400/20 to-blue-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -296,16 +296,16 @@ export default function AIMarketingAutomation() {
         </section>
 
         {{/* Benefits Section */},
-  }
+  };
         <section className="py-20">
           <div className="container mx-auto px-4">
             <motion.div;
               initial={{ opacity: 0, y: 20 },
-  }
+  };
               whileInView={{ opacity: 1, y: 0 },
-  }
+  };
               transition={{ duration: 0.8 },
-  }
+  };
               className="className="text-center mb-16";"
             >
               <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
@@ -321,13 +321,13 @@ export default function AIMarketingAutomation() {
                 {benefits.slice(0, 4).map((benefit, index) => (
   <motion.div;
                     key={{benefit},
-  }
+  };
                     initial={{ opacity: 0, x: -20 },
-  }
+  };
                     whileInView={{ opacity: 1, x: 0 },
-  }
+  };
                     transition={{ duration: 0.8, delay: index * 0.1 },
-  }
+  };
                     className="className="flex items-center space-x-3";"
                   >
                     <CheckCircle className="w-5 h-5 text-cyan-400 flex-shrink-0" />
@@ -339,13 +339,13 @@ export default function AIMarketingAutomation() {
                 {benefits.slice(4).map((benefit, index) => (
   <motion.div;
                     key={{benefit},
-  }
+  };
                     initial={{ opacity: 0, x: 20 },
-  }
+  };
                     whileInView={{ opacity: 1, x: 0 },
-  }
+  };
                     transition={{ duration: 0.8, delay: index * 0.1 },
-  }
+  };
                     className="className="flex items-center space-x-3";"
                   >
                     <CheckCircle className="w-5 h-5 text-cyan-400 flex-shrink-0" />
@@ -358,16 +358,16 @@ export default function AIMarketingAutomation() {
         </section>
 
         {{/* CTA Section */},
-  }
+  };
         <section className="py-20">
           <div className="container mx-auto px-4">
             <motion.div;
               initial={{ opacity: 0, y: 20 },
-  }
+  };
               whileInView={{ opacity: 1, y: 0 },
-  }
+  };
               transition={{ duration: 0.8 },
-  }
+  };
               className="className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-400/30 rounded-2xl p-12 text-center";"
             >
               <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
@@ -380,18 +380,18 @@ export default function AIMarketingAutomation() {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <motion.button;
                   whileHover={{ scale: 1.05 },
-  }
+  };
                   whileTap={{ scale: 0.95 },
-  }
+  };
                   className="className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 shadow-lg hover:shadow-cyan-500/25";"
                 >
                   Start Free Trial;
                 </motion.button>
                 <motion.button;
                   whileHover={{ scale: 1.05 },
-  }
+  };
                   whileTap={{ scale: 0.95 },
-  }
+  };
                   className="className="px-8 py-4 border border-cyan-400/30 text-cyan-400 font-semibold rounded-lg hover: bg-cyan-400/10 transition-all duration-300";"
                 >
                   Schedule Demo;
@@ -403,4 +403,4 @@ export default function AIMarketingAutomation() {
       </div>
     </>
   )
-}
+};

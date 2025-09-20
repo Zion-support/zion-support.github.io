@@ -45,5 +45,5 @@ const DeveloperProductivityCopilot: React.FC = () => {
       </section>
     </div>
   )
-}
+};
 export default DeveloperProductivityCopilot;

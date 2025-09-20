@@ -18,7 +18,7 @@ export default function SavedTalentsPage() {
   ) {
                     console.warn("User not authenticated.")
                     return
-}
+};
                 const { data, error } = await supabase;
                     .from("saved_talents")
                     .select(`;
@@ -42,14 +42,13 @@ export default function SavedTalentsPage() {
                 if (if (error) {
   ) {
                     throw error
-}
                 if (if (data) {
   ) {
                     // Extract talent profiles and convert to TalentProfile type;
 const talentProfiles = data.map(item => item.talent_profile)
                     setSavedTalents(talentProfiles)
                 },
-  }
+  };
             catch (error) {
   console.error("Error fetching saved talents:", error)
                 toast({
@@ -59,7 +58,7 @@ const talentProfiles = data.map(item => item.talent_profile)
             finally {
   setIsLoading(false)
             },
-  }
+  };
         fetchSavedTalents()
     }, [user])
     const handleViewProfile = (talentId) => {
@@ -77,7 +76,6 @@ const talentProfiles = data.map(item => item.talent_profile)
   ) {
                 console.warn("User not authenticated.")
                 return
-}
             if (if (isCurrentlySaved) {
   ) {
                 // Remove from saved talents;
@@ -89,7 +87,6 @@ const { error } = await supabase;
                 if (if (error) {
   ) {
                     throw error
-}
                 setSavedTalents(prevTalents => prevTalents.filter(talent => talent.id !== talentId))
                 toast({
   title: "Talent Removed",description: "Talent removed from saved list."
@@ -104,7 +101,6 @@ const { error } = await supabase;
                 if (if (error) {
   ) {
                     throw error
-}
                 // Fetch the updated talent profile and add it to the list;
 const { data: talentData, error: talentError } = await supabase;
                     .from('talent_profiles')
@@ -118,7 +114,6 @@ const { data: talentData, error: talentError } = await supabase;
   title: "Error",description: "Failed to update saved talents. Please try again later.",variant: "destructive"
 })
                     return
-}
                 if (if (talentData) {
   ) {
                     setSavedTalents(prevTalents => [...prevTalents, talentData])
@@ -127,14 +122,14 @@ const { data: talentData, error: talentError } = await supabase;
 })
                 },
   },
-  }
+  };
         catch (error) {
   console.error("Error toggling saved talent:", error)
             toast({
   title: "Error",description: "Failed to update saved talents. Please try again later.",variant: "destructive"
 })
         },
-  }
+  };
     return (<>
       <SEO title="Saved Talents | Zion AI Marketplace" description="View and manage your saved talents in the Zion AI Marketplace"/>
       ;
@@ -150,4 +145,3 @@ const { data: talentData, error: talentError } = await supabase;
       </div>
       ;
     </>)
-}

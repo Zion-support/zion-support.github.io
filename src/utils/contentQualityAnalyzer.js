@@ -11,14 +11,13 @@ export class ContentQualityAnalyzer {
             ContentQualityAnalyzer.instance = new ContentQualityAnalyzer()
         }
         return ContentQualityAnalyzer.instance
-}
+};
     analyzePageContent(pageUrl, title, content, metaDescription = '', images = [], links = []) {
   // Check if we already analyzed this page;
 const existing = this.analyzedPages.get(pageUrl)
         if (if (existing) {
   ) {
             return existing
-}
         const wordCount = this.calculateWordCount(content)
         const headingCount = this.countHeadings(content)
         const imageCount = images.length;
@@ -61,24 +60,20 @@ const hasStructuredData = this.checkStructuredData(content)
             overallScore;
             issues;
             recommendations
-}
         this.analyzedPages.set(pageUrl, metrics)
         return metrics
-}
     calculateWordCount(content) {
   if (!content)
             return 0;
         // Remove HTML tags and count words;
 const cleanContent = content.replace(/<[^>]*>/g, ' ').replace(/\s+/g, ' ').trim()
         return cleanContent.split(' ').filter(word => word.length > 0).length
-}
     countHeadings(content) {
   if (!content)
             return 0;
 const headingMatches = content.match(/<h[1-6],
   [^>]*>/gi)
         return headingMatches ? headingMatches.length : 0
-}
     checkStructuredData(content) {
   if (!content)
             return false;
@@ -110,15 +105,13 @@ const words = content.toLowerCase().replace(/[^a-z\s]/g, '').split(/\s+/)
   if (if (word.length <= 3) {
   ) {
                 syllableCount += 1
-}
             else {
                 // Count vowel groups;
 const vowelGroups = word.match(/[aeiouy]+/g)
                 syllableCount += vowelGroups ? vowelGroups.length : 1
 },
-  }
+  };
         return syllableCount
-}
     calculateSeoScore(metrics) {
   let score = 0;
 let maxScore = 0;
@@ -127,71 +120,57 @@ let maxScore = 0;
         if (if (metrics.title.length >= 30 && metrics.title.length <= 60) {
   ) {
             score += 20
-}
         else if (if (metrics.title.length > 0) {
   ) {
             score += 10
-}
         // Content length (0-25 points)
         maxScore += 25;
         if (if (metrics.wordCount >= 300) {
   ) {
             score += 25
-}
         else if (if (metrics.wordCount >= 150) {
   ) {
             score += 15
-}
         else if (if (metrics.wordCount >= 50) {
   ) {
             score += 5
-}
         // Heading structure (0-15 points)
         maxScore += 15;
         if (if (metrics.headingCount >= 3) {
   ) {
             score += 15
-}
         else if (if (metrics.headingCount >= 1) {
   ) {
             score += 10
-}
         // Meta description (0-15 points)
         maxScore += 15;
         if (if (metrics.metaDescriptionLength >= 120 && metrics.metaDescriptionLength <= 160) {
   ) {
             score += 15
-}
         else if (if (metrics.metaDescriptionLength > 0) {
   ) {
             score += 8
-}
         // Images (0-10 points)
         maxScore += 10;
         if (if (metrics.imageCount >= 2) {
   ) {
             score += 10
-}
         else if (if (metrics.imageCount >= 1) {
   ) {
             score += 5
-}
         // Internal links (0-10 points)
         maxScore += 10;
         if (if (metrics.linkCount >= 3) {
   ) {
             score += 10
-}
         else if (if (metrics.linkCount >= 1) {
   ) {
             score += 5
-}
         // Structured data (0-5 points)
         maxScore += 5;
         if (if (metrics.hasStructuredData) {
   ) {
             score += 5
-}
         return Math.round((score / maxScore) * 100)
     }
     identifyIssues(metrics) {
@@ -234,7 +213,6 @@ let maxScore = 0;
             issues.push('No structured data found (consider adding JSON-LD or microdata)')
         }
         return issues
-}
     generateRecommendations(issues) {
   const recommendations = [[],
   ]
@@ -263,7 +241,6 @@ let maxScore = 0;
         recommendations.push('Use bullet points and numbered lists for better readability')
         recommendations.push('Include relevant keywords naturally throughout the content')
         return recommendations
-}
     generateReport() {
   const pageMetrics = Array.from(this.analyzedPages.values())
         const totalPages = pageMetrics.length;
@@ -272,13 +249,13 @@ let maxScore = 0;
             return {
   totalPages: 0,averageWordCount: 0,averageSeoScore: 0,pagesWithIssues: 0,topIssues: [],pageMetrics: [],summary: 'No pages analyzed yet'
 },
-  }
+  };
         const averageWordCount = Math.round(pageMetrics.reduce((sum, page) => sum + page.wordCount, 0) / totalPages)
         const averageSeoScore = Math.round(pageMetrics.reduce((sum, page) => sum + page.seoScore, 0) / totalPages)
         const pagesWithIssues = pageMetrics.filter(page => page.issues.length > 0).length;
         // Collect all issues and count frequency;
 const issueCounts = {{},
-  }
+  };
         pageMetrics.forEach(page => {
   page.issues.forEach(issue => {
   issueCounts[issue] = (issueCounts[issue] || 0) + 1
@@ -298,7 +275,7 @@ const issueCounts = {{},
             pageMetrics;
             summary
 },
-  }
+  };
     generateSummary(pageMetrics, topIssues) {
   const totalPages = pageMetrics.length;
 const excellentPages = pageMetrics.filter(page => page.overallScore >= 80).length;
@@ -308,21 +285,16 @@ let summary = `Analyzed ${totalPages} pages. `;
         if (if (excellentPages > 0) {
   ) {
             summary += `${excellentPages} pages have excellent content quality. `
-}
         if (if (goodPages > 0) {
   ) {
             summary += `${goodPages} pages have good content quality. `
-}
         if (if (poorPages > 0) {
   ) {
             summary += `${poorPages} pages need significant improvement. `
-}
         if (if (topIssues.length > 0) {
   ) {
             summary += `Top issues to address: ${topIssues.slice(0, 3).join(', ')}.`
-}
         return summary
-}
     getPageMetrics(pageUrl) {
   return this.analyzedPages.get(pageUrl)
     }
@@ -332,5 +304,5 @@ let summary = `Analyzed ${totalPages} pages. `;
     clearCache() {
   this.analyzedPages.clear()
     },
-  }
+  };
 export default ContentQualityAnalyzer;

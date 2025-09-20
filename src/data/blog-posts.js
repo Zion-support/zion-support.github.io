@@ -32,21 +32,18 @@ export const blogPosts = [
   ]
 export const getBlogPostBySlug = (slug) => {
   return blogPosts.find(post => post.slug === slug)
-}
+};
 
 export const getBlogPostsByCategory = (category) => {
   return blogPosts.filter(post => post.category === category)
-}
 
 export const getFeaturedBlogPosts = () => {
   return blogPosts.filter(post => post.featured)
-}
 
 export const getRecentBlogPosts = (limit = 3) => {
   return blogPosts;
     .sort((a, b) => new Date(b.publishDate) - new Date(a.publishDate))
     .slice(0, limit)
-}
 
 export const searchBlogPosts = (query) => {
   const searchTerm = query.toLowerCase()
@@ -56,14 +53,12 @@ export const searchBlogPosts = (query) => {
     post.content.toLowerCase().includes(searchTerm) ||;
     post.tags.some(tag => tag.toLowerCase().includes(searchTerm))
   )
-}
 export const getBlogCategories = () => {
   const categories = [[...new Set(blogPosts.map(post => post.category))],
   ]
   return categories.map(category => ({
   name: category,count: blogPosts.filter(post => post.category === category).length
 }))
-}
 
 export const getBlogTags = () => {
   const allTags = blogPosts.flatMap(post => post.tags)
@@ -72,6 +67,5 @@ export const getBlogTags = () => {
   return uniqueTags.map(tag => ({
   name: tag,count: allTags.filter(t => t === tag).length
 }))
-}
 
 export const BLOG_POSTS = blogPosts;

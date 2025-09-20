@@ -1,14 +1,13 @@
 export interface RealInnovativeService {
   id: string,title: string,description: string,category: string,subcategory: string,price: number,currency: string,pricingModel: string,features: string[],benefits: string[],useCases: string[],targetAudience: string[],tags: string[],estimatedDelivery: string,supportLevel: string,marketPrice: string,roi: string,innovationLevel: string,contactInfo: {
   phone: string,email: string,website: string
-}
+};
   technicalSpecs?: {
   technology: string[],integrations: string[],apiEndpoints: number,uptime: string,security: string[[],
   ],
-  }
+  };
   competitors?: string[]
   marketSize?: string
-}
 
 export const REAL_INNOVATIVE_SERVICES_2025: RealInnovativeService[] = [
   // AI-Powered Business Intelligence & Analytics;
@@ -51,16 +50,14 @@ export const REAL_INNOVATIVE_SERVICES_2025: RealInnovativeService[] = [
     estimatedDelivery: "6-8 weeks",supportLevel: "enterprise",marketPrice: "$2,999 - $8,999/month";
     roi: "250-400%",innovationLevel: "Advanced",contactInfo: {
   phone: "+1 302 464 0950",email: "kleber@ziontechgroup.com",website: "https://ziontechgroup.com"
-}
     technicalSpecs: {
   technology: ["Python", "TensorFlow", "React", "Node.js", "PostgreSQL"]
       integrations: ["Salesforce", "HubSpot", "QuickBooks", "Google Analytics", "Shopify"]
       apiEndpoints: 150,uptime: "99.9%",security: [["SOC 2", "GDPR", "HIPAA", "End-to-end encryption"],
   ],
-  }
+  };
     competitors: ["Tableau", "Power BI", "Looker", "Qlik"]
     marketSize: "$29.9 billion by 2025"
-}
   // AI-Powered Cybersecurity Suite;
   {
   id: "ai-cybersecurity-suite",title: "AI-Powered Cybersecurity Suite",description: "Comprehensive cybersecurity solution that uses artificial intelligence to detect, prevent, and respond to threats in real-time with automated incident response.";
@@ -101,16 +98,14 @@ export const REAL_INNOVATIVE_SERVICES_2025: RealInnovativeService[] = [
     estimatedDelivery: "4-6 weeks",supportLevel: "enterprise",marketPrice: "$1,800 - $5,000/month";
     roi: "300-500%",innovationLevel: "Advanced",contactInfo: {
   phone: "+1 302 464 0950",email: "kleber@ziontechgroup.com",website: "https://ziontechgroup.com"
-}
     technicalSpecs: {
   technology: ["Machine Learning", "Python", "Elasticsearch", "Kafka", "Docker"]
       integrations: ["SIEM", "EDR", "Firewall", "IDS/IPS", "Vulnerability scanners"]
       apiEndpoints: 200,uptime: "99.99%",security: [["SOC 2 Type II", "ISO 27001", "NIST", "Zero Trust"],
   ],
-  }
+  };
     competitors: ["CrowdStrike", "SentinelOne", "Darktrace", "Cylance"]
     marketSize: "$45.2 billion by 2025"
-}
   // AI Content Marketing Suite;
   {
   id: "ai-content-marketing-suite",title: "AI Content Marketing Suite",description: "End-to-end AI-powered content creation and marketing automation platform that generates engaging content across all channels with brand voice consistency.",category: "AI & Marketing",subcategory: "Content Marketing",price: 800,currency: "$",pricingModel: "monthly",features: [
@@ -150,16 +145,14 @@ export const REAL_INNOVATIVE_SERVICES_2025: RealInnovativeService[] = [
     estimatedDelivery: "3-4 weeks",supportLevel: "professional",marketPrice: "$800 - $2,500/month";
     roi: "200-350%",innovationLevel: "Advanced",contactInfo: {
   phone: "+1 302 464 0950",email: "kleber@ziontechgroup.com",website: "https://ziontechgroup.com"
-}
     technicalSpecs: {
   technology: ["GPT-4", "BERT", "React", "Node.js", "MongoDB"]
       integrations: ["WordPress", "Shopify", "Mailchimp", "Hootsuite", "Google Analytics"]
       apiEndpoints: 100,uptime: "99.8%",security: [["GDPR", "CCPA", "SSL", "Data encryption"],
   ],
-  }
+  };
     competitors: ["Jasper", "Copy.ai", "Writesonic", "ContentBot"]
     marketSize: "$15.8 billion by 2025"
-}
   // AI Sales Copilot;
   {
   id: "ai-sales-copilot",title: "AI Sales Copilot",description: "Intelligent sales assistant that automates lead qualification, follow-ups, and sales process optimization using advanced AI and machine learning.";
@@ -200,16 +193,14 @@ export const REAL_INNOVATIVE_SERVICES_2025: RealInnovativeService[] = [
     estimatedDelivery: "4-5 weeks",supportLevel: "professional",marketPrice: "$1,200 - $3,500/month";
     roi: "250-400%",innovationLevel: "Advanced",contactInfo: {
   phone: "+1 302 464 0950",email: "kleber@ziontechgroup.com",website: "https://ziontechgroup.com"
-}
     technicalSpecs: {
   technology: ["Machine Learning", "Python", "React", "Node.js", "PostgreSQL"]
       integrations: ["Salesforce", "HubSpot", "Pipedrive", "Outreach", "Gmail"]
       apiEndpoints: 120,uptime: "99.9%",security: [["SOC 2", "GDPR", "Data encryption", "Access control"],
   ],
-  }
+  };
     competitors: ["Gong", "Chorus", "Outreach", "SalesLoft"]
     marketSize: "$18.3 billion by 2025"
-}
   // AI Customer Support Platform;
   {
   id: "ai-customer-support-platform",title: "AI Customer Support Platform",description: "Intelligent customer support solution that provides instant responses, ticket routing, and customer satisfaction optimization using AI chatbots and automation.";
@@ -250,16 +241,14 @@ export const REAL_INNOVATIVE_SERVICES_2025: RealInnovativeService[] = [
     estimatedDelivery: "3-4 weeks",supportLevel: "professional",marketPrice: "$600 - $2,000/month";
     roi: "200-300%",innovationLevel: "Advanced",contactInfo: {
   phone: "+1 302 464 0950",email: "kleber@ziontechgroup.com",website: "https://ziontechgroup.com"
-}
     technicalSpecs: {
   technology: ["NLP", "Machine Learning", "React", "Node.js", "MongoDB"]
       integrations: ["Zendesk", "Intercom", "Slack", "Teams", "Email"]
       apiEndpoints: 80,uptime: "99.9%",security: [["GDPR", "CCPA", "Data encryption", "Secure hosting"],
   ],
-  }
+  };
     competitors: ["Intercom", "Zendesk", "Freshdesk", "Help Scout"]
     marketSize: "$12.7 billion by 2025"
-}
   // AI Data Analytics & BI;
   {
   id: "ai-data-analytics-bi",title: "AI Data Analytics & BI",description: "Advanced business intelligence platform that uses AI to transform raw data into actionable insights and predictive analytics for data-driven decision making.",category: "AI & Analytics",subcategory: "Data Analytics",price: 1500,currency: "$",pricingModel: "monthly",features: [
@@ -299,16 +288,14 @@ export const REAL_INNOVATIVE_SERVICES_2025: RealInnovativeService[] = [
     estimatedDelivery: "5-7 weeks",supportLevel: "enterprise",marketPrice: "$1,500 - $4,500/month";
     roi: "300-450%",innovationLevel: "Advanced",contactInfo: {
   phone: "+1 302 464 0950",email: "kleber@ziontechgroup.com",website: "https://ziontechgroup.com"
-}
     technicalSpecs: {
   technology: ["Python", "TensorFlow", "React", "Node.js", "PostgreSQL"]
       integrations: ["Salesforce", "HubSpot", "QuickBooks", "Google Analytics", "Shopify"]
       apiEndpoints: 150,uptime: "99.9%",security: [["SOC 2", "GDPR", "HIPAA", "End-to-end encryption"],
   ],
-  }
+  };
     competitors: ["Tableau", "Power BI", "Looker", "Qlik"]
     marketSize: "$29.9 billion by 2025"
-}
   // Cloud Infrastructure & DevOps;
   {
   id: "cloud-infrastructure-devops",title: "Cloud Infrastructure & DevOps",description: "Enterprise-grade cloud infrastructure with automated DevOps pipelines for scalable, reliable, and secure applications with 99.9% uptime guarantee.";
@@ -349,16 +336,14 @@ export const REAL_INNOVATIVE_SERVICES_2025: RealInnovativeService[] = [
     estimatedDelivery: "6-8 weeks",supportLevel: "enterprise",marketPrice: "$3,000 - $8,000/month";
     roi: "200-350%",innovationLevel: "Advanced",contactInfo: {
   phone: "+1 302 464 0950",email: "kleber@ziontechgroup.com",website: "https://ziontechgroup.com"
-}
     technicalSpecs: {
   technology: ["AWS", "Azure", "GCP", "Kubernetes", "Docker", "Terraform"]
       integrations: ["GitHub", "GitLab", "Jenkins", "Prometheus", "Grafana"]
       apiEndpoints: 300,uptime: "99.9%",security: [["SOC 2", "ISO 27001", "NIST", "Zero Trust"],
   ],
-  }
+  };
     competitors: ["AWS", "Azure", "GCP", "DigitalOcean"]
     marketSize: "$178.9 billion by 2025"
-}
   // IT Helpdesk & Support;
   {
   id: "it-helpdesk-support",title: "IT Helpdesk & Support",description: "Professional IT support services with remote assistance, on-site support, and proactive maintenance for your business technology infrastructure.";
@@ -399,16 +384,14 @@ export const REAL_INNOVATIVE_SERVICES_2025: RealInnovativeService[] = [
     estimatedDelivery: "Immediate",supportLevel: "professional",marketPrice: "$1,200 - $3,500/month";
     roi: "150-250%",innovationLevel: "Professional",contactInfo: {
   phone: "+1 302 464 0950",email: "kleber@ziontechgroup.com",website: "https://ziontechgroup.com"
-}
     technicalSpecs: {
   technology: ["Remote desktop", "Monitoring tools", "Ticketing system", "Asset management"]
       integrations: ["Active Directory", "Office 365", "Google Workspace", "Slack"]
       apiEndpoints: 50,uptime: "99.5%",security: [["SOC 2", "HIPAA", "GDPR", "Data encryption"],
   ],
-  }
+  };
     competitors: ["MSPs", "Internal IT", "Break-fix services"]
     marketSize: "$25.8 billion by 2025"
-}
   // Data Management & Backup;
   {
   id: "data-management-backup",title: "Data Management & Backup",description: "Comprehensive data management solutions including backup, recovery, archiving, and data governance with 99.99% recovery rate guarantee.";
@@ -449,16 +432,14 @@ export const REAL_INNOVATIVE_SERVICES_2025: RealInnovativeService[] = [
     estimatedDelivery: "2-3 weeks",supportLevel: "professional",marketPrice: "$800 - $2,500/month";
     roi: "200-300%",innovationLevel: "Professional",contactInfo: {
   phone: "+1 302 464 0950",email: "kleber@ziontechgroup.com",website: "https://ziontechgroup.com"
-}
     technicalSpecs: {
   technology: ["Backup software", "Cloud storage", "Encryption", "Monitoring tools"]
       integrations: ["Active Directory", "SQL Server", "Exchange", "File servers"]
       apiEndpoints: 40,uptime: "99.9%",security: [["SOC 2", "HIPAA", "GDPR", "End-to-end encryption"],
   ],
-  }
+  };
     competitors: ["Veeam", "Acronis", "Backup Exec", "Cloud providers"]
     marketSize: "$18.4 billion by 2025"
-}
   // Network & Security Infrastructure;
   {
   id: "network-security-infrastructure",title: "Network & Security Infrastructure",description: "Enterprise networking solutions with advanced security features, monitoring, and optimization for improved performance and security posture.";
@@ -499,16 +480,14 @@ export const REAL_INNOVATIVE_SERVICES_2025: RealInnovativeService[] = [
     estimatedDelivery: "4-6 weeks",supportLevel: "enterprise",marketPrice: "$2,000 - $6,000/month";
     roi: "180-280%",innovationLevel: "Professional",contactInfo: {
   phone: "+1 302 464 0950",email: "kleber@ziontechgroup.com",website: "https://ziontechgroup.com"
-}
     technicalSpecs: {
   technology: ["Cisco", "Juniper", "Fortinet", "Palo Alto", "Monitoring tools"]
       integrations: ["Active Directory", "SIEM", "Firewall", "VPN", "Load balancers"]
       apiEndpoints: 100,uptime: "99.9%",security: [["SOC 2", "ISO 27001", "NIST", "Zero Trust"],
   ],
-  }
+  };
     competitors: ["Cisco", "Juniper", "Fortinet", "Palo Alto"]
     marketSize: "$32.1 billion by 2025"
-}
   // Digital Transformation Consulting;
   {
   id: "digital-transformation-consulting",title: "Digital Transformation Consulting",description: "Strategic consulting services to help businesses modernize their technology stack and digital processes for improved efficiency and competitiveness.",category: "IT & Consulting",subcategory: "Digital Transformation",price: 5000,currency: "$",pricingModel: "monthly",features: [
@@ -548,13 +527,12 @@ export const REAL_INNOVATIVE_SERVICES_2025: RealInnovativeService[] = [
     estimatedDelivery: "Ongoing",supportLevel: "enterprise",marketPrice: "$5,000 - $15,000/month";
     roi: "300-500%",innovationLevel: "Strategic",contactInfo: {
   phone: "+1 302 464 0950",email: "kleber@ziontechgroup.com",website: "https://ziontechgroup.com"
-}
     technicalSpecs: {
   technology: ["Assessment tools", "Strategy frameworks", "Project management", "Analytics"]
       integrations: ["Enterprise systems", "Cloud platforms", "Analytics tools", "Communication platforms"]
       apiEndpoints: 20,uptime: "N/A",security: [["Confidentiality", "Data protection", "Secure communication"],
   ],
-  }
+  };
     competitors: ["McKinsey", "BCG", "Bain", "Deloitte"]
     marketSize: "$67.8 billion by 2025"
 },

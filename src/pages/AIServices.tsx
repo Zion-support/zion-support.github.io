@@ -60,7 +60,7 @@ export default function AIServices() {
           </div>
 
           {{/* Capabilities */},
-  }
+  };
           <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
   { icon: Brain, title: 'Chat & Agents', desc: 'Multilingual, tool-using assistants with guardrails.' },
@@ -85,7 +85,7 @@ export default function AIServices() {
           </div>
 
           {{/* Pricing */},
-  }
+  };
           <div className="mt-20">
             <h2 className="text-2xl md:text-3xl font-bold text-white text-center">Transparent Pricing</h2>
             <p className="text-slate-300 text-center mt-2">Market-aligned, value-focused. Cancel anytime.</p>
@@ -102,7 +102,7 @@ export default function AIServices() {
                     {p.features.map((f) => (
   <li key={f} className="flex gap-2">
                         <LineChart className="w-4 h-4 text-cyan-400 mt-1" /> {{f},
-  }
+  };
                       </li>
                     ))}
                   </ul>
@@ -113,14 +113,14 @@ export default function AIServices() {
           </div>
 
           {{/* Helpful links */},
-  }
+  };
           <div className="mt-16 text-center">
             <div className="text-slate-400 text-sm">Learn more:</div>
             <div className="mt-2 flex flex-wrap items-center justify-center gap-4">
               {links.map((l) => (
   <a key={l.name} href={l.url} className="text-cyan-400 hover:text-cyan-300" target="_blank" rel="noreferrer">
                   {{l.name},
-  }
+  };
                 </a>
               ))}
             </div>
@@ -130,5 +130,5 @@ export default function AIServices() {
       </section>
     </div>
   )
-}
+};
 

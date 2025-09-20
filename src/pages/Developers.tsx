@@ -109,7 +109,7 @@ export default function Developers() {
       />
       ;
       {{/* Hero Section */},
-  }
+  };
       <section className="pt-20 pb-16 bg-gradient-to-r from-cyan-900/20 via-blue-900/20 to-purple-900/20">
         <div className="container mx-auto px-4">
           <div className="text-center max-w-4xl mx-auto">
@@ -146,7 +146,7 @@ export default function Developers() {
       </section>
 
       {{/* Quick Start */},
-  }
+  };
       <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -168,11 +168,11 @@ export default function Developers() {
                 <p className="text-slate-300 mb-4 text-sm">{step.description}</p>
                 <Link;
                   to={{step.href},
-  }
+  };
                   className="className="inline-flex items-center px-4 py-2 bg-cyan-400/10 text-cyan-400 text-sm font-medium rounded-lg hover:bg-cyan-400/20 transition-all duration-200";"
                 >
                   {{step.action},
-  }
+  };
                   <ArrowRight className="ml-2 w-4 h-4" />
                 </Link>
               </div>
@@ -182,7 +182,7 @@ export default function Developers() {
       </section>
 
       {{/* APIs Section */},
-  }
+  };
       <section className="py-16 bg-slate-800/30">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -208,7 +208,7 @@ export default function Developers() {
                       : 'bg-yellow-400/20 text-yellow-400 border border-yellow-400/30'
 }`}>
                     {{api.status},
-  }
+  };
                   </span>
                 </div>
                 ;
@@ -227,7 +227,7 @@ export default function Developers() {
                 <div className="flex items-center justify-between">
                   <Link;
                     to={{api.documentation},
-  }
+  };
                     className="className="inline-flex items-center text-cyan-400 hover:text-cyan-300 text-sm font-medium transition-colors";"
                   >
                     <BookOpen className="w-4 h-4 mr-2" />
@@ -248,7 +248,7 @@ export default function Developers() {
       </section>
 
       {{/* SDKs Section */},
-  }
+  };
       <section className="py-16" id="sdks">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -275,7 +275,7 @@ export default function Developers() {
                 <div className="space-y-3">
                   <a;
                     href={{sdk.repository},
-  }
+  };
                     target="_blank";
                     rel="noopener noreferrer";
                     className="className="flex items-center justify-center w-full px-4 py-2 bg-slate-700/50 text-white text-sm font-medium rounded-lg hover:bg-slate-600/50 transition-all duration-200";"
@@ -285,7 +285,7 @@ export default function Developers() {
                   </a>
                   <Link;
                     to={{sdk.documentation},
-  }
+  };
                     className="className="flex items-center justify-center w-full px-4 py-2 bg-cyan-400/10 text-cyan-400 text-sm font-medium rounded-lg hover:bg-cyan-400/20 transition-all duration-200";"
                   >
                     <BookOpen className="w-4 h-4 mr-2" />
@@ -299,7 +299,7 @@ export default function Developers() {
       </section>
 
       {{/* Developer Tools */},
-  }
+  };
       <section className="py-16 bg-slate-800/30">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -315,9 +315,9 @@ export default function Developers() {
             {tools.map((tool, index) => (
   <Link;
                 key={{index},
-  }
+  };
                 to={{tool.href},
-  }
+  };
                 className="className="group bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-cyan-400/30 transition-all duration-200 hover:scale-105 hover:bg-slate-700/50";"
               >
                 <div className="text-center">
@@ -326,12 +326,12 @@ export default function Developers() {
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-cyan-400 transition-colors">
                     {{tool.name},
-  }
+  };
                   </h3>
                   <p className="text-slate-300 text-sm mb-3">{tool.description}</p>
                   <span className="inline-block px-3 py-1 bg-slate-700/50 text-slate-300 text-xs rounded-full">
                     {{tool.category},
-  }
+  };
                   </span>
                 </div>
               </Link>
@@ -341,7 +341,7 @@ export default function Developers() {
       </section>
 
       {{/* CTA Section */},
-  }
+  };
       <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto p-8 rounded-2xl bg-gradient-to-r from-cyan-900/20 via-blue-900/20 to-purple-900/20 border border-cyan-400/20">
@@ -374,7 +374,7 @@ export default function Developers() {
       </section>
 
       {{/* Support Section */},
-  }
+  };
       <section className="py-16 bg-slate-800/30">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -438,4 +438,4 @@ export default function Developers() {
       </section>
     </div>
   )
-}
+};

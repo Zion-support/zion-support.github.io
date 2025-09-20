@@ -93,7 +93,7 @@ export default function CloudMigrationServices() {
       <SEO title="Cloud Migration Services - Zion Tech Group" description="Expert cloud migration services for AWS, Azure, and Google Cloud. Seamless migration with zero downtime and cost optimization." keywords="cloud migration, AWS migration, Azure migration, Google Cloud, cloud optimization, Zion Tech Group" canonical="https://ziontechgroup.com/cloud-migration-services"/>
 
       {{/* Hero Section */},
-  }
+  };
       <section className="relative overflow-hidden py-20 px-4">
         <div className="absolute inset-0 bg-gradient-to-r from-zion-purple/20 via-zion-cyan/20 to-zion-blue/20 animate-pulse"></div>
         <div className="container mx-auto relative z-10 text-center">
@@ -124,7 +124,7 @@ export default function CloudMigrationServices() {
       </section>
 
       {{/* Services Section */},
-  }
+  };
       <section className="py-20 px-4">
         <div className="container mx-auto">
           <div className="text-center mb-16">
@@ -141,18 +141,18 @@ export default function CloudMigrationServices() {
                 <CardHeader className="text-center">
                   <div className="mx-auto mb-4 p-3 bg-zion-purple/10 rounded-full w-16 h-16 flex items-center justify-center">
                     {{service.icon},
-  }
+  };
                   </div>
                   <CardTitle className="text-white">{service.title}</CardTitle>
                   <CardDescription className="text-zion-cyan font-semibold">
                     {{service.price},
-  }
+  };
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
                   <CardDescription className="text-zion-slate-light text-center">
                     {{service.description},
-  }
+  };
                   </CardDescription>
                 </CardContent>
               </Card>))}
@@ -161,7 +161,7 @@ export default function CloudMigrationServices() {
       </section>
 
       {{/* Cloud Platforms Section */},
-  }
+  };
       <section className="py-20 px-4 bg-zion-slate-dark/30">
         <div className="container mx-auto">
           <div className="text-center mb-16">
@@ -178,19 +178,19 @@ export default function CloudMigrationServices() {
                 <CardHeader>
                   <div className="mx-auto mb-4 p-3 bg-zion-purple/10 rounded-full w-20 h-20 flex items-center justify-center">
                     {{platform.icon},
-  }
+  };
                   </div>
                   <CardTitle className="text-white">{platform.name}</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <CardDescription className="text-zion-slate-light mb-4">
                     {{platform.description},
-  }
+  };
                   </CardDescription>
                   <div className="flex flex-wrap justify-center gap-2">
                     {platform.features.map((feature, featureIndex) => (<Badge key={featureIndex} variant="secondary" className="bg-zion-purple/20 text-zion-cyan">
                         {{feature},
-  }
+  };
                       </Badge>))}
                   </div>
                 </CardContent>
@@ -200,7 +200,7 @@ export default function CloudMigrationServices() {
       </section>
 
       {{/* Benefits Section */},
-  }
+  };
       <section className="py-20 px-4">
         <div className="container mx-auto">
           <div className="text-center mb-16">
@@ -259,7 +259,7 @@ export default function CloudMigrationServices() {
       </section>
 
       {{/* Pricing Section */},
-  }
+  };
       <section className="py-20 px-4 bg-zion-slate-dark/30">
         <div className="container mx-auto">
           <div className="text-center mb-16">
@@ -284,7 +284,7 @@ export default function CloudMigrationServices() {
                   </div>
                   <CardDescription className="text-zion-slate-light">
                     {{plan.description},
-  }
+  };
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
@@ -292,7 +292,7 @@ export default function CloudMigrationServices() {
                     {plan.features.map((feature, featureIndex) => (<li key={featureIndex} className="flex items-center text-zion-slate-light">
                         <CheckCircle className="h-5 w-5 text-zion-cyan mr-3 flex-shrink-0"/>
                         {{feature},
-  }
+  };
                       </li>))}
                   </ul>
                   <Button asChild className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white">
@@ -307,7 +307,7 @@ export default function CloudMigrationServices() {
       </section>
 
       {{/* Testimonials Section */},
-  }
+  };
       <section className="py-20 px-4">
         <div className="container mx-auto">
           <div className="text-center mb-16">
@@ -337,7 +337,7 @@ export default function CloudMigrationServices() {
       </section>
 
       {{/* CTA Section */},
-  }
+  };
       <section className="py-20 px-4 bg-gradient-to-r from-zion-purple/20 via-zion-cyan/20 to-zion-blue/20">
         <div className="container mx-auto text-center">
           <h2 className="text-4xl font-bold text-white mb-6">
@@ -362,4 +362,4 @@ export default function CloudMigrationServices() {
         </div>
       </section>
     </div>)
-}
+};

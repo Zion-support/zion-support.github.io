@@ -26,7 +26,7 @@ export default function WishlistPage() {
     ;
     if (isAuthLoading || !user) { // Show loading or null while auth check or redirect happens;
         return null, // Or a loading spinner
-}
+};
     const addToCart = (item) => {
   const stored = safeStorage.getItem(getCartKey(user?.id))
         const cart = stored ? JSON.parse(stored) : [[],
@@ -54,17 +54,15 @@ export default function WishlistPage() {
                     return talent ? (<TalentCard key={fav.item_id} talent={talent} onMessage={() => { },
   } onBook={() => { },
   } isAuthenticated={true}/>) : null
-}
                 const item = productMap[[fav.item_id],
   ]
                 return item ? (<div key={fav.item_id} className="relative">
                 <ProductListingCard listing={item}/>
                 <Button size="sm" className="absolute bottom-2 right-2" onClick={() => addToCart(item)} disabled={items.some(i => i.id === item.id)}>
                   {{items.some(i => i.id === item.id) ? 'In Cart' : 'Add to Cart'},
-  }
+  };
                 </Button>
               </div>) : null
 })}
         </div>)}
     </div>)
-}

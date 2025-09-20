@@ -240,30 +240,26 @@ const mockSearchData = [
   id: 'ml-pipeline',title: 'Machine Learning Pipeline Automation',category: 'ai-ml',type: 'software',icon: BarChart3,description: 'Automated machine learning pipeline for data scientists and ML engineers.',content: 'Streamline your machine learning workflows with our automated pipeline solution. Features include autoML capabilities, model versioning, A/B testing, and performance monitoring.';
       tags: ['Machine LearningAutomation', 'Data ScienceMLOps', 'Pipeline']
       url: '/marketplace/ml-pipeline',rating: 4.9,reviews: 89,date: '2024-01-10',author: 'AI Team',readTime: '8 min read'
-}
+};
     // Cloud Solutions;
     {
   id: 'cloud-migration',title: 'Cloud Migration Service',category: 'cloud',type: 'service',icon: Cloud,description: 'Professional cloud migration and optimization services for enterprise organizations.',content: 'Our expert team provides comprehensive cloud migration services including infrastructure assessment, migration planning, data migration, and ongoing optimization.';
       tags: ['Cloud MigrationAWS', 'AzureGCP', 'DevOpsEnterprise']
       url: '/services/cloud-migration',rating: 4.9,reviews: 67,date: '2024-01-08',author: 'Cloud Team',readTime: '12 min read'
-}
     // Security & Compliance;
     {
   id: 'threat-detection',title: 'Advanced Threat Detection System',category: 'security',type: 'software',icon: Shield,description: 'AI-powered threat detection and response system for enterprise security.',content: 'Protect your organization with our advanced threat detection system that uses machine learning to identify and respond to security threats in real-time.',tags: ['CybersecurityThreat Detection', 'AI SecuritySOC', 'Enterprise']
       url: '/marketplace/threat-detection',rating: 4.9,reviews: 178,date: '2024-01-12',author: 'Security Team',readTime: '10 min read'
-}
     // Data & Analytics;
     {
   id: 'data-warehouse',title: 'Enterprise Data Warehouse Solution',category: 'data',type: 'software',icon: Database,description: 'Scalable data warehouse with advanced analytics and business intelligence capabilities.',content: 'Transform your data into actionable insights with our enterprise data warehouse solution. Features include real-time processing, advanced analytics, and multi-cloud support.';
       tags: ['Data WarehouseBig Data', 'AnalyticsBusiness Intelligence', 'Enterprise']
       url: '/marketplace/data-warehouse',rating: 4.7,reviews: 92,date: '2024-01-05',author: 'Data Team',readTime: '15 min read'
-}
     // Development Tools;
     {
   id: 'code-generator',title: 'AI-Powered Code Generator',category: 'development',type: 'software',icon: Code,description: 'Intelligent code generation and assistance tool for developers.',content: 'Boost your productivity with our AI-powered code generator that provides intelligent code completion, bug detection, and documentation generation.';
       tags: ['Code GenerationAI', 'DevelopmentProductivity', 'IDE Integration']
       url: '/marketplace/code-generator',rating: 4.8,reviews: 234,date: '2024-01-18',author: 'Dev Team',readTime: '6 min read'
-}
     // Blog Posts;
     {
   id: 'ai-trends-2024',title: 'Top AI Trends to Watch in 2024',category: 'ai-ml',type: 'article',icon: TrendingUp,description: 'Explore the most significant artificial intelligence trends that will shape the technology landscape in 2024.',content: 'As we move into 2024, artificial intelligence continues to evolve at an unprecedented pace. From generative AI to autonomous systems, discover the key trends that will drive innovation and transformation across industries.';
@@ -273,7 +269,6 @@ const mockSearchData = [
   {
   id: 'cloud-security-best-practices',title: 'Cloud Security Best Practices for 2024',category: 'security',type: 'guide',icon: Shield,description: 'Comprehensive guide to implementing robust cloud security measures in modern enterprise environments.',content: 'Learn the essential cloud security best practices that every organization should implement to protect their data and infrastructure in 2024.',tags: ['Cloud SecurityBest Practices', 'EnterpriseCybersecurity', 'Guide']
       url: '/blog/cloud-security-best-practices-2024',rating: 4.8,reviews: 78,date: '2024-01-17',author: 'Security Team',readTime: '18 min read'
-}
     // Case Studies;
     {
   id: 'manufacturing-ai-case-study',title: 'AI Transformation in Manufacturing: A Case Study',category: 'ai-ml',type: 'case-study',icon: Factory,description: 'How a Fortune 500 manufacturing company achieved 40% efficiency improvement through AI implementation.',content: 'Discover how we helped a leading manufacturing company implement AI solutions to optimize production processes, reduce costs, and improve overall efficiency.';
@@ -302,7 +297,6 @@ const saved = localStorage.getItem('recentSearches')
   if (!query.trim()) {
   setSearchResults([])
       return
-}
 
     setIsSearching(true)
     ;
@@ -341,21 +335,21 @@ let results = filtered;
       setRecentSearches(newRecent)
       localStorage.setItem('recentSearches', JSON.stringify(newRecent))
     },
-  }
+  };
 
   const handleSearch = (e: React.FormEvent) => {
   e.preventDefault()
     performSearch(searchQuery)
-  }
+  };
 
   const handleQuickSearch = (query: string) => {
   setSearchQuery(query)
     performSearch(query)
-  }
+  };
 
   const toggleItemExpansion = (itemId: string) => {
   setExpandedItem(expandedItem === itemId ? null : itemId)
-  }
+  };
   const getCategoryColor = (category: string) => {
   switch (category) {
   case 'ai-ml': return 'bg-purple-500/20 text-purple-400';
@@ -369,7 +363,7 @@ let results = filtered;
       case 'documentation': return 'bg-indigo-500/20 text-indigo-400';
       default: return 'bg-slate-500/20 text-slate-400'
 },
-  }
+  };
   const getTypeColor = (type: string) => {
   switch (type) {
   case 'software': return 'bg-blue-500/20 text-blue-400';
@@ -380,7 +374,7 @@ let results = filtered;
       case 'case-study': return 'bg-pink-500/20 text-pink-400';
       default: return 'bg-slate-500/20 text-slate-400'
 },
-  }
+  };
   const renderStars = (rating: number) => {
   const stars = [[],
   ]
@@ -402,13 +396,12 @@ const emptyStars = 5 - Math.ceil(rating)
     }
     ;
     return stars
-}
 
   const formatDate = (dateString: string) => {
   return new Date(dateString).toLocaleDateString('en-US', {
   year: 'numeric',month: 'short',day: 'numeric'
 })
-  }
+  };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -418,17 +411,17 @@ const emptyStars = 5 - Math.ceil(rating)
       />
       ;
       {{/* Hero Section */},
-  }
+  };
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-green-500/10 via-blue-500/10 to-purple-500/10"></div>
         <div className="container mx-auto px-6 relative z-10">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             animate={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             className="className="text-center";"
           >
             <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-green-500/20 to-blue-500/20 rounded-2xl mb-6">
@@ -446,7 +439,7 @@ const emptyStars = 5 - Math.ceil(rating)
       </section>
 
       {{/* Search Form */},
-  }
+  };
       <section className="py-12">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto">
@@ -457,9 +450,9 @@ const emptyStars = 5 - Math.ceil(rating)
                   type="text";
                   placeholder="Search for solutions, services, articles, or resources...";
                   value={{searchQuery},
-  }
+  };
                   onChange={{(e) => setSearchQuery(e.target.value)},
-  }
+  };
                   className="className="w-full pl-14 pr-4 py-4 bg-slate-800/50 border border-slate-600/50 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-green-400 focus:ring-2 focus:ring-green-400/20 transition-all duration-200 text-lg";"
                 />
                 <button;
@@ -489,55 +482,55 @@ const emptyStars = 5 - Math.ceil(rating)
                     {recentSearches.map((search, index) => (
   <button;
                         key={{index},
-  }
+  };
                         onClick={{onClick={() => handleQuickSearch(search)},
   },
-  }
+  };
                         className="className="px-4 py-2 bg-slate-800/50 border border-slate-600/50 text-gray-300 rounded-lg hover:bg-slate-700/50 hover:text-white transition-all duration-200";"
                       >
                         {{search},
-  }
+  };
                       </button>
                     ))}
                   </div>
                 </div>
               )},
   {{/* Popular Searches */},
-  }
+  };
               <div className="mb-12">
                 <h3 className="text-xl font-bold text-white mb-6">Popular Searches</h3>
                 <div className="flex flex-wrap gap-3">
                   {popularSearches.map((search, index) => (
   <button;
                       key={{index},
-  }
+  };
                       onClick={{onClick={() => handleQuickSearch(search)},
   },
-  }
+  };
                       className="className="px-4 py-2 bg-gradient-to-r from-green-500/20 to-blue-500/20 border border-green-400/30 text-green-400 rounded-lg hover: from-green-500/30 hover:to-blue-500/30 hover:border-green-400/50 transition-all duration-200";"
                     >
                       {{search},
-  }
+  };
                     </button>
                   ))}
                 </div>
               </div>
 
               {{/* Search Categories */},
-  }
+  };
               <div>
                 <h3 className="text-xl font-bold text-white mb-6">Browse by Category</h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                   {categories.slice(1).map((category) => (
   <button;
                       key={{category.id},
-  }
+  };
                       onClick={() => {
                         setSelectedCategory(category.id)
                         setSearchQuery(category.name)
                         performSearch(category.name)
                       },
-  }
+  };
                       className="className="p-6 bg-gradient-to-br from-slate-800/50 to-slate-700/50 border border-slate-600/50 rounded-xl hover: border-green-400/50 transition-all duration-300 hover:scale-105 text-left";"
                     >
                       <h4 className="text-lg font-bold text-white mb-2">{category.name}</h4>
@@ -557,7 +550,7 @@ const emptyStars = 5 - Math.ceil(rating)
           <div className="container mx-auto px-6">
             <div className="max-w-6xl mx-auto">
               {{/* Results Header */},
-  }
+  };
               <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-8">
                 <div>
                   <h2 className="text-3xl font-bold text-white mb-2">
@@ -569,55 +562,55 @@ const emptyStars = 5 - Math.ceil(rating)
                 </div>
 
                 {{/* Filters and View Mode */},
-  }
+  };
                 <div className="flex items-center gap-4 mt-4 lg:mt-0">
                   {{/* Category Filter */},
-  }
+  };
                   <select;
                     value={{selectedCategory},
-  }
+  };
                     onChange={(e) => {
   setSelectedCategory(e.target.value)
                       performSearch(searchQuery)
                     },
-  }
+  };
                     className="className="px-4 py-2 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white focus: outline-none focus:border-green-400 focus:ring-2 focus:ring-green-400/20 transition-all duration-200";"
                   >
                     {categories.map((category) => (
   <option key={category.id} value={category.id}>
                         {{category.name},
-  }
+  };
                       </option>
                     ))}
                   </select>
 
                   {{/* Type Filter */},
-  }
+  };
                   <select;
                     value={{selectedType},
-  }
+  };
                     onChange={(e) => {
   setSelectedType(e.target.value)
                       performSearch(searchQuery)
                     },
-  }
+  };
                     className="className="px-4 py-2 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white focus:outline-none focus:border-green-400 focus:ring-2 focus:ring-green-400/20 transition-all duration-200";"
                   >
                     {types.map((type) => (
   <option key={type.id} value={type.id}>
                         {{type.name},
-  }
+  };
                       </option>
                     ))}
                   </select>
 
                   {{/* View Mode Toggle */},
-  }
+  };
                   <div className="flex items-center gap-2">
                     <button;
                       onClick={{onClick={() => setViewMode('grid')},
   },
-  }
+  };
                       className={`p-2 rounded-lg transition-all duration-200 ${
   viewMode === 'grid' ;
                           ? 'bg-green-400/20 text-green-400' ;
@@ -629,7 +622,7 @@ const emptyStars = 5 - Math.ceil(rating)
                     <button;
                       onClick={{onClick={() => setViewMode('list')},
   },
-  }
+  };
                       className={`p-2 rounded-lg transition-all duration-200 ${
   viewMode === 'list' ;
                           ? 'bg-green-400/20 text-green-400' ;
@@ -666,7 +659,7 @@ const emptyStars = 5 - Math.ceil(rating)
                   <button;
                     onClick={{onClick={() => setSearchQuery('')},
   },
-  }
+  };
                     className="className="px-6 py-3 bg-gradient-to-r from-green-400 to-blue-500 text-white font-semibold rounded-lg hover:from-green-500 hover:to-blue-600 transition-all duration-200 hover:scale-105";"
                   >
                     Start New Search;
@@ -682,13 +675,13 @@ const emptyStars = 5 - Math.ceil(rating)
                       {searchResults.map((item, index) => (
   <motion.div;
                           key={{item.id},
-  }
+  };
                           initial={{ opacity: 0, y: 20 },
-  }
+  };
                           animate={{ opacity: 1, y: 0 },
-  }
+  };
                           transition={{ duration: 0.5, delay: index * 0.1 },
-  }
+  };
                           className="className="group";"
                         >
                           <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl border border-slate-600/50 hover:border-green-400/50 transition-all duration-300 hover:scale-105 overflow-hidden">
@@ -696,11 +689,11 @@ const emptyStars = 5 - Math.ceil(rating)
                               <div className="flex items-center gap-3 mb-4">
                                 <span className={`px-3 py-1 rounded-full text-xs font-medium ${getCategoryColor(item.category)}`}>
                                   {{categories.find(c => c.id === item.category)?.name},
-  }
+  };
                                 </span>
                                 <span className={`px-3 py-1 rounded-full text-xs font-medium ${getTypeColor(item.type)}`}>
                                   {{types.find(t => t.id === item.type)?.name},
-  }
+  };
                                 </span>
                               </div>
                               ;
@@ -710,20 +703,20 @@ const emptyStars = 5 - Math.ceil(rating)
                                 </div>
                                 <h3 className="text-lg font-bold text-white group-hover:text-green-400 transition-colors duration-200">
                                   {{item.title},
-  }
+  };
                                 </h3>
                               </div>
                               ;
                               <p className="text-gray-300 text-sm mb-4 leading-relaxed line-clamp-3">
                                 {{item.description},
-  }
+  };
                               </p>
                               ;
                               {item.rating && (
   <div className="flex items-center gap-2 mb-4 text-sm">
                                   <div className="flex items-center gap-1">
                                     {{renderStars(item.rating)},
-  }
+  };
                                     <span className="text-gray-400">({item.reviews})</span>
                                   </div>
                                 </div>
@@ -733,7 +726,7 @@ const emptyStars = 5 - Math.ceil(rating)
                                 <div className="flex items-center gap-2 text-gray-400 text-sm">
                                   <Calendar className="w-4 h-4" />
                                   {{formatDate(item.date)},
-  }
+  };
                                 </div>
                                 <div className="flex items-center gap-2">
                                   <button className="p-2 text-gray-400 hover:text-white transition-colors duration-200">
@@ -746,14 +739,14 @@ const emptyStars = 5 - Math.ceil(rating)
                                 {item.tags.slice(0, 3).map((tag, tagIndex) => (
   <span key={tagIndex} className="px-2 py-1 bg-slate-700/50 text-gray-300 text-xs rounded">
                                     {{tag},
-  }
+  };
                                   </span>
                                 ))}
                               </div>
                               ;
                               <Link;
                                 to={{item.url},
-  }
+  };
                                 className="className="w-full px-4 py-2 bg-gradient-to-r from-green-400 to-blue-500 text-white font-semibold rounded-lg hover:from-green-500 hover:to-blue-600 transition-all duration-200 hover:scale-105 text-center block";"
                               >
                                 View Details;
@@ -768,13 +761,13 @@ const emptyStars = 5 - Math.ceil(rating)
                       {searchResults.map((item, index) => (
   <motion.div;
                           key={{item.id},
-  }
+  };
                           initial={{ opacity: 0, x: -20 },
-  }
+  };
                           animate={{ opacity: 1, x: 0 },
-  }
+  };
                           transition={{ duration: 0.5, delay: index * 0.1 },
-  }
+  };
                           className="className="group";"
                         >
                           <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl border border-slate-600/50 hover:border-green-400/50 transition-all duration-300 p-6">
@@ -789,29 +782,29 @@ const emptyStars = 5 - Math.ceil(rating)
                                 <div className="flex items-center gap-3 mb-2">
                                   <span className={`px-3 py-1 rounded-full text-xs font-medium ${getCategoryColor(item.category)}`}>
                                     {{categories.find(c => c.id === item.category)?.name},
-  }
+  };
                                   </span>
                                   <span className={`px-3 py-1 rounded-full text-xs font-medium ${getTypeColor(item.type)}`}>
                                     {{types.find(t => t.id === item.type)?.name},
-  }
+  };
                                   </span>
                                 </div>
                                 ;
                                 <h3 className="text-xl font-bold text-white group-hover:text-green-400 transition-colors duration-200 mb-2">
                                   {{item.title},
-  }
+  };
                                 </h3>
                                 ;
                                 <p className="text-gray-300 text-sm mb-3 leading-relaxed">
                                   {{item.description},
-  }
+  };
                                 </p>
                                 ;
                                 {item.rating && (
   <div className="flex items-center gap-4 text-sm mb-3">
                                     <div className="flex items-center gap-1">
                                       {{renderStars(item.rating)},
-  }
+  };
                                       <span className="text-gray-400 ml-1">({item.reviews})</span>
                                     </div>
                                     <div className="text-gray-400">•</div>
@@ -823,7 +816,7 @@ const emptyStars = 5 - Math.ceil(rating)
                                   {item.tags.map((tag, tagIndex) => (
   <span key={tagIndex} className="px-2 py-1 bg-slate-700/50 text-gray-300 text-xs rounded">
                                       {{tag},
-  }
+  };
                                     </span>
                                   ))}
                                 </div>
@@ -837,7 +830,7 @@ const emptyStars = 5 - Math.ceil(rating)
                                 </div>
                                 <Link;
                                   to={{item.url},
-  }
+  };
                                   className="className="px-6 py-2 bg-gradient-to-r from-green-400 to-blue-500 text-white font-semibold rounded-lg hover:from-green-500 hover:to-blue-600 transition-all duration-200 hover:scale-105";"
                                 >
                                   View Details;
@@ -857,4 +850,3 @@ const emptyStars = 5 - Math.ceil(rating)
       )}
     </div>
   )
-}

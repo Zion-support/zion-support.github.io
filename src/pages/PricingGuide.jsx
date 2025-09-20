@@ -23,42 +23,40 @@ export default function PricingGuide() {
             'Managed Services': <Lock className="w-6 h-6"/>
         }
         return icons[category] || <Star className="w-6 h-6"/>
-}
+};
     const formatPrice = (price) => {
   if (if (price >= 1000) {
   ) {
             return `$${(price / 1000).toFixed(0)}K`
-}
         return `$${price}`
-}
     const getMarketComparison = (price, category) => {
   const const comparisons = {
   = {
             'AI Development': {{ avg: price * 1.3, savings: 23 },
-  }
+  };
             'Cloud Services': {{ avg: price * 1.25, savings: 20 },
-  }
+  };
             'DevOps': {{ avg: price * 1.35, savings: 26 },
-  }
+  };
             'Cybersecurity': {{ avg: price * 1.4, savings: 29 },
-  }
+  };
             'Data & Analytics': {{ avg: price * 1.3, savings: 23 },
-  }
+  };
             'Digital Transformation': {{ avg: price * 1.45, savings: 31 },
-  }
+  };
             'Emerging Tech': {{ avg: price * 1.5, savings: 33 },
-  }
+  };
             'Managed Services': {{ avg: price * 1.2, savings: 17 },
   },
-  }
+  };
         return comparisons[category] || {{ avg: price * 1.3, savings: 23 },
   },
-  }
+  };
     return (<div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-blue-light">
       <SEO title="IT Services Pricing Guide - Zion Tech Group" description="Comprehensive pricing guide for enterprise IT services, AI development, cybersecurity, cloud migration, and digital transformation. Competitive rates with guaranteed ROI." keywords="IT services pricing, AI development cost, cybersecurity pricing, cloud migration cost, digital transformation pricing, managed services pricing" canonical="https://ziontechgroup.com/pricing-guide"/>
 
       {{/* Hero Section */},
-  }
+  };
       <div className="bg-gradient-to-r from-zion-purple to-zion-purple-dark py-20 px-4">
         <div className="container mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -82,7 +80,7 @@ export default function PricingGuide() {
       </div>
 
       {{/* Contact Information Banner */},
-  }
+  };
       <div className="bg-zion-blue-dark py-6 px-4 border-b border-zion-blue-light">
         <div className="container mx-auto">
           <div className="flex flex-wrap items-center justify-center gap-8 text-zion-cyan">
@@ -103,7 +101,7 @@ export default function PricingGuide() {
       </div>
 
       {{/* Pricing Overview */},
-  }
+  };
       <div className="py-16 px-4">
         <div className="container mx-auto">
           <div className="text-center mb-12">
@@ -155,19 +153,19 @@ export default function PricingGuide() {
           </div>
 
           {{/* Category Filter */},
-  }
+  };
           <div className="flex flex-wrap justify-center gap-4 mb-12">
             <Button variant={selectedCategory === 'all' ? 'default' : 'outline'} onClick={() => setSelectedCategory('all')} className="bg-zion-purple hover:bg-zion-purple-dark">
               All Categories;
             </Button>
             {EXPANDED_SERVICE_CATEGORIES.map((category) => (<Button key={category.value} variant={selectedCategory === category.value ? 'default' : 'outline'} onClick={() => setSelectedCategory(category.value)} className={selectedCategory === category.value ? 'bg-zion-purple hover:bg-zion-purple-dark' : ''}>
                 {{category.label},
-  }
+  };
               </Button>))}
           </div>
 
           {{/* Services Pricing Grid */},
-  }
+  };
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {filteredServices.map((service) => {
   const marketComparison = getMarketComparison(service.price, service.category)
@@ -176,7 +174,7 @@ export default function PricingGuide() {
                     <div className="flex items-start justify-between mb-3">
                       <div className="p-2 rounded-lg bg-zion-purple/20 text-zion-cyan">
                         {{getCategoryIcon(service.category)},
-  }
+  };
                       </div>
                       {service.featured && (<Badge className="bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white">
                           Featured;
@@ -185,12 +183,12 @@ export default function PricingGuide() {
                     <CardTitle className="text-white text-xl mb-2">{service.title}</CardTitle>
                     <CardDescription className="text-zion-slate-light">
                       {{service.description},
-  }
+  };
                     </CardDescription>
                   </CardHeader>
                   <CardContent className="pt-0">
                     {{/* Pricing Section */},
-  }
+  };
                     <div className="bg-zion-blue-dark/50 rounded-lg p-4 mb-6">
                       <div className="flex items-center justify-between mb-4">
                         <div>
@@ -209,7 +207,7 @@ export default function PricingGuide() {
                     </div>
 
                     {{/* Service Details */},
-  }
+  };
                     <div className="space-y-3 mb-6">
                       <div className="flex items-center gap-2 text-zion-slate-light">
                         <Clock className="w-4 h-4"/>
@@ -230,16 +228,16 @@ export default function PricingGuide() {
                     </div>
 
                     {{/* Tags */},
-  }
+  };
                     <div className="flex flex-wrap gap-2 mb-6">
                       {service.tags.slice(0, 4).map((tag) => (<Badge key={tag} variant="secondary" className="bg-zion-blue-light text-zion-cyan">
                           {{tag},
-  }
+  };
                         </Badge>))}
                     </div>
 
                     {{/* CTA Buttons */},
-  }
+  };
                     <div className="flex gap-2">
                       <Button size="sm" variant="outline" className="border-zion-purple text-zion-purple hover: bg-zion-purple hover:text-white flex-1">
                         <Mail className="w-4 h-4 mr-1"/>
@@ -264,7 +262,7 @@ export default function PricingGuide() {
       </div>
 
       {{/* Value Proposition */},
-  }
+  };
       <div className="py-16 px-4 bg-zion-blue-dark">
         <div className="container mx-auto">
           <div className="text-center mb-12">
@@ -335,7 +333,7 @@ export default function PricingGuide() {
       </div>
 
       {{/* Contact CTA Section */},
-  }
+  };
       <div className="py-20 px-4 bg-gradient-to-r from-zion-purple to-zion-purple-dark">
         <div className="container mx-auto text-center">
           <h2 className="text-3xl font-bold text-white mb-6">Ready to Get Started?</h2>
@@ -360,4 +358,3 @@ export default function PricingGuide() {
         </div>
       </div>
     </div>)
-}

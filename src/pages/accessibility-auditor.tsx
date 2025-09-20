@@ -85,23 +85,23 @@ export default function AccessibilityPage() {
   const const containerVariants = {
   = {
     hidden: {{ opacity: 0 },
-  }
+  };
     visible: {
   opacity: 1,transition: {
   staggerChildren: 0.1
 },
   },
-  }
+  };
   const const itemVariants = {
   = {
     hidden: {{ opacity: 0, y: 20 },
-  }
+  };
     visible: {
   opacity: 1,y: 0,transition: {
   duration: 0.5
 },
   },
-  }
+  };
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
       <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -121,7 +121,7 @@ export default function AccessibilityPage() {
           </div>
 
           {{/* Key Features */},
-  }
+  };
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-center mb-12">Comprehensive Accessibility Testing</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -136,7 +136,7 @@ export default function AccessibilityPage() {
           </div>
 
           {{/* Compliance Standards */},
-  }
+  };
           <div className="mb-16">
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20">
               <h2 className="text-3xl font-bold text-center mb-8">Compliance Standards We Test</h2>
@@ -151,7 +151,7 @@ export default function AccessibilityPage() {
           </div>
 
           {{/* Testing Areas */},
-  }
+  };
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-center mb-12">Testing Areas</h2>
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
@@ -163,7 +163,7 @@ export default function AccessibilityPage() {
   <li key={idx} className="flex items-center text-gray-300">
                         <span className="w-2 h-2 bg-blue-400 rounded-full mr-3"></span>
                         {{item},
-  }
+  };
                       </li>
                     ))}
                   </ul>
@@ -173,7 +173,7 @@ export default function AccessibilityPage() {
           </div>
 
           {{/* Process */},
-  }
+  };
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-center mb-12">Our Audit Process</h2>
             <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
@@ -212,7 +212,7 @@ export default function AccessibilityPage() {
           </div>
 
           {{/* Benefits */},
-  }
+  };
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-center mb-12">Why Choose Our Accessibility Auditor?</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -263,7 +263,7 @@ export default function AccessibilityPage() {
           </div>
 
           {{/* CTA Section */},
-  }
+  };
           <div className="text-center">
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20 max-w-4xl mx-auto">
               <h3 className="text-2xl font-bold mb-4">Ready to Make Your Digital Products Accessible?</h3>
@@ -291,4 +291,4 @@ export default function AccessibilityPage() {
       </section>
     </div>
   )
-}
+};

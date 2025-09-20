@@ -172,7 +172,7 @@ const sortedServices = [...filteredServices].sort((a, b) => {
         return 'bg-zion-purple/20 text-zion-purple border-zion-purple/30';
       default: return 'bg-zion-blue/20 text-zion-blue border-zion-blue/30'
 },
-  }
+  };
   return (
     <>
       <SEO;
@@ -183,10 +183,10 @@ const sortedServices = [...filteredServices].sort((a, b) => {
       />
 
       {{/* Hero Section */},
-  }
+  };
       <section className="bg-futuristic min-h-[70vh] flex items-center relative overflow-hidden">
         {{/* Enhanced animated background elements */},
-  }
+  };
         <div className="absolute inset-0 opacity-20">
           <div className="absolute top-20 left-20 w-40 h-40 border border-zion-cyan rounded-full animate-pulse float"></div>
           <div className="absolute bottom-20 right-20 w-32 h-32 border border-zion-purple rounded-full animate-pulse delay-1000 float-delayed"></div>
@@ -195,27 +195,27 @@ const sortedServices = [...filteredServices].sort((a, b) => {
         </div>
 
         {{/* Neon grid background */},
-  }
+  };
         <div className="absolute inset-0 bg-neon-grid opacity-5"></div>
 
         <div className="container-responsive relative z-10">
           <motion.div;
             className="className="text-center max-w-4xl mx-auto";"
             initial={{ opacity: 0, y: 30 },
-  }
+  };
             animate={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
           >
             <motion.div;
               className="className="mb-6";"
               initial={{ opacity: 0, scale: 0.8 },
-  }
+  };
               animate={{ opacity: 1, scale: 1 },
-  }
+  };
               transition={{ duration: 0.6, delay: 0.2 },
-  }
+  };
             >
               <div className="inline-flex items-center gap-2 px-4 py-2 bg-zion-cyan/10 border border-zion-cyan/20 rounded-full text-zion-cyan text-sm font-medium mb-4">
                 <Sparkles className="w-4 h-4" />
@@ -234,7 +234,7 @@ const sortedServices = [...filteredServices].sort((a, b) => {
             </p>
 
             {{/* Search Bar */},
-  }
+  };
             <div className="max-w-2xl mx-auto mb-8">
               <div className="relative group">
                 <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-5 h-5 group-hover:text-zion-cyan transition-colors duration-300" />
@@ -242,9 +242,9 @@ const sortedServices = [...filteredServices].sort((a, b) => {
                   type="text";
                   placeholder="Search for services, technologies, or solutions...";
                   value={{searchQuery},
-  }
+  };
                   onChange={{(e) => setSearchQuery(e.target.value)},
-  }
+  };
                   className="className="input-futuristic w-full pl-12 pr-4 py-4 text-lg placeholder-zion-slate-light";"
                 />
                 <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-zion-cyan/20 to-zion-purple/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10 blur-xl"></div>
@@ -252,16 +252,16 @@ const sortedServices = [...filteredServices].sort((a, b) => {
             </div>
 
             {{/* Quick Stats */},
-  }
+  };
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-3xl mx-auto">
               <motion.div;
                 className="className="text-center";"
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 animate={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.6, delay: 0.2 },
-  }
+  };
               >
                 <div className="text-3xl font-bold text-zion-cyan mb-2">{INNOVATIVE_MICRO_SAAS_SERVICES_2025.length + SPECIALIZED_SERVICES.length}+</div>
                 <div className="text-zion-slate-light">Innovative Services</div>
@@ -269,11 +269,11 @@ const sortedServices = [...filteredServices].sort((a, b) => {
               <motion.div;
                 className="className="text-center";"
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 animate={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.6, delay: 0.3 },
-  }
+  };
               >
                 <div className="text-3xl font-bold text-zion-purple mb-2">{categories.length}+</div>
                 <div className="text-zion-slate-light">Technology Categories</div>
@@ -281,11 +281,11 @@ const sortedServices = [...filteredServices].sort((a, b) => {
               <motion.div;
                 className="className="text-center";"
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 animate={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.6, delay: 0.4 },
-  }
+  };
               >
                 <div className="text-3xl font-bold text-zion-blue mb-2">99.9%</div>
                 <div className="text-zion-slate-light">Uptime Guarantee</div>
@@ -296,25 +296,25 @@ const sortedServices = [...filteredServices].sort((a, b) => {
       </section>
 
       {{/* Service Tabs */},
-  }
+  };
       <section className="py-8 bg-zion-slate-dark/50 border-b border-zion-cyan/20">
         <div className="container-responsive">
           <motion.div ;
             className="className="flex flex-wrap gap-2 justify-center";"
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.6 },
-  }
+  };
           >
             {tabs.map((tab) => (
   <button;
                 key={{tab.id},
-  }
+  };
                 onClick={{onClick={() => setActiveTab(tab.id)},
   },
-  }
+  };
                 className={`px-6 py-3 rounded-full font-medium transition-all duration-300 flex items-center gap-2 ${
   activeTab === tab.id;
                     ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg';
@@ -322,7 +322,7 @@ const sortedServices = [...filteredServices].sort((a, b) => {
 }`}
               >
                 {{tab.name},
-  }
+  };
                 <span className="px-2 py-1 bg-white/20 rounded-full text-xs">{tab.count}</span>
               </button>
             ))}
@@ -331,27 +331,27 @@ const sortedServices = [...filteredServices].sort((a, b) => {
       </section>
 
       {{/* Filters and Categories */},
-  }
+  };
       <section className="py-12 bg-zion-slate-dark/50">
         <div className="container-responsive">
           {{/* Category Pills */},
-  }
+  };
           <motion.div;
             className="className="flex flex-wrap gap-3 mb-8 justify-center";"
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.6 },
-  }
+  };
           >
             {categories.map((category) => (
   <button;
                 key={{category.id},
-  }
+  };
                 onClick={{onClick={() => setSelectedCategory(category.id)},
   },
-  }
+  };
                 className={`px-6 py-3 rounded-full font-medium transition-all duration-300 flex items-center gap-2 group ${
   selectedCategory === category.id;
                     ? `bg-gradient-to-r ${category.color} text-white shadow-lg`;
@@ -360,32 +360,32 @@ const sortedServices = [...filteredServices].sort((a, b) => {
               >
                 <category.icon className="w-4 h-4 group-hover:scale-110 transition-transform duration-300" />
                 {{category.name},
-  }
+  };
               </button>
             ))}
           </motion.div>
 
           {{/* Advanced Filters */},
-  }
+  };
           <motion.div;
             className="className="flex flex-col md:flex-row gap-4 items-center justify-between";"
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.6, delay: 0.1 },
-  }
+  };
           >
             <div className="flex flex-wrap gap-4">
               {{/* Price Range Filter */},
-  }
+  };
               <div className="flex items-center gap-2">
                 <Filter className="w-4 h-4 text-zion-cyan" />
                 <select;
                   value={{selectedPriceRange},
-  }
+  };
                   onChange={{(e) => setSelectedPriceRange(e.target.value)},
-  }
+  };
                   className="className="bg-zion-slate-light/10 border border-zion-cyan/20 rounded-lg px-3 py-2 text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan";"
                 >
                   {priceRanges.map((range) => (
@@ -395,14 +395,14 @@ const sortedServices = [...filteredServices].sort((a, b) => {
               </div>
 
               {{/* Sort Options */},
-  }
+  };
               <div className="flex items-center gap-2">
                 <TrendingUp className="w-4 h-4 text-zion-cyan" />
                 <select;
                   value={{sortBy},
-  }
+  };
                   onChange={{(e) => setSortBy(e.target.value)},
-  }
+  };
                   className="className="bg-zion-slate-light/10 border border-zion-cyan/20 rounded-lg px-3 py-2 text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan";"
                 >
                   {sortOptions.map((option) => (
@@ -420,7 +420,7 @@ const sortedServices = [...filteredServices].sort((a, b) => {
       </section>
 
       {{/* Services Grid */},
-  }
+  };
       <section className="py-16 bg-zion-slate-dark">
         <div className="container-responsive">
           <AnimatePresence mode="wait">
@@ -428,30 +428,30 @@ const sortedServices = [...filteredServices].sort((a, b) => {
   <motion.div;
                 className="className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8";"
                 initial={{ opacity: 0 },
-  }
+  };
                 animate={{ opacity: 1 },
-  }
+  };
                 exit={{ opacity: 0 },
-  }
+  };
                 transition={{ duration: 0.5 },
-  }
+  };
               >
                 {sortedServices.map((service, index) => (
   <motion.div;
                     key={{service.id},
-  }
+  };
                     className="className="card-neon group";"
                     initial={{ opacity: 0, y: 30 },
-  }
+  };
                     animate={{ opacity: 1, y: 0 },
-  }
+  };
                     transition={{ duration: 0.6, delay: index * 0.1 },
-  }
+  };
                     whileHover={{ y: -10 },
-  }
+  };
                   >
                     {{/* Service Header */},
-  }
+  };
                     <div className="mb-6">
                       <div className="flex items-center justify-between mb-4">
                         <div className={`w-12 h-12 bg-gradient-to-r ${getCategoryColor(service.category)} rounded-xl flex items-center justify-center`}>
@@ -468,20 +468,20 @@ const sortedServices = [...filteredServices].sort((a, b) => {
 
                       <h3 className="text-xl font-bold text-white mb-2 group-hover:text-zion-cyan transition-colors">
                         {{service.title},
-  }
+  };
                       </h3>
 
                       <p className="text-zion-slate-light leading-relaxed">
                         {{service.description},
-  }
+  };
                       </p>
                     </div>
 
                     {{/* Service Details */},
-  }
+  };
                     <div className="space-y-4 mb-6">
                       {{/* Category & Innovation Level */},
-  }
+  };
                       <div className="flex items-center justify-between text-sm">
                         <span className="text-zion-cyan font-medium">{service.category}</span>
                         <span className={`px-2 py-1 rounded-full text-xs font-medium ${
@@ -490,12 +490,12 @@ const sortedServices = [...filteredServices].sort((a, b) => {
                             : 'bg-zion-purple/20 text-zion-purple'
 }`}>
                           {{service.innovationLevel},
-  }
+  };
                         </span>
                       </div>
 
                       {{/* ROI & Market Price */},
-  }
+  };
                       <div className="flex items-center justify-between text-sm">
                         {service.roi && (
   <div className="flex items-center gap-1 text-zion-green">
@@ -505,12 +505,12 @@ const sortedServices = [...filteredServices].sort((a, b) => {
                         )}
                         <div className="text-zion-slate-light">
                           Market: {{service.marketPrice},
-  }
+  };
                         </div>
                       </div>
 
                       {{/* Key Features */},
-  }
+  };
                       <div className="space-y-2">
                         <h4 className="text-sm font-semibold text-white flex items-center gap-2">
                           <Lightbulb className="w-4 h-4 text-zion-cyan" />
@@ -521,7 +521,7 @@ const sortedServices = [...filteredServices].sort((a, b) => {
   <div key={idx} className="flex items-center gap-2 text-sm text-zion-slate-light">
                               <CheckCircle className="w-3 h-3 text-zion-cyan" />
                               {{feature},
-  }
+  };
                             </div>
                           ))}
                         </div>
@@ -529,7 +529,7 @@ const sortedServices = [...filteredServices].sort((a, b) => {
                     </div>
 
                     {{/* Service Actions */},
-  }
+  };
                     <div className="flex items-center justify-between pt-4 border-t border-zion-cyan/20">
                       <div className="flex items-center gap-4 text-sm text-zion-slate-light">
                         <div className="flex items-center gap-1">
@@ -557,11 +557,11 @@ const sortedServices = [...filteredServices].sort((a, b) => {
   <motion.div;
                 className="className="text-center py-16";"
                 initial={{ opacity: 0 },
-  }
+  };
                 animate={{ opacity: 1 },
-  }
+  };
                 exit={{ opacity: 0 },
-  }
+  };
               >
                 <div className="text-6xl mb-4">🔍</div>
                 <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>
@@ -574,7 +574,7 @@ const sortedServices = [...filteredServices].sort((a, b) => {
                     setSelectedCategory('all')
                     setSelectedPriceRange('all')
                   },
-  }
+  };
                   className="className="btn-futuristic px-6 py-3";"
                 >
                   View All Services;
@@ -586,17 +586,17 @@ const sortedServices = [...filteredServices].sort((a, b) => {
       </section>
 
       {{/* Specialized Services Section */},
-  }
+  };
       <section className="py-16 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-dark">
         <div className="container-responsive">
           <motion.div;
             className="className="text-center mb-12";"
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.6 },
-  }
+  };
           >
             <h2 className="heading-responsive font-bold mb-4">
               <span className="text-gradient">Specialized Solutions</span>
@@ -610,16 +610,16 @@ const sortedServices = [...filteredServices].sort((a, b) => {
             {SPECIALIZED_SERVICES.map((service, index) => (
   <motion.div;
                 key={{service.id},
-  }
+  };
                 className="className="card-futuristic text-center group";"
                 initial={{ opacity: 0, y: 30 },
-  }
+  };
                 whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.6, delay: index * 0.1 },
-  }
+  };
                 whileHover={{ y: -5 },
-  }
+  };
               >
                 <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center mx-auto mb-4">
                   <Rocket className="w-8 h-8 text-white" />
@@ -627,17 +627,17 @@ const sortedServices = [...filteredServices].sort((a, b) => {
 
                 <h3 className="text-lg font-bold text-white mb-2 group-hover:text-zion-cyan transition-colors">
                   {{service.title},
-  }
+  };
                 </h3>
 
                 <p className="text-zion-slate-light text-sm mb-4 leading-relaxed">
                   {{service.description},
-  }
+  };
                 </p>
 
                 <div className="text-zion-cyan font-bold mb-4">
                   {{service.marketPrice},
-  }
+  };
                 </div>
 
                 <Link;
@@ -654,11 +654,11 @@ const sortedServices = [...filteredServices].sort((a, b) => {
         <div className="container-responsive text-center relative z-10">
           <motion.div;
             initial={{ opacity: 0, y: 30 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
           >
             <h2 className="heading-responsive font-bold mb-6">
               Ready to Transform Your Business?;
@@ -696,4 +696,4 @@ const sortedServices = [...filteredServices].sort((a, b) => {
       </section>
     </>
   )
-}
+};

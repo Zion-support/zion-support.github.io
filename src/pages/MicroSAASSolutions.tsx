@@ -106,7 +106,7 @@ export default function MicroSAASSolutions() {
 
       <div className="min-h-screen bg-futuristic">
         {{/* Hero Section */},
-  }
+  };
         <section className="relative pt-32 pb-20 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-br from-zion-cyan/20 via-zion-purple/20 to-zion-blue/20"></div>
           <div className="absolute inset-0">
@@ -149,7 +149,7 @@ export default function MicroSAASSolutions() {
         </section>
 
         {{/* Services Section */},
-  }
+  };
         <section className="py-20 bg-zion-blue-dark/50">
           <div className="container-responsive">
             <div className="text-center mb-16">
@@ -163,7 +163,7 @@ export default function MicroSAASSolutions() {
               {services.map((service, index) => (
   <div;
                   key={{service.title},
-  }
+  };
                   className="className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300";"
                 >
                   <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mb-6">
@@ -188,7 +188,7 @@ export default function MicroSAASSolutions() {
         </section>
 
         {{/* Benefits Section */},
-  }
+  };
         <section className="py-20">
           <div className="container-responsive">
             <div className="text-center mb-16">
@@ -202,7 +202,7 @@ export default function MicroSAASSolutions() {
               {benefits.map((benefit, index) => (
   <div;
                   key={{benefit.title},
-  }
+  };
                   className="className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-8 hover:border-zion-cyan/40 transition-all duration-300";"
                 >
                   <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-6">
@@ -218,7 +218,7 @@ export default function MicroSAASSolutions() {
         </section>
 
         {{/* Industries Section */},
-  }
+  };
         <section className="py-20 bg-zion-blue-dark/50">
           <div className="container-responsive">
             <div className="text-center mb-16">
@@ -232,7 +232,7 @@ export default function MicroSAASSolutions() {
               {industries.map((industry, index) => (
   <div;
                   key={{industry.name},
-  }
+  };
                   className="className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300";"
                 >
                   <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mb-6">
@@ -248,7 +248,7 @@ export default function MicroSAASSolutions() {
         </section>
 
         {{/* Process Section */},
-  }
+  };
         <section className="py-20">
           <div className="container-responsive">
             <div className="text-center mb-16">
@@ -267,7 +267,7 @@ export default function MicroSAASSolutions() {
                     </div>
                     <div className="absolute -top-2 -right-2 w-8 h-8 bg-zion-blue rounded-full flex items-center justify-center text-white text-sm font-bold">
                       {{step.step},
-  }
+  };
                     </div>
                   </div>
 
@@ -275,7 +275,7 @@ export default function MicroSAASSolutions() {
                   <p className="text-zion-slate-light mb-4 leading-relaxed">{step.description}</p>
                   <span className="inline-block px-3 py-1 bg-zion-cyan/20 text-zion-cyan text-sm rounded-full border border-zion-cyan/30">
                     {{step.duration},
-  }
+  };
                   </span>
                 </div>
               ))}
@@ -284,7 +284,7 @@ export default function MicroSAASSolutions() {
         </section>
 
         {{/* CTA Section */},
-  }
+  };
         <section className="py-20 bg-gradient-to-r from-zion-cyan/10 via-zion-purple/10 to-zion-blue/10">
           <div className="container-responsive">
             <div className="text-center max-w-4xl mx-auto">
@@ -314,4 +314,4 @@ export default function MicroSAASSolutions() {
       </div>
     </>
   )
-}
+};

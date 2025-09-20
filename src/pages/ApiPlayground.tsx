@@ -49,17 +49,17 @@ export default function ApiPlayground() {
       requestExample: {
   text: "I love this new AI technology! It's amazing how it can understand context.",language: "en",features: [["sentiment", "entities", "keywords"],
   ],
-  }
+  };
       responseExample: {
   sentiment: {{ score: 0.9, label: "positive" },
-  }
+  };
         entities: [
   {{ text: "AI technology", type: "technology", confidence: 0.95 },
   },
   ]
         keywords: ["AI", "technology", "amazing", "context"]
         language: "en"
-}
+};
       documentation: 'https://docs.ziontechgroup.com/api/ai-text-analysis',sdk: 'https://github.com/ziontechgroup/ai-sdk',featured: true
 },
   {
@@ -74,7 +74,6 @@ export default function ApiPlayground() {
   ]
       requestExample: {
   region: "us-east-1",type: "compute",status: "running"
-}
       responseExample: {
   resources: [
   {
@@ -82,7 +81,6 @@ export default function ApiPlayground() {
 },
   ]
         total: 1
-}
       documentation: 'https://docs.ziontechgroup.com/api/cloud-resources',sdk: 'https://github.com/ziontechgroup/cloud-sdk',featured: false
 },
   {
@@ -97,13 +95,10 @@ export default function ApiPlayground() {
       requestExample: {
   data: {
   ip: "192.168.1.100",user_agent: "Mozilla/5.0...",action: "login_attempt"
-}
         source: "web_application",timestamp: "2024-01-15T10:30:00Z"
-}
       responseExample: {
   threat_level: "low",risk_score: 0.2,recommendations: ["Enable 2FA", "Monitor login patterns"]
         detected: false
-}
       documentation: 'https://docs.ziontechgroup.com/api/security-threats',sdk: 'https://github.com/ziontechgroup/security-sdk',featured: true
 },
   {
@@ -117,7 +112,6 @@ export default function ApiPlayground() {
       requestExample: {
   query: "SELECT user_id, COUNT(*) as login_count FROM user_logins WHERE date >= '2024-01-01' GROUP BY user_id ORDER BY login_count DESC LIMIT 10";
         format: "json",timeout: 30
-}
       responseExample: {
   results: [
   {{ user_id: "user123", login_count: 45 },
@@ -126,7 +120,6 @@ export default function ApiPlayground() {
   },
   ]
         total_rows: 2,execution_time: 0.15
-}
       documentation: 'https://docs.ziontechgroup.com/api/data-query',sdk: 'https://github.com/ziontechgroup/data-sdk',featured: false
 },
   {
@@ -141,7 +134,6 @@ export default function ApiPlayground() {
   ]
       requestExample: {
   location: "building-a",type: "sensor",status: "active"
-}
       responseExample: {
   devices: [
   {
@@ -149,7 +141,6 @@ export default function ApiPlayground() {
 },
   ]
         total: 1
-}
       documentation: 'https://docs.ziontechgroup.com/api/iot-devices',sdk: 'https://github.com/ziontechgroup/iot-sdk',featured: false
 },
   ]
@@ -174,10 +165,9 @@ const matchesMethod = activeMethod === 'all' || api.method === method.id;
 
   const getCategoryIcon = (categoryId: string) => {
   return categories.find(c => c.id === categoryId)?.icon || <Code className="w-5 h-5" />
-  }
+  };
   const getMethodColor = (method: string) => {
   return methods.find(m => m.id === method)?.color || 'text-zion-slate-light'
-}
   const getStatusColor = (status: string) => {
   switch (status) {
   case 'stable': return 'text-green-400';
@@ -185,13 +175,13 @@ const matchesMethod = activeMethod === 'all' || api.method === method.id;
       case 'alpha': return 'text-red-400';
       default: return 'text-zion-slate-light'
 },
-  }
+  };
   const handleApiSelect = (api: any) => {
   setSelectedApi(api)
     setRequestBody(JSON.stringify(api.requestExample, null, 2))
     setResponseData('')
     setActiveTab('playground')
-  }
+  };
 
   const handleTestApi = async () => {
     if (!selectedApi) return;
@@ -203,11 +193,11 @@ const matchesMethod = activeMethod === 'all' || api.method === method.id;
       setResponseData(JSON.stringify(selectedApi.responseExample, null, 2))
       setIsLoading(false)
     }, 1500)
-  }
+  };
 
   const copyToClipboard = (text: string) => {
   navigator.clipboard.writeText(text)
-  }
+  };
   const downloadResponse = () => {
     if (!responseData) return;
 const blob = new Blob([responseData], { type: 'application/json' })
@@ -219,11 +209,11 @@ const blob = new Blob([responseData], { type: 'application/json' })
     a.click()
     document.body.removeChild(a)
     URL.revokeObjectURL(url)
-  }
+  };
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       {{/* Hero Section */},
-  }
+  };
       <div className="bg-gradient-to-r from-zion-blue-dark to-zion-purple py-20">
         <div className="container mx-auto px-4 text-center">
           <div className="flex justify-center mb-6">
@@ -244,16 +234,16 @@ const blob = new Blob([responseData], { type: 'application/json' })
         <div className="container mx-auto px-4">
           <div className="max-w-7xl mx-auto">
             {{/* Search and Filters */},
-  }
+  };
             <div className="mb-8">
               <div className="relative mb-6">
                 <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-5 h-5" />
                 <input;
                   type="text";
                   value={{searchQuery},
-  }
+  };
                   onChange={{(e) => setSearchQuery(e.target.value)},
-  }
+  };
                   placeholder="Search APIs...";
                   className="className="w-full pl-12 pr-4 py-4 bg-zion-slate border border-zion-slate-light rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent";"
                 />
@@ -261,15 +251,15 @@ const blob = new Blob([responseData], { type: 'application/json' })
 
               <div className="flex flex-wrap gap-4">
                 {{/* Categories */},
-  }
+  };
                 <div className="flex flex-wrap gap-2">
                   {categories.map((category) => (
   <button;
                       key={{category.id},
-  }
+  };
                       onClick={{onClick={() => setActiveCategory(category.id)},
   },
-  }
+  };
                       className={`flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-colors ${
   activeCategory === category.id;
                           ? 'bg-zion-cyan text-zion-slate-dark';
@@ -284,15 +274,15 @@ const blob = new Blob([responseData], { type: 'application/json' })
                 </div>
 
                 {{/* Methods */},
-  }
+  };
                 <div className="flex flex-wrap gap-2">
                   {methods.map((method) => (
   <button;
                       key={{method.id},
-  }
+  };
                       onClick={{onClick={() => setActiveMethod(method.id)},
   },
-  }
+  };
                       className={`px-4 py-2 rounded-lg font-medium transition-colors ${
   activeMethod === method.id;
                           ? 'bg-zion-purple text-white';
@@ -308,17 +298,17 @@ const blob = new Blob([responseData], { type: 'application/json' })
 
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
               {{/* API List */},
-  }
+  };
               <div className="lg:col-span-1">
                 <h2 className="text-2xl font-bold text-white mb-6">Available APIs</h2>
                 <div className="space-y-4">
                   {filteredApis.map((api) => (
   <div;
                       key={{api.id},
-  }
+  };
                       onClick={{onClick={() => handleApiSelect(api)},
   },
-  }
+  };
                       className={`bg-zion-slate border border-zion-slate-light rounded-lg p-4 cursor-pointer hover:border-zion-cyan transition-colors ${
   selectedApi?.id === api.id ? 'border-zion-cyan ring-2 ring-zion-cyan/20' : ''
 }`}
@@ -326,20 +316,20 @@ const blob = new Blob([responseData], { type: 'application/json' })
                       <div className="flex items-start justify-between mb-3">
                         <div className="flex items-center gap-2">
                           {{getCategoryIcon(api.category)},
-  }
+  };
                           <span className="text-sm text-zion-slate-light bg-zion-slate-light/20 px-2 py-1 rounded-full">
                             {{categories.find(c => c.id === api.category)?.name},
-  }
+  };
                           </span>
                         </div>
                         <div className="text-right">
                           <div className={`text-sm font-medium ${getMethodColor(api.method)}`}>
                             {{api.method},
-  }
+  };
                           </div>
                           <div className={`text-xs ${getStatusColor(api.status)}`}>
                             {{api.status},
-  }
+  };
                           </div>
                         </div>
                       </div>
@@ -365,12 +355,12 @@ const blob = new Blob([responseData], { type: 'application/json' })
               </div>
 
               {{/* API Playground */},
-  }
+  };
               <div className="lg:col-span-2">
                 {selectedApi ? (
   <div className="bg-zion-slate border border-zion-slate-light rounded-lg">
                     {{/* API Header */},
-  }
+  };
                     <div className="p-6 border-b border-zion-slate-light">
                       <div className="flex items-center justify-between mb-4">
                         <div>
@@ -380,11 +370,11 @@ const blob = new Blob([responseData], { type: 'application/json' })
                         <div className="flex items-center gap-2">
                           <span className={`px-3 py-1 rounded-full text-sm font-medium ${getMethodColor(selectedApi.method)}`}>
                             {{selectedApi.method},
-  }
+  };
                           </span>
                           <span className={`px-3 py-1 rounded-full text-sm font-medium ${getStatusColor(selectedApi.status)}`}>
                             {{selectedApi.status},
-  }
+  };
                           </span>
                         </div>
                       </div>
@@ -397,12 +387,12 @@ const blob = new Blob([responseData], { type: 'application/json' })
                     </div>
 
                     {{/* Tabs */},
-  }
+  };
                     <div className="flex border-b border-zion-slate-light">
                       <button;
                         onClick={{onClick={() => setActiveTab('playground')},
   },
-  }
+  };
                         className={`px-6 py-3 font-medium transition-colors ${
   activeTab === 'playground';
                             ? 'text-zion-cyan border-b-2 border-zion-cyan';
@@ -414,7 +404,7 @@ const blob = new Blob([responseData], { type: 'application/json' })
                       <button;
                         onClick={{onClick={() => setActiveTab('docs')},
   },
-  }
+  };
                         className={`px-6 py-3 font-medium transition-colors ${
   activeTab === 'docs';
                             ? 'text-zion-cyan border-b-2 border-zion-cyan';
@@ -426,7 +416,7 @@ const blob = new Blob([responseData], { type: 'application/json' })
                       <button;
                         onClick={{onClick={() => setActiveTab('sdk')},
   },
-  }
+  };
                         className={`px-6 py-3 font-medium transition-colors ${
   activeTab === 'sdk';
                             ? 'text-zion-cyan border-b-2 border-zion-cyan';
@@ -438,12 +428,12 @@ const blob = new Blob([responseData], { type: 'application/json' })
                     </div>
 
                     {{/* Tab Content */},
-  }
+  };
                     <div className="p-6">
                       {activeTab === 'playground' && (
   <div className="space-y-6">
                           {{/* Request */},
-  }
+  };
                           <div>
                             <h3 className="text-lg font-semibold text-white mb-3">Request</h3>
                             <div className="bg-zion-slate-dark p-4 rounded-lg">
@@ -452,7 +442,7 @@ const blob = new Blob([responseData], { type: 'application/json' })
                                 <button;
                                   onClick={{onClick={() => copyToClipboard(requestBody)},
   },
-  }
+  };
                                   className="className="text-zion-cyan hover:text-zion-cyan-light transition-colors";"
                                 >
                                   <Copy className="w-4 h-4" />
@@ -460,9 +450,9 @@ const blob = new Blob([responseData], { type: 'application/json' })
                               </div>
                               <textarea;
                                 value={{requestBody},
-  }
+  };
                                 onChange={{(e) => setRequestBody(e.target.value)},
-  }
+  };
                                 className="className="w-full h-32 bg-zion-slate border border-zion-slate-light rounded p-3 text-white font-mono text-sm resize-none focus:outline-none focus:ring-2 focus:ring-zion-cyan";"
                                 placeholder="Enter request body...";
                               />
@@ -470,14 +460,14 @@ const blob = new Blob([responseData], { type: 'application/json' })
                           </div>
 
                           {{/* Test Button */},
-  }
+  };
                           <div className="flex justify-center">
                             <button;
                               onClick={{onClick={handleTestApi},
   },
-  }
+  };
                               disabled={{isLoading},
-  }
+  };
                               className="className="bg-zion-cyan text-zion-slate-dark px-8 py-3 rounded-lg font-semibold hover:bg-zion-cyan-light transition-colors disabled:opacity-50 disabled:cursor-not-allowed inline-flex items-center gap-2";"
                             >
                               {isLoading ? (
@@ -506,7 +496,7 @@ const blob = new Blob([responseData], { type: 'application/json' })
                                     <button;
                                       onClick={{onClick={() => copyToClipboard(responseData)},
   },
-  }
+  };
                                       className="className="text-zion-cyan hover:text-zion-cyan-light transition-colors";"
                                     >
                                       <Copy className="w-4 h-4" />
@@ -514,7 +504,7 @@ const blob = new Blob([responseData], { type: 'application/json' })
                                     <button;
                                       onClick={{onClick={downloadResponse},
   },
-  }
+  };
                                       className="className="text-zion-cyan hover:text-zion-cyan-light transition-colors";"
                                     >
                                       <Download className="w-4 h-4" />
@@ -523,7 +513,7 @@ const blob = new Blob([responseData], { type: 'application/json' })
                                 </div>
                                 <pre className="text-white font-mono text-sm overflow-x-auto">
                                   {{responseData},
-  }
+  };
                                 </pre>
                               </div>
                             </div>
@@ -544,7 +534,7 @@ const blob = new Blob([responseData], { type: 'application/json' })
   param.required ? 'bg-red-500/20 text-red-400' : 'bg-green-500/20 text-green-400'
 }`}>
                                         {{param.required ? 'Required' : 'Optional'},
-  }
+  };
                                       </span>
                                       <span className="text-zion-slate-light text-sm">{param.type}</span>
                                     </div>
@@ -558,7 +548,7 @@ const blob = new Blob([responseData], { type: 'application/json' })
                           <div className="flex justify-center">
                             <a;
                               href={{selectedApi.documentation},
-  }
+  };
                               target="_blank";
                               rel="noopener noreferrer";
                               className="className="bg-zion-purple text-white px-6 py-3 rounded-lg font-semibold hover:bg-zion-purple-light transition-colors inline-flex items-center gap-2";"
@@ -582,7 +572,7 @@ const blob = new Blob([responseData], { type: 'application/json' })
                                 </p>
                                 <a;
                                   href={{selectedApi.sdk},
-  }
+  };
                                   target="_blank";
                                   rel="noopener noreferrer";
                                   className="className="bg-zion-cyan text-zion-slate-dark px-6 py-3 rounded-lg font-semibold hover:bg-zion-cyan-light transition-colors inline-flex items-center gap-2";"
@@ -613,7 +603,7 @@ const blob = new Blob([responseData], { type: 'application/json' })
       </div>
 
       {{/* CTA Section */},
-  }
+  };
       <div className="py-16 bg-gradient-to-r from-zion-blue-dark to-zion-purple">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold text-white mb-6">
@@ -634,4 +624,3 @@ const blob = new Blob([responseData], { type: 'application/json' })
       </div>
     </div>
   )
-}

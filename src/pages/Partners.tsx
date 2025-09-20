@@ -176,7 +176,7 @@ export default function Partners() {
       />
       ;
       {{/* Hero Section */},
-  }
+  };
       <section className="relative overflow-hidden py-20">
         <div className="absolute inset-0 bg-gradient-to-r from-indigo-500/10 via-purple-500/10 to-pink-500/10"></div>
         <div className="container-responsive relative z-10">
@@ -212,7 +212,7 @@ export default function Partners() {
         </div>
         ;
         {{/* Background Elements */},
-  }
+  };
         <div className="absolute inset-0 -z-10">
           <div className="absolute top-20 left-10 w-72 h-72 bg-cyan-500/10 rounded-full blur-3xl"></div>
           <div className="absolute bottom-20 right-10 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl"></div>
@@ -220,18 +220,18 @@ export default function Partners() {
       </section>
 
       {{/* Partnership Types */},
-  }
+  };
       <section className="py-20">
         <div className="container-responsive">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             viewport={{ once: true },
-  }
+  };
             className="className="text-center mb-16";"
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
@@ -247,15 +247,15 @@ export default function Partners() {
             {partnershipTypes.map((type, index) => (
   <motion.div;
                 key={{type.title},
-  }
+  };
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.6, delay: index * 0.1 },
-  }
+  };
                 viewport={{ once: true },
-  }
+  };
                 className="className="p-8 rounded-2xl border border-slate-700/50 bg-slate-800/30 hover:border-slate-600/50 transition-all duration-300 hover:scale-105";"
               >
                 <div className="flex items-start gap-4 mb-6">
@@ -286,11 +286,11 @@ export default function Partners() {
                     {type.examples.map((example, exampleIndex) => (
   <span;
                         key={{exampleIndex},
-  }
+  };
                         className="className="px-3 py-1 bg-slate-700/50 text-cyan-400 text-xs rounded-full border border-cyan-400/20";"
                       >
                         {{example},
-  }
+  };
                       </span>
                     ))}
                   </div>
@@ -302,18 +302,18 @@ export default function Partners() {
       </section>
 
       {{/* Partner Benefits */},
-  }
+  };
       <section className="py-20 bg-slate-800/30">
         <div className="container-responsive">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             viewport={{ once: true },
-  }
+  };
             className="className="text-center mb-16";"
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
@@ -329,15 +329,15 @@ export default function Partners() {
             {partnerBenefits.map((benefit, index) => (
   <motion.div;
                 key={{benefit.title},
-  }
+  };
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.6, delay: index * 0.1 },
-  }
+  };
                 viewport={{ once: true },
-  }
+  };
                 className="className="text-center";"
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center mx-auto mb-4">
@@ -353,18 +353,18 @@ export default function Partners() {
       </section>
 
       {{/* Partner Programs */},
-  }
+  };
       <section className="py-20">
         <div className="container-responsive">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             viewport={{ once: true },
-  }
+  };
             className="className="text-center mb-16";"
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
@@ -380,15 +380,15 @@ export default function Partners() {
             {partnerPrograms.map((program, index) => (
   <motion.div;
                 key={{program.level},
-  }
+  };
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.6, delay: index * 0.1 },
-  }
+  };
                 viewport={{ once: true },
-  }
+  };
                 className={`p-6 rounded-xl border transition-all duration-300 hover:scale-105 ${
   program.level === 'Gold' || program.level === 'Platinum';
                     ? 'border-cyan-400/50 bg-gradient-to-br from-slate-800/50 to-slate-700/50 ring-2 ring-cyan-400/20';
@@ -424,18 +424,18 @@ export default function Partners() {
       </section>
 
       {{/* Success Stories */},
-  }
+  };
       <section className="py-20 bg-slate-800/30">
         <div className="container-responsive">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             viewport={{ once: true },
-  }
+  };
             className="className="text-center mb-16";"
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
@@ -451,21 +451,21 @@ export default function Partners() {
             {successStories.map((story, index) => (
   <motion.div;
                 key={{story.partner},
-  }
+  };
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.6, delay: index * 0.1 },
-  }
+  };
                 viewport={{ once: true },
-  }
+  };
                 className="className="p-6 rounded-xl border border-slate-700/50 bg-slate-800/30 hover:border-slate-600/50 transition-all duration-300 hover:scale-105";"
               >
                 <div className="text-center mb-6">
                   <div className={`w-16 h-16 bg-gradient-to-br ${story.color} rounded-xl flex items-center justify-center mx-auto mb-4 text-3xl`}>
                     {{story.logo},
-  }
+  };
                   </div>
                   <h3 className="text-xl font-bold text-white mb-2">{story.partner}</h3>
                   <p className="text-cyan-400 font-medium mb-1">{story.type}</p>
@@ -487,19 +487,19 @@ export default function Partners() {
       </section>
 
       {{/* Become a Partner CTA */},
-  }
+  };
       <section id="become-partner" className="py-20">
         <div className="container-responsive">
           <div className="bg-gradient-to-r from-slate-800/50 to-slate-700/50 rounded-3xl p-12 border border-slate-700/50">
             <motion.div;
               initial={{ opacity: 0, y: 20 },
-  }
+  };
               whileInView={{ opacity: 1, y: 0 },
-  }
+  };
               transition={{ duration: 0.8 },
-  }
+  };
               viewport={{ once: true },
-  }
+  };
               className="className="text-center max-w-4xl mx-auto";"
             >
               <h2 className="text-3xl lg: text-4xl font-bold text-white mb-6">
@@ -555,4 +555,4 @@ export default function Partners() {
       </section>
     </div>
   )
-}
+};

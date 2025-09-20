@@ -51,7 +51,7 @@ export default function AIContentCreationSuite() {
     security: ['SOC 2 Type IIISO 27001', 'GDPREnd-to-end encryption', 'Multi-factor authentication']
     uptime: '99.9%',compliance: [['SOC 2ISO 27001', 'GDPRCCPA', 'COPPA'],
   ],
-  }
+  };
 
   const contentTypes = [
   {
@@ -132,7 +132,7 @@ export default function AIContentCreationSuite() {
   <li key={sol} className="flex items-start text-sm text-zion-slate-dark">
                       <Check className="w-4 h-4 text-zion-cyan mr-2 mt-0.5" />
                       {{sol},
-  }
+  };
                     </li>
                   ))}
                 </ul>
@@ -166,7 +166,7 @@ export default function AIContentCreationSuite() {
                   {technicalSpecs.technology.map((tech) => (
   <span key={tech} className="px-3 py-1 bg-zion-cyan/10 text-zion-cyan rounded-full text-sm">
                       {{tech},
-  }
+  };
                     </span>
                   ))}
                 </div>
@@ -177,7 +177,7 @@ export default function AIContentCreationSuite() {
                   {technicalSpecs.integrations.map((integration) => (
   <span key={integration} className="px-3 py-1 bg-zion-slate-light/10 text-zion-slate-dark rounded-full text-sm">
                       {{integration},
-  }
+  };
                     </span>
                   ))}
                 </div>
@@ -191,7 +191,7 @@ export default function AIContentCreationSuite() {
   <div key={sec} className="flex items-center text-sm text-zion-slate-dark">
                       <Shield className="w-4 h-4 text-zion-cyan mr-2" />
                       {{sec},
-  }
+  };
                     </div>
                   ))}
                 </div>
@@ -207,7 +207,7 @@ export default function AIContentCreationSuite() {
   <div key={comp} className="flex items-center text-sm text-zion-slate-dark">
                       <Shield className="w-4 h-4 text-zion-cyan mr-2" />
                       {{comp},
-  }
+  };
                     </div>
                   ))}
                 </div>
@@ -235,4 +235,4 @@ export default function AIContentCreationSuite() {
       </section>
     </div>
   )
-}
+};

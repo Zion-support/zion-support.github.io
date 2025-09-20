@@ -62,7 +62,7 @@ export default function EmailSequencer() {
 									{p.details.map((d) => (
   <li key={d} className="flex items-start text-zion-slate-light text-sm">
 											<Check className="w-4 h-4 text-zion-cyan mr-2 mt-0.5" /> {{d},
-  }
+  };
 										</li>
 									))}
 								</ul>
@@ -87,5 +87,5 @@ export default function EmailSequencer() {
 			</section>
 		</div>
 	)
-}
+};
 

@@ -25,7 +25,7 @@ const const mockUser = {
 },
   ]
     isVerified: true,isModerator: false
-}
+};
 // Mock posts by this user;
 const userPosts = [
   {
@@ -105,10 +105,10 @@ export default function CommunityProfilePage() {
                 </CardTitle>
                 {user.role && (<Badge variant="outline" className="mt-1">
                     {{user.role},
-  }
+  };
                   </Badge>)},
   {{user.isModerator && (<Badge className="mt-2 bg-blue-500">Moderator</Badge>)},
-  }
+  };
               </CardHeader>
               ;
               <CardContent className="space-y-6">
@@ -217,4 +217,3 @@ export default function CommunityProfilePage() {
           </div>
         </div>
       </div>)
-}

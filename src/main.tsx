@@ -13,4 +13,4 @@ if (rootElement) {
       </EnhancedErrorBoundary>
     </React.StrictMode>
   )
-}
+};

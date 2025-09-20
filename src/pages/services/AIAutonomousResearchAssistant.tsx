@@ -84,7 +84,7 @@ export default function AIAutonomousResearchAssistant() {
   ]
     apiEndpoints: 200,uptime: "99.99%",security: [["SOC 2", "GDPR", "HIPAA", "Zero-trust architecture"],
   ],
-  }
+  };
 
   const const pricing = {
   = {
@@ -97,24 +97,24 @@ export default function AIAutonomousResearchAssistant() {
       "Custom integrations";
       "Advanced analytics"
 ],
-  }
+  };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light text-white relative overflow-hidden">
       {{/* Futuristic Animated Background */},
-  }
+  };
       <div className="fixed inset-0 overflow-hidden pointer-events-none">
         {{/* Animated grid with neon effect */},
-  }
+  };
         <div className="absolute inset-0 bg-[linear-gradient(rgba(34,221,210,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(34,221,210,0.1)_1px,transparent_1px)] bg-[size:50px_50px] animate-pulse"></div>
         ;
         {{/* Floating particles with neon glow */},
-  }
+  };
         <div className="absolute inset-0">
           {[...Array(20)].map((_, i) => (
   <motion.div;
               key={{i},
-  }
+  };
               className="className="absolute w-1 h-1 bg-cyan-400 rounded-full opacity-80 shadow-lg shadow-cyan-400/50";"
               animate={{
   x: [0, 100, 0]
@@ -123,22 +123,22 @@ export default function AIAutonomousResearchAssistant() {
                 scale: [[0.5, 1.5, 0.5],
   ],
   },
-  }
+  };
               transition={{
   duration: 3 + i * 0.2,repeat: Infinity,delay: i * 0.1,ease: "easeInOut"
 },
-  }
+  };
               style={{
   left: `${Math.random() * 100}%`;
                 top: `${Math.random() * 100}%`
 },
-  }
+  };
             />
           ))}
         </div>
         ;
         {{/* Gradient orbs with neon glow */},
-  }
+  };
         <motion.div ;
           className="className="absolute top-20 left-20 w-72 h-72 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full blur-3xl";"
           animate={{
@@ -146,11 +146,11 @@ export default function AIAutonomousResearchAssistant() {
             opacity: [[0.2, 0.5, 0.2],
   ],
   },
-  }
+  };
           transition={{
   duration: 4,repeat: Infinity,ease: "easeInOut"
 },
-  }
+  };
         />
         ;
         <motion.div ;
@@ -160,25 +160,25 @@ export default function AIAutonomousResearchAssistant() {
             opacity: [[0.5, 0.2, 0.5],
   ],
   },
-  }
+  };
           transition={{
   duration: 5,repeat: Infinity,ease: "easeInOut",delay: 1
 },
-  }
+  };
         />
       </div>
 
       {{/* Header Section */},
-  }
+  };
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
           >
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-400/30 text-cyan-400 text-sm font-medium mb-6">
               <Brain className="w-4 h-4 mr-2" />
@@ -194,14 +194,14 @@ export default function AIAutonomousResearchAssistant() {
           </motion.div>
 
           {{/* Key Metrics */},
-  }
+  };
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 },
-  }
+  };
             transition={{ duration: 0.8, delay: 0.2 },
-  }
+  };
             className="className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12";"
           >
             <div className="bg-gradient-to-br from-cyan-500/20 to-blue-500/20 border border-cyan-400/30 rounded-2xl p-6 backdrop-blur-sm">
@@ -223,14 +223,14 @@ export default function AIAutonomousResearchAssistant() {
           </motion.div>
 
           {{/* CTA Buttons */},
-  }
+  };
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 },
-  }
+  };
             transition={{ duration: 0.8, delay: 0.4 },
-  }
+  };
             className="className="flex flex-col sm:flex-row gap-4 justify-center items-center";"
           >
             <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 rounded-2xl font-semibold text-white transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/25 flex items-center">
@@ -246,17 +246,17 @@ export default function AIAutonomousResearchAssistant() {
       </section>
 
       {{/* Navigation Tabs */},
-  }
+  };
       <div className="relative py-8 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-wrap justify-center gap-2 mb-8">
             {['overviewfeatures', 'pricingtechnical', 'contact'].map((tab) => (
   <button;
                 key={{tab},
-  }
+  };
                 onClick={{onClick={() => setActiveTab(tab)},
   },
-  }
+  };
                 className={`px-6 py-3 rounded-xl font-medium transition-all duration-300 ${
   activeTab === tab;
                     ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white shadow-lg shadow-cyan-500/25';
@@ -264,7 +264,7 @@ export default function AIAutonomousResearchAssistant() {
 }`}
               >
                 {{tab.charAt(0).toUpperCase() + tab.slice(1)},
-  }
+  };
               </button>
             ))}
           </div>
@@ -272,7 +272,7 @@ export default function AIAutonomousResearchAssistant() {
       </div>
 
       {{/* Content Sections */},
-  }
+  };
       <section className="relative py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <AnimatePresence mode="wait">
@@ -280,13 +280,13 @@ export default function AIAutonomousResearchAssistant() {
   <motion.div;
                 key="overview";
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 animate={{ opacity: 1, y: 0 },
-  }
+  };
                 exit={{ opacity: 0, y: -20 },
-  }
+  };
                 transition={{ duration: 0.5 },
-  }
+  };
                 className="className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center";"
               >
                 <div>
@@ -349,13 +349,13 @@ export default function AIAutonomousResearchAssistant() {
   <motion.div;
                 key="features";
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 animate={{ opacity: 1, y: 0 },
-  }
+  };
                 exit={{ opacity: 0, y: -20 },
-  }
+  };
                 transition={{ duration: 0.5 },
-  }
+  };
                 className="className="space-y-8";"
               >
                 <div className="text-center mb-12">
@@ -371,13 +371,13 @@ export default function AIAutonomousResearchAssistant() {
                   {features.map((feature, index) => (
   <motion.div;
                       key={{index},
-  }
+  };
                       initial={{ opacity: 0, y: 20 },
-  }
+  };
                       animate={{ opacity: 1, y: 0 },
-  }
+  };
                       transition={{ duration: 0.5, delay: index * 0.1 },
-  }
+  };
                       className="className="bg-gradient-to-br from-zion-slate/50 to-zion-slate/30 border border-cyan-400/20 rounded-2xl p-6 backdrop-blur-sm hover:border-cyan-400/40 transition-all duration-300 group";"
                     >
                       <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
@@ -396,13 +396,13 @@ export default function AIAutonomousResearchAssistant() {
   <motion.div;
                 key="pricing";
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 animate={{ opacity: 1, y: 0 },
-  }
+  };
                 exit={{ opacity: 0, y: -20 },
-  }
+  };
                 transition={{ duration: 0.5 },
-  }
+  };
                 className="className="space-y-8";"
               >
                 <div className="text-center mb-12">
@@ -416,7 +416,7 @@ export default function AIAutonomousResearchAssistant() {
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                   {{/* Monthly Plan */},
-  }
+  };
                   <div className="bg-gradient-to-br from-zion-slate/50 to-zion-slate/30 border border-cyan-400/30 rounded-3xl p-8 backdrop-blur-sm relative">
                     <div className="text-center">
                       <h3 className="text-2xl font-bold text-white mb-4">Monthly</h3>
@@ -427,7 +427,7 @@ export default function AIAutonomousResearchAssistant() {
   <li key={index} className="flex items-center text-gray-300">
                             <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                             {{feature},
-  }
+  };
                           </li>
                         ))}
                       </ul>
@@ -438,7 +438,7 @@ export default function AIAutonomousResearchAssistant() {
                   </div>
 
                   {{/* Yearly Plan */},
-  }
+  };
                   <div className="bg-gradient-to-br from-cyan-500/20 to-blue-500/20 border-2 border-cyan-400 rounded-3xl p-8 backdrop-blur-sm relative transform scale-105">
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                       <div className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
@@ -454,7 +454,7 @@ export default function AIAutonomousResearchAssistant() {
   <li key={index} className="flex items-center text-gray-300">
                             <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                             {{feature},
-  }
+  };
                           </li>
                         ))}
                       </ul>
@@ -465,7 +465,7 @@ export default function AIAutonomousResearchAssistant() {
                   </div>
 
                   {{/* Enterprise Plan */},
-  }
+  };
                   <div className="bg-gradient-to-br from-zion-slate/50 to-zion-slate/30 border border-purple-400/30 rounded-3xl p-8 backdrop-blur-sm relative">
                     <div className="text-center">
                       <h3 className="text-2xl font-bold text-white mb-4">Enterprise</h3>
@@ -501,13 +501,13 @@ export default function AIAutonomousResearchAssistant() {
   <motion.div;
                 key="technical";
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 animate={{ opacity: 1, y: 0 },
-  }
+  };
                 exit={{ opacity: 0, y: -20 },
-  }
+  };
                 transition={{ duration: 0.5 },
-  }
+  };
                 className="className="space-y-8";"
               >
                 <div className="text-center mb-12">
@@ -530,7 +530,7 @@ export default function AIAutonomousResearchAssistant() {
                         {technicalSpecs.technology.map((tech, index) => (
   <div key={index} className="bg-zion-slate/50 rounded-lg px-3 py-2 text-center text-sm text-gray-300">
                             {{tech},
-  }
+  };
                           </div>
                         ))}
                       </div>
@@ -546,7 +546,7 @@ export default function AIAutonomousResearchAssistant() {
   <div key={index} className="flex items-center text-gray-300">
                             <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                             {{integration},
-  }
+  };
                           </div>
                         ))}
                       </div>
@@ -585,7 +585,7 @@ export default function AIAutonomousResearchAssistant() {
   <div key={index} className="flex items-center text-gray-300">
                             <ShieldCheck className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                             {{standard},
-  }
+  };
                           </div>
                         ))}
                       </div>
@@ -598,13 +598,13 @@ export default function AIAutonomousResearchAssistant() {
   <motion.div;
                 key="contact";
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 animate={{ opacity: 1, y: 0 },
-  }
+  };
                 exit={{ opacity: 0, y: -20 },
-  }
+  };
                 transition={{ duration: 0.5 },
-  }
+  };
                 className="className="max-w-4xl mx-auto";"
               >
                 <div className="text-center mb-12">
@@ -662,7 +662,7 @@ export default function AIAutonomousResearchAssistant() {
       </section>
 
       {{/* Contact Information */},
-  }
+  };
       <section className="py-16 px-4 sm: px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <div className="grid md:grid-cols-3 gap-8">
@@ -686,4 +686,4 @@ export default function AIAutonomousResearchAssistant() {
       </section>
     </div>
   )
-}
+};

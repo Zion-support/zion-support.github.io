@@ -2,11 +2,11 @@ export type ServiceItem = {
   id: string,title: string,description: string,category: 'Micro SaaS' | 'IT Services' | 'AI Solutions' | 'Cybersecurity' | 'Data & Analytics' | 'Cloud & DevOps' | 'Quantum Computing' | 'Blockchain & Web3' | 'IoT & Edge' | 'Green Tech' | 'Space Tech' | 'BioTech & Health' | 'FinTech & DeFi' | 'Metaverse & AR/VR' | 'Autonomous Systems',price: string, // average market starting price;
 	billing: 'month' | 'project' | 'hour',features: string[],ctaLabel: string,href: string, // internal path or external URL;
 	external?: boolean
-}
+};
 export type ServiceCategory = {
   name: string,slug: string,items: ServiceItem[[],
   ],
-  }
+  };
 export const servicesCatalog: ServiceCategory[] = [
   {
   name: 'Micro SaaS',slug: 'micro-saas',items: [
@@ -60,7 +60,6 @@ export const servicesCatalog: ServiceCategory[] = [
 					'Risk assessment'
 ]
 				ctaLabel: 'Optimize Supply Chain',href: 'https://ziontechgroup.com/contact'
-}
 			;
 			{
   id: 'soc2-compliance-automation-saas',title: 'SOC 2 Compliance Automation SaaS',description: 'Automate evidence collection, policy mapping, and control monitoring to pass SOC 2 audits faster.';
@@ -79,7 +78,6 @@ export const servicesCatalog: ServiceCategory[] = [
 					'Compliance logging'
 ]
 				ctaLabel: 'Monitor Models',href: 'https://ziontechgroup.com/services'
-}
 			;
 			{
   id: 'gdpr-dsar-portal',title: 'GDPR DSAR Portal',description: 'Secure intake, verification, and fulfillment of Data Subject Access Requests with audit trails.';
@@ -150,7 +148,6 @@ export const servicesCatalog: ServiceCategory[] = [
 					'Regulatory compliance'
 ]
 				ctaLabel: 'Vehicle Integration',href: 'https://ziontechgroup.com/contact'
-}
 			;
 			{
   id: 'enterprise-rag-search',title: 'Enterprise RAG Search Platform',description: 'Private, secure Retrieval-Augmented Generation over your docs, wikis, tickets, and data.';
@@ -172,7 +169,6 @@ export const servicesCatalog: ServiceCategory[] = [
 					'Okta and SSO ready'
 ]
 				ctaLabel: 'Deploy Copilots',href: 'https://ziontechgroup.com/services'
-}
 			// New Innovative AI Services Added;
 			{
   id: 'quantum-consciousness-simulation-2030',title: 'Quantum Consciousness Simulation Platform 2030',description: 'Revolutionary quantum computing platform that simulates human consciousness, enabling breakthrough research in cognitive science, psychology, and artificial general intelligence.';
@@ -209,7 +205,6 @@ export const servicesCatalog: ServiceCategory[] = [
 					'Mobile app for creatorsAPI integration capabilities'
 ]
 				ctaLabel: 'Creative Access',href: 'https://ziontechgroup.com/contact'
-}
 			;
 			{
   id: 'synthetic-data-generator',title: 'Synthetic Data Generator',description: 'Privacy-safe synthetic data for analytics, testing, and ML with differential privacy.';
@@ -259,7 +254,6 @@ export const servicesCatalog: ServiceCategory[] = [
 					'Scalable architecture'
 ]
 				ctaLabel: 'Edge Deployment',href: 'https://ziontechgroup.com/contact'
-}
 			;
 			{
   id: 'platform-engineering-kubernetes',title: 'Platform Engineering on Kubernetes',description: 'Golden paths, IDP, and paved roads for developers with secure, standardized delivery.';
@@ -280,7 +274,6 @@ export const servicesCatalog: ServiceCategory[] = [
 					'Executive reporting'
 ]
 				ctaLabel: 'Cut Cloud Costs',href: 'https://ziontechgroup.com/services'
-}
 			;
 			{
   id: 'managed-kubernetes-sre',title: 'Managed Kubernetes SRE',description: 'Hands-on SRE for clusters: upgrades, security baselines, autoscaling, and incident response.';
@@ -322,7 +315,6 @@ export const servicesCatalog: ServiceCategory[] = [
 					'Compliance ready'
 ]
 				ctaLabel: 'Quantum Security',href: 'https://ziontechgroup.com/contact'
-}
 			;
 			{
   id: 'managed-detection-response',title: 'Managed Detection & Response (MDR)',description: '24/7 monitoring, threat hunting, and incident response with SIEM/SOAR integration.';
@@ -365,7 +357,6 @@ export const servicesCatalog: ServiceCategory[] = [
 					'Data integration'
 ]
 				ctaLabel: 'BI Assessment',href: 'https://ziontechgroup.com/contact'
-}
 			;
 			{
   id: 'data-quality-observability',title: 'Data Quality & Observability',description: 'Monitor freshness, completeness, and lineage to trust your analytics and AI.';
@@ -408,7 +399,6 @@ export const servicesCatalog: ServiceCategory[] = [
 					'Enterprise support'
 ]
 				ctaLabel: 'Cloud Migration',href: 'https://ziontechgroup.com/contact'
-}
 			;
 			{
   id: 'serverless-application-factory',title: 'Serverless Application Factory',description: 'Blueprints and accelerators to build secure, low-cost serverless backends fast.';
@@ -428,7 +418,6 @@ export const servicesCatalog: ServiceCategory[] = [
 					'Executive tabletop exercises'
 ]
 				ctaLabel: 'Harden Resilience',href: 'https://ziontechgroup.com/services'
-}
 			;
 			{
   id: 'data-contracts-platform',title: 'Data Contracts Platform',description: 'Define and enforce data contracts across services with schema checks, drift alerts, and lineage.';
@@ -534,7 +523,6 @@ export const servicesCatalog: ServiceCategory[] = [
 					'Performance monitoring'
 ]
 				ctaLabel: 'Edge AI Demo',href: 'https://ziontechgroup.com/contact'
-}
 			;
 			{
   id: 'predictive-maintenance-iot',title: 'Predictive Maintenance for IoT Fleets',description: 'Deploy sensors and analytics to predict failures and optimize uptime across assets.',category: 'IoT & Edge',price: '$2,499';
@@ -575,7 +563,6 @@ export const servicesCatalog: ServiceCategory[] = [
 					'Policy recommendations'
 ]
 				ctaLabel: 'Climate Demo',href: 'https://ziontechgroup.com/contact'
-}
 			;
 			{
   id: 'carbon-accounting-saas',title: 'Carbon Accounting & ESG Reporting',description: 'Automate Scope 1–3 emissions tracking with audit-ready ESG disclosures.',category: 'Green Tech',price: '$999',billing: 'month',features: [
@@ -607,7 +594,6 @@ export const servicesCatalog: ServiceCategory[] = [
 					'Interplanetary network'
 ]
 				ctaLabel: 'Connect Space',href: 'https://ziontechgroup.com/contact'
-}
 			;
 			{
   id: 'satellite-imagery-analytics',title: 'Satellite Imagery Analytics',description: 'Computer vision on multi-spectral imagery for agriculture, insurance, and defense insights.';
@@ -640,7 +626,6 @@ export const servicesCatalog: ServiceCategory[] = [
 					'Research collaboration'
 ]
 				ctaLabel: 'Analyze Genome',href: 'https://ziontechgroup.com/contact'
-}
 			;
 			{
   id: 'telemedicine-ai-triage',title: 'Telemedicine AI Triage',description: 'AI symptom checker with escalation workflows to clinicians and EHR integration.',category: 'BioTech & Health',price: '$1,999';
@@ -673,7 +658,6 @@ export const servicesCatalog: ServiceCategory[] = [
 					'Smart contract security'
 ]
 				ctaLabel: 'Deploy Protocol',href: 'https://ziontechgroup.com/contact'
-}
 			;
 			{
   id: 'kyc-aml-transaction-monitoring',title: 'KYC/AML Transaction Monitoring',description: 'Detect suspicious activity using rules + ML with investigator case management.',category: 'FinTech & DeFi',price: '$2,499';
@@ -705,7 +689,6 @@ export const servicesCatalog: ServiceCategory[] = [
 					'Safety monitoring'
 ]
 				ctaLabel: 'Navigate AR',href: 'https://ziontechgroup.com/contact'
-}
 			;
 			{
   id: 'vr-training-simulators',title: 'VR Training Simulators',description: 'Enterprise-grade immersive learning for safety, field ops, and medical procedures.';
@@ -739,7 +722,6 @@ export const servicesCatalog: ServiceCategory[] = [
 					'Performance analytics'
 ]
 				ctaLabel: 'Deploy Robots',href: 'https://ziontechgroup.com/contact'
-}
 			;
 			{
   id: 'warehouse-robotics-orchestration',title: 'Warehouse Robotics Orchestration',description: 'Coordinate AMRs, conveyors, and pick stations to maximize throughput and safety.';
@@ -752,7 +734,7 @@ export const servicesCatalog: ServiceCategory[] = [
 				ctaLabel: 'Orchestrate Robots',href: 'https://ziontechgroup.com/services'
 },
   ],
-  }
+  };
 	// New Service Categories Added;
 	{
   name: 'Supply Chain & Logistics',slug: 'supply-chain-logistics',items: [

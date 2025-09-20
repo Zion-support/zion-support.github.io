@@ -1,12 +1,12 @@
 export interface ExpandedInnovativeService {
   id: string,title: string,description: string,category: string,subcategory: string,price: number,currency: string,pricingModel: string,features: string[],benefits: string[],useCases: string[],targetAudience: string[],tags: string[],estimatedDelivery: string,supportLevel: string,marketPrice: string,roi: string,innovationLevel: string,contactInfo: {
   phone: string,email: string,website: string
-}
+};
   technicalSpecs?: {
   technology: string[],integrations: string[],apiEndpoints: number,uptime: string,security: string[[],
   ],
   },
-  }
+  };
 
 export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
   // AI-Powered Cybersecurity Threat Intelligence;
@@ -49,14 +49,13 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
     estimatedDelivery: "8-10 weeks",supportLevel: "enterprise",marketPrice: "$2,499 - $7,999/month";
     roi: "300-500%",innovationLevel: "Advanced",contactInfo: {
   phone: "+1 302 464 0950",email: "kleber@ziontechgroup.com",website: "https://ziontechgroup.com"
-}
     technicalSpecs: {
   technology: ["AI/ML", "Blockchain", "Zero Trust", "SIEM", "SOAR"]
       integrations: ["AWS", "Azure", "GCP", "Splunk", "QRadar"]
       apiEndpoints: 150,uptime: "99.99%",security: [["SOC 2", "ISO 27001", "GDPR", "HIPAA", "FedRAMP"],
   ],
   },
-  }
+  };
 
   // AI Sales Co-pilot for SMBs;
   {
@@ -92,14 +91,13 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
     estimatedDelivery: "1–2 weeks",supportLevel: "professional",marketPrice: "$499 – $1,499/month";
     roi: "200–350%",innovationLevel: "Advanced",contactInfo: {
   phone: "+1 302 464 0950",email: "kleber@ziontechgroup.com",website: "https://ziontechgroup.com"
-}
     technicalSpecs: {
   technology: ["LLM", "Vector DB", "RAG", "Webhooks"]
       integrations: ["Salesforce", "HubSpot", "Pipedrive", "Outlook", "Gmail"]
       apiEndpoints: 42,uptime: "99.9%",security: [["SOC 2", "GDPR", "SAML SSO"],
   ],
   },
-  }
+  };
 
   // FinOps cost optimization for cloud;
   {
@@ -128,14 +126,14 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
     tags: ["FinOps", "Cloud", "Kubernetes", "AWS", "Azure", "GCP"]
     estimatedDelivery: "2–4 weeks",supportLevel: "enterprise",marketPrice: "$1,200 – $5,000/month";
     roi: "200–500%",innovationLevel: "Professional",contactInfo: {{ phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com", website: "https://ziontechgroup.com" },
-  }
+  };
     technicalSpecs: {
   technology: ["AWS CUR", "BigQuery", "Athena", "Prometheus"]
       integrations: ["AWS", "Azure", "GCP", "Datadog", "PagerDuty"]
       apiEndpoints: 65,uptime: "99.9%",security: [["SOC 2", "ISO 27001", "SSO"],
   ],
   },
-  }
+  };
 
   // Managed MLOps platform;
   {
@@ -164,14 +162,14 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
     tags: ["MLOps", "Feature Store", "Monitoring", "Compliance"]
     estimatedDelivery: "4–8 weeks",supportLevel: "enterprise",marketPrice: "$2,500 – $8,000/month";
     roi: "250–400%",innovationLevel: "Advanced",contactInfo: {{ phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com", website: "https://ziontechgroup.com" },
-  }
+  };
     technicalSpecs: {
   technology: ["Kubernetes", "Ray", "Feast", "MLflow", "Kafka"]
       integrations: ["SageMaker", "Vertex AI", "Databricks", "Snowflake"]
       apiEndpoints: 93,uptime: "99.95%",security: [["SOC 2", "HIPAA", "GDPR"],
   ],
   },
-  }
+  };
 
   // eCommerce personalization micro‑SaaS;
   {
@@ -201,7 +199,7 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
     estimatedDelivery: "3–7 days",supportLevel: "professional",marketPrice: "$299 – $1,999/month";
     roi: "300–700%",innovationLevel: "Professional",contactInfo: {{ phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com", website: "https://ziontechgroup.com" },
   },
-  }
+  };
   // SOC2-in-a-box compliance automation;
   {
   id: "soc2-in-a-box",title: "SOC 2‑in‑a‑Box Compliance Automation",description: "Prebuilt controls, evidence collection, risk register, and auditor‑ready reports with integrations to your cloud and tooling.";
@@ -230,7 +228,7 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
     estimatedDelivery: "2–3 weeks",supportLevel: "professional",marketPrice: "$700 – $3,500/month";
     roi: "200–400%",innovationLevel: "Professional",contactInfo: {{ phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com", website: "https://ziontechgroup.com" },
   },
-  }
+  };
   // Data platform in a week (modern stack)
   {
   id: "modern-data-platform-week",title: "Modern Data Platform in a Week",description: "Fixed‑scope build of ingestion, warehouse, metrics layer, and BI with dbt, a cloud warehouse, and a production‑grade CI/CD.";
@@ -258,14 +256,14 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
     tags: ["Data", "dbt", "Snowflake", "BigQuery", "Metrics"]
     estimatedDelivery: "1 week",supportLevel: "professional",marketPrice: "$15,000 – $45,000 one‑time";
     roi: "150–300%",innovationLevel: "Advanced",contactInfo: {{ phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com", website: "https://ziontechgroup.com" },
-  }
+  };
     technicalSpecs: {
   technology: ["Fivetran", "Airbyte", "dbt", "BigQuery", "Snowflake"]
       integrations: ["GA4", "Salesforce", "HubSpot", "Stripe", "Postgres"]
       apiEndpoints: 18,uptime: "99.9%",security: [["SSO", "Row‑level security"],
   ],
   },
-  }
+  };
 
   // Blockchain-Based Supply Chain Transparency;
   {
@@ -308,7 +306,7 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
     roi: "250-400%",innovationLevel: "Advanced",contactInfo: {
   phone: "+1 302 464 0950",email: "kleber@ziontechgroup.com",website: "https://ziontechgroup.com"
 },
-  }
+  };
   // IoT Edge Computing Analytics Platform;
   {
   id: "iot-edge-computing-analytics",title: "IoT Edge Computing Analytics Platform",description: "Intelligent edge computing platform that processes IoT data locally, reducing latency, bandwidth costs, and enabling real-time decision making for industrial and smart city applications.";
@@ -350,7 +348,7 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
     roi: "300-450%",innovationLevel: "Advanced",contactInfo: {
   phone: "+1 302 464 0950",email: "kleber@ziontechgroup.com",website: "https://ziontechgroup.com"
 },
-  }
+  };
   // AI-Powered Legal Document Analysis;
   {
   id: "ai-legal-document-analysis",title: "AI Legal Document Analysis Platform",description: "Intelligent legal document analysis platform that uses AI to review, analyze, and extract key information from contracts, legal documents, and regulatory filings.";
@@ -392,7 +390,7 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
     roi: "200-350%",innovationLevel: "Advanced",contactInfo: {
   phone: "+1 302 464 0950",email: "kleber@ziontechgroup.com",website: "https://ziontechgroup.com"
 },
-  }
+  };
   // Quantum-Ready Cryptography Platform;
   {
   id: "quantum-ready-cryptography",title: "Quantum-Ready Cryptography Platform",description: "Future-proof cryptography platform that implements post-quantum cryptographic algorithms, ensuring data security against quantum computing threats.";
@@ -434,7 +432,7 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
     roi: "400-600%",innovationLevel: "Cutting-edge",contactInfo: {
   phone: "+1 302 464 0950",email: "kleber@ziontechgroup.com",website: "https://ziontechgroup.com"
 },
-  }
+  };
   // AI-Powered Healthcare Diagnostics;
   {
   id: "ai-healthcare-diagnostics",title: "AI Healthcare Diagnostics Platform",description: "Advanced healthcare diagnostics platform that uses AI to analyze medical images, patient data, and symptoms to assist healthcare professionals in diagnosis and treatment planning.";
@@ -476,7 +474,7 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
     roi: "350-500%",innovationLevel: "Advanced",contactInfo: {
   phone: "+1 302 464 0950",email: "kleber@ziontechgroup.com",website: "https://ziontechgroup.com"
 },
-  }
+  };
   // Sustainable Energy Management Platform;
   {
   id: "sustainable-energy-management",title: "Sustainable Energy Management Platform",description: "Comprehensive energy management platform that optimizes energy consumption, integrates renewable energy sources, and provides sustainability analytics for organizations.";
@@ -518,7 +516,7 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
     roi: "250-400%",innovationLevel: "Advanced",contactInfo: {
   phone: "+1 302 464 0950",email: "kleber@ziontechgroup.com",website: "https://ziontechgroup.com"
 },
-  }
+  };
   // AI-Powered Financial Fraud Detection;
   {
   id: "ai-financial-fraud-detection",title: "AI Financial Fraud Detection Platform",description: "Advanced fraud detection platform that uses AI and machine learning to identify and prevent financial fraud in real-time across multiple channels and transaction types.",category: "AI & Financial Services",subcategory: "Fraud Detection",price: 2899,currency: "$",pricingModel: "monthly",features: [
@@ -559,7 +557,7 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
     roi: "300-500%",innovationLevel: "Advanced",contactInfo: {
   phone: "+1 302 464 0950",email: "kleber@ziontechgroup.com",website: "https://ziontechgroup.com"
 },
-  }
+  };
   // Autonomous Vehicle Fleet Management;
   {
   id: "autonomous-vehicle-fleet-management",title: "Autonomous Vehicle Fleet Management Platform",description: "Comprehensive fleet management platform for autonomous vehicles, providing real-time monitoring, route optimization, safety management, and operational analytics.";
@@ -601,7 +599,7 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
     roi: "400-600%",innovationLevel: "Cutting-edge",contactInfo: {
   phone: "+1 302 464 0950",email: "kleber@ziontechgroup.com",website: "https://ziontechgroup.com"
 },
-  }
+  };
   // AI-Powered Content Creation Platform;
   {
   id: "ai-content-creation-platform",title: "AI Content Creation Platform",description: "Intelligent content creation platform that uses AI to generate high-quality, engaging content across multiple formats including articles, videos, social media posts, and marketing materials.";
@@ -643,7 +641,7 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
     roi: "200-400%",innovationLevel: "Advanced",contactInfo: {
   phone: "+1 302 464 0950",email: "kleber@ziontechgroup.com",website: "https://ziontechgroup.com"
 },
-  }
+  };
   // AI Agent Helpdesk for ITSM;
   {
   id: "ai-agent-itsm-helpdesk",title: "AI Agent Helpdesk for ITSM",description: "Autonomous LLM agents triage, resolve, and route IT tickets with knowledge-grounded answers, Change/Incident workflows, and audit trails integrated with your ITSM.";
@@ -675,14 +673,14 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
     tags: ["ITSM", "LLM", "RAG", "Automation", "Service Desk"]
     estimatedDelivery: "2–4 weeks",supportLevel: "enterprise",marketPrice: "$1,200 – $4,000/month";
     roi: "200–400%",innovationLevel: "Advanced",contactInfo: {{ phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com", website: "https://ziontechgroup.com" },
-  }
+  };
     technicalSpecs: {
   technology: ["LLM", "Vector DB", "RAG", "Serverless Functions"]
       integrations: ["ServiceNow", "Jira Service Management", "Zendesk", "Okta"]
       apiEndpoints: 38,uptime: "99.9%",security: [["SOC 2", "GDPR", "SAML SSO"],
   ],
   },
-  }
+  };
 
   // Data Governance & Quality as a Service;
   {
@@ -710,14 +708,14 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
     tags: ["Data Governance", "Lineage", "Quality", "Observability"]
     estimatedDelivery: "4–8 weeks",supportLevel: "enterprise",marketPrice: "$2,000 – $7,000/month";
     roi: "200–350%",innovationLevel: "Professional",contactInfo: {{ phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com", website: "https://ziontechgroup.com" },
-  }
+  };
     technicalSpecs: {
   technology: ["dbt", "OpenLineage", "Great Expectations", "Airflow"]
       integrations: ["Snowflake", "BigQuery", "Redshift", "Looker"]
       apiEndpoints: 22,uptime: "99.9%",security: [["SSO", "Row-level security"],
   ],
   },
-  }
+  };
 
   // Cloud Landing Zone in 10 Days;
   {
@@ -745,14 +743,14 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
     tags: ["Landing Zone", "Security", "IaC", "Governance"]
     estimatedDelivery: "2 weeks",supportLevel: "professional",marketPrice: "$20,000 – $60,000 one-time";
     roi: "150–300%",innovationLevel: "Professional",contactInfo: {{ phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com", website: "https://ziontechgroup.com" },
-  }
+  };
     technicalSpecs: {
   technology: ["Terraform", "Crossplane", "AWS/Azure/GCP Org"]
       integrations: ["Okta", "Datadog", "PagerDuty"]
       apiEndpoints: 12,uptime: "99.9%",security: [["CIS", "NIST", "SSO"],
   ],
   },
-  }
+  };
 
   // Marketing Content Ops Co-pilot;
   {
@@ -781,7 +779,7 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
     estimatedDelivery: "1–2 weeks",supportLevel: "professional",marketPrice: "$499 – $1,999/month";
     roi: "250–500%",innovationLevel: "Advanced",contactInfo: {{ phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com", website: "https://ziontechgroup.com" },
   },
-  }
+  };
   ;
   // Cloud Cost Optimization AI;
   {
@@ -823,14 +821,13 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
     estimatedDelivery: "2-4 weeks",supportLevel: "professional",marketPrice: "$1,499 - $6,999/month";
     roi: "200-500%",innovationLevel: "Advanced",contactInfo: {
   phone: "+1 302 464 0950",email: "kleber@ziontechgroup.com",website: "https://ziontechgroup.com"
-}
     technicalSpecs: {
   technology: ["Python", "dbt", "BigQuery", "Athena", "K8s"]
       integrations: ["AWS", "Azure", "GCP", "Datadog", "Snowflake"]
       apiEndpoints: 85,uptime: "99.9%",security: [["SOC 2", "ISO 27001"],
   ],
   },
-  }
+  };
   // SOC 2 & ISO 27001 Compliance Copilot;
   {
   id: "soc2-iso-compliance-copilot",title: "Compliance Copilot for SOC 2 & ISO 27001",description: "Evidence collection, control mapping, and auditor-ready reports with continuous monitoring across your SaaS stack.";
@@ -859,14 +856,13 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
     estimatedDelivery: "3-6 weeks",supportLevel: "professional",marketPrice: "$1,999 - $7,999/month";
     roi: "150-400%",innovationLevel: "Advanced",contactInfo: {
   phone: "+1 302 464 0950",email: "kleber@ziontechgroup.com",website: "https://ziontechgroup.com"
-}
     technicalSpecs: {
   technology: ["Node.js", "PostgreSQL", "OpenAPI", "LLM"]
       integrations: ["Okta", "Google Workspace", "Azure AD", "AWS", "GitHub"]
       apiEndpoints: 110,uptime: "99.9%",security: [["SOC 2", "ISO 27001", "SAML", "SCIM"],
   ],
   },
-  }
+  };
   // Data Pipeline Observability Platform;
   {
   id: "data-pipeline-observability",title: "Data Pipeline Observability Platform",description: "End-to-end data quality, freshness, and lineage monitoring for modern data stacks with incident auto-remediation.";
@@ -894,14 +890,14 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
     tags: ["DataOps", "Observability", "LLM", "dbt", "Lineage"]
     estimatedDelivery: "3-5 weeks",supportLevel: "professional",marketPrice: "$1,290 - $5,999/month";
     roi: "200-350%",innovationLevel: "Advanced",contactInfo: {{ phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com", website: "https://ziontechgroup.com" },
-  }
+  };
     technicalSpecs: {
   technology: ["Python", "Airflow", "dbt", "Spark"]
       integrations: ["Fivetran", "Snowflake", "BigQuery", "Redshift", "Airbyte"]
       apiEndpoints: 95,uptime: "99.9%",security: [["SOC 2", "Row-level security"],
   ],
   },
-  }
+  };
   // AI Customer Support Agent Platform;
   {
   id: "ai-customer-support-agent",title: "AI Customer Support Agent Platform",description: "RAG-powered omnichannel support with secure retrieval over your docs, CRM, and tickets. Escalates with full context.";
@@ -929,14 +925,14 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
     tags: ["RAG", "LLM", "CX", "Zendesk", "Intercom"]
     estimatedDelivery: "2-4 weeks",supportLevel: "professional",marketPrice: "$899 - $3,999/month";
     roi: "200-600%",innovationLevel: "Advanced",contactInfo: {{ phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com", website: "https://ziontechgroup.com" },
-  }
+  };
     technicalSpecs: {
   technology: ["Typescript", "Vector DB", "LLM", "gRPC"]
       integrations: ["Zendesk", "Intercom", "Salesforce", "HubSpot"]
       apiEndpoints: 70,uptime: "99.9%",security: [["SOC 2", "PII redaction"],
   ],
   },
-  }
+  };
   // Privacy Request Automation (DSAR)
   {
   id: "privacy-request-automation",title: "Privacy Request Automation (DSAR)",description: "Automated data subject request intake, identity verification, and data discovery across SaaS and data lakes.";
@@ -965,7 +961,7 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
     estimatedDelivery: "3-6 weeks",supportLevel: "professional",marketPrice: "$1,090 - $4,999/month";
     roi: "200-400%",innovationLevel: "Advanced",contactInfo: {{ phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com", website: "https://ziontechgroup.com" },
   },
-  }
+  };
   // MLOps Continuous Delivery Platform;
   {
   id: "mlops-continuous-delivery",title: "MLOps Continuous Delivery Platform",description: "Feature store, model registry, canary deployments, drift detection, and governance for reliable AI delivery.";
@@ -993,7 +989,7 @@ export const EXPANDED_INNOVATIVE_SERVICES_2025: ExpandedInnovativeService[] = [
     tags: ["MLOps", "LLMOps", "Feature Store", "Registry"]
     estimatedDelivery: "4-8 weeks",supportLevel: "enterprise",marketPrice: "$2,490 - $9,999/month";
     roi: "200-500%",innovationLevel: "Advanced",contactInfo: {{ phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com", website: "https://ziontechgroup.com" },
-  }
+  };
     technicalSpecs: {
   technology: ["Kubernetes", "Kafka", "Ray", "Feast"]
       integrations: ["SageMaker", "Vertex AI", "Databricks", "MLflow"]

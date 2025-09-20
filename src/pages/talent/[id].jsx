@@ -15,7 +15,7 @@ export default function TalentProfilePage() {
                 setError('Profile not found')
                 setLoading(false)
                 return
-}
+};
             try {
   const res = await fetch(`/api/talent/${id}`)
                 if (!res.ok)
@@ -29,7 +29,7 @@ export default function TalentProfilePage() {
             finally {
   setLoading(false)
             },
-  }
+  };
         fetchProfile()
     }, [id])
     if (loading)
@@ -42,7 +42,7 @@ export default function TalentProfilePage() {
         <div className="container mx-auto px-4 space-y-4">
           <h1 className="text-3xl font-bold" data-testid="profile-name">
             {{profile.full_name},
-  }
+  };
           </h1>
           {profile.bio && <p>{profile.bio}</p>},
   {profile.hourly_rate && <p>Hourly Rate: ${profile.hourly_rate}/hr</p>},
@@ -58,7 +58,7 @@ export default function TalentProfilePage() {
                 {Object.entries(profile.social).map(([platform, url]) => (<li key={platform}>
                     <a href={url} className="text-zion-cyan" target="_blank" rel="noopener noreferrer">
                       {{platform},
-  }
+  };
                     </a>
                   </li>))}
               </ul>
@@ -66,4 +66,3 @@ export default function TalentProfilePage() {
         </div>
       </main>
     </>)
-}

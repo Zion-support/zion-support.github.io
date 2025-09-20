@@ -20,7 +20,7 @@ interface AccessibilitySettings {
   reducedMotion: boolean;
   soundEnabled: boolean;
   theme: 'light' | 'dark' | 'auto';
-}
+};
 
 export function Accessibility() {
   const [isOpen, setIsOpen] = useState(false);
@@ -75,14 +75,12 @@ const [settings, setSettings] = useState<AccessibilitySettings>({
       root.classList.add('high-contrast')
 } else {
       root.classList.remove('high-contrast')
-}
     
     // Apply reduced motion
     if (newSettings.reducedMotion) {
       root.classList.add('reduced-motion')
 } else {
       root.classList.remove('reduced-motion')
-}
     
     // Apply theme
     if (newSettings.theme === 'light') {
@@ -141,13 +139,13 @@ const [settings, setSettings] = useState<AccessibilitySettings>({
         {isOpen && (
           <motion.div
             initial={{ opacity: 0, x: -400 },
-  }
+  };
             animate={{ opacity: 1, x: 0 },
-  }
+  };
             exit={{ opacity: 0, x: -400 },
-  }
+  };
             transition={{ duration: 0.3, ease: "easeOut" },
-  }
+  };
             className="fixed left-4 bottom-20 z-50 w-80 bg-slate-900 border border-cyan-400/20 rounded-lg shadow-2xl backdrop-blur-xl"
           >
             <div className="p-6">
@@ -324,4 +322,3 @@ const [settings, setSettings] = useState<AccessibilitySettings>({
       </AnimatePresence>
     </>
   )
-}

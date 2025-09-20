@@ -43,18 +43,16 @@ import {
 } from "lucide-react";
 interface Resource {
   id: string,name: string,type: 'human' | 'infrastructure' | 'software' | 'equipment' | 'facility',category: string,status: 'available' | 'allocated' | 'maintenance' | 'unavailable',priority: 'low' | 'medium' | 'high' | 'critical',capacity: number,currentUsage: number,location: string,department: string,cost: number,lastUpdated: string,tags: string[],description: string,manager: string,utilization: number
-}
+};
 
 interface ResourceStats {
   totalResources: number,availableResources: number,allocatedResources: number,maintenanceResources: number,totalCapacity: number,currentUtilization: number,averageCost: number,topDepartments: Array<{ name: string, count: number, percentage: number }>
-}
 
 interface ResourceManagementSystemProps {
   showStats?: boolean,
   showFilters?: boolean,
   showCharts?: boolean,
   maxResources?: number,
-}
 
 export const ResourceManagementSystem: React.FC<ResourceManagementSystemProps> = ({
   showStats = true;
@@ -107,15 +105,12 @@ const [editingResource, setEditingResource] = useState<Resource | null>(null),
 
     if (selectedType !== 'all') {
       filtered = filtered.filter(r => r.type === selectedType)
-}
 
     if (selectedStatus !== 'all') {
       filtered = filtered.filter(r => r.status === selectedStatus)
-}
 
     if (selectedPriority !== 'all') {
       filtered = filtered.filter(r => r.priority === selectedPriority)
-}
 
     if (searchQuery) {
       filtered = filtered.filter(r =>
@@ -250,9 +245,9 @@ const [editingResource, setEditingResource] = useState<Resource | null>(null),
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
           <motion.div
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             animate={{ opacity: 1, y: 0 },
-  }
+  };
             className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center"
           >
             <div className="text-3xl font-bold text-white mb-2">{resourceStats.totalResources}</div>
@@ -261,11 +256,11 @@ const [editingResource, setEditingResource] = useState<Resource | null>(null),
 
           <motion.div
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             animate={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ delay: 0.1 },
-  }
+  };
             className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center"
           >
             <div className="text-3xl font-bold text-green-400 mb-2">{resourceStats.availableResources}</div>
@@ -274,11 +269,11 @@ const [editingResource, setEditingResource] = useState<Resource | null>(null),
 
           <motion.div
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             animate={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ delay: 0.2 },
-  }
+  };
             className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center"
           >
             <div className="text-3xl font-bold text-blue-400 mb-2">{resourceStats.allocatedResources}</div>
@@ -287,11 +282,11 @@ const [editingResource, setEditingResource] = useState<Resource | null>(null),
 
           <motion.div
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             animate={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ delay: 0.3 },
-  }
+  };
             className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center"
           >
             <div className="text-3xl font-bold text-zion-cyan mb-2">{resourceStats.currentUtilization.toFixed(1)}%</div>
@@ -304,11 +299,11 @@ const [editingResource, setEditingResource] = useState<Resource | null>(null),
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
           <motion.div
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             animate={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ delay: 0.4 },
-  }
+  };
             className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl"
           >
             <h3 className="text-lg font-semibold text-white mb-4">Total Capacity</h3>
@@ -318,11 +313,11 @@ const [editingResource, setEditingResource] = useState<Resource | null>(null),
 
           <motion.div
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             animate={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ delay: 0.5 },
-  }
+  };
             className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl"
           >
             <h3 className="text-lg font-semibold text-white mb-4">Average Cost</h3>
@@ -332,11 +327,11 @@ const [editingResource, setEditingResource] = useState<Resource | null>(null),
 
           <motion.div
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             animate={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ delay: 0.6 },
-  }
+  };
             className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl"
           >
             <h3 className="text-lg font-semibold text-white mb-4">Maintenance</h3>
@@ -354,11 +349,11 @@ const [editingResource, setEditingResource] = useState<Resource | null>(null),
               <motion.div
                 key={dept.name}
                 initial={{ opacity: 0, scale: 0.9 },
-  }
+  };
                 animate={{ opacity: 1, scale: 1 },
-  }
+  };
                 transition={{ delay: index * 0.1 },
-  }
+  };
                 className="p-4 bg-zinc-900/30 border border-zinc-700/50 rounded-lg text-center"
               >
                 <div className="text-2xl font-bold text-white mb-1">{dept.count}</div>
@@ -431,11 +426,11 @@ const [editingResource, setEditingResource] = useState<Resource | null>(null),
           <motion.div
             key={resource.id}
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             animate={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ delay: index * 0.1 },
-  }
+  };
             className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl hover:bg-zinc-900/50 transition-all duration-300"
           >
             {/* Resource Header */}
@@ -514,11 +509,11 @@ const [editingResource, setEditingResource] = useState<Resource | null>(null),
               <div className="w-full bg-zinc-700 rounded-full h-2">
                 <motion.div
                   initial={{ width: 0 },
-  }
+  };
                   animate={{ width: `${resource.utilization}%` },
-  }
+  };
                   transition={{ duration: 1, delay: index * 0.1 },
-  }
+  };
                   className={`h-2 rounded-full transition-all duration-300 ${
                     resource.utilization >= 90 ? 'bg-red-500' :
                     resource.utilization >= 75 ? 'bg-yellow-500' :
@@ -568,9 +563,9 @@ const [editingResource, setEditingResource] = useState<Resource | null>(null),
   {filteredResources.length === 0 && (
         <motion.div
           initial={{ opacity: 0 },
-  }
+  };
           animate={{ opacity: 1 },
-  }
+  };
           className="text-center py-12"
         >
           <Target className="w-16 h-16 text-zinc-600 mx-auto mb-4" />
@@ -588,4 +583,3 @@ const [editingResource, setEditingResource] = useState<Resource | null>(null),
       )}
     </div>
   )
-};

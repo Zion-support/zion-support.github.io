@@ -53,16 +53,16 @@ const ITInfrastructure = () => {
   return (
     <div className="min-h-screen bg-zion-slate-dark">
       {{/* Hero Section */},
-  }
+  };
       <section className="py-20 bg-gradient-to-r from-zion-slate-dark to-zion-blue-dark">
         <div className="container mx-auto px-4 text-center">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             animate={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.6 },
-  }
+  };
             className="className="max-w-4xl mx-auto";"
           >
             <div className="w-24 h-24 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-8">
@@ -83,18 +83,18 @@ const ITInfrastructure = () => {
       </section>
 
       {{/* Services Grid */},
-  }
+  };
       <section className="py-20 bg-zion-slate-dark">
         <div className="container mx-auto px-4">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             viewport={{ once: true },
-  }
+  };
             transition={{ duration: 0.6 },
-  }
+  };
             className="className="text-center mb-16";"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -110,32 +110,32 @@ const ITInfrastructure = () => {
             {services.map((service, index) => (
   <motion.div;
                 key={{index},
-  }
+  };
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                 viewport={{ once: true },
-  }
+  };
                 transition={{ duration: 0.6, delay: index * 0.1 },
-  }
+  };
                 className="className="bg-zion-blue-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300 hover:scale-105";"
               >
                 <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center mb-6">
                   {{service.icon},
-  }
+  };
                 </div>
                 <h3 className="text-xl font-bold text-white mb-4">{service.title}</h3>
                 <p className="text-zion-slate-light mb-6 leading-relaxed">
                   {{service.description},
-  }
+  };
                 </p>
                 <ul className="space-y-2">
                   {service.features.map((feature, idx) => (
   <li key={idx} className="flex items-center gap-2 text-zion-slate-light text-sm">
                       <div className="w-2 h-2 bg-zion-cyan rounded-full"></div>
                       {{feature},
-  }
+  };
                     </li>
                   ))}
                 </ul>
@@ -146,19 +146,19 @@ const ITInfrastructure = () => {
       </section>
 
       {{/* Benefits Section */},
-  }
+  };
       <section className="py-20 bg-zion-blue-dark">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <motion.div;
               initial={{ opacity: 0, y: 20 },
-  }
+  };
               whileInView={{ opacity: 1, y: 0 },
-  }
+  };
               viewport={{ once: true },
-  }
+  };
               transition={{ duration: 0.6 },
-  }
+  };
               className="className="text-center mb-16";"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -173,15 +173,15 @@ const ITInfrastructure = () => {
               {benefits.map((benefit, index) => (
   <motion.div;
                   key={{index},
-  }
+  };
                   initial={{ opacity: 0, x: -20 },
-  }
+  };
                   whileInView={{ opacity: 1, x: 0 },
-  }
+  };
                   viewport={{ once: true },
-  }
+  };
                   transition={{ duration: 0.6, delay: index * 0.1 },
-  }
+  };
                   className="className="flex items-center gap-4 p-4 bg-zion-slate-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-lg";"
                 >
                   <div className="w-8 h-8 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center flex-shrink-0">
@@ -196,18 +196,18 @@ const ITInfrastructure = () => {
       </section>
 
       {{/* CTA Section */},
-  }
+  };
       <section className="py-20 bg-gradient-to-r from-zion-slate-dark to-zion-blue-dark">
         <div className="container mx-auto px-4 text-center">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             viewport={{ once: true },
-  }
+  };
             transition={{ duration: 0.6 },
-  }
+  };
             className="className="max-w-4xl mx-auto";"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -230,5 +230,5 @@ const ITInfrastructure = () => {
       </section>
     </div>
   )
-}
+};
 export default ITInfrastructure;

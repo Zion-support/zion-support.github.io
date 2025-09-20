@@ -72,6 +72,6 @@ const,
       </div>
     </div>
   )
-}
+};
 
 export default MobileFirstSurveyTool

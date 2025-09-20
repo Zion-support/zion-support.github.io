@@ -26,7 +26,7 @@ export default function ProjectRoom() {
   ) {
             setActiveTab('video')
         },
-  }
+  };
     const endVideoCall = () => {
         setIsInCall(false)
         toast.info("Video call ended", {
@@ -49,7 +49,7 @@ const mockUsers = [
   setCallParticipants(prev => [...prev, randomUser])
             toast(`${randomUser.name} joined the call`)
         },
-  }
+  };
     return (<>
       <SEO title={`Project Room - ${projectId}`} description="Collaborate on your project"/>
       ;
@@ -136,7 +136,7 @@ const mockUsers = [
                     <VideoCallRoom roomId={`project-${projectId}`} participants={callParticipants} onLeave={endVideoCall}/>
                     ;
                     {{/* This button is just for demo/testing purposes */},
-  }
+  };
                     <div className="flex justify-center mt-4">
                       <Button variant="outline" onClick={simulateUserJoining} className="text-sm">
                         Simulate user joining (demo only)
@@ -204,4 +204,4 @@ const mockUsers = [
       </main>
       ;
     </>)
-}
+};

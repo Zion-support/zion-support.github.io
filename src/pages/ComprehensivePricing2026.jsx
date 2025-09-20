@@ -28,36 +28,36 @@ const allServices = [[...ultimateInnovativeServices2026, ...enterpriseITInfrastr
                 return allServices.filter(service => ['Supply Chain ManagementFinancial Technology', 'Healthcare TechnologyLegal Technology', 'Blockchain TechnologyInternet of Things', 'Quantum Computing'].includes(service.category))
             default: return allServices
 },
-  }
+  };
     const filteredServices = getCategoryServices(selectedCategory)
     const getAnnualPrice = (monthlyPrice) => {
   const price = parseInt(monthlyPrice.replace(/[^0-9]/g, ''))
         const annualPrice = price * 12 * 0.8, // 20% discount for annual;
         return `$${annualPrice.toLocaleString()}`
-}
+};
     const const containerVariants = {
   = {
         hidden: {{ opacity: 0 },
-  }
+  };
         visible: {
   opacity: 1,transition: {
   staggerChildren: 0.1
 },
   },
-  }
+  };
     const const itemVariants = {
   = {
         hidden: {{ y: 20, opacity: 0 },
-  }
+  };
         visible: {
   y: 0,opacity: 1,transition: {
   duration: 0.5,ease: "easeOut"
 },
   },
-  }
+  };
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
       {{/* Hero Section */},
-  }
+  };
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <motion.h1 className="text-4xl md:text-6xl font-bold mb-6" initial={{ opacity: 0, y: 20 },
@@ -78,7 +78,7 @@ const allServices = [[...ultimateInnovativeServices2026, ...enterpriseITInfrastr
           </motion.p>
 
           {{/* Billing Toggle */},
-  }
+  };
           <motion.div className="flex items-center justify-center gap-4 mb-8" initial={{ opacity: 0, y: 20 },
   } animate={{ opacity: 1, y: 0 },
   } transition={{ duration: 0.8, delay: 0.4 },
@@ -93,7 +93,7 @@ const allServices = [[...ultimateInnovativeServices2026, ...enterpriseITInfrastr
           </motion.div>
 
           {{/* Contact Information */},
-  }
+  };
           <motion.div className="bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/20 mb-8 max-w-2xl mx-auto" initial={{ opacity: 0, y: 20 },
   } animate={{ opacity: 1, y: 0 },
   } transition={{ duration: 0.8, delay: 0.6 },
@@ -118,7 +118,7 @@ const allServices = [[...ultimateInnovativeServices2026, ...enterpriseITInfrastr
       </section>
 
       {{/* Category Filter */},
-  }
+  };
       <section className="py-8 px-4 sm:px-6 lg:px-8 bg-white/5 backdrop-blur-sm">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-wrap justify-center gap-4">
@@ -126,14 +126,14 @@ const allServices = [[...ultimateInnovativeServices2026, ...enterpriseITInfrastr
                 ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white shadow-lg';
                 : 'bg-white/10 text-gray-300 hover:bg-white/20 hover:text-white'}`}>
                 {{category === 'all' ? 'All Services' : category},
-  }
+  };
               </button>))}
           </div>
         </div>
       </section>
 
       {{/* Pricing Grid */},
-  }
+  };
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" variants={containerVariants} initial="hidden" animate="visible">
@@ -142,7 +142,7 @@ const allServices = [[...ultimateInnovativeServices2026, ...enterpriseITInfrastr
   }>
                 <div className="bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/20 hover:border-cyan-400/50 transition-all duration-300 hover:shadow-lg hover:shadow-cyan-400/25 h-full">
                   {{/* Service Header */},
-  }
+  };
                   <div className="flex items-start justify-between mb-4">
                     <div className="text-4xl">{service.icon}</div>
                     {service.popular && (<span className="bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs px-2 py-1 rounded-full">
@@ -151,23 +151,23 @@ const allServices = [[...ultimateInnovativeServices2026, ...enterpriseITInfrastr
                   </div>
 
                   {{/* Service Info */},
-  }
+  };
                   <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">
                     {{service.name},
-  }
+  };
                   </h3>
                   <p className="text-gray-300 text-sm mb-3">{service.tagline}</p>
                   ;
                   {{/* Pricing */},
-  }
+  };
                   <div className="mb-4">
                     <div className="text-3xl font-bold text-cyan-400">
                       {{billingCycle === 'monthly' ? service.price : getAnnualPrice(service.price)},
-  }
+  };
                     </div>
                     <div className="text-gray-400">
                       {{billingCycle === 'monthly' ? service.period : '/year'},
-  }
+  };
                     </div>
                     {billingCycle === 'annual' && (<div className="text-sm text-green-400 mt-1">
                         Save 20% with annual billing;
@@ -175,26 +175,26 @@ const allServices = [[...ultimateInnovativeServices2026, ...enterpriseITInfrastr
                   </div>
 
                   {{/* Category */},
-  }
+  };
                   <div className="flex items-center gap-2 mb-4">
                     <span className="text-sm text-gray-400">{service.category}</span>
                   </div>
 
                   {{/* Key Features */},
-  }
+  };
                   <div className="mb-4">
                     <h4 className="text-sm font-semibold text-white mb-2">Key Features:</h4>
                     <ul className="text-xs text-gray-300 space-y-1">
                       {service.features.slice(0, 4).map((feature, idx) => (<li key={idx} className="flex items-center gap-2">
                           <span className="text-cyan-400">✓</span>
                           {{feature},
-  }
+  };
                         </li>))}
                     </ul>
                   </div>
 
                   {{/* Market Info */},
-  }
+  };
                   <div className="mb-4 text-xs text-gray-400">
                     <div className="flex justify-between mb-1">
                       <span>Market Size:</span>
@@ -211,22 +211,22 @@ const allServices = [[...ultimateInnovativeServices2026, ...enterpriseITInfrastr
                   </div>
 
                   {{/* ROI */},
-  }
+  };
                   <div className="mb-4 p-3 bg-green-500/10 border border-green-500/20 rounded-lg">
                     <p className="text-xs text-green-400 font-semibold">ROI: {service.roi}</p>
                   </div>
 
                   {{/* Trial Info */},
-  }
+  };
                   <div className="mb-4 text-center p-2 bg-blue-500/10 border border-blue-500/20 rounded-lg">
                     <span className="text-xs text-blue-400">
                       {service.trialDays}-day free trial • Setup in {{service.setupTime},
-  }
+  };
                     </span>
                   </div>
 
                   {{/* Action Buttons */},
-  }
+  };
                   <div className="flex gap-2">
                     <a href={service.link} target="_blank" rel="noopener noreferrer" className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white text-sm font-semibold py-2 px-4 rounded-lg transition-all duration-300 text-center">
                       Learn More;
@@ -252,7 +252,7 @@ const allServices = [[...ultimateInnovativeServices2026, ...enterpriseITInfrastr
       </section>
 
       {{/* Enterprise Plans */},
-  }
+  };
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5 backdrop-blur-sm">
         <div className="max-w-7xl mx-auto text-center">
           <motion.div initial={{ opacity: 0, y: 20 },
@@ -298,7 +298,7 @@ const allServices = [[...ultimateInnovativeServices2026, ...enterpriseITInfrastr
       </section>
 
       {{/* CTA Section */},
-  }
+  };
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div initial={{ opacity: 0, y: 20 },
@@ -337,7 +337,7 @@ const allServices = [[...ultimateInnovativeServices2026, ...enterpriseITInfrastr
       </section>
 
       {{/* Footer Info */},
-  }
+  };
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5 backdrop-blur-sm">
         <div className="max-w-7xl mx-auto text-center">
           <h3 className="text-2xl font-bold text-white mb-6">Why Choose Our Pricing?</h3>
@@ -361,5 +361,4 @@ const allServices = [[...ultimateInnovativeServices2026, ...enterpriseITInfrastr
         </div>
       </section>
     </div>)
-}
 export default ComprehensivePricing2026;

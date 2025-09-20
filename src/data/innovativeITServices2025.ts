@@ -1,14 +1,13 @@
 export interface InnovativeITService {
   id: string,title: string,description: string,category: string,subcategory: string,price: number,currency: string,pricingModel: string,features: string[],benefits: string[],useCases: string[],targetAudience: string[],tags: string[],estimatedDelivery: string,supportLevel: string,marketPrice: string,roi: string,innovationLevel: string,contactInfo: {
   phone: string,email: string,website: string
-}
+};
   technicalSpecs?: {
   technology: string[],integrations: string[],apiEndpoints: number,uptime: string,security: string[[],
   ],
-  }
+  };
   competitors?: string[]
   marketSize?: string
-}
 
 export const INNOVATIVE_IT_SERVICES_2025: InnovativeITService[] = [
   // Quantum Cloud Computing Infrastructure;
@@ -51,16 +50,14 @@ export const INNOVATIVE_IT_SERVICES_2025: InnovativeITService[] = [
     estimatedDelivery: "20-24 weeks",supportLevel: "enterprise",marketPrice: "$15,999 - $45,000/month";
     roi: "500-1000%",innovationLevel: "Revolutionary",contactInfo: {
   phone: "+1 302 464 0950",email: "kleber@ziontechgroup.com",website: "https://ziontechgroup.com"
-}
     technicalSpecs: {
   technology: ["Quantum Algorithms", "Python", "Qiskit", "AWS", "Azure", "React"]
       integrations: ["Quantum hardware", "Cloud platforms", "Scientific software", "ML frameworks"]
       apiEndpoints: 500,uptime: "99.99%",security: [["SOC 2", "ISO 27001", "Quantum-resistant encryption", "Zero-trust architecture"],
   ],
-  }
+  };
     competitors: ["IBM Quantum", "Google Quantum", "Microsoft Azure Quantum"]
     marketSize: "$89.7 billion by 2027"
-}
   // Blockchain-Based Supply Chain Management;
   {
   id: "blockchain-supply-chain-management",title: "Blockchain-Based Supply Chain Management",description: "Comprehensive supply chain management platform that uses blockchain technology to provide transparency, traceability, and efficiency across the entire supply chain ecosystem.";
@@ -101,16 +98,14 @@ export const INNOVATIVE_IT_SERVICES_2025: InnovativeITService[] = [
     estimatedDelivery: "12-16 weeks",supportLevel: "enterprise",marketPrice: "$4,499 - $12,000/month";
     roi: "200-400%",innovationLevel: "Advanced",contactInfo: {
   phone: "+1 302 464 0950",email: "kleber@ziontechgroup.com",website: "https://ziontechgroup.com"
-}
     technicalSpecs: {
   technology: ["Ethereum", "Hyperledger", "React", "Node.js", "PostgreSQL"]
       integrations: ["ERP systems", "WMS", "TMS", "IoT devices", "Payment gateways"]
       apiEndpoints: 300,uptime: "99.9%",security: [["SOC 2", "ISO 27001", "Blockchain security", "End-to-end encryption"],
   ],
-  }
+  };
     competitors: ["IBM Food Trust", "VeChain", "Walmart Blockchain", "Maersk TradeLens"]
     marketSize: "$67.8 billion by 2027"
-}
   // Edge Computing & IoT Management Platform;
   {
   id: "edge-computing-iot-management",title: "Edge Computing & IoT Management Platform",description: "Advanced edge computing platform that manages IoT devices, processes data at the edge, and provides real-time analytics and automation capabilities.";
@@ -151,16 +146,14 @@ export const INNOVATIVE_IT_SERVICES_2025: InnovativeITService[] = [
     estimatedDelivery: "14-18 weeks",supportLevel: "enterprise",marketPrice: "$5,999 - $18,000/month";
     roi: "250-450%",innovationLevel: "Advanced",contactInfo: {
   phone: "+1 302 464 0950",email: "kleber@ziontechgroup.com",website: "https://ziontechgroup.com"
-}
     technicalSpecs: {
   technology: ["Kubernetes", "Docker", "Python", "React", "Node.js"]
       integrations: ["IoT protocols", "Cloud platforms", "Analytics tools", "Security systems"]
       apiEndpoints: 400,uptime: "99.95%",security: [["SOC 2", "ISO 27001", "Edge security", "Device authentication"],
   ],
-  }
+  };
     competitors: ["AWS Greengrass", "Azure IoT Edge", "Google Cloud IoT", "Cisco Edge"]
     marketSize: "$43.4 billion by 2027"
-}
   // Zero-Trust Security Architecture;
   {
   id: "zero-trust-security-architecture",title: "Zero-Trust Security Architecture Platform",description: "Comprehensive zero-trust security platform that implements continuous verification, least-privilege access, and micro-segmentation for modern enterprise environments.";
@@ -201,16 +194,14 @@ export const INNOVATIVE_IT_SERVICES_2025: InnovativeITService[] = [
     estimatedDelivery: "16-20 weeks",supportLevel: "enterprise",marketPrice: "$7,999 - $22,000/month";
     roi: "300-600%",innovationLevel: "Advanced",contactInfo: {
   phone: "+1 302 464 0950",email: "kleber@ziontechgroup.com",website: "https://ziontechgroup.com"
-}
     technicalSpecs: {
   technology: ["Python", "React", "Node.js", "PostgreSQL", "Redis"]
       integrations: ["Identity providers", "SIEM systems", "Cloud platforms", "Network devices"]
       apiEndpoints: 250,uptime: "99.99%",security: [["SOC 2", "ISO 27001", "FedRAMP", "Zero-trust architecture"],
   ],
-  }
+  };
     competitors: ["Palo Alto Networks", "Cisco", "VMware", "Microsoft"]
     marketSize: "$51.6 billion by 2027"
-}
   // DevOps Automation & CI/CD Platform;
   {
   id: "devops-automation-cicd",title: "DevOps Automation & CI/CD Platform",description: "Comprehensive DevOps platform that automates the entire software development lifecycle, from code commit to production deployment, with advanced monitoring and optimization.";
@@ -251,16 +242,14 @@ export const INNOVATIVE_IT_SERVICES_2025: InnovativeITService[] = [
     estimatedDelivery: "8-12 weeks",supportLevel: "professional",marketPrice: "$3,999 - $12,000/month";
     roi: "200-400%",innovationLevel: "Advanced",contactInfo: {
   phone: "+1 302 464 0950",email: "kleber@ziontechgroup.com",website: "https://ziontechgroup.com"
-}
     technicalSpecs: {
   technology: ["Jenkins", "GitLab", "Docker", "Kubernetes", "React", "Node.js"]
       integrations: ["Git repositories", "Cloud platforms", "Monitoring tools", "Security scanners"]
       apiEndpoints: 200,uptime: "99.9%",security: [["SOC 2", "ISO 27001", "Secure pipelines", "Access control"],
   ],
-  }
+  };
     competitors: ["GitLab", "Jenkins", "CircleCI", "GitHub Actions"]
     marketSize: "$25.8 billion by 2027"
-}
   // Data Center Modernization & Hybrid Cloud;
   {
   id: "data-center-modernization-hybrid-cloud",title: "Data Center Modernization & Hybrid Cloud Platform",description: "Comprehensive platform for modernizing legacy data centers and implementing hybrid cloud solutions that optimize performance, cost, and scalability.";
@@ -301,16 +290,14 @@ export const INNOVATIVE_IT_SERVICES_2025: InnovativeITService[] = [
     estimatedDelivery: "18-24 weeks",supportLevel: "enterprise",marketPrice: "$8,999 - $25,000/month";
     roi: "300-500%",innovationLevel: "Advanced",contactInfo: {
   phone: "+1 302 464 0950",email: "kleber@ziontechgroup.com",website: "https://ziontechgroup.com"
-}
     technicalSpecs: {
   technology: ["VMware", "OpenStack", "Kubernetes", "React", "Node.js", "PostgreSQL"]
       integrations: ["Cloud platforms", "Storage systems", "Network devices", "Monitoring tools"]
       apiEndpoints: 350,uptime: "99.95%",security: [["SOC 2", "ISO 27001", "Encryption", "Access control"],
   ],
-  }
+  };
     competitors: ["VMware", "Microsoft", "IBM", "HPE"]
     marketSize: "$78.9 billion by 2027"
-}
   // Network Virtualization & SDN Platform;
   {
   id: "network-virtualization-sdn",title: "Network Virtualization & Software-Defined Networking Platform",description: "Advanced network virtualization platform that implements software-defined networking (SDN) to provide flexible, scalable, and programmable network infrastructure.";
@@ -351,16 +338,14 @@ export const INNOVATIVE_IT_SERVICES_2025: InnovativeITService[] = [
     estimatedDelivery: "14-18 weeks",supportLevel: "enterprise",marketPrice: "$6,499 - $18,000/month";
     roi: "250-450%",innovationLevel: "Advanced",contactInfo: {
   phone: "+1 302 464 0950",email: "kleber@ziontechgroup.com",website: "https://ziontechgroup.com"
-}
     technicalSpecs: {
   technology: ["OpenFlow", "OpenDaylight", "Python", "React", "Node.js"]
       integrations: ["Network devices", "Cloud platforms", "Monitoring tools", "Security systems"]
       apiEndpoints: 280,uptime: "99.9%",security: [["SOC 2", "ISO 27001", "Network segmentation", "Access control"],
   ],
-  }
+  };
     competitors: ["Cisco", "VMware", "Juniper", "Arista"]
     marketSize: "$32.7 billion by 2027"
-}
   // API Management & Integration Platform;
   {
   id: "api-management-integration",title: "API Management & Integration Platform",description: "Comprehensive API management platform that provides API design, development, testing, deployment, and monitoring capabilities with advanced integration features.";
@@ -401,16 +386,14 @@ export const INNOVATIVE_IT_SERVICES_2025: InnovativeITService[] = [
     estimatedDelivery: "8-12 weeks",supportLevel: "professional",marketPrice: "$3,499 - $10,000/month";
     roi: "200-400%",innovationLevel: "Advanced",contactInfo: {
   phone: "+1 302 464 0950",email: "kleber@ziontechgroup.com",website: "https://ziontechgroup.com"
-}
     technicalSpecs: {
   technology: ["Kong", "Apigee", "React", "Node.js", "PostgreSQL", "Redis"]
       integrations: ["Cloud platforms", "Databases", "Message queues", "Authentication systems"]
       apiEndpoints: 150,uptime: "99.9%",security: [["SOC 2", "OAuth 2.0", "JWT", "API security"],
   ],
-  }
+  };
     competitors: ["Apigee", "Kong", "MuleSoft", "Tyk"]
     marketSize: "$19.8 billion by 2027"
-}
   // Digital Twin & Simulation Platform;
   {
   id: "digital-twin-simulation",title: "Digital Twin & Simulation Platform",description: "Advanced digital twin platform that creates virtual replicas of physical systems, enabling real-time monitoring, simulation, and predictive analytics.";
@@ -451,13 +434,12 @@ export const INNOVATIVE_IT_SERVICES_2025: InnovativeITService[] = [
     estimatedDelivery: "16-20 weeks",supportLevel: "enterprise",marketPrice: "$7,999 - $22,000/month";
     roi: "300-500%",innovationLevel: "Advanced",contactInfo: {
   phone: "+1 302 464 0950",email: "kleber@ziontechgroup.com",website: "https://ziontechgroup.com"
-}
     technicalSpecs: {
   technology: ["Unity3D", "Unreal Engine", "Python", "React", "Node.js", "PostgreSQL"]
       integrations: ["IoT platforms", "CAD software", "PLM systems", "Analytics tools"]
       apiEndpoints: 300,uptime: "99.9%",security: [["SOC 2", "ISO 27001", "Data encryption", "Access control"],
   ],
-  }
+  };
     competitors: ["Siemens", "GE Digital", "PTC", "Dassault Systèmes"]
     marketSize: "$86.1 billion by 2027"
 },

@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight, Star, Quote } from "lucide-react";
 interface Testimonial {
   id: number,name: string,role: string,company: string,content: string,rating: number,avatar: string,industry: string
-}
+};
 
 const Testimonials: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -39,13 +39,13 @@ const nextTestimonial = () => {
         <motion.div
           className="text-center mb-16"
           initial={{ opacity: 0, y: 30 },
-  }
+  };
           whileInView={{ opacity: 1, y: 0 },
-  }
+  };
           transition={{ duration: 0.8 },
-  }
+  };
           viewport={{ once: true },
-  }
+  };
         >
           <div className="inline-flex items-center mb-4 px-4 py-2 bg-zion-cyan/10 border border-zion-cyan/20 rounded-full">
             <Quote className="w-4 h-4 text-zion-cyan mr-2" />
@@ -67,13 +67,13 @@ const nextTestimonial = () => {
             <motion.div
               key={currentIndex}
               initial={{ opacity: 0, x: 100 },
-  }
+  };
               animate={{ opacity: 1, x: 0 },
-  }
+  };
               exit={{ opacity: 0, x: -100 },
-  }
+  };
               transition={{ duration: 0.5 },
-  }
+  };
               className="bg-zion-slate-dark/50 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-8 md:p-12 text-center relative overflow-hidden"
             >
               {/* Background decoration */}
@@ -151,13 +151,13 @@ const nextTestimonial = () => {
         <motion.div
           className="mt-16 text-center"
           initial={{ opacity: 0, y: 20 },
-  }
+  };
           whileInView={{ opacity: 1, y: 0 },
-  }
+  };
           transition={{ duration: 0.8, delay: 0.4 },
-  }
+  };
           viewport={{ once: true },
-  }
+  };
         >
           <p className="text-zion-slate-light text-sm mb-6">Join our growing list of satisfied clients</p>
           <div className="grid grid-cols-2 md: grid-cols-4 gap-8 max-w-2xl mx-auto">
@@ -182,5 +182,4 @@ const nextTestimonial = () => {
       </div>
     </section>
   )
-};
 export default Testimonials;

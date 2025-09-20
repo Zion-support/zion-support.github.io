@@ -88,7 +88,7 @@ const Services2026: React.FC = () => {
       case 'innovation':;
         return filtered.sort((a, b) => {
   const innovationLevels = {{ 'Revolutionary': 3, 'Cutting-Edge': 2, 'Advanced': 1 },
-  }
+  };
           return (innovationLevels[b.innovationLevel as keyof typeof innovationLevels] || 0) - (innovationLevels[a.innovationLevel as keyof typeof innovationLevels] || 0)
         })
       case 'roi':;
@@ -111,10 +111,10 @@ const Services2026: React.FC = () => {
       />
 
       {{/* Hero Section */},
-  }
+  };
       <section className="relative py-20 sm:py-32 overflow-hidden">
         {{/* Animated Background */},
-  }
+  };
         <div className="absolute inset-0">
           <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10 animate-pulse"></div>
           <div className="absolute top-0 left-0 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl animate-bounce"></div>
@@ -126,11 +126,11 @@ const Services2026: React.FC = () => {
           <div className="text-center max-w-4xl mx-auto">
             <motion.div;
               initial={{ opacity: 0, y: 20 },
-  }
+  };
               animate={{ opacity: 1, y: 0 },
-  }
+  };
               transition={{ duration: 0.8 },
-  }
+  };
             >
               <h1 className="text-5xl sm:text-7xl font-extrabold tracking-tight bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
                 2026 Services;
@@ -158,34 +158,34 @@ const Services2026: React.FC = () => {
       </section>
 
       {{/* Search and Filters */},
-  }
+  };
       <section className="py-12">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             {{/* Search Bar */},
-  }
+  };
             <div className="relative mb-8">
               <Search className="absolute left-4 top-1/2 -translate-y-1/2 h-6 w-6 text-slate-400" />
               <input;
                 value={{query},
-  }
+  };
                 onChange={{(e) => setQuery(e.target.value)},
-  }
+  };
                 placeholder="Search revolutionary services, e.g. quantum, AI, cybersecurity, IoT...";
                 className="className="w-full pl-12 pr-4 py-4 rounded-2xl bg-slate-800/70 border border-cyan-400/30 focus:border-cyan-400 focus:ring-4 focus:ring-cyan-400/20 outline-none text-lg";"
               />
             </div>
 
             {{/* Category Filters */},
-  }
+  };
             <div className="flex flex-wrap gap-3 mb-8">
               {categories.map((category) => (
   <button;
                   key={{category.id},
-  }
+  };
                   onClick={{onClick={() => setSelectedCategory(category.id)},
   },
-  }
+  };
                   className={`flex items-center gap-2 px-4 py-2 rounded-xl border transition-all duration-200 ${
   selectedCategory === category.id;
                       ? 'bg-cyan-500/20 border-cyan-400 text-cyan-300';
@@ -200,14 +200,14 @@ const Services2026: React.FC = () => {
             </div>
 
             {{/* Sort Options */},
-  }
+  };
             <div className="flex items-center gap-4 mb-8">
               <span className="text-slate-400 font-medium">Sort by:</span>
               <select;
                 value={{sortBy},
-  }
+  };
                 onChange={{(e) => setSortBy(e.target.value)},
-  }
+  };
                 className="className="bg-slate-800/70 border border-slate-600/50 rounded-lg px-3 py-2 text-white focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 outline-none";"
               >
                 <option value="innovation">Innovation Level</option>
@@ -237,19 +237,19 @@ const Services2026: React.FC = () => {
               {featuredServices.map((service) => (
   <motion.div;
                   key={{service.id},
-  }
+  };
                   initial={{ opacity: 0, y: 20 },
-  }
+  };
                   whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                   transition={{ duration: 0.6 },
-  }
+  };
                   className="className="group bg-gradient-to-br from-slate-900/80 to-slate-800/80 backdrop-blur border border-cyan-400/30 hover:border-cyan-400/60 transition-all duration-300 rounded-3xl p-8 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-400/20";"
                 >
                   <div className="flex items-center justify-between mb-4">
                     <div className="text-xs uppercase tracking-wide text-cyan-300/80 font-semibold">
                       {{service.category},
-  }
+  };
                     </div>
                     <div className="flex items-center gap-1 text-yellow-400">
                       <Star className="w-4 h-4 fill-current" />
@@ -259,12 +259,12 @@ const Services2026: React.FC = () => {
 
                   <h3 className="text-xl font-bold text-white group-hover:text-cyan-300 transition-colors mb-3">
                     {{service.title},
-  }
+  };
                   </h3>
 
                   <p className="text-slate-300 text-sm leading-relaxed mb-4 line-clamp-3">
                     {{service.description},
-  }
+  };
                   </p>
 
                   <div className="space-y-3 mb-6">
@@ -293,7 +293,7 @@ const Services2026: React.FC = () => {
 
                     <div className="text-xs text-slate-500">
                       ID: {{service.id},
-  }
+  };
                     </div>
                   </div>
                 </motion.div>
@@ -303,7 +303,7 @@ const Services2026: React.FC = () => {
         </section>
       )},
   {{/* All Services Grid */},
-  }
+  };
       <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
@@ -319,19 +319,19 @@ const Services2026: React.FC = () => {
             {filteredAndSorted.map((service) => (
   <motion.div;
                 key={{service.id},
-  }
+  };
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.6 },
-  }
+  };
                 className="className="group bg-slate-900/60 backdrop-blur border border-slate-700/50 hover:border-cyan-400/40 transition-all duration-300 rounded-2xl p-6 hover:scale-105 hover:shadow-xl hover:shadow-cyan-400/10";"
               >
                 <div className="flex items-center justify-between mb-3">
                   <div className="text-xs uppercase tracking-wide text-cyan-300/70 font-semibold">
                     {{service.category},
-  }
+  };
                   </div>
                   <div className={`px-2 py-1 rounded-full text-xs font-medium ${
   service.innovationLevel === 'Revolutionary';
@@ -341,18 +341,18 @@ const Services2026: React.FC = () => {
                       : 'bg-blue-500/20 text-blue-300 border border-blue-500/30'
 }`}>
                     {{service.innovationLevel},
-  }
+  };
                   </div>
                 </div>
 
                 <h3 className="text-lg font-semibold text-white group-hover:text-cyan-300 transition-colors mb-2 line-clamp-2">
                   {{service.title},
-  }
+  };
                 </h3>
 
                 <p className="text-slate-300 text-sm leading-relaxed mb-4 line-clamp-3">
                   {{service.description},
-  }
+  };
                 </p>
 
                 <div className="space-y-2 mb-4">
@@ -377,7 +377,7 @@ const Services2026: React.FC = () => {
 
                   <div className="text-xs text-slate-500">
                     {{service.id},
-  }
+  };
                   </div>
                 </div>
               </motion.div>
@@ -387,7 +387,7 @@ const Services2026: React.FC = () => {
       </section>
 
       {{/* Contact and Pricing Section */},
-  }
+  };
       <section className="py-20 bg-gradient-to-r from-slate-900/50 to-slate-800/50">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
@@ -495,7 +495,7 @@ const Services2026: React.FC = () => {
       </section>
 
       {{/* Footer Links */},
-  }
+  };
       <section className="py-12">
         <div className="container mx-auto px-4 text-center">
           <div className="text-sm text-slate-400 mb-4">
@@ -508,5 +508,5 @@ const Services2026: React.FC = () => {
       </section>
     </div>
   )
-}
+};
 export default Services2026;

@@ -24,11 +24,10 @@ interface Notification {
   };
   priority: 'low' | 'medium' | 'high',category: string;
   expiresAt?: Date
-}
+};
 
 interface Props {
   enabled?: boolean,
-}
 
 export function SmartNotificationSystem({ enabled = true }: Props) {
   const [notifications, setNotifications] = useState<Notification[]>([]),
@@ -81,7 +80,6 @@ const [showSettings, setShowSettings] = useState(false);
 const filtered = prev.filter(notification => {
           if (notification.expiresAt && notification.expiresAt < now) {
             return false
-}
           return true
 }),
         
@@ -184,9 +182,9 @@ const days = Math.floor(diff / (1000 * 60 * 60 * 24));
         onClick={() => setIsVisible(true)}
         className="fixed bottom-56 right-4 z-50 p-3 bg-gradient-to-r from-pink-500 to-rose-500 rounded-full shadow-lg hover: shadow-xl transition-all duration-300 relative"
         whileHover={{ scale: 1.1 },
-  }
+  };
         whileTap={{ scale: 0.9 },
-  }
+  };
         title="Notifications"
         aria-label="Open notifications"
       >
@@ -194,9 +192,9 @@ const days = Math.floor(diff / (1000 * 60 * 60 * 24));
         {unreadCount > 0 && (
           <motion.div
             initial={{ scale: 0 },
-  }
+  };
             animate={{ scale: 1 },
-  }
+  };
             className="absolute -top-1 -right-1 w-5 h-5 bg-red-500 text-white text-xs rounded-full flex items-center justify-center font-bold"
           >
             {unreadCount > 9 ? '9+' : unreadCount}
@@ -204,17 +202,16 @@ const days = Math.floor(diff / (1000 * 60 * 60 * 24));
         )}
       </motion.button>
     )
-}
 
   return (
     <AnimatePresence>
       <motion.div
         initial={{ opacity: 0, x: 300 },
-  }
+  };
         animate={{ opacity: 1, x: 0 },
-  }
+  };
         exit={{ opacity: 0, x: 300 },
-  }
+  };
         className="fixed top-4 right-4 z-50 w-96 bg-white/95 backdrop-blur-md rounded-2xl shadow-2xl border border-gray-200/50 max-h-[90vh] overflow-hidden"
       >
         {/* Header */}
@@ -261,11 +258,11 @@ const days = Math.floor(diff / (1000 * 60 * 60 * 24));
           {showSettings && (
             <motion.div
               initial={{ height: 0, opacity: 0 },
-  }
+  };
               animate={{ height: 'auto', opacity: 1 },
-  }
+  };
               exit={{ height: 0, opacity: 0 },
-  }
+  };
               className="border-b border-gray-200 p-4 bg-gray-50"
             >
               <div className="space-y-3">
@@ -307,11 +304,11 @@ const days = Math.floor(diff / (1000 * 60 * 60 * 24));
                 <motion.div
                   key={notification.id}
                   initial={{ opacity: 0, y: 20 },
-  }
+  };
                   animate={{ opacity: 1, y: 0 },
-  }
+  };
                   exit={{ opacity: 0, y: -20 },
-  }
+  };
                   className={`p-4 hover:bg-gray-50 transition-colors cursor-pointer border-l-4 ${getPriorityColor(notification.priority)} ${
                     !notification.read ? 'bg-blue-50/50' : ''
                   }`}
@@ -338,7 +335,7 @@ const days = Math.floor(diff / (1000 * 60 * 60 * 24));
                                 e.stopPropagation();
                                 notification.action!.onClick()
 },
-  }
+  };
                               className="mt-2 text-xs text-blue-600 hover: text-blue-800 font-medium transition-colors"
                             >
                               {notification.action.label} →
@@ -356,7 +353,7 @@ const days = Math.floor(diff / (1000 * 60 * 60 * 24));
                               e.stopPropagation();
                               removeNotification(notification.id)
 },
-  }
+  };
                             className="p-1 text-gray-400 hover:text-red-500 transition-colors"
                             title="Remove notification"
                           >
@@ -391,4 +388,3 @@ const days = Math.floor(diff / (1000 * 60 * 60 * 24));
       </motion.div>
     </AnimatePresence>
   )
-}

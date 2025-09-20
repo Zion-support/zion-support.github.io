@@ -97,26 +97,26 @@ const AIWorkflowAutomation = () => {
     const const containerVariants = {
   = {
         hidden: {{ opacity: 0 },
-  }
+  };
         visible: {
   opacity: 1,transition: {
   staggerChildren: 0.1
 },
   },
-  }
+  };
     const const itemVariants = {
   = {
         hidden: {{ y: 20, opacity: 0 },
-  }
+  };
         visible: {
   y: 0,opacity: 1,transition: {
   duration: 0.5
 },
   },
-  }
+  };
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {{/* Hero Section */},
-  }
+  };
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-[linear-gradient(rgba(34,221,210,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(34,221,210,0.1)_1px,transparent_1px)] bg-[size:50px_50px]"/>
         ;
@@ -150,7 +150,7 @@ const AIWorkflowAutomation = () => {
       </div>
 
       {{/* Features Section */},
-  }
+  };
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
         <motion.div variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true },
   } className="text-center mb-16">
@@ -179,7 +179,7 @@ const AIWorkflowAutomation = () => {
                   {feature.benefits.map((benefit, idx) => (<li key={idx} className="flex items-center text-sm text-gray-400">
                       <div className="w-2 h-2 bg-orange-500 rounded-full mr-3"></div>
                       {{benefit},
-  }
+  };
                     </li>))}
                 </ul>
               </div>
@@ -188,7 +188,7 @@ const AIWorkflowAutomation = () => {
       </div>
 
       {{/* Solutions by Department */},
-  }
+  };
       <div className="bg-gradient-to-r from-orange-600/20 to-red-600/20 border-t border-orange-500/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <motion.div initial={{ opacity: 0, y: 20 },
@@ -220,7 +220,7 @@ const AIWorkflowAutomation = () => {
                   {category.solutions.map((solution, idx) => (<li key={idx} className="flex items-center text-sm text-gray-400">
                       <div className="w-2 h-2 bg-orange-500 rounded-full mr-3"></div>
                       {{solution},
-  }
+  };
                     </li>))}
                 </ul>
               </motion.div>))}
@@ -229,7 +229,7 @@ const AIWorkflowAutomation = () => {
       </div>
 
       {{/* Benefits Section */},
-  }
+  };
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <motion.div initial={{ opacity: 0, y: 20 },
   } whileInView={{ opacity: 1, y: 0 },
@@ -259,7 +259,7 @@ const AIWorkflowAutomation = () => {
       </div>
 
       {{/* Technology Stack */},
-  }
+  };
       <div className="bg-gradient-to-r from-orange-600/20 to-red-600/20 border-t border-orange-500/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <motion.div initial={{ opacity: 0, y: 20 },
@@ -291,7 +291,7 @@ const AIWorkflowAutomation = () => {
       </div>
 
       {{/* CTA Section */},
-  }
+  };
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <motion.div initial={{ opacity: 0, y: 20 },
   } whileInView={{ opacity: 1, y: 0 },
@@ -316,5 +316,5 @@ const AIWorkflowAutomation = () => {
         </motion.div>
       </div>
     </div>)
-}
+};
 export default AIWorkflowAutomation;

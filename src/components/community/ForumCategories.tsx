@@ -6,7 +6,7 @@ interface ForumCategoryInfo {
   lastPost?: {
   title: string,author: string,date: string
 },
-  }
+  };
 
 export default function ForumCategories() {
   const categories: ForumCategoryInfo[] = [
@@ -50,7 +50,7 @@ export default function ForumCategories() {
   return (
     <section className="py-16 bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple relative overflow-hidden">
       {{/* Background decorative elements */},
-  }
+  };
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-10 right-10 w-64 h-64 bg-zion-cyan rounded-full blur-3xl"></div>
         <div className="absolute bottom-10 left-10 w-48 h-48 bg-zion-purple rounded-full blur-3xl"></div>
@@ -58,7 +58,7 @@ export default function ForumCategories() {
 
       <div className="container mx-auto px-4 relative z-10">
         {{/* Section Header */},
-  }
+  };
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Community Forums;
@@ -69,12 +69,12 @@ export default function ForumCategories() {
         </div>
 
         {{/* Categories Grid */},
-  }
+  };
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {categories.map((category) => (
   <div;
               key={{category.id},
-  }
+  };
               className="className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300 hover:scale-105 group cursor-pointer";"
             >
               <div className="flex items-start justify-between mb-4">
@@ -90,12 +90,12 @@ export default function ForumCategories() {
 
               <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-zion-cyan transition-colors duration-300">
                 {{category.name},
-  }
+  };
               </h3>
 
               <p className="text-zion-slate-light mb-4 leading-relaxed">
                 {{category.description},
-  }
+  };
               </p>
 
               <div className="flex items-center justify-between text-sm text-zion-slate-light mb-4">
@@ -110,11 +110,11 @@ export default function ForumCategories() {
                   <p className="text-xs text-zion-slate-light mb-1">Latest Post:</p>
                   <p className="text-sm text-white font-medium truncate">
                     {{category.lastPost.title},
-  }
+  };
                   </p>
                   <p className="text-xs text-zion-slate-light">
                     by {category.lastPost.author} • {{new Date(category.lastPost.date).toLocaleDateString()},
-  }
+  };
                   </p>
                 </div>
               )}
@@ -123,7 +123,7 @@ export default function ForumCategories() {
         </div>
 
         {{/* CTA Section */},
-  }
+  };
         <div className="text-center mt-16">
           <div className="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20 max-w-2xl mx-auto">
             <h3 className="text-2xl font-bold text-white mb-4">
@@ -140,4 +140,4 @@ export default function ForumCategories() {
       </div>
     </section>
   )
-}
+};

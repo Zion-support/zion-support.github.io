@@ -44,13 +44,12 @@ import {
 interface SitemapSection {
   title: string,icon: React.ComponentType<any>,description: string,routes: SitemapRoute[];
   featured?: boolean
-}
+};
 
 interface SitemapRoute {
   path: string,name: string,description: string,icon: React.ComponentType<any>,category: string;
   featured?: boolean,
   external?: boolean
-}
 
 export const SitemapGenerator: React.FC = () => {
   const [sitemapData, setSitemapData] = useState<SitemapSection[]>([]),

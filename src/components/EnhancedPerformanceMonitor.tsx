@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 interface PerformanceMetrics {
   loadTime: number,renderTime: number,memoryUsage: number,networkLatency: number,fps: number,lighthouseScore: number
-}
+};
 
 export function EnhancedPerformanceMonitor() {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
@@ -109,7 +109,7 @@ const currentTime = performance.now();
                   'bg-red-400'
                 }`}
                 style={{ width: `${metrics.lighthouseScore}%` },
-  }
+  };
               />
             </div>
             <span className={metrics.lighthouseScore >= 90 ? 'text-green-400' : 
@@ -125,4 +125,3 @@ const currentTime = performance.now();
       </div>
     </div>
   )
-}

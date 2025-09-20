@@ -16,11 +16,11 @@ import {
 } from "lucide-react";
 interface PerformanceMetric {
   name: string,value: number,unit: string,trend: 'up' | 'down' | 'stable',status: 'good' | 'warning' | 'critical',icon: React.ComponentType<any>
-}
+};
 
 interface PerformanceData {
   timestamp: number,metrics: PerformanceMetric[],alerts: string[],recommendations: string[],
-  }
+  };
 
 const PerformanceAnalytics: React.FC = () => {
   const [performanceData, setPerformanceData] = useState<PerformanceData | null>(null),
@@ -113,11 +113,11 @@ const formatValue = (value: number, unit: string) => {
         <div className="max-w-7xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             animate={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
           >
             <div className="inline-flex items-center px-4 py-2 bg-purple-600/20 text-purple-400 rounded-full text-sm font-medium mb-6">
               <Monitor className="w-4 h-4 mr-2" />
@@ -139,11 +139,11 @@ const formatValue = (value: number, unit: string) => {
           {/* Controls */}
           <motion.div
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             animate={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8, delay: 0.2 },
-  }
+  };
             className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12"
           >
             <button
@@ -187,22 +187,22 @@ const formatValue = (value: number, unit: string) => {
           <div className="max-w-7xl mx-auto">
             <motion.div
               initial={{ opacity: 0 },
-  }
+  };
               animate={{ opacity: 1 },
-  }
+  };
               transition={{ duration: 0.5 },
-  }
+  };
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12"
             >
               {performanceData.metrics.map((metric, index) => (
                 <motion.div
                   key={metric.name}
                   initial={{ opacity: 0, y: 20 },
-  }
+  };
                   animate={{ opacity: 1, y: 0 },
-  }
+  };
                   transition={{ duration: 0.5, delay: index * 0.1 },
-  }
+  };
                   className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:border-purple-500/50 transition-all duration-300"
                 >
                   <div className="flex items-start justify-between mb-4">
@@ -233,7 +233,7 @@ const formatValue = (value: number, unit: string) => {
                           metric.status === 'warning' ? 'bg-yellow-500' : 'bg-red-500'
                         }`}
                         style={{ width: `${Math.min(metric.value, 100)}%` },
-  }
+  };
                       />
                     </div>
                   </div>
@@ -246,11 +246,11 @@ const formatValue = (value: number, unit: string) => {
               {/* Alerts */}
               <motion.div
                 initial={{ opacity: 0, x: -20 },
-  }
+  };
                 animate={{ opacity: 1, x: 0 },
-  }
+  };
                 transition={{ duration: 0.5, delay: 0.3 },
-  }
+  };
                 className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6"
               >
                 <h3 className="text-xl font-semibold text-white mb-4 flex items-center">
@@ -277,11 +277,11 @@ const formatValue = (value: number, unit: string) => {
               {/* Recommendations */}
               <motion.div
                 initial={{ opacity: 0, x: 20 },
-  }
+  };
                 animate={{ opacity: 1, x: 0 },
-  }
+  };
                 transition={{ duration: 0.5, delay: 0.4 },
-  }
+  };
                 className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6"
               >
                 <h3 className="text-xl font-semibold text-white mb-4 flex items-center">
@@ -313,13 +313,13 @@ const formatValue = (value: number, unit: string) => {
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             viewport={{ once: true },
-  }
+  };
           >
             <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">
               Optimize Your Application Performance
@@ -339,5 +339,4 @@ const formatValue = (value: number, unit: string) => {
       </section>
     </div>
   )
-};
 export default PerformanceAnalytics;

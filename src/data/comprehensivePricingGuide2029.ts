@@ -7,12 +7,12 @@ export interface PricingTier {
   ]
   limitations?: string[[],
   ],
-  }
+  };
 
 export interface ServiceCategory {
   id: string,name: string,description: string,icon: string,services: ProductListing[],pricingTiers: PricingTier[[],
   ],
-  }
+  };
 
 export const COMPREHENSIVE_PRICING_GUIDE_2029: ServiceCategory[] = [
   {

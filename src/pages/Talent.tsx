@@ -510,7 +510,7 @@ export default function Talent() {
       rate: '$80-100/hr',availability: 'Available',skills: ['Machine LearningPython', 'Scikit-learnData Engineering', 'SQLAWS', 'Docker']
       bio: 'Experienced ML engineer with strong background in data engineering and production ML systems.',certifications: ['AWS Solutions ArchitectGoogle Cloud Professional Data Engineer'],projects: ['Customer Segmentation ModelPredictive Analytics Platform', 'Data Pipeline Optimization']
       rating: 4.7,reviews: 18,featured: false
-}
+};
     // Cloud & DevOps;
     {
   id: 'devops-architect',name: 'Michael Thompson',title: 'DevOps Architect',category: 'cloud',experience: 'lead',avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face',location: 'Seattle, WA';
@@ -518,7 +518,6 @@ export default function Talent() {
       bio: '15+ years of experience designing and implementing cloud-native architectures and CI/CD pipelines.',certifications: ['AWS Solutions Architect ProfessionalKubernetes Administrator', 'Terraform Associate']
       projects: ['Multi-cloud MigrationMicroservices Architecture', 'DevOps Transformation']
       rating: 4.9,reviews: 31,featured: true
-}
     // Security;
     {
   id: 'security-engineer',name: 'Jennifer Park',title: 'Security Engineer',category: 'security',experience: 'senior',avatar: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face',location: 'New York, NY';
@@ -527,14 +526,12 @@ export default function Talent() {
       certifications: ['CISSPCEH', 'OSCPCompTIA Security+']
       projects: ['Security Infrastructure DesignCompliance Framework Implementation', 'Incident Response']
       rating: 4.8,reviews: 25,featured: false
-}
     // Data & Analytics;
     {
   id: 'data-scientist',name: 'David Kim',title: 'Data Scientist',category: 'data',experience: 'mid',avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop&crop=face',location: 'Chicago, IL';
       rate: '$90-110/hr',availability: 'Available',skills: ['PythonR', 'SQLStatistics', 'Data VisualizationTableau', 'Power BI']
       bio: 'Data scientist with strong statistical background and experience in business intelligence and analytics.',certifications: ['Google Data AnalyticsMicrosoft Power BI Data Analyst'],projects: ['Customer Analytics DashboardPredictive Modeling', 'Business Intelligence Platform']
       rating: 4.6,reviews: 16,featured: false
-}
     // Software Development;
     {
   id: 'fullstack-developer',name: 'Emily Watson',title: 'Full Stack Developer',category: 'development',experience: 'mid',avatar: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=150&h=150&fit=crop&crop=face',location: 'Denver, CO';
@@ -545,7 +542,7 @@ export default function Talent() {
   ]
   const toggleTalentExpansion = (talentId: string) => {
   setExpandedTalent(expandedTalent === talentId ? null : talentId)
-  }
+  };
   const filteredTalent = talentPool.filter(talent => {
   if (selectedCategory !== 'all' && talent.category !== selectedCategory) return false;
     if (selectedExperience !== 'all' && talent.experience !== selectedExperience) return false;
@@ -567,7 +564,7 @@ export default function Talent() {
       case 'development': return 'bg-orange-500/20 text-orange-400';
       default: return 'bg-slate-500/20 text-slate-400'
 },
-  }
+  };
   const getExperienceColor = (experience: string) => {
   switch (experience) {
   case 'junior': return 'bg-green-500/20 text-green-400';
@@ -576,21 +573,20 @@ export default function Talent() {
       case 'lead': return 'bg-orange-500/20 text-orange-400';
       default: return 'bg-slate-500/20 text-slate-400'
 },
-  }
+  };
   const getAvailabilityColor = (availability: string) => {
   return availability === 'Available' ? 'bg-green-500/20 text-green-400' : 'bg-red-500/20 text-red-400'
-}
   const renderStars = (rating: number) => {
   return Array.from({ length: 5 }, (_, i) => (
   <Star;
         key={{i},
-  }
+  };
         className={`w-4 h-4 ${
   i < Math.floor(rating) ? 'text-yellow-400 fill-current' : 'text-gray-400'
 }`}
       />
     ))
-  }
+  };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -600,17 +596,17 @@ export default function Talent() {
       />
       ;
       {{/* Hero Section */},
-  }
+  };
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 via-purple-500/10 to-green-500/10"></div>
         <div className="container mx-auto px-6 relative z-10">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             animate={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             className="className="text-center";"
           >
             <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-2xl mb-6">
@@ -628,13 +624,13 @@ export default function Talent() {
       </section>
 
       {{/* Search and Filters */},
-  }
+  };
       <section className="py-12">
         <div className="container mx-auto px-6">
           <div className="max-w-6xl mx-auto">
             <div className="flex flex-col lg:flex-row gap-6 mb-8">
               {{/* Search */},
-  }
+  };
               <div className="flex-1">
                 <div className="relative">
                   <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
@@ -642,22 +638,22 @@ export default function Talent() {
                     type="text";
                     placeholder="Search by name, skills, or expertise...";
                     value={{searchQuery},
-  }
+  };
                     onChange={{(e) => setSearchQuery(e.target.value)},
-  }
+  };
                     className="className="w-full pl-12 pr-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-400/20 transition-all duration-200";"
                   />
                 </div>
               </div>
 
               {{/* Category Filter */},
-  }
+  };
               <div className="lg:w-48">
                 <select;
                   value={{selectedCategory},
-  }
+  };
                   onChange={{(e) => setSelectedCategory(e.target.value)},
-  }
+  };
                   className="className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white focus:outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-400/20 transition-all duration-200";"
                 >
                   {categories.map((category) => (
@@ -669,13 +665,13 @@ export default function Talent() {
               </div>
 
               {{/* Experience Filter */},
-  }
+  };
               <div className="lg:w-48">
                 <select;
                   value={{selectedExperience},
-  }
+  };
                   onChange={{(e) => setSelectedExperience(e.target.value)},
-  }
+  };
                   className="className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white focus:outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-400/20 transition-all duration-200";"
                 >
                   {experienceLevels.map((level) => (
@@ -687,12 +683,12 @@ export default function Talent() {
               </div>
 
               {{/* View Mode Toggle */},
-  }
+  };
               <div className="flex items-center gap-2">
                 <button;
                   onClick={{onClick={() => setViewMode('grid')},
   },
-  }
+  };
                   className={`p-2 rounded-lg transition-all duration-200 ${
   viewMode === 'grid' ;
                       ? 'bg-blue-400/20 text-blue-400' ;
@@ -704,7 +700,7 @@ export default function Talent() {
                 <button;
                   onClick={{onClick={() => setViewMode('list')},
   },
-  }
+  };
                   className={`p-2 rounded-lg transition-all duration-200 ${
   viewMode === 'list' ;
                       ? 'bg-blue-400/20 text-blue-400' ;
@@ -720,16 +716,16 @@ export default function Talent() {
       </section>
 
       {{/* Featured Talent */},
-  }
+  };
       <section className="py-16">
         <div className="container mx-auto px-6">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             className="className="text-center mb-12";"
           >
             <h2 className="text-3xl font-bold text-white mb-4">Featured Professionals</h2>
@@ -740,13 +736,13 @@ export default function Talent() {
             {talentPool.filter(t => t.featured).map((talent, index) => (
   <motion.div;
                 key={{talent.id},
-  }
+  };
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.8, delay: index * 0.1 },
-  }
+  };
                 className="className="group";"
               >
                 <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-2xl border border-slate-600/50 hover:border-blue-400/50 transition-all duration-300 hover:scale-105 overflow-hidden">
@@ -754,15 +750,15 @@ export default function Talent() {
                     <div className="flex items-center gap-3 mb-4">
                       <span className={`px-3 py-1 rounded-full text-xs font-medium ${getCategoryColor(talent.category)}`}>
                         {{categories.find(c => c.id === talent.category)?.name},
-  }
+  };
                       </span>
                       <span className={`px-3 py-1 rounded-full text-xs font-medium ${getExperienceColor(talent.experience)}`}>
                         {{experienceLevels.find(e => e.id === talent.experience)?.name},
-  }
+  };
                       </span>
                       <span className={`px-3 py-1 rounded-full text-xs font-medium ${getAvailabilityColor(talent.availability)}`}>
                         {{talent.availability},
-  }
+  };
                       </span>
                       <span className="px-3 py-1 rounded-full text-xs font-medium bg-yellow-500/20 text-yellow-400">
                         Featured;
@@ -773,13 +769,13 @@ export default function Talent() {
                       <img ;
                         src={talent.avatar} ;
                         alt={{talent.name},
-  }
+  };
                         className="className="w-16 h-16 rounded-full object-cover border-2 border-blue-400/20";"
                       />
                       <div>
                         <h3 className="text-xl font-bold text-white group-hover:text-blue-400 transition-colors duration-200">
                           {{talent.name},
-  }
+  };
                         </h3>
                         <p className="text-gray-300">{talent.title}</p>
                         <div className="flex items-center gap-2 mt-1">
@@ -791,7 +787,7 @@ export default function Talent() {
                     ;
                     <p className="text-gray-300 text-sm mb-4 leading-relaxed">
                       {{talent.bio},
-  }
+  };
                     </p>
                     ;
                     <div className="mb-4">
@@ -800,7 +796,7 @@ export default function Talent() {
                         {talent.skills.slice(0, 5).map((skill, skillIndex) => (
   <span key={skillIndex} className="px-2 py-1 bg-slate-700/50 text-gray-300 text-xs rounded">
                             {{skill},
-  }
+  };
                           </span>
                         ))}
                       </div>
@@ -815,7 +811,7 @@ export default function Talent() {
                         <div className="text-gray-400">Rating</div>
                         <div className="flex items-center gap-1">
                           {{renderStars(talent.rating)},
-  }
+  };
                           <span className="text-gray-300 text-xs">({talent.reviews})</span>
                         </div>
                       </div>
@@ -824,23 +820,23 @@ export default function Talent() {
                     <button;
                       onClick={{onClick={() => toggleTalentExpansion(talent.id)},
   },
-  }
+  };
                       className="className="w-full px-4 py-2 bg-gradient-to-r from-blue-400 to-purple-500 text-white font-semibold rounded-lg hover:from-blue-500 hover:to-purple-600 transition-all duration-200 hover:scale-105";"
                     >
                       {{expandedTalent === talent.id ? 'Show Less' : 'View Full Profile'},
-  }
+  };
                     </button>
                     ;
                     {expandedTalent === talent.id && (
   <motion.div;
                         initial={{ opacity: 0, height: 0 },
-  }
+  };
                         animate={{ opacity: 1, height: 'auto' },
-  }
+  };
                         exit={{ opacity: 0, height: 0 },
-  }
+  };
                         transition={{ duration: 0.3 },
-  }
+  };
                         className="className="mt-4 pt-4 border-t border-slate-600/50";"
                       >
                         <div className="mb-4">
@@ -849,7 +845,7 @@ export default function Talent() {
                             {talent.certifications.map((cert, certIndex) => (
   <span key={certIndex} className="px-2 py-1 bg-blue-500/20 text-blue-400 text-xs rounded">
                                 {{cert},
-  }
+  };
                               </span>
                             ))}
                           </div>
@@ -862,7 +858,7 @@ export default function Talent() {
   <li key={projectIndex} className="flex items-center text-gray-300 text-sm">
                                 <CheckCircle className="w-3 h-3 text-blue-400 mr-2 flex-shrink-0" />
                                 {{project},
-  }
+  };
                               </li>
                             ))}
                           </ul>
@@ -878,16 +874,16 @@ export default function Talent() {
       </section>
 
       {{/* All Talent */},
-  }
+  };
       <section className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50">
         <div className="container mx-auto px-6">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-4">All Available Talent</h2>
@@ -901,13 +897,13 @@ export default function Talent() {
               {filteredTalent.map((talent, index) => (
   <motion.div;
                   key={{talent.id},
-  }
+  };
                   initial={{ opacity: 0, y: 20 },
-  }
+  };
                   whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                   transition={{ duration: 0.8, delay: index * 0.05 },
-  }
+  };
                   className="className="group";"
                 >
                   <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl border border-slate-600/50 hover:border-blue-400/50 transition-all duration-300 hover:scale-105 overflow-hidden">
@@ -915,11 +911,11 @@ export default function Talent() {
                       <div className="flex items-center gap-2 mb-3">
                         <span className={`px-2 py-1 rounded-full text-xs font-medium ${getCategoryColor(talent.category)}`}>
                           {{categories.find(c => c.id === talent.category)?.name},
-  }
+  };
                         </span>
                         <span className={`px-2 py-1 rounded-full text-xs font-medium ${getExperienceColor(talent.experience)}`}>
                           {{experienceLevels.find(e => e.id === talent.experience)?.name},
-  }
+  };
                         </span>
                       </div>
                       ;
@@ -927,13 +923,13 @@ export default function Talent() {
                         <img ;
                           src={talent.avatar} ;
                           alt={{talent.name},
-  }
+  };
                           className="className="w-12 h-12 rounded-full object-cover border border-blue-400/20";"
                         />
                         <div>
                           <h3 className="text-lg font-bold text-white group-hover:text-blue-400 transition-colors duration-200">
                             {{talent.name},
-  }
+  };
                           </h3>
                           <p className="text-gray-300 text-sm">{talent.title}</p>
                         </div>
@@ -945,7 +941,7 @@ export default function Talent() {
                           {talent.skills.slice(0, 3).map((skill, skillIndex) => (
   <span key={skillIndex} className="px-2 py-1 bg-slate-700/50 text-gray-300 text-xs rounded">
                               {{skill},
-  }
+  };
                             </span>
                           ))}
                         </div>
@@ -960,7 +956,7 @@ export default function Talent() {
                           <div className="text-gray-400">Rating</div>
                           <div className="flex items-center gap-1">
                             {{renderStars(talent.rating)},
-  }
+  };
                           </div>
                         </div>
                       </div>
@@ -978,13 +974,13 @@ export default function Talent() {
               {filteredTalent.map((talent, index) => (
   <motion.div;
                   key={{talent.id},
-  }
+  };
                   initial={{ opacity: 0, x: -20 },
-  }
+  };
                   whileInView={{ opacity: 1, x: 0 },
-  }
+  };
                   transition={{ duration: 0.8, delay: index * 0.05 },
-  }
+  };
                   className="className="group";"
                 >
                   <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl border border-slate-600/50 hover:border-blue-400/50 transition-all duration-300 p-6">
@@ -993,7 +989,7 @@ export default function Talent() {
                         <img ;
                           src={talent.avatar} ;
                           alt={{talent.name},
-  }
+  };
                           className="className="w-20 h-20 rounded-full object-cover border-2 border-blue-400/20";"
                         />
                       </div>
@@ -1002,15 +998,15 @@ export default function Talent() {
                         <div className="flex items-center gap-3 mb-2">
                           <span className={`px-3 py-1 rounded-full text-xs font-medium ${getCategoryColor(talent.category)}`}>
                             {{categories.find(c => c.id === talent.category)?.name},
-  }
+  };
                           </span>
                           <span className={`px-3 py-1 rounded-full text-xs font-medium ${getExperienceColor(talent.experience)}`}>
                             {{experienceLevels.find(e => e.id === talent.experience)?.name},
-  }
+  };
                           </span>
                           <span className={`px-3 py-1 rounded-full text-xs font-medium ${getAvailabilityColor(talent.availability)}`}>
                             {{talent.availability},
-  }
+  };
                           </span>
                           {talent.featured && (
   <span className="px-3 py-1 rounded-full text-xs font-medium bg-yellow-500/20 text-yellow-400">
@@ -1021,12 +1017,12 @@ export default function Talent() {
                         ;
                         <h3 className="text-xl font-bold text-white group-hover:text-blue-400 transition-colors duration-200 mb-2">
                           {{talent.name},
-  }
+  };
                         </h3>
                         ;
                         <p className="text-gray-300 text-sm mb-3 leading-relaxed">
                           {{talent.bio},
-  }
+  };
                         </p>
                         ;
                         <div className="mb-3">
@@ -1035,7 +1031,7 @@ export default function Talent() {
                             {talent.skills.slice(0, 6).map((skill, skillIndex) => (
   <span key={skillIndex} className="px-2 py-1 bg-slate-700/50 text-gray-300 text-xs rounded">
                                 {{skill},
-  }
+  };
                               </span>
                             ))}
                           </div>
@@ -1052,7 +1048,7 @@ export default function Talent() {
                             <div className="text-gray-400">Rating</div>
                             <div className="flex items-center gap-1">
                               {{renderStars(talent.rating)},
-  }
+  };
                               <span className="text-gray-300 text-xs">({talent.reviews})</span>
                             </div>
                           </div>
@@ -1065,7 +1061,7 @@ export default function Talent() {
                             <div className="text-green-400 font-medium text-sm">
                               {{experienceLevels.find(e => e.id === talent.experience)?.name.split(' ')[0],
   },
-  }
+  };
                             </div>
                           </div>
                         </div>
@@ -1084,16 +1080,16 @@ export default function Talent() {
       </section>
 
       {{/* Call to Action */},
-  }
+  };
       <section className="py-20">
         <div className="container mx-auto px-6 text-center">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
           >
             <h2 className="text-4xl font-bold text-white mb-6">
               Ready to Connect with Top Talent?;
@@ -1119,4 +1115,3 @@ export default function Talent() {
       </section>
     </div>
   )
-}

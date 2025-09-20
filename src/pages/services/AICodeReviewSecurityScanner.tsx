@@ -103,16 +103,16 @@ const AICodeReviewSecurityScanner = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {{/* Hero Section */},
-  }
+  };
       <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             animate={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             className="className="text-center";"
           >
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-green-500 to-emerald-500 text-white text-sm font-medium mb-6">
@@ -133,9 +133,9 @@ const AICodeReviewSecurityScanner = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button;
                 whileHover={{ scale: 1.05 },
-  }
+  };
                 whileTap={{ scale: 0.95 },
-  }
+  };
                 className="className="px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-500 text-white font-semibold rounded-lg hover:from-green-600 hover:to-emerald-600 transition-all duration-200 flex items-center justify-center";"
               >
                 Start Free Trial;
@@ -143,9 +143,9 @@ const AICodeReviewSecurityScanner = () => {
               </motion.button>
               <motion.button;
                 whileHover={{ scale: 1.05 },
-  }
+  };
                 whileTap={{ scale: 0.95 },
-  }
+  };
                 className="className="px-8 py-4 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-200 flex items-center justify-center";"
               >
                 Schedule Demo;
@@ -157,16 +157,16 @@ const AICodeReviewSecurityScanner = () => {
       </section>
 
       {{/* Vulnerability Types Section */},
-  }
+  };
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
         <div className="max-w-7xl mx-auto">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             className="className="text-center mb-12";"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -182,13 +182,13 @@ const AICodeReviewSecurityScanner = () => {
             {vulnerabilityTypes.map((vulnType, index) => (
   <motion.div;
                 key={{index},
-  }
+  };
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.6, delay: index * 0.1 },
-  }
+  };
                 className="className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-green-500/50 transition-all duration-300";"
               >
                 <div className="flex items-start mb-4">
@@ -207,7 +207,7 @@ const AICodeReviewSecurityScanner = () => {
   <li key={idx} className="flex items-center text-sm text-gray-400">
                         <Minus className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
                         {{example},
-  }
+  };
                       </li>
                     ))}
                   </ul>
@@ -219,16 +219,16 @@ const AICodeReviewSecurityScanner = () => {
       </section>
 
       {{/* Features Section */},
-  }
+  };
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             className="className="text-center mb-16";"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -244,13 +244,13 @@ const AICodeReviewSecurityScanner = () => {
             {features.map((feature, index) => (
   <motion.div;
                 key={{index},
-  }
+  };
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.6, delay: index * 0.1 },
-  }
+  };
                 className="className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-green-500/50 transition-all duration-300";"
               >
                 <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg flex items-center justify-center mb-4">
@@ -263,7 +263,7 @@ const AICodeReviewSecurityScanner = () => {
   <li key={idx} className="flex items-center text-sm text-gray-400">
                       <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                       {{benefit},
-  }
+  };
                     </li>
                   ))}
                 </ul>
@@ -274,16 +274,16 @@ const AICodeReviewSecurityScanner = () => {
       </section>
 
       {{/* Pricing Section */},
-  }
+  };
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
         <div className="max-w-7xl mx-auto">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             className="className="text-center mb-16";"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -299,13 +299,13 @@ const AICodeReviewSecurityScanner = () => {
             {pricing.map((plan, index) => (
   <motion.div;
                 key={{index},
-  }
+  };
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.6, delay: index * 0.1 },
-  }
+  };
                 className={`relative bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border ${
   plan.popular ;
                     ? 'border-green-500/50 ring-2 ring-green-500/20' ;
@@ -334,16 +334,16 @@ const AICodeReviewSecurityScanner = () => {
   <li key={idx} className="flex items-center text-gray-300">
                       <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                       {{feature},
-  }
+  };
                     </li>
                   ))}
                 </ul>
 
                 <motion.button;
                   whileHover={{ scale: 1.02 },
-  }
+  };
                   whileTap={{ scale: 0.98 },
-  }
+  };
                   className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-200 ${
   plan.popular;
                       ? 'bg-gradient-to-r from-green-500 to-emerald-500 text-white hover:from-green-600 hover:to-emerald-600';
@@ -351,7 +351,7 @@ const AICodeReviewSecurityScanner = () => {
 }`}
                 >
                   {{plan.cta},
-  }
+  };
                 </motion.button>
               </motion.div>
             ))}
@@ -360,16 +360,16 @@ const AICodeReviewSecurityScanner = () => {
       </section>
 
       {{/* Use Cases Section */},
-  }
+  };
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             className="className="text-center mb-16";"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -385,13 +385,13 @@ const AICodeReviewSecurityScanner = () => {
             {useCases.map((useCase, index) => (
   <motion.div;
                 key={{index},
-  }
+  };
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.6, delay: index * 0.1 },
-  }
+  };
                 className="className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-green-500/50 transition-all duration-300";"
               >
                 <div className="flex items-start mb-4">
@@ -408,7 +408,7 @@ const AICodeReviewSecurityScanner = () => {
   <li key={idx} className="flex items-center text-sm text-gray-400">
                       <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                       {{benefit},
-  }
+  };
                     </li>
                   ))}
                 </ul>
@@ -419,16 +419,16 @@ const AICodeReviewSecurityScanner = () => {
       </section>
 
       {{/* CTA Section */},
-  }
+  };
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-green-900/20 to-emerald-900/20">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Ready to Secure Your Code?;
@@ -440,9 +440,9 @@ const AICodeReviewSecurityScanner = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button;
                 whileHover={{ scale: 1.05 },
-  }
+  };
                 whileTap={{ scale: 0.95 },
-  }
+  };
                 className="className="px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-500 text-white font-semibold rounded-lg hover:from-green-600 hover:to-emerald-600 transition-all duration-200 flex items-center justify-center";"
               >
                 Start Free Trial;
@@ -450,9 +450,9 @@ const AICodeReviewSecurityScanner = () => {
               </motion.button>
               <motion.button;
                 whileHover={{ scale: 1.05 },
-  }
+  };
                 whileTap={{ scale: 0.95 },
-  }
+  };
                 className="className="px-8 py-4 border border-gray-600 text-white font-semibold rounded-lg hover: bg-gray-800 transition-all duration-200 flex items-center justify-center";"
               >
                 Contact Sales;
@@ -464,5 +464,5 @@ const AICodeReviewSecurityScanner = () => {
       </section>
     </div>
   )
-}
+};
 export default AICodeReviewSecurityScanner;

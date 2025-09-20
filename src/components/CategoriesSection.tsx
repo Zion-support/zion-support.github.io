@@ -30,33 +30,33 @@ const specialServices = [
   ]
 interface CategoriesSectionProps {
   showTitle?: boolean
-}
+};
 
 const const containerVariants = {
   = {
   hidden: {{ opacity: 0 },
-  }
+  };
   visible: {
   opacity: 1,transition: {
   staggerChildren: 0.1,delayChildren: 0.2
 },
   },
-  }
+  };
 const const itemVariants = {
   = {
   hidden: {{ y: 20, opacity: 0 },
-  }
+  };
   visible: {
   y: 0,opacity: 1,transition: {
   duration: 0.5,ease: "easeOut"
 },
   },
-  }
+  };
 export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) {
   return (
     <section className="py-20 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 relative overflow-hidden">
       {{/* Background pattern */},
-  }
+  };
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0" style={{
   backgroundImage: `radial-gradient(circle at 25% 25%, #8ab1f3 2px, transparent 2px)`;
@@ -70,13 +70,13 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
   <motion.div ;
             className="className="text-center mb-16";"
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             viewport={{ once: true },
-  }
+  };
             transition={{ duration: 0.6 },
-  }
+  };
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
               Explore Categories;
@@ -90,18 +90,18 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
         <motion.div ;
           className="className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6";"
           variants={{containerVariants},
-  }
+  };
           initial="hidden";
           whileInView="visible";
           viewport={{ once: true },
-  }
+  };
         >
           {categories.map((category, index) => (
   <motion.div;
               key={{category.title},
-  }
+  };
               variants={{itemVariants},
-  }
+  };
               className="className="group block";"
             >
               <Link to={category.link} className="block">
@@ -109,7 +109,7 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
                   <div className={`rounded-full w-16 h-16 bg-gradient-to-br ${category.color} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
                     <div className="text-white text-2xl">
                       {{category.icon},
-  }
+  };
                     </div>
                   </div>
                   <h3 className="text-xl font-bold text-white mb-3">{category.title}</h3>
@@ -123,26 +123,26 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
         <motion.div ;
           className="className="mt-12";"
           initial={{ opacity: 0, y: 20 },
-  }
+  };
           whileInView={{ opacity: 1, y: 0 },
-  }
+  };
           viewport={{ once: true },
-  }
+  };
           transition={{ duration: 0.6, delay: 0.4 },
-  }
+  };
         >
           <h3 className="text-center text-xl font-bold text-white mb-6">Featured Services</h3>
           <div className="flex flex-wrap justify-center gap-4">
             {specialServices.map((service) => (
   <Link;
                 key={{service.title},
-  }
+  };
                 to={{service.link},
-  }
+  };
                 className="className="px-6 py-3 bg-blue-600 hover:bg-blue-700 border border-blue-500/20 hover:border-blue-400/50 rounded-full text-white transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25 flex items-center gap-2";"
               >
                 {{service.title},
-  }
+  };
                 <span className="text-sm">→</span>
               </Link>
             ))}
@@ -152,13 +152,13 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
         <motion.div ;
           className="className="mt-12 flex justify-center";"
           initial={{ opacity: 0, y: 20 },
-  }
+  };
           whileInView={{ opacity: 1, y: 0 },
-  }
+  };
           viewport={{ once: true },
-  }
+  };
           transition={{ duration: 0.6, delay: 0.6 },
-  }
+  };
         >
           <Link ;
             to="/categories" ;
@@ -171,4 +171,3 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
       </div>
     </section>
   )
-}

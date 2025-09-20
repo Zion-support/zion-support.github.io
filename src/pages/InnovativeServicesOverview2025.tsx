@@ -72,16 +72,16 @@ const InnovativeServicesOverview2025 = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       {{/* Hero Section */},
-  }
+  };
       <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             animate={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             className="className="text-center";"
           >
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 text-white text-sm font-medium mb-6">
@@ -101,9 +101,9 @@ const InnovativeServicesOverview2025 = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button;
                 whileHover={{ scale: 1.05 },
-  }
+  };
                 whileTap={{ scale: 0.95 },
-  }
+  };
                 className="className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-200";"
               >
                 <ArrowRight className="w-5 h-5 mr-2" />
@@ -111,9 +111,9 @@ const InnovativeServicesOverview2025 = () => {
               </motion.button>
               <motion.button;
                 whileHover={{ scale: 1.05 },
-  }
+  };
                 whileTap={{ scale: 0.95 },
-  }
+  };
                 className="className="inline-flex items-center px-8 py-4 border-2 border-zion-slate-light text-zion-slate-light font-semibold rounded-lg hover:bg-zion-slate-light hover:text-zion-slate-dark transition-all duration-200";"
               >
                 <Phone className="w-5 h-5 mr-2" />
@@ -125,16 +125,16 @@ const InnovativeServicesOverview2025 = () => {
       </section>
 
       {{/* Featured Services */},
-  }
+  };
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             className="className="text-center mb-16";"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -149,13 +149,13 @@ const InnovativeServicesOverview2025 = () => {
             {serviceCategories.map((service, index) => (
   <motion.div;
                 key={{service.id},
-  }
+  };
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.6, delay: index * 0.1 },
-  }
+  };
                 className="className="bg-zion-slate-dark/80 backdrop-blur-sm rounded-xl p-8 border border-zion-slate-light/20 hover:border-zion-slate-light/40 transition-all duration-300";"
               >
                 <div className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-xl flex items-center justify-center mb-6`}>
@@ -195,7 +195,7 @@ const InnovativeServicesOverview2025 = () => {
                 ;
                 <a;
                   href={{service.path},
-  }
+  };
                   className="className="inline-flex items-center w-full justify-center px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-200";"
                 >
                   <ArrowRight className="w-5 h-5 mr-2" />
@@ -208,16 +208,16 @@ const InnovativeServicesOverview2025 = () => {
       </section>
 
       {{/* Additional Services */},
-  }
+  };
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-zion-slate-dark/50">
         <div className="max-w-7xl mx-auto">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             className="className="text-center mb-16";"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -232,13 +232,13 @@ const InnovativeServicesOverview2025 = () => {
             {additionalServices.map((service, index) => (
   <motion.div;
                 key={{index},
-  }
+  };
                 initial={{ opacity: 0, scale: 0.8 },
-  }
+  };
                 whileInView={{ opacity: 1, scale: 1 },
-  }
+  };
                 transition={{ duration: 0.6, delay: index * 0.1 },
-  }
+  };
                 className="className="bg-zion-slate-dark/80 backdrop-blur-sm rounded-lg p-6 border border-zion-slate-light/20 hover:border-zion-slate-light/40 transition-all duration-300";"
               >
                 <h3 className="text-lg font-semibold text-white mb-2">{service.name}</h3>
@@ -246,7 +246,7 @@ const InnovativeServicesOverview2025 = () => {
                 <div className="text-xl font-bold text-white mb-4">{service.price}</div>
                 <a;
                   href={{service.path},
-  }
+  };
                   className="className="inline-flex items-center w-full justify-center px-4 py-2 bg-zion-slate-light/20 text-zion-slate-light font-medium rounded-lg hover:bg-zion-slate-light/30 transition-all duration-200";"
                 >
                   View Details;
@@ -258,16 +258,16 @@ const InnovativeServicesOverview2025 = () => {
       </section>
 
       {{/* Contact Section */},
-  }
+  };
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
           >
             <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">
               Ready to Transform Your Business?;
@@ -310,5 +310,5 @@ const InnovativeServicesOverview2025 = () => {
       </section>
     </div>
   )
-}
+};
 export default InnovativeServicesOverview2025;

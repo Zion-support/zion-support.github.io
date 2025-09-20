@@ -3,19 +3,18 @@ interface SitemapUrl {
   lastmod?: string;
   changefreq?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never';
   priority?: number;
-}
+};
 
 interface SitemapConfig {
   baseUrl: string;
   urls: SitemapUrl[];
   outputPath?: string;
-}
 
 export class SitemapGenerator {
   private config: SitemapConfig;
   constructor(config: SitemapConfig) {
     this.config = config;
-  }
+  };
 
   /**
    * Generate XML sitemap content
@@ -40,7 +39,7 @@ export class SitemapGenerator {
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${xmlUrls}
 </urlset>`;
-  }
+  };
 
   /**
    * Generate robots.txt content
@@ -71,7 +70,7 @@ Allow: /careers
 
 # Crawl delay (optional)
 Crawl-delay: 1`;
-  }
+  };
 
   /**
    * Generate sitemap index for large sites
@@ -89,7 +88,7 @@ Crawl-delay: 1`;
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${sitemapEntries}
 </sitemapindex>`;
-  }
+  };
 
   /**
    * Generate JSON-LD structured data for sitemap
@@ -118,7 +117,7 @@ ${sitemapEntries}
     };
 
     return JSON.stringify(structuredData, null, 2);
-  }
+  };
 
 // Default sitemap configuration for Zion Tech Group
 export const defaultSitemapConfig: SitemapConfig = {
@@ -166,16 +165,13 @@ export const defaultSitemapConfig: SitemapConfig = {
     { url: '/pricing', priority: 0.6, changefreq: 'monthly' },
     { url: '/marketplace', priority: 0.7, changefreq: 'weekly' },
   ]
-};
 
 // Utility function to generate sitemap
 export function generateSitemap(config: SitemapConfig = defaultSitemapConfig): string {
   const generator = new SitemapGenerator(config);
   return generator.generateXML();
-}
 
 // Utility function to generate robots.txt
 export function generateRobotsTxt(config: SitemapConfig = defaultSitemapConfig): string {
   const generator = new SitemapGenerator(config);
   return generator.generateRobotsTxt();
-}

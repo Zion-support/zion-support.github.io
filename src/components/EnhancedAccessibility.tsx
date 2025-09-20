@@ -6,7 +6,7 @@ interface AccessibilitySettings {
   focusVisible: boolean;
   screenReader: boolean;
   keyboardNavigation: boolean
-}
+};
 
 const EnhancedAccessibility: React.FC = () => {
   const [settings, setSettings] = useState<AccessibilitySettings>({
@@ -24,7 +24,6 @@ const [announcements, setAnnouncements] = useState<string[]>([]);
     const savedSettings = localStorage.getItem('accessibility-settings');
     if (savedSettings) {
       setSettings(JSON.parse(savedSettings))
-}
 
     // Detect screen reader
     const detectScreenReader = () => {
@@ -36,7 +35,6 @@ const [announcements, setAnnouncements] = useState<string[]>([]);
         window.speechSynthesis?.getVoices().length > 0;
       
       setSettings(prev => ({ ...prev, screenReader: hasScreenReader }))
-};
 
     detectScreenReader();
 
@@ -50,28 +48,24 @@ const applySettings = (newSettings: AccessibilitySettings) => {
       root.classList.add('high-contrast')
 } else {
       root.classList.remove('high-contrast')
-}
 
     // Large text
     if (newSettings.largeText) {
       root.classList.add('large-text')
 } else {
       root.classList.remove('large-text')
-}
 
     // Reduced motion
     if (newSettings.reducedMotion) {
       root.classList.add('reduced-motion')
 } else {
       root.classList.remove('reduced-motion')
-}
 
     // Focus visible
     if (newSettings.focusVisible) {
       root.classList.add('focus-visible')
 } else {
       root.classList.remove('focus-visible')
-}
 
     // Keyboard navigation
     if (newSettings.keyboardNavigation) {
@@ -97,7 +91,6 @@ const updateSetting = (setting: keyof AccessibilitySettings, value: boolean) => 
     };
     announce(`${settingNames[setting],
   } ${value ? 'enabled' : 'disabled'}`)
-};
 const announce = (message: string) => {
     setAnnouncements(prev => [...prev.slice(-2), message]);
     
@@ -117,7 +110,6 @@ const announce = (message: string) => {
   };
 const toggleSetting = (setting: keyof AccessibilitySettings) => {
     updateSetting(setting, !settings[setting])
-};
 
   return (
     <>
@@ -198,5 +190,4 @@ const toggleSetting = (setting: keyof AccessibilitySettings) => {
       </a>
     </>
   )
-};
 export default EnhancedAccessibility;

@@ -10,7 +10,7 @@ const const mockPost = {
   = {
     id: "1",title: "Best practices for AI model fine-tuning",content: "I've been working on fine-tuning models for specific tasks and wanted to share some approaches that have worked well for me...",authorId: "user1",authorName: "Alex Johnson",authorAvatar: "https://i.pravatar.cc/150?img=3",authorRole: "Verified Talent",categoryId: "ai-tools",tags: ["machine-learning", "fine-tuning", "gpt"]
     createdAt: "2025-04-01T12:00:00Z",updatedAt: "2025-04-01T12:00:00Z",upvotes: 48,downvotes: 2,replyCount: 12,isAnswered: true,isFeatured: true
-}
+};
 export default function EditPostPage() {
   const { postId } = useParams()
     const navigate = useNavigate()
@@ -72,7 +72,7 @@ const isAdmin = user?.userType === 'admin' || user?.role === 'admin';
   title: "Error",description: "There was a problem updating your post",variant: "destructive"
 })
         },
-  }
+  };
     return (<SEO title="Edit Post | Community Forum | Zion AI Marketplace" description="Edit your discussion post in the Zion AI Marketplace community forum." keywords="community, forum, discussion, edit post"/>
         ;
             <div className="container py-8">
@@ -92,4 +92,3 @@ const isAdmin = user?.userType === 'admin' || user?.role === 'admin';
         ;
         <PostForm initialValues={initialValues} onSubmit={handleSubmit} isEditing={true}/>
       </div>)
-}

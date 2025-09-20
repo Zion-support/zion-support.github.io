@@ -46,5 +46,5 @@ const LandingPageGenerator: React.FC = () => {
       </section>
     </div>
   )
-}
+};
 export default LandingPageGenerator;

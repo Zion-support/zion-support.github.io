@@ -11,7 +11,7 @@ interface SEOHeadProps {
   modifiedTime?: string;
   section?: string;
   tags?: string[],
-  }
+  };
 
 const SEOHead: React.FC<SEOHeadProps> = ({
   title = "Zion Tech Group - Revolutionary AI & Technology Solutions",
@@ -52,18 +52,15 @@ const SEOHead: React.FC<SEOHeadProps> = ({
     // Update article-specific tags if provided
     if (publishedTime) {
       updateMetaTag('article:published_time', publishedTime, 'property')
-}
+};
     if (modifiedTime) {
       updateMetaTag('article:modified_time', modifiedTime, 'property')
-}
     if (section) {
       updateMetaTag('article:section', section, 'property')
-}
     if (tags.length > 0) {
       tags.forEach(tag => {
         addMetaTag('article:tag', tag, 'property')
 })
-}
 
     // Update canonical URL
     updateCanonicalUrl(url);
@@ -98,7 +95,6 @@ const addMetaTag = (name: string, content: string, attribute: string = 'name') =
     meta.setAttribute(attribute, name);
     meta.setAttribute('content', content);
     document.head.appendChild(meta)
-};
 const updateCanonicalUrl = (url: string) => {
     let canonical = document.querySelector('link[rel="canonical"]');
     if (canonical) {
@@ -115,7 +111,6 @@ const updateStructuredData = (data: any) => {
     const existingScript = document.querySelector('script[type="application/ld+json"]');
     if (existingScript) {
       existingScript.remove()
-}
 
     // Add new structured data
     const structuredData = {
@@ -146,8 +141,6 @@ const script = document.createElement('script');
     script.type = 'application/ld+json';
     script.textContent = JSON.stringify(structuredData);
     document.head.appendChild(script)
-};
 
   return null; // This component doesn't render anything
-};
 export default SEOHead;

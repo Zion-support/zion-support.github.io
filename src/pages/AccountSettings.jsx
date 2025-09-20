@@ -25,7 +25,7 @@ export default function AccountSettings() {
                 setDidHandle(parsed.didHandle || '')
                 setEnableBackup(!!parsed.enableBackup)
             },
-  }
+  };
         catch (e) {
   console.error('Error loading account settings', e)
         },
@@ -56,7 +56,7 @@ const ethereum = window.ethereum;
   ) {
                 toast.error('No wallet detected. Please install MetaMask or another compatible wallet.')
                 return
-}
+};
             // Request accounts;
 const accounts = await ethereum.request({ method: 'eth_requestAccounts' })
             const address = accounts[[0],
@@ -75,7 +75,7 @@ const message = `Zion AI Marketplace wallet verification\nAddress: ${address}\nT
   ) {
                     setDidHandle(ensName)
                 },
-  }
+  };
             catch (error) {
   console.error('ENS lookup error:', error)
             }
@@ -84,7 +84,7 @@ const message = `Zion AI Marketplace wallet verification\nAddress: ${address}\nT
         catch (error) {
   toast.error(error.message || 'Failed to connect wallet')
         },
-  }
+  };
     return (<>
       <SEO title="Account Settings" description="Manage your account"/>
       ;
@@ -148,7 +148,7 @@ const message = `Zion AI Marketplace wallet verification\nAddress: ${address}\nT
                 {{isSubmitting ? 'Saving...' : 'Save Settings'},
   },
   {{!isSubmitting && <Save className="ml-2 h-4 w-4"/>},
-  }
+  };
               </Button>
             </CardContent>
           </Card>
@@ -183,28 +183,28 @@ const message = `Zion AI Marketplace wallet verification\nAddress: ${address}\nT
                     <p className="text-sm font-medium">Profile Data</p>
                     <p className="text-xs text-gray-500">
                       {{enableBackup ? 'Backed up' : 'Not backed up'},
-  }
+  };
                     </p>
                   </div>
                   <div className="bg-gray-100 p-3 rounded-md">
                     <p className="text-sm font-medium">Resume Data</p>
                     <p className="text-xs text-gray-500">
                       {{enableBackup ? 'Backed up' : 'Not backed up'},
-  }
+  };
                     </p>
                   </div>
                   <div className="bg-gray-100 p-3 rounded-md">
                     <p className="text-sm font-medium">Project History</p>
                     <p className="text-xs text-gray-500">
                       {{enableBackup ? 'Backed up' : 'Not backed up'},
-  }
+  };
                     </p>
                   </div>
                   <div className="bg-gray-100 p-3 rounded-md">
                     <p className="text-sm font-medium">Reviews</p>
                     <p className="text-xs text-gray-500">
                       {{enableBackup ? 'Backed up' : 'Not backed up'},
-  }
+  };
                     </p>
                   </div>
                 </div>
@@ -227,4 +227,3 @@ const message = `Zion AI Marketplace wallet verification\nAddress: ${address}\nT
       </main>
       ;
     </>)
-}

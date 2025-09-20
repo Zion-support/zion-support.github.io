@@ -193,7 +193,7 @@ export default function Resources() {
       />
       ;
       {{/* Hero Section */},
-  }
+  };
       <section className="relative overflow-hidden py-20">
         <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 via-pink-500/10 to-orange-500/10"></div>
         <div className="container-responsive relative z-10">
@@ -213,7 +213,7 @@ export default function Resources() {
             </p>
             ;
             {{/* Search Bar */},
-  }
+  };
             <div className="max-w-2xl mx-auto mb-8">
               <div className="relative">
                 <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
@@ -229,7 +229,7 @@ export default function Resources() {
             </div>
 
             {{/* Quick Stats */},
-  }
+  };
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
               {[
   {{ label: 'Resources', value: '500+', icon: BookOpen },
@@ -243,15 +243,15 @@ export default function Resources() {
   ].map((stat, index) => (
   <motion.div;
                   key={{stat.label},
-  }
+  };
                   initial={{ opacity: 0, y: 20 },
-  }
+  };
                   whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                   transition={{ duration: 0.6, delay: index * 0.1 },
-  }
+  };
                   viewport={{ once: true },
-  }
+  };
                   className="className="text-center";"
                 >
                   <div className="w-16 h-16 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-xl flex items-center justify-center mx-auto mb-3">
@@ -266,7 +266,7 @@ export default function Resources() {
         </div>
         ;
         {{/* Background Elements */},
-  }
+  };
         <div className="absolute inset-0 -z-10">
           <div className="absolute top-20 left-10 w-72 h-72 bg-purple-500/10 rounded-full blur-3xl"></div>
           <div className="absolute bottom-20 right-10 w-96 h-96 bg-pink-500/10 rounded-full blur-3xl"></div>
@@ -274,7 +274,7 @@ export default function Resources() {
       </section>
 
       {{/* Featured Resources */},
-  }
+  };
       <section className="py-20">
         <div className="container-responsive">
           <div className="text-center mb-16">
@@ -290,15 +290,15 @@ export default function Resources() {
             {featuredResources.map((resource, index) => (
   <motion.div;
                 key={{resource.title},
-  }
+  };
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.6, delay: index * 0.1 },
-  }
+  };
                 viewport={{ once: true },
-  }
+  };
                 className="className="group relative p-8 rounded-2xl bg-gradient-to-br from-slate-800/50 to-slate-700/50 border border-slate-700/50 hover:border-purple-500/50 transition-all duration-300 hover:scale-105";"
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl flex items-center justify-center mb-6">
@@ -307,7 +307,7 @@ export default function Resources() {
                 ;
                 <h3 className="text-xl font-bold text-white mb-3 group-hover:text-purple-400 transition-colors">
                   {{resource.title},
-  }
+  };
                 </h3>
                 <p className="text-gray-300 mb-6">{resource.description}</p>
                 ;
@@ -315,7 +315,7 @@ export default function Resources() {
                   <span className="text-sm text-purple-400 font-medium">{resource.type}</span>
                   <Link;
                     to={{resource.href},
-  }
+  };
                     className="className="inline-flex items-center gap-2 text-purple-400 hover:text-purple-300 font-medium transition-colors";"
                   >
                     View Resource;
@@ -329,7 +329,7 @@ export default function Resources() {
       </section>
 
       {{/* Resource Categories */},
-  }
+  };
       <section className="py-20 bg-slate-800/30">
         <div className="container-responsive">
           <div className="text-center mb-16">
@@ -345,15 +345,15 @@ export default function Resources() {
             {resources.map((category, index) => (
   <motion.div;
                 key={{category.name},
-  }
+  };
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.6, delay: index * 0.1 },
-  }
+  };
                 viewport={{ once: true },
-  }
+  };
                 className="className="group relative p-8 rounded-2xl bg-slate-800/50 hover:bg-slate-800 transition-all duration-300 hover:scale-105 border border-slate-700/50 hover:border-purple-500/50";"
               >
                 {category.featured && (
@@ -370,7 +370,7 @@ export default function Resources() {
                 ;
                 <h3 className="text-xl font-bold text-white mb-3 group-hover:text-purple-400 transition-colors">
                   {{category.name},
-  }
+  };
                 </h3>
                 <p className="text-gray-300 mb-6">{category.description}</p>
                 ;
@@ -388,7 +388,7 @@ export default function Resources() {
                   className="className="inline-flex items-center gap-2 text-purple-400 hover:text-purple-300 font-medium transition-colors";"
                 >
                   View All {{category.name},
-  }
+  };
                   <ArrowRight className="w-4 h-4" />
                 </Link>
               </motion.div>
@@ -398,7 +398,7 @@ export default function Resources() {
       </section>
 
       {{/* Upcoming Events */},
-  }
+  };
       <section className="py-20">
         <div className="container-responsive">
           <div className="text-center mb-16">
@@ -414,15 +414,15 @@ export default function Resources() {
             {upcomingEvents.map((event, index) => (
   <motion.div;
                 key={{event.title},
-  }
+  };
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.6, delay: index * 0.1 },
-  }
+  };
                 viewport={{ once: true },
-  }
+  };
                 className="className="group relative p-8 rounded-2xl bg-gradient-to-br from-slate-800/50 to-slate-700/50 border border-slate-700/50 hover:border-orange-500/50 transition-all duration-300 hover:scale-105";"
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-red-500 rounded-xl flex items-center justify-center mb-6">
@@ -431,7 +431,7 @@ export default function Resources() {
                 ;
                 <h3 className="text-xl font-bold text-white mb-3 group-hover:text-orange-400 transition-colors">
                   {{event.title},
-  }
+  };
                 </h3>
                 ;
                 <div className="space-y-3 mb-6">
@@ -451,7 +451,7 @@ export default function Resources() {
                 ;
                 <Link;
                   to={{event.href},
-  }
+  };
                   className="className="inline-flex items-center gap-2 text-orange-400 hover:text-orange-300 font-medium transition-colors";"
                 >
                   Register Now;
@@ -464,7 +464,7 @@ export default function Resources() {
       </section>
 
       {{/* Quick Links */},
-  }
+  };
       <section className="py-20 bg-slate-800/30">
         <div className="container-responsive">
           <div className="text-center mb-16">
@@ -480,30 +480,30 @@ export default function Resources() {
             {quickLinks.map((link, index) => (
   <motion.div;
                 key={{link.name},
-  }
+  };
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.6, delay: index * 0.1 },
-  }
+  };
                 viewport={{ once: true },
-  }
+  };
               >
                 <Link;
                   to={{link.href},
-  }
+  };
                   className="className="block p-6 rounded-xl bg-slate-800/50 hover:bg-slate-800 transition-all duration-300 hover:scale-105 border border-slate-700/50 hover:border-purple-500/50 text-center group";"
                 >
                   <div className="w-12 h-12 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-lg flex items-center justify-center mx-auto mb-3 group-hover:from-purple-500/30 group-hover:to-pink-500/30 transition-all duration-300">
                     {{link.type === 'Resource' && <BookOpen className="w-6 h-6 text-purple-400" />},
   },
   {{link.type === 'Support' && <HelpCircle className="w-6 h-6 text-pink-400" />},
-  }
+  };
                   </div>
                   <h3 className="text-sm font-semibold text-white group-hover:text-purple-400 transition-colors">
                     {{link.name},
-  }
+  };
                   </h3>
                   <p className="text-xs text-gray-400 mt-1">{link.type}</p>
                 </Link>
@@ -514,19 +514,19 @@ export default function Resources() {
       </section>
 
       {{/* Newsletter Signup */},
-  }
+  };
       <section className="py-20">
         <div className="container-responsive">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div;
               initial={{ opacity: 0, y: 20 },
-  }
+  };
               whileInView={{ opacity: 1, y: 0 },
-  }
+  };
               transition={{ duration: 0.8 },
-  }
+  };
               viewport={{ once: true },
-  }
+  };
             >
               <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
                 Stay Updated;
@@ -556,18 +556,18 @@ export default function Resources() {
       </section>
 
       {{/* CTA Section */},
-  }
+  };
       <section className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50">
         <div className="container-responsive text-center">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             viewport={{ once: true },
-  }
+  };
           >
             <h2 className="text-3xl lg: text-4xl font-bold text-white mb-6">
               Need Help Finding Resources?;
@@ -596,4 +596,4 @@ export default function Resources() {
       </section>
     </div>
   )
-}
+};

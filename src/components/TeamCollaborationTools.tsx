@@ -67,19 +67,19 @@ import {
 } from "lucide-react";
 interface TeamMember {
   id: string,name: string,role: string,department: string,avatar: string,status: 'online' | 'away' | 'busy' | 'offline',lastSeen: string,skills: string[],projects: string[],availability: 'available' | 'busy' | 'unavailable'
-}
+};
 
 interface Project {
   id: string,name: string,description: string,status: 'planning' | 'active' | 'review' | 'completed' | 'on-hold',priority: 'low' | 'medium' | 'high' | 'critical',progress: number,startDate: string,endDate: string,teamMembers: string[],tasks: Task[],budget: number,client: string,tags: string[],
-  }
+  };
 
 interface Task {
   id: string,title: string,description: string,status: 'todo' | 'in-progress' | 'review' | 'completed',priority: 'low' | 'medium' | 'high' | 'critical',assignee: string,dueDate: string,estimatedHours: number,actualHours: number,dependencies: string[],tags: string[],comments: Comment[],
-  }
+  };
 
 interface Comment {
   id: string,author: string,content: string,timestamp: string,likes: number,replies: Comment[],
-  }
+  };
 
 interface Message {
   id: string,sender: string,content: string,timestamp: string,type: 'text' | 'file' | 'image' | 'link';
@@ -87,11 +87,9 @@ interface Message {
   reactions: { type: string, count: number },
   [];
   isRead: boolean
-}
 
 interface FileItem {
   id: string,name: string,type: 'document' | 'image' | 'video' | 'audio' | 'archive' | 'other',size: number,uploadedBy: string,uploadDate: string,lastModified: string,tags: string[],sharedWith: string[],permissions: 'view' | 'edit' | 'admin',version: string
-}
 
 interface TeamCollaborationToolsProps {
   showTeamMembers?: boolean;
@@ -99,7 +97,6 @@ interface TeamCollaborationToolsProps {
   showCommunication?: boolean,
   showFileSharing?: boolean,
   maxItems?: number,
-}
 
 export const TeamCollaborationTools: React.FC<TeamCollaborationToolsProps> = ({
   showTeamMembers = true;
@@ -257,7 +254,7 @@ const sampleFiles: FileItem[] = [
         } else {
           msg.reactions.push({ type: reactionType, count: 1 })
 },
-  }
+  };
       return msg
 })),
   },
@@ -299,18 +296,18 @@ const sampleFiles: FileItem[] = [
   {activeTab === 'team' && showTeamMembers && (
         <motion.div
           initial={{ opacity: 0, y: 20 },
-  }
+  };
           animate={{ opacity: 1, y: 0 },
-  }
+  };
           className="space-y-6"
         >
           {/* Team Stats */}
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
             <motion.div
               initial={{ opacity: 0, y: 20 },
-  }
+  };
               animate={{ opacity: 1, y: 0 },
-  }
+  };
               className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center"
             >
               <div className="text-3xl font-bold text-white mb-2">{teamMembers.length}</div>
@@ -319,11 +316,11 @@ const sampleFiles: FileItem[] = [
 
             <motion.div
               initial={{ opacity: 0, y: 20 },
-  }
+  };
               animate={{ opacity: 1, y: 0 },
-  }
+  };
               transition={{ delay: 0.1 },
-  }
+  };
               className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center"
             >
               <div className="text-3xl font-bold text-green-400 mb-2">
@@ -334,11 +331,11 @@ const sampleFiles: FileItem[] = [
 
             <motion.div
               initial={{ opacity: 0, y: 20 },
-  }
+  };
               animate={{ opacity: 1, y: 0 },
-  }
+  };
               transition={{ delay: 0.2 },
-  }
+  };
               className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center"
             >
               <div className="text-3xl font-bold text-blue-400 mb-2">
@@ -349,11 +346,11 @@ const sampleFiles: FileItem[] = [
 
             <motion.div
               initial={{ opacity: 0, y: 20 },
-  }
+  };
               animate={{ opacity: 1, y: 0 },
-  }
+  };
               transition={{ delay: 0.3 },
-  }
+  };
               className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center"
             >
               <div className="text-3xl font-bold text-zion-cyan mb-2">
@@ -369,11 +366,11 @@ const sampleFiles: FileItem[] = [
               <motion.div
                 key={member.id}
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 animate={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ delay: index * 0.1 },
-  }
+  };
                 className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl hover:bg-zinc-900/50 transition-all duration-300"
               >
                 {/* Member Header */}
@@ -465,18 +462,18 @@ const sampleFiles: FileItem[] = [
   {activeTab === 'projects' && showProjects && (
         <motion.div
           initial={{ opacity: 0, y: 20 },
-  }
+  };
           animate={{ opacity: 1, y: 0 },
-  }
+  };
           className="space-y-6"
         >
           {/* Project Stats */}
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
             <motion.div
               initial={{ opacity: 0, y: 20 },
-  }
+  };
               animate={{ opacity: 1, y: 0 },
-  }
+  };
               className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center"
             >
               <div className="text-3xl font-bold text-white mb-2">{projects.length}</div>
@@ -485,11 +482,11 @@ const sampleFiles: FileItem[] = [
 
             <motion.div
               initial={{ opacity: 0, y: 20 },
-  }
+  };
               animate={{ opacity: 1, y: 0 },
-  }
+  };
               transition={{ delay: 0.1 },
-  }
+  };
               className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center"
             >
               <div className="text-3xl font-bold text-green-400 mb-2">
@@ -500,11 +497,11 @@ const sampleFiles: FileItem[] = [
 
             <motion.div
               initial={{ opacity: 0, y: 20 },
-  }
+  };
               animate={{ opacity: 1, y: 0 },
-  }
+  };
               transition={{ delay: 0.2 },
-  }
+  };
               className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center"
             >
               <div className="text-3xl font-bold text-blue-400 mb-2">
@@ -515,11 +512,11 @@ const sampleFiles: FileItem[] = [
 
             <motion.div
               initial={{ opacity: 0, y: 20 },
-  }
+  };
               animate={{ opacity: 1, y: 0 },
-  }
+  };
               transition={{ delay: 0.3 },
-  }
+  };
               className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center"
             >
               <div className="text-3xl font-bold text-zion-cyan mb-2">
@@ -535,11 +532,11 @@ const sampleFiles: FileItem[] = [
               <motion.div
                 key={project.id}
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 animate={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ delay: index * 0.1 },
-  }
+  };
                 className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl hover:bg-zinc-900/50 transition-all duration-300 cursor-pointer"
                 onClick={() => handleProjectSelect(project)}
               >
@@ -584,11 +581,11 @@ const sampleFiles: FileItem[] = [
                   <div className="w-full bg-zinc-700 rounded-full h-2">
                     <motion.div
                       initial={{ width: 0 },
-  }
+  };
                       animate={{ width: `${project.progress}%` },
-  }
+  };
                       transition={{ duration: 1, delay: index * 0.1 },
-  }
+  };
                       className="h-2 bg-zion-cyan rounded-full"
                     />
                   </div>
@@ -645,18 +642,18 @@ const sampleFiles: FileItem[] = [
   {activeTab === 'communication' && showCommunication && (
         <motion.div
           initial={{ opacity: 0, y: 20 },
-  }
+  };
           animate={{ opacity: 1, y: 0 },
-  }
+  };
           className="space-y-6"
         >
           {/* Communication Stats */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
             <motion.div
               initial={{ opacity: 0, y: 20 },
-  }
+  };
               animate={{ opacity: 1, y: 0 },
-  }
+  };
               className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center"
             >
               <div className="text-3xl font-bold text-white mb-2">{messages.length}</div>
@@ -665,11 +662,11 @@ const sampleFiles: FileItem[] = [
 
             <motion.div
               initial={{ opacity: 0, y: 20 },
-  }
+  };
               animate={{ opacity: 1, y: 0 },
-  }
+  };
               transition={{ delay: 0.1 },
-  }
+  };
               className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center"
             >
               <div className="text-3xl font-bold text-green-400 mb-2">
@@ -680,11 +677,11 @@ const sampleFiles: FileItem[] = [
 
             <motion.div
               initial={{ opacity: 0, y: 20 },
-  }
+  };
               animate={{ opacity: 1, y: 0 },
-  }
+  };
               transition={{ delay: 0.2 },
-  }
+  };
               className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center"
             >
               <div className="text-3xl font-bold text-blue-400 mb-2">
@@ -700,11 +697,11 @@ const sampleFiles: FileItem[] = [
               <motion.div
                 key={message.id}
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 animate={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ delay: index * 0.1 },
-  }
+  };
                 className={`p-4 bg-zinc-900/30 border border-zinc-700/50 rounded-xl hover:bg-zinc-900/50 transition-all duration-300 ${
                   !message.isRead ? 'border-zion-cyan/50 bg-zion-cyan/5' : ''
                 }`}
@@ -787,18 +784,18 @@ const sampleFiles: FileItem[] = [
   {activeTab === 'files' && showFileSharing && (
         <motion.div
           initial={{ opacity: 0, y: 20 },
-  }
+  };
           animate={{ opacity: 1, y: 0 },
-  }
+  };
           className="space-y-6"
         >
           {/* File Stats */}
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
             <motion.div
               initial={{ opacity: 0, y: 20 },
-  }
+  };
               animate={{ opacity: 1, y: 0 },
-  }
+  };
               className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center"
             >
               <div className="text-3xl font-bold text-white mb-2">{files.length}</div>
@@ -807,11 +804,11 @@ const sampleFiles: FileItem[] = [
 
             <motion.div
               initial={{ opacity: 0, y: 20 },
-  }
+  };
               animate={{ opacity: 1, y: 0 },
-  }
+  };
               transition={{ delay: 0.1 },
-  }
+  };
               className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center"
             >
               <div className="text-3xl font-bold text-green-400 mb-2">
@@ -822,11 +819,11 @@ const sampleFiles: FileItem[] = [
 
             <motion.div
               initial={{ opacity: 0, y: 20 },
-  }
+  };
               animate={{ opacity: 1, y: 0 },
-  }
+  };
               transition={{ delay: 0.2 },
-  }
+  };
               className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center"
             >
               <div className="text-3xl font-bold text-blue-400 mb-2">
@@ -837,11 +834,11 @@ const sampleFiles: FileItem[] = [
 
             <motion.div
               initial={{ opacity: 0, y: 20 },
-  }
+  };
               animate={{ opacity: 1, y: 0 },
-  }
+  };
               transition={{ delay: 0.3 },
-  }
+  };
               className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center"
             >
               <div className="text-3xl font-bold text-zion-cyan mb-2">
@@ -857,11 +854,11 @@ const sampleFiles: FileItem[] = [
               <motion.div
                 key={file.id}
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 animate={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ delay: index * 0.1 },
-  }
+  };
                 className="p-4 bg-zinc-900/30 border border-zinc-700/50 rounded-xl hover:bg-zinc-900/50 transition-all duration-300"
               >
                 <div className="flex items-center gap-4">
@@ -922,4 +919,3 @@ const sampleFiles: FileItem[] = [
       )}
     </div>
   )
-};

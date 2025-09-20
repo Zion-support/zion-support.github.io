@@ -4,7 +4,7 @@ import { Search, Filter, Star, ArrowRight, ChevronDown, Globe, Zap, Shield, Brai
 import { INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from "../data/innovativeMicroSaasServices2025";
 interface ServiceContact {
   mobile: string,email: string,address: string,website: string
-}
+};
 
 const UltimateServicesShowcase2025: React.FC = () => {
   const [activeCategory, setActiveCategory] = useState('all');
@@ -177,11 +177,11 @@ const itemVariants = {
         <div className="max-w-7xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 },
-  }
+  };
             animate={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
           >
             <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-blue bg-clip-text text-transparent">
               Zion Tech Group
@@ -223,13 +223,13 @@ const itemVariants = {
           <motion.div
             className="max-w-4xl mx-auto mb-8"
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             viewport={{ once: true },
-  }
+  };
           >
             <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-pink bg-clip-text text-transparent mb-6">
               Ultimate Services Showcase 2025
@@ -288,13 +288,13 @@ const itemVariants = {
           <motion.div 
             className="max-w-4xl mx-auto"
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             viewport={{ once: true },
-  }
+  };
           >
             <div className="relative mb-6">
               <input
@@ -348,11 +348,11 @@ const itemVariants = {
           <motion.div
             className="flex flex-wrap justify-center gap-4 mb-12"
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             animate={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8, delay: 0.4 },
-  }
+  };
           >
             {categories.map((category) => (
               <motion.button
@@ -364,9 +364,9 @@ const itemVariants = {
                     : 'glass border border-white/20 text-gray-300 hover:bg-white/10 hover:border-zion-cyan/30'
                 }`}
                 whileHover={{ scale: 1.05 },
-  }
+  };
                 whileTap={{ scale: 0.95 },
-  }
+  };
               >
                 <span className="text-lg">{category.icon}</span>
                 {category.name} ({category.count})
@@ -398,7 +398,7 @@ const itemVariants = {
                 }
                 onClick={() => handleServiceClick(service)}
                 whileHover={{ y: -5 },
-  }
+  };
               >
                 <div className="flex items-start justify-between mb-4">
                   <div className="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">{service.icon}</div>
@@ -466,13 +466,13 @@ const itemVariants = {
           <motion.div
             className="text-center mb-16"
             initial={{ opacity: 0, y: 30 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.8 },
-  }
+  };
             viewport={{ once: true },
-  }
+  };
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
               Why Choose Zion Tech Group?
@@ -488,7 +488,7 @@ const itemVariants = {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true },
-  }
+  };
           >
             <motion.div variants={itemVariants} className="glass rounded-xl p-6 border border-white/20 hover:border-zion-cyan/30 transition-all duration-300 group">
               <div className="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">🚀</div>
@@ -516,21 +516,21 @@ const itemVariants = {
         {selectedService && (
           <motion.div
             initial={{ opacity: 0 },
-  }
+  };
             animate={{ opacity: 1 },
-  }
+  };
             exit={{ opacity: 0 },
-  }
+  };
             className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4"
             onClick={closeModal}
           >
             <motion.div
               initial={{ scale: 0.8, opacity: 0 },
-  }
+  };
               animate={{ scale: 1, opacity: 1 },
-  }
+  };
               exit={{ scale: 0.8, opacity: 0 },
-  }
+  };
               className="glass rounded-2xl p-8 max-w-4xl w-full max-h-[90vh] overflow-y-auto"
               onClick={(e) => e.stopPropagation()}
             >

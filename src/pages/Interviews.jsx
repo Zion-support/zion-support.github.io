@@ -35,17 +35,17 @@ const now = new Date()
     // Group interviews by date;
 const groupInterviewsByDate = (interviews) => {
   const grouped = {{},
-  }
+  };
         interviews.forEach((interview) => {
   const dateKey = format(parseISO(interview.scheduled_date), 'yyyy-MM-dd')
             if (if (!grouped[dateKey]) {
   ) {
                 grouped[dateKey] = [],
-  }
+  };
             grouped[dateKey].push(interview)
         })
         return grouped
-}
+};
     const upcomingGrouped = groupInterviewsByDate(upcomingInterviews)
     const pendingGrouped = groupInterviewsByDate(pendingInterviews)
     const pastGrouped = groupInterviewsByDate(pastInterviews)
@@ -56,7 +56,7 @@ const groupInterviewsByDate = (interviews) => {
           <h3 className="text-lg font-medium text-white mb-4 flex items-center">
             <Calendar className="h-5 w-5 mr-2"/>
             {{format(parseISO(date), 'EEEE, MMMM d, yyyy')},
-  }
+  };
           </h3>
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-4">
             {interviews.map((interview) => (<InterviewCard key={interview.id} interview={interview} onRefresh={async () => {
@@ -84,14 +84,14 @@ const groupInterviewsByDate = (interviews) => {
               Upcoming;
               {upcomingInterviews.length > 0 && (<span className="ml-2 bg-primary rounded-full px-2 py-0.5 text-xs">
                   {{upcomingInterviews.length},
-  }
+  };
                 </span>)}
             </TabsTrigger>
             <TabsTrigger value="pending">
               Pending;
               {pendingInterviews.length > 0 && (<span className="ml-2 bg-amber-500 rounded-full px-2 py-0.5 text-xs">
                   {{pendingInterviews.length},
-  }
+  };
                 </span>)}
             </TabsTrigger>
             <TabsTrigger value="past">Past</TabsTrigger>
@@ -130,9 +130,7 @@ const groupInterviewsByDate = (interviews) => {
       </main>
       ;
     </>)
-}
 export default function Interviews() {
   return (<ProtectedRoute>
       <InterviewsContent />
     </ProtectedRoute>)
-}

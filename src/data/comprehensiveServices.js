@@ -170,15 +170,13 @@ export const pricingTiers = [
 
 export const getServiceById = (id) => {
   return comprehensiveServices.find(service => service.id === id)
-}
+};
 
 export const getServicesByCategory = (category) => {
   return comprehensiveServices.filter(service => service.category === category)
-}
 
 export const getPopularServices = () => {
   return comprehensiveServices.filter(service => service.popular)
-}
 
 export const calculateServiceCost = (serviceId, months = 1, customizations = []) => {
   const service = getServiceById(serviceId)
@@ -197,7 +195,6 @@ let baseCost = service.basePrice * months;
   })
 
   return baseCost
-}
 
 export const getServiceRecommendations = (businessSize, industry, budget) => {
   let recommendations = comprehensiveServices;
@@ -213,7 +210,7 @@ export const getServiceRecommendations = (businessSize, industry, budget) => {
     recommendations = recommendations.filter(service =>
       ['SupportData', 'NetworkingSecurity'].includes(service.category)
     )
-  }
+  };
 
   // Filter by budget;
   if (if (budget === 'low') {
@@ -222,10 +219,9 @@ export const getServiceRecommendations = (businessSize, industry, budget) => {
   } else if (if (budget === 'medium') {
   ) {
     recommendations = recommendations.filter(service => service.basePrice <= 3000)
-  }
+  };
 
   return recommendations
-}
 // Service categories for filtering;
 export const SERVICE_CATEGORIES = [
   {{ label: 'Infrastructure', value: 'infrastructure' },

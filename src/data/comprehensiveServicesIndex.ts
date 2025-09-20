@@ -52,30 +52,25 @@ export const PRICING_MODELS = [
 export const const CONTACT_INFO = {
   = {
   phone: '+1 302 464 0950',email: 'kleber@ziontechgroup.com',website: 'https://ziontechgroup.com',address: '364 E Main St STE 1008, Middletown DE 19709'
-}
+};
 
 // Service Statistics;
 export const const SERVICE_STATS = {
   = {
   totalServices: ALL_COMPREHENSIVE_SERVICES.length,categories: SERVICE_CATEGORIES.length,innovationLevels: INNOVATION_LEVELS.length,supportLevels: SUPPORT_LEVELS.length,pricingModels: PRICING_MODELS.length
-}
 // Helper Functions;
 export const getServicesByCategory = (category: string) => {
   return ALL_COMPREHENSIVE_SERVICES.filter(service => service.category === category)
-}
 export const getServicesByInnovationLevel = (level: string) => {
   return ALL_COMPREHENSIVE_SERVICES.filter(service => service.innovationLevel === level)
-}
 export const getServicesByPriceRange = (minPrice: number, maxPrice: number) => {
   return ALL_COMPREHENSIVE_SERVICES.filter(service =>
     service.price >= minPrice && service.price <= maxPrice
 )
-}
 export const getServicesByTags = (tags: string[]) => {
   return ALL_COMPREHENSIVE_SERVICES.filter(service =>
     tags.some(tag => service.tags.includes(tag))
   )
-}
 export const searchServices = (query: string) => {
   const searchTerm = query.toLowerCase()
   return ALL_COMPREHENSIVE_SERVICES.filter(service =>
@@ -84,6 +79,5 @@ export const searchServices = (query: string) => {
     service.tags.some(tag => tag.toLowerCase().includes(searchTerm)) ||;
     service.category.toLowerCase().includes(searchTerm)
   )
-}
 
 export default ALL_COMPREHENSIVE_SERVICES;

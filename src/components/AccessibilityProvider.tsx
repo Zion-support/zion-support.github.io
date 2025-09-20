@@ -3,20 +3,18 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Braille } from "lucide-react";
 interface AccessibilityContextType {
   highContrast: boolean,toggleHighContrast: () => void,reducedMotion: boolean,toggleReducedMotion: () => void,fontSize: number,increaseFontSize: () => void,decreaseFontSize: () => void,resetFontSize: () => void,showSkipLinks: boolean,setShowSkipLinks: (show: boolean) => void,voiceNavigation: boolean,toggleVoiceNavigation: () => void
-}
+};
 
 const AccessibilityContext = createContext<AccessibilityContextType | undefined>(undefined);
 export const useAccessibility = () => {
   const context = useContext(AccessibilityContext);
   if (!context) {
     throw new Error('useAccessibility must be used within an AccessibilityProvider')
-}
   return context
 },
 
 interface AccessibilityProviderProps {
   children: ReactNode
-}
 
 export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ children }) => {
   const [highContrast, setHighContrast] = useState(false);
@@ -44,14 +42,12 @@ const savedVoiceNavigation = localStorage.getItem('zion-voice-navigation') === '
       root.classList.add('high-contrast')
 } else {
       root.classList.remove('high-contrast')
-}
 
     // Apply reduced motion
     if (reducedMotion) {
       root.classList.add('reduce-motion')
 } else {
       root.classList.remove('reduce-motion')
-}
 
     // Apply font size
     root.style.fontSize = `${fontSize}px`
@@ -70,13 +66,11 @@ const savedVoiceNavigation = localStorage.getItem('zion-voice-navigation') === '
       if (event.altKey && event.key === 'h') {
         event.preventDefault();
         toggleHighContrast()
-}
 
       // Font size controls (Alt + Plus/Minus)
       if (event.altKey && event.key === '+') {
         event.preventDefault();
         increaseFontSize()
-}
       if (event.altKey && event.key === '-') {
         event.preventDefault();
         decreaseFontSize()
@@ -144,11 +138,11 @@ const savedVoiceNavigation = localStorage.getItem('zion-voice-navigation') === '
         {showSkipLinks && (
           <motion.div
             initial={{ opacity: 0, y: -20 },
-  }
+  };
             animate={{ opacity: 1, y: 0 },
-  }
+  };
             exit={{ opacity: 0, y: -20 },
-  }
+  };
             className="fixed top-0 left-0 right-0 z-50 bg-zion-cyan text-black p-4 text-center"
           >
             <div className="max-w-4xl mx-auto flex flex-wrap justify-center gap-4">
@@ -179,9 +173,9 @@ const savedVoiceNavigation = localStorage.getItem('zion-voice-navigation') === '
       <div className="fixed bottom-4 left-4 z-40">
         <motion.div
           initial={{ opacity: 0, x: -20 },
-  }
+  };
           animate={{ opacity: 1, x: 0 },
-  }
+  };
           className="bg-zion-slate border border-zion-cyan/20 rounded-lg p-2 shadow-2xl"
         >
           <div className="flex flex-col gap-2">
@@ -277,4 +271,3 @@ const handleKeyDown = (event: KeyboardEvent) => {
 }, [isActive]),
 
   return <>{children}</>
-};

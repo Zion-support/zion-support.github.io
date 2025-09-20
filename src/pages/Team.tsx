@@ -58,7 +58,7 @@ interface TeamMember {
   website?: string;
   email: string,image: string,featured: boolean,leadership: boolean,achievements: string[[],
   ],
-  }
+  };
 
 const Team: React.FC = () => {
   const [selectedDepartment, setSelectedDepartment] = useState('all')
@@ -186,16 +186,16 @@ const matchesRole = selectedRole === 'all' || ;
       />
       ;
       {{/* Hero Section */},
-  }
+  };
       <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
         <div className="max-w-7xl mx-auto">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             animate={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.6 },
-  }
+  };
             className="className="text-center";"
           >
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -212,14 +212,14 @@ const matchesRole = selectedRole === 'all' || ;
           </motion.div>
 
           {{/* Team Stats */},
-  }
+  };
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             animate={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.6, delay: 0.2 },
-  }
+  };
             className="className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16";"
           >
             {[
@@ -234,13 +234,13 @@ const matchesRole = selectedRole === 'all' || ;
   ].map((stat, index) => (
   <motion.div;
                 key={{index},
-  }
+  };
                 initial={{ opacity: 0, scale: 0.8 },
-  }
+  };
                 animate={{ opacity: 1, scale: 1 },
-  }
+  };
                 transition={{ duration: 0.6, delay: 0.3 + index * 0.1 },
-  }
+  };
                 className="className="text-center";"
               >
                 <div className={`w-16 h-16 bg-gradient-to-r ${stat.color} rounded-2xl flex items-center justify-center mx-auto mb-4`}>
@@ -254,7 +254,7 @@ const matchesRole = selectedRole === 'all' || ;
         </div>
 
         {{/* Background Elements */},
-  }
+  };
         <div className="absolute inset-0 -z-10">
           <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-blue-500/5" />
           <div className="absolute top-20 left-20 w-72 h-72 bg-cyan-500/10 rounded-full blur-3xl" />
@@ -263,18 +263,18 @@ const matchesRole = selectedRole === 'all' || ;
       </section>
 
       {{/* Leadership Team */},
-  }
+  };
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.6 },
-  }
+  };
             viewport={{ once: true },
-  }
+  };
             className="className="text-center mb-16";"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -289,15 +289,15 @@ const matchesRole = selectedRole === 'all' || ;
             {leadershipTeam.map((member, index) => (
   <motion.div;
                 key={{member.id},
-  }
+  };
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.6, delay: index * 0.1 },
-  }
+  };
                 viewport={{ once: true },
-  }
+  };
                 className="className="bg-white/5 backdrop-blur-sm border border-cyan-400/20 rounded-2xl overflow-hidden hover:border-cyan-400/40 transition-all duration-300 group";"
               >
                 <div className="aspect-square bg-gradient-to-br from-cyan-500/20 to-blue-500/20 flex items-center justify-center">
@@ -311,7 +311,7 @@ const matchesRole = selectedRole === 'all' || ;
   {{member.department === 'cloud' && <Cloud />},
   },
   {{member.department === 'quantum' && <Atom />},
-  }
+  };
                   </div>
                 </div>
                 ;
@@ -319,7 +319,7 @@ const matchesRole = selectedRole === 'all' || ;
                   <div className="text-center mb-6">
                     <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300">
                       {{member.name},
-  }
+  };
                     </h3>
                     <p className="text-cyan-400 font-medium mb-1">{member.title}</p>
                     <p className="text-gray-400 text-sm">{member.department}</p>
@@ -327,7 +327,7 @@ const matchesRole = selectedRole === 'all' || ;
                   ;
                   <p className="text-gray-300 text-center mb-6 leading-relaxed">
                     {{member.bio},
-  }
+  };
                   </p>
                   ;
                   <div className="space-y-3 mb-6">
@@ -345,11 +345,11 @@ const matchesRole = selectedRole === 'all' || ;
                     {member.expertise.slice(0, 3).map((skill, skillIndex) => (
   <span;
                         key={{skillIndex},
-  }
+  };
                         className="className="px-3 py-1 bg-cyan-500/10 text-cyan-400 text-xs rounded-full border border-cyan-400/20";"
                       >
                         {{skill},
-  }
+  };
                       </span>
                     ))}
                   </div>
@@ -358,7 +358,7 @@ const matchesRole = selectedRole === 'all' || ;
                     {member.linkedin && (
   <a;
                         href={{member.linkedin},
-  }
+  };
                         target="_blank";
                         rel="noopener noreferrer";
                         className="className="p-2 text-gray-400 hover:text-blue-400 hover:bg-white/5 rounded-lg transition-all duration-200";"
@@ -369,7 +369,7 @@ const matchesRole = selectedRole === 'all' || ;
   {member.twitter && (
   <a;
                         href={{member.twitter},
-  }
+  };
                         target="_blank";
                         rel="noopener noreferrer";
                         className="className="p-2 text-gray-400 hover:text-blue-400 hover:bg-white/5 rounded-lg transition-all duration-200";"
@@ -380,7 +380,7 @@ const matchesRole = selectedRole === 'all' || ;
   {member.github && (
   <a;
                         href={{member.github},
-  }
+  };
                         target="_blank";
                         rel="noopener noreferrer";
                         className="className="p-2 text-gray-400 hover:text-gray-300 hover:bg-white/5 rounded-lg transition-all duration-200";"
@@ -391,7 +391,7 @@ const matchesRole = selectedRole === 'all' || ;
   {member.website && (
   <a;
                         href={{member.website},
-  }
+  };
                         target="_blank";
                         rel="noopener noreferrer";
                         className="className="p-2 text-gray-400 hover:text-cyan-400 hover:bg-white/5 rounded-lg transition-all duration-200";"
@@ -414,18 +414,18 @@ const matchesRole = selectedRole === 'all' || ;
       </section>
 
       {{/* Department Filters */},
-  }
+  };
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.6 },
-  }
+  };
             viewport={{ once: true },
-  }
+  };
             className="className="text-center mb-16";"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -437,7 +437,7 @@ const matchesRole = selectedRole === 'all' || ;
           </motion.div>
 
           {{/* Filters */},
-  }
+  };
           <div className="flex flex-col lg:flex-row gap-6 mb-12">
             <div className="flex-1">
               <label className="block text-sm font-medium text-cyan-400 mb-3">Department</label>
@@ -445,10 +445,10 @@ const matchesRole = selectedRole === 'all' || ;
                 {departments.map((dept) => (
   <button;
                     key={{dept.id},
-  }
+  };
                     onClick={{onClick={() => setSelectedDepartment(dept.id)},
   },
-  }
+  };
                     className={`flex items-center space-x-2 px-3 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
   selectedDepartment === dept.id;
                         ? 'bg-cyan-500/20 text-cyan-400 border border-cyan-400/40';
@@ -476,10 +476,10 @@ const matchesRole = selectedRole === 'all' || ;
   ].map((role) => (
   <button;
                     key={{role.id},
-  }
+  };
                     onClick={{onClick={() => setSelectedRole(role.id)},
   },
-  }
+  };
                     className={`w-full text-left px-3 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
   selectedRole === role.id;
                         ? 'bg-cyan-500/20 text-cyan-400 border border-cyan-400/40';
@@ -494,20 +494,20 @@ const matchesRole = selectedRole === 'all' || ;
           </div>
 
           {{/* Team Grid */},
-  }
+  };
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {filteredMembers.map((member, index) => (
   <motion.div;
                 key={{member.id},
-  }
+  };
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.6, delay: index * 0.1 },
-  }
+  };
                 viewport={{ once: true },
-  }
+  };
                 className="className="bg-white/5 backdrop-blur-sm border border-cyan-400/20 rounded-xl overflow-hidden hover:border-cyan-400/40 transition-all duration-300 group";"
               >
                 <div className="aspect-square bg-gradient-to-br from-cyan-500/20 to-blue-500/20 flex items-center justify-center">
@@ -529,7 +529,7 @@ const matchesRole = selectedRole === 'all' || ;
   {{member.department === 'design' && <PenTool />},
   },
   {{member.department === 'data' && <Database />},
-  }
+  };
                   </div>
                 </div>
                 ;
@@ -537,7 +537,7 @@ const matchesRole = selectedRole === 'all' || ;
                   <div className="text-center mb-4">
                     <h3 className="text-lg font-bold text-white mb-1 group-hover:text-cyan-400 transition-colors duration-300">
                       {{member.name},
-  }
+  };
                     </h3>
                     <p className="text-cyan-400 text-sm font-medium mb-1">{member.title}</p>
                     <p className="text-gray-400 text-xs capitalize">{member.department}</p>
@@ -545,18 +545,18 @@ const matchesRole = selectedRole === 'all' || ;
                   ;
                   <p className="text-gray-300 text-sm text-center mb-4 leading-relaxed line-clamp-3">
                     {{member.bio},
-  }
+  };
                   </p>
                   ;
                   <div className="flex flex-wrap gap-1 mb-4">
                     {member.expertise.slice(0, 2).map((skill, skillIndex) => (
   <span;
                         key={{skillIndex},
-  }
+  };
                         className="className="px-2 py-1 bg-cyan-500/10 text-cyan-400 text-xs rounded-full border border-cyan-400/20";"
                       >
                         {{skill},
-  }
+  };
                       </span>
                     ))}
                   </div>
@@ -565,7 +565,7 @@ const matchesRole = selectedRole === 'all' || ;
                     {member.linkedin && (
   <a;
                         href={{member.linkedin},
-  }
+  };
                         target="_blank";
                         rel="noopener noreferrer";
                         className="className="p-2 text-gray-400 hover:text-blue-400 hover:bg-white/5 rounded-lg transition-all duration-200";"
@@ -576,7 +576,7 @@ const matchesRole = selectedRole === 'all' || ;
   {member.github && (
   <a;
                         href={{member.github},
-  }
+  };
                         target="_blank";
                         rel="noopener noreferrer";
                         className="className="p-2 text-gray-400 hover:text-gray-300 hover:bg-white/5 rounded-lg transition-all duration-200";"
@@ -599,18 +599,18 @@ const matchesRole = selectedRole === 'all' || ;
       </section>
 
       {{/* Company Culture */},
-  }
+  };
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.6 },
-  }
+  };
             viewport={{ once: true },
-  }
+  };
             className="className="text-center mb-16";"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -633,15 +633,15 @@ const matchesRole = selectedRole === 'all' || ;
   ].map((value, index) => (
   <motion.div;
                 key={{index},
-  }
+  };
                 initial={{ opacity: 0, y: 20 },
-  }
+  };
                 whileInView={{ opacity: 1, y: 0 },
-  }
+  };
                 transition={{ duration: 0.6, delay: index * 0.1 },
-  }
+  };
                 viewport={{ once: true },
-  }
+  };
                 className="className="text-center";"
               >
                 <div className="w-16 h-16 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-2xl flex items-center justify-center mx-auto mb-6 border border-cyan-400/30">
@@ -656,18 +656,18 @@ const matchesRole = selectedRole === 'all' || ;
       </section>
 
       {{/* Join Our Team CTA */},
-  }
+  };
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.6 },
-  }
+  };
             viewport={{ once: true },
-  }
+  };
             className="className="bg-gradient-to-r from-cyan-600/20 to-blue-600/20 border border-cyan-500/30 rounded-2xl p-12 text-center";"
           >
             <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">
@@ -697,5 +697,5 @@ const matchesRole = selectedRole === 'all' || ;
       </section>
     </div>
   )
-}
+};
 export default Team;

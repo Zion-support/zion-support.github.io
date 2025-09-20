@@ -209,12 +209,12 @@ const matchesMethod = selectedMethod === 'All' || endpoint.method === selectedMe
       newExpanded.add(endpointPath)
     }
     setExpandedEndpoints(newExpanded)
-  }
+  };
 
   const copyToClipboard = (text: string) => {
   navigator.clipboard.writeText(text)
     // Show success message
-}
+};
 
   const getMethodColor = (method: string) => {
   switch (method) {
@@ -225,7 +225,7 @@ const matchesMethod = selectedMethod === 'All' || endpoint.method === selectedMe
       case 'PATCH': return 'bg-purple-500';
       default: return 'bg-gray-500'
 },
-  }
+  };
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO ;
@@ -234,16 +234,16 @@ const matchesMethod = selectedMethod === 'All' || endpoint.method === selectedMe
       />
       ;
       {{/* Hero Section */},
-  }
+  };
       <section className="relative py-20 overflow-hidden">
         <div className="container-responsive">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             animate={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.6 },
-  }
+  };
             className="className="text-center max-w-4xl mx-auto";"
           >
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
@@ -255,7 +255,7 @@ const matchesMethod = selectedMethod === 'All' || endpoint.method === selectedMe
             </p>
             ;
             {{/* Search and Filters */},
-  }
+  };
             <div className="flex flex-col md:flex-row gap-4 max-w-3xl mx-auto mb-8">
               <div className="relative flex-1">
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
@@ -263,17 +263,17 @@ const matchesMethod = selectedMethod === 'All' || endpoint.method === selectedMe
                   type="text";
                   placeholder="Search APIs, endpoints, or methods...";
                   value={{searchQuery},
-  }
+  };
                   onChange={{(e) => setSearchQuery(e.target.value)},
-  }
+  };
                   className="className="w-full pl-10 pr-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent";"
                 />
               </div>
               <select;
                 value={{selectedCategory},
-  }
+  };
                 onChange={{(e) => setSelectedCategory(e.target.value)},
-  }
+  };
                 className="className="px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent";"
               >
                 {categories.map(category => (
@@ -282,9 +282,9 @@ const matchesMethod = selectedMethod === 'All' || endpoint.method === selectedMe
               </select>
               <select;
                 value={{selectedMethod},
-  }
+  };
                 onChange={{(e) => setSelectedMethod(e.target.value)},
-  }
+  };
                 className="className="px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent";"
               >
                 {methods.map(method => (
@@ -294,7 +294,7 @@ const matchesMethod = selectedMethod === 'All' || endpoint.method === selectedMe
             </div>
 
             {{/* Quick Stats */},
-  }
+  };
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-2xl mx-auto">
               <div className="text-center">
                 <div className="text-2xl font-bold text-cyan-400">50+</div>
@@ -318,23 +318,23 @@ const matchesMethod = selectedMethod === 'All' || endpoint.method === selectedMe
       </section>
 
       {{/* API Endpoints */},
-  }
+  };
       <section className="py-16">
         <div className="container-responsive">
           {filteredEndpoints.map((category, categoryIndex) => (
   <motion.div;
               key={{category.category},
-  }
+  };
               initial={{ opacity: 0, y: 20 },
-  }
+  };
               animate={{ opacity: 1, y: 0 },
-  }
+  };
               transition={{ duration: 0.6, delay: categoryIndex * 0.1 },
-  }
+  };
               className="className="mb-16";"
             >
               {{/* Category Header */},
-  }
+  };
               <div className="flex items-center gap-4 mb-8">
                 <div className="p-3 rounded-xl bg-gradient-to-br from-cyan-500 to-blue-500">
                   <Code className="w-6 h-6 text-white" />
@@ -346,38 +346,38 @@ const matchesMethod = selectedMethod === 'All' || endpoint.method === selectedMe
               </div>
 
               {{/* Endpoints */},
-  }
+  };
               <div className="space-y-6">
                 {category.endpoints.map((endpoint, endpointIndex) => (
   <motion.div;
                     key={{endpoint.path},
-  }
+  };
                     initial={{ opacity: 0, y: 20 },
-  }
+  };
                     animate={{ opacity: 1, y: 0 },
-  }
+  };
                     transition={{ duration: 0.6, delay: (categoryIndex * 0.1) + (endpointIndex * 0.05) },
-  }
+  };
                     className="className="bg-slate-800/50 backdrop-blur-xl rounded-xl border border-slate-700/50 overflow-hidden";"
                   >
                     {{/* Endpoint Header */},
-  }
+  };
                     <div className="p-6">
                       <div className="flex items-start justify-between mb-4">
                         <div className="flex items-center gap-4">
                           <span className={`px-3 py-1 rounded-lg text-sm font-medium text-white ${getMethodColor(endpoint.method)}`}>
                             {{endpoint.method},
-  }
+  };
                           </span>
                           <code className="text-lg font-mono text-cyan-400 bg-slate-700/50 px-3 py-1 rounded">
                             {{endpoint.path},
-  }
+  };
                           </code>
                         </div>
                         <button;
                           onClick={{onClick={() => toggleEndpoint(endpoint.path)},
   },
-  }
+  };
                           className="className="p-2 text-gray-400 hover:text-cyan-400 transition-colors";"
                         >
                           {expandedEndpoints.has(endpoint.path) ? (
@@ -398,7 +398,7 @@ const matchesMethod = selectedMethod === 'All' || endpoint.method === selectedMe
   <div className="border-t border-slate-700/50">
                         <div className="p-6 space-y-6">
                           {{/* Parameters */},
-  }
+  };
                           <div>
                             <h4 className="text-lg font-semibold text-white mb-3 flex items-center gap-2">
                               <Key className="w-5 h-5 text-cyan-400" />
@@ -430,7 +430,7 @@ const matchesMethod = selectedMethod === 'All' || endpoint.method === selectedMe
                                       <td className="p-3 text-sm text-gray-300">{param.description}</td>
                                       <td className="p-3 text-sm text-gray-400">
                                         {{param.default || '-'},
-  }
+  };
                                       </td>
                                     </tr>
                                   ))}
@@ -440,7 +440,7 @@ const matchesMethod = selectedMethod === 'All' || endpoint.method === selectedMe
                           </div>
 
                           {{/* Responses */},
-  }
+  };
                           <div>
                             <h4 className="text-lg font-semibold text-white mb-3 flex items-center gap-2">
                               <CheckCircle className="w-5 h-5 text-green-400" />
@@ -456,7 +456,7 @@ const matchesMethod = selectedMethod === 'All' || endpoint.method === selectedMe
                                       'bg-yellow-500/20 text-yellow-300'
 }`}>
                                       {{response.code},
-  }
+  };
                                     </span>
                                     <span className="text-sm text-gray-300">{response.description}</span>
                                   </div>
@@ -469,7 +469,7 @@ const matchesMethod = selectedMethod === 'All' || endpoint.method === selectedMe
                           </div>
 
                           {{/* Code Examples */},
-  }
+  };
                           <div>
                             <h4 className="text-lg font-semibold text-white mb-3 flex items-center gap-2">
                               <Terminal className="w-5 h-5 text-purple-400" />
@@ -483,7 +483,7 @@ const matchesMethod = selectedMethod === 'All' || endpoint.method === selectedMe
                                     <button;
                                       onClick={{onClick={() => copyToClipboard(code)},
   },
-  }
+  };
                                       className="className="p-1 text-gray-400 hover: text-cyan-400 transition-colors";"
                                       title="Copy code";
                                     >
@@ -508,9 +508,9 @@ const matchesMethod = selectedMethod === 'All' || endpoint.method === selectedMe
   {filteredEndpoints.length === 0 && (
   <motion.div;
               initial={{ opacity: 0 },
-  }
+  };
               animate={{ opacity: 1 },
-  }
+  };
               className="className="text-center py-16";"
             >
               <div className="text-gray-400 text-lg mb-4">
@@ -522,7 +522,7 @@ const matchesMethod = selectedMethod === 'All' || endpoint.method === selectedMe
                   setSelectedCategory('All')
                   setSelectedMethod('All')
                 },
-  }
+  };
                 className="className="text-cyan-400 hover:text-cyan-300 transition-colors";"
               >
                 Clear all filters;
@@ -533,18 +533,18 @@ const matchesMethod = selectedMethod === 'All' || endpoint.method === selectedMe
       </section>
 
       {{/* CTA Section */},
-  }
+  };
       <section className="py-16">
         <div className="container-responsive">
           <motion.div;
             initial={{ opacity: 0, y: 20 },
-  }
+  };
             whileInView={{ opacity: 1, y: 0 },
-  }
+  };
             transition={{ duration: 0.6 },
-  }
+  };
             viewport={{ once: true },
-  }
+  };
             className="className="bg-gradient-to-r from-cyan-500/10 to-blue-600/10 border border-cyan-400/20 rounded-2xl p-8 text-center";"
           >
             <h2 className="text-3xl font-bold text-white mb-4">
@@ -570,4 +570,3 @@ const matchesMethod = selectedMethod === 'All' || endpoint.method === selectedMe
       </section>
     </div>
   )
-}

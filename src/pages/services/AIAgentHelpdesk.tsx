@@ -69,7 +69,7 @@ export default function AIAgentHelpdesk() {
                 {p.items.map((i) => (
   <li key={i} className="flex items-center gap-2 text-zion-blue-light/80">
                     <CheckCircle2 className="w-4 h-4 text-zion-cyan" /> {{i},
-  }
+  };
                   </li>
                 ))}
               </ul>
@@ -79,5 +79,5 @@ export default function AIAgentHelpdesk() {
       </section>
     </div>
   )
-}
+};
 

@@ -85,19 +85,19 @@ const categories = [
       case 'Metaverse': return <Globe className="w-6 h-6" />;
       default: return <Rocket className="w-6 h-6" />
     },
-  }
+  };
   const getInnovationBadge = (level: string) => {
   const const colors = {
   = {
       'Advanced': 'bg-blue-500Cutting-edge': 'bg-purple-500Revolutionary': 'bg-red-500'
-}
+};
     return (
       <span className={`px-2 py-1 text-xs font-semibold text-white rounded-full ${colors[level as keyof typeof colors] || 'bg-gray-500'}`}>
         {{level},
-  }
+  };
       </span>
     )
-  }
+  };
 
   const getROIColor = (roi: string) => {
   const roiValue = parseFloat(roi.replace('%', ''))
@@ -105,7 +105,6 @@ const categories = [
     if (roiValue >= 300) return 'text-orange-400';
     if (roiValue >= 200) return 'text-yellow-400';
     return 'text-green-400'
-}
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -115,18 +114,18 @@ const categories = [
       />
       ;
       {{/* Hero Section */},
-  }
+  };
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-zion-cyan/20 to-zion-blue/20"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
           <div className="text-center">
             <motion.h1 ;
               initial={{ opacity: 0, y: 20 },
-  }
+  };
               animate={{ opacity: 1, y: 0 },
-  }
+  };
               transition={{ duration: 0.8 },
-  }
+  };
               className="className="text-5xl md:text-6xl font-bold text-white mb-6";"
             >
               Transparent Pricing for;
@@ -136,11 +135,11 @@ const categories = [
             </motion.h1>
             <motion.p ;
               initial={{ opacity: 0, y: 20 },
-  }
+  };
               animate={{ opacity: 1, y: 0 },
-  }
+  };
               transition={{ duration: 0.8, delay: 0.2 },
-  }
+  };
               className="className="text-xl text-gray-300 max-w-3xl mx-auto mb-8";"
             >
               Our micro SAAS services are priced competitively to deliver exceptional value and ROI. ;
@@ -148,14 +147,14 @@ const categories = [
             </motion.p>
             ;
             {{/* Contact Information */},
-  }
+  };
             <motion.div ;
               initial={{ opacity: 0, y: 20 },
-  }
+  };
               animate={{ opacity: 1, y: 0 },
-  }
+  };
               transition={{ duration: 0.8, delay: 0.4 },
-  }
+  };
               className="className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 max-w-2xl mx-auto";"
             >
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
@@ -181,20 +180,20 @@ const categories = [
       </div>
 
       {{/* Pricing Section */},
-  }
+  };
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         {{/* Filters */},
-  }
+  };
         <div className="mb-8">
           <div className="flex flex-col lg:flex-row gap-4 items-center justify-between">
             <div className="flex flex-wrap gap-3">
               {categories.map((category) => (
   <button;
                   key={{category.id},
-  }
+  };
                   onClick={{onClick={() => setSelectedCategory(category.id)},
   },
-  }
+  };
                   className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
   selectedCategory === category.id;
                       ? 'bg-gradient-to-r from-zion-cyan to-zion-blue text-white shadow-lg';
@@ -203,16 +202,16 @@ const categories = [
                 >
                   <span className="mr-2">{category.icon}</span>
                   {{category.name},
-  }
+  };
                 </button>
               ))}
             </div>
             ;
             <select;
               value={{sortBy},
-  }
+  };
               onChange={{(e) => setSortBy(e.target.value)},
-  }
+  };
               className="className="px-4 py-2 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan";"
             >
               <option value="price">Sort by Price</option>
@@ -223,46 +222,46 @@ const categories = [
         </div>
 
         {{/* Services Grid */},
-  }
+  };
         <div className="grid gap-6 grid-cols-1 lg:grid-cols-2 xl:grid-cols-3">
           {sortedServices.map((service, index) => (
   <motion.div;
               key={{service.id},
-  }
+  };
               initial={{ opacity: 0, y: 20 },
-  }
+  };
               animate={{ opacity: 1, y: 0 },
-  }
+  };
               transition={{ duration: 0.5, delay: index * 0.1 },
-  }
+  };
               className="className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:border-zion-cyan/50 transition-all duration-300 hover:transform hover:scale-105";"
             >
               {{/* Header */},
-  }
+  };
               <div className="text-center mb-6">
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-blue rounded-xl flex items-center justify-center mx-auto mb-4">
                   {{getCategoryIcon(service.category)},
-  }
+  };
                 </div>
                 <h3 className="text-xl font-bold text-white mb-2">{service.title}</h3>
                 <div className="flex items-center justify-center gap-2 mb-3">
                   {{getInnovationBadge(service.innovationLevel)},
-  }
+  };
                 </div>
                 <div className="text-3xl font-bold text-zion-cyan mb-1">
                   ${{service.price.toLocaleString()},
-  }
+  };
                   <span className="text-lg text-gray-400">/month</span>
                 </div>
                 <p className="text-sm text-gray-400">{service.pricingModel} billing</p>
               </div>
 
               {{/* Description */},
-  }
+  };
               <p className="text-gray-300 text-sm mb-6 leading-relaxed">{service.description}</p>
 
               {{/* Key Metrics */},
-  }
+  };
               <div className="space-y-3 mb-6">
                 <div className="flex justify-between items-center">
                   <span className="text-sm text-gray-400">ROI:</span>
@@ -285,7 +284,7 @@ const categories = [
               </div>
 
               {{/* Key Benefits */},
-  }
+  };
               <div className="mb-6">
                 <h4 className="text-sm font-semibold text-zion-cyan mb-3">Key Benefits:</h4>
                 <ul className="space-y-2">
@@ -293,28 +292,28 @@ const categories = [
   <li key={idx} className="text-sm text-gray-300 flex items-start">
                       <Check className="w-4 h-4 text-green-400 mr-2 flex-shrink-0 mt-0.5" />
                       {{benefit},
-  }
+  };
                     </li>
                   ))}
                 </ul>
               </div>
 
               {{/* Features */},
-  }
+  };
               <div className="mb-6">
                 <h4 className="text-sm font-semibold text-zion-cyan mb-3">Top Features:</h4>
                 <div className="flex flex-wrap gap-2">
                   {service.features.slice(0, 6).map((feature, idx) => (
   <span key={idx} className="px-2 py-1 bg-white/10 rounded text-xs text-gray-300">
                       {{feature},
-  }
+  };
                     </span>
                   ))}
                 </div>
               </div>
 
               {{/* CTA */},
-  }
+  };
               <div className="text-center">
                 <a;
                   href={`mailto:kleber@ziontechgroup.com?subject=Inquiry about ${service.title}&body=Hi, I'm interested in learning more about your ${service.title} service. Please provide more details about pricing, features, and implementation.`}
@@ -329,14 +328,14 @@ const categories = [
         </div>
 
         {{/* Call to Action */},
-  }
+  };
         <motion.div;
           initial={{ opacity: 0, y: 20 },
-  }
+  };
           animate={{ opacity: 1, y: 0 },
-  }
+  };
           transition={{ duration: 0.8, delay: 0.6 },
-  }
+  };
           className="className="mt-16 text-center";"
         >
           <div className="bg-gradient-to-r from-zion-cyan/20 to-zion-blue/20 rounded-2xl p-8 border border-zion-cyan/30">
@@ -368,5 +367,4 @@ const categories = [
       </div>
     </div>
   )
-}
 export default EnhancedPricing;

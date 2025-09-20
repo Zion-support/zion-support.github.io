@@ -71,6 +71,6 @@ const,
       </div>
     </div>
   )
-}
+};
 
 export default DeveloperAPITester

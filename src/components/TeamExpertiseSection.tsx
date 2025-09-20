@@ -53,13 +53,13 @@ export function TeamExpertiseSection() {
         <motion.div 
           className="text-center mb-16"
           initial={{ opacity: 0, y: 20 },
-  }
+  };
           whileInView={{ opacity: 1, y: 0 },
-  }
+  };
           viewport={{ once: true },
-  }
+  };
           transition={{ duration: 0.6 },
-  }
+  };
         >
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
             Team Expertise
@@ -76,13 +76,13 @@ export function TeamExpertiseSection() {
               key={expertise.title}
               className="bg-slate-800 border border-slate-700 rounded-xl p-6 text-center hover:border-blue-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25 group"
               initial={{ opacity: 0, y: 30 },
-  }
+  };
               whileInView={{ opacity: 1, y: 0 },
-  }
+  };
               viewport={{ once: true },
-  }
+  };
               transition={{ duration: 0.6, delay: index * 0.1 },
-  }
+  };
             >
               <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
                 <span className="text-3xl">{expertise.icon}</span>
@@ -106,13 +106,13 @@ export function TeamExpertiseSection() {
         <motion.div 
           className="text-center mb-12"
           initial={{ opacity: 0, y: 20 },
-  }
+  };
           whileInView={{ opacity: 1, y: 0 },
-  }
+  };
           viewport={{ once: true },
-  }
+  };
           transition={{ duration: 0.6, delay: 0.3 },
-  }
+  };
         >
           <div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl p-8 text-white">
             <h3 className="text-2xl font-bold mb-4">
@@ -137,4 +137,4 @@ export function TeamExpertiseSection() {
       </div>
     </section>
   )
-}
+};
