@@ -44,7 +44,7 @@ if (isLoading) {
   }
   if (showNewResumeForm) {
     return (
-      <CreateResumeForm,
+      <CreateResumeForm
 onCreateResume = {handleCreateNewResume,}
         onCancel = {(,) => setShowNewResumeForm(false),}
         isLoading = {isLoading,}
@@ -57,7 +57,7 @@ onCreateResume = {handleCreateNewResume,}
         <h1 className="text-2xl font-bold">Resume Builder</h1>
         <div className="flex gap-4 flex-wrap items-center">
           {resume && <ResumeVersionSelector currentResume={resume} onResumeChange={handleResumeChange} />}
-          <Button,
+          <Button
 onClick = {(,) => setShowNewResumeForm(true),}
             variant="outline"
             size="sm"
@@ -75,13 +75,13 @@ onClick = {(,) => setShowNewResumeForm(true),}
             <ResumeProgress resume={resume} progress={progress} />
           </div>
           <Tabs value={activeTab} onValueChange={setActiveTab}>
-            <ResumeSteps,
+            <ResumeSteps
 steps = {RESUME_STEPS,}
               activeTab = {activeTab,}
               onChange = {setActiveTab,}
             />
             {resume && (
-              <ResumeStepContent,
+              <ResumeStepContent
 activeTab = {activeTab,}
                 resume = {resume as Resume,}
                 onNextStep = {nextStep,}

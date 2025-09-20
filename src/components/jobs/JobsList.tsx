@@ -14,7 +14,7 @@ interface JobsListProps {
 return (
     <div className="grid gap-6 md:grid-cols-2">
       {jobs.map((job,) => (
-        <Card,
+        <Card
 key = {job.id,}
           className={`overflow-hidden cursor-pointer transition-shadow hover:shadow-md ${
             onSelectJob ? "cursor-pointer" : ""

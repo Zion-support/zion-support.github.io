@@ -13,7 +13,7 @@ return (
               <div key={interview.id} className='flex items-center gap-3'>
                 <Avatar className='h-10 w-10 bg-zion-purple/10'>
                   {interview.client_avatar |interview.talent_avatar ? (
-                    <img,
+                    <img
 src={interview.client_avatar |interview.talent_avatar}
                       alt={interview.client_name |interview.talent_name}
                       loading='lazy'                    />
@@ -30,7 +30,7 @@ src={interview.client_avatar |interview.talent_avatar}
                   {/* Assuming AvatarImage and AvatarFallback are part of Avatar or imported separately */}
                   {/* For now conditional rendering based on available image */}
                   {interview.client_avatar |interview.talent_avatar ? (
-                    <img,
+                    <img
 src={interview.client_avatar |interview.talent_avatar |undefined} // Ensure src is string | undefined,
 alt={interview.client_name |interview.talent_name |"User"} // Ensure alt is string
                     />

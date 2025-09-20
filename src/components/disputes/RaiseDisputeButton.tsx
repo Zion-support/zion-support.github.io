@@ -10,7 +10,7 @@ interface RaiseDisputeButtonProps {
   className?: string,
 return (
     <>
-      <Button,
+      <Button
 variant={variant}
         size={size}
         className={className}
@@ -27,7 +27,7 @@ variant={variant}
 this project.
             </DialogDescription>
           </DialogHeader>
-          <DisputeForm,
+          <DisputeForm
 projectId={projectId}
             milestoneId={milestoneId}
             onDisputeCreated={handleDisputeCreated}

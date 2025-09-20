@@ -21,7 +21,7 @@ export default function GlobalMapPage() {
                 <TooltipProvider key={i.id}>
                   <Tooltip>
                     <TooltipTrigger asChild>
-                      <div,
+                      <div
 className={`absolute ${color} rounded-full p-1`}
                         style={{ left: x top: y }}
                       >

@@ -14,7 +14,7 @@ return (
           ) : (
             <Avatar>
               {review.reviewer_profile?.avatar_url ? (
-                <AvatarImage,
+                <AvatarImage
 src={review.reviewer_profile.avatar_url}
                   alt={review.reviewer_profile.display_name}
                 />
@@ -83,7 +83,7 @@ src={review.reviewer_profile.avatar_url}
               </Badge>
             )}
             {review.would_work_again !== undefined && (
-              <Badge,
+              <Badge
 variant={review.would_work_again ? 'default' : 'secondary'}
                 className={`${review.would_work_again ? 'bg-green-100 text-green-800 hover:bg-green-200' : 'bg-gray-100 text-gray-800 hover:bg-gray-200'}`}              >
                 {review.would_work_again
@@ -128,7 +128,7 @@ variant={review.would_work_again ? 'default' : 'secondary'}
               </Badge>
             )}
             {review.would_work_again !== undefined && (
-              <Badge,
+              <Badge
 variant={review.would_work_again ? "default" : "secondary"}
                 className={`${review.would_work_again ? "bg-green-100 text-green-800 hover:bg-green-200" : "bg-gray-100 text-gray-800 hover:bg-gray-200"}`}
               >
@@ -158,7 +158,7 @@ variant={review.would_work_again ? "default" : "secondary"}
 please provide details below.
               </DialogDescription>
             </DialogHeader>
-            <Textarea,
+            <Textarea
 placeholder='Why are you reporting this review?'              value={reportReason}
               onChange={e => setReportReason(e.target.value)}
               className='min-h-[100px]'
@@ -168,13 +168,13 @@ placeholder='Why are you reporting this review?'              value={reportReaso
               className="min-h-[100px]"
             />
             <DialogFooter>
-              <Button,
+              <Button
 variant='outline'
                 onClick={() => setIsReportDialogOpen(false)}
               >
                 Cancel
               </Button>
-              <Button,
+              <Button
 onClick={handleReport}
                 disabled={!reportReason.trim() |isReporting}              >
                 {isReporting ? 'Submitting...' : 'Submit Report'}              </Button>                {isReporting ? "Submitting..." : "Submit Report"}

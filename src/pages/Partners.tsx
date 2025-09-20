@@ -40,7 +40,7 @@ return (
           <p className='text-zion-slate-light'>{t('partner.dashboard_desc')}</p>
         </div>
         <div className='flex gap-2'>
-          <Button,
+          <Button
 variant='outline'
             className='flex items-center gap-2'
             onClick={() => window.print()}
@@ -58,7 +58,7 @@ variant='outline'
           </Button>
         </div>
       </div>
-      <Tabs,
+      <Tabs
 value={activeTab}
         onValueChange={setActiveTab}
         className='space-y-4'

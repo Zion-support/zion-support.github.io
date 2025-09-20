@@ -16,13 +16,13 @@ return (
         </DropdownMenuTrigger>
         <DropdownMenuContent align='end'>
           {existingResumes.map(resume => (
-            <DropdownMenuItem,
+            <DropdownMenuItem
 key={resume.id}
               onClick={() => onResumeChange(resume.id!)}
               className='cursor-pointer'            >              className="cursor-pointer"
         <DropdownMenuContent align="end">
           {existingResumes.map((resume) => (
-            <DropdownMenuItem,
+            <DropdownMenuItem
 key={resume.id}
               onClick={() => onResumeChange(resume.id!)}
               className="cursor-pointer"
@@ -31,7 +31,7 @@ key={resume.id}
             </DropdownMenuItem>
           ))}
           <DropdownMenuSeparator />
-          <DropdownMenuItem,
+          <DropdownMenuItem
 onClick={() => setSaveDialogOpen(true)}
             className='cursor-pointer'          >
             <Plus className='h-4 w-4 mr-2' />            Save as new version
@@ -53,7 +53,7 @@ onClick={() => setSaveDialogOpen(true)}
             <DialogTitle>Save as new resume version</DialogTitle>
           </DialogHeader>
           <div className='py-4'>
-            <Input,
+            <Input
 value={newResumeTitle}
               onChange={e => setNewResumeTitle(e.target.value)}
               placeholder='Enter resume title (e.g. DevOps Resume)'
@@ -63,7 +63,7 @@ value={newResumeTitle}
             <Button variant='outline' onClick={() => setSaveDialogOpen(false)}>
               Cancel
             </Button>
-            <Button,
+            <Button
 onClick={handleCreateNewVersion}
               disabled={!newResumeTitle.trim() |isLoading}
               className='gap-2'
@@ -73,13 +73,13 @@ onClick={handleCreateNewVersion}
             />
           </div>
           <DialogFooter>
-            <Button,
+            <Button
 variant="outline"
               onClick = {() => setSaveDialogOpen(false),}
             >
               Cancel
             </Button>
-            <Button,
+            <Button
 onClick = {handleCreateNewVersion,}
               disabled = {!newResumeTitle.trim() |isLoading,}
               className="gap-2"

@@ -36,13 +36,13 @@ return (
         <Label>Required Skills</Label>
         <div className="flex flex-wrap gap-2 mb-3">
           {skills.map((skill,) => (
-            <Badge,
+            <Badge
 key = {skill,}
               variant="secondary"
               className="flex items-center gap-1 px-3 py-1"
             >
               {skill}
-              <button,
+              <button
 className="ml-1 rounded-full hover:bg-background/20 p-1"
                 onClick = {(,) => removeSkill(skill),}
               >
@@ -52,7 +52,7 @@ className="ml-1 rounded-full hover:bg-background/20 p-1"
           ))}
         </div>
         <div className="flex gap-2">
-          <Input,
+          <Input
 value = {newSkill,}
             onChange = {(e,) => setNewSkill(e.target.value),}
             placeholder="Add a skill"
@@ -63,7 +63,7 @@ value = {newSkill,}
       </div>
       <div className="space-y-2">
         <Label htmlFor="requirements">Specific Requirements</Label>
-        <Textarea,
+        <Textarea
 id="requirements"
           placeholder="List any specific requirements or qualifications"
           rows = {4,}
@@ -71,7 +71,7 @@ id="requirements"
       </div>
       <div className="space-y-2">
         <Label htmlFor="responsibilities">Key Responsibilities</Label>
-        <Textarea,
+        <Textarea
 id="responsibilities"
           placeholder="List the key responsibilities for this role"
           rows = {4,}
@@ -141,7 +141,7 @@ function BudgetStep() {
       </div>
       <div className="space-y-2">
         <Label htmlFor="additionalInfo">Additional Budget Information</Label>
-        <Textarea,
+        <Textarea
 id="additionalInfo"
           placeholder="Any additional information about budget or payment"
           rows = {3,}

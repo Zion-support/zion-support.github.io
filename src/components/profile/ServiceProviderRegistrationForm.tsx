@@ -32,7 +32,7 @@ return (
                 </h3>
                 <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
                   <div className='col-span-1'>
-                    <FormField,
+                    <FormField
 control={form.control}
                       name='name'
                       render={({ field }: { field: any }) => (                        <FormItem>
@@ -42,7 +42,7 @@ control={form.control}
                           <FormControl>
                             <div className='relative'>
                               <UserRound className='absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4' />
-                              <Input,
+                              <Input
 className='pl-10 bg-zion-blue border-zion-blue-light text-white'
                                 placeholder='Your full name'
                                 {...field}
@@ -55,7 +55,7 @@ className='pl-10 bg-zion-blue border-zion-blue-light text-white'
                     />
                   </div>
                   <div className='col-span-1'>
-                    <FormField,
+                    <FormField
 control={form.control}
                       name='title'
                       render={({ field }: { field: any }) => (                        <FormItem>
@@ -65,7 +65,7 @@ control={form.control}
                           <FormControl>
                             <div className='relative'>
                               <Briefcase className='absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4' />
-                              <Input,
+                              <Input
 className='pl-10 bg-zion-blue border-zion-blue-light text-white'
                                 placeholder='e.g., Creative Design Studio'
                                 {...field}
@@ -78,7 +78,7 @@ className='pl-10 bg-zion-blue border-zion-blue-light text-white'
                     />
                   </div>
                   <div className='col-span-1'>
-                    <FormField,
+                    <FormField
 control={form.control}
                       name='location'
                       render={({ field }: { field: any }) => (                        <FormItem>
@@ -88,7 +88,7 @@ control={form.control}
                           <FormControl>
                             <div className='relative'>
                               <MapPin className='absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4' />
-                              <Input,
+                              <Input
 className='pl-10 bg-zion-blue border-zion-blue-light text-white'
                                 placeholder='City State/Province Country'
                                 {...field}
@@ -101,7 +101,7 @@ className='pl-10 bg-zion-blue border-zion-blue-light text-white'
                     />
                   </div>
                   <div className='col-span-1'>
-                    <FormField,
+                    <FormField
 control={form.control}
                       name='website'
                       render={({ field }: { field: any }) => (                        <FormItem>
@@ -111,7 +111,7 @@ control={form.control}
                           <FormControl>
                             <div className='relative'>
                               <Globe className='absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4' />
-                              <Input,
+                              <Input
 className='pl-10 bg-zion-blue border-zion-blue-light text-white'
                                 placeholder='https://yourwebsite.com'
                                 {...field}
@@ -133,7 +133,7 @@ className='pl-10 bg-zion-blue border-zion-blue-light text-white'
                     <div className='relative w-24 h-24 rounded-full overflow-hidden bg-zion-blue-light border border-zion-blue-light'>
                       {uploadedAvatar ? (
                         <AspectRatio ratio={1 / 1}>
-                          <img,
+                          <img
 src={uploadedAvatar}
                             alt='Avatar preview'
                             className='w-full h-full object-cover'
@@ -148,7 +148,7 @@ src={uploadedAvatar}
                     <label className='flex items-center justify-center px-4 py-2 rounded-md bg-zion-purple hover:bg-zion-purple-dark text-white cursor-pointer transition-colors'>
                       <Upload className='mr-2 h-4 w-4' />
                       <span>Upload Photo</span>
-                      <input,
+                      <input
 type='file'
                         accept='image/*'
                         className='hidden'
@@ -167,7 +167,7 @@ JPG PNG or GIF format.
                 <h3 className='text-lg font-medium text-white'>
                   Service Description
                 </h3>
-                <FormField,
+                <FormField
 control={form.control}
                   name='bio'
                   render={({ field }: { field: any }) => (                    <FormItem>
@@ -175,7 +175,7 @@ control={form.control}
                         About Your Services
                       </FormLabel>
                       <FormControl>
-                        <Textarea,
+                        <Textarea
 className='h-32 min-h-[128px] bg-zion-blue border-zion-blue-light text-white'
                           placeholder='Describe your services expertise and what sets you apart from others...'
                           {...field}
@@ -189,7 +189,7 @@ className='h-32 min-h-[128px] bg-zion-blue border-zion-blue-light text-white'
                   )}
                 />
                 {/* AI Enhancement Option */}
-                <FormField,
+                <FormField
 control={form.control}
                   name='enhancedProfile'
                   render={({ field }: { field: any }) => (
@@ -204,7 +204,7 @@ better visibility and client engagement
                         </FormDescription>
                       </div>
                       <FormControl>
-                        <Switch,
+                        <Switch
 aria-label='AI profile enhancement'
                           checked={field.value}
                           onCheckedChange={field.onChange}
@@ -215,7 +215,7 @@ aria-label='AI profile enhancement'
                 />
                 {form.watch('enhancedProfile') && (
                   <div className='flex justify-end'>
-                    <Button,
+                    <Button
 type='button'
                       variant='outline'
                       className='border-zion-purple text-zion-purple hover:bg-zion-purple/10'
@@ -236,7 +236,7 @@ type='button'
                         <Sparkles className='w-4 h-4 mr-2 text-zion-purple' />
                         AI-Generated Content
                       </h4>
-                      <Button,
+                      <Button
 type='button'
                         size='sm'
                         className='bg-zion-purple hover:bg-zion-purple-dark text-white'
@@ -262,7 +262,7 @@ type='button'
                             <div className='flex flex-wrap gap-2 mt-1'>
                               {generatedContent.services.map(
                                 (service index) => (
-                                  <Badge,
+                                  <Badge
 key={index}
                                     className='bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none'
                                   >
@@ -284,7 +284,7 @@ key={index}
                   <h3 className='text-lg font-medium text-white'>
                     Services Offered
                   </h3>
-                  <FormField,
+                  <FormField
 control={form.control}
                     name='services'
                     render={({ field }: { field: any }) => (                      <FormItem>
@@ -293,14 +293,14 @@ control={form.control}
                         </FormLabel>
                         <div className='flex gap-2'>
                           <FormControl>
-                            <Input,
+                            <Input
 className='flex-1 bg-zion-blue border-zion-blue-light text-white'
                               placeholder='Add a service...'
                               {...field}
                               onKeyDown = {handleServiceKeyPress,}
                             />
                           </FormControl>
-                          <Button,
+                          <Button
 type='button'
                             variant='outline'
                             className='border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white'
@@ -317,12 +317,12 @@ type='button'
                   />
                   <div className='flex flex-wrap gap-2 mt-2'>
                     {serviceTags.map(service => (
-                      <Badge,
+                      <Badge
 key={service}
                         className='bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none pl-2 pr-1 py-1.5 flex items-center gap-1'
                       >
                         {service}
-                        <button,
+                        <button
 type='button'
                           onClick={() => handleRemoveService(service)}
                           className='rounded-full hover:bg-zion-purple-dark/20 p-0.5'                        >
@@ -342,7 +342,7 @@ type='button'
                   <h3 className='text-lg font-medium text-white'>
                     Pricing & Availability
                   </h3>
-                  <FormField,
+                  <FormField
 control={form.control}
                     name='hourlyRate'
                     render={({ field }: { field: any }) => (                      <FormItem>
@@ -354,7 +354,7 @@ control={form.control}
                             <span className='absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate'>
                               $
                             </span>
-                            <Input,
+                            <Input
 className='pl-8 bg-zion-blue border-zion-blue-light text-white'
                               placeholder='e.g., 85'
                               {...field}
@@ -368,7 +368,7 @@ className='pl-8 bg-zion-blue border-zion-blue-light text-white'
                       </FormItem>
                     )}
                   />
-                  <FormField,
+                  <FormField
 control={form.control}
                     name='availability'
                     render={({ field }: { field: any }) => (
@@ -378,14 +378,14 @@ control={form.control}
                         </FormLabel>                        <FormControl>
                           <div className='space-y-2'>
                             <div className='flex items-center space-x-2'>
-                              <input,
+                              <input
 type='radio'
                                 id='available'
                                 value='available'
                                 checked={field.value === 'available'}
                                 onChange={() => field.onChange('available')}
                                 className='text-zion-purple focus:ring-zion-purple'                              />
-                              <label,
+                              <label
 htmlFor='available'
                                 className='text-white flex items-center gap-2'
                               >
@@ -394,14 +394,14 @@ htmlFor='available'
                               </label>
                             </div>
                             <div className='flex items-center space-x-2'>
-                              <input,
+                              <input
 type='radio'
                                 id='limited'
                                 value='limited'
                                 checked={field.value === 'limited'}
                                 onChange={() => field.onChange('limited')}
                                 className='text-zion-purple focus:ring-zion-purple'                              />
-                              <label,
+                              <label
 htmlFor='limited'
                                 className='text-white flex items-center gap-2'
                               >
@@ -410,14 +410,14 @@ htmlFor='limited'
                               </label>
                             </div>
                             <div className='flex items-center space-x-2'>
-                              <input,
+                              <input
 type='radio'
                                 id='unavailable'
                                 value='unavailable'
                                 checked={field.value === 'unavailable'}
                                 onChange={() => field.onChange('unavailable')}
                                 className='text-zion-purple focus:ring-zion-purple'                              />
-                              <label,
+                              <label
 htmlFor='unavailable'
                                 className='text-white flex items-center gap-2'
                               >
@@ -436,14 +436,14 @@ htmlFor='unavailable'
             </CardContent>
             <CardFooter className='border-t border-zion-blue-light pt-6'>
               <div className='flex flex-col sm:flex-row gap-4 w-full sm:justify-between'>
-                <Button,
+                <Button
 type='button'
                   variant='outline'
                   className='border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white'
                 >
                   Save as Draft
                 </Button>
-                <Button,
+                <Button
 type='submit'
                   className='bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white'
                   disabled={isSubmitting}                >

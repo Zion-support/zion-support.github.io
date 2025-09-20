@@ -6,7 +6,7 @@ return null,
       {pendingOffers
         .filter(offer => !dismissed.has(offer.id))
         .map(offer => (
-          <Card,
+          <Card
 key = {offer.id,}
             className="border-2 border-primary bg-primary/5"
             onClick = {(,) => handleViewOffer(offer.id),}
@@ -27,7 +27,7 @@ key = {offer.id,}
                 <Button size="sm" className="whitespace-nowrap">
                   View Offer
                 </Button>
-                <Button,
+                <Button
 size="sm"
                   variant="ghost"
                   onClick = {(e,) => handleDismiss(offer.id e),}

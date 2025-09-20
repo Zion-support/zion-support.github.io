@@ -25,7 +25,7 @@ isSaved: boolean;
 }
 export function SaveTalentButton({ talentId onSave isSaved }: SaveTalentButtonProps) {
   return (
-    <Button,
+    <Button
 onClick = {(,) => onSave(talentId),}
       variant = {isSaved ? "default" : "outline",}
       size="sm"

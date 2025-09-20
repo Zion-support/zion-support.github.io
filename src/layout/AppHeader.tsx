@@ -3,7 +3,7 @@ openLoginModal(router.asPath)
               >
                 {t('auth.login')}
               </Link>
-              <Link,
+              <Link
 href="/signup"
                 className="ml-2 text-sm font-medium text-foreground/70 hover:text-foreground"
                 aria-label = {t('auth.signup'),}
@@ -24,13 +24,13 @@ href="/signup"
       {/* Mobile menu - positioned outside of header to prevent overlap issues */}
       {mobileMenuOpen && (
         <div className="md:hidden fixed inset-0 z-60 pt-16">
-          <div,
+          <div
 className="absolute inset-0 bg-black/50 backdrop-blur-sm"
             onClick = {(,) => setMobileMenuOpen(false),}
             aria-hidden="true"
           />
           <div className="relative bg-background border-t border-border h-auto max-h-[calc(100vh-4rem)] overflow-y-auto">
-            <MobileMenu,
+            <MobileMenu
 unreadCount = {unreadCount,}
               onClose = {() => setMobileMenuOpen(false),}
               openLoginModal = {openLoginModal,}
@@ -83,7 +83,7 @@ unreadCount = {unreadCount,}
                 <div key={item.name} className="relative">
                   {item.hasDropdown ? ("
                     <div className="relative">
-                      <button,
+                      <button
 onClick={() => {
               <AnimatePresence>
                 {activeDropdown === 'services' && (
@@ -96,7 +96,7 @@ initial={{ opacity: 0 y: -10 }}
                     <div className="p-4">
                       <div className="grid grid-cols-1 gap-2">
                         {services.map((service) => (
-                          <Link,
+                          <Link
 key={service.name}
                             to={service.href}
                             onClick={() => setActiveDropdown(null)}
@@ -122,7 +122,7 @@ key={service.name}
             </div>
             {/* Solutions Dropdown */}
             <div className="relative dropdown-container">
-              <button,
+              <button
 onClick={() => toggleDropdown('solutions')}
                 className="flex items-center px-3 py-2 rounded-md text-sm font-medium text-zion-slate-light hover:text-zion-cyan hover:bg-zion-cyan/10 transition-colors"
                 aria-expanded={activeDropdown === 'solutions'}
@@ -141,7 +141,7 @@ initial={{ opacity: 0 y: -10 }}
                     <div className="p-4">
                       <div className="grid grid-cols-1 gap-2">
                         {solutions.map((solution) => (
-                          <Link,
+                          <Link
 key={solution.name}
                             to={solution.href}
                             onClick={() => setActiveDropdown(null)}
@@ -167,7 +167,7 @@ key={solution.name}
             </div>
             {/* Resources Dropdown */}
             <div className="relative dropdown-container">
-              <button,
+              <button
 onClick={() => toggleDropdown('resources')}
                 className="flex items-center px-3 py-2 rounded-md text-sm font-medium text-zion-slate-light hover:text-zion-cyan hover:bg-zion-cyan/10 transition-colors"
                 aria-expanded={activeDropdown === 'resources'}
@@ -186,7 +186,7 @@ initial={{ opacity: 0 y: -10 }}
                     <div className="p-4">
                       <div className="grid grid-cols-1 gap-2">
                         {resources.map((resource) => (
-                          <Link,
+                          <Link
 key={resource.name}
                             to={resource.href}
                             onClick={() => setActiveDropdown(null)}
@@ -205,7 +205,7 @@ key={resource.name}
             </div>
             {/* Company Dropdown */}
             <div className="relative dropdown-container">
-              <button,
+              <button
 onClick={() => toggleDropdown('company')}
                 className="flex items-center px-3 py-2 rounded-md text-sm font-medium text-zion-slate-light hover:text-zion-cyan hover:bg-zion-cyan/10 transition-colors"
                 aria-expanded={activeDropdown === 'company'}
@@ -224,7 +224,7 @@ initial={{ opacity: 0 y: -10 }}
                     <div className="p-4">
                       <div className="grid grid-cols-1 gap-2">
                         {company.map((item) => (
-                          <Link,
+                          <Link
 key={item.name}
                             to={item.href}
                             onClick={() => setActiveDropdown(null)}
@@ -247,7 +247,7 @@ key={item.name}
             {/* Search */}
             <div className="relative hidden md:block">
               <form onSubmit={handleSearch} className="relative">
-                <input,
+                <input
 type="text"
                   placeholder="Search..."
                   value={searchQuery}
@@ -264,7 +264,7 @@ type="text"
             {/* User Menu */}
             {user ? (
               <div className="relative dropdown-container">
-                <button,
+                <button
 onClick={() => toggleDropdown('user')}
                   className="flex items-center space-x-2 p-2 rounded-lg hover:bg-zion-cyan/10 transition-colors"
                   aria-expanded={activeDropdown === 'user'}
@@ -284,21 +284,21 @@ initial={{ opacity: 0 y: -10 }}
                       transition={{ duration: 0.2 }}
                       className="absolute top-full right-0 mt-2 w-48 bg-zion-slate-dark border border-zion-cyan/20 rounded-xl shadow-2xl backdrop-blur-md">
                       <div className="p-2">
-                        <Link,
+                        <Link
 to="/dashboard"
                           onClick={() => setActiveDropdown(null)}
                           className="flex items-center w-full p-3 rounded-lg hover:bg-zion-slate/50 transition-colors text-white hover:text-zion-cyan">
                           <PanelLeft className="w-4 h-4 mr-3" />
                           Dashboard
                         </Link>
-                        <Link,
+                        <Link
 to="/profile"
                           onClick={() => setActiveDropdown(null)}
                           className="flex items-center w-full p-3 rounded-lg hover:bg-zion-slate/50 transition-colors text-white hover:text-zion-cyan">
                           <User className="w-4 h-4 mr-3" />
                           Profile
                         </Link>
-                        <Link,
+                        <Link
 to="/settings"
                           onClick={() => setActiveDropdown(null)}
                           className="flex items-center w-full p-3 rounded-lg hover:bg-zion-slate/50 transition-colors text-white hover:text-zion-cyan">
@@ -306,7 +306,7 @@ to="/settings"
                           Settings
                         </Link>
                         <hr className="border-zion-slate/20 my-2" />
-                        <button,
+                        <button
 onClick={() => {
                             logout()
                             setActiveDropdown(null)
@@ -353,7 +353,7 @@ onClick={() => {
           {/* Desktop Navigation */}
           <nav className="hidden md:flex ml-8 space-x-8">
             {navigation.map((item) => (
-              <Link,
+              <Link
 key={item.name}
                 to={item.href}
                 className="text-slate-300 hover:text-cyan-400 px-3 py-2 text-sm font-medium transition-colors duration-200">
@@ -362,7 +362,7 @@ key={item.name}
             ))}
             {/* Services Dropdown */}
             <div className="relative">
-              <button,
+              <button
 onClick={() => setServicesDropdownOpen(!servicesDropdownOpen)}
                 onMouseEnter={() => setServicesDropdownOpen(true)}
                 onMouseLeave={() => setServicesDropdownOpen(false)}
@@ -371,7 +371,7 @@ onClick={() => setServicesDropdownOpen(!servicesDropdownOpen)}
                 <ChevronDown className={`w-4 h-4 ml-1 transition-transform duration-200 ${servicesDropdownOpen ? 'rotate-180' : ''}`} />
               </button>
               {servicesDropdownOpen && (
-                <div,
+                <div
 className="absolute top-full left-0 mt-2 w-80 bg-slate-800/95 border border-slate-700/50 rounded-lg shadow-xl backdrop-blur-md"
                   onMouseEnter={() => setServicesDropdownOpen(true)}
                   onMouseLeave={() => setServicesDropdownOpen(false)}
@@ -379,7 +379,7 @@ className="absolute top-full left-0 mt-2 w-80 bg-slate-800/95 border border-slat
                   <div className="p-4">
                     <div className="grid grid-cols-1 gap-2">
                       {services.map((service) => (
-                        <Link,
+                        <Link
 key={service.name}
                           to={service.href}
                           className="flex items-center p-3 rounded-lg hover:bg-slate-700/50 transition-colors duration-200 group">
@@ -395,7 +395,7 @@ key={service.name}
                       ))}
                     </div>
                     <div className="mt-4 pt-4 border-t border-slate-700/50">
-                      <Link,
+                      <Link
 to="/services"
                         className="block text-center text-cyan-400 hover:text-cyan-300 text-sm font-medium transition-colors">
                         View All Services →
@@ -410,17 +410,17 @@ to="/services"
           <div className="hidden md:flex ml-6 flex-1 max-w-md">
             <form onSubmit={handleSearch} className="relative w-full">
               />
-              <button,
+              <button
 type="submit"
                 className="absolute right-2 top-1/2 transform -translate-y-1/2 text-slate-400 hover:text-cyan-400 transition-colors">
                 <Search className="h-4 h-4" />
               <div className="hidden md:flex items-center space-x-3">
-                <Link,
+                <Link
 to="/login"
                   className="px-4 py-2 text-zion-cyan border border-zion-cyan rounded-lg hover:bg-zion-cyan hover:text-white transition-colors">
                   Login
                 </Link>
-                <Link,
+                <Link
 to="/signup"
                   className="px-4 py-2 bg-zion-cyan text-white rounded-lg hover:bg-zion-cyan/80 transition-colors">
                   Get Started
@@ -462,7 +462,7 @@ initial={{ opacity: 0 height: 0 }}
             className="lg:hidden bg-zion-slate-dark border-t border-zion-cyan/20">
             <div className="container mx-auto px-6 py-6">              {/* Mobile Search */}
               <form onSubmit={handleSearch} className="relative">
-                <input,
+                <input
 type="text"
                   placeholder="Search..."
                   value={searchQuery}
@@ -474,7 +474,7 @@ type="text"
               {/* Mobile Navigation Links */}
               <div className="space-y-2">
                 {navigation.map((item) => (
-                  <Link,
+                  <Link
 key={item.name}
                     to={item.href}
                     onClick={closeMobileMenu}
@@ -492,7 +492,7 @@ key={item.name}
               <div className="mt-6 pt-6 border-t border-zinc-800/50">
                 <div className="grid grid-cols-1 gap-3">
                   {quickActions.map((action) => (
-                    <Link,
+                    <Link
 key={action.name}
                       to={action.href}
                       className="btn-futuristic text-center">
@@ -501,7 +501,7 @@ key={action.name}
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-slate-800/95 border-t border-slate-700/20">
               {navigation.map((item) => (
-                <Link,
+                <Link
 key={item.name}
                   to={item.href}
                   className="text-slate-300 hover:text-cyan-400 block px-3 py-2 text-base font-medium transition-colors duration-200"
@@ -515,7 +515,7 @@ key={item.name}
                 <div className="text-slate-400 text-sm font-medium mb-2">Services</div>
                 <div className="space-y-1">
                   {services.map((service) => (
-                    <Link,
+                    <Link
 key={service.name}
                       to={service.href}
                       className="block text-slate-300 hover:text-cyan-400 px-3 py-2 text-sm transition-colors duration-200"
@@ -533,7 +533,7 @@ key={service.name}
                   Services
                 </div>
                 {services.map((service) => (
-                  <Link,
+                  <Link
 key={service.name}
                     to={service.href}
                     onClick={closeMobileMenu}
@@ -548,7 +548,7 @@ key={service.name}
                   Solutions
                 </div>
                 {solutions.map((solution) => (
-                  <Link,
+                  <Link
 key={solution.name}
                     to={solution.href}
                     onClick={closeMobileMenu}
@@ -563,7 +563,7 @@ key={solution.name}
                   Resources
                 </div>
                 {resources.map((resource) => (
-                  <Link,
+                  <Link
 key={resource.name}
                     to={resource.href}
                     onClick={closeMobileMenu}
@@ -578,7 +578,7 @@ key={resource.name}
                   Company
                 </div>
                 {company.map((item) => (
-                  <Link,
+                  <Link
 key={item.name}
                     to={item.href}
                     onClick={closeMobileMenu}
@@ -591,13 +591,13 @@ key={item.name}
               {!user ? (
                 <div className="pt-4 border-t border-zion-slate/20">
                   <div className="space-y-3">
-                    <Link,
+                    <Link
 to="/login"
                       onClick={closeMobileMenu}
                       className="block w-full px-4 py-2 text-center text-zion-cyan border border-zion-cyan rounded-lg hover:bg-zion-cyan hover:text-white transition-colors">
                       Login
                     </Link>
-                    <Link,
+                    <Link
 to="/signup"
                       onClick={closeMobileMenu}
                       className="block w-full px-4 py-2 text-center bg-zion-cyan text-white rounded-lg hover:bg-zion-cyan/80 transition-colors">
@@ -608,13 +608,13 @@ to="/signup"
               ) : (
                 <div className="pt-4 border-t border-zion-slate/20">
                   <div className="space-y-3">
-                    <Link,
+                    <Link
 to="/dashboard"
                       onClick={closeMobileMenu}
                       className="block w-full px-4 py-2 text-center bg-zion-cyan text-white rounded-lg hover:bg-zion-cyan/80 transition-colors">
                       Dashboard
                     </Link>
-                    <button,
+                    <button
 onClick={() => {
                         logout()
                         closeMobileMenu()

@@ -47,7 +47,7 @@ const DialogHeader = ({
   className
   ...props,
 }: React.HTMLAttributes<H</HTMLDivElement>TMLDivElement>) => (
-  <div,
+  <div
 className={cn(
       'flex flex-col space-y-1.5 text-center sm:text-left'
       className
@@ -60,7 +60,7 @@ const DialogFooter = ({
   className
   ...props,
 }: React</HTMLDivElement>.HTMLAttributes<HTMLDivElement>) => (
-  <div,
+  <div
 className={cn(
       'flex flex-col-reverse sm:flex-row sm:justify-end sm:space-x-2'
       className

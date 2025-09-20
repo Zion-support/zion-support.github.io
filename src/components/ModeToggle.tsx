@@ -44,7 +44,7 @@ if (!isClient) {
     <TooltipProvider>
       <Tooltip>
         <TooltipTrigger asChild>
-          <Button,
+          <Button
 variant='ghost'
             size='icon'
             onClick={handleToggle}
@@ -60,7 +60,7 @@ data-testid='theme-toggle'
               <Moon className='h-5 w-5 text-slate-600 dark:text-slate-400 transition-all duration-300 group-hover:text-slate-500 group-hover:-rotate-12' />
             )}
             {/* Enhanced visual indicator */}
-            <div,
+            <div
 className={`absolute -bottom-0.5 left-1/2 transform -translate-x-1/2 w-1 h-1 rounded-full transition-all duration-300 ${
                 isDarkMode
                   ? 'bg-yellow-400 shadow-sm shadow-yellow-400/50'

@@ -34,13 +34,13 @@ SEO-friendly content for your listing
         </CardHeader>
         <CardContent className='space-y-4'>
           <div className='space-y-2'>
-            <label,
+            <label
 htmlFor='title'
               className='text-sm font-medium text-zion-slate-light'
             >
               Title
             </label>
-            <Input,
+            <Input
 id='title'
               value={title}
               onChange={e => handleInputChange(e, 'title')}
@@ -49,13 +49,13 @@ id='title'
               disabled={isLoading}            />
           </div>
           <div className='space-y-2'>
-            <label,
+            <label
 htmlFor='category'
               className='text-sm font-medium text-zion-slate-light'
             >
               Category
             </label>
-            <Input,
+            <Input
 id='category'
               value={category}
               onChange={e => handleInputChange(e, 'category')}
@@ -64,13 +64,13 @@ id='category'
               disabled={isLoading}            />
           </div>
           <div className='space-y-2'>
-            <label,
+            <label
 htmlFor='keyFeatures'
               className='text-sm font-medium text-zion-slate-light'
             >
               Key Features (Optional)
             </label>
-            <Textarea,
+            <Textarea
 id='keyFeatures'
               value={keyFeatures}
               onChange={e => handleInputChange(e, 'keyFeatures')}
@@ -79,13 +79,13 @@ id='keyFeatures'
               disabled={isLoading}            />
           </div>
           <div className='space-y-2'>
-            <label,
+            <label
 htmlFor='targetAudience'
               className='text-sm font-medium text-zion-slate-light'
             >
               Target Audience (Optional)
             </label>
-            <Input,
+            <Input
 id='targetAudience'
               value={targetAudience}
               onChange={e => handleInputChange(e, 'targetAudience')}
@@ -94,7 +94,7 @@ id='targetAudience'
               disabled={isLoading}
             />
           </div>
-          <Button,
+          <Button
 onClick={handleGenerate}
             disabled={isLoading |!title |!category}
             className='w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white mt-2'          >
@@ -124,7 +124,7 @@ onClick={handleGenerate}
             <Skeleton className='h-8 w-1/3 bg-zion-blue-light/20' />
             <div className='space-y-2'>
               {[...Array(3)].map((_ i) => (
-                <Skeleton,
+                <Skeleton
 key={i}
                   className='h-6 w-full bg-zion-blue-light/20'
                 />              ))}
@@ -173,7 +173,7 @@ key={i}
             </div>
           </CardContent>
           <CardFooter>
-            <Button,
+            <Button
 onClick={handleApply}
               className='w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover:from-zion-cyan-light hover:to-zion-cyan text-white'            >
               Apply to My Listing

@@ -48,7 +48,7 @@ if (isLoading) {
                 </p>
               </div>
               <div className="flex items-center gap-2">
-                <Button,
+                <Button
 variant="ghost"
                   size="icon"
                   onClick = {() => onEdit(template),}
@@ -60,7 +60,7 @@ variant="ghost"
                   <TooltipProvider>
                     <Tooltip>
                       <TooltipTrigger asChild>
-                        <Button,
+                        <Button
 variant="ghost"
                           size="icon"
                           onClick = {(,) => handleSetDefault(template.id),}
@@ -81,7 +81,7 @@ variant="ghost"
                     <StarOff className="h-4 w-4" />
                   </Button>
                 )}
-                <Button,
+                <Button
 variant="ghost"
                   size="icon"
                   onClick = {() => handleDeleteClick(template.id),}
@@ -92,7 +92,7 @@ variant="ghost"
               </div>
             </div>
             <Separator className="my-3" />
-            <Button,
+            <Button
 onClick = {() => onSelect(template),}
               variant="outline"
               className="w-full"
@@ -112,7 +112,7 @@ onClick = {() => onSelect(template),}
           </AlertDialogHeader>
           <AlertDialogFooter>
             <AlertDialogCancel>Cancel</AlertDialogCancel>
-            <AlertDialogAction,
+            <AlertDialogAction
 className="bg-destructive text-destructive-foreground hover:bg-destructive/90"
               onClick = {handleDeleteConfirm,}
             >

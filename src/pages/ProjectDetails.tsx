@@ -12,7 +12,7 @@ import { logErrorToProduction } from '@/utils/productionLogger';
 import {
 return (
     <>
-      <SEO,
+      <SEO
 title={`Project: ${project.job?.title |'Project Details'} | Zion AI Marketplace`}
         description='View and manage your project details and collaboration.'
       />
@@ -53,14 +53,14 @@ and start the project.
                       </AlertDialogHeader>
                       <AlertDialogFooter>
                         <AlertDialogCancel>Cancel</AlertDialogCancel>
-                        <AlertDialogAction,
+                        <AlertDialogAction
 onClick={() => handleStatusChange('offer_accepted')}
                         >                          Accept Offer
                         </AlertDialogAction>
                       </AlertDialogFooter>
                     </AlertDialogContent>
                   </AlertDialog>
-                  <Button,
+                  <Button
 variant='outline'
                     onClick={() => handleStatusChange('changes_requested')}
                   >
@@ -89,7 +89,7 @@ approved.
                     </AlertDialogHeader>
                     <AlertDialogFooter>
                       <AlertDialogCancel>Cancel</AlertDialogCancel>
-                      <AlertDialogAction,
+                      <AlertDialogAction
 onClick={() => handleStatusChange('completed')}
                       >                        Mark as Completed
                       </AlertDialogAction>
@@ -115,7 +115,7 @@ onClick={() => handleStatusChange('completed')}
                 ['offer_sent', 'offer_accepted', 'in_progress'].includes(
                   project.status
                 ) && (
-                  <Button,
+                  <Button
 variant='outline'
                     onClick={() =>
                       router.push(
@@ -130,7 +130,7 @@ variant='outline'
         </div>
         <div className='grid grid-cols-1 lg:grid-cols-3 gap-8'>
           <div className='order-2 lg:order-1 lg:col-span-2'>
-            <Tabs,
+            <Tabs
 defaultValue='details'
               value={activeTab}
               onValueChange={setActiveTab}
@@ -231,7 +231,7 @@ defaultValue='details'
                           </div>
                         </div>
                         <Button variant='outline' size='sm' asChild>
-                          <a,
+                          <a
 href={project.agreement_url}
                             target='_blank'
                             rel='noopener noreferrer'
@@ -263,14 +263,14 @@ href={project.agreement_url}
                       <div className='space-y-4 max-h-[400px] overflow-y-auto mb-4'>
                         {notes.length > 0 ? (
                           notes.map(note => (
-                            <div,
+                            <div
 key={note.id}
                               className='bg-muted/30 p-3 rounded-md'
                             >
                               <div className='flex items-center gap-2 mb-2'>
                                 <Avatar className='h-6 w-6'>
                                   {note.created_by_profile?.avatar_url ? (
-                                    <img,
+                                    <img
 src={note.created_by_profile.avatar_url}
                                       alt={note.created_by_profile.display_name}
                                       loading='lazy'                                    />
@@ -302,12 +302,12 @@ src={note.created_by_profile.avatar_url}
                       </div>
                       {isOfferAccepted && (
                         <div>
-                          <Textarea,
+                          <Textarea
 placeholder='Add a note or update to the project...'
                             value={newNote}
                             onChange={e => setNewNote(e.target.value)}
                             className='min-h-[100px] mb-2'                          />
-                          <Button,
+                          <Button
 onClick = {handleSubmitNote,}
                             disabled = {!newNote.trim() |isSubmittingNote,}
                           >
@@ -334,7 +334,7 @@ onClick = {handleSubmitNote,}
                   <div className='flex items-start gap-4'>
                     <Avatar className='h-10 w-10'>
                       {project.talent_profile?.profile_picture_url ? (
-                        <img,
+                        <img
 src={project.talent_profile.profile_picture_url}
                           alt={project.talent_profile.full_name}
                           loading='lazy'                        />
@@ -351,7 +351,7 @@ src={project.talent_profile.profile_picture_url}
                           'Professional'}
                       </p>
                       {isClient && (
-                        <Button,
+                        <Button
 variant='outline'
                           size='sm'
                           className='mt-2'
@@ -368,7 +368,7 @@ variant='outline'
                   <div className='flex items-start gap-4'>
                     <Avatar className='h-10 w-10'>
                       {project.talent_profile?.profile_picture_url ? (
-                        <img,
+                        <img
 src={project.talent_profile.profile_picture_url}
                           alt={project.talent_profile.full_name}
                           loading='lazy'                        />
@@ -384,7 +384,7 @@ src={project.talent_profile.profile_picture_url}
                         Project Owner
                       </p>
                       {isTalent && (
-                        <Button,
+                        <Button
 variant='outline'
                           size='sm'
                           className='mt-2'
@@ -433,7 +433,7 @@ variant='outline'
                     <AlertCircle className='h-4 w-4' /> The talent has requested,
 changes to this offer.
                   </p>
-                  <Button,
+                  <Button
 variant='outline'
                     onClick={() =>
                       router.push(`/messages?talentId=${project.talent_id}`)

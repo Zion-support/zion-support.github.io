@@ -12,7 +12,7 @@ enhancementType: 'summary' | 'work-description' | 'skill-categorization' | 'gene
   className?: string,
 export function AIEnhancementButton({
 return (
-    <Button,
+    <Button
 type="button"
       variant="ghost"
       size="sm"

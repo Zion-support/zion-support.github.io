@@ -183,7 +183,7 @@ const MenubarShortcut = ({
   ...props,
 }: React.HTMLAttributes<HTMLSpanElement>) => {
   return (
-    <span,
+    <span
 className={cn(
         &quot;ml-auto text-xs tracking-widest text-muted-foreground&quot;
         className

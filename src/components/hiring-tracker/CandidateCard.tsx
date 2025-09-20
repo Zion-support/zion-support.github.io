@@ -13,7 +13,7 @@ return (
     <>
       <Draggable draggableId={application.id} index={index}>
         {provided => (
-          <Card,
+          <Card
 className='mb-2 p-0 shadow-sm border'
             ref={provided.innerRef}            {...provided.draggableProps}
             {...provided.dragHandleProps}
@@ -27,7 +27,7 @@ className='mb-2 p-0 shadow-sm border'
                     {/* Using renamed AvatarPrimitive */}
                     {application.talent_profile?.profile_picture_url &&
                     !avatarError ? (
-                      <Image,
+                      <Image
 src={application.talent_profile.profile_picture_url}
                         alt={candidateName}
                         width={32} // Match h-8 w-8,
@@ -58,14 +58,14 @@ onError={() => setAvatarError(true)}                        priority={false} // 
                       {showNotes ? 'Hide notes' : 'Add notes'}
                     </DropdownMenuItem>
                     <DropdownMenuItem onClick={() => setShowHireModal(true)}>
-                      <BriefcaseIcon,
+                      <BriefcaseIcon
 className='h-4 w-4 mr-2'
                         aria-hidden='true'
                       />{' '}
                       Hire Candidate
                     </DropdownMenuItem>
                     <DropdownMenuItem asChild>
-                      <Link,
+                      <Link
 href={`/messages?talentId=${application.talent_id}`}
                       >
                         Message
@@ -73,7 +73,7 @@ href={`/messages?talentId=${application.talent_id}`}
                     </DropdownMenuItem>
                     {application.resume?.file_url && (
                       <DropdownMenuItem asChild>
-                        <a,
+                        <a
 href={application.resume.file_url}
                           target='_blank'
                           rel='noopener noreferrer'
@@ -110,7 +110,7 @@ href={application.resume.file_url}
               {/* Notes Section */}
               {showNotes && (
                 <div className='mt-2'>
-                  <Textarea,
+                  <Textarea
 placeholder='Add private notes about this candidate...'
                     className='text-xs min-h-[60px]'
                     value={notes}
@@ -131,7 +131,7 @@ placeholder='Add private notes about this candidate...'
                 </Button>
                 <Button variant='outline' size='sm' className='flex-1' asChild>
                   {application.resume?.file_url ? (
-                    <a,
+                    <a
 href={application.resume.file_url}
                       target='_blank'
                       rel='noopener noreferrer'
@@ -144,7 +144,7 @@ href={application.resume.file_url}
                     </span>
                   )}
                 </Button>
-                <Button,
+                <Button
 variant='default'
                   size='sm'
                   className='flex-1'
@@ -157,7 +157,7 @@ variant='default'
         )}
       </Draggable>
       {/* Hire Confirmation Modal */}
-      <HireConfirmationModal,
+      <HireConfirmationModal
 isOpen = {showHireModal,}
         onClose = {() => setShowHireModal(false),}
         application = {application,}

@@ -51,13 +51,13 @@ return (
       <ReferralStats stats={stats} isLoading={isLoading} />
       <div className='grid gap-6 mt-6 lg:grid-cols-3'>
         <div className='lg:col-span-2 space-y-6'>
-          <ReferralLink,
+          <ReferralLink
 referralLink={referralLink}
             onCopy={copyReferralLink}
             onShare={shareOnSocialMedia}          />
           <Tabs defaultValue='referrals' className='w-full'>
             <TabsList className='w-full grid grid-cols-2'>
-              <TabsTrigger,
+              <TabsTrigger
 value='referrals'
                 className='flex items-center gap-2'
               >
@@ -69,7 +69,7 @@ value='referrals'
                 Rewards
               </TabsTrigger>
             </TabsList>
-            <TabsContent,
+            <TabsContent
 value='referrals'
               className='p-0 border rounded-md mt-6'
             >

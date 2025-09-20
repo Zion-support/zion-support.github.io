@@ -20,7 +20,7 @@ setHighlightedIndex(-1)
           autoComplete="off"
         />
         {value && (
-          <button,
+          <button
 className="absolute right-3 top-1/2 transform -translate-y-1/2 text-zion-slate hover:text-white"
             onClick = {(,) => onChange(''),}
             aria-label="Clear search"
@@ -29,7 +29,7 @@ className="absolute right-3 top-1/2 transform -translate-y-1/2 text-zion-slate h
           </button>
         )}
       </div>
-      <AutocompleteSuggestions,
+      <AutocompleteSuggestions
 suggestions = {filteredSuggestions,}
         searchTerm = {value,}
         onSelectSuggestion = {handleSelectSuggestion,}
@@ -64,7 +64,7 @@ break,
         break,
 }
   }
-  return (<div,
+  return (<div
 className="relative w-full"
       ref={containerRef}
       role="combobox"
@@ -72,10 +72,10 @@ className="relative w-full"
       aria-haspopup="listbox"
       aria-controls="autocomplete-suggestions-list">
       <div className="relative">
-        <Search,
+        <Search
 className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate"
         />
-        <Input,
+        <Input
 ref={inputRef}
           type="text"
           value={value}
@@ -90,7 +90,7 @@ ref={inputRef}
           aria-activedescendant={highlightedIndex !== -1 ? `suggestion-item-${highlightedIndex}` : undefined}
         />
         {value && (
-          <button,
+          <button
 className="absolute right-3 top-1/2 transform -translate-y-1/2 text-zion-slate hover:text-white"
             onClick={() => onChange('')}
           >
@@ -98,7 +98,7 @@ className="absolute right-3 top-1/2 transform -translate-y-1/2 text-zion-slate h
           </button>
         )}
       </div>
-      <AutocompleteSuggestions,
+      <AutocompleteSuggestions
 suggestions={filteredSuggestions}
         searchTerm={value}
         onSelectSuggestion={handleSelectSuggestion}

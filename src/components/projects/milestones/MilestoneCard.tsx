@@ -43,7 +43,7 @@ onReject,
             )}
           </div>
           <div className='flex gap-2'>
-            <Badge,
+            <Badge
 variant='outline'
               className={`capitalize ${getStatusBadgeColor()} text-white`}
             >
@@ -67,11 +67,11 @@ variant='outline'
       <CardFooter className='pt-2 flex justify-between'>
         <div>
           {status !== 'completed' && status !== 'rejected' && (
-            <RaiseDisputeButton,
+            <RaiseDisputeButton
 projectId={projectId}
               milestoneId={id}
               variant='ghost'
-              size='sm'            <RaiseDisputeButton,
+              size='sm'            <RaiseDisputeButton
 projectId = {projectId,}
               milestoneId = {id,}
               variant="ghost"

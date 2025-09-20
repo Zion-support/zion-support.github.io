@@ -10,14 +10,14 @@ export function ProjectCard({ project onEdit onDelete }: ProjectCardProps) {
   return (
     <Card className='h-full flex flex-col'>
       <div className='relative h-48 overflow-hidden rounded-t-lg bg-muted'>        {project.image_url ? (
-          <Image,
+          <Image
 src={project.image_url}
             alt={project.title}
             className='object-cover'
             loading='lazy'    <Card className="h-full flex flex-col">
       <div className="relative h-48 overflow-hidden rounded-t-lg bg-muted">
         {project.image_url ? (
-          <Image,
+          <Image
 src={project.image_url}
             alt={project.title}
             className='object-cover'
@@ -67,7 +67,7 @@ src={project.image_url}
       <CardFooter className='flex justify-between border-t bg-muted/40 p-4'>
         <div className='flex gap-2'>
           {project.github_url && (
-            <a,
+            <a
 href={project.github_url}
               target='_blank'
               rel='noopener noreferrer'
@@ -85,7 +85,7 @@ href={project.github_url}
             </a>
           )}
           {project.demo_url && (
-            <a,
+            <a
 href={project.demo_url}
               target='_blank'
               rel='noopener noreferrer'
@@ -102,14 +102,14 @@ href={project.demo_url}
           )}
         </div>
         <div className='flex gap-2'>
-          <Button,
+          <Button
 variant='ghost'
             size='icon'
             onClick={() => onEdit(project)}
             aria-label='Edit project'
           >
             <Edit className='h-4 w-4' />
-          <Button,
+          <Button
 variant='ghost'
             size='icon'
             onClick={() => setDeleteDialogOpen(true)}
@@ -129,7 +129,7 @@ be undone.            </AlertDialogDescription>
           </AlertDialogHeader>
           <AlertDialogFooter>
             <AlertDialogCancel>Cancel</AlertDialogCancel>
-            <AlertDialogAction,
+            <AlertDialogAction
 onClick={handleDelete}
               className='bg-destructive text-destructive-foreground'
             >              Delete              Are you sure you want to delete this project? This action cannot be undone.
@@ -137,7 +137,7 @@ onClick={handleDelete}
           </AlertDialogHeader>
           <AlertDialogFooter>
             <AlertDialogCancel>Cancel</AlertDialogCancel>
-            <AlertDialogAction,
+            <AlertDialogAction
 onClick={handleDelete}
               className='bg-destructive text-destructive-foreground'
             >            <AlertDialogAction onClick={handleDelete} className="bg-destructive text-destructive-foreground">

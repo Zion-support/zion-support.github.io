@@ -8,7 +8,7 @@ import { CAREER_JOBS,  } from "@/data/careersJobs";
 export default function Careers() {
 return (
     <>
-      <SEO,
+      <SEO
 title='Careers at Zion - Join Our Team'
         description="Join the team building the future of AI and technology. Explore career opportunities at Zion's innovative marketplace platform."
         keywords='Zion careers AI jobs tech careers remote work startup jobs'
@@ -32,7 +32,7 @@ title='Careers at Zion - Join Our Team'
               </p>
             </div>
             <div className='rounded-lg overflow-hidden relative w-full h-full'>
-              <img,
+              <img
 src='https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&h=600&q=80'
                 alt='Team collaboration'
                 className='object-cover'
@@ -45,7 +45,7 @@ src='https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fi
             </h2>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>
               {benefits.map((benefit index) => (
-                <div,
+                <div
 key={index}
                   className='bg-zion-blue-dark p-8 rounded-lg border border-zion-blue-light'
                 >
@@ -65,25 +65,25 @@ key={index}
             </h2>
             <Tabs defaultValue='engineering' className='w-full'>
               <TabsList className='bg-zion-blue-dark border border-zion-blue-light mb-8 w-full flex flex-wrap justify-center'>
-                <TabsTrigger,
+                <TabsTrigger
 value='engineering'
                   className='data-[state=active]:bg-zion-purple/20 data-[state=active]:text-zion-purple'
                 >
                   Engineering
                 </TabsTrigger>
-                <TabsTrigger,
+                <TabsTrigger
 value='product'
                   className='data-[state=active]:bg-zion-purple/20 data-[state=active]:text-zion-purple'
                 >
                   Product
                 </TabsTrigger>
-                <TabsTrigger,
+                <TabsTrigger
 value='marketing'
                   className='data-[state=active]:bg-zion-purple/20 data-[state=active]:text-zion-purple'
                 >
                   Marketing
                 </TabsTrigger>
-                <TabsTrigger,
+                <TabsTrigger
 value='operations'
                   className='data-[state=active]:bg-zion-purple/20 data-[state=active]:text-zion-purple'
                 >
@@ -91,13 +91,13 @@ value='operations'
                 </TabsTrigger>
               </TabsList>
               {Object.entries(jobs).map(([department jobList]) => (
-                <TabsContent,
+                <TabsContent
 key={department}
                   value={department}
                   className='space-y-6'
                 >
                   {jobList.map((job index) => (
-                    <Card,
+                    <Card
 key={index}
                       className='bg-zion-blue-dark border border-zion-blue-light hover:border-zion-purple transition-colors'
                     >
@@ -121,7 +121,7 @@ key={index}
                               {job.description}
                             </p>
                           </div>
-                          <Button,
+                          <Button
 asChild
                             className='w-full md:w-auto mt-4 md:mt-0 bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple'
                           >
@@ -145,7 +145,7 @@ asChild
               We're always looking for talented individuals who are passionate,
 about AI and technology. Send us your resume and let's start a,
 conversation. You can also apply directly by emailing us at
-              <a,
+              <a
 href={`mailto:${applyEmail}`}
                 className='text-zion-cyan hover:text-zion-purple transition-colors'
               >
@@ -153,7 +153,7 @@ href={`mailto:${applyEmail}`}
               </a>
               .
             </p>
-            <Button,
+            <Button
 asChild
               className='bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple'
             >

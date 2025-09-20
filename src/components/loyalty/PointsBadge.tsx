@@ -5,7 +5,7 @@ return (
       <div className='flex items-center gap-1'>
         <Tooltip>
           <TooltipTrigger asChild>
-            <Link,
+            <Link
 href={isAuthenticated ? '/points' : '#'}
               onClick={handleClick}
               title={
@@ -55,14 +55,14 @@ href={isAuthenticated ? '/points' : '#'}
         {isAuthenticated && (
           <Tooltip>
             <TooltipTrigger asChild>
-              <Button,
+              <Button
 variant='ghost'
                 size='sm'
                 onClick={handleRefresh}
                 disabled={isRefreshing |loading}
                 className='p-1 h-6 w-6 text-muted-foreground hover:text-foreground'
                 aria-label='Refresh points'              >
-                <RefreshCw,
+                <RefreshCw
 className={`h-3 w-3 ${isRefreshing |loading ? 'animate-spin' : ''}`}
                   aria-hidden='true'
                 />

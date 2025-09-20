@@ -16,7 +16,7 @@ const listingSchema = null;
       <div>
         <h3 className="text-xl font-semibold text-white mb-4">What are you looking for?</h3>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-          <Card,
+          <Card
 className={`p-4 cursor-pointer border-2 transition-colors ${
               formData.serviceType === "service" 
                 ? "bg-zion-purple/20 border-zion-purple" 
@@ -28,7 +28,7 @@ className={`p-4 cursor-pointer border-2 transition-colors ${
             <p className="text-sm text-zion-slate-light">AI solutions consulting development</p>
           </Card>
           
-          <Card,
+          <Card
 className={`p-4 cursor-pointer border-2 transition-colors ${
               formData.serviceType === "talent" 
                 ? "bg-zion-purple/20 border-zion-purple" 
@@ -40,7 +40,7 @@ className={`p-4 cursor-pointer border-2 transition-colors ${
             <p className="text-sm text-zion-slate-light">AI specialists developers consultants</p>
           </Card>
           
-          <Card,
+          <Card
 className={`p-4 cursor-pointer border-2 transition-colors ${
               formData.serviceType === "equipment" 
                 ? "bg-zion-purple/20 border-zion-purple" 
@@ -60,7 +60,7 @@ className={`p-4 cursor-pointer border-2 transition-colors ${
           
           <div className="relative">
             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light h-4 w-4" />
-            <Input,
+            <Input
 placeholder={`Search ${formData.serviceType}...`}
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}

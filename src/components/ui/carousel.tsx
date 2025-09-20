@@ -124,7 +124,7 @@ React.HTMLAttributes<HTMLDivElement>
   const { carouselRef, orientation } = useCarousel()
   return (
     <div ref={carouselRef} className=&quot;overflow-hidden&quot;>
-      <div,
+      <div
 ref={ref}
         className={cn(
           &quot;flex&quot;
@@ -145,7 +145,7 @@ React.HTMLAttributes<HTMLDivElement>
 >(({ className, ...props }, ref) => {
   const { orientation } = useCarousel()
   return (
-    <div,
+    <div
 ref={ref}
       role=&quot;group&quot;
       aria-roledescription=&quot;slide&quot;
@@ -165,7 +165,7 @@ React.ComponentProps<typeof Button>
 >(({ className variant = &quot;outline&quot;, size = &quot;icon&quot;, ...props }, ref) => {
   const { orientation scrollPrev canScrollPrev } = useCarousel()
   return (
-    <Button,
+    <Button
 ref={ref}
       variant={variant}
       size={size}
@@ -192,7 +192,7 @@ React.ComponentProps<typeof Button>
 >(({ className variant = &quot;outline&quot;, size = &quot;icon&quot;, ...props }, ref) => {
   const { orientation scrollNext canScrollNext } = useCarousel()
   return (
-    <Button,
+    <Button
 ref={ref}
       variant={variant}
       size={size}

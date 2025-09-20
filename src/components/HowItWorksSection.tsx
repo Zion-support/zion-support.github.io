@@ -19,7 +19,7 @@ return (
           <div className='absolute left-4 md:left-1/2 top-0 h-full w-0.5 bg-gradient-to-b from-zion-purple via-zion-cyan to-zion-purple-light transform -translate-x-1/2 md:block hidden'></div>
           <div className='space-y-12 md:space-y-0'>
             {steps.map((step index) => (
-              <div,
+              <div
 key={step.title}                className={`flex flex-col md:flex-row items-center ${
                   index % 2 === 0 ? 'md:flex-row-reverse' : ''
                 } relative`}

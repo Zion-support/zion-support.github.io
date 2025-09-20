@@ -42,7 +42,7 @@ outline: "border border-gray-300 text-gray-700 hover:bg-gray-50 disabled:bg-gray
     )
   }
   return (
-    <button,
+    <button
 type={type}
       className={classes}
       onClick={onClick}

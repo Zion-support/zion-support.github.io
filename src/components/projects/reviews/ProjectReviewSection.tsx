@@ -40,7 +40,7 @@ submit feedback
                         : 'pending approval'}
                     </p>
                     {userReview.status === 'pending' && (
-                      <Button,
+                      <Button
 variant='outline'
                         onClick={() => setIsReviewModalOpen(true)}
                       >                        Edit Review
@@ -50,7 +50,7 @@ variant='outline'
                 ) : null}
               </div>
             )}
-            <ReviewsList,
+            <ReviewsList
 reviews = {reviews,}
               isLoading = {isLoading,}
               onReportReview = {reportReview,}
@@ -70,7 +70,7 @@ able to leave reviews
       </CardContent>
       {/* Review Modal */}
       {(isClient |isTalent) && (
-        <LeaveReviewModal,
+        <LeaveReviewModal
 projectId = {project.id,}
           revieweeId = {revieweeId,}
           revieweeName = {revieweeName,}

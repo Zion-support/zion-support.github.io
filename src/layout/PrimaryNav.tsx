@@ -31,7 +31,7 @@ export function PrimaryNav() {
             </div>
           </div>
           {/* Mobile menu button */}
-          <button,
+          <button
 className='lg:hidden p-2 rounded focus:outline-none flex-shrink-0'
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-expanded={mobileMenuOpen}
@@ -46,12 +46,12 @@ className='lg:hidden p-2 rounded focus:outline-none flex-shrink-0'
       </header>
       {mobileMenuOpen && (
         <div className='lg:hidden fixed inset-0 z-60 pt-16'>
-          <div,
+          <div
 className='absolute inset-0 bg-black/50 backdrop-blur-sm'
             onClick={() => setMobileMenuOpen(false)}
             aria-hidden='true'          />
           <div className='relative bg-card border-t border-primary/20 max-h-[calc(100vh-4rem)] overflow-y-auto'>
-            <MobileMenu,
+            <MobileMenu
 unreadCount={unreadCount}
               onClose={() => setMobileMenuOpen(false)}
               openLoginModal={returnToPath => setLoginOpen(true)}            />
@@ -129,7 +129,7 @@ height: 0;
                     </h3>"
                     <div className="space-y-2 ml-4">
                       {category.items.map((service: unknown serviceIndex: unknown
-                        <Link,
+                        <Link
 key={serviceIndex}
                           to={service.path}"
                           className="block text-gray-300 hover:text-white transition-colors duration-200"

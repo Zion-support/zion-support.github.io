@@ -28,7 +28,7 @@ description: string;
         {tags && tags.length > 0 && (
           <div className='flex flex-wrap gap-2 mb-4'>
             {tags.map((tag i) => (
-              <Badge,
+              <Badge
 key={i}
                 variant='outline'
                 className='border-zion-slate-dark text-zion-slate-light'
@@ -46,7 +46,7 @@ key={i}
               <div className='relative h-8 w-8 rounded-full mr-2 overflow-hidden'>
                 {' '}
                 {/* Added relative and overflow-hidden */}
-                <Image,
+                <Image
 src={authorImage}
                   alt={author}
                   className='object-cover rounded-full'

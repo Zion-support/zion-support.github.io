@@ -3,7 +3,7 @@ import { ChevronLeft,, ChevronRight,, MoreHorizontal,  } from 'lucide-react'
 import { cn,  } from &quot;@/lib/utils&quot;
 import { ButtonProps,, buttonVariants,  } from &quot;@/components/ui/button&quot;
 const Pagination = ({ className, ...props }: React.ComponentProps<&quot;nav&quot;>) => (
-  <nav,
+  <nav
 role=&quot;navigation&quot;
     aria-label=&quot;pagination&quot;
     className={cn(&quot;mx-auto flex w-full justify-center&quot;, className)}
@@ -15,7 +15,7 @@ const PaginationContent = React.forwardRef<
   HTMLUListElement,
 React.ComponentProps<&quot;ul&quot;>
 >(({ className, ...props }, ref) => (
-  <ul,
+  <ul
 ref={ref}
     className={cn(&quot;flex flex-row items-center gap-1&quot;, className)}
     {...props}
@@ -44,7 +44,7 @@ isActive
   size = &quot;icon&quot;
   ...props,
 }: PaginationLinkProps) => (
-  <a,
+  <a
 aria-current={isActive ? &quot;page" : undefined}
     className={cn(
       buttonVariants({
@@ -58,7 +58,7 @@ aria-current={isActive ? &quot;page" : undefined}
 PaginationLink.displayName = &quot;PaginationLink&quot;
 const PaginationButton = React.forwardRef<HTMLButtonElement PaginationButtonProps>(
   ({ page isActive className, ...props }, ref) => (
-    <button,
+    <button
 ref={ref}
       type=&quot;button"
       aria-label={`Page ${page}`}
@@ -79,7 +79,7 @@ const PaginationPrevious = ({
   className
   ...props,
 }: Omit<PaginationLinkProps 'size'>) => (
-  <PaginationLink,
+  <PaginationLink
 aria-label="Go to previous page&quot;
     size=&quot;default"
     className={cn("gap-1 pl-2.5", className)}
@@ -94,7 +94,7 @@ const PaginationNext = ({
   className
   ...props,
 }: Omit<PaginationLinkProps 'size'>) => (
-  <PaginationLink,
+  <PaginationLink
 aria-label=&quot;Go to next page&quot;
     size=&quot;default"
     className={cn("gap-1 pr-2.5", className)}
@@ -109,7 +109,7 @@ const PaginationEllipsis = ({
   className
   ...props,
 }: React.ComponentProps<&quot;span">) => (
-  <span,
+  <span
 aria-hidden,
 className={cn("flex h-9 w-9 items-center justify-center", className)}
     {...props}

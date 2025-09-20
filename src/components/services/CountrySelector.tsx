@@ -12,7 +12,7 @@ return (
           ? `IT Onsite Service in ${selectedCountry.country}`
           : 'Select Country for IT Onsite Service'}
       </h3>
-      <Select,
+      <Select
 onValueChange={handleCountryChange}
         value={selectedCountry?.country}      >
         <SelectTrigger className='bg-zion-blue border-zion-blue-light text-white'>
@@ -24,7 +24,7 @@ onValueChange={handleCountryChange}
               Popular Countries
             </p>
             {topCountries.map(item => (
-              <SelectItem,
+              <SelectItem
 key={item.country}
                 value={item.country}
                 className='text-white'
@@ -44,7 +44,7 @@ key={item.country}
             {onsiteServicePricing
               .sort((a b) => a.country.localeCompare(b.country))
               .map(item => (
-                <SelectItem,
+                <SelectItem
 key={item.country}
                   value={item.country}
                   className='text-white'

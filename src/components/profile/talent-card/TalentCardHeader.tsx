@@ -19,7 +19,7 @@ yearsExperience,
             {fullName}
             {/* AI score could be used for verification badge */}
             {yearsExperience > 5 && (
-              <BadgeCheck,
+              <BadgeCheck
 className='h-4 w-4 text-zion-cyan'
                 aria-label='Verified Expert'
               />

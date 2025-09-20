@@ -32,13 +32,13 @@ onBack: () => void;
           <Button variant='ghost' size='icon' aria-label='Attach file'>
             <PaperclipIcon className='h-5 w-5' />
           </Button>
-          <Input,
+          <Input
 value={newMessage}
             onChange={e => setNewMessage(e.target.value)}
             onKeyDown={handleKeyDown}
             placeholder='Type a message...'
             className='flex-1'          />
-          <Button,
+          <Button
 size='icon'
             onClick={handleSend}
             disabled={!newMessage.trim()}

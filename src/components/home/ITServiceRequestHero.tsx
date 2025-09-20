@@ -20,14 +20,14 @@ return (
         </div>
         <div className='bg-zion-blue-light p-6 rounded-lg shadow-lg w-full max-w-md md:ml-auto'>
           <div className='flex flex-col md:flex-row items-center gap-4'>
-            <Image,
+            <Image
 src='/logos/zion-logo.png'
               alt='Zion logo'
               width={200}
               height={200}
               className='w-full h-auto md:w-40'            />
             <form onSubmit={handleSubmit} className='space-y-4 flex-1'>
-              <Input,
+              <Input
 value={name}
                 onChange={e => setName(e.target.value)}
                 className='bg-zion-blue-dark border-zion-blue-light focus:border-zion-purple focus:ring-zion-purple text-white'                required
@@ -38,7 +38,7 @@ value={name}
                   'Enter the main contact for this request.'
                 )}
               </p>
-              <Input,
+              <Input
 type='email'
                 value={email}
                 onChange={e => setEmail(e.target.value)}
@@ -50,7 +50,7 @@ type='email'
                   "We'll confirm your request here."
                 )}
               </p>
-              <Input,
+              <Input
 value={phone}
                 onChange={e => setPhone(e.target.value)}
                 className='bg-zion-blue-dark border-zion-blue-light focus:border-zion-purple focus:ring-zion-purple text-white'              />
@@ -60,14 +60,14 @@ value={phone}
                   'Include a direct line for urgent updates.'
                 )}
               </p>
-              <Input,
+              <Input
 value={company}
                 onChange={e => setCompany(e.target.value)}
                 className='bg-zion-blue-dark border-zion-blue-light focus:border-zion-purple focus:ring-zion-purple text-white'              />
               <p className='text-xs text-zion-slate-light'>
                 {t('onsite_form.company_helper', 'Who do you represent?')}
               </p>
-              <Input,
+              <Input
 value={location}
                 onChange={e => setLocation(e.target.value)}
                 className='bg-zion-blue-dark border-zion-blue-light focus:border-zion-purple focus:ring-zion-purple text-white'                required
@@ -78,7 +78,7 @@ value={location}
                   'Where do you need on-site support?'
                 )}
               </p>
-              <Textarea,
+              <Textarea
 value={details}
                 onChange={e => setDetails(e.target.value)}
                 className='bg-zion-blue-dark border-zion-blue-light focus:border-zion-purple focus:ring-zion-purple text-white min-h-[80px]'              />
@@ -88,7 +88,7 @@ value={details}
                   'Share any important context for our technicians.'
                 )}
               </p>
-              <Button,
+              <Button
 type='submit'
                 disabled={isSubmitting}
                 className='w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-lg py-3 px-6 transition-transform hover:scale-105'              >

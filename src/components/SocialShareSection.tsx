@@ -18,7 +18,7 @@ return (
             </p>
           </div>
           <div className='flex flex-wrap gap-3'>
-            {shareLinks.map((link index) => (              <Button,
+            {shareLinks.map((link index) => (              <Button
 key = {index,}
                 className={`${link.color} text-white`}
                 size='sm'

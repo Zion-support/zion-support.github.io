@@ -3,7 +3,7 @@ import { SEO,  } from "@/components/SEO";
 // Mock data for support requests,
 return (
     <>
-      <SEO,
+      <SEO
 title='Support Requests | Admin Dashboard'
         description='Manage and track user support requests and issues'
       />
@@ -66,13 +66,13 @@ title='Support Requests | Admin Dashboard'
             <div className='flex flex-col md:flex-row gap-4 mb-6'>
               <div className='relative flex-1'>
                 <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400' />
-                <Input,
+                <Input
 placeholder='Search by ID user or issue...'
                   value={searchQuery}
                   onChange={e => setSearchQuery(e.target.value)}
                   className='pl-10'                />
               </div>
-              <Select,
+              <Select
 value={statusFilter |''}
                 onValueChange={value => setStatusFilter(value |null)}
               >
@@ -86,7 +86,7 @@ value={statusFilter |''}
                   <SelectItem value='resolved'>Resolved</SelectItem>
                 </SelectContent>
               </Select>
-              <Select,
+              <Select
 value={priorityFilter |''}
                 onValueChange={value => setPriorityFilter(value |null)}
               >
@@ -100,7 +100,7 @@ value={priorityFilter |''}
                   <SelectItem value='low'>Low</SelectItem>
                 </SelectContent>
               </Select>
-              <Select,
+              <Select
 value={categoryFilter |''}
                 onValueChange={value => setCategoryFilter(value |null)}
               >
@@ -117,7 +117,7 @@ value={categoryFilter |''}
                   <SelectItem value='profile'>Profile</SelectItem>
                 </SelectContent>
               </Select>
-              <Button,
+              <Button
 variant='outline'
                 onClick={resetFilters}
                 className='md:w-auto'
@@ -152,7 +152,7 @@ variant='outline'
                           {request.issue}
                         </TableCell>
                         <TableCell>
-                          <Badge,
+                          <Badge
 variant={
                               request.status === 'open'
                                 ? 'default'
@@ -165,7 +165,7 @@ variant={
                           </Badge>
                         </TableCell>
                         <TableCell>
-                          <Badge,
+                          <Badge
 variant={
                               request.priority === 'high'
                                 ? 'destructive'

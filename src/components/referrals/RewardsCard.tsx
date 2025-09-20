@@ -84,11 +84,11 @@ export function RewardsCard({ rewards isLoading }: RewardsCardProps) {
       </CardHeader>
       <CardContent>
         <div className='space-y-4'>          {rewards.map((reward index) => (
-            <div,
+            <div
 key={reward.id}
         <div className="space-y-4">
           {rewards.map((reward index,) => (
-            <div,
+            <div
 key = {reward.id,}
               className={`flex justify-between items-start ${
                 index !== rewards.length - 1 ? 'border-b pb-3' : ''

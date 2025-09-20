@@ -29,12 +29,12 @@ complete onboarding
       <CardContent>
         <div className='flex flex-col space-y-3'>
           <div className='flex space-x-2'>
-            <Input,
+            <Input
 value = {referralLink,}
               readOnly,
 className='font-mono text-sm'
             />
-            <Button,
+            <Button
 variant='outline'
               size='icon'
               onClick={handleCopy}
@@ -58,7 +58,7 @@ return (
       <CardContent>
         <div className="flex flex-col space-y-3">
           <div className="flex space-x-2">
-            <Input,
+            <Input
 value={referralLink}
               readOnly,
 className="font-mono text-sm"
@@ -81,11 +81,11 @@ className="font-mono text-sm"
             Share on social media:
           </p>
           <div className='flex space-x-2'>
-            <Button,
+            <Button
 variant='outline'
               size='sm'
               className='flex items-center gap-2'
-              onClick={() => onShare('twitter')}            <Button,
+              onClick={() => onShare('twitter')}            <Button
 variant="outline"
               size="sm"
               className="flex items-center gap-2"
@@ -94,11 +94,11 @@ variant="outline"
               <Twitter className='h-4 w-4' />
               Twitter
             </Button>
-            <Button,
+            <Button
 variant='outline'
               size='sm'
               className='flex items-center gap-2'              onClick={() => onShare('facebook')}
-            <Button,
+            <Button
 variant="outline"
               size="sm"
               className="flex items-center gap-2"
@@ -107,7 +107,7 @@ variant="outline"
               <Facebook className='h-4 w-4' />
               Facebook
             </Button>
-            <Button,
+            <Button
 variant='outline'
               size='sm'
               className='flex items-center gap-2'

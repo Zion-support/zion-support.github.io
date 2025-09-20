@@ -1,76 +1,62 @@
+#!/usr/bin/env node
+
 const fs = require('fs');
 const path = require('path');
-;
-function fixObjectSyntax(filePath) {;
-  try {;
-    let content = fs.readFileSync(filePath, 'utf8');
-    let modified = false;
 
-;
-    // Fix semicolons in object properties;
-    content = content.replace(/(\w+):\s*"([^"]*)"\s*;/g, '$1:"$2",');
-    content = content.replace(/(\w+):\s*"([^"]*)"\s*;/g, '$1: "$2"'), ,
-    content = content.replace(/(\w+):\s*"([^"]*)"\s*;/g, '$1: "$2"'), ,
-    // Fix semicolons in array elements;
-    content = content.replace(/"([^"]*)"\s*;/g, '"$1",');    content = content.replace(/"([^"]*)"\s*;/g, '"$1"');
-;
-    // Fix semicolons in function declarations;
-    content = content.replace(;
-      /function\s+(\w+)\s*\(\s*\)\s*{\s*;/g,;
-      'function $1() {';    );
-;
-    // Fix semicolons in const/let declarations;
+function fixObjectSyntax(content) {
+  // Fix missing commas between object properties
+  // Pattern: property: value\n      nextProperty
+  let fixed = content.replace(/(\w+):\s*([^\n,]+)\n\s+(\w+):/g, '$1: $2,\n      $3:');
+  
+  // Fix missing commas between array elements in objects
+  fixed = fixed.replace(/(\w+):\s*\[([^\]]+)\]\n\s+(\w+):/g, '$1: [$2],\n      $3:');
+  
+  // Fix missing commas between objects in arrays
+  fixed = fixed.replace(/\}\n\s*\{/g, '},\n    {');
+  
+  // Fix missing commas after strings
+  fixed = fixed.replace(/"([^"]+)"\n\s+(\w+):/g, '"$1",\n      $2:');
+  
+  // Fix missing commas in arrays - strings
+  fixed = fixed.replace(/"([^"]+)"\n\s+"([^"]+)"/g, '"$1",\n    "$2"');
+  
+  // Fix missing commas in arrays - numbers
+  fixed = fixed.replace(/(\d+)\n\s+(\d+)/g, '$1,\n    $2');
+  
+  // Fix missing commas in arrays - variables
+  fixed = fixed.replace(/(\w+)\n\s+(\w+)/g, '$1,\n    $2');
+  
+  return fixed;
+}
 
-    content = content.replace(/(const|let)\s+(\w+)\s*=\s*\[\s*;/g, '$1 $2 = [');
-    content = content.replace(/(const|let)\s+(\w+)\s*=\s*\{\s*;/g, '$1 $2 = {');
-;
-    // Fix semicolons in object literals;
-    content = content.replace(/\{\s*;/g, '{');
-    content = content.replace(/\[\s*;/g, '[');
-;
-    // Remove trailing semicolons before closing braces/brackets;
-    content = content.replace(/,\s*;\s*(\}|\])/g, '$1');
-    content = content.replace(/;\s*(\}|\])/g, '$1');
-;
-    if (content !== fs.readFileSync(filePath, 'utf8')) {;
-      fs.writeFileSync(filePath, content, 'utf8');
-      modified = true,
+function fixFile(filePath) {
+  try {
+    const content = fs.readFileSync(filePath, 'utf8');
+    const fixedContent = fixObjectSyntax(content);
+    
+    if (content !== fixedContent) {
+      fs.writeFileSync(filePath, fixedContent, 'utf8');
+      console.log(`Fixed: ${filePath}`);
+      return true;
     }
-
-;
-    return modified;
-  } catch (error) {;
-    console.error(`Error processing ${filePath} `, error.message);
     return false;
-
+  } catch (error) {
+    console.error(`Error fixing ${filePath}:`, error.message);
+    return false;
   }
 }
-;
-function processDirectory(dirPath) {;
-  const files = fs.readdirSync(dirPath);
-  let fixedCount = 0;
-;
-  for (const file of files) {;
-    const filePath = path.join(dirPath, file);
-    const stat = fs.statSync(filePath);
 
-;
-    if (stat.isDirectory()) {;
-      fixedCount += processDirectory(filePath);
-    } else if (;
-      file.endsWith('.tsx') ||;
-      file.endsWith('.ts') ||;
-      file.endsWith('.jsx') ||;
-      file.endsWith('.js');
-    ) {;
-      if (fixObjectSyntax(filePath)) fixedCount++;
-    }
+// Fix specific files that are known to have object syntax issues
+const filesToFix = [
+  'src/pages/Services.tsx',
+  'src/pages/Pricing.tsx'
+];
+
+let fixedCount = 0;
+for (const file of filesToFix) {
+  if (fixFile(file)) {
+    fixedCount++;
   }
-;
-  return fixedCount;
-
 }
-;
-console.log('Starting object syntax fixes...');
-const fixedCount = processDirectory('./pages');
+
 console.log(`Fixed ${fixedCount} files`);

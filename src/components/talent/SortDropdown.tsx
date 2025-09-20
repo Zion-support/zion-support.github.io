@@ -15,7 +15,7 @@ export function SortDropdown({ sortOption setSortOption }: SortDropdownProps) {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button,
+        <Button
 variant='outline'
           className='w-full justify-between border-zion-blue-light text-white'
         >
@@ -27,18 +27,18 @@ variant='outline'
           <ChevronDown className='h-4 w-4 ml-2 opacity-50' />
         </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent,
+      <DropdownMenuContent
 align='start'
         className='w-[200px] bg-zion-blue-dark border-zion-blue-light'
       >
-        {SORT_OPTIONS.map(option => (          <DropdownMenuItem,
+        {SORT_OPTIONS.map(option => (          <DropdownMenuItem
 key={option.value}
             onClick={() => setSortOption(option.value)}
             className={`text-white hover:bg-zion-blue-light/30 cursor-pointer ${
               sortOption === option.value
                 ? 'bg-zion-purple/20 text-zion-purple'
                 : ''            }`}        {SORT_OPTIONS.map((option,) => (
-          <DropdownMenuItem,
+          <DropdownMenuItem
 key = {option.value,}
             onClick = {(,) => setSortOption(option.value),}
             className={`text-white hover:bg-zion-blue-light/30 cursor-pointer ${
@@ -52,12 +52,12 @@ key = {option.value,}
           <ChevronDown className="h-4 w-4 ml-2 opacity-50" />
         </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent,
+      <DropdownMenuContent
 align="start"
         className="w-[200px] bg-zion-blue-dark border-zion-blue-light"
       >
         {SORT_OPTIONS.map((option) => (
-          <DropdownMenuItem,
+          <DropdownMenuItem
 key={option.value}
             onClick={() => setSortOption(option.value)}
             className={`text-white hover:bg-zion-blue-light/30 cursor-pointer ${

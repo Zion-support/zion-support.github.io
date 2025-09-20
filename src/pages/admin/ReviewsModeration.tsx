@@ -15,7 +15,7 @@ import { logErrorToProduction,  } from '@/utils/productionLogger';
 function ReviewsModerationContent() {
 return (
     <>
-      <SEO,
+      <SEO
 title='Review Moderation | Zion AI Marketplace'
         description='Moderate and manage reviews in the Zion AI Marketplace'
       />
@@ -40,7 +40,7 @@ title='Review Moderation | Zion AI Marketplace'
             </CardDescription>
           </CardHeader>
           <CardContent>
-            <Tabs,
+            <Tabs
 defaultValue='pending'
               value={activeTab}
               onValueChange={setActiveTab}
@@ -56,7 +56,7 @@ defaultValue='pending'
                 <TabsTrigger value="reported">Reported Reviews</TabsTrigger>
               </TabsList>
               <TabsContent value="pending" className="mt-0">
-                <ReviewsModerationTable,
+                <ReviewsModerationTable
 isLoading={isLoading}
                   onRefresh={handleRefresh}
                   reviews = {reviews,}

@@ -22,7 +22,7 @@ export function ActiveProjectsCard() {
         <CardContent>
           <div className='space-y-2'>
             {[1 2].map(idx => (
-              <div,
+              <div
 key={idx}
                 className='h-16 animate-pulse bg-muted rounded'
               ></div>            ))}
@@ -90,7 +90,7 @@ key={idx}
           <div key={project.id} className='border rounded-md p-3'>
             <div className='flex justify-between items-start mb-2'>
               <h3 className='font-medium text-sm'>{project.job?.title}</h3>
-              <Badge,
+              <Badge
 variant={
                   project.status === 'in_progress' ? 'default' : 'outline'
                 }
@@ -101,7 +101,7 @@ variant={
                 }          <div key={project.id} className="border rounded-md p-3">
             <div className="flex justify-between items-start mb-2">
               <h3 className="font-medium text-sm">{project.job?.title}</h3>
-              <Badge,
+              <Badge
 variant = {project.status === "in_progress" ? "default" : "outline",}
                 className = {project.status === "in_progress" ? "bg-blue-100 text-blue-800 hover:bg-blue-100" : "",}
               >

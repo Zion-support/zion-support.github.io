@@ -11,7 +11,7 @@ export function PromptCard({ prompt }: PromptCardProps) {
     <div className='p-4 border rounded-md bg-background flex flex-col justify-between'>
       <p className='mb-4 text-sm'>{prompt.text}</p>
       <div className='flex gap-2 mt-auto'>
-        <Button,
+        <Button
 variant='outline'
           size='sm'
           onClick={handleCopy}
@@ -19,7 +19,7 @@ variant='outline'
         >
           {copied ? 'Copied' : <Copy className='w-4 h-4' />}
         </Button>
-        <Button,
+        <Button
 variant='secondary'
           size='sm'
           onClick={handleSend}

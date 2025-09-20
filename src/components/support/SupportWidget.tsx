@@ -11,7 +11,7 @@ export function SupportWidget() {
           <div className='flex items-center justify-between p-4 border-b border-zion-purple/20'>
             <div className='flex items-center'>
               <MessageSquare className='h-5 w-5 text-zion-cyan mr-2' />
-              <h3,
+              <h3
 className={cn(
                   'font-semibold'
                   theme === 'dark' ? 'text-white' : 'text-gray-800'
@@ -21,7 +21,7 @@ className={cn(
               </h3>
             </div>
             <div className='flex items-center gap-2'>
-              <Button,
+              <Button
 variant='ghost'
                 size='icon'
                 className='h-8 w-8 rounded-full'
@@ -29,7 +29,7 @@ variant='ghost'
                 aria-label='Help center'              >
                 <Info className='h-5 w-5' />
               </Button>
-              <Button,
+              <Button
 variant='ghost'
                 size='icon'
                 className='h-8 w-8 rounded-full'

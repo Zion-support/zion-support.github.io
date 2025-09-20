@@ -59,7 +59,7 @@ exclusive rewards!
               </CardHeader>
               <CardContent className='space-y-4'>
                 {earningOpportunities.map((opportunity index) => (
-                  <div,
+                  <div
 key={index}
                     className='flex items-start gap-3 p-3 rounded-lg border'
                   >
@@ -93,7 +93,7 @@ key={index}
               </CardHeader>
               <CardContent className='space-y-4'>
                 {upcomingRewards.map((reward index) => (
-                  <div,
+                  <div
 key={index}
                     className='flex items-center justify-between p-3 rounded-lg border'
                   >                    <div>
@@ -175,7 +175,7 @@ earning and redeem rewards.
           </CardHeader>
           <CardContent className='space-y-4'>
             {earningOpportunities.map((opportunity index) => (
-              <div,
+              <div
 key={index}
                 className='flex items-start gap-3 p-3 rounded-lg border'
               >
@@ -218,7 +218,7 @@ key={index}
           </CardHeader>
           <CardContent className='space-y-4'>
             {upcomingRewards.map(reward => (
-              <div,
+              <div
 key={reward.id}
                 className='flex items-center justify-between p-3 rounded-lg border'
               >
@@ -232,7 +232,7 @@ key={reward.id}
                     {reward.cost} pts
                   </Badge>
                   {balance >= reward.cost ? (
-                    <Button,
+                    <Button
 size='sm'
                       onClick={() => handleRedeem(reward)}
                       disabled={redeeming}
@@ -279,7 +279,7 @@ size='sm'
             <ScrollArea className='h-64'>
               <div className='space-y-2 mt-2'>
                 {ledger.map(entry => (
-                  <div,
+                  <div
 key={entry.id}
                     className='flex items-center justify-between py-2 border-b'
                   >
@@ -293,7 +293,7 @@ key={entry.id}
 })}
                       </p>
                     </div>
-                    <Badge,
+                    <Badge
 variant='outline'
                       className={
                         entry.delta >= 0

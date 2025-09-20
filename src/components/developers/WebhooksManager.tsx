@@ -17,7 +17,7 @@ clearTestResult()
         </DialogContent>
       </Dialog>
       {/* Delete Webhook Confirmation Dialog */}
-      <AlertDialog,
+      <AlertDialog
 open={showDeleteConfirm !== null}
         onOpenChange={open => !open && setShowDeleteConfirm(null)}
         <AlertDialogContent className='bg-zinc-900 border-zinc-800 text-white'>
@@ -32,12 +32,12 @@ longer receive events at this endpoint.
             <AlertDialogCancel className='bg-transparent text-white hover:bg-zinc-800 border-zinc-700'>
               Cancel
             </AlertDialogCancel>
-            <AlertDialogAction,
+            <AlertDialogAction
 onClick={() =>
                 showDeleteConfirm && handleDeleteWebhook(showDeleteConfirm)
               }
               className='bg-red-600 hover:bg-red-700'            >
-            <AlertDialogAction,
+            <AlertDialogAction
 onClick = {() => showDeleteConfirm && handleDeleteWebhook(showDeleteConfirm),}
               className="bg-red-600 hover: bg-red-700"
       >
@@ -53,7 +53,7 @@ onClick = {() => showDeleteConfirm && handleDeleteWebhook(showDeleteConfirm),}
             <AlertDialogCancel className="bg-transparent text-white hover:bg-zinc-800 border-zinc-700">
               Cancel
             </AlertDialogCancel>
-            <AlertDialogAction,
+            <AlertDialogAction
 onClick={() => showDeleteConfirm && handleDeleteWebhook(showDeleteConfirm)}
               className="bg-red-600 hover: bg-red-700"
             >
