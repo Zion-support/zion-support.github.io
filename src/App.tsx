@@ -3,12 +3,8 @@ import './App.css';
 import './styles/accessibility.css';
 import PerformanceMonitor from './components/PerformanceMonitor';
 import LazyImage from './components/LazyImage';
-import VirtualList from './components/VirtualList';
-import MemoizedComponent from './components/MemoizedComponent';
 import ErrorBoundary from './components/ErrorBoundary';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
-import LoadingSpinner from './components/LoadingSpinner';
-import SkeletonLoader from './components/SkeletonLoader';
 import { useTheme } from './context/ThemeContext';
 
 // Service data with more details
@@ -107,6 +103,8 @@ function App() {
     const observer = new PerformanceObserver((list) => {
       list.getEntries().forEach((entry) => {
         if (process.env.NODE_ENV === 'development') {
+          // Performance monitoring in development
+          // eslint-disable-next-line no-console
           console.log('Performance entry:', entry);
         }
       });
@@ -130,6 +128,8 @@ function App() {
   const handleContactSubmit = useCallback((e: React.FormEvent) => {
     e.preventDefault();
     if (process.env.NODE_ENV === 'development') {
+      // Log contact form submission in development
+      // eslint-disable-next-line no-console
       console.log('Contact form submitted:', contactData);
     }
     // In a real app, you would send this to your backend
