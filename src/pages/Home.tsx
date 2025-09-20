@@ -1,15 +1,13 @@
-<<<<<<< HEAD
 interface Service {
   id: string 
   name: string 
 }
-=======
-import React from 'react';
->>>>>>> 8c478e615056772e765dbc204462fa984d447432
 
-export default function Home() {
+import React from 'react' 
+import Link from 'next/link' 
+
+const Home: React.FC = () => {
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
       <div className="relative overflow-hidden">
@@ -43,13 +41,3 @@ Learn More
 } 
 
 export default Home 
-=======
-    <div className="min-h-screen bg-gray-50 py-12">
-      <div className="container mx-auto px-4">
-        <h1 className="text-4xl font-bold text-gray-900 mb-6">Home</h1>
-        <p className="text-lg text-gray-600">Coming soon...</p>
-      </div>
-    </div>
-  );
-}
->>>>>>> 8c478e615056772e765dbc204462fa984d447432

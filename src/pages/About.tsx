@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 import React from 'react'
-=======
-import React from 'react';
->>>>>>> 8c478e615056772e765dbc204462fa984d447432
 
 export default function About() {
   return (
@@ -29,10 +25,5 @@ export default function About() {
         </div>
       </div>
     </div>
-<<<<<<< HEAD
   )
 }
-=======
-  );
-}
->>>>>>> 8c478e615056772e765dbc204462fa984d447432
