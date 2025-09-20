@@ -13,7 +13,7 @@
   NETLIFY_DISABLE_FRAMEWORK_DETECTION = "true"
   NETLIFY_FORCE_STATIC_BUILD = "true"
   CANONICAL_URL = "https://ziontechgroup.com"
-  NPM_CONFIG_PREFER_OFFLINE = "true"
+  NPM_FLAGS = "--prefer-offline"
 
 # Fix MIME type issues
 [[headers]]
