@@ -191,12 +191,7 @@ setSettings(defaultSettings);
 
 const notification = {;
 id: Date.now().toString();
-<<<<<<< HEAD
-message: "Accessibility settings reset to defaults";
-type: "info" as const;
-=======
 message: "Accessibility settings reset to defaults";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 type: "info" as const;,
 timestamp: Date.now(),
 };

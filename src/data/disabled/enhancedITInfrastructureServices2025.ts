@@ -66,12 +66,7 @@ targetAudience: ["Financial services", "Healthcare", "Government", "Defense cont
 tags: ["Zero-Trust", "Network Security", "Identity Management", "Compliance", "Threat Detection"],
 contactInfo: {
 phone: "+1 302 464 0950";
-<<<<<<< HEAD
-email: "kleber@ziontechgroup.com";
-website: "https://ziontechgroup.com";
-=======
 email: "kleber@ziontechgroup.com";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 website: "https://ziontechgroup.com";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$4;500/month (Industry average: $8;500/month)",
@@ -113,12 +108,7 @@ targetAudience: ["Enterprise companies", "Data centers", "Cloud providers", "Man
 tags: ["Hyperconverged", "Infrastructure", "AI", "Automation", "Cloud"],
 contactInfo: {
 phone: "+1 302 464 0950";
-<<<<<<< HEAD
-email: "kleber@ziontechgroup.com";
-website: "https://ziontechgroup.com";
-=======
 email: "kleber@ziontechgroup.com";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 website: "https://ziontechgroup.com";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$3;200/month (Industry average: $6;200/month)",
@@ -160,12 +150,7 @@ targetAudience: ["Manufacturing", "Automotive", "Healthcare", "Smart cities", "L
 tags: ["5G", "Private Networks", "IoT", "Edge Computing", "Industrial"],
 contactInfo: {
 phone: "+1 302 464 0950";
-<<<<<<< HEAD
-email: "kleber@ziontechgroup.com";
-website: "https://ziontechgroup.com";
-=======
 email: "kleber@ziontechgroup.com";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 website: "https://ziontechgroup.com";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$2;800/month (Industry average: $5;500/month)",
@@ -207,12 +192,7 @@ targetAudience: ["Research institutions", "Government agencies", "Tech companies
 tags: ["Quantum Computing", "Data Center", "Research", "Innovation", "Future Tech"],
 contactInfo: {
 phone: "+1 302 464 0950";
-<<<<<<< HEAD
-email: "kleber@ziontechgroup.com";
-website: "https://ziontechgroup.com";
-=======
 email: "kleber@ziontechgroup.com";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 website: "https://ziontechgroup.com";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$5;500/month (Industry average: $10;000/month)",
@@ -254,12 +234,7 @@ targetAudience: ["IoT companies", "Manufacturing", "Retail chains", "Smart citie
 tags: ["Edge Computing", "Distributed Systems", "IoT", "Performance", "Orchestration"],
 contactInfo: {
 phone: "+1 302 464 0950";
-<<<<<<< HEAD
-email: "kleber@ziontechgroup.com";
-website: "https://ziontechgroup.com";
-=======
 email: "kleber@ziontechgroup.com";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 website: "https://ziontechgroup.com";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$2;400/month (Industry average: $4;800/month)",
@@ -301,12 +276,7 @@ targetAudience: ["Environmentally conscious companies", "Government agencies", "
 tags: ["Green Technology", "Sustainability", "Data Center", "Energy Efficiency", "Environmental"],
 contactInfo: {
 phone: "+1 302 464 0950";
-<<<<<<< HEAD
-email: "kleber@ziontechgroup.com";
-website: "https://ziontechgroup.com";
-=======
 email: "kleber@ziontechgroup.com";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 website: "https://ziontechgroup.com";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$3;800/month (Industry average: $7;200/month)",
@@ -348,12 +318,7 @@ targetAudience: ["Enterprise companies", "Managed service providers", "Data cent
 tags: ["AI Operations", "IT Operations", "Predictive Maintenance", "Automation", "Performance"],
 contactInfo: {
 phone: "+1 302 464 0950";
-<<<<<<< HEAD
-email: "kleber@ziontechgroup.com";
-website: "https://ziontechgroup.com";
-=======
 email: "kleber@ziontechgroup.com";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 website: "https://ziontechgroup.com";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$2;600/month (Industry average: $5;200/month)",
@@ -395,12 +360,7 @@ targetAudience: ["Financial services", "Supply chain companies", "Healthcare", "
 tags: ["Blockchain", "Smart Contracts", "Distributed Ledger", "Cryptocurrency", "Web3"],
 contactInfo: {
 phone: "+1 302 464 0950";
-<<<<<<< HEAD
-email: "kleber@ziontechgroup.com";
-website: "https://ziontechgroup.com";
-=======
 email: "kleber@ziontechgroup.com";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 website: "https://ziontechgroup.com";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$3;200/month (Industry average: $6;400/month)",
@@ -442,12 +402,7 @@ targetAudience: ["Manufacturing", "Smart cities", "Healthcare", "Retail", "Agric
 tags: ["IoT", "Device Management", "Edge Computing", "Data Processing", "Analytics"],
 contactInfo: {
 phone: "+1 302 464 0950";
-<<<<<<< HEAD
-email: "kleber@ziontechgroup.com";
-website: "https://ziontechgroup.com";
-=======
 email: "kleber@ziontechgroup.com";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 website: "https://ziontechgroup.com";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$1;800/month (Industry average: $3;600/month)",
@@ -489,12 +444,7 @@ targetAudience: ["Enterprise companies", "Multi-cloud users", "Hybrid cloud adop
 tags: ["Hybrid Cloud", "Multi-cloud", "Orchestration", "Cost Optimization", "Performance"],
 contactInfo: {
 phone: "+1 302 464 0950";
-<<<<<<< HEAD
-email: "kleber@ziontechgroup.com";
-website: "https://ziontechgroup.com";
-=======
 email: "kleber@ziontechgroup.com";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 website: "https://ziontechgroup.com";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$2;900/month (Industry average: $5;800/month)",

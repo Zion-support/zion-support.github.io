@@ -75,18 +75,10 @@ render={({ field }: { field: any }) => (
 <div className="space-y-4">;
 <FormField;
 control={form.control}
-<<<<<<< HEAD
-              name='is_current'
-              render={({ field }: { field: any }) => (
-                <FormItem className='flex flex-row items-start space-x-3 space-y-0 py-2'>                  <FormControl>
-                    <Checkbox
-                    <Checkbox,
-=======
 name="is_current";
 render={({ field }: { field: any }) => (
 <FormItem className="flex flex-row items-start space-x-3 space-y-0 py-2">                  <FormControl>;
 <Checkbox;
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 checked = {field.value}
 onCheckedChange = {field.onChange}
 />;

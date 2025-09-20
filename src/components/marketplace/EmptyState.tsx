@@ -199,10 +199,6 @@ onAddProduct?: () => void;
 isAuthenticated?: boolean;
 }) {const action = onAddProduct;
 ? {
-<<<<<<< HEAD
-label: isAuthenticated ? "Add Product" : "Login to Add Product";
-=======
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 label: isAuthenticated ? "Add Product" : "Login to Add Product";,
 onClick: onAddProduct; ,
 }

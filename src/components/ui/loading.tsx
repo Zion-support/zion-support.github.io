@@ -10,20 +10,6 @@ export function Loading({size = "md", ;
 variant = "spinner", ;
 className;
 text}: LoadingProps) {const sizeClasses = {;
-<<<<<<< HEAD
-sm: "w-4 h-4", md: "w-6 h-6";
-className?: string;
-text?: string,
-};
-export function Loading({
-size = "md", ;
-variant = "spinner", ;
-className;
-text,
-}: LoadingProps) {
-const sizeClasses = {;
-=======
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 sm: "w-4 h-4", md: "w-6 h-6";,
 lg: "w-8 h-8",
 xl: "w-12 h-12",
@@ -87,11 +73,6 @@ export function PageLoading() {return (
 <Loading size="xl" variant="spinner" className="text-zion-cyan" />;
 <h2 className="text-xl font-semibold text-zion-slate-light">Loading Zion Tech Group</h2>;
 <p className="text-zion-slate-light">Preparing your experience...</p>;
-<<<<<<< HEAD
-</div>
-</div>
-=======
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 </div>;
 </div>;
 ),
@@ -102,14 +83,6 @@ export function ContentSkeleton() {return (
 <div className="space-y-4 animate-pulse">;
 <div className="h-8 bg-zion-slate-light/20 rounded w-3/4"></div>;
 <div className="space-y-2">;
-<<<<<<< HEAD
-<div className="h-4 bg-zion-slate-light/20 rounded"></div>
-<div className="h-4 bg-zion-slate-light/20 rounded w-5/6"></div>
-<div className="h-4 bg-zion-slate-light/20 rounded w-4/6"></div>
-</div>
-</div>
-=======
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 <div className="h-4 bg-zion-slate-light/20 rounded"></div>;
 <div className="h-4 bg-zion-slate-light/20 rounded w-5/6"></div>;
 <div className="h-4 bg-zion-slate-light/20 rounded w-4/6"></div>;

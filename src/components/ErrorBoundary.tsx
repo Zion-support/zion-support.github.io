@@ -153,29 +153,6 @@ Refresh Page;
 </button>;
 <button;
 onClick={() => this.setState({ hasError: false error: undefined errorInfo: undefined })}
-<<<<<<< HEAD
-                className="w-full bg-gray-100 text-gray-700 py-2 px-4 rounded-lg hover:bg-gray-200 transition-colors"
-              >
-                Try Again
-              </button>
-            </div>
-            {process.env.NODE_ENV === 'development' && this.state.error && (
-              <details className="mt-4 p-4 bg-gray-100 rounded-lg">
-                <summary className="cursor-pointer text-sm font-medium text-gray-700">
-                  Error Details (Development)
-                </summary>
-                <pre className="mt-2 text-xs text-gray-600 overflow-auto">
-                  {this.state.error.toString()}
-                  {this.state.errorInfo?.componentStack}
-                </pre>
-              </details>
-            )}
-          </div>
-        </div>
-      )
-    }
-    return this.props.children}
-=======
 className="w-full bg-gray-100 text-gray-700 py-2 px-4 rounded-lg hover:bg-gray-200 transition-colors"
 >;
 Try Again;
@@ -198,7 +175,6 @@ Error Details (Development)
 }
 return this.props.children,
 }
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 }
 
 export function ErrorBoundary({ childre;  n; fallbac; k; onError }: ErrorBoundaryProps) {

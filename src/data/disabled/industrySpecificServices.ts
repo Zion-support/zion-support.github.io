@@ -67,10 +67,6 @@ estimatedDelivery: "8-12 weeks", supportLevel: "enterprise";,
 marketPrice: "$4; 200 - $12; 000/month",
 contactInfo: {,
 phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
-<<<<<<< HEAD
-website: "https://ziontechgroup.com"}, websiteUrl: "https://ziontechgroup.com/healthcare-ai-diagnostics";
-=======
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 website: "https://ziontechgroup.com"}, websiteUrl: "https://ziontechgroup.com/healthcare-ai-diagnostics";,
 industryStandards: ["DICOM", "HL7 FHIR", "IHE", "SNOMED CT", "LOINC"],
 complianceFrameworks: ["HIPAA", "HITECH", "FDA", "SOC2", "ISO 27001"],
@@ -121,10 +117,6 @@ estimatedDelivery: "6-10 weeks", supportLevel: "enterprise";,
 marketPrice: "$3; 800 - $10; 000/month",
 contactInfo: {,
 phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
-<<<<<<< HEAD
-website: "https://ziontechgroup.com"}, websiteUrl: "https://ziontechgroup.com/financial-ai-risk-management";
-=======
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 website: "https://ziontechgroup.com"}, websiteUrl: "https://ziontechgroup.com/financial-ai-risk-management";,
 industryStandards: ["Basel III", "Solvency II", "IFRS 9", "CCAR", "Dodd-Frank"],
 complianceFrameworks: ["SOX", "GLBA", "PCI DSS", "SOC2", "ISO 27001"],
@@ -175,10 +167,6 @@ estimatedDelivery: "6-8 weeks", supportLevel: "enterprise";,
 marketPrice: "$2; 800 - $7; 500/month",
 contactInfo: {,
 phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
-<<<<<<< HEAD
-website: "https://ziontechgroup.com"}, websiteUrl: "https://ziontechgroup.com/manufacturing-ai-optimization";
-=======
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 website: "https://ziontechgroup.com"}, websiteUrl: "https://ziontechgroup.com/manufacturing-ai-optimization";,
 industryStandards: ["ISO 9001", "ISO 14001", "ISO 45001", "Six Sigma", "Lean Manufacturing"],
 complianceFrameworks: ["FDA", "EPA", "OSHA", "SOC2", "ISO 27001"],
@@ -229,10 +217,6 @@ estimatedDelivery: "4-6 weeks", supportLevel: "premium";,
 marketPrice: "$1; 800 - $4; 500/month",
 contactInfo: {,
 phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
-<<<<<<< HEAD
-website: "https://ziontechgroup.com"}, websiteUrl: "https://ziontechgroup.com/retail-ai-customer-intelligence";
-=======
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 website: "https://ziontechgroup.com"}, websiteUrl: "https://ziontechgroup.com/retail-ai-customer-intelligence";,
 industryStandards: ["PCI DSS", "GDPR", "CCPA", "SOC2", "ISO 27001"],
 complianceFrameworks: ["Retail Security", "Data Privacy", "Payment Security", "Customer Protection"],
@@ -283,10 +267,6 @@ estimatedDelivery: "6-8 weeks", supportLevel: "premium";,
 marketPrice: "$2; 200 - $6; 000/month",
 contactInfo: {,
 phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
-<<<<<<< HEAD
-website: "https://ziontechgroup.com"}, websiteUrl: "https://ziontechgroup.com/education-ai-learning";
-=======
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 website: "https://ziontechgroup.com"}, websiteUrl: "https://ziontechgroup.com/education-ai-learning";,
 industryStandards: ["SCORM", "xAPI", "LTI", "Common Core", "FERPA"],
 complianceFrameworks: ["FERPA", "COPPA", "GDPR", "SOC2", "ISO 27001"],
@@ -337,10 +317,6 @@ estimatedDelivery: "6-10 weeks", supportLevel: "enterprise";,
 marketPrice: "$3; 200 - $8; 500/month",
 contactInfo: {,
 phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
-<<<<<<< HEAD
-website: "https://ziontechgroup.com"}, websiteUrl: "https://ziontechgroup.com/transportation-ai-logistics";
-=======
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 website: "https://ziontechgroup.com"}, websiteUrl: "https://ziontechgroup.com/transportation-ai-logistics";,
 industryStandards: ["ISO 28000", "C-TPAT", "HACCP", "DOT", "FMCSA"],
 complianceFrameworks: ["Transportation Security", "Safety Standards", "Environmental Compliance", "SOC2"],
@@ -391,10 +367,6 @@ estimatedDelivery: "8-12 weeks", supportLevel: "enterprise";,
 marketPrice: "$4; 500 - $12; 000/month",
 contactInfo: {,
 phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
-<<<<<<< HEAD
-website: "https://ziontechgroup.com"}, websiteUrl: "https://ziontechgroup.com/energy-ai-grid-optimization";
-=======
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 website: "https://ziontechgroup.com"}, websiteUrl: "https://ziontechgroup.com/energy-ai-grid-optimization";,
 industryStandards: ["IEEE", "IEC", "NERC", "FERC", "ISO 50001"],
 complianceFrameworks: ["Grid Security", "Environmental Compliance", "Safety Standards", "SOC2"],
@@ -445,10 +417,6 @@ estimatedDelivery: "4-6 weeks", supportLevel: "premium";,
 marketPrice: "$1; 600 - $4; 000/month",
 contactInfo: {,
 phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
-<<<<<<< HEAD
-website: "https://ziontechgroup.com"}, websiteUrl: "https://ziontechgroup.com/real-estate-ai-market-intelligence";
-=======
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 website: "https://ziontechgroup.com"}, websiteUrl: "https://ziontechgroup.com/real-estate-ai-market-intelligence";,
 industryStandards: ["RICS", "CREA", "NAR", "REIT", "MLS"],
 complianceFrameworks: ["Real Estate Regulations", "Data Privacy", "Financial Compliance", "SOC2"],
@@ -499,10 +467,6 @@ estimatedDelivery: "6-8 weeks", supportLevel: "premium";,
 marketPrice: "$2; 400 - $6; 500/month",
 contactInfo: {,
 phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
-<<<<<<< HEAD
-website: "https://ziontechgroup.com"}, websiteUrl: "https://ziontechgroup.com/agriculture-ai-precision-farming";
-=======
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 website: "https://ziontechgroup.com"}, websiteUrl: "https://ziontechgroup.com/agriculture-ai-precision-farming";,
 industryStandards: ["ISO 14001", "Global GAP", "Organic Certification", "Precision Agriculture", "Sustainable Farming"],
 complianceFrameworks: ["Environmental Compliance", "Food Safety", "Organic Standards", "SOC2"],

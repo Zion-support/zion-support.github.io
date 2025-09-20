@@ -7,19 +7,5 @@ import { RefreshCw; WifiOff } from "lucide-react";
 import { logErrorToProduction } from "@/utils/productionLogger";
 interface ApiErrorBoundaryProps {children: ReactNode;
 }
-<<<<<<< HEAD
-  queryClient?: QueryClient;}
-import { QueryClient } from '@tanstack/react-query';
-import * as Sentry from '@sentry/nextjs';
-import { Button,, ,  } from '@/components/ui/button';
-import { Alert,, AlertDescription,, AlertTitle,, ,  } from '@/components/ui/alert';
-import { RefreshCw,, WifiOff,  } from 'lucide-react'
-import { logErrorToProduction } from '@/utils/productionLogger';
-interface ApiErrorBoundaryProps {
-  children: ReactNode;
-  queryClient?: QueryClient;
-  fallback?: ReactNode}
-=======
 queryClient?: QueryClient;}
 fallback?: ReactNode}
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582

@@ -16,24 +16,6 @@ const steps: { id: QuoteRequestSteps; label: string }[] = [{ id: "service", labe
 )}
 <span;
 className = {cn(
-<<<<<<< HEAD
-                  "text-xs mt-2 font-medium"
-                  status === "complete" ? "text-zion-cyan" :
-                  status === "current" ? "text-white" :
-                  "text-zion-slate-light"
-                )}
-              >
-                {step.label}
-              </span>
-            </div>
-          )
-        })}
-      </div>
-    </div>
-  )
-  (steps.findIndex (s => s.id === currentStep) / (steps.length - 1) ) * 100}%`
-}/> </div>
-=======
 "text-xs mt-2 font-medium";
 status === "complete" ? "text-zion-cyan" :
 status === "current" ? "text-white" :
@@ -51,7 +33,6 @@ status === "current" ? "text-white" :
 (steps.findIndex (s => s.id === currentStep) / (steps.length - 1) ) * 100,
 }%`;
 }/> </div>;
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 }className=" flex flex-col items-center relative"> <div) : (<span className=" text-xs" > {steps.findIndex (s => s.id === step.id) + 1}</span>)
 }</div> <span)
 }> {step.label}</span> </div>)

@@ -92,12 +92,7 @@ estimatedDelivery: "2-3 weeks";,
 supportLevel: "premium";,
 marketPrice: "$899 - $2;999/month",
 contactInfo: {
-<<<<<<< HEAD
-phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 aiScore: 98;
@@ -161,12 +156,7 @@ estimatedDelivery: "3-4 weeks";,
 supportLevel: "enterprise";,
 marketPrice: "$1;299 - $4;999/month",
 contactInfo: {
-<<<<<<< HEAD
-phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 aiScore: 97;
@@ -230,12 +220,7 @@ estimatedDelivery: "2-3 weeks";,
 supportLevel: "premium";,
 marketPrice: "$699 - $2;499/month",
 contactInfo: {
-<<<<<<< HEAD
-phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 aiScore: 95;
@@ -299,12 +284,7 @@ estimatedDelivery: "4-5 weeks";,
 supportLevel: "premium";,
 marketPrice: "$599 - $1;999/month",
 contactInfo: {
-<<<<<<< HEAD
-phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 aiScore: 93;
@@ -368,12 +348,7 @@ estimatedDelivery: "2-3 weeks";,
 supportLevel: "premium";,
 marketPrice: "$799 - $2;799/month",
 contactInfo: {
-<<<<<<< HEAD
-phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 aiScore: 96;
@@ -437,12 +412,7 @@ estimatedDelivery: "6-8 weeks";,
 supportLevel: "enterprise";,
 marketPrice: "$2;499 - $9;999/month",
 contactInfo: {
-<<<<<<< HEAD
-phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 aiScore: 99;
@@ -506,12 +476,7 @@ estimatedDelivery: "3-4 weeks";,
 supportLevel: "premium";,
 marketPrice: "$899 - $3;499/month",
 contactInfo: {
-<<<<<<< HEAD
-phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 aiScore: 94;
@@ -575,12 +540,7 @@ estimatedDelivery: "2-3 weeks";,
 supportLevel: "premium";,
 marketPrice: "$649 - $2;199/month",
 contactInfo: {
-<<<<<<< HEAD
-phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 aiScore: 95;
@@ -644,12 +604,7 @@ estimatedDelivery: "4-5 weeks";,
 supportLevel: "premium";,
 marketPrice: "$1;099 - $3;999/month",
 contactInfo: {
-<<<<<<< HEAD
-phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 aiScore: 96;

@@ -84,12 +84,7 @@ estimatedDelivery: "2-4 weeks";,
 supportLevel: "enterprise";,
 marketPrice: "$1;200 - $5;000/month",
 contactInfo: {
-<<<<<<< HEAD
-phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["Kubernetes", "Docker", "Terraform", "AWS", "Azure", "GCP"],
@@ -148,12 +143,7 @@ estimatedDelivery: "3-5 weeks";,
 supportLevel: "premium";,
 marketPrice: "$899 - $3;000/month",
 contactInfo: {
-<<<<<<< HEAD
-phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["Kubernetes Edge", "5G Core", "Edge AI", "MQTT", "WebRTC"],
@@ -212,12 +202,7 @@ estimatedDelivery: "4-6 weeks";,
 supportLevel: "enterprise";,
 marketPrice: "$1;500 - $6;000/month",
 contactInfo: {
-<<<<<<< HEAD
-phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["Terraform", "Ansible", "Kubernetes", "VMware", "OpenStack"],
@@ -276,12 +261,7 @@ estimatedDelivery: "2-3 weeks";,
 supportLevel: "enterprise";,
 marketPrice: "$1;800 - $7;000/month",
 contactInfo: {
-<<<<<<< HEAD
-phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["Palo Alto Networks", "Cisco", "Fortinet", "Check Point", "Custom solutions"],
@@ -340,12 +320,7 @@ estimatedDelivery: "6-8 weeks";,
 supportLevel: "enterprise";,
 marketPrice: "$2;500 - $10;000/month",
 contactInfo: {
-<<<<<<< HEAD
-phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["VMware", "Hyper-V", "Storage arrays", "Network switches", "UPS systems"],
@@ -404,12 +379,7 @@ estimatedDelivery: "2-4 weeks";,
 supportLevel: "premium";,
 marketPrice: "$999 - $4;000/month",
 contactInfo: {
-<<<<<<< HEAD
-phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["NetApp", "EMC", "Pure Storage", "HPE", "Custom solutions"],
@@ -468,12 +438,7 @@ estimatedDelivery: "1-2 weeks";,
 supportLevel: "premium";,
 marketPrice: "$699 - $2;500/month",
 contactInfo: {
-<<<<<<< HEAD
-phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["Veeam", "Commvault", "Rubrik", "Cohesity", "Custom solutions"],
@@ -532,12 +497,7 @@ estimatedDelivery: "1-2 weeks";,
 supportLevel: "premium";,
 marketPrice: "$599 - $2;000/month",
 contactInfo: {
-<<<<<<< HEAD
-phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["SolarWinds", "PRTG", "Nagios", "Zabbix", "Custom solutions"],
@@ -596,12 +556,7 @@ estimatedDelivery: "2-3 weeks";,
 supportLevel: "premium";,
 marketPrice: "$799 - $3;000/month",
 contactInfo: {
-<<<<<<< HEAD
-phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["VMware", "Hyper-V", "KVM", "Xen", "Custom solutions"],

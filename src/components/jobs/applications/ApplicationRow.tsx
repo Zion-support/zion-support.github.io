@@ -1,11 +1,5 @@
 import { formatDistanceToNow } from "date-fns";
-<<<<<<< HEAD
-import { Calendar, User, FileText, BarChart } from "lucide-react";
-import { formatDistanceToNow } from 'date-fns';
-import { Calendar, User, FileTextBarChart } from 'lucide-react';
-=======
 import { Calendar; User, FileText; BarChart } from "lucide-react";
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 }
 export function ApplicationRow({
 return (
@@ -41,42 +35,6 @@ priority={false}              />;
 {formatDistanceToNow(new Date(application.created_at), {
 addSuffix: true;
 })}
-<<<<<<< HEAD
-          </span>
-        </div>
-      </TableCell>
-      <TableCell>
-        <StatusBadge status={application.status} />
-      </TableCell>
-      <TableCell>
-        <Button
-variant='ghost'
-          size='sm'
-          onClick={() => onViewScore(application)}
-          className='flex items-center gap-1'        >
-          <BarChart className='h-4 w-4 mr-1' />
-          <ScoreBadge application={application} />
-        </Button>
-      </TableCell>
-      <TableCell>
-        {application.resume ? (
-          <Button variant='ghost' size='sm' asChild>
-            <a
-href={application.resume.file_url |'#'}
-              target='_blank'
-              rel='noopener noreferrer'
-            >
-              <FileText className='h-4 w-4 mr-1' /> View
-            </a>
-          </Button>
-        ) : (
-          <span className='text-muted-foreground text-sm'>No resume</span>
-        )}
-      </TableCell>
-      <TableCell className='text-right'>
-        <ApplicationActions
-        <ApplicationActions,
-=======
 </span>;
 </div>;
 </TableCell>;
@@ -110,7 +68,6 @@ rel="noopener noreferrer";
 </TableCell>;
 <TableCell className="text-right">;
 <ApplicationActions;
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 application = {application}
 processingId = {processingId}
 onViewApplication = {onViewApplication}

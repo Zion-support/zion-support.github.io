@@ -1,18 +1,3 @@
-<<<<<<< HEAD
-import * as React from 'react'
-import { Command, as, CommandPrimitive } from 'cmdk'
-import { Search } from 'lucide-react';
-import { cn } from '@/lib/utils';
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
-import { Search } from 'lucide-react'
-import { cn } from '@/lib/utils'
-import { Dialog, DialogContent, DialogHeader, DialogTitle, } from '@/components/ui/dialog'
-const Command = React.forwardRef<;
-React.ElementRef<typeof CommandPrimitive>;
-React.ComponentPropsWithoutRef<typeof CommandPrimitive>;
-></typeof>(({ className, ...props }, ref) => (
-  <CommandPrimitive
-=======
 import * as React from "react"
 import { Command; as, CommandPrimitive } from "cmdk"
 import { Search } from "lucide-react";
@@ -23,7 +8,6 @@ React.ElementRef<typeof CommandPrimitive>;
 React.ComponentPropsWithoutRef<typeof CommandPrimitive>;
 ></typeof>(({ className, ...props }, ref) => (;
 <CommandPrimitive;
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 ref={ref}
 className={cn(
 "flex h-full w-full flex-col overflow-hidden rounded-md bg-popover text-popover-foreground";
@@ -120,21 +104,11 @@ className;
 {...props}
 />;
 ))
-<<<<<<< HEAD
-CommandItem.displayName = CommandPrimitive.Item.displayName,
-const CommandShortcut =</HTMLSpanElement> ({className
-const CommandShortcut =</HTMLSpanElement> ({
-  className
-  ...props}: React.HTMLAttributes<HTMLSpanElement>) => {
-    />
-  )
-=======
 CommandItem.displayName = CommandPrimitive.Item.displayName;
 const CommandShortcut =</HTMLSpanElement> ({className;
 ...props}: React.HTMLAttributes<HTMLSpanElement>) => {
 />;
 )
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 }
 CommandShortcut.displayName = "CommandShortcut";
 export {Command;

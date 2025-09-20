@@ -1,11 +1,7 @@
-<<<<<<< HEAD
-redirectUrl?: string}
-=======
 import React from "react";
 
 redirectUrl?: string,
 }
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 export function PaymentButton({
 >;
 {isProcessing ? (

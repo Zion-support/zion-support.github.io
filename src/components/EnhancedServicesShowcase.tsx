@@ -187,16 +187,10 @@ staggerChildren: 0.1}
 }
 }
 ;
-<<<<<<< HEAD
-const categories = ["AllAI & AnalyticsQuantum ComputingCybersecurity", "Cloud & DevOpsData & AnalyticsBlockchain & Web3"], ;
-export default function EnhancedServicesShowcase(...args: unknow n[]): unknown {  const [selectedCategory, setSelectedCategory] = useState<any>("All"),
-const [hoveredService, setHoveredService] = useState<string | null>(null),
-=======
 const categories = ["AllAI & AnalyticsQuantum ComputingCybersecurity", "Cloud & DevOpsData & AnalyticsBlockchain & Web3"],;
 ,;
 export default function EnhancedServicesShowcase(...args: unknow n[]): unknown {  const [selectedCategory; setSelectedCategory] = useState<any>("All"),
 const [hoveredService; setHoveredService] = useState<string | null>(null),
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 </string>,
 </any>,
 import { useState } from "react";;

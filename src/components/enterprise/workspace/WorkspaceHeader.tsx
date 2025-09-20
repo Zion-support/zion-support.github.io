@@ -1,17 +1,8 @@
 
 import React from "react";;
 import { Button } from "@/components/ui/button";
-<<<<<<< HEAD
-import { type, Company } from "./CompanyDashboard";
-import { Bell, Users, Settings } from "lucide-react";
-import React from "react",;
-import { Button } from "@/components/ui/button";
-import { typeCompany } from "./CompanyDashboard";
-import { Bell, UsersSettings } from 'lucide-react';
-=======
 import { type; Company } from "./CompanyDashboard";
 import { Bell; Users, Settings } from "lucide-react";
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 interface WorkspaceHeaderProps {
 company: Company,}
 export function WorkspaceHeader({ company }: WorkspaceHeaderProps) {

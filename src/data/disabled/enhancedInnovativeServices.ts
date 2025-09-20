@@ -91,12 +91,6 @@ contactInfo: {
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
-<<<<<<< HEAD
-websiteUrl: "https://ziontechgroup.com/ai-financial-advisory";
-email: "kleber@ziontechgroup.com";,
-website: "https://ziontechgroup.com"};
-=======
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 websiteUrl: "https://ziontechgroup.com/ai-financial-advisory";,
 technicalSpecs: ["Machine Learning Models", "Real-time Data Processing", "API Integration", "Cloud Infrastructure"],
 integrations: ["Bloomberg", "Reuters", "Yahoo Finance", "Trading Platforms", "Banking APIs"],
@@ -151,12 +145,6 @@ contactInfo: {
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
-<<<<<<< HEAD
-websiteUrl: "https://ziontechgroup.com/ai-healthcare";
-email: "kleber@ziontechgroup.com";,
-website: "https://ziontechgroup.com"};
-=======
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 websiteUrl: "https://ziontechgroup.com/ai-healthcare";,
 technicalSpecs: ["Deep Learning Models", "Medical Image Processing", "Natural Language Processing", "Real-time Analytics"],
 integrations: ["Epic", "Cerner", "PACS Systems", "Lab Information Systems", "Pharmacy Systems"],
@@ -211,12 +199,6 @@ contactInfo: {
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
-<<<<<<< HEAD
-websiteUrl: "https://ziontechgroup.com/ai-legal-services";
-email: "kleber@ziontechgroup.com";,
-website: "https://ziontechgroup.com"};
-=======
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 websiteUrl: "https://ziontechgroup.com/ai-legal-services";,
 technicalSpecs: ["Natural Language Processing", "Machine Learning", "Document OCR", "Semantic Search"],
 integrations: ["Westlaw", "LexisNexis", "Clio", "Practice Management Systems", "Document Management"],
@@ -271,12 +253,6 @@ contactInfo: {
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
-<<<<<<< HEAD
-websiteUrl: "https://ziontechgroup.com/ai-marketing";
-email: "kleber@ziontechgroup.com";,
-website: "https://ziontechgroup.com"};
-=======
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 websiteUrl: "https://ziontechgroup.com/ai-marketing";,
 technicalSpecs: ["Machine Learning", "Predictive Analytics", "Real-time Processing", "API Integration"],
 integrations: ["Shopify", "WooCommerce", "HubSpot", "Salesforce", "Google Analytics", "Facebook Ads"],
@@ -331,12 +307,6 @@ contactInfo: {
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
-<<<<<<< HEAD
-websiteUrl: "https://ziontechgroup.com/ai-supply-chain";
-email: "kleber@ziontechgroup.com";,
-website: "https://ziontechgroup.com"};
-=======
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 websiteUrl: "https://ziontechgroup.com/ai-supply-chain";,
 technicalSpecs: ["Machine Learning", "Predictive Analytics", "IoT Integration", "Real-time Monitoring"],
 integrations: ["ERP Systems", "WMS", "TMS", "E-commerce Platforms", "Supplier Portals"],
@@ -391,12 +361,6 @@ contactInfo: {
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
-<<<<<<< HEAD
-websiteUrl: "https://ziontechgroup.com/ai-hr-platform";
-email: "kleber@ziontechgroup.com";,
-website: "https://ziontechgroup.com"};
-=======
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 websiteUrl: "https://ziontechgroup.com/ai-hr-platform";,
 technicalSpecs: ["Machine Learning", "Natural Language Processing", "Predictive Analytics", "API Integration"],
 integrations: ["ATS Systems", "HRIS", "LinkedIn", "Job Boards", "Background Check Services"],
@@ -451,12 +415,6 @@ contactInfo: {
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
-<<<<<<< HEAD
-websiteUrl: "https://ziontechgroup.com/ai-real-estate";
-email: "kleber@ziontechgroup.com";,
-website: "https://ziontechgroup.com"};
-=======
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 websiteUrl: "https://ziontechgroup.com/ai-real-estate";,
 technicalSpecs: ["Machine Learning", "Predictive Analytics", "Geospatial Analysis", "Real-time Data Processing"],
 integrations: ["MLS Systems", "Property Databases", "Financial Data Sources", "Market Data APIs"],
@@ -511,12 +469,6 @@ contactInfo: {
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
-<<<<<<< HEAD
-websiteUrl: "https://ziontechgroup.com/ai-education";
-email: "kleber@ziontechgroup.com";,
-website: "https://ziontechgroup.com"};
-=======
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 websiteUrl: "https://ziontechgroup.com/ai-education";,
 technicalSpecs: ["Machine Learning", "Natural Language Processing", "Learning Analytics", "Content Management"],
 integrations: ["LMS Systems", "Student Information Systems", "Content Libraries", "Assessment Tools"],
@@ -571,12 +523,6 @@ contactInfo: {
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
-<<<<<<< HEAD
-websiteUrl: "https://ziontechgroup.com/ai-manufacturing";
-email: "kleber@ziontechgroup.com";,
-website: "https://ziontechgroup.com"};
-=======
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 websiteUrl: "https://ziontechgroup.com/ai-manufacturing";,
 technicalSpecs: ["Machine Learning", "IoT Integration", "Predictive Analytics", "Real-time Monitoring"],
 integrations: ["MES Systems", "SCADA", "ERP Systems", "IoT Devices", "Quality Control Systems"],
@@ -631,12 +577,6 @@ contactInfo: {
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
-<<<<<<< HEAD
-websiteUrl: "https://ziontechgroup.com/ai-energy";
-email: "kleber@ziontechgroup.com";,
-website: "https://ziontechgroup.com"};
-=======
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 websiteUrl: "https://ziontechgroup.com/ai-energy";,
 technicalSpecs: ["Machine Learning", "IoT Integration", "Predictive Analytics", "Real-time Processing"],
 integrations: ["SCADA Systems", "Smart Meters", "Renewable Energy Systems", "Energy Trading Platforms"],
@@ -691,12 +631,6 @@ contactInfo: {
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
-<<<<<<< HEAD
-websiteUrl: "https://ziontechgroup.com/ai-transportation";
-email: "kleber@ziontechgroup.com";,
-website: "https://ziontechgroup.com"};
-=======
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 websiteUrl: "https://ziontechgroup.com/ai-transportation";,
 technicalSpecs: ["Machine Learning", "GPS Integration", "Real-time Analytics", "IoT Connectivity"],
 integrations: ["GPS Systems", "Fleet Management Software", "TMS", "Fuel Cards", "Maintenance Systems"],
@@ -751,12 +685,6 @@ contactInfo: {
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
-<<<<<<< HEAD
-websiteUrl: "https://ziontechgroup.com/ai-retail";
-email: "kleber@ziontechgroup.com";,
-website: "https://ziontechgroup.com"};
-=======
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 websiteUrl: "https://ziontechgroup.com/ai-retail";,
 technicalSpecs: ["Machine Learning", "Predictive Analytics", "Real-time Processing", "API Integration"],
 integrations: ["POS Systems", "E-commerce Platforms", "Inventory Management", "Customer Databases", "Payment Systems"],
@@ -808,12 +736,7 @@ estimatedDelivery: "4-5 weeks";,
 supportLevel: "premium";,
 marketPrice: "$1;899 - $5;999/month",
 contactInfo: {
-<<<<<<< HEAD
-phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 websiteUrl: "https://ziontechgroup.com/ai-real-estate-investment";
@@ -873,12 +796,7 @@ estimatedDelivery: "3-4 weeks";,
 supportLevel: "premium";,
 marketPrice: "$899 - $2;999/month",
 contactInfo: {
-<<<<<<< HEAD
-phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 websiteUrl: "https://ziontechgroup.com/ai-education-platform";
@@ -938,12 +856,7 @@ estimatedDelivery: "4-5 weeks";,
 supportLevel: "premium";,
 marketPrice: "$1;499 - $4;999/month",
 contactInfo: {
-<<<<<<< HEAD
-phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 websiteUrl: "https://ziontechgroup.com/ai-energy-management";
@@ -1003,12 +916,7 @@ estimatedDelivery: "4-5 weeks";,
 supportLevel: "premium";,
 marketPrice: "$1;299 - $3;999/month",
 contactInfo: {
-<<<<<<< HEAD
-phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 websiteUrl: "https://ziontechgroup.com/ai-precision-agriculture";
@@ -1068,12 +976,7 @@ estimatedDelivery: "4-5 weeks";,
 supportLevel: "premium";,
 marketPrice: "$1;699 - $4;999/month",
 contactInfo: {
-<<<<<<< HEAD
-phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 websiteUrl: "https://ziontechgroup.com/ai-construction-management";
@@ -1133,12 +1036,7 @@ estimatedDelivery: "3-4 weeks";,
 supportLevel: "premium";,
 marketPrice: "$999 - $2;999/month",
 contactInfo: {
-<<<<<<< HEAD
-phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 websiteUrl: "https://ziontechgroup.com/ai-hospitality-platform";
@@ -1198,12 +1096,7 @@ estimatedDelivery: "4-5 weeks";,
 supportLevel: "premium";,
 marketPrice: "$2;199 - $6;999/month",
 contactInfo: {
-<<<<<<< HEAD
-phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 websiteUrl: "https://ziontechgroup.com/ai-insurance-platform";
@@ -1263,12 +1156,7 @@ estimatedDelivery: "3-4 weeks";,
 supportLevel: "premium";,
 marketPrice: "$1;599 - $4;999/month",
 contactInfo: {
-<<<<<<< HEAD
-phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 websiteUrl: "https://ziontechgroup.com/ai-legal-research";
@@ -1328,12 +1216,7 @@ estimatedDelivery: "3-4 weeks";,
 supportLevel: "premium";,
 marketPrice: "$1;299 - $3;999/month",
 contactInfo: {
-<<<<<<< HEAD
-phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 websiteUrl: "https://ziontechgroup.com/ai-media-platform";
@@ -1393,12 +1276,7 @@ estimatedDelivery: "3-4 weeks";,
 supportLevel: "premium";,
 marketPrice: "$1;199 - $3;999/month",
 contactInfo: {
-<<<<<<< HEAD
-phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 websiteUrl: "https://ziontechgroup.com/ai-gaming-platform";
@@ -1458,12 +1336,7 @@ estimatedDelivery: "4-5 weeks";,
 supportLevel: "enterprise";,
 marketPrice: "$2;499 - $7;999/month",
 contactInfo: {
-<<<<<<< HEAD
-phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 websiteUrl: "https://ziontechgroup.com/ai-cybersecurity-intelligence";
@@ -1523,12 +1396,7 @@ estimatedDelivery: "4-5 weeks";,
 supportLevel: "premium";,
 marketPrice: "$1;799 - $5;999/month",
 contactInfo: {
-<<<<<<< HEAD
-phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 websiteUrl: "https://ziontechgroup.com/ai-supply-chain-platform";
@@ -1588,12 +1456,7 @@ estimatedDelivery: "3-4 weeks";,
 supportLevel: "premium";,
 marketPrice: "$1;399 - $4;999/month",
 contactInfo: {
-<<<<<<< HEAD
-phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 websiteUrl: "https://ziontechgroup.com/ai-customer-experience";
@@ -1653,12 +1516,7 @@ estimatedDelivery: "3-4 weeks";,
 supportLevel: "premium";,
 marketPrice: "$1;199 - $3;999/month",
 contactInfo: {
-<<<<<<< HEAD
-phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 websiteUrl: "https://ziontechgroup.com/ai-hr-talent-platform";
@@ -1718,12 +1576,7 @@ estimatedDelivery: "4-5 weeks";,
 supportLevel: "enterprise";,
 marketPrice: "$1;899 - $6;999/month",
 contactInfo: {
-<<<<<<< HEAD
-phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 websiteUrl: "https://ziontechgroup.com/ai-data-governance";

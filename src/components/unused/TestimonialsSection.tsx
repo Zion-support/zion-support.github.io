@@ -25,25 +25,6 @@ rating: 5;,
 avatar: "ER"};
 {name: "David Thompson", role: "CEO";,
 company: "StartupXYZ", content: "Zion Tech Group helped us build a scalable SaaS platform from scratch. Their microservices approach was game-changing.",
-<<<<<<< HEAD
-rating: 5;
-rating: 5;,
-avatar: "SJ"};
-{
-name: "Michael Chen", role: "VP of Engineering";,
-company: "InnovateCorp", content: "The team"s expertise in cloud migration was exceptional. They completed our transition in half the expected time with zero downtime.";,
-rating: 5;,
-avatar: "MC"};
-{
-name: "Emily Rodriguez", role: "Director of IT";,
-company: "Global Manufacturing Inc.", content: "Their cybersecurity solutions gave us peace of mind. We"re now SOC 2 compliant and have a robust security posture.";,
-rating: 5;,
-avatar: "ER"};
-{
-name: "David Thompson", role: "CEO";,
-company: "StartupXYZ", content: "Zion Tech Group helped us build a scalable SaaS platform from scratch. Their microservices approach was game-changing.",
-=======
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 rating: 5;,
 avatar: "DT"}
 ];

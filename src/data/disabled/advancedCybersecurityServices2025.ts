@@ -52,15 +52,7 @@ securityFeatures: ["Zero-trust architecture", "Continuous monitoring", "Threat d
 integrationTime: "4-8 weeks", scalability: "Enterprise-wide deployment";,
 realTimeProcessing: true; multilingualSupport: true; industrySpecific: true; zeroTrust: true; aiPowered: true; quantumResistant: true; threatIntelligence: true;
 };
-<<<<<<< HEAD
-{id: 2; name: "AI-Powered Threat Intelligence";
-integrationTime: "4-8 weeks", scalability: "Enterprise-wide deployment";,
-realTimeProcessing: true; multilingualSupport: true; industrySpecific: true; zeroTrust: true; aiPowered: true; quantumResistant: true; threatIntelligence: true;};
-{
-id: 2; name: "AI-Powered Threat Intelligence";,
-=======
 {id: 2; name: "AI-Powered Threat Intelligence";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 category: "Threat Intelligence", description: "Advanced AI-driven threat intelligence platform with real-time threat detection; predictive analytics; and automated response",
 pricing: "Professional", price: 1800;,
 pricingModel: "monthly", features: [
@@ -96,17 +88,7 @@ securityFeatures: ["AI-powered detection", "Real-time monitoring", "Automated re
 integrationTime: "3-6 weeks", scalability: "Enterprise deployment";,
 realTimeProcessing: true; multilingualSupport: true; industrySpecific: true; zeroTrust: false; aiPowered: true; quantumResistant: false; threatIntelligence: true;
 };
-<<<<<<< HEAD
-{id: 3; name: "Quantum-Resistant Cryptography";
-category: "Post-Quantum Security", description: "Future-proof cryptography solutions resistant to quantum computing attacks with hybrid encryption and quantum key distribution";
-pricing: "Enterprise", price: 3000;
-integrationTime: "3-6 weeks", scalability: "Enterprise deployment";,
-realTimeProcessing: true; multilingualSupport: true; industrySpecific: true; zeroTrust: false; aiPowered: true; quantumResistant: false; threatIntelligence: true;};
-{
-id: 3; name: "Quantum-Resistant Cryptography";,
-=======
 {id: 3; name: "Quantum-Resistant Cryptography";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 category: "Post-Quantum Security", description: "Future-proof cryptography solutions resistant to quantum computing attacks with hybrid encryption and quantum key distribution";,
 pricing: "Enterprise", price: 3000;,
 pricingModel: "monthly", features: [
@@ -142,15 +124,7 @@ securityFeatures: ["Quantum-resistant algorithms", "Hybrid encryption", "Quantum
 integrationTime: "6-12 weeks", scalability: "Enterprise deployment";,
 realTimeProcessing: true; multilingualSupport: true; industrySpecific: true; zeroTrust: false; aiPowered: false; quantumResistant: true; threatIntelligence: false;
 };
-<<<<<<< HEAD
-{id: 4; name: "Privacy-Preserving Analytics";
-integrationTime: "6-12 weeks", scalability: "Enterprise deployment";,
-realTimeProcessing: true; multilingualSupport: true; industrySpecific: true; zeroTrust: false; aiPowered: false; quantumResistant: true; threatIntelligence: false;};
-{
-id: 4; name: "Privacy-Preserving Analytics";,
-=======
 {id: 4; name: "Privacy-Preserving Analytics";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 category: "Privacy Engineering", description: "Advanced privacy-preserving analytics platform using differential privacy; federated learning; and secure multi-party computation",
 pricing: "Professional", price: 1200;,
 pricingModel: "monthly", features: [
@@ -186,15 +160,7 @@ securityFeatures: ["Differential privacy", "Federated learning", "Secure computa
 integrationTime: "4-8 weeks", scalability: "Enterprise deployment";,
 realTimeProcessing: true; multilingualSupport: true; industrySpecific: true; zeroTrust: false; aiPowered: true; quantumResistant: false; threatIntelligence: false;
 };
-<<<<<<< HEAD
-{id: 5; name: "Cloud Security Posture Management";
-integrationTime: "4-8 weeks", scalability: "Enterprise deployment";,
-realTimeProcessing: true; multilingualSupport: true; industrySpecific: true; zeroTrust: false; aiPowered: true; quantumResistant: false; threatIntelligence: false;};
-{
-id: 5; name: "Cloud Security Posture Management";,
-=======
 {id: 5; name: "Cloud Security Posture Management";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 category: "Cloud Security", description: "Comprehensive cloud security platform with continuous monitoring; compliance management; and automated remediation",
 pricing: "Professional", price: 1500;,
 pricingModel: "monthly", features: [
@@ -230,15 +196,7 @@ securityFeatures: ["Continuous monitoring", "Automated remediation", "Risk scori
 integrationTime: "2-4 weeks", scalability: "Multi-cloud deployment";,
 realTimeProcessing: true; multilingualSupport: true; industrySpecific: true; zeroTrust: true; aiPowered: true; quantumResistant: false; threatIntelligence: true;
 };
-<<<<<<< HEAD
-{id: 6; name: "IoT Security Guardian";
-integrationTime: "2-4 weeks", scalability: "Multi-cloud deployment";,
-realTimeProcessing: true; multilingualSupport: true; industrySpecific: true; zeroTrust: true; aiPowered: true; quantumResistant: false; threatIntelligence: true;};
-{
-id: 6; name: "IoT Security Guardian";,
-=======
 {id: 6; name: "IoT Security Guardian";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 category: "IoT Security", description: "Comprehensive IoT security platform with device authentication; network segmentation; and behavioral monitoring",
 pricing: "Professional", price: 800;,
 pricingModel: "monthly", features: [

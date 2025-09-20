@@ -95,12 +95,6 @@ mobile: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";,
 address: "364 E Main St STE 1008 Middletown DE 19709";,
 website: "https://ziontechgroup.com"};
-<<<<<<< HEAD
-realImplementation: true;
-address: "364 E Main St STE 1008 Middletown DE 19709";,
-website: "https://ziontechgroup.com"};
-=======
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 realImplementation: true;,
 implementationDetails: "AI-powered legal document analysis platform with advanced NLP; contract risk assessment; and compliance automation.",
 launchDate: "2025-02-01";
@@ -157,12 +151,6 @@ mobile: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";,
 address: "364 E Main St STE 1008 Middletown DE 19709";,
 website: "https://ziontechgroup.com"};
-<<<<<<< HEAD
-realImplementation: true;
-address: "364 E Main St STE 1008 Middletown DE 19709";,
-website: "https://ziontechgroup.com"};
-=======
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 realImplementation: true;,
 implementationDetails: "Quantum-safe cybersecurity platform with post-quantum cryptography; advanced threat detection; and zero-trust architecture.",
 launchDate: "2025-01-20";
@@ -219,12 +207,6 @@ mobile: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";,
 address: "364 E Main St STE 1008 Middletown DE 19709";,
 website: "https://ziontechgroup.com"};
-<<<<<<< HEAD
-realImplementation: true;
-address: "364 E Main St STE 1008 Middletown DE 19709";,
-website: "https://ziontechgroup.com"};
-=======
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 realImplementation: true;,
 implementationDetails: "AI-powered healthcare analytics platform with predictive medicine; clinical decision support; and population health insights.",
 launchDate: "2025-01-10";
@@ -281,12 +263,6 @@ mobile: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";,
 address: "364 E Main St STE 1008 Middletown DE 19709";,
 website: "https://ziontechgroup.com"};
-<<<<<<< HEAD
-realImplementation: true;
-address: "364 E Main St STE 1008 Middletown DE 19709";,
-website: "https://ziontechgroup.com"};
-=======
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 realImplementation: true;,
 implementationDetails: "Blockchain-based supply chain transparency platform with smart contracts; real-time tracking; and compliance automation.",
 launchDate: "2025-02-15";
@@ -343,12 +319,6 @@ mobile: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";,
 address: "364 E Main St STE 1008 Middletown DE 19709";,
 website: "https://ziontechgroup.com"};
-<<<<<<< HEAD
-realImplementation: true;
-address: "364 E Main St STE 1008 Middletown DE 19709";,
-website: "https://ziontechgroup.com"};
-=======
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 realImplementation: true;,
 implementationDetails: "AI-powered financial risk management platform with real-time monitoring; predictive analytics; and regulatory compliance.",
 launchDate: "2025-01-25";
@@ -405,12 +375,6 @@ mobile: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";,
 address: "364 E Main St STE 1008 Middletown DE 19709";,
 website: "https://ziontechgroup.com"};
-<<<<<<< HEAD
-realImplementation: true;
-address: "364 E Main St STE 1008 Middletown DE 19709";,
-website: "https://ziontechgroup.com"};
-=======
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 realImplementation: true;,
 implementationDetails: "Edge computing IoT platform with real-time processing; local AI inference; and multi-cloud integration.",
 launchDate: "2025-02-10";
@@ -467,12 +431,6 @@ mobile: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";,
 address: "364 E Main St STE 1008 Middletown DE 19709";,
 website: "https://ziontechgroup.com"};
-<<<<<<< HEAD
-realImplementation: true;
-address: "364 E Main St STE 1008 Middletown DE 19709";,
-website: "https://ziontechgroup.com"};
-=======
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 realImplementation: true;,
 implementationDetails: "AI-powered marketing automation suite with personalization; predictive analytics; and campaign optimization.",
 launchDate: "2025-01-15";
@@ -529,12 +487,6 @@ mobile: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";,
 address: "364 E Main St STE 1008 Middletown DE 19709";,
 website: "https://ziontechgroup.com"};
-<<<<<<< HEAD
-realImplementation: true;
-address: "364 E Main St STE 1008 Middletown DE 19709";,
-website: "https://ziontechgroup.com"};
-=======
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 realImplementation: true;,
 implementationDetails: "Quantum machine learning platform with hybrid classical-quantum computing; advanced algorithms; and research collaboration tools.",
 launchDate: "2025-01-01";
@@ -591,12 +543,6 @@ mobile: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";,
 address: "364 E Main St STE 1008 Middletown DE 19709";,
 website: "https://ziontechgroup.com"};
-<<<<<<< HEAD
-realImplementation: true;
-address: "364 E Main St STE 1008 Middletown DE 19709";,
-website: "https://ziontechgroup.com"};
-=======
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 realImplementation: true;,
 implementationDetails: "AI-powered HR analytics platform with employee insights; turnover prediction; and recruitment optimization.",
 launchDate: "2025-02-01";
@@ -653,12 +599,6 @@ mobile: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";,
 address: "364 E Main St STE 1008 Middletown DE 19709";,
 website: "https://ziontechgroup.com"};
-<<<<<<< HEAD
-realImplementation: true;
-address: "364 E Main St STE 1008 Middletown DE 19709";,
-website: "https://ziontechgroup.com"};
-=======
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 realImplementation: true;,
 implementationDetails: "Sustainable energy management platform with AI optimization; real-time monitoring; and sustainability tracking.",
 launchDate: "2025-01-30";

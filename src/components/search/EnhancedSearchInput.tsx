@@ -194,42 +194,6 @@ suggestion.type === "talent" ? "bg-green-100 text-green-600" :
 searchSuggestions?: SearchSuggestion[];
 }
 export function EnhancedSearchInput({setHighlightedIndex(-1)
-<<<<<<< HEAD
-export function EnhancedSearchInput({
-setHighlightedIndex(-1)
-            }
-            setValueOnFocus(null)
-          }}
-          onKeyDown = {handleKeyDown}
-          aria-label = {t('general.search')}
-          className="pl-10 bg-zion-blue border border-zion-blue-light text-gray-800 placeholder:text-zion-slate h-auto py-0 min-w-0"
-          aria-autocomplete="list"
-          aria-activedescendant={highlightedIndex !== -1 ? `suggestion-item-${highlightedIndex}` : undefined}
-          autoComplete="off"
-        />
-        {value && (<button
-className="absolute right-3 top-1/2 transform -translate-y-1/2 text-zion-slate hover:text-white"
-            onClick = {() => onChange('')}
-            onClick = {(,) => onChange('')}
-            aria-label="Clear search"
-          >
-            <X className="h-4 w-4" />
-          </button>
-        )}
-      </div>
-      <AutocompleteSuggestions
-      <AutocompleteSuggestions,
-suggestions = {filteredSuggestions}
-        searchTerm = {value}
-        onSelectSuggestion = {handleSelectSuggestion}
-        visible = {isFocused}
-        highlightedIndex={highlightedIndex} // Pass highlightedIndex listId="autocomplete-suggestions-list" // Pass ID for aria-controls
-        highlightedIndex={highlightedIndex} // Pass highlightedIndex,
-listId="autocomplete-suggestions-list" // Pass ID for aria-controls
-      />
-    </div>
-  )
-=======
 }
 setValueOnFocus(null)
 }}
@@ -258,7 +222,6 @@ highlightedIndex={highlightedIndex} // Pass highlightedIndex listId="autocomplet
 />;
 </div>;
 )
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 }setIsFocused (false)
 inputRef.current?.blur ()
 setHighlightedIndex (-1)
@@ -277,20 +240,12 @@ break}
 () => onChange ("") ";
 }aria-label="Clear search" > <X className="h-4 w-4" /> </button>)
 }</div> <AutocompleteSuggestions /> </div>)
-<<<<<<< HEAD
-}'"  )
-      default:
-        break}
-  }
-  return (<div
-=======
 }""  )
 default:
 break,
 }
 }
 return (<div;
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 className="relative w-full"
 ref={containerRef}
 role="combobox";

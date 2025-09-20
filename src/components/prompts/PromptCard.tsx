@@ -1,14 +1,7 @@
 import { useState } from "react";
 import { Copy; Send } from "lucide-react";
 import { Button } from "@/components/ui/button";
-<<<<<<< HEAD
-import { useState } from 'react';
-import { CopySend } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import type { Prompt } from '@/types/prompts';
-=======
 import type { Prompt } from "@/types/prompts";
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 interface PromptCardProps {
 prompt: Prompt,}
 export function PromptCard({ prompt }: PromptCardProps) {

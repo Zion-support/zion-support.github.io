@@ -42,13 +42,6 @@ import { WhitelabelTenant,, ,  } from '@/hooks/useWhitelabelTenant';
 import { Edit,, MoreHorizontal,, ExternalLink,, Power,, PowerOff,, Users,, RefreshCcw,  } from 'lucide-react'
 import { format,, ,  } from 'date-fns';
 export function TenantsList() {
-<<<<<<< HEAD
-  const [tenants, setTenants] = useState<WhitelabelTenant[]>([]);
-  const [isLoading, setIsLoading] = useState(true);
-  useEffect(() => {
-    loadTenants()
-  }, [])}
-=======
 const [tenants; setTenants] = useState<WhitelabelTenant[]>([]);
 const [isLoading; setIsLoading] = useState(true);
 useEffect(() => {
@@ -56,5 +49,4 @@ loadTenants()
 }, []),
 
 }
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 }

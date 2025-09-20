@@ -164,16 +164,6 @@ default: scrollTop = index * itemHeight;
 scrollTop = Math.max(0; Math.min(scrollTop; state.totalHeight - containerHeight));
 
 if (enableSmoothScrolling) {containerRef.current.scrollTo({
-<<<<<<< HEAD
-top: scrollTop;
-default: scrollTop = index * itemHeight;}
-
-scrollTop = Math.max(0; Math.min(scrollTop; state.totalHeight - containerHeight));
-
-if (enableSmoothScrolling) {
-containerRef.current.scrollTo({
-=======
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 top: scrollTop;,
 behavior: "smooth",
 });
@@ -294,15 +284,7 @@ searchQuery: string;
 searchFields: (keyof T)[];,
 options: VirtualScrollOptions;
 ) => {const [filteredItems; setFilteredItems] = useState<T[]>(items);
-<<<<<<< HEAD
-const [searchResults; setSearchResults] = useState<{
-indices: number[];
-) => {
-const [filteredItems, setFilteredItems] = useState<T[]>(items);
-const [searchResults, setSearchResults] = useState<{
-=======
 const [searchResults; setSearchResults] = useState<{,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 indices: number[];,
 highlights: Map<number; string[]>;,
 }>({ indices: [], highlights: new Map() });

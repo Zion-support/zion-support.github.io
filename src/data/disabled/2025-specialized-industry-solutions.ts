@@ -52,10 +52,6 @@ tags: ["Healthcare AI", "Medical Technology", "Drug Discovery", "Diagnostics", "
 contactInfo: {,
 phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com/medtech-ai-platform",
-<<<<<<< HEAD
-address: "364 E Main St STE 1008 Middletown DE 19709"}, marketPrice: "$899-2999/month";
-=======
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 address: "364 E Main St STE 1008 Middletown DE 19709"}, marketPrice: "$899-2999/month";,
 competitors: ["IBM Watson Health", "Google Health", "Microsoft Healthcare"],
 roi: "400% within 12 months", setupTime: "1 month";,
@@ -94,10 +90,6 @@ tags: ["FinTech", "Compliance", "Risk Management", "Fraud Detection", "Regulator
 contactInfo: {,
 phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com/fintech-compliance-suite",
-<<<<<<< HEAD
-address: "364 E Main St STE 1008 Middletown DE 19709"}, marketPrice: "$599-1999/month";
-=======
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 address: "364 E Main St STE 1008 Middletown DE 19709"}, marketPrice: "$599-1999/month";,
 competitors: ["Thomson Reuters", "LexisNexis", "Refinitiv"],
 roi: "500% within 6 months", setupTime: "2 weeks";,
@@ -138,10 +130,6 @@ tags: ["Industry 4.0", "IoT", "Predictive Maintenance", "Quality Control", "Smar
 contactInfo: {,
 phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com/smart-factory-hub",
-<<<<<<< HEAD
-address: "364 E Main St STE 1008 Middletown DE 19709"}, marketPrice: "$0.10-0.50 per device per day";
-=======
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 address: "364 E Main St STE 1008 Middletown DE 19709"}, marketPrice: "$0.10-0.50 per device per day";,
 competitors: ["Siemens Mindsphere", "GE Predix", "PTC ThingWorx"],
 roi: "400% within 8 months", setupTime: "1 month";,
@@ -182,10 +170,6 @@ tags: ["Retail AI", "Omnichannel", "E-commerce", "Personalization", "Inventory M
 contactInfo: {,
 phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com/omnichannel-retail-ai",
-<<<<<<< HEAD
-address: "364 E Main St STE 1008 Middletown DE 19709"}, marketPrice: "2.5-5% of revenue";
-=======
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 address: "364 E Main St STE 1008 Middletown DE 19709"}, marketPrice: "2.5-5% of revenue";,
 competitors: ["Salesforce Commerce Cloud", "Shopify Plus", "Adobe Commerce"],
 roi: "300% within 6 months", setupTime: "2 weeks";,
@@ -226,10 +210,6 @@ tags: ["EdTech", "Adaptive Learning", "AI Education", "Personalized Learning", "
 contactInfo: {,
 phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com/adaptive-learning-platform",
-<<<<<<< HEAD
-address: "364 E Main St STE 1008 Middletown DE 19709"}, marketPrice: "$15-45 per student per month";
-=======
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 address: "364 E Main St STE 1008 Middletown DE 19709"}, marketPrice: "$15-45 per student per month";,
 competitors: ["DreamBox", "Knewton", "Carnegie Learning"],
 roi: "350% within 9 months", setupTime: "1 week";,
@@ -270,10 +250,6 @@ tags: ["Logistics", "Supply Chain", "Route Optimization", "Fleet Management", "A
 contactInfo: {,
 phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com/logistics-optimization-ai",
-<<<<<<< HEAD
-address: "364 E Main St STE 1008 Middletown DE 19709"}, marketPrice: "$399-1299/month";
-=======
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 address: "364 E Main St STE 1008 Middletown DE 19709"}, marketPrice: "$399-1299/month";,
 competitors: ["Flexport", "Project44", "FourKites"],
 roi: "400% within 6 months", setupTime: "2 weeks";,
@@ -314,10 +290,6 @@ tags: ["Renewable Energy", "Grid Management", "Sustainability", "Energy Optimiza
 contactInfo: {,
 phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com/green-energy-management",
-<<<<<<< HEAD
-address: "364 E Main St STE 1008 Middletown DE 19709"}, marketPrice: "$0.02-0.08 per kWh";
-=======
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 address: "364 E Main St STE 1008 Middletown DE 19709"}, marketPrice: "$0.02-0.08 per kWh";,
 competitors: ["GE Digital", "Siemens Energy", "Schneider Electric"],
 roi: "450% within 12 months", setupTime: "1 month";,
@@ -358,10 +330,6 @@ tags: ["PropTech", "Real Estate", "Investment Analysis", "Market Intelligence", 
 contactInfo: {,
 phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com/proptech-intelligence-suite",
-<<<<<<< HEAD
-address: "364 E Main St STE 1008 Middletown DE 19709"}, marketPrice: "$299-899/month";
-=======
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 address: "364 E Main St STE 1008 Middletown DE 19709"}, marketPrice: "$299-899/month";,
 competitors: ["CoStar", "Real Capital Analytics", "Yardi"],
 roi: "350% within 8 months", setupTime: "1 week";,
@@ -402,10 +370,6 @@ tags: ["LegalTech", "AI", "Contract Analysis", "Legal Research", "Compliance"],
 contactInfo: {,
 phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com/legaltech-ai-platform",
-<<<<<<< HEAD
-address: "364 E Main St STE 1008 Middletown DE 19709"}, marketPrice: "$199-599 per attorney per month";
-=======
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 address: "364 E Main St STE 1008 Middletown DE 19709"}, marketPrice: "$199-599 per attorney per month";,
 competitors: ["DoNotPay", "Harvey AI", "Casetext"],
 roi: "400% within 6 months", setupTime: "1 week";,
@@ -446,10 +410,6 @@ tags: ["AgTech", "Precision Agriculture", "Drone Technology", "AI", "Sustainabil
 contactInfo: {,
 phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com/precision-agriculture-ai",
-<<<<<<< HEAD
-address: "364 E Main St STE 1008 Middletown DE 19709"}, marketPrice: "$2.50-8.00 per acre per month";
-=======
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 address: "364 E Main St STE 1008 Middletown DE 19709"}, marketPrice: "$2.50-8.00 per acre per month";,
 competitors: ["John Deere", "Climate FieldView", "Granular"],
 roi: "300% within 12 months", setupTime: "2 weeks";,

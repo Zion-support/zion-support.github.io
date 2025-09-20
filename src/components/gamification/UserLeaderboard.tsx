@@ -35,12 +35,7 @@ return (
 {entries.map((e idx) => (
 <div;
 key={e.name}
-<<<<<<< HEAD
-              className='flex justify-between items-center p-2 rounded-md hover:bg-muted/50'            <div
-              className='flex justify-between items-center p-2 rounded-md hover:bg-muted/50'            <div,
-=======
 className="flex justify-between items-center p-2 rounded-md hover:bg-muted/50"            <div;
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 key = {e.name}
 className="flex justify-between items-center p-2 rounded-md hover:bg-muted/50"
 >;

@@ -24,10 +24,7 @@ const initialState = { items: [] };
             return { items: [] };
     default: return state;
      }
-<<<<<<< HEAD
-=======
     default: return state;}
->>>>>>> 9d7313116a64aea01fdf8aaa2b42f67aaee4a840
 }
 const CartContext = createContext(undefined);
 export function useCart() {
@@ -71,11 +68,8 @@ export function CartProvider({ children }) {
         safeStorage.setItem(cartKey, JSON.stringify(state.items));
     }, [state.items, cartKey]);
     const value = {items: state.items;
-<<<<<<< HEAD
-=======
     const value = {
         items: state.items;
->>>>>>> 9d7313116a64aea01fdf8aaa2b42f67aaee4a840
         dispatch};
     return <CartContext.Provider value={value}>{children}</CartContext.Provider>;
 }

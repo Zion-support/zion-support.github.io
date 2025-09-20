@@ -13,12 +13,7 @@ children?: NavigationItem[];}
 };
 const navigationItems: NavigationItem[] = [
 {name: "Home";
-<<<<<<< HEAD
-href: "/";
-icon: <Home className="w-5 h-5" />;
-=======
 href: "/";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 icon: <Home className="w-5 h-5" />;,
 description: "Welcome to the future"};
 {
@@ -39,17 +34,7 @@ href: "/about";,
 icon: <Users className="w-5 h-5" />;,
 description: "Our mission and vision"};
 {name: "Contact";
-<<<<<<< HEAD
-href: "/contact";
-icon: <Phone className="w-5 h-5" />;
-icon: <Users className="w-5 h-5" />;,
-description: "Our mission and vision"};
-{
-name: "Contact";
-href: "/contact";
-=======
 href: "/contact";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 icon: <Phone className="w-5 h-5" />;,
 description: "Get in touch with us"}
 ];

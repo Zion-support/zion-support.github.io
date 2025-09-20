@@ -150,26 +150,13 @@ billing: "project";,
 features: ["Landing zone design", "IaC (Terraform)", "Cost optimization"],
 ctaLabel: "Get Estimate";,
 href: "/contact"};
-<<<<<<< HEAD
-{id: "vcio";
-title: "vCIO Advisory";
-ctaLabel: "Get Estimate";,
-href: "/contact"};
-{
-id: "vcio";
-=======
 {id: "vcio";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 title: "vCIO Advisory";,
 description: "Quarterly roadmap; security posture; and vendor governance.",
 category: "IT Services";
 price: "From $150/hour";,
 billing: "hour";,
 features: ["IT roadmap", "Budget planning", "Compliance alignment"],
-<<<<<<< HEAD
-ctaLabel: "Book Session";
-=======
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 ctaLabel: "Book Session";,
 href: "/contact"}
 ];
@@ -187,16 +174,7 @@ billing: "project";,
 features: ["OWASP ASVS", "Authenticated scans", "Executive + technical reports"],
 ctaLabel: "Request Scope";,
 href: "/contact"};
-<<<<<<< HEAD
-{id: "soc2-readiness";
-title: "SOC 2 Readiness";
-ctaLabel: "Request Scope";,
-href: "/contact"};
-{
-id: "soc2-readiness";
-=======
 {id: "soc2-readiness";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 title: "SOC 2 Readiness";,
 description: "Gap assessment; policies; controls mappings; and audit prep.",
 category: "Cybersecurity";,
@@ -205,26 +183,13 @@ billing: "project";,
 features: ["Policy kit", "Evidence collection", "Auditor liaison"],
 ctaLabel: "Start Readiness";,
 href: "/contact"};
-<<<<<<< HEAD
-{id: "mxdr";
-title: "Managed XDR";
-ctaLabel: "Start Readiness";,
-href: "/contact"};
-{
-id: "mxdr";
-=======
 {id: "mxdr";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 title: "Managed XDR";,
 description: "24/7 detection and response across endpoints; cloud; and identities.",
 category: "Cybersecurity";
 price: "From $35/endpoint/month";,
 billing: "month";,
 features: ["MITRE ATT&CK mapping", "Threat hunting", "Monthly posture reviews"],
-<<<<<<< HEAD
-ctaLabel: "Secure Now";
-=======
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 ctaLabel: "Secure Now";,
 href: "/contact"}
 ];
@@ -242,26 +207,13 @@ billing: "project";,
 features: ["dbt models", "Metrics layer", "Role-based access"],
 ctaLabel: "Book Workshop";,
 href: "/contact"};
-<<<<<<< HEAD
-{id: "mlops";
-title: "MLOps Enablement";
-ctaLabel: "Book Workshop";,
-href: "/contact"};
-{
-id: "mlops";
-=======
 {id: "mlops";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 title: "MLOps Enablement";,
 description: "Feature store; CI/CD for models; and monitoring.",
 category: "Data & Analytics";,
 price: "From $15;000/project",
 billing: "project";,
 features: ["Model registry", "Canary rollout", "Drift detection"],
-<<<<<<< HEAD
-ctaLabel: "Plan Rollout";
-=======
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 ctaLabel: "Plan Rollout";,
 href: "/contact"}
 ];
@@ -279,26 +231,13 @@ billing: "project";,
 features: ["Self-service scaffolding", "Guardrails", "Scorecards"],
 ctaLabel: "Design IDP";,
 href: "/contact"};
-<<<<<<< HEAD
-{id: "finops";
-title: "FinOps Program";
-ctaLabel: "Design IDP";,
-href: "/contact"};
-{
-id: "finops";
-=======
 {id: "finops";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 title: "FinOps Program";,
 description: "Cost visibility; allocation; and savings automation across clouds.",
 category: "Cloud & DevOps";,
 price: "From $8;000/project",
 billing: "project";,
 features: ["Anomaly detection", "RI/SP planning", "Showback/chargeback"],
-<<<<<<< HEAD
-ctaLabel: "Cut Cloud Spend";
-=======
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 ctaLabel: "Cut Cloud Spend";,
 href: "/contact"}
 ];

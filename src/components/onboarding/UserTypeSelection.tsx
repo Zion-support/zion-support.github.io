@@ -15,12 +15,7 @@ onSelect: (userType: "serviceProvider" | "talent" | "client") => void;,
 selectedType: string | null;
 export function UserTypeSelection({
 }
-<<<<<<< HEAD
-  onSelect,}
-  onSelect,
-=======
 onSelect,}
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 selectedType}: UserTypeSelectionProps) {
 const userTypes: UserTypeOption[] = [
 {

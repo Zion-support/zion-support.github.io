@@ -92,12 +92,7 @@ marketPrice: "$3;999 - $15;000/month",
 roi: "400-700%";
 innovationLevel: "Cutting-edge";
 contactInfo: {
-<<<<<<< HEAD
-phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technicalSpecs: {,
@@ -162,12 +157,7 @@ marketPrice: "$4;999 - $20;000/month",
 roi: "500-800%";
 innovationLevel: "Cutting-edge";
 contactInfo: {
-<<<<<<< HEAD
-phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technicalSpecs: {,
@@ -229,12 +219,7 @@ marketPrice: "$3;499 - $15;000/month",
 roi: "300-600%";
 innovationLevel: "Cutting-edge";
 contactInfo: {
-<<<<<<< HEAD
-phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technicalSpecs: {,
@@ -296,12 +281,7 @@ marketPrice: "$2;299 - $8;000/month",
 roi: "350-600%";
 innovationLevel: "Cutting-edge";
 contactInfo: {
-<<<<<<< HEAD
-phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technicalSpecs: {,
@@ -363,12 +343,7 @@ marketPrice: "$2;799 - $10;000/month",
 roi: "300-500%";
 innovationLevel: "Cutting-edge";
 contactInfo: {
-<<<<<<< HEAD
-phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technicalSpecs: {,
@@ -430,12 +405,7 @@ marketPrice: "$3;999 - $15;000/month",
 roi: "400-700%";
 innovationLevel: "Cutting-edge";
 contactInfo: {
-<<<<<<< HEAD
-phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technicalSpecs: {,
@@ -497,12 +467,7 @@ marketPrice: "$1;899 - $6;000/month",
 roi: "250-400%";
 innovationLevel: "Cutting-edge";
 contactInfo: {
-<<<<<<< HEAD
-phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technicalSpecs: {,
@@ -564,12 +529,7 @@ marketPrice: "$2;499 - $8;000/month",
 roi: "300-500%";
 innovationLevel: "Cutting-edge";
 contactInfo: {
-<<<<<<< HEAD
-phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technicalSpecs: {,
@@ -631,12 +591,7 @@ marketPrice: "$3;299 - $12;000/month",
 roi: "400-700%";
 innovationLevel: "Cutting-edge";
 contactInfo: {
-<<<<<<< HEAD
-phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technicalSpecs: {,

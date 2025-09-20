@@ -84,12 +84,7 @@ estimatedDelivery: "8-12 weeks";,
 supportLevel: "enterprise";,
 marketPrice: "$5;000 - $25;000/month",
 contactInfo: {
-<<<<<<< HEAD
-phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["IBM Q", "Google Quantum", "Microsoft Q#", "Qiskit", "Cirq", "PennyLane"],
@@ -148,12 +143,7 @@ estimatedDelivery: "6-8 weeks";,
 supportLevel: "premium";,
 marketPrice: "$1;200 - $4;500/month",
 contactInfo: {
-<<<<<<< HEAD
-phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["Kubernetes", "Docker", "Node.js", "Python", "Redis", "PostgreSQL"],
@@ -212,12 +202,7 @@ estimatedDelivery: "8-12 weeks";,
 supportLevel: "enterprise";,
 marketPrice: "$2;500 - $8;000/month",
 contactInfo: {
-<<<<<<< HEAD
-phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["OAuth 2.0", "SAML", "OIDC", "Zero Trust Network Access", "Identity providers", "SIEM"],
@@ -276,12 +261,7 @@ estimatedDelivery: "4-6 weeks";,
 supportLevel: "premium";,
 marketPrice: "$800 - $3;000/month",
 contactInfo: {
-<<<<<<< HEAD
-phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["Terraform", "Kubernetes", "Docker", "Python", "React", "PostgreSQL"],
@@ -340,12 +320,7 @@ estimatedDelivery: "3-4 weeks";,
 supportLevel: "premium";,
 marketPrice: "$600 - $2;500/month",
 contactInfo: {
-<<<<<<< HEAD
-phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["Kong", "Apigee", "AWS API Gateway", "Azure API Management", "Node.js", "React"],
@@ -404,12 +379,7 @@ estimatedDelivery: "3-4 weeks";,
 supportLevel: "premium";,
 marketPrice: "$450 - $1;800/month",
 contactInfo: {
-<<<<<<< HEAD
-phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["Jenkins", "GitLab CI", "GitHub Actions", "Terraform", "Ansible", "Kubernetes"],
@@ -468,12 +438,7 @@ estimatedDelivery: "8-12 weeks";,
 supportLevel: "enterprise";,
 marketPrice: "$1;500 - $6;000/month",
 contactInfo: {
-<<<<<<< HEAD
-phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["Apache Kafka", "Apache Airflow", "DataHub", "Amundsen", "Great Expectations", "dbt"],
@@ -532,12 +497,7 @@ estimatedDelivery: "4-6 weeks";,
 supportLevel: "premium";,
 marketPrice: "$800 - $3;000/month",
 contactInfo: {
-<<<<<<< HEAD
-phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["IoT sensors", "Energy monitoring", "Sustainability analytics", "Green computing tools", "Reporting platforms"],

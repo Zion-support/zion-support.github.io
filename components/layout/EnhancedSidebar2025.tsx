@@ -273,7 +273,6 @@ export default function EnhancedSidebar2025({ isOpen, onClose }: EnhancedSidebar
       child.description?.toLowerCase().includes(searchQuery.toLowerCase())
     ) || []
   );
-=======
 
   return (
     <motion.aside

@@ -1,6 +1,4 @@
-=======
 import React, { useState, useEffect } from "react";
-import ThemeToggle from "@/components/ThemeToggle";
 
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -10,10 +8,6 @@ export function Header() {
       setIsScrolled(window.scrollY > 0);
     };
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-=======
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -41,7 +35,6 @@ export function Header() {
             </div>
           </div>
           <div className="flex items-center space-x-4">
-            <ThemeToggle />
             <button className="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600">
               Get Started
             </button>
@@ -50,18 +43,6 @@ export function Header() {
       </nav>
     </header>
   );
-{/* Mobile Menu */}
-{isMenuOpen && (
-</div>;
-)}
-</div>;
-</header>;
-);
-};
+}
 
 export default Header;
-export { Header };
-=======
-}
-=======
-}

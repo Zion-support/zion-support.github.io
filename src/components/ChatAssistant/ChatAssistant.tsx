@@ -77,62 +77,6 @@ aria-live="polite";
 <div className="flex flex-wrap justify-center gap-2">;
 {starterQuestions.map((q idx) => (<Button;
 key = {idx}
-<<<<<<< HEAD
-                      variant="outline"
-                      className="text-xs"
-                      onClick = {() => handleSendMessage(q)}
-                  {starterQuestions.map((q idx,) => (
-                    <Button,
-key = {idx}
-                      variant="outline"
-                      className="text-xs"
-                      onClick = {(,) => handleSendMessage(q)}
-                    >
-                      {q}
-                    </Button>
-                  ))}
-                </div>
-              )}
-            </div>
-          ) : (currentMessages.map((msg) => (
-              <ChatMessage key={msg.id} role={msg.role} message={msg.message} />
-            ))
-          )}
-          <div ref={messagesEndRef} />
-        </div>
-        {/* Input */}
-        <div className="p-3 border-t border-zion-purple/20 bg-zion-blue-dark/30">
-          <ChatInput onSend={handleSendMessage} />
-        </div>
-      </div>
-      {showGuestModal && guestMessage && (
-        <div
-className="fixed inset-0 bg-black/60 z-[100] flex items-center justify-center p-4"
-          role="dialog"
-          aria-modal="true"
-          aria-labelledby="confirm-message-title"
-        >
-          <div className="bg-zion-blue-darker p-6 rounded-lg shadow-xl w-full max-w-md">
-            <h3
-id="confirm-message-title"
-              className="text-lg font-semibold text-white mb-4"
-            >
-              Confirm Message
-            </h3>
-            <p className="text-zion-slate mb-6 whitespace-pre-wrap break-words">
-              {guestMessage}
-            </p>
-            <div className="flex justify-end space-x-3">
-              <Button
-variant="outline"
-                onClick = {handleModalCancel}
-                className="text-white border-zion-purple hover:bg-zion-purple/10"
-              >
-                Cancel
-              </Button>
-              <Button
-              <Button,
-=======
 variant="outline"
 className="text-xs"
 onClick = {() => handleSendMessage(q)}
@@ -180,7 +124,6 @@ className="text-white border-zion-purple hover:bg-zion-purple/10"
 Cancel;
 </Button>;
 <Button;
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 onClick = {handleModalSendConfirm}
 className="bg-zion-purple hover:bg-zion-purple-dark text-white"
 >;
@@ -194,9 +137,4 @@ Send;
 )
 }
 };
-<<<<<<< HEAD
-}
-;
-=======
 ;)
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582

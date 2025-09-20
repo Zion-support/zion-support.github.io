@@ -14,23 +14,6 @@ export, const, securityConfig = {
 },export, default, securityConfig,
 // Security Configuration,
 export const securityConfig = {
-<<<<<<< HEAD
-  // Content Security Policy,
-csp: {,
-directives: {
-      defaultSrc: ["'self'"],
-styleSrc: ["'self'", "'unsafe-inline'", "https://fonts.googleapis.com"],
-fontSrc: ["'self'", "https://fonts.gstatic.com"],
-imgSrc: ["'self'", "data:", "https:"],
-scriptSrc: ["'self'"]
-      connectSrc: ["'self'"],
-frameSrc: ["'none'"]
-      objectSrc: ["'none'"],
-baseUri: ["'self'"]
-      formAction: ["'self'"],
-upgradeInsecureRequests: []
-    }
-=======
   csp: {
     directives: {
       defaultSrc: ["'self'"],
@@ -57,7 +40,6 @@ upgradeInsecureRequests: []
   rateLimit: {
     windowMs: 15 * 60 * 1000, // 15 minutes
     max: 100 // limit each IP to 100 requests per windowMs
->>>>>>> 9d7313116a64aea01fdf8aaa2b42f67aaee4a840
   }
   // Security Headers,
 headers: {
@@ -72,7 +54,4 @@ windowMs: 15 * 60 * 1000, // 15 minutes,
 max: 100 // limit each IP to 100 requests per windowMs}
 }
 export default securityConfig
-<<<<<<< HEAD
-=======
 };
->>>>>>> 9d7313116a64aea01fdf8aaa2b42f67aaee4a840

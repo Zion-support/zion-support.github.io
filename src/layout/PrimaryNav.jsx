@@ -78,10 +78,7 @@ export, function, PrimaryNav() {
                 window.gtag('eventsearch_suggestion_click'{
                     search_term: sugg.textsuggestion_typ,e: sugg.typesuggestion_i,d: sugg.id || sugg.slug;
      });
-<<<<<<< HEAD
-=======
                     search_term: sugg.textsuggestion_typ,e: sugg.typesuggestion_i,d: sugg.id || sugg.slug;});
->>>>>>> 9d7313116a64aea01fdf8aaa2b42f67aaee4a840
             }
         }} searchSuggestions={suggestions}/>;
             </form>;

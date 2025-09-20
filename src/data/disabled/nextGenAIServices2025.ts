@@ -82,12 +82,7 @@ demoUrl: "https://ziontechgroup.com/demo/ai-consciousness";
 documentationUrl: "https://ziontechgroup.com/docs/ai-consciousness";
 contactInfo: {
 phone: "+1 302 464 0950";
-<<<<<<< HEAD
-email: "kleber@ziontechgroup.com";
-website: "https://ziontechgroup.com";
-=======
 email: "kleber@ziontechgroup.com";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 website: "https://ziontechgroup.com";,
 address: "364 E Main St STE 1008 Middletown DE 19709"}
 };
@@ -140,12 +135,7 @@ demoUrl: "https://ziontechgroup.com/demo/quantum-ai";
 documentationUrl: "https://ziontechgroup.com/docs/quantum-ai";
 contactInfo: {
 phone: "+1 302 464 0950";
-<<<<<<< HEAD
-email: "kleber@ziontechgroup.com";
-website: "https://ziontechgroup.com";
-=======
 email: "kleber@ziontechgroup.com";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 website: "https://ziontechgroup.com";,
 address: "364 E Main St STE 1008 Middletown DE 19709"}
 };
@@ -198,12 +188,7 @@ demoUrl: "https://ziontechgroup.com/demo/neural-search";
 documentationUrl: "https://ziontechgroup.com/docs/neural-search";
 contactInfo: {
 phone: "+1 302 464 0950";
-<<<<<<< HEAD
-email: "kleber@ziontechgroup.com";
-website: "https://ziontechgroup.com";
-=======
 email: "kleber@ziontechgroup.com";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 website: "https://ziontechgroup.com";,
 address: "364 E Main St STE 1008 Middletown DE 19709"}
 };
@@ -256,12 +241,7 @@ demoUrl: "https://ziontechgroup.com/demo/multimodal-ai";
 documentationUrl: "https://ziontechgroup.com/docs/multimodal-ai";
 contactInfo: {
 phone: "+1 302 464 0950";
-<<<<<<< HEAD
-email: "kleber@ziontechgroup.com";
-website: "https://ziontechgroup.com";
-=======
 email: "kleber@ziontechgroup.com";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 website: "https://ziontechgroup.com";,
 address: "364 E Main St STE 1008 Middletown DE 19709"}
 };
@@ -314,12 +294,7 @@ demoUrl: "https://ziontechgroup.com/demo/digital-twins";
 documentationUrl: "https://ziontechgroup.com/docs/digital-twins";
 contactInfo: {
 phone: "+1 302 464 0950";
-<<<<<<< HEAD
-email: "kleber@ziontechgroup.com";
-website: "https://ziontechgroup.com";
-=======
 email: "kleber@ziontechgroup.com";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 website: "https://ziontechgroup.com";,
 address: "364 E Main St STE 1008 Middletown DE 19709"}
 }

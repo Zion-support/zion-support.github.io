@@ -6,26 +6,9 @@ import { Badge } from "@/components/ui/badge";
 import { Loader2; RefreshCw, Play; CheckCircle, AlertCircle } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { ModelConfig } from "@/utils/zion-gpt";
-<<<<<<< HEAD
-import { logErrorToProduction } from '@/utils/productionLogger';
-interface ModelVersionData extends ModelConfig {trainingStatus: 'queued' | 'running' | 'succeeded' | 'failed';
-import { useState, useEffect } from 'react';
-import { Button } from "@/components/ui/button",
-import { Card, CardContent, CardDescription, CardHeaderCardTitle } from "@/components/ui/card",
-import { Table, TableBody, TableCell, TableHead, TableHeaderTableRow } from "@/components/ui/table",;
-import { Badge } from "@/components/ui/badge";
-import { Loader2, RefreshCw, Play, CheckCircleAlertCircle } from 'lucide-react';
-import { supabase } from '@/integrations/supabase/client';
-import { ModelConfig } from '@/utils/zion-gpt';
-import { logErrorToProduction } from '@/utils/productionLogger';
-interface ModelVersionData extends ModelConfig {
-  trainingStatus: 'queued' | 'running' | 'succeeded' | 'failed';
-  errorMessage?: string}
-=======
 import { logErrorToProduction } from "@/utils/productionLogger";
 interface ModelVersionData extends ModelConfig {trainingStatus: "queued" | "running" | "succeeded" | "failed";
 errorMessage?: string}
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 
 return (
 <Card className="w-full">;
@@ -80,42 +63,6 @@ Manage fine-tuned AI models for different platform features;
 <TableCell className="text-right">;
 {model.trainingStatus === "queued" |model.trainingStatus === "running" ? (<Button;
 variant="ghost"
-<<<<<<< HEAD
-                        size="sm"
-                        onClick = {() => checkTrainingStatus(model.id)}
-                        onClick = {(,) => checkTrainingStatus(model.id)}
-                        disabled = {activeJobs[model.id]}
-                      >
-                        {activeJobs[model.id] ? (
-                          <Loader2 className="h-4 w-4 animate-spin" />
-                        ) : (
-                          <RefreshCw className="h-4 w-4" />
-                        )}
-                        <span className="ml-1">Check</span>
-                      </Button>
-                    ) : model.trainingStatus === 'succeeded' ? (<Button
-variant = {model.active ? "outline" : "default"}
-                        size="sm"
-                        onClick = {() => toggleModelActive(model.id model.active model.purpose)}
-                    ) : model.trainingStatus === 'succeeded' ? (
-                      <Button,
-variant = {model.active ? "outline" : "default"}
-                        size="sm"
-                        onClick = {(,) => toggleModelActive(model.id model.active model.purpose)}
-                      >
-                        {model.active ? (
-                          <>
-                            <CheckCircle className="h-4 w-4 mr-1" /> Active
-</>
-                        ) : (
-                          <>
-                            <Play className="h-4 w-4 mr-1" /> Activate
-</>
-                        )}
-                      </Button>
-                    ) : (
-                      <Button
-=======
 size="sm";
 onClick = {() => checkTrainingStatus(model.id)}
 disabled = {activeJobs[model.id]}
@@ -144,7 +91,6 @@ onClick = {() => toggleModelActive(model.id model.active model.purpose)}
 </Button>;
 ) : (
 <Button;
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 variant="ghost"
 size="sm";
 className="text-red-500"

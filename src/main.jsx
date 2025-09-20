@@ -10,10 +10,7 @@ import './index.css',const queryClient = new QueryClient({;
     staleTim,e: 5 * 60 * 10o00// 5 minutes;
     retr,y: 1;
      }
-<<<<<<< HEAD
-=======
     retr,y: 1;}
->>>>>>> 9d7313116a64aea01fdf8aaa2b42f67aaee4a840
     };
 });
 const rootElement = document.getElementById('root');function renderApp() {
@@ -38,11 +35,7 @@ const rootElement = document.getElementById('root');function renderApp() {
             <div style="padding: 20pxtext-alig,n: centerfont-famil,y: sans-serif">;
     <h1>Application Error</h1>;
                 <p>${message}</p>;
-<<<<<<< HEAD
-            </div>`,}
-=======
             </div>`}
->>>>>>> 9d7313116a64aea01fdf8aaa2b42f67aaee4a840
 ;
 try {;
     renderApp();

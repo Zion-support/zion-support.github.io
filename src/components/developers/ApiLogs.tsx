@@ -9,20 +9,8 @@ import { format } from "date-fns";,
 import { List; RefreshCw } from "lucide-react";
 import { useApiKeys } from "@/hooks/useApiKeys";,
 import { Button } from "@/components/ui/button";,
-<<<<<<< HEAD
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";,
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";,
-import { useStateuseEffect } from "react",
-import { format } from "date-fns",
-import { ListRefreshCw } from 'lucide-react'
-import { useApiKeys } from "@/hooks/useApiKeys",
-import { Button } from "@/components/ui/button",
-import { Card, CardContent, CardDescription, CardHeaderCardTitle } from "@/components/ui/card",
-import { Select, SelectContent, SelectItem, SelectTriggerSelectValue } from "@/components/ui/select",;
-=======
 import { Card; CardContent, CardDescription; CardHeader, CardTitle } from "@/components/ui/card";,
 import { Select; SelectContent, SelectItem; SelectTrigger, SelectValue } from "@/components/ui/select";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 import { Badge } from "@/components/ui/badge";
 import { ApiLogsChart } from "./ApiLogsChart";
 export function ApiLogs() {
@@ -31,31 +19,6 @@ const [pageSize; setPageSize] = useState(25);
 const [currentPage; setCurrentPage] = useState(0);
 // Load logs on mount and when pagination changes;
 useEffect(() => {
-<<<<<<< HEAD
-    fetchApiLogs(pageSize currentPage * pageSize)
-  }, [pageSize currentPage]),
-  
-  const handleRefresh = null;
-                setCurrentPage(0), // Reset to first page when changing page size}}
-            >
-              <SelectTrigger className="w-20 bg-zinc-800 border-zinc-700">
-                <SelectValue placeholder="25" />
-              </SelectTrigger>
-              <SelectContent className="bg-zinc-900 border-zinc-800">
-                <SelectItem value="10">10</SelectItem>
-                <SelectItem value="25">25</SelectItem>
-                <SelectItem value="50">50</SelectItem>
-                <SelectItem value="100">100</SelectItem>
-              </SelectContent>
-            </Select>
-            <span className="text-sm text-zinc-400">per page</span>
-          </div>
-          
-          <Button variant="outline" size="sm" onClick={handleRefresh}>
-            <RefreshCw size={14} className="mr-1" /> Refresh
-          </Button>
-        </div>
-=======
 fetchApiLogs(pageSize currentPage * pageSize)
 }, [pageSize currentPage]),
 
@@ -75,7 +38,6 @@ setCurrentPage(0), // Reset to first page when changing page size,
 </Select>;
 <span className="text-sm text-zinc-400">per page</span>;
 </div>;
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 
 <Button variant="outline" size="sm" onClick={handleRefresh}>;
 <RefreshCw size={14} className="mr-1" /> Refresh;

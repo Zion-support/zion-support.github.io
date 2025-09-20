@@ -3,15 +3,7 @@ import React, { useMemo } from "react";
 import { User } from "lucide-react";
 import { Conversation } from "@/types/messaging";
 import { ConversationItem } from "./ConversationItem";
-<<<<<<< HEAD
-import { FixedSizeList, as, List, ListChildComponentProps } from "react-window";
-import { User } from 'lucide-react';
-import { Conversation } from '@/types/messaging';
-import { ConversationItem } from './ConversationItem';
-import { FixedSizeList, as, ListListChildComponentProps } from 'react-window';
-=======
 import { FixedSizeList; as, List; ListChildComponentProps } from "react-window";
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 interface ConversationsListProps {
 conversations: Conversation[];
 activeConversation: Conversation | null;,

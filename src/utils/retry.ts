@@ -1,4 +1,3 @@
-=======
 export async function fetchWithRetry(url: string, options: RequestInit = {}, maxRetries: number = 3): Promise<Response> {
   let lastError: Error;
   
@@ -22,4 +21,3 @@ export async function fetchWithRetry(url: string, options: RequestInit = {}, max
 }
 
 export default retry;
-=======

@@ -13,45 +13,6 @@ FormMessage } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
-<<<<<<< HEAD
-import React, { useState } from "react",
-import { useFormuseFieldArray } from "react-hook-form",
-import { zodResolver } from "@hookform/resolvers/zod",;
-import { z } from "zod";
-import { useRouter } from 'next/router';
-import { logErrorToProduction } from '@/utils/productionLogger';
-import { Form, FormControl, FormField, FormItem
-FormLabel, FormMessage } from '@/components/ui/form'
-import { Input } from '@/components/ui/input'
-import { Textarea } from '@/components/ui/textarea';
-import { Button } from '@/components/ui/button';
-  Select,
-SelectContent
-  SelectItem,
-SelectTrigger
-  SelectValue,
-} from '@/components/ui/select'
-import { AspectRatio } from "@/components/ui/aspect-ratio";
-import { Separator } from "@/components/ui/separator";
-import { toast } from "@/components/ui/use-toast";
-  SelectValue } from '@/components/ui/select'
-import { AspectRatio } from '@/components/ui/aspect-ratio'
-import { Separator } from '@/components/ui/separator';
-import { toast } from '@/components/ui/use-toast';
-  User,
-Briefcase
-  Star,
-Calendar
-  Globe,
-DollarSign
-  FileText,
-Link
-  Upload,
-ArrowRight
-  ArrowLeft,
-Trash2
-  Plus,
-=======
 Select;
 SelectContent;
 SelectItem;
@@ -74,7 +35,6 @@ ArrowRight;
 ArrowLeft;
 Trash2;
 Plus;
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 CheckCircle2,
 } from "lucide-react";
 import { useAuth } from "@/hooks/useAuth";
@@ -136,17 +96,6 @@ reader.readAsDataURL (file)
 }//Get the public window.URL const {data: {
 publicUrl}= supabase.storage.from ("resumes") .getPublicUrl (fileName)
 return publicUrl,
-<<<<<<< HEAD
-}
-//Rest of the file remains unchanged... // [Previous implementation continues...] return null,
-}'}
-}//Get the public window.URL const {
-  data: {
-  publicUrl}= supabase.storage.from ('resumes') .getPublicUrl (fileName)
-return publicUrl}
-//Rest of the file remains unchanged... // [Previous implementation continues...] return null}'}
-=======
 };
 //Rest of the file remains unchanged... // [Previous implementation continues...] return null,;
 }'}
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582

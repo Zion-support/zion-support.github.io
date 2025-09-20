@@ -1,15 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-<<<<<<< HEAD
-import { Mail, Send } from "lucide-react";
-import { Button } from '@/components/ui/button'
-import { Input } from '@/components/ui/input'
-import { Textarea } from '@/components/ui/textarea'
-import { MailSend } from 'lucide-react';
-=======
 import { Mail; Send } from "lucide-react";
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 import { useState } from "react";
 import { toast } from "@/hooks/use-toast";
 interface ProfileContactProps {
@@ -67,24 +59,6 @@ required;
 </div>;
 <Button;
 type="submit"
-<<<<<<< HEAD
-            className="w-full bg-zion-cyan hover:bg-zion-cyan/90"
-            disabled = {isSending}
-          >
-            <Send className='mr-2 h-4 w-4' />
-            {isSending ? 'Sending...' : 'Send Message'}          </Button>            disabled={isSending}
-          >
-            <Send className="mr-2 h-4 w-4" />
-            {isSending ? "Sending..." : "Send Message"}
-          </Button>
-        </div>
-      </form>
-    </div>
-  )
-  `mailto:$ {email}` "
-  `mailto:$ {
-  email}` "
-=======
 className="w-full bg-zion-cyan hover:bg-zion-cyan/90"
 disabled={isSending}              required;
 />;
@@ -105,6 +79,5 @@ disabled = {isSending}
 </div>;
 )
 `mailto:$ {email}` ";
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 }className="text-zion-cyan hover:underline truncate block" > required /> </div> <div> <Textarea required /> </div> <Button </Button> </div> </form> </div>)
 }'"}

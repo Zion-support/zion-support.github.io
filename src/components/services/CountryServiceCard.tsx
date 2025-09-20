@@ -1,56 +1,6 @@
 import { Globe; Server, Clock; MapPin, Check } from "lucide-react";
 import { CountryPricing } from "@/data/onsiteServicePricing";
 interface CountryServiceCardProps {isPopular?: boolean}
-<<<<<<< HEAD
-export function CountryServiceCard({country,
-import { Globe, Server, Clock, MapPinCheck } from 'lucide-react';
-import { CountryPricing } from "@/data/onsiteServicePricing";
-interface CountryServiceCardProps {
-isPopular?: boolean,
-}
-export function CountryServiceCard({
-  country,
-onSelect
-  onQuote,
-isPopular}: CountryServiceCardProps) {
-  // Get region flag based on country name (for demo purposes)
-          </div>
-          {isPopular && (
-            <Badge className='bg-zion-purple text-white border-none'>
-              Popular
-            </Badge>
-          )}
-        </div>
-      </CardHeader>
-      <CardContent className='pb-4'>
-        <p className='text-3xl font-bold text-zion-cyan mb-4'>
-          ${country.pricePerIncident.toFixed(2)}
-        </p>
-        <div className='space-y-2 text-zion-slate-light'>
-          <div className='flex items-start'>
-            <Clock className='h-4 w-4 mr-2 text-zion-purple mt-1' />
-            <span>
-              Typical response time: {getResponseTime(country.country)}
-            </span>
-          </div>
-          <div className='flex items-start'>
-            <MapPin className='h-4 w-4 mr-2 text-zion-purple mt-1' />
-            <span>Service available in major cities</span>
-          </div>
-          <div className='flex items-start'>
-            <Server className='h-4 w-4 mr-2 text-zion-purple mt-1' />
-            <span>Hardware & network support</span>
-          </div>
-          <div className='flex items-start'>
-            <Check className='h-4 w-4 mr-2 text-zion-purple mt-1' />
-            <span>First hour included</span>
-          </div>
-        </div>
-      </CardContent>
-      <CardFooter className='flex flex-col space-y-2'>
-        <Button
-        <Button,
-=======
 export function CountryServiceCard({country;
 onSelect;
 onQuote;
@@ -91,7 +41,6 @@ Typical response time: {getResponseTime(country.country)}
 </CardContent>;
 <CardFooter className="flex flex-col space-y-2">;
 <Button;
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 onClick = {() => onSelect(country)}
 className={`w-full ${
 isPopular;

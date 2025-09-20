@@ -83,12 +83,7 @@ estimatedDelivery: "8-12 weeks";,
 supportLevel: "enterprise";,
 marketPrice: "$25;000 - $100;000/month",
 contactInfo: {
-<<<<<<< HEAD
-phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["AI/ML", "Cloud Native", "Microservices", "Kubernetes", "TensorFlow"],
@@ -146,12 +141,7 @@ estimatedDelivery: "12-16 weeks";,
 supportLevel: "enterprise";,
 marketPrice: "$50;000 - $200;000/month",
 contactInfo: {
-<<<<<<< HEAD
-phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["Quantum Algorithms", "Qiskit", "Cirq", "Hybrid Systems"],
@@ -209,12 +199,7 @@ estimatedDelivery: "6-8 weeks";,
 supportLevel: "premium";,
 marketPrice: "$15;000 - $60;000/month",
 contactInfo: {
-<<<<<<< HEAD
-phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["Machine Learning", "NLP", "Deep Learning", "AutoML"],
@@ -272,12 +257,7 @@ estimatedDelivery: "8-10 weeks";,
 supportLevel: "enterprise";,
 marketPrice: "$20;000 - $80;000/month",
 contactInfo: {
-<<<<<<< HEAD
-phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["AI/ML", "Behavioral Analytics", "Threat Intelligence", "SOAR"],
@@ -335,12 +315,7 @@ estimatedDelivery: "10-14 weeks";,
 supportLevel: "enterprise";,
 marketPrice: "$30;000 - $120;000/month",
 contactInfo: {
-<<<<<<< HEAD
-phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["IoT", "3D Modeling", "Real-time Analytics", "AI/ML"],

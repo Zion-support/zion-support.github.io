@@ -7,7 +7,6 @@ const FuturisticAnimatedBackground2029: React.FC = () => {
 };
 
 export default FuturisticAnimatedBackground2029;
-=======
     <div className={`fixed inset-0 pointer-events-none ${className}`}>
       <canvas
         ref={canvasRef}
@@ -29,4 +28,3 @@ export default FuturisticAnimatedBackground2029;
   );
 }
 
-=======

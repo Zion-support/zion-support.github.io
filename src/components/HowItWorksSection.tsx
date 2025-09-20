@@ -51,20 +51,7 @@ export const HowItWorksSection: any = () => {return (
 <//div><///div>;
 import React from "react";
 import { GradientHeading } from "./GradientHeading";
-<<<<<<< HEAD
-import { Check, Handshake, Search, Send } from "lucide-react";
-</div>;
-</div>;
-</div>;
-</div>;
-)};
-<//div><///div>;
-import React from 'react'
-import { GradientHeading } from './GradientHeading'
-import { Check, Handshake, SearchSend } from 'lucide-react';
-=======
 import { Check; Handshake, Search; Send } from "lucide-react";
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 import { cn } from "@/lib/utils";
 import { useTranslation } from "react-i18next";
 interface HowItWorksSectionProps {

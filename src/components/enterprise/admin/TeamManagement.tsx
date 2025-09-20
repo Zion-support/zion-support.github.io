@@ -133,14 +133,7 @@ teamMembers.map ( (member) => (<TableRow key= {
 member.id ";
 }> <TableCell> .join ("")
 }</span> </div> <div> </div> </div> </div> </TableCell> <TableCell> {member.role}</TableCell> <TableCell> <Badge > {member.status}</Badge> </TableCell> <TableCell> {
-<<<<<<< HEAD
-}</span> </div> <div> </div> </div> </div> </TableCell> <TableCell> {
-  member.role}</TableCell> <TableCell> <Badge > {
-  member.status}</Badge> </TableCell> <TableCell> {
-  member.lastActive "
-=======
 member.lastActive ";
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 }</TableCell> <TableCell className="text-right"> onClick={
 () => handleResendInvite (member.email) ";
 }> <Mail className="h-4 w-4 mr-1"/> Resend </Button> className="text-destructive hover:text-destructive"onClick={

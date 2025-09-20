@@ -12,47 +12,6 @@ author: string;
 }
 }
 };
-<<<<<<< HEAD
-export const ContentManagement: React.FC = () => {const [content, setContent] = useState<ContentItem[]>([
-views: number;,
-author: string;};
-export const ContentManagement: React.FC = () => {
-const [content, setContent] = useState<ContentItem[]>([
-{
-id: '1',
-title: 'AI Revolution in Enterprise',
-type: 'blog',
-status: 'published',
-publishDate: '2024-01-15',
-views: 1234,
-author: 'John Doe'},
-{id: '2',
-{
-id: '2',
-title: 'Quantum Computing Solutions',
-type: 'service',
-status: 'published',
-publishDate: '2024-01-14',
-views: 987,
-author: 'Jane Smith'},
-{id: '3',
-{
-id: '3',
-title: 'Digital Transformation Guide',
-type: 'blog',
-status: 'draft',
-publishDate: '2024-01-16',
-views: 0,
-author: 'Mike Johnson'},
-{
-id: '4',
-title: 'Cybersecurity Services',
-type: 'service',
-status: 'scheduled',
-publishDate: '2024-01-17',
-views: 0,
-author: 'Sarah Wilson',;
-=======
 export const ContentManagement: React.FC = () => {const [content; setContent] = useState<ContentItem[]>([
 {,
 id: "1",
@@ -84,7 +43,6 @@ status: "scheduled",
 publishDate: "2024-01-17",
 views: 0;,
 author: "Sarah Wilson",;
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 };
 ]);
 

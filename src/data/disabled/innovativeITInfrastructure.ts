@@ -84,12 +84,7 @@ estimatedDelivery: "8-12 weeks";,
 supportLevel: "enterprise";,
 marketPrice: "$2;500 - $10;000/month",
 contactInfo: {
-<<<<<<< HEAD
-phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["Intel Xeon", "AMD EPYC", "NVIDIA GPUs", "Smart cooling", "Renewable energy systems"],
@@ -144,12 +139,7 @@ estimatedDelivery: "6-10 weeks";,
 supportLevel: "enterprise";,
 marketPrice: "$1;800 - $7;000/month",
 contactInfo: {
-<<<<<<< HEAD
-phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["Kubernetes", "Docker", "Node.js", "Redis", "MQTT", "5G networks"],
@@ -204,12 +194,7 @@ estimatedDelivery: "12-16 weeks";,
 supportLevel: "enterprise";,
 marketPrice: "$3;500 - $15;000/month",
 contactInfo: {
-<<<<<<< HEAD
-phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["Qiskit", "PennyLane", "Cirq", "Classical infrastructure", "Quantum simulators"],
@@ -264,12 +249,7 @@ estimatedDelivery: "10-14 weeks";,
 supportLevel: "enterprise";,
 marketPrice: "$2;200 - $8;500/month",
 contactInfo: {
-<<<<<<< HEAD
-phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["Okta", "Palo Alto", "CrowdStrike", "Splunk", "Microsoft Defender"],
@@ -324,12 +304,7 @@ estimatedDelivery: "10-14 weeks";,
 supportLevel: "enterprise";,
 marketPrice: "$2;800 - $12;000/month",
 contactInfo: {
-<<<<<<< HEAD
-phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["TensorFlow", "PyTorch", "Kubernetes", "Docker", "Prometheus", "Grafana"],

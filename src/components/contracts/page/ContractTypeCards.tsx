@@ -5,24 +5,6 @@ export function ContractTypeCards({
 }
 onStandardClick,}
 onSmartClick}: ContractTypeCardsProps) {return (
-<<<<<<< HEAD
-import { FileTextShieldCheck } from 'lucide-react';
-interface ContractTypeCardsProps {
-onStandardClick: () => void,
-onSmartClick: () => void,
-export function ContractTypeCards({
-  onStandardClick,
-onSmartClick}: ContractTypeCardsProps) {
-  return (
-    <div className='grid md:grid-cols-2 gap-6 mb-10'>
-      <Card>
-        <CardHeader>
-          <CardTitle className='flex items-center gap-2'>
-            <FileText className='h-5 w-5' />            Standard Contracts
-          <CardTitle className="flex items-center gap-2">
-            <FileText className="h-5 w-5" />
-interface ContractTypeCardsProps {
-=======
 <div className="grid md:grid-cols-2 gap-6 mb-10">;
 <Card>;
 <CardHeader>;
@@ -31,7 +13,6 @@ interface ContractTypeCardsProps {
 <CardTitle className="flex items-center gap-2">;
 <FileText className="h-5 w-5" />;
 interface ContractTypeCardsProps {,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 onSmartClick: () => void}
 export function ContractTypeCards({ onStandardClick onSmartClick }: ContractTypeCardsProps) {
 return (

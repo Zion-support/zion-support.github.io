@@ -193,7 +193,6 @@ const CaseStudies: NextPage = () => {
 
   const featuredCaseStudies = caseStudies.filter(study => study.featured)
 
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-blue-50">
       <Head>
@@ -459,7 +458,4 @@ export default function CaseStudiesPage() {
 		</>
 	)
 }
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
 export default CaseStudies
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f

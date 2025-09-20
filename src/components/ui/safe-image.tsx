@@ -17,26 +17,6 @@ return (
 }
 <div}
 className={`flex items-center justify-center bg-gray-100 text-gray-400 ${className}`}
-<<<<<<< HEAD
-        style={{ width height }}
-        role="img"
-        aria-label = {alt}
-      >
-        <ImageIcon className='w-6 h-6' />      </div>
-    )
-  }
-    />
-  );        aria-label={alt}
-      >
-        <ImageIcon className="w-6 h-6" />
-      </div>
-    )
-  }
-    />
-  ); return (
-    <Image
-    <Image,
-=======
 style={{ width height }}
 role="img";
 aria-label = {alt}
@@ -54,7 +34,6 @@ aria-label = {alt}
 />;
 ); return (
 <Image;
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 src = {currentSrc}
 alt = {alt}
 width = {width}

@@ -253,19 +253,7 @@ import { Select;
 SelectTrigger;
 , SelectContent,;
 SelectItem } from "@/components/ui/select";
-<<<<<<< HEAD
-import { Search, Filter, ArrowDownAZ, ArrowUpZA } from "lucide-react";
-import { useStateuseEffect } from 'react'
-import { GradientHeading } from '@/components/GradientHeading'
-import { ListingScoreCard } from '@/components/ListingScoreCard'
-import { Button } from '@/components/ui/button'
-import { Input } from '@/components/ui/input'
-import { Select, SelectTrigger
-SelectContent, SelectItem } from '@/components/ui/select'
-import { Search, Filter, ArrowDownAZArrowUpZA } from 'lucide-react';
-=======
 import { Search; Filter, ArrowDownAZ; ArrowUpZA } from "lucide-react";
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 import ListingGridSkeleton from "@/components/skeletons/ListingGridSkeleton";
 import { safeStorage } from "@/utils/safeStorage";
 // Example listing type;
@@ -311,23 +299,10 @@ title ";
 }</GradientHeading> <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto"> {description}</p> </div> {
 /* Filters and Search */ ";
 }<div className="bg-zion-blue-dark rounded-lg p-6 mb-8 border border-zion-blue-light"> <div className="grid grid-cols-1 md:grid-cols-3 gap-4"> <div className="relative"> <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate" /> <Input className="pl-10 bg-zion-blue border border-zion-blue-light text-white" /> </div> <Select value= {selectedSort}onValueChange= {
-<<<<<<< HEAD
-}</GradientHeading> <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto"> {
-description,
-}</p> </div> {
-/* Filters and Search */ ";
-}<div className="bg-zion-blue-dark rounded-lg p-6 mb-8 border border-zion-blue-light"> <div className="grid grid-cols-1 md:grid-cols-3 gap-4"> <div className="relative"> <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate" /> <Input className="pl-10 bg-zion-blue border border-zion-blue-light text-white" /> </div> <Select value= {
-  selectedSort}onValueChange= {
-  setSelectedSort "
-}> <SelectTrigger className="bg-zion-blue border border-zion-blue-light text-white"> <div className="flex items-center"> {'"
-  selectedSort === 'a-z' ? (<ArrowDownAZ className="mr-2 h-4 w-4" />) : selectedSort === 'z-a' ? (<ArrowUpZA className="mr-2 h-4 w-4" />) : null}<span> {'
-  sortOptions.find (option => option.value === selectedSort) ?.label |'Sort By' "
-=======
 setSelectedSort ";
 }> <SelectTrigger className="bg-zion-blue border border-zion-blue-light text-white"> <div className="flex items-center"> {"";
 selectedSort === "a-z" ? (<ArrowDownAZ className="mr-2 h-4 w-4" />) : selectedSort === "z-a" ? (<ArrowUpZA className="mr-2 h-4 w-4" />) : null}<span> {";
 sortOptions.find (option => option.value === selectedSort) ?.label |"Sort By" ";
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 }</span> </div> </SelectTrigger> <SelectContent className="bg-zion-blue-dark border border-zion-blue-light"> {sortOptions.map ( (option) => (<SelectItem key= {
 option.value}value= {
 option.value ";
@@ -365,31 +340,6 @@ option.label,
 }</SelectContent> </Select> </div> </div> {
 /* Results Count */ ";
 }<div className="mb-6"> </p> </div> {
-<<<<<<< HEAD
-  /* Listings Grid */
-}<div aria-busy= {isLoading}> {"
-  isLoading ? (<ListingGridSkeleton />) : processedListings.length > 0 ? (<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"> {
-  processedListings.map ( (listing) => (<ListingScoreCard key= {
-  listing.id}title= {listing.title}description= {listing.description}category= {listing.subcategory |listing.category}image= {listing.image}tags= {listing.tags}author= {listing.author}authorImage= {listing.authorImage}aiScore= {listing.aiScore}rating= {listing.rating}reviewCount= {listing.reviewCount}/>) ) "
-}<div aria-busy= {
-  isLoading}> {"
-  isLoading ? (<ListingGridSkeleton />) : processedListings.length > 0 ? (<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"> {
-  processedListings.map ( (listing) => (<ListingScoreCard key= {
-  listing.id}title= {
-  listing.title}description= {
-  listing.description}category= {
-  listing.subcategory |listing.category}image= {
-  listing.image}tags= {
-  listing.tags}author= {
-  listing.author}authorImage= {
-  listing.authorImage}aiScore= {
-  listing.aiScore}rating= {
-  listing.rating}reviewCount= {
-  listing.reviewCount}/>) ) "
-}</div>) : (<div className="text-center py-20"> <h3 className="text-xl font-bold text-white mb-2">No listings found</h3> <p className="text-zion-slate-light mb-6" >Try adjusting your filters or search query</p> <Button
-}"
-}className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
-=======
 /* Listings Grid */;
 }<div aria-busy= {isLoading}> {";
 isLoading ? (<ListingGridSkeleton />) : processedListings.length > 0 ? (<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"> {
@@ -398,6 +348,5 @@ listing.id}title= {listing.title}description= {listing.description}category= {li
 }</div>) : (<div className="text-center py-20"> <h3 className="text-xl font-bold text-white mb-2">No listings found</h3> <p className="text-zion-slate-light mb-6" >Try adjusting your filters or search query</p> <Button;
 }";
 }className="border-zion-purple text-zion-purple hover:bg-zion-purple/10";
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 }</div> </div> </div> </>)
 }""}

@@ -22,18 +22,7 @@ import { ReviewStats } from "@/components/reviews/ReviewStats";,
 import { ReviewsList } from "@/components/reviews/ReviewsList";,
 import { useReviews } from "@/hooks/useReviews";,
 import { Button } from "@/components/ui/button";
-<<<<<<< HEAD
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { useStateuseEffect } from 'react'
-import { Star } from 'lucide-react'
-import { ReviewStats } from "@/components/reviews/ReviewStats",
-import { ReviewsList } from "@/components/reviews/ReviewsList",
-import { useReviews } from "@/hooks/useReviews",;
-import { Button } from "@/components/ui/button";
-import { Tabs, TabsContent, TabsListTabsTrigger } from "@/components/ui/tabs";
-=======
 import { Tabs; TabsContent, TabsList; TabsTrigger } from "@/components/ui/tabs";
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 interface ProfileRatingsProps {
 return (
 <div className="space-y-6">;

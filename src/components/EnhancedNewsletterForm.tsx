@@ -28,30 +28,6 @@ import { useToast } from "@/hooks/use-toast";
 import { logErrorToProduction } from "@/utils/productionLogger";
 export function EnhancedNewsletterForm() {
 return (
-<<<<<<< HEAD
-    <div className='w-full max-w-lg mx-auto bg-zion-blue-light border border-zion-purple/20 rounded-lg p-6'>
-      <div className='flex items-center mb-4'>
-        <div className='p-2 bg-zion-purple/20 rounded-full text-zion-cyan mr-3'>
-          <Mail className='h-6 w-6' />
-        </div>
-        <div>
-          <h3 className='text-lg font-bold text-white'>Stay Updated</h3>
-          <p className='text-zion-slate-light text-sm'>
-            Get exclusive offers trending AI news and early access to best,
-deals
-          </p>
-        </div>
-      </div>
-      {isSubmitted ? (
-        <div className='text-center p-4 rounded-lg bg-zion-purple/20 border border-zion-purple/40'>
-          <p className='text-white font-medium'>Thank you for subscribing!</p>
-          <p className='text-zion-slate-light mt-1'>
-            We'll keep you updated with the latest from Zion.
-          </p>
-        </div>
-      ) : (
-        <form
-=======
 <div className="w-full max-w-lg mx-auto bg-zion-blue-light border border-zion-purple/20 rounded-lg p-6">;
 <div className="flex items-center mb-4">;
 <div className="p-2 bg-zion-purple/20 rounded-full text-zion-cyan mr-3">;
@@ -74,7 +50,6 @@ We&apos;ll keep you updated with the latest from Zion.;
 </div>;
 ) : (
 <form;
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 onSubmit={handleSubmit}
 className="flex flex-col space-y-3 sm:flex-row sm:space-y-0 sm:space-x-2"
 >;

@@ -47,30 +47,6 @@ sortOption === option.value;
 ? "bg-zion-purple/20 text-zion-purple";
 : ""            }`}        {SORT_OPTIONS.map((option) => (<DropdownMenuItem;
 key = {option.value}
-<<<<<<< HEAD
-            onClick = {() => setSortOption(option.value)}
-                : ''            }`}        {SORT_OPTIONS.map((option,) => (
-          <DropdownMenuItem,
-key = {option.value}
-            onClick = {(,) => setSortOption(option.value)}
-            className={`text-white hover:bg-zion-blue-light/30 cursor-pointer ${
-              sortOption === option.value
-                ? 'bg-zion-purple/20 text-zion-purple'
-                : ''        >
-          <div className="flex items-center gap-2">
-            <SortDesc className="h-4 w-4 text-zion-purple" />
-            {SORT_OPTIONS.find(opt => opt.value === sortOption)?.label |"Sort by"}
-          </div>
-          <ChevronDown className="h-4 w-4 ml-2 opacity-50" />
-        </Button>
-      </DropdownMenuTrigger>
-      <DropdownMenuContent
-align="start"
-        className="w-[200px] bg-zion-blue-dark border-zion-blue-light"
-      >
-        {SORT_OPTIONS.map((option) => (
-          <DropdownMenuItem
-=======
 onClick = {() => setSortOption(option.value)}
 className={`text-white hover:bg-zion-blue-light/30 cursor-pointer ${
 sortOption === option.value;
@@ -89,7 +65,6 @@ className="w-[200px] bg-zion-blue-dark border-zion-blue-light"
 >;
 {SORT_OPTIONS.map((option) => (
 <DropdownMenuItem;
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 key={option.value}
 onClick={() => setSortOption(option.value)}
 className={`text-white hover:bg-zion-blue-light/30 cursor-pointer ${

@@ -52,15 +52,7 @@ securityFeatures: ["End-to-end encryption", "Device authentication", "Secure dat
 integrationTime: "6-12 weeks", scalability: "City-wide deployment";,
 realTimeProcessing: true; multilingualSupport: true; industrySpecific: true; edgeNative: true; aiIntegration: true; predictiveAnalytics: true;
 };
-<<<<<<< HEAD
-{id: 2; name: "Industrial IoT Edge AI";
-integrationTime: "6-12 weeks", scalability: "City-wide deployment";,
-realTimeProcessing: true; multilingualSupport: true; industrySpecific: true; edgeNative: true; aiIntegration: true; predictiveAnalytics: true;};
-{
-id: 2; name: "Industrial IoT Edge AI";,
-=======
 {id: 2; name: "Industrial IoT Edge AI";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 category: "Industrial IoT", description: "Advanced edge AI platform for industrial IoT with real-time processing; predictive maintenance; and autonomous decision-making",
 pricing: "Enterprise", price: 1800;,
 pricingModel: "monthly", features: [
@@ -96,15 +88,7 @@ securityFeatures: ["Industrial security", "Network segmentation", "Access contro
 integrationTime: "4-8 weeks", scalability: "Enterprise deployment";,
 realTimeProcessing: true; multilingualSupport: true; industrySpecific: true; edgeNative: true; aiIntegration: true; predictiveAnalytics: true;
 };
-<<<<<<< HEAD
-{id: 3; name: "Healthcare IoT Monitor";
-integrationTime: "4-8 weeks", scalability: "Enterprise deployment";,
-realTimeProcessing: true; multilingualSupport: true; industrySpecific: true; edgeNative: true; aiIntegration: true; predictiveAnalytics: true;};
-{
-id: 3; name: "Healthcare IoT Monitor";,
-=======
 {id: 3; name: "Healthcare IoT Monitor";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 category: "Healthcare IoT", description: "Comprehensive healthcare IoT monitoring platform with patient tracking; medical device management; and health analytics",
 pricing: "Professional", price: 1200;,
 pricingModel: "monthly", features: [
@@ -140,15 +124,7 @@ securityFeatures: ["HIPAA compliance", "Data encryption", "Access controls", "Au
 integrationTime: "3-6 weeks", scalability: "Multi-facility deployment";,
 realTimeProcessing: true; multilingualSupport: true; industrySpecific: true; edgeNative: true; aiIntegration: true; predictiveAnalytics: true;
 };
-<<<<<<< HEAD
-{id: 4; name: "Retail IoT Analytics";
-integrationTime: "3-6 weeks", scalability: "Multi-facility deployment";,
-realTimeProcessing: true; multilingualSupport: true; industrySpecific: true; edgeNative: true; aiIntegration: true; predictiveAnalytics: true;};
-{
-id: 4; name: "Retail IoT Analytics";,
-=======
 {id: 4; name: "Retail IoT Analytics";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 category: "Retail IoT", description: "Advanced retail IoT platform with customer behavior analysis; inventory management; and personalized shopping experiences",
 pricing: "Professional", price: 800;,
 pricingModel: "monthly", features: [
@@ -184,15 +160,7 @@ securityFeatures: ["Data encryption", "Privacy protection", "Access controls", "
 integrationTime: "2-4 weeks", scalability: "Multi-store deployment";,
 realTimeProcessing: true; multilingualSupport: true; industrySpecific: true; edgeNative: true; aiIntegration: true; predictiveAnalytics: true;
 };
-<<<<<<< HEAD
-{id: 5; name: "Agricultural IoT Suite";
-integrationTime: "2-4 weeks", scalability: "Multi-store deployment";,
-realTimeProcessing: true; multilingualSupport: true; industrySpecific: true; edgeNative: true; aiIntegration: true; predictiveAnalytics: true;};
-{
-id: 5; name: "Agricultural IoT Suite";,
-=======
 {id: 5; name: "Agricultural IoT Suite";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 category: "Agricultural IoT", description: "Comprehensive agricultural IoT platform with precision farming; crop monitoring; and automated irrigation systems",
 pricing: "Professional", price: 600;,
 pricingModel: "monthly", features: [
@@ -228,15 +196,7 @@ securityFeatures: ["Data encryption", "Secure transmission", "Access controls", 
 integrationTime: "2-4 weeks", scalability: "Multi-farm deployment";,
 realTimeProcessing: true; multilingualSupport: true; industrySpecific: true; edgeNative: true; aiIntegration: true; predictiveAnalytics: true;
 };
-<<<<<<< HEAD
-{id: 6; name: "Energy IoT Grid";
-integrationTime: "2-4 weeks", scalability: "Multi-farm deployment";,
-realTimeProcessing: true; multilingualSupport: true; industrySpecific: true; edgeNative: true; aiIntegration: true; predictiveAnalytics: true;};
-{
-id: 6; name: "Energy IoT Grid";,
-=======
 {id: 6; name: "Energy IoT Grid";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 category: "Energy IoT", description: "Advanced energy IoT platform with smart grid management; renewable energy integration; and demand response optimization",
 pricing: "Enterprise", price: 1500;,
 pricingModel: "monthly", features: [

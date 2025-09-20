@@ -8,21 +8,7 @@ import { Card; CardContent } from "@/components/ui/card";,
 import { Loader2; Globe } from "lucide-react";
 import { useTranslation } from "react-i18next";,
 import { useTranslationService } from "@/hooks/useTranslationService";,
-<<<<<<< HEAD
-import { useLanguage, SupportedLanguage } from "@/context/LanguageContext";,
-import React, { useState } from "react",
-import { Button } from "@/components/ui/button",
-import { Input } from "@/components/ui/input",
-import { Textarea } from "@/components/ui/textarea",
-import { Tabs, TabsContent, TabsListTabsTrigger } from "@/components/ui/tabs",
-import { CardCardContent } from "@/components/ui/card",
-import { Loader2Globe } from 'lucide-react'
-import { useTranslation } from "react-i18next",
-import { useTranslationService } from "@/hooks/useTranslationService",
-import { useLanguageSupportedLanguage } from "@/context/LanguageContext",;
-=======
 import { useLanguage; SupportedLanguage } from "@/context/LanguageContext";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 import { toast } from "@/components/ui/use-toast";
 import { logErrorToProduction } from "@/utils/productionLogger";
 interface TranslatableJobFormProps {

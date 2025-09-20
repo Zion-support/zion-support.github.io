@@ -95,12 +95,7 @@ targetAudience: ["Research institutions", "Tech giants", "Defense", "Healthcare"
 tags: ["Neuromorphic", "Brain-Inspired", "AI", "Energy Efficient"],
 contactInfo: {
 phone: "+1 302 464 0950";
-<<<<<<< HEAD
-email: "kleber@ziontechgroup.com";
-website: "https://ziontechgroup.com/brain-inspired-ai";
-=======
 email: "kleber@ziontechgroup.com";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 website: "https://ziontechgroup.com/brain-inspired-ai";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$8;000-30;000/month",
@@ -145,12 +140,7 @@ targetAudience: ["Healthcare", "Research institutions", "Assistive technology", 
 tags: ["BCI", "Neural Control", "Cognitive Enhancement", "Assistive Tech"],
 contactInfo: {
 phone: "+1 302 464 0950";
-<<<<<<< HEAD
-email: "kleber@ziontechgroup.com";
-website: "https://ziontechgroup.com/neural-control-platform";
-=======
 email: "kleber@ziontechgroup.com";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 website: "https://ziontechgroup.com/neural-control-platform";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$3;500-12;000/month",
@@ -195,12 +185,7 @@ targetAudience: ["Biotech companies", "Pharmaceuticals", "Research institutions"
 tags: ["Synthetic Biology", "Bio-Design", "CRISPR", "Protein Engineering"],
 contactInfo: {
 phone: "+1 302 464 0950";
-<<<<<<< HEAD
-email: "kleber@ziontechgroup.com";
-website: "https://ziontechgroup.com/bio-design-studio";
-=======
 email: "kleber@ziontechgroup.com";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 website: "https://ziontechgroup.com/bio-design-studio";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$5;000-20;000/month",
@@ -245,12 +230,7 @@ targetAudience: ["Manufacturing", "Healthcare", "Logistics", "Agriculture"],
 tags: ["Robotics", "Autonomous Systems", "AI", "Human-Robot Collaboration"],
 contactInfo: {
 phone: "+1 302 464 0950";
-<<<<<<< HEAD
-email: "kleber@ziontechgroup.com";
-website: "https://ziontechgroup.com/autonomous-robotics";
-=======
 email: "kleber@ziontechgroup.com";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 website: "https://ziontechgroup.com/autonomous-robotics";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$2;800-8;000/month",
@@ -296,12 +276,7 @@ targetAudience: ["Manufacturing", "Aerospace", "Automotive", "Construction"],
 tags: ["Smart Materials", "Material Science", "AI Design", "Performance Optimization"],
 contactInfo: {
 phone: "+1 302 464 0950";
-<<<<<<< HEAD
-email: "kleber@ziontechgroup.com";
-website: "https://ziontechgroup.com/smart-materials-platform";
-=======
 email: "kleber@ziontechgroup.com";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 website: "https://ziontechgroup.com/smart-materials-platform";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$599-1;999/month",
@@ -347,12 +322,7 @@ targetAudience: ["Energy companies", "Research institutions", "Government", "Uti
 tags: ["Fusion Energy", "Clean Energy", "Plasma Physics", "Energy Management"],
 contactInfo: {
 phone: "+1 302 464 0950";
-<<<<<<< HEAD
-email: "kleber@ziontechgroup.com";
-website: "https://ziontechgroup.com/fusion-energy-management";
-=======
 email: "kleber@ziontechgroup.com";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 website: "https://ziontechgroup.com/fusion-energy-management";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$4;500-15;000/month",
@@ -398,12 +368,7 @@ targetAudience: ["Transportation companies", "Government", "Infrastructure", "Pa
 tags: ["Hyperloop", "High-Speed Transport", "Vacuum Technology", "Transportation"],
 contactInfo: {
 phone: "+1 302 464 0950";
-<<<<<<< HEAD
-email: "kleber@ziontechgroup.com";
-website: "https://ziontechgroup.com/hyperloop-management";
-=======
 email: "kleber@ziontechgroup.com";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 website: "https://ziontechgroup.com/hyperloop-management";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$3;200-10;000/month",
@@ -449,12 +414,7 @@ targetAudience: ["Government", "Financial services", "Healthcare", "Defense"],
 tags: ["Quantum Communication", "Quantum Encryption", "Network Security", "Quantum Key Distribution"],
 contactInfo: {
 phone: "+1 302 464 0950";
-<<<<<<< HEAD
-email: "kleber@ziontechgroup.com";
-website: "https://ziontechgroup.com/quantum-communication";
-=======
 email: "kleber@ziontechgroup.com";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 website: "https://ziontechgroup.com/quantum-communication";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$5;500-20;000/month",
@@ -500,12 +460,7 @@ targetAudience: ["Manufacturing", "Aerospace", "Biomedical", "Consumer goods"],
 tags: ["4D Printing", "Smart Materials", "Shape-Shifting", "Manufacturing"],
 contactInfo: {
 phone: "+1 302 464 0950";
-<<<<<<< HEAD
-email: "kleber@ziontechgroup.com";
-website: "https://ziontechgroup.com/4d-printing-platform";
-=======
 email: "kleber@ziontechgroup.com";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 website: "https://ziontechgroup.com/4d-printing-platform";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$899-2;999/month",
@@ -551,12 +506,7 @@ targetAudience: ["Gamers", "Game developers", "Healthcare", "Research"],
 tags: ["Neural Gaming", "Brain-Computer Interface", "Immersive Gaming", "Cognitive Training"],
 contactInfo: {
 phone: "+1 302 464 0950";
-<<<<<<< HEAD
-email: "kleber@ziontechgroup.com";
-website: "https://ziontechgroup.com/neural-gaming-platform";
-=======
 email: "kleber@ziontechgroup.com";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 website: "https://ziontechgroup.com/neural-gaming-platform";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$399-1;299/month",

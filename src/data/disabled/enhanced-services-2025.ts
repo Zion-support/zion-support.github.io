@@ -42,12 +42,7 @@ website: string;};
 
 const contactInfo = {;
 mobile: "+1 302 464 0950";
-<<<<<<< HEAD
-email: "kleber@ziontechgroup.com";
-address: "364 E Main St STE 1008 Middletown DE 19709";
-=======
 email: "kleber@ziontechgroup.com";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 address: "364 E Main St STE 1008 Middletown DE 19709";,
 website: "https://ziontechgroup.com"};
 export const enhancedServices2025: EnhancedService[] = [
@@ -60,10 +55,6 @@ category: "micro-saas";
 pricing: {,
 monthly: "$199/month";,
 yearly: "$1;999/year",
-<<<<<<< HEAD
-enterprise: "Custom pricing";
-=======
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 enterprise: "Custom pricing";,
 setup: "$299 one-time"};
 features: [
@@ -108,10 +99,6 @@ category: "micro-saas";
 pricing: {,
 monthly: "$299/month";,
 yearly: "$2;999/year",
-<<<<<<< HEAD
-enterprise: "Custom pricing";
-=======
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 enterprise: "Custom pricing";,
 setup: "$499 one-time"};
 features: [
@@ -155,12 +142,7 @@ description: "Intelligent invoice management platform that automates the entire 
 category: "micro-saas";
 pricing: {
 monthly: "$79/month";
-<<<<<<< HEAD
-yearly: "$799/year";
-enterprise: "Custom pricing";
-=======
 yearly: "$799/year";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 enterprise: "Custom pricing";,
 setup: "$199 one-time"};
 features: [
@@ -205,10 +187,6 @@ category: "micro-saas";
 pricing: {,
 monthly: "$149/month";,
 yearly: "$1;499/year",
-<<<<<<< HEAD
-enterprise: "Custom pricing";
-=======
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 enterprise: "Custom pricing";,
 setup: "$299 one-time"};
 features: [
@@ -253,10 +231,6 @@ category: "micro-saas";
 pricing: {,
 monthly: "$199/month";,
 yearly: "$1;999/year",
-<<<<<<< HEAD
-enterprise: "Custom pricing";
-=======
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 enterprise: "Custom pricing";,
 setup: "$399 one-time"};
 features: [
@@ -302,10 +276,6 @@ category: "it-services";,
 pricing: {,
 monthly: "$1;500/month",
 yearly: "$15;000/year",
-<<<<<<< HEAD
-enterprise: "Custom pricing";
-=======
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 enterprise: "Custom pricing";,
 setup: "$2;000 one-time"},
 features: [
@@ -351,10 +321,6 @@ category: "it-services";
 pricing: {,
 monthly: "$800/month";,
 yearly: "$8;000/year",
-<<<<<<< HEAD
-enterprise: "Custom pricing";
-=======
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 enterprise: "Custom pricing";,
 setup: "$1;500 one-time"},
 features: [
@@ -399,10 +365,6 @@ category: "it-services";
 pricing: {,
 monthly: "$500/month";,
 yearly: "$5;000/year",
-<<<<<<< HEAD
-enterprise: "Custom pricing";
-=======
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 enterprise: "Custom pricing";,
 setup: "$1;000 one-time"},
 features: [
@@ -448,10 +410,6 @@ category: "ai-services";,
 pricing: {,
 monthly: "$2;000/month",
 yearly: "$20;000/year",
-<<<<<<< HEAD
-enterprise: "Custom pricing";
-=======
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 enterprise: "Custom pricing";,
 setup: "$5;000 one-time"},
 features: [
@@ -496,10 +454,6 @@ category: "ai-services";,
 pricing: {,
 monthly: "$3;500/month",
 yearly: "$35;000/year",
-<<<<<<< HEAD
-enterprise: "Custom pricing";
-=======
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 enterprise: "Custom pricing";,
 setup: "$8;000 one-time"},
 features: [
@@ -544,10 +498,6 @@ category: "ai-services";,
 pricing: {,
 monthly: "$4;000/month",
 yearly: "$40;000/year",
-<<<<<<< HEAD
-enterprise: "Custom pricing";
-=======
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 enterprise: "Custom pricing";,
 setup: "$10;000 one-time"},
 features: [
@@ -593,10 +543,6 @@ category: "emerging-tech";,
 pricing: {,
 monthly: "$10;000/month",
 yearly: "$100;000/year",
-<<<<<<< HEAD
-enterprise: "Custom pricing";
-=======
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 enterprise: "Custom pricing";,
 setup: "$25;000 one-time"},
 features: [
@@ -641,10 +587,6 @@ category: "emerging-tech";,
 pricing: {,
 monthly: "$5;000/month",
 yearly: "$50;000/year",
-<<<<<<< HEAD
-enterprise: "Custom pricing";
-=======
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 enterprise: "Custom pricing";,
 setup: "$15;000 one-time"},
 features: [

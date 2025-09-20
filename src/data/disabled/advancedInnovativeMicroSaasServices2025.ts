@@ -91,12 +91,6 @@ contactInfo: {
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
-<<<<<<< HEAD
-websiteUrl: "https://ziontechgroup.com/ai-autonomous-business-operations";
-email: "kleber@ziontechgroup.com";,
-website: "https://ziontechgroup.com"};
-=======
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 websiteUrl: "https://ziontechgroup.com/ai-autonomous-business-operations";,
 technologyStack: ["Python", "TensorFlow", "Kubernetes", "AWS", "PostgreSQL", "Redis", "Apache Kafka"],
 integrationCapabilities: ["ERP Systems", "CRM Platforms", "Payment Gateways", "Analytics Tools", "Communication Platforms"],
@@ -157,12 +151,6 @@ contactInfo: {
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
-<<<<<<< HEAD
-websiteUrl: "https://ziontechgroup.com/quantum-enhanced-ai";
-email: "kleber@ziontechgroup.com";,
-website: "https://ziontechgroup.com"};
-=======
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 websiteUrl: "https://ziontechgroup.com/quantum-enhanced-ai";,
 technologyStack: ["Qiskit", "Cirq", "PennyLane", "Python", "C++", "CUDA", "TensorFlow"],
 integrationCapabilities: ["Cloud Quantum Services", "HPC Clusters", "AI Frameworks", "Research Tools", "Simulation Software"],
@@ -223,12 +211,6 @@ contactInfo: {
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
-<<<<<<< HEAD
-websiteUrl: "https://ziontechgroup.com/advanced-cybersecurity-ai";
-email: "kleber@ziontechgroup.com";,
-website: "https://ziontechgroup.com"};
-=======
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 websiteUrl: "https://ziontechgroup.com/advanced-cybersecurity-ai";,
 technologyStack: ["Python", "TensorFlow", "Elasticsearch", "Kafka", "Redis", "Docker", "Kubernetes"],
 integrationCapabilities: ["SIEM Systems", "EDR Solutions", "Firewalls", "Identity Providers", "Cloud Platforms"],
@@ -289,12 +271,6 @@ contactInfo: {
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
-<<<<<<< HEAD
-websiteUrl: "https://ziontechgroup.com/iot-edge-ai";
-email: "kleber@ziontechgroup.com";,
-website: "https://ziontechgroup.com"};
-=======
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 websiteUrl: "https://ziontechgroup.com/iot-edge-ai";,
 technologyStack: ["Python", "TensorFlow Lite", "MQTT", "Node.js", "Docker", "Kubernetes", "Redis"],
 integrationCapabilities: ["IoT Devices", "Cloud Platforms", "Analytics Tools", "Business Systems", "Mobile Apps"],
@@ -355,12 +331,6 @@ contactInfo: {
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
-<<<<<<< HEAD
-websiteUrl: "https://ziontechgroup.com/blockchain-defi";
-email: "kleber@ziontechgroup.com";,
-website: "https://ziontechgroup.com"};
-=======
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 websiteUrl: "https://ziontechgroup.com/blockchain-defi";,
 technologyStack: ["Solidity", "Web3.js", "React", "Node.js", "PostgreSQL", "Redis", "Ethereum"],
 integrationCapabilities: ["Multiple Blockchains", "DEX Protocols", "Wallet Providers", "Oracle Services", "Analytics Tools"],
@@ -421,12 +391,6 @@ contactInfo: {
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
-<<<<<<< HEAD
-websiteUrl: "https://ziontechgroup.com/ai-content-creation";
-email: "kleber@ziontechgroup.com";,
-website: "https://ziontechgroup.com"};
-=======
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 websiteUrl: "https://ziontechgroup.com/ai-content-creation";,
 technologyStack: ["OpenAI GPT", "Claude", "Python", "React", "Node.js", "PostgreSQL", "Redis"],
 integrationCapabilities: ["CMS Platforms", "Social Media APIs", "Email Marketing Tools", "Analytics Platforms", "SEO Tools"],
@@ -487,12 +451,6 @@ contactInfo: {
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
-<<<<<<< HEAD
-websiteUrl: "https://ziontechgroup.com/autonomous-data-management";
-email: "kleber@ziontechgroup.com";,
-website: "https://ziontechgroup.com"};
-=======
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 websiteUrl: "https://ziontechgroup.com/autonomous-data-management";,
 technologyStack: ["Python", "Apache Airflow", "Apache Kafka", "PostgreSQL", "Redis", "Docker", "Kubernetes"],
 integrationCapabilities: ["Data Sources", "Analytics Tools", "Business Systems", "Cloud Platforms", "Compliance Tools"],
@@ -553,12 +511,6 @@ contactInfo: {
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
-<<<<<<< HEAD
-websiteUrl: "https://ziontechgroup.com/advanced-it-automation";
-email: "kleber@ziontechgroup.com";,
-website: "https://ziontechgroup.com"};
-=======
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 websiteUrl: "https://ziontechgroup.com/advanced-it-automation";,
 technologyStack: ["Terraform", "Ansible", "Kubernetes", "Docker", "Python", "Go", "AWS/Azure/GCP"],
 integrationCapabilities: ["Cloud Providers", "Monitoring Tools", "Security Tools", "CI/CD Platforms", "Business Systems"],
@@ -619,12 +571,6 @@ contactInfo: {
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
-<<<<<<< HEAD
-websiteUrl: "https://ziontechgroup.com/ai-customer-experience";
-email: "kleber@ziontechgroup.com";,
-website: "https://ziontechgroup.com"};
-=======
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 websiteUrl: "https://ziontechgroup.com/ai-customer-experience";,
 technologyStack: ["Python", "TensorFlow", "React", "Node.js", "PostgreSQL", "Redis", "Kafka"],
 integrationCapabilities: ["CRM Systems", "E-commerce Platforms", "Communication Tools", "Analytics Platforms", "Marketing Tools"],

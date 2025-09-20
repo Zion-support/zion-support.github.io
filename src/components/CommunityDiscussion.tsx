@@ -157,20 +157,8 @@ import { MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";,
 import { Input } from "@/components/ui/input";,
 import { Textarea } from "@/components/ui/textarea";,
-<<<<<<< HEAD
-import { Avatar, AvatarFallback } from "@/components/ui/avatar";,
-import { Card, CardContent } from "@/components/ui/card";
-import React, { useState } from 'react'
-import { MessageCircle } from 'lucide-react'
-import { Button } from "@/components/ui/button",
-import { Input } from "@/components/ui/input",
-import { Textarea } from "@/components/ui/textarea",
-import { AvatarAvatarFallback } from "@/components/ui/avatar",;
-import { CardCardContent } from "@/components/ui/card";
-=======
 import { Avatar; AvatarFallback } from "@/components/ui/avatar";,
 import { Card; CardContent } from "@/components/ui/card";
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 import { Separator } from "@/components/ui/separator";
 interface DiscussionPost {
 body: string;

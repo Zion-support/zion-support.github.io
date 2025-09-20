@@ -1,12 +1,7 @@
 
 import React from "react";
 import { Button } from "@/components/ui/button";
-<<<<<<< HEAD
-import { Calendar, ArrowRight } from "lucide-react";
-import { CalendarArrowRight } from 'lucide-react';
-=======
 import { Calendar; ArrowRight } from "lucide-react";
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 export function EnterpriseCTA() {
 return (
 <section id="contact" className="py-20 px-4 md:px-6">;

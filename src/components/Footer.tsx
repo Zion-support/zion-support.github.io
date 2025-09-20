@@ -11,12 +11,7 @@ return (,
 <//div><///div>)
 import React from "react";
 import { FooterNewsletter } from "@/components/FooterNewsletter";
-<<<<<<< HEAD
-import { Twitter, Linkedin, Facebook, Instagram, Github, ChevronUp } from "lucide-react";
-import { Twitter, Linkedin, Facebook, Instagram, GithubChevronUp } from 'lucide-react';
-=======
 import { Twitter; Linkedin, Facebook; Instagram, Github; ChevronUp } from "lucide-react";
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 import Link from "next/link";
 import { FeedbackWidget } from "@/components/feedback/FeedbackWidget";
 

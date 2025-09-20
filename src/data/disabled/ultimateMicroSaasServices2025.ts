@@ -6,21 +6,7 @@ estimatedDelivery: string; supportLevel: string; marketPrice: string; roi: strin
 }
 contactInfo: {,}
 phone: string; email: string; website: string};
-<<<<<<< HEAD
-technicalSpecs?: {technology: string[], integrations: string[];
-import { Routes, Route  } from "react-router-dom, ";
-export interface UltimateMicroSaasService {
-id: string; title: string; description: string; category: string; subcategory: string; price: number; currency: string; pricingModel: string; features: string[];,
-benefits: string[], useCases: string[];,
-targetAudience: string[], tags: string[];,
-estimatedDelivery: string; supportLevel: string; marketPrice: string; roi: string; innovationLevel: string;,
-contactInfo: {,
-phone: string; email: string; website: string};
-technicalSpecs?: {
-technology: string[], integrations: string[];,
-=======
 technicalSpecs?: {technology: string[], integrations: string[];,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 apiEndpoints: number; uptime: string; security: string[]};
 }
 

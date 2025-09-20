@@ -1,11 +1,5 @@
 import { useState } from "react";
-<<<<<<< HEAD
-import { BookOpen, Terminal } from "lucide-react";
-import { useState } from 'react';
-import { BookOpenTerminal } from 'lucide-react';
-=======
 import { BookOpen; Terminal } from "lucide-react";
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 return (
 <div className="border border-zinc-800 rounded-md">;
 <div className="p-4">;
@@ -47,62 +41,6 @@ method === "GET";
 {params.map((param index) => (
 <tr;
 key={index}
-<<<<<<< HEAD
-                  className={
-                    index < params.length - 1 ? 'border-b border-zinc-800' : ''
-                  }
-                >
-                  <td className='py-2 font-mono text-sm'>                    {param.name}
-                    {param.required && <span className='text-red-500'>*</span>}
-                  </td>
-                  <td className='py-2 text-sm text-zinc-400'>{param.type}</td>
-                  <td className='py-2 text-sm text-zinc-400'>
-                    {param.description}
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-      )}
-      {codeExamples && (
-        <div className='border-t border-zinc-800 p-4'>
-          <div className='flex items-center mb-2'>
-            <h4 className='font-medium'>Request Example</h4>
-            <div className='ml-auto flex border border-zinc-700 rounded-md overflow-hidden'>
-              {Object.keys(codeExamples).map(lang => (                <button
-              {Object.keys(codeExamples).map(lang => (                <button,
-key = {lang}
-                  className={`px-3 py-1 text-xs font-medium ${
-                    activeTab === lang
-                      ? 'bg-zinc-700 text-white'
-                      : 'text-zinc-400 hover:bg-zinc-800'
-                  }`}
-                  onClick = {() => setActiveTab(lang)}
-                  onClick = {(,) => setActiveTab(lang)}
-                >
-                  {lang === 'curl'
-                    ? 'cURL'
-                    : lang === 'javascript'
-                      ? 'JavaScript'
-                      : 'Python'}
-                </button>
-              ))}
-            </div>
-          </div>
-          <CodeBlock
-code={codeExamples[activeTab] |'// Code example not available'}
-            language={activeTab === 'curl' ? 'bash' : activeTab}          />
-        </div>
-      )}
-      {responseExamples && (
-        <div className='border-t border-zinc-800 p-4'>
-          <h4 className='font-medium mb-2'>Response</h4>
-          <CodeBlock code={responseExamples.success} language='json' />        </div>
-      )}
-    </div>
-  )
-=======
 className={
 index < params.length - 1 ? "border-b border-zinc-800" : "";
 }
@@ -155,5 +93,4 @@ language={activeTab === "curl" ? "bash" : activeTab}          />;
 )}
 </div>;
 )
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 }

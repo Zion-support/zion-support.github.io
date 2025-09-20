@@ -201,24 +201,7 @@ field.value ";
 field.value ";
 }> <FormControl> <SelectTrigger> <SelectValue placeholder="Select duration" /> </SelectTrigger> </FormControl> <SelectContent> <SelectItem value="15" >15 minutes</SelectItem> <SelectItem value="30" >30 minutes</SelectItem> <SelectItem value="45" >45 minutes</SelectItem> <SelectItem value="60" >60 minutes</SelectItem> </SelectContent> </Select> <FormMessage /> </FormItem>)
 }/> <FormField <FormItem> <FormLabel>Platform</FormLabel> <Select onValueChange= {field.onChange}defaultValue= {
-<<<<<<< HEAD
-}/> <FormField <FormLabel>Time</FormLabel> <Select onValueChange= {
-field.onChange,
-}defaultValue= {
 field.value ";
-}> <FormControl> <SelectTrigger> <SelectValue placeholder="Select time" /> </SelectTrigger> </FormControl> </SelectItem>) )
-}</SelectContent> </Select> <FormMessage /> </FormItem>) ";
-}/> </div> <div className="grid grid-cols-1 md:grid-cols-2 gap-4" > <FormField <FormItem> <FormLabel>Duration</FormLabel> <Select onValueChange= {
-field.onChange,
-}defaultValue= {
-field.value ";
-}> <FormControl> <SelectTrigger> <SelectValue placeholder="Select duration" /> </SelectTrigger> </FormControl> <SelectContent> <SelectItem value="15" >15 minutes</SelectItem> <SelectItem value="30" >30 minutes</SelectItem> <SelectItem value="45" >45 minutes</SelectItem> <SelectItem value="60" >60 minutes</SelectItem> </SelectContent> </Select> <FormMessage /> </FormItem>)
-}/> <FormField <FormItem> <FormLabel>Platform</FormLabel> <Select onValueChange= {
-  field.onChange}defaultValue= {
-  field.value "
-=======
-field.value ";
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 }> <FormControl> <SelectTrigger> <SelectValue placeholder="Select platform" /> </SelectTrigger> </FormControl> <SelectContent> <SelectItem value="zoom" >Zoom</SelectItem> <SelectItem value="google-meet" >Google Meet</SelectItem> <SelectItem value="teams" >Microsoft Teams</SelectItem> <SelectItem value="other" >Other</SelectItem> </SelectContent> </Select> <FormMessage /> </FormItem>)
 }/> </div> {";
 form.watch ("platform") !== "in-app" && (<FormField control= {

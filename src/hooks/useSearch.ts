@@ -33,11 +33,6 @@ caseSensitive = false;
 } = options;
 
 const [searchState; setSearchState] = useState<SearchState<T>>({
-<<<<<<< HEAD
-query: "";
-const [searchState, setSearchState] = useState<SearchState<T>>({
-=======
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 query: "";,
 filters: {};
 sortBy: null;
@@ -140,10 +135,6 @@ return searchState.sortOrder === "asc" ? comparison : -comparison;
 
 setSearchState(prev => ({...prev;
 results;
-<<<<<<< HEAD
-totalResults: results.length;
-=======
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 totalResults: results.length;,
 isLoading: false; }));
 return results;

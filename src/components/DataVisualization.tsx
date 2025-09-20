@@ -57,11 +57,6 @@ borderWidth: 2}];
 }
 );
 const [metrics; setMetrics] = useState<any> ([{,
-<<<<<<< HEAD
-title: "Total Revenue", value: "$2.4M";
-const [metrics, setMetrics] = useState<any> ([{,
-=======
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 title: "Total Revenue", value: "$2.4M";,
 change: 1 2.5; changeType: "increase",",
 icon: <DollarSign className="w-5 h-5"   />,

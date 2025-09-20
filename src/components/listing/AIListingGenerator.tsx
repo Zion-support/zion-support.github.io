@@ -25,27 +25,6 @@ interface AIListingGeneratorProps {initialValues?: {
 title?: string;
 category?: string;
 }
-<<<<<<< HEAD
-    keyFeatures?: string;}
-    keyFeatures?: string;
-    targetAudience?: string}
-}
-return (
-    <div className="space-y-6">
-      <Card className="border border-zion-blue-light bg-zion-blue-dark">
-        <CardHeader>
-          <CardTitle className="flex items-center text-white">
-            <Sparkles className="h-5 w-5 mr-2 text-zion-cyan" />
-            AI Listing Optimizer
-          </CardTitle>
-          <p className="text-sm text-zion-slate-light">
-            Provide basic information and let AI generate optimized SEO-friendly content for your listing
-          </p>
-        </CardHeader>
-        <CardContent>
-          <AIListingForm
-          <AIListingForm,
-=======
 keyFeatures?: string;}
 targetAudience?: string}
 }
@@ -63,7 +42,6 @@ Provide basic information and let AI generate optimized SEO-friendly content for
 </CardHeader>;
 <CardContent>;
 <AIListingForm;
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 onSubmit = {handleGenerate}
 isLoading = {isLoading}
 initialValues = {initialValues}
@@ -77,24 +55,12 @@ initialValues = {initialValues}
 </div>;
 )
 }: AIListingGeneratorProps) {const {
-<<<<<<< HEAD
-}: AIListingGeneratorProps) {
-const {
-toast,
-}= useToast ()
-const [isLoading, setIsLoading] = useState (false)
-const [generatedContent, setGeneratedContent] = useState<GeneratedContent | null> (null)
-const handleGenerate = async ({title,
-category
-keyFeatures,
-=======
 toast}= useToast ()
 const [isLoading; setIsLoading] = useState (false)
 const [generatedContent; setGeneratedContent] = useState<GeneratedContent | null> (null)
 const handleGenerate = async ({title;
 category;
 keyFeatures;
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 targetAudience}: {
 title: string;
 category: string;,
@@ -102,17 +68,9 @@ keyFeatures: string;,
 targetAudience: string;
 }) => {setIsLoading (true)
 try {
-<<<<<<< HEAD
-  const {
-  data error}= await supabase.functions.invoke ('ai-listing-generator', {body: {
-  data error}= await supabase.functions.invoke ('ai-listing-generator', {
-  body: {
-  title category  keyFeatures targetAudience})
-=======
 const {
 data error}= await supabase.functions.invoke ("ai-listing-generator", {body: {
 title category  keyFeatures targetAudience})
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 if (error) {
 throw new Error (error.message)
 }if (data && (data as any) .error) {
@@ -135,23 +93,7 @@ toast ({
 return (<div className="space-y-6" > <Card className="border border-zion-blue-light bg-zion-blue-dark" > <CardHeader> <CardTitle className="flex items-center text-white" > <Sparkles className="h-5 w-5 mr-2 text-zion-cyan" /> AI Listing Optimizer </CardTitle> <p className="text-sm text-zion-slate-light" > Provide basic information and let AI generate optimized SEO-friendly content for your listing </p> </CardHeader> <CardContent> <AIListingForm onSubmit= {handleGenerate}isLoading= {isLoading}initialValues= {initialValues}/> </CardContent> </Card> {
 isLoading && <LoadingContentSkeleton />;
 }{generatedContent && !isLoading && (<GeneratedContentDisplay content= {
-<<<<<<< HEAD
-  generatedContent}onApply= {handleApply}/>)
-return (<div className="space-y-6" > <Card className="border border-zion-blue-light bg-zion-blue-dark" > <CardHeader> <CardTitle className="flex items-center text-white" > <Sparkles className="h-5 w-5 mr-2 text-zion-cyan" /> AI Listing Optimizer </CardTitle> <p className="text-sm text-zion-slate-light" > Provide basic information and let AI generate optimized SEO-friendly content for your listing </p> </CardHeader> <CardContent> <AIListingForm onSubmit= {
-handleGenerate,
-}isLoading= {
-isLoading,
-}initialValues= {
-initialValues,
-}/> </CardContent> </Card> {
-isLoading && <LoadingContentSkeleton />;
-}{
-  generatedContent && !isLoading && (<GeneratedContentDisplay content= {
-  generatedContent}onApply= {
-  handleApply}/>)
-=======
 generatedContent}onApply= {handleApply}/>)
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 }</div>)
 }"";
 }))

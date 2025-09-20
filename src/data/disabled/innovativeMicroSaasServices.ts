@@ -908,12 +908,7 @@ description: "Real-time business intelligence powered by AI that transforms raw 
 category: "AI & Analytics",
 subcategory: "Business Intelligence",
 price: {starter: 199;
-<<<<<<< HEAD
-professional: 499;
-enterprise: 1299;
-=======
 professional: 499;,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 enterprise: 1299;,
 currency: "$",
 },
@@ -980,12 +975,7 @@ category: "Cybersecurity",
 subcategory: "Compliance & Governance",
 price: {
 starter: 299;
-<<<<<<< HEAD
-professional: 799;
-enterprise: 1999;
-=======
 professional: 799;,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 enterprise: 1999;,
 currency: "$",
 },
@@ -2159,12 +2149,7 @@ integrations: ["Siemens Mindsphere", "GE Predix", "PTC ThingWorx", "Azure Digita
 compliance: ["ISO 27001", "Industry-specific standards", "Data privacy regulations"],
 roi: "450% within 10 months",
 competitors: ["Siemens", "GE Digital", "PTC", "Microsoft Azure"],
-<<<<<<< HEAD
-freeTrial: true;
-freeTrialDays: 21;
-=======
 freeTrial: true;,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 freeTrialDays: 21;,
 demoUrl: "https://demo.ziontechgroup.com/digital-twin",
 },

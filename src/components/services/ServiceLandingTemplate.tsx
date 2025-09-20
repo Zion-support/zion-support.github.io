@@ -16,27 +16,6 @@ avatar?: string;
 }
 
 interface ServiceLandingTemplateProps {
-<<<<<<< HEAD
-  title: string;
-  subtitle: string;
-  heroImage?: string;
-  description: string;
-  benefits: Benefit[];
-  description: string;
-  benefits?: string[];
-  features?: Array<{
-    icon: React.ReactNode;
-    title: string;
-    description: string;
-  }>;
-  stats?: Array<{
-    label: string;
-    value: string;
-  }>;
-  ctaText: string;
-  ctaLink: string;
-  testimonials?: Testimonial[];
-=======
 title: string;
 subtitle: string;
 heroImage?: string;
@@ -45,7 +24,6 @@ benefits: Benefit[];,
 ctaText: string;,
 ctaLink: string;
 testimonials?: Testimonial[];
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 }
 export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({
 title,

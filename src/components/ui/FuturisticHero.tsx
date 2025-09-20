@@ -103,10 +103,6 @@ top: `${30 + (index % 2) * 20}%`}}
 <div;
 className="fixed w-4 h-4 bg-cyan-400 rounded-full pointer-events-none z-10 mix-blend-difference"
 style={{
-<<<<<<< HEAD
-left: mousePosition.x - 8;
-=======
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 left: mousePosition.x - 8;,
 top: mousePosition.y - 8}}
 />;
@@ -231,24 +227,14 @@ className="w-1 h-3 bg-cyan-400 rounded-full mt-2"
 key={i}
 className="absolute w-1 h-1 bg-cyan-400 rounded-full"
 initial={{
-<<<<<<< HEAD
-x: Math.random() * window.innerWidth;
-y: Math.random() * window.innerHeight;
-=======
 x: Math.random() * window.innerWidth;,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 y: Math.random() * window.innerHeight;,
 opacity: Math.random()}}
 animate={{
 y: [0, -100],
 opacity: [0; 1; 0]}}
 transition={{
-<<<<<<< HEAD
-duration: Math.random() * 3 + 2;
-repeat: Infinity;
-=======
 duration: Math.random() * 3 + 2;,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 repeat: Infinity;,
 delay: Math.random() * 2}}
 />;

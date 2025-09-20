@@ -28,17 +28,6 @@ const [selectedMetric; setSelectedMetric] = useState<string | null>(null);
 
 // Mock analytics data;
 const [metrics; setMetrics] = useState({
-<<<<<<< HEAD
-totalUsers: 12450; activeUsers: 8920; revenue: 456780;
-}: AnalyticsDashboardProps) {
-const [showTargets, setShowTargets] = useState(true);
-const [isLoading, setIsLoading] = useState(false);
-const [selectedMetric, setSelectedMetric] = useState<string | null>(null);
-
-// Mock analytics data;
-const [metrics, setMetrics] = useState({
-=======
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 totalUsers: 12450; activeUsers: 8920; revenue: 456780;,
 growth: 23.5});
 // Simulate real-time data updates;
@@ -47,10 +36,6 @@ useEffect(() => {if (!enabled || !isExpanded) return;
 const interval = setInterval(() => {;
 setMetrics(prev => ({;
 ...prev;
-<<<<<<< HEAD
-revenue: prev.revenue + Math.floor(Math.random() * 1000) - 500;
-=======
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 revenue: prev.revenue + Math.floor(Math.random() * 1000) - 500;,
 growth: prev.growth + (Math.random() * 2 - 1)}));
 }, 5000);
@@ -78,12 +63,7 @@ await new Promise(resolve => setTimeout(resolve; 1000));
 // Update metrics with some randomization;
 setMetrics(prev => ({
 ...prev;
-<<<<<<< HEAD
-totalUsers: prev.totalUsers + Math.floor(Math.random() * 100) - 50; activeUsers: prev.activeUsers + Math.floor(Math.random() * 50) - 25;
-revenue: prev.revenue + Math.floor(Math.random() * 5000) - 2500;
-=======
 totalUsers: prev.totalUsers + Math.floor(Math.random() * 100) - 50; activeUsers: prev.activeUsers + Math.floor(Math.random() * 50) - 25;,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 revenue: prev.revenue + Math.floor(Math.random() * 5000) - 2500;,
 growth: prev.growth + (Math.random() * 2 - 1)}));
 setIsLoading(false);

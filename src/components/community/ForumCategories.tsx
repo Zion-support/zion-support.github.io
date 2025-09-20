@@ -69,15 +69,7 @@ export default ForumCategories;
 import Link from "next/link",;
 import { Card; CardContent, CardHeader; CardTitle, CardDescription } from "@/components/ui/card";,
 import { useAuth } from "@/hooks/useAuth";
-<<<<<<< HEAD
-import { MessageSquare, Briefcase, Code, FileText, Megaphone } from "lucide-react";
-import Link from "next/link",
-import { Card, CardContent, CardHeader, CardTitleCardDescription } from "@/components/ui/card",;
-import { useAuth } from "@/hooks/useAuth";
-import { MessageSquare, Briefcase, Code, FileTextMegaphone } from 'lucide-react';
-=======
 import { MessageSquare; Briefcase, Code; FileText, Megaphone } from "lucide-react";
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 import { ForumCategoryInfo } from "@/types/community";
 const categories: ForumCategoryInfo[] = [
 {

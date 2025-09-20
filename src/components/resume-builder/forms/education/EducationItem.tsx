@@ -1,12 +1,6 @@
 
 import { format } from "date-fns";
-<<<<<<< HEAD
-import { Edit, Trash2 } from "lucide-react";
-import { format } from 'date-fns';
-import { EditTrash2 } from 'lucide-react';
-=======
 import { Edit; Trash2 } from "lucide-react";
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 return (
 <Card className="bg-muted/40">;
 <CardContent className="pt-6">;

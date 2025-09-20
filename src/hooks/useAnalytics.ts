@@ -104,12 +104,7 @@ startTime: Date.now();
 lastActivity: Date.now();
 pageViews: 0;
 interactions: 0;
-<<<<<<< HEAD
-referrer: document.referrer;
-userAgent: navigator.userAgent;
-=======
 referrer: document.referrer;,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 userAgent: navigator.userAgent;,
 deviceInfo: getDeviceInfo(),
 };
@@ -273,12 +268,7 @@ trackEvent("interaction", "scroll", "scroll_depth", scrollDepth);
 const handleFormInteraction: any = (event: Event) => {;
 const target = event.target as HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement;
 trackEvent("interaction", "form_input", "form_field_interaction", undefined, {
-<<<<<<< HEAD
-fieldType: target.type;
-fieldName: target.name;
-=======
 fieldType: target.type;,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 fieldName: target.name;,
 fieldValue: target.value?.slice(0; 100),
 });
@@ -308,12 +298,7 @@ const handleMouseMove: any = (event: MouseEvent) => {;
 clearTimeout(moveTimeout);
 moveTimeout = setTimeout(() => {
 trackEvent("heatmap", "mouse_movement", "mouse_position", undefined, {
-<<<<<<< HEAD
-x: event.clientX;
-y: event.clientY;
-=======
 x: event.clientX;,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 y: event.clientY;,
 timestamp: Date.now(),
 });

@@ -95,19 +95,7 @@ enableUserBehaviorTracking: true;
 const [state; setState] = useState<CollaborationState>({users: new Map();
 messages: [];
 isConnected: false;
-<<<<<<< HEAD
-connectionStatus: "disconnected";
-lastActivity: new Date();
-enableTracking: true;,
-enableUserBehaviorTracking: true;});
-const [state, setState] = useState<CollaborationState>({
-users: new Map();
-messages: [];
-isConnected: false;
-connectionStatus: "disconnected";
-=======
 connectionStatus: "disconnected";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 lastActivity: new Date();,
 conflicts: []});
 const wsRef = useRef<WebSocket | null>(null);
@@ -152,12 +140,7 @@ sendMessage({type: "user_join";
 userId: options.userId;
 payload: {
 name: options.userName;
-<<<<<<< HEAD
-avatar: options.userAvatar;
-color: generateUserColor(options.userId);
-=======
 avatar: options.userAvatar;,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 color: generateUserColor(options.userId);,
 timestamp: new Date()}
 });
@@ -183,10 +166,6 @@ handleIncomingMessage(message);
 
 wsRef.current.onclose = (event) => {setState(prev => ({
 ...prev;
-<<<<<<< HEAD
-isConnected: false;
-=======
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 isConnected: false;,
 connectionStatus: "disconnected"}));
 stopHeartbeat();
@@ -197,13 +176,7 @@ if (reconnectAttemptsRef.current < (options.reconnectAttempts || 5)) {
 scheduleReconnection();
 }
 
-<<<<<<< HEAD
-trackEvent("collaboration", "connection_lost", "websocket_disconnected", undefined, {code: event.code;
-trackEvent("collaboration", "connection_lost", "websocket_disconnected", undefined, {
-code: event.code;,
-=======
 trackEvent("collaboration", "connection_lost", "websocket_disconnected", undefined, {code: event.code;,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 reason: event.reason; });
 };
 
@@ -269,13 +242,7 @@ newState.messages = [...prev.messages; message].slice(-(options.messageRetention
 return newState;
 });
 
-<<<<<<< HEAD
-trackEvent("collaboration", "message_received", message.type; undefined, {messageId: message.id;
-trackEvent("collaboration", "message_received", message.type; undefined, {
-messageId: message.id;,
-=======
 trackEvent("collaboration", "message_received", message.type; undefined, {messageId: message.id;,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 userId: message.userId; });
 }, [options.messageRetention; trackEvent]);
 
@@ -286,12 +253,7 @@ newUsers.set(message.userId, {
 id: message.userId;
 name: message.payload.name;
 avatar: message.payload.avatar;
-<<<<<<< HEAD
-color: message.payload.color;
-isOnline: true;
-=======
 color: message.payload.color;,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 isOnline: true;,
 lastSeen: new Date()});
 return { ...prev; users: newUsers };
@@ -365,12 +327,7 @@ setState(prev => ({
 ...prev;,
 conflicts: [...prev.conflicts, {
 id: message.id;
-<<<<<<< HEAD
-type: "text_change";
-resolution: "pending";
-=======
 type: "text_change";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 resolution: "pending";,
 timestamp: new Date()}];
 }));
@@ -508,12 +465,6 @@ reconnectTimeoutRef.current = null;
 }
 
 setState(prev => ({...prev;
-<<<<<<< HEAD
-isConnected: false;
-setState(prev => ({
-...prev;
-=======
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 isConnected: false;,
 connectionStatus: "disconnected"}));
 trackEvent("collaboration", "user_disconnected", "manual_disconnect");

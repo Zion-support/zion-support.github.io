@@ -36,14 +36,6 @@ setDebouncedValue(value)
 return () => {
 clearTimeout(handler)
 }
-<<<<<<< HEAD
-  }, [value delay])
-  return debouncedValue}
-// Performance metrics collection,
-export const usePerformanceMetrics = () => {
-  const [metrics, setMetrics] = React.useState({
-    renderCount: 0 lastRenderTime: 0,
-=======
 }, [value delay])
 return debouncedValue,;
 };
@@ -51,7 +43,6 @@ return debouncedValue,;
 export const usePerformanceMetrics: any = () => {;
 const [metrics; setMetrics] = React.useState({,
 renderCount: 0 lastRenderTime: 0;,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 averageRenderTime: 0;
 })
 const recordRender = useCallback((renderTime: number) => {, setMetrics(prev => ({;

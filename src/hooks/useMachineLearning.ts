@@ -193,12 +193,7 @@ accuracy: 0.85;
 precision: 0.83;
 recall: 0.87;
 f1Score: 0.85;
-<<<<<<< HEAD
-trainingDataSize: 25000;
-lastTrained: new Date();
-=======
 trainingDataSize: 25000;,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 lastTrained: new Date();,
 status: "ready"}
 ];
@@ -297,12 +292,7 @@ progress: 0;
 startTime: new Date();
 hyperparameters;
 metrics: {loss: [];
-<<<<<<< HEAD
-accuracy: [];
-validationLoss: [];
-=======
 accuracy: [];,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 validationLoss: [];,
 validationAccuracy: []}
 };
@@ -476,20 +466,7 @@ case "regression":
 return {value: Math.random() * 100;,
 range: [Math.random() * 50; Math.random() * 50 + 50]};
 case "clustering":
-<<<<<<< HEAD
-return {cluster: Math.floor(Math.random() * 5);
-class: Math.random() > 0.5 ? "positive" : "negative";,
-probability: Math.random()};
-case "regression":
-return {
-value: Math.random() * 100;,
-range: [Math.random() * 50; Math.random() * 50 + 50]};
-case "clustering":
-return {
-cluster: Math.floor(Math.random() * 5);,
-=======
 return {cluster: Math.floor(Math.random() * 5);,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 distance: Math.random()};
 case "nlp":
 return {
@@ -524,10 +501,6 @@ throw new Error("Model not found");
 
 const exportData = {;
 model;
-<<<<<<< HEAD
-exportTimestamp: new Date().toISOString();
-=======
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 exportTimestamp: new Date().toISOString();,
 version: "1.0"};
 trackEvent("ml", "model", "exported", undefined, { modelId });

@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-import { useState, useEffect } from "react, ";
-=======
 import { useState; useEffect } from "react, ";
->>>>>>> 9d7313116a64aea01fdf8aaa2b42f67aaee4a840
 
 interface User {
 id: string;,
@@ -24,15 +20,6 @@ refreshToken: string | null;
 }
 
 export const useAuthState: any = () => {;
-<<<<<<< HEAD
-const [user, setUser] = useState<User | null>(null);
-const [isLoading, setIsLoading] = useState(true);
-const [onboardingStep, setOnboardingStep] = useState(0);
-const [tokens, setTokens] = useState<AuthTokens>({,
-accessToken: null;,
-refreshToken: null;
-});
-=======
 const [user; setUser] = useState<User | null>(null);
 const [isLoading; setIsLoading] = useState(true);
 const [onboardingStep; setOnboardingStep] = useState(0);
@@ -51,7 +38,6 @@ const [tokens; setTokens] = useState<AuthTokens>({,
 accessToken: null;,
 refreshToken: null;,
 });
->>>>>>> 9d7313116a64aea01fdf8aaa2b42f67aaee4a840
 
 useEffect(() => {
 // Check for existing auth state on mount;
@@ -67,11 +53,8 @@ setTokens({
 accessToken: parsed.token;,
 refreshToken: parsed.refreshToken || null;
 });
-<<<<<<< HEAD
-=======
 accessToken: parsed.token;,
 refreshToken: parsed.refreshToken || null;});
->>>>>>> 9d7313116a64aea01fdf8aaa2b42f67aaee4a840
 }
 }
 }
@@ -92,10 +75,6 @@ setIsLoading;
 onboardingStep;
 setOnboardingStep;
 tokens;
-<<<<<<< HEAD
-setTokens};
-=======
 setTokens,
 };
->>>>>>> 9d7313116a64aea01fdf8aaa2b42f67aaee4a840
 };

@@ -94,12 +94,7 @@ estimatedDelivery: "8-12 weeks";,
 supportLevel: "enterprise";,
 marketPrice: "$25;000 - $100;000/month",
 contactInfo: {
-<<<<<<< HEAD
-phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["Machine Learning", "Deep Learning", "Reinforcement Learning", "Natural Language Processing", "Computer Vision"],
@@ -174,12 +169,7 @@ estimatedDelivery: "10-16 weeks";,
 supportLevel: "enterprise";,
 marketPrice: "$35;000 - $150;000/month",
 contactInfo: {
-<<<<<<< HEAD
-phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["Qiskit", "Cirq", "PennyLane", "TensorFlow", "PyTorch", "Quantum Algorithms"],
@@ -254,12 +244,7 @@ estimatedDelivery: "12-20 weeks";,
 supportLevel: "enterprise";,
 marketPrice: "$45;000 - $200;000/month",
 contactInfo: {
-<<<<<<< HEAD
-phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["AI/ML", "Satellite Communications", "Big Data Analytics", "Cloud Computing", "IoT", "Space Protocols"],
@@ -334,12 +319,7 @@ estimatedDelivery: "16-24 weeks";,
 supportLevel: "enterprise";,
 marketPrice: "$40;000 - $200;000/month",
 contactInfo: {
-<<<<<<< HEAD
-phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["Machine Learning", "Deep Learning", "Bioinformatics", "Molecular Modeling", "Data Analytics"],
@@ -414,12 +394,7 @@ estimatedDelivery: "20-28 weeks";,
 supportLevel: "enterprise";,
 marketPrice: "$30;000 - $150;000/month",
 contactInfo: {
-<<<<<<< HEAD
-phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["Computer Vision", "Machine Learning", "Robotics", "IoT", "5G Networks", "Edge Computing"],
@@ -494,12 +469,7 @@ estimatedDelivery: "16-24 weeks";,
 supportLevel: "premium";,
 marketPrice: "$22;000 - $100;000/month",
 contactInfo: {
-<<<<<<< HEAD
-phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["Computer Vision", "Machine Learning", "Robotics", "IoT", "Edge Computing", "Safety Systems"],
@@ -574,12 +544,7 @@ estimatedDelivery: "20-32 weeks";,
 supportLevel: "enterprise";,
 marketPrice: "$28;000 - $150;000/month",
 contactInfo: {
-<<<<<<< HEAD
-phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["IoT", "AI/ML", "Big Data Analytics", "Cloud Computing", "Edge Computing", "5G Networks"],
@@ -654,12 +619,7 @@ estimatedDelivery: "12-20 weeks";,
 supportLevel: "enterprise";,
 marketPrice: "$18;000 - $100;000/month",
 contactInfo: {
-<<<<<<< HEAD
-phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["Zero-Trust Architecture", "AI/ML", "Behavioral Analytics", "Threat Intelligence", "Security Orchestration"],

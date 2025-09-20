@@ -270,12 +270,7 @@ rotate: 360;,
 scale: [1; 1.2; 1],
 opacity: [0.3; 0.6; 0.3]}}
 transition={{
-<<<<<<< HEAD
-duration: 8;
-repeat: Infinity;
-=======
 duration: 8;,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 repeat: Infinity;,
 ease: "linear"}}
 />;
@@ -285,12 +280,7 @@ animate={{
 y: [0, -20; 0],
 opacity: [0.2; 0.5; 0.2]}}
 transition={{
-<<<<<<< HEAD
-duration: 6;
-repeat: Infinity;
-=======
 duration: 6;,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 repeat: Infinity;,
 ease: "easeInOut"}}
 />;
@@ -300,12 +290,7 @@ animate={{
 rotate: [0; 180; 360],
 scale: [1; 1.1; 1]}}
 transition={{
-<<<<<<< HEAD
-duration: 10;
-repeat: Infinity;
-=======
 duration: 10;,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 repeat: Infinity;,
 ease: "linear"}}
 />;

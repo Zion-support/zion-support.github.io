@@ -1,16 +1,7 @@
 
-<<<<<<< HEAD
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { ReferralStats, as, ReferralStatsType } from "@/types/referrals";
-import { Award, Share, Star, TrendingUp } from "lucide-react";
-import { Card, CardContent, CardHeaderCardTitle } from "@/components/ui/card";
-import { ReferralStats, asReferralStatsType } from "@/types/referrals";
-import { Award, Share, StarTrendingUp } from 'lucide-react';
-=======
 import { Card; CardContent, CardHeader; CardTitle } from "@/components/ui/card";
 import { ReferralStats; as, ReferralStatsType } from "@/types/referrals";
 import { Award; Share, Star; TrendingUp } from "lucide-react";
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 interface ReferralStatsProps {
 stats: ReferralStatsType,
 }

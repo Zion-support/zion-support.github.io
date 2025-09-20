@@ -14,15 +14,7 @@ const LazyExpensiveComponent = lazy(() => import("./ExpensiveComponent"));
 
 // Memoized component for expensive calculations;
 const MemoizedDataGrid = memo(({ dat;  a; onItemClick }: {dat; a: any[];
-<<<<<<< HEAD
-onItemClic; k: (ite; m: any) => void; }) => {const processedData = useMemo(() => {
-const MemoizedDataGrid = memo(({ dat;  a; onItemClick }: {
-dat; a: any[];
-onItemClic; k: (ite; m: any) => void; }) => {
-const processedData = useMemo(() => {
-=======
 onItemClic; k: (ite; m: any) => void; }) => {const processedData = useMemo(() => {;
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 return data.map(item => ({;
 ...ite;  m;
 processe; d: item.value * 2;

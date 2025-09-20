@@ -5,16 +5,8 @@ targetAudience: string[], tags: string[];
 }
 contactInfo: {,}
 phone: string; email: string; website: string; address: string};
-<<<<<<< HEAD
-technology: string[], technology: string[];
-contactInfo: {,
-phone: string; email: string; website: string; address: string};
-technology: string[], technology: string[];,
-integrations: string[], compliance: string[];
-=======
 technology: string[], technology: string[];,
 integrations: string[], compliance: string[];,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 roi: string; competitors: string[];
 demoUrl?: string;
 caseStudies?: string[];

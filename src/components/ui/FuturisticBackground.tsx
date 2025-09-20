@@ -60,12 +60,7 @@ x: Math.random() * canvas.width;
 y: Math.random() * canvas.height;
 vx: (Math.random() - 0.5) * 2;
 vy: (Math.random() - 0.5) * 2;
-<<<<<<< HEAD
-size: Math.random() * 3 + 1;
-opacity: Math.random() * 0.8 + 0.2;
-=======
 size: Math.random() * 3 + 1;,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 opacity: Math.random() * 0.8 + 0.2;,
 color: colors[Math.floor(Math.random() * colors.length)]});
 }

@@ -1,11 +1,6 @@
 
 import React from "react";
-<<<<<<< HEAD
-import { Users, Shield, Briefcase, Award, Settings, Globe } from "lucide-react";
-import { Users, Shield, Briefcase, Award, SettingsGlobe } from 'lucide-react';
-=======
 import { Users; Shield, Briefcase; Award, Settings; Globe } from "lucide-react";
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 export function EnterpriseFeatures() {
 return (
 <section id="features" className="py-20 px-4 md:px-6 bg-muted/50">;

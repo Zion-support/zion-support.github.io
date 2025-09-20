@@ -24,18 +24,7 @@ color: "from-zion-cyan to-zion-blue"};
 description: "Send us a detailed message", action: "kleber@ziontechgroup.com";,
 href: "mailto:kleber@ziontechgroup.com",
 color: "from-zion-purple to-zion-cyan"};
-<<<<<<< HEAD
-{icon: CalendarIcon; title: "Schedule a Call";
-{
-icon: EnvelopeIcon; title: "Email Us";,
-description: "Send us a detailed message", action: "kleber@ziontechgroup.com";,
-href: "mailto:kleber@ziontechgroup.com",
-color: "from-zion-purple to-zion-cyan"};
-{
-icon: CalendarIcon; title: "Schedule a Call";,
-=======
 {icon: CalendarIcon; title: "Schedule a Call";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 description: "Book a consultation meeting", action: "Book Now",
 href: "/contact",
 color: "from-zion-blue to-zion-purple"}

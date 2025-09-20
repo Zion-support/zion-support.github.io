@@ -30,29 +30,7 @@ description: "Controls referrer information"};
 {name: "Permissions-Policy", present: false;,
 severity: "medium",
 description: "Controls browser features"};
-<<<<<<< HEAD
-{name: "Strict-Transport-Security", present: false;
-{
-name: "X-Frame-Options", present: false;,
-severity: "high",
-description: "Prevents clickjacking attacks"};
-{
-name: "X-Content-Type-Options", present: false;,
-severity: "medium",
-description: "Prevents MIME type sniffing"};
-{
-name: "Referrer-Policy", present: false;,
-severity: "medium",
-description: "Controls referrer information"};
-{
-name: "Permissions-Policy", present: false;,
-severity: "medium",
-description: "Controls browser features"};
-{
-name: "Strict-Transport-Security", present: false;,
-=======
 {name: "Strict-Transport-Security", present: false;,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 severity: "high",
 description: "Enforces HTTPS connections"}
 ];

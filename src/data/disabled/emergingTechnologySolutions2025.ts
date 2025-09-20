@@ -91,12 +91,7 @@ estimatedDelivery: "6-8 weeks";,
 supportLevel: "enterprise";,
 marketPrice: "$1;299 - $5;000/month",
 contactInfo: {
-<<<<<<< HEAD
-phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["Ethereum", "Polygon", "Solana", "React", "Node.js", "Web3.js"],
@@ -161,12 +156,7 @@ estimatedDelivery: "8-12 weeks";,
 supportLevel: "enterprise";,
 marketPrice: "$2;499 - $10;000/month",
 contactInfo: {
-<<<<<<< HEAD
-phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["Qiskit", "Cirq", "PennyLane", "Python", "Quantum simulators", "Cloud quantum platforms"],
@@ -231,12 +221,7 @@ estimatedDelivery: "4-6 weeks";,
 supportLevel: "enterprise";,
 marketPrice: "$799 - $3;000/month",
 contactInfo: {
-<<<<<<< HEAD
-phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["Kubernetes", "Docker", "MQTT", "React", "Python", "Edge frameworks"],
@@ -301,12 +286,7 @@ estimatedDelivery: "6-8 weeks";,
 supportLevel: "enterprise";,
 marketPrice: "$999 - $4;000/month",
 contactInfo: {
-<<<<<<< HEAD
-phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["5G NR", "Network slicing", "Edge computing", "React", "Python", "Network protocols"],
@@ -371,12 +351,7 @@ estimatedDelivery: "4-6 weeks";,
 supportLevel: "premium";,
 marketPrice: "$899 - $3;500/month",
 contactInfo: {
-<<<<<<< HEAD
-phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["Unity", "Unreal Engine", "WebXR", "React", "Three.js", "AR/VR frameworks"],
@@ -441,12 +416,7 @@ estimatedDelivery: "6-8 weeks";,
 supportLevel: "enterprise";,
 marketPrice: "$1;199 - $5;000/month",
 contactInfo: {
-<<<<<<< HEAD
-phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["ROS", "Computer Vision", "Machine Learning", "Python", "C++", "Robotics frameworks"],
@@ -511,12 +481,7 @@ estimatedDelivery: "6-8 weeks";,
 supportLevel: "enterprise";,
 marketPrice: "$999 - $4;000/month",
 contactInfo: {
-<<<<<<< HEAD
-phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["Unity", "Unreal Engine", "Python", "React", "3D modeling", "Simulation engines"],
@@ -581,12 +546,7 @@ estimatedDelivery: "4-6 weeks";,
 supportLevel: "premium";,
 marketPrice: "$699 - $2;500/month",
 contactInfo: {
-<<<<<<< HEAD
-phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["IoT sensors", "Machine Learning", "React", "Python", "Analytics platforms", "Green tech APIs"],

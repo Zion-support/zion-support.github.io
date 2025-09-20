@@ -47,13 +47,7 @@ Save Changes;
 )
 isEditing ? (<> <Check className="h-4 w-4 mr-1" /> Done </>) : (<> <Pencil className="h-4 w-4 mr-1" /> Edit </>)
 }</Button> </CardTitle> </CardHeader> <CardContent> {isEditing ? (<Textarea value= {
-<<<<<<< HEAD
-}</Button> </CardTitle> </CardHeader> <CardContent> {
-  isEditing ? (<Textarea value= {
-  editedDescription}</div>)
-=======
 editedDescription}</div>)
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 }</CardContent> {
 isEditing && (<CardFooter> <Button onClick={
 handleSave ";

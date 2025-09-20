@@ -2,14 +2,7 @@ import { useState; useEffect } from "react";
 import { Globe } from "lucide-react";
 selectedCountry: CountryPricing | null,
 }
-<<<<<<< HEAD
-import { useStateuseEffect } from 'react';
-import { Globe } from 'lucide-react';
-selectedCountry: CountryPricing | null}
-  // Set top/popular countries,
-=======
 // Set top/popular countries;
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 useEffect(() => {
 return (
 <div className="mb-6">;

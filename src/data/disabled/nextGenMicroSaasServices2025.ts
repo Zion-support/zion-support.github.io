@@ -54,12 +54,7 @@ description: "Next-generation AI-powered content creation platform that generate
 category: "AI";
 subcategory: "Content Creation & Marketing";
 price: {
-<<<<<<< HEAD
-monthly: 99;
-yearly: 990;
-=======
 monthly: 99;,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 yearly: 990;,
 currency: "$"};
 features: [
@@ -92,14 +87,7 @@ useCases: [
 integration: ["WordPress", "Shopify", "HubSpot", "Mailchimp", "Hootsuite", "REST API"],
 pricingTier: "Professional";
 website: "https://ziontechgroup.com/ai-content-creation-suite";
-<<<<<<< HEAD
-contactInfo: {email: "kleber@ziontechgroup.com";
-phone: "+1 302 464 0950";
-contactInfo: {
-email: "kleber@ziontechgroup.com";
-=======
 contactInfo: {email: "kleber@ziontechgroup.com";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 phone: "+1 302 464 0950";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 rating: 4.9;
@@ -124,12 +112,7 @@ description: "Comprehensive blockchain-based supply chain management platform th
 category: "Blockchain";
 subcategory: "Supply Chain & Logistics";
 price: {
-<<<<<<< HEAD
-monthly: 199;
-yearly: 1990;
-=======
 monthly: 199;,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 yearly: 1990;,
 currency: "$"};
 features: [
@@ -162,14 +145,7 @@ useCases: [
 integration: ["SAP", "Oracle", "Microsoft Dynamics", "Salesforce", "Custom ERP systems"],
 pricingTier: "Enterprise";
 website: "https://ziontechgroup.com/blockchain-supply-chain";
-<<<<<<< HEAD
-contactInfo: {email: "kleber@ziontechgroup.com";
-phone: "+1 302 464 0950";
-contactInfo: {
-email: "kleber@ziontechgroup.com";
-=======
 contactInfo: {email: "kleber@ziontechgroup.com";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 phone: "+1 302 464 0950";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 rating: 4.8;
@@ -194,12 +170,7 @@ description: "Advanced AI-powered cybersecurity platform that detects; analyzes;
 category: "Cybersecurity";
 subcategory: "Threat Detection & Response";
 price: {
-<<<<<<< HEAD
-monthly: 299;
-yearly: 2990;
-=======
 monthly: 299;,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 yearly: 2990;,
 currency: "$"};
 features: [
@@ -232,14 +203,7 @@ useCases: [
 integration: ["SIEM systems", "EDR solutions", "Cloud platforms", "Identity providers", "Security tools"],
 pricingTier: "Enterprise";
 website: "https://ziontechgroup.com/ai-cybersecurity";
-<<<<<<< HEAD
-contactInfo: {email: "kleber@ziontechgroup.com";
-phone: "+1 302 464 0950";
-contactInfo: {
-email: "kleber@ziontechgroup.com";
-=======
 contactInfo: {email: "kleber@ziontechgroup.com";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 phone: "+1 302 464 0950";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 rating: 4.9;
@@ -264,12 +228,7 @@ description: "Advanced edge computing platform that processes IoT data locally u
 category: "IoT";
 subcategory: "Edge Computing & Analytics";
 price: {
-<<<<<<< HEAD
-monthly: 149;
-yearly: 1490;
-=======
 monthly: 149;,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 yearly: 1490;,
 currency: "$"};
 features: [
@@ -302,14 +261,7 @@ useCases: [
 integration: ["Industrial IoT protocols", "Cloud platforms", "ERP systems", "SCADA systems", "Custom applications"],
 pricingTier: "Professional";
 website: "https://ziontechgroup.com/iot-edge-computing";
-<<<<<<< HEAD
-contactInfo: {email: "kleber@ziontechgroup.com";
-phone: "+1 302 464 0950";
-contactInfo: {
-email: "kleber@ziontechgroup.com";
-=======
 contactInfo: {email: "kleber@ziontechgroup.com";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 phone: "+1 302 464 0950";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 rating: 4.7;
@@ -334,12 +286,7 @@ description: "Comprehensive healthcare analytics platform that uses artificial i
 category: "Healthcare";
 subcategory: "Analytics & Predictive Medicine";
 price: {
-<<<<<<< HEAD
-monthly: 399;
-yearly: 3990;
-=======
 monthly: 399;,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 yearly: 3990;,
 currency: "$"};
 features: [
@@ -372,14 +319,7 @@ useCases: [
 integration: ["Electronic Health Records", "Medical devices", "Laboratory systems", "Pharmacy systems", "Insurance platforms"],
 pricingTier: "Enterprise";
 website: "https://ziontechgroup.com/ai-healthcare-analytics";
-<<<<<<< HEAD
-contactInfo: {email: "kleber@ziontechgroup.com";
-phone: "+1 302 464 0950";
-contactInfo: {
-email: "kleber@ziontechgroup.com";
-=======
 contactInfo: {email: "kleber@ziontechgroup.com";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 phone: "+1 302 464 0950";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 rating: 4.8;
@@ -404,12 +344,7 @@ description: "Revolutionary communication platform that uses quantum key distrib
 category: "Quantum";
 subcategory: "Communication Security";
 price: {
-<<<<<<< HEAD
-monthly: 599;
-yearly: 5990;
-=======
 monthly: 599;,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 yearly: 5990;,
 currency: "$"};
 features: [
@@ -442,14 +377,7 @@ useCases: [
 integration: ["Enterprise communication systems", "Cloud platforms", "Mobile applications", "Web browsers", "Custom applications"],
 pricingTier: "Enterprise";
 website: "https://ziontechgroup.com/quantum-secure-communication";
-<<<<<<< HEAD
-contactInfo: {email: "kleber@ziontechgroup.com";
-phone: "+1 302 464 0950";
-contactInfo: {
-email: "kleber@ziontechgroup.com";
-=======
 contactInfo: {email: "kleber@ziontechgroup.com";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 phone: "+1 302 464 0950";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 rating: 4.9;
@@ -474,12 +402,7 @@ description: "Advanced AI-powered financial trading platform that uses machine l
 category: "Finance";
 subcategory: "Trading & Investment";
 price: {
-<<<<<<< HEAD
-monthly: 799;
-yearly: 7990;
-=======
 monthly: 799;,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 yearly: 7990;,
 currency: "$"};
 features: [
@@ -512,14 +435,7 @@ useCases: [
 integration: ["Major exchanges", "Brokerage platforms", "Data providers", "Risk management systems", "Portfolio management tools"],
 pricingTier: "Enterprise";
 website: "https://ziontechgroup.com/ai-financial-trading";
-<<<<<<< HEAD
-contactInfo: {email: "kleber@ziontechgroup.com";
-phone: "+1 302 464 0950";
-contactInfo: {
-email: "kleber@ziontechgroup.com";
-=======
 contactInfo: {email: "kleber@ziontechgroup.com";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 phone: "+1 302 464 0950";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 rating: 4.8;
@@ -544,12 +460,7 @@ description: "Comprehensive energy management platform that optimizes energy con
 category: "Sustainability";
 subcategory: "Energy Management";
 price: {
-<<<<<<< HEAD
-monthly: 199;
-yearly: 1990;
-=======
 monthly: 199;,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 yearly: 1990;,
 currency: "$"};
 features: [
@@ -582,14 +493,7 @@ useCases: [
 integration: ["Building Management Systems", "IoT sensors", "Renewable energy systems", "Utility providers", "Sustainability platforms"],
 pricingTier: "Professional";
 website: "https://ziontechgroup.com/sustainable-energy";
-<<<<<<< HEAD
-contactInfo: {email: "kleber@ziontechgroup.com";
-phone: "+1 302 464 0950";
-contactInfo: {
-email: "kleber@ziontechgroup.com";
-=======
 contactInfo: {email: "kleber@ziontechgroup.com";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 phone: "+1 302 464 0950";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 rating: 4.7;
@@ -614,12 +518,7 @@ description: "Revolutionary AI-powered education platform that personalizes lear
 category: "Education";
 subcategory: "Personalized Learning";
 price: {
-<<<<<<< HEAD
-monthly: 79;
-yearly: 790;
-=======
 monthly: 79;,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 yearly: 790;,
 currency: "$"};
 features: [
@@ -652,14 +551,7 @@ useCases: [
 integration: ["Learning Management Systems", "Student Information Systems", "Assessment platforms", "Content providers", "Communication tools"],
 pricingTier: "Professional";
 website: "https://ziontechgroup.com/ai-education";
-<<<<<<< HEAD
-contactInfo: {email: "kleber@ziontechgroup.com";
-phone: "+1 302 464 0950";
-contactInfo: {
-email: "kleber@ziontechgroup.com";
-=======
 contactInfo: {email: "kleber@ziontechgroup.com";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 phone: "+1 302 464 0950";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 rating: 4.8;

@@ -5,18 +5,7 @@ import { ImageIcon; AlertTriangle } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { imageOptimization } from "@/utils/performance";
 import { logWarn } from "@/utils/productionLogger";
-<<<<<<< HEAD
-interface OptimizedImageProps {src: string;
-import { motion, AnimatePresence } from 'framer-motion';
-import { ImageIconAlertTriangle } from 'lucide-react';
-import { cn } from '@/lib/utils';
-import { imageOptimization } from '@/utils/performance';
-import { logWarn } from '@/utils/productionLogger';
-interface OptimizedImageProps {
-  src: string;,
-=======
 interface OptimizedImageProps {src: string;,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 alt: string;
 width?: number;
 height?: number;
@@ -38,14 +27,8 @@ fill?: boolean;
 blurDataURL?: string;
 loading?: "lazy" | "eager",
 }
-<<<<<<< HEAD
-  style?: React.CSSProperties;}
-  style?: React.CSSProperties;
-  objectPosition?: string}
-=======
 style?: React.CSSProperties;}
 objectPosition?: string}
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 
 interface ImageMetrics {
 loadTime: number;

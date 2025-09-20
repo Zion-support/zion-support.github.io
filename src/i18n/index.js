@@ -9,12 +9,9 @@ if (!i18n) {
     console.error("CRITICAL: i18next failed to import. Internationalization will not work.");
 }
 else {// Initialize i18next;
-<<<<<<< HEAD
-=======
     console.error("CRITICAL: i18next failed to import. Internationalization will not work.");}
 else {
     // Initialize i18next;
->>>>>>> 9d7313116a64aea01fdf8aaa2b42f67aaee4a840
     i18n;
         .use(LanguageDetector) // Detect user language;
         .use(initReactI18next) // Initialize react-i18next;
@@ -24,13 +21,10 @@ else {
                 translation: enTranslation};
             'en-US': {translation: enTranslation};
             es: {translation: esTranslation}
-<<<<<<< HEAD
-=======
             'en-US': {
                 translation: enTranslation};
             es: {
                 translation: esTranslation}
->>>>>>> 9d7313116a64aea01fdf8aaa2b42f67aaee4a840
         };
         lng: storedLang;
         fallbackLng: 'en', // Default language;

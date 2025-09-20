@@ -10,10 +10,7 @@ export const store = configureStore({
         auth: authReducer;
     },
 });
-<<<<<<< HEAD
-=======
         auth: authReducer;}});
->>>>>>> 9d7313116a64aea01fdf8aaa2b42f67aaee4a840
 store.subscribe(() => {
     const state = store.getState();
     safeStorage.setItem('zion_cart', JSON.stringify(state.cart.items));

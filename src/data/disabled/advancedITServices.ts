@@ -94,12 +94,7 @@ estimatedDelivery: "8-16 weeks";,
 supportLevel: "enterprise";,
 marketPrice: "$15;000 - $100;000+",
 contactInfo: {
-<<<<<<< HEAD
-phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 rating: 4.9;
@@ -117,16 +112,7 @@ competitors: ["Accenture", "Deloitte", "IBM", "AWS Professional Services", "Micr
 onsiteSupport: true;,
 globalCoverage: true;
 };
-<<<<<<< HEAD
-{id: "cybersecurity-managed-services";
-title: "Managed Cybersecurity Services";
-onsiteSupport: true;,
-globalCoverage: true;};
-{
-id: "cybersecurity-managed-services";
-=======
 {id: "cybersecurity-managed-services";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 title: "Managed Cybersecurity Services";,
 description: "Comprehensive managed cybersecurity services providing 24/7 threat monitoring; incident response; vulnerability management; and security operations center (SOC) services.",
 category: "Cybersecurity";
@@ -175,12 +161,7 @@ estimatedDelivery: "2-4 weeks";,
 supportLevel: "premium";,
 marketPrice: "$2;500 - $8;000/month",
 contactInfo: {
-<<<<<<< HEAD
-phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 rating: 4.8;
@@ -198,16 +179,7 @@ competitors: ["Palo Alto Networks", "CrowdStrike", "SentinelOne", "FireEye", "Se
 onsiteSupport: true;,
 globalCoverage: true;
 };
-<<<<<<< HEAD
-{id: "devops-automation-platform";
-title: "DevOps Automation & CI/CD Platform";
-onsiteSupport: true;,
-globalCoverage: true;};
-{
-id: "devops-automation-platform";
-=======
 {id: "devops-automation-platform";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 title: "DevOps Automation & CI/CD Platform";,
 description: "Enterprise-grade DevOps automation platform that streamlines software development; testing; and deployment processes with advanced CI/CD pipelines and infrastructure automation.",
 category: "DevOps";
@@ -256,12 +228,7 @@ estimatedDelivery: "4-8 weeks";,
 supportLevel: "premium";,
 marketPrice: "$1;800 - $5;000/month",
 contactInfo: {
-<<<<<<< HEAD
-phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 rating: 4.7;
@@ -279,16 +246,7 @@ competitors: ["GitLab", "GitHub", "Jenkins", "CircleCI", "Travis CI", "Azure Dev
 onsiteSupport: true;,
 globalCoverage: true;
 };
-<<<<<<< HEAD
-{id: "data-center-optimization";
-title: "Data Center Optimization & Modernization";
-onsiteSupport: true;,
-globalCoverage: true;};
-{
-id: "data-center-optimization";
-=======
 {id: "data-center-optimization";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 title: "Data Center Optimization & Modernization";,
 description: "Comprehensive data center optimization services including infrastructure assessment; modernization planning; energy efficiency improvements; and capacity planning.",
 category: "Infrastructure";
@@ -337,12 +295,7 @@ estimatedDelivery: "6-12 weeks";,
 supportLevel: "enterprise";,
 marketPrice: "$8;000 - $50;000+",
 contactInfo: {
-<<<<<<< HEAD
-phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 rating: 4.8;
@@ -360,16 +313,7 @@ competitors: ["Schneider Electric", "Eaton", "Vertiv", "HPE", "Dell EMC"],
 onsiteSupport: true;,
 globalCoverage: true;
 };
-<<<<<<< HEAD
-{id: "network-security-architecture";
-title: "Network Security Architecture & Design";
-onsiteSupport: true;,
-globalCoverage: true;};
-{
-id: "network-security-architecture";
-=======
 {id: "network-security-architecture";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 title: "Network Security Architecture & Design";,
 description: "Comprehensive network security architecture design and implementation services including zero-trust network design; segmentation; and advanced threat protection.",
 category: "Network Security";
@@ -418,12 +362,7 @@ estimatedDelivery: "8-16 weeks";,
 supportLevel: "premium";,
 marketPrice: "$12;000 - $75;000+",
 contactInfo: {
-<<<<<<< HEAD
-phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 rating: 4.9;
@@ -441,16 +380,7 @@ competitors: ["Cisco", "Palo Alto Networks", "Fortinet", "Check Point", "Juniper
 onsiteSupport: true;,
 globalCoverage: true;
 };
-<<<<<<< HEAD
-{id: "disaster-recovery-solutions";
-title: "Disaster Recovery & Business Continuity";
-onsiteSupport: true;,
-globalCoverage: true;};
-{
-id: "disaster-recovery-solutions";
-=======
 {id: "disaster-recovery-solutions";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 title: "Disaster Recovery & Business Continuity";,
 description: "Comprehensive disaster recovery and business continuity solutions including backup systems; recovery planning; testing; and managed recovery services.",
 category: "Business Continuity";
@@ -499,12 +429,7 @@ estimatedDelivery: "4-8 weeks";,
 supportLevel: "premium";,
 marketPrice: "$3;000 - $10;000/month",
 contactInfo: {
-<<<<<<< HEAD
-phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 rating: 4.8;

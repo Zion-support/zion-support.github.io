@@ -65,25 +65,7 @@ currentValue: 2847392; predictedValue: 3200000; confidence: 0.85;,
 timeframe: "Next 30 days"},
 {metric: "Conversion Rate",
 currentValue: 3.24;
-<<<<<<< HEAD
-predictedValue: 3.45;
-confidence: 0.78;
-const [predictions, setPredictions] = useState<PredictionData[]>([
-{
-metric: "Monthly Active Users",
-currentValue: 45672; predictedValue: 52100; confidence: 0.89;,
-timeframe: "Next 30 days"},
-{
-metric: "Revenue",
-currentValue: 2847392; predictedValue: 3200000; confidence: 0.85;,
-timeframe: "Next 30 days"},
-{
-metric: "Conversion Rate",
-currentValue: 3.24;
-predictedValue: 3.45;
-=======
 predictedValue: 3.45;,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 confidence: 0.78;,
 timeframe: "Next 30 days"}
 ]);

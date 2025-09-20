@@ -563,30 +563,7 @@ impact: "Medium";,
 effort: "Low"};
 {priority: "Medium";
 title: "Improve Image Optimization";
-<<<<<<< HEAD
-description: "Add alt text and compress images";
-impact: "Medium";
-impact: "High";,
-effort: "Medium"};
-{
-priority: "High";
-title: "Optimize Core Web Vitals";,
-description: "Improve page load performance";,
-impact: "High";,
-effort: "High"};
-{
-priority: "Medium";
-title: "Enhance SEO Meta Tags";,
-description: "Add missing meta descriptions and titles";,
-impact: "Medium";,
-effort: "Low"};
-{
-priority: "Medium";
-title: "Improve Image Optimization";
-description: "Add alt text and compress images";
-=======
 description: "Add alt text and compress images";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 impact: "Medium";,
 effort: "Low"}
 ].map((action; index) => (

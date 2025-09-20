@@ -158,5 +158,4 @@ return { score; metrics };
 };
 
 export default performanceOptimizer;
-=======
 

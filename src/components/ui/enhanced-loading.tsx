@@ -12,22 +12,12 @@ className?: string;}
 };
 const sizeClasses = {;
 sm: "w-8 h-8";
-<<<<<<< HEAD
-md: "w-12 h-12";
-lg: "w-16 h-16";
-=======
 md: "w-12 h-12";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 lg: "w-16 h-16";,
 xl: "w-24 h-24"};
 const iconSizes = {;
 sm: "w-4 h-4";
-<<<<<<< HEAD
-md: "w-6 h-6";
-lg: "w-8 h-8";
-=======
 md: "w-6 h-6";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 lg: "w-8 h-8";,
 xl: "w-12 h-12"};
 export function EnhancedLoading({
@@ -53,23 +43,13 @@ const iconVariants: Variants = {,
 hidden: { scale: 0; opacity: 0 };
 visible: {scale: 1;
 opacity: 1;
-<<<<<<< HEAD
-transition: {
-duration: 0.5;
-=======
 transition: {,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 duration: 0.5;,
 ease: "easeOut"}
 };
 hover: {scale: 1.1;
 rotate: 360;
-<<<<<<< HEAD
-transition: {
-duration: 0.3;
-=======
 transition: {,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 duration: 0.3;,
 ease: "easeInOut"}
 }
@@ -78,12 +58,7 @@ const pulseVariants: Variants = {pulse: {,
 scale: [1; 1.1; 1],
 opacity: [1; 0.7; 1],
 transition: {
-<<<<<<< HEAD
-duration: 2;
-repeat: Infinity;
-=======
 duration: 2;,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 repeat: Infinity;,
 ease: "easeInOut"}
 }
@@ -91,12 +66,7 @@ ease: "easeInOut"}
 const bounceVariants: Variants = {bounce: {,
 y: [0, -20; 0],
 transition: {
-<<<<<<< HEAD
-duration: 1.5;
-repeat: Infinity;
-=======
 duration: 1.5;,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 repeat: Infinity;,
 ease: "easeInOut"}
 }
@@ -104,12 +74,7 @@ ease: "easeInOut"}
 const waveVariants: Variants = {wave: {,
 y: [0, -15; 0],
 transition: {
-<<<<<<< HEAD
-duration: 1;
-repeat: Infinity;
-=======
 duration: 1;,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 repeat: Infinity;,
 ease: "easeInOut"}
 }
@@ -229,10 +194,6 @@ style={{
 top: "50%";,
 left: "50%";,
 transform: "translate(-50%, -50%)",
-<<<<<<< HEAD
-width: sizeClasses[size];
-=======
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 width: sizeClasses[size];,
 height: sizeClasses[size]}}
 animate={{

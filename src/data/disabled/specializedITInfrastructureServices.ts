@@ -85,12 +85,7 @@ estimatedDelivery: "4-6 weeks";,
 supportLevel: "enterprise";,
 marketPrice: "$2;800 - $8;000/month",
 contactInfo: {
-<<<<<<< HEAD
-phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["Kubernetes", "Docker", "React", "Node.js", "Redis", "AWS Edge"],
@@ -150,12 +145,7 @@ estimatedDelivery: "6-8 weeks";,
 supportLevel: "enterprise";,
 marketPrice: "$3;500 - $12;000/month",
 contactInfo: {
-<<<<<<< HEAD
-phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["React", "Node.js", "PostgreSQL", "Redis", "OAuth 2.0", "SAML"],
@@ -215,12 +205,7 @@ estimatedDelivery: "4-5 weeks";,
 supportLevel: "enterprise";,
 marketPrice: "$2;200 - $7;000/month",
 contactInfo: {
-<<<<<<< HEAD
-phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["Kubernetes", "Terraform", "React", "Node.js", "MongoDB", "Docker"],
@@ -280,12 +265,7 @@ estimatedDelivery: "3-4 weeks";,
 supportLevel: "premium";,
 marketPrice: "$1;800 - $5;500/month",
 contactInfo: {
-<<<<<<< HEAD
-phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["OpenFlow", "React", "Node.js", "PostgreSQL", "Redis", "Docker"],
@@ -345,12 +325,7 @@ estimatedDelivery: "2-3 weeks";,
 supportLevel: "premium";,
 marketPrice: "$1;500 - $4;500/month",
 contactInfo: {
-<<<<<<< HEAD
-phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["Kubernetes", "Docker", "React", "Node.js", "MongoDB", "Redis"],

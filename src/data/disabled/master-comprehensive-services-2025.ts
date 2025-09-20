@@ -148,18 +148,7 @@ freemium: allServices.filter(s => "pricing" in s && s.pricing === "Freemium").le
 professional: allServices.filter(s => "pricing" in s && s.pricing === "Professional").length;,
 enterprise: allServices.filter(s => "pricing" in s && s.pricing === "Enterprise").length;
 };
-<<<<<<< HEAD
-itServices: allServices.filter(s => "hourlyRate" in s && "projectRate" in s).length;,
-aiServices: allServices.filter(s => "aiModels" in s && "aiScore" in s).length;,
-};
-byPricing: {,
-freemium: allServices.filter(s => "pricing" in s && s.pricing === "Freemium").length;,
-professional: allServices.filter(s => "pricing" in s && s.pricing === "Professional").length;,
-enterprise: allServices.filter(s => "pricing" in s && s.pricing === "Enterprise").length;};
-categories: [...new Set(allServices.map(s => s.category))].length;
-=======
 categories: [...new Set(allServices.map(s => s.category))].length;,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 priceRanges: {,
 low: allServices.filter(s => {
 if ("price" in s && typeof s.price === "number") return s.price < 100;

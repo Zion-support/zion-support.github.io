@@ -87,12 +87,7 @@ estimatedDelivery: "3-4 weeks";
 supportLevel: "premium";
 contactInfo: {
 phone: "+1 302 464 0950";
-<<<<<<< HEAD
-email: "kleber@ziontechgroup.com";
-website: "https://ziontechgroup.com";
-=======
 email: "kleber@ziontechgroup.com";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 website: "https://ziontechgroup.com";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 demoUrl: "https://ziontechgroup.com/demo/edge-computing-ai";
@@ -149,12 +144,7 @@ estimatedDelivery: "4-5 weeks";
 supportLevel: "enterprise";
 contactInfo: {
 phone: "+1 302 464 0950";
-<<<<<<< HEAD
-email: "kleber@ziontechgroup.com";
-website: "https://ziontechgroup.com";
-=======
 email: "kleber@ziontechgroup.com";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 website: "https://ziontechgroup.com";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 demoUrl: "https://ziontechgroup.com/demo/zero-trust-security";
@@ -211,12 +201,7 @@ estimatedDelivery: "4-6 weeks";
 supportLevel: "premium";
 contactInfo: {
 phone: "+1 302 464 0950";
-<<<<<<< HEAD
-email: "kleber@ziontechgroup.com";
-website: "https://ziontechgroup.com";
-=======
 email: "kleber@ziontechgroup.com";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 website: "https://ziontechgroup.com";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 demoUrl: "https://ziontechgroup.com/demo/hybrid-cloud-management";
@@ -273,12 +258,7 @@ estimatedDelivery: "6-8 weeks";
 supportLevel: "enterprise";
 contactInfo: {
 phone: "+1 302 464 0950";
-<<<<<<< HEAD
-email: "kleber@ziontechgroup.com";
-website: "https://ziontechgroup.com";
-=======
 email: "kleber@ziontechgroup.com";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 website: "https://ziontechgroup.com";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 demoUrl: "https://ziontechgroup.com/demo/data-center-automation";
@@ -335,12 +315,7 @@ estimatedDelivery: "3-4 weeks";
 supportLevel: "premium";
 contactInfo: {
 phone: "+1 302 464 0950";
-<<<<<<< HEAD
-email: "kleber@ziontechgroup.com";
-website: "https://ziontechgroup.com";
-=======
 email: "kleber@ziontechgroup.com";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 website: "https://ziontechgroup.com";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 demoUrl: "https://ziontechgroup.com/demo/network-performance";

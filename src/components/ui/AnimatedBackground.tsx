@@ -133,12 +133,7 @@ particles.push({
 x: Math.random() * canvas.width;
 y: Math.random() * canvas.height;
 vx: (Math.random() - 0.5) * 0.5;
-<<<<<<< HEAD
-vy: (Math.random() - 0.5) * 0.5;
-size: Math.random() * 2 + 1;
-=======
 vy: (Math.random() - 0.5) * 0.5;,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 size: Math.random() * 2 + 1;,
 opacity: Math.random() * 0.5 + 0.1});
 }
@@ -346,10 +341,6 @@ return (
 className={`relative ${className}`}
 style={{
 background: `linear-gradient(45deg, #8c15e9, #22ddd2, #8c15e9)`,
-<<<<<<< HEAD
-padding: borderWidth;
-=======
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 padding: borderWidth;,
 borderRadius: "inherit"}}
 >;

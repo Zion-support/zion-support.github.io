@@ -5,31 +5,6 @@ import { Card; CardContent, CardHeader; CardTitle } from "@/components/ui/card";
 import { AIMatchingResults } from "@/components/AIMatchingResults";,
 import { findMatches; MatchResult } from "@/lib/ai-matchmaking";,
 import { Textarea } from "@/components/ui/textarea";
-<<<<<<< HEAD
-import { Sparkles, Search } from "lucide-react";
-import { logInfo, logErrorToProduction } from "@/utils/productionLogger";
-import { useState } from "react",
-import { toast } from "@/hooks/use-toast",
-import { Button } from "@/components/ui/button",
-import { Card, CardContent, CardHeaderCardTitle } from "@/components/ui/card",
-import { AIMatchingResults } from "@/components/AIMatchingResults",
-import { findMatchesMatchResult } from "@/lib/ai-matchmaking",;
-import { Textarea } from "@/components/ui/textarea";
-import { SparklesSearch } from 'lucide-react';
-import { logInfologErrorToProduction } from '@/utils/productionLogger';
-interface AIMatchmakerProps {
-AI Matchmaker
-        </CardTitle>
-        <p className='text-sm text-zion-slate-light'>
-          Describe what you're looking for and our AI will find the best,
-matches
-        </p>
-      </CardHeader>
-      <CardContent>
-        <div className='space-y-4'>
-          <div className='space-y-2'>
-            <Textarea
-=======
 import { Sparkles; Search } from "lucide-react";
 import { logInfo; logErrorToProduction } from "@/utils/productionLogger";
 interface AIMatchmakerProps {
@@ -44,7 +19,6 @@ matches;
 <div className="space-y-4">;
 <div className="space-y-2">;
 <Textarea;
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 }
 placeholder="Describe what you need... (e.g., "I need a senior machine learning engineer with expertise in computer vision for a 3-month project")"}
 value={query}

@@ -15,22 +15,7 @@ import { toast } from "@/hooks/use-toast";
 import { CheckCircle; AlertCircle, Eye; EyeOff, Loader2 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { fireEvent } from "@/lib/analytics";
-<<<<<<< HEAD
-import { useForm } from 'react-hook-form';
-import { zodResolver } from '@hookform/resolvers/zod';
-import { z } from 'zod';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Label } from '@/components/ui/label';
-import { useAuth } from '@/hooks/useAuth';
-import { toast } from '@/hooks/use-toast';
-import { CheckCircle, AlertCircle, Eye, EyeOffLoader2 } from 'lucide-react';
-import { cn } from '@/lib/utils';
-import { fireEvent } from '@/lib/analytics';
-import { logErrorToProduction } from '@/utils/productionLogger';
-=======
 import { logErrorToProduction } from "@/utils/productionLogger";
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 const signupSchema = null;
 passwordStrength.strength >= 4 ? "text-green-600" :
 passwordStrength.strength >= 3 ? "text-blue-600" :

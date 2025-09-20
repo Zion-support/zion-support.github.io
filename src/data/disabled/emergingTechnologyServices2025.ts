@@ -99,12 +99,7 @@ supportLevel: "enterprise";,
 marketPrice: "$25;000 - $100;000/month",
 contactInfo: {
 phone: "+1 302 464 0950";
-<<<<<<< HEAD
-email: "kleber@ziontechgroup.com";
-website: "https://ziontechgroup.com";
-=======
 email: "kleber@ziontechgroup.com";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 website: "https://ziontechgroup.com";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 technology: ["Quantum processors", "Qiskit", "Cirq", "PennyLane", "Python", "Quantum algorithms"],
@@ -177,12 +172,7 @@ supportLevel: "enterprise";,
 marketPrice: "$8;999 - $25;000/month",
 contactInfo: {
 phone: "+1 302 464 0950";
-<<<<<<< HEAD
-email: "kleber@ziontechgroup.com";
-website: "https://ziontechgroup.com";
-=======
 email: "kleber@ziontechgroup.com";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 website: "https://ziontechgroup.com";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 technology: ["Machine Learning", "Deep Learning", "Reinforcement Learning", "NLP", "Computer Vision", "Python"],
@@ -255,12 +245,7 @@ supportLevel: "enterprise";,
 marketPrice: "$5;999 - $18;000/month",
 contactInfo: {
 phone: "+1 302 464 0950";
-<<<<<<< HEAD
-email: "kleber@ziontechgroup.com";
-website: "https://ziontechgroup.com";
-=======
 email: "kleber@ziontechgroup.com";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 website: "https://ziontechgroup.com";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 technology: ["Ethereum", "Polygon", "Hyperledger", "IPFS", "React", "Node.js", "Solidity"],
@@ -333,12 +318,7 @@ supportLevel: "premium";,
 marketPrice: "$3;999 - $12;000/month",
 contactInfo: {
 phone: "+1 302 464 0950";
-<<<<<<< HEAD
-email: "kleber@ziontechgroup.com";
-website: "https://ziontechgroup.com";
-=======
 email: "kleber@ziontechgroup.com";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 website: "https://ziontechgroup.com";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 technology: ["Kubernetes", "Docker", "TensorFlow Lite", "MQTT", "React", "Python", "Edge AI"],
@@ -411,12 +391,7 @@ supportLevel: "enterprise";,
 marketPrice: "$7;999 - $25;000/month",
 contactInfo: {
 phone: "+1 302 464 0950";
-<<<<<<< HEAD
-email: "kleber@ziontechgroup.com";
-website: "https://ziontechgroup.com";
-=======
 email: "kleber@ziontechgroup.com";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 website: "https://ziontechgroup.com";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 technology: ["Machine Learning", "Deep Learning", "NLP", "Python", "Elasticsearch", "Kafka", "Redis"],
@@ -489,12 +464,7 @@ supportLevel: "enterprise";,
 marketPrice: "$12;999 - $35;000/month",
 contactInfo: {
 phone: "+1 302 464 0950";
-<<<<<<< HEAD
-email: "kleber@ziontechgroup.com";
-website: "https://ziontechgroup.com";
-=======
 email: "kleber@ziontechgroup.com";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 website: "https://ziontechgroup.com";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 technology: ["Post-quantum algorithms", "Lattice-based cryptography", "Code-based cryptography", "Hash-based signatures"],
@@ -567,12 +537,7 @@ supportLevel: "enterprise";,
 marketPrice: "$19;999 - $50;000/month",
 contactInfo: {
 phone: "+1 302 464 0950";
-<<<<<<< HEAD
-email: "kleber@ziontechgroup.com";
-website: "https://ziontechgroup.com";
-=======
 email: "kleber@ziontechgroup.com";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 website: "https://ziontechgroup.com";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 technology: ["Deep Learning", "Molecular modeling", "Bioinformatics", "Python", "TensorFlow", "PyTorch"],
@@ -645,12 +610,7 @@ supportLevel: "enterprise";,
 marketPrice: "$15;999 - $45;000/month",
 contactInfo: {
 phone: "+1 302 464 0950";
-<<<<<<< HEAD
-email: "kleber@ziontechgroup.com";
-website: "https://ziontechgroup.com";
-=======
 email: "kleber@ziontechgroup.com";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 website: "https://ziontechgroup.com";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 technology: ["Computer Vision", "Deep Learning", "Robotics", "Sensor fusion", "Python", "C++", "ROS"],

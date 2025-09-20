@@ -32,34 +32,6 @@ See how enterprise teams are transforming their hiring process;
 <div className="h-12 w-12 rounded-full overflow-hidden bg-muted">;
 <img;
 src={testimonial.image}
-<<<<<<< HEAD
-                        alt={testimonial.author}
-                        className='h-full w-full object-cover'
-                        loading='lazy'                      />
-                    </div>
-                    <div>
-                      <p className='font-bold'>{testimonial.author}</p>
-                      <p className='text-sm text-muted-foreground'>                        {testimonial.title}, {testimonial.company}                      <p className="font-bold">{testimonial.author}</p>
-                      <p className="text-sm text-muted-foreground">
-                        {testimonial.title}, {testimonial.company}
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </CarouselItem>
-            ))}
-          </CarouselContent>
-          <div className='flex justify-center gap-2 mt-8'>            <CarouselPrevious />          <div className="flex justify-center gap-2 mt-8">
-            <CarouselPrevious />
-            <CarouselNext />
-          </div>
-        </Carousel>
-      </div>
-    </section>
-  );
-  )
-};
-=======
 alt={testimonial.author}
 className="h-full w-full object-cover"
 loading="lazy"                      />;
@@ -85,4 +57,3 @@ loading="lazy"                      />;
 </section>;
 );
 };}}))
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582

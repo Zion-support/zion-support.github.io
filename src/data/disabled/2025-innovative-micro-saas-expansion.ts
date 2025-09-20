@@ -75,12 +75,7 @@ integrations: ["Jupyter Notebooks", "TensorFlow Quantum", "Qiskit", "Cirq", "Pen
 compliance: ["ISO 27001", "SOC2", "GDPR", "HIPAA", "FISMA"],
 website: "https://ziontechgroup.com/quantum-ai-research-platform";
 contact: {
-<<<<<<< HEAD
-phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 trialDays: 30;,
@@ -133,12 +128,7 @@ integrations: ["AWS IoT", "Azure IoT", "Google Cloud IoT", "MQTT", "CoAP", "OPC 
 compliance: ["ISO 27001", "SOC2", "GDPR", "NIST", "IEC 62443"],
 website: "https://ziontechgroup.com/edge-ai-iot-orchestrator";
 contact: {
-<<<<<<< HEAD
-phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 trialDays: 21;,
@@ -191,12 +181,7 @@ integrations: ["Ethereum", "Polygon", "Solana", "MetaMask", "WalletConnect", "Op
 compliance: ["GDPR", "CCPA", "SOC2", "ISO 27001"],
 website: "https://ziontechgroup.com/decentralized-ai-marketplace";
 contact: {
-<<<<<<< HEAD
-phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 trialDays: 14;,
@@ -249,12 +234,7 @@ integrations: ["SAP", "Oracle", "Salesforce", "Microsoft Dynamics", "Tableau", "
 compliance: ["ISO 14001", "ISO 50001", "GRI Standards", "SASB", "TCFD"],
 website: "https://ziontechgroup.com/green-ai-optimizer";
 contact: {
-<<<<<<< HEAD
-phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 trialDays: 30;,
@@ -307,12 +287,7 @@ integrations: ["Epic", "Cerner", "GE Healthcare", "Siemens Healthineers", "Phili
 compliance: ["HIPAA", "FDA 510(k)", "CE Mark", "ISO 13485", "SOC2"],
 website: "https://ziontechgroup.com/ai-healthcare-diagnostics-pro";
 contact: {
-<<<<<<< HEAD
-phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 trialDays: 45;,
@@ -365,12 +340,7 @@ integrations: ["Bloomberg Terminal", "Reuters Eikon", "FactSet", "Refinitiv", "S
 compliance: ["Basel III", "Dodd-Frank", "SOX", "GDPR", "SOC2", "ISO 27001"],
 website: "https://ziontechgroup.com/ai-financial-intelligence-suite";
 contact: {
-<<<<<<< HEAD
-phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 trialDays: 30;,
@@ -423,12 +393,7 @@ integrations: ["Splunk", "ServiceNow", "Jira", "Slack", "Microsoft Teams", "Slac
 compliance: ["ISO 27001", "SOC2", "NIST", "GDPR", "HIPAA", "PCI DSS"],
 website: "https://ziontechgroup.com/ai-cybersecurity-defense-platform";
 contact: {
-<<<<<<< HEAD
-phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 trialDays: 21;,
@@ -481,12 +446,7 @@ integrations: ["SAP", "Oracle", "Salesforce", "Shopify", "WooCommerce", "Magento
 compliance: ["ISO 28000", "C-TPAT", "GDPR", "SOC2", "ISO 27001"],
 website: "https://ziontechgroup.com/ai-logistics-optimization-engine";
 contact: {
-<<<<<<< HEAD
-phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 trialDays: 30;,
@@ -539,12 +499,7 @@ integrations: ["Canvas", "Blackboard", "Moodle", "Google Classroom", "Microsoft 
 compliance: ["FERPA", "COPPA", "GDPR", "SOC2", "ISO 27001"],
 website: "https://ziontechgroup.com/ai-education-personalization-platform";
 contact: {
-<<<<<<< HEAD
-phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 trialDays: 14;,

@@ -263,7 +263,5 @@ export const innovativeMicroSaasSolutions2025 = [
     ],
     integrations: ['CRM systems', 'E-commerce platforms', 'Analytics tools', 'Social media platforms', 'Marketing tools'],
     compliance: ['CAN-SPAM', 'GDPR', 'CCPA', 'Email marketing regulations']
-=======
-=======
   }
 ];

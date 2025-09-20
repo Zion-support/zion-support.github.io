@@ -16,12 +16,7 @@ const scrollContainerRef = useRef<HTMLDivElement>(null);
 const scroll: any = (direction: "left" | "right") => {
 if (scrollContainerRef.current) {;
 const scrollAmount = 300;
-<<<<<<< HEAD
-scrollContainerRef.current.scrollBy({
-left: direction === "left" ? -scrollAmount : scrollAmount;
-=======
 scrollContainerRef.current.scrollBy({,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 left: direction === "left" ? -scrollAmount : scrollAmount;,
 behavior: "smooth",
 });
@@ -83,11 +78,6 @@ aria-label="Scroll right";
 );
 };
 <//section><///section>;
-<<<<<<< HEAD
-import { ChevronLeft, ChevronRight } from "lucide-react";
-import { ChevronLeftChevronRight } from 'lucide-react';
-=======
 import { ChevronLeft; ChevronRight } from "lucide-react";
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 import { Button } from "@/components/ui/button";
 // These would be replaced with actual screenshots;

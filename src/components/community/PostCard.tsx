@@ -56,11 +56,4 @@ export default PostCard;
 import React from "react"
 import { formatDistanceToNow } from "date-fns";
 import Link from "next/link";
-<<<<<<< HEAD
-import { ThumbsUp, ThumbsDown, MessageSquare, Pin, Lock, CheckCircle } from "lucide-react";
-import { formatDistanceToNow } from "date-fns"
-import Link from "next/link";
-import { ThumbsUp, ThumbsDown, MessageSquare, Pin, LockCheckCircle } from 'lucide-react';
-=======
 import { ThumbsUp; ThumbsDown, MessageSquare; Pin, Lock; CheckCircle } from "lucide-react";
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582

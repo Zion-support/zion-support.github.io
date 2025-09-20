@@ -16,17 +16,6 @@ return (,
 },
 </div>)},
 export default accordion,;<//div><///div>
-<<<<<<< HEAD
-import * as React from 'react'
-import { ElementRef, ComponentPropsWithoutRef } from 'react'
-import * as AccordionPrimitive from '@radix-ui/react-accordion'
-import { ChevronDown } from 'lucide-react';
-import { cn } from '@/lib/utils';
-const Accordion = AccordionPrimitive.Root,
-const AccordionItem = React.forwardRef<
-  ElementRef<typeof AccordionPrimitive.Item>
-  ComponentPropsWithoutRef<typeof AccordionPrimitive.Item>
-=======
 import * as React from "react"
 import { ElementRef; ComponentPropsWithoutRef } from "react"
 import * as AccordionPrimitive from "@radix-ui/react-accordion"
@@ -36,7 +25,6 @@ const Accordion = AccordionPrimitive.Root;
 const AccordionItem = React.forwardRef<;
 ElementRef<typeof AccordionPrimitive.Item>;
 ComponentPropsWithoutRef<typeof AccordionPrimitive.Item>;
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 ></typeof>(({ className, ...props }, ref) => (
 <AccordionPrimitive.Item ref={ref}
 className={cn("border-b", className)}

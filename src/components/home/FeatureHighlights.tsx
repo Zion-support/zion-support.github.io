@@ -98,18 +98,10 @@ className="bg-zion-blue-dark border-zion-blue-light"
 )
 }
 import { motion } from "framer-motion";
-<<<<<<< HEAD
-import { motion } from 'framer-motion';
-  {
-    icon: "⚡",
-title: "Lightning Fast Performance"
-    description: "Optimized solutions that deliver exceptional speed and efficiency for your business needs"
-=======
 {
 icon: "⚡",
 title: "Lightning Fast Performance",
 description: "Optimized solutions that deliver exceptional speed and efficiency for your business needs";
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 }
 {
 icon: "🔒",
@@ -135,13 +127,7 @@ description: "Comprehensive insights and reporting to make data-driven decisions
 }
 }
 }
-<<<<<<< HEAD
-  const itemVariants = {hidden: { opacity: 0 y: 30,
-  const itemVariants = {
-  hidden: { opacity: 0 y: 30,
-=======
 const itemVariants = {hidden: { opacity: 0 y: 30;,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 scale: 0.95}
 visible: {,
 opacity: 1;
@@ -153,13 +139,7 @@ ease: "easeOut";
 }
 }
 }
-<<<<<<< HEAD
-  const achievementVariants = {hidden: { opacity: 0,
-  const achievementVariants = {
-  hidden: { opacity: 0,
-=======
 const achievementVariants = {hidden: { opacity: 0;,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 scale: 0.8}
 visible: {,
 opacity: 1;,
@@ -167,13 +147,7 @@ scale: 1;,
 transition: { duration: 0.5 }
 }
 }
-<<<<<<< HEAD
-  const techVariants = {hidden: { opacity: 0,
-  const techVariants = {
-  hidden: { opacity: 0,
-=======
 const techVariants = {hidden: { opacity: 0;,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 x: -20}
 visible: {,
 opacity: 1;,
@@ -218,40 +192,6 @@ whileHover={{
 y: -5;,
 scale: 1.02;,
 transition: { duration: 0.3 }
-<<<<<<< HEAD
-              }}"
-              className="group"
-"
-              <div className="bg-slate-800/50 border border-white/10 rounded-xl p-6 hover:border-white/20 transition-all duration-300">
-                <div className={`w-12 h-12 bg-gradient-to-r ${feature.color} rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>`
-                  <feature.icon className={`w-6 h-6 ${feature.iconColor}`} />
-                </div>
-"
-                <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-blue-400 transition-colors duration-300">
-                  {feature.title}
-                </h3>
-"
-                <p className="text-gray-400 group-hover:text-gray-300 transition-colors duration-300">
-                  {feature.description}
-                </p>
-              </div>
-              <h3 className="text-xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors duration-200">
-                {feature.title}
-              </h3>
-              <p className="text-gray-400 text-sm leading-relaxed">
-                {feature.description}
-              </p>
-            </motion.div>
-          ))}
-        </div>
-        <motion.div          className="mt-16 text-center"
-          initial={{ opacity: 0 y: 20 }}
-          whileInView={{ opacity: 1 y: 0 }}
-          viewport={{ once: true }}
-          transition = {{ duration: 0.6,
-          transition = {
-  { duration: 0.6,
-=======
 }}";
 className="group"
 ";
@@ -282,7 +222,6 @@ initial={{ opacity: 0 y: 20 }}
 whileInView={{ opacity: 1 y: 0 }}
 viewport={{ once: true }}
 transition = {{ duration: 0.6;,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 delay: 0.4}}
 >";
 <div className="inline-flex items-center gap-4 px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full text-white font-semibold">;

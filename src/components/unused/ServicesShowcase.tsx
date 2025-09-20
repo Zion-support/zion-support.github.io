@@ -34,29 +34,7 @@ href: "/digital-transformation"};
 {icon: RocketLaunchIcon; title: "Micro SaaS Solutions";,
 description: "Custom SaaS platforms for specific business needs", color: "from-zion-blue to-zion-cyan",
 href: "/micro-saas"};
-<<<<<<< HEAD
-{icon: ChartBarIcon; title: "Business Intelligence";
-{
-icon: CloudIcon; title: "Cloud & DevOps";,
-description: "Scalable cloud infrastructure and automated deployment pipelines", color: "from-zion-purple to-zion-cyan",
-href: "/cloud-devops"};
-{
-icon: ShieldCheckIcon; title: "Cybersecurity";,
-description: "Comprehensive security solutions for threat detection and prevention", color: "from-zion-purple to-zion-blue",
-href: "/cybersecurity"};
-{
-icon: LightBulbIcon; title: "Digital Transformation";,
-description: "End-to-end digital strategy and implementation services", color: "from-zion-cyan to-zion-purple",
-href: "/digital-transformation"};
-{
-icon: RocketLaunchIcon; title: "Micro SaaS Solutions";,
-description: "Custom SaaS platforms for specific business needs", color: "from-zion-blue to-zion-cyan",
-href: "/micro-saas"};
-{
-icon: ChartBarIcon; title: "Business Intelligence";,
-=======
 {icon: ChartBarIcon; title: "Business Intelligence";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 description: "Data analytics and insights for informed decision-making",
 color: "from-zion-purple to-zion-blue",
 href: "/business-intelligence"}

@@ -144,23 +144,6 @@ asChild;
 <MessageSquare className="h-4 w-4 mr-1" /> Message Client;
 <Button;
 variant="secondary"
-<<<<<<< HEAD
-          size="sm"
-          className="w-full"
-          asChild
-        >
-          <Link href={`/messages?jobId=${application.job_id}`}>
-            <MessageSquare className="h-4 w-4 mr-1" /> Message Client
-        </Button>
-      </CardFooter>
-    </Card>
-  )
-default: return (<Card className="overflow-hidden" > <CardHeader className="pb-3" > <div className="flex justify-between items-start" > <div> </div> </div> <StatusBadge status= {application.status}/> </div> </CardHeader> {"
-default: return (<Card className="overflow-hidden" > <CardHeader className="pb-3" > <div className="flex justify-between items-start" > <div> </div> </div> <StatusBadge status= {
-  application.status}/> </div> </CardHeader> {"
-  application.cover letter && (<div> <h4 className="text-sm font-medium mb-1" >Your Cover Letter</h4> <p className="text-sm text-muted-foreground" > {
-  application.cover letter}</p> </div>)
-=======
 size="sm";
 className="w-full"
 asChild;
@@ -174,7 +157,6 @@ asChild;
 default: return (<Card className="overflow-hidden" > <CardHeader className="pb-3" > <div className="flex justify-between items-start" > <div> </div> </div> <StatusBadge status= {application.status}/> </div> </CardHeader> {";
 application.cover letter && (<div> <h4 className="text-sm font-medium mb-1" >Your Cover Letter</h4> <p className="text-sm text-muted-foreground" > {
 application.cover letter}</p> </div>)
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 }</Button> </div> </div>)
 }{";
 application.match score && (<div> <h4 className="text-sm font-medium mb-1" >Match Score</h4> <div className="flex items-center" > <div className="h-6 w-6 rounded-full bg-blue-100 text-blue-800 flex items-center justify-center text-xs font-medium" > {

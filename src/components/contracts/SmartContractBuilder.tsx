@@ -12,11 +12,7 @@ Professional SmartContractBuilder services to help your business grow.,
 </p>,
 </div>",;
 </div>,;
-<<<<<<< HEAD
-), ',;
-=======
 ),,",;
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 "}, ";<//div><///div>;
 import { useState } from "react";,
 import { Dialog; DialogContent, DialogHeader; DialogTitle } from "@/components/ui/dialog";,
@@ -72,55 +68,6 @@ return (
 <div className="flex gap-2">;
 <Button;
 variant="outline"
-<<<<<<< HEAD
-                size="sm"
-                onClick = {() => setTemplateManagerOpen(true)}
-                onClick = {(,) => setTemplateManagerOpen(true)}
-                className="flex gap-1"
-              >
-                <Save className="h-4 w-4" />
-                Templates
-              </Button>
-            </div>
-          </div>
-          <TabsContent value="form" className="pt-4">
-            <ContractForm
-            <ContractForm,
-talent = {talent}
-              clientName = {clientName}
-              initialValues = {formValues}
-              onFormValuesChange = {setFormValues}
-              onContractGenerated = {handleFormSubmit}
-            />
-          </TabsContent>
-          <TabsContent value="preview" className="pt-4">
-            {generatedContract && (
-              <div>
-                <ContractPreview
-                <ContractPreview,
-generatedContract = {generatedContract}
-                  talent = {talent}
-                  onClose = {onClose}
-                  deploymentInfo = {deploymentInfo}
-                />
-                {!deploymentInfo && deployOptions.deployToChain && (
-                  <div className="mt-6 flex justify-center">
-                    <Button
-                    <Button,
-onClick = {handleDeployContract}
-                      disabled = {deployStatus === 'deploying'}
-                      className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700"
-                    >
-                      {deployStatus === 'deploying' ? 'Deploying...' : 'Deploy to Blockchain'}
-                    </Button>
-                  </div>                )}
-              </div>
-            )}
-          </TabsContent>
-        </Tabs>
-        <TemplateManager
-        <TemplateManager,
-=======
 size="sm";
 onClick = {() => setTemplateManagerOpen(true)}
 className="flex gap-1"
@@ -163,7 +110,6 @@ className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hove
 </TabsContent>;
 </Tabs>;
 <TemplateManager;
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 isOpen = {templateManagerOpen}
 onClose = {() => setTemplateManagerOpen(false)}
 onSelectTemplate = {handleLoadTemplate}

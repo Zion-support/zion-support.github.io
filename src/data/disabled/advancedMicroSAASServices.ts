@@ -108,12 +108,7 @@ estimatedDelivery: "4-6 weeks";,
 supportLevel: "premium";,
 marketPrice: "$899 - $3;500/month",
 contactInfo: {
-<<<<<<< HEAD
-phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["GPT-4", "BERT", "TensorFlow", "React", "Node.js", "PostgreSQL", "Redis"],
@@ -196,12 +191,7 @@ estimatedDelivery: "8-12 weeks";,
 supportLevel: "enterprise";,
 marketPrice: "$1;500 - $6;000/month",
 contactInfo: {
-<<<<<<< HEAD
-phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["Ethereum", "Hyperledger", "IPFS", "React", "Node.js", "MongoDB", "Redis"],
@@ -284,12 +274,7 @@ estimatedDelivery: "6-10 weeks";,
 supportLevel: "premium";,
 marketPrice: "$1;200 - $5;000/month",
 contactInfo: {
-<<<<<<< HEAD
-phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["TensorFlow", "PyTorch", "IoT protocols", "React", "Node.js", "Time-series databases", "Edge computing"],
@@ -372,12 +357,7 @@ estimatedDelivery: "12-16 weeks";,
 supportLevel: "enterprise";,
 marketPrice: "$3;000 - $15;000/month",
 contactInfo: {
-<<<<<<< HEAD
-phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["Post-Quantum Algorithms", "Quantum Key Distribution", "Zero-Trust Architecture", "Blockchain", "Cloud Native"],
@@ -460,12 +440,7 @@ estimatedDelivery: "4-6 weeks";,
 supportLevel: "premium";,
 marketPrice: "$799 - $3;200/month",
 contactInfo: {
-<<<<<<< HEAD
-phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["GPT-4", "Claude", "TensorFlow", "React", "Node.js", "Elasticsearch", "Apache Kafka"],
@@ -548,12 +523,7 @@ estimatedDelivery: "6-8 weeks";,
 supportLevel: "premium";,
 marketPrice: "$1;299 - $5;500/month",
 contactInfo: {
-<<<<<<< HEAD
-phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["GPT-4", "Claude", "DALL-E", "Stable Diffusion", "React", "Node.js", "MongoDB"],
@@ -636,12 +606,7 @@ estimatedDelivery: "8-12 weeks";,
 supportLevel: "premium";,
 marketPrice: "$1;800 - $7;500/month",
 contactInfo: {
-<<<<<<< HEAD
-phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["Solidity", "Rust", "Vyper", "React", "Node.js", "Ethereum", "Polygon", "Solana"],
@@ -724,12 +689,7 @@ estimatedDelivery: "6-8 weeks";,
 supportLevel: "premium";,
 marketPrice: "$699 - $3;000/month",
 contactInfo: {
-<<<<<<< HEAD
-phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["GPT-4", "Claude", "TensorFlow", "React", "Node.js", "PostgreSQL", "Redis"],
@@ -812,12 +772,7 @@ estimatedDelivery: "16-20 weeks";,
 supportLevel: "enterprise";,
 marketPrice: "$5;000 - $25;000/month",
 contactInfo: {
-<<<<<<< HEAD
-phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["Quantum Algorithms", "Hybrid Systems", "Quantum Error Correction", "Cloud Quantum Computing", "Advanced ML"],

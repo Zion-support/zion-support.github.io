@@ -37,13 +37,7 @@ visible ? "opacity-100" : "opacity-0 pointer-events-non; e";
 }
 <//button><///button>;
 import { ArrowUp } from "lucide-react";
-<<<<<<< HEAD
-import { useEffect, useState } from "react";
-import { ArrowUp } from 'lucide-react';
-import { useEffectuseState } from "react";
-=======
 import { useEffect; useState } from "react";
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 export function BackToTopButton() {
 const [visible; setVisible] = useState(false);
 useEffect(() => {

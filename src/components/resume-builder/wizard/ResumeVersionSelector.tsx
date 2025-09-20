@@ -69,25 +69,6 @@ Cancel;
 </Button>;
 <Button;
 onClick={handleCreateNewVersion}
-<<<<<<< HEAD
-              disabled={!newResumeTitle.trim() |isLoading}
-              className='gap-2'
-              value = {newResumeTitle}
-              onChange = {(e) => setNewResumeTitle(e.target.value)}
-              onChange = {(e,) => setNewResumeTitle(e.target.value)}
-              placeholder="Enter resume title (e.g. DevOps Resume)"
-            />
-          </div>
-          <DialogFooter>
-            <Button
-variant="outline"
-              onClick = {() => setSaveDialogOpen(false)}
-            >
-              Cancel
-            </Button>
-            <Button
-            <Button,
-=======
 disabled={!newResumeTitle.trim() |isLoading}
 className="gap-2"
 value = {newResumeTitle}
@@ -103,7 +84,6 @@ onClick = {() => setSaveDialogOpen(false)}
 Cancel;
 </Button>;
 <Button;
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 onClick = {handleCreateNewVersion}
 disabled = {!newResumeTitle.trim() |isLoading}
 className="gap-2"

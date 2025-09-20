@@ -78,12 +78,7 @@ targetAudience: [
 tags: ["Space Tech", "Satellites", "Communication", "Earth Observation", "Space Data", "Global Coverage"],
 contactInfo: {
 phone: "+1 302 464 0950";
-<<<<<<< HEAD
-email: "kleber@ziontechgroup.com";
-website: "https://ziontechgroup.com";
-=======
 email: "kleber@ziontechgroup.com";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 website: "https://ziontechgroup.com";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$50;000/month (Industry average: $100;000/month)",
@@ -148,12 +143,7 @@ targetAudience: [
 tags: ["Biotechnology", "AI", "Drug Discovery", "Genetic Engineering", "Synthetic Biology", "Precision Medicine"],
 contactInfo: {
 phone: "+1 302 464 0950";
-<<<<<<< HEAD
-email: "kleber@ziontechgroup.com";
-website: "https://ziontechgroup.com";
-=======
 email: "kleber@ziontechgroup.com";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 website: "https://ziontechgroup.com";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$35;000/month (Industry average: $70;000/month)",
@@ -218,12 +208,7 @@ targetAudience: [
 tags: ["Nanotechnology", "Manufacturing", "Quantum Materials", "Atomic Precision", "Materials Science", "Innovation"],
 contactInfo: {
 phone: "+1 302 464 0950";
-<<<<<<< HEAD
-email: "kleber@ziontechgroup.com";
-website: "https://ziontechgroup.com";
-=======
 email: "kleber@ziontechgroup.com";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 website: "https://ziontechgroup.com";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$40;000/month (Industry average: $80;000/month)",
@@ -288,12 +273,7 @@ targetAudience: [
 tags: ["Quantum Internet", "Quantum Communication", "Quantum Security", "Quantum Networks", "Encryption", "Future Tech"],
 contactInfo: {
 phone: "+1 302 464 0950";
-<<<<<<< HEAD
-email: "kleber@ziontechgroup.com";
-website: "https://ziontechgroup.com";
-=======
 email: "kleber@ziontechgroup.com";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 website: "https://ziontechgroup.com";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$30;000/month (Industry average: $60;000/month)",
@@ -358,12 +338,7 @@ targetAudience: [
 tags: ["Brain-Computer Interface", "Neural Technology", "Cognitive Enhancement", "Medical Technology", "Human-AI", "Accessibility"],
 contactInfo: {
 phone: "+1 302 464 0950";
-<<<<<<< HEAD
-email: "kleber@ziontechgroup.com";
-website: "https://ziontechgroup.com";
-=======
 email: "kleber@ziontechgroup.com";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 website: "https://ziontechgroup.com";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$25;000/month (Industry average: $50;000/month)",
@@ -428,12 +403,7 @@ targetAudience: [
 tags: ["Fusion Energy", "Clean Energy", "Nuclear Physics", "Plasma Physics", "Sustainability", "Climate Solution"],
 contactInfo: {
 phone: "+1 302 464 0950";
-<<<<<<< HEAD
-email: "kleber@ziontechgroup.com";
-website: "https://ziontechgroup.com";
-=======
 email: "kleber@ziontechgroup.com";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 website: "https://ziontechgroup.com";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$100;000/month (Industry average: $200;000/month)",
@@ -498,12 +468,7 @@ targetAudience: [
 tags: ["Digital Twin", "IoT", "Simulation", "Predictive Analytics", "Virtual Reality", "Smart Cities"],
 contactInfo: {
 phone: "+1 302 464 0950";
-<<<<<<< HEAD
-email: "kleber@ziontechgroup.com";
-website: "https://ziontechgroup.com";
-=======
 email: "kleber@ziontechgroup.com";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 website: "https://ziontechgroup.com";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$15;000/month (Industry average: $30;000/month)",
@@ -568,12 +533,7 @@ targetAudience: [
 tags: ["Holographic Display", "3D Technology", "Telepresence", "Augmented Reality", "Immersive Tech", "Visualization"],
 contactInfo: {
 phone: "+1 302 464 0950";
-<<<<<<< HEAD
-email: "kleber@ziontechgroup.com";
-website: "https://ziontechgroup.com";
-=======
 email: "kleber@ziontechgroup.com";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 website: "https://ziontechgroup.com";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$20;000/month (Industry average: $40;000/month)",
@@ -638,12 +598,7 @@ targetAudience: [
 tags: ["Quantum Sensing", "Quantum Technology", "Precision Measurement", "Detection", "Scientific Instruments", "Innovation"],
 contactInfo: {
 phone: "+1 302 464 0950";
-<<<<<<< HEAD
-email: "kleber@ziontechgroup.com";
-website: "https://ziontechgroup.com";
-=======
 email: "kleber@ziontechgroup.com";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 website: "https://ziontechgroup.com";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$18;000/month (Industry average: $35;000/month)",
@@ -708,12 +663,7 @@ targetAudience: [
 tags: ["Autonomous Systems", "Robotics", "AI", "Computer Vision", "Automation", "Innovation"],
 contactInfo: {
 phone: "+1 302 464 0950";
-<<<<<<< HEAD
-email: "kleber@ziontechgroup.com";
-website: "https://ziontechgroup.com";
-=======
 email: "kleber@ziontechgroup.com";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 website: "https://ziontechgroup.com";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$25;000/month (Industry average: $50;000/month)",

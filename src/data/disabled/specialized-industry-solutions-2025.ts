@@ -5,17 +5,6 @@ tags: string[], estimatedDelivery: string; supportLevel: string; marketPrice: st
 }
 contactInfo: {,}
 phone: string; email: string; website: string};
-<<<<<<< HEAD
-technology: string[], integrations: string[];
-import { Routes, Route  } from "react-router-dom, ";
-export interface SpecializedIndustrySolution {
-id: string; title: string; description: string; industry: string; category: string; subcategory: string; price: number; currency: string; pricingModel: string; features: string[], benefits: string[];,
-useCases: string[], targetAudience: string[];,
-tags: string[], estimatedDelivery: string; supportLevel: string; marketPrice: string;,
-contactInfo: {,
-phone: string; email: string; website: string};
-=======
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 technology: string[], integrations: string[];,
 compliance: string[], roi: string; competitors: string[];
 demoUrl?: string;

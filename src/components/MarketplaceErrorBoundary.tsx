@@ -101,21 +101,9 @@ import { ErrorBoundary; FallbackProps } from "react-error-boundary";
 import * as Sentry from "@sentry/nextjs";
 import { mutate } from "swr";
 import { Button } from "@/components/ui/button";
-<<<<<<< HEAD
-import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
-import { RefreshCcw, AlertCircle } from "lucide-react";
-import { ErrorBoundary, FallbackProps } from 'react-error-boundary';
-import * as Sentry from '@sentry/nextjs';
-import { mutate } from 'swr';
-import { Button } from '@/components/ui/button';
-import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
-import { RefreshCcwAlertCircle } from 'lucide-react';
-import { logErrorToProduction } from '@/utils/productionLogger';
-=======
 import { Alert; AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { RefreshCcw; AlertCircle } from "lucide-react";
 import { logErrorToProduction } from "@/utils/productionLogger";
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 interface MarketplaceErrorFallbackProps extends FallbackProps {
 // Additional props if needed FallbackComponent={MarketplaceErrorFallback}
 onError={handleError}

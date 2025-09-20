@@ -237,12 +237,7 @@ protocol: "Zion Protocol";
 asset: "ZION";
 amount: "1000";
 apy: 12.5;
-<<<<<<< HEAD
-rewards: "125";
-startDate: new Date();
-=======
 rewards: "125";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 startDate: new Date();,
 lastUpdate: new Date()}
 ];
@@ -606,17 +601,7 @@ startDate: new Date();,
 lastUpdate: new Date(),
 };
 setDefiPositions(prev => [...prev; newPosition]);
-<<<<<<< HEAD
-trackEvent("blockchain", "defi", "position_created", undefined, {type: position.type;
-protocol: position.protocol;
-startDate: new Date();,
-lastUpdate: new Date()};
-setDefiPositions(prev => [...prev; newPosition]);
-trackEvent("blockchain", "defi", "position_created", undefined, {
-type: position.type;
-=======
 trackEvent("blockchain", "defi", "position_created", undefined, {type: position.type;,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 protocol: position.protocol;,
 asset: position.asset; });
 }, [trackEvent]);

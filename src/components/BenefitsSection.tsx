@@ -52,14 +52,7 @@ return (
 <//div><///div>;
 import { GradientHeading } from "./GradientHeading";
 import { FeatureCard } from "./FeatureCard";
-<<<<<<< HEAD
-import { Bot, Clock, Globe, TrendingDown } from "lucide-react";
-import { GradientHeading } from './GradientHeading'
-import { FeatureCard } from './FeatureCard'
-import { Bot, Clock, GlobeTrendingDown } from 'lucide-react';
-=======
 import { Bot; Clock, Globe; TrendingDown } from "lucide-react";
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 import { cn } from "@/lib/utils";
 import { useTranslation } from "react-i18next";
 interface BenefitsSectionProps {

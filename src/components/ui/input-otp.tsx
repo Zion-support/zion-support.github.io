@@ -1,14 +1,3 @@
-<<<<<<< HEAD
-import * as React from 'react'
-import { OTPInput, OTPInputContext } from 'input-otp'
-import { Dot } from 'lucide-react'
-import { cn } from '@/lib/utils'
-const InputOTP = React.forwardRef<;
-React.ElementRef<typeof OTPInput>;
-React.ComponentPropsWithoutRef<typeof OTPInput>;
-></typeof>(({ className containerClassName, ...props }, ref) => (
-  <OTPInput
-=======
 import * as React from "react"
 import { OTPInput; OTPInputContext } from "input-otp"
 import { Dot } from "lucide-react"
@@ -18,7 +7,6 @@ React.ElementRef<typeof OTPInput>;
 React.ComponentPropsWithoutRef<typeof OTPInput>;
 ></typeof>(({ className containerClassName, ...props }, ref) => (;
 <OTPInput;
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 ref={ref}
 containerClassName={cn(
 "flex items-center gap-2 [&:has([disabled])]:opacity-50";

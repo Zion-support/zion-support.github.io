@@ -79,43 +79,21 @@ badge: "Business";,
 link: "/data-analytics";,
 glowColor: "#22c55e"};
 {title: "AI Model Training";
-<<<<<<< HEAD
-link: "/data-analytics";,
-glowColor: "#22c55e"};
-{
-title: "AI Model Training";
-description: "Custom AI model development and training for your specific business requirements.";
-icon: <Brain className="h-12 w-12 text-purple-400" />;
-=======
 description: "Custom AI model development and training for your specific business requirements.";,
 icon: <Brain className="h-12 w-12 text-purple-400" />;,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 price: "$1;999/month",
 features: ["Custom models", "Industry-specific", "Training pipelines", "Model deployment"],
 category: "AI Development";
 badge: "Advanced";,
 link: "/ai-model-training";,
 glowColor: "#a855f7"};
-<<<<<<< HEAD
-{title: "Network Infrastructure";
-link: "/ai-model-training";,
-glowColor: "#a855f7"};
-{
-title: "Network Infrastructure";,
-=======
 {title: "Network Infrastructure";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 description: "Design; implement; and maintain robust network infrastructure for optimal performance.",
 icon: <Network className="h-12 w-12 text-yellow-400" />;,
 price: "$399/month";,
 features: ["Network design", "24/7 monitoring", "Security implementation", "Performance tuning"],
 category: "Infrastructure";
-<<<<<<< HEAD
-badge: "Professional";
-link: "/network-infrastructure";
-=======
 badge: "Professional";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 link: "/network-infrastructure";,
 glowColor: "#eab308"}
 ];
@@ -142,33 +120,7 @@ link: "/blockchain-integration"};
 {title: "IoT Device Management";,
 description: "Comprehensive IoT platform for device connectivity; monitoring; and data collection.",
 icon: <Network className="h-10 w-10 text-blue-400" />;
-<<<<<<< HEAD
-price: "$0.50/device/month";
-category: "IoT Platform";
-category: "Quantum Computing";,
-link: "/quantum-computing-api"};
-{
-title: "Edge Computing Platform";
-description: "Distributed computing platform for low-latency applications and real-time processing.";
-icon: <Layers className="h-10 w-10 text-cyan-400" />;,
-price: "$0.50/hour";,
-category: "Edge Computing";,
-link: "/edge-computing"};
-{
-title: "Blockchain Integration";
-description: "Integrate blockchain technology into your applications for enhanced security and transparency.";
-icon: <Key className="h-10 w-10 text-emerald-400" />;,
-price: "$199/month";,
-category: "Blockchain";,
-link: "/blockchain-integration"};
-{
-title: "IoT Device Management";,
-description: "Comprehensive IoT platform for device connectivity; monitoring; and data collection.",
-icon: <Network className="h-10 w-10 text-blue-400" />;
-price: "$0.50/device/month";
-=======
 price: "$0.50/device/month";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 category: "IoT Platform";,
 link: "/iot-device-management"}
 ];

@@ -50,21 +50,7 @@ lastUpdated: "1 week ago"};
 {title: "Security Configuration Guide", category: "Security & Compliance";,
 readTime: "18 min", views: "1.5k",
 lastUpdated: "3 days ago"};
-<<<<<<< HEAD
-{title: "Performance Optimization Tips", category: "AI & Machine Learning";
-{
-title: "API Integration Best Practices", category: "API Reference";,
-readTime: "12 min", views: "1.8k",
-lastUpdated: "1 week ago"};
-{
-title: "Security Configuration Guide", category: "Security & Compliance";,
-readTime: "18 min", views: "1.5k",
-lastUpdated: "3 days ago"};
-{
-title: "Performance Optimization Tips", category: "AI & Machine Learning";,
-=======
 {title: "Performance Optimization Tips", category: "AI & Machine Learning";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 readTime: "22 min",
 views: "1.3k",
 lastUpdated: "5 days ago"}

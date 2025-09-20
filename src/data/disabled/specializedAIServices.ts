@@ -84,12 +84,7 @@ estimatedDelivery: "8-12 weeks";,
 supportLevel: "enterprise";,
 marketPrice: "$15;000 - $50;000/month",
 contactInfo: {
-<<<<<<< HEAD
-phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["PyTorch", "TensorFlow", "Hugging Face", "Transformers", "CUDA", "Distributed Training"],
@@ -147,12 +142,7 @@ estimatedDelivery: "3-4 weeks";,
 supportLevel: "premium";,
 marketPrice: "$4;200 - $15;000/month",
 contactInfo: {
-<<<<<<< HEAD
-phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["OpenCV", "TensorFlow", "PyTorch", "CUDA", "Edge TPU", "Computer Vision Models"],
@@ -210,12 +200,7 @@ estimatedDelivery: "4-6 weeks";,
 supportLevel: "premium";,
 marketPrice: "$6;800 - $20;000/month",
 contactInfo: {
-<<<<<<< HEAD
-phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["TensorFlow", "PyTorch", "Scikit-learn", "Deep Learning", "NLP", "Graph Analytics"],
@@ -273,12 +258,7 @@ estimatedDelivery: "3-4 weeks";,
 supportLevel: "premium";,
 marketPrice: "$3;500 - $12;000/month",
 contactInfo: {
-<<<<<<< HEAD
-phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["Python", "R", "TensorFlow", "Scikit-learn", "Prophet", "Time Series Models"],
@@ -336,12 +316,7 @@ estimatedDelivery: "2-3 weeks";,
 supportLevel: "premium";,
 marketPrice: "$2;800 - $8;000/month",
 contactInfo: {
-<<<<<<< HEAD
-phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["Python", "UiPath", "Automation Anywhere", "Blue Prism", "Machine Learning", "NLP"],
@@ -399,12 +374,7 @@ estimatedDelivery: "3-4 weeks";,
 supportLevel: "premium";,
 marketPrice: "$3;800 - $12;000/month",
 contactInfo: {
-<<<<<<< HEAD
-phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["Python", "TensorFlow", "Scikit-learn", "NLP", "Recommendation Systems", "Deep Learning"],
@@ -462,12 +432,7 @@ estimatedDelivery: "4-6 weeks";,
 supportLevel: "premium";,
 marketPrice: "$5;200 - $18;000/month",
 contactInfo: {
-<<<<<<< HEAD
-phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["Python", "TensorFlow", "Scikit-learn", "Optimization Algorithms", "Time Series Models", "Graph Analytics"],
@@ -525,12 +490,7 @@ estimatedDelivery: "2-3 weeks";,
 supportLevel: "premium";,
 marketPrice: "$3;200 - $10;000/month",
 contactInfo: {
-<<<<<<< HEAD
-phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
-=======
 phone: "+1 302 464 0950";,
->>>>>>> bfddf44e03d6ba856f66d9723288368815d59582
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["Selenium", "Appium", "JUnit", "TestNG", "Machine Learning", "NLP", "Computer Vision"],
