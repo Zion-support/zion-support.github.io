@@ -37,7 +37,8 @@ declare module 'lovable-tagger' {
 declare const __dirname: string;
 declare const process: {
   env: {
-    [key: string]: string | undefined,NODE_ENV: 'development' | 'production' | 'test';
+    [key: string]: string | undefined;
+    NODE_ENV: 'development' | 'production' | 'test';
     PORT?: string
   }
 },
@@ -45,7 +46,7 @@ declare const process: {
 // Badge component type fixes
 declare module '@/components/ui/badge' {
   export interface BadgeProps {
-    className?: string,
+    className?: string;
     variant?:
       | "default"
       | "secondary"
