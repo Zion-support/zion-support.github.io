@@ -1007,8 +1007,6 @@ main.loading {
   }
 }
 
-}
-
 /* LiveKit UI overrides */
   [data-lk-theme='default'] {
     --lk-color-accent: #06B6D4;
