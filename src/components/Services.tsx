@@ -1,4 +1,5 @@
-import React from "react";
+import React from "react"
+
 const Services: React.FC = () => {
   return (
     <div className="min-h-screen bg-gray-900 text-white">
@@ -8,24 +9,25 @@ const Services: React.FC = () => {
           <div className="bg-gray-800 p-6 rounded-lg">
             <h3 className="text-xl font-semibold mb-4">AI Services</h3>
             <p className="text-gray-300">
-              Cutting-edge artificial intelligence solutions for your business needs.;
+              Cutting-edge artificial intelligence solutions for your business needs.
             </p>
           </div>
           <div className="bg-gray-800 p-6 rounded-lg">
             <h3 className="text-xl font-semibold mb-4">Micro SaaS</h3>
             <p className="text-gray-300">
-              Scalable software solutions tailored to your specific requirements.;
+              Scalable software solutions tailored to your specific requirements.
             </p>
           </div>
           <div className="bg-gray-800 p-6 rounded-lg">
             <h3 className="text-xl font-semibold mb-4">IT Infrastructure</h3>
             <p className="text-gray-300">
-              Robust and secure infrastructure solutions for modern businesses.;
+              Robust and secure infrastructure solutions for modern businesses.
             </p>
           </div>
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
+
 export default Services;

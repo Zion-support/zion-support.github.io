@@ -1,17 +1,18 @@
-import React, { useState, useEffect, useCallback, useMemo } from "react";
+import React, { useState, useEffect, useCallback, useMemo } from "react"
+
 const Home: React.FC = () => {
-  const [isLoaded, setIsLoaded] = useState(false);
-  const [scrollY, setScrollY] = useState(0);
+  const [isLoaded, setIsLoaded] = useState(false)
+  const [scrollY, setScrollY] = useState(0)
   const [hoveredService, setHoveredService] = useState<number | null>(null);
 
   const handleScroll = useCallback(() => {
-    setScrollY(window.scrollY);
+    setScrollY(window.scrollY)
   }, []);
 
   useEffect(() => {
-    setIsLoaded(true);
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
+    setIsLoaded(true)
+    window.addEventListener('scroll', handleScroll, { passive: true })
+    return () => window.removeEventListener('scroll', handleScroll)
   }, [handleScroll]);
 
   const services = useMemo(() => [
@@ -143,7 +144,7 @@ const Home: React.FC = () => {
                       </div>
                       <ul className="space-y-2">
                         {service.features.map((feature, featureIndex) => (
-                          <li key={featureIndex} className="text-gray-400 flex items-center group-hover: text-gray-300 transition-colors duration-300">
+                          <li key={featureIndex} className="text-gray-400 flex items-center group-hover:text-gray-300 transition-colors duration-300">
                             <span className={`w-2 h-2 bg-gradient-to-r ${service.gradient} rounded-full mr-3 transition-all duration-300 ${hoveredService === index ? 'scale-125' : ''}`}></span>
                             {feature}
                           </li>
@@ -287,7 +288,7 @@ const Home: React.FC = () => {
           <section className="py-20 px-4">
             <div className="max-w-4xl mx-auto text-center">
               <div className={`transition-all duration-1000 delay-900 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-                <h2 className="text-4xl md: text-5xl font-bold mb-8">Ready to Transform Your Business?</h2>
+                <h2 className="text-4xl md:text-5xl font-bold mb-8">Ready to Transform Your Business?</h2>
                 <p className="text-xl text-gray-300 mb-12">
                   Join hundreds of companies already using our cutting-edge technology solutions
                 </p>
@@ -305,6 +306,7 @@ const Home: React.FC = () => {
         </div>
       </div>
     </div>
-  )
+  );
 };
+
 export default Home;

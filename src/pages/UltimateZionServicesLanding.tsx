@@ -1,10 +1,10 @@
-import React from "react";
-import UltimateZionServicesShowcase from "../components/UltimateZionServicesShowcase";
+import React from "react"
+import UltimateZionServicesShowcase from "../components/UltimateZionServicesShowcase"
 const UltimateZionServicesLanding: React.FC = () => {
   return (
-    <div>
-      <UltimateZionServicesShowcase />
-    </div>
-  )
-}
+    <div>;
+      <[^>]*/>
+    </[^>]*>
+  );
+};
 export default UltimateZionServicesLanding;

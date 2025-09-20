@@ -1,43 +1,43 @@
 
-import { Route, Routes } from "react-router-dom";
-import Login from "@/pages/Login";
-import Signup from "@/pages/Signup";
-import { ProtectedRoute } from "@/components/ProtectedRoute";
-const AuthRoutes = () => {
+import { Route, Routes } from "react-router-dom"
+import Login from "@/pages/Login"
+import Signup from "@/pages/Signup"
+import { ProtectedRoute } from "@/components/ProtectedRoute"
+const AuthRoutes = () => {;
   return (
-    <Routes>
-      <Route path="/login" element={<Login />} />
-      <Route path="/signup" element={<Signup />} />
+    <Routes>;
+      <Route path="/login" element={<Login />} />;
+      <Route path="/signup" element={<Signup />} />;
 
-      {{/* Protected routes that require authentication */}}
+      {/* Protected routes that require authentication */};
       <Route;
-        path="/profile";
+        path="/profile"
         element={;
-          <ProtectedRoute>
-            <div>Profile Page</div>
-          </ProtectedRoute>
-        }
-      />
-
-      <Route;
-        path="/dashboard";
-        element={;
-          <ProtectedRoute>
-            <div>Dashboard</div>
-          </ProtectedRoute>
-        }
-      />
+          <ProtectedRoute>;
+            <div>Profile Page</[^>]*>
+          </[^>]*>
+        };
+      />;
 
       <Route;
-        path="/settings";
+        path="/dashboard"
         element={;
-          <ProtectedRoute>
-            <div>Settings</div>
-          </ProtectedRoute>
-        }
-      />
-    </Routes>
-  )
-}
+          <ProtectedRoute>;
+            <div>Dashboard</[^>]*>
+          </[^>]*>
+        };
+      />;
+
+      <Route;
+        path="/settings"
+        element={;
+          <ProtectedRoute>;
+            <div>Settings</[^>]*>
+          </[^>]*>
+        };
+      />;
+    </[^>]*>
+  ),;
+},;
 
 export default AuthRoutes;

@@ -1,4 +1,5 @@
-import React, { Component, ErrorInfo, ReactNode } from "react";
+import React, { Component, ErrorInfo, ReactNode } from "react"
+
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;
@@ -6,25 +7,25 @@ interface Props {
 }
 
 interface State {
-  hasError: boolean,
+  hasError: boolean;
   error: Error | null;
-  errorInfo: ErrorInfo | null,
+  errorInfo: ErrorInfo | null;
   errorId: string | null;
 }
 
 class EnhancedErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
-    super(props);
-      this.state = { 
-        hasError: false,
-        error: null,
-        errorInfo: null,
-        errorId: null
-      };
+    super(props)
+    this.state = {
+      hasError: false,
+      error: null,
+      errorInfo: null,
+      errorId: null
+    };
   }
 
   static getDerivedStateFromError(error: Error): Partial<State> {
-    return { 
+    return {
       hasError: true,
       error,
       errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
@@ -39,18 +40,18 @@ class EnhancedErrorBoundary extends Component<Props, State> {
 
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
-      console.error('Error caught by boundary:', error, errorInfo);
+      console.error('Error caught by boundary:', error, errorInfo)
     }
 
     // Call custom error handler if provided
     if (this.props.onError) {
-      this.props.onError(error, errorInfo);
+      this.props.onError(error, errorInfo)
     }
 
     // In production, you might want to send this to an error reporting service
     if (process.env.NODE_ENV === 'production') {
       // Example: Send to error reporting service
-      // errorReportingService.captureException(error, { extra: errorInfo });
+      // errorReportingService.captureException(error, { extra: errorInfo })
     }
   }
 
@@ -61,16 +62,16 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       errorInfo: null,
       errorId: null
     });
-  };
+  }
 
   handleReload = () => {
-    window.location.reload();
-  };
+    window.location.reload()
+  }
 
   render() {
     if (this.state.hasError) {
       if (this.props.fallback) {
-        return this.props.fallback;
+        return this.props.fallback
       }
 
       return (
@@ -149,7 +150,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       );
     }
 
-    return this.props.children;
+    return this.props.children
   }
 }
 
