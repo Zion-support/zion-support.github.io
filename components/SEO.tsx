@@ -1,14 +1,6 @@
-<<<<<<< HEAD
-'use client';
-
-import React from 'react';
-import { usePathname } from 'next/navigation';
-=======
 'use client'
 import React from 'react'
-import Head from 'next/head'
 import { usePathname } from 'next/navigation'
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-c519
 
 interface SEOProps {
   title?: string;
@@ -44,18 +36,6 @@ export default function SEO({
   nofollow, 
   jsonLd 
 }: SEOProps) {
-<<<<<<< HEAD
-  const pathname = usePathname();
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || DEFAULTS.url;
-  const pageTitle = title || DEFAULTS.title;
-  const pageDescription = description || DEFAULTS.description;
-  const pagePath = pathname || '/';
-
-  // Derive canonical from baseUrl + path, ensure single slash and trailing slash
-  const rawDerived = baseUrl.replace(/\/$/, '') + (pagePath.startsWith('/') ? pagePath : `/${pagePath}`);
-  const normalizedCanonical = rawDerived.endsWith('/') ? rawDerived : `${rawDerived}/`;
-
-=======
   const pathname = usePathname()
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || DEFAULTS.url
   const pageTitle = title || DEFAULTS.title
@@ -66,7 +46,6 @@ export default function SEO({
   const rawDerived = baseUrl.replace(/\/$/, '') + (pagePath.startsWith('/') ? pagePath : `/${pagePath}`)
   const normalizedCanonical = rawDerived.endsWith('/') ? rawDerived : `${rawDerived}/`
   
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-c519
   // Prefer explicit image, then ogImage, then default; resolve to absolute URL
   const requestedImage = image || ogImage || DEFAULTS.image;
   const imageUrl = /^(https?:)?\/\//.test(requestedImage)
