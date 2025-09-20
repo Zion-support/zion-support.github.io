@@ -59,11 +59,7 @@
     "format:check": "prettier --check .",
     "security:audit": "npm audit --audit-level=moderate",
     "deps:update": "npm update",
-    "deps:outdated": "npm outdated",
-    "performance": "node -e \"console.log('Performance monitoring enabled')\"",
-    "security": "node -e \"console.log('Security validation enabled')\"",
-    "accessibility": "node -e \"console.log('Accessibility features enabled')\"",
-    "seo": "node -e \"console.log('SEO optimization enabled')\""
+    "deps:outdated": "npm outdated"
   },
   "dependencies": {
     "@google-analytics/data": "^5.2.0",
@@ -175,8 +171,8 @@
     "@testing-library/react": "^14.1.2",
     "@types/jest": "^29.5.3",
     "@types/node": "^20.19.17",
-    "@types/react": "^18.3.24",
-    "@types/react-dom": "^18.3.7",
+    "@types/react": "^17.0.0",
+    "@types/react-dom": "^17.0.0",
     "@typescript-eslint/eslint-plugin": "^6.21.0",
     "@typescript-eslint/parser": "^6.21.0",
     "@vitejs/plugin-react": "^4.2.1",
