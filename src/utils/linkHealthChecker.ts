@@ -1,4 +1,3 @@
-
 export interface LinkHealthResult {
   url: string;
   status: "healthy" | "unhealthy" | "error";
@@ -7,88 +6,136 @@ export interface LinkHealthResult {
   error?: string;
   lastChecked: Date;
 }
-lastChecked: Date;}}
+
+export interface LinkHealthConfig {
+  timeout: number;
+  retries: number;
+  userAgent: string;
+  followRedirects: boolean;
+}
+
+export class LinkHealthChecker {
+  private config: LinkHealthConfig;
+
+  constructor(config: Partial<LinkHealthConfig> = {}) {
+    this.config = {
+      timeout: config.timeout || 5000,
+      retries: config.retries || 3,
+      userAgent: config.userAgent || "LinkHealthChecker/1.0",
+      followRedirects: config.followRedirects ?? true
+    };
+  }
+
   async checkLink(url: string): Promise<LinkHealthResult> {
     const startTime = Date.now();
 
-try {
-const response = await fetch(url, {
-method: "HEAD",;
-signal: AbortSignal.timeout(this.config.timeout),;
-headers: {;
-"User-Agent": this.config.userAgent;
-},
-redirect: this.config.followRedirects ? "follow" : "manual"});
-const responseTime = Date.now() - startTime;
+    try {
+      const response = await fetch(url, {
+        method: "HEAD",
+        signal: AbortSignal.timeout(this.config.timeout),
+        headers: {
+          "User-Agent": this.config.userAgent
+        },
+        redirect: this.config.followRedirects ? "follow" : "manual"
+      });
 
-if (response.ok || response.status < 400) {return {
-url;
-status: "healthy",statusCode: response.status;
-responseTime;,
-lastChecked: new Date()};
-} else {
-return {
-url;
-status: "unhealthy",
-statusCode: response.status;
-responseTime;,
-error: `HTTP ${response.status}: ${response.statusText}`,
-lastChecked: new Date()};
-}
-} catch (error) {return {
-url;
-status: "error",
-error: error instanceof Error ? error.message : "Unknown error",lastChecked: new Date()};
-}
-}
+      const responseTime = Date.now() - startTime;
+
+      if (response.ok || response.status < 400) {
+        return {
+          url,
+          status: "healthy",
+          statusCode: response.status,
+          responseTime,
+          lastChecked: new Date()
+        };
+      } else {
+        return {
+          url,
+          status: "unhealthy",
+          statusCode: response.status,
+          responseTime,
+          error: `HTTP ${response.status}: ${response.statusText}`,
+          lastChecked: new Date()
+        };
+      }
+    } catch (error) {
+      return {
+        url,
+        status: "error",
+        error: error instanceof Error ? error.message : "Unknown error",
+        lastChecked: new Date()
+      };
+    }
+  }
+
   async checkMultipleLinks(urls: string[]): Promise<LinkHealthResult[]> {
     const results: LinkHealthResult[] = [];
 
-for (const url of urls) {
-try {
-const result = await this.checkLink(url);
-results.push(result);
-} catch (error) {results.push({
-url;
-status: "error",
-error: error instanceof Error ? error.message : "Unknown error",lastChecked: new Date()});
-}
-}
+    for (const url of urls) {
+      try {
+        const result = await this.checkLink(url);
+        results.push(result);
+      } catch (error) {
+        results.push({
+          url,
+          status: "error",
+          error: error instanceof Error ? error.message : "Unknown error",
+          lastChecked: new Date()
+        });
+      }
+    }
+
     return results;
   }
 
   async checkLinksWithRetry(url: string): Promise<LinkHealthResult> {
     let lastError: string | undefined;
 
-for (let attempt = 1; attempt <= this.config.retries; attempt++) {try {
-const result = await this.checkLink(url);
-if (result.status === "healthy") {
-return result;
-}
-lastError = result.error;
-} catch (error) {
-lastError = error instanceof Error ? error.message : "Unknown error";
-}
+    for (let attempt = 1; attempt <= this.config.retries; attempt++) {
+      try {
+        const result = await this.checkLink(url);
+        if (result.status === "healthy") {
+          return result;
+        }
+        lastError = result.error;
+      } catch (error) {
+        lastError = error instanceof Error ? error.message : "Unknown error";
+      }
+
       if (attempt < this.config.retries) {
         await new Promise(resolve => setTimeout(resolve, 1000 * attempt));
       }
     }
 
-return {
-url;
-status: "error",
-error: `Failed after ${this.config.retries} attempts. Last error: ${lastError}`,
-lastChecked: new Date()};}
+    return {
+      url,
+      status: "error",
+      error: lastError || "Max retries exceeded",
+      lastChecked: new Date()
+    };
+  }
 
-getHealthSummary(results: LinkHealthResult[]): {
-total: number;
-healthy: number;
-unhealthy: number;,
-errors: number;,
-averageResponseTime: number;
-} {
-errors: number;,
-averageResponseTime: number;} {: 0;
+  getHealthSummary(results: LinkHealthResult[]): {
+    total: number;
+    healthy: number;
+    unhealthy: number;
+    errors: number;
+    averageResponseTime: number;
+  } {
+    const total = results.length;
+    const healthy = results.filter(r => r.status === "healthy").length;
+    const unhealthy = results.filter(r => r.status === "unhealthy").length;
+    const errors = results.filter(r => r.status === "error").length;
+    
+    const validResponseTimes = results
+      .filter(r => r.responseTime !== undefined)
+      .map(r => r.responseTime!);
+    
+    const averageResponseTime = validResponseTimes.length > 0
+      ? validResponseTimes.reduce((sum, time) => sum + time, 0) / validResponseTimes.length
+      : 0;
+
     return {
       total,
       healthy,
@@ -100,36 +147,38 @@ averageResponseTime: number;} {: 0;
 
   generateReport(results: LinkHealthResult[]): string {
     const summary = this.getHealthSummary(results);
-    const timestamp = new Date().toISOString();
-
-    let report = `Link Health Report - ${timestamp}\n`;
+    let report = `Link Health Report\n`;
+    report += `==================\n\n`;
     report += `Summary:\n`;
-    report += `- Total Links: ${summary.total}\n`;
+    report += `- Total links: ${summary.total}\n`;
     report += `- Healthy: ${summary.healthy}\n`;
     report += `- Unhealthy: ${summary.unhealthy}\n`;
     report += `- Errors: ${summary.errors}\n`;
-    report += `- Average Response Time: ${summary.averageResponseTime.toFixed(2)}ms\n\n`;
+    report += `- Average response time: ${summary.averageResponseTime.toFixed(2)}ms\n\n`;
 
     report += `Detailed Results:\n`;
+    results.forEach((result, index) => {
+      report += `${index + 1}. ${result.url}\n`;
+      report += `   Status: ${result.status}\n`;
+      if (result.statusCode) {
+        report += `   Status Code: ${result.statusCode}\n`;
+      }
+      if (result.responseTime) {
+        report += `   Response Time: ${result.responseTime}ms\n`;
+      }
+      if (result.error) {
+        report += `   Error: ${result.error}\n`;
+      }
+      report += `   Last Checked: ${result.lastChecked.toISOString()}\n\n`;
+    });
 
-results.forEach((result; index) => {report += `${index + 1}. ${result.url}\n`;
-report += `   Status: ${result.status}\n`;
-if (result.statusCode) report += `   Status Code: ${result.statusCode}\n`;
-if (result.responseTime) report += `   Response Time: ${result.responseTime}ms\n`;
-if (result.error) report += `   Error: ${result.error}\n`;
-report += `   Last Checked: ${result.lastChecked.toISOString()}\n\n`;
-});
     return report;
   }
 }
 
-export default LinkHealthChecker;
-
-  static async checkMultipleLinks(urls: string[]): Promise<LinkHealthStatus[]> {
-    const results = await Promise.all(
-      urls.map(url => this.checkLinkHealth(url))
-    );
-    
-    return results;
+export class LinkHealthStatus {
+  static async checkMultipleLinks(urls: string[]): Promise<LinkHealthResult[]> {
+    const checker = new LinkHealthChecker();
+    return checker.checkMultipleLinks(urls);
   }
 }

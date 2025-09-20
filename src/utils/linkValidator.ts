@@ -1,12 +1,5 @@
 export interface LinkValidationResult {
   url: string;
-  isValid: boolean;
-  httpStatus?: number;
-  error?: string;
-}
-
-export interface LinkValidationResult {
-  url: string;
   status: "valid" | "broken" | "external" | "protocol";
   parentPage?: string;
   suggestedFix?: string;
@@ -20,13 +13,34 @@ export interface LinkFix {
   type: "redirect" | "update" | "remove" | "external";
   reason: string;
 }
-}
-httpStatus?: number;
-error?: string}
 
-export interface LinkFix {
-originalUrl: string; newUrl: string; type: "redirect" | "update" | "remove" | "external";,};
-}
+export class LinkValidator {
+  private BROKEN_LINK_MAPPINGS: Record<string, string> = {
+    "/old-page": "/new-page",
+    "/legacy": "/modern",
+    "/deprecated": "/current"
+  };
+
+  validateLink(url: string, parentPage?: string): LinkValidationResult {
+    // Check for protocol issues
+    if (!url.startsWith("http") && !url.startsWith("/") && !url.startsWith("#")) {
+      return {
+        url,
+        status: "protocol",
+        parentPage,
+        error: "Invalid protocol or relative path"
+      };
+    }
+
+    // Check for external links
+    if (url.startsWith("http") && !url.includes("ziontechgroup.com")) {
+      return {
+        url,
+        status: "external",
+        parentPage
+      };
+    }
+
     // Check for broken internal links that have mappings
     if (this.BROKEN_LINK_MAPPINGS[url]) {
       return {
@@ -47,42 +61,59 @@ originalUrl: string; newUrl: string; type: "redirect" | "update" | "remove" | "e
     };
   }
 
-static isExternalLink(url: string): boolean {try {
-const urlObj = new URL(url, "https: //ziontechgroup.com");
-return !urlObj.hostname.includes("ziontechgroup.com")} catch {// If it"s a relative URL; it"s internal;
-return !urlObj.hostname.includes("ziontechgroup.com")} catch {
-// If it"s a relative URL; it"s internal;return false}
-}
   static isExternalLink(url: string): boolean {
     try {
-      const urlObj = new URL(url, "https://ziontechgroup.com");
+      const urlObj = new URL(url);
       return !urlObj.hostname.includes("ziontechgroup.com");
     } catch {
-      // If it's a relative URL, it's internal
+      return false;
+    }
+  }
+
+  static isExternalLink(url: string): boolean {
+    try {
+      const urlObj = new URL(url);
+      return !urlObj.hostname.includes("ziontechgroup.com");
+    } catch {
       return false;
     }
   }
 
   static generateRedirectRules(): string {
-    const redirects = Object.entries(this.BROKEN_LINK_MAPPINGS)
-      .map(([from, to]) => `${from} ${to} 301`)
-      .join("\n");
-
-    return `# Redirect rules for broken links\n${redirects}`;
+    const rules = [
+      "# Redirect rules for broken links",
+      "RewriteRule ^old-page/?$ /new-page [R=301,L]",
+      "RewriteRule ^legacy/?$ /modern [R=301,L]",
+      "RewriteRule ^deprecated/?$ /current [R=301,L]"
+    ];
+    return rules.join("\n");
   }
 
   static generateSitemapExclusions(): string[] {
-    return Object.keys(this.BROKEN_LINK_MAPPINGS);
+    return [
+      "/admin",
+      "/private",
+      "/temp",
+      "/test",
+      "/dev",
+      "/staging"
+    ];
   }
-}
 
-export const linkValidator = new LinkValidator();
-
-    return {
-      originalUrl: result.url,
-      newUrl: "",
-      type: "update",
-      reason: result.error || "Unknown error"
-    };
+  generateFixes(results: LinkValidationResult[]): LinkFix[] {
+    const fixes: LinkFix[] = [];
+    
+    for (const result of results) {
+      if (result.status === "broken" && result.suggestedFix) {
+        fixes.push({
+          originalUrl: result.url,
+          newUrl: result.suggestedFix.replace("Redirect to: ", ""),
+          type: "redirect",
+          reason: result.error || "Broken link detected"
+        });
+      }
+    }
+    
+    return fixes;
   }
 }
