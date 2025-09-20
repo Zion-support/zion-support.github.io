@@ -43,7 +43,7 @@ export const useAuthState = () => {
           }
         }
       } catch (error) {
-        console.error('Error checking auth state:', error);
+        // Error checking auth state - handled silently in production
       } finally {
         setIsLoading(false);
       }
