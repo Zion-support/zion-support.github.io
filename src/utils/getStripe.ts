@@ -1,6 +1,4 @@
 interface Service {
-<<<<<<< HEAD
-=======
 id: string;
 name: string;
 }
@@ -18,4 +16,3 @@ stripePromise = loadStripe(key, { advancedFraudSignals: false });
 }
 return stripePromise;
 }
->>>>>>> pr-22690
