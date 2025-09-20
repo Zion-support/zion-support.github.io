@@ -87,7 +87,10 @@ export const QuotesPage: React.FC = () => {
       {viewMode === 'form' && (
         <div className="p-6">
           <QuotesForm
-            initialData={editingQuote}
+            initialData={editingQuote ? {
+              ...editingQuote,
+              validUntil: editingQuote.validUntil ? new Date(editingQuote.validUntil) : new Date()
+            } : undefined}
             onSave={handleSaveQuote}
             onCancel={handleCancelForm}
             isEditing={!!editingQuote?.id}

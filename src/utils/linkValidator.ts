@@ -70,15 +70,6 @@ export class LinkValidator {
     }
   }
 
-  static isExternalLink(url: string): boolean {
-    try {
-      const urlObj = new URL(url);
-      return !urlObj.hostname.includes("ziontechgroup.com");
-    } catch {
-      return false;
-    }
-  }
-
   static generateRedirectRules(): string {
     const rules = [
       "# Redirect rules for broken links",

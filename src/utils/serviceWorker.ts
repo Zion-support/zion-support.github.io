@@ -1,3 +1,32 @@
+// Service Worker type declarations
+declare const self: any;
+
+// Service Worker event types
+interface ExtendableEvent extends Event {
+  waitUntil(promise: Promise<any>): void;
+}
+
+interface FetchEvent extends Event {
+  request: Request;
+  respondWith(response: Promise<Response> | Response): void;
+}
+
+interface SyncEvent extends Event {
+  tag: string;
+  waitUntil(promise: Promise<any>): void;
+}
+
+interface PushEvent extends Event {
+  data?: any;
+  waitUntil(promise: Promise<any>): void;
+}
+
+interface NotificationEvent extends Event {
+  notification: Notification;
+  action?: string;
+  waitUntil(promise: Promise<any>): void;
+}
+
 const CACHE_NAMES = {
   STATIC: "static-cache-v1",
   DYNAMIC: "dynamic-cache-v1",
@@ -226,7 +255,7 @@ self.addEventListener("notificationclick", (event: NotificationEvent) => {
 
   if (event.action === "explore") {
     event.waitUntil(
-      clients.openWindow("/")
+      self.clients.openWindow("/")
     );
   }
 });

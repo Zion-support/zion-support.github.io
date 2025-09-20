@@ -54,19 +54,19 @@ export class InvoicePDFGenerator {
   private addHeader(data: InvoiceData): void {
     // Company name
     this.doc.setFontSize(24);
-    this.doc.setFont(undefined, 'bold');
+    this.doc.setFont('helvetica', 'bold');
     this.doc.text(data.company.name, 20, 30);
 
     // Company details
     this.doc.setFontSize(10);
-    this.doc.setFont(undefined, 'normal');
+    this.doc.setFont('helvetica', 'normal');
     this.doc.text(data.company.address, 20, 40);
     this.doc.text(data.company.email, 20, 45);
     this.doc.text(data.company.phone, 20, 50);
 
     // Invoice title
     this.doc.setFontSize(20);
-    this.doc.setFont(undefined, 'bold');
+    this.doc.setFont('helvetica', 'bold');
     this.doc.text('INVOICE', 150, 30);
   }
 
@@ -74,11 +74,11 @@ export class InvoicePDFGenerator {
     const startY = 80;
     
     this.doc.setFontSize(12);
-    this.doc.setFont(undefined, 'bold');
+    this.doc.setFont('helvetica', 'bold');
     this.doc.text('Bill To:', 20, startY);
 
     this.doc.setFontSize(10);
-    this.doc.setFont(undefined, 'normal');
+    this.doc.setFont('helvetica', 'normal');
     this.doc.text(data.client.name, 20, startY + 10);
     this.doc.text(data.client.email, 20, startY + 15);
     this.doc.text(data.client.address, 20, startY + 20);
@@ -134,7 +134,7 @@ export class InvoicePDFGenerator {
     this.doc.text(`Subtotal: $${data.subtotal.toFixed(2)}`, rightAlign, finalY);
     this.doc.text(`Tax: $${data.tax.toFixed(2)}`, rightAlign, finalY + 5);
     
-    this.doc.setFont(undefined, 'bold');
+    this.doc.setFont('helvetica', 'bold');
     this.doc.text(`Total: $${data.total.toFixed(2)}`, rightAlign, finalY + 10);
   }
 
@@ -143,7 +143,7 @@ export class InvoicePDFGenerator {
       const finalY = (this.doc as any).lastAutoTable.finalY + 40;
       
       this.doc.setFontSize(10);
-      this.doc.setFont(undefined, 'normal');
+      this.doc.setFont('helvetica', 'normal');
       this.doc.text('Notes:', 20, finalY);
       this.doc.text(data.notes, 20, finalY + 10);
     }

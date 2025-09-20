@@ -21,7 +21,7 @@ export function PerformanceMonitor() {
       const fidObserver = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
           if (entry.entryType === 'first-input') {
-            console.log('FID:', entry.processingStart - entry.startTime);
+            console.log('FID:', (entry as any).processingStart - entry.startTime);
           }
         }
       });
