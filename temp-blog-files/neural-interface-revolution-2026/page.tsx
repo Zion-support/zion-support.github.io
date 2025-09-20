@@ -2,6 +2,7 @@ import React from 'react'
 import Link from 'next/link'
 import { Metadata } from 'next'
 export const metadata: Metadata = {
+<<<<<<< HEAD
   title: 'Neural Interface Revolution 2026 - Zion Tech Group'
   description: 'Explore the neural interface revolution of 2026. Learn about brain-computer interfaces, neural augmentation, and mind-machine integration.'
   keywords: 'neural interface, brain-computer interface, BCI, neural augmentation, mind-machine interface, neurotechnology 2026'
@@ -9,6 +10,16 @@ export const metadata: Metadata = {
     title: 'Neural Interface Revolution 2026'
     description: 'Revolutionary neural interface technology and brain-computer interfaces'
     type: 'website'}
+=======
+  title: 'Neural Interface Revolution 2026 - Zion Tech Group',
+  description: 'Explore the neural interface revolution of 2026. Learn about brain-computer interfaces, neural augmentation, and mind-machine integration.',
+  keywords: 'neural interface, brain-computer interface, BCI, neural augmentation, mind-machine interface, neurotechnology 2026',
+  openGraph: {
+    title: 'Neural Interface Revolution 2026',
+    description: 'Revolutionary neural interface technology and brain-computer interfaces',
+    type: 'website'
+  }
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-3eed
 }
 export default function NeuralInterfaceRevolution() {
   return (

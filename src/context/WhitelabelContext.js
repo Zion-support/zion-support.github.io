@@ -46,4 +46,3 @@ export const WhitelabelProvider = ({ children, config = {} }) => {
       {children}
     </WhitelabelContext.Provider>);
 };
-=======

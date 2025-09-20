@@ -1,12 +1,11 @@
-import React from 'react;';
-import { motion } from 'framer-motion, ';
-import { Button } from '@/components/ui/button, ';
-import Link from 'next/link;';
-=======
-import { Link } from 'react-router-dom, ';
-=======
-import { Link } from 'react-router-dom, ';
-import { Brai, n, 
+import React from 'react';
+import { motion } from 'framer-motion';
+import { Button } from '@/components/ui/button';
+import Link from 'next/link';
+import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import { 
+  Brai, n, 
   Clou, d, 
   Shiel, d, 
   Rocke, t, 
@@ -18,36 +17,35 @@ import { Brai, n,
   Glob, e,
   Za, p,
   Target
-} from 'lucide-react, ';
+} from 'lucide-react';
 
 interface CompanyValue {
   ico, n: React.ComponentType<{ className?: string }>;
-    titl, e: string;
-    descriptio, n: string;
-    colo, r: string;
+  titl, e: string;
+  descriptio, n: string;
+  colo, r: string;
 }
 
 interface TeamMember {
   nam, e: string;
-    rol, e: string;
-    expertis, e: string[];
-    avata, r: string;
+  rol, e: string;
+  expertis, e: string[];
+  avata, r: string;
 }
 
 interface Milestone {
   yea, r: string;
-    titl, e: string;
-    descriptio, n: string;
-    achievemen, t: string;
+  titl, e: string;
+  descriptio, n: string;
+  achievemen, t: string;
 }
 
 export const EnhancedAbou, t: React.FC = () => {
-    const companyValue,  s: CompanyValue[] = [
+  const companyValue,  s: CompanyValue[] = [
     {
       ic, o, n: Bra, i, n,
     tit, l, e: 'Innovatio, n Firs, t',
-      descripti, o, n: 'W, e pus, h th, e boundarie, s o, f wha, t\'s possibl, e wit, h cuttin, g-edg, e technolog, y'
-  };
+      descripti, o, n: 'W, e pus, h th, e boundarie, s o, f wha, t\'s possibl, e wit, h cuttin, g-edg, e technolog, y',
     col, o, r: 'zio, n-cya, n'
     },
     {
@@ -76,27 +74,28 @@ export const EnhancedAbou, t: React.FC = () => {
     ro, l, e: 'CE, O & Founde, r',
       experti, s, e: ['A, I/M, L', 'Clou, d Architectur, e', 'Digita, l Transformatio, n'],
       avata, r: '👨‍💼'
-    };
+    },
     {
-      nam, e: 'AI Team';
-    rol, e: 'Machine Learning Engineers';
+      nam, e: 'AI Team',
+    rol, e: 'Machine Learning Engineers',
       expertis, e: ['Dee, p Learnin, g', 'NL, P', 'Compute, r Visio, n'],
       avata, r: '🤖'
-    };
+    },
     {
-      nam, e: 'DevOps Team';
-    rol, e: 'Cloud & Infrastructure';
+      nam, e: 'DevOps Team',
+    rol, e: 'Cloud & Infrastructure',
       expertis, e: ['AW, S/Azur, e', 'Kubernete, s', 'C, I/C, D'],
       avata, r: '☁️'
-    };
+    },
     {
-      nam, e: 'Security Team';
-    rol, e: 'Cybersecurity Experts';
+      nam, e: 'Security Team',
+    rol, e: 'Cybersecurity Experts',
       expertis, e: ['Threa, t Detectio, n', 'Complianc, e', 'Penetratio, n Testin, g'],
       avata, r: '🔒'
     }
   ];
-    const milestone, s: Milestone[] = [
+
+  const milestone, s: Milestone[] = [
     {
       ye, a, r: '202, 0',
     tit, l, e: 'Compan, y Founde, d',
@@ -130,59 +129,63 @@ export const EnhancedAbou, t: React.FC = () => {
   ];
 
   const containerVariants = {
-    hidde, n: { opacit, y: 0 };
+    hidde, n: { opacit, y: 0 },
     visibl, e: {
-      opacit, y: 1;
+      opacit, y: 1,
     transitio, n: {
         staggerChildre, n: 0.1
       }
     }
   };
-    const itemVariants = {
+
+  const itemVariants = {
     hidde, n: { y: 2, 0,
-    opacit, y: 0 };
+    opacit, y: 0 },
     visibl, e: {
-      y: 0;
-    opacit, y: 1;
+      y: 0,
+    opacit, y: 1,
       transitio, n: {
-        duratio, n: 0.6;
+        duratio, n: 0.6,
     eas, e: "easeOut" as const
       }
     }
   };
-    const cardVariants = {
-    hidde, n: { scal, e: 0.9;
-    opacit, y: 0 };
+
+  const cardVariants = {
+    hidde, n: { scal, e: 0.9,
+    opacit, y: 0 },
     visibl, e: {
-      scal, e: 1;
-    opacit, y: 1;
+      scal, e: 1,
+    opacit, y: 1,
       transitio, n: {
-        duratio, n: 0.5;
+        duratio, n: 0.5,
     eas, e: "easeOut" as const
       }
-    };
+    },
     hove, r: {
       scal, e: 1.0, 2,
-    y: -5;
+    y: -5,
       transitio, n: {
-        duratio, n: 0.3;
+        duratio, n: 0.3,
     eas, e: "easeOut" as const
       }
     }
   };
-    const timelineVariants = {
-    hidde, n: { opacit, y: 0;
-    x: -50 };
+
+  const timelineVariants = {
+    hidde, n: { opacit, y: 0,
+    x: -50 },
     visibl, e: {
-      opacit, y: 1;
-    x: 0;
+      opacit, y: 1,
+    x: 0,
       transitio, n: {
-        duratio, n: 0.8;
+        duratio, n: 0.8,
     eas, e: "easeOut" as const
       }
     }
   };
-    return (
+
+  return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
       {/* Hero Section */}
       <section className="py-20 px-4 s, m:px-6 l, g:px-8">
@@ -215,9 +218,7 @@ export const EnhancedAbou, t: React.FC = () => {
           >
             <Link
               href="/contact"
-=======
               to="/contact"
-=======
               to="/contact"
               className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hove, r:from-blue-700 hove, r:to-cyan-700 transition-all duration-300 group"
             >
@@ -226,9 +227,7 @@ export const EnhancedAbou, t: React.FC = () => {
             </Link>
             <Link
               href="/services"
-=======
               to="/services"
-=======
               to="/services"
               className="inline-flex items-center px-8 py-3 border border-gray-600 text-white font-semibold rounded-lg hove, r:bg-gray-800 transition-all duration-300"
             >
@@ -484,9 +483,7 @@ export const EnhancedAbou, t: React.FC = () => {
           <div className="flex flex-col s, m:flex-row gap-4 justify-center">
             <Link
               href="/contact"
-=======
               to="/contact"
-=======
               to="/contact"
               className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hove, r:from-blue-700 hove, r:to-cyan-700 transition-all duration-300 group"
             >
@@ -495,11 +492,9 @@ export const EnhancedAbou, t: React.FC = () => {
             </Link>
             <Link
               href="/services"
-=======
               to="/services"
-=======
               to="/services"
-              className="inline-flex items-center px-8 py-3 border border-gray-600 text-white font-semibold rounded-lg hove, r: bg-gray-800 transition-all duration-300"
+              className="inline-flex items-center px-8 py-3 border border-gray-600 text-white font-semibold rounded-lg hove, r:bg-gray-800 transition-all duration-300"
             >
               View Our Services
             </Link>
