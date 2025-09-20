@@ -1,3 +1,68 @@
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { 
+  CheckCircle, 
+  Building2, 
+  Globe, 
+  BarChart3,
+  Cpu,
+  Database,
+  Cloud,
+  Shield,
+  Zap,
+  Users
+} from 'lucide-react';
+
+const Services = () => {
+  const featuredServices = [
+    {
+      title: "AI-Powered Analytics",
+      description: "Advanced machine learning solutions for data-driven insights",
+      icon: Cpu,
+      path: "/services/ai-analytics",
+      features: ["Real-time data processing", "Predictive modeling", "Custom algorithms"]
+    },
+    {
+      title: "Cloud Infrastructure",
+      description: "Scalable cloud solutions for modern businesses",
+      icon: Cloud,
+      path: "/services/cloud-infrastructure", 
+      features: ["Auto-scaling", "High availability", "Security compliance"]
+    },
+    {
+      title: "Cybersecurity Solutions",
+      description: "Comprehensive security services to protect your business",
+      icon: Shield,
+      path: "/services/cybersecurity",
+      features: ["Threat detection", "Vulnerability assessment", "Incident response"]
+    }
+  ];
+
+  const serviceCategories = [
+    {
+      title: "Technology Services",
+      description: "Cutting-edge technology solutions",
+      icon: Cpu,
+      services: [
+        { name: "AI & Machine Learning", description: "Advanced AI solutions", path: "/ai-services" },
+        { name: "Cloud Computing", description: "Scalable cloud infrastructure", path: "/cloud-services" },
+        { name: "Data Analytics", description: "Business intelligence solutions", path: "/analytics" }
+      ]
+    },
+    {
+      title: "Consulting Services", 
+      description: "Expert guidance for your business",
+      icon: Users,
+      services: [
+        { name: "Digital Transformation", description: "Modernize your business", path: "/digital-transformation" },
+        { name: "Strategy Consulting", description: "Strategic business planning", path: "/strategy" },
+        { name: "Process Optimization", description: "Streamline operations", path: "/optimization" }
+      ]
+    }
+  ];
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-zion-slate via-zion-slate-dark to-zion-purple text-white">
       {/* Featured Services */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5 backdrop-blur-sm">
         <div className="max-w-7xl mx-auto">
