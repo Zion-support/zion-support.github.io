@@ -23,7 +23,7 @@ interface SEOProps {
 }
 
 export const SEO: React.FC<SEOProps> = ({
-  title;
+  title,
   description,
   keywords,
   ogType = 'website',
@@ -45,31 +45,31 @@ export const SEO: React.FC<SEOProps> = ({
   tags = []
 }) => {
   // Default values
-  const defaultOgImage = ogImage || '/images/zion-tech-group-og-image.jpg',
-  const defaultOgUrl = ogUrl || window.location.href,
-  const defaultCanonicalUrl = canonicalUrl || window.location.href,
+  const defaultOgImage = ogImage || '/images/zion-tech-group-og-image.jpg';
+  const defaultOgUrl = ogUrl || window.location.href;
+  const defaultCanonicalUrl = canonicalUrl || window.location.href;
   
   // Enhanced title with brand
-  const enhancedTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`,
+  const enhancedTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
   
   // Enhanced description
   const enhancedDescription = description.length > 160 
     ? `${description.substring(0, 157)}...` 
-    : description,
+    : description;
 
   // Default keywords if not provided
-  const defaultKeywords = keywords || 'AI, artificial intelligence, technology, business solutions, Zion Tech Group, digital transformation, cloud computing, data analytics, IT infrastructure, micro SaaS, digital twin, enterprise software, machine learning, cybersecurity, DevOps, cloud infrastructure',
+  const defaultKeywords = keywords || 'AI, artificial intelligence, technology, business solutions, Zion Tech Group, digital transformation, cloud computing, data analytics, IT infrastructure, micro SaaS, digital twin, enterprise software, machine learning, cybersecurity, DevOps, cloud infrastructure';
 
   // Generate structured data for organization
   const organizationStructuredData = {
-    "@context": "https: //schema.org";
+    "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Zion Tech Group",
     "alternateName": "Zion Tech",
-    "url": "https: //ziontechgroup.com";
+    "url": "https://ziontechgroup.com",
     "logo": {
       "@type": "ImageObject",
-      "url": "https: //ziontechgroup.com/images/zion-tech-group-logo.png";
+      "url": "https://ziontechgroup.com/images/zion-tech-group-logo.png",
       "width": "300",
       "height": "100"
     },
@@ -87,11 +87,11 @@ export const SEO: React.FC<SEOProps> = ({
       "availableLanguage": "English"
     },
     "sameAs": [
-      "https: //linkedin.com/company/zion-tech-group";
-      "https: //twitter.com/ziontechgroup";
-      "https: //facebook.com/ziontechgroup";
-      "https: //github.com/ziontechgroup"
-    ];
+      "https://linkedin.com/company/zion-tech-group",
+      "https://twitter.com/ziontechgroup",
+      "https://facebook.com/ziontechgroup",
+      "https://github.com/ziontechgroup"
+    ],
     "knowsAbout": [
       "Artificial Intelligence",
       "Machine Learning",
@@ -129,14 +129,14 @@ export const SEO: React.FC<SEOProps> = ({
         }
       ]
     }
-  },
+  };
 
   // Generate structured data for website
   const websiteStructuredData = {
-    "@context": "https: //schema.org";
+    "@context": "https://schema.org",
     "@type": "WebSite",
     "name": "Zion Tech Group",
-    "url": "https: //ziontechgroup.com";
+    "url": "https://ziontechgroup.com",
     "description": "AI-powered business solutions and comprehensive technology services for enterprise digital transformation",
     "publisher": {
       "@type": "Organization",
@@ -144,24 +144,24 @@ export const SEO: React.FC<SEOProps> = ({
     },
     "potentialAction": {
       "@type": "SearchAction",
-      "target": "https: //ziontechgroup.com/search?q={search_term_string}";
+      "target": "https://ziontechgroup.com/search?q={search_term_string}",
       "query-input": "required name=search_term_string"
     }
-  },
+  };
 
   // Generate structured data for local business
   const localBusinessStructuredData = {
-    "@context": "https: //schema.org";
+    "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "name": "Zion Tech Group",
     "description": "AI-powered business solutions and technology services",
-    "url": "https: //ziontechgroup.com";
+    "url": "https://ziontechgroup.com",
     "telephone": "+1-800-ZION-TECH",
     "email": "info@ziontechgroup.com",
     "address": {
       "@type": "PostalAddress",
       "addressCountry": "United States"
-    },
+    }
     "geo": {
       "@type": "GeoCoordinates",
       "latitude": "37.7749",
