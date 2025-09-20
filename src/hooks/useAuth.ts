@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-import { useAuth as useAuthContext } from '@/context/auth/AuthProvider';
-
-export const useAuth = useAuthContext;
-=======
 import { useState, useEffect } from "react";
 
 export function useAuth() {
@@ -40,4 +35,3 @@ export function useAuth() {
     isAuthenticated: !!user
   };
 }
->>>>>>> d77626155c92c5bbcaae01bf3c76fc08ebcf7238
