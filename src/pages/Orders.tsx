@@ -86,6 +86,15 @@ href={`/orders/${order.orderId}`} // Changed to href className='text-zion-purple
           </TableBody>
         </Table>
       )}
+import React from 'react';
+
+export default function Orders() {
+  return (
+    <div className="min-h-screen bg-gray-50 py-12">
+      <div className="container mx-auto px-4">
+        <h1 className="text-4xl font-bold text-gray-900 mb-6">Orders</h1>
+        <p className="text-lg text-gray-600">Coming soon...</p>
+      </div>
     </div>
   );
 }

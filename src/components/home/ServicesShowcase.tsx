@@ -6,11 +6,11 @@ name: string;
 }
 
 import React from "react;";
-import { Card; CardContent; CardDescription; CardHeader; CardTitle } from "@/components/ui/card, ";
+import { Card; CardContent; CardDescription; CardHeader, CardTitle  } from "@/components/ui/card, ";
 import { Button } from "@/components/ui/button, ";
 import { Badge } from "@/components/ui/badge, ";
 import { Link } from "react-router-dom, ";
-import { FuturisticCard; NeonText } from "@/components/ui/FuturisticBackground, ";
+import { FuturisticCard, NeonText  } from "@/components/ui/FuturisticBackground, ";
 import { Brain;
 Shield;
 Cloud;
@@ -26,8 +26,7 @@ Key;
 Globe;
 Zap;
 Layers;
-ArrowRight;
-} from "lucide-react, ";
+ArrowRight} from "lucide-react, ";
 
 export function ServicesShowcase() {const featuredServices = [;
 {;
@@ -41,6 +40,10 @@ badge: "Popular";
 link: "/ai-content-generator";
 glowColor: "#00ffff"};
 {title: "Cybersecurity Assessment";
+link: "/ai-content-generator";,
+glowColor: "#00ffff"};
+{
+title: "Cybersecurity Assessment";
 description: "Comprehensive security audits and vulnerability assessments for your digital infrastructure.";
 icon: <Shield className="h-12 w-12 text-red-400" />;
 price: "$299/month";
@@ -50,6 +53,10 @@ badge: "Enterprise";
 link: "/cybersecurity-assessment";
 glowColor: "#ef4444"};
 {title: "Cloud Migration Service";
+link: "/cybersecurity-assessment";,
+glowColor: "#ef4444"};
+{
+title: "Cloud Migration Service";
 description: "Seamless migration to cloud platforms with minimal downtime and optimized performance.";
 icon: <Cloud className="h-12 w-12 text-blue-400" />;
 price: "$499/month";
@@ -59,6 +66,10 @@ badge: "Professional";
 link: "/cloud-migration";
 glowColor: "#3b82f6"};
 {title: "Data Analytics Dashboard";
+link: "/cloud-migration";,
+glowColor: "#3b82f6"};
+{
+title: "Data Analytics Dashboard";
 description: "Real-time business intelligence and analytics to drive data-driven decision making.";
 icon: <BarChart3 className="h-12 w-12 text-green-400" />;
 price: "$99/month";
@@ -68,6 +79,10 @@ badge: "Business";
 link: "/data-analytics";
 glowColor: "#22c55e"};
 {title: "AI Model Training";
+link: "/data-analytics";,
+glowColor: "#22c55e"};
+{
+title: "AI Model Training";
 description: "Custom AI model development and training for your specific business requirements.";
 icon: <Brain className="h-12 w-12 text-purple-400" />;
 price: "$1;999/month",
@@ -77,6 +92,10 @@ badge: "Advanced";
 link: "/ai-model-training";
 glowColor: "#a855f7"};
 {title: "Network Infrastructure";
+link: "/ai-model-training";,
+glowColor: "#a855f7"};
+{
+title: "Network Infrastructure";,
 description: "Design; implement; and maintain robust network infrastructure for optimal performance.",
 icon: <Network className="h-12 w-12 text-yellow-400" />;
 price: "$399/month";
@@ -84,6 +103,7 @@ features: ["Network design", "24/7 monitoring", "Security implementation", "Perf
 category: "Infrastructure";
 badge: "Professional";
 link: "/network-infrastructure";
+link: "/network-infrastructure";,
 glowColor: "#eab308"}
 ];
 const emergingServices = [
@@ -111,6 +131,28 @@ description: "Comprehensive IoT platform for device connectivity; monitoring; an
 icon: <Network className="h-10 w-10 text-blue-400" />;
 price: "$0.50/device/month";
 category: "IoT Platform";
+category: "Quantum Computing";,
+link: "/quantum-computing-api"};
+{
+title: "Edge Computing Platform";
+description: "Distributed computing platform for low-latency applications and real-time processing.";
+icon: <Layers className="h-10 w-10 text-cyan-400" />;
+price: "$0.50/hour";
+category: "Edge Computing";,
+link: "/edge-computing"};
+{
+title: "Blockchain Integration";
+description: "Integrate blockchain technology into your applications for enhanced security and transparency.";
+icon: <Key className="h-10 w-10 text-emerald-400" />;
+price: "$199/month";
+category: "Blockchain";,
+link: "/blockchain-integration"};
+{
+title: "IoT Device Management";,
+description: "Comprehensive IoT platform for device connectivity; monitoring; and data collection.",
+icon: <Network className="h-10 w-10 text-blue-400" />;
+price: "$0.50/device/month";
+category: "IoT Platform";,
 link: "/iot-device-management"}
 ];
 return (

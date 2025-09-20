@@ -10,6 +10,13 @@ Clipboard } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import React { Component ErrorInfo ReactNode } from 'react'
+import { motionAnimatePresence } from 'framer-motion'
+import { AlertTriangle, RefreshCw, Home, Bug
+Send, Clipboard } from 'lucide-react'
+import { Button } from '@/components/ui/button'
+import { Card, CardContent, CardHeaderCardTitle } from '@/components/ui/card'
+import { Badge } from '@/components/ui/badge'
 import * as Sentry from '@sentry/nextjs';
 import { logErrorToProduction } from '@/utils/productionLogger';
 interface ErrorBoundaryState {hasError: boolean,
@@ -30,6 +37,7 @@ context?: string;  enableRetry?: boolean,
 maxRetries?: number,
 }
 showReportButton?: boolean,}
+showReportButton?: boolean,
 context?: string}
 export class GlobalErrorBoundary extends Component<
   ErrorBoundaryProps,
@@ -50,10 +58,8 @@ errorBoundaryProps?: Omit<ErrorBoundaryProps 'children'>
     </GlobalErrorBoundary>
   )
   WrappedComponent.displayName = `withErrorBoundary(${Component.displayName |Component.name})`
-  return WrappedComponent,
-}
+  return WrappedComponent}
 export default GlobalErrorBoundary,
 WrappedComponent.displayName = `withErrorBoundary(${Component.displayName |Component.name})`
-  return WrappedComponent,
-}
+  return WrappedComponent}
 export default GlobalErrorBoundary

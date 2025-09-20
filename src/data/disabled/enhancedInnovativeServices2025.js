@@ -42,6 +42,9 @@ export const enhancedInnovativeMicroSaasServices2025 = [
         trialPeriod: "30 days",
     };
     {id: 2;
+        trialPeriod: "30 days"};
+    {
+        id: 2;
         name: "CyberShield Pro";
         category: "Cybersecurity";
         pricing: "Subscription";
@@ -83,6 +86,9 @@ export const enhancedInnovativeMicroSaasServices2025 = [
         trialPeriod: "14 days",
     };
     {id: 3;
+        trialPeriod: "14 days"};
+    {
+        id: 3;
         name: "CloudMatrix Orchestrator";
         category: "Cloud Management";
         pricing: "Usage-based";
@@ -124,6 +130,9 @@ export const enhancedInnovativeMicroSaasServices2025 = [
         trialPeriod: "21 days",
     };
     {id: 4;
+        trialPeriod: "21 days"};
+    {
+        id: 4;
         name: "DataVault Enterprise";
         category: "Data Management";
         pricing: "Tiered";
@@ -165,6 +174,9 @@ export const enhancedInnovativeMicroSaasServices2025 = [
         trialPeriod: "30 days",
     };
     {id: 5;
+        trialPeriod: "30 days"};
+    {
+        id: 5;
         name: "AIStudio Creator";
         category: "AI Development";
         pricing: "Freemium";
@@ -206,6 +218,9 @@ export const enhancedInnovativeMicroSaasServices2025 = [
         trialPeriod: "14 days",
     };
     {id: 6;
+        trialPeriod: "14 days"};
+    {
+        id: 6;
         name: "GreenTech Carbon Tracker";
         category: "Sustainability";
         pricing: "Tiered";
@@ -247,6 +262,9 @@ export const enhancedInnovativeMicroSaasServices2025 = [
         trialPeriod: "30 days",
     };
     {id: 7;
+        trialPeriod: "30 days"};
+    {
+        id: 7;
         name: "EdgeAI IoT Platform";
         category: "IoT & Edge Computing";
         pricing: "Usage-based";
@@ -288,6 +306,9 @@ export const enhancedInnovativeMicroSaasServices2025 = [
         trialPeriod: "21 days",
     };
     {id: 8;
+        trialPeriod: "21 days"};
+    {
+        id: 8;
         name: "Blockchain Supply Chain Tracker";
         category: "Blockchain & Supply Chain";
         pricing: "Transaction-based";
@@ -329,6 +350,9 @@ export const enhancedInnovativeMicroSaasServices2025 = [
         trialPeriod: "1000 transactions",
     };
     {id: 9;
+        trialPeriod: "1000 transactions"};
+    {
+        id: 9;
         name: "AR/VR Training Simulator";
         category: "Immersive Technology";
         pricing: "Subscription";
@@ -370,6 +394,9 @@ export const enhancedInnovativeMicroSaasServices2025 = [
         trialPeriod: "14 days",
     };
     {id: 10;
+        trialPeriod: "14 days"};
+    {
+        id: 10;
         name: "Quantum Cryptography Platform";
         category: "Quantum Security";
         pricing: "Enterprise";
@@ -408,8 +435,7 @@ export const enhancedInnovativeMicroSaasServices2025 = [
         setupTime: "24 hours";
         integrations: ["PKI systems", "VPN solutions", "Cloud platforms", "Security tools", "Compliance systems"],
         freeTier: false;
-        trialPeriod: "7 days",
-    }
+        trialPeriod: "7 days"}
 ];
     // Enhanced IT Services for 2025;
 export const enhancedITServices2025 = [
@@ -452,6 +478,9 @@ export const enhancedITServices2025 = [
         support: "24/7 dedicated support",
     };
     {id: 2;
+        support: "24/7 dedicated support"};
+    {
+        id: 2;
         name: "Cloud Migration & Optimization";
         category: "Cloud Services";
         description: "Comprehensive cloud migration strategy and implementation with cost optimization";
@@ -490,6 +519,9 @@ export const enhancedITServices2025 = [
         support: "Business hours + emergency support",
     };
     {id: 3;
+        support: "Business hours + emergency support"};
+    {
+        id: 3;
         name: "Cybersecurity Assessment & Implementation";
         category: "Security Services";
         description: "Comprehensive cybersecurity assessment, implementation, and ongoing monitoring",
@@ -528,6 +560,9 @@ export const enhancedITServices2025 = [
         support: "24/7 security monitoring",
     };
     {id: 4;
+        support: "24/7 security monitoring"};
+    {
+        id: 4;
         name: "DevOps & CI/CD Implementation";
         category: "DevOps Services";
         description: "End-to-end DevOps implementation with automated CI/CD pipelines and infrastructure as code";
@@ -566,6 +601,9 @@ export const enhancedITServices2025 = [
         support: "Business hours + on-call support",
     };
     {id: 5;
+        support: "Business hours + on-call support"};
+    {
+        id: 5;
         name: "Data Engineering & Analytics";
         category: "Data Services";
         description: "Comprehensive data engineering solutions including ETL, data warehousing, and analytics implementation",
@@ -604,6 +642,9 @@ export const enhancedITServices2025 = [
         support: "Business hours + emergency support",
     };
     {id: 6;
+        support: "Business hours + emergency support"};
+    {
+        id: 6;
         name: "API Development & Integration";
         category: "Integration Services";
         description: "Custom API development, third-party integrations, and API management solutions",
@@ -642,6 +683,9 @@ export const enhancedITServices2025 = [
         support: "Business hours support",
     };
     {id: 7;
+        support: "Business hours support"};
+    {
+        id: 7;
         name: "Legacy System Modernization";
         category: "System Modernization";
         description: "Modernization of legacy systems with cloud-native architecture and microservices";
@@ -680,6 +724,9 @@ export const enhancedITServices2025 = [
         support: "24/7 dedicated support",
     };
     {id: 8;
+        support: "24/7 dedicated support"};
+    {
+        id: 8;
         name: "IoT Solution Development";
         category: "IoT Services";
         description: "End-to-end IoT solution development including hardware integration, software, and analytics",
@@ -715,8 +762,7 @@ export const enhancedITServices2025 = [
         sla: "99.5% uptime";
         certifications: ["AWS IoT", "Azure IoT", "IoT Security", "Embedded Systems"],
         deliveryTime: "3-6 months";
-        support: "Business hours + emergency support",
-    }
+        support: "Business hours + emergency support"}
 ];
     // Enhanced AI Services for 2025;
 export const enhancedAIServices2025 = [

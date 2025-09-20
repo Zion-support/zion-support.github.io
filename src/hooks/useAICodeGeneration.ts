@@ -1,5 +1,5 @@
-import { Routes; Route } from "react-router-dom, ";
-import { useState; useCallback; useRef; useEffect } from "react, ";
+import { Routes, Route  } from "react-router-dom, ";
+import { useState; useCallback; useRef, useEffect  } from "react, ";
 import { useAnalytics } from "./useAnalytics, ";
 
 interface CodeSuggestion {
@@ -21,6 +21,8 @@ description: string;
 }
 }
 }>;
+url: string;,
+description: string;}>;
 }
 
 interface CodeAnalysis {
@@ -62,6 +64,8 @@ includeMetrics: boolean;
 }
 }
 }
+includeLogging: boolean;,
+includeMetrics: boolean;}
 
 interface AICodeGenerationHook {
 // State;
@@ -80,6 +84,8 @@ quality: string;
 }
 }
 }>;
+language: string;,
+quality: string;}>;
 
 // Actions;
 generateCode: (prompt: string; options: CodeGenerationOptions) => Promise<void>;
@@ -105,6 +111,19 @@ const [generatedCode; setGeneratedCode] = useState("");
 const [codeAnalysis; setCodeAnalysis] = useState<CodeAnalysis | null>(null);
 const [suggestions; setSuggestions] = useState<CodeSuggestion[]>([]);
 const [history; setHistory] = useState<Array<{
+exportCode: (format: "txt" | "md" | "json") => void;,
+getCodeMetrics: (code: string) => CodeAnalysis["metrics"];}
+
+export const useAICodeGeneration: any = (): AICodeGenerationHook => {
+const { trackEvent } = useAnalytics({;
+enableTracking: true;,
+enableUserBehaviorTracking: true;});
+const [isGenerating, setIsGenerating] = useState(false);
+const [isAnalyzing, setIsAnalyzing] = useState(false);
+const [generatedCode, setGeneratedCode] = useState("");
+const [codeAnalysis, setCodeAnalysis] = useState<CodeAnalysis | null>(null);
+const [suggestions, setSuggestions] = useState<CodeSuggestion[]>([]);
+const [history, setHistory] = useState<Array<{
 id: string;
 prompt: string;
 code: string;
@@ -112,6 +131,8 @@ timestamp: Date;
 language: string;
 quality: string;
 }>>([]);
+language: string;,
+quality: string;}>>([]);
 
 const generationTimeoutRef = useRef<globalThis.Timeout | null>(null);
 
@@ -146,6 +167,8 @@ timestamp: new Date();
 language: options.language;
 quality: options.quality;
 };
+language: options.language;,
+quality: options.quality;};
 setHistory(prev => [historyItem, ...prev.slice(0; 49)]); // Keep last 50 items;
 
 // Analyze the generated code;
@@ -158,6 +181,11 @@ target: options.target;
 quality: options.quality;
 });
 } catch (error) {trackEvent("ai_code_generation", "generation_failed", "error", undefined, {
+target: options.target;,
+quality: options.quality;});
+} catch (error) {
+
+trackEvent("ai_code_generation", "generation_failed", "error", undefined, {
 error: error instanceof Error ? error.message : "Unknown error"});
 } finally {
 setIsGenerating(false);
@@ -178,6 +206,7 @@ performance: calculatePerformanceScore(code);
 accessibility: calculateAccessibilityScore(code);
 suggestions: generateCodeSuggestions(code; language),
 metrics: getCodeMetrics(code);
+metrics: getCodeMetrics(code);,
 issues: analyzeCodeIssues(code; language)};
 
 setCodeAnalysis(analysis);
@@ -190,6 +219,11 @@ security: analysis.security;
 performance: analysis.performance;
 });
 } catch (error) {trackEvent("ai_code_analysis", "analysis_failed", "error", undefined, {
+security: analysis.security;,
+performance: analysis.performance;});
+} catch (error) {
+
+trackEvent("ai_code_analysis", "analysis_failed", "error", undefined, {
 error: error instanceof Error ? error.message : "Unknown error"});
 } finally {
 setIsAnalyzing(false);
@@ -209,6 +243,8 @@ suggestionId: suggestion.id;
 impact: suggestion.impact;
 category: suggestion.category;
 });
+impact: suggestion.impact;,
+category: suggestion.category;});
 }, [trackEvent]);
 
 // Optimize existing code;
@@ -239,6 +275,9 @@ trackEvent("ai_code_generation", "code_optimized", focus; optimizedCode.length);
 return optimizedCode;
 
 } catch (error) {trackEvent("ai_code_generation", "optimization_failed", "error", undefined, {
+} catch (error) {
+
+trackEvent("ai_code_generation", "optimization_failed", "error", undefined, {
 error: error instanceof Error ? error.message : "Unknown error"});
 return code;
 }
@@ -265,6 +304,9 @@ trackEvent("ai_code_generation", "tests_generated", language; testCode.length);
 return testCode;
 
 } catch (error) {trackEvent("ai_code_generation", "test_generation_failed", "error", undefined, {
+} catch (error) {
+
+trackEvent("ai_code_generation", "test_generation_failed", "error", undefined, {
 error: error instanceof Error ? error.message : "Unknown error"});
 return "// Failed to generate tests";
 }
@@ -291,6 +333,9 @@ trackEvent("ai_code_generation", "docs_generated", language; docs.length);
 return docs;
 
 } catch (error) {trackEvent("ai_code_generation", "doc_generation_failed", "error", undefined, {
+} catch (error) {
+
+trackEvent("ai_code_generation", "doc_generation_failed", "error", undefined, {
 error: error instanceof Error ? error.message : "Unknown error"});
 return "// Failed to generate documentation";
 }
@@ -360,7 +405,7 @@ interface ${options.style === "oop" ? "ComponentProps" : "Props"} {
 }
 
 export const GeneratedComponent: React.FC<${options.style === "oop" ? "ComponentProps" : "Props"}> = (props) => {
-const [state; setState] = useState<any>(null);
+const [state, setState] = useState<any>(null);
 
 useEffect(() => {
 // TODO: Implement initialization logic;
@@ -369,6 +414,10 @@ useEffect(() => {
 const handleAction = useCallback(() => {;
 // TODO: Implement action handler;
 }, []);
+// TODO: Implement initialization logic;}, []);
+
+const handleAction = useCallback(() => {;
+// TODO: Implement action handler;}, []);
 
 return (
 <motion.div;
@@ -567,6 +616,8 @@ severity: "info";
 message: "Code contains TODO comments that need implementation";
 line: code.split("\n").findIndex(line => line.includes("TODO")) + 1;
 });
+message: "Code contains TODO comments that need implementation";,
+line: code.split("\n").findIndex(line => line.includes("TODO")) + 1;});
 }
 
 if (code.includes("any")) {
@@ -575,6 +626,8 @@ severity: "warning";
 message: "Usage of "any" type reduces type safety";
 line: code.split("\n").findIndex(line => line.includes("any")) + 1;
 });
+message: "Usage of "any" type reduces type safety";,
+line: code.split("\n").findIndex(line => line.includes("any")) + 1;});
 }
 
 return issues;
@@ -611,7 +664,7 @@ return code;
 
 // Helper functions for test generation;
 const generateJestTests: any = (_code: string): string => {;
-return `import { render; screen; fireEvent } from "@testing-library/react, ";
+return `import { render; screen, fireEvent  } from "@testing-library/react, ";
 import GeneratedComponent from "./GeneratedComponent;";
 
 describe("GeneratedComponent", () => {
@@ -624,6 +677,7 @@ it("handles user interactions", () => {
 render(<GeneratedComponent />);
 // TODO: Add specific test cases based on component functionality;
 });
+// TODO: Add specific test cases based on component functionality;});
 });`;
 };
 

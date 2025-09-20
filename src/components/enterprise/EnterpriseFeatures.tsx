@@ -1,6 +1,7 @@
 
 import React from "react";
 import { Users, Shield, Briefcase, Award, Settings, Globe } from "lucide-react";
+import { Users, Shield, Briefcase, Award, SettingsGlobe } from 'lucide-react';
 export function EnterpriseFeatures() {
   return (
     <section id='features' className='py-20 px-4 md:px-6 bg-muted/50'>

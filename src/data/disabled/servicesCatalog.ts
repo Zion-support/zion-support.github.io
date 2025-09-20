@@ -20,6 +20,8 @@ name: string;
 slug: string;
 items: ServiceItem[];
 };
+slug: string;,
+items: ServiceItem[];};
 
 export const servicesCatalog: ServiceCategory[] = [
 {
@@ -42,6 +44,8 @@ ctaLabel: "Start Free Trial";
 href: "https://ziontechgroup.com";
 external: true;
 };
+href: "https://ziontechgroup.com";,
+external: true;};
 {
 id: "etl-to-lakehouse";
 title: "No-Code ETL to Lakehouse";
@@ -54,6 +58,8 @@ ctaLabel: "Connect Sources";
 href: "https://ziontechgroup.com";
 external: true;
 };
+href: "https://ziontechgroup.com";,
+external: true;};
 {
 id: "email-deliverability-suite";
 title: "Email Deliverability Suite";
@@ -66,6 +72,8 @@ ctaLabel: "Improve Deliverability";
 href: "https://ziontechgroup.com";
 external: true;
 }
+href: "https://ziontechgroup.com";,
+external: true;}
 ];
 };
 {
@@ -84,6 +92,8 @@ ctaLabel: "Deploy Assistant";
 href: "https://ziontechgroup.com";
 external: true;
 };
+href: "https://ziontechgroup.com";,
+external: true;};
 {
 id: "ai-code-reviewer";
 title: "AI Code Reviewer & Pair";
@@ -96,6 +106,8 @@ ctaLabel: "Enable on GitHub";
 href: "https://ziontechgroup.com";
 external: true;
 };
+href: "https://ziontechgroup.com";,
+external: true;};
 {
 id: "vision-inspection";
 title: "Vision Quality Inspection";
@@ -108,6 +120,8 @@ ctaLabel: "Book Demo";
 href: "https://ziontechgroup.com";
 external: true;
 }
+href: "https://ziontechgroup.com";,
+external: true;}
 ];
 };
 {name: "IT Services";
@@ -124,6 +138,10 @@ features: ["24/7 monitoring", "Remote & onsite support", "Asset inventory"],
 ctaLabel: "Talk to Sales";
 href: "/contact"};
 {id: "migrations-cloud";
+ctaLabel: "Talk to Sales";,
+href: "/contact"};
+{
+id: "migrations-cloud";
 title: "Cloud Migration Factory";
 description: "Lift-and-shift or re-platform to AWS/Azure/GCP with IaC.";
 category: "IT Services";
@@ -134,12 +152,18 @@ ctaLabel: "Get Estimate";
 href: "/contact"};
 {id: "vcio";
 title: "vCIO Advisory";
+ctaLabel: "Get Estimate";,
+href: "/contact"};
+{
+id: "vcio";
+title: "vCIO Advisory";,
 description: "Quarterly roadmap; security posture; and vendor governance.",
 category: "IT Services";
 price: "From $150/hour";
 billing: "hour";
 features: ["IT roadmap", "Budget planning", "Compliance alignment"],
 ctaLabel: "Book Session";
+ctaLabel: "Book Session";,
 href: "/contact"}
 ];
 };
@@ -158,6 +182,11 @@ ctaLabel: "Request Scope";
 href: "/contact"};
 {id: "soc2-readiness";
 title: "SOC 2 Readiness";
+ctaLabel: "Request Scope";,
+href: "/contact"};
+{
+id: "soc2-readiness";
+title: "SOC 2 Readiness";,
 description: "Gap assessment; policies; controls mappings; and audit prep.",
 category: "Cybersecurity";
 price: "From $10;000/project",
@@ -167,12 +196,18 @@ ctaLabel: "Start Readiness";
 href: "/contact"};
 {id: "mxdr";
 title: "Managed XDR";
+ctaLabel: "Start Readiness";,
+href: "/contact"};
+{
+id: "mxdr";
+title: "Managed XDR";,
 description: "24/7 detection and response across endpoints; cloud; and identities.",
 category: "Cybersecurity";
 price: "From $35/endpoint/month";
 billing: "month";
 features: ["MITRE ATT&CK mapping", "Threat hunting", "Monthly posture reviews"],
 ctaLabel: "Secure Now";
+ctaLabel: "Secure Now";,
 href: "/contact"}
 ];
 };
@@ -191,12 +226,18 @@ ctaLabel: "Book Workshop";
 href: "/contact"};
 {id: "mlops";
 title: "MLOps Enablement";
+ctaLabel: "Book Workshop";,
+href: "/contact"};
+{
+id: "mlops";
+title: "MLOps Enablement";,
 description: "Feature store; CI/CD for models; and monitoring.",
 category: "Data & Analytics";
 price: "From $15;000/project",
 billing: "project";
 features: ["Model registry", "Canary rollout", "Drift detection"],
 ctaLabel: "Plan Rollout";
+ctaLabel: "Plan Rollout";,
 href: "/contact"}
 ];
 };
@@ -215,12 +256,18 @@ ctaLabel: "Design IDP";
 href: "/contact"};
 {id: "finops";
 title: "FinOps Program";
+ctaLabel: "Design IDP";,
+href: "/contact"};
+{
+id: "finops";
+title: "FinOps Program";,
 description: "Cost visibility; allocation; and savings automation across clouds.",
 category: "Cloud & DevOps";
 price: "From $8;000/project",
 billing: "project";
 features: ["Anomaly detection", "RI/SP planning", "Showback/chargeback"],
 ctaLabel: "Cut Cloud Spend";
+ctaLabel: "Cut Cloud Spend";,
 href: "/contact"}
 ];
 }

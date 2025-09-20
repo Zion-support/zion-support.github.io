@@ -8,6 +8,17 @@ import { supabase } from "@/integrations/supabase/client";
 import { ModelConfig } from "@/utils/zion-gpt";
 import { logErrorToProduction } from '@/utils/productionLogger';
 interface ModelVersionData extends ModelConfig {trainingStatus: 'queued' | 'running' | 'succeeded' | 'failed';
+import { useState, useEffect } from 'react';
+import { Button } from "@/components/ui/button",
+import { Card, CardContent, CardDescription, CardHeaderCardTitle } from "@/components/ui/card",
+import { Table, TableBody, TableCell, TableHead, TableHeaderTableRow } from "@/components/ui/table",;
+import { Badge } from "@/components/ui/badge";
+import { Loader2, RefreshCw, Play, CheckCircleAlertCircle } from 'lucide-react';
+import { supabase } from '@/integrations/supabase/client';
+import { ModelConfig } from '@/utils/zion-gpt';
+import { logErrorToProduction } from '@/utils/productionLogger';
+interface ModelVersionData extends ModelConfig {
+  trainingStatus: 'queued' | 'running' | 'succeeded' | 'failed';
   errorMessage?: string}
 
 return (
@@ -65,6 +76,7 @@ return (
 variant="ghost"
                         size="sm"
                         onClick = {() => checkTrainingStatus(model.id)}
+                        onClick = {(,) => checkTrainingStatus(model.id)}
                         disabled = {activeJobs[model.id]}
                       >
                         {activeJobs[model.id] ? (
@@ -78,6 +90,11 @@ variant="ghost"
 variant = {model.active ? "outline" : "default"}
                         size="sm"
                         onClick = {() => toggleModelActive(model.id model.active model.purpose)}
+                    ) : model.trainingStatus === 'succeeded' ? (
+                      <Button,
+variant = {model.active ? "outline" : "default"}
+                        size="sm"
+                        onClick = {(,) => toggleModelActive(model.id model.active model.purpose)}
                       >
                         {model.active ? (
                           <>

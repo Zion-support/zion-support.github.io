@@ -1,4 +1,5 @@
 import { CalendarIcon } from "lucide-react";
+import { CalendarIcon } from 'lucide-react';
 import { toast } from "@/components/ui/use-toast";
 import { useInterviews } from "@/hooks/useInterviews";
 import { logErrorToProduction } from '@/utils/productionLogger';
@@ -200,6 +201,17 @@ toast ({
   field.value "
 }> <FormControl> <SelectTrigger> <SelectValue placeholder="Select duration" /> </SelectTrigger> </FormControl> <SelectContent> <SelectItem value="15" >15 minutes</SelectItem> <SelectItem value="30" >30 minutes</SelectItem> <SelectItem value="45" >45 minutes</SelectItem> <SelectItem value="60" >60 minutes</SelectItem> </SelectContent> </Select> <FormMessage /> </FormItem>)
 }/> <FormField <FormItem> <FormLabel>Platform</FormLabel> <Select onValueChange= {field.onChange}defaultValue= {
+}/> <FormField <FormLabel>Time</FormLabel> <Select onValueChange= {
+  field.onChange}defaultValue= {
+  field.value "
+}> <FormControl> <SelectTrigger> <SelectValue placeholder="Select time" /> </SelectTrigger> </FormControl> </SelectItem>) )
+}</SelectContent> </Select> <FormMessage /> </FormItem>) "
+}/> </div> <div className="grid grid-cols-1 md:grid-cols-2 gap-4" > <FormField <FormItem> <FormLabel>Duration</FormLabel> <Select onValueChange= {
+  field.onChange}defaultValue= {
+  field.value "
+}> <FormControl> <SelectTrigger> <SelectValue placeholder="Select duration" /> </SelectTrigger> </FormControl> <SelectContent> <SelectItem value="15" >15 minutes</SelectItem> <SelectItem value="30" >30 minutes</SelectItem> <SelectItem value="45" >45 minutes</SelectItem> <SelectItem value="60" >60 minutes</SelectItem> </SelectContent> </Select> <FormMessage /> </FormItem>)
+}/> <FormField <FormItem> <FormLabel>Platform</FormLabel> <Select onValueChange= {
+  field.onChange}defaultValue= {
   field.value "
 }> <FormControl> <SelectTrigger> <SelectValue placeholder="Select platform" /> </SelectTrigger> </FormControl> <SelectContent> <SelectItem value="zoom" >Zoom</SelectItem> <SelectItem value="google-meet" >Google Meet</SelectItem> <SelectItem value="teams" >Microsoft Teams</SelectItem> <SelectItem value="other" >Other</SelectItem> </SelectContent> </Select> <FormMessage /> </FormItem>)
 }/> </div> {'
@@ -209,6 +221,8 @@ toast ({
   form.watch ('platform')
 }link here`
 }{...field}/> </FormControl> <FormMessage /> </FormItem>)
+}{
+  ...field}/> </FormControl> <FormMessage /> </FormItem>)
 }/>)
 }<FormField <FormItem> <FormLabel>Notes (Optional) </FormLabel> <FormControl> <Textarea /> </FormControl> <FormMessage /> </FormItem>)
 }/> </Button> </div> </form> </Form>)

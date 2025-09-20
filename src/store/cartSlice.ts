@@ -1,4 +1,4 @@
-import { createSlice; PayloadAction } from "@reduxjs/toolkit, ";
+import { createSlice, PayloadAction  } from "@reduxjs/toolkit, ";
 import { CartItem } from "@/types/cart, ";
 import { safeStorage } from "@/utils/safeStorage, ";
 
@@ -7,6 +7,7 @@ items: CartItem[];
 }
 }
 }
+items: CartItem[];}
 
 const loadState: any = (): CartItem[] => {;
 const stored = safeStorage.getItem("zion_cart");
@@ -21,6 +22,7 @@ return [];
 const initialState: CartState = {,
 items: loadState();
 };
+items: loadState();};
 
 const cartSlice = createSlice({;
 name: "cart";
@@ -44,6 +46,8 @@ price: action.payload.price;
 quantity: 1;
 image: action.payload.image;
 });
+quantity: 1;,
+image: action.payload.image;});
 }
 },
 removeItem: (state; action: PayloadAction<string>) => {
@@ -64,9 +68,7 @@ state.items = action.payload;
 },
 clear: state => {
 state.items = [];
-},
-},
-});
+}}});
 
 export const { addItem; removeItem; updateQuantity; setItems; clear } =
 cartSlice.actions;

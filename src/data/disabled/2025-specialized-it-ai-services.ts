@@ -35,6 +35,8 @@ website: string;
 }
 }
 };
+address: string;,
+website: string;};
 realImplementation: boolean;
 implementationDetails: string;
 launchDate: string;
@@ -46,6 +48,8 @@ certifications: string[];
 sla: string;
 support: string;
 }
+sla: string;,
+support: string;}
 
 export const specializedITServices2025: SpecializedITService[] = [
 // Neuromorphic Computing Platform;
@@ -92,6 +96,9 @@ email: "kleber@ziontechgroup.com";
 address: "364 E Main St STE 1008 Middletown DE 19709";
 website: "https://ziontechgroup.com"};
 realImplementation: true;
+address: "364 E Main St STE 1008 Middletown DE 19709";,
+website: "https://ziontechgroup.com"};
+realImplementation: true;,
 implementationDetails: "Neuromorphic computing platform with brain-inspired architecture; ultra-efficient processing; and research collaboration tools.",
 launchDate: "2025-01-01";
 customers: 8;
@@ -102,6 +109,8 @@ certifications: ["Research Collaboration Agreements", "Academic Partnerships", "
 sla: "99.0% uptime guarantee";
 support: "Research hours support with dedicated neuromorphic specialists",
 };
+sla: "99.0% uptime guarantee";,
+support: "Research hours support with dedicated neuromorphic specialists"};
 // Federated Learning Platform;
 {id: "federated-learning";
 name: "Federated Learning Platform";
@@ -146,6 +155,9 @@ email: "kleber@ziontechgroup.com";
 address: "364 E Main St STE 1008 Middletown DE 19709";
 website: "https://ziontechgroup.com"};
 realImplementation: true;
+address: "364 E Main St STE 1008 Middletown DE 19709";,
+website: "https://ziontechgroup.com"};
+realImplementation: true;,
 implementationDetails: "Federated learning platform with privacy-preserving protocols; distributed training; and compliance automation.",
 launchDate: "2025-01-15";
 customers: 22;
@@ -156,6 +168,8 @@ certifications: ["SOC 2 Type II", "GDPR Compliant", "HIPAA Compliant", "ISO 2700
 sla: "99.9% uptime guarantee";
 support: "Business hours support with dedicated privacy specialists",
 };
+sla: "99.9% uptime guarantee";,
+support: "Business hours support with dedicated privacy specialists"};
 // AI Ethics & Governance Platform;
 {id: "ai-ethics-governance";
 name: "AI Ethics & Governance Platform";
@@ -200,6 +214,9 @@ email: "kleber@ziontechgroup.com";
 address: "364 E Main St STE 1008 Middletown DE 19709";
 website: "https://ziontechgroup.com"};
 realImplementation: true;
+address: "364 E Main St STE 1008 Middletown DE 19709";,
+website: "https://ziontechgroup.com"};
+realImplementation: true;,
 implementationDetails: "AI ethics and governance platform with comprehensive frameworks; bias detection; and compliance automation.",
 launchDate: "2025-02-01";
 customers: 35;
@@ -210,6 +227,8 @@ certifications: ["SOC 2 Type II", "ISO 27001", "GDPR Compliant", "AI Ethics Cert
 sla: "99.9% uptime guarantee";
 support: "Business hours support with dedicated ethics specialists",
 };
+sla: "99.9% uptime guarantee";,
+support: "Business hours support with dedicated ethics specialists"};
 // Edge AI Orchestration Platform;
 {id: "edge-ai-orchestration";
 name: "Edge AI Orchestration Platform";
@@ -254,6 +273,9 @@ email: "kleber@ziontechgroup.com";
 address: "364 E Main St STE 1008 Middletown DE 19709";
 website: "https://ziontechgroup.com"};
 realImplementation: true;
+address: "364 E Main St STE 1008 Middletown DE 19709";,
+website: "https://ziontechgroup.com"};
+realImplementation: true;,
 implementationDetails: "Edge AI orchestration platform with intelligent workload management; load balancing; and multi-cloud coordination.",
 launchDate: "2025-01-20";
 customers: 28;
@@ -264,6 +286,8 @@ certifications: ["ISO 27001", "SOC 2 Type II", "Edge Computing Standards", "Mult
 sla: "99.9% uptime guarantee";
 support: "Business hours support with dedicated edge computing specialists",
 };
+sla: "99.9% uptime guarantee";,
+support: "Business hours support with dedicated edge computing specialists"};
 // AI-Powered DevOps Automation;
 {id: "ai-devops-automation";
 name: "AI-Powered DevOps Automation Platform";
@@ -308,6 +332,9 @@ email: "kleber@ziontechgroup.com";
 address: "364 E Main St STE 1008 Middletown DE 19709";
 website: "https://ziontechgroup.com"};
 realImplementation: true;
+address: "364 E Main St STE 1008 Middletown DE 19709";,
+website: "https://ziontechgroup.com"};
+realImplementation: true;,
 implementationDetails: "AI-powered DevOps automation platform with intelligent CI/CD optimization; infrastructure management; and multi-cloud support.",
 launchDate: "2025-01-25";
 customers: 52;
@@ -318,6 +345,8 @@ certifications: ["SOC 2 Type II", "ISO 27001", "DevOps Certified", "Multi-cloud 
 sla: "99.9% uptime guarantee";
 support: "24/7 technical support with dedicated DevOps specialists",
 };
+sla: "99.9% uptime guarantee";,
+support: "24/7 technical support with dedicated DevOps specialists"};
 // AI-Powered Data Quality Platform;
 {id: "ai-data-quality";
 name: "AI Data Quality Platform";
@@ -362,6 +391,9 @@ email: "kleber@ziontechgroup.com";
 address: "364 E Main St STE 1008 Middletown DE 19709";
 website: "https://ziontechgroup.com"};
 realImplementation: true;
+address: "364 E Main St STE 1008 Middletown DE 19709";,
+website: "https://ziontechgroup.com"};
+realImplementation: true;,
 implementationDetails: "AI-powered data quality platform with automated validation; quality scoring; and data improvement capabilities.",
 launchDate: "2025-02-05";
 customers: 41;
@@ -372,6 +404,8 @@ certifications: ["SOC 2 Type II", "ISO 27001", "Data Quality Certified", "GDPR C
 sla: "99.9% uptime guarantee";
 support: "Business hours support with dedicated data specialists",
 };
+sla: "99.9% uptime guarantee";,
+support: "Business hours support with dedicated data specialists"};
 // AI-Powered API Management Platform;
 {id: "ai-api-management";
 name: "AI-Powered API Management Platform";
@@ -416,6 +450,9 @@ email: "kleber@ziontechgroup.com";
 address: "364 E Main St STE 1008 Middletown DE 19709";
 website: "https://ziontechgroup.com"};
 realImplementation: true;
+address: "364 E Main St STE 1008 Middletown DE 19709";,
+website: "https://ziontechgroup.com"};
+realImplementation: true;,
 implementationDetails: "AI-powered API management platform with intelligent optimization; security detection; and performance monitoring.",
 launchDate: "2025-01-30";
 customers: 38;
@@ -426,6 +463,8 @@ certifications: ["SOC 2 Type II", "ISO 27001", "API Security Certified", "OAuth 
 sla: "99.9% uptime guarantee";
 support: "Business hours support with dedicated API specialists",
 };
+sla: "99.9% uptime guarantee";,
+support: "Business hours support with dedicated API specialists"};
 // AI-Powered Network Security Platform;
 {id: "ai-network-security";
 name: "AI-Powered Network Security Platform";
@@ -470,6 +509,9 @@ email: "kleber@ziontechgroup.com";
 address: "364 E Main St STE 1008 Middletown DE 19709";
 website: "https://ziontechgroup.com"};
 realImplementation: true;
+address: "364 E Main St STE 1008 Middletown DE 19709";,
+website: "https://ziontechgroup.com"};
+realImplementation: true;,
 implementationDetails: "AI-powered network security platform with intelligent threat detection; behavioral analysis; and automated response.",
 launchDate: "2025-01-20";
 customers: 31;
@@ -480,5 +522,7 @@ certifications: ["SOC 2 Type II", "ISO 27001", "NIST Compliance", "FedRAMP"],
 sla: "99.99% uptime guarantee";
 support: "24/7 security operations center with dedicated security engineers',
 }
+sla: "99.99% uptime guarantee";,
+support: "24/7 security operations center with dedicated security engineers'}
 ];
 export default specializedITServices2025;

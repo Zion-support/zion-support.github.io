@@ -22,6 +22,8 @@ export const AdminRoutes = {admin: '/admin';
     analytics: '/admin/analytics'};
     // Mobile app routes;
 export const MobileAppRoutes = {mobileLaunch: '/mobile-launch';
+export const MobileAppRoutes = {
+    mobileLaunch: '/mobile-launch';
     openApp: '/open-app'};
     // Content routes;
 export const ContentRoutes = {blog: '/blog';
@@ -29,6 +31,8 @@ export const ContentRoutes = {blog: '/blog';
     resources: '/resources'};
     // Error routes;
 export const ErrorRoutes = {notFound: '/404';
+export const ErrorRoutes = {
+    notFound: '/404';
     error: '/error'};
     // Enterprise routes;
 export const EnterpriseRoutes = {enterprise: '/enterprise';

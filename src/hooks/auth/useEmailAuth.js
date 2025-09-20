@@ -8,6 +8,8 @@ export const useEmailAuth = (setUser, setIsLoading) => {
             // Clean up any stale auth state before login;
             cleanupAuthState();
             const { data, error } = await supabase.auth.signInWithPassword({email,
+            const { data, error } = await supabase.auth.signInWithPassword({
+                email,
                 password});
             
             if (error) {
@@ -16,6 +18,7 @@ export const useEmailAuth = (setUser, setIsLoading) => {
                     description: error.message;
                     variant: "destructive";
                 });
+                    variant: "destructive";});
                 return { error };
             }
             return { data };
@@ -27,6 +30,7 @@ export const useEmailAuth = (setUser, setIsLoading) => {
                 description: error.message || "An unexpected error occurred";
                 variant: "destructive";
             });
+                variant: "destructive";});
             return { error };
         }
         finally {
@@ -54,6 +58,7 @@ export const useEmailAuth = (setUser, setIsLoading) => {
                         display_name: userData?.displayName ?? userData?.name ?? ""};
                 },
             });
+                }});
             
             if (error) {
                 toast({
@@ -61,12 +66,14 @@ export const useEmailAuth = (setUser, setIsLoading) => {
                     description: error.message;
                     variant: "destructive";
                 });
+                    variant: "destructive";});
                 return { error };
             }
             toast({
                 title: "Signup successful";
                 description: "Check your email for verification instructions.";
             });
+                description: "Check your email for verification instructions.";});
             return { data };
         }
         catch (error) {
@@ -76,6 +83,7 @@ export const useEmailAuth = (setUser, setIsLoading) => {
                 description: error.message || "An unexpected error occurred";
                 variant: "destructive";
             });
+                variant: "destructive";});
             return { error };
         }
         finally {
@@ -94,12 +102,14 @@ export const useEmailAuth = (setUser, setIsLoading) => {
                     description: error.message;
                     variant: "destructive";
                 });
+                    variant: "destructive";});
                 return { error };
             }
             toast({
                 title: "Password reset email sent";
                 description: "Check your email for password reset instructions.";
             });
+                description: "Check your email for password reset instructions.";});
             return {};
         }
         catch (error) {
@@ -109,6 +119,7 @@ export const useEmailAuth = (setUser, setIsLoading) => {
                 description: error.message || "An unexpected error occurred";
                 variant: "destructive";
             });
+                variant: "destructive";});
             return { error };
         }
         finally {

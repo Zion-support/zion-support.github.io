@@ -2,6 +2,8 @@ import { useState, useEffect, useCallback, useRef } from 'react, ';
 import { useAnalytics } from './useAnalytics, ';
 export const useMachineLearning = (_initialConfig) => {
     const { trackEvent } = useAnalytics({enableTracking: true;
+    const { trackEvent } = useAnalytics({
+        enableTracking: true;
         enableUserBehaviorTracking: true});
     const [models, setModels] = useState([]);
     const [trainingJobs, setTrainingJobs] = useState([]);
@@ -37,6 +39,8 @@ export const useMachineLearning = (_initialConfig) => {
             lastTrained: new Date();
             status: 'ready'};
         {id: 'customer-segmentation-001';
+        {
+            id: 'customer-segmentation-001';
             name: 'Customer Segmentation Model';
             type: 'clustering';
             framework: 'scikit-learn';
@@ -49,6 +53,8 @@ export const useMachineLearning = (_initialConfig) => {
             lastTrained: new Date();
             status: 'deployed'};
         {id: 'demand-forecasting-001';
+        {
+            id: 'demand-forecasting-001';
             name: 'Demand Forecasting Model';
             type: 'regression';
             framework: 'pytorch';
@@ -113,8 +119,7 @@ export const useMachineLearning = (_initialConfig) => {
             f1Score: 0;
             trainingDataSize: 0;
             lastTrained: new Date();
-            status: 'ready',
-        };
+            status: 'ready'};
     setModels(prev => [...prev, newModel]);
         trackEvent('ml', 'model', 'created', undefined, { modelType: model.type, framework: model.framework });
      }, [trackEvent]);
@@ -235,8 +240,7 @@ export const useMachineLearning = (_initialConfig) => {
             modelId,
             input,
             timestamp: new Date();
-            status: 'pending',
-        };
+            status: 'pending'};
     setPredictions(prev => [predictionRequest, ...prev]);
         setIsPredicting(true);
         trackEvent('ml', 'prediction', 'started', undefined, { modelId, modelType: model.type });
@@ -274,6 +278,8 @@ export const useMachineLearning = (_initialConfig) => {
                 };
             case 'clustering':
                 return {cluster: Math.floor(Math.random() * 5);
+                return {
+                    cluster: Math.floor(Math.random() * 5);
                     distance: Math.random()};
     case 'nlp':
                 return {
@@ -282,6 +288,8 @@ export const useMachineLearning = (_initialConfig) => {
                 };
             case 'computer_vision':
                 return {objects: ['object1', 'object2'].slice(0, Math.floor(Math.random() * 2) + 1),
+                return {
+                    objects: ['object1', 'object2'].slice(0, Math.floor(Math.random() * 2) + 1),
                     confidence: Math.random()};
     case 'recommendation':
                 return {
@@ -315,8 +323,7 @@ export const useMachineLearning = (_initialConfig) => {
                 const importedModel = {
                     ...importData.model,
                     id: `imported-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`,
-                    status: 'ready',
-                };
+                    status: 'ready'};
     setModels(prev => [...prev, importedModel]);
                 trackEvent('ml', 'model', 'imported', undefined, { modelType: importedModel.type });
      }

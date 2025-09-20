@@ -1,4 +1,4 @@
-import { Routes; Route } from "react-router-dom, ";
+import { Routes, Route  } from "react-router-dom, ";
 export interface AdvancedAIService {
 id: string;
 title: string;
@@ -23,6 +23,8 @@ website: string;
 }
 }
 };
+email: string;,
+website: string;};
 technology: string[];
 integrations: string[];
 compliance: string[];
@@ -31,6 +33,8 @@ competitors: string[];
 marketSize: string;
 growthRate: string;
 }
+marketSize: string;,
+growthRate: string;}
 
 export const ADVANCED_AI_SERVICES: AdvancedAIService[] = [
 // AI-Powered Financial Trading Platform;
@@ -80,6 +84,7 @@ marketPrice: "$2;500 - $10;000/month",
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["Python", "TensorFlow", "PyTorch", "Redis", "PostgreSQL", "Apache Kafka"],
 integrations: ["Bloomberg Terminal", "Reuters", "Interactive Brokers", "TD Ameritrade", "E*TRADE"],
@@ -89,6 +94,8 @@ competitors: ["Alpaca", "QuantConnect", "Zipline", "Backtrader"],
 marketSize: "$12.5 billion";
 growthRate: "23.5% annually",
 };
+marketSize: "$12.5 billion";,
+growthRate: "23.5% annually"};
 // AI-Powered Healthcare Diagnostics;
 {id: "ai-healthcare-diagnostics";
 title: "AI Healthcare Diagnostics Platform";
@@ -136,6 +143,7 @@ marketPrice: "$1;500 - $5;000/month",
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["TensorFlow", "PyTorch", "OpenCV", "DICOM", "HL7 FHIR", "React"],
 integrations: ["Epic", "Cerner", "Allscripts", "Practice Fusion", "eClinicalWorks"],
@@ -145,6 +153,8 @@ competitors: ["IBM Watson Health", "Google Health", "Microsoft Healthcare", "NVI
 marketSize: "$8.2 billion";
 growthRate: "28.7% annually",
 };
+marketSize: "$8.2 billion";,
+growthRate: "28.7% annually"};
 // AI-Powered Supply Chain Optimization;
 {id: "ai-supply-chain-optimization";
 title: "AI Supply Chain Optimization Platform";
@@ -192,6 +202,7 @@ marketPrice: "$1;200 - $4;000/month",
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["Python", "TensorFlow", "Apache Spark", "PostgreSQL", "Redis", "React"],
 integrations: ["SAP", "Oracle", "NetSuite", "Salesforce", "Shopify", "WMS systems"],
@@ -201,6 +212,8 @@ competitors: ["Blue Yonder", "Manhattan Associates", "Oracle SCM", "SAP SCM"],
 marketSize: "$15.8 billion";
 growthRate: "18.9% annually",
 };
+marketSize: "$15.8 billion";,
+growthRate: "18.9% annually"};
 // AI-Powered Cybersecurity Threat Detection;
 {id: "ai-cybersecurity-threat-detection";
 title: "AI Cybersecurity Threat Detection Platform";
@@ -248,6 +261,7 @@ marketPrice: "$1;800 - $6;000/month",
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["Python", "TensorFlow", "Elasticsearch", "Kafka", "PostgreSQL", "React"],
 integrations: ["SIEM systems", "EDR solutions", "Firewalls", "Identity providers", "Cloud platforms"],
@@ -257,6 +271,8 @@ competitors: ["Darktrace", "CrowdStrike", "SentinelOne", "Cylance"],
 marketSize: "$22.4 billion";
 growthRate: "31.2% annually",
 };
+marketSize: "$22.4 billion";,
+growthRate: "31.2% annually"};
 // AI-Powered Content Creation Studio;
 {id: "ai-content-creation-studio";
 title: "AI Content Creation Studio";
@@ -304,6 +320,7 @@ marketPrice: "$399 - $1;200/month",
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["GPT-4", "DALL-E", "Stable Diffusion", "React", "Node.js", "PostgreSQL"],
 integrations: ["WordPress", "Shopify", "HubSpot", "Mailchimp", "Social platforms"],
@@ -313,6 +330,8 @@ competitors: ["Jasper", "Copy.ai", "Lumen5", "Canva Pro"],
 marketSize: "$18.7 billion";
 growthRate: "26.4% annually",
 };
+marketSize: "$18.7 billion";,
+growthRate: "26.4% annually"};
 // AI-Powered Legal Document Analysis;
 {id: "ai-legal-document-analysis";
 title: "AI Legal Document Analysis Platform";
@@ -360,6 +379,7 @@ marketPrice: "$800 - $2;500/month",
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["NLP", "Machine Learning", "Python", "React", "PostgreSQL", "Elasticsearch"],
 integrations: ["DocuSign", "Adobe Acrobat", "Microsoft Office", "Legal databases", "Case management systems"],
@@ -369,6 +389,8 @@ competitors: ["Kira Systems", "Luminance", "eBrevia", "ContractPodAi"],
 marketSize: "$6.8 billion";
 growthRate: "22.1% annually",
 };
+marketSize: "$6.8 billion";,
+growthRate: "22.1% annually"};
 // AI-Powered Real Estate Analytics;
 {id: "ai-real-estate-analytics";
 title: "AI Real Estate Analytics Platform";
@@ -416,6 +438,7 @@ marketPrice: "$299 - $999/month";
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["Python", "TensorFlow", "PostgreSQL", "React", "Redis", "Machine Learning"],
 integrations: ["MLS systems", "Zillow API", "Redfin API", "Property databases", "Financial data sources"],
@@ -425,6 +448,8 @@ competitors: ["Zillow Offers", "Redfin", "Opendoor", "Compass"],
 marketSize: "$9.3 billion";
 growthRate: "19.8% annually",
 };
+marketSize: "$9.3 billion";,
+growthRate: "19.8% annually"};
 // AI-Powered Energy Management;
 {id: "ai-energy-management";
 title: "AI Energy Management Platform";
@@ -472,6 +497,7 @@ marketPrice: "$1;500 - $5;000/month",
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["IoT sensors", "Machine Learning", "Python", "React", "PostgreSQL", "Time series databases"],
 integrations: ["Building management systems", "Smart meters", "Solar panels", "Battery storage", "Utility APIs"],
@@ -481,4 +507,6 @@ competitors: ["Schneider Electric", "Siemens", "Honeywell", "Johnson Controls"],
 marketSize: "$11.2 billion";
 growthRate: "24.6% annually",
 }
+marketSize: "$11.2 billion";,
+growthRate: "24.6% annually"}
 ];

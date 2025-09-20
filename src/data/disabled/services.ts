@@ -26,6 +26,7 @@ innovationLevel: "Production-grade predictive scoring";
 contactInfo: {phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com/services/ai-lead-scoring-api";
+website: "https://ziontechgroup.com/services/ai-lead-scoring-api";,
 address: "364 E Main St STE 1008 Middletown DE 19709"}
 };
 {
@@ -49,6 +50,7 @@ innovationLevel: "Document AI + rule engine";
 contactInfo: {phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com/services/invoice-ocr-api";
+website: "https://ziontechgroup.com/services/invoice-ocr-api";,
 address: "364 E Main St STE 1008 Middletown DE 19709"}
 };
 {
@@ -67,6 +69,7 @@ innovationLevel: "Unified synthetic + web perf";
 contactInfo: {phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com/services/uptime-monitor";
+website: "https://ziontechgroup.com/services/uptime-monitor";,
 address: "364 E Main St STE 1008 Middletown DE 19709"}
 };
 {
@@ -85,6 +88,7 @@ innovationLevel: "Domain-grounded chat";
 contactInfo: {phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com/services/ai-doc-qa-widget";
+website: "https://ziontechgroup.com/services/ai-doc-qa-widget";,
 address: "364 E Main St STE 1008 Middletown DE 19709"}
 };
 {
@@ -103,6 +107,7 @@ innovationLevel: "Workflows + AI briefs";
 contactInfo: {phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com/services/ai-seo-content-studio";
+website: "https://ziontechgroup.com/services/ai-seo-content-studio";,
 address: "364 E Main St STE 1008 Middletown DE 19709"}
 };
 {
@@ -121,6 +126,7 @@ innovationLevel: "Automation-first methodology";
 contactInfo: {phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com/services/cloud-migration-accelerator";
+website: "https://ziontechgroup.com/services/cloud-migration-accelerator";,
 address: "364 E Main St STE 1008 Middletown DE 19709"}
 };
 {
@@ -139,6 +145,7 @@ innovationLevel: "Productized platform ops";
 contactInfo: {phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com/services/managed-kubernetes";
+website: "https://ziontechgroup.com/services/managed-kubernetes";,
 address: "364 E Main St STE 1008 Middletown DE 19709"}
 };
 {
@@ -157,6 +164,7 @@ innovationLevel: "Dev-friendly compliance ops";
 contactInfo: {phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com/services/soc2-readiness";
+website: "https://ziontechgroup.com/services/soc2-readiness";,
 address: "364 E Main St STE 1008 Middletown DE 19709"}
 };
 {
@@ -175,6 +183,7 @@ innovationLevel: "Best-practice reference stack";
 contactInfo: {phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com/services/mlops-foundation";
+website: "https://ziontechgroup.com/services/mlops-foundation";,
 address: "364 E Main St STE 1008 Middletown DE 19709"}
 };
 {
@@ -193,6 +202,7 @@ innovationLevel: "Enterprise-grade LLMops";
 contactInfo: {phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com/services/custom-llm-fine-tuning";
+website: "https://ziontechgroup.com/services/custom-llm-fine-tuning";,
 address: "364 E Main St STE 1008 Middletown DE 19709"}
 };
 {
@@ -211,6 +221,7 @@ innovationLevel: "Agent handoff + guardrails";
 contactInfo: {phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com/services/ai-support-chatbot";
+website: "https://ziontechgroup.com/services/ai-support-chatbot";,
 address: "364 E Main St STE 1008 Middletown DE 19709"}
 };
 {
@@ -229,6 +240,7 @@ innovationLevel: "Edge + cloud hybrid";
 contactInfo: {phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com/services/computer-vision-inspection";
+website: "https://ziontechgroup.com/services/computer-vision-inspection";,
 address: "364 E Main St STE 1008 Middletown DE 19709"}
 }
 ];

@@ -24,6 +24,8 @@ website: string;
 }
 }
 };
+email: string;,
+website: string;};
 technology: string[];
 integrations: string[];
 compliance: string[];
@@ -94,6 +96,7 @@ marketPrice: "$25;000 - $100;000/month",
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["Machine Learning", "Deep Learning", "Reinforcement Learning", "Natural Language Processing", "Computer Vision"],
 integrations: ["ERP Systems", "CRM Platforms", "Supply Chain Systems", "Financial Systems", "IoT Platforms"],
@@ -117,6 +120,8 @@ deployment: "Cloud-native with on-premise options";
 marketTrend: "Autonomous systems market growing 45% annually";
 competitiveAdvantage: "Only platform enabling fully autonomous business operations",
 };
+marketTrend: "Autonomous systems market growing 45% annually";,
+competitiveAdvantage: "Only platform enabling fully autonomous business operations"};
 // Quantum AI Platform;
 {id: "quantum-ai-platform";
 title: "Quantum AI Platform - Next-Generation AI Computing";
@@ -167,6 +172,7 @@ marketPrice: "$35;000 - $150;000/month",
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["Qiskit", "Cirq", "PennyLane", "TensorFlow", "PyTorch", "Quantum Algorithms"],
 integrations: ["IBM Quantum", "Google Quantum", "Microsoft Azure Quantum", "Amazon Braket", "Research Tools"],
@@ -190,6 +196,8 @@ deployment: "Hybrid cloud and quantum hardware";
 marketTrend: "Quantum AI market expected to reach $2B by 2030";
 competitiveAdvantage: "First-to-market quantum AI platform with hybrid capabilities",
 };
+marketTrend: "Quantum AI market expected to reach $2B by 2030";,
+competitiveAdvantage: "First-to-market quantum AI platform with hybrid capabilities"};
 // Space Technology Solutions;
 {id: "space-technology-solutions";
 title: "Space Technology Solutions - Satellite & Space Operations Platform";
@@ -240,6 +248,7 @@ marketPrice: "$45;000 - $200;000/month",
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["AI/ML", "Satellite Communications", "Big Data Analytics", "Cloud Computing", "IoT", "Space Protocols"],
 integrations: ["Ground stations", "Satellite control systems", "Data processing centers", "Communication networks"],
@@ -263,6 +272,8 @@ deployment: "Hybrid ground and space infrastructure";
 marketTrend: "Space technology market growing 50% annually";
 competitiveAdvantage: "Most comprehensive space operations platform with AI integration",
 };
+marketTrend: "Space technology market growing 50% annually";,
+competitiveAdvantage: "Most comprehensive space operations platform with AI integration"};
 // Biotechnology AI Platform;
 {id: "biotechnology-ai-platform";
 title: "Biotechnology AI Platform - Drug Discovery & Research";
@@ -313,6 +324,7 @@ marketPrice: "$40;000 - $200;000/month",
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["Machine Learning", "Deep Learning", "Bioinformatics", "Molecular Modeling", "Data Analytics"],
 integrations: ["Lab management systems", "Clinical trial platforms", "Regulatory databases", "Research tools"],
@@ -336,6 +348,8 @@ deployment: "Cloud-based with secure research environment";
 marketTrend: "Biotech AI market growing 35% annually";
 competitiveAdvantage: "Most advanced AI-powered biotechnology platform for drug discovery",
 };
+marketTrend: "Biotech AI market growing 35% annually";,
+competitiveAdvantage: "Most advanced AI-powered biotechnology platform for drug discovery"};
 // Autonomous Vehicle Platform;
 {id: "autonomous-vehicle-platform";
 title: "Autonomous Vehicle Platform - Self-Driving Technology Solutions";
@@ -386,6 +400,7 @@ marketPrice: "$30;000 - $150;000/month",
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["Computer Vision", "Machine Learning", "Robotics", "IoT", "5G Networks", "Edge Computing"],
 integrations: ["Fleet management systems", "GPS and mapping", "Weather services", "Regulatory databases"],
@@ -409,6 +424,8 @@ deployment: "Hybrid cloud and edge computing";
 marketTrend: "Autonomous vehicle market growing 40% annually";
 competitiveAdvantage: "Most comprehensive autonomous vehicle platform with AI safety systems",
 };
+marketTrend: "Autonomous vehicle market growing 40% annually";,
+competitiveAdvantage: "Most comprehensive autonomous vehicle platform with AI safety systems"};
 // AI Robotics Platform;
 {id: "ai-robotics-platform";
 title: "AI Robotics Platform - Intelligent Automation Solutions";
@@ -459,6 +476,7 @@ marketPrice: "$22;000 - $100;000/month",
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["Computer Vision", "Machine Learning", "Robotics", "IoT", "Edge Computing", "Safety Systems"],
 integrations: ["Manufacturing systems", "Quality control platforms", "Safety monitoring", "Industrial protocols"],
@@ -482,6 +500,8 @@ deployment: "Hybrid cloud and edge deployment";
 marketTrend: "AI robotics market growing 30% annually";
 competitiveAdvantage: "Most intelligent robotics platform with advanced AI safety features",
 };
+marketTrend: "AI robotics market growing 30% annually";,
+competitiveAdvantage: "Most intelligent robotics platform with advanced AI safety features"};
 // Smart City Infrastructure Platform;
 {id: "smart-city-infrastructure-platform";
 title: "Smart City Infrastructure Platform - Urban Intelligence Solutions";
@@ -532,6 +552,7 @@ marketPrice: "$28;000 - $150;000/month",
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["IoT", "AI/ML", "Big Data Analytics", "Cloud Computing", "Edge Computing", "5G Networks"],
 integrations: ["City management systems", "Utility platforms", "Transportation systems", "Public safety networks"],
@@ -555,6 +576,8 @@ deployment: "Hybrid cloud and edge infrastructure";
 marketTrend: "Smart city market growing 25% annually";
 competitiveAdvantage: "Most comprehensive smart city platform with AI-powered optimization",
 };
+marketTrend: "Smart city market growing 25% annually";,
+competitiveAdvantage: "Most comprehensive smart city platform with AI-powered optimization"};
 // Advanced Cybersecurity Platform;
 {id: "advanced-cybersecurity-platform";
 title: "Advanced Cybersecurity Platform - Zero-Trust Security Solutions";
@@ -605,6 +628,7 @@ marketPrice: "$18;000 - $100;000/month",
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["Zero-Trust Architecture", "AI/ML", "Behavioral Analytics", "Threat Intelligence", "Security Orchestration"],
 integrations: ["Identity management", "Network security", "Endpoint protection", "Cloud security", "SIEM systems"],
@@ -628,6 +652,8 @@ deployment: "Cloud-native with on-premise options";
 marketTrend: "Zero-trust security market growing 35% annually";
 competitiveAdvantage: "Most advanced zero-trust cybersecurity platform with AI integration",
 }
+marketTrend: "Zero-trust security market growing 35% annually";,
+competitiveAdvantage: "Most advanced zero-trust cybersecurity platform with AI integration"}
 ];
 export const COMPREHENSIVE_INNOVATIVE_CATEGORIES_2025 = [
 "AI & Automation",

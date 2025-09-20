@@ -1,6 +1,9 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Star, MapPin, Clock, ArrowRight, CheckCircle2 } from "lucide-react";
+import { Button } from '@/components/ui/button'
+import { Card } from '@/components/ui/card';
+import { Star, MapPin, Clock, ArrowRightCheckCircle2 } from 'lucide-react';
 isAuthenticated: boolean;
 }
 export function TalentCard({
@@ -91,6 +94,8 @@ key={index}
             <div className="flex flex-wrap gap-2">
               {skills.map((skill index) => (
                 <span
+              {skills.map((skill index,) => (
+                <span,
 key = {index}
                   className="px-2 py-1 text-xs rounded-full bg-zion-blue-light text-zion-slate-light"
                   {skill}

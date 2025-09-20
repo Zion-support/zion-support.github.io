@@ -24,6 +24,8 @@ website: string;
 }
 }
 };
+email: string;,
+website: string;};
 technology: string[];
 integrations: string[];
 compliance: string[];
@@ -33,6 +35,8 @@ uniqueValue: string;
 sla: string;
 uptime: string;
 }
+sla: string;,
+uptime: string;}
 
 export const COMPREHENSIVE_IT_INFRASTRUCTURE_SERVICES: ComprehensiveITInfrastructureService[] = [
 // Cloud-Native Infrastructure;
@@ -82,6 +86,7 @@ marketPrice: "$1;200 - $5;000/month",
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["Kubernetes", "Docker", "Terraform", "AWS", "Azure", "GCP"],
 integrations: ["CI/CD pipelines", "Monitoring tools", "Security platforms", "Backup systems"],
@@ -92,6 +97,8 @@ uniqueValue: "Unified multi-cloud management with automated optimization and cos
 sla: "99.99% uptime with 4-hour response time";
 uptime: "99.99%",
 };
+sla: "99.99% uptime with 4-hour response time";,
+uptime: "99.99%"};
 // Edge Computing Infrastructure;
 {id: "edge-computing-infrastructure";
 title: "Edge Computing Infrastructure Platform";
@@ -139,6 +146,7 @@ marketPrice: "$899 - $3;000/month",
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["Kubernetes Edge", "5G Core", "Edge AI", "MQTT", "WebRTC"],
 integrations: ["IoT platforms", "Cloud services", "5G networks", "Enterprise systems"],
@@ -149,6 +157,8 @@ uniqueValue: "Comprehensive edge infrastructure with 5G optimization and AI depl
 sla: "99.9% uptime with 2-hour response time";
 uptime: "99.9%",
 };
+sla: "99.9% uptime with 2-hour response time";,
+uptime: "99.9%"};
 // Hybrid Cloud Management;
 {id: "hybrid-cloud-management-platform";
 title: "Hybrid Cloud Management Platform";
@@ -196,6 +206,7 @@ marketPrice: "$1;500 - $6;000/month",
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["Terraform", "Ansible", "Kubernetes", "VMware", "OpenStack"],
 integrations: ["AWS", "Azure", "GCP", "On-premises systems", "Monitoring tools"],
@@ -206,6 +217,8 @@ uniqueValue: "Unified hybrid cloud management with automated optimization and co
 sla: "99.95% uptime with 6-hour response time";
 uptime: "99.95%",
 };
+sla: "99.95% uptime with 6-hour response time";,
+uptime: "99.95%"};
 // Network Security Infrastructure;
 {id: "network-security-infrastructure";
 title: "Advanced Network Security Infrastructure";
@@ -253,6 +266,7 @@ marketPrice: "$1;800 - $7;000/month",
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["Palo Alto Networks", "Cisco", "Fortinet", "Check Point", "Custom solutions"],
 integrations: ["SIEM systems", "Identity providers", "Cloud platforms", "Monitoring tools"],
@@ -263,6 +277,8 @@ uniqueValue: "Comprehensive network security with AI-powered threat detection an
 sla: "99.99% uptime with 1-hour response time";
 uptime: "99.99%",
 };
+sla: "99.99% uptime with 1-hour response time";,
+uptime: "99.99%"};
 // Data Center Infrastructure;
 {id: "data-center-infrastructure";
 title: "Modern Data Center Infrastructure";
@@ -310,6 +326,7 @@ marketPrice: "$2;500 - $10;000/month",
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["VMware", "Hyper-V", "Storage arrays", "Network switches", "UPS systems"],
 integrations: ["Monitoring tools", "Backup systems", "Cloud platforms", "Management tools"],
@@ -320,6 +337,8 @@ uniqueValue: "Modern data center infrastructure with energy efficiency and autom
 sla: "99.999% uptime with 4-hour response time";
 uptime: "99.999%",
 };
+sla: "99.999% uptime with 4-hour response time";,
+uptime: "99.999%"};
 // Storage Infrastructure;
 {id: "storage-infrastructure-platform";
 title: "Enterprise Storage Infrastructure Platform";
@@ -367,6 +386,7 @@ marketPrice: "$999 - $4;000/month",
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["NetApp", "EMC", "Pure Storage", "HPE", "Custom solutions"],
 integrations: ["Backup systems", "Monitoring tools", "Cloud platforms", "Management tools"],
@@ -377,6 +397,8 @@ uniqueValue: "Intelligent storage infrastructure with automated optimization and
 sla: "99.9% uptime with 4-hour response time";
 uptime: "99.9%",
 };
+sla: "99.9% uptime with 4-hour response time";,
+uptime: "99.9%"};
 // Backup and Disaster Recovery;
 {id: "backup-disaster-recovery-platform";
 title: "Comprehensive Backup & Disaster Recovery Platform";
@@ -424,6 +446,7 @@ marketPrice: "$699 - $2;500/month",
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["Veeam", "Commvault", "Rubrik", "Cohesity", "Custom solutions"],
 integrations: ["Storage systems", "Cloud platforms", "Monitoring tools", "Management tools"],
@@ -434,6 +457,8 @@ uniqueValue: "Comprehensive backup and recovery with automated testing and compl
 sla: "99.9% uptime with 2-hour response time";
 uptime: "99.9%",
 };
+sla: "99.9% uptime with 2-hour response time";,
+uptime: "99.9%"};
 // Network Monitoring Infrastructure;
 {id: "network-monitoring-infrastructure";
 title: "Advanced Network Monitoring Infrastructure";
@@ -481,6 +506,7 @@ marketPrice: "$599 - $2;000/month",
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["SolarWinds", "PRTG", "Nagios", "Zabbix", "Custom solutions"],
 integrations: ["Network devices", "Cloud platforms", "Management tools", "Alerting systems"],
@@ -491,6 +517,8 @@ uniqueValue: "Intelligent network monitoring with AI-powered analytics and autom
 sla: "99.9% uptime with 4-hour response time";
 uptime: "99.9%",
 };
+sla: "99.9% uptime with 4-hour response time";,
+uptime: "99.9%"};
 // Virtualization Infrastructure;
 {id: "virtualization-infrastructure-platform";
 title: "Enterprise Virtualization Infrastructure Platform";
@@ -538,6 +566,7 @@ marketPrice: "$799 - $3;000/month",
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["VMware", "Hyper-V", "KVM", "Xen", "Custom solutions"],
 integrations: ["Storage systems", "Network infrastructure", "Management tools", "Monitoring tools"],
@@ -548,4 +577,6 @@ uniqueValue: "Comprehensive virtualization platform with automated optimization 
 sla: "99.9% uptime with 4-hour response time";
 uptime: "99.9%",
 }
+sla: "99.9% uptime with 4-hour response time";,
+uptime: "99.9%"}
 ];

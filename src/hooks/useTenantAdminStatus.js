@@ -4,6 +4,7 @@ export const useTenantAdminStatus = (tenantId) => {
         isAdmin: false;
         isLoading: true;
     });
+        isLoading: true;});
     useEffect(() => {
         const checkTenantAdminStatus = async (_tenantId) => {
             try {

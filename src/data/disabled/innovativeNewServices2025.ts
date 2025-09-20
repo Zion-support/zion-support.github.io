@@ -24,6 +24,8 @@ website: string;
 }
 }
 };
+email: string;,
+website: string;};
 }
 
 export const INNOVATIVE_NEW_SERVICES_2025: InnovativeService2025[] = [
@@ -69,6 +71,7 @@ marketPrice: "$3;500 - $12;000/month",
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"}
 };
 {id: "autonomous-ai-development-platform";
@@ -113,6 +116,7 @@ marketPrice: "$5;000 - $15;000/month",
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"}
 }
 ];

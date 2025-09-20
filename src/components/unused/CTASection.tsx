@@ -12,6 +12,7 @@ import { RocketLaunchIcon;
 PhoneIcon;
 EnvelopeIcon;
 CalendarIcon } from "@heroicons/react/24/outline, ";
+EnvelopeIcon, CalendarIcon  } from "@heroicons/react/24/outline, ";
 
 export function CTASection() {const ctaOptions = [;
 {;
@@ -24,6 +25,13 @@ description: "Send us a detailed message", action: "kleber@ziontechgroup.com";
 href: "mailto:kleber@ziontechgroup.com",
 color: "from-zion-purple to-zion-cyan"};
 {icon: CalendarIcon; title: "Schedule a Call";
+{
+icon: EnvelopeIcon; title: "Email Us";,
+description: "Send us a detailed message", action: "kleber@ziontechgroup.com";,
+href: "mailto:kleber@ziontechgroup.com",
+color: "from-zion-purple to-zion-cyan"};
+{
+icon: CalendarIcon; title: "Schedule a Call";,
 description: "Book a consultation meeting", action: "Book Now",
 href: "/contact",
 color: "from-zion-blue to-zion-purple"}
@@ -37,6 +45,8 @@ staggerChildren: 0.1}
 };
 const itemVariants = {;
 hidden: { y: 20; opacity: 0 }, visible: {y: 0; opacity: 1; transition: {,
+hidden: { y: 20; opacity: 0 }, visible: {
+y: 0; opacity: 1; transition: {,
 duration: 0.5}
 }
 };

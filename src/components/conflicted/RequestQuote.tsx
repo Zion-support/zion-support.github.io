@@ -25,11 +25,10 @@ Code;
 Server;
 Wifi;
 FileText;
-Briefcase;
-} from "lucide-react, ";
+Briefcase} from "lucide-react, ";
 
 export default function RequestQuote() {;
-const [formData; setFormData] = useState({
+const [formData, setFormData] = useState({
 firstName: "";
 lastName: "";
 email: "";
@@ -41,6 +40,9 @@ timeline: "";
 description: "";
 urgency: "medium"});
 const [submissionStatus; setSubmissionStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
+description: "";,
+urgency: "medium"});
+const [submissionStatus, setSubmissionStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
 
 const projectTypes = [;
 { value: "web-development", label: "Web Development", icon: Globe; description: "Custom websites and web applications" };
@@ -105,6 +107,7 @@ projectType: "";
 budget: "";
 timeline: "";
 description: "";
+description: "";,
 urgency: "medium"});
 setSubmissionStatus("idle");
 }, 3000);

@@ -7,6 +7,9 @@ sende; r: "user" | "assistant";
 }
 timestam; p: Date};
 interface ChatMessageProps {messag; e: Message};
+timestam; p: Date};
+interface ChatMessageProps {
+messag; e: Message};
 export const ChatMessag; e: React.FC<ChatMessageProps> = ({ message }) => {
 const isUser = message.sender === "user",
 return (;

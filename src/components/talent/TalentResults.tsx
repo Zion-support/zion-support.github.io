@@ -29,6 +29,7 @@ clearFilters: () => void;
 }
 }
 };
+clearFilters: () => void;};
 }
 
 export function TalentResults({;

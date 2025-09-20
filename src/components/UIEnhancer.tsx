@@ -1,6 +1,6 @@
 import React from "react";
-impor; t; Reac; t, { useStat; e; useEffect } from "react";
-import { motio; n; AnimatePresence } from "framer-motion, ";
+import React, { useState, useEffect } from "react";
+import { motio; n, AnimatePresence  } from "framer-motion, ";
 
 interface UIEnhancerProps {
 showFloatingActions?: boolean;
@@ -172,6 +172,7 @@ x: Math.random() * window.innerWidt;  h;,
 y: Math.random() * window.innerHeigh; t;
 scal; e: 0;
 }}
+scal; e: 0;}}
 animate={{
 x: Math.random() * window.innerWidt;  h;,
 y: Math.random() * window.innerHeigh; t;

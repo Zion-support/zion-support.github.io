@@ -95,99 +95,9 @@ cybersecurity and the latest technology trends shaping our future.
                   >
                     {category.name}
                   </span>
+import React from 'react';
+
 export default function Blog() {
-  const blogPosts = [], image: "/api/placeholder/600/400"
-  {"
-      id: 1 title: "The Future of AI in Enterprise: 2025 Trends and Predictions","
-      excerpt: "Explore the latest AI trends transforming enterprise operations and how businesses can leverage these technologies for competitive advantage.", author: "Dr. Sarah Chen","
-      date: "2025-01-15", readTime: "8 min read","
-      category: "AI & Machine Learning", tags: ["AIEnterpriseTechnology"], image: "/api/placeholder/600/400",
-featured: true}, { id: 2}, {
-      id: 2,
-title: &quotQuantum Computing Breakthrough: What It Means for Your Business&quot,
-excerpt: &quotUnderstanding the latest quantum computing advances and their practical applications in solving complex business problems.&quot,
-author: &quotProf. Michael Rodriguez&quot,
-date: &quot2025-01-12&quot,
-readTime: &quot12 min read&quot,
-category: &quotQuantum Computing&quot,
-tags: [&quotQuantum&quot, &quot;Computing&quot, &quot;Innovation&quot]
-      image: &quot,/api/placeholder/600/400&quot,"
-      title: "Quantum Computing Breakthrough: What It Means for Your Business", excerpt: "Understanding the latest quantum computing advances and their practical applications in solving complex business problems.","
-      author: "Prof. Michael Rodriguez", date: "2025-01-12","
-      readTime: "12 min read", category: "Quantum Computing","
-      tags: ["Quantum", "Computing", "Innovation"], image: "/api/placeholder/600/400","
-      tags: ["QuantumComputingInnovation"], image: "/api/placeholder/600/400",
-featured: true}, { id: 3}, {
-      id: 3,
-title: &quotMicro SaaS Revolution: Building Scalable Solutions&quot,
-excerpt: &quotHow micro SaaS platforms are changing the software landscape and creating new opportunities for businesses.&quot,
-author: &quotAlex Thompson&quot,
-date: &quot2025-01-10&quot,
-readTime: &quot6 min read&quot,
-category: &quotMicro SaaS&quot,
-tags: [&quotSaaS&quot, &quot;Software&quot, &quot;Business&quot]
-      image: &quot,/api/placeholder/600/400&quot,"
-      title: "Micro SaaS Revolution: Building Scalable Solutions", excerpt: "How micro SaaS platforms are changing the software landscape and creating new opportunities for businesses.","
-      author: "Alex Thompson", date: "2025-01-10","
-      readTime: "6 min read", category: "Micro SaaS","
-      tags: ["SaaS", "Software", "Business"], image: "/api/placeholder/600/400","
-      tags: ["SaaSSoftwareBusiness"], image: "/api/placeholder/600/400",
-featured: false}, { id: 4}, {
-      id: 4,
-title: &quotCybersecurity in the Age of AI: New Threats and Solutions&quot,
-excerpt: &quotExamining how AI is both creating new security challenges and providing innovative solutions to protect enterprise data.&quot,
-author: &quotLisa Park&quot,
-date: &quot2025-01-08&quot,
-readTime: &quot10 min read&quot,
-category: &quotCybersecurity&quot,
-tags: [&quotSecurity&quot, &quot;AI&quot, &quot;Enterprise&quot]
-      image: &quot,/api/placeholder/600/400&quot,"
-      title: "Cybersecurity in the Age of AI: New Threats and Solutions", excerpt: "Examining how AI is both creating new security challenges and providing innovative solutions to protect enterprise data.","
-      author: "Lisa Park", date: "2025-01-08","
-      readTime: "10 min read", category: "Cybersecurity","
-      tags: ["Security", "AI", "Enterprise"], image: "/api/placeholder/600/400","
-      tags: ["SecurityAIEnterprise"], image: "/api/placeholder/600/400",
-featured: false}, { id: 5}, {
-      id: 5,
-title: &quotDigital Transformation: A Complete Guide for 2025&quot,
-excerpt: &quotComprehensive strategies for successful digital transformation initiatives in modern enterprises.&quot,
-author: &quotDavid Kumar&quot,
-date: &quot2025-01-05&quot,
-readTime: &quot15 min read&quot,
-category: &quotDigital Transformation&quot,
-tags: [&quotDigital&quot, &quot;Transformation&quot, &quot;Strategy&quot]
-      image: &quot,/api/placeholder/600/400&quot,"
-      title: "Digital Transformation: A Complete Guide for 2025", excerpt: "Comprehensive strategies for successful digital transformation initiatives in modern enterprises.","
-      author: "David Kumar", date: "2025-01-05","
-      readTime: "15 min read", category: "Digital Transformation","
-      tags: ["Digital", "Transformation", "Strategy"], image: "/api/placeholder/600/400","
-      tags: ["DigitalTransformationStrategy"], image: "/api/placeholder/600/400",
-featured: false}, { id: 6}, {
-      id: 6,
-title: &quotCloud Infrastructure Best Practices for Global Enterprises&quot,
-excerpt: &quotEssential guidelines for designing and managing cloud infrastructure that scales with your business needs.&quot,
-author: &quotMaria Santos&quot,
-date: &quot2025-01-03&quot,
-readTime: &quot9 min read&quot,
-category: &quotCloud Computing&quot,
-tags: [&quotCloud&quot, &quot;Infrastructure&quot, &quot;Enterprise&quot]
-      image: &quot,/api/placeholder/600/400&quot,
-featured: false}
-  ]&quot,
-const categories = []&quot
-"
-      title: "Cloud Infrastructure Best Practices for Global Enterprises", excerpt: "Essential guidelines for designing and managing cloud infrastructure that scales with your business needs.","
-      author: "Maria Santos", date: "2025-01-03","
-      readTime: "9 min read", category: "Cloud Computing","
-      tags: ["Cloud", "Infrastructure", "Enterprise"], image: "/api/placeholder/600/400","
-      tags: ["CloudInfrastructureEnterprise"], image: "/api/placeholder/600/400",
-featured: false}
-  ]
-  const categories = []
-  const featuredPosts = blogPosts.filter(post => post.featured)
-}
-  const regularPosts = blogPosts.filter()
-}
   return (
     <>"
       <SEO title="&quot;Blog" - Zion Tech Group | Technology Insights & Industry News&quot;"
@@ -544,4 +454,11 @@ key = "{post.id}
 </>
   )
   )})))))))))
+    <div className="min-h-screen bg-gray-50 py-12">
+      <div className="container mx-auto px-4">
+        <h1 className="text-4xl font-bold text-gray-900 mb-6">Blog</h1>
+        <p className="text-lg text-gray-600">Coming soon...</p>
+      </div>
+    </div>
+  );
 }

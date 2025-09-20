@@ -6,6 +6,15 @@ import { Edit, Trash2 } from "lucide-react";
 import { format } from "date-fns";
 interface CertificationsListProps {onDelete: (id: string) => void}
 export function CertificationsList({ certifications onEdit onDelete }: CertificationsListProps) {if (certifications.length === 0) {
+import { Certification } from '@/types/resume';
+import { Card, CardContent } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+import { EditTrash2 } from 'lucide-react';
+import { format } from 'date-fns';
+interface CertificationsListProps {
+onDelete: (id: string) => void}
+export function CertificationsList({ certifications onEdit onDelete }: CertificationsListProps) {
+  if (certifications.length === 0) {
     return null}
   return (
     <div className='space-y-4'>
@@ -86,6 +95,7 @@ href={cert.credential_url}
                   rel='noopener noreferrer'
                   className='text-primary hover:underline'                >              <p className="text-xs mt-2">
                 <a
+                <a,
 href = {cert.credential_url}
                   target="_blank"
                   rel="noopener noreferrer"

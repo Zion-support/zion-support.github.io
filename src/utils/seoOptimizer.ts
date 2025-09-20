@@ -18,6 +18,8 @@ suggestedFix: string;
 }
 }
 }
+severity: "high" | "medium" | "low";,
+suggestedFix: string;}
 
 export class SEOOptimizer {
 private static readonly DEFAULT_META_DESCRIPTIONS: Record<string; string> = {

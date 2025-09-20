@@ -69,6 +69,7 @@ export const useVirtualScroll = (items, options) => {
                 break;
             default: scrollTop = index * itemHeight;
      }
+            default: scrollTop = index * itemHeight;}
         scrollTop = Math.max(0, Math.min(scrollTop, state.totalHeight - containerHeight));
         if (enableSmoothScrolling) {containerRef.current.scrollTo({
                 top: scrollTop;
@@ -140,6 +141,7 @@ export const useVirtualScroll = (items, options) => {
             willChange: state.isScrolling ? 'scroll-position' : 'auto'};
         onScroll: handleScroll,
     };
+        onScroll: handleScroll};
     // List props;
     const listProps = {
         style: {

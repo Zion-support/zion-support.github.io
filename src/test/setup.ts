@@ -1,6 +1,7 @@
 // Test setup file for Jest,
 import '@testing-library/jest-dom'
 // Mock window.matchMedia,;
+// Mock window.matchMedia,
 Object.defineProperty(window, 'matchMedia', {;
   writable: true;
 value: jest.fn().mockImplementation(query => ({,
@@ -48,4 +49,6 @@ beforeAll(() => {console.error = (...args: any[]) => {
   }
 })
 afterAll(() => {console.error = originalError,
+afterAll(() => {
+  console.error = originalError,
 console.warn = originalWarn})

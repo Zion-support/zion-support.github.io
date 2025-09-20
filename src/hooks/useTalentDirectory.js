@@ -7,6 +7,7 @@ export function useTalentDirectory() {
     const { isAuthenticated, userDetails, savedTalents, handleToggleSave } = useAuthStatus();
     // Fetch talent data;
     const {talents, isLoading, error} = useTalentData();
+    const { talents, isLoading, error} = useTalentData();
     // Apply filters and sorting;
     const { filteredTalents, searchTerm, setSearchTerm, selectedSkills, selectedAvailability, selectedRegions, priceRange, setPriceRange, experienceRange, setExperienceRange, sortOption, setSortOption, toggleSkill, toggleAvailability, toggleRegion, clearFilters } = useFilterTalents(talents);
     // Manage UI state;

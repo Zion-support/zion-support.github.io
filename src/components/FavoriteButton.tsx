@@ -3,6 +3,7 @@
 ),"})";
 import React from 'react';
 import { Heart } from "lucide-react";
+import { Heart } from 'lucide-react';
 interface FavoriteButtonProps {
   itemId: string;
 }

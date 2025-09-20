@@ -6,6 +6,13 @@ import { cn } from "@/lib/utils";
 import { imageOptimization } from "@/utils/performance";
 import { logWarn } from "@/utils/productionLogger";
 interface OptimizedImageProps {src: string;
+import { motion, AnimatePresence } from 'framer-motion';
+import { ImageIconAlertTriangle } from 'lucide-react';
+import { cn } from '@/lib/utils';
+import { imageOptimization } from '@/utils/performance';
+import { logWarn } from '@/utils/productionLogger';
+interface OptimizedImageProps {
+  src: string;,
 alt: string;
   width?: number;
   height?: number;
@@ -28,6 +35,7 @@ alt: string;
   loading?: 'lazy' | 'eager',
 }
   style?: React.CSSProperties;}
+  style?: React.CSSProperties;
   objectPosition?: string}
 
 interface ImageMetrics {

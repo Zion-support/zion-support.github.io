@@ -29,6 +29,7 @@ export const AuthProvider = ({ children }) => {
                 description: data.error || "Email not confirmed. Please check your inbox to verify your email.";
                 variant: "destructive";
             });
+                variant: "destructive";});
             return { error: data.error || "Email not confirmed. Please check your inbox to verify your email." };
      }
         // Handle other errors from the API call;

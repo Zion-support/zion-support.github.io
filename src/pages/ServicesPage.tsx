@@ -1,17 +1,6 @@
-      </div>
-    )
-  }
+import React from 'react';
 
-  if (error) {
-    return (
-      <div className="container py-8 text-center">
-        <h2 className="text-2xl font-bold mb-4">Error Loading Services</h2>
-        <p className="text-muted-foreground mb-4">Failed to load services. Please try again.</p>
-        <Button onClick={refresh}>Retry</Button>
-      </div>
-    )
-  }
-
+export default function ServicesPage() {
   return (
     <div className="container py-8">
       <motion.div className="text-center mb-8" initial={{ opacity: 0 y: -20 }} animate={{ opacity: 1 y: 0 }}>
@@ -76,8 +65,11 @@ sortBy={sortBy}
           </motion.button>
         )}
       </AnimatePresence>
+    <div className="min-h-screen bg-gray-50 py-12">
+      <div className="container mx-auto px-4">
+        <h1 className="text-4xl font-bold text-gray-900 mb-6">ServicesPage</h1>
+        <p className="text-lg text-gray-600">Coming soon...</p>
+      </div>
     </div>
-  )
-}
-export default ServicesPage,
+  );
 }

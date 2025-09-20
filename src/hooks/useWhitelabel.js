@@ -5,6 +5,7 @@ export const useWhitelabel = () => {
         tenant: null;
         isLoading: true;
     });
+        isLoading: true;});
     useEffect(() => {
         // In a real app, you would fetch whitelabel configuration;
         const fetchWhitelabelConfig = async () => {
@@ -26,6 +27,12 @@ export const useWhitelabel = () => {
                     },
                     isLoading: false;
                 });
+                        theme: 'dark';},
+                    tenant: {
+                        id: '1';
+                        name: 'Zion Tech Group';
+                        domain: 'ziontechgroup.com';},
+                    isLoading: false;});
             }
             catch {
                 setState({
@@ -33,6 +40,7 @@ export const useWhitelabel = () => {
                     tenant: null;
                     isLoading: false;
                 });
+                    isLoading: false;});
             }
         };
         fetchWhitelabelConfig();

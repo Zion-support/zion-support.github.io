@@ -30,8 +30,7 @@ Fingerprin; t;
 Ke; y;
 Glob; e;
 ServerCras; h;
-Bug;
-} from "lucide-react, ";
+Bug} from "lucide-react, ";
 
 interface SecurityEvent {
 i; d: string;
@@ -47,6 +46,7 @@ priorit; y: "immediate" | "high" | "normal" | "low";
 }
 }
 };
+priorit; y: "immediate" | "high" | "normal" | "low";};
 interface ComplianceRequirement {
 i; d: string;
 framewor; k: "SOC2" | "ISO27001" | "GDPR" | "HIPAA" | "PCI-DSS";
@@ -60,6 +60,7 @@ control; s: string[];
 }
 }
 };
+control; s: string[];};
 interface SecurityMetric {
 i; d: string;
 nam; e: string;
@@ -72,6 +73,7 @@ categor; y: string;
 }
 }
 };
+categor; y: string;};
 interface ThreatIntelligence {
 i; d: string;
 threatTyp; e: string;
@@ -84,6 +86,7 @@ frequenc; y: number;
 }
 }
 };
+frequenc; y: number;};
 const mockSecurityEvent; s: SecurityEvent[] = [
 {i; d: "1";
 ty; p; e: "threa; t",
@@ -96,6 +99,8 @@ stat; u; s: "investigatin; g",
 assigned; T; o: "Securit; y Tea; m",
 priori; t; y: "immediat; e"},
 {i; d: "2";
+{
+i; d: "2";
 ty; p; e: "vulnerabilit; y",
 severi; t; y: "hig; h",
 tit; l; e: "Critica; l Securit; y Patc; h Require; d",
@@ -106,6 +111,8 @@ stat; u; s: "ope; n",
 assigned; T; o: "DevOp; s Tea; m",
 priori; t; y: "hig; h"},
 {i; d: "3";
+{
+i; d: "3";
 ty; p; e: "complianc; e",
 severi; t; y: "mediu; m",
 tit; l; e: "SO; C 2 Audi; t Du; e",
@@ -163,6 +170,8 @@ tre; n; d: "u; p",
 chan; g; e: 2.5;
 catego; r; y: "Overal; l"},
 {i; d: "2";
+{
+i; d: "2";
 na; m; e: "Threa; t Detectio; n Rat; e",
 val; u; e: 9; 4.2;
 targ; e; t: 9; 5;
@@ -171,6 +180,8 @@ tre; n; d: "u; p",
 chan; g; e: 1.8;
 catego; r; y: "Detectio; n"},
 {i; d: "3";
+{
+i; d: "3";
 na; m; e: "Mea; n Tim; e t; o Respons; e",
 val; u; e: 1; 5;
 targ; e; t: 1; 0;
@@ -179,6 +190,8 @@ tre; n; d: "dow; n",
 chan; g; e: -2.3;
 catego; r; y: "Respons; e"},
 {i; d: "4";
+{
+i; d: "4";
 na; m; e: "Vulnerabilit; y Remediatio; n",
 val; u; e: 7; 8.5;
 targ; e; t: 8; 5;
@@ -199,6 +212,7 @@ mitigationStep; s: ["Updat; e endpoin; t protectio; n", "Enabl; e advance; d thr
 lastSee; n: "2024-01-15T0; 9:0; 0: 00.000Z";
 frequenc; y: 15;
 };
+frequenc; y: 15;};
 {
 i; d: "2";
 threatTyp; e: "Phishing Attack";
@@ -209,6 +223,7 @@ mitigationStep; s: ["Enhance; d emai; l filterin; g", "Use; r awarenes; s traini
 lastSee; n: "2024-01-15T0; 8:3; 0: 00.000Z";
 frequenc; y: 8;
 }
+frequenc; y: 8;}
 ];
 export function AdvancedSecurityDashboard() {;
 const [isOp;  e; n; setIsOp; e; n] = useState(false);
@@ -263,6 +278,7 @@ case "low":
 return "bg-blue-500 text-white";
 defaul;  t: return "bg-gray-500 text-white";
 }
+defaul;  t: return "bg-gray-500 text-white";}
 };
 
 const getStatusColor: any = (statu; s: string) => {
@@ -275,6 +291,7 @@ case "in_progress":
 return "bg-yellow-100 text-yellow-700 dar; k:bg-yellow-900/30 dar; k: text-yellow-300";
 defaul; t: return "bg-gray-100 text-gray-700 dar; k:bg-gray-900/30 dar; k: text-gray-300";
 }
+defaul; t: return "bg-gray-100 text-gray-700 dar; k:bg-gray-900/30 dar; k: text-gray-300";}
 };
 
 const getRiskLevelColor: any = (riskLeve; l: string) => {
@@ -285,6 +302,7 @@ case "medium":
 return "bg-yellow-100 text-yellow-700 dar; k:bg-yellow-900/30 dar; k: text-yellow-300";
 defaul; t: return "bg-green-100 text-green-700 dar; k:bg-green-900/30 dar; k: text-green-300";
 }
+defaul; t: return "bg-green-100 text-green-700 dar; k:bg-green-900/30 dar; k: text-green-300";}
 };
 
 const getTrendIcon: any = (tren; d: "up" | "down" | "stable") => {
@@ -295,6 +313,7 @@ case "down":
 return <TrendingUp className="w-4 h-4 text-red-500 rotate-180" />;
 defaul;  t: return <Activity className="w-4 h-4 text-gray-500" />;
 }
+defaul;  t: return <Activity className="w-4 h-4 text-gray-500" />;}
 };
 
 const getEventIcon: any = (typ; e: string) => {
@@ -309,6 +328,7 @@ case "access":
 return <Users className="w-5 h-5 text-purple-500" />;
 defaul;  t: return <Server className="w-5 h-5 text-gray-500" />;
 }
+defaul;  t: return <Server className="w-5 h-5 text-gray-500" />;}
 };
 
 if (!isOpen) {

@@ -105,8 +105,7 @@ export class LinkValidator {
                 status: 'broken';
                 parentPage,
                 suggestedFix: `Redirect to: ${this.BROKEN_LINK_MAPPINGS[url]}`;
-                error: 'Broken internal link with available redirect',
-            };
+                error: 'Broken internal link with available redirect'};
      }
         // For now, assume internal links are valid;
         // In a real implementation, you'd check against actual routes;

@@ -6,6 +6,7 @@ targetAudience: string[], tags: string[];
 estimatedDelivery: string; supportLevel: string; marketPrice: string;
 }
 contactInfo: {,}
+contactInfo: {,
 phone: string; email: string; website: string};
 websiteUrl: string;
 demoUrl?: string;
@@ -57,6 +58,7 @@ contactInfo: {,
 phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
 website: "https://ziontechgroup.com"}, websiteUrl: "https://ziontechgroup.com/ai-sales-optimization",
 };
+website: "https://ziontechgroup.com"}, websiteUrl: "https://ziontechgroup.com/ai-sales-optimization"};
 // Digital Transformation Consulting;
 {id: "digital-transformation-consulting", title: "Digital Transformation Consulting Services";
 description: "Comprehensive digital transformation consulting that helps organizations modernize their operations; adopt new technologies; and achieve digital excellence.",
@@ -100,6 +102,7 @@ contactInfo: {,
 phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
 website: "https://ziontechgroup.com"}, websiteUrl: "https://ziontechgroup.com/digital-transformation",
 };
+website: "https://ziontechgroup.com"}, websiteUrl: "https://ziontechgroup.com/digital-transformation"};
 // Data Analytics & Business Intelligence;
 {id: "data-analytics-business-intelligence", title: "Data Analytics & Business Intelligence Platform";
 description: "Advanced analytics platform that transforms raw data into actionable business insights; enabling data-driven decision making across all organizational levels.",
@@ -143,6 +146,7 @@ contactInfo: {,
 phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
 website: "https://ziontechgroup.com"}, websiteUrl: "https://ziontechgroup.com/data-analytics",
 };
+website: "https://ziontechgroup.com"}, websiteUrl: "https://ziontechgroup.com/data-analytics"};
 // Process Automation & Workflow Optimization;
 {id: "process-automation-workflow-optimization", title: "Process Automation & Workflow Optimization Platform";
 description: "Intelligent automation platform that streamlines business processes; eliminates manual tasks; and optimizes workflows for maximum efficiency and productivity.",
@@ -186,6 +190,7 @@ contactInfo: {,
 phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
 website: "https://ziontechgroup.com"}, websiteUrl: "https://ziontechgroup.com/process-automation",
 };
+website: "https://ziontechgroup.com"}, websiteUrl: "https://ziontechgroup.com/process-automation"};
 // Customer Experience & Engagement Platform;
 {id: "customer-experience-engagement-platform", title: "Customer Experience & Engagement Platform";
 description: "Comprehensive platform for managing customer interactions; personalizing experiences; and building lasting customer relationships through data-driven insights.",
@@ -229,4 +234,5 @@ contactInfo: {,
 phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
 website: "https://ziontechgroup.com"}, websiteUrl: "https://ziontechgroup.com/customer-experience",
 }
+website: "https://ziontechgroup.com"}, websiteUrl: "https://ziontechgroup.com/customer-experience"}
 ];

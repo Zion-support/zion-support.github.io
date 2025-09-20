@@ -24,6 +24,7 @@ avgSessionDuration: 0,
 topPages: [],;
 trafficSources: [];
 });
+trafficSources: [];});
 
 useEffect(() => {
 // Simulate data loading;

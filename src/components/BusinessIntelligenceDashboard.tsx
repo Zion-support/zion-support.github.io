@@ -8,8 +8,17 @@ category: "revenue" | "growth" | "efficiency" | "customer", icon: string; color:
 interface KPIData {metric: string; current: number; target: number; progress: number; status: "on-track" | "at-risk" | "behind"};
 interface RevenueData {month: string; revenue: number; growth: number; profit: number};
 interface CustomerInsight {segment: string; count: number; revenue: number; growth: number; satisfaction: number};
+interface BusinessMetric {
+id: string; title: string; value: string; change: string; trend: "up" | "down" | "stable";,
+category: "revenue" | "growth" | "efficiency" | "customer", icon: string; color: string};
+interface KPIData {
+metric: string; current: number; target: number; progress: number; status: "on-track" | "at-risk" | "behind"};
+interface RevenueData {
+month: string; revenue: number; growth: number; profit: number};
+interface CustomerInsight {
+segment: string; count: number; revenue: number; growth: number; satisfaction: number};
 export const BusinessIntelligenceDashboard: React.FC = () => {;
-const [metrics; setMetrics] = useState<BusinessMetric[]>([
+const [metrics, setMetrics] = useState<BusinessMetric[]>([
 {,
 id: "1",
 title: "Total Revenue",
@@ -20,6 +29,8 @@ category: "revenue",
 icon: "💰",
 color: "green"},
 {id: "2",
+{
+id: "2",
 title: "Customer Growth",
 value: "24;567",
 change: "+12.3%",
@@ -28,6 +39,8 @@ category: "growth",
 icon: "👥",
 color: "blue"},
 {id: "3",
+{
+id: "3",
 title: "Operational Efficiency",
 value: "94.2%",
 change: "+2.1%",
@@ -36,6 +49,8 @@ category: "efficiency",
 icon: "⚡",
 color: "purple"},
 {id: "4",
+{
+id: "4",
 title: "Customer Satisfaction",
 value: "4.8/5",
 change: "+0.3",
@@ -44,6 +59,8 @@ category: "customer",
 icon: "⭐",
 color: "yellow"},
 {id: "5",
+{
+id: "5",
 title: "Market Share",
 value: "15.7%",
 change: "+3.2%",
@@ -52,6 +69,8 @@ category: "growth",
 icon: "📈",
 color: "indigo"},
 {id: "6",
+{
+id: "6",
 title: "Cost Reduction",
 value: "$2.1M",
 change: "-8.5%",
@@ -75,10 +94,28 @@ status: "at-risk"},
 current: 4.2;
 target: 4.5;
 progress: 93;
+const [kpis, setKpis] = useState<KPIData[]>([
+{
+metric: "Monthly Revenue Target",
+current: 1250000; target: 1500000; progress: 83;,
+status: "on-track"},
+{
+metric: "Customer Acquisition",
+current: 2456; target: 3000; progress: 82;,
+status: "on-track"},
+{
+metric: "Product Launch",
+current: 3; target: 5; progress: 60;,
+status: "at-risk"},
+{
+metric: "Employee Satisfaction",
+current: 4.2;
+target: 4.5;
+progress: 93;,
 status: "on-track"}
 ]);
 
-const [revenueData; setRevenueData] = useState<RevenueData[]>([
+const [revenueData, setRevenueData] = useState<RevenueData[]>([
 { month: "Jan", revenue: 950000; growth: 8.2; profit: 285000 },
 { month: "Feb", revenue: 1100000; growth: 15.8; profit: 330000 },
 { month: "Mar", revenue: 1200000; growth: 9.1; profit: 360000 },
@@ -97,11 +134,24 @@ satisfaction: 4.6},
 {segment: "SMB",
 count: 8900; revenue: 1100000;
 growth: 8.7;
+const [customerInsights, setCustomerInsights] = useState<CustomerInsight[]>([
+{
+segment: "Enterprise",
+count: 245; revenue: 8500000; growth: 15.2;,
+satisfaction: 4.9},
+{
+segment: "Mid-Market",
+count: 1245; revenue: 2800000; growth: 22.1;,
+satisfaction: 4.6},
+{
+segment: "SMB",
+count: 8900; revenue: 1100000;
+growth: 8.7;,
 satisfaction: 4.3}
 ]);
 
-const [selectedTimeframe; setSelectedTimeframe] = useState("6m");
-const [selectedCategory; setSelectedCategory] = useState("all");
+const [selectedTimeframe, setSelectedTimeframe] = useState("6m");
+const [selectedCategory, setSelectedCategory] = useState("all");
 
 const getTrendIcon: any = (trend: string) => {switch (trend) {;
 case "up": return "↗️";

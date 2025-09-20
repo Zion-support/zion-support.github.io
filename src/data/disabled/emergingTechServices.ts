@@ -7,6 +7,7 @@ monthly?: number;
 yearly?: number;
 }
 oneTime?: number;,}
+oneTime?: number;,
 currency: string; pricingModel: string};
 currency?: string;
 pricingModel?: string;
@@ -20,6 +21,8 @@ phone: string; email: string; website: string; address: string};
 rating: number; reviewCount: number; launchDate: string;
 status: "Active" | "Beta" | "Coming Soon", innovationScore: number;
 }
+rating: number; reviewCount: number; launchDate: string;,
+status: "Active" | "Beta" | "Coming Soon", innovationScore: number;}
 
 export const EMERGING_TECH_SERVICES: EmergingTechService[] = [
 // Blockchain Services;
@@ -84,6 +87,10 @@ launchDate: "2024-01-01",
 status: "Active",
 innovationScore: 92;
 },
+rating: 4.8; reviewCount: 156;,
+launchDate: "2024-01-01",
+status: "Active",
+innovationScore: 92;},
 
 // IoT Services;
 {id: "iot-ecosystem-platform",
@@ -140,6 +147,10 @@ launchDate: "2023-12-01",
 status: "Active",
 innovationScore: 89;
 },
+rating: 4.7; reviewCount: 234;,
+launchDate: "2023-12-01",
+status: "Active",
+innovationScore: 89;},
 
 // Edge Computing Services;
 {id: "edge-computing-orchestrator",
@@ -196,6 +207,10 @@ launchDate: "2024-02-01",
 status: "Active",
 innovationScore: 94;
 },
+rating: 4.9; reviewCount: 178;,
+launchDate: "2024-02-01",
+status: "Active",
+innovationScore: 94;},
 
 // 5G Services;
 {id: "5g-network-optimization",
@@ -252,6 +267,10 @@ launchDate: "2024-01-15",
 status: "Active",
 innovationScore: 91;
 },
+rating: 4.8; reviewCount: 145;,
+launchDate: "2024-01-15",
+status: "Active",
+innovationScore: 91;},
 
 // AR/VR Services;
 {id: "ar-vr-enterprise-platform",
@@ -308,6 +327,10 @@ launchDate: "2023-11-01",
 status: "Active",
 innovationScore: 88;
 },
+rating: 4.6; reviewCount: 189;,
+launchDate: "2023-11-01",
+status: "Active",
+innovationScore: 88;},
 
 // Robotics Services;
 {id: "intelligent-robotics-automation",
@@ -364,6 +387,10 @@ launchDate: "2024-01-01",
 status: "Active",
 innovationScore: 95;
 },
+rating: 4.9; reviewCount: 67;,
+launchDate: "2024-01-01",
+status: "Active",
+innovationScore: 95;},
 
 // Quantum Computing Services;
 {id: "quantum-computing-simulation",
@@ -420,6 +447,10 @@ launchDate: "2024-01-01",
 status: "Active",
 innovationScore: 96;
 },
+rating: 4.9; reviewCount: 89;,
+launchDate: "2024-01-01",
+status: "Active",
+innovationScore: 96;},
 
 // Biotechnology Services;
 {id: "ai-biotech-research-platform",
@@ -476,6 +507,10 @@ launchDate: "2023-12-01",
 status: "Active",
 innovationScore: 93;
 },
+rating: 4.8; reviewCount: 123;,
+launchDate: "2023-12-01",
+status: "Active",
+innovationScore: 93;},
 
 // Green Technology Services;
 {id: "sustainable-tech-solutions",
@@ -532,6 +567,10 @@ launchDate: "2024-01-01",
 status: "Active",
 innovationScore: 90;
 },
+rating: 4.7; reviewCount: 167;,
+launchDate: "2024-01-01",
+status: "Active",
+innovationScore: 90;},
 
 // Space Technology Services;
 {id: "space-tech-innovation-platform",
@@ -588,6 +627,10 @@ launchDate: "2024-02-01",
 status: "Active",
 innovationScore: 97;
 },
+rating: 4.9; reviewCount: 78;,
+launchDate: "2024-02-01",
+status: "Active",
+innovationScore: 97;},
 
 // NEW EMERGING TECHNOLOGY SERVICES;
 {id: "quantum-machine-learning-platform",
@@ -647,6 +690,10 @@ launchDate: "2024-03-01",
 status: "Active",
 innovationScore: 95;
 },
+rating: 4.9; reviewCount: 89;,
+launchDate: "2024-03-01",
+status: "Active",
+innovationScore: 95;},
 
 {id: "space-technology-platform",
 title: "Space Technology & Satellite Management Platform",
@@ -705,6 +752,10 @@ launchDate: "2024-02-15",
 status: "Active",
 innovationScore: 93;
 },
+rating: 4.8; reviewCount: 67;,
+launchDate: "2024-02-15",
+status: "Active",
+innovationScore: 93;},
 
 {id: "brain-computer-interface-platform",
 title: "Brain-Computer Interface Development Platform",
@@ -763,6 +814,10 @@ launchDate: "2024-01-20",
 status: "Beta",
 innovationScore: 96;
 },
+rating: 4.7; reviewCount: 45;,
+launchDate: "2024-01-20",
+status: "Beta",
+innovationScore: 96;},
 
 {id: "autonomous-vehicle-platform",
 title: "Autonomous Vehicle Development Platform",
@@ -821,6 +876,10 @@ launchDate: "2024-02-01",
 status: "Active",
 innovationScore: 94;
 },
+rating: 4.6; reviewCount: 78;,
+launchDate: "2024-02-01",
+status: "Active",
+innovationScore: 94;},
 
 {id: "quantum-internet-platform",
 title: "Quantum Internet & Communication Platform",
@@ -879,6 +938,10 @@ launchDate: "2024-01-10",
 status: "Beta",
 innovationScore: 97;
 },
+rating: 4.9; reviewCount: 34;,
+launchDate: "2024-01-10",
+status: "Beta",
+innovationScore: 97;},
 
 {id: "ai-consciousness-simulation",
 title: "AI Consciousness Simulation Platform",
@@ -937,6 +1000,10 @@ launchDate: "2024-01-05",
 status: "Beta",
 innovationScore: 98;
 },
+rating: 4.8; reviewCount: 23;,
+launchDate: "2024-01-05",
+status: "Beta",
+innovationScore: 98;},
 
 {id: "quantum-financial-modeling",
 title: "Quantum Financial Modeling & Risk Assessment",
@@ -995,6 +1062,10 @@ launchDate: "2024-02-20",
 status: "Active",
 innovationScore: 95;
 },
+rating: 4.9; reviewCount: 56;,
+launchDate: "2024-02-20",
+status: "Active",
+innovationScore: 95;},
 
 {id: "autonomous-manufacturing-platform",
 title: "Autonomous Manufacturing & Industry 4.0 Platform",
@@ -1053,6 +1124,10 @@ launchDate: "2024-01-15",
 status: "Active",
 innovationScore: 93;
 },
+rating: 4.7; reviewCount: 89;,
+launchDate: "2024-01-15",
+status: "Active",
+innovationScore: 93;},
 
 {id: "quantum-drug-discovery",
 title: "Quantum Drug Discovery & Molecular Modeling",
@@ -1111,6 +1186,10 @@ launchDate: "2024-02-25",
 status: "Active",
 innovationScore: 96;
 }
+rating: 4.9; reviewCount: 67;,
+launchDate: "2024-02-25",
+status: "Active",
+innovationScore: 96;}
 ];
 
 export const getEmergingTechServiceByCategory: any = (category: string) => {

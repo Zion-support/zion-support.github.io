@@ -22,6 +22,11 @@ technology: string[];
 estimatedDelivery: string;
 supportLevel: "basic" | "standard" | "premium" | "enterprise";
 }
+email: string;,
+website: string;};
+technology: string[];
+estimatedDelivery: string;,
+supportLevel: "basic" | "standard" | "premium" | "enterprise";}
 
 export const INNOVATIVE_SERVICES_2025: InnovativeService2025[] = [
 {id: "ai-autonomous-business-manager";
@@ -56,6 +61,13 @@ estimatedDelivery: "2-4 weeks";
 supportLevel: "premium",
 };
 {id: "quantum-neural-network-platform";
+email: "kleber@ziontechgroup.com";,
+website: "https://ziontechgroup.com"};
+technology: ["GPT-4", "Machine Learning", "RPA", "Business Intelligence"],
+estimatedDelivery: "2-4 weeks";,
+supportLevel: "premium"};
+{
+id: "quantum-neural-network-platform";
 title: "Quantum Neural Network Platform";
 description: "Next-generation quantum computing platform with neural network capabilities for complex problem solving and optimization.";
 category: "Quantum Computing";
@@ -88,6 +100,14 @@ supportLevel: "enterprise",
 };
 {id: "blockchain-defi-solutions";
 title: "Blockchain DeFi Solutions";
+email: "kleber@ziontechgroup.com";,
+website: "https://ziontechgroup.com"};
+technology: ["Quantum Computing", "Neural Networks", "Quantum Algorithms", "AI"],
+estimatedDelivery: "6-8 weeks";,
+supportLevel: "enterprise"};
+{
+id: "blockchain-defi-solutions";
+title: "Blockchain DeFi Solutions";,
 description: "Comprehensive blockchain and DeFi platform for financial services; smart contracts; and decentralized applications.",
 category: "Blockchain & DeFi";
 price: 8000;
@@ -119,6 +139,14 @@ supportLevel: "premium",
 };
 {id: "iot-data-analytics-platform";
 title: "IoT Data Analytics Platform";
+email: "kleber@ziontechgroup.com";,
+website: "https://ziontechgroup.com"};
+technology: ["Ethereum", "Solana", "Smart Contracts", "DeFi Protocols"],
+estimatedDelivery: "4-6 weeks";,
+supportLevel: "premium"};
+{
+id: "iot-data-analytics-platform";
+title: "IoT Data Analytics Platform";,
 description: "Advanced IoT platform with real-time data analytics; predictive maintenance; and intelligent automation.",
 category: "IoT & Analytics";
 price: 5000;
@@ -150,6 +178,14 @@ supportLevel: "standard",
 };
 {id: "ai-cybersecurity-automation";
 title: "AI Cybersecurity Automation";
+email: "kleber@ziontechgroup.com";,
+website: "https://ziontechgroup.com"};
+technology: ["IoT", "Machine Learning", "Big Data", "Cloud Computing"],
+estimatedDelivery: "3-5 weeks";,
+supportLevel: "standard"};
+{
+id: "ai-cybersecurity-automation";
+title: "AI Cybersecurity Automation";,
 description: "Intelligent cybersecurity platform that automatically detects; prevents; and responds to threats using AI.",
 category: "Cybersecurity";
 price: 12000;
@@ -179,6 +215,11 @@ technology: ["AI", "Machine Learning", "Cybersecurity", "Automation"],
 estimatedDelivery: "4-6 weeks";
 supportLevel: "premium",
 }
+email: "kleber@ziontechgroup.com";,
+website: "https://ziontechgroup.com"};
+technology: ["AI", "Machine Learning", "Cybersecurity", "Automation"],
+estimatedDelivery: "4-6 weeks";,
+supportLevel: "premium"}
 ];
 export const INNOVATIVE_SERVICE_CATEGORIES = [
 "AI & Automation",

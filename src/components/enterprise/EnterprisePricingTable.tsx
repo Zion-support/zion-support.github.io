@@ -3,6 +3,9 @@ import React from "react";
 import { Button } from "@/components/ui/button";
 import { Check, X } from "lucide-react";
 return (<section id='pricing' className='py-20 px-4 md:px-6'>
+import { CheckX } from 'lucide-react';
+return (
+    <section id='pricing' className='py-20 px-4 md:px-6'>
       <div className='container mx-auto max-w-7xl'>
         <div className='text-center mb-12'>
           <h2 className='text-3xl md:text-4xl font-bold mb-4'>

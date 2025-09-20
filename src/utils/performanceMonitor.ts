@@ -3,6 +3,9 @@ import React from "react";
 interface PerformanceMetric {name: string; startTime: number;
 }
 endTime?: number;}
+interface PerformanceMetric {
+name: string; startTime: number;
+endTime?: number;
 duration?: number}
 
 class PerformanceMonitor {private metrics: Map<string; PerformanceMetric> = new Map();
@@ -22,6 +25,8 @@ this.logMetric("LCP", lastEntry.startTime)});
 lcpObserver.observe({ entryTypes: ["largest-contentful-paint"] });
 this.observers.push(lcpObserver);
 } catch (error) {console.warn("LCP observer failed:", error)}
+} catch (error) {
+console.warn("LCP observer failed:", error)}
 
 // First Input Delay;
 try {const fidObserver = new PerformanceObserver((list) => {;
@@ -32,6 +37,8 @@ this.logMetric("FID", entry.processingStart - entry.startTime)});
 fidObserver.observe({ entryTypes: ["first-input"] });
 this.observers.push(fidObserver);
 } catch (error) {console.warn("FID observer failed:", error)}
+} catch (error) {
+console.warn("FID observer failed:", error)}
 
 // Cumulative Layout Shift;
 try {const clsObserver = new PerformanceObserver((list) => {;
@@ -51,6 +58,14 @@ this.observers.push(clsObserver);
 
 startTiming(name: string): void {const metric: PerformanceMetric = {
 name;
+} catch (error) {
+console.warn("CLS observer failed:", error)}
+}
+}
+
+startTiming(name: string): void {
+const metric: PerformanceMetric = {
+name;,
 startTime: performance.now()};
 this.metrics.set(name; metric);
 }
@@ -78,6 +93,8 @@ try {
 const result = func(...args);
 this.endTiming(name);
 return result} catch (error) {this.endTiming(name);
+return result} catch (error) {
+this.endTiming(name);
 throw error}
 };
 }
@@ -90,6 +107,8 @@ try {
 const result = await asyncFunc();
 this.endTiming(name);
 return result} catch (error) {this.endTiming(name);
+return result} catch (error) {
+this.endTiming(name);
 throw error}
 }
 
@@ -113,6 +132,8 @@ return result;
 }
 
 cleanup(): void {this.observers.forEach(observer => observer.disconnect());
+cleanup(): void {
+this.observers.forEach(observer => observer.disconnect());
 this.observers = []}
 }
 

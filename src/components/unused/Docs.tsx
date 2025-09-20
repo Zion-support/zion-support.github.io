@@ -51,6 +51,16 @@ lastUpdated: "1 week ago"};
 readTime: "18 min", views: "1.5k",
 lastUpdated: "3 days ago"};
 {title: "Performance Optimization Tips", category: "AI & Machine Learning";
+{
+title: "API Integration Best Practices", category: "API Reference";,
+readTime: "12 min", views: "1.8k",
+lastUpdated: "1 week ago"};
+{
+title: "Security Configuration Guide", category: "Security & Compliance";,
+readTime: "18 min", views: "1.5k",
+lastUpdated: "3 days ago"};
+{
+title: "Performance Optimization Tips", category: "AI & Machine Learning";,
 readTime: "22 min",
 views: "1.3k",
 lastUpdated: "5 days ago"}

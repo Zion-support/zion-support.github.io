@@ -4,6 +4,7 @@ import { motion } from "framer-motion, ";
 interface HeroFeature {
 icon: React.ComponentType<{ className?: string }>,title: string;description: string;gradient: string;
 };interface HeroFeaturesProps {
+icon: React.ComponentType<{ className?: string }>,title: string;description: string;gradient: string;};interface HeroFeaturesProps {
 features: HeroFeature[ ];
 }
 }

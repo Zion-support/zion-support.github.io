@@ -22,6 +22,10 @@ await supabase.auth.signOut({ scope: "global" });
 }
 if (typeof window !== "undefined") {window.location.assign("/login")}
 } else {const message = error.response?.data?.message || "Something went wrong";
+if (typeof window !== "undefined") {
+window.location.assign("/login")}
+} else {
+const message = error.response?.data?.message || "Something went wrong";
 toast.error(message)}
 return Promise.reject(error);
 }

@@ -42,6 +42,9 @@ export const enhancedMicroSaasServices2025 = [
         trialPeriod: "14 days",
     };
     {id: 2;
+        trialPeriod: "14 days"};
+    {
+        id: 2;
         name: "InvoiceGenius AI";
         category: "Finance";
         pricing: "Freemium";
@@ -83,6 +86,9 @@ export const enhancedMicroSaasServices2025 = [
         trialPeriod: "30 days",
     };
     {id: 3;
+        trialPeriod: "30 days"};
+    {
+        id: 3;
         name: "SocialSync Pro";
         category: "Marketing";
         pricing: "Freemium";
@@ -124,6 +130,9 @@ export const enhancedMicroSaasServices2025 = [
         trialPeriod: "7 days",
     };
     {id: 4;
+        trialPeriod: "7 days"};
+    {
+        id: 4;
         name: "CustomerFlow CRM";
         category: "CRM";
         pricing: "Freemium";
@@ -165,6 +174,9 @@ export const enhancedMicroSaasServices2025 = [
         trialPeriod: "14 days",
     };
     {id: 5;
+        trialPeriod: "14 days"};
+    {
+        id: 5;
         name: "DataViz Studio";
         category: "Analytics";
         pricing: "Freemium";
@@ -206,6 +218,9 @@ export const enhancedMicroSaasServices2025 = [
         trialPeriod: "21 days",
     };
     {id: 6;
+        trialPeriod: "21 days"};
+    {
+        id: 6;
         name: "ScheduleMaster AI";
         category: "Scheduling";
         pricing: "Freemium";
@@ -244,8 +259,7 @@ export const enhancedMicroSaasServices2025 = [
         setupTime: "30 minutes";
         integrations: ["Google Calendar", "Outlook", "Slack", "Zapier", "Stripe"],
         freeTier: true;
-        trialPeriod: "14 days",
-    };
+        trialPeriod: "14 days"};
     // NEW INNOVATIVE MICRO SAAS SERVICES;
     {id: 7;
         name: "Quantum AI Fusion Platform";
@@ -289,6 +303,9 @@ export const enhancedMicroSaasServices2025 = [
         trialPeriod: "30 days",
     };
     {id: 8;
+        trialPeriod: "30 days"};
+    {
+        id: 8;
         name: "Neuromorphic Computing Platform";
         category: "AI Architecture";
         pricing: "Enterprise";
@@ -330,6 +347,9 @@ export const enhancedMicroSaasServices2025 = [
         trialPeriod: "60 days",
     };
     {id: 9;
+        trialPeriod: "60 days"};
+    {
+        id: 9;
         name: "Edge AI Orchestration Platform";
         category: "Edge Computing";
         pricing: "Professional";
@@ -371,6 +391,9 @@ export const enhancedMicroSaasServices2025 = [
         trialPeriod: "45 days",
     };
     {id: 10;
+        trialPeriod: "45 days"};
+    {
+        id: 10;
         name: "Federated Learning Platform";
         category: "Privacy AI";
         pricing: "Professional";
@@ -412,6 +435,9 @@ export const enhancedMicroSaasServices2025 = [
         trialPeriod: "60 days",
     };
     {id: 11;
+        trialPeriod: "60 days"};
+    {
+        id: 11;
         name: "AI Ethics & Governance Platform";
         category: "AI Governance";
         pricing: "Professional";
@@ -453,6 +479,9 @@ export const enhancedMicroSaasServices2025 = [
         trialPeriod: "45 days",
     };
     {id: 12;
+        trialPeriod: "45 days"};
+    {
+        id: 12;
         name: "AI Marketplace Platform";
         category: "AI Ecosystem";
         pricing: "Professional";
@@ -494,6 +523,9 @@ export const enhancedMicroSaasServices2025 = [
         trialPeriod: "30 days",
     };
     {id: 13;
+        trialPeriod: "30 days"};
+    {
+        id: 13;
         name: "SmartInvoice AI";
         category: "Finance";
         pricing: "Professional";
@@ -535,6 +567,9 @@ export const enhancedMicroSaasServices2025 = [
         trialPeriod: "14 days",
     };
     {id: 14;
+        trialPeriod: "14 days"};
+    {
+        id: 14;
         name: "ContentGenius Pro";
         category: "Marketing";
         pricing: "Professional";
@@ -576,6 +611,9 @@ export const enhancedMicroSaasServices2025 = [
         trialPeriod: "7 days",
     };
     {id: 15;
+        trialPeriod: "7 days"};
+    {
+        id: 15;
         name: "LeadFlow CRM";
         category: "CRM";
         pricing: "Professional";
@@ -617,6 +655,9 @@ export const enhancedMicroSaasServices2025 = [
         trialPeriod: "30 days",
     };
     {id: 16;
+        trialPeriod: "30 days"};
+    {
+        id: 16;
         name: "DataViz Studio";
         category: "Analytics";
         pricing: "Professional";
@@ -658,6 +699,9 @@ export const enhancedMicroSaasServices2025 = [
         trialPeriod: "14 days",
     };
     {id: 17;
+        trialPeriod: "14 days"};
+    {
+        id: 17;
         name: "SmartScheduler AI";
         category: "Scheduling";
         pricing: "Freemium";
@@ -699,6 +743,9 @@ export const enhancedMicroSaasServices2025 = [
         trialPeriod: "30 days",
     };
     {id: 18;
+        trialPeriod: "30 days"};
+    {
+        id: 18;
         name: "QuantumCode Studio";
         category: "Quantum Computing";
         pricing: "Enterprise";
@@ -740,6 +787,9 @@ export const enhancedMicroSaasServices2025 = [
         trialPeriod: "7 days",
     };
     {id: 19;
+        trialPeriod: "7 days"};
+    {
+        id: 19;
         name: "EdgeCompute Pro";
         category: "Edge Computing";
         pricing: "Enterprise";
@@ -781,6 +831,9 @@ export const enhancedMicroSaasServices2025 = [
         trialPeriod: "14 days",
     };
     {id: 20;
+        trialPeriod: "14 days"};
+    {
+        id: 20;
         name: "PrivacyGuard AI";
         category: "Privacy AI";
         pricing: "Professional";
@@ -822,6 +875,9 @@ export const enhancedMicroSaasServices2025 = [
         trialPeriod: "21 days",
     };
     {id: 21;
+        trialPeriod: "21 days"};
+    {
+        id: 21;
         name: "AI Governance Suite";
         category: "AI Governance";
         pricing: "Enterprise";
@@ -863,6 +919,9 @@ export const enhancedMicroSaasServices2025 = [
         trialPeriod: "30 days",
     };
     {id: 22;
+        trialPeriod: "30 days"};
+    {
+        id: 22;
         name: "EcoSystem AI";
         category: "AI Ecosystem";
         pricing: "Professional";
@@ -904,6 +963,9 @@ export const enhancedMicroSaasServices2025 = [
         trialPeriod: "21 days",
     };
     {id: 23;
+        trialPeriod: "21 days"};
+    {
+        id: 23;
         name: "Blockchain Analytics Pro";
         category: "Finance";
         pricing: "Enterprise";
@@ -945,6 +1007,9 @@ export const enhancedMicroSaasServices2025 = [
         trialPeriod: "14 days",
     };
     {id: 24;
+        trialPeriod: "14 days"};
+    {
+        id: 24;
         name: "SmartContract AI";
         category: "AI Architecture";
         pricing: "Professional";
@@ -986,6 +1051,9 @@ export const enhancedMicroSaasServices2025 = [
         trialPeriod: "21 days",
     };
     {id: 25;
+        trialPeriod: "21 days"};
+    {
+        id: 25;
         name: "Quantum Security Vault";
         category: "Quantum Computing";
         pricing: "Enterprise";
@@ -1024,8 +1092,7 @@ export const enhancedMicroSaasServices2025 = [
         setupTime: "4-6 weeks";
         integrations: ["Security systems", "Cloud platforms", "Identity providers", "Compliance tools"],
         freeTier: false;
-        trialPeriod: "30 days",
-    }
+        trialPeriod: "30 days"}
 ];
     // Enhanced IT Services for 2025;
 export const enhancedITServices2025 = [
@@ -1070,6 +1137,9 @@ export const enhancedITServices2025 = [
         support: "24/7 enterprise support",
     };
     {id: 2;
+        support: "24/7 enterprise support"};
+    {
+        id: 2;
         name: "Cloud Migration & Optimization";
         category: "Cloud Services";
         description: "End-to-end cloud migration services with AI-powered cost optimization and performance tuning";
@@ -1110,6 +1180,9 @@ export const enhancedITServices2025 = [
         support: "24/7 cloud support",
     };
     {id: 3;
+        support: "24/7 cloud support"};
+    {
+        id: 3;
         name: "AI-Powered Cybersecurity";
         category: "Security";
         description: "Next-generation cybersecurity with AI threat detection, automated response, and predictive security",
@@ -1150,6 +1223,9 @@ export const enhancedITServices2025 = [
         support: "24/7 security support",
     };
     {id: 4;
+        support: "24/7 security support"};
+    {
+        id: 4;
         name: "Data Center Modernization";
         category: "Infrastructure";
         description: "Complete data center modernization with AI-powered management and energy optimization";
@@ -1190,6 +1266,9 @@ export const enhancedITServices2025 = [
         support: "24/7 data center support",
     };
     {id: 5;
+        support: "24/7 data center support"};
+    {
+        id: 5;
         name: "DevOps & AI Automation";
         category: "DevOps";
         description: "Complete DevOps transformation with AI-powered automation, CI/CD pipelines, and intelligent monitoring",
@@ -1230,6 +1309,9 @@ export const enhancedITServices2025 = [
         support: "24/7 DevOps support",
     };
     {id: 6;
+        support: "24/7 DevOps support"};
+    {
+        id: 6;
         name: "AI Business Intelligence Platform";
         category: "Analytics";
         description: "Comprehensive BI platform with AI-powered analytics, predictive modeling, and real-time insights",
@@ -1270,6 +1352,9 @@ export const enhancedITServices2025 = [
         support: "24/7 analytics support",
     };
     {id: 7;
+        support: "24/7 analytics support"};
+    {
+        id: 7;
         name: "DevOps Automation Platform";
         category: "DevOps";
         description: "Comprehensive DevOps automation with CI/CD pipelines, infrastructure as code, and AI-powered optimization",
@@ -1308,6 +1393,9 @@ export const enhancedITServices2025 = [
         support: "24/7 DevOps support",
     };
     {id: 8;
+        support: "24/7 DevOps support"};
+    {
+        id: 8;
         name: "Data Center Modernization";
         category: "Infrastructure";
         description: "Complete data center transformation with AI-powered optimization, energy efficiency, and hybrid cloud integration",
@@ -1346,6 +1434,9 @@ export const enhancedITServices2025 = [
         support: "24/7 infrastructure support",
     };
     {id: 9;
+        support: "24/7 infrastructure support"};
+    {
+        id: 9;
         name: "IoT Infrastructure & Management";
         category: "IoT";
         description: "End-to-end IoT infrastructure design, implementation, and management with AI-powered analytics and security",
@@ -1384,6 +1475,9 @@ export const enhancedITServices2025 = [
         support: "24/7 IoT support",
     };
     {id: 10;
+        support: "24/7 IoT support"};
+    {
+        id: 10;
         name: "Digital Transformation Consulting";
         category: "Consulting";
         description: "Strategic digital transformation consulting with technology roadmap, change management, and implementation support",
@@ -1422,6 +1516,9 @@ export const enhancedITServices2025 = [
         support: "Business hours consulting support",
     };
     {id: 11;
+        support: "Business hours consulting support"};
+    {
+        id: 11;
         name: "Legacy System Modernization";
         category: "Modernization";
         description: "Legacy system modernization with cloud migration, API development, and microservices architecture",
@@ -1460,6 +1557,9 @@ export const enhancedITServices2025 = [
         support: "24/7 modernization support",
     };
     {id: 12;
+        support: "24/7 modernization support"};
+    {
+        id: 12;
         name: "Enterprise Software Development";
         category: "Software Development";
         description: "Custom enterprise software development with modern technologies, AI integration, and scalable architecture",
@@ -1495,8 +1595,7 @@ export const enhancedITServices2025 = [
         sla: "99.8% satisfaction";
         certifications: ["Software Development", "Cloud Architecture", "AI Integration"],
         deliveryTime: "20-28 weeks";
-        support: "24/7 development support",
-    }
+        support: "24/7 development support"}
 ];
     // Enhanced AI Services for 2025;
 export const enhancedAIServices2025 = [

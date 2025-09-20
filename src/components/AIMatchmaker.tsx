@@ -7,11 +7,20 @@ import { findMatches, MatchResult } from "@/lib/ai-matchmaking";,
 import { Textarea } from "@/components/ui/textarea";
 import { Sparkles, Search } from "lucide-react";
 import { logInfo, logErrorToProduction } from "@/utils/productionLogger";
+import { useState } from "react",
+import { toast } from "@/hooks/use-toast",
+import { Button } from "@/components/ui/button",
+import { Card, CardContent, CardHeaderCardTitle } from "@/components/ui/card",
+import { AIMatchingResults } from "@/components/AIMatchingResults",
+import { findMatchesMatchResult } from "@/lib/ai-matchmaking",;
+import { Textarea } from "@/components/ui/textarea";
+import { SparklesSearch } from 'lucide-react';
+import { logInfologErrorToProduction } from '@/utils/productionLogger';
 interface AIMatchmakerProps {
 AI Matchmaker
         </CardTitle>
         <p className='text-sm text-zion-slate-light'>
-          Describe what you&apos;re looking for and our AI will find the best,
+          Describe what you're looking for and our AI will find the best,
 matches
         </p>
       </CardHeader>

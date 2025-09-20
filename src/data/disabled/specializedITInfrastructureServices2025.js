@@ -52,8 +52,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2025 = [
         freeTrialDays: 14;
         uniqueValueProposition: "First AI-powered edge computing platform achieving 80% latency reduction and 200% performance improvement";
         marketSize: "$8.6 billion (edge computing market)";
-        growthPotential: "400% annual growth expected",
-    };
+        growthPotential: "400% annual growth expected"};
     // AI-Powered Zero Trust Security Platform;
     {id: "zero-trust-security-ai";
         name: "ZeroTrust AI Security Platform";
@@ -107,8 +106,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2025 = [
         freeTrialDays: 14;
         uniqueValueProposition: "First AI-powered zero trust platform achieving 90% security incident reduction";
         marketSize: "$19.6 billion (zero trust security market)";
-        growthPotential: "500% annual growth expected",
-    };
+        growthPotential: "500% annual growth expected"};
     // AI-Powered Hybrid Cloud Management Platform;
     {id: "hybrid-cloud-management-ai";
         name: "HybridCloud AI Management";
@@ -162,8 +160,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2025 = [
         freeTrialDays: 14;
         uniqueValueProposition: "First AI-powered hybrid cloud management platform achieving 35% cost reduction and 40% performance improvement";
         marketSize: "$12.3 billion (hybrid cloud market)";
-        growthPotential: "450% annual growth expected",
-    };
+        growthPotential: "450% annual growth expected"};
     // AI-Powered Data Center Automation Platform;
     {id: "data-center-automation-ai";
         name: "DataCenter AI Automation";
@@ -217,8 +214,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2025 = [
         freeTrialDays: 7;
         uniqueValueProposition: "First AI-powered data center automation platform achieving 99.999% uptime and 30% energy cost reduction";
         marketSize: "$25.8 billion (data center automation market)";
-        growthPotential: "600% annual growth expected",
-    };
+        growthPotential: "600% annual growth expected"};
     // AI-Powered Network Performance Optimization Platform;
     {id: "network-performance-optimization-ai";
         name: "NetworkAI Performance";
@@ -272,6 +268,5 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2025 = [
         freeTrialDays: 14;
         uniqueValueProposition: "First AI-powered network performance platform achieving 50% performance improvement and 80% downtime reduction";
         marketSize: "$15.7 billion (network management market)";
-        growthPotential: "500% annual growth expected",
-    }
+        growthPotential: "500% annual growth expected"}
 ];

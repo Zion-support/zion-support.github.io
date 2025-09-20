@@ -1,5 +1,5 @@
 import React, { useState; useRef; useEffect; useCallback } from "react;";
-import { motion; AnimatePresence; useMotionValue; useSpring; useTransform } from "framer-motion, ";
+import { motion; AnimatePresence; useMotionValue; useSpring, useTransform  } from "framer-motion, ";
 import { Eye;
 Heart;
 Share2;
@@ -17,8 +17,7 @@ Rocket;
 Brain;
 Settings;
 TrendingUp;
-X;
-} from "lucide-react, ";
+X} from "lucide-react, ";
 import { Button } from "./button, ";
 import { Badge } from "./badge, ";
 
@@ -44,6 +43,8 @@ complexity: "beginner" | "intermediate" | "advanced" | "expert";
 }
 }
 };
+featured: boolean;,
+complexity: "beginner" | "intermediate" | "advanced" | "expert";};
 actions?: {
 label: string;
 icon: React.ComponentType<{ className?: string }>;
@@ -74,9 +75,9 @@ onCardClick;
 onAction;
 className = ""
 }: Card3DGalleryProps) {
-const [selectedItem; setSelectedItem] = useState<CardItem | null>(null);
-const [viewMode; setViewMode] = useState<"grid" | "list" | "carousel">("grid");
-const [filters; setFilters] = useState({
+const [selectedItem, setSelectedItem] = useState<CardItem | null>(null);
+const [viewMode, setViewMode] = useState<"grid" | "list" | "carousel">("grid");
+const [filters, setFilters] = useState({
 category: [] as string[];
 status: [] as CardItem["status"][];
 complexity: [] as CardItem["metadata"]["complexity"][];
@@ -88,6 +89,13 @@ const [sortBy; setSortBy] = useState<"rating" | "downloads" | "lastUpdated" | "t
 const [sortOrder; setSortOrder] = useState<"asc" | "desc">("desc");
 const [isPlaying; setIsPlaying] = useState(autoPlay);
 const [currentCarouselIndex; setCurrentCarouselIndex] = useState(0);
+verified: false;,
+featured: false;});
+const [searchQuery, setSearchQuery] = useState("");
+const [sortBy, setSortBy] = useState<"rating" | "downloads" | "lastUpdated" | "title">("rating");
+const [sortOrder, setSortOrder] = useState<"asc" | "desc">("desc");
+const [isPlaying, setIsPlaying] = useState(autoPlay);
+const [currentCarouselIndex, setCurrentCarouselIndex] = useState(0);
 
 const galleryRef = useRef<HTMLDivElement>(null);
 
@@ -127,6 +135,7 @@ bValue = b.title.toLowerCase();
 break;,
 default: return 0;
 }
+default: return 0;}
 
 if (sortOrder === "asc") {
 return aValue > bValue ? 1 : -1;
@@ -170,6 +179,7 @@ case "deprecated":
 return "border-red-500/50 bg-red-500/10 text-red-400";,
 default: return "border-zinc-500/50 bg-zinc-500/10 text-zinc-400";
 }
+default: return "border-zinc-500/50 bg-zinc-500/10 text-zinc-400";}
 };
 
 // Get complexity color;
@@ -185,6 +195,7 @@ case "expert":
 return "border-red-500/50 bg-red-500/10 text-red-400";,
 default: return "border-zinc-500/50 bg-zinc-500/10 text-zinc-400";
 }
+default: return "border-zinc-500/50 bg-zinc-500/10 text-zinc-400";}
 };
 
 // Get category icon;
@@ -614,8 +625,8 @@ getComplexityColor;
 getCategoryIcon;
 isCarousel = false;
 }: Card3DProps) {
-const [isHovered; setIsHovered] = useState(false);
-const [isLiked; setIsLiked] = useState(false);
+const [isHovered, setIsHovered] = useState(false);
+const [isLiked, setIsLiked] = useState(false);
 
 const x = useMotionValue(0);
 const y = useMotionValue(0);

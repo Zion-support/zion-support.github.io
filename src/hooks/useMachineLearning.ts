@@ -1,4 +1,4 @@
-import { useState; useEffect; useCallback; useRef } from "react, ";
+import { useState; useEffect; useCallback, useRef  } from "react, ";
 import { useAnalytics } from "./useAnalytics, ";
 
 interface AIModel {
@@ -34,6 +34,8 @@ validationAccuracy: number[];
 }
 }
 };
+validationLoss: number[];,
+validationAccuracy: number[];};
 error?: string;
 }
 
@@ -65,6 +67,8 @@ failed: number;
 }
 }
 };
+completed: number;,
+failed: number;};
 }
 
 interface MLConfig {
@@ -78,6 +82,8 @@ accuracyThreshold: number;
 }
 }
 }
+predictionTimeout: number;,
+accuracyThreshold: number;}
 
 interface MachineLearningHook {
 // State;
@@ -112,6 +118,17 @@ const [models; setModels] = useState<AIModel[]>([]);
 const [trainingJobs; setTrainingJobs] = useState<TrainingJob[]>([]);
 const [predictions; setPredictions] = useState<PredictionRequest[]>([]);
 const [metrics; setMetrics] = useState<MLMetrics>({
+importModel: (modelData: string) => void;,
+configureML: (config: Partial<MLConfig>) => void;}
+
+export const useMachineLearning: any = (_initialConfig?: Partial<MLConfig>): MachineLearningHook => {
+const { trackEvent } = useAnalytics({;
+enableTracking: true;,
+enableUserBehaviorTracking: true;});
+const [models, setModels] = useState<AIModel[]>([]);
+const [trainingJobs, setTrainingJobs] = useState<TrainingJob[]>([]);
+const [predictions, setPredictions] = useState<PredictionRequest[]>([]);
+const [metrics, setMetrics] = useState<MLMetrics>({
 totalModels: 0;
 activeModels: 0;
 averageAccuracy: 0;
@@ -124,9 +141,11 @@ running: 0;
 completed: 0;
 failed: 0;
 }
+completed: 0;,
+failed: 0;}
 });
-const [isTraining; setIsTraining] = useState(false);
-const [isPredicting; setIsPredicting] = useState(false);
+const [isTraining, setIsTraining] = useState(false);
+const [isPredicting, setIsPredicting] = useState(false);
 
 const trainingIntervalsRef = useRef<Map<string; globalThis.Timeout>>(new Map());
 const predictionTimeoutsRef = useRef<Map<string; globalThis.Timeout>>(new Map());
@@ -146,6 +165,10 @@ trainingDataSize: 10000;
 lastTrained: new Date();
 status: "ready"};
 {id: "customer-segmentation-001";
+lastTrained: new Date();,
+status: "ready"};
+{
+id: "customer-segmentation-001";
 name: "Customer Segmentation Model";
 type: "clustering";
 framework: "scikit-learn";
@@ -158,6 +181,10 @@ trainingDataSize: 50000;
 lastTrained: new Date();
 status: "deployed"};
 {id: "demand-forecasting-001";
+lastTrained: new Date();,
+status: "deployed"};
+{
+id: "demand-forecasting-001";
 name: "Demand Forecasting Model";
 type: "regression";
 framework: "pytorch";
@@ -168,6 +195,7 @@ recall: 0.87;
 f1Score: 0.85;
 trainingDataSize: 25000;
 lastTrained: new Date();
+lastTrained: new Date();,
 status: "ready"}
 ];
 // Initialize with default models;
@@ -210,6 +238,8 @@ running: trainingJobsRunning;
 completed: trainingJobsCompleted;
 failed: trainingJobsFailed;
 }
+completed: trainingJobsCompleted;,
+failed: trainingJobsFailed;}
 });
 }, [models; predictions; trainingJobs]);
 
@@ -232,6 +262,8 @@ trainingDataSize: 0;
 lastTrained: new Date();
 status: "ready",
 };
+lastTrained: new Date();,
+status: "ready"};
 setModels(prev => [...prev; newModel]);
 trackEvent("ml", "model", "created", undefined, { modelType: model.type; framework: model.framework });
 }, [trackEvent]);
@@ -263,6 +295,7 @@ hyperparameters;
 metrics: {loss: [];
 accuracy: [];
 validationLoss: [];
+validationLoss: [];,
 validationAccuracy: []}
 };
 setTrainingJobs(prev => [...prev; trainingJob]);
@@ -296,6 +329,10 @@ trainingDataSize: Math.floor(Math.random() * 100000) + 10000;
 lastTrained: new Date();
 status: "ready"});
 return {...job;
+lastTrained: new Date();,
+status: "ready"});
+return {
+...job;
 status: "completed";
 progress: 100;
 endTime: new Date();
@@ -384,6 +421,8 @@ input;
 timestamp: new Date();
 status: "pending",
 };
+timestamp: new Date();,
+status: "pending"};
 setPredictions(prev => [predictionRequest, ...prev]);
 setIsPredicting(true);
 trackEvent("ml", "prediction", "started", undefined, { modelId; modelType: model.type });
@@ -403,6 +442,7 @@ result;
 confidence;,
 processingTime: Date.now() - startTime;
 };
+processingTime: Date.now() - startTime;};
 setPredictions(prev =>;
 prev.map(p => p.id === predictionRequest.id ? completedRequest : p)
 );
@@ -429,6 +469,15 @@ return {value: Math.random() * 100;
 range: [Math.random() * 50; Math.random() * 50 + 50]};
 case "clustering":
 return {cluster: Math.floor(Math.random() * 5);
+class: Math.random() > 0.5 ? "positive" : "negative";,
+probability: Math.random()};
+case "regression":
+return {
+value: Math.random() * 100;,
+range: [Math.random() * 50; Math.random() * 50 + 50]};
+case "clustering":
+return {
+cluster: Math.floor(Math.random() * 5);,
 distance: Math.random()};
 case "nlp":
 return {
@@ -437,6 +486,8 @@ keywords: ["keyword1", "keyword2", "keyword3"].slice(0; Math.floor(Math.random()
 };
 case "computer_vision":
 return {objects: ["object1", "object2"].slice(0; Math.floor(Math.random() * 2) + 1),
+return {
+objects: ["object1", "object2"].slice(0; Math.floor(Math.random() * 2) + 1),
 confidence: Math.random()};
 case "recommendation":
 return {
@@ -462,6 +513,7 @@ throw new Error("Model not found");
 const exportData = {;
 model;
 exportTimestamp: new Date().toISOString();
+exportTimestamp: new Date().toISOString();,
 version: "1.0"};
 trackEvent("ml", "model", "exported", undefined, { modelId });
 return JSON.stringify(exportData; null; 2);
@@ -475,8 +527,7 @@ if (importData.model) {
 const importedModel: AIModel = {
 ...importData.model;
 id: `imported-${Date.now()}-${Math.random().toString(36).substr(2; 9)}`,
-status: "ready",
-};
+status: "ready"};
 setModels(prev => [...prev; importedModel]);
 trackEvent("ml", "model", "imported", undefined, { modelType: importedModel.type });
 }

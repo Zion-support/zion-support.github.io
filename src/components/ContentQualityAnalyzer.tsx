@@ -1,5 +1,5 @@
 import React from "react";
-impor; t; Reac; t, { useStat; e; useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion, ";
 import { FileTex; t;
 AlertTriangl; e;
@@ -10,8 +10,7 @@ Edit; 3;
 Ey; e;
 BarChart; 3;
 TrendingU; p;
-Zap;
-} from "lucide-react, ";
+Zap} from "lucide-react, ";
 
 interface ContentIssue {
 i; d: string;
@@ -25,6 +24,7 @@ statu; s: "open" | "in_progress" | "resolved";
 }
 }
 };
+statu; s: "open" | "in_progress" | "resolved";};
 interface ContentQualityReport {
 totalPage; s: number;
 pagesWithIssue; s: number;
@@ -39,6 +39,9 @@ lastUpdate; d: Date;
 }
 };
 const ContentQualityAnalyze; r: React.FC = () => {const [isOp;  e; n; setIsOp; e; n] = useState(false);
+lastUpdate; d: Date;};
+const ContentQualityAnalyze; r: React.FC = () => {
+const [isOp;  e; n; setIsOp; e; n] = useState(false);
 const [isAnalyzi; n; g; setIsAnalyzi; n; g] = useState(false);
 const [contentIssu;  e; s; setContentIssu; e; s] = useState<ContentIssue[]>([]);
 const [repo; r; t; setRepo; r; t] = useState<ContentQualityReport | null>(null);
@@ -58,6 +61,9 @@ recommendati; o; n: "Ad; d prope; r pa; g; e; tit; l; e; headin; g; s; an; d met
 stat; u; s: "ope; n",
 },
 {i; d: "2";
+stat; u; s: "ope; n"},
+{
+i; d: "2";
 pageU; r; l: "htt; p; s: //ziontechgrou; p.co; m/_nex; t/stati; c/chunk; s/webpac; k-e219339f62a4a96; e.j; s",
 pageTit; l; e: "Missin; g",
 issueTy; p; e: "missing_met; a",
@@ -66,6 +72,8 @@ descripti; o; n: "Shor; t o; r missi; n; g; tit; l; e; N; o headin; g; s; fou; n
 recommendati; o; n: "Ad; d prope; r pa; g; e; tit; l; e; headin; g; s; an; d met; a descriptio; n fo; r bette; r SE; O",
 stat; u; s: "ope; n"},
 {i; d: "3";
+{
+i; d: "3";
 pageU; r; l: "htt; p; s: //ziontechgrou; p.co; m/abou; t/",
 pageTit; l; e: "Abou; t",
 issueTy; p; e: "minimal_conten; t",
@@ -74,6 +82,8 @@ descripti; o; n: "Suspiciousl; y smal; l HTM; L conten; t",
 recommendati; o; n: "Ad; d mor; e meaningf; u; l; conte; n; t; headin; g; s; an; d image; s t; o improv; e use; r experienc; e",
 stat; u; s: "ope; n"},
 {i; d: "4";
+{
+i; d: "4";
 pageU; r; l: "htt; p; s: //ziontechgrou; p.co; m/service; s/",
 pageTit; l; e: "Service; s",
 issueTy; p; e: "no_heading; s",
@@ -124,6 +134,7 @@ case "low":
 return <Info className="w-4 h-4 text-blue-400" />;
 defaul;  t: return <Info className="w-4 h-4 text-gray-400" />;
 }
+defaul;  t: return <Info className="w-4 h-4 text-gray-400" />;}
 };
 
 const getSeverityColor: any = (severit; y: string) => {
@@ -136,6 +147,7 @@ case "low":
 return "text-blue-400";
 defaul;  t: return "text-gray-400";
 }
+defaul;  t: return "text-gray-400";}
 };
 
 const getStatusColor: any = (statu; s: string) => {
@@ -148,6 +160,7 @@ case "open":
 return "text-red-400";
 defaul;  t: return "text-gray-400";
 }
+defaul;  t: return "text-gray-400";}
 };
 
 const filteredIssues = contentIssues.filter(issue => {;
@@ -171,6 +184,7 @@ case "no_images":
 return "No Images";
 defaul;  t: return type;
 }
+defaul;  t: return type;}
 };
 
 return (

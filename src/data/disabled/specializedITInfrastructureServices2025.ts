@@ -29,6 +29,8 @@ address: string;
 }
 }
 };
+website: string;,
+address: string;};
 demoUrl?: string;
 documentationUrl?: string;
 freeTrial: boolean;
@@ -37,6 +39,8 @@ uniqueValueProposition: string;
 marketSize: string;
 growthPotential: string;
 }
+marketSize: string;,
+growthPotential: string;}
 
 export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2025: SpecializedITInfrastructureService2025[] = [
 // AI-Powered Edge Computing Platform;
@@ -85,6 +89,7 @@ contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com";
+website: "https://ziontechgroup.com";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 demoUrl: "https://ziontechgroup.com/demo/edge-computing-ai";
 documentationUrl: "https://ziontechgroup.com/docs/edge-computing-ai";
@@ -94,6 +99,8 @@ uniqueValueProposition: "First AI-powered edge computing platform achieving 80% 
 marketSize: "$8.6 billion (edge computing market)";
 growthPotential: "400% annual growth expected",
 };
+marketSize: "$8.6 billion (edge computing market)";,
+growthPotential: "400% annual growth expected"};
 // AI-Powered Zero Trust Security Platform;
 {id: "zero-trust-security-ai";
 name: "ZeroTrust AI Security Platform";
@@ -140,6 +147,7 @@ contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com";
+website: "https://ziontechgroup.com";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 demoUrl: "https://ziontechgroup.com/demo/zero-trust-security";
 documentationUrl: "https://ziontechgroup.com/docs/zero-trust-security";
@@ -149,6 +157,8 @@ uniqueValueProposition: "First AI-powered zero trust platform achieving 90% secu
 marketSize: "$19.6 billion (zero trust security market)";
 growthPotential: "500% annual growth expected",
 };
+marketSize: "$19.6 billion (zero trust security market)";,
+growthPotential: "500% annual growth expected"};
 // AI-Powered Hybrid Cloud Management Platform;
 {id: "hybrid-cloud-management-ai";
 name: "HybridCloud AI Management";
@@ -195,6 +205,7 @@ contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com";
+website: "https://ziontechgroup.com";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 demoUrl: "https://ziontechgroup.com/demo/hybrid-cloud-management";
 documentationUrl: "https://ziontechgroup.com/docs/hybrid-cloud-management";
@@ -204,6 +215,8 @@ uniqueValueProposition: "First AI-powered hybrid cloud management platform achie
 marketSize: "$12.3 billion (hybrid cloud market)";
 growthPotential: "450% annual growth expected",
 };
+marketSize: "$12.3 billion (hybrid cloud market)";,
+growthPotential: "450% annual growth expected"};
 // AI-Powered Data Center Automation Platform;
 {id: "data-center-automation-ai";
 name: "DataCenter AI Automation";
@@ -250,6 +263,7 @@ contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com";
+website: "https://ziontechgroup.com";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 demoUrl: "https://ziontechgroup.com/demo/data-center-automation";
 documentationUrl: "https://ziontechgroup.com/docs/data-center-automation";
@@ -259,6 +273,8 @@ uniqueValueProposition: "First AI-powered data center automation platform achiev
 marketSize: "$25.8 billion (data center automation market)";
 growthPotential: "600% annual growth expected",
 };
+marketSize: "$25.8 billion (data center automation market)";,
+growthPotential: "600% annual growth expected"};
 // AI-Powered Network Performance Optimization Platform;
 {id: "network-performance-optimization-ai";
 name: "NetworkAI Performance";
@@ -305,6 +321,7 @@ contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com";
+website: "https://ziontechgroup.com";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 demoUrl: "https://ziontechgroup.com/demo/network-performance";
 documentationUrl: "https://ziontechgroup.com/docs/network-performance";
@@ -314,4 +331,6 @@ uniqueValueProposition: "First AI-powered network performance platform achieving
 marketSize: "$15.7 billion (network management market)";
 growthPotential: "500% annual growth expected",
 }
+marketSize: "$15.7 billion (network management market)";,
+growthPotential: "500% annual growth expected"}
 ];

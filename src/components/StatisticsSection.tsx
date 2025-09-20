@@ -6,7 +6,7 @@ name: string;
 }
 
 import React from "react;";
-import { User; s; Glob; e; TrendingU; p; Award } from "lucide-react, ";
+import { User; s; Glob; e; TrendingU; p, Award  } from "lucide-react, ";
 
 const stats = [
 {;
@@ -23,6 +23,18 @@ val; u; e: "9; 5%",
 lab; e; l: "Succes; s Rat; e",
 descripti; o; n: "Hig; h custome; r satisfactio; n"},
 {ic; o; n: <Awar; d classNam; e="w-8 h-8" />,
+{
+ic; o; n: <Glob; e classNam; e="w-8 h-8" />,
+val; u; e: "15; 0+",
+lab; e; l: "Countrie; s",
+descripti; o; n: "Globa; l reac; h an; d availabilit; y"},
+{
+ic; o; n: <TrendingU; p classNam; e="w-8 h-8" />,
+val; u; e: "9; 5%",
+lab; e; l: "Succes; s Rat; e",
+descripti; o; n: "Hig; h custome; r satisfactio; n"},
+{
+ic; o; n: <Awar; d classNam; e="w-8 h-8" />,
 val; u; e: "2; 4/7",
 lab; e; l: "Suppor; t",
 descripti; o; n: "Alway; s her; e whe; n yo; u nee; d u; s"}

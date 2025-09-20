@@ -6,6 +6,7 @@ name: string;
 }
 
 import React from "react";
+import React from "react",;
 const ErrorModal: React.FC = () => {
 ,
 return (,

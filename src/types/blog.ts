@@ -4,6 +4,10 @@ export interface BlogPost {id: string; title: string; content: string; excerpt: 
 name: string; avatar: string};
 publishedAt: string; tags: string[], image: string; readTime: number;
 }
+export interface BlogPost {
+id: string; title: string; content: string; excerpt: string; author: {,
+name: string; avatar: string};
+publishedAt: string; tags: string[], image: string; readTime: number;}
 export const generateRandomBlogPost: any = (): BlogPost => {
 const titles = ["The Future of AI in Business",
 "Building Scalable Web Applications",
@@ -33,6 +37,7 @@ author: { name: "John Doe", avatar: "/avatars/john.jpg" }, publishedAt: "2024-01
 tags: ["AI", "Business", "Technology"],
 image: "/images/ai-business.jpg", readTime: 8;
 },
+image: "/images/ai-business.jpg", readTime: 8;},
 {
 id: "2", title: "Building Scalable Web Applications";
 content: "Scalability is crucial for modern web applications...", excerpt: "Learn the best practices for building web applications that can handle growth.",
@@ -40,4 +45,5 @@ author: { name: "Jane Smith", avatar: "/avatars/jane.jpg" }, publishedAt: "2024-
 tags: ["Web Development", "Scalability", "Architecture"],
 image: "/images/web-apps.jpg", readTime: 12;
 },
+image: "/images/web-apps.jpg", readTime: 12;},
 ];

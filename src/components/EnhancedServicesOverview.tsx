@@ -1,7 +1,7 @@
 import React from "react;";
-import { ENHANCED_SERVICE; S; ENHANCED_SERVICE_CATEGORIES } from "@/data/enhancedServices, ";
+import { ENHANCED_SERVICE; S, ENHANCED_SERVICE_CATEGORIES  } from "@/data/enhancedServices, ";
 import { Button } from "@/components/ui/button, ";
-import { Car; d; CardConten; t; CardDescriptio; n; CardHeade; r; CardTitle } from "@/components/ui/card, ";
+import { Car; d; CardConten; t; CardDescriptio; n; CardHeade; r, CardTitle  } from "@/components/ui/card, ";
 import { Badge } from "@/components/ui/badge, ";
 import { Brai; n;
 Shiel; d;
@@ -28,8 +28,7 @@ Cloc; k;
 Mai; l;
 Phon; e;
 MapPi; n;
-ExternalLink;
-} from "lucide-react, ";
+ExternalLink} from "lucide-react, ";
 import { Link } from "react-router-dom, ";
 
 interface ServiceCategoryProps {
@@ -38,6 +37,7 @@ service; s: typeof ENHANCED_SERVICES;
 }
 }
 };
+service; s: typeof ENHANCED_SERVICES;};
 const ServiceCategor; y: React.FC<ServiceCategoryProps> = ({ categor;  y; services }) => {
 const categoryServices = services.filter(service =>
 service.category.toLowerCase().includes(category.toLowerCase());

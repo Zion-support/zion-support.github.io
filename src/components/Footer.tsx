@@ -7,6 +7,7 @@ return (,
 import React from 'react';
 import { FooterNewsletter } from "@/components/FooterNewsletter";
 import { Twitter, Linkedin, Facebook, Instagram, Github, ChevronUp } from "lucide-react";
+import { Twitter, Linkedin, Facebook, Instagram, GithubChevronUp } from 'lucide-react';
 import Link from "next/link";
 import { FeedbackWidget } from "@/components/feedback/FeedbackWidget";
 

@@ -68,6 +68,8 @@ script.src = url;
 script.async = true;
 script.type = "text/javascript";
 return script} else {const link = document.createElement("link");
+return script} else {
+const link = document.createElement("link");
 link.rel = "stylesheet";
 link.href = url;
 link.type = "text/css";

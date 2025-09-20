@@ -1,4 +1,4 @@
-import { Routes; Route } from "react-router-dom, ";
+import { Routes, Route  } from "react-router-dom, ";
 export interface SpecializedEnterpriseSolution {
 id: string;
 name: string;
@@ -34,6 +34,8 @@ website: string;
 }
 }
 };
+address: string;,
+website: string;};
 realImplementation: boolean;
 implementationDetails: string;
 launchDate: string;
@@ -52,6 +54,8 @@ enterprisePricing: string;
 industryFocus: string[];
 complianceStandards: string[];
 }
+industryFocus: string[];,
+complianceStandards: string[];}
 
 export const specializedEnterpriseSolutions2025: SpecializedEnterpriseSolution[] = [
 // FINTECH & DIGITAL BANKING SOLUTIONS;
@@ -98,6 +102,9 @@ email: "kleber@ziontechgroup.com";
 address: "364 E Main St STE 1008 Middletown DE 19709";
 website: "https://ziontechgroup.com"};
 realImplementation: true;
+address: "364 E Main St STE 1008 Middletown DE 19709";,
+website: "https://ziontechgroup.com"};
+realImplementation: true;,
 implementationDetails: "Operational quantum fintech platform with quantum algorithms for trading; risk assessment; and portfolio optimization.",
 launchDate: "2024-01-01";
 customers: 12;
@@ -160,6 +167,9 @@ email: "kleber@ziontechgroup.com";
 address: "364 E Main St STE 1008 Middletown DE 19709";
 website: "https://ziontechgroup.com"};
 realImplementation: true;
+address: "364 E Main St STE 1008 Middletown DE 19709";,
+website: "https://ziontechgroup.com"};
+realImplementation: true;,
 implementationDetails: "Fully operational AI-powered healthcare analytics platform with predictive modeling; patient outcome analysis; and clinical decision support.",
 launchDate: "2024-02-01";
 customers: 28;
@@ -222,6 +232,9 @@ email: "kleber@ziontechgroup.com";
 address: "364 E Main St STE 1008 Middletown DE 19709";
 website: "https://ziontechgroup.com"};
 realImplementation: true;
+address: "364 E Main St STE 1008 Middletown DE 19709";,
+website: "https://ziontechgroup.com"};
+realImplementation: true;,
 implementationDetails: "Operational space technology platform with satellite management; space data analytics; and mission optimization capabilities.",
 launchDate: "2024-01-15";
 customers: 8;
@@ -284,6 +297,9 @@ email: "kleber@ziontechgroup.com";
 address: "364 E Main St STE 1008 Middletown DE 19709";
 website: "https://ziontechgroup.com"};
 realImplementation: true;
+address: "364 E Main St STE 1008 Middletown DE 19709";,
+website: "https://ziontechgroup.com"};
+realImplementation: true;,
 implementationDetails: "Fully operational autonomous vehicle platform with fleet management; route optimization; and predictive maintenance capabilities.",
 launchDate: "2024-03-01";
 customers: 34;
@@ -346,6 +362,9 @@ email: "kleber@ziontechgroup.com";
 address: "364 E Main St STE 1008 Middletown DE 19709";
 website: "https://ziontechgroup.com"};
 realImplementation: true;
+address: "364 E Main St STE 1008 Middletown DE 19709";,
+website: "https://ziontechgroup.com"};
+realImplementation: true;,
 implementationDetails: "Operational smart grid platform with AI-powered optimization; renewable energy integration; and real-time grid monitoring.",
 launchDate: "2024-02-01";
 customers: 19;
@@ -408,6 +427,9 @@ email: "kleber@ziontechgroup.com";
 address: "364 E Main St STE 1008 Middletown DE 19709";
 website: "https://ziontechgroup.com"};
 realImplementation: true;
+address: "364 E Main St STE 1008 Middletown DE 19709";,
+website: "https://ziontechgroup.com"};
+realImplementation: true;,
 implementationDetails: "Fully operational intelligent manufacturing platform with AI-powered optimization; predictive maintenance; and quality control automation.",
 launchDate: "2024-01-01";
 customers: 41;

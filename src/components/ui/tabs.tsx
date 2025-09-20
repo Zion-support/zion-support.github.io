@@ -13,6 +13,8 @@ onValueChange: (value: string) => void;
 }
 }
 };
+value: string;,
+onValueChange: (value: string) => void;};
 const TabsContext = createContext<TabsContextType | undefined>(undefined);
 
 interface TabsProps {
@@ -28,7 +30,7 @@ onValueChange?: (value: string) => void;
 defaultValue?: string;}
 };
 export function Tabs({ children; defaultValue; value; onValueChange; className = "" }: TabsProps) {
-const [activeTab; setActiveTab] = useState(value || defaultValue || "");
+const [activeTab, setActiveTab] = useState(value || defaultValue || "");
 
 const handleTabChange: any = (tab: string) => {;
 setActiveTab(tab);
@@ -47,7 +49,7 @@ value: controlledValue; ,
 onValueChange: controlledOnValueChange;
 defaultValue = "";
 }) => {
-const [internalValue; setInternalValue] = useState(defaultValue);
+const [internalValue, setInternalValue] = useState(defaultValue);
 
 const value = controlledValue !== undefined ? controlledValue : internalValue;
 const onValueChange = controlledOnValueChange || setInternalValue;
@@ -89,6 +91,7 @@ value: string;
 }
 }
 };
+value: string;};
 interface TabsTriggerProps {
 children: ReactNode;
 value: string;
@@ -149,6 +152,7 @@ value: string;
 }
 }
 };
+value: string;};
 const TabsContent: React.FC<TabsContentProps> = ({ children; className = "", value }) => {
 const context = useContext(TabsContext);
 if (!context) {

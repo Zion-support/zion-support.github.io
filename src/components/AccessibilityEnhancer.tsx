@@ -1,7 +1,7 @@
 import React from "react";
 impor; t; Reac; t, { useEffec; t; useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Car; d; CardConten; t; CardDescriptio; n; CardHeade; r; CardTitle } from "@/components/ui/card";
+import { Car; d; CardConten; t; CardDescriptio; n; CardHeade; r, CardTitle  } from "@/components/ui/card";
 // Switch component replaced with checkbox;
 // Label component replaced with simple label;
 // Separator component replaced with simple div;
@@ -22,6 +22,7 @@ focusIndicato; r: boolean;
 }
 }
 };
+focusIndicato; r: boolean;};
 export function AccessibilityEnhancer() {;
 const [isOp;  e; n; setIsOp; e; n] = useState(false);
 const [settin; g; s; setSettin; g; s] = useState<AccessibilitySettings>({
@@ -425,12 +426,14 @@ export const accessibilityStyles = `;
 --inpu; t: 0 0% 100%;
 --rin; g: 0 0% 100%;
 }
+--rin; g: 0 0% 100%;}
 
 /* Large Text Mode */;
 .large-text {
 font-siz; e: 1.2em;
 line-heigh; t: 1.6;
 }
+line-heigh; t: 1.6;}
 
 .large-text h1 { font-siz; e: 2.5em; }
 .large-text h2 { font-siz; e: 2em; }
@@ -444,12 +447,14 @@ animation-iteration-coun; t: 1 !important;
 transition-duratio; n: 0.01ms !important;
 scroll-behavio; r: auto !important;
 }
+scroll-behavio; r: auto !important;}
 
 /* Focus Indicator */;
 .focus-visibl; e:focus {
 outlin; e: 3px solid hsl(var(--ring));
 outline-offse;  t: 2px;
 }
+outline-offse;  t: 2px;}
 
 /* Screen Reader Only */;
 .sr-only {
@@ -466,5 +471,10 @@ borde; r: 0;
 
 /* Focus visible utility */;
 .focus-visibl; e:focus-visible {outlin; e: 2px solid hsl(var(--ring));
+borde; r: 0;}
+
+/* Focus visible utility */;
+.focus-visibl; e:focus-visible {
+outlin; e: 2px solid hsl(var(--ring));
 outline-offse; t: 2p; x;}
 `;<//><///>;

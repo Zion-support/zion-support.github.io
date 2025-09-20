@@ -138,24 +138,14 @@ earning points immediately.
 </>
     );
   }
+import React from 'react';
+
+export default function Points() {
   return (
-    <div className='container py-10 max-w-4xl'>
-      <div className='text-center mb-8'>
-        <Gift className='h-16 w-16 text-primary mx-auto mb-4' />
-        <h1 className='text-4xl font-bold mb-4'>Your Rewards</h1>
-        <div className='text-6xl font-bold text-primary mb-2'>
-          {loading ? '...' : balance}
-        </div>
-        <p className='text-xl text-muted-foreground'>Points Available</p>
-        {!loading && balance === 0 && (
-          <p className='text-sm text-muted-foreground mt-2'>            You haven't earned any points yet. Complete the tasks below to start        </div>
-        <p className="text-xl text-muted-foreground">Points Available</p>
-        {!loading && balance === 0 && (
-          <p className="text-sm text-muted-foreground mt-2">
-            You haven't earned any points yet. Complete the tasks below to start,
-earning and redeem rewards.
-          </p>
-        )}
+    <div className="min-h-screen bg-gray-50 py-12">
+      <div className="container mx-auto px-4">
+        <h1 className="text-4xl font-bold text-gray-900 mb-6">Points</h1>
+        <p className="text-lg text-gray-600">Your points and rewards...</p>
       </div>
       <div className='grid md:grid-cols-2 gap-8 mb-12'>
         <Card>

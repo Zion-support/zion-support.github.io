@@ -691,8 +691,7 @@ export const ENHANCED_INNOVATIVE_SERVICES = [
         integrationOptions: ["MLS Systems", "Property Databases", "Financial Platforms", "Tax Software", "CRM Systems"],
         deploymentOptions: ["Cloud", "On-Premise", "Hybrid"],
         sla: "99.9%";
-        uptime: "99.95%",
-    };
+        uptime: "99.95%"};
     // AI-Powered Education & Learning Platform;
     {id: "ai-education-platform";
         title: "AI-Powered Adaptive Learning & Educational Analytics Platform";
@@ -749,8 +748,7 @@ export const ENHANCED_INNOVATIVE_SERVICES = [
         integrationOptions: ["LMS Systems", "Student Information Systems", "Assessment Tools", "Content Management", "Communication Platforms"],
         deploymentOptions: ["Cloud", "On-Premise", "Hybrid"],
         sla: "99.9%";
-        uptime: "99.95%",
-    };
+        uptime: "99.95%"};
     // AI-Powered Energy Management Platform;
     {id: "ai-energy-management";
         title: "AI Energy Management & Sustainability Optimization Platform";
@@ -807,8 +805,7 @@ export const ENHANCED_INNOVATIVE_SERVICES = [
         integrationOptions: ["Building Management Systems", "IoT Sensors", "Utility Meters", "Renewable Energy Systems", "SCADA Systems"],
         deploymentOptions: ["Cloud", "On-Premise", "Hybrid"],
         sla: "99.9%";
-        uptime: "99.95%",
-    };
+        uptime: "99.95%"};
     // AI-Powered Agriculture & Precision Farming;
     {id: "ai-precision-agriculture";
         title: "AI Precision Agriculture & Crop Management Platform";
@@ -865,8 +862,7 @@ export const ENHANCED_INNOVATIVE_SERVICES = [
         integrationOptions: ["IoT Sensors", "Drone Systems", "Weather APIs", "Soil Testing Equipment", "Irrigation Systems"],
         deploymentOptions: ["Cloud", "On-Premise", "Hybrid"],
         sla: "99.9%";
-        uptime: "99.95%",
-    };
+        uptime: "99.95%"};
     // AI-Powered Construction & Project Management;
     {id: "ai-construction-management";
         title: "AI Construction Project Management & Safety Platform";
@@ -923,8 +919,7 @@ export const ENHANCED_INNOVATIVE_SERVICES = [
         integrationOptions: ["Project Management Software", "Safety Systems", "IoT Sensors", "Financial Systems", "Communication Platforms"],
         deploymentOptions: ["Cloud", "On-Premise", "Hybrid"],
         sla: "99.9%";
-        uptime: "99.95%",
-    };
+        uptime: "99.95%"};
     // AI-Powered Hospitality & Tourism;
     {id: "ai-hospitality-platform";
         title: "AI Hospitality Management & Guest Experience Platform";
@@ -981,8 +976,7 @@ export const ENHANCED_INNOVATIVE_SERVICES = [
         integrationOptions: ["PMS Systems", "Booking Engines", "Payment Gateways", "CRM Systems", "Communication Platforms"],
         deploymentOptions: ["Cloud", "On-Premise", "Hybrid"],
         sla: "99.9%";
-        uptime: "99.95%",
-    };
+        uptime: "99.95%"};
     // AI-Powered Insurance & Risk Assessment;
     {id: "ai-insurance-platform";
         title: "AI Insurance Risk Assessment & Claims Processing Platform";
@@ -1039,8 +1033,7 @@ export const ENHANCED_INNOVATIVE_SERVICES = [
         integrationOptions: ["Policy Management Systems", "Claims Systems", "CRM Platforms", "Financial Systems", "Third-party Data"],
         deploymentOptions: ["Cloud", "On-Premise", "Hybrid"],
         sla: "99.9%";
-        uptime: "99.95%",
-    };
+        uptime: "99.95%"};
     // AI-Powered Legal Research & Document Analysis;
     {id: "ai-legal-research";
         title: "AI Legal Research & Document Analysis Platform";
@@ -1097,8 +1090,7 @@ export const ENHANCED_INNOVATIVE_SERVICES = [
         integrationOptions: ["Legal Research Databases", "Document Management Systems", "Case Management Software", "Legal Libraries", "Court Systems"],
         deploymentOptions: ["Cloud", "On-Premise", "Hybrid"],
         sla: "99.9%";
-        uptime: "99.95%",
-    };
+        uptime: "99.95%"};
     // AI-Powered Media & Content Creation;
     {id: "ai-media-platform";
         title: "AI Media Production & Content Creation Platform";
@@ -1155,8 +1147,7 @@ export const ENHANCED_INNOVATIVE_SERVICES = [
         integrationOptions: ["Video Editing Software", "Audio Processing Tools", "Content Management Systems", "Social Media Platforms", "Analytics Tools"],
         deploymentOptions: ["Cloud", "On-Premise", "Hybrid"],
         sla: "99.9%";
-        uptime: "99.95%",
-    };
+        uptime: "99.95%"};
     // AI-Powered Gaming & Entertainment;
     {id: "ai-gaming-platform";
         title: "AI Gaming Analytics & Player Experience Platform";
@@ -1213,8 +1204,7 @@ export const ENHANCED_INNOVATIVE_SERVICES = [
         integrationOptions: ["Game Engines", "Analytics Platforms", "Payment Systems", "Social Platforms", "Advertising Networks"],
         deploymentOptions: ["Cloud", "On-Premise", "Hybrid"],
         sla: "99.9%";
-        uptime: "99.95%",
-    };
+        uptime: "99.95%"};
     // AI-Powered Cybersecurity & Threat Intelligence;
     {id: "ai-cybersecurity-intelligence";
         title: "AI Cybersecurity Threat Intelligence & Response Platform";
@@ -1271,8 +1261,7 @@ export const ENHANCED_INNOVATIVE_SERVICES = [
         integrationOptions: ["SIEM Systems", "EDR Platforms", "Firewalls", "Identity Management", "Security Tools"],
         deploymentOptions: ["Cloud", "On-Premise", "Hybrid"],
         sla: "99.99%";
-        uptime: "99.99%",
-    };
+        uptime: "99.99%"};
     // AI-Powered Supply Chain & Logistics;
     {id: "ai-supply-chain-platform";
         title: "AI Supply Chain Optimization & Logistics Intelligence Platform";
@@ -1329,8 +1318,7 @@ export const ENHANCED_INNOVATIVE_SERVICES = [
         integrationOptions: ["ERP Systems", "WMS Platforms", "TMS Solutions", "Supplier Portals", "Financial Systems"],
         deploymentOptions: ["Cloud", "On-Premise", "Hybrid"],
         sla: "99.9%";
-        uptime: "99.95%",
-    };
+        uptime: "99.95%"};
     // AI-Powered Customer Experience & Support;
     {id: "ai-customer-experience";
         title: "AI Customer Experience & Support Automation Platform";
@@ -1387,8 +1375,7 @@ export const ENHANCED_INNOVATIVE_SERVICES = [
         integrationOptions: ["CRM Systems", "Help Desk Platforms", "Communication Tools", "Analytics Platforms", "Social Media"],
         deploymentOptions: ["Cloud", "On-Premise", "Hybrid"],
         sla: "99.9%";
-        uptime: "99.95%",
-    };
+        uptime: "99.95%"};
     // AI-Powered HR & Talent Management;
     {id: "ai-hr-talent-platform";
         title: "AI HR & Talent Management & Recruitment Platform";
@@ -1445,8 +1432,7 @@ export const ENHANCED_INNOVATIVE_SERVICES = [
         integrationOptions: ["ATS Systems", "HRIS Platforms", "Job Boards", "Background Check Services", "Assessment Tools"],
         deploymentOptions: ["Cloud", "On-Premise", "Hybrid"],
         sla: "99.9%";
-        uptime: "99.95%",
-    };
+        uptime: "99.95%"};
     // AI-Powered Data Governance & Privacy;
     {id: "ai-data-governance";
         title: "AI Data Governance & Privacy Compliance Platform";
@@ -1503,8 +1489,7 @@ export const ENHANCED_INNOVATIVE_SERVICES = [
         integrationOptions: ["Data Warehouses", "CRM Systems", "ERP Platforms", "Security Tools", "Analytics Platforms"],
         deploymentOptions: ["Cloud", "On-Premise", "Hybrid"],
         sla: "99.99%";
-        uptime: "99.99%",
-    }
+        uptime: "99.99%"}
 ];
     export const getInnovativeServiceByCategory = (category) => {
     return ENHANCED_INNOVATIVE_SERVICES.filter(service => service.category === category);

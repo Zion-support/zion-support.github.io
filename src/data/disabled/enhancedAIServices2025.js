@@ -55,6 +55,9 @@ export const enhancedAIServices2025 = [
         industrySpecific: true,
     };
     {id: 2;
+        industrySpecific: true};
+    {
+        id: 2;
         name: "NLP Genius";
         category: "Natural Language Processing";
         pricing: "Tiered";
@@ -109,6 +112,9 @@ export const enhancedAIServices2025 = [
         industrySpecific: true,
     };
     {id: 3;
+        industrySpecific: true};
+    {
+        id: 3;
         name: "Predictive Analytics Pro";
         category: "Predictive Analytics";
         pricing: "Enterprise";
@@ -163,6 +169,9 @@ export const enhancedAIServices2025 = [
         industrySpecific: true,
     };
     {id: 4;
+        industrySpecific: true};
+    {
+        id: 4;
         name: "AI Chatbot Studio";
         category: "Conversational AI";
         pricing: "Freemium";
@@ -217,6 +226,9 @@ export const enhancedAIServices2025 = [
         industrySpecific: true,
     };
     {id: 5;
+        industrySpecific: true};
+    {
+        id: 5;
         name: "AI Content Creator";
         category: "Content Generation";
         pricing: "Usage-based";
@@ -271,6 +283,9 @@ export const enhancedAIServices2025 = [
         industrySpecific: true,
     };
     {id: 6;
+        industrySpecific: true};
+    {
+        id: 6;
         name: "AI Data Scientist";
         category: "Data Science";
         pricing: "Enterprise";
@@ -325,6 +340,9 @@ export const enhancedAIServices2025 = [
         industrySpecific: true,
     };
     {id: 7;
+        industrySpecific: true};
+    {
+        id: 7;
         name: "AI Voice Assistant";
         category: "Voice AI";
         pricing: "Tiered";
@@ -379,6 +397,9 @@ export const enhancedAIServices2025 = [
         industrySpecific: true,
     };
     {id: 8;
+        industrySpecific: true};
+    {
+        id: 8;
         name: "AI Recommendation Engine";
         category: "Recommendation Systems";
         pricing: "Usage-based";
@@ -433,6 +454,9 @@ export const enhancedAIServices2025 = [
         industrySpecific: true,
     };
     {id: 9;
+        industrySpecific: true};
+    {
+        id: 9;
         name: "AI Fraud Detection";
         category: "Security AI";
         pricing: "Enterprise";
@@ -487,6 +511,9 @@ export const enhancedAIServices2025 = [
         industrySpecific: true,
     };
     {id: 10;
+        industrySpecific: true};
+    {
+        id: 10;
         name: "AI Process Automation";
         category: "Process Automation";
         pricing: "Tiered";
@@ -538,7 +565,6 @@ export const enhancedAIServices2025 = [
         scalability: "Enterprise-grade";
         realTimeProcessing: true;
         multilingualSupport: false;
-        industrySpecific: true,
-    }
+        industrySpecific: true}
 ];
     export default enhancedAIServices2025;

@@ -12,6 +12,8 @@ announceToScreenReader: (message: string) => void;
 }
 }
 };
+focusTrap: (element: HTMLElement | null) => void;,
+announceToScreenReader: (message: string) => void;};
 const AccessibilityContext = createContext<AccessibilityContextType | undefined>(undefined);
 
 export const useAccessibility: any = () => {;
@@ -27,10 +29,11 @@ children: ReactNode;
 }
 }
 };
+children: ReactNode;};
 export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ children }) => {;
-const [isHighContrast; setIsHighContrast] = useState(false);
-const [isReducedMotion; setIsReducedMotion] = useState(false);
-const [isLargeText; setIsLargeText] = useState(false);
+const [isHighContrast, setIsHighContrast] = useState(false);
+const [isReducedMotion, setIsReducedMotion] = useState(false);
+const [isLargeText, setIsLargeText] = useState(false);
 
 // Check for user preferences on mount;
 useEffect(() => {

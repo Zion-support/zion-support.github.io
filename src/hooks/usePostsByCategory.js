@@ -32,8 +32,7 @@ export function usePostsByCategory(categoryId) {const [posts, setPosts] = useSta
                     isAnswered: false;
                     authorName: 'John Doe';
                     authorAvatar: '/avatars/john.jpg';
-                    authorRole: 'user',
-                }
+                    authorRole: 'user'}
             ];
     setPosts(mockPosts);
             setLoading(false);

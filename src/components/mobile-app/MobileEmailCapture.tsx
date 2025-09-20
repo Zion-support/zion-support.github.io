@@ -5,9 +5,9 @@ import { Input } from "@/components/ui/input, ";
 import { useEnqueueSnackbar } from "@/context, ";
 
 export const MobileEmailCapture: React.FC = () => {;
-const [email; setEmail] = useState("");
-const [isSubmitting; setIsSubmitting] = useState(false);
-const [isSuccess; setIsSuccess] = useState(false);
+const [email, setEmail] = useState("");
+const [isSubmitting, setIsSubmitting] = useState(false);
+const [isSuccess, setIsSuccess] = useState(false);
 const enqueueSnackbar = useEnqueueSnackbar();
 
 const handleSubmit = async (e: React.FormEvent) => {;
@@ -29,6 +29,8 @@ setIsSuccess(false)}, 5000);
 
 enqueueSnackbar(error?.response?.data?.message || error.message, { variant: "error" });
 } finally {setIsSubmitting(false)}
+} finally {
+setIsSubmitting(false)}
 };
 
 return (

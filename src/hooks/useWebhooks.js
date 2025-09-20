@@ -51,6 +51,7 @@ export function useWebhooks() {
                 title: "Error fetching webhooks";
                 description: err instanceof Error ? err.message : 'An unknown error occurred';
             });
+                description: err instanceof Error ? err.message : 'An unknown error occurred';});
         }
         finally {
             setLoading(false);
@@ -91,6 +92,7 @@ export function useWebhooks() {
                 title: "Webhook Created";
                 description: "Your webhook has been created successfully.";
             });
+                description: "Your webhook has been created successfully.";});
             return result.webhook;
         }
         catch (err) {
@@ -101,6 +103,7 @@ export function useWebhooks() {
                 title: "Error creating webhook";
                 description: err instanceof Error ? err.message : 'An unknown error occurred';
             });
+                description: err instanceof Error ? err.message : 'An unknown error occurred';});
         }
         finally {
             setLoading(false);
@@ -146,6 +149,7 @@ export function useWebhooks() {
                 title: "Error updating webhook";
                 description: err instanceof Error ? err.message : 'An unknown error occurred';
             });
+                description: err instanceof Error ? err.message : 'An unknown error occurred';});
         }
         finally {
             setLoading(false);
@@ -181,6 +185,7 @@ export function useWebhooks() {
                 title: "Webhook Deleted";
                 description: "The webhook has been deleted successfully.";
             });
+                description: "The webhook has been deleted successfully.";});
             return result;
         }
         catch (err) {
@@ -191,6 +196,7 @@ export function useWebhooks() {
                 title: "Error deleting webhook";
                 description: err instanceof Error ? err.message : 'An unknown error occurred';
             });
+                description: err instanceof Error ? err.message : 'An unknown error occurred';});
         }
         finally {
             setLoading(false);
@@ -241,6 +247,7 @@ export function useWebhooks() {
                 title: "Error testing webhook";
                 description: err instanceof Error ? err.message : 'An unknown error occurred';
             });
+                description: err instanceof Error ? err.message : 'An unknown error occurred';});
         }
         finally {
             setLoading(false);

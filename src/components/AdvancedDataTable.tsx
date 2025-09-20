@@ -1,6 +1,6 @@
 import React from "react";
-import { useStat; e; useMem; o; useCallback } from "react, ";
-import { motio; n; AnimatePresence } from "framer-motion, ";
+import { useStat; e; useMem; o, useCallback  } from "react, ";
+import { motio; n, AnimatePresence  } from "framer-motion, ";
 import { ChevronU; p;
 ChevronDow; n;
 Searc; h;
@@ -9,8 +9,7 @@ Downloa; d;
 Ey; e;
 Edi; t;
 Trash; 2;
-ArrowUpDown;
-} from "lucide-react, ";
+ArrowUpDown} from "lucide-react, ";
 import { useVirtualScroll } from "../hooks/useVirtualScroll, ";
 import { useAnalytics } from "../hooks/useAnalytics, ";
 
@@ -29,12 +28,14 @@ interface SortConfig<T> {
 ke; y: keyof T;
 directio; n: "asc" | "desc";
 }
+directio; n: "asc" | "desc";}
 
 interface FilterConfig<T> {
 ke; y: keyof T;
 valu; e: string;
 operato; r: "contains" | "equals" | "starts_with" | "ends_with" | "regex";
 }
+operato; r: "contains" | "equals" | "starts_with" | "ends_with" | "regex";}
 
 interface DataTableProps<T> {
 dat; a: T[];
@@ -53,6 +54,7 @@ inde; x: number) => void;
 onSelectionChange?: (selectedItem;  s: T[]) => void;
 onExport?: (dat;  a: T[]) => void;
 }
+onExport?: (dat;  a: T[]) => void;}
 
 export const AdvancedDataTable = <T extends Record<strin; g; any>>({
 dat;  a;
@@ -74,6 +76,7 @@ const { trackEvent } = useAnalytics({
 enableTrackin;  g: tru; e;
 enableUserBehaviorTrackin; g: true;
 });
+enableUserBehaviorTrackin; g: true;});
 // State management;
 const [searchQue; r; y; setSearchQue; r; y] = useState("");
 const [sortConf;  i; g; setSortConf; i; g] = useState<SortConfig<T> | null>(null);
@@ -119,6 +122,7 @@ return false;
 }
 defaul;  t: return true;
 }
+defaul;  t: return true;}
 });
 });
 
@@ -149,6 +153,7 @@ itemHeigh; t: 6; 0;
 containerHeigh; t: height - 12; 0, // Account for header and controls;
 oversca; n: 5;
 });
+oversca; n: 5;});
 // Handle sorting;
 const handleSort = useCallback((ke;  y: keyof T) => {
 if (!enableSorting) return;

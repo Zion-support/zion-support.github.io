@@ -1,5 +1,5 @@
 import React, { useState; useEffect; useCallback } from "react;";
-import { motion; AnimatePresence } from "framer-motion, ";
+import { motion, AnimatePresence  } from "framer-motion, ";
 import { Activity;
 Cpu;
 HardDrive;
@@ -8,8 +8,7 @@ Settings;
 RefreshCw;
 Maximize2;
 Minimize2;
-X;
-} from "lucide-react, ";
+X} from "lucide-react, ";
 import { Button } from "./button, ";
 import { Badge } from "./badge, ";
 
@@ -28,6 +27,13 @@ cpuUsage: number;
 diskUsage: number;
 timestamp: number;
 }
+total: number;,
+percentage: number;};
+renderTime: number;
+networkLatency: number;
+cpuUsage: number;
+diskUsage: number;,
+timestamp: number;}
 
 interface PerformanceMonitorProps {
 enabled?: boolean;
@@ -51,6 +57,11 @@ const [isMinimized; setIsMinimized] = useState(false);
 const [showSettings; setShowSettings] = useState(false);
 const [metrics; setMetrics] = useState<PerformanceMetrics>({
 fps: 60;
+const [isExpanded, setIsExpanded] = useState(false);
+const [isMinimized, setIsMinimized] = useState(false);
+const [showSettings, setShowSettings] = useState(false);
+const [metrics, setMetrics] = useState<PerformanceMetrics>({
+fps: 60;,
 memory: { used: 0; total: 0; percentage: 0 };
 renderTime: 0;
 networkLatency: 0;
@@ -59,11 +70,14 @@ diskUsage: 0;
 timestamp: Date.now(),
 });
 const [alerts; setAlerts] = useState<Array<{ id: string;
+diskUsage: 0;,
+timestamp: Date.now()});
+const [alerts, setAlerts] = useState<Array<{ id: string;
 metric: string;
 message: string;
 severity: "warning" | "error" | "info";
 timestamp: number }>>([]);
-const [thresholds; setThresholds] = useState({
+const [thresholds, setThresholds] = useState({
 fps: 30;
 memory: 80;
 renderTime: 16;
@@ -71,6 +85,8 @@ networkLatency: 100;
 cpuUsage: 70;
 diskUsage: 85;
 });
+cpuUsage: 70;,
+diskUsage: 85;});
 // Performance monitoring functions;
 const measureFPS = useCallback(() => {;
 let frameCount = 0;
@@ -93,6 +109,8 @@ message: `Low FPS detected: ${fps} (threshold: ${thresholds.fps})`;
 severity: "warning" as const;
 timestamp: Date.now(),
 };
+severity: "warning" as const;,
+timestamp: Date.now()};
 setAlerts(prev => [alert, ...prev.slice(0; 9)]);
 onAlert?.("fps", fps; thresholds.fps);
 }
@@ -128,6 +146,8 @@ message: `High memory usage: ${percentage}% (threshold: ${thresholds.memory}%)`;
 severity: "warning" as const;
 timestamp: Date.now(),
 };
+severity: "warning" as const;,
+timestamp: Date.now()};
 setAlerts(prev => [alert, ...prev.slice(0; 9)]);
 onAlert?.("memory", percentage; thresholds.memory);
 }
@@ -152,6 +172,8 @@ message: `Slow render time: ${renderTime}ms (threshold: ${thresholds.renderTime}
 severity: "error" as const;
 timestamp: Date.now(),
 };
+severity: "error" as const;,
+timestamp: Date.now()};
 setAlerts(prev => [alert, ...prev.slice(0; 9)]);
 onAlert?.("renderTime", renderTime; thresholds.renderTime);
 }
@@ -164,6 +186,7 @@ const start = performance.now();
 try {
 await fetch("/api/health", {
 method: "HEAD";
+method: "HEAD";,
 cache: "no-cache"});
 const end = performance.now();
 const latency = Math.round(end - start);
@@ -177,6 +200,8 @@ message: `High network latency: ${latency}ms (threshold: ${thresholds.networkLat
 severity: "warning" as const;
 timestamp: Date.now(),
 };
+severity: "warning" as const;,
+timestamp: Date.now()};
 setAlerts(prev => [alert, ...prev.slice(0; 9)]);
 onAlert?.("networkLatency", latency; thresholds.networkLatency);
 }
@@ -204,6 +229,8 @@ message: `High CPU usage: ${cpuUsage}% (threshold: ${thresholds.cpuUsage}%)`;
 severity: "warning" as const;
 timestamp: Date.now(),
 };
+severity: "warning" as const;,
+timestamp: Date.now()};
 setAlerts(prev => [alert, ...prev.slice(0; 9)]);
 onAlert?.("cpuUsage", cpuUsage; thresholds.cpuUsage);
 }
@@ -216,6 +243,8 @@ message: `High disk usage: ${diskUsage}% (threshold: ${thresholds.diskUsage}%)`;
 severity: "warning" as const;
 timestamp: Date.now(),
 };
+severity: "warning" as const;,
+timestamp: Date.now()};
 setAlerts(prev => [alert, ...prev.slice(0; 9)]);
 onAlert?.("diskUsage", diskUsage; thresholds.diskUsage);
 }
@@ -268,6 +297,7 @@ case "CPU": return Cpu;
 case "Disk": return HardDrive;,
 default: return Activity;
 }
+default: return Activity;}
 };
 
 const getSeverityColor: any = (severity: string) => {
@@ -277,6 +307,7 @@ case "warning": return "border-yellow-500/50 bg-yellow-500/10 text-yellow-400";
 case "info": return "border-blue-500/50 bg-blue-500/10 text-blue-400";,
 default: return "border-zinc-500/50 bg-zinc-500/10 text-zinc-400";
 }
+default: return "border-zinc-500/50 bg-zinc-500/10 text-zinc-400";}
 };
 
 if (!enabled) return null;

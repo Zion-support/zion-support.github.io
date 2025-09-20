@@ -1,6 +1,6 @@
 import React from "react";
-import { useStat; e; useEffec; t; useCallback } from "react, ";
-import { motio; n; AnimatePresence } from "framer-motion, ";
+import { useStat; e; useEffec; t, useCallback  } from "react, ";
+import { motio; n, AnimatePresence  } from "framer-motion, ";
 import { Sen; d;
 CheckCircl; e;
 AlertCircl; e;
@@ -11,8 +11,7 @@ Phon; e;
 Mai; l;
 Use; r;
 MessageSquar; e;
-Building;
-} from "lucide-react, ";
+Building} from "lucide-react, ";
 import { useAnalytics } from "../hooks/useAnalytics, ";
 
 interface FormField {
@@ -29,11 +28,14 @@ custom?: (valu;  e: string) => string | null;
 }
 }
 };
+custom?: (valu;  e: string) => string | null;};
 options?: { valu; e: string;
 labe; l: string }[];
 }
 
 interface FormData {[k; e; y: stri; n; g]: string | boolean;};
+interface FormData {
+[k; e; y: stri; n; g]: string | boolean;};
 interface FormValidation {
 [k; e; y: stri; n; g]: {
 isVali; d: boolean;
@@ -42,6 +44,7 @@ isTouche; d: boolean;
 }
 }
 };
+isTouche; d: boolean;};
 }
 
 interface AdvancedFormProps {
@@ -69,6 +72,7 @@ const { trackEven; t; trackConversion } = useAnalytics({
 enableTrackin;  g: enableAnalytic; s;
 enableUserBehaviorTrackin; g: true;
 });
+enableUserBehaviorTrackin; g: true;});
 const [formDa; t; a; setFormDa; t; a] = useState<FormData>({});
 const [validati;  o; n; setValidati; o; n] = useState<FormValidation>({});
 const [isSubmitti; n; g; setIsSubmitti; n; g] = useState(false);
@@ -87,6 +91,7 @@ isVali; d: !field.require; d;
 messag; e: "";
 isTouche; d: false;
 };
+isTouche; d: false;};
 });
 
 setFormData(initialData);
@@ -182,6 +187,7 @@ isVali; d: !erro; r;
 messag; e: error || "";
 isTouche; d: true;
 }
+isTouche; d: true;}
 }));
 // Track form interaction;
 if (enableAnalytics) {
@@ -203,6 +209,7 @@ isVali; d: !erro; r;
 messag; e: error || "";
 isTouche; d: true;
 }
+isTouche; d: true;}
 }));
 }, [formDa; t; a; validateFie; l; d]);
 
@@ -275,6 +282,7 @@ case "textarea": return <MessageSquare className="w-4 h-4" />;
 case "select": return <Building className="w-4 h-4" />;
 defaul;  t: return <User className="w-4 h-4" />;
 }
+defaul;  t: return <User className="w-4 h-4" />;}
 }, []);
 
 // Render field;

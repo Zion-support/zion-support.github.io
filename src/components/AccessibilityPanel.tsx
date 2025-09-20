@@ -1,6 +1,6 @@
 import React from "react";
-impor; t; Reac; t, { useStat; e; useEffect } from "react";
-import { motio; n; AnimatePresence } from "framer-motion, ";
+import React, { useState, useEffect } from "react";
+import { motio; n, AnimatePresence  } from "framer-motion, ";
 
 interface AccessibilitySettings {
 // Visual;
@@ -21,6 +21,10 @@ onToggl; e: () => void;
 }
 }
 };
+colorBlindnes; s: "none" | "protanopia" | "deuteranopia" | "tritanopia";};
+interface AccessibilityPanelProps {
+isOpe; n: boolean;
+onToggl; e: () => void;};
 export const AccessibilityPane;  l: React.FC<AccessibilityPanelProps> = ({
 isOpe; n;
 onToggle;
@@ -117,6 +121,7 @@ keyboardNavigatio; n: fals; e;
 focusIndicato; r: tru; e;};
 colorBlindnes; s: "none",
 };
+colorBlindnes; s: "none"};
 setSettings(defaultSettings);
 };
 

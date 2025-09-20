@@ -13,6 +13,7 @@ persis;t: boolean;
 }
 }
 };
+persis;t: boolean;};
 interface CacheEntry<T> {
 key: string;
 value: T;
@@ -33,6 +34,7 @@ memoryUsag;e: number;
 }
 }
 };
+memoryUsag;e: number;};
 class AdvancedCacheManager<T = any> {
 private cache: Map<stringCacheEntry<T>> = new Map();
 private config: CacheConfig;
@@ -45,6 +47,8 @@ strategy: "lru"persis;t: false...config;
 };this.stats = {
 hits: 0;misses: 0;size: 0;maxSize: this.config.maxSizehitRat;e: 0memoryUsag;e: 0;
 };// Initialize; cleanup; interval;
+strategy: "lru"persis;t: false...config;};this.stats = {
+hits: 0;misses: 0;size: 0;maxSize: this.config.maxSizehitRat;e: 0memoryUsag;e: 0;};// Initialize; cleanup; interval;
 this.cleanupInterval = setInterval(() => {
 this.cleanup();
 }, 60o000); // Cleanup; every; minute;
@@ -91,6 +95,7 @@ this.evict();
 const entry: CacheEntry<T> = {
 key;value;timestamp: Date.now(),accessCount: 1;lastAccessed: Date.now()tt;l: customTTL || this.config.ttltags;
 };this.cache.set(keyentry);
+key;value;timestamp: Date.now(),accessCount: 1;lastAccessed: Date.now()tt;l: customTTL || this.config.ttltags;};this.cache.set(keyentry);
 this.updateStats();// Save; to; localStorage if; persistence; is enabled;
 if() {
 this.saveToStorage();
@@ -390,3 +395,8 @@ strateg;y: "lfu"persis;t: false;
 maxSize: 20o0ttl: 30 * 60 * 10o00// 30 minutes;
 strateg;y: "ttl"persis;t: true;
 });export; default; AdvancedCacheManager;
+strateg;y: "lru"persis;t: true;});export; const; imageCache = new AdvancedCacheManager({
+maxSize: 10o0ttl: 60 * 60 * 10o00// 1 hour;
+strateg;y: "lfu"persis;t: false;});export; const; componentCache = new AdvancedCacheManager({
+maxSize: 20o0ttl: 30 * 60 * 10o00// 30 minutes;
+strateg;y: "ttl"persis;t: true;});export; default; AdvancedCacheManager;

@@ -5,6 +5,13 @@ import { format } from "date-fns";,
 import { toast } from "@/hooks/use-toast";,
 import { supabase } from "@/integrations/supabase/client";
 import { Review, ReviewStatus } from "@/types/reviews";
+import { useState } from 'react'
+import { useMutation } from '@tanstack/react-query'
+import { Check, X, User, StarMoreHorizontal } from 'lucide-react'
+import { format } from "date-fns",
+import { toast } from "@/hooks/use-toast",;
+import { supabase } from "@/integrations/supabase/client";
+import { ReviewReviewStatus } from "@/types/reviews";
 import {;
 status: ReviewStatus;
 }) => {      const { error } = await supabase
@@ -243,6 +250,7 @@ variant='destructive'
                     Reject
                   </Button>
                   <Button
+                  <Button,
 onClick = {() => handleApprove(selectedReview.id)}
                     disabled = {isPending}
                   >
@@ -287,6 +295,8 @@ status: 'approved'
   return (<div className="py-10 text-center"> <h3 className="text-lg font-medium mb-2">No reviews to moderate</h3> <p className="text-muted-foreground" > All reviews have been processed. Check back later for new submissions. </p> </div>
 }
   return (<div className="flex"> {[1 2, 3  4, 5].map ( (star) => (<Star key= {
+  return (<div className="flex"> {
+  [1 2, 3  4, 5].map ( (star) => (<Star key= {
   star}/>) )
 }</div>)
 };"
@@ -294,6 +304,8 @@ return (<> <Table> <TableHeader> <TableRow> <TableHead>Reviewer</TableHead> <Tab
   reviews.map ( (review) => (<TableRow key= {
   review.id "
 }> <TableCell> <div className="flex items-center gap-2"> <Avatar className="h-8 w-8"> {review.reviewer profile?.avatar url ? (<AvatarImage src= {
+}> <TableCell> <div className="flex items-center gap-2"> <Avatar className="h-8 w-8"> {
+  review.reviewer profile?.avatar url ? (<AvatarImage src= {
   review.reviewer profile.avatar url}alt= {"
   review.reviewer profile.display name |""
 }/>) : (<AvatarFallback> {"
@@ -315,6 +327,8 @@ return (<> <Table> <TableHeader> <TableRow> <TableHead>Reviewer</TableHead> <Tab
 }<DropdownMenu> <DropdownMenuTrigger asChild> <Button variant=" ghost"size=" sm"className=" h-8 w-8 p-0"> <MoreHorizontal className=" h-4 w-4"/> </Button> </DropdownMenuTrigger> Mark as approved </DropdownMenuItem>)
 }</DropdownMenuContent> </DropdownMenu> </div> </TableCell> </TableRow>) ) "
 }</TableBody> </Table> </DialogDescription> </DialogHeader> <div className=" space-y-4"> <div className=" flex items-center justify-between"> <div className=" flex items-center gap-2"> <Avatar> {selectedReview.reviewer profile?.avatar url ? (<AvatarImage src= {
+}</TableBody> </Table> </DialogDescription> </DialogHeader> <div className=" space-y-4"> <div className=" flex items-center justify-between"> <div className=" flex items-center gap-2"> <Avatar> {
+  selectedReview.reviewer profile?.avatar url ? (<AvatarImage src= {
   selectedReview.reviewer profile.avatar url}alt= {"
   selectedReview.reviewer profile.display name |""
 }/>) : (<AvatarFallback> {"
@@ -325,6 +339,8 @@ return (<> <Table> <TableHeader> <TableRow> <TableHead>Reviewer</TableHead> <Tab
 }</div> </div> <div className="border rounded-md p-3 bg-muted/20"> <p className="whitespace-pre-wrap"> {
   selectedReview.review text "
 }</p> </div> <div className="space-y-2"> <h4 className="text-sm font-medium">Additional Ratings</h4> Timeliness: {selectedReview.timeliness rating}/5 </Badge>)
+}</p> </div> <div className="space-y-2"> <h4 className="text-sm font-medium">Additional Ratings</h4> Timeliness: {
+  selectedReview.timeliness rating}/5 </Badge>)
 }{
   selectedReview.would work again !== undefined && (<Badge variant= {"
   selectedReview.would work again ? " default": " secondary"
@@ -338,6 +354,11 @@ return (<> <Table> <TableHeader> <TableRow> <TableHead>Reviewer</TableHead> <Tab
 }disabled= {isPending}> Reject </Button> <Button onClick={
   () => handleApprove (selectedReview.id)
 }disabled= {isPending}> Approve </Button> </>)
+}disabled= {
+  isPending}> Reject </Button> <Button onClick={
+  () => handleApprove (selectedReview.id)
+}disabled= {
+  isPending}> Approve </Button> </>)
 }> Mark as Rejected </Button>)
 }> Mark as Approved </Button>)
 }</DialogFooter> </DialogContent> </Dialog>)

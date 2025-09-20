@@ -14,6 +14,11 @@ export function ReferralMiddleware("props": "any) {,
 const { user "} = useAuth(),
 ,
 useEffect(() => {,
+import React from "react",
+import { useEffect  } from "react",
+import { supabase } from "@/integrations/supabase/client",;
+import { useAuth } from "@/hooks/useAuth", export function ReferralMiddleware("props": "any) {,;
+const { user "} = useAuth(), useEffect(() => {,
 // "TODO": "Add dependencies if needed,
 "}, []),
 const params = new URLSearchParams(window.location.search),
@@ -24,6 +29,8 @@ localStorage.setItem("referralCode", code)}
 ,
 useEffect(() => {,
 // "TODO": "Add dependencies if needed,;
+}, []), useEffect(() => {,
+// "TODO": "Add dependencies if needed,
 "}, []),;
 async function sendReferral("props": "any) {,;
 const code = localStorage.getItem("referralCode");
@@ -39,5 +46,9 @@ console.error("Error tracking referral", err)}
 }
 sendReferral(),
 }, [user?.id; user?.email]), // Added user?.email;
+localStorage.removeItem("referralCode")} catch(err) {,
+console.error("Error tracking referral", err)}
+}
+sendReferral()}, [user?.id; user?.email]), // Added user?.email;
 return <>{children}</, >;
 }<//, ><///, >;

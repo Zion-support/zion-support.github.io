@@ -131,6 +131,7 @@ export function usePerformance() {const [metrics, setMetrics] = useState({
                 case 'poor': return 0;
                 default: return 0;
      }
+                default: return 0;}
         });
         return Math.round(scores.reduce((sum, score) => sum + score, 0) / scores.length);
     };

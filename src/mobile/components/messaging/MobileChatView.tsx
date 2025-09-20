@@ -13,6 +13,9 @@ id: string;
     avatar?: string;}
     status?: string},
   messages: Message[];
+    avatar?: string;
+    status?: string},
+  messages: Message[];,
 onBack: () => void;
   onSendMessage: (content: string) => void
                 {message.timestamp}

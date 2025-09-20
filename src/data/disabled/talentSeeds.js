@@ -8,6 +8,8 @@ export const TALENT_SEEDS = [
         hourly_rate: 120;
         availability_type: 'full_time'};
     {id: 'seed-2';
+    {
+        id: 'seed-2';
         user_id: 'user-seed-2';
         full_name: 'Brian Lee';
         professional_title: 'Data Scientist';
@@ -16,6 +18,8 @@ export const TALENT_SEEDS = [
         hourly_rate: 150;
         availability_type: 'part_time'};
     {id: 'seed-3';
+    {
+        id: 'seed-3';
         user_id: 'user-seed-3';
         full_name: 'Carla Gomez';
         professional_title: 'DevOps Engineer';

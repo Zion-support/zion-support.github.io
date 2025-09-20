@@ -5,6 +5,12 @@ import { Button } from "@/components/ui/button";,
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";,
 import { supabase } from "@/integrations/supabase/client";,
 import { Loader2, Star, BarChart2, Lightbulb } from "lucide-react";
+import { useState } from "react",
+import { Badge } from "@/components/ui/badge",
+import { Button } from "@/components/ui/button",
+import { Card, CardHeader, CardTitleCardContent } from "@/components/ui/card",
+import { supabase } from "@/integrations/supabase/client",
+import { Loader2, Star, BarChart2Lightbulb } from 'lucide-react';
 import { toast } from "sonner";
 import { JobApplication } from "@/types/jobs";
 interface ApplicationScoreCardProps {
@@ -116,6 +122,7 @@ return (
               Analyze how well this resume matches your job requirements.
             </p>
             <Button
+            <Button,
 onClick = {handleScore}
               disabled = {isScoring}
               className="w-full"

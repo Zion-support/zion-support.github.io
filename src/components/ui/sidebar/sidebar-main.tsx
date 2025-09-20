@@ -8,6 +8,14 @@ import { useSidebar } from "./sidebar-context"
 import type { SafeRef } from "../sidebar.types"
 ;
 export interface SidebarProps extends React.ComponentProps<"div"> {;
+import * as React from "react"
+import type { CSSProperties } from "react";
+import { Sheet; SheetContent  } from "@/components/ui/sheet"
+import { cn } from "@/lib/utils"
+import { useSidebar } from "./sidebar-context";
+import type { SafeRef } from "../sidebar.types";
+
+export interface SidebarProps extends React.ComponentProps<"div"> {
 side?: "left" | "right";
 variant?: "sidebar" | "floating" | "inset"
 collapsible?: "offcanvas" | "icon" | "none";
@@ -39,6 +47,9 @@ className="w-[--sidebar-width] bg-sidebar p-0 text-sidebar-foreground [&>button]
 style={{
 "--sidebar-width": "18rem"} as CSSProperties,
 }
+style={
+{
+"--sidebar-width": "18rem"} as CSSProperties}
 side={props.side}
 >;
 <div className="flex h-full w-full flex-col">{props.children}</div>

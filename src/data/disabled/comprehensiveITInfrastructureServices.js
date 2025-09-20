@@ -54,8 +54,7 @@ export const COMPREHENSIVE_IT_INFRASTRUCTURE_SERVICES = [
         competitors: ["AWS EKS", "Azure AKS", "Google GKE", "Red Hat OpenShift"],
         uniqueValue: "Unified multi-cloud management with automated optimization and cost control";
         sla: "99.99% uptime with 4-hour response time";
-        uptime: "99.99%",
-    };
+        uptime: "99.99%"};
     // Edge Computing Infrastructure;
     {id: "edge-computing-infrastructure";
         title: "Edge Computing Infrastructure Platform";
@@ -111,8 +110,7 @@ export const COMPREHENSIVE_IT_INFRASTRUCTURE_SERVICES = [
         competitors: ["AWS Greengrass", "Azure IoT Edge", "Google Cloud IoT", "IBM Edge"],
         uniqueValue: "Comprehensive edge infrastructure with 5G optimization and AI deployment";
         sla: "99.9% uptime with 2-hour response time";
-        uptime: "99.9%",
-    };
+        uptime: "99.9%"};
     // Hybrid Cloud Management;
     {id: "hybrid-cloud-management-platform";
         title: "Hybrid Cloud Management Platform";
@@ -168,8 +166,7 @@ export const COMPREHENSIVE_IT_INFRASTRUCTURE_SERVICES = [
         competitors: ["VMware vCloud", "Microsoft Azure Stack", "AWS Outposts", "Google Anthos"],
         uniqueValue: "Unified hybrid cloud management with automated optimization and compliance";
         sla: "99.95% uptime with 6-hour response time";
-        uptime: "99.95%",
-    };
+        uptime: "99.95%"};
     // Network Security Infrastructure;
     {id: "network-security-infrastructure";
         title: "Advanced Network Security Infrastructure";
@@ -225,8 +222,7 @@ export const COMPREHENSIVE_IT_INFRASTRUCTURE_SERVICES = [
         competitors: ["Cisco", "Palo Alto Networks", "Fortinet", "Check Point"],
         uniqueValue: "Comprehensive network security with AI-powered threat detection and response";
         sla: "99.99% uptime with 1-hour response time";
-        uptime: "99.99%",
-    };
+        uptime: "99.99%"};
     // Data Center Infrastructure;
     {id: "data-center-infrastructure";
         title: "Modern Data Center Infrastructure";
@@ -282,8 +278,7 @@ export const COMPREHENSIVE_IT_INFRASTRUCTURE_SERVICES = [
         competitors: ["Equinix", "Digital Realty", "CoreSite", "Cyxtera"],
         uniqueValue: "Modern data center infrastructure with energy efficiency and automation";
         sla: "99.999% uptime with 4-hour response time";
-        uptime: "99.999%",
-    };
+        uptime: "99.999%"};
     // Storage Infrastructure;
     {id: "storage-infrastructure-platform";
         title: "Enterprise Storage Infrastructure Platform";
@@ -339,8 +334,7 @@ export const COMPREHENSIVE_IT_INFRASTRUCTURE_SERVICES = [
         competitors: ["NetApp", "EMC", "Pure Storage", "HPE", "Dell"],
         uniqueValue: "Intelligent storage infrastructure with automated optimization and management";
         sla: "99.9% uptime with 4-hour response time";
-        uptime: "99.9%",
-    };
+        uptime: "99.9%"};
     // Backup and Disaster Recovery;
     {id: "backup-disaster-recovery-platform";
         title: "Comprehensive Backup & Disaster Recovery Platform";
@@ -396,8 +390,7 @@ export const COMPREHENSIVE_IT_INFRASTRUCTURE_SERVICES = [
         competitors: ["Veeam", "Commvault", "Rubrik", "Cohesity", "Dell EMC"],
         uniqueValue: "Comprehensive backup and recovery with automated testing and compliance";
         sla: "99.9% uptime with 2-hour response time";
-        uptime: "99.9%",
-    };
+        uptime: "99.9%"};
     // Network Monitoring Infrastructure;
     {id: "network-monitoring-infrastructure";
         title: "Advanced Network Monitoring Infrastructure";
@@ -453,8 +446,7 @@ export const COMPREHENSIVE_IT_INFRASTRUCTURE_SERVICES = [
         competitors: ["SolarWinds", "PRTG", "Nagios", "Zabbix", "Datadog"],
         uniqueValue: "Intelligent network monitoring with AI-powered analytics and automation";
         sla: "99.9% uptime with 4-hour response time";
-        uptime: "99.9%",
-    };
+        uptime: "99.9%"};
     // Virtualization Infrastructure;
     {id: "virtualization-infrastructure-platform";
         title: "Enterprise Virtualization Infrastructure Platform";
@@ -510,6 +502,5 @@ export const COMPREHENSIVE_IT_INFRASTRUCTURE_SERVICES = [
         competitors: ["VMware", "Microsoft Hyper-V", "Red Hat", "Citrix", "Oracle"],
         uniqueValue: "Comprehensive virtualization platform with automated optimization and management";
         sla: "99.9% uptime with 4-hour response time";
-        uptime: "99.9%",
-    }
+        uptime: "99.9%"}
 ];

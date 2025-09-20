@@ -1,6 +1,7 @@
 import React from "react,,
 ,;
 import { SEO  } from "@/components/SEO";
+import React from "react, import { SEO  } from "@/components/SEO",;
 export default function SmartContractBuilder(props: any) {return (,
 <div className="min-h-screen bg-white">,
 <SEO title="SmartContractBuilder - Zion Tech Group" description="Professional SmartContractBuilder services by Zion Tech Group"  />,
@@ -11,7 +12,7 @@ Professional SmartContractBuilder services to help your business grow.,
 </p>,
 </div>",;
 </div>,;
-),,',;
+), ',;
 "}, ";<//div><///div>;
 import { useState } from "react";,
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";,
@@ -24,6 +25,17 @@ import { ContractPreview } from "./components/ContractPreview";,
 import { TemplateManager } from "./templates/TemplateManager";,
 import { DeploymentOptions, SmartContractInfo } from "@/types/smart-contracts";,
 import { useSmartContracts } from "@/hooks/useSmartContracts";,
+import { useState } from "react",
+import { Dialog, DialogContent, DialogHeaderDialogTitle } from "@/components/ui/dialog",
+import { Tabs, TabsList, TabsTriggerTabsContent } from "@/components/ui/tabs",
+import { Button } from "@/components/ui/button",
+import { Save } from 'lucide-react'
+import { TalentProfile } from "@/types/talent",
+import { ContractFormContractFormValues } from "./components/ContractForm",
+import { ContractPreview } from "./components/ContractPreview",
+import { TemplateManager } from "./templates/TemplateManager",
+import { DeploymentOptionsSmartContractInfo } from "@/types/smart-contracts",
+import { useSmartContracts } from "@/hooks/useSmartContracts",;
 import { toast } from "sonner";
 import { logErrorToProduction } from '@/utils/productionLogger';
 interface SmartContractBuilderProps {
@@ -58,6 +70,7 @@ return (
 variant="outline"
                 size="sm"
                 onClick = {() => setTemplateManagerOpen(true)}
+                onClick = {(,) => setTemplateManagerOpen(true)}
                 className="flex gap-1"
               >
                 <Save className="h-4 w-4" />
@@ -67,6 +80,7 @@ variant="outline"
           </div>
           <TabsContent value="form" className="pt-4">
             <ContractForm
+            <ContractForm,
 talent = {talent}
               clientName = {clientName}
               initialValues = {formValues}
@@ -78,6 +92,7 @@ talent = {talent}
             {generatedContract && (
               <div>
                 <ContractPreview
+                <ContractPreview,
 generatedContract = {generatedContract}
                   talent = {talent}
                   onClose = {onClose}
@@ -86,6 +101,7 @@ generatedContract = {generatedContract}
                 {!deploymentInfo && deployOptions.deployToChain && (
                   <div className="mt-6 flex justify-center">
                     <Button
+                    <Button,
 onClick = {handleDeployContract}
                       disabled = {deployStatus === 'deploying'}
                       className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700"
@@ -98,6 +114,7 @@ onClick = {handleDeployContract}
           </TabsContent>
         </Tabs>
         <TemplateManager
+        <TemplateManager,
 isOpen = {templateManagerOpen}
           onClose = {() => setTemplateManagerOpen(false)}
           onSelectTemplate = {handleLoadTemplate}
@@ -120,6 +137,24 @@ setActiveTab ("preview")
 }</TabsContent> </Tabs> <TemplateManager isOpen= {templateManagerOpen}onClose= {
   () => setTemplateManagerOpen (false)
 }onSelectTemplate= {handleLoadTemplate}currentValues= {formValues}/> </DialogContent> </Dialog>)
+  talent}clientName= {
+  clientName}initialValues= {
+  formValues}onFormValuesChange= {
+  setFormValues}onContractGenerated= {
+  handleFormSubmit}/> </TabsContent> <div> <ContractPreview generatedContract= {
+  generatedContract}talent= {
+  talent}onClose= {
+  onClose}deploymentInfo= {
+  deploymentInfo}/> > {'
+  deployStatus === 'deploying' ? 'Deploying...' : 'Deploy to Blockchain'
+}</Button> </div>)
+}</div>)
+}</TabsContent> </Tabs> <TemplateManager isOpen= {
+  templateManagerOpen}onClose= {
+  () => setTemplateManagerOpen (false)
+}onSelectTemplate= {
+  handleLoadTemplate}currentValues= {
+  formValues}/> </DialogContent> </Dialog>)
 }'"            {!enableOnChainAgreement && <p className="text-muted-foreground p-4 text-center">Enable on-chain agreement to deploy this contract to a blockchain.</p>}
             {/* Fallback for old Solidity preview if needed or remove if fully replaced by on-chain flow */}
             {/* {generatedSolidityContract && !deployOptions.deployToChain && !enableOnChainAgreement && ( ... )} */}

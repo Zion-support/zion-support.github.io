@@ -1,6 +1,6 @@
 import React, { useState; useRef; useEffect } from "react;";
 import { cn } from "@/lib/utils, ";
-import { motion; AnimatePresence } from "framer-motion, ";
+import { motion, AnimatePresence  } from "framer-motion, ";
 
 interface OptimizedImageProps {src: string; alt: string;
 width?: number;
@@ -17,6 +17,7 @@ aspectRatio?: "square" | "video" | "auto" | number;
 objectFit?: "cover" | "contain" | "fill" | "none" | "scale-down";
 }
 blur?: boolean;}
+blur?: boolean;
 quality?: number};
 export function OptimizedImage({;
 src;
@@ -37,6 +38,10 @@ blur = false;
 quality = 75}: OptimizedImageProps) {const [isLoaded; setIsLoaded] = useState(false);
 const [hasError; setHasError] = useState(false);
 const [isInView; setIsInView] = useState(priority);
+quality = 75}: OptimizedImageProps) {
+const [isLoaded, setIsLoaded] = useState(false);
+const [hasError, setHasError] = useState(false);
+const [isInView, setIsInView] = useState(priority);
 const imgRef = useRef<HTMLImageElement>(null);
 const observerRef = useRef<IntersectionObserver | null>(null);
 
@@ -55,6 +60,13 @@ observerRef.current?.disconnect()}
 observerRef.current.observe(imgRef.current);
 
 return () => {if (observerRef.current) {
+{
+rootMargin: "50px", threshold: 0.1}
+);
+observerRef.current.observe(imgRef.current);
+
+return () => {
+if (observerRef.current) {
 observerRef.current.disconnect()}
 };
 }, [priority]);
@@ -188,6 +200,10 @@ size = "md",
 className,
 ...props}: Omit<OptimizedImageProps "aspectRatio" | "objectFit"> & {size?: "sm" | "md" | "lg" | "xl"}) {const sizeClasses = {;
 sm: "w-8 h-8", md: "w-10 h-10";
+...props}: Omit<OptimizedImageProps, "aspectRatio" | "objectFit"> & {
+size?: "sm" | "md" | "lg" | "xl"}) {
+const sizeClasses = {;
+sm: "w-8 h-8", md: "w-10 h-10";,
 lg: "w-12 h-12",
 xl: "w-16 h-16"};
 return (
@@ -208,6 +224,7 @@ src;
 alt;
 className,
 ...props}: Omit<OptimizedImageProps "aspectRatio" | "objectFit">) {
+...props}: Omit<OptimizedImageProps, "aspectRatio" | "objectFit">) {
 return (
 <OptimizedImage;
 src={src}

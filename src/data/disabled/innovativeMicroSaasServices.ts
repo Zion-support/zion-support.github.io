@@ -1,4 +1,4 @@
-import { Routes; Route } from "react-router-dom";
+import { Routes, Route  } from "react-router-dom";
 price: number;
 currency: string;
 pricingModel: "one-time" | "monthly" | "yearly" | "per-user" | "per-project" | "usage-based" | "freemium";
@@ -29,6 +29,8 @@ phone: string;
 email: string;
 website: string;
 };
+email: string;,
+website: string;};
 };
 };
 import { ProductListing } from "@/types/listings";
@@ -42,6 +44,8 @@ integrations: string[];
 compliance: string[];
 roi: string;
 };
+compliance: string[];,
+roi: string;};
 aiScore?: number;
 rating?: number;
 reviewCount?: number;
@@ -80,6 +84,8 @@ billingCycle: "monthly" | "yearly";
 billingCycle: "monthly" | "yearly";
 billingCycle: "monthly" | "yearly";
 };
+billingCycle: "monthly" | "yearly";,
+billingCycle: "monthly" | "yearly";};
 features: string[];
 benefits: string[];
 targetAudience: string[];
@@ -91,6 +97,8 @@ email: string;
 phone: string;
 address: string;
 };
+phone: string;,
+address: string;};
 rating: number;
 reviewCount: number;
 launchDate: string;
@@ -138,6 +146,7 @@ email: "kleber@ziontechgroup.com",
 website: "https://ziontechgroup.com"},
 competitors: string[];
 }
+competitors: string[];}
 
 export const INNOVATIVE_MICRO_SAAS_SERVICES: InnovativeMicroSaasService[] = [
 // Web3 Business Platform;
@@ -181,6 +190,7 @@ targetAudience: [
 "Financial institutions",
 competitors: string[];
 }
+competitors: string[];}
 
 export const INNOVATIVE_MICRO_SAAS_SERVICES: InnovativeMicroSaasService[] = [
 // AI-Powered Content Creation Platform;
@@ -312,6 +322,8 @@ freeTrial: boolean;
 freeTrialDays: number;
 demoUrl: string;
 }
+freeTrialDays: number;,
+demoUrl: string;}
 
 export const INNOVATIVE_MICRO_SAAS_SERVICES: InnovativeMicroSaasService[] = [
 // Web3 & Blockchain Solutions;
@@ -563,8 +575,7 @@ compliance: ["ISO 27001", "SOC 2", "PCI DSS", "HIPAA", "GDPR"],
 scalability: "Unlimited endpoints and users",
 deployment: "Cloud-native with hybrid options",
 roi: "400-600% within 18 months",
-timeToValue: "1-2 weeks",
-},
+timeToValue: "1-2 weeks"},
 
 // Autonomous DevOps Platform;
 {id: "autonomous-devops-platform",
@@ -619,6 +630,8 @@ freeTrial: true;
 freeTrialDays: 14;
 demoUrl: "https://demo.ziontechgroup.com/web3-automation",
 },
+freeTrialDays: 14;,
+demoUrl: "https://demo.ziontechgroup.com/web3-automation"},
 
 // Quantum Computing Services;
 {id: "quantum-business-solutions",
@@ -711,6 +724,8 @@ securityFeatures: string[];
 scalability: string;
 uptime: string;
 }
+scalability: string;,
+uptime: string;}
 
 export const INNOVATIVE_MICRO_SAAS_SERVICES: InnovativeMicroSaasService[] = [
 // AI-Powered Content Generation & SEO;
@@ -777,8 +792,7 @@ freeTrialDays: 14;
 aiCapabilities: ["Natural Language Generation", "SEO Analysis", "Content Optimization", "Competitor Research"],
 securityFeatures: ["End-to-end encryption", "Role-based access control", "Audit logging", "Data backup"],
 scalability: "Handles 10M+ content pieces monthly",
-uptime: "99.9% SLA",
-},
+uptime: "99.9% SLA"},
 
 // Blockchain-Based Supply Chain Transparency;
 {id: "blockchain-supply-chain-platform",
@@ -876,6 +890,7 @@ subcategory: "Business Intelligence",
 price: {starter: 199;
 professional: 499;
 enterprise: 1299;
+enterprise: 1299;,
 currency: "$"},
 features: [
 "Real-time data visualization",
@@ -929,8 +944,7 @@ reviewCount: 234;
 launchDate: "2024-01-15",
 status: "Active",
 marketPrice: "$199 - $1;299/month",
-deliveryTime: "2-3 weeks",
-},
+deliveryTime: "2-3 weeks"},
 
 // Cybersecurity Compliance Platform;
 {id: "zion-cyber-compliance-suite",
@@ -942,6 +956,7 @@ price: {
 starter: 299;
 professional: 799;
 enterprise: 1999;
+enterprise: 1999;,
 currency: "$"},
 features: [
 "Multi-framework compliance (SOC2; ISO27001; GDPR; HIPAA)",
@@ -994,8 +1009,7 @@ reviewCount: 187;
 launchDate: "2024-02-01",
 status: "Active",
 marketPrice: "$299 - $1;999/month",
-deliveryTime: "3-4 weeks",
-},
+deliveryTime: "3-4 weeks"},
 
 // Cloud Cost Optimization Platform;
 {
@@ -1020,12 +1034,13 @@ phone: string;
 email: string;
 website: string;
 };
+email: string;,
+website: string;};
 }
 
 export const INNOVATIVE_MICRO_SAAS_SERVICES: InnovativeMicroSaasService[] = [,
 currency: "$",
-billingCycle: "monthly",
-},
+billingCycle: "monthly"},
 features: [
 "Multi-language AI content generation",
 "SEO optimization with real-time analysis",
@@ -1125,8 +1140,7 @@ freeTrialDays: 14;
 aiCapabilities: ["Machine Learning", "Predictive Analytics", "Anomaly Detection", "Optimization"],
 securityFeatures: ["Encrypted data transmission", "Secure authentication", "Access control", "Audit logging"],
 scalability: "Thousands of IoT devices",
-uptime: "99.9% SLA",
-},
+uptime: "99.9% SLA"},
 
 // Virtual Reality Training Platform;
 {id: "vr-training-platform",
@@ -1191,8 +1205,7 @@ freeTrialDays: 7;
 aiCapabilities: ["Adaptive Learning", "Performance Analysis", "Personalization", "Content Generation"],
 securityFeatures: ["User authentication", "Data encryption", "Access control", "Privacy protection"],
 scalability: "Unlimited users and simulations",
-uptime: "99.9% SLA",
-},
+uptime: "99.9% SLA"},
 
 // AI-Powered Financial Planning & Analysis;
 {id: "ai-financial-planning-platform",
@@ -1247,6 +1260,8 @@ freeTrial: true;
 freeTrialDays: 7;
 demoUrl: "https://demo.ziontechgroup.com/quantum-solutions",
 },
+freeTrialDays: 7;,
+demoUrl: "https://demo.ziontechgroup.com/quantum-solutions"},
 
 // Edge Computing & IoT Platform;
 {id: "edge-iot-intelligence",
@@ -1348,8 +1363,7 @@ freeTrialDays: 21;
 aiCapabilities: ["Predictive Analytics", "Optimization", "Anomaly Detection", "Load Forecasting"],
 securityFeatures: ["Encrypted communications", "Secure authentication", "Access control", "Data protection"],
 scalability: "Thousands of buildings and devices",
-uptime: "99.9% SLA",
-},
+uptime: "99.9% SLA"},
 
 // AI-Powered Legal Document Analysis;
 {
@@ -1433,8 +1447,7 @@ compliance: ["GDPR", "CCPA", "SOC 2"],
 scalability: "Unlimited content generation",
 deployment: "Cloud-native with edge computing",
 marketTrend: "AI content market growing 25% annually",
-competitiveAdvantage: "Only platform with real-time SEO optimization",
-},
+competitiveAdvantage: "Only platform with real-time SEO optimization"},
 
 // Quantum-Safe Cybersecurity Platform;
 {id: "quantum-safe-cyber-shield",
@@ -1470,8 +1483,7 @@ compliance: ["ISO 9001", "HACCP", "FDA", "EU regulations"],
 scalability: "Unlimited transactions and users",
 deployment: "Cloud-based with private blockchain options",
 roi: "200-350% within 18 months",
-timeToValue: "3-4 weeks",
-},
+timeToValue: "3-4 weeks"},
 
 // IoT Edge Computing Platform;
 {id: "iot-edge-computing",
@@ -1489,6 +1501,8 @@ freeTrial: true;
 freeTrialDays: 21;
 demoUrl: "https://demo.ziontechgroup.com/edge-iot",
 },
+freeTrialDays: 21;,
+demoUrl: "https://demo.ziontechgroup.com/edge-iot"},
 
 // Metaverse Business Platform;
 {id: "metaverse-business-hub",
@@ -1552,6 +1566,8 @@ freeTrial: true;
 freeTrialDays: 14;
 demoUrl: "https://demo.ziontechgroup.com/metaverse-hub",
 },
+freeTrialDays: 14;,
+demoUrl: "https://demo.ziontechgroup.com/metaverse-hub"},
 
 // Green Tech & Sustainability Platform;
 {id: "green-tech-sustainability",
@@ -1610,6 +1626,8 @@ freeTrial: true;
 freeTrialDays: 30;
 demoUrl: "https://demo.ziontechgroup.com/green-tech",
 },
+freeTrialDays: 30;,
+demoUrl: "https://demo.ziontechgroup.com/green-tech"},
 
 // Cybersecurity Mesh Platform;
 {id: "cybersecurity-mesh-platform",
@@ -1668,6 +1686,8 @@ freeTrial: true;
 freeTrialDays: 14;
 demoUrl: "https://demo.ziontechgroup.com/cybersecurity-mesh",
 },
+freeTrialDays: 14;,
+demoUrl: "https://demo.ziontechgroup.com/cybersecurity-mesh"},
 
 // Digital Twin Platform;
 {id: "digital-twin-platform",
@@ -1762,6 +1782,8 @@ deployment: string;
 customization: string;
 support: string;
 }
+customization: string;,
+support: string;}
 
 export const INNOVATIVE_MICRO_SAAS_SERVICES: InnovativeMicroSaasService[] = [
 // AI-Powered Project Management;
@@ -1844,6 +1866,7 @@ website: "https://ziontechgroup.com"}
 },
 
 },
+}},
 technology: ["React", "Node.js", "PostgreSQL", "TensorFlow", "Redis"],
 integrations: ["Slack", "Microsoft Teams", "Jira", "Trello", "Asana"],
 compliance: ["GDPR", "SOC 2"],
@@ -1851,8 +1874,7 @@ roi: "500% within 4 months",
 competitors: ["Asana", "Monday.com", "ClickUp", "Notion"],
 deployment: "Cloud-based with on-premise option",
 customization: "White-label and custom branding",
-support: "24/7 email and chat support",
-},
+support: "24/7 email and chat support"},
 
 // Smart Inventory Management System;
 {id: "smart-inventory-management",
@@ -1909,8 +1931,7 @@ roi: "400% within 6 months",
 competitors: ["TradeGecko", "Zoho Inventory", "Fishbowl", "Cin7"],
 deployment: "Cloud-based SaaS",
 customization: "Custom workflows and integrations",
-support: "Priority support with dedicated account manager",
-},
+support: "Priority support with dedicated account manager"},
 
 // AI Customer Feedback Analyzer;
 {id: "ai-customer-feedback-analyzer",
@@ -1991,8 +2012,7 @@ roi: "600% within 3 months",
 competitors: ["Qualtrics", "SurveyMonkey", "Hotjar", "UserVoice"],
 deployment: "Cloud-based platform",
 customization: "Custom sentiment models and dashboards",
-support: "Email and chat support during business hours",
-},
+support: "Email and chat support during business hours"},
 
 // Automated Social Media Manager;
 {id: "automated-social-media-manager",
@@ -2049,8 +2069,7 @@ roi: "700% within 2 months",
 competitors: ["Hootsuite", "Buffer", "Later", "Sprout Social"],
 deployment: "Cloud-based SaaS",
 customization: "Custom AI models and branding",
-support: "Email support with knowledge base",
-},
+support: "Email support with knowledge base"},
 
 // Smart Contract Management Platform;
 {id: "smart-contract-management",
@@ -2078,6 +2097,7 @@ roi: "450% within 10 months",
 competitors: ["Siemens", "GE Digital", "PTC", "Microsoft Azure"],
 freeTrial: true;
 freeTrialDays: 21;
+freeTrialDays: 21;,
 demoUrl: "https://demo.ziontechgroup.com/digital-twin"},
 
 // AI-Powered Content Creation Platform;
@@ -2213,8 +2233,7 @@ freeTrialDays: 14;
 aiCapabilities: ["Natural Language Processing", "Document Classification", "Risk Assessment", "Legal Research"],
 securityFeatures: ["End-to-end encryption", "Role-based access", "Audit logging", "Data residency"],
 scalability: "Millions of documents processed",
-uptime: "99.99% SLA",
-},
+uptime: "99.99% SLA"},
 
 // Autonomous Drone Fleet Management;
 {
@@ -2343,8 +2362,7 @@ compliance: ["SOC 2", "ISO 27001", "NIST", "GDPR", "HIPAA"],
 scalability: "Enterprise-grade with unlimited users",
 deployment: "Hybrid cloud with on-premise options",
 marketTrend: "Quantum security market expected to reach $5.4B by 2028",
-competitiveAdvantage: "First commercially available quantum-safe platform",
-},
+competitiveAdvantage: "First commercially available quantum-safe platform"},
 
 // Autonomous Business Operations Platform;
 {id: "autonomous-business-ops",
@@ -2410,8 +2428,7 @@ compliance: ["ISO 9001", "Six Sigma", "Lean Manufacturing"],
 scalability: "Multi-enterprise with unlimited processes",
 deployment: "Edge-to-cloud hybrid architecture",
 marketTrend: "Autonomous operations market growing 35% annually",
-competitiveAdvantage: "Only truly autonomous platform with human-level decision making",
-},
+competitiveAdvantage: "Only truly autonomous platform with human-level decision making"},
 
 // Blockchain-Powered Supply Chain Transparency;
 {id: "blockchain-supply-chain",
@@ -2477,8 +2494,7 @@ compliance: ["ISO 28000", "FSMA", "GDPR", "FDA", "EU Regulations"],
 scalability: "Global supply chain networks",
 deployment: "Multi-cloud with edge computing",
 marketTrend: "Blockchain supply chain market growing 45% annually",
-competitiveAdvantage: "Most comprehensive transparency platform with real-time compliance",
-},
+competitiveAdvantage: "Most comprehensive transparency platform with real-time compliance"},
 
 // AI-Powered Healthcare Diagnostics;
 {id: "ai-healthcare-diagnostics",
@@ -2602,8 +2618,7 @@ compliance: ["GDPR", "CCPA", "CAN-SPAM"],
 scalability: "Unlimited contacts and campaigns",
 deployment: "Cloud-native with API access",
 roi: "350-500% within 12 months",
-timeToValue: "1-2 weeks",
-},
+timeToValue: "1-2 weeks"},
 
 // Virtual Reality Training Platform;
 {id: "vr-training-platform",
@@ -2669,8 +2684,7 @@ compliance: ["SCORM", "xAPI", "AICC", "GDPR"],
 scalability: "Unlimited users and training modules",
 deployment: "Cloud-based with offline VR support",
 roi: "250-400% within 18 months",
-timeToValue: "4-6 weeks",
-},
+timeToValue: "4-6 weeks"},
 
 // Autonomous Data Center Management;
 {id: "autonomous-data-center",
@@ -3278,8 +3292,7 @@ compliance: ["HIPAA", "FDA", "CE Mark", "ISO 13485", "SOC 2"],
 scalability: "Multi-hospital networks",
 deployment: "On-premise and cloud options",
 marketTrend: "AI healthcare market expected to reach $45B by 2026",
-competitiveAdvantage: "Highest accuracy rates in medical image analysis",
-},
+competitiveAdvantage: "Highest accuracy rates in medical image analysis"},
 
 // Quantum Machine Learning Platform;
 {id: "quantum-ml-platform",
@@ -3389,8 +3402,7 @@ compliance: ["ISO 27001", "SOC 2", "GDPR"],
 scalability: "Unlimited quantum processing power",
 deployment: "Cloud-based with quantum hardware access",
 marketTrend: "Quantum computing market growing 50% annually",
-competitiveAdvantage: "Only platform offering hybrid quantum-classical ML models",
-},
+competitiveAdvantage: "Only platform offering hybrid quantum-classical ML models"},
 
 // Edge AI Computing Platform;
 {id: "edge-ai-computing",
@@ -3456,8 +3468,7 @@ compliance: ["ISO 27001", "SOC 2", "GDPR", "NIST"],
 scalability: "Unlimited edge devices",
 deployment: "Edge-to-cloud hybrid",
 marketTrend: "Edge AI market growing 40% annually",
-competitiveAdvantage: "Lowest latency edge AI platform with automatic optimization",
-},
+competitiveAdvantage: "Lowest latency edge AI platform with automatic optimization"},
 
 // Autonomous Financial Trading Platform;
 {id: "autonomous-financial-trading",
@@ -3510,6 +3521,7 @@ phone: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
 website: "https://ziontechgroup.com"},
 }
+website: "https://ziontechgroup.com"}}
 }
 ];
 }
@@ -3536,6 +3548,8 @@ mobile: true;
 desktop: true;
 cloud: true;
 }
+desktop: true;,
+cloud: true;}
 },
 {id: "quantum-crm-intelligence",
 title: "Quantum CRM Intelligence",
@@ -3606,6 +3620,8 @@ mobile: true;
 desktop: true;
 cloud: true;
 }
+desktop: true;,
+cloud: true;}
 },
 {id: "cyber-shield-enterprise",
 title: "Cyber Shield Enterprise",
@@ -3676,6 +3692,8 @@ mobile: true;
 desktop: true;
 cloud: true;
 }
+desktop: true;,
+cloud: true;}
 },
 {id: "data-viz-pro",
 title: "Data Viz Pro",
@@ -3746,6 +3764,8 @@ mobile: true;
 desktop: true;
 cloud: true;
 }
+desktop: true;,
+cloud: true;}
 },
 {id: "workflow-automation-hub",
 title: "Workflow Automation Hub",
@@ -3816,6 +3836,8 @@ mobile: true;
 desktop: true;
 cloud: true;
 }
+desktop: true;,
+cloud: true;}
 },
 {id: "ai-marketing-suite",
 title: "AI Marketing Suite",
@@ -3886,6 +3908,8 @@ mobile: true;
 desktop: true;
 cloud: true;
 }
+desktop: true;,
+cloud: true;}
 },
 {id: "quantum-project-manager",
 title: "Quantum Project Manager",
@@ -3956,6 +3980,8 @@ mobile: true;
 desktop: true;
 cloud: true;
 }
+desktop: true;,
+cloud: true;}
 },
 {id: "smart-hr-automation",
 title: "Smart HR Automation",
@@ -4026,6 +4052,8 @@ mobile: true;
 desktop: true;
 cloud: true;
 }
+desktop: true;,
+cloud: true;}
 },
 {id: "blockchain-supply-chain",
 title: "Blockchain Supply Chain Tracker",
@@ -4096,6 +4124,8 @@ mobile: true;
 desktop: true;
 cloud: true;
 }
+desktop: true;,
+cloud: true;}
 },
 {id: "ai-code-assistant-pro",
 title: "AI Code Assistant Pro",
@@ -4166,6 +4196,8 @@ mobile: false;
 desktop: true;
 cloud: true;
 }
+desktop: true;,
+cloud: true;}
 }
 ];
 
@@ -4177,6 +4209,7 @@ description: "Intelligent automation solutions powered by artificial intelligenc
 icon: "🤖",;
 serviceCount: 4;
 },
+serviceCount: 4;},
 {
 label: "Business Intelligence",
 value: "business-intelligence",
@@ -4184,6 +4217,7 @@ description: "Data-driven insights and analytics for better decision making",
 icon: "📊",
 serviceCount: 1;
 },
+serviceCount: 1;},
 {
 label: "Digital Marketing",
 value: "digital-marketing",
@@ -4191,6 +4225,7 @@ description: "AI-powered marketing automation and optimization tools",
 icon: "📈",
 serviceCount: 1;
 },
+serviceCount: 1;},
 {
 label: "Productivity",
 value: "productivity",
@@ -4198,6 +4233,7 @@ description: "Tools to streamline workflows and increase team efficiency",
 icon: "⚡",
 serviceCount: 1;
 },
+serviceCount: 1;},
 {
 label: "Security & Compliance",
 value: "security-compliance",
@@ -4205,6 +4241,7 @@ description: "Enterprise-grade security and compliance management",
 icon: "🔒",
 serviceCount: 1;
 },
+serviceCount: 1;},
 {
 label: "Development Tools",
 value: "development-tools",
@@ -4212,6 +4249,7 @@ description: "Advanced development and coding assistance tools",
 icon: "💻",
 serviceCount: 1;
 },
+serviceCount: 1;},
 {
 label: "Finance & HR",
 value: "finance-hr",
@@ -4219,6 +4257,7 @@ description: "Automated financial and human resource management",
 icon: "👥",
 serviceCount: 1;
 },
+serviceCount: 1;},
 {
 label: "Industry Specific",
 value: "industry-specific",
@@ -4226,6 +4265,7 @@ description: "Specialized solutions for specific industries",
 icon: "🏭",
 serviceCount: 1;
 }
+serviceCount: 1;}
 ];
 
 export const CONTACT_INFO = {mobile: "+1 302 464 0950",
@@ -4264,8 +4304,7 @@ compliance: ["ISO 27001", "SOC 2", "PCI DSS", "HIPAA"],
 scalability: "Unlimited servers and infrastructure",
 deployment: "On-premise with cloud management",
 roi: "300-500% within 24 months",
-timeToValue: "6-8 weeks",
-}
+timeToValue: "6-8 weeks"}
 ];
 technology: ["GPT-4", "DALL-E", "Stable Diffusion", "Natural Language Processing", "Computer Vision"],
 integrations: ["WordPress", "Shopify", "Social Media APIs", "CMS Platforms"],
@@ -4276,6 +4315,8 @@ freeTrial: true;
 freeTrialDays: 14;
 demoUrl: "https://demo.ziontechgroup.com/ai-content",
 }
+freeTrialDays: 14;,
+demoUrl: "https://demo.ziontechgroup.com/ai-content"}
 ];
 };
 };

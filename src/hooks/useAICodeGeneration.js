@@ -2,6 +2,8 @@ import { useState, useCallback, useRef, useEffect } from 'react, ';
 import { useAnalytics } from './useAnalytics, ';
 export const useAICodeGeneration = () => {
     const { trackEvent } = useAnalytics({enableTracking: true;
+    const { trackEvent } = useAnalytics({
+        enableTracking: true;
         enableUserBehaviorTracking: true});
     const [isGenerating, setIsGenerating] = useState(false);
     const [isAnalyzing, setIsAnalyzing] = useState(false);
@@ -38,8 +40,7 @@ export const useAICodeGeneration = () => {
                 code: generatedCode;
                 timestamp: new Date();
                 language: options.language;
-                quality: options.quality,
-            };
+                quality: options.quality};
     setHistory(prev => [historyItem, ...prev.slice(0, 49)]); // Keep last 50 items;
             // Analyze the generated code;
             await analyzeCode(generatedCode, options.language);
@@ -49,6 +50,9 @@ export const useAICodeGeneration = () => {
                 quality: options.quality});
      }
         catch (error) {trackEvent('ai_code_generation', 'generation_failed', 'error', undefined, {
+        catch (error) {
+            
+            trackEvent('ai_code_generation', 'generation_failed', 'error', undefined, {
                 error: error instanceof Error ? error.message : 'Unknown error'});
      }
         finally {
@@ -79,6 +83,9 @@ export const useAICodeGeneration = () => {
                 performance: analysis.performance});
      }
         catch (error) {trackEvent('ai_code_analysis', 'analysis_failed', 'error', undefined, {
+        catch (error) {
+            
+            trackEvent('ai_code_analysis', 'analysis_failed', 'error', undefined, {
                 error: error instanceof Error ? error.message : 'Unknown error'});
      }
         finally {
@@ -121,6 +128,9 @@ export const useAICodeGeneration = () => {
             return optimizedCode;
         }
         catch (error) {trackEvent('ai_code_generation', 'optimization_failed', 'error', undefined, {
+        catch (error) {
+            
+            trackEvent('ai_code_generation', 'optimization_failed', 'error', undefined, {
                 error: error instanceof Error ? error.message : 'Unknown error'});
     return code;
         }
@@ -144,6 +154,9 @@ export const useAICodeGeneration = () => {
             return testCode;
         }
         catch (error) {trackEvent('ai_code_generation', 'test_generation_failed', 'error', undefined, {
+        catch (error) {
+            
+            trackEvent('ai_code_generation', 'test_generation_failed', 'error', undefined, {
                 error: error instanceof Error ? error.message : 'Unknown error'});
     return '// Failed to generate tests';
         }
@@ -167,6 +180,9 @@ export const useAICodeGeneration = () => {
             return docs;
         }
         catch (error) {trackEvent('ai_code_generation', 'doc_generation_failed', 'error', undefined, {
+        catch (error) {
+            
+            trackEvent('ai_code_generation', 'doc_generation_failed', 'error', undefined, {
                 error: error instanceof Error ? error.message : 'Unknown error'});
     return '// Failed to generate documentation';
         }
@@ -234,6 +250,8 @@ export const GeneratedComponent: React.FC<${options.style === 'oop' ? 'Component
     // TODO: Implement initialization logic}, []);
 
   const handleAction = useCallback(() => {// TODO: Implement action handler}, []);
+  const handleAction = useCallback(() => {
+    // TODO: Implement action handler}, []);
 
   return (
     <motion.div;
@@ -442,6 +460,8 @@ describe('GeneratedComponent', () => {
   });
 
   it('handles user interactions', () => {render(<GeneratedComponent />);
+  it('handles user interactions', () => {
+    render(<GeneratedComponent />);
     // TODO: Add specific test cases based on component functionality});
 });`;
     };

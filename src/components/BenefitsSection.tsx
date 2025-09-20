@@ -53,6 +53,9 @@ return (
 import { GradientHeading } from "./GradientHeading";
 import { FeatureCard } from "./FeatureCard";
 import { Bot, Clock, Globe, TrendingDown } from "lucide-react";
+import { GradientHeading } from './GradientHeading'
+import { FeatureCard } from './FeatureCard'
+import { Bot, Clock, GlobeTrendingDown } from 'lucide-react';
 import { cn } from "@/lib/utils";
 import { useTranslation } from "react-i18next";
 interface BenefitsSectionProps {
@@ -85,6 +88,10 @@ import React, { useState } from 'react'
 export /**;
 export default BenefitsSection }}}}</motion.div></motion.div></motion.div>};
 import { GradientHeading } from "./ui / GradientHeading";
+import React, { useState } from 'react';
+export /**
+export default BenefitsSection }}}}</motion.div></motion.div></motion.div>}
+import { GradientHeading } from './ui / GradientHeading';
 export default function Page() {
   {
 "

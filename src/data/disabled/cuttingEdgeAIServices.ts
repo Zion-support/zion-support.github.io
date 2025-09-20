@@ -24,6 +24,8 @@ website: string;
 }
 }
 };
+email: string;,
+website: string;};
 websiteUrl: string;
 demoUrl?: string;
 documentationUrl?: string;
@@ -80,6 +82,9 @@ email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com"};
 websiteUrl: "https://ziontechgroup.com/autonomous-ai-research",
 };
+email: "kleber@ziontechgroup.com";,
+website: "https://ziontechgroup.com"};
+websiteUrl: "https://ziontechgroup.com/autonomous-ai-research"};
 // AI Consciousness Evolution Platform;
 {id: "ai-consciousness-evolution-platform";
 title: "AI Consciousness Evolution Platform";
@@ -130,6 +135,9 @@ email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com"};
 websiteUrl: "https://ziontechgroup.com/ai-consciousness-evolution",
 };
+email: "kleber@ziontechgroup.com";,
+website: "https://ziontechgroup.com"};
+websiteUrl: "https://ziontechgroup.com/ai-consciousness-evolution"};
 // AI Autonomous Business Manager;
 {id: "ai-autonomous-business-manager";
 title: "AI Autonomous Business Manager";
@@ -180,6 +188,9 @@ email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com"};
 websiteUrl: "https://ziontechgroup.com/ai-business-manager",
 };
+email: "kleber@ziontechgroup.com";,
+website: "https://ziontechgroup.com"};
+websiteUrl: "https://ziontechgroup.com/ai-business-manager"};
 // AI Autonomous Creative Director;
 {id: "ai-autonomous-creative-director";
 title: "AI Autonomous Creative Director";
@@ -230,6 +241,9 @@ email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com"};
 websiteUrl: "https://ziontechgroup.com/ai-creative-director",
 };
+email: "kleber@ziontechgroup.com";,
+website: "https://ziontechgroup.com"};
+websiteUrl: "https://ziontechgroup.com/ai-creative-director"};
 // AI Autonomous Code Review System;
 {id: "ai-autonomous-code-review-system";
 title: "AI Autonomous Code Review System";
@@ -280,4 +294,7 @@ email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com"};
 websiteUrl: "https://ziontechgroup.com/ai-code-review",
 }
+email: "kleber@ziontechgroup.com";,
+website: "https://ziontechgroup.com"};
+websiteUrl: "https://ziontechgroup.com/ai-code-review"}
 ];

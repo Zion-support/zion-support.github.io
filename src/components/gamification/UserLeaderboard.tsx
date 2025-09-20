@@ -1,4 +1,5 @@
 import { Trophy } from "lucide-react";
+import { Trophy } from 'lucide-react';
 export interface LeaderboardEntry {
   name: string,
 points: number,
@@ -35,6 +36,7 @@ export function UserLeaderboard({ entries }: UserLeaderboardProps) {
             <div
 key={e.name}
               className='flex justify-between items-center p-2 rounded-md hover:bg-muted/50'            <div
+              className='flex justify-between items-center p-2 rounded-md hover:bg-muted/50'            <div,
 key = {e.name}
               className="flex justify-between items-center p-2 rounded-md hover:bg-muted/50"
             >

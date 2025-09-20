@@ -24,6 +24,8 @@ website: string;
 }
 }
 };
+email: string;,
+website: string;};
 technology: string[];
 integrations: string[];
 compliance: string[];
@@ -38,6 +40,8 @@ scalability: string;
 customizationLevel: string;
 innovationLevel: string;
 }
+customizationLevel: string;,
+innovationLevel: string;}
 
 export const EMERGING_TECHNOLOGY_SOLUTIONS_2025: EmergingTechnologySolution[] = [
 // Blockchain & Web3 Solutions;
@@ -89,6 +93,7 @@ marketPrice: "$1;299 - $5;000/month",
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["Ethereum", "Polygon", "Solana", "React", "Node.js", "Web3.js"],
 integrations: ["Enterprise systems", "Payment gateways", "Cloud platforms", "Financial systems", "IoT platforms"],
@@ -103,6 +108,8 @@ scalability: "Enterprise-grade with multi-chain support";
 customizationLevel: "Custom blockchain solutions and smart contracts";
 innovationLevel: "Cutting-edge Web3 and blockchain technology",
 };
+customizationLevel: "Custom blockchain solutions and smart contracts";,
+innovationLevel: "Cutting-edge Web3 and blockchain technology"};
 // Quantum Computing Solutions;
 {id: "quantum-computing-solutions-platform";
 title: "Quantum Computing Solutions Platform - Next-Generation Computing Power";
@@ -152,6 +159,7 @@ marketPrice: "$2;499 - $10;000/month",
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["Qiskit", "Cirq", "PennyLane", "Python", "Quantum simulators", "Cloud quantum platforms"],
 integrations: ["Research platforms", "Scientific computing tools", "Financial modeling systems", "Cloud platforms", "HPC systems"],
@@ -166,6 +174,8 @@ scalability: "Quantum cloud infrastructure with unlimited computational power";
 customizationLevel: "Custom quantum algorithms and applications";
 innovationLevel: "Revolutionary quantum computing technology",
 };
+customizationLevel: "Custom quantum algorithms and applications";,
+innovationLevel: "Revolutionary quantum computing technology"};
 // Edge Computing & IoT Solutions;
 {id: "edge-computing-iot-platform";
 title: "Edge Computing & IoT Platform - Intelligent Edge Intelligence";
@@ -215,6 +225,7 @@ marketPrice: "$799 - $3;000/month",
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["Kubernetes", "Docker", "MQTT", "React", "Python", "Edge frameworks"],
 integrations: ["Cloud platforms", "IoT devices", "Data centers", "Network infrastructure", "Security systems"],
@@ -229,6 +240,8 @@ scalability: "Distributed edge infrastructure with unlimited device support";
 customizationLevel: "Custom edge computing solutions and IoT integrations";
 innovationLevel: "Advanced edge computing and IoT technology",
 };
+customizationLevel: "Custom edge computing solutions and IoT integrations";,
+innovationLevel: "Advanced edge computing and IoT technology"};
 // 5G & Advanced Connectivity Solutions;
 {id: "5g-advanced-connectivity-platform";
 title: "5G & Advanced Connectivity Platform - Next-Generation Network Solutions";
@@ -278,6 +291,7 @@ marketPrice: "$999 - $4;000/month",
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["5G NR", "Network slicing", "Edge computing", "React", "Python", "Network protocols"],
 integrations: ["Network infrastructure", "Cloud platforms", "IoT platforms", "Security systems", "Analytics platforms"],
@@ -292,6 +306,8 @@ scalability: "Enterprise 5G infrastructure with unlimited device support";
 customizationLevel: "Custom 5G solutions and network configurations";
 innovationLevel: "Cutting-edge 5G and connectivity technology",
 };
+customizationLevel: "Custom 5G solutions and network configurations";,
+innovationLevel: "Cutting-edge 5G and connectivity technology"};
 // Augmented Reality & Virtual Reality Solutions;
 {id: "ar-vr-enterprise-platform";
 title: "AR/VR Enterprise Platform - Immersive Business Solutions";
@@ -341,6 +357,7 @@ marketPrice: "$899 - $3;500/month",
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["Unity", "Unreal Engine", "WebXR", "React", "Three.js", "AR/VR frameworks"],
 integrations: ["Learning management systems", "Video conferencing platforms", "3D modeling tools", "Analytics platforms", "Content management systems"],
@@ -355,6 +372,8 @@ scalability: "Multi-user AR/VR platform with unlimited content support";
 customizationLevel: "Custom AR/VR experiences and training programs";
 innovationLevel: "Advanced immersive technology solutions",
 };
+customizationLevel: "Custom AR/VR experiences and training programs";,
+innovationLevel: "Advanced immersive technology solutions"};
 // Robotics & Automation Solutions;
 {id: "robotics-automation-platform";
 title: "Robotics & Automation Platform - Intelligent Automation Solutions";
@@ -404,6 +423,7 @@ marketPrice: "$1;199 - $5;000/month",
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["ROS", "Computer Vision", "Machine Learning", "Python", "C++", "Robotics frameworks"],
 integrations: ["Manufacturing systems", "ERP platforms", "Quality management systems", "Safety systems", "Analytics platforms"],
@@ -418,6 +438,8 @@ scalability: "Enterprise robotics platform with multi-system support";
 customizationLevel: "Custom robotics solutions and automation workflows";
 innovationLevel: "Advanced robotics and automation technology",
 };
+customizationLevel: "Custom robotics solutions and automation workflows";,
+innovationLevel: "Advanced robotics and automation technology"};
 // Digital Twin & Simulation Solutions;
 {id: "digital-twin-simulation-platform";
 title: "Digital Twin & Simulation Platform - Virtual Replica Solutions";
@@ -467,6 +489,7 @@ marketPrice: "$999 - $4;000/month",
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["Unity", "Unreal Engine", "Python", "React", "3D modeling", "Simulation engines"],
 integrations: ["IoT platforms", "CAD systems", "PLM platforms", "Analytics platforms", "Cloud platforms"],
@@ -481,6 +504,8 @@ scalability: "Enterprise digital twin platform with unlimited system support";
 customizationLevel: "Custom digital twin solutions and simulation models";
 innovationLevel: "Advanced digital twin and simulation technology",
 };
+customizationLevel: "Custom digital twin solutions and simulation models";,
+innovationLevel: "Advanced digital twin and simulation technology"};
 // Green Technology & Sustainability Solutions;
 {id: "green-technology-sustainability-platform";
 title: "Green Technology & Sustainability Platform - Eco-Friendly Solutions";
@@ -530,6 +555,7 @@ marketPrice: "$699 - $2;500/month",
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["IoT sensors", "Machine Learning", "React", "Python", "Analytics platforms", "Green tech APIs"],
 integrations: ["Energy management systems", "Environmental monitoring", "Sustainability platforms", "Reporting systems", "Compliance platforms"],
@@ -544,5 +570,7 @@ scalability: "Multi-organization sustainability platform";
 customizationLevel: "Custom sustainability solutions and reporting";
 innovationLevel: "Advanced green technology and sustainability solutions",
 }
+customizationLevel: "Custom sustainability solutions and reporting";,
+innovationLevel: "Advanced green technology and sustainability solutions"}
 ];
 export default EMERGING_TECHNOLOGY_SOLUTIONS_2025;

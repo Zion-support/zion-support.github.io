@@ -5,6 +5,13 @@ import { Badge } from "@/components/ui/badge";
 import { ArrowRight } from "lucide-react";
 onApply: () => void,
 export function GeneratedContentDisplay({content,
+import React from "react",
+import { Button } from "@/components/ui/button",;
+import { Badge } from "@/components/ui/badge";
+import { ArrowRight } from 'lucide-react';
+onApply: () => void,
+export function GeneratedContentDisplay({
+  content,
 onApply}: GeneratedContentDisplayProps) {
   return (
     <Card className='border border-zion-blue-light bg-zion-blue-dark'>

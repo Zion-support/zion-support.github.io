@@ -3,6 +3,8 @@
 import Image from 'next/image';
 import { useState } from "react";
 import { ImageIcon } from "lucide-react";
+import { useState } from 'react';
+import { ImageIcon } from 'lucide-react';
 interface SafeImageProps {
   src: string,
 alt: string;  width?: number;interface SafeImageProps {,
@@ -32,6 +34,7 @@ className={`flex items-center justify-center bg-gray-100 text-gray-400 ${classNa
     />
   ); return (
     <Image
+    <Image,
 src = {currentSrc}
       alt = {alt}
       width = {width}

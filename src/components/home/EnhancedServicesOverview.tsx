@@ -8,7 +8,7 @@ name: string;
 import React from "react;";
 import { Link } from "react-router-dom, ";
 import { Button } from "../ui/button, ";
-import { Card; CardContent; CardDescription; CardHeader; CardTitle } from "../ui/card, ";
+import { Card; CardContent; CardDescription; CardHeader, CardTitle  } from "../ui/card, ";
 import { Badge } from "../ui/badge, ";
 import { Brain;
 Shield;
@@ -21,8 +21,7 @@ DollarSign;
 ArrowRight;
 Star;
 Clock;
-Globe;
-} from "lucide-react, ";
+Globe} from "lucide-react, ";
 
 // Mock data for enhanced services;
 const ENHANCED_SERVICES = [
@@ -40,6 +39,8 @@ benefits: ["Increased efficiency", "Better decision making", "Cost reduction"],
 tags: ["AI", "Analytics", "Business Intelligence"],
 location: "Global"};
 {id: "security-1";
+{
+id: "security-1";
 title: "Enterprise Cybersecurity Suite";
 description: "Comprehensive security solution protecting your business from modern threats";
 category: "Cybersecurity";
@@ -52,6 +53,8 @@ benefits: ["Enhanced security", "Compliance assurance", "Risk mitigation"],
 tags: ["Security", "Compliance", "Enterprise"],
 location: "Global"};
 {id: "cloud-1";
+{
+id: "cloud-1";
 title: "Cloud Infrastructure Optimization";
 description: "Optimize your cloud costs and performance with intelligent automation";
 category: "Cloud & DevOps";
@@ -82,6 +85,7 @@ case "Green Tech & Sustainability": return <Leaf className="w-6 h-6" />;
 case "FinTech & Digital Banking": return <DollarSign className="w-6 h-6" />;,
 default: return <Zap className="w-6 h-6" />;
 }
+default: return <Zap className="w-6 h-6" />;}
 };
 
 const getAvailabilityColor: any = (availability: string) => {
@@ -91,6 +95,7 @@ case "within-week": return "text-yellow-400";
 case "within-month": return "text-orange-400";,
 default: return "text-gray-400";
 }
+default: return "text-gray-400";}
 };
 
 return (
@@ -220,6 +225,7 @@ if (!acc.find(cat => cat.category === service.category)) {
 acc.push({
 category: service.category;
 count: ENHANCED_SERVICES.filter(s => s.category === service.category).length;
+count: ENHANCED_SERVICES.filter(s => s.category === service.category).length;,
 icon: getCategoryIcon(service.category)});
 }
 return acc;

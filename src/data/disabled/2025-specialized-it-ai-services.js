@@ -51,8 +51,7 @@ export const specializedITServices2025 = [
         marketPrice: '$3,500-$5,000/month',
         certifications: ['Research Collaboration Agreements', 'Academic Partnerships', 'ISO 27001'],
         sla: '99.0% uptime guarantee';
-        support: 'Research hours support with dedicated neuromorphic specialists',
-    };
+        support: 'Research hours support with dedicated neuromorphic specialists'};
     // Federated Learning Platform;
     {id: 'federated-learning';
         name: 'Federated Learning Platform';
@@ -105,8 +104,7 @@ export const specializedITServices2025 = [
         marketPrice: '$2,000-$3,000/month',
         certifications: ['SOC 2 Type II', 'GDPR Compliant', 'HIPAA Compliant', 'ISO 27001'],
         sla: '99.9% uptime guarantee';
-        support: 'Business hours support with dedicated privacy specialists',
-    };
+        support: 'Business hours support with dedicated privacy specialists'};
     // AI Ethics & Governance Platform;
     {id: 'ai-ethics-governance';
         name: 'AI Ethics & Governance Platform';
@@ -159,8 +157,7 @@ export const specializedITServices2025 = [
         marketPrice: '$1,500-$2,500/month',
         certifications: ['SOC 2 Type II', 'ISO 27001', 'GDPR Compliant', 'AI Ethics Certification'],
         sla: '99.9% uptime guarantee';
-        support: 'Business hours support with dedicated ethics specialists',
-    };
+        support: 'Business hours support with dedicated ethics specialists'};
     // Edge AI Orchestration Platform;
     {id: 'edge-ai-orchestration';
         name: 'Edge AI Orchestration Platform';
@@ -213,8 +210,7 @@ export const specializedITServices2025 = [
         marketPrice: '$1,500-$2,500/month',
         certifications: ['ISO 27001', 'SOC 2 Type II', 'Edge Computing Standards', 'Multi-cloud Certified'],
         sla: '99.9% uptime guarantee';
-        support: 'Business hours support with dedicated edge computing specialists',
-    };
+        support: 'Business hours support with dedicated edge computing specialists'};
     // AI-Powered DevOps Automation;
     {id: 'ai-devops-automation';
         name: 'AI-Powered DevOps Automation Platform';
@@ -267,8 +263,7 @@ export const specializedITServices2025 = [
         marketPrice: '$1,200-$2,000/month',
         certifications: ['SOC 2 Type II', 'ISO 27001', 'DevOps Certified', 'Multi-cloud Certified'],
         sla: '99.9% uptime guarantee';
-        support: '24/7 technical support with dedicated DevOps specialists',
-    };
+        support: '24/7 technical support with dedicated DevOps specialists'};
     // AI-Powered Data Quality Platform;
     {id: 'ai-data-quality';
         name: 'AI Data Quality Platform';
@@ -321,8 +316,7 @@ export const specializedITServices2025 = [
         marketPrice: '$1,000-$1,800/month',
         certifications: ['SOC 2 Type II', 'ISO 27001', 'Data Quality Certified', 'GDPR Compliant'],
         sla: '99.9% uptime guarantee';
-        support: 'Business hours support with dedicated data specialists',
-    };
+        support: 'Business hours support with dedicated data specialists'};
     // AI-Powered API Management Platform;
     {id: 'ai-api-management';
         name: 'AI-Powered API Management Platform';
@@ -375,8 +369,7 @@ export const specializedITServices2025 = [
         marketPrice: '$1,000-$1,600/month',
         certifications: ['SOC 2 Type II', 'ISO 27001', 'API Security Certified', 'OAuth 2.0 Compliant'],
         sla: '99.9% uptime guarantee';
-        support: 'Business hours support with dedicated API specialists',
-    };
+        support: 'Business hours support with dedicated API specialists'};
     // AI-Powered Network Security Platform;
     {id: 'ai-network-security';
         name: 'AI-Powered Network Security Platform';
@@ -429,7 +422,6 @@ export const specializedITServices2025 = [
         marketPrice: '$1,800-$3,000/month',
         certifications: ['SOC 2 Type II', 'ISO 27001', 'NIST Compliance', 'FedRAMP'],
         sla: '99.99% uptime guarantee';
-        support: '24/7 security operations center with dedicated security engineers',
-    }
+        support: '24/7 security operations center with dedicated security engineers'}
 ];
     export default specializedITServices2025;

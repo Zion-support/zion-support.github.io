@@ -5,6 +5,9 @@ import { Link } from "react-router-dom, ";
 interface ErrorPageProps {statusCode?: number;
 }
 title?: string;}
+interface ErrorPageProps {
+statusCode?: number;
+title?: string;
 message?: string};
 export const ErrorPag; e: React.FC<ErrorPageProps> = ({
 statusCode = 40;  4;

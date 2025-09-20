@@ -9,6 +9,7 @@ import { useRouter } from 'next/navigation'
 import type {User as SupabaseUser,
 AuthChangeEvent
   Session} from '@supabase/supabase-js'
+  Session } from '@supabase/supabase-js'
 interface UserProfileProps {
   onUserChange?: (user: SupabaseUser | null) => void,}
 export default function UserProfile({ onUserChange }: UserProfileProps) {
@@ -107,4 +108,5 @@ const {
         </Button>
       </CardContent>
     </Card>;
+    </Card>
   );

@@ -14,6 +14,8 @@ currency: string;
 }
 }
 };
+enterprise: number;,
+currency: string;};
 features: string[];
 benefits: string[];
 targetAudience: string[];
@@ -27,6 +29,8 @@ email: string;
 phone: string;
 address: string;
 };
+phone: string;,
+address: string;};
 rating: number;
 reviewCount: number;
 launchDate: string;
@@ -36,6 +40,8 @@ compliance: string[];
 integrations: string[];
 sla: string;
 }
+integrations: string[];,
+sla: string;}
 
 export const ENTERPRISE_IT_INFRASTRUCTURE_2025: EnterpriseITInfrastructureService[] = [
 // Enterprise Infrastructure Services;
@@ -48,6 +54,7 @@ price: {
 monthly: 8999;
 yearly: 89990;
 enterprise: 14999;
+enterprise: 14999;,
 currency: "$"};
 features: [
 "Multi-cloud orchestration and management";
@@ -80,6 +87,9 @@ supportLevel: "Dedicated";
 website: "https://ziontechgroup.com/enterprise-hybrid-cloud";
 contactInfo: {email: "kleber@ziontechgroup.com";
 phone: "+1 302 464 0950";
+contactInfo: {
+email: "kleber@ziontechgroup.com";
+phone: "+1 302 464 0950";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 rating: 4.9;
 reviewCount: 67;
@@ -92,6 +102,10 @@ sla: "99.99% uptime guarantee",
 };
 {id: "next-generation-data-center-solutions";
 title: "Next-Generation Data Center & Edge Computing Solutions";
+sla: "99.99% uptime guarantee"};
+{
+id: "next-generation-data-center-solutions";
+title: "Next-Generation Data Center & Edge Computing Solutions";,
 description: "Advanced data center infrastructure with edge computing capabilities; designed for ultra-low latency applications and massive scalability.",
 category: "Data Center";
 subcategory: "Edge Computing";
@@ -99,6 +113,7 @@ price: {
 monthly: 12999;
 yearly: 129990;
 enterprise: 19999;
+enterprise: 19999;,
 currency: "$"};
 features: [
 "Ultra-low latency edge computing nodes";
@@ -131,6 +146,9 @@ supportLevel: "Dedicated";
 website: "https://ziontechgroup.com/next-gen-data-center";
 contactInfo: {email: "kleber@ziontechgroup.com";
 phone: "+1 302 464 0950";
+contactInfo: {
+email: "kleber@ziontechgroup.com";
+phone: "+1 302 464 0950";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 rating: 4.9;
 reviewCount: 45;
@@ -143,6 +161,10 @@ sla: "99.995% uptime guarantee",
 };
 {id: "enterprise-network-security-fabric";
 title: "Enterprise Network Security Fabric & Zero Trust Architecture";
+sla: "99.995% uptime guarantee"};
+{
+id: "enterprise-network-security-fabric";
+title: "Enterprise Network Security Fabric & Zero Trust Architecture";,
 description: "Comprehensive network security solution implementing zero trust architecture with advanced threat detection; segmentation; and automated response capabilities.",
 category: "Security";
 subcategory: "Network Security";
@@ -150,6 +172,7 @@ price: {
 monthly: 6999;
 yearly: 69990;
 enterprise: 11999;
+enterprise: 11999;,
 currency: "$"};
 features: [
 "Zero trust network architecture implementation";
@@ -182,6 +205,9 @@ supportLevel: "Premium";
 website: "https://ziontechgroup.com/enterprise-network-security";
 contactInfo: {email: "kleber@ziontechgroup.com";
 phone: "+1 302 464 0950";
+contactInfo: {
+email: "kleber@ziontechgroup.com";
+phone: "+1 302 464 0950";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 rating: 4.8;
 reviewCount: 89;
@@ -194,6 +220,10 @@ sla: "99.9% uptime guarantee",
 };
 {id: "enterprise-performance-optimization-suite";
 title: "Enterprise Performance Optimization & Monitoring Suite";
+sla: "99.9% uptime guarantee"};
+{
+id: "enterprise-performance-optimization-suite";
+title: "Enterprise Performance Optimization & Monitoring Suite";,
 description: "Comprehensive performance monitoring and optimization platform that provides real-time insights into application performance; infrastructure health; and user experience.",
 category: "Performance";
 subcategory: "Monitoring & Optimization";
@@ -201,6 +231,7 @@ price: {
 monthly: 5499;
 yearly: 54990;
 enterprise: 8999;
+enterprise: 8999;,
 currency: "$"};
 features: [
 "Real-time application performance monitoring";
@@ -233,6 +264,9 @@ supportLevel: "Enterprise";
 website: "https://ziontechgroup.com/enterprise-performance-optimization";
 contactInfo: {email: "kleber@ziontechgroup.com";
 phone: "+1 302 464 0950";
+contactInfo: {
+email: "kleber@ziontechgroup.com";
+phone: "+1 302 464 0950";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 rating: 4.7;
 reviewCount: 134;
@@ -245,6 +279,10 @@ sla: "99.9% uptime guarantee",
 };
 {id: "enterprise-disaster-recovery-platform";
 title: "Enterprise Disaster Recovery & Business Continuity Platform";
+sla: "99.9% uptime guarantee"};
+{
+id: "enterprise-disaster-recovery-platform";
+title: "Enterprise Disaster Recovery & Business Continuity Platform";,
 description: "Advanced disaster recovery platform that ensures business continuity with automated backup; replication; and recovery capabilities across multiple locations.",
 category: "Disaster Recovery";
 subcategory: "Business Continuity";
@@ -252,6 +290,7 @@ price: {
 monthly: 7999;
 yearly: 79990;
 enterprise: 12999;
+enterprise: 12999;,
 currency: "$"};
 features: [
 "Automated backup and replication";
@@ -284,6 +323,9 @@ supportLevel: "Premium";
 website: "https://ziontechgroup.com/enterprise-disaster-recovery";
 contactInfo: {email: "kleber@ziontechgroup.com";
 phone: "+1 302 464 0950";
+contactInfo: {
+email: "kleber@ziontechgroup.com";
+phone: "+1 302 464 0950";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 rating: 4.9;
 reviewCount: 78;
@@ -296,6 +338,10 @@ sla: "99.99% recovery time guarantee",
 };
 {id: "enterprise-integration-hub";
 title: "Enterprise Integration Hub & API Management Platform";
+sla: "99.99% recovery time guarantee"};
+{
+id: "enterprise-integration-hub";
+title: "Enterprise Integration Hub & API Management Platform";,
 description: "Comprehensive integration platform that enables seamless connectivity between enterprise systems; applications; and data sources with advanced API management capabilities.",
 category: "Integration";
 subcategory: "API Management";
@@ -303,6 +349,7 @@ price: {
 monthly: 6499;
 yearly: 64990;
 enterprise: 10999;
+enterprise: 10999;,
 currency: "$"};
 features: [
 "Advanced API gateway and management";
@@ -335,6 +382,9 @@ supportLevel: "Enterprise";
 website: "https://ziontechgroup.com/enterprise-integration-hub";
 contactInfo: {email: "kleber@ziontechgroup.com";
 phone: "+1 302 464 0950";
+contactInfo: {
+email: "kleber@ziontechgroup.com";
+phone: "+1 302 464 0950";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 rating: 4.8;
 reviewCount: 112;
@@ -347,6 +397,10 @@ sla: "99.9% uptime guarantee",
 };
 {id: "enterprise-compliance-automation-suite";
 title: "Enterprise Compliance Automation & Governance Suite";
+sla: "99.9% uptime guarantee"};
+{
+id: "enterprise-compliance-automation-suite";
+title: "Enterprise Compliance Automation & Governance Suite";,
 description: "Comprehensive compliance automation platform that streamlines regulatory compliance; audit processes; and governance across enterprise systems and processes.",
 category: "Compliance";
 subcategory: "Governance & Audit";
@@ -354,6 +408,7 @@ price: {
 monthly: 7499;
 yearly: 74990;
 enterprise: 11999;
+enterprise: 11999;,
 currency: "$"};
 features: [
 "Automated compliance monitoring and reporting";
@@ -386,6 +441,9 @@ supportLevel: "Premium";
 website: "https://ziontechgroup.com/enterprise-compliance-automation";
 contactInfo: {email: "kleber@ziontechgroup.com";
 phone: "+1 302 464 0950";
+contactInfo: {
+email: "kleber@ziontechgroup.com";
+phone: "+1 302 464 0950";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 rating: 4.9;
 reviewCount: 67;
@@ -398,6 +456,10 @@ sla: "99.9% uptime guarantee",
 };
 {id: "enterprise-scalability-solutions";
 title: "Enterprise Scalability & Auto-Scaling Solutions";
+sla: "99.9% uptime guarantee"};
+{
+id: "enterprise-scalability-solutions";
+title: "Enterprise Scalability & Auto-Scaling Solutions";,
 description: "Advanced scalability platform that automatically scales enterprise applications and infrastructure based on demand; ensuring optimal performance and cost efficiency.",
 category: "Scalability";
 subcategory: "Auto-Scaling";
@@ -405,6 +467,7 @@ price: {
 monthly: 5999;
 yearly: 59990;
 enterprise: 9999;
+enterprise: 9999;,
 currency: "$"};
 features: [
 "Intelligent auto-scaling algorithms";
@@ -437,6 +500,9 @@ supportLevel: "Enterprise";
 website: "https://ziontechgroup.com/enterprise-scalability-solutions";
 contactInfo: {email: "kleber@ziontechgroup.com";
 phone: "+1 302 464 0950";
+contactInfo: {
+email: "kleber@ziontechgroup.com";
+phone: "+1 302 464 0950";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 rating: 4.7;
 reviewCount: 98;
@@ -445,7 +511,6 @@ status: "Active";
 technology: ["Auto-scaling", "Load Balancing", "Performance Monitoring", "AI/ML", "Cloud Computing"],
 compliance: ["SOC2", "ISO 27001", "Performance standards", "Industry-specific requirements"],
 integrations: ["Cloud providers", "Application platforms", "Monitoring tools", "Load balancers"],
-sla: "99.9% uptime guarantee",
-}
+sla: "99.9% uptime guarantee"}
 ];
 export default ENTERPRISE_IT_INFRASTRUCTURE_2025;

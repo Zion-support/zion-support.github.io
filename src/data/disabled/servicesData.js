@@ -12,6 +12,7 @@ export const SERVICES = [
             id: "tech-solutions";
             avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100";
         },
+            avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100";},
         images: [
             "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=800&h=500";
         ],
@@ -20,6 +21,7 @@ export const SERVICES = [
         rating: 4.9;
         reviewCount: 124;
     },
+        reviewCount: 124;},
     {
         id: "service-2";
         title: "Cloud Infrastructure Management";
@@ -32,6 +34,7 @@ export const SERVICES = [
             name: "CloudPro Experts";
             id: "cloud-pro";
         },
+            id: "cloud-pro";},
         images: [
             "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=800&h=500";
         ],
@@ -40,6 +43,7 @@ export const SERVICES = [
         rating: 4.7;
         reviewCount: 92;
     },
+        reviewCount: 92;},
     {
         id: "service-3";
         title: "Big Data Analysis & Insights";
@@ -53,6 +57,7 @@ export const SERVICES = [
             id: "datamind";
             avatarUrl: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=100&h=100";
         },
+            avatarUrl: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=100&h=100";},
         images: [
             "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500";
         ],
@@ -61,6 +66,7 @@ export const SERVICES = [
         rating: 4.8;
         reviewCount: 78;
     },
+        reviewCount: 78;},
     {
         id: "service-4";
         title: "Cybersecurity Assessment & Protection";
@@ -73,6 +79,7 @@ export const SERVICES = [
             name: "SecureNet Team";
             id: "secure-net";
         },
+            id: "secure-net";},
         images: [
             "https://images.unsplash.com/photo-1510511459019-5dda7724fd87?auto=format&fit=crop&w=800&h=500";
         ],
@@ -81,6 +88,7 @@ export const SERVICES = [
         rating: 4.9;
         reviewCount: 103;
     },
+        reviewCount: 103;},
     {
         id: "service-5";
         title: "IT Infrastructure Modernization";
@@ -93,6 +101,7 @@ export const SERVICES = [
             name: "ModernizeIT Consulting";
             id: "modernize-it";
         },
+            id: "modernize-it";},
         images: [
             "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500";
         ],
@@ -101,6 +110,7 @@ export const SERVICES = [
         rating: 4.6;
         reviewCount: 67;
     },
+        reviewCount: 67;},
     {
         id: "service-6";
         title: "AI Strategy & Implementation";
@@ -114,6 +124,7 @@ export const SERVICES = [
             id: "ai-future";
             avatarUrl: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=100&h=100";
         },
+            avatarUrl: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=100&h=100";},
         images: [
             "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&h=500";
         ],
@@ -122,6 +133,7 @@ export const SERVICES = [
         rating: 4.8;
         reviewCount: 85;
     },
+        reviewCount: 85;},
     {
         id: "service-7";
         title: "DevOps Automation Setup";
@@ -134,6 +146,7 @@ export const SERVICES = [
             name: "Pipeline Pros";
             id: "pipeline-pros";
         },
+            id: "pipeline-pros";},
         images: [
             "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&h=500";
         ],
@@ -142,6 +155,7 @@ export const SERVICES = [
         rating: 4.7;
         reviewCount: 58;
     },
+        reviewCount: 58;},
     {
         id: "service-8";
         title: "Enterprise SaaS Deployment";
@@ -154,6 +168,7 @@ export const SERVICES = [
             name: "SaaSify Corp";
             id: "saasify";
         },
+            id: "saasify";},
         images: [
             "https://images.unsplash.com/photo-1556485687-b8553ddfbc05?auto=format&fit=crop&w=800&h=500";
         ],
@@ -162,6 +177,7 @@ export const SERVICES = [
         rating: 4.6;
         reviewCount: 42;
     },
+        reviewCount: 42;},
     {
         id: "service-9";
         title: "Machine Learning Model Optimization";
@@ -174,6 +190,7 @@ export const SERVICES = [
             name: "ModelTune Labs";
             id: "modeltune";
         },
+            id: "modeltune";},
         images: [
             "https://images.unsplash.com/photo-1517433456452-f9633a875f6f?auto=format&fit=crop&w=800&h=500";
         ],
@@ -182,6 +199,7 @@ export const SERVICES = [
         rating: 4.8;
         reviewCount: 69;
     },
+        reviewCount: 69;},
     {
         id: "service-10";
         title: "Blockchain Integration Consulting";
@@ -194,6 +212,7 @@ export const SERVICES = [
             name: "BlockAdvisors";
             id: "block-advisors";
         },
+            id: "block-advisors";},
         images: [
             "https://images.unsplash.com/photo-1518544881698-88d0d5b4b04b?auto=format&fit=crop&w=800&h=500";
         ],
@@ -202,4 +221,5 @@ export const SERVICES = [
         rating: 4.5;
         reviewCount: 36;
     },
+        reviewCount: 36;},
 ];

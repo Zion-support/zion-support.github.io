@@ -39,6 +39,9 @@ export const innovativeITServices2025 = [
         support: "24/7 premium support",
     };
     {id: 2;
+        support: "24/7 premium support"};
+    {
+        id: 2;
         name: "Quantum-Ready Infrastructure";
         category: "Infrastructure";
         description: "Design and implementation of quantum-ready IT infrastructure prepared for post-quantum cryptography and quantum computing integration";
@@ -77,6 +80,9 @@ export const innovativeITServices2025 = [
         support: "24/7 enterprise support",
     };
     {id: 3;
+        support: "24/7 enterprise support"};
+    {
+        id: 3;
         name: "AI-Powered DevOps Automation";
         category: "DevOps";
         description: "Intelligent DevOps automation platform with AI-driven deployment, monitoring, and optimization capabilities",
@@ -115,6 +121,9 @@ export const innovativeITServices2025 = [
         support: "Business hours + emergency support",
     };
     {id: 4;
+        support: "Business hours + emergency support"};
+    {
+        id: 4;
         name: "Edge Computing Infrastructure";
         category: "Infrastructure";
         description: "Design and deployment of edge computing infrastructure for low-latency applications and IoT deployments";
@@ -153,6 +162,9 @@ export const innovativeITServices2025 = [
         support: "Business hours + emergency support",
     };
     {id: 5;
+        support: "Business hours + emergency support"};
+    {
+        id: 5;
         name: "Blockchain Infrastructure Services";
         category: "Blockchain";
         description: "Enterprise blockchain infrastructure design, deployment, and management for secure decentralized applications",
@@ -191,6 +203,9 @@ export const innovativeITServices2025 = [
         support: "24/7 premium support",
     };
     {id: 6;
+        support: "24/7 premium support"};
+    {
+        id: 6;
         name: "Green IT Infrastructure";
         category: "Sustainability";
         description: "Energy-efficient IT infrastructure design and implementation with carbon footprint reduction and sustainability optimization";
@@ -229,6 +244,9 @@ export const innovativeITServices2025 = [
         support: "Business hours + emergency support",
     };
     {id: 7;
+        support: "Business hours + emergency support"};
+    {
+        id: 7;
         name: "AI Infrastructure Optimization";
         category: "AI Infrastructure";
         description: "Specialized infrastructure optimization for AI workloads, including GPU clusters, distributed training, and inference optimization",
@@ -267,6 +285,9 @@ export const innovativeITServices2025 = [
         support: "24/7 premium support",
     };
     {id: 8;
+        support: "24/7 premium support"};
+    {
+        id: 8;
         name: "Hybrid Cloud Architecture";
         category: "Cloud";
         description: "Design and implementation of hybrid cloud architectures with seamless integration between on-premises and cloud environments";
@@ -302,6 +323,5 @@ export const innovativeITServices2025 = [
         sla: "99.9% uptime";
         certifications: ["AWS", "Azure", "GCP", "Cloud Architecture", "Security"],
         deliveryTime: "6-10 weeks";
-        support: "Business hours + emergency support",
-    }
+        support: "Business hours + emergency support"}
 ];

@@ -1,4 +1,4 @@
-import { Routes; Route } from "react-router-dom, ";
+import { Routes, Route  } from "react-router-dom, ";
 export interface ExpandedInnovativeService {
 id: string;
 title: string;
@@ -23,6 +23,8 @@ website: string;
 }
 }
 };
+email: string;,
+website: string;};
 technology: string[];
 integrations: string[];
 compliance: string[];
@@ -82,6 +84,7 @@ marketPrice: "$399 - $1;500/month",
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["OpenAI GPT-4", "React", "Node.js", "MongoDB", "AWS"],
 integrations: ["WordPress", "Shopify", "HubSpot", "Mailchimp", "Buffer"],
@@ -91,6 +94,8 @@ competitors: ["Jasper", "Copy.ai", "Writesonic", "ContentBot"],
 demoUrl: "https://ziontechgroup.com/demo/ai-content-suite";
 documentationUrl: "https://ziontechgroup.com/docs/ai-content-suite",
 };
+demoUrl: "https://ziontechgroup.com/demo/ai-content-suite";,
+documentationUrl: "https://ziontechgroup.com/docs/ai-content-suite"};
 // AI-Powered Video Analytics Platform;
 {id: "ai-video-analytics-platform";
 title: "AI Video Analytics & Intelligence Platform";
@@ -140,6 +145,7 @@ marketPrice: "$599 - $2;500/month",
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["TensorFlow", "OpenCV", "Python", "React", "AWS", "Docker"],
 integrations: ["CCTV systems", "IP cameras", "Security platforms", "Analytics tools"],
@@ -197,6 +203,7 @@ marketPrice: "$299 - $1;200/month",
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["Python", "TensorFlow", "React", "Node.js", "PostgreSQL", "Redis"],
 integrations: ["Plaid", "Yodlee", "TD Ameritrade", "Charles Schwab", "Fidelity"],
@@ -254,6 +261,7 @@ marketPrice: "$899 - $3;500/month",
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["TensorFlow", "PyTorch", "Python", "React", "DICOM", "HL7"],
 integrations: ["PACS systems", "EHR systems", "Radiology information systems"],
@@ -311,6 +319,7 @@ marketPrice: "$799 - $3;000/month",
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["Python", "TensorFlow", "React", "Node.js", "PostgreSQL", "Redis"],
 integrations: ["SAP", "Oracle", "Microsoft Dynamics", "Salesforce", "Shopify"],
@@ -368,6 +377,7 @@ marketPrice: "$499 - $2;000/month",
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["NLP", "Python", "React", "Node.js", "Elasticsearch", "PostgreSQL"],
 integrations: ["Westlaw", "LexisNexis", "Clio", "MyCase", "PracticePanther"],
@@ -425,6 +435,7 @@ marketPrice: "$399 - $1;500/month",
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["Python", "TensorFlow", "React", "Node.js", "PostgreSQL", "Redis"],
 integrations: ["MLS systems", "Zillow", "Redfin", "Realtor.com", "Property databases"],
@@ -482,6 +493,7 @@ marketPrice: "$299 - $1;200/month",
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["Python", "NLP", "React", "Node.js", "PostgreSQL", "Redis"],
 integrations: ["Workday", "BambooHR", "Greenhouse", "Lever", "Slack"],
@@ -539,6 +551,7 @@ marketPrice: "$599 - $2;500/month",
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["Python", "TensorFlow", "React", "Node.js", "IoT protocols", "PostgreSQL"],
 integrations: ["Building management systems", "Smart meters", "Solar panels", "Battery storage"],
@@ -596,6 +609,7 @@ marketPrice: "$799 - $3;000/month",
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["Computer Vision", "Python", "TensorFlow", "React", "IoT", "PostgreSQL"],
 integrations: ["MES systems", "ERP systems", "PLC controllers", "Quality control equipment"],
@@ -653,6 +667,7 @@ marketPrice: "$199 - $800/month";
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["Python", "NLP", "React", "Node.js", "PostgreSQL", "Redis"],
 integrations: ["Canvas", "Blackboard", "Moodle", "Google Classroom", "Microsoft Teams"],
@@ -710,6 +725,7 @@ marketPrice: "$499 - $2;000/month",
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["Computer Vision", "Python", "TensorFlow", "React", "IoT", "PostgreSQL"],
 integrations: ["Weather APIs", "Satellite imagery", "Farm equipment", "Soil sensors"],
@@ -767,6 +783,7 @@ marketPrice: "$699 - $2;800/month",
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["Python", "TensorFlow", "React", "Node.js", "PostgreSQL", "Redis"],
 integrations: ["TMS systems", "GPS tracking", "Fuel cards", "Maintenance systems"],
@@ -824,6 +841,7 @@ marketPrice: "$599 - $2;500/month",
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["Python", "Machine Learning", "React", "Node.js", "PostgreSQL", "Redis"],
 integrations: ["Policy management systems", "Claims systems", "CRM systems", "Payment gateways"],
@@ -881,6 +899,7 @@ marketPrice: "$199 - $800/month";
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["Python", "TensorFlow", "React", "Node.js", "PostgreSQL", "Redis"],
 integrations: ["Unity", "Unreal Engine", "Steam", "Twitch", "Discord"],

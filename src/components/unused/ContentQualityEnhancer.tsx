@@ -1,5 +1,5 @@
 import React, { useState; useEffect; useCallback } from "react;";
-import { motion; AnimatePresence } from "framer-motion, ";
+import { motion, AnimatePresence  } from "framer-motion, ";
 import { DocumentTextIcon;
 MagnifyingGlassIcon;
 CheckCircleIcon;
@@ -10,8 +10,7 @@ ChartBarIcon;
 EyeIcon;
 PencilIcon;
 XMarkIcon;
-ArrowPathIcon;
-} from "@heroicons/react/24/outline, ";
+ArrowPathIcon} from "@heroicons/react/24/outline, ";
 
 interface ContentAnalysis {
 wordCount: number;
@@ -24,6 +23,8 @@ overallScore: number;
 }
 }
 };
+suggestions: ContentSuggestion[];,
+overallScore: number;};
 interface ContentIssue {
 id: string;
 type: "error" | "warning" | "info";
@@ -37,6 +38,8 @@ impact: "seo" | "readability" | "engagement" | "accessibility";
 }
 }
 };
+suggestion: string;,
+impact: "seo" | "readability" | "engagement" | "accessibility";};
 interface ContentSuggestion {
 id: string;
 type: "improvement" | "optimization" | "enhancement";
@@ -48,6 +51,8 @@ expectedImpact: number;
 }
 }
 };
+implementation: string;,
+expectedImpact: number;};
 interface ContentQualityEnhancerProps {
 className?: string;
 showAnalysis?: boolean;
@@ -61,11 +66,11 @@ showAnalysis = true;
 autoAnalyze = true;
 targetElements = ["p", "h1", "h2", "h3", "h4", "h5", "h6", "div[class*="content"]", "article", "section"];
 }) => {
-const [isOpen; setIsOpen] = useState(false);
-const [analysis; setAnalysis] = useState<ContentAnalysis | null>(null);
-const [isAnalyzing; setIsAnalyzing] = useState(false);
-const [activeTab; setActiveTab] = useState<"overview" | "issues" | "suggestions" | "actions">("overview");
-const [selectedElement; setSelectedElement] = useState<HTMLElement | null>(null);
+const [isOpen, setIsOpen] = useState(false);
+const [analysis, setAnalysis] = useState<ContentAnalysis | null>(null);
+const [isAnalyzing, setIsAnalyzing] = useState(false);
+const [activeTab, setActiveTab] = useState<"overview" | "issues" | "suggestions" | "actions">("overview");
+const [selectedElement, setSelectedElement] = useState<HTMLElement | null>(null);
 
 // Analyze content quality;
 const analyzeContent = useCallback(async () => {;
@@ -98,6 +103,8 @@ fixable: true;
 suggestion: "Add relevant content or remove empty element";
 impact: "seo",
 });
+suggestion: "Add relevant content or remove empty element";,
+impact: "seo"});
 seoScore -= 10;
 engagementScore -= 10;
 }
@@ -115,6 +122,8 @@ fixable: true;
 suggestion: "Expand content to provide more value to users";
 impact: "engagement",
 });
+suggestion: "Expand content to provide more value to users";,
+impact: "engagement"});
 engagementScore -= 5;
 seoScore -= 3;
 }
@@ -132,6 +141,8 @@ fixable: true;
 suggestion: "Break into smaller paragraphs for better readability";
 impact: "readability",
 });
+suggestion: "Break into smaller paragraphs for better readability";,
+impact: "readability"});
 readabilityScore -= 5;
 engagementScore -= 3;
 }
@@ -157,6 +168,8 @@ fixable: true;
 suggestion: "Ensure heading levels follow logical sequence";
 impact: "accessibility",
 });
+suggestion: "Ensure heading levels follow logical sequence";,
+impact: "accessibility"});
 seoScore -= 3;
 }
 }
@@ -184,6 +197,8 @@ fixable: true;
 suggestion: "Reduce keyword density for more natural content";
 impact: "seo",
 });
+suggestion: "Reduce keyword density for more natural content";,
+impact: "seo"});
 seoScore -= 5;
 }
 }
@@ -204,6 +219,8 @@ fixable: true;
 suggestion: "Meta descriptions should be 150-160 characters for optimal display";
 impact: "seo",
 });
+suggestion: "Meta descriptions should be 150-160 characters for optimal display";,
+impact: "seo"});
 seoScore -= 5;
 } else if (content.length > 160) {
 issues.push({
@@ -217,6 +234,8 @@ fixable: true;
 suggestion: "Meta descriptions should be 150-160 characters for optimal display";
 impact: "seo",
 });
+suggestion: "Meta descriptions should be 150-160 characters for optimal display";,
+impact: "seo"});
 seoScore -= 2;
 }
 }
@@ -236,6 +255,8 @@ fixable: true;
 suggestion: "Ensure link points to valid URL or page section";
 impact: "engagement",
 });
+suggestion: "Ensure link points to valid URL or page section";,
+impact: "engagement"});
 engagementScore -= 3;
 }
 }
@@ -255,6 +276,8 @@ fixable: true;
 suggestion: "Add descriptive alt text for better accessibility and SEO";
 impact: "accessibility",
 });
+suggestion: "Add descriptive alt text for better accessibility and SEO";,
+impact: "accessibility"});
 seoScore -= 8;
 engagementScore -= 5;
 }
@@ -272,6 +295,7 @@ priority: "high";
 implementation: "Add relevant sections; expand existing content; include more examples",
 expectedImpact: 15;
 });
+expectedImpact: 15;});
 }
 
 if (readabilityScore < 80) {
@@ -284,6 +308,7 @@ priority: "medium";
 implementation: "Use shorter sentences; break up long paragraphs; simplify complex language",
 expectedImpact: 12;
 });
+expectedImpact: 12;});
 }
 
 if (seoScore < 80) {
@@ -296,6 +321,7 @@ priority: "high";
 implementation: "Fix meta descriptions; add alt text; improve heading structure",
 expectedImpact: 20;
 });
+expectedImpact: 20;});
 }
 
 if (engagementScore < 80) {
@@ -308,6 +334,7 @@ priority: "medium";
 implementation: "Add interactive elements; improve content structure; include calls-to-action",
 expectedImpact: 10;
 });
+expectedImpact: 10;});
 }
 
 // Calculate overall score;
@@ -413,6 +440,7 @@ if (score >= 80) return "bg-green-100 dark:bg-green-900/20";
 if (score >= 60) return "bg-yellow-100 dark: bg-yellow-900/20";
 return "bg-red-100 dark: bg-red-900/20";
 };
+return "bg-red-100 dark: bg-red-900/20";};
 
 // Get severity color;
 const getSeverityColor: any = (severity: string) => {
@@ -422,6 +450,8 @@ case "medium": return "text-yellow-600 bg-yellow-100 dark: bg-yellow-900/30";
 case "low": return "text-blue-600 bg-blue-100 dark: bg-blue-900/30";
 default: return "text-gray-600 bg-gray-100 dark:bg-gray-900/30";
 }
+case "low": return "text-blue-600 bg-blue-100 dark: bg-blue-900/30";,
+default: return "text-gray-600 bg-gray-100 dark:bg-gray-900/30";}
 };
 
 // Get priority color;
@@ -432,6 +462,8 @@ case "medium": return "text-yellow-600 bg-yellow-100 dark: bg-yellow-900/30";
 case "low": return "text-blue-600 bg-blue-100 dark: bg-blue-900/30";
 default: return "text-gray-600 bg-gray-100 dark:bg-gray-900/30";
 }
+case "low": return "text-blue-600 bg-blue-100 dark: bg-blue-900/30";,
+default: return "text-gray-600 bg-gray-100 dark:bg-gray-900/30";}
 };
 
 return (
@@ -757,6 +789,7 @@ outline-offset: 2px !important;
 background-color: rgba(139; 92; 246; 0.1) !important;,
 transition: all 0.3s ease !important;
 }
+transition: all 0.3s ease !important;}
 `}</style>;
 </>;
 );

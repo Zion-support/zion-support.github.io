@@ -42,6 +42,9 @@ export const specializedInnovativeServices2025 = [
         innovationScore: 9.1,
     };
     {id: 2;
+        innovationScore: 9.1};
+    {
+        id: 2;
         name: "Federated Learning & Privacy-Preserving AI";
         category: "Privacy AI";
         subcategory: "Federated Learning";
@@ -83,6 +86,9 @@ export const specializedInnovativeServices2025 = [
         innovationScore: 9.3,
     };
     {id: 3;
+        innovationScore: 9.3};
+    {
+        id: 3;
         name: "Neuromorphic Computing Platform";
         category: "Neuromorphic Computing";
         subcategory: "Brain-Inspired AI";
@@ -124,6 +130,9 @@ export const specializedInnovativeServices2025 = [
         innovationScore: 9.5,
     };
     {id: 4;
+        innovationScore: 9.5};
+    {
+        id: 4;
         name: "Holographic Display & 3D Visualization";
         category: "Holographic Technology";
         subcategory: "3D Visualization";
@@ -165,6 +174,9 @@ export const specializedInnovativeServices2025 = [
         innovationScore: 9.2,
     };
     {id: 5;
+        innovationScore: 9.2};
+    {
+        id: 5;
         name: "Ambient Intelligence & Smart Environment";
         category: "Ambient Intelligence";
         subcategory: "Smart Environments";
@@ -206,6 +218,9 @@ export const specializedInnovativeServices2025 = [
         innovationScore: 9.0,
     };
     {id: 6;
+        innovationScore: 9.0};
+    {
+        id: 6;
         name: "Swarm Robotics & Autonomous Systems";
         category: "Swarm Robotics";
         subcategory: "Autonomous Systems";
@@ -247,6 +262,9 @@ export const specializedInnovativeServices2025 = [
         innovationScore: 9.4,
     };
     {id: 7;
+        innovationScore: 9.4};
+    {
+        id: 7;
         name: "Bio-Inspired Computing & Evolutionary Algorithms";
         category: "Bio-Inspired Computing";
         subcategory: "Evolutionary AI";
@@ -288,6 +306,9 @@ export const specializedInnovativeServices2025 = [
         innovationScore: 8.8,
     };
     {id: 8;
+        innovationScore: 8.8};
+    {
+        id: 8;
         name: "Quantum Machine Learning & AI";
         category: "Quantum AI";
         subcategory: "Quantum Machine Learning";
@@ -326,7 +347,6 @@ export const specializedInnovativeServices2025 = [
         scalability: ["Quantum Hardware Scaling", "Algorithm Complexity", "Multi-qubit Support"],
         estimatedDelivery: "18-24 weeks";
         supportLevel: "enterprise";
-        innovationScore: 9.6,
-    }
+        innovationScore: 9.6}
 ];
     export default specializedInnovativeServices2025;

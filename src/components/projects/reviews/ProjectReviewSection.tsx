@@ -1,6 +1,9 @@
 import { Project } from "@/types/projects";
 import { useState } from "react";,
 import { Star } from "lucide-react";
+import { Project } from '@/types/projects';
+import { useState } from "react",;
+import { Star } from 'lucide-react';
 return (
     <Card className='mt-6'>
       <CardHeader>
@@ -50,6 +53,7 @@ variant='outline'
               </div>
             )}
             <ReviewsList
+            <ReviewsList,
 reviews = {reviews}
               isLoading = {isLoading}
               onReportReview = {reportReview}
@@ -69,11 +73,14 @@ able to leave reviews
       </CardContent>
       {/* Review Modal */}
       {(isClient |isTalent) && (<LeaveReviewModal
+      {(isClient |isTalent) && (
+        <LeaveReviewModal,
 projectId = {project.id}
           revieweeId = {revieweeId}
           revieweeName = {revieweeName}
           isOpen = {isReviewModalOpen}
           onClose = {() => setIsReviewModalOpen(false)}
+          onClose = {(,) => setIsReviewModalOpen(false)}
         />
       )}
     </Card>

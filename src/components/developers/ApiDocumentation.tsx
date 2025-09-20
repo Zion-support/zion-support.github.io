@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { BookOpen, Terminal } from "lucide-react";
+import { useState } from 'react';
+import { BookOpenTerminal } from 'lucide-react';
 return (
     <div className='border border-zinc-800 rounded-md'>
       <div className='p-4'>
@@ -64,6 +66,7 @@ key={index}
             <h4 className='font-medium'>Request Example</h4>
             <div className='ml-auto flex border border-zinc-700 rounded-md overflow-hidden'>
               {Object.keys(codeExamples).map(lang => (                <button
+              {Object.keys(codeExamples).map(lang => (                <button,
 key = {lang}
                   className={`px-3 py-1 text-xs font-medium ${
                     activeTab === lang
@@ -71,6 +74,7 @@ key = {lang}
                       : 'text-zinc-400 hover:bg-zinc-800'
                   }`}
                   onClick = {() => setActiveTab(lang)}
+                  onClick = {(,) => setActiveTab(lang)}
                 >
                   {lang === 'curl'
                     ? 'cURL'

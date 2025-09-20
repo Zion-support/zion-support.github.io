@@ -3,6 +3,8 @@ import React from "react";
 export interface Listing {id: string; title: string; description: string; price: number; currency: string; category: string; tags: string[];
 }
 }
+export interface Listing {
+id: string; title: string; description: string; price: number; currency: string; category: string; tags: string[];,
 avatar: string; rating: number; reviews: number};
 location: {,
 city: string; country: string;
@@ -19,6 +21,16 @@ export interface ListingFilter {category?: string;
 priceRange?: {}
 min: number; max: number};
 author?: {name: string; id: string;
+returns?: {
+allowed: boolean; days: number; cost: number};
+}
+
+export interface ListingFilter {
+category?: string;
+priceRange?: {
+min: number; max: number};
+author?: {
+name: string; id: string;
 avatarUrl?: string};
 location?: string;
 availability?: string;

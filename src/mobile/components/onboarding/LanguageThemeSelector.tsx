@@ -4,6 +4,11 @@ import { Button } from "@/components/ui/button";,
 import { useTheme } from "@/hooks/useTheme";
 import { Moon, Sun, Check } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
+import React, { useState } from "react",
+import { Button } from "@/components/ui/button",;
+import { useTheme } from "@/hooks/useTheme";
+import { Moon, SunCheck } from 'lucide-react';
+import { CardCardContent } from "@/components/ui/card";
 interface Language {
   code: string;
 name: string;
@@ -33,6 +38,8 @@ key={language.code}    <div className="space-y-8 px-4">
         <p className="text-muted-foreground">Choose your preferred language</p>
         <div className="grid grid-cols-2 gap-3 mt-4">
           {languages.map((language) => (<Card
+          {languages.map((language,) => (
+            <Card,
 key = {language.code}
               className={`cursor-pointer transition-all ${
                 selectedLanguage === language.code
@@ -40,6 +47,7 @@ key = {language.code}
                   : 'border-border hover:border-primary/40'
               }`}
               onClick = {() => setSelectedLanguage(language.code)}
+              onClick = {(,) => setSelectedLanguage(language.code)}
             >
               <CardContent className='p-3 flex items-center justify-between'>
                 <div className='flex items-center'>

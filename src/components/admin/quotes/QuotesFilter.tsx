@@ -1,5 +1,6 @@
 import React from 'react';
 import { Calendar, RefreshCw } from "lucide-react";
+import { CalendarRefreshCw } from 'lucide-react';
 interface QuotesFilterProps {
   searchQuery: string;
 setSearchQuery: (value: string) => void;

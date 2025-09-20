@@ -1,4 +1,4 @@
-import { Routes; Route } from "react-router-dom, ";
+import { Routes, Route  } from "react-router-dom, ";
 export interface ServiceContact {
 phone: string;
 email: string;
@@ -7,6 +7,8 @@ address: string;
 }
 }
 }
+website: string;,
+address: string;}
 
 export interface MicroSaasService {
 id: number;
@@ -32,6 +34,8 @@ trialPeriod: string;
 }
 }
 }
+freeTier: boolean;,
+trialPeriod: string;}
 
 export interface ITService {
 id: number;
@@ -54,6 +58,8 @@ support: string;
 }
 }
 }
+deliveryTime: string;,
+support: string;}
 
 export interface AIService {
 id: number;
@@ -78,6 +84,8 @@ useCases: string[];
 }
 }
 }
+aiScore: number;,
+useCases: string[];}
 
 // Enhanced Micro SAAS Services for 2025;
 export const enhancedMicroSaasServices2025: MicroSaasService[] = [
@@ -115,6 +123,9 @@ email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com/taskflow-pro";
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$29-89/month";
+website: "https://ziontechgroup.com/taskflow-pro";,
+address: "364 E Main St STE 1008 Middletown DE 19709"};
+marketPrice: "$29-89/month";,
 competitors: ["Asana", "Monday.com", "ClickUp"],
 roi: "300% within 6 months";
 setupTime: "15 minutes";
@@ -123,6 +134,10 @@ freeTier: true;
 trialPeriod: "14 days",
 };
 {id: 2;
+freeTier: true;,
+trialPeriod: "14 days"};
+{
+id: 2;
 name: "InvoiceGenius AI";
 category: "Finance";
 pricing: "Freemium";
@@ -156,6 +171,9 @@ email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com/invoicegenius-ai";
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$39-99/month";
+website: "https://ziontechgroup.com/invoicegenius-ai";,
+address: "364 E Main St STE 1008 Middletown DE 19709"};
+marketPrice: "$39-99/month";,
 competitors: ["QuickBooks", "FreshBooks", "Xero"],
 roi: "400% within 3 months";
 setupTime: "30 minutes";
@@ -164,6 +182,10 @@ freeTier: true;
 trialPeriod: "30 days",
 };
 {id: 3;
+freeTier: true;,
+trialPeriod: "30 days"};
+{
+id: 3;
 name: "SocialSync Pro";
 category: "Marketing";
 pricing: "Freemium";
@@ -197,6 +219,9 @@ email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com/socialsync-pro";
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$49-149/month";
+website: "https://ziontechgroup.com/socialsync-pro";,
+address: "364 E Main St STE 1008 Middletown DE 19709"};
+marketPrice: "$49-149/month";,
 competitors: ["Hootsuite", "Buffer", "Sprout Social"],
 roi: "250% within 4 months";
 setupTime: "45 minutes";
@@ -205,6 +230,10 @@ freeTier: true;
 trialPeriod: "7 days",
 };
 {id: 4;
+freeTier: true;,
+trialPeriod: "7 days"};
+{
+id: 4;
 name: "CustomerFlow CRM";
 category: "CRM";
 pricing: "Freemium";
@@ -238,6 +267,9 @@ email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com/customerflow-crm";
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$25-79/month";
+website: "https://ziontechgroup.com/customerflow-crm";,
+address: "364 E Main St STE 1008 Middletown DE 19709"};
+marketPrice: "$25-79/month";,
 competitors: ["HubSpot", "Salesforce", "Pipedrive"],
 roi: "350% within 5 months";
 setupTime: "1 hour";
@@ -246,6 +278,10 @@ freeTier: true;
 trialPeriod: "14 days",
 };
 {id: 5;
+freeTier: true;,
+trialPeriod: "14 days"};
+{
+id: 5;
 name: "DataViz Studio";
 category: "Analytics";
 pricing: "Freemium";
@@ -279,6 +315,9 @@ email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com/dataviz-studio";
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$45-129/month";
+website: "https://ziontechgroup.com/dataviz-studio";,
+address: "364 E Main St STE 1008 Middletown DE 19709"};
+marketPrice: "$45-129/month";,
 competitors: ["Tableau", "Power BI", "Looker"],
 roi: "280% within 6 months";
 setupTime: "2 hours";
@@ -287,6 +326,10 @@ freeTier: true;
 trialPeriod: "21 days",
 };
 {id: 6;
+freeTier: true;,
+trialPeriod: "21 days"};
+{
+id: 6;
 name: "ScheduleMaster AI";
 category: "Scheduling";
 pricing: "Freemium";
@@ -320,6 +363,9 @@ email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com/schedulemaster-ai";
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$22-67/month";
+website: "https://ziontechgroup.com/schedulemaster-ai";,
+address: "364 E Main St STE 1008 Middletown DE 19709"};
+marketPrice: "$22-67/month";,
 competitors: ["Calendly", "Acuity Scheduling", "SimplyBook.me"],
 roi: "320% within 4 months";
 setupTime: "30 minutes";
@@ -327,6 +373,8 @@ integrations: ["Google Calendar", "Outlook", "Slack", "Zapier", "Stripe"],
 freeTier: true;
 trialPeriod: "14 days",
 };
+freeTier: true;,
+trialPeriod: "14 days"};
 // NEW INNOVATIVE MICRO SAAS SERVICES;
 {id: 7;
 name: "Quantum AI Fusion Platform";
@@ -360,6 +408,7 @@ contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com/services/quantum-ai-fusion";
+website: "https://ziontechgroup.com/services/quantum-ai-fusion";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$50;000-500;000",
 competitors: ["IBM Quantum", "Google Quantum AI", "Microsoft Quantum"],
@@ -370,6 +419,10 @@ freeTier: false;
 trialPeriod: "30 days",
 };
 {id: 8;
+freeTier: false;,
+trialPeriod: "30 days"};
+{
+id: 8;
 name: "Neuromorphic Computing Platform";
 category: "AI Architecture";
 pricing: "Enterprise";
@@ -401,6 +454,7 @@ contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com/services/neuromorphic-computing";
+website: "https://ziontechgroup.com/services/neuromorphic-computing";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$75;000-300;000",
 competitors: ["Intel Loihi", "BrainChip", "IBM TrueNorth"],
@@ -411,6 +465,10 @@ freeTier: false;
 trialPeriod: "60 days",
 };
 {id: 9;
+freeTier: false;,
+trialPeriod: "60 days"};
+{
+id: 9;
 name: "Edge AI Orchestration Platform";
 category: "Edge Computing";
 pricing: "Professional";
@@ -442,6 +500,7 @@ contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com/services/edge-ai-orchestration";
+website: "https://ziontechgroup.com/services/edge-ai-orchestration";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$30;000-120;000",
 competitors: ["AWS Greengrass", "Azure IoT Edge", "Google Edge TPU"],
@@ -452,6 +511,10 @@ freeTier: false;
 trialPeriod: "45 days",
 };
 {id: 10;
+freeTier: false;,
+trialPeriod: "45 days"};
+{
+id: 10;
 name: "Federated Learning Platform";
 category: "Privacy AI";
 pricing: "Professional";
@@ -483,6 +546,7 @@ contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com/services/federated-learning-platform";
+website: "https://ziontechgroup.com/services/federated-learning-platform";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$40;000-150;000",
 competitors: ["OpenMined", "TensorFlow Federated", "PySyft"],
@@ -493,6 +557,10 @@ freeTier: false;
 trialPeriod: "60 days",
 };
 {id: 11;
+freeTier: false;,
+trialPeriod: "60 days"};
+{
+id: 11;
 name: "AI Ethics & Governance Platform";
 category: "AI Governance";
 pricing: "Professional";
@@ -524,6 +592,7 @@ contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com/services/ai-ethics-governance";
+website: "https://ziontechgroup.com/services/ai-ethics-governance";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$35;000-140;000",
 competitors: ["IBM AI Fairness 360", "Microsoft Responsible AI", "Google AI Principles"],
@@ -534,6 +603,10 @@ freeTier: false;
 trialPeriod: "45 days",
 };
 {id: 12;
+freeTier: false;,
+trialPeriod: "45 days"};
+{
+id: 12;
 name: "AI Marketplace Platform";
 category: "AI Ecosystem";
 pricing: "Professional";
@@ -565,6 +638,7 @@ contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com/services/ai-marketplace-platform";
+website: "https://ziontechgroup.com/services/ai-marketplace-platform";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$25;000-90;000",
 competitors: ["Hugging Face", "Model Zoo", "AI Hub"],
@@ -575,6 +649,10 @@ freeTier: false;
 trialPeriod: "30 days",
 };
 {id: 13;
+freeTier: false;,
+trialPeriod: "30 days"};
+{
+id: 13;
 name: "SmartInvoice AI";
 category: "Finance";
 pricing: "Professional";
@@ -608,6 +686,9 @@ email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com/smart-invoice-ai";
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$89-199/month";
+website: "https://ziontechgroup.com/smart-invoice-ai";,
+address: "364 E Main St STE 1008 Middletown DE 19709"};
+marketPrice: "$89-199/month";,
 competitors: ["Bill.com", "FreshBooks", "QuickBooks"],
 roi: "300% in 6 months";
 setupTime: "2-3 days";
@@ -616,6 +697,10 @@ freeTier: false;
 trialPeriod: "14 days",
 };
 {id: 14;
+freeTier: false;,
+trialPeriod: "14 days"};
+{
+id: 14;
 name: "ContentGenius Pro";
 category: "Marketing";
 pricing: "Professional";
@@ -649,6 +734,9 @@ email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com/content-genius-pro";
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$67-149/month";
+website: "https://ziontechgroup.com/content-genius-pro";,
+address: "364 E Main St STE 1008 Middletown DE 19709"};
+marketPrice: "$67-149/month";,
 competitors: ["Jasper", "Copy.ai", "Writesonic"],
 roi: "250% in 3 months";
 setupTime: "1 day";
@@ -657,6 +745,10 @@ freeTier: false;
 trialPeriod: "7 days",
 };
 {id: 15;
+freeTier: false;,
+trialPeriod: "7 days"};
+{
+id: 15;
 name: "LeadFlow CRM";
 category: "CRM";
 pricing: "Professional";
@@ -690,6 +782,9 @@ email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com/leadflow-crm";
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$45-99/month";
+website: "https://ziontechgroup.com/leadflow-crm";,
+address: "364 E Main St STE 1008 Middletown DE 19709"};
+marketPrice: "$45-99/month";,
 competitors: ["Salesforce", "HubSpot", "Pipedrive"],
 roi: "400% in 6 months";
 setupTime: "3-5 days";
@@ -698,6 +793,10 @@ freeTier: true;
 trialPeriod: "30 days",
 };
 {id: 16;
+freeTier: true;,
+trialPeriod: "30 days"};
+{
+id: 16;
 name: "DataViz Studio";
 category: "Analytics";
 pricing: "Professional";
@@ -731,6 +830,9 @@ email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com/dataviz-studio";
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$79-179/month";
+website: "https://ziontechgroup.com/dataviz-studio";,
+address: "364 E Main St STE 1008 Middletown DE 19709"};
+marketPrice: "$79-179/month";,
 competitors: ["Tableau", "Power BI", "Looker"],
 roi: "350% in 4 months";
 setupTime: "1 week";
@@ -739,6 +841,10 @@ freeTier: false;
 trialPeriod: "14 days",
 };
 {id: 17;
+freeTier: false;,
+trialPeriod: "14 days"};
+{
+id: 17;
 name: "SmartScheduler AI";
 category: "Scheduling";
 pricing: "Freemium";
@@ -772,6 +878,9 @@ email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com/smart-scheduler-ai";
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$39-89/month";
+website: "https://ziontechgroup.com/smart-scheduler-ai";,
+address: "364 E Main St STE 1008 Middletown DE 19709"};
+marketPrice: "$39-89/month";,
 competitors: ["Calendly", "Acuity", "Scheduling.com"],
 roi: "280% in 3 months";
 setupTime: "2-3 days";
@@ -780,6 +889,10 @@ freeTier: true;
 trialPeriod: "30 days",
 };
 {id: 18;
+freeTier: true;,
+trialPeriod: "30 days"};
+{
+id: 18;
 name: "QuantumCode Studio";
 category: "Quantum Computing";
 pricing: "Enterprise";
@@ -813,6 +926,9 @@ email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com/quantum-code-studio";
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$299-599/month";
+website: "https://ziontechgroup.com/quantum-code-studio";,
+address: "364 E Main St STE 1008 Middletown DE 19709"};
+marketPrice: "$299-599/month";,
 competitors: ["IBM Quantum", "Microsoft Azure Quantum", "Amazon Braket"],
 roi: "500% in 12 months";
 setupTime: "2-3 weeks";
@@ -821,6 +937,10 @@ freeTier: false;
 trialPeriod: "7 days",
 };
 {id: 19;
+freeTier: false;,
+trialPeriod: "7 days"};
+{
+id: 19;
 name: "EdgeCompute Pro";
 category: "Edge Computing";
 pricing: "Enterprise";
@@ -854,6 +974,9 @@ email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com/edge-compute-pro";
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$199-399/month";
+website: "https://ziontechgroup.com/edge-compute-pro";,
+address: "364 E Main St STE 1008 Middletown DE 19709"};
+marketPrice: "$199-399/month";,
 competitors: ["AWS Greengrass", "Azure IoT Edge", "Google Cloud IoT"],
 roi: "400% in 8 months";
 setupTime: "2-4 weeks";
@@ -862,6 +985,10 @@ freeTier: false;
 trialPeriod: "14 days",
 };
 {id: 20;
+freeTier: false;,
+trialPeriod: "14 days"};
+{
+id: 20;
 name: "PrivacyGuard AI";
 category: "Privacy AI";
 pricing: "Professional";
@@ -895,6 +1022,9 @@ email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com/privacy-guard-ai";
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$129-249/month";
+website: "https://ziontechgroup.com/privacy-guard-ai";,
+address: "364 E Main St STE 1008 Middletown DE 19709"};
+marketPrice: "$129-249/month";,
 competitors: ["OneTrust", "TrustArc", "BigID"],
 roi: "350% in 6 months";
 setupTime: "1-2 weeks";
@@ -903,6 +1033,10 @@ freeTier: false;
 trialPeriod: "21 days",
 };
 {id: 21;
+freeTier: false;,
+trialPeriod: "21 days"};
+{
+id: 21;
 name: "AI Governance Suite";
 category: "AI Governance";
 pricing: "Enterprise";
@@ -936,6 +1070,9 @@ email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com/ai-governance-suite";
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$450-899/month";
+website: "https://ziontechgroup.com/ai-governance-suite";,
+address: "364 E Main St STE 1008 Middletown DE 19709"};
+marketPrice: "$450-899/month";,
 competitors: ["DataRobot", "H2O.ai", "IBM Watson"],
 roi: "600% in 12 months";
 setupTime: "3-4 weeks";
@@ -944,6 +1081,10 @@ freeTier: false;
 trialPeriod: "30 days",
 };
 {id: 22;
+freeTier: false;,
+trialPeriod: "30 days"};
+{
+id: 22;
 name: "EcoSystem AI";
 category: "AI Ecosystem";
 pricing: "Professional";
@@ -977,6 +1118,9 @@ email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com/ecosystem-ai";
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$179-349/month";
+website: "https://ziontechgroup.com/ecosystem-ai";,
+address: "364 E Main St STE 1008 Middletown DE 19709"};
+marketPrice: "$179-349/month";,
 competitors: ["Dataiku", "Alteryx", "RapidMiner"],
 roi: "450% in 8 months";
 setupTime: "2-3 weeks";
@@ -985,6 +1129,10 @@ freeTier: false;
 trialPeriod: "21 days",
 };
 {id: 23;
+freeTier: false;,
+trialPeriod: "21 days"};
+{
+id: 23;
 name: "Blockchain Analytics Pro";
 category: "Finance";
 pricing: "Enterprise";
@@ -1018,6 +1166,9 @@ email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com/blockchain-analytics-pro";
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$299-599/month";
+website: "https://ziontechgroup.com/blockchain-analytics-pro";,
+address: "364 E Main St STE 1008 Middletown DE 19709"};
+marketPrice: "$299-599/month";,
 competitors: ["Chainalysis", "Elliptic", "CipherTrace"],
 roi: "500% in 9 months";
 setupTime: "3-4 weeks";
@@ -1026,6 +1177,10 @@ freeTier: false;
 trialPeriod: "14 days",
 };
 {id: 24;
+freeTier: false;,
+trialPeriod: "14 days"};
+{
+id: 24;
 name: "SmartContract AI";
 category: "AI Architecture";
 pricing: "Professional";
@@ -1059,6 +1214,9 @@ email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com/smart-contract-ai";
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$159-299/month";
+website: "https://ziontechgroup.com/smart-contract-ai";,
+address: "364 E Main St STE 1008 Middletown DE 19709"};
+marketPrice: "$159-299/month";,
 competitors: ["OpenZeppelin", "Truffle", "Hardhat"],
 roi: "400% in 6 months";
 setupTime: "1-2 weeks";
@@ -1067,6 +1225,10 @@ freeTier: false;
 trialPeriod: "21 days",
 };
 {id: 25;
+freeTier: false;,
+trialPeriod: "21 days"};
+{
+id: 25;
 name: "Quantum Security Vault";
 category: "Quantum Computing";
 pricing: "Enterprise";
@@ -1100,6 +1262,9 @@ email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com/quantum-security-vault";
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$399-799/month";
+website: "https://ziontechgroup.com/quantum-security-vault";,
+address: "364 E Main St STE 1008 Middletown DE 19709"};
+marketPrice: "$399-799/month";,
 competitors: ["NIST PQC", "Cloudflare", "Google"],
 roi: "600% in 18 months";
 setupTime: "4-6 weeks";
@@ -1107,6 +1272,8 @@ integrations: ["Security systems", "Cloud platforms", "Identity providers", "Com
 freeTier: false;
 trialPeriod: "30 days",
 }
+freeTier: false;,
+trialPeriod: "30 days"}
 ];
 // Enhanced IT Services for 2025;
 export const enhancedITServices2025: ITService[] = [
@@ -1142,6 +1309,7 @@ contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com/enterprise-network";
+website: "https://ziontechgroup.com/enterprise-network";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$15;000-50;000",
 responseTime: "2 hours";
@@ -1151,6 +1319,10 @@ deliveryTime: "8-12 weeks";
 support: "24/7 enterprise support",
 };
 {id: 2;
+deliveryTime: "8-12 weeks";,
+support: "24/7 enterprise support"};
+{
+id: 2;
 name: "Cloud Migration & Optimization";
 category: "Cloud Services";
 description: "End-to-end cloud migration services with AI-powered cost optimization and performance tuning";
@@ -1182,6 +1354,7 @@ contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com/cloud-migration";
+website: "https://ziontechgroup.com/cloud-migration";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$25;000-75;000",
 responseTime: "4 hours";
@@ -1191,6 +1364,10 @@ deliveryTime: "12-16 weeks";
 support: "24/7 cloud support",
 };
 {id: 3;
+deliveryTime: "12-16 weeks";,
+support: "24/7 cloud support"};
+{
+id: 3;
 name: "AI-Powered Cybersecurity";
 category: "Security";
 description: "Next-generation cybersecurity with AI threat detection; automated response; and predictive security",
@@ -1222,6 +1399,7 @@ contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com/ai-cybersecurity";
+website: "https://ziontechgroup.com/ai-cybersecurity";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$22;000-60;000",
 responseTime: "1 hour";
@@ -1231,6 +1409,10 @@ deliveryTime: "6-10 weeks";
 support: "24/7 security support",
 };
 {id: 4;
+deliveryTime: "6-10 weeks";,
+support: "24/7 security support"};
+{
+id: 4;
 name: "Data Center Modernization";
 category: "Infrastructure";
 description: "Complete data center modernization with AI-powered management and energy optimization";
@@ -1262,6 +1444,7 @@ contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com/data-center-modernization";
+website: "https://ziontechgroup.com/data-center-modernization";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$60;000-150;000",
 responseTime: "6 hours";
@@ -1271,6 +1454,10 @@ deliveryTime: "16-24 weeks";
 support: "24/7 data center support",
 };
 {id: 5;
+deliveryTime: "16-24 weeks";,
+support: "24/7 data center support"};
+{
+id: 5;
 name: "DevOps & AI Automation";
 category: "DevOps";
 description: "Complete DevOps transformation with AI-powered automation; CI/CD pipelines; and intelligent monitoring",
@@ -1302,6 +1489,7 @@ contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com/devops-ai-automation";
+website: "https://ziontechgroup.com/devops-ai-automation";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$28;000-80;000",
 responseTime: "3 hours";
@@ -1311,6 +1499,10 @@ deliveryTime: "10-14 weeks";
 support: "24/7 DevOps support",
 };
 {id: 6;
+deliveryTime: "10-14 weeks";,
+support: "24/7 DevOps support"};
+{
+id: 6;
 name: "AI Business Intelligence Platform";
 category: "Analytics";
 description: "Comprehensive BI platform with AI-powered analytics; predictive modeling; and real-time insights",
@@ -1342,6 +1534,7 @@ contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com/ai-bi-platform";
+website: "https://ziontechgroup.com/ai-bi-platform";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$35;000-100;000",
 responseTime: "4 hours";
@@ -1351,6 +1544,10 @@ deliveryTime: "14-20 weeks";
 support: "24/7 analytics support",
 };
 {id: 7;
+deliveryTime: "14-20 weeks";,
+support: "24/7 analytics support"};
+{
+id: 7;
 name: "DevOps Automation Platform";
 category: "DevOps";
 description: "Comprehensive DevOps automation with CI/CD pipelines; infrastructure as code; and AI-powered optimization",
@@ -1380,6 +1577,7 @@ contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com/devops-automation";
+website: "https://ziontechgroup.com/devops-automation";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$18;000-45;000",
 responseTime: "4 hours";
@@ -1389,6 +1587,10 @@ deliveryTime: "8-12 weeks";
 support: "24/7 DevOps support",
 };
 {id: 8;
+deliveryTime: "8-12 weeks";,
+support: "24/7 DevOps support"};
+{
+id: 8;
 name: "Data Center Modernization";
 category: "Infrastructure";
 description: "Complete data center transformation with AI-powered optimization; energy efficiency; and hybrid cloud integration",
@@ -1418,6 +1620,7 @@ contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com/data-center-modernization";
+website: "https://ziontechgroup.com/data-center-modernization";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$35;000-80;000",
 responseTime: "6 hours";
@@ -1427,6 +1630,10 @@ deliveryTime: "16-24 weeks";
 support: "24/7 infrastructure support",
 };
 {id: 9;
+deliveryTime: "16-24 weeks";,
+support: "24/7 infrastructure support"};
+{
+id: 9;
 name: "IoT Infrastructure & Management";
 category: "IoT";
 description: "End-to-end IoT infrastructure design; implementation; and management with AI-powered analytics and security",
@@ -1456,6 +1663,7 @@ contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com/iot-infrastructure";
+website: "https://ziontechgroup.com/iot-infrastructure";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$22;000-55;000",
 responseTime: "4 hours";
@@ -1465,6 +1673,10 @@ deliveryTime: "12-18 weeks";
 support: "24/7 IoT support",
 };
 {id: 10;
+deliveryTime: "12-18 weeks";,
+support: "24/7 IoT support"};
+{
+id: 10;
 name: "Digital Transformation Consulting";
 category: "Consulting";
 description: "Strategic digital transformation consulting with technology roadmap; change management; and implementation support",
@@ -1494,6 +1706,7 @@ contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com/digital-transformation";
+website: "https://ziontechgroup.com/digital-transformation";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$45;000-120;000",
 responseTime: "8 hours";
@@ -1503,6 +1716,10 @@ deliveryTime: "20-32 weeks";
 support: "Business hours consulting support",
 };
 {id: 11;
+deliveryTime: "20-32 weeks";,
+support: "Business hours consulting support"};
+{
+id: 11;
 name: "Legacy System Modernization";
 category: "Modernization";
 description: "Legacy system modernization with cloud migration; API development; and microservices architecture",
@@ -1532,6 +1749,7 @@ contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com/legacy-modernization";
+website: "https://ziontechgroup.com/legacy-modernization";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$28;000-75;000",
 responseTime: "6 hours";
@@ -1541,6 +1759,10 @@ deliveryTime: "16-24 weeks";
 support: "24/7 modernization support",
 };
 {id: 12;
+deliveryTime: "16-24 weeks";,
+support: "24/7 modernization support"};
+{
+id: 12;
 name: "Enterprise Software Development";
 category: "Software Development";
 description: "Custom enterprise software development with modern technologies; AI integration; and scalable architecture",
@@ -1570,6 +1792,7 @@ contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com/enterprise-software";
+website: "https://ziontechgroup.com/enterprise-software";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$32;000-85;000",
 responseTime: "4 hours";
@@ -1578,6 +1801,8 @@ certifications: ["Software Development", "Cloud Architecture", "AI Integration"]
 deliveryTime: "20-28 weeks";
 support: "24/7 development support",
 }
+deliveryTime: "20-28 weeks";,
+support: "24/7 development support"}
 ];
 // Enhanced AI Services for 2025;
 export const enhancedAIServices2025: AIService[] = [
@@ -1612,6 +1837,7 @@ contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com/ai-business-intelligence";
+website: "https://ziontechgroup.com/ai-business-intelligence";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$3;500-8;000/month",
 aiModels: ["GPT-4", "Claude", "BERT", "Custom ML models"],
@@ -1652,6 +1878,7 @@ contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com/nlp-solutions";
+website: "https://ziontechgroup.com/nlp-solutions";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$2;200-6;000/month",
 aiModels: ["GPT-4", "Claude", "BERT", "T5", "Custom NLP models"],
@@ -1692,6 +1919,7 @@ contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com/computer-vision";
+website: "https://ziontechgroup.com/computer-vision";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$3;800-9;000/month",
 aiModels: ["YOLO", "ResNet", "EfficientNet", "Custom CV models"],
@@ -1732,6 +1960,7 @@ contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com/predictive-analytics";
+website: "https://ziontechgroup.com/predictive-analytics";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$3;200-7;500/month",
 aiModels: ["Prophet", "ARIMA", "LSTM", "Random Forest", "Custom ML models"],
@@ -1772,6 +2001,7 @@ contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com/ai-process-automation";
+website: "https://ziontechgroup.com/ai-process-automation";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$2;800-6;500/month",
 aiModels: ["Custom ML models", "RPA tools", "Process mining algorithms"],
@@ -1812,6 +2042,7 @@ contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com/ai-chatbot";
+website: "https://ziontechgroup.com/ai-chatbot";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$1;800-5;000/month",
 aiModels: ["GPT-4", "Claude", "Custom conversational AI"],
@@ -1852,6 +2083,7 @@ contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com/ai-predictive-maintenance";
+website: "https://ziontechgroup.com/ai-predictive-maintenance";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$4;200-9;500/month",
 aiModels: ["LSTM", "Random Forest", "XGBoost", "Custom ML models"],
@@ -1892,6 +2124,7 @@ contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com/ai-supply-chain";
+website: "https://ziontechgroup.com/ai-supply-chain";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$3;800-8;500/month",
 aiModels: ["Prophet", "ARIMA", "Neural Networks", "Optimization algorithms"],
@@ -1932,6 +2165,7 @@ contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com/ai-customer-experience";
+website: "https://ziontechgroup.com/ai-customer-experience";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$2;800-6;500/month",
 aiModels: ["BERT", "GPT-4", "Recommendation systems", "Clustering algorithms"],
@@ -1972,6 +2206,7 @@ contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com/ai-financial-risk";
+website: "https://ziontechgroup.com/ai-financial-risk";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$5;500-12;000/month",
 aiModels: ["Deep Learning", "Random Forest", "XGBoost", "Custom financial models"],
@@ -2012,6 +2247,7 @@ contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com/ai-healthcare-analytics";
+website: "https://ziontechgroup.com/ai-healthcare-analytics";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$4;800-10;500/month",
 aiModels: ["Deep Learning", "Computer Vision", "NLP", "Medical AI models"],
@@ -2052,6 +2288,7 @@ contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com/ai-marketing-automation";
+website: "https://ziontechgroup.com/ai-marketing-automation";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$3;200-7;500/month",
 aiModels: ["Machine Learning", "NLP", "Recommendation systems", "Optimization algorithms"],
@@ -2068,3 +2305,5 @@ microSaas: enhancedMicroSaasServices2025;
 itServices: enhancedITServices2025;
 aiServices: enhancedAIServices2025;
 };
+itServices: enhancedITServices2025;,
+aiServices: enhancedAIServices2025;};

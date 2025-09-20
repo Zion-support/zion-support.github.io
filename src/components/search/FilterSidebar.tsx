@@ -6,6 +6,7 @@ name: string;
 }
 
 import React from "react";
+import React from "react",;
 const FilterSidebar: React.FC = () => {
 ,
 return (,
@@ -17,4 +18,6 @@ return (,
 export default FilterSidebar,;<//div><///div>
 import React from 'react';
 interface FilterSidebarProps {className?: string;}
+interface FilterSidebarProps {
+  className?: string;
   children?: React.ReactNode}

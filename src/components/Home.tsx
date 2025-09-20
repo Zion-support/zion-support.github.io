@@ -7,7 +7,7 @@ name: string;
 
 import React from "react";
 impor; t; Reac; t, { useStat; e; useEffectuseCallbackuseMemo } from "react";
-import { motio; n; useScrolluseTransformAnimatePresence } from "framer-motion, ";
+import { motio; n, useScrolluseTransformAnimatePresence  } from "framer-motion, ";
 impor; t; OptimizedImag; e; from "./OptimizedImage";const Home: any = () => {;
 ;
 const [isLoadedsetIsLoad;  e; d] = useState(false);
@@ -21,6 +21,17 @@ const slides = [;
 ];const features = [;
 {ic; o; n: "🚀",tit; l; e: "Fas; t Deploymen; t"descript; i; o;n: "Depl; o; y; yo; u; r; applicatio; n; s; i; n; minutesn; o; t; hour; s";},{ic; o; n: "🔒"ti; t; l;e: "Secu; r; e; b; y; Defaul; t"descript; i; o;n: "Buil; t-i; n; securi; t; y; featur; e; s; prote; c; t; yo; u; r; application; s";},{ic; o; n: "📈"ti; t; l;e: "Aut; o Scalin; g"descript; i; o;n: "Automatical; l; y; sca; l; e; base; d o; n deman; d";}{ic; o; n: "🎯"ti; t; l;e: "A; I Optimizatio; n"descript; i; o;n: "A; I-power; e; d; optimizati; o; n; fo; r bette; r performanc; e";};
 ];const stats = [;
+{
+tit; l; e: "A; I-Powere; d Developmen; t",descripti; o; n: "Bui; l; d; applicatio; n; s; fast; e; r; wi; t; h; o; u; r; cuttin; g-ed; g; e; A; I; tool; s"ima; g; e: "/image; s/a; i-developmen; t.jp; g"c; t;a: "Ge; t Starte; d";},{
+tit; l; e: "Scalabl; e Infrastructur; e",descripti; o; n: "Depl; o; y; a; n; d; sca; l; e; yo; u; r; applicatio; n; s; wit; h confidenc; e"ima; g; e: "/image; s/infrastructur; e.jp; g"c; t;a: "Lear; n Mor; e";},{
+tit; l; e: "Tea; m Collaboratio; n"descript; i; o;n: "Wo; r; k; seamless; l; y; wi; t; h; yo; u; r; te; a; m; usi; n; g; o; u; r; collaborati; v; e; tool; s"ima; g; e: "/image; s/collaboratio; n.jp; g"c; t;a: "Tr; y No; w";};
+,  ];const features = [;
+{
+ic; o; n: "🚀",tit; l; e: "Fas; t Deploymen; t"descript; i; o;n: "Depl; o; y; yo; u; r; applicatio; n; s; i; n; minutesn; o; t; hour; s";},{
+ic; o; n: "🔒"ti; t; l;e: "Secu; r; e; b; y; Defaul; t"descript; i; o;n: "Buil; t-i; n; securi; t; y; featur; e; s; prote; c; t; yo; u; r; application; s";},{
+ic; o; n: "📈"ti; t; l;e: "Aut; o Scalin; g"descript; i; o;n: "Automatical; l; y; sca; l; e; base; d o; n deman; d";}{
+ic; o; n: "🎯"ti; t; l;e: "A; I Optimizatio; n"descript; i; o;n: "A; I-power; e; d; optimizati; o; n; fo; r bette; r performanc; e";};
+,  ];const stats = [;
 { numb; e; r: "10; M+"la; b; e;l: "Application; s Buil; t" },{ numb; e; r: "50; K+"la; b; e;l: "Activ; e Developer; s" },{ numb; e; r: "9; 9.9%"la; b; e;l: "Uptim; e Guarante; e" }{ numb; e; r: "2; 4/7"la; b; e;l: "Suppor; t Availabl; e" };
 ];const handleSlideChange = useCallback((inde;  x: number) => {;
 setCurrentSlide(index);
@@ -45,12 +56,14 @@ hidde; n: { opaci; t;y: 0 },visibl; e: {
 opacit; y: 1transiti; o;n: {;
 staggerChildr; e;n: 0.1;
 }
+staggerChildr; e;n: 0.1;}
 }
 };const itemVariants = {;
 hidde; n: { ,y: 20opaci; t;y: 0 },visibl; e: {,
 y: 0opacit; y: 1transiti; o;n: {;
 durati; o;n: 0.5;
 }
+durati; o;n: 0.5;}
 }
 };return (;
 <div className="min-h-screen bg-gray-90o0 text-white">;
@@ -70,6 +83,7 @@ initial={{ opacit; y: 0;x: index === 0 ? 0 : 10o0 }}
 animate={{ ;
 opacit; y: currentSlide === index ? 1 : 0;x: currentSlide === index ? 0 : currentSlide > index ? -10o0 : 10o0;
 }}
+opacit; y: currentSlide === index ? 1 : 0;x: currentSlide === index ? 0 : currentSlide > index ? -10o0 : 10o0;}}
 transition={{ duratio; n: 0.5 }}
 >;
 <div className="max-w-6xl mx-auto text-center px-4">;

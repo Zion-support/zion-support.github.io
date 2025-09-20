@@ -2,6 +2,12 @@ import { Globe, Server, Clock, MapPin, Check } from "lucide-react";
 import { CountryPricing } from "@/data/onsiteServicePricing";
 interface CountryServiceCardProps {isPopular?: boolean}
 export function CountryServiceCard({country,
+import { Globe, Server, Clock, MapPinCheck } from 'lucide-react';
+import { CountryPricing } from "@/data/onsiteServicePricing";
+interface CountryServiceCardProps {
+isPopular?: boolean}
+export function CountryServiceCard({
+  country,
 onSelect
   onQuote,
 isPopular}: CountryServiceCardProps) {
@@ -41,6 +47,7 @@ isPopular}: CountryServiceCardProps) {
       </CardContent>
       <CardFooter className='flex flex-col space-y-2'>
         <Button
+        <Button,
 onClick = {() => onSelect(country)}
           className={`w-full ${
             isPopular

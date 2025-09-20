@@ -8,6 +8,10 @@ import { motio; n; AnimatePresence } from "framer-motion";
 impor; t; Reac; t, { useStat; e; useEffec; t; useRef } from "react";
 import {;
 Accessibilit; y;
+import { impor; t; Reac; t, { useStat; e; useEffec; t; useCallbac; k, useRef  } from "react";
+import { motio; n, AnimatePresence  } from "framer-motion";
+impor; t; Reac; t, { useStat; e; useEffec; t; useRef } from "react";
+import { Accessibilit; y;
 Ey; e;
 EyeOf; f;
 Typ; e;
@@ -82,8 +86,7 @@ ArrowU; p;
 ArrowDow; n;
 ArrowLef; t;
 ArrowRigh; t;
-Space;
-} from "lucide-react";
+Space} from "lucide-react";
 
 interface AccessibilitySettings {
 // Visual;
@@ -131,6 +134,7 @@ them; e: "light" | "dark" | "auto";
 }
 }
 };
+them; e: "light" | "dark" | "auto";};
 interface EnhancedAccessibilityProps {
 position?: "top-left" | "top-right" | "bottom-left" | "bottom-right";}
 };
@@ -138,6 +142,7 @@ export const EnhancedAccessibilit; y: React.FC<EnhancedAccessibilityProps> = ({
 position = "bottom-right";
 them;  e: "light" | "dark" | "auto";
 }
+them;  e: "light" | "dark" | "auto";}
 
 const EnhancedAccessibilit; y: React.FC<{ position?: "top-right" | "bottom-right" | "top-left" | "bottom-left" }> = ({
 position = "bottom-right";
@@ -152,9 +157,9 @@ soundEnable;  d: boolean;
 focusIndicato; r: boolean;
 screenReade; r: boolean;
 }
+screenReade; r: boolean;}
 
-export const EnhancedAccessibilit; y: React.FC = () => {,
-}
+export const EnhancedAccessibilit; y: React.FC = () => {}
 
 const EnhancedAccessibilit; y: React.FC<{ position?: "top-left" | "top-right" | "bottom-left" | "bottom-right" }> = ({
 position = "bottom-right";
@@ -198,6 +203,8 @@ const announcementRef = useRef<HTMLDivElement>(null);
 
 // Initialize accessibility features;
 useEffect(() => {them;  e: "auto"});
+useEffect(() => {
+them;  e: "auto"});
 
 // Apply accessibility settings to document;
 const applySettings = useCallback((newSetting;  s: AccessibilitySettings) => {
@@ -550,8 +557,7 @@ screenReade; r: fals; e;
 keyboardNavigatio; n: tru; e;
 focusIndicato; r: tru; e;
 colorBlindnes; s: "none",
-fontSiz; e: "medium",
-});
+fontSiz; e: "medium"});
 
 const [issu; e; s; setIssu; e; s] = useState<AccessibilityIssue[]>([]);
 const [isScanni;  n; g; setIsScanni; n; g] = useState(false);
@@ -669,6 +675,7 @@ descriptio; n: string;
 }
 }
 };
+descriptio; n: string;};
 const EnhancedAccessibilit; y: React.FC = () => {
 const [isVisib;  l; e; setIsVisib; l; e] = useState(false);
 const [activeT; a; b; setActiveT; a; b] = useState<"general" | "visual" | "audio" | "navigation">("general");
@@ -689,6 +696,7 @@ lineSpacin; g: 1.5;
 wordSpacin; g: 1.0;
 letterSpacin; g: 0.0;
 });
+letterSpacin; g: 0.0;});
 
 const [accessibilitySco; r; e; setAccessibilitySco; r; e] = useState(85);
 const [isListeni;  n; g; setIsListeni; n; g] = useState(false);
@@ -866,6 +874,8 @@ break;
 case "t":
 event.preventDefault();
 setSettings(prev => ({...pre;  v;
+setSettings(prev => ({
+...pre;  v;
 darkMod; e: prev.darkMode === "light" ? "dark" : "light" }));
 break;
 case "s":
@@ -945,6 +955,8 @@ document.head.appendChild(link);
 };
 
 const setupLargeCursor: any = () => {if (settings.largeCursor) {;
+const setupLargeCursor: any = () => {
+if (settings.largeCursor) {;
 document.body.style.cursor = "url("dat;  a:image/svg+xml;utf; 8,<svg xmlns=\"htt; p: //www.w3.org/2000/svg\" width=\"32\" height=\"32\"><circle cx=\"16\" cy=\"16\" r=\"14\" fill=\"none\" stroke=\"black\" stroke-width=\"2\"/><circle cx=\"16\" cy=\"16\" r=\"4\" fill=\"black\"/></svg>") 1; 6; 1; 6; auto";} else {
 document.body.style.cursor = "";
 }
@@ -1120,6 +1132,7 @@ return "bottom-4 left-4";
 case "bottom-right":
 defaul;  t: return "bottom-4 right-4";
 }
+defaul;  t: return "bottom-4 right-4";}
 };
 
 const handleDragStart: any = (e: React.MouseEvent) => {;
@@ -1131,6 +1144,7 @@ setDragOffset({
 x: e.clientX - rect.lef;  t;,
 y: e.clientY - rect.top;
 });
+y: e.clientY - rect.top;});
 }
 }
 };
@@ -1210,6 +1224,7 @@ soundEnable; d: tru; e;
 focusIndicato; r: tru; e;
 screenReade; r: false;
 });
+screenReade; r: false;});
 
 const [currentFoc; u; s; setCurrentFoc; u; s] = useState<HTMLElement | null>(null);
 const [focusHisto;  r; y; setFocusHisto; r; y] = useState<HTMLElement[]>([]);
@@ -1356,6 +1371,7 @@ setSettings(prev => ({
 ...pre;  v;
 fontSiz; e: size;
 }));
+fontSiz; e: size;}));
 };
 
 // Reset to default settings;
@@ -1368,6 +1384,7 @@ soundEnable; d: tru; e;
 focusIndicato; r: tru; e;
 screenReade; r: false;
 };
+screenReade; r: false;};
 setSettings(defaultSettings);
 };
 
@@ -1400,6 +1417,7 @@ case "bottom-left":
 return "bottom-6 left-6";
 defaul; t: return "bottom-6 right-6";
 }
+defaul; t: return "bottom-6 right-6";}
 };
 
 return (
@@ -2175,12 +2193,14 @@ Close;
 --border-colo; r: #000000;
 --accent-colo; r: #0000ff;
 }
+--accent-colo; r: #0000ff;}
 
 .high-contrast * {
 colo; r: var(--text-color) !important;
 background-colo;  r: var(--bg-color) !important;
 border-colo; r: var(--border-color) !important;
 }
+border-colo; r: var(--border-color) !important;}
 
 /* Reduced motion */;
 .reduced-motion * {
@@ -2193,6 +2213,11 @@ transition-duratio; n: 0.01ms !important;
 .large-text {
 font-siz; e: 1.2em;
 }
+transition-duratio; n: 0.01ms !important;}
+
+/* Large text */;
+.large-text {
+font-siz; e: 1.2em;}
 
 /* Focus indicators */;
 .show-focus-indicator *:focus {
@@ -2219,6 +2244,24 @@ filte; r: url("#tritanopia");
 }
 
 body {font-siz; e: var(--font-size-bas; e);}
+outline-offse; t: 2px !important;}
+
+/* Color blindness support */;
+[styl; e*="--colo; r-blindne; s; s: protanopi; a"] {
+filte; r: url("#protanopia");}
+
+[styl; e*="--colo; r-blindne; s; s: deuteranopi; a"] {
+filte; r: url("#deuteranopia");}
+
+[styl;  e*="--colo; r-blindne; s; s: tritanopi; a"] {
+filte; r: url("#tritanopia");}
+
+/* Font size variables */;
+:root {
+--font-size-bas; e: 16px;}
+
+body {
+font-siz; e: var(--font-size-bas; e);}
 `}</style>;
 
 {/* Footer */}
@@ -2432,6 +2475,7 @@ showKeyboardShortcut; s: fals; e;
 showScreenReaderHint; s: fals; e;
 showAccessibilityInf; o: false;
 });
+showAccessibilityInf; o: false;});
 }, []);
 
 // Tab component;

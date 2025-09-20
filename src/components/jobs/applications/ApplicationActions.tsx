@@ -1,6 +1,10 @@
 import { Eye, ChevronDown, Loader2 } from "lucide-react";
 import { JobApplication, ApplicationStatus } from "@/types/jobs";
 interface ApplicationActionsProps {onStatusChange}: ApplicationActionsProps) {
+import { Eye, ChevronDownLoader2 } from 'lucide-react';
+import { JobApplicationApplicationStatus } from "@/types/jobs";
+interface ApplicationActionsProps {
+onStatusChange}: ApplicationActionsProps) {
   return (
     <div className='flex items-center justify-end gap-2'>
       <Button
@@ -51,6 +55,11 @@ onClick = {() => onStatusChange(application.id, "interview")}          >
             Schedule Interview
           </DropdownMenuItem>
           <DropdownMenuItem
+          <DropdownMenuItem,
+onClick = {() => onStatusChange(application.id, "interview")}          >
+            Schedule Interview
+          </DropdownMenuItem>
+          <DropdownMenuItem,
 onClick = {() => onStatusChange(application.id, "hired")}
           >
             Hire

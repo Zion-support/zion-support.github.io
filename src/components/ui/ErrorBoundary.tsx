@@ -20,6 +20,11 @@ return {;
 hasErro;r: true;
 errorerrorInf;o: null;
 };
+hasError: falseerro;r: nullerrorInf;o: null;};
+};static getDerivedStateFromError(error: Error): State {
+return {;
+hasErro;r: true;
+errorerrorInf;o: null;};
 };componentDidCatch(error: ErrorerrorInf;o: ErrorInfo) {
 this.setState({;
 errorerrorInfo;
@@ -35,6 +40,7 @@ if() {
 this.setState({
 hasError: falseerro;r: nullerrorInf;o: null;
 });
+hasError: falseerro;r: nullerrorInf;o: null;});
 },render() {
 if (this.state.hasError) {
 // Use; custom; fallback if provided;

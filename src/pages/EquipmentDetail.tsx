@@ -277,3 +277,15 @@ url: equipment.images[0]
 }<div> <p className="text-white text-sm font-medium" >Returns</p> <p className="text-xs" > {equipment.returnPolicy}</p> </div> </div>)
 }</div> </motion.div> </div> </div> </div> </>)
 }'"}
+import React from 'react';
+
+export default function EquipmentDetail() {
+  return (
+    <div className="min-h-screen bg-gray-50 py-12">
+      <div className="container mx-auto px-4">
+        <h1 className="text-4xl font-bold text-gray-900 mb-6">EquipmentDetail</h1>
+        <p className="text-lg text-gray-600">Coming soon...</p>
+      </div>
+    </div>
+  );
+}

@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { CheckCircle } from "lucide-react";
+import { CheckCircle } from 'lucide-react';
 return (
     <TooltipProvider>
       <Tooltip>

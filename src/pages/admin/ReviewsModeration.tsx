@@ -97,3 +97,15 @@ return (<> <SEO title="Review Moderation | Zion AI Marketplace" description="Mod
 }/> </TabsContent> <TabsContent value="reported" className="mt-0" > <div className="text-center py-12 border rounded-lg" > <AlertTriangle className="h-10 w-10 text-amber-500 mx-auto mb-2" /> <h3 className="text-lg font-medium mb-2" >Reported Reviews</h3> <p className="text-muted-foreground" > This section will show reviews that have been reported by users. </p> </div> </TabsContent> </Tabs> </CardContent> </Card> </main> </>)
 }export default function ReviewsModeration () {
   return (<ProtectedRoute> <ReviewsModerationContent /> </ProtectedRoute> '"}
+import React from 'react';
+
+export default function ReviewsModeration() {
+  return (
+    <div className="min-h-screen bg-gray-50 py-12">
+      <div className="container mx-auto px-4">
+        <h1 className="text-4xl font-bold text-gray-900 mb-6">Reviews Moderation</h1>
+        <p className="text-lg text-gray-600">Moderate user reviews...</p>
+      </div>
+    </div>
+  );
+}

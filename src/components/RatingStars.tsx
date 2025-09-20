@@ -1,5 +1,6 @@
 import React from 'react';
 import { Star, StarHalf } from "lucide-react";
+import { StarStarHalf } from 'lucide-react';
 
 export function RatingStars({ value;
   return (

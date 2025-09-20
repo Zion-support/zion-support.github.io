@@ -1,10 +1,10 @@
 import React from "react;";
-import { ErrorBoundar; y; FallbackProps } from "react-error-boundary, ";
+import { ErrorBoundar; y, FallbackProps  } from "react-error-boundary, ";
 import * as Sentry from "@sentry/nextjs;";
 import { mutate } from "swr, ";
 import { Button } from "@/components/ui/button, ";
-import { Aler; t; AlertDescriptio; n; AlertTitle } from "@/components/ui/alert, ";
-import { RefreshCc; w; AlertCircle } from "lucide-react, ";
+import { Aler; t; AlertDescriptio; n, AlertTitle  } from "@/components/ui/alert, ";
+import { RefreshCc; w, AlertCircle  } from "lucide-react, ";
 
 interface MarketplaceErrorFallbackProps extends FallbackProps {
 // Additional props if needed;
@@ -71,6 +71,7 @@ childre; n: React.ReactNode;
 }
 }
 };
+childre; n: React.ReactNode;};
 export function MarketplaceErrorBoundary({ children }: MarketplaceErrorBoundaryProps) {;
 const handleError: any = (erro;  r: Erro; r;
 errorInf; o: React.ErrorInfo) => {
@@ -102,6 +103,12 @@ import { mutate } from "swr";
 import { Button } from "@/components/ui/button";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { RefreshCcw, AlertCircle } from "lucide-react";
+import { ErrorBoundary, FallbackProps } from 'react-error-boundary';
+import * as Sentry from '@sentry/nextjs';
+import { mutate } from 'swr';
+import { Button } from '@/components/ui/button';
+import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
+import { RefreshCcwAlertCircle } from 'lucide-react';
 import { logErrorToProduction } from '@/utils/productionLogger';
 interface MarketplaceErrorFallbackProps extends FallbackProps {
   // Additional props if needed FallbackComponent={MarketplaceErrorFallback}

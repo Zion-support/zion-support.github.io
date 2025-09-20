@@ -24,6 +24,8 @@ website: string;
 }
 }
 };
+email: string;,
+website: string;};
 websiteUrl: string;
 demoUrl?: string;
 documentationUrl?: string;
@@ -80,6 +82,9 @@ email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com"};
 websiteUrl: "https://ziontechgroup.com/industrial-iot",
 };
+email: "kleber@ziontechgroup.com";,
+website: "https://ziontechgroup.com"};
+websiteUrl: "https://ziontechgroup.com/industrial-iot"};
 // Smart City IoT Solution;
 {id: "smart-city-iot-solution";
 title: "Smart City IoT Infrastructure Platform";
@@ -130,6 +135,9 @@ email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com"};
 websiteUrl: "https://ziontechgroup.com/smart-city-iot",
 };
+email: "kleber@ziontechgroup.com";,
+website: "https://ziontechgroup.com"};
+websiteUrl: "https://ziontechgroup.com/smart-city-iot"};
 // Healthcare IoT Monitoring;
 {id: "healthcare-iot-monitoring";
 title: "Healthcare IoT Patient Monitoring System";
@@ -180,6 +188,9 @@ email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com"};
 websiteUrl: "https://ziontechgroup.com/healthcare-iot",
 };
+email: "kleber@ziontechgroup.com";,
+website: "https://ziontechgroup.com"};
+websiteUrl: "https://ziontechgroup.com/healthcare-iot"};
 // Retail IoT Analytics Platform;
 {id: "retail-iot-analytics";
 title: "Retail IoT Analytics and Optimization Platform";
@@ -230,6 +241,9 @@ email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com"};
 websiteUrl: "https://ziontechgroup.com/retail-iot",
 };
+email: "kleber@ziontechgroup.com";,
+website: "https://ziontechgroup.com"};
+websiteUrl: "https://ziontechgroup.com/retail-iot"};
 // Edge AI Computing Platform;
 {id: "edge-ai-computing";
 title: "Edge AI Computing Platform";
@@ -280,4 +294,7 @@ email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com"};
 websiteUrl: "https://ziontechgroup.com/edge-ai",
 }
+email: "kleber@ziontechgroup.com";,
+website: "https://ziontechgroup.com"};
+websiteUrl: "https://ziontechgroup.com/edge-ai"}
 ];

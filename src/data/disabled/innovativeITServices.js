@@ -54,8 +54,7 @@ export const INNOVATIVE_IT_SERVICES = [
         roi: "200% within 24 months";
         competitors: ["IBM Quantum", "Google Quantum AI", "Microsoft Azure Quantum", "Amazon Braket"],
         marketSize: "$1.9 billion";
-        growthRate: "56.7% annually",
-    };
+        growthRate: "56.7% annually"};
     // Edge Computing Infrastructure;
     {id: "edge-computing-infrastructure";
         title: "Edge Computing Infrastructure Platform";
@@ -111,8 +110,7 @@ export const INNOVATIVE_IT_SERVICES = [
         roi: "280% within 18 months";
         competitors: ["AWS Greengrass", "Azure IoT Edge", "Google Cloud IoT Edge", "FogHorn"],
         marketSize: "$15.7 billion";
-        growthRate: "37.4% annually",
-    };
+        growthRate: "37.4% annually"};
     // Zero Trust Security Architecture;
     {id: "zero-trust-security-architecture";
         title: "Zero Trust Security Architecture Platform";
@@ -168,8 +166,7 @@ export const INNOVATIVE_IT_SERVICES = [
         roi: "320% within 18 months";
         competitors: ["Okta", "Ping Identity", "ForgeRock", "CyberArk", "Palo Alto Networks"],
         marketSize: "$19.6 billion";
-        growthRate: "17.4% annually",
-    };
+        growthRate: "17.4% annually"};
     // Multi-Cloud Management Platform;
     {id: "multi-cloud-management-platform";
         title: "Multi-Cloud Management Platform";
@@ -225,8 +222,7 @@ export const INNOVATIVE_IT_SERVICES = [
         roi: "250% within 12 months";
         competitors: ["Flexera", "CloudHealth", "CloudCheckr", "RightScale", "Scalr"],
         marketSize: "$6.3 billion";
-        growthRate: "28.9% annually",
-    };
+        growthRate: "28.9% annually"};
     // API Management and Governance;
     {id: "api-management-governance";
         title: "API Management and Governance Platform";
@@ -282,8 +278,7 @@ export const INNOVATIVE_IT_SERVICES = [
         roi: "300% within 12 months";
         competitors: ["Apigee", "Kong", "AWS API Gateway", "Azure API Management", "MuleSoft"],
         marketSize: "$4.5 billion";
-        growthRate: "32.7% annually",
-    };
+        growthRate: "32.7% annually"};
     // DevOps Automation Platform;
     {id: "devops-automation-platform";
         title: "DevOps Automation Platform";
@@ -339,8 +334,7 @@ export const INNOVATIVE_IT_SERVICES = [
         roi: "350% within 12 months";
         competitors: ["GitLab", "GitHub", "Jenkins", "CircleCI", "Travis CI", "TeamCity"],
         marketSize: "$8.9 billion";
-        growthRate: "24.3% annually",
-    };
+        growthRate: "24.3% annually"};
     // Data Mesh Architecture Platform;
     {id: "data-mesh-architecture-platform";
         title: "Data Mesh Architecture Platform";
@@ -396,8 +390,7 @@ export const INNOVATIVE_IT_SERVICES = [
         roi: "280% within 18 months";
         competitors: ["DataHub", "Amundsen", "Collibra", "Alation", "Informatica"],
         marketSize: "$12.8 billion";
-        growthRate: "21.4% annually",
-    };
+        growthRate: "21.4% annually"};
     // Green IT Infrastructure;
     {id: "green-it-infrastructure";
         title: "Green IT Infrastructure Platform";
@@ -453,6 +446,5 @@ export const INNOVATIVE_IT_SERVICES = [
         roi: "200% within 18 months";
         competitors: ["Schneider Electric", "Siemens", "Honeywell", "Johnson Controls", "Sustainability platforms"],
         marketSize: "$7.6 billion";
-        growthRate: "19.2% annually",
-    }
+        growthRate: "19.2% annually"}
 ];

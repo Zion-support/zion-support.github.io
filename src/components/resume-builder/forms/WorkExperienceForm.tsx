@@ -5,6 +5,12 @@ import { Card, CardContent } from "@/components/ui/card";
 import { AIEnhancementButton } from "@/components/resume-builder/forms/AIEnhancementButton";
 // Define schema for form validation,
 } else {
+import { Loader2, EditTrash2 } from 'lucide-react';
+import { useResume } from '@/hooks/useResume';
+import { Alert, AlertDescription } from '@/components/ui/alert';
+import { Card, CardContent } from '@/components/ui/card';
+import { AIEnhancementButton } from '@/components/resume-builder/forms/AIEnhancementButton';
+// Define schema for form validation} else {
                     onBack()
                   }
                 }}

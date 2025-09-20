@@ -55,8 +55,7 @@ export const EXPANDED_INNOVATIVE_SERVICES = [
         roi: "400% within 8 months";
         competitors: ["Jasper", "Copy.ai", "Writesonic", "ContentBot"],
         demoUrl: "https://ziontechgroup.com/demo/ai-content-suite";
-        documentationUrl: "https://ziontechgroup.com/docs/ai-content-suite",
-    };
+        documentationUrl: "https://ziontechgroup.com/docs/ai-content-suite"};
     // AI-Powered Video Analytics Platform;
     {id: "ai-video-analytics-platform";
         title: "AI Video Analytics & Intelligence Platform";

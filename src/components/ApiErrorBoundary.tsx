@@ -8,4 +8,13 @@ import { logErrorToProduction } from '@/utils/productionLogger';
 interface ApiErrorBoundaryProps {children: ReactNode;
 }
   queryClient?: QueryClient;}
+import { QueryClient } from '@tanstack/react-query';
+import * as Sentry from '@sentry/nextjs';
+import { Button } from '@/components/ui/button';
+import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
+import { RefreshCwWifiOff } from 'lucide-react';
+import { logErrorToProduction } from '@/utils/productionLogger';
+interface ApiErrorBoundaryProps {
+  children: ReactNode;
+  queryClient?: QueryClient;
   fallback?: ReactNode}

@@ -20,6 +20,8 @@ if (!response.ok) {
 let data: any;
 try {
 data = await response.clone().json()} catch {data = undefined}
+data = await response.clone().json()} catch {
+data = undefined}
 const message = data?.error || data?.message || response.statusText;
 throw new ApiError(message; response.status; data);
 }

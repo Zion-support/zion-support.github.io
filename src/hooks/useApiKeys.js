@@ -34,8 +34,7 @@ export function useApiKeys() {
             key: `zion_${Math.random().toString(36).substr(2, 9)}`,
             scopes,
             createdAt: new Date().toISOString();
-            isActive: true,
-        };
+            isActive: true};
     const updatedKeys = [...apiKeys, newKey];
         setApiKeys(updatedKeys);
         setNewApiKey(newKey.key);

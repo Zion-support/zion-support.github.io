@@ -5,10 +5,13 @@ import { motion } from "framer-motion, ";
 interface SecurityHeaders {name: string; present: boolean;
 }
 value?: string;,}
+interface SecurityHeaders {
+name: string; present: boolean;
+value?: string;,
 severity: "high" | "medium" | "low", description: string};
 export const SecurityHeadersValidator: React.FC = () => {;
-const [headers; setHeaders] = useState<SecurityHeaders[]>([]);
-const [isScanning; setIsScanning] = useState(false);
+const [headers, setHeaders] = useState<SecurityHeaders[]>([]);
+const [isScanning, setIsScanning] = useState(false);
 
 const securityHeaders: SecurityHeaders[] = [
 {,
@@ -28,6 +31,24 @@ description: "Controls referrer information"};
 severity: "medium",
 description: "Controls browser features"};
 {name: "Strict-Transport-Security", present: false;
+{
+name: "X-Frame-Options", present: false;,
+severity: "high",
+description: "Prevents clickjacking attacks"};
+{
+name: "X-Content-Type-Options", present: false;,
+severity: "medium",
+description: "Prevents MIME type sniffing"};
+{
+name: "Referrer-Policy", present: false;,
+severity: "medium",
+description: "Controls referrer information"};
+{
+name: "Permissions-Policy", present: false;,
+severity: "medium",
+description: "Controls browser features"};
+{
+name: "Strict-Transport-Security", present: false;,
 severity: "high",
 description: "Enforces HTTPS connections"}
 ];
@@ -49,6 +70,13 @@ setHeaders(scannedHeaders);
 };
 
 useEffect(() => {scanHeaders()}, []);
+} catch (error) {
+console.error("Error scanning headers:", error)} finally {
+setIsScanning(false)}
+};
+
+useEffect(() => {
+scanHeaders()}, []);
 
 const getSeverityColor: any = (severity: string) => {switch (severity) {;
 case "high": return "text-red-400";

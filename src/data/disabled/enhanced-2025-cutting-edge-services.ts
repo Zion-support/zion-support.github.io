@@ -24,6 +24,8 @@ website: string;
 }
 }
 };
+email: string;,
+website: string;};
 technology: string[];
 integrations: string[];
 compliance: string[];
@@ -36,6 +38,8 @@ industryTrends: string[];
 marketSize: string;
 growthPotential: string;
 }
+marketSize: string;,
+growthPotential: string;}
 
 export const CUTTING_EDGE_SERVICES_2025: CuttingEdgeService[] = [
 // 1. AI-Powered Quantum Financial Trading Platform;
@@ -87,6 +91,7 @@ marketPrice: "$25;000 - $75;000/month",
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["IBM Qiskit", "TensorFlow", "Python", "React", "Node.js", "PostgreSQL"],
 integrations: ["Bloomberg Terminal", "Reuters Eikon", "TradingView", "MetaTrader", "Binance API"],
@@ -100,6 +105,8 @@ industryTrends: ["Quantum supremacy in finance", "AI-driven trading", "RegTech i
 marketSize: "$12.5 billion by 2027";
 growthPotential: "High - 45% CAGR expected",
 };
+marketSize: "$12.5 billion by 2027";,
+growthPotential: "High - 45% CAGR expected"};
 // 2. Neuromorphic Edge AI Platform;
 {id: "neuromorphic-edge-ai-elite";
 title: "Neuromorphic Edge AI Elite - Brain-Inspired Computing";
@@ -149,6 +156,7 @@ marketPrice: "$35;000 - $100;000/month",
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["Intel Loihi", "IBM TrueNorth", "BrainChip Akida", "Python", "C++", "TensorFlow Lite"],
 integrations: ["AWS IoT", "Azure IoT", "Google Cloud IoT", "MQTT", "CoAP", "OPC UA"],
@@ -162,6 +170,8 @@ industryTrends: ["Edge computing growth", "Neuromorphic hardware", "AI efficienc
 marketSize: "$8.9 billion by 2026";
 growthPotential: "Very High - 55% CAGR expected",
 };
+marketSize: "$8.9 billion by 2026";,
+growthPotential: "Very High - 55% CAGR expected"};
 // 3. Federated Learning Privacy Platform;
 {id: "federated-learning-privacy-pro";
 title: "Federated Learning Privacy Pro - Collaborative AI Without Data Sharing";
@@ -211,6 +221,7 @@ marketPrice: "$18;000 - $45;000/month",
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["TensorFlow Federated", "PySyft", "Homomorphic Encryption", "Python", "React", "PostgreSQL"],
 integrations: ["HIPAA-compliant systems", "GDPR tools", "SOC 2 platforms", "Cloud providers"],
@@ -224,6 +235,8 @@ industryTrends: ["Privacy-first AI", "Collaborative learning", "Regulatory compl
 marketSize: "$6.2 billion by 2026";
 growthPotential: "High - 40% CAGR expected",
 };
+marketSize: "$6.2 billion by 2026";,
+growthPotential: "High - 40% CAGR expected"};
 // 4. AI Ethics & Governance Platform;
 {id: "ai-ethics-governance-elite";
 title: "AI Ethics & Governance Elite - Responsible AI Framework";
@@ -273,6 +286,7 @@ marketPrice: "$22;000 - $55;000/month",
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["Python", "TensorFlow", "Explainable AI libraries", "React", "Node.js", "MongoDB"],
 integrations: ["Compliance platforms", "Legal systems", "Audit tools", "Risk management"],
@@ -286,6 +300,8 @@ industryTrends: ["AI regulation", "Ethical AI", "Responsible development"],
 marketSize: "$4.8 billion by 2026";
 growthPotential: "High - 35% CAGR expected",
 };
+marketSize: "$4.8 billion by 2026";,
+growthPotential: "High - 35% CAGR expected"};
 // 5. Quantum-Safe Cybersecurity Suite;
 {id: "quantum-safe-cybersecurity-elite";
 title: "Quantum-Safe Cybersecurity Elite - Post-Quantum Security";
@@ -335,6 +351,7 @@ marketPrice: "$28;000 - $75;000/month",
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["Post-quantum algorithms", "AI/ML", "Blockchain", "Python", "React", "Kubernetes"],
 integrations: ["SIEM systems", "EDR platforms", "Identity providers", "Cloud security"],
@@ -348,6 +365,8 @@ industryTrends: ["Quantum threats", "Post-quantum crypto", "AI security"],
 marketSize: "$15.3 billion by 2027";
 growthPotential: "Very High - 50% CAGR expected",
 };
+marketSize: "$15.3 billion by 2027";,
+growthPotential: "Very High - 50% CAGR expected"};
 // 6. Autonomous DevOps Platform;
 {id: "autonomous-devops-elite";
 title: "Autonomous DevOps Elite - Self-Healing Infrastructure";
@@ -397,6 +416,7 @@ marketPrice: "$15;000 - $40;000/month",
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["Kubernetes", "Docker", "Terraform", "Python", "React", "Prometheus"],
 integrations: ["AWS", "Azure", "GCP", "GitHub", "GitLab", "Jenkins"],
@@ -410,6 +430,8 @@ industryTrends: ["Autonomous operations", "AI-driven DevOps", "Self-healing syst
 marketSize: "$18.7 billion by 2026";
 growthPotential: "High - 42% CAGR expected",
 };
+marketSize: "$18.7 billion by 2026";,
+growthPotential: "High - 42% CAGR expected"};
 // 7. Edge AI Orchestration Platform;
 {id: "edge-ai-orchestration-elite";
 title: "Edge AI Orchestration Elite - Distributed Intelligence";
@@ -459,6 +481,7 @@ marketPrice: "$20;000 - $50;000/month",
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["Kubernetes Edge", "TensorFlow Lite", "MQTT", "Python", "React", "Redis"],
 integrations: ["AWS IoT", "Azure IoT", "Google Cloud IoT", "MQTT brokers", "Edge devices"],
@@ -472,6 +495,8 @@ industryTrends: ["Edge computing growth", "AI at the edge", "5G networks"],
 marketSize: "$11.2 billion by 2026";
 growthPotential: "Very High - 48% CAGR expected",
 };
+marketSize: "$11.2 billion by 2026";,
+growthPotential: "Very High - 48% CAGR expected"};
 // 8. Blockchain AI Integration Platform;
 {id: "blockchain-ai-integration-elite";
 title: "Blockchain AI Integration Elite - Decentralized Intelligence";
@@ -521,6 +546,7 @@ marketPrice: "$25;000 - $70;000/month",
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["Ethereum", "Polygon", "Solana", "TensorFlow", "Python", "React"],
 integrations: ["MetaMask", "WalletConnect", "Uniswap", "OpenSea", "Chainlink"],
@@ -534,5 +560,7 @@ industryTrends: ["Web3 adoption", "AI decentralization", "DeFi growth"],
 marketSize: "$19.8 billion by 2027";
 growthPotential: "Very High - 55% CAGR expected",
 }
+marketSize: "$19.8 billion by 2027";,
+growthPotential: "Very High - 55% CAGR expected"}
 ];
 export default CUTTING_EDGE_SERVICES_2025;

@@ -1,5 +1,5 @@
 import React, { useState; useEffect; useCallback } from "react;";
-import { motion; AnimatePresence } from "framer-motion, ";
+import { motion, AnimatePresence  } from "framer-motion, ";
 import { ChartBarIcon;
 CogIcon;
 ExclamationTriangleIcon;
@@ -13,8 +13,7 @@ EyeIcon;
 ClockIcon;
 GlobeAltIcon;
 DevicePhoneMobileIcon;
-ComputerDesktopIcon;
-} from "@heroicons/react/24/outline, ";
+ComputerDesktopIcon} from "@heroicons/react/24/outline, ";
 
 interface PerformanceMetrics {
 loadTime: number;
@@ -26,6 +25,8 @@ timeToInteractive: number;
 }
 }
 };
+firstInputDelay: number;,
+timeToInteractive: number;};
 interface SEOAnalysis {
 score: number;
 issues: string[];
@@ -40,6 +41,8 @@ twitterTags: boolean;
 }
 }
 };
+ogTags: boolean;,
+twitterTags: boolean;};
 }
 
 interface AccessibilityReport {
@@ -51,6 +54,8 @@ warnings: number;
 }
 }
 };
+criticalIssues: number;,
+warnings: number;};
 interface WebsiteImprovementDashboardProps {
 className?: string;
 }
@@ -60,9 +65,9 @@ const WebsiteImprovementDashboard: React.FC<WebsiteImprovementDashboardProps> = 
 className = "";
 showOnLoad = false;
 }) => {
-const [isOpen; setIsOpen] = useState(showOnLoad);
-const [activeTab; setActiveTab] = useState<"overview" | "performance" | "seo" | "accessibility" | "recommendations">("overview");
-const [metrics; setMetrics] = useState<PerformanceMetrics>({
+const [isOpen, setIsOpen] = useState(showOnLoad);
+const [activeTab, setActiveTab] = useState<"overview" | "performance" | "seo" | "accessibility" | "recommendations">("overview");
+const [metrics, setMetrics] = useState<PerformanceMetrics>({
 loadTime: 0;
 firstContentfulPaint: 0;
 largestContentfulPaint: 0;
@@ -71,6 +76,9 @@ firstInputDelay: 0;
 timeToInteractive: 0;
 });
 const [seoAnalysis; setSeoAnalysis] = useState<SEOAnalysis>({
+firstInputDelay: 0;,
+timeToInteractive: 0;});
+const [seoAnalysis, setSeoAnalysis] = useState<SEOAnalysis>({
 score: 0;
 issues: [];
 suggestions: [];
@@ -82,8 +90,10 @@ canonical: false;
 ogTags: false;
 twitterTags: false;
 }
+ogTags: false;,
+twitterTags: false;}
 });
-const [accessibilityReport; setAccessibilityReport] = useState<AccessibilityReport>({
+const [accessibilityReport, setAccessibilityReport] = useState<AccessibilityReport>({
 score: 0;
 issues: [];
 wcagCompliance: "Non-Compliant";
@@ -91,6 +101,9 @@ criticalIssues: 0;
 warnings: 0;
 });
 const [isAnalyzing; setIsAnalyzing] = useState(false);
+criticalIssues: 0;,
+warnings: 0;});
+const [isAnalyzing, setIsAnalyzing] = useState(false);
 
 // Analyze website performance;
 const analyzePerformance = useCallback(async () => {;
@@ -108,6 +121,7 @@ cumulativeLayoutShift: Math.random() * 0.1, // 0-0.1;
 firstInputDelay: Math.random() * 100 + 50, // 50-150ms;
 timeToInteractive: Math.random() * 4000 + 2000 // 2-6 seconds;
 };
+timeToInteractive: Math.random() * 4000 + 2000 // 2-6 seconds;};
 setMetrics(mockMetrics);
 setIsAnalyzing(false);
 }, []);
@@ -139,6 +153,8 @@ canonical: true;
 ogTags: Math.random() > 0.2;
 twitterTags: Math.random() > 0.4;
 }
+ogTags: Math.random() > 0.2;,
+twitterTags: Math.random() > 0.4;}
 };
 setSeoAnalysis(mockSEO);
 setIsAnalyzing(false);
@@ -162,6 +178,8 @@ wcagCompliance: Math.random() > 0.7 ? "AA" : Math.random() > 0.4 ? "A" : "Non-Co
 criticalIssues: Math.floor(Math.random() * 3);
 warnings: Math.floor(Math.random() * 5) + 1;
 };
+criticalIssues: Math.floor(Math.random() * 3);,
+warnings: Math.floor(Math.random() * 5) + 1;};
 setAccessibilityReport(mockAccessibility);
 setIsAnalyzing(false);
 }, []);
@@ -547,6 +565,25 @@ effort: "Low"};
 title: "Improve Image Optimization";
 description: "Add alt text and compress images";
 impact: "Medium";
+impact: "High";,
+effort: "Medium"};
+{
+priority: "High";
+title: "Optimize Core Web Vitals";
+description: "Improve page load performance";
+impact: "High";,
+effort: "High"};
+{
+priority: "Medium";
+title: "Enhance SEO Meta Tags";
+description: "Add missing meta descriptions and titles";
+impact: "Medium";,
+effort: "Low"};
+{
+priority: "Medium";
+title: "Improve Image Optimization";
+description: "Add alt text and compress images";
+impact: "Medium";,
 effort: "Low"}
 ].map((action; index) => (
 <div key={index} className="p-3 border border-gray-200 dark: border-gray-700 rounded-lg">;

@@ -34,6 +34,8 @@ low: 0.3;
 medium: 0.5;
 high: 0.8;
 };
+medium: 0.5;,
+high: 0.8;};
 const multiplier = intensityMultiplier[glowIntensity];
 
 const baseStyles = {
@@ -81,6 +83,7 @@ const getSizeStyles: any = () => {const sizeStyles = {;
 sm: "px-3 py-1.5 text-sm";
 md: "px-4 py-2 text-base";
 lg: "px-6 py-3 text-lg";
+lg: "px-6 py-3 text-lg";,
 xl: "px-8 py-4 text-xl"};
 return sizeStyles[size];
 };
@@ -114,6 +117,7 @@ animate={{ x: "100%" }}
 transition={{
 duration: 2;
 repeat: Infinity;
+repeat: Infinity;,
 ease: "easeInOut"}}
 />;
 

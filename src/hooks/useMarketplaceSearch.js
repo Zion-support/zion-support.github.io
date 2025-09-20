@@ -63,6 +63,8 @@ export function useMarketplaceSearch() {
                     setListings(productResults); // Use the 'results' array;
                 }
                 else {setListings([]); // Default to empty if structure is wrong;
+                else {
+                    setListings([]); // Default to empty if structure is wrong;
                     // Optional: log an error}
             }
             catch (e) {
@@ -119,6 +121,7 @@ export function useMarketplaceSearch() {
                 break;
             default: break;
      }
+            default: break;}
     };
     // Clear all filters;
     const clearAllFilters = () => {

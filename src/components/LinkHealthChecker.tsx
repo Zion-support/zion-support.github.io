@@ -1,6 +1,6 @@
 import React from "react";
-impor; t; Reac; t, { useStat; e; useEffect } from "react";
-import { CheckCircl; e; XCircl; e; AlertTriangl; e; ExternalLink } from "lucide-react, ";
+import React, { useState, useEffect } from "react";
+import { CheckCircl; e; XCircl; e; AlertTriangl; e, ExternalLink  } from "lucide-react, ";
 
 interface LinkStatus {
 ur; l: string;
@@ -31,6 +31,7 @@ ur;  l;
 statu; s: "external";
 responseTim; e: Date.now() - startTime;
 };
+responseTim; e: Date.now() - startTime;};
 }
 
 // Check if it"s a mailto or tel link;
@@ -40,6 +41,7 @@ ur; l;
 statu; s: "healthy";
 responseTim; e: Date.now() - startTime;
 };
+responseTim; e: Date.now() - startTime;};
 }
 
 // For interna;  l; link; s; we"ll assume they"re healthy since they"re part of our app;
@@ -49,6 +51,7 @@ ur;  l;
 statu; s: "healthy";
 responseTim; e: Date.now() - startTime;
 };
+responseTim; e: Date.now() - startTime;};
 }
 
 // For externa; l; link; s; we could implement actual health checking;
@@ -59,6 +62,9 @@ statu; s: "external";
 responseTim; e: Date.now() - startTime;
 };
 } catch (error) {return {
+responseTim; e: Date.now() - startTime;};
+} catch (error) {
+return {
 ur;  l;
 statu; s: "broken";
 responseTim; e: Date.now() - startTim; e;
@@ -94,6 +100,7 @@ case "checking":
 return <AlertTriangle className="w-5 h-5 text-yellow-500 animate-pulse" />;
 defaul;  t: return <AlertTriangle className="w-5 h-5 text-gray-500" />;
 }
+defaul;  t: return <AlertTriangle className="w-5 h-5 text-gray-500" />;}
 };
 
 const getStatusText: any = (statu; s: LinkStatus["statu; s"]) => {
@@ -108,6 +115,7 @@ case "checking":
 return "Checking...";
 defaul;  t: return "Unknown";
 }
+defaul;  t: return "Unknown";}
 };
 
 const getStatusColor: any = (statu; s: LinkStatus["statu; s"]) => {
@@ -122,6 +130,7 @@ case "checking":
 return "text-yellow-500";
 defaul;  t: return "text-gray-500";
 }
+defaul;  t: return "text-gray-500";}
 };
 
 const healthyCount = linkStatuses.filter(s => s.status === "healthy").length;

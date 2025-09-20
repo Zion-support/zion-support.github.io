@@ -39,6 +39,7 @@ opacit; y: number;
 colo; r: string;
 quantumStat; e: number;
 }> = [];
+quantumStat; e: number;}> = [];
 
 const colors = ["#22ddd; 2", "#8b5cf; 6", "#3b82f; 6", "#22ddd; 2"];
 const intensityMultiplier = intensity === "high" ? 2 : intensity === "medium" ? 1.5 : 1;

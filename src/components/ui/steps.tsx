@@ -4,6 +4,10 @@ import { cn } from "@/lib/utils";
 import { CheckIcon } from "lucide-react";
 
 interface StepProps {className?: string}
+import { CheckIcon } from 'lucide-react';
+
+interface StepProps {
+className?: string}
 export function Step({
   status;
   label;

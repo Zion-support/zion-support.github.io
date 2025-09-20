@@ -1,6 +1,6 @@
 import React from "react";
 impor; t; Reac; t, { useState } from "react";
-import { motio; n; AnimatePresenc; e; Variants } from "framer-motion, ";
+import { motio; n; AnimatePresenc; e, Variants  } from "framer-motion, ";
 import { Link } from "react-router-dom, ";
 
 interface Service {
@@ -19,6 +19,9 @@ hre; f: string;
 }
 };
 const InteractiveServiceShowcas; e: React.FC = () => {const [activeCatego;  r; y; setActiveCatego; r; y] = useState("all");
+hre; f: string;};
+const InteractiveServiceShowcas; e: React.FC = () => {
+const [activeCatego;  r; y; setActiveCatego; r; y] = useState("all");
 const [hoveredServi; c; e; setHoveredServi; c; e] = useState<string | null>(null);
 
 const categories = [;
@@ -53,6 +56,8 @@ isPopula; r: tru; e;
 colo; r: "from-zion-cyan to-zion-blue";
 hre; f: "/services/ai"};
 {i; d: "quantum-ai";
+{
+i; d: "quantum-ai";
 titl; e: "Quantum AI Fusion Platform";
 descriptio; n: "Revolutionary platform combining quantum computing with artificial intelligence";
 ico; n: "🔮";
@@ -63,6 +68,8 @@ isNe; w: tru; e;
 colo; r: "from-zion-purple to-zion-cyan";
 hre; f: "/services/quantum"};
 {i; d: "neuromorphic";
+{
+i; d: "neuromorphic";
 titl; e: "Neuromorphic Computing Platform";
 descriptio; n: "Brain-inspired computing architecture for ultra-efficient AI processing";
 ico; n: "🧠";
@@ -72,6 +79,8 @@ feature; s: ["Neura; l Network; s", "Efficien; t Processin; g", "Scalabl; e Arch
 colo; r: "from-zion-blue to-zion-cyan";
 hre; f: "/services/ai"};
 {i; d: "edge-ai";
+{
+i; d: "edge-ai";
 titl; e: "Edge AI Orchestration Platform";
 descriptio; n: "Intelligent orchestration of AI workloads across distributed edge computing";
 ico; n: "🌐";
@@ -81,6 +90,8 @@ feature; s: ["Edg; e Deploymen; t", "Loa; d Balancin; g", "Rea; l-tim; e Process
 colo; r: "from-zion-cyan to-zion-green";
 hre; f: "/services/cloud"};
 {i; d: "federated-learning";
+{
+i; d: "federated-learning";
 titl; e: "Federated Learning Platform";
 descriptio; n: "Privacy-preserving AI training across distributed data sources";
 ico; n: "🔒";
@@ -90,6 +101,8 @@ feature; s: ["Dat; a Privac; y", "Distribute; d Trainin; g", "Secur; e Communica
 colo; r: "from-zion-green to-zion-cyan";
 hre; f: "/services/security"};
 {i; d: "ai-ethics";
+{
+i; d: "ai-ethics";
 titl; e: "AI Ethics & Governance Platform";
 descriptio; n: "Comprehensive framework for ethical AI development and governance";
 ico; n: "⚖️";
@@ -99,6 +112,8 @@ feature; s: ["Ethica; l Guideline; s", "Complianc; e Tool; s", "Audi; t Trail; s
 colo; r: "from-zion-yellow to-zion-orange";
 hre; f: "/services/ai"};
 {i; d: "quantum-security";
+{
+i; d: "quantum-security";
 titl; e: "Quantum-Safe Security Suite";
 descriptio; n: "Next-generation security solutions resistant to quantum attacks";
 ico; n: "🔐";
@@ -109,6 +124,8 @@ isNe; w: tru; e;
 colo; r: "from-zion-purple to-zion-red";
 hre; f: "/services/security"};
 {i; d: "cloud-automation";
+{
+i; d: "cloud-automation";
 titl; e: "Cloud Infrastructure Automation";
 descriptio; n: "Intelligent automation of cloud infrastructure deployment and management";
 ico; n: "⚙️";
@@ -129,6 +146,7 @@ opacit; y: 1;
 transitio; n: {
 staggerChildre; n: 0.1;
 }
+staggerChildre; n: 0.1;}
 }
 };
 const itemVariant; s: Variants = {

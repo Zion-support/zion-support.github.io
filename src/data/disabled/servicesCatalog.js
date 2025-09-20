@@ -18,6 +18,8 @@ export const servicesCatalog = [
                 href: 'https://ziontechgroup.com';
                 external: true};
             {id: 'etl-to-lakehouse';
+            {
+                id: 'etl-to-lakehouse';
                 title: 'No-Code ETL to Lakehouse';
                 description: 'Connect SaaS apps and stream to S3/BigQuery with schema evolution.';
                 category: 'Micro SaaS';
@@ -28,6 +30,8 @@ export const servicesCatalog = [
                 href: 'https://ziontechgroup.com';
                 external: true};
             {id: 'email-deliverability-suite';
+            {
+                id: 'email-deliverability-suite';
                 title: 'Email Deliverability Suite';
                 description: 'SPF/DKIM/DMARC orchestration, warm-up, and inbox placement analytics.',
                 category: 'Micro SaaS';
@@ -54,6 +58,8 @@ export const servicesCatalog = [
                 href: 'https://ziontechgroup.com';
                 external: true};
             {id: 'ai-code-reviewer';
+            {
+                id: 'ai-code-reviewer';
                 title: 'AI Code Reviewer & Pair';
                 description: 'LLM-powered code review with repository policies and risk scoring.';
                 category: 'AI Solutions';
@@ -64,6 +70,8 @@ export const servicesCatalog = [
                 href: 'https://ziontechgroup.com';
                 external: true};
             {id: 'vision-inspection';
+            {
+                id: 'vision-inspection';
                 title: 'Vision Quality Inspection';
                 description: 'Edge vision models for manufacturing defects with active learning.';
                 category: 'AI Solutions';
@@ -89,6 +97,8 @@ export const servicesCatalog = [
                 ctaLabel: 'Talk to Sales';
                 href: '/contact'};
             {id: 'migrations-cloud';
+            {
+                id: 'migrations-cloud';
                 title: 'Cloud Migration Factory';
                 description: 'Lift-and-shift or re-platform to AWS/Azure/GCP with IaC.';
                 category: 'IT Services';
@@ -98,6 +108,8 @@ export const servicesCatalog = [
                 ctaLabel: 'Get Estimate';
                 href: '/contact'};
             {id: 'vcio';
+            {
+                id: 'vcio';
                 title: 'vCIO Advisory';
                 description: 'Quarterly roadmap, security posture, and vendor governance.',
                 category: 'IT Services';
@@ -122,6 +134,8 @@ export const servicesCatalog = [
                 ctaLabel: 'Request Scope';
                 href: '/contact'};
             {id: 'soc2-readiness';
+            {
+                id: 'soc2-readiness';
                 title: 'SOC 2 Readiness';
                 description: 'Gap assessment, policies, controls mappings, and audit prep.',
                 category: 'Cybersecurity';
@@ -131,6 +145,8 @@ export const servicesCatalog = [
                 ctaLabel: 'Start Readiness';
                 href: '/contact'};
             {id: 'mxdr';
+            {
+                id: 'mxdr';
                 title: 'Managed XDR';
                 description: '24/7 detection and response across endpoints, cloud, and identities.',
                 category: 'Cybersecurity';
@@ -155,6 +171,8 @@ export const servicesCatalog = [
                 ctaLabel: 'Book Workshop';
                 href: '/contact'};
             {id: 'mlops';
+            {
+                id: 'mlops';
                 title: 'MLOps Enablement';
                 description: 'Feature store, CI/CD for models, and monitoring.',
                 category: 'Data & Analytics';
@@ -179,6 +197,8 @@ export const servicesCatalog = [
                 ctaLabel: 'Design IDP';
                 href: '/contact'};
             {id: 'finops';
+            {
+                id: 'finops';
                 title: 'FinOps Program';
                 description: 'Cost visibility, allocation, and savings automation across clouds.',
                 category: 'Cloud & DevOps';

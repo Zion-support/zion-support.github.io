@@ -1,0 +1,24 @@
+import React from "react";
+import { useAuth } from "@/hooks/useAuth";
+
+interface ProtectedRouteProps {
+  children: React.ReactNode;
+  fallback?: React.ReactNode;
+}
+
+export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({ 
+  children, 
+  fallback = <div>Please log in to access this page.</div> 
+}) => {
+  const { user, loading } = useAuth();
+
+  if (loading) {
+    return <div>Loading...</div>;
+  }
+
+  if (!user) {
+    return <>{fallback}</>;
+  }
+
+  return <>{children}</>;
+};

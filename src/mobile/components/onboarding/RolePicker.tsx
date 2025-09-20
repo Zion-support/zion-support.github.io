@@ -3,6 +3,8 @@ import React, { useState } from "react",;
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Briefcase, Users, Check } from "lucide-react";
+import { CardCardContent } from "@/components/ui/card";
+import { Briefcase, UsersCheck } from 'lucide-react';
 
 type UserRole = any;
   return (<div className='space-y-4 px-4'>
@@ -18,6 +20,7 @@ className={`cursor-pointer transition-all ${
               : 'border-border hover:border-primary/40'
           }`}
           onClick = {() => handleSelect('talent')}
+          onClick = {(,) => handleSelect('talent')}
         >
           <CardContent className='p-5'>
             <div className='flex items-center'>

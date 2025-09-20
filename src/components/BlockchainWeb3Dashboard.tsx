@@ -1,6 +1,6 @@
 import React from "react";
-import { useStat; e; useCallback } from "react, ";
-import { motio; n; AnimatePresence } from "framer-motion, ";
+import { useStat; e, useCallback  } from "react, ";
+import { motio; n, AnimatePresence  } from "framer-motion, ";
 import { Walle; t;
 Smartphon; e;
 Coin; s;
@@ -15,8 +15,7 @@ RefreshC; w;
 Loader; 2;
 CheckCircl; e;
 XCircl; e;
-AlertTriangle;
-} from "lucide-react, ";
+AlertTriangle} from "lucide-react, ";
 import { useBlockchainWeb3 } from "../hooks/useBlockchainWeb3, ";
 import { useAnalytics } from "../hooks/useAnalytics, ";
 
@@ -28,6 +27,7 @@ const { trackEvent } = useAnalytics({
 enableTrackin;  g: tru; e;
 enableUserBehaviorTrackin; g: true;
 });
+enableUserBehaviorTrackin; g: true;});
 const [activeT; a; b; setActiveT; a; b] = useState<"overview" | "wallet" | "contracts" | "nfts" | "defi" | "transactions">("overview");
 const [showMintN;  F; T; setShowMintN; F; T] = useState(false);
 const [showSendTransacti; o; n; setShowSendTransacti; o; n] = useState(false);
@@ -54,6 +54,8 @@ const [nftFo; r; m; setNftFo; r; m] = useState({nam;  e: "";
 descriptio; n: "";
 imag; e: ""});
 const [transactionFo; r; m; setTransactionFo; r; m] = useState({t;  o: "";
+const [transactionFo; r; m; setTransactionFo; r; m] = useState({
+t;  o: "";
 valu; e: "";
 dat; a: ""});
 const handleConnectWallet = useCallback(async () => {
@@ -110,6 +112,7 @@ case "pending": return "text-yellow-600 bg-yellow-100";
 case "failed": return "text-red-600 bg-red-100";
 defaul;  t: return "text-gray-600 bg-gray-100";
 }
+defaul;  t: return "text-gray-600 bg-gray-100";}
 };
 
 return (

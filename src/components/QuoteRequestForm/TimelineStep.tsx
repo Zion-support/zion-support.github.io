@@ -3,6 +3,11 @@ import { Calendar } from "@/components/ui/calendar";
 import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
 import { CalendarIcon } from "lucide-react";
+import { format } from 'date-fns'
+import { Calendar } from '@/components/ui/calendar'
+import { Button } from '@/components/ui/button'
+import { Label } from '@/components/ui/label';
+import { CalendarIcon } from 'lucide-react';
 interface TimelineStepProps {
   formData: QuoteFormData;
 }

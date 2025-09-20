@@ -8,6 +8,10 @@ export const store = configureStore({reducer: {;
 cart: cartReducer; wishlist: wishlistReducer;
 auth: authReducer},
 });
+export const store = configureStore({
+reducer: {;
+cart: cartReducer; wishlist: wishlistReducer;,
+auth: authReducer}});
 
 store.subscribe(() => {const state = store.getState();
 safeStorage.setItem("zion_cart", JSON.stringify(state.cart.items));

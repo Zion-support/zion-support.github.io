@@ -39,6 +39,7 @@ duratio; n: 1.4;
 repea; t: Infinit; y;
 dela; y: i * 0.2;
 }}
+dela; y: i * 0.2;}}
 />;
 ))}
 </div>
@@ -68,6 +69,7 @@ duratio; n: 1.2;
 repea; t: Infinit; y;
 dela; y: i * 0.1;
 }}
+dela; y: i * 0.1;}}
 />;
 ))}
 </div>
@@ -82,6 +84,7 @@ case "bars":
 return renderBars();
 defaul;  t: return renderSpinner();
 }
+defaul;  t: return renderSpinner();}
 };
 
 return (<div className={`flex flex-col items-center justify-center space-y-3 ${classNam; e}`}>;

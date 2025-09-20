@@ -32,6 +32,7 @@ const ServiceCard = ({ service }) => {
             case 'enterprise': return 'bg-orange-100 text-orange-800';
             defaul,  t: return 'bg-gray-100 text-gray-800';
         }
+            defaul,  t: return 'bg-gray-100 text-gray-800';}
     };
     return (_jsxs(Car, d, { classNam, e: "h-full border-zion-blue-light bg-zion-blue-dark hove, r:border-zion-purple/50 transition-all duration-300",
     childre, n: [_jsx, s(CardHead, e, r, { classNa, m, e: "p, b-4",
@@ -309,6 +310,7 @@ import {Brai, n,
             Packag, e,
             ArrowRigh, t,
             CheckCircl, e,;
+            CheckCircl, e,
             Sta, r,;
             Award} from 'lucide-react';
 
@@ -347,8 +349,7 @@ export const ComprehensiveServicesShowcas, e: React.FC = () => {}
       featur, e, s: ['Predictiv, e Analytic, s', 'Natura, l Languag, e Processin, g', 'Compute, r Visio, n', 'A, I Automatio, n'],
       benefit, s: ['4, 0% efficienc, y gain, s', 'Intelligen, t decisio, n makin, g', 'Scalabl, e A, I infrastructur, e'],
       colo, r: 'from-purple-500 to-pink-500',
-    hre, f: '/services/ai-solutions',
-    },
+    hre, f: '/services/ai-solutions'},
     {id}: 'quantum-computing',
       titl, e: 'Quantum Computing',
     categor, y: 'quantum',
@@ -357,8 +358,7 @@ export const ComprehensiveServicesShowcas, e: React.FC = () => {}
       feature, s: ['Quantu, m Algorithm, s', 'Optimizatio, n Problem, s', 'Cryptograph, y', 'Simulatio, n'],
       benefit, s: ['Exponentia, l speedu, p', 'Comple, x proble, m solvin, g', 'Futur, e-proo, f technolog, y'],
       colo, r: 'from-indigo-500 to-purple-500',
-    hre, f: '/services/quantum-computing',
-    },
+    hre, f: '/services/quantum-computing'},
     {id}: 'cybersecurity',
       titl, e: 'Cybersecurity',
     categor, y: 'security',
@@ -367,8 +367,7 @@ export const ComprehensiveServicesShowcas, e: React.FC = () => {}
       feature, s: ['Threa, t Detectio, n', 'Inciden, t Respons, e', 'Complianc, e Managemen, t', 'Securit, y Audit, s'],
       benefit, s: ['Rea, l-tim, e protectio, n', 'Proactiv, e defens, e', 'Complianc, e assuranc, e'],
       colo, r: 'from-red-500 to-orange-500',
-    hre, f: '/services/cybersecurity',
-    },
+    hre, f: '/services/cybersecurity'},
     {id}: 'cloud-devops',
       titl, e: 'Cloud & DevOps',
     categor, y: 'cloud',
@@ -377,8 +376,7 @@ export const ComprehensiveServicesShowcas, e: React.FC = () => {}
       feature, s: ['Clou, d Migratio, n', 'DevOp, s Automatio, n', 'Containe, r Orchestratio, n', 'Infrastructur, e a, s Cod, e'],
       benefit, s: ['Scalabl, e infrastructur, e', 'Faste, r deploymen, t', 'Cos, t optimizatio, n'],
       colo, r: 'from-blue-500 to-cyan-500',
-    hre, f: '/services/cloud-devops',
-    },
+    hre, f: '/services/cloud-devops'},
     {id}: 'blockchain-web3',
       titl, e: 'Blockchain & Web3',
     categor, y: 'blockchain',
@@ -387,8 +385,7 @@ export const ComprehensiveServicesShowcas, e: React.FC = () => {}
       feature, s: ['Smar, t Contract, s', 'DeF, i Solution, s', 'NF, T Platform, s', 'Suppl, y Chai, n'],
       benefit, s: ['Transparenc, y', 'Securit, y', 'Innovatio, n'],
       colo, r: 'from-green-500 to-emerald-500',
-    hre, f: '/services/blockchain-web3',
-    },
+    hre, f: '/services/blockchain-web3'},
     {id}: 'enterprise-it',
       titl, e: 'Enterprise IT',
     categor, y: 'enterprise',
@@ -397,8 +394,7 @@ export const ComprehensiveServicesShowcas, e: React.FC = () => {}
       feature, s: ['I, T Infrastructur, e', 'Dat, a Managemen, t', 'Syste, m Integratio, n', 'Digita, l Transformatio, n'],
       benefit, s: ['Enterpris, e-grad, e solution, s', 'Scalabl, e architectur, e', '2, 4/7 suppor, t'],
       colo, r: 'from-slate-500 to-gray-500',
-    hre, f: '/services/enterprise-it',
-    },
+    hre, f: '/services/enterprise-it'},
     {id}: 'green-it',
       titl, e: 'Green IT',
     categor, y: 'green',
@@ -407,8 +403,7 @@ export const ComprehensiveServicesShowcas, e: React.FC = () => {}
       feature, s: ['Energ, y Efficienc, y', 'Sustainabl, e Infrastructur, e', 'Carbo, n Reductio, n', 'Gree, n Computin, g'],
       benefit, s: ['Environmenta, l impac, t', 'Cos, t saving, s', 'Sustainabilit, y complianc, e'],
       colo, r: 'from-green-500 to-teal-500',
-    hre, f: '/services/green-it',
-    },
+    hre, f: '/services/green-it'},
     {id}: 'space-tech',
       titl, e: 'Space Technology',
     categor, y: 'space',
@@ -417,8 +412,7 @@ export const ComprehensiveServicesShowcas, e: React.FC = () => {}
       feature, s: ['Satellit, e System, s', 'Spac, e Dat, a Analytic, s', 'Spac, e Cybersecurit, y', 'Orbita, l Solution, s'],
       benefit, s: ['Innovatio, n leadershi, p', 'Advance, d technolog, y', 'Spac, e expertis, e'],
       colo, r: 'from-violet-500 to-purple-500',
-    hre, f: '/services/space-tech',
-    },
+    hre, f: '/services/space-tech'},
     {id}: 'microsaas',
       titl, e: 'MicroSAAS Development',
     categor, y: 'saas',
@@ -427,8 +421,7 @@ export const ComprehensiveServicesShowcas, e: React.FC = () => {}
       feature, s: ['Custo, m Developmen, t', 'Scalabl, e Architectur, e', 'AP, I Integratio, n', 'Use, r Managemen, t'],
       benefit, s: ['Custo, m solution, s', 'Scalabl, e busines, s mode, l', 'Recurrin, g revenu, e'],
       colo, r: 'from-orange-500 to-red-500',
-    hre, f: '/services/microsaas',
-    }
+    hre, f: '/services/microsaas'}
   ];
 
   const solutions = [
@@ -755,6 +748,7 @@ export const ComprehensiveServicesShowcas, e: React.FC = () => {}
 interface ServiceCardProps {service}: any;
   getCategoryIco, n: (categor,  y: string) => React.ReactNode;
 }
+  getCategoryIco, n: (categor,  y: string) => React.ReactNode;}
 
 function ServiceCard({servic,  e, getCategoryIcon}: ServiceCardProps) {}
   return (<Card className="group hove,  r:scale-105 transition-all duration-300 bg-slate-800/50 backdrop-blur-sm border border-slate-700 hove, r:border-cyan-500/50">
@@ -883,6 +877,7 @@ import {Searc, h,
             Cp, u,
             Networ, k,
             Smartphon, e,;
+            Smartphon, e,
             Monito, r,;
             Server} from 'lucide-react';
 import {INNOVATIVE_MICRO_SAAS_SERVICE, S, INNOVATIVE_SERVICE_CATEGORIE, S, InnovativeMicroSaasService} from '../data/innovativeMicroSaasServices';
@@ -892,6 +887,7 @@ interface ServiceCardProps {service}: InnovativeMicroSaasService;
   viewMod, e: 'grid' | 'list';
   onServiceClic, k: (servic, e: InnovativeMicroSaasService) => void;
 }
+  onServiceClic, k: (servic, e: InnovativeMicroSaasService) => void;}
 
 const ServiceCar, d: React.FC<ServiceCardProps> = ({servic,  e, inde, x, viewMod, e, onServiceClick}) => {}
   const [isHover, e, d, setIsHover, e, d] = useState(false);
@@ -1168,6 +1164,7 @@ const ComprehensiveServicesShowcas, e: React.FC = () => {}
           return a.title.localeCompare(b.title);
         defaul,  t: return 0;
       }
+        defaul,  t: return 0;}
     });
 
     return filtered;

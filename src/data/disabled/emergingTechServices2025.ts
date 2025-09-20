@@ -21,6 +21,8 @@ address: string;
 }
 }
 };
+website: string;,
+address: string;};
 marketPrice: string;
 competitors: string[];
 roi: string;
@@ -35,6 +37,8 @@ scalability: string;
 support: string;
 futurePotential: string;
 }
+support: string;,
+futurePotential: string;}
 
 export const emergingTechServices2025: EmergingTechService[] = [
 {id: 1;
@@ -76,6 +80,7 @@ contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com";
+website: "https://ziontechgroup.com";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$50;000/month (Industry average: $100;000/month)",
 competitors: ["SpaceX Starlink", "OneWeb", "Amazon Project Kuiper", "Telesat"],
@@ -99,6 +104,10 @@ support: "24/7 space operations support";
 futurePotential: "Mars colonization support; deep space exploration",
 },
 {id: 2;
+support: "24/7 space operations support";,
+futurePotential: "Mars colonization support; deep space exploration"},
+{
+id: 2;
 name: "Biotechnology AI Platform";
 category: "Biotechnology";
 subcategory: "AI-Driven Research";
@@ -137,6 +146,7 @@ contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com";
+website: "https://ziontechgroup.com";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$35;000/month (Industry average: $70;000/month)",
 competitors: ["Insitro", "Atomwise", "BenevolentAI", "Recursion Pharmaceuticals"],
@@ -160,6 +170,10 @@ support: "Biotechnology expert support";
 futurePotential: "Human augmentation; synthetic life forms; bio-computing",
 },
 {id: 3;
+support: "Biotechnology expert support";,
+futurePotential: "Human augmentation; synthetic life forms; bio-computing"},
+{
+id: 3;
 name: "Nanotechnology Manufacturing Platform";
 category: "Nanotechnology";
 subcategory: "Advanced Manufacturing";
@@ -198,6 +212,7 @@ contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com";
+website: "https://ziontechgroup.com";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$40;000/month (Industry average: $80;000/month)",
 competitors: ["Nano Dimension", "Nanofabrica", "Carbon", "Desktop Metal"],
@@ -221,6 +236,10 @@ support: "Nanotechnology expert support";
 futurePotential: "Molecular machines; quantum computers; space elevators",
 },
 {id: 4;
+support: "Nanotechnology expert support";,
+futurePotential: "Molecular machines; quantum computers; space elevators"},
+{
+id: 4;
 name: "Quantum Internet Platform";
 category: "Quantum Computing";
 subcategory: "Quantum Communication";
@@ -259,6 +278,7 @@ contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com";
+website: "https://ziontechgroup.com";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$30;000/month (Industry average: $60;000/month)",
 competitors: ["Quantum Xchange", "ID Quantique", "Toshiba Quantum", "NTT Quantum"],
@@ -282,6 +302,10 @@ support: "Quantum internet expert support";
 futurePotential: "Quantum teleportation; quantum AI networks; interplanetary quantum communication",
 },
 {id: 5;
+support: "Quantum internet expert support";,
+futurePotential: "Quantum teleportation; quantum AI networks; interplanetary quantum communication"},
+{
+id: 5;
 name: "Brain-Computer Interface Platform";
 category: "Neural Technology";
 subcategory: "Brain-Machine Interface";
@@ -320,6 +344,7 @@ contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com";
+website: "https://ziontechgroup.com";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$25;000/month (Industry average: $50;000/month)",
 competitors: ["Neuralink", "Kernel", "CTRL-labs", "Emotiv"],
@@ -343,6 +368,10 @@ support: "Neuroscience expert support";
 futurePotential: "Human consciousness upload; collective intelligence; telepathic communication",
 },
 {id: 6;
+support: "Neuroscience expert support";,
+futurePotential: "Human consciousness upload; collective intelligence; telepathic communication"},
+{
+id: 6;
 name: "Fusion Energy Platform";
 category: "Energy Technology";
 subcategory: "Nuclear Fusion";
@@ -381,6 +410,7 @@ contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com";
+website: "https://ziontechgroup.com";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$100;000/month (Industry average: $200;000/month)",
 competitors: ["ITER", "Commonwealth Fusion", "General Fusion", "Helion Energy"],
@@ -404,6 +434,10 @@ support: "Fusion physics expert support";
 futurePotential: "Interstellar travel; space colonization; unlimited energy civilization",
 },
 {id: 7;
+support: "Fusion physics expert support";,
+futurePotential: "Interstellar travel; space colonization; unlimited energy civilization"},
+{
+id: 7;
 name: "Digital Twin Platform";
 category: "Digital Technology";
 subcategory: "Virtual Replication";
@@ -442,6 +476,7 @@ contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com";
+website: "https://ziontechgroup.com";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$15;000/month (Industry average: $30;000/month)",
 competitors: ["Siemens Digital Twin", "GE Digital Twin", "Microsoft Azure Digital Twins", "IBM Digital Twin"],
@@ -465,6 +500,10 @@ support: "Digital twin expert support";
 futurePotential: "Metaverse integration; consciousness simulation; parallel universe modeling",
 },
 {id: 8;
+support: "Digital twin expert support";,
+futurePotential: "Metaverse integration; consciousness simulation; parallel universe modeling"},
+{
+id: 8;
 name: "Holographic Display Platform";
 category: "Display Technology";
 subcategory: "3D Holography";
@@ -503,6 +542,7 @@ contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com";
+website: "https://ziontechgroup.com";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$20;000/month (Industry average: $40;000/month)",
 competitors: ["Looking Glass", "Light Field Lab", "RealView Imaging", "Leia Inc"],
@@ -526,6 +566,10 @@ support: "Holographic technology expert support";
 futurePotential: "Star Wars-style communication; virtual reality replacement; 3D internet",
 },
 {id: 9;
+support: "Holographic technology expert support";,
+futurePotential: "Star Wars-style communication; virtual reality replacement; 3D internet"},
+{
+id: 9;
 name: "Quantum Sensing Platform";
 category: "Quantum Technology";
 subcategory: "Quantum Sensors";
@@ -564,6 +608,7 @@ contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com";
+website: "https://ziontechgroup.com";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$18;000/month (Industry average: $35;000/month)",
 competitors: ["Q-CTRL", "Quantum Machines", "Rigetti", "D-Wave"],
@@ -587,6 +632,10 @@ support: "Quantum physics expert support";
 futurePotential: "Quantum internet; quantum computers; quantum communication networks",
 },
 {id: 10;
+support: "Quantum physics expert support";,
+futurePotential: "Quantum internet; quantum computers; quantum communication networks"},
+{
+id: 10;
 name: "Autonomous Systems Platform";
 category: "Robotics";
 subcategory: "Autonomous Intelligence";
@@ -625,6 +674,7 @@ contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com";
+website: "https://ziontechgroup.com";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$25;000/month (Industry average: $50;000/month)",
 competitors: ["Boston Dynamics", "ABB Robotics", "KUKA", "FANUC"],
@@ -647,6 +697,8 @@ scalability: "Unlimited autonomous systems";
 support: "Robotics expert support";
 futurePotential: "General purpose robots; humanoid robots; swarm intelligence",
 }
+support: "Robotics expert support";,
+futurePotential: "General purpose robots; humanoid robots; swarm intelligence"}
 ];
 
 export default emergingTechServices2025;

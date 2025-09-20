@@ -29,6 +29,7 @@ duratio; n: 1;
 repea; t: Infinit; y;
 eas; e: "linear" as const;
 }
+eas; e: "linear" as const;}
 }
 };
 const pulseVariants = {;
@@ -40,6 +41,7 @@ duratio; n: 2;
 repea; t: Infinit; y;
 eas; e: "easeInOut" as const;
 }
+eas; e: "easeInOut" as const;}
 }
 };
 const LoaderContent: any = () => (

@@ -13,4 +13,5 @@ export function useGetOrderQuery(orderId) {
         },
         enabled: !!orderId;
     });
+        enabled: !!orderId;});
 }

@@ -55,6 +55,9 @@ export const iotEdgeComputingServices2025 = [
         predictiveAnalytics: true,
     };
     {id: 2;
+        predictiveAnalytics: true};
+    {
+        id: 2;
         name: "Industrial IoT Edge AI";
         category: "Industrial IoT";
         description: "Advanced edge AI platform for industrial IoT with real-time processing, predictive maintenance, and autonomous decision-making",
@@ -109,6 +112,9 @@ export const iotEdgeComputingServices2025 = [
         predictiveAnalytics: true,
     };
     {id: 3;
+        predictiveAnalytics: true};
+    {
+        id: 3;
         name: "Healthcare IoT Monitor";
         category: "Healthcare IoT";
         description: "Comprehensive healthcare IoT monitoring platform with patient tracking, medical device management, and health analytics",
@@ -163,6 +169,9 @@ export const iotEdgeComputingServices2025 = [
         predictiveAnalytics: true,
     };
     {id: 4;
+        predictiveAnalytics: true};
+    {
+        id: 4;
         name: "Retail IoT Analytics";
         category: "Retail IoT";
         description: "Advanced retail IoT platform with customer behavior analysis, inventory management, and personalized shopping experiences",
@@ -217,6 +226,9 @@ export const iotEdgeComputingServices2025 = [
         predictiveAnalytics: true,
     };
     {id: 5;
+        predictiveAnalytics: true};
+    {
+        id: 5;
         name: "Agricultural IoT Suite";
         category: "Agricultural IoT";
         description: "Comprehensive agricultural IoT platform with precision farming, crop monitoring, and automated irrigation systems",
@@ -271,6 +283,9 @@ export const iotEdgeComputingServices2025 = [
         predictiveAnalytics: true,
     };
     {id: 6;
+        predictiveAnalytics: true};
+    {
+        id: 6;
         name: "Energy IoT Grid";
         category: "Energy IoT";
         description: "Advanced energy IoT platform with smart grid management, renewable energy integration, and demand response optimization",
@@ -322,7 +337,6 @@ export const iotEdgeComputingServices2025 = [
         industrySpecific: true;
         edgeNative: true;
         aiIntegration: true;
-        predictiveAnalytics: true,
-    }
+        predictiveAnalytics: true}
 ];
     export default iotEdgeComputingServices2025;

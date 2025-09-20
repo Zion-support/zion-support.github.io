@@ -26,6 +26,8 @@ website: string;
 }
 }
 };
+email: string;,
+website: string;};
 technicalSpecs?: {
 technology: string[];
 integrations: string[];
@@ -33,6 +35,8 @@ apiEndpoints: number;
 uptime: string;
 security: string[];
 };
+uptime: string;,
+security: string[];};
 }
 
 export const INNOVATIVE_NEW_SERVICES: InnovativeNewService[] = [
@@ -87,6 +91,7 @@ innovationLevel: "Revolutionary";
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"}
 };
 // AI-Powered Autonomous Systems;
@@ -140,6 +145,7 @@ innovationLevel: "Advanced";
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"}
 };
 // Blockchain & Web3 Services;
@@ -193,6 +199,7 @@ innovationLevel: "Innovative";
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"}
 };
 // AI-Powered Cybersecurity & Threat Intelligence;
@@ -246,6 +253,7 @@ innovationLevel: "Advanced";
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"}
 };
 // AI-Powered Healthcare & Medical Research;
@@ -299,6 +307,7 @@ innovationLevel: "Revolutionary";
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"}
 };
 // AI-Powered Financial Services & Trading;
@@ -352,6 +361,7 @@ innovationLevel: "Advanced";
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"}
 };
 // AI-Powered Manufacturing & Industry 4.0;
@@ -405,6 +415,7 @@ innovationLevel: "Innovative";
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"}
 };
 // AI-Powered Energy & Sustainability;
@@ -458,6 +469,7 @@ innovationLevel: "Innovative";
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"}
 };
 // AI-Powered Transportation & Smart Cities;
@@ -511,6 +523,7 @@ innovationLevel: "Advanced";
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"}
 };
 // AI-Powered Education & Learning Analytics;
@@ -564,6 +577,7 @@ innovationLevel: "Innovative";
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"}
 };
 // AI-Powered Retail & E-commerce Innovation;
@@ -617,6 +631,7 @@ innovationLevel: "Advanced";
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"}
 };
 // AI-Powered Legal & Compliance Automation;
@@ -670,6 +685,7 @@ innovationLevel: "Advanced";
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"}
 };
 // AI-Powered Agriculture & Precision Farming;
@@ -723,6 +739,7 @@ innovationLevel: "Innovative";
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"}
 };
 // AI-Powered Construction & Infrastructure;
@@ -776,6 +793,7 @@ innovationLevel: "Advanced";
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"}
 };
 // AI-Powered Hospitality & Guest Experience;
@@ -829,6 +847,7 @@ innovationLevel: "Innovative";
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"}
 }
 ];

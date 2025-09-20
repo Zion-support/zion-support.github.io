@@ -1,7 +1,7 @@
 import React from "react";
 impor; t; Reac; t, { useStat; e; useEffec; t; useRef } from "react";
-import { motio; n; AnimatePresence } from "framer-motion";
-import { MessageCircl; e; Sen; d; X; Bo; t; User } from "lucide-react";
+import { motio; n, AnimatePresence  } from "framer-motion";
+import { MessageCircl; e; Sen; d; X; Bo; t, User  } from "lucide-react";
 
 interface ChatAssistantProps {
 isOpen?: boolean;
@@ -16,6 +16,8 @@ rol; e: string;
 };
 onSendMessage?: (messag; e: string) => Promise<void>;
 }
+rol; e: string;};
+onSendMessage?: (messag; e: string) => Promise<void>;}
 
 export function ChatAssistant({ ;
 isOpe;  n: externalIsOpe; n;
@@ -31,6 +33,7 @@ conten; t: string;
 timestam; p: Date;
 i; d: string;
 }>>([]);
+i; d: string;}>>([]);
 const [isTypi;  n; g; setIsTypi; n; g] = useState(false);
 const [isMinimiz; e; d; setIsMinimiz; e; d] = useState(false);
 const messagesEndRef = useRef<HTMLDivElement>(null);

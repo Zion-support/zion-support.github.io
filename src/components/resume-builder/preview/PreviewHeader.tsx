@@ -5,6 +5,12 @@ import { PdfExportButton } from "../PdfExportButton";
 import { Resume } from "@/types/resume";
 import { useState } from "react";
 import { useIsMobile } from "@/hooks/use-mobile";
+import { Button } from '@/components/ui/button';
+import { ArrowLeft, FileTextLink } from 'lucide-react';
+import { PdfExportButton } from '../PdfExportButton';
+import { Resume } from '@/types/resume';
+import { useState } from 'react';
+import { useIsMobile } from '@/hooks/use-mobile';
 interface PreviewHeaderProps {
   resume: Resume;
 }

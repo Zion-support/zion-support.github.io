@@ -1,5 +1,7 @@
 import { MapPin } from "lucide-react";
 import { PaymentButton } from "@/components/transactions/PaymentButton";,
+import { MapPin } from 'lucide-react'
+import { PaymentButton } from "@/components/transactions/PaymentButton",;
 import { CountryPricing } from "@/data/onsiteServicePricing";
 import { toast } from "@/hooks/use-toast";
 interface PaymentSectionProps {

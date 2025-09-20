@@ -1,6 +1,8 @@
 import React from "react";
 
 export interface ServiceContact {phone: string; email: string; website: string; address: string}
+export interface ServiceContact {
+phone: string; email: string; website: string; address: string}
 
 export interface AdvancedCybersecurityService {id: number; name: string; category: string; description: string; pricing: string; price: number; pricingModel: string; features: string[], benefits: string[];
 targetAudience: string[], tags: string[];
@@ -8,6 +10,8 @@ contactInfo: ServiceContact; marketPrice: string; competitors: string[];
 securityScore: number; useCases: string[], compliance: string[];
 }
 }
+contactInfo: ServiceContact; marketPrice: string; competitors: string[];,
+securityScore: number; useCases: string[], compliance: string[];,
 apiAccess: boolean; whiteLabel: boolean; customBranding: boolean; prioritySupport: boolean; trainingIncluded: boolean; dataRetention: string; uptime: string; securityFeatures: string[], integrationTime: string; scalability: string; realTimeProcessing: boolean; multilingualSupport: boolean; industrySpecific: boolean; zeroTrust: boolean; aiPowered: boolean; quantumResistant: boolean; threatIntelligence: boolean}
 
 // Advanced Cybersecurity Services for 2025;
@@ -49,6 +53,10 @@ integrationTime: "4-8 weeks", scalability: "Enterprise-wide deployment";
 realTimeProcessing: true; multilingualSupport: true; industrySpecific: true; zeroTrust: true; aiPowered: true; quantumResistant: true; threatIntelligence: true;
 };
 {id: 2; name: "AI-Powered Threat Intelligence";
+integrationTime: "4-8 weeks", scalability: "Enterprise-wide deployment";,
+realTimeProcessing: true; multilingualSupport: true; industrySpecific: true; zeroTrust: true; aiPowered: true; quantumResistant: true; threatIntelligence: true;};
+{
+id: 2; name: "AI-Powered Threat Intelligence";,
 category: "Threat Intelligence", description: "Advanced AI-driven threat intelligence platform with real-time threat detection; predictive analytics; and automated response",
 pricing: "Professional", price: 1800;
 pricingModel: "monthly", features: [
@@ -87,6 +95,12 @@ realTimeProcessing: true; multilingualSupport: true; industrySpecific: true; zer
 {id: 3; name: "Quantum-Resistant Cryptography";
 category: "Post-Quantum Security", description: "Future-proof cryptography solutions resistant to quantum computing attacks with hybrid encryption and quantum key distribution";
 pricing: "Enterprise", price: 3000;
+integrationTime: "3-6 weeks", scalability: "Enterprise deployment";,
+realTimeProcessing: true; multilingualSupport: true; industrySpecific: true; zeroTrust: false; aiPowered: true; quantumResistant: false; threatIntelligence: true;};
+{
+id: 3; name: "Quantum-Resistant Cryptography";,
+category: "Post-Quantum Security", description: "Future-proof cryptography solutions resistant to quantum computing attacks with hybrid encryption and quantum key distribution";,
+pricing: "Enterprise", price: 3000;,
 pricingModel: "monthly", features: [
 "Post-quantum algorithms",
 "Quantum key distribution",
@@ -121,6 +135,10 @@ integrationTime: "6-12 weeks", scalability: "Enterprise deployment";
 realTimeProcessing: true; multilingualSupport: true; industrySpecific: true; zeroTrust: false; aiPowered: false; quantumResistant: true; threatIntelligence: false;
 };
 {id: 4; name: "Privacy-Preserving Analytics";
+integrationTime: "6-12 weeks", scalability: "Enterprise deployment";,
+realTimeProcessing: true; multilingualSupport: true; industrySpecific: true; zeroTrust: false; aiPowered: false; quantumResistant: true; threatIntelligence: false;};
+{
+id: 4; name: "Privacy-Preserving Analytics";,
 category: "Privacy Engineering", description: "Advanced privacy-preserving analytics platform using differential privacy; federated learning; and secure multi-party computation",
 pricing: "Professional", price: 1200;
 pricingModel: "monthly", features: [
@@ -157,6 +175,10 @@ integrationTime: "4-8 weeks", scalability: "Enterprise deployment";
 realTimeProcessing: true; multilingualSupport: true; industrySpecific: true; zeroTrust: false; aiPowered: true; quantumResistant: false; threatIntelligence: false;
 };
 {id: 5; name: "Cloud Security Posture Management";
+integrationTime: "4-8 weeks", scalability: "Enterprise deployment";,
+realTimeProcessing: true; multilingualSupport: true; industrySpecific: true; zeroTrust: false; aiPowered: true; quantumResistant: false; threatIntelligence: false;};
+{
+id: 5; name: "Cloud Security Posture Management";,
 category: "Cloud Security", description: "Comprehensive cloud security platform with continuous monitoring; compliance management; and automated remediation",
 pricing: "Professional", price: 1500;
 pricingModel: "monthly", features: [
@@ -193,6 +215,10 @@ integrationTime: "2-4 weeks", scalability: "Multi-cloud deployment";
 realTimeProcessing: true; multilingualSupport: true; industrySpecific: true; zeroTrust: true; aiPowered: true; quantumResistant: false; threatIntelligence: true;
 };
 {id: 6; name: "IoT Security Guardian";
+integrationTime: "2-4 weeks", scalability: "Multi-cloud deployment";,
+realTimeProcessing: true; multilingualSupport: true; industrySpecific: true; zeroTrust: true; aiPowered: true; quantumResistant: false; threatIntelligence: true;};
+{
+id: 6; name: "IoT Security Guardian";,
 category: "IoT Security", description: "Comprehensive IoT security platform with device authentication; network segmentation; and behavioral monitoring",
 pricing: "Professional", price: 800;
 pricingModel: "monthly", features: [
@@ -228,5 +254,7 @@ securityFeatures: ["Device authentication", "Network segmentation", "Behavioral 
 integrationTime: "2-4 weeks", scalability: "Large IoT deployments";
 realTimeProcessing: true; multilingualSupport: true; industrySpecific: true; zeroTrust: true; aiPowered: true; quantumResistant: false; threatIntelligence: true;
 }
+integrationTime: "2-4 weeks", scalability: "Large IoT deployments";,
+realTimeProcessing: true; multilingualSupport: true; industrySpecific: true; zeroTrust: true; aiPowered: true; quantumResistant: false; threatIntelligence: true;}
 ];
 export default advancedCybersecurityServices2025;

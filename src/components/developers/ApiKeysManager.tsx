@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { Check, Clock, Key, MoreVertical, RefreshCw, X } from "lucide-react";
+import { useState } from 'react';
+import { Check, Clock, Key, MoreVertical, RefreshCwX } from 'lucide-react';
   // Create key form state,
 const [keyName, setKeyName] = useState("");
   const [selectedScopes, setSelectedScopes] = useState<ApiKeyScope[]>([]),
@@ -82,6 +84,8 @@ htmlFor={scope.value}
                 <Button
 onClick={handleCreateKey}
                   disabled={keyName.trim() === '' |selectedScopes.length === 0}
+                  disabled={
+                    keyName.trim() === '' |selectedScopes.length === 0}
                 >                  Create Key
               <DialogFooter>
                 <Button variant="outline" onClick={handleDialogClose}>Cancel</Button>
@@ -252,6 +256,8 @@ key={scope}
                 <div className="mt-3 flex flex-wrap gap-2">
                   {key.scopes.map((scope) => (
                     <Badge
+                  {key.scopes.map((scope,) => (
+                    <Badge,
 key = {scope}
                       variant="secondary"
                       className="bg-zinc-800 text-zinc-300 hover:bg-zinc-800"
@@ -332,6 +338,7 @@ onClick={() =>
               }
               className='bg-blue-600 hover:bg-blue-700'            >
             <AlertDialogAction
+            <AlertDialogAction,
 onClick = {() => showRegenerateConfirm && handleRegenerateKey(showRegenerateConfirm)}
               className="bg-blue-600 hover:bg-blue-700"
       >
@@ -378,6 +385,7 @@ onClick={() =>
               }
               className='bg-red-600 hover:bg-red-700'            >
             <AlertDialogAction
+            <AlertDialogAction,
 onClick = {() => showDeleteConfirm && handleRevokeKey(showDeleteConfirm)}
               className="bg-red-600 hover: bg-red-700"
       >

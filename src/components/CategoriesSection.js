@@ -36,8 +36,7 @@ cons, t categorie, s = [
     colo, r: "from-zion-cyan to-zion-blue",
         gradien, t: "from-zion-cyan/20 to-zion-blue/20",
     feature, s: ["A, I Expert, s", "Globa, l Networ, k", "Verifie, d Profile, s"],
-        stat, s: "10K+ Experts",
-    },
+        stat, s: "10K+ Experts"},
     {
         titl, e: "Equipment",
     descriptio, n: "Rent or buy specialize, d, hardwar, e, server, s, and devices",
@@ -50,8 +49,7 @@ cons, t categorie, s = [
     colo, r: "from-zion-cyan-light to-zion-cyan",
         gradien, t: "from-zion-cyan-light/20 to-zion-cyan/20",
     feature, s: ["Hig, h-Performanc, e", "Flexibl, e Renta, l", "2, 4/7 Monitorin, g"],
-        stat, s: "1000+ Devices",
-    },
+        stat, s: "1000+ Devices"},
     {
         titl, e: "Innovation",
     descriptio, n: "Discover cutting-edge solutions and tech breakthroughs",
@@ -64,8 +62,7 @@ cons, t categorie, s = [
     colo, r: "from-zion-purple-light to-zion-purple",
         gradien, t: "from-zion-purple-light/20 to-zion-purple/20",
     feature, s: ["Lates, t Tec, h", "A, I Solution, s", "Futur, e-Read, y"],
-        stat, s: "100+ Innovations",
-    },
+        stat, s: "100+ Innovations"},
 ];
 const specialServices = [
     {

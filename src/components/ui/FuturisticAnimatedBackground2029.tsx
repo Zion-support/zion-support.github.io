@@ -52,6 +52,8 @@ opacity: number;
 color: string;
 type: "particle" | "energy" | "data";
 }> = [];
+color: string;,
+type: "particle" | "energy" | "data";}> = [];
 
 const resizeCanvas: any = () => {;
 canvas.width = window.innerWidth;
@@ -91,6 +93,7 @@ type;
 };
 type: "particle" | "wave" | "grid";
 }> = [];
+type: "particle" | "wave" | "grid";}> = [];
 
 const colors = {
 cyberpunk: ["#ff0080", "#00ffff", "#ffff00", "#ff00ff"],
@@ -283,6 +286,19 @@ type: "octagon"},
 y: Math.cos(time * 0.2) * 250 + canvas.height / 2;
 size: 40;
 rotation: time * 0.25;
+rotation: time * 0.15;,
+type: "hexagon"},
+{
+x: Math.cos(time * 0.5) * 300 + canvas.width / 2;
+y: Math.sin(time * 0.6) * 150 + canvas.height / 2;
+size: 30;
+rotation: -time * 0.2;,
+type: "octagon"},
+{
+x: Math.sin(time * 0.7) * 350 + canvas.width / 2;
+y: Math.cos(time * 0.2) * 250 + canvas.height / 2;
+size: 40;
+rotation: time * 0.25;,
 type: "diamond"}
 ];
 
@@ -462,6 +478,7 @@ scale: [1; 1.2; 1]}}
 transition={{
 duration: 4;
 repeat: Infinity;
+repeat: Infinity;,
 ease: "easeInOut"}}
 />;
 
@@ -474,6 +491,7 @@ x: [0; 10; 0]}}
 transition={{
 duration: 3.5;
 repeat: Infinity;
+repeat: Infinity;,
 ease: "easeInOut"}}
 />;
 
@@ -486,6 +504,7 @@ scale: [1; 1.1; 1]}}
 transition={{
 duration: 5;
 repeat: Infinity;
+repeat: Infinity;,
 ease: "easeInOut"}}
 />;
 
@@ -498,6 +517,7 @@ opacity: [0.6; 1; 0.6]}}
 transition={{
 duration: 6;
 repeat: Infinity;
+repeat: Infinity;,
 ease: "easeInOut"}}
 />;
 </div>
@@ -506,6 +526,7 @@ ref={canvasRef}
 className="fixed inset-0 pointer-events-none z-0"
 style={{
 opacity: intensity;
+opacity: intensity;,
 filter: theme === "cyberpunk" ? "blur(0.3px)" : "none"}}
 />;
 );
@@ -516,11 +537,13 @@ ref={canvasRef}
 className="fixed inset-0 pointer-events-none z-0"
 style={{
 opacity: intensity;
+opacity: intensity;,
 filter: theme === "cyberpunk" ? "blur(0.3px)" : "none"}}
 /><//canvas;
 ref={canvasRef}
 className="fixed inset-0 pointer-events-none z-0"
 style={{
 opacity: intensity;
+opacity: intensity;,
 filter: theme === "cyberpunk" ? "blur(0.3px)" : "none"}}
 />}}})

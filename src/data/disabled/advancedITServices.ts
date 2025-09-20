@@ -24,6 +24,8 @@ website: string;
 }
 }
 };
+email: string;,
+website: string;};
 rating: number;
 reviewCount: number;
 featured: boolean;
@@ -39,6 +41,8 @@ competitors: string[];
 onsiteSupport: boolean;
 globalCoverage: boolean;
 }
+onsiteSupport: boolean;,
+globalCoverage: boolean;}
 
 export const ADVANCED_IT_SERVICES: AdvancedITService[] = [
 {id: "cloud-migration-enterprise";
@@ -92,6 +96,7 @@ marketPrice: "$15;000 - $100;000+",
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 rating: 4.9;
 reviewCount: 89;
@@ -110,6 +115,11 @@ globalCoverage: true;
 };
 {id: "cybersecurity-managed-services";
 title: "Managed Cybersecurity Services";
+onsiteSupport: true;,
+globalCoverage: true;};
+{
+id: "cybersecurity-managed-services";
+title: "Managed Cybersecurity Services";,
 description: "Comprehensive managed cybersecurity services providing 24/7 threat monitoring; incident response; vulnerability management; and security operations center (SOC) services.",
 category: "Cybersecurity";
 subcategory: "Managed Services";
@@ -159,6 +169,7 @@ marketPrice: "$2;500 - $8;000/month",
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 rating: 4.8;
 reviewCount: 156;
@@ -177,6 +188,11 @@ globalCoverage: true;
 };
 {id: "devops-automation-platform";
 title: "DevOps Automation & CI/CD Platform";
+onsiteSupport: true;,
+globalCoverage: true;};
+{
+id: "devops-automation-platform";
+title: "DevOps Automation & CI/CD Platform";,
 description: "Enterprise-grade DevOps automation platform that streamlines software development; testing; and deployment processes with advanced CI/CD pipelines and infrastructure automation.",
 category: "DevOps";
 subcategory: "Automation & CI/CD";
@@ -226,6 +242,7 @@ marketPrice: "$1;800 - $5;000/month",
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 rating: 4.7;
 reviewCount: 234;
@@ -244,6 +261,11 @@ globalCoverage: true;
 };
 {id: "data-center-optimization";
 title: "Data Center Optimization & Modernization";
+onsiteSupport: true;,
+globalCoverage: true;};
+{
+id: "data-center-optimization";
+title: "Data Center Optimization & Modernization";,
 description: "Comprehensive data center optimization services including infrastructure assessment; modernization planning; energy efficiency improvements; and capacity planning.",
 category: "Infrastructure";
 subcategory: "Data Center";
@@ -293,6 +315,7 @@ marketPrice: "$8;000 - $50;000+",
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 rating: 4.8;
 reviewCount: 67;
@@ -311,6 +334,11 @@ globalCoverage: true;
 };
 {id: "network-security-architecture";
 title: "Network Security Architecture & Design";
+onsiteSupport: true;,
+globalCoverage: true;};
+{
+id: "network-security-architecture";
+title: "Network Security Architecture & Design";,
 description: "Comprehensive network security architecture design and implementation services including zero-trust network design; segmentation; and advanced threat protection.",
 category: "Network Security";
 subcategory: "Architecture & Design";
@@ -360,6 +388,7 @@ marketPrice: "$12;000 - $75;000+",
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 rating: 4.9;
 reviewCount: 89;
@@ -378,6 +407,11 @@ globalCoverage: true;
 };
 {id: "disaster-recovery-solutions";
 title: "Disaster Recovery & Business Continuity";
+onsiteSupport: true;,
+globalCoverage: true;};
+{
+id: "disaster-recovery-solutions";
+title: "Disaster Recovery & Business Continuity";,
 description: "Comprehensive disaster recovery and business continuity solutions including backup systems; recovery planning; testing; and managed recovery services.",
 category: "Business Continuity";
 subcategory: "Disaster Recovery";
@@ -427,6 +461,7 @@ marketPrice: "$3;000 - $10;000/month",
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 rating: 4.8;
 reviewCount: 123;
@@ -443,4 +478,6 @@ competitors: ["Veeam", "Commvault", "Rubrik", "Cohesity", "Zerto"],
 onsiteSupport: true;
 globalCoverage: true;
 }
+onsiteSupport: true;,
+globalCoverage: true;}
 ];

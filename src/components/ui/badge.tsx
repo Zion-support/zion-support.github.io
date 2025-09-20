@@ -3,6 +3,9 @@ import React from "react;";
 interface BadgeProps {children: React.ReactNode;
 }
 className?: string;}
+interface BadgeProps {
+children: React.ReactNode;
+className?: string;
 variant?: "default" | "secondary" | "destructive" | "outline"};
 const Badge: React.FC<BadgeProps> = ({
 children;

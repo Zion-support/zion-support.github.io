@@ -26,6 +26,8 @@ sort: string;
 }
 }
 }
+minRating: number;,
+sort: string;}
 
 export interface SearchMetrics {
 totalResults: number;
@@ -37,6 +39,8 @@ count: number }>;
 averagePrice: number;
 averageRating: number;
 }
+averagePrice: number;,
+averageRating: number;}
 
 /**;
 * Highlight search terms in text with HTML mark tags;
@@ -341,6 +345,7 @@ category: "",;
 minPrice: 0;
 maxPrice: 10000;
 minRating: 0;
+minRating: 0;,
 sort: "relevance"});
 export default {
 highlightSearchTerms;

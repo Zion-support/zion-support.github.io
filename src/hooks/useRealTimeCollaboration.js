@@ -4,6 +4,11 @@ export const useRealTimeCollaboration = (options, wsConfig) => {
     const { trackEvent } = useAnalytics({enableTracking: true;
         enableUserBehaviorTracking: true});
     const [state, setState] = useState({users: new Map();
+    const { trackEvent } = useAnalytics({
+        enableTracking: true;
+        enableUserBehaviorTracking: true});
+    const [state, setState] = useState({
+        users: new Map();
         messages: [];
         isConnected: false;
         connectionStatus: 'disconnected';
@@ -39,8 +44,7 @@ export const useRealTimeCollaboration = (options, wsConfig) => {
                     ...prev;
   };
                     isConnected: true;
-                    connectionStatus: 'connected',
-                }));
+                    connectionStatus: 'connected'}));
     // Send user join message;
                 sendMessage({type: 'user_join';
                     userId: options.userId;
@@ -78,6 +82,8 @@ export const useRealTimeCollaboration = (options, wsConfig) => {
                     scheduleReconnection();
                 }
                 trackEvent('collaboration', 'connection_lost', 'websocket_disconnected', undefined, {code: event.code;
+                trackEvent('collaboration', 'connection_lost', 'websocket_disconnected', undefined, {
+                    code: event.code;
                     reason: event.reason});
      };
             wsRef.current.onerror = (error) => {
@@ -86,6 +92,9 @@ export const useRealTimeCollaboration = (options, wsConfig) => {
      };
         }
         catch (error) {trackEvent('collaboration', 'connection_failed', 'websocket_init_failed', undefined, {
+        catch (error) {
+            
+            trackEvent('collaboration', 'connection_failed', 'websocket_init_failed', undefined, {
                 error: error instanceof Error ? error.message : 'Unknown error'});
      }
     }, [options, wsConfig, generateUserColor, trackEvent]);
@@ -94,8 +103,7 @@ export const useRealTimeCollaboration = (options, wsConfig) => {
         const fullMessage = {
             ...message,
             id: `msg_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
-            timestamp: new Date(),
-        };
+            timestamp: new Date()};
     if (wsRef.current?.readyState === WebSocket.OPEN) {
             wsRef.current.send(JSON.stringify(fullMessage));
             trackEvent('collaboration', 'message_sent', message.type, undefined, { messageId: fullMessage.id });
@@ -136,6 +144,8 @@ export const useRealTimeCollaboration = (options, wsConfig) => {
             return newState;
         });
         trackEvent('collaboration', 'message_received', message.type, undefined, {messageId: message.id;
+        trackEvent('collaboration', 'message_received', message.type, undefined, {
+            messageId: message.id;
             userId: message.userId});
      }, [options.messageRetention, trackEvent]);
     // Handle user join;

@@ -7,8 +7,14 @@ title: string; description: string; confidence: number;
 }
 impact: "high" | "medium" | "low", category: string; timestamp: string};
 interface PredictionData {metric: string; currentValue: number; predictedValue: number; confidence: number; timeframe: string};
+interface AIInsight {
+id: string; type: "trend" | "anomaly" | "recommendation" | "prediction";
+title: string; description: string; confidence: number;,
+impact: "high" | "medium" | "low", category: string; timestamp: string};
+interface PredictionData {
+metric: string; currentValue: number; predictedValue: number; confidence: number; timeframe: string};
 export const AIPoweredAnalytics: React.FC = () => {;
-const [insights; setInsights] = useState<AIInsight[]>([
+const [insights, setInsights] = useState<AIInsight[]>([
 {,
 id: "1",
 type: "trend",
@@ -19,6 +25,8 @@ impact: "high",
 category: "User Behavior",
 timestamp: "2024-01-20T10:30:00Z"},
 {id: "2",
+{
+id: "2",
 type: "anomaly",
 title: "Unusual API Response Pattern",
 description: "API response times for /api/analytics endpoint showing 3x normal latency during peak hours.",
@@ -27,6 +35,8 @@ impact: "medium",
 category: "Performance",
 timestamp: "2024-01-20T09:15:00Z"},
 {id: "3",
+{
+id: "3",
 type: "recommendation",
 title: "Optimization Opportunity",
 description: "Implementing caching for user preferences could reduce database queries by 40%.",
@@ -35,6 +45,8 @@ impact: "high",
 category: "Performance",
 timestamp: "2024-01-20T08:45:00Z"},
 {id: "4",
+{
+id: "4",
 type: "prediction",
 title: "Revenue Forecast",
 description: "Based on current trends; monthly revenue is predicted to reach $3.2M by end of month.",
@@ -55,11 +67,25 @@ timeframe: "Next 30 days"},
 currentValue: 3.24;
 predictedValue: 3.45;
 confidence: 0.78;
+const [predictions, setPredictions] = useState<PredictionData[]>([
+{
+metric: "Monthly Active Users",
+currentValue: 45672; predictedValue: 52100; confidence: 0.89;,
+timeframe: "Next 30 days"},
+{
+metric: "Revenue",
+currentValue: 2847392; predictedValue: 3200000; confidence: 0.85;,
+timeframe: "Next 30 days"},
+{
+metric: "Conversion Rate",
+currentValue: 3.24;
+predictedValue: 3.45;
+confidence: 0.78;,
 timeframe: "Next 30 days"}
 ]);
 
-const [isAnalyzing; setIsAnalyzing] = useState(false);
-const [selectedCategory; setSelectedCategory] = useState<string>("all");
+const [isAnalyzing, setIsAnalyzing] = useState(false);
+const [selectedCategory, setSelectedCategory] = useState<string>("all");
 
 const getInsightIcon: any = (type: string) => {switch (type) {;
 case "trend": return "📈";

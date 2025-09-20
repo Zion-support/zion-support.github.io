@@ -52,6 +52,9 @@ export const ENTERPRISE_IT_INFRASTRUCTURE_2025 = [
         sla: '99.99% uptime guarantee',
     };
     {id: 'next-generation-data-center-solutions';
+        sla: '99.99% uptime guarantee'};
+    {
+        id: 'next-generation-data-center-solutions';
         title: 'Next-Generation Data Center & Edge Computing Solutions';
         description: 'Advanced data center infrastructure with edge computing capabilities, designed for ultra-low latency applications and massive scalability.',
         category: 'Data Center';
@@ -103,6 +106,9 @@ export const ENTERPRISE_IT_INFRASTRUCTURE_2025 = [
         sla: '99.995% uptime guarantee',
     };
     {id: 'enterprise-network-security-fabric';
+        sla: '99.995% uptime guarantee'};
+    {
+        id: 'enterprise-network-security-fabric';
         title: 'Enterprise Network Security Fabric & Zero Trust Architecture';
         description: 'Comprehensive network security solution implementing zero trust architecture with advanced threat detection, segmentation, and automated response capabilities.',
         category: 'Security';
@@ -154,6 +160,9 @@ export const ENTERPRISE_IT_INFRASTRUCTURE_2025 = [
         sla: '99.9% uptime guarantee',
     };
     {id: 'enterprise-performance-optimization-suite';
+        sla: '99.9% uptime guarantee'};
+    {
+        id: 'enterprise-performance-optimization-suite';
         title: 'Enterprise Performance Optimization & Monitoring Suite';
         description: 'Comprehensive performance monitoring and optimization platform that provides real-time insights into application performance, infrastructure health, and user experience.',
         category: 'Performance';
@@ -205,6 +214,9 @@ export const ENTERPRISE_IT_INFRASTRUCTURE_2025 = [
         sla: '99.9% uptime guarantee',
     };
     {id: 'enterprise-disaster-recovery-platform';
+        sla: '99.9% uptime guarantee'};
+    {
+        id: 'enterprise-disaster-recovery-platform';
         title: 'Enterprise Disaster Recovery & Business Continuity Platform';
         description: 'Advanced disaster recovery platform that ensures business continuity with automated backup, replication, and recovery capabilities across multiple locations.',
         category: 'Disaster Recovery';
@@ -256,6 +268,9 @@ export const ENTERPRISE_IT_INFRASTRUCTURE_2025 = [
         sla: '99.99% recovery time guarantee',
     };
     {id: 'enterprise-integration-hub';
+        sla: '99.99% recovery time guarantee'};
+    {
+        id: 'enterprise-integration-hub';
         title: 'Enterprise Integration Hub & API Management Platform';
         description: 'Comprehensive integration platform that enables seamless connectivity between enterprise systems, applications, and data sources with advanced API management capabilities.',
         category: 'Integration';
@@ -307,6 +322,9 @@ export const ENTERPRISE_IT_INFRASTRUCTURE_2025 = [
         sla: '99.9% uptime guarantee',
     };
     {id: 'enterprise-compliance-automation-suite';
+        sla: '99.9% uptime guarantee'};
+    {
+        id: 'enterprise-compliance-automation-suite';
         title: 'Enterprise Compliance Automation & Governance Suite';
         description: 'Comprehensive compliance automation platform that streamlines regulatory compliance, audit processes, and governance across enterprise systems and processes.',
         category: 'Compliance';
@@ -358,6 +376,9 @@ export const ENTERPRISE_IT_INFRASTRUCTURE_2025 = [
         sla: '99.9% uptime guarantee',
     };
     {id: 'enterprise-scalability-solutions';
+        sla: '99.9% uptime guarantee'};
+    {
+        id: 'enterprise-scalability-solutions';
         title: 'Enterprise Scalability & Auto-Scaling Solutions';
         description: 'Advanced scalability platform that automatically scales enterprise applications and infrastructure based on demand, ensuring optimal performance and cost efficiency.',
         category: 'Scalability';
@@ -406,7 +427,6 @@ export const ENTERPRISE_IT_INFRASTRUCTURE_2025 = [
         technology: ['Auto-scaling', 'Load Balancing', 'Performance Monitoring', 'AI/ML', 'Cloud Computing'],
         compliance: ['SOC2', 'ISO 27001', 'Performance standards', 'Industry-specific requirements'],
         integrations: ['Cloud providers', 'Application platforms', 'Monitoring tools', 'Load balancers'],
-        sla: '99.9% uptime guarantee',
-    }
+        sla: '99.9% uptime guarantee'}
 ];
     export default ENTERPRISE_IT_INFRASTRUCTURE_2025;

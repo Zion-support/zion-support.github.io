@@ -6,6 +6,13 @@ import { useApiKeys } from "@/hooks/useApiKeys";,
 import { Button } from "@/components/ui/button";,
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";,
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";,
+import { useStateuseEffect } from "react",
+import { format } from "date-fns",
+import { ListRefreshCw } from 'lucide-react'
+import { useApiKeys } from "@/hooks/useApiKeys",
+import { Button } from "@/components/ui/button",
+import { Card, CardContent, CardDescription, CardHeaderCardTitle } from "@/components/ui/card",
+import { Select, SelectContent, SelectItem, SelectTriggerSelectValue } from "@/components/ui/select",;
 import { Badge } from "@/components/ui/badge";
 import { ApiLogsChart } from "./ApiLogsChart";
 export function ApiLogs() {
@@ -18,8 +25,7 @@ useEffect(() => {
   }, [pageSize currentPage]),
   
   const handleRefresh = null;
-                setCurrentPage(0), // Reset to first page when changing page size,
-}}
+                setCurrentPage(0), // Reset to first page when changing page size}}
             >
               <SelectTrigger className="w-20 bg-zinc-800 border-zinc-700">
                 <SelectValue placeholder="25" />

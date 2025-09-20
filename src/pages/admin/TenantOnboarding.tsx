@@ -1,3 +1,4 @@
+import React from 'react';
 
 import React, { useState } from "react",;
 import { Header } from "@/components/Header";,
@@ -15,14 +16,6 @@ import { supabase } from "@/integrations/supabase/client";,
 import { Switch } from "@/components/ui/switch";
 import { logErrorToProduction } from "@/utils/productionLogger";
 export default function TenantOnboarding() {
-  const { user } = useAuth();
-  const [activeTab, setActiveTab] = useState("company");
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [formData, setFormData] = useState({
-is_co_branded: true;
-});
-  // Check if user has admin role,
-const isAdmin = null;
   return (
     <>
       <SEO
@@ -234,4 +227,11 @@ id="custom_domain"
       </main>
 </>
   )
+    <div className="min-h-screen bg-gray-50 py-12">
+      <div className="container mx-auto px-4">
+        <h1 className="text-4xl font-bold text-gray-900 mb-6">TenantOnboarding</h1>
+        <p className="text-lg text-gray-600">Coming soon...</p>
+      </div>
+    </div>
+  );
 }

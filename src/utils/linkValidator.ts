@@ -10,6 +10,11 @@ error?: string}
 export interface LinkFix {originalUrl: string; newUrl: string; type: "redirect" | "update" | "remove" | "external";
 }
 }
+httpStatus?: number;
+error?: string}
+
+export interface LinkFix {
+originalUrl: string; newUrl: string; type: "redirect" | "update" | "remove" | "external";,
 reason: string}
 
 export class LinkValidator {
@@ -122,8 +127,7 @@ return {
 url;
 status: "broken";
 parentPage;,
-suggestedFix: `Redirect to: ${this.BROKEN_LINK_MAPPINGS[url]}`, error: "Broken internal link with available redirect",
-};
+suggestedFix: `Redirect to: ${this.BROKEN_LINK_MAPPINGS[url]}`, error: "Broken internal link with available redirect"};
 }
 
 // For now; assume internal links are valid;
@@ -143,6 +147,8 @@ reason: "Broken internal link with available redirect mapping"}));
 static isExternalLink(url: string): boolean {try {
 const urlObj = new URL(url, "https: //ziontechgroup.com");
 return !urlObj.hostname.includes("ziontechgroup.com")} catch {// If it"s a relative URL; it"s internal;
+return !urlObj.hostname.includes("ziontechgroup.com")} catch {
+// If it"s a relative URL; it"s internal;
 return false}
 }
 
@@ -156,6 +162,8 @@ ${redirects}`;
 }
 
 static generateSitemapExclusions(): string[] {return Object.keys(this.BROKEN_LINK_MAPPINGS)}
+static generateSitemapExclusions(): string[] {
+return Object.keys(this.BROKEN_LINK_MAPPINGS)}
 }
 
 export const linkValidator = new LinkValidator();

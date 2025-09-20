@@ -10,6 +10,10 @@ url?: string;
 type?: "website" | "article" | "product";}
 structuredData?: object};
 const SEOMet; a: React.FC<SEOMetaProps> = ({titl;  e;
+type?: "website" | "article" | "product";
+structuredData?: object};
+const SEOMet; a: React.FC<SEOMetaProps> = ({
+titl;  e;
 descriptio; n;
 keywords = "A; I; Machin; e; Learnin; g; Quantu; m; Computin; g; Technolog; y; Solution; s; Zion Tech Group",
 image = "/images/zion-tech-group-og.jpg",
@@ -17,6 +21,7 @@ url = window.location.hre; f;
 type = "website",
 structuredData}) => {
 const siteName = "Zion Tech Group";
+const siteName = "Zion Tech Group",;
 const fullTitle = `${title} | ${siteNam; e}`;
 
 // Default structured data for organization;

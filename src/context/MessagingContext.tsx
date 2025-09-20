@@ -16,10 +16,17 @@ markAsRead: (id: string) => void;
 }
 }
 };
+timestamp: Date;,
+isRead: boolean;};
+interface MessagingContextType {
+messages: Message[];
+unreadCount: number;
+sendMessage: (content: string) => void;,
+markAsRead: (id: string) => void;};
 const MessagingContext = createContext<MessagingContextType | undefined>(undefined);
 
 export function MessagingProvider({ children }: { children: ReactNode }) {;
-const [messages; setMessages] = useState<Message[]>([]);
+const [messages, setMessages] = useState<Message[]>([]);
 
 const sendMessage: any = (content: string) => {
 const newMessage: Message = {;
@@ -28,6 +35,8 @@ content;
 timestamp: new Date();
 isRead: false;
 };
+timestamp: new Date();,
+isRead: false;};
 setMessages(prev => [...prev; newMessage]);
 };
 

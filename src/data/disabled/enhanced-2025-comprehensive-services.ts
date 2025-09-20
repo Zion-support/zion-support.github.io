@@ -1,4 +1,4 @@
-import { Routes; Route } from "react-router-dom, ";
+import { Routes, Route  } from "react-router-dom, ";
 export interface EnhancedService {
 id: string;
 name: string;
@@ -22,6 +22,8 @@ address: string;
 }
 }
 };
+email: string;,
+address: string;};
 trialDays: number;
 setupTime: string;
 competitors: string[];
@@ -35,6 +37,8 @@ apiEndpoints: number;
 uptime: string;
 securityFeatures: string[];
 }
+uptime: string;,
+securityFeatures: string[];}
 
 export const enhanced2025ComprehensiveServices: EnhancedService[] = [
 // AI-Powered Business Intelligence & Analytics;
@@ -73,6 +77,7 @@ website: "https://ziontechgroup.com/ai-business-intelligence-suite";
 contact: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 trialDays: 21;
 setupTime: "2-3 business days";
@@ -124,6 +129,7 @@ website: "https://ziontechgroup.com/quantum-safe-cybersecurity";
 contact: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 trialDays: 30;
 setupTime: "1-2 weeks";
@@ -175,6 +181,7 @@ website: "https://ziontechgroup.com/autonomous-devops-platform";
 contact: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 trialDays: 14;
 setupTime: "3-5 business days";
@@ -226,6 +233,7 @@ website: "https://ziontechgroup.com/blockchain-supply-chain";
 contact: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 trialDays: 30;
 setupTime: "2-4 weeks";
@@ -277,6 +285,7 @@ website: "https://ziontechgroup.com/ai-healthcare-analytics";
 contact: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 trialDays: 45;
 setupTime: "4-6 weeks";
@@ -328,6 +337,7 @@ website: "https://ziontechgroup.com/quantum-machine-learning";
 contact: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 trialDays: 60;
 setupTime: "6-8 weeks";
@@ -379,6 +389,7 @@ website: "https://ziontechgroup.com/autonomous-trading-platform";
 contact: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 trialDays: 30;
 setupTime: "2-3 weeks";
@@ -430,6 +441,7 @@ website: "https://ziontechgroup.com/iot-edge-computing";
 contact: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 trialDays: 21;
 setupTime: "1-2 weeks";
@@ -481,6 +493,7 @@ website: "https://ziontechgroup.com/ai-legal-research";
 contact: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 trialDays: 14;
 setupTime: "1-2 business days";
@@ -532,6 +545,7 @@ website: "https://ziontechgroup.com/autonomous-marketing";
 contact: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 trialDays: 14;
 setupTime: "2-3 business days";
@@ -586,6 +600,7 @@ website: "https://ziontechgroup.com/renewable-energy-management";
 contact: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 trialDays: 30;
 setupTime: "2-4 weeks";
@@ -637,6 +652,7 @@ website: "https://ziontechgroup.com/autonomous-logistics";
 contact: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 trialDays: 21;
 setupTime: "2-3 weeks";

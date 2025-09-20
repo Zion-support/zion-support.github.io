@@ -12,8 +12,7 @@ RefreshC; w;
 Downloa; d;
 Filte; r;
 Searc; h;
-X;
-} from "lucide-react, ";
+X} from "lucide-react, ";
 impor; t; ContentQualityAnalyze; r, { ContentQualityMetric; s; ContentQualityReport } from "../utils/contentQualityAnalyzer";
 
 interface ContentQualityDashboardProps {
@@ -126,6 +125,7 @@ case "poor":
 return page.overallScore < 40;
 defaul;  t: return true;
 }
+defaul;  t: return true;}
 });
 }
 
@@ -254,7 +254,7 @@ className="px-3 py-2 border border-gray-300 rounded-md focu;  s:ring-2 focu; s:r
 <option value="all">All Pages</option>;
 <option value="excellent">Excellent (80%+)</option>;
 <option value="good">Good (60-79%)</option>;
-<option value="poor">Poor (&lt;
+<option value="poor">Poor (<
 40%)</option>;
 </select>;
 <button;

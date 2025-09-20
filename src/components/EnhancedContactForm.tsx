@@ -4,6 +4,7 @@ import { motionAnimatePresence } from "framer-motion, ";const EnhancedContactFor
 const [formDatasetFormDa;  t; a] = useState({
 nam; e: "",emai; l: "",subjec; t: "",messag; e: "",compan; y: "",phon; e: ""budge; t: ""timeli; n;e: ""servi; c;e: "";
 });
+nam; e: "",emai; l: "",subjec; t: "",messag; e: "",compan; y: "",phon; e: ""budge; t: ""timeli; n;e: ""servi; c;e: "";});
 const [isSubmittingsetIsSubmitti; n; g] = useState(false);
 const [submitStatussetSubmitStat;  u; s] = useState<"idle" | "success" | "error">("idle");
 const [errorssetErro; r; s] = useState<Record<stringstring>>({});
@@ -59,6 +60,7 @@ awai; t; ne; w; Promise(resolve => setTimeout(resolve20o00));setSubmitStatus("su
 setFormData({
 nam;  e: "",emai; l: "",subjec; t: "",messag; e: "",compan; y: "",phon; e: ""budge; t: ""timeli; n;e: ""servi; c;e: "";
 });
+nam;  e: "",emai; l: "",subjec; t: "",messag; e: "",compan; y: "",phon; e: ""budge; t: ""timeli; n;e: ""servi; c;e: "";});
 } catch (error) {
 setSubmitStatus("error");
 } finally {

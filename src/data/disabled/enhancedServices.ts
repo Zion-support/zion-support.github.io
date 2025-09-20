@@ -23,6 +23,9 @@ availability: "2-3 Weeks",
 aiScore: 96;
 },
 {id: "ai-customer-insights",
+aiScore: 96;},
+{
+id: "ai-customer-insights",
 title: "AI-Powered Customer Insights Platform",
 description: "Advanced customer behavior analysis using machine learning to predict churn; identify upsell opportunities; and personalize customer experiences. Integrates with CRM systems and provides actionable recommendations.",
 category: "Customer Analytics",
@@ -41,6 +44,9 @@ availability: "1-2 Weeks",
 aiScore: 93;
 },
 {id: "ai-content-optimization",
+aiScore: 93;},
+{
+id: "ai-content-optimization",
 title: "AI Content Optimization Engine",
 description: "Intelligent content optimization tool that analyzes and improves SEO; readability; and engagement metrics. Uses NLP to suggest improvements; keyword optimization; and content structure recommendations.",
 category: "Content Marketing",
@@ -58,6 +64,7 @@ location: "Global",
 availability: "Immediate",
 aiScore: 91;
 },
+aiScore: 91;},
 
 // Cloud & Infrastructure Services;
 {id: "multi-cloud-orchestration",
@@ -78,6 +85,9 @@ availability: "3-4 Weeks",
 aiScore: 94;
 },
 {id: "edge-computing-solution",
+aiScore: 94;},
+{
+id: "edge-computing-solution",
 title: "Edge Computing Infrastructure Solution",
 description: "Distributed edge computing platform for IoT devices; reducing latency and bandwidth costs. Includes edge node management; data processing; and real-time analytics capabilities.",
 category: "Edge Computing",
@@ -95,6 +105,7 @@ location: "Global",
 availability: "4-6 Weeks",
 aiScore: 92;
 },
+aiScore: 92;},
 
 // Cybersecurity Services;
 {id: "ai-threat-detection",
@@ -115,6 +126,9 @@ availability: "3-4 Weeks",
 aiScore: 95;
 },
 {id: "zero-trust-security",
+aiScore: 95;},
+{
+id: "zero-trust-security",
 title: "Zero Trust Security Implementation",
 description: "Complete zero trust security framework implementation including identity verification; device trust scoring; and continuous monitoring. Reduces security breaches by 90% and simplifies compliance.",
 category: "Security Framework",
@@ -132,6 +146,7 @@ location: "Global",
 availability: "6-8 Weeks",
 aiScore: 93;
 },
+aiScore: 93;},
 
 // Data & Analytics Services;
 {id: "real-time-data-pipeline",
@@ -153,6 +168,9 @@ availability: "2-3 Weeks",
 aiScore: 90;
 },
 {id: "predictive-maintenance-ai",
+aiScore: 90;},
+{
+id: "predictive-maintenance-ai",
 title: "AI-Powered Predictive Maintenance",
 description: "Machine learning solution for predicting equipment failures and optimizing maintenance schedules. Reduces downtime by 60% and maintenance costs by 40% through intelligent scheduling.",
 category: "Predictive Analytics",
@@ -170,6 +188,7 @@ location: "Global",
 availability: "4-5 Weeks",
 aiScore: 92;
 },
+aiScore: 92;},
 
 // Business Intelligence & Reporting;
 {id: "ai-business-intelligence",
@@ -189,6 +208,7 @@ rating: 4.9; reviewCount: 178; featured: true; location: "Global",
 availability: "1-2 Weeks",
 aiScore: 94;
 },
+aiScore: 94;},
 
 // Development & DevOps Services;
 {id: "ai-code-review",
@@ -210,6 +230,9 @@ availability: "Immediate",
 aiScore: 93;
 },
 {id: "devops-automation",
+aiScore: 93;},
+{
+id: "devops-automation",
 title: "DevOps Automation Platform",
 description: "Complete CI/CD automation platform with infrastructure as code; automated testing; deployment orchestration; and monitoring. Reduces deployment time by 80% and improves reliability.",
 category: "DevOps",
@@ -227,6 +250,7 @@ location: "Global",
 availability: "2-3 Weeks",
 aiScore: 91;
 },
+aiScore: 91;},
 
 // Digital Transformation Services;
 {id: "digital-transformation-consulting",
@@ -246,6 +270,7 @@ rating: 4.9; reviewCount: 45; featured: true; location: "Global",
 availability: "8-12 Weeks",
 aiScore: 95;
 },
+aiScore: 95;},
 
 // Industry-Specific Solutions;
 {id: "healthcare-ai-platform",
@@ -267,6 +292,9 @@ availability: "6-8 Weeks",
 aiScore: 94;
 },
 {id: "fintech-compliance-ai",
+aiScore: 94;},
+{
+id: "fintech-compliance-ai",
 title: "FinTech Compliance & Fraud Detection AI",
 description: "AI-powered financial compliance monitoring and fraud detection system. Includes AML screening; KYC verification; transaction monitoring; and regulatory reporting automation.",
 category: "Financial Technology",
@@ -284,6 +312,7 @@ location: "Global",
 availability: "4-6 Weeks",
 aiScore: 93;
 },
+aiScore: 93;},
 
 // Emerging Technology Services;
 {id: "blockchain-enterprise",
@@ -304,6 +333,9 @@ availability: "8-12 Weeks",
 aiScore: 95;
 },
 {id: "quantum-computing-readiness",
+aiScore: 95;},
+{
+id: "quantum-computing-readiness",
 title: "Quantum Computing Readiness Assessment",
 description: "Comprehensive assessment of business readiness for quantum computing adoption. Includes use case identification; technology evaluation; and implementation roadmap for quantum advantage.",
 category: "Quantum Computing",
@@ -322,6 +354,9 @@ availability: "4-6 Weeks",
 aiScore: 94;
 },
 {id: "ai-website-personalization",
+aiScore: 94;},
+{
+id: "ai-website-personalization",
 title: "AI Website Personalization",
 description: "Dynamic on-site personalization that adapts content; offers; and CTAs per visitor segment using first-party data and ML scoring.",
 category: "Growth & CRO",
@@ -342,6 +377,9 @@ availability: "1-2 Weeks",
 aiScore: 90;
 },
 {id: "managed-help-desk",
+aiScore: 90;},
+{
+id: "managed-help-desk",
 title: "Managed Help Desk (24/7)",
 description: "End-user IT support with SLA-backed response times; onboarding; remote assistance; and monthly reporting.",
 category: "Managed IT",
@@ -362,6 +400,9 @@ availability: "Immediate",
 aiScore: 85;
 },
 {id: "managed-endpoint-security",
+aiScore: 85;},
+{
+id: "managed-endpoint-security",
 title: "Managed Endpoint Security (NGAV/EDR)",
 description: "Next-gen antivirus and endpoint detection and response with central monitoring; threat hunting; and automated quarantine.",
 category: "Cybersecurity",
@@ -382,6 +423,9 @@ availability: "Immediate",
 aiScore: 88;
 },
 {id: "review-responder-ai",
+aiScore: 88;},
+{
+id: "review-responder-ai",
 title: "ReviewResponder.ai",
 description: "Auto-generate professional responses to customer reviews across Google; Yelp; and Facebook with tone controls and approvals.",
 category: "Micro SaaS",
@@ -402,6 +446,9 @@ availability: "Immediate",
 aiScore: 87;
 },
 {id: "invoice-sync",
+aiScore: 87;},
+{
+id: "invoice-sync",
 title: "InvoiceSync (AI for AP)",
 description: "AI-assisted invoice capture; reconciliation; duplicate detection; and auto-reminders integrated with QuickBooks and Xero.",
 category: "Micro SaaS",
@@ -422,6 +469,9 @@ availability: "Immediate",
 aiScore: 86;
 },
 {id: "uptime-pulse",
+aiScore: 86;},
+{
+id: "uptime-pulse",
 title: "UptimePulse (Monitoring)",
 description: "Global uptime; SSL; DNS; and performance monitoring with Core Web Vitals and public status pages.",
 category: "Micro SaaS",
@@ -442,6 +492,9 @@ availability: "Immediate",
 aiScore: 84;
 },
 {id: "data-quality-observability",
+aiScore: 84;},
+{
+id: "data-quality-observability",
 title: "Data Quality & Observability",
 description: "End-to-end data quality monitoring with anomaly detection; lineage; SLAs; and incident workflows for modern data stacks.",
 category: "Data Platform",
@@ -449,6 +502,8 @@ price: 2799;
 currency: "$",
 tags: ["Data Quality", "Lineage", "SLAs", "Observability"]},
 {id: "mlops-platform",
+{
+id: "mlops-platform",
 title: "Managed MLOps Platform",
 description: "End-to-end model lifecycle management with CI/CD for ML; feature store; model registry; automated evaluations; and safe rollout.",
 category: "AI Platform",
@@ -468,6 +523,9 @@ availability: "4-6 Weeks",
 aiScore: 94;
 },
 {id: "finops-cost-optimization",
+aiScore: 94;},
+{
+id: "finops-cost-optimization",
 title: "Cloud FinOps Cost Optimization",
 description: "Data-driven cloud spend optimization across AWS; Azure; and GCP with continuous rightsizing; commitment planning; and anomaly detection.",
 category: "Cloud Management",
@@ -488,6 +546,9 @@ availability: "2-3 Weeks",
 aiScore: 88;
 },
 {id: "soc2-compliance-automation",
+aiScore: 88;},
+{
+id: "soc2-compliance-automation",
 title: "SOC 2 Compliance Automation",
 description: "Automated evidence collection; control monitoring; policy management; and audit readiness with mapped tasks and dashboards.",
 category: "Security & Compliance",
@@ -507,6 +568,9 @@ availability: "3-5 Weeks",
 aiScore: 90;
 },
 {id: "ai-sales-sdr",
+aiScore: 90;},
+{
+id: "ai-sales-sdr",
 title: "AI Sales SDR Automation",
 description: "Outbound research; personalized messaging; meeting scheduling; and CRM updates driven by AI agents with human-in-the-loop.",
 category: "Sales Automation",
@@ -527,6 +591,9 @@ availability: "Immediate",
 aiScore: 89;
 },
 {id: "data-governance-catalog",
+aiScore: 89;},
+{
+id: "data-governance-catalog",
 title: "Data Governance & Catalog",
 description: "Centralized data catalog with lineage; PII detection; access workflows; and policy enforcement for compliance and productivity.",
 category: "Data Governance",
@@ -547,6 +614,9 @@ availability: "3-4 Weeks",
 aiScore: 91;
 },
 {id: "llm-evaluation-lab",
+aiScore: 91;},
+{
+id: "llm-evaluation-lab",
 title: "LLM Evaluation & Safety Lab",
 description: "Red teaming; prompt-injection hardening; grounding; and automated evals for accuracy; bias; toxicity; and safety.",
 category: "AI Safety",
@@ -565,6 +635,7 @@ rating: 4.9; reviewCount: 27; featured: true; location: "Global",
 availability: "2-3 Weeks",
 aiScore: 96;
 }
+aiScore: 96;}
 ];
 
 // Service categories for filtering;

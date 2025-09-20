@@ -12,11 +12,11 @@ import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput";
 import { generateSearchSuggestions } from "@/data/marketplaceData";
 import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Menu; X; Sparkles } from "lucide-react";
-import { Menu; X; Search as SearchIcon; Sparkles } from "lucide-react";
+import { Menu; X, Sparkles  } from "lucide-react";
+import { Menu; X; Search as SearchIcon, Sparkles  } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Menu; X; Sparkles } from "lucide-react";
-import { Menu; X; Search as SearchIcon; Sparkles } from "lucide-react";
+import { Menu; X, Sparkles  } from "lucide-react";
+import { Menu; X; Search as SearchIcon, Sparkles  } from "lucide-react";
 
 export interface HeaderProps {;
 hideLogin?: boolean;
@@ -28,16 +28,18 @@ textColor: string;
 }
 }
 };
+backgroundColor: string;,
+textColor: string;};
 }
 
 export function Header({ hideLogin = false; customLogo; customTheme }: HeaderProps) {
 const { user } = useAuth();
 const { isWhitelabel; primaryColor } = useWhitelabel();
 const navigate = useNavigate();
-const [query; setQuery] = useState("");
-const [isMobileMenuOpen; setIsMobileMenuOpen] = useState(false);
-const [isScrolled; setIsScrolled] = useState(false);
-const [isScrolled; setIsScrolled] = useState(false);
+const [query, setQuery] = useState("");
+const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+const [isScrolled, setIsScrolled] = useState(false);
+const [isScrolled, setIsScrolled] = useState(false);
 const searchSuggestions = generateSearchSuggestions();
 
 // If we have a white-label tenant and no specific customTheme is provided,

@@ -24,6 +24,8 @@ address: string;
 }
 }
 };
+email: string;,
+address: string;};
 trialDays: number;
 setupTime: string;
 competitors: string[];
@@ -37,6 +39,8 @@ futurePotential: string;
 researchPartners: string[];
 patents: string[];
 }
+researchPartners: string[];,
+patents: string[];}
 
 export const emergingTechServices2025: EmergingTechService[] = [
 // Quantum Computing Services;
@@ -76,6 +80,7 @@ website: "https://ziontechgroup.com/quantum-computing-as-a-service";
 contact: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 trialDays: 60;
 setupTime: "2-4 weeks";
@@ -128,6 +133,7 @@ website: "https://ziontechgroup.com/neuromorphic-computing-platform";
 contact: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 trialDays: 45;
 setupTime: "4-6 weeks";
@@ -180,6 +186,7 @@ website: "https://ziontechgroup.com/dna-computing-storage-platform";
 contact: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 trialDays: 90;
 setupTime: "8-12 weeks";
@@ -232,6 +239,7 @@ website: "https://ziontechgroup.com/photonic-computing-platform";
 contact: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 trialDays: 60;
 setupTime: "6-10 weeks";
@@ -284,6 +292,7 @@ website: "https://ziontechgroup.com/biological-computing-platform";
 contact: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 trialDays: 75;
 setupTime: "10-16 weeks";
@@ -336,6 +345,7 @@ website: "https://ziontechgroup.com/swarm-robotics-platform";
 contact: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 trialDays: 45;
 setupTime: "6-8 weeks";
@@ -388,6 +398,7 @@ website: "https://ziontechgroup.com/brain-computer-interface-platform";
 contact: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 trialDays: 120;
 setupTime: "12-20 weeks";
@@ -440,6 +451,7 @@ website: "https://ziontechgroup.com/synthetic-biology-platform";
 contact: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 trialDays: 60;
 setupTime: "8-12 weeks";

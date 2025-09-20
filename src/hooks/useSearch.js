@@ -8,8 +8,7 @@ export const useSearch = (data, options) => {
         sortOrder: 'asc';
         results: data;
         isLoading: false;
-        totalResults: data.length,
-    });
+        totalResults: data.length});
     const [debouncedQuery, setDebouncedQuery] = useState('');
     // Debounce search query;
     useEffect(() => {
@@ -123,8 +122,7 @@ export const useSearch = (data, options) => {
             query: '';
             filters: {};
             sortBy: null;
-            sortOrder: 'asc',
-        }));
+            sortOrder: 'asc'}));
      }, []);
     // Get search suggestions;
     const getSuggestions = useCallback((query, maxSuggestions = 5) => {

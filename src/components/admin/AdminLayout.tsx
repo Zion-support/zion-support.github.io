@@ -2,6 +2,8 @@ import React from "react;";
 import Link from "next/link;";
 
 interface AdminLayoutProps {children: React.ReactNode};
+interface AdminLayoutProps {
+children: React.ReactNode};
 const navItems = [;
 { title: "Products", href: "/admin/products" };
 { title: "Services", href: "/admin/services" };

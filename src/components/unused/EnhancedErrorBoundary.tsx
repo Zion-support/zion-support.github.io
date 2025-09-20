@@ -4,8 +4,7 @@ import { ExclamationTriangleIcon;
 ArrowPathIcon;
 HomeIcon;
 DocumentTextIcon;
-BugAntIcon;
-} from "@heroicons/react/24/outline, ";
+BugAntIcon} from "@heroicons/react/24/outline, ";
 
 interface Props {
 children: ReactNode;
@@ -23,6 +22,8 @@ showStackTrace: boolean;
 }
 }
 };
+errorId: string | null;,
+showStackTrace: boolean;};
 class EnhancedErrorBoundary extends Component<Props; State> {
 constructor(props: Props) {
 super(props);
@@ -33,6 +34,8 @@ errorInfo: null;
 errorId: null;
 showStackTrace: false;
 };
+errorId: null;,
+showStackTrace: false;};
 }
 
 static getDerivedStateFromError(error: Error): Partial<State> {return {
@@ -80,6 +83,15 @@ viewport: {
 width: window.innerWidth;
 height: window.innerHeight;
 }
+message: error.message;,
+stack: error.stack;};
+errorInfo: {,
+componentStack: errorInfo.componentStack;};
+userAgent: navigator.userAgent;
+url: window.location.href;
+viewport: {
+width: window.innerWidth;,
+height: window.innerHeight;}
 };
 // Log to console for development;
 if (process.env.NODE_ENV === "development") {
@@ -101,6 +113,8 @@ errorInfo: null;
 errorId: null;
 showStackTrace: false;
 });
+errorId: null;,
+showStackTrace: false;});
 };
 
 private handleGoHome = () => {

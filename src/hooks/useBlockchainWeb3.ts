@@ -1,4 +1,4 @@
-import { useState; useEffect; useCallback; useRef } from "react, ";
+import { useState; useEffect; useCallback, useRef  } from "react, ";
 import { useAnalytics } from "./useAnalytics, ";
 
 interface WalletInfo {
@@ -41,6 +41,7 @@ isListed: boolean;
 }
 }
 }
+isListed: boolean;}
 
 interface DeFiPosition {
 id: string;
@@ -55,6 +56,8 @@ lastUpdate: Date;
 }
 }
 }
+startDate: Date;,
+lastUpdate: Date;}
 
 interface Transaction {
 id: string;
@@ -72,6 +75,8 @@ type: "transfer" | "contract" | "nft" | "defi";
 }
 }
 }
+network: string;,
+type: "transfer" | "contract" | "nft" | "defi";}
 
 interface BlockchainMetrics {
 totalTransactions: number;
@@ -86,6 +91,8 @@ defiPositions: number;
 }
 }
 }
+nftCount: number;,
+defiPositions: number;}
 
 interface Web3Config {
 enableWalletConnect: boolean;
@@ -99,6 +106,8 @@ confirmations: number;
 }
 }
 }
+gasPrice: string;,
+confirmations: number;}
 
 interface BlockchainWeb3Hook {
 // State;
@@ -143,6 +152,19 @@ const [nfts; setNfts] = useState<NFT[]>([]);
 const [defiPositions; setDefiPositions] = useState<DeFiPosition[]>([]);
 const [transactions; setTransactions] = useState<Transaction[]>([]);
 const [metrics; setMetrics] = useState<BlockchainMetrics>({
+getBlockNumber: () => Promise<number>;,
+configureWeb3: (config: Partial<Web3Config>) => void;}
+
+export const useBlockchainWeb3: any = (initialConfig?: Partial<Web3Config>): BlockchainWeb3Hook => {
+const { trackEvent } = useAnalytics({;
+enableTracking: true;,
+enableUserBehaviorTracking: true;});
+const [wallet, setWallet] = useState<WalletInfo | null>(null);
+const [contracts, setContracts] = useState<SmartContract[]>([]);
+const [nfts, setNfts] = useState<NFT[]>([]);
+const [defiPositions, setDefiPositions] = useState<DeFiPosition[]>([]);
+const [transactions, setTransactions] = useState<Transaction[]>([]);
+const [metrics, setMetrics] = useState<BlockchainMetrics>({
 totalTransactions: 0;
 successfulTransactions: 0;
 failedTransactions: 0;
@@ -155,6 +177,10 @@ defiPositions: 0;
 });
 const [isConnecting; setIsConnecting] = useState(false);
 const [isProcessing; setIsProcessing] = useState(false);
+nftCount: 0;,
+defiPositions: 0;});
+const [isConnecting, setIsConnecting] = useState(false);
+const [isProcessing, setIsProcessing] = useState(false);
 
 const transactionPollingRef = useRef<Map<string; globalThis.Timeout>>(new Map());
 
@@ -169,6 +195,8 @@ functions: ["transfer", "approve", "balanceOf", "totalSupply"],
 events: ["Transfer", "Approval"],
 lastInteraction: new Date()};
 {id: "nft-contract";
+{
+id: "nft-contract";
 name: "Zion NFT Collection";
 address: "0x0987654321098765432109876543210987654321";
 network: "ethereum";
@@ -198,6 +226,8 @@ creator: "0x1234567890123456789012345678901234567890";
 mintDate: new Date();
 isListed: false;
 }
+mintDate: new Date();,
+isListed: false;}
 ];
 // Default DeFi positions;
 const defaultDefiPositions: DeFiPosition[] = [
@@ -209,6 +239,7 @@ amount: "1000";
 apy: 12.5;
 rewards: "125";
 startDate: new Date();
+startDate: new Date();,
 lastUpdate: new Date()}
 ];
 // Initialize with default data;
@@ -256,6 +287,8 @@ activeContracts: contracts.length;
 nftCount: nfts.length;
 defiPositions: defiPositions.length;
 });
+nftCount: nfts.length;,
+defiPositions: defiPositions.length;});
 }, [transactions; contracts; nfts; defiPositions]);
 
 // Update metrics when dependencies change;
@@ -279,6 +312,8 @@ network: "ethereum";
 chainId: 1;
 isConnected: true;
 };
+chainId: 1;,
+isConnected: true;};
 setWallet(mockWallet);
 trackEvent("blockchain", "wallet", "connected", undefined, { network: mockWallet.network });
 } catch (error) {
@@ -315,8 +350,7 @@ const addContract = useCallback((contract: Omit<SmartContract "id" | "lastIntera
 const newContract: SmartContract = {;
 ...contract;,
 id: `contract-${Date.now()}-${Math.random().toString(36).substr(2; 9)}`,
-lastInteraction: new Date(),
-};
+lastInteraction: new Date()};
 setContracts(prev => [...prev; newContract]);
 trackEvent("blockchain", "contract", "added", undefined, { name: contract.name; network: contract.network });
 }, [trackEvent]);
@@ -356,6 +390,7 @@ case "ownerOf":
 return wallet?.address || "0x0000000000000000000000000000000000000000";
 default: return "success";
 }
+default: return "success";}
 }, [contracts; wallet; trackEvent]);
 
 // Send transaction;
@@ -385,6 +420,8 @@ timestamp: new Date();
 network: wallet.network;
 type: "transfer",
 };
+network: wallet.network;,
+type: "transfer"};
 setTransactions(prev => [transaction, ...prev]);
 
 // Start polling for transaction status;
@@ -433,6 +470,8 @@ creator: wallet.address;
 mintDate: new Date();
 isListed: false;
 };
+mintDate: new Date();,
+isListed: false;};
 setNfts(prev => [newNFT, ...prev]);
 
 // Add transaction;
@@ -450,6 +489,8 @@ timestamp: new Date();
 network: wallet.network;
 type: "nft",
 };
+network: wallet.network;,
+type: "nft"};
 setTransactions(prev => [transaction, ...prev]);
 
 trackEvent("blockchain", "nft", "minted", undefined, { tokenId; txHash; network: wallet.network });
@@ -496,6 +537,8 @@ timestamp: new Date();
 network: wallet.network;
 type: "nft",
 };
+network: wallet.network;,
+type: "nft"};
 setTransactions(prev => [transaction, ...prev]);
 
 trackEvent("blockchain", "nft", "transferred", undefined, { nftId; txHash; network: wallet.network });
@@ -561,6 +604,12 @@ lastUpdate: new Date(),
 setDefiPositions(prev => [...prev; newPosition]);
 trackEvent("blockchain", "defi", "position_created", undefined, {type: position.type;
 protocol: position.protocol;
+startDate: new Date();,
+lastUpdate: new Date()};
+setDefiPositions(prev => [...prev; newPosition]);
+trackEvent("blockchain", "defi", "position_created", undefined, {
+type: position.type;
+protocol: position.protocol;,
 asset: position.asset; });
 }, [trackEvent]);
 
@@ -588,6 +637,8 @@ tx.hash === txHash;
 status: newStatus;
 blockNumber: newStatus === "confirmed" ? Math.floor(Math.random() * 1000000) : undefined;
 }
+status: newStatus;,
+blockNumber: newStatus === "confirmed" ? Math.floor(Math.random() * 1000000) : undefined;}
 : tx;
 )
 );

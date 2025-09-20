@@ -21,3 +21,6 @@ import { Button } from "@/components/ui/button"
 import { ShieldAlert } from 'lucide-react'
 interface EmptyFraudStateProps {;
 ;}
+import { Button } from "@/components/ui/button";
+import { ShieldAlert } from 'lucide-react';
+interface EmptyFraudStateProps {

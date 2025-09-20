@@ -17,6 +17,8 @@ recommendations: string[];
 }
 }
 }
+issues: string[];,
+recommendations: string[];}
 
 export interface ContentQualityReport {
 totalPages: number;
@@ -29,6 +31,8 @@ summary: string;
 }
 }
 }
+pageMetrics: ContentQualityMetrics[];,
+summary: string;}
 
 export class ContentQualityAnalyzer {
 private static instance: ContentQualityAnalyzer;
@@ -170,6 +174,8 @@ linkCount: number;
 metaDescriptionLength: number;
 hasStructuredData: boolean;
 }): number {
+metaDescriptionLength: number;,
+hasStructuredData: boolean;}): number {
 let score = 0;
 let maxScore = 0;
 
@@ -241,6 +247,8 @@ linkCount: number;
 metaDescriptionLength: number;
 hasStructuredData: boolean;
 }): string[] {
+metaDescriptionLength: number;,
+hasStructuredData: boolean;}): string[] {
 const issues: string[] = [];
 if (!metrics.title || metrics.title.length < 30) {
 issues.push("Title is too short (should be 30-60 characters)");
@@ -325,6 +333,7 @@ averageSeoScore: 0;
 pagesWithIssues: 0;
 topIssues: [];
 pageMetrics: [];
+pageMetrics: [];,
 summary: "No pages analyzed yet"};
 }
 

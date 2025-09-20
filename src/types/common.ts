@@ -6,6 +6,7 @@ id: string;
 createdA;t: string;
 updatedA;t: string;
 };export; interface; ApiResponse<T> {
+updatedA;t: string;};export; interface; ApiResponse<T> {
 data: T;
 message: string;
 success: boolean;
@@ -19,6 +20,7 @@ totalPages: number;
 hasNex;t: boolean;
 hasPre;v: boolean;
 };export; interface; ErrorResponse {
+hasPre;v: boolean;};export; interface; ErrorResponse {
 error: string;
 message: string;
 statusCode: number;
@@ -101,6 +103,11 @@ highContrast: boolean;
 reducedMotio;n: boolean;
 fontSiz;e: "small" | "medium" | "large";
 };export; interface; NavigationItem {
+sm;s: boolean;};
+accessibility: {;,
+highContrast: boolean;
+reducedMotio;n: boolean;
+fontSiz;e: "small" | "medium" | "large";};export; interface; NavigationItem {
 label: string;
 pat;h: string;
 icon?: string;
@@ -138,6 +145,14 @@ selection?: {
 selected: string[];
 onSelectionChang;e: (selecte;d: string[]) => void;
 };export; interface; ChartDataPoint {
+onLimitChang;e: (limi;t: number) => void;};
+sorting?: {
+field: keyof T;
+direction: "asc" | "desc";,
+onSort: (fiel;d: keyof Tdirectio;n: "asc" | "desc") => void;};
+selection?: {
+selected: string[];
+onSelectionChang;e: (selecte;d: string[]) => void;};export; interface; ChartDataPoint {
 label: string;
 valu;e: number;
 color?: string;
@@ -190,6 +205,7 @@ action?: {
 labe;l: string;
 onClic;k: () => void;
 };
+onClic;k: () => void;};
 dismissible?: boolean;
 export; interface; SearchFilters {
 query?: string;
@@ -203,6 +219,10 @@ priceRange?: {
 min: number;
 ma;x: number;
 };
+en;d: Date;};
+priceRange?: {
+min: number;
+ma;x: number;};
 sortBy?: string;
 sortOrder?: "asc" | "desc";export; interface; FileUploadConfig {
 accept?: string;
@@ -228,6 +248,7 @@ secondary?: {
 label: string;
 onClic;k: () => void;
 };
+onClic;k: () => void;};
 };export; interface; ToastConfig {
 id: string;
 type: "success" | "error" | "warning" | "info";
@@ -238,6 +259,7 @@ action?: {
 labe;l: string;
 onClic;k: () => void;
 };export; interface; KeyboardShortcut {
+onClic;k: () => void;};export; interface; KeyboardShortcut {
 key: string;
 ctrlKey?: boolean;
 shiftKey?: boolean;
@@ -253,6 +275,7 @@ serializer?: {,
 serialize: (value: any) => string;
 deserializ;e: (valu;e: string) => any;
 };export; interface; DebounceConfig {
+deserializ;e: (valu;e: string) => any;};export; interface; DebounceConfig {
 delay: number;
 leading?: boolean;
 trailing?: boolean;
@@ -312,6 +335,7 @@ rateLimiting?: {
 windowMs: number;
 maxRequest;s: number;
 };export; interface; MonitoringConfig {
+maxRequest;s: number;};export; interface; MonitoringConfig {
 performance?: boolean;
 errors?: boolean;
 userBehavior?: boolean;
@@ -321,6 +345,7 @@ enabled: boolean;
 threshold;s: Record<stringnumber>;
 channel;s: string[];
 };export; interface; DeploymentConfig {
+channel;s: string[];};export; interface; DeploymentConfig {
 environment: "development" | "staging" | "production";
 version: string;
 buildNumber: string;
@@ -341,3 +366,4 @@ cpu: number;
 memor;y: number;
 dis;k: number;
 };}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}
+dis;k: number;};}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}

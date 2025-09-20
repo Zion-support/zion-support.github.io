@@ -1,6 +1,6 @@
 
 import React, { useRef } from "react";
-import { ChevronLeft; ChevronRight } from "lucide-react, ";
+import { ChevronLeft, ChevronRight  } from "lucide-react, ";
 import { Button } from "@/components/ui/button, ";
 
 // These would be replaced with actual screenshots;
@@ -18,6 +18,7 @@ if (scrollContainerRef.current) {;
 const scrollAmount = 300;
 scrollContainerRef.current.scrollBy({
 left: direction === "left" ? -scrollAmount : scrollAmount;
+left: direction === "left" ? -scrollAmount : scrollAmount;,
 behavior: "smooth"});
 }
 };
@@ -78,5 +79,6 @@ aria-label="Scroll right";
 };
 <//section><///section>;
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import { ChevronLeftChevronRight } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 // These would be replaced with actual screenshots

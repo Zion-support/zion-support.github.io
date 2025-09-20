@@ -5,6 +5,7 @@ interface ReplyCardProps {reply: ForumReply;
 className?: string;
 }
 onMarkAnswer?: () => void;}
+onMarkAnswer?: () => void;
 canMarkAnswer?: boolean};
 export default function ReplyCard({ reply; className = "", onMarkAnswer; canMarkAnswer }: ReplyCardProps) {
 return (
@@ -51,6 +52,12 @@ import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";,
 import { Button } from "@/components/ui/button";,
 import { Badge } from "@/components/ui/badge";,
+import { formatDistanceToNow } from "date-fns",
+import { ThumbsUp, ThumbsDownCheckCircle } from 'lucide-react'
+import { Card, CardContent, CardFooterCardHeader } from "@/components/ui/card",
+import { Avatar, AvatarFallbackAvatarImage } from "@/components/ui/avatar",
+import { Button } from "@/components/ui/button",
+import { Badge } from "@/components/ui/badge",;
 import { ForumReply } from "@/types/community";
 import { cn } from "@/lib/utils";
 interface ReplyCardProps {

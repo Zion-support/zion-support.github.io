@@ -10,6 +10,10 @@ phone: string; email: string; website: string};
 technology: string[], integrations: string[];
 compliance: string[], roi: string; competitors: string[], marketTrend: string; innovationLevel: string; uniqueValue: string;
 }
+contactInfo: {,
+phone: string; email: string; website: string};
+technology: string[], integrations: string[];,
+compliance: string[], roi: string; competitors: string[], marketTrend: string; innovationLevel: string; uniqueValue: string;}
 
 export const ADVANCED_INNOVATIVE_SERVICES: AdvancedInnovativeService[] = [
 // AI-Powered Predictive Maintenance Platform;
@@ -71,8 +75,7 @@ roi: "350% within 8 months",
 competitors: ["Uptake", "C3.ai", "PTC", "Siemens", "GE Digital"],
 marketTrend: "Growing at 30% annually with Industry 4.0 adoption",
 innovationLevel: "Cutting-edge AI/ML with real-time IoT integration",
-uniqueValue: "Combines edge computing with cloud-based ML for real-time predictions",
-},
+uniqueValue: "Combines edge computing with cloud-based ML for real-time predictions"},
 
 // Quantum Machine Learning Platform;
 {id: "quantum-machine-learning-platform",
@@ -131,8 +134,7 @@ roi: "600% within 18 months",
 competitors: ["IBM Quantum", "Google Quantum", "D-Wave", "Rigetti", "Xanadu"],
 marketTrend: "Explosive growth with 500% annual increase in quantum computing adoption",
 innovationLevel: "Pioneering quantum-classical hybrid approaches",
-uniqueValue: "First commercial platform combining quantum computing with practical ML applications",
-},
+uniqueValue: "First commercial platform combining quantum computing with practical ML applications"},
 
 // Autonomous Drone Fleet Management;
 {id: "autonomous-drone-fleet-management",
@@ -490,8 +492,7 @@ roi: "400% within 12 months",
 competitors: ["DroneDeploy", "PrecisionHawk", "AirMap", "Kitty Hawk"],
 marketTrend: "Rapid growth with 40% annual increase in commercial drone adoption",
 innovationLevel: "Leading-edge autonomous fleet management with AI optimization",
-uniqueValue: "First comprehensive platform for multi-drone autonomous operations",
-},
+uniqueValue: "First comprehensive platform for multi-drone autonomous operations"},
 
 // Blockchain-Based Digital Identity Platform;
 {id: "blockchain-digital-identity-platform",
@@ -550,8 +551,7 @@ roi: "350% within 6 months",
 competitors: ["Microsoft Identity", "Okta", "Auth0", "Sovrin", "uPort"],
 marketTrend: "Growing rapidly with increasing focus on privacy and security",
 innovationLevel: "Cutting-edge blockchain identity with zero-knowledge proofs",
-uniqueValue: "First enterprise-grade SSI platform with comprehensive compliance features",
-},
+uniqueValue: "First enterprise-grade SSI platform with comprehensive compliance features"},
 
 // AI-Powered Legal Document Analysis;
 {id: "ai-legal-document-analysis",
@@ -610,8 +610,7 @@ roi: "450% within 4 months",
 competitors: ["Kira Systems", "Luminance", "eBrevia", "LawGeex", "ContractPodAi"],
 marketTrend: "Growing at 35% annually with increasing legal tech adoption",
 innovationLevel: "Advanced AI with legal domain expertise",
-uniqueValue: "First comprehensive legal document analysis platform with risk scoring",
-},
+uniqueValue: "First comprehensive legal document analysis platform with risk scoring"},
 
 // Sustainable Energy Management Platform;
 {id: "sustainable-energy-management",
@@ -670,8 +669,7 @@ roi: "300% within 8 months",
 competitors: ["Schneider Electric", "Siemens", "Honeywell", "Johnson Controls"],
 marketTrend: "Rapid growth with increasing focus on sustainability and ESG",
 innovationLevel: "Advanced AI-powered sustainability optimization",
-uniqueValue: "First comprehensive platform combining energy management with ESG compliance",
-},
+uniqueValue: "First comprehensive platform combining energy management with ESG compliance"},
 
 // Advanced Cybersecurity Threat Intelligence;
 {id: "advanced-cybersecurity-threat-intelligence",
@@ -730,8 +728,7 @@ roi: "400% within 6 months",
 competitors: ["CrowdStrike", "Palo Alto Networks", "FireEye", "Recorded Future"],
 marketTrend: "Growing at 25% annually with increasing cyber threats",
 innovationLevel: "Advanced AI with real-time threat intelligence",
-uniqueValue: "First AI-powered platform combining threat detection with automated response",
-},
+uniqueValue: "First AI-powered platform combining threat detection with automated response"},
 
 // Smart City IoT Management Platform;
 {id: "smart-city-iot-management",
@@ -790,8 +787,7 @@ roi: "350% within 18 months",
 competitors: ["Cisco", "Siemens", "IBM", "Microsoft", "Oracle"],
 marketTrend: "Rapid growth with increasing smart city initiatives globally",
 innovationLevel: "Comprehensive IoT platform for urban infrastructure management",
-uniqueValue: "First integrated platform managing all aspects of smart city operations",
-},
+uniqueValue: "First integrated platform managing all aspects of smart city operations"},
 
 // AI-Powered Healthcare Diagnostics;
 {id: "ai-healthcare-diagnostics",
@@ -850,8 +846,7 @@ roi: "400% within 12 months",
 competitors: ["IBM Watson Health", "Google Health", "Microsoft Healthcare", "Siemens Healthineers"],
 marketTrend: "Growing at 40% annually with increasing AI adoption in healthcare",
 innovationLevel: "Advanced AI with medical domain expertise",
-uniqueValue: "First comprehensive AI platform for medical diagnostics and clinical support",
-},
+uniqueValue: "First comprehensive AI platform for medical diagnostics and clinical support"},
 
 // Quantum-Safe Communication Platform;
 {id: "quantum-safe-communication",
@@ -910,8 +905,7 @@ roi: "500% within 24 months",
 competitors: ["Signal", "Wickr", "ProtonMail", "Quantum Xchange"],
 marketTrend: "Emerging market with increasing quantum computing threats",
 innovationLevel: "Pioneering post-quantum cryptography implementation",
-uniqueValue: "First commercial platform implementing NIST-approved post-quantum algorithms",
-}
+uniqueValue: "First commercial platform implementing NIST-approved post-quantum algorithms"}
 ];
 
 export default ADVANCED_INNOVATIVE_SERVICES;

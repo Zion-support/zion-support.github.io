@@ -20,6 +20,17 @@ avatar: "👨‍💻"};
 {name: "Emily Rodriguez", role: "Operations Director";
 company: "Global Solutions", content: "Their cloud migration expertise saved us months of planning and implementation time. The results exceeded our expectations.",
 rating: 5;
+rating: 5;,
+avatar: "👩‍💼"};
+{
+name: "Michael Chen", role: "VP of Engineering";,
+company: "InnovateLabs", content: "The cybersecurity implementation was seamless and comprehensive. We feel much more secure knowing our systems are protected by Zion Tech Group.";
+rating: 5;,
+avatar: "👨‍💻"};
+{
+name: "Emily Rodriguez", role: "Operations Director";,
+company: "Global Solutions", content: "Their cloud migration expertise saved us months of planning and implementation time. The results exceeded our expectations.",
+rating: 5;,
 avatar: "👩‍🔬"}
 ];
 const renderStars: any = (rating: number) => {;

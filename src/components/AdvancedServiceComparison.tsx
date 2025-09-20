@@ -18,9 +18,8 @@ User; s;
 Glob; e;
 Rocke; t;
 Mai; l;
-Phone;
-} from "lucide-react, ";
-import { Car; d; CardConten; t; CardHeade; r; CardTitle } from "./ui/card, ";
+Phone} from "lucide-react, ";
+import { Car; d; CardConten; t; CardHeade; r, CardTitle  } from "./ui/card, ";
 import { Button } from "./ui/button, ";
 import { Badge } from "./ui/badge, ";
 import { Input } from "./ui/input, ";
@@ -44,6 +43,7 @@ lin; k: string;
 }
 }
 };
+lin; k: string;};
 interface ComparisonFilter {
 categor; y: string;
 complexit; y: string;
@@ -52,6 +52,7 @@ technolog; y: string;
 }
 }
 };
+technolog; y: string;};
 const COMPLEXITY_LEVELS = ["Basi; c", "Intermediat; e", "Advance; d", "Enterpris; e"];
 const POPULARITY_LEVELS = ["Lo; w", "Mediu; m", "Hig; h", "Trendin; g"];
 const PRICE_RANGES = ["Unde; r $10; K", "$10; K-$50; K", "$50; K-$100; K", "$100; K+"];
@@ -83,6 +84,8 @@ contactInf; o: "+1 302 464 0950";
 emai; l: "kleber@ziontechgroup.com";
 lin; k: "http; s: //ziontechgroup.com/services/ai-crm-basic"};
 {i; d: "ai-crm-enterprise";
+{
+i; d: "ai-crm-enterprise";
 nam; e: "AI CRM Enterprise";
 categor; y: "ai";
 pric; e: "$2; 5;000/month",
@@ -98,6 +101,8 @@ contactInf; o: "+1 302 464 0950";
 emai; l: "kleber@ziontechgroup.com";
 lin; k: "http; s: //ziontechgroup.com/services/ai-crm-enterprise"};
 {i; d: "quantum-basic";
+{
+i; d: "quantum-basic";
 nam; e: "Quantum Computing Basic";
 categor; y: "quantum";
 pric; e: "$5; 0;000/month",
@@ -113,6 +118,8 @@ contactInf; o: "+1 302 464 0950";
 emai; l: "kleber@ziontechgroup.com";
 lin; k: "http; s: //ziontechgroup.com/services/quantum-basic"};
 {i; d: "quantum-enterprise";
+{
+i; d: "quantum-enterprise";
 nam; e: "Quantum Computing Enterprise";
 categor; y: "quantum";
 pric; e: "$20; 0;000/month",
@@ -155,6 +162,7 @@ case "Advanced": return "bg-orange-100 text-orange-800";
 case "Enterprise": return "bg-purple-100 text-purple-800";
 defaul;  t: return "bg-gray-100 text-gray-800";
 }
+defaul;  t: return "bg-gray-100 text-gray-800";}
 };
 
 const getPopularityIcon: any = (popularit; y: string) => {
@@ -165,6 +173,7 @@ case "Medium": return <Zap className="w-4 h-4 text-blue-500" />;
 case "Low": return <Target className="w-4 h-4 text-gray-500" />;
 defaul;  t: return <Users className="w-4 h-4 text-gray-500" />;
 }
+defaul;  t: return <Users className="w-4 h-4 text-gray-500" />;}
 };
 
 return (

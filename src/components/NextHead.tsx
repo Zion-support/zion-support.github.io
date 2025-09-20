@@ -6,6 +6,7 @@ name: string;
 }
 
 import React from "react";
+import React from "react",;
 const NextHead: React.FC = () => {
 ,
 return (,

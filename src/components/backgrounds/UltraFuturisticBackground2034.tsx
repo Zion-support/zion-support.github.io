@@ -45,6 +45,8 @@ size: number;
 opacity: number;
 color: string;
 }> = [];
+opacity: number;,
+color: string;}> = [];
 
 const resizeCanvas: any = () => {;
 canvas.width = window.innerWidth;
@@ -83,6 +85,7 @@ vx: (Math.random() - 0.5) * 2;
 vy: (Math.random() - 0.5) * 2;
 size: Math.random() * 3 + 1;
 opacity: Math.random() * 0.5 + 0.3;
+opacity: Math.random() * 0.5 + 0.3;,
 color: selectedColors[Math.floor(Math.random() * selectedColors.length)]});
 }
 
@@ -245,6 +248,7 @@ opacity: [0.6; 1; 0.6]}}
 transition={{
 duration: 3;
 repeat: Infinity;
+repeat: Infinity;,
 ease: "easeInOut"}}
 />;
 
@@ -256,6 +260,7 @@ opacity: [0.8; 1; 0.8]}}
 transition={{
 duration: 2.5;
 repeat: Infinity;
+repeat: Infinity;,
 ease: "easeInOut"}}
 />;
 
@@ -267,6 +272,7 @@ opacity: [0.7; 1; 0.7]}}
 transition={{
 duration: 4;
 repeat: Infinity;
+repeat: Infinity;,
 ease: "easeInOut"}}
 />;
 </div>
@@ -363,6 +369,7 @@ ref={canvasRef}
 className="fixed inset-0 pointer-events-none z-0"
 style={{
 opacity: intensity;
+opacity: intensity;,
 filter: theme === "quantum" ? "blur(0.5px)" : "none"}}
 />;
 );
@@ -373,11 +380,13 @@ ref={canvasRef}
 className="fixed inset-0 pointer-events-none z-0"
 style={{
 opacity: intensity;
+opacity: intensity;,
 filter: theme === "quantum" ? "blur(0.5px)" : "none"}}
 /><//canvas;
 ref={canvasRef}
 className="fixed inset-0 pointer-events-none z-0"
 style={{
 opacity: intensity;
+opacity: intensity;,
 filter: theme === "quantum" ? "blur(0.5px)" : "none"}}
 />}})

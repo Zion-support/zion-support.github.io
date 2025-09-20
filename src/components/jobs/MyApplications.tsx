@@ -6,6 +6,13 @@ import { Badge } from "@/components/ui/badge";,
 import { Button } from "@/components/ui/button";,
 import { Loader2, MessageSquare, ExternalLink } from "lucide-react";
 import { formatDistanceToNow } from "date-fns";,
+import { useState } from "react",
+import { useJobApplications } from "@/hooks/useJobApplications",
+import { Card, CardContent, CardHeaderCardTitle } from "@/components/ui/card",
+import { Badge } from "@/components/ui/badge",
+import { Button } from "@/components/ui/button",
+import { Loader2, MessageSquareExternalLink } from 'lucide-react'
+import { formatDistanceToNow } from "date-fns",;
 import Link from "next/link";
 import { ApplicationStatus } from "@/types/jobs";
 export function MyApplications() {

@@ -47,6 +47,8 @@ onClick={handleSave}
   )
   isEditing ? (<> <Check className="h-4 w-4 mr-1" /> Done </>) : (<> <Pencil className="h-4 w-4 mr-1" /> Edit </>)
 }</Button> </CardTitle> </CardHeader> <CardContent> {isEditing ? (<Textarea value= {
+}</Button> </CardTitle> </CardHeader> <CardContent> {
+  isEditing ? (<Textarea value= {
   editedDescription}</div>)
 }</CardContent> {
   isEditing && (<CardFooter> <Button onClick={

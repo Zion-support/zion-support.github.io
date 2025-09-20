@@ -1,4 +1,4 @@
-import { useState; useEffect; useCallback; useMemo } from "react, ";
+import { useState; useEffect; useCallback, useMemo  } from "react, ";
 
 interface SearchOptions<T> {
 searchFields: (keyof T)[];
@@ -18,6 +18,8 @@ results: T[];
 isLoading: boolean;
 totalResults: number;
 }
+isLoading: boolean;,
+totalResults: number;}
 
 export const useSearch = <T extends Record<string; any>>(
 data: T[];
@@ -32,6 +34,8 @@ caseSensitive = false;
 
 const [searchState; setSearchState] = useState<SearchState<T>>({
 query: "";
+const [searchState, setSearchState] = useState<SearchState<T>>({
+query: "";,
 filters: {};
 sortBy: null;
 sortOrder: "asc";
@@ -40,6 +44,9 @@ isLoading: false;
 totalResults: data.length;
 });
 const [debouncedQuery; setDebouncedQuery] = useState("");
+isLoading: false;,
+totalResults: data.length;});
+const [debouncedQuery, setDebouncedQuery] = useState("");
 
 // Debounce search query;
 useEffect(() => {
@@ -131,6 +138,7 @@ return searchState.sortOrder === "asc" ? comparison : -comparison;
 setSearchState(prev => ({...prev;
 results;
 totalResults: results.length;
+totalResults: results.length;,
 isLoading: false; }));
 return results;
 }, [data; debouncedQuery; searchState.filters; searchState.sortBy; searchState.sortOrder; searchFields; fuzzyMatch]);
@@ -160,6 +168,8 @@ setSearchState(prev => ({
 sortBy: field;
 sortOrder: order;
 }));
+sortBy: field;,
+sortOrder: order;}));
 }, []);
 
 // Clear search;
@@ -171,6 +181,8 @@ filters: {};
 sortBy: null;
 sortOrder: "asc",
 }));
+sortBy: null;,
+sortOrder: "asc"}));
 }, []);
 
 // Get search suggestions;
@@ -206,6 +218,8 @@ currentPage: page;
 hasNextPage: endIndex < searchState.totalResults;
 hasPrevPage: page > 1;
 };
+hasNextPage: endIndex < searchState.totalResults;,
+hasPrevPage: page > 1;};
 }, [searchState.results; searchState.totalResults]);
 
 return {

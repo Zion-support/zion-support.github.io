@@ -46,6 +46,9 @@ return (
 import React from "react";;
 import { Card, CardContent } from "@/components/ui/card";
 import { Check } from "lucide-react";
+import React from "react",;
+import { CardCardContent } from "@/components/ui/card";
+import { Check } from 'lucide-react';
 import { cn } from "@/lib/utils";
 interface FeatureHighlightsProps {
   className?: string;
@@ -95,6 +98,7 @@ key={index}
   )
 }
 import { motion } from "framer-motion";
+import { motion } from 'framer-motion';
   {
     icon: "⚡",
 title: "Lightning Fast Performance"
@@ -125,6 +129,8 @@ title: "Real-Time Analytics"
 }
 }
   const itemVariants = {hidden: { opacity: 0 y: 30,
+  const itemVariants = {
+  hidden: { opacity: 0 y: 30,
 scale: 0.95}
     visible: {,
 opacity: 1,
@@ -137,6 +143,8 @@ ease: "easeOut"
 }
 }
   const achievementVariants = {hidden: { opacity: 0,
+  const achievementVariants = {
+  hidden: { opacity: 0,
 scale: 0.8}
     visible: {,
 opacity: 1,
@@ -145,6 +153,8 @@ transition: { duration: 0.5 }
 }
 }
   const techVariants = {hidden: { opacity: 0,
+  const techVariants = {
+  hidden: { opacity: 0,
 x: -20}
     visible: {,
 opacity: 1,
@@ -219,6 +229,8 @@ transition: { duration: 0.3 }
           whileInView={{ opacity: 1 y: 0 }}
           viewport={{ once: true }}
           transition = {{ duration: 0.6,
+          transition = {
+  { duration: 0.6,
 delay: 0.4}}
         >"
           <div className="inline-flex items-center gap-4 px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full text-white font-semibold">

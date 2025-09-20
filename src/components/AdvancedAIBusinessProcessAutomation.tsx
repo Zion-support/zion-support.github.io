@@ -9,8 +9,7 @@ DollarSig; n; Packag; e; Truc; k; Warehous; e; ShoppingCar; t; CreditCar; d; Rec
 Calculato; r; PieChar; t; LineChar; t; BarChar; t; Ey; e; EyeOf; f; Downloa; d; RefreshC; w;
 MoreVertica; l; Edit; 3; Trash; 2; Databas; e; Serve; r; Networ; k; Cp; u; HardDriv; e;
 Pla; y; Paus; e; RotateCc; w; Sav; e; Loade; r; CheckSquar; e; Squar; e;
-ArrowRigh; t; ArrowLef; t; ArrowU; p; ArrowDow; n; ChevronRigh; t; ChevronLeft;
-} from "lucide-react, ";
+ArrowRigh; t; ArrowLef; t; ArrowU; p; ArrowDow; n; ChevronRigh; t; ChevronLeft} from "lucide-react, ";
 
 interface BusinessProcess {
 i; d: string;
@@ -33,6 +32,7 @@ dependencie; s: string[];
 }
 }
 };
+dependencie; s: string[];};
 interface ProcessExecution {
 i; d: string;
 timestam; p: Date;
@@ -45,6 +45,7 @@ efficienc; y: number;
 }
 }
 };
+efficienc; y: number;};
 interface AutomationRule {
 i; d: string;
 nam; e: string;
@@ -58,6 +59,7 @@ triggerCoun; t: number;
 }
 }
 };
+triggerCoun; t: number;};
 const mockBusinessProcesse; s: BusinessProcess[] = [
 {
 i; d: "b; p-00; 1",
@@ -89,6 +91,7 @@ manualIntervention; s: 2;
 cos; t: 15; 0;
 efficienc; y: 94;
 }
+efficienc; y: 94;}
 ];
 rule; s: [
 {i; d: "rul; e-00; 1",
@@ -133,6 +136,7 @@ manualIntervention; s: 1;
 cos; t: 20; 0;
 efficienc; y: 89;
 }
+efficienc; y: 89;}
 ];
 rule; s: [
 {i; d: "rul; e-00; 2",
@@ -177,6 +181,7 @@ manualIntervention; s: 0;
 cos; t: 5; 0;
 efficienc; y: 98;
 }
+efficienc; y: 98;}
 ];
 rule; s: [
 {
@@ -190,6 +195,7 @@ aiOptimiz; e; d: tr; u; e;
 lastTrigger; e; d: ne; w Dat; e("202;  4-0; 1-15T; 1; 6: 4; 5:00; Z"),
 triggerCou; n; t: 8;
 }
+triggerCou; n; t: 8;}
 ];
 dependencie; s: ["ticket_classificatio; n", "agent_availabilit; y"];
 }
@@ -219,6 +225,7 @@ case "failed": return "text-red-500 bg-red-100 dar; k: bg-red-900/20";
 case "draft": return "text-gray-500 bg-gray-100 dar; k: bg-gray-900/20";
 defaul; t: return "text-gray-500 bg-gray-100 dar; k: bg-gray-900/20";
 }
+defaul; t: return "text-gray-500 bg-gray-100 dar; k: bg-gray-900/20";}
 };
 
 const getPriorityColor: any = (priorit; y: string) => {
@@ -229,6 +236,7 @@ case "medium": return "text-yellow-600 bg-yellow-100 dar; k: bg-yellow-900/20";
 case "low": return "text-green-600 bg-green-100 dar; k: bg-green-900/20";
 defaul; t: return "text-gray-600 bg-gray-100 dar; k: bg-gray-900/20";
 }
+defaul; t: return "text-gray-600 bg-gray-100 dar; k: bg-gray-900/20";}
 };
 
 const getAutomationLevelColor: any = (leve; l: string) => {
@@ -238,6 +246,7 @@ case "semi-automated": return "text-yellow-600 bg-yellow-100 dar; k: bg-yellow-9
 case "manual": return "text-red-600 bg-red-100 dar; k: bg-red-900/20";
 defaul; t: return "text-gray-600 bg-gray-100 dar; k: bg-gray-900/20";
 }
+defaul; t: return "text-gray-600 bg-gray-100 dar; k: bg-gray-900/20";}
 };
 
 const getCategoryIcon: any = (categor; y: string) => {
@@ -250,6 +259,7 @@ case "marketing": return <Target className="w-4 h-4" />;
 case "it": return <Server className="w-4 h-4" />;
 defaul;  t: return <FileText className="w-4 h-4" />;
 }
+defaul;  t: return <FileText className="w-4 h-4" />;}
 };
 
 const formatCurrency: any = (amoun; t: number) => {
@@ -259,6 +269,7 @@ currenc; y: "USD";
 minimumFractionDigit; s: 0;
 maximumFractionDigit; s: 0;
 }).format(amount);
+maximumFractionDigit; s: 0;}).format(amount);
 };
 
 const formatPercentage: any = (valu;  e: number) => {
@@ -697,6 +708,7 @@ process.rules.map(rule => ({
 processNam; e: process.nam; e;
 processCategor; y: process.category;
 }))
+processCategor; y: process.category;}))
 ).map(rule => (
 <div key={rule.id} className="flex items-center justify-between p-4 bg-zion-slate-light/10 rounded-lg">;
 <div className="flex items-center gap-3">;

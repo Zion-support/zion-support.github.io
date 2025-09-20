@@ -2,6 +2,7 @@
 import React from "react";
 import { Toaster as Sonner } from "sonner";
 ;
+
 import { useTheme } from "../ThemeProvider";
 import { Toaster as Sonner } from "sonner";
 
@@ -24,6 +25,7 @@ actionButton:
 cancelButton:
 "bg-gray-200 text-gray-700"},
 }}
+"bg-gray-200 text-gray-700"}}}
 {...props}
 />;
 );
@@ -43,6 +45,7 @@ actionButton:
 cancelButton:
 "bg-gray-200 text-gray-700"},
 }}
+"bg-gray-200 text-gray-700"}}}
 {...props}
 /><//Sonner;
 theme={theme as ToasterProps["theme"]}
@@ -57,5 +60,6 @@ actionButton:
 cancelButton:
 "bg-gray-200 text-gray-700"},
 }}
+"bg-gray-200 text-gray-700"}}}
 {...props}
 />;

@@ -49,6 +49,7 @@ export const INNOVATIVE_MICRO_SAAS_SOLUTIONS_2025 = [
             website: "https://ziontechgroup.com"};
         websiteUrl: "https://ziontechgroup.com/ai-content-generation",
     };
+        websiteUrl: "https://ziontechgroup.com/ai-content-generation"};
     // Blockchain DeFi Analytics Platform;
     {id: "blockchain-defi-analytics-platform";
         title: "Blockchain DeFi Analytics Platform";
@@ -99,6 +100,7 @@ export const INNOVATIVE_MICRO_SAAS_SOLUTIONS_2025 = [
             website: "https://ziontechgroup.com"};
         websiteUrl: "https://ziontechgroup.com/blockchain-defi-analytics",
     };
+        websiteUrl: "https://ziontechgroup.com/blockchain-defi-analytics"};
     // IoT Smart Home Management Platform;
     {id: "iot-smart-home-management";
         title: "IoT Smart Home Management Platform";
@@ -149,6 +151,7 @@ export const INNOVATIVE_MICRO_SAAS_SOLUTIONS_2025 = [
             website: "https://ziontechgroup.com"};
         websiteUrl: "https://ziontechgroup.com/iot-smart-home",
     };
+        websiteUrl: "https://ziontechgroup.com/iot-smart-home"};
     // AI-Powered Customer Service Automation;
     {id: "ai-customer-service-automation";
         title: "AI-Powered Customer Service Automation";
@@ -199,6 +202,7 @@ export const INNOVATIVE_MICRO_SAAS_SOLUTIONS_2025 = [
             website: "https://ziontechgroup.com"};
         websiteUrl: "https://ziontechgroup.com/ai-customer-service",
     };
+        websiteUrl: "https://ziontechgroup.com/ai-customer-service"};
     // Quantum-Ready Cybersecurity Suite;
     {id: "quantum-ready-cybersecurity-suite";
         title: "Quantum-Ready Cybersecurity Suite";
@@ -249,4 +253,5 @@ export const INNOVATIVE_MICRO_SAAS_SOLUTIONS_2025 = [
             website: "https://ziontechgroup.com"};
         websiteUrl: "https://ziontechgroup.com/quantum-cybersecurity",
     }
+        websiteUrl: "https://ziontechgroup.com/quantum-cybersecurity"}
 ];

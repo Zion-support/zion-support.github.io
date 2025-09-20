@@ -1,6 +1,8 @@
 import Image from 'next/image';
 import { Loader2 } from "lucide-react";
 import { useState } from "react";
+import { Loader2 } from 'lucide-react';
+import { useState } from 'react';
 interface YoutubeEmbedProps {
 return (
     <div className='relative aspect-video max-w-3xl mx-auto'>

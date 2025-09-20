@@ -12,6 +12,19 @@ integrations: string[], compliance: string[];
 roi: string; competitors: string[], industryPartners: string[];
 certifications: string[];
 }
+import { Routes, Route  } from "react-router-dom, ";
+export interface IndustrySpecificSolution {
+id: string; title: string; description: string; industry: string; category: string; subcategory: string; price: number; currency: string; pricingModel: "monthly" | "yearly" | "one-time" | "per-user" | "per-project" | "usage-based";,
+features: string[], benefits: string[];,
+useCases: string[], targetAudience: string[];,
+tags: string[], estimatedDelivery: string;,
+supportLevel: "basic" | "standard" | "premium" | "enterprise", marketPrice: string;
+contactInfo: {,
+phone: string; email: string; website: string};
+industryExpertise: number; rating: number; reviewCount: number; featured: boolean; location: string; availability: string; demoUrl: string; documentationUrl: string; technology: string[];,
+integrations: string[], compliance: string[];,
+roi: string; competitors: string[], industryPartners: string[];,
+certifications: string[];}
 
 export const INDUSTRY_SPECIFIC_SOLUTIONS: IndustrySpecificSolution[] = [
 {,
@@ -63,6 +76,8 @@ contactInfo: {,
 phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
 website: "https://ziontechgroup.com"}, industryExpertise: 98; rating: 4.9; reviewCount: 234; featured: true; location: "Global";
 availability: "24/7", demoUrl: "https://ziontechgroup.com/demo/healthcare-ai";
+website: "https://ziontechgroup.com"}, industryExpertise: 98; rating: 4.9; reviewCount: 234; featured: true; location: "Global";,
+availability: "24/7", demoUrl: "https://ziontechgroup.com/demo/healthcare-ai";,
 documentationUrl: "https://ziontechgroup.com/docs/healthcare-ai", technology: ["TensorFlow", "PyTorch", "OpenCV", "DICOM", "FHIR", "HL7", "HIPAA-compliant cloud"],
 integrations: ["Epic", "Cerner", "Allscripts", "Medical imaging systems", "Lab information systems", "PACS"],
 compliance: ["HIPAA", "FDA", "CE Mark", "ISO 13485", "SOC 2", "GDPR"],
@@ -118,6 +133,8 @@ contactInfo: {,
 phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
 website: "https://ziontechgroup.com"}, industryExpertise: 96; rating: 4.8; reviewCount: 189; featured: true; location: "Global";
 availability: "24/7", demoUrl: "https://ziontechgroup.com/demo/manufacturing-4-0";
+website: "https://ziontechgroup.com"}, industryExpertise: 96; rating: 4.8; reviewCount: 189; featured: true; location: "Global";,
+availability: "24/7", demoUrl: "https://ziontechgroup.com/demo/manufacturing-4-0";,
 documentationUrl: "https://ziontechgroup.com/docs/manufacturing-4-0", technology: ["IoT platforms", "Machine learning", "Computer vision", "PLC integration", "SCADA systems", "Cloud computing"],
 integrations: ["SAP", "Oracle", "Siemens", "Rockwell Automation", "Mitsubishi", "ABB", "IoT platforms"],
 compliance: ["ISO 9001", "ISO 14001", "OHSAS 18001", "Industry 4.0 standards", "Safety regulations"],
@@ -173,6 +190,8 @@ contactInfo: {,
 phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
 website: "https://ziontechgroup.com"}, industryExpertise: 97; rating: 4.9; reviewCount: 156; featured: true; location: "Global";
 availability: "24/7", demoUrl: "https://ziontechgroup.com/demo/financial-ai";
+website: "https://ziontechgroup.com"}, industryExpertise: 97; rating: 4.9; reviewCount: 156; featured: true; location: "Global";,
+availability: "24/7", demoUrl: "https://ziontechgroup.com/demo/financial-ai";,
 documentationUrl: "https://ziontechgroup.com/docs/financial-ai", technology: ["Machine learning", "Deep learning", "Natural language processing", "Big data analytics", "Cloud computing"],
 integrations: ["Bloomberg", "Reuters", "Trading platforms", "Core banking systems", "Risk management tools", "Compliance systems"],
 compliance: ["Basel III", "Solvency II", "Dodd-Frank", "SOX", "GDPR", "PCI DSS", "AML regulations"],
@@ -228,6 +247,8 @@ contactInfo: {,
 phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
 website: "https://ziontechgroup.com"}, industryExpertise: 94; rating: 4.8; reviewCount: 267; featured: false; location: "Global";
 availability: "24/7", demoUrl: "https://ziontechgroup.com/demo/retail-ai";
+website: "https://ziontechgroup.com"}, industryExpertise: 94; rating: 4.8; reviewCount: 267; featured: false; location: "Global";,
+availability: "24/7", demoUrl: "https://ziontechgroup.com/demo/retail-ai";,
 documentationUrl: "https://ziontechgroup.com/docs/retail-ai", technology: ["Machine learning", "Recommendation engines", "Natural language processing", "Computer vision", "Big data analytics"],
 integrations: ["Shopify", "WooCommerce", "Magento", "Salesforce", "HubSpot", "Google Analytics", "Facebook Ads"],
 compliance: ["GDPR", "CCPA", "PCI DSS", "SOC 2", "Industry-specific regulations"],
@@ -283,6 +304,8 @@ contactInfo: {,
 phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
 website: "https://ziontechgroup.com"}, industryExpertise: 95; rating: 4.8; reviewCount: 134; featured: false; location: "Global";
 availability: "24/7", demoUrl: "https://ziontechgroup.com/demo/energy-utility";
+website: "https://ziontechgroup.com"}, industryExpertise: 95; rating: 4.8; reviewCount: 134; featured: false; location: "Global";,
+availability: "24/7", demoUrl: "https://ziontechgroup.com/demo/energy-utility";,
 documentationUrl: "https://ziontechgroup.com/docs/energy-utility", technology: ["IoT platforms", "Machine learning", "Predictive analytics", "SCADA systems", "Cloud computing", "Edge computing"],
 integrations: ["SCADA systems", "Energy management systems", "Metering systems", "Renewable energy platforms", "Grid control systems"],
 compliance: ["NERC CIP", "ISO standards", "Grid codes", "Environmental regulations", "Safety standards"],
@@ -338,6 +361,8 @@ contactInfo: {,
 phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
 website: "https://ziontechgroup.com"}, industryExpertise: 93; rating: 4.7; reviewCount: 189; featured: false; location: "Global";
 availability: "24/7", demoUrl: "https://ziontechgroup.com/demo/transportation-logistics";
+website: "https://ziontechgroup.com"}, industryExpertise: 93; rating: 4.7; reviewCount: 189; featured: false; location: "Global";,
+availability: "24/7", demoUrl: "https://ziontechgroup.com/demo/transportation-logistics";,
 documentationUrl: "https://ziontechgroup.com/docs/transportation-logistics", technology: ["Machine learning", "Optimization algorithms", "IoT platforms", "GPS tracking", "Cloud computing", "Mobile apps"],
 integrations: ["TMS systems", "WMS systems", "ERP systems", "GPS tracking", "Weather services", "Traffic data"],
 compliance: ["DOT regulations", "Safety standards", "Environmental regulations", "Industry-specific standards"],

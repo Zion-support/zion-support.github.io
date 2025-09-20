@@ -20,6 +20,8 @@ location: "Global";
 availability: "Immediate";
 aiScore: 85;
 };
+availability: "Immediate";,
+aiScore: 85;};
 {
 id: "mp-sales-insights";
 title: "Sales Insights Dashboard";
@@ -39,6 +41,8 @@ location: "North America";
 availability: "1-2 Weeks";
 aiScore: 88;
 };
+availability: "1-2 Weeks";,
+aiScore: 88;};
 {
 id: "mp-helpdesk-bot";
 title: "Helpdesk Chatbot";
@@ -58,6 +62,8 @@ location: "Global";
 availability: "Immediate";
 aiScore: 84;
 };
+availability: "Immediate";,
+aiScore: 84;};
 {
 id: "mp-analytics-kit";
 title: "Starter Analytics Kit";
@@ -77,6 +83,8 @@ location: "Europe";
 availability: "Immediate";
 aiScore: 82;
 };
+availability: "Immediate";,
+aiScore: 82;};
 {
 id: "mp-content-planner";
 title: "Content Planner AI";
@@ -96,6 +104,8 @@ location: "Global";
 availability: "Immediate";
 aiScore: 86;
 };
+availability: "Immediate";,
+aiScore: 86;};
 {
 id: "mp-design-studio";
 title: "AI Design Studio";
@@ -115,6 +125,8 @@ location: "Global";
 availability: "Immediate";
 aiScore: 83;
 };
+availability: "Immediate";,
+aiScore: 83;};
 {
 id: "mp-audio-enhancer";
 title: "Audio Enhancer Suite";
@@ -134,6 +146,8 @@ location: "Global";
 availability: "Immediate";
 aiScore: 85;
 };
+availability: "Immediate";,
+aiScore: 85;};
 {
 id: "mp-project-hub";
 title: "AI Project Hub";
@@ -153,6 +167,8 @@ location: "Global";
 availability: "1-2 Weeks";
 aiScore: 87;
 };
+availability: "1-2 Weeks";,
+aiScore: 87;};
 {
 id: "mp-customer-analytics";
 title: "Customer Analytics Toolkit";
@@ -172,6 +188,8 @@ location: "North America";
 availability: "2-3 Weeks";
 aiScore: 88;
 };
+availability: "2-3 Weeks";,
+aiScore: 88;};
 {
 id: "mp-smart-crm";
 title: "Smart CRM Starter";
@@ -191,4 +209,6 @@ location: "Global";
 availability: "Immediate";
 aiScore: 89;
 }
+availability: "Immediate";,
+aiScore: 89;}
 ];

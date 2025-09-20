@@ -1,3 +1,5 @@
+import React from 'react';
+
 export default function LandingPage() {
   const { t } = useTranslation();
   const { isRTL } = useLanguage();
@@ -77,6 +79,12 @@ className={`${isRTL ? 'ml-0 mr-2 rotate-180' : 'ml-2'} h-4 w-4`}
       {/* Add social share section to encourage users to spread the word */}
       <SocialShareSection />
       <FloatingCTA />
+  return (
+    <div className="min-h-screen bg-gray-50 py-12">
+      <div className="container mx-auto px-4">
+        <h1 className="text-4xl font-bold text-gray-900 mb-6">Welcome to Zion Tech</h1>
+        <p className="text-lg text-gray-600">Your technology partner...</p>
+      </div>
     </div>
   );
 }

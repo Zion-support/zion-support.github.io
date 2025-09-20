@@ -24,6 +24,8 @@ website: string;
 }
 }
 };
+email: string;,
+website: string;};
 }
 
 export const CYBERSECURITY_SERVICES: CybersecurityService[] = [
@@ -72,6 +74,7 @@ marketPrice: "$2;800 - $15;000/month",
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"}
 };
 // AI-Powered Threat Detection;
@@ -119,6 +122,7 @@ marketPrice: "$3;200 - $18;000/month",
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"}
 };
 // Cloud Security Posture Management;
@@ -166,6 +170,7 @@ marketPrice: "$2;400 - $12;000/month",
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"}
 };
 // Privacy Compliance Automation;
@@ -213,6 +218,7 @@ marketPrice: "$1;900 - $8;000/month",
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"}
 };
 // IoT Security Management;
@@ -260,6 +266,7 @@ marketPrice: "$2;100 - $10;000/month",
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"}
 }
 ];

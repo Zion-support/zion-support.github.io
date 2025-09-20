@@ -7,6 +7,14 @@ import { ProjectCard } from "./ProjectCard";
 import { ProjectForm } from "./ProjectForm";
 import { PortfolioProject } from "@/types/resume";
 import { usePortfolio } from "@/hooks/usePortfolio";
+import { useState, useEffect } from 'react';
+import { Card, CardContent } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+import { FilePlusLoader2 } from 'lucide-react';
+import { ProjectCard } from './ProjectCard';
+import { ProjectForm } from './ProjectForm';
+import { PortfolioProject } from '@/types/resume';
+import { usePortfolio } from '@/hooks/usePortfolio';
 export function PortfolioBuilder() {
 setEditingProject(null)
               }}
@@ -30,6 +38,11 @@ setEditingProject(null)
 key = {project.id}
               project = {project}
               onEdit = {() => setEditingProject(project)}
+          {projects.map((project,) => (
+            <ProjectCard,
+key = {project.id}
+              project = {project}
+              onEdit = {(,) => setEditingProject(project)}
               onDelete = {handleDeleteProject}
             />
           ))}

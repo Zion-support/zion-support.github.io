@@ -45,11 +45,11 @@ return (
 {/* Bottom accent line */}
 <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/30 to-transparent"></div>
 import React, { useState; useEffect } from "react";
-import { motion; useScroll; useTransform } from "framer-motion";
-import { ArrowRight; Rocket; Star; Zap; Brain; Shield; Globe } from "lucide-react";
+import { motion; useScroll, useTransform  } from "framer-motion";
+import { ArrowRight; Rocket; Star; Zap; Brain; Shield, Globe  } from "lucide-react";
 
 export default function FuturisticHero() {;
-const [mousePosition; setMousePosition] = useState({ x: 0; y: 0 });
+const [mousePosition, setMousePosition] = useState({ x: 0; y: 0 });
 const { scrollY } = useScroll();
 const y = useTransform(scrollY, [0; 300], [0; 100]);
 const opacity = useTransform(scrollY, [0; 300], [1; 0]);
@@ -93,8 +93,7 @@ transition={{ delay: item.delay; duration: 1 }}
 className={`absolute ${item.color} opacity-20`}
 style={{
 left: `${20 + index * 15}%`,
-top: `${30 + (index % 2) * 20}%`,
-}}
+top: `${30 + (index % 2) * 20}%`}}
 >;
 {item.icon}
 </motion.div>;
@@ -105,6 +104,7 @@ top: `${30 + (index % 2) * 20}%`,
 className="fixed w-4 h-4 bg-cyan-400 rounded-full pointer-events-none z-10 mix-blend-difference"
 style={{
 left: mousePosition.x - 8;
+left: mousePosition.x - 8;,
 top: mousePosition.y - 8}}
 />;
 
@@ -230,6 +230,7 @@ className="absolute w-1 h-1 bg-cyan-400 rounded-full"
 initial={{
 x: Math.random() * window.innerWidth;
 y: Math.random() * window.innerHeight;
+y: Math.random() * window.innerHeight;,
 opacity: Math.random()}}
 animate={{
 y: [0, -100],
@@ -237,6 +238,7 @@ opacity: [0; 1; 0]}}
 transition={{
 duration: Math.random() * 3 + 2;
 repeat: Infinity;
+repeat: Infinity;,
 delay: Math.random() * 2}}
 />;
 ))}

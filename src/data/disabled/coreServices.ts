@@ -24,6 +24,8 @@ website: string;
 }
 }
 };
+email: string;,
+website: string;};
 technology: string[];
 integrations: string[];
 compliance: string[];
@@ -80,6 +82,7 @@ marketPrice: "$399 - $1200/month";
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["Python", "React", "Node.js", "OpenAI API", "PostgreSQL"],
 integrations: ["WordPress", "Shopify", "Mailchimp", "HubSpot", "Google Analytics"],
@@ -93,6 +96,11 @@ featured: true;
 };
 {id: "cloud-infrastructure-pro";
 title: "Cloud Infrastructure Pro - Scalable Cloud Solutions";
+aiScore: 95;,
+featured: true;};
+{
+id: "cloud-infrastructure-pro";
+title: "Cloud Infrastructure Pro - Scalable Cloud Solutions";,
 description: "Enterprise-grade cloud infrastructure services including hosting; scaling; security; and monitoring for high-performance applications.",
 category: "Cloud & Infrastructure";
 subcategory: "Cloud Hosting";
@@ -135,6 +143,7 @@ marketPrice: "$599 - $2000/month";
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["AWS", "Docker", "Kubernetes", "Terraform", "Ansible"],
 integrations: ["GitHub", "Jenkins", "Slack", "PagerDuty", "Datadog"],
@@ -148,6 +157,11 @@ featured: true;
 };
 {id: "cybersecurity-shield";
 title: "Cybersecurity Shield - Advanced Security Solutions";
+aiScore: 88;,
+featured: true;};
+{
+id: "cybersecurity-shield";
+title: "Cybersecurity Shield - Advanced Security Solutions";,
 description: "Comprehensive cybersecurity services including threat detection; vulnerability assessment; and security monitoring for businesses of all sizes.",
 category: "Cybersecurity";
 subcategory: "Security Services";
@@ -190,6 +204,7 @@ marketPrice: "$299 - $800/month";
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["SIEM", "EDR", "Firewall", "IDS/IPS", "Penetration Testing"],
 integrations: ["Active Directory", "Office 365", "Slack", "Jira", "ServiceNow"],
@@ -201,6 +216,8 @@ reviewCount: 234;
 aiScore: 92;
 featured: true;
 }
+aiScore: 92;,
+featured: true;}
 ];
 export const SERVICE_CATEGORIES = [;
 { label: "AI & Content Management", value: "ai-content" };
@@ -227,4 +244,5 @@ enterprise: { name: "Enterprise", multiplier: 2.5 }
 export const CONTACT_INFO = {;
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};

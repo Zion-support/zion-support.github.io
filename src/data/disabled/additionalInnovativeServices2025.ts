@@ -1,4 +1,4 @@
-import { Routes; Route } from "react-router-dom, ";
+import { Routes, Route  } from "react-router-dom, ";
 export interface AdditionalInnovativeService2025 {
 id: string;
 title: string;
@@ -23,6 +23,8 @@ website: string;
 }
 }
 };
+email: string;,
+website: string;};
 technology: string[];
 compliance: string[];
 integrations: string[];
@@ -34,6 +36,8 @@ dataRetention: string;
 uptime: string;
 securityFeatures: string[];
 }
+uptime: string;,
+securityFeatures: string[];}
 
 export const ADDITIONAL_INNOVATIVE_SERVICES_2025: AdditionalInnovativeService2025[] = [
 // AI-Powered Financial Services;
@@ -83,6 +87,7 @@ marketPrice: "$2;500 - $8;000/month",
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["Python", "TensorFlow", "React", "Node.js", "PostgreSQL", "Redis"],
 compliance: ["SEC", "FINRA", "GDPR", "SOC 2"],
@@ -143,6 +148,7 @@ marketPrice: "$4;500 - $15;000/month",
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["Python", "TensorFlow", "PyTorch", "React", "Node.js", "PostgreSQL"],
 compliance: ["HIPAA", "FDA", "SOC 2", "GDPR"],
@@ -203,6 +209,7 @@ marketPrice: "$1;800 - $5;000/month",
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["Python", "NLP", "React", "Node.js", "PostgreSQL", "Elasticsearch"],
 compliance: ["GDPR", "SOC 2", "Legal Ethics"],
@@ -263,6 +270,7 @@ marketPrice: "$1;200 - $4;000/month",
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["Python", "TensorFlow", "React", "Node.js", "PostgreSQL", "Redis"],
 compliance: ["FERPA", "COPPA", "GDPR", "SOC 2"],
@@ -323,6 +331,7 @@ marketPrice: "$3;200 - $10;000/month",
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["Python", "TensorFlow", "React", "Node.js", "PostgreSQL", "Redis"],
 compliance: ["ISO 28000", "C-TPAT", "GDPR", "SOC 2"],
@@ -383,6 +392,7 @@ marketPrice: "$1;500 - $5;000/month",
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["Python", "TensorFlow", "React", "Node.js", "PostgreSQL", "Redis"],
 compliance: ["GDPR", "SOC 2", "Real Estate Regulations"],
@@ -443,6 +453,7 @@ marketPrice: "$2;200 - $7;000/month",
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["Python", "NLP", "React", "Node.js", "PostgreSQL", "Redis"],
 compliance: ["EEOC", "ADA", "GDPR", "SOC 2"],
@@ -503,6 +514,7 @@ marketPrice: "$2;800 - $8;000/month",
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["Python", "TensorFlow", "React", "Node.js", "PostgreSQL", "Redis"],
 compliance: ["GDPR", "CAN-SPAM", "SOC 2", "CCPA"],
@@ -563,6 +575,7 @@ marketPrice: "$1;900 - $6;000/month",
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["Python", "NLP", "React", "Node.js", "PostgreSQL", "Redis"],
 compliance: ["GDPR", "SOC 2", "CCPA"],
@@ -623,6 +636,7 @@ marketPrice: "$3;500 - $12;000/month",
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["Python", "TensorFlow", "React", "Node.js", "PostgreSQL", "Redis"],
 compliance: ["ISO 9001", "GDPR", "SOC 2"],

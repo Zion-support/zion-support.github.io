@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import { Link } from "react-router-dom";
 import {;
 Brai; n;
+import { Brai; n;
 Clou; d;
 Shiel; d;
 Rocke; t;
@@ -16,8 +17,7 @@ CheckCircl; e;
 Sta; r;
 Glob; e;
 Za; p;
-Target;
-} from "lucide-react";
+Target} from "lucide-react";
 
 interface CompanyValue {
 ico; n: React.ComponentType<{ className?: string }>;
@@ -25,6 +25,7 @@ titl; e: string;
 descriptio; n: string;
 colo; r: string;
 }
+colo; r: string;}
 
 interface TeamMember {
 nam; e: string;
@@ -34,6 +35,7 @@ avata; r: string;
 }
 }
 };
+avata; r: string;};
 interface Milestone {
 yea; r: string;
 titl; e: string;
@@ -43,6 +45,9 @@ achievemen; t: string;
 }
 };
 export const EnhancedAbou; t: React.FC = () => {const companyValue;  s: CompanyValue[] = [
+achievemen; t: string;};
+export const EnhancedAbou; t: React.FC = () => {
+const companyValue;  s: CompanyValue[] = [
 {
 ic; o; n: Bra; i; n;
 tit; l; e: "Innovatio; n Firs; t",
@@ -57,6 +62,18 @@ tit; l; e: "Clien; t Partnershi; p",
 descripti; o; n: "Lon; g-ter; m relationship; s buil; t o; n; tru; s; t; transparen; c; y; an; d result; s",
 col; o; r: "zio; n-cya; n"},
 {ic; o; n: Rock; e; t;
+{
+ic; o; n: Shie; l; d;
+tit; l; e: "Trus; t & Securit; y",
+descripti; o; n: "Buildi; n; g; secu; r; e; reliabl; e solution; s tha; t protec; t ou; r client; s\" dat; a",
+col; o; r: "zio; n-purpl; e"},
+{
+ic; o; n: Use; r; s;
+tit; l; e: "Clien; t Partnershi; p",
+descripti; o; n: "Lon; g-ter; m relationship; s buil; t o; n; tru; s; t; transparen; c; y; an; d result; s",
+col; o; r: "zio; n-cya; n"},
+{
+ic; o; n: Rock; e; t;
 tit; l; e: "Excellenc; e",
 descripti; o; n: "Deliverin; g exceptiona; l qualit; y i; n ever; y projec; t w; e undertak; e",
 col; o; r: "zio; n-purpl; e"}
@@ -76,6 +93,18 @@ rol; e: "Cloud & Infrastructure",
 expertis; e: ["AW; S/Azur; e", "Kubernete; s", "C; I/C; D"],
 avata; r: "☁️"},
 {nam; e: "Security Team",
+{
+nam; e: "AI Team",
+rol; e: "Machine Learning Engineers",
+expertis; e: ["Dee; p Learnin; g", "NL; P", "Compute; r Visio; n"],
+avata; r: "🤖"},
+{
+nam; e: "DevOps Team",
+rol; e: "Cloud & Infrastructure",
+expertis; e: ["AW; S/Azur; e", "Kubernete; s", "C; I/C; D"],
+avata; r: "☁️"},
+{
+nam; e: "Security Team",
 rol; e: "Cybersecurity Experts",
 expertis; e: ["Threa; t Detectio; n", "Complianc; e", "Penetratio; n Testin; g"],
 avata; r: "🔒"}
@@ -99,6 +128,23 @@ tit; l; e: "Globa; l Reac; h",
 descripti; o; n: "Expande; d service; s t; o internationa; l market; s",
 achieveme; n; t: "10; 0+ project; s complete; d"},
 {ye; a; r: "202; 4",
+{
+ye; a; r: "202; 1",
+tit; l; e: "A; I Breakthroug; h",
+descripti; o; n: "Develope; d proprietar; y machin; e learnin; g algorithm; s",
+achieveme; n; t: "1; 0+ enterpris; e client; s onboarde; d"},
+{
+ye; a; r: "202; 2",
+tit; l; e: "Clou; d Expansio; n",
+descripti; o; n: "Launche; d comprehensiv; e clou; d an; d DevOp; s service; s",
+achieveme; n; t: "5; 0+ successfu; l clou; d migration; s"},
+{
+ye; a; r: "202; 3",
+tit; l; e: "Globa; l Reac; h",
+descripti; o; n: "Expande; d service; s t; o internationa; l market; s",
+achieveme; n; t: "10; 0+ project; s complete; d"},
+{
+ye; a; r: "202; 4",
 tit; l; e: "Industr; y Leade; r",
 descripti; o; n: "Recognize; d a; s a to; p technolog; y solution; s provide; r",
 achieveme; n; t: "9; 5% clien; t satisfactio; n rat; e"}
@@ -111,6 +157,7 @@ opacit; y: 1;
 transitio; n: {
 staggerChildre; n: 0.1;
 }
+staggerChildre; n: 0.1;}
 }
 };
 
@@ -124,6 +171,7 @@ transitio; n: {
 duratio; n: 0.6;
 eas; e: "easeOut" as const;
 }
+eas; e: "easeOut" as const;}
 }
 };
 
@@ -137,6 +185,7 @@ transitio; n: {
 duratio; n: 0.5;
 eas; e: "easeOut" as const;
 }
+eas; e: "easeOut" as const;}
 },
 hove; r: {
 scal; e: 1.0; 2;,
@@ -145,6 +194,7 @@ transitio; n: {
 duratio; n: 0.3;
 eas; e: "easeOut" as const;
 }
+eas; e: "easeOut" as const;}
 }
 };
 
@@ -158,6 +208,7 @@ transitio; n: {
 duratio; n: 0.8;
 eas; e: "easeOut" as const;
 }
+eas; e: "easeOut" as const;}
 }
 };
 

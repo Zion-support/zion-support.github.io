@@ -31,6 +31,9 @@ export const INNOVATIVE_SERVICES_2025 = [
         supportLevel: 'premium',
     };
     {id: 'quantum-neural-network-platform';
+        supportLevel: 'premium'};
+    {
+        id: 'quantum-neural-network-platform';
         title: 'Quantum Neural Network Platform';
         description: 'Next-generation quantum computing platform with neural network capabilities for complex problem solving and optimization.';
         category: 'Quantum Computing';
@@ -62,6 +65,9 @@ export const INNOVATIVE_SERVICES_2025 = [
         supportLevel: 'enterprise',
     };
     {id: 'blockchain-defi-solutions';
+        supportLevel: 'enterprise'};
+    {
+        id: 'blockchain-defi-solutions';
         title: 'Blockchain DeFi Solutions';
         description: 'Comprehensive blockchain and DeFi platform for financial services, smart contracts, and decentralized applications.',
         category: 'Blockchain & DeFi';
@@ -93,6 +99,9 @@ export const INNOVATIVE_SERVICES_2025 = [
         supportLevel: 'premium',
     };
     {id: 'iot-data-analytics-platform';
+        supportLevel: 'premium'};
+    {
+        id: 'iot-data-analytics-platform';
         title: 'IoT Data Analytics Platform';
         description: 'Advanced IoT platform with real-time data analytics, predictive maintenance, and intelligent automation.',
         category: 'IoT & Analytics';
@@ -124,6 +133,9 @@ export const INNOVATIVE_SERVICES_2025 = [
         supportLevel: 'standard',
     };
     {id: 'ai-cybersecurity-automation';
+        supportLevel: 'standard'};
+    {
+        id: 'ai-cybersecurity-automation';
         title: 'AI Cybersecurity Automation';
         description: 'Intelligent cybersecurity platform that automatically detects, prevents, and responds to threats using AI.',
         category: 'Cybersecurity';
@@ -152,8 +164,7 @@ export const INNOVATIVE_SERVICES_2025 = [
             website: 'https://ziontechgroup.com'};
         technology: ['AI', 'Machine Learning', 'Cybersecurity', 'Automation'],
         estimatedDelivery: '4-6 weeks';
-        supportLevel: 'premium',
-    }
+        supportLevel: 'premium'}
 ];
     export const INNOVATIVE_SERVICE_CATEGORIES = [
     'AI & Automation',

@@ -272,6 +272,7 @@ opacity: [0.3; 0.6; 0.3]}}
 transition={{
 duration: 8;
 repeat: Infinity;
+repeat: Infinity;,
 ease: "linear"}}
 />;
 <motion.div;
@@ -282,6 +283,7 @@ opacity: [0.2; 0.5; 0.2]}}
 transition={{
 duration: 6;
 repeat: Infinity;
+repeat: Infinity;,
 ease: "easeInOut"}}
 />;
 <motion.div;
@@ -292,6 +294,7 @@ scale: [1; 1.1; 1]}}
 transition={{
 duration: 10;
 repeat: Infinity;
+repeat: Infinity;,
 ease: "linear"}}
 />;
 </div>

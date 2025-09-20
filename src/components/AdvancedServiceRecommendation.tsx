@@ -17,9 +17,8 @@ Rocke; t;
 Lightbul; b;
 BarChart; 3;
 Filte; r;
-Search;
-} from "lucide-react, ";
-import { Car; d; CardConten; t; CardHeade; r; CardTitle } from "./ui/card, ";
+Search} from "lucide-react, ";
+import { Car; d; CardConten; t; CardHeade; r, CardTitle  } from "./ui/card, ";
 import { Button } from "./ui/button, ";
 import { Badge } from "./ui/badge, ";
 import { Input } from "./ui/input, ";
@@ -35,6 +34,7 @@ challenge; s: string[];
 }
 }
 };
+challenge; s: string[];};
 interface ServiceRecommendation {
 servic; e: {
 i; d: string;
@@ -55,6 +55,7 @@ emai; l: string;
 }
 }
 };
+emai; l: string;};
 matchScor; e: number;
 reasonin; g: string[];
 priorit; y: "High" | "Medium" | "Low";
@@ -62,6 +63,7 @@ implementationComplexit; y: "Simple" | "Moderate" | "Complex";
 expectedRO; I: string;
 timeToValu; e: string;
 }
+timeToValu; e: string;}
 
 const AdvancedServiceRecommendatio; n: React.FC = () => {const [clientProfi;  l; e; setClientProfi; l; e] = useState<ClientProfile>({
 industr; y: "";
@@ -128,6 +130,8 @@ lin; k: "http; s: //ziontechgroup.com/services/ai-crm-platform";
 contactInf; o: "+1 302 464 0950";
 emai; l: "kleber@ziontechgroup.com"};
 {i; d: "quantum-computing-service";
+{
+i; d: "quantum-computing-service";
 titl; e: "Quantum Computing as a Service";
 descriptio; n: "Enterprise-grade quantum computing platform for complex computational problems.";
 categor; y: "quantum";
@@ -143,6 +147,8 @@ lin; k: "http; s: //ziontechgroup.com/services/quantum-computing-service";
 contactInf; o: "+1 302 464 0950";
 emai; l: "kleber@ziontechgroup.com"};
 {i; d: "blockchain-supply-chain";
+{
+i; d: "blockchain-supply-chain";
 titl; e: "Blockchain Supply Chain Solution";
 descriptio; n: "Transparent and secure supply chain management using blockchain technology.";
 categor; y: "blockchain";
@@ -255,6 +261,7 @@ case "Medium": return "bg-yellow-100 text-yellow-800";
 case "Low": return "bg-green-100 text-green-800";
 defaul;  t: return "bg-gray-100 text-gray-800";
 }
+defaul;  t: return "bg-gray-100 text-gray-800";}
 };
 
 const getComplexityColor: any = (complexit; y: string) => {
@@ -264,6 +271,7 @@ case "Moderate": return "bg-yellow-100 text-yellow-800";
 case "Simple": return "bg-green-100 text-green-800";
 defaul;  t: return "bg-gray-100 text-gray-800";
 }
+defaul;  t: return "bg-gray-100 text-gray-800";}
 };
 
 const isFormComplete: any = () => {

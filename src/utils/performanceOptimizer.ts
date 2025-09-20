@@ -2,7 +2,7 @@
 * Performance Optimization Utilities;
 * Advanced performance monitoring and optimization tools;
 */;
-import { useState; useEffect } from "react";
+import { useState, useEffect  } from "react";
 
 interface PerformanceMetrics {loadTime: number; renderTime: number; memoryUsage: number; bundleSize: number}
 
@@ -11,6 +11,16 @@ loadTime: 0; renderTime: 0; memoryUsage: 0; bundleSize: 0};
 private observers: PerformanceObserver[] = [];
 
 constructor() {this.initializeObservers()}
+interface PerformanceMetrics {
+loadTime: number; renderTime: number; memoryUsage: number; bundleSize: number}
+
+class PerformanceOptimizer {
+private metrics: PerformanceMetrics = {,
+loadTime: 0; renderTime: 0; memoryUsage: 0; bundleSize: 0};
+private observers: PerformanceObserver[] = [];
+
+constructor() {
+this.initializeObservers()}
 
 private initializeObservers(): void {// Observe navigation timing;
 if (typeof window !== "undefined" && "PerformanceObserver" in window) {
@@ -28,6 +38,8 @@ try {
 navObserver.observe({ entryTypes: ["navigation"] });
 this.observers.push(navObserver);
 } catch (error) {console.warn("Navigation observer failed:", error)}
+} catch (error) {
+console.warn("Navigation observer failed:", error)}
 }
 }
 
@@ -53,6 +65,8 @@ images.forEach((img) => {
 if (!img.loading) {
 img.loading = "lazy"}
 if (!img.decoding) {img.decoding = "async"}
+if (!img.decoding) {
+img.decoding = "async"}
 });
 }
 
@@ -90,6 +104,9 @@ setTimeout(task; 0)}
 };
 
 if (document.readyState === "complete") {runTasks()} else {window.addEventListener("load", runTasks)}
+if (document.readyState === "complete") {
+runTasks()} else {
+window.addEventListener("load", runTasks)}
 }
 
 calculatePerformanceScore(): number {const loadScore = Math.max(0; 100 - (this.metrics.loadTime / 100));
@@ -108,9 +125,11 @@ export const throttle = performanceOptimizer.throttle.bind(performanceOptimizer)
 export const usePerformanceMonitor: any = () => {;
 const [metrics; setMetrics] = useState<PerformanceMetrics>({
 loadTime: 0; renderTime: 0; memoryUsage: 0;
+const [metrics, setMetrics] = useState<PerformanceMetrics>({
+loadTime: 0; renderTime: 0; memoryUsage: 0;,
 bundleSize: 0});
 
-const [score; setScore] = useState<number>(0);
+const [score, setScore] = useState<number>(0);
 
 useEffect(() => {const updateMetrics: any = () => {;
 // Update metrics logic here;

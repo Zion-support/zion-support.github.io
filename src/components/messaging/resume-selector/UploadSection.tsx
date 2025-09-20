@@ -7,6 +7,12 @@ onFileUpload: (e: React.ChangeEvent<HTMLInputElement>) => void,
 export function UploadSection({
 }
   customFile,}
+import { UploadFileText } from 'lucide-react';
+interface UploadSectionProps {
+  customFile: File | null;,
+onFileUpload: (e: React.ChangeEvent<HTMLInputElement>) => void,
+export function UploadSection({
+  customFile,
 onFileUpload}: UploadSectionProps) {
   return (
     <div className='space-y-3'>

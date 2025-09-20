@@ -2,6 +2,8 @@ import { useState, useEffect, useCallback, useRef } from 'react, ';
 import { useAnalytics } from './useAnalytics, ';
 export const useSecurityCompliance = (_initialConfig) => {
     const { trackEvent } = useAnalytics({enableTracking: true;
+    const { trackEvent } = useAnalytics({
+        enableTracking: true;
         enableUserBehaviorTracking: true});
     const [securityEvents, setSecurityEvents] = useState([]);
     const [complianceRules, setComplianceRules] = useState([]);
@@ -34,6 +36,8 @@ export const useSecurityCompliance = (_initialConfig) => {
             ],
             violations: []};
         {id: 'sox-financial-controls';
+        {
+            id: 'sox-financial-controls';
             name: 'SOX Financial Controls';
             category: 'sox';
             description: 'Maintain internal controls over financial reporting';
@@ -49,6 +53,8 @@ export const useSecurityCompliance = (_initialConfig) => {
             ],
             violations: []};
         {id: 'hipaa-privacy-security';
+        {
+            id: 'hipaa-privacy-security';
             name: 'HIPAA Privacy & Security';
             category: 'hipaa';
             description: 'Protect health information privacy and security';
@@ -91,8 +97,7 @@ export const useSecurityCompliance = (_initialConfig) => {
                     type: randomType;
                     severity: 'low';
                     details: `Simulated ${randomType} event for testing`;
-                    status: 'new',
-                });
+                    status: 'new'});
      }
         }, 30000); // Check every 30 seconds;
     }, [isMonitoring, trackEvent]);
@@ -111,8 +116,7 @@ export const useSecurityCompliance = (_initialConfig) => {
         const newEvent = {
             ...event,
             id: `event-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`,
-            timestamp: new Date(),
-        };
+            timestamp: new Date()};
     setSecurityEvents(prev => [newEvent, ...prev]);
         trackEvent('security', 'event', 'created', undefined, { eventType: event.type, severity: event.severity });
     // Update metrics;
@@ -137,8 +141,7 @@ export const useSecurityCompliance = (_initialConfig) => {
             id: `rule-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`,
             lastChecked: new Date();
             nextCheck: new Date(Date.now() + 24 * 60 * 60 * 1000), // Default to 24 hours;
-            violations: [],
-        };
+            violations: []};
     setComplianceRules(prev => [...prev, newRule]);
         trackEvent('compliance', 'rule', 'added', undefined, { category: rule.category });
      }, [trackEvent]);
@@ -167,8 +170,7 @@ export const useSecurityCompliance = (_initialConfig) => {
                         severity: violation.severity;
                         description: violation.details;
                         timestamp: violation.timestamp;
-                        status: 'open',
-                    }))
+                        status: 'open'}))
                 };
      }));
             // Update compliance score;
@@ -176,6 +178,8 @@ export const useSecurityCompliance = (_initialConfig) => {
             const totalRules = complianceRules.length;
             const newScore = totalRules > 0 ? Math.round((compliantRules / totalRules) * 100) : 100;
             setSecurityMetrics(prev => ({...prev,
+            setSecurityMetrics(prev => ({
+                ...prev,
                 complianceScore: newScore}));
     trackEvent('compliance', 'check', 'completed', undefined, { score: newScore });
      }
@@ -197,6 +201,7 @@ export const useSecurityCompliance = (_initialConfig) => {
                 violations: rule.violations.length}));
             recommendations: [],
         };
+            recommendations: []};
     // Generate recommendations;
         if (securityMetrics.complianceScore < 80) {
             report.recommendations.push('Immediate compliance review required');

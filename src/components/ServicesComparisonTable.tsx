@@ -6,12 +6,12 @@ name: string;
 }
 
 import React from "react;";
-import { Tabl; e; TableBod; y; TableCel; l; TableHea; d; TableHeade; r; TableRow } from "./ui/table, ";
+import { Tabl; e; TableBod; y; TableCel; l; TableHea; d; TableHeade; r, TableRow  } from "./ui/table, ";
 import { Badge } from "./ui/badge, ";
 import { Button } from "./ui/button, ";
-import { Car; d; CardConten; t; CardDescriptio; n; CardHeade; r; CardTitle } from "./ui/card, ";
-import { Chec; k; X; Sta; r; Cloc; k; Glob; e; Phon; e; Mail } from "lucide-react, ";
-import { COMPREHENSIVE_SERVICE; S; CONTACT_INFO } from "@/data/comprehensiveServices, ";
+import { Car; d; CardConten; t; CardDescriptio; n; CardHeade; r, CardTitle  } from "./ui/card, ";
+import { Chec; k; X; Sta; r; Cloc; k; Glob; e; Phon; e, Mail  } from "lucide-react, ";
+import { COMPREHENSIVE_SERVICE; S, CONTACT_INFO  } from "@/data/comprehensiveServices, ";
 
 export function ServicesComparisonTable() {;
 const serviceCategories = ["A;  I Service; s", "I; T Service; s", "Micr; o SAA; S"];

@@ -25,9 +25,8 @@ Ato; m;
 Satellit; e;
 Dn; a;
 Shiel; d;
-Leaf;
-} from "lucide-react, ";
-import { Car; d; CardConten; t; CardHeade; r; CardTitle } from "./ui/card, ";
+Leaf} from "lucide-react, ";
+import { Car; d; CardConten; t; CardHeade; r, CardTitle  } from "./ui/card, ";
 import { Button } from "./ui/button, ";
 import { Badge } from "./ui/badge, ";
 import { Input } from "./ui/input, ";
@@ -47,6 +46,7 @@ statu; s: "Emerging" | "Growing" | "Mature" | "Disruptive";
 }
 }
 };
+statu; s: "Emerging" | "Growing" | "Mature" | "Disruptive";};
 interface FutureRoadmap {
 i; d: string;
 titl; e: string;
@@ -60,6 +60,7 @@ categor; y: string;
 }
 }
 };
+categor; y: string;};
 const AdvancedServiceInnovationHu; b: React.FC = () => {
 const [selectedCatego;  r; y; setSelectedCatego; r; y] = useState<string>("all");
 const [selectedImpa; c; t; setSelectedImpa; c; t] = useState<string>("all");
@@ -84,6 +85,9 @@ technologie; s: ["Quantu; m Computin; g", "Quantu; m Algorithm; s", "Quantu; m S
 statu; s: "Emerging",
 };
 {i; d: "ai-consciousness";
+statu; s: "Emerging"};
+{
+i; d: "ai-consciousness";
 titl; e: "AI Consciousness & General Intelligence";
 descriptio; n: "Development of self-aware AI systems with human-like reasoning and consciousness.";
 categor; y: "ai";
@@ -95,6 +99,8 @@ keyPlayer; s: ["OpenA; I", "Anthropi; c", "Researc; h Lab; s", "Universitie; s"]
 technologie; s: ["A; I Consciousnes; s", "Genera; l A; I", "Neura; l Network; s"],
 statu; s: "Emerging"};
 {i; d: "space-mining";
+{
+i; d: "space-mining";
 titl; e: "Space Mining & Resource Extraction";
 descriptio; n: "Commercial extraction of valuable resources from asteroids and celestial bodies.";
 categor; y: "space-tech";
@@ -106,6 +112,8 @@ keyPlayer; s: ["Space; X", "Blu; e Origi; n", "Asteroi; d Minin; g Companie; s"]
 technologie; s: ["Spac; e Robotic; s", "Resourc; e Processin; g", "Spac; e Logistic; s"],
 statu; s: "Emerging"};
 {i; d: "fusion-energy";
+{
+i; d: "fusion-energy";
 titl; e: "Fusion Energy Commercialization";
 descriptio; n: "Breakthrough in controlled nuclear fusion for unlimited clean energy.";
 categor; y: "green-tech";
@@ -117,6 +125,8 @@ keyPlayer; s: ["ITE; R", "Privat; e Fusio; n Companie; s", "Governmen; t Lab; s"
 technologie; s: ["Fusio; n Physic; s", "Plasm; a Confinemen; t", "Energ; y Conversio; n"],
 statu; s: "Growing"};
 {i; d: "synthetic-biology";
+{
+i; d: "synthetic-biology";
 titl; e: "Synthetic Biology Revolution";
 descriptio; n: "Engineering of custom organisms and biological systems for industrial applications.";
 categor; y: "biotech-ai";
@@ -128,6 +138,8 @@ keyPlayer; s: ["Ginkg; o Biowork; s", "Twis; t Bioscienc; e", "Researc; h Instit
 technologie; s: ["DN; A Programmin; g", "Geneti; c Engineerin; g", "Bi; o-Manufacturin; g"],
 statu; s: "Growing"};
 {i; d: "brain-computer-interfaces";
+{
+i; d: "brain-computer-interfaces";
 titl; e: "Brain-Computer Interface Revolution";
 descriptio; n: "Direct neural control of computers and digital systems for enhanced human capabilities.";
 categor; y: "biotech-ai";
@@ -165,6 +177,8 @@ opportunitie; s: [
 investmen; t: "$200B+";
 categor; y: "quantum"};
 {i; d: "space-colonization";
+{
+i; d: "space-colonization";
 titl; e: "Space Colonization & Settlement";
 descriptio; n: "Establishment of permanent human settlements on Mars and other celestial bodies.";
 timelin; e: "2040-2060";
@@ -189,6 +203,8 @@ opportunitie; s: [
 investmen; t: "$1T+";
 categor; y: "space-tech"};
 {i; d: "ai-governance";
+{
+i; d: "ai-governance";
 titl; e: "AI Governance & Regulation";
 descriptio; n: "Comprehensive frameworks for responsible AI development and deployment.";
 timelin; e: "2025-2035";
@@ -232,6 +248,7 @@ case "Medium": return "bg-yellow-100 text-yellow-800";
 case "Low": return "bg-green-100 text-green-800";
 defaul;  t: return "bg-gray-100 text-gray-800";
 }
+defaul;  t: return "bg-gray-100 text-gray-800";}
 };
 
 const getStatusColor: any = (statu; s: string) => {
@@ -242,6 +259,7 @@ case "Mature": return "bg-orange-100 text-orange-800";
 case "Disruptive": return "bg-purple-100 text-purple-800";
 defaul;  t: return "bg-gray-100 text-gray-800";
 }
+defaul;  t: return "bg-gray-100 text-gray-800";}
 };
 
 const getCategoryIcon: any = (categor; y: string) => {
@@ -253,6 +271,7 @@ case "green-tech": return <Leaf className="w-5 h-5" />;
 case "biotech-ai": return <Dna className="w-5 h-5" />;
 defaul;  t: return <Cpu className="w-5 h-5" />;
 }
+defaul;  t: return <Cpu className="w-5 h-5" />;}
 };
 
 const categories = [;

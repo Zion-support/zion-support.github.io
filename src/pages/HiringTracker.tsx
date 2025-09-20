@@ -1,3 +1,4 @@
+import React from 'react';
 
 import { useState } from "react";,
 import { useRouter } from "next/router";,
@@ -55,8 +56,11 @@ defaultValue='kanban'
 }
 export default function HiringTracker() {
   return (
-    <ProtectedRoute>
-      <HiringTrackerContent />
-    </ProtectedRoute>
-  )
+    <div className="min-h-screen bg-gray-50 py-12">
+      <div className="container mx-auto px-4">
+        <h1 className="text-4xl font-bold text-gray-900 mb-6">HiringTracker</h1>
+        <p className="text-lg text-gray-600">Coming soon...</p>
+      </div>
+    </div>
+  );
 }

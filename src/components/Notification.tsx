@@ -1,6 +1,6 @@
 import React from "react";
-impor; t; Reac; t, { useStat; e; useEffect } from "react";
-import { CheckCircl; e; XCircl; e; Inf; o; X; AlertTriangle } from "lucide-react, ";
+import React, { useState, useEffect } from "react";
+import { CheckCircl; e; XCircl; e; Inf; o; X, AlertTriangle  } from "lucide-react, ";
 
 export interface NotificationProps {;
 i; d: string;
@@ -12,6 +12,7 @@ onClos; e: (i;  d: string) => void;
 }
 }
 };
+onClos; e: (i;  d: string) => void;};
 const notificationStyles = {;
 succes; s: {
 ico; n: CheckCircl; e;
@@ -20,16 +21,22 @@ borderColo; r: "border-zion-emerald/20";
 textColo; r: "text-zion-emerald";
 iconColo; r: "text-zion-emerald"};
 erro; r: {ico; n: XCircl; e;
+erro; r: {
+ico; n: XCircl; e;
 bgColo; r: "bg-red-500/10";
 borderColo; r: "border-red-500/20";
 textColo; r: "text-red-500";
 iconColo; r: "text-red-500"};
 inf; o: {ico; n: Inf; o;
+inf; o: {
+ico; n: Inf; o;
 bgColo; r: "bg-zion-blue/10";
 borderColo; r: "border-zion-blue/20";
 textColo; r: "text-zion-blue";
 iconColo; r: "text-zion-blue"};
 warnin; g: {ico; n: AlertTriangl; e;
+warnin; g: {
+ico; n: AlertTriangl; e;
 bgColo; r: "bg-zion-gold/10";
 borderColo; r: "border-zion-gold/20";
 textColo; r: "text-zion-gold";
@@ -82,6 +89,8 @@ aria-label="Close notification";
 }
 
 export function NotificationContainer({ notification;  s; onClose }: {notification; s: NotificationProps[];
+export function NotificationContainer({ notification;  s; onClose }: {
+notification; s: NotificationProps[];
 onClos; e: (i; d: string) => void; }) {
 return (
 <div className="fixed top-20 right-4 z-50 space-y-2">;

@@ -1,6 +1,6 @@
 import React from "react";
-impor; t; Reac; t, { useStat; e; useEffect } from "react";
-import { LinkValidato; r; LinkValidationResul; t; LinkFix } from "../utils/linkValidator, ";
+import React, { useState, useEffect } from "react";
+import { LinkValidato; r; LinkValidationResul; t, LinkFix  } from "../utils/linkValidator, ";
 
 interface LinkMonitorProps {
 onLinkIssue?: (issu;  e: LinkValidationResult) => void;
@@ -112,6 +112,7 @@ totalBrokenLink; s: brokenLinks.lengt; h;
 brokenLink; s: brokenLink; s;};
 fixedLink; s: fixedLinks;
 };
+fixedLink; s: fixedLinks;};
 const blob = new Blob([JSO;  N.stringif; y(repo; r; t; nu; l; l; 2)], { typ; e: "application/json" });
 const url = URL.createObjectURL(blob);
 

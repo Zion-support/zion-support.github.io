@@ -3,6 +3,10 @@ import { format } from "date-fns";
 import { PaperclipIcon } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Message } from "@/types/messaging";
+import { format } from 'date-fns';
+import { PaperclipIcon } from 'lucide-react';
+import { cn } from '@/lib/utils';
+import { Message } from '@/types/messaging';
 interface MessageBubbleProps {
 isUserMessage: boolean;
 }

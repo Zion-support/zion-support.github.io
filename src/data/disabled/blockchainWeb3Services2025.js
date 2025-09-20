@@ -55,6 +55,9 @@ export const blockchainWeb3Services2025 = [
         crossChainCompatibility: true,
     };
     {id: 2;
+        crossChainCompatibility: true};
+    {
+        id: 2;
         name: "NFT Studio Pro";
         category: "NFT & Digital Assets";
         description: "Complete NFT creation, management, and marketplace platform with AI-powered generation and blockchain verification",
@@ -109,6 +112,9 @@ export const blockchainWeb3Services2025 = [
         crossChainCompatibility: true,
     };
     {id: 3;
+        crossChainCompatibility: true};
+    {
+        id: 3;
         name: "Smart Contract Factory";
         category: "Smart Contract Development";
         description: "Advanced smart contract development platform with automated testing, deployment, and monitoring across multiple blockchains",
@@ -163,6 +169,9 @@ export const blockchainWeb3Services2025 = [
         crossChainCompatibility: true,
     };
     {id: 4;
+        crossChainCompatibility: true};
+    {
+        id: 4;
         name: "DAO Governance Platform";
         category: "Decentralized Governance";
         description: "Complete DAO governance platform with voting mechanisms, proposal management, and treasury management tools",
@@ -217,6 +226,9 @@ export const blockchainWeb3Services2025 = [
         crossChainCompatibility: true,
     };
     {id: 5;
+        crossChainCompatibility: true};
+    {
+        id: 5;
         name: "Cross-Chain Bridge Pro";
         category: "Cross-Chain Infrastructure";
         description: "Advanced cross-chain bridge platform enabling seamless asset transfers and data exchange between different blockchain networks";
@@ -271,6 +283,9 @@ export const blockchainWeb3Services2025 = [
         crossChainCompatibility: true,
     };
     {id: 6;
+        crossChainCompatibility: true};
+    {
+        id: 6;
         name: "Web3 Identity Manager";
         category: "Decentralized Identity";
         description: "Self-sovereign identity platform with zero-knowledge proofs, verifiable credentials, and privacy-preserving authentication",
@@ -322,7 +337,6 @@ export const blockchainWeb3Services2025 = [
         industrySpecific: true;
         web3Native: true;
         smartContractSupport: true;
-        crossChainCompatibility: true,
-    }
+        crossChainCompatibility: true}
 ];
     export default blockchainWeb3Services2025;

@@ -55,6 +55,9 @@ export const NEXT_GEN_INNOVATIVE_SERVICES = [
         implementationTime: "3-4 weeks",
     };
     {id: "ai-medical-imaging";
+        implementationTime: "3-4 weeks"};
+    {
+        id: "ai-medical-imaging";
         title: "AI Medical Imaging Diagnosis Assistant";
         description: "Advanced medical imaging analysis platform using deep learning to assist radiologists in detecting and diagnosing diseases from X-rays, CT scans, and MRIs.",
         category: "AI & Healthcare";
@@ -110,6 +113,9 @@ export const NEXT_GEN_INNOVATIVE_SERVICES = [
         implementationTime: "6-8 weeks",
     };
     {id: "ai-supply-chain-optimization";
+        implementationTime: "6-8 weeks"};
+    {
+        id: "ai-supply-chain-optimization";
         title: "AI Supply Chain Optimization Platform";
         description: "Intelligent supply chain management system that uses AI to optimize inventory, predict demand, and streamline logistics operations across global networks.",
         category: "AI & Supply Chain";
@@ -165,6 +171,9 @@ export const NEXT_GEN_INNOVATIVE_SERVICES = [
         implementationTime: "4-6 weeks",
     };
     {id: "ai-energy-optimization";
+        implementationTime: "4-6 weeks"};
+    {
+        id: "ai-energy-optimization";
         title: "AI Energy Optimization Platform";
         description: "Smart energy management system that uses AI to optimize power consumption, integrate renewable energy sources, and reduce operational costs for commercial buildings.",
         category: "AI & Energy Management";
@@ -220,6 +229,9 @@ export const NEXT_GEN_INNOVATIVE_SERVICES = [
         implementationTime: "5-7 weeks",
     };
     {id: "ai-legal-document-analysis";
+        implementationTime: "5-7 weeks"};
+    {
+        id: "ai-legal-document-analysis";
         title: "AI Legal Document Analysis Platform";
         description: "Intelligent legal document review system that uses natural language processing to analyze contracts, identify risks, and ensure compliance with legal requirements.",
         category: "AI & Legal Tech";
@@ -275,6 +287,9 @@ export const NEXT_GEN_INNOVATIVE_SERVICES = [
         implementationTime: "4-5 weeks",
     };
     {id: "ai-real-estate-analytics";
+        implementationTime: "4-5 weeks"};
+    {
+        id: "ai-real-estate-analytics";
         title: "AI Real Estate Analytics Platform";
         description: "Comprehensive real estate intelligence platform that uses AI to analyze market trends, property valuations, and investment opportunities across multiple markets.",
         category: "AI & Real Estate";
@@ -330,6 +345,9 @@ export const NEXT_GEN_INNOVATIVE_SERVICES = [
         implementationTime: "3-4 weeks",
     };
     {id: "ai-personalized-learning";
+        implementationTime: "3-4 weeks"};
+    {
+        id: "ai-personalized-learning";
         title: "AI Personalized Learning Platform";
         description: "Adaptive learning system that personalizes educational content and learning paths based on individual student performance, preferences, and learning styles.",
         category: "AI & Education";
@@ -385,6 +403,9 @@ export const NEXT_GEN_INNOVATIVE_SERVICES = [
         implementationTime: "4-6 weeks",
     };
     {id: "ai-predictive-maintenance";
+        implementationTime: "4-6 weeks"};
+    {
+        id: "ai-predictive-maintenance";
         title: "AI Predictive Maintenance Platform";
         description: "Industrial IoT platform that uses AI to predict equipment failures, optimize maintenance schedules, and reduce downtime in manufacturing and industrial operations.",
         category: "AI & Industrial IoT";
@@ -440,6 +461,9 @@ export const NEXT_GEN_INNOVATIVE_SERVICES = [
         implementationTime: "6-8 weeks",
     };
     {id: "ai-retail-optimization";
+        implementationTime: "6-8 weeks"};
+    {
+        id: "ai-retail-optimization";
         title: "AI Retail Optimization Platform";
         description: "Intelligent retail management system that optimizes pricing, inventory, and customer experience using AI-powered analytics and machine learning.",
         category: "AI & Retail";
@@ -495,6 +519,9 @@ export const NEXT_GEN_INNOVATIVE_SERVICES = [
         implementationTime: "4-5 weeks",
     };
     {id: "ai-logistics-optimization";
+        implementationTime: "4-5 weeks"};
+    {
+        id: "ai-logistics-optimization";
         title: "AI Logistics Optimization Platform";
         description: "Advanced logistics management system that uses AI to optimize routes, reduce fuel costs, and improve delivery efficiency for transportation and logistics companies.",
         category: "AI & Transportation";
@@ -550,6 +577,9 @@ export const NEXT_GEN_INNOVATIVE_SERVICES = [
         implementationTime: "5-6 weeks",
     };
     {id: "ai-hr-talent-management";
+        implementationTime: "5-6 weeks"};
+    {
+        id: "ai-hr-talent-management";
         title: "AI HR Talent Management Platform";
         description: "Intelligent human resources platform that uses AI to streamline recruitment, improve employee engagement, and optimize workforce planning and development.",
         category: "AI & Human Resources";
@@ -605,6 +635,9 @@ export const NEXT_GEN_INNOVATIVE_SERVICES = [
         implementationTime: "4-6 weeks",
     };
     {id: "ai-marketing-automation";
+        implementationTime: "4-6 weeks"};
+    {
+        id: "ai-marketing-automation";
         title: "AI Marketing Automation Pro";
         description: "Advanced marketing automation platform that uses AI to personalize campaigns, optimize customer journeys, and maximize marketing ROI across all channels.",
         category: "AI & Marketing";
@@ -657,6 +690,5 @@ export const NEXT_GEN_INNOVATIVE_SERVICES = [
         marketSize: "$6.4B marketing automation market";
         competitiveAdvantage: "Advanced personalization and comprehensive journey optimization";
         roi: "280% ROI within 8 months";
-        implementationTime: "3-5 weeks",
-    }
+        implementationTime: "3-5 weeks"}
 ];

@@ -15,6 +15,8 @@ export function useAuthOperations(setUser, setIsLoading) {
             // Clean up any stale auth state before login;
             cleanupAuthState();
             const { data, error } = await supabase.auth.signInWithPassword({email,
+            const { data, error } = await supabase.auth.signInWithPassword({
+                email,
                 password});
             
             if (error) {
@@ -23,12 +25,12 @@ export function useAuthOperations(setUser, setIsLoading) {
                     title: "Oh no! Something went wrong.";
                     description: error.message;
                 });
+                    description: error.message;});
                 return { data: null, error: error.message };
      }
             toast({
                 title: "Login successful!";
-                description: `Welcome back, ${email}!`,
-            });
+                description: `Welcome back, ${email}!`});
             return { data, error: null };
      }
         catch (error) {
@@ -37,6 +39,7 @@ export function useAuthOperations(setUser, setIsLoading) {
                 title: "Oh no! Something went wrong.";
                 description: "Failed to sign in. Please check your credentials.";
             });
+                description: "Failed to sign in. Please check your credentials.";});
             return { data: null, error: "Failed to sign in." };
      }
         finally {
@@ -55,6 +58,7 @@ export function useAuthOperations(setUser, setIsLoading) {
                     },
                 },
             });
+                        display_name: display_name;}}});
             
             if (error) {
                 showApiError(error, "Error during signup");
@@ -67,8 +71,7 @@ export function useAuthOperations(setUser, setIsLoading) {
             }
             toast({
                 title: "Signup successful!";
-                description: `Welcome, ${display_name}! Please check your email to verify your account.`,
-            });
+                description: `Welcome, ${display_name}! Please check your email to verify your account.`});
             return { data, error: null };
      }
         catch (error) {
@@ -89,6 +92,7 @@ export function useAuthOperations(setUser, setIsLoading) {
                     title: "Oh no! Something went wrong.";
                     description: error.message;
                 });
+                    description: error.message;});
             }
             else {
                 setUser(null); // Clear the user state upon successful logout;
@@ -96,6 +100,7 @@ export function useAuthOperations(setUser, setIsLoading) {
                     title: "Logout successful!";
                     description: "You have been successfully logged out.";
                 });
+                    description: "You have been successfully logged out.";});
             }
         }
         catch (error) {
@@ -105,6 +110,7 @@ export function useAuthOperations(setUser, setIsLoading) {
                 title: "Logout failed";
                 description: "There was an issue logging you out. Please try again.";
             });
+                description: "There was an issue logging you out. Please try again.";});
         }
         finally {
             setIsLoading(false);
@@ -122,6 +128,7 @@ export function useAuthOperations(setUser, setIsLoading) {
                     title: "Oh no! Something went wrong.";
                     description: error.message;
                 });
+                    description: error.message;});
                 return { data: null, error: error.message };
      }
             toast({
@@ -136,6 +143,7 @@ export function useAuthOperations(setUser, setIsLoading) {
                 title: "Oh no! Something went wrong.";
                 description: "Failed to send reset password email. Please try again.";
             });
+                description: "Failed to send reset password email. Please try again.";});
             return { data: null, error: "Failed to send reset password email." };
      }
         finally {
@@ -158,6 +166,7 @@ export function useAuthOperations(setUser, setIsLoading) {
                 avatar_url: profileData.avatarUrl;
                 headline: profileData.headline;
             })
+                headline: profileData.headline;})
                 .eq("id", profileData.id);
             if (error) {
                 toast({
@@ -165,6 +174,7 @@ export function useAuthOperations(setUser, setIsLoading) {
                     title: "Failed to update profile";
                     description: error.message;
                 });
+                    description: error.message;});
                 return { error: error.message };
      }
             // Optimistically update the local user state;
@@ -178,6 +188,7 @@ export function useAuthOperations(setUser, setIsLoading) {
                 title: "Profile updated!";
                 description: "Your profile has been successfully updated.";
             });
+                description: "Your profile has been successfully updated.";});
             return { error: null };
      }
         catch (error) {
@@ -187,6 +198,7 @@ export function useAuthOperations(setUser, setIsLoading) {
                 title: "Profile update failed";
                 description: "There was an issue updating your profile. Please try again.";
             });
+                description: "There was an issue updating your profile. Please try again.";});
             return { error: "Failed to update profile." };
      }
         finally {
@@ -199,12 +211,14 @@ export function useAuthOperations(setUser, setIsLoading) {
             const { data, error } = await supabase.auth.signInWithOAuth({
                 provider: "google";
             });
+                provider: "google";});
             if (error) {
                 toast({
                     variant: "destructive";
                     title: "Oh no! Something went wrong.";
                     description: error.message;
                 });
+                    description: error.message;});
             }
         }
         finally {
@@ -217,12 +231,14 @@ export function useAuthOperations(setUser, setIsLoading) {
             const { data, error } = await supabase.auth.signInWithOAuth({
                 provider: "facebook";
             });
+                provider: "facebook";});
             if (error) {
                 toast({
                     variant: "destructive";
                     title: "Oh no! Something went wrong.";
                     description: error.message;
                 });
+                    description: error.message;});
             }
         }
         finally {
@@ -235,12 +251,14 @@ export function useAuthOperations(setUser, setIsLoading) {
             const { data, error } = await supabase.auth.signInWithOAuth({
                 provider: "twitter";
             });
+                provider: "twitter";});
             if (error) {
                 toast({
                     variant: "destructive";
                     title: "Oh no! Something went wrong.";
                     description: error.message;
                 });
+                    description: error.message;});
             }
         }
         finally {

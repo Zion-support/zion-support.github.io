@@ -8,6 +8,12 @@ CardFooter;
 CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Copy, Download, Link, Plus } from "lucide-react";
+import { useRefuseState } from 'react'
+import { Button } from '@/components/ui/button'
+import { Card, CardContent, CardDescription, CardFooter
+CardHeader, CardTitle } from '@/components/ui/card'
+import { Input } from '@/components/ui/input';
+import { Copy, Download, LinkPlus } from 'lucide-react';
 return (
     <div className='space-y-6'>
       <Card className='bg-zion-blue-dark border-zion-blue-light'>
@@ -123,6 +129,10 @@ key={index}
                   <Input
 value = {item.link}
                     readOnly className='font-mono text-xs'
+                  <Input,
+value = {item.link}
+                    readOnly,
+className='font-mono text-xs'
                   />
                   <Button
 variant='outline'
@@ -158,6 +168,10 @@ variant='outline'
 }//Add custom parameter if provided if (customParam) {
 }const newLink = {name: `$ {
   selectedCampaign}$ {customParam ? `-$ {
+}const newLink = {
+  name: `$ {
+  selectedCampaign}$ {
+  customParam ? `-$ {
   customParam}`: ""
 }`
 }
@@ -170,6 +184,8 @@ document.body.removeChild (link)
 };"
   baseLink "
 }readOnly className="font-mono text-sm"/> <Copy className="h-4 w-4"/> <span className="sr-only">Copy</span> </Button> </div> </CardContent> </Card> <div className="flex justify-between items-center"> <DialogTrigger asChild> <Button variant=" outline"size=" sm"className="flex items-center gap-2"> <Plus className="h-4 w-4"/> Create New Link </Button> </DialogTrigger> <DialogContent className="sm:max-w-md bg-zion-blue border-zion-blue-light"> <DialogHeader> <DialogTitle>Create Custom Campaign Link</DialogTitle> <DialogDescription> Generate a trackable link for specific marketing campaigns </DialogDescription> </DialogHeader> <div className="grid gap-4 py-4"> <div className="grid gap-2"> <Label htmlFor=" campaign">Campaign Type</Label> <Select value= {selectedCampaign}onValueChange= {
+}readOnly className="font-mono text-sm"/> <Copy className="h-4 w-4"/> <span className="sr-only">Copy</span> </Button> </div> </CardContent> </Card> <div className="flex justify-between items-center"> <DialogTrigger asChild> <Button variant=" outline"size=" sm"className="flex items-center gap-2"> <Plus className="h-4 w-4"/> Create New Link </Button> </DialogTrigger> <DialogContent className="sm:max-w-md bg-zion-blue border-zion-blue-light"> <DialogHeader> <DialogTitle>Create Custom Campaign Link</DialogTitle> <DialogDescription> Generate a trackable link for specific marketing campaigns </DialogDescription> </DialogHeader> <div className="grid gap-4 py-4"> <div className="grid gap-2"> <Label htmlFor=" campaign">Campaign Type</Label> <Select value= {
+  selectedCampaign}onValueChange= {
   setSelectedCampaign "
 }> <SelectTrigger id=" campaign"> <SelectValue placeholder=" Select campaign type"/> </SelectTrigger> <SelectContent> <SelectItem value=" default">General (Default) </SelectItem> <SelectItem value=" youtube">YouTube</SelectItem> <SelectItem value=" newsletter">Newsletter</SelectItem> <SelectItem value=" blog">Blog</SelectItem> <SelectItem value=" podcast">Podcast</SelectItem> <SelectItem value=" social">Social Media</SelectItem> </SelectContent> </Select> </div> <div className="grid gap-2"> <Label htmlFor=" custom">Custom Parameter (Optional) </Label> <Input /> </div> </div> <DialogFooter> <Button > Cancel </Button> <Button className="bg-zion-purple hover:bg-zion-purple-dark"> Generate Link </Button> </DialogFooter> </DialogContent> </Dialog> </div> <div className="grid gap-4"> {
   generatedLinks.length > 0 ? (generatedLinks.map ( (item index) => (<Card key= {

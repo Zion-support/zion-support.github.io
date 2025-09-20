@@ -1,3 +1,4 @@
+import React from 'react';
 
 import { SEO } from "@/components/SEO";,
 import { GradientHeading } from "@/components/GradientHeading";,
@@ -970,12 +971,13 @@ roadmap
           </motion.div>
         </div>
       </section>
+export default function GreenIT() {
+  return (
+    <div className="min-h-screen bg-gray-50 py-12">
+      <div className="container mx-auto px-4">
+        <h1 className="text-4xl font-bold text-gray-900 mb-6">GreenIT</h1>
+        <p className="text-lg text-gray-600">Coming soon...</p>
+      </div>
     </div>
-  )
-}
-export { GreenIT }
-export { GreenIT }
-export { GreenIT }
-export { GreenIT }
-export { GreenIT GreenIT }
+  );
 }

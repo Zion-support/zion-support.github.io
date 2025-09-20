@@ -1,11 +1,10 @@
-
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { useRouter } from "next/router";, // Changed from useNavigate,
 import { CheckCircle2 } from "lucide-react";
 import { useTranslation } from "react-i18next";
+
 export default function PaymentSuccess() {
-  const router = null;
   return (
     <div className='min-h-screen bg-zion-blue flex flex-col items-center justify-center p-4'>
       <div className='max-w-md w-full bg-zion-blue-dark rounded-xl p-8 border border-zion-blue-light shadow-lg text-center'>
@@ -49,7 +48,11 @@ variant="outline"
             {t('errors.return_home')}
           </Button>
         </div>
+    <div className="min-h-screen bg-gray-50 py-12">
+      <div className="container mx-auto px-4">
+        <h1 className="text-4xl font-bold text-gray-900 mb-6">Payment Successful</h1>
+        <p className="text-lg text-gray-600">Your payment was processed successfully...</p>
       </div>
     </div>
-  )
+  );
 }

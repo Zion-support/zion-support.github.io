@@ -1,6 +1,7 @@
 
 import React from "react";
 import { Quote } from "lucide-react";
+import { Quote } from 'lucide-react'
 import {
 export function EnterpriseTestimonials() {
   return (
@@ -55,4 +56,5 @@ src={testimonial.image}
       </div>
     </section>
   );
+  )
 };

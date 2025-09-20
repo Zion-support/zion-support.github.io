@@ -53,16 +53,22 @@ description: "Cutting - edge AI solutions chatbots and machine learning"
 link: "/ai - services"
     color: "from - purple - 500 to - indigo - 600"}
   {title: "Micro SAAS",
+  {
+    title: "Micro SAAS",
 description: "Cloud - based software solutions for modern businesses"
     icon: "☁️",
 link: "/micro - saas"
     color: "from - cyan - 500 to - blue - 600"}
   {title: "IT Services",
+  {
+    title: "IT Services",
 description: "Infrastructure security and technical consulting"
     icon: "⚡",
 link: "/all - services"
     color: "from - amber - 500 to - orange - 600"}
   {title: "Digital Transformation",
+  {
+    title: "Digital Transformation",
 description: "Business modernization and digital strategy"
     icon: "📈",
 link: "/all - services"
@@ -111,6 +117,8 @@ link: "/services - comparison"
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {displayCategories.map((category) => (
             <Link
+          {displayCategories.map((category,) => (
+            <Link,
 key = {category.id}
               href = {category.link |'#'}
               className="group block rounded-lg focus:outline-none focus:ring-2 focus:ring-zion-cyan"
@@ -133,6 +141,8 @@ key = {category.id}
           <div className="flex flex-wrap justify-center gap-4">
             {getSpecialServices(t).map((service) => (
               <Link
+            {getSpecialServices(t).map((service,) => (
+              <Link,
 key = {service.title}
                 href = {service.link}
                 className="px-6 py-3 bg-zion-blue-light hover:bg-zion-blue-dark border border-zion-purple/20 hover:border-zion-purple/50 rounded-full text-zion-cyan transition-all duration-300"
@@ -166,6 +176,13 @@ categories?: CategoryType[], //Accept categories as a prop}export function Categ
 className
 style,
 categories: fetchedCategories; //Rename prop for clarity}: CategoriesSectionProps) {const {
+style?: React.CSSProperties,
+categories?: CategoryType[], //Accept categories as a prop}export function CategoriesSection ({
+  showTitle = true,
+className
+style,
+categories: fetchedCategories; //Rename prop for clarity}: CategoriesSectionProps) {
+  const {
   t}= useTranslation ()
 const defaultCategories = getDefaultCategories (t)
 //Use fetchedCategories if provided otherwise fallback to defaultCategories const displayCategories = fetchedCategories && fetchedCategories.length > 0 ? fetchedCategories.map (cat => ({
@@ -189,6 +206,8 @@ icon: getIcon (cat.iconName)
 }return (</p> </div>)
 }</div> </Link>) )
 }</div> > {service.title}</Link>) ) "
+}</div> > {
+  service.title}</Link>) ) "
 }</div> </div> <div className="mt-12 flex justify-center" > <Link href="/categories/all" className="text-zion-cyan border-b border-zion-cyan hover:border-zion-cyan-dark transition-colors" > {'
   t ('home.view all categories')
 }</Link> </div> </div> </section>)

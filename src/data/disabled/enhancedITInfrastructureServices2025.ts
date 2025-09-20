@@ -21,6 +21,8 @@ address: string;
 }
 }
 };
+website: string;,
+address: string;};
 marketPrice: string;
 competitors: string[];
 roi: string;
@@ -30,6 +32,8 @@ sla: string;
 support: string;
 certifications: string[];
 }
+support: string;,
+certifications: string[];}
 
 export const enhancedITInfrastructureServices2025: ITInfrastructureService[] = [
 {id: 201;
@@ -64,6 +68,7 @@ contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com";
+website: "https://ziontechgroup.com";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$4;500/month (Industry average: $8;500/month)",
 competitors: ["Cisco", "Palo Alto Networks", "Fortinet", "Check Point"],
@@ -106,6 +111,7 @@ contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com";
+website: "https://ziontechgroup.com";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$3;200/month (Industry average: $6;200/month)",
 competitors: ["Nutanix", "VMware vSAN", "HPE SimpliVity", "Dell EMC VxRail"],
@@ -148,6 +154,7 @@ contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com";
+website: "https://ziontechgroup.com";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$2;800/month (Industry average: $5;500/month)",
 competitors: ["Ericsson", "Nokia", "Huawei", "Cisco", "Samsung"],
@@ -190,6 +197,7 @@ contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com";
+website: "https://ziontechgroup.com";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$5;500/month (Industry average: $10;000/month)",
 competitors: ["IBM Quantum", "Google Quantum", "Microsoft Quantum", "Amazon Braket"],
@@ -232,6 +240,7 @@ contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com";
+website: "https://ziontechgroup.com";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$2;400/month (Industry average: $4;800/month)",
 competitors: ["AWS Greengrass", "Azure IoT Edge", "Google Edge TPU", "Cisco Edge"],
@@ -274,6 +283,7 @@ contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com";
+website: "https://ziontechgroup.com";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$3;800/month (Industry average: $7;200/month)",
 competitors: ["Google Cloud", "Microsoft Azure", "AWS", "Equinix", "Digital Realty"],
@@ -316,6 +326,7 @@ contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com";
+website: "https://ziontechgroup.com";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$2;600/month (Industry average: $5;200/month)",
 competitors: ["ServiceNow", "BMC", "BMC Helix", "IBM Watson AIOps", "Splunk"],
@@ -358,6 +369,7 @@ contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com";
+website: "https://ziontechgroup.com";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$3;200/month (Industry average: $6;400/month)",
 competitors: ["IBM Blockchain", "Microsoft Azure Blockchain", "Amazon Managed Blockchain", "ConsenSys"],
@@ -400,6 +412,7 @@ contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com";
+website: "https://ziontechgroup.com";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$1;800/month (Industry average: $3;600/month)",
 competitors: ["AWS IoT", "Azure IoT", "Google Cloud IoT", "IBM Watson IoT", "Cisco IoT"],
@@ -442,6 +455,7 @@ contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com";
+website: "https://ziontechgroup.com";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$2;900/month (Industry average: $5;800/month)",
 competitors: ["VMware Cloud", "Red Hat OpenShift", "HashiCorp", "CloudBolt", "RightScale"],

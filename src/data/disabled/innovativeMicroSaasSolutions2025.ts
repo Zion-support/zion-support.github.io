@@ -24,6 +24,8 @@ website: string;
 }
 }
 };
+email: string;,
+website: string;};
 websiteUrl: string;
 demoUrl?: string;
 documentationUrl?: string;
@@ -80,6 +82,9 @@ email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com"};
 websiteUrl: "https://ziontechgroup.com/ai-content-generation",
 };
+email: "kleber@ziontechgroup.com";,
+website: "https://ziontechgroup.com"};
+websiteUrl: "https://ziontechgroup.com/ai-content-generation"};
 // Blockchain DeFi Analytics Platform;
 {id: "blockchain-defi-analytics-platform";
 title: "Blockchain DeFi Analytics Platform";
@@ -130,6 +135,9 @@ email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com"};
 websiteUrl: "https://ziontechgroup.com/blockchain-defi-analytics",
 };
+email: "kleber@ziontechgroup.com";,
+website: "https://ziontechgroup.com"};
+websiteUrl: "https://ziontechgroup.com/blockchain-defi-analytics"};
 // IoT Smart Home Management Platform;
 {id: "iot-smart-home-management";
 title: "IoT Smart Home Management Platform";
@@ -180,6 +188,9 @@ email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com"};
 websiteUrl: "https://ziontechgroup.com/iot-smart-home",
 };
+email: "kleber@ziontechgroup.com";,
+website: "https://ziontechgroup.com"};
+websiteUrl: "https://ziontechgroup.com/iot-smart-home"};
 // AI-Powered Customer Service Automation;
 {id: "ai-customer-service-automation";
 title: "AI-Powered Customer Service Automation";
@@ -230,6 +241,9 @@ email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com"};
 websiteUrl: "https://ziontechgroup.com/ai-customer-service",
 };
+email: "kleber@ziontechgroup.com";,
+website: "https://ziontechgroup.com"};
+websiteUrl: "https://ziontechgroup.com/ai-customer-service"};
 // Quantum-Ready Cybersecurity Suite;
 {id: "quantum-ready-cybersecurity-suite";
 title: "Quantum-Ready Cybersecurity Suite";
@@ -280,4 +294,7 @@ email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com"};
 websiteUrl: "https://ziontechgroup.com/quantum-cybersecurity",
 }
+email: "kleber@ziontechgroup.com";,
+website: "https://ziontechgroup.com"};
+websiteUrl: "https://ziontechgroup.com/quantum-cybersecurity"}
 ];

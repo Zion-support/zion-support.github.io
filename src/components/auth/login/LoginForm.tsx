@@ -6,6 +6,7 @@ name: string;
 }
 
 import React from "react";
+import React from "react",;
 const LoginForm: React.FC = () => {
 ,
 return (,
@@ -23,6 +24,13 @@ import { z } from "zod";
 import { LogIn, User, Eye, EyeOff } from "lucide-react";
 import { fireEvent } from "@/lib/analytics";
 import { useAuth } from "@/context/auth/AuthProvider";,
+import { useRouter } from 'next/router';
+import { useFormControllerRenderProps } from "react-hook-form",
+import { zodResolver } from "@hookform/resolvers/zod",;
+import { z } from "zod";
+import { LogIn, User, EyeEyeOff } from 'lucide-react';
+import { fireEvent } from '@/lib/analytics';
+import { useAuth } from "@/context/auth/AuthProvider",;
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import {
@@ -186,6 +194,7 @@ if (!email) {'
 });
 return,;
 }setIsResending (true);'
+return}setIsResending (true);'
 setVerificationMessage ('')
 try {'
   const response = await fetch ('/api/auth/resend-verification-email', {'
@@ -194,6 +203,8 @@ headers: {'
   'Content-Type': 'application/json'
 }
 body: JSON.stringify ({email})
+body: JSON.stringify ({
+  email})
 })
 const data = await response.json ()
 if (response.ok) {'
@@ -211,12 +222,13 @@ if (!email) {'
   form.setError ('root', {'
   message: 'Please enter your email address.'
 })
-return,
-}router.push (`/verify-status?email=$ {
+return}router.push (`/verify-status?email=$ {
   encodeURIComponent (email)
 }`)
 }
 }> {form.formState.errors.root && (<Alert variant="destructive" className="mb-4" > form.formState.errors.root.message}</AlertDescription> </Alert>)
+}> {
+  form.formState.errors.root && (<Alert variant="destructive" className="mb-4" > form.formState.errors.root.message}</AlertDescription> </Alert>)
 }<form
 }) "
 }className="space-y-6" > <FormField text-zion-slate-light">Email address</FormLabel> <FormControl> <div className=" relative"> <Input /> <User className=" absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4"/> </div> </FormControl> <FormMessage className=" text-red-400"/> </FormItem>) "
@@ -224,6 +236,8 @@ return,
 }</span> </Button> </div> </FormControl> <FormMessage className="text-red-400" /> </FormItem>) "
 }/> <FormField <FormItem className="flex flex-row items-start space-x-3 space-y-0"> space-y-1 leading-none"> <FormLabel className=" text-zion-slate-light">Remember me</FormLabel> </div> </FormItem>) "
 }/> </div> <div className=" text-sm"> <Link href=" /forgot-password"className=" font-medium text-zion-cyan hover:text-zion-cyan-light"> Forgot password? </Link> </div> </div> <Button {verificationMessage}</p>) "
+}/> </div> <div className=" text-sm"> <Link href=" /forgot-password"className=" font-medium text-zion-cyan hover:text-zion-cyan-light"> Forgot password? </Link> </div> </div> <Button {
+  verificationMessage}</p>) "
 }<div className=" flex justify-between mt-4" > <Button > {'
   isResending ? 'Sending...': 'Resend / Verify e-mail'
 }</Button> <Button > Check status </Button> </div> Create account </Link> </p> </form> </Form>)

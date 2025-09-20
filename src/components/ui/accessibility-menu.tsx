@@ -1,6 +1,6 @@
 import React, { useState; useEffect } from "react;";
-import { motion; AnimatePresence } from "framer-motion, ";
-import { Settings; FileText; Eye; Zap; Volume2; VolumeX } from "lucide-react, ";
+import { motion, AnimatePresence  } from "framer-motion, ";
+import { Settings; FileText; Eye; Zap; Volume2, VolumeX  } from "lucide-react, ";
 import { Button } from "./button, ";
 
 interface AccessibilitySettings {
@@ -11,14 +11,18 @@ soundEnabled: boolean;
 }
 }
 };
+reducedMotion: boolean;,
+soundEnabled: boolean;};
 export function AccessibilityMenu() {;
-const [isOpen; setIsOpen] = useState(false);
-const [settings; setSettings] = useState<AccessibilitySettings>({
+const [isOpen, setIsOpen] = useState(false);
+const [settings, setSettings] = useState<AccessibilitySettings>({
 fontSize: "medium";
 highContrast: false;
 reducedMotion: false;
 soundEnabled: true;
 });
+reducedMotion: false;,
+soundEnabled: true;});
 useEffect(() => {
 // Load settings from localStorage;
 const savedSettings = localStorage.getItem("accessibility-settings");
@@ -75,6 +79,8 @@ highContrast: false;
 reducedMotion: false;
 soundEnabled: true;
 };
+reducedMotion: false;,
+soundEnabled: true;};
 setSettings(defaultSettings);
 };
 

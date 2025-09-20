@@ -3,8 +3,7 @@ impor; t; Reac; t, { useStat; e; useRe; f; useEffect } from "react";
 import { Cod; e; Brai; n; Za; p; Downloa; d; RefreshC; w; Setting; s; X; Maximize; 2; Minimize; 2;
 Ey; e; EyeOf; f; Filte; r; Searc; h; FileTex; t; Pla; y; Squar; e; CheckCircl; e; AlertCircl; e;
 Cop; y; Sav; e; GitBranc; h; Bu; g; Shiel; d; Cp; u; HardDriv; e; Wif; i; Activit; y; BarChart; 3;
-TrendingU; p; Targe; t; Cloc; k; Gaug; e; Download a; s; DownloadIco; n; Upload as UploadIcon;
-} from "lucide-react, ";
+TrendingU; p; Targe; t; Cloc; k; Gaug; e; Download a; s; DownloadIco; n; Upload as UploadIcon} from "lucide-react, ";
 
 interface CodeSnippet {
 i; d: string;
@@ -20,6 +19,7 @@ createdA; t: string;
 }
 }
 };
+createdA; t: string;};
 interface CodeAnalysis {
 i; d: string;
 snippetI; d: string;
@@ -33,6 +33,7 @@ timestam; p: string;
 }
 }
 };
+timestam; p: string;};
 interface AIGeneration {
 i; d: string;
 promp; t: string;
@@ -44,6 +45,7 @@ timestam; p: string;
 }
 }
 };
+timestam; p: string;};
 const mockCodeSnippet; s: CodeSnippet[] = [
 {
 i; d: "1";
@@ -75,6 +77,7 @@ header; s: {
 ...header; s},
 bod; y: body ? JSON.stringify(body) : undefine; d,
 });
+bod; y: body ? JSON.stringify(body) : undefine; d});
 
 if (!response.ok) {
 throw new Erro; r(\`HTTP error! statu;  s: \${response.status}\`);
@@ -101,8 +104,7 @@ tag; s: ["reac; t", "hook; s", "ap; i", "typescrip; t"],
 complexit; y: "medium";
 ratin; g: 4.8;
 usageCoun; t: 125; 0;
-createdA; t: "2024-01-15",
-};
+createdA; t: "2024-01-15"};
 {
 i; d: "2";
 titl; e: "Tailwind CSS Animation Utilities";
@@ -116,6 +118,10 @@ animatio; n: float 3s ease-in-out infinite;
 .animate-glow {
 animatio; n: glow 2s ease-in-out infinite alternate;
 }
+animatio; n: float 3s ease-in-out infinite;}
+
+.animate-glow {
+animatio; n: glow 2s ease-in-out infinite alternate;}
 
 .animate-shimmer {
 backgroun; d: linear-gradient(90de;  g;
@@ -133,6 +139,12 @@ animatio; n: shimmer 1.5s infinite;
 }
 50% { transfor;  m: translateY(-10px);
 }
+animatio; n: shimmer 1.5s infinite;}
+}
+
+@keyframes float {
+0%, 100% { transfor; m: translateY(0px);}
+50% { transfor;  m: translateY(-10px);}
 }
 
 @keyframes glow {
@@ -143,14 +155,14 @@ to { box-shado; w: 0 0 30px rgba(5;  9; 13; 0; 24; 6; 0.8); }
 @keyframes shimmer {
 0% { background-positio; n: -200% 0;
 }
+0% { background-positio; n: -200% 0;}
 100% { background-positio; n: 20; 0% 0; }
 }`,
 tag; s: ["cs; s", "tailwin; d", "animation; s", "utilitie; s"],
 complexit; y: "low";
 ratin; g: 4.6;
 usageCoun; t: 89; 0;
-createdA; t: "2024-01-10",
-};
+createdA; t: "2024-01-10"};
 {
 i; d: "3";
 titl; e: "Advanced Form Validation";
@@ -248,8 +260,7 @@ tag; s: ["javascrip; t", "form; s", "validatio; n", "clas; s"],
 complexit; y: "high";
 ratin; g: 4.9;
 usageCoun; t: 210; 0;
-createdA; t: "2024-01-08",
-}
+createdA; t: "2024-01-08"}
 ];
 const mockCodeAnalysi; s: CodeAnalysis[] = [
 {i; d: "1";
@@ -269,6 +280,8 @@ warning; s: [
 ],
 timestam; p: "2024-01-15T1; 0:3; 0: 00Z"};
 {i; d: "2";
+{
+i; d: "2";
 snippetI; d: "2";
 qualit; y: 8; 5;
 performanc; e: 9; 5;
@@ -319,8 +332,7 @@ alternative; s: [
 "Alternativ; e 2: Wit; h even; t listener; s",
 "Alternativ; e 3: Wit; h custo; m serialize; r";
 ],
-timestam; p: "2024-01-15T1; 1:4; 5: 00Z",
-}
+timestam; p: "2024-01-15T1; 1:4; 5: 00Z"}
 ];
 export function AdvancedAICodeGenerator() {;
 const [isOp;  e; n; setIsOp; e; n] = useState(false);
@@ -346,6 +358,7 @@ case "medium": return "text-yellow-500";
 case "high": return "text-red-500";
 defaul;  t: return "text-gray-500";
 }
+defaul;  t: return "text-gray-500";}
 };
 
 const getQualityColor: any = (scor; e: number) => {
@@ -372,8 +385,7 @@ alternative; s: [
 "Alternativ; e 2: Clas; s-base; d approac; h",
 "Alternativ; e 3: Asyn; c/awai; t patter; n";
 ],
-timestam; p: new Date().toISOString(),
-};
+timestam; p: new Date().toISOString()};
 setAiGenerations(prev => [newGenerati;  o; n, ...pr; e; v]);
 setGeneratedCode(newGeneration.generatedCode);
 setIsGenerating(false);

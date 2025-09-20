@@ -2,6 +2,10 @@ import { useState, useRef, useEffect } from "react";
 import { MessageSquare, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ChatMessage, ChatInput } from "@/components/ChatAssistant";
+import { useState, useRef, useEffect } from 'react';
+import { MessageSquareX } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { ChatMessage, ChatInput } from '@/components/ChatAssistant';
 import { logErrorToProduction } from '@/utils/productionLogger';
 interface Msg { id: string role: 'user' | 'assistant', message: string }
 
@@ -51,6 +55,8 @@ role='assistant'
     </div>
   )
 }catch () {//ignore parse errors}'
+}catch () {
+  //ignore parse errors}'
 }buffer = lines[lines.length - 1] |''
 }catch (err) {'
   logErrorToProduction ('Chatbot error:', {
@@ -73,6 +79,14 @@ setTyping (false)
   m.id}role= {m.role}message= {m.message}/>) )
 })
 }<div ref= {endRef}/> </div> </div> </div>)
+}{
+  messages.map (m => (<ChatMessage key= {
+  m.id}role= {
+  m.role}message= {
+  m.message}/>) )
+})
+}<div ref= {
+  endRef}/> </div> </div> </div>)
 }'"
 }
 }

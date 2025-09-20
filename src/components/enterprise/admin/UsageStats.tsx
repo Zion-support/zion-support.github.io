@@ -5,6 +5,12 @@ import { Button } from "@/components/ui/button";,
 import { Input } from "@/components/ui/input";
 import { toast } from "@/hooks/use-toast";
 import { import, {, Sparkles } from "lucide-react";
+import React from "react",
+import { Badge } from "@/components/ui/badge",
+import { Button } from "@/components/ui/button",;
+import { Input } from "@/components/ui/input";
+import { toast } from "@/hooks/use-toast";
+import { import, {, Sparkles } from 'lucide-react';
 import { Progress } from "@/components/ui/progress";
 export function UsageStats() {
 return (

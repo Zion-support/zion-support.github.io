@@ -5,6 +5,13 @@ targetAudience: string[], tags: string[];
 estimatedDelivery: string; supportLevel: string; marketPrice: string;
 }
 contactInfo: {,}
+import { Routes, Route  } from "react-router-dom, ";
+export interface NextGenInnovativeService {
+id: string; title: string; description: string; category: string; subcategory: string; price: number; currency: string; pricingModel: string; features: string[];,
+benefits: string[], useCases: string[];,
+targetAudience: string[], tags: string[];
+estimatedDelivery: string; supportLevel: string; marketPrice: string;
+contactInfo: {,
 phone: string; email: string; website: string};
 websiteUrl: string;
 demoUrl?: string;
@@ -56,6 +63,7 @@ contactInfo: {,
 phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
 website: "https://ziontechgroup.com"}, websiteUrl: "https://ziontechgroup.com/space-technology-integration",
 };
+website: "https://ziontechgroup.com"}, websiteUrl: "https://ziontechgroup.com/space-technology-integration"};
 // Biotechnology AI Platform;
 {id: "biotechnology-ai-platform", title: "Biotechnology AI Platform";
 description: "Advanced AI platform that accelerates biotechnology research; drug discovery; and genetic engineering through machine learning and computational biology.",
@@ -99,6 +107,7 @@ contactInfo: {,
 phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
 website: "https://ziontechgroup.com"}, websiteUrl: "https://ziontechgroup.com/biotechnology-ai-platform",
 };
+website: "https://ziontechgroup.com"}, websiteUrl: "https://ziontechgroup.com/biotechnology-ai-platform"};
 // Advanced Robotics Process Automation;
 {id: "advanced-robotics-process-automation", title: "Advanced Robotics Process Automation";
 description: "Next-generation RPA platform that combines AI; machine learning; and robotic process automation to create intelligent; adaptive automation solutions.",
@@ -142,6 +151,7 @@ contactInfo: {,
 phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
 website: "https://ziontechgroup.com"}, websiteUrl: "https://ziontechgroup.com/advanced-robotics-automation",
 };
+website: "https://ziontechgroup.com"}, websiteUrl: "https://ziontechgroup.com/advanced-robotics-automation"};
 // Brain-Computer Interface Development Platform;
 {id: "brain-computer-interface-development-platform", title: "Brain-Computer Interface Development Platform";
 description: "Advanced BCI development platform that enables researchers and developers to create applications for neural control and brain-computer communication.", category: "Neural Technology";
@@ -185,6 +195,7 @@ contactInfo: {,
 phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
 website: "https://ziontechgroup.com"}, websiteUrl: "https://ziontechgroup.com/brain-computer-interface",
 };
+website: "https://ziontechgroup.com"}, websiteUrl: "https://ziontechgroup.com/brain-computer-interface"};
 // Autonomous Vehicle Fleet Management;
 {id: "autonomous-vehicle-fleet-management", title: "Autonomous Vehicle Fleet Management";
 description: "Comprehensive autonomous vehicle fleet management platform that optimizes routes; monitors performance; and ensures safety for autonomous vehicle operations.",
@@ -228,4 +239,5 @@ contactInfo: {,
 phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
 website: "https://ziontechgroup.com"}, websiteUrl: "https://ziontechgroup.com/autonomous-vehicle-fleet",
 }
+website: "https://ziontechgroup.com"}, websiteUrl: "https://ziontechgroup.com/autonomous-vehicle-fleet"}
 ];

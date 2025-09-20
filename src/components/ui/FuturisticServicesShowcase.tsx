@@ -1,8 +1,7 @@
 import React, { useState } from "react;";
-import { motion; AnimatePresence } from "framer-motion, ";
+import { motion, AnimatePresence  } from "framer-motion, ";
 import { Brain; Zap; Shield; Globe; Rocket; Star;
-ArrowRight; CheckCircle; TrendingUp; Users; Award;
-} from "lucide-react, ";
+ArrowRight; CheckCircle; TrendingUp; Users; Award} from "lucide-react, ";
 
 interface Service {
 id: string;
@@ -26,6 +25,7 @@ price: "$199/month";
 features: ["AI Code Review", "Testing Automation", "DevOps Intelligence", "Security Automation"],
 popular: true;
 };
+popular: true;};
 {
 id: "micro-saas";
 name: "Micro SaaS Solutions";
@@ -74,8 +74,8 @@ features: ["Smart Contracts", "DeFi Platforms", "NFT Marketplaces", "DAO Governa
 ];
 
 export default function FuturisticServicesShowcase() {;
-const [hoveredService; setHoveredService] = useState<string | null>(null);
-const [selectedCategory; setSelectedCategory] = useState<string>("all");
+const [hoveredService, setHoveredService] = useState<string | null>(null);
+const [selectedCategory, setSelectedCategory] = useState<string>("all");
 
 const categories = [;
 { id: "all", name: "All Services", icon: <Star className="w-4 h-4" /> };

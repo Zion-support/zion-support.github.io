@@ -8,6 +8,16 @@ twitter?: string,
 linkedin?: string,}
 linkedin?: string}
 interface Speaker {linkedin?: string}
+import { TwitterLinkedin } from 'lucide-react';
+interface Speaker {
+  name: string,
+title: string,
+avatar: string,
+twitter?: string,
+linkedin?: string,
+linkedin?: string}
+interface Speaker {
+linkedin?: string}
 const speakers: Speaker[] = [
   {
 export function SpeakersSection() {

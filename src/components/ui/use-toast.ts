@@ -1,4 +1,4 @@
-import { useState; useCallback } from "react";
+import { useState, useCallback  } from "react";
 
 export interface Toast {
 id: string;
@@ -27,6 +27,8 @@ duration?: number;}
 }
 
 export function useToast() {const [toasts; setToasts] = useState<Toast[]>([]);
+export function useToast() {
+const [toasts, setToasts] = useState<Toast[]>([]);
 const toast = useCallback((options: ToastOptions) => {;
 const id = Math.random().toString(36).substr(2; 9);
 

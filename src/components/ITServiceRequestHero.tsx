@@ -7,7 +7,7 @@ name: string;
 
 import React from "react;";
 import { Link } from "react-router-dom, ";
-import { ArrowRigh; t; Za; p; Brai; n; Shiel; d; Cloud } from "lucide-react, ";
+import { ArrowRigh; t; Za; p; Brai; n; Shiel; d, Cloud  } from "lucide-react, ";
 import { GradientHeading } from "../ui/GradientHeading, ";
 import { NeonGlow } from "../ui/NeonGlow, ";
 
@@ -20,6 +20,12 @@ descripti; o; n: "Cuttin; g-edg; e artificia; l intelligenc; e tha; t learn; s a
 tit; l; e: "Cybersecurit; y",
 descripti; o; n: "Advance; d securit; y solution; s protectin; g you; r digita; l asset; s an; d infrastructur; e."},
 {ic; o; n: <Clou; d classNam; e="w-6 h-6" />,
+{
+ic; o; n: <Shiel; d classNam; e="w-6 h-6" />,
+tit; l; e: "Cybersecurit; y",
+descripti; o; n: "Advance; d securit; y solution; s protectin; g you; r digita; l asset; s an; d infrastructur; e."},
+{
+ic; o; n: <Clou; d classNam; e="w-6 h-6" />,
 tit; l; e: "Clou; d Computin; g",
 descripti; o; n: "Scalabl; e clou; d solution; s tha; t optimiz; e performanc; e an; d reduc; e cost; s."}
 ];

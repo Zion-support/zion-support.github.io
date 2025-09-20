@@ -21,6 +21,8 @@ address: string;
 }
 }
 };
+website: string;,
+address: string;};
 marketPrice: string;
 competitors: string[];
 roi: string;
@@ -34,6 +36,8 @@ compliance: string[];
 scalability: string;
 support: string;
 }
+scalability: string;,
+support: string;}
 
 export const innovativeMicroSaasServices2025: InnovativeMicroSaasService[] = [
 {id: 1;
@@ -75,6 +79,7 @@ contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com";
+website: "https://ziontechgroup.com";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$25;000/month (Industry average: $50;000/month)",
 competitors: ["IBM Quantum", "Google Quantum AI", "Microsoft Azure Quantum", "Amazon Braket"],
@@ -97,6 +102,10 @@ scalability: "Unlimited quantum qubits";
 support: "24/7 quantum expert support",
 };
 {id: 2;
+scalability: "Unlimited quantum qubits";,
+support: "24/7 quantum expert support"};
+{
+id: 2;
 name: "Neuromorphic Computing Platform";
 category: "AI Architecture";
 subcategory: "Brain-Inspired Computing";
@@ -135,6 +144,7 @@ contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com";
+website: "https://ziontechgroup.com";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$15;000/month (Industry average: $30;000/month)",
 competitors: ["Intel Loihi", "IBM TrueNorth", "BrainChip", "SynSense"],
@@ -157,6 +167,10 @@ scalability: "Up to 1M neurons";
 support: "Expert neuromorphic support",
 };
 {id: 3;
+scalability: "Up to 1M neurons";,
+support: "Expert neuromorphic support"};
+{
+id: 3;
 name: "Federated Learning Platform";
 category: "Privacy AI";
 subcategory: "Distributed Learning";
@@ -195,6 +209,7 @@ contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com";
+website: "https://ziontechgroup.com";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$8;000/month (Industry average: $15;000/month)",
 competitors: ["OpenMined", "TensorFlow Federated", "PySyft", "IBM Federated Learning"],
@@ -217,6 +232,10 @@ scalability: "Unlimited participants";
 support: "Privacy expert support",
 };
 {id: 4;
+scalability: "Unlimited participants";,
+support: "Privacy expert support"};
+{
+id: 4;
 name: "Edge AI Orchestration Platform";
 category: "Edge Computing";
 subcategory: "AI Orchestration";
@@ -255,6 +274,7 @@ contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com";
+website: "https://ziontechgroup.com";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$12;000/month (Industry average: $25;000/month)",
 competitors: ["AWS Greengrass", "Azure IoT Edge", "Google Cloud IoT", "EdgeX Foundry"],
@@ -277,6 +297,10 @@ scalability: "Unlimited edge nodes";
 support: "24/7 edge computing support",
 };
 {id: 5;
+scalability: "Unlimited edge nodes";,
+support: "24/7 edge computing support"};
+{
+id: 5;
 name: "AI Ethics & Governance Platform";
 category: "AI Governance";
 subcategory: "Ethics & Compliance";
@@ -315,6 +339,7 @@ contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com";
+website: "https://ziontechgroup.com";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$6;000/month (Industry average: $12;000/month)",
 competitors: ["IBM AI Fairness 360", "Google What-If Tool", "Microsoft Responsible AI", "Accenture AI Ethics"],
@@ -337,6 +362,10 @@ scalability: "Unlimited AI models";
 support: "AI ethics expert support",
 };
 {id: 6;
+scalability: "Unlimited AI models";,
+support: "AI ethics expert support"};
+{
+id: 6;
 name: "Blockchain AI Integration Platform";
 category: "Blockchain";
 subcategory: "AI Integration";
@@ -375,6 +404,7 @@ contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com";
+website: "https://ziontechgroup.com";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$18;000/month (Industry average: $35;000/month)",
 competitors: ["Ocean Protocol", "SingularityNET", "Fetch.ai", "Numerai"],
@@ -397,6 +427,10 @@ scalability: "Multi-chain support";
 support: "Blockchain AI expert support",
 };
 {id: 7;
+scalability: "Multi-chain support";,
+support: "Blockchain AI expert support"};
+{
+id: 7;
 name: "Quantum-Safe Cryptography Platform";
 category: "Cybersecurity";
 subcategory: "Post-Quantum Security";
@@ -435,6 +469,7 @@ contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com";
+website: "https://ziontechgroup.com";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$10;000/month (Industry average: $20;000/month)",
 competitors: ["NIST PQC", "IBM Quantum Safe", "Microsoft Post-Quantum", "Google Post-Quantum"],
@@ -457,6 +492,10 @@ scalability: "Unlimited encryption keys";
 support: "Cryptography expert support",
 };
 {id: 8;
+scalability: "Unlimited encryption keys";,
+support: "Cryptography expert support"};
+{
+id: 8;
 name: "AI-Powered DevOps Platform";
 category: "DevOps";
 subcategory: "AI Automation";
@@ -495,6 +534,7 @@ contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com";
+website: "https://ziontechgroup.com";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$7;000/month (Industry average: $15;000/month)",
 competitors: ["GitLab", "GitHub Actions", "Jenkins", "CircleCI", "Travis CI"],
@@ -517,6 +557,10 @@ scalability: "Unlimited repositories";
 support: "DevOps expert support",
 };
 {id: 9;
+scalability: "Unlimited repositories";,
+support: "DevOps expert support"};
+{
+id: 9;
 name: "Synthetic Data Generation Platform";
 category: "Data Science";
 subcategory: "Synthetic Data";
@@ -555,6 +599,7 @@ contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com";
+website: "https://ziontechgroup.com";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$5;000/month (Industry average: $10;000/month)",
 competitors: ["Synthetic Data Vault", "Mostly AI", "Datomize", "Hazy"],
@@ -577,6 +622,10 @@ scalability: "Unlimited data generation";
 support: "Data science expert support",
 };
 {id: 10;
+scalability: "Unlimited data generation";,
+support: "Data science expert support"};
+{
+id: 10;
 name: "AI-Powered Customer Experience Platform";
 category: "Customer Experience";
 subcategory: "AI Personalization";
@@ -615,6 +664,7 @@ contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com";
+website: "https://ziontechgroup.com";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$9;000/month (Industry average: $18;000/month)",
 competitors: ["Intercom", "Zendesk", "HubSpot", "Salesforce", "Adobe Experience Cloud"],
@@ -636,5 +686,7 @@ compliance: ["GDPR", "CCPA", "SOC 2", "ISO 27001"],
 scalability: "Unlimited customers";
 support: "Customer experience expert support",
 }
+scalability: "Unlimited customers";,
+support: "Customer experience expert support"}
 ];
 export default innovativeMicroSaasServices2025;

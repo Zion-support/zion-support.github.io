@@ -3,6 +3,7 @@ import { Dialog;
 DialogContent;
 DialogHeader;
 DialogTitle } from "@/components/ui/dialog, ";
+DialogHeader, DialogTitle  } from "@/components/ui/dialog, ";
 import { Button } from "@/components/ui/button, ";
 import { Input } from "@/components/ui/input, ";
 import { Textarea } from "@/components/ui/textarea, ";
@@ -12,10 +13,11 @@ FormItem;
 FormLabel;
 FormControl;
 FormMessage } from "@/components/ui/form, ";
+FormControl, FormMessage  } from "@/components/ui/form, ";
 import { useForm } from "react-hook-form, ";
 import { yupResolver } from "@hookform/resolvers/yup, ";
 import * as yup from "yup;";
-import { Mail; PaperPlane } from "lucide-react, ";
+import { Mail, PaperPlane  } from "lucide-react, ";
 import api from "@/services/apiClient;";
 import { toast } from "@/hooks/use-toast, ";
 
@@ -31,6 +33,8 @@ type FormValues = {;
 subject: string;
 message: string;
 };
+subject: string;,
+message: string;};
 
 const schema = z.object({;
 subject: z;
@@ -64,6 +68,8 @@ productId;
 subject: values.subject;
 body: values.message;
 });
+subject: values.subject;,
+body: values.message;});
 toast.success("Message sent!");
 form.reset();
 onClose();
@@ -248,6 +254,8 @@ className="bg-zion-blue-dark border border-zion-blue-light text-white sm:max-w-m
         <Form {...form}>
           <form onSubmit={(e) => e.preventDefault()} className="space-y-4">
             <FormField
+          <form onSubmit={(e,) => e.preventDefault()} className="space-y-4">
+            <FormField,
 control = {form.control}
               name="subject"
               render={({ field }: { field: any }) => (                <FormItem>
@@ -264,6 +272,7 @@ placeholder="Subject"
               )}
             />
             <FormField
+            <FormField,
 control = {form.control}
               name="message"
               render={({ field }: { field: any }) => (                <FormItem>
@@ -280,6 +289,7 @@ placeholder={`Message to ${publisherName}...`}
               )}
             />
             <Button
+            <Button,
 onClick = {handleSend}
               className="w-full"
               disabled = {!form.formState.isValid |isSubmitting}            >

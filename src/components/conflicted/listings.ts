@@ -21,6 +21,7 @@ author?: {,
 name: string; id: string;
 }
 avatarUrl?: string;}
+avatarUrl?: string;
 email?: string};
 createdAt: string; updatedAt: string;
 featured?: boolean;

@@ -30,6 +30,13 @@ compliance: string[];
 roi: string;
 competitors: string[];
 }
+email: string;,
+website: string;};
+technology: string[];
+integrations: string[];
+compliance: string[];
+roi: string;,
+competitors: string[];}
 
 export const INNOVATIVE_IT_INFRASTRUCTURE_SERVICES: InnovativeITInfrastructureService[] = [
 // Green Computing Infrastructure;
@@ -79,6 +86,7 @@ marketPrice: "$2;500 - $10;000/month",
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["Intel Xeon", "AMD EPYC", "NVIDIA GPUs", "Smart cooling", "Renewable energy systems"],
 integrations: ["AWS", "Azure", "Google Cloud", "VMware", "OpenStack"],
@@ -134,6 +142,7 @@ marketPrice: "$1;800 - $7;000/month",
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["Kubernetes", "Docker", "Node.js", "Redis", "MQTT", "5G networks"],
 integrations: ["AWS Greengrass", "Azure IoT Edge", "Google Cloud IoT", "IBM Edge Application Manager"],
@@ -189,6 +198,7 @@ marketPrice: "$3;500 - $15;000/month",
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["Qiskit", "PennyLane", "Cirq", "Classical infrastructure", "Quantum simulators"],
 integrations: ["IBM Quantum", "Google Quantum", "AWS Braket", "Azure Quantum", "D-Wave"],
@@ -244,6 +254,7 @@ marketPrice: "$2;200 - $8;500/month",
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["Okta", "Palo Alto", "CrowdStrike", "Splunk", "Microsoft Defender"],
 integrations: ["Active Directory", "LDAP", "SAML", "OAuth", "SIEM systems"],
@@ -299,6 +310,7 @@ marketPrice: "$2;800 - $12;000/month",
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
 technology: ["TensorFlow", "PyTorch", "Kubernetes", "Docker", "Prometheus", "Grafana"],
 integrations: ["AWS", "Azure", "Google Cloud", "VMware", "OpenStack", "Ansible"],

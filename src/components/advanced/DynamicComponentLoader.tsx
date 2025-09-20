@@ -9,6 +9,13 @@ import { Loader2, AlertTriangle, Wifi, WifiOff, RefreshCw } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
+useEffect
+  ComponentType } from 'react'
+import { motionAnimatePresence } from 'framer-motion'
+import { Loader2, AlertTriangle, Wifi, WifiOffRefreshCw } from 'lucide-react'
+import { Button } from '@/components/ui/button'
+import { CardCardContent } from '@/components/ui/card'
+import { cn } from '@/lib/utils';
 import { logErrorToProduction } from '@/utils/productionLogger';
 interface LoadingState {
   isLoading: boolean,

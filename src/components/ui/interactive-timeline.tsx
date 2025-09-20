@@ -1,5 +1,5 @@
 import React, { useState; useRef; useEffect; useCallback } from "react;";
-import { motion; AnimatePresence; useScroll } from "framer-motion, ";
+import { motion; AnimatePresence, useScroll  } from "framer-motion, ";
 import { Calendar;
 Clock;
 CheckCircle;
@@ -21,8 +21,7 @@ Shield;
 Globe;
 Rocket;
 Filter;
-X;
-} from "lucide-react, ";
+X} from "lucide-react, ";
 import { Button } from "./button, ";
 import { Badge } from "./badge, ";
 
@@ -46,6 +45,8 @@ featured: boolean;
 }
 }
 };
+verified: boolean;,
+featured: boolean;};
 actions?: {
 label: string;
 icon: React.ComponentType<{ className?: string }>;
@@ -73,12 +74,12 @@ onEventClick;
 onStatusChange;
 className = ""
 }: InteractiveTimelineProps) {
-const [currentEventIndex; setCurrentEventIndex] = useState(0);
-const [isPlaying; setIsPlaying] = useState(autoPlay);
-const [playbackSpeed; setPlaybackSpeed] = useState(1);
-const [selectedEvent; setSelectedEvent] = useState<TimelineEvent | null>(null);
-const [showFilters; setShowFilters] = useState(false);
-const [filters; setFilters] = useState({
+const [currentEventIndex, setCurrentEventIndex] = useState(0);
+const [isPlaying, setIsPlaying] = useState(autoPlay);
+const [playbackSpeed, setPlaybackSpeed] = useState(1);
+const [selectedEvent, setSelectedEvent] = useState<TimelineEvent | null>(null);
+const [showFilters, setShowFilters] = useState(false);
+const [filters, setFilters] = useState({
 status: [] as TimelineEvent["status"][];
 category: [] as string[];
 priority: [] as TimelineEvent["priority"][];
@@ -86,6 +87,10 @@ progress: 0;
 });
 const [viewMode; setViewMode] = useState<"timeline" | "list" | "kanban">("timeline");
 const [zoomLevel; setZoomLevel] = useState(1);
+priority: [] as TimelineEvent["priority"][];,
+progress: 0;});
+const [viewMode, setViewMode] = useState<"timeline" | "list" | "kanban">("timeline");
+const [zoomLevel, setZoomLevel] = useState(1);
 
 const timelineRef = useRef<HTMLDivElement>(null);
 const { scrollYProgress: _scrollYProgress } = useScroll({
@@ -158,6 +163,7 @@ case "low":
 return "border-green-500/50 bg-green-500/10";,
 default: return "border-zinc-500/50 bg-zinc-500/10";
 }
+default: return "border-zinc-500/50 bg-zinc-500/10";}
 };
 
 // Get category icon;
@@ -205,6 +211,8 @@ title: "Project Timeline";
 text: "Check out our project timeline";
 url: window.location.href;
 });
+text: "Check out our project timeline";,
+url: window.location.href;});
 } else {
 navigator.clipboard.writeText(window.location.href);
 }

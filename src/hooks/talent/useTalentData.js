@@ -11,6 +11,9 @@ export function useTalentData() {
         initialData: [];
     });
     return {talents: data ?? [];
+        initialData: [];});
+    return {
+        talents: data ?? [];
         isLoading,
         error};
 }

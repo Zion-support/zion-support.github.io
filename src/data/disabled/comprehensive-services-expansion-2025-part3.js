@@ -82,8 +82,7 @@ export const brainComputerInterfaceServices2025 = [
         setupTime: "6-8 weeks";
         integrations: ["Medical devices", "Research platforms", "Gaming systems", "Assistive tools"],
         freeTier: false;
-        trialPeriod: "30 days",
-    }
+        trialPeriod: "30 days"}
 ];
     // Synthetic Biology Services;
 export const syntheticBiologyServices2025 = [
@@ -169,8 +168,7 @@ export const advancedRoboticsServices2025 = [
         setupTime: "4-6 weeks";
         integrations: ["Manufacturing systems", "Warehouse management", "Healthcare platforms", "Agricultural systems"],
         freeTier: false;
-        trialPeriod: "30 days",
-    }
+        trialPeriod: "30 days"}
 ];
     // Advanced Materials Services;
 export const advancedMaterialsServices2025 = [
@@ -213,8 +211,7 @@ export const advancedMaterialsServices2025 = [
         setupTime: "2-3 weeks";
         integrations: ["CAD systems", "Simulation platforms", "Manufacturing systems", "Research databases"],
         freeTier: true;
-        trialPeriod: "14 days",
-    }
+        trialPeriod: "14 days"}
 ];
     // Advanced Energy Services;
 export const advancedEnergyServices2025 = [
@@ -257,8 +254,7 @@ export const advancedEnergyServices2025 = [
         setupTime: "8-12 weeks";
         integrations: ["Grid systems", "Research platforms", "Safety systems", "Energy markets"],
         freeTier: false;
-        trialPeriod: "60 days",
-    }
+        trialPeriod: "60 days"}
 ];
     // Advanced Transportation Services;
 export const advancedTransportationServices2025 = [
@@ -301,8 +297,7 @@ export const advancedTransportationServices2025 = [
         setupTime: "6-8 weeks";
         integrations: ["Transportation systems", "Energy grids", "Safety systems", "Passenger apps"],
         freeTier: false;
-        trialPeriod: "45 days",
-    }
+        trialPeriod: "45 days"}
 ];
     // Advanced Communication Services;
 export const advancedCommunicationServices2025 = [
@@ -345,8 +340,7 @@ export const advancedCommunicationServices2025 = [
         setupTime: "8-12 weeks";
         integrations: ["Communication networks", "Security systems", "Quantum devices", "Enterprise platforms"],
         freeTier: false;
-        trialPeriod: "60 days",
-    }
+        trialPeriod: "60 days"}
 ];
     // Advanced Manufacturing Services;
 export const advancedManufacturingServices2025 = [
@@ -389,8 +383,7 @@ export const advancedManufacturingServices2025 = [
         setupTime: "3-4 weeks";
         integrations: ["3D printers", "Design software", "Material suppliers", "Quality systems"],
         freeTier: true;
-        trialPeriod: "21 days",
-    }
+        trialPeriod: "21 days"}
 ];
     // Advanced Gaming Services;
 export const advancedGamingServices2025 = [
@@ -433,8 +426,7 @@ export const advancedGamingServices2025 = [
         setupTime: "2-3 weeks";
         integrations: ["Gaming platforms", "VR systems", "BCI devices", "Social platforms"],
         freeTier: true;
-        trialPeriod: "14 days",
-    }
+        trialPeriod: "14 days"}
 ];
     // Export all cutting-edge services;
 export const allCuttingEdgeServices2025 = {neuromorphic: neuromorphicComputingServices2025;
@@ -481,3 +473,5 @@ export const searchCuttingEdgeServices = (query) => {
 };
 // Master export combining all services;
 export const masterServicesExport = {cuttingEdge: allCuttingEdgeServices2025};
+export const masterServicesExport = {
+    cuttingEdge: allCuttingEdgeServices2025};

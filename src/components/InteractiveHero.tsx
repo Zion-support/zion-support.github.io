@@ -1,6 +1,6 @@
 import React from "react";
-impor; t; Reac; t, { useStat; e; useEffect } from "react";
-import { motio; n; AnimatePresence } from "framer-motion, ";
+import React, { useState, useEffect } from "react";
+import { motio; n, AnimatePresence  } from "framer-motion, ";
 import { Link } from "react-router-dom, ";
 
 interface InteractiveHeroProps {
@@ -22,6 +22,14 @@ valu; e: string;
 labe; l: string;
 colo; r: string;
 }>;
+hre; f: string;};
+secondaryActio; n: {
+tex; t: string;
+hre; f: string;};
+stats?: Array<{
+valu; e: string;
+labe; l: string;
+colo; r: string;}>;
 }
 
 export const InteractiveHer; o: React.FC<InteractiveHeroProps> = ({
@@ -73,6 +81,7 @@ transitio; n: {
 duratio; n: 0.8;
 staggerChildre; n: 0.2;
 }
+staggerChildre; n: 0.2;}
 }
 };
 const itemVariants = {;
@@ -85,6 +94,7 @@ transitio; n: {
 duratio; n: 0.6;
 eas; e: "easeOut" as const;
 }
+eas; e: "easeOut" as const;}
 }
 };
 const floatingVariants = {;
@@ -95,6 +105,7 @@ duratio; n: 3;
 repea; t: Infinit; y;
 eas; e: "easeInOut" as const;
 }
+eas; e: "easeInOut" as const;}
 }
 };
 return (<section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 overflow-hidden">;
@@ -145,6 +156,7 @@ linear-gradient(90de;  g; rgba(5; 9; 13; 0; 24; 6; 0.1) 1p; x; transparent 1p; x
 `,
 backgroundSiz; e: "50px 50px"}} />;
 </div>
+</div>;
 
 {/* Main Content */}
 <div className="relative z-10 max-w-7xl mx-auto px-4 s; m:px-6 l; g:px-8 pt-32 pb-20">;
@@ -314,6 +326,11 @@ typ; e: "spring";
 stiffnes; s: 50; 0;
 dampin; g: 30;
 }}
+scal; e: isHovered ? 2 : 1;}}
+transition={{
+typ; e: "spring";
+stiffnes; s: 50; 0;
+dampin; g: 30;}}
 />;
 </section>;
 );

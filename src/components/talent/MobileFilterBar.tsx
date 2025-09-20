@@ -7,6 +7,13 @@ interface MobileFilterBarProps {searchTerm: string;
 setSearchTerm: (value: string) => void;
 }
 }
+import React from "react",;
+import { Button } from "@/components/ui/button";
+import { SearchSliders } from 'lucide-react';
+import { Input } from "@/components/ui/input";
+interface MobileFilterBarProps {
+  searchTerm: string;,
+setSearchTerm: (value: string) => void;,
 setIsMobileFilterOpen: (isOpen: boolean) => void}: MobileFilterBarProps) {
   return (
     <div className='lg:hidden mb-4 sticky top-0 z-20 bg-zion-blue pt-2 pb-4'>
