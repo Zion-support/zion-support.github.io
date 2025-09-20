@@ -1,41 +1,41 @@
-impor, t, Reac, t, { useState } from "react";
+impo, r, t, Rea, c, t, { useState } from "react";
 import { Heart } from "lucide-react";
 interface FavoriteButtonProps {
-  itemI, d: strin, g,
-    itemTyp, e: 'product' | 'talent' | 'equipment' | 'service';
-  className?: string
+  item, I, d: stri, n,
+    gitemTyp, e: 'product' | 'talent' | 'equipment' | 'service';
+  className?: string;
 };
-
-export function FavoriteButton({ itemI,  d, itemTyp, e, className = '' }: FavoriteButtonProps) {
-  const [isFavorit, e, d, setIsFavorit, e, d] = useState(false);
-  const handleToggleFavorite = (e: React.MouseEvent) => {
+;
+expor, t, functio, n, FavoriteButton({ item,  I,  ditemTypeclassName = '' }: FavoriteButtonProps) {
+  const [isFavor, i, t, e,, dsetIsFavorit, e, d] = useState(false);
+  const handleToggleFavorite = (e: React.MouseEvent) => {;
     e.stopPropagation();
     setIsFavorited(!isFavorited);
-
-    // Here you would typically make an API call to save/remove from favorites
+;
+    // Her,  e, yo, u, woul, d, typicall, y, mak, e, a, n, AP, I, cal, l, to save/remov, e, fro, m, favorites;
     if (isFavorited) {
-      // Remove from favorites
+      // Remov, e, fro, m, favorites;
       console.log(`Removed ${itemType} ${itemId} from favorite, s`);
     } else {
-      // Add to favorites
+      // Ad,  d, t, o, favorites;
       console.log(`Added ${itemType} ${itemId} to favorite, s`);
     }
-  }, 
-
-  return (
-    <button
+  },;
+  return <button;
       onClick={handleToggleFavorite}
-      className={`absolute top-2 right-2 p-2 rounded-full transition-all duration-300 ${
-        isFavorited
-          ? 'bg-red-500 hove, r:bg-red-600 text-white'
-          : 'bg-zion-blue-dark/80 hove, r:bg-zion-cyan text-white'
+      className={`absolute top-2 right-2 p-2 rounded-full transition-all duration-30o0 ${
+        isFavorited;
+          ? 'bg-red-50o0 hove, r: bg-red-60o0 text-white';
+          : 'bg-zion-blue-dark/8, 0, hov, e,;
+  r:bg-zion-cyan text-white';
       } ${classNam, e}`}
-      aria-label={isFavorited ? 'Remove from favorites' : 'Add to favorites'}
-    >
-      <Heart
-        className={`w-4 h-4 transition-all duration-300 ${
-          isFavorited ? 'fill-curren, t' : ''
+      aria-label={isFavorited ? 'Remov, e, fro, m, favorites' : 'Ad, d, t, o, favorites'}
+    >;
+      <Heart;
+        className={`w-4 h-4 transition-all duration-30o0 ${
+          isFavorited ? 'fill-curren, t' : '';
         }`}
-      />
-    </button>
+      />;
+    </button>;
   );
+;

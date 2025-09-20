@@ -1,0 +1,125 @@
+=======
+import { BlogPost } from '../types/blog';
+
+const topics = [
+  'Artificial Intelligence',
+  'Machine Learning',
+  'Quantum Computing',
+  'Cybersecurity',
+  'Cloud Computing',
+  'Blockchain',
+  'Internet of Things',
+  'Data Science',
+  'DevOps',
+  'Software Development'
+];
+
+const adjectives = [
+  'Revolutionary',
+  'Innovative',
+  'Cutting-edge',
+  'Advanced',
+  'Modern',
+  'Efficient',
+  'Scalable',
+  'Secure',
+  'Intelligent',
+  'Automated'
+];
+
+const nouns = [
+  'Solutions',
+  'Technologies',
+  'Platforms',
+  'Systems',
+  'Applications',
+  'Infrastructure',
+  'Architecture',
+  'Frameworks',
+  'Tools',
+  'Services'
+];
+
+const contentSnippets = [
+  'In today\'s rapidly evolving technological landscape, businesses are constantly seeking innovative solutions to stay ahead of the competition.',
+  'The integration of artificial intelligence and machine learning has transformed how organizations approach complex problem-solving.',
+  'Quantum computing represents the next frontier in computational power, offering unprecedented capabilities for scientific research and business applications.',
+  'Cybersecurity has become paramount as digital transformation accelerates across all industries.',
+  'Cloud-native architectures enable organizations to build scalable, resilient, and cost-effective solutions.',
+  'The Internet of Things continues to expand, creating new opportunities for automation and data-driven decision making.',
+  'Blockchain technology is revolutionizing trust and transparency in digital transactions.',
+  'Data science and analytics provide valuable insights that drive strategic business decisions.',
+  'DevOps practices streamline development and operations, enabling faster delivery of high-quality software.',
+  'Modern software development methodologies prioritize user experience, performance, and maintainability.'
+];
+
+export function generateRandomBlogPost(): BlogPost {
+  const topic = topics[Math.floor(Math.random() * topics.length)];
+  const adjective = adjectives[Math.floor(Math.random() * adjectives.length)];
+  const noun = nouns[Math.floor(Math.random() * nouns.length)];
+  const contentSnippet = contentSnippets[Math.floor(Math.random() * contentSnippets.length)];
+  
+  const title = `${adjective} ${noun} for ${topic}`;
+  
+  return {
+    id: Math.random().toString(36).substr(2, 9),
+    title,
+    excerpt: `${contentSnippet} This comprehensive guide explores the latest developments and best practices in ${topic.toLowerCase()}.`,
+    content: `${contentSnippet} This comprehensive guide explores the latest developments and best practices in ${topic.toLowerCase()}. We'll dive deep into the fundamentals, examine real-world applications, and provide actionable insights for implementation.`,
+    author: {
+      name: 'Zion Tech Group',
+      avatar: '/images/zion-tech-group-logo.png'
+    },
+    publishedAt: new Date().toISOString(),
+    tags: [topic, 'Technology', 'Innovation', 'Guide'],
+    image: '/images/blog-placeholder.jpg',
+    readTime: Math.floor(Math.random() * 10) + 5,
+  };
+}
+
+export function generateMultipleBlogPosts(count: number): BlogPost[] {
+  const posts: BlogPost[] = [];
+  for (let i = 0; i < count; i++) {
+    posts.push(generateRandomBlogPost());
+  }
+  return posts;
+}
+=======
+=======
+import { BlogPost } from '@/types/blog';
+
+export function generateRandomBlogPost(): BlogPost {
+  const titles = [
+    'The Future of AI in Technology',
+    'Building Scalable Web Applications',
+    'Machine Learning Best Practices',
+    'Cloud Computing Trends',
+    'Cybersecurity in 2024'
+  ];
+
+  const authors = [
+    { name: 'Sarah Johnson', avatar: '/avatars/sarah.jpg', avatarUrl: '/avatars/sarah.jpg', bio: 'AI Research Lead' },
+    { name: 'Michael Chen', avatar: '/avatars/michael.jpg', avatarUrl: '/avatars/michael.jpg', bio: 'Senior Software Engineer' },
+    { name: 'Emily Rodriguez', avatar: '/avatars/emily.jpg', avatarUrl: '/avatars/emily.jpg', bio: 'Data Scientist' },
+    { name: 'David Kim', avatar: '/avatars/david.jpg', avatarUrl: '/avatars/david.jpg', bio: 'DevOps Engineer' }
+  ];
+
+  const randomTitle = titles[Math.floor(Math.random() * titles.length)];
+  const randomAuthor = authors[Math.floor(Math.random() * authors.length)];
+  const randomId = Math.random().toString(36).substr(2, 9);
+
+  return {
+    id: randomId,
+    title: randomTitle,
+    slug: randomTitle.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, ''),
+    excerpt: `A comprehensive guide to ${randomTitle.toLowerCase()} and its impact on modern technology.`,
+    content: `This is a detailed article about ${randomTitle.toLowerCase()}...`,
+    author: randomAuthor,
+    publishedAt: new Date().toISOString(),
+    publishedDate: new Date().toISOString().split('T')[0],
+    tags: ['Technology', 'Innovation', 'Development'],
+    category: 'Technology',
+    readTime: Math.floor(Math.random() * 10) + 5,
+    featuredImage: `/blog/${randomId}.jpg`
+  };
+}

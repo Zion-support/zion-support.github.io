@@ -1,44 +1,46 @@
-import { ServiceVariant } from '../types/service-variants',
+import { ServiceVariant } from '../types/service-variants';
+
 export interface EmergingTechBreakthrough2025 {
-  id: string,
-  name: string,
-  tagline: string,
-  price: string,
-  period: string,
-  description: string,
-  features: string[],
-  popular: boolean,
-  icon: string,
-  color: string,
-  textColor: string,
-  link: string,
-  marketPosition: string,
-  targetAudience: string,
-  trialDays: number,
-  setupTime: string,
-  category: string,
-  realService: boolean,
-  technology: string[],
-  integrations: string[],
-  useCases: string[],
-  roi: string,
-  competitors: string[],
-  marketSize: string,
-  growthRate: string,
-  variant: ServiceVariant,
+  id: string;
+  name: string;
+  tagline: string;
+  price: string;
+  period: string;
+  description: string;
+  features: string[];
+  popular: boolean;
+  icon: string;
+  color: string;
+  textColor: string;
+  link: string;
+  marketPosition: string;
+  targetAudience: string;
+  trialDays: number;
+  setupTime: string;
+  category: string;
+  realService: boolean;
+  technology: string[];
+  integrations: string[];
+  useCases: string[];
+  roi: string;
+  competitors: string[];
+  marketSize: string;
+  growthRate: string;
+  variant: ServiceVariant;
   contactInfo: {
-    mobile: string,
-    email: string,
-    address: string,
-    website: string
-  },
-  realImplementation: boolean,
-  implementationDetails: string,
-  launchDate: string,
-  customers: number,
-  rating: number,
-  reviews: number
+    mobile: string;
+    email: string;
+    address: string;
+    website: string;
+  };
+  realImplementation: boolean;
+  implementationDetails: string;
+  launchDate: string;
+  customers: number;
+  rating: number;
+  reviews: number;
 }
+
 export const emergingTechBreakthroughs2025: EmergingTechBreakthrough2025[] = [
   // Brain-Computer Interface Platform
   {
@@ -49,11 +51,16 @@ export const emergingTechBreakthroughs2025: EmergingTechBreakthrough2025[] = [
     period: '/month',
     description: 'Revolutionary brain-computer interface platform that enables direct communication between the human brain and computers for medical applications, gaming, and productivity enhancement.',
     features: [
-      'Non-invasive neural signal processingReal-time brain activity monitoring',
-      'Thought-to-text conversionBrain-controlled applications',
-      'Medical rehabilitation toolsGaming and entertainment',
-      'Productivity enhancementAccessibility solutions',
-      'Research and development toolsCustom application development'
+      'Non-invasive neural signal processing',
+      'Real-time brain activity monitoring',
+      'Thought-to-text conversion',
+      'Brain-controlled applications',
+      'Medical rehabilitation tools',
+      'Gaming and entertainment',
+      'Productivity enhancement',
+      'Accessibility solutions',
+      'Research and development tools',
+      'Custom application development'
     ],
     popular: true,
     icon: '🧠',
@@ -87,6 +94,7 @@ export const emergingTechBreakthroughs2025: EmergingTechBreakthrough2025[] = [
     rating: 5.0,
     reviews: 5
   },
+
   // Quantum Internet Security Platform
   {
     id: 'quantum-internet-security-platform',
@@ -96,11 +104,16 @@ export const emergingTechBreakthroughs2025: EmergingTechBreakthrough2025[] = [
     period: '/month',
     description: 'Next-generation quantum internet security platform that provides unbreakable encryption and secure communication protocols for the quantum internet era.',
     features: [
-      'Quantum key distribution networksPost-quantum cryptography',
-      'Quantum-resistant algorithmsSecure quantum communication',
-      'Quantum network monitoringQuantum state verification',
-      'Multi-party quantum protocolsQuantum memory systems',
-      'Quantum entanglement distributionCompliance and audit tools'
+      'Quantum key distribution networks',
+      'Post-quantum cryptography',
+      'Quantum-resistant algorithms',
+      'Secure quantum communication',
+      'Quantum network monitoring',
+      'Quantum state verification',
+      'Multi-party quantum protocols',
+      'Quantum memory systems',
+      'Quantum entanglement distribution',
+      'Compliance and audit tools'
     ],
     popular: true,
     icon: '🔒',
@@ -134,6 +147,7 @@ export const emergingTechBreakthroughs2025: EmergingTechBreakthrough2025[] = [
     rating: 5.0,
     reviews: 10
   },
+
   // Space Mining Operations Platform
   {
     id: 'space-mining-operations-platform',
@@ -143,11 +157,16 @@ export const emergingTechBreakthroughs2025: EmergingTechBreakthrough2025[] = [
     period: '/month',
     description: 'Revolutionary space mining operations platform that enables automated asteroid mining, resource extraction, and space resource management for commercial space operations.',
     features: [
-      'Asteroid identification and mappingAutomated mining operations',
-      'Resource extraction systemsSpace logistics management',
-      'Resource processing facilitiesSpace transportation coordination',
-      'Environmental impact monitoringRegulatory compliance tools',
-      'Resource valuation and tradingSpace infrastructure management'
+      'Asteroid identification and mapping',
+      'Automated mining operations',
+      'Resource extraction systems',
+      'Space logistics management',
+      'Resource processing facilities',
+      'Space transportation coordination',
+      'Environmental impact monitoring',
+      'Regulatory compliance tools',
+      'Resource valuation and trading',
+      'Space infrastructure management'
     ],
     popular: true,
     icon: '🚀',
@@ -181,6 +200,7 @@ export const emergingTechBreakthroughs2025: EmergingTechBreakthrough2025[] = [
     rating: 5.0,
     reviews: 3
   },
+
   // Quantum Robotics Platform
   {
     id: 'quantum-robotics-platform',
@@ -190,11 +210,16 @@ export const emergingTechBreakthroughs2025: EmergingTechBreakthrough2025[] = [
     period: '/month',
     description: 'Advanced quantum robotics platform that leverages quantum computing for enhanced robot intelligence, decision-making, and autonomous operations in complex environments.',
     features: [
-      'Quantum-enhanced AI algorithmsQuantum sensor integration',
-      'Advanced autonomous navigationQuantum machine learning',
-      'Multi-robot coordinationQuantum optimization algorithms',
-      'Real-time quantum processingAdvanced perception systems',
-      'Adaptive learning capabilitiesQuantum communication networks'
+      'Quantum-enhanced AI algorithms',
+      'Quantum sensor integration',
+      'Advanced autonomous navigation',
+      'Quantum machine learning',
+      'Multi-robot coordination',
+      'Quantum optimization algorithms',
+      'Real-time quantum processing',
+      'Advanced perception systems',
+      'Adaptive learning capabilities',
+      'Quantum communication networks'
     ],
     popular: true,
     icon: '🤖',
@@ -228,6 +253,7 @@ export const emergingTechBreakthroughs2025: EmergingTechBreakthrough2025[] = [
     rating: 4.9,
     reviews: 8
   },
+
   // Autonomous Vehicle AI Platform
   {
     id: 'autonomous-vehicle-ai-platform',
@@ -237,11 +263,16 @@ export const emergingTechBreakthroughs2025: EmergingTechBreakthrough2025[] = [
     period: '/month',
     description: 'Revolutionary autonomous vehicle AI platform that enables fully self-driving vehicles with advanced perception, decision-making, and safety systems powered by AI and quantum computing.',
     features: [
-      'Advanced computer vision systemsReal-time decision making',
-      'Predictive safety algorithmsMulti-sensor fusion',
-      'Quantum-enhanced navigationAdaptive learning systems',
-      'Fleet management capabilitiesSafety monitoring and alerts',
-      'Regulatory compliance toolsPerformance analytics'
+      'Advanced computer vision systems',
+      'Real-time decision making',
+      'Predictive safety algorithms',
+      'Multi-sensor fusion',
+      'Quantum-enhanced navigation',
+      'Adaptive learning systems',
+      'Fleet management capabilities',
+      'Safety monitoring and alerts',
+      'Regulatory compliance tools',
+      'Performance analytics'
     ],
     popular: true,
     icon: '🚗',
@@ -275,6 +306,7 @@ export const emergingTechBreakthroughs2025: EmergingTechBreakthrough2025[] = [
     rating: 5.0,
     reviews: 6
   },
+
   // Quantum Materials Discovery Platform
   {
     id: 'quantum-materials-discovery-platform',
@@ -284,11 +316,16 @@ export const emergingTechBreakthroughs2025: EmergingTechBreakthrough2025[] = [
     period: '/month',
     description: 'Advanced quantum materials discovery platform that accelerates the development of new materials, drugs, and chemicals using quantum computing and AI-powered simulations.',
     features: [
-      'Quantum molecular simulationsAI-powered material design',
-      'Drug discovery algorithmsChemical property prediction',
-      'Material performance optimizationQuantum chemistry calculations',
-      'High-throughput screeningProperty prediction models',
-      'Optimization algorithmsResearch collaboration tools'
+      'Quantum molecular simulations',
+      'AI-powered material design',
+      'Drug discovery algorithms',
+      'Chemical property prediction',
+      'Material performance optimization',
+      'Quantum chemistry calculations',
+      'High-throughput screening',
+      'Property prediction models',
+      'Optimization algorithms',
+      'Research collaboration tools'
     ],
     popular: true,
     icon: '🧪',
@@ -322,6 +359,7 @@ export const emergingTechBreakthroughs2025: EmergingTechBreakthrough2025[] = [
     rating: 4.8,
     reviews: 9
   },
+
   // Metaverse AI Development Platform
   {
     id: 'metaverse-ai-development-platform',
@@ -331,11 +369,16 @@ export const emergingTechBreakthroughs2025: EmergingTechBreakthrough2025[] = [
     period: '/month',
     description: 'Comprehensive metaverse AI development platform that enables the creation of intelligent virtual worlds, AI-powered NPCs, and dynamic environments with advanced AI capabilities.',
     features: [
-      'AI-powered NPC generationDynamic world creation',
-      'Intelligent environment adaptationAI behavior modeling',
-      'Real-time world generationUser interaction AI',
-      'Content personalizationVirtual economy management',
-      'AI-powered storytellingCross-platform deployment'
+      'AI-powered NPC generation',
+      'Dynamic world creation',
+      'Intelligent environment adaptation',
+      'AI behavior modeling',
+      'Real-time world generation',
+      'User interaction AI',
+      'Content personalization',
+      'Virtual economy management',
+      'AI-powered storytelling',
+      'Cross-platform deployment'
     ],
     popular: true,
     icon: '🌍',
@@ -369,4 +412,4 @@ export const emergingTechBreakthroughs2025: EmergingTechBreakthrough2025[] = [
     rating: 4.7,
     reviews: 18
   }
-],
+];

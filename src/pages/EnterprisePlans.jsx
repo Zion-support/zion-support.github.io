@@ -1,10 +1,15 @@
-import React from "react";
-import { EnterpriseHero } from "@/components/enterprise/EnterpriseHe, ro";import { EnterprisePricingTable } from "@/components/enterprise/EnterprisePricingTab, le";import { EnterpriseFeatures } from "@/components/enterprise/EnterpriseFeatur, es";import { EnterpriseCTA } from "@/components/enterprise/EnterpriseC, TA";import { EnterpriseTrustBadges } from "@/components/enterprise/EnterpriseTrustBadg, es";import { EnterpriseTestimonials } from "@/components/enterprise/EnterpriseTestimonia, ls";import SEO from "@/components/SEO";
+import React from "react"
+import { EnterpriseHero   } from "@/components/enterprise/EnterpriseHero";
+import { EnterprisePricingTable   } from "@/components/enterprise/EnterprisePricingTable";
+import { EnterpriseFeatures   } from "@/components/enterprise/EnterpriseFeatures";
+import { EnterpriseCTA   } from "@/components/enterprise/EnterpriseCTA";
+import { EnterpriseTrustBadges   } from "@/components/enterprise/EnterpriseTrustBadges";
+import { EnterpriseTestimonials   } from "@/components/enterprise/EnterpriseTestimonials";
+import SEO from "@/components/SEO"
 export default function EnterprisePlans() {
-
   return (<>
-      <SEO title="Enterprise Plans - Zion AI Marketplace" description="Scale your talent acquisition with Zion's enterprise solutions. Custom branded portalsdedicated talent pools, and powerful admin tools."/>
-      ;
+      <SEO title="Enterprise Plans - Zion AI Marketplace" description="Scale your talent acquisition with Zion's enterprise solutions. Custom branded portals, dedicated talent pools, and powerful admin tools."/>
+      
       <main className="min-h-screen bg-background">
         <EnterpriseHero />
         <EnterprisePricingTable />
@@ -13,6 +18,6 @@ export default function EnterprisePlans() {
         <EnterpriseTrustBadges />
         <EnterpriseCTA />
       </main>
-      ;
+      
     </>)
-};
+}

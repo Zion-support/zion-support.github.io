@@ -1,388 +1,255 @@
-import { useCallback, useEffect, useRef, useState } from 'react';
-import { PerformanceMetrics, PerformanceAlert } from '../types/common';
+import { useEffect, useRef, useState } from 'react';
 
-interface PerformanceConfig {
-  enableFPSMonitoring?: boolean;
-  enableMemoryMonitoring?: boolean;
-  enableNetworkMonitoring?: boolean;
-  enableWebVitals?: boolean;
-  fpsThreshold?: number;
-  memoryThreshold?: number;
-  networkThreshold?: number;
-  alertThresholds?: {
-    fps: { warning: number; error: number };
-    memory: { warning: number; error: number };
-    network: { warning: number; error: number };
-  };
-  onAlert?: (alert: PerformanceAlert) => void;
-};
+interface PerformanceMetrics {
+  fcp: number | null;
+  lcp: number | null;
+  fid: number | null;
+  cls: number | null;
+  ttfb: number | null;
+  domLoad: number | null;
+  windowLoad: number | null;
+}
 
-interface PerformanceState {
-  metrics: PerformanceMetrics;
-  alerts: PerformanceAlert[];
-  isMonitoring: boolean;
-  history: PerformanceMetrics[];
+interface PerformanceObserverEntry {
+  name: string;
+  value: number;
+  rating: 'good' | 'needs-improvement' | 'poor';
+}
 
-const defaultConfig: Required<PerformanceConfig> = {
-  enableFPSMonitoring: true,
-  enableMemoryMonitoring: true,
-  enableNetworkMonitoring: true,
-  enableWebVitals: true,
-  fpsThreshold: 30,
-  memoryThreshold: 100,
-  networkThreshold: 200,
-  alertThresholds: {
-    fps: { warning: 45, error: 30 },
-    memory: { warning: 50, error: 100 },
-    network: { warning: 100, error: 200 },
-  },
-  onAlert: () => {},
+// Extended interfaces for specific performance entry types
+interface FirstInputEntry extends PerformanceEntry {
+  processingStart: number;
+  startTime: number;
+}
 
-export const usePerformance = (config: PerformanceConfig = {}) => {
-  const mergedConfig = { ...defaultConfig, ...config };
-  const [state, setState] = useState<PerformanceState>({
-    metrics: {
-      fps: 0,
-      memoryUsage: 0,
-      renderTime: 0,
-      networkLatency: 0,
-      bundleSize: 0,
-      cacheHitRate: 0,
-      lighthouseScore: 0,
-      loadTime: 0,
-    },
-    alerts: [],
-    isMonitoring: false,
-    history: [],
+interface LayoutShiftEntry extends PerformanceEntry {
+  hadRecentInput: boolean;
+  value: number;
+}
+
+export function usePerformance() {
+  const [metrics, setMetrics] = useState<PerformanceMetrics>({
+    fcp: null,
+    lcp: null,
+    fid: null,
+    cls: null,
+    ttfb: null,
+    domLoad: null,
+    windowLoad: null
   });
 
-  const frameCountRef = useRef(0);
-  const lastTimeRef = useRef(performance.now());
-  const fpsHistoryRef = useRef<number[]>([]);
-  const alertIdRef = useRef(0);
+  const [observers, setObservers] = useState<PerformanceObserverEntry[]>([]);
   const observerRef = useRef<PerformanceObserver | null>(null);
 
-  const addAlert = useCallback((type: PerformanceAlert['type'], message: string) => {
-    const newAlert: PerformanceAlert = {
-      id: `alert-${++alertIdRef.current}`,
-      type,
-      message,
-      timestamp: new Date(),
+  useEffect(() => {
+    // Check if PerformanceObserver is supported
+    if (!('PerformanceObserver' in window)) {
+      console.warn('PerformanceObserver not supported');
+      return;
+    }
+
+    // First Contentful Paint (FCP)
+    const fcpObserver = new PerformanceObserver((list) => {
+      const entries = list.getEntries();
+      const fcpEntry = entries.find(entry => entry.name === 'first-contentful-paint');
+      if (fcpEntry) {
+        setMetrics(prev => ({ ...prev, fcp: fcpEntry.startTime }));
+      }
+    });
+
+    // Largest Contentful Paint (LCP)
+    const lcpObserver = new PerformanceObserver((list) => {
+      const entries = list.getEntries();
+      const lcpEntry = entries[entries.length - 1];
+      if (lcpEntry) {
+        setMetrics(prev => ({ ...prev, lcp: lcpEntry.startTime }));
+      }
+    });
+
+    // First Input Delay (FID)
+    const fidObserver = new PerformanceObserver((list) => {
+      const entries = list.getEntries();
+      const fidEntry = entries[entries.length - 1] as FirstInputEntry;
+      if (fidEntry && 'processingStart' in fidEntry) {
+        setMetrics(prev => ({ ...prev, fid: fidEntry.processingStart - fidEntry.startTime }));
+      }
+    });
+
+    // Cumulative Layout Shift (CLS)
+    const clsObserver = new PerformanceObserver((list) => {
+      let clsValue = 0;
+      for (const entry of list.getEntries()) {
+        const layoutShiftEntry = entry as LayoutShiftEntry;
+        if (!layoutShiftEntry.hadRecentInput) {
+          clsValue += layoutShiftEntry.value;
+        }
+      }
+      setMetrics(prev => ({ ...prev, cls: clsValue }));
+    });
+
+    // Start observing
+    try {
+      fcpObserver.observe({ entryTypes: ['paint'] });
+      lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
+      fidObserver.observe({ entryTypes: ['first-input'] });
+      clsObserver.observe({ entryTypes: ['layout-shift'] });
+    } catch (error) {
+      console.warn('Error setting up performance observers:', error);
+    }
+
+    // Navigation timing metrics
+    const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+    if (navigationEntry) {
+      setMetrics(prev => ({
+        ...prev,
+        ttfb: navigationEntry.responseStart - navigationEntry.requestStart,
+        domLoad: navigationEntry.domContentLoadedEventEnd - navigationEntry.domContentLoadedEventStart,
+        windowLoad: navigationEntry.loadEventEnd - navigationEntry.loadEventStart
+      }));
+    }
+
+    // Cleanup
+    return () => {
+      fcpObserver.disconnect();
+      lcpObserver.disconnect();
+      fidObserver.disconnect();
+      clsObserver.disconnect();
+    };
+  }, []);
+
+  // Get performance rating
+  const getRating = (metric: keyof PerformanceMetrics, value: number): 'good' | 'needs-improvement' | 'poor' => {
+    const thresholds = {
+      fcp: { good: 1800, poor: 3000 },
+      lcp: { good: 2500, poor: 4000 },
+      fid: { good: 100, poor: 300 },
+      cls: { good: 0.1, poor: 0.25 },
+      ttfb: { good: 800, poor: 1800 }
     };
 
-    setState(prev => ({
-      ...prev,
-      alerts: [newAlert, ...prev.alerts.slice(0, 9)], // Keep last 10 alerts
-    }));
+    const threshold = thresholds[metric];
+    if (!threshold) return 'good';
 
-    mergedConfig.onAlert(newAlert);
+    if (value <= threshold.good) return 'good';
+    if (value <= threshold.poor) return 'needs-improvement';
+    return 'poor';
+  };
 
-    // Auto-remove alert after 5 seconds
-    setTimeout(() => {
-      setState(prev => ({
-        ...prev,
-        alerts: prev.alerts.filter(alert => alert.id !== newAlert.id),
-      }));
-    }, 5000);
-  }, [mergedConfig]);
-
-  const measureFPS = useCallback(() => {
-    if (!mergedConfig.enableFPSMonitoring) return;
-
-    const now = performance.now();
-    const deltaTime = now - lastTimeRef.current;
-    frameCountRef.current++;
-
-    if (deltaTime >= 1000) {
-      const fps = Math.round((frameCountRef.current * 1000) / deltaTime);
-      fpsHistoryRef.current.push(fps);
-      
-      if (fpsHistoryRef.current.length > 10) {
-        fpsHistoryRef.current.shift();
-      }
-
-      const avgFPS = Math.round(
-        fpsHistoryRef.current.reduce((a, b) => a + b, 0) / fpsHistoryRef.current.length
-      );
-
-      // Check for FPS alerts
-      if (avgFPS < mergedConfig.alertThresholds.fps.error) {
-        addAlert('error', `Critical FPS: ${avgFPS}`);
-      } else if (avgFPS < mergedConfig.alertThresholds.fps.warning) {
-        addAlert('warning', `Low FPS: ${avgFPS}`);
-      }
-
-      frameCountRef.current = 0;
-      lastTimeRef.current = now;
-
-      return avgFPS;
-    }
-
-    return null;
-  }, [mergedConfig, addAlert]);
-
-  const measureMemory = useCallback(() => {
-    if (!mergedConfig.enableMemoryMonitoring) return 0;
-
-    const memoryInfo = (performance as any).memory;
-    if (!memoryInfo) return 0;
-
-    const memoryUsage = Math.round((memoryInfo.usedJSHeapSize / 1024 / 1024) * 100) / 100;
-
-    // Check for memory alerts
-    if (memoryUsage > mergedConfig.alertThresholds.memory.error) {
-      addAlert('error', `High memory usage: ${memoryUsage}MB`);
-    } else if (memoryUsage > mergedConfig.alertThresholds.memory.warning) {
-      addAlert('warning', `Memory usage elevated: ${memoryUsage}MB`);
-    }
-
-    return memoryUsage;
-  }, [mergedConfig, addAlert]);
-
-  const measureNetworkLatency = useCallback(() => {
-    if (!mergedConfig.enableNetworkMonitoring) return 0;
-
-    // Simulate network latency measurement
-    const startTime = performance.now();
+  // Get all metrics with ratings
+  const getMetricsWithRatings = () => {
+    const result: PerformanceObserverEntry[] = [];
     
-    return new Promise<number>((resolve) => {
-      // Use a small image request to measure latency
-      const img = new Image();
-      const timeout = setTimeout(() => {
-        resolve(0); // Timeout
-      }, 5000);
-
-      img.onload = img.onerror = () => {
-        clearTimeout(timeout);
-        const latency = Math.round(performance.now() - startTime);
-        
-        // Check for network alerts
-        if (latency > mergedConfig.alertThresholds.network.error) {
-          addAlert('error', `High network latency: ${latency}ms`);
-        } else if (latency > mergedConfig.alertThresholds.network.warning) {
-          addAlert('warning', `Network latency elevated: ${latency}ms`);
-        }
-
-        resolve(latency);
-      };
-
-      // Use a 1x1 pixel image for latency measurement
-      img.src = 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7';
-    });
-  }, [mergedConfig, addAlert]);
-
-  const measureWebVitals = useCallback(() => {
-    if (!mergedConfig.enableWebVitals) return;
-
-    const observer = new PerformanceObserver((list) => {
-      for (const entry of list.getEntries()) {
-        switch (entry.entryType) {
-          case 'largest-contentful-paint':
-            const lcp = entry as PerformanceEntry & { startTime: number };
-            if (lcp.startTime > 4000) {
-              addAlert('error', `Poor LCP: ${lcp.startTime.toFixed(2)}ms`);
-            } else if (lcp.startTime > 2500) {
-              addAlert('warning', `LCP needs improvement: ${lcp.startTime.toFixed(2)}ms`);
-            }
-            break;
-
-          case 'first-input':
-            const fid = entry as PerformanceEntry & { processingStart: number; startTime: number };
-            const delay = fid.processingStart - fid.startTime;
-            if (delay > 100) {
-              addAlert('error', `High FID: ${delay.toFixed(2)}ms`);
-            } else if (delay > 50) {
-              addAlert('warning', `FID needs improvement: ${delay.toFixed(2)}ms`);
-            }
-            break;
-
-          case 'layout-shift':
-            const cls = entry as PerformanceEntry & { value: number };
-            if (cls.value > 0.25) {
-              addAlert('error', `Poor CLS: ${cls.value.toFixed(3)}`);
-            } else if (cls.value > 0.1) {
-              addAlert('warning', `CLS needs improvement: ${cls.value.toFixed(3)}`);
-            }
-            break;
-        }
+    Object.entries(metrics).forEach(([key, value]) => {
+      if (value !== null) {
+        result.push({
+          name: key.toUpperCase(),
+          value,
+          rating: getRating(key as keyof PerformanceMetrics, value)
+        });
       }
+    });
+
+    return result;
+  };
+
+  // Log performance metrics
+  const logMetrics = () => {
+    const metricsWithRatings = getMetricsWithRatings();
+    console.group('🚀 Performance Metrics');
+    
+    metricsWithRatings.forEach(({ name, value, rating }) => {
+      const emoji = rating === 'good' ? '✅' : rating === 'needs-improvement' ? '⚠️' : '❌';
+      console.log(`${emoji} ${name}: ${value.toFixed(2)}ms (${rating})`);
+    });
+    
+    console.groupEnd();
+  };
+
+  // Get performance score (0-100)
+  const getPerformanceScore = () => {
+    const metricsWithRatings = getMetricsWithRatings();
+    if (metricsWithRatings.length === 0) return 0;
+
+    const scores = metricsWithRatings.map(({ rating }) => {
+      switch (rating) {
+        case 'good': return 100;
+        case 'needs-improvement': return 65;
+        case 'poor': return 0;
+        default: return 0;
+      }
+    });
+
+    return Math.round(scores.reduce((sum, score) => sum + score, 0) / scores.length);
+  };
+
+  // Monitor long tasks
+  useEffect(() => {
+    if (!('PerformanceObserver' in window)) return;
+
+    const longTaskObserver = new PerformanceObserver((list) => {
+      const entries = list.getEntries();
+      entries.forEach((entry) => {
+        if (entry.duration > 50) {
+          console.warn('Long task detected:', {
+            duration: entry.duration,
+            startTime: entry.startTime,
+            name: entry.name
+          });
+        }
+      });
     });
 
     try {
-      observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] });
-      observerRef.current = observer;
+      longTaskObserver.observe({ entryTypes: ['longtask'] });
     } catch (error) {
-      console.warn('Performance Observer not supported:', error);
-    }
-  }, [mergedConfig, addAlert]);
-
-  const updateMetrics = useCallback(async () => {
-    const fps = measureFPS();
-    const memoryUsage = measureMemory();
-    const networkLatency = await measureNetworkLatency();
-
-    // Get navigation timing
-    const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-    const renderTime = navigation ? Math.round((navigation.loadEventEnd - navigation.loadEventStart) * 100) / 100 : 0;
-    const loadTime = navigation ? Math.round(navigation.loadEventEnd - navigation.fetchStart) : 0;
-
-    // Calculate Lighthouse score
-    const lighthouseScore = Math.max(0, Math.min(100,
-      100 - (loadTime / 100) - (memoryUsage * 2) - (networkLatency / 10) - ((60 - (fps || 60)) * 2)
-    ));
-
-    const newMetrics: PerformanceMetrics = {
-      fps: fps || state.metrics.fps,
-      memoryUsage,
-      renderTime,
-      networkLatency,
-      bundleSize: 0, // Would be calculated from actual bundle analysis
-      cacheHitRate: Math.round((Math.random() * 30 + 70) * 100) / 100,
-      lighthouseScore: Math.round(lighthouseScore),
-      loadTime,
-    };
-
-    setState(prev => ({
-      ...prev,
-      metrics: newMetrics,
-      history: [...prev.history.slice(-19), newMetrics], // Keep last 20 measurements
-    }));
-  }, [measureFPS, measureMemory, measureNetworkLatency, state.metrics.fps]);
-
-  const startMonitoring = useCallback(() => {
-    setState(prev => ({ ...prev, isMonitoring: true }));
-    
-    if (mergedConfig.enableWebVitals) {
-      measureWebVitals();
+      console.warn('Error setting up long task observer:', error);
     }
 
-    // Update metrics every second
-    const interval = setInterval(updateMetrics, 1000);
-    
-    return () => {
-      clearInterval(interval);
-      if (observerRef.current) {
-        observerRef.current.disconnect();
-      }
-    };
-  }, [updateMetrics, measureWebVitals, mergedConfig]);
-
-  const stopMonitoring = useCallback(() => {
-    setState(prev => ({ ...prev, isMonitoring: false }));
-    if (observerRef.current) {
-      observerRef.current.disconnect();
-      observerRef.current = null;
-    }
+    return () => longTaskObserver.disconnect();
   }, []);
 
-  const clearAlerts = useCallback(() => {
-    setState(prev => ({ ...prev, alerts: [] }));
-  }, []);
+  return {
+    metrics,
+    observers: getMetricsWithRatings(),
+    performanceScore: getPerformanceScore(),
+    logMetrics,
+    getRating: (metric: keyof PerformanceMetrics) => {
+      const value = metrics[metric];
+      return value !== null ? getRating(metric, value) : null;
+    }
+  };
+}
 
-  const getAverageMetric = useCallback((metric: keyof PerformanceMetrics, period: number = 10) => {
-    const recentHistory = state.history.slice(-period);
-    if (recentHistory.length === 0) return 0;
+// Hook for monitoring specific performance events
+export function usePerformanceEvent(eventName: string, callback: (entry: PerformanceEntry) => void) {
+  useEffect(() => {
+    if (!('PerformanceObserver' in window)) return;
 
-    const sum = recentHistory.reduce((acc, metrics) => acc + metrics[metric], 0);
-    return Math.round((sum / recentHistory.length) * 100) / 100;
-  }, [state.history]);
+    const observer = new PerformanceObserver((list) => {
+      list.getEntries().forEach(callback);
+    });
 
-  const getMetricTrend = useCallback((metric: keyof PerformanceMetrics, period: number = 10) => {
-    const recentHistory = state.history.slice(-period);
-    if (recentHistory.length < 2) return 'stable';
+    try {
+      observer.observe({ entryTypes: [eventName] });
+    } catch (error) {
+      console.warn(`Error observing ${eventName}:`, error);
+    }
 
-    const first = recentHistory[0][metric];
-    const last = recentHistory[recentHistory.length - 1][metric];
-    const change = last - first;
-    const percentageChange = (change / first) * 100;
+    return () => observer.disconnect();
+  }, [eventName, callback]);
+}
 
-    if (percentageChange > 5) return 'improving';
-    if (percentageChange < -5) return 'declining';
-    return 'stable';
-  }, [state.history]);
-
-  const getPerformanceScore = useCallback(() => {
-    const { metrics } = state;
-    const score = Math.round(
-      (metrics.fps / 60) * 25 +
-      (Math.max(0, 100 - metrics.memoryUsage) / 100) * 25 +
-      (Math.max(0, 1000 - metrics.renderTime) / 1000) * 25 +
-      (metrics.lighthouseScore / 100) * 25
-    );
-    return Math.max(0, Math.min(100, score));
-  }, [state.metrics]);
+// Hook for measuring time between renders
+export function useRenderTime() {
+  const renderStart = useRef(performance.now());
+  const [renderTime, setRenderTime] = useState(0);
 
   useEffect(() => {
-    if (state.isMonitoring) {
-      return startMonitoring();
-    }
-  }, [state.isMonitoring, startMonitoring]);
+    const renderEnd = performance.now();
+    const time = renderEnd - renderStart.current;
+    setRenderTime(time);
+    renderStart.current = renderEnd;
+  });
 
-  return {
-    ...state,
-    startMonitoring,
-    stopMonitoring,
-    clearAlerts,
-    getAverageMetric,
-    getMetricTrend,
-    getPerformanceScore,
-  };
-
-// Performance utilities
-export const measureRenderTime = (componentName: string) => {
-  const startTime = performance.now();
-  
-  return () => {
-    const endTime = performance.now();
-    const renderTime = endTime - startTime;
-    
-    if (process.env.NODE_ENV === 'development') {
-      console.log(`${componentName} render time: ${renderTime.toFixed(2)}ms`);
-    }
-    
-    return renderTime;
-  };
-
-export const measureAsyncOperation = async <T>(
-  operation: () => Promise<T>,
-  operationName: string
-): Promise<T> => {
-  const startTime = performance.now();
-  
-  try {
-    const result = await operation();
-    const endTime = performance.now();
-    const duration = endTime - startTime;
-    
-    if (process.env.NODE_ENV === 'development') {
-      console.log(`${operationName} completed in ${duration.toFixed(2)}ms`);
-    }
-    
-    return result;
-  } catch (error) {
-    const endTime = performance.now();
-    const duration = endTime - startTime;
-    
-    if (process.env.NODE_ENV === 'development') {
-      console.error(`${operationName} failed after ${duration.toFixed(2)}ms:`, error);
-    }
-    
-    throw error;
-  };
-
-export const createPerformanceMarker = (name: string) => {
-  performance.mark(`${name}-start`);
-  
-  return {
-    end: () => {
-      performance.mark(`${name}-end`);
-      performance.measure(name, `${name}-start`, `${name}-end`);
-      
-      const measure = performance.getEntriesByName(name)[0];
-      if (measure && process.env.NODE_ENV === 'development') {
-        console.log(`${name}: ${measure.duration.toFixed(2)}ms`);
-      }
-    }
-  };
-
-export default usePerformance;
+  return renderTime;
+}

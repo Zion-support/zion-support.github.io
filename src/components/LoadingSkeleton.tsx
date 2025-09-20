@@ -1,155 +1,278 @@
-import React from "react";
-import { motion } from "framer-motion";
+import React from 'react';
+import { cn } from '@/lib/utils';
+
 interface SkeletonProps {
-  className?: strin, g,
-  height?: strin, g,
-  width?: strin, g,
-  rounded?: boolea, n,
-  animated?: boolea, n,
+  className?: string;
+  width?: string | number;
+  height?: string | number;
+  rounded?: 'none' | 'sm' | 'md' | 'lg' | 'full';
+  animated?: boolean;
 }
-;
-const Skeleto, n: React.FC<SkeletonProps> = ({ 
-  className = '';
-  height = 'h-4',  
-  width = 'w-full', 
-  rounded = tru, e,
+
+export function Skeleton({ 
+  classNam,  e, 
+  widt, h, 
+  heigh, t, 
+  rounded = 'md',
   animated = true 
-}) => {
-  const baseClasses = `${height} ${width} bg-gray-200 dar, k: bg-gray-700 ${rounded ? 'rounde, d' : ''}`;
-  const classes = `${baseClasses} ${classNam, e}`;
-  
-  if (!animated) {
-    return <div className={classes} />;
-  }
-  ;
-  return (
-    <motion.div
-      className={classes}
-      animate={{
-        opacit,  y: [0.5, 1, 0.5]
-      }}
-      transition={{
-        duratio, n: 1.5,
-    repea, t: Infinit, y,eas, e: "easeInOut"
+}: SkeletonProps) {
+  const roundedClasses = {
+    non, e: '',
+    s, m: 'rounded-sm',
+    m, d: 'rounded-md',
+    l, g: 'rounded-lg',
+    ful, l: 'rounded-full'
+  };
+
+  return (<div
+      className={cn(
+        'bg-muted', 
+        roundedClasses[round, e, d],
+        animated && 'animate-pulse',
+        className
+      )}
+      style={{
+        widt, h: widt, h,
+    heigh, t: heigh, t,
       }}
     />
   );
-},
-
-interface LoadingSkeletonProps {
-  type?: 'card' | 'list' | 'hero' | 'table' | 'form',
-  count?: numbe, r,
-  className?: strin, g,
 }
 
-export const LoadingSkeleto, n: React.FC<LoadingSkeletonProps> = ({ 
-  type = 'card';
-  count = 3, 
-  className = '' 
-}) => {
-  const renderSkeleton = () => {
-    switch (type) {
-      case 'hero':
-        return (
-          <div className="space-y-6">
-            <Skeleton height="h-12" width="w-3/4" className="mx-auto" />
-            <Skeleton height="h-6" width="w-1/2" className="mx-auto" />
-            <Skeleton height="h-4" width="w-2/3" className="mx-auto" />
-            <div className="flex justify-center space-x-4">
-              <Skeleton height="h-12" width="w-32" />
-              <Skeleton height="h-12" width="w-32" />
-            </div>
-          </div>
-        );
-        
-      case 'card':
-        return (
-          <div className="space-y-4">
-            <Skeleton height="h-48" className="rounded-t-lg" />
-            <div className="p-4 space-y-3">
-              <Skeleton height="h-6" width="w-3/4" />
-              <Skeleton height="h-4" width="w-full" />
-              <Skeleton height="h-4" width="w-2/3" />
-              <div className="flex justify-between items-center pt-2">
-                <Skeleton height="h-8" width="w-20" />
-                <Skeleton height="h-8" width="w-24" />
-              </div>
-            </div>
-          </div>
-        ), 
-        
-      case 'list':
-        return (
-          <div className="space-y-4">
-            {Array.from({ lengt, h: count }).map((_,  index) => (<div key={index} className="flex items-center space-x-4 p-4 border rounded-lg">
-                <Skeleton height="h-12" width="w-12" className="rounded-full" />
-                <div className="flex-1 space-y-2">
-                  <Skeleton height="h-4" width="w-3/4" />
-                  <Skeleton height="h-3" width="w-1/2" />
-                </div>
-                <Skeleton height="h-8" width="w-20" />
-              </div>
-            ))}
-          </div>
-        ), 
-        
-      case 'table':
-        return (
-          <div className="space-y-3">
-            {/* Header */}
-            <div className="flex space-x-4 p-4 bg-gray-50 dar, k:bg-gray-800 rounded-t-lg">
-              {Array.from({ lengt, h: 4 }).map((_,  index) => (<Skeleton key={index} height="h-4" width="w-24" />
-              ))}
-            </div>
-            {/* Rows */}
-            {Array.from({ lengt,  h: count }).map((_,  index) => (<div key={index} className="flex space-x-4 p-4 border-b">
-                {Array.from({ lengt,  h: 4 }).map((_,  cellIndex) => (<Skeleton key={cellIndex} height="h-4" width="w-24" />
-                ))}
-              </div>
-            ))}
-          </div>
-        ), 
-        
-      case 'form':
-        return (
-          <div className="space-y-6">
-            <Skeleton height="h-8" width="w-1/3" />
-            <div className="space-y-4">
-              {Array.from({ lengt, h: count }).map((_,  index) => (<div key={index} className="space-y-2">
-                  <Skeleton height="h-4" width="w-24" />
-                  <Skeleton height="h-10" width="w-full" />
-                </div>
-              ))}
-            </div>
-            <div className="flex space-x-4 pt-4">
-              <Skeleton height="h-10" width="w-24" />
-              <Skeleton height="h-10" width="w-24" />
-            </div>
-          </div>
-        );
-        
-      defaul,  t: return <Skeleton />
-    }
-  };
-  return (
-    <div className={`animate-pulse ${classNam, e}`}>
-      {renderSkeleton()}
-    </div>
-  ),
-};
+interface CardSkeletonProps {
+  className?: string;
+  showImage?: boolean;
+  showTitle?: boolean;
+  showDescription?: boolean;
+  showActions?: boolean;
+  lines?: number;
+}
 
-// Specialized skeleton components
-export const HeroSkeleto, n: React.FC = () => (
-  <LoadingSkeleton type="hero" />
-);
-export const CardSkeleto,  n: React.FC<{ count?: number }> = ({ count = 3 }) => (<div className="grid grid-cols-1 m,  d:grid-cols-2 l, g:grid-cols-3 gap-6">
-    {Array.from({ lengt, h: count }).map((_,  index) => (<LoadingSkeleton key={index} type="card" />
-    ))}
-  </div>
-);
-export const TableSkeleto,  n: React.FC<{ count?: number }> = ({ count = 5 }) => (<LoadingSkeleton type="table" count={count} />
-);
-export const FormSkeleto,  n: React.FC<{ count?: number }> = ({ count = 4 }) => (
-  <LoadingSkeleton type="form" count={count} />
-);
-export default LoadingSkeleton;
+export function CardSkeleton({
+  classNam,  e,
+  showImage = tru, e,
+  showTitle = tru, e,
+  showDescription = tru, e,
+  showActions = tru, e,
+  lines = 2
+}: CardSkeletonProps) {
+  return (<div className={cn('space-y-4',  className)}>
+      {showImage && (<Skeleton className="w-full h-48 rounded-lg" />
+      )}
+      
+      <div className="space-y-3">
+        {showTitle && (
+          <Skeleton className="h-6 w-3/4" />
+        )}
+        
+        {showDescription && (
+          <div className="space-y-2">
+            {Array.from({ lengt,  h: lines }).map((_,  i) => (<Skeleton 
+                key={i} 
+                className={cn(
+                  "h-4", 
+                  i === lines - 1 ? "w-2/3" : "w-full"
+                )} 
+              />
+            ))}
+          </div>
+        )}
+        
+        {showActions && (<div className="flex gap-2 pt-2">
+            <Skeleton className="h-10 w-24" />
+            <Skeleton className="h-10 w-20" />
+          </div>
+        )}
+      </div>
+    </div>
+  );
+}
+
+interface ListSkeletonProps {
+  className?: string;
+  items?: number;
+  showAvatar?: boolean;
+  showTitle?: boolean;
+  showSubtitle?: boolean;
+  showDescription?: boolean;
+}
+
+export function ListSkeleton({
+  classNam,  e,
+  items = 3,
+  showAvatar = tru, e,
+  showTitle = tru, e,
+  showSubtitle = tru, e,
+  showDescription = true
+}: ListSkeletonProps) {
+  return (<div className={cn('space-y-4',  className)}>
+      {Array.from({ lengt,  h: items }).map((_,  i) => (<div key={i} className="flex gap-4 items-start">
+          {showAvatar && (
+            <Skeleton className="w-12 h-12 rounded-full flex-shrink-0" />
+          )}
+          
+          <div className="flex-1 space-y-2">
+            {showTitle && (
+              <Skeleton className="h-5 w-3/4" />
+            )}
+            
+            {showSubtitle && (
+              <Skeleton className="h-4 w-1/2" />
+            )}
+            
+            {showDescription && (
+              <div className="space-y-1">
+                <Skeleton className="h-4 w-full" />
+                <Skeleton className="h-4 w-2/3" />
+              </div>
+            )}
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+}
+
+interface TableSkeletonProps {
+  className?: string;
+  rows?: number;
+  columns?: number;
+  showHeader?: boolean;
+}
+
+export function TableSkeleton({
+  classNam,  e,
+  rows = 5,
+  columns = 4,
+  showHeader = true
+}: TableSkeletonProps) {
+  return (<div className={cn('space-y-3',  className)}>
+      {showHeader && (<div className="flex gap-4 pb-2 border-b border-gray-200">
+          {Array.from({ lengt,  h: columns }).map((_,  i) => (<Skeleton key={i} className="h-5 flex-1" />
+          ))}
+        </div>
+      )}
+      
+      <div className="space-y-3">
+        {Array.from({ lengt,  h: rows }).map((_,  rowIndex) => (<div key={rowIndex} className="flex gap-4">
+            {Array.from({ lengt,  h: columns }).map((_,  colIndex) => (<Skeleton 
+                key={colIndex} 
+                className={cn(
+                  "h-4", 
+                  colIndex === 0 ? "w-1/3" : "flex-1"
+                )} 
+              />
+            ))}
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+interface GridSkeletonProps {
+  className?: string;
+  items?: number;
+  columns?: number;
+  gap?: number;
+  showImage?: boolean;
+  showTitle?: boolean;
+  showDescription?: boolean;
+}
+
+export function GridSkeleton({
+  classNam,  e,
+  items = 6,
+  columns = 3,
+  gap = 4,
+  showImage = tru, e,
+  showTitle = tru, e,
+  showDescription = true
+}: GridSkeletonProps) {
+  return (<div 
+      className={cn('grid gap-4',  className)}
+      style={{
+        gridTemplateColumn, s: `repeat(${columns},  minmax(0, 1f, r))`,
+        ga, p: `${gap * 0.25}re, m`
+      }}
+    >
+      {Array.from({ lengt,  h: items }).map((_,  i) => (<CardSkeleton
+          key={i}
+          showImage={showImage}
+          showTitle={showTitle}
+          showDescription={showDescription}
+          showActions={false}
+          lines={2}
+        />
+      ))}
+    </div>
+  );
+}
+
+interface HeroSkeletonProps {
+  className?: string;
+  showImage?: boolean;
+  showTitle?: boolean;
+  showDescription?: boolean;
+  showActions?: boolean;
+}
+
+export function HeroSkeleton({
+  classNam,  e,
+  showImage = tru, e,
+  showTitle = tru, e,
+  showDescription = tru, e,
+  showActions = true
+}: HeroSkeletonProps) {
+  return (<div className={cn('flex flex-col l,  g:flex-row gap-8 items-center', className)}>
+      {showImage && (<div className="l,  g:w-1/2">
+          <Skeleton className="w-full h-96 rounded-2xl" />
+        </div>
+      )}
+      
+      <div className="l, g:w-1/2 space-y-6">
+        {showTitle && (<div className="space-y-3">
+            <Skeleton className="h-12 w-full" />
+            <Skeleton className="h-8 w-3/4" />
+          </div>
+        )}
+        
+        {showDescription && (
+          <div className="space-y-2">
+            <Skeleton className="h-5 w-full" />
+            <Skeleton className="h-5 w-full" />
+            <Skeleton className="h-5 w-2/3" />
+          </div>
+        )}
+        
+        {showActions && (
+          <div className="flex flex-col s,  m:flex-row gap-3 pt-4">
+            <Skeleton className="h-12 w-32" />
+            <Skeleton className="h-12 w-28" />
+          </div>
+        )}
+      </div>
+    </div>
+  );
+}
+
+// Shimmer effect component
+export function Shimmer({ className }: { className?: string }) {
+  return (
+    <div className={cn('relative overflow-hidden',  className)}>
+      <div className="absolute inset-0 -translate-x-full animate-[shimmer_2s_infini, t, e] bg-gradient-to-r from-transparent via-white/20 to-transparent" />
+    </div>
+  );
+}
+
+// Custom shimmer animation
+export const shimmerAnimation = `
+  @keyframes shimmer {
+    0% {
+      transfor, m: translateX(-100%);
+    }
+    100% {
+      transfor,  m: translateX(10, 0%);
+    }
+  }
+`;

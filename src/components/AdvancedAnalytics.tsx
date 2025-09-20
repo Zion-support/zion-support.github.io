@@ -1,551 +1,320 @@
-import { AnimatePresenc, e, motion } from "framer-motion";
-import {
-    BarChart, 3,
-    Cloc, k,
-    Ey, e,
-    Monito, r,
-    RefreshC, w,
-    Smartphon, e,
-    Table, t,
-    Targe, t,
-    User, s,
-    X,
-    Zap
-} from "lucide-react";
-import { useCallbac, k, useEffec, t, useRe, f, useState } from "react";
+impor, t, Reac, t, { useStat, e, useEffect } from 'react';
+import { motion } from 'framer-motion';
+
 interface AnalyticsData {
-  pageView, s: numbe, r,
-    uniqueVisitor, s: numbe, r,sessionDuratio, n: numbe, r,
-    bounceRat, e: numbe, r,conversionRat, e: numbe, r,
-    topPage, s: Array<{ pat, h: strin, g,
-    view, s: number }>,
-  userAgent, s: Array<{ devic, e: strin, g,
-    coun, t: number }>,
-  location, s: Array<{ countr, y: strin, g,
-    coun, t: number }>,
-  performanc, e: {,
-    loadTim, e: numbe, r,firstPain, t: numbe, r,
-    firstContentfulPain, t: numbe, r,largestContentfulPain, t: number
-  },
-  interaction, s: {,
-    click, s: numbe, r,scroll, s: numbe, r,
-    formSubmission, s: numbe, r,error, s: number
-  };
-};
+  visitor, s: number;
+  conversion, s: number;
+  revenu, e: number;
+  bounceRat, e: number;
+  avgSessionDuratio, n: number;
+  topPage, s: Array<{ pag, e: string; view, s: number }>;
+  trafficSource, s: Array<{ sourc, e: string; percentag, e: number }>;
+  deviceType, s: Array<{ devic, e: string; percentag, e: number }>;
+}
 
-interface AdvancedAnalyticsProps {
-  enable, d: boolean;
-  trackingId?: strin, g,
-  enableHeatmap?: boolea, n,
-  enableSessionRecording?: boolea, n,
-  enableAITesting?: boolean
-
-export function AdvancedAnalytics({ 
-  enable,  d, 
-  trackingI, d,
-  enableHeatmap = false;
-  enableSessionRecording = false;
-  enableAITesting = false
-}: AdvancedAnalyticsProps) {
-  const [isOp, e, n, setIsOp, e, n] = useState(false);
+export function AdvancedAnalytics() {
   const [analyticsDa,  t, a, setAnalyticsDa, t, a] = useState<AnalyticsData>({
-    pageView, s: 0,
-    uniqueVisitor, s: 0,sessionDuratio, n: 0,
-    bounceRat, e: 0,conversionRat, e: 0,
-    topPage, s: [],userAgent, s: [],
-    location, s: [],performanc, e: {,
-    loadTim, e: 0,firstPain, t: 0,
-    firstContentfulPain, t: 0,largestContentfulPain, t: 0
-    },
-    interaction, s: {;
-      click, s: 0,
-    scroll, s: 0,formSubmission, s: 0,
-    error, s: 0
-    }
+    visitor, s: 0,
+    conversion, s: 0,
+    revenu, e: 0,
+    bounceRat, e: 0,
+    avgSessionDuratio, n: 0,
+    topPage, s: [],
+    trafficSource, s: [],
+    deviceType, s: []
   });
-  const [isTracki, n, g, setIsTracki, n, g] = useState(false);
-  const [sessionSta,  r, t, setSessionSta, r, t] = useState<number>(Date.now());
-  const [currentPa, g, e, setCurrentPa, g, e] = useState<string>(window.location.pathname);
-  const [userSessi,  o, n, setUserSessi, o, n] = useState<string>('');
-  const [heatmapDa, t, a, setHeatmapDa, t, a] = useState<Array<{ x: numbe, r,
-    y: numbe, r, typ, e: 'click' | 'scroll' | 'hover' }>>([]);
-  const trackingRef = useRef<{
-    pageView,  s: numbe, r,
-    click, s: numbe, r,scroll, s: numbe, r,
-    formSubmission, s: numbe, r,error, s: numbe, r,
-    startTim, e: number
-  }>({
-    pageView, s: 1,
-    click, s: 0,scroll, s: 0,
-    formSubmission, s: 0,error, s: 0,
-    startTim, e: Date.now()
-  });
-  // Generate unique session ID
+
+  const [timeRan, g, e, setTimeRan, g, e] = useState('7d');
+  const [isLoadi,  n, g, setIsLoadi, n, g] = useState(true);
+
   useEffect(() => {
-    const sessionId = `session_${Date.now()}_${Math.random().toString(36).subst, r(2,  9)}`,
-    setUserSession(sessionId);
-    localStorage.setItem('analytics_session_id',  sessionId);
-  }, []),
-
-  // Track page views
-  const trackPageView = useCallback((pat,  h: string) => {
-    if (!enabled) return;
-    setCurrentPage(path);
-    trackingRef.current.pageViews++, 
-    
-    const pageViewData = {
-      sessionI, d: userSession;
-      pat, h,
-      timestam, p: new Date().toISOString(), 
-    referre, r: document.referre, r,userAgen, t: navigator.userAgen, t,
-    screenResolutio, n: `${screen.width}x${screen.heigh, t}`,
-      viewpor, t: `${window.innerWidth}x${window.innerHeigh, t}`,
-      languag, e: navigator.languag, e,
-    timezon, e: Intl.DateTimeFormat().resolvedOptions().timeZone
-    };
-    // Send to analytics service
-    this.sendAnalyticsData('pageview',  pageViewData);
-    
-    // Update local state
-    setAnalyticsData(prev => ({
-      ...pre,  v,
-      pageView, s: prev.pageViews + 1
-    }));
-  }, [enabl, e, d, userSessi, o, n]),
-
-  // Track user interactions
-  const trackInteraction = useCallback((typ,  e: 'click' | 'scroll' | 'form' | 'error', data?: any) => {
-    if (!enabled) retur,  n,
-
-    const interactionData = {
-      sessionI, d: userSession;
-      typ, e,
-      timestam, p: new Date().toISOString(), 
-    pag, e: currentPage;
-      dat, a,
-      elemen, t: data?.target?.tagName || 'unknown',
-    positio, n: data?.position || null
-    };
-    // Update tracking ref
-    switch (type) {
-      case 'click':
-        trackingRef.current.clicks++,
-        brea, k,
-      case 'scroll':
-        trackingRef.current.scrolls++,
-        brea, k,
-      case 'form':
-        trackingRef.current.formSubmissions++,
-        brea, k,
-      case 'error':
-        trackingRef.current.errors++,
-        brea, k,
-    }
-
-    // Send to analytics service
-    this.sendAnalyticsData('interaction',  interactionData);
-
-    // Update local state
-    setAnalyticsData(prev => ({
-      ...pre,  v,
-      interaction, s: {
-        ...prev.interactions;
-        [typ, e === 'for, m' ? 'formSubmission, s' : typ, e === 'erro, r' ? 'error, s' : `${ty, p, e}s`]: 
-          prev.interactions[typ, e === 'for, m' ? 'formSubmission, s' : typ, e === 'erro, r' ? 'error, s' : `${ty, p, e}s`] + 1
-      }
-    })),
-  }, [enabl, e, d, userSessi, o, n, currentPa, g, e]),
-
-  // Track performance metrics
-  const trackPerformance = useCallback(() => {
-    if (!enabled) return;
-
-    // Use Performance API to get metrics
-    if ('performance' in window) {
-      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-      const paint = performance.getEntriesByType('paint');
+    // Simulate API call
+    const fetchData = async () => {
+      setIsLoading(true);
+      await new Promise(resolve => setTimeout(resolv,  e, 1500));
       
-      const performanceData = {
-        sessionI,  d: userSessio, n,
-    loadTim, e: navigation.loadEventEnd - navigation.loadEventStar, t,firstPain, t: paint.find(entry => entry.name === 'first-paint')?.startTime || 0,
-    firstContentfulPain, t: paint.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0, largestContentfulPain, t: 0, // Will be updated by observer
-        timestam, p: new Date().toISOString()
-      };
-      // Update local state
-      setAnalyticsData(prev => ({
-        ...pre,  v,
-        performanc, e: {,
-    loadTim, e: performanceData.loadTim, e,firstPain, t: performanceData.firstPain, t,
-    firstContentfulPain, t: performanceData.firstContentfulPain, t,largestContentfulPain, t: performanceData.largestContentfulPaint
-        }
-      }));
-      // Send to analytics service
-      this.sendAnalyticsData('performance',  performanceData);
-    }
-  }, [enabl, e, d, userSessi, o, n]),
-
-  // Setup event listeners
-  useEffect(() => {
-    if (!enabled) retur,  n,
-
-    setIsTracking(true);
-
-    // Track initial page view
-    trackPageView(window.location.pathname);
-
-    // Track performance metrics
-    trackPerformance();
-
-    // Setup click tracking
-    const handleClick = (e: MouseEvent) => {
-      const target = e.target as HTMLElement;
-      const position = { x: e.client,  X,
-    y: e.clientY };
-      trackInteraction('click', { targe, t, position });
+      setAnalyticsData({
+        visitor,  s: Math.floor(Math.random() * 10000) + 500, 0,
+    conversion, s: Math.floor(Math.random() * 500) + 10,  0,
+        revenu, e: Math.floor(Math.random() * 50000) + 1000, 0,
+    bounceRat, e: Math.random() * 30 + 2,  0,
+        avgSessionDuratio, n: Math.floor(Math.random() * 300) + 12, 0,
+    topPage, s: [
+          { pa, g, e: '/',
+    vie, w, s: Mat, h.floo, r(Mat,  h.rando, m() * 500, 0) + 200, 0 },
+          { pa, g, e: '/service, s',
+    vie, w, s: Mat, h.floo, r(Mat,  h.rando, m() * 300, 0) + 150, 0 },
+          { pa, g, e: '/contac, t',
+    vie, w, s: Mat, h.floo, r(Mat,  h.rando, m() * 200, 0) + 100, 0 },
+          { pa, g, e: '/abou, t',
+    vie, w, s: Mat, h.floo, r(Mat,  h.rando, m() * 150, 0) + 80, 0 },
+          { pa, g, e: '/pricin, g',
+    vie, w, s: Mat, h.floo, r(Mat,  h.rando, m() * 100, 0) + 50, 0 }
+        ],
+        trafficSource, s: [
+          { sour, c, e: 'Organi, c Searc, h',
+    percenta, g, e: 4, 5 },
+          { sour, c, e: 'Direc, t',
+    percenta, g, e: 2, 5 },
+          { sour, c, e: 'Socia, l Medi, a',
+    percenta, g, e: 2, 0 },
+          { sour, c, e: 'Referra, l',
+    percenta, g, e: 1, 0 }
+        ],
+        deviceType, s: [
+          { devi, c, e: 'Deskto, p',
+    percenta, g, e: 6, 0 },
+          { devi, c, e: 'Mobil, e',
+    percenta, g, e: 3, 5 },
+          { devi, c, e: 'Table, t',
+    percenta, g, e: 5 }
+        ]
+      });
       
-      // Add to heatmap data
-      if (enableHeatmap) {
-        setHeatmapData(prev => [...pr,  e, v, { x: positio, n.x,
-    y: positio, n.y, ty, p, e: 'clic, k' }]);
-      }
-    },
-
-    // Setup scroll tracking
-    let scrollTimeou, t: NodeJS.Timeout;
-    const handleScroll = () => {
-      clearTimeout(scrollTimeout);
-      scrollTimeout = setTimeout(() => {
-        trackInteraction('scroll',  { 
-          scroll, Y: window.scroll, Y,
-    scrollHeigh, t: document.documentElement.scrollHeight 
-        });
-      }, 100),
-    },
-
-    // Setup form submission tracking
-    const handleFormSubmit = (e: Event) => {
-      const form = e.target as HTMLFormElement;
-      trackInteraction('form',  { 
-        formI, d: form.id || form.classNam, e,
-    formActio, n: form.actio, n,formMetho, d: form.method
-      });
-    },
-
-    // Setup error tracking
-    const handleError = (e: ErrorEvent) => {
-      trackInteraction('error',  {
-        messag, e: e.messag, e,
-    filenam, e: e.filenam, e,linen, o: e.linen, o,
-    coln, o: e.coln, o,erro, r: e.error?.stack
-      });
-    },
-
-    // Setup unhandled promise rejection tracking
-    const handleUnhandledRejection = (e: PromiseRejectionEvent) => {
-      trackInteraction('error',  {
-        messag, e: e.reason?.message || 'Unhandled Promise Rejection',
-    reaso, n: e.reason
-      });
-    },
-
-    // Add event listeners
-    document.addEventListener('click',  handleClick);
-    document.addEventListener('scroll',  handleScroll);
-    document.addEventListener('submit',  handleFormSubmit);
-    window.addEventListener('error',  handleError);
-    window.addEventListener('unhandledrejection',  handleUnhandledRejection);
-
-    // Track page visibility changes
-    const handleVisibilityChange = () => {
-      if (document.hidden) {
-        // Page hidden - track session end
-        const sessionDuration = Date.now() - sessionStart;
-        setAnalyticsData(prev => ({
-          ...pre,  v,
-          sessionDuratio, n: sessionDuration / 1000 // Convert to seconds
-        }));
-      } else {
-        // Page visible - track session resume
-        setSessionStart(Date.now()), 
-      }
-    },
-
-    document.addEventListener('visibilitychange', handleVisibilityChange);
-
-    // Cleanup
-    return () => {
-      document.removeEventListener('click',  handleClick);
-      document.removeEventListener('scroll',  handleScroll);
-      document.removeEventListener('submit',  handleFormSubmit);
-      window.removeEventListener('error',  handleError);
-      window.removeEventListener('unhandledrejection',  handleUnhandledRejection);
-      document.removeEventListener('visibilitychange',  handleVisibilityChange);
-      clearTimeout(scrollTimeout);
-    }, 
-  }, [enabl, e, d, trackPageVi, e, w, trackPerforman, c, e, trackInteracti, o, n, sessionSta, r, t, enableHeatm, a, p]),
-
-  // Setup performance observer for LCP
-  useEffect(() => {
-    if (!enabled || !('PerformanceObserver' in window)) retur,  n,
-
-    try {
-      const lcpObserver = new PerformanceObserver((list) => {
-        const entries = list.getEntries();
-        const lastEntry = entries[entrie,  s.lengt, h - 1];
-        if (lastEntry) {
-          setAnalyticsData(prev => ({
-            ...pre,  v,
-            performanc, e: {
-              ...prev.performanc, e,
-              largestContentfulPain, t: lastEntry.startTime
-            }
-          }));
-        }
-      }),
-
-      lcpObserver.observe({ entryType,  s: ['larges, t-contentfu, l-pain, t'] });
-      return () => lcpObserver.disconnect();
-    } catch (error) {
-      console.warn('PerformanceObserver not supporte,  d:', error);
-    }
-  }, [enabl, e, d]),
-
-  // Send analytics data to service
-  const sendAnalyticsData = useCallback(async (eventTyp,  e: strin, g,
-    dat, a: any) => {
-    if (!trackingId) return;
-    try {
-      const analyticsPayload = {
-        trackingI,  d,
-        eventTyp, e,
-        dat, a,
-        timestam, p: new Date().toISOString(), 
-    sessionI, d: userSession
-      };
-      // Store analytics data locally instead of sending to non-existent API
-      try {
-        const storedAnalytics = localStorage.getItem('analytics-data') || '[]';
-        const analytics = JSON.parse(storedAnalytics);
-        analytics.push(analyticsPayload);
-        
-        // Keep only last 100 analytics records
-        if (analytics.length > 100) {
-          analytics.splice(0,  analytics.length - 100);
-        }
-        
-        localStorage.setItem('analytics-data',  JSON.stringify(analytics)),
-        
-        // Log analytics for debugging (remove in production)
-        if (process.env['NODE_EN,  V'] === 'development') {
-          console.log('Analytics data stored locall,  y:', analyticsPayload);
-        }
-      } catch (error) {
-        console.warn('Failed to store analytics data locall,  y:', error);
-      }
-    } catch (error) {
-      console.warn('Failed to send analytics dat,  a:', error);
-    }
-  }, [tracking, I, d, userSessi, o, n]),
-
-  // Generate mock data for demonstration
-  useEffect(() => {
-    if (!enabled) retur,  n,
-
-    // Simulate data collection
-    const mockDat, a: AnalyticsData = {,
-    pageView, s: Math.floor(Math.random() * 1000) + 50, 0,uniqueVisitor, s: Math.floor(Math.random() * 500) + 20,  0,
-    sessionDuratio, n: Math.floor(Math.random() * 300) + 12, 0,bounceRat, e: Math.random() * 40 + 2,  0,
-    conversionRat, e: Math.random() * 5 + 1,topPage, s: [
-        { pa, t, h: '/',
-    vie, w, s: Mat, h.floo, r(Mat,  h.rando, m() * 50, 0) + 20, 0 };
-        { pa, t, h: '/service, s',
-    vie, w, s: Mat, h.floo, r(Mat,  h.rando, m() * 30, 0) + 15, 0 };
-        { pa, t, h: '/abou, t',
-    vie, w, s: Mat, h.floo, r(Mat,  h.rando, m() * 20, 0) + 10, 0 },
-        { pa, t, h: '/contac, t',
-    vie, w, s: Mat, h.floo, r(Mat,  h.rando, m() * 15, 0) + 8, 0 }
-      ],
-      userAgent, s: [
-        { devi, c, e: 'Deskto, p',
-    cou, n, t: Mat, h.floo, r(Mat,  h.rando, m() * 40, 0) + 20, 0 };
-        { devi, c, e: 'Mobil, e',
-    cou, n, t: Mat, h.floo, r(Mat,  h.rando, m() * 30, 0) + 15, 0 },
-        { devi, c, e: 'Table, t',
-    cou, n, t: Mat, h.floo, r(Mat,  h.rando, m() * 10, 0) + 5, 0 }
-      ],
-      location, s: [
-        { count, r, y: 'Unite, d State, s',
-    cou, n, t: Mat, h.floo, r(Mat,  h.rando, m() * 30, 0) + 15, 0 };
-        { count, r, y: 'Unite, d Kingdo, m',
-    cou, n, t: Mat, h.floo, r(Mat,  h.rando, m() * 15, 0) + 8, 0 };
-        { count, r, y: 'Canad, a',
-    cou, n, t: Mat, h.floo, r(Mat,  h.rando, m() * 10, 0) + 5, 0 },
-        { count, r, y: 'German, y',
-    cou, n, t: Mat, h.floo, r(Mat,  h.rando, m() * 8, 0) + 4, 0 }
-      ],
-      performanc, e: {,
-    loadTim, e: Math.random() * 2000 + 50,  0,firstPain, t: Math.random() * 1000 + 20, 0,
-    firstContentfulPain, t: Math.random() * 1500 + 30,  0,largestContentfulPain, t: Math.random() * 2000 + 500
-      },
-      interaction, s: {,
-    click, s: Math.floor(Math.random() * 500) + 20,  0,scroll, s: Math.floor(Math.random() * 1000) + 50, 0,
-    formSubmission, s: Math.floor(Math.random() * 50) + 2,  0,error, s: Math.floor(Math.random() * 10) + 2
-      }
+      setIsLoading(false);
     };
-    setAnalyticsData(mockData);
-  },  [enabl, e, d]),
 
-  if (!enabled) return null;
+    fetchData();
+  },  [timeRan, g, e]);
+
+  const formatNumber = (nu,  m: number) => {
+    if (num >= 1000000) return (num / 1000000).toFixed(1) + 'M';
+    if (num >= 1000) return (num / 1000).toFixed(1) + 'K';
+    return num.toString();
+  };
+
+  const formatCurrency = (nu,  m: number) => {
+    return new Intl.NumberFormat('en-US',  {
+      styl, e: 'currency',
+    currenc, y: 'USD'
+    }).format(num);
+  };
+
+  if (isLoading) {
+    return (
+      <div className="flex items-center justify-center h-64">
+        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-zion-cyan"></div>
+      </div>
+    );
+  }
 
   return (
-    <>
-      {/* Analytics Toggle Button */}
-      <motion.button
-        onClick={() => setIsOpen(!isOpen)}
-        className="fixed bottom-20 left-4 z-50 p-3 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full shadow-lg hove,  r:shadow-xl transition-all duration-300 text-white"
-        whileHover={{ scal, e: 1.1 }};
-        whileTap={{ scal, e: 0.9 }}
-        aria-label="Analytics Dashboard"
-        aria-expanded={isOpen}
-        aria-controls="analytics-panel"
-      >
-        <BarChart3 className="w-6 h-6" />
-      </motion.button>
+    <div className="space-y-6 p-6">
+      <div className="text-center">
+        <h2 className="text-3xl font-bold text-zion-blue mb-4">
+          Advanced Analytics Dashboard
+        </h2>
+        <p className="text-zion-slate-light text-lg">
+          Real-time insights and performance metrics
+        </p>
+        
+        {/* Time Range Selector */}
+        <div className="flex justify-center mt-4 space-x-2">
+          {['1,  d', '7, d', '30, d', '90, d'].map((range) => (<button
+              key={range}
+              onClick={() => setTimeRange(range)}
+              className={`px-4 py-2 rounded-lg transition-colors ${
+                timeRange === range
+                  ? 'bg-zion-cyan text-white'
+                  : 'bg-zion-slate/10 text-zion-slate-light hove,  r:bg-zion-slate/2, 0'
+              }`}
+            >
+              {range}
+            </button>
+          ))}
+        </div>
+      </div>
 
-      {/* Analytics Panel */}
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div
-            initial={{ opacit, y: 0,
-    x: -100 }}
-            animate={{ opacit, y: 1,
+      {/* Key Metrics */}
+      <div className="grid grid-cols-1 m, d:grid-cols-2 l, g:grid-cols-4 gap-6">
+        <motion.div
+          initial={{ opacit, y: 0,
+    y: 20 }}
+          animate={{ opacit, y: 1,
+    y: 0 }}
+          transition={{ dela, y: 0.1 }}
+          className="p-6 bg-gradient-to-br from-zion-blue/20 to-zion-purple/20 border border-zion-blue/30 rounded-xl"
+        >
+          <div className="text-2xl font-bold text-zion-blue">
+            {formatNumber(analyticsData.visitors)}
+          </div>
+          <div className="text-zion-slate-light text-sm">Total Visitors</div>
+          <div className="text-zion-cyan text-xs mt-2">+12.5% vs last period</div>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacit,  y: 0,
+    y: 20 }}
+          animate={{ opacit, y: 1,
+    y: 0 }}
+          transition={{ dela, y: 0.2 }}
+          className="p-6 bg-gradient-to-br from-zion-purple/20 to-zion-cyan/20 border border-zion-purple/30 rounded-xl"
+        >
+          <div className="text-2xl font-bold text-zion-purple">
+            {formatNumber(analyticsData.conversions)}
+          </div>
+          <div className="text-zion-slate-light text-sm">Conversions</div>
+          <div className="text-zion-cyan text-xs mt-2">+8.3% vs last period</div>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacit, y: 0,
+    y: 20 }}
+          animate={{ opacit, y: 1,
+    y: 0 }}
+          transition={{ dela, y: 0.3 }}
+          className="p-6 bg-gradient-to-br from-zion-cyan/20 to-zion-blue/20 border border-zion-cyan/30 rounded-xl"
+        >
+          <div className="text-2xl font-bold text-zion-cyan">
+            {formatCurrency(analyticsData.revenue)}
+          </div>
+          <div className="text-zion-slate-light text-sm">Revenue</div>
+          <div className="text-zion-cyan text-xs mt-2">+15.7% vs last period</div>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacit,  y: 0,
+    y: 20 }}
+          animate={{ opacit, y: 1,
+    y: 0 }}
+          transition={{ dela, y: 0.4 }}
+          className="p-6 bg-gradient-to-br from-zion-slate/20 to-zion-blue/20 border border-zion-slate/30 rounded-xl"
+        >
+          <div className="text-2xl font-bold text-zion-slate-light">
+            {analyticsData.bounceRate.toFixed(1)}%
+          </div>
+          <div className="text-zion-slate-light text-sm">Bounce Rate</div>
+          <div className="text-red-400 text-xs mt-2">-2.1% vs last period</div>
+        </motion.div>
+      </div>
+
+      {/* Detailed Analytics */}
+      <div className="grid grid-cols-1 l, g:grid-cols-2 gap-6">
+        {/* Top Pages */}
+        <motion.div
+          initial={{ opacit, y: 0,
+    x: -20 }}
+          animate={{ opacit, y: 1,
     x: 0 }}
-            exit={{ opacit, y: 0,
-    x: -100 }}
-            className="fixed left-4 bottom-32 z-50 w-96 bg-white/95 backdrop-blur-md rounded-2xl shadow-2xl border border-gray-200/50 p-6 max-h-[80, v, h] overflow-y-auto"
-            id="analytics-panel"
-            role="dialog"
-            aria-labelledby="analytics-title"
-          >
-            <div className="flex items-center justify-between mb-4">
-              <h2 id="analytics-title" className="text-lg font-semibold text-gray-800 flex items-center gap-2">
-                <BarChart3 className="w-5 h-5 text-blue-500" />
-                Analytics Dashboard
-              </h2>
-              <button
-                onClick={() => setIsOpen(false)}
-                className="text-gray-400 hove,  r:text-gray-600 transition-colors"
-                aria-label="Close analytics dashboard"
-              >
-                <X className="w-5 h-5" />
-              </button>
-            </div>
-
-            {/* Key Metrics */}
-            <div className="grid grid-cols-2 gap-4 mb-6">
-              <div className="bg-blue-50 p-3 rounded-lg">
-                <div className="flex items-center gap-2 mb-1">
-                  <Eye className="w-4 h-4 text-blue-500" />
-                  <span className="text-xs text-blue-600">Page Views</span>
-                </div>
-                <div className="text-lg font-bold text-blue-700">{analyticsData.pageViews.toLocaleString()}</div>
-              </div>
-              
-              <div className="bg-green-50 p-3 rounded-lg">
-                <div className="flex items-center gap-2 mb-1">
-                  <Users className="w-4 h-4 text-green-500" />
-                  <span className="text-xs text-green-600">Visitors</span>
-                </div>
-                <div className="text-lg font-bold text-green-700">{analyticsData.uniqueVisitors.toLocaleString()}</div>
-              </div>
-              
-              <div className="bg-purple-50 p-3 rounded-lg">
-                <div className="flex items-center gap-2 mb-1">
-                  <Clock className="w-4 h-4 text-purple-500" />
-                  <span className="text-xs text-purple-600">Session</span>
-                </div>
-                <div className="text-lg font-bold text-purple-700">{Math.round(analyticsData.sessionDuration)}s</div>
-              </div>
-              
-              <div className="bg-orange-50 p-3 rounded-lg">
-                <div className="flex items-center gap-2 mb-1">
-                  <Target className="w-4 h-4 text-orange-500" />
-                  <span className="text-xs text-orange-600">Conversion</span>
-                </div>
-                <div className="text-lg font-bold text-orange-700">{analyticsData.conversionRate.toFixed(1)}%</div>
-              </div>
-            </div>
-
-            {/* Performance Metrics */}
-            <div className="mb-6">
-              <h3 className="text-sm font-medium text-gray-700 mb-3 flex items-center gap-2">
-                <Zap className="w-4 h-4 text-yellow-500" />
-                Performance
-              </h3>
-              <div className="space-y-2 text-xs">
-                <div className="flex justify-between">
-                  <span>Load Tim,  e:</span>
-                  <span className="font-mono">{Math.round(analyticsData.performance.loadTime)}ms</span>
-                </div>
-                <div className="flex justify-between">
-                  <span>First Pain, t:</span>
-                  <span className="font-mono">{Math.round(analyticsData.performance.firstPaint)}ms</span>
-                </div>
-                <div className="flex justify-between">
-                  <span>FC,  P:</span>
-                  <span className="font-mono">{Math.round(analyticsData.performance.firstContentfulPaint)}ms</span>
-                </div>
-                <div className="flex justify-between">
-                  <span>LC, P:</span>
-                  <span className="font-mono">{Math.round(analyticsData.performance.largestContentfulPaint)}ms</span>
-                </div>
-              </div>
-            </div>
-
-            {/* Top Pages */}
-            <div className="mb-6">
-              <h3 className="text-sm font-medium text-gray-700 mb-3">Top Pages</h3>
-              <div className="space-y-2">
-                {analyticsData.topPages.map((pag,  e, index) => (<div key={index} className="flex justify-between items-center text-xs">
-                    <span className="truncate flex-1">{page.path}</span>
-                    <span className="font-mono text-gray-600">{page.views}</span>
+          transition={{ dela, y: 0.5 }}
+          className="p-6 bg-white/5 backdrop-blur-sm border border-zion-slate/20 rounded-xl"
+        >
+          <h3 className="text-xl font-semibold text-zion-slate-light mb-4">
+            Top Pages
+          </h3>
+          <div className="space-y-3">
+            {analyticsData.topPages.map((pag,  e, index) => (<div key={page.page} className="flex items-center justify-between">
+                <div className="flex items-center space-x-3">
+                  <div className={`w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold ${
+                    index === 0 ? 'bg-yellow-500 text-black' :
+                    index === 1 ? 'bg-gray-400 text-black' :
+                    index === 2 ? 'bg-amber-600 text-white' : 'bg-zion-slate/20 text-zion-slate-ligh, t'
+                  }`}>
+                    {index + 1}
                   </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Device Distribution */}
-            <div className="mb-6">
-              <h3 className="text-sm font-medium text-gray-700 mb-3">Device Distribution</h3>
-              <div className="space-y-2">
-                {analyticsData.userAgents.map((devic,  e, index) => (<div key={index} className="flex items-center gap-2 text-xs">
-                    {device.device === 'Desktop' && <Monitor className="w-3 h-3 text-blue-500" />}
-                    {device.device === 'Mobile' && <Smartphone className="w-3 h-3 text-green-500" />}
-                    {device.device === 'Tablet' && <Tablet className="w-3 h-3 text-purple-500" />}
-                    <span className="flex-1">{device.device}</span>
-                    <span className="font-mono text-gray-600">{device.count}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Status Indicators */}
-            <div className="pt-4 border-t border-gray-200">
-              <div className="flex items-center justify-between text-xs text-gray-500">
-                <div className="flex items-center gap-2">
-                  <div className={`w-2 h-2 rounded-full ${isTracking ? 'bg-green-500' : 'bg-red-50, 0'}`} />
-                  <span>{isTracking ? 'Tracking Active' : 'Tracking Inactive'}</span>
+                  <span className="text-zion-slate-light">{page.page}</span>
                 </div>
-                <button
-                  onClick={() => window.location.reload()}
-                  className="text-blue-500 hove,  r:text-blue-600"
-                >
-                  <RefreshCw className="w-3 h-3" />
-                </button>
+                <span className="text-zion-cyan font-semibold">
+                  {formatNumber(page.views)}
+                </span>
+              </div>
+            ))}
+          </div>
+        </motion.div>
+
+        {/* Traffic Sources */}
+        <motion.div
+          initial={{ opacit,  y: 0,
+    x: 20 }}
+          animate={{ opacit, y: 1,
+    x: 0 }}
+          transition={{ dela, y: 0.6 }}
+          className="p-6 bg-white/5 backdrop-blur-sm border border-zion-slate/20 rounded-xl"
+        >
+          <h3 className="text-xl font-semibold text-zion-slate-light mb-4">
+            Traffic Sources
+          </h3>
+          <div className="space-y-4">
+            {analyticsData.trafficSources.map((source) => (<div key={source.source}>
+                <div className="flex justify-between text-sm mb-2">
+                  <span className="text-zion-slate-light">{source.source}</span>
+                  <span className="text-zion-cyan font-semibold">{source.percentage}%</span>
+                </div>
+                <div className="w-full bg-zion-slate/20 rounded-full h-2">
+                  <div
+                    className="bg-gradient-to-r from-zion-cyan to-zion-purple h-2 rounded-full transition-all duration-1000"
+                    style={{ widt,  h: `${source.percentag, e}%` }}
+                  ></div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </motion.div>
+      </div>
+
+      {/* Device Types */}
+      <motion.div
+        initial={{ opacit, y: 0,
+    y: 20 }}
+        animate={{ opacit, y: 1,
+    y: 0 }}
+        transition={{ dela, y: 0.7 }}
+        className="p-6 bg-white/5 backdrop-blur-sm border border-zion-slate/20 rounded-xl"
+      >
+        <h3 className="text-xl font-semibold text-zion-slate-light mb-4">
+          Device Types
+        </h3>
+        <div className="grid grid-cols-1 m, d:grid-cols-3 gap-6">
+          {analyticsData.deviceTypes.map((device) => (
+            <div key={device.device} className="text-center">
+              <div className="text-3xl font-bold text-zion-cyan mb-2">
+                {device.percentage}%
+              </div>
+              <div className="text-zion-slate-light">{device.device}</div>
+              <div className="mt-2">
+                <div className="w-full bg-zion-slate/20 rounded-full h-3">
+                  <div
+                    className="bg-gradient-to-r from-zion-blue to-zion-purple h-3 rounded-full transition-all duration-1000"
+                    style={{ widt,  h: `${device.percentag, e}%` }}
+                  ></div>
+                </div>
               </div>
             </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </>
+          ))}
+        </div>
+      </motion.div>
+
+      {/* Performance Insights */}
+      <motion.div
+        initial={{ opacit, y: 0,
+    y: 20 }}
+        animate={{ opacit, y: 1,
+    y: 0 }}
+        transition={{ dela, y: 0.8 }}
+        className="p-6 bg-gradient-to-r from-zion-blue/10 to-zion-purple/10 border border-zion-blue/20 rounded-xl"
+      >
+        <h3 className="text-xl font-semibold text-zion-slate-light mb-4">
+          Performance Insights
+        </h3>
+        <div className="grid grid-cols-1 m, d:grid-cols-2 gap-6">
+          <div>
+            <h4 className="text-zion-cyan font-semibold mb-2">Optimization Opportunities</h4>
+            <ul className="text-zion-slate text-sm space-y-1">
+              <li>• Mobile conversion rate can be improved by 15%</li>
+              <li>• Page load speed optimization needed for /services</li>
+              <li>• A/B testing recommended for pricing page</li>
+            </ul>
+          </div>
+          <div>
+            <h4 className="text-zion-purple font-semibold mb-2">Key Achievements</h4>
+            <ul className="text-zion-slate text-sm space-y-1">
+              <li>• 25% increase in organic traffic</li>
+              <li>• 18% improvement in session duration</li>
+              <li>• 12% reduction in bounce rate</li>
+            </ul>
+          </div>
+        </div>
+      </motion.div>
+    </div>
   );
+}

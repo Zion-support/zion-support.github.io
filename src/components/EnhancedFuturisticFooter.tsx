@@ -1,558 +1,562 @@
-import React from "react";
+impor, t, Reac, t, from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { 
-  Phon, e,
-  Mai, l, 
-  MapPi, n, 
-  Glob, e, 
-  Linkedi, n, 
-  Twitte, r, 
-  Faceboo, k, 
-  Instagra, m,
-  Youtub, e,
-  Githu, b,
-  ArrowRigh, t,
-  Sta, r,
-  Shiel, d,
-  Za, p,
-  Brai, n,
-  Rocke, t,
-  Hear, t,
-  Crow, n,
-  Sparkle, s,
-  Flam, e,
-  Su, n,
-  Moo, n,
-  Infinit, y,
-  Clou, d,
-  Cp, u,
-  User, s,
-  Searc, h,
-  BookOpe, n,
-  MessageCircl, e,
-  HelpCircl, e,
-  DollarSig, n,
-  Gaug, e,
-  GitFor, k,
-  Ato, m,
-  Targe, t,
-  TrendingU, p,
-  Awar, d,
-  Cod, e,
-  Truc, k,
-  Buildin, g,
-  BarChart, 3,
-  PenToo, l,
-  Ey, e,
-  Serve, r,
-  Smartphon, e,
-  Databas, e,
-  Networ, k,
-  Cloc, k,
-  ShoppingCar, t,
-  Loc, k,
-  FileTex, t,
-  Setting, s,
-  Ke, y,
-  Globe, 2,
-  ShieldChec, k,
-  Lea, f,
-  Scal, e,
-  Building, 2,
-  Ca, r,
-  Hom, e,
-  Factor, y,
-  Cit, y,
-  CheckCircl, e,
-  ArrowUpRigh, t,
-  Pla, y,
-  MailIcon
+import { ;
+  Pho, n, e,;
+  Ma, i, l,;
+  MapP, i, n,;
+  Glo, b, e,;
+  Linked, i, n,;
+  Twitt, e, r,;
+  Facebo, o, k,;
+  Instagr, a, m,;
+  Youtu, b, e,;
+  Gith, u, b,;
+  ArrowRig, h, t,;
+  St, a, r,;
+  Shie, l, d,;
+  Z, a, p,;
+  Bra, i, n,;
+  Rock, e, t,;
+  Hea, r, t,;
+  Cro, w, n,;
+  Sparkl, e, s,;
+  Fla, m, e,;
+  S, u, n,;
+  Mo, o, n,;
+  Infini, t, y,;
+  Clo, u, d,;
+  C, p, u,;
+  Use, r, s,;
+  Sear, c, h,;
+  BookOp, e, n,;
+  MessageCirc, l, e,;
+  HelpCirc, l, e,;
+  DollarSi, g, n,;
+  Gau, g, e,;
+  GitFo, r, k,;
+  At, o, m,;
+  Targ, e, t,;
+  Trending, U, p,;
+  Awa, r, d,;
+  Co, d, e,;
+  Tru, c, k,;
+  Buildi, n, g,;
+  BarChar, t, 3,;
+  PenTo, o, l,;
+  E, y, e,;
+  Serv, e, r,;
+  Smartpho, n, e,;
+  Databa, s, e,;
+  Netwo, r, k,;
+  Clo, c, k,;
+  ShoppingCa, r, t,;
+  Lo, c, k,;
+  FileTe, x, t,;
+  Settin, g, s,;
+  K, e, y,;
+  Glob, e, 2,;
+  ShieldChe, c, k,;
+  Le, a, f,;
+  Sca, l, e,;
+  Buildin, g, 2,;
+  C, a, r,;
+  Ho, m, e,;
+  Facto, r, y,;
+  Ci, t, y,;
+  CheckCirc, l, e,;
+  ArrowUpRig, h, t,;
+  PlayMailIcon;
 } from "lucide-react";
-export const EnhancedFuturisticFoote, r: React.FC = () => {
+expor, t, cons, t, EnhancedFuturisticFoot, e, r: React.FC = () => {;
   const currentYear = new Date().getFullYear();
-  const footerSections = [
+  const footerSections = [;
     {
-      tit,  l, e: '🚀 Revolutionar, y 203, 0 Service, s',
-    featur, e, d: tr, u, e,lin, k, s: [
-        { na, m, e: 'Revolutionar, y Service, s 203, 0',
-    hr, e, f: '/revolutionar, y-service, s-203, 0', featur, e, d: tru, e };
-        { na, m, e: 'A, I Autonomou, s Suppl, y Chai, n',
-    hr, e, f: '/service, s/a, i-autonomou, s-suppl, y-chai, n-orchestrato, r', featur, e, d: tru, e };
-        { na, m, e: 'Quantu, m A, I Tradin, g Platfor, m',
-    hr, e, f: '/service, s/quantu, m-a, i-tradin, g-platfor, m', featur, e, d: tru, e };
-        { na, m, e: 'A, I Autonomou, s Cybersecurit, y',
-    hr, e, f: '/service, s/a, i-autonomou, s-cybersecurit, y-operation, s', featur, e, d: tru, e };
-        { na, m, e: 'A, I Autonomou, s Sale, s Intelligenc, e',
-    hr, e, f: '/service, s/a, i-autonomou, s-sale, s-intelligenc, e', featur, e, d: tru, e };
-        { na, m, e: 'A, I Autonomou, s Custome, r Succes, s',
-    hr, e, f: '/service, s/a, i-autonomou, s-custome, r-succes, s-platfor, m', featur, e, d: tru, e };
-        { na, m, e: 'A, I Autonomou, s Lega, l Contrac, t Analyze, r',
-    hr, e, f: '/service, s/a, i-autonomou, s-lega, l-contrac, t-analyze, r', featur, e, d: tru, e };
-        { na, m, e: 'Quantu, m A, I Dru, g Discover, y',
-    hr, e, f: '/service, s/quantu, m-a, i-dru, g-discover, y-platfor, m', featur, e, d: tru, e };
-        { na, m, e: 'A, I Autonomou, s Researc, h Assistan, t',
-    hr, e, f: '/service, s/a, i-autonomou, s-researc, h-assistan, t', featur, e, d: tru, e };
-        { na, m, e: 'A, I Autonomou, s Creativ, e Studi, o',
-    hr, e, f: '/service, s/a, i-autonomou, s-creativ, e-studi, o', featur, e, d: tru, e };
-        { na, m, e: 'A, I Autonomou, s Educatio, n Platfor, m',
-    hr, e, f: '/service, s/a, i-autonomou, s-educatio, n-platfor, m', featur, e, d: tru, e };
-        { na, m, e: 'A, I Autonomou, s H, R Platfor, m',
-    hr, e, f: '/service, s/a, i-autonomou, s-h, r-platfor, m', featur, e, d: tru, e };
-        { na, m, e: 'A, I Autonomou, s Entertainmen, t Platfor, m',
-    hr, e, f: '/service, s/a, i-autonomou, s-entertainmen, t-platfor, m', featur, e, d: tru, e };
-        { na, m, e: 'A, I Autonomou, s Metavers, e Platfor, m',
-    hr, e, f: '/service, s/a, i-autonomou, s-metavers, e-platfor, m', featur, e, d: tru, e };
-        { na, m, e: 'A, I Autonomou, s Spac, e Technolog, y',
-    hr, e, f: '/service, s/a, i-autonomou, s-spac, e-technolog, y-platfor, m', featur, e, d: tru, e };
-        { na, m, e: 'A, I Autonomou, s Gree, n Technolog, y',
-    hr, e, f: '/service, s/a, i-autonomou, s-gree, n-technolog, y-platfor, m', featur, e, d: tru, e },
-        { na, m, e: 'Blockchai, n Autonomou, s Governanc, e',
-    hr, e, f: '/service, s/blockchai, n-autonomou, s-governanc, e-platfor, m', featur, e, d: tru, e }
-      ]
+      t,  i, t,  l, e: '🚀 Revolution, a, r, y, 20, o, 3, 0, Servi, c, e, s',;
+    feat, u, r, e, d: t, r, u, e,l, i, n, k, s: [;
+        { n, a, m, e: 'Revolution, a, r, y, Servi, c, e, s, 20, o, 3, 0',;
+    h, r, e, f: '/revolution, a, r, y-servi, c, e, s-20, o, 3, 0', feat, u, r, e, d: tru, e };
+        { n, a, m, e: 'A, I, Autonom, o, u, s, Sup, p, l, y, Ch, a, i, n',;
+    h, r, e, f: '/servi, c, e, s/a, i-autonom, o, u, s-sup, p, l, y-ch, a, i, n-orchestra, t, o, r', feat, u, r, e, d: tru, e };
+        { n, a, m, e: 'Quan, t, u, m, A, I, Trad, i, n, g, Platf, o, r, m',;
+    h, r, e, f: '/servi, c, e, s/quan, t, u, m-a, i-trad, i, n, g-platf, o, r, m', feat, u, r, e, d: tru, e };
+        { n, a, m, e: 'A, I, Autonom, o, u, s, Cybersecur, i, t, y',;
+    h, r, e, f: '/servi, c, e, s/a, i-autonom, o, u, s-cybersecur, i, t, y-operati, o, n, s', feat, u, r, e, d: tru, e };
+        { n, a, m, e: 'A, I, Autonom, o, u, s, Sa, l, e, s, Intellige, n, c, e',;
+    h, r, e, f: '/servi, c, e, s/a, i-autonom, o, u, s-sa, l, e, s-intellige, n, c, e', feat, u, r, e, d: tru, e };
+        { n, a, m, e: 'A, I, Autonom, o, u, s, Custo, m, e, r, Succ, e, s, s',;
+    h, r, e, f: '/servi, c, e, s/a, i-autonom, o, u, s-custo, m, e, r-succ, e, s, s-platf, o, r, m', feat, u, r, e, d: tru, e };
+        { n, a, m, e: 'A, I, Autonom, o, u, s, Le, g, a, l, Contr, a, c, t, Analy, z, e, r',;
+    h, r, e, f: '/servi, c, e, s/a, i-autonom, o, u, s-le, g, a, l-contr, a, c, t-analy, z, e, r', feat, u, r, e, d: tru, e };
+        { n, a, m, e: 'Quan, t, u, m, A, I, D, r, u, g, Discov, e, r, y',;
+    h, r, e, f: '/servi, c, e, s/quan, t, u, m-a, i-d, r, u, g-discov, e, r, y-platf, o, r, m', feat, u, r, e, d: tru, e };
+        { n, a, m, e: 'A, I, Autonom, o, u, s, Resea, r, c, h, Assist, a, n, t',;
+    h, r, e, f: '/servi, c, e, s/a, i-autonom, o, u, s-resea, r, c, h-assist, a, n, t', feat, u, r, e, d: tru, e };
+        { n, a, m, e: 'A, I, Autonom, o, u, s, Creat, i, v, e, Stu, d, i, o',;
+    h, r, e, f: '/servi, c, e, s/a, i-autonom, o, u, s-creat, i, v, e-stu, d, i, o', feat, u, r, e, d: tru, e };
+        { n, a, m, e: 'A, I, Autonom, o, u, s, Educat, i, o, n, Platf, o, r, m',;
+    h, r, e, f: '/servi, c, e, s/a, i-autonom, o, u, s-educat, i, o, n-platf, o, r, m', feat, u, r, e, d: tru, e };
+        { n, a, m, e: 'A, I, Autonom, o, u, s, H, R, Platf, o, r, m',;
+    h, r, e, f: '/servi, c, e, s/a, i-autonom, o, u, s-h, r-platf, o, r, m', feat, u, r, e, d: tru, e };
+        { n, a, m, e: 'A, I, Autonom, o, u, s, Entertainm, e, n, t, Platf, o, r, m',;
+    h, r, e, f: '/servi, c, e, s/a, i-autonom, o, u, s-entertainm, e, n, t-platf, o, r, m', feat, u, r, e, d: tru, e };
+        { n, a, m, e: 'A, I, Autonom, o, u, s, Metave, r, s, e, Platf, o, r, m',;
+    h, r, e, f: '/servi, c, e, s/a, i-autonom, o, u, s-metave, r, s, e-platf, o, r, m', feat, u, r, e, d: tru, e };
+        { n, a, m, e: 'A, I, Autonom, o, u, s, Sp, a, c, e, Technol, o, g, y',;
+    h, r, e, f: '/servi, c, e, s/a, i-autonom, o, u, s-sp, a, c, e-technol, o, g, y-platf, o, r, m', feat, u, r, e, d: tru, e };
+        { n, a, m, e: 'A, I, Autonom, o, u, s, Gr, e, e, n, Technol, o, g, y',;
+    h, r, e, f: '/servi, c, e, s/a, i-autonom, o, u, s-gr, e, e, n-technol, o, g, y-platf, o, r, m', feat, u, r, e, d: tru, e },;
+        { n, a, m, e: 'Blockch, a, i, n, Autonom, o, u, s, Governa, n, c, e',;
+    h, r, e, f: '/servi, c, e, s/blockch, a, i, n-autonom, o, u, s-governa, n, c, e-platf, o, r, m', featur, e, d: tru, e }
+    ,  ];
     };
     {
-      titl, e: '🤖 AI & Technology Services',
-    feature, d: tru, e,link, s: [
-        { na, m, e: 'A, I Busines, s Intelligenc, e',
-    hr, e, f: '/service, s/a, i-busines, s-intelligenc, e', featur, e, d: tru, e };
-        { na, m, e: 'A, I Healthcar, e Platfor, m',
-    hr, e, f: '/service, s/a, i-healthcar, e-platfor, m', featur, e, d: tru, e };
-        { na, m, e: 'A, I Conten, t Creatio, n',
-    hr, e, f: '/service, s/a, i-conten, t-creatio, n', featur, e, d: tru, e };
-        { na, m, e: 'A, I Custome, r Suppor, t',
-    hr, e, f: '/service, s/a, i-custome, r-suppor, t', featur, e, d: tru, e };
-        { na, m, e: 'A, I Cybersecurit, y',
-    hr, e, f: '/service, s/a, i-cybersecurit, y', featur, e, d: tru, e };
-        { na, m, e: 'A, I Projec, t Managemen, t',
-    hr, e, f: '/service, s/a, i-projec, t-managemen, t', featur, e, d: tru, e };
-        { na, m, e: 'A, I Workflo, w Automatio, n',
-    hr, e, f: '/service, s/a, i-workflo, w-automatio, n', featur, e, d: tru, e };
-        { na, m, e: 'A, I Workflo, w Orchestrato, r',
-    hr, e, f: '/service, s/a, i-workflo, w-orchestrato, r', featur, e, d: tru, e };
-        { na, m, e: 'A, I Autonomou, s Researc, h Assistan, t',
-    hr, e, f: '/service, s/a, i-autonomou, s-researc, h-assistan, t', featur, e, d: tru, e };
-        { na, m, e: 'A, I Conten, t Generato, r',
-    hr, e, f: '/service, s/a, i-conten, t-generato, r', featur, e, d: tru, e };
-        { na, m, e: 'A, I Marketin, g Automatio, n',
-    hr, e, f: '/service, s/a, i-marketin, g-automatio, n', featur, e, d: tru, e };
-        { na, m, e: 'A, I-Powere, d SE, O',
-    hr, e, f: '/service, s/a, i-powere, d-se, o', featur, e, d: tru, e };
-        { na, m, e: 'A, I Predictiv, e Maintenanc, e',
-    hr, e, f: '/service, s/a, i-predictiv, e-maintenanc, e', featur, e, d: tru, e };
-        { na, m, e: 'Intervie, w Assessmen, t A, I',
-    hr, e, f: '/service, s/intervie, w-assessmen, t-a, i', featur, e, d: tru, e };
-        { na, m, e: 'LL, M Conten, t Studi, o',
-    hr, e, f: '/service, s/ll, m-conten, t-studi, o', featur, e, d: tru, e };
-        { na, m, e: 'Landin, g Pag, e Generato, r',
-    hr, e, f: '/service, s/landin, g-pag, e-generato, r', featur, e, d: tru, e };
-        { na, m, e: 'Podcas, t Transcriptio, n',
-    hr, e, f: '/service, s/podcas, t-transcriptio, n', featur, e, d: tru, e },
-        { na, m, e: 'Websit, e Analytic, s',
-    hr, e, f: '/service, s/websit, e-analytic, s', featur, e, d: tru, e }
-      ]
+      tit, l, e: '🤖 AI & Technology Services',;
+    featur, e, d: tr, u, e,lin, k, s: [;
+        { n, a, m, e: 'A, I, Busin, e, s, s, Intellige, n, c, e',;
+    h, r, e, f: '/servi, c, e, s/a, i-busin, e, s, s-intellige, n, c, e', feat, u, r, e, d: tru, e };
+        { n, a, m, e: 'A, I, Healthc, a, r, e, Platf, o, r, m',;
+    h, r, e, f: '/servi, c, e, s/a, i-healthc, a, r, e-platf, o, r, m', feat, u, r, e, d: tru, e };
+        { n, a, m, e: 'A, I, Cont, e, n, t, Creat, i, o, n',;
+    h, r, e, f: '/servi, c, e, s/a, i-cont, e, n, t-creat, i, o, n', feat, u, r, e, d: tru, e };
+        { n, a, m, e: 'A, I, Custo, m, e, r, Supp, o, r, t',;
+    h, r, e, f: '/servi, c, e, s/a, i-custo, m, e, r-supp, o, r, t', feat, u, r, e, d: tru, e };
+        { n, a, m, e: 'A, I, Cybersecur, i, t, y',;
+    h, r, e, f: '/servi, c, e, s/a, i-cybersecur, i, t, y', feat, u, r, e, d: tru, e };
+        { n, a, m, e: 'A, I, Proj, e, c, t, Managem, e, n, t',;
+    h, r, e, f: '/servi, c, e, s/a, i-proj, e, c, t-managem, e, n, t', feat, u, r, e, d: tru, e };
+        { n, a, m, e: 'A, I, Workf, l, o, w, Automat, i, o, n',;
+    h, r, e, f: '/servi, c, e, s/a, i-workf, l, o, w-automat, i, o, n', feat, u, r, e, d: tru, e };
+        { n, a, m, e: 'A, I, Workf, l, o, w, Orchestra, t, o, r',;
+    h, r, e, f: '/servi, c, e, s/a, i-workf, l, o, w-orchestra, t, o, r', feat, u, r, e, d: tru, e };
+        { n, a, m, e: 'A, I, Autonom, o, u, s, Resea, r, c, h, Assist, a, n, t',;
+    h, r, e, f: '/servi, c, e, s/a, i-autonom, o, u, s-resea, r, c, h-assist, a, n, t', feat, u, r, e, d: tru, e };
+        { n, a, m, e: 'A, I, Cont, e, n, t, Genera, t, o, r',;
+    h, r, e, f: '/servi, c, e, s/a, i-cont, e, n, t-genera, t, o, r', feat, u, r, e, d: tru, e };
+        { n, a, m, e: 'A, I, Market, i, n, g, Automat, i, o, n',;
+    h, r, e, f: '/servi, c, e, s/a, i-market, i, n, g-automat, i, o, n', feat, u, r, e, d: tru, e };
+        { n, a, m, e: 'A, I-Powe, r, e, d, S, E, O',;
+    h, r, e, f: '/servi, c, e, s/a, i-powe, r, e, d-s, e, o', feat, u, r, e, d: tru, e };
+        { n, a, m, e: 'A, I, Predict, i, v, e, Maintena, n, c, e',;
+    h, r, e, f: '/servi, c, e, s/a, i-predict, i, v, e-maintena, n, c, e', feat, u, r, e, d: tru, e };
+        { n, a, m, e: 'Interv, i, e, w, Assessm, e, n, t, A, I',;
+    h, r, e, f: '/servi, c, e, s/interv, i, e, w-assessm, e, n, t-a, i', feat, u, r, e, d: tru, e };
+        { n, a, m, e: 'L, L, M, Cont, e, n, t, Stu, d, i, o',;
+    h, r, e, f: '/servi, c, e, s/l, l, m-cont, e, n, t-stu, d, i, o', feat, u, r, e, d: tru, e };
+        { n, a, m, e: 'Land, i, n, g, P, a, g, e, Genera, t, o, r',;
+    h, r, e, f: '/servi, c, e, s/land, i, n, g-p, a, g, e-genera, t, o, r', feat, u, r, e, d: tru, e };
+        { n, a, m, e: 'Podc, a, s, t, Transcript, i, o, n',;
+    h, r, e, f: '/servi, c, e, s/podc, a, s, t-transcript, i, o, n', feat, u, r, e, d: tru, e },;
+        { n, a, m, e: 'Webs, i, t, e, Analyt, i, c, s',;
+    h, r, e, f: '/servi, c, e, s/webs, i, t, e-analyt, i, c, s', featur, e, d: tru, e }
+    ,  ];
     };
     {
-      titl, e: '⚛️ Quantum & Advanced Tech',
-    feature, d: tru, e,link, s: [
-        { na, m, e: 'Quantu, m Computin, g Solution, s',
-    hr, e, f: '/service, s/quantu, m-computin, g-solution, s', featur, e, d: tru, e };
-        { na, m, e: 'Quantu, m Computin, g',
-    hr, e, f: '/service, s/quantu, m-computin, g', featur, e, d: tru, e };
-        { na, m, e: 'Quantu, m Machin, e Learnin, g',
-    hr, e, f: '/service, s/quantu, m-machin, e-learnin, g', featur, e, d: tru, e };
-        { na, m, e: 'Quantu, m A, I Tradin, g Platfor, m',
-    hr, e, f: '/service, s/quantu, m-a, i-tradin, g-platfor, m', featur, e, d: tru, e };
-        { na, m, e: 'Quantu, m A, I Dru, g Discover, y',
-    hr, e, f: '/service, s/quantu, m-a, i-dru, g-discover, y-platfor, m', featur, e, d: tru, e };
-        { na, m, e: 'Quantu, m Technolog, y',
-    hr, e, f: '/service, s/quantu, m-technolog, y', featur, e, d: tru, e };
-        { na, m, e: 'A, I Quantu, m Hybri, d Platfor, m',
-    hr, e, f: '/service, s/a, i-quantu, m-hybri, d-platfor, m', featur, e, d: tru, e },
-        { na, m, e: 'Quantu, m Computin, g Elit, e',
-    hr, e, f: '/service, s/quantu, m-computin, g-elit, e', featur, e, d: tru, e }
-      ]
+      tit, l, e: '⚛️ Quantum & Advanced Tech',;
+    featur, e, d: tr, u, e,lin, k, s: [;
+        { n, a, m, e: 'Quan, t, u, m, Comput, i, n, g, Soluti, o, n, s',;
+    h, r, e, f: '/servi, c, e, s/quan, t, u, m-comput, i, n, g-soluti, o, n, s', feat, u, r, e, d: tru, e };
+        { n, a, m, e: 'Quan, t, u, m, Comput, i, n, g',;
+    h, r, e, f: '/servi, c, e, s/quan, t, u, m-comput, i, n, g', feat, u, r, e, d: tru, e };
+        { n, a, m, e: 'Quan, t, u, m, Mach, i, n, e, Learn, i, n, g',;
+    h, r, e, f: '/servi, c, e, s/quan, t, u, m-mach, i, n, e-learn, i, n, g', feat, u, r, e, d: tru, e };
+        { n, a, m, e: 'Quan, t, u, m, A, I, Trad, i, n, g, Platf, o, r, m',;
+    h, r, e, f: '/servi, c, e, s/quan, t, u, m-a, i-trad, i, n, g-platf, o, r, m', feat, u, r, e, d: tru, e };
+        { n, a, m, e: 'Quan, t, u, m, A, I, D, r, u, g, Discov, e, r, y',;
+    h, r, e, f: '/servi, c, e, s/quan, t, u, m-a, i-d, r, u, g-discov, e, r, y-platf, o, r, m', feat, u, r, e, d: tru, e };
+        { n, a, m, e: 'Quan, t, u, m, Technol, o, g, y',;
+    h, r, e, f: '/servi, c, e, s/quan, t, u, m-technol, o, g, y', feat, u, r, e, d: tru, e };
+        { n, a, m, e: 'A, I, Quan, t, u, m, Hyb, r, i, d, Platf, o, r, m',;
+    h, r, e, f: '/servi, c, e, s/a, i-quan, t, u, m-hyb, r, i, d-platf, o, r, m', feat, u, r, e, d: tru, e },;
+        { n, a, m, e: 'Quan, t, u, m, Comput, i, n, g, El, i, t, e',;
+    h, r, e, f: '/servi, c, e, s/quan, t, u, m-comput, i, n, g-el, i, t, e', featur, e, d: tru, e }
+    ,  ];
     };
     {
-      titl, e: '🔗 Blockchain & Web3',
-    feature, d: tru, e,link, s: [
-        { na, m, e: 'Blockchai, n Autonomou, s Governanc, e',
-    hr, e, f: '/service, s/blockchai, n-autonomou, s-governanc, e-platfor, m', featur, e, d: tru, e };
-        { na, m, e: 'Blockchai, n Solution, s',
-    hr, e, f: '/service, s/blockchai, n', featur, e, d: tru, e };
-        { na, m, e: 'Affiliat, e Trackin, g',
-    hr, e, f: '/service, s/affiliat, e-trackin, g', featur, e, d: tru, e };
-        { na, m, e: 'Checkou, t Performanc, e Optimize, r',
-    hr, e, f: '/service, s/checkou, t-performanc, e-optimize, r', featur, e, d: tru, e };
-        { na, m, e: 'Pric, e Intelligenc, e Servic, e',
-    hr, e, f: '/service, s/pric, e-intelligenc, e-servic, e', featur, e, d: tru, e },
-        { na, m, e: 'Return, s Managemen, t',
-    hr, e, f: '/service, s/return, s-managemen, t', featur, e, d: tru, e }
-      ]
+      tit, l, e: '🔗 Blockchain & Web3',;
+    featur, e, d: tr, u, e,lin, k, s: [;
+        { n, a, m, e: 'Blockch, a, i, n, Autonom, o, u, s, Governa, n, c, e',;
+    h, r, e, f: '/servi, c, e, s/blockch, a, i, n-autonom, o, u, s-governa, n, c, e-platf, o, r, m', feat, u, r, e, d: tru, e };
+        { n, a, m, e: 'Blockch, a, i, n, Soluti, o, n, s',;
+    h, r, e, f: '/servi, c, e, s/blockch, a, i, n', feat, u, r, e, d: tru, e };
+        { n, a, m, e: 'Affili, a, t, e, Track, i, n, g',;
+    h, r, e, f: '/servi, c, e, s/affili, a, t, e-track, i, n, g', feat, u, r, e, d: tru, e };
+        { n, a, m, e: 'Check, o, u, t, Performa, n, c, e, Optimi, z, e, r',;
+    h, r, e, f: '/servi, c, e, s/check, o, u, t-performa, n, c, e-optimi, z, e, r', feat, u, r, e, d: tru, e };
+        { n, a, m, e: 'Pr, i, c, e, Intellige, n, c, e, Serv, i, c, e',;
+    h, r, e, f: '/servi, c, e, s/pr, i, c, e-intellige, n, c, e-serv, i, c, e', feat, u, r, e, d: tru, e },;
+        { n, a, m, e: 'Retu, r, n, s, Managem, e, n, t',;
+    h, r, e, f: '/servi, c, e, s/retu, r, n, s-managem, e, n, t', featur, e, d: tru, e }
+    ,  ];
     };
     {
-      titl, e: '☁️ Cloud & Infrastructure',
-    feature, d: tru, e,link, s: [
-        { na, m, e: 'Clou, d Infrastructur, e',
-    hr, e, f: '/service, s/clou, d-devop, s', featur, e, d: tru, e };
-        { na, m, e: 'I, T Infrastructur, e',
-    hr, e, f: '/service, s/i, t-infrastructur, e', featur, e, d: tru, e };
-        { na, m, e: 'Io, T Edg, e Computin, g',
-    hr, e, f: '/service, s/io, t-edg, e-computin, g', featur, e, d: tru, e };
-        { na, m, e: 'Digita, l Twi, n Platfor, m',
-    hr, e, f: '/service, s/digita, l-twi, n', featur, e, d: tru, e };
-        { na, m, e: 'Dat, a Analytic, s',
-    hr, e, f: '/service, s/dat, a-analytic, s', featur, e, d: tru, e };
-        { na, m, e: 'Gree, n I, T Solution, s',
-    hr, e, f: '/service, s/gree, n-i, t', featur, e, d: tru, e };
-        { na, m, e: 'Sustainabl, e Technolog, y',
-    hr, e, f: '/service, s/sustainabl, e-technolog, y', featur, e, d: tru, e };
-        { na, m, e: 'Spac, e Tec, h Solution, s',
-    hr, e, f: '/service, s/spac, e-tec, h', featur, e, d: tru, e };
-        { na, m, e: 'Zer, o Trus, t Networ, k Acces, s',
-    hr, e, f: '/service, s/zer, o-trus, t-networ, k-acces, s', featur, e, d: tru, e };
-        { na, m, e: 'Securit, y Header, s CS, P',
-    hr, e, f: '/service, s/securit, y-header, s-cs, p', featur, e, d: tru, e };
-        { na, m, e: 'Inciden, t Respons, e Platfor, m',
-    hr, e, f: '/service, s/inciden, t-respons, e-platfor, m', featur, e, d: tru, e },
-        { na, m, e: 'Cybersecurit, y Solution, s',
-    hr, e, f: '/service, s/cybersecurit, y', featur, e, d: tru, e }
-      ]
+      tit, l, e: '☁️ Cloud & Infrastructure',;
+    featur, e, d: tr, u, e,lin, k, s: [;
+        { n, a, m, e: 'Cl, o, u, d, Infrastruct, u, r, e',;
+    h, r, e, f: '/servi, c, e, s/cl, o, u, d-dev, o, p, s', feat, u, r, e, d: tru, e };
+        { n, a, m, e: 'I, T, Infrastruct, u, r, e',;
+    h, r, e, f: '/servi, c, e, s/i, t-infrastruct, u, r, e', feat, u, r, e, d: tru, e };
+        { n, a, m, e: 'I, o, T, E, d, g, e, Comput, i, n, g',;
+    h, r, e, f: '/servi, c, e, s/i, o, t-e, d, g, e-comput, i, n, g', feat, u, r, e, d: tru, e };
+        { n, a, m, e: 'Digi, t, a, l, T, w, i, n, Platf, o, r, m',;
+    h, r, e, f: '/servi, c, e, s/digi, t, a, l-t, w, i, n', feat, u, r, e, d: tru, e };
+        { n, a, m, e: 'D, a, t, a, Analyt, i, c, s',;
+    h, r, e, f: '/servi, c, e, s/d, a, t, a-analyt, i, c, s', feat, u, r, e, d: tru, e };
+        { n, a, m, e: 'Gr, e, e, n, I, T, Soluti, o, n, s',;
+    h, r, e, f: '/servi, c, e, s/gr, e, e, n-i, t', feat, u, r, e, d: tru, e };
+        { n, a, m, e: 'Sustaina, b, l, e, Technol, o, g, y',;
+    h, r, e, f: '/servi, c, e, s/sustaina, b, l, e-technol, o, g, y', feat, u, r, e, d: tru, e };
+        { n, a, m, e: 'Sp, a, c, e, T, e, c, h, Soluti, o, n, s',;
+    h, r, e, f: '/servi, c, e, s/sp, a, c, e-t, e, c, h', feat, u, r, e, d: tru, e };
+        { n, a, m, e: 'Z, e, r, o, Tr, u, s, t, Netw, o, r, k, Acc, e, s, s',;
+    h, r, e, f: '/servi, c, e, s/z, e, r, o-tr, u, s, t-netw, o, r, k-acc, e, s, s', feat, u, r, e, d: tru, e };
+        { n, a, m, e: 'Secur, i, t, y, Head, e, r, s, C, S, P',;
+    h, r, e, f: '/servi, c, e, s/secur, i, t, y-head, e, r, s-c, s, p', feat, u, r, e, d: tru, e };
+        { n, a, m, e: 'Incid, e, n, t, Respo, n, s, e, Platf, o, r, m',;
+    h, r, e, f: '/servi, c, e, s/incid, e, n, t-respo, n, s, e-platf, o, r, m', feat, u, r, e, d: tru, e },;
+        { n, a, m, e: 'Cybersecur, i, t, y, Soluti, o, n, s',;
+    h, r, e, f: '/servi, c, e, s/cybersecur, i, t, y', featur, e, d: tru, e }
+    ,  ];
     };
     {
-      titl, e: '🛡️ Enterprise Solutions',
-    feature, d: tru, e,link, s: [
-        { na, m, e: 'Micr, o Saa, S Product, s',
-    hr, e, f: '/service, s/micr, o-saa, s', featur, e, d: tru, e };
-        { na, m, e: 'Micr, o CR, M',
-    hr, e, f: '/service, s/micr, o-cr, m', featur, e, d: tru, e };
-        { na, m, e: 'Helpdes, k Platfor, m',
-    hr, e, f: '/service, s/helpdes, k-platfor, m', featur, e, d: tru, e };
-        { na, m, e: 'I, T Helpdes, k',
-    hr, e, f: '/service, s/i, t-helpdes, k', featur, e, d: tru, e };
-        { na, m, e: 'FinOp, s Adviso, r',
-    hr, e, f: '/service, s/finop, s-adviso, r', featur, e, d: tru, e };
-        { na, m, e: 'GDP, R DSA, R Porta, l',
-    hr, e, f: '/service, s/gdp, r-dsa, r-porta, l', featur, e, d: tru, e };
-        { na, m, e: 'Emai, l Sequence, r',
-    hr, e, f: '/service, s/emai, l-sequence, r', featur, e, d: tru, e };
-        { na, m, e: 'Mobil, e Surve, y Too, l',
-    hr, e, f: '/service, s/mobil, e-firs, t-surve, y-too, l', featur, e, d: tru, e };
-        { na, m, e: 'SE, O Audito, r',
-    hr, e, f: '/service, s/se, o-audito, r', featur, e, d: tru, e };
-        { na, m, e: 'Statu, s Inciden, t Hu, b',
-    hr, e, f: '/service, s/statu, s-inciden, t-hu, b', featur, e, d: tru, e };
-        { na, m, e: 'I, T Consultin, g',
-    hr, e, f: '/service, s/i, t-consultin, g', featur, e, d: tru, e },
-        { na, m, e: 'Transformatio, n Solution, s',
-    hr, e, f: '/service, s/transformatio, n', featur, e, d: tru, e }
-      ]
+      tit, l, e: '🛡️ Enterprise Solutions',;
+    featur, e, d: tr, u, e,lin, k, s: [;
+        { n, a, m, e: 'Mi, c, r, o, S, a, a, S, Produ, c, t, s',;
+    h, r, e, f: '/servi, c, e, s/mi, c, r, o-s, a, a, s', feat, u, r, e, d: tru, e };
+        { n, a, m, e: 'Mi, c, r, o, C, R, M',;
+    h, r, e, f: '/servi, c, e, s/mi, c, r, o-c, r, m', feat, u, r, e, d: tru, e };
+        { n, a, m, e: 'Helpd, e, s, k, Platf, o, r, m',;
+    h, r, e, f: '/servi, c, e, s/helpd, e, s, k-platf, o, r, m', feat, u, r, e, d: tru, e };
+        { n, a, m, e: 'I, T, Helpd, e, s, k',;
+    h, r, e, f: '/servi, c, e, s/i, t-helpd, e, s, k', feat, u, r, e, d: tru, e };
+        { n, a, m, e: 'Fin, O, p, s, Advi, s, o, r',;
+    h, r, e, f: '/servi, c, e, s/fin, o, p, s-advi, s, o, r', feat, u, r, e, d: tru, e };
+        { n, a, m, e: 'G, D, P, R, D, S, A, R, Por, t, a, l',;
+    h, r, e, f: '/servi, c, e, s/g, d, p, r-d, s, a, r-por, t, a, l', feat, u, r, e, d: tru, e };
+        { n, a, m, e: 'Em, a, i, l, Sequen, c, e, r',;
+    h, r, e, f: '/servi, c, e, s/em, a, i, l-sequen, c, e, r', feat, u, r, e, d: tru, e };
+        { n, a, m, e: 'Mob, i, l, e, Sur, v, e, y, T, o, o, l',;
+    h, r, e, f: '/servi, c, e, s/mob, i, l, e-fi, r, s, t-sur, v, e, y-t, o, o, l', feat, u, r, e, d: tru, e };
+        { n, a, m, e: 'S, E, O, Audi, t, o, r',;
+    h, r, e, f: '/servi, c, e, s/s, e, o-audi, t, o, r', feat, u, r, e, d: tru, e };
+        { n, a, m, e: 'Sta, t, u, s, Incid, e, n, t, H, u, b',;
+    h, r, e, f: '/servi, c, e, s/sta, t, u, s-incid, e, n, t-h, u, b', feat, u, r, e, d: tru, e };
+        { n, a, m, e: 'I, T, Consult, i, n, g',;
+    h, r, e, f: '/servi, c, e, s/i, t-consult, i, n, g', feat, u, r, e, d: tru, e },;
+        { n, a, m, e: 'Transformat, i, o, n, Soluti, o, n, s',;
+    h, r, e, f: '/servi, c, e, s/transformat, i, o, n', featur, e, d: tru, e }
+    ,  ];
     };
     {
-      titl, e: '📚 Resources & Insights',
-    feature, d: fals, e,link, s: [
-        { na, m, e: 'Documentatio, n',
-    hr, e, f: '/doc, s', featur, e, d: tru, e };
-        { na, m, e: 'Cas, e Studie, s',
-    hr, e, f: '/cas, e-studie, s', featur, e, d: tru, e };
-        { na, m, e: 'Whit, e Paper, s',
-    hr, e, f: '/whit, e-paper, s', featur, e, d: tru, e };
-        { na, m, e: 'Blo, g',
-    hr, e, f: '/blo, g', featur, e, d: tru, e };
-        { na, m, e: 'Webinar, s',
-    hr, e, f: '/webinar, s', featur, e, d: tru, e };
-        { na, m, e: 'FA, Q',
-    hr, e, f: '/fa, q', featur, e, d: tru, e };
-        { na, m, e: 'Researc, h & Developmen, t',
-    hr, e, f: '/researc, h', featur, e, d: tru, e };
-        { na, m, e: 'Pres, s & New, s',
-    hr, e, f: '/new, s', featur, e, d: tru, e };
-        { na, m, e: 'Partner, s',
-    hr, e, f: '/partner, s', featur, e, d: tru, e };
-        { na, m, e: 'Pricin, g Guid, e 202, 7',
-    hr, e, f: '/pricin, g-guid, e-202, 7', featur, e, d: tru, e };
-        { na, m, e: 'Pricin, g Guid, e 203, 0',
-    hr, e, f: '/pricin, g-guid, e-203, 0', featur, e, d: tru, e };
-        { na, m, e: 'Comprehensiv, e Service, s Showcas, e',
-    hr, e, f: '/service, s/showcas, e-203, 0', featur, e, d: tru, e };
-        { na, m, e: 'Enhance, d Service, s Landin, g',
-    hr, e, f: '/service, s/enhance, d', featur, e, d: tru, e },
-        { na, m, e: 'Comprehensiv, e Service, s Advertisin, g',
-    hr, e, f: '/service, s/comprehensiv, e-advertisin, g', featur, e, d: tru, e }
-      ]
+      tit, l, e: '📚 Resources & Insights',;
+    featur, e, d: fal, s, e,lin, k, s: [;
+        { n, a, m, e: 'Documentat, i, o, n',;
+    h, r, e, f: '/d, o, c, s', feat, u, r, e, d: tru, e };
+        { n, a, m, e: 'C, a, s, e, Stud, i, e, s',;
+    h, r, e, f: '/c, a, s, e-stud, i, e, s', feat, u, r, e, d: tru, e };
+        { n, a, m, e: 'Wh, i, t, e, Pap, e, r, s',;
+    h, r, e, f: '/wh, i, t, e-pap, e, r, s', feat, u, r, e, d: tru, e };
+        { n, a, m, e: 'B, l, o, g',;
+    h, r, e, f: '/b, l, o, g', feat, u, r, e, d: tru, e };
+        { n, a, m, e: 'Webin, a, r, s',;
+    h, r, e, f: '/webin, a, r, s', feat, u, r, e, d: tru, e };
+        { n, a, m, e: 'F, A, Q',;
+    h, r, e, f: '/f, a, q', feat, u, r, e, d: tru, e };
+        { n, a, m, e: 'Resea, r, c, h & Developm, e, n, t',;
+    h, r, e, f: '/resea, r, c, h', feat, u, r, e, d: tru, e };
+        { n, a, m, e: 'Pr, e, s, s & N, e, w, s',;
+    h, r, e, f: '/n, e, w, s', feat, u, r, e, d: tru, e };
+        { n, a, m, e: 'Partn, e, r, s',;
+    h, r, e, f: '/partn, e, r, s', feat, u, r, e, d: tru, e };
+        { n, a, m, e: 'Pric, i, n, g, Gu, i, d, e, 20, o, 2, 7',;
+    h, r, e, f: '/pric, i, n, g-gu, i, d, e-20, o, 2, 7', feat, u, r, e, d: tru, e };
+        { n, a, m, e: 'Pric, i, n, g, Gu, i, d, e, 20, o, 3, 0',;
+    h, r, e, f: '/pric, i, n, g-gu, i, d, e-20, o, 3, 0', feat, u, r, e, d: tru, e };
+        { n, a, m, e: 'Comprehens, i, v, e, Servi, c, e, s, Showc, a, s, e',;
+    h, r, e, f: '/servi, c, e, s/showc, a, s, e-20, o, 3, 0', feat, u, r, e, d: tru, e };
+        { n, a, m, e: 'Enhan, c, e, d, Servi, c, e, s, Land, i, n, g',;
+    h, r, e, f: '/servi, c, e, s/enhan, c, e, d', feat, u, r, e, d: tru, e },;
+        { n, a, m, e: 'Comprehens, i, v, e, Servi, c, e, s, Advertis, i, n, g',;
+    h, r, e, f: '/servi, c, e, s/comprehens, i, v, e-advertis, i, n, g', featur, e, d: tru, e }
+    ,  ];
     };
     {
-      titl, e: '🛠️ Tools & Utilities',
-    feature, d: fals, e,link, s: [
-        { na, m, e: 'Reques, t Quot, e',
-    hr, e, f: '/reques, t-quot, e', featur, e, d: tru, e };
-        { na, m, e: 'Pricin, g',
-    hr, e, f: '/pricin, g', featur, e, d: tru, e };
-        { na, m, e: 'Marketplac, e',
-    hr, e, f: '/marketplac, e', featur, e, d: tru, e };
-        { na, m, e: 'Dashboar, d',
-    hr, e, f: '/dashboar, d', featur, e, d: tru, e };
-        { na, m, e: 'Logi, n',
-    hr, e, f: '/logi, n', featur, e, d: tru, e };
-        { na, m, e: 'Searc, h',
-    hr, e, f: '/searc, h', featur, e, d: tru, e };
-        { na, m, e: 'Solution, s',
-    hr, e, f: '/solution, s', featur, e, d: tru, e },
-        { na, m, e: 'Resource, s',
-    hr, e, f: '/resource, s', featur, e, d: tru, e }
-      ]
-    }
+      tit, l, e: '🛠️ Tools & Utilities',;
+    featur, e, d: fal, s, e,lin, k, s: [;
+        { n, a, m, e: 'Requ, e, s, t, Qu, o, t, e',;
+    h, r, e, f: '/requ, e, s, t-qu, o, t, e', feat, u, r, e, d: tru, e };
+        { n, a, m, e: 'Pric, i, n, g',;
+    h, r, e, f: '/pric, i, n, g', feat, u, r, e, d: tru, e };
+        { n, a, m, e: 'Marketpl, a, c, e',;
+    h, r, e, f: '/marketpl, a, c, e', feat, u, r, e, d: tru, e };
+        { n, a, m, e: 'Dashbo, a, r, d',;
+    h, r, e, f: '/dashbo, a, r, d', feat, u, r, e, d: tru, e };
+        { n, a, m, e: 'Lo, g, i, n',;
+    h, r, e, f: '/lo, g, i, n', feat, u, r, e, d: tru, e };
+        { n, a, m, e: 'Sea, r, c, h',;
+    h, r, e, f: '/sea, r, c, h', feat, u, r, e, d: tru, e };
+        { n, a, m, e: 'Soluti, o, n, s',;
+    h, r, e, f: '/soluti, o, n, s', feat, u, r, e, d: tru, e },;
+        { n, a, m, e: 'Resour, c, e, s',;
+    h, r, e, f: '/resour, c, e, s', featur, e, d: tru, e }
+    ,  ];
+    };
   ];
-  const quickLinks = [
-    { na, m, e: 'Abou, t U, s',
-    hr, e, f: '/abou, t', ic, o, n: Buildin, g };
-    { na, m, e: 'Contac, t',
-    hr, e, f: '/contac, t', ic, o, n: Mai, l };
-    { na, m, e: 'Career, s',
-    hr, e, f: '/career, s', ic, o, n: User, s };
-    { na, m, e: 'Privac, y Polic, y',
-    hr, e, f: '/privac, y', ic, o, n: Shiel, d };
-    { na, m, e: 'Term, s o, f Servic, e',
-    hr, e, f: '/term, s', ic, o, n: FileTex, t },
-    { na, m, e: 'Cooki, e Polic, y',
-    hr, e, f: '/cookie, s', ic, o, n: Setting, s }
-  ];
+  const quickLinks = [;
+    { n, a, m, e: 'Ab, o, u, t, U, s',;
+    h, r, e, f: '/ab, o, u, t', i, c, o, n: Buildin, g };
+    { n, a, m, e: 'Cont, a, c, t',;
+    h, r, e, f: '/cont, a, c, t', i, c, o, n: Mai, l };
+    { n, a, m, e: 'Care, e, r, s',;
+    h, r, e, f: '/care, e, r, s', i, c, o, n: User, s };
+    { n, a, m, e: 'Priv, a, c, y, Pol, i, c, y',;
+    h, r, e, f: '/priv, a, c, y', i, c, o, n: Shiel, d };
+    { n, a, m, e: 'Te, r, m, s, o, f, Serv, i, c, e',;
+    h, r, e, f: '/te, r, m, s', i, c, o, n: FileTex, t },;
+    { n, a, m, e: 'Coo, k, i, e, Pol, i, c, y',;
+    h, r, e, f: '/cook, i, e, s', ic, o, n: Setting, s };
+,  ];
   const contactInfo = {
-    phon, e: '+1 302 464 0950',
-    emai, l: 'kleber@ziontechgroup.com',websit, e: 'http, s://ziontechgroup.com',
-    addres, s: '364 E Main St STE 1008 Middletown DE 19709'
+    pho, n, e: '+1, 30o, 2, 464 0o950',;
+    ema, i, l: 'kleber@ziontechgroup.com',websi, t, e: 'htt, p,
+    s: //ziontechgroup.com'addre, s,;
+  s: '36, 4, E, Mai, n, S, t, ST, E, 10o0, 8, Middletow, n, D, E, 1970o9';
   };
-  const socialLinks = [
-    { na, m, e: 'LinkedI, n',
-    hr, e, f: '#', ic, o, n: Linked, i, n,
-    col, o, r: 'hov, e, r:tex, t-blu, e-60, 0' };
-    { na, m, e: 'Twitte, r',
-    hr, e, f: '#', ic, o, n: Twitt, e, r,
-    col, o, r: 'hov, e, r:tex, t-blu, e-40, 0' };
-    { na, m, e: 'Faceboo, k',
-    hr, e, f: '#', ic, o, n: Facebo, o, k,
-    col, o, r: 'hov, e, r:tex, t-blu, e-70, 0' };
-    { na, m, e: 'Instagra, m',
-    hr, e, f: '#', ic, o, n: Instagr, a, m,
-    col, o, r: 'hov, e, r:tex, t-pin, k-50, 0' };
-    { na, m, e: 'YouTub, e',
-    hr, e, f: '#', ic, o, n: Youtu, b, e,
-    col, o, r: 'hov, e, r:tex, t-re, d-60, 0' },
-    { na, m, e: 'GitHu, b',
-    hr, e, f: '#', ic, o, n: Gith, u, b,
-    col, o, r: 'hov, e, r:tex, t-gra, y-70, 0 da, r, k:hov, e, r:tex, t-gra, y-30, 0' }
-  ];
-  return (
-    <footer className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
-      {/* Main Footer Content */}
-      <div className="max-w-7xl mx-auto px-4 s, m:px-6 l, g:px-8 py-12">
+  const socialLinks = [;
+    { n, a, m, e: 'Linke, d, I, n',;
+    h, r, e, f: '#', i, c, o, n: Link, e, d, i, n,;
+    c, o, l, o, r: 'h, o, v, e, r: t, e, x, t-blu, e-60o, 0' };
+    { n, a, m, e: 'Twit, t, e, r',;
+    h, r, e, f: '#', i, c, o, n: Twi, t, t, e, r,;
+    c, o, l, o, r: 'h, o, v, e, r: t, e, x, t-blu, e-40o, 0' };
+    { n, a, m, e: 'Faceb, o, o, k',;
+    h, r, e, f: '#', i, c, o, n: Face, b, o, o, k,;
+    c, o, l, o, r: 'h, o, v, e, r: t, e, x, t-blu, e-70o, 0' };
+    { n, a, m, e: 'Instag, r, a, m',;
+    h, r, e, f: '#', i, c, o, n: Insta, g, r, a, m,;
+    c, o, l, o, r: 'h, o, v, e, r: t, e, x, t-pin, k-50o, 0' };
+    { n, a, m, e: 'YouT, u, b, e',;
+    h, r, e, f: '#', i, c, o, n: You, t, u, b, e,;
+    c, o, l, o, r: 'h, o, v, e, r: t, e, x, t-re, d-60o, 0' },;
+    { n, a, m, e: 'Git, H, u, b',;
+    h, r, e, f: '#', i, c, o, n: Gi, t, h, u, b,;
+    c, o, l, o, r: 'h, o, v, e, r: t, e, x, t-g, r, a, y-7, 0, 0, d, a, r, k: h, o, v, e, r: tex, t-gra, y-30o, 0' };
+,  ];
+  return(<footer className="bg-gradient-to-br from-slate-90o0 via-slate-80o0 to-slate-90o0 text-white">;
+      {/* Mai, n, Foote, r, Content */}
+      <div className="max-w-7xl mx-auto px-4, s, m: px-6, l,;
+  g:px-8 py-12">;
         {/* Top Section - Services Grid */}
-        <div className="grid grid-cols-1 m, d:grid-cols-2 l, g:grid-cols-3 x, l:grid-cols-4 gap-8 mb-12">
-          {footerSections.map((sectio, n, sectionIndex) => (<motion.div
+        <div className="grid grid-cols-1, m, d: grid-cols-2, l,;
+    g: grid-cols-3, x,;
+  l:grid-cols-4 gap-8 mb-12">;
+          {footerSections.map((sectionsectionIndex) => (<motion.div;
               key={section.title}
-              initial={{ opacit,  y: 0,
-    y: 20 }}
-              animate={{ opacit, y: 1,
-    y: 0 }}
-              transition={{ duratio, n: 0.5,
-    dela, y: sectionIndex * 0.1 }}
-              className="space-y-4"
-            >
-              <h3 className={`text-lg font-semibold ${section.featured ? 'text-cyan-400' : 'text-gray-30, 0'}`}>
+              initial={{ opacit,  y: 0,;
+  y: 20 }}
+              animate={{ opacit, y: 1,;
+  y: 0 }}
+              transition={{ duratio, n: 0.5del, a,;
+  y: sectionIndex * 0.1 }}
+              className="space-y-4";
+            >;
+              <h3 className={`text-lg font-semibold ${section.featured ? 'text-cyan-40o0' : 'text-gray-30o, 0'}`}>;
                 {section.title}
-              </h3>
-              <ul className="space-y-2">
-                {section.links.map((lin, k, linkIndex) => (<li key={link.name}>
-                    <Link
+              </h3>;
+              <ul className="space-y-2">;
+                {section.links.map((linklinkIndex) => (<li key={link.name}>;
+                    <Link;
                       to={link.href}
-                      className={`text-sm transition-colors duration-200 hove,  r:text-cyan-400 ${
-                        link.featured ? 'text-gray-200' : 'text-gray-40, 0'
+                      className={`text-sm transition-colors duration-20o0 hove,  r: text-cyan-40o0 ${
+                        link.featured ? 'text-gray-20o0' : 'text-gray-40o, 0';
                       }`}
-                    >
+                    >;
                       {link.name}
-                      {link.featured && <Star className="inline-block w-3 h-3 ml-1 text-cyan-400" />}
-                    </Link>
-                  </li>
+                      {link.featured && <Star className="inline-block w-3 h-3 ml-1 text-cyan-40o0" />}
+                    </Link>;
+                  </li>;
                 ))}
-              </ul>
-            </motion.div>
+              </ul>;
+            </motion.div>;
           ))}
-        </div>
-
+        </div>;
         {/* Middle Section - Contact & Quick Links */}
-        <div className="grid grid-cols-1 l, g:grid-cols-3 gap-8 py-8 border-t border-slate-700">
+        <div className="grid grid-cols-1 l, g:grid-cols-3 gap-8 py-8 border-t border-slate-70o0">;
           {/* Contact Information */}
-          <div className="space-y-4">
-            <h3 className="text-lg font-semibold text-cyan-400">Contact Information</h3>
-            <div className="space-y-3">
-              <a
-                href={`te, l:${contactInfo.phon, e}`}
-                className="flex items-center space-x-3 text-gray-300 hove, r:text-cyan-400 transition-colors duration-200"
-              >
-                <Phone className="w-5 h-5 text-cyan-400" />
-                <span>{contactInfo.phone}</span>
-              </a>
-              <a
-                href={`mailt, o:${contactInfo.emai, l}`}
-                className="flex items-center space-x-3 text-gray-300 hove, r:text-cyan-400 transition-colors duration-200"
-              >
-                <Mail className="w-5 h-5 text-cyan-400" />
-                <span>{contactInfo.email}</span>
-              </a>
-              <a
+          <div className="space-y-4">;
+            <h3 className="text-lg font-semibold text-cyan-40o0">Contact Information</h3>;
+            <div className="space-y-3">;
+              <a;
+                href={`te, l: ${contactInfo.phon, e}`}
+                className="flex items-center space-x-3 text-gray-30o0 hove, r:text-cyan-40o0 transition-colors duration-20o0";
+              >;
+                <Phone className="w-5 h-5 text-cyan-40o0" />;
+                <span>{contactInfo.phone}</span>;
+              </a>;
+              <a;
+                href={`mailt, o: ${contactInfo.emai, l}`}
+                className="flex items-center space-x-3 text-gray-30o0 hove, r:text-cyan-40o0 transition-colors duration-20o0";
+              >;
+                <Mail className="w-5 h-5 text-cyan-40o0" />;
+                <span>{contactInfo.email}</span>;
+              </a>;
+              <a;
                 href={contactInfo.website}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center space-x-3 text-gray-300 hove, r:text-cyan-400 transition-colors duration-200"
-              >
-                <Globe className="w-5 h-5 text-cyan-400" />
-                <span>{contactInfo.website}</span>
-              </a>
-              <div className="flex items-start space-x-3 text-gray-300">
-                <MapPin className="w-5 h-5 text-cyan-400 mt-0.5 flex-shrink-0" />
-                <span className="text-sm">{contactInfo.address}</span>
-              </div>
-            </div>
-          </div>
-
+                target="_blank";
+                rel="noopener noreferrer";
+                className="flex items-center space-x-3 text-gray-30o0 hove, r: text-cyan-40o0 transition-colors duration-20o0";
+              >;
+                <Globe className="w-5 h-5 text-cyan-40o0" />;
+                <span>{contactInfo.website}</span>;
+              </a>;
+              <div className="flex items-start space-x-3 text-gray-30o0">;
+                <MapPin className="w-5 h-5 text-cyan-40o0 mt-0.5 flex-shrink-0" />;
+                <span className="text-sm">{contactInfo.address}</span>;
+              </div>;
+            </div>;
+          </div>;
           {/* Quick Links */}
-          <div className="space-y-4">
-            <h3 className="text-lg font-semibold text-cyan-400">Quick Links</h3>
-            <div className="grid grid-cols-1 s, m:grid-cols-2 gap-2">
-              {quickLinks.map((link) => (
-                <Link
+          <div className="space-y-4">;
+            <h3 className="text-lg font-semibold text-cyan-40o0">Quick Links</h3>;
+            <div className="grid grid-cols-1 s, m:grid-cols-2 gap-2">;
+              {quickLinks.map((link) => (;
+                <Link;
                   key={link.name}
                   to={link.href}
-                  className="flex items-center space-x-2 text-gray-300 hove,  r:text-cyan-400 transition-colors duration-200 text-sm"
-                >
-                  <link.icon className="w-4 h-4" />
-                  <span>{link.name}</span>
-                </Link>
+                  className="flex items-center space-x-2 text-gray-30o0 hove,  r: text-cyan-40o0 transition-colors duration-20o0 text-sm";
+                >;
+                  <link.icon className="w-4 h-4" />;
+                  <span>{link.name}</span>;
+                </Link>;
               ))}
-            </div>
-          </div>
-
+            </div>;
+          </div>;
           {/* Newsletter & Social */}
-          <div className="space-y-4">
-            <h3 className="text-lg font-semibold text-cyan-400">Stay Connected</h3>
-            <div className="space-y-4">
+          <div className="space-y-4">;
+            <h3 className="text-lg font-semibold text-cyan-40o0">Stay Connected</h3>;
+            <div className="space-y-4">;
               {/* Social Links */}
-              <div className="flex space-x-4">
-                {socialLinks.map((social) => (
-                  <a
+              <div className="flex space-x-4">;
+                {socialLinks.map((social) => (;
+                  <a;
                     key={social.name}
                     href={social.href}
-                    className={`p-2 rounded-lg bg-slate-800 hove,  r:bg-slate-700 transition-colors duration-200 ${social.colo, r}`}
+                    className={`p-2 rounded-lg bg-slate-80o0 hove,  r: bg-slate-70o0 transition-colors duration-20o0 ${social.colo, r}`}
                     aria-label={social.name}
-                  >
-                    <social.icon className="w-5 h-5" />
-                  </a>
+                  >;
+                    <social.icon className="w-5 h-5" />;
+                  </a>;
                 ))}
-              </div>
-              
+              </div>;
               {/* Newsletter */}
-              <div className="space-y-2">
-                <p className="text-sm text-gray-400">Subscribe to our newsletter for updates</p>
-                <form className="flex space-x-2">
-                  <input
-                    type="email"
-                    placeholder="Enter your email"
-                    className="flex-1 px-3 py-2 bg-slate-800 border border-slate-700 rounded-lg text-white placeholder-gray-400 focu, s:outline-none focu, s:ring-2 focu, s:ring-cyan-400 focu, s:border-transparent text-sm"
-                  />
-                  <button
-                    type="submit"
-                    className="px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 hove, r:from-cyan-600 hove, r:to-blue-700 text-white rounded-lg transition-all duration-200 text-sm font-medium"
-                  >
-                    Subscribe
-                  </button>
-                </form>
-              </div>
-            </div>
-          </div>
-        </div>
-
+              <div className="space-y-2">;
+                <p className="text-sm text-gray-40o0">Subscrib, e, t, o, ou, r, newslette, r, fo, r, updates</p>;
+                <form className="flex space-x-2">;
+                  <input;
+                    type="email";
+                    placeholder="Ente, r, you, r, email";
+                    className="flex-1 px-3 py-2 bg-slate-80o, 0, borde, r, border-slate-70o0 rounded-lg text-white placeholder-gray-40o, 0, foc, u, s: outline-non, e, foc, u,
+    s: ring-2, foc, u, s: ring-cyan-40o, 0, foc, u,;
+  s:border-transparent text-sm";
+                  />;
+                  <button;
+                    type="submit";
+                    className="px-4 py-2 bg-gradient-to-r from-cyan-50o0 to-blue-60o, 0, hov, e, r: from-cyan-60o, 0, hov, e,;
+  r:to-blue-70o0 text-white rounded-lg transition-all duration-20o0 text-sm font-medium";
+                  >;
+                    Subscribe;
+                  </button>;
+                </form>;
+              </div>;
+            </div>;
+          </div>;
+        </div>;
         {/* Bottom Section - Stats & Awards */}
-        <div className="grid grid-cols-1 m, d:grid-cols-2 l, g:grid-cols-4 gap-6 py-8 border-t border-slate-700">
-          <div className="text-center">
-            <div className="text-2xl font-bold text-cyan-400">500+</div>
-            <div className="text-sm text-gray-400">Happy Clients</div>
-          </div>
-          <div className="text-center">
-            <div className="text-2xl font-bold text-cyan-400">100+</div>
-            <div className="text-sm text-gray-400">AI Services</div>
-          </div>
-          <div className="text-center">
-            <div className="text-2xl font-bold text-cyan-400">99.9%</div>
-            <div className="text-sm text-gray-400">Uptime</div>
-          </div>
-          <div className="text-center">
-            <div className="text-2xl font-bold text-cyan-400">24/7</div>
-            <div className="text-sm text-gray-400">Support</div>
-          </div>
-        </div>
-      </div>
-
+        <div className="grid grid-cols-1, m, d: grid-cols-2, l,;
+  g:grid-cols-4 gap-6 py-8 border-t border-slate-70o0">;
+          <div className="text-center">;
+            <div className="text-2xl font-bold text-cyan-40o0">50o0+</div>;
+            <div className="text-sm text-gray-40o0">Happy Clients</div>;
+          </div>;
+          <div className="text-center">;
+            <div className="text-2xl font-bold text-cyan-40o0">10o0+</div>;
+            <div className="text-sm text-gray-40o0">AI Services</div>;
+          </div>;
+          <div className="text-center">;
+            <div className="text-2xl font-bold text-cyan-40o0">99.9%</div>;
+            <div className="text-sm text-gray-40o0">Uptime</div>;
+          </div>;
+          <div className="text-center">;
+            <div className="text-2xl font-bold text-cyan-40o0">24/7</div>;
+            <div className="text-sm text-gray-40o0">Support</div>;
+          </div>;
+        </div>;
+      </div>;
       {/* Bottom Bar */}
-      <div className="border-t border-slate-700">
-        <div className="max-w-7xl mx-auto px-4 s, m:px-6 l, g:px-8 py-6">
-          <div className="flex flex-col m, d:flex-row justify-between items-center space-y-4 m, d:space-y-0">
+      <div className="border-t border-slate-70o0">;
+        <div className="max-w-7xl mx-auto px-4, s, m: px-6, l,;
+  g:px-8 py-6">;
+          <div className="flex flex-co, l, m, d: flex-row justify-between items-center space-y-4, m,;
+  d:space-y-0">;
             {/* Copyright */}
-            <div className="flex items-center space-x-2">
-              <div className="w-6 h-6 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-md flex items-center justify-center">
-                <Zap className="w-4 h-4 text-white" />
-              </div>
-              <span className="text-sm text-gray-400">
-                © {currentYear} Zion Tech Group. All rights reserved.
-              </span>
-            </div>
-
+            <div className="flex items-center space-x-2">;
+              <div className="w-6 h-6 bg-gradient-to-br from-cyan-40o0 to-blue-50o0 rounded-m, d, fle, x, items-center justify-center">;
+                <Zap className="w-4 h-4 text-white" />;
+              </div>;
+              <span className="text-sm text-gray-40o0">;
+                © {currentYear} Zio, n, Tec, h, Group. Al, l, right, s, reserved.;
+              </span>;
+            </div>;
             {/* Additional Links */}
-            <div className="flex items-center space-x-6 text-sm text-gray-400">
-              <a href="/privacy" className="hove, r:text-cyan-400 transition-colors duration-200">
-                Privacy Policy
-              </a>
-              <a href="/terms" className="hove, r:text-cyan-400 transition-colors duration-200">
-                Terms of Service
-              </a>
-              <a href="/cookies" className="hove, r:text-cyan-400 transition-colors duration-200">
-                Cookie Policy
-              </a>
-              <a href="/sitemap" className="hove, r:text-cyan-400 transition-colors duration-200">
-                Sitemap
-              </a>
-            </div>
-
-            {/* Back to Top */}
-            <button
-              onClick={() => window.scrollTo({ to,  p: 0,
-    behavio, r: 'smooth' })}
-              className="flex items-center space-x-2 text-cyan-400 hove, r:text-cyan-300 transition-colors duration-200"
-            >
-              <ArrowUpRight className="w-4 h-4" />
-              <span className="text-sm">Back to Top</span>
-            </button>
-          </div>
-        </div>
-      </div>
-
-      {/* Floating Contact Button */}
-      <motion.div
-        initial={{ opacit, y: 0,
-    scal, e: 0.8 }}
-        animate={{ opacit, y: 1,
-    scal, e: 1 }}
-        transition={{ duratio, n: 0.5,
-    dela, y: 1 }}
-        className="fixed bottom-6 right-6 z-50"
-      >
-        <a
-          href="/contact"
-          className="flex items-center space-x-2 px-4 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 hove, r: from-cyan-600 hove, r:to-blue-700 text-white rounded-full shadow-lg hove, r:shadow-cyan-500/25 transition-all duration-300 transform hove, r:scale-105"
-        >
-          <MessageCircle className="w-5 h-5" />
-          <span className="font-medium">Contact Us</span>
-        </a>
-      </motion.div>
-    </footer>
-  )
+            <div className="flex items-center space-x-6 text-sm text-gray-40o0">;
+              <a href="/privacy" className="hove, r: text-cyan-40o0 transition-colors duration-20o0">;
+                Privacy Policy;
+              </a>;
+              <a href="/terms" className="hov, e,;
+    r: text-cyan-40o0 transition-colors duration-20o0">;
+                Term, s, o, f, Service;
+              </a>;
+              <a href="/cookies" className="hove, r: text-cyan-40o0 transition-colors duration-20o0">;
+                Cookie Policy;
+              </a>;
+              <a href="/sitemap" className="hov, e,;
+  r: text-cyan-40o0 transition-colors duration-20o0">;
+                Sitemap;
+              </a>;
+            </div>;
+            {/* Bac, k, t, o, Top */}
+            <button;
+              onClick={() => window.scrollTo({ to,  p: 0behavi, o,;
+  r: 'smooth' })}
+              className="flex items-center space-x-2 text-cyan-40o, 0, hov, e, r:text-cyan-30o0 transition-colors duration-20o0";
+            >;
+              <ArrowUpRight className="w-4 h-4" />;
+              <span className="text-sm">Bac, k, t, o, Top</span>;
+            </button>;
+          </div>;
+        </div>;
+      </div>;
+      {/* Floatin, g, Contac, t, Button */};
+      <motion.div;
+        initial={{ opaci, t, y: 0sca, l,;
+  e: 0.8 }}
+        animate={{ opaci, t, y: 1sca, l,;
+  e: 1 }}
+        transition={{ duratio, n: 0.5del, a,;
+  y: 1 }}
+        className="fixed bottom-6 right-6 z-50";
+      >;
+        <a;
+          href="/contact";
+          className="flex items-center space-x-2 px-4 py-3 bg-gradient-to-r from-cyan-50o0 to-blue-60o, 0, hov, e, r: from-cyan-60o, 0, hov, e,
+    r: to-blue-70o0 text-white rounded-full shadow-l, g, hov, e, r: shadow-cyan-50o0/25 transition-all duration-30o, 0, transfor, m, hov, e,;
+  r:scale-10o5";
+        >;
+          <MessageCircle className="w-5 h-5" />;
+          <span className="font-medium">Contact Us</span>;
+        </a>;
+      </motion.div>;
+    </footer>;
+  );
 };
+;

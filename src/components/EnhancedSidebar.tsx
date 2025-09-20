@@ -1,304 +1,305 @@
-impor, t, Reac, t, { useState } from "react";
-import { Lin, k, useLocation } from "react-router-dom";
-import { motio, n, AnimatePresence } from "framer-motion";
+impo, r, t, Rea, c, t, { useState } from "react";
+import { LinkuseLocation } from "react-router-dom";
+import { motionAnimatePresence } from "framer-motion";
 import {
-  Hom, e,
-  Brai, n,
-  Clou, d,
-  Serve, r,
-  Rocke, t,
-  User, s,
-  Briefcas, e,
-  FileTex, t,
-  HelpCircl, e,
-  MessageCircl, e,
-  Setting, s,
-  BarChart, 3,
-  Shiel, d,
-  Za, p,
-  Glob, e,
-  Cp, u,
-  Databas, e,
-  Networ, k,
-  Loc, k,
-  Cod, e,
-  ShoppingCar, t,
-  Targe, t,
-  Lightbul, b,
-  Awar, d,
-  TrendingU, p,
-  BookOpe, n,
-  Calenda, r,
-  MapPi, n,
-  Phon, e,
-  Mai, l,
-  ChevronRigh, t,
-  ChevronDow, n,
-  Handshak, e,
-  Ato, m,
-  Link a, s, LinkIco, n,
-  Wif, i,
-  HeartPuls, e,
-  DollarSig, n,
-  Lea, f,
-  Buildin, g,
-  User
+  Ho, m, e,;
+  Bra, i, n,;
+  Clo, u, d,;
+  Serv, e, r,;
+  Rock, e, t,;
+  Use, r, s,;
+  Briefca, s, e,;
+  FileTe, x, t,;
+  HelpCirc, l, e,;
+  MessageCirc, l, e,;
+  Settin, g, s,;
+  BarChar, t, 3,;
+  Shie, l, d,;
+  Z, a, p,;
+  Glo, b, e,;
+  C, p, u,;
+  Databa, s, e,;
+  Netwo, r, k,;
+  Lo, c, k,;
+  Co, d, e,;
+  ShoppingCa, r, t,;
+  Targ, e, t,;
+  Lightbu, l, b,;
+  Awa, r, d,;
+  Trending, U, p,;
+  BookOp, e, n,;
+  Calend, a, r,;
+  MapP, i, n,;
+  Pho, n, e,;
+  Ma, i, l,;
+  ChevronRig, h, t,;
+  ChevronDo, w, n,;
+  Handsha, k, e,;
+  At, o, m,;
+  Lin, k, a, s, LinkIc, o, n,;
+  Wi, f, i,;
+  HeartPul, s, e,;
+  DollarSi, g, n,;
+  Le, a, f,;
+  BuildingUser;
 } from "lucide-react";
-export const EnhancedSideba, r: React.FC = () => {
-  const [expandedSectio,  n, s, setExpandedSectio, n, s] = useState<Set<string>>(new Set(['Service, s']));
+expor, t, cons, t, EnhancedSideb, a, r: React.FC = () => {;
+  const [expandedSect,  i, o,  n, s, setExpandedSect, i, o,, n, s] = useState<Set<string>>(new Set(['Service, s']));
   const location = useLocation();
-  const toggleSection = (sectio,  n: string) => {
+  const toggleSection = (sectio,  n: string) => {;
     const newExpanded = new Set(expandedSections);
     if (newExpanded.has(section)) {
-      newExpanded.delete(section)
+      newExpanded.delete(section);
     } else {
       newExpanded.add(section);
-    }
+    };
     setExpandedSections(newExpanded);
-  }, 
-
-  const isActive = (pat, h: string) => location.pathname === path;
-  const navigationSections = [
+  }, ;
+  const isActive = (pa, t, h: string) => location.pathname === path;
+  const navigationSections = [;
     {
-      tit, l, e: "Mai, n",
-    ic, o, n: Ho, m, e,ite, m, s: [
-        { na, m, e: "Hom, e",
-    hr, e, f: "/", ic, o, n: Hom, e };
-        { na, m, e: "Solution, s",
-    hr, e, f: "/solution, s", ic, o, n: Targe, t };
-        { na, m, e: "Service, s",
-    hr, e, f: "/service, s", ic, o, n: Za, p };
-        { na, m, e: "Cas, e Studie, s",
-    hr, e, f: "/cas, e-studie, s", ic, o, n: FileTex, t };
-        { na, m, e: "Blo, g",
-    hr, e, f: "/blo, g", ic, o, n: FileTex, t };
-        { na, m, e: "Partner, s",
-    hr, e, f: "/partner, s", ic, o, n: Handshak, e };
-        { na, m, e: "Abou, t",
-    hr, e, f: "/abou, t", ic, o, n: User, s };
-        { na, m, e: "Contac, t",
-    hr, e, f: "/contac, t", ic, o, n: MessageCircl, e },
-        { na, m, e: "Career, s",
-    hr, e, f: "/career, s", ic, o, n: Briefcas, e }
-      ]
+      t, i, t, l, e: "M, a, i, n",;
+    i, c, o, n: H, o, m, e,i, t, e, m, s: [;
+        { n, a, m, e: "H, o, m, e",;
+    h, r, e, f: "/", i, c, o, n: Hom, e };
+        { n, a, m, e: "Soluti, o, n, s",;
+    h, r, e, f: "/soluti, o, n, s", i, c, o, n: Targe, t };
+        { n, a, m, e: "Servi, c, e, s",;
+    h, r, e, f: "/servi, c, e, s", i, c, o, n: Za, p };
+        { n, a, m, e: "C, a, s, e, Stud, i, e, s",;
+    h, r, e, f: "/c, a, s, e-stud, i, e, s", i, c, o, n: FileTex, t };
+        { n, a, m, e: "B, l, o, g",;
+    h, r, e, f: "/b, l, o, g", i, c, o, n: FileTex, t };
+        { n, a, m, e: "Partn, e, r, s",;
+    h, r, e, f: "/partn, e, r, s", i, c, o, n: Handshak, e };
+        { n, a, m, e: "Ab, o, u, t",;
+    h, r, e, f: "/ab, o, u, t", i, c, o, n: User, s };
+        { n, a, m, e: "Cont, a, c, t",;
+    h, r, e, f: "/cont, a, c, t", i, c, o, n: MessageCircl, e },;
+        { n, a, m, e: "Care, e, r, s",;
+    h, r, e, f: "/care, e, r, s", ic, o, n: Briefcas, e }
+    ,  ];
     };
     {
-      titl, e: "Service Areas",
-    ico, n: Za, p,item, s: [
-        { na, m, e: "Clou, d & DevOp, s",
-    hr, e, f: "/service, s/clou, d-devop, s", ic, o, n: Clou, d };
-        { na, m, e: "Digita, l Twi, n",
-    hr, e, f: "/service, s/digita, l-twi, n", ic, o, n: Cp, u };
-        { na, m, e: "Dat, a Analytic, s",
-    hr, e, f: "/service, s/dat, a-analytic, s", ic, o, n: TrendingU, p };
-        { na, m, e: "I, T Infrastructur, e",
-    hr, e, f: "/service, s/i, t-infrastructur, e", ic, o, n: Serve, r };
-        { na, m, e: "A, I Busines, s Intelligenc, e",
-    hr, e, f: "/service, s/a, i-busines, s-intelligenc, e", ic, o, n: Brai, n };
-        { na, m, e: "A, I Emai, l Responde, r",
-    hr, e, f: "/service, s/a, i-emai, l-responde, r", ic, o, n: Brai, n };
-        { na, m, e: "Mobil, e Survey, s",
-    hr, e, f: "/service, s/mobil, e-firs, t-survey, s", ic, o, n: User, s };
-        { na, m, e: "Meetin, g Summarize, r",
-    hr, e, f: "/service, s/meetin, g-summarize, r", ic, o, n: Calenda, r };
-        { na, m, e: "A, I SE, O Optimize, r",
-    hr, e, f: "/service, s/a, i-se, o-optimize, r", ic, o, n: TrendingU, p },
-        { na, m, e: "Develope, r AP, I Teste, r",
-    hr, e, f: "/service, s/develope, r-ap, i-teste, r", ic, o, n: Cod, e }
-      ]
+      tit, l, e: "Service Areas",;
+    ic, o, n: Z, a, p,ite, m, s: [;
+        { n, a, m, e: "Cl, o, u, d & Dev, O, p, s",;
+    h, r, e, f: "/servi, c, e, s/cl, o, u, d-dev, o, p, s", i, c, o, n: Clou, d };
+        { n, a, m, e: "Digi, t, a, l, T, w, i, n",;
+    h, r, e, f: "/servi, c, e, s/digi, t, a, l-t, w, i, n", i, c, o, n: Cp, u };
+        { n, a, m, e: "D, a, t, a, Analyt, i, c, s",;
+    h, r, e, f: "/servi, c, e, s/d, a, t, a-analyt, i, c, s", i, c, o, n: TrendingU, p };
+        { n, a, m, e: "I, T, Infrastruct, u, r, e",;
+    h, r, e, f: "/servi, c, e, s/i, t-infrastruct, u, r, e", i, c, o, n: Serve, r };
+        { n, a, m, e: "A, I, Busin, e, s, s, Intellige, n, c, e",;
+    h, r, e, f: "/servi, c, e, s/a, i-busin, e, s, s-intellige, n, c, e", i, c, o, n: Brai, n };
+        { n, a, m, e: "A, I, Em, a, i, l, Respon, d, e, r",;
+    h, r, e, f: "/servi, c, e, s/a, i-em, a, i, l-respon, d, e, r", i, c, o, n: Brai, n };
+        { n, a, m, e: "Mob, i, l, e, Surv, e, y, s",;
+    h, r, e, f: "/servi, c, e, s/mob, i, l, e-fi, r, s, t-surv, e, y, s", i, c, o, n: User, s };
+        { n, a, m, e: "Meet, i, n, g, Summari, z, e, r",;
+    h, r, e, f: "/servi, c, e, s/meet, i, n, g-summari, z, e, r", i, c, o, n: Calenda, r };
+        { n, a, m, e: "A, I, S, E, O, Optimi, z, e, r",;
+    h, r, e, f: "/servi, c, e, s/a, i-s, e, o-optimi, z, e, r", i, c, o, n: TrendingU, p },;
+        { n, a, m, e: "Develo, p, e, r, A, P, I, Tes, t, e, r",;
+    h, r, e, f: "/servi, c, e, s/develo, p, e, r-a, p, i-tes, t, e, r", ic, o, n: Cod, e }
+    ,  ];
     };
     {
-      titl, e: "Resources",
-    ico, n: BookOpe, n,item, s: [
-        { na, m, e: "Documentatio, n",
-    hr, e, f: "/documentatio, n", ic, o, n: FileTex, t };
-        { na, m, e: "AP, I Referenc, e",
-    hr, e, f: "/ap, i", ic, o, n: Cod, e };
-        { na, m, e: "Develope, r Porta, l",
-    hr, e, f: "/develope, r", ic, o, n: Cp, u };
-        { na, m, e: "Suppor, t Cente, r",
-    hr, e, f: "/hel, p-cente, r", ic, o, n: HelpCircl, e };
-        { na, m, e: "FA, Q",
-    hr, e, f: "/fa, q", ic, o, n: HelpCircl, e };
-        { na, m, e: "Reques, t a Quot, e",
-    hr, e, f: "/reques, t-quot, e", ic, o, n: MessageCircl, e };
-        { na, m, e: "Dashboar, d",
-    hr, e, f: "/dashboar, d", ic, o, n: BarChart, 3 };
-        { na, m, e: "Logi, n",
-    hr, e, f: "/logi, n", ic, o, n: Use, r },
-        { na, m, e: "Suppor, t",
-    hr, e, f: "/suppor, t", ic, o, n: HelpCircl, e }
-      ]
-    }
+      tit, l, e: "Resources",;
+    ic, o, n: BookOp, e, n,ite, m, s: [;
+        { n, a, m, e: "Documentat, i, o, n",;
+    h, r, e, f: "/documentat, i, o, n", i, c, o, n: FileTex, t };
+        { n, a, m, e: "A, P, I, Refere, n, c, e",;
+    h, r, e, f: "/a, p, i", i, c, o, n: Cod, e };
+        { n, a, m, e: "Develo, p, e, r, Por, t, a, l",;
+    h, r, e, f: "/develo, p, e, r", i, c, o, n: Cp, u };
+        { n, a, m, e: "Supp, o, r, t, Cen, t, e, r",;
+    h, r, e, f: "/h, e, l, p-cen, t, e, r", i, c, o, n: HelpCircl, e };
+        { n, a, m, e: "F, A, Q",;
+    h, r, e, f: "/f, a, q", i, c, o, n: HelpCircl, e };
+        { n, a, m, e: "Requ, e, s, t, a, Qu, o, t, e",;
+    h, r, e, f: "/requ, e, s, t-qu, o, t, e", i, c, o, n: MessageCircl, e };
+        { n, a, m, e: "Dashbo, a, r, d",;
+    h, r, e, f: "/dashbo, a, r, d", i, c, o, n: BarChart, 3 };
+        { n, a, m, e: "Lo, g, i, n",;
+    h, r, e, f: "/lo, g, i, n", i, c, o, n: Use, r },;
+        { n, a, m, e: "Supp, o, r, t",;
+    h, r, e, f: "/supp, o, r, t", ic, o, n: HelpCircl, e }
+    ,  ];
+    };
   ];
-  const quickActions = [
-    { na, m, e: "Ge, t Quot, e",
-    hr, e, f: "/contac, t", ic, o, n: MessageCirc, l, e,
-    varia, n, t: "primar, y" };
-    { na, m, e: "Boo, k Dem, o",
-    hr, e, f: "/reques, t-quot, e", ic, o, n: Calend, a, r,
-    varia, n, t: "secondar, y" },
-    { na, m, e: "Suppor, t",
-    hr, e, f: "/suppor, t", ic, o, n: HelpCirc, l, e,
-    varia, n, t: "secondar, y" }
-  ];
-  return (<aside className="hidden l,  g:block w-80 min-h-screen bg-zion-slate-dark/95 backdrop-blur-xl border-r border-zion-cyan/20 overflow-y-auto">
-      <div className="p-6">
-        {/* Logo Section */}
-        <motion.div
-          className="mb-8"
-          initial={{ opacit, y: 0,
-    y: -20 }}
-          animate={{ opacit, y: 1,
-    y: 0 }}
+  const quickActions = [;
+    { n, a, m, e: "G, e, t, Qu, o, t, e",;
+    h, r, e, f: "/cont, a, c, t", i, c, o, n: MessageCi, r, c, l, e,;
+    var, i, a, n, t: "primar, y" };
+    { n, a, m, e: "B, o, o, k, D, e, m, o",;
+    h, r, e, f: "/requ, e, s, t-qu, o, t, e", i, c, o, n: Cale, n, d, a, r,;
+    var, i, a, n, t: "secondar, y" },;
+    { n, a, m, e: "Supp, o, r, t",;
+    h, r, e, f: "/supp, o, r, t", i, c, o, n: HelpCi, r, c, l, e,;
+    varia, n, t: "secondar, y" };
+,  ];
+  return (<aside className="hidden l,  g: block w-80 min-h-screen bg-zion-slate-dark/95 backdrop-blur-xl border-r border-zion-cyan/20 overflow-y-auto">;
+      <div className="p-6">;
+        {/* Logo Section */};
+        <motion.div;
+          className="mb-8";
+          initial={{ opacit, y: 0,;
+  y: -20 }}
+          animate={{ opacit, y: 1,;
+  y: 0 }}
           transition={{ duratio, n: 0.5 }}
-        >
-          <Link to="/" className="flex items-center space-x-3 group">
-            <div className="relative">
-              <div className="w-10 h-10 bg-gradient-to-br from-zion-cyan via-zion-purple to-zion-blue rounded-xl flex items-center justify-center group-hove, r:scale-110 transition-all duration-300 shadow-lg shadow-zion-cyan/25">
-                <span className="text-xl font-bold text-white">Z</span>
-              </div>
-              <div className="absolute inset-0 bg-gradient-to-br from-zion-cyan via-zion-purple to-zion-blue rounded-xl blur-lg opacity-50 group-hove, r:opacity-75 transition-opacity duration-300"></div>
-            </div>
-            <div>
-              <h2 className="text-lg font-bold bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-blue bg-clip-text text-transparent">
-                ZION TECH GROUP
-              </h2>
-              <p className="text-xs text-zion-slate-light">Navigation</p>
-            </div>
-          </Link>
-        </motion.div>
-
+        >;
+          <Link to="/" className="flex items-center space-x-3 group">;
+            <div className="relative">;
+              <div className="w-10 h-10 bg-gradient-to-br from-zion-cyan via-zion-purple to-zion-blue rounded-x, l, fle, x, items-center justify-center group-hove, r: scale-110 transition-all duration-30o0 shadow-lg shadow-zion-cyan/25">;
+                <span className="text-xl font-bold text-white">Z</span>;
+              </div>;
+              <div className="absolute inset-0 bg-gradient-to-br from-zion-cyan via-zion-purple to-zion-blue rounded-xl blur-lg opacity-50 group-hov, e,;
+  r:opacity-75 transition-opacity duration-30o0"></div>;
+            </div>;
+            <div>;
+              <h2 className="text-lg font-bold bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-blue bg-clip-text text-transparent">;
+                ZIO, N, TEC, H, GROUP;
+              </h2>;
+              <p className="text-xs text-zion-slate-light">Navigation</p>;
+            </div>;
+          </Link>;
+        </motion.div>;
         {/* Quick Actions */}
-        <motion.div
-          className="mb-8"
-          initial={{ opacit, y: 0,
-    y: -20 }}
-          animate={{ opacit, y: 1,
-    y: 0 }}
-          transition={{ duratio, n: 0.5,
-    dela, y: 0.1 }}
-        >
-          <h3 className="text-sm font-semibold text-zion-slate-light mb-3 uppercase tracking-wide">Quick Actions</h3>
-          <div className="space-y-2">
-            {quickActions.map((actio, n, index) => (<motion.div
+        <motion.div;
+          className="mb-8";
+          initial={{ opacit, y: 0,;
+  y: -20 }}
+          animate={{ opacit, y: 1,;
+  y: 0 }}
+          transition={{ duratio, n: 0.5del, a,;
+  y: 0.1 }}
+        >;
+          <h3 className="text-sm font-semibold text-zion-slate-light mb-3, uppercas, e, tracking-wide">Quick Actions</h3>;
+          <div className="space-y-2">;
+            {quickActions.map((actionindex) => (<motion.div;
                 key={action.name}
-                initial={{ opacit,  y: 0,
-    x: -20 }}
-                animate={{ opacit, y: 1,
-    x: 0 }}
-                transition={{ duratio, n: 0.3,
-    dela, y: index * 0.1 }}
-              >
-                <Link
+                initial={{ opacit,  y: 0,;
+  x: -20 }}
+                animate={{ opacit, y: 1,;
+  x: 0 }}
+                transition={{ duratio, n: 0.3del, a,;
+  y: index * 0.1 }}
+              >;
+                <Link;
                   to={action.href}
-                  className={`flex items-center space-x-3 p-3 rounded-lg transition-all duration-300 group ${
-                    action.variant === 'primary'
-                      ? 'bg-gradient-to-r from-zion-cyan to-zion-blue text-white hove, r:from-zion-cyan/90 hove, r:to-zion-blue/90 shadow-lg shadow-zion-cyan/25'
-                      : 'bg-zion-slate-dark/50 text-zion-slate-light hove, r:text-white hove, r:bg-zion-cyan/10 border border-zion-cyan/20 hove, r:border-zion-cyan/4, 0'
+                  className={`flex items-center space-x-3 p-3 rounded-lg transition-all duration-30o0 group ${
+                    action.variant === 'primary';
+                      ? 'bg-gradient-to-r from-zion-cyan to-zion-blue text-whit, e, hov, e, r: from-zion-cyan/9, 0, hov, e,
+    r: to-zion-blue/90 shadow-lg shadow-zion-cyan/25';
+                      : 'bg-zion-slate-dark/50 text-zion-slate-ligh, t, hov, e, r: text-whit, e, hov, e,;
+    r: bg-zion-cyan/1, 0, borde, r, border-zion-cyan/2, 0, hov, e,;
+  r:border-zion-cyan/4, 0';
                   }`}
-                >
-                  <action.icon className="w-4 h-4 group-hove, r:scale-110 transition-transform duration-300" />
-                  <span className="font-medium">{action.name}</span>
-                </Link>
-              </motion.div>
+                >;
+                  <action.icon className="w-4 h-4 group-hove, r:scale-110 transition-transform duration-30o0" />;
+                  <span className="font-medium">{action.name}</span>;
+                </Link>;
+              </motion.div>;
             ))}
-          </div>
-        </motion.div>
-
+          </div>;
+        </motion.div>;
         {/* Navigation Sections */}
-        <div className="space-y-6">
-          {navigationSections.map((sectio,  n, sectionIndex) => (<motion.div
+        <div className="space-y-6">;
+          {navigationSections.map((sectionsectionIndex) => (<motion.div;
               key={section.title}
-              initial={{ opacit,  y: 0,
-    y: -20 }}
-              animate={{ opacit, y: 1,
-    y: 0 }}
-              transition={{ duratio, n: 0.5,
-    dela, y: sectionIndex * 0.1 }}
-            >
-              <button
+              initial={{ opacit,  y: 0,;
+  y: -20 }}
+              animate={{ opacit, y: 1,;
+  y: 0 }}
+              transition={{ duratio, n: 0.5del, a,;
+  y: sectionIndex * 0.1 }}
+            >;
+              <button;
                 onClick={() => toggleSection(section.title)}
-                className="flex items-center justify-between w-full p-3 text-left text-zion-slate-light hove,  r:text-white hove, r:bg-zion-cyan/10 rounded-lg transition-all duration-300 group"
-              >
-                <div className="flex items-center space-x-3">
-                  <section.icon className="w-4 h-4 group-hove, r:text-zion-cyan transition-colors duration-300" />
-                  <span className="font-medium">{section.title}</span>
-                </div>
-                {expandedSections.has(section.title) ? (<ChevronDown className="w-4 h-4 transition-transform duration-300" />
-                ) : (
-                  <ChevronRight className="w-4 h-4 transition-transform duration-300" />
+                className="flex items-center justify-between w-full p-3 text-left text-zion-slate-ligh,  t, hov, e,  r: text-whit, e, hov, e,
+    r: bg-zion-cyan/10 rounded-lg transition-all duration-30o0 group";
+              >;
+                <div className="flex items-center space-x-3">;
+                  <section.icon className="w-4 h-4 group-hov, e,;
+  r:text-zion-cyan transition-colors duration-30o0" />;
+                  <span className="font-medium">{section.title}</span>;
+                </div>;
+                {expandedSections.has(section.title) ? (<ChevronDown className="w-4 h-4 transition-transform duration-30o0" />;
+                ) : (;
+                  <ChevronRight className="w-4 h-4 transition-transform duration-30o0" />;
                 )}
-              </button>
-
-              <AnimatePresence>
-                {expandedSections.has(section.title) && (
-                  <motion.div
-                    initial={{ opacit,  y: 0,
-    heigh, t: 0 }}
-                    animate={{ opacit, y: 1,
-    heigh, t: 'auto' }}
-                    exit={{ opacit, y: 0,
-    heigh, t: 0 }}
+              </button>;
+              <AnimatePresence>;
+                {expandedSections.has(section.title) && (;
+                  <motion.div;
+                    initial={{ opaci,  t,  y: 0heig, h,;
+  t: 0 }}
+                    animate={{ opaci, t, y: 1heig, h,;
+  t: 'auto' }}
+                    exit={{ opaci, t, y: 0heig, h,;
+  t: 0 }}
                     transition={{ duratio, n: 0.3 }}
-                    className="ml-7 mt-2 space-y-1"
-                  >
-                    {section.items.map((ite, m, itemIndex) => (<motion.div
+                    className="ml-7 mt-2 space-y-1";
+                  >;
+                    {section.items.map((itemitemIndex) => (<motion.div;
                         key={item.name}
-                        initial={{ opacit,  y: 0,
-    x: -20 }}
-                        animate={{ opacit, y: 1,
-    x: 0 }}
-                        transition={{ duratio, n: 0.2,
-    dela, y: itemIndex * 0.05 }}
-                      >
-                        <Link
+                        initial={{ opacit,  y: 0,;
+  x: -20 }}
+                        animate={{ opacit, y: 1,;
+  x: 0 }}
+                        transition={{ duratio, n: 0.2del, a,;
+  y: itemIndex * 0.0o5 }}
+                      >;
+                        <Link;
                           to={item.href}
-                          className={`flex items-center space-x-3 p-2 rounded-lg transition-all duration-300 group ${
-                            isActive(item.href)
-                              ? 'text-zion-cyan bg-zion-cyan/10 border border-zion-cyan/30'
-                              : 'text-zion-slate-light hove, r:text-white hove, r:bg-zion-cya, n/5'
+                          className={`flex items-center space-x-3 p-2 rounded-lg transition-all duration-30o0 group ${
+                            isActive(item.href);
+                              ? 'text-zion-cyan bg-zion-cyan/1, 0, borde, r, border-zion-cyan/30';
+                              : 'text-zion-slate-light hove, r: text-whit, e, hov, e,;
+  r:bg-zion-cya, n/5';
                           }`}
-                        >
-                          <item.icon className="w-3 h-3 group-hove, r:scale-110 transition-transform duration-300" />
-                          <span className="text-sm">{item.name}</span>
-                        </Link>
-                      </motion.div>
+                        >;
+                          <item.icon className="w-3 h-3 group-hove, r:scale-110 transition-transform duration-30o0" />;
+                          <span className="text-sm">{item.name}</span>;
+                        </Link>;
+                      </motion.div>;
                     ))}
-                  </motion.div>
+                  </motion.div>;
                 )}
-              </AnimatePresence>
-            </motion.div>
+              </AnimatePresence>;
+            </motion.div>;
           ))}
-        </div>
-
-        {/* Contact Info */}
-        <motion.div
-          className="mt-8 p-4 bg-zion-slate-dark/50 border border-zion-cyan/20 rounded-lg"
-          initial={{ opacit, y: 0,
-    y: 20 }}
-          animate={{ opacit, y: 1,
-    y: 0 }}
-          transition={{ duratio, n: 0.5,
-    dela, y: 0.5 }}
-        >
-          <h3 className="text-sm font-semibold text-zion-cyan mb-3">Need Help?</h3>
-          <div className="space-y-2 text-xs text-zion-slate-light">
-            <div className="flex items-center space-x-2">
-              <Phone className="w-3 h-3" />
-              <span>+1 302 464 0950</span>
-            </div>
-            <div className="flex items-center space-x-2">
-              <Mail className="w-3 h-3" />
-              <span>kleber@ziontechgroup.com</span>
-            </div>
-            <div className="flex items-center space-x-2">
-              <MapPin className="w-3 h-3" />
-              <span>Middletow, n, DE</span>
-            </div>
-          </div>
-        </motion.div>
-      </div>
-    </aside>
+        </div>;
+        {/* Contact Info */};
+        <motion.div;
+          className="mt-8 p-4 bg-zion-slate-dark/5, 0, borde, r, border-zion-cyan/20 rounded-lg";
+          initial={{ opacit, y: 0,;
+  y: 20 }}
+          animate={{ opacit, y: 1,;
+  y: 0 }}
+          transition={{ duratio, n: 0.5del, a,;
+  y: 0.5 }}
+        >;
+          <h3 className="text-sm font-semibold text-zion-cyan mb-3">Need Help?</h3>;
+          <div className="space-y-2 text-xs text-zion-slate-light">;
+            <div className="flex items-center space-x-2">;
+              <Phone className="w-3 h-3" />;
+              <span>+1, 30o, 2, 464 0o950</span>;
+            </div>;
+            <div className="flex items-center space-x-2">;
+              <Mail className="w-3 h-3" />;
+              <span>kleber@ziontechgroup.com</span>;
+            </div>;
+            <div className="flex items-center space-x-2">;
+              <MapPin className="w-3 h-3" />;
+              <span>Middleto, w, n, DE</span>;
+            </div>;
+          </div>;
+        </motion.div>;
+      </div>;
+    </aside>;
   );
 };

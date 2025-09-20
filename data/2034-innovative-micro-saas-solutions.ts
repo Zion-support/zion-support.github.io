@@ -1,8 +1,8 @@
 export type InnovativeMicroSaas = {
-	id: string,
-	name: string,
-	description: string,
-	tagline?: string,
+	id: string;
+	name: string;
+	description: string;
+	tagline?: string;
 	category:
 		| 'Content Marketing'
 		| 'Business Operations'
@@ -12,16 +12,17 @@ export type InnovativeMicroSaas = {
 		| 'Financial Technology'
 		| 'Human Resources'
 		| 'Supply Chain Management'
-		| 'Customer Support',
-	pricing: { starter: string, professional?: string, enterprise?: string },
-	features: string[],
-	integrations?: string[],
-	useCases?: string[],
-	link: string,
-	realService?: boolean,
-	rating?: number,
-	launchDate?: string
-},
+		| 'Customer Support';
+	pricing: { starter: string; professional?: string; enterprise?: string };
+	features: string[];
+	integrations?: string[];
+	useCases?: string[];
+	link: string;
+	realService?: boolean;
+	rating?: number;
+	launchDate?: string;
+};
+
 export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [
 	{
 		id: 'podcast-transcription-seo-suite',
@@ -30,9 +31,9 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [
 		description: 'Accurate multi-speaker transcription with summaries, quotes, and SEO-ready blog drafts including schema and social cards.',
 		category: 'Content Marketing',
 		pricing: { starter: '$39/mo' },
-		features: ['Multi-speaker diarizationSEO blog drafts', 'Pull-quotesSchema & social cards'],
-		integrations: ['YouTubeSpotify', 'WordPress'],
-		useCases: ['Content repurposingSEO growth'],
+		features: ['Multi-speaker diarization', 'SEO blog drafts', 'Pull-quotes', 'Schema & social cards'],
+		integrations: ['YouTube', 'Spotify', 'WordPress'],
+		useCases: ['Content repurposing', 'SEO growth'],
 		link: 'https://ziontechgroup.com/services/podcast-transcription-seo-suite',
 		realService: true,
 		rating: 4.7,
@@ -44,9 +45,9 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [
 		description: 'Automated post-visit SMS/email review requests with smart routing to preferred platforms and churn-risk alerts.',
 		category: 'Marketing Automation',
 		pricing: { starter: '$29/mo' },
-		features: ['Smart review routingNPS & CSAT', 'Churn alertsMulti-location dashboards'],
-		integrations: ['Google Business ProfileYelp'],
-		useCases: ['Local rankingReputation management'],
+		features: ['Smart review routing', 'NPS & CSAT', 'Churn alerts', 'Multi-location dashboards'],
+		integrations: ['Google Business Profile', 'Yelp'],
+		useCases: ['Local ranking', 'Reputation management'],
 		link: 'https://ziontechgroup.com/services/local-seo-reviews-booster',
 		realService: true
 	},
@@ -56,9 +57,9 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [
 		description: 'Reconciling bank transactions with invoices using OCR and matching heuristics, with discrepancy alerts.',
 		category: 'Financial Technology',
 		pricing: { starter: '$59/mo' },
-		features: ['OCR ingestionMatching heuristics', 'Discrepancy alertsExport to ERP'],
-		integrations: ['QuickBooksXero', 'Stripe'],
-		useCases: ['Accounting automationFinance ops'],
+		features: ['OCR ingestion', 'Matching heuristics', 'Discrepancy alerts', 'Export to ERP'],
+		integrations: ['QuickBooks', 'Xero', 'Stripe'],
+		useCases: ['Accounting automation', 'Finance ops'],
 		link: 'https://ziontechgroup.com/services/smart-invoice-reconciliation',
 		realService: true
 	},
@@ -68,10 +69,10 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [
 		description: 'Summarize resumes, score against job descriptions, and auto-generate interview question sets.',
 		category: 'Human Resources',
 		pricing: { starter: '$69/mo' },
-		features: ['Resume parsingJD matching', 'Question setsATS sync'],
-		integrations: ['GreenhouseLever'],
-		useCases: ['Faster hiringBias reduction'],
+		features: ['Resume parsing', 'JD matching', 'Question sets', 'ATS sync'],
+		integrations: ['Greenhouse', 'Lever'],
+		useCases: ['Faster hiring', 'Bias reduction'],
 		link: 'https://ziontechgroup.com/services/candidate-screening-copilot',
 		realService: true
 	}
-],
+];

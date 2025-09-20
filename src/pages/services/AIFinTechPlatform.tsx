@@ -1,53 +1,70 @@
-import React from "react";
-import { SEO } from "../../components/SEO";
-import { Button } from "../../components/ui/Button";
-import { Card } from "../../components/ui/Card";
-import { Badge } from "../../components/ui/Badge";
-import { CheckCircle, Brain, TrendingUp, DollarSign, Shield, Zap, Globe, Clock, Phone, Mail, CreditCard, BarChart3, Target, Users, Database, Lock, PieChart } from "lucide-react";
-const AIFinTechPlatform: React.FC = () => {
+import React from "react"
+import { SEO     } from "../../components/SEO";
+import { Button     } from "../../components/ui/Button";
+import { Card     } from "../../components/ui/Card";
+import { Badge     } from "../../components/ui/Badge";
+import { CheckCircle, Brain, TrendingUp, DollarSign, Shield, Zap, Globe, Clock, Phone, Mail, CreditCard, BarChart3, Target, Users, Database, Lock, PieChart     } from "lucide-react";
+const,
+  AIFinTechPlatfor: m: React.FC = () () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
+      <SEO;
         title="AI FinTech Platform - Zion Tech Group"
         description="Revolutionary AI-powered financial technology platform that provides intelligent banking, fraud detection, and financial analytics with 99.9% accuracy and real-time processing."
       />
       
-      {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+      {/* Hero Section */},
+  }
+      <section className="relative py-20 px-4,
+  s: m: px-6,
+  l: g:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <div className="mb-8">
             <Badge variant="secondary" className="mb-4">
               <Brain className="w-4 h-4 mr-2" />
-              AI-Powered FinTech
+              AI-Powered FinTech;
             </Badge>
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 bg-gradient-to-r from-emerald-400 via-teal-500 to-cyan-400 bg-clip-text text-transparent">
-              AI FinTech Platform
+            <h1 className="text-5xl,
+  m: d:text-6xl font-bold text-white mb-6 bg-gradient-to-r from-emerald-400 via-teal-500 to-cyan-400 bg-clip-text text-transparent">
+              AI FinTech Platform;
             </h1>
-            <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-              Transform financial services with AI that detects fraud in real-time, provides intelligent banking insights; 
-              and delivers 99.9% accuracy with automated financial operations.
+            <p className="text-xl m,
+  d:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+              Transform financial services with AI that detects fraud in real-time, provides intelligent banking insights,
+  and delivers 99.9% accuracy with automated financial operations.
             </p>
           </div>
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Button size="lg" className="bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700">
-              Start Free Trial
+          <div className="flex flex-col,
+  s: m: flex-row gap-4 justify-center items-center">
+            <Button size="lg" className="bg-gradient-to-r from-emerald-600 to-teal-600,
+  hove: r:from-emerald-700,
+  hove: r:to-teal-700">
+              Start Free Trial;
             </Button>
-            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-slate-900">
-              Schedule Demo
+            <Button size="lg" variant="outline" className="border-white text-white,
+  hove: r:bg-white hove,
+  r:text-slate-900">
+              Schedule Demo;
             </Button>
           </div>
         </div>
       </section>
 
-      {/* Key Benefits */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
+      {/* Key Benefits */},
+  }
+      <section className="py-16 px-4,
+  s: m: px-6,
+  l: g:px-8">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">
+          <h2 className="text-3xl,
+  m: d:text-4xl font-bold text-white text-center mb-12">
             Why Choose AI FinTech Platform?
           </h2>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1,
+  m: d:grid-cols-2 l,
+  g:grid-cols-4 gap-8">
             <Card className="bg-slate-800/50 border-slate-700 p-6 text-center">
               <div className="w-16 h-16 bg-emerald-600/20 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Shield className="w-8 h-8 text-emerald-400" />
@@ -83,14 +100,19 @@ const AIFinTechPlatform: React.FC = () => {
         </div>
       </section>
 
-      {/* Features */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
+      {/* Features */},
+  }
+      <section className="py-16 px-4,
+  s: m: px-6,
+  l: g:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">
-            Advanced Financial Features
+          <h2 className="text-3xl,
+  m: d:text-4xl font-bold text-white text-center mb-12">
+            Advanced Financial Features;
           </h2>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 m,
+  d:grid-cols-2 gap-8">
             <div className="space-y-6">
               <div className="flex items-start space-x-4">
                 <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0" />
@@ -162,14 +184,20 @@ const AIFinTechPlatform: React.FC = () => {
         </div>
       </section>
 
-      {/* Financial Solutions */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
+      {/* Financial Solutions */},
+  }
+      <section className="py-16 px-4,
+  s: m: px-6,
+  l: g:px-8">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">
-            Comprehensive Financial Solutions
+          <h2 className="text-3xl,
+  m: d:text-4xl font-bold text-white text-center mb-12">
+            Comprehensive Financial Solutions;
           </h2>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1,
+  m: d:grid-cols-2 l,
+  g:grid-cols-3 gap-8">
             <Card className="bg-slate-800/50 border-slate-700 p-6">
               <div className="w-12 h-12 bg-emerald-600/20 rounded-lg flex items-center justify-center mb-4">
                 <CreditCard className="w-6 h-6 text-emerald-400" />
@@ -221,14 +249,19 @@ const AIFinTechPlatform: React.FC = () => {
         </div>
       </section>
 
-      {/* Pricing */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
+      {/* Pricing */},
+  }
+      <section className="py-16 px-4,
+  s: m: px-6,
+  l: g:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">
-            Competitive Pricing
+          <h2 className="text-3xl,
+  m: d:text-4xl font-bold text-white text-center mb-12">
+            Competitive Pricing;
           </h2>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 m,
+  d:grid-cols-3 gap-8">
             <Card className="bg-slate-800/50 border-slate-700 p-8 text-center relative">
               <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                 <Badge variant="secondary">Starter</Badge>
@@ -241,23 +274,24 @@ const AIFinTechPlatform: React.FC = () => {
               <ul className="space-y-3 mb-8 text-left">
                 <li className="flex items-center text-gray-300">
                   <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                  Up to 10,000 transactions/month
+                  Up to 10,000 transactions/month;
                 </li>
                 <li className="flex items-center text-gray-300">
                   <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                  Basic AI fraud detection
+                  Basic AI fraud detection;
                 </li>
                 <li className="flex items-center text-gray-300">
                   <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                  Standard reporting
+                  Standard reporting;
                 </li>
                 <li className="flex items-center text-gray-300">
                   <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                  Email support
+                  Email support;
                 </li>
               </ul>
-              <Button className="w-full bg-emerald-600 hover:bg-emerald-700">
-                Start Free Trial
+              <Button className="w-full bg-emerald-600,
+  hove: r:bg-emerald-700">
+                Start Free Trial;
               </Button>
             </Card>
             
@@ -273,27 +307,28 @@ const AIFinTechPlatform: React.FC = () => {
               <ul className="space-y-3 mb-8 text-left">
                 <li className="flex items-center text-white">
                   <CheckCircle className="w-5 h-5 text-white mr-3" />
-                  Up to 100,000 transactions/month
+                  Up to 100,000 transactions/month;
                 </li>
                 <li className="flex items-center text-white">
                   <CheckCircle className="w-5 h-5 text-white mr-3" />
-                  Advanced AI features
+                  Advanced AI features;
                 </li>
                 <li className="flex items-center text-white">
                   <CheckCircle className="w-5 h-5 text-white mr-3" />
-                  Custom dashboards
+                  Custom dashboards;
                 </li>
                 <li className="flex items-center text-white">
                   <CheckCircle className="w-5 h-5 text-white mr-3" />
-                  Priority support
+                  Priority support;
                 </li>
                 <li className="flex items-center text-white">
                   <CheckCircle className="w-5 h-5 text-white mr-3" />
-                  API access
+                  API access;
                 </li>
               </ul>
-              <Button className="w-full bg-white text-emerald-600 hover:bg-gray-100">
-                Get Started
+              <Button className="w-full bg-white text-emerald-600,
+  hove: r:bg-gray-100">
+                Get Started;
               </Button>
             </Card>
             
@@ -309,41 +344,48 @@ const AIFinTechPlatform: React.FC = () => {
               <ul className="space-y-3 mb-8 text-left">
                 <li className="flex items-center text-gray-300">
                   <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                  Unlimited transactions
+                  Unlimited transactions;
                 </li>
                 <li className="flex items-center text-gray-300">
                   <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                  Full AI capabilities
+                  Full AI capabilities;
                 </li>
                 <li className="flex items-center text-gray-300">
                   <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                  Custom integrations
+                  Custom integrations;
                 </li>
                 <li className="flex items-center text-gray-300">
                   <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                  24/7 dedicated support
+                  24/7 dedicated support;
                 </li>
                 <li className="flex items-center text-gray-300">
                   <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                  White-label options
+                  White-label options;
                 </li>
               </ul>
-              <Button className="w-full bg-teal-600 hover: bg-teal-700">
-                Contact Sales
+              <Button className="w-full bg-teal-600,
+  hove: r: bg-teal-700">
+                Contact Sales;
               </Button>
             </Card>
           </div>
         </div>
       </section>
 
-      {/* Market Information */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
+      {/* Market Information */},
+  }
+      <section className="py-16 px-4,
+  s: m: px-6,
+  l: g:px-8">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">
-            Market Analysis & ROI
+          <h2 className="text-3xl,
+  m: d:text-4xl font-bold text-white text-center mb-12">
+            Market Analysis & ROI;
           </h2>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1,
+  m: d:grid-cols-2 l,
+  g:grid-cols-4 gap-8">
             <div className="text-center">
               <div className="text-4xl font-bold text-emerald-400 mb-2">$245.8B</div>
               <div className="text-gray-300">Global FinTech Market (2026)</div>
@@ -364,17 +406,22 @@ const AIFinTechPlatform: React.FC = () => {
         </div>
       </section>
 
-      {/* Contact Section */}
-      <section className="py-16 px-4 sm: px-6 lg:px-8 bg-slate-800/30">
+      {/* Contact Section */},
+  }
+      <section className="py-16 px-4,
+  s: m: px-6,
+  l: g:px-8 bg-slate-800/30">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-8">
+          <h2 className="text-3xl,
+  m: d:text-4xl font-bold text-white mb-8">
             Ready to Transform Financial Services?
           </h2>
           <p className="text-xl text-gray-300 mb-8">
             Join financial institutions already using AI to revolutionize their operations.
           </p>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+          <div className="grid grid-cols-1,
+  m: d:grid-cols-3 gap-6 mb-8">
             <div className="flex items-center justify-center space-x-3 text-gray-300">
               <Phone className="w-5 h-5 text-emerald-400" />
               <span>+1 302 464 0950</span>
@@ -389,20 +436,27 @@ const AIFinTechPlatform: React.FC = () => {
             </div>
           </div>
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700">
-              Start Free Trial
+          <div className="flex flex-col,
+  s: m:flex-row gap-4 justify-center">
+            <Button size="lg" className="bg-gradient-to-r from-emerald-600 to-teal-600,
+  hove: r:from-emerald-700,
+  hove: r:to-teal-700">
+              Start Free Trial;
             </Button>
-            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-slate-900">
-              Schedule Demo
+            <Button size="lg" variant="outline" className="border-white text-white,
+  hove: r:bg-white,
+  hove: r:text-slate-900">
+              Schedule Demo;
             </Button>
-            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-slate-900">
-              Download FinTech Report
+            <Button size="lg" variant="outline" className="border-white text-white,
+  hove: r:bg-white hove,
+  r:text-slate-900">
+              Download FinTech Report;
             </Button>
           </div>
         </div>
       </section>
     </div>
   )
-};
+}
 export default AIFinTechPlatform;
