@@ -7,4 +7,4 @@ const JobPostingForm: React.FC = () => {
       <p className="text-gray-300">Revolutionary technology component</p>
   },
     </div>)},
-export default JobPostingForm,
+export default JobPostingForm,;<//div><///div>

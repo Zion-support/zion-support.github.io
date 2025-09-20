@@ -19,16 +19,14 @@ interface AccessibilitySettings {
     reducedMotion: boolean;
     screenReader: boolean;
     fontSize: number;
-    colorBlindMode: "normal" | "protanopia" | "deuteranopia" | "tritanopia";
-}
-
+    colorBlindMode: "normal" | "protanopia" | "deuteranopia" | "tritanopia";,
+};
 interface AccessibilityProps {
   enabled?: boolean;
   className?: string;
-  onSettingsChange?: (settings: AccessibilitySettings) => void;
-}
-
-export function AccessibilityPanel({ 
+  onSettingsChange?: (settings: AccessibilitySettings) => void;,
+};
+export function AccessibilityPanel({ ;
   enabled = true;
   className = "",
   onSettingsChange;
@@ -40,7 +38,7 @@ export function AccessibilityPanel({
     reducedMotion: false;
     screenReader: false;
     fontSize: 16;
-    colorBlindMode: "normal"
+    colorBlindMode: "normal",
   });
     // Apply accessibility settings to document;
   useEffect(() => {
@@ -115,7 +113,7 @@ export function AccessibilityPanel({
       reducedMotion: false;
       screenReader: false;
       fontSize: 16;
-      colorBlindMode: "normal"
+      colorBlindMode: "normal",
     };
     saveSettings(defaults);
   }, [saveSettings]);
@@ -370,7 +368,7 @@ export function AccessibilityPanel({
     overflow: hidden;
     clip: rect(0; 0; 0; 0);
             white-space: nowrap;
-    border: 0;
+    border: 0;,
      }
 
           .high-contrast {
@@ -381,42 +379,42 @@ export function AccessibilityPanel({
     --zion-blue-light: #3399ff;
     --zion-cyan-light: #33ffff;
     --zion-purple-dark: #6600cc;
-    --zion-purple-light: #cc33ff;
+    --zion-purple-light: #cc33ff;,
      }
 
           [data-color-blind="protanopia"] {
-            filter: url("#protanopia-filter");
+            filter: url("#protanopia-filter");,
      }
 
           [data-color-blind="deuteranopia"] {
-            filter: url("#deuteranopia-filter");
+            filter: url("#deuteranopia-filter");,
      }
 
           [data-color-blind="tritanopia"] {
-            filter: url("#tritanopia-filter");
+            filter: url("#tritanopia-filter");,
      }
 
           :root {
             --font-size: 16px;
-    --reduced-motion: no-preference;
+    --reduced-motion: no-preference;,
      }
 
           * {
-            font-size: var(--font-size);
+            font-size: var(--font-size);,
      }
 
           @media (prefers-reduced-motion: reduce) {
             * {
               animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;,
      }
           }
 
           [style*="--reduced-motion: reduce"] * {
             animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;,
      }
         `
       }} />
@@ -437,4 +435,4 @@ export function AccessibilityPanel({
       </svg>
     </>
   );
-}
+}<//><///>

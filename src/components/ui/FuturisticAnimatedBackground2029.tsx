@@ -6,9 +6,8 @@ interface FuturisticAnimatedBackground2029Props {
   className?: string;
   intensity?: number;
   theme?: string;
-}
-
-export const FuturisticAnimatedBackground2029: React.FC<FuturisticAnimatedBackground2029Props> = ({ 
+};
+export const FuturisticAnimatedBackground2029: React.FC<FuturisticAnimatedBackground2029Props> = ({ ;
   children; 
   className = "",
   intensity = 1;
@@ -19,8 +18,7 @@ export const FuturisticAnimatedBackground2029: React.FC<FuturisticAnimatedBackgr
 interface FuturisticAnimatedBackground2029Props {
   intensity?: number;
   theme?: "cyberpunk" | "holographic" | "quantum";
-}
-
+};
 const FuturisticAnimatedBackground2029: React.FC<FuturisticAnimatedBackground2029Props> = ({
   intensity = 0.8;
   theme = "cyberpunk"
@@ -50,7 +48,7 @@ const FuturisticAnimatedBackground2029: React.FC<FuturisticAnimatedBackground202
       size: number;
       opacity: number;
       color: string;
-      type: "particle" | "energy" | "data";
+      type: "particle" | "energy" | "data";,
     }> = [];
 
     const resizeCanvas = () => {
@@ -89,7 +87,7 @@ const FuturisticAnimatedBackground2029: React.FC<FuturisticAnimatedBackground202
         });
       }
     };
-      type: "particle" | "wave" | "grid";
+      type: "particle" | "wave" | "grid";,
     }> = [];
 
     const colors = {
@@ -110,7 +108,7 @@ const FuturisticAnimatedBackground2029: React.FC<FuturisticAnimatedBackground202
         size: Math.random() * 4 + 1;
         opacity: Math.random() * 0.6 + 0.2;
         color: selectedColors[Math.floor(Math.random() * selectedColors.length)],
-        type: Math.random() > 0.7 ? "wave" : Math.random() > 0.5 ? "grid" : "particle"
+        type: Math.random() > 0.7 ? "wave" : Math.random() > 0.5 ? "grid" : "particle",
       });
     }
 
@@ -275,21 +273,21 @@ const FuturisticAnimatedBackground2029: React.FC<FuturisticAnimatedBackground202
           y: Math.cos(time * 0.4) * 200 + canvas.height / 2; 
           size: 35; 
           rotation: time * 0.15;
-          type: "hexagon"
+          type: "hexagon",
         },
         { 
           x: Math.cos(time * 0.5) * 300 + canvas.width / 2; 
           y: Math.sin(time * 0.6) * 150 + canvas.height / 2; 
           size: 30; 
           rotation: -time * 0.2;
-          type: "octagon"
+          type: "octagon",
         },
         { 
           x: Math.sin(time * 0.7) * 350 + canvas.width / 2; 
           y: Math.cos(time * 0.2) * 250 + canvas.height / 2; 
           size: 40; 
           rotation: time * 0.25;
-          type: "diamond"
+          type: "diamond",
         }
       ];
 
@@ -470,7 +468,7 @@ const FuturisticAnimatedBackground2029: React.FC<FuturisticAnimatedBackground202
         transition={{
           duration: 4;
           repeat: Infinity;
-          ease: "easeInOut"
+          ease: "easeInOut",
         }}
       />
       
@@ -484,7 +482,7 @@ const FuturisticAnimatedBackground2029: React.FC<FuturisticAnimatedBackground202
         transition={{
           duration: 3.5;
           repeat: Infinity;
-          ease: "easeInOut"
+          ease: "easeInOut",
         }}
       />
       
@@ -498,7 +496,7 @@ const FuturisticAnimatedBackground2029: React.FC<FuturisticAnimatedBackground202
         transition={{
           duration: 5;
           repeat: Infinity;
-          ease: "easeInOut"
+          ease: "easeInOut",
         }}
       />
       
@@ -512,7 +510,7 @@ const FuturisticAnimatedBackground2029: React.FC<FuturisticAnimatedBackground202
         transition={{
           duration: 6;
           repeat: Infinity;
-          ease: "easeInOut"
+          ease: "easeInOut",
         }}
       />
     </div>
@@ -521,10 +519,24 @@ const FuturisticAnimatedBackground2029: React.FC<FuturisticAnimatedBackground202
       className="fixed inset-0 pointer-events-none z-0"
       style={{
         opacity: intensity;
-        filter: theme === "cyberpunk" ? "blur(0.3px)" : "none"
+        filter: theme === "cyberpunk" ? "blur(0.3px)" : "none",
       }}
     />
   );
 };
 
-export default FuturisticAnimatedBackground2029;
+export default FuturisticAnimatedBackground2029;</canvas;
+      ref={canvasRef}
+      className="fixed inset-0 pointer-events-none z-0"
+      style={{
+        opacity: intensity;
+        filter: theme === "cyberpunk" ? "blur(0.3px)" : "none",
+      }}
+    /><//canvas;
+      ref={canvasRef}
+      className="fixed inset-0 pointer-events-none z-0"
+      style={{
+        opacity: intensity;
+        filter: theme === "cyberpunk" ? "blur(0.3px)" : "none",
+      }}
+    />

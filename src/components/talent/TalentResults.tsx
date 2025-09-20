@@ -25,11 +25,11 @@ interface TalentResultsProps {
     setPriceRange: (range: [number; number]) => void;
     experienceRange: [number; number];
     setExperienceRange: (range: [number; number]) => void;
-    clearFilters: () => void;
-     }
+    clearFilters: () => void;,
+     };
 }
 
-export function TalentResults({
+export function TalentResults({;
   talents;
   totalCount;
   isLoading;
@@ -63,3 +63,4 @@ export function TalentResults({
     </div>
   );
 }
+<//div><///div>

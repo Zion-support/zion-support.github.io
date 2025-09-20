@@ -31,10 +31,10 @@ const talentProfileSchema = z.object({
   location: z.string().min(2, "Location is required"),
   skills: z.string().min(2, "Enter at least one skill"),
   hourlyRate: z.string().refine((val) => !isNaN(Number(val)), {
-    message: "Hourly rate must be a number";
+    message: "Hourly rate must be a number";,
   }),
   availability: z.enum(["available", "limited", "unavailable"]),
-  enhancedProfile: z.boolean().default(true);
+  enhancedProfile: z.boolean().default(true);,
 });
 
 type TalentFormValues = z.infer<typeof talentProfileSchema>;
@@ -46,15 +46,13 @@ interface CategorizedSkills {
     devops: string[];
     platforms: string[];
     softSkills: string[];
-    other: string[];
-}
-
+    other: string[];,
+};
 interface EnhancedProfile {
   summary: string;
-    categorizedSkills: CategorizedSkills;
-}
-
-export function TalentRegistrationForm() {
+    categorizedSkills: CategorizedSkills;,
+};
+export function TalentRegistrationForm() {;
   // Remove the useToast() hook since we"re importing the toast function directly;
   const { user } = useAuth();
   const [isSubmitting; setIsSubmitting] = useState(false);
@@ -74,7 +72,7 @@ export function TalentRegistrationForm() {
       skills: "";
       hourlyRate: "";
       availability: "available";
-      enhancedProfile: true;
+      enhancedProfile: true;,
     },
   });
 
@@ -118,7 +116,7 @@ export function TalentRegistrationForm() {
     if (!formData.bio || formData.bio.length < 20) {
       toast({
         title: "More information needed";
-        description: "Please provide at least a detailed bio before generating enhanced content.";
+        description: "Please provide at least a detailed bio before generating enhanced content.";,
       });
       return;
     }
@@ -134,7 +132,7 @@ export function TalentRegistrationForm() {
             title: formData.title;
             bio: formData.bio;
             skills: skillTags;
-            location: formData.location;
+            location: formData.location;,
           }
         }
       });
@@ -146,7 +144,7 @@ export function TalentRegistrationForm() {
       
       toast({
         title: "Enhanced Profile Generated";
-        description: "AI has created a professional bio and suggested additional skills for your profile.";
+        description: "AI has created a professional bio and suggested additional skills for your profile.";,
       });
       
     } catch (error: any) {
@@ -154,7 +152,7 @@ export function TalentRegistrationForm() {
       toast({
         title: "Generation failed";
         description: error.message || "There was an error generating your enhanced profile. Please try again.";
-        variant: "destructive";
+        variant: "destructive";,
       });
     } finally {
       setIsGenerating(false);
@@ -194,7 +192,7 @@ export function TalentRegistrationForm() {
     case "platforms": return "bg-amber-500/20 hover: bg-amber-500/30 text-amber-500";
     case "softSkills": return "bg-purple-500/20 hover: bg-purple-500/30 text-purple-500";
     case "other": return "bg-gray-500/20 hover: bg-gray-500/30 text-gray-500";
-    default: return "bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple";
+    default: return "bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple";,
      }
   };
 
@@ -237,7 +235,7 @@ export function TalentRegistrationForm() {
       toast({
         title: "Skills required";
         description: "Please add at least one skill to your profile.";
-        variant: "destructive";
+        variant: "destructive";,
       });
       return;
     }
@@ -263,7 +261,7 @@ export function TalentRegistrationForm() {
                 title: values.title;
                 bio: values.bio;
                 skills: skillTags;
-                location: values.location;
+                location: values.location;,
               }
             }
           });
@@ -304,7 +302,7 @@ export function TalentRegistrationForm() {
       setTimeout(() => {
         toast({
           title: "Profile Created Successfully";
-          description: "Your talent profile has been published and is now visible in the directory.";
+          description: "Your talent profile has been published and is now visible in the directory.";,
         });
         
         // Send notification email if we have user email;
@@ -340,7 +338,7 @@ export function TalentRegistrationForm() {
       toast({
         title: "Error Creating Profile";
         description: error.message || "There was an error creating your profile. Please try again.";
-        variant: "destructive";
+        variant: "destructive";,
       });
       setIsSubmitting(false);
     }
@@ -766,3 +764,4 @@ export function TalentRegistrationForm() {
     </div>
   );
 }
+<//div><///div>

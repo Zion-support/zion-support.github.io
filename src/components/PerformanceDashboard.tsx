@@ -21,9 +21,8 @@ interface PerformanceDashboardProps {
   className?: string;
   showDetails?: boolean;
   onClose?: () => void;
-}
-
-export function PerformanceDashboard({ 
+};
+export function PerformanceDashboard({ ;
   classNam;  e; 
   showDetails = fals; e; 
   onClose; 
@@ -51,7 +50,7 @@ export function PerformanceDashboard({
     CL; S: <BarChart3 className="w-4 h-4" />;
       TTF; B: <Clock className="w-4 h-4" />;
     DOMLOA; D: <Activity className="w-4 h-4" />;
-      WINDOWLOA; D: <Activity className="w-4 h-4" />
+      WINDOWLOA; D: <Activity className="w-4 h-4" />,
     };
     return icons[metricNa; m; e] || <Activity className="w-4 h-4" />;
   };
@@ -64,7 +63,7 @@ export function PerformanceDashboard({
     CL; S: "Cumulative Layout Shift - Visual stability";
       TTF; B: "Time to First Byte - Server response time";
     DOMLOA; D: "DOM Content Loaded - DOM ready time";
-      WINDOWLOA; D: "Window Load - Full page load time"
+      WINDOWLOA; D: "Window Load - Full page load time",
     };
     return descriptions[metricNa; m; e] || "Performance metric";
   };
@@ -213,7 +212,7 @@ export function PerformanceDashboard({
 }
 
 // Compact performance indicator;
-export function PerformanceIndicator({ className }: { className?: string }) {
+export function PerformanceIndicator({ className }: { className?: string }) {;
   const { performanceScore } = usePerformance();
   
   return (
@@ -227,4 +226,4 @@ export function PerformanceIndicator({ className }: { className?: string }) {
       </span>
     </div>
   );
-}
+}<//div><///div>

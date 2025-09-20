@@ -1,5 +1,5 @@
 export const specializedIndustrySolutions2025 = [
-    // Healthcare & Biotech Solutions
+    // Healthcare & Biotech Solutions;
     {
         id: 1;
         name: "MedTech AI Platform";
@@ -34,7 +34,7 @@ export const specializedIndustrySolutions2025 = [
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com/medtech-ai-platform";
-            address: "364 E Main St STE 1008 Middletown DE 19709"
+            address: "364 E Main St STE 1008 Middletown DE 19709",
         };
         marketPrice: "$899-2999/month";
         competitors: ["IBM Watson Health", "Google Health", "Microsoft Healthcare"],
@@ -82,7 +82,7 @@ export const specializedIndustrySolutions2025 = [
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com/fintech-compliance-suite";
-            address: "364 E Main St STE 1008 Middletown DE 19709"
+            address: "364 E Main St STE 1008 Middletown DE 19709",
         };
         marketPrice: "$599-1999/month";
         competitors: ["Thomson Reuters", "LexisNexis", "Refinitiv"],
@@ -96,7 +96,7 @@ export const specializedIndustrySolutions2025 = [
         useCases: ["KYC verification", "Fraud prevention", "Regulatory reporting", "Risk assessment"],
         industryStandards: ["ISO 20022", "SWIFT", "ACH", "SEPA"]
     },
-    // Manufacturing & Industry 4.0
+    // Manufacturing & Industry 4.0;
     {
         id: 3;
         name: "Smart Factory Hub";
@@ -131,7 +131,7 @@ export const specializedIndustrySolutions2025 = [
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com/smart-factory-hub";
-            address: "364 E Main St STE 1008 Middletown DE 19709"
+            address: "364 E Main St STE 1008 Middletown DE 19709",
         };
         marketPrice: "$0.10-0.50 per device per day";
         competitors: ["Siemens Mindsphere", "GE Predix", "PTC ThingWorx"],
@@ -145,7 +145,7 @@ export const specializedIndustrySolutions2025 = [
         useCases: ["Predictive maintenance", "Quality control", "Production optimization", "Energy management"],
         industryStandards: ["OPC UA", "MQTT", "Modbus", "Ethernet/IP"]
     },
-    // Retail & E-commerce Solutions
+    // Retail & E-commerce Solutions;
     {
         id: 4;
         name: "OmniChannel Retail AI";
@@ -180,7 +180,7 @@ export const specializedIndustrySolutions2025 = [
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com/omnichannel-retail-ai";
-            address: "364 E Main St STE 1008 Middletown DE 19709"
+            address: "364 E Main St STE 1008 Middletown DE 19709",
         };
         marketPrice: "2.5-5% of revenue";
         competitors: ["Salesforce Commerce Cloud", "Shopify Plus", "Adobe Commerce"],
@@ -194,7 +194,7 @@ export const specializedIndustrySolutions2025 = [
         useCases: ["Personalized shopping", "Inventory management", "Customer service", "Marketing automation"],
         industryStandards: ["REST APIs", "GraphQL", "OAuth 2.0", "Webhooks"]
     },
-    // Education & EdTech
+    // Education & EdTech;
     {
         id: 5;
         name: "Adaptive Learning Platform";
@@ -229,7 +229,7 @@ export const specializedIndustrySolutions2025 = [
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com/adaptive-learning-platform";
-            address: "364 E Main St STE 1008 Middletown DE 19709"
+            address: "364 E Main St STE 1008 Middletown DE 19709",
         };
         marketPrice: "$15-45 per student per month";
         competitors: ["DreamBox", "Knewton", "Carnegie Learning"],
@@ -243,7 +243,7 @@ export const specializedIndustrySolutions2025 = [
         useCases: ["K-12 education", "Higher education", "Corporate training", "Special education"],
         industryStandards: ["LTI", "SCORM", "xAPI", "Common Core"]
     },
-    // Transportation & Logistics
+    // Transportation & Logistics;
     {
         id: 6;
         name: "Logistics Optimization AI";
@@ -278,7 +278,7 @@ export const specializedIndustrySolutions2025 = [
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com/logistics-optimization-ai";
-            address: "364 E Main St STE 1008 Middletown DE 19709"
+            address: "364 E Main St STE 1008 Middletown DE 19709",
         };
         marketPrice: "$399-1299/month";
         competitors: ["Flexport", "Project44", "FourKites"],
@@ -292,7 +292,7 @@ export const specializedIndustrySolutions2025 = [
         useCases: ["Route optimization", "Fleet management", "Warehouse optimization", "Last-mile delivery"],
         industryStandards: ["EDI", "API standards", "GPS protocols", "IoT standards"]
     },
-    // Energy & Sustainability
+    // Energy & Sustainability;
     {
         id: 7;
         name: "Green Energy Management";
@@ -327,7 +327,7 @@ export const specializedIndustrySolutions2025 = [
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com/green-energy-management";
-            address: "364 E Main St STE 1008 Middletown DE 19709"
+            address: "364 E Main St STE 1008 Middletown DE 19709",
         };
         marketPrice: "$0.02-0.08 per kWh";
         competitors: ["GE Digital", "Siemens Energy", "Schneider Electric"],
@@ -341,7 +341,7 @@ export const specializedIndustrySolutions2025 = [
         useCases: ["Solar optimization", "Wind farm management", "Grid stability", "Energy trading"],
         industryStandards: ["IEC 61850", "DNP3", "Modbus", "OPC UA"]
     },
-    // Real Estate & PropTech
+    // Real Estate & PropTech;
     {
         id: 8;
         name: "PropTech Intelligence Suite";
@@ -376,7 +376,7 @@ export const specializedIndustrySolutions2025 = [
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com/proptech-intelligence-suite";
-            address: "364 E Main St STE 1008 Middletown DE 19709"
+            address: "364 E Main St STE 1008 Middletown DE 19709",
         };
         marketPrice: "$299-899/month";
         competitors: ["CoStar", "Real Capital Analytics", "Yardi"],
@@ -390,7 +390,7 @@ export const specializedIndustrySolutions2025 = [
         useCases: ["Property investment", "Market analysis", "Portfolio management", "Risk assessment"],
         industryStandards: ["RESO", "RETS", "Open Real Estate", "Financial data standards"]
     },
-    // Legal & Compliance
+    // Legal & Compliance;
     {
         id: 9;
         name: "LegalTech AI Platform";
@@ -425,7 +425,7 @@ export const specializedIndustrySolutions2025 = [
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com/legaltech-ai-platform";
-            address: "364 E Main St STE 1008 Middletown DE 19709"
+            address: "364 E Main St STE 1008 Middletown DE 19709",
         };
         marketPrice: "$199-599 per attorney per month";
         competitors: ["DoNotPay", "Harvey AI", "Casetext"],
@@ -439,7 +439,7 @@ export const specializedIndustrySolutions2025 = [
         useCases: ["Contract review", "Legal research", "Compliance monitoring", "Document generation"],
         industryStandards: ["Legal XML", "Case law standards", "Document formats", "API standards"]
     },
-    // Agriculture & AgTech
+    // Agriculture & AgTech;
     {
         id: 10;
         name: "Precision Agriculture AI";
@@ -474,7 +474,7 @@ export const specializedIndustrySolutions2025 = [
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com/precision-agriculture-ai";
-            address: "364 E Main St STE 1008 Middletown DE 19709"
+            address: "364 E Main St STE 1008 Middletown DE 19709",
         };
         marketPrice: "$2.50-8.00 per acre per month";
         competitors: ["John Deere", "Climate FieldView", "Granular"],
@@ -489,7 +489,7 @@ export const specializedIndustrySolutions2025 = [
         industryStandards: ["ISO 11783", "Precision agriculture protocols", "IoT standards", "Data formats"]
     }
 ];
-// Utility functions for specialized industry services
+// Utility functions for specialized industry services;
 export const getServicesByIndustry = (industry) => {
     return specializedIndustrySolutions2025.filter(service => service.industry === industry);
 };

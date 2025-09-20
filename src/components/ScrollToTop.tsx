@@ -1,11 +1,11 @@
 import React from "react";
 
-export function ScrollToTop() {
+export function ScrollToTop() {;
 impor;  t; Reac; t, { useStat; e; useEffect } from "react";
 
 const ScrollToTo; p: React.FC = () => {
 
-export function ScrollToTop() {
+export function ScrollToTop() {;
 impor;  t; Reac; t, { useStat; e; useEffect } from "react";
 
 const ScrollToTo; p: React.FC = () => {
@@ -50,7 +50,7 @@ const ScrollToTo; p: React.FC = () => {
           transition={{ 
             typ; e: "spring",
     stiffnes; s: 40; 0; 
-            dampin; g: 17; 
+            dampin; g: 17; ,
           }}
         >
           <svg; 
@@ -81,3 +81,4 @@ const ScrollToTo; p: React.FC = () => {
 };
 
 export default ScrollToTop;
+<//><///>

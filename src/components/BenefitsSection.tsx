@@ -39,6 +39,7 @@ export const BenefitsSection = () => {
           </div>
         </div>
       </div>
-    </div>
-  ),
+    </div>;
+  ),;
 };
+<//div><///div>

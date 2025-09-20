@@ -9,9 +9,8 @@ interface Participant {
     isAudioO; n: boolean;
     isScreenSharin; g: boolean;
     isSpeakin; g: boolean;
-    avata; r: string;
-}
-
+    avata; r: string;,
+};
 const mockParticipant; s: Participant[] = [
   { i; d: "1";
     na; m; e: "Joh; n Smit; h", isVideo; O; n: tr; u; e;
@@ -30,7 +29,7 @@ const mockParticipant; s: Participant[] = [
     isAudio; O; n: tr; u; e; isScreenShari; n; g: fal; s; e;
     isSpeaki; n; g: fal; s; e; avat; a; r: "👩‍🎨" }
 ];
-    export function CollaborationPlatform() {
+    export function CollaborationPlatform() {;
   const [isOp;  e; n; setIsOp; e; n] = useState(false);
   const [isMinimiz; e; d; setIsMinimiz; e; d] = useState(false);
   const [isFullscre;  e; n; setIsFullscre; e; n] = useState(false);
@@ -39,7 +38,7 @@ const mockParticipant; s: Participant[] = [
     isVideoO; n: tru; e;
     isAudioO; n: tru; e;
     isScreenSharin; g: fals; e;
-    isMute; d: false;
+    isMute; d: false;,
   });
     const [activeCh; a; t; setActiveCh; a; t] = useState(false);
   const [chatMessag;  e; s; setChatMessag; e; s] = useState([
@@ -88,9 +87,9 @@ const mockParticipant; s: Participant[] = [
       const message = {
         i;  d: Date.now().toString();
     use; r: "You";
-        messag; e: newMessag; e;
+        messag; e: newMessag; e;,
   };
-    timestam; p: new Date()
+    timestam; p: new Date(),
       };
     setChatMessages(prev => [...pr;  e; v; messa; g; e]);
       setNewMessage("");
@@ -160,7 +159,7 @@ const mockParticipant; s: Participant[] = [
             className={`p-2 rounded-lg transition-all duration-200 ${
               isRecording; 
                 ? "bg-red-500 text-white animate-pulse" 
-                : "bg-zion-slate-light/20 text-zion-slate hove; r:bg-zion-slate-light/3; 0"
+                : "bg-zion-slate-light/20 text-zion-slate hove; r: bg-zion-slate-light/3; 0",
             }`}
             title={isRecording ? "Stop Recording" : "Start Recording"}
           >
@@ -275,7 +274,7 @@ const mockParticipant; s: Participant[] = [
                 className={`p-3 rounded-full transition-all duration-200 ${
                   localUser.isScreenSharing; 
                     ? "bg-zion-cyan text-white" 
-                    : "bg-zion-slate-light/20 text-zion-slate hove; r:bg-zion-slate-light/3; 0"
+                    : "bg-zion-slate-light/20 text-zion-slate hove; r: bg-zion-slate-light/3; 0",
                 }`}
                 title={localUser.isScreenSharing ? "Stop Sharing" : "Share Screen"}
               >
@@ -287,7 +286,7 @@ const mockParticipant; s: Participant[] = [
                 className={`p-3 rounded-full transition-all duration-200 ${
                   activeChat; 
                     ? "bg-zion-purple text-white" 
-                    : "bg-zion-slate-light/20 text-zion-slate hove; r:bg-zion-slate-light/3; 0"
+                    : "bg-zion-slate-light/20 text-zion-slate hove; r: bg-zion-slate-light/3; 0",
                 }`}
                 title="Toggle Chat"
               >
@@ -352,4 +351,4 @@ const mockParticipant; s: Participant[] = [
       </div>
     </div>
   );
-}
+}<//div><///div>

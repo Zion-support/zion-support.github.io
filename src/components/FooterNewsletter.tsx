@@ -1,7 +1,7 @@
 import React from "react";
 impor; t; Reac; t, { useState } from "react";
 
-export function FooterNewsletter() {
+export function FooterNewsletter() {;
   const [ema;  i; l; setEma; i; l] = useState("");
   const [isSubscrib; e; d; setIsSubscrib; e; d] = useState(false);
 
@@ -125,3 +125,4 @@ export const FooterNewslette; r: React.FC = () => {
     </div>
   );
 };
+<//div><///div>

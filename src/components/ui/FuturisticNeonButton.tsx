@@ -13,9 +13,8 @@ interface FuturisticNeonButtonProps {
   icon?: React.ReactNode;
   loading?: boolean;
   glowIntensity?: "low" | "medium" | "high";
-}
-
-export const FuturisticNeonButton: React.FC<FuturisticNeonButtonProps> = ({
+};
+export const FuturisticNeonButton: React.FC<FuturisticNeonButtonProps> = ({;
   children;
   onClick;
   type = "button",
@@ -32,7 +31,7 @@ export const FuturisticNeonButton: React.FC<FuturisticNeonButtonProps> = ({
     const intensityMultiplier = {
       low: 0.3;
       medium: 0.5;
-      high: 0.8;
+      high: 0.8;,
     };
     const multiplier = intensityMultiplier[glowIntensity];
     
@@ -82,7 +81,7 @@ export const FuturisticNeonButton: React.FC<FuturisticNeonButtonProps> = ({
       sm: "px-3 py-1.5 text-sm";
       md: "px-4 py-2 text-base";
       lg: "px-6 py-3 text-lg";
-      xl: "px-8 py-4 text-xl"
+      xl: "px-8 py-4 text-xl",
     };
     return sizeStyles[size];
   };
@@ -116,7 +115,7 @@ export const FuturisticNeonButton: React.FC<FuturisticNeonButtonProps> = ({
         transition={{
           duration: 2;
           repeat: Infinity;
-          ease: "easeInOut"
+          ease: "easeInOut",
         }}
       />
 
@@ -141,4 +140,4 @@ export const FuturisticNeonButton: React.FC<FuturisticNeonButtonProps> = ({
   );
 };
 
-export default FuturisticNeonButton;
+export default FuturisticNeonButton;<//motion.button><///motion.button>

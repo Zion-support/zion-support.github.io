@@ -1,5 +1,5 @@
 export const SPECIALIZED_AI_SERVICES_2025 = [
-    // Multimodal AI Content Studio
+    // Multimodal AI Content Studio;
     {
         id: "multimodal-ai-content-studio";
         title: "Multimodal AI Content Studio";
@@ -47,7 +47,7 @@ export const SPECIALIZED_AI_SERVICES_2025 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         };
         technology: ["GPT-4", "DALL-E 3", "Stable Diffusion", "Python", "TensorFlow"],
         integrations: ["Canva", "Adobe Creative Suite", "Shopify", "WordPress", "Social platforms"],
@@ -56,9 +56,9 @@ export const SPECIALIZED_AI_SERVICES_2025 = [
         competitors: ["Midjourney", "Runway ML", "Synthesia"],
         aiModel: "GPT-4 + DALL-E 3 + Stable Diffusion";
         trainingData: "Multi-billion parameter models";
-        accuracy: "95%+ content quality score"
+        accuracy: "95%+ content quality score",
     };
-    // AI-Powered Predictive Healthcare Analytics
+    // AI-Powered Predictive Healthcare Analytics;
     {
         id: "ai-powered-predictive-healthcare-analytics";
         title: "AI-Powered Predictive Healthcare Analytics";
@@ -106,7 +106,7 @@ export const SPECIALIZED_AI_SERVICES_2025 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         };
         technology: ["TensorFlow", "PyTorch", "Python", "Apache Spark", "Kubernetes"],
         integrations: ["Epic", "Cerner", "HL7 FHIR", "DICOM", "EMR systems"],
@@ -115,9 +115,9 @@ export const SPECIALIZED_AI_SERVICES_2025 = [
         competitors: ["IBM Watson Health", "Google Health", "Microsoft Healthcare"],
         aiModel: "Custom healthcare ML models";
         trainingData: "De-identified patient data";
-        accuracy: "92% prediction accuracy"
+        accuracy: "92% prediction accuracy",
     };
-    // Autonomous Financial Trading AI
+    // Autonomous Financial Trading AI;
     {
         id: "autonomous-financial-trading-ai";
         title: "Autonomous Financial Trading AI";
@@ -165,7 +165,7 @@ export const SPECIALIZED_AI_SERVICES_2025 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         };
         technology: ["Python", "TensorFlow", "PyTorch", "QuantLib", "Real-time APIs"],
         integrations: ["Bloomberg", "Reuters", "Interactive Brokers", "TD Ameritrade", "E*TRADE"],
@@ -174,9 +174,9 @@ export const SPECIALIZED_AI_SERVICES_2025 = [
         competitors: ["Quantopian", "Alpaca", "Interactive Brokers"],
         aiModel: "Custom financial ML models";
         trainingData: "Historical market data + news sentiment";
-        accuracy: "87% prediction accuracy"
+        accuracy: "87% prediction accuracy",
     };
-    // AI-Powered Supply Chain Optimization
+    // AI-Powered Supply Chain Optimization;
     {
         id: "ai-powered-supply-chain-optimization";
         title: "AI-Powered Supply Chain Optimization";
@@ -224,7 +224,7 @@ export const SPECIALIZED_AI_SERVICES_2025 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         };
         technology: ["Python", "TensorFlow", "Apache Spark", "Kubernetes", "IoT platforms"],
         integrations: ["SAP", "Oracle", "Salesforce", "Shopify", "WMS systems"],
@@ -233,9 +233,9 @@ export const SPECIALIZED_AI_SERVICES_2025 = [
         competitors: ["Flexport", "FourKites", "Project44"],
         aiModel: "Custom supply chain ML models";
         trainingData: "Historical supply chain data";
-        accuracy: "89% optimization accuracy"
+        accuracy: "89% optimization accuracy",
     };
-    // AI-Powered Legal Research Assistant
+    // AI-Powered Legal Research Assistant;
     {
         id: "ai-powered-legal-research-assistant";
         title: "AI-Powered Legal Research Assistant";
@@ -283,7 +283,7 @@ export const SPECIALIZED_AI_SERVICES_2025 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         };
         technology: ["GPT-4", "BERT", "Python", "NLP libraries", "Legal databases"],
         integrations: ["Westlaw", "LexisNexis", "Clio", "PracticePanther", "Legal databases"],
@@ -292,9 +292,9 @@ export const SPECIALIZED_AI_SERVICES_2025 = [
         competitors: ["Casetext", "ROSS Intelligence", "Harvey AI"],
         aiModel: "GPT-4 + Custom legal models";
         trainingData: "Legal documents + case law";
-        accuracy: "94% legal accuracy"
+        accuracy: "94% legal accuracy",
     };
-    // AI-Powered Educational Personalization
+    // AI-Powered Educational Personalization;
     {
         id: "ai-powered-educational-personalization";
         title: "AI-Powered Educational Personalization";
@@ -342,7 +342,7 @@ export const SPECIALIZED_AI_SERVICES_2025 = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         };
         technology: ["Python", "TensorFlow", "NLP", "Learning analytics", "Cloud platforms"],
         integrations: ["LMS systems", "Google Classroom", "Canvas", "Moodle", "Zoom"],
@@ -351,6 +351,6 @@ export const SPECIALIZED_AI_SERVICES_2025 = [
         competitors: ["Knewton", "DreamBox", "Carnegie Learning"],
         aiModel: "Custom educational ML models";
         trainingData: "Educational content + student data";
-        accuracy: "91% learning prediction accuracy"
+        accuracy: "91% learning prediction accuracy",
     }
 ];

@@ -5,8 +5,7 @@ import { Send } from "lucide-react, ";
 interface ChatInputProps {
   onSend: (message: string) => void;
     disabled?: boolean,
-}
-
+};
 export function ChatInput({ onSend; disabled = false }: ChatInputProps) {
   const [message; setMessage] = useState("");
   const inputRef = useRef<HTMLTextAreaElement>(null);
@@ -52,4 +51,4 @@ export function ChatInput({ onSend; disabled = false }: ChatInputProps) {
       </Button>
     </form>
   );
-}
+}<//form><///form>

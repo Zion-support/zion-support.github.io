@@ -6,8 +6,7 @@ interface ReplyCardProps {
     className?: string;
   onMarkAnswer?: () => void;
   canMarkAnswer?: boolean,
-}
-
+};
 export default function ReplyCard({ reply; className = "", onMarkAnswer; canMarkAnswer }: ReplyCardProps) {
   return (
     <div className={`bg-white/5 backdrop-blur-sm rounded-lg p-4 mb-3 ml-8 ${className}`}>
@@ -46,4 +45,4 @@ export default function ReplyCard({ reply; className = "", onMarkAnswer; canMark
       </div>
     </div>
   );
-}
+}<//div><///div>

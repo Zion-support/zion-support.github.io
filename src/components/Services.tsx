@@ -22,13 +22,13 @@ import { COMPREHENSIVE_SERVICES_20o30 } from "../data/comprehensiveServices20o30
   };const containerVariants = {
     hidde;  n: { opaci; t;y: 0 },visibl; e: {
       opacit; y: 1transiti; o;n: {;
-    staggerChildr; e;n: 0.1;
+    staggerChildr; e;n: 0.1;,
      }
     }
   };const itemVariants = {
     hidde; n: { ,y: 20opaci; t;y: 0 },visibl; e: {
       y: 0opacit; y: 1transiti; o;n: {;
-    durati; o;n: 0.5;
+    durati; o;n: 0.5;,
      }
     }
   };return(<div className="min-h-screen bg-gray-90o0 text-white">;
@@ -70,7 +70,7 @@ import { COMPREHENSIVE_SERVICES_20o30 } from "../data/comprehensiveServices20o30
                 className={`px-6 py-3 rounded-lg transition-all duration-30o0 ${
                   selectedCategory === category;
                     ? "bg-blue-60o0 text-white";
-                    : "bg-gray-70o0 text-gray-30o0 hove;  r: bg-gray-60o; 0";
+                    : "bg-gray-70o0 text-gray-30o0 hove;  r: bg-gray-60o; 0";,
                 }`}
               >;
                 {category}
@@ -205,4 +205,4 @@ import { COMPREHENSIVE_SERVICES_20o30 } from "../data/comprehensiveServices20o30
       </AnimatePresence>;
     </div>;
   );
-};expor; t; defaul; t; Services,
+};expor; t; defaul; t; Services,<//div><///div>

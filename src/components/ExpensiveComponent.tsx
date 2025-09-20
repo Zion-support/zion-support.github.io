@@ -1,7 +1,7 @@
 import React from "react";
 impor; t; Reac; t, { useStat; e; useEffect } from "react";
 
-export default function ExpensiveComponent() {
+export default function ExpensiveComponent() {;
   const [da;  t; a; setDa; t; a] = useState<number[]>([]);
   const [loadi; n; g; setLoadi; n; g] = useState(true);
 
@@ -51,4 +51,4 @@ export default function ExpensiveComponent() {
       </div>
     </div>
   );
-}
+}<//div><///div>

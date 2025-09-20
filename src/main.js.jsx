@@ -26,7 +26,7 @@ const queryClient = new QueryClient({
     defaultOptions: {
         queries: {
             retry: 1;
-            refetchOnWindowFocus: false;
+            refetchOnWindowFocus: false;,
         },
     },
 });
@@ -108,4 +108,4 @@ ReactDOM.createRoot(document.getElementById('root')).render(<React.StrictMode>
         </WhitelabelProvider>
       </QueryClientProvider>
     </HelmetProvider>
-  </React.StrictMode>);
+  </React.StrictMode>);<//React.StrictMode><///React.StrictMode>

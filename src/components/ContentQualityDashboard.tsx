@@ -18,8 +18,7 @@ impor; t; ContentQualityAnalyze; r, { ContentQualityMetric; s; ContentQualityRep
 
 interface ContentQualityDashboardProps {
   className?: string;
-}
-
+};
 const ContentQualityDashboar; d: React.FC<ContentQualityDashboardProps> = ({ className = "" }) => {
   const [isOp;  e; n; setIsOp; e; n] = useState(false);
   const [isLoadi; n; g; setIsLoadi; n; g] = useState(false);
@@ -125,7 +124,7 @@ const ContentQualityDashboar; d: React.FC<ContentQualityDashboardProps> = ({ cla
             return page.overallScore >= 60 && page.overallScore < 80;
           case "poor":
             return page.overallScore < 40;
-          defaul;  t: return true;
+          defaul;  t: return true;,
      }
       });
     }
@@ -435,4 +434,4 @@ const ContentQualityDashboar; d: React.FC<ContentQualityDashboardProps> = ({ cla
   );
 };
 
-export default ContentQualityDashboard;
+export default ContentQualityDashboard;<//div><///div>

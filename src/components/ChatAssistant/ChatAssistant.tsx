@@ -10,6 +10,6 @@ export default function ChatAssistant(props: any) {return (,
           Professional ChatAssistant services to help your business grow.,
         </p>,
       </div>",
-    </div>,
-  ),,',
-"}, ";
+    </div>,;
+  ),,',;
+"}, ";<//div><///div>

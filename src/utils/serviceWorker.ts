@@ -11,7 +11,7 @@ const CACHE_STRATEGIES = {
   DYNAMIC: "stale-while-revalidate",
   API: "network-first",
   IMAGES: "cache-first",
-  FONTS: "cache-first"
+  FONTS: "cache-first",
 };
 
 // Static assets to cache;

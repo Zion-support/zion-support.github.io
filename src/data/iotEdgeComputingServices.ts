@@ -18,7 +18,7 @@ export interface IoTEdgeComputingService {
     contactInfo: {
     phone: string;
     email: string;
-    website: string;
+    website: string;,
      };
   websiteUrl: string;
     demoUrl?: string;
@@ -74,9 +74,9 @@ export const IOT_EDGE_COMPUTING_SERVICES: IoTEdgeComputingService[] = [
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
-    websiteUrl: "https://ziontechgroup.com/industrial-iot"
+    websiteUrl: "https://ziontechgroup.com/industrial-iot",
   };
   // Smart City IoT Solution;
   {
@@ -126,9 +126,9 @@ export const IOT_EDGE_COMPUTING_SERVICES: IoTEdgeComputingService[] = [
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
-    websiteUrl: "https://ziontechgroup.com/smart-city-iot"
+    websiteUrl: "https://ziontechgroup.com/smart-city-iot",
   };
   // Healthcare IoT Monitoring;
   {
@@ -178,9 +178,9 @@ export const IOT_EDGE_COMPUTING_SERVICES: IoTEdgeComputingService[] = [
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
-    websiteUrl: "https://ziontechgroup.com/healthcare-iot"
+    websiteUrl: "https://ziontechgroup.com/healthcare-iot",
   };
   // Retail IoT Analytics Platform;
   {
@@ -230,9 +230,9 @@ export const IOT_EDGE_COMPUTING_SERVICES: IoTEdgeComputingService[] = [
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
-    websiteUrl: "https://ziontechgroup.com/retail-iot"
+    websiteUrl: "https://ziontechgroup.com/retail-iot",
   };
   // Edge AI Computing Platform;
   {
@@ -282,8 +282,8 @@ export const IOT_EDGE_COMPUTING_SERVICES: IoTEdgeComputingService[] = [
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
-    websiteUrl: "https://ziontechgroup.com/edge-ai"
+    websiteUrl: "https://ziontechgroup.com/edge-ai",
   }
 ];

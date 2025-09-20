@@ -18,7 +18,7 @@ export interface InnovativeMicroSaas2025 {
     contactInfo: {
     phone: string;
     email: string;
-    website: string;
+    website: string;,
      };
   technology: string[];
     integrations: string[];
@@ -27,7 +27,7 @@ export interface InnovativeMicroSaas2025 {
     competitors: string[];
     innovationLevel: string;
     marketTrend: string;
-    aiCapabilities: string[];
+    aiCapabilities: string[];,
 }
 
 export const INNOVATIVE_MICRO_SAAS_2025: InnovativeMicroSaas2025[] = [
@@ -79,7 +79,7 @@ export const INNOVATIVE_MICRO_SAAS_2025: InnovativeMicroSaas2025[] = [
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     technology: ["GPT-5", "NLP", "Machine Learning", "React", "Python"],
     integrations: ["WordPress", "Shopify", "Mailchimp", "Hootsuite", "Google Analytics"],
@@ -139,7 +139,7 @@ export const INNOVATIVE_MICRO_SAAS_2025: InnovativeMicroSaas2025[] = [
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     technology: ["RPA", "AI/ML", "Process Mining", "Workflow Engine", "Analytics"],
     integrations: ["SAP", "Salesforce", "Oracle", "Microsoft", "Workday"],
@@ -199,7 +199,7 @@ export const INNOVATIVE_MICRO_SAAS_2025: InnovativeMicroSaas2025[] = [
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     technology: ["Quantum Algorithms", "Classical ML", "Hybrid Systems", "Python", "Qiskit"],
     integrations: ["AWS", "Azure", "Google Cloud", "IBM Quantum", "D-Wave"],
@@ -259,7 +259,7 @@ export const INNOVATIVE_MICRO_SAAS_2025: InnovativeMicroSaas2025[] = [
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     technology: ["AI/ML", "Real-time Analytics", "Personalization Engine", "React", "Python"],
     integrations: ["Shopify", "WooCommerce", "Salesforce", "HubSpot", "Google Analytics"],
@@ -319,7 +319,7 @@ export const INNOVATIVE_MICRO_SAAS_2025: InnovativeMicroSaas2025[] = [
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     technology: ["Blockchain", "Zero-Knowledge Proofs", "Cryptography", "Smart Contracts"],
     integrations: ["OAuth", "SAML", "Active Directory", "LDAP", "SSO"],
@@ -379,7 +379,7 @@ export const INNOVATIVE_MICRO_SAAS_2025: InnovativeMicroSaas2025[] = [
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     technology: ["Edge Computing", "IoT Protocols", "Real-time Analytics", "Containerization"],
     integrations: ["AWS IoT", "Azure IoT", "Google Cloud IoT", "MQTT", "CoAP"],

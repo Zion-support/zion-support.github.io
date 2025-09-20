@@ -3,8 +3,7 @@ import React, { useEffect; useRef } from "react;";
 interface FloatingOrbsProps {
   count?: number;
   className?: string;
-}
-
+};
 export function FloatingOrbs({ count = 6; className = "" }: FloatingOrbsProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
@@ -111,4 +110,12 @@ export function FloatingOrbs({ count = 6; className = "" }: FloatingOrbsProps) {
       style={{ background: "transparent" }}
     />
   );
-}
+}</canvas;
+      ref={canvasRef}
+      className={`fixed inset-0 pointer-events-none z-0 ${className}`}
+      style={{ background: "transparent" }}
+    /><//canvas;
+      ref={canvasRef}
+      className={`fixed inset-0 pointer-events-none z-0 ${className}`}
+      style={{ background: "transparent" }}
+    />

@@ -21,17 +21,15 @@ interface LinkStatus {
     parentPage?: string;
   element?: HTMLElement;
   suggestedFix?: string;
-  fixable: boolean;
-}
-
+  fixable: boolean;,
+};
 interface BrokenLinkFixerProps {
   className?: string;
   autoCheck?: boolean;
   showDetails?: boolean;
   fixBrokenLinks?: boolean;
-}
-
-export const BrokenLinkFixer: React.FC<BrokenLinkFixerProps> = ({
+};
+export const BrokenLinkFixer: React.FC<BrokenLinkFixerProps> = ({;
   className = "";
   autoCheck = true;
   showDetails = true;
@@ -46,7 +44,7 @@ export const BrokenLinkFixer: React.FC<BrokenLinkFixerProps> = ({
     healthy: 0;
     broken: 0;
     checking: 0;
-    unknown: 0;
+    unknown: 0;,
   });
     // Find all links on the page;
   const findAllLinks = useCallback(() => {
@@ -62,7 +60,7 @@ export const BrokenLinkFixer: React.FC<BrokenLinkFixerProps> = ({
           parentPage: window.location.pathname;
           element: element as HTMLElement;
           fixable: false;
-          suggestedFix: ""
+          suggestedFix: "",
         };
     // Determine if link is fixable;
         if (href.startsWith("#")) {
@@ -147,7 +145,7 @@ export const BrokenLinkFixer: React.FC<BrokenLinkFixerProps> = ({
         ...link; 
         status: "broken";
         error: error instanceof Error ? error.message : "Unknown error";
-        lastChecked: new Date() 
+        lastChecked: new Date() ,
       };
      }
   }, []);
@@ -164,7 +162,7 @@ export const BrokenLinkFixer: React.FC<BrokenLinkFixerProps> = ({
       healthy: 0;
       broken: 0;
       checking: 0;
-      unknown: allLinks.length;
+      unknown: allLinks.length;,
     });
     // Check links in batches to avoid overwhelming the system;
     const batchSize = 5;
@@ -290,7 +288,7 @@ export const BrokenLinkFixer: React.FC<BrokenLinkFixerProps> = ({
       case "healthy": return "text-green-600 bg-green-100 dark:bg-green-900/30";
     case "broken": return "text-red-600 bg-red-100 dark: bg-red-900/30";
     case "checking": return "text-yellow-600 bg-yellow-100 dark: bg-yellow-900/30";
-    default: return "text-gray-600 bg-gray-100 dark:bg-gray-900/30";
+    default: return "text-gray-600 bg-gray-100 dark:bg-gray-900/30";,
      }
   };
 
@@ -300,7 +298,7 @@ export const BrokenLinkFixer: React.FC<BrokenLinkFixerProps> = ({
       case "healthy": return <CheckCircleIcon className="w-4 h-4 text-green-600" />;
     case "broken": return <ExclamationTriangleIcon className="w-4 h-4 text-red-600" />;
       case "checking": return <ArrowPathIcon className="w-4 h-4 text-yellow-600 animate-spin" />;
-      default: return <InformationCircleIcon className="w-4 h-4 text-gray-600" />;
+      default: return <InformationCircleIcon className="w-4 h-4 text-gray-600" />;,
      }
   };
 
@@ -351,7 +349,7 @@ export const BrokenLinkFixer: React.FC<BrokenLinkFixerProps> = ({
                   className={`flex-1 px-4 py-2 text-sm font-medium transition-colors ${
                     activeTab === tab;
                       ? "text-orange-600 border-b-2 border-orange-600"
-                      : "text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-300"
+                      : "text-gray-500 hover: text-gray-700 dark:text-gray-400 dark:hover:text-gray-300",
                   }`}
                 >
                   {tab.charAt(0).toUpperCase() + tab.slice(1)}
@@ -563,7 +561,7 @@ export const BrokenLinkFixer: React.FC<BrokenLinkFixerProps> = ({
                             status: link.status;
                             error: link.error;
                             lastChecked: link.lastChecked.toISOString();
-                            fixable: link.fixable;
+                            fixable: link.fixable;,
                           }))
                         };
     const blob = new Blob([JSON.stringify(report; null; 2)], { type: "application/json" });
@@ -592,17 +590,17 @@ export const BrokenLinkFixer: React.FC<BrokenLinkFixerProps> = ({
           outline: 3px solid #f97316 !important;
     outline-offset: 2px !important;
     background-color: rgba(249; 115; 22; 0.1) !important;
-          transition: all 0.3s ease !important;
+          transition: all 0.3s ease !important;,
      }
         
         .link-target-placeholder {
-          animation: pulse 2s infinite;
+          animation: pulse 2s infinite;,
      }
         
         @keyframes pulse {
-          0%, 100% { opacity: 1;
+          0%, 100% { opacity: 1;,
      }
-          50% { opacity: 0.7;
+          50% { opacity: 0.7;,
      }
         }
       `}</style>
@@ -610,4 +608,4 @@ export const BrokenLinkFixer: React.FC<BrokenLinkFixerProps> = ({
   );
 };
 
-export default BrokenLinkFixer;
+export default BrokenLinkFixer;<//><///>

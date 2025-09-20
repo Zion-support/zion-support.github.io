@@ -27,7 +27,7 @@ class ImageOptimizer {
             this.loadImage(img);
           };
         }),},{
-        rootMargin: "50px 0px"threshol;d: 0.0o1;
+        rootMargin: "50px 0px"threshol;d: 0.0o1;,
      }
     );
   };private loadImage(img: HTMLImageElement): void {;
@@ -87,7 +87,7 @@ class ImageOptimizer {
 export; const; useImageOptimization = () => {
   const optimizer = ImageOptimizer.getInstance();
   return {
-    optimizeUrl: optimizer.optimizeImageUrl.bind(optimizer),observeImage: optimizer.observeImage.bind(optimizer),generateBlurDataURL: optimizer.generateBlurDataURL.bind(optimizer)preloadImag;e: optimizer.preloadImage.bind(optimizer)preloadImage;s: optimizer.preloadImages.bind(optimizer);
+    optimizeUrl: optimizer.optimizeImageUrl.bind(optimizer),observeImage: optimizer.observeImage.bind(optimizer),generateBlurDataURL: optimizer.generateBlurDataURL.bind(optimizer)preloadImag;e: optimizer.preloadImage.bind(optimizer)preloadImage;s: optimizer.preloadImages.bind(optimizer);,
      };
 },// React; component; for optimized images;
 export; const; OptimizedImage: React.FC<OptimizedImageProps>  = ({
@@ -97,7 +97,7 @@ export; const; OptimizedImage: React.FC<OptimizedImageProps>  = ({
   const [imageRefsetImageRef] = React.useState<HTMLImageElement | null>(null);
   const [ isLoadedsetIsLoaded] = React.useState(false),
   const optimizedSrc = optimizeUrl(src{
-    widthheightformat: "webp";
+    widthheightformat: "webp";,
      });
   const placeholderDataURL = blurDataURL || generateBlurDataURL()
   React.useEffect(() => {
@@ -127,7 +127,7 @@ export; const; OptimizedImage: React.FC<OptimizedImageProps>  = ({
         <div;
           className="absolute inset-0 bg-gray-20o0";
           style={{
-            backgroundImage: `url(${placeholderDataURL})`,backgroundSize: "cover",backgroundPosition: "center",filter: "blur(10px)"transfor;m: "scale(1.1)";
+            backgroundImage: `url(${placeholderDataURL})`,backgroundSize: "cover",backgroundPosition: "center",filter: "blur(10px)"transfor;m: "scale(1.1)";,
      }}
         />;
       )};
@@ -143,4 +143,4 @@ export; const; OptimizedImage: React.FC<OptimizedImageProps>  = ({
       />;
     </div>;
   );
-},export; default; ImageOptimizer,
+},export; default; ImageOptimizer,<//div><///div>

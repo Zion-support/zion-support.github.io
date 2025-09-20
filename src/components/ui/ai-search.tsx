@@ -33,7 +33,7 @@ interface SearchResult {
     metadata: {
     lastUpdated: string;
     verified: boolean;
-    featured: boolean;
+    featured: boolean;,
      };
 }
 
@@ -43,18 +43,16 @@ interface AISearchProps {
   onSearch?: (query: string; filters: SearchFilters) => void;
     onResultClick?: (result: SearchResult) => void;
     className?: string;
-}
-
+};
 interface SearchFilters {
   category: string[];
     priceRange: [number; number];
   rating: number;
     location: string[];
     verified: boolean;
-    featured: boolean;
-}
-
-export function AISearch({
+    featured: boolean;,
+};
+export function AISearch({;
   enabled = true;
   placeholder = "Search for AI services; talent; or companies...",
   onSearch;
@@ -74,7 +72,7 @@ export function AISearch({
     rating: 0;
     location: [];
     verified: false;
-    featured: false;
+    featured: false;,
   });
     const [results; setResults] = useState<SearchResult[]>([]);
   const [suggestions; setSuggestions] = useState<string[]>([]);
@@ -138,7 +136,7 @@ export function AISearch({
         metadata: {
           lastUpdated: "2024-01-15";
           verified: true;
-          featured: true;
+          featured: true;,
         }
       };
       {
@@ -155,7 +153,7 @@ export function AISearch({
         metadata: {
           lastUpdated: "2024-01-20";
           verified: true;
-          featured: false;
+          featured: false;,
         }
       };
       {
@@ -172,7 +170,7 @@ export function AISearch({
         metadata: {
           lastUpdated: "2024-01-18";
           verified: true;
-          featured: true;
+          featured: true;,
         }
       }
     ];
@@ -244,7 +242,7 @@ export function AISearch({
       navigator.share({
         title: "Search Results from Zion Tech Group";
         text: `Check out these results for "${query}"`;
-        url: window.location.href;
+        url: window.location.href;,
       });
      } else {
       // Fallback to copying to clipboard;
@@ -314,7 +312,7 @@ export function AISearch({
             className={`absolute right-16 top-1/2 transform -translate-y-1/2 p-2 rounded-lg transition-all duration-200 ${
               isVoiceActive; 
                 ? "bg-red-500/20 text-red-400" 
-                : "text-zinc-400 hover:text-zinc-300 hover:bg-zion-blue/20"
+                : "text-zinc-400 hover: text-zinc-300 hover:bg-zion-blue/20",
             }`}
           >
             {isVoiceActive ? (
@@ -623,4 +621,4 @@ export function AISearch({
       </AnimatePresence>
     </div>
   );
-}
+}<//div><///div>

@@ -40,7 +40,7 @@ interface CardItem {
     downloads: number;
     verified: boolean;
     featured: boolean;
-    complexity: "beginner" | "intermediate" | "advanced" | "expert";
+    complexity: "beginner" | "intermediate" | "advanced" | "expert";,
      };
   actions?: {
     label: string;
@@ -60,9 +60,8 @@ interface Card3DGalleryProps {
   onCardClick?: (item: CardItem) => void;
     onAction?: (itemId: string; action: string) => void;
     className?: string;
-}
-
-export function Card3DGallery({
+};
+export function Card3DGallery({;
   enabled = true;
   items;
   columns = 3;
@@ -79,7 +78,7 @@ export function Card3DGallery({
     status: [] as CardItem["status"][];
     complexity: [] as CardItem["metadata"]["complexity"][];
     verified: false;
-    featured: false;
+    featured: false;,
   });
     const [searchQuery; setSearchQuery] = useState("");
   const [sortBy; setSortBy] = useState<"rating" | "downloads" | "lastUpdated" | "title">("rating");
@@ -123,7 +122,7 @@ export function Card3DGallery({
           aValue = a.title.toLowerCase();
           bValue = b.title.toLowerCase();
           break;
-        default: return 0;
+        default: return 0;,
      }
       
       if (sortOrder === "asc") {
@@ -166,7 +165,7 @@ export function Card3DGallery({
         return "border-blue-500/50 bg-blue-500/10 text-blue-400";
       case "deprecated":
         return "border-red-500/50 bg-red-500/10 text-red-400";
-      default: return "border-zinc-500/50 bg-zinc-500/10 text-zinc-400";
+      default: return "border-zinc-500/50 bg-zinc-500/10 text-zinc-400";,
      }
   };
 
@@ -181,7 +180,7 @@ export function Card3DGallery({
         return "border-orange-500/50 bg-orange-500/10 text-orange-400";
       case "expert":
         return "border-red-500/50 bg-red-500/10 text-red-400";
-      default: return "border-zinc-500/50 bg-zinc-500/10 text-zinc-400";
+      default: return "border-zinc-500/50 bg-zinc-500/10 text-zinc-400";,
      }
   };
 
@@ -222,7 +221,7 @@ export function Card3DGallery({
                 className={`px-3 py-1 rounded-md text-xs font-medium transition-all duration-200 ${
                   viewMode === mode;
                     ? "bg-zion-cyan text-zion-blue-dark"
-                    : "text-zinc-400 hover:text-white"
+                    : "text-zinc-400 hover: text-white",
                 }`}
               >
                 {mode === "grid" ? <Grid className="w-4 h-4" /> :
@@ -454,7 +453,7 @@ export function Card3DGallery({
                 key={index}
                 onClick={() => setCurrentCarouselIndex(index)}
                 className={`w-2 h-2 rounded-full transition-all duration-200 ${
-                  index === currentCarouselIndex ? "bg-zion-cyan w-6" : "bg-zinc-600 hover:bg-zinc-500"
+                  index === currentCarouselIndex ? "bg-zion-cyan w-6" : "bg-zinc-600 hover: bg-zinc-500",
                 }`}
               />
             ))}
@@ -661,7 +660,7 @@ function Card3D({
           transformStyle: "preserve-3d";
           rotateX;
           rotateY;
-          transform: isHovered ? "translateZ(20px)" : "translateZ(0px)"
+          transform: isHovered ? "translateZ(20px)" : "translateZ(0px)",
         }}
         transition={{ duration: 0.3 }}
       >
@@ -727,7 +726,7 @@ function Card3D({
                 variant="ghost"
                 onClick={handleLike}
                 className={`p-2 text-xs ${
-                  isLiked ? "text-red-400 hover:text-red-300" : "text-zinc-400 hover:text-white"
+                  isLiked ? "text-red-400 hover: text-red-300" : "text-zinc-400 hover:text-white",
                 }`}
               >
                 <Heart className={`w-4 h-4 ${isLiked ? "fill-current" : ""}`} />
@@ -761,4 +760,4 @@ function Card3D({
       </motion.div>
     </motion.div>
   );
-}
+}<//motion.div><///motion.div>

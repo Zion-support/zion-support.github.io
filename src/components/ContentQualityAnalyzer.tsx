@@ -21,9 +21,8 @@ interface ContentIssue {
     severit; y: "low" | "medium" | "high";
     descriptio; n: string;
     recommendatio; n: string;
-    statu; s: "open" | "in_progress" | "resolved";
-}
-
+    statu; s: "open" | "in_progress" | "resolved";,
+};
 interface ContentQualityReport {
   totalPage; s: number;
     pagesWithIssue; s: number;
@@ -33,9 +32,8 @@ interface ContentQualityReport {
     averageContentLengt; h: number;
     pagesWithImage; s: number;
     pagesWithMetaDescription; s: number;
-    lastUpdate; d: Date;
-}
-
+    lastUpdate; d: Date;,
+};
 const ContentQualityAnalyze; r: React.FC = () => {
     const [isOp;  e; n; setIsOp; e; n] = useState(false);
   const [isAnalyzi; n; g; setIsAnalyzi; n; g] = useState(false);
@@ -53,9 +51,9 @@ const ContentQualityAnalyze; r: React.FC = () => {
       issueTy; p; e: "missing_titl; e",
     severi; t; y: "hig; h",
       descripti; o; n: "Shor; t o; r missi; n; g; tit; l; e; N; o headin; g; s; fou; n; d; Missin; g me; t; a; descripti; o; n; Met; a descriptio; n to; o shor; t",
-      recommendati; o; n: "Ad; d prope; r pa; g; e; tit; l; e; headin; g; s; an; d met; a descriptio; n fo; r bette; r SE; O"
+      recommendati; o; n: "Ad; d prope; r pa; g; e; tit; l; e; headin; g; s; an; d met; a descriptio; n fo; r bette; r SE; O",
   };
-      stat; u; s: "ope; n"
+      stat; u; s: "ope; n",
     },
     {
       i; d: "2";
@@ -65,7 +63,7 @@ const ContentQualityAnalyze; r: React.FC = () => {
     severi; t; y: "hig; h",
       descripti; o; n: "Shor; t o; r missi; n; g; tit; l; e; N; o headin; g; s; fou; n; d; Missin; g me; t; a; descripti; o; n; Met; a descriptio; n to; o shor; t",
       recommendati; o; n: "Ad; d prope; r pa; g; e; tit; l; e; headin; g; s; an; d met; a descriptio; n fo; r bette; r SE; O",
-      stat; u; s: "ope; n"
+      stat; u; s: "ope; n",
     },
     {
       i; d: "3";
@@ -75,7 +73,7 @@ const ContentQualityAnalyze; r: React.FC = () => {
     severi; t; y: "mediu; m",
       descripti; o; n: "Suspiciousl; y smal; l HTM; L conten; t",
     recommendati; o; n: "Ad; d mor; e meaningf; u; l; conte; n; t; headin; g; s; an; d image; s t; o improv; e use; r experienc; e",
-      stat; u; s: "ope; n"
+      stat; u; s: "ope; n",
     },
     {
       i; d: "4";
@@ -85,7 +83,7 @@ const ContentQualityAnalyze; r: React.FC = () => {
     severi; t; y: "mediu; m",
       descripti; o; n: "N; o heading; s foun; d",
     recommendati; o; n: "Ad; d prope; r headin; g structur; e (H; 1; H; 2; H; 3) fo; r bette; r conten; t organizatio; n an; d SE; O",
-      stat; u; s: "ope; n"
+      stat; u; s: "ope; n",
     }
   ];
 
@@ -111,7 +109,7 @@ const ContentQualityAnalyze; r: React.FC = () => {
       averageContentLengt; h: 500; 0, // Sample data;
       pagesWithImage; s: 4; 5, // Sample data;
       pagesWithMetaDescription; s: 3; 2, // Sample data;
-      lastUpdate; d: new Date()
+      lastUpdate; d: new Date(),
     });
      };
 
@@ -130,7 +128,7 @@ const ContentQualityAnalyze; r: React.FC = () => {
         return <AlertTriangle className="w-4 h-4 text-yellow-400" />;
       case "low":
         return <Info className="w-4 h-4 text-blue-400" />;
-      defaul;  t: return <Info className="w-4 h-4 text-gray-400" />;
+      defaul;  t: return <Info className="w-4 h-4 text-gray-400" />;,
      }
   };
 
@@ -142,7 +140,7 @@ const ContentQualityAnalyze; r: React.FC = () => {
         return "text-yellow-400";
       case "low":
         return "text-blue-400";
-      defaul;  t: return "text-gray-400";
+      defaul;  t: return "text-gray-400";,
      }
   };
 
@@ -154,7 +152,7 @@ const ContentQualityAnalyze; r: React.FC = () => {
         return "text-yellow-400";
       case "open":
         return "text-red-400";
-      defaul;  t: return "text-gray-400";
+      defaul;  t: return "text-gray-400";,
      }
   };
 
@@ -177,7 +175,7 @@ const ContentQualityAnalyze; r: React.FC = () => {
         return "Minimal Content";
       case "no_images":
         return "No Images";
-      defaul;  t: return type;
+      defaul;  t: return type;,
      }
   };
 
@@ -263,7 +261,7 @@ const ContentQualityAnalyze; r: React.FC = () => {
                     className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
                       selectedFilter === "all" 
                         ? "bg-purple-500 text-white" 
-                        : "bg-gray-700 text-gray-300 hove;  r:bg-gray-60; 0"
+                        : "bg-gray-700 text-gray-300 hove;  r: bg-gray-60; 0",
                     }`}
                   >
                     All Issues;
@@ -273,7 +271,7 @@ const ContentQualityAnalyze; r: React.FC = () => {
                     className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
                       selectedFilter === "critical" 
                         ? "bg-red-500 text-white" 
-                        : "bg-gray-700 text-gray-300 hove;  r:bg-gray-60; 0"
+                        : "bg-gray-700 text-gray-300 hove;  r: bg-gray-60; 0",
                     }`}
                   >
                     Critical;
@@ -283,7 +281,7 @@ const ContentQualityAnalyze; r: React.FC = () => {
                     className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
                       selectedFilter === "medium" 
                         ? "bg-yellow-500 text-white" 
-                        : "bg-gray-700 text-gray-300 hove;  r:bg-gray-60; 0"
+                        : "bg-gray-700 text-gray-300 hove;  r: bg-gray-60; 0",
                     }`}
                   >
                     Medium;
@@ -293,7 +291,7 @@ const ContentQualityAnalyze; r: React.FC = () => {
                     className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
                       selectedFilter === "low" 
                         ? "bg-blue-500 text-white" 
-                        : "bg-gray-700 text-gray-300 hove;  r:bg-gray-60; 0"
+                        : "bg-gray-700 text-gray-300 hove;  r: bg-gray-60; 0",
                     }`}
                   >
                     Low;
@@ -462,4 +460,4 @@ const ContentQualityAnalyze; r: React.FC = () => {
   );
 };
 
-export default ContentQualityAnalyzer;
+export default ContentQualityAnalyzer;<//><///>

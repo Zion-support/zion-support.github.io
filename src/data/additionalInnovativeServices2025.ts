@@ -19,7 +19,7 @@ export interface AdditionalInnovativeService2025 {
     contactInfo: {
     phone: string;
     email: string;
-    website: string;
+    website: string;,
      };
   technology: string[];
     compliance: string[];
@@ -30,7 +30,7 @@ export interface AdditionalInnovativeService2025 {
     customBranding: boolean;
     dataRetention: string;
     uptime: string;
-    securityFeatures: string[];
+    securityFeatures: string[];,
 }
 
 export const ADDITIONAL_INNOVATIVE_SERVICES_2025: AdditionalInnovativeService2025[] = [
@@ -82,7 +82,7 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_2025: AdditionalInnovativeService202
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     technology: ["Python", "TensorFlow", "React", "Node.js", "PostgreSQL", "Redis"],
     compliance: ["SEC", "FINRA", "GDPR", "SOC 2"],
@@ -144,7 +144,7 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_2025: AdditionalInnovativeService202
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     technology: ["Python", "TensorFlow", "PyTorch", "React", "Node.js", "PostgreSQL"],
     compliance: ["HIPAA", "FDA", "SOC 2", "GDPR"],
@@ -206,7 +206,7 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_2025: AdditionalInnovativeService202
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     technology: ["Python", "NLP", "React", "Node.js", "PostgreSQL", "Elasticsearch"],
     compliance: ["GDPR", "SOC 2", "Legal Ethics"],
@@ -268,7 +268,7 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_2025: AdditionalInnovativeService202
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     technology: ["Python", "TensorFlow", "React", "Node.js", "PostgreSQL", "Redis"],
     compliance: ["FERPA", "COPPA", "GDPR", "SOC 2"],
@@ -330,7 +330,7 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_2025: AdditionalInnovativeService202
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     technology: ["Python", "TensorFlow", "React", "Node.js", "PostgreSQL", "Redis"],
     compliance: ["ISO 28000", "C-TPAT", "GDPR", "SOC 2"],
@@ -392,7 +392,7 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_2025: AdditionalInnovativeService202
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     technology: ["Python", "TensorFlow", "React", "Node.js", "PostgreSQL", "Redis"],
     compliance: ["GDPR", "SOC 2", "Real Estate Regulations"],
@@ -454,7 +454,7 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_2025: AdditionalInnovativeService202
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     technology: ["Python", "NLP", "React", "Node.js", "PostgreSQL", "Redis"],
     compliance: ["EEOC", "ADA", "GDPR", "SOC 2"],
@@ -516,7 +516,7 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_2025: AdditionalInnovativeService202
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     technology: ["Python", "TensorFlow", "React", "Node.js", "PostgreSQL", "Redis"],
     compliance: ["GDPR", "CAN-SPAM", "SOC 2", "CCPA"],
@@ -578,7 +578,7 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_2025: AdditionalInnovativeService202
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     technology: ["Python", "NLP", "React", "Node.js", "PostgreSQL", "Redis"],
     compliance: ["GDPR", "SOC 2", "CCPA"],
@@ -640,7 +640,7 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_2025: AdditionalInnovativeService202
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     technology: ["Python", "TensorFlow", "React", "Node.js", "PostgreSQL", "Redis"],
     compliance: ["ISO 9001", "GDPR", "SOC 2"],

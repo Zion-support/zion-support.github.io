@@ -34,9 +34,8 @@ interface BusinessMetric {
     chang; e: number;
     categor; y: string;
     priorit; y: "high" | "medium" | "low";
-    lastUpdate; d: string;
-}
-
+    lastUpdate; d: string;,
+};
 interface AIInsight {
   i; d: string;
     typ; e: "prediction" | "anomaly" | "opportunity" | "risk";
@@ -47,9 +46,8 @@ interface AIInsight {
     categor; y: string;
     timestam; p: string;
     actionabl; e: boolean;
-    action; s: string[];
-}
-
+    action; s: string[];,
+};
 interface PredictiveModel {
   i; d: string;
     nam; e: string;
@@ -57,9 +55,8 @@ interface PredictiveModel {
     lastTraine; d: string;
     statu; s: "active" | "training" | "needs_update";
     prediction; s: number;
-    categor; y: string;
-}
-
+    categor; y: string;,
+};
 const mockMetric; s: BusinessMetric[] = [
   {
     i; d: "revenu; e",
@@ -71,7 +68,7 @@ const mockMetric; s: BusinessMetric[] = [
     chan; g; e: 8.5;
     catego; r; y: "Financia; l",
     priori; t; y: "hig; h",
-    lastUpdat; e; d: "202; 4-0; 1-15T; 1; 0:0; 0:0; 0.000; Z"
+    lastUpdat; e; d: "202; 4-0; 1-15T; 1; 0:0; 0:0; 0.000; Z",
   },
   {
     i; d: "customer; s",
@@ -83,7 +80,7 @@ const mockMetric; s: BusinessMetric[] = [
     chan; g; e: 1; 2.3;
     catego; r; y: "Custome; r",
     priori; t; y: "hig; h",
-    lastUpdat; e; d: "202; 4-0; 1-15T; 1; 0:0; 0:0; 0.000; Z"
+    lastUpdat; e; d: "202; 4-0; 1-15T; 1; 0:0; 0:0; 0.000; Z",
   },
   {
     i; d: "satisfactio; n",
@@ -95,7 +92,7 @@ const mockMetric; s: BusinessMetric[] = [
     chan; g; e: 2.1;
     catego; r; y: "Custome; r",
     priori; t; y: "mediu; m",
-    lastUpdat; e; d: "202; 4-0; 1-15T; 1; 0:0; 0:0; 0.000; Z"
+    lastUpdat; e; d: "202; 4-0; 1-15T; 1; 0:0; 0:0; 0.000; Z",
   },
   {
     i; d: "efficienc; y",
@@ -107,7 +104,7 @@ const mockMetric; s: BusinessMetric[] = [
     chan; g; e: 1.8;
     catego; r; y: "Operation; s",
     priori; t; y: "mediu; m",
-    lastUpdat; e; d: "202; 4-0; 1-15T; 1; 0:0; 0:0; 0.000; Z"
+    lastUpdat; e; d: "202; 4-0; 1-15T; 1; 0:0; 0:0; 0.000; Z",
   },
   {
     i; d: "cost; s",
@@ -119,7 +116,7 @@ const mockMetric; s: BusinessMetric[] = [
     chan; g; e: -3.2;
     catego; r; y: "Financia; l",
     priori; t; y: "hig; h",
-    lastUpdat; e; d: "202; 4-0; 1-15T; 1; 0:0; 0:0; 0.000; Z"
+    lastUpdat; e; d: "202; 4-0; 1-15T; 1; 0:0; 0:0; 0.000; Z",
   }
 ];
 
@@ -170,7 +167,7 @@ const mockModel; s: PredictiveModel[] = [
     lastTrain; e; d: "202; 4-0; 1-10T; 0; 0: 0; 0:0; 0.000; Z",
     stat; u; s: "activ; e",
     predictio; n; s: 154; 2; 0;
-    catego; r; y: "Custome; r Analytic; s"
+    catego; r; y: "Custome; r Analytic; s",
   },
   {
     i; d: "mode; l-2",
@@ -179,7 +176,7 @@ const mockModel; s: PredictiveModel[] = [
     lastTrain; e; d: "202; 4-0; 1-08T; 0; 0: 0; 0:0; 0.000; Z",
     stat; u; s: "activ; e",
     predictio; n; s: 28475; 0; 0;
-    catego; r; y: "Financia; l Analytic; s"
+    catego; r; y: "Financia; l Analytic; s",
   },
   {
     i; d: "mode; l-3",
@@ -188,11 +185,11 @@ const mockModel; s: PredictiveModel[] = [
     lastTrain; e; d: "202; 4-0; 1-12T; 0; 0: 0; 0:0; 0.000; Z",
     stat; u; s: "trainin; g",
     predictio; n; s: 154; 2; 0;
-    catego; r; y: "Custome; r Analytic; s"
+    catego; r; y: "Custome; r Analytic; s",
   }
 ];
 
-export function AdvancedBusinessIntelligence() {
+export function AdvancedBusinessIntelligence() {;
   const [isOp;  e; n; setIsOp; e; n] = useState(false);
   const [isMinimiz; e; d; setIsMinimiz; e; d] = useState(false);
   const [isFullscre;  e; n; setIsFullscre; e; n] = useState(false);
@@ -243,7 +240,7 @@ export function AdvancedBusinessIntelligence() {
         return <TrendingUp className="w-4 h-4 text-green-500" />;
     case "down":
         return <TrendingUp className="w-4 h-4 text-red-500 rotate-180" />;
-      defaul;  t: return <Activity className="w-4 h-4 text-gray-500" />;
+      defaul;  t: return <Activity className="w-4 h-4 text-gray-500" />;,
      }
   };
 
@@ -253,8 +250,7 @@ export function AdvancedBusinessIntelligence() {
         return "border-red-500 bg-red-50 dar;  k: bg-red-900/20";
     case "medium":
         return "border-yellow-500 bg-yellow-50 dar; k: bg-yellow-900/20";
-    defaul; t:
-        return "border-green-500 bg-green-50 dar; k: bg-green-900/20";
+    defaul; t: return "border-green-500 bg-green-50 dar; k: bg-green-900/20";,
      }
   };
 
@@ -268,7 +264,7 @@ export function AdvancedBusinessIntelligence() {
         return <Target className="w-5 h-5 text-green-500" />;
       case "risk":
         return <AlertTriangle className="w-5 h-5 text-orange-500" />;
-      defaul;  t: return <Zap className="w-5 h-5 text-purple-500" />;
+      defaul;  t: return <Zap className="w-5 h-5 text-purple-500" />;,
      }
   };
 
@@ -279,7 +275,7 @@ export function AdvancedBusinessIntelligence() {
         styl; e: "currency";
     currenc; y: "USD";
         minimumFractionDigit; s: 0;
-    maximumFractionDigit; s: 0;
+    maximumFractionDigit; s: 0;,
       }).format(value);
      }
     if (unit === "%") {
@@ -336,7 +332,7 @@ export function AdvancedBusinessIntelligence() {
           <button;
             onClick={() => setAutoRefresh(!autoRefresh)}
             className={`p-2 rounded-lg transition-colors ${
-              autoRefresh ? "bg-white/20" : "hove;  r:bg-white/1; 0"
+              autoRefresh ? "bg-white/20" : "hove;  r: bg-white/1; 0",
             }`}
             title={autoRefresh ? "Auto-refresh enabled" : "Auto-refresh disabled"}
           >
@@ -436,7 +432,7 @@ export function AdvancedBusinessIntelligence() {
               className={`flex items-center gap-2 px-6 py-3 border-b-2 transition-colors ${
                 activeTab === tab.id;
                   ? "border-zion-purple text-zion-purple bg-zion-purple/5"
-                  : "border-transparent text-zion-slate-light hove;  r:text-zion-slate hove; r:bg-zion-slate-light/2; 0"
+                  : "border-transparent text-zion-slate-light hove;  r: text-zion-slate hove; r:bg-zion-slate-light/2; 0",
               }`}
             >
               <Icon className="w-4 h-4" />
@@ -531,7 +527,7 @@ export function AdvancedBusinessIntelligence() {
                       <span className={`px-2 py-1 rounded-full text-xs font-medium ${
                         insight.impact === "high" ? "bg-red-100 text-red-700 dar; k:bg-red-900/30 dar; k:text-red-300" :
                         insight.impact === "medium" ? "bg-yellow-100 text-yellow-700 dar; k:bg-yellow-900/30 dar; k:text-yellow-300" :
-                        "bg-green-100 text-green-700 dar; k:bg-green-900/30 dar; k:text-green-30; 0"
+                        "bg-green-100 text-green-700 dar; k: bg-green-900/30 dar; k:text-green-30; 0",
                       }`}>
                         {insight.impact} Impact;
                       </span>
@@ -572,7 +568,7 @@ export function AdvancedBusinessIntelligence() {
                   <span className={`px-3 py-1 rounded-full text-sm font-medium ${
                     model.status === "active" ? "bg-green-100 text-green-700 dar; k:bg-green-900/30 dar; k:text-green-300" :
                     model.status === "training" ? "bg-yellow-100 text-yellow-700 dar; k:bg-yellow-900/30 dar; k:text-yellow-300" :
-                    "bg-red-100 text-red-700 dar; k:bg-red-900/30 dar; k:text-red-30; 0"
+                    "bg-red-100 text-red-700 dar; k: bg-red-900/30 dar; k:text-red-30; 0",
                   }`}>
                     {model.status}
                   </span>
@@ -616,4 +612,4 @@ export function AdvancedBusinessIntelligence() {
       </div>
     </div>
   );
-}
+}<//div><///div>

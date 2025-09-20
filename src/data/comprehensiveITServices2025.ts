@@ -10,7 +10,7 @@ export interface ComprehensiveITService {
   demoUrl?: string;
   caseStudies?: string[];
   websiteUrl?: string;
-  marketTrend: string; industryFocus: string[], scalability: string; customizationLevel: string; serviceLevel: string;
+  marketTrend: string; industryFocus: string[], scalability: string; customizationLevel: string; serviceLevel: string;,
 }
 
 export const comprehensiveITServices2025: ComprehensiveITService[] = [
@@ -68,7 +68,7 @@ export const COMPREHENSIVE_IT_SERVICES_2025: ComprehensiveITService[] = [
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 1008 Middletown DE 19709",
     },
     technology: ["AWS", "Azure", "Google Cloud", "Kubernetes", "Docker", "Terraform"],
     integrations: ["On-premises systems", "Legacy applications", "Database systems", "Security platforms", "Monitoring tools"],
@@ -81,7 +81,7 @@ export const COMPREHENSIVE_IT_SERVICES_2025: ComprehensiveITService[] = [
     industryFocus: ["Technology", "Finance", "Healthcare", "Manufacturing", "Retail"],
     scalability: "Enterprise-grade with unlimited scalability",
     customizationLevel: "Custom cloud solutions and migration strategies",
-    serviceLevel: "24/7 managed cloud services"
+    serviceLevel: "24/7 managed cloud services",
   },
 
   // Cybersecurity & Information Security Services;
@@ -133,7 +133,7 @@ export const COMPREHENSIVE_IT_SERVICES_2025: ComprehensiveITService[] = [
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     },
     technology: ["SIEM platforms", "EDR solutions", "Firewall systems", "Identity management", "Security frameworks"],
     integrations: ["Security tools", "Monitoring systems", "Compliance platforms", "Incident response systems", "Training platforms"],
@@ -146,7 +146,7 @@ export const COMPREHENSIVE_IT_SERVICES_2025: ComprehensiveITService[] = [
     industryFocus: ["Financial Services", "Healthcare", "Technology", "Government", "Manufacturing"],
     scalability: "Enterprise security infrastructure with unlimited protection",
     customizationLevel: "Custom security frameworks and compliance solutions",
-    serviceLevel: "24/7 security monitoring and response"
+    serviceLevel: "24/7 security monitoring and response",
   },
 
   // DevOps & CI/CD Pipeline Services;
@@ -198,7 +198,7 @@ export const COMPREHENSIVE_IT_SERVICES_2025: ComprehensiveITService[] = [
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     },
     technology: ["Jenkins", "GitLab CI", "GitHub Actions", "Docker", "Kubernetes", "Terraform"],
     integrations: ["Version control systems", "Testing frameworks", "Monitoring tools", "Cloud platforms", "Security tools"],
@@ -211,7 +211,7 @@ export const COMPREHENSIVE_IT_SERVICES_2025: ComprehensiveITService[] = [
     industryFocus: ["Technology", "Finance", "Healthcare", "E-commerce", "SaaS"],
     scalability: "Enterprise DevOps platform with unlimited pipeline support",
     customizationLevel: "Custom DevOps workflows and automation rules",
-    serviceLevel: "24/7 DevOps support and monitoring"
+    serviceLevel: "24/7 DevOps support and monitoring",
   },
 
   // Data Management & Analytics Services;
@@ -275,7 +275,7 @@ export const COMPREHENSIVE_IT_SERVICES_2025: ComprehensiveITService[] = [
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     },
     technology: ["Python", "R", "SQL", "Tableau", "Power BI", "Apache Spark"],
     integrations: ["Data sources", "Business systems", "Cloud platforms", "Analytics tools", "Reporting systems"],
@@ -288,7 +288,7 @@ export const COMPREHENSIVE_IT_SERVICES_2025: ComprehensiveITService[] = [
     industryFocus: ["Retail", "Manufacturing", "Finance", "Healthcare", "Technology"],
     scalability: "Enterprise data platform with unlimited data processing",
     customizationLevel: "Custom analytics solutions and reporting dashboards",
-    serviceLevel: "24/7 data monitoring and support"
+    serviceLevel: "24/7 data monitoring and support",
   },
 
   // Network Infrastructure & Management Services;
@@ -340,7 +340,7 @@ export const COMPREHENSIVE_IT_SERVICES_2025: ComprehensiveITService[] = [
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     },
     technology: ["Cisco", "Juniper", "Aruba", "Network monitoring tools", "Security appliances"],
     integrations: ["Network devices", "Security systems", "Monitoring tools", "Cloud platforms", "Business systems"],
@@ -353,7 +353,7 @@ export const COMPREHENSIVE_IT_SERVICES_2025: ComprehensiveITService[] = [
     industryFocus: ["Technology", "Finance", "Healthcare", "Manufacturing", "Education"],
     scalability: "Enterprise network infrastructure with unlimited scalability",
     customizationLevel: "Custom network solutions and security configurations",
-    serviceLevel: "24/7 network monitoring and support"
+    serviceLevel: "24/7 network monitoring and support",
   },
 
   // IT Consulting & Strategic Planning Services;
@@ -406,7 +406,7 @@ export const COMPREHENSIVE_IT_SERVICES_2025: ComprehensiveITService[] = [
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     },
     technology: ["Strategic frameworks", "Planning tools", "Analytics platforms", "Governance frameworks"],
     integrations: ["Business systems", "Technology platforms", "Analytics tools", "Governance systems"],
@@ -419,7 +419,7 @@ export const COMPREHENSIVE_IT_SERVICES_2025: ComprehensiveITService[] = [
     industryFocus: ["All Industries", "Technology", "Finance", "Healthcare", "Manufacturing"],
     scalability: "Consulting services for organizations of all sizes",
     customizationLevel: "Custom strategic plans and technology roadmaps",
-    serviceLevel: "Flexible consulting engagement models"
+    serviceLevel: "Flexible consulting engagement models",
   },
 
   // IT Support & Help Desk Services;
@@ -471,7 +471,7 @@ export const COMPREHENSIVE_IT_SERVICES_2025: ComprehensiveITService[] = [
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     },
     technology: ["Help desk platforms", "Remote support tools", "Monitoring systems", "Knowledge management", "Reporting tools"],
     integrations: ["Business systems", "User management", "Monitoring tools", "Communication platforms"],
@@ -484,7 +484,7 @@ export const COMPREHENSIVE_IT_SERVICES_2025: ComprehensiveITService[] = [
     industryFocus: ["All Industries", "Technology", "Finance", "Healthcare", "Education"],
     scalability: "Multi-organization support platform with unlimited user support",
     customizationLevel: "Custom support workflows and knowledge bases",
-    serviceLevel: "24/7 technical support and monitoring"
+    serviceLevel: "24/7 technical support and monitoring",
   },
 
   // Software Development & Custom Solutions;
@@ -536,7 +536,7 @@ export const COMPREHENSIVE_IT_SERVICES_2025: ComprehensiveITService[] = [
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     },
     technology: ["React", "Node.js", "Python", "Java", "C#", "Cloud platforms"],
     integrations: ["Business systems", "Databases", "APIs", "Cloud services", "Third-party platforms"],
@@ -549,7 +549,7 @@ export const COMPREHENSIVE_IT_SERVICES_2025: ComprehensiveITService[] = [
     industryFocus: ["All Industries", "Technology", "Manufacturing", "Retail", "Healthcare"],
     scalability: "Enterprise development platform with unlimited customization",
     customizationLevel: "Fully custom software solutions and integrations",
-    serviceLevel: "Comprehensive development and ongoing support"
+    serviceLevel: "Comprehensive development and ongoing support",
   },
 
   // IT Project Management & Implementation Services;
@@ -601,7 +601,7 @@ export const COMPREHENSIVE_IT_SERVICES_2025: ComprehensiveITService[] = [
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     },
     technology: ["Help desk platforms", "Remote support tools", "Monitoring systems", "Knowledge management", "Reporting tools"],
     integrations: ["Business systems", "User management", "Monitoring tools", "Communication platforms"],
@@ -614,7 +614,7 @@ export const COMPREHENSIVE_IT_SERVICES_2025: ComprehensiveITService[] = [
     industryFocus: ["All Industries", "Technology", "Finance", "Healthcare", "Education"],
     scalability: "Multi-organization support platform with unlimited user support",
     customizationLevel: "Custom support workflows and knowledge bases",
-    serviceLevel: "24/7 technical support and monitoring"
+    serviceLevel: "24/7 technical support and monitoring",
   },
 
   // Software Development & Custom Solutions;
@@ -666,7 +666,7 @@ export const COMPREHENSIVE_IT_SERVICES_2025: ComprehensiveITService[] = [
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     },
     technology: ["React", "Node.js", "Python", "Java", "C#", "Cloud platforms"],
     integrations: ["Business systems", "Databases", "APIs", "Cloud services", "Third-party platforms"],
@@ -679,7 +679,7 @@ export const COMPREHENSIVE_IT_SERVICES_2025: ComprehensiveITService[] = [
     industryFocus: ["All Industries", "Technology", "Manufacturing", "Retail", "Healthcare"],
     scalability: "Enterprise development platform with unlimited customization",
     customizationLevel: "Fully custom software solutions and integrations",
-    serviceLevel: "Comprehensive development and ongoing support"
+    serviceLevel: "Comprehensive development and ongoing support",
   },
 
   // IT Project Management & Implementation Services;
@@ -731,7 +731,7 @@ export const COMPREHENSIVE_IT_SERVICES_2025: ComprehensiveITService[] = [
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     },
     technology: ["Project management tools", "Collaboration platforms", "Monitoring systems", "Reporting tools"],
     integrations: ["Business systems", "Project tools", "Communication platforms", "Analytics tools"],
@@ -804,7 +804,7 @@ export const COMPREHENSIVE_IT_SERVICES_2025: ComprehensiveITService[] = [
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 1008 Middletown DE 19709",
     },
     marketPrice: "$18; 000/month (Industry average: $35;000/month)",
     competitors: ["Microsoft 365", "Google Workspace", "Slack", "Zoom"],
@@ -865,7 +865,7 @@ export const COMPREHENSIVE_IT_SERVICES_2025: ComprehensiveITService[] = [
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 1008 Middletown DE 19709",
     },
     marketPrice: "$10; 000/month (Industry average: $20;000/month)",
     competitors: ["Apigee", "Kong", "AWS API Gateway", "Azure API Management"],
@@ -926,7 +926,7 @@ export const COMPREHENSIVE_IT_SERVICES_2025: ComprehensiveITService[] = [
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 1008 Middletown DE 19709",
     },
     marketPrice: "$8; 000/month (Industry average: $15;000/month)",
     competitors: ["Veeam", "Commvault", "Rubrik", "Cohesity"],
@@ -1042,7 +1042,7 @@ export const COMPREHENSIVE_IT_SERVICES_2025: ComprehensiveITService[] = [
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+      address: "364 E Main St STE 1008 Middletown DE 19709",
     },
     technology: ["AWS", "Azure", "Google Cloud", "Kubernetes", "Docker", "Terraform"],
     integrations: ["On-premises systems", "Legacy applications", "Database systems", "Security platforms", "Monitoring tools"],
@@ -1055,7 +1055,7 @@ export const COMPREHENSIVE_IT_SERVICES_2025: ComprehensiveITService[] = [
     industryFocus: ["Technology", "Finance", "Healthcare", "Manufacturing", "Retail"],
     scalability: "Enterprise-grade with unlimited scalability",
     customizationLevel: "Custom cloud solutions and migration strategies",
-    serviceLevel: "24/7 managed cloud services"
+    serviceLevel: "24/7 managed cloud services",
   },
 
   // Cybersecurity & Information Security Services;
@@ -1107,7 +1107,7 @@ export const COMPREHENSIVE_IT_SERVICES_2025: ComprehensiveITService[] = [
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     },
     technology: ["SIEM platforms", "EDR solutions", "Firewall systems", "Identity management", "Security frameworks"],
     integrations: ["Security tools", "Monitoring systems", "Compliance platforms", "Incident response systems", "Training platforms"],
@@ -1120,7 +1120,7 @@ export const COMPREHENSIVE_IT_SERVICES_2025: ComprehensiveITService[] = [
     industryFocus: ["Financial Services", "Healthcare", "Technology", "Government", "Manufacturing"],
     scalability: "Enterprise security infrastructure with unlimited protection",
     customizationLevel: "Custom security frameworks and compliance solutions",
-    serviceLevel: "24/7 security monitoring and response"
+    serviceLevel: "24/7 security monitoring and response",
   },
 
   // DevOps & CI/CD Pipeline Services;
@@ -1172,7 +1172,7 @@ export const COMPREHENSIVE_IT_SERVICES_2025: ComprehensiveITService[] = [
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     },
     technology: ["Jenkins", "GitLab CI", "GitHub Actions", "Docker", "Kubernetes", "Terraform"],
     integrations: ["Version control systems", "Testing frameworks", "Monitoring tools", "Cloud platforms", "Security tools"],
@@ -1185,7 +1185,7 @@ export const COMPREHENSIVE_IT_SERVICES_2025: ComprehensiveITService[] = [
     industryFocus: ["Technology", "Finance", "Healthcare", "E-commerce", "SaaS"],
     scalability: "Enterprise DevOps platform with unlimited pipeline support",
     customizationLevel: "Custom DevOps workflows and automation rules",
-    serviceLevel: "24/7 DevOps support and monitoring"
+    serviceLevel: "24/7 DevOps support and monitoring",
   },
 
   // Data Management & Analytics Services;
@@ -1237,7 +1237,7 @@ export const COMPREHENSIVE_IT_SERVICES_2025: ComprehensiveITService[] = [
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     },
     technology: ["Python", "R", "SQL", "Tableau", "Power BI", "Apache Spark"],
     integrations: ["Data sources", "Business systems", "Cloud platforms", "Analytics tools", "Reporting systems"],
@@ -1250,7 +1250,7 @@ export const COMPREHENSIVE_IT_SERVICES_2025: ComprehensiveITService[] = [
     industryFocus: ["Retail", "Manufacturing", "Finance", "Healthcare", "Technology"],
     scalability: "Enterprise data platform with unlimited data processing",
     customizationLevel: "Custom analytics solutions and reporting dashboards",
-    serviceLevel: "24/7 data monitoring and support"
+    serviceLevel: "24/7 data monitoring and support",
   },
 
   // Network Infrastructure & Management Services;
@@ -1302,7 +1302,7 @@ export const COMPREHENSIVE_IT_SERVICES_2025: ComprehensiveITService[] = [
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     },
     technology: ["Cisco", "Juniper", "Aruba", "Network monitoring tools", "Security appliances"],
     integrations: ["Network devices", "Security systems", "Monitoring tools", "Cloud platforms", "Business systems"],
@@ -1315,7 +1315,7 @@ export const COMPREHENSIVE_IT_SERVICES_2025: ComprehensiveITService[] = [
     industryFocus: ["Technology", "Finance", "Healthcare", "Manufacturing", "Education"],
     scalability: "Enterprise network infrastructure with unlimited scalability",
     customizationLevel: "Custom network solutions and security configurations",
-    serviceLevel: "24/7 network monitoring and support"
+    serviceLevel: "24/7 network monitoring and support",
   },
 
   // IT Consulting & Strategic Planning Services;
@@ -1368,7 +1368,7 @@ export const COMPREHENSIVE_IT_SERVICES_2025: ComprehensiveITService[] = [
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     },
     technology: ["Strategic frameworks", "Planning tools", "Analytics platforms", "Governance frameworks"],
     integrations: ["Business systems", "Technology platforms", "Analytics tools", "Governance systems"],
@@ -1381,7 +1381,7 @@ export const COMPREHENSIVE_IT_SERVICES_2025: ComprehensiveITService[] = [
     industryFocus: ["All Industries", "Technology", "Finance", "Healthcare", "Manufacturing"],
     scalability: "Consulting services for organizations of all sizes",
     customizationLevel: "Custom strategic plans and technology roadmaps",
-    serviceLevel: "Flexible consulting engagement models"
+    serviceLevel: "Flexible consulting engagement models",
   },
 
   // IT Support & Help Desk Services;
@@ -1433,7 +1433,7 @@ export const COMPREHENSIVE_IT_SERVICES_2025: ComprehensiveITService[] = [
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     },
     technology: ["Help desk platforms", "Remote support tools", "Monitoring systems", "Knowledge management", "Reporting tools"],
     integrations: ["Business systems", "User management", "Monitoring tools", "Communication platforms"],
@@ -1446,7 +1446,7 @@ export const COMPREHENSIVE_IT_SERVICES_2025: ComprehensiveITService[] = [
     industryFocus: ["All Industries", "Technology", "Finance", "Healthcare", "Education"],
     scalability: "Multi-organization support platform with unlimited user support",
     customizationLevel: "Custom support workflows and knowledge bases",
-    serviceLevel: "24/7 technical support and monitoring"
+    serviceLevel: "24/7 technical support and monitoring",
   },
 
   // Software Development & Custom Solutions;
@@ -1498,7 +1498,7 @@ export const COMPREHENSIVE_IT_SERVICES_2025: ComprehensiveITService[] = [
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     },
     technology: ["React", "Node.js", "Python", "Java", "C#", "Cloud platforms"],
     integrations: ["Business systems", "Databases", "APIs", "Cloud services", "Third-party platforms"],
@@ -1511,7 +1511,7 @@ export const COMPREHENSIVE_IT_SERVICES_2025: ComprehensiveITService[] = [
     industryFocus: ["All Industries", "Technology", "Manufacturing", "Retail", "Healthcare"],
     scalability: "Enterprise development platform with unlimited customization",
     customizationLevel: "Fully custom software solutions and integrations",
-    serviceLevel: "Comprehensive development and ongoing support"
+    serviceLevel: "Comprehensive development and ongoing support",
   },
 
   // IT Project Management & Implementation Services;
@@ -1563,7 +1563,7 @@ export const COMPREHENSIVE_IT_SERVICES_2025: ComprehensiveITService[] = [
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     },
     technology: ["Project management tools", "Collaboration platforms", "Monitoring systems", "Reporting tools"],
     integrations: ["Business systems", "Project tools", "Communication platforms", "Analytics tools"],
@@ -1576,7 +1576,7 @@ export const COMPREHENSIVE_IT_SERVICES_2025: ComprehensiveITService[] = [
     industryFocus: ["All Industries", "Technology", "Finance", "Healthcare", "Manufacturing"],
     scalability: "Project management services for projects of all sizes",
     customizationLevel: "Custom project management methodologies and tools",
-    serviceLevel: "Comprehensive project management and support"
+    serviceLevel: "Comprehensive project management and support",
   }
 ];
 

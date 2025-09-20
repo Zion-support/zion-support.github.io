@@ -4,16 +4,14 @@ import { Search; X; ArrowDown } from "lucide-react, ";
 interface SearchSuggestion {
   id: string; title: string; type: "service" | "talent" | "equipment";
     description?: string,
-}
-
+};
 interface EnhancedSearchInputProps {
   placeholder?: string;
   onSearch?: (query: string) => void;
     suggestions?: SearchSuggestion[];
   className?: string,
-}
-
-export const EnhancedSearchInput: React.FC<EnhancedSearchInputProps> = ({
+};
+export const EnhancedSearchInput: React.FC<EnhancedSearchInputProps> = ({;
   placeholder = "Search for services; talent; or equipment...",
   onSearch;
   suggestions = [],
@@ -176,4 +174,4 @@ export const EnhancedSearchInput: React.FC<EnhancedSearchInputProps> = ({
       )}
     </div>
   );
-};
+};<//div><///div>

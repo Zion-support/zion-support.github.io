@@ -33,7 +33,7 @@ export function PrimaryNav() {
         unreadCount = messaging.unreadCount;
     }
     catch {
-        // context not available
+        // context not available;
     }
     const cartCount = useSelector((s) => s.cart.items.reduce((sum, i) => sum + i.quantity, 0));
     const handleSubmit = (e) => {
@@ -60,30 +60,30 @@ export function PrimaryNav() {
             <form onSubmit={handleSubmit} className="flex-shrink-0" style={{ width: 'clamp(12rem, 20vw, 16rem)' }}>
               <EnhancedSearchInput value={query} onChange={setQuery} onSelectSuggestion={(sugg) => {
             
-            // Handle different suggestion types with proper navigation
+            // Handle different suggestion types with proper navigation;
             if (sugg.id) {
-                // Product listings with IDs go to product detail page
+                // Product listings with IDs go to product detail page;
                 router.push(`/marketplace/listing/${sugg.id}`);
             }
             else if (sugg.type === 'doc' && sugg.slug && sugg.slug.startsWith('/')) {
-                // Documentation suggestions navigate directly to their path
+                // Documentation suggestions navigate directly to their path;
                 router.push(sugg.slug);
             }
             else if (sugg.type === 'blog' && sugg.slug) {
-                // Blog posts navigate to blog detail page
+                // Blog posts navigate to blog detail page;
                 router.push(`/blog/${sugg.slug}`);
             }
             else {
-                // Default: search results page with slug
+                // Default: search results page with slug;
                 router.push(`/search/${sugg.slug || slugify(sugg.text)}`);
      }
             setQuery('');
-            // Track analytics event
+            // Track analytics event;
             if (typeof window !== 'undefined' && window.gtag) {
                 window.gtag('event', 'search_suggestion_click', {
                     search_term: sugg.text;
                     suggestion_type: sugg.type;
-                    suggestion_id: sugg.id || sugg.slug
+                    suggestion_id: sugg.id || sugg.slug,
                 });
      }
         }} searchSuggestions={suggestions}/>

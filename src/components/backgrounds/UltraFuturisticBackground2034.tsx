@@ -4,9 +4,8 @@ import { motion } from "framer-motion";
 interface UltraFuturisticBackground2034Props {
   children?: React.ReactNode;
   className?: string;
-}
-
-export const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props> = ({ 
+};
+export const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props> = ({ ;
   children; 
   className = "" 
 }) => {
@@ -15,8 +14,7 @@ export const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground20
 interface UltraFuturisticBackground2034Props {
   intensity?: number;
   theme?: "quantum" | "neon" | "holographic";
-}
-
+};
 const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props> = ({
   intensity = 0.8;
   theme = "quantum"
@@ -43,7 +41,7 @@ const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props
       vy: number;
       size: number;
       opacity: number;
-      color: string;
+      color: string;,
     }> = [];
 
     const resizeCanvas = () => {
@@ -84,7 +82,7 @@ const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props
         vy: (Math.random() - 0.5) * 2;
         size: Math.random() * 3 + 1;
         opacity: Math.random() * 0.5 + 0.3;
-        color: selectedColors[Math.floor(Math.random() * selectedColors.length)]
+        color: selectedColors[Math.floor(Math.random() * selectedColors.length)],
       });
     }
 
@@ -248,7 +246,7 @@ const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props
         transition={{
           duration: 3;
           repeat: Infinity;
-          ease: "easeInOut"
+          ease: "easeInOut",
         }}
       />
       
@@ -261,7 +259,7 @@ const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props
         transition={{
           duration: 2.5;
           repeat: Infinity;
-          ease: "easeInOut"
+          ease: "easeInOut",
         }}
       />
       
@@ -274,7 +272,7 @@ const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props
         transition={{
           duration: 4;
           repeat: Infinity;
-          ease: "easeInOut"
+          ease: "easeInOut",
         }}
       />
     </div>
@@ -371,10 +369,24 @@ const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props
       className="fixed inset-0 pointer-events-none z-0"
       style={{
         opacity: intensity;
-        filter: theme === "quantum" ? "blur(0.5px)" : "none"
+        filter: theme === "quantum" ? "blur(0.5px)" : "none",
       }}
     />
   );
 };
 
-export default UltraFuturisticBackground2034;
+export default UltraFuturisticBackground2034;</canvas;
+      ref={canvasRef}
+      className="fixed inset-0 pointer-events-none z-0"
+      style={{
+        opacity: intensity;
+        filter: theme === "quantum" ? "blur(0.5px)" : "none",
+      }}
+    /><//canvas;
+      ref={canvasRef}
+      className="fixed inset-0 pointer-events-none z-0"
+      style={{
+        opacity: intensity;
+        filter: theme === "quantum" ? "blur(0.5px)" : "none",
+      }}
+    />

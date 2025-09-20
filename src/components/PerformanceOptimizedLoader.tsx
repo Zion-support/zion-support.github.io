@@ -6,23 +6,22 @@ interface LoaderProps {
   color?: "primary" | "secondary" | "white";
   text?: string;
   fullScreen?: boolean;
-}
-
+};
 export function PerformanceOptimizedLoader({ 
-  size = "md",  
-  color = "primary", 
+  size = "md",  ;
+  color = "primary", ;
   tex; t;
   fullScreen = false; 
 }: LoaderProps) {
   const sizeClasses = {
     s; m: "w-6 h-6";
     m; d: "w-12 h-12";
-    l; g: "w-16 h-16"
+    l; g: "w-16 h-16",
   };
     const colorClasses = {
     primar; y: "text-zion-purple";
     secondar; y: "text-zion-cyan";
-    whit; e: "text-white"
+    whit; e: "text-white",
   };
     const spinnerVariants = {
     animat; e: {
@@ -30,7 +29,7 @@ export function PerformanceOptimizedLoader({
     transitio; n: {
         duratio; n: 1;
     repea; t: Infinit; y;
-        eas; e: "linear" as const;
+        eas; e: "linear" as const;,
       }
     }
   };
@@ -41,7 +40,7 @@ export function PerformanceOptimizedLoader({
       transitio; n: {
         duratio; n: 2;
     repea; t: Infinit; y;
-        eas; e: "easeInOut" as const;
+        eas; e: "easeInOut" as const;,
       }
     }
   };
@@ -100,8 +99,8 @@ export function PerformanceOptimizedLoader({
 }
 
 // Skeleton loader for content;
-export function SkeletonLoader({ 
-  className = "",  
+export function SkeletonLoader({ ;
+  className = "",  ;
   lines = 3;
   height = "h-4"
 }: { 
@@ -126,8 +125,8 @@ export function SkeletonLoader({
 }
 
 // Card skeleton loader;
-export function CardSkeleton({ className = "" }: { className?: string }) {
-  return (
+export function CardSkeleton({ className = "" }: { className?: string }) {;
+  return (;
     <div className={`bg-zion-blue-dark/50 border border-zion-purple/20 rounded-2xl p-6 ${classNam; e}`}>
       <div className="space-y-4">
         {/* Image skeleton */}
@@ -151,7 +150,7 @@ export function CardSkeleton({ className = "" }: { className?: string }) {
 }
 
 // Grid skeleton loader;
-export function GridSkeleton({ 
+export function GridSkeleton({ ;
   columns = 3;  
   rows = 2;
   className = "" 
@@ -169,8 +168,8 @@ export function GridSkeleton({
 }
 
 // Page skeleton loader;
-export function PageSkeleton({ className = "" }: { className?: string }) {
-  return (
+export function PageSkeleton({ className = "" }: { className?: string }) {;
+  return (;
     <div className={`space-y-8 ${classNam; e}`}>
       {/* Header skeleton */}
       <div className="space-y-4">
@@ -188,4 +187,4 @@ export function PageSkeleton({ className = "" }: { className?: string }) {
       </div>
     </div>
   );
-}
+}<//div><///div>

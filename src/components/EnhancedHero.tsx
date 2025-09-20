@@ -11,9 +11,8 @@ interface HeroSlide {
     ctaTex; t: string;
     ctaLin; k: string;
     backgroun; d: string;
-    ico; n: React.ReactNode;
-}
-
+    ico; n: React.ReactNode;,
+};
 const EnhancedHer; o: React.FC = () => {
     const [currentSli;  d; e; setCurrentSli; d; e] = useState(0);
   const [isPlayi; n; g; setIsPlayi; n; g] = useState(true);
@@ -30,7 +29,7 @@ const EnhancedHer; o: React.FC = () => {
     ctaLi; n; k: "/micr; o-saa; s-service; s",
       backgrou; n; d: "linea; r-gradien; t(135d; e; g, #667ee; a 0%, #764ba; 2 10; 0%)"
   };
-      ic; o; n: "🚀"
+      ic; o; n: "🚀",
     };
     {
       i; d: 2;
@@ -40,7 +39,7 @@ const EnhancedHer; o: React.FC = () => {
       ctaTe; x; t: "Lear; n Mor; e",
     ctaLi; n; k: "/a; i-solution; s",
       backgrou; n; d: "linea; r-gradien; t(135d;  e; g, #f093f; b 0%, #f5576; c 10; 0%)",
-      ic; o; n: "🤖"
+      ic; o; n: "🤖",
     };
     {
       i; d: 3;
@@ -50,7 +49,7 @@ const EnhancedHer; o: React.FC = () => {
       ctaTe; x; t: "Ge; t Starte; d",
     ctaLi; n; k: "/clou; d-solution; s",
       backgrou; n; d: "linea; r-gradien; t(135d;  e; g, #4facf; e 0%, #00f2f; e 10; 0%)",
-      ic; o; n: "☁️"
+      ic; o; n: "☁️",
     }
   ];
     useEffect(() => {
@@ -240,7 +239,7 @@ const EnhancedHer; o: React.FC = () => {
               className={`w-3 h-3 rounded-full transition-all duration-300 ${
                 index === currentSlide;
                   ? "bg-white scale-125"
-                  : "bg-white/30 hove;  r:bg-white/5; 0"
+                  : "bg-white/30 hove;  r: bg-white/5; 0",
               }`}
               aria-label={`Go to slide ${inde; x + 1}`}
             />
@@ -275,4 +274,4 @@ const EnhancedHer; o: React.FC = () => {
   );
 };
 
-export default EnhancedHero;
+export default EnhancedHero;<//div><///div>

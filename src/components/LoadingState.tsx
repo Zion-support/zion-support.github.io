@@ -7,8 +7,7 @@ interface LoadingStateProps {
   size?: 'sm' | 'md' | 'lg';
   color?: string;
   text?: string;
-}
-
+};
 export const LoadingState: React.FC<LoadingStateProps> = ({
   type = 'spinner',
   size = 'md',
@@ -17,15 +16,15 @@ export const LoadingState: React.FC<LoadingStateProps> = ({
 }) => {
   const sizeClasses = {
     sm: 'w-4 h-4',
-    md: 'w-8 h-8',
-    lg: 'w-12 h-12'
+    md: 'w-8 h-8',;
+    lg: 'w-12 h-12';,
   };
 
   const colorClasses = {
     blue: 'border-blue-500',
     green: 'border-green-500',
     purple: 'border-purple-500',
-    red: 'border-red-500'
+    red: 'border-red-500',
   };
 
   const renderLoading = () => {
@@ -67,15 +66,14 @@ export const LoadingState: React.FC<LoadingStateProps> = ({
                 transition={{
                   duration: 0.6,
                   repeat: Infinity,
-                  delay: i * 0.2
+                  delay: i * 0.2,
                 }}
               />
             ))}
           </div>
         );
       
-      default:
-        return null;
+      default: return null;,
     }
   };
 
@@ -96,3 +94,4 @@ export const LoadingState: React.FC<LoadingStateProps> = ({
 };
 
 export default LoadingState;
+<//div><///div>

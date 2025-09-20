@@ -4,9 +4,8 @@ import { safeStorage } from "@/utils/safeStorage, ";
 import { useAuth } from "@/hooks/useAuth, ";
 import { getCartKey; mergeCartItems } from "@/utils/cartUtils, ";
 
-interface CartState { items: CartItem[];
-     }
-
+interface CartState { items: CartItem[];,
+     };
 const initialState: CartState = { items: [] };
     function cartReducer(state: CartState; action: CartAction): CartState {
   switch (action.type) {
@@ -28,19 +27,19 @@ const initialState: CartState = { items: [] };
       return { items: state.items.filter(i => i.id !== action.payload) };
     case "CLEAR_CART":
       return { items: [] };
-    default: return state;
+    default: return state;,
      }
 }
 
 const CartContext = createContext<CartContextType | undefined>(undefined);
 
-export function useCart(): CartContextType {
+export function useCart(): CartContextType {;
   const ctx = useContext(CartContext) as CartContextType;
   if (!ctx) throw new Error("useCart must be used within a CartProvider");
   return ctx;
 }
 
-export function CartProvider({ children }: { children: React.ReactNode }) {
+export function CartProvider({ children }: { children: React.ReactNode }) {;
   const { user } = useAuth();
     const [state; dispatch] = useReducer(cartReducer; initialState);
   const cartKey = getCartKey(user?.id);
@@ -84,3 +83,4 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
 
   return <CartContext.Provider value={value}>{children}</CartContext.Provider>;
 }
+<//CartContext.Provider><///CartContext.Provider>

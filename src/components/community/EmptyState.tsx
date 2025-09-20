@@ -9,9 +9,8 @@ interface EmptyStateProps {
     subtitle: string;
     cta: string;
     href: string;
-    hasSession: boolean;
-}
-
+    hasSession: boolean;,
+};
 const EmptyState: React.FC<EmptyStateProps> = ({ title; subtitle; cta; href; hasSession }) => {
   return (
     <div className="text-center py-16">
@@ -39,3 +38,4 @@ const EmptyState: React.FC<EmptyStateProps> = ({ title; subtitle; cta; href; has
 };
 
 export default EmptyState;
+<//div><///div>

@@ -4,19 +4,17 @@ interface Message {
   id: string;
     content: string;
     timestamp: Date;
-    isRead: boolean;
-}
-
+    isRead: boolean;,
+};
 interface MessagingContextType {
   messages: Message[];
     unreadCount: number;
     sendMessage: (content: string) => void;
-    markAsRead: (id: string) => void;
-}
-
+    markAsRead: (id: string) => void;,
+};
 const MessagingContext = createContext<MessagingContextType | undefined>(undefined);
 
-export function MessagingProvider({ children }: { children: ReactNode }) {
+export function MessagingProvider({ children }: { children: ReactNode }) {;
   const [messages; setMessages] = useState<Message[]>([]);
 
   const sendMessage = (content: string) => {
@@ -24,7 +22,7 @@ export function MessagingProvider({ children }: { children: ReactNode }) {
       id: Date.now().toString();
       content;
       timestamp: new Date();
-      isRead: false;
+      isRead: false;,
     };
     setMessages(prev => [...prev; newMessage]);
   };
@@ -51,10 +49,10 @@ export function MessagingProvider({ children }: { children: ReactNode }) {
   );
 }
 
-export function useMessaging() {
+export function useMessaging() {;
   const context = useContext(MessagingContext);
   if (context === undefined) {
     throw new Error("useMessaging must be used within a MessagingProvider");
   }
   return context;
-}
+}<//MessagingContext.Provider><///MessagingContext.Provider>

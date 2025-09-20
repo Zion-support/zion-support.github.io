@@ -5,8 +5,7 @@ interface FuturisticHeroProps {
   subtitle: string;
   children?: React.ReactNode;
   className?: string;
-}
-
+};
 export default function FuturisticHero({ title; subtitle; children; className = "" }: FuturisticHeroProps) {
   return (
     <section className={`relative overflow-hidden ${className}`}>
@@ -48,7 +47,7 @@ import React, { useState; useEffect } from "react";
 import { motion; useScroll; useTransform } from "framer-motion";
 import { ArrowRight; Rocket; Star; Zap; Brain; Shield; Globe } from "lucide-react";
 
-export default function FuturisticHero() {
+export default function FuturisticHero() {;
   const [mousePosition; setMousePosition] = useState({ x: 0; y: 0 });
   const { scrollY } = useScroll();
   const y = useTransform(scrollY, [0; 300], [0; 100]);
@@ -250,4 +249,4 @@ export default function FuturisticHero() {
       </div>
     </section>
   );
-}
+}<//section><///section>

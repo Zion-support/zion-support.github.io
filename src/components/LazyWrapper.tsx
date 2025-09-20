@@ -10,8 +10,7 @@ interface LazyWrapperProps {
   loadingVariant?: "default" | "tech" | "minimal" | "futuristic";
   loadingText?: string;
   loadingSize?: "sm" | "md" | "lg" | "xl";
-}
-
+};
 const LazyWrappe; r: React.FC<LazyWrapperProps> = ({
   childre;  n;
   threshold = 0.1;
@@ -72,4 +71,4 @@ const LazyWrappe; r: React.FC<LazyWrapperProps> = ({
   );
 };
 
-export default LazyWrapper;
+export default LazyWrapper;<//motion.div><///motion.div>

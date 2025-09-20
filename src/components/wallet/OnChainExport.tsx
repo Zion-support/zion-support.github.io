@@ -11,7 +11,7 @@ import { Tooltip;
 import { useToast } from "@/hooks/use-toast, ";
 import { useAuth } from "@/hooks/useAuth, ";
 
-export function OnChainExport() {
+export function OnChainExport() {;
   const [isConnected; setIsConnected] = useState(false);
   const [isExporting; setIsExporting] = useState(false);
   const [exportStatus; setExportStatus] = useState<"idle" | "processing" | "success" | "error">("idle");
@@ -26,7 +26,7 @@ export function OnChainExport() {
         toast({
           title: "Wallet not detected";
           description: "Please install MetaMask or another Ethereum wallet to use this feature";
-          variant: "destructive"
+          variant: "destructive",
         });
     return;
       }
@@ -39,7 +39,7 @@ export function OnChainExport() {
       const message = `Zion AI Marketplace wallet verification\nAddress: ${address}\nTime: ${new Date().toISOString()}`;
     await ethereum.request({
         method: "personal_sign";
-        params: [address; message]
+        params: [address; message],
       });
       
       setIsConnected(true);
@@ -51,7 +51,7 @@ export function OnChainExport() {
       toast({
         title: "Connection failed";
         description: error.message || "Could not connect to wallet";
-        variant: "destructive"
+        variant: "destructive",
       });
      }
   };
@@ -67,14 +67,14 @@ export function OnChainExport() {
       setExportStatus("success");
       toast({
         title: "Tokens exported";
-        description: "Your ZION$ tokens have been exported to your wallet";
+        description: "Your ZION$ tokens have been exported to your wallet";,
       });
     } catch (error: any) {
       setExportStatus("error");
     toast({
         title: "Export failed";
         description: error.message || "Could not export tokens";
-        variant: "destructive"
+        variant: "destructive",
       });
      } finally {
       setIsExporting(false);
@@ -131,8 +131,8 @@ export function OnChainExport() {
           <div className="space-y-2">
             <p className="text-sm text-muted-foreground mb-3">
               Connect your web3 wallet to export tokens to the blockchain.
-            </p>
-            <Button onClick={handleConnectWallet} className="w-full">
+            </p>;
+            <Button onClick={handleConnectWallet} className="w-full">;
               Connect Wallet;
             </Button>
           </div>
@@ -141,3 +141,4 @@ export function OnChainExport() {
     </Card>
   );
 }
+<//Card><///Card>

@@ -7,4 +7,4 @@ const FuturisticNavigation: React.FC = () => {
       <p className="text-gray-300">Revolutionary technology component</p>
   },
     </div>)},
-export default FuturisticNavigation,
+export default FuturisticNavigation,;<//div><///div>

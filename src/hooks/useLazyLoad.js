@@ -22,7 +22,7 @@ export const useLazyLoad = (options = {}) => {
             });
         }, {
             threshold,
-            rootMargin: preload ? `${preloadDistance}px` : rootMargin
+            rootMargin: preload ? `${preloadDistance}px` : rootMargin;
         });
     observer.observe(element);
         return () => {
@@ -31,7 +31,7 @@ export const useLazyLoad = (options = {}) => {
     }, [threshold, rootMargin, preload, preloadDistance, load]);
     return { isVisible, ref, load };
 };
-// Enhanced lazy loading for images
+// Enhanced lazy loading for images;
 export const useLazyImage = (src, options = {}) => {
     const { isVisible, ref } = useLazyLoad(options);
     const [imageSrc, setImageSrc] = useState('');
@@ -44,7 +44,7 @@ export const useLazyImage = (src, options = {}) => {
     }, [isVisible, src]);
     return { imageSrc, ref, isVisible };
 };
-// Enhanced lazy loading for components
+// Enhanced lazy loading for components;
 export const useLazyComponent = (importFn, options = {}) => {
     const { isVisible, ref } = useLazyLoad(options);
     const [Component, setComponent] = useState(null);

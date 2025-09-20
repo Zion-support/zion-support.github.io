@@ -8,14 +8,14 @@ import { motionAnimatePresence } from "framer-motion, ";interface MonitoringData
     pageVie; w; s: number;
     conversionRa; t; e: number;
     bounceRa; t;e: number;
-    averageSessionDurati; o;n: number;
+    averageSessionDurati; o;n: number;,
 };
 interface Alert {
   i; d: string;
     ty; p; e: "error" | "warning" | "info" | "success";
     messa; g; e: string;
     timesta; m;p: Date;
-    resolv; e;d: boolean;
+    resolv; e;d: boolean;,
 };
 interface MonitoringDashboardProps {
   enableRealTime?: boolean;
@@ -29,7 +29,7 @@ cons; t; MonitoringDashboa; r; d: React.FC<MonitoringDashboardProps> = ({
   className = "";
 }) => {
   const [d; a; t; a; set; D; a,, t; a] = useState<MonitoringData>({
-    upti;  m;  e: 99.9;responseTi; m; e: 1; 5; 0;errorRa; t; e: 0.1;userCou; n; t: 0;pageVie; w; s: 0;conversionRa; t; e: 0;bounceRa; t; e: 0averageSessionDurati; o;n: 0;
+    upti;  m;  e: 99.9;responseTi; m; e: 1; 5; 0;errorRa; t; e: 0.1;userCou; n; t: 0;pageVie; w; s: 0;conversionRa; t; e: 0;bounceRa; t; e: 0averageSessionDurati; o;n: 0;,
      });const [al; e; r; t; s; setAl; e; r,, t; s] = useState<Alert[]>([]);
   const [isLoa;  d; i;  n; g; setIsLoa; d; i,, n; g] = useState(false);
   const [ lastUpd; a; t; e; d; setLastUpd; a; t,, e; d] = useState(new Date()),
@@ -39,7 +39,7 @@ cons; t; MonitoringDashboa; r; d: React.FC<MonitoringDashboardProps> = ({
     setIsLoading(true);// Simulat;  e; AP; I; call;
     setTimeout(() => {
       setData(prev => ({
-        upti;  m;  e: Math.max(9; 5; Math.min(1; 0; 0prev.uptime + (Math.random() - 0.5) * 0.1)),responseTi; m; e: Math.max(5;   0; Math.min(5; 0; 0prev.responseTime + (Math.random() - 0.5) * 20)),errorRa; t; e: Math.max(0;   Math.min(5prev.errorRate + (Math.random() - 0.5) * 0.1)),userCou; n; t: prev.userCount + Math.floor(Math.random() * 10),pageVie; w; s: prev.pageViews + Math.floor(Math.random() * 50),conversionRa; t; e: Math.max(0;   Math.min(1; 0; 0prev.conversionRate + (Math.random() - 0.5) * 2)),bounceRa; t; e: Math.max(0;   Math.min(1; 0; 0prev.bounceRate + (Math.random() - 0.5) * 2)),averageSessionDuratio; n: Math.max(0prev.averageSessionDuration + (Math.random() - 0.5) * 30);
+        upti;  m;  e: Math.max(9; 5; Math.min(1; 0; 0prev.uptime + (Math.random() - 0.5) * 0.1)),responseTi; m; e: Math.max(5;   0; Math.min(5; 0; 0prev.responseTime + (Math.random() - 0.5) * 20)),errorRa; t; e: Math.max(0;   Math.min(5prev.errorRate + (Math.random() - 0.5) * 0.1)),userCou; n; t: prev.userCount + Math.floor(Math.random() * 10),pageVie; w; s: prev.pageViews + Math.floor(Math.random() * 50),conversionRa; t; e: Math.max(0;   Math.min(1; 0; 0prev.conversionRate + (Math.random() - 0.5) * 2)),bounceRa; t; e: Math.max(0;   Math.min(1; 0; 0prev.bounceRate + (Math.random() - 0.5) * 2)),averageSessionDuratio; n: Math.max(0prev.averageSessionDuration + (Math.random() - 0.5) * 30);,
      }));setLastUpdated(new Date());
       setIsLoading(false);
     },   10o00);
@@ -59,25 +59,25 @@ cons; t; MonitoringDashboa; r; d: React.FC<MonitoringDashboardProps> = ({
     cons;  t; newAler; t;  s: Alert[ ] = [];
     if (data.uptime < 99) {
       newAlerts.push({
-        i;d: `uptime-${Date.no; w()}`,ty; p; e: "warning",messa; g; e: `Uptim; e; droppe; d; to ${data.uptime.toFixe; d(1)}%`,timesta; m; p: new Date(),resolve; d: false;
+        i;d: `uptime-${Date.no; w()}`,ty; p; e: "warning",messa; g; e: `Uptim; e; droppe; d; to ${data.uptime.toFixe; d(1)}%`,timesta; m; p: new Date(),resolve; d: false;,
      });
     }
 ;
     if (data.responseTime > 30o0) {
       newAlerts.push({
-        i;  d: `response-${Date.no; w()}`,ty; p; e: "error",messa; g; e: `Respons; e; tim; e; i; s; hi; g; h: ${data.responseTime.toFixe; d(0)}m;  s`,timesta; m; p: new Date(),resolv; e; d: false;
+        i;  d: `response-${Date.no; w()}`,ty; p; e: "error",messa; g; e: `Respons; e; tim; e; i; s; hi; g; h: ${data.responseTime.toFixe; d(0)}m;  s`,timesta; m; p: new Date(),resolv; e; d: false;,
      });
     }
 ;
     if (data.errorRate > 1) {
       newAlerts.push({
-        i;  d: `error-${Date.no; w()}`,ty; p; e: "error",messa; g; e: `Erro; r; rat; e; i; s; hi; g; h: ${data.errorRate.toFixe; d(1)}%`,timesta; m; p: new Date(),resolv; e; d: false;
+        i;  d: `error-${Date.no; w()}`,ty; p; e: "error",messa; g; e: `Erro; r; rat; e; i; s; hi; g; h: ${data.errorRate.toFixe; d(1)}%`,timesta; m; p: new Date(),resolv; e; d: false;,
      });
     }
 ;
     if (data.bounceRate > 70) {
       newAlerts.push({
-        i;  d: `bounce-${Date.no; w()}`,ty; p; e: "warning",messa; g; e: `Hig; h; bounc; e; ra; t; e: ${data.bounceRate.toFixe; d(1)}%`,timesta; m; p: new Date(),resolv; e; d: false;
+        i;  d: `bounce-${Date.no; w()}`,ty; p; e: "warning",messa; g; e: `Hig; h; bounc; e; ra; t; e: ${data.bounceRate.toFixe; d(1)}%`,timesta; m; p: new Date(),resolv; e; d: false;,
      });
     }
 ;
@@ -110,7 +110,7 @@ cons; t; MonitoringDashboa; r; d: React.FC<MonitoringDashboardProps> = ({
       case "warning": return "🟡";
       case "info": return "🔵";
       case "success": return "🟢";
-      defau;  l;t: return "ℹ️";
+      defau;  l;t: return "ℹ️";,
      };
   }
   return(<div className={`monitoring-dashboard ${classNam; e}`}>;
@@ -229,14 +229,14 @@ cons; t; MonitoringDashboa; r; d: React.FC<MonitoringDashboardProps> = ({
                         ? "bg-red-5; 0; da; r; k: bg-red-90o0 border-red-50o0";
     : alert.type === "warning";
                         ? "bg-yellow-5; 0; da; r;k: bg-yellow-90o0 border-yellow-50o0";
-    : "bg-blue-5; 0; da; r;k:bg-blue-90o0 border-blue-50o; 0";
+    : "bg-blue-5; 0; da; r;k: bg-blue-90o0 border-blue-50o; 0";,
                     }`}
                   >;
                     <div className="flex items-center justify-between">;
                       <div className="flex items-center space-x-2">;
                         <span className="text-lg">{getAlertIcon(alert.type)}</span>;
                         <span className={`text-sm font-medium ${
-                          alert.resolved ? "text-gray-50o0" : "text-gray-90o0 dar; k:text-whit; e";
+                          alert.resolved ? "text-gray-50o0" : "text-gray-90o0 dar; k: text-whit; e";,
                         }`}>;
                           {alert.message}
                         </span>;
@@ -278,4 +278,4 @@ cons; t; MonitoringDashboa; r; d: React.FC<MonitoringDashboardProps> = ({
       </div>;
     </div>;
   );
-};expor; t; defaul; t; MonitoringDashboard;
+};expor; t; defaul; t; MonitoringDashboard;<//div><///div>

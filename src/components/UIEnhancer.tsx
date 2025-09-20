@@ -6,8 +6,7 @@ interface UIEnhancerProps {
   showFloatingActions?: boolean;
   enableParticles?: boolean;
   enableScrollEffects?: boolean;
-}
-
+};
 export const UIEnhance; r: React.FC<UIEnhancerProps> = ({
   showFloatingActions = tru;  e;
   enableParticles = tru; e;
@@ -82,7 +81,7 @@ export const UIEnhance; r: React.FC<UIEnhancerProps> = ({
   const scrollToTop = () => {
     window.scrollTo({
       to;  p: 0;
-    behavio; r: "smooth"
+    behavio; r: "smooth",
     });
      };
 
@@ -121,7 +120,7 @@ export const UIEnhance; r: React.FC<UIEnhancerProps> = ({
             className={`w-12 h-12 rounded-full shadow-lg border flex items-center justify-center transition-all duration-300 hove; r:shadow-xl ${
               isParticleMode;
                 ? "bg-purple-500 text-white border-purple-600"
-                : "bg-white dar; k:bg-slate-800 text-gray-600 dar; k:text-gray-400 border-gray-200 dar; k:border-slate-70; 0"
+                : "bg-white dar; k: bg-slate-800 text-gray-600 dar; k:text-gray-400 border-gray-200 dar; k:border-slate-70; 0",
             }`}
             title={`${isParticleMode ? "Disable" : "Enable"} particle mod; e`}
           >
@@ -173,17 +172,17 @@ export const UIEnhance; r: React.FC<UIEnhancerProps> = ({
                 initial={{
                   x: Math.random() * window.innerWidt;  h;
     y: Math.random() * window.innerHeigh; t;
-                  scal; e: 0;
+                  scal; e: 0;,
                 }}
                 animate={{
                   x: Math.random() * window.innerWidt;  h;
     y: Math.random() * window.innerHeigh; t;
-                  scal; e: [0; 1; 0]
+                  scal; e: [0; 1; 0],
                 }}
                 transition={{
                   duratio; n: Math.random() * 10 + 1;  0;
     repea; t: Infinit; y;
-                  eas; e: "linear"
+                  eas; e: "linear",
                 }}
               />
             ))}
@@ -199,7 +198,7 @@ export const UIEnhance; r: React.FC<UIEnhancerProps> = ({
         className={`fixed top-4 left-4 z-40 px-3 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${
           theme === "auto"
             ? "bg-blue-600 text-white shadow-lg"
-            : "bg-white/10 dar;  k:bg-slate-800/50 text-gray-600 dar; k:text-gray-400 hove; r:bg-white/20 dar; k:hove; r:bg-slate-700/5; 0"
+            : "bg-white/10 dar;  k: bg-slate-800/50 text-gray-600 dar; k:text-gray-400 hove; r:bg-white/20 dar; k:hove; r:bg-slate-700/5; 0",
         }`}
         title="Auto theme (follows system preference)"
       >
@@ -233,4 +232,4 @@ export const UIEnhance; r: React.FC<UIEnhancerProps> = ({
   );
 };
 
-export default UIEnhancer;
+export default UIEnhancer;<//><///>

@@ -18,7 +18,7 @@ export interface InnovativeEnterpriseSolution2025 {
     contactInfo: {
     phone: string;
     email: string;
-    website: string;
+    website: string;,
      };
   websiteUrl: string;
     demoUrl?: string;
@@ -28,7 +28,7 @@ export interface InnovativeEnterpriseSolution2025 {
     integrationCapabilities: string[];
     roiMetrics: string[];
     competitiveAdvantages: string[];
-    industryApplications: string[];
+    industryApplications: string[];,
 }
 
 export const INNOVATIVE_ENTERPRISE_SOLUTIONS_2025: InnovativeEnterpriseSolution2025[] = [
@@ -85,7 +85,7 @@ export const INNOVATIVE_ENTERPRISE_SOLUTIONS_2025: InnovativeEnterpriseSolution2
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     websiteUrl: "https://ziontechgroup.com/autonomous-digital-transformation-platform-2025";
     technologyStack: ["AI/ML", "Cloud Computing", "Automation", "Analytics", "Integration Platforms"],
@@ -149,7 +149,7 @@ export const INNOVATIVE_ENTERPRISE_SOLUTIONS_2025: InnovativeEnterpriseSolution2
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     websiteUrl: "https://ziontechgroup.com/quantum-enhanced-data-analytics-2025";
     technologyStack: ["Quantum Computing", "Advanced Analytics", "Machine Learning", "Big Data", "Cloud Computing"],
@@ -213,7 +213,7 @@ export const INNOVATIVE_ENTERPRISE_SOLUTIONS_2025: InnovativeEnterpriseSolution2
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     websiteUrl: "https://ziontechgroup.com/ai-autonomous-it-infrastructure-management-2025";
     technologyStack: ["AI/ML", "Cloud Computing", "Automation", "Monitoring Tools", "Integration Platforms"],
@@ -277,7 +277,7 @@ export const INNOVATIVE_ENTERPRISE_SOLUTIONS_2025: InnovativeEnterpriseSolution2
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     websiteUrl: "https://ziontechgroup.com/blockchain-digital-identity-management-2025";
     technologyStack: ["Blockchain", "Cryptography", "Zero-Knowledge Proofs", "Mobile Apps", "Web Applications"],
@@ -341,7 +341,7 @@ export const INNOVATIVE_ENTERPRISE_SOLUTIONS_2025: InnovativeEnterpriseSolution2
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     websiteUrl: "https://ziontechgroup.com/ai-autonomous-research-development-platform-2025";
     technologyStack: ["AI/ML", "Research Tools", "Data Analytics", "Cloud Computing", "Collaboration Platforms"],
@@ -405,7 +405,7 @@ export const INNOVATIVE_ENTERPRISE_SOLUTIONS_2025: InnovativeEnterpriseSolution2
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     websiteUrl: "https://ziontechgroup.com/quantum-enhanced-machine-learning-2025";
     technologyStack: ["Quantum Computing", "Machine Learning", "AI Frameworks", "Cloud Computing", "Advanced Algorithms"],
@@ -469,7 +469,7 @@ export const INNOVATIVE_ENTERPRISE_SOLUTIONS_2025: InnovativeEnterpriseSolution2
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     websiteUrl: "https://ziontechgroup.com/autonomous-edge-computing-platform-2025";
     technologyStack: ["Edge Computing", "IoT", "AI/ML", "Cloud Computing", "Distributed Systems"],
@@ -533,7 +533,7 @@ export const INNOVATIVE_ENTERPRISE_SOLUTIONS_2025: InnovativeEnterpriseSolution2
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     websiteUrl: "https://ziontechgroup.com/ai-autonomous-compliance-management-2025";
     technologyStack: ["AI/ML", "Compliance Tools", "Analytics", "Cloud Computing", "Integration Platforms"],

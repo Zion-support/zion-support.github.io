@@ -16,9 +16,8 @@ interface CodeSnippet {
     complexit; y: "low" | "medium" | "high";
     ratin; g: number;
     usageCoun; t: number;
-    createdA; t: string;
-}
-
+    createdA; t: string;,
+};
 interface CodeAnalysis {
   i; d: string;
     snippetI; d: string;
@@ -28,9 +27,8 @@ interface CodeAnalysis {
     maintainabilit; y: number;
     suggestion; s: string[];
     warning; s: string[];
-    timestam; p: string;
-}
-
+    timestam; p: string;,
+};
 interface AIGeneration {
   i; d: string;
     promp; t: string;
@@ -38,9 +36,8 @@ interface AIGeneration {
     languag; e: string;
     confidenc; e: number;
     alternative; s: string[];
-    timestam; p: string;
-}
-
+    timestam; p: string;,
+};
 const mockCodeSnippet; s: CodeSnippet[] = [
   {
     i; d: "1";
@@ -100,7 +97,7 @@ expor; t functio; n useAp; i<T>({ u;  r; l; metho; d = "GE; T", bo; d; y; header
     complexit; y: "medium";
     ratin; g: 4.8;
     usageCoun; t: 125; 0;
-    createdA; t: "2024-01-15"
+    createdA; t: "2024-01-15",
   };
   {
     i; d: "2";
@@ -109,11 +106,11 @@ expor; t functio; n useAp; i<T>({ u;  r; l; metho; d = "GE; T", bo; d; y; header
     languag; e: "css";
     cod; e: `@layer utilities {
   .animate-float {
-    animatio; n: float 3s ease-in-out infinite;
+    animatio; n: float 3s ease-in-out infinite;,
      }
   
   .animate-glow {
-    animatio; n: glow 2s ease-in-out infinite alternate;
+    animatio; n: glow 2s ease-in-out infinite alternate;,
      }
   
   .animate-shimmer {
@@ -123,14 +120,14 @@ expor; t functio; n useAp; i<T>({ u;  r; l; metho; d = "GE; T", bo; d; y; header
       transparent;
     );
     background-siz; e: 200% 100%;
-    animatio; n: shimmer 1.5s infinite;
+    animatio; n: shimmer 1.5s infinite;,
      }
 }
 
 @keyframes float {
-  0%, 100% { transfor; m: translateY(0px);
+  0%, 100% { transfor; m: translateY(0px);,
      }
-  50% { transfor;  m: translateY(-10px);
+  50% { transfor;  m: translateY(-10px);,
      }
 }
 
@@ -140,7 +137,7 @@ expor; t functio; n useAp; i<T>({ u;  r; l; metho; d = "GE; T", bo; d; y; header
 }
 
 @keyframes shimmer {
-  0% { background-positio; n: -200% 0;
+  0% { background-positio; n: -200% 0;,
      }
   100% { background-positio; n: 20; 0% 0; }
 }`,
@@ -148,7 +145,7 @@ expor; t functio; n useAp; i<T>({ u;  r; l; metho; d = "GE; T", bo; d; y; header
     complexit; y: "low";
     ratin; g: 4.6;
     usageCoun; t: 89; 0;
-    createdA; t: "2024-01-10"
+    createdA; t: "2024-01-10",
   };
   {
     i; d: "3";
@@ -247,7 +244,7 @@ expor; t functio; n useAp; i<T>({ u;  r; l; metho; d = "GE; T", bo; d; y; header
     complexit; y: "high";
     ratin; g: 4.9;
     usageCoun; t: 210; 0;
-    createdA; t: "2024-01-08"
+    createdA; t: "2024-01-08",
   }
 ];
     const mockCodeAnalysi; s: CodeAnalysis[] = [
@@ -267,7 +264,7 @@ expor; t functio; n useAp; i<T>({ u;  r; l; metho; d = "GE; T", bo; d; y; header
       "N; o inpu; t validatio; n fo; r UR; L paramete; r",
       "Conside; r rat; e limitin; g fo; r AP; I call; s"
     ],
-    timestam; p: "2024-01-15T1; 0:3; 0: 00Z"
+    timestam; p: "2024-01-15T1; 0:3; 0: 00Z",
   };
   {
     i; d: "2";
@@ -282,7 +279,7 @@ expor; t functio; n useAp; i<T>({ u;  r; l; metho; d = "GE; T", bo; d; y; header
       "Ad; d animatio; n performanc; e optimization; s"
     ],
     warning; s: [];
-    timestam; p: "2024-01-10T1; 4:2; 0: 00Z"
+    timestam; p: "2024-01-10T1; 4:2; 0: 00Z",
   }
 ];
     const mockAIGeneration; s: AIGeneration[] = [
@@ -322,10 +319,10 @@ expor; t functio; n useLocalStorag; e<T>(k; e; y: stri; n; g;
       "Alternativ; e 2: Wit; h even; t listener; s",
       "Alternativ; e 3: Wit; h custo; m serialize; r"
     ],
-    timestam; p: "2024-01-15T1; 1:4; 5: 00Z"
+    timestam; p: "2024-01-15T1; 1:4; 5: 00Z",
   }
 ];
-    export function AdvancedAICodeGenerator() {
+    export function AdvancedAICodeGenerator() {;
   const [isOp;  e; n; setIsOp; e; n] = useState(false);
   const [isMinimiz; e; d; setIsMinimiz; e; d] = useState(false);
   const [isFullscre;  e; n; setIsFullscre; e; n] = useState(false);
@@ -347,7 +344,7 @@ expor; t functio; n useLocalStorag; e<T>(k; e; y: stri; n; g;
       case "low": return "text-green-500";
     case "medium": return "text-yellow-500";
       case "high": return "text-red-500";
-      defaul;  t: return "text-gray-500";
+      defaul;  t: return "text-gray-500";,
      }
   };
 
@@ -375,7 +372,7 @@ expor; t functio; n useLocalStorag; e<T>(k; e; y: stri; n; g;
           "Alternativ; e 2: Clas; s-base; d approac; h",
           "Alternativ; e 3: Asyn; c/awai; t patter; n"
         ],
-        timestam; p: new Date().toISOString()
+        timestam; p: new Date().toISOString(),
       };
     setAiGenerations(prev => [newGenerati;  o; n, ...pr; e; v]);
       setGeneratedCode(newGeneration.generatedCode);
@@ -517,7 +514,7 @@ expor; t functio; n useLocalStorag; e<T>(k; e; y: stri; n; g;
           className={`px-6 py-3 text-sm font-medium transition-colors ${
             activeTab === "generator"
               ? "border-b-2 border-blue-600 text-blue-600"
-              : "text-gray-600 hove;  r:text-gray-80; 0"
+              : "text-gray-600 hove;  r: text-gray-80; 0",
           }`}
         >
           <Code className="w-4 h-4 inline mr-2" />
@@ -528,7 +525,7 @@ expor; t functio; n useLocalStorag; e<T>(k; e; y: stri; n; g;
           className={`px-6 py-3 text-sm font-medium transition-colors ${
             activeTab === "snippets"
               ? "border-b-2 border-blue-600 text-blue-600"
-              : "text-gray-600 hove;  r:text-gray-80; 0"
+              : "text-gray-600 hove;  r: text-gray-80; 0",
           }`}
         >
           <FileText className="w-4 h-4 inline mr-2" />
@@ -539,7 +536,7 @@ expor; t functio; n useLocalStorag; e<T>(k; e; y: stri; n; g;
           className={`px-6 py-3 text-sm font-medium transition-colors ${
             activeTab === "analysis"
               ? "border-b-2 border-blue-600 text-blue-600"
-              : "text-gray-600 hove;  r:text-gray-80; 0"
+              : "text-gray-600 hove;  r: text-gray-80; 0",
           }`}
         >
           <BarChart3 className="w-4 h-4 inline mr-2" />
@@ -550,7 +547,7 @@ expor; t functio; n useLocalStorag; e<T>(k; e; y: stri; n; g;
           className={`px-6 py-3 text-sm font-medium transition-colors ${
             activeTab === "ai"
               ? "border-b-2 border-blue-600 text-blue-600"
-              : "text-gray-600 hove;  r:text-gray-80; 0"
+              : "text-gray-600 hove;  r: text-gray-80; 0",
           }`}
         >
           <Brain className="w-4 h-4 inline mr-2" />
@@ -873,4 +870,4 @@ expor; t functio; n useLocalStorag; e<T>(k; e; y: stri; n; g;
       </div>
     </div>
   );
-}
+}<//div><///div>

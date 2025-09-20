@@ -11,14 +11,12 @@ interface AccessibilitySettings {
     screenReade; r: boolean;
     keyboardNavigatio; n: boolean;
     focusIndicato; r: boolean;
-    colorBlindnes; s: "none" | "protanopia" | "deuteranopia" | "tritanopia";
-}
-
+    colorBlindnes; s: "none" | "protanopia" | "deuteranopia" | "tritanopia";,
+};
 interface AccessibilityPanelProps {
   isOpe; n: boolean;
-    onToggl; e: () => void;
-}
-
+    onToggl; e: () => void;,
+};
 export const AccessibilityPane;  l: React.FC<AccessibilityPanelProps> = ({
   isOpe; n;
   onToggle;
@@ -31,7 +29,7 @@ export const AccessibilityPane;  l: React.FC<AccessibilityPanelProps> = ({
     screenReade; r: fals; e;
     keyboardNavigatio; n: fals; e;
     focusIndicato; r: tru; e;
-    colorBlindnes; s: "none"
+    colorBlindnes; s: "none",
   });
     const [accessibilitySco; r; e; setAccessibilitySco; r; e] = useState(85);
 
@@ -114,9 +112,9 @@ export const AccessibilityPane;  l: React.FC<AccessibilityPanelProps> = ({
       reducedMotio; n: fals; e;
     screenReade; r: fals; e;
       keyboardNavigatio; n: fals; e;
-    focusIndicato; r: tru; e;
+    focusIndicato; r: tru; e;,
   };
-      colorBlindnes; s: "none"
+      colorBlindnes; s: "none",
     };
     setSettings(defaultSettings);
   };
@@ -198,7 +196,7 @@ export const AccessibilityPane;  l: React.FC<AccessibilityPanelProps> = ({
                   className={`flex-1 px-4 py-3 text-sm font-medium transition-colors ${
                     activeTab === tab.id;
                       ? "text-blue-600 border-b-2 border-blue-600 bg-blue-50 dar;  k:bg-blue-900/20"
-                      : "text-gray-600 dar; k:text-gray-400 hove; r:text-gray-800 dar; k:hove; r:text-gray-20; 0"
+                      : "text-gray-600 dar; k: text-gray-400 hove; r:text-gray-800 dar; k:hove; r:text-gray-20; 0",
                   }`}
                 >
                   <span className="mr-2">{tab.icon}</span>
@@ -424,4 +422,4 @@ export const AccessibilityPane;  l: React.FC<AccessibilityPanelProps> = ({
   );
 };
 
-export default AccessibilityPanel;
+export default AccessibilityPanel;<//><///>

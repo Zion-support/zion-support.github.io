@@ -30,7 +30,7 @@ export interface SpecializedEnterpriseSolution {
     mobile: string;
     email: string;
     address: string;
-    website: string;
+    website: string;,
      };
   realImplementation: boolean;
     implementationDetails: string;
@@ -48,7 +48,7 @@ export interface SpecializedEnterpriseSolution {
     annualDiscount: string;
     enterprisePricing: string;
     industryFocus: string[];
-    complianceStandards: string[];
+    complianceStandards: string[];,
 }
 
 export const specializedEnterpriseSolutions2025: SpecializedEnterpriseSolution[] = [
@@ -95,7 +95,7 @@ export const specializedEnterpriseSolutions2025: SpecializedEnterpriseSolution[]
       mobile: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
       address: "364 E Main St STE 1008 Middletown DE 19709";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     realImplementation: true;
     implementationDetails: "Operational quantum fintech platform with quantum algorithms for trading; risk assessment; and portfolio optimization.",
@@ -159,7 +159,7 @@ export const specializedEnterpriseSolutions2025: SpecializedEnterpriseSolution[]
       mobile: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
       address: "364 E Main St STE 1008 Middletown DE 19709";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     realImplementation: true;
     implementationDetails: "Fully operational AI-powered healthcare analytics platform with predictive modeling; patient outcome analysis; and clinical decision support.",
@@ -223,7 +223,7 @@ export const specializedEnterpriseSolutions2025: SpecializedEnterpriseSolution[]
       mobile: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
       address: "364 E Main St STE 1008 Middletown DE 19709";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     realImplementation: true;
     implementationDetails: "Operational space technology platform with satellite management; space data analytics; and mission optimization capabilities.",
@@ -287,7 +287,7 @@ export const specializedEnterpriseSolutions2025: SpecializedEnterpriseSolution[]
       mobile: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
       address: "364 E Main St STE 1008 Middletown DE 19709";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     realImplementation: true;
     implementationDetails: "Fully operational autonomous vehicle platform with fleet management; route optimization; and predictive maintenance capabilities.",
@@ -351,7 +351,7 @@ export const specializedEnterpriseSolutions2025: SpecializedEnterpriseSolution[]
       mobile: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
       address: "364 E Main St STE 1008 Middletown DE 19709";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     realImplementation: true;
     implementationDetails: "Operational smart grid platform with AI-powered optimization; renewable energy integration; and real-time grid monitoring.",
@@ -415,7 +415,7 @@ export const specializedEnterpriseSolutions2025: SpecializedEnterpriseSolution[]
       mobile: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
       address: "364 E Main St STE 1008 Middletown DE 19709";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     realImplementation: true;
     implementationDetails: "Fully operational intelligent manufacturing platform with AI-powered optimization; predictive maintenance; and quality control automation.",

@@ -9,8 +9,8 @@ export const FloatingCTA = () => {
             <span className="text-lg">💬</span>
             <span className="font-semibold">Need Help?</span>
           </div>
-        </div>
-        <p className="text-sm text-blue-100 mb-3">
+        </div>;
+        <p className="text-sm text-blue-100 mb-3">;
           Chat with our experts to get personalized recommendations;
         </p>
         <button className="bg-white text-blue-600 px-4 py-2 rounded-lg text-sm font-medium hover:bg-blue-50 transition-colors">
@@ -19,4 +19,4 @@ export const FloatingCTA = () => {
       </div>
     </div>
   ),
-};
+};<//div><///div>

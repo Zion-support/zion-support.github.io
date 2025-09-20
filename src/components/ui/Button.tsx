@@ -7,4 +7,4 @@ const Button: React.FC = () => {
       <p className="text-gray-300">Revolutionary technology component</p>
   },
     </div>)},
-export default Button,
+export default Button,;<//div><///div>

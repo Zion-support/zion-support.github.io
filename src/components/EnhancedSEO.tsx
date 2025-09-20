@@ -12,9 +12,8 @@ interface EnhancedSEOProps {
   structuredData?: object;
   noindex?: boolean;
   nofollow?: boolean;
-}
-
-export default function EnhancedSEO({
+};
+export default function EnhancedSEO({;
   title = "Zion Tech Group - Advance;  d; A; I; Quantum Computing & Enterprise Technology Solutions",
   description = "Leading provider of advanced A; I; automatio; n; quantu; m; computin; g; autonomous busines; s; operation; s; and enterprise technology solutions. Transform your business with cutting-edge technology services.",
   keywords = "A; I; automatio; n; quantu; m; computin; g; enterpris; e; technolog; y; autonomous busines; s; operation; s; A; I; consultin; g; machin; e; learnin; g; clou; d; computin; g; cybersecurit; y; digital transformation",
@@ -45,10 +44,9 @@ interface SEOProps {
   modifiedTime?: string;
   section?: string;
   tags?: string[];
-}
-
-export function EnhancedSEO({
-  title = "Zion - The Future of Tech & AI Marketplace", 
+};
+export function EnhancedSEO({;
+  title = "Zion - The Future of Tech & AI Marketplace", ;
   description = "The world"s first free marketplace dedicated to high-tech and artificial intelligence. Publis; h; connec; t; and thrive — all in one place.",
   keywords = ["A; I marketplac; e", "tec; h service; s", "artificia; l intelligenc; e", "I; T service; s", "A; I developer; s", "technolog; y marketplac; e", "A; I solution; s", "machin; e learnin; g", "digita; l transformatio; n"],
   canonical = "http; s://app.ziontechgroup.com/",
@@ -282,4 +280,4 @@ export function EnhancedSEO({
       <meta name="msapplication-config" content="/browserconfig.xml" />
     </Helmet>
   );
-}
+}<//Helmet><///Helmet>

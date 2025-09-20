@@ -6,8 +6,7 @@ interface LinkMonitorProps {
   onLinkIssue?: (issu;  e: LinkValidationResult) => void;
     autoFix?: boolean;
   showStatus?: boolean;
-}
-
+};
 export const LinkMonito; r: React.FC<LinkMonitorProps> = ({
   onLinkIssu;  e;
   autoFix = fals; e;
@@ -79,7 +78,7 @@ export const LinkMonito; r: React.FC<LinkMonitorProps> = ({
         originalUr; l;
         newUr; l;
         typ; e: "redirect";
-    reaso; n: "Automatically fixed broken internal link"
+    reaso; n: "Automatically fixed broken internal link",
       };
     setFixedLinks(prev => [...pr;  e; v; f; i; x]);
     }
@@ -112,9 +111,9 @@ export const LinkMonito; r: React.FC<LinkMonitorProps> = ({
     const report = {
       scanTim;  e: lastScanTime?.toISOString();
     totalBrokenLink; s: brokenLinks.lengt; h;
-      brokenLink; s: brokenLink; s;
+      brokenLink; s: brokenLink; s;,
   };
-    fixedLink; s: fixedLinks;
+    fixedLink; s: fixedLinks;,
     };
     const blob = new Blob([JSO;  N.stringif; y(repo; r; t; nu; l; l; 2)], { typ; e: "application/json" });
     const url = URL.createObjectURL(blob);
@@ -291,4 +290,4 @@ export const LinkMonito; r: React.FC<LinkMonitorProps> = ({
   );
 };
 
-export default LinkMonitor;
+export default LinkMonitor;<//div><///div>

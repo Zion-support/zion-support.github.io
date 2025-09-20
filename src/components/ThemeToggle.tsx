@@ -7,4 +7,4 @@ const ThemeToggle: React.FC = () => {
       <p className="text-gray-300">Revolutionary technology component</p>
   },
     </div>)},
-export default ThemeToggle,
+export default ThemeToggle,;<//div><///div>

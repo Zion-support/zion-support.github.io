@@ -18,13 +18,13 @@ export interface InnovativeITInfrastructureService {
     contactInfo: {
     phone: string;
     email: string;
-    website: string;
+    website: string;,
      };
   technology: string[];
     integrations: string[];
     compliance: string[];
     roi: string;
-    competitors: string[];
+    competitors: string[];,
 }
 
 export const INNOVATIVE_IT_INFRASTRUCTURE_SERVICES: InnovativeITInfrastructureService[] = [
@@ -76,7 +76,7 @@ export const INNOVATIVE_IT_INFRASTRUCTURE_SERVICES: InnovativeITInfrastructureSe
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     technology: ["Intel Xeon", "AMD EPYC", "NVIDIA GPUs", "Smart cooling", "Renewable energy systems"],
     integrations: ["AWS", "Azure", "Google Cloud", "VMware", "OpenStack"],
@@ -133,7 +133,7 @@ export const INNOVATIVE_IT_INFRASTRUCTURE_SERVICES: InnovativeITInfrastructureSe
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     technology: ["Kubernetes", "Docker", "Node.js", "Redis", "MQTT", "5G networks"],
     integrations: ["AWS Greengrass", "Azure IoT Edge", "Google Cloud IoT", "IBM Edge Application Manager"],
@@ -190,7 +190,7 @@ export const INNOVATIVE_IT_INFRASTRUCTURE_SERVICES: InnovativeITInfrastructureSe
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     technology: ["Qiskit", "PennyLane", "Cirq", "Classical infrastructure", "Quantum simulators"],
     integrations: ["IBM Quantum", "Google Quantum", "AWS Braket", "Azure Quantum", "D-Wave"],
@@ -247,7 +247,7 @@ export const INNOVATIVE_IT_INFRASTRUCTURE_SERVICES: InnovativeITInfrastructureSe
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     technology: ["Okta", "Palo Alto", "CrowdStrike", "Splunk", "Microsoft Defender"],
     integrations: ["Active Directory", "LDAP", "SAML", "OAuth", "SIEM systems"],
@@ -304,7 +304,7 @@ export const INNOVATIVE_IT_INFRASTRUCTURE_SERVICES: InnovativeITInfrastructureSe
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     };
     technology: ["TensorFlow", "PyTorch", "Kubernetes", "Docker", "Prometheus", "Grafana"],
     integrations: ["AWS", "Azure", "Google Cloud", "VMware", "OpenStack", "Ansible"],

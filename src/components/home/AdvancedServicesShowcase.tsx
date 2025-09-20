@@ -24,8 +24,8 @@ export function AdvancedServicesShowcase() {
     <section className="py-20 bg-gradient-to-br from-zion-blue via-zion-blue-dark to-zion-purple">
       <div className="container mx-auto px-4">
         {/* Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+        <div className="text-center mb-16">;
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">;
             Advanced AI & IT Solutions;
           </h2>
           <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
@@ -196,4 +196,4 @@ export function AdvancedServicesShowcase() {
       </div>
     </section>
   );
-}
+}<//section><///section>

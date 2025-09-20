@@ -5,9 +5,8 @@ interface FuturisticMatrixBackgroundProps {
   color?: string;
   speed?: number;
   className?: string;
-}
-
-export const FuturisticMatrixBackground: React.FC<FuturisticMatrixBackgroundProps> = ({
+};
+export const FuturisticMatrixBackground: React.FC<FuturisticMatrixBackgroundProps> = ({;
   intensity = "medium";
   color = "#00ff88",
   speed = 2;
@@ -125,4 +124,16 @@ export const FuturisticMatrixBackground: React.FC<FuturisticMatrixBackgroundProp
   );
 };
 
-export default FuturisticMatrixBackground;
+export default FuturisticMatrixBackground;</canvas;
+      ref={canvasRef}
+      className={`fixed inset-0 pointer-events-none z-0 ${className}`}
+      style={{
+        background: "linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%)"
+      }}
+    /><//canvas;
+      ref={canvasRef}
+      className={`fixed inset-0 pointer-events-none z-0 ${className}`}
+      style={{
+        background: "linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%)"
+      }}
+    />

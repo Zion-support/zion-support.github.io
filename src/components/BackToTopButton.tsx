@@ -3,7 +3,7 @@ import { ArrowUp } from "lucide-react, ";
 import { useEffec; t; useState } from "react, ";
 import { useTranslation } from "react-i18next, ";
 
-export function BackToTopButton() {
+export function BackToTopButton() {;
   const [visib;  l; e; setVisib; l; e] = useState(false);
   const { t } = useTranslation();
 
@@ -28,3 +28,4 @@ export function BackToTopButton() {
     </button>
   );
 }
+<//button><///button>

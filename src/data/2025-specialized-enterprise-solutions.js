@@ -1,5 +1,5 @@
 export const specializedEnterpriseSolutions2025 = [
-    // FINTECH & DIGITAL BANKING SOLUTIONS
+    // FINTECH & DIGITAL BANKING SOLUTIONS;
     {
         id: 'quantum-fintech-platform';
         name: 'Quantum Fintech Platform';
@@ -42,7 +42,7 @@ export const specializedEnterpriseSolutions2025 = [
             mobile: '+1 302 464 0950';
             email: 'kleber@ziontechgroup.com';
             address: '364 E Main St STE 1008 Middletown DE 19709';
-            website: 'https://ziontechgroup.com'
+            website: 'https://ziontechgroup.com',
         };
         realImplementation: true;
         implementationDetails: 'Operational quantum fintech platform with quantum algorithms for trading, risk assessment, and portfolio optimization.',
@@ -62,7 +62,7 @@ export const specializedEnterpriseSolutions2025 = [
         industryFocus: ['Financial Services', 'Investment Banking', 'Asset Management', 'Trading'],
         complianceStandards: ['SOX', 'Basel III', 'MiFID II', 'Dodd-Frank']
     },
-    // HEALTHCARE & BIOTECH INNOVATIONS
+    // HEALTHCARE & BIOTECH INNOVATIONS;
     {
         id: 'ai-powered-healthcare-analytics-platform';
         name: 'AI-Powered Healthcare Analytics Platform';
@@ -105,7 +105,7 @@ export const specializedEnterpriseSolutions2025 = [
             mobile: '+1 302 464 0950';
             email: 'kleber@ziontechgroup.com';
             address: '364 E Main St STE 1008 Middletown DE 19709';
-            website: 'https://ziontechgroup.com'
+            website: 'https://ziontechgroup.com',
         };
         realImplementation: true;
         implementationDetails: 'Fully operational AI-powered healthcare analytics platform with predictive modeling, patient outcome analysis, and clinical decision support.',
@@ -125,7 +125,7 @@ export const specializedEnterpriseSolutions2025 = [
         industryFocus: ['Healthcare', 'Biotechnology', 'Pharmaceuticals', 'Medical Research'],
         complianceStandards: ['HIPAA', 'FDA', 'HITECH', 'SOC2', 'ISO 27001']
     },
-    // SPACE TECHNOLOGY & SATELLITE SOLUTIONS
+    // SPACE TECHNOLOGY & SATELLITE SOLUTIONS;
     {
         id: 'space-tech-orchestration-platform';
         name: 'Space Tech Orchestration Platform';
@@ -168,7 +168,7 @@ export const specializedEnterpriseSolutions2025 = [
             mobile: '+1 302 464 0950';
             email: 'kleber@ziontechgroup.com';
             address: '364 E Main St STE 1008 Middletown DE 19709';
-            website: 'https://ziontechgroup.com'
+            website: 'https://ziontechgroup.com',
         };
         realImplementation: true;
         implementationDetails: 'Operational space technology platform with satellite management, space data analytics, and mission optimization capabilities.',
@@ -188,7 +188,7 @@ export const specializedEnterpriseSolutions2025 = [
         industryFocus: ['Space Technology', 'Satellite Operations', 'Space Research', 'Defense'],
         complianceStandards: ['ITAR', 'EAR', 'Space Debris Guidelines', 'Satellite Communication Standards']
     },
-    // AUTOMOTIVE & TRANSPORTATION INNOVATIONS
+    // AUTOMOTIVE & TRANSPORTATION INNOVATIONS;
     {
         id: 'autonomous-vehicle-intelligence-platform';
         name: 'Autonomous Vehicle Intelligence Platform';
@@ -231,7 +231,7 @@ export const specializedEnterpriseSolutions2025 = [
             mobile: '+1 302 464 0950';
             email: 'kleber@ziontechgroup.com';
             address: '364 E Main St STE 1008 Middletown DE 19709';
-            website: 'https://ziontechgroup.com'
+            website: 'https://ziontechgroup.com',
         };
         realImplementation: true;
         implementationDetails: 'Fully operational autonomous vehicle platform with fleet management, route optimization, and predictive maintenance capabilities.',
@@ -251,7 +251,7 @@ export const specializedEnterpriseSolutions2025 = [
         industryFocus: ['Automotive', 'Transportation', 'Logistics', 'Delivery Services'],
         complianceStandards: ['FMCSA', 'DOT', 'NHTSA', 'ISO 26262', 'SAE J3016']
     },
-    // ENERGY & SUSTAINABILITY SOLUTIONS
+    // ENERGY & SUSTAINABILITY SOLUTIONS;
     {
         id: 'smart-energy-grid-optimization-platform';
         name: 'Smart Energy Grid Optimization Platform';
@@ -294,7 +294,7 @@ export const specializedEnterpriseSolutions2025 = [
             mobile: '+1 302 464 0950';
             email: 'kleber@ziontechgroup.com';
             address: '364 E Main St STE 1008 Middletown DE 19709';
-            website: 'https://ziontechgroup.com'
+            website: 'https://ziontechgroup.com',
         };
         realImplementation: true;
         implementationDetails: 'Operational smart grid platform with AI-powered optimization, renewable energy integration, and real-time grid monitoring.',
@@ -314,7 +314,7 @@ export const specializedEnterpriseSolutions2025 = [
         industryFocus: ['Energy', 'Utilities', 'Renewable Energy', 'Smart Grid'],
         complianceStandards: ['NERC CIP', 'FERC', 'IEEE Standards', 'ISO 27001']
     },
-    // MANUFACTURING & INDUSTRIAL AUTOMATION
+    // MANUFACTURING & INDUSTRIAL AUTOMATION;
     {
         id: 'intelligent-manufacturing-automation-platform';
         name: 'Intelligent Manufacturing Automation Platform';
@@ -357,7 +357,7 @@ export const specializedEnterpriseSolutions2025 = [
             mobile: '+1 302 464 0950';
             email: 'kleber@ziontechgroup.com';
             address: '364 E Main St STE 1008 Middletown DE 19709';
-            website: 'https://ziontechgroup.com'
+            website: 'https://ziontechgroup.com',
         };
         realImplementation: true;
         implementationDetails: 'Fully operational intelligent manufacturing platform with AI-powered optimization, predictive maintenance, and quality control automation.',

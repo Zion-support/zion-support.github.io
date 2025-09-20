@@ -18,7 +18,7 @@ export interface DevOpsCloudService {
     contactInfo: {
     phone: string;
     email: string;
-    website: string;
+    website: string;,
      };
 }
 
@@ -69,7 +69,7 @@ export const DEVOPS_CLOUD_SERVICES: DevOpsCloudService[] = [
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     }
   };
   // Multi-Cloud Management Platform;
@@ -118,7 +118,7 @@ export const DEVOPS_CLOUD_SERVICES: DevOpsCloudService[] = [
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     }
   };
   // Kubernetes Management Platform;
@@ -167,7 +167,7 @@ export const DEVOPS_CLOUD_SERVICES: DevOpsCloudService[] = [
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     }
   };
   // Observability Platform;
@@ -216,7 +216,7 @@ export const DEVOPS_CLOUD_SERVICES: DevOpsCloudService[] = [
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     }
   };
   // Serverless Development Platform;
@@ -265,7 +265,7 @@ export const DEVOPS_CLOUD_SERVICES: DevOpsCloudService[] = [
     contactInfo: {
       phone: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-      website: "https://ziontechgroup.com"
+      website: "https://ziontechgroup.com",
     }
   }
 ];

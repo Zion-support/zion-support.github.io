@@ -5,9 +5,8 @@ interface ButtonProps {
     onClick?: () => void;
   variant?: "primary" | "secondary";
   disabled?: boolean,
-}
-
-export const OptimizedButton = React.memo<ButtonProps>(({ 
+};
+export const OptimizedButton = React.memo<ButtonProps>(({ ;
   children; 
   onClick; 
   variant = "primary", 
@@ -26,3 +25,4 @@ export const OptimizedButton = React.memo<ButtonProps>(({
 });
 
 OptimizedButton.displayName = "OptimizedButton";
+<//button><///button>

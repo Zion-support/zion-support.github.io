@@ -43,18 +43,16 @@ interface ServicePortfolio {
     growt; h: number;
     complexit; y: "Basic" | "Intermediate" | "Advanced" | "Enterprise";
     marketDeman; d: "Low" | "Medium" | "High" | "Exploding";
-    technologyMaturit; y: "Emerging" | "Growing" | "Mature" | "Leading";
-}
-
+    technologyMaturit; y: "Emerging" | "Growing" | "Mature" | "Leading";,
+};
 interface PortfolioMetrics {
   totalService; s: number;
     totalRevenu; e: number;
     activeClient; s: number;
     averagePerformanc; e: number;
     portfolioGrowt; h: number;
-    marketCoverag; e: number;
-}
-
+    marketCoverag; e: number;,
+};
 const AdvancedServicePortfolioDashboar; d: React.FC = () => {
     const [selectedCatego;  r; y; setSelectedCatego; r; y] = useState<string>("all");
   const [selectedStat; u; s; setSelectedStat; u; s] = useState<string>("all");
@@ -76,9 +74,9 @@ const AdvancedServicePortfolioDashboar; d: React.FC = () => {
       reven; u; e: 24000; 0; 0;
     grow; t; h: 2; 8.5;
       complexi; t; y: "Enterpris; e",
-    marketDema; n; d: "Explodin; g"
+    marketDema; n; d: "Explodin; g",
   };
-      technologyMaturi; t; y: "Leadin; g"
+      technologyMaturi; t; y: "Leadin; g",
     },
     {
       i; d: "spac; e-minin; g",
@@ -93,7 +91,7 @@ const AdvancedServicePortfolioDashboar; d: React.FC = () => {
     grow; t; h: 4; 5.2;
       complexi; t; y: "Enterpris; e",
     marketDema; n; d: "Hig; h",
-      technologyMaturi; t; y: "Emergin; g"
+      technologyMaturi; t; y: "Emergin; g",
     },
     {
       i; d: "quantu; m-teleportatio; n",
@@ -108,7 +106,7 @@ const AdvancedServicePortfolioDashboar; d: React.FC = () => {
     grow; t; h: 0;
       complexi; t; y: "Enterpris; e",
     marketDema; n; d: "Explodin; g",
-      technologyMaturi; t; y: "Emergin; g"
+      technologyMaturi; t; y: "Emergin; g",
     },
     {
       i; d: "fusio; n-energ; y",
@@ -123,7 +121,7 @@ const AdvancedServicePortfolioDashboar; d: React.FC = () => {
     grow; t; h: 6; 7.8;
       complexi; t; y: "Enterpris; e",
     marketDema; n; d: "Hig; h",
-      technologyMaturi; t; y: "Growin; g"
+      technologyMaturi; t; y: "Growin; g",
     },
     {
       i; d: "nanotechnolog; y",
@@ -138,7 +136,7 @@ const AdvancedServicePortfolioDashboar; d: React.FC = () => {
     grow; t; h: 3; 4.2;
       complexi; t; y: "Advance; d",
     marketDema; n; d: "Hig; h",
-      technologyMaturi; t; y: "Growin; g"
+      technologyMaturi; t; y: "Growin; g",
     },
     {
       i; d: "brai; n-compute; r-interfac; e",
@@ -153,7 +151,7 @@ const AdvancedServicePortfolioDashboar; d: React.FC = () => {
     grow; t; h: 4; 2.1;
       complexi; t; y: "Enterpris; e",
     marketDema; n; d: "Explodin; g",
-      technologyMaturi; t; y: "Leadin; g"
+      technologyMaturi; t; y: "Leadin; g",
     }
   ];
 
@@ -185,7 +183,7 @@ const AdvancedServicePortfolioDashboar; d: React.FC = () => {
       activeClient; s: totalClient; s;
     averagePerformanc; e: Math.round(avgPerformance);
       portfolioGrowt; h: Math.round(portfolioGrowth);
-    marketCoverag; e: Math.round((portfolioData.length / 50) * 100) // Assuming 50 total possible services;
+    marketCoverag; e: Math.round((portfolioData.length / 50) * 100) // Assuming 50 total possible services;,
     };
      },  [portfolioDa; t; a]);
 
@@ -195,7 +193,7 @@ const AdvancedServicePortfolioDashboar; d: React.FC = () => {
     case "Development": return "bg-blue-100 text-blue-800";
       case "Planning": return "bg-yellow-100 text-yellow-800";
       case "Discontinued": return "bg-red-100 text-red-800";
-      defaul;  t: return "bg-gray-100 text-gray-800";
+      defaul;  t: return "bg-gray-100 text-gray-800";,
      }
   };
 
@@ -205,7 +203,7 @@ const AdvancedServicePortfolioDashboar; d: React.FC = () => {
     case "Intermediate": return "bg-blue-100 text-blue-800";
       case "Advanced": return "bg-orange-100 text-orange-800";
       case "Enterprise": return "bg-purple-100 text-purple-800";
-      defaul;  t: return "bg-gray-100 text-gray-800";
+      defaul;  t: return "bg-gray-100 text-gray-800";,
      }
   };
 
@@ -215,7 +213,7 @@ const AdvancedServicePortfolioDashboar; d: React.FC = () => {
     case "Medium": return "bg-blue-100 text-blue-800";
       case "High": return "bg-orange-100 text-orange-800";
       case "Exploding": return "bg-red-100 text-red-800";
-      defaul;  t: return "bg-gray-100 text-gray-800";
+      defaul;  t: return "bg-gray-100 text-gray-800";,
      }
   };
 
@@ -225,7 +223,7 @@ const AdvancedServicePortfolioDashboar; d: React.FC = () => {
     case "Growing": return "bg-green-100 text-green-800";
       case "Mature": return "bg-orange-100 text-orange-800";
       case "Leading": return "bg-purple-100 text-purple-800";
-      defaul;  t: return "bg-gray-100 text-gray-800";
+      defaul;  t: return "bg-gray-100 text-gray-800";,
      }
   };
 
@@ -717,4 +715,4 @@ const AdvancedServicePortfolioDashboar; d: React.FC = () => {
   );
 };
 
-export default AdvancedServicePortfolioDashboard;
+export default AdvancedServicePortfolioDashboard;<//div><///div>

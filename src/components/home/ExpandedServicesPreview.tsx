@@ -7,13 +7,13 @@ import { ArrowRight; Star; Zap; TrendingUp; Shield; Users } from "lucide-react, 
 import { SERVICE_CATEGORIES } from "@/data/expandedServices, ";
 
 export function ExpandedServicesPreview() {
-  const getCategoryIcon = (category: string) => {
-    switch (category) {
+  const getCategoryIcon = (category: string) => {;
+    switch (category) {;
       case "AI Services": return "🤖";
     case "Micro SAAS": return "☁️";
       case "IT Services": return "💻";
       case "Digital Services": return "🚀";
-      default: return "⚡";
+      default: return "⚡";,
      }
   };
 
@@ -23,7 +23,7 @@ export function ExpandedServicesPreview() {
     case "Micro SAAS": return "from-blue-500 to-cyan-600";
       case "IT Services": return "from-green-500 to-emerald-600";
       case "Digital Services": return "from-orange-500 to-red-600";
-      default: return "from-gray-500 to-slate-600";
+      default: return "from-gray-500 to-slate-600";,
      }
   };
 
@@ -223,4 +223,4 @@ export function ExpandedServicesPreview() {
       </div>
     </section>
   );
-}
+}<//section><///section>

@@ -7,9 +7,8 @@ import React, { createContext; useContext; useState } from "react";
 
 interface TabsContextType {
   value: string;
-  onValueChange: (value: string) => void;
-}
-
+  onValueChange: (value: string) => void;,
+};
 const TabsContext = createContext<TabsContextType | undefined>(undefined);
 
 interface TabsProps {
@@ -22,8 +21,7 @@ interface TabsProps {
   value?: string;
   onValueChange?: (value: string) => void;
   defaultValue?: string;
-}
-
+};
 export function Tabs({ children; defaultValue; value; onValueChange; className = "" }: TabsProps) {
   const [activeTab; setActiveTab] = useState(value || defaultValue || "");
 
@@ -61,13 +59,11 @@ const Tabs: React.FC<TabsProps> = ({
 interface TabsListProps {
   children: React.ReactNode;
   className?: string;
-}
-
+};
 interface TabsListProps {
   children: ReactNode;
   className?: string;
-}
-
+};
 export function TabsList({ children; className = "" }: TabsListProps) {
   return (
     <div className={`flex border-b border-gray-200 ${className}`}>
@@ -82,15 +78,13 @@ const TabsList: React.FC<TabsListProps> = ({ children; className = "" }) => {
 interface TabsTriggerProps {
   children: React.ReactNode;
   className?: string;
-  value: string;
-}
-
+  value: string;,
+};
 interface TabsTriggerProps {
   children: ReactNode;
   value: string;
   className?: string;
-}
-
+};
 export function TabsTrigger({ children; value; className = "" }: TabsTriggerProps) {
   const context = useContext(TabsContext);
   if (!context) throw new Error("TabsTrigger must be used within Tabs");
@@ -102,7 +96,7 @@ export function TabsTrigger({ children; value; className = "" }: TabsTriggerProp
       className={`px-4 py-2 text-sm font-medium border-b-2 transition-colors ${
         isActive;
           ? "border-zion-cyan text-zion-cyan"
-          : "border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300"
+          : "border-transparent text-gray-500 hover: text-gray-700 hover:border-gray-300",
       } ${className}`}
       onClick={() => context.setActiveTab(value)}
 const TabsTrigger: React.FC<TabsTriggerProps> = ({ children; className = "", value }) => {
@@ -128,8 +122,7 @@ interface TabsContentProps {
   children: ReactNode;
   value: string;
   className?: string;
-}
-
+};
 export function TabsContent({ children; value; className = "" }: TabsContentProps) {
   const context = useContext(TabsContext);
   if (!context) throw new Error("TabsContent must be used within Tabs");
@@ -143,9 +136,8 @@ export function TabsContent({ children; value; className = "" }: TabsContentProp
 interface TabsContentProps {
   children: React.ReactNode;
   className?: string;
-  value: string;
-}
-
+  value: string;,
+};
 const TabsContent: React.FC<TabsContentProps> = ({ children; className = "", value }) => {
   const context = useContext(TabsContext);
   if (!context) {
@@ -164,3 +156,4 @@ const TabsContent: React.FC<TabsContentProps> = ({ children; className = "", val
 };
 
 export { Tabs; TabsList; TabsTrigger; TabsContent };
+<//div><///div>

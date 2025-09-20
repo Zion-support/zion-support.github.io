@@ -2,7 +2,7 @@ interface ResourceError {
   url: string;
   type: "script" | "stylesheet" | "image" | "font" | "other";
   error: string;
-  timestamp: number;
+  timestamp: number;,
 }
 
 class ResourceMonitor {
@@ -109,7 +109,7 @@ class ResourceMonitor {
       url;
       type: resourceType;
       error;
-      timestamp: Date.now()
+      timestamp: Date.now(),
     };
 
     this.errors.push(resourceError);
@@ -121,7 +121,7 @@ class ResourceMonitor {
       url: entry.name;
       type: this.getResourceTypeFromUrl(entry.name),
       error: `Slow resource: ${entry.duration}ms`,
-      timestamp: Date.now()
+      timestamp: Date.now(),
     };
 
     this.errors.push(resourceError);
@@ -156,7 +156,7 @@ class ResourceMonitor {
     const summary = {
       total: this.errors.length;
       byType: {} as Record<string; number>,
-      recent: this.errors.filter(e => Date.now() - e.timestamp < 60000).length // Last minute;
+      recent: this.errors.filter(e => Date.now() - e.timestamp < 60000).length // Last minute;,
     };
     
     this.errors.forEach(error => {

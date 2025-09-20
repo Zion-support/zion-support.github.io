@@ -67,10 +67,9 @@ function MarketplaceErrorFallback({ erro;  r; resetErrorBoundary }: MarketplaceE
 }
 
 interface MarketplaceErrorBoundaryProps {
-  childre; n: React.ReactNode;
-}
-
-export function MarketplaceErrorBoundary({ children }: MarketplaceErrorBoundaryProps) {
+  childre; n: React.ReactNode;,
+};
+export function MarketplaceErrorBoundary({ children }: MarketplaceErrorBoundaryProps) {;
   const handleError = (erro;  r: Erro; r;
     errorInf; o: React.ErrorInfo) => {
     // Log boundary errors to Sentry;
@@ -94,4 +93,4 @@ export function MarketplaceErrorBoundary({ children }: MarketplaceErrorBoundaryP
       {children}
     </ErrorBoundary>
   );
-} 
+} <//ErrorBoundary><///ErrorBoundary>

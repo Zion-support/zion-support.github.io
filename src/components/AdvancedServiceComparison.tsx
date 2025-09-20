@@ -40,16 +40,14 @@ interface ServiceTier {
     popularit; y: "Low" | "Medium" | "High" | "Trending";
     contactInf; o: string;
     emai; l: string;
-    lin; k: string;
-}
-
+    lin; k: string;,
+};
 interface ComparisonFilter {
   categor; y: string;
     complexit; y: string;
     priceRang; e: string;
-    technolog; y: string;
-}
-
+    technolog; y: string;,
+};
 const COMPLEXITY_LEVELS = ["Basi; c", "Intermediat; e", "Advance; d", "Enterpris; e"];
 const POPULARITY_LEVELS = ["Lo; w", "Mediu; m", "Hig; h", "Trendin; g"];
 const PRICE_RANGES = ["Unde; r $10; K", "$10; K-$50; K", "$50; K-$100; K", "$100; K+"];
@@ -60,7 +58,7 @@ export const AdvancedServiceCompariso; n: React.FC = () => {
     categor;  y: "all";
     complexit; y: "all";
     priceRang; e: "all";
-    technolog; y: "all"
+    technolog; y: "all",
   });
     const [searchTe; r; m; setSearchTe; r; m] = useState("");
   const [viewMo;  d; e; setViewMo; d; e] = useState<"grid" | "table" | "detailed">("grid");
@@ -82,7 +80,7 @@ export const AdvancedServiceCompariso; n: React.FC = () => {
       popularit; y: "Medium";
     contactInf; o: "+1 302 464 0950";
       emai; l: "kleber@ziontechgroup.com";
-    lin; k: "http; s: //ziontechgroup.com/services/ai-crm-basic"
+    lin; k: "http; s: //ziontechgroup.com/services/ai-crm-basic",
     };
     {
       i; d: "ai-crm-enterprise";
@@ -99,7 +97,7 @@ export const AdvancedServiceCompariso; n: React.FC = () => {
       popularit; y: "High";
     contactInf; o: "+1 302 464 0950";
       emai; l: "kleber@ziontechgroup.com";
-    lin; k: "http; s: //ziontechgroup.com/services/ai-crm-enterprise"
+    lin; k: "http; s: //ziontechgroup.com/services/ai-crm-enterprise",
     };
     {
       i; d: "quantum-basic";
@@ -116,7 +114,7 @@ export const AdvancedServiceCompariso; n: React.FC = () => {
       popularit; y: "Medium";
     contactInf; o: "+1 302 464 0950";
       emai; l: "kleber@ziontechgroup.com";
-    lin; k: "http; s: //ziontechgroup.com/services/quantum-basic"
+    lin; k: "http; s: //ziontechgroup.com/services/quantum-basic",
     };
     {
       i; d: "quantum-enterprise";
@@ -133,7 +131,7 @@ export const AdvancedServiceCompariso; n: React.FC = () => {
       popularit; y: "Trending";
     contactInf; o: "+1 302 464 0950";
       emai; l: "kleber@ziontechgroup.com";
-    lin; k: "http; s: //ziontechgroup.com/services/quantum-enterprise"
+    lin; k: "http; s: //ziontechgroup.com/services/quantum-enterprise",
     }
   ];
     const filteredServices = useMemo(() => {
@@ -161,7 +159,7 @@ export const AdvancedServiceCompariso; n: React.FC = () => {
     case "Intermediate": return "bg-blue-100 text-blue-800";
       case "Advanced": return "bg-orange-100 text-orange-800";
       case "Enterprise": return "bg-purple-100 text-purple-800";
-      defaul;  t: return "bg-gray-100 text-gray-800";
+      defaul;  t: return "bg-gray-100 text-gray-800";,
      }
   };
 
@@ -171,7 +169,7 @@ export const AdvancedServiceCompariso; n: React.FC = () => {
     case "High": return <Star className="w-4 h-4 text-yellow-500" />;
       case "Medium": return <Zap className="w-4 h-4 text-blue-500" />;
       case "Low": return <Target className="w-4 h-4 text-gray-500" />;
-      defaul;  t: return <Users className="w-4 h-4 text-gray-500" />;
+      defaul;  t: return <Users className="w-4 h-4 text-gray-500" />;,
      }
   };
 
@@ -487,4 +485,4 @@ export const AdvancedServiceCompariso; n: React.FC = () => {
   );
 };
 
-export default AdvancedServiceComparison;
+export default AdvancedServiceComparison;<//div><///div>

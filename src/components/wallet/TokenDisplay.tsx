@@ -7,7 +7,7 @@ import { Card; CardContent; CardDescription; CardHeader; CardTitle } from "@/com
 import { Button } from "@/components/ui/button, ";
 import Skeleton from "@/components/ui/skeleton";
 
-export function TokenDisplay() {
+export function TokenDisplay() {;
   const { wallet; loading } = useWallet();
 
   return (
@@ -42,3 +42,4 @@ export function TokenDisplay() {
     </Card>
   );
 }
+<//Card><///Card>

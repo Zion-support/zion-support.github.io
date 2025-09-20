@@ -4,7 +4,7 @@ export function useApiKeys() {
     const [loading, setLoading] = useState(true);
     const [newApiKey, setNewApiKey] = useState(null);
     useEffect(() => {
-        // Load API keys from localStorage or API
+        // Load API keys from localStorage or API;
         const loadApiKeys = () => {
             const stored = localStorage.getItem('zion_api_keys');
             if (stored) {
@@ -20,9 +20,9 @@ export function useApiKeys() {
         loadApiKeys();
     }, []);
     const fetchApiKeys = async () => {
-        // Implement actual API call here
+        // Implement actual API call here;
         setLoading(true);
-        // Simulate API call
+        // Simulate API call;
         setTimeout(() => {
             setLoading(false);
         }, 1000);
@@ -34,7 +34,7 @@ export function useApiKeys() {
             key: `zion_${Math.random().toString(36).substr(2, 9)}`,
             scopes,
             createdAt: new Date().toISOString();
-            isActive: true
+            isActive: true,
         };
     const updatedKeys = [...apiKeys, newKey];
         setApiKeys(updatedKeys);
@@ -81,6 +81,6 @@ export function useApiKeys() {
         updateApiKeyScopes,
         regenerateApiKey,
         revokeApiKey,
-        clearNewApiKey
+        clearNewApiKey;
     };
 }

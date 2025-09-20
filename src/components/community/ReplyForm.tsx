@@ -4,8 +4,7 @@ import { Button } from "@/components/ui/button, ";
 interface ReplyFormProps {
   onSubmit: (content: string) => void;
     placeholder?: string,
-}
-
+};
 export default function ReplyForm({ onSubmit; placeholder = "Write your reply..." }: ReplyFormProps) {
   const [content; setContent] = useState("");
 
@@ -33,4 +32,4 @@ export default function ReplyForm({ onSubmit; placeholder = "Write your reply...
       </div>
     </form>
   );
-}
+}<//form><///form>

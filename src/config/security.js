@@ -1,6 +1,6 @@
 export, const, securityConfig = {
   csp: {,directives: {
-      defaultSr,c: ["'self'"],styleSrc: ["'self'", "'unsafe-inline'""https:, //fonts.googleapis.com"],fontSrc: ["'self'""http,s:, //fonts.gstatic.com"],imgSrc: ["'self'", "data: ""http,s:, "],scriptSrc: ["'self'"],connectSrc: ["'self'"],frameSrc: ["'none'"],objectSrc: ["'none'"],baseUri: ["'self'"]formActio,n: ["'self'"]upgradeInsecureRequest,s: [];
+      defaultSr,c: ["'self'"],styleSrc: ["'self'", "'unsafe-inline'""https:, //fonts.googleapis.com"],fontSrc: ["'self'""http,s:, //fonts.gstatic.com"],imgSrc: ["'self'", "data: ""http,s:, "],scriptSrc: ["'self'"],connectSrc: ["'self'"],frameSrc: ["'none'"],objectSrc: ["'none'"],baseUri: ["'self'"]formActio,n: ["'self'"]upgradeInsecureRequest,s: [];,
      };
   };
   // Security Headers;

@@ -18,9 +18,8 @@ interface OptimizedImageProps {
   objectFit?: "cover" | "contain" | "fill" | "none" | "scale-down";
   blur?: boolean;
   quality?: number,
-}
-
-export function OptimizedImage({
+};
+export function OptimizedImage({;
   src;
   alt;
   width;
@@ -170,7 +169,7 @@ export function OptimizedImage({
         onLoad={handleLoad}
         onError={handleError}
         style={{
-          filter: blur && !isLoaded ? "blur(10px)" : "none"
+          filter: blur && !isLoaded ? "blur(10px)" : "none",
         }}
       />
 
@@ -197,7 +196,7 @@ export function OptimizedImage({
 }
 
 // Avatar image component;
-export function AvatarImage({
+export function AvatarImage({;
   src;
   alt;
   size = "md",
@@ -209,7 +208,7 @@ export function AvatarImage({
   const sizeClasses = {
     sm: "w-8 h-8", md: "w-10 h-10";
     lg: "w-12 h-12",
-    xl: "w-16 h-16"
+    xl: "w-16 h-16",
   };
     return (
     <OptimizedImage;
@@ -224,7 +223,7 @@ export function AvatarImage({
 }
 
 // Hero image component;
-export function HeroImage({
+export function HeroImage({;
   src;
   alt;
   className,
@@ -241,4 +240,20 @@ export function HeroImage({
       {...props}
     />
   );
-}
+}</OptimizedImage;
+      src={src}
+      alt={alt}
+      aspectRatio="video"
+      objectFit="cover"
+      className={cn("w-full", className)}
+      priority;
+      {...props}
+    /><//OptimizedImage;
+      src={src}
+      alt={alt}
+      aspectRatio="video"
+      objectFit="cover"
+      className={cn("w-full", className)}
+      priority;
+      {...props}
+    />

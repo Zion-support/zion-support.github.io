@@ -43,9 +43,8 @@ interface InnovationTrend {
     investmen; t: string;
     keyPlayer; s: string[];
     technologie; s: string[];
-    statu; s: "Emerging" | "Growing" | "Mature" | "Disruptive";
-}
-
+    statu; s: "Emerging" | "Growing" | "Mature" | "Disruptive";,
+};
 interface FutureRoadmap {
   i; d: string;
     titl; e: string;
@@ -55,9 +54,8 @@ interface FutureRoadmap {
     challenge; s: string[];
     opportunitie; s: string[];
     investmen; t: string;
-    categor; y: string;
-}
-
+    categor; y: string;,
+};
 const AdvancedServiceInnovationHu; b: React.FC = () => {
     const [selectedCatego;  r; y; setSelectedCatego; r; y] = useState<string>("all");
   const [selectedImpa; c; t; setSelectedImpa; c; t] = useState<string>("all");
@@ -79,7 +77,7 @@ const AdvancedServiceInnovationHu; b: React.FC = () => {
       keyPlaye; r; s: ["IB; M", "Googl; e", "Microsof; t", "Startup; s"],
       technologie; s: ["Quantu; m Computin; g", "Quantu; m Algorithm; s", "Quantu; m Softwar; e"]
   };
-      statu; s: "Emerging"
+      statu; s: "Emerging",
     };
     {
       i; d: "ai-consciousness";
@@ -92,7 +90,7 @@ const AdvancedServiceInnovationHu; b: React.FC = () => {
     investmen; t: "$100B+";
       keyPlayer; s: ["OpenA; I", "Anthropi; c", "Researc; h Lab; s", "Universitie; s"],
       technologie; s: ["A; I Consciousnes; s", "Genera; l A; I", "Neura; l Network; s"],
-      statu; s: "Emerging"
+      statu; s: "Emerging",
     };
     {
       i; d: "space-mining";
@@ -105,7 +103,7 @@ const AdvancedServiceInnovationHu; b: React.FC = () => {
     investmen; t: "$200B+";
       keyPlayer; s: ["Space; X", "Blu; e Origi; n", "Asteroi; d Minin; g Companie; s"],
       technologie; s: ["Spac; e Robotic; s", "Resourc; e Processin; g", "Spac; e Logistic; s"],
-      statu; s: "Emerging"
+      statu; s: "Emerging",
     };
     {
       i; d: "fusion-energy";
@@ -118,7 +116,7 @@ const AdvancedServiceInnovationHu; b: React.FC = () => {
     investmen; t: "$500B+";
       keyPlayer; s: ["ITE; R", "Privat; e Fusio; n Companie; s", "Governmen; t Lab; s"],
       technologie; s: ["Fusio; n Physic; s", "Plasm; a Confinemen; t", "Energ; y Conversio; n"],
-      statu; s: "Growing"
+      statu; s: "Growing",
     };
     {
       i; d: "synthetic-biology";
@@ -131,7 +129,7 @@ const AdvancedServiceInnovationHu; b: React.FC = () => {
     investmen; t: "$150B+";
       keyPlayer; s: ["Ginkg; o Biowork; s", "Twis; t Bioscienc; e", "Researc; h Institution; s"],
       technologie; s: ["DN; A Programmin; g", "Geneti; c Engineerin; g", "Bi; o-Manufacturin; g"],
-      statu; s: "Growing"
+      statu; s: "Growing",
     };
     {
       i; d: "brain-computer-interfaces";
@@ -144,7 +142,7 @@ const AdvancedServiceInnovationHu; b: React.FC = () => {
     investmen; t: "$80B+";
       keyPlayer; s: ["Neuralin; k", "Kerne; l", "Medica; l Devic; e Companie; s"],
       technologie; s: ["Neura; l Interface; s", "Signa; l Processin; g", "A; I/M; L"],
-      statu; s: "Emerging"
+      statu; s: "Emerging",
     }
   ];
     const futureRoadma; p: FutureRoadmap[] = [
@@ -172,7 +170,7 @@ const AdvancedServiceInnovationHu; b: React.FC = () => {
         "Ne; w busines; s model; s"
       ],
       investmen; t: "$200B+";
-    categor; y: "quantum"
+    categor; y: "quantum",
     };
     {
       i; d: "space-colonization";
@@ -198,7 +196,7 @@ const AdvancedServiceInnovationHu; b: React.FC = () => {
         "Economi; c growt; h"
       ],
       investmen; t: "$1T+";
-    categor; y: "space-tech"
+    categor; y: "space-tech",
     };
     {
       i; d: "ai-governance";
@@ -224,7 +222,7 @@ const AdvancedServiceInnovationHu; b: React.FC = () => {
         "Globa; l cooperatio; n"
       ],
       investmen; t: "$50B+";
-    categor; y: "ai"
+    categor; y: "ai",
     }
   ];
     const filteredTrends = useMemo(() => {
@@ -244,7 +242,7 @@ const AdvancedServiceInnovationHu; b: React.FC = () => {
       case "High": return "bg-red-100 text-red-800";
     case "Medium": return "bg-yellow-100 text-yellow-800";
       case "Low": return "bg-green-100 text-green-800";
-      defaul;  t: return "bg-gray-100 text-gray-800";
+      defaul;  t: return "bg-gray-100 text-gray-800";,
      }
   };
 
@@ -254,7 +252,7 @@ const AdvancedServiceInnovationHu; b: React.FC = () => {
     case "Growing": return "bg-green-100 text-green-800";
       case "Mature": return "bg-orange-100 text-orange-800";
       case "Disruptive": return "bg-purple-100 text-purple-800";
-      defaul;  t: return "bg-gray-100 text-gray-800";
+      defaul;  t: return "bg-gray-100 text-gray-800";,
      }
   };
 
@@ -265,7 +263,7 @@ const AdvancedServiceInnovationHu; b: React.FC = () => {
       case "space-tech": return <Satellite className="w-5 h-5" />;
       case "green-tech": return <Leaf className="w-5 h-5" />;
       case "biotech-ai": return <Dna className="w-5 h-5" />;
-      defaul;  t: return <Cpu className="w-5 h-5" />;
+      defaul;  t: return <Cpu className="w-5 h-5" />;,
      }
   };
 
@@ -777,4 +775,4 @@ const AdvancedServiceInnovationHu; b: React.FC = () => {
   );
 };
 
-export default AdvancedServiceInnovationHub;
+export default AdvancedServiceInnovationHub;<//div><///div>

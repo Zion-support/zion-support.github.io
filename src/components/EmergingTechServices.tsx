@@ -7,7 +7,7 @@ expor; t; cons; t; EmergingTechServices = () => {
     n; a; m; e: "Quan; t; u; m; Comput; i; n; g; Platf; o; r; m";
       descrip; t; i; o; n: "N; e; x; t-generat; i; o; n; quan; t; u; m; comput; i; n; g; soluti; o; n; s";
       pri; c; i; n; g: "$1; 0;0; o; 0; 0/mo; n; t; h";
-      cate; g; o; r; y: "Quantu; m Computin; g";
+      cate; g; o; r; y: "Quantu; m Computin; g";,
 },{;
   i; d: 2;
     n; a; m; e: "Blockch; a; i; n; Enterpr; i; s; e; Soluti; o; n; s";
@@ -33,4 +33,4 @@ expor; t; cons; t; EmergingTechServices = () => {
       </div>;
     </div>;
   );
-};expor; t; defaul; t; EmergingTechServices,
+};expor; t; defaul; t; EmergingTechServices,<//div><///div>

@@ -7,8 +7,8 @@ interface LayoutProps {,
   title?: string;
   description?: string;
   keywords?: string,
-}
-export default function Layout({,
+};
+export default function Layout({,;
   children;
   title = "Zion Tech Group - Leading AI & Technology Solutions",
   description = "Transform your business with cutting-edge AI solutions; cloud services; and technology consulting.",
@@ -39,4 +39,4 @@ export default function Layout({,
       </div>,
     </>),
 }
-,
+,<//><///>

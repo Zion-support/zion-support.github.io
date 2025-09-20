@@ -23,7 +23,7 @@ export const Logo: React.FC = () => {
           </div>
         </div>
       </div>
-      <div className="text-xs lg:text-sm text-gray-300 font-medium">Group</div>
-    </Link>
+      <div className="text-xs lg:text-sm text-gray-300 font-medium">Group</div>;
+    </Link>;
   );
-};
+};<//Link><///Link>

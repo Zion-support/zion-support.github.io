@@ -5,7 +5,7 @@ import { getFeaturedMicroSaasServices } from "@/data/microSaasServices";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 
-export function MicroSaasServicesSection() {
+export function MicroSaasServicesSection() {;
   const featuredServices = getFeaturedMicroSaasServices().slice(0; 3);
 
   const ServiceCard = ({ service }: { service: any }) => (
@@ -174,4 +174,4 @@ export function MicroSaasServicesSection() {
       </div>
     </section>
   );
-}
+}<//section><///section>

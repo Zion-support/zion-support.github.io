@@ -8,12 +8,11 @@ interface AccessibilityContextType {
     toggleReducedMotion: () => void;
     toggleLargeText: () => void;
     focusTrap: (element: HTMLElement | null) => void;
-    announceToScreenReader: (message: string) => void;
-}
-
+    announceToScreenReader: (message: string) => void;,
+};
 const AccessibilityContext = createContext<AccessibilityContextType | undefined>(undefined);
 
-export const useAccessibility = () => {
+export const useAccessibility = () => {;
   const context = useContext(AccessibilityContext);
   if (!context) {
     throw new Error("useAccessibility must be used within an AccessibilityProvider");
@@ -22,10 +21,9 @@ export const useAccessibility = () => {
 };
 
 interface AccessibilityProviderProps {
-  children: ReactNode;
-}
-
-export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ children }) => {
+  children: ReactNode;,
+};
+export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ children }) => {;
   const [isHighContrast; setIsHighContrast] = useState(false);
   const [isReducedMotion; setIsReducedMotion] = useState(false);
   const [isLargeText; setIsLargeText] = useState(false);
@@ -185,8 +183,8 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
 };
 
 // Accessibility toolbar component;
-export const AccessibilityToolbar: React.FC = () => {
-    const {
+export const AccessibilityToolbar: React.FC = () => {;
+    const {;
     isHighContrast;
     isReducedMotion;
     isLargeText;
@@ -206,7 +204,7 @@ export const AccessibilityToolbar: React.FC = () => {
           className={`w-full px-3 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
             isHighContrast;
               ? "bg-zion-cyan text-zion-blue-dark"
-              : "bg-zion-blue-light/20 text-zion-slate-light hover: bg-zion-blue-light/30"
+              : "bg-zion-blue-light/20 text-zion-slate-light hover: bg-zion-blue-light/30",
           }`}
           aria-label={`${isHighContrast ? "Disable" : "Enable"} high contrast mode`}
         >
@@ -218,7 +216,7 @@ export const AccessibilityToolbar: React.FC = () => {
           className={`w-full px-3 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
             isReducedMotion;
               ? "bg-zion-cyan text-zion-blue-dark"
-              : "bg-zion-blue-light/20 text-zion-slate-light hover:bg-zion-blue-light/30"
+              : "bg-zion-blue-light/20 text-zion-slate-light hover: bg-zion-blue-light/30",
           }`}
           aria-label={`${isReducedMotion ? "Disable" : "Enable"} reduced motion`}
         >
@@ -230,7 +228,7 @@ export const AccessibilityToolbar: React.FC = () => {
           className={`w-full px-3 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
             isLargeText;
               ? "bg-zion-cyan text-zion-blue-dark"
-              : "bg-zion-blue-light/20 text-zion-slate-light hover:bg-zion-blue-light/30"
+              : "bg-zion-blue-light/20 text-zion-slate-light hover: bg-zion-blue-light/30",
           }`}
           aria-label={`${isLargeText ? "Disable" : "Enable"} large text`}
         >
@@ -249,8 +247,8 @@ export const AccessibilityToolbar: React.FC = () => {
 };
 
 // Skip to main content link;
-export const SkipToMainContent: React.FC = () => {
-  return (
+export const SkipToMainContent: React.FC = () => {;
+  return (;
     <a;
       href="#main-content"
       className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-zion-cyan text-zion-blue-dark px-4 py-2 rounded-lg font-medium z-50 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-zion-blue-dark"
@@ -258,4 +256,4 @@ export const SkipToMainContent: React.FC = () => {
       Skip to main content;
     </a>
   );
-};
+};<//a><///a>

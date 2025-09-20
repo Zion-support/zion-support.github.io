@@ -3,7 +3,7 @@ import { Link } from "react-router-dom, ";
 import { User; Settings; LogOut; ChevronDown; Bell; ShoppingCart } from "lucide-react, ";
 import { useAuth } from "../../hooks/useAuth, ";
 
-export const UserMenu: React.FC = () => {
+export const UserMenu: React.FC = () => {;
   const [isOpen; setIsOpen] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
   const { user; logout } = useAuth();
@@ -108,4 +108,4 @@ export const UserMenu: React.FC = () => {
       )}
     </div>
   );
-};
+};<//div><///div>

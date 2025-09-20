@@ -1,5 +1,5 @@
 export const INDUSTRY_SPECIFIC_SERVICES = [
-    // Healthcare Industry Services
+    // Healthcare Industry Services;
     {
         id: "healthcare-ai-diagnostic-suite";
         title: "Healthcare AI Diagnostic Suite";
@@ -49,7 +49,7 @@ export const INDUSTRY_SPECIFIC_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         };
         websiteUrl: "https://ziontechgroup.com/healthcare-ai-diagnostics";
         industryStandards: ["DICOM", "HL7 FHIR", "IHE", "SNOMED CT", "LOINC"],
@@ -57,7 +57,7 @@ export const INDUSTRY_SPECIFIC_SERVICES = [
         integrationPartners: ["Epic", "Cerner", "Allscripts", "Athenahealth", "Practice Fusion"],
         caseStudies: ["Major Hospital Network", "Radiology Practice", "Primary Care Group"]
     },
-    // Financial Services Industry
+    // Financial Services Industry;
     {
         id: "financial-ai-risk-management";
         title: "Financial AI Risk Management Platform";
@@ -107,7 +107,7 @@ export const INDUSTRY_SPECIFIC_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         };
         websiteUrl: "https://ziontechgroup.com/financial-ai-risk-management";
         industryStandards: ["Basel III", "Solvency II", "IFRS 9", "CCAR", "Dodd-Frank"],
@@ -115,7 +115,7 @@ export const INDUSTRY_SPECIFIC_SERVICES = [
         integrationPartners: ["Bloomberg", "Reuters", "FactSet", "Moody's", "S&P Global"],
         caseStudies: ["Major Bank", "Investment Firm", "Insurance Company"]
     },
-    // Manufacturing Industry Services
+    // Manufacturing Industry Services;
     {
         id: "manufacturing-ai-optimization";
         title: "Manufacturing AI Optimization Platform";
@@ -165,7 +165,7 @@ export const INDUSTRY_SPECIFIC_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         };
         websiteUrl: "https://ziontechgroup.com/manufacturing-ai-optimization";
         industryStandards: ["ISO 9001", "ISO 14001", "ISO 45001", "Six Sigma", "Lean Manufacturing"],
@@ -173,7 +173,7 @@ export const INDUSTRY_SPECIFIC_SERVICES = [
         integrationPartners: ["SAP", "Oracle", "Siemens", "Rockwell Automation", "ABB"],
         caseStudies: ["Automotive Manufacturer", "Electronics Producer", "Chemical Plant"]
     },
-    // Retail Industry Services
+    // Retail Industry Services;
     {
         id: "retail-ai-customer-intelligence";
         title: "Retail AI Customer Intelligence Platform";
@@ -223,7 +223,7 @@ export const INDUSTRY_SPECIFIC_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         };
         websiteUrl: "https://ziontechgroup.com/retail-ai-customer-intelligence";
         industryStandards: ["PCI DSS", "GDPR", "CCPA", "SOC2", "ISO 27001"],
@@ -231,7 +231,7 @@ export const INDUSTRY_SPECIFIC_SERVICES = [
         integrationPartners: ["Shopify", "WooCommerce", "Magento", "Salesforce", "HubSpot"],
         caseStudies: ["E-commerce Platform", "Fashion Retailer", "Electronics Store"]
     },
-    // Education Industry Services
+    // Education Industry Services;
     {
         id: "education-ai-learning-platform";
         title: "Education AI Learning Platform";
@@ -281,7 +281,7 @@ export const INDUSTRY_SPECIFIC_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         };
         websiteUrl: "https://ziontechgroup.com/education-ai-learning";
         industryStandards: ["SCORM", "xAPI", "LTI", "Common Core", "FERPA"],
@@ -289,7 +289,7 @@ export const INDUSTRY_SPECIFIC_SERVICES = [
         integrationPartners: ["Canvas", "Blackboard", "Moodle", "Google Classroom", "Microsoft Teams"],
         caseStudies: ["University System", "K-12 District", "Corporate Training"]
     },
-    // Transportation & Logistics Services
+    // Transportation & Logistics Services;
     {
         id: "transportation-ai-logistics-optimization";
         title: "Transportation AI Logistics Optimization Platform";
@@ -339,7 +339,7 @@ export const INDUSTRY_SPECIFIC_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         };
         websiteUrl: "https://ziontechgroup.com/transportation-ai-logistics";
         industryStandards: ["ISO 28000", "C-TPAT", "HACCP", "DOT", "FMCSA"],
@@ -347,7 +347,7 @@ export const INDUSTRY_SPECIFIC_SERVICES = [
         integrationPartners: ["SAP", "Oracle", "Manhattan Associates", "JDA Software", "Blue Yonder"],
         caseStudies: ["Major Trucking Company", "E-commerce Logistics", "Warehouse Operator"]
     },
-    // Energy Industry Services
+    // Energy Industry Services;
     {
         id: "energy-ai-grid-optimization";
         title: "Energy AI Grid Optimization Platform";
@@ -397,7 +397,7 @@ export const INDUSTRY_SPECIFIC_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         };
         websiteUrl: "https://ziontechgroup.com/energy-ai-grid-optimization";
         industryStandards: ["IEEE", "IEC", "NERC", "FERC", "ISO 50001"],
@@ -405,7 +405,7 @@ export const INDUSTRY_SPECIFIC_SERVICES = [
         integrationPartners: ["Siemens", "GE", "ABB", "Schneider Electric", "Honeywell"],
         caseStudies: ["Major Utility", "Grid Operator", "Renewable Energy Provider"]
     },
-    // Real Estate Industry Services
+    // Real Estate Industry Services;
     {
         id: "real-estate-ai-market-intelligence";
         title: "Real Estate AI Market Intelligence Platform";
@@ -455,7 +455,7 @@ export const INDUSTRY_SPECIFIC_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         };
         websiteUrl: "https://ziontechgroup.com/real-estate-ai-market-intelligence";
         industryStandards: ["RICS", "CREA", "NAR", "REIT", "MLS"],
@@ -463,7 +463,7 @@ export const INDUSTRY_SPECIFIC_SERVICES = [
         integrationPartners: ["Zillow", "Redfin", "Realtor.com", "CoStar", "Real Capital Analytics"],
         caseStudies: ["Real Estate Investment Firm", "Property Developer", "Real Estate Agency"]
     },
-    // Agriculture Industry Services
+    // Agriculture Industry Services;
     {
         id: "agriculture-ai-precision-farming";
         title: "Agriculture AI Precision Farming Platform";
@@ -513,7 +513,7 @@ export const INDUSTRY_SPECIFIC_SERVICES = [
         contactInfo: {
             phone: "+1 302 464 0950";
             email: "kleber@ziontechgroup.com";
-            website: "https://ziontechgroup.com"
+            website: "https://ziontechgroup.com",
         };
         websiteUrl: "https://ziontechgroup.com/agriculture-ai-precision-farming";
         industryStandards: ["ISO 14001", "Global GAP", "Organic Certification", "Precision Agriculture", "Sustainable Farming"],

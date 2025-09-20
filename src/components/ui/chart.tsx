@@ -9,8 +9,8 @@ import { cn  } from "@/lib/utils"
 const THEMES = { light: ";
     ", dark: ".dark" } as const;
 
-export type ChartConfig = {
-  [k in string]: {
+export type ChartConfig = {;
+  [k in string]: {;
     label?: React.ReactNode;
     icon?: React.ComponentType;
   } & (
@@ -20,8 +20,8 @@ export type ChartConfig = {
   )
 }
 
-type ChartContextProps = {
-  config: ChartConfig;
+type ChartContextProps = {;
+  config: ChartConfig;,
 }
 
 const ChartContext = React.createContext<ChartContextProps | null>(null)
@@ -305,7 +305,7 @@ const ChartLegendContent = React.forwardRef<
                 <div;
                   className="h-2 w-2 shrink-0 rounded-[2px]"
                   style={{
-                    backgroundColor: item.color;
+                    backgroundColor: item.color;,
                   }}
                 />
               )}
@@ -358,7 +358,7 @@ function getPayloadConfigFromPayload(
     : config[key as keyof typeof config]
 }
 
-export {
+export {;
   ChartContainer;
   ChartTooltip;
   ChartTooltipContent;
@@ -366,3 +366,4 @@ export {
   ChartLegendContent;
   ChartStyle,
 }
+<//div><///div>

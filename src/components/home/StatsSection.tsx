@@ -7,4 +7,4 @@ const StatsSection: React.FC = () => {
       <p className="text-gray-300">Revolutionary technology component</p>
   },
     </div>)},
-export default StatsSection,
+export default StatsSection,;<//div><///div>
