@@ -2,167 +2,59 @@
 
 const fs = require('fs');
 const path = require('path');
-const { execSync } = require('child_process');
+const glob = require('glob');
 
-console.log('🔧 Fixing all remaining syntax errors...');
+console.log('🔧 Fixing all remaining syntax issues...');
 
-// Function to fix all syntax errors in a file
-function fixAllSyntaxErrors(content, filePath) {
-  let fixed = content;
-  let hasChanges = false;
+// Fix export statements with commas
+const exportCommaFiles = [
+  'app/tools/ai-transformation-roi-calculator-2025/page.tsx',
+  'app/tools/ai-2026-roi-calculator/page.tsx'
+];
 
-  // Fix missing semicolon after array closing bracket before useEffect
-  fixed = fixed.replace(/\]\);?\s*useEffect/g, (match) => {
-    hasChanges = true;
-    return ']);\n\n  useEffect';
-  });
-
-  // Fix missing semicolon after array closing bracket before const
-  fixed = fixed.replace(/\]\);?\s*const /g, (match) => {
-    hasChanges = true;
-    return ']);\n\n  const ';
-  });
-
-  // Fix missing semicolon after object closing bracket before const
-  fixed = fixed.replace(/}\);?\s*const /g, (match) => {
-    hasChanges = true;
-    return '});\n\n  const ';
-  });
-
-  // Fix missing semicolon after object closing bracket before function calls
-  fixed = fixed.replace(/}\);?\s*([a-zA-Z_][a-zA-Z0-9_]*)\(/g, (match, funcName) => {
-    hasChanges = true;
-    return `});\n\n    ${funcName}(`;
-  });
-
-  // Fix semicolon instead of comma in switch cases
-  fixed = fixed.replace(/case '([^']+)': return ([^,;]+),/g, (match, caseValue, returnValue) => {
-    hasChanges = true;
-    return `case '${caseValue}': return ${returnValue};`;
-  });
-
-  // Fix comma instead of semicolon at end of function return
-  fixed = fixed.replace(/return ([^;]+),\s*}/g, (match, returnValue) => {
-    hasChanges = true;
-    return `return ${returnValue};\n  }`;
-  });
-
-  // Fix comma instead of semicolon in object method closing
-  fixed = fixed.replace(/\),\s*};/g, (match) => {
-    hasChanges = true;
-    return ');\n  };';
-  });
-
-  // Fix TypeScript function syntax
-  fixed = fixed.replace(/\(\) : any =>/g, (match) => {
-    hasChanges = true;
-    return '() =>';
-  });
-
-  fixed = fixed.replace(/\(([^)]+) : any =>/g, (match, params) => {
-    hasChanges = true;
-    return `(${params} =>`;
-  });
-
-  // Fix unterminated string at end of export
-  fixed = fixed.replace(/export default (\w+);?'/g, (match, componentName) => {
-    hasChanges = true;
-    return `export default ${componentName};`;
-  });
-
-  // Fix trailing comma in return statement
-  fixed = fixed.replace(/\),\s*};?\s*$/gm, (match) => {
-    hasChanges = true;
-    return ');\n};';
-  });
-
-  return { content: fixed, hasChanges };
-}
-
-// Function to process all TypeScript/JavaScript files
-function processAllFiles(dir) {
-  const files = [];
-  
-  function traverse(currentDir) {
+exportCommaFiles.forEach(file => {
+  const filePath = path.join(process.cwd(), file);
+  if (fs.existsSync(filePath)) {
     try {
-      const items = fs.readdirSync(currentDir);
+      let content = fs.readFileSync(filePath, 'utf8');
+      content = content.replace(/export default page,/g, 'export default page;');
+      fs.writeFileSync(filePath, content, 'utf8');
+      console.log(`✅ Fixed export in ${file}`);
+    } catch (error) {
+      console.error(`❌ Error fixing ${file}:`, error.message);
+    }
+  }
+});
+
+// Fix array semicolon issues - more comprehensive approach
+const arrayFiles = [
+  'app/components/InteractiveFeatureShowcase.tsx',
+  'app/components/ProjectManagementDashboard.tsx',
+  'app/components/RealTimeCollaboration.tsx'
+];
+
+arrayFiles.forEach(file => {
+  const filePath = path.join(process.cwd(), file);
+  if (fs.existsSync(filePath)) {
+    try {
+      let content = fs.readFileSync(filePath, 'utf8');
       
-      for (const item of items) {
-        const fullPath = path.join(currentDir, item);
-        try {
-          const stat = fs.statSync(fullPath);
-          
-          if (stat.isDirectory()) {
-            // Skip node_modules, .git, and other common directories
-            if (!['node_modules', '.git', '.next', 'out', 'dist', 'build'].includes(item)) {
-              traverse(fullPath);
-            }
-          } else if (stat.isFile()) {
-            const ext = path.extname(item);
-            if (['.ts', '.tsx', '.js', '.jsx'].includes(ext)) {
-              files.push(fullPath);
-            }
-          }
-        } catch (error) {
-          console.log(`⚠️ Skipping ${fullPath}: ${error.message}`);
-        }
-      }
+      // Fix array declarations that are missing variable assignment
+      content = content.replace(/(\s+)\]\);\s*\n(\s*)(const|let|var|\w+\()/g, '$1]);\n\n$2$3');
+      
+      // Fix array declarations in useEffect
+      content = content.replace(/(\s+}\s*\]\);\s*)\n(\s*)(const\s+)/g, '$1\n\n$2$3');
+      content = content.replace(/(\s+}\s*\]\);\s*)\n(\s*)([a-zA-Z_]\w*\()/g, '$1\n\n$2$3');
+      
+      // Ensure proper spacing after array declarations
+      content = content.replace(/(\]\);)\n([a-zA-Z_])/g, '$1\n\n$2');
+      
+      fs.writeFileSync(filePath, content, 'utf8');
+      console.log(`✅ Fixed array syntax in ${file}`);
     } catch (error) {
-      console.log(`⚠️ Cannot read directory ${currentDir}: ${error.message}`);
+      console.error(`❌ Error fixing ${file}:`, error.message);
     }
   }
-  
-  traverse(dir);
-  return files;
-}
+});
 
-// Function to process a single file
-function processFile(filePath) {
-  try {
-    const content = fs.readFileSync(filePath, 'utf8');
-    const { content: fixedContent, hasChanges } = fixAllSyntaxErrors(content, filePath);
-    
-    if (hasChanges) {
-      fs.writeFileSync(filePath, fixedContent, 'utf8');
-      console.log(`✅ Fixed: ${path.relative(process.cwd(), filePath)}`);
-      return true;
-    }
-    return false;
-  } catch (error) {
-    console.error(`❌ Error processing ${filePath}:`, error.message);
-    return false;
-  }
-}
-
-// Main execution
-try {
-  const sourceDir = process.cwd();
-  const sourceFiles = processAllFiles(sourceDir);
-  
-  console.log(`📁 Found ${sourceFiles.length} source files to process...`);
-  
-  let fixedCount = 0;
-  let errorCount = 0;
-  
-  for (const file of sourceFiles) {
-    try {
-      if (processFile(file)) {
-        fixedCount++;
-      }
-    } catch (error) {
-      console.error(`❌ Failed to process ${file}:`, error.message);
-      errorCount++;
-    }
-  }
-  
-  console.log(`\n📊 Summary:`);
-  console.log(`✅ Files fixed: ${fixedCount}`);
-  console.log(`❌ Errors: ${errorCount}`);
-  console.log(`📁 Total files processed: ${sourceFiles.length}`);
-  
-  console.log('\n🎉 All syntax fixes completed!');
-  
-} catch (error) {
-  console.error('💥 Fatal error:', error.message);
-  process.exit(1);
-}
+console.log('🎉 All remaining syntax fixes completed!');

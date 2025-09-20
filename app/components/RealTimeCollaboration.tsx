@@ -81,6 +81,7 @@ const RealTimeCollaboration: React.FC = () => {
       }
     ]);
 
+
   const mockMessages: Message[] = [
       {
         id: '1',
@@ -119,6 +120,7 @@ const RealTimeCollaboration: React.FC = () => {
       }
     ]);
 
+
   const mockFiles: File[] = [
       {
         id: '1',
@@ -148,6 +150,7 @@ const RealTimeCollaboration: React.FC = () => {
         url: '#'
       }
     ]);
+
 
     setUsers(mockUsers);
     setMessages(mockMessages);

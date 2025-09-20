@@ -76,6 +76,7 @@ const InteractiveFeatureShowcase: React.FC = () => {
     }
   ]);
 
+
   useEffect(() => {
     setIsVisible(true);
     const interval = setInterval(() => {
