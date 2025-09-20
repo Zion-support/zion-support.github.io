@@ -1,6 +1,5 @@
-import { specializedIndustrySolutions2026 } from "./data/specializedIndustrySolutions2026";
+import { specializedIndustrySolutions2026 } from "../data/specializedIndustrySolutions2026";
 
-// Service interface definition
 export interface Service {
   id: string;
   title: string;
@@ -46,7 +45,7 @@ export function map2026ServicesToExistingStructure(): Service[] {
     description: service.description,
     category: service.category,
     subcategory: service.subcategory,
-    price: parseInt(service.price.replace(/[$]/g, "")), // Convert "$999" to 999
+    price: parseInt(service.price.replace(/[$]/g, "")),
     currency: "USD",
     pricingModel: service.pricingModel,
     features: service.features,
@@ -66,16 +65,16 @@ export function map2026ServicesToExistingStructure(): Service[] {
     technicalSpecs: {
       technology: service.technology,
       integrations: service.integrations,
-      apiEndpoints: 200, // Default API endpoints
+      apiEndpoints: 200,
       uptime: service.uptime,
-      security: ["SOC 2", "ISO 27001", "Data encryption"] // Default security
+      security: ["SOC 2", "ISO 27001", "Data encryption"],
     },
     competitors: service.competitors,
     marketSize: service.marketSize,
-    compliance: ["SOC 2", "ISO 27001"] // Default compliance
-  }))
+    compliance: ["SOC 2", "ISO 27001"]
+  }));
 }
 
 export default {
-map2026ServicesToExistingStructure,
-}
+  map2026ServicesToExistingStructure,
+};
