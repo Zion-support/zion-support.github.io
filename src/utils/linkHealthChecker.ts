@@ -1,8 +1,4 @@
 
-<<<<<<< HEAD
-export interface LinkHealthResult {
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-5df3
 url: string;,
 status: "healthy" | "unhealthy" | "error";
 statusCode?: number;
@@ -174,7 +170,4 @@ return report;
 }
 
 export default LinkHealthChecker;
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-5df3

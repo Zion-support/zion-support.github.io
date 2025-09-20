@@ -1,11 +1,13 @@
-<<<<<<< HEAD
 import React from "react";
+interface LoadingSpinnerProps {size?: "sm" | "md" | "lg"}
+text?: string;}
+interface LoadingSpinnerProps {
+size?: "sm" | "md" | "lg",
+text?: string;
 interface LoadingSpinnerProps {size?: "sm" | "md" | "lg",
 }
-=======
 
 interface LoadingSpinnerProps {size?: "sm" | "md" | "lg"}
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-5df3
 text?: string;}
 className?: string};
 
@@ -15,6 +17,14 @@ text = "Loading...",
 className = ""
 }) => {
 const sizeClasses = {;
+sm: "h-6 w-6", md: "h-12 w-12",;
+lg: "h-16 w-16",;
+};
+return (
+<div className={`flex flex-col items-center justify-center ${className}`}>;
+<div className={`animate-spin rounded-full border-b-2 border-purple-500 ${sizeClasses[size]} mb-4`}></div>;
+<p className="text-gray-300 text-lg">{text}</p>;
+</div>;
 sm: "h-6 w-6" md: "h-12 w-12";
 lg: "h-16 w-16";
 };
@@ -27,9 +37,7 @@ return (
 };
 
 export default LoadingSpinner;
-<<<<<<< HEAD
+<//div><///div>;
 <//div><///div>
-=======
 <//div><///div>;
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-5df3

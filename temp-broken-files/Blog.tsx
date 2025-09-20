@@ -1,17 +1,3 @@
-<<<<<<< HEAD:src/pages/Blog.tsx
-import React, { useState, useEffect } from 'react';
-
-export const metadata: Metadata = {
-metadataBase: new URL('https://ziontechgroup.com'),
-title: 'Blog - AI, Quantum Computing & Technology Insights',
-description: 'Stay updated with the latest insights, trends, and innovations in AI, quantum computing, and technology from Zion Tech Group experts.',
-keywords: ['blog', 'AI insights', 'quantum computing', 'technology trends', 'innovation', 'tech news'],
-openGraph: {
-title: 'Blog - AI, Quantum Computing & Technology Insights',
-description: 'Latest insights and innovations in AI and technology.',
-type: 'website',
-url: 'https://ziontechgroup.com/blog'
-=======
 import { Search,  } from 'lucide-react'
 import { fetchWithRetry, ,  } from '@/utils/fetchWithRetry';
 import { logInfo, logErrorToProduction,  } from '@/utils/productionLogger';
@@ -80,7 +66,6 @@ min-h-screen bg-zion-blue pt-12 pb-20 px-4"> <h1>Blog</h1> <div className=" cont
   () => {
 }</div> </div> </>)
 }'"  const featuredPosts = blogPosts.filter(post => post.featured)
->>>>>>> pr-22690:temp-broken-files/Blog.tsx
 }
 }
 

@@ -1,7 +1,5 @@
 export interface PracticalMicroSaasService2027 {
-=======
 export interface PracticalMicroSaas2027 {
-=======
 export interface PracticalMicroSaas2027 {
   id: string;
   name: string;

@@ -3,11 +3,6 @@ import { SEO } from "@/components/SEO";
 
 export default function AdminDashboard() {
   return (
-<<<<<<< HEAD:temp-broken-files/features/AdminDashboard.tsx
-  return (
-  return (
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a1cb:src/pages/features/AdminDashboard.tsx
     <>
       <SEO 
         title="AdminDashboard - Zion Tech Group"
@@ -21,13 +16,7 @@ export default function AdminDashboard() {
             <p className="text-zion-slate-light text-lg">Coming soon...</p>
           </div>
         </div>
-<<<<<<< HEAD:temp-broken-files/features/AdminDashboard.tsx
-      </main>
-</>
-}
-=======
       </div>
     </>
   );
 }
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a1cb:src/pages/features/AdminDashboard.tsx

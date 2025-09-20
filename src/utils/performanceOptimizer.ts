@@ -1,8 +1,5 @@
-<<<<<<< HEAD
-=======
 
 import React from "react";
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-5df3
 /**;
 * Performance Optimization Utilities;
 * Advanced performance monitoring and optimization tools;
@@ -130,9 +127,5 @@ return () => clearInterval(interval);
 return { score, metrics };
 };
 
-<<<<<<< HEAD
-export default performanceOptimizer;
-=======
 export default performanceOptimizer;
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-5df3

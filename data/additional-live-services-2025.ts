@@ -1,4 +1,3 @@
-=======
 export interface AdditionalLiveService2025 {
   id: string;
   name: string;
@@ -14,6 +13,5 @@ export const additionalLiveServices2025: AdditionalLiveService2025[] = [
     tagline: 'Real-time service delivery',
     price: '$199',
     features: ['Real-time monitoring', 'Live support', 'Performance tracking']
-=======
   }
 ];

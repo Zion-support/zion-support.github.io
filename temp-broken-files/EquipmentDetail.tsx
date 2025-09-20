@@ -9,7 +9,6 @@ import { equipmentListings } from "@/data/equipmentData";
 import { ProductListing } from "@/types/listings";
 import { motion } from "framer-motion";
 import { useCurrency } from "@/hooks/useCurrency";
-========
 import { ShoppingCart,, Star,, Truck,, Shield,, RotateCcw,, Clock,, AlertTriangle, ArrowLeft,  } from 'lucide-react'
 import { toast,  } from "@/hooks/use-toast",
 import { useAuth,  } from "@/hooks/useAuth",

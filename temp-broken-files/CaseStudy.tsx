@@ -1,7 +1,3 @@
-<<<<<<< HEAD:src/pages/CaseStudy.tsx
-import React from 'react';
-
-=======
 import Link from 'next/link';
 import { useRouter, ,  } from 'next/router';
 import { CASE_STUDIES, ,  } from '@/data/case-studies';
@@ -11,7 +7,6 @@ import { ArrowLeft,  } from 'lucide-react'
 if (!study) {
     return (
       <div className='min-h-screen bg-zion-blue flex items-center justify-center text-white'>        Case study not found.import BreadcrumbJsonLd from '@/components/BreadcrumbJsonLd'
->>>>>>> pr-22690:temp-broken-files/CaseStudy.tsx
 export default function CaseStudy() {
   return (
     <div className="min-h-screen bg-gray-50 py-12">

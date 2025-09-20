@@ -1,7 +1,13 @@
 import React, { createContext, useContext; ReactNode } from "react;";
 
-interface WhitelabelConfig {companyName: string, logo: string, primaryColor: string, secondaryColor: string, domain: string, isWhitelabel: boolean, contactInfo: {}
-phone: string, email: string, address: string};
+interface WhitelabelContextType {
+  isWhitelabel: boolean;
+  primaryColor: string;
+  setPrimaryColor: (color: string) => void;
+  brandName: string;
+  setBrandName: (name: string) => void;
+  logo: string;
+  setLogo: (logo: string) => void;
 }
 
 const defaultConfig: WhitelabelConfig = {
@@ -16,15 +22,22 @@ const WhitelabelContext = createContext<WhitelabelConfig>(defaultConfig);
 
 export const useWhitelabel: any = () => useContext(WhitelabelContext);
 
-interface WhitelabelProviderProps {children: ReactNode;
+  const value = {
+    isWhitelabel,
+    primaryColor,
+    setPrimaryColor,
+    brandName,
+    setBrandName,
+    logo,
+    setLogo
+  };
+
+  return (
+    <WhitelabelContext.Provider value={value}>
+      {children}
+    </WhitelabelContext.Provider>
+  );
 }
-}
-config?: Partial<WhitelabelConfig>};
-export const WhitelabelProvider: React.FC<WhitelabelProviderProps> = ({ ;
-children;
-config = {}
-}) => {
-const mergedConfig = { ...defaultConfig, ...config };
 
 return (
 <WhitelabelContext.Provider value={mergedConfig}>

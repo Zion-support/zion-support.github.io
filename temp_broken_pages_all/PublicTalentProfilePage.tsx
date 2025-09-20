@@ -1,8 +1,6 @@
 import React from 'react';
-<<<<<<< HEAD:temp_broken_pages_all/PublicTalentProfilePage.tsx
 
 <<<<<<<< HEAD:temp_broken_pages_all/PublicTalentProfilePage.tsx
-<<<<<<< HEAD:temp_broken_pages_all/PublicTalentProfilePage.tsx
 import { useState, useEffect } from "react";,
 import { useRouter } from "next/router";,
 import { supabase } from "@/integrations/supabase/client";,
@@ -16,7 +14,6 @@ import { logErrorToProduction } from "@/utils/productionLogger";
 import { Star, MapPin, Clock, Link, as, LinkIcon, Github, Twitter, Linkedin, CheckCircle2 } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Star } from "lucide-react";
-========
 import { useState, useEffect,  } from "react",
 import { useRouter,  } from "next/router",
 import { supabase,  } from "@/integrations/supabase/client",
@@ -40,7 +37,6 @@ export default function ProfilePage() {
               }}
             />
             {/* Placeholder for other sidebar elements */}
-=======
 import { SEO } from "@/components/SEO";
 
 export default function PublicTalentProfilePage() {
@@ -56,14 +52,12 @@ export default function PublicTalentProfilePage() {
           <div className="text-center">
             <h1 className="text-3xl font-bold text-white mb-4">PublicTalentProfilePage</h1>
             <p className="text-zion-slate-light text-lg">Coming soon...</p>
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a1cb:src/pages/PublicTalentProfilePage.tsx
           </div>
         </div>
       </div>
     </>
   );
 }
-<<<<<<< HEAD:temp_broken_pages_all/PublicTalentProfilePage.tsx
 if (profileId) {
   fetchProfile ()
 }, [profileId])
@@ -106,6 +100,3 @@ export default function PublicTalentProfilePage() {
     </div>
   );
 }
->>>>>>> 1836dcad4eb858f12251bf809dd3ca83faa1433b:src/pages/PublicTalentProfilePage.tsx
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a1cb:src/pages/PublicTalentProfilePage.tsx

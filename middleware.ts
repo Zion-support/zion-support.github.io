@@ -1,7 +1,6 @@
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 
-// Define public routes that don't require authentication
 const publicRoutes = [
   "/",
   "/about",
@@ -14,13 +13,11 @@ const publicRoutes = [
   "/auth/register",
   "/auth/forgot-password",
   "/auth/reset-password",
-  "/auth/verify",
-];
+  "/auth/verify"];
 
 export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
-  // Allow public routes
   if (publicRoutes.includes(pathname)) {
     const response = NextResponse.next();
     

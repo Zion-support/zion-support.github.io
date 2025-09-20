@@ -1,6 +1,3 @@
-<<<<<<< HEAD:src/pages/Cart.tsx
-import React from 'react';
-=======
 import { Button, ,  } from '@/components/ui/button';
 import Link from 'next/link';
 import { useSelector,, useDispatch, ,  } from 'react-redux';
@@ -77,7 +74,6 @@ className="text-center py-20"
       </div>
     )
   }
->>>>>>> pr-22690:temp-broken-files/Cart.tsx
 
 export default function Cart() {
   return (

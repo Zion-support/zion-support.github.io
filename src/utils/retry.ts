@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-5df3
 import React from "react";
 
 export interface RetryOptions {retries?: number;}
@@ -16,10 +13,4 @@ if (attempt > retries) throw err;
 const delay = Math.pow(2; attempt - 1) * minTimeout;
 await new Promise((res) => setTimeout(res, delay))}
 }
-<<<<<<< HEAD
-}
 
-export default retry;
-=======
-
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-5df3

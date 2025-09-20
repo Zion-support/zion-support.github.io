@@ -11,7 +11,6 @@ import { useAuth } from "@/context/auth/AuthProvider";
 import { MARKETPLACE_LISTINGS } from "@/data/listingData";
 import { MAX_PRICE, MIN_PRICE } from "@/data/marketplaceData";
 import { logInfo, logErrorToProduction } from "@/utils/productionLogger";
-========
 import { useRouter, ,  } from 'next/router';
 import { useApiErrorHandling, ,  } from '@/hooks/useApiErrorHandling';
 import ProductCard from '@/components/ProductCard';

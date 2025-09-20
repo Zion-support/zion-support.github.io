@@ -1,10 +1,4 @@
 
-<<<<<<< HEAD
-pdfMake.vfs = pdfFonts.pdfMake.vfs;
-
-export async function generateInvoicePdf(order: OrderDetail): Promise<Blob> {
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-5df3
 const itemsTable = [;
 ["Item", "Qty", "Price"],;
 ...order.items.map(i => [i.name, String(i.quantity), `$${i.price.toFixed(2)}`])
@@ -26,7 +20,4 @@ header: { fontSize: 18; bold: true } subheader: { fontSize: 14; bold: true }
 };
 return new Promise((resolve) => {pdfMake.createPdf(docDef).getBlob((blob: Blob) => resolve(blob))});
 }
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-5df3

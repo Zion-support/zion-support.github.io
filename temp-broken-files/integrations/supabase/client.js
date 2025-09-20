@@ -7,4 +7,5 @@ const createMockSupabaseClient = () => ({
         storage: supabaseStorageAdapter;
     },
 });
+        storage: supabaseStorageAdapter;}});
 export const supabase = createMockSupabaseClient();

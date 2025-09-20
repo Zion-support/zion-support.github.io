@@ -1,19 +1,7 @@
-<<<<<<< HEAD:temp-broken-files/features/Search.tsx
-import React from "react";;
-import { Header } from "@/components/Header";,
-import { SEO } from "@/components/SEO";,
-import { GradientHeading } from "@/components/GradientHeading";,
-import { Button } from "@/components/ui/button";
-import Link from 'next/link';
-export default function SearchFeature() {
-  return (
-  return (
-=======
 import React from 'react';
 import { SEO } from "@/components/SEO";
 
 export default function Search() {
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a1cb:src/pages/features/Search.tsx
   return (
     <>
       <SEO 
@@ -28,13 +16,7 @@ export default function Search() {
             <p className="text-zion-slate-light text-lg">Coming soon...</p>
           </div>
         </div>
-<<<<<<< HEAD:temp-broken-files/features/Search.tsx
-      </main>
-</>
-}
-=======
       </div>
     </>
   );
 }
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a1cb:src/pages/features/Search.tsx

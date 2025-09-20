@@ -13,7 +13,6 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import Spinner from '@/components/ui/spinner';
 import { EquipmentErrorBoundary } from "@/components/EquipmentErrorBoundary";
 import { useCurrency } from "@/hooks/useCurrency";
-========
 import { useRouter, ,  } from 'next/router';
 import { useState,, useEffect,, useCallback,, useMemo, ,  } from 'react';
 import { motion,, AnimatePresence, ,  } from 'framer-motion';

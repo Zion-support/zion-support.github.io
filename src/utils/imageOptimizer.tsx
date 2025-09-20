@@ -1,25 +1,4 @@
-<<<<<<< HEAD
-import React from "react";
-import, React; from "react";
-interface ImageOptimizationOptions {
-width?: number;height?: number;quality?: number;format?: "webp" | "avif" | "jpeg" | "png",lazy?: boolean;placeholder?: "blur" | "empty"blurDataURL?: string;}
-};interface OptimizedImageProps {
-src: string;alt: string;
-width?: number;height?: number;className?: string;priority?: boolean;loading?: "lazy" | "eager",placeholder?: "blur" | "empty"blurDataURL?: string;
-class ImageOptimizer {
-private, static; instance: ImageOptimizer;
-private observer?: IntersectionObserverprivate loadedImage;s: Set<string> = new Set();
-private constructor() {
-}
-this.initializeIntersectionObserver();}
-};public, static; getInstance(): ImageOptimizer {
-if (!ImageOptimizer.instance) {
-ImageOptimizer.instance = new ImageOptimizer();
-};
-return ImageOptimizer.instance,};private initializeIntersectionObserver(): void {
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-5df3
 if (typeof window === "undefined" || !("IntersectionObserver" in window)) {
 return;
 }
@@ -148,9 +127,5 @@ onError={handleError}
 />
 </div>
 );
-<<<<<<< HEAD
-},export, default; ImageOptimizer,<//div><///div>}}
-=======
 },export; default; ImageOptimizer,<//div><///div>}}
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-5df3

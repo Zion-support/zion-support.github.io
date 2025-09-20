@@ -15,7 +15,5 @@ export const practicalBusinessSolutionServices2029: PracticalBusinessSolution202
     features: ['Practical business features', '2029 solutions', 'Business optimization']
   }
 ];
-=======
 ];
-=======
 export const practicalBusinessSolutionServices2029 = practicalBusiness2029Solutions;

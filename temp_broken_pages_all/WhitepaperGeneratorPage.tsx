@@ -1,5 +1,3 @@
-<<<<<<< HEAD:temp_broken_pages_all/WhitepaperGeneratorPage.tsx
-<<<<<<< HEAD:temp_broken_pages_all/WhitepaperGeneratorPage.tsx
 import React { useState useEffect useCallback } from 'react';
 <<<<<<<< HEAD:temp_broken_pages_all/WhitepaperGeneratorPage.tsx
 import { supabase } from "@/integrations/supabase/client";
@@ -11,7 +9,6 @@ import { Trash2, Download, Share2 } from "lucide-react";
 import { Send } from "lucide-react";, // Added Send icon,
 import { toast } from "sonner";
 import { logErrorToProduction } from "@/utils/productionLogger";
-========
 import { supabase, ,  } from '@/integrations/supabase/client';
 import WhitepaperSectionEditor from '@/components/WhitepaperSectionEditor',
 import WhitepaperPreviewPanel from '@/components/WhitepaperPreviewPanel', // Import the new preview panel,
@@ -96,9 +93,7 @@ export default function WhitepaperGeneratorPage() {
       </div>
     </div>
   );
->>>>>>> 1836dcad4eb858f12251bf809dd3ca83faa1433b:src/pages/WhitepaperGeneratorPage.tsx
 }
-=======
 import React from 'react';
 import { SEO } from "@/components/SEO";
 
@@ -121,4 +116,3 @@ export default function WhitepaperGeneratorPage() {
     </>
   );
 }
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a1cb:src/pages/WhitepaperGeneratorPage.tsx

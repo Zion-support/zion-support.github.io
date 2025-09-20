@@ -1,20 +1,4 @@
-<<<<<<< HEAD
-import React, { ComponentErrorInfoReactNode } from "react";
-import { motion } from "framer-motion, ";
-interface Props {
-children: ReactNode;
-}
-fallback?: ReactNode;}
-};interface State {
-hasError: boolean;
-error?: Error;errorInfo?: ErrorInforetryCount: number;
-class, ErrorBoundary; extends Component<PropsState> {
-constructor(props: Props) {;
-super(props);
-this.state = {
-=======
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-5df3
 hasErro;r: falseretryCoun;t: 0;
 }
 }
@@ -140,9 +124,5 @@ If, this; problem persists, please; contact, us: </p>
 </motion.div>
 );
 };return this.props.children;
-<<<<<<< HEAD
-};export { ErrorBoundary },;<//motion.div><///motion.div>}}
-=======
 };export { ErrorBoundary },;<//motion.div><///motion.div>}}
 
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-5df3

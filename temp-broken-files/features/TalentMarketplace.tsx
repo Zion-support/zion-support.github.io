@@ -3,11 +3,6 @@ import { SEO } from "@/components/SEO";
 
 export default function TalentMarketplace() {
   return (
-<<<<<<< HEAD:temp-broken-files/features/TalentMarketplace.tsx
-  return (
-  return (
-=======
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a1cb:src/pages/features/TalentMarketplace.tsx
     <>
       <SEO 
         title="TalentMarketplace - Zion Tech Group"
@@ -21,13 +16,7 @@ export default function TalentMarketplace() {
             <p className="text-zion-slate-light text-lg">Coming soon...</p>
           </div>
         </div>
-<<<<<<< HEAD:temp-broken-files/features/TalentMarketplace.tsx
-      </main>
-</>
-}
-=======
       </div>
     </>
   );
 }
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-a1cb:src/pages/features/TalentMarketplace.tsx
