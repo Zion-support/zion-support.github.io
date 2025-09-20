@@ -17,23 +17,31 @@ import {
 } from "lucide-react";
 export default function About() {
   const stats = [
-    { number: '500+', label: 'Projects Completed', icon: CheckCircle };
-    { number: '50+', label: 'Team Members', icon: Users };
-    { number: '25+', label: 'Countries Served', icon: Globe };
+    { number: '500+', label: 'Projects Completed', icon: CheckCircle },
+    { number: '50+', label: 'Team Members', icon: Users },
+    { number: '25+', label: 'Countries Served', icon: Globe },
     { number: '99%', label: 'Client Satisfaction', icon: Star }
   ];
   const values = [
     {
-      icon: Brain,title: 'Innovation First',description: 'We push the boundaries of what\'s possible with cutting-edge AI and emerging technologies.'
+      icon: Brain,
+      title: 'Innovation First',
+      description: 'We push the boundaries of what\'s possible with cutting-edge AI and emerging technologies.'
+    },
+    {
+      icon: Shield,
+      title: 'Trust & Security',
+      description: 'Your data and business operations are protected with enterprise-grade security measures.'
     };
     {
-      icon: Shield,title: 'Trust & Security',description: 'Your data and business operations are protected with enterprise-grade security measures.'
+      icon: Heart,
+      title: 'Client Success',
+      description: 'We measure our success by the success of our clients and their digital transformation journey.'
     };
     {
-      icon: Heart,title: 'Client Success',description: 'We measure our success by the success of our clients and their digital transformation journey.'
-    };
-    {
-      icon: Rocket,title: 'Future-Ready',description: 'We build solutions that not only solve today\'s problems but prepare you for tomorrow\'s challenges.'
+      icon: Rocket,
+      title: 'Future-Ready',
+      description: 'We build solutions that not only solve today\'s problems but prepare you for tomorrow\'s challenges.'
     }
   ];
   const team = [

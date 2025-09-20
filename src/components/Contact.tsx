@@ -71,7 +71,7 @@ const Contact: React.FC = () => {
         </div>
       </div>
     </div>
-  ),
-},
+  );
+};
 
 export default Contact;

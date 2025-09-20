@@ -10,11 +10,11 @@ interface AccessibilitySettings {
 
 const EnhancedAccessibility: React.FC = () => {
   const [settings, setSettings] = useState<AccessibilitySettings>({
-    highContrast: false;
-    largeText: false;
-    reducedMotion: false;
-    focusVisible: true;
-    screenReader: false;
+    highContrast: false,
+    largeText: false,
+    reducedMotion: false,
+    focusVisible: true,
+    screenReader: false,
     keyboardNavigation: true
   });
   const [announcements, setAnnouncements] = useState<string[]>([]);

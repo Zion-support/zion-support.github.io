@@ -14,16 +14,16 @@ interface SEOHeadProps {
 }
 
 const SEOHead: React.FC<SEOHeadProps> = ({
-  title = "Zion Tech Group - Revolutionary AI & Technology Solutions";
-  description = "Transform your business with cutting-edge AI, quantum computing, and autonomous systems. Zion Tech Group delivers the future of technology.";
-  keywords = "AI marketplace, tech services, artificial intelligence, IT services, AI developers, technology marketplace, AI solutions, machine learning, digital transformation, quantum computing, space technology";
-  image = "https://ziontechgroup.com/og-image.jpg";
-  url = "https://ziontechgroup.com";
-  type = "website";
-  author = "Zion Tech Group";
-  publishedTime;
-  modifiedTime;
-  section;
+  title = "Zion Tech Group - Revolutionary AI & Technology Solutions",
+  description = "Transform your business with cutting-edge AI, quantum computing, and autonomous systems. Zion Tech Group delivers the future of technology.",
+  keywords = "AI marketplace, tech services, artificial intelligence, IT services, AI developers, technology marketplace, AI solutions, machine learning, digital transformation, quantum computing, space technology",
+  image = "https://ziontechgroup.com/og-image.jpg",
+  url = "https://ziontechgroup.com",
+  type = "website",
+  author = "Zion Tech Group",
+  publishedTime,
+  modifiedTime,
+  section,
   tags = []
 }) => {
   useEffect(() => {
@@ -70,15 +70,15 @@ const SEOHead: React.FC<SEOHeadProps> = ({
 
     // Update structured data
     updateStructuredData({
-      title;
-      description;
-      image;
-      url;
-      type;
-      author;
-      publishedTime;
-      modifiedTime;
-      section;
+      title,
+      description,
+      image,
+      url,
+      type,
+      author,
+      publishedTime,
+      modifiedTime,
+      section,
       tags
     });
   }, [title, description, keywords, image, url, type, author, publishedTime, modifiedTime, section, tags]);
@@ -123,27 +123,27 @@ const SEOHead: React.FC<SEOHeadProps> = ({
 
     // Add new structured data
     const structuredData = {
-      "@context": "https: //schema.org";
-      "@type": data.type === 'article' ? 'Article' : 'WebPage';
-      "headline": data.title;
-      "description": data.description;
-      "image": data.image;
-      "url": data.url;
+      "@context": "https://schema.org",
+      "@type": data.type === 'article' ? 'Article' : 'WebPage',
+      "headline": data.title,
+      "description": data.description,
+      "image": data.image,
+      "url": data.url,
       "author": {
-        "@type": "Organization";
+        "@type": "Organization",
         "name": data.author
-      };
+      },
       "publisher": {
-        "@type": "Organization";
-        "name": "Zion Tech Group";
+        "@type": "Organization",
+        "name": "Zion Tech Group",
         "logo": {
-          "@type": "ImageObject";
-          "url": "https: //ziontechgroup.com/logo.png"
+          "@type": "ImageObject",
+          "url": "https://ziontechgroup.com/logo.png"
         }
-      };
-      ...(data.publishedTime && { "datePublished": data.publishedTime });
-      ...(data.modifiedTime && { "dateModified": data.modifiedTime });
-      ...(data.section && { "articleSection": data.section });
+      },
+      ...(data.publishedTime && { "datePublished": data.publishedTime }),
+      ...(data.modifiedTime && { "dateModified": data.modifiedTime }),
+      ...(data.section && { "articleSection": data.section }),
       ...(data.tags && data.tags.length > 0 && { "keywords": data.tags.join() })
     };
 
@@ -153,7 +153,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
     document.head.appendChild(script);
   };
 
-  return null, // This component doesn't render anything
+  return null; // This component doesn't render anything
 };
 
 export default SEOHead;

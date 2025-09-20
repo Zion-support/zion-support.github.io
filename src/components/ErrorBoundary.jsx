@@ -32,17 +32,28 @@ function ErrorFallback({ error, resetError, retryCount = 0 }) {
     
     const errorMessages = {
         network: {
-            title: 'Connection Error',description: 'We\'re having trouble connecting to our servers. Please check your internet connection and try again.',icon: Shield,color: 'text-orange-400'
-        };
+            title: 'Connection Error',
+            description: 'We\'re having trouble connecting to our servers. Please check your internet connection and try again.',
+            icon: Shield,
+            color: 'text-orange-400'
+        },
         runtime: {
-            title: 'Runtime Error',description: 'Something unexpected happened while processing your request. Our team has been notified.',icon: Bug,color: 'text-red-400'
-        };
+            title: 'Runtime Error',
+            description: 'Something unexpected happened while processing your request. Our team has been notified.',
+            icon: Bug,
+            color: 'text-red-400'
+        },
         reference: {
-            title: 'Reference Error',description: 'There was an issue with the page resources. Please refresh and try again.',icon: AlertTriangle,color: 'text-yellow-400'
-        };
+            title: 'Reference Error',
+            description: 'There was an issue with the page resources. Please refresh and try again.',
+            icon: AlertTriangle,
+            color: 'text-yellow-400'
+        },
         general: {
-            title: 'Something went wrong',description: 'We encountered an unexpected error. Don\'t worry, our team has been notified.',
-            icon: AlertTriangle,color: 'text-zion-purple'
+            title: 'Something went wrong',
+            description: 'We encountered an unexpected error. Don\'t worry, our team has been notified.',
+            icon: AlertTriangle,
+            color: 'text-zion-purple'
         }
     };
     const currentError = errorMessages[errorType];
@@ -157,12 +168,12 @@ function ErrorBoundary({ children, fallback, onError }) {
             }
             // Log error to console in development
             if (process.env.NODE_ENV === 'development') {
-                console.error('ErrorBoundary caught an error:', event.error),
+                console.error('ErrorBoundary caught an error:', event.error);
             }
-        },
+        };
 
         const handleUnhandledRejection = (event) => {
-            setHasError(true),
+            setHasError(true);
             setError(new Error(event.reason));
             if (onError) {
                 onError(new Error(event.reason), { componentStack: event.reason?.stack });
@@ -177,7 +188,7 @@ function ErrorBoundary({ children, fallback, onError }) {
         window.addEventListener('unhandledrejection', handleUnhandledRejection);
         
         return () => {
-            window.removeEventListener('error', handleError),
+            window.removeEventListener('error', handleError);
             window.removeEventListener('unhandledrejection', handleUnhandledRejection);
         };
     }, [onError]);
@@ -198,24 +209,24 @@ function ErrorBoundary({ children, fallback, onError }) {
                 resetError={resetError}
                 retryCount={retryCount}
             />
-        ),
+        );
     }
 
-    return <>{children}</>,
+    return <>{children}</>;
 }
 
 // Hook for functional components to handle errors
 export function useErrorHandler() {
-    const [error, setError] = useState(null),
+    const [error, setError] = useState(null);
 
     const handleError = (error) => {
-        setError(error),
-        console.error('useErrorHandler caught an error:', error),
-    },
+        setError(error);
+        console.error('useErrorHandler caught an error:', error);
+    };
 
     const clearError = () => {
-        setError(null),
-    },
+        setError(null);
+    };
 
     return { error, handleError, clearError };
 }
