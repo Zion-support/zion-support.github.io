@@ -19,10 +19,6 @@ const nextConfig = {
   // Ignore build errors to allow deployment with syntax issues
   typescript: {
     ignoreBuildErrors: true,
-    // Disable TypeScript completely for build
-    enableTypeChecking: false,
-    // Skip TypeScript checking during build
-    skipBuildError: true,
   },
   eslint: {
     ignoreDuringBuilds: true,
