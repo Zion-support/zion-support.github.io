@@ -109,10 +109,10 @@ zion-website/
 *.py
 *.sh
 *.cjs
-*.js
-*.jsx
-*.ts
-*.tsx
+!*.js
+!*.jsx
+!*.ts
+!*.tsx
 !src/
 !App.tsx
 !index.html
