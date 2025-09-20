@@ -1,107 +1,202 @@
-import React from 'react'
-import { Brain, Code, Shield, Cloud, Users, Zap, ArrowRight } from 'lucide-react'
+import React from 'react';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
+import { 
+  Cloud, 
+  Shield, 
+  Zap, 
+  Users, 
+  Globe, 
+  Database, 
+  Code, 
+  Smartphone,
+  BarChart3,
+  Lock,
+  Server,
+  Cpu
+} from 'lucide-react';
 
 export default function ServicesPage() {
   const services = [
     {
-      icon: Brain,
-      title: 'AI & Machine Learning',
-      description: 'Harness the power of artificial intelligence with our cutting-edge ML solutions.',
-      features: ['Natural Language Processing', 'Computer Vision', 'Predictive Analytics', 'Chatbots & Virtual Assistants']
-    },
-    {
-      icon: Code,
-      title: 'Software Development',
-      description: 'Custom software solutions tailored to your business needs.',
-      features: ['Web Applications', 'Mobile Apps', 'API Development', 'Legacy System Modernization']
+      icon: Cloud,
+      title: "Cloud Solutions",
+      description: "Comprehensive cloud infrastructure and migration services",
+      features: [
+        "AWS, Azure, Google Cloud expertise",
+        "Cloud migration and optimization",
+        "Serverless architecture design",
+        "Cost optimization strategies"
+      ],
+      color: "text-blue-400"
     },
     {
       icon: Shield,
-      title: 'Cybersecurity',
-      description: 'Protect your business with comprehensive security solutions.',
-      features: ['Security Audits', 'Penetration Testing', 'Incident Response', 'Compliance Management']
-    },
-    {
-      icon: Cloud,
-      title: 'Cloud Services',
-      description: 'Scalable cloud infrastructure and migration services.',
-      features: ['Cloud Migration', 'Infrastructure as Code', 'DevOps & CI/CD', 'Cloud Security']
-    },
-    {
-      icon: Users,
-      title: 'Technology Consulting',
-      description: 'Strategic guidance for your digital transformation journey.',
-      features: ['Digital Strategy', 'Technology Assessment', 'Process Optimization', 'Change Management']
+      title: "Cybersecurity",
+      description: "Advanced security solutions to protect your digital assets",
+      features: [
+        "Threat detection and response",
+        "Vulnerability assessments",
+        "Compliance and governance",
+        "Security training and awareness"
+      ],
+      color: "text-green-400"
     },
     {
       icon: Zap,
-      title: 'Process Automation',
-      description: 'Streamline operations with intelligent automation solutions.',
-      features: ['Workflow Automation', 'RPA Implementation', 'Business Process Optimization', 'Integration Services']
+      title: "AI & Machine Learning",
+      description: "Intelligent solutions powered by artificial intelligence",
+      features: [
+        "Custom AI model development",
+        "Machine learning pipelines",
+        "Natural language processing",
+        "Computer vision solutions"
+      ],
+      color: "text-yellow-400"
+    },
+    {
+      icon: Users,
+      title: "Digital Transformation",
+      description: "Complete digital overhaul for modern businesses",
+      features: [
+        "Process automation",
+        "Legacy system modernization",
+        "Change management",
+        "Digital strategy consulting"
+      ],
+      color: "text-purple-400"
+    },
+    {
+      icon: Globe,
+      title: "Web Development",
+      description: "Modern, responsive web applications",
+      features: [
+        "React, Next.js, Vue.js development",
+        "Progressive Web Apps (PWA)",
+        "E-commerce solutions",
+        "API development and integration"
+      ],
+      color: "text-cyan-400"
+    },
+    {
+      icon: Database,
+      title: "Data Analytics",
+      description: "Turn data into actionable insights",
+      features: [
+        "Business intelligence dashboards",
+        "Data warehousing solutions",
+        "Predictive analytics",
+        "Real-time data processing"
+      ],
+      color: "text-orange-400"
+    },
+    {
+      icon: Smartphone,
+      title: "Mobile Development",
+      description: "Native and cross-platform mobile applications",
+      features: [
+        "iOS and Android development",
+        "React Native solutions",
+        "Flutter applications",
+        "Mobile app optimization"
+      ],
+      color: "text-pink-400"
+    },
+    {
+      icon: BarChart3,
+      title: "Business Intelligence",
+      description: "Data-driven decision making solutions",
+      features: [
+        "Custom reporting dashboards",
+        "KPI tracking and monitoring",
+        "Data visualization",
+        "Performance analytics"
+      ],
+      color: "text-indigo-400"
+    },
+    {
+      icon: Lock,
+      title: "Data Privacy & Compliance",
+      description: "Ensure compliance with data protection regulations",
+      features: [
+        "GDPR compliance implementation",
+        "Privacy impact assessments",
+        "Data governance frameworks",
+        "Audit and compliance reporting"
+      ],
+      color: "text-red-400"
     }
-  ]
+  ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
-      <div className="bg-gradient-to-br from-blue-50 to-indigo-100 py-16">
-        <div className="container mx-auto px-4">
-          <div className="text-center">
-            <h1 className="text-4xl font-bold text-gray-900 mb-4">Our Services</h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Comprehensive technology solutions designed to accelerate your business growth and digital transformation.
-            </p>
-          </div>
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            Our Services
+          </h1>
+          <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Comprehensive technology solutions designed to transform your business and drive innovation
+          </p>
         </div>
-      </div>
+      </section>
 
       {/* Services Grid */}
-      <div className="py-16">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {services.map((service, index) => {
-              const Icon = service.icon
-              return (
-                <div key={index} className="bg-white border border-gray-200 rounded-lg p-8 hover:shadow-lg transition-shadow">
-                  <div className="flex items-start space-x-4">
-                    <div className="flex-shrink-0">
-                      <Icon className="h-12 w-12 text-blue-600" />
-                    </div>
-                    <div className="flex-1">
-                      <h3 className="text-2xl font-semibold text-gray-900 mb-3">{service.title}</h3>
-                      <p className="text-gray-600 mb-4">{service.description}</p>
-                      <ul className="space-y-2">
-                        {service.features.map((feature, featureIndex) => (
-                          <li key={featureIndex} className="flex items-center text-gray-600">
-                            <ArrowRight className="h-4 w-4 text-blue-600 mr-2" />
-                            {feature}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {services.map((service, index) => (
+              <Card key={index} className="bg-white/10 backdrop-blur-sm border-white/20 text-white hover:bg-white/20 transition-all duration-300">
+                <CardHeader>
+                  <div className="flex items-center gap-3 mb-4">
+                    <service.icon className={`h-8 w-8 ${service.color}`} />
+                    <CardTitle className="text-xl">{service.title}</CardTitle>
                   </div>
-                </div>
-              )
-            })}
+                  <CardDescription className="text-gray-300">
+                    {service.description}
+                  </CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <ul className="space-y-2 mb-6">
+                    {service.features.map((feature, featureIndex) => (
+                      <li key={featureIndex} className="flex items-center gap-2 text-sm text-gray-300">
+                        <div className="w-1.5 h-1.5 bg-blue-400 rounded-full"></div>
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                  <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white">
+                    Learn More
+                  </Button>
+                </CardContent>
+              </Card>
+            ))}
           </div>
         </div>
-      </div>
+      </section>
 
       {/* CTA Section */}
-      <div className="bg-blue-600 py-16">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold text-white mb-4">Ready to Get Started?</h2>
-          <p className="text-blue-100 mb-8 max-w-2xl mx-auto">
-            Contact us today to discuss how our services can help your business thrive.
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            Ready to Get Started?
+          </h2>
+          <p className="text-xl text-gray-300 mb-8">
+            Let's discuss how our services can help transform your business
           </p>
-          <a
-            href="/contact"
-            className="inline-flex items-center px-8 py-3 border border-white text-white font-medium rounded-lg hover:bg-white hover:text-blue-600 transition-colors"
-          >
-            Contact Us
-          </a>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white">
+              Get Free Consultation
+            </Button>
+            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-gray-900">
+              View Our Portfolio
+            </Button>
+          </div>
         </div>
-      </div>
+      </section>
     </div>
-  )
+  );
+>>>>>>> website-improvements
 }

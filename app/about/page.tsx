@@ -1,115 +1,209 @@
-import React from 'react'
-import { Users, Target, Award, TrendingUp } from 'lucide-react'
+import React from 'react';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
+import { 
+  Users, 
+  Target, 
+  Award, 
+  Globe, 
+  Lightbulb, 
+  Heart,
+  CheckCircle,
+  TrendingUp,
+  Shield,
+  Zap
+} from 'lucide-react';
 
 export default function AboutPage() {
-  const stats = [
-    { icon: Users, value: '500+', label: 'Clients Served' },
-    { icon: Target, value: '99%', label: 'Project Success Rate' },
-    { icon: Award, value: '50+', label: 'Awards Won' },
-    { icon: TrendingUp, value: '200%', label: 'Average ROI' }
-  ]
-
   const values = [
     {
-      title: 'Innovation',
-      description: 'We stay at the forefront of technology, constantly exploring new solutions and approaches to solve complex business challenges.'
+      icon: Lightbulb,
+      title: "Innovation",
+      description: "We constantly push the boundaries of technology to deliver cutting-edge solutions that drive real business value."
     },
     {
-      title: 'Excellence',
-      description: 'We are committed to delivering the highest quality solutions that exceed our clients\' expectations and drive measurable results.'
+      icon: Shield,
+      title: "Security",
+      description: "Security is at the core of everything we do. We implement enterprise-grade security measures to protect your data and systems."
     },
     {
-      title: 'Collaboration',
-      description: 'We work closely with our clients as partners, ensuring their vision and goals are at the center of every solution we develop.'
+      icon: Users,
+      title: "Collaboration",
+      description: "We work closely with our clients as partners, ensuring transparent communication and shared success throughout every project."
     },
     {
-      title: 'Integrity',
-      description: 'We conduct business with the highest ethical standards, maintaining transparency and trust in all our relationships.'
+      icon: Target,
+      title: "Excellence",
+      description: "We strive for excellence in every project, delivering high-quality solutions that exceed expectations and drive measurable results."
     }
-  ]
+  ];
+
+  const stats = [
+    { number: "500+", label: "Projects Completed" },
+    { number: "50+", label: "Happy Clients" },
+    { number: "5+", label: "Years Experience" },
+    { number: "99%", label: "Client Satisfaction" }
+  ];
+
+  const team = [
+    {
+      name: "Sarah Johnson",
+      role: "CEO & Founder",
+      description: "15+ years in technology leadership, former CTO at Fortune 500 companies."
+    },
+    {
+      name: "Michael Chen",
+      role: "CTO",
+      description: "Expert in cloud architecture and AI/ML solutions with 12+ years experience."
+    },
+    {
+      name: "Emily Rodriguez",
+      role: "Head of Security",
+      description: "Cybersecurity specialist with certifications in CISSP and CISM."
+    },
+    {
+      name: "David Kim",
+      role: "Lead Developer",
+      description: "Full-stack developer with expertise in modern web technologies."
+    }
+  ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
-      <div className="bg-gradient-to-br from-blue-50 to-indigo-100 py-16">
-        <div className="container mx-auto px-4">
-          <div className="text-center">
-            <h1 className="text-4xl font-bold text-gray-900 mb-4">About Zion Tech Group</h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We are a leading technology company dedicated to transforming businesses through innovative solutions and cutting-edge technology.
-            </p>
-          </div>
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            About Zion Tech Group
+          </h1>
+          <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            We are a leading technology company dedicated to transforming businesses through innovative solutions and cutting-edge technology.
+          </p>
         </div>
-      </div>
+      </section>
 
-      {/* Company Overview */}
-      <div className="py-16">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">Our Story</h2>
-            <div className="prose prose-lg mx-auto text-gray-600">
-              <p className="mb-6">
-                Founded in 2020, Zion Tech Group has emerged as a trusted partner for businesses seeking to leverage technology for growth and innovation. Our team of experienced professionals combines deep technical expertise with a passion for solving complex challenges.
+      {/* Mission Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Our Mission
+              </h2>
+              <p className="text-lg text-gray-300 mb-6">
+                To empower businesses with innovative technology solutions that drive growth, efficiency, and competitive advantage. We believe that technology should be an enabler, not a barrier, and we work tirelessly to make that vision a reality for our clients.
               </p>
-              <p className="mb-6">
-                We specialize in artificial intelligence, cloud computing, cybersecurity, and digital transformation services. Our mission is to empower organizations to achieve their goals through technology that is both powerful and accessible.
+              <p className="text-lg text-gray-300 mb-8">
+                Our team of experts combines deep technical knowledge with business acumen to deliver solutions that not only meet your current needs but also position you for future success.
               </p>
-              <p>
-                With offices across multiple continents and a global team of experts, we serve clients ranging from startups to Fortune 500 companies, helping them navigate the digital landscape and achieve sustainable growth.
-              </p>
+              <div className="flex flex-wrap gap-4">
+                <Badge variant="secondary" className="bg-blue-600 text-white">Innovation</Badge>
+                <Badge variant="secondary" className="bg-green-600 text-white">Excellence</Badge>
+                <Badge variant="secondary" className="bg-purple-600 text-white">Integrity</Badge>
+                <Badge variant="secondary" className="bg-orange-600 text-white">Collaboration</Badge>
+              </div>
+            </div>
+            <div className="grid grid-cols-2 gap-6">
+              {stats.map((stat, index) => (
+                <Card key={index} className="bg-white/10 backdrop-blur-sm border-white/20 text-white text-center">
+                  <CardContent className="p-6">
+                    <div className="text-3xl font-bold text-blue-400 mb-2">{stat.number}</div>
+                    <div className="text-sm text-gray-300">{stat.label}</div>
+                  </CardContent>
+                </Card>
+              ))}
             </div>
           </div>
         </div>
-      </div>
-
-      {/* Stats Section */}
-      <div className="bg-gray-50 py-16">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {stats.map((stat, index) => {
-              const Icon = stat.icon
-              return (
-                <div key={index} className="text-center">
-                  <Icon className="h-12 w-12 text-blue-600 mx-auto mb-4" />
-                  <div className="text-3xl font-bold text-gray-900 mb-2">{stat.value}</div>
-                  <div className="text-gray-600">{stat.label}</div>
-                </div>
-              )
-            })}
-          </div>
-        </div>
-      </div>
+      </section>
 
       {/* Values Section */}
-      <div className="py-16">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">Our Values</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Our Values
+            </h2>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              The principles that guide everything we do
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {values.map((value, index) => (
-              <div key={index} className="bg-white border border-gray-200 rounded-lg p-8">
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">{value.title}</h3>
-                <p className="text-gray-600">{value.description}</p>
-              </div>
+              <Card key={index} className="bg-white/10 backdrop-blur-sm border-white/20 text-white text-center">
+                <CardHeader>
+                  <div className="flex justify-center mb-4">
+                    <div className="bg-blue-600 rounded-full w-16 h-16 flex items-center justify-center">
+                      <value.icon className="h-8 w-8 text-white" />
+                    </div>
+                  </div>
+                  <CardTitle className="text-xl mb-2">{value.title}</CardTitle>
+                  <CardDescription className="text-gray-300">
+                    {value.description}
+                  </CardDescription>
+                </CardHeader>
+              </Card>
             ))}
           </div>
         </div>
-      </div>
+      </section>
+
+      {/* Team Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Meet Our Team
+            </h2>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              The experts behind our success
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {team.map((member, index) => (
+              <Card key={index} className="bg-white/10 backdrop-blur-sm border-white/20 text-white">
+                <CardHeader className="text-center">
+                  <div className="w-20 h-20 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full mx-auto mb-4 flex items-center justify-center">
+                    <Users className="h-10 w-10 text-white" />
+                  </div>
+                  <CardTitle className="text-xl">{member.name}</CardTitle>
+                  <CardDescription className="text-blue-400 font-semibold">
+                    {member.role}
+                  </CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-gray-300 text-sm text-center">
+                    {member.description}
+                  </p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* CTA Section */}
-      <div className="bg-blue-600 py-16">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold text-white mb-4">Ready to Work With Us?</h2>
-          <p className="text-blue-100 mb-8 max-w-2xl mx-auto">
-            Let's discuss how we can help your business achieve its technology goals.
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            Ready to Work With Us?
+          </h2>
+          <p className="text-xl text-gray-300 mb-8">
+            Let's discuss how we can help transform your business with our technology solutions
           </p>
-          <a
-            href="/contact"
-            className="inline-flex items-center px-8 py-3 border border-white text-white font-medium rounded-lg hover:bg-white hover:text-blue-600 transition-colors"
-          >
-            Get in Touch
-          </a>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white">
+              Get In Touch
+            </Button>
+            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-gray-900">
+              View Our Work
+            </Button>
+          </div>
         </div>
-      </div>
+      </section>
     </div>
-  )
+  );
 }
