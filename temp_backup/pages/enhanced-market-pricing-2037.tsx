@@ -2,9 +2,9 @@ import React from 'react';
 import SEO from '../components/SEO';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import { motion } from 'framer-motion';
-import {,
-  Zap, Brain, Globe;
-  TrendingUp, Award, CheckCircle, ExternalLink,
+import { 
+  Zap, Brain, Globe, 
+  TrendingUp, Award, CheckCircle, ExternalLink 
 } from 'lucide-react';
 export default function EnhancedMarketPricing2037Page() {,
   const fadeInUp = {,

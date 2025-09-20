@@ -1,0 +1,150 @@
+<<<<<<< HEAD
+
+const PricingSection: React.FC = () => {
+  return (
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">PricingSection</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
+  );
+};
+=======
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+import { Check, X, Star, Zap, Shield, Users, ArrowRight, Crown, Rocket, Building } from 'lucide-react';
+const plans = [
+    {
+        name: "Starter",
+        price: 99,
+        period: "month",
+        description: "Perfect for small businesses and startups",
+        icon: <Rocket className="w-8 h-8"/>,
+        color: "from-zion-cyan to-zion-blue",
+        bgColor: "from-zion-cyan/20 to-zion-blue/20",
+        features: [
+            "Up to 5 team members",
+            "Basic AI tools access",
+            "Email support",
+            "Standard templates",
+            "1 project at a time"
+        ],
+        notIncluded: [
+            "Advanced analytics",
+            "Priority support",
+            "Custom integrations"
+        ],
+        popular: false,
+        cta: "Get Started"
+    },
+    {
+        name: "Professional",
+        price: 299,
+        period: "month",
+        description: "Ideal for growing companies and teams",
+        icon: <Building className="w-8 h-8"/>,
+        color: "from-zion-purple to-zion-purple-dark",
+        bgColor: "from-zion-purple/20 to-zion-purple-dark/20",
+        features: [
+            "Up to 25 team members",
+            "Full AI tools access",
+            "Priority email support",
+            "Advanced templates",
+            "Unlimited projects",
+            "Team collaboration",
+            "Basic analytics"
+        ],
+        notIncluded: [
+            "Custom integrations",
+            "Dedicated account manager"
+        ],
+        popular: true,
+        cta: "Start Free Trial"
+    },
+    {
+        name: "Enterprise",
+        price: 999,
+        period: "month",
+        description: "For large organizations with complex needs",
+        icon: <Crown className="w-8 h-8"/>,
+        color: "from-zion-cyan-light to-zion-purple",
+        bgColor: "from-zion-cyan-light/20 to-zion-purple/20",
+        features: [
+            "Unlimited team members",
+            "All AI tools + custom models",
+            "24/7 phone support",
+            "Custom templates",
+            "Unlimited projects",
+            "Advanced analytics",
+            "Custom integrations",
+            "Dedicated account manager",
+            "SLA guarantees",
+            "On-premise options"
+        ],
+        notIncluded: [],
+        popular: false,
+        cta: "Contact Sales"
+    }
+];
+const addons = [
+    {
+        name: "AI Model Training",
+        price: 199,
+        period: "month",
+        description: "Custom AI model training and optimization",
+        icon: <Zap className="w-6 h-6"/>,
+        features: ["Custom model training", "Performance optimization", "Model monitoring"]
+    },
+    {
+        name: "Premium Support",
+        price: 99,
+        period: "month",
+        description: "24/7 dedicated support with guaranteed response times",
+        icon: <Shield className="w-6 h-6"/>,
+        features: ["24/7 phone support", "Guaranteed 2-hour response", "Dedicated support team"]
+    },
+    {
+        name: "Advanced Analytics",
+        price: 149,
+        period: "month",
+        description: "Comprehensive analytics and reporting suite",
+        icon: <Users className="w-6 h-6"/>,
+        features: ["Custom dashboards", "Advanced reporting", "Data export options"]
+    }
+];
+export function PricingSection() {
+    const [billingPeriod, setBillingPeriod] = useState('month');
+    const [selectedPlan, setSelectedPlan] = useState(null);
+    const getDiscountedPrice = (price) => {
+        return billingPeriod === 'year' ? Math.round(price * 10) : price;
+    };
+    const containerVariants = {
+        hidden: { opacity: 0 },
+        visible: {
+            opacity: 1,
+            transition: {
+                staggerChildren: 0.2,
+                delayChildren: 0.1
+            }
+        }
+    };
+    const itemVariants = {
+        hidden: { y: 30, opacity: 0 },
+        visible: {
+            y: 0,
+            opacity: 1,
+            transition: {
+                duration: 0.6,
+                ease: "easeOut"
+            }
+        }
+    };
+    return (<section className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-blue relative overflow-hidden">
+      {/* Background decorative elements */}
+      <div className="absolute inset-0 opacity-5">
+        <div className="absolute top-20 left-20 w-32 h-32 border border-zion-cyan rounded-full"></div>
+        <div className="absolute bottom-20 right-20 w-24 h-24 border border-zion-purple rounded-full"></div>
+        <div className="absolute top-1/2 left-1/2 w-16 h-16 border border-zion-cyan-light rounded-full"></div>
+      </div>
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-7bc1
+
+export default PricingSection;

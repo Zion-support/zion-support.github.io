@@ -1,26 +1,7 @@
 #!/bin/bash
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-8069
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 2f18dd51d09966d9ccd305d811e0b1edfa245900
-<<<<<<< HEAD
-echo "🔧 Resolving ALL remaining merge conflicts..."
-<<<<<<< HEAD
-=======
 =======
 echo "Resolving all merge conflicts by accepting our version..."
->>>>>>> cursor/create-and-deploy-new-content-a12c
->>>>>>> cursor/create-and-deploy-new-content-8069
-=======
-# Comprehensive conflict resolution script
-echo "🚀 Starting comprehensive conflict resolution..."
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
 
 # Step 1: Check current status
 echo "📊 Checking current status..."
@@ -124,88 +105,13 @@ for branch in $PR_BRANCHES; do
     fi
 done
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 =======
-<<<<<<< HEAD
->>>>>>> cursor/create-and-deploy-new-content-8069
-echo "🎉 All conflict resolution complete!"
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/create-and-deploy-new-content-df8e
-=======
->>>>>>> 2f18dd51d09966d9ccd305d811e0b1edfa245900
 echo "Resolving all merge conflicts by using main branch version..."
 
 # Find all files with merge conflicts
-conflicted_files=$(grep -r -l "<<<<<<< HEAD" src/ 2>/dev/null || true)
-
-if [ -z "$conflicted_files" ]; then
-    echo "No merge conflicts found."
-    exit 0
-=======
-# Step 7: Push changes
-echo "---"
-echo "🚀 Pushing changes to main..."
-if git push origin main; then
-    echo "✅ Successfully pushed changes"
-else
-    echo "⚠️  Failed to push changes"
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee
-fi
-
-# Step 8: Test build
-echo "---"
-echo "🧪 Testing build..."
-if npm run build:netlify; then
-    echo "✅ Build successful"
-else
-    echo "❌ Build failed"
-fi
-
-# Step 9: Run health checks
-echo "---"
-echo "🏥 Running health checks..."
-if npm run health-check; then
-    echo "✅ Health checks passed"
-else
-    echo "❌ Health checks failed"
-fi
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 echo "All merge conflicts resolved!"
->>>>>>> cursor/create-and-deploy-new-content-87a1
 =======
 echo "All merge conflicts resolved!"
->>>>>>> cursor/create-and-deploy-new-content-df8e
-=======
-echo "All merge conflicts resolved!"
->>>>>>> cursor/create-and-deploy-new-content-87a1
->>>>>>> 2f18dd51d09966d9ccd305d811e0b1edfa245900
-<<<<<<< HEAD
-=======
 =======
 echo "Conflict resolution complete!"
 echo "Files processed: $(echo "$files_with_conflicts" | wc -l)"
->>>>>>> cursor/create-and-deploy-new-content-a12c
->>>>>>> cursor/create-and-deploy-new-content-8069
-=======
-# Summary
-echo "---"
-echo "📊 Final Summary:"
-echo "✅ Successful merges: $SUCCESSFUL_MERGES"
-echo "❌ Failed merges: $FAILED_MERGES"
-echo "⏰ Completed at: $(date)"
-
-if [ $FAILED_MERGES -eq 0 ]; then
-    echo "🎉 All PRs merged successfully!"
-else
-    echo "⚠️  Some PRs failed to merge. Check the logs above for details."
-fi
-
-echo "---"
-echo "✅ Script completed!"
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee

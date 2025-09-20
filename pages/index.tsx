@@ -1,77 +1,6 @@
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import { CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, DollarSign, Shield, Mail, MapPin, Rocket, Brain, Sparkles, Atom, Cpu, Target, Microscope, TestTube, Clock, ShieldCheck } from 'lucide-react';
-import Button from '../components/ui/Button';
-import UltraFuturisticBackground2029 from '../components/ui/UltraFuturisticBackground2029';
-import UltraAdvancedNavigation from '../components/layout/UltraAdvancedNavigation';
-import UltraAdvancedNavigation2026 from '../components/layout/UltraAdvancedNavigation2026';
-import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029';
-import UltraFuturisticFooter2029 from '../components/layout/UltraFuturisticFooter2029';
-import EnhancedServiceShowcase from '../components/sections/EnhancedServiceShowcase';
-import Enhanced2026ServicesShowcase from '../components/sections/Enhanced2026ServicesShowcase';
-import Enhanced2026ServicesShowcaseV4 from '../components/sections/Enhanced2026ServicesShowcaseV4';
-import Revolutionary2026ServiceShowcase from '../components/sections/Revolutionary2026ServiceShowcase';
-import EnhancedHero2026 from '../components/sections/EnhancedHero2026';
-import UltraFuturisticHero2029 from '../components/sections/UltraFuturisticHero2029';
-import { motion } from 'framer-motion';
-import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
-import { extraServices } from '../data/extra-services';
-import { additionalEnhancedServices } from '../data/additional-real-services';
-import { innovativeMicroSaasServices } from '../data/innovative-micro-saas-services';
-import { innovativeMicroSaasServicesV3 } from '../data/innovative-micro-saas-v3';
-import { innovativeAIServices } from '../data/innovative-ai-services';
-import { quantumSpaceServices } from '../data/quantum-space-services';
-import { quantumAIServices2025 } from '../data/quantum-ai-services-2025';
-import { enterpriseITServices } from '../data/enterprise-it-services';
-import { professionalServices } from '../data/professional-services';
-import { nextGenerationAIServices } from '../data/next-generation-ai-services';
-import { emergingTechnologyServices } from '../data/emerging-technology-services';
-import { emergingTechServices2025 } from '../data/emerging-tech-services-2025';
-import { comprehensiveITSolutions } from '../data/comprehensive-it-solutions';
-import { realMarketServices } from '../data/real-market-services';
-import { serviceExpansions2025 } from '../data/service-expansions-2025';
-import { verifiedRealServices2025Batch2 } from '../data/verified-real-services-2025-batch2';
-import { realOperationalServices } from '../data/real-operational-services';
-import { newOperationalServices2025 } from '../data/new-operational-services-2025';
-import { innovative2025Services } from '../data/innovative-2025-services';
-import { revolutionary2025Services } from '../data/revolutionary-2025-services';
-import { nextGenInnovations2025 } from '../data/next-gen-innovations-2025';
-import { innovative2026Services } from '../data/innovative-2026-services';
-import { emergingTech2026Services } from '../data/emerging-tech-2026-services';
-import { enterpriseIT2026Services } from '../data/enterprise-it-2026-services';
-import { innovative2026MicroSaasServices } from '../data/innovative-2026-micro-saas';
-import { emergingTech2026Services as emergingTech2026ServicesNew } from '../data/emerging-tech-2026-services';
-import { enterpriseIT2026Services as enterpriseIT2026ServicesNew } from '../data/enterprise-it-2026-services';
-import { innovative2026MicroSaasServicesV2 } from '../data/innovative-2026-micro-saas-v2';
-import { emergingTech2026ServicesV2 } from '../data/emerging-tech-2026-services-v2';
-import { enterpriseIT2026ServicesV2 } from '../data/enterprise-it-2026-services-v2';
-import { revolutionary2026Innovations } from '../data/revolutionary-2026-innovations';
-import { nextGenAI2026Services } from '../data/next-gen-ai-2026-services';
-import { aiAutonomousServices2026 } from '../data/2026-ai-autonomous-services';
-import { quantumSpaceTechServices2026 } from '../data/2026-quantum-space-tech-services';
-import { metaverseDigitalRealityServices2026 } from '../data/2026-metaverse-digital-reality-services';
-import { innovative2026AIServicesV3 } from '../data/innovative-2026-ai-services-v3';
-import { emergingTech2026ServicesV3 } from '../data/emerging-tech-2026-services-v3';
-import { enterpriseIT2026ServicesV3 } from '../data/enterprise-it-2026-services-v3';
-import { ultimate2026Services } from '../data/ultimate-2026-services';
-import { cuttingEdge2027Innovations } from '../data/2027-cutting-edge-innovations';
-import { practicalMicroSaas2027 } from '../data/2027-practical-micro-saas';
-import { revolutionary2026MicroSaasServices } from '../data/revolutionary-2026-micro-saas-services';
-import { revolutionary2026ITServices } from '../data/revolutionary-2026-it-services';
-import { revolutionary2026AIServices } from '../data/revolutionary-2026-ai-services';
-import { revolutionary2027Services } from '../data/revolutionary-2027-services';
-import { emergingTech2027Services } from '../data/emerging-tech-2027-services';
-import { revolutionary2027AIServices } from '../data/revolutionary-2027-ai-services';
-import { revolutionary2027ITServices } from '../data/revolutionary-2027-it-services';
-import { revolutionary2027MicroSaasServices } from '../data/revolutionary-2027-micro-saas';
-import { futuristic2028Services } from '../data/2028-futuristic-innovations';
-import { emergingTech2028Services } from '../data/2028-emerging-tech-services';
-import { futuristic2029AIServices } from '../data/2029-futuristic-ai-services';
-import { quantumInnovation2029Services } from '../data/2029-quantum-innovation-services';
-import { emergingTech2029Services } from '../data/2029-emerging-tech-services';
-import { enterpriseIT2029Services } from '../data/2029-enterprise-it-services';
-import { practicalBusiness2029Solutions } from '../data/2029-practical-business-solutions';
+import { ArrowRight, Brain, Cloud, Database, Rocket, Shield, Users, Zap, BarChart3, Star, TrendingUp, CheckCircle } from 'lucide-react'
+import Link from 'next/link'
+import React from 'react'
 
 export default function HomePage() {
   const heroStats = [
@@ -218,267 +147,121 @@ export default function HomePage() {
       
       <UltraFuturisticNavigation2029 />
 
-      <main className="relative z-10">
-        {/* Hero Section */}
-        <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-          <div className="container mx-auto px-4 py-20 text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="max-w-6xl mx-auto"
-            >
-              <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6 leading-tight">
-                Zion Tech Group
-              </h1>
-              <p className="text-xl md:text-2xl lg:text-3xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-                Revolutionizing the future with cutting-edge AI, quantum computing, and emerging technology solutions that transform businesses and drive innovation.
-              </p>
-              
-              <div className="flex flex-wrap justify-center gap-4 mb-12">
-                <Button
-                  href="/services"
-                  className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-4 text-lg font-semibold rounded-full transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
-                >
-                  Explore Services
-                  <ArrowRight className="ml-2 w-5 h-5" />
-                </Button>
-                <Button
-                  href="/contact"
-                  variant="outline"
-                  className="border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-gray-900 px-8 py-4 text-lg font-semibold rounded-full transition-all duration-300 transform hover:scale-105"
-                >
-                  Get Started
-                </Button>
-              </div>
+			{/* Features Section */}
+			<section className="py-24 sm:py-32 bg-gray-50">
+				<div className="mx-auto max-w-7xl px-6 lg:px-8">
+					<div className="mx-auto max-w-2xl text-center mb-16">
+						<h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Why Choose Zion Tech Group?</h2>
+						<p className="mt-6 text-lg text-gray-600">
+							We combine cutting-edge technology with deep industry expertise to deliver solutions that drive real business value.
+						</p>
+					</div>
+					<div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+						{features.map((feature) => (
+							<div key={feature.title} className="text-center group">
+								<div className={`mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-br ${feature.color} mb-6 group-hover:scale-110 transition-transform duration-300`}>
+									{React.createElement(feature.icon, { className: "h-8 w-8 text-white" })}
+								</div>
+								<h3 className="text-xl font-semibold text-gray-900 mb-4">{feature.title}</h3>
+								<p className="text-gray-600 mb-6">{feature.description}</p>
+								<Link
+									href={feature.href}
+									className="inline-flex items-center text-blue-600 hover:text-blue-500 font-medium"
+								>
+									Learn More <ArrowRight className="ml-2 h-4 w-4" />
+								</Link>
+							</div>
+						))}
+					</div>
+				</div>
+			</section>
 
-              {/* Hero Stats */}
-              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 mt-16">
-                {heroStats.map((stat, index) => (
-                  <motion.div
-                    key={stat.label}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: index * 0.1 }}
-                    className="text-center"
-                  >
-                    <div className={`${stat.color} mb-2 flex justify-center`}>
-                      {stat.icon}
-                    </div>
-                    <div className="text-2xl md:text-3xl font-bold text-white mb-1">
-                      {stat.value}
-                    </div>
-                    <div className="text-sm text-gray-400">
-                      {stat.label}
-                    </div>
-                  </motion.div>
-                ))}
-              </div>
-            </motion.div>
-          </div>
-        </section>
+			{/* Benefits Section */}
+			<section className="py-24 sm:py-32 bg-white">
+				<div className="mx-auto max-w-7xl px-6 lg:px-8">
+					<div className="grid lg:grid-cols-2 gap-12 items-center">
+						<div>
+							<h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl mb-6">
+								Transform Your Business with Advanced Technology
+							</h2>
+							<p className="text-lg text-gray-600 mb-8">
+								Our comprehensive suite of services empowers businesses to innovate, scale, and compete in the digital age.
+							</p>
+							<div className="space-y-4">
+								{benefits.map((benefit, index) => (
+									<div key={index} className="flex items-start space-x-3">
+										<CheckCircle className="h-6 w-6 text-green-500 mt-0.5 flex-shrink-0" />
+										<span className="text-gray-700">{benefit}</span>
+									</div>
+								))}
+							</div>
+							<div className="mt-8">
+								<Link
+									href="/services"
+									className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
+								>
+									View All Services
+									<ArrowRight className="ml-2 h-4 w-4" />
+								</Link>
+							</div>
+						</div>
+						<div className="relative">
+							<div className="aspect-square bg-gradient-to-br from-blue-100 to-purple-100 rounded-2xl p-8">
+								<div className="grid grid-cols-2 gap-4 h-full">
+									<div className="space-y-4">
+										<div className="h-20 bg-white rounded-lg shadow-sm flex items-center justify-center">
+											<Brain className="h-8 w-8 text-purple-600" />
+										</div>
+										<div className="h-16 bg-white rounded-lg shadow-sm flex items-center justify-center">
+											<Cloud className="h-6 w-6 text-blue-600" />
+										</div>
+									</div>
+									<div className="space-y-4 pt-8">
+										<div className="h-16 bg-white rounded-lg shadow-sm flex items-center justify-center">
+											<Shield className="h-6 w-6 text-red-600" />
+										</div>
+										<div className="h-20 bg-white rounded-lg shadow-sm flex items-center justify-center">
+											<BarChart3 className="h-8 w-8 text-green-600" />
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
 
-        {/* Hero Features */}
-        <section className="py-20 bg-gradient-to-b from-gray-900/50 to-gray-900/80 backdrop-blur-sm">
-          <div className="container mx-auto px-4">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="text-center mb-16"
-            >
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Revolutionary Technology Solutions
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Discover our cutting-edge platforms that are reshaping industries and driving the future of technology.
-              </p>
-            </motion.div>
+			{/* CTA Section */}
+			<section className="py-24 sm:py-32 bg-gradient-to-r from-blue-600 to-purple-600">
+				<div className="mx-auto max-w-7xl px-6 lg:px-8">
+					<div className="mx-auto max-w-2xl text-center">
+						<h2 className="text-3xl font-bold tracking-tight text-gray-900">Ready to Transform Your Business?</h2>
+						<p className="mt-6 text-lg leading-8 text-gray-600">
+							Let's discuss how our AI, cloud, and cybersecurity solutions can help you achieve your technology goals.
+						</p>
+						<div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+							<Link
+								href="/contact"
+								className="rounded-md bg-blue-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
+							>
+								Get Started Today
+							</Link>
+							<Link
+								href="/about"
+								className="text-sm font-semibold leading-6 text-gray-900"
+							>
+								Learn More About Us
+							</Link>
+						</div>
+					</div>
+				</div>
+			</section>
+		</>
+	)
+}
+import React from 'react';
+import Homepage2025 from '../components/Homepage2025';
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {heroFeatures.map((feature, index) => (
-                <motion.div
-                  key={feature.title}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="group"
-                >
-                  <Link href={feature.href} className="block">
-                    <div className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-6 h-full transition-all duration-300 hover:border-cyan-400/50 hover:shadow-2xl hover:shadow-cyan-400/20 group-hover:scale-105">
-                      <div className="text-4xl mb-4">{feature.icon}</div>
-                      <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-cyan-400 transition-colors">
-                        {feature.title}
-                      </h3>
-                      <p className="text-gray-400 mb-4 text-sm leading-relaxed">
-                        {feature.description}
-                      </p>
-                      {feature.price && (
-                        <div className="text-cyan-400 font-semibold text-lg mb-3">
-                          {feature.price}
-                        </div>
-                      )}
-                      {feature.category && (
-                        <span className="inline-block bg-gradient-to-r from-cyan-500/20 to-blue-500/20 text-cyan-400 text-xs px-3 py-1 rounded-full border border-cyan-400/30">
-                          {feature.category}
-                        </span>
-                      )}
-                    </div>
-                  </Link>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Service Statistics */}
-        <section className="py-20 bg-gradient-to-b from-gray-900/80 to-gray-900">
-          <div className="container mx-auto px-4">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="text-center mb-16"
-            >
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Our Service Portfolio
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Comprehensive technology solutions spanning AI, quantum computing, space technology, and enterprise IT.
-              </p>
-            </motion.div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              <motion.div
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
-                className="text-center bg-gradient-to-br from-blue-600/20 to-purple-600/20 backdrop-blur-sm border border-blue-500/30 rounded-2xl p-8"
-              >
-                <div className="text-5xl mb-4">🚀</div>
-                <div className="text-4xl font-bold text-white mb-2">{serviceStats.totalServices}+</div>
-                <div className="text-gray-300">Total Services</div>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.6, delay: 0.1 }}
-                viewport={{ once: true }}
-                className="text-center bg-gradient-to-br from-green-600/20 to-emerald-600/20 backdrop-blur-sm border border-green-500/30 rounded-2xl p-8"
-              >
-                <div className="text-5xl mb-4">🤖</div>
-                <div className="text-4xl font-bold text-white mb-2">{serviceStats.aiServices}+</div>
-                <div className="text-gray-300">AI Services</div>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-                viewport={{ once: true }}
-                className="text-center bg-gradient-to-br from-purple-600/20 to-indigo-600/20 backdrop-blur-sm border border-purple-500/30 rounded-2xl p-8"
-              >
-                <div className="text-5xl mb-4">⚛️</div>
-                <div className="text-4xl font-bold text-white mb-2">{serviceStats.quantumServices}+</div>
-                <div className="text-gray-300">Quantum Services</div>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.6, delay: 0.3 }}
-                viewport={{ once: true }}
-                className="text-center bg-gradient-to-br from-cyan-600/20 to-blue-600/20 backdrop-blur-sm border border-cyan-500/30 rounded-2xl p-8"
-              >
-                <div className="text-5xl mb-4">🌌</div>
-                <div className="text-4xl font-bold text-white mb-2">{serviceStats.spaceServices}+</div>
-                <div className="text-gray-300">Space Tech</div>
-              </motion.div>
-            </div>
-          </div>
-        </section>
-
-        {/* Contact Information */}
-        <section className="py-20 bg-gradient-to-b from-gray-900 to-black">
-          <div className="container mx-auto px-4">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="text-center mb-16"
-            >
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Get In Touch
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Ready to transform your business with cutting-edge technology? Contact us today.
-              </p>
-            </motion.div>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
-                className="text-center bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-8"
-              >
-                <Phone className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-white mb-3">Phone</h3>
-                <p className="text-gray-300">{contactInfo.mobile}</p>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.1 }}
-                viewport={{ once: true }}
-                className="text-center bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-8"
-              >
-                <Mail className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-white mb-3">Email</h3>
-                <p className="text-gray-300">{contactInfo.email}</p>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-                viewport={{ once: true }}
-                className="text-center bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-8"
-              >
-                <MapPin className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-white mb-3">Address</h3>
-                <p className="text-gray-300 text-sm">{contactInfo.address}</p>
-              </motion.div>
-            </div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.3 }}
-              viewport={{ once: true }}
-              className="text-center mt-12"
-            >
-              <Button
-                href="/contact"
-                className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white px-10 py-4 text-xl font-semibold rounded-full transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
-              >
-                Start Your Journey
-                <Rocket className="ml-2 w-6 h-6" />
-              </Button>
-            </motion.div>
-          </div>
-        </section>
-      </main>
-
-      <UltraFuturisticFooter2029 />
-    </>
-  );
+export default function HomePage() {
+  return <Homepage2025 />;
 }

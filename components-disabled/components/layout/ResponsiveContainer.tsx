@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-interface ResponsiveContainerProps {,
+
+interface ResponsiveContainerProps {
   children: React.ReactNode;
   variant?: 'default' | 'wide' | 'narrow' | 'full';
   padding?: 'none' | 'sm' | 'md' | 'lg' | 'xl';

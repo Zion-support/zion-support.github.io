@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
-import {,
-  Search, Filter, Star, CheckCircle, ArrowRight;
-  Brain, Atom, Shield, Rocket, Target, Microscope;
-  Phone, Mail, MapPin, TrendingUp, Users, Award;
-  Zap, Globe, Cpu, Database, Lock, Cloud;
-  Stethoscope, GraduationCap, Leaf, Truck,
+import { 
+  Search, Filter, Star, CheckCircle, ArrowRight, 
+  Brain, Atom, Shield, Rocket, Target, Microscope,
+  Phone, Mail, MapPin, TrendingUp, Users, Award,
+  Zap, Globe, Cpu, Database, Lock, Cloud,
+  Stethoscope, GraduationCap, Leaf, Truck
 } from 'lucide-react';
 import Layout from '../components/layout/Layout';
 // Import all the new 2025 innovative service data,

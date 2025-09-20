@@ -34,9 +34,16 @@ export default function CategoryDetail({ }: CategoryDetailProps) {,
       <p>This component is currently under development.</p>,
     </div>,
   );
+
+
+=======
+=======
+
+
 }
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee,
-:src.disabled/src/pages.disabled/CategoryDetail.jsx,
+=======
+
+:src.disabled/src/pages.disabled/CategoryDetail.jsx
 }
 }
 ursor/add-new-services-and-deploy-updates-0462,

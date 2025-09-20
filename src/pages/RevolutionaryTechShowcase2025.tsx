@@ -275,7 +275,6 @@ const RevolutionaryTechShowcase2025: React.FC = () => {
           </motion.div>
       </motion.div>
     </>
-    </>
   );
 };
 

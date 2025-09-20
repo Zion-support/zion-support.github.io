@@ -1,10 +1,82 @@
-import React from 'react',
+import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { 
+  Clock, 
+  Target, 
+  Zap, 
+  Shield, 
+  Users, 
+  Rocket,
+  ArrowRight 
+} from 'lucide-react';
 
-const HowItWorksSection: React.FC = () => {,
-  return (,
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">,
-      <h3 className="text-xl font-bold mb-4">HowItWorksSection</h3>,
-      <p className="text-gray-300">Revolutionary technology component</p>,
-    </div>,
-  ),};
+const HowItWorksSection = () => {
+  const [hoveredStep, setHoveredStep] = useState(null);
+
+  const steps = [
+    {
+      number: "01",
+      title: "Discovery & Planning",
+      description: "We analyze your requirements and create a comprehensive project roadmap.",
+      duration: "1-2 weeks",
+      success: "99% accuracy",
+      details: [
+        "Requirements gathering",
+        "Technical architecture",
+        "Project timeline",
+        "Resource allocation"
+      ]
+    },
+    {
+      number: "02",
+      title: "Development & Testing",
+      description: "Our expert team builds your solution with rigorous quality assurance.",
+      duration: "4-8 weeks",
+      success: "95% efficiency",
+      details: [
+        "Agile development",
+        "Continuous testing",
+        "Code review",
+        "Performance optimization"
+      ]
+    },
+    {
+      number: "03",
+      title: "Deployment & Launch",
+      description: "Seamless deployment with monitoring and support for smooth operation.",
+      duration: "1-2 weeks",
+      success: "100% uptime",
+      details: [
+        "Production deployment",
+        "Performance monitoring",
+        "User training",
+        "Ongoing support"
+      ]
+    }
+  ];
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2
+      }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0 }
+  };
+
+const HowItWorksSection: React.FC = () => {
+  return (
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">HowItWorksSection</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
+  );
+};
+
 export default HowItWorksSection;

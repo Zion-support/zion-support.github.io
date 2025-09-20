@@ -1,10 +1,26 @@
-import React from 'react',
+import React, { useState, useEffect, useRef } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Search, X, Filter, ArrowRight, Globe, Brain, Shield, Rocket, Atom } from 'lucide-react';
+import Link from 'next/link';
+import AccessibilityEnhancer from './AccessibilityEnhancer';
 
-const SearchComponent: React.FC = () => {,
-  return (,
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">,
-      <h3 className="text-xl font-bold mb-4">SearchComponent</h3>,
-      <p className="text-gray-300">Revolutionary technology component</p>,
-    </div>,
-  ),};
+interface SearchResult {
+  id: string;
+  title: string;
+  description: string;
+  type: 'service' | 'solution' | 'page' | 'resource';
+  url: string;
+  category: string;
+  tags: string[];
+}
+
+const SearchComponent: React.FC = () => {
+  return (
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">SearchComponent</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
+  );
+};
+
 export default SearchComponent;

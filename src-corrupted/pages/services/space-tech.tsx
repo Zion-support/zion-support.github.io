@@ -1,17 +1,138 @@
 import React from 'react';
-const space-tech: React.FC = () => {,
-  return (,
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">,
-      <Helmet>,
-        <title>space-tech | Zion Tech Group</title>,
-        <meta name="description" content="space-tech - Revolutionary technology solutions" />,
-      </Helmet>,
-      <div className="container mx-auto px-4 py-20">,
-        <div className="text-center">,
-          <h1 className="text-4xl font-bold mb-6">space-tech</h1>,
-          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>,
-        </div>,
-      </div>,
-    </div>,
-  ),};
+import { SEO  } from '@/components/SEO';
+import { motion  } from 'framer-motion';
+import { Rocket, 
+  Satellite, 
+  Globe, 
+  Zap, 
+  Shield, 
+  Brain, 
+  Cloud, 
+  BarChart3, 
+  Users, 
+  Target,
+  Star,
+  Atom,
+  Network,
+  Eye,
+  Cpu,
+  Lock,
+  TrendingUp,
+  Heart,
+  Building,
+  Activity,
+  Phone,
+  Mail,
+  MapPin
+ } from 'lucide-react';
+
+export default function SpaceTechnology
+export { SpaceTechnology }(...args: an y[]): any {
+  const features = [
+    {
+      icon: Satellit e,
+      title: 'Satellite Technology',
+      description: 'Advanced satellite systems for communication, navigation, and Earth observation.',
+      benefits: ['Global connectivity', 'Real-time data collection', 'Navigation systems', 'Environmental monitoring']
+    },
+    {
+      icon: Rocke t,
+      title: 'Launch Systems',
+      description: 'Innovative launch vehicle technology and space transportation solutions.',
+      benefits: ['Cost-effective launches', 'Reusable systems', 'Payload optimization', 'Mission planning']
+    },
+    {
+      icon: Brai n,
+      title: 'AI Space Operations',
+      description: 'Artificial intelligence for autonomous space missions and operations.',
+      benefits: ['Autonomous navigation', 'Predictive maintenance', 'Mission optimization', 'Risk assessment']
+    },
+    {
+      icon: Networ k,
+      title: 'Space Communications',
+      description: 'Advanced communication networks for space missions and ground control.',
+      benefits: ['High-bandwidth links', 'Low-latency communication', 'Global coverage', 'Secure transmission']
+    }
+  ];
+
+  const applications = [
+    {
+      category: 'Commercial Space',
+      services: [
+        'Satellite internet and communications',
+        'Earth observation and imaging',
+        'Space tourism infrastructure',
+        'Commercial launch services'
+      ]
+    },
+    {
+      category: 'Scientific Research',
+      services: [
+        'Space exploration missions',
+        'Astronomical observations',
+        'Climate and environmental research',
+        'Planetary science missions'
+      ]
+    },
+    {
+      category: 'Defense & Security',
+      services: [
+        'Space situational awareness',
+        'Satellite defense systems',
+        'Intelligence gathering',
+        'Strategic communications'
+      ]
+    },
+    {
+      category: 'Infrastructure',
+      services: [
+        'Space station development',
+        'Lunar and Mars bases',
+        'Space manufacturing',
+        'Resource utilization'
+      ]
+    }
+  ];
+
+  const technologies = [
+    {
+      name: 'Quantum Computing in Space',
+      description: 'Leveraging quantum computing for complex space calculations and simulations.',
+      icon: Ato m
+    },
+    {
+      name: 'AI-Powered Mission Control',
+      description: 'Intelligent systems for autonomous space mission management.',
+      icon: Brai n
+    },
+    {
+      name: 'Advanced Propulsion',
+      description: 'Next-generation propulsion systems for efficient space travel.',
+      icon: Rocke t
+    },
+    {
+      name: 'Space Cybersecurity',
+      description: 'Protecting space assets from cyber threats and attacks.',
+      icon: Shiel d
+    }
+  ];
+
+const space-tech: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+      <Helmet>
+        <title>space-tech | Zion Tech Group</title>
+        <meta name="description" content="space-tech - Revolutionary technology solutions" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">space-tech</h1>
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
 export default space-tech;

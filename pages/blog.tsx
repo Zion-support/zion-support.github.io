@@ -1,15 +1,6 @@
-import React from 'react';
-import Head from 'next/head';
-import { motion } from 'framer-motion';
-import { 
-  Calendar, 
-  User, 
-  Tag, 
-  ArrowRight,
-  Search,
-  Filter,
-  Eye
-} from 'lucide-react';
+import React from 'react'
+import Link from 'next/link'
+import { Calendar, User, ArrowRight, Tag, Clock, TrendingUp } from 'lucide-react'
 
 const Blog = () => {
   const featuredPosts = [
@@ -358,10 +349,8 @@ const Blog = () => {
               </button>
             </motion.div>
           </div>
-        </section>
-      </div>
-    </>
-  );
-};
-
-export default Blog;
+        </div>
+      </section>
+    </div>
+  )
+}

@@ -1,10 +1,95 @@
-import React from 'react',
+import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { 
+  ArrowRight, ExternalLink, Star, Zap, Shield, 
+  TrendingUp, Clock, DollarSign, Check, Sparkles,
+  Brain, Rocket, Globe, FlaskConical, Cpu, Factory
+} from 'lucide-react';
+import Button from '../ui/Button';
+import { EnhancedRealMicroSaasService } from '../../data/enhanced-real-micro-saas-services';
 
-const EnhancedServicesShowcase: React.FC = () => {,
-  return (,
-    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">,
-      <h3 className="text-xl font-bold mb-4">EnhancedServicesShowcase</h3>,
-      <p className="text-gray-300">Revolutionary technology component</p>,
-    </div>,
-  ),};
+interface EnhancedServicesShowcaseProps {
+  services: EnhancedRealMicroSaasService[];
+  title?: string;
+  subtitle?: string;
+  showFilters?: boolean;
+  maxServices?: number;
+}
+
+export default function EnhancedServicesShowcase({
+  services,
+  title = "Revolutionary Micro SAAS Services",
+  subtitle = "Discover cutting-edge solutions that transform your business",
+  showFilters = true,
+  maxServices
+}: EnhancedServicesShowcaseProps) {
+  const [selectedCategory, setSelectedCategory] = useState('All');
+  const [sortBy, setSortBy] = useState<'innovation' | 'price' | 'rating' | 'name'>('innovation');
+  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
+
+  const categories = ['All', ...Array.from(new Set(services.map(s => s.category)))];
+  
+  const filteredServices = maxServices 
+    ? services.slice(0, maxServices)
+    : services.filter(service => 
+        selectedCategory === 'All' || service.category === selectedCategory
+      );
+
+  // Sort services
+  filteredServices.sort((a, b) => {
+    switch (sortBy) {
+      case 'innovation':
+        return (b.realImplementation ? 1 : 0) - (a.realImplementation ? 1 : 0) || 
+               (b.popular ? 1 : 0) - (a.popular ? 1 : 0);
+      case 'price':
+        return parseFloat(a.price.replace('$', '').replace(',', '')) - 
+               parseFloat(b.price.replace('$', '').replace(',', ''));
+      case 'rating':
+        return b.rating - a.rating;
+      case 'name':
+        return a.name.localeCompare(b.name);
+      default:
+        return 0;
+    }
+  });
+
+  const getVariantColor = (variant: string) => {
+    switch (variant) {
+      case 'quantum-advanced':
+      case 'quantum-cyberpunk':
+      case 'quantum-space':
+        return 'from-cyan-500 to-blue-600';
+      case 'holographic-matrix':
+      case 'holographic-neural':
+        return 'from-purple-500 to-pink-600';
+      case 'neural-quantum':
+      case 'neural-cyberpunk':
+        return 'from-green-500 to-teal-600';
+      case 'cyberpunk-holographic':
+        return 'from-red-500 to-orange-600';
+      default:
+        return 'from-cyan-500 to-purple-600';
+    }
+  };
+
+  const getCategoryIcon = (category: string) => {
+    if (category.includes('Quantum') || category.includes('AI')) return <Brain className="w-5 h-5" />;
+    if (category.includes('Manufacturing') || category.includes('Autonomous')) return <Factory className="w-5 h-5" />;
+    if (category.includes('Cybersecurity') || category.includes('Security')) return <Shield className="w-5 h-5" />;
+    if (category.includes('Space') || category.includes('Aerospace')) return <Rocket className="w-5 h-5" />;
+    if (category.includes('Metaverse') || category.includes('VR')) return <Globe className="w-5 h-5" />;
+    if (category.includes('Healthcare') || category.includes('Biomedical')) return <FlaskConical className="w-5 h-5" />;
+    if (category.includes('Finance') || category.includes('Trading')) return <TrendingUp className="w-5 h-5" />;
+    return <Cpu className="w-5 h-5" />;
+  };
+
+const EnhancedServicesShowcase: React.FC = () => {
+  return (
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">EnhancedServicesShowcase</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
+  );
+};
+
 export default EnhancedServicesShowcase;

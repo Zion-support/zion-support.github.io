@@ -1,17 +1,86 @@
 import React from 'react';
-  return (,
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">,
-      <Helmet>,
-        <title>AISEO | Zion Tech Group</title>,
-        <meta name="description" content="AISEO - Revolutionary technology solutions" />,
-      </Helmet>,
-      <div className="container mx-auto px-4 py-20">,
-        <div className="text-center">,
-          <h1 className="text-4xl font-bold mb-6">AISEO</h1>,
-          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>,
-        </div>,
-      </div>,
-    </div>,
+import { motion  } from 'framer-motion';
+import { Search, 
+  TrendingUp, 
+  Target, 
+  BarChart3, 
+  CheckCircle,
+  ArrowRight,
+  Star,
+  Globe,
+  Cpu,
+  Database,
+  ChartBar,
+  PieChart,
+  Activity,
+  Eye,
+  Clock,
+  DollarSign,
+  Award,
+  MessageSquare,
+  Share2,
+  Brain,
+  Zap,
+  Shield
+ } from 'lucide-react';
+
+const AISEO: Reac t.FC = (): JSX.Element => {
+  const features = [
+    {
+      icon: Brai n,
+      title: 'AI-Powered Keyword Research',
+      description: 'Advanced algorithms to discover high-value keywords and search opportunities'
+    },
+    {
+      icon: Targe t,
+      title: 'Content Optimization',
+      description: 'AI-driven recommendations to improve content relevance and search rankings'
+    },
+    {
+      icon: TrendingU p,
+      title: 'Performance Tracking',
+      description: 'Real-time monitoring of SEO metrics and ranking improvements'
+    },
+    {
+      icon: Shiel d,
+      title: 'Technical SEO Audit',
+      description: 'Automated detection and fixing of technical SEO issues'
+    },
+    {
+      icon: Za p,
+      title: 'Competitive Analysis',
+      description: 'AI-powered insights into competitor strategies and opportunities'
+    },
+    {
+      icon: BarChart 3,
+      title: 'Ranking Predictions',
+      description: 'Predict future ranking changes based on current optimization efforts'
+    }
+  ];
+
+  const benefits = [
+    'Improve search rankings by 40%',
+    'Increase organic traffic by 60%',
+    'Reduce SEO audit time by 80%',
+    'Boost conversion rates by 25%',
+    'Identify new keyword opportunities',
+    'Automate technical SEO fixes'
+  ];
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 text-white">
+      <Helmet>
+        <title>AISEO | Zion Tech Group</title>
+        <meta name="description" content="AISEO - Revolutionary technology solutions" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-6">AISEO</h1>
+          <p className="text-xl text-gray-300">Revolutionary technology solutions</p>
+        </div>
+      </div>
+    </div>
   );
 };
 export default AISEO;

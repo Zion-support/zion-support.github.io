@@ -1,0 +1,115 @@
+<<<<<<< HEAD
+
+const ClientSuccessStoriesSection: React.FC = () => {
+  return (
+    <div className="p-6 bg-gradient-to-br from-blue-900 to-purple-900 text-white rounded-lg">
+      <h3 className="text-xl font-bold mb-4">ClientSuccessStoriesSection</h3>
+      <p className="text-gray-300">Revolutionary technology component</p>
+    </div>
+  );
+};
+=======
+import {  import { motion  } from 'framer-motion';
+;
+ params - Function parameters;
+ * @returns {*} Function return value;
+ */;
+function ClientSuccessStoriesSection("props": "any) {;
+export function ClientSuccessStoriesSection("props": any) {;
+  return (";
+    <section className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">";
+      <div className="max-w-7xl mx-auto px-6">;
+        <motion.div ";
+          className="text-center mb-16";
+          initial = {;
+  { "opacity": 0",;
+  "y": "2 0;
+"}}
+          whileInView = {;
+  { "opacity": "1",;
+  "y": "0;
+"}}
+          viewport={{ "once": "tru e "}}
+          transition={{ "duration": "0.6 "}}
+        >";
+          <h2 className="text-4xl "md": "tex t-5xl font-bold text-white mb-4">;
+            Client Success Stories;
+          </h2>";
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">;
+            Real results from real clients.Discover how we've helped businesses;
+            across industries achieve remarkable transformations and measurable success.</p>;
+        </motion.div>;
+          initial = {;
+  { "opacity": 0",;
+  "y": "2 0;
+"}}
+          whileInView = {;
+  { "opacity": "1",;
+  "y": "0;
+"}}
+          transition = {;
+  { "duration": "0.6",;
+  "delay": "0.1;
+"}}";
+          className="grid grid-cols-2 "md": "gri d-cols-4 gap-8 mb-16";
+        > {successMetrics.map ( (metric", index) => {;
+            ;
+            return (";
+              <div key = {metric.label} className="text-center">";
+                <div className="flex justify-center mb-4">";
+                  <div className="p-3 bg-green-100 rounded-full">";
+                    <IconComponent className="h-8 w-8 text-green-600"   />                  </div>;
+                </div>";
+                <div className="text-3xl font-bold text-gray-900 mb-2">;
+                  {metric.value}
+                </div>";
+                <div className="text-gray-600">{metric.label}</div>;
+              </div>;
+            )})}
+        </motion.div>;
+        {/* Testimonials Grid */}";
+        <div className="grid "md": "gri d-cols-2 gap-8 mb-12">;
+          {testimonials.map((testimonial", index)  => (";
+        <div className="grid grid-cols-1 "lg": "gri d-cols-3 gap-8 mb-16">;
+          {successStories.map((story", index) => (;
+            <motion.div;
+              key={story.id}";
+              className="bg-slate-800 border border-slate-700 rounded-xl overflow-hidden "hover": "borde r-blue-500/50 transition-all duration-300 "hover": shado w-lg "hover": shado w-blue-500/25";
+              initial = {;
+  { "opacity": 0",;
+  "y": "3 0;
+"}}
+              whileInView = {;
+  { "opacity": "1",;
+  "y": "0;
+"}}
+              viewport={{ "once": "tru e "}}
+              transition = {;
+  { "duration": "0.6",;
+  "delay": "inde x * 0.1;
+"}}
+            >";
+              <div className="flex items-center mb-6">";
+                <div className="text-4xl mr-4">{testimonial.avatar}</div>;
+                <div>";
+                  <h3 className="text-xl font-bold text-gray-900">;
+                    {testimonial.name}
+                  "
+                  <p className="text-gray-600">{testimonial.role}</p>"
+                  <p className="text-blue-600 font-medium">{testimonial.comp}</p>
+                </div>"
+                <div className="absolute top-3 right-3">"
+                  <div className="flex items-center gap-1">
+                    {[...Array(story.rating)].map((_, i) => ("
+                      <span key={i} className="text-yellow-400 text-sm">★</span>
+                    ))}
+                  </div>;
+                </div>;
+              </div>;
+              <div className="p -6">;
+                <h3 className="text-xl font - bold text-white mb-2">;
+                  {story.client}
+                
+>>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-7bc1
+
+export default ClientSuccessStoriesSection;

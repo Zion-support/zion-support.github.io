@@ -216,15 +216,20 @@ bash -n script-name.sh
 bash -x script-name.sh
 ```
 
-## 🔒 **SAFETY MEASURES**
+   (content from feature branch)
+   ```
+=======
+      (content from main branch)
+      (content from feature branch)
+      ```
 
-### **Backup Strategy**
-- **Automatic Backups**: Created before each major operation
-- **Backup Naming**: `backup-YYYYMMDD-HHMMSS`
-- **Backup Storage**: Pushed to remote repository
-- **Rollback Capability**: Easy restoration from backup
-
-### **Recovery Procedures**
+3. **Resolve conflicts by:**
+   - Keeping both changes where appropriate
+   - Choosing the feature branch changes for new content
+=======
+   - Removing conflict markers (`<<<<<<<`, ``, `>>>>>>>`)
+=======
+### 6. Process All Open PRs
 ```bash
 # List available backups
 git branch -r | grep backup

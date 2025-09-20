@@ -34,9 +34,16 @@ export default function Cart({ }: CartProps) {,
       <p>This component is currently under development.</p>,
     </div>,
   );
+
+
+=======
+=======
+
+
 }
->>>>>>> origin/cursor/fix-netlify-build-and-merge-to-main-2eee,
-:src.disabled/src/pages.disabled/Cart.jsx,
+=======
+
+:src.disabled/src/pages.disabled/Cart.jsx
 }
 }
 ursor/add-new-services-and-deploy-updates-0462,

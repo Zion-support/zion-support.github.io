@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const NextGenInnovationHub2032: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-emerald-900 via-teal-900 to-cyan-900 text-white">
+    <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white">
       <div className="container mx-auto px-4 py-16">
         {/* Hero Section */}
         <div className="text-center mb-16">
@@ -315,6 +315,10 @@ const NextGenInnovationHub2032: React.FC = () => {
             <button className="border-2 border-emerald-400 text-emerald-400 px-10 py-4 rounded-lg hover:bg-emerald-400 hover:text-white transition-all duration-300 font-semibold text-lg"></button>
               Schedule Tour</button>
             </button>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 };
 

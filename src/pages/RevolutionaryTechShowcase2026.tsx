@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 const RevolutionaryTechShowcase2026: React.FC = () => {
-  const [selectedTech, setSelectedTech] = useState('ai');
+  const [activeTab, setActiveTab] = useState('ai');
 
   const technologies = [
     {
@@ -100,48 +100,37 @@ const RevolutionaryTechShowcase2026: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 text-white">
-      <div className="container mx-auto px-4 py-16">
-        {/* Hero Section */}
-        <div className="text-center mb-16">
-          <div className="inline-block px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
-            🚀 REVOLUTIONARY TECH • 2026
-          </div>
-          <h1 className="text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-            Revolutionary Tech Showcase 2026
-          </h1>
-          <p className="text-xl md:text-2xl mb-8 text-gray-300 max-w-4xl mx-auto">
-            Witness the future of technology. Our revolutionary innovations are reshaping reality, 
-            transcending limitations, and creating possibilities that were once thought impossible.
-          </p>
-          <div className="flex flex-wrap justify-center gap-4 mb-12">
-            <button className="bg-gradient-to-r from-purple-600 to-pink-600 px-8 py-4 rounded-lg hover:shadow-2xl transition-all duration-300 font-semibold text-lg">
-              Explore Technologies →
-            </button>
-            <button className="border-2 border-purple-400 text-purple-400 px-8 py-4 rounded-lg hover:bg-purple-400 hover:text-black transition-all duration-300 font-semibold text-lg">
-              Schedule Demo
-            </button>
+      {/* Hero Section */}
+      <div className="relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm"></div>
+        <div className="relative z-10 container mx-auto px-4 py-20">
+          <div className="text-center">
+            <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full text-sm font-bold mb-6 animate-pulse">
+              🚀 Revolutionary Technology 2026
+            </div>
+            <h1 className="text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+              Tech Revolution
+            </h1>
+            <p className="text-xl md:text-2xl text-purple-200 mb-8 max-w-4xl mx-auto">
+              Experience the future of technology with our revolutionary innovations
+              that are reshaping the world as we know it.
+            </p>
+            <div className="flex flex-wrap justify-center gap-4">
+              <button className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-300">
+                Explore Now
+              </button>
+              <button className="border border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold hover:bg-purple-400 hover:text-white transition-all duration-300">
+                Learn More
+              </button>
+            </div>
           </div>
         </div>
 
-        {/* Technology Selector */}
-        <div className="mb-12">
-          <h2 className="text-3xl font-bold text-center mb-8">Select Technology</h2>
-          <div className="flex flex-wrap justify-center gap-4">
-            {technologies.map((tech) => (
-              <button
-                key={tech.id}
-                onClick={() => setSelectedTech(tech.id)}
-                className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
-                  selectedTech === tech.id
-                    ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white shadow-lg'
-                    : 'bg-white/10 text-gray-300 hover:bg-white/20'
-                }`}
-              >
-                <span className="mr-2">{tech.icon}</span>
-                {tech.name}
-              </button>
-            ))}
-          </div>
+      {/* Technology Tabs */}
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center mb-12">
+          <h2 className="text-4xl font-bold mb-4">Revolutionary Technologies</h2>
+          <p className="text-xl text-purple-200">Choose a technology to explore</p>
         </div>
 
         {/* Selected Technology Details */}
@@ -229,8 +218,8 @@ const RevolutionaryTechShowcase2026: React.FC = () => {
             <button className="bg-gradient-to-r from-purple-600 to-pink-600 px-8 py-4 rounded-lg hover:shadow-2xl transition-all duration-300 font-semibold text-lg">
               Get Early Access →
             </button>
-            <button className="border-2 border-purple-400 text-purple-400 px-8 py-4 rounded-lg hover:bg-purple-400 hover:text-black transition-all duration-300 font-semibold text-lg">
-              Contact Our Team
+            <button className="border border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold hover:bg-purple-400 hover:text-white transition-all duration-300">
+              Contact Us
             </button>
           </div>
         </div>

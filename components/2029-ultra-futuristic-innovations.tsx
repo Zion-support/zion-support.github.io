@@ -1,3 +1,65 @@
+
+
+
+
+} from 'lucide-react';import UltraFuturisticBackground2029 from '../components/backgrounds/UltraFuturisticBackground2029';import { Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, Star, TrendingUp, Eye, Timer } from 'lucide-react';
+
+
+
+import UltraFuturisticBackground2029 from '../components/backgrounds/UltraFuturisticBackground2029';
+import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029';
+import UltraFuturisticFooter2029 from '../components/layout/UltraFuturisticFooter2029';
+
+import UltraFuturistic2029ServiceShowcase from '../components/sections/UltraFuturistic2029ServiceShowcase';
+import { cuttingEdge2029Services  } from '../data/2029-cutting-edge-innovations';
+import { ultimateMicroSaasServices } from '../data/ultimate-micro-saas-services';
+
+
+  const contactInfo = {
+    mobile: '+1 302 464 0950'
+    email: 'kleber@ziontechgroup.com'
+    address: '364 E Main St STE 1008 Middletown DE 19709'
+    website: 'https://ziontechgroup.com'
+  }
+    mobile: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',
+    website: 'https://ziontechgroup.com',;
+  };
+
+  const contactInfo = {
+    mobile: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',
+    website: 'https://ziontechgroup.com',;
+  };
+
+
+  const all2029Services = [
+    ...cuttingEdgeInnovations2029
+    ...spaceColonization2029Services
+  ];    website: 'https://ziontechgroup.com'
+  }
+
+
+
+
+
+export default function UltraFuturistic2029InnovationsPage() {;
+  const contactInfo = {;
+    mobile: '+1 302 464 0950',;
+    email: 'kleber@ziontechgroup && ziontechgroup.com',;
+    address: '364 E Main St STE 1008 Middletown DE 19709',;
+    website: 'https://ziontechgroup && ziontechgroup.com',;
+  };
+
+
+  const all2029Services = [...cuttingEdgeInnovations2029, ...spaceColonization2029Services];
+
+
+  const all2029Services = [...cuttingEdgeInnovations2029, ...spaceColonization2029Services];
+  return (
+
 import React from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
