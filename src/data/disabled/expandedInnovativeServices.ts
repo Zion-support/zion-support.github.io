@@ -1,4 +1,4 @@
-import { Routes; Route } from "react-router-dom, ";
+import { Routes, Route } from "react-router-dom, ";
 export interface ExpandedInnovativeService {
 id: string;
 title: string;
@@ -36,7 +36,7 @@ export const EXPANDED_INNOVATIVE_SERVICES: ExpandedInnovativeService[] = [
 // AI-Powered Content Creation & Marketing;
 {id: "ai-content-creation-suite";,
 title: "AI Content Creation & Marketing Suite";,
-description: "Comprehensive AI-powered platform for creating; optimizing; and distributing content across multiple channels with intelligent automation.",
+description: "Comprehensive AI-powered platform for creating, optimizing; and distributing content across multiple channels with intelligent automation.",
 category: "AI & Content Marketing";
 subcategory: "Content Creation";
 price: 399;
@@ -44,7 +44,7 @@ currency: "$";,
 pricingModel: "monthly";,
 features: [
 "AI-powered content generation";
-"Multi-format content creation (blog; social; video)",
+"Multi-format content creation (blog, social; video)",
 "SEO optimization recommendations",
 "Content calendar automation",
 "Social media scheduling",
@@ -75,7 +75,7 @@ targetAudience: [
 "Digital agencies",
 "Business owners";
 ],
-tags: ["AI", "Content Creation", "Marketing Automation", "SEO", "Social Media"],
+tags: ["AI", "Content Creation", "Marketing Automation", "SEO", "Social Media"]
 estimatedDelivery: "2-3 weeks";,
 supportLevel: "premium";,
 marketPrice: "$399 - $1;500/month",
@@ -83,18 +83,18 @@ contactInfo: {
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
-technology: ["OpenAI GPT-4", "React", "Node.js", "MongoDB", "AWS"],
-integrations: ["WordPress", "Shopify", "HubSpot", "Mailchimp", "Buffer"],
-compliance: ["GDPR", "CCPA", "SOC 2"],
+technology: ["OpenAI GPT-4", "React", "Node.js", "MongoDB", "AWS"]
+integrations: ["WordPress", "Shopify", "HubSpot", "Mailchimp", "Buffer"]
+compliance: ["GDPR", "CCPA", "SOC 2"]
 roi: "400% within 8 months";,
-competitors: ["Jasper", "Copy.ai", "Writesonic", "ContentBot"],
+competitors: ["Jasper", "Copy.ai", "Writesonic", "ContentBot"]
 demoUrl: "https://ziontechgroup.com/demo/ai-content-suite";,
-documentationUrl: "https://ziontechgroup.com/docs/ai-content-suite",
+documentationUrl: "https://ziontechgroup.com/docs/ai-content-suite"
 };
 // AI-Powered Video Analytics Platform;
 {id: "ai-video-analytics-platform";,
 title: "AI Video Analytics & Intelligence Platform";,
-description: "Advanced video analytics platform that uses computer vision and AI to extract insights; detect objects; and analyze behavior patterns in video content.",
+description: "Advanced video analytics platform that uses computer vision and AI to extract insights, detect objects, and analyze behavior patterns in video content.",
 category: "AI & Video Analytics";
 subcategory: "Computer Vision";
 price: 599;
@@ -133,7 +133,7 @@ targetAudience: [
 "Quality control managers",
 "Marketing analysts";
 ],
-tags: ["AI", "Computer Vision", "Video Analytics", "Machine Learning", "Security"],
+tags: ["AI", "Computer Vision", "Video Analytics", "Machine Learning", "Security"]
 estimatedDelivery: "3-4 weeks";,
 supportLevel: "enterprise";,
 marketPrice: "$599 - $2;500/month",
@@ -141,17 +141,17 @@ contactInfo: {
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
-technology: ["TensorFlow", "OpenCV", "Python", "React", "AWS", "Docker"],
-integrations: ["CCTV systems", "IP cameras", "Security platforms", "Analytics tools"],
-compliance: ["GDPR", "CCPA", "SOC 2", "ISO 27001"],
+technology: ["TensorFlow", "OpenCV", "Python", "React", "AWS", "Docker"]
+integrations: ["CCTV systems", "IP cameras", "Security platforms", "Analytics tools"]
+compliance: ["GDPR", "CCPA", "SOC 2", "ISO 27001"]
 roi: "350% within 12 months";,
-competitors: ["Vintra", "BriefCam", "Avigilon", "Milestone Systems"];
+competitors: ["Vintra", "BriefCam", "Avigilon" "Milestone Systems"];
 },
 
 // AI-Powered Financial Planning Platform;
 {id: "ai-financial-planning-platform";,
 title: "AI Financial Planning & Wealth Management Platform";,
-description: "Intelligent financial planning platform that provides personalized investment advice; portfolio optimization; and financial goal tracking using AI algorithms.",
+description: "Intelligent financial planning platform that provides personalized investment advice, portfolio optimization, and financial goal tracking using AI algorithms.",
 category: "AI & Financial Services";
 subcategory: "Wealth Management";
 price: 299;
@@ -190,7 +190,7 @@ targetAudience: [
 "Retirement planners",
 "Tax professionals";
 ],
-tags: ["AI", "Financial Planning", "Wealth Management", "Investment", "FinTech"],
+tags: ["AI", "Financial Planning", "Wealth Management", "Investment", "FinTech"]
 estimatedDelivery: "4-5 weeks";,
 supportLevel: "premium";,
 marketPrice: "$299 - $1;200/month",
@@ -198,17 +198,17 @@ contactInfo: {
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
-technology: ["Python", "TensorFlow", "React", "Node.js", "PostgreSQL", "Redis"],
-integrations: ["Plaid", "Yodlee", "TD Ameritrade", "Charles Schwab", "Fidelity"],
-compliance: ["SEC", "FINRA", "SOC 2", "GDPR"],
+technology: ["Python", "TensorFlow", "React", "Node.js", "PostgreSQL", "Redis"]
+integrations: ["Plaid", "Yodlee", "TD Ameritrade", "Charles Schwab", "Fidelity"]
+compliance: ["SEC", "FINRA", "SOC 2", "GDPR"]
 roi: "500% within 18 months";,
-competitors: ["Betterment", "Wealthfront", "Personal Capital", "M1 Finance"];
+competitors: ["Betterment", "Wealthfront", "Personal Capital" "M1 Finance"];
 },
 
 // AI-Powered Healthcare Diagnostics Platform;
 {id: "ai-healthcare-diagnostics-platform";,
 title: "AI Healthcare Diagnostics & Medical Imaging Platform";,
-description: "Advanced medical imaging analysis platform that uses AI to detect diseases; analyze medical scans; and provide diagnostic assistance to healthcare professionals.",
+description: "Advanced medical imaging analysis platform that uses AI to detect diseases, analyze medical scans, and provide diagnostic assistance to healthcare professionals.",
 category: "AI & Healthcare";
 subcategory: "Medical Diagnostics";
 price: 899;
@@ -247,7 +247,7 @@ targetAudience: [
 "Medical imaging technicians",
 "Healthcare IT managers";
 ],
-tags: ["AI", "Healthcare", "Medical Imaging", "Diagnostics", "Machine Learning"],
+tags: ["AI", "Healthcare", "Medical Imaging", "Diagnostics", "Machine Learning"]
 estimatedDelivery: "6-8 weeks";,
 supportLevel: "enterprise";,
 marketPrice: "$899 - $3;500/month",
@@ -255,17 +255,17 @@ contactInfo: {
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
-technology: ["TensorFlow", "PyTorch", "Python", "React", "DICOM", "HL7"],
-integrations: ["PACS systems", "EHR systems", "Radiology information systems"],
-compliance: ["HIPAA", "FDA", "SOC 2", "ISO 13485"],
+technology: ["TensorFlow", "PyTorch", "Python", "React", "DICOM", "HL7"]
+integrations: ["PACS systems", "EHR systems", "Radiology information systems"]
+compliance: ["HIPAA", "FDA", "SOC 2", "ISO 13485"]
 roi: "400% within 24 months";,
-competitors: ["Aidoc", "Zebra Medical Vision", "Butterfly Network", "Enlitic"];
+competitors: ["Aidoc", "Zebra Medical Vision", "Butterfly Network" "Enlitic"];
 },
 
 // AI-Powered Supply Chain Optimization;
 {id: "ai-supply-chain-optimization";,
 title: "AI Supply Chain Optimization & Predictive Analytics Platform";,
-description: "Intelligent supply chain platform that uses AI to predict demand; optimize inventory; reduce costs; and improve operational efficiency across the entire supply chain.",
+description: "Intelligent supply chain platform that uses AI to predict demand, optimize inventory, reduce costs, and improve operational efficiency across the entire supply chain.",
 category: "AI & Supply Chain";
 subcategory: "Optimization";
 price: 799;
@@ -304,7 +304,7 @@ targetAudience: [
 "Inventory managers",
 "Procurement specialists";
 ],
-tags: ["AI", "Supply Chain", "Optimization", "Predictive Analytics", "Logistics"],
+tags: ["AI", "Supply Chain", "Optimization", "Predictive Analytics", "Logistics"]
 estimatedDelivery: "4-6 weeks";,
 supportLevel: "enterprise";,
 marketPrice: "$799 - $3;000/month",
@@ -312,17 +312,17 @@ contactInfo: {
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
-technology: ["Python", "TensorFlow", "React", "Node.js", "PostgreSQL", "Redis"],
-integrations: ["SAP", "Oracle", "Microsoft Dynamics", "Salesforce", "Shopify"],
-compliance: ["ISO 28000", "SOC 2", "GDPR"],
+technology: ["Python", "TensorFlow", "React", "Node.js", "PostgreSQL", "Redis"]
+integrations: ["SAP", "Oracle", "Microsoft Dynamics", "Salesforce", "Shopify"]
+compliance: ["ISO 28000", "SOC 2", "GDPR"]
 roi: "450% within 15 months";,
-competitors: ["Llamasoft", "E2open", "Kinaxis", "Blue Yonder"];
+competitors: ["Llamasoft", "E2open", "Kinaxis" "Blue Yonder"];
 },
 
 // AI-Powered Legal Research & Document Analysis;
 {id: "ai-legal-research-platform";,
 title: "AI Legal Research & Document Analysis Platform";,
-description: "Advanced legal research platform that uses AI to analyze legal documents; predict case outcomes; and provide comprehensive legal research assistance.",
+description: "Advanced legal research platform that uses AI to analyze legal documents, predict case outcomes, and provide comprehensive legal research assistance.",
 category: "AI & Legal Services";
 subcategory: "Legal Research";
 price: 499;
@@ -361,7 +361,7 @@ targetAudience: [
 "Compliance officers",
 "Legal administrators";
 ],
-tags: ["AI", "Legal Services", "Document Analysis", "Research", "Compliance"],
+tags: ["AI", "Legal Services", "Document Analysis", "Research", "Compliance"]
 estimatedDelivery: "3-4 weeks";,
 supportLevel: "premium";,
 marketPrice: "$499 - $2;000/month",
@@ -369,17 +369,17 @@ contactInfo: {
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
-technology: ["NLP", "Python", "React", "Node.js", "Elasticsearch", "PostgreSQL"],
-integrations: ["Westlaw", "LexisNexis", "Clio", "MyCase", "PracticePanther"],
-compliance: ["SOC 2", "GDPR", "CCPA", "ISO 27001"],
+technology: ["NLP", "Python", "React", "Node.js", "Elasticsearch", "PostgreSQL"]
+integrations: ["Westlaw", "LexisNexis", "Clio", "MyCase", "PracticePanther"]
+compliance: ["SOC 2", "GDPR", "CCPA", "ISO 27001"]
 roi: "350% within 12 months";,
-competitors: ["Casetext", "ROSS Intelligence", "Harvey", "DoNotPay"];
+competitors: ["Casetext", "ROSS Intelligence", "Harvey" "DoNotPay"];
 },
 
 // AI-Powered Real Estate Analytics Platform;
 {id: "ai-real-estate-analytics";,
 title: "AI Real Estate Analytics & Investment Platform";,
-description: "Comprehensive real estate platform that uses AI to analyze market trends; predict property values; and provide investment recommendations for real estate professionals.",
+description: "Comprehensive real estate platform that uses AI to analyze market trends, predict property values, and provide investment recommendations for real estate professionals.",
 category: "AI & Real Estate";
 subcategory: "Market Analytics";
 price: 399;
@@ -418,7 +418,7 @@ targetAudience: [
 "Property managers",
 "Mortgage professionals";
 ],
-tags: ["AI", "Real Estate", "Market Analytics", "Investment", "Predictive Analytics"],
+tags: ["AI", "Real Estate", "Market Analytics", "Investment", "Predictive Analytics"]
 estimatedDelivery: "3-4 weeks";,
 supportLevel: "premium";,
 marketPrice: "$399 - $1;500/month",
@@ -426,17 +426,17 @@ contactInfo: {
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
-technology: ["Python", "TensorFlow", "React", "Node.js", "PostgreSQL", "Redis"],
-integrations: ["MLS systems", "Zillow", "Redfin", "Realtor.com", "Property databases"],
-compliance: ["SOC 2", "GDPR", "CCPA"],
+technology: ["Python", "TensorFlow", "React", "Node.js", "PostgreSQL", "Redis"]
+integrations: ["MLS systems", "Zillow", "Redfin", "Realtor.com", "Property databases"]
+compliance: ["SOC 2", "GDPR", "CCPA"]
 roi: "400% within 18 months";,
-competitors: ["Zillow", "Redfin", "Realtor.com", "PropStream", "RealtyMogul"];
+competitors: ["Zillow", "Redfin", "Realtor.com", "PropStream" "RealtyMogul"];
 },
 
 // AI-Powered HR & Talent Management Platform;
 {id: "ai-hr-talent-management";,
 title: "AI HR & Talent Management Platform";,
-description: "Intelligent HR platform that uses AI to streamline recruitment; improve employee engagement; optimize workforce planning; and enhance HR decision-making.",
+description: "Intelligent HR platform that uses AI to streamline recruitment, improve employee engagement, optimize workforce planning, and enhance HR decision-making.",
 category: "AI & Human Resources";
 subcategory: "Talent Management";
 price: 299;
@@ -475,7 +475,7 @@ targetAudience: [
 "Learning & development managers",
 "HR directors";
 ],
-tags: ["AI", "Human Resources", "Talent Management", "Recruitment", "Analytics"],
+tags: ["AI", "Human Resources", "Talent Management", "Recruitment", "Analytics"]
 estimatedDelivery: "3-4 weeks";,
 supportLevel: "premium";,
 marketPrice: "$299 - $1;200/month",
@@ -483,17 +483,17 @@ contactInfo: {
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
-technology: ["Python", "NLP", "React", "Node.js", "PostgreSQL", "Redis"],
-integrations: ["Workday", "BambooHR", "Greenhouse", "Lever", "Slack"],
-compliance: ["SOC 2", "GDPR", "CCPA", "ISO 27001"],
+technology: ["Python", "NLP", "React", "Node.js", "PostgreSQL", "Redis"]
+integrations: ["Workday", "BambooHR", "Greenhouse", "Lever", "Slack"]
+compliance: ["SOC 2", "GDPR", "CCPA", "ISO 27001"]
 roi: "350% within 12 months";,
-competitors: ["Workday", "BambooHR", "Greenhouse", "Lever", "Hired"];
+competitors: ["Workday", "BambooHR", "Greenhouse", "Lever" "Hired"];
 },
 
 // AI-Powered Energy Management Platform;
 {id: "ai-energy-management-platform";,
 title: "AI Energy Management & Sustainability Platform";,
-description: "Intelligent energy management platform that uses AI to optimize energy consumption; predict demand; and improve sustainability across commercial and industrial facilities.",
+description: "Intelligent energy management platform that uses AI to optimize energy consumption, predict demand, and improve sustainability across commercial and industrial facilities.",
 category: "AI & Energy Management";
 subcategory: "Sustainability";
 price: 599;
@@ -532,7 +532,7 @@ targetAudience: [
 "Operations directors",
 "Building owners";
 ],
-tags: ["AI", "Energy Management", "Sustainability", "IoT", "Predictive Analytics"],
+tags: ["AI", "Energy Management", "Sustainability", "IoT", "Predictive Analytics"]
 estimatedDelivery: "4-5 weeks";,
 supportLevel: "enterprise";,
 marketPrice: "$599 - $2;500/month",
@@ -540,17 +540,17 @@ contactInfo: {
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
-technology: ["Python", "TensorFlow", "React", "Node.js", "IoT protocols", "PostgreSQL"],
-integrations: ["Building management systems", "Smart meters", "Solar panels", "Battery storage"],
-compliance: ["ISO 50001", "LEED", "SOC 2", "GDPR"],
+technology: ["Python", "TensorFlow", "React", "Node.js", "IoT protocols", "PostgreSQL"]
+integrations: ["Building management systems", "Smart meters", "Solar panels", "Battery storage"]
+compliance: ["ISO 50001", "LEED", "SOC 2", "GDPR"]
 roi: "400% within 18 months";,
-competitors: ["Schneider Electric", "Siemens", "Honeywell", "Johnson Controls"];
+competitors: ["Schneider Electric", "Siemens", "Honeywell" "Johnson Controls"];
 },
 
 // AI-Powered Manufacturing Quality Control;
 {id: "ai-manufacturing-quality-control";,
 title: "AI Manufacturing Quality Control & Predictive Maintenance Platform";,
-description: "Advanced manufacturing platform that uses AI to monitor quality; predict equipment failures; and optimize production processes in real-time.",
+description: "Advanced manufacturing platform that uses AI to monitor quality, predict equipment failures, and optimize production processes in real-time.",
 category: "AI & Manufacturing";
 subcategory: "Quality Control";
 price: 799;
@@ -589,7 +589,7 @@ targetAudience: [
 "Production engineers",
 "Operations directors";
 ],
-tags: ["AI", "Manufacturing", "Quality Control", "Predictive Maintenance", "IoT"],
+tags: ["AI", "Manufacturing", "Quality Control", "Predictive Maintenance", "IoT"]
 estimatedDelivery: "4-6 weeks";,
 supportLevel: "enterprise";,
 marketPrice: "$799 - $3;000/month",
@@ -597,17 +597,17 @@ contactInfo: {
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
-technology: ["Computer Vision", "Python", "TensorFlow", "React", "IoT", "PostgreSQL"],
-integrations: ["MES systems", "ERP systems", "PLC controllers", "Quality control equipment"],
-compliance: ["ISO 9001", "ISO 14001", "SOC 2", "GDPR"],
+technology: ["Computer Vision", "Python", "TensorFlow", "React", "IoT", "PostgreSQL"]
+integrations: ["MES systems", "ERP systems", "PLC controllers", "Quality control equipment"]
+compliance: ["ISO 9001", "ISO 14001", "SOC 2", "GDPR"]
 roi: "450% within 15 months";,
-competitors: ["Siemens", "GE Digital", "PTC", "Rockwell Automation"];
+competitors: ["Siemens", "GE Digital", "PTC" "Rockwell Automation"];
 },
 
 // AI-Powered Education & Learning Platform;
 {id: "ai-education-learning-platform";,
 title: "AI Education & Personalized Learning Platform";,
-description: "Intelligent education platform that uses AI to personalize learning experiences; track student progress; and provide adaptive content recommendations.",
+description: "Intelligent education platform that uses AI to personalize learning experiences, track student progress, and provide adaptive content recommendations.",
 category: "AI & Education";
 subcategory: "Personalized Learning";
 price: 199;
@@ -646,7 +646,7 @@ targetAudience: [
 "Students",
 "Parents";
 ],
-tags: ["AI", "Education", "Personalized Learning", "Adaptive Learning", "Analytics"],
+tags: ["AI", "Education", "Personalized Learning", "Adaptive Learning", "Analytics"]
 estimatedDelivery: "3-4 weeks";
 supportLevel: "premium";
 marketPrice: "$199 - $800/month";
@@ -654,17 +654,17 @@ contactInfo: {
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
-technology: ["Python", "NLP", "React", "Node.js", "PostgreSQL", "Redis"],
-integrations: ["Canvas", "Blackboard", "Moodle", "Google Classroom", "Microsoft Teams"],
-compliance: ["FERPA", "COPPA", "SOC 2", "GDPR"],
+technology: ["Python", "NLP", "React", "Node.js", "PostgreSQL", "Redis"]
+integrations: ["Canvas", "Blackboard", "Moodle", "Google Classroom", "Microsoft Teams"]
+compliance: ["FERPA", "COPPA", "SOC 2", "GDPR"]
 roi: "300% within 12 months";,
-competitors: ["Duolingo", "Khan Academy", "Coursera", "Udemy", "Pluralsight"];
+competitors: ["Duolingo", "Khan Academy", "Coursera", "Udemy" "Pluralsight"];
 },
 
 // AI-Powered Agriculture & Precision Farming;
 {id: "ai-agriculture-precision-farming";,
 title: "AI Agriculture & Precision Farming Platform";,
-description: "Intelligent agriculture platform that uses AI; IoT sensors; and satellite imagery to optimize crop yields; reduce resource usage; and improve farming efficiency.",
+description: "Intelligent agriculture platform that uses AI, IoT sensors, and satellite imagery to optimize crop yields, reduce resource usage, and improve farming efficiency.",
 category: "AI & Agriculture";
 subcategory: "Precision Farming";
 price: 499;
@@ -703,7 +703,7 @@ targetAudience: [
 "Agricultural researchers",
 "Farm managers";
 ],
-tags: ["AI", "Agriculture", "Precision Farming", "IoT", "Sustainability"],
+tags: ["AI", "Agriculture", "Precision Farming", "IoT", "Sustainability"]
 estimatedDelivery: "4-5 weeks";,
 supportLevel: "premium";,
 marketPrice: "$499 - $2;000/month",
@@ -711,17 +711,17 @@ contactInfo: {
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
-technology: ["Computer Vision", "Python", "TensorFlow", "React", "IoT", "PostgreSQL"],
-integrations: ["Weather APIs", "Satellite imagery", "Farm equipment", "Soil sensors"],
-compliance: ["Organic certification", "SOC 2", "GDPR"],
+technology: ["Computer Vision", "Python", "TensorFlow", "React", "IoT", "PostgreSQL"]
+integrations: ["Weather APIs", "Satellite imagery", "Farm equipment", "Soil sensors"]
+compliance: ["Organic certification", "SOC 2", "GDPR"]
 roi: "400% within 18 months";,
-competitors: ["John Deere", "Climate Corporation", "Farmers Edge", "Granular"];
+competitors: ["John Deere", "Climate Corporation", "Farmers Edge" "Granular"];
 },
 
 // AI-Powered Transportation & Logistics Optimization;
 {id: "ai-transportation-logistics";,
 title: "AI Transportation & Logistics Optimization Platform";,
-description: "Intelligent transportation platform that uses AI to optimize routes; predict demand; reduce costs; and improve efficiency across transportation and logistics operations.",
+description: "Intelligent transportation platform that uses AI to optimize routes, predict demand, reduce costs, and improve efficiency across transportation and logistics operations.",
 category: "AI & Transportation";
 subcategory: "Logistics Optimization";
 price: 699;
@@ -760,7 +760,7 @@ targetAudience: [
 "Operations managers",
 "Supply chain specialists";
 ],
-tags: ["AI", "Transportation", "Logistics", "Route Optimization", "Fleet Management"],
+tags: ["AI", "Transportation", "Logistics", "Route Optimization", "Fleet Management"]
 estimatedDelivery: "4-5 weeks";,
 supportLevel: "enterprise";,
 marketPrice: "$699 - $2;800/month",
@@ -768,17 +768,17 @@ contactInfo: {
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
-technology: ["Python", "TensorFlow", "React", "Node.js", "PostgreSQL", "Redis"],
-integrations: ["TMS systems", "GPS tracking", "Fuel cards", "Maintenance systems"],
-compliance: ["DOT", "FMCSA", "SOC 2", "GDPR"],
+technology: ["Python", "TensorFlow", "React", "Node.js", "PostgreSQL", "Redis"]
+integrations: ["TMS systems", "GPS tracking", "Fuel cards", "Maintenance systems"]
+compliance: ["DOT", "FMCSA", "SOC 2", "GDPR"]
 roi: "400% within 15 months";,
-competitors: ["Convoy", "KeepTruckin", "Samsara", "Verizon Connect"];
+competitors: ["Convoy", "KeepTruckin", "Samsara" "Verizon Connect"];
 },
 
 // AI-Powered Insurance & Risk Assessment;
 {id: "ai-insurance-risk-assessment";,
 title: "AI Insurance & Risk Assessment Platform";,
-description: "Intelligent insurance platform that uses AI to assess risks; automate underwriting; detect fraud; and provide personalized insurance recommendations.",
+description: "Intelligent insurance platform that uses AI to assess risks, automate underwriting, detect fraud, and provide personalized insurance recommendations.",
 category: "AI & Insurance";
 subcategory: "Risk Assessment";
 price: 599;
@@ -817,7 +817,7 @@ targetAudience: [
 "Underwriters",
 "Insurance executives";
 ],
-tags: ["AI", "Insurance", "Risk Assessment", "Fraud Detection", "Underwriting"],
+tags: ["AI", "Insurance", "Risk Assessment", "Fraud Detection", "Underwriting"]
 estimatedDelivery: "4-5 weeks";,
 supportLevel: "enterprise";,
 marketPrice: "$599 - $2;500/month",
@@ -825,17 +825,17 @@ contactInfo: {
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
-technology: ["Python", "Machine Learning", "React", "Node.js", "PostgreSQL", "Redis"],
-integrations: ["Policy management systems", "Claims systems", "CRM systems", "Payment gateways"],
-compliance: ["SOC 2", "GDPR", "CCPA", "Insurance regulations"],
+technology: ["Python", "Machine Learning", "React", "Node.js", "PostgreSQL", "Redis"]
+integrations: ["Policy management systems", "Claims systems", "CRM systems", "Payment gateways"]
+compliance: ["SOC 2", "GDPR", "CCPA", "Insurance regulations"]
 roi: "450% within 18 months";,
-competitors: ["Lemonade", "Root Insurance", "Metromile", "Trov"];
+competitors: ["Lemonade", "Root Insurance", "Metromile" "Trov"];
 },
 
 // AI-Powered Gaming & Entertainment Platform;
 {id: "ai-gaming-entertainment";,
 title: "AI Gaming & Entertainment Platform";,
-description: "Intelligent gaming platform that uses AI to create personalized gaming experiences; optimize gameplay; and provide intelligent matchmaking and recommendations.",
+description: "Intelligent gaming platform that uses AI to create personalized gaming experiences, optimize gameplay, and provide intelligent matchmaking and recommendations.",
 category: "AI & Gaming";
 subcategory: "Entertainment";
 price: 199;
@@ -874,7 +874,7 @@ targetAudience: [
 "Streaming service providers",
 "Gaming community managers";
 ],
-tags: ["AI", "Gaming", "Entertainment", "Matchmaking", "Personalization"],
+tags: ["AI", "Gaming", "Entertainment", "Matchmaking", "Personalization"]
 estimatedDelivery: "3-4 weeks";
 supportLevel: "premium";
 marketPrice: "$199 - $800/month";
@@ -882,11 +882,11 @@ contactInfo: {
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
-technology: ["Python", "TensorFlow", "React", "Node.js", "PostgreSQL", "Redis"],
-integrations: ["Unity", "Unreal Engine", "Steam", "Twitch", "Discord"],
-compliance: ["COPPA", "SOC 2", "GDPR"],
+technology: ["Python", "TensorFlow", "React", "Node.js", "PostgreSQL", "Redis"]
+integrations: ["Unity", "Unreal Engine", "Steam", "Twitch", "Discord"]
+compliance: ["COPPA", "SOC 2", "GDPR"]
 roi: "300% within 12 months";,
-competitors: ["Unity", "Epic Games", "Steam", "Twitch", "Discord"];
+competitors: ["Unity", "Epic Games", "Steam", "Twitch" "Discord"];
 }
 ];
 

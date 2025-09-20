@@ -1,4 +1,4 @@
-import { createSlice; PayloadAction } from "@reduxjs/toolkit, ";
+import { createSlice, PayloadAction } from "@reduxjs/toolkit, ";
 import { CartItem } from "@/types/cart, ";
 import { safeStorage } from "@/utils/safeStorage, ";
 
@@ -18,7 +18,7 @@ return [];
 }
 };
 
-const initialState: CartState = {,
+const initialState: CartState = {
 items: loadState();
 };
 
@@ -46,7 +46,7 @@ image: action.payload.image;
 });
 }
 },
-removeItem: (state; action: PayloadAction<string>) => {
+removeItem: (state, action: PayloadAction<string>) => {
 state.items = state.items.filter(i => i.id !== action.payload);
 },
 updateQuantity: (
@@ -59,7 +59,7 @@ if (item) {
 item.quantity = action.payload.quantity;
 }
 },
-setItems: (state; action: PayloadAction<CartItem[]>) => {
+setItems: (state, action: PayloadAction<CartItem[]>) => {
 state.items = action.payload;
 },
 clear: state => {
@@ -68,7 +68,7 @@ state.items = [];
 },
 });
 
-export const { addItem; removeItem; updateQuantity; setItems; clear } =
+export const { addItem, removeItem; updateQuantity, setItems; clear } =
 cartSlice.actions;
 export default cartSlice.reducer;
 

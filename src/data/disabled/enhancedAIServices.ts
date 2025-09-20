@@ -1,27 +1,27 @@
 import React from "react";
 
-export interface AIService {id: string; title: string; description: string; category: string; pricing: {,}
-monthly: number; yearly: number; custom: string; currency: string; pricingModel: string};
-features: string[], benefits: string[];,
-useCases: string[], targetAudience: string[];,
-technologies: string[], integrations: string[];,
-support: string[], link: string;
+export interface AIService {id: string, title: string, description: string, category: string, pricing: {}
+monthly: number, yearly: number, custom: string, currency: string, pricingModel: string};
+features: string[] benefits: string[];,
+useCases: string[] targetAudience: string[];,
+technologies: string[] integrations: string[];,
+support: string[] link: string;
 badge?: string;,
-icon: string; image: string;
+icon: string, image: string;
 }
 
 export const ENHANCED_AI_SERVICES: AIService[] = [
 {,
-id: "ai-chatbot-platform",
-title: "AI Chatbot Platform",
-description: "Intelligent conversational AI platform for customer service; lead generation; and business automation.",
-category: "Conversational AI",
+id: "ai-chatbot-platform"
+title: "AI Chatbot Platform"
+description: "Intelligent conversational AI platform for customer service, lead generation, and business automation.",
+category: "Conversational AI"
 pricing: {
 monthly: 299;,
 yearly: 2990;,
-custom: "Enterprise pricing available",
-currency: "$",
-pricingModel: "Monthly subscription with usage-based pricing"},
+custom: "Enterprise pricing available"
+currency: "$"
+pricingModel: "Monthly subscription with usage-based pricing"}
 features: [
 "Natural language processing",
 "Multi-language support",
@@ -43,7 +43,7 @@ useCases: [
 "Appointment scheduling",
 "Order processing";
 ],
-targetAudience: ["E-commerce businesses", "Service providers", "Healthcare", "Financial services"],
+targetAudience: ["E-commerce businesses", "Service providers", "Healthcare", "Financial services"]
 technologies: [
 "GPT-4", "BERT", "Transformer models", "NLP libraries",
 "Speech recognition", "Text-to-speech";
@@ -58,20 +58,20 @@ support: [
 "API documentation",
 "Implementation assistance";
 ],
-link: "https://ziontechgroup.com/ai-chatbot-platform",
-badge: "Popular",
-icon: "💬",
-image: "https://images.unsplash.com/photo-1551434678-e076c223a5ab?auto=format&fit=crop&w=800&h=500",
+link: "https://ziontechgroup.com/ai-chatbot-platform"
+badge: "Popular"
+icon: "💬"
+image: "https://images.unsplash.com/photo-1551434678-e076c223a5ab?auto=format&fit=crop&w=800&h=500"
 },
-{id: "ai-content-generation-suite",
-title: "AI Content Generation Suite",
-description: "Comprehensive AI-powered content creation platform for marketing; SEO; and creative writing.",
-category: "Content Generation",
-pricing: {,
+{id: "ai-content-generation-suite"
+title: "AI Content Generation Suite"
+description: "Comprehensive AI-powered content creation platform for marketing, SEO; and creative writing.",
+category: "Content Generation"
+pricing: {
 monthly: 199; yearly: 1990;,
-custom: "Agency and enterprise plans",
-currency: "$",
-pricingModel: "Monthly subscription with content volume tiers"},
+custom: "Agency and enterprise plans"
+currency: "$"
+pricingModel: "Monthly subscription with content volume tiers"}
 features: [
 "Blog post generation",
 "Social media content",
@@ -93,7 +93,7 @@ useCases: [
 "E-commerce content",
 "SEO optimization";
 ],
-targetAudience: ["Marketing teams", "Content creators", "Agencies", "E-commerce businesses"],
+targetAudience: ["Marketing teams", "Content creators", "Agencies", "E-commerce businesses"]
 technologies: [
 "GPT-4", "Claude", "BERT", "Transformer models",
 "NLP processing", "SEO algorithms";
@@ -108,19 +108,19 @@ support: [
 "Training and workshops",
 "Priority support";
 ],
-link: "https://ziontechgroup.com/ai-content-generation-suite",
-icon: "✍️",
-image: "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?auto=format&fit=crop&w=800&h=500",
+link: "https://ziontechgroup.com/ai-content-generation-suite"
+icon: "✍️"
+image: "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?auto=format&fit=crop&w=800&h=500"
 },
-{id: "ai-image-generation-platform",
-title: "AI Image Generation Platform",
-description: "Advanced AI-powered image creation platform for marketing; design; and creative projects.",
-category: "Computer Vision",
-pricing: {,
+{id: "ai-image-generation-platform"
+title: "AI Image Generation Platform"
+description: "Advanced AI-powered image creation platform for marketing, design; and creative projects.",
+category: "Computer Vision"
+pricing: {
 monthly: 149; yearly: 1490;,
-custom: "Custom enterprise solutions",
-currency: "$",
-pricingModel: "Monthly subscription with image generation credits"},
+custom: "Custom enterprise solutions"
+currency: "$"
+pricingModel: "Monthly subscription with image generation credits"}
 features: [
 "Text-to-image generation",
 "Image editing and manipulation",
@@ -142,7 +142,7 @@ useCases: [
 "Website design",
 "Advertising campaigns";
 ],
-targetAudience: ["Designers", "Marketing teams", "E-commerce businesses", "Creative agencies"],
+targetAudience: ["Designers", "Marketing teams", "E-commerce businesses", "Creative agencies"]
 technologies: [
 "DALL-E", "Midjourney", "Stable Diffusion", "GAN models",
 "Computer vision", "Deep learning";
@@ -157,19 +157,19 @@ support: [
 "Training resources",
 "Custom model training";
 ],
-link: "https://ziontechgroup.com/ai-image-generation-platform",
-icon: "🎨",
-image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&h=500",
+link: "https://ziontechgroup.com/ai-image-generation-platform"
+icon: "🎨"
+image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&h=500"
 },
-{id: "ai-predictive-analytics",
-title: "AI Predictive Analytics Platform",
-description: "Advanced predictive analytics and forecasting platform powered by machine learning algorithms.",
-category: "Predictive Analytics",
-pricing: {,
+{id: "ai-predictive-analytics"
+title: "AI Predictive Analytics Platform"
+description: "Advanced predictive analytics and forecasting platform powered by machine learning algorithms."
+category: "Predictive Analytics"
+pricing: {
 monthly: 399; yearly: 3990;,
-custom: "Enterprise and custom solutions",
-currency: "$",
-pricingModel: "Monthly subscription with data volume tiers"},
+custom: "Enterprise and custom solutions"
+currency: "$"
+pricingModel: "Monthly subscription with data volume tiers"}
 features: [
 "Time series forecasting",
 "Predictive modeling",
@@ -191,7 +191,7 @@ useCases: [
 "Customer behavior prediction",
 "Operational optimization";
 ],
-targetAudience: ["Data scientists", "Business analysts", "Operations managers", "Financial services"],
+targetAudience: ["Data scientists", "Business analysts", "Operations managers", "Financial services"]
 technologies: [
 "TensorFlow", "PyTorch", "Scikit-learn", "XGBoost",
 "Deep learning", "Statistical modeling";
@@ -206,20 +206,20 @@ support: [
 "Implementation support",
 "Training and certification";
 ],
-link: "https://ziontechgroup.com/ai-predictive-analytics",
-badge: "Featured",
-icon: "🔮",
-image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500",
+link: "https://ziontechgroup.com/ai-predictive-analytics"
+badge: "Featured"
+icon: "🔮"
+image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"
 },
-{id: "ai-process-automation",
-title: "AI Process Automation Platform",
-description: "Intelligent process automation platform that combines RPA with AI for end-to-end business process optimization.",
-category: "Process Automation",
-pricing: {,
+{id: "ai-process-automation"
+title: "AI Process Automation Platform"
+description: "Intelligent process automation platform that combines RPA with AI for end-to-end business process optimization."
+category: "Process Automation"
+pricing: {
 monthly: 249; yearly: 2490;,
-custom: "Enterprise automation solutions",
-currency: "$",
-pricingModel: "Monthly subscription with process complexity tiers"},
+custom: "Enterprise automation solutions"
+currency: "$"
+pricingModel: "Monthly subscription with process complexity tiers"}
 features: [
 "Intelligent document processing",
 "Workflow automation",
@@ -241,7 +241,7 @@ useCases: [
 "HR automation",
 "Supply chain optimization";
 ],
-targetAudience: ["Operations managers", "Process improvement teams", "Finance departments", "HR teams"],
+targetAudience: ["Operations managers", "Process improvement teams", "Finance departments", "HR teams"]
 technologies: [
 "RPA tools", "Machine learning", "OCR", "NLP",
 "Workflow engines", "API integration";
@@ -256,19 +256,19 @@ support: [
 "Training and certification",
 "Ongoing optimization";
 ],
-link: "https://ziontechgroup.com/ai-process-automation",
-icon: "⚙️",
-image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&h=500",
+link: "https://ziontechgroup.com/ai-process-automation"
+icon: "⚙️"
+image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&h=500"
 },
-{id: "ai-customer-insights-platform",
-title: "AI Customer Insights Platform",
-description: "Advanced customer analytics platform that uses AI to uncover deep insights and predict customer behavior.",
-category: "Customer Analytics",
-pricing: {,
+{id: "ai-customer-insights-platform"
+title: "AI Customer Insights Platform"
+description: "Advanced customer analytics platform that uses AI to uncover deep insights and predict customer behavior."
+category: "Customer Analytics"
+pricing: {
 monthly: 299; yearly: 2990;,
-custom: "Enterprise customer intelligence",
-currency: "$",
-pricingModel: "Monthly subscription with customer data volume tiers"},
+custom: "Enterprise customer intelligence"
+currency: "$"
+pricingModel: "Monthly subscription with customer data volume tiers"}
 features: [
 "Customer segmentation",
 "Behavioral analysis",
@@ -290,7 +290,7 @@ useCases: [
 "Customer service optimization",
 "Revenue optimization";
 ],
-targetAudience: ["Marketing teams", "Customer success teams", "Product managers", "E-commerce businesses"],
+targetAudience: ["Marketing teams", "Customer success teams", "Product managers", "E-commerce businesses"]
 technologies: [
 "Machine learning", "Deep learning", "Statistical analysis",
 "Data mining", "Predictive modeling";
@@ -305,19 +305,19 @@ support: [
 "Training and workshops",
 "Ongoing optimization";
 ],
-link: "https://ziontechgroup.com/ai-customer-insights-platform",
-icon: "👥",
-image: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&h=500",
+link: "https://ziontechgroup.com/ai-customer-insights-platform"
+icon: "👥"
+image: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&h=500"
 },
-{id: "ai-voice-assistant-platform",
-title: "AI Voice Assistant Platform",
-description: "Enterprise-grade voice assistant platform for customer service; internal operations; and accessibility.",
-category: "Voice AI",
-pricing: {,
+{id: "ai-voice-assistant-platform"
+title: "AI Voice Assistant Platform"
+description: "Enterprise-grade voice assistant platform for customer service, internal operations, and accessibility.",
+category: "Voice AI"
+pricing: {
 monthly: 199; yearly: 1990;,
-custom: "Custom voice solutions",
-currency: "$",
-pricingModel: "Monthly subscription with usage-based pricing"},
+custom: "Custom voice solutions"
+currency: "$"
+pricingModel: "Monthly subscription with usage-based pricing"}
 features: [
 "Natural language understanding",
 "Multi-language support",
@@ -339,7 +339,7 @@ useCases: [
 "Smart home integration",
 "Enterprise automation";
 ],
-targetAudience: ["Call centers", "Healthcare providers", "Financial services", "Retail businesses"],
+targetAudience: ["Call centers", "Healthcare providers", "Financial services", "Retail businesses"]
 technologies: [
 "Speech recognition", "Text-to-speech", "NLP",
 "Voice synthesis", "Audio processing";
@@ -354,19 +354,19 @@ support: [
 "Training and certification",
 "Ongoing optimization";
 ],
-link: "https://ziontechgroup.com/ai-voice-assistant-platform",
-icon: "🎤",
-image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&h=500",
+link: "https://ziontechgroup.com/ai-voice-assistant-platform"
+icon: "🎤"
+image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&h=500"
 },
-{id: "ai-data-quality-platform",
-title: "AI Data Quality Platform",
-description: "Intelligent data quality management platform that automatically detects; cleans; and validates data.",
-category: "Data Quality",
-pricing: {,
+{id: "ai-data-quality-platform"
+title: "AI Data Quality Platform"
+description: "Intelligent data quality management platform that automatically detects, cleans; and validates data.",
+category: "Data Quality"
+pricing: {
 monthly: 179; yearly: 1790;,
-custom: "Enterprise data solutions",
-currency: "$",
-pricingModel: "Monthly subscription with data volume tiers"},
+custom: "Enterprise data solutions"
+currency: "$"
+pricingModel: "Monthly subscription with data volume tiers"}
 features: [
 "Automated data cleaning",
 "Quality scoring",
@@ -388,7 +388,7 @@ useCases: [
 "Healthcare data quality",
 "E-commerce data management";
 ],
-targetAudience: ["Data engineers", "IT teams", "Compliance officers", "Business analysts"],
+targetAudience: ["Data engineers", "IT teams", "Compliance officers", "Business analysts"]
 technologies: [
 "Machine learning", "Data validation", "Pattern recognition",
 "Statistical analysis", "Data profiling";
@@ -403,19 +403,19 @@ support: [
 "Training and certification",
 "Ongoing optimization";
 ],
-link: "https://ziontechgroup.com/ai-data-quality-platform",
-icon: "🧹",
-image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500",
+link: "https://ziontechgroup.com/ai-data-quality-platform"
+icon: "🧹"
+image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"
 },
-{id: "ai-translation-platform",
-title: "AI Translation Platform",
-description: "Advanced AI-powered translation platform supporting 100+ languages with industry-specific terminology.",
-category: "Language AI",
-pricing: {,
+{id: "ai-translation-platform"
+title: "AI Translation Platform"
+description: "Advanced AI-powered translation platform supporting 100+ languages with industry-specific terminology."
+category: "Language AI"
+pricing: {
 monthly: 129; yearly: 1290;,
-custom: "Enterprise translation solutions",
-currency: "$",
-pricingModel: "Monthly subscription with translation volume tiers"},
+custom: "Enterprise translation solutions"
+currency: "$"
+pricingModel: "Monthly subscription with translation volume tiers"}
 features: [
 "100+ language support",
 "Industry-specific terminology",
@@ -437,7 +437,7 @@ useCases: [
 "Marketing campaigns",
 "Legal documents";
 ],
-targetAudience: ["Global businesses", "E-commerce companies", "Legal firms", "Healthcare providers"],
+targetAudience: ["Global businesses", "E-commerce companies", "Legal firms", "Healthcare providers"]
 technologies: [
 "Neural machine translation", "Transformer models", "NLP",
 "Speech recognition", "Text-to-speech";
@@ -452,19 +452,19 @@ support: [
 "Training and certification",
 "Ongoing optimization";
 ],
-link: "https://ziontechgroup.com/ai-translation-platform",
-icon: "🌍",
-image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&h=500",
+link: "https://ziontechgroup.com/ai-translation-platform"
+icon: "🌍"
+image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&h=500"
 },
-{id: "ai-recommendation-engine",
-title: "AI Recommendation Engine",
-description: "Intelligent recommendation system that personalizes user experiences and increases conversion rates.",
-category: "Recommendation Systems",
-pricing: {,
+{id: "ai-recommendation-engine"
+title: "AI Recommendation Engine"
+description: "Intelligent recommendation system that personalizes user experiences and increases conversion rates."
+category: "Recommendation Systems"
+pricing: {
 monthly: 349; yearly: 3490;,
-custom: "Custom recommendation solutions",
-currency: "$",
-pricingModel: "Monthly subscription with recommendation volume tiers"},
+custom: "Custom recommendation solutions"
+currency: "$"
+pricingModel: "Monthly subscription with recommendation volume tiers"}
 features: [
 "Collaborative filtering",
 "Content-based filtering",
@@ -486,7 +486,7 @@ useCases: [
 "Service recommendations",
 "Cross-selling opportunities";
 ],
-targetAudience: ["E-commerce businesses", "Content platforms", "Streaming services", "Financial services"],
+targetAudience: ["E-commerce businesses", "Content platforms", "Streaming services", "Financial services"]
 technologies: [
 "Machine learning", "Deep learning", "Collaborative filtering",
 "Content-based filtering", "Neural networks";
@@ -501,10 +501,10 @@ support: [
 "Training and certification",
 "Ongoing optimization";
 ],
-link: "https://ziontechgroup.com/ai-recommendation-engine",
-badge: "Premium",
-icon: "🎯",
-image: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&h=500",
+link: "https://ziontechgroup.com/ai-recommendation-engine"
+badge: "Premium"
+icon: "🎯"
+image: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&h=500"
 }
 ];
 

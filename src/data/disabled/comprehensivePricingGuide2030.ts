@@ -8,8 +8,8 @@ name: string;
 }
 
 export const COMPREHENSIVE_PRICING_GUIDE_2030 = {;
-basic: {,;
-name: "Basic Plan",;
+basic: {;
+name: "Basic Plan";
 price: 2999;,
 features: [
 "Basic AI Analytics",
@@ -18,8 +18,8 @@ features: [
 "Email Integration";
 ];
 },
-professional: {,
-name: "Professional Plan",
+professional: {
+name: "Professional Plan"
 price: 7999;,
 features: [
 "Advanced AI Analytics",
@@ -29,8 +29,8 @@ features: [
 "Custom Dashboards";
 ];
 },
-enterprise: {,
-name: "Enterprise Plan",
+enterprise: {
+name: "Enterprise Plan"
 price: 19999;,
 features: [
 "Full AI Suite",

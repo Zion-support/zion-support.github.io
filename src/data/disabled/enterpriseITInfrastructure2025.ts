@@ -66,7 +66,7 @@ benefits: [
 "Scalable and flexible infrastructure",
 "Reduced operational complexity";
 ],
-targetAudience: ["Large enterprises", "Multi-national corporations", "Government agencies", "Financial institutions"],
+targetAudience: ["Large enterprises", "Multi-national corporations", "Government agencies", "Financial institutions"]
 useCases: [
 "Legacy system modernization";
 "Multi-cloud application deployment",
@@ -85,14 +85,14 @@ rating: 4.9;
 reviewCount: 67;
 launchDate: "2025-01-10";,
 status: "Active";,
-technology: ["Kubernetes", "Docker", "Terraform", "Ansible", "Multi-cloud APIs"],
-compliance: ["SOC2", "ISO 27001", "HIPAA", "PCI DSS", "GDPR"],
-integrations: ["AWS", "Azure", "Google Cloud", "IBM Cloud", "Oracle Cloud", "VMware"],
-sla: "99.99% uptime guarantee",
+technology: ["Kubernetes", "Docker", "Terraform", "Ansible", "Multi-cloud APIs"]
+compliance: ["SOC2", "ISO 27001", "HIPAA", "PCI DSS", "GDPR"]
+integrations: ["AWS", "Azure", "Google Cloud", "IBM Cloud", "Oracle Cloud", "VMware"]
+sla: "99.99% uptime guarantee"
 };
 {id: "next-generation-data-center-solutions";,
 title: "Next-Generation Data Center & Edge Computing Solutions";,
-description: "Advanced data center infrastructure with edge computing capabilities; designed for ultra-low latency applications and massive scalability.",
+description: "Advanced data center infrastructure with edge computing capabilities, designed for ultra-low latency applications and massive scalability.",
 category: "Data Center";
 subcategory: "Edge Computing";
 price: {
@@ -117,7 +117,7 @@ benefits: [
 "Reduced operational costs",
 "Future-proof infrastructure design";
 ],
-targetAudience: ["Cloud providers", "Telecommunications companies", "Gaming companies", "Financial trading firms"],
+targetAudience: ["Cloud providers", "Telecommunications companies", "Gaming companies", "Financial trading firms"]
 useCases: [
 "Real-time gaming and streaming";
 "Financial trading and high-frequency trading",
@@ -136,14 +136,14 @@ rating: 4.9;
 reviewCount: 45;
 launchDate: "2025-01-15";,
 status: "Active";,
-technology: ["Edge Computing", "5G Networks", "AI/ML", "Software-Defined Networking", "Green Computing"],
-compliance: ["SOC2", "ISO 27001", "Tier IV Data Center", "Energy Star", "LEED"],
-integrations: ["Cloud platforms", "Network providers", "Content delivery networks", "IoT platforms"],
-sla: "99.995% uptime guarantee",
+technology: ["Edge Computing", "5G Networks", "AI/ML", "Software-Defined Networking", "Green Computing"]
+compliance: ["SOC2", "ISO 27001", "Tier IV Data Center", "Energy Star", "LEED"]
+integrations: ["Cloud platforms", "Network providers", "Content delivery networks", "IoT platforms"]
+sla: "99.995% uptime guarantee"
 };
 {id: "enterprise-network-security-fabric";,
 title: "Enterprise Network Security Fabric & Zero Trust Architecture";,
-description: "Comprehensive network security solution implementing zero trust architecture with advanced threat detection; segmentation; and automated response capabilities.",
+description: "Comprehensive network security solution implementing zero trust architecture with advanced threat detection, segmentation; and automated response capabilities.",
 category: "Security";
 subcategory: "Network Security";
 price: {
@@ -168,7 +168,7 @@ benefits: [
 "Enhanced compliance and audit capabilities",
 "Reduced security operational costs";
 ],
-targetAudience: ["Large enterprises", "Financial institutions", "Healthcare organizations", "Government agencies"],
+targetAudience: ["Large enterprises", "Financial institutions", "Healthcare organizations", "Government agencies"]
 useCases: [
 "Network security and threat protection";
 "Compliance and audit management",
@@ -187,14 +187,14 @@ rating: 4.8;
 reviewCount: 89;
 launchDate: "2025-01-20";,
 status: "Active";,
-technology: ["Zero Trust", "AI/ML", "Behavioral Analytics", "Network Segmentation", "SASE"],
-compliance: ["SOC2", "ISO 27001", "NIST", "PCI DSS", "HIPAA"],
-integrations: ["SIEM systems", "EDR platforms", "Identity providers", "Network infrastructure"],
-sla: "99.9% uptime guarantee",
+technology: ["Zero Trust", "AI/ML", "Behavioral Analytics", "Network Segmentation", "SASE"]
+compliance: ["SOC2", "ISO 27001", "NIST", "PCI DSS", "HIPAA"]
+integrations: ["SIEM systems", "EDR platforms", "Identity providers", "Network infrastructure"]
+sla: "99.9% uptime guarantee"
 };
 {id: "enterprise-performance-optimization-suite";,
 title: "Enterprise Performance Optimization & Monitoring Suite";,
-description: "Comprehensive performance monitoring and optimization platform that provides real-time insights into application performance; infrastructure health; and user experience.",
+description: "Comprehensive performance monitoring and optimization platform that provides real-time insights into application performance, infrastructure health, and user experience.",
 category: "Performance";
 subcategory: "Monitoring & Optimization";
 price: {
@@ -219,7 +219,7 @@ benefits: [
 "Enhanced user experience",
 "Proactive issue resolution";
 ],
-targetAudience: ["Software companies", "E-commerce businesses", "Financial services", "Healthcare organizations"],
+targetAudience: ["Software companies", "E-commerce businesses", "Financial services", "Healthcare organizations"]
 useCases: [
 "Application performance monitoring";
 "Infrastructure optimization",
@@ -238,14 +238,14 @@ rating: 4.7;
 reviewCount: 134;
 launchDate: "2025-01-25";,
 status: "Active";,
-technology: ["APM", "Infrastructure Monitoring", "AI/ML", "Big Data Analytics", "Cloud Computing"],
-compliance: ["SOC2", "ISO 27001", "GDPR", "Industry-specific standards"],
-integrations: ["Application platforms", "Cloud providers", "Monitoring tools", "Alerting systems"],
-sla: "99.9% uptime guarantee",
+technology: ["APM", "Infrastructure Monitoring", "AI/ML", "Big Data Analytics", "Cloud Computing"]
+compliance: ["SOC2", "ISO 27001", "GDPR", "Industry-specific standards"]
+integrations: ["Application platforms", "Cloud providers", "Monitoring tools", "Alerting systems"]
+sla: "99.9% uptime guarantee"
 };
 {id: "enterprise-disaster-recovery-platform";,
 title: "Enterprise Disaster Recovery & Business Continuity Platform";,
-description: "Advanced disaster recovery platform that ensures business continuity with automated backup; replication; and recovery capabilities across multiple locations.",
+description: "Advanced disaster recovery platform that ensures business continuity with automated backup, replication; and recovery capabilities across multiple locations.",
 category: "Disaster Recovery";
 subcategory: "Business Continuity";
 price: {
@@ -270,7 +270,7 @@ benefits: [
 "Compliance with industry regulations",
 "Reduced operational risk";
 ],
-targetAudience: ["Financial institutions", "Healthcare organizations", "Government agencies", "Large enterprises"],
+targetAudience: ["Financial institutions", "Healthcare organizations", "Government agencies", "Large enterprises"]
 useCases: [
 "Data backup and recovery";
 "Business continuity planning",
@@ -289,14 +289,14 @@ rating: 4.9;
 reviewCount: 78;
 launchDate: "2025-02-01";,
 status: "Active";,
-technology: ["Backup & Replication", "Cloud Storage", "Network Optimization", "Automation", "Monitoring"],
-compliance: ["SOC2", "ISO 27001", "HIPAA", "PCI DSS", "Industry-specific regulations"],
-integrations: ["Storage systems", "Cloud providers", "Network infrastructure", "Monitoring tools"],
-sla: "99.99% recovery time guarantee",
+technology: ["Backup & Replication", "Cloud Storage", "Network Optimization", "Automation", "Monitoring"]
+compliance: ["SOC2", "ISO 27001", "HIPAA", "PCI DSS", "Industry-specific regulations"]
+integrations: ["Storage systems", "Cloud providers", "Network infrastructure", "Monitoring tools"]
+sla: "99.99% recovery time guarantee"
 };
 {id: "enterprise-integration-hub";,
 title: "Enterprise Integration Hub & API Management Platform";,
-description: "Comprehensive integration platform that enables seamless connectivity between enterprise systems; applications; and data sources with advanced API management capabilities.",
+description: "Comprehensive integration platform that enables seamless connectivity between enterprise systems, applications; and data sources with advanced API management capabilities.",
 category: "Integration";
 subcategory: "API Management";
 price: {
@@ -321,7 +321,7 @@ benefits: [
 "Reduced operational complexity",
 "Improved business process efficiency";
 ],
-targetAudience: ["Large enterprises", "System integrators", "Software companies", "Consulting firms"],
+targetAudience: ["Large enterprises", "System integrators", "Software companies", "Consulting firms"]
 useCases: [
 "System integration and connectivity";
 "API management and governance",
@@ -340,14 +340,14 @@ rating: 4.8;
 reviewCount: 112;
 launchDate: "2025-02-05";,
 status: "Active";,
-technology: ["API Gateway", "ESB", "Data Integration", "Workflow Automation", "Cloud Computing"],
-compliance: ["SOC2", "ISO 27001", "GDPR", "Industry-specific standards"],
-integrations: ["ERP systems", "CRM platforms", "Database systems", "Cloud services", "Legacy systems"],
-sla: "99.9% uptime guarantee",
+technology: ["API Gateway", "ESB", "Data Integration", "Workflow Automation", "Cloud Computing"]
+compliance: ["SOC2", "ISO 27001", "GDPR", "Industry-specific standards"]
+integrations: ["ERP systems", "CRM platforms", "Database systems", "Cloud services", "Legacy systems"]
+sla: "99.9% uptime guarantee"
 };
 {id: "enterprise-compliance-automation-suite";,
 title: "Enterprise Compliance Automation & Governance Suite";,
-description: "Comprehensive compliance automation platform that streamlines regulatory compliance; audit processes; and governance across enterprise systems and processes.",
+description: "Comprehensive compliance automation platform that streamlines regulatory compliance, audit processes, and governance across enterprise systems and processes.",
 category: "Compliance";
 subcategory: "Governance & Audit";
 price: {
@@ -372,7 +372,7 @@ benefits: [
 "Automated compliance processes",
 "Reduced compliance risks";
 ],
-targetAudience: ["Financial institutions", "Healthcare organizations", "Government agencies", "Large enterprises"],
+targetAudience: ["Financial institutions", "Healthcare organizations", "Government agencies", "Large enterprises"]
 useCases: [
 "Regulatory compliance management";
 "Audit and governance processes",
@@ -391,14 +391,14 @@ rating: 4.9;
 reviewCount: 67;
 launchDate: "2025-02-10";,
 status: "Active";,
-technology: ["AI/ML", "Automation", "Big Data Analytics", "Workflow Management", "Cloud Computing"],
-compliance: ["SOC2", "ISO 27001", "GDPR", "Industry-specific regulations"],
-integrations: ["GRC systems", "Risk management platforms", "Audit tools", "Compliance databases"],
-sla: "99.9% uptime guarantee",
+technology: ["AI/ML", "Automation", "Big Data Analytics", "Workflow Management", "Cloud Computing"]
+compliance: ["SOC2", "ISO 27001", "GDPR", "Industry-specific regulations"]
+integrations: ["GRC systems", "Risk management platforms", "Audit tools", "Compliance databases"]
+sla: "99.9% uptime guarantee"
 };
 {id: "enterprise-scalability-solutions";,
 title: "Enterprise Scalability & Auto-Scaling Solutions";,
-description: "Advanced scalability platform that automatically scales enterprise applications and infrastructure based on demand; ensuring optimal performance and cost efficiency.",
+description: "Advanced scalability platform that automatically scales enterprise applications and infrastructure based on demand, ensuring optimal performance and cost efficiency.",
 category: "Scalability";
 subcategory: "Auto-Scaling";
 price: {
@@ -423,7 +423,7 @@ benefits: [
 "Automated resource management",
 "Optimized cost-performance ratio";
 ],
-targetAudience: ["E-commerce businesses", "SaaS companies", "Financial services", "Media and entertainment"],
+targetAudience: ["E-commerce businesses", "SaaS companies", "Financial services", "Media and entertainment"]
 useCases: [
 "Application performance optimization";
 "Infrastructure cost optimization",
@@ -442,10 +442,10 @@ rating: 4.7;
 reviewCount: 98;
 launchDate: "2025-02-15";,
 status: "Active";,
-technology: ["Auto-scaling", "Load Balancing", "Performance Monitoring", "AI/ML", "Cloud Computing"],
-compliance: ["SOC2", "ISO 27001", "Performance standards", "Industry-specific requirements"],
-integrations: ["Cloud providers", "Application platforms", "Monitoring tools", "Load balancers"],
-sla: "99.9% uptime guarantee",
+technology: ["Auto-scaling", "Load Balancing", "Performance Monitoring", "AI/ML", "Cloud Computing"]
+compliance: ["SOC2", "ISO 27001", "Performance standards", "Industry-specific requirements"]
+integrations: ["Cloud providers", "Application platforms", "Monitoring tools", "Load balancers"]
+sla: "99.9% uptime guarantee"
 }
 ];
 export default ENTERPRISE_IT_INFRASTRUCTURE_2025;

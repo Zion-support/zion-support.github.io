@@ -1,4 +1,4 @@
-import { Routes; Route } from "react-router-dom, ";
+import { Routes, Route } from "react-router-dom, ";
 // Interface definitions;
 export interface ServiceContact {
 phone: string;
@@ -85,20 +85,20 @@ benefits: [
 "Cost optimization",
 "Innovation leadership";
 ],
-targetAudience: ["Research institutions", "Tech giants", "Defense", "Healthcare"],
-tags: ["Neuromorphic", "Brain-Inspired", "AI", "Energy Efficient"],
+targetAudience: ["Research institutions", "Tech giants", "Defense", "Healthcare"]
+tags: ["Neuromorphic", "Brain-Inspired", "AI", "Energy Efficient"]
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com/brain-inspired-ai";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$8;000-30;000/month",
-aiModels: ["Spiking Neural Networks", "Event-driven models", "Bio-inspired algorithms"],
+aiModels: ["Spiking Neural Networks", "Event-driven models", "Bio-inspired algorithms"]
 accuracy: "98.5%";,
 trainingData: "Neuromorphic datasets";,
-compliance: ["Research standards", "Safety protocols", "Data protection"],
+compliance: ["Research standards", "Safety protocols", "Data protection"]
 aiScore: 98;,
-useCases: ["Autonomous systems", "Robotics", "Edge computing", "Cognitive computing"];
+useCases: ["Autonomous systems", "Robotics", "Edge computing" "Cognitive computing"];
 }
 ];
 
@@ -108,7 +108,7 @@ export const brainComputerInterfaceServices2025: MicroSaasService[] = [
 name: "Neural Control Platform";
 category: "Brain-Computer Interface";,
 pricing: "Enterprise";,
-description: "Advanced brain-computer interface platform for direct neural control; communication; and cognitive enhancement applications",
+description: "Advanced brain-computer interface platform for direct neural control, communication; and cognitive enhancement applications",
 price: 3500;
 pricingModel: "monthly";,
 userLimit: "Up to 100 users";,
@@ -130,20 +130,20 @@ benefits: [
 "Research advancement",
 "Innovation leadership";
 ],
-targetAudience: ["Healthcare", "Research institutions", "Assistive technology", "Gaming"],
-tags: ["BCI", "Neural Control", "Cognitive Enhancement", "Assistive Tech"],
+targetAudience: ["Healthcare", "Research institutions", "Assistive technology", "Gaming"]
+tags: ["BCI", "Neural Control", "Cognitive Enhancement", "Assistive Tech"]
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com/neural-control-platform";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$3;500-12;000/month",
-competitors: ["Neuralink", "Kernel", "CTRL-labs"],
+competitors: ["Neuralink", "Kernel", "CTRL-labs"]
 roi: "600% within 24 months";,
 setupTime: "6-8 weeks";,
-integrations: ["Medical devices", "Research platforms", "Gaming systems", "Assistive tools"],
+integrations: ["Medical devices", "Research platforms", "Gaming systems", "Assistive tools"]
 freeTier: false;,
-trialPeriod: "30 days",
+trialPeriod: "30 days"
 }
 ];
 // Synthetic Biology Services;
@@ -151,7 +151,7 @@ export const syntheticBiologyServices2025: AIService[] = [
 {id: 1;
 name: "Bio-Design Studio";,
 category: "Synthetic Biology";,
-description: "Comprehensive synthetic biology platform for designing; modeling; and engineering biological systems with AI assistance",
+description: "Comprehensive synthetic biology platform for designing, modeling; and engineering biological systems with AI assistance",
 pricing: "Enterprise";
 price: 5000;,
 pricingModel: "monthly";,
@@ -173,20 +173,20 @@ benefits: [
 "Compliance achievement",
 "Innovation acceleration";
 ],
-targetAudience: ["Biotech companies", "Pharmaceuticals", "Research institutions", "Agriculture"],
-tags: ["Synthetic Biology", "Bio-Design", "CRISPR", "Protein Engineering"],
+targetAudience: ["Biotech companies", "Pharmaceuticals", "Research institutions", "Agriculture"]
+tags: ["Synthetic Biology", "Bio-Design", "CRISPR", "Protein Engineering"]
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com/bio-design-studio";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$5;000-20;000/month",
-aiModels: ["Bio-AI models", "Protein folding", "Metabolic modeling", "Design algorithms"],
+aiModels: ["Bio-AI models", "Protein folding", "Metabolic modeling", "Design algorithms"]
 accuracy: "96.2%";,
 trainingData: "Biological datasets";,
-compliance: ["FDA", "EPA", "Biosafety", "Research ethics"],
+compliance: ["FDA", "EPA", "Biosafety", "Research ethics"]
 aiScore: 96;,
-useCases: ["Drug development", "Biofuels", "Agriculture", "Biomaterials"];
+useCases: ["Drug development", "Biofuels", "Agriculture" "Biomaterials"];
 }
 ];
 
@@ -196,7 +196,7 @@ export const advancedRoboticsServices2025: MicroSaasService[] = [
 name: "Autonomous Robotics Platform";
 category: "Advanced Robotics";,
 pricing: "Enterprise";,
-description: "Next-generation autonomous robotics platform with AI-powered navigation; manipulation; and human-robot collaboration",
+description: "Next-generation autonomous robotics platform with AI-powered navigation, manipulation; and human-robot collaboration",
 price: 2800;
 pricingModel: "monthly";,
 userLimit: "Unlimited robots";,
@@ -218,20 +218,20 @@ benefits: [
 "Human augmentation",
 "Operational efficiency";
 ],
-targetAudience: ["Manufacturing", "Healthcare", "Logistics", "Agriculture"],
-tags: ["Robotics", "Autonomous Systems", "AI", "Human-Robot Collaboration"],
+targetAudience: ["Manufacturing", "Healthcare", "Logistics", "Agriculture"]
+tags: ["Robotics", "Autonomous Systems", "AI", "Human-Robot Collaboration"]
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com/autonomous-robotics";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$2;800-8;000/month",
-competitors: ["Boston Dynamics", "ABB", "KUKA"],
+competitors: ["Boston Dynamics", "ABB", "KUKA"]
 roi: "400% within 18 months";,
 setupTime: "4-6 weeks";,
-integrations: ["Manufacturing systems", "Warehouse management", "Healthcare platforms", "Agricultural systems"],
+integrations: ["Manufacturing systems", "Warehouse management", "Healthcare platforms", "Agricultural systems"]
 freeTier: false;,
-trialPeriod: "30 days",
+trialPeriod: "30 days"
 }
 ];
 // Advanced Materials Services;
@@ -240,7 +240,7 @@ export const advancedMaterialsServices2025: MicroSaasService[] = [
 name: "Smart Materials Platform";
 category: "Advanced Materials";,
 pricing: "Professional";,
-description: "Innovative smart materials platform for designing; testing; and deploying materials with adaptive properties and AI optimization",
+description: "Innovative smart materials platform for designing, testing; and deploying materials with adaptive properties and AI optimization",
 price: 599;
 pricingModel: "monthly";,
 userLimit: "Up to 50 users";,
@@ -262,20 +262,20 @@ benefits: [
 "Innovation acceleration",
 "Market advantage";
 ],
-targetAudience: ["Manufacturing", "Aerospace", "Automotive", "Construction"],
-tags: ["Smart Materials", "Material Science", "AI Design", "Performance Optimization"],
+targetAudience: ["Manufacturing", "Aerospace", "Automotive", "Construction"]
+tags: ["Smart Materials", "Material Science", "AI Design", "Performance Optimization"]
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com/smart-materials-platform";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$599-1;999/month",
-competitors: ["Materialise", "Autodesk", "Dassault"],
+competitors: ["Materialise", "Autodesk", "Dassault"]
 roi: "350% within 15 months";,
 setupTime: "2-3 weeks";,
-integrations: ["CAD systems", "Simulation platforms", "Manufacturing systems", "Research databases"],
+integrations: ["CAD systems", "Simulation platforms", "Manufacturing systems", "Research databases"]
 freeTier: true;,
-trialPeriod: "14 days",
+trialPeriod: "14 days"
 }
 ];
 // Advanced Energy Services;
@@ -284,7 +284,7 @@ export const advancedEnergyServices2025: MicroSaasService[] = [
 name: "Fusion Energy Management";
 category: "Fusion Energy";,
 pricing: "Enterprise";,
-description: "Revolutionary fusion energy management platform for monitoring; controlling; and optimizing fusion reactor operations",
+description: "Revolutionary fusion energy management platform for monitoring, controlling; and optimizing fusion reactor operations",
 price: 4500;
 pricingModel: "monthly";,
 userLimit: "Unlimited users";,
@@ -306,20 +306,20 @@ benefits: [
 "Environmental impact",
 "Energy independence";
 ],
-targetAudience: ["Energy companies", "Research institutions", "Government", "Utilities"],
-tags: ["Fusion Energy", "Clean Energy", "Plasma Physics", "Energy Management"],
+targetAudience: ["Energy companies", "Research institutions", "Government", "Utilities"]
+tags: ["Fusion Energy", "Clean Energy", "Plasma Physics", "Energy Management"]
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com/fusion-energy-management";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$4;500-15;000/month",
-competitors: ["ITER", "Commonwealth Fusion", "General Fusion"],
+competitors: ["ITER", "Commonwealth Fusion", "General Fusion"]
 roi: "800% within 36 months";,
 setupTime: "8-12 weeks";,
-integrations: ["Grid systems", "Research platforms", "Safety systems", "Energy markets"],
+integrations: ["Grid systems", "Research platforms", "Safety systems", "Energy markets"]
 freeTier: false;,
-trialPeriod: "60 days",
+trialPeriod: "60 days"
 }
 ];
 // Advanced Transportation Services;
@@ -350,20 +350,20 @@ benefits: [
 "Environmental impact",
 "Infrastructure efficiency";
 ],
-targetAudience: ["Transportation companies", "Government", "Infrastructure", "Passengers"],
-tags: ["Hyperloop", "High-Speed Transport", "Vacuum Technology", "Transportation"],
+targetAudience: ["Transportation companies", "Government", "Infrastructure", "Passengers"]
+tags: ["Hyperloop", "High-Speed Transport", "Vacuum Technology", "Transportation"]
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com/hyperloop-management";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$3;200-10;000/month",
-competitors: ["Virgin Hyperloop", "Hyperloop TT", "Hardt Hyperloop"],
+competitors: ["Virgin Hyperloop", "Hyperloop TT", "Hardt Hyperloop"]
 roi: "500% within 24 months";,
 setupTime: "6-8 weeks";,
-integrations: ["Transportation systems", "Energy grids", "Safety systems", "Passenger apps"],
+integrations: ["Transportation systems", "Energy grids", "Safety systems", "Passenger apps"]
 freeTier: false;,
-trialPeriod: "45 days",
+trialPeriod: "45 days"
 }
 ];
 // Advanced Communication Services;
@@ -394,20 +394,20 @@ benefits: [
 "Risk mitigation",
 "Competitive edge";
 ],
-targetAudience: ["Government", "Financial services", "Healthcare", "Defense"],
-tags: ["Quantum Communication", "Quantum Encryption", "Network Security", "Quantum Key Distribution"],
+targetAudience: ["Government", "Financial services", "Healthcare", "Defense"]
+tags: ["Quantum Communication", "Quantum Encryption", "Network Security", "Quantum Key Distribution"]
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com/quantum-communication";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$5;500-20;000/month",
-competitors: ["ID Quantique", "Toshiba", "NTT"],
+competitors: ["ID Quantique", "Toshiba", "NTT"]
 roi: "600% within 30 months";,
 setupTime: "8-12 weeks";,
-integrations: ["Communication networks", "Security systems", "Quantum devices", "Enterprise platforms"],
+integrations: ["Communication networks", "Security systems", "Quantum devices", "Enterprise platforms"]
 freeTier: false;,
-trialPeriod: "60 days",
+trialPeriod: "60 days"
 }
 ];
 // Advanced Manufacturing Services;
@@ -438,20 +438,20 @@ benefits: [
 "Cost optimization",
 "Performance enhancement";
 ],
-targetAudience: ["Manufacturing", "Aerospace", "Biomedical", "Consumer goods"],
-tags: ["4D Printing", "Smart Materials", "Shape-Shifting", "Manufacturing"],
+targetAudience: ["Manufacturing", "Aerospace", "Biomedical", "Consumer goods"]
+tags: ["4D Printing", "Smart Materials", "Shape-Shifting", "Manufacturing"]
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com/4d-printing-platform";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$899-2;999/month",
-competitors: ["Stratasys", "3D Systems", "HP"],
+competitors: ["Stratasys", "3D Systems", "HP"]
 roi: "400% within 18 months";,
 setupTime: "3-4 weeks";,
-integrations: ["3D printers", "Design software", "Material suppliers", "Quality systems"],
+integrations: ["3D printers", "Design software", "Material suppliers", "Quality systems"]
 freeTier: true;,
-trialPeriod: "21 days",
+trialPeriod: "21 days"
 }
 ];
 // Advanced Gaming Services;
@@ -482,20 +482,20 @@ benefits: [
 "Innovation leadership",
 "Market differentiation";
 ],
-targetAudience: ["Gamers", "Game developers", "Healthcare", "Research"],
-tags: ["Neural Gaming", "Brain-Computer Interface", "Immersive Gaming", "Cognitive Training"],
+targetAudience: ["Gamers", "Game developers", "Healthcare", "Research"]
+tags: ["Neural Gaming", "Brain-Computer Interface", "Immersive Gaming", "Cognitive Training"]
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com/neural-gaming-platform";,
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$399-1;299/month",
-competitors: ["Valve", "Oculus", "Neuralink"],
+competitors: ["Valve", "Oculus", "Neuralink"]
 roi: "500% within 15 months";,
 setupTime: "2-3 weeks";,
-integrations: ["Gaming platforms", "VR systems", "BCI devices", "Social platforms"],
+integrations: ["Gaming platforms", "VR systems", "BCI devices", "Social platforms"]
 freeTier: true;,
-trialPeriod: "14 days",
+trialPeriod: "14 days"
 }
 ];
 // Export all cutting-edge services;
@@ -522,7 +522,7 @@ const allServices = Object.values(allCuttingEdgeServices2025).flat();
 return allServices.filter(service => service.category === category);
 };
 
-export const getCuttingEdgeServicesByPriceRange: any = (minPrice: number; maxPrice: number) => {
+export const getCuttingEdgeServicesByPriceRange: any = (minPrice: number, maxPrice: number) => {
 const allServices = Object.values(allCuttingEdgeServices2025).flat();
 return allServices.filter(service => {
 if ("price" in service && typeof service.price === "number") {

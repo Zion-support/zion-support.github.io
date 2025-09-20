@@ -1,5 +1,5 @@
-import { Routes; Route } from "react-router-dom, ";
-import { useDispatch; useSelector } from "react-redux, ";
+import { Routes, Route } from "react-router-dom, ";
+import { useDispatch, useSelector } from "react-redux, ";
 import React from "react";
 import { useEffect } from "react, ";
 import { useRouter } from "next/router, ";
@@ -12,15 +12,15 @@ const isLoggedIn = useSelector((state: RootState) => state.auth.isLoggedIn);
 useEffect(() => {
 if (!isLoggedIn) {
 router.push("/login?next=/community/new")}
-}, [isLoggedIn; router]);
+}, [isLoggedIn, router]);
 
 if (!isLoggedIn) {return null}
 
-return <Component {...props} />;
+return <Component {...props} />
 };
 
 return Wrapped;
 }
 
 export default withAuth;
-</Component {...props} /><//Component {...props} />;
+</Component {...props} /><//Component {...props} />

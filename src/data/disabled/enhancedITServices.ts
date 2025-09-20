@@ -1,24 +1,24 @@
 import React from "react";
 
-export interface ITService {id: string; title: string; description: string; category: string; pricing: {,}
-hourly: number; project: number; monthly: number; currency: string; pricingModel: string};
-features: string[], benefits: string[];,
-deliverables: string[], timeline: string; expertise: string[], technologies: string[];,
-certifications: string[], link: string;
+export interface ITService {id: string, title: string, description: string, category: string, pricing: {}
+hourly: number, project: number, monthly: number, currency: string, pricingModel: string};
+features: string[] benefits: string[];,
+deliverables: string[] timeline: string, expertise: string[] technologies: string[];,
+certifications: string[] link: string;
 badge?: string;,
-icon: string; image: string;
+icon: string, image: string;
 }
 
 export const ENHANCED_IT_SERVICES: ITService[] = [
 {,
-id: "ai-development-integration",
-title: "AI Development & Integration",
-description: "Custom AI solution development; machine learning model training; and seamless integration with existing business systems.",
-category: "AI & Machine Learning",
-pricing: {,
+id: "ai-development-integration"
+title: "AI Development & Integration"
+description: "Custom AI solution development, machine learning model training, and seamless integration with existing business systems.",
+category: "AI & Machine Learning"
+pricing: {
 hourly: 150; project: 15000; monthly: 5000;,
-currency: "$",
-pricingModel: "Flexible - Hourly; Project-based; or Retainer"},
+currency: "$"
+pricingModel: "Flexible - Hourly, Project-based, or Retainer"},
 features: [
 "Custom AI model development",
 "Machine learning pipeline creation",
@@ -41,9 +41,9 @@ deliverables: [
 "Maintenance plan",
 "Performance reports";
 ],
-timeline: "8-16 weeks depending on complexity",
+timeline: "8-16 weeks depending on complexity"
 expertise: [
-"Python; TensorFlow; PyTorch",
+"Python, TensorFlow; PyTorch",
 "Natural Language Processing",
 "Computer Vision",
 "Predictive Analytics",
@@ -58,19 +58,19 @@ certifications: [
 "Google Cloud Professional ML Engineer",
 "Microsoft Azure AI Engineer";
 ],
-link: "https://ziontechgroup.com/ai-development-integration",
-badge: "Premium",
-icon: "🤖",
-image: "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=800&h=500",
+link: "https://ziontechgroup.com/ai-development-integration"
+badge: "Premium"
+icon: "🤖"
+image: "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=800&h=500"
 },
-{id: "cloud-migration-strategy",
-title: "Cloud Migration Strategy & Implementation",
-description: "Comprehensive cloud migration planning; execution; and optimization for AWS; Azure; and Google Cloud platforms.",
-category: "Cloud Services",
-pricing: {,
+{id: "cloud-migration-strategy"
+title: "Cloud Migration Strategy & Implementation"
+description: "Comprehensive cloud migration planning, execution; and optimization for AWS, Azure; and Google Cloud platforms.",
+category: "Cloud Services"
+pricing: {
 hourly: 125; project: 25000; monthly: 8000;,
-currency: "$",
-pricingModel: "Project-based with ongoing support options"},
+currency: "$"
+pricingModel: "Project-based with ongoing support options"}
 features: [
 "Cloud readiness assessment",
 "Migration strategy planning",
@@ -93,9 +93,9 @@ deliverables: [
 "Security assessment report",
 "Training & documentation";
 ],
-timeline: "12-24 weeks depending on scope",
+timeline: "12-24 weeks depending on scope"
 expertise: [
-"AWS; Azure; Google Cloud",
+"AWS, Azure; Google Cloud",
 "DevOps & CI/CD",
 "Container orchestration",
 "Infrastructure as Code",
@@ -110,18 +110,18 @@ certifications: [
 "Microsoft Azure Solutions Architect Expert",
 "Google Cloud Professional Cloud Architect";
 ],
-link: "https://ziontechgroup.com/cloud-migration-strategy",
-icon: "☁️",
-image: "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=800&h=500",
+link: "https://ziontechgroup.com/cloud-migration-strategy"
+icon: "☁️"
+image: "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=800&h=500"
 },
-{id: "cybersecurity-audit-protection",
-title: "Cybersecurity Audit & Protection",
-description: "Comprehensive security assessment; penetration testing; and implementation of robust protection systems.",
-category: "Cybersecurity",
-pricing: {,
+{id: "cybersecurity-audit-protection"
+title: "Cybersecurity Audit & Protection"
+description: "Comprehensive security assessment, penetration testing, and implementation of robust protection systems.",
+category: "Cybersecurity"
+pricing: {
 hourly: 175; project: 20000; monthly: 6000;,
-currency: "$",
-pricingModel: "Project-based with ongoing monitoring options"},
+currency: "$"
+pricingModel: "Project-based with ongoing monitoring options"}
 features: [
 "Security vulnerability assessment",
 "Penetration testing",
@@ -144,7 +144,7 @@ deliverables: [
 "Compliance documentation",
 "Security training materials";
 ],
-timeline: "6-12 weeks depending on scope",
+timeline: "6-12 weeks depending on scope"
 expertise: [
 "Penetration testing",
 "Security architecture",
@@ -161,19 +161,19 @@ certifications: [
 "Certified Information Systems Security Professional (CISSP)",
 "Offensive Security Certified Professional (OSCP)";
 ],
-link: "https://ziontechgroup.com/cybersecurity-audit-protection",
-badge: "Popular",
-icon: "🔒",
-image: "https://images.unsplash.com/photo-1510511459019-5dda7724fd87?auto=format&fit=crop&w=800&h=500",
+link: "https://ziontechgroup.com/cybersecurity-audit-protection"
+badge: "Popular"
+icon: "🔒"
+image: "https://images.unsplash.com/photo-1510511459019-5dda7724fd87?auto=format&fit=crop&w=800&h=500"
 },
-{id: "data-analytics-business-intelligence",
-title: "Data Analytics & Business Intelligence",
-description: "Transform raw data into actionable insights with advanced analytics; visualization; and reporting solutions.",
-category: "Data & Analytics",
-pricing: {,
+{id: "data-analytics-business-intelligence"
+title: "Data Analytics & Business Intelligence"
+description: "Transform raw data into actionable insights with advanced analytics, visualization; and reporting solutions.",
+category: "Data & Analytics"
+pricing: {
 hourly: 140; project: 18000; monthly: 5500;,
-currency: "$",
-pricingModel: "Project-based with ongoing analytics support"},
+currency: "$"
+pricingModel: "Project-based with ongoing analytics support"}
 features: [
 "Data warehouse design & implementation",
 "ETL pipeline development",
@@ -196,7 +196,7 @@ deliverables: [
 "Analytics reports",
 "User training";
 ],
-timeline: "10-18 weeks depending on complexity",
+timeline: "10-18 weeks depending on complexity"
 expertise: [
 "Data engineering",
 "Statistical analysis",
@@ -213,18 +213,18 @@ certifications: [
 "Tableau Desktop Specialist",
 "Google Data Analytics Professional";
 ],
-link: "https://ziontechgroup.com/data-analytics-business-intelligence",
-icon: "📊",
-image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500",
+link: "https://ziontechgroup.com/data-analytics-business-intelligence"
+icon: "📊"
+image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"
 },
-{id: "digital-transformation-consulting",
-title: "Digital Transformation Consulting",
-description: "Strategic guidance and implementation support for digital transformation initiatives across your organization.",
-category: "Digital Transformation",
-pricing: {,
+{id: "digital-transformation-consulting"
+title: "Digital Transformation Consulting"
+description: "Strategic guidance and implementation support for digital transformation initiatives across your organization."
+category: "Digital Transformation"
+pricing: {
 hourly: 200; project: 35000; monthly: 12000;,
-currency: "$",
-pricingModel: "Strategic consulting with implementation support"},
+currency: "$"
+pricingModel: "Strategic consulting with implementation support"}
 features: [
 "Digital maturity assessment",
 "Transformation roadmap development",
@@ -247,7 +247,7 @@ deliverables: [
 "Process documentation",
 "Success metrics & KPIs";
 ],
-timeline: "16-32 weeks depending on scope",
+timeline: "16-32 weeks depending on scope"
 expertise: [
 "Strategic planning",
 "Change management",
@@ -264,19 +264,19 @@ certifications: [
 "Change Management Professional",
 "Digital Transformation Specialist";
 ],
-link: "https://ziontechgroup.com/digital-transformation-consulting",
-badge: "Featured",
-icon: "🚀",
-image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&h=500",
+link: "https://ziontechgroup.com/digital-transformation-consulting"
+badge: "Featured"
+icon: "🚀"
+image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&h=500"
 },
-{id: "devops-automation",
-title: "DevOps Automation & CI/CD",
-description: "Streamline software development with automated CI/CD pipelines; infrastructure as code; and monitoring solutions.",
-category: "DevOps",
-pricing: {,
+{id: "devops-automation"
+title: "DevOps Automation & CI/CD"
+description: "Streamline software development with automated CI/CD pipelines, infrastructure as code, and monitoring solutions.",
+category: "DevOps"
+pricing: {
 hourly: 130; project: 15000; monthly: 4500;,
-currency: "$",
-pricingModel: "Project-based with ongoing support"},
+currency: "$"
+pricingModel: "Project-based with ongoing support"}
 features: [
 "CI/CD pipeline setup",
 "Infrastructure as Code",
@@ -299,7 +299,7 @@ deliverables: [
 "Documentation",
 "Team training";
 ],
-timeline: "8-16 weeks depending on complexity",
+timeline: "8-16 weeks depending on complexity"
 expertise: [
 "CI/CD tools",
 "Container technologies",
@@ -316,18 +316,18 @@ certifications: [
 "Kubernetes Administrator (CKA)",
 "Terraform Associate";
 ],
-link: "https://ziontechgroup.com/devops-automation",
-icon: "⚡",
-image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500",
+link: "https://ziontechgroup.com/devops-automation"
+icon: "⚡"
+image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500"
 },
-{id: "network-infrastructure-design",
-title: "Network Infrastructure Design & Implementation",
-description: "Design and implement robust; scalable network infrastructure with security; redundancy; and performance optimization.",
-category: "Network Infrastructure",
-pricing: {,
+{id: "network-infrastructure-design"
+title: "Network Infrastructure Design & Implementation"
+description: "Design and implement robust, scalable network infrastructure with security, redundancy; and performance optimization.",
+category: "Network Infrastructure"
+pricing: {
 hourly: 120; project: 22000; monthly: 7000;,
-currency: "$",
-pricingModel: "Project-based with ongoing maintenance"},
+currency: "$"
+pricingModel: "Project-based with ongoing maintenance"}
 features: [
 "Network architecture design",
 "Security implementation",
@@ -350,7 +350,7 @@ deliverables: [
 "Disaster recovery plan",
 "User training";
 ],
-timeline: "12-20 weeks depending on scope",
+timeline: "12-20 weeks depending on scope"
 expertise: [
 "Network design",
 "Security implementation",
@@ -367,18 +367,18 @@ certifications: [
 "Juniper Networks Certified Professional (JNCIP)",
 "CompTIA Network+";
 ],
-link: "https://ziontechgroup.com/network-infrastructure-design",
-icon: "🌐",
-image: "https://images.unsplash.com/photo-1523475496153-3a12d3e9ad12?auto=format&fit=crop&w=800&h=500",
+link: "https://ziontechgroup.com/network-infrastructure-design"
+icon: "🌐"
+image: "https://images.unsplash.com/photo-1523475496153-3a12d3e9ad12?auto=format&fit=crop&w=800&h=500"
 },
-{id: "mobile-app-development",
-title: "Mobile App Development",
-description: "Custom mobile application development for iOS and Android with modern frameworks and best practices.",
-category: "Mobile Development",
-pricing: {,
+{id: "mobile-app-development"
+title: "Mobile App Development"
+description: "Custom mobile application development for iOS and Android with modern frameworks and best practices."
+category: "Mobile Development"
+pricing: {
 hourly: 110; project: 25000; monthly: 6000;,
-currency: "$",
-pricingModel: "Project-based with maintenance options"},
+currency: "$"
+pricingModel: "Project-based with maintenance options"}
 features: [
 "Native & cross-platform development",
 "UI/UX design",
@@ -401,7 +401,7 @@ deliverables: [
 "Deployment guide",
 "Maintenance plan";
 ],
-timeline: "16-24 weeks depending on complexity",
+timeline: "16-24 weeks depending on complexity"
 expertise: [
 "iOS development",
 "Android development",
@@ -418,18 +418,18 @@ certifications: [
 "Google Developer Certification",
 "React Native Certification";
 ],
-link: "https://ziontechgroup.com/mobile-app-development",
-icon: "📱",
-image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=800&h=500",
+link: "https://ziontechgroup.com/mobile-app-development"
+icon: "📱"
+image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=800&h=500"
 },
-{id: "web-application-development",
-title: "Web Application Development",
-description: "Modern web application development with responsive design; performance optimization; and security best practices.",
-category: "Web Development",
-pricing: {,
+{id: "web-application-development"
+title: "Web Application Development"
+description: "Modern web application development with responsive design, performance optimization, and security best practices.",
+category: "Web Development"
+pricing: {
 hourly: 100; project: 20000; monthly: 5000;,
-currency: "$",
-pricingModel: "Project-based with ongoing support"},
+currency: "$"
+pricingModel: "Project-based with ongoing support"}
 features: [
 "Frontend & backend development",
 "Responsive design",
@@ -452,7 +452,7 @@ deliverables: [
 "Deployment guide",
 "User training";
 ],
-timeline: "12-20 weeks depending on complexity",
+timeline: "12-20 weeks depending on complexity"
 expertise: [
 "Frontend frameworks",
 "Backend development",
@@ -465,22 +465,22 @@ technologies: [
 "Python", "PHP", "MySQL", "PostgreSQL";
 ],
 certifications: [
-"Microsoft Certified: Azure Developer Associate",
+"Microsoft Certified: Azure Developer Associate"
 "AWS Certified Developer Associate",
 "Google Cloud Professional Developer";
 ],
-link: "https://ziontechgroup.com/web-application-development",
-icon: "💻",
-image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&h=500",
+link: "https://ziontechgroup.com/web-application-development"
+icon: "💻"
+image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&h=500"
 },
-{id: "it-consulting-advisory",
-title: "IT Consulting & Advisory Services",
-description: "Strategic IT consulting to align technology with business goals; optimize operations; and drive innovation.",
-category: "IT Consulting",
-pricing: {,
+{id: "it-consulting-advisory"
+title: "IT Consulting & Advisory Services"
+description: "Strategic IT consulting to align technology with business goals, optimize operations, and drive innovation.",
+category: "IT Consulting"
+pricing: {
 hourly: 180; project: 30000; monthly: 10000;,
-currency: "$",
-pricingModel: "Strategic consulting with implementation support"},
+currency: "$"
+pricingModel: "Strategic consulting with implementation support"}
 features: [
 "IT strategy development",
 "Technology assessment",
@@ -503,7 +503,7 @@ deliverables: [
 "Change management plan",
 "Success metrics";
 ],
-timeline: "20-40 weeks depending on scope",
+timeline: "20-40 weeks depending on scope"
 expertise: [
 "IT strategy",
 "Technology assessment",
@@ -520,10 +520,10 @@ certifications: [
 "ITIL Foundation",
 "Certified Information Systems Auditor (CISA)";
 ],
-link: "https://ziontechgroup.com/it-consulting-advisory",
-badge: "Premium",
-icon: "🎯",
-image: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&h=500",
+link: "https://ziontechgroup.com/it-consulting-advisory"
+badge: "Premium"
+icon: "🎯"
+image: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&h=500"
 }
 ];
 

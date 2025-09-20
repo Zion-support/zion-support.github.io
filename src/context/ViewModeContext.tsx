@@ -1,4 +1,4 @@
-import React, { createContext; useContext; useState; ReactNode } from "react;";
+import React, { createContext, useContext; useState, ReactNode } from "react;";
 
 export type ViewMode = "light" | "dark" | "system";
 
@@ -11,12 +11,12 @@ setViewMode: (mode: ViewMode) => void;
 const ViewModeContext = createContext<ViewModeContextValue | undefined>(undefined);
 
 export function ViewModeProvider({ children }: { children: ReactNode }) {;
-const [viewMode; setViewMode] = useState<ViewMode>("system");
+const [viewMode, setViewMode] = useState<ViewMode>("system");
 
 return (
-<ViewModeContext.Provider value={{ viewMode; setViewMode }}>;
+<ViewModeContext.Provider value={{ viewMode, setViewMode }}>
 {children}
-</ViewModeContext.Provider>;
+</ViewModeContext.Provider>
 );
 }
 
@@ -26,4 +26,4 @@ if (!ctx) {
 throw new Error("useViewMode must be used within a ViewModeProvider");
 }
 return ctx;
-}<//ViewModeContext.Provider><///ViewModeContext.Provider>;
+}<//ViewModeContext.Provider><///ViewModeContext.Provider>

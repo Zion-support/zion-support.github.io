@@ -8,7 +8,7 @@ description: "Full-stack AI development services to integrate advanced machine l
 category: "Development";
 price: 5000;,
 currency: "$";,
-tags: ["AI Integration", "Machine Learning", "Enterprise"],
+tags: ["AI Integration", "Machine Learning", "Enterprise"]
 author: {
 name: "TechSolutions Inc.";,
 id: "tech-solutions";,
@@ -26,12 +26,12 @@ reviewCount: 124;
 id: "service-2";,
 title: "Cloud Infrastructure Management";,
 description:
-"24/7 monitoring and management of your cloud infrastructure to ensure optimal performance; security; and cost efficiency.",
+"24/7 monitoring and management of your cloud infrastructure to ensure optimal performance, security; and cost efficiency.",
 category: "Management";
 price: 3000;,
 currency: "$";,
-tags: ["Cloud", "DevOps", "Security"],
-author: {,
+tags: ["Cloud", "DevOps", "Security"]
+author: {
 name: "CloudPro Experts";,
 id: "cloud-pro";
 },
@@ -50,7 +50,7 @@ description: "Transform your raw data into actionable business insights with our
 category: "Analytics";
 price: 4500;,
 currency: "$";,
-tags: ["Big Data", "Analytics", "Business Intelligence"],
+tags: ["Big Data", "Analytics", "Business Intelligence"]
 author: {
 name: "DataMind Solutions";,
 id: "datamind";,
@@ -71,8 +71,8 @@ description: "Comprehensive security audits and implementation of robust protect
 category: "Security";
 price: 6000;,
 currency: "$";,
-tags: ["Cybersecurity", "Penetration Testing", "Compliance"],
-author: {,
+tags: ["Cybersecurity", "Penetration Testing", "Compliance"]
+author: {
 name: "SecureNet Team";,
 id: "secure-net";
 },
@@ -88,12 +88,12 @@ reviewCount: 103;
 id: "service-5";,
 title: "IT Infrastructure Modernization";,
 description:
-"Transform your legacy systems into modern; agile infrastructure that supports innovation and business growth.",
+"Transform your legacy systems into modern, agile infrastructure that supports innovation and business growth.",
 category: "Consulting";
 price: 8500;,
 currency: "$";,
-tags: ["Digital Transformation", "Legacy Systems", "Infrastructure"],
-author: {,
+tags: ["Digital Transformation", "Legacy Systems", "Infrastructure"]
+author: {
 name: "ModernizeIT Consulting";,
 id: "modernize-it";
 },
@@ -112,7 +112,7 @@ description: "Strategic consulting and implementation services to help businesse
 category: "Strategy";
 price: 7500;,
 currency: "$";,
-tags: ["AI Strategy", "Digital Transformation", "Business Growth"],
+tags: ["AI Strategy", "Digital Transformation", "Business Growth"]
 author: {
 name: "AI Future Consulting";,
 id: "ai-future";,
@@ -133,8 +133,8 @@ description: "Implement CI/CD pipelines and infrastructure automation to streaml
 category: "Management";
 price: 5500;,
 currency: "$";,
-tags: ["DevOps", "Automation", "CI/CD"],
-author: {,
+tags: ["DevOps", "Automation", "CI/CD"]
+author: {
 name: "Pipeline Pros";,
 id: "pipeline-pros";
 },
@@ -153,8 +153,8 @@ description: "End-to-end deployment of scalable SaaS applications with ongoing m
 category: "Development";
 price: 6500;,
 currency: "$";,
-tags: ["SaaS", "Cloud", "Scaling"],
-author: {,
+tags: ["SaaS", "Cloud", "Scaling"]
+author: {
 name: "SaaSify Corp";,
 id: "saasify";
 },
@@ -173,8 +173,8 @@ description: "Improve existing ML models for better accuracy and performance usi
 category: "Analytics";
 price: 4800;,
 currency: "$";,
-tags: ["Machine Learning", "Optimization", "Tuning"],
-author: {,
+tags: ["Machine Learning", "Optimization", "Tuning"]
+author: {
 name: "ModelTune Labs";,
 id: "modeltune";
 },
@@ -193,8 +193,8 @@ description: "Consulting services to integrate blockchain technology into existi
 category: "Consulting";
 price: 7000;,
 currency: "$";,
-tags: ["Blockchain", "Integration", "Consulting"],
-author: {,
+tags: ["Blockchain", "Integration", "Consulting"]
+author: {
 name: "BlockAdvisors";,
 id: "block-advisors";
 },

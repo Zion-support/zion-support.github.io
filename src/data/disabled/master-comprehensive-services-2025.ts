@@ -1,7 +1,7 @@
 // Master Comprehensive Services 2025;
 // This file combines all existing services with the new comprehensive expansion;
 
-import { enhancedMicroSaasServices2025; enhancedITServices2025; enhancedAIServices2025 } from "./comprehensiveServices2025, ";
+import { enhancedMicroSaasServices2025, enhancedITServices2025; enhancedAIServices2025 } from "./comprehensiveServices2025, ";
 import { allExpandedServices2025;
 getServicesByCategory;
 getServicesByPriceRange;
@@ -63,7 +63,7 @@ return allServices.filter(service => service.category === category);
 };
 
 // Get services by price range across all service types;
-export const getMasterServicesByPriceRange: any = (minPrice: number; maxPrice: number): AnyService[] => {
+export const getMasterServicesByPriceRange: any = (minPrice: number, maxPrice: number): AnyService[] => {
 const allServices = getAllServices();
 return allServices.filter(service => {
 if ("price" in service && typeof service.price === "number") {
@@ -145,7 +145,7 @@ professional: allServices.filter(s => "pricing" in s && s.pricing === "Professio
 enterprise: allServices.filter(s => "pricing" in s && s.pricing === "Enterprise").length;
 };
 categories: [...new Set(allServices.map(s => s.category))].length;,
-priceRanges: {,
+priceRanges: {
 low: allServices.filter(s => {
 if ("price" in s && typeof s.price === "number") return s.price < 100;
 if ("hourlyRate" in s && typeof s.hourlyRate === "number") return s.hourlyRate < 100;
@@ -167,7 +167,7 @@ return false;
 return stats;
 };
 
-// Get featured services (high-value; innovative services)
+// Get featured services (high-value, innovative services)
 export const getMasterFeaturedServices: any = (limit: number = 10): AnyService[] => {;
 const allServices = getAllServices();
 // Score services based on various factors;
@@ -206,12 +206,12 @@ if (cuttingEdgeCategories.includes(service.category)) {
 score += 25;
 }
 
-return { ...service; score };
+return { ...service, score };
 });
 
 // Sort by score and return top services;
 return scoredServices;
-.sort((a; b) => (b as any).score - (a as any).score)
+.sort((a, b) => (b as any).score - (a as any).score)
 .slice(0; limit);
 };
 

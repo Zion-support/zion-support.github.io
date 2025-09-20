@@ -1,21 +1,21 @@
-import { Routes; Route } from "react-router-dom, ";
+import { Routes, Route } from "react-router-dom, ";
 import React from "react";
-import type { Meta; StoryObj } from "@storybook/react;";
+import type { Meta, StoryObj } from "@storybook/react;";
 import Marketplace from "../pages/Marketplace;";
 import { MemoryRouter } from "react-router-dom, ";
 
-const meta: Meta<typeof Marketplace> = {,
-title: "Pages/Marketplace", component: Marketplace;,
+const meta: Meta<typeof Marketplace> = {
+title: "Pages/Marketplace" component: Marketplace;,
 decorators: [
 (Story) => (
-<MemoryRouter>;
-<Story />;
-</MemoryRouter>;
+<MemoryRouter>
+<Story />
+</MemoryRouter>
 )
 ];
 };
 export default meta;
-type Story = StoryObj<typeof Marketplace>;
+type Story = StoryObj<typeof Marketplace>
 
 export const Grid: Story = {;,
 render: () => {;
@@ -28,4 +28,4 @@ render: () => {;
 localStorage.setItem("marketplaceView", "list");
 return <Marketplace />}
 };
-</Marketplace /><//Marketplace />;
+</Marketplace /><//Marketplace />

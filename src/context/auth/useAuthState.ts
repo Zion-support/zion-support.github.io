@@ -1,4 +1,4 @@
-import { useState; useEffect } from "react, ";
+import { useState, useEffect } from "react, ";
 
 interface User {
 id: string;,
@@ -20,10 +20,10 @@ refreshToken: string | null;
 }
 
 export const useAuthState: any = () => {;
-const [user; setUser] = useState<User | null>(null);
-const [isLoading; setIsLoading] = useState(true);
-const [onboardingStep; setOnboardingStep] = useState(0);
-const [tokens; setTokens] = useState<AuthTokens>({,
+const [user, setUser] = useState<User | null>(null);
+const [isLoading, setIsLoading] = useState(true);
+const [onboardingStep, setOnboardingStep] = useState(0);
+const [tokens, setTokens] = useState<AuthTokens>({,
 accessToken: null;,
 refreshToken: null;
 });

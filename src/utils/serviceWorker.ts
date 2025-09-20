@@ -1,7 +1,7 @@
 import React from "react";
 
 // Enhanced Service Worker for Zion Tech Group;
-// Provides offline support; caching strategies; and performance optimizations;
+// Provides offline support, caching strategies, and performance optimizations;
 const CACHE_NAME = "zion-tech-group-v2.0.0";
 const STATIC_CACHE = "zion-static-v2.0.0";
 const DYNAMIC_CACHE = "zion-dynamic-v2.0.0";
@@ -9,11 +9,11 @@ const API_CACHE = "zion-api-v2.0.0";
 
 // Cache strategies;
 const CACHE_STRATEGIES = {
-STATIC: "cache-first",
-DYNAMIC: "stale-while-revalidate",
-API: "network-first",;
-IMAGES: "cache-first",;
-FONTS: "cache-first",;
+STATIC: "cache-first"
+DYNAMIC: "stale-while-revalidate"
+API: "network-first";
+IMAGES: "cache-first";
+FONTS: "cache-first";
 };
 
 // Static assets to cache;
@@ -82,11 +82,11 @@ const url = new URL(request.url);
 if (request.method !== "GET") {return}
 
 // Handle different types of requests;
-if (isStaticAsset(request)) {event.respondWith(cacheFirst(request; STATIC_CACHE))} else if (isDynamicRoute(request)) {event.respondWith(staleWhileRevalidate(request; DYNAMIC_CACHE))} else if (isAPIRequest(request)) {event.respondWith(networkFirst(request; API_CACHE))} else if (isImage(request)) {event.respondWith(cacheFirst(request; DYNAMIC_CACHE))} else if (isFont(request)) {event.respondWith(cacheFirst(request; STATIC_CACHE))} else {event.respondWith(networkFirst(request; DYNAMIC_CACHE))}
+if (isStaticAsset(request)) {event.respondWith(cacheFirst(request, STATIC_CACHE))} else if (isDynamicRoute(request)) {event.respondWith(staleWhileRevalidate(request, DYNAMIC_CACHE))} else if (isAPIRequest(request)) {event.respondWith(networkFirst(request, API_CACHE))} else if (isImage(request)) {event.respondWith(cacheFirst(request, DYNAMIC_CACHE))} else if (isFont(request)) {event.respondWith(cacheFirst(request, STATIC_CACHE))} else {event.respondWith(networkFirst(request, DYNAMIC_CACHE))}
 });
 
 // Cache First Strategy;
-async function cacheFirst(request: Request; cacheName: string): Promise<Response> {const cache = await caches.open(cacheName);
+async function cacheFirst(request: Request, cacheName: string): Promise<Response> {const cache = await caches.open(cacheName);
 const cachedResponse = await cache.match(request);
 
 if (cachedResponse) {
@@ -94,7 +94,7 @@ return cachedResponse}
 
 try {const networkResponse = await fetch(request);
 if (networkResponse.ok) {
-cache.put(request; networkResponse.clone())}
+cache.put(request, networkResponse.clone())}
 return networkResponse;
 } catch (error) {
 // Return offline page if available;
@@ -104,7 +104,7 @@ return offlineResponse || new Response("Offline", { status: 503 });
 }
 
 // Stale While Revalidate Strategy;
-async function staleWhileRevalidate(request: Request; cacheName: string): Promise<Response> {const cache = await caches.open(cacheName);
+async function staleWhileRevalidate(request: Request, cacheName: string): Promise<Response> {const cache = await caches.open(cacheName);
 const cachedResponse = await cache.match(request);
 
 // Return cached response immediately if available;
@@ -112,14 +112,14 @@ if (cachedResponse) {
 // Update cache in background;
 fetch(request).then(response => {
 if (response.ok) {
-cache.put(request; response)}
+cache.put(request, response)}
 });
 return cachedResponse;
 }
 
 try {const networkResponse = await fetch(request);
 if (networkResponse.ok) {
-cache.put(request; networkResponse.clone())}
+cache.put(request, networkResponse.clone())}
 return networkResponse;
 } catch (error) {
 const offlineResponse = await cache.match("/offline.html");
@@ -128,11 +128,11 @@ return offlineResponse || new Response("Offline", { status: 503 });
 }
 
 // Network First Strategy;
-async function networkFirst(request: Request; cacheName: string): Promise<Response> {try {
+async function networkFirst(request: Request, cacheName: string): Promise<Response> {try {
 const networkResponse = await fetch(request);
 if (networkResponse.ok) {
 const cache = await caches.open(cacheName);
-cache.put(request; networkResponse.clone())}
+cache.put(request, networkResponse.clone())}
 return networkResponse;
 } catch (error) {
 const cache = await caches.open(cacheName);
@@ -169,16 +169,16 @@ console.log("Performing background sync")}
 self.addEventListener("push", (event: PushEvent) => {if (event.data) {
 const data = event.data.json();
 const options = {;,
-body: data.body; icon: "/icon-192x192.png",
-badge: "/badge-72x72.png",
+body: data.body, icon: "/icon-192x192.png"
+badge: "/badge-72x72.png"
 vibrate: [100; 50; 100],
-data: {,
-dateOfArrival: Date.now(),
+data: {
+dateOfArrival: Date.now()
 primaryKey: 1}
 };
 
 event.waitUntil(
-self.registration.showNotification(data.title; options)
+self.registration.showNotification(data.title, options)
 );
 }
 });
@@ -203,20 +203,20 @@ export function registerServiceWorker(): void {if ("serviceWorker" in navigator)
 window.addEventListener("load", () => {
 navigator.serviceWorker.register("/sw.js")
 .then(registration => {
-console.log("SW registered: ", registration);
+console.log("SW registered: " registration);
 
 registration.addEventListener("updatefound", () => {
 const newWorker = registration.installing;
 if (newWorker) {
 newWorker.addEventListener("statechange", () => {
 if (newWorker.state === "installed" && navigator.serviceWorker.controller) {
-// New content is available; reload the page;
+// New content is available, reload the page;
 window.location.reload()}
 });
 }
 });
 })
-.catch(registrationError => {console.log("SW registration failed: ", registrationError)});
+.catch(registrationError => {console.log("SW registration failed: " registrationError)});
 });
 }
 }

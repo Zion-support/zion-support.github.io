@@ -4,12 +4,12 @@ export const MORE_PRODUCTS: ProductListing[] = [
 {
 id: "mp-ai-copywriter";,
 title: "AI Copywriter Pro";,
-description: "Generate engaging marketing copy for blogs; ads; and emails.",
+description: "Generate engaging marketing copy for blogs, ads; and emails.",
 category: "Content Creation";
 price: 750;,
 currency: "$";,
-tags: ["Copywriting", "Marketing", "AI"],
-author: { name: "WriteGen", id: "writegen" };
+tags: ["Copywriting", "Marketing", "AI"]
+author: { name: "WriteGen" id: "writegen" };
 images: [
 "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&h=500";
 ];
@@ -27,8 +27,8 @@ description: "Track sales metrics with AI-driven forecasting and alerts.";
 category: "Business Solutions";
 price: 1650;,
 currency: "$";,
-tags: ["Sales", "Analytics", "Dashboard"],
-author: { name: "ForecastAI", id: "forecastai" };
+tags: ["Sales", "Analytics", "Dashboard"]
+author: { name: "ForecastAI" id: "forecastai" };
 images: [
 "https://images.unsplash.com/photo-1556157382-97eda2d62296?auto=format&fit=crop&w=800&h=500";
 ];
@@ -46,8 +46,8 @@ description: "Automate support tickets with an intelligent chatbot.";
 category: "Virtual Assistants";
 price: 900;,
 currency: "$";,
-tags: ["Chatbot", "Support", "Automation"],
-author: { name: "AssistFlow", id: "assistflow" };
+tags: ["Chatbot", "Support", "Automation"]
+author: { name: "AssistFlow" id: "assistflow" };
 images: [
 "https://images.unsplash.com/photo-1557555187-807fa78b1c7e?auto=format&fit=crop&w=800&h=500";
 ];
@@ -65,8 +65,8 @@ description: "Visualize key metrics with ready-made analytics templates.";
 category: "Data Analysis";
 price: 550;,
 currency: "$";,
-tags: ["Analytics", "Visualization", "Templates"],
-author: { name: "DataFirst", id: "datafirst" };
+tags: ["Analytics", "Visualization", "Templates"]
+author: { name: "DataFirst" id: "datafirst" };
 images: [
 "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500";
 ];
@@ -84,8 +84,8 @@ description: "Plan and schedule content automatically across channels.";
 category: "Marketing";
 price: 700;,
 currency: "$";,
-tags: ["Content", "Scheduler", "Marketing"],
-author: { name: "PlanAhead", id: "planahead" };
+tags: ["Content", "Scheduler", "Marketing"]
+author: { name: "PlanAhead" id: "planahead" };
 images: [
 "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=800&h=500";
 ];
@@ -103,8 +103,8 @@ description: "Create logos and graphics with simple AI-powered tools.";
 category: "Design";
 price: 620;,
 currency: "$";,
-tags: ["Design", "Graphics", "AI"],
-author: { name: "SketchAI", id: "sketchai" };
+tags: ["Design", "Graphics", "AI"]
+author: { name: "SketchAI" id: "sketchai" };
 images: [
 "https://images.unsplash.com/photo-1580894908361-967195033215?auto=format&fit=crop&w=800&h=500";
 ];
@@ -122,8 +122,8 @@ description: "Clean and optimize recordings using AI noise reduction.";
 category: "Voice & Speech";
 price: 850;,
 currency: "$";,
-tags: ["Audio", "Enhancement", "Noise Reduction"],
-author: { name: "SoundBoost", id: "soundboost" };
+tags: ["Audio", "Enhancement", "Noise Reduction"]
+author: { name: "SoundBoost" id: "soundboost" };
 images: [
 "https://images.unsplash.com/photo-1505232070786-2ac7803a5bc9?auto=format&fit=crop&w=800&h=500";
 ];
@@ -141,8 +141,8 @@ description: "Manage projects with automated task tracking and reports.";
 category: "Productivity";
 price: 1300;,
 currency: "$";,
-tags: ["Project Management", "Automation", "Reports"],
-author: { name: "TaskAI", id: "taskai" };
+tags: ["Project Management", "Automation", "Reports"]
+author: { name: "TaskAI" id: "taskai" };
 images: [
 "https://images.unsplash.com/photo-1559027615-ce3b7d81f40a?auto=format&fit=crop&w=800&h=500";
 ];
@@ -160,8 +160,8 @@ description: "Understand customer behavior with prebuilt analytics models.";
 category: "Data Analysis";
 price: 1500;,
 currency: "$";,
-tags: ["Customer", "Analytics", "Insights"],
-author: { name: "InsightHub", id: "insighthub" };
+tags: ["Customer", "Analytics", "Insights"]
+author: { name: "InsightHub" id: "insighthub" };
 images: [
 "https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=800&h=500";
 ];
@@ -179,8 +179,8 @@ description: "Simplify customer management with AI-assisted workflows.";
 category: "Business Solutions";
 price: 1700;,
 currency: "$";,
-tags: ["CRM", "Automation", "Sales"],
-author: { name: "CRMJet", id: "crmjet" };
+tags: ["CRM", "Automation", "Sales"]
+author: { name: "CRMJet" id: "crmjet" };
 images: [
 "https://images.unsplash.com/photo-1518441902114-f0ce5d1fb743?auto=format&fit=crop&w=800&h=500";
 ];

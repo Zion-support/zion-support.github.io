@@ -33,7 +33,7 @@ export const IOT_EDGE_COMPUTING_SERVICES: IoTEdgeComputingService[] = [
 // Industrial IoT Platform;
 {id: "industrial-iot-platform";,
 title: "Industrial IoT (IIoT) Platform";,
-description: "Comprehensive IIoT platform for manufacturing; energy; and industrial operations that provides real-time monitoring; predictive maintenance; and operational optimization.",
+description: "Comprehensive IIoT platform for manufacturing, energy; and industrial operations that provides real-time monitoring, predictive maintenance, and operational optimization.",
 category: "IoT & Edge Computing";
 subcategory: "Industrial IoT";
 price: 4200;
@@ -70,7 +70,7 @@ targetAudience: [
 "Engineering teams",
 "IT managers";
 ],
-tags: ["IIoT", "Manufacturing", "Predictive Maintenance", "Energy Optimization", "Industrial Automation"],
+tags: ["IIoT", "Manufacturing", "Predictive Maintenance", "Energy Optimization", "Industrial Automation"]
 estimatedDelivery: "8-12 weeks";,
 supportLevel: "enterprise";,
 marketPrice: "$4;200 - $12;000/month",
@@ -78,12 +78,12 @@ contactInfo: {
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
-websiteUrl: "https://ziontechgroup.com/industrial-iot",
+websiteUrl: "https://ziontechgroup.com/industrial-iot"
 };
 // Smart City IoT Solution;
 {id: "smart-city-iot-solution";,
 title: "Smart City IoT Infrastructure Platform";,
-description: "Comprehensive smart city solution integrating traffic management; environmental monitoring; public safety; and utility management through IoT sensors and edge computing.",
+description: "Comprehensive smart city solution integrating traffic management, environmental monitoring, public safety, and utility management through IoT sensors and edge computing.",
 category: "IoT & Edge Computing";
 subcategory: "Smart Cities";
 price: 5800;
@@ -120,7 +120,7 @@ targetAudience: [
 "Public safety directors",
 "Infrastructure managers";
 ],
-tags: ["Smart Cities", "IoT", "Traffic Management", "Public Safety", "Urban Planning"],
+tags: ["Smart Cities", "IoT", "Traffic Management", "Public Safety", "Urban Planning"]
 estimatedDelivery: "12-16 weeks";,
 supportLevel: "enterprise";,
 marketPrice: "$5;800 - $18;000/month",
@@ -128,12 +128,12 @@ contactInfo: {
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
-websiteUrl: "https://ziontechgroup.com/smart-city-iot",
+websiteUrl: "https://ziontechgroup.com/smart-city-iot"
 };
 // Healthcare IoT Monitoring;
 {id: "healthcare-iot-monitoring";,
 title: "Healthcare IoT Patient Monitoring System";,
-description: "Advanced patient monitoring system using IoT devices and edge computing to provide real-time health monitoring; early warning systems; and remote patient care capabilities.",
+description: "Advanced patient monitoring system using IoT devices and edge computing to provide real-time health monitoring, early warning systems, and remote patient care capabilities.",
 category: "IoT & Edge Computing";
 subcategory: "Healthcare IoT";
 price: 3800;
@@ -170,7 +170,7 @@ targetAudience: [
 "Senior care facilities",
 "Healthcare IT teams";
 ],
-tags: ["Healthcare IoT", "Patient Monitoring", "Remote Care", "Health Analytics", "Medical Devices"],
+tags: ["Healthcare IoT", "Patient Monitoring", "Remote Care", "Health Analytics", "Medical Devices"]
 estimatedDelivery: "6-10 weeks";,
 supportLevel: "enterprise";,
 marketPrice: "$3;800 - $10;500/month",
@@ -178,12 +178,12 @@ contactInfo: {
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
-websiteUrl: "https://ziontechgroup.com/healthcare-iot",
+websiteUrl: "https://ziontechgroup.com/healthcare-iot"
 };
 // Retail IoT Analytics Platform;
 {id: "retail-iot-analytics";,
 title: "Retail IoT Analytics and Optimization Platform";,
-description: "Intelligent retail analytics platform using IoT sensors to track customer behavior; optimize store layouts; manage inventory; and enhance customer experience.",
+description: "Intelligent retail analytics platform using IoT sensors to track customer behavior, optimize store layouts, manage inventory, and enhance customer experience.",
 category: "IoT & Edge Computing";
 subcategory: "Retail IoT";
 price: 2200;
@@ -220,7 +220,7 @@ targetAudience: [
 "Operations directors",
 "Business analysts";
 ],
-tags: ["Retail IoT", "Customer Analytics", "Store Optimization", "Inventory Management", "Customer Experience"],
+tags: ["Retail IoT", "Customer Analytics", "Store Optimization", "Inventory Management", "Customer Experience"]
 estimatedDelivery: "4-6 weeks";,
 supportLevel: "premium";,
 marketPrice: "$2;200 - $6;500/month",
@@ -228,12 +228,12 @@ contactInfo: {
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
-websiteUrl: "https://ziontechgroup.com/retail-iot",
+websiteUrl: "https://ziontechgroup.com/retail-iot"
 };
 // Edge AI Computing Platform;
 {id: "edge-ai-computing";,
 title: "Edge AI Computing Platform";,
-description: "Advanced edge computing platform that brings AI processing capabilities to IoT devices; enabling real-time AI inference; local data processing; and reduced cloud dependency.",
+description: "Advanced edge computing platform that brings AI processing capabilities to IoT devices, enabling real-time AI inference, local data processing, and reduced cloud dependency.",
 category: "IoT & Edge Computing";
 subcategory: "Edge AI";
 price: 3200;
@@ -270,7 +270,7 @@ targetAudience: [
 "Product managers",
 "Technology directors";
 ],
-tags: ["Edge AI", "IoT", "Real-time Processing", "Machine Learning", "Edge Computing"],
+tags: ["Edge AI", "IoT", "Real-time Processing", "Machine Learning", "Edge Computing"]
 estimatedDelivery: "6-8 weeks";,
 supportLevel: "premium";,
 marketPrice: "$3;200 - $8;500/month",
@@ -278,6 +278,6 @@ contactInfo: {
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
-websiteUrl: "https://ziontechgroup.com/edge-ai",
+websiteUrl: "https://ziontechgroup.com/edge-ai"
 }
 ];

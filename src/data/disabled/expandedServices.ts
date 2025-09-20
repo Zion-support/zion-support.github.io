@@ -1,17 +1,17 @@
 import { ProductListing } from "@/types/listings, ";
 
-// Real; market-competitive micro SAAS services and IT solutions;
+// Real, market-competitive micro SAAS services and IT solutions;
 export const EXPANDED_SERVICES: ProductListing[] = [
 // AI & Machine Learning Services;
 {
 id: "ai-chatbot-enterprise";,
 title: "Enterprise AI Chatbot Development";,
-description: "Custom AI-powered chatbots for customer service; sales; and support with multi-language support; sentiment analysis; and seamless CRM integration. Includes training data preparation and ongoing optimization.",
+description: "Custom AI-powered chatbots for customer service, sales; and support with multi-language support, sentiment analysis, and seamless CRM integration. Includes training data preparation and ongoing optimization.",
 category: "AI Development";
 subcategory: "Chatbots";
 price: 8999;,
 currency: "$";,
-tags: ["AI Chatbot", "Customer Service", "CRM Integration", "Multi-language"],
+tags: ["AI Chatbot", "Customer Service", "CRM Integration", "Multi-language"]
 author: {
 name: "Zion Tech Group";
 id: "zion-tech-group";,
@@ -30,12 +30,12 @@ aiScore: 96;
 {
 id: "ai-predictive-analytics";,
 title: "AI-Powered Predictive Analytics Platform";,
-description: "Advanced predictive analytics solution using machine learning algorithms for sales forecasting; customer behavior prediction; and risk assessment. Real-time dashboards and automated reporting included.",
+description: "Advanced predictive analytics solution using machine learning algorithms for sales forecasting, customer behavior prediction, and risk assessment. Real-time dashboards and automated reporting included.",
 category: "AI Development";
 subcategory: "Analytics";
 price: 12999;,
 currency: "$";,
-tags: ["Predictive Analytics", "Machine Learning", "Business Intelligence", "Forecasting"],
+tags: ["Predictive Analytics", "Machine Learning", "Business Intelligence", "Forecasting"]
 author: {
 name: "Zion Tech Group";,
 id: "zion-tech-group";,
@@ -52,12 +52,12 @@ aiScore: 94;
 {
 id: "ai-document-processing";,
 title: "Intelligent Document Processing & OCR";,
-description: "AI-powered document processing system that automatically extracts; categorizes; and processes information from invoices; contracts; forms; and handwritten documents with 99.2% accuracy.",
+description: "AI-powered document processing system that automatically extracts, categorizes; and processes information from invoices, contracts; forms, and handwritten documents with 99.2% accuracy.",
 category: "AI Development";
 subcategory: "Document Processing";
 price: 7499;,
 currency: "$";,
-tags: ["OCR", "Document Processing", "Automation", "Data Extraction"],
+tags: ["OCR", "Document Processing", "Automation", "Data Extraction"]
 author: {
 name: "Zion Tech Group";,
 id: "zion-tech-group";,
@@ -75,12 +75,12 @@ aiScore: 92;
 {
 id: "cloud-migration-enterprise";,
 title: "Enterprise Cloud Migration & Optimization";,
-description: "End-to-end cloud migration services including AWS; Azure; and Google Cloud. Includes cost optimization; security implementation; performance tuning; and 24/7 monitoring setup.",
+description: "End-to-end cloud migration services including AWS, Azure; and Google Cloud. Includes cost optimization, security implementation, performance tuning, and 24/7 monitoring setup.",
 category: "Cloud Services";
 subcategory: "Migration";
 price: 15999;,
 currency: "$";,
-tags: ["Cloud Migration", "AWS", "Azure", "Cost Optimization", "Security"],
+tags: ["Cloud Migration", "AWS", "Azure", "Cost Optimization", "Security"]
 author: {
 name: "Zion Tech Group";,
 id: "zion-tech-group";,
@@ -98,12 +98,12 @@ aiScore: 93;
 {
 id: "devops-automation-suite";,
 title: "DevOps Automation & CI/CD Pipeline";,
-description: "Complete DevOps automation solution with automated testing; deployment pipelines; infrastructure as code; and monitoring. Supports Docker; Kubernetes; and major cloud platforms.",
+description: "Complete DevOps automation solution with automated testing, deployment pipelines, infrastructure as code, and monitoring. Supports Docker, Kubernetes; and major cloud platforms.",
 category: "DevOps";
 subcategory: "Automation";
 price: 8999;,
 currency: "$";,
-tags: ["DevOps", "CI/CD", "Docker", "Kubernetes", "Automation"],
+tags: ["DevOps", "CI/CD", "Docker", "Kubernetes", "Automation"]
 author: {
 name: "Zion Tech Group";,
 id: "zion-tech-group";,
@@ -120,12 +120,12 @@ aiScore: 91;
 {
 id: "kubernetes-management";,
 title: "Kubernetes Cluster Management & Monitoring";,
-description: "Professional Kubernetes cluster setup; management; and monitoring services. Includes auto-scaling; load balancing; security hardening; and performance optimization.",
+description: "Professional Kubernetes cluster setup, management; and monitoring services. Includes auto-scaling, load balancing, security hardening, and performance optimization.",
 category: "DevOps";
 subcategory: "Kubernetes";
 price: 6499;,
 currency: "$";,
-tags: ["Kubernetes", "Container Orchestration", "Auto-scaling", "Monitoring"],
+tags: ["Kubernetes", "Container Orchestration", "Auto-scaling", "Monitoring"]
 author: {
 name: "Zion Tech Group";,
 id: "zion-tech-group";,
@@ -143,12 +143,12 @@ aiScore: 89;
 {
 id: "cybersecurity-audit-complete";,
 title: "Comprehensive Cybersecurity Audit & Penetration Testing";,
-description: "Full security assessment including vulnerability scanning; penetration testing; social engineering tests; and compliance audit. Detailed report with remediation recommendations.",
+description: "Full security assessment including vulnerability scanning, penetration testing, social engineering tests, and compliance audit. Detailed report with remediation recommendations.",
 category: "Cybersecurity";
 subcategory: "Audit & Testing";
 price: 18999;,
 currency: "$";,
-tags: ["Penetration Testing", "Vulnerability Assessment", "Compliance", "Security Audit"],
+tags: ["Penetration Testing", "Vulnerability Assessment", "Compliance", "Security Audit"]
 author: {
 name: "Zion Tech Group";,
 id: "zion-tech-group";,
@@ -166,12 +166,12 @@ aiScore: 95;
 {
 id: "zero-trust-security";,
 title: "Zero Trust Security Architecture Implementation";,
-description: "Implementation of zero trust security model with multi-factor authentication; micro-segmentation; continuous monitoring; and least privilege access controls.",
+description: "Implementation of zero trust security model with multi-factor authentication, micro-segmentation, continuous monitoring, and least privilege access controls.",
 category: "Cybersecurity";
 subcategory: "Architecture";
 price: 24999;,
 currency: "$";,
-tags: ["Zero Trust", "Multi-factor Authentication", "Micro-segmentation", "Access Control"],
+tags: ["Zero Trust", "Multi-factor Authentication", "Micro-segmentation", "Access Control"]
 author: {
 name: "Zion Tech Group";,
 id: "zion-tech-group";,
@@ -188,12 +188,12 @@ aiScore: 93;
 {
 id: "incident-response-planning";,
 title: "Incident Response Planning & Tabletop Exercises";,
-description: "Comprehensive incident response planning including playbook development; team training; tabletop exercises; and ongoing support. Covers ransomware; data breaches; and system compromises.",
+description: "Comprehensive incident response planning including playbook development, team training, tabletop exercises, and ongoing support. Covers ransomware, data breaches, and system compromises.",
 category: "Cybersecurity";
 subcategory: "Incident Response";
 price: 12999;,
 currency: "$";,
-tags: ["Incident Response", "Tabletop Exercises", "Ransomware", "Data Breach"],
+tags: ["Incident Response", "Tabletop Exercises", "Ransomware", "Data Breach"]
 author: {
 name: "Zion Tech Group";,
 id: "zion-tech-group";,
@@ -211,12 +211,12 @@ aiScore: 90;
 {
 id: "data-warehouse-enterprise";,
 title: "Enterprise Data Warehouse & ETL Pipeline";,
-description: "Design and implementation of enterprise data warehouse with ETL pipelines; data modeling; and business intelligence dashboards. Supports real-time and batch processing.",
+description: "Design and implementation of enterprise data warehouse with ETL pipelines, data modeling, and business intelligence dashboards. Supports real-time and batch processing.",
 category: "Data Analytics";
 subcategory: "Data Warehouse";
 price: 19999;,
 currency: "$";,
-tags: ["Data Warehouse", "ETL", "Business Intelligence", "Data Modeling"],
+tags: ["Data Warehouse", "ETL", "Business Intelligence", "Data Modeling"]
 author: {
 name: "Zion Tech Group";,
 id: "zion-tech-group";,
@@ -234,12 +234,12 @@ aiScore: 92;
 {
 id: "real-time-analytics-dashboard";,
 title: "Real-Time Analytics Dashboard & Reporting";,
-description: "Custom real-time analytics dashboard with automated reporting; KPI tracking; and interactive visualizations. Includes mobile app and email alert system.",
+description: "Custom real-time analytics dashboard with automated reporting, KPI tracking, and interactive visualizations. Includes mobile app and email alert system.",
 category: "Data Analytics";
 subcategory: "Dashboards";
 price: 8999;,
 currency: "$";,
-tags: ["Real-time Analytics", "Dashboard", "KPI Tracking", "Visualization"],
+tags: ["Real-time Analytics", "Dashboard", "KPI Tracking", "Visualization"]
 author: {
 name: "Zion Tech Group";,
 id: "zion-tech-group";,
@@ -256,12 +256,12 @@ aiScore: 89;
 {
 id: "data-governance-compliance";,
 title: "Data Governance & Compliance Framework";,
-description: "Implementation of data governance policies; data quality management; and compliance frameworks for GDPR; CCPA; HIPAA; and industry-specific regulations.",
+description: "Implementation of data governance policies, data quality management, and compliance frameworks for GDPR, CCPA; HIPAA, and industry-specific regulations.",
 category: "Data Analytics";
 subcategory: "Governance";
 price: 15999;,
 currency: "$";,
-tags: ["Data Governance", "GDPR", "CCPA", "HIPAA", "Compliance"],
+tags: ["Data Governance", "GDPR", "CCPA", "HIPAA", "Compliance"]
 author: {
 name: "Zion Tech Group";,
 id: "zion-tech-group";,
@@ -279,12 +279,12 @@ aiScore: 91;
 {
 id: "progressive-web-app";,
 title: "Progressive Web App (PWA) Development";,
-description: "Modern PWA development with offline functionality; push notifications; and app-like experience. Includes cross-platform compatibility and performance optimization.",
+description: "Modern PWA development with offline functionality, push notifications, and app-like experience. Includes cross-platform compatibility and performance optimization.",
 category: "Web Development";
 subcategory: "PWA";
 price: 12999;,
 currency: "$";,
-tags: ["PWA", "Offline Functionality", "Push Notifications", "Cross-platform"],
+tags: ["PWA", "Offline Functionality", "Push Notifications", "Cross-platform"]
 author: {
 name: "Zion Tech Group";,
 id: "zion-tech-group";,
@@ -301,12 +301,12 @@ aiScore: 90;
 {
 id: "mobile-app-cross-platform";,
 title: "Cross-Platform Mobile App Development";,
-description: "Native-quality mobile apps for iOS and Android using React Native or Flutter. Includes backend API development; testing; and app store deployment.",
+description: "Native-quality mobile apps for iOS and Android using React Native or Flutter. Includes backend API development, testing; and app store deployment.",
 category: "Mobile Development";
 subcategory: "Cross-platform";
 price: 18999;,
 currency: "$";,
-tags: ["React Native", "Flutter", "iOS", "Android", "Backend API"],
+tags: ["React Native", "Flutter", "iOS", "Android", "Backend API"]
 author: {
 name: "Zion Tech Group";,
 id: "zion-tech-group";,
@@ -323,12 +323,12 @@ aiScore: 89;
 {
 id: "ecommerce-platform-custom";,
 title: "Custom E-commerce Platform Development";,
-description: "Full-featured e-commerce platform with inventory management; payment processing; order tracking; and customer management. Includes admin dashboard and mobile app.",
+description: "Full-featured e-commerce platform with inventory management, payment processing, order tracking, and customer management. Includes admin dashboard and mobile app.",
 category: "Web Development";
 subcategory: "E-commerce";
 price: 24999;,
 currency: "$";,
-tags: ["E-commerce", "Payment Processing", "Inventory Management", "Admin Dashboard"],
+tags: ["E-commerce", "Payment Processing", "Inventory Management", "Admin Dashboard"]
 author: {
 name: "Zion Tech Group";,
 id: "zion-tech-group";,
@@ -347,12 +347,12 @@ aiScore: 93;
 {
 id: "smart-contract-development";,
 title: "Smart Contract Development & Audit";,
-description: "Ethereum; Solana; and Polygon smart contract development with comprehensive security auditing. Includes DeFi protocols; NFT contracts; and DAO governance systems.",
+description: "Ethereum, Solana; and Polygon smart contract development with comprehensive security auditing. Includes DeFi protocols, NFT contracts, and DAO governance systems.",
 category: "Blockchain";
 subcategory: "Smart Contracts";
 price: 15999;,
 currency: "$";,
-tags: ["Smart Contracts", "Ethereum", "DeFi", "NFT", "Security Audit"],
+tags: ["Smart Contracts", "Ethereum", "DeFi", "NFT", "Security Audit"]
 author: {
 name: "Zion Tech Group";,
 id: "zion-tech-group";,
@@ -369,12 +369,12 @@ aiScore: 91;
 {
 id: "defi-protocol-development";,
 title: "DeFi Protocol Development & Integration";,
-description: "Custom DeFi protocols including yield farming; liquidity pools; and lending platforms. Includes security audits; testing; and mainnet deployment.",
+description: "Custom DeFi protocols including yield farming, liquidity pools, and lending platforms. Includes security audits, testing; and mainnet deployment.",
 category: "Blockchain";
 subcategory: "DeFi";
 price: 29999;,
 currency: "$";,
-tags: ["DeFi", "Yield Farming", "Liquidity Pools", "Lending", "Security"],
+tags: ["DeFi", "Yield Farming", "Liquidity Pools", "Lending", "Security"]
 author: {
 name: "Zion Tech Group";,
 id: "zion-tech-group";,
@@ -393,12 +393,12 @@ aiScore: 94;
 {
 id: "iot-platform-development";,
 title: "IoT Platform Development & Device Integration";,
-description: "Complete IoT platform with device management; data collection; real-time monitoring; and analytics. Supports multiple protocols and cloud platforms.",
+description: "Complete IoT platform with device management, data collection, real-time monitoring, and analytics. Supports multiple protocols and cloud platforms.",
 category: "IoT";
 subcategory: "Platform Development";
 price: 19999;,
 currency: "$";,
-tags: ["IoT", "Device Management", "Real-time Monitoring", "Data Collection"],
+tags: ["IoT", "Device Management", "Real-time Monitoring", "Data Collection"]
 author: {
 name: "Zion Tech Group";,
 id: "zion-tech-group";,
@@ -415,12 +415,12 @@ aiScore: 89;
 {
 id: "hardware-prototyping";,
 title: "Hardware Prototyping & PCB Design";,
-description: "Custom hardware prototyping services including PCB design; component selection; firmware development; and testing. Supports IoT; robotics; and embedded systems.",
+description: "Custom hardware prototyping services including PCB design, component selection, firmware development, and testing. Supports IoT, robotics; and embedded systems.",
 category: "Hardware";
 subcategory: "Prototyping";
 price: 12999;,
 currency: "$";,
-tags: ["PCB Design", "Hardware Prototyping", "Firmware", "IoT", "Robotics"],
+tags: ["PCB Design", "Hardware Prototyping", "Firmware", "IoT", "Robotics"]
 author: {
 name: "Zion Tech Group";,
 id: "zion-tech-group";,
@@ -438,12 +438,12 @@ aiScore: 90;
 {
 id: "business-process-automation";,
 title: "Business Process Automation & RPA";,
-description: "End-to-end business process automation using RPA tools and custom software. Includes workflow analysis; implementation; and ongoing optimization.",
+description: "End-to-end business process automation using RPA tools and custom software. Includes workflow analysis, implementation; and ongoing optimization.",
 category: "Business Automation";
 subcategory: "RPA";
 price: 17999;,
 currency: "$";,
-tags: ["RPA", "Process Automation", "Workflow", "Optimization"],
+tags: ["RPA", "Process Automation", "Workflow", "Optimization"]
 author: {
 name: "Zion Tech Group";,
 id: "zion-tech-group";,
@@ -460,12 +460,12 @@ aiScore: 91;
 {
 id: "erp-system-custom";,
 title: "Custom ERP System Development";,
-description: "Tailored ERP system with modules for finance; HR; inventory; CRM; and project management. Includes mobile app; reporting; and integration capabilities.",
+description: "Tailored ERP system with modules for finance, HR; inventory, CRM; and project management. Includes mobile app, reporting; and integration capabilities.",
 category: "Business Solutions";
 subcategory: "ERP";
 price: 39999;,
 currency: "$";,
-tags: ["ERP", "Finance", "HR", "Inventory", "CRM"],
+tags: ["ERP", "Finance", "HR", "Inventory", "CRM"]
 author: {
 name: "Zion Tech Group";,
 id: "zion-tech-group";,
@@ -483,18 +483,18 @@ aiScore: 94;
 ];
 // Service categories for filtering;
 export const EXPANDED_SERVICE_CATEGORIES = [;
-{ label: "AI Development", value: "ai-development" };
-{ label: "Cloud Services", value: "cloud-services" };
-{ label: "DevOps", value: "devops" };
-{ label: "Cybersecurity", value: "cybersecurity" };
-{ label: "Data Analytics", value: "data-analytics" };
-{ label: "Web Development", value: "web-development" };
-{ label: "Mobile Development", value: "mobile-development" };
-{ label: "Blockchain", value: "blockchain" };
-{ label: "IoT", value: "iot" };
-{ label: "Hardware", value: "hardware" };
-{ label: "Business Automation", value: "business-automation" };
-{ label: "Business Solutions", value: "business-solutions" }
+{ label: "AI Development" value: "ai-development" };
+{ label: "Cloud Services" value: "cloud-services" };
+{ label: "DevOps" value: "devops" };
+{ label: "Cybersecurity" value: "cybersecurity" };
+{ label: "Data Analytics" value: "data-analytics" };
+{ label: "Web Development" value: "web-development" };
+{ label: "Mobile Development" value: "mobile-development" };
+{ label: "Blockchain" value: "blockchain" };
+{ label: "IoT" value: "iot" };
+{ label: "Hardware" value: "hardware" };
+{ label: "Business Automation" value: "business-automation" };
+{ label: "Business Solutions" value: "business-solutions" }
 ];
 // Service subcategories for detailed filtering;
 export const EXPANDED_SERVICE_SUBCATEGORIES = {

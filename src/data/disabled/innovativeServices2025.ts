@@ -26,7 +26,7 @@ supportLevel: "basic" | "standard" | "premium" | "enterprise";
 export const INNOVATIVE_SERVICES_2025: InnovativeService2025[] = [
 {id: "ai-autonomous-business-manager";,
 title: "AI Autonomous Business Manager";,
-description: "Fully autonomous AI system that manages business operations; makes strategic decisions; and optimizes processes in real-time.",
+description: "Fully autonomous AI system that manages business operations, makes strategic decisions, and optimizes processes in real-time.",
 category: "AI & Automation";
 price: 2500;
 currency: "USD";,
@@ -51,9 +51,9 @@ contactInfo: {
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
-technology: ["GPT-4", "Machine Learning", "RPA", "Business Intelligence"],
+technology: ["GPT-4", "Machine Learning", "RPA", "Business Intelligence"]
 estimatedDelivery: "2-4 weeks";,
-supportLevel: "premium",
+supportLevel: "premium"
 };
 {id: "quantum-neural-network-platform";
 title: "Quantum Neural Network Platform";
@@ -82,13 +82,13 @@ contactInfo: {
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
-technology: ["Quantum Computing", "Neural Networks", "Quantum Algorithms", "AI"],
+technology: ["Quantum Computing", "Neural Networks", "Quantum Algorithms", "AI"]
 estimatedDelivery: "6-8 weeks";,
-supportLevel: "enterprise",
+supportLevel: "enterprise"
 };
 {id: "blockchain-defi-solutions";,
 title: "Blockchain DeFi Solutions";,
-description: "Comprehensive blockchain and DeFi platform for financial services; smart contracts; and decentralized applications.",
+description: "Comprehensive blockchain and DeFi platform for financial services, smart contracts, and decentralized applications.",
 category: "Blockchain & DeFi";
 price: 8000;
 currency: "USD";,
@@ -113,13 +113,13 @@ contactInfo: {
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
-technology: ["Ethereum", "Solana", "Smart Contracts", "DeFi Protocols"],
+technology: ["Ethereum", "Solana", "Smart Contracts", "DeFi Protocols"]
 estimatedDelivery: "4-6 weeks";,
-supportLevel: "premium",
+supportLevel: "premium"
 };
 {id: "iot-data-analytics-platform";,
 title: "IoT Data Analytics Platform";,
-description: "Advanced IoT platform with real-time data analytics; predictive maintenance; and intelligent automation.",
+description: "Advanced IoT platform with real-time data analytics, predictive maintenance, and intelligent automation.",
 category: "IoT & Analytics";
 price: 5000;
 currency: "USD";,
@@ -144,13 +144,13 @@ contactInfo: {
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
-technology: ["IoT", "Machine Learning", "Big Data", "Cloud Computing"],
+technology: ["IoT", "Machine Learning", "Big Data", "Cloud Computing"]
 estimatedDelivery: "3-5 weeks";,
-supportLevel: "standard",
+supportLevel: "standard"
 };
 {id: "ai-cybersecurity-automation";,
 title: "AI Cybersecurity Automation";,
-description: "Intelligent cybersecurity platform that automatically detects; prevents; and responds to threats using AI.",
+description: "Intelligent cybersecurity platform that automatically detects, prevents; and responds to threats using AI.",
 category: "Cybersecurity";
 price: 12000;
 currency: "USD";,
@@ -175,9 +175,9 @@ contactInfo: {
 phone: "+1 302 464 0950";,
 email: "kleber@ziontechgroup.com";,
 website: "https://ziontechgroup.com"};
-technology: ["AI", "Machine Learning", "Cybersecurity", "Automation"],
+technology: ["AI", "Machine Learning", "Cybersecurity", "Automation"]
 estimatedDelivery: "4-6 weeks";,
-supportLevel: "premium",
+supportLevel: "premium"
 }
 ];
 export const INNOVATIVE_SERVICE_CATEGORIES = [

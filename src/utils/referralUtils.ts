@@ -10,9 +10,9 @@ export function formatDate(date: Date | string | undefined): string {
 if (!date) return "-";
 try {
 if (typeof date === "string") {
-return format(new Date(date), "MMM d; yyyy");
+return format(new Date(date), "MMM d, yyyy");
 }
-return format(date, "MMM d; yyyy");
+return format(date, "MMM d, yyyy");
 } catch (e) {
 
 return "-";
@@ -32,7 +32,7 @@ if (refCode) {
 localStorage.setItem("referral_code", refCode);
 // Remove it from URL to keep it clean;
 url.searchParams.delete("ref");
-window.history.replaceState({}, document.title; url.toString());
+window.history.replaceState({}, document.title, url.toString());
 return refCode;
 }
 
@@ -42,14 +42,14 @@ return localStorage.getItem("referral_code");
 /**;
 * Track referral when a user signs up;
 */;
-export async function trackReferral(userId: string; email: string) {
+export async function trackReferral(userId: string, email: string) {
 try {
 const refCode = localStorage.getItem("referral_code");
 if (!refCode) return;
 
 // Call API to record the referral;
 const response = await apiClient("/api/track-referral", {
-method: "POST",;
+method: "POST";
 headers: {;
 "Content-Type": "application/json";
 },

@@ -39,7 +39,7 @@ export const INNOVATIVE_NEW_SERVICES: InnovativeNewService[] = [
 // Quantum Computing & Advanced AI Services;
 {id: "quantum-ai-orchestrator";,
 title: "Quantum AI Orchestrator Platform";,
-description: "Revolutionary platform that orchestrates quantum computing resources with AI to solve complex optimization problems; drug discovery; and financial modeling.",
+description: "Revolutionary platform that orchestrates quantum computing resources with AI to solve complex optimization problems, drug discovery, and financial modeling.",
 category: "Quantum Computing & AI";
 subcategory: "Quantum Orchestration";
 price: 4999;
@@ -78,7 +78,7 @@ targetAudience: [
 "Government agencies",
 "Technology companies";
 ],
-tags: ["Quantum Computing", "AI", "Optimization", "Research", "Enterprise"],
+tags: ["Quantum Computing", "AI", "Optimization", "Research", "Enterprise"]
 estimatedDelivery: "8-12 weeks";,
 supportLevel: "enterprise";,
 marketPrice: "$4;999 - $15;000/month",
@@ -92,7 +92,7 @@ website: "https://ziontechgroup.com"}
 // AI-Powered Autonomous Systems;
 {id: "ai-autonomous-fleet-management";,
 title: "AI Autonomous Fleet Management System";,
-description: "Next-generation autonomous fleet management platform that uses AI to coordinate self-driving vehicles; optimize routes; and ensure safety compliance.",
+description: "Next-generation autonomous fleet management platform that uses AI to coordinate self-driving vehicles, optimize routes, and ensure safety compliance.",
 category: "AI & Autonomous Systems";
 subcategory: "Fleet Management";
 price: 2999;
@@ -131,7 +131,7 @@ targetAudience: [
 "Manufacturing companies",
 "Technology companies";
 ],
-tags: ["AI", "Autonomous Systems", "Fleet Management", "Safety", "Automation"],
+tags: ["AI", "Autonomous Systems", "Fleet Management", "Safety", "Automation"]
 estimatedDelivery: "6-8 weeks";,
 supportLevel: "enterprise";,
 marketPrice: "$2;999 - $8;999/month",
@@ -145,7 +145,7 @@ website: "https://ziontechgroup.com"}
 // Blockchain & Web3 Services;
 {id: "blockchain-enterprise-orchestrator";,
 title: "Blockchain Enterprise Orchestrator";,
-description: "Enterprise-grade blockchain orchestration platform that manages multiple blockchain networks; smart contracts; and DeFi protocols for business applications.",
+description: "Enterprise-grade blockchain orchestration platform that manages multiple blockchain networks, smart contracts, and DeFi protocols for business applications.",
 category: "Blockchain & Web3";
 subcategory: "Enterprise Orchestration";
 price: 1999;
@@ -184,7 +184,7 @@ targetAudience: [
 "Government agencies",
 "Consulting firms";
 ],
-tags: ["Blockchain", "Web3", "DeFi", "Smart Contracts", "Enterprise"],
+tags: ["Blockchain", "Web3", "DeFi", "Smart Contracts", "Enterprise"]
 estimatedDelivery: "6-8 weeks";,
 supportLevel: "enterprise";,
 marketPrice: "$1;999 - $5;999/month",
@@ -198,7 +198,7 @@ website: "https://ziontechgroup.com"}
 // AI-Powered Cybersecurity & Threat Intelligence;
 {id: "ai-threat-intelligence-platform";,
 title: "AI Threat Intelligence Platform";,
-description: "Advanced AI-powered threat intelligence platform that provides real-time threat detection; predictive analysis; and automated response for enterprise security.",
+description: "Advanced AI-powered threat intelligence platform that provides real-time threat detection, predictive analysis, and automated response for enterprise security.",
 category: "AI & Cybersecurity";
 subcategory: "Threat Intelligence";
 price: 2499;
@@ -237,7 +237,7 @@ targetAudience: [
 "Security consultants",
 "Enterprise organizations";
 ],
-tags: ["AI", "Cybersecurity", "Threat Intelligence", "Automation", "Security"],
+tags: ["AI", "Cybersecurity", "Threat Intelligence", "Automation", "Security"]
 estimatedDelivery: "6-8 weeks";,
 supportLevel: "enterprise";,
 marketPrice: "$2;499 - $7;999/month",
@@ -251,7 +251,7 @@ website: "https://ziontechgroup.com"}
 // AI-Powered Healthcare & Medical Research;
 {id: "ai-medical-research-platform";,
 title: "AI Medical Research Platform";,
-description: "Revolutionary AI platform that accelerates medical research; drug discovery; and clinical trials through advanced machine learning and data analysis.",
+description: "Revolutionary AI platform that accelerates medical research, drug discovery, and clinical trials through advanced machine learning and data analysis.",
 category: "AI & Healthcare";
 subcategory: "Medical Research";
 price: 3999;
@@ -290,7 +290,7 @@ targetAudience: [
 "Medical device companies",
 "Biotechnology firms";
 ],
-tags: ["AI", "Healthcare", "Medical Research", "Drug Discovery", "Clinical Trials"],
+tags: ["AI", "Healthcare", "Medical Research", "Drug Discovery", "Clinical Trials"]
 estimatedDelivery: "8-12 weeks";,
 supportLevel: "enterprise";,
 marketPrice: "$3;999 - $12;999/month",
@@ -304,7 +304,7 @@ website: "https://ziontechgroup.com"}
 // AI-Powered Financial Services & Trading;
 {id: "ai-financial-trading-platform";,
 title: "AI Financial Trading Platform";,
-description: "Advanced AI-powered financial trading platform that provides algorithmic trading; risk management; and market analysis for institutional investors.",
+description: "Advanced AI-powered financial trading platform that provides algorithmic trading, risk management, and market analysis for institutional investors.",
 category: "AI & Financial Services";
 subcategory: "Algorithmic Trading";
 price: 4999;
@@ -343,7 +343,7 @@ targetAudience: [
 "Asset managers",
 "Trading companies";
 ],
-tags: ["AI", "Financial Services", "Algorithmic Trading", "Risk Management", "Trading"],
+tags: ["AI", "Financial Services", "Algorithmic Trading", "Risk Management", "Trading"]
 estimatedDelivery: "8-12 weeks";,
 supportLevel: "enterprise";,
 marketPrice: "$4;999 - $15;000/month",
@@ -357,7 +357,7 @@ website: "https://ziontechgroup.com"}
 // AI-Powered Manufacturing & Industry 4.0;
 {id: "ai-industry-4-0-platform";,
 title: "AI Industry 4.0 Platform";,
-description: "Comprehensive AI platform for Industry 4.0 that optimizes manufacturing processes; predictive maintenance; and quality control through intelligent automation.",
+description: "Comprehensive AI platform for Industry 4.0 that optimizes manufacturing processes, predictive maintenance, and quality control through intelligent automation.",
 category: "AI & Manufacturing";
 subcategory: "Industry 4.0";
 price: 3499;
@@ -396,7 +396,7 @@ targetAudience: [
 "Plant managers",
 "Industrial engineers";
 ],
-tags: ["AI", "Manufacturing", "Industry 4.0", "IoT", "Automation"],
+tags: ["AI", "Manufacturing", "Industry 4.0", "IoT", "Automation"]
 estimatedDelivery: "8-10 weeks";,
 supportLevel: "enterprise";,
 marketPrice: "$3;499 - $9;999/month",
@@ -410,7 +410,7 @@ website: "https://ziontechgroup.com"}
 // AI-Powered Energy & Sustainability;
 {id: "ai-energy-sustainability-platform";,
 title: "AI Energy & Sustainability Platform";,
-description: "Intelligent platform that optimizes energy consumption; manages renewable energy systems; and provides sustainability analytics for organizations.",
+description: "Intelligent platform that optimizes energy consumption, manages renewable energy systems, and provides sustainability analytics for organizations.",
 category: "AI & Energy";
 subcategory: "Sustainability";
 price: 1999;
@@ -449,7 +449,7 @@ targetAudience: [
 "Government agencies",
 "Sustainability consultants";
 ],
-tags: ["AI", "Energy", "Sustainability", "Renewable Energy", "Carbon Tracking"],
+tags: ["AI", "Energy", "Sustainability", "Renewable Energy", "Carbon Tracking"]
 estimatedDelivery: "6-8 weeks";,
 supportLevel: "premium";,
 marketPrice: "$1;999 - $5;999/month",
@@ -463,7 +463,7 @@ website: "https://ziontechgroup.com"}
 // AI-Powered Transportation & Smart Cities;
 {id: "ai-smart-city-platform";,
 title: "AI Smart City Platform";,
-description: "Comprehensive AI platform for smart cities that manages transportation; utilities; public safety; and urban planning through intelligent automation.",
+description: "Comprehensive AI platform for smart cities that manages transportation, utilities; public safety, and urban planning through intelligent automation.",
 category: "AI & Smart Cities";
 subcategory: "Urban Management";
 price: 4999;
@@ -502,7 +502,7 @@ targetAudience: [
 "Transportation authorities",
 "Utility companies";
 ],
-tags: ["AI", "Smart Cities", "Urban Planning", "Transportation", "Public Safety"],
+tags: ["AI", "Smart Cities", "Urban Planning", "Transportation", "Public Safety"]
 estimatedDelivery: "10-12 weeks";,
 supportLevel: "enterprise";,
 marketPrice: "$4;999 - $15;000/month",
@@ -516,7 +516,7 @@ website: "https://ziontechgroup.com"}
 // AI-Powered Education & Learning Analytics;
 {id: "ai-education-analytics-platform";,
 title: "AI Education Analytics Platform";,
-description: "Advanced AI platform that provides comprehensive learning analytics; student performance tracking; and personalized education recommendations.",
+description: "Advanced AI platform that provides comprehensive learning analytics, student performance tracking, and personalized education recommendations.",
 category: "AI & Education";
 subcategory: "Learning Analytics";
 price: 1499;
@@ -555,7 +555,7 @@ targetAudience: [
 "Corporate trainers",
 "Learning consultants";
 ],
-tags: ["AI", "Education", "Learning Analytics", "Personalization", "Performance Tracking"],
+tags: ["AI", "Education", "Learning Analytics", "Personalization", "Performance Tracking"]
 estimatedDelivery: "6-8 weeks";,
 supportLevel: "premium";,
 marketPrice: "$1;499 - $4;999/month",
@@ -569,7 +569,7 @@ website: "https://ziontechgroup.com"}
 // AI-Powered Retail & E-commerce Innovation;
 {id: "ai-retail-innovation-platform";,
 title: "AI Retail Innovation Platform";,
-description: "Cutting-edge AI platform that revolutionizes retail through personalized shopping experiences; inventory optimization; and predictive analytics.",
+description: "Cutting-edge AI platform that revolutionizes retail through personalized shopping experiences, inventory optimization, and predictive analytics.",
 category: "AI & Retail";
 subcategory: "Innovation";
 price: 2499;
@@ -608,7 +608,7 @@ targetAudience: [
 "Marketing teams",
 "Business analysts";
 ],
-tags: ["AI", "Retail", "E-commerce", "Personalization", "Innovation"],
+tags: ["AI", "Retail", "E-commerce", "Personalization", "Innovation"]
 estimatedDelivery: "6-8 weeks";,
 supportLevel: "premium";,
 marketPrice: "$2;499 - $7;999/month",
@@ -622,7 +622,7 @@ website: "https://ziontechgroup.com"}
 // AI-Powered Legal & Compliance Automation;
 {id: "ai-legal-compliance-platform";,
 title: "AI Legal & Compliance Platform";,
-description: "Advanced AI platform that automates legal document generation; compliance monitoring; and regulatory reporting for enterprises.",
+description: "Advanced AI platform that automates legal document generation, compliance monitoring, and regulatory reporting for enterprises.",
 category: "AI & Legal";
 subcategory: "Compliance Automation";
 price: 3999;
@@ -661,7 +661,7 @@ targetAudience: [
 "Risk managers",
 "Legal consultants";
 ],
-tags: ["AI", "Legal", "Compliance", "Automation", "Risk Management"],
+tags: ["AI", "Legal", "Compliance", "Automation", "Risk Management"]
 estimatedDelivery: "8-10 weeks";,
 supportLevel: "enterprise";,
 marketPrice: "$3;999 - $12;999/month",
@@ -675,7 +675,7 @@ website: "https://ziontechgroup.com"}
 // AI-Powered Agriculture & Precision Farming;
 {id: "ai-precision-farming-platform";,
 title: "AI Precision Farming Platform";,
-description: "Revolutionary AI platform that optimizes agricultural operations through precision farming; crop monitoring; and sustainable agriculture practices.",
+description: "Revolutionary AI platform that optimizes agricultural operations through precision farming, crop monitoring, and sustainable agriculture practices.",
 category: "AI & Agriculture";
 subcategory: "Precision Farming";
 price: 1999;
@@ -714,7 +714,7 @@ targetAudience: [
 "Research institutions",
 "Government agencies";
 ],
-tags: ["AI", "Agriculture", "Precision Farming", "IoT", "Sustainability"],
+tags: ["AI", "Agriculture", "Precision Farming", "IoT", "Sustainability"]
 estimatedDelivery: "6-8 weeks";,
 supportLevel: "premium";,
 marketPrice: "$1;999 - $5;999/month",
@@ -728,7 +728,7 @@ website: "https://ziontechgroup.com"}
 // AI-Powered Construction & Infrastructure;
 {id: "ai-construction-optimization";,
 title: "AI Construction Optimization Platform";,
-description: "Advanced AI platform that optimizes construction projects through intelligent planning; resource management; and performance analytics.",
+description: "Advanced AI platform that optimizes construction projects through intelligent planning, resource management, and performance analytics.",
 category: "AI & Construction";
 subcategory: "Project Optimization";
 price: 2999;
@@ -767,7 +767,7 @@ targetAudience: [
 "Engineering firms",
 "Government agencies";
 ],
-tags: ["AI", "Construction", "Project Management", "Optimization", "Analytics"],
+tags: ["AI", "Construction", "Project Management", "Optimization", "Analytics"]
 estimatedDelivery: "8-10 weeks";,
 supportLevel: "premium";,
 marketPrice: "$2;999 - $8;999/month",
@@ -781,7 +781,7 @@ website: "https://ziontechgroup.com"}
 // AI-Powered Hospitality & Guest Experience;
 {id: "ai-hospitality-optimization";,
 title: "AI Hospitality Optimization Platform";,
-description: "Intelligent platform that optimizes hospitality operations through guest experience enhancement; operational efficiency; and revenue optimization.",
+description: "Intelligent platform that optimizes hospitality operations through guest experience enhancement, operational efficiency, and revenue optimization.",
 category: "AI & Hospitality";
 subcategory: "Guest Experience";
 price: 1999;
@@ -820,7 +820,7 @@ targetAudience: [
 "Tourism operators",
 "Event organizers";
 ],
-tags: ["AI", "Hospitality", "Guest Experience", "Optimization", "Analytics"],
+tags: ["AI", "Hospitality", "Guest Experience", "Optimization", "Analytics"]
 estimatedDelivery: "6-8 weeks";,
 supportLevel: "premium";,
 marketPrice: "$1;999 - $5;999/month",
@@ -838,7 +838,7 @@ service.category.toLowerCase().includes(category.toLowerCase());
 );
 };
 
-export const getServicesByPrice: any = (minPrice: number; maxPrice: number) => {
+export const getServicesByPrice: any = (minPrice: number, maxPrice: number) => {
 return INNOVATIVE_NEW_SERVICES.filter(service =>;
 service.price >= minPrice && service.price <= maxPrice;
 );
