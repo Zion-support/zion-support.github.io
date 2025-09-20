@@ -37,19 +37,16 @@ const testimonials = [
 const categories = ["All", "AI & Infrastructure", "Quantum Computing", "AI Research", "Manufacturing IoT", "Cybersecurity"],
 
 export function InteractiveTestimonials() {
-  const [selectedCategory, setSelectedCategory] = useState("All"),
-  const [selectedTestimonial, setSelectedTestimonial] = useState(0),
-
+  const [selectedCategory, setSelectedCategory] = useState("All");
+  const [selectedTestimonial, setSelectedTestimonial] = useState(0);
   const filteredTestimonials = selectedCategory === "All" 
     ? testimonials 
-    : testimonials.filter(t => t.category === selectedCategory),
-
-  const currentTestimonial = filteredTestimonials[selectedTestimonial],
-
+    : testimonials.filter(t => t.category === selectedCategory);
+  const currentTestimonial = filteredTestimonials[selectedTestimonial];
   const nextTestimonial = () => {
     setSelectedTestimonial((prev) => 
       prev === filteredTestimonials.length - 1 ? 0 : prev + 1
-    ),
+    );
   };
   const prevTestimonial = () => {
     setSelectedTestimonial((prev) => 
@@ -60,7 +57,7 @@ export function InteractiveTestimonials() {
     setCurrentIndex(index)
   };
   const togglePlayPause = () => {
-    setIsPlaying(!isPlaying),
+    setIsPlaying(!isPlaying);
   },
 
   // Auto-advance testimonials
@@ -68,10 +65,10 @@ export function InteractiveTestimonials() {
     if (!isPlaying) return,
 
     const interval = setInterval(() => {
-      nextTestimonial(),
+      nextTestimonial();
     }, 5000),
 
-    return () => clearInterval(interval),
+    return () => clearInterval(interval);
   }, [isPlaying, currentIndex]),
 
   const currentTestimonial = testimonials[currentIndex];

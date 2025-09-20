@@ -52,7 +52,7 @@ interface SidebarItem {
 }
 
 export function MainSidebar() {
-  const [isOpen, setIsOpen] = useState(false),
+  const [isOpen, setIsOpen] = useState(false);
   const [expandedSections, setExpandedSections] = useState<string[]>(['services']),
   const location = useLocation();
   const toggleSection = (section: string) => {
@@ -180,10 +180,9 @@ export function MainSidebar() {
   ];
   const renderSidebarItem = (item: SidebarItem, level: number = 0) => {
     const isActive = location.pathname === item.href;
-    const hasChildren = item.children && item.children.length > 0,
-    const isExpanded = expandedSections.includes(item.name.toLowerCase()),
-    const isFeatured = item.featured,
-
+    const hasChildren = item.children && item.children.length > 0;
+    const isExpanded = expandedSections.includes(item.name.toLowerCase());
+    const isFeatured = item.featured;
     return (
       <div key={item.name} className="mb-1">
         {hasChildren ? (

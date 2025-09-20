@@ -1,45 +1,71 @@
 #!/bin/bash
 
-echo "Fixing all syntax errors in React components..."
+# Comprehensive Syntax Error Fix Script
+# This script will fix all syntax errors introduced during merge conflicts
 
-# Function to fix syntax errors in a file
-fix_file() {
-    local file="$1"
-    echo "Fixing: $file"
+echo "🔧 Starting comprehensive syntax error fixes..."
+
+# Find all TypeScript and JavaScript files with syntax errors
+echo "Finding and fixing syntax errors in all files..."
+
+find src -name "*.tsx" -o -name "*.ts" -o -name "*.jsx" -o -name "*.js" | while read file; do
+    echo "Fixing syntax errors in: $file"
     
-    if [ -f "$file" ]; then
-        # Fix missing closing braces for functions/components
-        sed -i 's/^  );$/  );/' "$file"
-        sed -i '/^  );$/{ N; s/^  );\n  export default/  );\n};\n\nexport default/; }' "$file"
-        
-        # Fix missing closing braces before export statements
-        sed -i '/^export default/{ s/^export default/};\n\nexport default/; }' "$file"
-        
-        # Remove duplicate closing braces
-        sed -i '/^};$/{ N; s/^};\n};$/};/; }' "$file"
-        
-        # Fix missing semicolons after closing braces
-        sed -i 's/^  }$/  };/' "$file"
-        sed -i 's/^}$/};/' "$file"
-        
-        echo "Fixed: $file"
-    fi
-}
-
-# Fix all JSX and TSX files
-echo "Fixing syntax errors in components..."
-find src/components -name "*.jsx" -o -name "*.tsx" | while read file; do
-    fix_file "$file"
+    # Create a backup
+    cp "$file" "${file}.backup"
+    
+    # Fix common patterns:
+    # 1. Remove extra semicolons after variable declarations
+    sed -i 's/useState(false),;/useState(false);/g' "$file"
+    sed -i 's/useState(0),;/useState(0);/g' "$file"
+    sed -i 's/useState<number | null>(null),;/useState<number | null>(null);/g' "$file"
+    
+    # 2. Fix duplicate if statements
+    sed -i 's/if (if (/if (/g' "$file"
+    
+    # 3. Remove extra semicolons from JSX elements
+    sed -i 's/>;/>/g' "$file"
+    sed -i 's/};/}/g' "$file"
+    
+    # 4. Fix function declarations
+    sed -i 's/() => {;/() => {/g' "$file"
+    sed -i 's/React.FC = () => {;/React.FC = () => {/g' "$file"
+    
+    # 5. Fix return statements
+    sed -i 's/return (;/return (/g' "$file"
+    
+    # 6. Fix JSX attributes
+    sed -i 's/className="[^"]*";/className="&"/g' "$file"
+    sed -i 's/onClick={[^}]*};/onClick={&}/g' "$file"
+    
+    # 7. Fix object properties
+    sed -i 's/const [^=]* = {;/const & = {/g' "$file"
+    
+    # 8. Fix array declarations
+    sed -i 's/\[[^]]*\];/\[&\]/g' "$file"
+    
+    # 9. Fix conditional statements
+    sed -i 's/if ([^)]*) {;/if (&) {/g' "$file"
+    sed -i 's/else {;/else {/g' "$file"
+    
+    # 10. Fix comments
+    sed -i 's/\/\/ [^;]*;/\//g' "$file"
+    
+    # 11. Fix string declarations
+    sed -i 's/"[^"]*";/"/g' "$file"
+    
+    # 12. Fix template literals
+    sed -i 's/`[^`]*`;/\`/g' "$file"
+    
+    # 13. Fix closing braces and parentheses
+    sed -i 's/};/}/g' "$file"
+    sed -i 's/);/)/g' "$file"
+    
+    # 14. Fix imports
+    sed -i 's/import [^;]*;/import &/g' "$file"
+    
+    # 15. Fix exports
+    sed -i 's/export [^;]*;/export &/g' "$file"
 done
 
-echo "Fixing syntax errors in pages..."
-find src/pages -name "*.jsx" -o -name "*.tsx" | while read file; do
-    fix_file "$file"
-done
-
-echo "Fixing syntax errors in other directories..."
-find src -name "*.jsx" -o -name "*.tsx" | grep -v -E "(components|pages)" | while read file; do
-    fix_file "$file"
-done
-
-echo "All syntax errors fixed!"
+echo "✅ Comprehensive syntax error fixes completed!"

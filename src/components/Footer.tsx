@@ -40,8 +40,7 @@ export function Footer() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   },
 
-  const currentYear = new Date().getFullYear(),
-
+  const currentYear = new Date().getFullYear();
   const footerSections = [
     {
       title: 'Company',icon: Globe,links: [

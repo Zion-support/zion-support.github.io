@@ -37,22 +37,21 @@ const testimonials: Testimonial[] = [
   }
 ];
 export default function EnhancedTestimonialsSection() {
-  const [currentTestimonial, setCurrentTestimonial] = useState(0),
-  const [isAutoPlaying, setIsAutoPlaying] = useState(true),
-
+  const [currentTestimonial, setCurrentTestimonial] = useState(0);
+  const [isAutoPlaying, setIsAutoPlaying] = useState(true);
   useEffect(() => {
     if (!isAutoPlaying) return,
 
     const interval = setInterval(() => {
-      setCurrentTestimonial((prev) => (prev + 1) % testimonials.length),
+      setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
     }, 8000),
 
-    return () => clearInterval(interval),
+    return () => clearInterval(interval);
   }, [isAutoPlaying, testimonials.length]),
 
   const nextTestimonial = () => {
-    setCurrentTestimonial((prev) => (prev + 1) % testimonials.length),
-    setIsAutoPlaying(false),
+    setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
+    setIsAutoPlaying(false);
   },
 
   const prevTestimonial = () => {
@@ -64,8 +63,7 @@ export default function EnhancedTestimonialsSection() {
     setIsAutoPlaying(false)
   },
 
-  const currentTestimonialData = testimonials[currentTestimonial],
-
+  const currentTestimonialData = testimonials[currentTestimonial];
   return (
     <section className="py-20 relative overflow-hidden bg-gradient-to-br from-zion-slate via-zion-slate-dark to-zion-slate">
       {/* Background decoration */}

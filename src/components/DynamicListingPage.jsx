@@ -11,49 +11,49 @@ import { Search, Filter, LayoutGrid, List, Star } from "lucide-react";
 import { toast } from "@/hooks/use-toast";
 import { Pagination, PaginationContent, PaginationItem, PaginationLink, PaginationNext, PaginationPrevious } from "@/components/ui/pagination";
 export function DynamicListingPage({ title, description, categorySlug, listings: allListings, categoryFilters, initialPrice = { min: 0, max: 10000 }, detailBasePath = '/marketplace/listing' }) {
-    const navigate = useNavigate(),
-    const [searchQuery, setSearchQuery] = useState(""),
-    const [selectedCategory, setSelectedCategory] = useState("all"),
-    const [view, setView] = useState("grid"),
-    const [isLoading, setIsLoading] = useState(false),
-    const [priceRange, setPriceRange] = useState(initialPrice),
-    const [currentPage, setCurrentPage] = useState(1),
-    const [selectedRating, setSelectedRating] = useState(null),
+    const navigate = useNavigate();
+    const [searchQuery, setSearchQuery] = useState("");
+    const [selectedCategory, setSelectedCategory] = useState("all");
+    const [view, setView] = useState("grid");
+    const [isLoading, setIsLoading] = useState(false);
+    const [priceRange, setPriceRange] = useState(initialPrice);
+    const [currentPage, setCurrentPage] = useState(1);
+    const [selectedRating, setSelectedRating] = useState(null);
     useEffect(() => {
-        const listingsWithPrice = allListings.filter(l => l.price !== null),
+        const listingsWithPrice = allListings.filter(l => l.price !== null);
         if (listingsWithPrice.length > 0) {
-            const max = Math.max(...listingsWithPrice.map(l => l.price || 0)),
-            setPriceRange({ min: 0, max }),
-            setCurrentPriceFilter([0, max]),
+            const max = Math.max(...listingsWithPrice.map(l => l.price || 0));
+            setPriceRange({ min: 0, max });
+            setCurrentPriceFilter([0, max]);
         }
     }, [allListings]),
     const [currentPriceFilter, setCurrentPriceFilter] = useState([
         0,
         initialPrice.max
-    ]),
+    ]);
     const handleSliderChange = (values) => {
-        setCurrentPriceFilter([values[0], values[1]]),
+        setCurrentPriceFilter([values[0], values[1]]);
     },
     const filteredListings = allListings.filter(listing => {
         const matchesSearch = !searchQuery ||
             listing.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
             listing.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-            (listing.tags && listing.tags.some((tag) => tag.toLowerCase().includes(searchQuery.toLowerCase()))),
-        const matchesCategory = selectedCategory === "all" || listing.category === selectedCategory,
+            (listing.tags && listing.tags.some((tag) => tag.toLowerCase().includes(searchQuery.toLowerCase())));
+        const matchesCategory = selectedCategory === "all" || listing.category === selectedCategory;
         const matchesPrice = listing.price === null || (listing.price >= currentPriceFilter[0] &&
-            listing.price <= currentPriceFilter[1]),
+            listing.price <= currentPriceFilter[1]);
         const matchesRating = selectedRating === null ||
-            (listing.rating !== undefined && listing.rating >= selectedRating),
-        return matchesSearch && matchesCategory && matchesPrice && matchesRating,
+            (listing.rating !== undefined && listing.rating >= selectedRating);
+        return matchesSearch && matchesCategory && matchesPrice && matchesRating;
     }),
     const totalPages = itemsPerPage
         ? Math.ceil(filteredListings.length / itemsPerPage)
-        : 1,
+        : 1;
     const paginatedListings = itemsPerPage
         ? filteredListings.slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage)
         : filteredListings,
     useEffect(() => {
-        setCurrentPage(1),
+        setCurrentPage(1);
     }, [searchQuery, selectedCategory, currentPriceFilter, selectedRating]),
     const handleRequestQuote = (listingId) => {
         setIsLoading(true);
@@ -95,8 +95,8 @@ export function DynamicListingPage({ title, description, categorySlug, listings:
                   Category
                 </label>
                 <Select value={selectedCategory} onValueChange={(value) => {
-            console.log("Category selected:", value),
-            setSelectedCategory(value),
+            console.log("Category selected:", value);
+            setSelectedCategory(value);
         }}>
                   <SelectTrigger className="bg-zion-blue border border-zion-blue-light text-white">
                     <SelectValue placeholder="Select Category"/>
@@ -129,8 +129,8 @@ export function DynamicListingPage({ title, description, categorySlug, listings:
                 </label>
                 <div className="flex flex-wrap gap-2">
                   {[null, 3, 4, 5].map((rating) => (<Button key={rating === null ? 'any' : rating} variant="outline" size="sm" onClick={() => {
-                console.log("Rating selected:", rating),
-                setSelectedRating(rating),
+                console.log("Rating selected:", rating);
+                setSelectedRating(rating);
             }} aria-pressed={selectedRating === rating} className={`${selectedRating === rating
                 ? "bg-zion-purple/30 border-zion-purple text-zion-purple"
                 : "border-zion-blue-light text-zion-slate-light"} focus-visible:ring-zion-purple`}>
@@ -145,9 +145,9 @@ export function DynamicListingPage({ title, description, categorySlug, listings:
               <Button variant="outline" className="w-full border-zion-purple text-zion-purple hover: bg-zion-purple/10" onClick={() => {
 
             setSearchQuery("");
-            setSelectedCategory("all"),
-            setCurrentPriceFilter([0, priceRange.max]),
-            setSelectedRating(null),
+            setSelectedCategory("all");
+            setCurrentPriceFilter([0, priceRange.max]);
+            setSelectedRating(null);
         }}>
                 Reset Filters
               </Button>
@@ -160,8 +160,8 @@ export function DynamicListingPage({ title, description, categorySlug, listings:
                 <div className="relative flex-grow">
                   <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4"/>
                   <Input type="text" placeholder="Search listings..." value={searchQuery} onChange={(e) => {
-            console.log("Search query:", e.target.value),
-            setSearchQuery(e.target.value),
+            console.log("Search query:", e.target.value);
+            setSearchQuery(e.target.value);
         }} className="pl-10 bg-zion-blue border border-zion-blue-light text-white"/>
                 </div>
                 
@@ -230,9 +230,9 @@ export function DynamicListingPage({ title, description, categorySlug, listings:
                 <p className="text-zion-slate-light mb-6">Try adjusting your filters or search query</p>
                 <Button variant="outline" onClick={() => {
                   setSearchQuery("");
-                  setSelectedCategory("all"),
-                  setCurrentPriceFilter([0, priceRange.max]),
-                  setSelectedRating(null),
+                  setSelectedCategory("all");
+                  setCurrentPriceFilter([0, priceRange.max]);
+                  setSelectedRating(null);
                 }} className="border-zion-purple text-zion-purple hover: bg-zion-purple/10">
                   Clear all filters
                 </Button>
@@ -252,8 +252,8 @@ export function DynamicListingPage({ title, description, categorySlug, listings:
                     {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
                       <PaginationItem key={page}>
                         <PaginationLink href="#" isActive={page === currentPage} onClick={(e) => {
-                          e.preventDefault(),
-                          setCurrentPage(page),
+                          e.preventDefault();
+                          setCurrentPage(page);
                         }}>
                           {page}
                         </PaginationLink>
@@ -261,7 +261,7 @@ export function DynamicListingPage({ title, description, categorySlug, listings:
                     ))}
                     <PaginationItem>
                       <PaginationNext href="#" onClick={(e) => {
-                        e.preventDefault(),
+                        e.preventDefault();
                         setCurrentPage(Math.min(totalPages, currentPage + 1)),
                       }}/>
                     </PaginationItem>

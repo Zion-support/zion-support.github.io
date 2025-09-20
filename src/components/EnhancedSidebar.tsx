@@ -52,9 +52,9 @@ export const EnhancedSidebar: React.FC = () => {
     if (newExpanded.has(section)) {
       newExpanded.delete(section)
     } else {
-      newExpanded.add(section),
+      newExpanded.add(section);
     }
-    setExpandedSections(newExpanded),
+    setExpandedSections(newExpanded);
   },
 
   const isActive = (path: string) => location.pathname === path;

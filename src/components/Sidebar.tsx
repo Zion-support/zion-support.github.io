@@ -111,9 +111,8 @@ export const Sidebar: React.FC = () => {
 
   const renderNavItem = (item: SidebarItem, level: number = 0) => {
     const hasChildren = item.children && item.children.length > 0;
-    const isExpanded = expandedSections.includes(item.name.toLowerCase()),
-    const active = isActive(item.href),
-
+    const isExpanded = expandedSections.includes(item.name.toLowerCase());
+    const active = isActive(item.href);
     return (
       <div key={item.name}>
         <div className="flex items-center">

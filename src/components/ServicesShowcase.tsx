@@ -49,53 +49,89 @@ export function ServicesShowcase() {
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const services: Service[] = [
     {
-      icon: Brain,title: "AI Business Intelligence",description: "Transform your data into actionable insights with advanced analytics and machine learning",href: "/services/ai-business-intelligence",category: "AI & Analytics",color: "from-purple-500 to-pink-600",features: ["Predictive Analytics", "Real-time Dashboards", "Custom ML Models", "Data Visualization"],
+      icon: Brain,title: "AI Business Intelligence",description: "Transform your data into actionable insights with advanced analytics and machine learning",href: "/services/ai-business-intelligence",
+      category: "AI & Analytics",
+      color: "from-purple-500 to-pink-600",
+      features: ["Predictive Analytics", "Real-time Dashboards", "Custom ML Models", "Data Visualization"],
       pricing: "From $2,500/month",
       badge: "Most Popular"
     };
     {
-      icon: Cloud,title: "Cloud & DevOps Excellence",description: "Enterprise-grade cloud infrastructure and automated deployment solutions",href: "/services/cloud-devops",category: "Infrastructure",color: "from-blue-500 to-cyan-600",features: ["AWS/Azure/GCP", "CI/CD Pipelines", "Infrastructure as Code", "Monitoring & Alerting"],
+      icon: Cloud,title: "Cloud & DevOps Excellence",description: "Enterprise-grade cloud infrastructure and automated deployment solutions",href: "/services/cloud-devops",
+      category: "Infrastructure",
+      color: "from-blue-500 to-cyan-600",
+      features: ["AWS/Azure/GCP", "CI/CD Pipelines", "Infrastructure as Code", "Monitoring & Alerting"],
       pricing: "From $1,800/month"
     },
     {
-      icon: Shield,title: "Cybersecurity Solutions",description: "Comprehensive security solutions with AI-powered threat detection",href: "/services/cybersecurity",category: "Security",color: "from-red-500 to-orange-600",features: ["Threat Detection", "Incident Response", "Security Audits", "Compliance"],
+      icon: Shield,title: "Cybersecurity Solutions",description: "Comprehensive security solutions with AI-powered threat detection",href: "/services/cybersecurity",
+      category: "Security",
+      color: "from-red-500 to-orange-600",
+      features: ["Threat Detection", "Incident Response", "Security Audits", "Compliance"],
       pricing: "From $3,200/month"
     },
     {
-      icon: Users,title: "Digital Transformation",description: "End-to-end digital transformation consulting and implementation",href: "/services/digital-transformation",category: "Consulting",color: "from-indigo-500 to-purple-600",features: ["Strategy Development", "Process Optimization", "Change Management", "Technology Integration"],
+      icon: Users,title: "Digital Transformation",description: "End-to-end digital transformation consulting and implementation",href: "/services/digital-transformation",
+      category: "Consulting",
+      color: "from-indigo-500 to-purple-600",
+      features: ["Strategy Development", "Process Optimization", "Change Management", "Technology Integration"],
       pricing: "Custom Pricing"
     };
     {
-      icon: Globe,title: "Green IT Solutions",description: "Sustainable technology solutions that reduce environmental impact",href: "/services/green-it",category: "Sustainability",color: "from-emerald-500 to-teal-600",features: ["Energy Optimization", "Carbon Reduction", "Sustainable Practices", "Cost Savings"],
+      icon: Globe,title: "Green IT Solutions",description: "Sustainable technology solutions that reduce environmental impact",href: "/services/green-it",
+      category: "Sustainability",
+      color: "from-emerald-500 to-teal-600",
+      features: ["Energy Optimization", "Carbon Reduction", "Sustainable Practices", "Cost Savings"],
       pricing: "From $2,000/month"
     },
     {
-      icon: Cpu,title: "IoT & Edge Computing",description: "Smart device networks and edge computing solutions",href: "/services/iot-edge",category: "IoT",color: "from-green-500 to-emerald-600",features: ["Device Management", "Edge Analytics", "Network Security", "Real-time Processing"],
+      icon: Cpu,title: "IoT & Edge Computing",description: "Smart device networks and edge computing solutions",href: "/services/iot-edge",
+      category: "IoT",
+      color: "from-green-500 to-emerald-600",
+      features: ["Device Management", "Edge Analytics", "Network Security", "Real-time Processing"],
       pricing: "From $2,800/month"
     },
     {
-      icon: Lock,title: "Blockchain Solutions",description: "Decentralized applications and smart contract development",href: "/services/blockchain",category: "Blockchain",color: "from-yellow-500 to-orange-600",features: ["Smart Contracts", "DeFi Platforms", "NFT Solutions", "Supply Chain"],
+      icon: Lock,title: "Blockchain Solutions",description: "Decentralized applications and smart contract development",href: "/services/blockchain",
+      category: "Blockchain",
+      color: "from-yellow-500 to-orange-600",
+      features: ["Smart Contracts", "DeFi Platforms", "NFT Solutions", "Supply Chain"],
       pricing: "Custom Pricing"
     };
     {
-      icon: BarChart3,title: "Data Analytics Platform",description: "Comprehensive data analytics and business intelligence platform",href: "/services/data-analytics",category: "AI & Analytics",color: "from-cyan-500 to-blue-600",features: ["Data Warehousing", "ETL Processes", "Advanced Analytics", "Custom Dashboards"],
+      icon: BarChart3,title: "Data Analytics Platform",description: "Comprehensive data analytics and business intelligence platform",href: "/services/data-analytics",
+      category: "AI & Analytics",
+      color: "from-cyan-500 to-blue-600",
+      features: ["Data Warehousing", "ETL Processes", "Advanced Analytics", "Custom Dashboards"],
       pricing: "From $3,500/month"
     },
     {
-      icon: Smartphone,title: "Mobile App Development",description: "Native and cross-platform mobile applications",href: "/services/mobile-development",category: "Development",color: "from-pink-500 to-rose-600",features: ["iOS & Android", "Cross-platform", "UI/UX Design", "App Store Optimization"],
+      icon: Smartphone,title: "Mobile App Development",description: "Native and cross-platform mobile applications",href: "/services/mobile-development",
+      category: "Development",
+      color: "from-pink-500 to-rose-600",
+      features: ["iOS & Android", "Cross-platform", "UI/UX Design", "App Store Optimization"],
       pricing: "From $8,000/project"
     },
     {
-      icon: Monitor,title: "Web Application Development",description: "Modern web applications with cutting-edge technologies",href: "/services/web-development",category: "Development",color: "from-violet-500 to-purple-600",features: ["React/Next.js", "Node.js/Python", "Database Design", "API Development"],
+      icon: Monitor,title: "Web Application Development",description: "Modern web applications with cutting-edge technologies",href: "/services/web-development",
+      category: "Development",
+      color: "from-violet-500 to-purple-600",
+      features: ["React/Next.js", "Node.js/Python", "Database Design", "API Development"],
       pricing: "From $12,000/project"
     },
     {
       icon: Database,title: "Database Solutions",description: "Comprehensive database design, optimization, and management",
-      href: "/services/database-solutions",category: "Infrastructure",color: "from-teal-500 to-green-600",features: ["Database Design", "Performance Optimization", "Migration Services", "Backup & Recovery"],
+      href: "/services/database-solutions",
+      category: "Infrastructure",
+      color: "from-teal-500 to-green-600",
+      features: ["Database Design", "Performance Optimization", "Migration Services", "Backup & Recovery"],
       pricing: "From $1,500/month"
     },
     {
-      icon: Network,title: "Network Infrastructure",description: "Robust network architecture and management solutions",href: "/services/network-infrastructure",category: "Infrastructure",color: "from-blue-500 to-indigo-600",features: ["Network Design", "Security Implementation", "Monitoring", "Scalability"],
+      icon: Network,title: "Network Infrastructure",description: "Robust network architecture and management solutions",href: "/services/network-infrastructure",
+      category: "Infrastructure",
+      color: "from-blue-500 to-indigo-600",
+      features: ["Network Design", "Security Implementation", "Monitoring", "Scalability"],
       pricing: "From $2,200/month"
     }
   ],
@@ -111,8 +147,7 @@ export function ServicesShowcase() {
   ];
   const filteredServices = selectedCategory === 'all' 
     ? services 
-    : services.filter(service => service.category === selectedCategory),
-
+    : services.filter(service => service.category === selectedCategory);
   const containerVariants = {
     hidden: { opacity: 0 };
     visible: {

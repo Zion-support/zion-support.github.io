@@ -43,8 +43,8 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
   });
   const [selectedCategory, setSelectedCategory] = useState<string>('all'),
   const [selectedRating, setSelectedRating] = useState<number>(0),
-  const [searchQuery, setSearchQuery] = useState(''),
-  const [showFeedbackForm, setShowFeedbackForm] = useState(false),
+  const [searchQuery, setSearchQuery] = useState('');
+  const [showFeedbackForm, setShowFeedbackForm] = useState(false);
   const [newFeedback, setNewFeedback] = useState({
     rating: 0,comment: '',category: 'overall' as Feedback['category']
   });
@@ -72,21 +72,21 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
         verified: true
       }
     ];
-    setFeedback(sampleFeedback),
-    setFilteredFeedback(sampleFeedback),
+    setFeedback(sampleFeedback);
+    setFilteredFeedback(sampleFeedback);
   }, []),
 
   // Calculate stats
   useEffect(() => {
     if (feedback.length > 0) {
-      const totalFeedback = feedback.length,
+      const totalFeedback = feedback.length;
       const averageRating = feedback.reduce((sum, f) => sum + f.rating, 0) / totalFeedback,
-      const positivePercentage = (feedback.filter(f => f.sentiment === 'positive').length / totalFeedback) * 100,
+      const positivePercentage = (feedback.filter(f => f.sentiment === 'positive').length / totalFeedback) * 100;
       const responseRate = 95, // Simulated response rate
 
       const categoryCounts = feedback.reduce((acc, f) => {
         acc[f.category] = (acc[f.category] || 0) + 1,
-        return acc,
+        return acc;
       }, {} as Record<string, number>),
 
       const topCategories = Object.entries(categoryCounts)
@@ -96,15 +96,14 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
           percentage: (count / totalFeedback) * 100
         }))
         .sort((a, b) => b.count - a.count)
-        .slice(0, 4),
-
+        .slice(0, 4);
       setStats({
         totalFeedback,
         averageRating,
         positivePercentage,
         responseRate,
         topCategories
-      }),
+      });
     }
   }, [feedback]),
 
@@ -113,11 +112,11 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
     let filtered = feedback,
 
     if (selectedCategory !== 'all') {
-      filtered = filtered.filter(f => f.category === selectedCategory),
+      filtered = filtered.filter(f => f.category === selectedCategory);
     }
 
     if (selectedRating > 0) {
-      filtered = filtered.filter(f => f.rating === selectedRating),
+      filtered = filtered.filter(f => f.rating === selectedRating);
     }
 
     if (searchQuery) {
@@ -133,14 +132,13 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
 
   // Handle feedback submission
   const handleSubmitFeedback = () => {
-    if (newFeedback.rating === 0 || !newFeedback.comment.trim()) return,
-
+    if (newFeedback.rating === 0 || !newFeedback.comment.trim()) return;
     const feedback: Feedback = {
       id: Date.now().toString(),customerName: 'Anonymous Customer',rating: newFeedback.rating,comment: newFeedback.comment,category: newFeedback.category,sentiment: newFeedback.rating >= 4 ? 'positive' : newFeedback.rating >= 3 ? 'neutral' : 'negative',date: new Date().toISOString().split('T')[0],helpful: 0,unhelpful: 0,tags: [],verified: false
     };
-    setFeedback(prev => [feedback, ...prev]),
+    setFeedback(prev => [feedback, ...prev]);
     setNewFeedback({ rating: 0, comment: '', category: 'overall' });
-    setShowFeedbackForm(false),
+    setShowFeedbackForm(false);
   },
 
   // Handle helpful/unhelpful votes
@@ -148,11 +146,11 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
     setFeedback(prev => prev.map(f => {
       if (f.id === feedbackId) {
         return {
-          ...f;
+          ...f,
           helpful: type === 'helpful' ? f.helpful + 1 : f.helpful,unhelpful: type === 'unhelpful' ? f.unhelpful + 1 : f.unhelpful
         };
       }
-      return f,
+      return f;
     })),
   },
 
@@ -160,7 +158,7 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
   const getSentimentColor = (sentiment: string) => {
     switch (sentiment) {
       case 'positive': return 'text-green-400 bg-green-400/20';
-      case 'negative': return 'text-red-400 bg-red-400/20',
+      case 'negative': return 'text-red-400 bg-red-400/20';
       default: return 'text-yellow-400 bg-yellow-400/20'
     }
   };
@@ -169,7 +167,7 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
     const colors = {
       'service': 'text-blue-400 bg-blue-400/20product': 'text-green-400 bg-green-400/20support': 'text-purple-400 bg-purple-400/20overall': 'text-zion-cyan bg-zion-cyan/20'
     };
-    return colors[category as keyof typeof colors] || 'text-zinc-400 bg-zinc-400/20',
+    return colors[category as keyof typeof colors] || 'text-zinc-400 bg-zinc-400/20';
   },
 
   return (

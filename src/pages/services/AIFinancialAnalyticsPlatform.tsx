@@ -1,56 +1,56 @@
 import { TrendingUp, DollarSign, BarChart3, Check, ExternalLink, Phone, Mail, Brain, Target, PieChart, Calculator, Shield } from "lucide-react";
-export default function AIFinancialAnalyticsPlatform() {
-  const features = [
-    'AI-powered financial forecasting and modelingReal-time market data analysis and insights',
-    'Predictive risk assessment and managementPortfolio optimization and rebalancing',
-    'Automated financial reporting and complianceCash flow prediction and optimization',
-    'Investment opportunity identificationRegulatory compliance monitoring',
-    'Multi-currency and multi-asset supportExecutive dashboard with KPI tracking'
-  ],
+export default function AIFinancialAnalyticsPlatform() {;
+  const features = [;
+    'AI-powered financial forecasting and modelingReal-time market data analysis and insights';
+    'Predictive risk assessment and managementPortfolio optimization and rebalancing';
+    'Automated financial reporting and complianceCash flow prediction and optimization';
+    'Investment opportunity identificationRegulatory compliance monitoring';
+    'Multi-currency and multi-asset supportExecutive dashboard with KPI tracking';
+  ]
 
-  const benefits = [
-    'Improve investment returns by 15-35%Reduce financial risk by 40-60%',
-    'Automate 80% of financial analysis tasksReal-time market insights and alerts',
-    'Data-driven investment decisionsComprehensive compliance coverage'
-  ],
+  const benefits = [;
+    'Improve investment returns by 15-35%Reduce financial risk by 40-60%';
+    'Automate 80% of financial analysis tasksReal-time market insights and alerts';
+    'Data-driven investment decisionsComprehensive compliance coverage';
+  ]
 
-  const useCases = [
+  const useCases = [;
     'Investment portfolio managementCorporate financial planning';
     'Risk management and complianceTrading strategy optimization';
-    'Mergers and acquisitions analysisFinancial market research'
-  ];
-  const tiers = [
-    { 
-      name: 'Professional',price: '$2,999/mo', 
-      details: ['Up to 10 portfoliosBasic AI insights', 'Email supportStandard market data'] 
-    },
-    { 
-      name: 'Institutional',price: '$7,999/mo', 
-      details: ['Up to 100 portfoliosAdvanced AI analytics', 'Priority supportPremium market data'] 
-    },
-    { 
-      name: 'Enterprise',price: '$19,999/mo', 
-      details: ['Unlimited portfoliosCustom AI models', 'Dedicated supportWhite-label solution'] 
+    'Mergers and acquisitions analysisFinancial market research';
+  ]
+  const tiers = [;
+    { ;
+      name: 'Professional',price: '$2,999/mo', ;
+      details: ['Up to 10 portfoliosBasic AI insights', 'Email supportStandard market data'] ;
     }
-  ],
+    { ;
+      name: 'Institutional',price: '$7,999/mo', ;
+      details: ['Up to 100 portfoliosAdvanced AI analytics', 'Priority supportPremium market data'] ;
+    }
+    { ;
+      name: 'Enterprise',price: '$19,999/mo', ;
+      details: ['Unlimited portfoliosCustom AI models', 'Dedicated supportWhite-label solution'] ;
+    }
+  ]
 
-  const financialTools = [
-    'Portfolio AnalyticsRisk Management',
-    'Performance AttributionAsset Allocation',
-    'Scenario AnalysisCompliance Reporting'
-  ],
+  const financialTools = [;
+    'Portfolio AnalyticsRisk Management';
+    'Performance AttributionAsset Allocation';
+    'Scenario AnalysisCompliance Reporting';
+  ]
 
-  const aiCapabilities = [
-    'Predictive modelingRisk assessment',
-    'Market analysisPortfolio optimization',
-    'Anomaly detectionTrend forecasting'
-  ];
+  const aiCapabilities = [;
+    'Predictive modelingRisk assessment';
+    'Market analysisPortfolio optimization';
+    'Anomaly detectionTrend forecasting';
+  ]
   return (
     <div className="min-h-screen bg-white">
       <section className="bg-gradient-to-br from-green-900 via-green-800 to-green-700 py-20 text-center">
         <div className="max-w-5xl mx-auto px-6">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6">
-            <DollarSign className="w-4 h-4 mr-2" /> AI-Powered Financial Analytics
+            <DollarSign className="w-4 h-4 mr-2" /> AI-Powered Financial Analytics;
           </div>
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">AI Financial Analytics Platform</h1>
           <p className="text-green-100 text-xl">Make smarter financial decisions with AI-powered analytics, predictive modeling, and real-time market insights.</p>
@@ -62,7 +62,7 @@ export default function AIFinancialAnalyticsPlatform() {
           <div>
             <h2 className="text-3xl font-bold text-zion-slate-dark mb-4">Advanced Financial Features</h2>
             <ul className="space-y-3">
-              {features.map((f) => (
+              {features.map((f) => (;
                 <li key={f} className="flex items-start">
                   <Check className="w-5 h-5 text-green-600 mr-3 mt-0.5" />
                   <span className="text-zion-slate-dark">{f}</span>
@@ -70,13 +70,13 @@ export default function AIFinancialAnalyticsPlatform() {
               ))}
             </ul>
             <div className="mt-6 text-sm text-zion-slate-light">
-              SOC 2 Type II, FINRA, SEC compliant. Real-time market data feeds. 99.99% uptime SLA.
+              SOC 2 Type II, FINRA, SEC compliant. Real-time market data feeds. 99.99% uptime SLA.;
             </div>
           </div>
           <div className="bg-white border border-zion-slate-light/20 rounded-xl p-6 shadow-md">
             <h3 className="text-2xl font-semibold text-zion-slate-dark mb-4">Financial Plans</h3>
             <div className="grid md:grid-cols-1 gap-4">
-              {tiers.map((t) => (
+              {tiers.map((t) => (;
                 <div key={t.name} className="rounded-lg p-4 border border-zion-slate-light/30">
                   <div className="text-lg font-semibold mb-1">{t.name}</div>
                   <div className="text-2xl font-bold text-green-600 mb-2">{t.price}</div>
@@ -101,7 +101,7 @@ export default function AIFinancialAnalyticsPlatform() {
           <div>
             <h3 className="text-2xl font-bold text-zion-slate-dark mb-4">Financial Benefits</h3>
             <ul className="space-y-3">
-              {benefits.map((b) => (
+              {benefits.map((b) => (;
                 <li key={b} className="flex items-start">
                   <TrendingUp className="w-5 h-5 text-green-600 mr-3 mt-0.5" />
                   <span className="text-zion-slate-dark">{b}</span>
@@ -112,7 +112,7 @@ export default function AIFinancialAnalyticsPlatform() {
           <div>
             <h3 className="text-2xl font-bold text-zion-slate-dark mb-4">Use Cases</h3>
             <ul className="space-y-3">
-              {useCases.map((u) => (
+              {useCases.map((u) => (;
                 <li key={u} className="flex items-start">
                   <Target className="w-5 h-5 text-green-600 mr-3 mt-0.5" />
                   <span className="text-zion-slate-dark">{u}</span>
@@ -125,7 +125,7 @@ export default function AIFinancialAnalyticsPlatform() {
         <div className="mt-12">
           <h3 className="text-2xl font-bold text-zion-slate-dark mb-6 text-center">Financial Analysis Tools</h3>
           <div className="grid md:grid-cols-3 gap-6">
-            {financialTools.map((t) => (
+            {financialTools.map((t) => (;
               <div key={t} className="p-6 bg-white border border-zion-slate-light/20 rounded-xl shadow-sm">
                 <PieChart className="w-6 h-6 text-green-600 mb-3" />
                 <div className="text-zion-slate-dark font-semibold">{t}</div>
@@ -137,7 +137,7 @@ export default function AIFinancialAnalyticsPlatform() {
         <div className="mt-12">
           <h3 className="text-2xl font-bold text-zion-slate-dark mb-6 text-center">AI-Powered Capabilities</h3>
           <div className="grid md:grid-cols-3 gap-6">
-            {aiCapabilities.map((c) => (
+            {aiCapabilities.map((c) => (;
               <div key={c} className="p-6 bg-white border border-zion-slate-light/20 rounded-xl shadow-sm">
                 <Brain className="w-6 h-6 text-green-600 mb-3" />
                 <div className="text-zion-slate-dark font-semibold">{c}</div>
@@ -192,10 +192,10 @@ export default function AIFinancialAnalyticsPlatform() {
           <div className="text-sm text-zion-slate-light mb-2">Ready to transform your financial analytics?</div>
           <div className="flex flex-col sm: flex-row gap-4 justify-center">
             <a href="tel:+13024640950" className="inline-flex items-center px-5 py-3 bg-green-600 text-white rounded-lg">
-              <Phone className="w-4 h-4 mr-2"/> +1 302 464 0950
+              <Phone className="w-4 h-4 mr-2"/> +1 302 464 0950;
             </a>
             <a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center px-5 py-3 border border-green-600 text-green-600 rounded-lg">
-              <Mail className="w-4 h-4 mr-2"/> kleber@ziontechgroup.com
+              <Mail className="w-4 h-4 mr-2"/> kleber@ziontechgroup.com;
             </a>
           </div>
           <div className="mt-4 text-sm text-zion-slate-light">
