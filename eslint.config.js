@@ -88,6 +88,7 @@ export default [
              '**/node_modules/**',
              '**/dist/**',
              '**/build/**',
+             '**/.next/**',
              '**/*.config.js',
              '**/*.config.cjs',
              '**/*.config.mjs',
