@@ -1,3 +1,0 @@
-const Homepage2025: React.FC = () => {
-  // Temporarily simplified to avoid build issues
-  return <div className="sr-only">Homepage2025 temporarily disabled</div>;
