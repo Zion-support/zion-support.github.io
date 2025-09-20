@@ -40,15 +40,15 @@ export function Accessibility() {
           case '+':
             e.preventDefault();
             increaseFontSize();
-            break,
+            break;
           case '-':
             e.preventDefault();
             decreaseFontSize();
-            break,
+            break;
           case '0':
             e.preventDefault();
             resetSettings();
-            break
+            break;
         }
       }
     },

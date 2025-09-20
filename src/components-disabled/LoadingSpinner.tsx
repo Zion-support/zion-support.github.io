@@ -20,5 +20,7 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
       <div className={`animate-spin rounded-full border-b-2 border-purple-500 ${sizeClasses[size]} mb-4`}></div>
       <p className="text-gray-300 text-lg">{text}</p>
     </div>
-  )
+  );
+};
+
 export default LoadingSpinner;

@@ -36,7 +36,7 @@ interface AIChatbotSystemProps {
 }
 
 export const AIChatbotSystem: React.FC<AIChatbotSystemProps> = ({
-  showHeader = true;
+  showHeader = true,
   showSettings = true,
   autoScroll = true
 }) => {
