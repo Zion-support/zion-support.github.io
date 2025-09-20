@@ -1,7 +1,6 @@
 import React from 'react';
 
 <<<<<<<< HEAD:temp_broken_pages_all/HiringTracker.tsx
-<<<<<<< HEAD:temp_broken_pages_all/HiringTracker.tsx
 import { useState } from "react";,
 import { useRouter } from "next/router";,
 import { KanbanBoard } from "@/components/hiring-tracker/KanbanBoard";,
@@ -10,7 +9,6 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { SEO } from "@/components/SEO";
 import { ProtectedRoute } from "@/components/ProtectedRoute";
 import { Briefcase } from "lucide-react";
-========
 import { useState,  } from "react",
 import { useRouter,  } from "next/router",
 import { KanbanBoard,  } from "@/components/hiring-tracker/KanbanBoard",
@@ -83,5 +81,4 @@ export default function HiringTracker() {
       </div>
     </div>
   );
->>>>>>> 1836dcad4eb858f12251bf809dd3ca83faa1433b:src/pages/HiringTracker.tsx
 }

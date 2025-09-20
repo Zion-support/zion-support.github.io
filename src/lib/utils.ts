@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 // Utility functions for the application
+=======
+import { type ClassValue, clsx } from "clsx";
+import { twMerge } from "tailwind-merge";
+>>>>>>> pr-22703
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
@@ -52,4 +57,8 @@ export function throttle<T extends (...args: any[]) => any>(
       setTimeout(() => inThrottle = false, limit);
     }
   };
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> pr-22703

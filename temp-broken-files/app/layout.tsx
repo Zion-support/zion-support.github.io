@@ -1,4 +1,8 @@
+import type { Metadata } from "next"
+import { Inter } from "next/font/google"
+import "./globals.css"
 
+<<<<<<< HEAD
 import React from "react";
 import { ThemeProvider } from "@/components/ThemeProvider"
 import { Header } from "@/components/Header"
@@ -44,11 +48,33 @@ const inter = Inter({ subsets: ["latin"] });
     title: "Zion Tech Group - Innovative Technology Solutions",
     description: "Leading provider of AI, cloud, cybersecurity, and digital transformation solutions.",
     siteName: "Zion Tech Group"},
+=======
+const inter = Inter({ subsets: ["latin"] })
+
+export const metadata: Metadata = {
+  title: "Zion Holdings - AI-Powered Solutions",
+  description: "Leading provider of AI-powered business solutions and innovative technology services",
+  keywords: "AI solutions, cloud computing, cybersecurity, digital transformation, technology consulting",
+  authors: [{ name: "Zion Holdings" }],
+  creator: "Zion Holdings",
+  publisher: "Zion Holdings",
+  robots: "index, follow",
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://zion.app",
+    title: "Zion Holdings - AI-Powered Solutions",
+    description: "Leading provider of AI-powered business solutions and innovative technology services",
+    siteName: "Zion Holdings",
+  },
+>>>>>>> pr-22703
   twitter: {
     card: "summary_large_image",
-    title: "Zion Tech Group - Innovative Technology Solutions",
-    description: "Leading provider of AI, cloud, cybersecurity, and digital transformation solutions."},
+    title: "Zion Holdings - AI-Powered Solutions",
+    description: "Leading provider of AI-powered business solutions and innovative technology services",
+  },
   viewport: "width=device-width, initial-scale=1",
+<<<<<<< HEAD
   themeColor: "#0ea5e9"};
 
 export default function RootLayout({
@@ -97,3 +123,12 @@ return (
 }
 
 >>>>>>> origin/main
+=======
+  themeColor: "#0ea5e9",
+}
+
+export default function RootLayout({
+  children,
+}: {
+// Merge conflict resolved - keeping working version
+>>>>>>> pr-22703

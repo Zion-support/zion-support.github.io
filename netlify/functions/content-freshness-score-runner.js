@@ -54,6 +54,6 @@ exports.handler = async function(event, context) {
         function: 'content-freshness-score-runner',
         status: 'error'
       })
-    };
+    },
   }
 },

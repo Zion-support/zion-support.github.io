@@ -8,7 +8,7 @@ exports.handler = async function() {
     execSync('git config user.name "zion-bot" && git config user.email "bot@zion.app" && git add -A && (git commit -m "feat(autonomy): invention orchestrator updates [ci skip]" || true) && (git push origin main || true)', { stdio: 'inherit', shell: true }),
     return { statusCode: 200, body: JSON.stringify({ ok: true, task: 'autonomous-invention-orchestrator' }) },
   } catch (e) {
-    return { statusCode: 200, body: JSON.stringify({ ok: false, error: String(e) }) };
+    return { statusCode: 200, body: JSON.stringify({ ok: false, error: String(e) }) },
   }
 },
 

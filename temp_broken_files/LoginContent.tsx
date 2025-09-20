@@ -5,13 +5,13 @@ interface LoginContentProps {,
   onLogin?: (credentials: { email: string, password: string }) => void,
 }
 ,
-export const LoginContent: React.FC<LoginContentProps> = ({ onLogin }) : any => {,
+export const LoginContent: React.FC<LoginContentProps> = ({ onLogin }) => {,
   const [formData, setFormData] = useState({,
     email: '',
     password: ''}),
   const [showPassword, setShowPassword] = useState(false),
   const [isLoading, setIsLoading] = useState(false),
-  const handleSubmit = async (e: React.FormEvent) : any => {,
+  const handleSubmit = async (e: React.FormEvent) => {,
     e.preventDefault(),
     setIsLoading(true),
     try {,
@@ -21,10 +21,10 @@ export const LoginContent: React.FC<LoginContentProps> = ({ onLogin }) : any => 
     } catch (error) {,
       console.error('Login error:', error),
     } finally {,
-      setIsLoading(false);
-};
+      setIsLoading(false),
+    }
   },
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) : any => {,
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {,
     setFormData(prev => ({,
       ...prev,
       [e.target.name]: e.target.value
@@ -134,6 +134,6 @@ export const LoginContent: React.FC<LoginContentProps> = ({ onLogin }) : any => 
         </form>,
       </div>,
     </div>,
-  );
-  },
+  ),
+},
 export default LoginContent,

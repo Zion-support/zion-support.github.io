@@ -33,8 +33,8 @@ ecmaVersion: 2021,
         clearInterval: 'readonly'
       },
       parserOptions: {,
-ecmaFeatures: {,
-jsx: true,
+ecmaFeatures: {
+          jsx: true,
 }
       }
     },
@@ -211,8 +211,8 @@ ecmaVersion: 2021,
       },
       parser: tsparser,
       parserOptions: {,
-ecmaFeatures: {,
-jsx: true,
+ecmaFeatures: {
+          jsx: true,
 }
       }
     },
@@ -225,8 +225,8 @@ jsx: true,
       ...jsxA11y.configs.recommended.rules,
     },
     settings: {,
-react: {,
-version: "detect"
+react: {
+        version: "detect"
       }
     }
   },

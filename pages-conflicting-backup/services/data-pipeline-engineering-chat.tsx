@@ -17,6 +17,6 @@ const DataPipelineEngineeringChat: NextPage = () => {
       </main>
     </div>
   );
-  };
+};
 
 export default DataPipelineEngineeringChat;

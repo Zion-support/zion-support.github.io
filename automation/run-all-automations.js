@@ -43,8 +43,8 @@ class AutomationRunner {,
       if (this.config.parallel) {,
         await this.runTasksParallel(),
       } else {,
-        await this.runTasksSequential();
-};
+        await this.runTasksSequential(),
+      }
 ,
       // Generate comprehensive report,
       await this.generateReport(),
@@ -66,24 +66,24 @@ class AutomationRunner {,
       execSync('git status', { stdio: 'pipe' }),
       logger.info('✅ Git repository found'),
     } catch (error) {,
-      throw new Error('Not in a git repository');
-};
+      throw new Error('Not in a git repository'),
+    }
 ,
     // Check if node_modules exists,
     if (!fs.existsSync('node_modules')) {,
       logger.warn('⚠️ node_modules not found, running npm install...'),
-      execSync('npm install', { stdio: 'inherit' });
-};
+      execSync('npm install', { stdio: 'inherit' }),
+    }
 ,
     // Check available disk space,
     const stats = fs.statSync('.'),
     const freeSpace = stats.size,
     if (freeSpace < 1000000000) { // 1GB,
-      logger.warn('⚠️ Low disk space detected');
-};
+      logger.warn('⚠️ Low disk space detected'),
+    }
 ,
-    logger.info('✅ System health check passed');
-};
+    logger.info('✅ System health check passed'),
+  }
 ,
   async runTasksSequential() {,
     logger.info('🔄 Running tasks sequentially...'),
@@ -95,8 +95,8 @@ class AutomationRunner {,
         logger.success(`✅ Task ${taskName} completed successfully`),
       } catch (error) {,
         logger.error(`❌ Task ${taskName} failed:`, error.message),
-        this.results.set(taskName, { success: false, error: error.message });
-};
+        this.results.set(taskName, { success: false, error: error.message }),
+      }
     }
   }
 ,
@@ -115,14 +115,14 @@ class AutomationRunner {,
         return { success: false, error: error.message },
       }
     }),
-    await Promise.all(promises);
-};
+    await Promise.all(promises),
+  }
 ,
   async runTask(taskName) {,
     const taskPath = path.join(__dirname, 'tasks', `${taskName}.js`),
     if (!fs.existsSync(taskPath)) {,
-      throw new Error(`Task file not found: ${taskPath}`);
-};
+      throw new Error(`Task file not found: ${taskPath}`),
+    }
 ,
     return new Promise((resolve, reject) => {,
       const timeout = setTimeout(() => {,
@@ -150,15 +150,15 @@ class AutomationRunner {,
             exitCode: code,
             duration: Date.now() - this.startTime}),
         } else {,
-          reject(new Error(`Task ${taskName} exited with code ${code}: ${stderr}`));
-};
+          reject(new Error(`Task ${taskName} exited with code ${code}: ${stderr}`)),
+        }
       }),
       taskProcess.on('error', (error) => {,
         clearTimeout(timeout),
         reject(error),
       }),
-    });
-};
+    }),
+  }
 ,
   async generateReport() {,
     logger.info('📊 Generating comprehensive report...'),
@@ -183,8 +183,8 @@ class AutomationRunner {,
     logger.info(`📄 Report saved to ${reportPath}`),
     logger.info(`📄 Logs saved to ${logsPath}`),
     // Print summary,
-    this.printSummary(report);
-};
+    this.printSummary(report),
+  }
 ,
   getSuccessCount() {,
     return Array.from(this.results.values()).filter(r => r.success).length,
@@ -200,16 +200,16 @@ class AutomationRunner {,
       .filter(([name, result]) => !result.success),
       .map(([name]) => name),
     if (failedTasks.length > 0) {,
-      recommendations.push(`Review and fix failed tasks: ${failedTasks.join()}`);
-};
+      recommendations.push(`Review and fix failed tasks: ${failedTasks.join()}`),
+    }
 ,
     if (this.getSuccessCount() === 0) {,
-      recommendations.push('All tasks failed - check system configuration and dependencies');
-};
+      recommendations.push('All tasks failed - check system configuration and dependencies'),
+    }
 ,
     if (this.getSuccessCount() < this.config.tasks.length * 0.5) {,
-      recommendations.push('More than 50% of tasks failed - review automation setup');
-};
+      recommendations.push('More than 50% of tasks failed - review automation setup'),
+    }
 ,
     return recommendations,
   }
@@ -227,11 +227,11 @@ class AutomationRunner {,
       console.log('\n📋 Recommendations: '),
       report.recommendations.forEach((rec, index) => {,
         console.log(`  ${index + 1}. ${rec}`),
-      });
-};
+      }),
+    }
 ,
-    console.log('='.repeat(60) + '\n');
-};
+    console.log('='.repeat(60) + '\n'),
+  }
 }
 ,
 // CLI support,
@@ -270,18 +270,18 @@ Available Tasks: - SecurityScanner,
 ,
   const tasksIndex = args.findIndex(arg => arg === '--tasks'),
   if (tasksIndex !== -1 && args[tasksIndex + 1]) {,
-    config.tasks = args[tasksIndex + 1].split();
-};
+    config.tasks = args[tasksIndex + 1].split(),
+  }
 ,
   const timeoutIndex = args.findIndex(arg => arg === '--timeout'),
   if (timeoutIndex !== -1 && args[timeoutIndex + 1]) {,
-    config.timeout = parseInt(args[timeoutIndex + 1]);
-};
+    config.timeout = parseInt(args[timeoutIndex + 1]),
+  }
 ,
   const retryIndex = args.findIndex(arg => arg === '--retry'),
   if (retryIndex !== -1 && args[retryIndex + 1]) {,
-    config.retryAttempts = parseInt(args[retryIndex + 1]);
-};
+    config.retryAttempts = parseInt(args[retryIndex + 1]),
+  }
 ,
   // Run automation,
   const runner = new AutomationRunner(config),
@@ -290,7 +290,7 @@ Available Tasks: - SecurityScanner,
   }).catch((error) => {,
     logger.error('❌ Automation run failed:', error),
     process.exit(1),
-  });
-  }
+  }),
+}
 ,
-module.exports = AutomationRunner,'
+module.exports = AutomationRunner,

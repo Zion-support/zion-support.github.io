@@ -1,14 +1,13 @@
 
 import React, { Component, ErrorInfo, ReactNode } from "react";
 
-interface ErrorBoundaryState {
-  hasError: boolean
-  error?: Error
+interface Props {
+  children: ReactNode;
 }
 
-interface ErrorBoundaryProps {
-  children: React.ReactNode
-  fallback?: React.ComponentType<{ error?: Error; resetError: () => void }>
+interface State {
+  hasError: boolean;
+  error?: Error;
 }
 
 export default class GlobalErrorBoundary extends Component<Props, State> {
@@ -59,6 +58,6 @@ export default class GlobalErrorBoundary extends Component<Props, State> {
       );
     }
 
-    return this.props.children
+    return this.props.children;
   }
 }

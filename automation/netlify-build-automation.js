@@ -15,8 +15,8 @@ const logger = winston.createLogger({,
 }),
 if (process.env.NODE_ENV !== 'production') {,
   logger.add(new winston.transports.Console({,
-    format: winston.format.simple()}));
-};
+    format: winston.format.simple()})),
+}
 ,
 const NetlifyBuildMonitor = require('./netlify-monitor'),
 const NetlifyErrorFixer = require('./netlify-error-fixer'),
@@ -63,8 +63,8 @@ class NetlifyBuildAutomation {,
       await this.handleBuildSuccess(build),
     }),
     // Start the monitor,
-    await this.monitor.monitorBuilds();
-};
+    await this.monitor.monitorBuilds(),
+  }
 ,
   async handleBuildError(error) {,
     this.log(`Build error detected: ${error.type} - ${error.message}`),
@@ -74,11 +74,11 @@ class NetlifyBuildAutomation {,
       message: error.message,
       buildId: error.buildId}),
     if (this.config.autoFix) {,
-      await this.autoFixError(error);
-};
+      await this.autoFixError(error),
+    }
 ,
-    this.saveStatus();
-};
+    this.saveStatus(),
+  }
 ,
   async handleBuildSuccess(build) {,
     this.log(`Build successful: ${build.id}`),
@@ -89,11 +89,11 @@ class NetlifyBuildAutomation {,
     this.status.buildHistory.unshift(this.status.lastBuild),
     // Keep only last 20 builds,
     if (this.status.buildHistory.length > 20) {,
-      this.status.buildHistory = this.status.buildHistory.slice(0, 20);
-};
+      this.status.buildHistory = this.status.buildHistory.slice(0, 20),
+    }
 ,
-    this.saveStatus();
-};
+    this.saveStatus(),
+  }
 ,
   async autoFixError(error) {,
     this.log(`Attempting to auto-fix error: ${error.type}`),
@@ -111,12 +111,12 @@ class NetlifyBuildAutomation {,
             attempt: retries + 1,
             success: true}),
           if (this.config.autoCommit) {,
-            await this.commitFixes();
-};
+            await this.commitFixes(),
+          }
 ,
           if (this.config.autoDeploy) {,
-            await this.triggerNewBuild();
-};
+            await this.triggerNewBuild(),
+          }
 ,
           break,
         } else {,
@@ -317,8 +317,8 @@ const timeoutId = setTimeout(resolve,                                           
 ,
 // Store timeoutId for cleanup if needed,
 ,
-            );
-};
+            ),
+          }
         }
       } catch (fixError) {,
         this.log(`Error during fix attempt ${retries + 1}: ${fixError.message}`,
@@ -518,8 +518,8 @@ const timeoutId = setTimeout(resolve,                                           
 ,
 // Store timeoutId for cleanup if needed,
 ,
-          );
-};
+          ),
+        }
       }
     }
 ,
@@ -531,8 +531,8 @@ const timeoutId = setTimeout(resolve,                                           
         errorType: error.type,
         buildId: error.buildId,
         attempt: retries,
-        success: false});
-};
+        success: false}),
+    }
   }
 ,
   async commitFixes() {,
@@ -584,8 +584,8 @@ const timeoutId = setTimeout(resolve,                                           
       this.log(`Found ${issues.length} pre-build issues, applying fixes...`),
       await this.fixer.applyAllFixes(),
     } else {,
-      this.log('All pre-build checks passed');
-};
+      this.log('All pre-build checks passed'),
+    }
   }
 ,
   async checkDependencies() {,
@@ -680,16 +680,16 @@ const timeoutId = setTimeout(resolve,                                           
         JSON.stringify(this.status, null, 2),
       ),
     } catch (error) {,
-      this.log(`Error saving status: ${error.message}`, 'error');
-};
+      this.log(`Error saving status: ${error.message}`, 'error'),
+    }
   }
 ,
   stop() {,
     this.log('Stopping Netlify build automation...'),
     this.status.isRunning = false,
     this.monitor.stop(),
-    this.saveStatus();
-};
+    this.saveStatus(),
+  }
 ,
   async runFullCycle() {,
     this.log('Running full automation cycle...'),
@@ -702,8 +702,8 @@ const timeoutId = setTimeout(resolve,                                           
       await this.generateReport(),
       this.log('Full automation cycle completed'),
     } catch (error) {,
-      this.log(`Error in full cycle: ${error.message}`, 'error');
-};
+      this.log(`Error in full cycle: ${error.message}`, 'error'),
+    }
   }
 }
 ,
@@ -729,7 +729,7 @@ if (require.main === module) {,
         logger.info(JSON.stringify(report, null, 2)),
       }),
       break,
-      );
+      ),
   }
 }
 ,

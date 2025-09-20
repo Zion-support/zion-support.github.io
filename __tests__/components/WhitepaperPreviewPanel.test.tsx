@@ -121,5 +121,5 @@ describe('WhitepaperPreviewPanel', () => {
       />
     ),
     expect(screen.queryByTestId('mock-responsive-container')).not.toBeInTheDocument(),
-  });
   }),
+}),

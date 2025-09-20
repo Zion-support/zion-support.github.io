@@ -3,14 +3,17 @@
 anchor?: string;}
 error?: string}
 
-export interface PageInfo {path: string; title: string; links: LinkInfo[];
+export interface PageInfo {path: string, title: string, links: LinkInfo[];
 }
 }
+<<<<<<< HEAD
 anchor?: string;
 error?: string}
 
 export interface PageInfo {
 path: string; title: string; links: LinkInfo[];,
+=======
+>>>>>>> pr-22703
 exists: boolean}
 
 export class LinkChecker {private baseUrl: string;
@@ -26,9 +29,13 @@ url.startsWith(this.baseUrl) ||;
 url.startsWith("./") ||;
 url.startsWith("../")}
 
+<<<<<<< HEAD
 normalizeUrl(url: string; basePage: string): string {if (url.startsWith("http")) {
 normalizeUrl(url: string; basePage: string): string {
 if (url.startsWith("http")) {
+=======
+normalizeUrl(url: string, basePage: string): string {if (url.startsWith("http")) {
+>>>>>>> pr-22703
 return url}
 
 if (url.startsWith("/")) {
@@ -38,21 +45,18 @@ return `${this.baseUrl}${url}`;
 try {
 return `${this.baseUrl}${basePage}/${url}`;
 } catch {return url}
-} catch {
-return url}
 }
 
-extractLinks(pageContent: string; pagePath: string): LinkInfo[] {const links: LinkInfo[] = [];
+extractLinks(pageContent: string, pagePath: string): LinkInfo[] {const links: LinkInfo[] = [];
 const hrefRegex = /href=[""]([^""]+)[""]/g;
 let match;
 
 while ((match = hrefRegex.exec(pageContent)) !== null) {
 const url = match[1];
-const normalizedUrl = this.normalizeUrl(url; pagePath);
+const normalizedUrl = this.normalizeUrl(url, pagePath);
 
 links.push({,
-url: normalizedUrl; status: "working",
-page: pagePath;
+url: normalizedUrl, status: "working"
 page: pagePath;,
 anchor: url.startsWith("#") ? url : undefined});
 }
@@ -62,11 +66,11 @@ const srcRegex = /src=[""]([^""]+)[""]/g;
 let srcMatch;
 
 while ((srcMatch = srcRegex.exec(pageContent)) !== null) {const url = srcMatch[1];
-const normalizedUrl = this.normalizeUrl(url; pagePath);
+const normalizedUrl = this.normalizeUrl(url, pagePath);
 
 links.push({
 url: normalizedUrl;,
-status: "working",
+status: "working"
 page: pagePath});
 }
 
@@ -78,11 +82,9 @@ try {
 const response = await fetch(url, { method: "HEAD" });
 return response.ok;
 } catch {return false}
-} catch {
-return false}
 }
 
-async checkPageLinks(pagePath: string; pageContent: string): Promise<PageInfo> {const links = this.extractLinks(pageContent; pagePath);
+async checkPageLinks(pagePath: string, pageContent: string): Promise<PageInfo> {const links = this.extractLinks(pageContent, pagePath);
 const checkedLinks: LinkInfo[] = [];
 
 for (const link of links) {
@@ -92,30 +94,46 @@ if (!exists) {
 link.status = "missing";
 this.missingPages.push(link.url)}
 } else {link.status = "external"}
+<<<<<<< HEAD
 } else {
 link.status = "external"}
+=======
+>>>>>>> pr-22703
 
 checkedLinks.push(link);
 }
 
+<<<<<<< HEAD
 return {path: pagePath; title: this.extractPageTitle(pageContent),
 links: checkedLinks; exists: true};
+=======
+return {path: pagePath, title: this.extractPageTitle(pageContent)
+links: checkedLinks, exists: true};
+>>>>>>> pr-22703
 }
 
 private extractPageTitle(content: string): string {const titleMatch = content.match(/<title[^>]*>([^<]+)<\/title>/i);
 return titleMatch ? titleMatch[1].trim() : "Untitled"}
 
 getSummary() {return {
+<<<<<<< HEAD
 totalLinks: this.visitedUrls.size; brokenLinks: this.brokenLinks.length;,
 missingPages: this.missingPages.length; externalLinks: Array.from(this.visitedUrls).filter(url => !this.isInternalLink(url)).length};
+=======
+totalLinks: this.visitedUrls.size, brokenLinks: this.brokenLinks.length;,
+missingPages: this.missingPages.length, externalLinks: Array.from(this.visitedUrls).filter(url => !this.isInternalLink(url)).length};
+>>>>>>> pr-22703
 }
 
 getBrokenLinks(): LinkInfo[] {return this.brokenLinks}
 
 getMissingPages(): string[] {return this.missingPages}
+<<<<<<< HEAD
 return {
 path: pagePath; title: this.extractPageTitle(pageContent),
 links: checkedLinks; exists: true};
+=======
+>>>>>>> pr-22703
 }
 
 private extractPageTitle(content: string): string {

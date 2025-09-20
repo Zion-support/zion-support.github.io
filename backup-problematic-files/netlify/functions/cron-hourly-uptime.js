@@ -22,8 +22,8 @@ exports.handler = async function () {,
           path: ep,
           status: 0,
           ms,
-          error: String(e.message |e)});
-};
+          error: String(e.message |e)}),
+      }
     }
     const log = { timestamp: Date.now(), results }
     const owner = process.env.GITHUB_OWNER,
@@ -54,15 +54,15 @@ exports.handler = async function () {,
           path: existingPath,
           content,
           message: 'chore(automation): init uptime log',
-          token});
-};
+          token}),
+      }
     }
     return {,
       statusCode: 200,
       body: JSON.stringify({ ok: true, count: results.length })
     }
   } catch (e) {,
-    return { statusCode: 500, body: JSON.stringify({ error: e.message }) };
+    return { statusCode: 500, body: JSON.stringify({ error: e.message }) },
   }
 },  try {,
     const baseUrl = process.env.URL |process.env.DEPLOY_URL |'',

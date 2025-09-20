@@ -157,7 +157,7 @@ const eventTypes = ['AllConference', 'WorkshopWebinar', 'Symposium'],
 const categories = ['AllAI & ML', 'CybersecurityCloud & DevOps', 'Data AnalyticsIoT & Edge', 'Digital Transformation'],
 const statuses = ['Allupcoming', 'past'],
 
-export default function Events() : any {
+export default function Events() {
   const [selectedType, setSelectedType] = useState('All'),
   const [selectedCategory, setSelectedCategory] = useState('All'),
   const [selectedStatus, setSelectedStatus] = useState('All'),
@@ -177,34 +177,34 @@ export default function Events() : any {
   const upcomingEvents = filteredEvents.filter(event => event.status === 'upcoming'),
   const pastEvents = filteredEvents.filter(event => event.status === 'past'),
 
-  const formatDate = (dateString: string) : any => {
+  const formatDate = (dateString: string) => {
     const date = new Date(dateString),
     return date.toLocaleDateString('en-US', {
       weekday: 'long',
       year: 'numeric',
       month: 'long',
       day: 'numeric'
-    });
+    }),
   },
 
-  const getCategoryIcon = (category: string) : any => {
+  const getCategoryIcon = (category: string) => {
     switch (category) {
-      case 'AI & ML': return Brain;
-      case 'Cybersecurity': return Shield;
-      case 'Cloud & DevOps': return Cloud;
-      case 'Data Analytics': return TrendingUp;
-      case 'IoT & Edge': return Zap;
-      case 'Digital Transformation': return Globe;
+      case 'AI & ML': return Brain,
+      case 'Cybersecurity': return Shield,
+      case 'Cloud & DevOps': return Cloud,
+      case 'Data Analytics': return TrendingUp,
+      case 'IoT & Edge': return Zap,
+      case 'Digital Transformation': return Globe,
       default: return BookOpen
     }
   },
 
-  const getStatusBadge = (status: string) : any => {
+  const getStatusBadge = (status: string) => {
     if (status === 'upcoming') {
       return <span className="px-3 py-1 bg-green-500/20 text-green-400 text-xs rounded-full border border-green-500/30">Upcoming</span>
     } else {
-      return <span className="px-3 py-1 bg-gray-500/20 text-gray-400 text-xs rounded-full border border-gray-500/30">Past</span>;
-  }
+      return <span className="px-3 py-1 bg-gray-500/20 text-gray-400 text-xs rounded-full border border-gray-500/30">Past</span>,
+    }
   },
 
   return (
@@ -313,7 +313,7 @@ export default function Events() : any {
             </motion.div>
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              {upcomingEvents.map((event, index) : any => {
+              {upcomingEvents.map((event, index) => {
                 const CategoryIcon = getCategoryIcon(event.category),
                 return (
                   <motion.div
@@ -430,7 +430,7 @@ export default function Events() : any {
             </motion.div>
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              {pastEvents.map((event, index) : any => {
+              {pastEvents.map((event, index) => {
                 const CategoryIcon = getCategoryIcon(event.category),
                 return (
                   <motion.div

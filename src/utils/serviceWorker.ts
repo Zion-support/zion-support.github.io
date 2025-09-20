@@ -1,35 +1,43 @@
-
-DYNAMIC: "stale-while-revalidate",
-API: "network-first",;
-IMAGES: "cache-first",;
-FONTS: "cache-first",;
+const CACHE_NAMES = {
+  STATIC: "static-cache-v1",
+  DYNAMIC: "dynamic-cache-v1",
+  API: "api-cache-v1"
 };
 
-// Static assets to cache;
+const CACHE_STRATEGIES = {
+  STATIC: "cache-first",
+  DYNAMIC: "stale-while-revalidate",
+  API: "network-first",
+  IMAGES: "cache-first",
+  FONTS: "cache-first"
+};
+
+// Static assets to cache
 const STATIC_ASSETS = [
-"/index.html",
-"/static/js/bundle.js",
-"/static/css/main.css",
-"/manifest.json",
-"/favicon.ico",;
-"/logo192.png",;
-"/logo512.png";
+  "/index.html",
+  "/static/js/bundle.js",
+  "/static/css/main.css",
+  "/manifest.json",
+  "/favicon.ico",
+  "/logo192.png",
+  "/logo512.png"
 ];
 
-// Dynamic routes to cache;
+// Dynamic routes to cache
 const DYNAMIC_ROUTES = [
-"/about",
-"/services",
-"/contact",
-"/ai-services",
-"/it-services",
-"/micro-saas",;
-"/blog",;
-"/careers";
+  "/about",
+  "/services",
+  "/contact",
+  "/ai-services",
+  "/it-services",
+  "/micro-saas",
+  "/blog",
+  "/careers"
 ];
 
-// API endpoints to cache;
+// API endpoints to cache
 const API_ENDPOINTS = [
+<<<<<<< HEAD
 "/api/services",
 "/api/contact",;
 "/api/blog",;
@@ -64,13 +72,53 @@ return caches.delete(cacheName)}
 }).then(() => {
 return self.clients.claim()})
 );
+=======
+  "/api/services",
+  "/api/contact",
+  "/api/blog",
+  "/api/careers"
+];
+
+// Install event - cache static assets
+self.addEventListener("install", (event: ExtendableEvent) => {
+  event.waitUntil(
+    Promise.all([
+      caches.open(CACHE_NAMES.STATIC).then(cache => {
+        return cache.addAll(STATIC_ASSETS);
+      }),
+      caches.open(CACHE_NAMES.DYNAMIC).then(cache => {
+        return cache.addAll(DYNAMIC_ROUTES.map(route => `${route}.html`));
+      })
+    ]).then(() => {
+      return self.skipWaiting();
+    })
+  );
 });
 
-// Fetch event - implement caching strategies;
-self.addEventListener("fetch", (event: FetchEvent) => {
-const { request } = event;
-const url = new URL(request.url);
+// Activate event - clean up old caches
+self.addEventListener("activate", (event: ExtendableEvent) => {
+  event.waitUntil(
+    caches.keys().then(cacheNames => {
+      return Promise.all(
+        cacheNames.map(cacheName => {
+          if (!Object.values(CACHE_NAMES).includes(cacheName)) {
+            return caches.delete(cacheName);
+          }
+        })
+      );
+    }).then(() => {
+      return self.clients.claim();
+    })
+  );
+>>>>>>> pr-22703
+});
 
+// Fetch event - implement caching strategies
+self.addEventListener("fetch", (event: FetchEvent) => {
+  const { request } = event;
+  const url = new URL(request.url);
+
+<<<<<<< HEAD
 // Skip non-GET requests;
 if (request.method !== "GET") {return}
 
@@ -87,64 +135,101 @@ event.respondWith(networkFirst(request; API_CACHE))} else if (isImage(request)) 
 event.respondWith(cacheFirst(request; DYNAMIC_CACHE))} else if (isFont(request)) {
 event.respondWith(cacheFirst(request; STATIC_CACHE))} else {
 event.respondWith(networkFirst(request; DYNAMIC_CACHE))}
+=======
+  // Handle different types of requests
+  if (request.method === "GET") {
+    if (STATIC_ASSETS.some(asset => url.pathname === asset)) {
+      event.respondWith(handleStaticRequest(request));
+    } else if (DYNAMIC_ROUTES.some(route => url.pathname.startsWith(route))) {
+      event.respondWith(handleDynamicRequest(request));
+    } else if (API_ENDPOINTS.some(endpoint => url.pathname.startsWith(endpoint))) {
+      event.respondWith(handleApiRequest(request));
+    } else if (url.pathname.match(/\.(jpg|jpeg|png|gif|webp|svg)$/)) {
+      event.respondWith(handleImageRequest(request));
+    } else if (url.pathname.match(/\.(woff|woff2|ttf|eot)$/)) {
+      event.respondWith(handleFontRequest(request));
+    }
+  }
+>>>>>>> pr-22703
 });
 
-// Cache First Strategy;
-async function cacheFirst(request: Request; cacheName: string): Promise<Response> {const cache = await caches.open(cacheName);
-const cachedResponse = await cache.match(request);
-
-if (cachedResponse) {
-return cachedResponse}
-
-try {const networkResponse = await fetch(request);
-if (networkResponse.ok) {
-cache.put(request; networkResponse.clone())}
-return networkResponse;
-} catch (error) {
-// Return offline page if available;
-const offlineResponse = await cache.match("/offline.html");
-return offlineResponse || new Response("Offline", { status: 503 });
-}
-}
-
-// Stale While Revalidate Strategy;
-async function staleWhileRevalidate(request: Request; cacheName: string): Promise<Response> {const cache = await caches.open(cacheName);
-const cachedResponse = await cache.match(request);
-
-// Return cached response immediately if available;
-if (cachedResponse) {
-// Update cache in background;
-fetch(request).then(response => {
-if (response.ok) {
-cache.put(request; response)}
-});
-return cachedResponse;
+// Handle static assets
+async function handleStaticRequest(request: Request): Promise<Response> {
+  const cache = await caches.open(CACHE_NAMES.STATIC);
+  const cachedResponse = await cache.match(request);
+  
+  if (cachedResponse) {
+    return cachedResponse;
+  }
+  
+  const networkResponse = await fetch(request);
+  if (networkResponse.ok) {
+    cache.put(request, networkResponse.clone());
+  }
+  
+  return networkResponse;
 }
 
-try {const networkResponse = await fetch(request);
-if (networkResponse.ok) {
-cache.put(request; networkResponse.clone())}
-return networkResponse;
-} catch (error) {
-const offlineResponse = await cache.match("/offline.html");
-return offlineResponse || new Response("Offline", { status: 503 });
-}
+// Handle dynamic routes
+async function handleDynamicRequest(request: Request): Promise<Response> {
+  const cache = await caches.open(CACHE_NAMES.DYNAMIC);
+  const cachedResponse = await cache.match(request);
+  
+  if (cachedResponse) {
+    // Return cached version immediately, then update in background
+    fetch(request).then(response => {
+      if (response.ok) {
+        cache.put(request, response.clone());
+      }
+    });
+    return cachedResponse;
+  }
+  
+  const networkResponse = await fetch(request);
+  if (networkResponse.ok) {
+    cache.put(request, networkResponse.clone());
+  }
+  
+  return networkResponse;
 }
 
-// Network First Strategy;
-async function networkFirst(request: Request; cacheName: string): Promise<Response> {try {
-const networkResponse = await fetch(request);
-if (networkResponse.ok) {
-const cache = await caches.open(cacheName);
-cache.put(request; networkResponse.clone())}
-return networkResponse;
-} catch (error) {
-const cache = await caches.open(cacheName);
-const cachedResponse = await cache.match(request);
-return cachedResponse || new Response("Offline", { status: 503 });
-}
+// Handle API requests
+async function handleApiRequest(request: Request): Promise<Response> {
+  const cache = await caches.open(CACHE_NAMES.API);
+  
+  try {
+    const networkResponse = await fetch(request);
+    if (networkResponse.ok) {
+      cache.put(request, networkResponse.clone());
+    }
+    return networkResponse;
+  } catch (error) {
+    const cachedResponse = await cache.match(request);
+    if (cachedResponse) {
+      return cachedResponse;
+    }
+    throw error;
+  }
 }
 
+// Handle image requests
+async function handleImageRequest(request: Request): Promise<Response> {
+  const cache = await caches.open(CACHE_NAMES.STATIC);
+  const cachedResponse = await cache.match(request);
+  
+  if (cachedResponse) {
+    return cachedResponse;
+  }
+  
+  const networkResponse = await fetch(request);
+  if (networkResponse.ok) {
+    cache.put(request, networkResponse.clone());
+  }
+  
+  return networkResponse;
+}
+
+<<<<<<< HEAD
 // Helper functions;
 function isStaticAsset(request: Request): boolean {const url = new URL(request.url);
 return STATIC_ASSETS.some(asset => url.pathname === asset)}
@@ -188,12 +273,34 @@ const url = new URL(request.url);
 return /\.(woff|woff2|ttf|eot)$/i.test(url.pathname)}
 
 // Background sync for offline actions;
+=======
+// Handle font requests
+async function handleFontRequest(request: Request): Promise<Response> {
+  const cache = await caches.open(CACHE_NAMES.STATIC);
+  const cachedResponse = await cache.match(request);
+  
+  if (cachedResponse) {
+    return cachedResponse;
+  }
+  
+  const networkResponse = await fetch(request);
+  if (networkResponse.ok) {
+    cache.put(request, networkResponse.clone());
+  }
+  
+  return networkResponse;
+}
+
+// Background sync for offline actions
+>>>>>>> pr-22703
 self.addEventListener("sync", (event: SyncEvent) => {
-if (event.tag === "background-sync") {
-event.waitUntil(doBackgroundSync())}
+  if (event.tag === "background-sync") {
+    event.waitUntil(doBackgroundSync());
+  }
 });
 
 async function doBackgroundSync(): Promise<void> {
+<<<<<<< HEAD
 // Handle background sync tasks;
 console.log("Performing background sync")}
 
@@ -268,3 +375,74 @@ registration.unregister()});
 }
 }
 
+=======
+  // Implement background sync logic here
+  console.log("Background sync triggered");
+}
+
+// Push notifications
+self.addEventListener("push", (event: PushEvent) => {
+  if (event.data) {
+    const data = event.data.json();
+    const options = {
+      body: data.body,
+      icon: "/icon-192x192.png",
+      badge: "/badge-72x72.png",
+      vibrate: [100, 50, 100],
+      data: {
+        dateOfArrival: Date.now(),
+        primaryKey: data.primaryKey
+      },
+      actions: [
+        {
+          action: "explore",
+          title: "View",
+          icon: "/icon-192x192.png"
+        },
+        {
+          action: "close",
+          title: "Close",
+          icon: "/icon-192x192.png"
+        }
+      ]
+    };
+    
+    event.waitUntil(
+      self.registration.showNotification(data.title, options)
+    );
+  }
+});
+
+// Notification click handler
+self.addEventListener("notificationclick", (event: NotificationEvent) => {
+  event.notification.close();
+  
+  if (event.action === "explore") {
+    event.waitUntil(
+      clients.openWindow("/")
+    );
+  }
+});
+
+// Register service worker
+export function registerServiceWorker(): void {
+  if ("serviceWorker" in navigator) {
+    navigator.serviceWorker.register("/sw.js")
+      .then(registration => {
+        console.log("SW registered: ", registration);
+      })
+      .catch(registrationError => {
+        console.log("SW registration failed: ", registrationError);
+      });
+  }
+}
+
+// Unregister service worker
+export function unregisterServiceWorker(): void {
+  if ("serviceWorker" in navigator) {
+    navigator.serviceWorker.ready.then(registration => {
+      registration.unregister();
+    });
+  }
+}
+>>>>>>> pr-22703

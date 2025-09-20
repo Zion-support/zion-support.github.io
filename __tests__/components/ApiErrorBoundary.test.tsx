@@ -15,10 +15,10 @@ vi.mock('@sentry/nextjs', () => ({
 })),
 
 // Component that throws an error
-const ThrowError = ({ shouldError }: { shouldError: boolean }) : any => {
+const ThrowError = ({ shouldError }: { shouldError: boolean }) => {
   if (shouldError) {
-    throw new Error('Test error for ApiErrorBoundary');
-};
+    throw new Error('Test error for ApiErrorBoundary'),
+  }
   return <div>No error</div>,
 },
 
@@ -120,5 +120,5 @@ describe('ApiErrorBoundary', () => {
 
     expect(screen.getByText('Custom error message')).toBeInTheDocument(),
     expect(screen.queryByText('Something went wrong')).not.toBeInTheDocument(),
-  });
-  }), 
+  }),
+}), 

@@ -16,7 +16,7 @@ exports.handler = async () => {,
     if (res.stdout) logs.push(res.stdout),
     if (res.stderr) logs.push(res.stderr),
     logs.push(`exit=${res.status |0}`),
-    return res.status |0;
+    return res.status |0,
   }
   step('components:catalog', () =>,
     runNode('automation/components-catalog.cjs'),

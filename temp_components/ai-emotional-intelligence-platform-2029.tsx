@@ -153,5 +153,4 @@ const ai-emotional-intelligence-platform-2029: React.FC = () => {
   )
 },
 
-export default ai-emotional-intelligence-platform-2029;
-  }
+export default ai-emotional-intelligence-platform-2029,

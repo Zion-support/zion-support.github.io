@@ -8,7 +8,7 @@ import {
 import EnhancedNavigation from '../../components/EnhancedNavigation';
 import EnhancedFooter from '../../components/EnhancedFooter';
 
-export default function DevOpsPage() : any {
+export default function DevOpsPage() {
   const services = [
     {
       title: "CI/CD Pipeline",
@@ -46,7 +46,7 @@ export default function DevOpsPage() : any {
       price: "$599/month",
       icon: Server
     }
-  ],
+  ];
 
   const benefits = [
     {
@@ -69,7 +69,7 @@ export default function DevOpsPage() : any {
       title: "Cost Optimization",
       description: "Optimize resource usage and reduce operational costs"
     }
-  ],
+  ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white overflow-hidden">
@@ -251,4 +251,4 @@ export default function DevOpsPage() : any {
       <EnhancedFooter />
     </div>
   );
-  }'
+}

@@ -1,5 +1,5 @@
 import Head from 'next/head',
-export default function AI2026IncidentTriageEvalGatesPlaybook() : any {,
+export default function AI2026IncidentTriageEvalGatesPlaybook() {,
   return (,
     <main className="min-h-screen bg-gradient-to-br from-slate-50 via-emerald-50 to-blue-100">,
       <Head>,

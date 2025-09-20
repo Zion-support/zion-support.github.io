@@ -6,7 +6,6 @@ import { Check, Mail, MapPin, Phone, ExternalLink } from 'lucide-react'
 
 import { innovativeRealMicroSaasServices2025 as servicesData } from '../data/2025-innovative-real-micro-saas-services'
 
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
   const service = useMemo(() => {
     if (!slug) return undefined
     const all: any[] = ([] as any[])
@@ -67,7 +66,7 @@ function extractSlugFromLink(link: string): string | null {
   }
 }
 
-export async function getStaticPaths() : any {
+export async function getStaticPaths() {
   const services = getAllServices()
   const slugs = new Set<string>()
 
@@ -87,8 +86,7 @@ export async function getStaticPaths() : any {
   const fs = require('fs')
   const path = require('path')
   const pagesDir = path.join(process.cwd(), 'pages')
-  const entries = fs.readdirSync(pagesDir, { withFileTypes: true });
-
+  const entries = fs.readdirSync(pagesDir, { withFileTypes: true })
   const existing = new Set<string>()
   for (const entry of entries) {
     // skip internals and folders we don't want to shadow
@@ -118,11 +116,8 @@ export async function getStaticPaths() : any {
 export async function getStaticProps({ params }: { params: { slug: string } }) {
   const services = getAllServices()
   const incomingSlug = (params?.slug || '').replace(/^\/+|\/+$/g, '')
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
 
-  let service: Service | undefined = services.find((s) : any => {
+  let service: Service | undefined = services.find((s) => {
     if (!s.link) return false
     const fromLink = extractSlugFromLink(s.link)
     return fromLink === incomingSlug
@@ -245,4 +240,4 @@ export default function ServiceDetailTopLevelPage({ service }: { service: Servic
       </div>
     </UltraFuturisticBackgroundComponent>
   )
-}})'
+}

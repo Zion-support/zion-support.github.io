@@ -199,7 +199,7 @@ const InteractiveAIToolsShowcase2027 = () => {,
               </div>,
               {/* Category Filter */}
               <div className="flex flex-wrap gap-2">,
-                {categories.map((category) : any => {,
+                {categories.map((category) => {,
                   const Icon = category.icon,
                   return (,
                     <button,
@@ -213,8 +213,8 @@ const InteractiveAIToolsShowcase2027 = () => {,
                       <Icon className="w-4 h-4" />,
                       <span className="font-semibold">{category.name}</span>,
                     </button>,
-                  );
-  })}
+                  ),
+                })}
               </div>,
               {/* View Mode Toggle */}
               <div className="flex bg-white/10 rounded-xl p-1">,

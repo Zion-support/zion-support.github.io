@@ -27,4 +27,4 @@ ReactDOM.createRoot(document.getElementById('root')!).render(,
       </Router>,
     </HelmetProvider>,
   </React.StrictMode>,
-),'
+),

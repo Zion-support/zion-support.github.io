@@ -1,12 +1,15 @@
 <<<<<<<< HEAD:temp_broken_pages_all/SearchPage.tsx
+<<<<<<< HEAD
 <<<<<<< HEAD:temp_broken_pages_all/SearchPage.tsx
+=======
+<<<<<<<< HEAD:temp_broken_pages_all/SearchPage.tsx
+>>>>>>> pr-22703
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import { useRouterReady, useRouteChange } from "@/hooks/useRouterReady";
 import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput";,
 import { generateSearchSuggestions } from "@/data/marketplaceData";,
 import { SearchSuggestion } from "@/types/search";
-========
 import { useEffect, useState,  } from "react";
 import { useRouter, ,  } from 'next/router';
 import { useRouterReady,, useRouteChange, ,  } from '@/hooks/useRouterReady';
@@ -285,4 +288,29 @@ export default function SearchPage() {
     </div>
   );
 }
+<<<<<<< HEAD
 >>>>>>> 1836dcad4eb858f12251bf809dd3ca83faa1433b:src/pages/SearchPage.tsx
+=======
+import React from 'react';
+import { SEO } from "@/components/SEO";
+
+export default function SearchPage() {
+  return (
+    <>
+      <SEO 
+        title="SearchPage - Zion Tech Group"
+        description="Page description"
+        keywords="keywords"
+      />
+      <div className="min-h-screen bg-zion-blue pt-24 pb-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center">
+            <h1 className="text-3xl font-bold text-white mb-4">SearchPage</h1>
+            <p className="text-zion-slate-light text-lg">Coming soon...</p>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+}
+>>>>>>> pr-22703

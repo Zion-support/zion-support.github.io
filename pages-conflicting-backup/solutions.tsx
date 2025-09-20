@@ -2,7 +2,7 @@ import React from 'react',
 import { Link } from 'react-router-dom',
 import { ArrowRight, Brain, Cloud, Shield, BarChart3, Database, Rocket, Users, Building, Globe, Zap, CheckCircle, Star, TrendingUp, Clock, Target, Award } from 'lucide-react',
 
-export default function Solutions() : any {
+export default function Solutions() {
 	const industrySolutions = [
 		{
 			icon: Building,

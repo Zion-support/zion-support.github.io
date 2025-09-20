@@ -22,10 +22,32 @@ export function middleware(request: NextRequest) {
     const response = NextResponse.next();
     
     // Security headers
+    response.headers.set("X-Frame-Options", "DENY");
+    response.headers.set("X-Content-Type-Options", "nosniff");
+    response.headers.set("Referrer-Policy", "origin-when-cross-origin");
+    response.headers.set(
+      "Permissions-Policy",
+      "camera=(), microphone=(), geolocation=()"
+    );
+    response.headers.set(
+      "Content-Security-Policy",
+      "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https:;"
+    );
     
+    return response;
+  }
+
+  // Check for authentication cookie
+  const authCookie = request.cookies.get("auth-token");
+
+  if (!authCookie) {
+    // Redirect to login if not authenticated
+    return NextResponse.redirect(new URL("/auth/login", request.url));
+  }
+
+  const response = NextResponse.next();
   
   // Security headers
-<<<<<<< HEAD
   response.headers.set("X-Frame-Options", "DENY");
   response.headers.set("X-Content-Type-Options", "nosniff");
   response.headers.set("Referrer-Policy", "origin-when-cross-origin");
@@ -50,7 +72,6 @@ export const config = {
      * - _next/image (image optimization files)
      * - favicon.ico (favicon file)
      */
-    "/((?!api|_next/static|_next/image|favicon.ico).*)"]};
-=======
-  
->>>>>>> 1204603bb86c207deec1187a655ed9994fda37b5
+    "/((?!api|_next/static|_next/image|favicon.ico).*)",
+  ],
+};

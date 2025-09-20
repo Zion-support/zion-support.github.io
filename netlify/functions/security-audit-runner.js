@@ -48,6 +48,6 @@ exports.handler = async function(event, context) {
         function: 'security-audit-runner',
         status: 'error'
       })
-    };
+    },
   }
 },

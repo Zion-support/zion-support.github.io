@@ -44,6 +44,6 @@ exports.handler = async function(event, context) {
         function: 'ultrafast-orchestrator',
         status: 'error'
       })
-    };
+    },
   }
 },

@@ -23,8 +23,8 @@ function cleanupDirectory(dirPath, maxAge = 7 * 24 * 60 * 60 * 1000) { // 7 days
       if (age > maxAge) {,
         fs.unlinkSync(filePath),
         cleanedCount++,
-        console.log(`Deleted old file: ${filePath}`);
-};
+        console.log(`Deleted old file: ${filePath}`),
+      }
     }
   }),
   return cleanedCount,
@@ -61,5 +61,5 @@ try {,
   console.log(`   • ${cleanedTemp} temporary files removed`),
 } catch (error) {,
   console.error('❌ Cache cleanup failed:', error),
-  process.exit(1);
-  }
+  process.exit(1),
+}

@@ -190,8 +190,8 @@ const SEOOptimization2029 = () => {
           return prev + 3,
         }),
       }100),
-      return () => clearInterval(interval);
-};
+      return () => clearInterval(interval),
+    }
   }[isAnalyzing]),
 
   useEffect(() => {
@@ -215,5 +215,4 @@ const SEOOptimization2029: React.FC = () => {
   )
 },
 
-export default SEOOptimization2029;
-  }
+export default SEOOptimization2029,

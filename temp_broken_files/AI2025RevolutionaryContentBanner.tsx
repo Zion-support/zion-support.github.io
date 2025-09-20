@@ -241,7 +241,7 @@ const RevolutionaryContentBanner2028 = () => {,
         </div>,
       )}
     </div>,
-  );
-  },
+  ),
+},
 export default AI2025RevolutionaryContentBanner,
 </div></div></div></div></div></div></div></div>,

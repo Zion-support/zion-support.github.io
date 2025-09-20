@@ -189,11 +189,10 @@ const CaseStudies: NextPage = () => {
     const matchesIndustry = selectedIndustry === 'All' || study.industry === selectedIndustry
     const matchesService = selectedService === 'All' || study.service === selectedService
     return matchesIndustry && matchesService
-  });
+  })
 
   const featuredCaseStudies = caseStudies.filter(study => study.featured)
 
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-blue-50">
       <Head>
@@ -207,11 +206,11 @@ const CaseStudies: NextPage = () => {
       <main className="container mx-auto px-4 py-16 pt-32">
         {/* Hero Section */}
         <div className="text-center mb-16">
-          <h1 className="text-4xl md: text-6xl font-bold text-gray-900 mb-6">
+          <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
             Success Stories & Case Studies
           </h1>
           <p className="text-xl text-gray-600 max-w-4xl mx-auto mb-8">
-            Discover how we&apos,ve helped businesses across industries achieve remarkable results through innovative 
+            Discover how we&apos;ve helped businesses across industries achieve remarkable results through innovative 
             technology solutions. From AI-powered systems to cloud transformations, see the real impact of our work.
           </p>
           <div className="flex flex-wrap justify-center gap-4 text-sm text-gray-500">
@@ -368,7 +367,7 @@ const CaseStudies: NextPage = () => {
                     </div>
                     <Link
                       href={`/case-studies/${study.id}`}
-                      className="text-blue-600 hover: text-blue-800 font-medium text-sm transition-colors duration-200"
+                      className="text-blue-600 hover:text-blue-800 font-medium text-sm transition-colors duration-200"
                     >
                       View Details →
                     </Link>
@@ -416,7 +415,7 @@ const CaseStudies: NextPage = () => {
               Ready to Create Your Success Story?
             </h2>
             <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-              Let&apos,s discuss how we can help you achieve similar results with innovative technology solutions 
+              Let&apos;s discuss how we can help you achieve similar results with innovative technology solutions 
               tailored to your specific business needs.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -442,7 +441,7 @@ const CaseStudies: NextPage = () => {
   )
 }
 
-export default function CaseStudiesPage() : any {
+export default function CaseStudiesPage() {
 	return (
 		<>
 			<Head>
@@ -459,7 +458,4 @@ export default function CaseStudiesPage() : any {
 		</>
 	)
 }
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-ace4
-=======
 export default CaseStudies
->>>>>>> origin/cursor/expand-services-and-deploy-updates-f53f

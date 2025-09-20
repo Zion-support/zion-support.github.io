@@ -1,6 +1,6 @@
 import React from 'react',
 import Head from 'next/head',
-export default function AI2026AgenticCostControlsDeepDive() : any {,
+export default function AI2026AgenticCostControlsDeepDive() {,
   return (,
     <>,
       <Head>,
@@ -44,6 +44,6 @@ export default function AI2026AgenticCostControlsDeepDive() : any {,
         </p>,
       </article>,
     </>,
-  );
-  }
+  ),
+}
 ,

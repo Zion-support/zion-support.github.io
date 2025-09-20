@@ -1,17 +1,3 @@
-<<<<<<< HEAD:src/pages/ForumCategoryPage.tsx
-import React from 'react';
-
-export default function ForumCategoryPage() {
-  return (
-    <div className="min-h-screen bg-gray-50 py-12">
-      <div className="container mx-auto px-4">
-        <h1 className="text-4xl font-bold text-gray-900 mb-6">ForumCategoryPage</h1>
-        <p className="text-lg text-gray-600">Coming soon...</p>
-      </div>
-    </div>
-  );
-}
-=======
 import { useState, useEffect,  } from "react",
 import Link from "next/link",
 import { useRouter,  } from "next/router",
@@ -36,4 +22,3 @@ const categoriesInfo: Record<string ForumCategoryInfo> = {
   "getting-hired": {
   )
 }
->>>>>>> pr-22690:temp-broken-files/ForumCategoryPage.tsx

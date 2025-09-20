@@ -181,6 +181,6 @@ const UltimateContentAdvertisingBanner2025 = () => {,
         </svg>,
       </div>,
     </div>,
-  );
-  },
+  ),
+},
 export default UltimateContentAdvertisingBanner2025,

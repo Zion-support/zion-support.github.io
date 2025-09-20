@@ -17,6 +17,6 @@ const TechnicalDocumentationChat: NextPage = () => {
       </main>
     </div>
   );
-  };
+};
 
 export default TechnicalDocumentationChat;

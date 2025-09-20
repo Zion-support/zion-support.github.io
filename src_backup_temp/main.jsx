@@ -49,8 +49,8 @@ const isDevelopment = import.meta.env.DEV,
 const container = document.getElementById('root'),
 ,
 if (!container) {,
-  throw new Error('Root element not found');
-};
+  throw new Error('Root element not found'),
+}
 ,
 // Create root,
 const root = createRoot(container),
@@ -123,8 +123,8 @@ const renderApp = (props) => {,
   if (rootElement?.hasChildNodes()) {,
     hydrateRoot(rootElement, app),
   } else if (rootElement) {,
-    createRoot(rootElement).render(app);
-};
+    createRoot(rootElement).render(app),
+  }
 },
 function displayFatalError(props: any) {,
     if (rootElement) {,
@@ -161,9 +161,9 @@ try {,
   renderApp(),
 } catch (error) {,
   console.error('Global error caught in main.jsx: ', error),
-  displayFatalError(error.message);
-};
+  displayFatalError(error.message),
+}
 window.addEventListener('error', (e) => {,
   console.error('Unhandled error: ', e.error || e.message),
   displayFatalError(e.message),
-}),'"
+}),

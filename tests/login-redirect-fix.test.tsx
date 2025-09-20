@@ -322,7 +322,7 @@ describe('Login Fix Integration Tests', () => {
   }),
 }),
 
-export const testLoginRedirect = async (queryParams: Record<string, string> = {}) : any => {
+export const testLoginRedirect = async (queryParams: Record<string, string> = {}) => {
   const mockRouter = {
     replace: vi.fn(),
     query: queryParams
@@ -336,8 +336,8 @@ export const testLoginRedirect = async (queryParams: Record<string, string> = {}
     expect(mockRouter.replace).toHaveBeenCalled(),
   }),
   
-  return mockRouter.replace.mock.calls[0][0];
-  },
+  return mockRouter.replace.mock.calls[0][0],
+},
 
 export const LOGIN_ROUTES = {
   OLD_SUPABASE: '/login',
@@ -345,6 +345,6 @@ export const LOGIN_ROUTES = {
   API_AUTH0: '/api/auth/login'
 },
 
-export const validateAuth0Route = (route: string) : any => {
+export const validateAuth0Route = (route: string) => {
   return route === LOGIN_ROUTES.NEW_AUTH0
-}, '
+}, 

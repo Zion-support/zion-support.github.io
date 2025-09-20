@@ -46,8 +46,8 @@ class TestSystem {,
       await this.testLogging(),
       this.displayResults(),
     } catch (error) {,
-      logger.error('Test suite failed:', error),      process.exit(1);
-};
+      logger.error('Test suite failed:', error),      process.exit(1),
+    }
   }
 ,
   /**,
@@ -63,16 +63,16 @@ const requiredDirs = [,
       if (fs.existsSync(file)) {,
         this.pass(`File exists: ${file}`),
       } else {,
-        this.fail(`File missing: ${file}`);
-};
+        this.fail(`File missing: ${file}`),
+      }
     }
 ,
     for (const dir of requiredDirs) {,
       if (fs.existsSync(dir) && fs.statSync(dir).isDirectory()) {,
         this.pass(`Directory exists: ${dir}`),
       } else {,
-        this.fail(`Directory missing: ${dir}`);
-};
+        this.fail(`Directory missing: ${dir}`),
+      }
     }
   }
 ,
@@ -90,8 +90,8 @@ const requiredDirs = [,
         if (packageJson.dependencies && packageJson.dependencies[dep]) {,
           this.pass(`Dependency found: ${dep}`),
         } else {,
-          this.fail(`Dependency missing: ${dep}`);
-};
+          this.fail(`Dependency missing: ${dep}`),
+        }
       }
 ,
       // Check scripts,
@@ -99,12 +99,12 @@ const requiredDirs = [,
         if (packageJson.scripts && packageJson.scripts[script]) {,
           this.pass(`Script found: ${script}`),
         } else {,
-          this.fail(`Script missing: ${script}`);
-};
+          this.fail(`Script missing: ${script}`),
+        }
       }
     } catch (error) {,
-      this.fail(`Error reading package.json: ${error.message}`);
-};
+      this.fail(`Error reading package.json: ${error.message}`),
+    }
   }
 ,
   /**,
@@ -119,15 +119,15 @@ const requiredDirs = [,
         if (envContent.includes(varName)) {,
           this.pass(`Environment variable defined: ${varName}`),
         } else {,
-          this.fail(`Environment variable missing: ${varName}`);
-};
+          this.fail(`Environment variable missing: ${varName}`),
+        }
       }
 ,
       // Check for placeholder values,
       if (envContent.includes('your_cursor_api_key_here')) {'        this.warn('API keys are using placeholder values (expected for testing))      }
     } catch (error) {,
-      this.fail(`Error reading .env file: ${error.message}`);
-};
+      this.fail(`Error reading .env file: ${error.message}`),
+    }
   }
 ,
   /**,
@@ -152,8 +152,8 @@ const requiredDirs = [,
         this.pass('Alert system works')      } else {,
         this.fail('Alert system failed')      }
     } catch (error) {,
-      this.fail(`Monitor test failed: ${error.message}`);
-};
+      this.fail(`Monitor test failed: ${error.message}`),
+    }
   }
 ,
   /**,
@@ -186,8 +186,8 @@ const requiredDirs = [,
           this.fail('Suggestion validation failed')        }
       }
     } catch (error) {,
-      this.fail(`Improver test failed: ${error.message}`);
-};
+      this.fail(`Improver test failed: ${error.message}`),
+    }
   }
 ,
   /**,
@@ -227,8 +227,8 @@ const suggestions = cursor.parseResponse(mockResponse),
         this.pass('Response parsing works')      } else {,
         this.fail('Response parsing failed')      }
     } catch (error) {,
-      this.fail(`Cursor integration test failed: ${error.message}`);
-};
+      this.fail(`Cursor integration test failed: ${error.message}`),
+    }
   }
 ,
   /**,
@@ -255,11 +255,11 @@ const Improver = require('./improve'),      const improver = new Improver(),
 ,
       // Cleanup test file,
       if (fs.existsSync(testFile)) {,
-        fs.unlinkSync(testFile);
-};
+        fs.unlinkSync(testFile),
+      }
     } catch (error) {,
-      this.fail(`Safety features test failed: ${error.message}`);
-};
+      this.fail(`Safety features test failed: ${error.message}`),
+    }
   }
 ,
   /**,
@@ -280,8 +280,8 @@ const hasLogFiles = logFiles.some(file => file.includes('.log')),
         this.pass('Logging system works')      } else {,
         this.fail('Logging system failed')      }
     } catch (error) {,
-      this.fail(`Logging test failed: ${error.message}`);
-};
+      this.fail(`Logging test failed: ${error.message}`),
+    }
   }
 ,
   /**,
@@ -290,8 +290,8 @@ const hasLogFiles = logFiles.some(file => file.includes('.log')),
   pass(message) {,
     this.testResults.passed++,
     this.testResults.total++,
-    console.log(`  ✅ ${message}`);
-};
+    console.log(`  ✅ ${message}`),
+  }
 ,
   /**,
    * Record a failing test,
@@ -299,15 +299,15 @@ const hasLogFiles = logFiles.some(file => file.includes('.log')),
   fail(message) {,
     this.testResults.failed++,
     this.testResults.total++,
-    console.log(`  ❌ ${message}`);
-};
+    console.log(`  ❌ ${message}`),
+  }
 ,
   /**,
    * Record a warning,
    */,
   warn(message) {,
-    console.log(`  ⚠️  ${message}`);
-};
+    console.log(`  ⚠️  ${message}`),
+  }
 ,
   /**,
    * Display test results,
@@ -319,8 +319,8 @@ const hasLogFiles = logFiles.some(file => file.includes('.log')),
     console.log(''),
     if (this.testResults.failed === 0) {,
       console.log('🎉 All tests passed! The system is ready to use.'),      console.log(''),      console.log('Next steps: '),      console.log('1. Configure your Cursor AI API keys in .env'),      console.log('2. Start the system: npm start'),      console.log('3. Monitor status: npm run status')    } else {,
-      console.log('⚠️  Some tests failed. Please fix the issues before using the system.'),      process.exit(1);
-};
+      console.log('⚠️  Some tests failed. Please fix the issues before using the system.'),      process.exit(1),
+    }
   }
 }
 ,
@@ -329,8 +329,8 @@ if (require.main === module) {,
   const testSystem = new TestSystem(),
   testSystem.runAllTests().catch(error => {,
     console.error('Test suite failed:', error),    process.exit(1),
-  });
-};
+  }),
+}
 ,
 module.exports = TestSystem,
 // Graceful shutdown handling,
@@ -343,4 +343,4 @@ process.on('SIGTERM', () => {,
   console.log('\n🛑 Received SIGTERM, shutting down gracefully...'),
   // Add cleanup logic here,
   process.exit(0),
-}),'
+}),

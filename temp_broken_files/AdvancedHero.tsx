@@ -11,5 +11,5 @@ const function AdvancedHero({ = () => {,
       </div>,
     </div>),
 },
-export default function AdvancedHero({;
-  }}})))
+export default function AdvancedHero({,
+}}})))

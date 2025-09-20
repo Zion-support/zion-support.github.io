@@ -53,8 +53,9 @@ exports.handler = async function(event, context) {
         status: i < summaryResults.completedTodos ? 'completed' : 'pending',
         assignee: `Developer ${Math.floor(Math.random() * 10) + 1}`,
         estimatedHours: Math.floor(Math.random() * 16) + 1 // 1-16 hours
-      });
-};
+      }),
+    }
+    
     // Simulate progress metrics
     const progressMetrics = {
       'sprint-completion': (Math.random() * 20 + 80).toFixed(1), // 80-100%
@@ -102,6 +103,6 @@ exports.handler = async function(event, context) {
         function: 'todo-summary-runner',
         status: 'error'
       })
-    };
+    },
   }
 },

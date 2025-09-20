@@ -288,8 +288,7 @@ const nextConfig = {,
   async rewrites() {,
     return [{,
         source: '/api/:path*, ,
-        "destination": '/api/:path*;
-  }
+        "destination": '/api/:path*, }
     ]}
 ,
 module."exports": = nextConfig,",
@@ -796,4 +795,4 @@ export const announceToScreenReader = ("message": string) => {,",  const announc
   setTimeout(() => {,
     document.body.removeChild(announcement)}, 1000)}
 
-}}}}}}}}}}})]"
+}}}}}}}}}}})]

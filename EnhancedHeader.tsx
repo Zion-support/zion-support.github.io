@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, ChevronDown, Phone, Mail, MapPin, Search, User, ShoppingCart, Bell } from 'lucide-react';
-const EnhancedHeader: React.FC = () => {
+const EnhancedHeader: React.FC = () => {,
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
@@ -37,15 +37,15 @@ const EnhancedHeader: React.FC = () => {
     { icon: 'Mail', text: 'kleber@ziontechgroup.com', href: 'mailto:kleber@ziontechgroup.com' },
     { icon: 'MapPin', text: '364 E Main St STE 1008, Middletown DE 19709', href: '#' }
   ];
-  const toggleDropdown = (name: string) => {
-    setActiveDropdown(activeDropdown === name ? null : name);
+  const toggleDropdown = (name: string) => {,
+  setActiveDropdown(activeDropdown === name ? null : name);
   }
   const closeMobileMenu = () => {
     setIsOpen(false);
     setActiveDropdown(null);
   }
-  const handleSearch = (e: React.FormEvent) => {
-    e.preventDefault();
+  const handleSearch = (e: React.FormEvent) => {,
+  e.preventDefault();
     if (searchQuery.trim()) {
       // Handle search logic here
       // console.log('Searching for:', searchQuery);
@@ -69,7 +69,8 @@ const EnhancedHeader: React.FC = () => {
             {navigationItems.map((item) => (
               <div key={item.name} className="relative">
                 {item.dropdown ? (
-                  <button onClick={() => toggleDropdown(item.name)}
+                  <button,
+onClick={() => toggleDropdown(item.name)}
                     className="flex items-center space-x-1 text-gray-700 hover:text-blue-600 transition-colors"
                   >
                     <span>{item.name}</span>
@@ -90,7 +91,8 @@ initial={{ opacity: 0, y: -10 }}
                       className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-lg border border-gray-200 py-2"
                     >
                       {item.dropdown.map((dropdownItem) => (
-                        <Link key={dropdownItem.name}
+                        <Link,
+key={dropdownItem.name}
                           href={dropdownItem.href}
                           className="block px-4 py-2 text-gray-700 hover:bg-gray-50 hover:text-blue-600 transition-colors"
                         >
@@ -109,7 +111,8 @@ initial={{ opacity: 0, y: -10 }}
           {/* Search and Actions */}
           <div className="hidden lg:flex items-center space-x-4">
             <form onSubmit={handleSearch} className="relative">
-              <input type="text"
+              <input,
+type="text"
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 placeholder="Search..."
@@ -130,7 +133,8 @@ initial={{ opacity: 0, y: -10 }}
             </div>
           </div>
           {/* Mobile Menu Button */}
-          <button onClick={() => setIsOpen(!isOpen)}
+          <button,
+onClick={() => setIsOpen(!isOpen)}
             className="lg:hidden p-2 text-gray-700 hover:text-blue-600 transition-colors"
           >
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -148,7 +152,8 @@ initial={{ opacity: 0, height: 0 }}
               <div className="px-4 py-4 space-y-4">
                 {/* Mobile Search */}
                 <form onSubmit={handleSearch} className="relative">
-                  <input type="text"
+                  <input,
+type="text"
                     value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}
                     placeholder="Search..."
@@ -161,7 +166,8 @@ initial={{ opacity: 0, height: 0 }}
                   <div key={item.name}>
                     {item.dropdown ? (
                       <div>
-                        <button onClick={() => toggleDropdown(item.name)}
+                        <button,
+onClick={() => toggleDropdown(item.name)}
                           className="flex items-center justify-between w-full text-left text-gray-700 hover:text-blue-600 transition-colors py-2"
                         >
                           <span>{item.name}</span>
@@ -170,7 +176,8 @@ initial={{ opacity: 0, height: 0 }}
                         {activeDropdown === item.name && (
                           <div className="ml-4 space-y-2">
                             {item.dropdown.map((dropdownItem) => (
-                              <Link key={dropdownItem.name}
+                              <Link,
+key={dropdownItem.name}
                                 href={dropdownItem.href}
                                 onClick={closeMobileMenu}
                                 className="block text-gray-600 hover:text-blue-600 transition-colors py-1"
@@ -182,7 +189,8 @@ initial={{ opacity: 0, height: 0 }}
                         )}
                       </div>
                     ) : (
-                      <Link href={item.href}
+                      <Link,
+href={item.href}
                         onClick={closeMobileMenu}
                         className="block text-gray-700 hover:text-blue-600 transition-colors py-2"
                       >

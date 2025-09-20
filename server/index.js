@@ -27,19 +27,19 @@ function buildSystemPrompt() {,
     '- Refunds: Case-by-case, contact support with invoice and description- Vendor listing: Apply via Vendor Portal, review usually within 3–5 business days',
     '',
     'Tone: Warm, professional, encouraging. Proactively offer next steps and links (use descriptive placeholders if URLs are unknown).'
-  ].join('\n');
-};
+  ].join('\n'),
+}
 ,
 app.post('/api/chat', async (req, res) => {,
   try {,
     if (!OPENAI_API_KEY) {,
-      return res.status(500).json({ error: 'Server missing OPENAI_API_KEY' });
-};
+      return res.status(500).json({ error: 'Server missing OPENAI_API_KEY' }),
+    }
 ,
     const { messages } = req.body || {},
     if (!Array.isArray(messages)) {,
-      return res.status(400).json({ error: 'Missing messages array' });
-};
+      return res.status(400).json({ error: 'Missing messages array' }),
+    }
 ,
     const systemMessage = { role: 'system', content: buildSystemPrompt() },
     const requestBody = {,
@@ -64,10 +64,10 @@ app.post('/api/chat', async (req, res) => {,
     const status = error.response?.status || 500,
     const data = error.response?.data,
     console.error('OpenAI proxy error:', status, data || error.message),
-    res.status(status).json({ error: 'Upstream error', detail: data || error.message });
-};
+    res.status(status).json({ error: 'Upstream error', detail: data || error.message }),
+  }
 }),
 app.listen(PORT, () => {,
   console.log(`Zion AI Assistant server listening on http: //localhost:${PORT}`),
-  console.log('Static widget available at /widget.js');
-  }),
+  console.log('Static widget available at /widget.js'),
+}),

@@ -114,7 +114,6 @@
     "recovered-branches",
     "token",
     "zion.app",
-    "src/**",
     "src/pages-disabled",
     "src/utils-disabled",
     "src.disabled",

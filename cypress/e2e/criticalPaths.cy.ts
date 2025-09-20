@@ -21,7 +21,7 @@ describe('Critical user journeys', () => {
     cy.visit('/marketplace'),
     cy.contains('Buy Now').first().click(),
     cy.url().should('include/checkout'),
-    cy.get('iframe[name^="__privateStripeFrame"]').then(($iframe) : any => {
+    cy.get('iframe[name^="__privateStripeFrame"]').then(($iframe) => {
       // fill Stripe test card 4242 4242 4242 4242
     }),
     cy.contains('Payment successful').should('be.visible'),

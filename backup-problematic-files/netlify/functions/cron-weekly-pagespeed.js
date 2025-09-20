@@ -21,8 +21,8 @@ exports.handler = async function () {,
         const desktop = await psi(url, 'desktop', key),
         results.push({ url, mobile, desktop }),
       } catch (e) {,
-        results.push({ url, error: e.message |String(e) });
-};
+        results.push({ url, error: e.message |String(e) }),
+      }
     }
     const owner = process.env.GITHUB_OWNER,
     const repo = process.env.GITHUB_REPO,
@@ -35,14 +35,14 @@ exports.handler = async function () {,
         path: 'data/reports/performance/weekly-pagespeed.json',
         content,
         message: 'chore(automation): weekly PageSpeed report',
-        token});
-};
+        token}),
+    }
     return {,
       statusCode: 200,
       body: JSON.stringify({ ok: true, pages: results.length })
     }
   } catch (e) {,
-    return { statusCode: 500, body: JSON.stringify({ error: e.message }) };
+    return { statusCode: 500, body: JSON.stringify({ error: e.message }) },
   }
 },async function psi(url, strategy = 'mobile', key) {,
   const endpoint = new URL('https: //www.googleapis.com/pagespeedonline/v5/runPagespeed'),

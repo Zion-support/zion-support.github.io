@@ -73,13 +73,11 @@ const DynamicContentCarousel = () => {,
             key={index}
             onClick={() => setCurrentSlide(index)}
             className={`w-3 h-3 rounded-full transition-colors ${,
->>>>>>> ac7fba6932d34fbe5c3a14454537102b07eb816c: src/components/DynamicContentCarousel.jsx,
->>>>>>> e69d67f2cecdf0b27b9028aecdc1e7a5e0a8e005:temp_broken_files/DynamicContentCarousel.jsx,
 ursor/fix-netlify-build-and-merge-to-main-c435:src/components/DynamicContentCarousel.jsx}`}
           />,
         ))}
       </div>,
     </div>,
-  );
-  },
+  ),
+},
 export default DynamicContentCarousel,

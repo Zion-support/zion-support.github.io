@@ -15,8 +15,8 @@ const logger = winston.createLogger({,
 }),
 if (process.env.NODE_ENV !== 'production') {,
   logger.add(new winston.transports.Console({,
-    format: winston.format.simple()}));
-};
+    format: winston.format.simple()})),
+}
 ,
 const AutomationTask = require('../continuous-improvement/AutomationTask'),
 const { execSync, spawn } = require('child_process'),
@@ -52,24 +52,24 @@ class CodeQualityEnforcer extends AutomationTask {,
       },
       // Run ESLint,
       if (this.config.tools.includes('eslint')) {,
-        results.eslint = await this.runESLint();
-};
+        results.eslint = await this.runESLint(),
+      }
 ,
       // Run Prettier,
       if (this.config.tools.includes('prettier')) {,
-        results.prettier = await this.runPrettier();
-};
+        results.prettier = await this.runPrettier(),
+      }
 ,
       // Run TypeScript checks,
       if (this.config.tools.includes('typescript')) {,
-        results.typescript = await this.runTypeScriptCheck();
-};
+        results.typescript = await this.runTypeScriptCheck(),
+      }
 ,
       // Run tests,
       if (this.config.tools.includes('tests')) {,
         results.tests = await this.runTests(),
-        results.coverage = await this.checkTestCoverage();
-};
+        results.coverage = await this.checkTestCoverage(),
+      }
 ,
       // Generate summary,
       results.summary = this.generateSummary(results),
@@ -81,16 +81,16 @@ class CodeQualityEnforcer extends AutomationTask {,
         logger.warn(`⚠️ Found ${this.violations.length} code quality violations`),
         // Auto-fix if enabled,
         if (this.config.autoFix) {,
-          await this.autoFixViolations();
-};
+          await this.autoFixViolations(),
+        }
 ,
         // Create PR if enabled and violations remain,
         if (this.config.createPR && this.violations.length > 0) {,
-          await this.createQualityPR();
-};
+          await this.createQualityPR(),
+        }
       } else {,
-        logger.info('✅ No code quality violations found');
-};
+        logger.info('✅ No code quality violations found'),
+      }
 ,
       // Generate report,
       await this.generateQualityReport(results),
@@ -134,8 +134,8 @@ class CodeQualityEnforcer extends AutomationTask {,
             severity: message.severity,
             message: message.message,
             rule: message.ruleId,
-            fixable: message.fix});
-};
+            fixable: message.fix}),
+        }
       }
 ,
       logger.info(`✅ ESLint: ${summary.totalErrors} errors, ${summary.totalWarnings} warnings`),
@@ -143,8 +143,8 @@ class CodeQualityEnforcer extends AutomationTask {,
     } catch (error) {,
       if (error.status === 1) {,
         // ESLint returns 1 when violations are found,
-        return this.parseESLintError(error.stdout);
-};
+        return this.parseESLintError(error.stdout),
+      }
       throw error,
     }
   }
@@ -180,8 +180,8 @@ class CodeQualityEnforcer extends AutomationTask {,
           severity: message.severity,
           message: message.message,
           rule: message.ruleId,
-          fixable: message.fix});
-};
+          fixable: message.fix}),
+      }
     }
 ,
     return summary,
@@ -215,8 +215,8 @@ class CodeQualityEnforcer extends AutomationTask {,
         violations.push({,
           file: line.trim(),
           type: 'formatting',
-          message: File needs formatting});
-};
+          message: File needs formatting}),
+      }
     }
 ,
     return violations,
@@ -252,8 +252,8 @@ class CodeQualityEnforcer extends AutomationTask {,
             line: parseInt(match[2]),
             column: parseInt(match[3]),
             message: match[4],
-            type: typescript});
-};
+            type: typescript}),
+        }
       }
     }
 ,
@@ -315,8 +315,8 @@ class CodeQualityEnforcer extends AutomationTask {,
       if (line.includes('All files')) {,
         const match = line.match(/(\d+(?:\.\d+)?)%/),
         if (match) {,
-          total = parseFloat(match[1]);
-};
+          total = parseFloat(match[1]),
+        }
       }
     }
 ,
@@ -344,22 +344,22 @@ class CodeQualityEnforcer extends AutomationTask {,
     if (results.eslint.violations) {,
       violations.push(...results.eslint.violations.map(v => ({,
         ...v,
-        tool: eslint})));
-};
+        tool: eslint}))),
+    }
 ,
     // Prettier violations,
     if (results.prettier.violations) {,
       violations.push(...results.prettier.violations.map(v => ({,
         ...v,
-        tool: prettier})));
-};
+        tool: prettier}))),
+    }
 ,
     // TypeScript violations,
     if (results.typescript.errors) {,
       violations.push(...results.typescript.errors.map(v => ({,
         ...v,
-        tool: typescript})));
-};
+        tool: typescript}))),
+    }
 ,
     return violations,
   }
@@ -370,21 +370,21 @@ class CodeQualityEnforcer extends AutomationTask {,
       // Fix ESLint violations,
       if (this.violations.some(v => v.tool === eslint' && v.fixable)) {,
         logger.info('🔧 Fixing ESLint violations...'),
-        execSync('npx eslint . --ext .js,.jsx,.ts,.tsx --fix', { stdio: 'pipe' });
-};
+        execSync('npx eslint . --ext .js,.jsx,.ts,.tsx --fix', { stdio: 'pipe' }),
+      }
 ,
       // Fix Prettier violations,
       if (this.violations.some(v => v.tool === 'prettier')) {,
         logger.info('🔧 Fixing Prettier violations...'),
-        execSync('npx prettier --write "**/*.{js,jsx,ts,tsx,json,css,md}"', { stdio: 'pipe' });
-};
+        execSync('npx prettier --write "**/*.{js,jsx,ts,tsx,json,css,md}"', { stdio: 'pipe' }),
+      }
 ,
       logger.info('✅ Auto-fix completed'),
       // Re-run checks to see what's left,
       await this.run(),
     } catch (error) {,
-      logger.error('❌ Auto-fix failed:', error);
-};
+      logger.error('❌ Auto-fix failed:', error),
+    }
   }
 ,
   async createQualityPR() {,
@@ -433,8 +433,8 @@ This commit was automatically generated by the Code Quality Enforcer.`,
       execSync(`gh pr create --title "${title}" --body "${body}" --base main --head ${branchName}`, {,
         stdio: pipe}),
     } catch (error) {,
-      logger.warn('⚠️ GitHub CLI not available, PR creation skipped');
-};
+      logger.warn('⚠️ GitHub CLI not available, PR creation skipped'),
+    }
   }
 ,
   generateQualityPRBody() {,
@@ -467,8 +467,8 @@ This PR was automatically generated by the Code Quality Enforcer.,
   async generateQualityReport(results) {,
     const reportPath = path.join(process.cwd(), reports', `quality-report-${Date.now()}.json`),
     await fs.writeFile(reportPath, JSON.stringify(results, null, 2)),
-    logger.info(`📄 Quality report saved to: ${reportPath}`);
-};
+    logger.info(`📄 Quality report saved to: ${reportPath}`),
+  }
 ,
   async selfHeal(error) {,
     logger.info('🔧 Attempting self-healing for CodeQualityEnforcer...'),
@@ -492,8 +492,8 @@ This PR was automatically generated by the Code Quality Enforcer.,
         stdio: pipe}),
       logger.info('✅ Dependencies installed'),
     } catch (error) {,
-      logger.error('❌ Failed to install dependencies:', error.message);
-};
+      logger.error('❌ Failed to install dependencies:', error.message),
+    }
   }
 ,
   async checkFilePermissions() {,
@@ -502,8 +502,8 @@ This PR was automatically generated by the Code Quality Enforcer.,
       await fs.access(reportDir, fs.constants.W_OK),
     } catch (error) {,
       logger.info('⚠️ Reports directory not writable, creating...'),
-      await fs.mkdir(path.join(process.cwd(), reports'), { recursive: true });
-};
+      await fs.mkdir(path.join(process.cwd(), reports'), { recursive: true }),
+    }
   }
 ,
   getStatus() {,
@@ -512,8 +512,8 @@ This PR was automatically generated by the Code Quality Enforcer.,
       qualityHistory: this.qualityHistory.slice(-5), // Last 5 scans,
       totalScans: this.qualityHistory.length,
       currentViolations: this.violations.length,
-      fixableViolations: this.violations.filter(v => v.fixable).length};
+      fixableViolations: this.violations.filter(v => v.fixable).length},
   }
 }
 ,
-module.exports = CodeQualityEnforcer,'
+module.exports = CodeQualityEnforcer,

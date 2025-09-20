@@ -1,5 +1,4 @@
 <<<<<<<< HEAD:temp_broken_pages_all/ProductPage.tsx
-<<<<<<< HEAD:temp_broken_pages_all/ProductPage.tsx
 import { useRouter } from "next/router";, // Changed from useParams,
 import { useEffect, useState } from "react";
 import Image from 'next/image';
@@ -8,7 +7,6 @@ import { NEW_PRODUCTS } from "@/data/newProductsData";
 import { useCart } from "@/context/CartContext";
 import { toast } from "@/hooks/use-toast";
 import { SEO } from "@/components/SEO";
-========
 import { useRouter,  } from 'next/router', // Changed from useParams,
 import { useEffect,, useState, ,  } from 'react';
 import Image from 'next/image';
@@ -74,5 +72,4 @@ export default function ProductPage() {
       </div>
     </div>
   );
->>>>>>> 1836dcad4eb858f12251bf809dd3ca83faa1433b:src/pages/ProductPage.tsx
 }

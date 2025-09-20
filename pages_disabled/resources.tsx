@@ -11,7 +11,7 @@ import {
 import EnhancedNavigation from '../components/EnhancedNavigation';
 import EnhancedFooter from '../components/EnhancedFooter';
 
-export default function ResourcesPage() : any {
+export default function ResourcesPage() {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
 
@@ -22,7 +22,7 @@ export default function ResourcesPage() : any {
     { id: 'tools', name: 'Developer Tools', icon: Tool },
     { id: 'community', name: 'Community', icon: Users2 },
     { id: 'events', name: 'Events & Webinars', icon: Calendar }
-  ],
+  ];
 
   const resources = [
     // Documentation
@@ -499,4 +499,4 @@ export default function ResourcesPage() : any {
       <EnhancedFooter />
     </div>
   );
-  }'
+}

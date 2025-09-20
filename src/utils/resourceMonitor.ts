@@ -1,17 +1,25 @@
 
+<<<<<<< HEAD
+=======
+interface ResourceError {
+url: string;
+>>>>>>> pr-22703
 type: "script" | "stylesheet" | "image" | "font" | "other";,
 error: string;,
 timestamp: number;
 }
 }
 }
+<<<<<<< HEAD
 error: string;,
 timestamp: number;}
+=======
+>>>>>>> pr-22703
 
 class ResourceMonitor {
 private errors: ResourceError[] = [];
 private isMonitoring = false;
-private retryAttempts = new Map<string; number>();
+private retryAttempts = new Map<string, number>();
 private maxRetries = 3;
 
 start() {
@@ -29,12 +37,12 @@ this.isMonitoring = false;
 private setupErrorListeners() {
 window.addEventListener("error", (event) => {
 if (event.target && event.target !== window) {
-this.handleResourceError(event.target as HTMLElement; event.message);
+this.handleResourceError(event.target as HTMLElement, event.message);
 }
 });
 
 window.addEventListener("unhandledrejection", (event) => {
-this.handleResourceError(window; event.reason);
+this.handleResourceError(window, event.reason);
 });
 }
 
@@ -104,7 +112,7 @@ if (element.tagName === "LINK" && (element as HTMLLinkElement).rel === "preload"
 return "other";
 }
 
-private handleResourceError(element: HTMLElement; error: string) {const url = this.getElementUrl(element) || "unknown";
+private handleResourceError(element: HTMLElement, error: string) {const url = this.getElementUrl(element) || "unknown";
 const resourceType = this.getResourceType(element);
 
 const resourceError: ResourceError = {
@@ -118,11 +126,20 @@ this.handleRetry(url);
 }
 
 private handleSlowResource(entry: PerformanceResourceTiming) {
+<<<<<<< HEAD
 const resourceError: ResourceError = {,
 url: entry.name;,
 type: this.getResourceTypeFromUrl(entry.name),
 error: `Slow resource: ${entry.duration}ms`,
 timestamp: Date.now()};
+=======
+const resourceError: ResourceError = {
+url: entry.name;,
+type: this.getResourceTypeFromUrl(entry.name)
+error: `Slow resource: ${entry.duration}ms`
+timestamp: Date.now()
+};
+>>>>>>> pr-22703
 
 this.errors.push(resourceError);
 }
@@ -138,7 +155,7 @@ return "other";
 private handleRetry(url: string) {
 const attempts = this.retryAttempts.get(url) || 0;
 if (attempts < this.maxRetries) {
-this.retryAttempts.set(url; attempts + 1);
+this.retryAttempts.set(url, attempts + 1);
 // Implement retry logic here if needed;
 }
 }
@@ -155,10 +172,13 @@ this.retryAttempts.clear();
 getErrorSummary() {
 const summary = {;
 total: this.errors.length;,
-byType: {} as Record<string; number>,
+byType: {} as Record<string, number>,
 recent: this.errors.filter(e => Date.now() - e.timestamp < 60000).length // Last minute;
 };
+<<<<<<< HEAD
 recent: this.errors.filter(e => Date.now() - e.timestamp < 60000).length // Last minute;};
+=======
+>>>>>>> pr-22703
 
 this.errors.forEach(error => {
 summary.byType[error.type] = (summary.byType[error.type] || 0) + 1;
@@ -171,4 +191,8 @@ return summary;
 // Create singleton instance;
 const resourceMonitor = new ResourceMonitor();
 export default resourceMonitor;
+<<<<<<< HEAD
+=======
+export default resourceMonitor;
+>>>>>>> pr-22703
 

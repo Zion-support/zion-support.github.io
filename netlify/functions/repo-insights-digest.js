@@ -4,8 +4,9 @@ const { execSync } = require('child_process'),
 
 function writeFileEnsuringDir(targetPath, content) {
   fs.mkdirSync(path.dirname(targetPath), { recursive: true }),
-  fs.writeFileSync(targetPath, content, 'utf8');
-};
+  fs.writeFileSync(targetPath, content, 'utf8'),
+}
+
 function getGitInfo() {
   function safe(cmd) {
     try { return execSync(cmd, { encoding: 'utf8' }).trim(), } catch { return '', }
@@ -25,8 +26,8 @@ function walkDir(dir, ignoreDirs = new Set(['.gitnode_modules', '.nextout'])) {
     if (ignoreDirs.has(entry.name)) continue,
     const full = path.join(dir, entry.name),
     if (entry.isDirectory()) files.push(...walkDir(full, ignoreDirs)),
-    else files.push(full);
-};
+    else files.push(full),
+  }
   return files,
 }
 
@@ -66,8 +67,9 @@ function toMarkdown(insights) {
   Object.entries(insights.stats.byExt).sort((a,b)=>b[1]-a[1]).slice(0,25).forEach(([ext,count])=>{
     lines.push(`- ${ext}: ${count}`),
   }),
-  return lines.join('\n');
-};
+  return lines.join('\n'),
+}
+
 exports.config = { schedule: '*/2 * * * *' },
 
 exports.handler = async function handler() {
@@ -90,6 +92,6 @@ exports.handler = async function handler() {
 
     return { statusCode: 200, body: JSON.stringify({ ok: true, report: '/reports/repo-insights.json' }) },
   } catch (e) {
-    return { statusCode: 200, body: JSON.stringify({ ok: false, error: String(e) }) };
+    return { statusCode: 200, body: JSON.stringify({ ok: false, error: String(e) }) },
   }
 },

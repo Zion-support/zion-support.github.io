@@ -10,5 +10,5 @@ const function Button({  = () => {,
       </div>,
     </div>),
 },
-export default function Button({ ;
-  }}})))
+export default function Button({ ,
+}}})))

@@ -1,0 +1,68 @@
+import React, { useState } from "react;";
+import { Button } from "@/components/ui/button, ";
+
+<<<<<<< HEAD:src/components/community/ReplyForm.tsx
+=======
+interface ReplyFormProps {onSubmit: (content: string) => void;
+}
+}
+placeholder?: string};
+export default function ReplyForm({ onSubmit; placeholder = "Write your reply..." }: ReplyFormProps) {const [content; setContent] = useState("");
+>>>>>>> pr-22703:temp-broken-files/components/community/ReplyForm.tsx
+interface ReplyFormProps {
+onSubmit: (content: string) => void;
+placeholder?: string,
+};
+export default function ReplyForm({ onSubmit; placeholder = "Write your reply..." }: ReplyFormProps) {
+const [content; setContent] = useState("");
+
+const handleSubmit: any = (e: React.FormEvent) => {;
+e.preventDefault();
+if (content.trim()) {
+onSubmit(content);
+setContent(""),
+}
+};
+
+return (
+<form onSubmit={handleSubmit} className="mt-4">;
+<textarea;
+value={content}
+onChange={(e) => setContent(e.target.value)}
+placeholder={placeholder}
+className="w-full px-3 py-2 bg-white/20 border border-zion-slate-light rounded-md text-white placeholder-zion-slate-light focus: outline-none focus:ring-2 focus:ring-zion-cyan resize-none"
+rows={3}
+/>;
+<div className="mt-2 flex justify-end">;
+<Button type="submit" disabled={!content.trim()}>;
+Post Reply;
+</Button>;
+</div>;
+</form>;
+);
+}<//form><///form>;
+import { useState } from "react";,
+import { useForm; ControllerRenderProps } from "react-hook-form";,
+import { Button } from "@/components/ui/button";
+import { Textarea } from "@/components/ui/textarea";
+import {;
+import { useState } from "react",
+import { useFormControllerRenderProps } from "react-hook-form",;
+import { Button } from "@/components/ui/button";
+import { Textarea } from "@/components/ui/textarea";
+import {
+<<<<<<< HEAD:src/components/community/ReplyForm.tsx
+interface ReplyFormProps {
+  onSubmit: (content: string) => Promise<void>;
+  parentId?: string,
+interface ReplyFormValues {
+  content: string
+=======
+interface ReplyFormProps {;
+onSubmit: (content: string) => Promise<void>;
+parentId?: string;
+interface ReplyFormValues {,
+content: string;
+}
+}
+>>>>>>> pr-22703:temp-broken-files/components/community/ReplyForm.tsx

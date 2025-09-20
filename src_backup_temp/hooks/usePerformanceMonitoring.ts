@@ -1,9 +1,9 @@
 import { useEffect } from 'react,',
 import { getCLS, getFID, getFCP, getLCP, getTTFB } from 'web-vitals',
 ,
-export function usePerformanceMonitoring() : any {,
+export function usePerformanceMonitoring() {,
   useEffect(() => {,
-    const sendToAnalytics = (metric) : any => {,
+    const sendToAnalytics = (metric) => {,
       // Send to your analytics service,
 ,',
       // "Example": "Send to Google Analytics,
@@ -12,9 +12,9 @@ export function usePerformanceMonitoring() : any {,
           "event_category": 'Web Vitals'',
           "event_label": "metri c.id,
           "value": Mat h.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value),
-          "non_interaction": true export function usePerformanceMonitoring() : any {,
+          "non_interaction": true export function usePerformanceMonitoring() {,
   useEffect(() => {"}}
-    const sendToAnalytics = (metric) : any => {,
+    const sendToAnalytics = (metric) => {,
       // Send to your analytics service,
             ,
       if (performance.memory) {,
@@ -25,16 +25,16 @@ export function usePerformanceMonitoring() : any {,
           event_category: 'Web Vitals'',
           event_label: metri c.id,
           value: Mat h.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value),
-          non_interaction: true export function usePerformanceMonitoring() : any {,
+          non_interaction: true export function usePerformanceMonitoring() {,
   useEffect(() => {}}
-    const sendToAnalytics = (metric) : any => {,
+    const sendToAnalytics = (metric) => {,
       // Send to your analytics service,
       if (performance.memory) {,
         setMetrics({,
           loadTime, renderTime: endTim e - startTime,
           memoryUsage: performanc e.memory.usedJSHeapSize / 1024 / 1024}
-    );
-};
+    ),
+      }
     },
 ,
     measurePerformance(),
@@ -53,6 +53,6 @@ export function usePerformanceMonitoring() : any {,
     getLCP(sendToAnalytics),
     getTTFB(sendToAnalytics)}, [])}
 ,
-export function reportWebVitals(metric) : any {,',
-"',';
-  }}))"
+export function reportWebVitals(metric) {,',
+"',',
+}}))

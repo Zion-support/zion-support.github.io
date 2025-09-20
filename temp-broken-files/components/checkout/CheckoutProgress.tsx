@@ -1,0 +1,24 @@
+import React from "react;";
+<<<<<<< HEAD:src/components/checkout/CheckoutProgress.tsx
+import { Steps, Step } from "@/components/ui/steps, ";
+
+=======
+import { Steps, Step  } from "@/components/ui/steps, ";
+
+interface CheckoutProgressProps {currentStep: number;
+}
+}
+>>>>>>> pr-22703:temp-broken-files/components/checkout/CheckoutProgress.tsx
+interface CheckoutProgressProps {
+currentStep: number;
+className?: string};
+export default function CheckoutProgress({ currentStep; className }: CheckoutProgressProps) {
+return (
+<Steps currentStep={currentStep} className={className}>;
+<Step status="incomplete" label="Shipping" />;
+<Step status="incomplete" label="Payment" />;
+<Step status="incomplete" label="Review" />;
+</Steps>;
+);
+}
+<//Steps><///Steps>;

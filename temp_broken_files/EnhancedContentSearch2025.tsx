@@ -139,6 +139,6 @@ const EnhancedContentSearch2025: React.FC = () => {,
         </div>,
       </div>,
     </div>,
-  );
-  },
+  ),
+},
 export default EnhancedContentSearch2025,

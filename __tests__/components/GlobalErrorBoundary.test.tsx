@@ -80,4 +80,3 @@ describe('GlobalErrorBoundary', () => {
     window.location = originalLocation,
   }),
 }),
-'

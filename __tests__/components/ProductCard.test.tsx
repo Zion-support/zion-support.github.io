@@ -124,6 +124,6 @@ describe('ProductCard', () => {
     render(<ProductCard product={productWithNullPrice} />, { wrapper: TestProviders }),
     expect(screen.getByText('Valid Test Product')).toBeInTheDocument(),
     expect(screen.queryByText(/USD/)).not.toBeInTheDocument(),
-  });
   }),
-'
+
+}),

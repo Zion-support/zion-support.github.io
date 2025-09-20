@@ -58,4 +58,3 @@ describe('/api/newsletter API', () => {
     expect(mockedSendEmail).toHaveBeenCalled(),
   }),
 }),
-'

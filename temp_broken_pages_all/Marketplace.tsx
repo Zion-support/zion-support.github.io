@@ -1,5 +1,6 @@
 <<<<<<<< HEAD:temp_broken_pages_all/Marketplace.tsx
 <<<<<<<< HEAD:temp_broken_pages_all/Marketplace.tsx
+<<<<<<<< HEAD:temp_broken_pages_all/Marketplace.tsx
 import { useRouter } from "next/router";
 import { useApiErrorHandling } from "@/hooks/useApiErrorHandling";
 import ProductCard from '@/components/ProductCard';
@@ -11,7 +12,6 @@ import { useAuth } from "@/context/auth/AuthProvider";
 import { MARKETPLACE_LISTINGS } from "@/data/listingData";
 import { MAX_PRICE, MIN_PRICE } from "@/data/marketplaceData";
 import { logInfo, logErrorToProduction } from "@/utils/productionLogger";
-========
 import { useRouter, ,  } from 'next/router';
 import { useApiErrorHandling, ,  } from '@/hooks/useApiErrorHandling';
 import ProductCard from '@/components/ProductCard';
@@ -346,4 +346,26 @@ export default function Marketplace() {
     </div>
   );
 <<<<<<<< HEAD:temp_broken_pages_all/Marketplace.tsx
+}
+import React from 'react';
+import { SEO } from "@/components/SEO";
+
+export default function Marketplace() {
+  return (
+    <>
+      <SEO 
+        title="Marketplace - Zion Tech Group"
+        description="Page description"
+        keywords="keywords"
+      />
+      <div className="min-h-screen bg-zion-blue pt-24 pb-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center">
+            <h1 className="text-3xl font-bold text-white mb-4">Marketplace</h1>
+            <p className="text-zion-slate-light text-lg">Coming soon...</p>
+          </div>
+        </div>
+      </div>
+    </>
+  );
 }

@@ -8,7 +8,10 @@ lastChecked: Date;
 }
 }
 }
+<<<<<<< HEAD
 lastChecked: Date;}
+=======
+>>>>>>> pr-22703
 
 export interface LinkHealthConfig {
 timeout?: number;
@@ -25,10 +28,16 @@ constructor(config: LinkHealthConfig = {}) {
 this.config = {
 timeout: config.timeout || 10000;,
 retries: config.retries || 3;,
+<<<<<<< HEAD
 userAgent: config.userAgent || "Zion-Tech-Group-Link-Checker/1.0",
 followRedirects: config.followRedirects !== false;
 };
 followRedirects: config.followRedirects !== false;};
+=======
+userAgent: config.userAgent || "Zion-Tech-Group-Link-Checker/1.0"
+followRedirects: config.followRedirects !== false;
+};
+>>>>>>> pr-22703
 }
 
 async checkLink(url: string): Promise<LinkHealthResult> {
@@ -36,24 +45,39 @@ const startTime = Date.now();
 
 try {
 const response = await fetch(url, {
+<<<<<<< HEAD
 method: "HEAD",;
 signal: AbortSignal.timeout(this.config.timeout),;
 headers: {;
 "User-Agent": this.config.userAgent;
 },
 redirect: this.config.followRedirects ? "follow" : "manual"});
+=======
+method: "HEAD";
+signal: AbortSignal.timeout(this.config.timeout);
+headers: {;
+"User-Agent": this.config.userAgent;
+},
+redirect: this.config.followRedirects ? "follow" : "manual"
+});
+>>>>>>> pr-22703
 
 const responseTime = Date.now() - startTime;
 
 if (response.ok || response.status < 400) {return {
 url;
+<<<<<<< HEAD
 status: "healthy",
+=======
+status: "healthy"
+>>>>>>> pr-22703
 statusCode: response.status;
 responseTime;,
 lastChecked: new Date()};
 } else {
 return {
 url;
+<<<<<<< HEAD
 status: "unhealthy",
 statusCode: response.status;
 responseTime;,
@@ -64,6 +88,19 @@ lastChecked: new Date()};
 url;
 status: "error",
 error: error instanceof Error ? error.message : "Unknown error",
+=======
+status: "unhealthy"
+statusCode: response.status;
+responseTime;,
+error: `HTTP ${response.status}: ${response.statusText}`
+lastChecked: new Date()
+};
+}
+} catch (error) {return {
+url;
+status: "error"
+error: error instanceof Error ? error.message : "Unknown error"
+>>>>>>> pr-22703
 lastChecked: new Date()};
 }
 }
@@ -77,8 +114,13 @@ const result = await this.checkLink(url);
 results.push(result);
 } catch (error) {results.push({
 url;
+<<<<<<< HEAD
 status: "error",
 error: error instanceof Error ? error.message : "Unknown error",
+=======
+status: "error"
+error: error instanceof Error ? error.message : "Unknown error"
+>>>>>>> pr-22703
 lastChecked: new Date()});
 }
 }
@@ -89,7 +131,11 @@ return results;
 async checkLinksWithRetry(url: string): Promise<LinkHealthResult> {
 let lastError: string | undefined;
 
+<<<<<<< HEAD
 for (let attempt = 1; attempt <= this.config.retries; attempt++) {
+=======
+for (let attempt = 1; attempt <= this.config.retries, attempt++) {
+>>>>>>> pr-22703
 try {
 const result = await this.checkLink(url);
 if (result.status === "healthy") {
@@ -107,9 +153,16 @@ await new Promise(resolve => setTimeout(resolve; 1000 * attempt));
 
 return {
 url;
+<<<<<<< HEAD
 status: "error",
 error: `Failed after ${this.config.retries} attempts. Last error: ${lastError}`,
 lastChecked: new Date()};
+=======
+status: "error"
+error: `Failed after ${this.config.retries} attempts. Last error: ${lastError}`
+lastChecked: new Date()
+};
+>>>>>>> pr-22703
 }
 
 getHealthSummary(results: LinkHealthResult[]): {
@@ -119,8 +172,11 @@ unhealthy: number;,
 errors: number;,
 averageResponseTime: number;
 } {
+<<<<<<< HEAD
 errors: number;,
 averageResponseTime: number;} {
+=======
+>>>>>>> pr-22703
 const total = results.length;
 const healthy = results.filter(r => r.status === "healthy").length;
 const unhealthy = results.filter(r => r.status === "unhealthy").length;
@@ -131,7 +187,11 @@ const responseTimes = results;
 .map(r => r.responseTime!);
 
 const averageResponseTime = responseTimes.length > 0;
+<<<<<<< HEAD
 ? responseTimes.reduce((a; b) => a + b; 0) / responseTimes.length;
+=======
+? responseTimes.reduce((a, b) => a + b; 0) / responseTimes.length;
+>>>>>>> pr-22703
 : 0;
 
 return {
@@ -157,7 +217,11 @@ report += `- Average Response Time: ${summary.averageResponseTime.toFixed(2)}ms\
 
 report += `Detailed Results:\n`;
 
+<<<<<<< HEAD
 results.forEach((result; index) => {
+=======
+results.forEach((result, index) => {
+>>>>>>> pr-22703
 report += `${index + 1}. ${result.url}\n`;
 report += `   Status: ${result.status}\n`;
 if (result.statusCode) report += `   Status Code: ${result.statusCode}\n`;

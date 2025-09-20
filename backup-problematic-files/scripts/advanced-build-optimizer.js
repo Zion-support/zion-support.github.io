@@ -155,4 +155,4 @@ const optimizer = new BuildOptimizer(),
     fs.writeFileSync('build-optimization-report.json', JSON.stringify(report, null, 2)),
     this.optimizations.push('Generated performance report')}
 
-}}}}}}}}}}}}'
+}}}}}}}}}}}}

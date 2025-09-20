@@ -46,8 +46,8 @@ exports.handler = async function(event, context) {,
         title,
         link: origin + slug,
         date,
-        description: ''});
-};
+        description: ''}),
+    }
 ,
     items.sort((a,b) => new Date(b.date).getTime() - new Date(a.date).getTime()),
     const xml = rssTemplate(items),
@@ -75,6 +75,6 @@ exports.handler = async function(event, context) {,
     if (!resCommit.ok) return { statusCode: resCommit.status, body: JSON.stringify({ error: jsonCommit }) },
     return { statusCode: 200, body: JSON.stringify({ ok: true, updated: path, commit: jsonCommit.commit && jsonCommit.commit.sha }) },
   } catch (e) {,
-    return { statusCode: 500, body: JSON.stringify({ error: String(e) }) };
+    return { statusCode: 500, body: JSON.stringify({ error: String(e) }) },
   }
 },

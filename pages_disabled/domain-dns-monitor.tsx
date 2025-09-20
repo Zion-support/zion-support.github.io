@@ -4,21 +4,19 @@ import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackgroun
 import { Button } from '../components/ui/Button';
 import Card from '../components/ui/Card';
 import { FileText, Check, Phone, Mail, MapPin, ExternalLink, ShieldCheck } from 'lucide-react';
-=======
 import QuantumHolographicMatrixBackground from '../components/ui/QuantumHolographicMatrixBackground';
-=======
 import QuantumHolographicMatrixBackground from '../components/ui/QuantumHolographicMatrixBackground';
 
 
 import { Globe, Check, Phone, Mail, MapPin, ExternalLink } from 'lucide-react';
 
-export default function DomainDNSMonitorPage() : any {
+export default function DomainDNSMonitorPage() {
   const contactInfo = {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com'
-  },
+  };
 
   const features = [
     'Registrar expiry and auto-renew checks',
@@ -31,9 +29,7 @@ export default function DomainDNSMonitorPage() : any {
 
   return (
     <UltraFuturisticBackground variant="quantum" intensity={1.5}>
-=======
     <QuantumHolographicMatrixBackground intensity={1.5}>
-=======
     <QuantumHolographicMatrixBackground intensity={1.5}>
       <Head>
         <title>Domain & DNS Health Monitor | Zion Tech Group</title>
@@ -71,7 +67,7 @@ export default function DomainDNSMonitorPage() : any {
               </div>
               <div className="mt-6 space-y-3 text-sm">
                 <div className="flex items-center gap-2 text-cyan-400 w-4 h-4 hover:underline"><Phone /><a href={`tel:${contactInfo.mobile.replace(/[^+\\d]/g, '')}`} >{contactInfo.mobile}</a></div>
-                <div className="flex items-center gap-2 text-purple-400 w-4 h-4 hover: underline"><Mail /><a href={`mailto:${contactInfo.email}`} >{contactInfo.email}</a></div>
+                <div className="flex items-center gap-2 text-purple-400 w-4 h-4 hover:underline"><Mail /><a href={`mailto:${contactInfo.email}`} >{contactInfo.email}</a></div>
                 <div className="flex items-center gap-2 text-green-400 w-4 h-4 text-xs hover:underline"><MapPin /><a href={`https://maps.google.com/?q=${encodeURIComponent(contactInfo.address)}`} target="_blank" rel="noopener noreferrer" >{contactInfo.address}</a></div>
               </div>
             </div>
@@ -79,10 +75,8 @@ export default function DomainDNSMonitorPage() : any {
         </div>
       </div>
     </UltraFuturisticBackground>
-=======
     </QuantumHolographicMatrixBackground>
-=======
     </QuantumHolographicMatrixBackground>
   );
-  }
+}
 

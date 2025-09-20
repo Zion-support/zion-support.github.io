@@ -1,7 +1,7 @@
 import { PrismaClient } from '@prisma/client',
 const prisma = new PrismaClient(),
 
-async function main() : any {
+async function main() {
   const products = [
     {
       id: 'demo-ai-writer',
@@ -107,13 +107,12 @@ async function main() : any {
   await (prisma as any).category.createMany({
     data: categories,
     skipDuplicates: true
-  });
-};
-main()
-  .catch((e) : any => {
-    console.error(e),
-    process.exit(1),
-  })
-  .finally(async () => {
-    await prisma.$disconnect(),
   }),
+}
+
+main()
+  .catch((e) => {
+    console.error(e),
+    process.exit(1)})
+  .finally(async () => {
+    await prisma.$disconnect()}),

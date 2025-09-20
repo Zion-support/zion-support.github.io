@@ -481,7 +481,7 @@ export const revolutionaryAIInnovationServices2029: RevolutionaryAIInnovationSer
   }
 ],
 
-export const getAIServicesByCategory = (category: string) : any => {
+export const getAIServicesByCategory = (category: string) => {
   return revolutionaryAIInnovationServices2029.filter(service => service.category === category)
 },
 
@@ -493,9 +493,9 @@ export const getNewAIServices = () => {
   return revolutionaryAIInnovationServices2029.filter(service => service.isNew),
 },
 
-export const getAIServicesByPriceRange = (minPrice: number, maxPrice: number) : any => {
+export const getAIServicesByPriceRange = (minPrice: number, maxPrice: number) => {
   return revolutionaryAIInnovationServices2029.filter(service => {
     const price = parseInt(service.price.replace('$', '').replace(, '')),
     return price >= minPrice && price <= maxPrice,
-  });
-  },
+  }),
+},

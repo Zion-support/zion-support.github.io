@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:temp_broken_pages_all/Orders.tsx
+=======
+>>>>>>> pr-22703
 } from '@/components/ui/table';
 <<<<<<<< HEAD:temp_broken_pages_all/Orders.tsx
 import { Badge } from "@/components/ui/badge";
@@ -13,7 +16,6 @@ import { Table;
 , TableHeader;
 , TableRow } from "@/components/ui/table";
 import { Badge } from "@/components/ui/badge";
-========
 import { Badge,  } from '@/components/ui/badge';
 import { FileText,, CheckCircle2,, Clock, ShieldAlert,  } from 'lucide-react'
 import Link from 'next/link', // Changed from react-router-dom,
@@ -114,7 +116,29 @@ export default function Orders() {
         <h1 className="text-4xl font-bold text-gray-900 mb-6">Orders</h1>
         <p className="text-lg text-gray-600">Coming soon...</p>
       </div>
->>>>>>> 1836dcad4eb858f12251bf809dd3ca83faa1433b:src/pages/Orders.tsx
     </div>
+<<<<<<< HEAD
+=======
+import React from 'react';
+import { SEO } from "@/components/SEO";
+
+export default function Orders() {
+  return (
+    <>
+      <SEO 
+        title="Orders - Zion Tech Group"
+        description="Page description"
+        keywords="keywords"
+      />
+      <div className="min-h-screen bg-zion-blue pt-24 pb-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center">
+            <h1 className="text-3xl font-bold text-white mb-4">Orders</h1>
+            <p className="text-zion-slate-light text-lg">Coming soon...</p>
+          </div>
+        </div>
+      </div>
+    </>
+>>>>>>> pr-22703
   );
 }

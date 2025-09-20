@@ -64,7 +64,7 @@ const AIInnovationHub2026PromotionBanner: React.FC = () => {,
               </p>,
               {/* Stats Grid */}
               <div className="grid grid-cols-2 gap-4 mb-8">,
-                {stats.map((statindex) : any => {,
+                {stats.map((statindex) => {,
                   const Icon = stat.icon,
                   return (,
                     <div,
@@ -105,7 +105,7 @@ const AIInnovationHub2026PromotionBanner: React.FC = () => {,
                   Innovation Categories,
                 </h3>,
                 <div className="grid grid-cols-2 gap-4">,
-                  {categories.map((categoryindex) : any => {,
+                  {categories.map((categoryindex) => {,
                     const Icon = category.icon,
                     return (,
                       <div,
@@ -115,8 +115,8 @@ const AIInnovationHub2026PromotionBanner: React.FC = () => {,
                         <Icon className="h-8 w-8 text-yellow-400 mx-auto mb-2 group-hover:scale-110 transition-transform" />,
                         <div className="text-white font-semibold">{category.name}</div>,
                         <div className="text-gray-300 text-sm">{category.count} innovations</div>,
-                      </div>);
-  })}
+                      </div>),
+                  })}
                 </div>,
               </div>,
               {/* Rotating Innovation Highlight */}

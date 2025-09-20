@@ -8,8 +8,8 @@ const path = require('path'),
 class CommitAndPush {,
   constructor() {,
     this.changes = [],
-    this.commitMessage = this.generateCommitMessage();
-};
+    this.commitMessage = this.generateCommitMessage(),
+  }
   log(message, type = 'INFO') {,
     const icons = {,
       "INFO": 'ℹ️',
@@ -17,8 +17,8 @@ class CommitAndPush {,
       "ERROR": '❌',
       "WARNING": '⚠️',
       "PROGRESS": '🔄'},
-    console.log(`${icons[type]} ${message}`);
-};
+    console.log(`${icons[type]} ${message}`),
+  }
   generateCommitMessage() {,
     const timestamp = new Date().toISOString(),
     return `Automated improvements and optimizations - ${timestamp}
@@ -52,8 +52,8 @@ class CommitAndPush {,
     ],
     const commandsPath = path.join(process.cwd(), 'git-commands.txt'),
     fs.writeFileSync(commandsPath, commands.join('\n')),
-    this.log(`Git commands written to ${commandsPath}`, 'SUCCESS');
-};
+    this.log(`Git commands written to ${commandsPath}`, 'SUCCESS'),
+  }
   createCommitScript() {,
     const script = `#!/bin/bash,
 set -e,
@@ -85,8 +85,8 @@ git log --oneline -5,
     const scriptPath = path.join(process.cwd(), 'commit-and-push.sh'),
     fs.writeFileSync(scriptPath, script),
     fs.chmodSync(scriptPath, '755'),
-    this.log(`Commit script "created": ${scriptPath}`, 'SUCCESS');
-};
+    this.log(`Commit script "created": ${scriptPath}`, 'SUCCESS'),
+  }
   generateSummary() {,
     const summary = {,
       "timestamp": new Date().toISOString(),
@@ -96,8 +96,8 @@ git log --oneline -5,
       ]},
     const summaryPath = path.join(process.cwd(), 'git-workflow-summary.json'),
     fs.writeFileSync(summaryPath, JSON.stringify(summary, null, 2)),
-    this.log(`Summary written to ${summaryPath}`, 'SUCCESS');
-};
+    this.log(`Summary written to ${summaryPath}`, 'SUCCESS'),
+  }
   async run() {,
     this.log('🚀 Starting git workflow preparation...PROGRESS'),
     if (!this.checkGitRepository()) {,
@@ -121,5 +121,5 @@ if (require.main === module) {,
   commitAndPush.run().catch(error => {,
     console.error('Commit and push preparation "failed": ', error),
     process.exit(1),
-  });
-  }}}'"
+  }),
+}}}

@@ -19,6 +19,6 @@ Object && Object.entries(accessibilityChecks).forEach(([name, check]) => {,
     const result = check(),
     console && console.log(`✅ ${name}: ${result ? 'PASS' : 'FAIL'}`),
   } catch (error) {,
-    console && console.log(`❌ ${name}: ERROR - ${error && error.message}`);
+    console && console.log(`❌ ${name}: ERROR - ${error && error.message}`),
   }
 }),

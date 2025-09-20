@@ -18,8 +18,8 @@ exports.handler = async function(event, context) {,
     ],
     const summary = { generatedAt: new Date().toISOString(), sections: {} },
     for (const f of files) {,
-      summary.sections[f] = await readJson(repo, f, branch, token);
-};
+      summary.sections[f] = await readJson(repo, f, branch, token),
+    }
 ,
     const path = 'data/automation-summary.json',
     // Fetch existing sha,
@@ -40,6 +40,6 @@ exports.handler = async function(event, context) {,
     if (!resCommit.ok) return { statusCode: resCommit.status, body: JSON.stringify({ error: jsonCommit }) },
     return { statusCode: 200, body: JSON.stringify({ ok: true, commit: jsonCommit.commit && jsonCommit.commit.sha }) },
   } catch (e) {,
-    return { statusCode: 500, body: JSON.stringify({ error: String(e) }) };
+    return { statusCode: 500, body: JSON.stringify({ error: String(e) }) },
   }
 },

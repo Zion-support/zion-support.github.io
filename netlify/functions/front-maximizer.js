@@ -18,8 +18,8 @@ exports.handler = async function(event, context) {
       if (Math.random() > 0.1) { // 90% success rate
         maximizationResults.optimizedPages++,
         const performanceGain = Math.floor(Math.random() * 40) + 20, // 20-60% improvement
-        maximizationResults.performanceGains.push(performanceGain);
-};
+        maximizationResults.performanceGains.push(performanceGain),
+      }
     }
     
     // Calculate metrics
@@ -84,6 +84,6 @@ exports.handler = async function(event, context) {
         function: 'front-maximizer',
         status: 'error'
       })
-    };
+    },
   }
 },

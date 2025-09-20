@@ -59,8 +59,8 @@ const ENHANCEMENT_TASKS = [,
 class EnhancementAutomation {,
   constructor() {,
     this.log('🚀 Starting Comprehensive Enhancement Automation'),
-    this.ensureDirectories();
-};
+    this.ensureDirectories(),
+  }
 ,
   log(message) {,
     const timestamp = new Date().toISOString(),
@@ -70,8 +70,8 @@ class EnhancementAutomation {,
     try {,
       fs.appendFileSync(CONFIG.logFile, logMessage + '\n'),
     } catch (error) {,
-      console.warn('Could not write to log file:', error.message);
-};
+      console.warn('Could not write to log file:', error.message),
+    }
   }
 ,
   ensureDirectories() {,
@@ -79,10 +79,10 @@ class EnhancementAutomation {,
     dirs.forEach(dir => {,
       if (!fs.existsSync(dir)) {,
         fs.mkdirSync(dir, { recursive: true }),
-        this.log(`📁 Created directory: ${dir}`);
-};
-    });
-};
+        this.log(`📁 Created directory: ${dir}`),
+      }
+    }),
+  }
 ,
   async backupFiles() {,
     this.log('💾 Creating backup of current files...'),
@@ -94,15 +94,15 @@ class EnhancementAutomation {,
       const mainPagePath = path.join(CONFIG.appDir, 'page.tsx'),
       if (fs.existsSync(mainPagePath)) {,
         fs.copyFileSync(mainPagePath, path.join(backupPath, 'page.tsx')),
-        this.log('✅ Backed up main page');
-};
+        this.log('✅ Backed up main page'),
+      }
 ,
       // Backup package.json,
       const packageJsonPath = path.join(__dirname, '../package.json'),
       if (fs.existsSync(packageJsonPath)) {,
         fs.copyFileSync(packageJsonPath, path.join(backupPath, 'package.json')),
-        this.log('✅ Backed up package.json');
-};
+        this.log('✅ Backed up package.json'),
+      }
 ,
       this.log(`💾 Backup created at: ${backupPath}`),
       return backupPath,
@@ -120,11 +120,11 @@ class EnhancementAutomation {,
         if (fs.existsSync(componentPath)) {,
           this.log(`✅ Component ${component} already exists`),
         } else {,
-          this.log(`⚠️  Component ${component} not found - skipping integration`);
-};
+          this.log(`⚠️  Component ${component} not found - skipping integration`),
+        }
       } catch (error) {,
-        this.log(`❌ Error checking component ${component}: ${error.message}`);
-};
+        this.log(`❌ Error checking component ${component}: ${error.message}`),
+      }
     }
   }
 ,
@@ -159,8 +159,8 @@ class EnhancementAutomation {,
           const lastImportIndex = content.lastIndexOf(importSection[importSection.length - 1]),
           const insertPoint = content.indexOf(, lastImportIndex) + 1,
           content = content.slice(0, insertPoint) + '\n' + missingImports.join('\n') + '\n' + content.slice(insertPoint),
-          this.log(`✅ Added ${missingImports.length} new imports`);
-};
+          this.log(`✅ Added ${missingImports.length} new imports`),
+        }
       }
 ,
       // Add components to the page if not already present,
@@ -185,8 +185,9 @@ class EnhancementAutomation {,
         fs.writeFileSync(mainPagePath, content),
         this.log(`✅ Added ${componentsAdded} new components to main page`),
       } else {,
-        this.log('✅ All components already integrated in main page');
-};
+        this.log('✅ All components already integrated in main page'),
+      }
+
     } catch (error) {,
       this.log(`❌ Error updating main page: ${error.message}`),
       throw error,
@@ -221,8 +222,9 @@ class EnhancementAutomation {,
         fs.writeFileSync(packageJsonPath, JSON.stringify(packageJson, null, 2)),
         this.log(`✅ Added ${scriptsAdded} new scripts to package.json`),
       } else {,
-        this.log('✅ All scripts already exist in package.json');
-};
+        this.log('✅ All scripts already exist in package.json'),
+      }
+
     } catch (error) {,
       this.log(`❌ Error updating package.json: ${error.message}`),
       throw error,
@@ -235,8 +237,8 @@ class EnhancementAutomation {,
     const enhancedPageDir = path.dirname(enhancedPagePath),
     try {,
       if (!fs.existsSync(enhancedPageDir)) {,
-        fs.mkdirSync(enhancedPageDir, { recursive: true });
-};
+        fs.mkdirSync(enhancedPageDir, { recursive: true }),
+      }
 ,
       const enhancedPageContent = `import React from 'react',
 import { Suspense } from 'react',
@@ -335,8 +337,8 @@ For issues or questions about the enhancements, please refer to the documentatio
       fs.writeFileSync(reportPath, reportContent),
       this.log('✅ Generated enhancement report'),
     } catch (error) {,
-      this.log(`❌ Error generating report: ${error.message}`);
-};
+      this.log(`❌ Error generating report: ${error.message}`),
+    }
   }
 ,
   async runEnhancement() {,
@@ -358,8 +360,8 @@ For issues or questions about the enhancements, please refer to the documentatio
       this.log('📋 Check ENHANCEMENT_REPORT.md for detailed information'),
       this.log('🚀 Run "npm run enhance: all" to re-run the enhancement process')} catch (error) {,
       this.log(`❌ Enhancement failed: ${error.message}`),
-      process.exit(1);
-};
+      process.exit(1),
+    }
   }
 }
 ,
@@ -369,7 +371,7 @@ if (import.meta.url === `file: //${process.argv[1]}`) {,
   automation.runEnhancement().catch(error => {,
     console.error('Enhancement automation failed:', error),
     process.exit(1),
-  });
-  }
+  }),
+}
 ,
 export default EnhancementAutomation,

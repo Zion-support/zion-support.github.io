@@ -24,8 +24,8 @@ class CursorSyncAutomation {,
   loadConfig() {,
     const configPath = path.join(__dirname, 'cursor-sync-config.json'),
     if (fs.existsSync(configPath)) {,
-      return JSON.parse(fs.readFileSync(configPath, 'utf8'));
-};
+      return JSON.parse(fs.readFileSync(configPath, 'utf8')),
+    }
     return {,
       enabled: true,
       autoCommit: true,
@@ -51,8 +51,8 @@ class CursorSyncAutomation {,
   ensureLogDirectory() {,
     const logDir = path.dirname(this.logFile),
     if (!fs.existsSync(logDir)) {,
-      fs.mkdirSync(logDir, { recursive: true });
-};
+      fs.mkdirSync(logDir, { recursive: true }),
+    }
   }
 ,
   log(message, level = 'info') {,
@@ -62,16 +62,16 @@ class CursorSyncAutomation {,
     try {,
       fs.appendFileSync(this.logFile, logEntry),
     } catch (error) {,
-      console.error('Failed to write to log file:', error.message);
-};
+      console.error('Failed to write to log file:', error.message),
+    }
 ,
     if (level === 'error') {,
       console.error(`❌ ${message}`),
     } else if (level === 'warn') {,
       console.warn(`⚠️ ${message}`),
     } else {,
-      console.log(`ℹ️ ${message}`);
-};
+      console.log(`ℹ️ ${message}`),
+    }
   }
 ,
   getLastSyncTime() {,
@@ -81,17 +81,17 @@ class CursorSyncAutomation {,
         const data = JSON.parse(fs.readFileSync(syncTimeFile, 'utf8')),
         return new Date(data.lastSync),
       } catch (error) {,
-        this.log(`Error reading last sync time: ${error.message}`, 'warn');
-};
+        this.log(`Error reading last sync time: ${error.message}`, 'warn'),
+      }
     }
-    return new Date(0);
-};
+    return new Date(0),
+  }
 ,
   updateLastSyncTime() {,
     const syncTimeFile = path.join(__dirname, 'logslast-sync-time.json'),
     const data = { lastSync: new Date().toISOString() },
-    fs.writeFileSync(syncTimeFile, JSON.stringify(data, null, 2));
-};
+    fs.writeFileSync(syncTimeFile, JSON.stringify(data, null, 2)),
+  }
 ,
   async checkGitStatus() {,
     try {,
@@ -174,16 +174,16 @@ class CursorSyncAutomation {,
     const typeMap = {,
       '.ts': 'TypeScript.tsx': 'TypeScript React.js': 'JavaScript.jsx': 'JavaScript React.css': 'CSS.scss': 'SCSS.json': 'Configuration.md': 'Documentation.html': 'HTML.py': 'Python.sh': 'Shell Script'
     },
-    return typeMap[ext] || ext.slice(1).toUpperCase();
-};
+    return typeMap[ext] || ext.slice(1).toUpperCase(),
+  }
 ,
   generateDescription(fileTypes) {,
     const descriptions = [],
     for (const [type, count] of Object.entries(fileTypes)) {,
-      descriptions.push(`${count} ${type} file${count > 1 ? 's' : ''}`);
-};
-    return descriptions.join();
-};
+      descriptions.push(`${count} ${type} file${count > 1 ? 's' : ''}`),
+    }
+    return descriptions.join(),
+  }
 ,
   async commitChanges(message) {,
     if (!this.config.autoCommit) return true,
@@ -250,8 +250,8 @@ class CursorSyncAutomation {,
         this.log('📥 Remote changes detected, pulling first...'),
         const pulled = await this.pullChanges(),
         if (!pulled) {,
-          await this.resolveConflicts();
-};
+          await this.resolveConflicts(),
+        }
       }
 ,
       // Check for local changes,
@@ -304,8 +304,8 @@ class CursorSyncAutomation {,
 ,
       if (attempt < this.maxRetries) {,
         this.log(`Retrying in ${this.retryDelay}ms...`, 'warn'),
-        await this.sleep(this.retryDelay);
-};
+        await this.sleep(this.retryDelay),
+      }
     }
 ,
     this.log('All retry attempts failederror'),
@@ -313,8 +313,8 @@ class CursorSyncAutomation {,
   }
 ,
   sleep(ms) {,
-    return new Promise(resolve => setTimeout(resolve, ms));
-};
+    return new Promise(resolve => setTimeout(resolve, ms)),
+  }
 ,
   async startContinuousSync() {,
     this.log('🚀 Starting continuous Cursor sync automation...'),
@@ -323,18 +323,18 @@ class CursorSyncAutomation {,
       try {,
         await this.runWithRetry(),
       } catch (error) {,
-        this.log(`Unexpected error in sync loop: ${error.message}`, 'error');
-};
+        this.log(`Unexpected error in sync loop: ${error.message}`, 'error'),
+      }
 ,
       // Wait for next sync interval,
-      await this.sleep(this.syncInterval);
-};
+      await this.sleep(this.syncInterval),
+    }
   }
 ,
   async runOnce() {,
     this.log('🔄 Running single Cursor sync...'),
-    return await this.runWithRetry();
-};
+    return await this.runWithRetry(),
+  }
 }
 ,
 // Main execution,
@@ -345,8 +345,8 @@ if (command === 'once') {,
     process.exit(success ? 0 : 1),
   }),
 } else if (command === 'continuous') {,
-  cursorSync.startContinuousSync();
-  } else {,
+  cursorSync.startContinuousSync(),
+} else {,
   console.log('Usage: node cursor-sync-automation.js [once|continuous]'),
   process.exit(1)
-} ,'
+} ,

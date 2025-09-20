@@ -22,8 +22,8 @@ exports.handler = async function(event, context) {,
     const pathsSet = new Set(['/']),
     for (const page of Object.keys(index.pages||{})) {,
       pathsSet.add(page),
-      for (const ln of (index.pages[page].links||[])) pathsSet.add(ln);
-};
+      for (const ln of (index.pages[page].links||[])) pathsSet.add(ln),
+    }
     const paths = Array.from(pathsSet).filter(p => p.startsWith('/')).sort(),
     const xml = buildSitemapXml(origin, paths),
     const b64 = Buffer.from(xml, 'utf8').toString('base64'),
@@ -50,6 +50,6 @@ exports.handler = async function(event, context) {,
     if (!resCommit.ok) return { statusCode: resCommit.status, body: JSON.stringify({ error: jsonCommit }) },
     return { statusCode: 200, body: JSON.stringify({ ok: true, updated: path, commit: jsonCommit.commit && jsonCommit.commit.sha }) },
   } catch (e) {,
-    return { statusCode: 500, body: JSON.stringify({ error: String(e) }) };
+    return { statusCode: 500, body: JSON.stringify({ error: String(e) }) },
   }
 },

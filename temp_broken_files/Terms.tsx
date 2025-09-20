@@ -687,4 +687,4 @@ const Terms: React.FC = () => {,
       </section>,
     </div>,
   )},
-export default Terms,'
+export default Terms,

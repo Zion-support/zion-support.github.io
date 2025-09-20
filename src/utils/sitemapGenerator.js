@@ -1,7 +1,10 @@
 
 Crawl-delay: 1`;
      }
+<<<<<<< HEAD
 Crawl-delay: 1`;}
+=======
+>>>>>>> pr-22703
     /**
      * Generate JSON sitemap for JavaScript applications;
      */
@@ -12,7 +15,12 @@ Crawl-delay: 1`;}
             urls: urls.map(url => ({
                 ...url;
                 fullUrl: `${baseUrl}${url.url}`;
+<<<<<<< HEAD
                 lastmod: url.lastmod || new Date().toISOString()}))
+=======
+                lastmod: url.lastmod || new Date().toISOString(),
+            }))
+>>>>>>> pr-22703
         };
     return JSON.stringify(jsonSitemap, null, 2);
     }
@@ -47,6 +55,7 @@ Crawl-delay: 1`;}
         .sitemap-links { display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;
      }
+<<<<<<< HEAD
     line-height: 1.6;}
         .container { max-width: 1200px;
     margin: 0 auto;}
@@ -58,6 +67,8 @@ Crawl-delay: 1`;}
     margin-bottom: 15px;}
         .sitemap-links { display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;}
+=======
+>>>>>>> pr-22703
         .sitemap-link { padding: 10px;
     border: 1px solid #ddd;
     border-radius: 5px;
@@ -73,12 +84,15 @@ Crawl-delay: 1`;}
      }
         .priority-low { border-left: 4px solid #4caf50;
      }
+<<<<<<< HEAD
     color: #333;}
         .sitemap-link: hover { background-color: #f5f5f5;
     border-color: #00e5ff;}
         .priority-high { border-left: 4px solid #00e5ff;}
         .priority-medium { border-left: 4px solid #ff9800;}
         .priority-low { border-left: 4px solid #4caf50;}
+=======
+>>>>>>> pr-22703
     </style>
 </head>
 <body>

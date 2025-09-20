@@ -213,4 +213,4 @@ const AIFutureTrends2025: React.FC = () => {,
         </div>,
       </div>,
     </div>)},
-export default AIFutureTrends2025,'
+export default AIFutureTrends2025,

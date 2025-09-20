@@ -128,14 +128,14 @@ const AdvancedContentManagementSystem = () => {,
       { type: ''Videosengagement: 38.9 }
     ]
   },
-  const getStatusColor = (status) : any => {,
+  const getStatusColor = (status) => {,
     switch (status) {,
-      case 'published': return 'text-green-600 bg-green-100';
-      case 'draft': return 'text-yellow-600 bg-yellow-100';
-      case 'review': return 'text-blue-600 bg-blue-100';
+      case 'published': return 'text-green-600 bg-green-100',
+      case 'draft': return 'text-yellow-600 bg-yellow-100',
+      case 'review': return 'text-blue-600 bg-blue-100',
       default: return 'text-gray-600 bg-gray-100'}
   },
-  const getTypeIcon = (type) : any => {,
+  const getTypeIcon = (type) => {,
     const typeConfig = contentTypes.find(t => t.id === type),
     return typeConfig ? typeConfig.icon : Database,
   },
@@ -268,7 +268,7 @@ const AdvancedContentManagementSystem = () => {,
                 </tr>,
               </thead>,
               <tbody>,
-                {recentContent.map((content) : any => {,
+                {recentContent.map((content) => {,
                   const TypeIcon = getTypeIcon(content.type),
                   return (,
                     <tr key={content.id} className="border-b border-gray-100 hover: bg-gray-50">,
@@ -348,5 +348,5 @@ const AdvancedContentManagementSystem = () => {,
       </div>,
     </div>,
   ),
-export default AdvancedContentManagementSystem;
-  }
+export default AdvancedContentManagementSystem,
+}

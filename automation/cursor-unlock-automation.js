@@ -22,8 +22,8 @@ class CursorUnlockAutomation {,
     this.logFile = path.join(__dirname, 'logscursor-unlock.log'),
     this.statusFile = path.join(__dirname, 'logscursor-status.json'),
     this.ensureDirectories(),
-    this.initializeStatus();
-};
+    this.initializeStatus(),
+  }
 ,
   loadConfig() {,
     const configPath = path.join(__dirname, 'config.json'),
@@ -64,8 +64,8 @@ class CursorUnlockAutomation {,
   ensureDirectories() {,
     const logDir = path.dirname(this.logFile),
     if (!fs.existsSync(logDir)) {,
-      fs.mkdirSync(logDir, { recursive: true });
-};
+      fs.mkdirSync(logDir, { recursive: true }),
+    }
   }
 ,
   initializeStatus() {,
@@ -82,16 +82,16 @@ class CursorUnlockAutomation {,
           memoryBefore: 0,
           memoryAfter: 0},
         lastUpdated: new Date().toISOString()},
-      fs.writeFileSync(this.statusFile, JSON.stringify(initialStatus, null, 2));
-};
+      fs.writeFileSync(this.statusFile, JSON.stringify(initialStatus, null, 2)),
+    }
   }
 ,
   log(message, level = 'info') {,
     const timestamp = new Date().toISOString(),
     const logEntry = `[${timestamp}] [${level.toUpperCase()}] ${message}`,
     console.log(logEntry),
-    fs.appendFileSync(this.logFile, logEntry + '\n');
-};
+    fs.appendFileSync(this.logFile, logEntry + '\n'),
+  }
 ,
   async executeCommand(command, options = {}) {,
     return new Promise((resolve, reject) => {,
@@ -113,14 +113,14 @@ class CursorUnlockAutomation {,
         if (code === 0) {,
           resolve({ stdout, stderr, code }),
         } else {,
-          reject(new Error(`Command failed with code ${code}: ${stderr}`));
-};
+          reject(new Error(`Command failed with code ${code}: ${stderr}`)),
+        }
       }),
       child.on('error', (error) => {,
         reject(error),
       }),
-    });
-};
+    }),
+  }
 ,
   getCursorProcesses() {,
     const platform = os.platform(),
@@ -173,8 +173,8 @@ class CursorUnlockAutomation {,
         killedCount++,
         this.log(`✅ Killed Cursor process: ${process}`),
       } catch (error) {,
-        this.log(`❌ Failed to kill process: ${error.message}`, 'error');
-};
+        this.log(`❌ Failed to kill process: ${error.message}`, 'error'),
+      }
     }
 ,
     return killedCount,
@@ -202,11 +202,11 @@ class CursorUnlockAutomation {,
         path.join(homeDir, '.configCursor'),
         path.join(homeDir, '.cacheCursor'),
         path.join(homeDir, '.localshareCursor'),
-      );
-};
+      ),
+    }
 ,
-    return directories.filter((dir) => fs.existsSync(dir));
-};
+    return directories.filter((dir) => fs.existsSync(dir)),
+  }
 ,
   async clearCursorCache() {,
     if (!this.config.cursorUnlock.clearCache) {,
@@ -226,14 +226,14 @@ class CursorUnlockAutomation {,
             if (fs.existsSync(cachePath)) {,
               fs.rmSync(cachePath, { recursive: true, force: true }),
               clearedCount++,
-              this.log(`✅ Cleared cache: ${cachePath}`);
-};
+              this.log(`✅ Cleared cache: ${cachePath}`),
+            }
           }
         }
       } catch (error) {,
         this.log(`❌ Failed to clear cache in ${dir}: ${error.message}`,
-          'error');
-};
+          'error'),
+      }
     }
 ,
     return clearedCount > 0,
@@ -260,16 +260,16 @@ class CursorUnlockAutomation {,
               // Try to make file writable,
               fs.chmodSync(filePath, 0o666),
               unlockedCount++,
-              this.log(`✅ Unlocked: ${file}`);
-};
+              this.log(`✅ Unlocked: ${file}`),
+            }
           } catch (error) {,
-            this.log(`⚠️ Could not unlock ${file}: ${error.message}`, 'warn');
-};
+            this.log(`⚠️ Could not unlock ${file}: ${error.message}`, 'warn'),
+          }
         }
       } catch (error) {,
         this.log(`❌ Error processing pattern ${pattern}: ${error.message}`,
-          'error');
-};
+          'error'),
+      }
     }
 ,
     return unlockedCount,
@@ -338,8 +338,8 @@ class CursorUnlockAutomation {,
         'extensions'),
     } else {,
       extensionsDir = path.join(homeDir,
-        '.configCursorUserextensions');
-};
+        '.configCursorUserextensions'),
+    }
 ,
     if (fs.existsSync(extensionsDir)) {,
       try {,
@@ -378,8 +378,8 @@ class CursorUnlockAutomation {,
         this.log(`✅ Optimization completed: ${command}`),
       } catch (error) {,
         this.log(`⚠️ Optimization failed: ${command} - ${error.message}`,
-          'warn');
-};
+          'warn'),
+      }
     }
 ,
     return successCount,
@@ -441,8 +441,8 @@ class CursorUnlockAutomation {,
         await new Promise((resolve) =>,
           setTimeout(resolve, this.config.cursorUnlock.retryDelay),
         ),
-        return this.unlockCursor(retryCount + 1);
-};
+        return this.unlockCursor(retryCount + 1),
+      }
 ,
       return false,
     }
@@ -450,8 +450,8 @@ class CursorUnlockAutomation {,
 ,
   async getStatus() {,
     if (fs.existsSync(this.statusFile)) {,
-      return JSON.parse(fs.readFileSync(this.statusFile, 'utf8'));
-};
+      return JSON.parse(fs.readFileSync(this.statusFile, 'utf8')),
+    }
     return null,
   }
 ,
@@ -461,8 +461,8 @@ class CursorUnlockAutomation {,
       const processes = this.getCursorProcesses(),
       if (processes.length > 0) {,
         this.log('🔍 Cursor processes detected, checking for locks...'),
-        await this.unlockCursor();
-};
+        await this.unlockCursor(),
+      }
     }, 30000), // Check every 30 seconds
   }
 ,
@@ -479,8 +479,8 @@ class CursorUnlockAutomation {,
       const status = await this.getStatus(),
       console.log(JSON.stringify(status, null, 2)),
     } else {,
-      await this.unlockCursor();
-};
+      await this.unlockCursor(),
+    }
   }
 }
 ,
@@ -490,7 +490,7 @@ if (require.main === module) {,
   automation.execute().catch((error) => {,
     console.error('❌ Automation failed:', error),
     process.exit(1),
-  });
-  }
+  }),
+}
 ,
 module.exports = CursorUnlockAutomation,

@@ -16,8 +16,8 @@ if (process.env.NODE_ENV !== 'production') {,
   logger.add(,
     new winston.transports.Console({,
       format: winston.format.simple()}),
-  );
-};
+  ),
+}
 ,
 /**,
  * Cursor Chat Monitor,
@@ -48,8 +48,8 @@ class CursorChatMonitor extends EventEmitter {,
     this.isRunning = false,
     this.watcher = null,
     this.chatHistory = [],
-    this.processedFiles = new Set();
-};
+    this.processedFiles = new Set(),
+  }
 ,
   async initialize() {,
     logger.info('👀 Initializing Cursor Chat Monitor...'),
@@ -72,8 +72,8 @@ class CursorChatMonitor extends EventEmitter {,
     try {,
       await fs.mkdir(this.config.outputDir, { recursive: true }),
     } catch (error) {,
-      logger.error('Error creating output directory:', error);
-};
+      logger.error('Error creating output directory:', error),
+    }
   }
 ,
   async loadChatHistory() {,
@@ -101,19 +101,19 @@ class CursorChatMonitor extends EventEmitter {,
       .on('unlink', (filePath) => this.handleFileRemoved(filePath)),
       .on('error', (error) => logger.error('Watcher error:', error)),
     // Also monitor for existing files,
-    await this.scanExistingFiles();
-};
+    await this.scanExistingFiles(),
+  }
 ,
   async scanExistingFiles() {,
     try {,
       const files = await this.findChatFiles(this.config.cursorDataDir),
       logger.info(`🔍 Found ${files.length} existing chat files`),
       for (const file of files) {,
-        await this.processChatFile(file);
-};
+        await this.processChatFile(file),
+      }
     } catch (error) {,
-      logger.error('Error scanning existing files:', error);
-};
+      logger.error('Error scanning existing files:', error),
+    }
   }
 ,
   async findChatFiles(dir) {,
@@ -126,8 +126,8 @@ class CursorChatMonitor extends EventEmitter {,
           const subFiles = await this.findChatFiles(fullPath),
           chatFiles.push(...subFiles),
         } else if (this.isChatFile(entry.name)) {,
-          chatFiles.push(fullPath);
-};
+          chatFiles.push(fullPath),
+        }
       }
     } catch (error) {,
       // Directory doesn't exist or can't be read
@@ -146,21 +146,21 @@ class CursorChatMonitor extends EventEmitter {,
       /\.json$/i,
       /\.txt$/i
     ],
-    return chatPatterns.some((pattern) => pattern.test(filename));
-};
+    return chatPatterns.some((pattern) => pattern.test(filename)),
+  }
 ,
   async handleNewFile(filePath) {,
     if (this.isChatFile(path.basename(filePath))) {,
       logger.info(`📄 New chat file detected: ${filePath}`),
-      await this.processChatFile(filePath);
-};
+      await this.processChatFile(filePath),
+    }
   }
 ,
   async handleFileChange(filePath) {,
     if (this.isChatFile(path.basename(filePath))) {,
       logger.info(`📝 Chat file changed: ${filePath}`),
-      await this.processChatFile(filePath);
-};
+      await this.processChatFile(filePath),
+    }
   }
 ,
   async handleFileRemoved(filePath) {,
@@ -182,11 +182,11 @@ class CursorChatMonitor extends EventEmitter {,
         await this.saveChatData(chatData),
         this.processedFiles.add(filePath),
         logger.info(`✅ Processed chat file: ${path.basename(filePath)}`),
-        this.emit('chatProcessed', chatData);
-};
+        this.emit('chatProcessed', chatData),
+      }
     } catch (error) {,
-      logger.error(`Error processing chat file ${filePath}:`, error);
-};
+      logger.error(`Error processing chat file ${filePath}:`, error),
+    }
   }
 ,
   parseChatContent(content, filePath) {,
@@ -196,8 +196,8 @@ class CursorChatMonitor extends EventEmitter {,
       return this.extractChatFromJson(jsonData, filePath),
     } catch (error) {,
       // If not JSON, try to parse as text,
-      return this.extractChatFromText(content, filePath);
-};
+      return this.extractChatFromText(content, filePath),
+    }
   }
 ,
   extractChatFromJson(data, filePath) {,
@@ -223,8 +223,8 @@ class CursorChatMonitor extends EventEmitter {,
     } else if (typeof data === 'string') {,
       chat.content = data,
     } else {,
-      chat.content = JSON.stringify(data);
-};
+      chat.content = JSON.stringify(data),
+    }
 ,
     // Extract metadata,
     if (data.metadata) {,
@@ -256,8 +256,8 @@ class CursorChatMonitor extends EventEmitter {,
 ,
   extractTextFromMessages(messages) {,
     if (!Array.isArray(messages)) {,
-      return JSON.stringify(messages);
-};
+      return JSON.stringify(messages),
+    }
 ,
     return messages,
       .map((msg) => {,
@@ -270,31 +270,31 @@ class CursorChatMonitor extends EventEmitter {,
         } else if (msg.message) {,
           return msg.message,
         } else {,
-          return JSON.stringify(msg);
-};
+          return JSON.stringify(msg),
+        }
       }),
-      .join('\n');
-};
+      .join('\n'),
+  }
 ,
   async saveChatData(chatData) {,
     // Add to history,
     this.chatHistory.push(chatData),
     // Limit history size,
     if (this.chatHistory.length > this.config.maxHistorySize) {,
-      this.chatHistory = this.chatHistory.slice(-this.config.maxHistorySize);
-};
+      this.chatHistory = this.chatHistory.slice(-this.config.maxHistorySize),
+    }
 ,
     // Save individual chat file,
     const chatFile = path.join(this.config.outputDir, `${chatData.id}.json`),
     await fs.writeFile(chatFile, JSON.stringify(chatData, null, 2)),
     // Update history file,
-    await this.saveChatHistory();
-};
+    await this.saveChatHistory(),
+  }
 ,
   async saveChatHistory() {,
     const historyFile = path.join(this.config.outputDir, 'chat-history.json'),
-    await fs.writeFile(historyFile, JSON.stringify(this.chatHistory, null, 2));
-};
+    await fs.writeFile(historyFile, JSON.stringify(this.chatHistory, null, 2)),
+  }
 ,
   generateChatId(filePath) {,
     const basename = path.basename(filePath, path.extname(filePath)),
@@ -303,19 +303,19 @@ class CursorChatMonitor extends EventEmitter {,
   }
 ,
   getRecentChats(limit = 10) {,
-    return this.chatHistory.slice(-limit);
-};
+    return this.chatHistory.slice(-limit),
+  }
 ,
   getChatsByDate(startDate, endDate) {,
     return this.chatHistory.filter((chat) => {,
       const chatDate = new Date(chat.timestamp),
       return chatDate >= startDate && chatDate <= endDate,
-    });
-};
+    }),
+  }
 ,
   getChatsBySource(source) {,
-    return this.chatHistory.filter((chat) => chat.source === source);
-};
+    return this.chatHistory.filter((chat) => chat.source === source),
+  }
 ,
   searchChats(query) {,
     const lowerQuery = query.toLowerCase(),
@@ -323,8 +323,8 @@ class CursorChatMonitor extends EventEmitter {,
       (chat) =>,
         chat.content.toLowerCase().includes(lowerQuery) ||,
         chat.filePath.toLowerCase().includes(lowerQuery),
-    );
-};
+    ),
+  }
 ,
   getStatus() {,
     return {,
@@ -362,6 +362,6 @@ if (require.main === module) {,
     logger.info('\n🛑 Shutting down Cursor Chat Monitor...'),
     monitor.stop(),
     process.exit(0),
-  });
-  }
+  }),
+}
 ,

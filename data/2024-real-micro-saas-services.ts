@@ -1,19 +1,17 @@
 import { ServiceVariant } from '../types/service-variants';
-=======
 export interface RealMicroSaasService2024 {
-  id: string,
-  name: string,
-  tagline: string,
-  price: string,
-  variant: string,
-  features: string[],
-  rating: number,
-  customers: string,
+  id: string;
+  name: string;
+  tagline: string;
+  price: string;
+  variant: string;
+  features: string[];
+  rating: number;
+  customers: string;
 }
 
 export const realMicroSaasServices2024: RealMicroSaasService2024[] = [
   {
-=======
     id: 'ai-business-intelligence-pro',
     name: 'AI Business Intelligence Pro',
     tagline: 'Transform data into actionable insights with AI',
@@ -487,7 +485,5 @@ export const realMicroSaasServices2024: RealMicroSaasService2024[] = [
     customers: 1900,
     rating: 4.8,
     reviews: 1050
-=======
   }
-],
-'
+];

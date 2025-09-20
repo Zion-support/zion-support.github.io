@@ -1,11 +1,14 @@
 import React from 'react';
 <<<<<<<< HEAD:temp_broken_pages_all/payment-success.tsx
+<<<<<<< HEAD
 <<<<<<< HEAD:temp_broken_pages_all/payment-success.tsx
+=======
+<<<<<<<< HEAD:temp_broken_pages_all/payment-success.tsx
+>>>>>>> pr-22703
 import { Button } from "@/components/ui/button";
 import { useRouter } from "next/router";, // Changed from useNavigate,
 import { CheckCircle2 } from "lucide-react";
 import { useTranslation } from "react-i18next";
-========
 import { Button, ,  } from '@/components/ui/button';
 import { useRouter,  } from 'next/router', // Changed from useNavigate,
 import { CheckCircle2,  } from 'lucide-react'
@@ -16,6 +19,12 @@ export default function PaymentSuccess() {
   return (
   return (
   const router = null;
+<<<<<<< HEAD
+=======
+import { SEO } from "@/components/SEO";
+
+export default function PaymentSuccess() {
+>>>>>>> pr-22703
   return (
     <>
       <SEO 
@@ -37,8 +46,14 @@ export default function PaymentSuccess() {
       <div className="container mx-auto px-4">
         <h1 className="text-4xl font-bold text-gray-900 mb-6">Payment Successful</h1>
         <p className="text-lg text-gray-600">Your payment was processed successfully...</p>
->>>>>>> 1836dcad4eb858f12251bf809dd3ca83faa1433b:src/pages/payment-success.tsx
       </div>
     </div>
   );
+<<<<<<< HEAD
 }
+=======
+}
+    </>
+  );
+}
+>>>>>>> pr-22703

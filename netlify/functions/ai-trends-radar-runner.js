@@ -54,6 +54,6 @@ exports.handler = async function(event, context) {
         function: 'ai-trends-radar-runner',
         status: 'error'
       })
-    };
+    },
   }
 },

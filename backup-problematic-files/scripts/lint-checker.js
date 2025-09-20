@@ -385,4 +385,4 @@ function checkFile(filePath) {,
             "content": line && line.trim(),
             "file": filePath})})}),
     if (fileIssues && fileIssues.length > 0) {,
-      filesWithIssues++,'
+      filesWithIssues++,

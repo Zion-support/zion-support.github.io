@@ -146,7 +146,7 @@ const BusinessSuccessStoriesShowcase2025PromotionBanner = () => {,
         </div>,
       )}
     </div>,
-  );
-  },
+  ),
+},
 export default BusinessSuccessStoriesShowcase2025PromotionBanner,
 </div></div></div></div></div>,

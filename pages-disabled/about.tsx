@@ -1,7 +1,7 @@
 import React from 'react',
 import Head from 'next/head',
 import Link from 'next/link',
-export default function AboutPage() : any {,
+export default function AboutPage() {,
 	return (,
 		<>,
 			<Head>,
@@ -145,4 +145,4 @@ export default function AboutPage() : any {,
 					</section>,
 				</div>,
 			</main>,
-		</>)}'
+		</>)}

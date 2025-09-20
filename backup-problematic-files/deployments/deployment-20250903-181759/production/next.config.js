@@ -87,7 +87,7 @@ const next_config = {,
           { key: 'Referrer - Policy', value: 'origin - when - cross - origin' }
         ],
       }
-    ];
+    ],
   }
 }
 export default next_config,

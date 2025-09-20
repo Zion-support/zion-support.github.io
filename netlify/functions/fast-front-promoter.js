@@ -54,6 +54,6 @@ exports.handler = async function(event, context) {
         function: 'fast-front-promoter',
         status: 'error'
       })
-    };
+    },
   }
 },

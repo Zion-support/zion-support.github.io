@@ -61,7 +61,7 @@ export const CategoriesSection = () => {
     { name: 'Cloud Solutions', icon: '☁️', color: 'from-blue-500 to-cyan-500' },
     { name: 'Cybersecurity', icon: '🔒', color: 'from-red-500 to-orange-500' },
     { name: 'Data Analytics', icon: '📊', color: 'from-green-500 to-teal-500' }
-  ],
+  ];
 
   return (
     <div className="py-16 bg-white">
@@ -87,7 +87,7 @@ export const CategoriesSection = () => {
       </div>
     </div>
   );
-  };
+};
 `,
     
     'src/components/BenefitsSection.tsx': `import React from 'react';
@@ -116,7 +116,7 @@ export const BenefitsSection = () => {
       title: 'Quality Assurance',
       description: 'Rigorous testing and quality control processes'
     }
-  ],
+  ];
 
   return (
     <div className="py-16 bg-gray-50">
@@ -143,7 +143,7 @@ export const BenefitsSection = () => {
                 <p className="text-gray-600">{benefit.description}</p>
               </motion.div>
             );
-  })}
+          })}
         </div>
       </div>
     </div>
@@ -177,7 +177,7 @@ export const HowItWorksSection = () => {
       title: 'Support',
       description: 'Ongoing maintenance and continuous optimization'
     }
-  ],
+  ];
 
   return (
     <div className="py-16 bg-white">
@@ -213,7 +213,7 @@ export const HowItWorksSection = () => {
       </div>
     </div>
   );
-  };
+};
 `,
     
     'src/components/FeaturedListingsSection.tsx': `import React from 'react';
@@ -246,7 +246,7 @@ export const FeaturedListingsSection = () => {
       price: 2500,
       category: 'Security'
     }
-  ],
+  ];
 
   return (
     <div className="py-16 bg-gray-50">
@@ -288,7 +288,7 @@ export const FeaturedListingsSection = () => {
       </div>
     </div>
   );
-  };
+};
 `,
     
     'src/components/HeroSection.tsx': `import React from 'react';
@@ -337,15 +337,15 @@ export const HeroSection = () => {
       </div>
     </div>
   );
-  };
+};
 `,
     
     'src/components/SEO.tsx': `import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
 interface SEOProps {
-  title: string,
-  description: string,
+  title: string;
+  description: string;
   canonical?: string;
   url?: string;
   image?: string;
@@ -357,7 +357,7 @@ export const SEO: React.FC<SEOProps> = ({ title, description, canonical, url, im
       <title>{title}</title>
       <meta name="description" content={description} />
       <link rel="canonical" href={canonical || url} />
-      <meta property="og: title" content={title} />
+      <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
       <meta property="og:url" content={url} />
       <meta property="og:image" content={image || '/og-image.jpg'} />
@@ -366,7 +366,7 @@ export const SEO: React.FC<SEOProps> = ({ title, description, canonical, url, im
       <meta name="twitter:description" content={description} />
     </Helmet>
   );
-  };
+};
 `
   };
   
@@ -376,9 +376,10 @@ export const SEO: React.FC<SEOProps> = ({ title, description, canonical, url, im
     
     if (!fs.existsSync(dir)) {
       fs.mkdirSync(dir, { recursive: true });
-};
+    }
+    
     fs.writeFileSync(fullPath, content);
-    console.log(`✅ Created component: ${filePath}`),
+    console.log(`✅ Created component: ${filePath}`);
   });
 };
 
@@ -476,9 +477,10 @@ const createMissingData = () => {
     
     if (!fs.existsSync(dir)) {
       fs.mkdirSync(dir, { recursive: true });
-};
+    }
+    
     fs.writeFileSync(fullPath, content);
-    console.log(`✅ Created data file: ${filePath}`),
+    console.log(`✅ Created data file: ${filePath}`);
   });
 };
 
@@ -496,7 +498,7 @@ export const QuickAccess = () => {
     { name: 'Team', icon: Users, href: '/team', color: 'from-blue-500 to-cyan-500' },
     { name: 'Security', icon: Shield, href: '/security', color: 'from-green-500 to-teal-500' },
     { name: 'Cloud', icon: Cloud, href: '/services?category=cloud', color: 'from-orange-500 to-red-500' }
-  ],
+  ];
 
   return (
     <div className="py-16 bg-white">
@@ -525,7 +527,7 @@ export const QuickAccess = () => {
                 </Link>
               </motion.div>
             );
-  })}
+          })}
         </div>
       </div>
     </div>
@@ -560,7 +562,7 @@ export const FeatureCTAs = () => {
       href: '/contact',
       color: 'bg-purple-600 hover:bg-purple-700'
     }
-  ],
+  ];
 
   return (
     <div className="py-16 bg-gray-50">
@@ -590,7 +592,7 @@ export const FeatureCTAs = () => {
                 </Link>
               </motion.div>
             );
-  })}
+          })}
         </div>
       </div>
     </div>
@@ -633,7 +635,7 @@ export const FeatureHighlights = () => {
       title: 'Proven Results',
       description: 'Track record of successful project deliveries'
     }
-  ],
+  ];
 
   return (
     <div className="py-16 bg-white">
@@ -660,7 +662,7 @@ export const FeatureHighlights = () => {
                 <p className="text-gray-600">{feature.description}</p>
               </motion.div>
             );
-  })}
+          })}
         </div>
       </div>
     </div>
@@ -711,7 +713,7 @@ export const ITServiceRequestHero = () => {
       </div>
     </div>
   );
-  };`
+};`
   };
   
   Object.entries(homeComponents).forEach(([filePath, content]) => {
@@ -720,9 +722,10 @@ export const ITServiceRequestHero = () => {
     
     if (!fs.existsSync(dir)) {
       fs.mkdirSync(dir, { recursive: true });
-};
+    }
+    
     fs.writeFileSync(fullPath, content);
-    console.log(`✅ Created home component: ${filePath}`),
+    console.log(`✅ Created home component: ${filePath}`);
   });
 };
 
@@ -770,7 +773,7 @@ export const FloatingCTA = () => {
       </motion.div>
     </AnimatePresence>
   );
-  };`,
+};`,
     
     'src/components/ServicesShowcase.tsx': `import React from 'react';
 import { motion } from 'framer-motion';
@@ -796,7 +799,7 @@ export const ServicesShowcase = () => {
       rating: 4.7,
       price: 8000
     }
-  ],
+  ];
 
   return (
     <div className="py-16 bg-gray-50">
@@ -833,7 +836,7 @@ export const ServicesShowcase = () => {
       </div>
     </div>
   );
-  };`
+};`
   };
   
   Object.entries(otherComponents).forEach(([filePath, content]) => {
@@ -842,9 +845,10 @@ export const ServicesShowcase = () => {
     
     if (!fs.existsSync(dir)) {
       fs.mkdirSync(dir, { recursive: true });
-};
+    }
+    
     fs.writeFileSync(fullPath, content);
-    console.log(`✅ Created component: ${filePath}`),
+    console.log(`✅ Created component: ${filePath}`);
   });
 };
 
@@ -874,7 +878,7 @@ createOtherComponents();
 installDependencies();
 
 console.log('🎉 Comprehensive improvements completed!');
-console.log('📊 Next steps: '),
+console.log('📊 Next steps:');
 console.log('1. Run "npm install" to install dependencies');
 console.log('2. Run "npm run build" to test the build');
-console.log('3. Run "npm run dev" to start development server');'
+console.log('3. Run "npm run dev" to start development server');

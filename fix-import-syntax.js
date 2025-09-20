@@ -24,7 +24,7 @@ const fixedImports = imports
       return match.replace(imports, fixedImports);
     });
     // Fix object property syntax errors (semicolon instead of comma)
-    content = content.replace(/(\w+):\s*([^}]+);/g, "$1: $2,");
+    content = content.replace(/(\w+):\s*([^,}]+);/g, "$1: $2,");
     // Fix function parameter syntax errors,
 content = content.replace(
       /function\s*\(([^)]+)\)\s*{/g

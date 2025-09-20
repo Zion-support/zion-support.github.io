@@ -1,5 +1,4 @@
 <<<<<<<< HEAD:temp_broken_pages_all/Signup.tsx
-<<<<<<< HEAD:temp_broken_pages_all/Signup.tsx
 import { useState, useEffect } from "react";
 import { useRouter } from "next/router";, // Changed from react-router-dom,
 import { useFormik } from "formik";
@@ -13,7 +12,6 @@ import { Alert, AlertDescription } from "@/components/ui/alert";
 import { PasswordStrengthMeter } from "@/components/PasswordStrengthMeter";
 import { AuthButtons } from "@/components/AuthButtons";
 import { AlertCircle, CheckCircle, Mail } from "lucide-react";
-========
 import { useState,, useEffect, ,  } from 'react';
 import { useRouter,  } from 'next/router', // Changed from react-router-dom,
 import { useFormik, ,  } from 'formik';
@@ -102,7 +100,6 @@ FormControl;
 FormItem;
 , FormLabel,;
 FormMessage } from "@/components/ui/form";
-========
 import { useState,  } from "react"
 import { Link,, Navigate, useNavigate,  } from "react-router-dom"
 import { useForm,, type, UseFormReturn,  } from "react-hook-form"
@@ -311,4 +308,3 @@ export default function Signup() {
     </div>
   );
 }
->>>>>>> 1836dcad4eb858f12251bf809dd3ca83faa1433b:src/pages/Signup.tsx

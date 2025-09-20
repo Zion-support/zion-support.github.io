@@ -469,4 +469,4 @@ export const revolutionaryAIServices2029: RevolutionaryAIService[] = [
     rating: 4.7,
     reviews: 43
   }
-],'
+],

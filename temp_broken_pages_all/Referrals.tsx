@@ -1,7 +1,6 @@
 import React from 'react';
 
 <<<<<<<< HEAD:temp_broken_pages_all/Referrals.tsx
-<<<<<<< HEAD:temp_broken_pages_all/Referrals.tsx
 import { useEffect } from "react";
 import { useAuth } from "@/hooks/useAuth";
 import { useReferrals } from "@/hooks/useReferrals";
@@ -24,7 +23,10 @@ CardHeader;
 , CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { useRouter } from "next/router"; // Changed from useNavigate,
+<<<<<<< HEAD
 ========
+=======
+>>>>>>> pr-22703
 import { useEffect, ,  } from 'react';
 import { useAuth, ,  } from '@/hooks/useAuth';
 import { useReferrals, ,  } from '@/hooks/useReferrals';
@@ -149,5 +151,30 @@ export default function Referrals() {
       </div>
     </div>
   );
+<<<<<<< HEAD
 >>>>>>> 1836dcad4eb858f12251bf809dd3ca83faa1433b:src/pages/Referrals.tsx
 }
+=======
+}
+import { SEO } from "@/components/SEO";
+
+export default function Referrals() {
+  return (
+    <>
+      <SEO 
+        title="Referrals - Zion Tech Group"
+        description="Page description"
+        keywords="keywords"
+      />
+      <div className="min-h-screen bg-zion-blue pt-24 pb-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center">
+            <h1 className="text-3xl font-bold text-white mb-4">Referrals</h1>
+            <p className="text-zion-slate-light text-lg">Coming soon...</p>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+}
+>>>>>>> pr-22703

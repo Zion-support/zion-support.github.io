@@ -15,15 +15,15 @@ try {,
     console && console.log('✅ Git repository detected'),
 } catch (error) {,
     console && console.error('❌ Not in a git repository'),
-    process && process.exit(1);
-};
+    process && process.exit(1),
+}
 try {,
     // Ensure clean working directory,
     const status = execSync('git status --porcelain', { encoding: 'utf8' }),
     if (status && status.trim()) {,
         console && console.log('⚠️  Working directory has changes. Stashing...'),
-        execSync('git stash push -m "Auto-stash before merge process"');
-};
+        execSync('git stash push -m "Auto-stash before merge process"'),
+    }
     // Fetch latest changes,
     console && console.log('📥 Fetching latest changes...'),
     execSync('git fetch --all --prune'),
@@ -59,8 +59,8 @@ try {,
     console.log ('✅ Git repository detected'),
 } catch (error) {,
     console.error ('❌ Not in a git repository'),
-    process.exit (1);
-};
+    process.exit (1),
+}
 try {,
     // Ensure clean working directory,
     const status = exec_sync ('git status --porcelain', { encoding: 'utf8' }),
@@ -69,8 +69,8 @@ try {,
 }
 ,
         console.log ('⚠️  Working directory has changes. Stashing...'),
-        exec_sync ('git stash push -m "Auto - stash before merge process"');
-};
+        exec_sync ('git stash push -m "Auto - stash before merge process"'),
+    }
     // Fetch latest changes,
     console.log ('📥 Fetching latest changes...'),
     exec_sync ('git fetch --all --prune'),
@@ -113,10 +113,10 @@ try {,
                     try {,
                         exec_sync (`git checkout --ours "${file}"`),
                     } catch (e) {,
-                        exec_sync (`git checkout --theirs "${file}"`);
-};
-                    exec_sync (`git add "${file}"`);
-};
+                        exec_sync (`git checkout --theirs "${file}"`),
+                    }
+                    exec_sync (`git add "${file}"`),
+                }
             }
 ,
     const branchList = branches && branches.split('\n'),

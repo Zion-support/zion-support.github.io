@@ -1,44 +1,44 @@
 import { ServiceVariant } from '../types/service-variants';
 
 export interface UltimateRealMicroSaasService {
-  id: string,
-  name: string,
-  tagline: string,
-  price: string,
-  period: string,
-  description: string,
-  features: string[],
-  popular: boolean,
-  icon: string,
-  color: string,
-  textColor: string,
-  link: string,
-  marketPosition: string,
-  targetAudience: string,
-  trialDays: number,
-  setupTime: string,
-  category: string,
-  realService: boolean,
-  technology: string[],
-  integrations: string[],
-  useCases: string[],
-  roi: string,
-  competitors: string[],
-  marketSize: string,
-  growthRate: string,
-  variant: string,
+  id: string;
+  name: string;
+  tagline: string;
+  price: string;
+  period: string;
+  description: string;
+  features: string[];
+  popular: boolean;
+  icon: string;
+  color: string;
+  textColor: string;
+  link: string;
+  marketPosition: string;
+  targetAudience: string;
+  trialDays: number;
+  setupTime: string;
+  category: string;
+  realService: boolean;
+  technology: string[];
+  integrations: string[];
+  useCases: string[];
+  roi: string;
+  competitors: string[];
+  marketSize: string;
+  growthRate: string;
+  variant: string;
   contactInfo: {
-    mobile: string,
-    email: string,
-    address: string,
-    website: string,
+    mobile: string;
+    email: string;
+    address: string;
+    website: string;
   };
-  realImplementation: boolean,
-  implementationDetails: string,
-  launchDate: string,
-  customers: number,
-  rating: number,
-  reviews: number,
+  realImplementation: boolean;
+  implementationDetails: string;
+  launchDate: string;
+  customers: number;
+  rating: number;
+  reviews: number;
 }
 
 export const ultimateRealMicroSaasServices2025: UltimateRealMicroSaasService[] = [
@@ -650,7 +650,7 @@ export const ultimateRealMicroSaasServices2025: UltimateRealMicroSaasService[] =
     color: 'from-emerald-600 to-green-700',
     textColor: 'text-emerald-400',
     link: 'https://ziontechgroup.com/domain-dns-monitor',
-    marketPosition: 'Comparable to basic DNS monitoring tools, advantage: portfolio and DNSSEC focus.',
+    marketPosition: 'Comparable to basic DNS monitoring tools; advantage: portfolio and DNSSEC focus.',
     targetAudience: 'Ops, SRE, MSPs, domain managers',
     trialDays: 7,
     setupTime: '30 minutes',
@@ -924,7 +924,7 @@ export const ultimateRealMicroSaasServices2025: UltimateRealMicroSaasService[] =
     technology: ['OpenTelemetry, Prometheus, Grafana, Next.js'],
     integrations: ['Datadog, Prometheus, Grafana, Slack'],
     useCases: ['Latency SLOs, Error budgets, Reliability reporting'],
-    roi: 'Keep reliability promises while moving fast, prevent alert fatigue.',
+    roi: 'Keep reliability promises while moving fast; prevent alert fatigue.',
     competitors: ['Nobl9', 'Datadog SLO', 'Lightstep'],
     marketSize: '$1.2B SRE tooling market',
     growthRate: '20% annual growth',
@@ -995,4 +995,4 @@ export const ultimateRealMicroSaasServices2025: UltimateRealMicroSaasService[] =
     rating: 4.6,
     reviews: 66
   }
-],
+];

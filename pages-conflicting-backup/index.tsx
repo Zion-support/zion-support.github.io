@@ -1,6 +1,6 @@
 import Head from 'next/head';
 
-export default function Home() : any {
+export default function Home() {
 	return (
 		<div>
 			<Head>
@@ -13,4 +13,4 @@ export default function Home() : any {
 			</main>
 		</div>
 	);
-  }
+}

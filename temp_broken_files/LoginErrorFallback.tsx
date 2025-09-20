@@ -11,5 +11,5 @@ const function LoginErrorFallback({ error, resetErrorBoundary }: LoginErrorFallb
     </div>,
   ),
 },
-export default function LoginErrorFallback({ error, resetErrorBoundary }: LoginErrorFallbackProps) {;
-  }}}
+export default function LoginErrorFallback({ error, resetErrorBoundary }: LoginErrorFallbackProps) {,
+}}}

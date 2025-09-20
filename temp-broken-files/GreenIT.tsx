@@ -1,12 +1,10 @@
 import React from 'react';
 
 <<<<<<<< HEAD:temp_broken_pages_all/GreenIT.tsx
-<<<<<<< HEAD:temp_broken_pages_all/GreenIT.tsx
 import { SEO } from "@/components/SEO";,
 import { GradientHeading } from "@/components/GradientHeading";,
 import { Button } from "@/components/ui/button";
 import { Leaf, Server, Cloud } from "lucide-react";
-========
 import { SEO,  } from "@/components/SEO",
 import { GradientHeading,  } from "@/components/GradientHeading",
 import { Button,  } from "@/components/ui/button";
@@ -989,7 +987,6 @@ export default function GreenIT() {
         <h1 className="text-4xl font-bold text-gray-900 mb-6">GreenIT</h1>
         <p className="text-lg text-gray-600">Coming soon...</p>
       </div>
->>>>>>> 1836dcad4eb858f12251bf809dd3ca83faa1433b:src/pages/GreenIT.tsx
     </div>
   );
 }

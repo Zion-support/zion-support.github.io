@@ -19,7 +19,7 @@ const contactInfo = {
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-},
+};
 
 const allServices = [
   ...innovativeNewMicroSaasServices2025,
@@ -57,9 +57,9 @@ const serviceCategories = [
     color: 'from-emerald-500 to-teal-600',
     description: 'AI-powered business intelligence and automation'
   }
-],
+];
 
-const ServiceCard = ({ service, index }: { service: any, index: number }) => (
+const ServiceCard = ({ service, index }: { service: any; index: number }) => (
   <motion.div
     initial={{ opacity: 0, y: 50 }}
     animate={{ opacity: 1, y: 0 }}
@@ -139,9 +139,9 @@ const ServiceCard = ({ service, index }: { service: any, index: number }) => (
       <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
     </Link>
   </motion.div>
-),
+);
 
-const CategorySection = ({ category, index }: { category: any, index: number }) => (
+const CategorySection = ({ category, index }: { category: any; index: number }) => (
   <motion.section
     initial={{ opacity: 0, y: 50 }}
     animate={{ opacity: 1, y: 0 }}
@@ -170,7 +170,7 @@ const CategorySection = ({ category, index }: { category: any, index: number }) 
       ))}
     </div>
   </motion.section>
-),
+);
 
 const HeroSection = () => (
   <section className="relative py-20 overflow-hidden">
@@ -242,11 +242,11 @@ const HeroSection = () => (
       </motion.div>
     </div>
   </section>
-),
+);
 
 const ContactSection = () => (
   <section className="py-20 bg-gradient-to-br from-gray-900 to-black">
-    <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div className="text-center mb-16">
         <h2 className="text-4xl font-bold text-white mb-4">
           Ready to Transform Your Business?
@@ -287,9 +287,9 @@ const ContactSection = () => (
       </div>
     </div>
   </section>
-),
+);
 
-export default function ComprehensiveNewServicesShowcase2025() : any {
+export default function ComprehensiveNewServicesShowcase2025() {
   return (
     <Layout>
       <Head>

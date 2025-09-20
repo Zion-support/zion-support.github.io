@@ -549,14 +549,14 @@ class ComprehensiveWebsiteAnalyzer {,
     const solutionRoutes = ['/enterprise/ai-business-intelligence/quantum-ai-platform/digital-twin',
       '/zero-trust-security'
     ],
-      await this.checkUrl(`${this.baseUrl}/solutions${solutionRoute}`);
-};
+      await this.checkUrl(`${this.baseUrl}/solutions${solutionRoute}`),
+    }
       await this.checkUrl(`${this.baseUrl}/solutions${solutionRoute}`)}
     // Check about sub-routes,
     const aboutRoutes = ['/story/team'],
     for (const aboutRoute of aboutRoutes) {,
-      await this.checkUrl(`${this.baseUrl}/about${aboutRoute}`);
-};
+      await this.checkUrl(`${this.baseUrl}/about${aboutRoute}`),
+    }
 ,
     // Check resources sub-routes,
     const resourceRoutes = ['/blog/case-studies/research-development/docs',
@@ -786,9 +786,9 @@ if: (require && require.main === module) {,
           "action": 'Create missing page',
           "priority": 'high'
         }))
-      });
-};
-    return recommendations;
+      }),
+    }
+    return recommendations,
   }
       })}
     return recommendations}

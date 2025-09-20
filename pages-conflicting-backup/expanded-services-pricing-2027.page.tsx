@@ -40,15 +40,15 @@ const ExpandedServicesPricingGuide2027: NextPage = () => {
   const resetFilters = () => {
     setSearchTerm(''),
     setSelectedCategory('all'),
-    setSelectedSubcategory('all');
+    setSelectedSubcategory('all'),
   },
 
-  const getMarketPositionColor = (position: string) : any => {
+  const getMarketPositionColor = (position: string) => {
     switch (position) {
-      case 'leader': return 'bg-green-600';
-      case 'challenger': return 'bg-blue-600';
-      case 'niche': return 'bg-purple-600';
-      case 'emerging': return 'bg-yellow-600';
+      case 'leader': return 'bg-green-600',
+      case 'challenger': return 'bg-blue-600',
+      case 'niche': return 'bg-purple-600',
+      case 'emerging': return 'bg-yellow-600',
       default: return 'bg-gray-600'
     }
   },
@@ -109,10 +109,10 @@ const ExpandedServicesPricingGuide2027: NextPage = () => {
             
             <select
               value={selectedCategory}
-              onChange={(e) : any => {
+              onChange={(e) => {
                 setSelectedCategory(e.target.value),
-                setSelectedSubcategory('all');
-  }}
+                setSelectedSubcategory('all'),
+              }}
               className="px-4 py-2 rounded-lg bg-white/20 text-white border border-white/30 focus:outline-none focus:ring-2 focus:ring-blue-400"
             >
               {categories.map(cat => (

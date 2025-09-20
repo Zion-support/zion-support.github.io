@@ -1,44 +1,44 @@
 import { ServiceVariant } from '../types/service-variants';
 
 export interface CuttingEdgeAIService {
-  id: string,
-  name: string,
-  tagline: string,
-  price: string,
-  period: string,
-  description: string,
-  features: string[],
-  popular: boolean,
-  icon: string,
-  color: string,
-  textColor: string,
-  link: string,
-  marketPosition: string,
-  targetAudience: string,
-  trialDays: number,
-  setupTime: string,
-  category: string,
-  realService: boolean,
-  technology: string[],
-  integrations: string[],
-  useCases: string[],
-  roi: string,
-  competitors: string[],
-  marketSize: string,
-  growthRate: string,
-  variant: string,
+  id: string;
+  name: string;
+  tagline: string;
+  price: string;
+  period: string;
+  description: string;
+  features: string[];
+  popular: boolean;
+  icon: string;
+  color: string;
+  textColor: string;
+  link: string;
+  marketPosition: string;
+  targetAudience: string;
+  trialDays: number;
+  setupTime: string;
+  category: string;
+  realService: boolean;
+  technology: string[];
+  integrations: string[];
+  useCases: string[];
+  roi: string;
+  competitors: string[];
+  marketSize: string;
+  growthRate: string;
+  variant: string;
   contactInfo: {
-    mobile: string,
-    email: string,
-    address: string,
-    website: string,
+    mobile: string;
+    email: string;
+    address: string;
+    website: string;
   };
-  realImplementation: boolean,
-  implementationDetails: string,
-  launchDate: string,
-  customers: number,
-  rating: number,
-  reviews: number,
+  realImplementation: boolean;
+  implementationDetails: string;
+  launchDate: string;
+  customers: number;
+  rating: number;
+  reviews: number;
 }
 
 export const cuttingEdgeAIServices2025: CuttingEdgeAIService[] = [
@@ -47,16 +47,13 @@ export const cuttingEdgeAIServices2025: CuttingEdgeAIService[] = [
     id: 'ai-quantum-financial-trading',
     name: 'AI Quantum Financial Trading Platform',
     tagline: 'Revolutionary AI-powered quantum trading with predictive market intelligence',
-=======
     tagline: 'Revolutionary AI-powered quantum trading with predictive market analysis',
-=======
     tagline: 'Revolutionary AI-powered quantum trading with predictive market analysis',
     price: '$2,999',
     period: '/month',
     description: 'Advanced AI platform combining quantum computing algorithms with machine learning for ultra-fast, predictive financial trading across global markets.',
     features: [
       'Quantum-enhanced market prediction algorithms',
-=======
       'Real-time global market analysis',
       'AI-powered risk management',
       'Automated portfolio optimization',
@@ -75,15 +72,12 @@ export const cuttingEdgeAIServices2025: CuttingEdgeAIService[] = [
       'API for institutional integration',
       '24/7 market monitoring',
       'Custom strategy development'
-=======
-=======
     ],
     popular: true,
     icon: '🚀',
     color: 'from-purple-600 to-indigo-600',
     textColor: 'text-purple-400',
     link: 'https://ziontechgroup.com/ai-quantum-financial-trading',
-=======
     marketPosition: 'Competes with Bloomberg Terminal ($24,000/year), TradingView Pro ($29.95/month). Our advantage: Quantum AI algorithms provide 40% better prediction accuracy.',
     targetAudience: 'Hedge funds, Investment banks, Professional traders, Financial institutions, High-frequency trading firms',
     trialDays: 7,
@@ -103,9 +97,7 @@ export const cuttingEdgeAIServices2025: CuttingEdgeAIService[] = [
     marketSize: '$45.2B financial technology market',
     growthRate: '22% annual growth',
     variant: 'ai-quantum-trading-enterprise',
-=======
     realService: true,
-=======
     realService: true,
     technology: ['Python, TensorFlow, Quantum Computing APIs, React, PostgreSQL, Redis, Docker, Kubernetes'],
     integrations: ['Bloomberg, Reuters, Interactive Brokers, TD Ameritrade, E*TRADE, MetaTrader, TradingView'],
@@ -122,7 +114,6 @@ export const cuttingEdgeAIServices2025: CuttingEdgeAIService[] = [
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
-=======
     implementationDetails: 'Cloud-native platform with quantum computing integration, real-time data processing, and AI-powered trading algorithms.',
     launchDate: '2024-12-01',
     customers: 28,
@@ -133,15 +124,12 @@ export const cuttingEdgeAIServices2025: CuttingEdgeAIService[] = [
     customers: 12,
     rating: 4.9,
     reviews: 8
-=======
-=======
   },
 
   // AI-Powered Healthcare Diagnostics
   {
     id: 'ai-healthcare-diagnostics-platform',
     name: 'AI Healthcare Diagnostics Platform',
-=======
     tagline: 'Revolutionary AI-powered medical diagnostics with 99.7% accuracy',
     price: '$1,499',
     period: '/month',
@@ -172,15 +160,12 @@ export const cuttingEdgeAIServices2025: CuttingEdgeAIService[] = [
       'Real-time diagnostic assistance',
       'Performance analytics and reporting',
       'Custom model training capabilities'
-=======
-=======
     ],
     popular: true,
     icon: '🏥',
     color: 'from-green-600 to-emerald-600',
     textColor: 'text-green-400',
     link: 'https://ziontechgroup.com/ai-healthcare-diagnostics',
-=======
     marketPosition: 'Competes with IBM Watson Health ($50,000/year), Google Cloud Healthcare API ($0.50/1000 API calls). Our advantage: 99.7% diagnostic accuracy vs industry average of 85%.',
     targetAudience: 'Hospitals, Medical clinics, Diagnostic centers, Radiologists, Healthcare providers',
     trialDays: 14,
@@ -209,8 +194,6 @@ export const cuttingEdgeAIServices2025: CuttingEdgeAIService[] = [
     marketSize: '$38.7B medical AI market',
     growthRate: '28% annual growth',
     variant: 'ai-healthcare-enterprise',
-=======
-=======
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -218,7 +201,6 @@ export const cuttingEdgeAIServices2025: CuttingEdgeAIService[] = [
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
-=======
     implementationDetails: 'HIPAA-compliant cloud platform with advanced AI algorithms for medical image analysis and diagnostic support.',
     launchDate: '2024-11-15',
     customers: 42,
@@ -229,15 +211,12 @@ export const cuttingEdgeAIServices2025: CuttingEdgeAIService[] = [
     customers: 28,
     rating: 4.8,
     reviews: 15
-=======
-=======
   },
 
   // AI-Powered Autonomous Manufacturing
   {
     id: 'ai-autonomous-manufacturing-platform',
     name: 'AI Autonomous Manufacturing Platform',
-=======
     tagline: 'Revolutionary AI-powered autonomous manufacturing with predictive maintenance',
     price: '$3,999',
     period: '/month',
@@ -268,15 +247,12 @@ export const cuttingEdgeAIServices2025: CuttingEdgeAIService[] = [
       'Workforce productivity analytics',
       'Custom automation workflows',
       'Integration with MES/ERP systems'
-=======
-=======
     ],
     popular: true,
     icon: '🏭',
     color: 'from-blue-600 to-cyan-600',
     textColor: 'text-blue-400',
     link: 'https://ziontechgroup.com/ai-autonomous-manufacturing',
-=======
     marketPosition: 'Competes with Siemens Mindsphere ($50,000/year), GE Predix ($100,000/year). Our advantage: 60% reduction in downtime and 45% improvement in efficiency.',
     targetAudience: 'Manufacturing companies, Industrial plants, Automotive manufacturers, Electronics manufacturers, Chemical plants',
     trialDays: 21,
@@ -305,8 +281,6 @@ export const cuttingEdgeAIServices2025: CuttingEdgeAIService[] = [
     marketSize: '$67.8B industrial IoT market',
     growthRate: '25% annual growth',
     variant: 'ai-manufacturing-enterprise',
-=======
-=======
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -314,7 +288,6 @@ export const cuttingEdgeAIServices2025: CuttingEdgeAIService[] = [
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
-=======
     implementationDetails: 'Industrial-grade AI platform with IoT integration, predictive analytics, and autonomous manufacturing capabilities.',
     launchDate: '2024-10-01',
     customers: 35,
@@ -367,14 +340,11 @@ export const cuttingEdgeAIServices2025: CuttingEdgeAIService[] = [
       'Custom security policies',
       'Integration with SIEM systems',
       '24/7 security monitoring'
-=======
-=======
     ],
     popular: true,
     icon: '🔒',
     color: 'from-red-600 to-pink-600',
     textColor: 'text-red-400',
-=======
     link: 'https://ziontechgroup.com/ai-cybersecurity-threat-intelligence',
     marketPosition: 'Competes with CrowdStrike ($8.99/user/month), Palo Alto Networks ($50,000/year). Our advantage: 95% threat detection accuracy with 0% false positives.',
     targetAudience: 'Enterprises, Government agencies, Financial institutions, Healthcare organizations, Educational institutions',
@@ -405,8 +375,6 @@ export const cuttingEdgeAIServices2025: CuttingEdgeAIService[] = [
     marketSize: '$182.3B cybersecurity market',
     growthRate: '18% annual growth',
     variant: 'ai-cybersecurity-enterprise',
-=======
-=======
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -414,7 +382,6 @@ export const cuttingEdgeAIServices2025: CuttingEdgeAIService[] = [
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
-=======
     implementationDetails: 'Enterprise-grade cybersecurity platform with AI-powered threat detection and automated incident response.',
     launchDate: '2024-09-01',
     customers: 67,
@@ -487,10 +454,8 @@ export const cuttingEdgeAIServices2025: CuttingEdgeAIService[] = [
     marketSize: '$89.1B education technology market',
     growthRate: '20% annual growth',
     variant: 'ai-education-enterprise',
-=======
     ],
     popular: true,
-=======
     ],
     popular: true,
     icon: '✍️',
@@ -518,7 +483,6 @@ export const cuttingEdgeAIServices2025: CuttingEdgeAIService[] = [
       website: 'https://ziontechgroup.com'
     },
     realImplementation: true,
-=======
     implementationDetails: 'Cloud-native content creation platform with advanced AI models and multi-format content generation capabilities.',
     launchDate: '2024-08-01',
     customers: 156,
@@ -529,7 +493,5 @@ export const cuttingEdgeAIServices2025: CuttingEdgeAIService[] = [
     customers: 42,
     rating: 4.8,
     reviews: 28
-=======
-=======
   }
-],
+];

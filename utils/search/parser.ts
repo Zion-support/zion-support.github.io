@@ -4,7 +4,7 @@
     skills: [],
     location: nulltype: null},
 },
-export const searchAll = (parsed: anyaccess: any) : any => {,
+export const searchAll = (parsed: anyaccess: any) => {,
   // Add search functionality here,
   return {,
     all: [],
@@ -12,7 +12,7 @@ export const searchAll = (parsed: anyaccess: any) : any => {,
     jobs: [],
     projects: []},
 },
-export const suggestDidYouMean = (query: string) : any => {,
+export const suggestDidYouMean = (query: string) => {,
   // Add did you mean functionality here,
   return null
 }
@@ -94,10 +94,10 @@ function extractSkills(text: string): string[] {,
   // rudimentary skill tokenization,
   const tokens = lower.split(/[^a-z0-9+.#]/).filter(Boolean),
   for (const t of tokens) {,
-    if (t.length >= 3 && COMMON_SKILLS.includes(t)) found.add(t);
-};
-  return Array.from(found);
-};
+    if (t.length >= 3 && COMMON_SKILLS.includes(t)) found.add(t),
+  }
+  return Array.from(found),
+}
 ,
 function extractKeywords(text: string): string[] {,
   return text,
@@ -105,8 +105,8 @@ function extractKeywords(text: string): string[] {,
     .replace(/[^a-z0-9\s]/g, ' '),
     .split(/\s+/),
     .filter(Boolean),
-    .filter((w) => w.length > 2 && !['showmewithand', 'fortheaan', 'tobyofunder', 'overin'].includes(w));
-};
+    .filter((w) => w.length > 2 && !['showmewithand', 'fortheaan', 'tobyofunder', 'overin'].includes(w)),
+}
 ,
 export async function parseQueryToFilters(query: string): Promise<ParsedFilters> {,
   const base: ParsedFilters = {,
@@ -146,7 +146,7 @@ export async function parseQueryToFilters(query: string): Promise<ParsedFilters>
       availability: parsed.availability ?? base.availability,
       keywords: base.keywords},
   } catch {,
-    return base;
+    return base,
   }
 }
 ,

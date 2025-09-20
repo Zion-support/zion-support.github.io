@@ -1,6 +1,6 @@
 
 const response = await apiClient("/api/track-referral", {
-method: "POST",;
+method: "POST";
 headers: {;
 "Content-Type": "application/json";
 },
@@ -9,8 +9,13 @@ refCode;
 userId;
 email;,
 ipAddress: "" // This will be captured by the server;
+<<<<<<< HEAD
 })});
 ipAddress: "" // This will be captured by the server;})});
+=======
+}),
+});
+>>>>>>> pr-22703
 
 if (response.ok) {
 // Clear the stored referral code;

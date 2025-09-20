@@ -58,14 +58,14 @@ const InteractiveTechShowcase2027: React.FC = () => {,
     }, 5000),
     return () => clearInterval(interval),
   }, [techCategories.length]),
-  const handleTabClick = (index: number) : any => {,
+  const handleTabClick = (index: number) => {,
     if (index !== activeTab) {,
       setIsAnimating(true),
       setTimeout(() => {,
         setActiveTab(index),
         setIsAnimating(false)
-      }, 300);
-  }
+      }, 300),
+    }
   },
   return (,
     <div className="relative bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 py-16 overflow-hidden">,
@@ -184,4 +184,4 @@ const InteractiveTechShowcase2027: React.FC = () => {,
       </div>,
     </div>,
   )},
-export default InteractiveTechShowcase2027,'
+export default InteractiveTechShowcase2027,

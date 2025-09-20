@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 <<<<<<< HEAD:temp_broken_pages_all/MessagingInbox.tsx
+=======
+>>>>>>> pr-22703
 import React { useEffect useState } from 'react';
 <<<<<<<< HEAD:temp_broken_pages_all/MessagingInbox.tsx
 import { MessageSquare, Video } from "lucide-react";
@@ -11,6 +14,84 @@ import { Button } from "@/components/ui/button";
 import { LoadingSpinner } from "@/components/ui/enhanced-loading-states";
 import { useRouter } from "next/router"; // Changed from react-router-dom
 
+<<<<<<< HEAD
+=======
+import React { useEffect useState } from 'react';
+import { MessageSquare, Video } from "lucide-react";
+import { useMessaging } from "@/context/MessagingContext";
+import { ProtectedRoute } from "@/components/ProtectedRoute";
+import { ConversationsList, ConversationDetailView } from "@/components/messaging";
+import { useIsMobile } from "@/hooks/use-mobile";
+import { toast } from "sonner";
+import { Button } from "@/components/ui/button";
+import { LoadingSpinner } from "@/components/ui/enhanced-loading-states";
+import { useRouter } from "next/router";, // Changed from react-router-dom,
+import { MessageSquare, Video,  } from 'lucide-react';
+import { useMessaging,  } from '@/context/MessagingContext';
+import { ProtectedRoute,  } from '@/components/ProtectedRoute';
+import { ConversationsList, ConversationDetailView,  } from '@/components/messaging';
+import { useIsMobile,  } from '@/hooks/use-mobile';
+import { toast,  } from 'sonner';
+import { Button,  } from '@/components/ui/button';
+import { LoadingSpinner,  } from '@/components/ui/enhanced-loading-states';
+import { useRouter,  } from 'next/router'; // Changed from react-router-dom
+
+import React { useEffect useState } from 'react';
+import { MessageSquare, Video,  } from 'lucide-react'
+import { useMessaging, ,  } from '@/context/MessagingContext';
+import { ProtectedRoute, ,  } from '@/components/ProtectedRoute';
+import { ConversationsList,, ConversationDetailView, ,  } from '@/components/messaging';
+import { useIsMobile, ,  } from '@/hooks/use-mobile';
+import { toast, ,  } from 'sonner';
+import { Button, ,  } from '@/components/ui/button';
+import { LoadingSpinner, ,  } from '@/components/ui/enhanced-loading-states';
+import { useRouter,  } from 'next/router', // Changed from react-router-dom,
+>>>>>>>> pr-22690:temp-broken-files/MessagingInbox.tsx
+import { logErrorToProduction } from '@/utils/productionLogger';
+export default function MessagingInbox() {markAsRead;
+    fetchConversations;
+    isLoading} = useMessaging();
+return (
+    <ProtectedRoute>
+      <div className="min-h-screen bg-zion-blue">
+        <div className="container mx-auto py-8 px-4">
+          <div className="flex justify-between items-center mb-6">
+            <h1 className={`text-${isMobile ? '2xl' : '3xl'} font-bold text-white flex items-center gap-2`}>
+              <MessageSquare className="h-6 w-6" />
+              Messages
+            </h1>
+            {activeConversation && (
+              <Button
+onClick = {startVideoCall}
+                className="flex items-center gap-2 bg-zion-purple hover:bg-zion-purple-light"
+              >
+                <Video className="h-4 w-4" />
+                Start Call
+              </Button>
+            )}
+          </div>
+          <div className="bg-zion-blue-light/10 rounded-lg shadow-lg border border-zion-purple/20 overflow-hidden">
+            <div className={`flex flex-col md:flex-row h-[${isMobile ? '85vh' : '75vh'}]`}>
+              {/* Conversations List */}
+              {isLoading ? (
+                <div className="flex-1 flex items-center justify-center p-8">
+                  <LoadingSpinner variant="primary" />
+                </div>
+              ) : (
+                <ConversationsList
+conversations = {conversations}
+                  activeConversation = {activeConversation}
+                  setActiveConversation = {setActiveConversation}
+                  markAsRead = {markAsRead}
+                />
+              )}
+              {/* Conversation Detail */}
+              <ConversationDetailView />
+            </div>
+import React from 'react';
+import { SEO } from "@/components/SEO";
+
+>>>>>>> pr-22703
 export default function MessagingInbox() {
   return (
     <>
@@ -63,4 +144,7 @@ export default function MessagingInbox() {
     </div>
   );
 }
+<<<<<<< HEAD
 >>>>>>> 1836dcad4eb858f12251bf809dd3ca83faa1433b:src/pages/MessagingInbox.tsx
+=======
+>>>>>>> pr-22703

@@ -17,6 +17,6 @@ const SecurityAuditingChat: NextPage = () => {
       </main>
     </div>
   );
-  };
+};
 
 export default SecurityAuditingChat;

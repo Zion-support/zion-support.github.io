@@ -62,16 +62,16 @@ ursor/migrate-github-actions-to-pm2-and-clean-up-5599,
       this.log('Linting issues resolved'),
     } catch (fixError) {,
       this.log(`Failed to fix linting "issues": ${fixError.message}`),
-      await this.reportLintingFailure(fixError);
-};
+      await this.reportLintingFailure(fixError),
+    }
   }
   async saveLintReport() {,
     const report = {,
       "lastLint": this.lastLint,
       projectRoot: this.projectRoot,
       eslintConfig: this.getEslintConfig()},ursor/migrate-github-actions-to-pm2-and-clean-up-5599,
-    fs.writeFileSync(this.lintReportFile, JSON.stringify(report, null, 2));
-};
+    fs.writeFileSync(this.lintReportFile, JSON.stringify(report, null, 2)),
+  }
   getEslintConfig() {,
     try {,
         return {}
@@ -112,8 +112,8 @@ const configPath = path.join(this.projectRoot, 'eslint.config.js'),
         await this.runLinting(),
       }ursor/migrate-github-actions-to-pm2-and-clean-up-5599
     } catch (error) {,
-      this.log(`File change check "failed": ${error.message}`);
-};
+      this.log(`File change check "failed": ${error.message}`),
+    }
   }
   getRecentFiles() {,
     const recentFiles = [],
@@ -157,7 +157,7 @@ ursor/automate-test-improve-and-merge-code-646c,
       this.log('Received SIGINT, shutting down gracefully'),',
       this.isRunning = false,
       process.exit(0),
-    });
+    }),
   }
 }
 ,

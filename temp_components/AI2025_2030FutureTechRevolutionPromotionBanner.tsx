@@ -1,6 +1,6 @@
 import React from 'react',
 import Link from 'next/link',
-export default function AI2025_2030FutureTechRevolutionPromotionBanner() : any {,
+export default function AI2025_2030FutureTechRevolutionPromotionBanner() {,
   return (,
     <div className="relative overflow-hidden bg-gradient-to-r from-purple-900 via-blue-900 to-green-900 py-16">,
       {/* Animated background */}
@@ -93,5 +93,5 @@ export default function AI2025_2030FutureTechRevolutionPromotionBanner() : any {
         </div>,
       </div>,
     </div>,
-  );
-  }
+  ),
+}

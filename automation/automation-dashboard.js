@@ -21,7 +21,7 @@ class AutomationDashboard {
     const logDir = path.dirname(this.logFile);
     if (!fs.existsSync(logDir)) {
       fs.mkdirSync(logDir, { recursive: true });
-};
+    }
   }
 
   log(message) {
@@ -44,7 +44,7 @@ class AutomationDashboard {
       { name: 'test-generator', path: 'test-generator.js', category: 'testing', status: 'available' },
       { name: 'intelligent-orchestrator', path: 'intelligent-orchestrator.js', category: 'orchestration', status: 'available' },
       { name: 'automation-factory', path: 'automation-factory.js', category: 'factory', status: 'available' }
-    ],
+    ];
 
     for (const system of systems) {
       const systemPath = path.join(__dirname, system.path);
@@ -60,7 +60,7 @@ class AutomationDashboard {
           uptime: 0,
           isRunning: false
         });
-};
+      }
     }
   }
 
@@ -85,7 +85,7 @@ class AutomationDashboard {
         successRate: system.successCount / (system.successCount + system.failureCount) || 0,
         averageExecutionTime: system.averageExecutionTime,
         uptime: system.uptime
-      },
+      };
 
       this.metrics.set(name, metrics);
     }
@@ -104,7 +104,8 @@ class AutomationDashboard {
           message: `Low success rate: ${(successRate * 100).toFixed(1)}%`,
           timestamp: new Date().toISOString()
         });
-};
+      }
+
       if (system.averageExecutionTime > 30000) {
         this.alerts.push({
           type: 'warning',
@@ -112,7 +113,8 @@ class AutomationDashboard {
           message: `Slow execution time: ${system.averageExecutionTime}ms`,
           timestamp: new Date().toISOString()
         });
-};
+      }
+
       if (!system.lastRun || Date.now() - system.lastRun.getTime() > 30 * 60 * 1000) {
         this.alerts.push({
           type: 'error',
@@ -120,14 +122,14 @@ class AutomationDashboard {
           message: 'System not running recently',
           timestamp: new Date().toISOString()
         });
-};
+      }
     }
   }
 
   async runSystem(systemName) {
     const system = this.automationSystems.get(systemName);
     if (!system) {
-      this.log(`❌ System not found: ${systemName}`),
+      this.log(`❌ System not found: ${systemName}`);
       return false;
     }
 
@@ -135,23 +137,23 @@ class AutomationDashboard {
     system.isRunning = true;
 
     try {
-      this.log(`🚀 Running system: ${systemName}`),
+      this.log(`🚀 Running system: ${systemName}`);
       
       const result = execSync(`node "${system.path}"`, { 
         encoding: 'utf8',
         stdio: 'pipe'
-      }),
+      });
       
       const executionTime = Date.now() - startTime;
       this.updateSystemMetrics(systemName, true, executionTime);
       
-      this.log(`✅ System completed: ${systemName} (${executionTime}ms)`),
+      this.log(`✅ System completed: ${systemName} (${executionTime}ms)`);
       return { success: true, output: result, executionTime };
     } catch (error) {
       const executionTime = Date.now() - startTime;
       this.updateSystemMetrics(systemName, false, executionTime);
       
-      this.log(`❌ System failed: ${systemName} - ${error.message}`),
+      this.log(`❌ System failed: ${systemName} - ${error.message}`);
       return { success: false, error: error.message, executionTime };
     } finally {
       system.isRunning = false;
@@ -202,7 +204,7 @@ class AutomationDashboard {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Automation Dashboard</title>
-    <script src="https: //cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body class="bg-gray-100">
@@ -269,7 +271,7 @@ class AutomationDashboard {
 
     <script>
         // Performance Chart
-        const ctx = document.getElementById('performanceChart').getContext('2d'),
+        const ctx = document.getElementById('performanceChart').getContext('2d');
         const performanceChart = new Chart(ctx, {
             type: 'line',
             data: {
@@ -291,13 +293,13 @@ class AutomationDashboard {
                     }
                 }
             }
-        }),
+        });
 
         function runAllSystems() {
             fetch('/api/run-all', { method: 'POST' })
                 .then(response => response.json())
                 .then(data => {
-                    alert('All systems started'),
+                    alert('All systems started');
                     setTimeout(refreshDashboard, 5000);
                 });
         }
@@ -310,7 +312,7 @@ class AutomationDashboard {
             fetch('/api/report')
                 .then(response => response.json())
                 .then(data => {
-                    const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' }),
+                    const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
                     const url = window.URL.createObjectURL(blob);
                     const a = document.createElement('a');
                     a.href = url;
@@ -339,7 +341,7 @@ class AutomationDashboard {
       metrics: {},
       alerts: this.alerts,
       recommendations: this.generateRecommendations()
-    },
+    };
 
     // System details
     for (const [name, system] of this.automationSystems) {
@@ -353,7 +355,7 @@ class AutomationDashboard {
         averageExecutionTime: system.averageExecutionTime,
         lastRun: system.lastRun?.toISOString(),
         uptime: system.uptime
-      },
+      };
     }
 
     // Metrics
@@ -387,7 +389,8 @@ class AutomationDashboard {
           message: `Improve ${name} reliability - current success rate: ${(successRate * 100).toFixed(1)}%`,
           priority: 'high'
         });
-};
+      }
+
       if (system.averageExecutionTime > 30000) {
         recommendations.push({
           type: 'optimization',
@@ -395,7 +398,8 @@ class AutomationDashboard {
           message: `Optimize ${name} performance - average execution time: ${system.averageExecutionTime}ms`,
           priority: 'medium'
         });
-};
+      }
+
       if (!system.lastRun || Date.now() - system.lastRun.getTime() > 30 * 60 * 1000) {
         recommendations.push({
           type: 'maintenance',
@@ -403,7 +407,7 @@ class AutomationDashboard {
           message: `Schedule regular runs for ${name} - last run: ${system.lastRun ? new Date(system.lastRun).toLocaleString() : 'Never'}`,
           priority: 'low'
         });
-};
+      }
     }
 
     return recommendations;
@@ -438,7 +442,7 @@ class AutomationDashboard {
             systems: Array.from(this.automationSystems.entries()),
             metrics: Array.from(this.metrics.entries()),
             alerts: this.alerts
-          })),
+          }));
           break;
 
         case '/api/run-all':
@@ -450,7 +454,7 @@ class AutomationDashboard {
           } else {
             res.writeHead(405);
             res.end(JSON.stringify({ error: 'Method not allowed' }));
-};
+          }
           break;
 
         case '/api/run':
@@ -467,7 +471,7 @@ class AutomationDashboard {
           } else {
             res.writeHead(405);
             res.end(JSON.stringify({ error: 'Method not allowed' }));
-};
+          }
           break;
 
         case '/api/report':
@@ -475,9 +479,10 @@ class AutomationDashboard {
           res.end(JSON.stringify(this.generateReport()));
           break;
 
-        default: res.writeHead(404),
+        default:
+          res.writeHead(404);
           res.end(JSON.stringify({ error: 'Not found' }));
-};
+      }
     });
 
     return server;
@@ -491,8 +496,8 @@ class AutomationDashboard {
     const server = this.createServer();
     server.listen(port, () => {
       this.log(`🚀 Automation Dashboard started on port ${port}`);
-      this.log(`📊 Dashboard available at: http://localhost:${port}`),
-      this.log(`📊 API available at: http://localhost:${port}/api/status`),
+      this.log(`📊 Dashboard available at: http://localhost:${port}`);
+      this.log(`📊 API available at: http://localhost:${port}/api/status`);
     });
   }
 }
@@ -515,8 +520,9 @@ switch (command) {
       process.exit(0);
     });
     break;
-  default: console.log('Usage: node automation-dashboard.js [start|status|run-all] [port]'),
-    console.log('\nCommands: '),
+  default:
+    console.log('Usage: node automation-dashboard.js [start|status|run-all] [port]');
+    console.log('\nCommands:');
     console.log('  start    - Start the dashboard server');
     console.log('  status   - Show current status');
     console.log('  run-all  - Run all automation systems');

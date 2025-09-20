@@ -83,14 +83,14 @@ const BusinessTransformationRevolution2025 = () => {,
           start += increment,
           if (start >= target) {,
             start = target,
-            clearInterval(timer);
-};
+            clearInterval(timer),
+          }
           setCounters(prev => ({ ...prev[key]: Math.floor(start) })),
         }20),
       }),
     },
     const timer = setTimeout(animateCounters500),
-    return () => clearTimeout(timer);
+    return () => clearTimeout(timer),
   }[]),
   const containerVariants = {,
     hidden: { opacity: 0, y: 50 },
@@ -264,4 +264,4 @@ const BusinessTransformationRevolution2025 = () => {,
     </section>,
   )},
 export default BusinessTransformationRevolution2025,
-</div></div></div></div>,'
+</div></div></div></div>,

@@ -17,6 +17,6 @@ const QualityAssuranceTestingChat: NextPage = () => {
       </main>
     </div>
   );
-  };
+};
 
 export default QualityAssuranceTestingChat;

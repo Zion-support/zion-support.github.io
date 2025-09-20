@@ -1,5 +1,4 @@
 <<<<<<<< HEAD:temp_broken_pages_all/ProfileDetail.tsx
-<<<<<<< HEAD:temp_broken_pages_all/ProfileDetail.tsx
 import { useState, useEffect } from "react";,
 import { useRouter } from "next/router";,
 import { supabase } from "@/integrations/supabase/client";,
@@ -12,7 +11,6 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import { MapPin, Clock, Link, as, LinkIcon, Github, Twitter, Linkedin, CheckCircle2, Mail, Phone, Globe } from "lucide-react";
 import { HireNowCTA } from "@/components/profile/HireNowCTA";
-========
 import { useState, useEffect,  } from "react",
 import { useRouter,  } from "next/router",
 import { supabase,  } from "@/integrations/supabase/client",
@@ -146,4 +144,3 @@ export default function ProfileDetail() {
     </div>
   );
 }
->>>>>>> 1836dcad4eb858f12251bf809dd3ca83faa1433b:src/pages/ProfileDetail.tsx

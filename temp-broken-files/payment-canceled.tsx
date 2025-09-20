@@ -1,60 +1,20 @@
 import React from 'react';
-<<<<<<< HEAD:temp_broken_pages_all/payment-canceled.tsx
-import { Button } from "@/components/ui/button";
-import { useRouter } from "next/router"; // Changed from useNavigate,
-import { XCircle } from "lucide-react";
-import { useRouter } from "next/router";, // Changed from useNavigate,
+import { SEO } from "@/components/SEO";
+
 export default function PaymentCanceled() {
   return (
-  return (
-  return (
-  const router = useRouter(), // Changed from navigate,
-return (<div className="flex flex-1 bg-zion-blue items-center justify-center p-4">
-        <div className="max-w-md w-full bg-zion-blue-dark rounded-xl p-8 border border-zion-blue-light shadow-lg text-center">
-          <div className="inline-flex h-12 w-12 rounded-full bg-red-100 mb-4 items-center justify-center">
-            <XCircle className="h-6 w-6 text-red-600" />
+    <>
+      <SEO 
+        title="payment-canceled - Zion Tech Group"
+        description="Page description"
+        keywords="keywords"
+      />
+      <div className="min-h-screen bg-zion-blue pt-24 pb-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center">
+            <h1 className="text-3xl font-bold text-white mb-4">payment-canceled</h1>
+            <p className="text-zion-slate-light text-lg">Coming soon...</p>
           </div>
-        <h1 className="text-2xl font-bold text-white mb-2">Payment Canceled</h1>
-        <p className="text-zion-slate-light mb-6">
-          Your payment process was canceled. No charges have been made to your account.
-        </p>
-        <div className="flex flex-col space-y-3">
-          <Button
-onClick={() => router.push('/payments')} // Changed to router.push className="bg-zion-purple hover:bg-zion-purple-dark text-white"
-          >
-            Try Again
-          </Button>
-          <Button
-variant="outline"
-            onClick={() => router.push('/dashboard')} // Changed to router.push className='border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white'
-export default function PaymentCanceled() {
-  return (
-  return (;
-  return (;
-  return (;
-  const router = useRouter(); // Changed from navigate,
-return (
-    <div className='flex flex-1 bg-zion-blue items-center justify-center p-4'>
-      <div className='max-w-md w-full bg-zion-blue-dark rounded-xl p-8 border border-zion-blue-light shadow-lg text-center'>
-        <div className='inline-flex h-12 w-12 rounded-full bg-red-100 mb-4 items-center justify-center'>
-          <XCircle className='h-6 w-6 text-red-600' />
-        </div>
-        <h1 className='text-2xl font-bold text-white mb-2'>Payment Canceled</h1>
-        <p className='text-zion-slate-light mb-6'>
-          Your payment process was canceled. No charges have been made to your,
-account.
-        </p>
-        <div className='flex flex-col space-y-3'>
-          <Button
-onClick={() => router.push('/payments')} // Changed to router.push className='bg-zion-purple hover:bg-zion-purple-dark text-white'
-          >
-            Try Again
-          </Button>
-          <Button
-variant='outline'
-            onClick={() => router.push('/dashboard')} // Changed to router.push className='border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white'          >
-            Return to Dashboard
-          </Button>
         </div>
 
 export default function PaymentCanceled() {
@@ -63,8 +23,7 @@ export default function PaymentCanceled() {
       <div className="container mx-auto px-4">
         <h1 className="text-4xl font-bold text-gray-900 mb-6">Payment Canceled</h1>
         <p className="text-lg text-gray-600">Your payment was canceled...</p>
->>>>>>> 1836dcad4eb858f12251bf809dd3ca83faa1433b:src/pages/payment-canceled.tsx
       </div>
-    </div>
+    </>
   );
 }

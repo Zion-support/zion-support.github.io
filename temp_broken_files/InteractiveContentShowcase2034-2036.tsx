@@ -182,5 +182,5 @@ const InteractiveContentShowcase2034-2036: React.FC = () => {,
       </div>,
     </div>,
   )},
-export default InteractiveContentShowcase2034-2036;
-  }
+export default InteractiveContentShowcase2034-2036,
+}

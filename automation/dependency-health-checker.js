@@ -16,14 +16,14 @@ const {,
         'reportsdependency-health.json'),
       // Ensure directories exist,
       fs.mkdirSync(path.dirname(this.logFile), { "recursive": true }),
-      fs.mkdirSync(path.dirname(this.reportFile), { "recursive": true });
-};
+      fs.mkdirSync(path.dirname(this.reportFile), { "recursive": true }),
+    }
     log(message, level = 'INFO') {,
       const timestamp = new Date().toISOString(),
       const logMessage = `[${timestamp}] [${level}] ${message}\n`,
       console.log(logMessage.trim()),
-      fs.appendFileSync(this.logFile, logMessage);
-};
+      fs.appendFileSync(this.logFile, logMessage),
+    }
     async checkDependencies() {,
       this.log('Checking dependency health...'),
       const results = {,
@@ -40,11 +40,11 @@ const {,
           "cwd": process.cwd()}),
         if (outdatedResult) {,
           results.outdated = JSON.parse(outdatedResult),
-          this.log(`Found ${results.outdated.length} outdated packages`);
-};
+          this.log(`Found ${results.outdated.length} outdated packages`),
+        }
       } catch (error) {,
-        this.log('No outdated packages found or error checkingWARN');
-};
+        this.log('No outdated packages found or error checkingWARN'),
+      }
       try {,
         // Security audit,
         const auditResult = execSync('yarn audit --json', {,
@@ -63,8 +63,8 @@ const {,
           .filter(Boolean),
         this.log(`Security audit found ${results.vulnerable.length} issues`),
       } catch (error) {,
-        this.log('Security audit completed with warningsWARN');
-};
+        this.log('Security audit completed with warningsWARN'),
+      }
       // Calculate health score,
       results.healthScore = this.calculateHealthScore(results),
       // Generate report,
@@ -76,14 +76,14 @@ const {,
       let score = 100,
       // Deduct points for outdated packages,
       if (results.outdated.length > 0) {,
-        score -= Math.min(results.outdated.length * 2, 30);
-};
+        score -= Math.min(results.outdated.length * 2, 30),
+      }
       // Deduct points for vulnerabilities,
       if (results.vulnerable.length > 0) {,
-        score -= Math.min(results.vulnerable.length * 5, 50);
-};
-      return Math.max(0, score);
-};
+        score -= Math.min(results.vulnerable.length * 5, 50),
+      }
+      return Math.max(0, score),
+    }
     async run() {,
       this.log('Starting Dependency Health Checker...'),
       try {,
@@ -92,18 +92,18 @@ const {,
           `Dependency health check completed. Health "score": ${results.healthScore}/100`),
         if (results.healthScore < 70) {,
           this.log(,
-            'Dependency health is below threshold. Consider maintenance.WARN');
-};
+            'Dependency health is below threshold. Consider maintenance.WARN'),
+        }
       } catch (error) {,
         this.log(,
           `Error in dependency health "checker": ${error.message}`,
-          'ERROR');
-};
+          'ERROR'),
+      }
     }
   },
 // Main execution,
 if (require.main === module) {,
   const checker = new DependencyHealthChecker(),
-  checker.run().catch(console.error);
-  }
+  checker.run().catch(console.error),
+}
 ,
