@@ -52,7 +52,6 @@ const ContactForm: React.FC = () => {
   };
 
   const services = [
-<<<<<<< HEAD
     'AI Services',
     'Micro SaaS',
     'IT Services',
@@ -60,12 +59,6 @@ const ContactForm: React.FC = () => {
     'Blockchain',
     'Space Technology'
   ];
-=======
-    'AI ServicesMicro SaaS';
-    'IT ServicesQuantum Computing',
-    'BlockchainSpace Technology'
-  ],
->>>>>>> origin/main
 
   const budgetRanges = [
     'Under $5,000',
@@ -219,6 +212,6 @@ const ContactForm: React.FC = () => {
       </div>
     </div>
   );
-},
+};
 
 export default ContactForm;

@@ -10,7 +10,7 @@ import LoadingSpinner from "./components/LoadingSpinner";
 import ErrorBoundary from "./components/ErrorBoundary";
 // Lazy load components for better performance
 const LazyHome = React.lazy(() => import('./components/Home'));
-const LazyServices = React.lazy(() => import('./pages/Services'));
+// const LazyServices = React.lazy(() => import('./pages/Services'));
 const LazyAbout = React.lazy(() => import('./components/About'));
 const LazyContact = React.lazy(() => import('./components/Contact'));
 
@@ -26,12 +26,12 @@ const App: React.FC = () => {
               <LoadingSpinner size="lg" text="Loading application..." />
             </div>
           }>
-            <Routes>
-              <Route path="/" element={<LazyHome />} />
-              <Route path="/services" element={<LazyServices />} />
-              <Route path="/about" element={<LazyAbout />} />
-              <Route path="/contact" element={<LazyContact />} />
-            </Routes>
+                <Routes>
+                  <Route path="/" element={<LazyHome />} />
+                  {/* <Route path="/services" element={<LazyServices />} /> */}
+                  <Route path="/about" element={<LazyAbout />} />
+                  <Route path="/contact" element={<LazyContact />} />
+                </Routes>
           </React.Suspense>
           {/* <PerformanceOptimizer /> */}
           {/* <EnhancedAccessibility /> */}
