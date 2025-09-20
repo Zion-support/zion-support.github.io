@@ -3,11 +3,11 @@
 @tailwind utilities;
 
 @layer base {
-/* Custom animations for enhanced content */
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
+  /* Custom animations for enhanced content */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
 
 @keyframes slideIn {
   from { opacity: 0; transform: translateX(-20px); }
@@ -701,4 +701,5 @@
   --lk-button-background-hover: #0891B2;
   --lk-bg1: #0B1120;
   --lk-bg2: #0F172A;
+}
 }
