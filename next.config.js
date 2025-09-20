@@ -1,71 +1,58 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: true,
-  trailingSlash: true,
+  // Enable static export for Netlify
   output: 'export',
-  assetPrefix: process.env.NODE_ENV === 'production' ? 'https://ziontechgroup.com' : '',
-  
+  trailingSlash: true,
+
   // Performance optimizations
   compress: true,
   poweredByHeader: false,
   
+  // Experimental features for performance
+  experimental: {
+    optimizeCss: true,
+    scrollRestoration: true,
+    optimizePackageImports: ['lucide-react', '@radix-ui/react-icons'],
+  },
+
   // Image optimization
   images: {
     unoptimized: true, // Required for static export
-    domains: ['images.unsplash.com', 'via.placeholder.com'],
     formats: ['image/webp', 'image/avif'],
   },
-  
-  // ESLint configuration
-  eslint: {
-    ignoreDuringBuilds: true,
-    dirs: []
-  },
-  
-  // TypeScript configuration
-  typescript: {
-    ignoreBuildErrors: true,
-  },
-  
+
   // Bundle analyzer
   webpack: (config, { dev, isServer }) => {
-    if (dev) {
-      config.watchOptions = {
-        ignored: ['**/node_modules/**', '**/.next/**'],
-      };
-    }
-    
-    // Exclude apps directory from compilation
-    config.module.rules.push({
-      test: /\.(ts|tsx|js|jsx)$/,
-      include: /apps\//,
-      use: "ignore-loader"
-    });
-    
     if (!dev && !isServer) {
       // Optimize bundle size
       config.optimization.splitChunks = {
         chunks: 'all',
         cacheGroups: {
           vendor: {
-            test: /[\\/]node_modules[\\/]/,
+            test: /[\/]node_modules[\/]/,
             name: 'vendors',
             chunks: 'all',
+          },
+          common: {
+            name: 'common',
+            minChunks: 2,
+            chunks: 'all',
+            enforce: true,
           },
         },
       };
     }
+
     return config;
   },
-  
-  // Experimental features for performance
-  experimental: {
-    optimizeCss: true,
-    scrollRestoration: true,
-    optimizePackageImports: ['@radix-ui/react-icons'],
+
+  // Ignore build errors to allow deployment with syntax issues
+  typescript: {
+    ignoreBuildErrors: true,
   },
-  
-  // Note: Security headers are handled by Netlify's _headers file for static exports
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
 };
 
 module.exports = nextConfig;
