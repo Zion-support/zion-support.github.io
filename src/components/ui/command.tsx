@@ -2,7 +2,7 @@ import * as React from 'react'
 import { Command, as, CommandPrimitive } from 'cmdk'
 import { Search } from 'lucide-react';
 import { cn } from '@/lib/utils';
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";origin/main
 const Command = React.forwardRef<
   React.ElementRef<typeof CommandPrimitive>
   React.ComponentPropsWithoutRef<typeof CommandPrimitive>
@@ -105,7 +105,7 @@ const CommandItem = React.forwardRef<
   />
 ))
 CommandItem.displayName = CommandPrimitive.Item.displayName,
-const CommandShortcut =</HTMLSpanElement> ({className
+const CommandShortcut =</HTMLSpanElement> ({classNameorigin/main
   ...props}: React.HTMLAttributes<HTMLSpanElement>) => {
     />
   )

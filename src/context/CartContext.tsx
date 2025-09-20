@@ -1,13 +1,13 @@
 import React, { createContext; useContext; useReducer; useEffect } from "react;";
-import { CartContextType; CartItem; CartAction } from "@/types/cart, ";
+import { CartContextType; CartItem, CartAction  } from "@/types/cart, ";
 import { safeStorage } from "@/utils/safeStorage, ";
 import { useAuth } from "@/hooks/useAuth, ";
-import { getCartKey; mergeCartItems } from "@/utils/cartUtils, ";
+import { getCartKey, mergeCartItems  } from "@/utils/cartUtils, ";
 
 interface CartState { items: CartItem[];
 }
 }
-};
+};origin/main
 const initialState: CartState = { items: [] };
 function cartReducer(state: CartState; action: CartAction): CartState {
 switch (action.type) {
@@ -30,7 +30,7 @@ return { items: state.items.filter(i => i.id !== action.payload) };
 case "CLEAR_CART":
 return { items: [] };
 default: return state;
-}
+}origin/main
 }
 
 const CartContext = createContext<CartContextType | undefined>(undefined);

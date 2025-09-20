@@ -13,7 +13,7 @@ CloudIcon;
 ShieldCheckIcon;
 LightBulbIcon;
 RocketLaunchIcon;
-ChartBarIcon } from "@heroicons/react/24/outline, ";
+ChartBarIcon } from "@heroicons/react/24/outline, ";origin/main
 
 export function ServicesShowcase() {const services = [;
 {;
@@ -33,7 +33,7 @@ href: "/digital-transformation"};
 {icon: RocketLaunchIcon; title: "Micro SaaS Solutions";
 description: "Custom SaaS platforms for specific business needs", color: "from-zion-blue to-zion-cyan",
 href: "/micro-saas"};
-{icon: ChartBarIcon; title: "Business Intelligence";
+{icon: ChartBarIcon; title: "Business Intelligence";origin/main
 description: "Data analytics and insights for informed decision-making",
 color: "from-zion-purple to-zion-blue",
 href: "/business-intelligence"}
@@ -46,7 +46,7 @@ staggerChildren: 0.1}
 }
 };
 const itemVariants = {;
-hidden: { y: 20; opacity: 0 }, visible: {y: 0; opacity: 1; transition: {,
+hidden: { y: 20; opacity: 0 }, visible: {y: 0; opacity: 1; transition: {,origin/main
 duration: 0.5}
 }
 };

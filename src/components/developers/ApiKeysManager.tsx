@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Check, Clock, Key, MoreVertical, RefreshCw, X } from "lucide-react";
+import { Check, Clock, Key, MoreVertical, RefreshCw, X } from "lucide-react";origin/main
   // Create key form state,
 const [keyName, setKeyName] = useState("");
   const [selectedScopes, setSelectedScopes] = useState<ApiKeyScope[]>([]),
@@ -81,7 +81,7 @@ htmlFor={scope.value}
                 </Button>
                 <Button
 onClick={handleCreateKey}
-                  disabled={keyName.trim() === '' |selectedScopes.length === 0}
+                  disabled={keyName.trim() === '' |selectedScopes.length === 0}origin/main
                 >                  Create Key
               <DialogFooter>
                 <Button variant="outline" onClick={handleDialogClose}>Cancel</Button>
@@ -251,7 +251,7 @@ key={scope}
                       className='bg-zinc-800 text-zinc-300 hover:bg-zinc-800'                    >
                 <div className="mt-3 flex flex-wrap gap-2">
                   {key.scopes.map((scope) => (
-                    <Badge
+                    <Badgeorigin/main
 key = {scope}
                       variant="secondary"
                       className="bg-zinc-800 text-zinc-300 hover:bg-zinc-800"
@@ -331,7 +331,7 @@ onClick={() =>
                 handleRegenerateKey(showRegenerateConfirm)
               }
               className='bg-blue-600 hover:bg-blue-700'            >
-            <AlertDialogAction
+            <AlertDialogActionorigin/main
 onClick = {() => showRegenerateConfirm && handleRegenerateKey(showRegenerateConfirm)}
               className="bg-blue-600 hover:bg-blue-700"
       >
@@ -377,7 +377,7 @@ onClick={() =>
                 showDeleteConfirm && handleRevokeKey(showDeleteConfirm)
               }
               className='bg-red-600 hover:bg-red-700'            >
-            <AlertDialogAction
+            <AlertDialogActionorigin/main
 onClick = {() => showDeleteConfirm && handleRevokeKey(showDeleteConfirm)}
               className="bg-red-600 hover: bg-red-700"
       >

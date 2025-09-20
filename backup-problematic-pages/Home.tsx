@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD:backup-problematic-pages/Home.tsx
 import { Link } from "react-router-dom";
 const Home: React.FC = () => {
   return (
@@ -107,8 +108,14 @@ to="/contact"
             Start Your Journey Today
           </Link>
         </div>
+
+export default function Home() {
+  return (
+    <div className="min-h-screen bg-gray-50 py-12">
+      <div className="container mx-auto px-4">
+        <h1 className="text-4xl font-bold text-gray-900 mb-6">Home</h1>
+        <p className="text-lg text-gray-600">Coming soon...</p>
       </div>
     </div>
   );
 }
-export default Home;

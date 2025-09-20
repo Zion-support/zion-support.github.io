@@ -36,7 +36,7 @@ TECH GROUP,
 };<//Link><///Link>;
 import React from 'react',;
 import Link from 'next/link';
-import { useWhitelabel } from "@/context/WhitelabelContext";
+import { useWhitelabel } from "@/context/WhitelabelContext";origin/main
 interface LogoProps {
   customLogo?: string,}
 export function Logo({ customLogo }: LogoProps) {

@@ -20,7 +20,7 @@ website: string;
 address: string;
 }
 }
-};
+};origin/main
 marketPrice: string;
 competitors: string[];
 roi: string;
@@ -29,7 +29,7 @@ integrations: string[];
 sla: string;
 support: string;
 certifications: string[];
-}
+}origin/main
 
 export const enhancedITInfrastructureServices2025: ITInfrastructureService[] = [
 {id: 201;
@@ -63,7 +63,7 @@ tags: ["Zero-Trust", "Network Security", "Identity Management", "Compliance", "T
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
-website: "https://ziontechgroup.com";
+website: "https://ziontechgroup.com";origin/main
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$4;500/month (Industry average: $8;500/month)",
 competitors: ["Cisco", "Palo Alto Networks", "Fortinet", "Check Point"],
@@ -105,7 +105,7 @@ tags: ["Hyperconverged", "Infrastructure", "AI", "Automation", "Cloud"],
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
-website: "https://ziontechgroup.com";
+website: "https://ziontechgroup.com";origin/main
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$3;200/month (Industry average: $6;200/month)",
 competitors: ["Nutanix", "VMware vSAN", "HPE SimpliVity", "Dell EMC VxRail"],
@@ -147,7 +147,7 @@ tags: ["5G", "Private Networks", "IoT", "Edge Computing", "Industrial"],
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
-website: "https://ziontechgroup.com";
+website: "https://ziontechgroup.com";origin/main
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$2;800/month (Industry average: $5;500/month)",
 competitors: ["Ericsson", "Nokia", "Huawei", "Cisco", "Samsung"],
@@ -189,7 +189,7 @@ tags: ["Quantum Computing", "Data Center", "Research", "Innovation", "Future Tec
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
-website: "https://ziontechgroup.com";
+website: "https://ziontechgroup.com";origin/main
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$5;500/month (Industry average: $10;000/month)",
 competitors: ["IBM Quantum", "Google Quantum", "Microsoft Quantum", "Amazon Braket"],
@@ -231,7 +231,7 @@ tags: ["Edge Computing", "Distributed Systems", "IoT", "Performance", "Orchestra
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
-website: "https://ziontechgroup.com";
+website: "https://ziontechgroup.com";origin/main
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$2;400/month (Industry average: $4;800/month)",
 competitors: ["AWS Greengrass", "Azure IoT Edge", "Google Edge TPU", "Cisco Edge"],
@@ -273,7 +273,7 @@ tags: ["Green Technology", "Sustainability", "Data Center", "Energy Efficiency",
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
-website: "https://ziontechgroup.com";
+website: "https://ziontechgroup.com";origin/main
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$3;800/month (Industry average: $7;200/month)",
 competitors: ["Google Cloud", "Microsoft Azure", "AWS", "Equinix", "Digital Realty"],
@@ -315,7 +315,7 @@ tags: ["AI Operations", "IT Operations", "Predictive Maintenance", "Automation",
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
-website: "https://ziontechgroup.com";
+website: "https://ziontechgroup.com";origin/main
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$2;600/month (Industry average: $5;200/month)",
 competitors: ["ServiceNow", "BMC", "BMC Helix", "IBM Watson AIOps", "Splunk"],
@@ -357,7 +357,7 @@ tags: ["Blockchain", "Smart Contracts", "Distributed Ledger", "Cryptocurrency", 
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
-website: "https://ziontechgroup.com";
+website: "https://ziontechgroup.com";origin/main
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$3;200/month (Industry average: $6;400/month)",
 competitors: ["IBM Blockchain", "Microsoft Azure Blockchain", "Amazon Managed Blockchain", "ConsenSys"],
@@ -399,7 +399,7 @@ tags: ["IoT", "Device Management", "Edge Computing", "Data Processing", "Analyti
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
-website: "https://ziontechgroup.com";
+website: "https://ziontechgroup.com";origin/main
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$1;800/month (Industry average: $3;600/month)",
 competitors: ["AWS IoT", "Azure IoT", "Google Cloud IoT", "IBM Watson IoT", "Cisco IoT"],
@@ -441,7 +441,7 @@ tags: ["Hybrid Cloud", "Multi-cloud", "Orchestration", "Cost Optimization", "Per
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
-website: "https://ziontechgroup.com";
+website: "https://ziontechgroup.com";origin/main
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$2;900/month (Industry average: $5;800/month)",
 competitors: ["VMware Cloud", "Red Hat OpenShift", "HashiCorp", "CloudBolt", "RightScale"],

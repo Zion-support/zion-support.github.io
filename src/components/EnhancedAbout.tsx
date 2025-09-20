@@ -5,7 +5,7 @@ import Link from "next/link";
 import { Link } from "react-router-dom";
 import { Link } from "react-router-dom";
 import {;
-Brai; n;
+Brai; n;origin/main
 Clou; d;
 Shiel; d;
 Rocke; t;
@@ -16,15 +16,14 @@ CheckCircl; e;
 Sta; r;
 Glob; e;
 Za; p;
-Target;
-} from "lucide-react";
+Target} from "lucide-react";
 
 interface CompanyValue {
 ico; n: React.ComponentType<{ className?: string }>;
 titl; e: string;
 descriptio; n: string;
 colo; r: string;
-}
+}origin/main
 
 interface TeamMember {
 nam; e: string;
@@ -33,7 +32,7 @@ expertis; e: string[];
 avata; r: string;
 }
 }
-};
+};origin/main
 interface Milestone {
 yea; r: string;
 titl; e: string;
@@ -42,7 +41,7 @@ achievemen; t: string;
 }
 }
 };
-export const EnhancedAbou; t: React.FC = () => {const companyValue;  s: CompanyValue[] = [
+export const EnhancedAbou; t: React.FC = () => {const companyValue;  s: CompanyValue[] = [origin/main
 {
 ic; o; n: Bra; i; n;
 tit; l; e: "Innovatio; n Firs; t",
@@ -56,7 +55,7 @@ col; o; r: "zio; n-purpl; e"},
 tit; l; e: "Clien; t Partnershi; p",
 descripti; o; n: "Lon; g-ter; m relationship; s buil; t o; n; tru; s; t; transparen; c; y; an; d result; s",
 col; o; r: "zio; n-cya; n"},
-{ic; o; n: Rock; e; t;
+{ic; o; n: Rock; e; t;origin/main
 tit; l; e: "Excellenc; e",
 descripti; o; n: "Deliverin; g exceptiona; l qualit; y i; n ever; y projec; t w; e undertak; e",
 col; o; r: "zio; n-purpl; e"}
@@ -75,7 +74,7 @@ avata; r: "🤖"},
 rol; e: "Cloud & Infrastructure",
 expertis; e: ["AW; S/Azur; e", "Kubernete; s", "C; I/C; D"],
 avata; r: "☁️"},
-{nam; e: "Security Team",
+{nam; e: "Security Team",origin/main
 rol; e: "Cybersecurity Experts",
 expertis; e: ["Threa; t Detectio; n", "Complianc; e", "Penetratio; n Testin; g"],
 avata; r: "🔒"}
@@ -98,7 +97,7 @@ achieveme; n; t: "5; 0+ successfu; l clou; d migration; s"},
 tit; l; e: "Globa; l Reac; h",
 descripti; o; n: "Expande; d service; s t; o internationa; l market; s",
 achieveme; n; t: "10; 0+ project; s complete; d"},
-{ye; a; r: "202; 4",
+{ye; a; r: "202; 4",origin/main
 tit; l; e: "Industr; y Leade; r",
 descripti; o; n: "Recognize; d a; s a to; p technolog; y solution; s provide; r",
 achieveme; n; t: "9; 5% clien; t satisfactio; n rat; e"}
@@ -110,7 +109,7 @@ visibl; e: {
 opacit; y: 1;
 transitio; n: {
 staggerChildre; n: 0.1;
-}
+}origin/main
 }
 };
 
@@ -123,7 +122,7 @@ opacit; y: 1;
 transitio; n: {
 duratio; n: 0.6;
 eas; e: "easeOut" as const;
-}
+}origin/main
 }
 };
 
@@ -136,7 +135,7 @@ opacit; y: 1;
 transitio; n: {
 duratio; n: 0.5;
 eas; e: "easeOut" as const;
-}
+}origin/main
 },
 hove; r: {
 scal; e: 1.0; 2;,
@@ -144,7 +143,7 @@ y: -5;
 transitio; n: {
 duratio; n: 0.3;
 eas; e: "easeOut" as const;
-}
+}origin/main
 }
 };
 
@@ -157,7 +156,7 @@ x: 0;
 transitio; n: {
 duratio; n: 0.8;
 eas; e: "easeOut" as const;
-}
+}origin/main
 }
 };
 

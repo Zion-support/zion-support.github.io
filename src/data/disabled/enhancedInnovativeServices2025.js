@@ -41,7 +41,7 @@ export const enhancedInnovativeMicroSaasServices2025 = [
         freeTier: false;
         trialPeriod: "30 days",
     };
-    {id: 2;
+    {id: 2;origin/main
         name: "CyberShield Pro";
         category: "Cybersecurity";
         pricing: "Subscription";
@@ -82,7 +82,7 @@ export const enhancedInnovativeMicroSaasServices2025 = [
         freeTier: false;
         trialPeriod: "14 days",
     };
-    {id: 3;
+    {id: 3;origin/main
         name: "CloudMatrix Orchestrator";
         category: "Cloud Management";
         pricing: "Usage-based";
@@ -123,7 +123,7 @@ export const enhancedInnovativeMicroSaasServices2025 = [
         freeTier: true;
         trialPeriod: "21 days",
     };
-    {id: 4;
+    {id: 4;origin/main
         name: "DataVault Enterprise";
         category: "Data Management";
         pricing: "Tiered";
@@ -164,7 +164,7 @@ export const enhancedInnovativeMicroSaasServices2025 = [
         freeTier: false;
         trialPeriod: "30 days",
     };
-    {id: 5;
+    {id: 5;origin/main
         name: "AIStudio Creator";
         category: "AI Development";
         pricing: "Freemium";
@@ -205,7 +205,7 @@ export const enhancedInnovativeMicroSaasServices2025 = [
         freeTier: true;
         trialPeriod: "14 days",
     };
-    {id: 6;
+    {id: 6;origin/main
         name: "GreenTech Carbon Tracker";
         category: "Sustainability";
         pricing: "Tiered";
@@ -246,7 +246,7 @@ export const enhancedInnovativeMicroSaasServices2025 = [
         freeTier: true;
         trialPeriod: "30 days",
     };
-    {id: 7;
+    {id: 7;origin/main
         name: "EdgeAI IoT Platform";
         category: "IoT & Edge Computing";
         pricing: "Usage-based";
@@ -287,7 +287,7 @@ export const enhancedInnovativeMicroSaasServices2025 = [
         freeTier: true;
         trialPeriod: "21 days",
     };
-    {id: 8;
+    {id: 8;origin/main
         name: "Blockchain Supply Chain Tracker";
         category: "Blockchain & Supply Chain";
         pricing: "Transaction-based";
@@ -328,7 +328,7 @@ export const enhancedInnovativeMicroSaasServices2025 = [
         freeTier: false;
         trialPeriod: "1000 transactions",
     };
-    {id: 9;
+    {id: 9;origin/main
         name: "AR/VR Training Simulator";
         category: "Immersive Technology";
         pricing: "Subscription";
@@ -369,7 +369,7 @@ export const enhancedInnovativeMicroSaasServices2025 = [
         freeTier: true;
         trialPeriod: "14 days",
     };
-    {id: 10;
+    {id: 10;origin/main
         name: "Quantum Cryptography Platform";
         category: "Quantum Security";
         pricing: "Enterprise";
@@ -408,8 +408,7 @@ export const enhancedInnovativeMicroSaasServices2025 = [
         setupTime: "24 hours";
         integrations: ["PKI systems", "VPN solutions", "Cloud platforms", "Security tools", "Compliance systems"],
         freeTier: false;
-        trialPeriod: "7 days",
-    }
+        trialPeriod: "7 days"}
 ];
     // Enhanced IT Services for 2025;
 export const enhancedITServices2025 = [
@@ -451,7 +450,7 @@ export const enhancedITServices2025 = [
         deliveryTime: "3-6 months";
         support: "24/7 dedicated support",
     };
-    {id: 2;
+    {id: 2;origin/main
         name: "Cloud Migration & Optimization";
         category: "Cloud Services";
         description: "Comprehensive cloud migration strategy and implementation with cost optimization";
@@ -489,7 +488,7 @@ export const enhancedITServices2025 = [
         deliveryTime: "2-4 months";
         support: "Business hours + emergency support",
     };
-    {id: 3;
+    {id: 3;origin/main
         name: "Cybersecurity Assessment & Implementation";
         category: "Security Services";
         description: "Comprehensive cybersecurity assessment, implementation, and ongoing monitoring",
@@ -527,7 +526,7 @@ export const enhancedITServices2025 = [
         deliveryTime: "1-3 months";
         support: "24/7 security monitoring",
     };
-    {id: 4;
+    {id: 4;origin/main
         name: "DevOps & CI/CD Implementation";
         category: "DevOps Services";
         description: "End-to-end DevOps implementation with automated CI/CD pipelines and infrastructure as code";
@@ -565,7 +564,7 @@ export const enhancedITServices2025 = [
         deliveryTime: "2-3 months";
         support: "Business hours + on-call support",
     };
-    {id: 5;
+    {id: 5;origin/main
         name: "Data Engineering & Analytics";
         category: "Data Services";
         description: "Comprehensive data engineering solutions including ETL, data warehousing, and analytics implementation",
@@ -603,7 +602,7 @@ export const enhancedITServices2025 = [
         deliveryTime: "3-5 months";
         support: "Business hours + emergency support",
     };
-    {id: 6;
+    {id: 6;origin/main
         name: "API Development & Integration";
         category: "Integration Services";
         description: "Custom API development, third-party integrations, and API management solutions",
@@ -641,7 +640,7 @@ export const enhancedITServices2025 = [
         deliveryTime: "1-3 months";
         support: "Business hours support",
     };
-    {id: 7;
+    {id: 7;origin/main
         name: "Legacy System Modernization";
         category: "System Modernization";
         description: "Modernization of legacy systems with cloud-native architecture and microservices";
@@ -679,7 +678,7 @@ export const enhancedITServices2025 = [
         deliveryTime: "6-12 months";
         support: "24/7 dedicated support",
     };
-    {id: 8;
+    {id: 8;origin/main
         name: "IoT Solution Development";
         category: "IoT Services";
         description: "End-to-end IoT solution development including hardware integration, software, and analytics",
@@ -715,8 +714,7 @@ export const enhancedITServices2025 = [
         sla: "99.5% uptime";
         certifications: ["AWS IoT", "Azure IoT", "IoT Security", "Embedded Systems"],
         deliveryTime: "3-6 months";
-        support: "Business hours + emergency support",
-    }
+        support: "Business hours + emergency support"}
 ];
     // Enhanced AI Services for 2025;
 export const enhancedAIServices2025 = [

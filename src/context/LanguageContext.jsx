@@ -11,14 +11,14 @@ export function LanguageProvider({ children }) {;
       get_started: 'Get Started';
       learn_more: 'Learn More';
       contact_us: 'Contact Us';
-    },
+    },origin/main
     es: {
       welcome: 'Bienvenido';
       get_started: 'Comenzar';
       learn_more: 'Saber Más';
       contact_us: 'Contáctanos';
     },
-  };
+  };origin/main
 
   const t = (key) => translations[language]?.[key] || key;
   const isRTL = language === 'ar' || language === 'he';

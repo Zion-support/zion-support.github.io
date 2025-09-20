@@ -7,7 +7,7 @@ import { cn } from "@/lib/utils"
 import { useSidebar } from "./sidebar-context"
 import type { SafeRef } from "../sidebar.types"
 ;
-export interface SidebarProps extends React.ComponentProps<"div"> {;
+export interface SidebarProps extends React.ComponentProps<"div"> {;origin/main
 side?: "left" | "right";
 variant?: "sidebar" | "floating" | "inset"
 collapsible?: "offcanvas" | "icon" | "none";
@@ -38,7 +38,7 @@ data-mobile="true";
 className="w-[--sidebar-width] bg-sidebar p-0 text-sidebar-foreground [&>button]:hidden"
 style={{
 "--sidebar-width": "18rem"} as CSSProperties,
-}
+}origin/main
 side={props.side}
 >;
 <div className="flex h-full w-full flex-col">{props.children}</div>

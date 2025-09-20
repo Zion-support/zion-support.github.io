@@ -7,5 +7,5 @@ interface AppStoreButtonsProps {className?: string;
   appStoreUrl?: string;
   googlePlayUrl?: string;
 }
-  onAppStoreClick?: () => void;}
+  onAppStoreClick?: () => void;}origin/main
   onGooglePlayClick?: () => void}

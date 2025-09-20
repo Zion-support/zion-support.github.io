@@ -1,4 +1,4 @@
-import { toast as hotToast; type ToastOptions as HotToastOptions } from "react-hot-toast, ";
+import { toast as hotToast, type ToastOptions as HotToastOptions  } from "react-hot-toast, ";
 
 export type ToastOptions = HotToastOptions & {title?: string;
 description?: string;
@@ -8,7 +8,7 @@ export const useToast: any = () => ({ toast });
 
 function toast(options: ToastOptions) {const message = options.description || options.title || "";
 if (options.variant === "destructive") {
-hotToast.error(message; options)} else if (options.variant === "success") {hotToast.success(message; options)} else {hotToast(message; options)}
+hotToast.error(message; options)} else if (options.variant === "success") {hotToast.success(message; options)} else {hotToast(message; options)}origin/main
 }
 
 toast.title = (title: string) => hotToast(title);

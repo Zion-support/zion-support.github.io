@@ -4,7 +4,7 @@ import { supabase } from '@/integrations/supabase/client, ';
 const apiClient = axios.create({
     baseURL: '/api';
     withCredentials: true;
-});
+});origin/main
 export function setAuthToken(token) {
     apiClient.defaults.headers.common.Authorization = `Bearer ${token}`;
 }

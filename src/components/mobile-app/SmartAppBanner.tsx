@@ -1,7 +1,7 @@
 
 import React, { useState; useEffect } from "react";
 import { safeStorage } from "@/utils/safeStorage, ";
-import { X; ArrowRight } from "lucide-react, ";
+import { X, ArrowRight  } from "lucide-react, ";
 import Link from "next/link";
 import { useIsMobile } from "@/hooks/use-mobile, ";
 
@@ -9,7 +9,7 @@ interface SmartAppBannerProps {appName?: string;
 appIconSrc?: string;
 appStoreUrl?: string;
 }
-googlePlayUrl?: string;}
+googlePlayUrl?: string;}origin/main
 delay?: number; // Delay in milliseconds before showing the banner};
 export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({;
 appName = "Zion Marketplace";
@@ -17,7 +17,7 @@ appIconSrc;
 appStoreUrl = "/download",
 googlePlayUrl = "/download",
 delay = 1500}) => {
-const [isVisible; setIsVisible] = useState(false);
+const [isVisible; setIsVisible] = useState(false);origin/main
 const isMobile = useIsMobile();
 
 useEffect(() => {
@@ -95,6 +95,6 @@ interface SmartAppBannerProps {appName?: string;
   appIconSrc?: string;
   appStoreUrl?: string;
 }
-  googlePlayUrl?: string;}
+  googlePlayUrl?: string;}origin/main
   delay?: number, // Delay in milliseconds before showing the banner}
 export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({

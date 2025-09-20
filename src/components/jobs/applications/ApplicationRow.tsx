@@ -1,5 +1,5 @@
 import { formatDistanceToNow } from "date-fns";
-import { Calendar, User, FileText, BarChart } from "lucide-react";
+import { Calendar, User, FileText, BarChart } from "lucide-react";origin/main
 }
 export function ApplicationRow({
 return (
@@ -67,7 +67,7 @@ href={application.resume.file_url |'#'}
         )}
       </TableCell>
       <TableCell className='text-right'>
-        <ApplicationActions
+        <ApplicationActionsorigin/main
 application = {application}
           processingId = {processingId}
           onViewApplication = {onViewApplication}

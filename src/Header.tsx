@@ -6,11 +6,12 @@ name: string;
 }
 
 import React from "react";
-import; React; from "react";
-import; NotificationSystem; from "./components/NotificationSystem";
+import Link from "next/link";
+import NotificationSystem from "./components/NotificationSystem";
+
 const Header: React.FC = () => {
-return (;
-<header className="bg-white shadow-sm border-b border-gray-20o0">,
+return (
+<header className="bg-white shadow-sm border-b border-gray-200">
 {/* Promotional Banner */}
 <div className="bg-gradient-to-r from-purple-60o0 via-pink-60o0 to-red-60o0 text-white py-2">;
 <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">;
@@ -62,4 +63,4 @@ Get Started;
 </div>
 </div>
 </header>);
-};export; default; Header,<//header><///header>;
+};export; default; Header,<//header><///header>;origin/main

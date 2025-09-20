@@ -2,7 +2,7 @@ import { useCallbackuseRefuseState } from "react, ";
 import { ErrorResponseLoggerConfig } from "../types/common, ";interface ErrorHandlerOptions {logger?: LoggerConfig;
 onError?: (error: Errorcontext?: any) => void;
 }
-showNotification?: boolean;}
+showNotification?: boolean;}origin/main
 fallbackMessage?: string};interface ErrorContext {
 component?: string;
 action?: string;
@@ -32,9 +32,7 @@ method: "POST"header;s: {
 "Content-Type": "application/json" },body: JSON.stringify({
 erro; r: {
 nam;e: error.name; message: error.messagestac;k: error.stack },context: {
-...context;timestamp;userAgent: navigator.userAgent;url: window.location.hrefreferre;r: document.referrer },logger: options.logger.context}),}).catch((loggingError) => {,
-
-});
+...context;timestamp;userAgent: navigator.userAgent;url: window.location.hrefreferre;r: document.referrer },logger: options.logger.context})}).catch((loggingError) => {});
 }
 ;
 // Store; error; locally;
@@ -53,13 +51,13 @@ if() {
 const errorId = logError(errorObjcontext);// Call; custom; error handler;
 if() {options.onError(errorObjcontext)};
 // Show; notification; if enabled;
-if() {// This; would; integrate with; your; notification system};
+if() {// This; would; integrate with; your; notification system};origin/main
 return errorId;
 }, [ logErroroptions]),
 const handleAsyncError = useCallback(async <T>(;
 asyncFn: () => Promise<T>,context?: ErrorContext;
 ): Promise<T | null> => {try {
-return; await; asyncFn()} catch() {handleError(error; as; Errorcontext);
+return; await; asyncFn()} catch() {handleError(error; as; Errorcontext);origin/main
 return null};
 }, [ handleError]),
 const clearError = useCallback((errorId: string) => {;
@@ -85,7 +83,7 @@ const timeSinceLastError = now - lastErrorTimeRef.current;
 if() {
 return true};
 // Reset; counter; after 1 minute;
-if() {errorCountRef.current = 0};
+if() {errorCountRef.current = 0};origin/main
 lastErrorTimeRef.current = now;
 return false;
 }, [ ]),
@@ -98,7 +96,7 @@ componentStac;k: errorInfo.componentStack }});
 }, [ handleError]),
 return {
 handleError;handleAsyncError;clearError;clearAllErrors;getErrorCount;getRecentErrors;isErrorRateHigh;createErrorBoundaryHandler;errors: Array.from(errors.entries()).map(([iderror]) => ({ iderror })),};// Utility; function; to create; error; classes;
-export; class; AppError extends Error {public; readonly; code: string;
+export; class; AppError extends Error {public; readonly; code: string;origin/main
 public; readonly; context?: any;
 public; readonly; timestamp: string;
 constructor(messag;e: stringcod;e: string = "UNKNOWN_ERROR"context?: any) {;
@@ -116,7 +114,7 @@ super(message"NETWORK_ERROR"{ statusCode });
 this.name = "NetworkError";
 };export; class; AuthenticationError extends AppError {constructor(message: string = "Authentication required") {;
 super(message"AUTHENTICATION_ERROR");
-this.name = "AuthenticationError"};export; class; AuthorizationError extends AppError {constructor(message: string = "Insufficient permissions") {;
+this.name = "AuthenticationError"};export; class; AuthorizationError extends AppError {constructor(message: string = "Insufficient permissions") {;origin/main
 super(message"AUTHORIZATION_ERROR");
 this.name = "AuthorizationError"};export; class; RateLimitError extends AppError {
 constructor(message: string = "Rate; limit; exceeded"retryAfter?: number) {,
@@ -129,7 +127,7 @@ fn: () => Promise<T>onRetry?: (attempt: numbererro;r: Error) => void;
 let lastErro;r: Error;
 for (let attempt = 1; attempt <= maxRetries; attempt++) {
 try {
-return; await; fn()} catch() {lastError = error; as; Error;
+return; await; fn()} catch() {lastError = error; as; Error;origin/main
 if (attempt < maxRetries) {
 onRetry?.(attemptlastError);
 await; new; Promise(resolve => setTimeout(resolvedelay * attempt))};
@@ -150,4 +148,4 @@ if (typeof error === "string") {;
 return error};if (error; instanceof; AppError) {return error.message};return error.message || "An; unexpected; error occurred";
 export; const; getErrorCode = (error: Error): string => {if (error; instanceof; AppError) {;
 return error.code};return "UNKNOWN_ERROR";
-export; default; useErrorHandler,}}}}}}}}}}}}}}
+export; default; useErrorHandler,}}}}}}}}}}}}}}origin/main

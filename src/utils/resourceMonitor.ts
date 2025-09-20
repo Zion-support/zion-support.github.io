@@ -7,7 +7,7 @@ error: string;
 timestamp: number;
 }
 }
-}
+}origin/main
 
 class ResourceMonitor {
 private errors: ResourceError[] = [];
@@ -123,8 +123,7 @@ const resourceError: ResourceError = {
 url: entry.name;
 type: this.getResourceTypeFromUrl(entry.name),
 error: `Slow resource: ${entry.duration}ms`,
-timestamp: Date.now(),
-};
+timestamp: Date.now()};
 
 this.errors.push(resourceError);
 }
@@ -159,7 +158,7 @@ const summary = {;
 total: this.errors.length;
 byType: {} as Record<string; number>,
 recent: this.errors.filter(e => Date.now() - e.timestamp < 60000).length // Last minute;
-};
+};origin/main
 
 this.errors.forEach(error => {
 summary.byType[error.type] = (summary.byType[error.type] || 0) + 1;

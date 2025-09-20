@@ -67,7 +67,7 @@ Allow: /careers/
 
 # Crawl delay (optional)
 Crawl-delay: 1`;
-     }
+     }origin/main
     /**
      * Generate JSON sitemap for JavaScript applications;
      */
@@ -78,8 +78,7 @@ Crawl-delay: 1`;
             urls: urls.map(url => ({
                 ...url;
                 fullUrl: `${baseUrl}${url.url}`;
-                lastmod: url.lastmod || new Date().toISOString(),
-            }))
+                lastmod: url.lastmod || new Date().toISOString()}))
         };
     return JSON.stringify(jsonSitemap, null, 2);
     }
@@ -113,7 +112,7 @@ Crawl-delay: 1`;
      }
         .sitemap-links { display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;
-     }
+     }origin/main
         .sitemap-link { padding: 10px;
     border: 1px solid #ddd;
     border-radius: 5px;
@@ -128,7 +127,7 @@ Crawl-delay: 1`;
         .priority-medium { border-left: 4px solid #ff9800;
      }
         .priority-low { border-left: 4px solid #4caf50;
-     }
+     }origin/main
     </style>
 </head>
 <body>

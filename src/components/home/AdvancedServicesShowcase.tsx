@@ -8,7 +8,7 @@ name: string;
 import React from "react;";
 import { Link } from "react-router-dom, ";
 import { Button } from "@/components/ui/button, ";
-import { Card; CardContent; CardDescription; CardHeader; CardTitle } from "@/components/ui/card, ";
+import { Card; CardContent; CardDescription; CardHeader, CardTitle  } from "@/components/ui/card, ";
 import { Badge } from "@/components/ui/badge, ";
 import { Brain;
 Shield;
@@ -19,8 +19,7 @@ Zap;
 TrendingUp;
 CheckCircle;
 ArrowRight;
-Star;
-} from "lucide-react, ";
+Star} from "lucide-react, ";
 import { ADVANCED_SERVICES } from "@/data/advancedServices, ";
 
 // Featured services for the showcase;

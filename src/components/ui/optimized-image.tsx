@@ -5,7 +5,7 @@ import { ImageIcon, AlertTriangle } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { imageOptimization } from "@/utils/performance";
 import { logWarn } from "@/utils/productionLogger";
-interface OptimizedImageProps {src: string;
+interface OptimizedImageProps {src: string;origin/main
 alt: string;
   width?: number;
   height?: number;
@@ -27,7 +27,7 @@ alt: string;
   blurDataURL?: string;
   loading?: 'lazy' | 'eager',
 }
-  style?: React.CSSProperties;}
+  style?: React.CSSProperties;}origin/main
   objectPosition?: string}
 
 interface ImageMetrics {

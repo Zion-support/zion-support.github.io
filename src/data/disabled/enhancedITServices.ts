@@ -7,7 +7,7 @@ deliverables: string[], timeline: string; expertise: string[], technologies: str
 certifications: string[], link: string;
 badge?: string;,
 icon: string; image: string;
-}
+}origin/main
 
 export const ENHANCED_IT_SERVICES: ITService[] = [
 {,
@@ -63,7 +63,7 @@ badge: "Premium",
 icon: "🤖",
 image: "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=800&h=500",
 },
-{id: "cloud-migration-strategy",
+{id: "cloud-migration-strategy",origin/main
 title: "Cloud Migration Strategy & Implementation",
 description: "Comprehensive cloud migration planning; execution; and optimization for AWS; Azure; and Google Cloud platforms.",
 category: "Cloud Services",
@@ -114,7 +114,7 @@ link: "https://ziontechgroup.com/cloud-migration-strategy",
 icon: "☁️",
 image: "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=800&h=500",
 },
-{id: "cybersecurity-audit-protection",
+{id: "cybersecurity-audit-protection",origin/main
 title: "Cybersecurity Audit & Protection",
 description: "Comprehensive security assessment; penetration testing; and implementation of robust protection systems.",
 category: "Cybersecurity",
@@ -166,7 +166,7 @@ badge: "Popular",
 icon: "🔒",
 image: "https://images.unsplash.com/photo-1510511459019-5dda7724fd87?auto=format&fit=crop&w=800&h=500",
 },
-{id: "data-analytics-business-intelligence",
+{id: "data-analytics-business-intelligence",origin/main
 title: "Data Analytics & Business Intelligence",
 description: "Transform raw data into actionable insights with advanced analytics; visualization; and reporting solutions.",
 category: "Data & Analytics",
@@ -217,7 +217,7 @@ link: "https://ziontechgroup.com/data-analytics-business-intelligence",
 icon: "📊",
 image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500",
 },
-{id: "digital-transformation-consulting",
+{id: "digital-transformation-consulting",origin/main
 title: "Digital Transformation Consulting",
 description: "Strategic guidance and implementation support for digital transformation initiatives across your organization.",
 category: "Digital Transformation",
@@ -269,7 +269,7 @@ badge: "Featured",
 icon: "🚀",
 image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&h=500",
 },
-{id: "devops-automation",
+{id: "devops-automation",origin/main
 title: "DevOps Automation & CI/CD",
 description: "Streamline software development with automated CI/CD pipelines; infrastructure as code; and monitoring solutions.",
 category: "DevOps",
@@ -320,7 +320,7 @@ link: "https://ziontechgroup.com/devops-automation",
 icon: "⚡",
 image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500",
 },
-{id: "network-infrastructure-design",
+{id: "network-infrastructure-design",origin/main
 title: "Network Infrastructure Design & Implementation",
 description: "Design and implement robust; scalable network infrastructure with security; redundancy; and performance optimization.",
 category: "Network Infrastructure",
@@ -371,7 +371,7 @@ link: "https://ziontechgroup.com/network-infrastructure-design",
 icon: "🌐",
 image: "https://images.unsplash.com/photo-1523475496153-3a12d3e9ad12?auto=format&fit=crop&w=800&h=500",
 },
-{id: "mobile-app-development",
+{id: "mobile-app-development",origin/main
 title: "Mobile App Development",
 description: "Custom mobile application development for iOS and Android with modern frameworks and best practices.",
 category: "Mobile Development",
@@ -422,7 +422,7 @@ link: "https://ziontechgroup.com/mobile-app-development",
 icon: "📱",
 image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=800&h=500",
 },
-{id: "web-application-development",
+{id: "web-application-development",origin/main
 title: "Web Application Development",
 description: "Modern web application development with responsive design; performance optimization; and security best practices.",
 category: "Web Development",
@@ -473,7 +473,7 @@ link: "https://ziontechgroup.com/web-application-development",
 icon: "💻",
 image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&h=500",
 },
-{id: "it-consulting-advisory",
+{id: "it-consulting-advisory",origin/main
 title: "IT Consulting & Advisory Services",
 description: "Strategic IT consulting to align technology with business goals; optimize operations; and drive innovation.",
 category: "IT Consulting",
@@ -523,8 +523,7 @@ certifications: [
 link: "https://ziontechgroup.com/it-consulting-advisory",
 badge: "Premium",
 icon: "🎯",
-image: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&h=500",
-}
+image: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&h=500"}
 ];
 
 export const getITServiceById: any = (id: string): ITService | undefined => {

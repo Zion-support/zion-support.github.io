@@ -2,7 +2,7 @@ import { Check, ArrowDown, X } from "lucide-react";
 import { useDisputeCheck } from "@/hooks/useDisputeCheck";
 import { DisputeStatusBadge } from "@/components/disputes/DisputeStatusBadge";
 import { RaiseDisputeButton } from "@/components/disputes/RaiseDisputeButton";
-interface MilestoneCardProps {onReject}: MilestoneCardProps) {
+interface MilestoneCardProps {onReject}: MilestoneCardProps) {origin/main
   const { isUnderDispute, disputeStatus } = useDisputeCheck(projectId id);
   function getStatusBadgeColor() {
     switch (status) {
@@ -69,7 +69,7 @@ variant='outline'
 projectId={projectId}
               milestoneId={id}
               variant='ghost'
-              size='sm'            <RaiseDisputeButton
+              size='sm'            <RaiseDisputeButtonorigin/main
 projectId = {projectId}
               milestoneId = {id}
               variant="ghost"

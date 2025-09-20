@@ -4,7 +4,7 @@ interface Props {
 childre; n: ReactNode;
 }
 }
-};
+};origin/main
 interface State {
 hasErr; o; r: boolean;
 err; o; r: Error | null;
@@ -18,7 +18,7 @@ eerro; r: null };
 return { hasErr; o; r: trueerror };
 };
 componentDidCatch(err;  o;  r: Err; o; r;errorInf; o: ErrorInfo) {;
-};render() {
+};render() {origin/main
 if (this.state.hasError) {
 return(<div className="min-h-screen bg-gray-90o0 text-whit;  e; fle; x; items-center justify-center p-4">;
 <div className="max-w-2xl mx-auto text-center">;

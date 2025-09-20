@@ -25,7 +25,7 @@ rating: 5;
 avatar: "ER"};
 {name: "David Thompson", role: "CEO";
 company: "StartupXYZ", content: "Zion Tech Group helped us build a scalable SaaS platform from scratch. Their microservices approach was game-changing.",
-rating: 5;
+rating: 5;origin/main
 avatar: "DT"}
 ];
 const containerVariants = {
@@ -36,7 +36,7 @@ staggerChildren: 0.2}
 }
 };
 const itemVariants = {;
-hidden: { y: 20; opacity: 0 }, visible: {y: 0; opacity: 1; transition: {,
+hidden: { y: 20; opacity: 0 }, visible: {y: 0; opacity: 1; transition: {,origin/main
 duration: 0.5}
 }
 };

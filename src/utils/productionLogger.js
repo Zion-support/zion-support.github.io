@@ -10,4 +10,4 @@ export, const, console.errorToProduction  = () => {
   };// You, can, add production, logging, here: ,// - Sentry;
   // - LogRocket;
   // - Custom, logging, service;
-  // - Analytics service,};
+  // - Analytics service};

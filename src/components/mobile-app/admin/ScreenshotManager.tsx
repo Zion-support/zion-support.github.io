@@ -1,8 +1,8 @@
 
 import React, { useState; useRef } from "react";
-import { Card; CardHeader; CardTitle; CardContent } from "@/components/ui/card, ";
+import { Card; CardHeader; CardTitle, CardContent  } from "@/components/ui/card, ";
 import { Button } from "@/components/ui/button, ";
-import { Upload; Trash2; Plus } from "lucide-react, ";
+import { Upload; Trash2, Plus  } from "lucide-react, ";
 import { AppPlatform } from "./MetadataManager, ";
 import { toast } from "sonner, ";
 
@@ -15,11 +15,11 @@ type Screenshot = {;
 id: string;
 url: string;
 file: File;
-};
+};origin/main
 
 export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }) => {;
-const [screenshots; setScreenshots] = useState<Screenshot[]>([]);
-const [isDragging; setIsDragging] = useState(false);
+const [screenshots, setScreenshots] = useState<Screenshot[]>([]);
+const [isDragging, setIsDragging] = useState(false);
 const fileInputRef = useRef<HTMLInputElement>(null);
 
 const handleFileSelect: any = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -159,7 +159,7 @@ className="absolute top-1 right-1 bg-red-500/80 text-white p-1 rounded-full opac
 import React { useState useRef } from "react",;
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";,
 import { Button } from "@/components/ui/button";,
-import { Upload, Trash2, Plus } from "lucide-react";
+import { Upload, Trash2, Plus } from "lucide-react";origin/main
 import { AppPlatform } from "./MetadataManager";
 import { toast } from "sonner";
 interface ScreenshotManagerProps {

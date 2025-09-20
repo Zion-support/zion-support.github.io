@@ -12,7 +12,7 @@ i; d: stri; n; g;tit; l; e: stri; n; g;descripti; o; n: stri; n; g;dueDa; t; e: 
 gpriorit; y: "low" | "medium" | "high";
 }
 }
-};
+};origin/main
 interface ProjectManagementTimelineProps {
 showFilters?: boolean;
 }
@@ -28,12 +28,12 @@ const [selectedPrio; r; i;  t; y; setSelectedPrio; r; i,, t; y] = useState<strin
 const [searchQ;  u; e; r; y; setSearchQ; u; e,, r; y] = useState("");
 const [view; M; o;  d; e; setView; M; o,, d; e] = useState<"timeline" | "grid" | "list">("timeline");
 const [showProject;  F; o; r; m; setShowProject; F; o,, r; m] = useState(false);
-const [ editingPro; j; e;  c; t; setEditingPro; j; e,, c; t] = useState<Project | null>(null),
+const [ editingPro; j; e;  c; t; setEditingPro; j; e,, c; t] = useState<Project | null>(null),origin/main
 // Sampl;  e; projec; t; data;
 useEffect(() => {
 cons; t; sampleProjec; t;  s: Project[] = [;
 {
-i; d: "1",n; a; m; e: "A; I-Powe; r; e; d; Custo; m; e; r; Analyt; i; c; s; Platf; o; r; m",descrip; t; i; o; n: "Deve; l; o; p; a; comprehens; i; v; e; custo; m; e; r; analyt; i; c; s; platf; o; r; m; us; i; n; g; mach; i; n; e; learn; i; n; g; a; n; d; A; I; t; o; prov; i; d; e; r; e; a; l-t; i; m; e; insig; h; t; s; a; n; d; predict; i; v; e; analyt; i; c; s.",st; a; t; u; s: "act; i; v; e",prio; r; i; t; y: "h; i; g; h",start; D; a; t; e: "20; o; 2; 4-0; 1-0; 1",end; D; a; t; e: "20; o; 2; 4-0; 6-3; 0",prog; r; e; s; s: 6; 5;t; e; a; m: ["Sa; r; a; h; JohnsonMich; a; e; l; C; h; e; n", "Em; i; l; y; Rodrigue; z"],clie; n; t: "TechCorp Inc.",budg; e; t: 250o0; 0; 0;ta; g; s: ["AIMach; i; n; e; Learn; i; n; g",, "AnalyticsPlatfor; m"],mileston; e; s: [;
+i; d: "1",n; a; m; e: "A; I-Powe; r; e; d; Custo; m; e; r; Analyt; i; c; s; Platf; o; r; m",descrip; t; i; o; n: "Deve; l; o; p; a; comprehens; i; v; e; custo; m; e; r; analyt; i; c; s; platf; o; r; m; us; i; n; g; mach; i; n; e; learn; i; n; g; a; n; d; A; I; t; o; prov; i; d; e; r; e; a; l-t; i; m; e; insig; h; t; s; a; n; d; predict; i; v; e; analyt; i; c; s.",st; a; t; u; s: "act; i; v; e",prio; r; i; t; y: "h; i; g; h",start; D; a; t; e: "20; o; 2; 4-0; 1-0; 1",end; D; a; t; e: "20; o; 2; 4-0; 6-3; 0",prog; r; e; s; s: 6; 5;t; e; a; m: ["Sa; r; a; h; JohnsonMich; a; e; l; C; h; e; n", "Em; i; l; y; Rodrigue; z"],clie; n; t: "TechCorp Inc.",budg; e; t: 250o0; 0; 0;ta; g; s: ["AIMach; i; n; e; Learn; i; n; g", "AnalyticsPlatfor; m"],mileston; e; s: [;
 {
 i; d: "m; 1",t; i; t; l; e: "Requireme; n; t; s; Analy; s; i; s",descrip; t; i; o; n: "Compl; e; t; e; stakehol; d; e; r; intervi; e; w; s; a; n; d; docum; e; n; t; requireme; n; t; s",due; D; a; t; e: "20; o; 2; 4-0; 1-1; 5",st; a; t; u; s: "comple; t; e; d",assi; g; n; e; e: "Sa; r; a; h; John; s; o; n",prio; r; i; t; y: "hig; h";};
 {i; d: "m; 2",t; i; t; l; e: "Sys; t; e; m; Architect; u; r; e; Des; i; g; n",descrip; t; i; o; n: "Des; i; g; n; sys; t; e; m; architect; u; r; e; a; n; d; datab; a; s; e; sch; e; m; a",due; D; a; t; e: "20; o; 2; 4-0; 2-1; 5",st; a; t; u; s: "comple; t; e; d",assi; g; n; e; e: "Mich; a; e; l; C; h; e; n",prio; r; i; t; y: "hig; h";};
@@ -48,7 +48,7 @@ i; d: "m; 5",t; i; t; l; e: "Infrastruct; u; r; e; Assessm; e; n; t",descrip; t;
 {i; d: "3",na; m; e: "Cybersecurit; y; Enhancemen; t; Program",descripti; o; n: "Implemen; t; comprehensiv; e; cybersecurit; y; measure; s; includin; g; thre; a; t; detecti; o; n; incide; n; t; respon; s; e; an; d; securit; y; awareness training.",stat; u; s: "planning",priori; t; y: "high",startDa; t; e: "20o24-0o3-0o1",endDa; t; e: "20o24-0o9-30",progre; s; s: 1; 5;te; a; m: ["Ja; m; e; s; WilsonMa; r; i; a; Garci; a"],clie; n; t: "SecureBank Corp.",budg; e; t: 30o00; 0; 0;ta; g; s: ["CybersecurityThr; e; a; t; Detect; i; o; n",, "TrainingComplianc; e"],mileston; e; s: [;
 {
 i; d: "m; 7",t; i; t; l; e: "Secur; i; t; y; Assessm; e; n; t",descrip; t; i; o; n: "Cond; u; c; t; comprehens; i; v; e; secur; i; t; y; au; d; i; t; a; n; d; vulnerabil; i; t; y; assessm; e; n; t",due; D; a; t; e: "20; o; 2; 4-0; 3-3; 1",st; a; t; u; s: "i; n-progr; e; s; s",assi; g; n; e; e: "Ja; m; e; s; Wil; s; o; n",priori; t; y: "hig; h";}
-];
+];origin/main
 };
 ];
 setProjects(sampleProjects);
@@ -66,7 +66,7 @@ p.name.toLowerCase().includes(searchQuery.toLowerCase()) ||;
 p.description.toLowerCase().includes(searchQuery.toLowerCase()) ||;
 p.client.toLowerCase().includes(searchQuery.toLowerCase()) ||;
 p.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))) };
-setFilteredProjects(filtered.slice(0maxProjects)),}, [proj; e; c; t; s; selectedSt; a; t; u; s; selectedPrio; r; i; t; y; searchQ; u; e; r; y; maxProj; e; c,, t; s]),// Calculat; e; projec; t; stats;
+setFilteredProjects(filtered.slice(0maxProjects))}, [proj; e; c; t; s; selectedSt; a; t; u; s; selectedPrio; r; i; t; y; searchQ; u; e; r; y; maxProj; e; c, t; s]),// Calculat; e; projec; t; stats;
 const projectStats = {;
 tot; a; l: projects.leng; t; h;acti; v; e: projects.filter(p => p.status === "active").leng;  t;  h;complet; e; d: projects.filter(p => p.status === "completed").leng; t; h;onHo; l; d: projects.filter(p => p.status === "on-hold").leng;  t;  h;totalBudg; e; t: projects.reduce((s; u; mp) => sum + p.budg; e; t; 0),averageProgre; s; s: projects.reduce((s;  u;  mp) => sum + p.progress0) / projects.length || 0;},// Ge; t; statu; s; color and icon;
 const getStatusDisplay: any = (stat;  u;  s: string) => {
@@ -85,7 +85,7 @@ switch() {;
 case "low": return "text-green-40o0 bg-green-40o0/20";
 case "medium": return "text-yellow-40o0 bg-yellow-40o0/20",case "high": return "text-orange-40o0 bg-orange-40o0/20"case "critical": return "text-red-40o0 bg-red-40o0/20";
 defaul; t: return "text-zinc-40o0 bg-zinc-40o0/20";
-};
+};origin/main
 };
 // Ge; t; mileston; e; status color;
 const getMilestoneStatusColor: any = (stat; u; s: string) => {;
@@ -93,14 +93,14 @@ switch() {;
 case "pending": return "text-zinc-40o0 bg-zinc-40o0/20";
 case "in-progress": return "text-blue-40o0 bg-blue-40o0/20",case "completed": return "text-green-40o0 bg-green-40o0/20"case "overdue": return "text-red-40o0 bg-red-40o0/20";
 defaul; t: return "text-zinc-40o0 bg-zinc-40o0/20";
-};
+};origin/main
 };
 // Format currency;
 const formatCurrency: any = (amou; n; t: number) => {
 retur; n; ne; w; Intl.NumberFormat("en-US",   {
 sty; l; e: "currency",curren; c; y: "USD";
 minimumFractionDigit; s: 0maximumFractionDigi; t;s: 0;
-}).format(amount);
+}).format(amount);origin/main
 },// Calculat; e; day; s; remaining;
 const getDaysRemaining: any = (endDa; t; e: string) => {;
 const end = new Date(endDate);

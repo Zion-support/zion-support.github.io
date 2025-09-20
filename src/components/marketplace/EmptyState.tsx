@@ -1,6 +1,6 @@
 import React from "react";
 import * as React from "react;";
-import { RefreshCw; Wifi; Server; ShoppingCart; Users; Wrench; Lightbulb } from "lucide-react, ";
+import { RefreshCw; Wifi; Server; ShoppingCart; Users; Wrench, Lightbulb  } from "lucide-react, ";
 import { Button } from "@/components/ui/button, ";
 import Link from "next/link;";
 import { useTranslation } from "react-i18next, ";
@@ -14,7 +14,7 @@ label: string;
 onClick: () => void;
 }
 }
-};
+};origin/main
 icon?: React.ReactNode;
 }
 
@@ -55,7 +55,7 @@ icon: <RefreshCw className="w-16 h-16 text-blue-400 animate-spin" />;
 title: "Loading...";
 description: "We\"re fetching the latest data for you. This should only take a moment.";
 },
-};
+};origin/main
 
 export function EmptyState({;
 type;
@@ -121,7 +121,7 @@ export interface EmptyStateProps {type: 'products' | 'categories' | 'talent' | '
   action?: {
     label: string;
 }
-}
+}origin/main
 onClick: () => void}
   icon?: React.ReactNode
   )
@@ -156,7 +156,7 @@ onAddProduct?: () => void;
 isAuthenticated?: boolean;
 }) {const action = onAddProduct;
 ? {
-label: isAuthenticated ? "Add Product" : "Login to Add Product";
+label: isAuthenticated ? "Add Product" : "Login to Add Product";origin/main
 onClick: onAddProduct; }
 : onRetry;
 ? { label: "Try Again", onClick: onRetry }

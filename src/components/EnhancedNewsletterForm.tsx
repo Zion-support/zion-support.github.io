@@ -5,7 +5,7 @@ name: string;
 }
 }
 
-import React from "react";
+import React from "react";origin/main
 const EnhancedNewsletterForm: React.FC = () => {
 ,
 return (,
@@ -18,7 +18,7 @@ export default EnhancedNewsletterForm,;<//div><///div>
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useState, useRef } from "react";
-import { Mail } from "lucide-react";
+import { Mail } from "lucide-react";origin/main
 import { useToast } from "@/hooks/use-toast";
 import { logErrorToProduction } from '@/utils/productionLogger';
 export function EnhancedNewsletterForm() {
@@ -40,7 +40,7 @@ deals
         <div className='text-center p-4 rounded-lg bg-zion-purple/20 border border-zion-purple/40'>
           <p className='text-white font-medium'>Thank you for subscribing!</p>
           <p className='text-zion-slate-light mt-1'>
-            We&apos;ll keep you updated with the latest from Zion.
+            We'll keep you updated with the latest from Zion.
           </p>
         </div>
       ) : (

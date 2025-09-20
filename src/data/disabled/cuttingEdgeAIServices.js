@@ -48,7 +48,7 @@ export const CUTTING_EDGE_AI_SERVICES = [
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com"};
         websiteUrl: "https://ziontechgroup.com/autonomous-ai-research",
-    };
+    };origin/main
     // AI Consciousness Evolution Platform;
     {id: "ai-consciousness-evolution-platform";
         title: "AI Consciousness Evolution Platform";
@@ -98,7 +98,7 @@ export const CUTTING_EDGE_AI_SERVICES = [
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com"};
         websiteUrl: "https://ziontechgroup.com/ai-consciousness-evolution",
-    };
+    };origin/main
     // AI Autonomous Business Manager;
     {id: "ai-autonomous-business-manager";
         title: "AI Autonomous Business Manager";
@@ -148,7 +148,7 @@ export const CUTTING_EDGE_AI_SERVICES = [
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com"};
         websiteUrl: "https://ziontechgroup.com/ai-business-manager",
-    };
+    };origin/main
     // AI Autonomous Creative Director;
     {id: "ai-autonomous-creative-director";
         title: "AI Autonomous Creative Director";
@@ -198,7 +198,7 @@ export const CUTTING_EDGE_AI_SERVICES = [
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com"};
         websiteUrl: "https://ziontechgroup.com/ai-creative-director",
-    };
+    };origin/main
     // AI Autonomous Code Review System;
     {id: "ai-autonomous-code-review-system";
         title: "AI Autonomous Code Review System";
@@ -248,5 +248,5 @@ export const CUTTING_EDGE_AI_SERVICES = [
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com"};
         websiteUrl: "https://ziontechgroup.com/ai-code-review",
-    }
+    }origin/main
 ];

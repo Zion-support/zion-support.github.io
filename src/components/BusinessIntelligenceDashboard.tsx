@@ -7,9 +7,9 @@ interface BusinessMetric {id: string; title: string; value: string; change: stri
 category: "revenue" | "growth" | "efficiency" | "customer", icon: string; color: string};
 interface KPIData {metric: string; current: number; target: number; progress: number; status: "on-track" | "at-risk" | "behind"};
 interface RevenueData {month: string; revenue: number; growth: number; profit: number};
-interface CustomerInsight {segment: string; count: number; revenue: number; growth: number; satisfaction: number};
+interface CustomerInsight {segment: string; count: number; revenue: number; growth: number; satisfaction: number};origin/main
 export const BusinessIntelligenceDashboard: React.FC = () => {;
-const [metrics; setMetrics] = useState<BusinessMetric[]>([
+const [metrics, setMetrics] = useState<BusinessMetric[]>([
 {,
 id: "1",
 title: "Total Revenue",
@@ -19,7 +19,7 @@ trend: "up",
 category: "revenue",
 icon: "💰",
 color: "green"},
-{id: "2",
+{id: "2",origin/main
 title: "Customer Growth",
 value: "24;567",
 change: "+12.3%",
@@ -27,7 +27,7 @@ trend: "up",
 category: "growth",
 icon: "👥",
 color: "blue"},
-{id: "3",
+{id: "3",origin/main
 title: "Operational Efficiency",
 value: "94.2%",
 change: "+2.1%",
@@ -35,7 +35,7 @@ trend: "up",
 category: "efficiency",
 icon: "⚡",
 color: "purple"},
-{id: "4",
+{id: "4",origin/main
 title: "Customer Satisfaction",
 value: "4.8/5",
 change: "+0.3",
@@ -43,7 +43,7 @@ trend: "up",
 category: "customer",
 icon: "⭐",
 color: "yellow"},
-{id: "5",
+{id: "5",origin/main
 title: "Market Share",
 value: "15.7%",
 change: "+3.2%",
@@ -51,7 +51,7 @@ trend: "up",
 category: "growth",
 icon: "📈",
 color: "indigo"},
-{id: "6",
+{id: "6",origin/main
 title: "Cost Reduction",
 value: "$2.1M",
 change: "-8.5%",
@@ -74,11 +74,11 @@ status: "at-risk"},
 {metric: "Employee Satisfaction",
 current: 4.2;
 target: 4.5;
-progress: 93;
+progress: 93;origin/main
 status: "on-track"}
 ]);
 
-const [revenueData; setRevenueData] = useState<RevenueData[]>([
+const [revenueData, setRevenueData] = useState<RevenueData[]>([
 { month: "Jan", revenue: 950000; growth: 8.2; profit: 285000 },
 { month: "Feb", revenue: 1100000; growth: 15.8; profit: 330000 },
 { month: "Mar", revenue: 1200000; growth: 9.1; profit: 360000 },
@@ -96,12 +96,12 @@ count: 1245; revenue: 2800000; growth: 22.1;
 satisfaction: 4.6},
 {segment: "SMB",
 count: 8900; revenue: 1100000;
-growth: 8.7;
+growth: 8.7;origin/main
 satisfaction: 4.3}
 ]);
 
-const [selectedTimeframe; setSelectedTimeframe] = useState("6m");
-const [selectedCategory; setSelectedCategory] = useState("all");
+const [selectedTimeframe, setSelectedTimeframe] = useState("6m");
+const [selectedCategory, setSelectedCategory] = useState("all");
 
 const getTrendIcon: any = (trend: string) => {switch (trend) {;
 case "up": return "↗️";

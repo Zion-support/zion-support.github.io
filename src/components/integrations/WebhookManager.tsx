@@ -5,7 +5,7 @@ name: string;
 }
 }
 
-import React from "react";
+import React from "react";origin/main
 const WebhookManager: React.FC = () => {
 ,
 return (,
@@ -26,7 +26,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { ClickableBadge } from "@/components/ui/clickable-badge";
-import { PlusCircle, Save, Trash } from "lucide-react";
+import { PlusCircle, Save, Trash } from "lucide-react";origin/main
 return (
     <div className='space-y-8'>
       <Card>
@@ -67,7 +67,7 @@ id='webhook-url'
               {newWebhook.eventTypes.map(event => (
                 <ClickableBadge
 key={event}                  onRemove={() => handleRemoveEvent(event)}
-                <ClickableBadge
+                <ClickableBadgeorigin/main
 key = {event}
                   onRemove = {(,) => handleRemoveEvent(event)}
                 >
@@ -312,7 +312,7 @@ newWebhook.secret |undefined);"
 }</div> <div className="flex space-x-2"> <Select value= {newWebhook.selectedEvent}onValueChange= {(value) => setNewWebhook ({
   ...newWebhook selectedEvent: value as WebhookEventType}) "
 }> <SelectTrigger className="w-full"> <SelectValue placeholder=" Select event"/> </SelectTrigger> <SelectContent> {eventOptions.map (option => (<SelectItem key= {
-  option.value}value= {option.value}> {option.label}</SelectItem>) ) "
+  option.value}value= {option.value}> {option.label}</SelectItem>) ) "origin/main
 }</SelectContent> </Select> <PlusCircle className="h-4 w-4 mr-2"/> Add </Button> </div> </div> <div className="space-y-2"> <Label htmlFor=" webhook-secret">Secret (optional) </Label> <Input /> <p className="text-xs text-muted-foreground"> If provided this secret will be used to sign the webhook payload. </p> </div> </CardContent> <CardFooter> <Button onClick={
   handleCreateWebhook "
 }> <Save className="h-4 w-4 mr-2"/> Create Webhook </Button> </CardFooter> </Card> <div> <h3 className="text-lg font-medium mb-4">Your Webhooks</h3> {"
@@ -346,7 +346,7 @@ newWebhook.secret |undefined);"
 }{"
   testResult && (<Card className="mt-4 border-blue-200"> <CardHeader> <CardTitle className="text-lg">Webhook Test Result</CardTitle> </CardHeader> <CardContent> <div className="space-y-2"> <div className="flex justify-between"> <span className="font-medium">Status:</span> <span className= {'
   testResult.status >= 200 && testResult.status < 300 ? 'text-green-600' : 'text-red-600'
-}> {testResult.status}{
+}> {testResult.status}{origin/main
   testResult.statusText "
 }</span> </div> <div> <span className="font-medium">Response:</span> <pre className="mt-1 p-2 bg-gray-100 rounded text-sm overflow-x-auto"> {'
   testResult.responseBody |'<empty>'

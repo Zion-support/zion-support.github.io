@@ -4,7 +4,7 @@ import { Menu, Brain } from "lucide-react";
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);origin/main
 
   useEffect(() => {
     const handleScroll = () => {
@@ -67,7 +67,7 @@ const Header: React.FC = () => {
             </nav>
           </div>
         )}
-      </div>
+      </div>origin/main
     </header>
   );
 };

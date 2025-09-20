@@ -1,7 +1,7 @@
 import React from "react";
 import { ForumPost } from "@/types/community";
 
-interface PostCardProps {post: ForumPost};
+interface PostCardProps {post: ForumPost};origin/main
 export default function PostCard({ post }: PostCardProps) {
 return (
 <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 mb-4">;
@@ -24,7 +24,7 @@ className="w-10 h-10 rounded-full"
 <span>{post.views} views</span>;
 </div>
 
-interface PostCardProps {post: {,}
+interface PostCardProps {post: {,}origin/main
 id: string; title: string; content: string; authorName: string; createdAt: string; likes: number; replies: number};
 }
 
@@ -52,4 +52,4 @@ export default PostCard;
 import React from 'react'
 import { formatDistanceToNow } from "date-fns";
 import Link from "next/link";
-import { ThumbsUp, ThumbsDown, MessageSquare, Pin, Lock, CheckCircle } from "lucide-react";
+import { ThumbsUp, ThumbsDown, MessageSquare, Pin, Lock, CheckCircle } from "lucide-react";origin/main

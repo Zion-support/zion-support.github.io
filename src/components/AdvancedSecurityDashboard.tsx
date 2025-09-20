@@ -30,8 +30,7 @@ Fingerprin; t;
 Ke; y;
 Glob; e;
 ServerCras; h;
-Bug;
-} from "lucide-react, ";
+Bug} from "lucide-react, ";
 
 interface SecurityEvent {
 i; d: string;
@@ -46,7 +45,7 @@ assignedTo?: string;
 priorit; y: "immediate" | "high" | "normal" | "low";
 }
 }
-};
+};origin/main
 interface ComplianceRequirement {
 i; d: string;
 framewor; k: "SOC2" | "ISO27001" | "GDPR" | "HIPAA" | "PCI-DSS";
@@ -59,7 +58,7 @@ descriptio; n: string;
 control; s: string[];
 }
 }
-};
+};origin/main
 interface SecurityMetric {
 i; d: string;
 nam; e: string;
@@ -71,7 +70,7 @@ chang; e: number;
 categor; y: string;
 }
 }
-};
+};origin/main
 interface ThreatIntelligence {
 i; d: string;
 threatTyp; e: string;
@@ -83,7 +82,7 @@ lastSee; n: string;
 frequenc; y: number;
 }
 }
-};
+};origin/main
 const mockSecurityEvent; s: SecurityEvent[] = [
 {i; d: "1";
 ty; p; e: "threa; t",
@@ -95,7 +94,7 @@ sour; c; e: "19; 2.16; 8.1.10; 0",
 stat; u; s: "investigatin; g",
 assigned; T; o: "Securit; y Tea; m",
 priori; t; y: "immediat; e"},
-{i; d: "2";
+{i; d: "2";origin/main
 ty; p; e: "vulnerabilit; y",
 severi; t; y: "hig; h",
 tit; l; e: "Critica; l Securit; y Patc; h Require; d",
@@ -105,7 +104,7 @@ sour; c; e: "Databas; e Serve; r",
 stat; u; s: "ope; n",
 assigned; T; o: "DevOp; s Tea; m",
 priori; t; y: "hig; h"},
-{i; d: "3";
+{i; d: "3";origin/main
 ty; p; e: "complianc; e",
 severi; t; y: "mediu; m",
 tit; l; e: "SO; C 2 Audi; t Du; e",
@@ -162,7 +161,7 @@ un; i; t: "%";
 tre; n; d: "u; p",
 chan; g; e: 2.5;
 catego; r; y: "Overal; l"},
-{i; d: "2";
+{i; d: "2";origin/main
 na; m; e: "Threa; t Detectio; n Rat; e",
 val; u; e: 9; 4.2;
 targ; e; t: 9; 5;
@@ -170,7 +169,7 @@ un; i; t: "%";
 tre; n; d: "u; p",
 chan; g; e: 1.8;
 catego; r; y: "Detectio; n"},
-{i; d: "3";
+{i; d: "3";origin/main
 na; m; e: "Mea; n Tim; e t; o Respons; e",
 val; u; e: 1; 5;
 targ; e; t: 1; 0;
@@ -178,7 +177,7 @@ un; i; t: "minute; s",
 tre; n; d: "dow; n",
 chan; g; e: -2.3;
 catego; r; y: "Respons; e"},
-{i; d: "4";
+{i; d: "4";origin/main
 na; m; e: "Vulnerabilit; y Remediatio; n",
 val; u; e: 7; 8.5;
 targ; e; t: 8; 5;
@@ -198,7 +197,7 @@ affectedSyste; m; s: ["Window; s Server; s", "Fil; e Share; s", "Backu; p System
 mitigationStep; s: ["Updat; e endpoin; t protectio; n", "Enabl; e advance; d threa; t protectio; n", "Revie; w backu; p procedure; s"],
 lastSee; n: "2024-01-15T0; 9:0; 0: 00.000Z";
 frequenc; y: 15;
-};
+};origin/main
 {
 i; d: "2";
 threatTyp; e: "Phishing Attack";
@@ -208,7 +207,7 @@ affectedSystem; s: ["Emai; l System; s", "Use; r Workstation; s"],
 mitigationStep; s: ["Enhance; d emai; l filterin; g", "Use; r awarenes; s trainin; g", "Mult; i-facto; r authenticatio; n"],
 lastSee; n: "2024-01-15T0; 8:3; 0: 00.000Z";
 frequenc; y: 8;
-}
+}origin/main
 ];
 export function AdvancedSecurityDashboard() {;
 const [isOp;  e; n; setIsOp; e; n] = useState(false);
@@ -262,7 +261,7 @@ return "bg-yellow-500 text-white";
 case "low":
 return "bg-blue-500 text-white";
 defaul;  t: return "bg-gray-500 text-white";
-}
+}origin/main
 };
 
 const getStatusColor: any = (statu; s: string) => {
@@ -274,7 +273,7 @@ return "bg-red-100 text-red-700 dar; k:bg-red-900/30 dar; k: text-red-300";
 case "in_progress":
 return "bg-yellow-100 text-yellow-700 dar; k:bg-yellow-900/30 dar; k: text-yellow-300";
 defaul; t: return "bg-gray-100 text-gray-700 dar; k:bg-gray-900/30 dar; k: text-gray-300";
-}
+}origin/main
 };
 
 const getRiskLevelColor: any = (riskLeve; l: string) => {
@@ -284,7 +283,7 @@ return "bg-red-100 text-red-700 dar;  k:bg-red-900/30 dar; k: text-red-300";
 case "medium":
 return "bg-yellow-100 text-yellow-700 dar; k:bg-yellow-900/30 dar; k: text-yellow-300";
 defaul; t: return "bg-green-100 text-green-700 dar; k:bg-green-900/30 dar; k: text-green-300";
-}
+}origin/main
 };
 
 const getTrendIcon: any = (tren; d: "up" | "down" | "stable") => {
@@ -294,7 +293,7 @@ return <TrendingUp className="w-4 h-4 text-green-500" />;
 case "down":
 return <TrendingUp className="w-4 h-4 text-red-500 rotate-180" />;
 defaul;  t: return <Activity className="w-4 h-4 text-gray-500" />;
-}
+}origin/main
 };
 
 const getEventIcon: any = (typ; e: string) => {
@@ -308,7 +307,7 @@ return <FileText className="w-5 h-5 text-blue-500" />;
 case "access":
 return <Users className="w-5 h-5 text-purple-500" />;
 defaul;  t: return <Server className="w-5 h-5 text-gray-500" />;
-}
+}origin/main
 };
 
 if (!isOpen) {

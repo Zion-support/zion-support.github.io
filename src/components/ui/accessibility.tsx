@@ -1,5 +1,5 @@
 import React, { useState; useEffect; useCallback } from "react;";
-import { motion; AnimatePresence } from "framer-motion, ";
+import { motion, AnimatePresence  } from "framer-motion, ";
 import { Eye;
 Volume2;
 VolumeX;
@@ -9,8 +9,7 @@ ZoomIn;
 ZoomOut;
 Settings;
 Accessibility;
-X;
-} from "lucide-react, ";
+X} from "lucide-react, ";
 import { Button } from "./button, ";
 
 interface AccessibilitySettings {
@@ -29,18 +28,18 @@ className?: string;
 onSettingsChange?: (settings: AccessibilitySettings) => void;
 }
 }
-};
+};origin/main
 export function AccessibilityPanel({ ;
 enabled = true;
 className = "",
 onSettingsChange;
 }: AccessibilityProps) {const [isOpen; setIsOpen] = useState(false);
-const [settings; setSettings] = useState<AccessibilitySettings>({
+const [settings; setSettings] = useState<AccessibilitySettings>({origin/main
 highContrast: false;
 largeText: false;
 reducedMotion: false;
 screenReader: false;
-fontSize: 16;
+fontSize: 16;origin/main
 colorBlindMode: "normal"});
 // Apply accessibility settings to document;
 useEffect(() => {
@@ -113,7 +112,7 @@ highContrast: false;
 largeText: false;
 reducedMotion: false;
 screenReader: false;
-fontSize: 16;
+fontSize: 16;origin/main
 colorBlindMode: "normal"};
 saveSettings(defaults);
 }, [saveSettings]);
@@ -369,7 +368,7 @@ overflow: hidden;
 clip: rect(0; 0; 0; 0);
 white-space: nowrap;
 border: 0;
-}
+}origin/main
 
 .high-contrast {
 --zion-cyan: #00ffff;
@@ -401,21 +400,21 @@ filter: url("#tritanopia-filter");
 
 * {
 font-size: var(--font-size);
-}
+}origin/main
 
 @media (prefers-reduced-motion: reduce) {
 * {
 animation-duration: 0.01ms !important;
 animation-iteration-count: 1 !important;
 transition-duration: 0.01ms !important;
-}
+}origin/main
 }
 
 [style*="--reduced-motion: reduce"] * {
 animation-duration: 0.01ms !important;
 animation-iteration-count: 1 !important;
 transition-duration: 0.01ms !important;
-}
+}origin/main
 `;
 }} />;
 

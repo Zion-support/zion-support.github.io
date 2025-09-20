@@ -6,7 +6,7 @@ name: string; id: string;
 avatarUrl?: string;,}
 verified: boolean; verified: boolean; verified: boolean};
 images: string[], createdAt: string;
-}
+}origin/main
 
 export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
 // AI & Machine Learning Services;
@@ -51,7 +51,7 @@ verified: true},
 images: ["https://images.unsplash.com/photo-1633412802994-5c058f151b66?auto=format&fit=crop&w=800&h=500"],
 createdAt: "2024-01-15T10:00:00.000Z",
 },
-{id: "ai-content-generator",
+{id: "ai-content-generator",origin/main
 title: "AI Content Generator Suite",
 description: "Advanced AI-powered content creation platform for blogs; social media; marketing copy; and product descriptions. Includes SEO optimization and brand voice customization.",
 category: "AI Services",
@@ -89,7 +89,7 @@ verified: true},
 images: ["https://images.unsplash.com/photo-1513258496099-48168024aec0?auto=format&fit=crop&w=800&h=500"],
 createdAt: "2024-01-20T14:30:00.000Z",
 },
-{id: "ai-data-analytics",
+{id: "ai-data-analytics",origin/main
 title: "AI-Powered Business Intelligence",
 description: "Intelligent data analytics platform that transforms raw data into actionable insights. Features predictive analytics; automated reporting; and real-time dashboards.",
 category: "AI Services",
@@ -127,7 +127,7 @@ verified: true},
 images: ["https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"],
 createdAt: "2024-02-01T09:15:00.000Z",
 },
-{id: "ai-code-assistant",
+{id: "ai-code-assistant",origin/main
 title: "AI Code Assistant Pro",
 description: "Intelligent coding companion that helps developers write; debug; and optimize code. Supports 50+ programming languages with advanced AI-powered suggestions.",
 category: "AI Services",
@@ -165,7 +165,7 @@ verified: true},
 images: ["https://images.unsplash.com/photo-1542831371-29b0f74f9713?auto=format&fit=crop&w=800&h=500"],
 createdAt: "2024-01-10T11:45:00.000Z",
 },
-{id: "ai-image-generator",
+{id: "ai-image-generator",origin/main
 title: "AI Image Generator Studio",
 description: "Professional AI image creation platform for marketing; design; and content creation. Generate high-quality images from text descriptions with advanced customization options.",
 category: "AI Services",
@@ -201,8 +201,7 @@ name: "Zion Tech Group",
 id: "zion-tech-group",
 verified: true},
 images: ["https://images.unsplash.com/photo-1624355834900-99cd2071585b?auto=format&fit=crop&w=800&h=500"],
-createdAt: "2024-02-05T16:20:00.000Z",
-},
+createdAt: "2024-02-05T16:20:00.000Z"},
 // IT Services & Solutions;
 {id: "cloud-migration-suite",
 title: "Cloud Migration Suite",
@@ -242,7 +241,7 @@ verified: true},
 images: ["https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=800&h=500"],
 createdAt: "2024-01-25T13:10:00.000Z",
 },
-{id: "cybersecurity-monitoring",
+{id: "cybersecurity-monitoring",origin/main
 title: "AI Cybersecurity Monitoring",
 description: "Advanced cybersecurity monitoring platform with AI-powered threat detection; automated response; and 24/7 security operations center (SOC) services.",
 category: "IT Services",
@@ -280,7 +279,7 @@ verified: true},
 images: ["https://images.unsplash.com/photo-1510511459019-5dda7724fd87?auto=format&fit=crop&w=800&h=500"],
 createdAt: "2024-02-10T08:30:00.000Z",
 },
-{id: "devops-automation",
+{id: "devops-automation",origin/main
 title: "DevOps Automation Platform",
 description: "Complete DevOps automation solution with CI/CD pipelines; infrastructure as code; monitoring; and deployment automation. Accelerate development cycles and improve reliability.",
 category: "IT Services",
@@ -318,7 +317,7 @@ verified: true},
 images: ["https://images.unsplash.com/photo-1593642532973-d31b6557fa68?auto=format&fit=crop&w=800&h=500"],
 createdAt: "2024-01-30T15:45:00.000Z",
 },
-{id: "data-backup-recovery",
+{id: "data-backup-recovery",origin/main
 title: "Enterprise Data Backup & Recovery",
 description: "Comprehensive data protection solution with automated backup; disaster recovery; and business continuity planning. Supports hybrid cloud environments with zero data loss guarantee.",
 category: "IT Services",
@@ -354,8 +353,7 @@ name: "Zion Tech Group",
 id: "zion-tech-group",
 verified: true},
 images: ["https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500"],
-createdAt: "2024-02-15T12:00:00.000Z",
-},
+createdAt: "2024-02-15T12:00:00.000Z"},
 // Innovative Business Solutions;
 {id: "ai-customer-support",
 title: "AI Customer Support Suite",
@@ -380,7 +378,7 @@ integration: string[], support: string[];
 link: string;
 badge?: string;,
 icon: string;
-}
+}origin/main
 
 export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
 {,
@@ -420,8 +418,7 @@ integration: ["WordPress", "Shopify", "Mailchimp", "Buffer", "Hootsuite"],
 support: ["24/7 chat support", "Video tutorials", "Live training sessions", "API documentation"],
 link: "https://ziontechgroup.com/ai-content-generator",
 badge: "Popular",
-icon: "🤖",
-},
+icon: "🤖"},
 {
 id: "smart-invoice-manager",
 title: "Smart Invoice Manager",
@@ -457,8 +454,7 @@ targetAudience: ["Small businesses", "Freelancers", "Consultants", "Startups"],
 integration: ["QuickBooks", "Xero", "Stripe", "PayPal", "Bank APIs"],
 support: ["Email support", "Knowledge base", "Video guides", "Community forum"],
 link: "https://ziontechgroup.com/smart-invoice-manager",
-icon: "📊",
-},
+icon: "📊"},
 {
 id: "project-collaboration-hub",
 title: "Project Collaboration Hub",
@@ -495,8 +491,7 @@ integration: ["Slack", "Microsoft Teams", "GitHub", "Jira", "Trello"],
 support: ["Live chat support", "Training webinars", "API documentation", "Community support"],
 link: "https://ziontechgroup.com/project-collaboration-hub",
 badge: "Featured",
-icon: "🚀",
-},
+icon: "🚀"},
 {
 id: "ai-customer-support",
 title: "AI Customer Support Suite",
@@ -532,8 +527,7 @@ targetAudience: ["E-commerce businesses", "SaaS companies", "Service providers",
 integration: ["Shopify", "WooCommerce", "Zendesk", "Intercom", "Slack"],
 support: ["Priority support", "Custom training", "White-label options", "Dedicated account manager"],
 link: "https://ziontechgroup.com/ai-customer-support",
-icon: "💬",
-},
+icon: "💬"},
 {
 id: "data-analytics-platform",
 title: "Data Analytics Platform",
@@ -569,8 +563,7 @@ targetAudience: ["Business analysts", "Data scientists", "Executives", "Marketin
 integration: ["Google Analytics", "Salesforce", "HubSpot", "MySQL", "PostgreSQL"],
 support: ["Data migration assistance", "Custom dashboard design", "Training sessions", "24/7 support"],
 link: "https://ziontechgroup.com/data-analytics-platform",
-icon: "📈",
-},
+icon: "📈"},
 {
 id: "ai-recruitment-assistant",
 title: "AI Recruitment Assistant",
@@ -607,8 +600,7 @@ integration: ["LinkedIn", "Indeed", "Workday", "BambooHR", "Greenhouse"],
 support: ["Implementation support", "Training programs", "Custom workflows", "Dedicated success manager"],
 link: "https://ziontechgroup.com/ai-recruitment-assistant",
 badge: "New",
-icon: "👥",
-},
+icon: "👥"},
 {
 id: "cybersecurity-monitor",
 title: "Cybersecurity Monitor",
@@ -644,8 +636,7 @@ targetAudience: ["IT security teams", "Compliance officers", "Small businesses",
 integration: ["Firewall systems", "SIEM tools", "Cloud platforms", "Identity providers"],
 support: ["Security consultation", "Incident response support", "Compliance guidance", "24/7 monitoring"],
 link: "https://ziontechgroup.com/cybersecurity-monitor",
-icon: "🔒",
-},
+icon: "🔒"},
 {
 id: "cloud-cost-optimizer",
 title: "Cloud Cost Optimizer",
@@ -681,8 +672,7 @@ targetAudience: ["DevOps engineers", "Cloud architects", "IT managers", "Startup
 integration: ["AWS", "Azure", "Google Cloud", "Kubernetes", "Docker"],
 support: ["Cloud optimization consulting", "Implementation support", "Training programs", "Best practices guide"],
 link: "https://ziontechgroup.com/cloud-cost-optimizer",
-icon: "☁️",
-},
+icon: "☁️"},
 {
 id: "ai-marketing-automation",
 title: "AI Marketing Automation",
@@ -719,8 +709,7 @@ integration: ["Shopify", "WooCommerce", "Mailchimp", "Facebook Ads", "Google Ads
 support: ["Campaign strategy consultation", "Implementation support", "Performance optimization", "Dedicated success manager"],
 link: "https://ziontechgroup.com/ai-marketing-automation",
 badge: "Premium",
-icon: "🎯",
-},
+icon: "🎯"},
 {
 id: "api-management-platform",
 title: "API Management Platform",
@@ -756,8 +745,7 @@ targetAudience: ["Developers", "API architects", "DevOps teams", "Startups"],
 integration: ["GitHub", "Postman", "Swagger", "Kubernetes", "Docker"],
 support: ["API design consultation", "Implementation support", "Performance optimization", "Developer training"],
 link: "https://ziontechgroup.com/api-management-platform",
-icon: "⚡",
-}
+icon: "⚡"}
 ];
 
 export const getMicroSaasServiceById: any = (id: string): MicroSaasService | undefined => {

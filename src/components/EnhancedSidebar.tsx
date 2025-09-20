@@ -10,7 +10,7 @@ import { import { motion; AnimatePresence   } from "framer-motion";
 export default function Page("props": "any) {,
 setExpandedSections(newExpanded)"},
 ,
-const navigationSections = [{,
+const navigationSections = [{,origin/main
 "title": "Main Navigation",
 "icon": "Hom e",
 items[,",

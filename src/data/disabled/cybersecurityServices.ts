@@ -23,7 +23,7 @@ email: string;
 website: string;
 }
 }
-};
+};origin/main
 }
 
 export const CYBERSECURITY_SERVICES: CybersecurityService[] = [
@@ -71,7 +71,7 @@ supportLevel: "enterprise";
 marketPrice: "$2;800 - $15;000/month",
 contactInfo: {
 phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";origin/main
 website: "https://ziontechgroup.com"}
 };
 // AI-Powered Threat Detection;
@@ -118,7 +118,7 @@ supportLevel: "enterprise";
 marketPrice: "$3;200 - $18;000/month",
 contactInfo: {
 phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";origin/main
 website: "https://ziontechgroup.com"}
 };
 // Cloud Security Posture Management;
@@ -165,7 +165,7 @@ supportLevel: "premium";
 marketPrice: "$2;400 - $12;000/month",
 contactInfo: {
 phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";origin/main
 website: "https://ziontechgroup.com"}
 };
 // Privacy Compliance Automation;
@@ -212,7 +212,7 @@ supportLevel: "premium";
 marketPrice: "$1;900 - $8;000/month",
 contactInfo: {
 phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";origin/main
 website: "https://ziontechgroup.com"}
 };
 // IoT Security Management;
@@ -259,7 +259,7 @@ supportLevel: "premium";
 marketPrice: "$2;100 - $10;000/month",
 contactInfo: {
 phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";origin/main
 website: "https://ziontechgroup.com"}
 }
 ];

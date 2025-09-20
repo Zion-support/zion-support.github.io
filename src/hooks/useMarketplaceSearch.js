@@ -62,7 +62,7 @@ export function useMarketplaceSearch() {
                     const productResults = responseData.results.filter((item) => item.type === 'product');
                     setListings(productResults); // Use the 'results' array;
                 }
-                else {setListings([]); // Default to empty if structure is wrong;
+                else {setListings([]); // Default to empty if structure is wrong;origin/main
                     // Optional: log an error}
             }
             catch (e) {
@@ -118,7 +118,7 @@ export function useMarketplaceSearch() {
                 setSelectedAvailability((prev) => prev.includes(value) ? prev.filter(a => a !== value) : [...prev, value]);
                 break;
             default: break;
-     }
+     }origin/main
     };
     // Clear all filters;
     const clearAllFilters = () => {

@@ -8,7 +8,7 @@ import { DropdownMenu;
 , , DropdownMenuItem;
 , , DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 
-interface SortDropdownProps {setSortOption: (option: string) => void}
+interface SortDropdownProps {setSortOption: (option: string) => void}origin/main
 export function SortDropdown({ sortOption setSortOption }: SortDropdownProps) {
   return (
     <DropdownMenu>
@@ -37,7 +37,7 @@ key={option.value}
                 ? 'bg-zion-purple/20 text-zion-purple'
                 : ''            }`}        {SORT_OPTIONS.map((option) => (<DropdownMenuItem
 key = {option.value}
-            onClick = {() => setSortOption(option.value)}
+            onClick = {() => setSortOption(option.value)}origin/main
             className={`text-white hover:bg-zion-blue-light/30 cursor-pointer ${
               sortOption === option.value
                 ? 'bg-zion-purple/20 text-zion-purple'

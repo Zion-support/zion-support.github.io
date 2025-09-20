@@ -19,7 +19,7 @@ reviewCount: 20;
 location: "Global";
 availability: "Immediate";
 aiScore: 85;
-};
+};origin/main
 {
 id: "mp-sales-insights";
 title: "Sales Insights Dashboard";
@@ -38,7 +38,7 @@ reviewCount: 15;
 location: "North America";
 availability: "1-2 Weeks";
 aiScore: 88;
-};
+};origin/main
 {
 id: "mp-helpdesk-bot";
 title: "Helpdesk Chatbot";
@@ -57,7 +57,7 @@ reviewCount: 12;
 location: "Global";
 availability: "Immediate";
 aiScore: 84;
-};
+};origin/main
 {
 id: "mp-analytics-kit";
 title: "Starter Analytics Kit";
@@ -76,7 +76,7 @@ reviewCount: 10;
 location: "Europe";
 availability: "Immediate";
 aiScore: 82;
-};
+};origin/main
 {
 id: "mp-content-planner";
 title: "Content Planner AI";
@@ -95,7 +95,7 @@ reviewCount: 14;
 location: "Global";
 availability: "Immediate";
 aiScore: 86;
-};
+};origin/main
 {
 id: "mp-design-studio";
 title: "AI Design Studio";
@@ -114,7 +114,7 @@ reviewCount: 9;
 location: "Global";
 availability: "Immediate";
 aiScore: 83;
-};
+};origin/main
 {
 id: "mp-audio-enhancer";
 title: "Audio Enhancer Suite";
@@ -133,7 +133,7 @@ reviewCount: 11;
 location: "Global";
 availability: "Immediate";
 aiScore: 85;
-};
+};origin/main
 {
 id: "mp-project-hub";
 title: "AI Project Hub";
@@ -152,7 +152,7 @@ reviewCount: 16;
 location: "Global";
 availability: "1-2 Weeks";
 aiScore: 87;
-};
+};origin/main
 {
 id: "mp-customer-analytics";
 title: "Customer Analytics Toolkit";
@@ -171,7 +171,7 @@ reviewCount: 13;
 location: "North America";
 availability: "2-3 Weeks";
 aiScore: 88;
-};
+};origin/main
 {
 id: "mp-smart-crm";
 title: "Smart CRM Starter";
@@ -190,5 +190,5 @@ reviewCount: 18;
 location: "Global";
 availability: "Immediate";
 aiScore: 89;
-}
+}origin/main
 ];

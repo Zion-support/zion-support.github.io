@@ -1,6 +1,6 @@
 import { createSlicePayloadAction } from "@reduxjs/toolkit, ";
 import { WishlistItem } from "@/types/listings, ";
-interface WishlistState {items: WishlistItem[]itemCoun; t: number};const initialState: WishlistState = {,items: [],itemCount: 0;
+interface WishlistState {items: WishlistItem[]itemCoun; t: number};const initialState: WishlistState = {,items: [],itemCount: 0;origin/main
 const wishlistSlice = createSlice({;,
 name: "wishlist", initialStatereducers: {addToWishlis;t: (stateactio;n: PayloadAction<WishlistItem>) => {;
 const existingItem = state.items.find(item => item.listingId === action.payload.listingId);
@@ -14,4 +14,4 @@ state.items = [];
 state.itemCount = 0}
 };
 }),export const { addToWishlistremoveFromWishlistclearWishlist } = wishlistSlice.actions;
-export; default; wishlistSlice.reducer,}
+export; default; wishlistSlice.reducer}

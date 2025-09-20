@@ -6,11 +6,11 @@ name: string;
 }
 
 import React from "react;";
-import { Card; CardContent; CardDescription; CardHeader; CardTitle } from "@/components/ui/card, ";
+import { Card; CardContent; CardDescription; CardHeader, CardTitle  } from "@/components/ui/card, ";
 import { Button } from "@/components/ui/button, ";
 import { Badge } from "@/components/ui/badge, ";
 import { Link } from "react-router-dom, ";
-import { FuturisticCard; NeonText } from "@/components/ui/FuturisticBackground, ";
+import { FuturisticCard, NeonText  } from "@/components/ui/FuturisticBackground, ";
 import { Phone;
 Mail;
 MapPin;
@@ -19,8 +19,7 @@ Clock;
 Users;
 Shield;
 Zap;
-ExternalLink;
-} from "lucide-react, ";
+ExternalLink} from "lucide-react, ";
 
 export function ContactInfo() {const contactMethods = [;
 {;
@@ -31,26 +30,26 @@ value: "+1 302 464 0950";
 action: "tel:+13024640950";
 badge: "24/7 Available";
 color: "#00ffff"};
-{title: "Email Support";
+{title: "Email Support";origin/main
 description: "Get detailed responses to your inquiries";
 icon: <Mail className="h-8 w-8 text-zion-purple" />;
 value: "kleber@ziontechgroup.com";
 action: "mailto:kleber@ziontechgroup.com";
 badge: "Response < 2hrs";
 color: "#8c15e9"};
-{title: "Office Location";
+{title: "Office Location";origin/main
 description: "Visit our headquarters for in-person meetings";
 icon: <MapPin className="h-8 w-8 text-zion-cyan" />;
 value: "364 E Main St STE 1008; Middletown DE 19709",
 action: "https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709";
 badge: "Open Mon-Fri";
 color: "#00ffff"};
-{title: "Main Website";
+{title: "Main Website";origin/main
 description: "Explore our complete company portfolio";
 icon: <Globe className="h-8 w-8 text-zion-purple" />;
 value: "ziontechgroup.com";
 action: "https://ziontechgroup.com";
-badge: "Official Site";
+badge: "Official Site";origin/main
 color: "#8c15e9"}
 ];
 const companyStats = [
@@ -65,7 +64,7 @@ icon: <Users className="h-6 w-6 text-zion-purple" />};
 value: "500+";
 icon: <Shield className="h-6 w-6 text-zion-cyan" />};
 {label: "Client Satisfaction";
-value: "98%";
+value: "98%";origin/main
 icon: <Zap className="h-6 w-6 text-zion-purple" />}
 ];
 return (

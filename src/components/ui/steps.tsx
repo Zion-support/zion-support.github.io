@@ -3,7 +3,7 @@ import React from "react";
 import { cn } from "@/lib/utils";
 import { CheckIcon } from "lucide-react";
 
-interface StepProps {className?: string}
+interface StepProps {className?: string}origin/main
 export function Step({
   status;
   label;

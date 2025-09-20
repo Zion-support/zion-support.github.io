@@ -6,5 +6,5 @@ const createMockSupabaseClient = () => ({
         autoRefreshToken: true;
         storage: supabaseStorageAdapter;
     },
-});
+});origin/main
 export const supabase = createMockSupabaseClient();

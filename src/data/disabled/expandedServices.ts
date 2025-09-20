@@ -17,7 +17,7 @@ name: "Zion Tech Group";
 id: "zion-tech-group";
 email: "kleber@ziontechgroup.com";
 avatarUrl: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=100&h=100";
-},
+},origin/main
 images: ["https://images.unsplash.com/photo-1633412802994-5c058f151b66?auto=format&fit=crop&w=800&h=500"];
 createdAt: "2024-01-15T10:00:00.000Z";
 rating: 4.9;
@@ -26,7 +26,7 @@ featured: true;
 location: "Global";
 availability: "4-6 Weeks";
 aiScore: 96;
-};
+};origin/main
 {
 id: "ai-predictive-analytics";
 title: "AI-Powered Predictive Analytics Platform";
@@ -40,7 +40,7 @@ author: {
 name: "Zion Tech Group";
 id: "zion-tech-group";
 email: "kleber@ziontechgroup.com";
-},
+},origin/main
 images: ["https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"];
 createdAt: "2024-01-20T14:30:00.000Z";
 rating: 4.8;
@@ -48,7 +48,7 @@ reviewCount: 89;
 location: "Global";
 availability: "6-8 Weeks";
 aiScore: 94;
-};
+};origin/main
 {
 id: "ai-document-processing";
 title: "Intelligent Document Processing & OCR";
@@ -62,7 +62,7 @@ author: {
 name: "Zion Tech Group";
 id: "zion-tech-group";
 email: "kleber@ziontechgroup.com";
-},
+},origin/main
 images: ["https://images.unsplash.com/photo-1513258496099-48168024aec0?auto=format&fit=crop&w=800&h=500"];
 createdAt: "2024-01-25T11:15:00.000Z";
 rating: 4.7;
@@ -70,7 +70,7 @@ reviewCount: 67;
 location: "Global";
 availability: "3-4 Weeks";
 aiScore: 92;
-};
+};origin/main
 // Cloud & DevOps Services;
 {
 id: "cloud-migration-enterprise";
@@ -85,7 +85,7 @@ author: {
 name: "Zion Tech Group";
 id: "zion-tech-group";
 email: "kleber@ziontechgroup.com";
-},
+},origin/main
 images: ["https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&h=500"];
 createdAt: "2024-01-30T09:45:00.000Z";
 rating: 4.9;
@@ -94,7 +94,7 @@ featured: true;
 location: "Global";
 availability: "8-12 Weeks";
 aiScore: 93;
-};
+};origin/main
 {
 id: "devops-automation-suite";
 title: "DevOps Automation & CI/CD Pipeline";
@@ -108,7 +108,7 @@ author: {
 name: "Zion Tech Group";
 id: "zion-tech-group";
 email: "kleber@ziontechgroup.com";
-},
+},origin/main
 images: ["https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=800&h=500"];
 createdAt: "2024-02-05T16:20:00.000Z";
 rating: 4.8;
@@ -116,7 +116,7 @@ reviewCount: 78;
 location: "Global";
 availability: "4-6 Weeks";
 aiScore: 91;
-};
+};origin/main
 {
 id: "kubernetes-management";
 title: "Kubernetes Cluster Management & Monitoring";
@@ -130,7 +130,7 @@ author: {
 name: "Zion Tech Group";
 id: "zion-tech-group";
 email: "kleber@ziontechgroup.com";
-},
+},origin/main
 images: ["https://images.unsplash.com/photo-1591405351990-4726e331f141?auto=format&fit=crop&w=800&h=500"];
 createdAt: "2024-02-10T13:10:00.000Z";
 rating: 4.7;
@@ -138,7 +138,7 @@ reviewCount: 45;
 location: "Global";
 availability: "3-5 Weeks";
 aiScore: 89;
-};
+};origin/main
 // Cybersecurity Services;
 {
 id: "cybersecurity-audit-complete";
@@ -153,7 +153,7 @@ author: {
 name: "Zion Tech Group";
 id: "zion-tech-group";
 email: "kleber@ziontechgroup.com";
-},
+},origin/main
 images: ["https://images.unsplash.com/photo-1510511459019-5dda7724fd87?auto=format&fit=crop&w=800&h=500"];
 createdAt: "2024-02-15T10:30:00.000Z";
 rating: 4.9;
@@ -162,7 +162,7 @@ featured: true;
 location: "Global";
 availability: "2-3 Weeks";
 aiScore: 95;
-};
+};origin/main
 {
 id: "zero-trust-security";
 title: "Zero Trust Security Architecture Implementation";
@@ -176,7 +176,7 @@ author: {
 name: "Zion Tech Group";
 id: "zion-tech-group";
 email: "kleber@ziontechgroup.com";
-},
+},origin/main
 images: ["https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500"];
 createdAt: "2024-02-20T15:45:00.000Z";
 rating: 4.8;
@@ -184,7 +184,7 @@ reviewCount: 67;
 location: "Global";
 availability: "6-8 Weeks";
 aiScore: 93;
-};
+};origin/main
 {
 id: "incident-response-planning";
 title: "Incident Response Planning & Tabletop Exercises";
@@ -198,7 +198,7 @@ author: {
 name: "Zion Tech Group";
 id: "zion-tech-group";
 email: "kleber@ziontechgroup.com";
-},
+},origin/main
 images: ["https://images.unsplash.com/photo-1523475496153-3a12d3e9ad12?auto=format&fit=crop&w=800&h=500"];
 createdAt: "2024-02-25T12:00:00.000Z";
 rating: 4.7;
@@ -206,7 +206,7 @@ reviewCount: 89;
 location: "Global";
 availability: "4-6 Weeks";
 aiScore: 90;
-};
+};origin/main
 // Data & Analytics Services;
 {
 id: "data-warehouse-enterprise";
@@ -221,7 +221,7 @@ author: {
 name: "Zion Tech Group";
 id: "zion-tech-group";
 email: "kleber@ziontechgroup.com";
-},
+},origin/main
 images: ["https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"];
 createdAt: "2024-03-01T09:15:00.000Z";
 rating: 4.8;
@@ -230,7 +230,7 @@ featured: true;
 location: "Global";
 availability: "8-12 Weeks";
 aiScore: 92;
-};
+};origin/main
 {
 id: "real-time-analytics-dashboard";
 title: "Real-Time Analytics Dashboard & Reporting";
@@ -244,7 +244,7 @@ author: {
 name: "Zion Tech Group";
 id: "zion-tech-group";
 email: "kleber@ziontechgroup.com";
-},
+},origin/main
 images: ["https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&h=500"];
 createdAt: "2024-03-05T14:30:00.000Z";
 rating: 4.7;
@@ -252,7 +252,7 @@ reviewCount: 56;
 location: "Global";
 availability: "4-6 Weeks";
 aiScore: 89;
-};
+};origin/main
 {
 id: "data-governance-compliance";
 title: "Data Governance & Compliance Framework";
@@ -266,7 +266,7 @@ author: {
 name: "Zion Tech Group";
 id: "zion-tech-group";
 email: "kleber@ziontechgroup.com";
-},
+},origin/main
 images: ["https://images.unsplash.com/photo-1545997331-9d517f5ab3b4?auto=format&fit=crop&w=800&h=500"];
 createdAt: "2024-03-10T11:45:00.000Z";
 rating: 4.8;
@@ -274,7 +274,7 @@ reviewCount: 67;
 location: "Global";
 availability: "6-8 Weeks";
 aiScore: 91;
-};
+};origin/main
 // Web & Mobile Development;
 {
 id: "progressive-web-app";
@@ -289,7 +289,7 @@ author: {
 name: "Zion Tech Group";
 id: "zion-tech-group";
 email: "kleber@ziontechgroup.com";
-},
+},origin/main
 images: ["https://images.unsplash.com/photo-1513258496099-48168024aec0?auto=format&fit=crop&w=800&h=500"];
 createdAt: "2024-03-15T16:20:00.000Z";
 rating: 4.8;
@@ -297,7 +297,7 @@ reviewCount: 89;
 location: "Global";
 availability: "6-8 Weeks";
 aiScore: 90;
-};
+};origin/main
 {
 id: "mobile-app-cross-platform";
 title: "Cross-Platform Mobile App Development";
@@ -311,7 +311,7 @@ author: {
 name: "Zion Tech Group";
 id: "zion-tech-group";
 email: "kleber@ziontechgroup.com";
-},
+},origin/main
 images: ["https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=800&h=500"];
 createdAt: "2024-03-20T13:10:00.000Z";
 rating: 4.7;
@@ -319,7 +319,7 @@ reviewCount: 78;
 location: "Global";
 availability: "8-12 Weeks";
 aiScore: 89;
-};
+};origin/main
 {
 id: "ecommerce-platform-custom";
 title: "Custom E-commerce Platform Development";
@@ -333,7 +333,7 @@ author: {
 name: "Zion Tech Group";
 id: "zion-tech-group";
 email: "kleber@ziontechgroup.com";
-},
+},origin/main
 images: ["https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=800&h=500"];
 createdAt: "2024-03-25T10:30:00.000Z";
 rating: 4.9;
@@ -342,7 +342,7 @@ featured: true;
 location: "Global";
 availability: "10-14 Weeks";
 aiScore: 93;
-};
+};origin/main
 // Blockchain & Web3 Services;
 {
 id: "smart-contract-development";
@@ -357,7 +357,7 @@ author: {
 name: "Zion Tech Group";
 id: "zion-tech-group";
 email: "kleber@ziontechgroup.com";
-},
+},origin/main
 images: ["https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&w=800&h=500"];
 createdAt: "2024-03-30T15:45:00.000Z";
 rating: 4.8;
@@ -365,7 +365,7 @@ reviewCount: 67;
 location: "Global";
 availability: "6-8 Weeks";
 aiScore: 91;
-};
+};origin/main
 {
 id: "defi-protocol-development";
 title: "DeFi Protocol Development & Integration";
@@ -379,7 +379,7 @@ author: {
 name: "Zion Tech Group";
 id: "zion-tech-group";
 email: "kleber@ziontechgroup.com";
-},
+},origin/main
 images: ["https://images.unsplash.com/photo-1621416894560-8a5c5baaacaa?auto=format&fit=crop&w=800&h=500"];
 createdAt: "2024-04-05T12:00:00.000Z";
 rating: 4.9;
@@ -388,7 +388,7 @@ featured: true;
 location: "Global";
 availability: "10-14 Weeks";
 aiScore: 94;
-};
+};origin/main
 // IoT & Hardware Integration;
 {
 id: "iot-platform-development";
@@ -403,7 +403,7 @@ author: {
 name: "Zion Tech Group";
 id: "zion-tech-group";
 email: "kleber@ziontechgroup.com";
-},
+},origin/main
 images: ["https://images.unsplash.com/photo-1518709268805-4e9042af2176?auto=format&fit=crop&w=800&h=500"];
 createdAt: "2024-04-10T09:30:00.000Z";
 rating: 4.7;
@@ -411,7 +411,7 @@ reviewCount: 56;
 location: "Global";
 availability: "8-12 Weeks";
 aiScore: 89;
-};
+};origin/main
 {
 id: "hardware-prototyping";
 title: "Hardware Prototyping & PCB Design";
@@ -425,7 +425,7 @@ author: {
 name: "Zion Tech Group";
 id: "zion-tech-group";
 email: "kleber@ziontechgroup.com";
-},
+},origin/main
 images: ["https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=800&h=500"];
 createdAt: "2024-04-15T14:15:00.000Z";
 rating: 4.8;
@@ -433,7 +433,7 @@ reviewCount: 78;
 location: "Global";
 availability: "6-8 Weeks";
 aiScore: 90;
-};
+};origin/main
 // Business Intelligence & Automation;
 {
 id: "business-process-automation";
@@ -448,7 +448,7 @@ author: {
 name: "Zion Tech Group";
 id: "zion-tech-group";
 email: "kleber@ziontechgroup.com";
-},
+},origin/main
 images: ["https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"];
 createdAt: "2024-04-20T11:00:00.000Z";
 rating: 4.8;
@@ -456,7 +456,7 @@ reviewCount: 67;
 location: "Global";
 availability: "6-8 Weeks";
 aiScore: 91;
-};
+};origin/main
 {
 id: "erp-system-custom";
 title: "Custom ERP System Development";
@@ -470,7 +470,7 @@ author: {
 name: "Zion Tech Group";
 id: "zion-tech-group";
 email: "kleber@ziontechgroup.com";
-},
+},origin/main
 images: ["https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"];
 createdAt: "2024-04-25T16:45:00.000Z";
 rating: 4.9;
@@ -479,7 +479,7 @@ featured: true;
 location: "Global";
 availability: "12-16 Weeks";
 aiScore: 94;
-}
+}origin/main
 ];
 // Service categories for filtering;
 export const EXPANDED_SERVICE_CATEGORIES = [;

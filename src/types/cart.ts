@@ -5,7 +5,7 @@ export interface CartItem {id: string; name: string; price: number; quantity: nu
 }
 image?: string}
 
-export interface CartContextType {items: CartItem[], dispatch: React.Dispatch<CartAction>}
+export interface CartContextType {items: CartItem[], dispatch: React.Dispatch<CartAction>}origin/main
 
 export type CartAction =
 | { type: "ADD_ITEM",

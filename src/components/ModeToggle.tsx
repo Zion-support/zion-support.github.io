@@ -15,10 +15,9 @@ import { Tooltip,
 TooltipContent;
 , TooltipProvider,;
 TooltipTrigger } from "@/components/ui/tooltip";
-import { toast } from "@/hooks/use-toast";
+import { toast } from "@/hooks/use-toast";origin/main
   darkModeMessages,
-lightModeMessages,
-} from '@/utils/themeToggleMessages'
+lightModeMessages } from '@/utils/themeToggleMessages'
 // Use the ThemeProvider hook directly to ensure no conflicts,
 import { useTheme } from "@/components/ThemeProvider";
 import { logIssue } from "@/utils/logIssue";
@@ -31,7 +30,7 @@ import { logInfo, logErrorToProduction } from "@/utils/productionLogger";
 // Use the ThemeProvider hook directly to ensure no conflicts,
 import { useTheme } from "@/components/ThemeProvider";
 import { logIssue } from "@/utils/logIssue";
-import { useEffect, useState } from "react";
+import { useEffect, useState } from "react";origin/main
 export function ModeToggle() {
 
   const { theme, toggleTheme } = useTheme();

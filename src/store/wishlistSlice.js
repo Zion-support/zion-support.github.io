@@ -1,7 +1,7 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit, ';
 const initialState = {
     items: [];
-};
+};origin/main
 export const getApiUrl = () => {
     var _a, _b;
     const env = (_b = (_a = import.meta) === null || _a === void 0 ? void 0 : _a.env) !== null && _b !== void 0 ? _b : process.env;
@@ -24,13 +24,11 @@ const wishlistSlice = createSlice({
         },
         removeFromWishlist(state, action) {
             state.items = state.items.filter((item) => item.id !== action.payload.id);
-        },
-    },
+        }},
     extraReducers: (builder) => {
         builder.addCase(loadWishlistFromDB.fulfilled, (state, action) => {
             state.items = action.payload;
         });
-    },
-});
+    }});
 export const { addToWishlist, removeFromWishlist } = wishlistSlice.actions;
 export default wishlistSlice.reducer;

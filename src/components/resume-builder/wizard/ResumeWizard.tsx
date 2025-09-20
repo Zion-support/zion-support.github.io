@@ -17,7 +17,7 @@ import { ResumeStepContent } from "./ResumeStepContent";
 import { useResumeProgress } from "./useResumeProgress";
 import { ResumeVersionSelector } from "./ResumeVersionSelector";
 import { RESUME_STEPS } from "./constants";
-export function ResumeWizard() {createResume} = useResume();
+export function ResumeWizard() {createResume} = useResume();origin/main
   const [activeTab, setActiveTab] = useState('basic-info');
   const [showNewResumeForm, setShowNewResumeForm] = useState(false);
   // Use the extracted hook for progress calculation,
@@ -42,7 +42,7 @@ if (isLoading) {
   }
   if (showNewResumeForm) {return (<CreateResumeForm
 onCreateResume = {handleCreateNewResume}
-        onCancel = {() => setShowNewResumeForm(false)}
+        onCancel = {() => setShowNewResumeForm(false)}origin/main
         isLoading = {isLoading}
       />
     )
@@ -53,7 +53,7 @@ onCreateResume = {handleCreateNewResume}
         <div className="flex gap-4 flex-wrap items-center">
           {resume && <ResumeVersionSelector currentResume={resume} onResumeChange={handleResumeChange} />}
           <Button
-onClick = {() => setShowNewResumeForm(true)}
+onClick = {() => setShowNewResumeForm(true)}origin/main
             variant="outline"
             size="sm"
             className="gap-2"
@@ -70,13 +70,13 @@ onClick = {() => setShowNewResumeForm(true)}
             <ResumeProgress resume={resume} progress={progress} />
           </div>
           <Tabs value={activeTab} onValueChange={setActiveTab}>
-            <ResumeSteps
+            <ResumeStepsorigin/main
 steps = {RESUME_STEPS}
               activeTab = {activeTab}
               onChange = {setActiveTab}
             />
             {resume && (
-              <ResumeStepContent
+              <ResumeStepContentorigin/main
 activeTab = {activeTab}
                 resume = {resume as Resume}
                 onNextStep = {nextStep}
@@ -95,6 +95,6 @@ activeTab = {activeTab}
   () => setShowNewResumeForm (false)
 }isLoading= {isLoading}/>)
 }> <FilePlus className="h-4 w-4" /> Create New </Button> </div> </div> <Card> </div> <Tabs value= {activeTab}onValueChange= {setActiveTab}> <ResumeSteps steps= {RESUME STEPS}activeTab= {activeTab}onChange= {setActiveTab}/> {resume && (<ResumeStepContent activeTab= {
-  activeTab}resume= {resume as Resume}onNextStep= {nextStep}onPrevStep= {prevStep}/>)
+  activeTab}resume= {resume as Resume}onNextStep= {nextStep}onPrevStep= {prevStep}/>)origin/main
 }</Tabs> </CardContent> </Card> </div>)
 }'"}

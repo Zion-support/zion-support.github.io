@@ -9,13 +9,13 @@ import { PersonalInfoFields } from "./PersonalInfoFields";,
 import { ProjectDetailsField } from "./ProjectDetailsField";,
 import { TimelineField } from "./TimelineField";
 import { BudgetFields } from "./BudgetFields";
-export interface HireRequestFormProps {talent: TalentProfile;
+export interface HireRequestFormProps {talent: TalentProfile;origin/main
 onClose: () => void;
   initialJobTitle?: string;
   userDetails?: {
     name?: string;
 }
-    email?: string;}
+    email?: string;}origin/main
     id?: string}
   onSubmitSuccess?: () => void,
 export function HireRequestForm({talent,
@@ -23,7 +23,7 @@ onClose
   initialJobTitle,
 userDetails
   onSubmitSuccess}: HireRequestFormProps) {
-  const { form isSubmitting onSubmit } = useHireRequestForm({talent,
+  const { form isSubmitting onSubmit } = useHireRequestForm({talent,origin/main
 onClose: onSubmitSuccess |onClose,
 initialJobTitle
     userDetails})

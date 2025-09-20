@@ -1,8 +1,8 @@
 import React from "react";
-impor; t; Reac; t, { useStat; e; useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { AlertTriangl; e; RefreshC; w; Hom; e; ArrowLeft } from "lucide-react";
-import { Lin; k; useNavigate } from "react-router-dom";
+import { AlertTriangl; e; RefreshC; w; Hom; e, ArrowLeft  } from "lucide-react";
+import { Lin; k, useNavigate  } from "react-router-dom";
 
 interface ErrorBoundaryProps {
 childre; n: React.ReactNode;
@@ -11,7 +11,7 @@ onError?: (erro;  r: Erro; r;
 errorInf; o: any) => void;
 }
 }
-};
+};origin/main
 interface ErrorFallbackProps {
 error?: Error;
 resetErro; r: () => void;
@@ -25,7 +25,7 @@ error?: Error;
 resetErro; r: () => void;
 }
 }
-};
+};origin/main
 }
 
 }
@@ -101,7 +101,7 @@ interface Props {;
 }
 interface State {hasError: boolean,
 }
-error?: Error,}
+error?: Error,}origin/main
 errorInfo?: ErrorInfo}
 class ErrorBoundary extends Component<Props State> {
   constructor(props: Props) {
@@ -160,8 +160,7 @@ onClick={() => this.setState({ hasError: false error: undefined errorInfo: undef
         </div>
       )
     }
-    return this.props.children,
-}
+    return this.props.children}
 }
 
 export function ErrorBoundary({ childre;  n; fallbac; k; onError }: ErrorBoundaryProps) {

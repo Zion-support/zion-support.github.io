@@ -23,7 +23,7 @@ email: string;
 address: string;
 }
 }
-};
+};origin/main
 trialDays: number;
 setupTime: string;
 competitors: string[];
@@ -36,7 +36,7 @@ innovationLevel: string;
 futurePotential: string;
 researchPartners: string[];
 patents: string[];
-}
+}origin/main
 
 export const emergingTechServices2025: EmergingTechService[] = [
 // Quantum Computing Services;
@@ -75,7 +75,7 @@ compliance: ["ISO 27001", "SOC2", "GDPR", "HIPAA", "FISMA", "NIST"],
 website: "https://ziontechgroup.com/quantum-computing-as-a-service";
 contact: {
 phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";origin/main
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 trialDays: 60;
 setupTime: "2-4 weeks";
@@ -127,7 +127,7 @@ compliance: ["ISO 27001", "SOC2", "GDPR", "NIST", "IEEE Standards"],
 website: "https://ziontechgroup.com/neuromorphic-computing-platform";
 contact: {
 phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";origin/main
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 trialDays: 45;
 setupTime: "4-6 weeks";
@@ -179,7 +179,7 @@ compliance: ["ISO 27001", "SOC2", "GDPR", "HIPAA", "Biosafety Standards"],
 website: "https://ziontechgroup.com/dna-computing-storage-platform";
 contact: {
 phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";origin/main
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 trialDays: 90;
 setupTime: "8-12 weeks";
@@ -231,7 +231,7 @@ compliance: ["ISO 27001", "SOC2", "GDPR", "NIST", "Telecom Standards"],
 website: "https://ziontechgroup.com/photonic-computing-platform";
 contact: {
 phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";origin/main
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 trialDays: 60;
 setupTime: "6-10 weeks";
@@ -283,7 +283,7 @@ compliance: ["ISO 27001", "SOC2", "GDPR", "HIPAA", "Biosafety Standards", "FDA"]
 website: "https://ziontechgroup.com/biological-computing-platform";
 contact: {
 phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";origin/main
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 trialDays: 75;
 setupTime: "10-16 weeks";
@@ -335,7 +335,7 @@ compliance: ["ISO 13482", "ISO 27001", "SOC2", "GDPR", "Safety Standards"],
 website: "https://ziontechgroup.com/swarm-robotics-platform";
 contact: {
 phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";origin/main
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 trialDays: 45;
 setupTime: "6-8 weeks";
@@ -387,7 +387,7 @@ compliance: ["FDA 510(k)", "CE Mark", "ISO 13485", "HIPAA", "GDPR", "ISO 27001"]
 website: "https://ziontechgroup.com/brain-computer-interface-platform";
 contact: {
 phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";origin/main
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 trialDays: 120;
 setupTime: "12-20 weeks";
@@ -439,7 +439,7 @@ compliance: ["ISO 27001", "SOC2", "GDPR", "Biosafety Standards", "FDA Guidelines
 website: "https://ziontechgroup.com/synthetic-biology-platform";
 contact: {
 phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";origin/main
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 trialDays: 60;
 setupTime: "8-12 weeks";

@@ -2,7 +2,7 @@ import React from "react";
 
 interface PerformanceMetric {name: string; startTime: number;
 }
-endTime?: number;}
+endTime?: number;}origin/main
 duration?: number}
 
 class PerformanceMonitor {private metrics: Map<string; PerformanceMetric> = new Map();
@@ -21,7 +21,7 @@ const lastEntry = entries[entries.length - 1];
 this.logMetric("LCP", lastEntry.startTime)});
 lcpObserver.observe({ entryTypes: ["largest-contentful-paint"] });
 this.observers.push(lcpObserver);
-} catch (error) {console.warn("LCP observer failed:", error)}
+} catch (error) {console.warn("LCP observer failed:", error)}origin/main
 
 // First Input Delay;
 try {const fidObserver = new PerformanceObserver((list) => {;
@@ -31,7 +31,7 @@ this.logMetric("FID", entry.processingStart - entry.startTime)});
 });
 fidObserver.observe({ entryTypes: ["first-input"] });
 this.observers.push(fidObserver);
-} catch (error) {console.warn("FID observer failed:", error)}
+} catch (error) {console.warn("FID observer failed:", error)}origin/main
 
 // Cumulative Layout Shift;
 try {const clsObserver = new PerformanceObserver((list) => {;
@@ -50,7 +50,7 @@ this.observers.push(clsObserver);
 }
 
 startTiming(name: string): void {const metric: PerformanceMetric = {
-name;
+name;origin/main
 startTime: performance.now()};
 this.metrics.set(name; metric);
 }
@@ -77,7 +77,7 @@ this.startTiming(name);
 try {
 const result = func(...args);
 this.endTiming(name);
-return result} catch (error) {this.endTiming(name);
+return result} catch (error) {this.endTiming(name);origin/main
 throw error}
 };
 }
@@ -89,7 +89,7 @@ asyncFunc: () => Promise<T>;
 try {
 const result = await asyncFunc();
 this.endTiming(name);
-return result} catch (error) {this.endTiming(name);
+return result} catch (error) {this.endTiming(name);origin/main
 throw error}
 }
 
@@ -112,7 +112,7 @@ result[name] = { ...metric };
 return result;
 }
 
-cleanup(): void {this.observers.forEach(observer => observer.disconnect());
+cleanup(): void {this.observers.forEach(observer => observer.disconnect());origin/main
 this.observers = []}
 }
 

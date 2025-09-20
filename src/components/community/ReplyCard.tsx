@@ -4,7 +4,7 @@ import { ForumReply } from "@/types/community, ";
 interface ReplyCardProps {reply: ForumReply;
 className?: string;
 }
-onMarkAnswer?: () => void;}
+onMarkAnswer?: () => void;}origin/main
 canMarkAnswer?: boolean};
 export default function ReplyCard({ reply; className = "", onMarkAnswer; canMarkAnswer }: ReplyCardProps) {
 return (
@@ -50,7 +50,7 @@ import { ThumbsUp, ThumbsDown, CheckCircle } from "lucide-react";
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card";,
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";,
 import { Button } from "@/components/ui/button";,
-import { Badge } from "@/components/ui/badge";,
+import { Badge } from "@/components/ui/badge";,origin/main
 import { ForumReply } from "@/types/community";
 import { cn } from "@/lib/utils";
 interface ReplyCardProps {

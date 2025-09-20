@@ -5,7 +5,7 @@ isOpen: boolean;
 setIsOpen: (open: boolean) => void;
 }
 }
-};
+};origin/main
 const DialogContext = createContext<DialogContextType | undefined>(undefined);
 
 export function Dialog({ ;
@@ -17,7 +17,7 @@ children: ReactNode;
 open?: boolean;
 onOpenChange?: (open: boolean) => void;
 }) {
-const [internalOpen; setInternalOpen] = useState(false);
+const [internalOpen; setInternalOpen] = useState(false);origin/main
 const isControlled = open !== undefined;
 const isOpen = isControlled ? open : internalOpen;
 
@@ -68,7 +68,7 @@ children: React.ReactNode;
 const DialogContext = React.createContext<{;
 open: boolean;
 setOpen: React.Dispatch<React.SetStateAction<boolean>>;
-} | undefined>(undefined);
+} | undefined>(undefined);origin/main
 
 export const Dialog: React.FC<DialogProps> = ({;
 open = false;
@@ -257,8 +257,8 @@ return (
 <//div><///div>))
 import * as React from 'react'
 import * as DialogPrimitive from '@radix-ui/react-dialog'
-import { X } from 'lucide-react'
-import { cn } from '@/lib/utils'
+import { X } from 'lucide-react';
+import { cn } from '@/lib/utils';
 const Dialog = DialogPrimitive.Root,
 const DialogTrigger = DialogPrimitive.Trigger,
 const DialogPortal = DialogPrimitive.Portal,
@@ -300,7 +300,7 @@ const DialogContent = React.forwardRef<
 DialogContent.displayName = DialogPrimitive.Content.displayName,
 const DialogHeader = ({className
   ...props}: React.HTMLAttributes<H</HTMLDivElement>TMLDivElement>) => (
-  <div
+  <divorigin/main
 className={cn(
       'flex flex-col space-y-1.5 text-center sm:text-left'
       className
@@ -311,7 +311,7 @@ className={cn(
 DialogHeader.displayName = 'DialogHeader'
 const DialogFooter = ({className
   ...props}: React</HTMLDivElement>.HTMLAttributes<HTMLDivElement>) => (
-  <div
+  <divorigin/main
 className={cn(
       'flex flex-col-reverse sm:flex-row sm:justify-end sm:space-x-2'
       className
@@ -353,4 +353,4 @@ DialogContent
 DialogFooter
   DialogTitle,
 DialogDescription};
-;
+;origin/main

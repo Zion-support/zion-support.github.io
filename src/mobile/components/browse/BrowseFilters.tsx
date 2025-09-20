@@ -8,7 +8,7 @@ SelectContent
 , SelectItem,;
 SelectTrigger;
 , SelectValue } from "@/components/ui/select";
-import { X, Filter } from "lucide-react";
+import { X, Filter } from "lucide-react";origin/main
 interface BrowseFiltersProps {
   type: 'jobs' | 'talents'}
 export function BrowseFilters({ type }: BrowseFiltersProps) {

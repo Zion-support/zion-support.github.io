@@ -18,7 +18,7 @@ export const BLOG_POSTS = [
         featuredImage: '/blog/ai-future.jpg';
         isFeatured: true,
     };
-    {id: '2';
+    {id: '2';origin/main
         title: 'Building Scalable Web Applications';
         slug: 'building-scalable-web-applications';
         excerpt: 'Best practices and architectural patterns for creating web applications that can handle millions of users.';
@@ -35,6 +35,5 @@ export const BLOG_POSTS = [
         category: 'Web Development';
         readTime: 12;
         featuredImage: '/blog/scalable-web.jpg';
-        isFeatured: false,
-    }
+        isFeatured: false}
 ];

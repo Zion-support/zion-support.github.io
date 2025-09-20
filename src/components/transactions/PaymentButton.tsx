@@ -1,5 +1,4 @@
-redirectUrl?: string,
-}
+redirectUrl?: string}
 export function PaymentButton({
     >
       {isProcessing ? (

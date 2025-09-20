@@ -59,8 +59,7 @@ export const COMPREHENSIVE_MICRO_SAAS_SERVICES_2025 = [
         marketTrend: "Growing demand for AI-powered business intelligence with 35% annual growth";
         industryFocus: ["Technology", "Finance", "Healthcare", "Retail", "Manufacturing"],
         scalability: "Enterprise-grade with unlimited users and data";
-        customizationLevel: "Highly customizable with white-label options",
-    };
+        customizationLevel: "Highly customizable with white-label options"};
     // AI-Powered Customer Experience Platform;
     {id: "ai-customer-experience-platform";
         title: "AI Customer Experience Platform - Personalized Customer Journeys";
@@ -121,8 +120,7 @@ export const COMPREHENSIVE_MICRO_SAAS_SERVICES_2025 = [
         marketTrend: "Rapid adoption of AI-powered CX platforms with 40% market growth";
         industryFocus: ["E-commerce", "SaaS", "Retail", "Financial Services", "Healthcare"],
         scalability: "Handles millions of customer interactions";
-        customizationLevel: "Fully customizable customer journey workflows",
-    };
+        customizationLevel: "Fully customizable customer journey workflows"};
     // AI-Powered Supply Chain & Logistics Optimization;
     {id: "ai-supply-chain-optimizer-pro";
         title: "AI Supply Chain Optimizer Pro - Intelligent Logistics Management";
@@ -183,8 +181,7 @@ export const COMPREHENSIVE_MICRO_SAAS_SERVICES_2025 = [
         marketTrend: "Growing demand for AI-powered supply chain solutions with 45% annual growth";
         industryFocus: ["Manufacturing", "Retail", "Logistics", "E-commerce", "Healthcare"],
         scalability: "Enterprise-grade with multi-company support";
-        customizationLevel: "Industry-specific optimization algorithms",
-    };
+        customizationLevel: "Industry-specific optimization algorithms"};
     // AI-Powered Financial Technology Platform;
     {id: "ai-fintech-platform-elite";
         title: "AI FinTech Platform Elite - Intelligent Financial Solutions";
@@ -245,8 +242,7 @@ export const COMPREHENSIVE_MICRO_SAAS_SERVICES_2025 = [
         marketTrend: "Explosive growth in AI-powered FinTech with 50% annual market expansion";
         industryFocus: ["Financial Services", "Banking", "Investment", "Insurance", "Real Estate"],
         scalability: "Banking-grade infrastructure with unlimited scalability";
-        customizationLevel: "White-label solutions for financial institutions",
-    };
+        customizationLevel: "White-label solutions for financial institutions"};
     // AI-Powered Healthcare & Medical Solutions;
     {id: "ai-healthcare-solutions-suite";
         title: "AI Healthcare Solutions Suite - Intelligent Medical Technology";
@@ -307,8 +303,7 @@ export const COMPREHENSIVE_MICRO_SAAS_SERVICES_2025 = [
         marketTrend: "Rapid adoption of AI in healthcare with 60% annual growth";
         industryFocus: ["Healthcare", "Medical Technology", "Pharmaceuticals", "Research", "Insurance"],
         scalability: "Enterprise healthcare infrastructure with multi-institution support";
-        customizationLevel: "Specialized medical AI models for different specialties",
-    };
+        customizationLevel: "Specialized medical AI models for different specialties"};
     // AI-Powered Education & Learning Platform;
     {id: "ai-education-learning-platform";
         title: "AI Education & Learning Platform - Intelligent Learning Solutions";
@@ -369,8 +364,7 @@ export const COMPREHENSIVE_MICRO_SAAS_SERVICES_2025 = [
         marketTrend: "Growing demand for AI-powered education with 55% annual growth";
         industryFocus: ["Education", "Corporate Training", "Online Learning", "EdTech", "Professional Development"],
         scalability: "Multi-institution platform with unlimited student support";
-        customizationLevel: "Customizable learning paths and curriculum design",
-    };
+        customizationLevel: "Customizable learning paths and curriculum design"};
     // AI-Powered Cybersecurity & Threat Intelligence;
     {id: "ai-cybersecurity-threat-intelligence";
         title: "AI Cybersecurity & Threat Intelligence - Advanced Security Solutions";
@@ -431,8 +425,7 @@ export const COMPREHENSIVE_MICRO_SAAS_SERVICES_2025 = [
         marketTrend: "High demand for AI-powered cybersecurity with 65% annual growth";
         industryFocus: ["Financial Services", "Healthcare", "Technology", "Government", "Manufacturing"],
         scalability: "Enterprise-grade security infrastructure with unlimited scalability";
-        customizationLevel: "Industry-specific security frameworks and compliance",
-    };
+        customizationLevel: "Industry-specific security frameworks and compliance"};
     // AI-Powered Marketing & Advertising Platform;
     {id: "ai-marketing-advertising-platform";
         title: "AI Marketing & Advertising Platform - Intelligent Marketing Solutions";
@@ -493,8 +486,7 @@ export const COMPREHENSIVE_MICRO_SAAS_SERVICES_2025 = [
         marketTrend: "Growing adoption of AI in marketing with 50% annual growth";
         industryFocus: ["E-commerce", "SaaS", "Retail", "B2B", "Agencies"],
         scalability: "Multi-client platform with unlimited campaign support";
-        customizationLevel: "Custom marketing workflows and automation rules",
-    };
+        customizationLevel: "Custom marketing workflows and automation rules"};
     // AI-Powered Human Resources & Talent Management;
     {id: "ai-hr-talent-management-suite";
         title: "AI HR & Talent Management Suite - Intelligent People Management";
@@ -555,8 +547,7 @@ export const COMPREHENSIVE_MICRO_SAAS_SERVICES_2025 = [
         marketTrend: "Growing demand for AI-powered HR solutions with 45% annual growth";
         industryFocus: ["Technology", "Healthcare", "Finance", "Manufacturing", "Professional Services"],
         scalability: "Multi-company platform with enterprise HR capabilities";
-        customizationLevel: "Customizable HR workflows and compliance frameworks",
-    };
+        customizationLevel: "Customizable HR workflows and compliance frameworks"};
     // AI-Powered Legal Technology & Compliance;
     {id: "ai-legal-technology-compliance";
         title: "AI Legal Technology & Compliance - Intelligent Legal Solutions";
@@ -617,8 +608,7 @@ export const COMPREHENSIVE_MICRO_SAAS_SERVICES_2025 = [
         marketTrend: "Rapid adoption of AI in legal technology with 55% annual growth";
         industryFocus: ["Legal Services", "Financial Services", "Healthcare", "Technology", "Manufacturing"],
         scalability: "Enterprise legal platform with multi-firm support";
-        customizationLevel: "Industry-specific legal workflows and compliance frameworks",
-    };
+        customizationLevel: "Industry-specific legal workflows and compliance frameworks"};
     // AI-Powered Real Estate & Property Management;
     {id: "ai-real-estate-property-management";
         title: "AI Real Estate & Property Management - Intelligent Property Solutions";
@@ -679,8 +669,7 @@ export const COMPREHENSIVE_MICRO_SAAS_SERVICES_2025 = [
         marketTrend: "Growing adoption of AI in real estate with 40% annual growth";
         industryFocus: ["Real Estate", "Property Management", "Investment", "Development", "Brokerage"],
         scalability: "Multi-property platform with unlimited portfolio support";
-        customizationLevel: "Customizable property workflows and reporting",
-    };
+        customizationLevel: "Customizable property workflows and reporting"};
     // AI-Powered Manufacturing & Industrial IoT;
     {id: "ai-manufacturing-industrial-iot";
         title: "AI Manufacturing & Industrial IoT - Intelligent Manufacturing Solutions";
@@ -741,7 +730,6 @@ export const COMPREHENSIVE_MICRO_SAAS_SERVICES_2025 = [
         marketTrend: "Rapid adoption of AI in manufacturing with 60% annual growth";
         industryFocus: ["Manufacturing", "Automotive", "Aerospace", "Electronics", "Food & Beverage"],
         scalability: "Enterprise manufacturing platform with multi-facility support";
-        customizationLevel: "Industry-specific manufacturing workflows and IoT integration",
-    }
+        customizationLevel: "Industry-specific manufacturing workflows and IoT integration"}
 ];
     export default COMPREHENSIVE_MICRO_SAAS_SERVICES_2025;

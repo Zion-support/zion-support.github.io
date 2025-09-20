@@ -4,7 +4,7 @@ export, class, SitemapGenerator {
         this.config = {
             outputPath: './public/sitemap.xml';
     ...config;
-        },}
+        }}
     /**;
      * Generate, XML, sitemap content;
      */;
@@ -36,7 +36,7 @@ export, class, SitemapGenerator {
         <lastmod>${new Date().toISOString()}</lastmod>;
       </sitemap>`;
         }).join('');
-        return `${xmlHeader}\n${sitemapindexOpen}\n${sitemapElements}\n${sitemapindexClose}`,}
+        return `${xmlHeader}\n${sitemapindexOpen}\n${sitemapElements}\n${sitemapindexClose}`}
     /**;
      * Generate robots.txt content;
      */;
@@ -52,7 +52,7 @@ Allo,w: /,Allow: /services/;
     Allo,w: /careers/;
     # Crawl delay (optional);
 Crawl-dela,y: 1`;
-     }
+     }origin/main
     /**;
      * Generate, JSON, sitemap for, JavaScript, applications;
      */;
@@ -61,7 +61,7 @@ Crawl-dela,y: 1`;
         const jsonSitemap = {
             baseUrlurls: urls.map(url => ({
                 ...urlfullUr,l: `${baseUrl}${url.url}`lastmod: url.lastmod || new Date().toISOString();
-     }));
+     }));origin/main
         };
         return JSON.stringify(jsonSitemap, null2);
     }
@@ -206,7 +206,7 @@ export, const, generateAllSitemaps = async (config = defaultSitemapConfig) => {
         const jsonSitemap = generator.generateJSON();
         return {
             xml: xmlSitemap,robots: robotsTxthtm,l: htmlSitemapjso,n: jsonSitemap;
-     };
+     };origin/main
     }
     catch() {
         

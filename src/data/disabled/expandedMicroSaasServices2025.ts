@@ -23,7 +23,7 @@ email: string;
 website: string;
 }
 }
-};
+};origin/main
 websiteUrl: string;
 demoUrl?: string;
 documentationUrl?: string;
@@ -32,7 +32,7 @@ complianceStandards: string[];
 integrationCapabilities: string[];
 roiMetrics: string[];
 competitiveAdvantages: string[];
-}
+}origin/main
 
 export const EXPANDED_MICRO_SAAS_SERVICES_2025: ExpandedMicroSaasService2025[] = [
 // AI-Powered Financial Compliance Automation;
@@ -88,7 +88,7 @@ contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com"};
-websiteUrl: "https://ziontechgroup.com/ai-financial-compliance-automation-2025";
+websiteUrl: "https://ziontechgroup.com/ai-financial-compliance-automation-2025";origin/main
 technologyStack: ["GPT-5", "Claude 3.5 Sonnet", "Regulatory APIs", "Machine Learning", "Blockchain"],
 complianceStandards: ["SOX", "Basel III", "Dodd-Frank", "GDPR", "PCI DSS", "SOC2"],
 integrationCapabilities: ["SAP", "Oracle", "QuickBooks", "Xero", "Banking APIs", "Regulatory Databases"],
@@ -149,7 +149,7 @@ contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com"};
-websiteUrl: "https://ziontechgroup.com/quantum-resistant-blockchain-identity-2025";
+websiteUrl: "https://ziontechgroup.com/quantum-resistant-blockchain-identity-2025";origin/main
 technologyStack: ["Quantum-Resistant Algorithms", "Blockchain", "Zero-Knowledge Proofs", "Cryptography", "Smart Contracts"],
 complianceStandards: ["eIDAS", "GDPR", "SOC2", "ISO 27001", "NIST", "W3C DID"],
 integrationCapabilities: ["OAuth 2.0", "SAML", "OpenID Connect", "REST APIs", "SDKs", "Mobile Apps"],
@@ -210,7 +210,7 @@ contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com"};
-websiteUrl: "https://ziontechgroup.com/ai-supply-chain-optimization-2025";
+websiteUrl: "https://ziontechgroup.com/ai-supply-chain-optimization-2025";origin/main
 technologyStack: ["Machine Learning", "Predictive Analytics", "IoT Sensors", "Cloud Computing", "Big Data Analytics"],
 complianceStandards: ["ISO 28000", "C-TPAT", "GDPR", "SOC2", "ISO 9001"],
 integrationCapabilities: ["ERP Systems", "WMS", "TMS", "Supplier Portals", "IoT Devices", "Analytics Platforms"],
@@ -271,7 +271,7 @@ contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com"};
-websiteUrl: "https://ziontechgroup.com/edge-computing-ai-platform-2025";
+websiteUrl: "https://ziontechgroup.com/edge-computing-ai-platform-2025";origin/main
 technologyStack: ["TensorFlow Lite", "ONNX Runtime", "Edge ML Frameworks", "Container Technology", "Kubernetes"],
 complianceStandards: ["ISO 27001", "SOC2", "GDPR", "HIPAA", "NIST"],
 integrationCapabilities: ["IoT Platforms", "Cloud Services", "Edge Devices", "Data Centers", "5G Networks"],
@@ -332,7 +332,7 @@ contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com"};
-websiteUrl: "https://ziontechgroup.com/ai-legal-document-analysis-2025";
+websiteUrl: "https://ziontechgroup.com/ai-legal-document-analysis-2025";origin/main
 technologyStack: ["Natural Language Processing", "Machine Learning", "Document AI", "Legal Databases", "Cloud Computing"],
 complianceStandards: ["GDPR", "SOC2", "ISO 27001", "Legal Industry Standards", "Data Privacy"],
 integrationCapabilities: ["Document Management Systems", "Legal Research Platforms", "Contract Management", "E-signature Platforms", "Legal Databases"],
@@ -393,7 +393,7 @@ contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com"};
-websiteUrl: "https://ziontechgroup.com/quantum-machine-learning-platform-2025";
+websiteUrl: "https://ziontechgroup.com/quantum-machine-learning-platform-2025";origin/main
 technologyStack: ["Quantum Computing", "Qiskit", "Cirq", "PennyLane", "Classical ML Frameworks"],
 complianceStandards: ["ISO 27001", "SOC2", "Research Standards", "Data Security", "Intellectual Property"],
 integrationCapabilities: ["Classical ML Platforms", "Cloud Services", "Research Tools", "Data Sources", "Analytics Platforms"],
@@ -454,7 +454,7 @@ contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com"};
-websiteUrl: "https://ziontechgroup.com/ai-healthcare-diagnostics-2025";
+websiteUrl: "https://ziontechgroup.com/ai-healthcare-diagnostics-2025";origin/main
 technologyStack: ["Deep Learning", "Computer Vision", "Natural Language Processing", "Medical AI Models", "Cloud Computing"],
 complianceStandards: ["HIPAA", "FDA", "CE Mark", "ISO 13485", "SOC2", "GDPR"],
 integrationCapabilities: ["EHR Systems", "PACS", "Laboratory Systems", "Telemedicine Platforms", "Medical Devices"],
@@ -515,7 +515,7 @@ contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com"};
-websiteUrl: "https://ziontechgroup.com/autonomous-cybersecurity-operations-2025";
+websiteUrl: "https://ziontechgroup.com/autonomous-cybersecurity-operations-2025";origin/main
 technologyStack: ["AI/ML", "Threat Intelligence", "Security Orchestration", "Behavioral Analytics", "Cloud Security"],
 complianceStandards: ["SOC2", "ISO 27001", "NIST", "GDPR", "HIPAA", "PCI DSS"],
 integrationCapabilities: ["SIEM", "EDR", "Firewalls", "Cloud Platforms", "Security Tools", "IT Infrastructure"],
@@ -576,7 +576,7 @@ contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com"};
-websiteUrl: "https://ziontechgroup.com/ai-marketing-automation-2025";
+websiteUrl: "https://ziontechgroup.com/ai-marketing-automation-2025";origin/main
 technologyStack: ["Machine Learning", "Predictive Analytics", "Marketing APIs", "CRM Integration", "Data Analytics"],
 complianceStandards: ["GDPR", "CCPA", "SOC2", "ISO 27001", "Marketing Compliance"],
 integrationCapabilities: ["CRM Systems", "Email Platforms", "Social Media", "Analytics Tools", "E-commerce Platforms"],
@@ -637,7 +637,7 @@ contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com"};
-websiteUrl: "https://ziontechgroup.com/quantum-secure-communication-2025";
+websiteUrl: "https://ziontechgroup.com/quantum-secure-communication-2025";origin/main
 technologyStack: ["Quantum Key Distribution", "Post-Quantum Algorithms", "Encryption", "Secure Protocols", "Quantum Hardware"],
 complianceStandards: ["FIPS 140-2", "Common Criteria", "SOC2", "ISO 27001", "Government Standards"],
 integrationCapabilities: ["Communication Platforms", "Messaging Apps", "Video Conferencing", "File Sharing", "Mobile Apps"],

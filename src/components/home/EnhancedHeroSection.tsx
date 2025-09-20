@@ -11,7 +11,7 @@ import { Link } from "react-router-dom";
 import {;
 ArrowRight;
 import React from "react";
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/ui/button";origin/main
 import { Badge } from "@/components/ui/badge";
 import { Link } from "react-router-dom";
 import {;
@@ -199,7 +199,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Link } from "react-router-dom";
 import {;
-ArrowRight;
+ArrowRight;origin/main
 Play;
 Star;
 Users;
@@ -210,8 +210,7 @@ Cloud;
 Code;
 TrendingUp;
 CheckCircle;
-ExternalLink;
-} from "lucide-react";
+ExternalLink} from "lucide-react";
 import { SimpleFuturisticBackground } from "@/components/ui/FuturisticBackground";
 
 export function EnhancedHeroSection() {

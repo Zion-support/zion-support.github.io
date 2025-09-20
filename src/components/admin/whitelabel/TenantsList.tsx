@@ -16,13 +16,11 @@ import { Badge } from "@/components/ui/badge";
 import { toast } from "@/hooks/use-toast";
 import { WhitelabelTenant } from "@/hooks/useWhitelabelTenant";
 import { Edit, MoreHorizontal, ExternalLink, Power, PowerOff, Users, RefreshCcw } from "lucide-react";
-import { format } from "date-fns";
+import { format } from "date-fns";origin/main
 export function TenantsList() {
   const [tenants, setTenants] = useState<WhitelabelTenant[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
     loadTenants()
-  }, []),
-
-}
+  }, [])}
 }

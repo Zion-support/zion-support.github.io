@@ -3,7 +3,7 @@ processingId: string | null;
   onViewApplication: (applicationId: string) => Promise<void>;
 onStatusChange: (applicationId: string newStatus: string) => Promise<void>;
 }
-}
+}origin/main
 onViewScore: (application: JobApplication) => void}
 // Sub-component for avatar to handle its own error state,
 return (
@@ -67,7 +67,7 @@ variant='outline'
                       onClick={() => handleHireClick(application)}                    >
                       <Briefcase className='h-3 w-3 mr-1' /> Hire
                     </ClickableBadge>
-                    <ApplicationActions
+                    <ApplicationActionsorigin/main
 application = {application}
                       processingId = {processingId}
                       onViewApplication = {onViewApplication}
@@ -80,7 +80,7 @@ application = {application}
           </TableBody>
         </Table>
       </div>
-      <HireConfirmationModal
+      <HireConfirmationModalorigin/main
 isOpen = {hireModalOpen}
         onClose = {() => setHireModalOpen(false)}
         application = {selectedApplication |undefined}
@@ -90,7 +90,7 @@ isOpen = {hireModalOpen}
   )
   /* Using Renamed AvatarPrimitive */
 }{application.talent profile?.profile picture url && !avatarError ? (<Image src= {
-  application.talent profile.profile picture url}alt= {talentName}width= {32}//for h-8 w-8 height= {
+  application.talent profile.profile picture url}alt= {talentName}width= {32}//for h-8 w-8 height= {origin/main
   32 "
 }//for h-8 w-8 className="rounded-full object-cover" onError= {
   () => setAvatarError (true)
@@ -99,7 +99,7 @@ isOpen = {hireModalOpen}
 }h-4 w-4"/>)
 }</AvatarPrimitive>)
 };"
-return (<> <div className=" rounded-md border"> hidden md:table-cell" >Applied</TableHead> <TableHead className="hidden md:table-cell" >Status</TableHead> <TableHead className="hidden lg:table-cell" >Match Score</TableHead> <TableHead className="text-right" >Actions</TableHead> </TableRow> </TableHeader> <TableBody> {applications.map ( (application) => (<TableRow key= {
+return (<> <div className=" rounded-md border"> hidden md:table-cell" >Applied</TableHead> <TableHead className="hidden md:table-cell" >Status</TableHead> <TableHead className="hidden lg:table-cell" >Match Score</TableHead> <TableHead className="text-right" >Actions</TableHead> </TableRow> </TableHeader> <TableBody> {applications.map ( (application) => (<TableRow key= {origin/main
   application.id}> <TableCell> </div> </div> </div> </TableCell> onClick={
   () => onViewScore (application)
 }> {
@@ -108,5 +108,5 @@ return (<> <div className=" rounded-md border"> hidden md:table-cell" >Applied</
 }</TableCell> <TableCell className="text-right" > <div className="flex items-center justify-end gap-2" > <ClickableBadge > <Briefcase className="h-3 w-3 mr-1" /> Hire </ClickableBadge> <ApplicationActions application= {application}processingId= {processingId}onViewApplication= {onViewApplication}onStatusChange= {onStatusChange}/> </div> </TableCell> </TableRow>) )
 }</TableBody> </Table> </div> <HireConfirmationModal isOpen= {hireModalOpen}onClose= {
   () => setHireModalOpen (false)
-}application= {selectedApplication |undefined}onConfirm= {handleHireConfirmed}/> </>)
+}application= {selectedApplication |undefined}onConfirm= {handleHireConfirmed}/> </>)origin/main
 }'"}

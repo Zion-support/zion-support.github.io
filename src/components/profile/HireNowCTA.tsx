@@ -1,9 +1,9 @@
 import React, { useState } from "react;";
 import { Button } from "../ui/Button, ";
-import { Card; CardContent; CardHeader; CardTitle } from "../ui/Card, ";
+import { Card; CardContent; CardHeader, CardTitle  } from "../ui/Card, ";
 import { Input } from "../ui/Input, ";
 import { Textarea } from "../ui/Textarea, ";
-import { Mail; Calendar; DollarSign; MessageSquare } from "lucide-react, ";
+import { Mail; Calendar; DollarSign, MessageSquare  } from "lucide-react, ";
 
 interface HireNowCTAProps {
 talentName: string;
@@ -24,7 +24,7 @@ export function HireNowCTA({ talentName; hourlyRate; onHire }: HireNowCTAProps) 
 const [formData; setFormData] = useState<HireData>({
 projectDescription: "";
 budget: "";
-startDate: "";
+startDate: "";origin/main
 message: ""});
 const handleSubmit: any = (e: React.FormEvent) => {;
 e.preventDefault();
@@ -34,7 +34,7 @@ onHire(formData);
 // Reset form and close;
 setFormData({projectDescription: "";
 budget: "";
-startDate: "";
+startDate: "";origin/main
 message: ""});
 setIsFormOpen(false);
 };

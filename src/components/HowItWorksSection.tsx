@@ -50,7 +50,7 @@ export const HowItWorksSection: any = () => {return (
 <//div><///div>;
 import React from 'react';
 import { GradientHeading } from "./GradientHeading";
-import { Check, Handshake, Search, Send } from "lucide-react";
+import { Check, Handshake, Search, Send } from "lucide-react";origin/main
 import { cn } from "@/lib/utils";
 import { useTranslation } from "react-i18next";
 interface HowItWorksSectionProps {

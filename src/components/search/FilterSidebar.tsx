@@ -5,7 +5,7 @@ name: string;
 }
 }
 
-import React from "react";
+import React from "react";origin/main
 const FilterSidebar: React.FC = () => {
 ,
 return (,
@@ -16,5 +16,5 @@ return (,
 </div>)},
 export default FilterSidebar,;<//div><///div>
 import React from 'react';
-interface FilterSidebarProps {className?: string;}
+interface FilterSidebarProps {className?: string;}origin/main
   children?: React.ReactNode}

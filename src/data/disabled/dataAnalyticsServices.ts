@@ -23,7 +23,7 @@ email: string;
 website: string;
 }
 }
-};
+};origin/main
 }
 
 export const DATA_ANALYTICS_SERVICES: DataAnalyticsService[] = [
@@ -71,7 +71,7 @@ supportLevel: "enterprise";
 marketPrice: "$3;200 - $18;000/month",
 contactInfo: {
 phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";origin/main
 website: "https://ziontechgroup.com"}
 };
 // Predictive Analytics Platform;
@@ -118,7 +118,7 @@ supportLevel: "premium";
 marketPrice: "$2;800 - $15;000/month",
 contactInfo: {
 phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";origin/main
 website: "https://ziontechgroup.com"}
 };
 // Data Governance Platform;
@@ -165,7 +165,7 @@ supportLevel: "enterprise";
 marketPrice: "$2;500 - $12;000/month",
 contactInfo: {
 phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";origin/main
 website: "https://ziontechgroup.com"}
 };
 // Customer Analytics Platform;
@@ -212,7 +212,7 @@ supportLevel: "premium";
 marketPrice: "$2;100 - $10;000/month",
 contactInfo: {
 phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";origin/main
 website: "https://ziontechgroup.com"}
 };
 // Business Intelligence Dashboard;
@@ -259,7 +259,7 @@ supportLevel: "premium";
 marketPrice: "$1;900 - $8;000/month",
 contactInfo: {
 phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";origin/main
 website: "https://ziontechgroup.com"}
 }
 ];

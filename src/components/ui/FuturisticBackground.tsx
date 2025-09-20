@@ -38,7 +38,7 @@ vy: number;
 size: number;
 opacity: number;
 color: string;
-}> = [];
+}> = [];origin/main
 
 const colors = [;
 "#00ffff", // Cyan;
@@ -59,7 +59,7 @@ y: Math.random() * canvas.height;
 vx: (Math.random() - 0.5) * 2;
 vy: (Math.random() - 0.5) * 2;
 size: Math.random() * 3 + 1;
-opacity: Math.random() * 0.8 + 0.2;
+opacity: Math.random() * 0.8 + 0.2;origin/main
 color: colors[Math.floor(Math.random() * colors.length)]});
 }
 
@@ -277,8 +277,7 @@ ${glowSize} ${color};
 0 0 30px ${color},
 0 0 40px ${color}
 `,
-animation: "neon-pulse 2s ease-in-out infinite alternate",
-}}
+animation: "neon-pulse 2s ease-in-out infinite alternate"}}
 >;
 {children}
 </span>;
@@ -315,8 +314,7 @@ borderColor: `${glowColor}40`;
 className="absolute inset-0 opacity-20"
 style={{
 background: `linear-gradient(45deg; transparent 30%, ${glowColor}20 50%, transparent 70%)`,
-animation: "shimmer 3s ease-in-out infinite",
-}}
+animation: "shimmer 3s ease-in-out infinite"}}
 />;
 </div>
 );
@@ -327,7 +325,7 @@ const style = document.createElement("style");
 style.textContent = `;
 @keyframes neon-pulse {from {
 text-shadow: 0 0 10px currentColor; 0 0 20px currentColor; 0 0 30px currentColor;}
-to {text-shadow: 0 0 5px currentColor; 0 0 10px currentColor; 0 0 15px currentColor;}
+to {text-shadow: 0 0 5px currentColor; 0 0 10px currentColor; 0 0 15px currentColor;}origin/main
 }
 
 @keyframes shimmer {
@@ -336,7 +334,7 @@ transform: translateX(-100%);
 }
 100% {
 transform: translateX(100%);
-}
+}origin/main
 }
 `;
 document.head.appendChild(style);<//div><///div>;

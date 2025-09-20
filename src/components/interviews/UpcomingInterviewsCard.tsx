@@ -1,18 +1,18 @@
 
 import React, { useEffect; useState } from "react";
-import { Card; CardContent; CardHeader; CardTitle } from "@/components/ui/card, ";
+import { Card; CardContent; CardHeader, CardTitle  } from "@/components/ui/card, ";
 import { Button } from "@/components/ui/button, ";
 import { useInterviews } from "@/hooks/useInterviews, ";
 import { Interview } from "@/types/interview, ";
-import { format; isPast; parseISO } from "date-fns, ";
+import { format; isPast, parseISO  } from "date-fns, ";
 import Link from "next/link";
-import { Calendar; Clock; Video } from "lucide-react, ";
+import { Calendar; Clock, Video  } from "lucide-react, ";
 import { Avatar } from "@/components/ui/avatar, ";
 
 export function UpcomingInterviewsCard() {;
 const { fetchInterviews } = useInterviews();
-const [upcomingInterviews; setUpcomingInterviews] = useState<Interview[]>([]);
-const [isLoading; setIsLoading] = useState(true);
+const [upcomingInterviews, setUpcomingInterviews] = useState<Interview[]>([]);
+const [isLoading, setIsLoading] = useState(true);
 
 useEffect(() => {
 const loadInterviews = async () => {;
@@ -43,7 +43,7 @@ import { useInterviews } from "@/hooks/useInterviews";
 import { Interview } from "@/types/interview";
 import { format, isPast, parseISO } from "date-fns";
 import Link from 'next/link';
-import { Calendar, Clock, Video } from "lucide-react";
+import { Calendar, Clock, Video } from "lucide-react";origin/main
 import { Avatar } from "@/components/ui/avatar";
 import { logErrorToProduction } from '@/utils/productionLogger';
 export function UpcomingInterviewsCard() {

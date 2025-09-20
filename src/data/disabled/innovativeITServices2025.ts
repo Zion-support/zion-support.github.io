@@ -7,7 +7,7 @@ website: string;
 address: string;
 }
 }
-}
+}origin/main
 
 export interface ITService {
 id: number;
@@ -29,7 +29,7 @@ deliveryTime: string;
 support: string;
 }
 }
-}
+}origin/main
 
 // Innovative IT Services for 2025;
 export const innovativeITServices2025: ITService[] = [
@@ -62,7 +62,7 @@ tags: ["Zero-Trust", "Cybersecurity", "Network Security", "Compliance", "Identit
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
-website: "https://ziontechgroup.com/zero-trust-architecture";
+website: "https://ziontechgroup.com/zero-trust-architecture";origin/main
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$150-250/hour";
 responseTime: "2 hours";
@@ -71,7 +71,7 @@ certifications: ["CISSP", "CISM", "CCSP", "SANS"],
 deliveryTime: "4-6 weeks";
 support: "24/7 premium support",
 };
-{id: 2;
+{id: 2;origin/main
 name: "Quantum-Ready Infrastructure";
 category: "Infrastructure";
 description: "Design and implementation of quantum-ready IT infrastructure prepared for post-quantum cryptography and quantum computing integration";
@@ -100,7 +100,7 @@ tags: ["Quantum Computing", "Infrastructure", "Cryptography", "Future-Proof", "S
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
-website: "https://ziontechgroup.com/quantum-ready-infrastructure";
+website: "https://ziontechgroup.com/quantum-ready-infrastructure";origin/main
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$200-300/hour";
 responseTime: "4 hours";
@@ -109,7 +109,7 @@ certifications: ["Quantum Computing", "Cryptography", "Infrastructure", "Securit
 deliveryTime: "8-12 weeks";
 support: "24/7 enterprise support",
 };
-{id: 3;
+{id: 3;origin/main
 name: "AI-Powered DevOps Automation";
 category: "DevOps";
 description: "Intelligent DevOps automation platform with AI-driven deployment; monitoring; and optimization capabilities",
@@ -138,7 +138,7 @@ tags: ["DevOps", "AI", "Automation", "CI/CD", "Monitoring"],
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
-website: "https://ziontechgroup.com/ai-devops-automation";
+website: "https://ziontechgroup.com/ai-devops-automation";origin/main
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$125-175/hour";
 responseTime: "4 hours";
@@ -147,7 +147,7 @@ certifications: ["AWS", "Azure", "GCP", "DevOps", "Kubernetes"],
 deliveryTime: "3-4 weeks";
 support: "Business hours + emergency support",
 };
-{id: 4;
+{id: 4;origin/main
 name: "Edge Computing Infrastructure";
 category: "Infrastructure";
 description: "Design and deployment of edge computing infrastructure for low-latency applications and IoT deployments";
@@ -176,7 +176,7 @@ tags: ["Edge Computing", "IoT", "Infrastructure", "Low Latency", "Performance"],
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
-website: "https://ziontechgroup.com/edge-computing-infrastructure";
+website: "https://ziontechgroup.com/edge-computing-infrastructure";origin/main
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$140-200/hour";
 responseTime: "6 hours";
@@ -185,7 +185,7 @@ certifications: ["Edge Computing", "IoT", "Infrastructure", "Networking"],
 deliveryTime: "6-8 weeks";
 support: "Business hours + emergency support",
 };
-{id: 5;
+{id: 5;origin/main
 name: "Blockchain Infrastructure Services";
 category: "Blockchain";
 description: "Enterprise blockchain infrastructure design; deployment; and management for secure decentralized applications",
@@ -214,7 +214,7 @@ tags: ["Blockchain", "Smart Contracts", "Decentralized", "Security", "Innovation
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
-website: "https://ziontechgroup.com/blockchain-infrastructure";
+website: "https://ziontechgroup.com/blockchain-infrastructure";origin/main
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$175-250/hour";
 responseTime: "8 hours";
@@ -223,7 +223,7 @@ certifications: ["Blockchain", "Ethereum", "Hyperledger", "Security"],
 deliveryTime: "8-10 weeks";
 support: "24/7 premium support",
 };
-{id: 6;
+{id: 6;origin/main
 name: "Green IT Infrastructure";
 category: "Sustainability";
 description: "Energy-efficient IT infrastructure design and implementation with carbon footprint reduction and sustainability optimization";
@@ -252,7 +252,7 @@ tags: ["Green IT", "Sustainability", "Energy Efficiency", "Carbon Reduction", "C
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
-website: "https://ziontechgroup.com/green-it-infrastructure";
+website: "https://ziontechgroup.com/green-it-infrastructure";origin/main
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$130-180/hour";
 responseTime: "6 hours";
@@ -261,7 +261,7 @@ certifications: ["LEED", "Energy Star", "Sustainability", "Green Building"],
 deliveryTime: "6-8 weeks";
 support: "Business hours + emergency support",
 };
-{id: 7;
+{id: 7;origin/main
 name: "AI Infrastructure Optimization";
 category: "AI Infrastructure";
 description: "Specialized infrastructure optimization for AI workloads; including GPU clusters; distributed training; and inference optimization",
@@ -290,7 +290,7 @@ tags: ["AI Infrastructure", "GPU Clusters", "Machine Learning", "Performance", "
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
-website: "https://ziontechgroup.com/ai-infrastructure-optimization";
+website: "https://ziontechgroup.com/ai-infrastructure-optimization";origin/main
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$180-250/hour";
 responseTime: "4 hours";
@@ -299,7 +299,7 @@ certifications: ["AI/ML", "GPU Computing", "Distributed Systems", "Performance"]
 deliveryTime: "8-12 weeks";
 support: "24/7 premium support",
 };
-{id: 8;
+{id: 8;origin/main
 name: "Hybrid Cloud Architecture";
 category: "Cloud";
 description: "Design and implementation of hybrid cloud architectures with seamless integration between on-premises and cloud environments";
@@ -328,7 +328,7 @@ tags: ["Hybrid Cloud", "Cloud Migration", "Integration", "Security", "Compliance
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
-website: "https://ziontechgroup.com/hybrid-cloud-architecture";
+website: "https://ziontechgroup.com/hybrid-cloud-architecture";origin/main
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$145-200/hour";
 responseTime: "6 hours";
@@ -336,5 +336,5 @@ sla: "99.9% uptime";
 certifications: ["AWS", "Azure", "GCP", "Cloud Architecture", "Security"],
 deliveryTime: "6-10 weeks";
 support: "Business hours + emergency support",
-}
+}origin/main
 ];

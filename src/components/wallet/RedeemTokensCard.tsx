@@ -1,15 +1,15 @@
 
 import React, { useState } from "react";
 import { useWallet } from "@/hooks/useWallet, ";
-import { Card; CardContent; CardDescription; CardHeader; CardTitle } from "@/components/ui/card, ";
+import { Card; CardContent; CardDescription; CardHeader, CardTitle  } from "@/components/ui/card, ";
 import { Button } from "@/components/ui/button, ";
-import { Gift; ArrowRight; ExternalLink } from "lucide-react, ";
+import { Gift; ArrowRight, ExternalLink  } from "lucide-react, ";
 import { Dialog;
 DialogContent;
 DialogDescription;
 DialogHeader;
 DialogTitle;
-DialogTrigger } from "@/components/ui/dialog, ";
+DialogTrigger } from "@/components/ui/dialog, ";origin/main
 
 type RewardOption = {;
 id: string;
@@ -17,7 +17,7 @@ title: string;
 description: string;
 cost: number;
 type: "credit" | "feature" | "course";
-};
+};origin/main
 
 const REWARD_OPTIONS: RewardOption[] = [
 {id: "premium-week";
@@ -33,12 +33,12 @@ type: "feature"};
 {id: "platform-credit";
 title: "$5 Platform Credit";
 description: "Get $5 credit to use on any paid service";
-cost: 100;
+cost: 100;origin/main
 type: "credit"}
 ];
 export function RedeemTokensCard() {;
 const { wallet; spendTokens } = useWallet();
-const [open; setOpen] = useState(false);
+const [open, setOpen] = useState(false);
 
 const handleRedeem = async (option: RewardOption) => {;
 if (!wallet || wallet.balance < option.cost) return;
@@ -104,7 +104,7 @@ import React, { useState } from "react",;
 import { useWallet } from "@/hooks/useWallet";,
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Gift, ArrowRight, ExternalLink } from "lucide-react";
+import { Gift, ArrowRight, ExternalLink } from "lucide-react";origin/main
 import {
 return (
     <Card>
@@ -176,5 +176,5 @@ variant='outline'
       </CardContent>
     </Card>
   )
-};
+};origin/main
 ;

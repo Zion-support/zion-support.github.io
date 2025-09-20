@@ -6,7 +6,7 @@ export interface EmptyMatchesCardProps {onRefresh: () => void;
 isProcessing: boolean,
 export function EmptyMatchesCard({
 }
-  onRefresh,}
+  onRefresh,}origin/main
 isProcessing}: EmptyMatchesCardProps) {
   return (
     <Card className='p-6 text-center border-dashed border-2 bg-muted/30'>
@@ -15,9 +15,9 @@ isProcessing}: EmptyMatchesCardProps) {
       </div>
       <h3 className='text-lg font-medium mb-2'>No talent matches yet</h3>
       <p className='text-muted-foreground mb-6'>
-        Run AI matching to find talents that match this job&apos;s requirements.
+        Run AI matching to find talents that match this job's requirements.
       </p>
-      <Button onClick={onRefresh} disabled={isProcessing} className='mx-auto'>      <Button
+      <Button onClick={onRefresh} disabled={isProcessing} className='mx-auto'>      <Buttonorigin/main
 onClick = {onRefresh}
         disabled = {isProcessing}
         className="mx-auto"

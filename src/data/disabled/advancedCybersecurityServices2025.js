@@ -55,7 +55,7 @@ export const advancedCybersecurityServices2025 = [
         quantumResistant: true;
         threatIntelligence: true,
     };
-    {id: 2;
+    {id: 2;origin/main
         name: "AI-Powered Threat Intelligence";
         category: "Threat Intelligence";
         description: "Advanced AI-driven threat intelligence platform with real-time threat detection, predictive analytics, and automated response",
@@ -110,7 +110,7 @@ export const advancedCybersecurityServices2025 = [
         quantumResistant: false;
         threatIntelligence: true,
     };
-    {id: 3;
+    {id: 3;origin/main
         name: "Quantum-Resistant Cryptography";
         category: "Post-Quantum Security";
         description: "Future-proof cryptography solutions resistant to quantum computing attacks with hybrid encryption and quantum key distribution";
@@ -165,7 +165,7 @@ export const advancedCybersecurityServices2025 = [
         quantumResistant: true;
         threatIntelligence: false,
     };
-    {id: 4;
+    {id: 4;origin/main
         name: "Privacy-Preserving Analytics";
         category: "Privacy Engineering";
         description: "Advanced privacy-preserving analytics platform using differential privacy, federated learning, and secure multi-party computation",
@@ -220,7 +220,7 @@ export const advancedCybersecurityServices2025 = [
         quantumResistant: false;
         threatIntelligence: false,
     };
-    {id: 5;
+    {id: 5;origin/main
         name: "Cloud Security Posture Management";
         category: "Cloud Security";
         description: "Comprehensive cloud security platform with continuous monitoring, compliance management, and automated remediation",
@@ -275,7 +275,7 @@ export const advancedCybersecurityServices2025 = [
         quantumResistant: false;
         threatIntelligence: true,
     };
-    {id: 6;
+    {id: 6;origin/main
         name: "IoT Security Guardian";
         category: "IoT Security";
         description: "Comprehensive IoT security platform with device authentication, network segmentation, and behavioral monitoring",
@@ -328,7 +328,6 @@ export const advancedCybersecurityServices2025 = [
         zeroTrust: true;
         aiPowered: true;
         quantumResistant: false;
-        threatIntelligence: true,
-    }
+        threatIntelligence: true}
 ];
     export default advancedCybersecurityServices2025;

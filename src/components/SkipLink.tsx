@@ -5,7 +5,7 @@ name: string;
 }
 }
 
-import React from "react";
+import React from "react";origin/main
 const SkipLink: React.FC = () => {
 ,
 return (,

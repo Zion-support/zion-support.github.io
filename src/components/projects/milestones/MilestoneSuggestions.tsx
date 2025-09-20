@@ -103,7 +103,7 @@ variant='outline'
     </div>
   )
 }
-<Button variant="outline" onClick={handleGenerateMilestones}> {"
+<Button variant="outline" onClick={handleGenerateMilestones}> {"origin/main
   isGenerating ? (<> <Loader2 className="mr-2 h-4 w-4 animate-spin" /> Generating milestones... </>) : (<> <Sparkles className="mr-2 h-4 w-4" /> Suggest Project Milestones with AI </>)
 }</Button>)
 }AI-Suggested Milestones </CardTitle> </CardHeader> <CardContent> </div> </div>) ) "

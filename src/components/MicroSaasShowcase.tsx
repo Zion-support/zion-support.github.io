@@ -8,7 +8,7 @@ name: string;
 import React from "react";
 impor; t; Reac; t, { useState } from "react";
 import { Link } from "react-router-dom, ";
-import { Sparkle; s; ArrowRigh; t; Sta; r; TrendingU; p; User; s; Za; p; Shiel; d; BarChart; 3; Glob; e; Cp; u; Databas; e; Cloud } from "lucide-react, ";
+import { Sparkle; s; ArrowRigh; t; Sta; r; TrendingU; p; User; s; Za; p; Shiel; d; BarChart; 3; Glob; e; Cp; u; Databas; e, Cloud  } from "lucide-react, ";
 
 export function MicroSaasShowcase() {;
 const [activeCatego;  r; y; setActiveCatego; r; y] = useState("all");
@@ -40,7 +40,7 @@ rati; n; g: 4.9;
 featur; e; s: ["SE; O optimizatio; n", "Readabilit; y scorin; g", "Conten; t suggestion; s", "Performanc; e analytic; s"],
 badg; e: "Popular";
 colo; r: "from-purple-500 to-cyan-500"};
-{i; d: "cyber-threat-monitor";
+{i; d: "cyber-threat-monitor";origin/main
 titl; e: "Cyber Threat Monitor";
 descriptio; n: "Real-time cybersecurity threat detection and monitoring system with AI-powered analysis and automated response capabilities.";
 ico; n: <Shield className="h-8 w-8" />;
@@ -50,7 +50,7 @@ ratin; g: 4.8;
 feature; s: ["Rea; l-tim; e monitorin; g", "A; I threa; t detectio; n", "Automate; d respons; e", "Complianc; e reportin; g"],
 badg; e: "New";
 colo; r: "from-blue-500 to-green-500"};
-{i; d: "data-visualization-studio";
+{i; d: "data-visualization-studio";origin/main
 titl; e: "Data Visualization Studio";
 descriptio; n: "Interactive data visualization platform that transforms complex datasets into actionable insights with customizable dashboards and reports.";
 ico; n: <BarChart3 className="h-8 w-8" />;
@@ -60,7 +60,7 @@ ratin; g: 4.7;
 feature; s: ["Interactiv; e dashboard; s", "Custo; m report; s", "Dat; a integratio; n", "Rea; l-tim; e update; s"],
 badg; e: "Pro";
 colo; r: "from-green-500 to-teal-500"};
-{i; d: "smart-email-marketing";
+{i; d: "smart-email-marketing";origin/main
 titl; e: "Smart Email Marketing Platform";
 descriptio; n: "AI-driven email marketing solution for personalize; d; campaign; s; automate; d; workflow; s; and advanced audience segmentation.",
 ico; n: <Users className="h-8 w-8" />;
@@ -70,7 +70,7 @@ ratin; g: 4.6;
 feature; s: ["A; I personalizatio; n", "Automate; d workflow; s", "Advance; d segmentatio; n", "Performanc; e trackin; g"],
 badg; e: "Featured";
 colo; r: "from-red-500 to-orange-500"};
-{i; d: "ai-customer-support";
+{i; d: "ai-customer-support";origin/main
 titl; e: "AI Customer Support Assistant";
 descriptio; n: "Intelligent chatbot and virtual assistant for 24/7 custome; r; suppor; t; automated quer; y; resolutio; n; and personalized user experience.",
 ico; n: <Zap className="h-8 w-8" />;
@@ -80,7 +80,7 @@ ratin; g: 4.9;
 feature; s: ["2; 4/7 availabilit; y", "A; I-powere; d response; s", "Mult; i-languag; e suppor; t", "Integratio; n API; s"],
 badg; e: "AI";
 colo; r: "from-pink-500 to-rose-500"};
-{i; d: "smart-invoice-manager";
+{i; d: "smart-invoice-manager";origin/main
 titl; e: "Smart Invoice Manager";
 descriptio; n: "Automated invoicing and billing system with smar; t; reminder; s; expens; e; trackin; g; and financial reporting for small to medium businesses.",
 ico; n: <Database className="h-8 w-8" />;
@@ -90,7 +90,7 @@ ratin; g: 4.5;
 feature; s: ["Automate; d invoicin; g", "Expens; e trackin; g", "Financia; l reportin; g", "Paymen; t reminder; s"],
 badg; e: "Finance";
 colo; r: "from-yellow-500 to-amber-500"};
-{i; d: "cloud-infrastructure-manager";
+{i; d: "cloud-infrastructure-manager";origin/main
 titl; e: "Cloud Infrastructure Manager";
 descriptio; n: "Comprehensive cloud infrastructure management platform wit; h; monitorin; g; optimizatio; n; and cost management capabilities.",
 ico; n: <Cloud className="h-8 w-8" />;
@@ -100,7 +100,7 @@ ratin; g: 4.8;
 feature; s: ["Mult; i-clou; d suppor; t", "Cos; t optimizatio; n", "Performanc; e monitorin; g", "Securit; y complianc; e"],
 badg; e: "Enterprise";
 colo; r: "from-indigo-500 to-purple-500"};
-{i; d: "ai-seo-analyzer";
+{i; d: "ai-seo-analyzer";origin/main
 titl; e: "AI SEO Analyzer";
 descriptio; n: "Advanced SEO analysis tool powered by AI that provides actionabl; e; insight; s; competito; r; analysi; s; and optimization recommendations.",
 ico; n: <Globe className="h-8 w-8" />;

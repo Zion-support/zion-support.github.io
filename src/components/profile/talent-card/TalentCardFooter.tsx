@@ -6,7 +6,7 @@ import { TalentProfile } from "@/types/talent";,
 import { HireRequestModal } from "@/components/profile/hire-request";,
 import { useAuthStatus } from "@/hooks/talent";
 import type { UserProfile } from "@/types/auth";
-import { useRouter } from "next/router";
+import { useRouter } from "next/router";origin/main
 interface TalentCardFooterProps {
 }
 export function TalentCardFooter({ profile onViewProfile onRequestHire }: TalentCardFooterProps) {
@@ -49,7 +49,7 @@ variant="outline"
         </div>
       </div>
       {/* Hire Request Modal */}
-      <HireRequestModal
+      <HireRequestModalorigin/main
 talent = {profile}
         isOpen = {isHireModalOpen}
         onClose = {() => setIsHireModalOpen(false)}

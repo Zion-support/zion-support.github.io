@@ -48,7 +48,7 @@ export const IOT_EDGE_COMPUTING_SERVICES = [
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com"};
         websiteUrl: "https://ziontechgroup.com/industrial-iot",
-    };
+    };origin/main
     // Smart City IoT Solution;
     {id: "smart-city-iot-solution";
         title: "Smart City IoT Infrastructure Platform";
@@ -98,7 +98,7 @@ export const IOT_EDGE_COMPUTING_SERVICES = [
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com"};
         websiteUrl: "https://ziontechgroup.com/smart-city-iot",
-    };
+    };origin/main
     // Healthcare IoT Monitoring;
     {id: "healthcare-iot-monitoring";
         title: "Healthcare IoT Patient Monitoring System";
@@ -148,7 +148,7 @@ export const IOT_EDGE_COMPUTING_SERVICES = [
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com"};
         websiteUrl: "https://ziontechgroup.com/healthcare-iot",
-    };
+    };origin/main
     // Retail IoT Analytics Platform;
     {id: "retail-iot-analytics";
         title: "Retail IoT Analytics and Optimization Platform";
@@ -198,7 +198,7 @@ export const IOT_EDGE_COMPUTING_SERVICES = [
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com"};
         websiteUrl: "https://ziontechgroup.com/retail-iot",
-    };
+    };origin/main
     // Edge AI Computing Platform;
     {id: "edge-ai-computing";
         title: "Edge AI Computing Platform";
@@ -248,5 +248,5 @@ export const IOT_EDGE_COMPUTING_SERVICES = [
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com"};
         websiteUrl: "https://ziontechgroup.com/edge-ai",
-    }
+    }origin/main
 ];

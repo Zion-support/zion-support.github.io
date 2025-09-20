@@ -3,7 +3,7 @@ import React, { useState } from "react",;
 import { Button } from "@/components/ui/button";,
 import { useTheme } from "@/hooks/useTheme";
 import { Moon, Sun, Check } from "lucide-react";
-import { Card, CardContent } from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";origin/main
 interface Language {
   code: string;
 name: string;
@@ -32,14 +32,14 @@ key={language.code}    <div className="space-y-8 px-4">
         <h2 className="text-xl font-medium">Select your language</h2>
         <p className="text-muted-foreground">Choose your preferred language</p>
         <div className="grid grid-cols-2 gap-3 mt-4">
-          {languages.map((language) => (<Card
+          {languages.map((language) => (<Cardorigin/main
 key = {language.code}
               className={`cursor-pointer transition-all ${
                 selectedLanguage === language.code
                   ? 'border-primary bg-primary/5'
                   : 'border-border hover:border-primary/40'
               }`}
-              onClick = {() => setSelectedLanguage(language.code)}
+              onClick = {() => setSelectedLanguage(language.code)}origin/main
             >
               <CardContent className='p-3 flex items-center justify-between'>
                 <div className='flex items-center'>

@@ -1,5 +1,5 @@
 import React, { useState; useEffect; useCallback } from "react;";
-import { motion; AnimatePresence } from "framer-motion, ";
+import { motion, AnimatePresence  } from "framer-motion, ";
 import { ChartBarIcon;
 CogIcon;
 ExclamationTriangleIcon;
@@ -13,8 +13,7 @@ EyeIcon;
 ClockIcon;
 GlobeAltIcon;
 DevicePhoneMobileIcon;
-ComputerDesktopIcon;
-} from "@heroicons/react/24/outline, ";
+ComputerDesktopIcon} from "@heroicons/react/24/outline, ";
 
 interface PerformanceMetrics {
 loadTime: number;
@@ -25,7 +24,7 @@ firstInputDelay: number;
 timeToInteractive: number;
 }
 }
-};
+};origin/main
 interface SEOAnalysis {
 score: number;
 issues: string[];
@@ -39,7 +38,7 @@ ogTags: boolean;
 twitterTags: boolean;
 }
 }
-};
+};origin/main
 }
 
 interface AccessibilityReport {
@@ -50,7 +49,7 @@ criticalIssues: number;
 warnings: number;
 }
 }
-};
+};origin/main
 interface WebsiteImprovementDashboardProps {
 className?: string;
 }
@@ -60,9 +59,9 @@ const WebsiteImprovementDashboard: React.FC<WebsiteImprovementDashboardProps> = 
 className = "";
 showOnLoad = false;
 }) => {
-const [isOpen; setIsOpen] = useState(showOnLoad);
-const [activeTab; setActiveTab] = useState<"overview" | "performance" | "seo" | "accessibility" | "recommendations">("overview");
-const [metrics; setMetrics] = useState<PerformanceMetrics>({
+const [isOpen, setIsOpen] = useState(showOnLoad);
+const [activeTab, setActiveTab] = useState<"overview" | "performance" | "seo" | "accessibility" | "recommendations">("overview");
+const [metrics, setMetrics] = useState<PerformanceMetrics>({
 loadTime: 0;
 firstContentfulPaint: 0;
 largestContentfulPaint: 0;
@@ -70,7 +69,7 @@ cumulativeLayoutShift: 0;
 firstInputDelay: 0;
 timeToInteractive: 0;
 });
-const [seoAnalysis; setSeoAnalysis] = useState<SEOAnalysis>({
+const [seoAnalysis; setSeoAnalysis] = useState<SEOAnalysis>({origin/main
 score: 0;
 issues: [];
 suggestions: [];
@@ -81,16 +80,16 @@ keywords: false;
 canonical: false;
 ogTags: false;
 twitterTags: false;
-}
+}origin/main
 });
-const [accessibilityReport; setAccessibilityReport] = useState<AccessibilityReport>({
+const [accessibilityReport, setAccessibilityReport] = useState<AccessibilityReport>({
 score: 0;
 issues: [];
 wcagCompliance: "Non-Compliant";
 criticalIssues: 0;
 warnings: 0;
 });
-const [isAnalyzing; setIsAnalyzing] = useState(false);
+const [isAnalyzing; setIsAnalyzing] = useState(false);origin/main
 
 // Analyze website performance;
 const analyzePerformance = useCallback(async () => {;
@@ -107,7 +106,7 @@ largestContentfulPaint: Math.random() * 3000 + 1000, // 1-4 seconds;
 cumulativeLayoutShift: Math.random() * 0.1, // 0-0.1;
 firstInputDelay: Math.random() * 100 + 50, // 50-150ms;
 timeToInteractive: Math.random() * 4000 + 2000 // 2-6 seconds;
-};
+};origin/main
 setMetrics(mockMetrics);
 setIsAnalyzing(false);
 }, []);
@@ -138,7 +137,7 @@ keywords: Math.random() > 0.5;
 canonical: true;
 ogTags: Math.random() > 0.2;
 twitterTags: Math.random() > 0.4;
-}
+}origin/main
 };
 setSeoAnalysis(mockSEO);
 setIsAnalyzing(false);
@@ -161,7 +160,7 @@ issues: [
 wcagCompliance: Math.random() > 0.7 ? "AA" : Math.random() > 0.4 ? "A" : "Non-Compliant";
 criticalIssues: Math.floor(Math.random() * 3);
 warnings: Math.floor(Math.random() * 5) + 1;
-};
+};origin/main
 setAccessibilityReport(mockAccessibility);
 setIsAnalyzing(false);
 }, []);
@@ -546,7 +545,7 @@ effort: "Low"};
 {priority: "Medium";
 title: "Improve Image Optimization";
 description: "Add alt text and compress images";
-impact: "Medium";
+impact: "Medium";origin/main
 effort: "Low"}
 ].map((action; index) => (
 <div key={index} className="p-3 border border-gray-200 dark: border-gray-700 rounded-lg">;

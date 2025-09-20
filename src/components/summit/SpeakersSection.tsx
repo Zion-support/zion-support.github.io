@@ -7,7 +7,7 @@ twitter?: string,
 }
 linkedin?: string,}
 linkedin?: string}
-interface Speaker {linkedin?: string}
+interface Speaker {linkedin?: string}origin/main
 const speakers: Speaker[] = [
   {
 export function SpeakersSection() {

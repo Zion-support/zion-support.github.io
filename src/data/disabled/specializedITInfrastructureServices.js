@@ -55,8 +55,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES = [
         roi: "300% within 8 months";
         competitors: ["AWS Edge", "Azure Edge", "Google Edge", "Cloudflare Workers"],
         marketTrend: "Growing market with 250% annual growth";
-        innovationLevel: "Advanced edge computing with AI capabilities",
-    };
+        innovationLevel: "Advanced edge computing with AI capabilities"};
     // Zero-Trust Security Architecture;
     {id: "zero-trust-security-architecture";
         title: "Zero-Trust Security Architecture Platform";
@@ -113,8 +112,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES = [
         roi: "400% within 12 months";
         competitors: ["Palo Alto Networks", "Cisco", "VMware", "Microsoft"],
         marketTrend: "Growing market with 300% annual growth";
-        innovationLevel: "Advanced zero-trust with AI-powered threat detection",
-    };
+        innovationLevel: "Advanced zero-trust with AI-powered threat detection"};
     // Hybrid Cloud Management Platform;
     {id: "hybrid-cloud-management-platform";
         title: "Hybrid Cloud Management Platform";
@@ -171,8 +169,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES = [
         roi: "350% within 8 months";
         competitors: ["VMware", "Red Hat", "HashiCorp", "CloudBolt"],
         marketTrend: "Growing market with 200% annual growth";
-        innovationLevel: "Advanced hybrid cloud with AI-powered optimization",
-    };
+        innovationLevel: "Advanced hybrid cloud with AI-powered optimization"};
     // Software-Defined Networking (SDN) Platform;
     {id: "software-defined-networking-platform";
         title: "Software-Defined Networking (SDN) Platform";
@@ -229,8 +226,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES = [
         roi: "300% within 6 months";
         competitors: ["VMware NSX", "Cisco ACI", "Juniper Contrail", "OpenDaylight"],
         marketTrend: "Growing market with 180% annual growth";
-        innovationLevel: "Advanced SDN with AI-powered traffic optimization",
-    };
+        innovationLevel: "Advanced SDN with AI-powered traffic optimization"};
     // Container Orchestration Platform;
     {id: "container-orchestration-platform";
         title: "Container Orchestration Platform";
@@ -287,6 +283,5 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES = [
         roi: "400% within 6 months";
         competitors: ["Red Hat OpenShift", "VMware Tanzu", "Docker Enterprise", "Rancher"],
         marketTrend: "Growing market with 250% annual growth";
-        innovationLevel: "Advanced container orchestration with AI-powered optimization",
-    }
+        innovationLevel: "Advanced container orchestration with AI-powered optimization"}
 ];

@@ -12,7 +12,7 @@ id: string;
 }
     avatar?: string;}
     status?: string},
-  messages: Message[];
+  messages: Message[];origin/main
 onBack: () => void;
   onSendMessage: (content: string) => void
                 {message.timestamp}

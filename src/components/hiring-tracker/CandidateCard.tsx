@@ -5,7 +5,7 @@ import { Draggable } from "@hello-pangea/dnd, ";
 import { formatDistanceToNow } from "date-fns, ";
 import { Link } from "react-router-dom, ";
 import { JobApplication } from "@/types/jobs, ";
-import { Card; CardContent } from "@/components/ui/card, ";
+import { Card, CardContent  } from "@/components/ui/card, ";
 import { Avatar } from "@/components/ui/avatar, ";
 import { Button } from "@/components/ui/button, ";
 import { Textarea } from "@/components/ui/textarea, ";
@@ -15,12 +15,11 @@ FileText;
 MoreVertical;
 Calendar;
 AlertTriangle;
-BriefcaseIcon;
-} from "lucide-react, ";
+BriefcaseIcon} from "lucide-react, ";
 import { DropdownMenu;
 DropdownMenuContent;
 DropdownMenuItem;
-DropdownMenuTrigger } from "@/components/ui/dropdown-menu, ";
+DropdownMenuTrigger } from "@/components/ui/dropdown-menu, ";origin/main
 import { ScoreBadge } from "@/components/jobs/applications/ScoreBadge, ";
 import { toast } from "@/hooks/use-toast, ";
 import { HireConfirmationModal } from "./HireConfirmationModal, ";
@@ -33,7 +32,7 @@ index: number;
 };
 export function CandidateCard({ application; index }: CandidateCardProps) {const [showNotes; setShowNotes] = useState(false);
 const [notes; setNotes] = useState(application.notes || "");
-const [showHireModal; setShowHireModal] = useState(false);
+const [showHireModal; setShowHireModal] = useState(false);origin/main
 
 // Check if application is stalled (no activity for 7 days)
 const isStalled = application.updated_at &&
@@ -44,7 +43,7 @@ const handleSaveNotes: any = () => {;
 // Here you would save the notes to the database;
 // For now; we'll just show a toast;
 toast({
-title: "Notes saved";
+title: "Notes saved";origin/main
 description: "Your notes have been saved"});
 setShowNotes(false);
 };
@@ -52,7 +51,7 @@ setShowNotes(false);
 const handleHireConfirmed: any = () => {;
 // Hiring process completed via the modal;
 toast({
-title: "Hiring process initiated";
+title: "Hiring process initiated";origin/main
 description: "Offer has been sent to the talent."});
 };
 
@@ -217,7 +216,7 @@ import { useState } from "react";
 import { Avatar, as, AvatarPrimitive } from "@/components/ui/avatar";, // Renamed to avoid conflict,
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
-import { MessageSquare, User, FileText, MoreVertical, Calendar, AlertTriangle, BriefcaseIcon } from "lucide-react";
+import { MessageSquare, User, FileText, MoreVertical, Calendar, AlertTriangle, BriefcaseIcon } from "lucide-react";origin/main
 interface CandidateCardProps {
   application: JobApplication;
 }
@@ -368,7 +367,7 @@ variant='default'
         )}
       </Draggable>
       {/* Hire Confirmation Modal */}
-      <HireConfirmationModal
+      <HireConfirmationModalorigin/main
 isOpen = {showHireModal}
         onClose = {() => setShowHireModal(false)}
         application = {application}
@@ -380,14 +379,14 @@ isOpen = {showHireModal}
   setShowNotes (false)
 }
   //Hiring process completed via the modal toast ({application.id}index= {index}> {(provided) => (<Card className="mb-2 p-0 shadow-sm border" ref= {
-  provided.innerRef}{...provided.draggableProps}{
+  provided.innerRef}{...provided.draggableProps}{origin/main
   ...provided.dragHandleProps "
 }> <CardContent className="p-3"> {
   /* Candidate Header */ "
 }<div className="flex justify-between items-start mb-2"> <div className="flex items-center gap-2"> <AvatarPrimitive className="h-8 w-8"> {
   /* Using renamed AvatarPrimitive */
 }{application.talent profile?.profile picture url && !avatarError ? (<Image src= {
-  application.talent profile.profile picture url}alt= {candidateName}width= {32}//Match h-8 w-8 height= {
+  application.talent profile.profile picture url}alt= {candidateName}width= {32}//Match h-8 w-8 height= {origin/main
   32 "
 }//Match h-8 w-8 className="rounded-full object-cover" //Ensure rounded and object-cover onError= {
   () => setAvatarError (true)
@@ -396,7 +395,7 @@ isOpen = {showHireModal}
 }//Avatars are usually not LCP />) : (<User className="h-4 w-4" />) "
 }</AvatarPrimitive> <div> <h4 className="font-medium text-sm"> {
   candidateName "
-}</h4> </p> </div> </div> <DropdownMenu> <DropdownMenuTrigger asChild> <Button variant="ghost" className="h-8 w-8 p-0"> <MoreVertical className="h-4 w-4" /> </Button> </DropdownMenuTrigger> </DropdownMenuItem> <DropdownMenuItem asChild> <Link href= {`/messages?talentId=$ {
+}</h4> </p> </div> </div> <DropdownMenu> <DropdownMenuTrigger asChild> <Button variant="ghost" className="h-8 w-8 p-0"> <MoreVertical className="h-4 w-4" /> </Button> </DropdownMenuTrigger> </DropdownMenuItem> <DropdownMenuItem asChild> <Link href= {`/messages?talentId=$ {origin/main
   application.talent id}`
 }> Message </Link> </DropdownMenuItem> {
   application.resume?.file url && (<DropdownMenuItem asChild> <a href= {
@@ -415,7 +414,7 @@ isOpen = {showHireModal}
 }{"
   application.match score !== null && application.match score !== undefined && (<div className="mb-2"> <ScoreBadge application= {
   application}/> </div>) "
-}<Textarea placeholder="Add private notes about this candidate..." className="text-xs min-h-[60px]" value= {notes}onChange= {
+}<Textarea placeholder="Add private notes about this candidate..." className="text-xs min-h-[60px]" value= {notes}onChange= {origin/main
   (e) => setNotes (e.target.value)
 }/> </div> </div>) "
 }<Button variant="outline" size="sm" className="flex-1" asChild > </Link> </Button> <Button variant="outline" size="sm" className="flex-1" asChild > <FileText className="h-3 w-3 mr-1" /> Resume </Link>) : (<span> <FileText className="h-3 w-3 mr-1" /> No Resume </span>) "
@@ -426,5 +425,5 @@ isOpen = {showHireModal}
   /* Hire Confirmation Modal */
 }<HireConfirmationModal isOpen= {showHireModal}onClose= {
   () => setShowHireModal (false)
-}application= {application}onConfirm= {handleHireConfirmed}/> </>)
+}application= {application}onConfirm= {handleHireConfirmed}/> </>)origin/main
 }'"}

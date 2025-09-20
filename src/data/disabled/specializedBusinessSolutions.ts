@@ -5,7 +5,7 @@ benefits: string[], useCases: string[];
 targetAudience: string[], tags: string[];
 estimatedDelivery: string; supportLevel: string; marketPrice: string;
 }
-contactInfo: {,}
+contactInfo: {,}origin/main
 phone: string; email: string; website: string};
 websiteUrl: string;
 demoUrl?: string;
@@ -56,7 +56,7 @@ marketPrice: "$699 - $2; 299/month",
 contactInfo: {,
 phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
 website: "https://ziontechgroup.com"}, websiteUrl: "https://ziontechgroup.com/ai-sales-optimization",
-};
+};origin/main
 // Digital Transformation Consulting;
 {id: "digital-transformation-consulting", title: "Digital Transformation Consulting Services";
 description: "Comprehensive digital transformation consulting that helps organizations modernize their operations; adopt new technologies; and achieve digital excellence.",
@@ -99,7 +99,7 @@ marketPrice: "$2; 499 - $8; 999/month",
 contactInfo: {,
 phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
 website: "https://ziontechgroup.com"}, websiteUrl: "https://ziontechgroup.com/digital-transformation",
-};
+};origin/main
 // Data Analytics & Business Intelligence;
 {id: "data-analytics-business-intelligence", title: "Data Analytics & Business Intelligence Platform";
 description: "Advanced analytics platform that transforms raw data into actionable business insights; enabling data-driven decision making across all organizational levels.",
@@ -142,7 +142,7 @@ marketPrice: "$799 - $2; 499/month",
 contactInfo: {,
 phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
 website: "https://ziontechgroup.com"}, websiteUrl: "https://ziontechgroup.com/data-analytics",
-};
+};origin/main
 // Process Automation & Workflow Optimization;
 {id: "process-automation-workflow-optimization", title: "Process Automation & Workflow Optimization Platform";
 description: "Intelligent automation platform that streamlines business processes; eliminates manual tasks; and optimizes workflows for maximum efficiency and productivity.",
@@ -185,7 +185,7 @@ marketPrice: "$599 - $1; 999/month",
 contactInfo: {,
 phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
 website: "https://ziontechgroup.com"}, websiteUrl: "https://ziontechgroup.com/process-automation",
-};
+};origin/main
 // Customer Experience & Engagement Platform;
 {id: "customer-experience-engagement-platform", title: "Customer Experience & Engagement Platform";
 description: "Comprehensive platform for managing customer interactions; personalizing experiences; and building lasting customer relationships through data-driven insights.",
@@ -228,5 +228,5 @@ marketPrice: "$899 - $2; 999/month",
 contactInfo: {,
 phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
 website: "https://ziontechgroup.com"}, websiteUrl: "https://ziontechgroup.com/customer-experience",
-}
+}origin/main
 ];

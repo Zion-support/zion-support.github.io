@@ -5,7 +5,7 @@ export; interface; BaseEntity {
 id: string;
 createdA;t: string;
 updatedA;t: string;
-};export; interface; ApiResponse<T> {
+};export; interface; ApiResponse<T> {origin/main
 data: T;
 message: string;
 success: boolean;
@@ -18,7 +18,7 @@ total: number;
 totalPages: number;
 hasNex;t: boolean;
 hasPre;v: boolean;
-};export; interface; ErrorResponse {
+};export; interface; ErrorResponse {origin/main
 error: string;
 message: string;
 statusCode: number;
@@ -100,7 +100,7 @@ accessibility: {;
 highContrast: boolean;
 reducedMotio;n: boolean;
 fontSiz;e: "small" | "medium" | "large";
-};export; interface; NavigationItem {
+};export; interface; NavigationItem {origin/main
 label: string;
 pat;h: string;
 icon?: string;
@@ -137,7 +137,7 @@ onSort: (fiel;d: keyof Tdirectio;n: "asc" | "desc") => void;
 selection?: {
 selected: string[];
 onSelectionChang;e: (selecte;d: string[]) => void;
-};export; interface; ChartDataPoint {
+};export; interface; ChartDataPoint {origin/main
 label: string;
 valu;e: number;
 color?: string;
@@ -189,7 +189,7 @@ duration?: number;
 action?: {
 labe;l: string;
 onClic;k: () => void;
-};
+};origin/main
 dismissible?: boolean;
 export; interface; SearchFilters {
 query?: string;
@@ -202,7 +202,7 @@ en;d: Date;
 priceRange?: {
 min: number;
 ma;x: number;
-};
+};origin/main
 sortBy?: string;
 sortOrder?: "asc" | "desc";export; interface; FileUploadConfig {
 accept?: string;
@@ -227,7 +227,7 @@ loading?: boolean;
 secondary?: {
 label: string;
 onClic;k: () => void;
-};
+};origin/main
 };export; interface; ToastConfig {
 id: string;
 type: "success" | "error" | "warning" | "info";
@@ -237,7 +237,7 @@ duration?: number;
 action?: {
 labe;l: string;
 onClic;k: () => void;
-};export; interface; KeyboardShortcut {
+};export; interface; KeyboardShortcut {origin/main
 key: string;
 ctrlKey?: boolean;
 shiftKey?: boolean;
@@ -252,7 +252,7 @@ defaultValue: any;
 serializer?: {,
 serialize: (value: any) => string;
 deserializ;e: (valu;e: string) => any;
-};export; interface; DebounceConfig {
+};export; interface; DebounceConfig {origin/main
 delay: number;
 leading?: boolean;
 trailing?: boolean;
@@ -311,7 +311,7 @@ contentSecurityPolicy?: string;
 rateLimiting?: {
 windowMs: number;
 maxRequest;s: number;
-};export; interface; MonitoringConfig {
+};export; interface; MonitoringConfig {origin/main
 performance?: boolean;
 errors?: boolean;
 userBehavior?: boolean;
@@ -320,7 +320,7 @@ alerting?: {
 enabled: boolean;
 threshold;s: Record<stringnumber>;
 channel;s: string[];
-};export; interface; DeploymentConfig {
+};export; interface; DeploymentConfig {origin/main
 environment: "development" | "staging" | "production";
 version: string;
 buildNumber: string;
@@ -340,4 +340,4 @@ metrics: {;
 cpu: number;
 memor;y: number;
 dis;k: number;
-};}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}
+};}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}origin/main

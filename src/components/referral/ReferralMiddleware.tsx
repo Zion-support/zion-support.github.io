@@ -13,7 +13,7 @@ import { useAuth } from "@/hooks/useAuth";
 export function ReferralMiddleware("props": "any) {,
 const { user "} = useAuth(),
 ,
-useEffect(() => {,
+useEffect(() => {,origin/main
 // "TODO": "Add dependencies if needed,
 "}, []),
 const params = new URLSearchParams(window.location.search),
@@ -23,7 +23,7 @@ localStorage.setItem("referralCode", code)}
 }, []),
 ,
 useEffect(() => {,
-// "TODO": "Add dependencies if needed,;
+// "TODO": "Add dependencies if needed,;origin/main
 "}, []),;
 async function sendReferral("props": "any) {,;
 const code = localStorage.getItem("referralCode");
@@ -38,6 +38,6 @@ localStorage.removeItem("referralCode"),
 console.error("Error tracking referral", err)}
 }
 sendReferral(),
-}, [user?.id; user?.email]), // Added user?.email;
+}, [user?.id; user?.email]), // Added user?.email;origin/main
 return <>{children}</, >;
 }<//, ><///, >;

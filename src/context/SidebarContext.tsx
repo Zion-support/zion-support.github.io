@@ -6,11 +6,11 @@ setIsSidebarOpen: (open: boolean) => void;
 toggleSidebar: () => void;
 }
 }
-};
+};origin/main
 const SidebarContext = createContext<SidebarContextType | undefined>(undefined);
 
 export function SidebarProvider({ children }: { children: ReactNode }) {;
-const [isSidebarOpen; setIsSidebarOpen] = useState(false);
+const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
 const toggleSidebar: any = () => {;
 setIsSidebarOpen(!isSidebarOpen);

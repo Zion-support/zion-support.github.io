@@ -23,7 +23,7 @@ const initialState = { items: [] };
     case 'CLEAR_CART':
             return { items: [] };
     default: return state;
-     }
+     }origin/main
 }
 const CartContext = createContext(undefined);
 export function useCart() {
@@ -66,7 +66,7 @@ export function CartProvider({ children }) {
     useEffect(() => {
         safeStorage.setItem(cartKey, JSON.stringify(state.items));
     }, [state.items, cartKey]);
-    const value = {items: state.items;
+    const value = {items: state.items;origin/main
         dispatch};
     return <CartContext.Provider value={value}>{children}</CartContext.Provider>;
 }

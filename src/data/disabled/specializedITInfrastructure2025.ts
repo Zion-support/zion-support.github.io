@@ -5,7 +5,7 @@ benefits: string[], useCases: string[];
 targetAudience: string[], tags: string[];
 estimatedDelivery: string; supportLevel: string; marketPrice: string;
 }
-contactInfo: {,}
+contactInfo: {,}origin/main
 phone: string; email: string; website: string};
 websiteUrl: string;
 demoUrl?: string;
@@ -65,7 +65,7 @@ phone: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
 website: "https://ziontechgroup.com"},
 websiteUrl: "https://ziontechgroup.com/edge-computing-infrastructure",
-},
+},origin/main
 
 // Quantum-Ready Cloud Infrastructure;
 // Quantum Network Infrastructure;
@@ -116,7 +116,7 @@ phone: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
 website: "https://ziontechgroup.com"},
 websiteUrl: "https://ziontechgroup.com/quantum-network-infrastructure",
-},
+},origin/main
 
 // 5G Enterprise Infrastructure Solutions;
 {id: "5g-enterprise-infrastructure-solutions",
@@ -166,7 +166,7 @@ phone: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
 website: "https://ziontechgroup.com"},
 websiteUrl: "https://ziontechgroup.com/5g-enterprise-infrastructure",
-},
+},origin/main
 
 // Autonomous DevOps Infrastructure;
 {id: "autonomous-devops-infrastructure",
@@ -222,8 +222,7 @@ roi: "250% within 8 months",
 competitors: ["HashiCorp", "Puppet", "Chef", "Ansible"],
 infrastructure: "Auto-scaling cloud-native",
 scalability: "Infinite auto-scaling",
-uptime: "99.99% availability",
-},
+uptime: "99.99% availability"},
 
 // Zero-Trust Security Infrastructure;
 {id: "zero-trust-security-infrastructure",
@@ -279,8 +278,7 @@ roi: "350% within 12 months",
 competitors: ["Palo Alto Networks", "Cisco", "Fortinet"],
 infrastructure: "Secure-by-design",
 scalability: "Enterprise-wide deployment",
-uptime: "99.9% security availability",
-},
+uptime: "99.9% security availability"},
 
 // Green Computing Infrastructure;
 {id: "green-computing-infrastructure",
@@ -336,8 +334,7 @@ roi: "200% within 18 months",
 competitors: ["Google Cloud", "Microsoft Azure", "AWS"],
 infrastructure: "Renewable energy-powered",
 scalability: "Sustainable scaling",
-uptime: "99.5% green availability",
-},
+uptime: "99.5% green availability"},
 
 // Hybrid Multi-Cloud Orchestration;
 {id: "hybrid-multi-cloud-orchestration",
@@ -395,7 +392,7 @@ phone: "+1 302 464 0950",
 email: "kleber@ziontechgroup.com",
 website: "https://ziontechgroup.com"},
 websiteUrl: "https://ziontechgroup.com/hybrid-cloud-infrastructure",
-},
+},origin/main
 
 // AI-Powered Infrastructure Management;
 {id: "ai-powered-infrastructure-management",
@@ -447,4 +444,4 @@ website: "https://ziontechgroup.com"},
 websiteUrl: "https://ziontechgroup.com/ai-infrastructure-management",
 }
 ];
-}
+}origin/main

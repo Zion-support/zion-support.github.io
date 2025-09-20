@@ -1,5 +1,5 @@
-import { Routes; Route } from "react-router-dom, ";
-import { useState; useCallback; useRef; useEffect } from "react, ";
+import { Routes, Route  } from "react-router-dom, ";
+import { useState; useCallback; useRef, useEffect  } from "react, ";
 import { useAnalytics } from "./useAnalytics, ";
 
 interface CodeSuggestion {
@@ -20,7 +20,7 @@ url: string;
 description: string;
 }
 }
-}>;
+}>;origin/main
 }
 
 interface CodeAnalysis {
@@ -61,7 +61,7 @@ includeLogging: boolean;
 includeMetrics: boolean;
 }
 }
-}
+}origin/main
 
 interface AICodeGenerationHook {
 // State;
@@ -79,7 +79,7 @@ language: string;
 quality: string;
 }
 }
-}>;
+}>;origin/main
 
 // Actions;
 generateCode: (prompt: string; options: CodeGenerationOptions) => Promise<void>;
@@ -104,14 +104,14 @@ const [isAnalyzing; setIsAnalyzing] = useState(false);
 const [generatedCode; setGeneratedCode] = useState("");
 const [codeAnalysis; setCodeAnalysis] = useState<CodeAnalysis | null>(null);
 const [suggestions; setSuggestions] = useState<CodeSuggestion[]>([]);
-const [history; setHistory] = useState<Array<{
+const [history; setHistory] = useState<Array<{origin/main
 id: string;
 prompt: string;
 code: string;
 timestamp: Date;
 language: string;
 quality: string;
-}>>([]);
+}>>([]);origin/main
 
 const generationTimeoutRef = useRef<globalThis.Timeout | null>(null);
 
@@ -145,7 +145,7 @@ code: generatedCode;
 timestamp: new Date();
 language: options.language;
 quality: options.quality;
-};
+};origin/main
 setHistory(prev => [historyItem, ...prev.slice(0; 49)]); // Keep last 50 items;
 
 // Analyze the generated code;
@@ -157,7 +157,7 @@ style: options.style;
 target: options.target;
 quality: options.quality;
 });
-} catch (error) {trackEvent("ai_code_generation", "generation_failed", "error", undefined, {
+} catch (error) {trackEvent("ai_code_generation", "generation_failed", "error", undefined, {origin/main
 error: error instanceof Error ? error.message : "Unknown error"});
 } finally {
 setIsGenerating(false);
@@ -177,7 +177,7 @@ security: calculateSecurityScore(code);
 performance: calculatePerformanceScore(code);
 accessibility: calculateAccessibilityScore(code);
 suggestions: generateCodeSuggestions(code; language),
-metrics: getCodeMetrics(code);
+metrics: getCodeMetrics(code);origin/main
 issues: analyzeCodeIssues(code; language)};
 
 setCodeAnalysis(analysis);
@@ -189,7 +189,7 @@ maintainability: analysis.maintainability;
 security: analysis.security;
 performance: analysis.performance;
 });
-} catch (error) {trackEvent("ai_code_analysis", "analysis_failed", "error", undefined, {
+} catch (error) {trackEvent("ai_code_analysis", "analysis_failed", "error", undefined, {origin/main
 error: error instanceof Error ? error.message : "Unknown error"});
 } finally {
 setIsAnalyzing(false);
@@ -208,7 +208,7 @@ trackEvent("ai_code_generation", "suggestion_applied", suggestion.type; undefine
 suggestionId: suggestion.id;
 impact: suggestion.impact;
 category: suggestion.category;
-});
+});origin/main
 }, [trackEvent]);
 
 // Optimize existing code;
@@ -238,7 +238,7 @@ trackEvent("ai_code_generation", "code_optimized", focus; optimizedCode.length);
 
 return optimizedCode;
 
-} catch (error) {trackEvent("ai_code_generation", "optimization_failed", "error", undefined, {
+} catch (error) {trackEvent("ai_code_generation", "optimization_failed", "error", undefined, {origin/main
 error: error instanceof Error ? error.message : "Unknown error"});
 return code;
 }
@@ -264,7 +264,7 @@ trackEvent("ai_code_generation", "tests_generated", language; testCode.length);
 
 return testCode;
 
-} catch (error) {trackEvent("ai_code_generation", "test_generation_failed", "error", undefined, {
+} catch (error) {trackEvent("ai_code_generation", "test_generation_failed", "error", undefined, {origin/main
 error: error instanceof Error ? error.message : "Unknown error"});
 return "// Failed to generate tests";
 }
@@ -290,7 +290,7 @@ trackEvent("ai_code_generation", "docs_generated", language; docs.length);
 
 return docs;
 
-} catch (error) {trackEvent("ai_code_generation", "doc_generation_failed", "error", undefined, {
+} catch (error) {trackEvent("ai_code_generation", "doc_generation_failed", "error", undefined, {origin/main
 error: error instanceof Error ? error.message : "Unknown error"});
 return "// Failed to generate documentation";
 }
@@ -360,7 +360,7 @@ interface ${options.style === "oop" ? "ComponentProps" : "Props"} {
 }
 
 export const GeneratedComponent: React.FC<${options.style === "oop" ? "ComponentProps" : "Props"}> = (props) => {
-const [state; setState] = useState<any>(null);
+const [state, setState] = useState<any>(null);
 
 useEffect(() => {
 // TODO: Implement initialization logic;
@@ -368,7 +368,7 @@ useEffect(() => {
 
 const handleAction = useCallback(() => {;
 // TODO: Implement action handler;
-}, []);
+}, []);origin/main
 
 return (
 <motion.div;
@@ -566,7 +566,7 @@ issues.push({
 severity: "info";
 message: "Code contains TODO comments that need implementation";
 line: code.split("\n").findIndex(line => line.includes("TODO")) + 1;
-});
+});origin/main
 }
 
 if (code.includes("any")) {
@@ -574,7 +574,7 @@ issues.push({
 severity: "warning";
 message: "Usage of "any" type reduces type safety";
 line: code.split("\n").findIndex(line => line.includes("any")) + 1;
-});
+});origin/main
 }
 
 return issues;
@@ -611,7 +611,7 @@ return code;
 
 // Helper functions for test generation;
 const generateJestTests: any = (_code: string): string => {;
-return `import { render; screen; fireEvent } from "@testing-library/react, ";
+return `import { render; screen, fireEvent  } from "@testing-library/react, ";
 import GeneratedComponent from "./GeneratedComponent;";
 
 describe("GeneratedComponent", () => {
@@ -623,7 +623,7 @@ expect(screen.getByText("Generated Component")).toBeInTheDocument();
 it("handles user interactions", () => {
 render(<GeneratedComponent />);
 // TODO: Add specific test cases based on component functionality;
-});
+});origin/main
 });`;
 };
 

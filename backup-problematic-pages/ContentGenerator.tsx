@@ -1,3 +1,4 @@
+<<<<<<< HEAD:backup-problematic-pages/ContentGenerator.tsx
 import React { useState useEffect } from 'react',;
 import { Header } from "@/components/Header";,
 import { Button } from "@/components/ui/button";,
@@ -223,4 +224,15 @@ xmlns="http://www.w3.org/2000/svg"
 </>
   )
 }
+import React from 'react';
+
+export default function ContentGenerator() {
+  return (
+    <div className="min-h-screen bg-gray-50 py-12">
+      <div className="container mx-auto px-4">
+        <h1 className="text-4xl font-bold text-gray-900 mb-6">ContentGenerator</h1>
+        <p className="text-lg text-gray-600">Coming soon...</p>
+      </div>
+    </div>
+  );
 }

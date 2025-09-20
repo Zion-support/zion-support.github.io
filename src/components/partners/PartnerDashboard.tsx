@@ -1,6 +1,6 @@
 import { BarChart, DollarSign, LineChart, TrendingUp, Users } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from "@/components/ui/card";
-import { Star } from "lucide-react";
+import { Star } from "lucide-react";origin/main
 export function PartnerDashboard() {
   // Placeholder data - would come from API in real implementation,
 return (

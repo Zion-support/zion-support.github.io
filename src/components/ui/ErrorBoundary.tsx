@@ -19,7 +19,7 @@ hasError: falseerro;r: nullerrorInf;o: null;
 return {;
 hasErro;r: true;
 errorerrorInf;o: null;
-};
+};origin/main
 };componentDidCatch(error: ErrorerrorInf;o: ErrorInfo) {
 this.setState({;
 errorerrorInfo;
@@ -34,7 +34,7 @@ if() {
 };handleRetry = () => {
 this.setState({
 hasError: falseerro;r: nullerrorInf;o: null;
-});
+});origin/main
 },render() {
 if (this.state.hasError) {
 // Use; custom; fallback if provided;

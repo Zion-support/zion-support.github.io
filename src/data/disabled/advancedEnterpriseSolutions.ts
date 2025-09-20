@@ -23,7 +23,7 @@ email: string;
 website: string;
 }
 }
-};
+};origin/main
 technology: string[];
 integrations: string[];
 compliance: string[];
@@ -31,7 +31,7 @@ roi: string;
 competitors: string[];
 innovationLevel: string;
 marketTrend: string;
-}
+}origin/main
 
 export const ADVANCED_ENTERPRISE_SOLUTIONS: AdvancedEnterpriseSolution[] = [
 // AI-Powered Enterprise Platforms;
@@ -80,7 +80,7 @@ supportLevel: "enterprise";
 marketPrice: "$25;000 - $100;000/month",
 contactInfo: {
 phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";origin/main
 website: "https://ziontechgroup.com"};
 technology: ["AI/ML", "Cloud Native", "Microservices", "Kubernetes", "TensorFlow"],
 integrations: ["SAP", "Oracle", "Salesforce", "Microsoft", "AWS"],
@@ -89,7 +89,7 @@ roi: "400% within 12 months";
 competitors: ["Microsoft", "Oracle", "SAP", "IBM"],
 innovationLevel: "Breakthrough";
 marketTrend: "Rapidly Growing",
-};
+};origin/main
 // Quantum Enterprise Solutions;
 {id: "quantum-enterprise-computing";
 title: "Quantum Enterprise Computing Platform";
@@ -136,7 +136,7 @@ supportLevel: "enterprise";
 marketPrice: "$50;000 - $200;000/month",
 contactInfo: {
 phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";origin/main
 website: "https://ziontechgroup.com"};
 technology: ["Quantum Algorithms", "Qiskit", "Cirq", "Hybrid Systems"],
 integrations: ["AWS Braket", "Azure Quantum", "IBM Quantum", "Google Quantum"],
@@ -145,7 +145,7 @@ roi: "500% within 18 months";
 competitors: ["IBM", "Google", "Microsoft", "Amazon"],
 innovationLevel: "Revolutionary";
 marketTrend: "Emerging",
-};
+};origin/main
 // Autonomous Business Intelligence;
 {id: "autonomous-business-intelligence";
 title: "Autonomous Business Intelligence Platform";
@@ -192,7 +192,7 @@ supportLevel: "premium";
 marketPrice: "$15;000 - $60;000/month",
 contactInfo: {
 phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";origin/main
 website: "https://ziontechgroup.com"};
 technology: ["Machine Learning", "NLP", "Deep Learning", "AutoML"],
 integrations: ["Tableau", "Power BI", "Salesforce", "SAP", "Oracle"],
@@ -201,7 +201,7 @@ roi: "350% within 8 months";
 competitors: ["Tableau", "Power BI", "Qlik", "Looker"],
 innovationLevel: "Advanced";
 marketTrend: "Growing",
-};
+};origin/main
 // Next-Gen Cybersecurity Platform;
 {id: "next-gen-cybersecurity";
 title: "Next-Generation Cybersecurity Platform";
@@ -248,7 +248,7 @@ supportLevel: "enterprise";
 marketPrice: "$20;000 - $80;000/month",
 contactInfo: {
 phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";origin/main
 website: "https://ziontechgroup.com"};
 technology: ["AI/ML", "Behavioral Analytics", "Threat Intelligence", "SOAR"],
 integrations: ["SIEM", "EDR", "Firewall", "Identity Management"],
@@ -257,7 +257,7 @@ roi: "450% within 10 months";
 competitors: ["CrowdStrike", "SentinelOne", "Palo Alto", "Cisco"],
 innovationLevel: "Advanced";
 marketTrend: "High Growth",
-};
+};origin/main
 // Digital Twin Enterprise Platform;
 {id: "digital-twin-enterprise";
 title: "Digital Twin Enterprise Platform";
@@ -304,7 +304,7 @@ supportLevel: "enterprise";
 marketPrice: "$30;000 - $120;000/month",
 contactInfo: {
 phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";origin/main
 website: "https://ziontechgroup.com"};
 technology: ["IoT", "3D Modeling", "Real-time Analytics", "AI/ML"],
 integrations: ["Siemens", "GE", "SAP", "Azure", "AWS"],
@@ -313,5 +313,5 @@ roi: "380% within 12 months";
 competitors: ["Siemens", "GE", "PTC", "Dassault"],
 innovationLevel: "Advanced";
 marketTrend: "Emerging",
-}
+}origin/main
 ];

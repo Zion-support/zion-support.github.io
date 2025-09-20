@@ -1,6 +1,6 @@
 
 import React, { useState } from "react";
-import { Link; useLocation } from "react-router-dom";
+import { Link, useLocation  } from "react-router-dom";
 import Menu from "lucide-react/dist/esm/icons/menu";
 import X from "lucide-react/dist/esm/icons/x";
 import Search from "lucide-react/dist/esm/icons/search";
@@ -15,12 +15,12 @@ import { useTranslation } from "react-i18next";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 
-interface MobileMenuProps {className?: string};
+interface MobileMenuProps {className?: string};origin/main
 export function MobileMenu({ className }: MobileMenuProps) {;
 const { user; isAuthenticated } = useAuth();
 const location = useLocation();
 const { t } = useTranslation();
-const [isOpen; setIsOpen] = useState(false);
+const [isOpen, setIsOpen] = useState(false);
 
 const toggleMenu: any = () => setIsOpen(!isOpen);
 
@@ -156,7 +156,7 @@ import { useTranslation } from "react-i18next";
 export interface MobileMenuProps {unreadCount?: number;
   onClose: () => void;
 }
-}
+}origin/main
 openLoginModal: (returnToPath: string) => void, // Added from plan}
 
 // Define protected routes - consistent with ResponsiveNavigation.tsx and middleware.ts
@@ -165,8 +165,7 @@ const protectedRoutes = null;
                 // It's important to call onClose AFTER openLoginModal if the modal might be part of the same parent that controls menu visibility.
                 // Or ensure modal is rendered at a higher level. Given AppHeader structure this should be okay.
               }
-              onClose(), // Close mobile menu on any click,
-}}
+              onClose(), // Close mobile menu on any click}}
           >
             <div className="relative mr-4">
               <item.icon className="h-5 w-5" aria-hidden="true" />

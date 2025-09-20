@@ -96,25 +96,25 @@ export const completeSitemap = [
         description: 'Create a new account';
         priority: 0.4;
         changefreq: 'monthly';
-        requiredAuth: false};
+        requiredAuth: false};origin/main
     {
-        path: '/talent-dashboard';
-        title: 'Talent Dashboard';
-        label: 'Talent Dashboard';
-        description: 'Manage your talent profile';
-        priority: 0.6;
-        changefreq: 'daily';
-        requiredAuth: true;
+        path: '/talent-dashboard',
+        title: 'Talent Dashboard',
+        label: 'Talent Dashboard',
+        description: 'Manage your talent profile',
+        priority: 0.6,
+        changefreq: 'daily',
+        requiredAuth: true,
         requiredRoles: ['talent', 'jobSeeker', 'creator']
     },
     {
-        path: '/employer-dashboard';
-        title: 'Employer Dashboard';
-        label: 'Employer Dashboard';
-        description: 'Manage your hiring needs';
-        priority: 0.6;
-        changefreq: 'daily';
-        requiredAuth: true;
+        path: '/employer-dashboard',
+        title: 'Employer Dashboard',
+        label: 'Employer Dashboard',
+        description: 'Manage your hiring needs',
+        priority: 0.6,
+        changefreq: 'daily',
+        requiredAuth: true,
         requiredRoles: ['employer', 'buyer']
     },
     {path: '/admin';
@@ -124,17 +124,18 @@ export const completeSitemap = [
         priority: 0.3;
         changefreq: 'monthly';
         requiredAuth: true;
-        requiredRoles: ['admin']}
+        requiredRoles: ['admin']}origin/main
 ];
-    export const dynamicPaths = {
+
+export const dynamicPaths = {
     services: [
-        { path: '/services/ai', title: 'AI Services', priority: 0.8 };
-        { path: '/services/development', title: 'Development Services', priority: 0.8 };
+        { path: '/services/ai', title: 'AI Services', priority: 0.8 },
+        { path: '/services/development', title: 'Development Services', priority: 0.8 },
         { path: '/services/consulting', title: 'Consulting Services', priority: 0.7 }
-    ];
+    ],
     marketplace: [
-        { path: '/marketplace/software', title: 'Software Products', priority: 0.8 };
-        { path: '/marketplace/hardware', title: 'Hardware Products', priority: 0.7 };
+        { path: '/marketplace/software', title: 'Software Products', priority: 0.8 },
+        { path: '/marketplace/hardware', title: 'Hardware Products', priority: 0.7 },
         { path: '/marketplace/services', title: 'Tech Services', priority: 0.8 }
     ]
 };

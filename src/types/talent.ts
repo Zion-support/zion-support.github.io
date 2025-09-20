@@ -28,7 +28,7 @@ export interface Certification {id: string; name: string; issuer: string; issueD
 expiryDate?: Date;}
 credentialId?: string}
 
-export interface Language {name: string; proficiency: "basic" | "conversational" | "fluent" | "native"}
+export interface Language {name: string; proficiency: "basic" | "conversational" | "fluent" | "native"}origin/main
 
 export interface SocialLinks {linkedin?: string;
 github?: string;
@@ -40,7 +40,7 @@ export interface TalentFilter {skills?: string[];
 }
 experienceRange?: {}
 min: number; max: number};
-hourlyRateRange?: {min: number; max: number};
+hourlyRateRange?: {min: number; max: number};origin/main
 location?: string;
 availability?: string;
 rating?: number;
@@ -59,4 +59,4 @@ city: string; country: string; timezone: string};
 availability: string; portfolio: PortfolioItem[], education: Education[];
 certifications: Certification[], languages: Language[];
 socialLinks: SocialLinks;
-}
+}origin/main

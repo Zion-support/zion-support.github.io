@@ -15,11 +15,11 @@ sendMessage: (content: string) => void;
 markAsRead: (id: string) => void;
 }
 }
-};
+};origin/main
 const MessagingContext = createContext<MessagingContextType | undefined>(undefined);
 
 export function MessagingProvider({ children }: { children: ReactNode }) {;
-const [messages; setMessages] = useState<Message[]>([]);
+const [messages, setMessages] = useState<Message[]>([]);
 
 const sendMessage: any = (content: string) => {
 const newMessage: Message = {;
@@ -27,7 +27,7 @@ id: Date.now().toString();
 content;
 timestamp: new Date();
 isRead: false;
-};
+};origin/main
 setMessages(prev => [...prev; newMessage]);
 };
 

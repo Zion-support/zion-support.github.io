@@ -51,7 +51,7 @@ size: number;
 opacity: number;
 color: string;
 type: "particle" | "energy" | "data";
-}> = [];
+}> = [];origin/main
 
 const resizeCanvas: any = () => {;
 canvas.width = window.innerWidth;
@@ -90,7 +90,7 @@ type;
 }
 };
 type: "particle" | "wave" | "grid";
-}> = [];
+}> = [];origin/main
 
 const colors = {
 cyberpunk: ["#ff0080", "#00ffff", "#ffff00", "#ff00ff"],
@@ -282,7 +282,7 @@ type: "octagon"},
 {x: Math.sin(time * 0.7) * 350 + canvas.width / 2;
 y: Math.cos(time * 0.2) * 250 + canvas.height / 2;
 size: 40;
-rotation: time * 0.25;
+rotation: time * 0.25;origin/main
 type: "diamond"}
 ];
 
@@ -461,7 +461,7 @@ opacity: [0.7; 1; 0.7],
 scale: [1; 1.2; 1]}}
 transition={{
 duration: 4;
-repeat: Infinity;
+repeat: Infinity;origin/main
 ease: "easeInOut"}}
 />;
 
@@ -473,7 +473,7 @@ opacity: [0.8; 1; 0.8],
 x: [0; 10; 0]}}
 transition={{
 duration: 3.5;
-repeat: Infinity;
+repeat: Infinity;origin/main
 ease: "easeInOut"}}
 />;
 
@@ -485,7 +485,7 @@ opacity: [0.75; 1; 0.75],
 scale: [1; 1.1; 1]}}
 transition={{
 duration: 5;
-repeat: Infinity;
+repeat: Infinity;origin/main
 ease: "easeInOut"}}
 />;
 
@@ -497,7 +497,7 @@ x: [0, -10; 0],
 opacity: [0.6; 1; 0.6]}}
 transition={{
 duration: 6;
-repeat: Infinity;
+repeat: Infinity;origin/main
 ease: "easeInOut"}}
 />;
 </div>
@@ -505,7 +505,7 @@ ease: "easeInOut"}}
 ref={canvasRef}
 className="fixed inset-0 pointer-events-none z-0"
 style={{
-opacity: intensity;
+opacity: intensity;origin/main
 filter: theme === "cyberpunk" ? "blur(0.3px)" : "none"}}
 />;
 );
@@ -515,12 +515,12 @@ export default FuturisticAnimatedBackground2029;</canvas;
 ref={canvasRef}
 className="fixed inset-0 pointer-events-none z-0"
 style={{
-opacity: intensity;
+opacity: intensity;origin/main
 filter: theme === "cyberpunk" ? "blur(0.3px)" : "none"}}
 /><//canvas;
 ref={canvasRef}
 className="fixed inset-0 pointer-events-none z-0"
 style={{
-opacity: intensity;
+opacity: intensity;origin/main
 filter: theme === "cyberpunk" ? "blur(0.3px)" : "none"}}
 />}}})

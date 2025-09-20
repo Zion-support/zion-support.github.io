@@ -1,6 +1,6 @@
 import { Save, ChevronDown, Plus, Loader2 } from "lucide-react";
 import { Resume } from "@/types/resume";
-import { useResume } from "@/hooks/useResume";
+import { useResume } from "@/hooks/useResume";origin/main
 interface ResumeVersionSelectorProps {
   currentResume: Resume;
 onResumeChange: (resumeId: string) => void,
@@ -69,7 +69,7 @@ onClick={handleCreateNewVersion}
               disabled={!newResumeTitle.trim() |isLoading}
               className='gap-2'
               value = {newResumeTitle}
-              onChange = {(e) => setNewResumeTitle(e.target.value)}
+              onChange = {(e) => setNewResumeTitle(e.target.value)}origin/main
               placeholder="Enter resume title (e.g. DevOps Resume)"
             />
           </div>
@@ -80,7 +80,7 @@ variant="outline"
             >
               Cancel
             </Button>
-            <Button
+            <Buttonorigin/main
 onClick = {handleCreateNewVersion}
               disabled = {!newResumeTitle.trim() |isLoading}
               className="gap-2"
@@ -96,7 +96,7 @@ onClick = {handleCreateNewVersion}
     </div>
   )
 }
-> {resume.basic info.title}</DropdownMenuItem>) )
+> {resume.basic info.title}</DropdownMenuItem>) )origin/main
 }<DropdownMenuSeparator /> <DropdownMenuItem > <Plus className="h-4 w-4 mr-2" /> Save as new version </DropdownMenuItem> </DropdownMenuContent> </DropdownMenu> <DialogHeader> <DialogTitle>Save as new resume version</DialogTitle> </DialogHeader> <div className="py-4" > <Input /> </div> <DialogFooter> <Button > Cancel </Button> <Button Save </Button> </DialogFooter> </DialogContent> </Dialog> </div>)
 }"
 }

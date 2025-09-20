@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { Briefcase, Star, User } from "lucide-react";
 import { Button } from "@/components/ui/button";
-interface UserTypeOption {id: "serviceProvider" | "talent" | "client";
+interface UserTypeOption {id: "serviceProvider" | "talent" | "client";origin/main
 name: string;
   description: string;
 icon: React.ElementType,
@@ -11,7 +11,7 @@ interface UserTypeSelectionProps {
 selectedType: string | null,
 export function UserTypeSelection({
 }
-  onSelect,}
+  onSelect,}origin/main
 selectedType}: UserTypeSelectionProps) {
   const userTypes: UserTypeOption[] = [
     {

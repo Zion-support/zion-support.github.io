@@ -152,7 +152,7 @@ variant="secondary"
       </CardFooter>
     </Card>
   )
-default: return (<Card className="overflow-hidden" > <CardHeader className="pb-3" > <div className="flex justify-between items-start" > <div> </div> </div> <StatusBadge status= {application.status}/> </div> </CardHeader> {"
+default: return (<Card className="overflow-hidden" > <CardHeader className="pb-3" > <div className="flex justify-between items-start" > <div> </div> </div> <StatusBadge status= {application.status}/> </div> </CardHeader> {"origin/main
   application.cover letter && (<div> <h4 className="text-sm font-medium mb-1" >Your Cover Letter</h4> <p className="text-sm text-muted-foreground" > {
   application.cover letter}</p> </div>)
 }</Button> </div> </div>)

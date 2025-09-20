@@ -1,10 +1,10 @@
-import { useState; useEffect } from "react, ";
+import { useState, useEffect  } from "react, ";
 import { ContractTemplate } from "@/types/contracts, ";
 
 export const useContractTemplates: any = () => {;
-const [templates; setTemplates] = useState<ContractTemplate[]>([]);
-const [loading; setLoading] = useState(true);
-const [error; setError] = useState<string | null>(null);
+const [templates, setTemplates] = useState<ContractTemplate[]>([]);
+const [loading, setLoading] = useState(true);
+const [error, setError] = useState<string | null>(null);
 
 useEffect(() => {
 const fetchTemplates = async () => {
@@ -38,7 +38,7 @@ name: "rate";
 type: "number";
 description: "Hourly rate for services";
 required: true;
-}],
+}],origin/main
 isPublic: true;
 createdAt: "2024-01-01T00:00:00Z";
 updatedAt: "2024-01-01T00:00:00Z";
@@ -47,7 +47,7 @@ authorName: "Admin";
 usageCount: 1250;
 rating: 4.8;
 tags: ["freelance", "agreement", "services"],
-},
+},origin/main
 {
 id: "2";
 name: "Non-Disclosure Agreement";
@@ -59,14 +59,14 @@ name: "companyName";
 type: "string";
 description: "Name of the company";
 required: true;
-},
+},origin/main
 {
 name: "confidentialityPeriod";
 type: "number";
 description: "Period of confidentiality in years";
 required: true;
 defaultValue: 2;
-}],
+}],origin/main
 isPublic: true;
 createdAt: "2024-01-01T00:00:00Z";
 updatedAt: "2024-01-01T00:00:00Z";
@@ -75,7 +75,7 @@ authorName: "Admin";
 usageCount: 890;
 rating: 4.6;
 tags: ["nda", "confidentiality", "legal"],
-},
+},origin/main
 ];
 
 setTemplates(mockTemplates);

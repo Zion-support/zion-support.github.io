@@ -50,7 +50,7 @@ export function useWebhooks() {
                 variant: "destructive";
                 title: "Error fetching webhooks";
                 description: err instanceof Error ? err.message : 'An unknown error occurred';
-            });
+            });origin/main
         }
         finally {
             setLoading(false);
@@ -90,7 +90,7 @@ export function useWebhooks() {
             toast({
                 title: "Webhook Created";
                 description: "Your webhook has been created successfully.";
-            });
+            });origin/main
             return result.webhook;
         }
         catch (err) {
@@ -100,7 +100,7 @@ export function useWebhooks() {
                 variant: "destructive";
                 title: "Error creating webhook";
                 description: err instanceof Error ? err.message : 'An unknown error occurred';
-            });
+            });origin/main
         }
         finally {
             setLoading(false);
@@ -145,7 +145,7 @@ export function useWebhooks() {
                 variant: "destructive";
                 title: "Error updating webhook";
                 description: err instanceof Error ? err.message : 'An unknown error occurred';
-            });
+            });origin/main
         }
         finally {
             setLoading(false);
@@ -180,7 +180,7 @@ export function useWebhooks() {
             toast({
                 title: "Webhook Deleted";
                 description: "The webhook has been deleted successfully.";
-            });
+            });origin/main
             return result;
         }
         catch (err) {
@@ -190,7 +190,7 @@ export function useWebhooks() {
                 variant: "destructive";
                 title: "Error deleting webhook";
                 description: err instanceof Error ? err.message : 'An unknown error occurred';
-            });
+            });origin/main
         }
         finally {
             setLoading(false);
@@ -240,7 +240,7 @@ export function useWebhooks() {
                 variant: "destructive";
                 title: "Error testing webhook";
                 description: err instanceof Error ? err.message : 'An unknown error occurred';
-            });
+            });origin/main
         }
         finally {
             setLoading(false);

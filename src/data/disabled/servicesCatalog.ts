@@ -19,7 +19,7 @@ export type ServiceCategory = {
 name: string;
 slug: string;
 items: ServiceItem[];
-};
+};origin/main
 
 export const servicesCatalog: ServiceCategory[] = [
 {
@@ -41,7 +41,7 @@ features: [
 ctaLabel: "Start Free Trial";
 href: "https://ziontechgroup.com";
 external: true;
-};
+};origin/main
 {
 id: "etl-to-lakehouse";
 title: "No-Code ETL to Lakehouse";
@@ -53,7 +53,7 @@ features: ["150+ connectors", "Change Data Capture", "dbt-compatible models"],
 ctaLabel: "Connect Sources";
 href: "https://ziontechgroup.com";
 external: true;
-};
+};origin/main
 {
 id: "email-deliverability-suite";
 title: "Email Deliverability Suite";
@@ -65,7 +65,7 @@ features: ["Automatic DNS validation", "Reputation monitoring", "Seed list testi
 ctaLabel: "Improve Deliverability";
 href: "https://ziontechgroup.com";
 external: true;
-}
+}origin/main
 ];
 };
 {
@@ -83,7 +83,7 @@ features: ["Multi-tenant vector index", "Retrieval policies", "Human-in-the-loop
 ctaLabel: "Deploy Assistant";
 href: "https://ziontechgroup.com";
 external: true;
-};
+};origin/main
 {
 id: "ai-code-reviewer";
 title: "AI Code Reviewer & Pair";
@@ -95,7 +95,7 @@ features: ["PR annotations", "Sec rules (OWASP)", "Refactor suggestions"],
 ctaLabel: "Enable on GitHub";
 href: "https://ziontechgroup.com";
 external: true;
-};
+};origin/main
 {
 id: "vision-inspection";
 title: "Vision Quality Inspection";
@@ -107,7 +107,7 @@ features: ["On-device inference", "Model drift alerts", "No internet required"],
 ctaLabel: "Book Demo";
 href: "https://ziontechgroup.com";
 external: true;
-}
+}origin/main
 ];
 };
 {name: "IT Services";
@@ -123,7 +123,7 @@ billing: "month";
 features: ["24/7 monitoring", "Remote & onsite support", "Asset inventory"],
 ctaLabel: "Talk to Sales";
 href: "/contact"};
-{id: "migrations-cloud";
+{id: "migrations-cloud";origin/main
 title: "Cloud Migration Factory";
 description: "Lift-and-shift or re-platform to AWS/Azure/GCP with IaC.";
 category: "IT Services";
@@ -133,13 +133,13 @@ features: ["Landing zone design", "IaC (Terraform)", "Cost optimization"],
 ctaLabel: "Get Estimate";
 href: "/contact"};
 {id: "vcio";
-title: "vCIO Advisory";
+title: "vCIO Advisory";origin/main
 description: "Quarterly roadmap; security posture; and vendor governance.",
 category: "IT Services";
 price: "From $150/hour";
 billing: "hour";
 features: ["IT roadmap", "Budget planning", "Compliance alignment"],
-ctaLabel: "Book Session";
+ctaLabel: "Book Session";origin/main
 href: "/contact"}
 ];
 };
@@ -157,7 +157,7 @@ features: ["OWASP ASVS", "Authenticated scans", "Executive + technical reports"]
 ctaLabel: "Request Scope";
 href: "/contact"};
 {id: "soc2-readiness";
-title: "SOC 2 Readiness";
+title: "SOC 2 Readiness";origin/main
 description: "Gap assessment; policies; controls mappings; and audit prep.",
 category: "Cybersecurity";
 price: "From $10;000/project",
@@ -166,13 +166,13 @@ features: ["Policy kit", "Evidence collection", "Auditor liaison"],
 ctaLabel: "Start Readiness";
 href: "/contact"};
 {id: "mxdr";
-title: "Managed XDR";
+title: "Managed XDR";origin/main
 description: "24/7 detection and response across endpoints; cloud; and identities.",
 category: "Cybersecurity";
 price: "From $35/endpoint/month";
 billing: "month";
 features: ["MITRE ATT&CK mapping", "Threat hunting", "Monthly posture reviews"],
-ctaLabel: "Secure Now";
+ctaLabel: "Secure Now";origin/main
 href: "/contact"}
 ];
 };
@@ -190,13 +190,13 @@ features: ["dbt models", "Metrics layer", "Role-based access"],
 ctaLabel: "Book Workshop";
 href: "/contact"};
 {id: "mlops";
-title: "MLOps Enablement";
+title: "MLOps Enablement";origin/main
 description: "Feature store; CI/CD for models; and monitoring.",
 category: "Data & Analytics";
 price: "From $15;000/project",
 billing: "project";
 features: ["Model registry", "Canary rollout", "Drift detection"],
-ctaLabel: "Plan Rollout";
+ctaLabel: "Plan Rollout";origin/main
 href: "/contact"}
 ];
 };
@@ -214,13 +214,13 @@ features: ["Self-service scaffolding", "Guardrails", "Scorecards"],
 ctaLabel: "Design IDP";
 href: "/contact"};
 {id: "finops";
-title: "FinOps Program";
+title: "FinOps Program";origin/main
 description: "Cost visibility; allocation; and savings automation across clouds.",
 category: "Cloud & DevOps";
 price: "From $8;000/project",
 billing: "project";
 features: ["Anomaly detection", "RI/SP planning", "Showback/chargeback"],
-ctaLabel: "Cut Cloud Spend";
+ctaLabel: "Cut Cloud Spend";origin/main
 href: "/contact"}
 ];
 }

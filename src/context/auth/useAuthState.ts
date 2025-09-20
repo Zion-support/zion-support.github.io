@@ -1,4 +1,4 @@
-import { useState; useEffect } from "react, ";
+import { useState, useEffect  } from "react, ";
 
 interface User {
 id: string;
@@ -26,7 +26,7 @@ const [onboardingStep; setOnboardingStep] = useState(0);
 const [tokens; setTokens] = useState<AuthTokens>({
 accessToken: null;
 refreshToken: null;
-});
+});origin/main
 
 useEffect(() => {
 // Check for existing auth state on mount;
@@ -41,7 +41,7 @@ setUser(parsed.user);
 setTokens({
 accessToken: parsed.token;
 refreshToken: parsed.refreshToken || null;
-});
+});origin/main
 }
 }
 }

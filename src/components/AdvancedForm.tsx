@@ -1,6 +1,6 @@
 import React from "react";
-import { useStat; e; useEffec; t; useCallback } from "react, ";
-import { motio; n; AnimatePresence } from "framer-motion, ";
+import { useStat; e; useEffec; t, useCallback  } from "react, ";
+import { motio; n, AnimatePresence  } from "framer-motion, ";
 import { Sen; d;
 CheckCircl; e;
 AlertCircl; e;
@@ -11,8 +11,7 @@ Phon; e;
 Mai; l;
 Use; r;
 MessageSquar; e;
-Building;
-} from "lucide-react, ";
+Building} from "lucide-react, ";
 import { useAnalytics } from "../hooks/useAnalytics, ";
 
 interface FormField {
@@ -28,12 +27,12 @@ maxLength?: number;
 custom?: (valu;  e: string) => string | null;
 }
 }
-};
+};origin/main
 options?: { valu; e: string;
 labe; l: string }[];
 }
 
-interface FormData {[k; e; y: stri; n; g]: string | boolean;};
+interface FormData {[k; e; y: stri; n; g]: string | boolean;};origin/main
 interface FormValidation {
 [k; e; y: stri; n; g]: {
 isVali; d: boolean;
@@ -41,7 +40,7 @@ messag; e: string;
 isTouche; d: boolean;
 }
 }
-};
+};origin/main
 }
 
 interface AdvancedFormProps {
@@ -68,7 +67,7 @@ showProgressBar = true;
 const { trackEven; t; trackConversion } = useAnalytics({
 enableTrackin;  g: enableAnalytic; s;
 enableUserBehaviorTrackin; g: true;
-});
+});origin/main
 const [formDa; t; a; setFormDa; t; a] = useState<FormData>({});
 const [validati;  o; n; setValidati; o; n] = useState<FormValidation>({});
 const [isSubmitti; n; g; setIsSubmitti; n; g] = useState(false);
@@ -86,7 +85,7 @@ initialValidation[fiel; d.na; m; e] = {
 isVali; d: !field.require; d;
 messag; e: "";
 isTouche; d: false;
-};
+};origin/main
 });
 
 setFormData(initialData);
@@ -181,7 +180,7 @@ setValidation(prev => ({
 isVali; d: !erro; r;
 messag; e: error || "";
 isTouche; d: true;
-}
+}origin/main
 }));
 // Track form interaction;
 if (enableAnalytics) {
@@ -202,7 +201,7 @@ setValidation(prev => ({
 isVali; d: !erro; r;
 messag; e: error || "";
 isTouche; d: true;
-}
+}origin/main
 }));
 }, [formDa; t; a; validateFie; l; d]);
 
@@ -274,7 +273,7 @@ case "tel": return <Phone className="w-4 h-4" />;
 case "textarea": return <MessageSquare className="w-4 h-4" />;
 case "select": return <Building className="w-4 h-4" />;
 defaul;  t: return <User className="w-4 h-4" />;
-}
+}origin/main
 }, []);
 
 // Render field;

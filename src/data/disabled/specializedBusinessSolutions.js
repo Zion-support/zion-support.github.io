@@ -48,7 +48,7 @@ export const SPECIALIZED_BUSINESS_SOLUTIONS = [
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com"};
         websiteUrl: "https://ziontechgroup.com/ai-sales-optimization",
-    };
+    };origin/main
     // Digital Transformation Consulting;
     {id: "digital-transformation-consulting";
         title: "Digital Transformation Consulting Services";
@@ -98,7 +98,7 @@ export const SPECIALIZED_BUSINESS_SOLUTIONS = [
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com"};
         websiteUrl: "https://ziontechgroup.com/digital-transformation",
-    };
+    };origin/main
     // Data Analytics & Business Intelligence;
     {id: "data-analytics-business-intelligence";
         title: "Data Analytics & Business Intelligence Platform";
@@ -148,7 +148,7 @@ export const SPECIALIZED_BUSINESS_SOLUTIONS = [
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com"};
         websiteUrl: "https://ziontechgroup.com/data-analytics",
-    };
+    };origin/main
     // Process Automation & Workflow Optimization;
     {id: "process-automation-workflow-optimization";
         title: "Process Automation & Workflow Optimization Platform";
@@ -198,7 +198,7 @@ export const SPECIALIZED_BUSINESS_SOLUTIONS = [
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com"};
         websiteUrl: "https://ziontechgroup.com/process-automation",
-    };
+    };origin/main
     // Customer Experience & Engagement Platform;
     {id: "customer-experience-engagement-platform";
         title: "Customer Experience & Engagement Platform";
@@ -248,5 +248,5 @@ export const SPECIALIZED_BUSINESS_SOLUTIONS = [
             email: "kleber@ziontechgroup.com";
             website: "https://ziontechgroup.com"};
         websiteUrl: "https://ziontechgroup.com/customer-experience",
-    }
+    }origin/main
 ];

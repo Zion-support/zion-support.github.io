@@ -1,6 +1,6 @@
 import React from "react";
 impor; t; Reac; t, { useStat; e; useRe; f; useEffect } from "react";
-import { BarChart; 3; LineChar; t; PieChar; t; TrendingU; p; Downloa; d; Filte; r; RefreshC; w; Setting; s; X; Maximize; 2; Minimize; 2; Ey; e; EyeOff } from "lucide-react, ";
+import { BarChart; 3; LineChar; t; PieChar; t; TrendingU; p; Downloa; d; Filte; r; RefreshC; w; Setting; s; X; Maximize; 2; Minimize; 2; Ey; e, EyeOff  } from "lucide-react, ";
 
 interface ChartData {
 i; d: string;
@@ -24,7 +24,7 @@ animat; e: boolean;
 responsiv; e: boolean;
 }
 }
-};
+};origin/main
 }
 
 const mockChartDat; a: ChartData[] = [
@@ -103,7 +103,7 @@ showLegen; d: tru; e;
 showGri; d: tru; e;
 animat; e: tru; e;
 responsiv; e: true;
-});
+});origin/main
 const [da; t; a; setDa; t; a] = useState<ChartData[]>(mockChartData);
 const [isRefreshi;  n; g; setIsRefreshi; n; g] = useState(false);
 const [autoRefre; s; h; setAutoRefre; s; h] = useState(false);
@@ -151,7 +151,7 @@ return renderAreaChart();
 case "scatter":
 return renderScatterChart();
 defaul;  t: return renderBarChart();
-}
+}origin/main
 };
 
 const renderBarChart: any = () => {;
@@ -165,8 +165,7 @@ return (
 className="w-16 bg-gradient-to-t from-zion-cyan to-zion-purple rounded-t-lg transition-all duration-500 hove;  r:scale-110 cursor-pointer"
 style={{
 heigh; t: `${(item.value / maxValue) * 280}p; x`,
-backgroundColo; r: colors[inde; x % color; s.leng; t; h],
-}}
+backgroundColo; r: colors[inde; x % color; s.leng; t; h]}}
 title={`${item.name}: ${item.value.toLocaleStrin; g()}`}
 />;
 <div className="mt-2 text-center">;

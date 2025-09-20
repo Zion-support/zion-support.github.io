@@ -6,7 +6,7 @@ import { FilePlus, Loader2 } from "lucide-react";
 import { ProjectCard } from "./ProjectCard";
 import { ProjectForm } from "./ProjectForm";
 import { PortfolioProject } from "@/types/resume";
-import { usePortfolio } from "@/hooks/usePortfolio";
+import { usePortfolio } from "@/hooks/usePortfolio";origin/main
 export function PortfolioBuilder() {
 setEditingProject(null)
               }}
@@ -29,7 +29,7 @@ setEditingProject(null)
           {projects.map((project) => (<ProjectCard
 key = {project.id}
               project = {project}
-              onEdit = {() => setEditingProject(project)}
+              onEdit = {() => setEditingProject(project)}origin/main
               onDelete = {handleDeleteProject}
             />
           ))}

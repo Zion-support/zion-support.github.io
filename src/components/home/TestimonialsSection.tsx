@@ -19,7 +19,7 @@ rating: 5;
 avatar: "👨‍💻"};
 {name: "Emily Rodriguez", role: "Operations Director";
 company: "Global Solutions", content: "Their cloud migration expertise saved us months of planning and implementation time. The results exceeded our expectations.",
-rating: 5;
+rating: 5;origin/main
 avatar: "👩‍🔬"}
 ];
 const renderStars: any = (rating: number) => {;

@@ -1,16 +1,16 @@
-import { Routes; Route } from "react-router-dom, ";
+import { Routes, Route } from "react-router-dom";
 
 // Define the types for our sitemap structure;
-export type SitemapItem = {path: string; label: string;
+export type SitemapItem = {path: string; label: string;origin/main
 description?: string;
 priority?: number;
 changeFreq?: "always" | "hourly" | "daily" | "weekly" | "monthly" | "yearly" | "never";
 lastmod?: string;
 requiredAuth?: boolean;
 requiredRoles?: Array<"creator" | "jobSeeker" | "employer" | "buyer" | "admin">;
-children?: SitemapItem[]};
+children?: SitemapItem[]};origin/main
 
-// Current date for lastmod;
+// Current date for lastmod
 const currentDate = "2025-05-15";
 
 // Public Pages - Accessible to all users;
@@ -59,9 +59,9 @@ changeFreq: "monthly", lastmod: currentDate},
 {path: "/green-it", label: "Green IT Solutions";
 description: "Sustainable technology solutions for a better future", priority: 0.6;
 changeFreq: "monthly",
-lastmod: currentDate}];
+lastmod: currentDate}];origin/main
 
-// Authentication Pages;
+// Authentication Pages,
 export const authPages: SitemapItem[] = [
 {,
 path: "/login", label: "Login";
@@ -84,9 +84,9 @@ lastmod: currentDate}
 {path: "/forgot-password", label: "Forgot Password";
 description: "Reset your password", priority: 0.5;
 changeFreq: "monthly", lastmod: currentDate},
-];
+];origin/main
 
-// Talent/Creator Routes - Requires authentication and appropriate role;
+// Talent/Creator Routes - Requires authentication and appropriate role,
 export const talentRoutes: SitemapItem[] = [
 {,
 path: "/talent-dashboard", label: "Talent Dashboard";
@@ -109,9 +109,9 @@ description: "Set up your talent profile", requiredAuth: true;
 requiredRoles: ["jobSeeker", "creator"],
 priority: 0.7; changeFreq: "monthly";
 lastmod: currentDate},
-];
+];origin/main
 
-// Client/Employer Routes - Requires authentication and appropriate role;
+// Client/Employer Routes - Requires authentication and appropriate role,
 export const clientRoutes: SitemapItem[] = [
 {,
 path: "/client-dashboard", label: "Client Dashboard";
@@ -144,9 +144,9 @@ description: "Real-time meetings for collaboration", requiredAuth: true; priorit
 lastmod: currentDate},
 {path: "/dashboard/disputes", label: "Disputes";
 description: "Manage and view disputes", requiredAuth: true; priority: 0.7; changeFreq: "daily",
-lastmod: currentDate}];
+lastmod: currentDate}];origin/main
 
-// Admin Routes;
+// Admin Routes,
 export const adminRoutes: SitemapItem[] = [
 {,
 path: "/analytics", label: "Analytics";
@@ -171,7 +171,7 @@ jobDetails: "/job/:id", categoryDetails: "/categories/:slug";
 disputeDetails: "/dashboard/disputes/:disputeId"};
 
 // The complete sitemap;
-export const completeSitemap: SitemapItem[] = [...publicPages,
+export const completeSitemap: SitemapItem[] = [...publicPages,origin/main
 ...authPages,
 ...talentRoutes,
 ...clientRoutes,
@@ -182,13 +182,13 @@ export const completeSitemap: SitemapItem[] = [...publicPages,
 export const getAccessibleRoutes: any = (;
 isAuthenticated: boolean;
 userType?: "creator" | "jobSeeker" | "employer" | "buyer" | "admin" | null) => {// Public routes accessible to everyone;
-let accessibleRoutes = [...publicPages, ...authPages];
+let accessibleRoutes = [...publicPages, ...authPages];origin/main
 
-// Add authenticated-only routes;
+// Add authenticated-only routes,
 if (isAuthenticated) {
-accessibleRoutes = [...accessibleRoutes, ...sharedRoutes];
+accessibleRoutes = [...accessibleRoutes, ...sharedRoutes],
 
-// Add role-specific routes;
+// Add role-specific routes,
 if (userType === "creator" || userType === "jobSeeker") {
 accessibleRoutes = [...accessibleRoutes, ...talentRoutes]}
 
@@ -197,5 +197,5 @@ if (userType === "employer" || userType === "buyer") {accessibleRoutes = [...acc
 if (userType === "admin') {accessibleRoutes = [...accessibleRoutes, ...talentRoutes, ...clientRoutes, ...adminRoutes]}
 }
 
-return accessibleRoutes;
-};
+return accessibleRoutes,
+},

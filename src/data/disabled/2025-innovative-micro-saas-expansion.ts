@@ -1,4 +1,4 @@
-import { Routes; Route } from "react-router-dom, ";
+import { Routes, Route  } from "react-router-dom, ";
 export interface InnovativeMicroSaasService {
 id: string;
 name: string;
@@ -21,7 +21,7 @@ email: string;
 address: string;
 }
 }
-};
+};origin/main
 trialDays: number;
 setupTime: string;
 competitors: string[];
@@ -73,7 +73,7 @@ compliance: ["ISO 27001", "SOC2", "GDPR", "HIPAA", "FISMA"],
 website: "https://ziontechgroup.com/quantum-ai-research-platform";
 contact: {
 phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";origin/main
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 trialDays: 30;
 setupTime: "1-2 weeks";
@@ -126,7 +126,7 @@ compliance: ["ISO 27001", "SOC2", "GDPR", "NIST", "IEC 62443"],
 website: "https://ziontechgroup.com/edge-ai-iot-orchestrator";
 contact: {
 phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";origin/main
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 trialDays: 21;
 setupTime: "2-4 weeks";
@@ -179,7 +179,7 @@ compliance: ["GDPR", "CCPA", "SOC2", "ISO 27001"],
 website: "https://ziontechgroup.com/decentralized-ai-marketplace";
 contact: {
 phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";origin/main
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 trialDays: 14;
 setupTime: "1-2 days";
@@ -232,7 +232,7 @@ compliance: ["ISO 14001", "ISO 50001", "GRI Standards", "SASB", "TCFD"],
 website: "https://ziontechgroup.com/green-ai-optimizer";
 contact: {
 phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";origin/main
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 trialDays: 30;
 setupTime: "3-6 weeks";
@@ -285,7 +285,7 @@ compliance: ["HIPAA", "FDA 510(k)", "CE Mark", "ISO 13485", "SOC2"],
 website: "https://ziontechgroup.com/ai-healthcare-diagnostics-pro";
 contact: {
 phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";origin/main
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 trialDays: 45;
 setupTime: "4-8 weeks";
@@ -338,7 +338,7 @@ compliance: ["Basel III", "Dodd-Frank", "SOX", "GDPR", "SOC2", "ISO 27001"],
 website: "https://ziontechgroup.com/ai-financial-intelligence-suite";
 contact: {
 phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";origin/main
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 trialDays: 30;
 setupTime: "2-4 weeks";
@@ -391,7 +391,7 @@ compliance: ["ISO 27001", "SOC2", "NIST", "GDPR", "HIPAA", "PCI DSS"],
 website: "https://ziontechgroup.com/ai-cybersecurity-defense-platform";
 contact: {
 phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";origin/main
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 trialDays: 21;
 setupTime: "2-3 weeks";
@@ -444,7 +444,7 @@ compliance: ["ISO 28000", "C-TPAT", "GDPR", "SOC2", "ISO 27001"],
 website: "https://ziontechgroup.com/ai-logistics-optimization-engine";
 contact: {
 phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";origin/main
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 trialDays: 30;
 setupTime: "3-5 weeks";
@@ -497,7 +497,7 @@ compliance: ["FERPA", "COPPA", "GDPR", "SOC2", "ISO 27001"],
 website: "https://ziontechgroup.com/ai-education-personalization-platform";
 contact: {
 phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";origin/main
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 trialDays: 14;
 setupTime: "1-2 weeks";

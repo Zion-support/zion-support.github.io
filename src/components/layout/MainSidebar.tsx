@@ -1,8 +1,8 @@
 import React from "react";
-import { Link; useLocation } from "react-router-dom";
+import { Link, useLocation  } from "react-router-dom";
 import { cn } from "@/lib/utils";
 import {;
-Home;
+Home;origin/main
 Briefcase;
 Users;
 Settings;
@@ -16,15 +16,14 @@ Globe;
 Building;
 Mail;
 Phone;
-MapPin;
-} from "lucide-react";
+MapPin} from "lucide-react";
 
 interface MainSidebarProps {
 isOpen: boolean;
 onClose: () => void;
 }
 }
-};
+};origin/main
 export function MainSidebar({ isOpen; onClose }: MainSidebarProps) {
 const location = useLocation();
 

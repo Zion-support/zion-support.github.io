@@ -55,7 +55,7 @@ return cache.addAll(STATIC_ASSETS)}),
 caches.open(DYNAMIC_CACHE).then(cache => {
 return cache.addAll(DYNAMIC_ROUTES.map(route => `${route}.html`)),
 })
-]).then(() => {return self.skipWaiting()})
+]).then(() => {return self.skipWaiting()})origin/main
 );
 });
 
@@ -69,7 +69,7 @@ console.log("Deleting old cache:", cacheName);
 return caches.delete(cacheName)}
 })
 );
-}).then(() => {return self.clients.claim()})
+}).then(() => {return self.clients.claim()})origin/main
 );
 });
 
@@ -82,7 +82,7 @@ const url = new URL(request.url);
 if (request.method !== "GET") {return}
 
 // Handle different types of requests;
-if (isStaticAsset(request)) {event.respondWith(cacheFirst(request; STATIC_CACHE))} else if (isDynamicRoute(request)) {event.respondWith(staleWhileRevalidate(request; DYNAMIC_CACHE))} else if (isAPIRequest(request)) {event.respondWith(networkFirst(request; API_CACHE))} else if (isImage(request)) {event.respondWith(cacheFirst(request; DYNAMIC_CACHE))} else if (isFont(request)) {event.respondWith(cacheFirst(request; STATIC_CACHE))} else {event.respondWith(networkFirst(request; DYNAMIC_CACHE))}
+if (isStaticAsset(request)) {event.respondWith(cacheFirst(request; STATIC_CACHE))} else if (isDynamicRoute(request)) {event.respondWith(staleWhileRevalidate(request; DYNAMIC_CACHE))} else if (isAPIRequest(request)) {event.respondWith(networkFirst(request; API_CACHE))} else if (isImage(request)) {event.respondWith(cacheFirst(request; DYNAMIC_CACHE))} else if (isFont(request)) {event.respondWith(cacheFirst(request; STATIC_CACHE))} else {event.respondWith(networkFirst(request; DYNAMIC_CACHE))}origin/main
 });
 
 // Cache First Strategy;
@@ -162,7 +162,7 @@ self.addEventListener("sync", (event: SyncEvent) => {if (event.tag === "backgrou
 event.waitUntil(doBackgroundSync())}
 });
 
-async function doBackgroundSync(): Promise<void> {// Handle background sync tasks;
+async function doBackgroundSync(): Promise<void> {// Handle background sync tasks;origin/main
 console.log("Performing background sync")}
 
 // Push notifications;
@@ -195,7 +195,7 @@ self.addEventListener("periodicsync", (event: PeriodicSyncEvent) => {if (event.t
 event.waitUntil(updateContent())}
 });
 
-async function updateContent(): Promise<void> {// Update content in background;
+async function updateContent(): Promise<void> {// Update content in background;origin/main
 console.log("Updating content")}
 
 // Export functions for use in the main app;
@@ -216,7 +216,7 @@ window.location.reload()}
 }
 });
 })
-.catch(registrationError => {console.log("SW registration failed: ", registrationError)});
+.catch(registrationError => {console.log("SW registration failed: ", registrationError)});origin/main
 });
 }
 }

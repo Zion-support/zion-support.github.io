@@ -5,7 +5,7 @@ name: string;
 }
 }
 
-import React from "react";
+import React from "react";origin/main
 const ConversationDetailView: React.FC = () => {
 ,
 return (,
@@ -25,7 +25,7 @@ import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { useAuth } from "@/hooks/useAuth";
 import { MessageBubble } from "./MessageBubble";
 import { DateDivider } from "./DateDivider";
-export function ConversationDetailView() {loadMessages} = useMessaging();
+export function ConversationDetailView() {loadMessages} = useMessaging();origin/main
   const [messageText, setMessageText] = useState('');
   const messagesEndRef = null;
   return (
@@ -34,7 +34,7 @@ export function ConversationDetailView() {loadMessages} = useMessaging();
       <div className="p-4 border-b border-zion-purple/20 bg-zion-blue-dark/30">
         <div className="flex items-center gap-3">
           <Avatar className="h-10 w-10 border border-zion-purple/20">
-            <AvatarImage
+            <AvatarImageorigin/main
 src = {activeConversation.other_user.avatar_url}
               alt = {activeConversation.other_user.name}
             />
@@ -61,7 +61,7 @@ src = {activeConversation.other_user.avatar_url}
             {activeConversation.context_data && activeConversation.context_data.image_url && (
               <div className="w-16 h-16 flex-shrink-0">
                 <AspectRatio ratio={1/1} className="rounded bg-zion-blue-dark/30 overflow-hidden">
-                  <img
+                  <imgorigin/main
 src = {activeConversation.context_data.image_url}
                     alt = {activeConversation.context_data.title |"Context"}
                     className="object-cover"
@@ -98,7 +98,7 @@ src = {activeConversation.context_data.image_url}
               <DateDivider date={new Date(group.date)} />
               <div className="space-y-3">
                 {group.messages.map((message) => (
-                  <MessageBubble
+                  <MessageBubbleorigin/main
 key = {message.id}
                     message = {message}
                     isUserMessage = {message.sender_id === user?.id}
@@ -114,7 +114,7 @@ key = {message.id}
         <form onSubmit={handleSendMessage} className="flex items-start gap-2">
           <textarea
 value = {messageText}
-            onChange = {(e) => setMessageText(e.target.value)}
+            onChange = {(e) => setMessageText(e.target.value)}origin/main
             onKeyDown = {handleKeyDown}
             placeholder="Type a message..."
             className="flex-1 bg-zion-blue-dark/30 border border-zion-purple/20 rounded-md p-2 min-h-[80px] text-black focus:outline-none focus:ring-2 focus:ring-zion-cyan"

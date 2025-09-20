@@ -6,7 +6,7 @@ interface LayoutProps {,;
 children: React.ReactNode;
 title?: string;
 }
-description?: string;}
+description?: string;}origin/main
 keywords?: string};
 export default function Layout({,;
 children;
@@ -37,6 +37,5 @@ return (,
 </main>,
 <Footer />,
 </div>,
-</>),
-}
+</>)}
 ,<//><///>;

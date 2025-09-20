@@ -38,7 +38,7 @@ export const innovativeITServices2025 = [
         deliveryTime: "4-6 weeks";
         support: "24/7 premium support",
     };
-    {id: 2;
+    {id: 2;origin/main
         name: "Quantum-Ready Infrastructure";
         category: "Infrastructure";
         description: "Design and implementation of quantum-ready IT infrastructure prepared for post-quantum cryptography and quantum computing integration";
@@ -76,7 +76,7 @@ export const innovativeITServices2025 = [
         deliveryTime: "8-12 weeks";
         support: "24/7 enterprise support",
     };
-    {id: 3;
+    {id: 3;origin/main
         name: "AI-Powered DevOps Automation";
         category: "DevOps";
         description: "Intelligent DevOps automation platform with AI-driven deployment, monitoring, and optimization capabilities",
@@ -114,7 +114,7 @@ export const innovativeITServices2025 = [
         deliveryTime: "3-4 weeks";
         support: "Business hours + emergency support",
     };
-    {id: 4;
+    {id: 4;origin/main
         name: "Edge Computing Infrastructure";
         category: "Infrastructure";
         description: "Design and deployment of edge computing infrastructure for low-latency applications and IoT deployments";
@@ -152,7 +152,7 @@ export const innovativeITServices2025 = [
         deliveryTime: "6-8 weeks";
         support: "Business hours + emergency support",
     };
-    {id: 5;
+    {id: 5;origin/main
         name: "Blockchain Infrastructure Services";
         category: "Blockchain";
         description: "Enterprise blockchain infrastructure design, deployment, and management for secure decentralized applications",
@@ -190,7 +190,7 @@ export const innovativeITServices2025 = [
         deliveryTime: "8-10 weeks";
         support: "24/7 premium support",
     };
-    {id: 6;
+    {id: 6;origin/main
         name: "Green IT Infrastructure";
         category: "Sustainability";
         description: "Energy-efficient IT infrastructure design and implementation with carbon footprint reduction and sustainability optimization";
@@ -228,7 +228,7 @@ export const innovativeITServices2025 = [
         deliveryTime: "6-8 weeks";
         support: "Business hours + emergency support",
     };
-    {id: 7;
+    {id: 7;origin/main
         name: "AI Infrastructure Optimization";
         category: "AI Infrastructure";
         description: "Specialized infrastructure optimization for AI workloads, including GPU clusters, distributed training, and inference optimization",
@@ -266,7 +266,7 @@ export const innovativeITServices2025 = [
         deliveryTime: "8-12 weeks";
         support: "24/7 premium support",
     };
-    {id: 8;
+    {id: 8;origin/main
         name: "Hybrid Cloud Architecture";
         category: "Cloud";
         description: "Design and implementation of hybrid cloud architectures with seamless integration between on-premises and cloud environments";
@@ -302,6 +302,5 @@ export const innovativeITServices2025 = [
         sla: "99.9% uptime";
         certifications: ["AWS", "Azure", "GCP", "Cloud Architecture", "Security"],
         deliveryTime: "6-10 weeks";
-        support: "Business hours + emergency support",
-    }
+        support: "Business hours + emergency support"}
 ];

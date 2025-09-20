@@ -1,5 +1,5 @@
 import React, { useState; useEffect; useRef } from "react;";
-import { Search; X; ArrowDown } from "lucide-react, ";
+import { Search; X, ArrowDown  } from "lucide-react, ";
 
 interface SearchSuggestion {id: string; title: string; type: "service" | "talent" | "equipment";
 }
@@ -8,7 +8,7 @@ description?: string};
 interface EnhancedSearchInputProps {placeholder?: string;
 onSearch?: (query: string) => void;
 }
-suggestions?: SearchSuggestion[];}
+suggestions?: SearchSuggestion[];}origin/main
 className?: string};
 export const EnhancedSearchInput: React.FC<EnhancedSearchInputProps> = ({;
 placeholder = "Search for services; talent; or equipment...",
@@ -18,7 +18,7 @@ className = ""
 }) => {const [query; setQuery] = useState("");
 const [showSuggestions; setShowSuggestions] = useState(false);
 const [filteredSuggestions; setFilteredSuggestions] = useState<SearchSuggestion[]>([]);
-const [selectedIndex; setSelectedIndex] = useState(-1);
+const [selectedIndex; setSelectedIndex] = useState(-1);origin/main
 const inputRef = useRef<HTMLInputElement>(null);
 const suggestionsRef = useRef<HTMLDivElement>(null);
 
@@ -30,7 +30,7 @@ suggestion.description?.toLowerCase().includes(query.toLowerCase());
 );
 setFilteredSuggestions(filtered.slice(0; 5));
 setShowSuggestions(true);
-setSelectedIndex(-1)} else {setFilteredSuggestions([]);
+setSelectedIndex(-1)} else {setFilteredSuggestions([]);origin/main
 setShowSuggestions(false)}
 }, [query; suggestions]);
 
@@ -81,7 +81,7 @@ break;
 case "Enter":
 e.preventDefault();
 if (selectedIndex >= 0 && filteredSuggestions[selectedIndex]) {
-handleSuggestionClick(filteredSuggestions[selectedIndex])} else if (query.trim()) {handleSubmit(e)}
+handleSuggestionClick(filteredSuggestions[selectedIndex])} else if (query.trim()) {handleSubmit(e)}origin/main
 break;
 case "Escape":
 setShowSuggestions(false);
@@ -170,7 +170,7 @@ suggestion.type === "talent" ? "bg-green-100 text-green-600" :
    */
   searchSuggestions?: SearchSuggestion[]
 }
-export function EnhancedSearchInput({setHighlightedIndex(-1)
+export function EnhancedSearchInput({setHighlightedIndex(-1)origin/main
             }
             setValueOnFocus(null)
           }}
@@ -183,19 +183,19 @@ export function EnhancedSearchInput({setHighlightedIndex(-1)
         />
         {value && (<button
 className="absolute right-3 top-1/2 transform -translate-y-1/2 text-zion-slate hover:text-white"
-            onClick = {() => onChange('')}
+            onClick = {() => onChange('')}origin/main
             aria-label="Clear search"
           >
             <X className="h-4 w-4" />
           </button>
         )}
       </div>
-      <AutocompleteSuggestions
+      <AutocompleteSuggestionsorigin/main
 suggestions = {filteredSuggestions}
         searchTerm = {value}
         onSelectSuggestion = {handleSelectSuggestion}
         visible = {isFocused}
-        highlightedIndex={highlightedIndex} // Pass highlightedIndex listId="autocomplete-suggestions-list" // Pass ID for aria-controls
+        highlightedIndex={highlightedIndex} // Pass highlightedIndex listId="autocomplete-suggestions-list" // Pass ID for aria-controlsorigin/main
       />
     </div>
   )
@@ -219,8 +219,7 @@ break}
 }</div> <AutocompleteSuggestions /> </div>)
 }'"  )
       default:
-        break,
-}
+        break}
   }
   return (<div
 className="relative w-full"

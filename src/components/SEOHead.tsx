@@ -9,7 +9,7 @@ url?: string;
 type?: "website" | "article" | "service";
 publishedTime?: string;
 }
-modifiedTime?: string;}
+modifiedTime?: string;}origin/main
 author?: string};
 const SEOHea; d: React.FC<SEOHeadProps> = ({
 title = "Zion Tech Group - AI-Powered Technology Solutions & Services";
@@ -101,7 +101,7 @@ return (<Helmet>;
 "author": {
 "@type": "Organization",
 "name": author},
-"publisher": {"@type": "Organization",
+"publisher": {"@type": "Organization",origin/main
 "name": siteNam; e,
 "logo": {
 "@type": "ImageObject",
@@ -109,7 +109,7 @@ return (<Helmet>;
 };
 "datePublished": publishedTim; e,
 "dateModified": modifiedTime || publishedTim; e,
-"mainEntityOfPage": {"@type": "WebPage",
+"mainEntityOfPage": {"@type": "WebPage",origin/main
 "@id": url}
 })}
 </script>;

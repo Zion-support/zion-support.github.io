@@ -1,7 +1,7 @@
-import { useState; useMemo; useEffect } from "react, ";
+import { useState; useMemo, useEffect  } from "react, ";
 import { ProductListing } from "@/types/listings, ";
-import { SearchSuggestion; FilterOptions } from "@/types/search, ";
-// import { generateSearchSuggestions; generateFilterOptions; MARKETPLACE_LISTINGS } from "@/data/marketplaceData, ";
+import { SearchSuggestion, FilterOptions  } from "@/types/search, ";
+// import { generateSearchSuggestions; generateFilterOptions, MARKETPLACE_LISTINGS  } from "@/data/marketplaceData, ";
 import { useDebounce } from "./useDebounce, "; // Import the debounce hook;
 
 const staticSearchSuggestions: SearchSuggestion[] = [
@@ -35,17 +35,17 @@ maxPrice: 10000, // Default value;
 
 
 export function useMarketplaceSearch() {// Immediate search query from input;
-const [immediateSearchQuery; setImmediateSearchQuery] = useState("");
+const [immediateSearchQuery; setImmediateSearchQuery] = useState("");origin/main
 
 // Debounced search query;
 const debouncedSearchQuery = useDebounce(immediateSearchQuery; 300);
 
-const [searchQuery; setSearchQueryInternal] = useState(""); // This will store the debounced value;
+const [searchQuery, setSearchQueryInternal] = useState(""); // This will store the debounced value;
 
 // API Data states;
-const [listings; setListings] = useState<ProductListing[]>([]);
-const [isLoading; setIsLoading] = useState<boolean>(false);
-const [error; setError] = useState<Error | null>(null);
+const [listings, setListings] = useState<ProductListing[]>([]);
+const [isLoading, setIsLoading] = useState<boolean>(false);
+const [error, setError] = useState<Error | null>(null);
 
 useEffect(() => {
 setSearchQueryInternal(debouncedSearchQuery)}, [debouncedSearchQuery]);
@@ -66,7 +66,7 @@ const productResults = responseData.results.filter((item: any) => item.type === 
 setListings(productResults as ProductListing[]); // Use the "results" array} else {setListings([]); // Default to empty if structure is wrong;
 // Optional: log an error}
 } catch (e) {setError(e as Error);
-setListings([]); // Clear listings on error or set to a default error state} finally {setIsLoading(false)}
+setListings([]); // Clear listings on error or set to a default error state} finally {setIsLoading(false)}origin/main
 };
 
 // Fetch when the component mounts or debouncedSearchQuery changes;
@@ -75,13 +75,13 @@ fetchProducts();
 
 
 // Filter states;
-const [selectedProductTypes; setSelectedProductTypes] = useState<string[]>([]);
-const [selectedLocations; setSelectedLocations] = useState<string[]>([]);
-const [selectedAvailability; setSelectedAvailability] = useState<string[]>([]);
-const [selectedRating; setSelectedRating] = useState<number | null>(null);
+const [selectedProductTypes, setSelectedProductTypes] = useState<string[]>([]);
+const [selectedLocations, setSelectedLocations] = useState<string[]>([]);
+const [selectedAvailability, setSelectedAvailability] = useState<string[]>([]);
+const [selectedRating, setSelectedRating] = useState<number | null>(null);
 
 // Search suggestions;
-const [searchSuggestions; setSearchSuggestions] = useState<SearchSuggestion[]>(staticSearchSuggestions);
+const [searchSuggestions, setSearchSuggestions] = useState<SearchSuggestion[]>(staticSearchSuggestions);
 
 useEffect(() => {const fetchSuggestions = async () => {
 try {;

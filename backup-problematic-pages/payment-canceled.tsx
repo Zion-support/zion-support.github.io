@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD:backup-problematic-pages/payment-canceled.tsx
 import { Button } from "@/components/ui/button";
 import { useRouter } from "next/router"; // Changed from useNavigate,
 import { XCircle } from "lucide-react";
@@ -48,15 +49,14 @@ variant='outline'
             Return to Dashboard
           </Button>
         </div>
+
+export default function PaymentCanceled() {
+  return (
+    <div className="min-h-screen bg-gray-50 py-12">
+      <div className="container mx-auto px-4">
+        <h1 className="text-4xl font-bold text-gray-900 mb-6">Payment Canceled</h1>
+        <p className="text-lg text-gray-600">Your payment was canceled...</p>
       </div>
     </div>
-  );            className="border-zion-blue-light text-zion-slate-light hover: bg-zion-blue-light hover:text-white"
-          >
-            Return to Dashboard
-          </Button>
-        </div>
-      </div>
-  )
-      </div>
-  )
+  );
 }

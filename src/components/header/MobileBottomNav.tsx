@@ -1,8 +1,8 @@
 import React from "react";
 
 
-import { Link; useLocation } from "react-router-dom, ";
-import { Home; Search; BriefcaseIcon; MessageSquare; User; MessageCircle; ShoppingCart } from "lucide-react, ";
+import { Link, useLocation  } from "react-router-dom, ";
+import { Home; Search; BriefcaseIcon; MessageSquare; User; MessageCircle, ShoppingCart  } from "lucide-react, ";
 import { useCart } from "@/context/CartContext, ";
 import { cn } from "@/lib/utils, ";
 import { useAuth } from "@/hooks/useAuth, ";
@@ -14,7 +14,7 @@ MessageCircle;
 Heart;
 MessageSquare;
 ShoppingCart;
-User } from "lucide-react, ";
+User } from "lucide-react, ";origin/main
 
 interface MobileBottomNavProps {
 unreadCount?: number;}
@@ -39,7 +39,7 @@ icon: Search;
 matches: (path: string) => path.startsWith("/talent") || path.startsWith("/categories") || path.startsWith("/marketplace")};
 {name: "Community";
 href: "/community";
-icon: MessageCircle;
+icon: MessageCircle;origin/main
 matches: (path: string) => path.startsWith("/community") || path.startsWith("/forum")};
 {
 name: "Messages";
@@ -48,21 +48,21 @@ icon: MessageSquare;
 matches: (path: string) => path.startsWith("/messages") || path.startsWith("/inbox");
 badge: unreadCount;
 authRequired: true;
-};
+};origin/main
 {
 name: "Cart";
 href: "/cart";
 icon: ShoppingCart;
 matches: (path: string) => path.startsWith("/cart");
 badge: cartCount;
-};
+};origin/main
 {
 name: "Dashboard";
 href: "/dashboard";
 icon: User;
 matches: (path: string) => path.startsWith("/dashboard");
 authRequired: true;
-}
+}origin/main
 ];
 // Filter items based on auth status;
 const visibleItems = navItems.filter(item =>

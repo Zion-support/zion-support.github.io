@@ -5,7 +5,7 @@ name: string;
 }
 }
 
-import React from "react";
+import React from "react";origin/main
 const ProfileRatings: React.FC = () => {
 ,
 return (,
@@ -21,7 +21,7 @@ import { ReviewStats } from "@/components/reviews/ReviewStats";,
 import { ReviewsList } from "@/components/reviews/ReviewsList";,
 import { useReviews } from "@/hooks/useReviews";,
 import { Button } from "@/components/ui/button";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";origin/main
 interface ProfileRatingsProps {
 return (
     <div className="space-y-6">
@@ -97,5 +97,5 @@ reviews={reviews.filter((r) => r.rating < 4)}
   reportReview "
 }/> </TabsContent> <TabsContent value="critical" > <ReviewsList reviews= {
   reviews.filter ( (r) => r.rating < 4)
-}isLoading= {isLoading}onReportReview= {reportReview}/> </TabsContent> </Tabs> </div> </div> </div>)
+}isLoading= {isLoading}onReportReview= {reportReview}/> </TabsContent> </Tabs> </div> </div> </div>)origin/main
 }"}

@@ -7,26 +7,23 @@ const benefits = [{
         tit, l, e: "A, I-Powere, d Matchmakin, g",
     descripti, o, n: "Ou, r advance, d algorithm, s matc, h you, r need, s wit, h th, e perfec, t servic, e provider, s o, r, produc, t, s, savin, g yo, u tim, e an, d ensurin, g optima, l result, s.",
         ic, o, n: _js, x(B,  o, t, { classNa, m, e: "w-8 h-8" }),
-        del, a, y: 0.1,
-    },
+        del, a, y: 0.1},
     {
         tit, l, e: "Globa, l Availabilit, y",
     descripti, o, n: "Acces, s a worldwid, e networ, k o, f te, c, h, talen, t, s, produc, t, s, an, d service, s t, o fin, d th, e bes, t solution, s regardles, s o, f geographi, c limitation, s.",
         ic, o, n: _js, x(Glo,  b, e, { classNa, m, e: "w-8 h-8" }),
-        del, a, y: 0.2,
-    },
+        del, a, y: 0.2},
     {
         tit, l, e: "2, 4/7 Suppor, t",
     descripti, o, n: "Ou, r dedicate, d tea, m i, s availabl, e aroun, d th, e cloc, k t, o assis, t wit, h an, y question, s o, r issue, s yo, u migh, t encounte, r durin, g you, r journe, y.",
         ic, o, n: _js, x(Clo,  c, k, { classNa, m, e: "w-8 h-8" }),
-        del, a, y: 0.3,
-    },
+        del, a, y: 0.3},
     {
         tit, l, e: "Cos, t Reductio, n",
     descripti, o, n: "Eliminat, e middleme, n an, d reduc, e cost, s b, y u, p t, o 4, 0% throug, h direc, t connection, s wit, h servic, e provider, s an, d produc, t vendor, s.",
         ic, o, n: _js, x(TrendingDo,  w, n, { classNa, m, e: "w-8 h-8" }),
         del, a, y: 0.4,
-    }];
+    }];origin/main
 export function BenefitsSection() {
 impor,  t, Reac, t, { useState } from 'react';
 import { motio, n, AnimatePresence } from 'framer-motion';

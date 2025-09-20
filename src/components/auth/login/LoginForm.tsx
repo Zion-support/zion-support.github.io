@@ -5,7 +5,7 @@ name: string;
 }
 }
 
-import React from "react";
+import React from "react";origin/main
 const LoginForm: React.FC = () => {
 ,
 return (,
@@ -22,7 +22,7 @@ import { zodResolver } from "@hookform/resolvers/zod";,
 import { z } from "zod";
 import { LogIn, User, Eye, EyeOff } from "lucide-react";
 import { fireEvent } from "@/lib/analytics";
-import { useAuth } from "@/context/auth/AuthProvider";,
+import { useAuth } from "@/context/auth/AuthProvider";,origin/main
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import {
@@ -185,7 +185,7 @@ if (!email) {'
   message: 'Please enter your email address.'
 });
 return,;
-}setIsResending (true);'
+}setIsResending (true);'origin/main
 setVerificationMessage ('')
 try {'
   const response = await fetch ('/api/auth/resend-verification-email', {'
@@ -193,7 +193,7 @@ try {'
 headers: {'
   'Content-Type': 'application/json'
 }
-body: JSON.stringify ({email})
+body: JSON.stringify ({email})origin/main
 })
 const data = await response.json ()
 if (response.ok) {'
@@ -211,19 +211,18 @@ if (!email) {'
   form.setError ('root', {'
   message: 'Please enter your email address.'
 })
-return,
-}router.push (`/verify-status?email=$ {
+return}router.push (`/verify-status?email=$ {
   encodeURIComponent (email)
 }`)
 }
-}> {form.formState.errors.root && (<Alert variant="destructive" className="mb-4" > form.formState.errors.root.message}</AlertDescription> </Alert>)
+}> {form.formState.errors.root && (<Alert variant="destructive" className="mb-4" > form.formState.errors.root.message}</AlertDescription> </Alert>)origin/main
 }<form
 }) "
 }className="space-y-6" > <FormField text-zion-slate-light">Email address</FormLabel> <FormControl> <div className=" relative"> <Input /> <User className=" absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4"/> </div> </FormControl> <FormMessage className=" text-red-400"/> </FormItem>) "
 }/> <FormField <FormItem> <FormLabel className=" text-zion-slate-light">Password</FormLabel> relative" > <Input /> <LogIn className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" /> <Button) : (<Eye className="h-4 w-4" />) "
 }</span> </Button> </div> </FormControl> <FormMessage className="text-red-400" /> </FormItem>) "
 }/> <FormField <FormItem className="flex flex-row items-start space-x-3 space-y-0"> space-y-1 leading-none"> <FormLabel className=" text-zion-slate-light">Remember me</FormLabel> </div> </FormItem>) "
-}/> </div> <div className=" text-sm"> <Link href=" /forgot-password"className=" font-medium text-zion-cyan hover:text-zion-cyan-light"> Forgot password? </Link> </div> </div> <Button {verificationMessage}</p>) "
+}/> </div> <div className=" text-sm"> <Link href=" /forgot-password"className=" font-medium text-zion-cyan hover:text-zion-cyan-light"> Forgot password? </Link> </div> </div> <Button {verificationMessage}</p>) "origin/main
 }<div className=" flex justify-between mt-4" > <Button > {'
   isResending ? 'Sending...': 'Resend / Verify e-mail'
 }</Button> <Button > Check status </Button> </div> Create account </Link> </p> </form> </Form>)

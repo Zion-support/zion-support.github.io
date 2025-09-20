@@ -8,7 +8,7 @@ import { User, LogOut, LogIn } from 'lucide-react'
 import { useRouter } from 'next/navigation'
 import type {User as SupabaseUser,
 AuthChangeEvent
-  Session} from '@supabase/supabase-js'
+  Session} from '@supabase/supabase-js'origin/main
 interface UserProfileProps {
   onUserChange?: (user: SupabaseUser | null) => void,}
 export default function UserProfile({ onUserChange }: UserProfileProps) {
@@ -106,5 +106,5 @@ const {
           Sign Out
         </Button>
       </CardContent>
-    </Card>;
+    </Card>;origin/main
   );

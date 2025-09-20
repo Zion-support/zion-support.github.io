@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import Link from 'next/link';
-import { BriefcaseIcon, Clock } from "lucide-react";
+import { BriefcaseIcon, Clock } from "lucide-react";origin/main
 export function ActiveProjectsCard() {
   const { projects, isLoading } = useProjects();
   const [activeProjects, setActiveProjects] = useState<Project[]>([]),
@@ -101,7 +101,7 @@ variant={
                 }          <div key={project.id} className="border rounded-md p-3">
             <div className="flex justify-between items-start mb-2">
               <h3 className="font-medium text-sm">{project.job?.title}</h3>
-              <Badge
+              <Badgeorigin/main
 variant = {project.status === "in_progress" ? "default" : "outline"}
                 className = {project.status === "in_progress" ? "bg-blue-100 text-blue-800 hover:bg-blue-100" : ""}
               >

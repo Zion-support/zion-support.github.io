@@ -7,7 +7,7 @@ import { safeStorage } from "@/utils/safeStorage, ";
 export const store = configureStore({reducer: {;
 cart: cartReducer; wishlist: wishlistReducer;
 auth: authReducer},
-});
+});origin/main
 
 store.subscribe(() => {const state = store.getState();
 safeStorage.setItem("zion_cart", JSON.stringify(state.cart.items));

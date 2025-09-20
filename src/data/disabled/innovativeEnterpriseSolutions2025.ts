@@ -23,7 +23,7 @@ email: string;
 website: string;
 }
 }
-};
+};origin/main
 websiteUrl: string;
 demoUrl?: string;
 documentationUrl?: string;
@@ -33,7 +33,7 @@ integrationCapabilities: string[];
 roiMetrics: string[];
 competitiveAdvantages: string[];
 industryApplications: string[];
-}
+}origin/main
 
 export const INNOVATIVE_ENTERPRISE_SOLUTIONS_2025: InnovativeEnterpriseSolution2025[] = [
 // Autonomous Digital Transformation Platform;
@@ -89,7 +89,7 @@ contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com"};
-websiteUrl: "https://ziontechgroup.com/autonomous-digital-transformation-platform-2025";
+websiteUrl: "https://ziontechgroup.com/autonomous-digital-transformation-platform-2025";origin/main
 technologyStack: ["AI/ML", "Cloud Computing", "Automation", "Analytics", "Integration Platforms"],
 complianceStandards: ["SOC2", "ISO 27001", "GDPR", "Industry-specific regulations"],
 integrationCapabilities: ["ERP Systems", "CRM Platforms", "Legacy Systems", "Cloud Services", "Data Platforms"],
@@ -151,7 +151,7 @@ contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com"};
-websiteUrl: "https://ziontechgroup.com/quantum-enhanced-data-analytics-2025";
+websiteUrl: "https://ziontechgroup.com/quantum-enhanced-data-analytics-2025";origin/main
 technologyStack: ["Quantum Computing", "Advanced Analytics", "Machine Learning", "Big Data", "Cloud Computing"],
 complianceStandards: ["SOC2", "ISO 27001", "GDPR", "Industry-specific data regulations"],
 integrationCapabilities: ["Data Warehouses", "Data Lakes", "Business Intelligence Tools", "Cloud Platforms", "Analytics Tools"],
@@ -213,7 +213,7 @@ contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com"};
-websiteUrl: "https://ziontechgroup.com/ai-autonomous-it-infrastructure-management-2025";
+websiteUrl: "https://ziontechgroup.com/ai-autonomous-it-infrastructure-management-2025";origin/main
 technologyStack: ["AI/ML", "Cloud Computing", "Automation", "Monitoring Tools", "Integration Platforms"],
 complianceStandards: ["SOC2", "ISO 27001", "GDPR", "Industry-specific regulations"],
 integrationCapabilities: ["IT Management Tools", "Cloud Platforms", "Monitoring Systems", "Security Tools", "Backup Systems"],
@@ -275,7 +275,7 @@ contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com"};
-websiteUrl: "https://ziontechgroup.com/blockchain-digital-identity-management-2025";
+websiteUrl: "https://ziontechgroup.com/blockchain-digital-identity-management-2025";origin/main
 technologyStack: ["Blockchain", "Cryptography", "Zero-Knowledge Proofs", "Mobile Apps", "Web Applications"],
 complianceStandards: ["GDPR", "CCPA", "SOC2", "ISO 27001", "Identity regulations"],
 integrationCapabilities: ["Identity Providers", "Authentication Systems", "CRM Platforms", "Financial Systems", "Healthcare Systems"],
@@ -337,7 +337,7 @@ contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com"};
-websiteUrl: "https://ziontechgroup.com/ai-autonomous-research-development-platform-2025";
+websiteUrl: "https://ziontechgroup.com/ai-autonomous-research-development-platform-2025";origin/main
 technologyStack: ["AI/ML", "Research Tools", "Data Analytics", "Cloud Computing", "Collaboration Platforms"],
 complianceStandards: ["Research ethics", "Data protection", "Intellectual property", "Industry-specific regulations"],
 integrationCapabilities: ["Research Databases", "Laboratory Systems", "Analytics Tools", "Collaboration Tools", "Publication Platforms"],
@@ -399,7 +399,7 @@ contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com"};
-websiteUrl: "https://ziontechgroup.com/quantum-enhanced-machine-learning-2025";
+websiteUrl: "https://ziontechgroup.com/quantum-enhanced-machine-learning-2025";origin/main
 technologyStack: ["Quantum Computing", "Machine Learning", "AI Frameworks", "Cloud Computing", "Advanced Algorithms"],
 complianceStandards: ["Data protection", "AI ethics", "Industry-specific regulations", "Intellectual property"],
 integrationCapabilities: ["ML Frameworks", "Data Platforms", "Cloud Services", "AI Tools", "Analytics Platforms"],
@@ -461,7 +461,7 @@ contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com"};
-websiteUrl: "https://ziontechgroup.com/autonomous-edge-computing-platform-2025";
+websiteUrl: "https://ziontechgroup.com/autonomous-edge-computing-platform-2025";origin/main
 technologyStack: ["Edge Computing", "IoT", "AI/ML", "Cloud Computing", "Distributed Systems"],
 complianceStandards: ["Data protection", "Security standards", "Industry-specific regulations"],
 integrationCapabilities: ["IoT Devices", "Cloud Platforms", "Edge Devices", "Network Infrastructure", "Data Centers"],
@@ -523,7 +523,7 @@ contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com"};
-websiteUrl: "https://ziontechgroup.com/ai-autonomous-compliance-management-2025";
+websiteUrl: "https://ziontechgroup.com/ai-autonomous-compliance-management-2025";origin/main
 technologyStack: ["AI/ML", "Compliance Tools", "Analytics", "Cloud Computing", "Integration Platforms"],
 complianceStandards: ["Industry-specific regulations", "Data protection", "Security standards", "Quality standards"],
 integrationCapabilities: ["Compliance Systems", "ERP Systems", "Risk Management Tools", "Audit Systems", "Training Platforms"],

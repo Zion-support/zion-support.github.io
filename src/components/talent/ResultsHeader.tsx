@@ -1,4 +1,4 @@
-import { Loader2 } from "lucide-react";
+import { Loader2 } from "lucide-react";origin/main
 interface ResultsHeaderProps {
   isLoading: boolean,
 }

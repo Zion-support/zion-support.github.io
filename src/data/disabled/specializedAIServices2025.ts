@@ -23,7 +23,7 @@ email: string;
 website: string;
 }
 }
-};
+};origin/main
 technology: string[];
 integrations: string[];
 compliance: string[];
@@ -33,7 +33,7 @@ innovationLevel: string;
 marketTrend: string;
 aiModel: string;
 trainingData: string;
-}
+}origin/main
 
 export const SPECIALIZED_AI_SERVICES_2025: SpecializedAIService2025[] = [
 // Multimodal AI Platform;
@@ -93,8 +93,7 @@ competitors: ["OpenAI", "Google AI", "Microsoft AI", "Anthropic"],
 innovationLevel: "Breakthrough",
 marketTrend: "Explosive Growth",
 aiModel: "GPT-5 + Multimodal Models",
-trainingData: "Proprietary + Public Datasets",
-},
+trainingData: "Proprietary + Public Datasets"},
 
 // AI-Powered Predictive Healthcare Analytics;
 // AI-Powered Drug Discovery Platform;
@@ -153,8 +152,7 @@ competitors: ["Insilico Medicine", "Atomwise", "BenevolentAI", "Exscientia"],
 innovationLevel: "Revolutionary",
 marketTrend: "High Growth",
 aiModel: "Custom Drug Discovery Models",
-trainingData: "Proprietary Pharmaceutical Data",
-},
+trainingData: "Proprietary Pharmaceutical Data"},
 
 // Autonomous Financial Trading AI;
 // AI-Powered Financial Trading Platform;
@@ -213,8 +211,7 @@ competitors: ["Quantopian", "Alpaca", "Interactive Brokers", "TD Ameritrade"],
 innovationLevel: "Advanced",
 marketTrend: "High Growth",
 aiModel: "Custom Financial AI Models",
-trainingData: "Market Data + Historical Trading Data",
-},
+trainingData: "Market Data + Historical Trading Data"},
 
 // AI-Powered Supply Chain Optimization;
 // AI-Powered Climate Prediction Engine;
@@ -273,8 +270,7 @@ competitors: ["IBM Weather", "AccuWeather", "The Weather Company", "Climate AI"]
 innovationLevel: "Advanced",
 marketTrend: "Growing",
 aiModel: "Custom Climate Prediction Models",
-trainingData: "Satellite + Historical Climate Data",
-},
+trainingData: "Satellite + Historical Climate Data"},
 
 // AI-Powered Legal Research Assistant;
 {id: "ai-legal-research-assistant",
@@ -332,8 +328,7 @@ competitors: ["LexisNexis", "Westlaw", "Casetext", "Ravel Law"],
 innovationLevel: "Advanced",
 marketTrend: "Growing",
 aiModel: "Custom Legal AI Models",
-trainingData: "Legal Documents + Case Law",
-},
+trainingData: "Legal Documents + Case Law"},
 
 // AI-Powered Educational Personalization;
 // AI-Powered Creative Design Platform;
@@ -392,6 +387,5 @@ competitors: ["Canva", "Adobe", "Figma", "Midjourney"],
 innovationLevel: "Breakthrough",
 marketTrend: "Explosive Growth",
 aiModel: "DALL-E + Custom Design Models",
-trainingData: "Creative Design Datasets",
-}
+trainingData: "Creative Design Datasets"}
 ];

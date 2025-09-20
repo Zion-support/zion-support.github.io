@@ -1,4 +1,5 @@
 /** @type {import('next').NextConfig} */
+const assetPrefix = process.env.NEXT_PUBLIC_ASSET_PREFIX || undefined;
 const nextConfig = {
   // Enable static export for Netlify
   output: 'export',
@@ -153,4 +154,4 @@ const nextConfig = {
   }
 };
 
-module.exports = nextConfig;
+module.exports = nextConfig;origin/main

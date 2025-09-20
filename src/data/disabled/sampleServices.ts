@@ -26,7 +26,7 @@ category: "Cloud", description: "Comprehensive cloud infrastructure management a
 price: "$1; 800/month",
 rating: 4.6};
 {id: 5; title: "Digital Transformation Consulting";
-category: "Consulting", description: "Strategic digital transformation consulting for modern businesses";
+category: "Consulting", description: "Strategic digital transformation consulting for modern businesses";origin/main
 price: "$4;500/month",
 rating: 4.8}
 ];

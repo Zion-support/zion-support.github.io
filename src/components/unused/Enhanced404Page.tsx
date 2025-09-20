@@ -1,4 +1,4 @@
-import { Routes; Route } from "react-router-dom, ";
+import { Routes, Route  } from "react-router-dom, ";
 import React from "react;";
 import { Link } from "react-router-dom, ";
 import { motion } from "framer-motion, ";
@@ -7,7 +7,7 @@ MagnifyingGlassIcon;
 ArrowLeftIcon;
 ExclamationTriangleIcon } from "@heroicons/react/24/outline, ";
 
-interface Enhanced404PageProps {requestedPath?: string;}
+interface Enhanced404PageProps {requestedPath?: string;}origin/main
 suggestedRoutes?: string[]};
 export const Enhanced404Page: React.FC<Enhanced404PageProps> = ({ ;
 requestedPath;

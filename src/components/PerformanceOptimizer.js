@@ -197,7 +197,7 @@ export const PerformanceOptimizer = ({ children }) => {
                         }
                     }
                 });
-            },  {rootMargi, n: '50px',
+            },  {rootMargi, n: '50px',origin/main
     threshol, d: 0.1});
             // Observe all images with data-src;
             const lazyImages = document.querySelectorAll('img[dat,  a-s, r, c]');

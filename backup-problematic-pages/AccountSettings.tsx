@@ -1,4 +1,17 @@
+import { useState } from 'react';
+import { useLocalStorage } from '@/hooks';
+import Header from '@/components/Header';
+import { SEO } from '@/components/SEO';
+import { useAuth } from '@/hooks/useAuth';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { Card, CardHeader, CardTitle, CardDescription, CardContent } from '@/components/ui/card';
+import { Label } from '@/components/ui/label';
+import { Switch } from '@/components/ui/switch';
+import { Separator } from '@/components/ui/separator';
+import { Wallet, Database, Save } from 'lucide-react';
 
+<<<<<<< HEAD:backup-problematic-pages/AccountSettings.tsx
 import React, { useState } from 'react';
 import { useLocalStorage } from '@/hooks';
 import { Header } from '@/components/Header';
@@ -11,6 +24,59 @@ import { Label } from '@/components/ui/label';
 import { Wallet, Database, Save } from 'lucide-react';
 
 export default function AccountSettings() {
+export default function AccountSettings() {
+  const { user, loading } = useAuth();
+  
+  // Handle case where user might not be available during static generation
+  if (loading) {
+    return (
+      <>
+        <SEO title='Account Settings' description='Manage your account' />
+        <Header />
+        <main className='container mx-auto py-8 px-4'>
+          <h1 className='text-3xl font-bold mb-6 text-white'>Account Settings</h1>
+          <div className='text-center py-8'>
+            <p className='text-gray-300'>Loading...</p>
+          </div>
+        </main>
+      </>
+    );
+  }
+  
+  if (!user) {
+    return (
+      <>
+        <SEO title='Account Settings' description='Manage your account' />
+        <Header />
+        <main className='container mx-auto py-8 px-4'>
+          <h1 className='text-3xl font-bold mb-6 text-white'>Account Settings</h1>
+          <div className='text-center py-8'>
+            <p className='text-gray-300'>Please log in to access your account settings.</p>
+          </div>
+        </main>
+      </>
+    );
+  }
+  const [didHandle, setDidHandle] = useLocalStorage('didHandle', '');
+  const [displayWeb3, setDisplayWeb3] = useLocalStorage('displayWeb3', false);
+  const [enableBackup, setEnableBackup] = useLocalStorage('enableBackup', false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleConnectWallet = async () => {
+    // Wallet connection logic
+    console.log('Connecting wallet...');
+  };
+
+  const handleSave = async () => {
+    setIsSubmitting(true);
+    try {
+      // Save settings logic
+      await new Promise(resolve => setTimeout(resolve, 1000));
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <>
       <SEO title='Account Settings' description='Manage your account' />
@@ -66,9 +132,12 @@ export default function AccountSettings() {
                   </p>
                 </div>
                 <Switch
+<<<<<<< HEAD:backup-problematic-pages/AccountSettings.tsx
 id='displayWeb3'
+                  id='displayWeb3'
                   checked={displayWeb3}
-                  onCheckedChange={setDisplayWeb3}                />
+                  onCheckedChange={setDisplayWeb3}
+                />
               </div>
               <Separator />
               <div className='flex items-center justify-between'>
@@ -82,20 +151,26 @@ id='displayWeb3'
                   </p>
                 </div>
                 <Switch
+<<<<<<< HEAD:backup-problematic-pages/AccountSettings.tsx
 id='backup'
+                  id='backup'
                   checked={enableBackup}
-                  onCheckedChange={setEnableBackup}                />
+                  onCheckedChange={setEnableBackup}
+                />
               </div>
               {enableBackup && (
                 <div className='rounded-md bg-amber-50 p-3 text-sm text-amber-800'>
-                  Data will be backed up to decentralized storage. This feature,
-is in beta.
+                  Data will be backed up to decentralized storage. This feature
+                  is in beta.
                 </div>
               )}
               <Button
+<<<<<<< HEAD:backup-problematic-pages/AccountSettings.tsx
 onClick={handleSave}
+                onClick={handleSave}
                 disabled={isSubmitting}
-                className='w-full'              >
+                className='w-full'
+              >
                 {isSubmitting ? 'Saving...' : 'Save Settings'}
                 {!isSubmitting && <Save className='ml-2 h-4 w-4' />}
               </Button>
@@ -114,7 +189,9 @@ onClick={handleSave}
                 {didHandle ? (
                   <div className='flex items-center gap-2 bg-gray-100 p-3 rounded-md'>
                     <svg
+<<<<<<< HEAD:backup-problematic-pages/AccountSettings.tsx
 xmlns='http://www.w3.org/2000/svg'
+                      xmlns='http://www.w3.org/2000/svg'
                       width='20'
                       height='20'
                       viewBox='0 0 24 24'
@@ -133,7 +210,9 @@ xmlns='http://www.w3.org/2000/svg'
                 ) : (
                   <div className='flex items-center gap-2 bg-gray-100 p-3 rounded-md'>
                     <svg
+<<<<<<< HEAD:backup-problematic-pages/AccountSettings.tsx
 xmlns='http://www.w3.org/2000/svg'
+                      xmlns='http://www.w3.org/2000/svg'
                       width='20'
                       height='20'
                       viewBox='0 0 24 24'
@@ -183,9 +262,12 @@ xmlns='http://www.w3.org/2000/svg'
               <div>
                 <h3 className='font-medium mb-2'>Recovery Options</h3>
                 <Button
+<<<<<<< HEAD:backup-problematic-pages/AccountSettings.tsx
 variant='outline'
+                  variant='outline'
                   className='w-full'
-                  disabled={!enableBackup}                >
+                  disabled={!enableBackup}
+                >
                   Restore Profile from Backup
                 </Button>
                 <p className='text-xs text-gray-500 mt-1'>
@@ -198,6 +280,9 @@ variant='outline'
           </Card>
         </div>
       </main>
+<<<<<<< HEAD:backup-problematic-pages/AccountSettings.tsx
 </>
   )
+    </>
+  );
 }

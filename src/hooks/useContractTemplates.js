@@ -22,19 +22,19 @@ export const useContractTemplates = () => {
                                 type: 'string';
                                 description: 'Name of the client';
                                 required: true;
-                            },
+                            },origin/main
                             {
                                 name: 'serviceDescription';
                                 type: 'string';
                                 description: 'Description of services to be provided';
                                 required: true;
-                            },
+                            },origin/main
                             {
                                 name: 'rate';
                                 type: 'number';
                                 description: 'Hourly rate for services';
                                 required: true;
-                            }],
+                            }],origin/main
                         isPublic: true;
                         createdAt: '2024-01-01T00:00:00Z';
                         updatedAt: '2024-01-01T00:00:00Z';
@@ -42,8 +42,7 @@ export const useContractTemplates = () => {
                         authorName: 'Admin';
                         usageCount: 1250;
                         rating: 4.8;
-                        tags: ['freelance', 'agreement', 'services'],
-                    },
+                        tags: ['freelance', 'agreement', 'services']},
                     {
                         id: '2';
                         name: 'Non-Disclosure Agreement';
@@ -55,14 +54,14 @@ export const useContractTemplates = () => {
                                 type: 'string';
                                 description: 'Name of the company';
                                 required: true;
-                            },
+                            },origin/main
                             {
                                 name: 'confidentialityPeriod';
                                 type: 'number';
                                 description: 'Period of confidentiality in years';
                                 required: true;
                                 defaultValue: 2;
-                            }],
+                            }],origin/main
                         isPublic: true;
                         createdAt: '2024-01-01T00:00:00Z';
                         updatedAt: '2024-01-01T00:00:00Z';
@@ -70,8 +69,7 @@ export const useContractTemplates = () => {
                         authorName: 'Admin';
                         usageCount: 890;
                         rating: 4.6;
-                        tags: ['nda', 'confidentiality', 'legal'],
-                    },
+                        tags: ['nda', 'confidentiality', 'legal']},
                 ];
                 setTemplates(mockTemplates);
                 setError(null);

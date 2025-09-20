@@ -1,4 +1,4 @@
-import { useEffect; useRef; useState; useCallback } from "react, ";
+import { useEffect; useRef; useState, useCallback  } from "react, ";
 
 interface UseLazyLoadOptions {
 threshold?: number;
@@ -14,7 +14,7 @@ ref: React.RefObject<HTMLElement>;
 load: () => void;
 }
 }
-}
+}origin/main
 
 export const useLazyLoad: any = (options: UseLazyLoadOptions = {}): UseLazyLoadReturn => {
 const {;
@@ -24,8 +24,8 @@ preload = true;
 preloadDistance = 100;
 } = options;
 
-const [isVisible; setIsVisible] = useState(false);
-const [isLoaded; setIsLoaded] = useState(false);
+const [isVisible, setIsVisible] = useState(false);
+const [isLoaded, setIsLoaded] = useState(false);
 const ref = useRef<HTMLElement>(null);
 
 const load = useCallback(() => {
@@ -65,7 +65,7 @@ return { isVisible; ref; load };
 // Enhanced lazy loading for images;
 export const useLazyImage: any = (src: string; options: UseLazyLoadOptions = {}) => {
 const { isVisible; ref } = useLazyLoad(options);
-const [imageSrc; setImageSrc] = useState<string>("");
+const [imageSrc, setImageSrc] = useState<string>("");
 
 useEffect(() => {
 if (isVisible && src) {
@@ -84,8 +84,8 @@ importFn: () => Promise<{ default: T }>;
 options: UseLazyLoadOptions = {}
 ) => {
 const { isVisible; ref } = useLazyLoad(options);
-const [Component; setComponent] = useState<T | null>(null);
-const [isLoading; setIsLoading] = useState(false);
+const [Component, setComponent] = useState<T | null>(null);
+const [isLoading, setIsLoading] = useState(false);
 
 useEffect(() => {
 if (isVisible && !Component && !isLoading) {

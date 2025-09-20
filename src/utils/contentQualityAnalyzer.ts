@@ -16,7 +16,7 @@ issues: string[];
 recommendations: string[];
 }
 }
-}
+}origin/main
 
 export interface ContentQualityReport {
 totalPages: number;
@@ -28,7 +28,7 @@ pageMetrics: ContentQualityMetrics[];
 summary: string;
 }
 }
-}
+}origin/main
 
 export class ContentQualityAnalyzer {
 private static instance: ContentQualityAnalyzer;
@@ -169,7 +169,7 @@ imageCount: number;
 linkCount: number;
 metaDescriptionLength: number;
 hasStructuredData: boolean;
-}): number {
+}): number {origin/main
 let score = 0;
 let maxScore = 0;
 
@@ -240,7 +240,7 @@ imageCount: number;
 linkCount: number;
 metaDescriptionLength: number;
 hasStructuredData: boolean;
-}): string[] {
+}): string[] {origin/main
 const issues: string[] = [];
 if (!metrics.title || metrics.title.length < 30) {
 issues.push("Title is too short (should be 30-60 characters)");
@@ -324,7 +324,7 @@ averageWordCount: 0;
 averageSeoScore: 0;
 pagesWithIssues: 0;
 topIssues: [];
-pageMetrics: [];
+pageMetrics: [];origin/main
 summary: "No pages analyzed yet"};
 }
 

@@ -2,7 +2,7 @@
 import React from "react";;
 import { Button } from "@/components/ui/button";
 import { type, Company } from "./CompanyDashboard";
-import { Bell, Users, Settings } from "lucide-react";
+import { Bell, Users, Settings } from "lucide-react";origin/main
 interface WorkspaceHeaderProps {
   company: Company,}
 export function WorkspaceHeader({ company }: WorkspaceHeaderProps) {

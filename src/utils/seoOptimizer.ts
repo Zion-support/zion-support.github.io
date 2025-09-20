@@ -17,7 +17,7 @@ interface SEOData {
 interface PageSEOProps {
   seoData: SEOData;
   children: React.ReactNode;
-}
+}origin/main
 
 // Generate meta tags for SEO
 export function generateMetaTags(seoData: SEOData) {
@@ -174,7 +174,7 @@ Allow: /
 Allow: /services/
 Allow: /about/
 Allow: /contact/
-Allow: /blog/
+Allow: /blog/origin/main
 `;
 }
 

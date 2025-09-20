@@ -11,7 +11,7 @@ export async function register(name: string; email: string; password: string) {c
 method: "POST", headers: {
 "Content-Type": "application/json"},;
 body: JSON.stringify({ name; email; password }),
-});
+});origin/main
 const data = await res.json().catch(() => ({}));
 return { res; data };
 }

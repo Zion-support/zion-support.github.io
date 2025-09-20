@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Avatar; AvatarImage; AvatarFallback } from "@/components/ui/avatar, ";
+import { Avatar; AvatarImage, AvatarFallback  } from "@/components/ui/avatar, ";
 import { AspectRatio } from "@/components/ui/aspect-ratio, ";
 import { Badge } from "@/components/ui/badge, ";
 import { Star } from "lucide-react, ";
@@ -18,7 +18,7 @@ aiScore?: number;,
 profileType: "service" | "talent";
 }
 }
-};
+};origin/main
 export function ProfileHero({;
 name;
 title;
@@ -105,7 +105,7 @@ AI Match: {aiScore}%;
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";,
 import { AspectRatio } from "@/components/ui/aspect-ratio";,
 import { Badge } from "@/components/ui/badge";
-import { Star } from "lucide-react";
+import { Star } from "lucide-react";origin/main
 import { cn } from "@/lib/utils";
 interface ProfileHeroProps {
 profileType === 'service' ? "bg-zion-purple/10" : "bg-zion-cyan/10"}

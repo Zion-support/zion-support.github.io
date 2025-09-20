@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Mail, Send } from "lucide-react";
+import { Mail, Send } from "lucide-react";origin/main
 import { useState } from "react";
 import { toast } from "@/hooks/use-toast";
 interface ProfileContactProps {
@@ -78,6 +78,6 @@ type="submit"
       </form>
     </div>
   )
-  `mailto:$ {email}` "
+  `mailto:$ {email}` "origin/main
 }className="text-zion-cyan hover:underline truncate block" > required /> </div> <div> <Textarea required /> </div> <Button </Button> </div> </form> </div>)
 }'"}

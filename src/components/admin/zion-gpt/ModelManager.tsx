@@ -7,7 +7,7 @@ import { Loader2, RefreshCw, Play, CheckCircle, AlertCircle } from "lucide-react
 import { supabase } from "@/integrations/supabase/client";
 import { ModelConfig } from "@/utils/zion-gpt";
 import { logErrorToProduction } from '@/utils/productionLogger';
-interface ModelVersionData extends ModelConfig {trainingStatus: 'queued' | 'running' | 'succeeded' | 'failed';
+interface ModelVersionData extends ModelConfig {trainingStatus: 'queued' | 'running' | 'succeeded' | 'failed';origin/main
   errorMessage?: string}
 
 return (
@@ -64,7 +64,7 @@ return (
                     {model.trainingStatus === 'queued' |model.trainingStatus === 'running' ? (<Button
 variant="ghost"
                         size="sm"
-                        onClick = {() => checkTrainingStatus(model.id)}
+                        onClick = {() => checkTrainingStatus(model.id)}origin/main
                         disabled = {activeJobs[model.id]}
                       >
                         {activeJobs[model.id] ? (
@@ -77,7 +77,7 @@ variant="ghost"
                     ) : model.trainingStatus === 'succeeded' ? (<Button
 variant = {model.active ? "outline" : "default"}
                         size="sm"
-                        onClick = {() => toggleModelActive(model.id model.active model.purpose)}
+                        onClick = {() => toggleModelActive(model.id model.active model.purpose)}origin/main
                       >
                         {model.active ? (
                           <>

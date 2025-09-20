@@ -124,7 +124,7 @@ export const advancedBlockchainServices2025 = [
         freeTier: false;
         trialPeriod: "7 days",
     };
-    {id: 2;
+    {id: 2;origin/main
         name: "Decentralized Identity Platform";
         category: "Identity Management";
         pricing: "Professional";
@@ -163,8 +163,7 @@ export const advancedBlockchainServices2025 = [
         setupTime: "2-3 weeks";
         integrations: ["Ethereum", "Polygon", "Identity protocols", "Enterprise systems"],
         freeTier: true;
-        trialPeriod: "14 days",
-    }
+        trialPeriod: "14 days"}
 ];
     // Advanced Cybersecurity Services;
 export const advancedCybersecurityServices2025 = [
@@ -206,7 +205,7 @@ export const advancedCybersecurityServices2025 = [
         deliveryTime: "8-10 weeks";
         support: "24/7",
     };
-    {id: 2;
+    {id: 2;origin/main
         name: "Quantum-Safe Cryptography";
         category: "Cryptography";
         description: "Post-quantum cryptography solutions to protect against future quantum computing threats to current encryption standards";
@@ -242,8 +241,7 @@ export const advancedCybersecurityServices2025 = [
         sla: "99.9% uptime";
         certifications: ["Cryptography", "Security", "Quantum Computing"],
         deliveryTime: "12-16 weeks";
-        support: "Business hours",
-    }
+        support: "Business hours"}
 ];
     // Advanced Cloud & DevOps Services;
 export const advancedCloudDevOpsServices2025 = [
@@ -283,8 +281,7 @@ export const advancedCloudDevOpsServices2025 = [
         sla: "99.5% uptime";
         certifications: ["AWS", "Azure", "GCP", "Kubernetes", "Docker"],
         deliveryTime: "6-8 weeks";
-        support: "Business hours",
-    }
+        support: "Business hours"}
 ];
     // Advanced Healthcare Services;
 export const advancedHealthcareServices2025 = [
@@ -370,8 +367,7 @@ export const advancedIoTServices2025 = [
         setupTime: "3-5 weeks";
         integrations: ["SCADA systems", "ERP platforms", "MES systems", "Cloud platforms"],
         freeTier: false;
-        trialPeriod: "30 days",
-    }
+        trialPeriod: "30 days"}
 ];
     // Advanced Quantum Services;
 export const advancedQuantumServices2025 = [
@@ -457,8 +453,7 @@ export const advancedSpaceServices2025 = [
         setupTime: "4-6 weeks";
         integrations: ["Satellite systems", "Tracking networks", "Regulatory databases", "Communication systems"],
         freeTier: false;
-        trialPeriod: "30 days",
-    }
+        trialPeriod: "30 days"}
 ];
     // Advanced Sustainability Services;
 export const advancedSustainabilityServices2025 = [
@@ -501,8 +496,7 @@ export const advancedSustainabilityServices2025 = [
         setupTime: "2-3 weeks";
         integrations: ["ERP systems", "Waste management", "Supply chain platforms", "Sustainability databases"],
         freeTier: true;
-        trialPeriod: "21 days",
-    }
+        trialPeriod: "21 days"}
 ];
     // Advanced Fintech Services;
 export const advancedFintechServices2025 = [
@@ -545,8 +539,7 @@ export const advancedFintechServices2025 = [
         setupTime: "3-4 weeks";
         integrations: ["Banking systems", "Regulatory databases", "Risk management", "Reporting systems"],
         freeTier: false;
-        trialPeriod: "21 days",
-    }
+        trialPeriod: "21 days"}
 ];
     // Export all additional services;
 export const allAdditionalServices2025 = {advancedAI: additionalAdvancedAIServices2025;

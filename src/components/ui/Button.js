@@ -21,7 +21,7 @@ const Button = React.forwardRef((_a, ref) => {
             'border border-input bg-background hover:bg-accent hover:text-accent-foreground': variant === 'outline',
             'bg-secondary text-secondary-foreground hover:bg-secondary/80': variant === 'secondary',
             'hover:bg-accent hover:text-accent-foreground': variant === 'ghost',
-            'text-primary underline-offset-4 hover:underline': variant === 'link'}, {'h-10 px-4 py-2': size === 'default',
+            'text-primary underline-offset-4 hover:underline': variant === 'link'}, {'h-10 px-4 py-2': size === 'default',origin/main
             'h-9 rounded-md px-3': size === 'sm',
             'h-11 rounded-md px-8': size === 'lg',
             'h-10 w-10': size === 'icon'}, className), ref: ref }, props)));
@@ -50,7 +50,7 @@ const buttonVariants = cva("inline-flex items-center justify-center rounded-lg f
     defaultVariants: {variant: "default",
         size: "md",
         fullWidth: false},
-});
+});origin/main
 const Button = React.forwardRef(({ className, variant, size, fullWidth, loading = false, leftIcon, rightIcon, children, disabled, ...props }, ref) => {
     return (<button className={cn(buttonVariants({ variant, size, fullWidth, className }))} ref={ref} disabled={disabled || loading} {...props}>
         {loading && (<svg className="animate-spin -ml-1 mr-2 h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">

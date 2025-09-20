@@ -11,7 +11,7 @@ import { ResumePreviewCard } from "./ResumePreviewCard";
 import { UploadSection } from "./UploadSection";
 import { SelectResumeSection } from "./SelectResumeSection";
 import { ResumeOption, ResumeSelectorProps } from "./types";
-import { logErrorToProduction } from "@/utils/productionLogger";
+import { logErrorToProduction } from "@/utils/productionLogger";origin/main
 export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {
   )
 }

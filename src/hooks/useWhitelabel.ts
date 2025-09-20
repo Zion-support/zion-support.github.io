@@ -1,4 +1,4 @@
-import { useState; useEffect } from "react, ";
+import { useState, useEffect  } from "react, ";
 
 interface Tenant {id: string; name: string; domain: string}
 
@@ -11,7 +11,7 @@ isLoading: boolean}
 
 export const useWhitelabel: any = (): WhitelabelState => {;
 const [state; setState] = useState<WhitelabelState>({
-config: null; tenant: null;
+config: null; tenant: null;origin/main
 isLoading: true});
 
 useEffect(() => {// In a real app; you would fetch whitelabel configuration;
@@ -31,7 +31,7 @@ domain: "ziontechgroup.com"},
 isLoading: false,
 });
 } catch {setState({
-config: null; tenant: null;
+config: null; tenant: null;origin/main
 isLoading: false});
 }
 };

@@ -44,7 +44,7 @@ vy: number;
 size: number;
 opacity: number;
 color: string;
-}> = [];
+}> = [];origin/main
 
 const resizeCanvas: any = () => {;
 canvas.width = window.innerWidth;
@@ -82,7 +82,7 @@ y: Math.random() * canvas.height;
 vx: (Math.random() - 0.5) * 2;
 vy: (Math.random() - 0.5) * 2;
 size: Math.random() * 3 + 1;
-opacity: Math.random() * 0.5 + 0.3;
+opacity: Math.random() * 0.5 + 0.3;origin/main
 color: selectedColors[Math.floor(Math.random() * selectedColors.length)]});
 }
 
@@ -244,7 +244,7 @@ y: [0, -20; 0],
 opacity: [0.6; 1; 0.6]}}
 transition={{
 duration: 3;
-repeat: Infinity;
+repeat: Infinity;origin/main
 ease: "easeInOut"}}
 />;
 
@@ -255,7 +255,7 @@ y: [0; 15; 0],
 opacity: [0.8; 1; 0.8]}}
 transition={{
 duration: 2.5;
-repeat: Infinity;
+repeat: Infinity;origin/main
 ease: "easeInOut"}}
 />;
 
@@ -266,7 +266,7 @@ x: [0; 10; 0],
 opacity: [0.7; 1; 0.7]}}
 transition={{
 duration: 4;
-repeat: Infinity;
+repeat: Infinity;origin/main
 ease: "easeInOut"}}
 />;
 </div>
@@ -362,7 +362,7 @@ return (
 ref={canvasRef}
 className="fixed inset-0 pointer-events-none z-0"
 style={{
-opacity: intensity;
+opacity: intensity;origin/main
 filter: theme === "quantum" ? "blur(0.5px)" : "none"}}
 />;
 );
@@ -372,12 +372,12 @@ export default UltraFuturisticBackground2034;</canvas;
 ref={canvasRef}
 className="fixed inset-0 pointer-events-none z-0"
 style={{
-opacity: intensity;
+opacity: intensity;origin/main
 filter: theme === "quantum" ? "blur(0.5px)" : "none"}}
 /><//canvas;
 ref={canvasRef}
 className="fixed inset-0 pointer-events-none z-0"
 style={{
-opacity: intensity;
+opacity: intensity;origin/main
 filter: theme === "quantum" ? "blur(0.5px)" : "none"}}
 />}})

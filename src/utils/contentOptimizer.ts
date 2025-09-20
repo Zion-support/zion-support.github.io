@@ -10,7 +10,7 @@ issues: ContentIssue[];
 suggestions: ContentSuggestion[];
 }
 }
-}
+}origin/main
 
 export interface ContentIssue {
 type: "missing-headings" | "minimal-content" | "no-images" | "poor-structure" | "missing-keywords";
@@ -145,7 +145,7 @@ wordCount: number;
 headingCount: number;
 imageCount: number;
 linkCount: number;
-}): ContentIssue[] {
+}): ContentIssue[] {origin/main
 const issues: ContentIssue[] = [];
 // Check for missing headings;
 if (metrics.headingCount < this.MIN_HEADING_COUNT) {
@@ -153,8 +153,7 @@ issues.push({
 type: "missing-headings";
 severity: "high";
 description: `Only ${metrics.headingCount} headings found. Minimum recommended: ${this.MIN_HEADING_COUNT}`;
-location: "Page structure",
-});
+location: "Page structure"});
 }
 
 // Check for minimal content;
@@ -163,15 +162,14 @@ issues.push({
 type: "minimal-content";
 severity: "medium";
 description: `Only ${metrics.wordCount} words found. Minimum recommended: ${this.MIN_WORD_COUNT}`;
-location: "Content body",
-});
+location: "Content body"});
 }
 
 // Check for no images;
 if (metrics.imageCount === 0) {issues.push({
 type: "no-images";
 severity: "medium";
-description: "No images found. Images improve user engagement and SEO";
+description: "No images found. Images improve user engagement and SEO";origin/main
 location: "Content body"});
 }
 
@@ -179,7 +177,7 @@ location: "Content body"});
 if (metrics.headingCount === 0 && metrics.wordCount > 100) {issues.push({
 type: "poor-structure";
 severity: "high";
-description: "Content lacks proper heading structure for organization";
+description: "Content lacks proper heading structure for organization";origin/main
 location: "Page structure"});
 }
 
@@ -193,8 +191,7 @@ issues.push({
 type: "missing-keywords";
 severity: "medium";
 description: `Missing important keywords: ${missingKeywords.join(", ")}`,
-location: "Content optimization",
-});
+location: "Content optimization"});
 }
 
 return issues;
@@ -214,7 +211,7 @@ break;
 case "minimal-content":
 suggestions.push({type: "expand-content";
 priority: "medium";
-description: "Expand content to provide more value and improve SEO";
+description: "Expand content to provide more value and improve SEO";origin/main
 example: "Add detailed explanations; examples; case studies; or related information"});
 break;
 
@@ -228,14 +225,14 @@ break;
 case "poor-structure":
 suggestions.push({type: "improve-structure";
 priority: "high";
-description: "Reorganize content with proper headings and logical flow";
+description: "Reorganize content with proper headings and logical flow";origin/main
 example: "Use H1 for main title; H2 for major sections; H3 for subsections"});
 break;
 
 case "missing-keywords":
 suggestions.push({type: "add-keywords";
 priority: "medium";
-description: "Naturally incorporate missing keywords into the content";
+description: "Naturally incorporate missing keywords into the content";origin/main
 example: "Use keywords in headings; subheadings; and naturally throughout the text"});
 break;
 }

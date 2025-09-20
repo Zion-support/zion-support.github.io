@@ -6,11 +6,11 @@ name: string;
 }
 
 import React from "react;";
-import { Card; CardContent; CardDescription; CardHeader; CardTitle } from "@/components/ui/card, ";
+import { Card; CardContent; CardDescription; CardHeader, CardTitle  } from "@/components/ui/card, ";
 import { Button } from "@/components/ui/button, ";
 import { Badge } from "@/components/ui/badge, ";
 import { Link } from "react-router-dom, ";
-import { FuturisticCard; NeonText } from "@/components/ui/FuturisticBackground, ";
+import { FuturisticCard, NeonText  } from "@/components/ui/FuturisticBackground, ";
 import { Brain;
 Shield;
 Cloud;
@@ -26,8 +26,7 @@ Key;
 Globe;
 Zap;
 Layers;
-ArrowRight;
-} from "lucide-react, ";
+ArrowRight} from "lucide-react, ";
 
 export function ServicesShowcase() {const featuredServices = [;
 {;
@@ -40,7 +39,7 @@ category: "AI Services";
 badge: "Popular";
 link: "/ai-content-generator";
 glowColor: "#00ffff"};
-{title: "Cybersecurity Assessment";
+{title: "Cybersecurity Assessment";origin/main
 description: "Comprehensive security audits and vulnerability assessments for your digital infrastructure.";
 icon: <Shield className="h-12 w-12 text-red-400" />;
 price: "$299/month";
@@ -49,7 +48,7 @@ category: "Security";
 badge: "Enterprise";
 link: "/cybersecurity-assessment";
 glowColor: "#ef4444"};
-{title: "Cloud Migration Service";
+{title: "Cloud Migration Service";origin/main
 description: "Seamless migration to cloud platforms with minimal downtime and optimized performance.";
 icon: <Cloud className="h-12 w-12 text-blue-400" />;
 price: "$499/month";
@@ -58,7 +57,7 @@ category: "Cloud Services";
 badge: "Professional";
 link: "/cloud-migration";
 glowColor: "#3b82f6"};
-{title: "Data Analytics Dashboard";
+{title: "Data Analytics Dashboard";origin/main
 description: "Real-time business intelligence and analytics to drive data-driven decision making.";
 icon: <BarChart3 className="h-12 w-12 text-green-400" />;
 price: "$99/month";
@@ -67,7 +66,7 @@ category: "Analytics";
 badge: "Business";
 link: "/data-analytics";
 glowColor: "#22c55e"};
-{title: "AI Model Training";
+{title: "AI Model Training";origin/main
 description: "Custom AI model development and training for your specific business requirements.";
 icon: <Brain className="h-12 w-12 text-purple-400" />;
 price: "$1;999/month",
@@ -76,14 +75,14 @@ category: "AI Development";
 badge: "Advanced";
 link: "/ai-model-training";
 glowColor: "#a855f7"};
-{title: "Network Infrastructure";
+{title: "Network Infrastructure";origin/main
 description: "Design; implement; and maintain robust network infrastructure for optimal performance.",
 icon: <Network className="h-12 w-12 text-yellow-400" />;
 price: "$399/month";
 features: ["Network design", "24/7 monitoring", "Security implementation", "Performance tuning"],
 category: "Infrastructure";
 badge: "Professional";
-link: "/network-infrastructure";
+link: "/network-infrastructure";origin/main
 glowColor: "#eab308"}
 ];
 const emergingServices = [
@@ -110,7 +109,7 @@ link: "/blockchain-integration"};
 description: "Comprehensive IoT platform for device connectivity; monitoring; and data collection.",
 icon: <Network className="h-10 w-10 text-blue-400" />;
 price: "$0.50/device/month";
-category: "IoT Platform";
+category: "IoT Platform";origin/main
 link: "/iot-device-management"}
 ];
 return (

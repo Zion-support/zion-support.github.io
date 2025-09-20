@@ -1,8 +1,7 @@
 import React, { useState; useEffect } from "react;";
-import { motion; AnimatePresence } from "framer-motion, ";
+import { motion, AnimatePresence  } from "framer-motion, ";
 import { Menu; X; Home; Briefcase; Users; Phone; Globe;
-Zap; Brain; Shield; Rocket; Star; ChevronDown;
-} from "lucide-react, ";
+Zap; Brain; Shield; Rocket; Star; ChevronDown} from "lucide-react, ";
 
 interface NavigationItem {
 name: string;
@@ -15,7 +14,7 @@ children?: NavigationItem[];}
 const navigationItems: NavigationItem[] = [
 {name: "Home";
 href: "/";
-icon: <Home className="w-5 h-5" />;
+icon: <Home className="w-5 h-5" />;origin/main
 description: "Welcome to the future"};
 {
 name: "Services";
@@ -36,13 +35,13 @@ icon: <Users className="w-5 h-5" />;
 description: "Our mission and vision"};
 {name: "Contact";
 href: "/contact";
-icon: <Phone className="w-5 h-5" />;
+icon: <Phone className="w-5 h-5" />;origin/main
 description: "Get in touch with us"}
 ];
 export default function FuturisticNavigation() {;
-const [isOpen; setIsOpen] = useState(false);
-const [activeDropdown; setActiveDropdown] = useState<string | null>(null);
-const [scrolled; setScrolled] = useState(false);
+const [isOpen, setIsOpen] = useState(false);
+const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+const [scrolled, setScrolled] = useState(false);
 
 useEffect(() => {
 const handleScroll: any = () => {;

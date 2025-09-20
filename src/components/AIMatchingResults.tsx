@@ -7,7 +7,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { BarChart3, BriefcaseIcon, Monitor, User } from "lucide-react";
 import Skeleton from "@/components/ui/skeleton";
 import { cn } from "@/lib/utils";
-interface AIMatchingResultsProps {serviceType?: string}
+interface AIMatchingResultsProps {serviceType?: string}origin/main
 export function AIMatchingResults({
                             {match.image ? (
                               <AvatarImage

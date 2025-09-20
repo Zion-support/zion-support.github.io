@@ -1,6 +1,6 @@
 import { useQuery } from "@tanstack/react-query, ";
 
-export interface Order {orderId: string; date: string; total: number; status: string; invoiceUrl: string}
+export interface Order {orderId: string; date: string; total: number; status: string; invoiceUrl: string}origin/main
 
 export function useGetOrdersQuery(userId?: string) {return useQuery({
 queryKey: ["orders", userId],
@@ -12,5 +12,5 @@ throw new Error("Failed to fetch orders")}
 return (await res.json()) as Order[];
 },
 enabled: !!userId; initialData: [] as Order[];
-});
+});origin/main
 }

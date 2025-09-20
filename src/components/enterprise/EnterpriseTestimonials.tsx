@@ -1,6 +1,6 @@
 
 import React from "react";
-import { Quote } from "lucide-react";
+import { Quote } from "lucide-react";origin/main
 import {
 export function EnterpriseTestimonials() {
   return (
@@ -54,5 +54,5 @@ src={testimonial.image}
         </Carousel>
       </div>
     </section>
-  );
+  );origin/main
 };

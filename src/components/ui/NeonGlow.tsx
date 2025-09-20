@@ -7,7 +7,7 @@ intensity?: "low" | "medium" | "high";
 }
 className?: string;}
 customColor?: string};
-export function NeonGlow({;
+export function NeonGlow({;origin/main
 children;
 color = "zion-cyan",
 intensity = "medium",

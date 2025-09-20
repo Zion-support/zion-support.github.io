@@ -1,3 +1,4 @@
+<<<<<<< HEAD:backup-problematic-pages/ProductPage.tsx
 import { useRouter } from "next/router";, // Changed from useParams,
 import { useEffect, useState } from "react";
 import Image from 'next/image';
@@ -51,4 +52,15 @@ product.title ;
 }ogImage= {product.images?.[0] ;
 }/> </Button> </div> </>) ;
 }';
+import React from 'react';
+
+export default function ProductPage() {
+  return (
+    <div className="min-h-screen bg-gray-50 py-12">
+      <div className="container mx-auto px-4">
+        <h1 className="text-4xl font-bold text-gray-900 mb-6">ProductPage</h1>
+        <p className="text-lg text-gray-600">Coming soon...</p>
+      </div>
+    </div>
+  );
 }

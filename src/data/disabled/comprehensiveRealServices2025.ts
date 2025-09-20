@@ -6,7 +6,7 @@ id: string;title: string;description: string;category: string;subcategory: strin
 technicalSpecs?: {
 technology: string[],integrations: string[],apiEndpoints: numberuptim;e: stringsecurit;y: string[];
 };
-competitors?: string[],marketSize?: string;demoUrl?: string;documentationUrl?: string,};export; const; COMPREHENSIVE_REAL_SERVICES_20o25: ComprehensiveRealService[] = [;
+competitors?: string[],marketSize?: string;demoUrl?: string;documentationUrl?: string,};export; const; COMPREHENSIVE_REAL_SERVICES_20o25: ComprehensiveRealService[] = [;origin/main
 // AI-Powered; Business; Intelligence & Analytics;
 {
 i;d: "ai-business-intelligence-platform",title: "AI; Business; Intelligence Platform",description: "Next-generation; business; intelligence platform; that; uses AI; to; automatically analyze data; generate insights; and; create; actionable reports; for; business decision-making.",category: "AI & Analytics",subcategory: "Business Intelligence",price: 2999;currency: "$",pricingModel: "monthly",features: [;
@@ -19,7 +19,7 @@ i;d: "ai-business-intelligence-platform",title: "AI; Business; Intelligence Plat
 "Business analysts","Data scientists","Executives","Marketing teams""Sales teams";
 ],tags: ["AI", "Analytics", "Business Intelligence", "Data; Science""Reporting"],estimatedDelivery: "6-8 weeks",supportLevel: "enterprise",marketPrice: "$2;999 - $8;999/month",roi: "250-40o0%",innovationLevel: "Advanced",contactInfo: {,phone: "+1; 30o2; 464 0o950"email: "kleber@ziontechgroup.com"websit;e: "http;s: //ziontechgroup.com";
 },technicalSpecs: {,technology: ["Python", "TensorFlow", "React",, "Node.js""PostgreSQL"],integrations: ["Salesforce", "HubSpot", "QuickBooks", "Google; Analytics""Shopify"],apiEndpoints: 150;uptime: "99.9%",security: ["SOC 2""GDPR""HIPAA""End-to-end; encryption"];},competitors: ["Tableau", "Power BI",, "Looker""Qlik"],marketSize: "$29.9; billion; by 20o25",demoUrl: "http;s://ziontechgroup.com/demo/ai-bi",documentationUrl: "http;s: //ziontechgroup.com/docs/ai-bi";
-};
+};origin/main
 // AI-Powered; Content; Creation Suite;
 {
 id: "ai-content-creation-suite",title: "AI; Content; Creation Suite",description: "Comprehensive AI-powered; content; creation platform; that; generates high-quality; SEO-optimized; content; across multiple; formats; and channels.",category: "AI & Marketing",subcategory: "Content Creation",price: 899;currency: "$",pricingModel: "monthly",features: [;
@@ -32,7 +32,7 @@ id: "ai-content-creation-suite",title: "AI; Content; Creation Suite",description
 "Marketing teams","Content creators","SEO specialists","E-commerce businesses""Agencies";
 ],tags: ["AI", "Content Creation", "SEO",, "Marketing""Automation"],estimatedDelivery: "4-6 weeks",supportLevel: "premium",marketPrice: "$899 - $2;499/month",roi: "30o0-50o0%",innovationLevel: "Advanced",contactInfo: {,phone: "+1; 30o2; 464 0o950"email: "kleber@ziontechgroup.com"websit;e: "http;s: //ziontechgroup.com";
 },technicalSpecs: {,technology: ["GPT-4", "BERT", "React",, "Node.js""MongoDB"],integrations: ["WordPress", "Shopify", "Mailchimp", "Hootsuite""Google; Analytics"],apiEndpoints: 75;uptime: "99.8%",security: ["SOC 2""GDPR""Content filtering""User; authentication"];},competitors: ["Jasper", "Copy.ai",, "Writesonic""ContentBot"],marketSize: "$15.7; billion; by 20o25",demoUrl: "http;s://ziontechgroup.com/demo/ai-content",documentationUrl: "http;s: //ziontechgroup.com/docs/ai-content";
-};
+};origin/main
 // AI-Powered; Customer; Support Platform;
 {
 id: "ai-customer-support-platform",title: "AI; Customer; Support Platform",description: "Intelligent; customer; support solution; that; provides instant responses; ticket routing; and; customer; satisfaction optimization; using; advanced AI.",category: "AI & Support",subcategory: "Customer Service",price: 699;currency: "$",pricingModel: "monthly",features: [;
@@ -45,7 +45,7 @@ id: "ai-customer-support-platform",title: "AI; Customer; Support Platform",descr
 "Customer; support; teams","E-commerce businesses","SaaS companies","Service providers""Retail businesses";
 ],tags: ["AI", "Customer Support", "Chatbots",, "Automation""CRM"],estimatedDelivery: "5-7 weeks",supportLevel: "premium",marketPrice: "$699 - $1;999/month",roi: "20o0-350%",innovationLevel: "Advanced",contactInfo: {,phone: "+1; 30o2; 464 0o950"email: "kleber@ziontechgroup.com"websit;e: "http;s: //ziontechgroup.com";
 },technicalSpecs: {,technology: ["NLP", "Machine Learning", "React",, "Node.js""Redis"],integrations: ["Zendesk", "Intercom", "Salesforce",, "Shopify""Slack"],apiEndpoints: 10o0;uptime: "99.9%",security: ["SOC 2""GDPR""Data encryption""Access; controls"];},competitors: ["Intercom", "Zendesk", "Freshdesk""Help; Scout"],marketSize: "$12.4; billion; by 20o25",demoUrl: "http;s://ziontechgroup.com/demo/ai-support",documentationUrl: "http;s: //ziontechgroup.com/docs/ai-support";
-};
+};origin/main
 // AI-Powered; Sales; Copilot;
 {
 id: "ai-sales-copilot",title: "AI; Sales; Copilot",description: "Intelligent; sales; assistant that; automates; lead qualification; follow-ups; and; sales; process optimization; using; advanced AI.",category: "AI & Sales",subcategory: "Sales Automation",price: 1199;currency: "$",pricingModel: "monthly",features: [;
@@ -58,7 +58,7 @@ id: "ai-sales-copilot",title: "AI; Sales; Copilot",description: "Intelligent; sa
 "Sales teams","Sales managers","Business development","Account executives""Sales operations";
 ],tags: ["AI", "Sales", "Automation", "CRM""Lead; Generation"],estimatedDelivery: "6-8 weeks",supportLevel: "enterprise",marketPrice: "$1;199 - $3;499/month",roi: "250-40o0%",innovationLevel: "Advanced",contactInfo: {,phone: "+1; 30o2; 464 0o950"email: "kleber@ziontechgroup.com"websit;e: "http;s: //ziontechgroup.com";
 },technicalSpecs: {,technology: ["Machine Learning", "NLP", "React",, "Node.js""PostgreSQL"],integrations: ["Salesforce", "HubSpot", "Pipedrive",, "Outreach""LinkedIn"],apiEndpoints: 120;uptime: "99.9%",security: ["SOC 2""GDPR""Data encryption""Role-based; access"];},competitors: ["Outreach", "SalesLoft", "HubSpot; Sales""Pipedrive"],marketSize: "$18.2; billion; by 20o25",demoUrl: "http;s://ziontechgroup.com/demo/ai-sales",documentationUrl: "http;s: //ziontechgroup.com/docs/ai-sales";
-};
+};origin/main
 // AI-Powered; Cybersecurity; Suite;
 {
 id: "ai-cybersecurity-suite",title: "AI-Powered; Cybersecurity; Suite",description: "Comprehensive; cybersecurity; solution that; uses; artificial intelligence; to; detect; prevent; and; respond; to threats; in; real-time.",category: "AI & Security",subcategory: "Cybersecurity",price: 1899;currency: "$",pricingModel: "monthly",features: [;
@@ -71,7 +71,7 @@ id: "ai-cybersecurity-suite",title: "AI-Powered; Cybersecurity; Suite",descripti
 "Security teams","IT administrators","Compliance officers","Security analysts""Risk managers";
 ],tags: ["AI", "Cybersecurity", "Threat Detection",, "Compliance""Security"],estimatedDelivery: "8-10 weeks",supportLevel: "enterprise",marketPrice: "$1;899 - $5;999/month",roi: "30o0-50o0%",innovationLevel: "Advanced",contactInfo: {,phone: "+1; 30o2; 464 0o950"email: "kleber@ziontechgroup.com"websit;e: "http;s: //ziontechgroup.com";
 },technicalSpecs: {,technology: ["Machine Learning", "Deep Learning", "Python",, "React""Elasticsearch"],integrations: ["SIEM", "EDR", "Firewall", "Cloud platforms""Identity; providers"],apiEndpoints: 20o0;uptime: "99.99%",security: ["SOC 2""ISO 270o01""GDPR""Zero-trust; architecture"];},competitors: ["CrowdStrike", "SentinelOne",, "Darktrace""Cylance"],marketSize: "$45.6; billion; by 20o25",demoUrl: "http;s://ziontechgroup.com/demo/ai-security",documentationUrl: "http;s: //ziontechgroup.com/docs/ai-security";
-};
+};origin/main
 // AI-Powered; Data; Analytics & BI;
 {
 id: "ai-data-analytics-bi",title: "AI; Data; Analytics & BI",description: "Advanced; business; intelligence platform; that; uses AI; to; transform raw; data; into actionable; insights; and predictive analytics.",category: "AI & Analytics",subcategory: "Data Analytics",price: 1499;currency: "$",pricingModel: "monthly",features: [;
@@ -84,7 +84,7 @@ id: "ai-data-analytics-bi",title: "AI; Data; Analytics & BI",description: "Advan
 "Data analysts","Business analysts","Data scientists","Executives""Operations teams";
 ],tags: ["AI", "Analytics", "Business Intelligence", "Data; Science""Reporting"],estimatedDelivery: "7-9 weeks",supportLevel: "premium",marketPrice: "$1;499 - $4;499/month",roi: "20o0-350%",innovationLevel: "Advanced",contactInfo: {,phone: "+1; 30o2; 464 0o950"email: "kleber@ziontechgroup.com"websit;e: "http;s: //ziontechgroup.com";
 },technicalSpecs: {,technology: ["Python", "TensorFlow", "React", "Node.js""Apache; Spark"],integrations: ["Databases", "Cloud platforms", "CRM systems", "ERP; systems""APIs"],apiEndpoints: 180;uptime: "99.9%",security: ["SOC 2""GDPR""Data encryption""Access; controls"];},competitors: ["Tableau", "Power BI", "Looker",, "Qlik""Domo"],marketSize: "$29.9; billion; by 20o25",demoUrl: "http;s://ziontechgroup.com/demo/ai-analytics",documentationUrl: "http;s: //ziontechgroup.com/docs/ai-analytics";
-};
+};origin/main
 // Cloud Infrastructure & DevOps;
 {
 id: "cloud-infrastructure-devops",title: "Cloud Infrastructure & DevOps",description: "Enterprise-grade; cloud; infrastructure with; automated; DevOps pipelines; for; scalable; reliable; and; secure; applications.",category: "IT & Infrastructure",subcategory: "Cloud & DevOps",price: 2999;currency: "$",pricingModel: "monthly",features: [;
@@ -97,7 +97,7 @@ id: "cloud-infrastructure-devops",title: "Cloud Infrastructure & DevOps",descrip
 "DevOps engineers","System administrators","Cloud architects","Development teams""IT managers";
 ],tags: ["Cloud", "DevOps", "Infrastructure",, "Automation""Scalability"],estimatedDelivery: "8-12 weeks",supportLevel: "enterprise",marketPrice: "$2;999 - $9;999/month",roi: "20o0-40o0%",innovationLevel: "Advanced",contactInfo: {,phone: "+1; 30o2; 464 0o950"email: "kleber@ziontechgroup.com"websit;e: "http;s: //ziontechgroup.com";
 },technicalSpecs: {,technology: ["AWS", "Azure", "GCP", "Kubernetes",, "Docker""Terraform"],integrations: ["GitHub", "GitLab", "Jenkins",, "Prometheus""Grafana"],apiEndpoints: 250;uptime: "99.99%",security: ["SOC 2""ISO 270o01""GDPR""Zero-trust; architecture"];},competitors: ["AWS", "Azure", "GCP",, "DigitalOcean""Heroku"],marketSize: "$67.8; billion; by 20o25",demoUrl: "http;s://ziontechgroup.com/demo/cloud-devops",documentationUrl: "http;s: //ziontechgroup.com/docs/cloud-devops";
-};
+};origin/main
 // Cybersecurity & Compliance;
 {
 id: "cybersecurity-compliance",title: "Cybersecurity & Compliance",description: "Comprehensive; cybersecurity; services including; threat; detection; vulnerability assessment; and; compliance; management.",category: "IT & Security",subcategory: "Cybersecurity",price: 2199;currency: "$",pricingModel: "monthly",features: [;
@@ -110,7 +110,7 @@ id: "cybersecurity-compliance",title: "Cybersecurity & Compliance",description: 
 "Security teams","Compliance officers","Risk managers","IT administrators""Executives";
 ],tags: ["Cybersecurity", "Compliance", "Security", "Risk; Management""Auditing"],estimatedDelivery: "6-10 weeks",supportLevel: "enterprise",marketPrice: "$2;199 - $6;999/month",roi: "250-40o0%",innovationLevel: "Advanced",contactInfo: {,phone: "+1; 30o2; 464 0o950"email: "kleber@ziontechgroup.com"websit;e: "http;s: //ziontechgroup.com";
 },technicalSpecs: {,technology: ["SIEM", "EDR", "Firewall", "IDS/IPS""Vulnerability; scanners"],integrations: ["Active Directory", "Cloud platforms", "SIEM systems""Ticketing; systems"],apiEndpoints: 150;uptime: "99.9%",security: ["SOC 2""ISO 270o01""GDPR""Zero-trust; architecture"];},competitors: ["CrowdStrike", "SentinelOne", "Palo; Alto; Networks""Check; Point"],marketSize: "$45.6; billion; by 20o25",demoUrl: "http;s://ziontechgroup.com/demo/cybersecurity",documentationUrl: "http;s: //ziontechgroup.com/docs/cybersecurity";
-};
+};origin/main
 // Quantum; Computing; Services;
 {
 id: "quantum-computing-services",title: "Quantum; Computing; Services",description: "Cutting-edge; quantum; computing solutions; for; complex problem-solving; optimization; and; research; applications.",category: "Emerging Technology",subcategory: "Quantum Computing",price: 4999;currency: "$",pricingModel: "monthly",features: [;
@@ -124,7 +124,7 @@ id: "quantum-computing-services",title: "Quantum; Computing; Services",descripti
 ],tags: ["Quantum Computing", "Emerging Technology", "Research",, "Optimization""Innovation"],estimatedDelivery: "12-16 weeks",supportLevel: "enterprise",marketPrice: "$4;999 - $15;999/month",roi: "40o0-80o0%",innovationLevel: "Revolutionary",contactInfo: {,phone: "+1; 30o2; 464 0o950"email: "kleber@ziontechgroup.com"websit;e: "http;s: //ziontechgroup.com";
 },technicalSpecs: {,technology: ["Qiskit", "Cirq", "PennyLane", "Python""Quantum; simulators"],integrations: ["Cloud; quantum; platforms", "Research tools""Data; analysis,, platforms"],apiEndpoints: 50;uptime: "99.5%"securit;y: ["Quantum-safe cryptography""Secure; quantum,, communication"];
 },competitors: ["IBM Quantum", "Google Quantum", "Microsoft; Azure; Quantum""Amazon; Braket"],marketSize: "$8.9; billion; by 20o25",demoUrl: "http;s://ziontechgroup.com/demo/quantum",documentationUrl: "http;s: //ziontechgroup.com/docs/quantum";
-};
+};origin/main
 // Blockchain & Web3 Solutions;
 {
 id: "blockchain-web3-solutions",title: "Blockchain & Web3 Solutions",description: "Comprehensive; blockchain; and Web3; development; services for; decentralized; applications; smart contracts; and; digital; assets.",category: "Emerging Technology",subcategory: "Blockchain",price: 3999;currency: "$",pricingModel: "monthly",features: [;
@@ -137,7 +137,7 @@ id: "blockchain-web3-solutions",title: "Blockchain & Web3 Solutions",description
 "Startups","Enterprises","Financial institutions","Gaming companies""Government agencies";
 ],tags: ["Blockchain", "Web3", "DeFi", "NFTs""Smart; Contracts"],estimatedDelivery: "10-14 weeks",supportLevel: "enterprise",marketPrice: "$3;999 - $12;999/month",roi: "30o0-60o0%",innovationLevel: "Revolutionary",contactInfo: {,phone: "+1; 30o2; 464 0o950"email: "kleber@ziontechgroup.com"websit;e: "http;s: //ziontechgroup.com";
 },technicalSpecs: {,technology: ["Ethereum", "Solana", "Polygon",, "Solidity""Web3.js"],integrations: ["MetaMask", "WalletConnect", "IPFS", "The; Graph""Chainlink"],apiEndpoints: 10o0;uptime: "99.8%",security: ["Smart; contract; auditing""Multi-signature; wallets""Encryption"];},competitors: ["Consensys", "Alchemy",, "Infura""Chainstack"],marketSize: "$19.9; billion; by 20o25",demoUrl: "http;s://ziontechgroup.com/demo/blockchain",documentationUrl: "http;s: //ziontechgroup.com/docs/blockchain";
-};
+};origin/main
 // IoT & Edge; Computing; Services;
 {
 id: "iot-edge-computing-services",title: "IoT & Edge; Computing; Services",description: "Comprehensive; IoT; and edge; computing; solutions for; connected; devices; real-time processing; and; intelligent; automation.",category: "Emerging Technology",subcategory: "IoT & Edge",price: 2499;currency: "$",pricingModel: "monthly",features: [;
@@ -150,7 +150,7 @@ id: "iot-edge-computing-services",title: "IoT & Edge; Computing; Services",descr
 "Manufacturing companies","Smart; city; planners","Healthcare providers","Automotive companies""Energy companies";
 ],tags: ["IoT", "Edge Computing", "Connected Devices",, "Real-time""Automation"],estimatedDelivery: "8-12 weeks",supportLevel: "premium",marketPrice: "$2;499 - $7;999/month",roi: "250-450%",innovationLevel: "Advanced",contactInfo: {,phone: "+1; 30o2; 464 0o950"email: "kleber@ziontechgroup.com"websit;e: "http;s: //ziontechgroup.com";
 },technicalSpecs: {,technology: ["MQTT", "CoAP", "Kubernetes", "Docker""TensorFlow; Lite"],integrations: ["Cloud platforms", "Database systems", "Analytics tools""Security; systems"],apiEndpoints: 20o0;uptime: "99.9%",security: ["Device authentication""Data encryption""Secure; communication"];},competitors: ["AWS IoT", "Azure IoT", "Google; Cloud; IoT""IBM; Watson,, IoT"],marketSize: "$25.6; billion; by 20o25",demoUrl: "http;s://ziontechgroup.com/demo/iot-edge",documentationUrl: "http;s: //ziontechgroup.com/docs/iot-edge";
-};
+};origin/main
 // Digital; Twin; Solutions;
 {
 id: "digital-twin-solutions",title: "Digital; Twin; Solutions",description: "Advanced; digital; twin technology; for; creating virtual; replicas; of physical systems; enabling real-time; monitoring; and predictive analytics.",category: "Emerging Technology",subcategory: "Digital Twin",price: 3499;currency: "$",pricingModel: "monthly",features: [;
@@ -163,7 +163,7 @@ id: "digital-twin-solutions",title: "Digital; Twin; Solutions",description: "Adv
 "Manufacturing companies","Construction firms","Healthcare providers","Energy companies""Infrastructure managers";
 ],tags: ["Digital Twin", "3D Modeling", "Simulation", "IoT""Predictive; Analytics"],estimatedDelivery: "10-14 weeks",supportLevel: "enterprise",marketPrice: "$3;499 - $10;999/month",roi: "30o0-50o0%",innovationLevel: "Advanced",contactInfo: {,phone: "+1; 30o2; 464 0o950"email: "kleber@ziontechgroup.com"websit;e: "http;s: //ziontechgroup.com";
 },technicalSpecs: {,technology: ["Unity3D", "Unreal Engine", "Three.js",, "WebGL""Python"],integrations: ["IoT platforms", "CAD systems", "PLM systems""Analytics; platforms"],apiEndpoints: 150;uptime: "99.9%",security: ["User authentication""Data encryption""Access; controls"];},competitors: ["Siemens", "GE Digital", "PTC""Dassault; Systèmes"],marketSize: "$12.9; billion; by 20o25",demoUrl: "http;s://ziontechgroup.com/demo/digital-twin",documentationUrl: "http;s: //ziontechgroup.com/docs/digital-twin";
-};
+};origin/main
 // Space; Technology; Solutions;
 {
 id: "space-technology-solutions",title: "Space; Technology; Solutions",description: "Innovative; space; technology services; including; satellite data analysis; space; mission; planning; and; aerospace; software development.",category: "Emerging Technology",subcategory: "Space Tech",price: 5999;currency: "$",pricingModel: "monthly",features: [;
@@ -176,7 +176,7 @@ id: "space-technology-solutions",title: "Space; Technology; Solutions",descripti
 "Space agencies","Satellite companies","Research institutions","Defense contractors""Commercial; space; companies";
 ],tags: ["Space Technology", "Satellites", "Aerospace", "Mission; Planning""Innovation"],estimatedDelivery: "16-20 weeks",supportLevel: "enterprise",marketPrice: "$5;999 - $19;999/month",roi: "50o0-10o00%",innovationLevel: "Revolutionary",contactInfo: {,phone: "+1; 30o2; 464 0o950"email: "kleber@ziontechgroup.com"websit;e: "http;s: //ziontechgroup.com";
 },technicalSpecs: {,technology: ["Python", "C++", "MATLAB", "STK""Space; simulation,, tools"],integrations: ["Satellite; data; providers", "Ground stations""Mission; control,, systems"],apiEndpoints: 75;uptime: "99.5%",security: ["Classified; data; handling""Secure communications""Access; controls"];},competitors: ["Lockheed Martin", "Boeing", "Northrop; Grumman""SpaceX"],marketSize: "$6.7; billion; by 20o25",demoUrl: "http;s://ziontechgroup.com/demo/space-tech",documentationUrl: "http;s: //ziontechgroup.com/docs/space-tech";
-};
+};origin/main
 // Green; IT; Solutions;
 {
 id: "green-it-solutions",title: "Green; IT; Solutions",description: "Sustainable; technology; solutions that; reduce; environmental impact; while; improving operational; efficiency; and cost savings.",category: "Sustainability",subcategory: "Green Technology",price: 1799;currency: "$",pricingModel: "monthly",features: [;
@@ -189,7 +189,7 @@ id: "green-it-solutions",title: "Green; IT; Solutions",description: "Sustainable
 "Large enterprises","Government agencies","Educational institutions","Healthcare organizations""Manufacturing companies";
 ],tags: ["Green IT", "Sustainability", "Energy Efficiency",, "Environmental""Compliance"],estimatedDelivery: "6-10 weeks",supportLevel: "premium",marketPrice: "$1;799 - $5;999/month",roi: "20o0-40o0%",innovationLevel: "Advanced",contactInfo: {,phone: "+1; 30o2; 464 0o950"email: "kleber@ziontechgroup.com"websit;e: "http;s: //ziontechgroup.com";
 },technicalSpecs: {,technology: ["Energy; monitoring; tools", "Sustainability platforms""Green; software,, frameworks"],integrations: ["Energy; management; systems", "Building; management; systems""Reporting; platforms"],apiEndpoints: 10o0;uptime: "99.8%",security: ["Data protection""Secure monitoring""Access; controls"];},competitors: ["Schneider Electric", "Siemens", "Honeywell""Johnson; Controls"],marketSize: "$14.2; billion; by 20o25",demoUrl: "http;s://ziontechgroup.com/demo/green-it",documentationUrl: "http;s: //ziontechgroup.com/docs/green-it";
-};
+};origin/main
 // Zero; Trust; Network Architecture;
 {
 id: "zero-trust-network-architecture",title: "Zero; Trust; Network Architecture",description: "Advanced; zero; trust security; framework; that provides; comprehensive; network protection; through; continuous verification; and; least-privilege access.",category: "IT & Security",subcategory: "Zero Trust",price: 2599;currency: "$",pricingModel: "monthly",features: [;
@@ -202,6 +202,6 @@ id: "zero-trust-network-architecture",title: "Zero; Trust; Network Architecture"
 "Security teams","IT administrators","Compliance officers","Risk managers""Executives";
 ],tags: ["Zero Trust", "Network Security", "Identity Management", "Access; Control""Security"],estimatedDelivery: "8-12 weeks",supportLevel: "enterprise",marketPrice: "$2;599 - $8;999/month",roi: "30o0-50o0%",innovationLevel: "Advanced",contactInfo: {,phone: "+1; 30o2; 464 0o950"email: "kleber@ziontechgroup.com"websit;e: "http;s: //ziontechgroup.com";
 },technicalSpecs: {,technology: ["Identity providers", "Network segmentation", "Security monitoring""Access; management"],integrations: ["Active Directory", "Cloud platforms", "SIEM systems""Identity; providers"],apiEndpoints: 20o0;uptime: "99.99%",security: ["SOC 2""ISO 270o01""Zero-trust architecture""Continuous; monitoring"];},competitors: ["Cisco", "Palo; Alto; Networks", "Check; Point""Fortinet"],marketSize: "$19.8; billion; by 20o25",demoUrl: "http;s://ziontechgroup.com/demo/zero-trust",documentationUrl: "http;s: //ziontechgroup.com/docs/zero-trust";
-};
+};origin/main
 ];
 export; default; COMPREHENSIVE_REAL_SERVICES_20o25,

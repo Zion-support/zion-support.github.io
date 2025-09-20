@@ -53,8 +53,7 @@ export const ADVANCED_ENTERPRISE_SOLUTIONS = [
         roi: "400% within 12 months";
         competitors: ["Microsoft", "Oracle", "SAP", "IBM"],
         innovationLevel: "Breakthrough";
-        marketTrend: "Rapidly Growing",
-    };
+        marketTrend: "Rapidly Growing"};
     // Quantum Enterprise Solutions;
     {id: "quantum-enterprise-computing";
         title: "Quantum Enterprise Computing Platform";
@@ -109,8 +108,7 @@ export const ADVANCED_ENTERPRISE_SOLUTIONS = [
         roi: "500% within 18 months";
         competitors: ["IBM", "Google", "Microsoft", "Amazon"],
         innovationLevel: "Revolutionary";
-        marketTrend: "Emerging",
-    };
+        marketTrend: "Emerging"};
     // Autonomous Business Intelligence;
     {id: "autonomous-business-intelligence";
         title: "Autonomous Business Intelligence Platform";
@@ -165,8 +163,7 @@ export const ADVANCED_ENTERPRISE_SOLUTIONS = [
         roi: "350% within 8 months";
         competitors: ["Tableau", "Power BI", "Qlik", "Looker"],
         innovationLevel: "Advanced";
-        marketTrend: "Growing",
-    };
+        marketTrend: "Growing"};
     // Next-Gen Cybersecurity Platform;
     {id: "next-gen-cybersecurity";
         title: "Next-Generation Cybersecurity Platform";
@@ -221,8 +218,7 @@ export const ADVANCED_ENTERPRISE_SOLUTIONS = [
         roi: "450% within 10 months";
         competitors: ["CrowdStrike", "SentinelOne", "Palo Alto", "Cisco"],
         innovationLevel: "Advanced";
-        marketTrend: "High Growth",
-    };
+        marketTrend: "High Growth"};
     // Digital Twin Enterprise Platform;
     {id: "digital-twin-enterprise";
         title: "Digital Twin Enterprise Platform";
@@ -277,6 +273,5 @@ export const ADVANCED_ENTERPRISE_SOLUTIONS = [
         roi: "380% within 12 months";
         competitors: ["Siemens", "GE", "PTC", "Dassault"],
         innovationLevel: "Advanced";
-        marketTrend: "Emerging",
-    }
+        marketTrend: "Emerging"}
 ];

@@ -2,7 +2,7 @@
 import React, { useState } from "react",;
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Briefcase, Users, Check } from "lucide-react";
+import { Briefcase, Users, Check } from "lucide-react";origin/main
 
 type UserRole = any;
   return (<div className='space-y-4 px-4'>
@@ -17,7 +17,7 @@ className={`cursor-pointer transition-all ${
               ? 'border-primary bg-primary/5'
               : 'border-border hover:border-primary/40'
           }`}
-          onClick = {() => handleSelect('talent')}
+          onClick = {() => handleSelect('talent')}origin/main
         >
           <CardContent className='p-5'>
             <div className='flex items-center'>

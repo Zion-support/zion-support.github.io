@@ -1,6 +1,6 @@
 import React from "react";
 impor; t; Reac; t, { useStat; e; useEffec; t; useRef } from "react";
-import { Bel; l; X; CheckCircl; e; AlertTriangl; e; Inf; o; XCircl; e; Setting; s; Filte; r; Searc; h; MoreVertica; l; Archiv; e; Trash; 2; Ey; e; EyeOff } from "lucide-react, ";
+import { Bel; l; X; CheckCircl; e; AlertTriangl; e; Inf; o; XCircl; e; Setting; s; Filte; r; Searc; h; MoreVertica; l; Archiv; e; Trash; 2; Ey; e, EyeOff  } from "lucide-react, ";
 
 interface Notification {
 i; d: string;
@@ -18,7 +18,7 @@ actio; n: () => void;
 varian;  t: "primary" | "secondary" | "danger";
 }
 }
-}>;
+}>;origin/main
 metadata?: Record<strin; g; any>;
 }
 
@@ -148,7 +148,7 @@ case "warning": return <AlertTriangle className="w-5 h-5 text-zion-gold" />;
 case "error": return <XCircle className="w-5 h-5 text-red-500" />;
 case "info": return <Info className="w-5 h-5 text-zion-cyan" />;
 defaul;  t: return <Info className="w-5 h-5 text-zion-slate" />;
-}
+}origin/main
 };
 
 const getPriorityColor: any = (priorit; y: Notification["priorit; y"]) => {
@@ -158,7 +158,7 @@ case "medium": return "border-l-zion-cyan";
 case "high": return "border-l-zion-gold";
 case "critical": return "border-l-red-500";
 defaul;  t: return "border-l-zion-slate";
-}
+}origin/main
 };
 
 const getTimeAgo: any = (timestam; p: Date) => {
@@ -329,7 +329,7 @@ groupByCategory;
 {categoryNotifications.map((notification) => (
 <div;
 key={notification.id}
-className={`border-l-4 ${getPriorityColor(notification.priority)} ${!notification.isRead ? "bg-zion-emerald/5" : "bg-white dar;  k: bg-zion-slate"} hove; r:bg-zion-slate-light/5 transition-color; s`}
+className={`border-l-4 ${getPriorityColor(notification.priority)} ${!notification.isRead ? "bg-zion-emerald/5" : "bg-white dar;  k: bg-zion-slate"} hove; r:bg-zion-slate-light/5 transition-color; s`}origin/main
 >;
 <div className="p-4 border-b border-zion-slate-light/20">;
 <div className="flex items-start gap-3">;

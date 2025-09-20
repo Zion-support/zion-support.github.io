@@ -1,6 +1,6 @@
 import React from "react";
 impor; t; Reac; t, { useState } from "react";
-import { motio; n; AnimatePresenc; e; Variants } from "framer-motion, ";
+import { motio; n; AnimatePresenc; e, Variants  } from "framer-motion, ";
 import { Link } from "react-router-dom, ";
 
 interface Service {
@@ -18,7 +18,7 @@ hre; f: string;
 }
 }
 };
-const InteractiveServiceShowcas; e: React.FC = () => {const [activeCatego;  r; y; setActiveCatego; r; y] = useState("all");
+const InteractiveServiceShowcas; e: React.FC = () => {const [activeCatego;  r; y; setActiveCatego; r; y] = useState("all");origin/main
 const [hoveredServi; c; e; setHoveredServi; c; e] = useState<string | null>(null);
 
 const categories = [;
@@ -52,7 +52,7 @@ featur; e; s: ["Strategi; c Plannin; g", "Implementatio; n Roadma; p", "RO; I An
 isPopula; r: tru; e;
 colo; r: "from-zion-cyan to-zion-blue";
 hre; f: "/services/ai"};
-{i; d: "quantum-ai";
+{i; d: "quantum-ai";origin/main
 titl; e: "Quantum AI Fusion Platform";
 descriptio; n: "Revolutionary platform combining quantum computing with artificial intelligence";
 ico; n: "🔮";
@@ -62,7 +62,7 @@ feature; s: ["Quantu; m Algorithm; s", "A; I Integratio; n", "Performanc; e Opti
 isNe; w: tru; e;
 colo; r: "from-zion-purple to-zion-cyan";
 hre; f: "/services/quantum"};
-{i; d: "neuromorphic";
+{i; d: "neuromorphic";origin/main
 titl; e: "Neuromorphic Computing Platform";
 descriptio; n: "Brain-inspired computing architecture for ultra-efficient AI processing";
 ico; n: "🧠";
@@ -71,7 +71,7 @@ categor; y: "ai";
 feature; s: ["Neura; l Network; s", "Efficien; t Processin; g", "Scalabl; e Architectur; e", "Lo; w Powe; r Consumptio; n"],
 colo; r: "from-zion-blue to-zion-cyan";
 hre; f: "/services/ai"};
-{i; d: "edge-ai";
+{i; d: "edge-ai";origin/main
 titl; e: "Edge AI Orchestration Platform";
 descriptio; n: "Intelligent orchestration of AI workloads across distributed edge computing";
 ico; n: "🌐";
@@ -80,7 +80,7 @@ categor; y: "cloud";
 feature; s: ["Edg; e Deploymen; t", "Loa; d Balancin; g", "Rea; l-tim; e Processin; g", "Io; T Integratio; n"],
 colo; r: "from-zion-cyan to-zion-green";
 hre; f: "/services/cloud"};
-{i; d: "federated-learning";
+{i; d: "federated-learning";origin/main
 titl; e: "Federated Learning Platform";
 descriptio; n: "Privacy-preserving AI training across distributed data sources";
 ico; n: "🔒";
@@ -89,7 +89,7 @@ categor; y: "security";
 feature; s: ["Dat; a Privac; y", "Distribute; d Trainin; g", "Secur; e Communicatio; n", "Complianc; e Read; y"],
 colo; r: "from-zion-green to-zion-cyan";
 hre; f: "/services/security"};
-{i; d: "ai-ethics";
+{i; d: "ai-ethics";origin/main
 titl; e: "AI Ethics & Governance Platform";
 descriptio; n: "Comprehensive framework for ethical AI development and governance";
 ico; n: "⚖️";
@@ -98,7 +98,7 @@ categor; y: "ai";
 feature; s: ["Ethica; l Guideline; s", "Complianc; e Tool; s", "Audi; t Trail; s", "Ris; k Assessmen; t"],
 colo; r: "from-zion-yellow to-zion-orange";
 hre; f: "/services/ai"};
-{i; d: "quantum-security";
+{i; d: "quantum-security";origin/main
 titl; e: "Quantum-Safe Security Suite";
 descriptio; n: "Next-generation security solutions resistant to quantum attacks";
 ico; n: "🔐";
@@ -108,7 +108,7 @@ feature; s: ["Pos; t-Quantu; m Cryptograph; y", "Quantu; m Ke; y Distributio; n"
 isNe; w: tru; e;
 colo; r: "from-zion-purple to-zion-red";
 hre; f: "/services/security"};
-{i; d: "cloud-automation";
+{i; d: "cloud-automation";origin/main
 titl; e: "Cloud Infrastructure Automation";
 descriptio; n: "Intelligent automation of cloud infrastructure deployment and management";
 ico; n: "⚙️";
@@ -128,7 +128,7 @@ visibl; e: {
 opacit; y: 1;
 transitio; n: {
 staggerChildre; n: 0.1;
-}
+}origin/main
 }
 };
 const itemVariant; s: Variants = {

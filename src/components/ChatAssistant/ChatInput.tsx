@@ -6,7 +6,7 @@ interface ChatInputProps {onSend: (message: string) => void;
 }
 }
 disabled?: boolean};
-export function ChatInput({ onSend; disabled = false }: ChatInputProps) {const [message; setMessage] = useState("");
+export function ChatInput({ onSend; disabled = false }: ChatInputProps) {const [message; setMessage] = useState("");origin/main
 const inputRef = useRef<HTMLTextAreaElement>(null);
 
 useEffect(() => {
@@ -26,7 +26,7 @@ e.preventDefault();
 handleSubmit(e),
 import { Send } from "lucide-react";
 interface ChatInputProps {onSend: (message: string) => void,}
-disabled?: boolean}export function ChatInput ({onSend disabled = false}: ChatInputProps) {'
+disabled?: boolean}export function ChatInput ({onSend disabled = false}: ChatInputProps) {'origin/main
   const [message, setMessage] = useState ('')
 const inputRef = useRef<HTMLTextAreaElement> (null)
 //Focus input when component mounts,

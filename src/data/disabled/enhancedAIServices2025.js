@@ -54,7 +54,7 @@ export const enhancedAIServices2025 = [
         multilingualSupport: true;
         industrySpecific: true,
     };
-    {id: 2;
+    {id: 2;origin/main
         name: "NLP Genius";
         category: "Natural Language Processing";
         pricing: "Tiered";
@@ -108,7 +108,7 @@ export const enhancedAIServices2025 = [
         multilingualSupport: true;
         industrySpecific: true,
     };
-    {id: 3;
+    {id: 3;origin/main
         name: "Predictive Analytics Pro";
         category: "Predictive Analytics";
         pricing: "Enterprise";
@@ -162,7 +162,7 @@ export const enhancedAIServices2025 = [
         multilingualSupport: false;
         industrySpecific: true,
     };
-    {id: 4;
+    {id: 4;origin/main
         name: "AI Chatbot Studio";
         category: "Conversational AI";
         pricing: "Freemium";
@@ -216,7 +216,7 @@ export const enhancedAIServices2025 = [
         multilingualSupport: true;
         industrySpecific: true,
     };
-    {id: 5;
+    {id: 5;origin/main
         name: "AI Content Creator";
         category: "Content Generation";
         pricing: "Usage-based";
@@ -270,7 +270,7 @@ export const enhancedAIServices2025 = [
         multilingualSupport: true;
         industrySpecific: true,
     };
-    {id: 6;
+    {id: 6;origin/main
         name: "AI Data Scientist";
         category: "Data Science";
         pricing: "Enterprise";
@@ -324,7 +324,7 @@ export const enhancedAIServices2025 = [
         multilingualSupport: false;
         industrySpecific: true,
     };
-    {id: 7;
+    {id: 7;origin/main
         name: "AI Voice Assistant";
         category: "Voice AI";
         pricing: "Tiered";
@@ -378,7 +378,7 @@ export const enhancedAIServices2025 = [
         multilingualSupport: true;
         industrySpecific: true,
     };
-    {id: 8;
+    {id: 8;origin/main
         name: "AI Recommendation Engine";
         category: "Recommendation Systems";
         pricing: "Usage-based";
@@ -432,7 +432,7 @@ export const enhancedAIServices2025 = [
         multilingualSupport: false;
         industrySpecific: true,
     };
-    {id: 9;
+    {id: 9;origin/main
         name: "AI Fraud Detection";
         category: "Security AI";
         pricing: "Enterprise";
@@ -486,7 +486,7 @@ export const enhancedAIServices2025 = [
         multilingualSupport: false;
         industrySpecific: true,
     };
-    {id: 10;
+    {id: 10;origin/main
         name: "AI Process Automation";
         category: "Process Automation";
         pricing: "Tiered";
@@ -538,7 +538,6 @@ export const enhancedAIServices2025 = [
         scalability: "Enterprise-grade";
         realTimeProcessing: true;
         multilingualSupport: false;
-        industrySpecific: true,
-    }
+        industrySpecific: true}
 ];
     export default enhancedAIServices2025;

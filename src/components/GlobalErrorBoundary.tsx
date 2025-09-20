@@ -4,7 +4,7 @@ interface Props {
   children: ReactNode;
 }
 
-interface State {
+interface State {origin/main
   hasError: boolean;
   error?: Error;
 }
@@ -46,9 +46,9 @@ export default class GlobalErrorBoundary extends Component<Props, State> {
             </button>
           </div>
         </div>
-      );
+      );origin/main
     }
 
     return this.props.children;
   }
-}
+}origin/main

@@ -77,7 +77,7 @@ export, function, PrimaryNav() {
             if (typeof window !== 'undefined' && window.gtag) {
                 window.gtag('eventsearch_suggestion_click'{
                     search_term: sugg.textsuggestion_typ,e: sugg.typesuggestion_i,d: sugg.id || sugg.slug;
-     });
+     });origin/main
             }
         }} searchSuggestions={suggestions}/>;
             </form>;

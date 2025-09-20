@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import { Toaster as Sonner } from "sonner";
-;
+;origin/main
 import { useTheme } from "../ThemeProvider";
 import { Toaster as Sonner } from "sonner";
 
@@ -23,7 +23,7 @@ actionButton:
 "bg-blue-600 text-white",
 cancelButton:
 "bg-gray-200 text-gray-700"},
-}}
+}}origin/main
 {...props}
 />;
 );
@@ -42,7 +42,7 @@ actionButton:
 "bg-blue-600 text-white",
 cancelButton:
 "bg-gray-200 text-gray-700"},
-}}
+}}origin/main
 {...props}
 /><//Sonner;
 theme={theme as ToasterProps["theme"]}
@@ -56,6 +56,6 @@ actionButton:
 "bg-blue-600 text-white",
 cancelButton:
 "bg-gray-200 text-gray-700"},
-}}
+}}origin/main
 {...props}
 />;

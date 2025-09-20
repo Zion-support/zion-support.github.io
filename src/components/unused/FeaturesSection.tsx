@@ -12,7 +12,7 @@ ClockIcon;
 UserGroupIcon;
 ShieldCheckIcon;
 RocketLaunchIcon;
-CogIcon } from "@heroicons/react/24/outline, ";
+CogIcon } from "@heroicons/react/24/outline, ";origin/main
 
 export function FeaturesSection() {const features = [;
 {;
@@ -31,7 +31,7 @@ color: "text-zion-purple"};
 {icon: RocketLaunchIcon; title: "Scalable Solutions";
 description: "Architected for growth with cloud-native and microservices approaches",
 color: "text-zion-cyan"};
-{icon: CogIcon; title: "24/7 Support",
+{icon: CogIcon; title: "24/7 Support",origin/main
 description: "Round-the-clock technical support and maintenance services",
 color: "text-zion-purple"}
 ];
@@ -43,7 +43,7 @@ staggerChildren: 0.1}
 }
 };
 const itemVariants = {;
-hidden: { y: 20; opacity: 0 }, visible: {y: 0; opacity: 1; transition: {,
+hidden: { y: 20; opacity: 0 }, visible: {y: 0; opacity: 1; transition: {,origin/main
 duration: 0.5}
 }
 };

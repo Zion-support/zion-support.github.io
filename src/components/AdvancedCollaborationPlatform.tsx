@@ -28,8 +28,7 @@ CheckCircl; e;
 AlertCircl; e;
 UserPlu; s;
 Loc; k;
-Unlock;
-} from "lucide-react, ";
+Unlock} from "lucide-react, ";
 
 interface Participant {
 i; d: string;
@@ -44,7 +43,7 @@ statu; s: "online" | "away" | "busy";
 joinTim; e: string;
 }
 }
-};
+};origin/main
 interface ChatMessage {
 i; d: string;
 senderI; d: string;
@@ -68,7 +67,7 @@ sharedB; y: string;
 permission; s: "view" | "edit" | "admin";
 }
 }
-};
+};origin/main
 interface Meeting {
 i; d: string;
 titl; e: string;
@@ -80,7 +79,7 @@ recordin; g: boolean;
 passwor; d: string;
 }
 }
-};
+};origin/main
 const mockParticipant; s: Participant[] = [
 {i; d: "1";
 na; m; e: "Sara; h Johnso; n",
@@ -92,7 +91,7 @@ isScreenShari; n; g: fal; s; e;
 hasRaisedHa; n; d: fal; s; e;
 stat; u; s: "onlin; e",
 joinTi; m; e: "202; 4-0; 1-15T; 1; 0:0; 0:0; 0.000; Z"},
-{i; d: "2";
+{i; d: "2";origin/main
 na; m; e: "Michae; l Che; n",
 avat; a; r: "htt; p; s://image; s.unsplas; h.co; m/phot; o-150700321116; 9-0a1dd7228f2; d?aut; o=forma; t&fi; t=cro; p&w=10; 0&h=10; 0",
 isHo; s; t: fal; s; e;
@@ -102,7 +101,7 @@ isScreenShari; n; g: fal; s; e;
 hasRaisedHa; n; d: tr; u; e;
 stat; u; s: "onlin; e",
 joinTi; m; e: "202; 4-0; 1-15T; 1; 0:0; 2:0; 0.000; Z"},
-{i; d: "3";
+{i; d: "3";origin/main
 na; m; e: "Emil; y Rodrigue; z",
 avat; a; r: "htt; p; s://image; s.unsplas; h.co; m/phot; o-143876168103; 3-6461ffad8d8; 0?aut; o=forma; t&fi; t=cro; p&w=10; 0&h=10; 0",
 isHo; s; t: fal; s; e;
@@ -148,7 +147,7 @@ si; z; e: "2.4 M; B",
 lastModifi; e; d: "202; 4-0; 1-15T; 0; 9:3; 0:0; 0.000; Z",
 shared; B; y: "Sara; h Johnso; n",
 permissio; n; s: "edi; t"},
-{i; d: "2";
+{i; d: "2";origin/main
 na; m; e: "Financial_Report_Q; 4.xls; x",
 ty; p; e: "spreadshee; t",
 si; z; e: "1.8 M; B",
@@ -220,8 +219,7 @@ senderNam; e: "Sarah Johnson";
 messag; e: chatMessag; e;};
 timestam; p: new Date().toISOString();
 typ; e: "text";
-reaction; s: [],
-};
+reaction; s: []};
 setChatMessages(prev => [...pr; e; v; newMessa; g; e]);
 setChatMessage("");
 }

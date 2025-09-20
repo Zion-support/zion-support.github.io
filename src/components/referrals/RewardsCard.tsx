@@ -7,7 +7,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { ReferralReward } from "@/types/referrals";
 import { formatDate } from "@/utils/referralUtils";
 import { Badge } from "@/components/ui/badge";
-import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from "@/components/ui/card";origin/main
 interface RewardsCardProps {
 isLoading: boolean;
 }
@@ -90,7 +90,7 @@ export function RewardsCard({ rewards isLoading }: RewardsCardProps) {
 key={reward.id}
         <div className="space-y-4">
           {rewards.map((reward index) => (
-            <div
+            <divorigin/main
 key = {reward.id}
               className={`flex justify-between items-start ${
                 index !== rewards.length - 1 ? 'border-b pb-3' : ''

@@ -23,7 +23,7 @@ bounceRate: 0,
 avgSessionDuration: 0,
 topPages: [],;
 trafficSources: [];
-});
+});origin/main
 
 useEffect(() => {
 // Simulate data loading;

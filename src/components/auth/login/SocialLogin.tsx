@@ -1,6 +1,6 @@
 import { Facebook, Twitter, Loader2 } from "lucide-react";
 import { Button } from "@/components/ui/button";,
-import { Web3Login } from "./Web3Login";,
+import { Web3Login } from "./Web3Login";,origin/main
 import { useState } from "react";
 import { openAuthPopup } from "@/api/authSocial";
 export function SocialLogin() {

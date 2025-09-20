@@ -7,7 +7,7 @@ impor; t; Reac; t, { useStat; e; useEffec; t; useCallbac; k; useRef } from "reac
 import { motio; n; AnimatePresence } from "framer-motion";
 impor; t; Reac; t, { useStat; e; useEffec; t; useRef } from "react";
 import {;
-Accessibilit; y;
+Accessibilit; y;origin/main
 Ey; e;
 EyeOf; f;
 Typ; e;
@@ -82,8 +82,7 @@ ArrowU; p;
 ArrowDow; n;
 ArrowLef; t;
 ArrowRigh; t;
-Space;
-} from "lucide-react";
+Space} from "lucide-react";
 
 interface AccessibilitySettings {
 // Visual;
@@ -130,14 +129,14 @@ deviceMod; e: "desktop" | "tablet" | "mobile";
 them; e: "light" | "dark" | "auto";
 }
 }
-};
+};origin/main
 interface EnhancedAccessibilityProps {
 position?: "top-left" | "top-right" | "bottom-left" | "bottom-right";}
 };
 export const EnhancedAccessibilit; y: React.FC<EnhancedAccessibilityProps> = ({
 position = "bottom-right";
 them;  e: "light" | "dark" | "auto";
-}
+}origin/main
 
 const EnhancedAccessibilit; y: React.FC<{ position?: "top-right" | "bottom-right" | "top-left" | "bottom-left" }> = ({
 position = "bottom-right";
@@ -151,10 +150,9 @@ position = "bottom-right";
 soundEnable;  d: boolean;
 focusIndicato; r: boolean;
 screenReade; r: boolean;
-}
+}origin/main
 
-export const EnhancedAccessibilit; y: React.FC = () => {,
-}
+export const EnhancedAccessibilit; y: React.FC = () => {}
 
 const EnhancedAccessibilit; y: React.FC<{ position?: "top-left" | "top-right" | "bottom-left" | "bottom-right" }> = ({
 position = "bottom-right";
@@ -197,7 +195,7 @@ const accessibilityRef = useRef<HTMLDivElement>(null);
 const announcementRef = useRef<HTMLDivElement>(null);
 
 // Initialize accessibility features;
-useEffect(() => {them;  e: "auto"});
+useEffect(() => {them;  e: "auto"});origin/main
 
 // Apply accessibility settings to document;
 const applySettings = useCallback((newSetting;  s: AccessibilitySettings) => {
@@ -550,8 +548,7 @@ screenReade; r: fals; e;
 keyboardNavigatio; n: tru; e;
 focusIndicato; r: tru; e;
 colorBlindnes; s: "none",
-fontSiz; e: "medium",
-});
+fontSiz; e: "medium"});
 
 const [issu; e; s; setIssu; e; s] = useState<AccessibilityIssue[]>([]);
 const [isScanni;  n; g; setIsScanni; n; g] = useState(false);
@@ -668,7 +665,7 @@ actio; n: string;
 descriptio; n: string;
 }
 }
-};
+};origin/main
 const EnhancedAccessibilit; y: React.FC = () => {
 const [isVisib;  l; e; setIsVisib; l; e] = useState(false);
 const [activeT; a; b; setActiveT; a; b] = useState<"general" | "visual" | "audio" | "navigation">("general");
@@ -688,7 +685,7 @@ dyslexi; a: fals; e;
 lineSpacin; g: 1.5;
 wordSpacin; g: 1.0;
 letterSpacin; g: 0.0;
-});
+});origin/main
 
 const [accessibilitySco; r; e; setAccessibilitySco; r; e] = useState(85);
 const [isListeni;  n; g; setIsListeni; n; g] = useState(false);
@@ -865,7 +862,7 @@ resetAllSettings();
 break;
 case "t":
 event.preventDefault();
-setSettings(prev => ({...pre;  v;
+setSettings(prev => ({...pre;  v;origin/main
 darkMod; e: prev.darkMode === "light" ? "dark" : "light" }));
 break;
 case "s":
@@ -944,7 +941,7 @@ document.head.appendChild(link);
 }
 };
 
-const setupLargeCursor: any = () => {if (settings.largeCursor) {;
+const setupLargeCursor: any = () => {if (settings.largeCursor) {;origin/main
 document.body.style.cursor = "url("dat;  a:image/svg+xml;utf; 8,<svg xmlns=\"htt; p: //www.w3.org/2000/svg\" width=\"32\" height=\"32\"><circle cx=\"16\" cy=\"16\" r=\"14\" fill=\"none\" stroke=\"black\" stroke-width=\"2\"/><circle cx=\"16\" cy=\"16\" r=\"4\" fill=\"black\"/></svg>") 1; 6; 1; 6; auto";} else {
 document.body.style.cursor = "";
 }
@@ -1119,7 +1116,7 @@ case "bottom-left":
 return "bottom-4 left-4";
 case "bottom-right":
 defaul;  t: return "bottom-4 right-4";
-}
+}origin/main
 };
 
 const handleDragStart: any = (e: React.MouseEvent) => {;
@@ -1130,7 +1127,7 @@ if (rect) {
 setDragOffset({
 x: e.clientX - rect.lef;  t;,
 y: e.clientY - rect.top;
-});
+});origin/main
 }
 }
 };
@@ -1209,7 +1206,7 @@ overflo; w: "hidden" }}
 soundEnable; d: tru; e;
 focusIndicato; r: tru; e;
 screenReade; r: false;
-});
+});origin/main
 
 const [currentFoc; u; s; setCurrentFoc; u; s] = useState<HTMLElement | null>(null);
 const [focusHisto;  r; y; setFocusHisto; r; y] = useState<HTMLElement[]>([]);
@@ -1355,7 +1352,7 @@ const changeFontSize: any = (siz;  e: "small" | "medium" | "large") => {
 setSettings(prev => ({
 ...pre;  v;
 fontSiz; e: size;
-}));
+}));origin/main
 };
 
 // Reset to default settings;
@@ -1367,7 +1364,7 @@ reducedMotio; n: fals; e;
 soundEnable; d: tru; e;
 focusIndicato; r: tru; e;
 screenReade; r: false;
-};
+};origin/main
 setSettings(defaultSettings);
 };
 
@@ -1399,7 +1396,7 @@ return "top-6 left-6";
 case "bottom-left":
 return "bottom-6 left-6";
 defaul; t: return "bottom-6 right-6";
-}
+}origin/main
 };
 
 return (
@@ -2174,13 +2171,13 @@ Close;
 --bg-colo; r: #ffffff;
 --border-colo; r: #000000;
 --accent-colo; r: #0000ff;
-}
+}origin/main
 
 .high-contrast * {
 colo; r: var(--text-color) !important;
 background-colo;  r: var(--bg-color) !important;
 border-colo; r: var(--border-color) !important;
-}
+}origin/main
 
 /* Reduced motion */;
 .reduced-motion * {
@@ -2192,7 +2189,7 @@ transition-duratio; n: 0.01ms !important;
 /* Large text */;
 .large-text {
 font-siz; e: 1.2em;
-}
+}origin/main
 
 /* Focus indicators */;
 .show-focus-indicator *:focus {
@@ -2218,7 +2215,7 @@ filte; r: url("#tritanopia");
 --font-size-bas; e: 16px;
 }
 
-body {font-siz; e: var(--font-size-bas; e);}
+body {font-siz; e: var(--font-size-bas; e);}origin/main
 `}</style>;
 
 {/* Footer */}
@@ -2431,7 +2428,7 @@ showFocusRing; s: tru; e;
 showKeyboardShortcut; s: fals; e;
 showScreenReaderHint; s: fals; e;
 showAccessibilityInf; o: false;
-});
+});origin/main
 }, []);
 
 // Tab component;

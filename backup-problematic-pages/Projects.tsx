@@ -1,3 +1,4 @@
+<<<<<<< HEAD:backup-problematic-pages/Projects.tsx
 import { Clock, Briefcase } from "lucide-react";
 function ProjectsContent() { const { projects, isLoading } = useProjects()
 function ProjectsContent() {
@@ -66,8 +67,15 @@ title='My Projects | Zion AI Marketplace'
       </main>
 </>
   )
+import React from 'react';
+
 export default function Projects() {
-  return <ProjectsContent /> }
-export default function Projects() {
-  return <ProjectsContent />
+  return (
+    <div className="min-h-screen bg-gray-50 py-12">
+      <div className="container mx-auto px-4">
+        <h1 className="text-4xl font-bold text-gray-900 mb-6">Projects</h1>
+        <p className="text-lg text-gray-600">Manage your projects...</p>
+      </div>
+    </div>
+  );
 }

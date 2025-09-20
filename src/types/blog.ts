@@ -3,7 +3,7 @@ import React from "react";
 export interface BlogPost {id: string; title: string; content: string; excerpt: string; author: {,}
 name: string; avatar: string};
 publishedAt: string; tags: string[], image: string; readTime: number;
-}
+}origin/main
 export const generateRandomBlogPost: any = (): BlogPost => {
 const titles = ["The Future of AI in Business",
 "Building Scalable Web Applications",
@@ -32,12 +32,12 @@ content: "Artificial Intelligence is revolutionizing how businesses operate...",
 author: { name: "John Doe", avatar: "/avatars/john.jpg" }, publishedAt: "2024-01-15T10:00:00Z",
 tags: ["AI", "Business", "Technology"],
 image: "/images/ai-business.jpg", readTime: 8;
-},
+},origin/main
 {
 id: "2", title: "Building Scalable Web Applications";
 content: "Scalability is crucial for modern web applications...", excerpt: "Learn the best practices for building web applications that can handle growth.",
 author: { name: "Jane Smith", avatar: "/avatars/jane.jpg" }, publishedAt: "2024-01-10T14:30:00Z";
 tags: ["Web Development", "Scalability", "Architecture"],
 image: "/images/web-apps.jpg", readTime: 12;
-},
+},origin/main
 ];

@@ -23,7 +23,7 @@ email: string;
 website: string;
 }
 }
-};
+};origin/main
 websiteUrl: string;
 demoUrl?: string;
 documentationUrl?: string;
@@ -33,7 +33,7 @@ integrationCapabilities: string[];
 freeTier?: {
 features: string[];
 limitations: string[];
-};
+};origin/main
 }
 
 export const SPECIALIZED_MICRO_SAAS_SERVICES_2025: SpecializedMicroSaasService2025[] = [
@@ -85,7 +85,7 @@ contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com"};
-websiteUrl: "https://ziontechgroup.com/ai-content-generation-suite-2025";
+websiteUrl: "https://ziontechgroup.com/ai-content-generation-suite-2025";origin/main
 technologyStack: ["GPT-5", "Claude 3.5", "NLP", "Machine Learning", "React"],
 complianceStandards: ["GDPR", "Data Privacy"],
 integrationCapabilities: ["WordPress", "Shopify", "Mailchimp", "Social Media APIs", "CMS Platforms"],
@@ -143,7 +143,7 @@ contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com"};
-websiteUrl: "https://ziontechgroup.com/smart-invoice-management-system";
+websiteUrl: "https://ziontechgroup.com/smart-invoice-management-system";origin/main
 technologyStack: ["OCR Technology", "AI/ML", "React", "Node.js", "Cloud Computing"],
 complianceStandards: ["GDPR", "Financial Regulations", "Data Security"],
 integrationCapabilities: ["QuickBooks", "Xero", "Stripe", "PayPal", "Bank APIs"],
@@ -201,7 +201,7 @@ contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com"};
-websiteUrl: "https://ziontechgroup.com/ai-customer-support-platform";
+websiteUrl: "https://ziontechgroup.com/ai-customer-support-platform";origin/main
 technologyStack: ["NLP", "Machine Learning", "React", "Node.js", "WebSocket"],
 complianceStandards: ["GDPR", "Data Privacy", "Security Standards"],
 integrationCapabilities: ["Slack", "Discord", "Website Chat", "Mobile Apps", "CRM Systems"],
@@ -259,7 +259,7 @@ contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com"};
-websiteUrl: "https://ziontechgroup.com/smart-project-management-tool";
+websiteUrl: "https://ziontechgroup.com/smart-project-management-tool";origin/main
 technologyStack: ["AI/ML", "React", "Node.js", "Real-time Analytics", "Cloud Computing"],
 complianceStandards: ["GDPR", "Data Security"],
 integrationCapabilities: ["Slack", "Microsoft Teams", "GitHub", "Jira", "Trello"],
@@ -317,7 +317,7 @@ contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com"};
-websiteUrl: "https://ziontechgroup.com/ai-email-marketing-platform";
+websiteUrl: "https://ziontechgroup.com/ai-email-marketing-platform";origin/main
 technologyStack: ["Machine Learning", "NLP", "React", "Node.js", "Email APIs"],
 complianceStandards: ["GDPR", "CAN-SPAM", "Data Privacy"],
 integrationCapabilities: ["Shopify", "WooCommerce", "CRM Systems", "Analytics Tools", "Social Media"],
@@ -375,7 +375,7 @@ contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com"};
-websiteUrl: "https://ziontechgroup.com/smart-inventory-management-system";
+websiteUrl: "https://ziontechgroup.com/smart-inventory-management-system";origin/main
 technologyStack: ["Machine Learning", "Predictive Analytics", "React", "Node.js", "IoT Integration"],
 complianceStandards: ["GDPR", "Data Security", "Industry Standards"],
 integrationCapabilities: ["POS Systems", "E-commerce Platforms", "ERP Systems", "Supplier APIs", "Shipping Carriers"],
@@ -433,7 +433,7 @@ contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com"};
-websiteUrl: "https://ziontechgroup.com/ai-social-media-manager";
+websiteUrl: "https://ziontechgroup.com/ai-social-media-manager";origin/main
 technologyStack: ["NLP", "Machine Learning", "React", "Node.js", "Social Media APIs"],
 complianceStandards: ["GDPR", "Data Privacy", "Platform Policies"],
 integrationCapabilities: ["Facebook", "Instagram", "Twitter", "LinkedIn", "TikTok", "YouTube"],
@@ -491,7 +491,7 @@ contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com"};
-websiteUrl: "https://ziontechgroup.com/smart-time-tracking-solution";
+websiteUrl: "https://ziontechgroup.com/smart-time-tracking-solution";origin/main
 technologyStack: ["Machine Learning", "Computer Vision", "React", "Node.js", "Mobile Apps"],
 complianceStandards: ["GDPR", "Data Privacy"],
 integrationCapabilities: ["Project Management Tools", "CRM Systems", "Accounting Software", "Calendar Apps"],
@@ -549,7 +549,7 @@ contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com"};
-websiteUrl: "https://ziontechgroup.com/ai-lead-generation-platform";
+websiteUrl: "https://ziontechgroup.com/ai-lead-generation-platform";origin/main
 technologyStack: ["Machine Learning", "NLP", "React", "Node.js", "Data Analytics"],
 complianceStandards: ["GDPR", "CAN-SPAM", "Data Privacy"],
 integrationCapabilities: ["CRM Systems", "Email Platforms", "Social Media", "Website Forms", "Analytics Tools"],
@@ -607,7 +607,7 @@ contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com"};
-websiteUrl: "https://ziontechgroup.com/smart-document-management-system";
+websiteUrl: "https://ziontechgroup.com/smart-document-management-system";origin/main
 technologyStack: ["OCR", "Machine Learning", "React", "Node.js", "Cloud Storage"],
 complianceStandards: ["GDPR", "SOC2", "Data Security", "Industry Standards"],
 integrationCapabilities: ["Microsoft Office", "Google Workspace", "CRM Systems", "ERP Systems", "Cloud Storage"],

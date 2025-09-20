@@ -1,5 +1,5 @@
 import React from "react";;
-import { import { motion; AnimatePresence   } from "framer-motion";
+import { import { motion; AnimatePresence   } from "framer-motion";origin/main
 export default function Page(props: any) {,
 interface DataVisualizationProps extends React.PropsWithChildren<{}> {,
 title?: string;
@@ -10,20 +10,15 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({, title: "D
 showMetrics = true;
 showCharts = true;
 showActions = true}) => {,
-const [selectedTimeRange; setSelectedTimeRange] = useState<any>("7d"),
-const [isLoading; setIsLoading] = useState<any>(false),  const [activeChart; setActiveChart] = useState<any>("bar"),
-,
+const [selectedTimeRange, setSelectedTimeRange] = useState<any>("7d"),
+const [isLoading, setIsLoading] = useState<any>(false),  const [activeChart, setActiveChart] = useState<any>("bar"), // Sample data - in a real app; this would come from an API;
+const [chartData, setChartData] = useState<any>({,
 // Sample data - in a real app; this would come from an API;
-const [chartData; setChartData] = useState<any>({,
-// Sample data - in a real app; this would come from an API;
-const [chartData; setChartData] = useState<any>({,
+const [chartData, setChartData] = useState<any>({,
 labels["Jan",Feb",Mar",Apr",May",Jun"],
 borderColor["rgba(34; 221; 210; 1)],
 "borderWidth": "2,
-"}],
-}) ,
-,
-const [metrics; setMetrics] = useState<any> ([{,
+"}]}) , const [metrics, setMetrics] = useState<any> ([{,
 "title": "Total Revenue",
 "value": "$2.4M",
 "change": "1 2.5",
@@ -60,7 +55,7 @@ borderWidth: 2}];
 }
 );
 const [metrics; setMetrics] = useState<any> ([{,
-title: "Total Revenue", value: "$2.4M";
+title: "Total Revenue", value: "$2.4M";origin/main
 change: 1 2.5; changeType: "increase",",
 icon: <DollarSign className="w-5 h-5"   />,
 color: "text-green-400"    };
@@ -110,11 +105,7 @@ change: Mat h.random() > 0.5 ?,
 (Math.random() * 15 - 7.5),
 changeType: Mat h.random() > 0.6 ? "increase" :",
 Math.random() > 0.3 ? "decrease" : "neutral";
-}))),
-,
-setIsLoading(false) },
-,
-// Get change icon and color",
+}))), setIsLoading(false) }, // Get change icon and color",
 labels: ["AI Services",Cloud Solutions",Security",Consulting",Development"],
 datasets: [{, data: [35; 25; 20; 15; 5],
 backgroundColor: [rgba(34; 221; 210; 0.8),rgba(140; 21; 233; 0.8),rgba(239; 68; 68; 0.8),rgba(16; 185; 129; 0.8),rgba(245; 158; 11; 0.8)],
@@ -125,7 +116,7 @@ borderColor[,
 ],
 ,
 ,
-"borderWidth": "2}]},
+"borderWidth": "2}]},origin/main
 // Generate line chart data;
 const lineChartData = {,
 '",

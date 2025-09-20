@@ -5,7 +5,7 @@ import { ProductListingCard } from "@/components/ProductListingCard";,
 import { Button } from "@/components/ui/button";,
 import { Input } from "@/components/ui/input";
 import { logInfo, logErrorToProduction } from "@/utils/productionLogger";
-import { import, {, Search, Filter, LayoutGrid, List, Star } from "lucide-react";
+import { import, {, Search, Filter, LayoutGrid, List, Star } from "lucide-react";origin/main
 import { toast } from "@/hooks/use-toast";
 import { captureException } from "@/utils/sentry";
 interface PriceRange {
@@ -30,12 +30,12 @@ return (</p> </div> <div className="grid grid-cols-1 lg:grid-cols-4 gap-6" > <di
   (value: string) => setSelectedBrand (value) "
 }> <SelectTrigger className="bg-zion-blue border border-zion-blue-light text-white" > <SelectValue placeholder="Select Brand" /> </SelectTrigger> <SelectContent className="bg-zion-blue-dark border border-zion-blue-light" > <SelectItem value="all" className="text-white" > All Brands </SelectItem> </SelectItem>) )
 }</SelectContent> </Select> </div>) "
-}<div className="mb-6" > <label className="text-sm font-medium text-zion-slate-light block mb-2" > Specifications </label> <Input Availability </label> <Select value= {selectedAvailability}onValueChange= {
+}<div className="mb-6" > <label className="text-sm font-medium text-zion-slate-light block mb-2" > Specifications </label> <Input Availability </label> <Select value= {selectedAvailability}onValueChange= {origin/main
   (value: string) => setSelectedAvailability (value) "
 }> <SelectTrigger className="bg-zion-blue border border-zion-blue-light text-white" > <SelectValue placeholder="Select Availability" /> </SelectTrigger> <SelectContent className="bg-zion-blue-dark border border-zion-blue-light" > <SelectItem value="all" className="text-white" > All </SelectItem> </SelectItem>) )
 }</SelectContent> </Select> </div>) "
 }<div className="mb-6" > <label className="text-sm font-medium text-zion-slate-light block mb-2" > Price Range </label> <div className="mt-6 px-2" > <Slider </div> </div> </div> <div className="mb-6" > <label className="text-sm font-medium text-zion-slate-light block mb-2" > Minimum Rating </label>
-}aria-pressed= {selectedRating === rating}className= {
+}aria-pressed= {selectedRating === rating}className= {origin/main
   ` {
   selectedRating === rating <Star key= {
   i "
@@ -54,7 +54,7 @@ setSelectedRating (null);"
   i "
 }className="rounded-lg overflow-hidden border border-zion-blue-light" > </div> </div> </div>) )
 }</div> > {filteredListings.map ( (listing) => (<ProductListingCard key= {
-  listing.id}listing= {listing}view= {view}onRequestQuote= {handleRequestQuote}detailBasePath= {detailBasePath}/>) ) "
+  listing.id}listing= {listing}view= {view}onRequestQuote= {handleRequestQuote}detailBasePath= {detailBasePath}/>) ) "origin/main
 }</div> No listings found </h3> <p className="text-zion-slate-light mb-6" > Try adjusting your filters or search query </p> <Button clearCategories ()
 setCurrentPriceFilter ([0 priceRange.max])
 setSelectedRating (null)

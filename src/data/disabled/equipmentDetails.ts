@@ -1,6 +1,6 @@
 import React from "react";
 
-export interface EquipmentSpecification {name: string; value: string}
+export interface EquipmentSpecification {name: string; value: string}origin/main
 
 export interface EquipmentDetails {id: string; name: string; description: string; brand: string; category: string;
 subcategory?: string;,
@@ -11,7 +11,7 @@ inStock: boolean;
 expectedShipping?: string;,
 specifications: EquipmentSpecification[], features: string[];
 }
-warranty?: string;}
+warranty?: string;}origin/main
 returnPolicy?: string}
 
 export const EQUIPMENT_DETAILS: Record<string; EquipmentDetails> = {
@@ -49,8 +49,7 @@ features: [
 "Anamorphic de-squeeze options",
 "Custom 3D LUT support";
 ],
-warranty: "2 years manufacturer warranty", returnPolicy: "30-day return policy for unused items in original packaging",
-};
+warranty: "2 years manufacturer warranty", returnPolicy: "30-day return policy for unused items in original packaging"};
 "audio-mixer-pro": {
 id: "audio-mixer-pro", name: "AudioMixer Pro Digital Mixing Console";
 description: "Professional digital mixing console designed for studio recording; live sound mixing; and post-production applications. Features 32 channels; premium preamps; extensive routing options; and intuitive control interface.",
@@ -82,6 +81,5 @@ specifications: [
 "8 DCA groups and 6 mute groups",
 "Integrated WiFi for wireless control";
 ],
-warranty: "3 years manufacturer warranty", returnPolicy: "21-day return policy for items in original condition",
-}
+warranty: "3 years manufacturer warranty", returnPolicy: "21-day return policy for items in original condition"}
 };

@@ -6,7 +6,7 @@ interface UploadSectionProps {customFile: File | null;
 onFileUpload: (e: React.ChangeEvent<HTMLInputElement>) => void,
 export function UploadSection({
 }
-  customFile,}
+  customFile,}origin/main
 onFileUpload}: UploadSectionProps) {
   return (
     <div className='space-y-3'>

@@ -8,7 +8,7 @@ const storedLang = safeStorage.getItem('i18n_lang') || undefined;
 if (!i18n) {
     console.error("CRITICAL: i18next failed to import. Internationalization will not work.");
 }
-else {// Initialize i18next;
+else {// Initialize i18next;origin/main
     i18n;
         .use(LanguageDetector) // Detect user language;
         .use(initReactI18next) // Initialize react-i18next;
@@ -17,7 +17,7 @@ else {// Initialize i18next;
             en: {
                 translation: enTranslation};
             'en-US': {translation: enTranslation};
-            es: {translation: esTranslation}
+            es: {translation: esTranslation}origin/main
         };
         lng: storedLang;
         fallbackLng: 'en', // Default language;

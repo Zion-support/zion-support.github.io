@@ -2,7 +2,7 @@ import React from "react";
 
 
 import { Star } from "lucide-react, ";
-import { Card; CardContent; CardFooter } from "@/components/ui/card, ";
+import { Card; CardContent, CardFooter  } from "@/components/ui/card, ";
 
 const testimonials = [
 {;
@@ -15,7 +15,7 @@ rating: 5;
 avatar: "/placeholder.svg"};
 {name: "Michael Chen", role: "Full Stack Developer";
 text: "I love being able to check job matches and respond to clients while on the go. The notification system is particularly useful.",
-rating: 4;
+rating: 4;origin/main
 avatar: "/placeholder.svg"}
 ];
 export const AppTestimonials: React.FC = () => {
@@ -62,4 +62,4 @@ className={`h-5 w-5 ${i < testimonial.rating ? "text-yellow-400 fill-yellow-400"
 );
 };
 <//section><///section>;
-import { Star } from "lucide-react";
+import { Star } from "lucide-react";origin/main

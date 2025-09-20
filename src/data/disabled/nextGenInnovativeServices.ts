@@ -4,7 +4,7 @@ benefits: string[], useCases: string[];
 targetAudience: string[], tags: string[];
 estimatedDelivery: string; supportLevel: string; marketPrice: string;
 }
-contactInfo: {,}
+contactInfo: {,}origin/main
 phone: string; email: string; website: string};
 websiteUrl: string;
 demoUrl?: string;
@@ -55,7 +55,7 @@ marketPrice: "$5; 500 - $25; 000/month",
 contactInfo: {,
 phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
 website: "https://ziontechgroup.com"}, websiteUrl: "https://ziontechgroup.com/space-technology-integration",
-};
+};origin/main
 // Biotechnology AI Platform;
 {id: "biotechnology-ai-platform", title: "Biotechnology AI Platform";
 description: "Advanced AI platform that accelerates biotechnology research; drug discovery; and genetic engineering through machine learning and computational biology.",
@@ -98,7 +98,7 @@ marketPrice: "$4; 200 - $18; 000/month",
 contactInfo: {,
 phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
 website: "https://ziontechgroup.com"}, websiteUrl: "https://ziontechgroup.com/biotechnology-ai-platform",
-};
+};origin/main
 // Advanced Robotics Process Automation;
 {id: "advanced-robotics-process-automation", title: "Advanced Robotics Process Automation";
 description: "Next-generation RPA platform that combines AI; machine learning; and robotic process automation to create intelligent; adaptive automation solutions.",
@@ -141,7 +141,7 @@ marketPrice: "$2; 800 - $12; 000/month",
 contactInfo: {,
 phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
 website: "https://ziontechgroup.com"}, websiteUrl: "https://ziontechgroup.com/advanced-robotics-automation",
-};
+};origin/main
 // Brain-Computer Interface Development Platform;
 {id: "brain-computer-interface-development-platform", title: "Brain-Computer Interface Development Platform";
 description: "Advanced BCI development platform that enables researchers and developers to create applications for neural control and brain-computer communication.", category: "Neural Technology";
@@ -184,7 +184,7 @@ marketPrice: "$3; 500 - $15; 000/month",
 contactInfo: {,
 phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
 website: "https://ziontechgroup.com"}, websiteUrl: "https://ziontechgroup.com/brain-computer-interface",
-};
+};origin/main
 // Autonomous Vehicle Fleet Management;
 {id: "autonomous-vehicle-fleet-management", title: "Autonomous Vehicle Fleet Management";
 description: "Comprehensive autonomous vehicle fleet management platform that optimizes routes; monitors performance; and ensures safety for autonomous vehicle operations.",
@@ -227,5 +227,5 @@ marketPrice: "$3; 200 - $15; 000/month",
 contactInfo: {,
 phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
 website: "https://ziontechgroup.com"}, websiteUrl: "https://ziontechgroup.com/autonomous-vehicle-fleet",
-}
+}origin/main
 ];

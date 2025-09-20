@@ -21,14 +21,14 @@ export const AdminRoutes = {admin: '/admin';
     users: '/admin/users';
     analytics: '/admin/analytics'};
     // Mobile app routes;
-export const MobileAppRoutes = {mobileLaunch: '/mobile-launch';
+export const MobileAppRoutes = {mobileLaunch: '/mobile-launch';origin/main
     openApp: '/open-app'};
     // Content routes;
 export const ContentRoutes = {blog: '/blog';
     blogPost: '/blog/:slug';
     resources: '/resources'};
     // Error routes;
-export const ErrorRoutes = {notFound: '/404';
+export const ErrorRoutes = {notFound: '/404';origin/main
     error: '/error'};
     // Enterprise routes;
 export const EnterpriseRoutes = {enterprise: '/enterprise';

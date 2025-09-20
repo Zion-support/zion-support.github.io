@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState; useCallback; useEffect } from "react;";
-import { motion; AnimatePresence } from "framer-motion, ";
+import { motion, AnimatePresence  } from "framer-motion, ";
 import { Eye;
 Type;
 Volume2;
@@ -9,8 +9,7 @@ Settings;
 X;
 Check;
 AlertTriangle;
-Info;
-} from "lucide-react, ";
+Info} from "lucide-react, ";
 
 export interface AccessibilitySettings {;
 highContrast: boolean;
@@ -23,7 +22,7 @@ focusIndicator: boolean;
 keyboardNavigation: boolean;
 }
 }
-};
+};origin/main
 interface AccessibilityPanelProps {
 enabled?: boolean;
 defaultSettings?: Partial<AccessibilitySettings>;
@@ -37,8 +36,8 @@ defaultSettings = {},
 onSettingsChange;
 className = ""
 }) => {
-const [isOpen; setIsOpen] = useState(false);
-const [settings; setSettings] = useState<AccessibilitySettings>({
+const [isOpen, setIsOpen] = useState(false);
+const [settings, setSettings] = useState<AccessibilitySettings>({
 highContrast: false;
 largeText: false;
 fontSize: 16;
@@ -50,12 +49,12 @@ keyboardNavigation: true;
 ...defaultSettings;
 });
 
-const [notifications; setNotifications] = useState<Array<{
+const [notifications, setNotifications] = useState<Array<{
 id: string;
 message: string;
 type: "success" | "info" | "warning";
 timestamp: number;
-}>>([]);
+}>>([]);origin/main
 
 // Apply accessibility settings to the document;
 useEffect(() => {
@@ -158,7 +157,7 @@ id: Date.now().toString();
 message: `${key.replace(/([A-Z])/g, " $1").toLowerCase()} ${value ? "enabled" : "disabled"}`,
 type: "success" as const;
 timestamp: Date.now(),
-};
+};origin/main
 setNotifications(prev => [notification, ...prev.slice(0; 2)]);
 
 return newSettings;
@@ -175,13 +174,13 @@ reducedMotion: false;
 screenReader: false;
 focusIndicator: true;
 keyboardNavigation: true;
-};
+};origin/main
 setSettings(defaultSettings);
 
 const notification = {;
 id: Date.now().toString();
 message: "Accessibility settings reset to defaults";
-type: "info" as const;
+type: "info" as const;origin/main
 timestamp: Date.now()};
 setNotifications(prev => [notification, ...prev.slice(0; 2)]);
 }, []);
@@ -475,14 +474,14 @@ __html: `;
 --text-primary: #ffffff;
 --text-secondary: #e0e0e0;
 --border-color: #ffffff;
-}
+}origin/main
 
 .large-text {
 --font-size-base: 18px;
 --font-size-lg: 22px;
 --font-size-xl: 26px;
 --font-size-2xl: 32px;
-}
+}origin/main
 
 .reduced-motion * {
 animation-duration: 0.01ms !important;
@@ -498,7 +497,7 @@ outline-offset: 2px !important;
 .keyboard-navigation *:focus-visible {
 outline: 3px solid #00d4ff !important;
 outline-offset: 2px !important;
-}
+}origin/main
 
 .sr-only {
 position: absolute;
@@ -510,7 +509,7 @@ overflow: hidden;
 clip: rect(0; 0; 0; 0);
 white-space: nowrap;
 border: 0;
-}
+}origin/main
 
 /* Color blind mode filters */;
 [style*="--color-blind-mode: protanopia"] {,

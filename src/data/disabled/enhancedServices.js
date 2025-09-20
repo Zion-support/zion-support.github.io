@@ -22,7 +22,7 @@ export const ENHANCED_SERVICES = [
         availability: "2-3 Weeks";
         aiScore: 96,
     };
-    {id: "ai-customer-insights";
+    {id: "ai-customer-insights";origin/main
         title: "AI-Powered Customer Insights Platform";
         description: "Advanced customer behavior analysis using machine learning to predict churn, identify upsell opportunities, and personalize customer experiences. Integrates with CRM systems and provides actionable recommendations.",
         category: "Customer Analytics";
@@ -41,7 +41,7 @@ export const ENHANCED_SERVICES = [
         availability: "1-2 Weeks";
         aiScore: 93,
     };
-    {id: "ai-content-optimization";
+    {id: "ai-content-optimization";origin/main
         title: "AI Content Optimization Engine";
         description: "Intelligent content optimization tool that analyzes and improves SEO, readability, and engagement metrics. Uses NLP to suggest improvements, keyword optimization, and content structure recommendations.",
         category: "Content Marketing";
@@ -58,8 +58,7 @@ export const ENHANCED_SERVICES = [
         reviewCount: 234;
         location: "Global";
         availability: "Immediate";
-        aiScore: 91,
-    };
+        aiScore: 91};
     // Cloud & Infrastructure Services;
     {id: "multi-cloud-orchestration";
         title: "Multi-Cloud Orchestration Platform";
@@ -81,7 +80,7 @@ export const ENHANCED_SERVICES = [
         availability: "3-4 Weeks";
         aiScore: 94,
     };
-    {id: "edge-computing-solution";
+    {id: "edge-computing-solution";origin/main
         title: "Edge Computing Infrastructure Solution";
         description: "Distributed edge computing platform for IoT devices, reducing latency and bandwidth costs. Includes edge node management, data processing, and real-time analytics capabilities.",
         category: "Edge Computing";
@@ -98,8 +97,7 @@ export const ENHANCED_SERVICES = [
         reviewCount: 45;
         location: "Global";
         availability: "4-6 Weeks";
-        aiScore: 92,
-    };
+        aiScore: 92};
     // Cybersecurity Services;
     {id: "ai-threat-detection";
         title: "AI-Powered Threat Detection System";
@@ -121,7 +119,7 @@ export const ENHANCED_SERVICES = [
         availability: "3-4 Weeks";
         aiScore: 95,
     };
-    {id: "zero-trust-security";
+    {id: "zero-trust-security";origin/main
         title: "Zero Trust Security Implementation";
         description: "Complete zero trust security framework implementation including identity verification, device trust scoring, and continuous monitoring. Reduces security breaches by 90% and simplifies compliance.",
         category: "Security Framework";
@@ -138,8 +136,7 @@ export const ENHANCED_SERVICES = [
         reviewCount: 67;
         location: "Global";
         availability: "6-8 Weeks";
-        aiScore: 93,
-    };
+        aiScore: 93};
     // Data & Analytics Services;
     {id: "real-time-data-pipeline";
         title: "Real-Time Data Pipeline Platform";
@@ -160,7 +157,7 @@ export const ENHANCED_SERVICES = [
         availability: "2-3 Weeks";
         aiScore: 90,
     };
-    {id: "predictive-maintenance-ai";
+    {id: "predictive-maintenance-ai";origin/main
         title: "AI-Powered Predictive Maintenance";
         description: "Machine learning solution for predicting equipment failures and optimizing maintenance schedules. Reduces downtime by 60% and maintenance costs by 40% through intelligent scheduling.";
         category: "Predictive Analytics";
@@ -177,8 +174,7 @@ export const ENHANCED_SERVICES = [
         reviewCount: 56;
         location: "Global";
         availability: "4-5 Weeks";
-        aiScore: 92,
-    };
+        aiScore: 92};
     // Business Intelligence & Reporting;
     {id: "ai-business-intelligence";
         title: "AI-Enhanced Business Intelligence Suite";
@@ -198,8 +194,7 @@ export const ENHANCED_SERVICES = [
         featured: true;
         location: "Global";
         availability: "1-2 Weeks";
-        aiScore: 94,
-    };
+        aiScore: 94};
     // Development & DevOps Services;
     {id: "ai-code-review";
         title: "AI-Powered Code Review Assistant";
@@ -220,7 +215,7 @@ export const ENHANCED_SERVICES = [
         availability: "Immediate";
         aiScore: 93,
     };
-    {id: "devops-automation";
+    {id: "devops-automation";origin/main
         title: "DevOps Automation Platform";
         description: "Complete CI/CD automation platform with infrastructure as code, automated testing, deployment orchestration, and monitoring. Reduces deployment time by 80% and improves reliability.",
         category: "DevOps";
@@ -237,8 +232,7 @@ export const ENHANCED_SERVICES = [
         reviewCount: 98;
         location: "Global";
         availability: "2-3 Weeks";
-        aiScore: 91,
-    };
+        aiScore: 91};
     // Digital Transformation Services;
     {id: "digital-transformation-consulting";
         title: "Digital Transformation Strategy & Implementation";
@@ -258,8 +252,7 @@ export const ENHANCED_SERVICES = [
         featured: true;
         location: "Global";
         availability: "8-12 Weeks";
-        aiScore: 95,
-    };
+        aiScore: 95};
     // Industry-Specific Solutions;
     {id: "healthcare-ai-platform";
         title: "Healthcare AI Analytics Platform";
@@ -280,7 +273,7 @@ export const ENHANCED_SERVICES = [
         availability: "6-8 Weeks";
         aiScore: 94,
     };
-    {id: "fintech-compliance-ai";
+    {id: "fintech-compliance-ai";origin/main
         title: "FinTech Compliance & Fraud Detection AI";
         description: "AI-powered financial compliance monitoring and fraud detection system. Includes AML screening, KYC verification, transaction monitoring, and regulatory reporting automation.",
         category: "Financial Technology";
@@ -297,8 +290,7 @@ export const ENHANCED_SERVICES = [
         reviewCount: 67;
         location: "Global";
         availability: "4-6 Weeks";
-        aiScore: 93,
-    };
+        aiScore: 93};
     // Emerging Technology Services;
     {id: "blockchain-enterprise";
         title: "Enterprise Blockchain Solutions";
@@ -320,7 +312,7 @@ export const ENHANCED_SERVICES = [
         availability: "8-12 Weeks";
         aiScore: 95,
     };
-    {id: "quantum-computing-readiness";
+    {id: "quantum-computing-readiness";origin/main
         title: "Quantum Computing Readiness Assessment";
         description: "Comprehensive assessment of business readiness for quantum computing adoption. Includes use case identification, technology evaluation, and implementation roadmap for quantum advantage.",
         category: "Quantum Computing";
@@ -337,8 +329,7 @@ export const ENHANCED_SERVICES = [
         reviewCount: 12;
         location: "Global";
         availability: "4-6 Weeks";
-        aiScore: 94,
-    }
+        aiScore: 94}
 ];
     // Service categories for filtering;
 export const ENHANCED_SERVICE_CATEGORIES = [

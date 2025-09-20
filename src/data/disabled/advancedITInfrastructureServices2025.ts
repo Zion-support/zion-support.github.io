@@ -26,7 +26,7 @@ website: string;
 address: string;
 }
 }
-};
+};origin/main
 }
 
 export const ADVANCED_IT_INFRASTRUCTURE_SERVICES_2025: AdvancedITInfrastructureService[] = [
@@ -81,7 +81,7 @@ sla: "99.99% uptime with performance guarantees";
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
-website: "https://ziontechgroup.com";
+website: "https://ziontechgroup.com";origin/main
 address: "364 E Main St STE 1008 Middletown DE 19709"}
 };
 {id: "quantum-secure-cloud-infrastructure";
@@ -134,7 +134,7 @@ sla: "99.999% availability with quantum-grade security";
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
-website: "https://ziontechgroup.com";
+website: "https://ziontechgroup.com";origin/main
 address: "364 E Main St STE 1008 Middletown DE 19709"}
 };
 {id: "autonomous-infrastructure-management";
@@ -187,7 +187,7 @@ sla: "99.9% automated resolution rate";
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
-website: "https://ziontechgroup.com";
+website: "https://ziontechgroup.com";origin/main
 address: "364 E Main St STE 1008 Middletown DE 19709"}
 };
 {id: "immersive-collaboration-infrastructure";
@@ -240,7 +240,7 @@ sla: "99.5% availability with performance optimization";
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
-website: "https://ziontechgroup.com";
+website: "https://ziontechgroup.com";origin/main
 address: "364 E Main St STE 1008 Middletown DE 19709"}
 };
 {id: "green-computing-optimization-platform";
@@ -293,7 +293,7 @@ sla: "Guaranteed energy savings with monitoring";
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
-website: "https://ziontechgroup.com";
+website: "https://ziontechgroup.com";origin/main
 address: "364 E Main St STE 1008 Middletown DE 19709"}
 };
 {id: "blockchain-infrastructure-as-a-service";
@@ -346,7 +346,7 @@ sla: "99.9% network availability with security guarantees";
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
-website: "https://ziontechgroup.com";
+website: "https://ziontechgroup.com";origin/main
 address: "364 E Main St STE 1008 Middletown DE 19709"}
 };
 {id: "hyper-converged-ai-infrastructure";
@@ -399,7 +399,7 @@ sla: "99.95% availability with performance guarantees";
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
-website: "https://ziontechgroup.com";
+website: "https://ziontechgroup.com";origin/main
 address: "364 E Main St STE 1008 Middletown DE 19709"}
 }
 ];

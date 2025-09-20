@@ -5,21 +5,23 @@ name: string;
 }
 }
 
-import { useState; useEffect } from "react, ";
+import { useState; useEffect } from "react, ";origin/main
 
 export function useIsMobile() {
-const [isMobile; setIsMobile] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
 
 useEffect(() => {
 const checkIsMobile: any = () => {
 setIsMobile(window.innerWidth < 768);
-};
+};origin/main
 
-checkIsMobile();
-window.addEventListener("resize", checkIsMobile);
+    checkIsMobile();
+    window.addEventListener("resize", checkIsMobile);
 
-return () => window.removeEventListener("resize", checkIsMobile);
-}, []);
+    return () => window.removeEventListener("resize", checkIsMobile);
+  }, []);
 
-return isMobile;
+  return isMobile;
 }
+
+export { useIsMobile as useMobile };

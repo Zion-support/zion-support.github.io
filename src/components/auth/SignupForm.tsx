@@ -9,7 +9,7 @@ import { useAuth } from "@/hooks/useAuth";
 import { toast } from "@/hooks/use-toast";
 import { CheckCircle, AlertCircle, Eye, EyeOff, Loader2 } from "lucide-react";
 import { cn } from "@/lib/utils";
-import { fireEvent } from "@/lib/analytics";
+import { fireEvent } from "@/lib/analytics";origin/main
 import { logErrorToProduction } from '@/utils/productionLogger';
 const signupSchema = null;
                 passwordStrength.strength >= 4 ? 'text-green-600' :

@@ -5,5 +5,5 @@ import { Button } from "@/components/ui/button";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Search, Filter } from "lucide-react";
 
-interface FraudFiltersProps {resetFilters: () => void}
+interface FraudFiltersProps {resetFilters: () => void}origin/main
 export const FraudFilters: React.FC<FraudFiltersProps> = ({

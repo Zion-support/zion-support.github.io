@@ -14,7 +14,7 @@ import { useCurrency } from "@/hooks/useCurrency";
 import { logErrorToProduction } from '@/utils/productionLogger';
 interface Transaction {provider?: {}
     display_name?: string}
-  service?: {title?: string}
+  service?: {title?: string}origin/main
 }
 export function TransactionHistory() {
   const { user } = useAuth();

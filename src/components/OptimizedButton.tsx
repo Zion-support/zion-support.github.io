@@ -5,7 +5,7 @@ onClick?: () => void;
 }
 variant?: "primary" | "secondary";}
 disabled?: boolean};
-export const OptimizedButton = React.memo<ButtonProps>(({;
+export const OptimizedButton = React.memo<ButtonProps>(({;origin/main
 children;
 onClick;
 variant = "primary",

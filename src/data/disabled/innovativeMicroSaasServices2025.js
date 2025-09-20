@@ -59,7 +59,7 @@ export const innovativeMicroSaasServices2025 = [
         scalability: "Unlimited quantum qubits";
         support: "24/7 quantum expert support",
     };
-    {id: 2;
+    {id: 2;origin/main
         name: "Neuromorphic Computing Platform";
         category: "AI Architecture";
         subcategory: "Brain-Inspired Computing";
@@ -119,7 +119,7 @@ export const innovativeMicroSaasServices2025 = [
         scalability: "Up to 1M neurons";
         support: "Expert neuromorphic support",
     };
-    {id: 3;
+    {id: 3;origin/main
         name: "Federated Learning Platform";
         category: "Privacy AI";
         subcategory: "Distributed Learning";
@@ -179,7 +179,7 @@ export const innovativeMicroSaasServices2025 = [
         scalability: "Unlimited participants";
         support: "Privacy expert support",
     };
-    {id: 4;
+    {id: 4;origin/main
         name: "Edge AI Orchestration Platform";
         category: "Edge Computing";
         subcategory: "AI Orchestration";
@@ -239,7 +239,7 @@ export const innovativeMicroSaasServices2025 = [
         scalability: "Unlimited edge nodes";
         support: "24/7 edge computing support",
     };
-    {id: 5;
+    {id: 5;origin/main
         name: "AI Ethics & Governance Platform";
         category: "AI Governance";
         subcategory: "Ethics & Compliance";
@@ -299,7 +299,7 @@ export const innovativeMicroSaasServices2025 = [
         scalability: "Unlimited AI models";
         support: "AI ethics expert support",
     };
-    {id: 6;
+    {id: 6;origin/main
         name: "Blockchain AI Integration Platform";
         category: "Blockchain";
         subcategory: "AI Integration";
@@ -359,7 +359,7 @@ export const innovativeMicroSaasServices2025 = [
         scalability: "Multi-chain support";
         support: "Blockchain AI expert support",
     };
-    {id: 7;
+    {id: 7;origin/main
         name: "Quantum-Safe Cryptography Platform";
         category: "Cybersecurity";
         subcategory: "Post-Quantum Security";
@@ -419,7 +419,7 @@ export const innovativeMicroSaasServices2025 = [
         scalability: "Unlimited encryption keys";
         support: "Cryptography expert support",
     };
-    {id: 8;
+    {id: 8;origin/main
         name: "AI-Powered DevOps Platform";
         category: "DevOps";
         subcategory: "AI Automation";
@@ -479,7 +479,7 @@ export const innovativeMicroSaasServices2025 = [
         scalability: "Unlimited repositories";
         support: "DevOps expert support",
     };
-    {id: 9;
+    {id: 9;origin/main
         name: "Synthetic Data Generation Platform";
         category: "Data Science";
         subcategory: "Synthetic Data";
@@ -539,7 +539,7 @@ export const innovativeMicroSaasServices2025 = [
         scalability: "Unlimited data generation";
         support: "Data science expert support",
     };
-    {id: 10;
+    {id: 10;origin/main
         name: "AI-Powered Customer Experience Platform";
         category: "Customer Experience";
         subcategory: "AI Personalization";
@@ -597,7 +597,6 @@ export const innovativeMicroSaasServices2025 = [
         ],
         compliance: ["GDPR", "CCPA", "SOC 2", "ISO 27001"],
         scalability: "Unlimited customers";
-        support: "Customer experience expert support",
-    }
+        support: "Customer experience expert support"}
 ];
     export default innovativeMicroSaasServices2025;

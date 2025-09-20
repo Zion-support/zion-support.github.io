@@ -9,7 +9,7 @@ Bug;
 Clipboard } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
+import { Badge } from "@/components/ui/badge";origin/main
 import * as Sentry from '@sentry/nextjs';
 import { logErrorToProduction } from '@/utils/productionLogger';
 interface ErrorBoundaryState {hasError: boolean,
@@ -29,7 +29,7 @@ showReportButton?: boolean,
 context?: string;  enableRetry?: boolean,
 maxRetries?: number,
 }
-showReportButton?: boolean,}
+showReportButton?: boolean,}origin/main
 context?: string}
 export class GlobalErrorBoundary extends Component<
   ErrorBoundaryProps,
@@ -50,10 +50,8 @@ errorBoundaryProps?: Omit<ErrorBoundaryProps 'children'>
     </GlobalErrorBoundary>
   )
   WrappedComponent.displayName = `withErrorBoundary(${Component.displayName |Component.name})`
-  return WrappedComponent,
-}
+  return WrappedComponent}
 export default GlobalErrorBoundary,
 WrappedComponent.displayName = `withErrorBoundary(${Component.displayName |Component.name})`
-  return WrappedComponent,
-}
+  return WrappedComponent}
 export default GlobalErrorBoundary

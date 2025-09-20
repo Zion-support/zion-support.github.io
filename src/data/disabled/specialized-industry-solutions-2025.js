@@ -60,8 +60,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
         websiteUrl: "https://ziontechgroup.com/services/healthcare-ai-diagnostics";
         industryChallenges: ["Diagnostic accuracy", "Healthcare costs", "Access to specialists", "Patient wait times"],
         marketOpportunity: "$45.2 billion by 2027";
-        competitiveAdvantage: "Advanced AI algorithms with healthcare-specific training",
-    };
+        competitiveAdvantage: "Advanced AI algorithms with healthcare-specific training"};
     // 2. Financial Services AI Compliance Platform;
     {id: "financial-ai-compliance-elite";
         title: "Financial AI Compliance Elite - Regulatory Intelligence";
@@ -123,8 +122,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
         websiteUrl: "https://ziontechgroup.com/services/financial-ai-compliance";
         industryChallenges: ["Regulatory complexity", "Compliance costs", "Detection accuracy", "Reporting efficiency"],
         marketOpportunity: "$28.9 billion by 2026";
-        competitiveAdvantage: "AI-powered compliance with real-time monitoring",
-    };
+        competitiveAdvantage: "AI-powered compliance with real-time monitoring"};
     // 3. Manufacturing IoT Intelligence Platform;
     {id: "manufacturing-iot-intelligence-elite";
         title: "Manufacturing IoT Intelligence Elite - Smart Factory Platform";
@@ -186,8 +184,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
         websiteUrl: "https://ziontechgroup.com/services/manufacturing-iot-intelligence";
         industryChallenges: ["Equipment downtime", "Maintenance costs", "Quality control", "Energy efficiency"],
         marketOpportunity: "$32.1 billion by 2027";
-        competitiveAdvantage: "Comprehensive IoT platform with AI-powered analytics",
-    };
+        competitiveAdvantage: "Comprehensive IoT platform with AI-powered analytics"};
     // 4. Retail AI Personalization Platform;
     {id: "retail-ai-personalization-elite";
         title: "Retail AI Personalization Elite - Customer Intelligence";
@@ -249,8 +246,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
         websiteUrl: "https://ziontechgroup.com/services/retail-ai-personalization";
         industryChallenges: ["Customer retention", "Inventory management", "Personalization", "Competition"],
         marketOpportunity: "$22.4 billion by 2026";
-        competitiveAdvantage: "AI-powered personalization with real-time optimization",
-    };
+        competitiveAdvantage: "AI-powered personalization with real-time optimization"};
     // 5. Energy Management AI Platform;
     {id: "energy-management-ai-elite";
         title: "Energy Management AI Elite - Smart Grid Intelligence";
@@ -312,8 +308,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
         websiteUrl: "https://ziontechgroup.com/services/energy-management-ai";
         industryChallenges: ["Grid reliability", "Energy costs", "Renewable integration", "Carbon reduction"],
         marketOpportunity: "$38.7 billion by 2027";
-        competitiveAdvantage: "AI-powered energy optimization with sustainability focus",
-    };
+        competitiveAdvantage: "AI-powered energy optimization with sustainability focus"};
     // 6. Transportation & Logistics AI Platform;
     {id: "transportation-logistics-ai-elite";
         title: "Transportation & Logistics AI Elite - Supply Chain Intelligence";
@@ -375,8 +370,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
         websiteUrl: "https://ziontechgroup.com/services/transportation-logistics-ai";
         industryChallenges: ["Transportation costs", "Delivery times", "Fleet optimization", "Supply chain visibility"],
         marketOpportunity: "$26.8 billion by 2026";
-        competitiveAdvantage: "AI-powered logistics with real-time optimization",
-    };
+        competitiveAdvantage: "AI-powered logistics with real-time optimization"};
     // 7. Education AI Learning Platform;
     {id: "education-ai-learning-elite";
         title: "Education AI Learning Elite - Personalized Learning Intelligence";
@@ -438,8 +432,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
         websiteUrl: "https://ziontechgroup.com/services/education-ai-learning";
         industryChallenges: ["Student engagement", "Learning outcomes", "Personalization", "Resource optimization"],
         marketOpportunity: "$19.6 billion by 2026";
-        competitiveAdvantage: "AI-powered personalized learning with adaptive content",
-    };
+        competitiveAdvantage: "AI-powered personalized learning with adaptive content"};
     // 8. Real Estate AI Platform;
     {id: "real-estate-ai-elite";
         title: "Real Estate AI Elite - Property Intelligence Platform";
@@ -501,7 +494,6 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025 = [
         websiteUrl: "https://ziontechgroup.com/services/real-estate-ai";
         industryChallenges: ["Market volatility", "Investment decisions", "Market research", "Portfolio optimization"],
         marketOpportunity: "$24.3 billion by 2026";
-        competitiveAdvantage: "AI-powered market intelligence with predictive analytics",
-    }
+        competitiveAdvantage: "AI-powered market intelligence with predictive analytics"}
 ];
     export default SPECIALIZED_INDUSTRY_SOLUTIONS_2025;

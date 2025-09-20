@@ -5,7 +5,7 @@ name: string;
 }
 }
 
-import React from "react";
+import React from "react";origin/main
 const ProjectDetailsFields: React.FC = () => {
 ,
 return (,
@@ -17,7 +17,7 @@ return (,
 export default ProjectDetailsFields,;<//div><///div>
 
 import { format } from "date-fns";
-import { CalendarIcon } from "lucide-react";
+import { CalendarIcon } from "lucide-react";origin/main
 interface ProjectDetailsFieldsProps {
   form: UseFormReturn<ContractFormValues>;  form: UseFormReturn<ContractFormValues>}
 }
@@ -87,7 +87,7 @@ control={form.control}
             field: ControllerRenderProps<ContractFormValues 'startDate'>
           }) => (<FormItem className='flex flex-col'>              <FormLabel>Start Date</FormLabel>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <FormField
+        <FormFieldorigin/main
 control = {form.control}
           name="startDate"
           render={({ field }: { field: ControllerRenderProps<ContractFormValues "startDate"> }) => (
@@ -115,7 +115,7 @@ mode='single'
                     disabled={date => date < new Date()}                    initialFocus                    mode="single"
                     selected = {field.value}
                     onSelect = {field.onChange}
-                    disabled = {(date) => date < new Date()}
+                    disabled = {(date) => date < new Date()}origin/main
                     >
                       {field.value ? (
                         format(field.value, "PPP")
@@ -148,7 +148,7 @@ control={form.control}
             field: ControllerRenderProps<ContractFormValues 'endDate'>
           }) => (
             <FormItem className='flex flex-col'>              <FormLabel>End Date (Optional)</FormLabel>
-        <FormField
+        <FormFieldorigin/main
 control = {form.control}
           name="endDate"
           render={({ field }: { field: ControllerRenderProps<ContractFormValues "endDate"> }) => (
@@ -176,7 +176,7 @@ mode='single'
                     disabled={date => date < form.getValues('startDate')}                    initialFocus                    mode="single"
                     selected = {field.value |undefined}
                     onSelect = {field.onChange}
-                    disabled = {(date) => date < form.getValues("startDate")}
+                    disabled = {(date) => date < form.getValues("startDate")}origin/main
                     >
                       {field.value ? (
                         format(field.value, "PPP")

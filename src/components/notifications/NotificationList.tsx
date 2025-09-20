@@ -7,5 +7,5 @@ import { NotificationItem } from "./NotificationItem";
 import { Notification } from "@/context/notifications";
 import { EmptyState } from "@/components/ui/empty-state";
 import { Bell } from "lucide-react";
-interface NotificationListProps {onRetry: () => void}
+interface NotificationListProps {onRetry: () => void}origin/main
 export const NotificationList: React.FC<NotificationListProps> = ({

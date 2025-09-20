@@ -1,6 +1,6 @@
 import React from "react,,
 ,;
-import { SEO  } from "@/components/SEO";
+import { SEO  } from "@/components/SEO";origin/main
 export default function ChatAssistant(props: any) {return (,
 <div className="min-h-screen bg-white">,
 <SEO title="ChatAssistant - Zion Tech Group" description="Professional ChatAssistant services by Zion Tech Group"  />,
@@ -11,7 +11,7 @@ Professional ChatAssistant services to help your business grow.,
 </p>,
 </div>",;
 </div>,;
-),,',;
+), ',;
 "}, ";<//div><///div>;
   const isGuest = !auth?.isAuthenticated,
 const handleSendMessage = async (messageContent: string) => {if (!messageContent.trim()) return,
@@ -78,7 +78,7 @@ className="flex-1 overflow-y-auto p-4 space-y-4"
 key = {idx}
                       variant="outline"
                       className="text-xs"
-                      onClick = {() => handleSendMessage(q)}
+                      onClick = {() => handleSendMessage(q)}origin/main
                     >
                       {q}
                     </Button>
@@ -122,7 +122,7 @@ variant="outline"
               >
                 Cancel
               </Button>
-              <Button
+              <Buttonorigin/main
 onClick = {handleModalSendConfirm}
                 className="bg-zion-purple hover:bg-zion-purple-dark text-white"
               >
@@ -135,5 +135,5 @@ onClick = {handleModalSendConfirm}
     </div>
   )
 }
-};
+};origin/main
 ;

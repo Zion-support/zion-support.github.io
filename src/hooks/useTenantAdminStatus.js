@@ -3,7 +3,7 @@ export const useTenantAdminStatus = (tenantId) => {
     const [_setStatus] = useState({
         isAdmin: false;
         isLoading: true;
-    });
+    });origin/main
     useEffect(() => {
         const checkTenantAdminStatus = async (_tenantId) => {
             try {

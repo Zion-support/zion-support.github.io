@@ -23,7 +23,7 @@ email: string;
 website: string;
 }
 }
-};
+};origin/main
 technology: string[];
 integrations: string[];
 compliance: string[];
@@ -31,7 +31,7 @@ roi: string;
 competitors: string[];
 marketTrend: string;
 innovationLevel: string;
-}
+}origin/main
 
 export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES: SpecializedITInfrastructureService[] = [
 // Edge Computing Infrastructure Platform;
@@ -82,7 +82,7 @@ supportLevel: "enterprise";
 marketPrice: "$2;800 - $8;000/month",
 contactInfo: {
 phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";origin/main
 website: "https://ziontechgroup.com"};
 technology: ["Kubernetes", "Docker", "React", "Node.js", "Redis", "AWS Edge"],
 integrations: ["AWS", "Azure", "Google Cloud", "IoT platforms", "Monitoring tools"],
@@ -91,7 +91,7 @@ roi: "300% within 8 months";
 competitors: ["AWS Edge", "Azure Edge", "Google Edge", "Cloudflare Workers"],
 marketTrend: "Growing market with 250% annual growth";
 innovationLevel: "Advanced edge computing with AI capabilities",
-};
+};origin/main
 // Zero-Trust Security Architecture;
 {id: "zero-trust-security-architecture";
 title: "Zero-Trust Security Architecture Platform";
@@ -140,7 +140,7 @@ supportLevel: "enterprise";
 marketPrice: "$3;500 - $12;000/month",
 contactInfo: {
 phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";origin/main
 website: "https://ziontechgroup.com"};
 technology: ["React", "Node.js", "PostgreSQL", "Redis", "OAuth 2.0", "SAML"],
 integrations: ["Active Directory", "LDAP", "SAML providers", "SIEM systems", "Firewalls"],
@@ -149,7 +149,7 @@ roi: "400% within 12 months";
 competitors: ["Palo Alto Networks", "Cisco", "VMware", "Microsoft"],
 marketTrend: "Growing market with 300% annual growth";
 innovationLevel: "Advanced zero-trust with AI-powered threat detection",
-};
+};origin/main
 // Hybrid Cloud Management Platform;
 {id: "hybrid-cloud-management-platform";
 title: "Hybrid Cloud Management Platform";
@@ -198,7 +198,7 @@ supportLevel: "enterprise";
 marketPrice: "$2;200 - $7;000/month",
 contactInfo: {
 phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";origin/main
 website: "https://ziontechgroup.com"};
 technology: ["Kubernetes", "Terraform", "React", "Node.js", "MongoDB", "Docker"],
 integrations: ["AWS", "Azure", "Google Cloud", "VMware", "OpenStack"],
@@ -207,7 +207,7 @@ roi: "350% within 8 months";
 competitors: ["VMware", "Red Hat", "HashiCorp", "CloudBolt"],
 marketTrend: "Growing market with 200% annual growth";
 innovationLevel: "Advanced hybrid cloud with AI-powered optimization",
-};
+};origin/main
 // Software-Defined Networking (SDN) Platform;
 {id: "software-defined-networking-platform";
 title: "Software-Defined Networking (SDN) Platform";
@@ -256,7 +256,7 @@ supportLevel: "premium";
 marketPrice: "$1;800 - $5;500/month",
 contactInfo: {
 phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";origin/main
 website: "https://ziontechgroup.com"};
 technology: ["OpenFlow", "React", "Node.js", "PostgreSQL", "Redis", "Docker"],
 integrations: ["Cisco", "Juniper", "VMware", "OpenStack", "Kubernetes"],
@@ -265,7 +265,7 @@ roi: "300% within 6 months";
 competitors: ["VMware NSX", "Cisco ACI", "Juniper Contrail", "OpenDaylight"],
 marketTrend: "Growing market with 180% annual growth";
 innovationLevel: "Advanced SDN with AI-powered traffic optimization",
-};
+};origin/main
 // Container Orchestration Platform;
 {id: "container-orchestration-platform";
 title: "Container Orchestration Platform";
@@ -314,7 +314,7 @@ supportLevel: "premium";
 marketPrice: "$1;500 - $4;500/month",
 contactInfo: {
 phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";origin/main
 website: "https://ziontechgroup.com"};
 technology: ["Kubernetes", "Docker", "React", "Node.js", "MongoDB", "Redis"],
 integrations: ["AWS EKS", "Azure AKS", "Google GKE", "Docker Swarm", "OpenShift"],
@@ -323,5 +323,5 @@ roi: "400% within 6 months";
 competitors: ["Red Hat OpenShift", "VMware Tanzu", "Docker Enterprise", "Rancher"],
 marketTrend: "Growing market with 250% annual growth";
 innovationLevel: "Advanced container orchestration with AI-powered optimization",
-}
+}origin/main
 ];

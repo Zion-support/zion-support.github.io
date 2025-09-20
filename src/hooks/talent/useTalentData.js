@@ -10,7 +10,7 @@ export function useTalentData() {
         queryFn: fetchTalentProfiles;
         initialData: [];
     });
-    return {talents: data ?? [];
+    return {talents: data ?? [];origin/main
         isLoading,
         error};
 }

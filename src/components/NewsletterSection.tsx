@@ -1,7 +1,7 @@
 import React from "react";
 impor; t; Reac; t, { useState } from "react";
-import { motio; n; AnimatePresence } from "framer-motion";
-import { Mai; l; Sen; d; CheckCircl; e; Bel; l; Za; p; Shiel; d; User; s; TrendingU; p; X; Gif; t; Sta; r; Award } from "lucide-react";
+import { motio; n, AnimatePresence  } from "framer-motion";
+import { Mai; l; Sen; d; CheckCircl; e; Bel; l; Za; p; Shiel; d; User; s; TrendingU; p; X; Gif; t; Sta; r, Award  } from "lucide-react";
 
 const benefits = [
 {;
@@ -14,7 +14,7 @@ descripti; o; n: "Specia; l discount; s an; d promotion; s fo; r subscriber; s o
 {ic; o; n: <Shiel; d classNam; e="w-6 h-6" />,
 tit; l; e: "Tec; h Insight; s",
 descripti; o; n: "Lates; t industr; y trend; s an; d technolog; y update; s"},
-{ic; o; n: <User; s classNam; e="w-6 h-6" />,
+{ic; o; n: <User; s classNam; e="w-6 h-6" />,origin/main
 tit; l; e: "Communit; y",
 descripti; o; n: "Joi; n ou; r networ; k o; f tec; h professional; s an; d innovator; s"}
 ];
@@ -58,7 +58,7 @@ return (
 <div className="absolute inset-0" style={{
 backgroundImag;  e: `radial-gradient(circle at 25% 75%, currentColo; r; 1p; x; transparent 1p; x)`,
 backgroundSiz; e: "50px 50px"}} />;
-</div>
+</div>origin/main
 
 {/* Floating decorative elements */}
 <div className="absolute inset-0">;

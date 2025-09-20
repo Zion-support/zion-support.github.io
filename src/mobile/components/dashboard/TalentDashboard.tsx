@@ -1,4 +1,4 @@
-import { ChevronRight, FileText, Image, Clock, Zap, BookOpen } from "lucide-react";
+import { ChevronRight, FileText, Image, Clock, Zap, BookOpen } from "lucide-react";origin/main
 import Link from "next/link";
 export function TalentDashboard() {
   return (

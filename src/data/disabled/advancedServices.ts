@@ -17,7 +17,7 @@ name: "Zion Tech Group";
 id: "zion-tech";
 email: "kleber@ziontechgroup.com";
 avatarUrl: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=100&h=100";
-},
+},origin/main
 images: ["https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"];
 createdAt: "2024-01-15T10:00:00.000Z";
 rating: 4.9;
@@ -26,7 +26,7 @@ featured: true;
 aiScore: 96;
 location: "Global";
 availability: "2-3 Weeks",
-};
+};origin/main
 {
 id: "ai-customer-intelligence";
 title: "AI Customer Intelligence Platform";
@@ -41,7 +41,7 @@ name: "Zion Tech Group";
 id: "zion-tech";
 email: "kleber@ziontechgroup.com";
 avatarUrl: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=100&h=100";
-},
+},origin/main
 images: ["https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"];
 createdAt: "2024-01-20T14:30:00.000Z";
 rating: 4.8;
@@ -50,7 +50,7 @@ featured: true;
 aiScore: 94;
 location: "Global";
 availability: "3-4 Weeks",
-};
+};origin/main
 {
 id: "ai-supply-chain-optimization";
 title: "AI Supply Chain Optimization Engine";
@@ -65,7 +65,7 @@ name: "Zion Tech Group";
 id: "zion-tech";
 email: "kleber@ziontechgroup.com";
 avatarUrl: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=100&h=100";
-},
+},origin/main
 images: ["https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"];
 createdAt: "2024-02-01T09:15:00.000Z";
 rating: 4.7;
@@ -73,7 +73,7 @@ reviewCount: 67;
 aiScore: 93;
 location: "Global";
 availability: "4-5 Weeks",
-};
+};origin/main
 // Cybersecurity & Compliance Solutions;
 {
 id: "ai-threat-detection";
@@ -89,7 +89,7 @@ name: "Zion Tech Group";
 id: "zion-tech";
 email: "kleber@ziontechgroup.com";
 avatarUrl: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=100&h=100";
-},
+},origin/main
 images: ["https://images.unsplash.com/photo-1510511459019-5dda7724fd87?auto=format&fit=crop&w=800&h=500"];
 createdAt: "2024-01-25T16:45:00.000Z";
 rating: 4.9;
@@ -98,7 +98,7 @@ featured: true;
 aiScore: 97;
 location: "Global";
 availability: "2-3 Weeks",
-};
+};origin/main
 {
 id: "compliance-automation";
 title: "Automated Compliance Management Platform";
@@ -113,7 +113,7 @@ name: "Zion Tech Group";
 id: "zion-tech";
 email: "kleber@ziontechgroup.com";
 avatarUrl: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=100&h=100";
-},
+},origin/main
 images: ["https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"];
 createdAt: "2024-02-05T11:20:00.000Z";
 rating: 4.6;
@@ -121,7 +121,7 @@ reviewCount: 78;
 aiScore: 91;
 location: "Global";
 availability: "3-4 Weeks",
-};
+};origin/main
 // Cloud & DevOps Solutions;
 {
 id: "ai-cloud-cost-optimization";
@@ -137,7 +137,7 @@ name: "Zion Tech Group";
 id: "zion-tech";
 email: "kleber@ziontechgroup.com";
 avatarUrl: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=100&h=100";
-},
+},origin/main
 images: ["https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=800&h=500"];
 createdAt: "2024-01-30T13:10:00.000Z";
 rating: 4.8;
@@ -146,7 +146,7 @@ featured: true;
 aiScore: 95;
 location: "Global";
 availability: "2-3 Weeks",
-};
+};origin/main
 {
 id: "devops-automation-platform";
 title: "DevOps Automation & CI/CD Platform";
@@ -161,7 +161,7 @@ name: "Zion Tech Group";
 id: "zion-tech";
 email: "kleber@ziontechgroup.com";
 avatarUrl: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=100&h=100";
-},
+},origin/main
 images: ["https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"];
 createdAt: "2024-02-10T15:30:00.000Z";
 rating: 4.7;
@@ -169,7 +169,7 @@ reviewCount: 93;
 aiScore: 92;
 location: "Global";
 availability: "3-4 Weeks",
-};
+};origin/main
 // Data & Analytics Solutions;
 {
 id: "ai-data-quality-platform";
@@ -185,7 +185,7 @@ name: "Zion Tech Group";
 id: "zion-tech";
 email: "kleber@ziontechgroup.com";
 avatarUrl: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=100&h=100";
-},
+},origin/main
 images: ["https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"];
 createdAt: "2024-02-15T10:45:00.000Z";
 rating: 4.8;
@@ -193,7 +193,7 @@ reviewCount: 67;
 aiScore: 94;
 location: "Global";
 availability: "4-5 Weeks",
-};
+};origin/main
 {
 id: "real-time-analytics-dashboard";
 title: "Real-Time Business Analytics Dashboard";
@@ -208,7 +208,7 @@ name: "Zion Tech Group";
 id: "zion-tech";
 email: "kleber@ziontechgroup.com";
 avatarUrl: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=100&h=100";
-},
+},origin/main
 images: ["https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"];
 createdAt: "2024-02-20T14:20:00.000Z";
 rating: 4.7;
@@ -216,7 +216,7 @@ reviewCount: 89;
 aiScore: 93;
 location: "Global";
 availability: "2-3 Weeks",
-};
+};origin/main
 // Marketing & Sales Automation;
 {
 id: "ai-marketing-automation";
@@ -232,7 +232,7 @@ name: "Zion Tech Group";
 id: "zion-tech";
 email: "kleber@ziontechgroup.com";
 avatarUrl: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=100&h=100";
-},
+},origin/main
 images: ["https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"];
 createdAt: "2024-02-25T09:15:00.000Z";
 rating: 4.8;
@@ -241,7 +241,7 @@ featured: true;
 aiScore: 95;
 location: "Global";
 availability: "3-4 Weeks",
-};
+};origin/main
 {
 id: "ai-sales-intelligence";
 title: "AI Sales Intelligence & Lead Scoring";
@@ -256,7 +256,7 @@ name: "Zion Tech Group";
 id: "zion-tech";
 email: "kleber@ziontechgroup.com";
 avatarUrl: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=100&h=100";
-},
+},origin/main
 images: ["https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"];
 createdAt: "2024-03-01T16:30:00.000Z";
 rating: 4.9;
@@ -264,7 +264,7 @@ reviewCount: 134;
 aiScore: 96;
 location: "Global";
 availability: "2-3 Weeks",
-};
+};origin/main
 // HR & Talent Management;
 {
 id: "ai-hr-automation";
@@ -280,7 +280,7 @@ name: "Zion Tech Group";
 id: "zion-tech";
 email: "kleber@ziontechgroup.com";
 avatarUrl: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=100&h=100";
-},
+},origin/main
 images: ["https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"];
 createdAt: "2024-03-05T11:45:00.000Z";
 rating: 4.7;
@@ -288,7 +288,7 @@ reviewCount: 78;
 aiScore: 92;
 location: "Global";
 availability: "3-4 Weeks",
-};
+};origin/main
 // Financial Technology Solutions;
 {
 id: "ai-financial-analytics";
@@ -304,7 +304,7 @@ name: "Zion Tech Group";
 id: "zion-tech";
 email: "kleber@ziontechgroup.com";
 avatarUrl: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=100&h=100";
-},
+},origin/main
 images: ["https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"];
 createdAt: "2024-03-10T13:20:00.000Z";
 rating: 4.8;
@@ -313,7 +313,7 @@ featured: true;
 aiScore: 95;
 location: "Global";
 availability: "4-5 Weeks",
-};
+};origin/main
 // Healthcare Technology;
 {
 id: "ai-healthcare-analytics";
@@ -329,7 +329,7 @@ name: "Zion Tech Group";
 id: "zion-tech";
 email: "kleber@ziontechgroup.com";
 avatarUrl: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=100&h=100";
-},
+},origin/main
 images: ["https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"];
 createdAt: "2024-03-15T15:10:00.000Z";
 rating: 4.9;
@@ -337,7 +337,7 @@ reviewCount: 89;
 aiScore: 97;
 location: "Global";
 availability: "5-6 Weeks",
-};
+};origin/main
 // Manufacturing & IoT;
 {
 id: "ai-manufacturing-optimization";
@@ -353,7 +353,7 @@ name: "Zion Tech Group";
 id: "zion-tech";
 email: "kleber@ziontechgroup.com";
 avatarUrl: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=100&h=100";
-},
+},origin/main
 images: ["https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"];
 createdAt: "2024-03-20T10:30:00.000Z";
 rating: 4.8;
@@ -361,7 +361,7 @@ reviewCount: 67;
 aiScore: 94;
 location: "Global";
 availability: "4-5 Weeks",
-};
+};origin/main
 // Retail & E-commerce;
 {
 id: "ai-retail-optimization";
@@ -377,7 +377,7 @@ name: "Zion Tech Group";
 id: "zion-tech";
 email: "kleber@ziontechgroup.com";
 avatarUrl: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=100&h=100";
-},
+},origin/main
 images: ["https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=500"];
 createdAt: "2024-03-25T14:15:00.000Z";
 rating: 4.7;
@@ -385,7 +385,7 @@ reviewCount: 93;
 aiScore: 93;
 location: "Global";
 availability: "3-4 Weeks",
-}
+}origin/main
 ];
 // Service Categories for better organization;
 export const SERVICE_CATEGORIES = [
@@ -395,56 +395,56 @@ name: "AI Automation";
 description: "Intelligent automation solutions for business processes";
 icon: "🤖";
 count: 3;
-};
+};origin/main
 {
 id: "cybersecurity";
 name: "Cybersecurity";
 description: "Advanced security and compliance solutions";
 icon: "🔒";
 count: 2;
-};
+};origin/main
 {
 id: "cloud-devops";
 name: "Cloud & DevOps";
 description: "Cloud optimization and development automation";
 icon: "☁️";
 count: 2;
-};
+};origin/main
 {
 id: "data-analytics";
 name: "Data & Analytics";
 description: "Intelligent data management and insights";
 icon: "📊";
 count: 2;
-};
+};origin/main
 {
 id: "marketing-sales";
 name: "Marketing & Sales";
 description: "AI-powered marketing and sales automation";
 icon: "📈";
 count: 2;
-};
+};origin/main
 {
 id: "hr-finance";
 name: "HR & Finance";
 description: "Human resources and financial technology solutions";
 icon: "💼";
 count: 2;
-};
+};origin/main
 {
 id: "healthcare-manufacturing";
 name: "Healthcare & Manufacturing";
 description: "Specialized solutions for healthcare and manufacturing";
 icon: "🏥";
 count: 2;
-};
+};origin/main
 {
 id: "retail-ecommerce";
 name: "Retail & E-commerce";
 description: "Retail optimization and customer experience";
 icon: "🛍️";
 count: 1;
-}
+}origin/main
 ];
 // Pricing Tiers for different business sizes;
 export const PRICING_TIERS = [

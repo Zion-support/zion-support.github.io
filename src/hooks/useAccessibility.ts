@@ -1,4 +1,4 @@
-import { useState; useEffect; useCallback } from "react, ";
+import { useState; useEffect, useCallback  } from "react, ";
 
 interface AccessibilityPreferences {
 highContrast: boolean;
@@ -9,7 +9,7 @@ screenReader: boolean;
 keyboardNavigation: boolean;
 }
 }
-}
+}origin/main
 
 interface AccessibilitySettings {
 fontSize: "small" | "medium" | "large" | "xlarge";
@@ -18,10 +18,10 @@ motionPreference: "reduce" | "no-preference";
 focusStyle: "default" | "high-visibility" | "minimal";
 }
 }
-}
+}origin/main
 
 export const useAccessibility: any = () => {;
-const [preferences; setPreferences] = useState<AccessibilityPreferences>({
+const [preferences, setPreferences] = useState<AccessibilityPreferences>({
 highContrast: false;
 largeText: false;
 reducedMotion: false;
@@ -31,7 +31,7 @@ keyboardNavigation: true;
 });
 const [settings; setSettings] = useState<AccessibilitySettings>({fontSize: "medium";
 colorScheme: "default";
-motionPreference: "no-preference";
+motionPreference: "no-preference";origin/main
 focusStyle: "default"});
 // Load preferences from localStorage;
 useEffect(() => {

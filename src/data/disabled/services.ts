@@ -25,7 +25,7 @@ roi: "3–8x on paid pipeline efficiency";
 innovationLevel: "Production-grade predictive scoring";
 contactInfo: {phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
-website: "https://ziontechgroup.com/services/ai-lead-scoring-api";
+website: "https://ziontechgroup.com/services/ai-lead-scoring-api";origin/main
 address: "364 E Main St STE 1008 Middletown DE 19709"}
 };
 {
@@ -48,7 +48,7 @@ roi: "2–6x via labor savings";
 innovationLevel: "Document AI + rule engine";
 contactInfo: {phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
-website: "https://ziontechgroup.com/services/invoice-ocr-api";
+website: "https://ziontechgroup.com/services/invoice-ocr-api";origin/main
 address: "364 E Main St STE 1008 Middletown DE 19709"}
 };
 {
@@ -66,7 +66,7 @@ roi: "Avoid revenue loss from downtime";
 innovationLevel: "Unified synthetic + web perf";
 contactInfo: {phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
-website: "https://ziontechgroup.com/services/uptime-monitor";
+website: "https://ziontechgroup.com/services/uptime-monitor";origin/main
 address: "364 E Main St STE 1008 Middletown DE 19709"}
 };
 {
@@ -84,7 +84,7 @@ roi: "20–40% ticket deflection";
 innovationLevel: "Domain-grounded chat";
 contactInfo: {phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
-website: "https://ziontechgroup.com/services/ai-doc-qa-widget";
+website: "https://ziontechgroup.com/services/ai-doc-qa-widget";origin/main
 address: "364 E Main St STE 1008 Middletown DE 19709"}
 };
 {
@@ -102,7 +102,7 @@ roi: "Compounding organic growth";
 innovationLevel: "Workflows + AI briefs";
 contactInfo: {phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
-website: "https://ziontechgroup.com/services/ai-seo-content-studio";
+website: "https://ziontechgroup.com/services/ai-seo-content-studio";origin/main
 address: "364 E Main St STE 1008 Middletown DE 19709"}
 };
 {
@@ -120,7 +120,7 @@ roi: "15–35% cost optimization";
 innovationLevel: "Automation-first methodology";
 contactInfo: {phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
-website: "https://ziontechgroup.com/services/cloud-migration-accelerator";
+website: "https://ziontechgroup.com/services/cloud-migration-accelerator";origin/main
 address: "364 E Main St STE 1008 Middletown DE 19709"}
 };
 {
@@ -138,7 +138,7 @@ roi: "Fewer incidents; faster MTTR",
 innovationLevel: "Productized platform ops";
 contactInfo: {phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
-website: "https://ziontechgroup.com/services/managed-kubernetes";
+website: "https://ziontechgroup.com/services/managed-kubernetes";origin/main
 address: "364 E Main St STE 1008 Middletown DE 19709"}
 };
 {
@@ -156,7 +156,7 @@ roi: "Shorter sales cycles";
 innovationLevel: "Dev-friendly compliance ops";
 contactInfo: {phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
-website: "https://ziontechgroup.com/services/soc2-readiness";
+website: "https://ziontechgroup.com/services/soc2-readiness";origin/main
 address: "364 E Main St STE 1008 Middletown DE 19709"}
 };
 {
@@ -174,7 +174,7 @@ roi: "Cut model deployment time 50–80%";
 innovationLevel: "Best-practice reference stack";
 contactInfo: {phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
-website: "https://ziontechgroup.com/services/mlops-foundation";
+website: "https://ziontechgroup.com/services/mlops-foundation";origin/main
 address: "364 E Main St STE 1008 Middletown DE 19709"}
 };
 {
@@ -192,7 +192,7 @@ roi: "Deflect tickets; faster workflows",
 innovationLevel: "Enterprise-grade LLMops";
 contactInfo: {phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
-website: "https://ziontechgroup.com/services/custom-llm-fine-tuning";
+website: "https://ziontechgroup.com/services/custom-llm-fine-tuning";origin/main
 address: "364 E Main St STE 1008 Middletown DE 19709"}
 };
 {
@@ -210,7 +210,7 @@ roi: "20–50% support cost savings";
 innovationLevel: "Agent handoff + guardrails";
 contactInfo: {phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
-website: "https://ziontechgroup.com/services/ai-support-chatbot";
+website: "https://ziontechgroup.com/services/ai-support-chatbot";origin/main
 address: "364 E Main St STE 1008 Middletown DE 19709"}
 };
 {
@@ -228,7 +228,7 @@ roi: "3–12 month payback typical";
 innovationLevel: "Edge + cloud hybrid";
 contactInfo: {phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
-website: "https://ziontechgroup.com/services/computer-vision-inspection";
+website: "https://ziontechgroup.com/services/computer-vision-inspection";origin/main
 address: "364 E Main St STE 1008 Middletown DE 19709"}
 }
 ];

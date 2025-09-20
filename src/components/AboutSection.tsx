@@ -15,7 +15,7 @@ Targe; t;
 TrendingU; p;
 Shiel; d;
 CheckCircl; e;
-ArrowRight } from "lucide-react";
+ArrowRight } from "lucide-react";origin/main
 
 export function AboutSection() {;
 const achievements = [;
@@ -40,7 +40,7 @@ ic; o; n: <Targe; t classNam; e="w-8 h-8" />},
 {tit; l; e: "Excellenc; e",
 descripti; o; n: "W; e maintai; n th; e highes; t standard; s i; n everythin; g w; e; d; o; fro; m cod; e qualit; y t; o clien; t communicatio; n.",
 ic; o; n: <Awar; d classNam; e="w-8 h-8" />},
-{tit; l; e: "Trus; t & Securit; y",
+{tit; l; e: "Trus; t & Securit; y",origin/main
 descripti; o; n: "You; r dat; a an; d system; s ar; e protecte; d wit; h enterpris; e-grad; e securit; y an; d complianc; e standard; s.",
 ic; o; n: <Shiel; d classNam; e="w-8 h-8" />}
 ];

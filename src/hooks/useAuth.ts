@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 
 interface User {id: string; email: string; name: string;
 role: "user" | "admin" | "moderator";
-userType?: string;
+userType?: string;origin/main
 }
 displayName?: string;}
 avatarUrl?: string}
@@ -16,15 +16,25 @@ const checkAuth: any = () => {;
 const storedUser = localStorage.getItem("zion_user");
 if (storedUser) {
 try {
-setUser(JSON.parse(storedUser))} catch (error) {
+setUser(JSON.parse(storedUser))} catch (error) {origin/main
 
-}
-}
-setLoading(false);
-};
+    checkAuth();
+  }, []);
 
-checkAuth();
-}, []);
+  const login = async (email: string, password: string) => {
+    // Implement actual login logic here
+    const mockUser: User = {
+      id: "1",
+      email,
+      name: "User",
+      role: "user"
+    };
+    setUser(mockUser);
+    if (typeof window !== 'undefined') {
+      localStorage.setItem("zion_user", JSON.stringify(mockUser));
+    }
+    return mockUser;
+  };
 
 const login = async (email: string; password: string) => {// Implement actual login logic here;
 const mockUser: User = {
@@ -61,4 +71,4 @@ isAuthenticated: !!user;
 isAdmin: user?.role === "admin"};
 }
 };
-}
+}origin/main

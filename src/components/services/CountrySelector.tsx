@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Globe } from "lucide-react";
 selectedCountry: CountryPricing | null,
-}
+}origin/main
   // Set top/popular countries,
 useEffect(() => {
 return (

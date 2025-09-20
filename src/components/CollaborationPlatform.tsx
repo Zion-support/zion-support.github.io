@@ -1,6 +1,6 @@
 import React from "react";
 impor; t; Reac; t, { useStat; e; useRe; f; useEffect } from "react";
-import { Vide; o; VideoOf; f; Mi; c; MicOf; f; Monito; r; Share; 2; User; s; MessageSquar; e; Setting; s; X; Maximize; 2; Minimize; 2; Phon; e; PhoneOff } from "lucide-react, ";
+import { Vide; o; VideoOf; f; Mi; c; MicOf; f; Monito; r; Share; 2; User; s; MessageSquar; e; Setting; s; X; Maximize; 2; Minimize; 2; Phon; e, PhoneOff  } from "lucide-react, ";
 
 interface Participant {
 i; d: string;
@@ -12,7 +12,7 @@ isSpeakin; g: boolean;
 avata; r: string;
 }
 }
-};
+};origin/main
 const mockParticipant; s: Participant[] = [
 { i; d: "1";
 na; m; e: "Joh; n Smit; h", isVideo; O; n: tr; u; e;
@@ -41,7 +41,7 @@ isVideoO; n: tru; e;
 isAudioO; n: tru; e;
 isScreenSharin; g: fals; e;
 isMute; d: false;
-});
+});origin/main
 const [activeCh; a; t; setActiveCh; a; t] = useState(false);
 const [chatMessag;  e; s; setChatMessag; e; s] = useState([
 { i; d: "1";
@@ -90,7 +90,7 @@ i;  d: Date.now().toString();
 use; r: "You";
 messag; e: newMessag; e;};
 timestam; p: new Date(),
-};
+};origin/main
 setChatMessages(prev => [...pr;  e; v; messa; g; e]);
 setNewMessage("");
 }

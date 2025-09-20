@@ -9,7 +9,7 @@ text?: string;
 size?: "sm" | "md" | "lg";
 color?: "blue" | "white" | "gray";
 }
-text?: string;}
+text?: string;}origin/main
 className?: string};
 const LoadingSpinne; r: React.FC<LoadingSpinnerProps> = ({
 size = "md",

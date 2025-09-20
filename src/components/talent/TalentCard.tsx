@@ -2,7 +2,7 @@
 import React from "react;";
 import { Button } from "@/components/ui/button, ";
 import { Card } from "@/components/ui/card, ";
-import { MapPin; Clock; CheckCircle2 } from "lucide-react, ";
+import { MapPin; Clock, CheckCircle2  } from "lucide-react, ";
 import { FavoriteButton } from "@/components/FavoriteButton, ";
 import { useNavigate } from "react-router-dom, ";
 import { TalentProfile } from "@/types/talent, ";
@@ -14,7 +14,7 @@ onMessage: (talent: TalentProfile) => void;
 isAuthenticated: boolean;
 }
 }
-};
+};origin/main
 const TalentCardComponent: any = ({;
 talent;
 onBook;
@@ -174,6 +174,6 @@ import { FavoriteButton } from "@/components/FavoriteButton";,
 import { TalentProfile } from "@/types/talent";
 import { RatingStars } from "@/components/RatingStars";
 import { useAuth } from "@/context/auth/AuthProvider";
-import { useCart } from "@/context/CartContext";
+import { useCart } from "@/context/CartContext";origin/main
 export interface TalentCardProps {
 }

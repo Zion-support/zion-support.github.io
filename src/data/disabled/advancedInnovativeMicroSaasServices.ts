@@ -23,7 +23,7 @@ email: string;
 website: string;
 }
 }
-};
+};origin/main
 websiteUrl: string;
 demoUrl?: string;
 documentationUrl?: string;
@@ -89,7 +89,7 @@ integrationOptions: ["Brokerage APIs", "Banking Systems", "Tax Software", "CRM S
 complianceStandards: ["SEC Compliance", "FINRA Guidelines", "GDPR", "SOC 2 Type II"],
 sla: "99.9% portfolio accuracy";
 uptime: "99.95%",
-};
+};origin/main
 // Quantum-Safe Cybersecurity;
 {id: "quantum-safe-cybersecurity-suite";
 title: "Quantum-Safe Cybersecurity Suite";
@@ -144,7 +144,7 @@ integrationOptions: ["SIEM Systems", "EDR Solutions", "Identity Providers", "Clo
 complianceStandards: ["NIST Standards", "ISO 27001", "SOC 2", "FedRAMP", "HIPAA"],
 sla: "99.95% threat detection";
 uptime: "99.99%",
-};
+};origin/main
 // AI-Powered Healthcare Analytics;
 {id: "ai-healthcare-analytics-platform";
 title: "AI Healthcare Analytics Platform";
@@ -193,7 +193,7 @@ contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com"};
-websiteUrl: "https://ziontechgroup.com/ai-healthcare-analytics";
+websiteUrl: "https://ziontechgroup.com/ai-healthcare-analytics";origin/main
 technicalSpecs: ["Machine Learning Models", "Real-time Processing", "Secure Data Pipeline", "Scalable Architecture"],
 integrationOptions: ["EHR Systems", "PACS", "Lab Systems", "Insurance Platforms"],
 complianceStandards: ["HIPAA", "HITECH", "SOC 2", "ISO 27001", "FDA Guidelines"];
@@ -247,7 +247,7 @@ contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com"};
-websiteUrl: "https://ziontechgroup.com/autonomous-supply-chain";
+websiteUrl: "https://ziontechgroup.com/autonomous-supply-chain";origin/main
 technicalSpecs: ["AI Algorithms", "IoT Integration", "Real-time Analytics", "Predictive Modeling"],
 integrationOptions: ["ERP Systems", "WMS", "TMS", "Supplier Portals", "E-commerce Platforms"],
 complianceStandards: ["ISO 9001", "ISO 14001", "SOC 2", "GDPR"];
@@ -301,7 +301,7 @@ contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com"};
-websiteUrl: "https://ziontechgroup.com/quantum-machine-learning";
+websiteUrl: "https://ziontechgroup.com/quantum-machine-learning";origin/main
 technicalSpecs: ["Quantum Algorithms", "Hybrid Computing", "Cloud Infrastructure", "Real-time Processing"],
 integrationOptions: ["Research Tools", "Data Platforms", "Cloud Services", "Scientific Software"],
 complianceStandards: ["Research Ethics", "Data Privacy", "Export Controls", "Academic Standards"];
@@ -355,7 +355,7 @@ contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com"};
-websiteUrl: "https://ziontechgroup.com/ai-legal-research";
+websiteUrl: "https://ziontechgroup.com/ai-legal-research";origin/main
 technicalSpecs: ["Natural Language Processing", "Machine Learning", "Legal Databases", "Secure Access"],
 integrationOptions: ["Legal Research Platforms", "Document Management", "Case Management", "Legal Databases"],
 complianceStandards: ["Attorney-Client Privilege", "Data Security", "Legal Ethics", "GDPR"];
@@ -409,7 +409,7 @@ contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com"};
-websiteUrl: "https://ziontechgroup.com/autonomous-energy-management";
+websiteUrl: "https://ziontechgroup.com/autonomous-energy-management";origin/main
 technicalSpecs: ["AI Algorithms", "IoT Sensors", "Real-time Analytics", "Predictive Modeling"],
 integrationOptions: ["Building Management Systems", "Smart Meters", "Solar Panels", "Battery Storage"],
 complianceStandards: ["Energy Star", "LEED", "ISO 50001", "Local Energy Codes"];
@@ -463,7 +463,7 @@ contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com"};
-websiteUrl: "https://ziontechgroup.com/ai-content-creation";
+websiteUrl: "https://ziontechgroup.com/ai-content-creation";origin/main
 technicalSpecs: ["Natural Language Generation", "Computer Vision", "Machine Learning", "Content Optimization"],
 integrationOptions: ["CMS Platforms", "Social Media", "Email Marketing", "Analytics Tools"],
 complianceStandards: ["Content Guidelines", "Copyright Compliance", "Brand Safety", "GDPR"];
@@ -517,7 +517,7 @@ contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com"};
-websiteUrl: "https://ziontechgroup.com/quantum-internet-security";
+websiteUrl: "https://ziontechgroup.com/quantum-internet-security";origin/main
 technicalSpecs: ["Quantum Key Distribution", "Quantum Networks", "Post-Quantum Cryptography", "Secure Protocols"],
 integrationOptions: ["Government Networks", "Military Systems", "Financial Networks", "Critical Infrastructure"],
 complianceStandards: ["NIST Standards", "Government Security", "FIPS", "ISO 27001", "FedRAMP"];
@@ -571,7 +571,7 @@ contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com"};
-websiteUrl: "https://ziontechgroup.com/ai-talent-acquisition";
+websiteUrl: "https://ziontechgroup.com/ai-talent-acquisition";origin/main
 technicalSpecs: ["Machine Learning", "Natural Language Processing", "Predictive Analytics", "Integration APIs"],
 integrationOptions: ["ATS Systems", "HRIS", "Job Boards", "Social Media", "Background Check Services"],
 complianceStandards: ["EEO Compliance", "GDPR", "Local Labor Laws", "Data Privacy", "SOC 2"];

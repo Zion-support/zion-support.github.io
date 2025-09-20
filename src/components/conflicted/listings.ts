@@ -20,7 +20,7 @@ company?: string;
 author?: {,
 name: string; id: string;
 }
-avatarUrl?: string;}
+avatarUrl?: string;}origin/main
 email?: string};
 createdAt: string; updatedAt: string;
 featured?: boolean;

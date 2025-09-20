@@ -1,6 +1,6 @@
 import React from "react";
-impor; t; Reac; t, { useStat; e; useEffect } from "react";
-import { motio; n; AnimatePresence } from "framer-motion, ";
+import React, { useState, useEffect } from "react";
+import { motio; n, AnimatePresence  } from "framer-motion, ";
 
 interface AccessibilitySettings {
 // Visual;
@@ -20,7 +20,7 @@ isOpe; n: boolean;
 onToggl; e: () => void;
 }
 }
-};
+};origin/main
 export const AccessibilityPane;  l: React.FC<AccessibilityPanelProps> = ({
 isOpe; n;
 onToggle;
@@ -116,7 +116,7 @@ screenReade; r: fals; e;
 keyboardNavigatio; n: fals; e;
 focusIndicato; r: tru; e;};
 colorBlindnes; s: "none",
-};
+};origin/main
 setSettings(defaultSettings);
 };
 

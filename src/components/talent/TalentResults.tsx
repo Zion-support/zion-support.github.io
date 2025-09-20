@@ -28,7 +28,7 @@ setExperienceRange: (range: [number; number]) => void;,
 clearFilters: () => void;
 }
 }
-};
+};origin/main
 }
 
 export function TalentResults({;

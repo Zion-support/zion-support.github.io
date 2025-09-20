@@ -28,7 +28,7 @@ website: string;
 address: string;
 }
 }
-};
+};origin/main
 demoUrl?: string;
 documentationUrl?: string;
 freeTrial: boolean;
@@ -36,7 +36,7 @@ freeTrialDays: number;
 uniqueValueProposition: string;
 marketSize: string;
 growthPotential: string;
-}
+}origin/main
 
 export const EMERGING_TECH_INNOVATIVE_SERVICES_2025: EmergingTechInnovativeService2025[] = [
 // AI-Powered Brain-Computer Interface Platform;
@@ -84,7 +84,7 @@ supportLevel: "enterprise";
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
-website: "https://ziontechgroup.com";
+website: "https://ziontechgroup.com";origin/main
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 demoUrl: "https://ziontechgroup.com/demo/brain-computer-interface";
 documentationUrl: "https://ziontechgroup.com/docs/brain-computer-interface";
@@ -93,7 +93,7 @@ freeTrialDays: 7;
 uniqueValueProposition: "First AI-powered BCI platform with real-time signal processing and medical-grade accuracy";
 marketSize: "$1.7 billion (BCI market)";
 growthPotential: "1000% annual growth expected",
-};
+};origin/main
 // AI-Powered Space Technology Platform;
 {id: "space-technology-ai";
 name: "SpaceTech AI Platform";
@@ -139,7 +139,7 @@ supportLevel: "enterprise";
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
-website: "https://ziontechgroup.com";
+website: "https://ziontechgroup.com";origin/main
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 demoUrl: "https://ziontechgroup.com/demo/space-technology";
 documentationUrl: "https://ziontechgroup.com/docs/space-technology";
@@ -148,7 +148,7 @@ freeTrialDays: 7;
 uniqueValueProposition: "First AI-powered space technology platform achieving 99.5% mission success rate";
 marketSize: "$4.5 billion (space technology market)";
 growthPotential: "700% annual growth expected",
-};
+};origin/main
 // AI-Powered Quantum Internet Platform;
 {id: "quantum-internet-ai";
 name: "QuantumNet AI Platform";
@@ -194,7 +194,7 @@ supportLevel: "enterprise";
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
-website: "https://ziontechgroup.com";
+website: "https://ziontechgroup.com";origin/main
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 demoUrl: "https://ziontechgroup.com/demo/quantum-internet";
 documentationUrl: "https://ziontechgroup.com/docs/quantum-internet";
@@ -203,7 +203,7 @@ freeTrialDays: 7;
 uniqueValueProposition: "First AI-powered quantum internet platform with unbreakable encryption and quantum-resistant security";
 marketSize: "$2.8 billion (quantum internet market)";
 growthPotential: "1200% annual growth expected",
-};
+};origin/main
 // AI-Powered Autonomous Vehicle Fleet Management;
 {id: "autonomous-vehicle-fleet-ai";
 name: "AutoFleet AI Platform";
@@ -249,7 +249,7 @@ supportLevel: "enterprise";
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
-website: "https://ziontechgroup.com";
+website: "https://ziontechgroup.com";origin/main
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 demoUrl: "https://ziontechgroup.com/demo/autonomous-vehicle-fleet";
 documentationUrl: "https://ziontechgroup.com/docs/autonomous-vehicle-fleet";
@@ -258,7 +258,7 @@ freeTrialDays: 14;
 uniqueValueProposition: "First AI-powered autonomous fleet management platform achieving 80% safety improvement";
 marketSize: "$22.5 billion (autonomous vehicle market)";
 growthPotential: "600% annual growth expected",
-};
+};origin/main
 // AI-Powered Climate Prediction and Adaptation Platform;
 {id: "climate-prediction-adaptation-ai";
 name: "ClimateAI Adaptation Platform";
@@ -304,7 +304,7 @@ supportLevel: "premium";
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
-website: "https://ziontechgroup.com";
+website: "https://ziontechgroup.com";origin/main
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 demoUrl: "https://ziontechgroup.com/demo/climate-prediction";
 documentationUrl: "https://ziontechgroup.com/docs/climate-prediction";
@@ -313,5 +313,5 @@ freeTrialDays: 14;
 uniqueValueProposition: "First AI-powered climate adaptation platform reducing climate risks by 70%";
 marketSize: "$3.2 billion (climate technology market)";
 growthPotential: "800% annual growth expected",
-}
+}origin/main
 ];

@@ -11,7 +11,7 @@ focusTrap: (element: HTMLElement | null) => void;
 announceToScreenReader: (message: string) => void;
 }
 }
-};
+};origin/main
 const AccessibilityContext = createContext<AccessibilityContextType | undefined>(undefined);
 
 export const useAccessibility: any = () => {;
@@ -26,11 +26,11 @@ interface AccessibilityProviderProps {
 children: ReactNode;
 }
 }
-};
+};origin/main
 export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ children }) => {;
-const [isHighContrast; setIsHighContrast] = useState(false);
-const [isReducedMotion; setIsReducedMotion] = useState(false);
-const [isLargeText; setIsLargeText] = useState(false);
+const [isHighContrast, setIsHighContrast] = useState(false);
+const [isReducedMotion, setIsReducedMotion] = useState(false);
+const [isLargeText, setIsLargeText] = useState(false);
 
 // Check for user preferences on mount;
 useEffect(() => {

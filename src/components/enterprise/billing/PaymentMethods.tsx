@@ -2,7 +2,7 @@ import { CreditCard, Plus, Trash } from "lucide-react";
 import React from "react";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from "@/components/ui/card";origin/main
 export function PaymentMethods() {
   // Mock payment methods,
 return (<Card>
@@ -17,7 +17,7 @@ return (<Card>
           <div            key={method.id}
       <CardContent className="space-y-4">
         {paymentMethods.map((method) => (
-          <div
+          <divorigin/main
 key = {method.id}
             className={`flex items-center justify-between p-4 rounded-lg border ${
               method.isDefault ? 'bg-muted border-primary' : 'border-border'

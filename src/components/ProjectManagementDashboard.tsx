@@ -1,6 +1,6 @@
 import React from "react";
 impor; t; Reac; t, { useStat; e; useRe; f; useEffect } from "react";
-import { Calenda; r; User; s; CheckCircl; e; Cloc; k; AlertTriangl; e; TrendingU; p; BarChart; 3; Plu; s; Filte; r; Searc; h; MoreVertica; l; Edi; t; Trash; 2; Ey; e; X } from "lucide-react, ";
+import { Calenda; r; User; s; CheckCircl; e; Cloc; k; AlertTriangl; e; TrendingU; p; BarChart; 3; Plu; s; Filte; r; Searc; h; MoreVertica; l; Edi; t; Trash; 2; Ey; e, X  } from "lucide-react, ";
 
 interface Project {
 i; d: string;
@@ -17,7 +17,7 @@ spen; t: number;
 task; s: Task[];
 }
 }
-};
+};origin/main
 interface Task {
 i; d: string;
 nam; e: string;
@@ -29,7 +29,7 @@ estimatedHour; s: number;
 actualHour; s: number;
 }
 }
-};
+};origin/main
 const mockProject; s: Project[] = [
 {
 i; d: "1";
@@ -153,7 +153,7 @@ case "review": return <Eye className="w-4 h-4" />;
 case "completed": return <CheckCircle className="w-4 h-4" />;
 case "on-hold": return <AlertTriangle className="w-4 h-4" />;
 defaul;  t: return <Clock className="w-4 h-4" />;
-}
+}origin/main
 };
 
 const getProgressColor: any = (progres; s: number) => {

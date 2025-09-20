@@ -4,7 +4,7 @@ import { FileText } from "lucide-react";
 import { ResumeOption } from "../resume-selector/types";
 import { ResumePreviewCard } from "./ResumePreviewCard";
 import { Resume } from "@/types/resume";
-interface SelectResumeSectionProps {resumeOptions: ResumeOption[];
+interface SelectResumeSectionProps {resumeOptions: ResumeOption[];origin/main
 selectedResume: ResumeOption | null;
   handleResumeSelect: (resumeId: string) => void;
 handleDownloadResume: () => void;
@@ -16,14 +16,14 @@ isLoading}: SelectResumeSectionProps) {return (
       {resumeOptions.length === 0 ? (
         <p className='text-sm text-zion-slate'>No saved resumes found.</p>
       ) : (<>
-          {resumeOptions.map(option => (            <button
+          {resumeOptions.map(option => (            <buttonorigin/main
 key = {option.id}
               className={`w-full text-left p-3 rounded-md transition ${
                 selectedResume?.id === option.id
                   ? 'bg-zion-purple/20 border border-zion-purple'
                   : 'bg-zion-blue-dark/30 hover:bg-zion-blue-dark/50'
               }`}
-              onClick = {() => handleResumeSelect(option.id)}
+              onClick = {() => handleResumeSelect(option.id)}origin/main
             >
               <div className='flex items-center'>
                 <FileText className='h-4 w-4 mr-2 text-zion-cyan' />
@@ -48,7 +48,7 @@ key={option.id}
             </button>
           ))}
           {selectedResume?.type === 'ai_resume' && selectedResume.resume && (
-            <ResumePreviewCard
+            <ResumePreviewCardorigin/main
 resume = {selectedResume.resume as Resume}
               onDownload = {handleDownloadResume}
               isLoading = {isLoading}

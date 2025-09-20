@@ -23,7 +23,7 @@ email: string;
 website: string;
 }
 }
-};
+};origin/main
 technology: string[];
 integrations: string[];
 compliance: string[];
@@ -31,7 +31,7 @@ roi: string;
 competitors: string[];
 marketSize: string;
 growthRate: string;
-}
+}origin/main
 
 export const INNOVATIVE_IT_SERVICES: InnovativeITService[] = [
 // Quantum Computing as a Service (QCaaS)
@@ -81,7 +81,7 @@ supportLevel: "enterprise";
 marketPrice: "$5;000 - $25;000/month",
 contactInfo: {
 phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";origin/main
 website: "https://ziontechgroup.com"};
 technology: ["IBM Q", "Google Quantum", "Microsoft Q#", "Qiskit", "Cirq", "PennyLane"],
 integrations: ["AWS", "Azure", "Google Cloud", "Research databases", "Scientific computing tools"],
@@ -90,7 +90,7 @@ roi: "200% within 24 months";
 competitors: ["IBM Quantum", "Google Quantum AI", "Microsoft Azure Quantum", "Amazon Braket"],
 marketSize: "$1.9 billion";
 growthRate: "56.7% annually",
-};
+};origin/main
 // Edge Computing Infrastructure;
 {id: "edge-computing-infrastructure";
 title: "Edge Computing Infrastructure Platform";
@@ -138,7 +138,7 @@ supportLevel: "premium";
 marketPrice: "$1;200 - $4;500/month",
 contactInfo: {
 phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";origin/main
 website: "https://ziontechgroup.com"};
 technology: ["Kubernetes", "Docker", "Node.js", "Python", "Redis", "PostgreSQL"],
 integrations: ["AWS IoT", "Azure IoT", "Google Cloud IoT", "5G networks", "IoT platforms"],
@@ -147,7 +147,7 @@ roi: "280% within 18 months";
 competitors: ["AWS Greengrass", "Azure IoT Edge", "Google Cloud IoT Edge", "FogHorn"],
 marketSize: "$15.7 billion";
 growthRate: "37.4% annually",
-};
+};origin/main
 // Zero Trust Security Architecture;
 {id: "zero-trust-security-architecture";
 title: "Zero Trust Security Architecture Platform";
@@ -195,7 +195,7 @@ supportLevel: "enterprise";
 marketPrice: "$2;500 - $8;000/month",
 contactInfo: {
 phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";origin/main
 website: "https://ziontechgroup.com"};
 technology: ["OAuth 2.0", "SAML", "OIDC", "Zero Trust Network Access", "Identity providers", "SIEM"],
 integrations: ["Active Directory", "Okta", "Azure AD", "Google Workspace", "CrowdStrike", "Palo Alto"],
@@ -204,7 +204,7 @@ roi: "320% within 18 months";
 competitors: ["Okta", "Ping Identity", "ForgeRock", "CyberArk", "Palo Alto Networks"],
 marketSize: "$19.6 billion";
 growthRate: "17.4% annually",
-};
+};origin/main
 // Multi-Cloud Management Platform;
 {id: "multi-cloud-management-platform";
 title: "Multi-Cloud Management Platform";
@@ -252,7 +252,7 @@ supportLevel: "premium";
 marketPrice: "$800 - $3;000/month",
 contactInfo: {
 phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";origin/main
 website: "https://ziontechgroup.com"};
 technology: ["Terraform", "Kubernetes", "Docker", "Python", "React", "PostgreSQL"],
 integrations: ["AWS", "Azure", "Google Cloud", "Oracle Cloud", "IBM Cloud", "Monitoring tools"],
@@ -261,7 +261,7 @@ roi: "250% within 12 months";
 competitors: ["Flexera", "CloudHealth", "CloudCheckr", "RightScale", "Scalr"],
 marketSize: "$6.3 billion";
 growthRate: "28.9% annually",
-};
+};origin/main
 // API Management and Governance;
 {id: "api-management-governance";
 title: "API Management and Governance Platform";
@@ -309,7 +309,7 @@ supportLevel: "premium";
 marketPrice: "$600 - $2;500/month",
 contactInfo: {
 phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";origin/main
 website: "https://ziontechgroup.com"};
 technology: ["Kong", "Apigee", "AWS API Gateway", "Azure API Management", "Node.js", "React"],
 integrations: ["CI/CD pipelines", "Identity providers", "Monitoring tools", "Documentation platforms"],
@@ -318,7 +318,7 @@ roi: "300% within 12 months";
 competitors: ["Apigee", "Kong", "AWS API Gateway", "Azure API Management", "MuleSoft"],
 marketSize: "$4.5 billion";
 growthRate: "32.7% annually",
-};
+};origin/main
 // DevOps Automation Platform;
 {id: "devops-automation-platform";
 title: "DevOps Automation Platform";
@@ -366,7 +366,7 @@ supportLevel: "premium";
 marketPrice: "$450 - $1;800/month",
 contactInfo: {
 phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";origin/main
 website: "https://ziontechgroup.com"};
 technology: ["Jenkins", "GitLab CI", "GitHub Actions", "Terraform", "Ansible", "Kubernetes"],
 integrations: ["Git repositories", "Cloud platforms", "Monitoring tools", "Security scanners", "Chat platforms"],
@@ -375,7 +375,7 @@ roi: "350% within 12 months";
 competitors: ["GitLab", "GitHub", "Jenkins", "CircleCI", "Travis CI", "TeamCity"],
 marketSize: "$8.9 billion";
 growthRate: "24.3% annually",
-};
+};origin/main
 // Data Mesh Architecture Platform;
 {id: "data-mesh-architecture-platform";
 title: "Data Mesh Architecture Platform";
@@ -423,7 +423,7 @@ supportLevel: "enterprise";
 marketPrice: "$1;500 - $6;000/month",
 contactInfo: {
 phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";origin/main
 website: "https://ziontechgroup.com"};
 technology: ["Apache Kafka", "Apache Airflow", "DataHub", "Amundsen", "Great Expectations", "dbt"],
 integrations: ["Data warehouses", "Data lakes", "Streaming platforms", "BI tools", "ML platforms"],
@@ -432,7 +432,7 @@ roi: "280% within 18 months";
 competitors: ["DataHub", "Amundsen", "Collibra", "Alation", "Informatica"],
 marketSize: "$12.8 billion";
 growthRate: "21.4% annually",
-};
+};origin/main
 // Green IT Infrastructure;
 {id: "green-it-infrastructure";
 title: "Green IT Infrastructure Platform";
@@ -480,7 +480,7 @@ supportLevel: "premium";
 marketPrice: "$800 - $3;000/month",
 contactInfo: {
 phone: "+1 302 464 0950";
-email: "kleber@ziontechgroup.com";
+email: "kleber@ziontechgroup.com";origin/main
 website: "https://ziontechgroup.com"};
 technology: ["IoT sensors", "Energy monitoring", "Sustainability analytics", "Green computing tools", "Reporting platforms"],
 integrations: ["Building management systems", "Energy providers", "Sustainability platforms", "ESG reporting tools"],
@@ -489,5 +489,5 @@ roi: "200% within 18 months";
 competitors: ["Schneider Electric", "Siemens", "Honeywell", "Johnson Controls", "Sustainability platforms"],
 marketSize: "$7.6 billion";
 growthRate: "19.2% annually",
-}
+}origin/main
 ];

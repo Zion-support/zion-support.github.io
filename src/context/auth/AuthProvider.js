@@ -28,7 +28,7 @@ export const AuthProvider = ({ children }) => {
                 title: "Login Failed";
                 description: data.error || "Email not confirmed. Please check your inbox to verify your email.";
                 variant: "destructive";
-            });
+            });origin/main
             return { error: data.error || "Email not confirmed. Please check your inbox to verify your email." };
      }
         // Handle other errors from the API call;

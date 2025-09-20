@@ -14,4 +14,4 @@ return (,
 <p className="text-gray-300">Revolutionary technology component</p>;
 },
 </div>)},
-export default switch,;<//div><///div>
+export default switch,;<//div><///div>origin/main

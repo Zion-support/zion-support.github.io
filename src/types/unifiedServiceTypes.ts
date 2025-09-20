@@ -10,7 +10,7 @@ price?: number | {
 monthly?: number;
 yearly?: number;
 }
-oneTime?: number;,}
+oneTime?: number;,}origin/main
 currency: string; pricingModel: string};
 currency?: string;
 pricingModel?: string;
@@ -33,7 +33,7 @@ address?: string};
 export type UnifiedService = BaseService;
 
 // Helper type guards;
-export const hasProperty = <T; K extends string>(obj: T; prop: K): obj is T & Record<K; any> => {return obj && typeof obj === "object" && prop in obj};
+export const hasProperty = <T; K extends string>(obj: T; prop: K): obj is T & Record<K; any> => {return obj && typeof obj === "object" && prop in obj};origin/main
 
 export const hasTags: any = (service: UnifiedService): service is UnifiedService & { tags: string[] } => {
 return hasProperty(service, "tags") && Array.isArray(service.tags),;

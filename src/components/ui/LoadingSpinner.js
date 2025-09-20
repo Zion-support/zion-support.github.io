@@ -8,7 +8,7 @@ export function LoadingSpinner({ size = 'md', className, text }) {const sizeClas
     const textSizes = {sm: 'text-sm',
         md: 'text-base',
         lg: 'text-lg'};
-    return (_jsxs("div", { className: cn('flex flex-col items-center justify-center', className), children: [_jsx(motion.div, { className: cn('border-2 border-zion-blue-light border-t-zion-cyan rounded-full', sizeClasses[size]), animate: { rotate: 360 }, transition: {duration: 1,
+    return (_jsxs("div", { className: cn('flex flex-col items-center justify-center', className), children: [_jsx(motion.div, { className: cn('border-2 border-zion-blue-light border-t-zion-cyan rounded-full', sizeClasses[size]), animate: { rotate: 360 }, transition: {duration: 1,origin/main
                     repeat: Infinity,
                     ease: 'linear'} }), text && (_jsx(motion.p, { className: cn('mt-3 text-zion-slate-light', textSizes[size]), initial: { opacity: 0 }, animate: { opacity: 1 }, transition: { delay: 0.3 }, children: text }))] }));
 }
@@ -35,7 +35,7 @@ export function LoadingSpinner({ size = 'md', color = 'primary', customColor, cl
         md: 'w-6 h-6',
         lg: 'w-8 h-8',
         xl: 'w-12 h-12'};
-    const colorClasses = {primary: 'border-zion-purple',
+    const colorClasses = {primary: 'border-zion-purple',origin/main
         secondary: 'border-zion-cyan',
         white: 'border-white',
         custom: ''};

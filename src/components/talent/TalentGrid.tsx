@@ -16,7 +16,7 @@ handleBook?: (talent: TalentProfile) => void;
 handleMessage?: (talent: TalentProfile) => void;
 }
 }
-};
+};origin/main
 export function TalentGrid({ ;
 talents;
 isLoading;

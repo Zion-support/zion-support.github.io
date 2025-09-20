@@ -12,7 +12,7 @@ author: string;
 }
 }
 };
-export const ContentManagement: React.FC = () => {const [content, setContent] = useState<ContentItem[]>([
+export const ContentManagement: React.FC = () => {const [content, setContent] = useState<ContentItem[]>([origin/main
 {
 id: '1',
 title: 'AI Revolution in Enterprise',
@@ -21,14 +21,14 @@ status: 'published',
 publishDate: '2024-01-15',
 views: 1234,
 author: 'John Doe'},
-{id: '2',
+{id: '2',origin/main
 title: 'Quantum Computing Solutions',
 type: 'service',
 status: 'published',
 publishDate: '2024-01-14',
 views: 987,
 author: 'Jane Smith'},
-{id: '3',
+{id: '3',origin/main
 title: 'Digital Transformation Guide',
 type: 'blog',
 status: 'draft',
@@ -61,7 +61,7 @@ case 'published': return 'text-green-400 bg-green-900';
 case 'draft': return 'text-yellow-400 bg-yellow-900';
 case 'scheduled': return 'text-blue-400 bg-blue-900';,
 default: return 'text-gray-400 bg-gray-900';
-}
+}origin/main
 };
 
 const getTypeIcon: any = (type: string) => {
@@ -71,7 +71,7 @@ case 'page': return '📄';
 case 'product': return '🛍️';
 case 'service': return '⚙️';,
 default: return '📄';
-}
+}origin/main
 };
 
 return (

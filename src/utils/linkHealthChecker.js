@@ -15,8 +15,7 @@ export class LinkHealthChecker {
                 headers: {
                     'User-Agent': this.config.userAgent;
                 },
-                redirect: this.config.followRedirects ? 'follow' : 'manual',
-            });
+                redirect: this.config.followRedirects ? 'follow' : 'manual'});
             const responseTime = Date.now() - startTime;
             if (response.ok || response.status < 400) {return {
                     url,
@@ -32,8 +31,7 @@ export class LinkHealthChecker {
                     statusCode: response.status,
                     responseTime,
                     error: `HTTP ${response.status}: ${response.statusText}`,
-                    lastChecked: new Date(),
-                };
+                    lastChecked: new Date()};
             }
         }
         catch (error) {return {
@@ -80,8 +78,7 @@ export class LinkHealthChecker {
             url,
             status: 'error',
             error: `Failed after ${this.config.retries} attempts. Last error: ${lastError}`,
-            lastChecked: new Date(),
-        };
+            lastChecked: new Date()};
     }
     getHealthSummary(results) {
         const total = results.length;

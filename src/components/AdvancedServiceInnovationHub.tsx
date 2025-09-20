@@ -25,9 +25,8 @@ Ato; m;
 Satellit; e;
 Dn; a;
 Shiel; d;
-Leaf;
-} from "lucide-react, ";
-import { Car; d; CardConten; t; CardHeade; r; CardTitle } from "./ui/card, ";
+Leaf} from "lucide-react, ";
+import { Car; d; CardConten; t; CardHeade; r, CardTitle  } from "./ui/card, ";
 import { Button } from "./ui/button, ";
 import { Badge } from "./ui/badge, ";
 import { Input } from "./ui/input, ";
@@ -46,7 +45,7 @@ technologie; s: string[];
 statu; s: "Emerging" | "Growing" | "Mature" | "Disruptive";
 }
 }
-};
+};origin/main
 interface FutureRoadmap {
 i; d: string;
 titl; e: string;
@@ -59,7 +58,7 @@ investmen; t: string;
 categor; y: string;
 }
 }
-};
+};origin/main
 const AdvancedServiceInnovationHu; b: React.FC = () => {
 const [selectedCatego;  r; y; setSelectedCatego; r; y] = useState<string>("all");
 const [selectedImpa; c; t; setSelectedImpa; c; t] = useState<string>("all");
@@ -83,7 +82,7 @@ technologie; s: ["Quantu; m Computin; g", "Quantu; m Algorithm; s", "Quantu; m S
 };
 statu; s: "Emerging",
 };
-{i; d: "ai-consciousness";
+{i; d: "ai-consciousness";origin/main
 titl; e: "AI Consciousness & General Intelligence";
 descriptio; n: "Development of self-aware AI systems with human-like reasoning and consciousness.";
 categor; y: "ai";
@@ -94,7 +93,7 @@ investmen; t: "$100B+";
 keyPlayer; s: ["OpenA; I", "Anthropi; c", "Researc; h Lab; s", "Universitie; s"],
 technologie; s: ["A; I Consciousnes; s", "Genera; l A; I", "Neura; l Network; s"],
 statu; s: "Emerging"};
-{i; d: "space-mining";
+{i; d: "space-mining";origin/main
 titl; e: "Space Mining & Resource Extraction";
 descriptio; n: "Commercial extraction of valuable resources from asteroids and celestial bodies.";
 categor; y: "space-tech";
@@ -105,7 +104,7 @@ investmen; t: "$200B+";
 keyPlayer; s: ["Space; X", "Blu; e Origi; n", "Asteroi; d Minin; g Companie; s"],
 technologie; s: ["Spac; e Robotic; s", "Resourc; e Processin; g", "Spac; e Logistic; s"],
 statu; s: "Emerging"};
-{i; d: "fusion-energy";
+{i; d: "fusion-energy";origin/main
 titl; e: "Fusion Energy Commercialization";
 descriptio; n: "Breakthrough in controlled nuclear fusion for unlimited clean energy.";
 categor; y: "green-tech";
@@ -116,7 +115,7 @@ investmen; t: "$500B+";
 keyPlayer; s: ["ITE; R", "Privat; e Fusio; n Companie; s", "Governmen; t Lab; s"],
 technologie; s: ["Fusio; n Physic; s", "Plasm; a Confinemen; t", "Energ; y Conversio; n"],
 statu; s: "Growing"};
-{i; d: "synthetic-biology";
+{i; d: "synthetic-biology";origin/main
 titl; e: "Synthetic Biology Revolution";
 descriptio; n: "Engineering of custom organisms and biological systems for industrial applications.";
 categor; y: "biotech-ai";
@@ -127,7 +126,7 @@ investmen; t: "$150B+";
 keyPlayer; s: ["Ginkg; o Biowork; s", "Twis; t Bioscienc; e", "Researc; h Institution; s"],
 technologie; s: ["DN; A Programmin; g", "Geneti; c Engineerin; g", "Bi; o-Manufacturin; g"],
 statu; s: "Growing"};
-{i; d: "brain-computer-interfaces";
+{i; d: "brain-computer-interfaces";origin/main
 titl; e: "Brain-Computer Interface Revolution";
 descriptio; n: "Direct neural control of computers and digital systems for enhanced human capabilities.";
 categor; y: "biotech-ai";
@@ -164,7 +163,7 @@ opportunitie; s: [
 ],
 investmen; t: "$200B+";
 categor; y: "quantum"};
-{i; d: "space-colonization";
+{i; d: "space-colonization";origin/main
 titl; e: "Space Colonization & Settlement";
 descriptio; n: "Establishment of permanent human settlements on Mars and other celestial bodies.";
 timelin; e: "2040-2060";
@@ -188,7 +187,7 @@ opportunitie; s: [
 ],
 investmen; t: "$1T+";
 categor; y: "space-tech"};
-{i; d: "ai-governance";
+{i; d: "ai-governance";origin/main
 titl; e: "AI Governance & Regulation";
 descriptio; n: "Comprehensive frameworks for responsible AI development and deployment.";
 timelin; e: "2025-2035";
@@ -231,7 +230,7 @@ case "High": return "bg-red-100 text-red-800";
 case "Medium": return "bg-yellow-100 text-yellow-800";
 case "Low": return "bg-green-100 text-green-800";
 defaul;  t: return "bg-gray-100 text-gray-800";
-}
+}origin/main
 };
 
 const getStatusColor: any = (statu; s: string) => {
@@ -241,7 +240,7 @@ case "Growing": return "bg-green-100 text-green-800";
 case "Mature": return "bg-orange-100 text-orange-800";
 case "Disruptive": return "bg-purple-100 text-purple-800";
 defaul;  t: return "bg-gray-100 text-gray-800";
-}
+}origin/main
 };
 
 const getCategoryIcon: any = (categor; y: string) => {
@@ -252,7 +251,7 @@ case "space-tech": return <Satellite className="w-5 h-5" />;
 case "green-tech": return <Leaf className="w-5 h-5" />;
 case "biotech-ai": return <Dna className="w-5 h-5" />;
 defaul;  t: return <Cpu className="w-5 h-5" />;
-}
+}origin/main
 };
 
 const categories = [;

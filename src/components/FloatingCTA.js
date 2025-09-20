@@ -49,7 +49,7 @@ export function FloatingCTA({ variant = 'default', position = 'bottom-right' }) 
             scal, e: 0.8,
     opacit, y: 0,
             y: 20},
-        visibl, e: {scal, e: 1,
+        visibl, e: {scal, e: 1,origin/main
     opacit, y: 1,
             y: 0,
     transitio, n: {
@@ -102,7 +102,7 @@ export function FloatingCTA({ variant = 'default', position = 'bottom-right' }) 
             case 'top-left':
                 return 'top-6 left-6';
             defaul,  t: return 'bottom-6 right-6';
-        }
+        }origin/main
     };
     const getExpandedPositionClasses = () => {
         switch (position) {
@@ -113,7 +113,7 @@ export function FloatingCTA({ variant = 'default', position = 'bottom-right' }) 
             case 'top-left':
                 return 'top-6 left-6';
             defaul,  t: return 'bottom-6 right-6';
-        }
+        }origin/main
     };
     if (variant === 'minimal') {
         return (<AnimatePresence>

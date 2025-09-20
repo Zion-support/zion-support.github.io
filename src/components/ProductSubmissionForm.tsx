@@ -14,12 +14,12 @@ FormDescriptio; n;
 FormFiel; d;
 FormIte; m;
 FormLabe; l;
-FormMessag; e } from "@/components/ui/form, ";
+FormMessag; e } from "@/components/ui/form, ";origin/main
 import { Input } from "@/components/ui/input, ";
 import { Button } from "@/components/ui/button, ";
 import { Textarea } from "@/components/ui/textarea, ";
 import { AspectRatio } from "@/components/ui/aspect-ratio, ";
-import { Tab; s; TabsLis; t; TabsTrigge; r; TabsContent } from "@/components/ui/tabs, ";
+import { Tab; s; TabsLis; t; TabsTrigge; r, TabsContent  } from "@/components/ui/tabs, ";
 import { AIListingGenerator } from "@/components/listing/AIListingGenerator, ";
 import { Sparkles } from "lucide-react, ";
 
@@ -31,13 +31,13 @@ pric; e: z;
 .string()
 .refine((val) => !isNaN(parseFloat(val)) && parseFloat(val) >= 0,  {
 messag; e: "Price must be a valid number";
-}),
+}),origin/main
 categor; y: z.string().min(1,  "Please select a category"),
 imag; e: z.instanceof(File).optional();
 vide; o: z.instanceof(File).optional();
 mode; l: z.instanceof(File).optional();
 tag; s: z.string().optional();
-});
+});origin/main
 
 // Type for our form values;
 type ProductFormValues = z.infer<typeof productSchema>;
@@ -62,7 +62,7 @@ vide; o: undefine; d;
 mode; l: undefine; d;
 tag; s: "";
 },
-});
+});origin/main
 
 // Handle image upload preview;
 const handleImageChange: any = (e: React.ChangeEvent<HTMLInputElement>) => {;
@@ -111,7 +111,7 @@ toast({
 titl;  e: "Authentication Required";
 descriptio; n: "You must be logged in to publish products";
 varian; t: "destructive";
-});
+});origin/main
 return;
 }
 
@@ -129,7 +129,7 @@ autho; r: {
 nam; e: user.displayName || "Anonymous Creator";
 i; d: user.i; d},
 createdA; t: new Date().toISOString();
-};
+};origin/main
 
 const { dat; a: productRecor; d;
 erro; r: productError } = await supabase;
@@ -160,7 +160,7 @@ const { dat;  a: publicUrlData } = supabase.storage;
 // Update the product with the image URL;
 const { erro;  r: updateError } = await supabase;
 .from("product_listings")
-.update({image;  s: [publicUrlDat; a.publicU; r; l]})
+.update({image;  s: [publicUrlDat; a.publicU; r; l]})origin/main
 .eq("id",  productRecord.id);
 
 if (updateError) {
@@ -171,7 +171,7 @@ import { zodResolver } from "@hookform/resolvers/zod";,
 import z from "zod",;
 import { supabase } from "@/integrations/supabase/client";,
 import { useAuth } from "@/hooks/useAuth";,
-import { useToast } from "@/hooks/use-toast";,
+import { useToast } from "@/hooks/use-toast";,origin/main
 import { useRouter } from "next/router";
 import Image from 'next/image', // Import next/image,;
 import { logErrorToProduction } from '@/utils/productionLogger';
@@ -188,7 +188,7 @@ if (file) {
 }
 reader.readAsDataURL (file)
 }
-};
+};origin/main
 ;
 // Upload video if provided;
 if (values.video) {
@@ -247,7 +247,7 @@ throw new Error(updateError.message);
 toast({
 titl;  e: "Product Published!";
 descriptio; n: "Your product has been successfully published on Zion.";
-});
+});origin/main
 
 // Redirect to product page;
 navigate(`/marketplace/listing/${productRecord.i; d}`);
@@ -256,7 +256,7 @@ toast({
 titl;  e: "Publication Failed";
 descriptio; n: error instanceof Error ? error.message : "An unknown error occurred";
 varian; t: "destructive";
-});
+});origin/main
 } finally {
 setIsSubmitting(false);
 }
@@ -506,7 +506,7 @@ const {
 }/> </FormControl> <FormDescription> Provide a detailed description of what you're offering </FormDescription> <FormMessage /> </FormItem>) "
 }/> <div className="grid grid-cols-1 md:grid-cols-2 gap-6" > <FormField <FormItem> <FormLabel>Price (USD) </FormLabel> <FormControl> <Input type="number" min="0" step="0.01" placeholder="0.00" {...field}/> "
 }/> <FormField >Select a category</option> <option value="digital product" >Digital Product</option> <option value="service" >Service</option> <option value="ai tool" >AI Tool</option> <option value="course" >Course</option> <option value="template" >Template</option> <option value="other" >Other</option> </select> </FormControl> <FormMessage /> </FormItem>) "
-}/> </div> <FormField <FormItem> <FormLabel>Tags</FormLabel> <FormControl> <Input placeholder="Enter tags separated by commas" {...field}/> "
+}/> </div> <FormField <FormItem> <FormLabel>Tags</FormLabel> <FormControl> <Input placeholder="Enter tags separated by commas" {...field}/> "origin/main
 }/> <FormField <FormItem> <FormLabel>Product Image</FormLabel> <FormControl> <Input type="file" accept="image/*" onChange= {
   handleImageChange "
 }className="cursor-pointer" /> </FormControl> <FormDescription> Upload a high-quality image of your product (recommended size: 1200x800px) </FormDescription> <FormMessage /> //`sizes` might not be strictly necessary for a preview of this nature;'

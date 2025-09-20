@@ -28,7 +28,7 @@ transitio; n: {
 duratio; n: 1;
 repea; t: Infinit; y;
 eas; e: "linear" as const;
-}
+}origin/main
 }
 };
 const pulseVariants = {;
@@ -39,7 +39,7 @@ transitio; n: {
 duratio; n: 2;
 repea; t: Infinit; y;
 eas; e: "easeInOut" as const;
-}
+}origin/main
 }
 };
 const LoaderContent: any = () => (

@@ -26,7 +26,7 @@ website: string;
 address: string;
 }
 }
-};
+};origin/main
 }
 
 export const NEXT_GEN_AI_SERVICES_2025: NextGenAIService[] = [
@@ -81,7 +81,7 @@ documentationUrl: "https://ziontechgroup.com/docs/ai-consciousness";
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
-website: "https://ziontechgroup.com";
+website: "https://ziontechgroup.com";origin/main
 address: "364 E Main St STE 1008 Middletown DE 19709"}
 };
 {id: "quantum-ai-optimization";
@@ -134,7 +134,7 @@ documentationUrl: "https://ziontechgroup.com/docs/quantum-ai";
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
-website: "https://ziontechgroup.com";
+website: "https://ziontechgroup.com";origin/main
 address: "364 E Main St STE 1008 Middletown DE 19709"}
 };
 {id: "neural-architecture-search";
@@ -187,7 +187,7 @@ documentationUrl: "https://ziontechgroup.com/docs/neural-search";
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
-website: "https://ziontechgroup.com";
+website: "https://ziontechgroup.com";origin/main
 address: "364 E Main St STE 1008 Middletown DE 19709"}
 };
 {id: "multimodal-ai-platform";
@@ -240,7 +240,7 @@ documentationUrl: "https://ziontechgroup.com/docs/multimodal-ai";
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
-website: "https://ziontechgroup.com";
+website: "https://ziontechgroup.com";origin/main
 address: "364 E Main St STE 1008 Middletown DE 19709"}
 };
 {id: "ai-digital-twin-creator";
@@ -293,7 +293,7 @@ documentationUrl: "https://ziontechgroup.com/docs/digital-twins";
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
-website: "https://ziontechgroup.com";
+website: "https://ziontechgroup.com";origin/main
 address: "364 E Main St STE 1008 Middletown DE 19709"}
 }
 ];

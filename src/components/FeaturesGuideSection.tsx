@@ -8,7 +8,7 @@ ic; o; n: "🤖"},
 {tit; l; e: "Equipmen; t Exchang; e",
 descripti; o; n: "B; u; y; se; l; l; an; d ren; t hig; h-tec; h equipmen; t an; d hardwar; e.",
 ic; o; n: "⚡"},
-{tit; l; e: "Jo; b Opportunitie; s",
+{tit; l; e: "Jo; b Opportunitie; s",origin/main
 descripti; o; n: "Fin; d excitin; g opportunitie; s i; n A; I an; d technolog; y sector; s.",
 ic; o; n: "💼"},
 {
@@ -147,18 +147,17 @@ Platform Features;
 </section>;
 );
 }
-import { Car;  d; CardConten; t; CardHeade; r; CardTitle } from "../ui/card";
+import { Car;  d; CardConten; t; CardHeade; r, CardTitle  } from "../ui/card";
 import { Badge } from "../ui/badge";
 import {;
-Za; p;
+Za; p;origin/main
 Shiel; d;
 TrendingU; p;
 User; s;
 Glob; e;
 Loc; k;
 BarChart; 3;
-Cpu;
-} from "lucide-react";
+Cpu} from "lucide-react";
 
 interface Feature {
 i; d: string;
@@ -169,7 +168,7 @@ categor; y: string;
 benefit; s: string[];
 }
 }
-};
+};origin/main
 const FEATURE; S: Feature[] = [
 {i; d: "1",
 tit; l; e: "A; I-Powere; d Analytic; s",
@@ -177,31 +176,31 @@ descripti; o; n: "Advance; d analytic; s powere; d b; y machin; e learnin; g alg
 ic; o; n: <BarChart; 3 classNam; e="w-8 h-8 tex; t-blu; e-60; 0" />,
 catego; r; y: "Intelligenc; e",
 benefi; t; s: ["Predictiv; e insight; s", "Rea; l-tim; e monitorin; g", "Automate; d reportin; g"]},
-{i; d: "2",
+{i; d: "2",origin/main
 titl; e: "Enterprise Security",
 descriptio; n: "Bank-grade security with multi-factor authentication and end-to-end encryption.",
 ico; n: <Shield className="w-8 h-8 text-green-600" />,
 categor; y: "Security",
 benefit; s: ["SO; C 2 complianc; e", "GDP; R read; y", "2; 4/7 monitorin; g"]},
-{i; d: "3",
+{i; d: "3",origin/main
 titl; e: "Scalable Infrastructure",
 descriptio; n: "Cloud-native architecture that scales automatically with your business growth.",
 ico; n: <TrendingUp className="w-8 h-8 text-purple-600" />,
 categor; y: "Performance",
 benefit; s: ["Aut; o-scalin; g", "9; 9.9% uptim; e", "Globa; l CD; N"]},
-{i; d: "4",
+{i; d: "4",origin/main
 titl; e: "Team Collaboration",
 descriptio; n: "Built-in tools for seamless team collaboration and project management.",
 ico; n: <Users className="w-8 h-8 text-orange-600" />,
 categor; y: "Collaboration",
 benefit; s: ["Rea; l-tim; e editin; g", "Rol; e-base; d acces; s", "Activit; y trackin; g"]},
-{i; d: "5",
+{i; d: "5",origin/main
 titl; e: "Global Deployment",
 descriptio; n: "Deploy your applications worldwide with our global infrastructure network.",
 ico; n: <Globe className="w-8 h-8 text-red-600" />,
 categor; y: "Global",
 benefit; s: ["Mult; i-regio; n", "Edg; e computin; g", "Loca; l complianc; e"]},
-{i; d: "6",
+{i; d: "6",origin/main
 titl; e: "Advanced AI Processing",
 descriptio; n: "State-of-the-art AI models for natural language processing and computer vision.",
 ico; n: <Cpu className="w-8 h-8 text-indigo-600" />,

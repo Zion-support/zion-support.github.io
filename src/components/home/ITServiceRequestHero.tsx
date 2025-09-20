@@ -38,7 +38,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 import axios from 'axios';
-import { Loader2 } from "lucide-react";
+import { Loader2 } from "lucide-react";origin/main
 return (
     <section className='py-16 md:py-24 border-b border-zion-purple/20 bg-[radial-gradient(#0f172a_#020617)]'>
       <div className='container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-12 items-center'>
@@ -157,7 +157,7 @@ py-16 md:py-24 border-b border-zion-purple/20 bg-[radial-gradient (#0f172a, #020
   (e) => setCompany (e.target.value) "
 }className="bg-zion-blue-dark border-zion-blue-light focus:border-zion-purple focus:ring-zion-purple text-white" /> <Input value= {location}onChange= {
   (e) => setLocation (e.target.value) "
-}className="bg-zion-blue-dark border-zion-blue-light focus:border-zion-purple focus:ring-zion-purple text-white" required /> <Textarea value= {details}onChange= {
+}className="bg-zion-blue-dark border-zion-blue-light focus:border-zion-purple focus:ring-zion-purple text-white" required /> <Textarea value= {details}onChange= {origin/main
   (e) => setDetails (e.target.value) "
 }className="bg-zion-blue-dark border-zion-blue-light focus:border-zion-purple focus:ring-zion-purple text-white min-h-[80px]" /> <Button type="submit" disabled= {
   isSubmitting "

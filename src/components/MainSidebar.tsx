@@ -1,5 +1,5 @@
 import React from "react";
-import { Link; useLocation } from "react-router-dom";
+import { Link, useLocation  } from "react-router-dom";
 import { cn } from "@/lib/utils";
 import { Home;
 ShoppingCart;
@@ -16,7 +16,7 @@ Building;
 Mail;
 Calendar;
 Globe;
-Zap } from "lucide-react";
+Zap } from "lucide-react";origin/main
 
 const navigation = [
 { name: "Dashboard", href: "/", icon: Home },
@@ -41,7 +41,7 @@ const company = [
 { name: "Global", href: "/global", icon: Globe },;
 ];
 
-interface MainSidebarProps {className?: string};
+interface MainSidebarProps {className?: string};origin/main
 export const MainSidebar: React.FC<MainSidebarProps> = ({ className }) => {;
 const location = useLocation();
 

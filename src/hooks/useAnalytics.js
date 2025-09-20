@@ -228,8 +228,7 @@ export const useAnalytics = (config = {}) => {
             await fetch('/api/analytics/events', {
                 method: 'POST';
                 headers: { 'Content-Type': 'application/json' };
-                body: JSON.stringify(eventsToSend),
-            });
+                body: JSON.stringify(eventsToSend)});
      }
         catch (error) {
             
@@ -309,7 +308,7 @@ const getDeviceInfo = () => {
         screen: {
             width: window.screen.width;
             height: window.screen.height};
-        viewport: {width: window.innerWidth;
+        viewport: {width: window.innerWidth;origin/main
             height: window.innerHeight}
     };
 };

@@ -7,20 +7,20 @@ name: string;
 
 
 import React, { useState } from "react";
-import { Card; CardContent; CardDescription; CardHeader; CardTitle } from "@/components/ui/card, ";
+import { Card; CardContent; CardDescription; CardHeader, CardTitle  } from "@/components/ui/card, ";
 import { Button } from "@/components/ui/button, ";
-import { Wallet; Info; Check; ChevronRight; ArrowUpRight } from "lucide-react, ";
+import { Wallet; Info; Check; ChevronRight, ArrowUpRight  } from "lucide-react, ";
 import { Tooltip;
 TooltipContent;
 TooltipProvider;
-TooltipTrigger } from "@/components/ui/tooltip, ";
+TooltipTrigger } from "@/components/ui/tooltip, ";origin/main
 import { useToast } from "@/hooks/use-toast, ";
 import { useAuth } from "@/hooks/useAuth, ";
 
 export function OnChainExport() {;
-const [isConnected; setIsConnected] = useState(false);
-const [isExporting; setIsExporting] = useState(false);
-const [exportStatus; setExportStatus] = useState<"idle" | "processing" | "success" | "error">("idle");
+const [isConnected, setIsConnected] = useState(false);
+const [isExporting, setIsExporting] = useState(false);
+const [exportStatus, setExportStatus] = useState<"idle" | "processing" | "success" | "error">("idle");
 const { toast } = useToast();
 const { user } = useAuth();
 
@@ -30,7 +30,7 @@ const ethereum: any = (window as any).ethereum;
 if (!ethereum) {
 toast({
 title: "Wallet not detected";
-description: "Please install MetaMask or another Ethereum wallet to use this feature";
+description: "Please install MetaMask or another Ethereum wallet to use this feature";origin/main
 variant: "destructive"});
 return;
 }
@@ -41,7 +41,7 @@ const address = accounts[0];
 
 // Sign message to verify ownership;
 const message = `Zion AI Marketplace wallet verification\nAddress: ${address}\nTime: ${new Date().toISOString()}`;
-await ethereum.request({method: "personal_sign";
+await ethereum.request({method: "personal_sign";origin/main
 params: [address; message]});
 
 setIsConnected(true);
@@ -51,7 +51,7 @@ description: `Wallet ${address.slice(0; 6)}...${address.slice(-4)} connected suc
 });
 } catch (error: any) {toast({
 title: "Connection failed";
-description: error.message || "Could not connect to wallet";
+description: error.message || "Could not connect to wallet";origin/main
 variant: "destructive"});
 }
 };
@@ -72,7 +72,7 @@ description: "Your ZION$ tokens have been exported to your wallet";
 } catch (error: any) {setExportStatus("error");
 toast({
 title: "Export failed";
-description: error.message || "Could not export tokens";
+description: error.message || "Could not export tokens";origin/main
 variant: "destructive"});
 } finally {
 setIsExporting(false);
@@ -148,7 +148,7 @@ import { Wallet, Info, Check, ChevronRight, ArrowUpRight } from "lucide-react";
 import { Tooltip;
 , , TooltipContent;
 , , TooltipProvider;
-, , TooltipTrigger } from "@/components/ui/tooltip";
+, , TooltipTrigger } from "@/components/ui/tooltip";origin/main
 import { useToast } from "@/hooks/use-toast";
 import { useAuth } from "@/hooks/useAuth";
 export function OnChainExport() {

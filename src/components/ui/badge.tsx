@@ -2,7 +2,7 @@ import React from "react;";
 
 interface BadgeProps {children: React.ReactNode;
 }
-className?: string;}
+className?: string;}origin/main
 variant?: "default" | "secondary" | "destructive" | "outline"};
 const Badge: React.FC<BadgeProps> = ({
 children;

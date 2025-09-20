@@ -9,7 +9,7 @@ export const store = configureStore({
         wishlist: wishlistReducer;
         auth: authReducer;
     },
-});
+});origin/main
 store.subscribe(() => {
     const state = store.getState();
     safeStorage.setItem('zion_cart', JSON.stringify(state.cart.items));

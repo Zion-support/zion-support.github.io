@@ -10,7 +10,7 @@ export function Loading({size = "md", ;
 variant = "spinner", ;
 className;
 text}: LoadingProps) {const sizeClasses = {;
-sm: "w-4 h-4", md: "w-6 h-6";
+sm: "w-4 h-4", md: "w-6 h-6";origin/main
 lg: "w-8 h-8",
 xl: "w-12 h-12"};
 const renderSpinner: any = () => (
@@ -73,7 +73,7 @@ export function PageLoading() {return (
 <h2 className="text-xl font-semibold text-zion-slate-light">Loading Zion Tech Group</h2>;
 <p className="text-zion-slate-light">Preparing your experience...</p>;
 </div>
-</div>
+</div>origin/main
 )};
 ;
 // Content skeleton loading;
@@ -85,7 +85,7 @@ export function ContentSkeleton() {return (
 <div className="h-4 bg-zion-slate-light/20 rounded w-5/6"></div>
 <div className="h-4 bg-zion-slate-light/20 rounded w-4/6"></div>
 </div>
-</div>
+</div>origin/main
 )};
 ;
 // Card skeleton loading;

@@ -29,7 +29,7 @@ const queryClient = new QueryClient({
             refetchOnWindowFocus: false;
         },
     },
-});
+});origin/main
 const rootElement = document.getElementById('root');
 function renderApp() {
     const app = (<React.StrictMode>

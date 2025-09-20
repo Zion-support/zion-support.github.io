@@ -9,7 +9,7 @@ Users
 , Settings,
 DollarSign;
 , Phone,;
-Menu } from "lucide-react";
+Menu } from "lucide-react";origin/main
 const Sidebar = () => {
   const navigation = [
     { name: 'Home', href: '/', icon: Home },
@@ -44,7 +44,7 @@ key={item.name}
   )
 }
 
-import React from "react";
+import React from "react";origin/main
 const Sidebar: React.FC = () => {
 ,
 return (,

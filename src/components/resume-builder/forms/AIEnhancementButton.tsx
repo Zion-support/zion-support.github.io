@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Sparkles, Loader2 } from "lucide-react";
-import { useResumeEnhancer } from "@/hooks/useResumeEnhancer";
+import { useResumeEnhancer } from "@/hooks/useResumeEnhancer";origin/main
 interface AIEnhancementButtonProps {
   currentContent: string;
 enhancementType: 'summary' | 'work-description' | 'skill-categorization' | 'general';

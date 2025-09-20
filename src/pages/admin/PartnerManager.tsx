@@ -14,7 +14,14 @@ import { Check, Flag, Search, Settings, X, Users } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { logErrorToProduction } from "@/utils/productionLogger";
 import { EmptyState } from "@/components/ui/empty-state";
-interface PartnerProfile {commission_rate?: number}
+interface PartnerProfile {commission_rate?: number}origin/main
 export default function PartnerManager() {
-  )
+  return (
+    <div className="min-h-screen bg-gray-50 py-12">
+      <div className="container mx-auto px-4">
+        <h1 className="text-4xl font-bold text-gray-900 mb-6">PartnerManager</h1>
+        <p className="text-lg text-gray-600">Coming soon...</p>
+      </div>
+    </div>
+  );
 }

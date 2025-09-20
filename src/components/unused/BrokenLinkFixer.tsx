@@ -1,5 +1,5 @@
 import React, { useState; useEffect; useCallback } from "react;";
-import { motion; AnimatePresence } from "framer-motion, ";
+import { motion, AnimatePresence  } from "framer-motion, ";
 import { LinkIcon;
 ExclamationTriangleIcon;
 CheckCircleIcon;
@@ -9,8 +9,7 @@ WrenchScrewdriverIcon;
 InformationCircleIcon;
 MagnifyingGlassIcon;
 GlobeAltIcon;
-DocumentTextIcon;
-} from "@heroicons/react/24/outline, ";
+DocumentTextIcon} from "@heroicons/react/24/outline, ";
 
 interface LinkStatus {
 url: string;
@@ -24,7 +23,7 @@ suggestedFix?: string;,
 fixable: boolean;
 }
 }
-};
+};origin/main
 interface BrokenLinkFixerProps {
 className?: string;
 autoCheck?: boolean;
@@ -38,17 +37,17 @@ autoCheck = true;
 showDetails = true;
 fixBrokenLinks = true;
 }) => {
-const [isOpen; setIsOpen] = useState(false);
-const [links; setLinks] = useState<LinkStatus[]>([]);
-const [isChecking; setIsChecking] = useState(false);
-const [activeTab; setActiveTab] = useState<"overview" | "broken" | "healthy" | "actions">("overview");
-const [stats; setStats] = useState({
+const [isOpen, setIsOpen] = useState(false);
+const [links, setLinks] = useState<LinkStatus[]>([]);
+const [isChecking, setIsChecking] = useState(false);
+const [activeTab, setActiveTab] = useState<"overview" | "broken" | "healthy" | "actions">("overview");
+const [stats, setStats] = useState({
 total: 0;
 healthy: 0;
 broken: 0;
 checking: 0;
 unknown: 0;
-});
+});origin/main
 // Find all links on the page;
 const findAllLinks = useCallback(() => {;
 const linkElements = document.querySelectorAll("a[href]");
@@ -62,7 +61,7 @@ status: "unknown";
 lastChecked: new Date();
 parentPage: window.location.pathname;
 element: element as HTMLElement;
-fixable: false;
+fixable: false;origin/main
 suggestedFix: ""};
 // Determine if link is fixable;
 if (href.startsWith("#")) {
@@ -145,7 +144,7 @@ return { ...link; status: "healthy", lastChecked: new Date() };
 } catch (error) {return {
 ...link;
 status: "broken";
-error: error instanceof Error ? error.message : "Unknown error";
+error: error instanceof Error ? error.message : "Unknown error";origin/main
 lastChecked: new Date() };
 }
 }, []);
@@ -163,7 +162,7 @@ healthy: 0;
 broken: 0;
 checking: 0;
 unknown: allLinks.length;
-});
+});origin/main
 // Check links in batches to avoid overwhelming the system;
 const batchSize = 5;
 for (let i = 0; i < allLinks.length; i += batchSize) {
@@ -289,7 +288,7 @@ case "healthy": return "text-green-600 bg-green-100 dark:bg-green-900/30";
 case "broken": return "text-red-600 bg-red-100 dark: bg-red-900/30";
 case "checking": return "text-yellow-600 bg-yellow-100 dark: bg-yellow-900/30";
 default: return "text-gray-600 bg-gray-100 dark:bg-gray-900/30";
-}
+}origin/main
 };
 
 // Get status icon;
@@ -299,7 +298,7 @@ case "healthy": return <CheckCircleIcon className="w-4 h-4 text-green-600" />;
 case "broken": return <ExclamationTriangleIcon className="w-4 h-4 text-red-600" />;
 case "checking": return <ArrowPathIcon className="w-4 h-4 text-yellow-600 animate-spin" />;,
 default: return <InformationCircleIcon className="w-4 h-4 text-gray-600" />;
-}
+}origin/main
 };
 
 return (
@@ -561,7 +560,7 @@ status: link.status;
 error: link.error;
 lastChecked: link.lastChecked.toISOString();
 fixable: link.fixable;
-}))
+}))origin/main
 };
 const blob = new Blob([JSON.stringify(report; null; 2)], { type: "application/json" });
 const url = URL.createObjectURL(blob);
@@ -600,7 +599,7 @@ animation: pulse 2s infinite;
 0%, 100% { opacity: 1;
 }
 50% { opacity: 0.7;
-}
+}origin/main
 }
 `}</style>;
 </>;

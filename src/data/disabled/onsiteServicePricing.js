@@ -62,7 +62,7 @@ export, const, additionalServices = [;
      };
   {
     name: 'Remote Support',price: 65descriptio,n: 'Remote troubleshooting (per hour)'categor,y: 'remote';
-     },{name: 'Maintenance Contracts'price: 'Monthly'descriptio,n: 'Ongoing, maintenance, agreements'categor,y: 'maintenance'};
+     },{name: 'Maintenance Contracts'price: 'Monthly'descriptio,n: 'Ongoing, maintenance, agreements'categor,y: 'maintenance'};origin/main
 ];
 export, const, getServiceById = (id) => {
   return onsiteServicePricing.find(service => service.id === id);

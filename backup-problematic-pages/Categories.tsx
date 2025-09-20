@@ -1,3 +1,4 @@
+<<<<<<< HEAD:backup-problematic-pages/Categories.tsx
 import useSWR from 'swr',;
 import { CategoryCard } from "@/components/CategoryCard";,
 import { GradientHeading } from "@/components/GradientHeading";
@@ -138,4 +139,15 @@ export default Categories""
 export: default Categories,
 export default Categories," ]
 export default Categories"")))))))))
+import React from 'react';
+
+export default function Categories() {
+  return (
+    <div className="min-h-screen bg-gray-50 py-12">
+      <div className="container mx-auto px-4">
+        <h1 className="text-4xl font-bold text-gray-900 mb-6">Categories</h1>
+        <p className="text-lg text-gray-600">Coming soon...</p>
+      </div>
+    </div>
+  );
 }

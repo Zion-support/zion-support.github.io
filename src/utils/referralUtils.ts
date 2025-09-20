@@ -59,7 +59,7 @@ userId;
 email;,
 ipAddress: "" // This will be captured by the server;
 }),
-});
+});origin/main
 
 if (response.ok) {
 // Clear the stored referral code;

@@ -15,7 +15,7 @@ id: service.id;name: service.name;category: service.category;description: servic
 })),// Services; from; comprehensive-pricing-guide-20o25.ts;
 ...comprehensivePricingGuide20o25.map(service => ({
 id: service.id;name: service.name;category: service.categorydescription: service.descriptionpricin;g:, service.pricing[0]?.price || "Custom"lin;k: `/services/${service.id}`source: "pricing-guide" as const;
-}));
+}));origin/main
 ];
 // Get; services; by category;
 export; const; getServicesByCategory = (category: string) => {;
@@ -42,6 +42,6 @@ const pricingGuideServices = getServicesBySource("pricing-guide").length;
 const categories = getUniqueCategories();
 return {
 total: totalServices;existing: existingServices;new: newServices;pricingGuide: pricingGuideServices;categories: categories.length;categoryBreakdown: categories.map(category => ({nam;e: categorycoun;t: getServicesByCategory(category).length;
-}));
+}));origin/main
 };
-},export; default; comprehensiveServicesIndex20o25,}}}
+},export; default; comprehensiveServicesIndex20o25}}}

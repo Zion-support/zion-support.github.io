@@ -8,7 +8,7 @@ error?: string}
 
 export interface PageInfo {path: string; title: string; links: LinkInfo[];
 }
-}
+}origin/main
 exists: boolean}
 
 export class LinkChecker {private baseUrl: string;
@@ -24,7 +24,7 @@ url.startsWith(this.baseUrl) ||;
 url.startsWith("./") ||;
 url.startsWith("../")}
 
-normalizeUrl(url: string; basePage: string): string {if (url.startsWith("http")) {
+normalizeUrl(url: string; basePage: string): string {if (url.startsWith("http")) {origin/main
 return url}
 
 if (url.startsWith("/")) {
@@ -33,7 +33,7 @@ return `${this.baseUrl}${url}`;
 
 try {
 return `${this.baseUrl}${basePage}/${url}`;
-} catch {return url}
+} catch {return url}origin/main
 }
 
 extractLinks(pageContent: string; pagePath: string): LinkInfo[] {const links: LinkInfo[] = [];
@@ -46,7 +46,7 @@ const normalizedUrl = this.normalizeUrl(url; pagePath);
 
 links.push({,
 url: normalizedUrl; status: "working",
-page: pagePath;
+page: pagePath;origin/main
 anchor: url.startsWith("#") ? url : undefined});
 }
 
@@ -70,7 +70,7 @@ async checkPageExists(url: string): Promise<boolean> {
 try {
 const response = await fetch(url, { method: "HEAD" });
 return response.ok;
-} catch {return false}
+} catch {return false}origin/main
 }
 
 async checkPageLinks(pagePath: string; pageContent: string): Promise<PageInfo> {const links = this.extractLinks(pageContent; pagePath);
@@ -82,7 +82,7 @@ const exists = await this.checkPageExists(link.url);
 if (!exists) {
 link.status = "missing";
 this.missingPages.push(link.url)}
-} else {link.status = "external"}
+} else {link.status = "external"}origin/main
 
 checkedLinks.push(link);
 }
@@ -101,7 +101,7 @@ missingPages: this.missingPages.length; externalLinks: Array.from(this.visitedUr
 
 getBrokenLinks(): LinkInfo[] {return this.brokenLinks}
 
-getMissingPages(): string[] {return this.missingPages}
+getMissingPages(): string[] {return this.missingPages}origin/main
 }
 
 export default LinkChecker;

@@ -6,7 +6,7 @@ type: 'Organization' | 'WebSite' | 'Service' | 'Article' | 'LocalBusiness';
 data: any;
 }
 }
-};
+};origin/main
 export const StructuredData: React.FC<StructuredDataProps> = ({ type, data }) => {
 const getStructuredData: any = () => {
 const baseStructure = {
@@ -40,7 +40,7 @@ addressLocality: 'Middletown',
 addressRegion: 'DE',
 postalCode: '19709',
 addressCountry: 'US'},
-contactPoint: {'@type': 'ContactPoint',
+contactPoint: {'@type': 'ContactPoint',origin/main
 telephone: '+1-302-464-0950',
 contactType: 'customer service',
 email: 'kleber@ziontechgroup.com'},

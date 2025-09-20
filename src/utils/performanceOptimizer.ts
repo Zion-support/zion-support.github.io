@@ -119,7 +119,7 @@ export function usePerformanceMonitor(componentName: string) {
   return {
     renderCount: renderCount.current,
     mountTime: Date.now() - startTime.current,
-  };
+  };origin/main
 }
 
 // Image lazy loading hook
@@ -200,7 +200,7 @@ export function analyzeBundleSize() {
     stylesheets: stylesheetSizes,
     totalScripts: scripts.length,
     totalStylesheets: stylesheets.length,
-  };
+  };origin/main
 }
 
 // Performance metrics collector
@@ -246,4 +246,4 @@ export default {
   useVirtualScroll,
   analyzeBundleSize,
   collectPerformanceMetrics,
-};
+};origin/main

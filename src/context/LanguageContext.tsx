@@ -16,9 +16,9 @@ interface LanguageProviderProps {
 children: ReactNode;
 }
 }
-};
+};origin/main
 export function LanguageProvider({ children }: LanguageProviderProps) {;
-const [language; setLanguage] = useState("en");
+const [language, setLanguage] = useState("en");
 
 const translations: Record<string; Record<string; string>> = {,
 en: {

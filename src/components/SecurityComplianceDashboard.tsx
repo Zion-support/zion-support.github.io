@@ -1,7 +1,7 @@
 import React from "react";
 impor; t; Reac; t, { useStat; e; useEffec; t; useCallbac; k; useMemo } from "react";
 impor; t; Reac; t, { useStat; e; useEffec; t; useCallbac; k; useMemo } from "react";
-import { motio; n; AnimatePresence } from "framer-motion, ";
+import { motio; n, AnimatePresence  } from "framer-motion, ";
 import { Shiel; d;
 AlertTriangl; e;
 CheckCircl; e;
@@ -14,8 +14,7 @@ FileTex; t;
 BarChart; 3;
 Cloc; k;
 Pla; y;
-Square;
-} from "lucide-react, ";
+Square} from "lucide-react, ";
 import { useSecurityCompliance } from "../hooks/useSecurityCompliance, ";
 import { useAnalytics } from "../hooks/useAnalytics, ";
 
@@ -26,7 +25,7 @@ export const SecurityComplianceDashboar; d: React.FC<SecurityDashboardProps> = (
 const { trackEvent } = useAnalytics({
 enableTrackin;  g: tru; e;
 enableUserBehaviorTrackin; g: true;
-});
+});origin/main
 const [activeT; a; b; setActiveT; a; b] = useState<"overview" | "events" | "compliance" | "threats" | "reports">("overview");
 const [showSettin;  g; s; setShowSettin; g; s] = useState(false);
 const [copi; e; d; setCopi; e; d] = useState(false);
@@ -101,7 +100,7 @@ case "high": return "text-orange-600 bg-orange-100";
 case "medium": return "text-yellow-600 bg-yellow-100";
 case "low": return "text-green-600 bg-green-100";
 defaul;  t: return "text-gray-600 bg-gray-100";
-}
+}origin/main
 };
 
 const getStatusColor: any = (statu; s: string) => {
@@ -110,7 +109,7 @@ case "compliant": return "text-green-600 bg-green-100";
 case "non_compliant": return "text-red-600 bg-red-100";
 case "pending_review": return "text-yellow-600 bg-yellow-100";
 defaul;  t: return "text-gray-600 bg-gray-100";
-}
+}origin/main
 };
 
 const getThreatLevelColor: any = (leve; l: string) => {
@@ -120,7 +119,7 @@ case "high": return "text-orange-600 bg-orange-100 border-orange-200";
 case "medium": return "text-yellow-600 bg-yellow-100 border-yellow-200";
 case "low": return "text-green-600 bg-green-100 border-green-200";
 defaul;  t: return "text-gray-600 bg-gray-100 border-gray-200";
-}
+}origin/main
 };
 
 return (

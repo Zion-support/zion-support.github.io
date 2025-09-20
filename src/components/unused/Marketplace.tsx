@@ -26,14 +26,13 @@ Palette;
 Smartphone;
 Server;
 CheckCircle;
-ArrowRight;
-} from "lucide-react, ";
+ArrowRight} from "lucide-react, ";
 
 export default function Marketplace() {;
-const [searchTerm; setSearchTerm] = useState("");
-const [selectedCategory; setSelectedCategory] = useState("all");
-const [selectedPriceRange; setSelectedPriceRange] = useState("all");
-const [sortBy; setSortBy] = useState("featured");
+const [searchTerm, setSearchTerm] = useState("");
+const [selectedCategory, setSelectedCategory] = useState("all");
+const [selectedPriceRange, setSelectedPriceRange] = useState("all");
+const [sortBy, setSortBy] = useState("featured");
 
 const categories = [;
 { id: "all", name: "All Products", icon: Globe; count: 24 };
@@ -84,7 +83,7 @@ featured: true;
 new: false;
 discount: 25;
 type: "software"};
-{id: 2;
+{id: 2;origin/main
 name: "Quantum Neural Network Framework";
 description: "Advanced quantum computing framework for neural network development and optimization.";
 category: "ai-solutions";
@@ -106,7 +105,7 @@ featured: true;
 new: true;
 discount: 25;
 type: "software"};
-{id: 3;
+{id: 3;origin/main
 name: "SOC2 Compliance Automation Suite";
 description: "Comprehensive security and compliance automation platform for enterprise organizations.";
 category: "cybersecurity";
@@ -128,7 +127,7 @@ featured: false;
 new: false;
 discount: 25;
 type: "software"};
-{id: 4;
+{id: 4;origin/main
 name: "5G Enterprise Network Kit";
 description: "Complete 5G networking solution for enterprise environments with advanced security.";
 category: "cloud-infrastructure";
@@ -150,7 +149,7 @@ featured: false;
 new: false;
 discount: 17;
 type: "hardware"};
-{id: 5;
+{id: 5;origin/main
 name: "AI Workflow Templates Pack";
 description: "Collection of 50+ pre-built AI workflow templates for common business processes.";
 category: "ai-solutions";
@@ -172,7 +171,7 @@ featured: false;
 new: false;
 discount: 33;
 type: "template"};
-{id: 6;
+{id: 6;origin/main
 name: "Blockchain DeFi Development Kit";
 description: "Complete toolkit for building decentralized finance applications on blockchain.";
 category: "blockchain";
@@ -194,7 +193,7 @@ featured: false;
 new: true;
 discount: 25;
 type: "development-kit"};
-{id: 7;
+{id: 7;origin/main
 name: "IoT Data Analytics Platform";
 description: "Enterprise IoT platform with advanced analytics and machine learning capabilities.";
 category: "iot-platforms";
@@ -216,7 +215,7 @@ featured: false;
 new: false;
 discount: 22;
 type: "platform"};
-{id: 8;
+{id: 8;origin/main
 name: "Cybersecurity Threat Intelligence";
 description: "Real-time threat intelligence and security monitoring service.";
 category: "cybersecurity";
@@ -236,7 +235,7 @@ features: [
 tags: ["Cybersecurity", "Threat Intelligence", "Monitoring", "Security"],
 featured: false;
 new: false;
-discount: 33;
+discount: 33;origin/main
 type: "service"}
 ];
 const filteredProducts = marketplaceProducts.filter(product => {
@@ -275,7 +274,7 @@ return b.reviewCount - a.reviewCount;
 case "rating":
 return b.rating - a.rating;
 default: return b.featured ? 1 : -1;
-}
+}origin/main
 });
 
 const formatPrice: any = (price: number; currency: string) => {

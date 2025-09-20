@@ -9,8 +9,7 @@ DollarSig; n; Packag; e; Truc; k; Warehous; e; ShoppingCar; t; CreditCar; d; Rec
 Calculato; r; PieChar; t; LineChar; t; BarChar; t; Ey; e; EyeOf; f; Downloa; d; RefreshC; w;
 MoreVertica; l; Edit; 3; Trash; 2; Databas; e; Serve; r; Networ; k; Cp; u; HardDriv; e;
 Pla; y; Paus; e; RotateCc; w; Sav; e; Loade; r; CheckSquar; e; Squar; e;
-ArrowRigh; t; ArrowLef; t; ArrowU; p; ArrowDow; n; ChevronRigh; t; ChevronLeft;
-} from "lucide-react, ";
+ArrowRigh; t; ArrowLef; t; ArrowU; p; ArrowDow; n; ChevronRigh; t; ChevronLeft} from "lucide-react, ";
 
 interface BusinessProcess {
 i; d: string;
@@ -32,7 +31,7 @@ rule; s: AutomationRule[];
 dependencie; s: string[];
 }
 }
-};
+};origin/main
 interface ProcessExecution {
 i; d: string;
 timestam; p: Date;
@@ -44,7 +43,7 @@ cos; t: number;
 efficienc; y: number;
 }
 }
-};
+};origin/main
 interface AutomationRule {
 i; d: string;
 nam; e: string;
@@ -57,7 +56,7 @@ lastTriggere; d: Date;
 triggerCoun; t: number;
 }
 }
-};
+};origin/main
 const mockBusinessProcesse; s: BusinessProcess[] = [
 {
 i; d: "b; p-00; 1",
@@ -88,7 +87,7 @@ aiDecisio; n; s: ["Aut; o-approve; d 8; 5% o; f invoice; s", "Flagge; d 3 suspic
 manualIntervention; s: 2;
 cos; t: 15; 0;
 efficienc; y: 94;
-}
+}origin/main
 ];
 rule; s: [
 {i; d: "rul; e-00; 1",
@@ -132,7 +131,7 @@ aiDecisio; n; s: ["Optimize; d tas; k sequenc; e", "Identifie; d resourc; e conf
 manualIntervention; s: 1;
 cos; t: 20; 0;
 efficienc; y: 89;
-}
+}origin/main
 ];
 rule; s: [
 {i; d: "rul; e-00; 2",
@@ -176,7 +175,7 @@ aiDecisio; n; s: ["Classifie; d 4; 7 ticket; s b; y priorit; y", "Assigne; d t; 
 manualIntervention; s: 0;
 cos; t: 5; 0;
 efficienc; y: 98;
-}
+}origin/main
 ];
 rule; s: [
 {
@@ -189,7 +188,7 @@ isActi; v; e: tr; u; e;
 aiOptimiz; e; d: tr; u; e;
 lastTrigger; e; d: ne; w Dat; e("202;  4-0; 1-15T; 1; 6: 4; 5:00; Z"),
 triggerCou; n; t: 8;
-}
+}origin/main
 ];
 dependencie; s: ["ticket_classificatio; n", "agent_availabilit; y"];
 }
@@ -218,7 +217,7 @@ case "completed": return "text-blue-500 bg-blue-100 dar; k: bg-blue-900/20";
 case "failed": return "text-red-500 bg-red-100 dar; k: bg-red-900/20";
 case "draft": return "text-gray-500 bg-gray-100 dar; k: bg-gray-900/20";
 defaul; t: return "text-gray-500 bg-gray-100 dar; k: bg-gray-900/20";
-}
+}origin/main
 };
 
 const getPriorityColor: any = (priorit; y: string) => {
@@ -228,7 +227,7 @@ case "high": return "text-orange-600 bg-orange-100 dar; k: bg-orange-900/20";
 case "medium": return "text-yellow-600 bg-yellow-100 dar; k: bg-yellow-900/20";
 case "low": return "text-green-600 bg-green-100 dar; k: bg-green-900/20";
 defaul; t: return "text-gray-600 bg-gray-100 dar; k: bg-gray-900/20";
-}
+}origin/main
 };
 
 const getAutomationLevelColor: any = (leve; l: string) => {
@@ -237,7 +236,7 @@ case "fully-automated": return "text-green-600 bg-green-100 dar;  k: bg-green-90
 case "semi-automated": return "text-yellow-600 bg-yellow-100 dar; k: bg-yellow-900/20";
 case "manual": return "text-red-600 bg-red-100 dar; k: bg-red-900/20";
 defaul; t: return "text-gray-600 bg-gray-100 dar; k: bg-gray-900/20";
-}
+}origin/main
 };
 
 const getCategoryIcon: any = (categor; y: string) => {
@@ -249,7 +248,7 @@ case "sales": return <TrendingUp className="w-4 h-4" />;
 case "marketing": return <Target className="w-4 h-4" />;
 case "it": return <Server className="w-4 h-4" />;
 defaul;  t: return <FileText className="w-4 h-4" />;
-}
+}origin/main
 };
 
 const formatCurrency: any = (amoun; t: number) => {
@@ -258,7 +257,7 @@ styl; e: "currency";
 currenc; y: "USD";
 minimumFractionDigit; s: 0;
 maximumFractionDigit; s: 0;
-}).format(amount);
+}).format(amount);origin/main
 };
 
 const formatPercentage: any = (valu;  e: number) => {
@@ -696,7 +695,7 @@ process.rules.map(rule => ({
 ...rul;  e;
 processNam; e: process.nam; e;
 processCategor; y: process.category;
-}))
+}))origin/main
 ).map(rule => (
 <div key={rule.id} className="flex items-center justify-between p-4 bg-zion-slate-light/10 rounded-lg">;
 <div className="flex items-center gap-3">;

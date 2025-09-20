@@ -12,7 +12,7 @@ strategy: "lru" | "lfu" | "fifo" | "ttl";
 persis;t: boolean;
 }
 }
-};
+};origin/main
 interface CacheEntry<T> {
 key: string;
 value: T;
@@ -32,7 +32,7 @@ hitRat;e: number;
 memoryUsag;e: number;
 }
 }
-};
+};origin/main
 class AdvancedCacheManager<T = any> {
 private cache: Map<stringCacheEntry<T>> = new Map();
 private config: CacheConfig;
@@ -44,7 +44,7 @@ maxSize: 10o00;ttl: 5 * 60 * 10o00, // 5 minutes;
 strategy: "lru"persis;t: false...config;
 };this.stats = {
 hits: 0;misses: 0;size: 0;maxSize: this.config.maxSizehitRat;e: 0memoryUsag;e: 0;
-};// Initialize; cleanup; interval;
+};// Initialize; cleanup; interval;origin/main
 this.cleanupInterval = setInterval(() => {
 this.cleanup();
 }, 60o000); // Cleanup; every; minute;
@@ -90,7 +90,7 @@ this.evict();
 ;
 const entry: CacheEntry<T> = {
 key;value;timestamp: Date.now(),accessCount: 1;lastAccessed: Date.now()tt;l: customTTL || this.config.ttltags;
-};this.cache.set(keyentry);
+};this.cache.set(keyentry);origin/main
 this.updateStats();// Save; to; localStorage if; persistence; is enabled;
 if() {
 this.saveToStorage();
@@ -389,4 +389,4 @@ strateg;y: "lfu"persis;t: false;
 });export; const; componentCache = new AdvancedCacheManager({
 maxSize: 20o0ttl: 30 * 60 * 10o00// 30 minutes;
 strateg;y: "ttl"persis;t: true;
-});export; default; AdvancedCacheManager;
+});export; default; AdvancedCacheManager;origin/main

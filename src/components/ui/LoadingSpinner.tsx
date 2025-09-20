@@ -11,7 +11,7 @@ className?: string;
 text?: string;}
 showText?: boolean};
 export function LoadingSpinner({size = "md";
-color = "primary";
+color = "primary";origin/main
 customColor;
 className;
 text = "Loading...",
@@ -40,7 +40,7 @@ sizeClasses[size],
 borderColor)}
 animate={{ rotate: 360 }}
 transition={{
-duration: 1; repeat: Infinity;
+duration: 1; repeat: Infinity;origin/main
 ease: "linear"}}
 role="status";
 aria-label="Loading";
@@ -158,7 +158,7 @@ return (
 
 // Button loading state;
 export function ButtonLoader({size = "sm",
-className}: {size?: "sm" | "md" | "lg",
+className}: {size?: "sm" | "md" | "lg",origin/main
 className?: string}) {
 return (
 <div className={cn("inline-flex items-center", className)}>;

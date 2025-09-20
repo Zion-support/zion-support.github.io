@@ -4,7 +4,7 @@ import { Badge } from "@/components/ui/badge";,
 import { Button } from "@/components/ui/button";,
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";,
 import { supabase } from "@/integrations/supabase/client";,
-import { Loader2, Star, BarChart2, Lightbulb } from "lucide-react";
+import { Loader2, Star, BarChart2, Lightbulb } from "lucide-react";origin/main
 import { toast } from "sonner";
 import { JobApplication } from "@/types/jobs";
 interface ApplicationScoreCardProps {
@@ -115,7 +115,7 @@ return (
             <p className="text-muted-foreground mb-4">
               Analyze how well this resume matches your job requirements.
             </p>
-            <Button
+            <Buttonorigin/main
 onClick = {handleScore}
               disabled = {isScoring}
               className="w-full"

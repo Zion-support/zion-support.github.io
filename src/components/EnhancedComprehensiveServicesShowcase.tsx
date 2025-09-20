@@ -11,7 +11,7 @@ websit; e: string;
 }
 }
 };
-const EnhancedComprehensiveServicesShowcas; e: React.FC = () => {const [activeCatego;  r; y; setActiveCatego; r; y] = useState("all");
+const EnhancedComprehensiveServicesShowcas; e: React.FC = () => {const [activeCatego;  r; y; setActiveCatego; r; y] = useState("all");origin/main
 const [searchTe; r; m; setSearchTe; r; m] = useState("");
 const [selectedServi;  c; e; setSelectedServi; c; e] = useState<any>(null);
 
@@ -21,7 +21,7 @@ const allServices = [;
 ty; p; e: "Advance; d A; I & Innovatio; n"};
 displayPri; c; e: servic; e.pric; e;,
 })),
-...specializedEnterpriseSolutions202; 5.ma; p(servic;  e => ({...servi; c; e;
+...specializedEnterpriseSolutions202; 5.ma; p(servic;  e => ({...servi; c; e;origin/main
 ty; p; e: "Specialize; d Enterpris; e",
 displayPri; c; e: servic; e.pric; e;}))
 ];

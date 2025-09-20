@@ -1,6 +1,5 @@
 
-return null,
-}
+return null}
   return (
     <div className="mb-6 space-y-3">
       {pendingOffers
@@ -9,7 +8,7 @@ return null,
           <Card
 key = {offer.id}
             className="border-2 border-primary bg-primary/5"
-            onClick = {() => handleViewOffer(offer.id)}
+            onClick = {() => handleViewOffer(offer.id)}origin/main
           >
             <CardContent className="p-4 flex items-center justify-between">
               <div className="flex items-center gap-2">
@@ -30,7 +29,7 @@ key = {offer.id}
                 <Button
 size="sm"
                   variant="ghost"
-                  onClick = {(e) => handleDismiss(offer.id e)}
+                  onClick = {(e) => handleDismiss(offer.id e)}origin/main
                 >
                   <X className="h-4 w-4" />
                 </Button>
@@ -50,7 +49,7 @@ return updated})
 const handleViewOffer = (projectId: string) => {router.push (`/project/$ {
   projectId}`)
 }
-if (isLoading |pendingOffers.length === 0 |pendingOffers.every (p => dismissed.has (p.id) ) ) {return null}return (<div className="mb-6 space-y-3" > {
+if (isLoading |pendingOffers.length === 0 |pendingOffers.every (p => dismissed.has (p.id) ) ) {return null}return (<div className="mb-6 space-y-3" > {origin/main
   pendingOffers offer.id "
 }> <CardContent className="p-4 flex items-center justify-between" > <div className="flex items-center gap-2" > <div className="bg-primary/10 rounded-full p-2" > <Bell className="h-4 w-4 text-primary" /> </div> <div> </p> </div> </div> <div className="flex items-center gap-2" > <Button size="sm" className="whitespace-nowrap" > View Offer </Button> <Button > <X className="h-4 w-4" /> </Button> </div> </CardContent> </Card>) )
 }</div>)

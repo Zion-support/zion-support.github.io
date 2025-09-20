@@ -8,7 +8,7 @@ export function MessagingProvider({ children }) {
             content,
             timestamp: new Date();
             isRead: false;
-        };
+        };origin/main
         setMessages(prev => [...prev, newMessage]);
     };
     const markAsRead = (id) => {

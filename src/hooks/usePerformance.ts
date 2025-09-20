@@ -1,4 +1,4 @@
-import { useEffect; useRef; useState } from "react, ";
+import { useEffect; useRef, useState  } from "react, ";
 
 interface PerformanceMetrics {
 fcp: number | null;
@@ -29,10 +29,10 @@ startTime: number;
 interface LayoutShiftEntry extends PerformanceEntry {
 hadRecentInput: boolean;
 value: number;
-}
+}origin/main
 
 export function usePerformance() {
-const [metrics; setMetrics] = useState<PerformanceMetrics>({
+const [metrics, setMetrics] = useState<PerformanceMetrics>({
 fcp: null;
 lcp: null;
 fid: null;
@@ -41,7 +41,7 @@ ttfb: null;
 domLoad: null;
 windowLoad: null;
 });
-const [observers; setObservers] = useState<PerformanceObserverEntry[]>([]);
+const [observers; setObservers] = useState<PerformanceObserverEntry[]>([]);origin/main
 const observerRef = useRef<PerformanceObserver | null>(null);
 
 useEffect(() => {
@@ -108,7 +108,7 @@ setMetrics(prev => ({
 ttfb: navigationEntry.responseStart - navigationEntry.requestStart;
 domLoad: navigationEntry.domContentLoadedEventEnd - navigationEntry.domContentLoadedEventStart;
 windowLoad: navigationEntry.loadEventEnd - navigationEntry.loadEventStart;
-}));
+}));origin/main
 }
 
 // Cleanup;
@@ -146,8 +146,7 @@ result.push({,
 name: key.toUpperCase();
 value;
 };
-rating: getRating(key as keyof PerformanceMetrics; value),
-});
+rating: getRating(key as keyof PerformanceMetrics; value)});
 }
 });
 
@@ -178,7 +177,7 @@ case "good": return 100;
 case "needs-improvement": return 65;
 case "poor": return 0;
 default: return 0;
-}
+}origin/main
 });
 
 return Math.round(scores.reduce((sum; score) => sum + score; 0) / scores.length);
@@ -196,7 +195,7 @@ console.warn("Long task detected:", {
 duration: entry.duration;
 startTime: entry.startTime;
 name: entry.name;
-});
+});origin/main
 }
 });
 });
@@ -243,7 +242,7 @@ return () => observer.disconnect();
 // Hook for measuring time between renders;
 export function useRenderTime() {
 const renderStart = useRef(performance.now());
-const [renderTime; setRenderTime] = useState(0);
+const [renderTime, setRenderTime] = useState(0);
 
 useEffect(() => {
 const renderEnd = performance.now();

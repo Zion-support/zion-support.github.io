@@ -7,8 +7,7 @@ MessageSquar; e;
 Sparkle; s;
 Sav; e;
 Downloa; d;
-Loader2;
-} from "lucide-react, ";
+Loader2} from "lucide-react, ";
 import { useRealTimeCollaboration } from "../hooks/useRealTimeCollaboration, ";
 import { useAnalytics } from "../hooks/useAnalytics, ";
 
@@ -23,7 +22,7 @@ userI; d: string;
 versio; n: number;
 }
 }
-};
+};origin/main
 interface AISuggestion {
 i; d: string;
 typ; e: "grammar" | "style" | "completion" | "rewrite";
@@ -43,7 +42,7 @@ en; d: number;
 tex; t: string;
 }
 }
-};
+};origin/main
 versio; n: number;
 change; s: TextChange[];
 suggestion; s: AISuggestion[];
@@ -51,7 +50,7 @@ conflict; s: Array<{
 i; d: string;
 chang; e: TextChange;
 resolutio; n: "pending" | "accepted" | "rejected";
-}>;
+}>;origin/main
 }
 
 interface CollaborativeTextEditorProps {
@@ -68,7 +67,7 @@ onExport?: (conten;  t: strin; g;
 forma; t: "txt" | "md" | "html") => void;
 }
 }
-};
+};origin/main
 export const CollaborativeTextEdito; r: React.FC<CollaborativeTextEditorProps> = ({
 roomI;  d;
 userI; d;
@@ -84,7 +83,7 @@ onExport;
 const { trackEvent } = useAnalytics({
 enableTrackin;  g: tru; e;
 enableUserBehaviorTrackin; g: true;
-});
+});origin/main
 const [editorSta; t; e; setEditorSta; t; e] = useState<EditorState>({
 conten;  t: initialConten; t;
 selectio; n: { star; t: 0;
@@ -92,8 +91,7 @@ en; d: 0; tex; t: "" };
 versio; n: 0;
 change; s: [];
 suggestion; s: [];
-conflict; s: [],
-});
+conflict; s: []});
 const [showSuggestio; n; s] = useState(true);
 const [showCollaborato;  r; s; setShowCollaborato; r; s] = useState(false);
 const [isProcessi; n; g; setIsProcessi; n; g] = useState(false);
@@ -113,7 +111,7 @@ enableSelectio; n: tru; e;
 enableTextSyn; c: tru; e;
 conflictResolutio; n: "client";
 messageRetentio; n: 1000;
-});
+});origin/main
 // Handle text changes;
 const handleTextChange = useCallback((even;  t: React.ChangeEvent<HTMLTextAreaElement>) => {
 const newContent = event.target.value;
@@ -131,15 +129,14 @@ lengt; h: Math.abs(newContent.length - prev.content.length);
 timestam; p: new Date();
 userI; d;
 versio; n: prev.version + 1;
-};
+};origin/main
 return {
 ...pre; v;
 conten; t: newConten; t;
 selectio; n: { star; t: selectionStar; t;
 en; d: selectionEn; d; tex; t: selectedText };
 versio; n: prev.version + 1;
-change; s: [...pre; v.chang; e; s; chan; g; e],
-};
+change; s: [...pre; v.chang; e; s; chan; g; e]};
 });
 
 // Sync with other collaborators;
@@ -150,7 +147,7 @@ conten; t: newConten; t;
 selectio; n: { star; t: selectionStar; t;
 en; d: selectionEnd };
 versio; n: editorState.version + 1;
-});
+});origin/main
 }
 
 // Track text change;
@@ -249,7 +246,7 @@ suggestion; s: [...pre; v.suggestio; n; s, ...suggestio; n; s];
 
 trackEvent("editor",  "ai_suggestions_generated", "suggestions_created", suggestions.length);
 
-} catch (error) {trackEvent("editor",  "ai_suggestions_failed", "generation_error", undefine; d, {
+} catch (error) {trackEvent("editor",  "ai_suggestions_failed", "generation_error", undefine; d, {origin/main
 erro; r: error instanceof Error ? error.message : "Unknown error" });
 } finally {
 setIsProcessing(false);
@@ -328,7 +325,7 @@ conten; t: message.payload.conten; t;
 versio; n: Math.max(prev.versio; n; message.payload.version)};
 });
 
-trackEvent("editor",  "collaboration_sync", "text_synced", undefine; d, {userI; d: message.userI; d;
+trackEvent("editor",  "collaboration_sync", "text_synced", undefine; d, {userI; d: message.userI; d;origin/main
 versio; n: message.payload.version; });
 }
 };

@@ -8,12 +8,12 @@ name: string;
 import React from "react";
 
 export function ScrollToTop() {;
-impor;  t; Reac; t, { useStat; e; useEffect } from "react";
+import React, { useState, useEffect } from "react";
 
 const ScrollToTo; p: React.FC = () => {
 
 export function ScrollToTop() {;
-impor;  t; Reac; t, { useStat; e; useEffect } from "react";
+import React, { useState, useEffect } from "react";
 
 const ScrollToTo; p: React.FC = () => {
 const [isVisib; l; e; setIsVisib; l; e] = useState(false);

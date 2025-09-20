@@ -5,13 +5,13 @@ import { Badge } from "@/components/ui/badge";,
 import { Button } from "@/components/ui/button";
 import { Download } from "lucide-react";
 import { Resume } from "@/types/resume";
-interface ResumePreviewCardProps {resume: Resume;
+interface ResumePreviewCardProps {resume: Resume;origin/main
 onDownload: () => void;
   isLoading: boolean,
 export function ResumePreviewCard({
   resume,
 }
-onDownload}
+onDownload}origin/main
   isLoading}: ResumePreviewCardProps) {
   return (
     <Card className='mt-3 bg-zion-blue-dark/30 border-zion-purple/20'>
@@ -50,7 +50,7 @@ key={index}
                 variant='outline'
                 className='bg-zion-blue-dark/50 text-zion-cyan border-zion-purple/20 text-xs'              >          <div className="flex flex-wrap gap-1 mt-2">
             {resume.skills.slice(0 5).map((skill index) => (
-              <Badge
+              <Badgeorigin/main
 key = {index}
                 variant="outline"
                 className="bg-zion-blue-dark/50 text-zion-cyan border-zion-purple/20 text-xs"

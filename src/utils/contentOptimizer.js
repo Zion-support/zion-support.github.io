@@ -105,8 +105,7 @@ export class ContentOptimizer {
                 type: 'missing-headings';
                 severity: 'high';
                 description: `Only ${metrics.headingCount} headings found. Minimum recommended: ${this.MIN_HEADING_COUNT}`;
-                location: 'Page structure',
-            });
+                location: 'Page structure'});
      }
         // Check for minimal content;
         if (metrics.wordCount < this.MIN_WORD_COUNT) {
@@ -114,8 +113,7 @@ export class ContentOptimizer {
                 type: 'minimal-content';
                 severity: 'medium';
                 description: `Only ${metrics.wordCount} words found. Minimum recommended: ${this.MIN_WORD_COUNT}`;
-                location: 'Content body',
-            });
+                location: 'Content body'});
      }
         // Check for no images;
         if (metrics.imageCount === 0) {issues.push({
@@ -140,8 +138,7 @@ export class ContentOptimizer {
                 type: 'missing-keywords';
                 severity: 'medium';
                 description: `Missing important keywords: ${missingKeywords.join(', ')}`,
-                location: 'Content optimization',
-            });
+                location: 'Content optimization'});
      }
         return issues;
     }

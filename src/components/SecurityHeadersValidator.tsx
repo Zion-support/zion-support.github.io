@@ -4,11 +4,11 @@ import { motion } from "framer-motion, ";
 
 interface SecurityHeaders {name: string; present: boolean;
 }
-value?: string;,}
+value?: string;,}origin/main
 severity: "high" | "medium" | "low", description: string};
 export const SecurityHeadersValidator: React.FC = () => {;
-const [headers; setHeaders] = useState<SecurityHeaders[]>([]);
-const [isScanning; setIsScanning] = useState(false);
+const [headers, setHeaders] = useState<SecurityHeaders[]>([]);
+const [isScanning, setIsScanning] = useState(false);
 
 const securityHeaders: SecurityHeaders[] = [
 {,
@@ -27,7 +27,7 @@ description: "Controls referrer information"};
 {name: "Permissions-Policy", present: false;
 severity: "medium",
 description: "Controls browser features"};
-{name: "Strict-Transport-Security", present: false;
+{name: "Strict-Transport-Security", present: false;origin/main
 severity: "high",
 description: "Enforces HTTPS connections"}
 ];
@@ -48,7 +48,7 @@ setHeaders(scannedHeaders);
 } catch (error) {console.error("Error scanning headers:", error)} finally {setIsScanning(false)}
 };
 
-useEffect(() => {scanHeaders()}, []);
+useEffect(() => {scanHeaders()}, []);origin/main
 
 const getSeverityColor: any = (severity: string) => {switch (severity) {;
 case "high": return "text-red-400";

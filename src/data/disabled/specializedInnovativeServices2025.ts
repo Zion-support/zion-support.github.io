@@ -7,7 +7,7 @@ website: string;
 address: string;
 }
 }
-}
+}origin/main
 
 export interface SpecializedService {
 id: number;
@@ -32,7 +32,7 @@ supportLevel: string;
 innovationScore: number;
 }
 }
-}
+}origin/main
 
 // Specialized Innovative Services for 2025;
 export const specializedInnovativeServices2025: SpecializedService[] = [
@@ -67,7 +67,7 @@ tags: ["Digital Twins", "Simulation", "IoT", "3D Modeling", "Predictive Analytic
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
-website: "https://ziontechgroup.com/digital-twin-platform";
+website: "https://ziontechgroup.com/digital-twin-platform";origin/main
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$8;500-20;000/month",
 technologyStack: ["Unity", "Unreal Engine", "IoT Platforms", "Cloud Computing", "AI/ML"],
@@ -77,7 +77,7 @@ estimatedDelivery: "8-12 weeks";
 supportLevel: "premium";
 innovationScore: 9.1;
 };
-{id: 2;
+{id: 2;origin/main
 name: "Federated Learning & Privacy-Preserving AI";
 category: "Privacy AI";
 subcategory: "Federated Learning";
@@ -108,7 +108,7 @@ tags: ["Federated Learning", "Privacy AI", "Secure AI", "Distributed Learning", 
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
-website: "https://ziontechgroup.com/federated-learning";
+website: "https://ziontechgroup.com/federated-learning";origin/main
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$12;000-30;000/month",
 technologyStack: ["Python", "TensorFlow Federated", "PySyft", "Homomorphic Encryption", "Cloud Computing"],
@@ -118,7 +118,7 @@ estimatedDelivery: "10-14 weeks";
 supportLevel: "enterprise";
 innovationScore: 9.3;
 };
-{id: 3;
+{id: 3;origin/main
 name: "Neuromorphic Computing Platform";
 category: "Neuromorphic Computing";
 subcategory: "Brain-Inspired AI";
@@ -149,7 +149,7 @@ tags: ["Neuromorphic Computing", "Brain-Inspired AI", "Spiking Neural Networks",
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
-website: "https://ziontechgroup.com/neuromorphic-computing";
+website: "https://ziontechgroup.com/neuromorphic-computing";origin/main
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$25;000-60;000/month",
 technologyStack: ["Neuromorphic Hardware", "Spiking Neural Networks", "Event-Driven Computing", "Custom Algorithms"],
@@ -159,7 +159,7 @@ estimatedDelivery: "16-20 weeks";
 supportLevel: "enterprise";
 innovationScore: 9.5;
 };
-{id: 4;
+{id: 4;origin/main
 name: "Holographic Display & 3D Visualization";
 category: "Holographic Technology";
 subcategory: "3D Visualization";
@@ -190,7 +190,7 @@ tags: ["Holographic Display", "3D Visualization", "Telepresence", "Immersive Tec
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
-website: "https://ziontechgroup.com/holographic-display";
+website: "https://ziontechgroup.com/holographic-display";origin/main
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$15;000-35;000/month",
 technologyStack: ["Holographic Hardware", "3D Rendering", "Computer Vision", "Spatial Computing", "AI"],
@@ -200,7 +200,7 @@ estimatedDelivery: "12-16 weeks";
 supportLevel: "premium";
 innovationScore: 9.2;
 };
-{id: 5;
+{id: 5;origin/main
 name: "Ambient Intelligence & Smart Environment";
 category: "Ambient Intelligence";
 subcategory: "Smart Environments";
@@ -231,7 +231,7 @@ tags: ["Ambient Intelligence", "Smart Environments", "IoT", "Context-Aware Compu
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
-website: "https://ziontechgroup.com/ambient-intelligence";
+website: "https://ziontechgroup.com/ambient-intelligence";origin/main
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$18;000-40;000/month",
 technologyStack: ["IoT Sensors", "AI/ML", "Edge Computing", "Cloud Platforms", "Context Recognition"],
@@ -241,7 +241,7 @@ estimatedDelivery: "14-18 weeks";
 supportLevel: "enterprise";
 innovationScore: 9.0;
 };
-{id: 6;
+{id: 6;origin/main
 name: "Swarm Robotics & Autonomous Systems";
 category: "Swarm Robotics";
 subcategory: "Autonomous Systems";
@@ -272,7 +272,7 @@ tags: ["Swarm Robotics", "Autonomous Systems", "Multi-Robot Coordination", "Coll
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
-website: "https://ziontechgroup.com/swarm-robotics";
+website: "https://ziontechgroup.com/swarm-robotics";origin/main
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$22;000-50;000/month",
 technologyStack: ["ROS", "Python", "Computer Vision", "AI/ML", "Robotics Hardware", "Communication Protocols"],
@@ -282,7 +282,7 @@ estimatedDelivery: "16-20 weeks";
 supportLevel: "enterprise";
 innovationScore: 9.4;
 };
-{id: 7;
+{id: 7;origin/main
 name: "Bio-Inspired Computing & Evolutionary Algorithms";
 category: "Bio-Inspired Computing";
 subcategory: "Evolutionary AI";
@@ -313,7 +313,7 @@ tags: ["Bio-Inspired Computing", "Evolutionary Algorithms", "Genetic Programming
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
-website: "https://ziontechgroup.com/bio-inspired-computing";
+website: "https://ziontechgroup.com/bio-inspired-computing";origin/main
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$14;000-32;000/month",
 technologyStack: ["Python", "Evolutionary Algorithms", "Genetic Programming", "AI/ML", "Optimization Libraries"],
@@ -323,7 +323,7 @@ estimatedDelivery: "10-14 weeks";
 supportLevel: "premium";
 innovationScore: 8.8;
 };
-{id: 8;
+{id: 8;origin/main
 name: "Quantum Machine Learning & AI";
 category: "Quantum AI";
 subcategory: "Quantum Machine Learning";
@@ -354,7 +354,7 @@ tags: ["Quantum AI", "Quantum Machine Learning", "Quantum Neural Networks", "Qua
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
-website: "https://ziontechgroup.com/quantum-machine-learning";
+website: "https://ziontechgroup.com/quantum-machine-learning";origin/main
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$35;000-80;000/month",
 technologyStack: ["Qiskit", "PennyLane", "Quantum Hardware", "Python", "Quantum Algorithms", "AI/ML"],
@@ -363,6 +363,6 @@ scalability: ["Quantum Hardware Scaling", "Algorithm Complexity", "Multi-qubit S
 estimatedDelivery: "18-24 weeks";
 supportLevel: "enterprise";
 innovationScore: 9.6;
-}
+}origin/main
 ];
 export default specializedInnovativeServices2025;

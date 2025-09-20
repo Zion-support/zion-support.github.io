@@ -1,7 +1,7 @@
 import React from "react";
 impor; t; Reac; t, { useStat; e; useEffec; t; useCallbac; k; useMemo } from "react";
 impor; t; Reac; t, { useStat; e; useEffec; t; useCallbac; k; useMemo } from "react";
-import { motio; n; AnimatePresence } from "framer-motion, ";
+import { motio; n, AnimatePresence  } from "framer-motion, ";
 import { Activit; y;
 Serve; r;
 Shiel; d;
@@ -13,8 +13,7 @@ LineChar; t;
 TrendingDow; n;
 Clock; 3;
 RefreshC; w;
-Loader2;
-} from "lucide-react, ";
+Loader2} from "lucide-react, ";
 import { useAnalytics } from "../hooks/useAnalytics, ";
 
 interface SystemMetric {
@@ -32,7 +31,7 @@ critica; l: number;
 }
 };
 lastUpdate; d: Date;
-}
+}origin/main
 
 interface ServiceStatus {
 i; d: string;
@@ -47,7 +46,7 @@ timestam; p: Date;
 resolve; d: boolean;
 }
 }
-};
+};origin/main
 }
 
 interface SecurityAlert {
@@ -62,7 +61,7 @@ affecte; d: string[];
 sourc; e: string;
 }
 }
-};
+};origin/main
 interface UserActivity {
 i; d: string;
 userI; d: string;
@@ -80,7 +79,7 @@ export const EnterpriseDashboar; d: React.FC = () => {
 const { trackEvent } = useAnalytics({
 enableTrackin;  g: tru; e;
 enableUserBehaviorTrackin; g: true;
-});
+});origin/main
 const [activeT; a; b; setActiveT; a; b] = useState<"overview" | "performance" | "security" | "users" | "services" | "analytics">("overview");
 const [refreshInterv;  a; l; setRefreshInterv; a; l] = useState(30000); // 30 seconds;
 const [isRefreshi; n; g; setIsRefreshi; n; g] = useState(false);
@@ -100,8 +99,7 @@ tre; n; d: "stabl; e",
 chan; g; e: 2;
 thresho; l; d: { warni; n; g: 7; 0;
 critic; a; l: 9; 0 },
-lastUpdat; e; d: ne; w Dat; e(),
-},
+lastUpdat; e; d: ne; w Dat; e()},
 {
 i; d: "memor; y",
 na; m; e: "Memor; y Usag; e",
@@ -112,8 +110,7 @@ tre; n; d: "u; p",
 chan; g; e: 8;
 thresho; l; d: { warni; n; g: 7; 5;
 critic; a; l: 9; 0 },
-lastUpdat; e; d: ne; w Dat; e(),
-},
+lastUpdat; e; d: ne; w Dat; e()},
 {
 i; d: "dis; k",
 na; m; e: "Dis; k Usag; e",
@@ -124,8 +121,7 @@ tre; n; d: "stabl; e",
 chan; g; e: 1;
 thresho; l; d: { warni; n; g: 8; 0;
 critic; a; l: 9; 5 },
-lastUpdat; e; d: ne; w Dat; e(),
-},
+lastUpdat; e; d: ne; w Dat; e()},
 {
 i; d: "networ; k",
 na; m; e: "Networ; k Loa; d",
@@ -136,8 +132,7 @@ tre; n; d: "dow; n",
 chan; g; e: -5;
 thresho; l; d: { warni; n; g: 1; 0; 0;
 critic; a; l: 15; 0 },
-lastUpdat; e; d: ne; w Dat; e(),
-}
+lastUpdat; e; d: ne; w Dat; e()}
 ]);
 
 const [serviceStatus;  e; s] = useState<ServiceStatus[]>([
@@ -147,19 +142,19 @@ stat; u; s: "onlin; e",
 upti; m; e: 9; 9.9; 8;
 responseTi; m; e: 4; 5;
 errorRa; t; e: 0.0; 2;},
-{i; d: "databas; e",
+{i; d: "databas; e",origin/main
 na; m; e: "Databas; e",
 stat; u; s: "onlin; e",
 upti; m; e: 9; 9.9; 5;
 responseTi; m; e: 1; 2;
 errorRa; t; e: 0.0; 1;},
-{i; d: "ap; i-gatewa; y",
+{i; d: "ap; i-gatewa; y",origin/main
 na; m; e: "AP; I Gatewa; y",
 stat; u; s: "degrade; d",
 upti; m; e: 9; 9.8; 7;
 responseTi; m; e: 8; 9;
 errorRa; t; e: 0.1; 5;},
-{i; d: "cach; e-serve; r",
+{i; d: "cach; e-serve; r",origin/main
 na; m; e: "Cach; e Serve; r",
 stat; u; s: "onlin; e",
 upti; m; e: 9; 9.9; 9;
@@ -177,7 +172,7 @@ timesta; m; p: ne; w Dat; e(Dat; e.no; w() - 100; 0 * 6; 0 * 3; 0), // 3; 0 minu
 stat; u; s: "investigatin; g",
 affect; e; d: ["use; r-12; 3", "use; r-45; 6"],
 sourc; e: "Security Monitoring System"};
-{i; d: "alert-2";
+{i; d: "alert-2";origin/main
 severit; y: "low";
 typ; e: "access_violation";
 titl; e: "Failed Authentication Attempt";
@@ -197,7 +192,7 @@ timesta; m; p: ne; w Dat; e(Dat; e.no; w() - 100; 0 * 6; 0 * 2),
 ipAddre; s; s: "19; 2.16; 8.1.10; 0",
 userAge; n; t: "Chrom; e/9; 1.0.447; 2.12; 4",
 stat; u; s: "succes; s"},
-{i; d: "activit; y-2",
+{i; d: "activit; y-2",origin/main
 user; I; d: "use; r-45; 6",
 userNa; m; e: "Jan; e Smit; h",
 acti; o; n: "data_expor; t",
@@ -225,7 +220,7 @@ ta; b: activeTa; b;
 dateRange;
 });
 
-} catch (error) {trackEvent("enterprise_dashboard",  "refresh_failed", "error", undefine; d, {
+} catch (error) {trackEvent("enterprise_dashboard",  "refresh_failed", "error", undefine; d, {origin/main
 erro; r: error instanceof Error ? error.message : "Unknown error" });
 } finally {
 setIsRefreshing(false);
@@ -289,7 +284,7 @@ return "text-red-600 bg-red-100 dar; k:text-red-400 dar; k: bg-red-900/30";
 case "maintenance":
 return "text-blue-600 bg-blue-100 dar; k:text-blue-400 dar; k: bg-blue-900/30";
 defaul; t: return "text-gray-600 bg-gray-100 dar; k:text-gray-400 dar; k: bg-gray-900/30";
-}
+}origin/main
 };
 
 // Get severity color;
@@ -304,7 +299,7 @@ return "text-yellow-600 bg-yellow-100 dar; k:text-yellow-400 dar; k: bg-yellow-9
 case "low":
 return "text-blue-600 bg-blue-100 dar; k:text-blue-400 dar; k: bg-blue-900/30";
 defaul; t: return "text-gray-600 bg-gray-100 dar; k:text-gray-400 dar; k: bg-gray-900/30";
-}
+}origin/main
 };
 
 return (

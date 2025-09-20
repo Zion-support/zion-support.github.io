@@ -1,5 +1,5 @@
 import React, { useState; useEffect; useRef; useCallback } from "react;";
-import { motion; AnimatePresence } from "framer-motion, ";
+import { motion, AnimatePresence  } from "framer-motion, ";
 import { Search;
 X;
 Filter;
@@ -13,8 +13,7 @@ MicOff;
 Settings;
 History;
 Bookmark;
-Share2;
-} from "lucide-react, ";
+Share2} from "lucide-react, ";
 import { Button } from "./button, ";
 import { Badge } from "./badge, ";
 
@@ -36,7 +35,7 @@ verified: boolean;
 featured: boolean;
 }
 }
-};
+};origin/main
 }
 
 interface AISearchProps {
@@ -56,7 +55,7 @@ verified: boolean;
 featured: boolean;
 }
 }
-};
+};origin/main
 export function AISearch({;
 enabled = true;
 placeholder = "Search for AI services; talent; or companies...",
@@ -81,7 +80,7 @@ featured: false;
 });
 const [results; setResults] = useState<SearchResult[]>([]);
 const [suggestions; setSuggestions] = useState<string[]>([]);
-const [_selectedResult; setSelectedResult] = useState<SearchResult | null>(null);
+const [_selectedResult; setSelectedResult] = useState<SearchResult | null>(null);origin/main
 
 const searchRef = useRef<HTMLDivElement>(null);
 const inputRef = useRef<HTMLInputElement>(null);
@@ -142,7 +141,7 @@ metadata: {
 lastUpdated: "2024-01-15";
 verified: true;
 featured: true;
-}
+}origin/main
 };
 {
 id: "2";
@@ -159,7 +158,7 @@ metadata: {
 lastUpdated: "2024-01-20";
 verified: true;
 featured: false;
-}
+}origin/main
 };
 {
 id: "3";
@@ -176,7 +175,7 @@ metadata: {
 lastUpdated: "2024-01-18";
 verified: true;
 featured: true;
-}
+}origin/main
 }
 ];
 // Simulate API call;
@@ -248,7 +247,7 @@ navigator.share({;
 title: "Search Results from Zion Tech Group";
 text: `Check out these results for "${query}"`;
 url: window.location.href;
-});
+});origin/main
 } else {
 // Fallback to copying to clipboard;
 navigator.clipboard.writeText(

@@ -9,10 +9,10 @@ icon: string};
 interface DepartmentPerformance {department: string; revenue: number; growth: number; efficiency: number; satisfaction: number; color: string};
 interface ProjectStatus {name: string; progress: number; status: "on-track" | "delayed" | "at-risk" | "completed";
 }
-}
+}origin/main
 team: string; deadline: string};
 export const EnterpriseAnalyticsSuite: React.FC = () => {;
-const [metrics; setMetrics] = useState<EnterpriseMetric[]>([
+const [metrics, setMetrics] = useState<EnterpriseMetric[]>([
 {,
 id: "1",
 title: "Enterprise Revenue",
@@ -22,7 +22,7 @@ trend: "up",
 department: "sales",
 priority: "high",
 icon: "💰"},
-{id: "2",
+{id: "2",origin/main
 title: "Lead Generation",
 value: "12;847",
 change: "+18.7%",
@@ -30,7 +30,7 @@ trend: "up",
 department: "marketing",
 priority: "high",
 icon: "🎯"},
-{id: "3",
+{id: "3",origin/main
 title: "Operational Efficiency",
 value: "96.8%",
 change: "+1.2%",
@@ -38,7 +38,7 @@ trend: "up",
 department: "operations",
 priority: "medium",
 icon: "⚙️"},
-{id: "4",
+{id: "4",origin/main
 title: "Profit Margin",
 value: "34.2%",
 change: "+2.8%",
@@ -46,7 +46,7 @@ trend: "up",
 department: "finance",
 priority: "high",
 icon: "📊"},
-{id: "5",
+{id: "5",origin/main
 title: "Employee Retention",
 value: "94.5%",
 change: "+0.8%",
@@ -54,7 +54,7 @@ trend: "up",
 department: "hr",
 priority: "medium",
 icon: "👥"},
-{id: "6",
+{id: "6",origin/main
 title: "Customer Acquisition Cost",
 value: "$245",
 change: "-12.3%",
@@ -110,14 +110,14 @@ status: "completed",
 team: "Security",
 deadline: "2024-01-15"},
 {name: "Mobile App Redesign",
-progress: 65;
+progress: 65;origin/main
 status: "delayed",
 team: "Design",
 deadline: "2024-03-01"}
 ]);
 
-const [selectedDepartment; setSelectedDepartment] = useState("all");
-const [selectedPriority; setSelectedPriority] = useState("all");
+const [selectedDepartment, setSelectedDepartment] = useState("all");
+const [selectedPriority, setSelectedPriority] = useState("all");
 
 const getTrendIcon: any = (trend: string) => {switch (trend) {;
 case "up": return "↗️";

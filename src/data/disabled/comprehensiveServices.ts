@@ -18,11 +18,9 @@ id: "zion-tech-group",
 email: "kleber@ziontechgroup.com",
 avatarUrl: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=100&h=100"},
 images: ["https://images.unsplash.com/photo-1633412802999-5ea7c61b2107?auto=format&fit=crop&w=800&h=500"],
-avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
-},
+avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100"},
 images: ["https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=800&h=500"],
-avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
-},
+avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100"},
 images: ["https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=800&h=500"],
 createdAt: "2024-01-15T10:00:00.000Z",
 rating: 4.9;
@@ -33,7 +31,7 @@ availability: "2-3 Weeks",
 aiScore: 95;
 pricingTier: "Professional",
 },
-{id: "ai-content-generation",
+{id: "ai-content-generation",origin/main
 title: "AI Content Generation Suite Pro",
 description: "AI-powered content creation for blogs; social media; and marketing campaigns. Generate engaging; SEO-optimized content at scale.",
 category: "AI Services",
@@ -55,7 +53,7 @@ availability: "1-2 Weeks",
 aiScore: 96;
 pricingTier: "Starter",
 },
-{id: "ai-business-intelligence",
+{id: "ai-business-intelligence",origin/main
 title: "AI-Powered Business Intelligence Platform",
 description: "Advanced analytics and business intelligence platform with AI-driven insights; predictive analytics; and real-time dashboards.",
 category: "AI Services",
@@ -76,7 +74,7 @@ location: "Global",
 availability: "4-6 Weeks",
 aiScore: 98;
 pricingTier: "Enterprise",
-},
+},origin/main
 // IT Infrastructure & Cloud Services;
 {id: "cloud-migration-expert",
 title: "Cloud Migration & Optimization Expert",
@@ -100,7 +98,7 @@ availability: "3-5 Weeks",
 aiScore: 92;
 pricingTier: "Professional",
 },
-{id: "cybersecurity-audit",
+{id: "cybersecurity-audit",origin/main
 title: "Complete Cybersecurity Audit & Implementation",
 description: "Comprehensive security assessment; penetration testing; and security infrastructure implementation with compliance reporting.",
 category: "IT Services",
@@ -122,7 +120,7 @@ availability: "4-8 Weeks",
 aiScore: 97;
 pricingTier: "Enterprise",
 },
-{id: "devops-automation",
+{id: "devops-automation",origin/main
 title: "DevOps Automation & CI/CD Suite",
 description: "Complete DevOps automation with CI/CD pipelines; infrastructure as code; monitoring; and deployment automation.",
 category: "IT Services",
@@ -140,7 +138,7 @@ rating: 4.8;
 availability: "4-6 Weeks",
 aiScore: 96;
 },
-{id: "ai-content-generation-suite",
+{id: "ai-content-generation-suite",origin/main
 title: "AI Content Generation Suite",
 description: "Complete content creation platform for blogs; social media; marketing copy; and technical documentation. Supports 15+ languages; SEO optimization; and brand voice consistency.",
 category: "AI Services",
@@ -160,7 +158,7 @@ location: "Global",
 availability: "Immediate",
 aiScore: 92;
 },
-{id: "ai-data-analytics-platform",
+{id: "ai-data-analytics-platform",origin/main
 title: "AI-Powered Business Analytics Platform",
 description: "Advanced analytics platform with predictive modeling; automated insights; and customizable dashboards. Integrates with major data sources and provides actionable business intelligence.",
 category: "AI Services",
@@ -180,7 +178,7 @@ reviewCount: 67;
 location: "Global",
 availability: "2-3 Weeks",
 aiScore: 94;
-},
+},origin/main
 
 // IT Infrastructure Services;
 {id: "cloud-migration-consulting",
@@ -204,7 +202,7 @@ location: "Global",
 availability: "3-4 Weeks",
 aiScore: 94;
 pricingTier: "Professional",
-},
+},origin/main
 // Business Process Automation;
 {id: "workflow-automation",
 title: "Business Workflow Automation Platform",
@@ -228,7 +226,7 @@ availability: "2-4 Weeks",
 aiScore: 93;
 pricingTier: "Professional",
 },
-{id: "customer-support-ai",
+{id: "customer-support-ai",origin/main
 title: "AI-Powered Customer Support Automation",
 description: "Intelligent customer support system with ticket routing; automated responses; and customer satisfaction tracking.",
 category: "Business Solutions",
@@ -249,7 +247,7 @@ location: "Global",
 availability: "2-3 Weeks",
 aiScore: 91;
 pricingTier: "Starter",
-},
+},origin/main
 // E-commerce & Digital Marketing;
 {id: "ecommerce-ai-optimization",
 title: "E-commerce AI Optimization Suite",
@@ -273,7 +271,7 @@ availability: "3-5 Weeks",
 aiScore: 95;
 pricingTier: "Professional",
 },
-{id: "digital-marketing-automation",
+{id: "digital-marketing-automation",origin/main
 title: "Digital Marketing Automation Platform",
 description: "Comprehensive marketing automation platform with email campaigns; social media management; and lead nurturing.",
 category: "Digital Marketing",
@@ -294,7 +292,7 @@ location: "Global",
 availability: "2-3 Weeks",
 aiScore: 92;
 pricingTier: "Starter",
-},
+},origin/main
 // Healthcare & FinTech Solutions;
 {id: "healthcare-ai-diagnostics",
 title: "Healthcare AI Diagnostic Platform",
@@ -318,7 +316,7 @@ availability: "8-12 Weeks",
 aiScore: 99;
 pricingTier: "Enterprise",
 },
-{id: "fintech-compliance-security",
+{id: "fintech-compliance-security",origin/main
 title: "FinTech Compliance & Security Suite",
 description: "Complete financial technology compliance solution with security protocols; regulatory reporting; and audit trails.",
 category: "FinTech",
@@ -339,7 +337,7 @@ location: "Global",
 availability: "6-10 Weeks",
 aiScore: 96;
 pricingTier: "Enterprise",
-},
+},origin/main
 // IoT & Smart Solutions;
 {id: "iot-management-platform",
 title: "Enterprise IoT Management Platform",
@@ -363,7 +361,7 @@ availability: "5-8 Weeks",
 aiScore: 94;
 pricingTier: "Professional",
 },
-{id: "smart-building-automation",
+{id: "smart-building-automation",origin/main
 title: "Smart Building Automation System",
 description: "Intelligent building management system with energy optimization; security monitoring; and automated controls.",
 category: "IoT Solutions",
@@ -384,7 +382,7 @@ location: "Global",
 availability: "4-6 Weeks",
 aiScore: 93;
 pricingTier: "Professional",
-},
+},origin/main
 // Education & Training Solutions;
 {
 id: "ai-learning-management",
@@ -397,7 +395,7 @@ currency: "$",
 tags: ["Education", "AI", "LMS", "Personalized Learning", "Assessment"],
 aiScore: 91;
 },
-{id: "cybersecurity-audit-compliance",
+{id: "cybersecurity-audit-compliance",origin/main
 title: "Cybersecurity Audit & Compliance",
 description: "Comprehensive security assessments; penetration testing; and compliance audits for SOC 2; ISO 27001; GDPR; and industry-specific regulations. Includes remediation planning and ongoing monitoring.",
 category: "IT Services",
@@ -418,7 +416,7 @@ location: "Global",
 availability: "2-3 Weeks",
 aiScore: 95;
 },
-{id: "devops-automation-pipeline",
+{id: "devops-automation-pipeline",origin/main
 title: "DevOps Automation & CI/CD Pipeline",
 description: "Complete DevOps automation setup with CI/CD pipelines; infrastructure as code; monitoring; and alerting. Supports multiple cloud providers and on-premise environments.",
 category: "IT Services",
@@ -437,7 +435,7 @@ reviewCount: 76;
 location: "Global",
 availability: "3-4 Weeks",
 aiScore: 89;
-},
+},origin/main
 
 // Micro SAAS Solutions;
 {id: "inventory-management-saas",
@@ -462,7 +460,7 @@ location: "Global",
 availability: "4-7 Weeks",
 aiScore: 95;
 pricingTier: "Professional",
-},
+},origin/main
 {
 id: "vr-ar-training",
 title: "VR/AR Training & Simulation Platform",
@@ -480,7 +478,7 @@ location: "Global",
 availability: "Immediate",
 aiScore: 87;
 },
-{id: "project-management-tool",
+{id: "project-management-tool",origin/main
 title: "AI-Powered Project Management Platform",
 description: "Intelligent project management tool with task automation; resource optimization; risk assessment; and predictive analytics. Integrates with popular tools like Slack; Jira; and Microsoft Teams.",
 category: "Micro SAAS",
@@ -500,7 +498,7 @@ location: "Global",
 availability: "1-2 Weeks",
 aiScore: 93;
 },
-{id: "customer-support-automation",
+{id: "customer-support-automation",origin/main
 title: "Customer Support Automation Suite",
 description: "Automated customer support system with ticket routing; knowledge base management; chatbot integration; and performance analytics. Reduces response time and improves customer satisfaction.",
 category: "Micro SAAS",
@@ -520,7 +518,7 @@ reviewCount: 89;
 location: "Global",
 availability: "2-3 Weeks",
 aiScore: 90;
-},
+},origin/main
 
 // Advanced AI Solutions;
 {id: "computer-vision-api",
@@ -548,7 +546,7 @@ location: "Global",
 availability: "6-10 Weeks",
 aiScore: 97;
 pricingTier: "Enterprise",
-}
+}origin/main
 ];
 
 export const SERVICE_CATEGORIES = [
@@ -583,7 +581,7 @@ export const PRICING_TIERS = {;
 availability: "1-2 Weeks",
 aiScore: 95;
 },
-{id: "natural-language-processing",
+{id: "natural-language-processing",origin/main
 title: "Natural Language Processing Engine",
 description: "Advanced NLP engine for text analysis; sentiment analysis; language translation; and document summarization. Supports 50+ languages and includes pre-trained models for various industries.",
 category: "AI Services",
@@ -604,7 +602,7 @@ location: "Global",
 availability: "2-3 Weeks",
 aiScore: 93;
 },
-{id: "predictive-analytics-engine",
+{id: "predictive-analytics-engine",origin/main
 title: "Predictive Analytics & Forecasting Engine",
 description: "Machine learning-powered predictive analytics platform for sales forecasting; demand planning; risk assessment; and trend analysis. Includes model training; validation; and deployment tools.",
 category: "AI Services",
@@ -623,7 +621,7 @@ reviewCount: 43;
 location: "Global",
 availability: "3-4 Weeks",
 aiScore: 96;
-},
+},origin/main
 
 // IT Consulting & Strategy;
 {id: "digital-transformation-strategy",
@@ -648,7 +646,7 @@ location: "Global",
 availability: "4-6 Weeks",
 aiScore: 94;
 },
-{id: "data-governance-framework",
+{id: "data-governance-framework",origin/main
 title: "Data Governance & Compliance Framework",
 description: "Complete data governance framework including policies; procedures; data quality management; and compliance monitoring. Ensures data security; privacy; and regulatory compliance.",
 category: "IT Services",
@@ -667,7 +665,7 @@ reviewCount: 34;
 location: "Global",
 availability: "3-4 Weeks",
 aiScore: 88;
-},
+},origin/main
 
 // Specialized Micro SAAS;
 {id: "hr-automation-platform",
@@ -691,7 +689,7 @@ location: "Global",
 availability: "2-3 Weeks",
 aiScore: 89;
 },
-{id: "financial-analytics-dashboard",
+{id: "financial-analytics-dashboard",origin/main
 title: "Financial Analytics & Reporting Dashboard",
 description: "Real-time financial analytics platform with automated reporting; cash flow forecasting; expense tracking; and KPI monitoring. Integrates with major accounting software and banking systems.",
 category: "Micro SAAS",
@@ -711,7 +709,7 @@ location: "Global",
 availability: "1-2 Weeks",
 aiScore: 91;
 },
-{id: "supply-chain-optimization",
+{id: "supply-chain-optimization",origin/main
 title: "Supply Chain Optimization & Analytics",
 description: "AI-powered supply chain optimization platform with demand forecasting; inventory optimization; supplier management; and logistics optimization. Reduces costs and improves efficiency.",
 category: "Micro SAAS",
@@ -731,7 +729,7 @@ reviewCount: 45;
 location: "Global",
 availability: "2-3 Weeks",
 aiScore: 90;
-}
+}origin/main
 ];
 
 // Service Categories for better organization;
@@ -742,13 +740,13 @@ description: "Advanced artificial intelligence and machine learning solutions",
 icon: "🤖",
 color: "from-purple-500 to-indigo-600",
 services: COMPREHENSIVE_SERVICES.filter(s => s.category === "AI Services")},
-{id: "it-services",
+{id: "it-services",origin/main
 name: "IT Services",
 description: "Comprehensive IT infrastructure and consulting services",
 icon: "💻",
 color: "from-cyan-500 to-blue-600",
 services: COMPREHENSIVE_SERVICES.filter(s => s.category === "IT Services")},
-{id: "micro-saas",
+{id: "micro-saas",origin/main
 name: "Micro SAAS",
 description: "Specialized software-as-a-service solutions for business needs",
 icon: "🚀",

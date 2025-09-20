@@ -15,8 +15,7 @@ export const masterComprehensiveServices2025 = {// Original services;
     // Additional services;
     additional: allAdditionalServices2025;
     // Cutting-edge services;
-    cuttingEdge: allCuttingEdgeServices2025,
-};
+    cuttingEdge: allCuttingEdgeServices2025};
     // Get all services as a flat array;
 export const getAllServices = () => {
     const allServices = [
@@ -97,7 +96,7 @@ export const getMasterServicesStats = () => {const allServices = getAllServices(
             microSaas: allServices.filter(s => 'pricing' in s && 'userLimit' in s).length;
             itServices: allServices.filter(s => 'hourlyRate' in s && 'projectRate' in s).length;
             aiServices: allServices.filter(s => 'aiModels' in s && 'aiScore' in s).length};
-        byPricing: {freemium: allServices.filter(s => 'pricing' in s && s.pricing === 'Freemium').length;
+        byPricing: {freemium: allServices.filter(s => 'pricing' in s && s.pricing === 'Freemium').length;origin/main
             professional: allServices.filter(s => 'pricing' in s && s.pricing === 'Professional').length;
             enterprise: allServices.filter(s => 'pricing' in s && s.pricing === 'Enterprise').length};
         categories: [...new Set(allServices.map(s => s.category))].length;

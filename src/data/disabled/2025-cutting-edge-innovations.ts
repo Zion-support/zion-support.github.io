@@ -21,7 +21,7 @@ website: string;
 address: string;
 }
 }
-};
+};origin/main
 marketPrice: string;
 competitors: string[];
 roi: string;
@@ -32,7 +32,7 @@ trialPeriod: string;
 technology: string[];
 compliance: string[];
 useCases: string[];
-}
+}origin/main
 
 export const cuttingEdgeInnovations2025: CuttingEdgeService[] = [
 // AI-Powered Micro SAAS Services;
@@ -70,7 +70,7 @@ phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com/quantumai-studio";
 address: "364 E Main St STE 1008 Middletown DE 19709"};
-marketPrice: "$299-999/month";
+marketPrice: "$299-999/month";origin/main
 competitors: ["IBM Quantum", "Google Quantum AI", "Microsoft Azure Quantum"],
 roi: "500% within 12 months";
 setupTime: "1 week";
@@ -115,7 +115,7 @@ phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com/neurosync-platform";
 address: "364 E Main St STE 1008 Middletown DE 19709"};
-marketPrice: "$199-599/month";
+marketPrice: "$199-599/month";origin/main
 competitors: ["Weights & Biases", "MLflow", "Neptune.ai"],
 roi: "400% within 6 months";
 setupTime: "3 days";
@@ -160,7 +160,7 @@ phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com/edgeai-orchestrator";
 address: "364 E Main St STE 1008 Middletown DE 19709"};
-marketPrice: "$0.05-0.15 per inference";
+marketPrice: "$0.05-0.15 per inference";origin/main
 competitors: ["AWS IoT Greengrass", "Azure IoT Edge", "Google Edge TPU"],
 roi: "300% within 4 months";
 setupTime: "1 day";
@@ -207,7 +207,7 @@ phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com/zerotrust-network-fabric";
 address: "364 E Main St STE 1008 Middletown DE 19709"};
-marketPrice: "$599-1999/month";
+marketPrice: "$599-1999/month";origin/main
 competitors: ["Cisco Zero Trust", "Palo Alto Networks", "Fortinet"],
 roi: "600% within 3 months";
 setupTime: "2 weeks";
@@ -252,7 +252,7 @@ phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com/quantumcloud-platform";
 address: "364 E Main St STE 1008 Middletown DE 19709"};
-marketPrice: "$399-1299/month";
+marketPrice: "$399-1299/month";origin/main
 competitors: ["IBM Cloud", "AWS Braket", "Azure Quantum"],
 roi: "400% within 8 months";
 setupTime: "1 week";
@@ -299,7 +299,7 @@ phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com/metaverse-development-studio";
 address: "364 E Main St STE 1008 Middletown DE 19709"};
-marketPrice: "$89-299/month";
+marketPrice: "$89-299/month";origin/main
 competitors: ["Roblox Studio", "Unity", "Unreal Engine"],
 roi: "350% within 6 months";
 setupTime: "1 week";
@@ -344,7 +344,7 @@ phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com/blockchain-enterprise-suite";
 address: "364 E Main St STE 1008 Middletown DE 19709"};
-marketPrice: "$799-2499/month";
+marketPrice: "$799-2499/month";origin/main
 competitors: ["IBM Blockchain", "ConsenSys", "R3 Corda"],
 roi: "500% within 9 months";
 setupTime: "2 weeks";
@@ -391,7 +391,7 @@ phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com/hyperautomation-hub";
 address: "364 E Main St STE 1008 Middletown DE 19709"};
-marketPrice: "$299-899/month";
+marketPrice: "$299-899/month";origin/main
 competitors: ["UiPath", "Automation Anywhere", "Blue Prism"],
 roi: "400% within 6 months";
 setupTime: "2 weeks";
@@ -436,7 +436,7 @@ phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com/ai-ethics-governance";
 address: "364 E Main St STE 1008 Middletown DE 19709"};
-marketPrice: "$449-1499/month";
+marketPrice: "$449-1499/month";origin/main
 competitors: ["Fiddler AI", "Weights & Biases", "Arize AI"],
 roi: "350% within 8 months";
 setupTime: "1 week";
@@ -483,7 +483,7 @@ phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com/smartcity-iot-platform";
 address: "364 E Main St STE 1008 Middletown DE 19709"};
-marketPrice: "$1299-4999/month";
+marketPrice: "$1299-4999/month";origin/main
 competitors: ["Cisco Smart Cities", "Siemens", "Schneider Electric"],
 roi: "400% within 12 months";
 setupTime: "1 month";

@@ -1,4 +1,4 @@
-import { Routes; Route } from "react-router-dom, ";
+import { Routes, Route  } from "react-router-dom, ";
 import React from "react";
 import Link from "next/link;";
 import { Heart } from "lucide-react, ";
@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button, ";
 import { Toolti; p;
 TooltipConten; t;
 TooltipProvide; r;
-TooltipTrigge; r } from "@/components/ui/tooltip, ";
+TooltipTrigge; r } from "@/components/ui/tooltip, ";origin/main
 import { useDispatch } from "react-redux, ";
 import type { AppDispatch } from "@/store;";
 import { addItem } from "@/store/cartSlice, ";
@@ -95,7 +95,7 @@ interface ProductCardProps {product: Product;
   onBuy?: () => Promise<void>, // Changed to allow async and signal completion/failure,
 onBuyAttemptComplete?: () => void, // Callback to signal the buy attempt is finished (success or fail)
 }
-  /** Disable the Buy Now button (e.g. when the checkout route isn't ready). */}
+  /** Disable the Buy Now button (e.g. when the checkout route isn't ready). */}origin/main
   buyDisabled?: boolean}
 
   )

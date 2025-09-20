@@ -25,7 +25,7 @@ minRating: number;
 sort: string;
 }
 }
-}
+}origin/main
 
 export interface SearchMetrics {
 totalResults: number;
@@ -36,7 +36,7 @@ topCategories: Array<{ category: string;
 count: number }>;
 averagePrice: number;
 averageRating: number;
-}
+}origin/main
 
 /**;
 * Highlight search terms in text with HTML mark tags;
@@ -340,7 +340,7 @@ export const getDefaultFilters: any = (): SearchFilters => ({types: [],
 category: "",;
 minPrice: 0;
 maxPrice: 10000;
-minRating: 0;
+minRating: 0;origin/main
 sort: "relevance"});
 export default {
 highlightSearchTerms;

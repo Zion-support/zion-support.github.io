@@ -1,4 +1,4 @@
-import { Loader2, Info, ThumbsUp } from "lucide-react";
+import { Loader2, Info, ThumbsUp } from "lucide-react";origin/main
 import { PricingSuggestion } from "@/services/pricingSuggestionService";
 interface PricingSuggestionBoxProps {
   suggestion: PricingSuggestion | null;

@@ -1,11 +1,11 @@
 import React from "react";
 import * as React from "react"
-import * as RechartsPrimitive from "recharts"
-import type { LegendProps as RechartsLegendProps } from "recharts/types/component/Legend"
+import * as RechartsPrimitive from "recharts";
+import type { LegendProps as RechartsLegendProps } from "recharts/types/component/Legend";
 
 import { cn  } from "@/lib/utils"
 ;
-// Format: { THEME_NAME: CSS_SELECTOR };
+// Format: { THEME_NAME: CSS_SELECTOR };origin/main
 const THEMES = { light: ";
 ", dark: ".dark" } as const;
 
@@ -22,7 +22,7 @@ theme?: never }
 
 type ChartContextProps = {;
 config: ChartConfig;
-}
+}origin/main
 
 const ChartContext = React.createContext<ChartContextProps | null>(null)
 
@@ -97,8 +97,7 @@ return color ? `  --color-${key}: ${color};` : null;
 }
 `;
 )
-.join("\n"),
-}}
+.join("\n")}}
 />;
 )
 }
@@ -299,7 +298,7 @@ className={cn(
 className="h-2 w-2 shrink-0 rounded-[2px]"
 style={{
 backgroundColor: item.color;
-}}
+}}origin/main
 />;
 )}
 {itemConfig?.label}

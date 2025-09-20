@@ -20,7 +20,7 @@ website: string;
 address: string;
 }
 }
-};
+};origin/main
 marketPrice: string;
 competitors: string[];
 roi: string;
@@ -34,7 +34,7 @@ compliance: string[];
 scalability: string;
 support: string;
 futurePotential: string;
-}
+}origin/main
 
 export const emergingTechServices2025: EmergingTechService[] = [
 {id: 1;
@@ -75,7 +75,7 @@ tags: ["Space Tech", "Satellites", "Communication", "Earth Observation", "Space 
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
-website: "https://ziontechgroup.com";
+website: "https://ziontechgroup.com";origin/main
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$50;000/month (Industry average: $100;000/month)",
 competitors: ["SpaceX Starlink", "OneWeb", "Amazon Project Kuiper", "Telesat"],
@@ -98,7 +98,7 @@ scalability: "Global satellite network";
 support: "24/7 space operations support";
 futurePotential: "Mars colonization support; deep space exploration",
 },
-{id: 2;
+{id: 2;origin/main
 name: "Biotechnology AI Platform";
 category: "Biotechnology";
 subcategory: "AI-Driven Research";
@@ -136,7 +136,7 @@ tags: ["Biotechnology", "AI", "Drug Discovery", "Genetic Engineering", "Syntheti
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
-website: "https://ziontechgroup.com";
+website: "https://ziontechgroup.com";origin/main
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$35;000/month (Industry average: $70;000/month)",
 competitors: ["Insitro", "Atomwise", "BenevolentAI", "Recursion Pharmaceuticals"],
@@ -159,7 +159,7 @@ scalability: "Unlimited biological data";
 support: "Biotechnology expert support";
 futurePotential: "Human augmentation; synthetic life forms; bio-computing",
 },
-{id: 3;
+{id: 3;origin/main
 name: "Nanotechnology Manufacturing Platform";
 category: "Nanotechnology";
 subcategory: "Advanced Manufacturing";
@@ -197,7 +197,7 @@ tags: ["Nanotechnology", "Manufacturing", "Quantum Materials", "Atomic Precision
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
-website: "https://ziontechgroup.com";
+website: "https://ziontechgroup.com";origin/main
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$40;000/month (Industry average: $80;000/month)",
 competitors: ["Nano Dimension", "Nanofabrica", "Carbon", "Desktop Metal"],
@@ -220,7 +220,7 @@ scalability: "Atomic-scale precision";
 support: "Nanotechnology expert support";
 futurePotential: "Molecular machines; quantum computers; space elevators",
 },
-{id: 4;
+{id: 4;origin/main
 name: "Quantum Internet Platform";
 category: "Quantum Computing";
 subcategory: "Quantum Communication";
@@ -258,7 +258,7 @@ tags: ["Quantum Internet", "Quantum Communication", "Quantum Security", "Quantum
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
-website: "https://ziontechgroup.com";
+website: "https://ziontechgroup.com";origin/main
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$30;000/month (Industry average: $60;000/month)",
 competitors: ["Quantum Xchange", "ID Quantique", "Toshiba Quantum", "NTT Quantum"],
@@ -281,7 +281,7 @@ scalability: "Global quantum network";
 support: "Quantum internet expert support";
 futurePotential: "Quantum teleportation; quantum AI networks; interplanetary quantum communication",
 },
-{id: 5;
+{id: 5;origin/main
 name: "Brain-Computer Interface Platform";
 category: "Neural Technology";
 subcategory: "Brain-Machine Interface";
@@ -319,7 +319,7 @@ tags: ["Brain-Computer Interface", "Neural Technology", "Cognitive Enhancement",
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
-website: "https://ziontechgroup.com";
+website: "https://ziontechgroup.com";origin/main
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$25;000/month (Industry average: $50;000/month)",
 competitors: ["Neuralink", "Kernel", "CTRL-labs", "Emotiv"],
@@ -342,7 +342,7 @@ scalability: "Unlimited neural interfaces";
 support: "Neuroscience expert support";
 futurePotential: "Human consciousness upload; collective intelligence; telepathic communication",
 },
-{id: 6;
+{id: 6;origin/main
 name: "Fusion Energy Platform";
 category: "Energy Technology";
 subcategory: "Nuclear Fusion";
@@ -380,7 +380,7 @@ tags: ["Fusion Energy", "Clean Energy", "Nuclear Physics", "Plasma Physics", "Su
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
-website: "https://ziontechgroup.com";
+website: "https://ziontechgroup.com";origin/main
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$100;000/month (Industry average: $200;000/month)",
 competitors: ["ITER", "Commonwealth Fusion", "General Fusion", "Helion Energy"],
@@ -403,7 +403,7 @@ scalability: "Global energy grid";
 support: "Fusion physics expert support";
 futurePotential: "Interstellar travel; space colonization; unlimited energy civilization",
 },
-{id: 7;
+{id: 7;origin/main
 name: "Digital Twin Platform";
 category: "Digital Technology";
 subcategory: "Virtual Replication";
@@ -441,7 +441,7 @@ tags: ["Digital Twin", "IoT", "Simulation", "Predictive Analytics", "Virtual Rea
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
-website: "https://ziontechgroup.com";
+website: "https://ziontechgroup.com";origin/main
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$15;000/month (Industry average: $30;000/month)",
 competitors: ["Siemens Digital Twin", "GE Digital Twin", "Microsoft Azure Digital Twins", "IBM Digital Twin"],
@@ -464,7 +464,7 @@ scalability: "Unlimited digital twins";
 support: "Digital twin expert support";
 futurePotential: "Metaverse integration; consciousness simulation; parallel universe modeling",
 },
-{id: 8;
+{id: 8;origin/main
 name: "Holographic Display Platform";
 category: "Display Technology";
 subcategory: "3D Holography";
@@ -502,7 +502,7 @@ tags: ["Holographic Display", "3D Technology", "Telepresence", "Augmented Realit
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
-website: "https://ziontechgroup.com";
+website: "https://ziontechgroup.com";origin/main
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$20;000/month (Industry average: $40;000/month)",
 competitors: ["Looking Glass", "Light Field Lab", "RealView Imaging", "Leia Inc"],
@@ -525,7 +525,7 @@ scalability: "Unlimited holographic displays";
 support: "Holographic technology expert support";
 futurePotential: "Star Wars-style communication; virtual reality replacement; 3D internet",
 },
-{id: 9;
+{id: 9;origin/main
 name: "Quantum Sensing Platform";
 category: "Quantum Technology";
 subcategory: "Quantum Sensors";
@@ -563,7 +563,7 @@ tags: ["Quantum Sensing", "Quantum Technology", "Precision Measurement", "Detect
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
-website: "https://ziontechgroup.com";
+website: "https://ziontechgroup.com";origin/main
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$18;000/month (Industry average: $35;000/month)",
 competitors: ["Q-CTRL", "Quantum Machines", "Rigetti", "D-Wave"],
@@ -586,7 +586,7 @@ scalability: "Unlimited quantum sensors";
 support: "Quantum physics expert support";
 futurePotential: "Quantum internet; quantum computers; quantum communication networks",
 },
-{id: 10;
+{id: 10;origin/main
 name: "Autonomous Systems Platform";
 category: "Robotics";
 subcategory: "Autonomous Intelligence";
@@ -624,7 +624,7 @@ tags: ["Autonomous Systems", "Robotics", "AI", "Computer Vision", "Automation", 
 contactInfo: {
 phone: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
-website: "https://ziontechgroup.com";
+website: "https://ziontechgroup.com";origin/main
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 marketPrice: "$25;000/month (Industry average: $50;000/month)",
 competitors: ["Boston Dynamics", "ABB Robotics", "KUKA", "FANUC"],
@@ -646,7 +646,7 @@ compliance: ["Safety standards", "Industry regulations", "Quality standards"],
 scalability: "Unlimited autonomous systems";
 support: "Robotics expert support";
 futurePotential: "General purpose robots; humanoid robots; swarm intelligence",
-}
+}origin/main
 ];
 
 export default emergingTechServices2025;

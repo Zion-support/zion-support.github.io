@@ -9,7 +9,7 @@ return (
       </div>
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onComplete)} className="space-y-6">
-          <FormField
+          <FormFieldorigin/main
 control = {form.control}
             name="displayName"
             render={({ field }: { field: any }) => (
@@ -29,7 +29,7 @@ placeholder="Your full name"
               </FormItem>
             )}
           />
-          <FormField
+          <FormFieldorigin/main
 control = {form.control}
             name="headline"
             render={({ field }: { field: any }) => (
@@ -53,7 +53,7 @@ placeholder={`e.g., ${
               </FormItem>
             )}
           />
-          <FormField
+          <FormFieldorigin/main
 control = {form.control}
             name="bio"
             render={({ field }: { field: any }) => (

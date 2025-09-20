@@ -4,7 +4,7 @@ benefits: string[], useCases: string[];
 targetAudience: string[], tags: string[];
 estimatedDelivery: string; supportLevel: string; marketPrice: string;
 }
-contactInfo: {,}
+contactInfo: {,}origin/main
 phone: string; email: string; website: string};
 websiteUrl: string;
 demoUrl?: string;
@@ -60,7 +60,7 @@ estimatedDelivery: "8-12 weeks", supportLevel: "enterprise";
 marketPrice: "$4; 200 - $12; 000/month",
 contactInfo: {,
 phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com"}, websiteUrl: "https://ziontechgroup.com/healthcare-ai-diagnostics";
+website: "https://ziontechgroup.com"}, websiteUrl: "https://ziontechgroup.com/healthcare-ai-diagnostics";origin/main
 industryStandards: ["DICOM", "HL7 FHIR", "IHE", "SNOMED CT", "LOINC"],
 complianceFrameworks: ["HIPAA", "HITECH", "FDA", "SOC2", "ISO 27001"],
 integrationPartners: ["Epic", "Cerner", "Allscripts", "Athenahealth", "Practice Fusion"],
@@ -110,7 +110,7 @@ estimatedDelivery: "6-10 weeks", supportLevel: "enterprise";
 marketPrice: "$3; 800 - $10; 000/month",
 contactInfo: {,
 phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com"}, websiteUrl: "https://ziontechgroup.com/financial-ai-risk-management";
+website: "https://ziontechgroup.com"}, websiteUrl: "https://ziontechgroup.com/financial-ai-risk-management";origin/main
 industryStandards: ["Basel III", "Solvency II", "IFRS 9", "CCAR", "Dodd-Frank"],
 complianceFrameworks: ["SOX", "GLBA", "PCI DSS", "SOC2", "ISO 27001"],
 integrationPartners: ["Bloomberg", "Reuters", "FactSet", "Moody's", "S&P Global"],
@@ -160,7 +160,7 @@ estimatedDelivery: "6-8 weeks", supportLevel: "enterprise";
 marketPrice: "$2; 800 - $7; 500/month",
 contactInfo: {,
 phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com"}, websiteUrl: "https://ziontechgroup.com/manufacturing-ai-optimization";
+website: "https://ziontechgroup.com"}, websiteUrl: "https://ziontechgroup.com/manufacturing-ai-optimization";origin/main
 industryStandards: ["ISO 9001", "ISO 14001", "ISO 45001", "Six Sigma", "Lean Manufacturing"],
 complianceFrameworks: ["FDA", "EPA", "OSHA", "SOC2", "ISO 27001"],
 integrationPartners: ["SAP", "Oracle", "Siemens", "Rockwell Automation", "ABB"],
@@ -210,7 +210,7 @@ estimatedDelivery: "4-6 weeks", supportLevel: "premium";
 marketPrice: "$1; 800 - $4; 500/month",
 contactInfo: {,
 phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com"}, websiteUrl: "https://ziontechgroup.com/retail-ai-customer-intelligence";
+website: "https://ziontechgroup.com"}, websiteUrl: "https://ziontechgroup.com/retail-ai-customer-intelligence";origin/main
 industryStandards: ["PCI DSS", "GDPR", "CCPA", "SOC2", "ISO 27001"],
 complianceFrameworks: ["Retail Security", "Data Privacy", "Payment Security", "Customer Protection"],
 integrationPartners: ["Shopify", "WooCommerce", "Magento", "Salesforce", "HubSpot"],
@@ -260,7 +260,7 @@ estimatedDelivery: "6-8 weeks", supportLevel: "premium";
 marketPrice: "$2; 200 - $6; 000/month",
 contactInfo: {,
 phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com"}, websiteUrl: "https://ziontechgroup.com/education-ai-learning";
+website: "https://ziontechgroup.com"}, websiteUrl: "https://ziontechgroup.com/education-ai-learning";origin/main
 industryStandards: ["SCORM", "xAPI", "LTI", "Common Core", "FERPA"],
 complianceFrameworks: ["FERPA", "COPPA", "GDPR", "SOC2", "ISO 27001"],
 integrationPartners: ["Canvas", "Blackboard", "Moodle", "Google Classroom", "Microsoft Teams"],
@@ -310,7 +310,7 @@ estimatedDelivery: "6-10 weeks", supportLevel: "enterprise";
 marketPrice: "$3; 200 - $8; 500/month",
 contactInfo: {,
 phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com"}, websiteUrl: "https://ziontechgroup.com/transportation-ai-logistics";
+website: "https://ziontechgroup.com"}, websiteUrl: "https://ziontechgroup.com/transportation-ai-logistics";origin/main
 industryStandards: ["ISO 28000", "C-TPAT", "HACCP", "DOT", "FMCSA"],
 complianceFrameworks: ["Transportation Security", "Safety Standards", "Environmental Compliance", "SOC2"],
 integrationPartners: ["SAP", "Oracle", "Manhattan Associates", "JDA Software", "Blue Yonder"],
@@ -360,7 +360,7 @@ estimatedDelivery: "8-12 weeks", supportLevel: "enterprise";
 marketPrice: "$4; 500 - $12; 000/month",
 contactInfo: {,
 phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com"}, websiteUrl: "https://ziontechgroup.com/energy-ai-grid-optimization";
+website: "https://ziontechgroup.com"}, websiteUrl: "https://ziontechgroup.com/energy-ai-grid-optimization";origin/main
 industryStandards: ["IEEE", "IEC", "NERC", "FERC", "ISO 50001"],
 complianceFrameworks: ["Grid Security", "Environmental Compliance", "Safety Standards", "SOC2"],
 integrationPartners: ["Siemens", "GE", "ABB", "Schneider Electric", "Honeywell"],
@@ -410,7 +410,7 @@ estimatedDelivery: "4-6 weeks", supportLevel: "premium";
 marketPrice: "$1; 600 - $4; 000/month",
 contactInfo: {,
 phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com"}, websiteUrl: "https://ziontechgroup.com/real-estate-ai-market-intelligence";
+website: "https://ziontechgroup.com"}, websiteUrl: "https://ziontechgroup.com/real-estate-ai-market-intelligence";origin/main
 industryStandards: ["RICS", "CREA", "NAR", "REIT", "MLS"],
 complianceFrameworks: ["Real Estate Regulations", "Data Privacy", "Financial Compliance", "SOC2"],
 integrationPartners: ["Zillow", "Redfin", "Realtor.com", "CoStar", "Real Capital Analytics"],
@@ -460,7 +460,7 @@ estimatedDelivery: "6-8 weeks", supportLevel: "premium";
 marketPrice: "$2; 400 - $6; 500/month",
 contactInfo: {,
 phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
-website: "https://ziontechgroup.com"}, websiteUrl: "https://ziontechgroup.com/agriculture-ai-precision-farming";
+website: "https://ziontechgroup.com"}, websiteUrl: "https://ziontechgroup.com/agriculture-ai-precision-farming";origin/main
 industryStandards: ["ISO 14001", "Global GAP", "Organic Certification", "Precision Agriculture", "Sustainable Farming"],
 complianceFrameworks: ["Environmental Compliance", "Food Safety", "Organic Standards", "SOC2"],
 integrationPartners: ["John Deere", "Case IH", "Precision Planting", "Climate FieldView", "FarmLogs"],

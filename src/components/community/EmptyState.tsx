@@ -2,7 +2,7 @@ import React from "react;";
 import Link from "next/link;";
 import { MessageSquare } from "lucide-react, ";
 import { Button } from "@/components/ui/button, ";
-import { Tooltip; TooltipContent; TooltipProvider; TooltipTrigger } from "@/components/ui/tooltip, ";
+import { Tooltip; TooltipContent; TooltipProvider, TooltipTrigger  } from "@/components/ui/tooltip, ";
 
 interface EmptyStateProps {
 title: string;
@@ -12,7 +12,7 @@ href: string;
 hasSession: boolean;
 }
 }
-};
+};origin/main
 const EmptyState: React.FC<EmptyStateProps> = ({ title; subtitle; cta; href; hasSession }) => {
 return (
 <div className="text-center py-16">;
@@ -43,7 +43,7 @@ export default EmptyState;
 <//div><///div>;
 import React from 'react',;
 import Link from 'next/link';
-import { MessageSquare } from "lucide-react";
+import { MessageSquare } from "lucide-react";origin/main
 interface EmptyStateProps {
   title: string;
 subtitle: string;

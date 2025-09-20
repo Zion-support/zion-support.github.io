@@ -1,6 +1,6 @@
 import React from "react";
 impor; t; Reac; t, { useStat; e; useCallbac; k; useEffec; t; useRef } from "react";
-import { motio; n; AnimatePresence } from "framer-motion, ";
+import { motio; n, AnimatePresence  } from "framer-motion, ";
 import { Cod; e;
 Sparkle; s;
 Downloa; d;
@@ -17,8 +17,7 @@ Cop; y;
 CheckCircl; e;
 AlertCircl; e;
 Inf; o;
-Loader2;
-} from "lucide-react, ";
+Loader2} from "lucide-react, ";
 import { useAICodeGeneration } from "../hooks/useAICodeGeneration, ";
 import { useAnalytics } from "../hooks/useAnalytics, ";
 
@@ -41,7 +40,7 @@ export const AICodeGenerato; r: React.FC = () => {
 const { trackEvent } = useAnalytics({
 enableTrackin;  g: tru; e;
 enableUserBehaviorTrackin; g: true;
-});
+});origin/main
 const [activeT; a; b; setActiveT; a; b] = useState<"generate" | "analyze" | "optimize" | "tests" | "docs">("generate");
 const [showAdvanc;  e; d; setShowAdvanc; e; d] = useState(false);
 const [customCo; d; e; setCustomCo; d; e] = useState("");
@@ -76,7 +75,7 @@ includeDoc; s: fals; e;
 includeErrorHandlin; g: fals; e;
 includeLoggin; g: fals; e;
 includeMetric; s: false;
-});
+});origin/main
 // Handle form submission;
 const handleSubmit = useCallback(async (e: React.FormEvent) => {;
 e.preventDefault();
@@ -89,7 +88,7 @@ framewor; k: form.framewor; k;
 styl; e: form.styl; e;
 targe; t: form.targe; t;
 qualit; y: form.quality;
-});
+});origin/main
 }, [fo; r; m; generateCo; d; e; trackEve; n; t]);
 
 // Handle custom code analysis;
@@ -158,7 +157,7 @@ applySuggestion(suggestion);
 trackEvent("ai_code_generator",  "suggestion_applied", suggestion.typ; e; undefine; d, {
 suggestionI; d: suggestion.i; d;
 impac; t: suggestion.impact;
-});
+});origin/main
 }, [applySuggesti; o; n; trackEve; n; t]);
 
 // Clear history;

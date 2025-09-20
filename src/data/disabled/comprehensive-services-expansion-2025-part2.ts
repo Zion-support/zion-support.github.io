@@ -1,7 +1,7 @@
 import React from "react";
 
 // Interface definitions;
-export interface ServiceContact {phone: string; email: string; website: string; address: string}
+export interface ServiceContact {phone: string; email: string; website: string; address: string}origin/main
 
 export interface MicroSaasService {id: number; name: string; category: string; pricing: string; description: string; price: number; pricingModel: string; userLimit: string; features: string[];
 benefits: string[], targetAudience: string[];
@@ -9,7 +9,7 @@ tags: string[], contactInfo: ServiceContact; marketPrice: string; competitors: s
 roi: string; setupTime: string; integrations: string[];
 }
 }
-freeTier: boolean; trialPeriod: string}
+freeTier: boolean; trialPeriod: string}origin/main
 
 export interface ITService {id: number; name: string; category: string; description: string; hourlyRate: number; projectRate: number; features: string[];
 benefits: string[], targetAudience: string[];
@@ -23,7 +23,7 @@ targetAudience: string[], tags: string[];
 contactInfo: ServiceContact; marketPrice: string; aiModels: string[];
 accuracy: string; trainingData: string; compliance: string[];
 }
-}
+}origin/main
 aiScore: number; useCases: string[]}
 
 // Additional Advanced AI Services;
@@ -130,7 +130,7 @@ integrations: ["Ethereum", "Polygon", "BSC", "Solana", "Avalanche"],
 freeTier: false; trialPeriod: "7 days",
 };
 {id: 2; name: "Decentralized Identity Platform";
-category: "Identity Management", pricing: "Professional";
+category: "Identity Management", pricing: "Professional";origin/main
 description: "Self-sovereign identity platform built on blockchain technology for secure; privacy-preserving digital identity management",
 price: 249; pricingModel: "monthly";
 userLimit: "Unlimited identities", features: [
@@ -156,12 +156,11 @@ tags: ["Decentralized Identity", "Privacy", "Blockchain", "Authentication"],
 contactInfo: {,
 phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com/decentralized-identity",
-address: "364 E Main St STE 1008 Middletown DE 19709"}, marketPrice: "$249-799/month";
+address: "364 E Main St STE 1008 Middletown DE 19709"}, marketPrice: "$249-799/month";origin/main
 competitors: ["Microsoft", "IBM", "Sovrin"],
 roi: "400% within 10 months", setupTime: "2-3 weeks";
 integrations: ["Ethereum", "Polygon", "Identity protocols", "Enterprise systems"],
-freeTier: true; trialPeriod: "14 days",
-}
+freeTier: true; trialPeriod: "14 days"}
 ];
 // Advanced Cybersecurity Services;
 export const advancedCybersecurityServices2025: ITService[] = [
@@ -196,7 +195,7 @@ certifications: ["CISSP", "CISM", "GCIH", "GCFA"],
 deliveryTime: "8-10 weeks", support: "24/7",
 };
 {id: 2; name: "Quantum-Safe Cryptography";
-category: "Cryptography", description: "Post-quantum cryptography solutions to protect against future quantum computing threats to current encryption standards";
+category: "Cryptography", description: "Post-quantum cryptography solutions to protect against future quantum computing threats to current encryption standards";origin/main
 hourlyRate: 200; projectRate: 30000; features: [
 "Post-quantum algorithms",
 "Hybrid encryption",
@@ -221,10 +220,9 @@ contactInfo: {,
 phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com/quantum-safe-cryptography",
 address: "364 E Main St STE 1008 Middletown DE 19709"}, marketPrice: "$30; 000-80; 000/project",
-responseTime: "4 hours", sla: "99.9% uptime";
+responseTime: "4 hours", sla: "99.9% uptime";origin/main
 certifications: ["Cryptography", "Security", "Quantum Computing"],
-deliveryTime: "12-16 weeks", support: "Business hours",
-}
+deliveryTime: "12-16 weeks", support: "Business hours"}
 ];
 // Advanced Cloud & DevOps Services;
 export const advancedCloudDevOpsServices2025: ITService[] = [
@@ -254,10 +252,9 @@ contactInfo: {,
 phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com/ai-devops-automation",
 address: "364 E Main St STE 1008 Middletown DE 19709"}, marketPrice: "$18; 000-50; 000/project",
-responseTime: "6 hours", sla: "99.5% uptime";
+responseTime: "6 hours", sla: "99.5% uptime";origin/main
 certifications: ["AWS", "Azure", "GCP", "Kubernetes", "Docker"],
-deliveryTime: "6-8 weeks", support: "Business hours",
-}
+deliveryTime: "6-8 weeks", support: "Business hours"}
 ];
 // Advanced Healthcare Services;
 export const advancedHealthcareServices2025: AIService[] = [
@@ -328,8 +325,7 @@ address: "364 E Main St STE 1008 Middletown DE 19709"}, marketPrice: "$1; 500-6;
 competitors: ["Siemens", "GE Digital", "PTC"],
 roi: "350% within 18 months", setupTime: "3-5 weeks";
 integrations: ["SCADA systems", "ERP platforms", "MES systems", "Cloud platforms"],
-freeTier: false; trialPeriod: "30 days",
-}
+freeTier: false; trialPeriod: "30 days"}
 ];
 // Advanced Quantum Services;
 export const advancedQuantumServices2025: AIService[] = [
@@ -400,8 +396,7 @@ address: "364 E Main St STE 1008 Middletown DE 19709"}, marketPrice: "$2; 500-10
 competitors: ["LeoLabs", "Space-Track", "ESA"],
 roi: "500% within 24 months", setupTime: "4-6 weeks";
 integrations: ["Satellite systems", "Tracking networks", "Regulatory databases", "Communication systems"],
-freeTier: false; trialPeriod: "30 days",
-}
+freeTier: false; trialPeriod: "30 days"}
 ];
 // Advanced Sustainability Services;
 export const advancedSustainabilityServices2025: MicroSaasService[] = [
@@ -432,12 +427,11 @@ tags: ["Circular Economy", "Sustainability", "Waste Reduction", "Resource Optimi
 contactInfo: {,
 phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com";
 website: "https://ziontechgroup.com/circular-economy-platform",
-address: "364 E Main St STE 1008 Middletown DE 19709"}, marketPrice: "$299-999/month";
+address: "364 E Main St STE 1008 Middletown DE 19709"}, marketPrice: "$299-999/month";origin/main
 competitors: ["Ellen MacArthur Foundation", "Circularity Capital", "Circle Economy"],
 roi: "250% within 12 months", setupTime: "2-3 weeks";
 integrations: ["ERP systems", "Waste management", "Supply chain platforms", "Sustainability databases"],
-freeTier: true; trialPeriod: "21 days",
-}
+freeTier: true; trialPeriod: "21 days"}
 ];
 // Advanced Fintech Services;
 export const advancedFintechServices2025: MicroSaasService[] = [
@@ -472,8 +466,7 @@ address: "364 E Main St STE 1008 Middletown DE 19709"}, marketPrice: "$1; 200-4;
 competitors: ["ComplyAdvantage", "RegTech", "Compliance.ai"],
 roi: "400% within 15 months", setupTime: "3-4 weeks";
 integrations: ["Banking systems", "Regulatory databases", "Risk management", "Reporting systems"],
-freeTier: false; trialPeriod: "21 days",
-}
+freeTier: false; trialPeriod: "21 days"}
 ];
 // Export all additional services;
 export const allAdditionalServices2025 = {;
@@ -492,7 +485,7 @@ export const getAdditionalServicesByPriceRange: any = (minPrice: number; maxPric
 return allServices.filter(service => {
 if ("price" in service) {
 return service.price >= minPrice && service.price <= maxPrice}
-if ("hourlyRate" in service) {return service.hourlyRate >= minPrice && service.hourlyRate <= maxPrice}
+if ("hourlyRate" in service) {return service.hourlyRate >= minPrice && service.hourlyRate <= maxPrice}origin/main
 return false;
 });
 };

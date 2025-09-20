@@ -12,12 +12,12 @@ import Link from "next/link";
 import { logErrorToProduction } from '@/utils/productionLogger';
 interface JobsListProps {return (<div className="grid gap-6 md:grid-cols-2">
 }
-      {jobs.map((job) => (<Card}
+      {jobs.map((job) => (<Card}origin/main
 key = {job.id}
           className={`overflow-hidden cursor-pointer transition-shadow hover:shadow-md ${
             onSelectJob ? "cursor-pointer" : ""
           }`}
-          onClick = {() => onSelectJob?.(job.id job.title)}
+          onClick = {() => onSelectJob?.(job.id job.title)}origin/main
         >
           <CardHeader className="p-4">
             <div className="flex justify-between items-start">
@@ -77,7 +77,7 @@ key = {job.id}
     </div>
   )
 };"
-return (<div className="grid gap-6 md:grid-cols-2" > {jobs.map ( (job) => (<Card key= {
+return (<div className="grid gap-6 md:grid-cols-2" > {jobs.map ( (job) => (<Card key= {origin/main
   job.id}className= {
   `overflow-hidden cursor-pointer transition-shadow hover:shadow-md $ {"
   onSelectJob ? "cursor-pointer" : ""
@@ -86,7 +86,7 @@ return (<div className="grid gap-6 md:grid-cols-2" > {jobs.map ( (job) => (<Card
   () => onSelectJob?. (job.id job.title)
 }job.description,
 }</p> + {job.skills.length - 3}more </Badge>) "
-}</div> <div className="mt-3 text-sm"> <span className="font-medium">Budget:</span> $ {job.budget.min}- $ {
+}</div> <div className="mt-3 text-sm"> <span className="font-medium">Budget:</span> $ {job.budget.min}- $ {origin/main
   job.budget.max "
 }</div> <div className="mt-1 text-sm"> </Link> </Button> <Button variant=" outline"size=" sm"> <X className="h-4 w-4" /> </Button> </div> </CardFooter> </Card>) )
 }</div>)

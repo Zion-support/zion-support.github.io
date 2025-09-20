@@ -6,7 +6,7 @@ export function LoadingSpinner({ size = 'md', className, text, variant = 'defaul
         md: 'w-8 h-8',
         lg: 'w-12 h-12',
         xl: 'w-16 h-16'};
-    const textSizeClasses = {sm: 'text-xs',
+    const textSizeClasses = {sm: 'text-xs',origin/main
         md: 'text-sm',
         lg: 'text-base',
         xl: 'text-lg'};
@@ -42,7 +42,7 @@ export function LoadingSpinner({ size = 'md', variant = 'default', className = '
         md: 'w-6 h-6',
         lg: 'w-8 h-8',
         xl: 'w-12 h-12'};
-    const variantClasses = {default: 'text-zion-cyan',
+    const variantClasses = {default: 'text-zion-cyan',origin/main
         primary: 'text-zion-blue',
         secondary: 'text-zion-purple',
         white: 'text-white'};

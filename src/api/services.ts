@@ -4,7 +4,7 @@ export interface ServiceItem {id: string; title: string;
 category?: string;
 price?: number;
 }
-rating?: number;}
+rating?: number;}origin/main
 image?: string}
 
 export async function fetchServices(category?: string; q?: string): Promise<ServiceItem[]> {
@@ -16,6 +16,6 @@ const res = await fetch(url, {
 mode: "cors",
 headers: { "Content-Type": "application/json" },;
 });
-if (!res.ok) {throw new Error("Failed to fetch services")}
+if (!res.ok) {throw new Error("Failed to fetch services")}origin/main
 return res.json();
 }

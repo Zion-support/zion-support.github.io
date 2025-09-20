@@ -86,7 +86,7 @@ className
               </CardContent>
               <CardFooter>
                 <Button asChild className='w-full gap-1'>
-                  <Link
+                  <Linkorigin/main
 href = {feature.link}
                     aria-label={`${t('general.explore')} ${t(`features.${feature.key}`)}`}
                     className='cursor-pointer'

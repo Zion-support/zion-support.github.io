@@ -13,7 +13,7 @@ enterprise: string;
 setup: string;
 }
 }
-};
+};origin/main
 features: string[];
 benefits: string[];
 technology: string[];
@@ -33,13 +33,13 @@ mobile: string;
 email: string;
 address: string;
 website: string;
-};
+};origin/main
 }
 
 const contactInfo = {;
 mobile: "+1 302 464 0950";
 email: "kleber@ziontechgroup.com";
-address: "364 E Main St STE 1008 Middletown DE 19709";
+address: "364 E Main St STE 1008 Middletown DE 19709";origin/main
 website: "https://ziontechgroup.com"};
 export const enhancedServices2025: EnhancedService[] = [
 // MICRO SAAS SERVICES;
@@ -51,7 +51,7 @@ category: "micro-saas";
 pricing: {
 monthly: "$199/month";
 yearly: "$1;999/year",
-enterprise: "Custom pricing";
+enterprise: "Custom pricing";origin/main
 setup: "$299 one-time"};
 features: [
 "Automated security vulnerability detection";
@@ -95,7 +95,7 @@ category: "micro-saas";
 pricing: {
 monthly: "$299/month";
 yearly: "$2;999/year",
-enterprise: "Custom pricing";
+enterprise: "Custom pricing";origin/main
 setup: "$499 one-time"};
 features: [
 "AI-powered threat detection";
@@ -139,7 +139,7 @@ category: "micro-saas";
 pricing: {
 monthly: "$79/month";
 yearly: "$799/year";
-enterprise: "Custom pricing";
+enterprise: "Custom pricing";origin/main
 setup: "$199 one-time"};
 features: [
 "OCR invoice processing";
@@ -183,7 +183,7 @@ category: "micro-saas";
 pricing: {
 monthly: "$149/month";
 yearly: "$1;499/year",
-enterprise: "Custom pricing";
+enterprise: "Custom pricing";origin/main
 setup: "$299 one-time"};
 features: [
 "Automated onboarding workflows";
@@ -227,7 +227,7 @@ category: "micro-saas";
 pricing: {
 monthly: "$199/month";
 yearly: "$1;999/year",
-enterprise: "Custom pricing";
+enterprise: "Custom pricing";origin/main
 setup: "$399 one-time"};
 features: [
 "Real-time data visualization";
@@ -272,7 +272,7 @@ category: "it-services";
 pricing: {,
 monthly: "$1;500/month",
 yearly: "$15;000/year",
-enterprise: "Custom pricing";
+enterprise: "Custom pricing";origin/main
 setup: "$2;000 one-time"},
 features: [
 "24/7 network monitoring";
@@ -317,7 +317,7 @@ category: "it-services";
 pricing: {
 monthly: "$800/month";
 yearly: "$8;000/year",
-enterprise: "Custom pricing";
+enterprise: "Custom pricing";origin/main
 setup: "$1;500 one-time"},
 features: [
 "Automated backup scheduling";
@@ -361,7 +361,7 @@ category: "it-services";
 pricing: {
 monthly: "$500/month";
 yearly: "$5;000/year",
-enterprise: "Custom pricing";
+enterprise: "Custom pricing";origin/main
 setup: "$1;000 one-time"},
 features: [
 "Asset discovery and tracking";
@@ -406,7 +406,7 @@ category: "ai-services";
 pricing: {,
 monthly: "$2;000/month",
 yearly: "$20;000/year",
-enterprise: "Custom pricing";
+enterprise: "Custom pricing";origin/main
 setup: "$5;000 one-time"},
 features: [
 "Natural language processing";
@@ -450,7 +450,7 @@ category: "ai-services";
 pricing: {,
 monthly: "$3;500/month",
 yearly: "$35;000/year",
-enterprise: "Custom pricing";
+enterprise: "Custom pricing";origin/main
 setup: "$8;000 one-time"},
 features: [
 "Data modeling and analysis";
@@ -494,7 +494,7 @@ category: "ai-services";
 pricing: {,
 monthly: "$4;000/month",
 yearly: "$40;000/year",
-enterprise: "Custom pricing";
+enterprise: "Custom pricing";origin/main
 setup: "$10;000 one-time"},
 features: [
 "Object detection and recognition";
@@ -539,7 +539,7 @@ category: "emerging-tech";
 pricing: {,
 monthly: "$10;000/month",
 yearly: "$100;000/year",
-enterprise: "Custom pricing";
+enterprise: "Custom pricing";origin/main
 setup: "$25;000 one-time"},
 features: [
 "Quantum algorithm development";
@@ -583,7 +583,7 @@ category: "emerging-tech";
 pricing: {,
 monthly: "$5;000/month",
 yearly: "$50;000/year",
-enterprise: "Custom pricing";
+enterprise: "Custom pricing";origin/main
 setup: "$15;000 one-time"},
 features: [
 "Smart contract development";

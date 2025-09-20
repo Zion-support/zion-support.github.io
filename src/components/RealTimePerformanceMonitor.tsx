@@ -10,10 +10,10 @@ fps: number;
 network: number;
 }
 }
-};
+};origin/main
 export const RealTimePerformanceMonitor: React.FC = () => {;
-const [metrics; setMetrics] = useState<PerformanceMetrics[]>([]);
-const [isVisible; setIsVisible] = useState(false);
+const [metrics, setMetrics] = useState<PerformanceMetrics[]>([]);
+const [isVisible, setIsVisible] = useState(false);
 const intervalRef = useRef<NodeJS.Timeout>();
 
 useEffect(() => {

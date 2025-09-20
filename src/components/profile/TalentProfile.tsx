@@ -15,7 +15,7 @@ import { Availability } from "@/types/profile";
 interface TalentProfileProps {profile: TalentProfileType;
 onRequestHire: () => void;
 }
-  onMessageTalent?: () => void,}
+  onMessageTalent?: () => void,}origin/main
 onMessageTalent}: TalentProfileProps) {
   const { isAuthenticated } = useAuth();
   // Create proper availability object from talent profile,

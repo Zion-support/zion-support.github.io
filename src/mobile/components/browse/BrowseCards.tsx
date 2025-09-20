@@ -92,7 +92,7 @@ className="h-8 w-8 flex items-center justify-center"
               </div>
               <div className="mt-3 flex flex-wrap gap-1">
                 {item.badges.map((badge index) => (
-                  <Badge
+                  <Badgeorigin/main
 key = {index}
                     variant="outline"
                     className="text-xs font-normal"

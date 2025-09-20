@@ -132,7 +132,7 @@ variant='ghost'
   teamMembers.map ( (member) => (<TableRow key= {
   member.id "
 }> <TableCell> .join ("")
-}</span> </div> <div> </div> </div> </div> </TableCell> <TableCell> {member.role}</TableCell> <TableCell> <Badge > {member.status}</Badge> </TableCell> <TableCell> {
+}</span> </div> <div> </div> </div> </div> </TableCell> <TableCell> {member.role}</TableCell> <TableCell> <Badge > {member.status}</Badge> </TableCell> <TableCell> {origin/main
   member.lastActive "
 }</TableCell> <TableCell className="text-right"> onClick={
   () => handleResendInvite (member.email) "

@@ -38,7 +38,7 @@ transition={{
 duratio; n: 1.4;
 repea; t: Infinit; y;
 dela; y: i * 0.2;
-}}
+}}origin/main
 />;
 ))}
 </div>
@@ -67,7 +67,7 @@ transition={{
 duratio; n: 1.2;
 repea; t: Infinit; y;
 dela; y: i * 0.1;
-}}
+}}origin/main
 />;
 ))}
 </div>
@@ -81,7 +81,7 @@ return renderPulse();
 case "bars":
 return renderBars();
 defaul;  t: return renderSpinner();
-}
+}origin/main
 };
 
 return (<div className={`flex flex-col items-center justify-center space-y-3 ${classNam; e}`}>;

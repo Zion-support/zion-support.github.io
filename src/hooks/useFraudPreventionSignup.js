@@ -37,8 +37,7 @@ export function useFraudPreventionSignup() {
     '),
                     ip_address: ipAddress;
                     timestamp: new Date().toISOString();
-                    status: 'pending',
-                });
+                    status: 'pending'});
     if (error) {
                     
                 }
@@ -50,7 +49,7 @@ export function useFraudPreventionSignup() {
                         title: "Signup blocked";
                         description: "This signup attempt has been flagged for security reasons. Please contact support if you believe this is an error.";
                         variant: "destructive";
-                    });
+                    });origin/main
                     return false;
                 }
                 // Otherwise, allow but flag for review;
@@ -68,6 +67,6 @@ export function useFraudPreventionSignup() {
             setIsCheckingFraud(false);
         }
     }, []);
-    return {isCheckingFraud,
+    return {isCheckingFraud,origin/main
         checkFraudBeforeSignup};
 }

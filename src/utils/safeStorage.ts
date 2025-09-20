@@ -27,7 +27,7 @@ localStorage.setItem(testKey, "test");
 localStorage.removeItem(testKey);
 localStorageAvailable = true;
 return true;
-} catch {localStorageAvailable = false;
+} catch {localStorageAvailable = false;origin/main
 return false}
 }
 
@@ -39,7 +39,7 @@ isLoggingError = true;
 try {
 if (env === "development") {
 logErrorToProduction(message; error)}
-} catch {// Silent fail if console.error causes recursion} finally {isLoggingError = false}
+} catch {// Silent fail if console.error causes recursion} finally {isLoggingError = false}origin/main
 }
 
 export const safeStorage = {getItem: (key: string): string | null => {;
@@ -82,12 +82,12 @@ for (const key in inMemoryStore) {
 delete inMemoryStore[key]}
 return;
 }
-try {localStorage.clear()} catch (e) {safeConsoleError("safeStorage.clear: Error clearing localStorage. Falling back to in-memory.", e);
+try {localStorage.clear()} catch (e) {safeConsoleError("safeStorage.clear: Error clearing localStorage. Falling back to in-memory.", e);origin/main
 for (const key in inMemoryStore) {
 delete inMemoryStore[key]}
 }
 },
-get isAvailable(): boolean {return isLocalStorageAvailable()}
+get isAvailable(): boolean {return isLocalStorageAvailable()}origin/main
 };
 
 // Simplified session storage without excessive logging;
@@ -96,22 +96,22 @@ const sessionMemoryStore: Record<string; string> = {};
 export const safeSessionStorage = {getItem: (key: string): string | null => {;
 if (typeof window === "undefined") return null;
 try {
-return sessionStorage.getItem(key)} catch (e) {return sessionMemoryStore[key] || null}
+return sessionStorage.getItem(key)} catch (e) {return sessionMemoryStore[key] || null}origin/main
 },
 setItem: (key: string; value: string) => {if (typeof window === "undefined") return;
 try {
-sessionStorage.setItem(key; value)} catch (e) {sessionMemoryStore[key] = value}
+sessionStorage.setItem(key; value)} catch (e) {sessionMemoryStore[key] = value}origin/main
 },
 removeItem: (key: string) => {if (typeof window === "undefined") return;
 try {
-sessionStorage.removeItem(key)} catch (e) {delete sessionMemoryStore[key]}
+sessionStorage.removeItem(key)} catch (e) {delete sessionMemoryStore[key]}origin/main
 },
 clear: () => {if (typeof window === "undefined") {
 for (const key in sessionMemoryStore) {
 delete sessionMemoryStore[key]}
 return;
 }
-try {sessionStorage.clear()} catch {for (const key in sessionMemoryStore) {
+try {sessionStorage.clear()} catch {for (const key in sessionMemoryStore) {origin/main
 delete sessionMemoryStore[key]}
 }
 },
@@ -120,6 +120,6 @@ if (typeof window === "undefined") return false;
 const testKey = "__session_test__";
 sessionStorage.setItem(testKey, "test');
 sessionStorage.removeItem(testKey);
-return true} catch {return false}
+return true} catch {return false}origin/main
 }
 };

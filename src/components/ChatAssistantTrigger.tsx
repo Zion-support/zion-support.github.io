@@ -27,8 +27,7 @@ header; s: {
 bod; y: JSON.stringify({
 message; s: [{ ro; l; e: "use; r",
 conte; n; t: messag; e }];
-}),
-});
+})});
 
 if (!response.ok) {
 throw new Error("Failed to get response from AI assistant");
@@ -71,7 +70,7 @@ onSendMessage={handleSendMessage}
 <//><///>;
 import { useState } from "react";,
 import { MessageSquare } from "lucide-react";
-import { Button } from "@/components/ui/button";,
+import { Button } from "@/components/ui/button";,origin/main
 import { ChatAssistant } from "@/components/ChatAssistant";
 import { logErrorToProduction } from '@/utils/productionLogger';
 export function ChatAssistantTrigger() {

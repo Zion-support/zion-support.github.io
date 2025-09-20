@@ -7,7 +7,7 @@ export interface ForumReply {id: string; content: string; authorId: string; auth
 }
 parentId?: string}
 
-export interface ForumCategoryInfo {id: string; name: string; description: string; icon: string; postCount: number;
+export interface ForumCategoryInfo {id: string; name: string; description: string; icon: string; postCount: number;origin/main
 }
 lastPost?: {,}
 title: string; author: string; date: string};
@@ -31,10 +31,10 @@ postCount: 67; lastPost: {
 title: "Market analysis for Q1";
 author: "BusinessUser", date: "2024-01-13T09:15:00Z"},
 },
-{id: "announcements", name: "Announcements";
+{id: "announcements", name: "Announcements";origin/main
 description: "Official announcements and updates", icon: "Megaphone";
 postCount: 23; lastPost: {
 title: "New features released";
 author: "Admin",
 date: "2024-01-12T14:00:00Z"},
-}];
+}];origin/main

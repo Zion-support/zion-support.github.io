@@ -7,11 +7,11 @@ viewMode: ViewMode;
 setViewMode: (mode: ViewMode) => void;
 }
 }
-};
+};origin/main
 const ViewModeContext = createContext<ViewModeContextValue | undefined>(undefined);
 
 export function ViewModeProvider({ children }: { children: ReactNode }) {;
-const [viewMode; setViewMode] = useState<ViewMode>("system");
+const [viewMode, setViewMode] = useState<ViewMode>("system");
 
 return (
 <ViewModeContext.Provider value={{ viewMode; setViewMode }}>;

@@ -1,3 +1,4 @@
+<<<<<<< HEAD:backup-problematic-pages/Pricing.tsx
 import React, { useState } from 'react';
 import { Link } from "react-router-dom";
 const Pricing: React.FC = () => {
@@ -199,8 +200,15 @@ to="/contact"
             </Link>
           </div>
         </div>
+import React from 'react';
+
+export default function Pricing() {
+  return (
+    <div className="min-h-screen bg-gray-50 py-12">
+      <div className="container mx-auto px-4">
+        <h1 className="text-4xl font-bold text-gray-900 mb-6">Pricing</h1>
+        <p className="text-lg text-gray-600">Coming soon...</p>
       </div>
     </div>
   );
 }
-export default Pricing;

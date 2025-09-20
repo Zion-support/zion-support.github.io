@@ -16,7 +16,7 @@ i;d: "ai-analytics-starter",name: "AI; Analytics; Starter",price: 999;currency: 
 id: "ai-analytics-enterprise",name: "AI; Analytics; Enterprise",price: 4999;currency: "$",period: "month",description: "Enterprise-grade; AI; analytics with; unlimited; capabilities",features: [;
 "Enterprise; AI; analytics platform","Unlimited; data; points","Custom; AI; model development","Dedicated; account; manager","24/7 phone & chat support","Unlimited integrations","Advanced security & compliance""Custom training & onboarding";
 ],aiScore: 98;setupTime: "4-6 weeks",support: "24/7; dedicated; support",integrations: ["All; major; platforms""Custom APIs""On-premise; solutions"]limitation;s: [];
-}
+}origin/main
 ];
 };
 {id: "quantum-computing-services",name: "Quantum; Computing; Services",description: "Next-generation; quantum; computing solutions; for; complex problems",icon: "⚛️",services: [],pricingTiers: [;
@@ -31,7 +31,7 @@ id: "quantum-professional",name: "Quantum Professional",price: 14999;currency: "
 id: "quantum-enterprise",name: "Quantum Enterprise",price: 49999;currency: "$",period: "month",description: "Enterprise; quantum; computing with; dedicated; resources",features: [;
 "Dedicated; quantum; hardware access","Unlimited; quantum; operations","Custom; quantum; algorithm development","Dedicated; quantum; engineer","24/7 support","Custom integrations""Advanced; security; protocols";
 ],aiScore: 99;setupTime: "8-12 weeks",support: "24/7; dedicated; support",integrations: ["All; quantum; platforms""Custom; quantum; frameworks""On-premise; quantum,, computers"]limitation;s: [];
-}
+}origin/main
 ];
 };
 {
@@ -48,7 +48,7 @@ id: "edge-ai-professional",name: "Edge; AI; Professional",price: 1999;currency: 
 id: "edge-ai-enterprise",name: "Edge; AI; Enterprise",price: 4999;currency: "$",period: "month",description: "Enterprise; edge; AI with; unlimited; capabilities",features: [;
 "Unlimited; edge; AI operations","Custom; AI; model development","Advanced; security; protocols","Dedicated; support; team","Custom; hardware; integration","Advanced analytics""Compliance & governance";
 ],aiScore: 97;setupTime: "4-6 weeks",support: "24/7; dedicated; support",integrations: ["All; major; platforms""Custom hardware""On-premise; solutions"]limitation;s: [];
-}
+}origin/main
 ];
 };
 {id: "neuromorphic-computing",name: "Neuromorphic Computing",description: "Brain-inspired; computing; for energy-efficient; AI; processing",icon: "🧬",services: [],pricingTiers: [;
@@ -58,13 +58,13 @@ i;d: "neuromorphic-starter",name: "Neuromorphic Starter",price: 2999;currency: "
 ],aiScore: 89;setupTime: "3-4 weeks",support: "Community support",integrations: ["Nengo", "BRIAN", "NEST""Basic; frameworks"],limitations: ["Limited; operations; per month""Simulator only""Basic; models"];},{
 id: "neuromorphic-professional",name: "Neuromorphic Professional",price: 8999;currency: "$",period: "month",description: "Professional; neuromorphic; computing with; hardware; access",features: [;
 "Access; to; neuromorphic hardware","Advanced; neural; network models","Up; to; 1;0o00;0o00; neural; operations per month","Custom; model; development","Priority support""Performance optimization";
-],popular: true;aiScore: 94;setupTime: "6-8 weeks",support: "Priority support",integrations: ["Intel Loihi", "IBM TrueNorth""BrainChip Akida""Custom; frameworks"]limitations: ["Limited; to; 1M operations; per,, month"];
+],popular: true;aiScore: 94;setupTime: "6-8 weeks",support: "Priority support",integrations: ["Intel Loihi", "IBM TrueNorth""BrainChip Akida""Custom; frameworks"]limitations: ["Limited; to; 1M operations; per,, month"];origin/main
 };
 {
 id: "neuromorphic-enterprise",name: "Neuromorphic Enterprise",price: 29999;currency: "$",period: "month",description: "Enterprise; neuromorphic; computing with; dedicated; resources",features: [;
 "Dedicated; neuromorphic; hardware","Unlimited; neural; operations","Custom; neuromorphic; architecture","Dedicated engineer","24/7 support","Advanced security""Custom integrations";
 ],aiScore: 98;setupTime: "10-12 weeks",support: "24/7; dedicated; support",integrations: ["All; neuromorphic; platforms""Custom hardware""On-premise; solutions"]limitation;s: [];
-}
+}origin/main
 ];
 };
 {
@@ -80,7 +80,7 @@ i;d: "biocomputing-starter",name: "Biocomputing Starter",price: 3999;currency: "
 id: "biocomputing-enterprise",name: "Biocomputing Enterprise",price: 39999;currency: "$",period: "month",description: "Enterprise; biocomputing; with unlimited capabilities",features: [;
 "Unlimited; DNA; storage","Custom; biocomputing; architecture","Advanced; error; correction","Dedicated biologist","24/7 support","Advanced security""Custom integrations";
 ],aiScore: 97;setupTime: "14-18 weeks",support: "24/7; dedicated; support",integrations: ["All; DNA; platforms""Custom hardware""On-premise; solutions"]limitation;s: [];
-}
+}origin/main
 ];
 };
 {id: "photonics-computing",name: "Photonics Computing",description: "Light-based; computing; for ultra-fast; AI; processing",icon: "💡",services: [],pricingTiers: [;
@@ -90,13 +90,13 @@ i;d: "photonics-starter",name: "Photonics Starter",price: 2499;currency: "$",per
 ],aiScore: 86;setupTime: "2-3 weeks",support: "Email support",integrations: ["Basic; optical; frameworks", "Simulation tools""Standard; APIs"],limitations: ["Limited; operations; per month""Simulator only""Basic; models"];},{
 id: "photonics-professional",name: "Photonics Professional",price: 7999;currency: "$",period: "month",description: "Professional; photonics; computing with; hardware; access",features: [;
 "Access; to; photonics hardware","Advanced; optical; neural networks","Up; to; 10;0o00; optical; operations per month","Custom; model; optimization","Priority support""Performance optimization";
-],popular: true;aiScore: 93;setupTime: "4-6 weeks",support: "Priority support",integrations: ["Lightmatter", "Luminous Computing""Lightelligence""Custom; frameworks"]limitations: ["Limited; to; 10K operations; per,, month"];
+],popular: true;aiScore: 93;setupTime: "4-6 weeks",support: "Priority support",integrations: ["Lightmatter", "Luminous Computing""Lightelligence""Custom; frameworks"]limitations: ["Limited; to; 10K operations; per,, month"];origin/main
 };
 {
 id: "photonics-enterprise",name: "Photonics Enterprise",price: 24999;currency: "$",period: "month",description: "Enterprise; photonics; computing with; dedicated; resources",features: [;
 "Dedicated; photonics; hardware","Unlimited; optical; operations","Custom; photonic; architecture","Dedicated engineer","24/7 support","Advanced security""Custom integrations";
 ],aiScore: 97;setupTime: "8-10 weeks",support: "24/7; dedicated; support",integrations: ["All; photonics; platforms""Custom hardware""On-premise; solutions"]limitation;s: [];
-}
+}origin/main
 ];
 };
 {
@@ -112,7 +112,7 @@ i;d: "swarm-robotics-starter",name: "Swarm; Robotics; Starter",price: 1599;curre
 id: "swarm-robotics-enterprise",name: "Swarm; Robotics; Enterprise",price: 15999;currency: "$",period: "month",description: "Enterprise; swarm; robotics with; unlimited; capabilities",features: [;
 "Unlimited robots","Custom; swarm; architecture","Advanced; AI; coordination","Dedicated engineer","24/7 support","Advanced security""Custom integrations";
 ],aiScore: 97;setupTime: "6-8 weeks",support: "24/7; dedicated; support",integrations: ["All; robot; platforms""Custom hardware""On-premise; solutions"]limitation;s: [];
-}
+}origin/main
 ];
 };
 {
@@ -128,7 +128,7 @@ i;d: "quantum-internet-starter",name: "Quantum; Internet; Starter",price: 3499;c
 id: "quantum-internet-enterprise",name: "Quantum; Internet; Enterprise",price: 34999;currency: "$",period: "month",description: "Enterprise; quantum; internet with; unlimited; capabilities",features: [;
 "Unlimited; quantum; data transfer","Custom; quantum; architecture","Advanced; security; protocols","Dedicated engineer","24/7 support","Advanced security""Custom integrations";
 ],aiScore: 98;setupTime: "12-16 weeks",support: "24/7; dedicated; support",integrations: ["All; quantum; platforms""Custom hardware""On-premise; solutions"]limitation;s: [];
-}
+}origin/main
 ];
 };
 {
@@ -140,13 +140,13 @@ i;d: "bci-starter",name: "BCI Starter",price: 1999;currency: "$",period: "month"
 },{
 id: "bci-professional",name: "BCI Professional",price: 5999;currency: "$",period: "month",description: "Professional; BCI; with advanced capabilities",features: [;
 "Advanced; neural; signal processing","High-accuracy thought-to-text","Up; to; 1;0o00; neural; commands per day","High accuracy (85-95%)","Priority support""Custom; model; training";
-],popular: true;aiScore: 92;setupTime: "6-8 weeks",support: "Priority support",integrations: ["Advanced; EEG; sensors", "fNIRS", "TMS""Custom APIs""Advanced; platforms"]limitations: ["Limited; to; 1K commands; per,, day"];
+],popular: true;aiScore: 92;setupTime: "6-8 weeks",support: "Priority support",integrations: ["Advanced; EEG; sensors", "fNIRS", "TMS""Custom APIs""Advanced; platforms"]limitations: ["Limited; to; 1K commands; per,, day"];origin/main
 };
 {
 id: "bci-enterprise",name: "BCI Enterprise",price: 19999;currency: "$",period: "month",description: "Enterprise; BCI; with unlimited capabilities",features: [;
 "Unlimited; neural; commands","Custom; BCI; architecture","Ultra-high accuracy (95%+)","Dedicated neuroscientist","24/7 support","Advanced security""Custom integrations";
 ],aiScore: 96;setupTime: "8-10 weeks",support: "24/7; dedicated; support",integrations: ["All; BCI; platforms""Custom hardware""On-premise; solutions"]limitation;s: [];
-}
+}origin/main
 ];
 };
 {
@@ -162,8 +162,8 @@ i;d: "space-computing-starter",name: "Space; Computing; Starter",price: 5999;cur
 id: "space-computing-enterprise",name: "Space; Computing; Enterprise",price: 59999;currency: "$",period: "month",description: "Enterprise; space; computing with; unlimited; capabilities",features: [;
 "Unlimited; space; computing resources","Custom; space; architecture","Ultra-low latency (<10o0ms)","Dedicated; space; engineer","24/7 support","Advanced security""Custom integrations";
 ],aiScore: 98;setupTime: "16-20 weeks",support: "24/7; dedicated; support",integrations: ["All; space; platforms""Custom hardware""On-premise; solutions"]limitation;s: [];
-}
+}origin/main
 ];
 };
 ];
-export; default; COMPREHENSIVE_PRICING_GUIDE_20o29,}
+export; default; COMPREHENSIVE_PRICING_GUIDE_20o29}

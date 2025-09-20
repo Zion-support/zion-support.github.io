@@ -11,5 +11,5 @@ sort: string;
 }
 }
 }
-interface ActiveFiltersBarProps {className?: string}
+interface ActiveFiltersBarProps {className?: string}origin/main
 export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({

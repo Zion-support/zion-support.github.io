@@ -12,7 +12,7 @@ if (!context) {
 }
 throw; new; Error("useNotifications; must; be used; within; a NotificationProvider");}
 };
-return context,},interface NotificationProviderProps {;
+return context},interface NotificationProviderProps {;
 children: ReactNode;
 }
 }

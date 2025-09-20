@@ -13,7 +13,7 @@ oneTime?: number;,
 currency: string;
 }
 }
-};
+};origin/main
 features: string[];
 benefits: string[];
 targetAudience: string[];
@@ -25,7 +25,7 @@ contactInfo: {
 email: string;
 phone: string;
 address: string;
-};
+};origin/main
 rating: number;
 reviewCount: number;
 launchDate: string;
@@ -38,7 +38,7 @@ technology: string[];
 apiEndpoints: number;
 uptime: string;
 security: string[];
-};
+};origin/main
 }
 
 export const NEXT_GEN_MICRO_SAAS_SERVICES_2025: NextGenMicroSaasService2025[] = [
@@ -50,7 +50,7 @@ category: "AI";
 subcategory: "Content Creation & Marketing";
 price: {
 monthly: 99;
-yearly: 990;
+yearly: 990;origin/main
 currency: "$"};
 features: [
 "Multi-format content generation (blogs; social media; emails; ads)",
@@ -83,7 +83,7 @@ integration: ["WordPress", "Shopify", "HubSpot", "Mailchimp", "Hootsuite", "REST
 pricingTier: "Professional";
 website: "https://ziontechgroup.com/ai-content-creation-suite";
 contactInfo: {email: "kleber@ziontechgroup.com";
-phone: "+1 302 464 0950";
+phone: "+1 302 464 0950";origin/main
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 rating: 4.9;
 reviewCount: 234;
@@ -108,7 +108,7 @@ category: "Blockchain";
 subcategory: "Supply Chain & Logistics";
 price: {
 monthly: 199;
-yearly: 1990;
+yearly: 1990;origin/main
 currency: "$"};
 features: [
 "End-to-end supply chain tracking with blockchain verification";
@@ -141,7 +141,7 @@ integration: ["SAP", "Oracle", "Microsoft Dynamics", "Salesforce", "Custom ERP s
 pricingTier: "Enterprise";
 website: "https://ziontechgroup.com/blockchain-supply-chain";
 contactInfo: {email: "kleber@ziontechgroup.com";
-phone: "+1 302 464 0950";
+phone: "+1 302 464 0950";origin/main
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 rating: 4.8;
 reviewCount: 156;
@@ -166,7 +166,7 @@ category: "Cybersecurity";
 subcategory: "Threat Detection & Response";
 price: {
 monthly: 299;
-yearly: 2990;
+yearly: 2990;origin/main
 currency: "$"};
 features: [
 "Real-time threat detection using AI algorithms";
@@ -199,7 +199,7 @@ integration: ["SIEM systems", "EDR solutions", "Cloud platforms", "Identity prov
 pricingTier: "Enterprise";
 website: "https://ziontechgroup.com/ai-cybersecurity";
 contactInfo: {email: "kleber@ziontechgroup.com";
-phone: "+1 302 464 0950";
+phone: "+1 302 464 0950";origin/main
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 rating: 4.9;
 reviewCount: 189;
@@ -224,7 +224,7 @@ category: "IoT";
 subcategory: "Edge Computing & Analytics";
 price: {
 monthly: 149;
-yearly: 1490;
+yearly: 1490;origin/main
 currency: "$"};
 features: [
 "Local AI processing capabilities for IoT devices";
@@ -257,7 +257,7 @@ integration: ["Industrial IoT protocols", "Cloud platforms", "ERP systems", "SCA
 pricingTier: "Professional";
 website: "https://ziontechgroup.com/iot-edge-computing";
 contactInfo: {email: "kleber@ziontechgroup.com";
-phone: "+1 302 464 0950";
+phone: "+1 302 464 0950";origin/main
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 rating: 4.7;
 reviewCount: 98;
@@ -282,7 +282,7 @@ category: "Healthcare";
 subcategory: "Analytics & Predictive Medicine";
 price: {
 monthly: 399;
-yearly: 3990;
+yearly: 3990;origin/main
 currency: "$"};
 features: [
 "Patient outcome prediction using AI algorithms";
@@ -315,7 +315,7 @@ integration: ["Electronic Health Records", "Medical devices", "Laboratory system
 pricingTier: "Enterprise";
 website: "https://ziontechgroup.com/ai-healthcare-analytics";
 contactInfo: {email: "kleber@ziontechgroup.com";
-phone: "+1 302 464 0950";
+phone: "+1 302 464 0950";origin/main
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 rating: 4.8;
 reviewCount: 167;
@@ -340,7 +340,7 @@ category: "Quantum";
 subcategory: "Communication Security";
 price: {
 monthly: 599;
-yearly: 5990;
+yearly: 5990;origin/main
 currency: "$"};
 features: [
 "Quantum key distribution for unbreakable encryption";
@@ -373,7 +373,7 @@ integration: ["Enterprise communication systems", "Cloud platforms", "Mobile app
 pricingTier: "Enterprise";
 website: "https://ziontechgroup.com/quantum-secure-communication";
 contactInfo: {email: "kleber@ziontechgroup.com";
-phone: "+1 302 464 0950";
+phone: "+1 302 464 0950";origin/main
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 rating: 4.9;
 reviewCount: 89;
@@ -398,7 +398,7 @@ category: "Finance";
 subcategory: "Trading & Investment";
 price: {
 monthly: 799;
-yearly: 7990;
+yearly: 7990;origin/main
 currency: "$"};
 features: [
 "AI-powered market analysis and prediction";
@@ -431,7 +431,7 @@ integration: ["Major exchanges", "Brokerage platforms", "Data providers", "Risk 
 pricingTier: "Enterprise";
 website: "https://ziontechgroup.com/ai-financial-trading";
 contactInfo: {email: "kleber@ziontechgroup.com";
-phone: "+1 302 464 0950";
+phone: "+1 302 464 0950";origin/main
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 rating: 4.8;
 reviewCount: 145;
@@ -456,7 +456,7 @@ category: "Sustainability";
 subcategory: "Energy Management";
 price: {
 monthly: 199;
-yearly: 1990;
+yearly: 1990;origin/main
 currency: "$"};
 features: [
 "Real-time energy consumption monitoring";
@@ -489,7 +489,7 @@ integration: ["Building Management Systems", "IoT sensors", "Renewable energy sy
 pricingTier: "Professional";
 website: "https://ziontechgroup.com/sustainable-energy";
 contactInfo: {email: "kleber@ziontechgroup.com";
-phone: "+1 302 464 0950";
+phone: "+1 302 464 0950";origin/main
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 rating: 4.7;
 reviewCount: 112;
@@ -514,7 +514,7 @@ category: "Education";
 subcategory: "Personalized Learning";
 price: {
 monthly: 79;
-yearly: 790;
+yearly: 790;origin/main
 currency: "$"};
 features: [
 "AI-powered personalized learning paths";
@@ -547,7 +547,7 @@ integration: ["Learning Management Systems", "Student Information Systems", "Ass
 pricingTier: "Professional";
 website: "https://ziontechgroup.com/ai-education";
 contactInfo: {email: "kleber@ziontechgroup.com";
-phone: "+1 302 464 0950";
+phone: "+1 302 464 0950";origin/main
 address: "364 E Main St STE 1008 Middletown DE 19709"};
 rating: 4.8;
 reviewCount: 203;

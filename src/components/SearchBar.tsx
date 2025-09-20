@@ -7,7 +7,7 @@ import { fireEvent } from "@/lib/analytics";
 import { SearchSuggestion } from "@/types/search";
 import { slugify } from "@/lib/slugify";
 import { useDebounce } from "@/hooks/useDebounce";
-import { useOnClickOutside } from "@/hooks/useOnClickOutside";
+import { useOnClickOutside } from "@/hooks/useOnClickOutside";origin/main
 /**
  * SearchBar component props
  */
@@ -27,8 +27,7 @@ interface SearchBarProps {
   /**
    * The placeholder text for the search input
    */
-  placeholder?: string,
-}
+  placeholder?: string}
 /**
  * SearchBar component that allows users to search for content.
  */
@@ -49,7 +48,7 @@ className='absolute right-3 top-1/2 -translate-y-1/2 text-zion-slate hover:text-
           </button>
         )}
       </div>
-      <AutocompleteSuggestions
+      <AutocompleteSuggestionsorigin/main
 suggestions = {suggestions}
         searchTerm = {value}
         onSelectSuggestion = {handleSelect}
@@ -62,6 +61,6 @@ suggestions = {suggestions}
 }/> onClick={'
   () => onChange ('') "
 }aria-label="Clear search" > <X className="h-4 w-4" /> </button>)
-}</div> <AutocompleteSuggestions suggestions= {suggestions}searchTerm= {value}onSelectSuggestion= {handleSelect}visible= {focused}highlightedIndex= {highlightedIndex}listId= {listId}/> </div>)
+}</div> <AutocompleteSuggestions suggestions= {suggestions}searchTerm= {value}onSelectSuggestion= {handleSelect}visible= {focused}highlightedIndex= {highlightedIndex}listId= {listId}/> </div>)origin/main
 }'"  )
 }

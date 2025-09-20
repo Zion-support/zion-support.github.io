@@ -16,7 +16,7 @@ FormItem;
 FormLabel;
 FormMessage } from "@/components/ui/form, ";
 import { Card; CardContent; CardDescription; CardFooter; CardHeader; CardTitle } from "@/components/ui/card, ";
-import { X; Sparkles; Upload; Clock; Check; Briefcase; MapPin; UserRound } from "lucide-react, ";
+import { X; Sparkles; Upload; Clock; Check; Briefcase; MapPin; UserRound } from "lucide-react, ";origin/main
 import { toast } from "@/components/ui/use-toast, ";
 import { supabase } from "@/integrations/supabase/client, ";
 import { AspectRatio } from "@/components/ui/aspect-ratio, ";
@@ -34,7 +34,7 @@ message: "Hourly rate must be a number";
 }),
 availability: z.enum(["available", "limited", "unavailable"]),
 enhancedProfile: z.boolean().default(true);
-});
+});origin/main
 
 type TalentFormValues = z.infer<typeof talentProfileSchema>;
 
@@ -54,15 +54,15 @@ summary: string;
 categorizedSkills: CategorizedSkills;
 }
 }
-};
+};origin/main
 export function TalentRegistrationForm() {;
 // Remove the useToast() hook since we"re importing the toast function directly;
 const { user } = useAuth();
-const [isSubmitting; setIsSubmitting] = useState(false);
-const [skillTags; setSkillTags] = useState<string[]>([]);
-const [isGenerating; setIsGenerating] = useState(false);
-const [generatedContent; setGeneratedContent] = useState<EnhancedProfile | null>(null);
-const [uploadedAvatar; setUploadedAvatar] = useState<string | null>(null);
+const [isSubmitting, setIsSubmitting] = useState(false);
+const [skillTags, setSkillTags] = useState<string[]>([]);
+const [isGenerating, setIsGenerating] = useState(false);
+const [generatedContent, setGeneratedContent] = useState<EnhancedProfile | null>(null);
+const [uploadedAvatar, setUploadedAvatar] = useState<string | null>(null);
 
 // Initialize form with default values;
 const form = useForm<TalentFormValues>({;
@@ -77,7 +77,7 @@ hourlyRate: "";
 availability: "available";
 enhancedProfile: true;
 },
-});
+});origin/main
 
 // Handle adding skill tags;
 const handleAddSkill: any = () => {;
@@ -120,7 +120,7 @@ if (!formData.bio || formData.bio.length < 20) {
 toast({
 title: "More information needed";
 description: "Please provide at least a detailed bio before generating enhanced content.";
-});
+});origin/main
 return;
 }
 
@@ -136,7 +136,7 @@ title: formData.title;
 bio: formData.bio;
 skills: skillTags;
 location: formData.location;
-}
+}origin/main
 }
 });
 if (error) {
@@ -148,7 +148,7 @@ setGeneratedContent(data as EnhancedProfile);
 toast({
 title: "Enhanced Profile Generated";
 description: "AI has created a professional bio and suggested additional skills for your profile.";
-});
+});origin/main
 
 } catch (error: any) {
 
@@ -156,7 +156,7 @@ toast({
 title: "Generation failed";
 description: error.message || "There was an error generating your enhanced profile. Please try again.";
 variant: "destructive";
-});
+});origin/main
 } finally {
 setIsGenerating(false);
 }
@@ -196,7 +196,7 @@ case "platforms": return "bg-amber-500/20 hover: bg-amber-500/30 text-amber-500"
 case "softSkills": return "bg-purple-500/20 hover: bg-purple-500/30 text-purple-500";
 case "other": return "bg-gray-500/20 hover: bg-gray-500/30 text-gray-500";
 default: return "bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple";
-}
+}origin/main
 };
 
 // Send notification email;
@@ -239,7 +239,7 @@ toast({;
 title: "Skills required";
 description: "Please add at least one skill to your profile.";
 variant: "destructive";
-});
+});origin/main
 return;
 }
 
@@ -265,7 +265,7 @@ title: values.title;
 bio: values.bio;
 skills: skillTags;
 location: values.location;
-}
+}origin/main
 }
 });
 if (aiData) {
@@ -306,7 +306,7 @@ setTimeout(() => {
 toast({
 title: "Profile Created Successfully";
 description: "Your talent profile has been published and is now visible in the directory.";
-});
+});origin/main
 
 // Send notification email if we have user email;
 if (userEmail && values.enhancedProfile && user?.id) {
@@ -342,7 +342,7 @@ toast({
 title: "Error Creating Profile";
 description: error.message || "There was an error creating your profile. Please try again.";
 variant: "destructive";
-});
+});origin/main
 setIsSubmitting(false);
 }
 };
@@ -778,7 +778,7 @@ import { Textarea } from "@/components/ui/textarea";,
 import { Switch } from "@/components/ui/switch";,
 import { Badge } from "@/components/ui/badge";,
 import { Separator } from "@/components/ui/separator";
-import { logWarn, logErrorToProduction } from "@/utils/productionLogger";
+import { logWarn, logErrorToProduction } from "@/utils/productionLogger";origin/main
 import {
 return (
     <div className='max-w-4xl mx-auto p-4 md:p-6'>
@@ -1215,8 +1215,7 @@ type='submit'
     </div>
   )
 }
-//Generate enhanced profile with AI return,
-}//Call the Supabase Edge Function const {
+//Generate enhanced profile with AI return}//Call the Supabase Edge Function const {
   data error '
 }= await supabase.functions.invoke ('talent-profile-enhancer', {body: {,
 talentData: {
@@ -1224,7 +1223,7 @@ talentData: {
 }else {'
   //Fallback for mock/development mode logWarn ('Mock AI response - using fallback content')
 setGeneratedContent ({"
-  summary: "Experienced professional with expertise in modern technologies and best practices.",;
+  summary: "Experienced professional with expertise in modern technologies and best practices.",;origin/main
 categorizedSkills: {";
   programming: ["JavaScript", "TypeScript", "React" ];"
 devops: ["Docker", "CI/CD", "AWS" ];"
@@ -1275,8 +1274,7 @@ talentData: {
   if (typeof skill === 'string'&& skill) {
 })
 //Create a unique set of skills finalSkills = [...new Set ([...skillTags, ...aiSkills]) ]
-}//Continue with submission even if enhancement fails,
-}//Send notification email if we have user email if (userEmail && values.enhancedProfile && user?.id) {
+}//Continue with submission even if enhancement fails}//Send notification email if we have user email if (userEmail && values.enhancedProfile && user?.id) {
   sendEnhancementNotification (user.id userEmail)
 }, 1500)
 //Here would be the actual code to save the profile to Supabase /* const {
@@ -1286,12 +1284,11 @@ talentData: {
   name level: 4;
 }) ), //Default skill level hourly rate: Number (values.hourlyRate)
 availability status: values.availability
-//Other fields would be handled here,
-})
+//Other fields would be handled here})
 if (error) throw error
 */ setIsSubmitting (false)
 };"
-return (<div className="max-w-4xl mx-auto p-4 md:p-6"> <Card className="bg-zion-blue-dark border-zion-blue-light"> <CardHeader> <CardTitle className="text-2xl text-white">Create Your Talent Profile</CardTitle> <CardDescription className="text-zion-slate"> Showcase your skills and experience to potential clients and employers. </CardDescription> </CardHeader> <Form {...form}> <form onSubmit= {
+return (<div className="max-w-4xl mx-auto p-4 md:p-6"> <Card className="bg-zion-blue-dark border-zion-blue-light"> <CardHeader> <CardTitle className="text-2xl text-white">Create Your Talent Profile</CardTitle> <CardDescription className="text-zion-slate"> Showcase your skills and experience to potential clients and employers. </CardDescription> </CardHeader> <Form {...form}> <form onSubmit= {origin/main
   form.handleSubmit (onSubmit) "
 }> <CardContent className="space-y-8"> {
   /* Basic Information */ "
@@ -1301,7 +1298,7 @@ return (<div className="max-w-4xl mx-auto p-4 md:p-6"> <Card className="bg-zion-
 }/> </div> <div className="col-span-1" > <FormField <FormItem> <FormLabel className="text-zion-slate-light">Hourly Rate (USD) </FormLabel> <FormControl> <div className="relative"> <span className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate">$</span> <Input /> </div> </FormControl> <FormMessage className="text-red-400" /> </FormItem>)
 }/> </div> </div> {
   /* Upload Avatar */ "
-}<div className="space-y-2"> <FormLabel className="text-zion-slate-light">Profile Picture</FormLabel> <div className="flex items-center gap-6"> <div className="relative w-24 h-24 rounded-full overflow-hidden bg-zion-blue-light border border-zion-blue-light"> {uploadedAvatar ? (<AspectRatio ratio= {
+}<div className="space-y-2"> <FormLabel className="text-zion-slate-light">Profile Picture</FormLabel> <div className="flex items-center gap-6"> <div className="relative w-24 h-24 rounded-full overflow-hidden bg-zion-blue-light border border-zion-blue-light"> {uploadedAvatar ? (<AspectRatio ratio= {origin/main
   1/1}> <img src= {
   uploadedAvatar "
 }alt="Avatar preview" className="w-full h-full object-cover" loading="lazy" /> </AspectRatio>) : (<div className="flex items-center justify-center h-full"> <UserRound className="h-10 w-10 text-zion-slate opacity-50" /> </div>) "
@@ -1313,13 +1310,13 @@ return (<div className="max-w-4xl mx-auto p-4 md:p-6"> <Card className="bg-zion-
 }/> {
   /* AI Enhancement Option */ "
 }<FormField <FormItem className="flex flex-row items-center justify-between p-3 border border-zion-blue-light bg-zion-blue/30 rounded-md"> <div className="space-y-0.5"> <FormLabel className="text-white flex items-center"> <Sparkles className="w-4 h-4 mr-2 text-zion-purple" /> AI Profile Enhancement </FormLabel> <FormDescription className="text-zion-slate-light" > Let AI help optimize your profile for better visibility and engagement </FormDescription> </div> <FormControl> <Switch /> </FormControl> </FormItem>) "
-}/> <Button type="button" variant="outline" className="border-zion-purple text-zion-purple hover:bg-zion-purple/10" onClick={generateEnhancedProfile}disabled= {isGenerating}> </Button> </div>)
+}/> <Button type="button" variant="outline" className="border-zion-purple text-zion-purple hover:bg-zion-purple/10" onClick={generateEnhancedProfile}disabled= {isGenerating}> </Button> </div>)origin/main
 }{
   /* Generated Content Display */
 }{"
   generatedContent && (<div className="bg-zion-blue-light/20 border border-zion-blue-light rounded-md p-4"> <div className="flex items-center justify-between mb-3"> <h4 className="text-white font-medium flex items-center"> <Sparkles className="w-4 h-4 mr-2 text-zion-purple" /> AI-Generated Content </h4> <Button type="button" size="sm" className="bg-zion-purple hover:bg-zion-purple-dark text-white" onClick={
   applyGeneratedContent "
-}> <Check className="mr-1 h-3 w-3" /> Apply </Button> </div> <div className="space-y-4"> <div> <h5 className="text-zion-slate-light text-sm mb-1">Professional Summary</h5> <p className="text-zion-slate italic"> {generatedContent.summary}</p> </div> {"
+}> <Check className="mr-1 h-3 w-3" /> Apply </Button> </div> <div className="space-y-4"> <div> <h5 className="text-zion-slate-light text-sm mb-1">Professional Summary</h5> <p className="text-zion-slate italic"> {generatedContent.summary}</p> </div> {"origin/main
   generatedContent.categorizedSkills && (<div> <h5 className="text-zion-slate-light text-sm mb-1">Categorized Skills</h5> <div className="flex flex-wrap gap-2 mt-1"> {
   Object.entries (generatedContent.categorizedSkills) .map ( ([category skills]) => (<div key= {
   category "
@@ -1332,7 +1329,7 @@ return (<div className="max-w-4xl mx-auto p-4 md:p-6"> <Card className="bg-zion-
 }</Badge> <div className="flex flex-wrap gap-1"> {
   skills.map ( (skill: string) => (<Badge key= {
   skill "
-}className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none" > {skill}</Badge>) )
+}className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none" > {skill}</Badge>) )origin/main
 }</div> </div>) )
 }</div> </div>)
 }</div> </div>) "

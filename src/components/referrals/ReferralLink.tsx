@@ -1,11 +1,11 @@
 import { Copy, Facebook, Link, Share, Twitter } from "lucide-react";
-interface ReferralLinkProps {referralLink: string;
+interface ReferralLinkProps {referralLink: string;origin/main
 onCopy: () => void;
   onShare: (platform: 'twitter' | 'facebook' | 'linkedin') => void,
 export function ReferralLink({
   referralLink,
 }
-onCopy}
+onCopy}origin/main
   onShare}: ReferralLinkProps) {
   const [copied, setCopied] = useState(false)
   const handleCopy = () => {
@@ -30,7 +30,7 @@ complete onboarding
           <div className='flex space-x-2'>
             <Input
 value = {referralLink}
-              readOnly className='font-mono text-sm'
+              readOnly className='font-mono text-sm'origin/main
             />
             <Button
 variant='outline'

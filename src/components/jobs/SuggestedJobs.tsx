@@ -1,4 +1,4 @@
-interface SuggestedJobsProps {talentId?: string}
+interface SuggestedJobsProps {talentId?: string}origin/main
 export function SuggestedJobs({ talentId }: SuggestedJobsProps) {
 if (isLoading) {
     return (
@@ -23,7 +23,7 @@ if (isLoading) {
           </div>
           <div className="grid gap-4 md:grid-cols-2">
             {newMatches.map(match => (
-              <JobMatchesCard
+              <JobMatchesCardorigin/main
 key = {match.id}
                 match = {match}
                 onApply = {handleApply}
@@ -41,7 +41,7 @@ key = {match.id}
           </div>
           <div className="grid gap-4 md:grid-cols-2">
             {viewedMatches.map(match => (
-              <JobMatchesCard
+              <JobMatchesCardorigin/main
 key = {match.id}
                 match = {match}
                 onApply = {handleApply}
@@ -59,7 +59,7 @@ key = {match.id}
           </div>
           <div className="grid gap-4 md:grid-cols-2">
             {appliedMatches.map(match => (
-              <JobMatchesCard
+              <JobMatchesCardorigin/main
 key = {match.id}
                 match = {match}
                 onApply = {handleApply}
@@ -73,7 +73,7 @@ key = {match.id}
     </div>
   )
 }= useJobSuggestions (currentTalentId)
-const handleApply = (matchId: string jobId: string) => {updateJobMatchStatus (matchId,  'applied')
+const handleApply = (matchId: string jobId: string) => {updateJobMatchStatus (matchId,  'applied')origin/main
 //In a real app this might redirect to application form or open a modal}
 const handleDecline = (matchId: string) => {'
   updateJobMatchStatus (matchId, 'declined')
@@ -91,7 +91,7 @@ if (isLoading) {
   match.id}match= {match}onApply= {handleApply}onDecline= {handleDecline}/>) )
 }</div> </div>) "
 }</div> <div className="grid gap-4 md:grid-cols-2" > {appliedMatches.map (match => (<JobMatchesCard key= {
-  match.id}match= {match}onApply= {handleApply}onDecline= {handleDecline}showApplied= {true}/>) )
+  match.id}match= {match}onApply= {handleApply}onDecline= {handleDecline}showApplied= {true}/>) )origin/main
 }</div> </div>)
 }</div>)
 }'"}

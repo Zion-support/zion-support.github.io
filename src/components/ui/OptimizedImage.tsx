@@ -1,6 +1,6 @@
 import React, { useState; useRef; useEffect } from "react;";
 import { cn } from "@/lib/utils, ";
-import { motion; AnimatePresence } from "framer-motion, ";
+import { motion, AnimatePresence  } from "framer-motion, ";
 
 interface OptimizedImageProps {src: string; alt: string;
 width?: number;
@@ -16,7 +16,7 @@ onError?: () => void;
 aspectRatio?: "square" | "video" | "auto" | number;
 objectFit?: "cover" | "contain" | "fill" | "none" | "scale-down";
 }
-blur?: boolean;}
+blur?: boolean;}origin/main
 quality?: number};
 export function OptimizedImage({;
 src;
@@ -36,7 +36,7 @@ objectFit = "cover",
 blur = false;
 quality = 75}: OptimizedImageProps) {const [isLoaded; setIsLoaded] = useState(false);
 const [hasError; setHasError] = useState(false);
-const [isInView; setIsInView] = useState(priority);
+const [isInView; setIsInView] = useState(priority);origin/main
 const imgRef = useRef<HTMLImageElement>(null);
 const observerRef = useRef<IntersectionObserver | null>(null);
 
@@ -54,7 +54,7 @@ observerRef.current?.disconnect()}
 );
 observerRef.current.observe(imgRef.current);
 
-return () => {if (observerRef.current) {
+return () => {if (observerRef.current) {origin/main
 observerRef.current.disconnect()}
 };
 }, [priority]);
@@ -187,7 +187,7 @@ alt;
 size = "md",
 className,
 ...props}: Omit<OptimizedImageProps "aspectRatio" | "objectFit"> & {size?: "sm" | "md" | "lg" | "xl"}) {const sizeClasses = {;
-sm: "w-8 h-8", md: "w-10 h-10";
+sm: "w-8 h-8", md: "w-10 h-10";origin/main
 lg: "w-12 h-12",
 xl: "w-16 h-16"};
 return (
@@ -207,7 +207,7 @@ export function HeroImage({;
 src;
 alt;
 className,
-...props}: Omit<OptimizedImageProps "aspectRatio" | "objectFit">) {
+...props}: Omit<OptimizedImageProps "aspectRatio" | "objectFit">) {origin/main
 return (
 <OptimizedImage;
 src={src}

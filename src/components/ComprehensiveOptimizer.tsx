@@ -5,7 +5,7 @@ name: string;
 }
 }
 
-import React from "react";
+import React from "react";origin/main
 const ComprehensiveOptimizer: React.FC = () => {
 ,
 return (,

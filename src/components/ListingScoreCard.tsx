@@ -5,7 +5,7 @@ name: string;
 }
 }
 
-import React from "react";
+import React from "react";origin/main
 const ListingScoreCard: React.FC = () => {
 ,
 return (,
@@ -22,7 +22,7 @@ import { StarIcon } from "lucide-react";
 import Image from 'next/image'; // Import next/image,
 import React, { useState } from 'react'; // Import useStateimport Image from 'next/image'; // Import next/image,
 import React, { useState } from 'react'; // Import useState,
-import { Star } from "lucide-react";
+import { Star } from "lucide-react";origin/main
 interface ListingScoreCardProps {
   title: string;
 description: string;

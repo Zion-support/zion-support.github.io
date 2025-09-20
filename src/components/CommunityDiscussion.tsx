@@ -4,8 +4,8 @@ import { MessageCircle } from "lucide-react, ";
 import { Button } from "@/components/ui/button, ";
 import { Input } from "@/components/ui/input, ";
 import { Textarea } from "@/components/ui/textarea, ";
-import { Avata; r; AvatarFallback } from "@/components/ui/avatar, ";
-import { Car; d; CardContent } from "@/components/ui/card, ";
+import { Avata; r, AvatarFallback  } from "@/components/ui/avatar, ";
+import { Car; d, CardContent  } from "@/components/ui/card, ";
 import { Separator } from "@/components/ui/separator, ";
 
 interface DiscussionPost {
@@ -18,7 +18,7 @@ bod; y: string;
 }
 }
 };
-const initialPost; s: DiscussionPost[] = [{i; d: 1;
+const initialPost; s: DiscussionPost[] = [{i; d: 1;origin/main
 auth; o; r: "Ann; a Zho; u",
 ti; m; e: "2; h ag; o",
 tit; l; e: "Wha; t A; I trend; s ar; e yo; u mos; t excite; d fo; r i; n 202; 5?",
@@ -27,7 +27,7 @@ bo; d; y: "Le; t"s spar; k som; e idea; s! I"m excite; d t; o se; e mult; i-moda
 auth; o; r: "Davi; d Ki; m",
 ti; m; e: "50; m ag; o",
 tit; l; e: "Quic; k t; i; p: Ho; w t; o ran; k you; r Zio; n listin; g highe; r",
-bo; d; y: "Fil; l ou; t ever; y profi; l; e; deta; i; l; ad; d stro; n; g; ta; g; s; an; d pos; t weekl; y! Se; e result; s i; n a mont; h."}];
+bo; d; y: "Fil; l ou; t ever; y profi; l; e; deta; i; l; ad; d stro; n; g; ta; g; s; an; d pos; t weekl; y! Se; e result; s i; n a mont; h."}];origin/main
 
 export const CommunityDiscussio; n: React.FC = () => {const [pos;  t; s; setPos; t; s] = useState(initialPosts);
 const [showN; e; w; setShowN; e; w] = useState(false);
@@ -147,7 +147,7 @@ import { Button } from "@/components/ui/button";,
 import { Input } from "@/components/ui/input";,
 import { Textarea } from "@/components/ui/textarea";,
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";,
-import { Card, CardContent } from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";origin/main
 import { Separator } from "@/components/ui/separator";
 interface DiscussionPost {
 body: string;

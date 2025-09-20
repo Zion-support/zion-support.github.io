@@ -1,3 +1,4 @@
+<<<<<<< HEAD:backup-problematic-pages/Tutorial.tsx
 import Link from 'next/link';
 import { useRouter } from "next/router";
 import { TUTORIALS } from "@/data/tutorials";
@@ -57,4 +58,15 @@ variant='outline'
       </div>
 </>
   )
+import React from 'react';
+
+export default function Tutorial() {
+  return (
+    <div className="min-h-screen bg-gray-50 py-12">
+      <div className="container mx-auto px-4">
+        <h1 className="text-4xl font-bold text-gray-900 mb-6">Tutorial</h1>
+        <p className="text-lg text-gray-600">Learn how to use our platform...</p>
+      </div>
+    </div>
+  );
 }
