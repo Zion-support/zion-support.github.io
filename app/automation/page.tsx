@@ -10,8 +10,8 @@ export default function AutomationPage() {
   return (
     <div>
       <SEO
-        title="[^"]*"
-        description="[^"]*"
+        title="Advanced Automation 2025 - AI-Powered Business Automation"
+        description="Transform your business with intelligent automation solutions"
         keywords="automation, business automation, AI automation, process automation, intelligent automation"
         url="/automation"
       />

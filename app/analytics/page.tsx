@@ -10,8 +10,8 @@ export default function AnalyticsPage() {
   return (
     <div>
       <SEO
-        title="[^"]*"
-        description="[^"]*"
+        title="Analytics Revolution 2025 - Advanced Data Analytics"
+        description="Transform your data into actionable insights with our advanced analytics solutions"
         keywords="analytics, data analytics, business intelligence, predictive analytics, real-time analytics"
         url="/analytics"
       />

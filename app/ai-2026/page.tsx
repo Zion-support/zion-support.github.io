@@ -10,8 +10,8 @@ export default function AI2026Page() {
   return (
     <div>
       <SEO
-        title="[^"]*"
-        description="[^"]*"
+        title="AI 2026 - Future AI Technologies"
+        description="Explore the future of AI with revolutionary technologies, quantum computing, and next-generation artificial intelligence solutions"
         keywords="AI 2026, future AI, quantum AI, revolutionary technology, artificial general intelligence"
         url="/ai-2026"
       />

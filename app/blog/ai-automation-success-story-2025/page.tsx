@@ -6,12 +6,13 @@ export const metadata: Metadata = {
   title: 'AI Automation Success Story: 500% ROI Achievement | Zion Tech Group',
   description: 'Discover how a Fortune 500 company achieved 500% ROI through intelligent AI automation, reducing operational costs by 60% and increasing productivity by 340%.',
   keywords: ['AI automationROIenterprisesuccess story', 'productivitycost reduction'],
-  openGraph: {,
+  openGraph: {
     title: 'AI Automation Success Story: 500% ROI Achievement',
     description: 'Fortune 500 company achieves 500% ROI through intelligent automation',
     type: 'article',
     publishedTime: '2025-01-14',
-    authors: ['Zion Tech Group']}
+    authors: ['Zion Tech Group']
+  }
 }
 export default function AIAutomationSuccessStoryPage() {
   return (
