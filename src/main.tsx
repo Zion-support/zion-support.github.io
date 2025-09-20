@@ -4,7 +4,7 @@ import { HelmetProvider } from 'react-helmet-async'
 import App from './App'
 import ErrorBoundary from './components/ErrorBoundary'
 import { ThemeProvider } from './context/ThemeContext'
-import { AccessibilityProvider } from './utils/accessibilityEnhancer'
+import AccessibilityEnhancer from './utils/accessibilityEnhancer'
 import { preloadCriticalResources, addResourceHints } from './utils/performanceOptimizer'
 import './index.css'
 
@@ -30,13 +30,13 @@ if (rootElement) {
   ReactDOM.createRoot(rootElement).render(
     <React.StrictMode>
       <ErrorBoundary>
-        <AccessibilityProvider>
+        <AccessibilityEnhancer>
           <ThemeProvider>
             <HelmetProvider>
               <App />
             </HelmetProvider>
           </ThemeProvider>
-        </AccessibilityProvider>
+        </AccessibilityEnhancer>
       </ErrorBoundary>
     </React.StrictMode>
   );
