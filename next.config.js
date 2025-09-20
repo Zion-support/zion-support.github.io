@@ -5,16 +5,6 @@ const nextConfig = {
   output: 'export',
   trailingSlash: true,
   
-  // Disable ESLint during build to handle syntax errors
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
-  
-  // Disable TypeScript type checking during build
-  typescript: {
-    ignoreBuildErrors: true,
-  },
-  
   // Performance optimizations
   compress: true,
   poweredByHeader: false,
@@ -46,6 +36,14 @@ const nextConfig = {
   experimental: {
     optimizeCss: true,
     scrollRestoration: true,
+  },
+  
+  // Ignore build errors to allow deployment with syntax issues
+  typescript: {
+    ignoreBuildErrors: true,
+  },
+  eslint: {
+    ignoreDuringBuilds: true,
   },
 };
 
