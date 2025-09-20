@@ -1,8 +1,10 @@
-import React from 'react'
-import Link from 'next/link'
-import Script from 'next/script'
-// import './globals.css'
-import '../src/app/globals.css'
+import type { Metadata, Viewport } from "next";
+import { Inter } from "next/font/google";
+import { ThemeProvider } from "@/components/ThemeProvider";
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
+import { Toaster } from "@/components/ui/toaster";
+import { Toaster as SonnerToaster } from "@/components/ui/sonner";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -26,7 +28,11 @@ export const metadata: Metadata = {
     title: "Zion Tech Group - Innovative Technology Solutions",
     description: "Leading provider of AI, cloud, cybersecurity, and digital transformation solutions.",
   },
-  viewport: "width=device-width, initial-scale=1",
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
   themeColor: "#0ea5e9",
 };
 
