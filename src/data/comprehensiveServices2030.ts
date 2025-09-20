@@ -1,6 +1,6 @@
-import { ProductListing } from "@/types/listings",
-import { COMPREHENSIVE_INNOVATIVE_SERVICES_2030 } from "./comprehensiveInnovativeServices2030",
-import { INNOVATIVE_MICRO_SAAS_SERVICES_2030 } from "./innovativeMicroSaasServices2030",
+import { ProductListing } from "@/types/listings";
+import { COMPREHENSIVE_INNOVATIVE_SERVICES_2030 } from "./comprehensiveInnovativeServices2030";
+import { INNOVATIVE_MICRO_SAAS_SERVICES_2030 } from "./innovativeMicroSaasServices2030";
 export const COMPREHENSIVE_SERVICES_2030: ProductListing[] = [
   ...COMPREHENSIVE_INNOVATIVE_SERVICES_2030,
   ...INNOVATIVE_MICRO_SAAS_SERVICES_2030,
@@ -118,93 +118,93 @@ export const COMPREHENSIVE_SERVICES_2030: ProductListing[] = [
 // Export individual categories for easier access
 export const AI_SERVICES_2030 = COMPREHENSIVE_SERVICES_2030.filter(service => 
   service.category.includes('AI')
-),
+);
 
 export const CYBERSECURITY_SERVICES_2030 = COMPREHENSIVE_SERVICES_2030.filter(service => 
   service.category === 'Cybersecurity'
-),
+);
 
 export const CLOUD_DEVOPS_SERVICES_2030 = COMPREHENSIVE_SERVICES_2030.filter(service => 
   service.category === 'Cloud & DevOps'
-),
+);
 
 export const BLOCKCHAIN_SERVICES_2030 = COMPREHENSIVE_SERVICES_2030.filter(service => 
   service.category === 'Blockchain & Web3'
-),
+);
 
 export const QUANTUM_SERVICES_2030 = COMPREHENSIVE_SERVICES_2030.filter(service => 
   service.category === 'Quantum Computing'
-),
+);
 
 export const IOT_SERVICES_2030 = COMPREHENSIVE_SERVICES_2030.filter(service => 
   service.category === 'IoT & Edge Computing'
-),
+);
 
 export const HEALTHCARE_SERVICES_2030 = COMPREHENSIVE_SERVICES_2030.filter(service => 
   service.category === 'AI & Healthcare'
-),
+);
 
 export const FINTECH_SERVICES_2030 = COMPREHENSIVE_SERVICES_2030.filter(service => 
   service.category === 'FinTech'
-),
+);
 
 export const LEGAL_TECH_SERVICES_2030 = COMPREHENSIVE_SERVICES_2030.filter(service => 
   service.category === 'AI & Legal Tech'
-),
+);
 
 export const EDUCATION_SERVICES_2030 = COMPREHENSIVE_SERVICES_2030.filter(service => 
   service.category === 'AI & Education'
-),
+);
 
 export const SPACE_TECH_SERVICES_2030 = COMPREHENSIVE_SERVICES_2030.filter(service => 
   service.category === 'Space Technology'
-),
+);
 
 export const SUSTAINABLE_TECH_SERVICES_2030 = COMPREHENSIVE_SERVICES_2030.filter(service => 
   service.category === 'Sustainable Technology'
-),
+);
 
 export const ENTERTAINMENT_SERVICES_2030 = COMPREHENSIVE_SERVICES_2030.filter(service => 
   service.category === 'AI & Entertainment'
-),
+);
 
 export const METAVERSE_SERVICES_2030 = COMPREHENSIVE_SERVICES_2030.filter(service => 
   service.category === 'AI & Metaverse'
-),
+);
 
 export const RESEARCH_SERVICES_2030 = COMPREHENSIVE_SERVICES_2030.filter(service => 
   service.category === 'AI & Research'
-),
+);
 
 export const GREEN_TECH_SERVICES_2030 = COMPREHENSIVE_SERVICES_2030.filter(service => 
   service.category === 'AI & Green Tech'
-),
+);
 
 export const OPERATIONS_SERVICES_2030 = COMPREHENSIVE_SERVICES_2030.filter(service => 
   service.category === 'AI & Operations'
-),
+);
 
 export const DEVELOPMENT_SERVICES_2030 = COMPREHENSIVE_SERVICES_2030.filter(service => 
   service.category === 'AI & Development'
-),
+);
 
 export const MARKETING_SERVICES_2030 = COMPREHENSIVE_SERVICES_2030.filter(service => 
   service.category === 'AI & Marketing'
-),
+);
 
 export const CONTENT_SERVICES_2030 = COMPREHENSIVE_SERVICES_2030.filter(service => 
   service.category === 'AI & Content'
-),
+);
 
 export const CUSTOMER_SUPPORT_SERVICES_2030 = COMPREHENSIVE_SERVICES_2030.filter(service => 
   service.category === 'AI & Customer Support'
-),
+);
 export const HR_SERVICES_2030 = COMPREHENSIVE_SERVICES_2030.filter(service => 
   service.category === 'AI & HR'
-),
+);
 export const DIGITAL_TWIN_SERVICES_2030 = COMPREHENSIVE_SERVICES_2030.filter(service => 
   service.category === 'Digital Twin'
-),
+);
 export const BUSINESS_INTELLIGENCE_SERVICES_2030 = COMPREHENSIVE_SERVICES_2030.filter(service => 
   service.category === 'AI & Business Intelligence'
-),
+);
