@@ -1,4 +1,4 @@
-import { apiClient } from "./apiClient";
+import { apiClient } from "../services/apiClient";
 
 export async function rewardOnboarding(userId: string, action: string, amount: number) {
   await apiClient("/functions/v1/token-manager/earn", {
@@ -15,7 +15,7 @@ export async function earnTokensForPurchase(
   await apiClient("/functions/v1/token-manager/earn", {
     method: "POST",
     body: JSON.stringify({
-      userId,
+      userId, 
       action: "purchase",
       amount: purchaseAmount,
       purchaseType,
@@ -30,7 +30,7 @@ export async function earnTokensForReferral(
   await apiClient("/functions/v1/token-manager/earn", {
     method: "POST",
     body: JSON.stringify({
-      userId,
+      userId, 
       action: "referral",
       referredUserId,
       amount: 100,
