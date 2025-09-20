@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback, useMemo } from 'react';
+import React, { useState, useEffect, useCallback, useMemo, lazy, Suspense } from 'react';
 
 const Home: React.FC = () => {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -13,7 +13,17 @@ const Home: React.FC = () => {
     setIsLoaded(true);
     window.addEventListener('scroll', handleScroll, { passive: true });
     
-    return () => window.removeEventListener('scroll', handleScroll);
+    // Performance optimization: Preload critical resources
+    const link = document.createElement('link');
+    link.rel = 'preload';
+    link.href = '/images/hero-bg.jpg';
+    link.as = 'image';
+    document.head.appendChild(link);
+    
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      document.head.removeChild(link);
+    };
   }, [handleScroll]);
 
   const services = useMemo(() => [
