@@ -35,7 +35,7 @@ const categoryColors: { [key: string]: string } = {
   'AI & Autonomous Systems': 'from-purple-600 to-indigo-700Quantum Computing & AI': 'from-blue-600 to-cyan-700Blockchain & Web3': 'from-green-600 to-emerald-700Cybersecurity & Privacy': 'from-red-600 to-pink-700Healthcare & Biotech': 'from-purple-600 to-pink-700Financial Technology': 'from-yellow-600 to-orange-700IoT & Automation': 'from-blue-600 to-teal-700Cloud & Infrastructure': 'from-gray-600 to-blue-700Data Analytics & BI': 'from-green-600 to-blue-700Digital Marketing & Automation': 'from-pink-600 to-purple-700E-commerce & Retail': 'from-orange-600 to-red-700Education & Learning Technology': 'from-teal-600 to-green-700Space Technology & Earth Observation': 'from-indigo-600 to-purple-700AR/VR & Immersive Technology': 'from-pink-600 to-rose-700Robotics & Automation': 'from-gray-600 to-slate-700Green Technology & Sustainability': 'from-green-600 to-emerald-700Supply Chain & Logistics': 'from-blue-600 to-indigo-700Human Resources & Talent Management': 'from-purple-600 to-violet-700Legal Technology & Compliance': 'from-slate-600 to-gray-700Real Estate & Property Technology': 'from-amber-600 to-orange-700Sports Technology & Analytics': 'from-green-600 to-blue-700Entertainment & Media Technology': 'from-purple-600 to-pink-700'
 };
 const features = [
-  "AI-Powered Automation",
+  "AI-Powered Automation";
   "Real-time Analytics",
   "Multi-cloud Support",
   "API-First Architecture",
@@ -74,16 +74,15 @@ export function ComprehensiveServicesShowcase2027() {
   const allServices = [...cuttingEdgeComprehensiveServices2027, ...specializedInnovativeServices2027],
 
   // Get unique categories
-  const categories = Array.from(new Set(allServices.map(service => service.category))),
-
+  const categories = Array.from(new Set(allServices.map(service => service.category)));
   // Filter services based on selection and search
   const filteredServices = allServices.filter(service => {
-    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory,
+    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
     const matchesSearch = searchQuery === '' ||
       service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
       service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      service.category.toLowerCase().includes(searchQuery.toLowerCase()),
-    return matchesCategory && matchesSearch,
+      service.category.toLowerCase().includes(searchQuery.toLowerCase());
+    return matchesCategory && matchesSearch;
   });
   const featuredServices = allServices.filter(service => service.popular).slice(0, 8);
   return (

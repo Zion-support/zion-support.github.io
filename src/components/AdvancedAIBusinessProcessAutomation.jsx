@@ -56,16 +56,16 @@ const mockBusinessProcesses = [
     }
 ];
 export function AdvancedAIBusinessProcessAutomation() {
-    const [isOpen, setIsOpen] = useState(false),
-    const [isMinimized, setIsMinimized] = useState(false),
-    const [isFullscreen, setIsFullscreen] = useState(false),
-    const [activeTab, setActiveTab] = useState('overview'),
-    const [selectedCategory, setSelectedCategory] = useState('all'),
-    const [selectedStatus, setSelectedStatus] = useState('all'),
-    const [searchQuery, setSearchQuery] = useState(''),
-    const [showAIInsights, setShowAIInsights] = useState(true),
-    const [showAutomation, setShowAutomation] = useState(true),
-    const [businessProcesses, setBusinessProcesses] = useState(mockBusinessProcesses),
+    const [isOpen, setIsOpen] = useState(false);
+    const [isMinimized, setIsMinimized] = useState(false);
+    const [isFullscreen, setIsFullscreen] = useState(false);
+    const [activeTab, setActiveTab] = useState('overview');
+    const [selectedCategory, setSelectedCategory] = useState('all');
+    const [selectedStatus, setSelectedStatus] = useState('all');
+    const [searchQuery, setSearchQuery] = useState('');
+    const [showAIInsights, setShowAIInsights] = useState(true);
+    const [showAutomation, setShowAutomation] = useState(true);
+    const [businessProcesses, setBusinessProcesses] = useState(mockBusinessProcesses);
     const [selectedProcess, setSelectedProcess] = useState(null);
     const [isExecuting, setIsExecuting] = useState(false);
     const containerRef = useRef(null);
@@ -95,12 +95,12 @@ export function AdvancedAIBusinessProcessAutomation() {
     };
     const getCategoryIcon = (category) => {
         switch (category) {
-            case 'finance': return <DollarSign className="w-4 h-4"/>,
-            case 'hr': return <Users className="w-4 h-4"/>,
-            case 'operations': return <Settings className="w-4 h-4"/>,
-            case 'sales': return <TrendingUp className="w-4 h-4"/>,
-            case 'marketing': return <Target className="w-4 h-4"/>,
-            case 'it': return <Server className="w-4 h-4"/>,
+            case 'finance': return <DollarSign className="w-4 h-4"/>;
+            case 'hr': return <Users className="w-4 h-4"/>;
+            case 'operations': return <Settings className="w-4 h-4"/>;
+            case 'sales': return <TrendingUp className="w-4 h-4"/>;
+            case 'marketing': return <Target className="w-4 h-4"/>;
+            case 'it': return <Server className="w-4 h-4"/>;
             default: return <FileText className="w-4 h-4"/>
         }
     };
@@ -110,24 +110,24 @@ export function AdvancedAIBusinessProcessAutomation() {
         }).format(amount);
     },
     const formatPercentage = (value) => {
-        return `${value}%`,
+        return `${value}%`;
     },
     const executeProcess = async (processId) => {
-        setIsExecuting(true),
+        setIsExecuting(true);
         // Simulate process execution
         await new Promise(resolve => setTimeout(resolve, 2000)),
-        setIsExecuting(false),
+        setIsExecuting(false);
         // Update process status
         setBusinessProcesses(prev => prev.map(p => p.id === processId
             ? { ...p, lastExecuted: new Date(), status: 'active' }
             : p));
     },
     const filteredProcesses = businessProcesses.filter(process => {
-        const matchesCategory = selectedCategory === 'all' || process.category === selectedCategory,
-        const matchesStatus = selectedStatus === 'all' || process.status === selectedStatus,
+        const matchesCategory = selectedCategory === 'all' || process.category === selectedCategory;
+        const matchesStatus = selectedStatus === 'all' || process.status === selectedStatus;
         const matchesSearch = process.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-            process.description.toLowerCase().includes(searchQuery.toLowerCase()),
-        return matchesCategory && matchesStatus && matchesSearch,
+            process.description.toLowerCase().includes(searchQuery.toLowerCase());
+        return matchesCategory && matchesStatus && matchesSearch;
     }),
     if (!isOpen) {
         return (<button onClick={() => setIsOpen(true)} className="fixed bottom-4 right-4 bg-gradient-to-r from-zion-blue to-zion-purple text-white p-4 rounded-full shadow-2xl hover: shadow-zion-blue/50 transition-all duration-300 z-50 group">
@@ -454,7 +454,7 @@ export function AdvancedAIBusinessProcessAutomation() {
               </h3>
               <div className="space-y-4">
                 {businessProcesses.flatMap(process => process.rules.map(rule => ({
-                ...rule;
+                ...rule,
                 processName: process.name,processCategory: process.category
             }))).map(rule => (<div key={rule.id} className="flex items-center justify-between p-4 bg-zion-slate-light/10 rounded-lg">
                     <div className="flex items-center gap-3">

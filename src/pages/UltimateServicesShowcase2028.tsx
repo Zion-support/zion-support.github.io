@@ -1,150 +1,150 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
-import { 
-  Search,
-  Filter, 
-  Star, 
-  Zap, 
-  Brain, 
-  Shield, 
-  Cloud, 
-  Heart, 
-  TrendingUp, 
-  Users, 
-  Globe, 
-  Cpu, 
-  Lock, 
-  Target, 
-  Rocket, 
-  Sparkles,
-  ChevronDown,
-  CheckCircle,
-  ArrowRight,
-  Phone,
-  Mail,
-  Globe as GlobeIcon,
-  Award,
-  Clock,
-  DollarSign,
-  BarChart3
+import { ;
+  Search;
+  Filter, ;
+  Star, ;
+  Zap, ;
+  Brain, ;
+  Shield, ;
+  Cloud, ;
+  Heart, ;
+  TrendingUp, ;
+  Users, ;
+  Globe, ;
+  Cpu, ;
+  Lock, ;
+  Target, ;
+  Rocket, ;
+  Sparkles;
+  ChevronDown;
+  CheckCircle;
+  ArrowRight;
+  Phone;
+  Mail;
+  Globe as GlobeIcon;
+  Award;
+  Clock;
+  DollarSign;
+  BarChart3;
 } from "lucide-react";
 import { INNOVATIVE_SERVICES_2028 } from "../data/innovativeServices2028";
 const UltimateServicesShowcase2028: React.FC = () => {
-  const [selectedCategory, setSelectedCategory] = useState('all'),
-  const [searchTerm, setSearchTerm] = useState(''),
-  const [sortBy, setSortBy] = useState('name'),
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),
-  const [expandedService, setExpandedService] = useState<string | null>(null),
+  const [selectedCategory, setSelectedCategory] = useState('all')
+  const [searchTerm, setSearchTerm] = useState('')
+  const [sortBy, setSortBy] = useState('name')
+  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid')
+  const [expandedService, setExpandedService] = useState<string | null>(null)
 
-  // Get unique categories
-  const categories = ['all', ...Array.from(new Set(INNOVATIVE_SERVICES_2028.map(service => service.category)))],
+  // Get unique categories;
+  const categories = [['all', ...Array.from(new Set(INNOVATIVE_SERVICES_2028.map(service => service.category)))];]
 
-  // Filter and sort services
-  const filteredServices = INNOVATIVE_SERVICES_2028
-    .filter(service => 
-      selectedCategory === 'all' || service.category === selectedCategory
+  // Filter and sort services;
+  const filteredServices = INNOVATIVE_SERVICES_2028;
+    .filter(service => ;
+      selectedCategory === 'all' || service.category === selectedCategory;
     )
-    .filter(service => 
-      service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      service.category.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    .filter(service => ;
+      service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
+      service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
+      service.category.toLowerCase().includes(searchTerm.toLowerCase()) ||;
       service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()))
     )
-    .sort((a, b) => {
-      switch (sortBy) {
-        case 'price':
-          return a.price - b.price,
-        case 'category':
-          return a.category.localeCompare(b.category),
-        case 'innovation':
-          return a.innovationLevel === 'revolutionary' ? 1 : -1,
-        case 'name':
+    .sort((a, b) => {;
+      switch (sortBy) {;
+        case 'price':;
+          return a.price - b.price;
+        case 'category':;
+          return a.category.localeCompare(b.category)
+        case 'innovation':;
+          return a.innovationLevel === 'revolutionary' ? 1 : -1;
+        case 'name':;
         default: return a.title.localeCompare(b.title)
       }
-    });
-  const getCategoryIcon = (category: string) => {
-    const icons: Record<string, React.ReactNode> = {
-      'AI & Enterprise': <Brain className="w-5 h-5" />,
-      'Quantum Computing': <Zap className="w-5 h-5" />,
-      'Cybersecurity': <Shield className="w-5 h-5" />,
-      'Healthcare Technology': <Heart className="w-5 h-5" />,
-      'Financial Technology': <DollarSign className="w-5 h-5" />,
-      'Supply Chain': <Globe className="w-5 h-5" />,
-      'Content Marketing': <Target className="w-5 h-5" />,
-      'Project Management': <Rocket className="w-5 h-5" />,
-      'Customer Support': <Users className="w-5 h-5" />,
+    })
+  const getCategoryIcon = (category: string) => {;
+    const const icons: Record<string, React.ReactNode> = {; = {
+      'AI & Enterprise': <Brain className="w-5 h-5" />;
+      'Quantum Computing': <Zap className="w-5 h-5" />;
+      'Cybersecurity': <Shield className="w-5 h-5" />;
+      'Healthcare Technology': <Heart className="w-5 h-5" />;
+      'Financial Technology': <DollarSign className="w-5 h-5" />;
+      'Supply Chain': <Globe className="w-5 h-5" />;
+      'Content Marketing': <Target className="w-5 h-5" />;
+      'Project Management': <Rocket className="w-5 h-5" />;
+      'Customer Support': <Users className="w-5 h-5" />;
       'Marketing Automation': <TrendingUp className="w-5 h-5" />
-    },
-    return icons[category] || <Sparkles className="w-5 h-5" />,
-  },
+    }
+    return icons[category] || <Sparkles className="w-5 h-5" />;
+  }
 
-  const getInnovationLevelColor = (level: string) => {
-    switch (level) {
-      case 'revolutionary':
+  const getInnovationLevelColor = (level: string) => {;
+    switch (level) {;
+      case 'revolutionary':;
         return 'from-purple-500 to-pink-500';
-      case 'cutting-edge':
-        return 'from-blue-500 to-cyan-500',
-      default: return 'from-green-500 to-emerald-500'
+      case 'cutting-edge':;
+        return 'from-blue-500 to-cyan-500';
+      default: return 'from-green-500 to-emerald-500';
     }
-  };
-  const containerVariants = {
-    hidden: { opacity: 0 };
-    visible: {
-      opacity: 1,transition: {
-        staggerChildren: 0.1
+  }
+  const const containerVariants = {; = {
+    hidden: {{ opacity: 0 }}
+    visible: {;
+      opacity: 1,transition: {;
+        staggerChildren: 0.1;
       }
     }
-  };
-  const itemVariants = {
-    hidden: { y: 20, opacity: 0 };
-    visible: {
-      y: 0,opacity: 1,transition: {
-        duration: 0.5,ease: "easeOut"
+  }
+  const const itemVariants = {; = {
+    hidden: {{ y: 20, opacity: 0 }}
+    visible: {;
+      y: 0,opacity: 1,transition: {;
+        duration: 0.5,ease: "easeOut";
       }
     }
-  };
+  }
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
-      {/* Futuristic Animated Background */}
+      {{/* Futuristic Animated Background */}}
       <div className="fixed inset-0 overflow-hidden pointer-events-none">
         <div className="absolute inset-0 bg-[linear-gradient(rgba(6,182,212,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(6,182,212,0.1)_1px,transparent_1px)] bg-[size:50px_50px] animate-pulse"></div>
         <div className="absolute inset-0">
-          {[...Array(20)].map((_, i) => (
-            <motion.div
-              key={i}
-              className="absolute w-1 h-1 bg-cyan-400 rounded-full opacity-60 shadow-lg shadow-cyan-400/50"
-              animate={{
-                x: [0, 100, 0],
-                y: [0, -100, 0],
-                opacity: [0.3, 1, 0.3],
-                scale: [0.5, 1.5, 0.5]
+          {[...Array(20)].map((_, i) => (;
+            <motion.div;
+              key={{i}}
+              className="className="absolute w-1 h-1 bg-cyan-400 rounded-full opacity-60 shadow-lg shadow-cyan-400/50";"
+              animate={{;
+                x: [0, 100, 0]
+                y: [0, -100, 0]
+                opacity: [0.3, 1, 0.3]
+                scale: [[0.5, 1.5, 0.5];]
               }}
-              transition={{
-                duration: 6 + i * 0.2,repeat: Infinity,delay: i * 0.1,ease: "easeInOut"
+              transition={{;
+                duration: 6 + i * 0.2,repeat: Infinity,delay: i * 0.1,ease: "easeInOut";
               }}
-              style={{
+              style={{;
                 left: `${Math.random() * 100}%`;
-                top: `${Math.random() * 100}%`
+                top: `${Math.random() * 100}%`;
               }}
             />
           ))}
         </div>
       </div>
 
-      {/* Hero Section */}
+      {{/* Hero Section */}}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
-          <motion.div
+          <motion.div;
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
             <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
-              2028 Services
+              2028 Services;
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Revolutionary AI, Quantum Computing, and Next-Generation Technology Solutions
+              Revolutionary AI, Quantum Computing, and Next-Generation Technology Solutions;
             </p>
             <div className="flex flex-wrap justify-center gap-4 mb-8">
               <div className="flex items-center gap-2 bg-cyan-500/20 border border-cyan-400/30 rounded-full px-4 py-2">
@@ -164,45 +164,45 @@ const UltimateServicesShowcase2028: React.FC = () => {
         </div>
       </section>
 
-      {/* Search and Filter Section */}
+      {{/* Search and Filter Section */}}
       <section className="px-4 sm:px-6 lg:px-8 mb-12">
         <div className="max-w-7xl mx-auto">
           <div className="bg-slate-800/50 backdrop-blur-xl border border-slate-700/50 rounded-2xl p-6">
             <div className="flex flex-col lg:flex-row gap-4 items-center">
-              {/* Search */}
+              {{/* Search */}}
               <div className="flex-1 relative">
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                <input
-                  type="text"
-                  placeholder="Search services, features, or categories..."
-                  value={searchTerm}
-                  onChange={(e) => setSearchTerm(e.target.value)}
-                  className="w-full pl-10 pr-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50"
+                <input;
+                  type="text";
+                  placeholder="Search services, features, or categories...";
+                  value={{searchTerm}}
+                  onChange={{(e) => setSearchTerm(e.target.value)}}
+                  className="className="w-full pl-10 pr-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50";"
                 />
               </div>
 
-              {/* Category Filter */}
+              {{/* Category Filter */}}
               <div className="relative">
-                <select
-                  value={selectedCategory}
-                  onChange={(e) => setSelectedCategory(e.target.value)}
-                  className="appearance-none bg-slate-700/50 border border-slate-600/50 rounded-xl px-4 py-3 pr-10 text-white focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50"
+                <select;
+                  value={{selectedCategory}}
+                  onChange={{(e) => setSelectedCategory(e.target.value)}}
+                  className="className="appearance-none bg-slate-700/50 border border-slate-600/50 rounded-xl px-4 py-3 pr-10 text-white focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50";"
                 >
-                  {categories.map(category => (
+                  {categories.map(category => (;
                     <option key={category} value={category}>
-                      {category === 'all' ? 'All Categories' : category}
+                      {{category === 'all' ? 'All Categories' : category}}
                     </option>
                   ))}
                 </select>
                 <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5 pointer-events-none" />
               </div>
 
-              {/* Sort */}
+              {{/* Sort */}}
               <div className="relative">
-                <select
-                  value={sortBy}
-                  onChange={(e) => setSortBy(e.target.value)}
-                  className="appearance-none bg-slate-700/50 border border-slate-600/50 rounded-xl px-4 py-3 pr-10 text-white focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50"
+                <select;
+                  value={{sortBy}}
+                  onChange={{(e) => setSortBy(e.target.value)}}
+                  className="className="appearance-none bg-slate-700/50 border border-slate-600/50 rounded-xl px-4 py-3 pr-10 text-white focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50";"
                 >
                   <option value="name">Sort by Name</option>
                   <option value="price">Sort by Price</option>
@@ -212,27 +212,27 @@ const UltimateServicesShowcase2028: React.FC = () => {
                 <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5 pointer-events-none" />
               </div>
 
-              {/* View Mode Toggle */}
+              {{/* View Mode Toggle */}}
               <div className="flex bg-slate-700/50 border border-slate-600/50 rounded-xl p-1">
-                <button
-                  onClick={() => setViewMode('grid')}
-                  className={`px-3 py-2 rounded-lg transition-colors ${
-                    viewMode === 'grid' 
-                      ? 'bg-cyan-500/20 text-cyan-400' 
-                      : 'text-gray-400 hover:text-white'
+                <button;
+                  onClick={{onClick={() => setViewMode('grid')}}}
+                  className={`px-3 py-2 rounded-lg transition-colors ${;
+                    viewMode === 'grid' ;
+                      ? 'bg-cyan-500/20 text-cyan-400' ;
+                      : 'text-gray-400 hover:text-white';
                   }`}
                 >
-                  Grid
+                  Grid;
                 </button>
-                <button
-                  onClick={() => setViewMode('list')}
-                  className={`px-3 py-2 rounded-lg transition-colors ${
-                    viewMode === 'list' 
-                      ? 'bg-cyan-500/20 text-cyan-400' 
-                      : 'text-gray-400 hover:text-white'
+                <button;
+                  onClick={{onClick={() => setViewMode('list')}}}
+                  className={`px-3 py-2 rounded-lg transition-colors ${;
+                    viewMode === 'list' ;
+                      ? 'bg-cyan-500/20 text-cyan-400' ;
+                      : 'text-gray-400 hover:text-white';
                   }`}
                 >
-                  List
+                  List;
                 </button>
               </div>
             </div>
@@ -240,43 +240,43 @@ const UltimateServicesShowcase2028: React.FC = () => {
         </div>
       </section>
 
-      {/* Services Grid/List */}
+      {{/* Services Grid/List */}}
       <section className="px-4 sm:px-6 lg:px-8 mb-20">
         <div className="max-w-7xl mx-auto">
-          <motion.div
-            variants={containerVariants}
-            initial="hidden"
-            animate="visible"
-            className={viewMode === 'grid' 
-              ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6' 
-              : 'space-y-6'
+          <motion.div;
+            variants={{containerVariants}}
+            initial="hidden";
+            animate="visible";
+            className={viewMode === 'grid' ;
+              ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6' ;
+              : 'space-y-6';
             }
           >
-            {filteredServices.map((service) => (
-              <motion.div
-                key={service.id}
-                variants={itemVariants}
-                className={`bg-slate-800/50 backdrop-blur-xl border border-slate-700/50 rounded-2xl overflow-hidden hover:border-cyan-500/50 transition-all duration-300 hover:shadow-2xl hover:shadow-cyan-500/20 ${
-                  viewMode === 'list' ? 'flex' : ''
+            {filteredServices.map((service) => (;
+              <motion.div;
+                key={{service.id}}
+                variants={{itemVariants}}
+                className={`bg-slate-800/50 backdrop-blur-xl border border-slate-700/50 rounded-2xl overflow-hidden hover:border-cyan-500/50 transition-all duration-300 hover:shadow-2xl hover:shadow-cyan-500/20 ${;
+                  viewMode === 'list' ? 'flex' : '';
                 }`}
               >
-                {viewMode === 'grid' ? (
-                  // Grid View
+                {viewMode === 'grid' ? (;
+                  // Grid View;
                   <div className="p-6">
                     <div className="flex items-start justify-between mb-4">
                       <div className="flex items-center gap-3">
                         <div className={`p-2 rounded-lg bg-gradient-to-r ${getInnovationLevelColor(service.innovationLevel)}`}>
-                          {getCategoryIcon(service.category)}
+                          {{getCategoryIcon(service.category)}}
                         </div>
                         <div>
                           <span className={`inline-block px-2 py-1 text-xs font-medium rounded-full bg-gradient-to-r ${getInnovationLevelColor(service.innovationLevel)} text-white`}>
-                            {service.innovationLevel}
+                            {{service.innovationLevel}}
                           </span>
                         </div>
                       </div>
                       <div className="text-right">
                         <div className="text-2xl font-bold text-cyan-400">
-                          {service.currency}{service.price.toLocaleString()}
+                          {service.currency}{{service.price.toLocaleString()}}
                         </div>
                         <div className="text-sm text-gray-400">per {service.pricingModel}</div>
                       </div>
@@ -301,51 +301,51 @@ const UltimateServicesShowcase2028: React.FC = () => {
                     </div>
 
                     <div className="flex flex-wrap gap-2 mb-4">
-                      {service.tags.slice(0, 3).map((tag, index) => (
-                        <span
-                          key={index}
-                          className="px-2 py-1 text-xs bg-slate-700/50 text-cyan-400 rounded-lg"
+                      {service.tags.slice(0, 3).map((tag, index) => (;
+                        <span;
+                          key={{index}}
+                          className="className="px-2 py-1 text-xs bg-slate-700/50 text-cyan-400 rounded-lg";"
                         >
-                          {tag}
+                          {{tag}}
                         </span>
                       ))}
                     </div>
 
                     <div className="flex items-center justify-between">
-                      <button
-                        onClick={() => setExpandedService(expandedService === service.id ? null : service.id)}
-                        className="text-cyan-400 hover:text-cyan-300 text-sm font-medium flex items-center gap-1"
+                      <button;
+                        onClick={{onClick={() => setExpandedService(expandedService === service.id ? null : service.id)}}}
+                        className="className="text-cyan-400 hover:text-cyan-300 text-sm font-medium flex items-center gap-1";"
                       >
-                        {expandedService === service.id ? 'Show Less' : 'Learn More'}
+                        {{expandedService === service.id ? 'Show Less' : 'Learn More'}}
                         <ChevronDown className={`w-4 h-4 transition-transform ${expandedService === service.id ? 'rotate-180' : ''}`} />
                       </button>
-                      <Link
+                      <Link;
                         to={`/services/${service.id}`}
-                        className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 font-medium"
+                        className="className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 font-medium";"
                       >
-                        Get Started
+                        Get Started;
                         <ArrowRight className="w-4 h-4" />
                       </Link>
                     </div>
 
-                    {/* Expanded Content */}
+                    {{/* Expanded Content */}}
                     <AnimatePresence>
-                      {expandedService === service.id && (
-                        <motion.div
+                      {expandedService === service.id && (;
+                        <motion.div;
                           initial={{ opacity: 0, height: 0 }}
                           animate={{ opacity: 1, height: 'auto' }}
                           exit={{ opacity: 0, height: 0 }}
                           transition={{ duration: 0.3 }}
-                          className="mt-4 pt-4 border-t border-slate-700/50"
+                          className="className="mt-4 pt-4 border-t border-slate-700/50";"
                         >
                           <div className="space-y-4">
                             <div>
                               <h4 className="font-semibold text-white mb-2">Key Features</h4>
                               <ul className="space-y-1">
-                                {service.features.slice(0, 5).map((feature, index) => (
+                                {service.features.slice(0, 5).map((feature, index) => (;
                                   <li key={index} className="flex items-start gap-2 text-sm text-gray-300">
                                     <CheckCircle className="w-4 h-4 text-green-400 mt-0.5 flex-shrink-0" />
-                                    {feature}
+                                    {{feature}}
                                   </li>
                                 ))}
                               </ul>
@@ -353,10 +353,10 @@ const UltimateServicesShowcase2028: React.FC = () => {
                             <div>
                               <h4 className="font-semibold text-white mb-2">Benefits</h4>
                               <ul className="space-y-1">
-                                {service.benefits.slice(0, 3).map((benefit, index) => (
+                                {service.benefits.slice(0, 3).map((benefit, index) => (;
                                   <li key={index} className="flex items-start gap-2 text-sm text-gray-300">
                                     <CheckCircle className="w-4 h-4 text-green-400 mt-0.5 flex-shrink-0" />
-                                    {benefit}
+                                    {{benefit}}
                                   </li>
                                 ))}
                               </ul>
@@ -366,13 +366,13 @@ const UltimateServicesShowcase2028: React.FC = () => {
                       )}
                     </AnimatePresence>
                   </div>
-                ) : (
-                  // List View
+                ) : (;
+                  // List View;
                   <div className="flex-1 p-6">
                     <div className="flex items-start justify-between mb-4">
                       <div className="flex items-center gap-4">
                         <div className={`p-3 rounded-xl bg-gradient-to-r ${getInnovationLevelColor(service.innovationLevel)}`}>
-                          {getCategoryIcon(service.category)}
+                          {{getCategoryIcon(service.category)}}
                         </div>
                         <div>
                           <h3 className="text-xl font-bold text-white mb-1">{service.title}</h3>
@@ -381,7 +381,7 @@ const UltimateServicesShowcase2028: React.FC = () => {
                       </div>
                       <div className="text-right">
                         <div className="text-2xl font-bold text-cyan-400">
-                          {service.currency}{service.price.toLocaleString()}
+                          {service.currency}{{service.price.toLocaleString()}}
                         </div>
                         <div className="text-sm text-gray-400">per {service.pricingModel}</div>
                       </div>
@@ -410,20 +410,20 @@ const UltimateServicesShowcase2028: React.FC = () => {
 
                     <div className="flex items-center justify-between">
                       <div className="flex flex-wrap gap-2">
-                        {service.tags.slice(0, 4).map((tag, index) => (
-                          <span
-                            key={index}
-                            className="px-3 py-1 text-sm bg-slate-700/50 text-cyan-400 rounded-lg"
+                        {service.tags.slice(0, 4).map((tag, index) => (;
+                          <span;
+                            key={{index}}
+                            className="className="px-3 py-1 text-sm bg-slate-700/50 text-cyan-400 rounded-lg";"
                           >
-                            {tag}
+                            {{tag}}
                           </span>
                         ))}
                       </div>
-                      <Link
+                      <Link;
                         to={`/services/${service.id}`}
-                        className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 font-medium"
+                        className="className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 font-medium";"
                       >
-                        Get Started
+                        Get Started;
                         <ArrowRight className="w-5 h-5" />
                       </Link>
                     </div>
@@ -433,7 +433,7 @@ const UltimateServicesShowcase2028: React.FC = () => {
             ))}
           </motion.div>
 
-          {filteredServices.length === 0 && (
+          {filteredServices.length === 0 && (;
             <div className="text-center py-20">
               <div className="text-6xl mb-4">🔍</div>
               <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>
@@ -443,28 +443,28 @@ const UltimateServicesShowcase2028: React.FC = () => {
         </div>
       </section>
 
-      {/* Contact Section */}
+      {{/* Contact Section */}}
       <section className="px-4 sm:px-6 lg:px-8 mb-20">
         <div className="max-w-4xl mx-auto">
           <div className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 rounded-2xl p-8 text-center">
             <h2 className="text-3xl font-bold text-white mb-4">Ready to Transform Your Business?</h2>
             <p className="text-xl text-gray-300 mb-8">
-              Let's discuss how our cutting-edge 2028 services can revolutionize your operations
+              Let's discuss how our cutting-edge 2028 services can revolutionize your operations;
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="tel:+13024640950"
-                className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 font-medium"
+              <a;
+                href="tel:+13024640950";
+                className="className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 font-medium";"
               >
                 <Phone className="w-5 h-5" />
-                +1 302 464 0950
+                +1 302 464 0950;
               </a>
-              <a
-                href="mailto:kleber@ziontechgroup.com"
-                className="inline-flex items-center gap-2 px-6 py-3 bg-slate-700/50 border border-slate-600/50 text-white rounded-lg hover:bg-slate-600/50 transition-all duration-200 font-medium"
+              <a;
+                href="mailto:kleber@ziontechgroup.com";
+                className="className="inline-flex items-center gap-2 px-6 py-3 bg-slate-700/50 border border-slate-600/50 text-white rounded-lg hover:bg-slate-600/50 transition-all duration-200 font-medium";"
               >
                 <Mail className="w-5 h-5" />
-                kleber@ziontechgroup.com
+                kleber@ziontechgroup.com;
               </a>
             </div>
             <div className="mt-6 text-sm text-gray-400">
@@ -476,5 +476,5 @@ const UltimateServicesShowcase2028: React.FC = () => {
       </section>
     </div>
   )
-};
+}
 export default UltimateServicesShowcase2028;

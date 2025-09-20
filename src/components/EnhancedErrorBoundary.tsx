@@ -56,9 +56,11 @@ class EnhancedErrorBoundary extends Component<Props, State> {
 
   handleRetry = () => {
     this.setState({
-hasError: false,error: null,errorInfo: null,errorId: null
-    
-});
+      hasError: false,
+      error: null,
+      errorInfo: null,
+      errorId: null
+    });
   };
 
   handleReload = () => {

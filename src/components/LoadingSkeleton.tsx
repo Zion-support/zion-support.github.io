@@ -16,10 +16,9 @@ const Skeleton: React.FC<SkeletonProps> = ({
   animated = true 
 }) => {
   const baseClasses = `${height} ${width} bg-gray-200 dark: bg-gray-700 ${rounded ? 'rounded' : ''}`;
-  const classes = `${baseClasses} ${className}`,
-  
+  const classes = `${baseClasses} ${className}`;
   if (!animated) {
-    return <div className={classes} />,
+    return <div className={classes} />;
   }
   
   return (
@@ -59,8 +58,7 @@ export const LoadingSkeleton: React.FC<LoadingSkeletonProps> = ({
               <Skeleton height="h-12" width="w-32" />
             </div>
           </div>
-        ),
-        
+        );
       case 'card':
         return (
           <div className="space-y-4">
@@ -75,8 +73,7 @@ export const LoadingSkeleton: React.FC<LoadingSkeletonProps> = ({
               </div>
             </div>
           </div>
-        ),
-        
+        );
       case 'list':
         return (
           <div className="space-y-4">
@@ -139,7 +136,7 @@ export const LoadingSkeleton: React.FC<LoadingSkeletonProps> = ({
     <div className={`animate-pulse ${className}`}>
       {renderSkeleton()}
     </div>
-  ),
+  );
 },
 
 // Specialized skeleton components

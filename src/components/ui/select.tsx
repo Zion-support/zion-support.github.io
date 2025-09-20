@@ -24,7 +24,7 @@ export function Select({
     >
       {children}
     </select>
-  ),
+  );
 }
 
 interface SelectItemProps {

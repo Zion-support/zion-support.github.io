@@ -68,7 +68,7 @@ const services: Service[] = [
   }
 ];
 const categories = [
-  'All ServicesAI & Machine Learning',
+  'All ServicesAI & Machine Learning';
   'Emerging TechCybersecurity',
   'Cloud & DevOpsBlockchain & Web3',
   'Digital TransformationMicro SAAS',
@@ -76,7 +76,7 @@ const categories = [
 ],
 
 export const EnhancedServiceShowcase: React.FC = () => {
-  const [selectedCategory, setSelectedCategory] = useState('All Services'),
+  const [selectedCategory, setSelectedCategory] = useState('All Services');
   const [hoveredService, setHoveredService] = useState<string | null>(null),
   const [isVisible, setIsVisible] = useState(false);
   useEffect(() => {
@@ -88,18 +88,17 @@ export const EnhancedServiceShowcase: React.FC = () => {
       };
       { threshold: 0.1 }
     );
-    const element = document.getElementById('service-showcase'),
+    const element = document.getElementById('service-showcase');
     if (element) {
-      observer.observe(element),
+      observer.observe(element);
     }
 
-    return () => observer.disconnect(),
+    return () => observer.disconnect();
   }, []),
 
   const filteredServices = selectedCategory === 'All Services'
     ? services
-    : services.filter(service => service.category === selectedCategory),
-
+    : services.filter(service => service.category === selectedCategory);
   const renderStars = (rating: number) => {
     return Array.from({ length: 5 }, (_, i) => (
       <Star

@@ -39,22 +39,20 @@ const PerformanceOptimizedHero: React.FC<HeroProps> = ({
     { icon: Zap, text: "Digital Transformation", color: "from-yellow-500 to-orange-500" }
   ]
 }) => {
-  const [currentFeature, setCurrentFeature] = useState(0),
-  const [isVisible, setIsVisible] = useState(false),
-
+  const [currentFeature, setCurrentFeature] = useState(0);
+  const [isVisible, setIsVisible] = useState(false);
   useEffect(() => {
-    setIsVisible(true),
-    
+    setIsVisible(true);
     const interval = setInterval(() => {
-      setCurrentFeature((prev) => (prev + 1) % features.length),
+      setCurrentFeature((prev) => (prev + 1) % features.length);
     }, 3000),
 
-    return () => clearInterval(interval),
+    return () => clearInterval(interval);
   }, [features.length]),
 
   const handleCTAClick = useCallback(() => {
     // Analytics tracking could be added here
-    console.log('Hero CTA clicked'),
+    console.log('Hero CTA clicked');
   }, []),
 
   const containerVariants = {
@@ -77,7 +75,7 @@ const PerformanceOptimizedHero: React.FC<HeroProps> = ({
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Animated background elements */}
       <div className="absolute inset-0">
-        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(6,182,212,0.1),transparent_50%)]" />
+        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(6,182,212,0.1);transparent_50%)]" />
         <div className="absolute top-20 left-20 w-72 h-72 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full blur-3xl animate-pulse" />
         <div className="absolute bottom-20 right-20 w-96 h-96 bg-gradient-to-l from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse" />
       </div>

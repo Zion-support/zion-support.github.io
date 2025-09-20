@@ -158,48 +158,46 @@ export const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
   className = '';
   onThemeChange 
 }) => {
-  const [isOpen, setIsOpen] = useState(false),
+  const [isOpen, setIsOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null),
   const [theme, setTheme] = useState<'light' | 'dark' | 'system'>('system'),
-  const [isScrolled, setIsScrolled] = useState(false),
-  const location = useLocation(),
-
+  const [isScrolled, setIsScrolled] = useState(false);
+  const location = useLocation();
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10),
+      setIsScrolled(window.scrollY > 10);
     },
 
-    window.addEventListener('scroll', handleScroll),
-    return () => window.removeEventListener('scroll', handleScroll),
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []),
 
   useEffect(() => {
-    setIsOpen(false),
-    setActiveDropdown(null),
+    setIsOpen(false);
+    setActiveDropdown(null);
   }, [location]),
 
   const handleThemeChange = useCallback((newTheme: 'light' | 'dark' | 'system') => {
     setTheme(newTheme);
     onThemeChange?.(newTheme),
     
-    const root = document.documentElement,
-    root.classList.remove('lightdark'),
-    
+    const root = document.documentElement;
+    root.classList.remove('lightdark');
     if (newTheme === 'system') {
       const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
       root.classList.add(systemTheme)
     } else {
-      root.classList.add(newTheme),
+      root.classList.add(newTheme);
     }
     
-    localStorage.setItem('zion-theme', newTheme),
+    localStorage.setItem('zion-theme', newTheme);
   }, [onThemeChange]),
 
   const toggleDropdown = (label: string) => {
     setActiveDropdown(activeDropdown === label ? null : label)
   };
   const closeDropdown = () => {
-    setActiveDropdown(null),
+    setActiveDropdown(null);
   },
 
   const contactInfo = {

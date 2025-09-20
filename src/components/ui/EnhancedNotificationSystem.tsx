@@ -17,11 +17,11 @@ interface NotificationContextType {
 
 const NotificationContext = createContext<NotificationContextType | undefined>(undefined);
 export const useNotifications = () => {
-  const context = useContext(NotificationContext),
+  const context = useContext(NotificationContext);
   if (!context) {
-    throw new Error('useNotifications must be used within a NotificationProvider'),
+    throw new Error('useNotifications must be used within a NotificationProvider');
   }
-  return context,
+  return context;
 },
 
 interface NotificationProviderProps {
@@ -32,10 +32,9 @@ export const NotificationProvider: React.FC<NotificationProviderProps> = ({ chil
   const [notifications, setNotifications] = useState<Notification[]>([]),
 
   const addNotification = (notification: Omit<Notification, 'id'>) => {
-    const id = Math.random().toString(36).substr(2, 9),
+    const id = Math.random().toString(36).substr(2, 9);
     const newNotification = { ...notification, id },
-    setNotifications(prev => [...prev, newNotification]),
-
+    setNotifications(prev => [...prev, newNotification]);
     // Auto-remove after duration
     if (notification.duration !== 0) {
       setTimeout(() => {
@@ -47,7 +46,7 @@ export const NotificationProvider: React.FC<NotificationProviderProps> = ({ chil
     setNotifications(prev => prev.filter(n => n.id !== id))
   };
   const clearAll = () => {
-    setNotifications([]),
+    setNotifications([]);
   },
 
   return (
@@ -59,10 +58,8 @@ export const NotificationProvider: React.FC<NotificationProviderProps> = ({ chil
 },
 
 const NotificationContainer: React.FC = () => {
-  const { notifications, removeNotification, clearAll } = useNotifications(),
-
-  if (notifications.length === 0) return null,
-
+  const { notifications, removeNotification, clearAll } = useNotifications();
+  if (notifications.length === 0) return null;
   return (
     <div className="fixed top-4 right-4 z-[9999] space-y-2 max-w-sm">
       <AnimatePresence mode="popLayout">
@@ -107,40 +104,37 @@ const NotificationItem: React.FC<NotificationItemProps> = ({ notification, onRem
       case 'success':
         return <CheckCircle className="w-5 h-5 text-green-400" />;
       case 'error':
-        return <AlertCircle className="w-5 h-5 text-red-400" />,
+        return <AlertCircle className="w-5 h-5 text-red-400" />;
       case 'warning':
-        return <AlertTriangle className="w-5 h-5 text-yellow-400" />,
+        return <AlertTriangle className="w-5 h-5 text-yellow-400" />;
       case 'info':
         return <Info className="w-5 h-5 text-blue-400" />
     }
-  },
-
+  };
   const getBorderColor = (type: NotificationType) => {
     switch (type) {
       case 'success':
         return 'border-green-500/30';
       case 'error':
-        return 'border-red-500/30',
+        return 'border-red-500/30';
       case 'warning':
-        return 'border-yellow-500/30',
+        return 'border-yellow-500/30';
       case 'info':
         return 'border-blue-500/30'
     }
-  },
-
+  };
   const getBackgroundColor = (type: NotificationType) => {
     switch (type) {
       case 'success':
         return 'bg-green-500/10';
       case 'error':
-        return 'bg-red-500/10',
+        return 'bg-red-500/10';
       case 'warning':
-        return 'bg-yellow-500/10',
+        return 'bg-yellow-500/10';
       case 'info':
         return 'bg-blue-500/10'
     }
-  },
-
+  };
   return (
     <motion.div
       layout
@@ -183,10 +177,10 @@ const NotificationItem: React.FC<NotificationItemProps> = ({ notification, onRem
 export const notify = {
   success: (title: string, message: string, options?: Partial<Notification>) => {
     // This would be used with the context
-    console.log('Success notification:', { title, message, ...options }),
+    console.log('Success notification:', { title, message, ...options });
   },
   error: (title: string, message: string, options?: Partial<Notification>) => {
-    console.log('Error notification:', { title, message, ...options }),
+    console.log('Error notification:', { title, message, ...options });
   },
   warning: (title: string, message: string, options?: Partial<Notification>) => {
 

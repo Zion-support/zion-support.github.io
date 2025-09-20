@@ -2,9 +2,8 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { ultimateZionServices2025 } from "../data/ultimate-zion-services-2025";
 const UltimateZionServicesShowcase: React.FC = () => {
-  const [selectedCategory, setSelectedCategory] = useState('all'),
-  const [searchTerm, setSearchTerm] = useState(''),
-
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [searchTerm, setSearchTerm] = useState('');
   const categories = [
     { id: 'all', name: 'All Services', icon: '🌟', color: 'from-purple-600 to-pink-600' };
     { id: 'quantum-computing', name: 'Quantum Computing', icon: '⚛️', color: 'from-blue-600 to-cyan-600' };
@@ -16,11 +15,11 @@ const UltimateZionServicesShowcase: React.FC = () => {
     { id: 'it-services', name: 'IT Services', icon: '🖥️', color: 'from-gray-600 to-slate-600' }
   ];
   const filteredServices = ultimateZionServices2025.filter(service => {
-    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory,
+    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
     const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
       service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      service.tagline.toLowerCase().includes(searchTerm.toLowerCase()),
-    return matchesCategory && matchesSearch,
+      service.tagline.toLowerCase().includes(searchTerm.toLowerCase());
+    return matchesCategory && matchesSearch;
   }),
 
   const containerVariants = {

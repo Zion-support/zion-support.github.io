@@ -47,15 +47,14 @@ import { CLEAN_INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from "../data/cleanInnovati
 import { ADDITIONAL_INNOVATIVE_SERVICES_2025 } from "../data/additionalInnovativeServices2025";
 import { EMERGING_TECH_SERVICES_2025 } from "../data/emergingTechServices2025";
 const ComprehensiveServicesShowcase2025 = () => {
-  const [activeCategory, setActiveCategory] = useState('all'),
-  const [searchTerm, setSearchTerm] = useState(''),
-  const [sortBy, setSortBy] = useState('innovation'),
-  const [viewMode, setViewMode] = useState('grid'),
-  const [selectedService, setSelectedService] = useState(null),
-
+  const [activeCategory, setActiveCategory] = useState('all');
+  const [searchTerm, setSearchTerm] = useState('');
+  const [sortBy, setSortBy] = useState('innovation');
+  const [viewMode, setViewMode] = useState('grid');
+  const [selectedService, setSelectedService] = useState(null);
   // Combine all services
   const allServices = [
-    ...CLEAN_INNOVATIVE_MICRO_SAAS_SERVICES_2025,
+    ...CLEAN_INNOVATIVE_MICRO_SAAS_SERVICES_2025;
     ...ADDITIONAL_INNOVATIVE_SERVICES_2025,
     ...EMERGING_TECH_SERVICES_2025
   ],
@@ -83,24 +82,24 @@ const ComprehensiveServicesShowcase2025 = () => {
     { id: 'Quantum Internet', name: 'Quantum Internet', count: allServices.filter(s => s.category === 'Quantum Internet').length, icon: '🌐', color: 'from-indigo-600 to-purple-500' }
   ];
   const filteredServices = allServices.filter(service => {
-    const matchesCategory = activeCategory === 'all' || service.category === activeCategory,
+    const matchesCategory = activeCategory === 'all' || service.category === activeCategory;
     const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.category.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase())),
-    return matchesCategory && matchesSearch,
+                         service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
+    return matchesCategory && matchesSearch;
   }),
 
   const sortedServices = [...filteredServices].sort((a, b) => {
     switch (sortBy) {
       case 'innovation':
-        return b.innovationLevel === 'Revolutionary' ? 1 : -1,
+        return b.innovationLevel === 'Revolutionary' ? 1 : -1;
       case 'price':
-        return a.price - b.price,
+        return a.price - b.price;
       case 'roi':
-        return parseInt(b.roi.split('-')[0]) - parseInt(a.roi.split('-')[0]),
+        return parseInt(b.roi.split('-')[0]) - parseInt(a.roi.split('-')[0]);
       case 'name':
-        return a.title.localeCompare(b.title),
+        return a.title.localeCompare(b.title);
       default: return 0
     }
   });
@@ -122,15 +121,15 @@ const ComprehensiveServicesShowcase2025 = () => {
   };
       const getInnovationColor = (level) => {
     switch (level) {
-      case 'Revolutionary': return 'text-purple-600 bg-purple-100',
-      case 'Cutting-edge': return 'text-blue-600 bg-blue-100',
-      case 'Advanced': return 'text-green-600 bg-green-100',
+      case 'Revolutionary': return 'text-purple-600 bg-purple-100';
+      case 'Cutting-edge': return 'text-blue-600 bg-blue-100';
+      case 'Advanced': return 'text-green-600 bg-green-100';
       default: return 'text-gray-600 bg-gray-100'
     }
   };
       const getCategoryIcon = (category) => {
-    const categoryData = categories.find(c => c.id === category),
-    return categoryData?.icon || '🚀',
+    const categoryData = categories.find(c => c.id === category);
+    return categoryData?.icon || '🚀';
   },
 
   return (

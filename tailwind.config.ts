@@ -1,5 +1,5 @@
-import type { Config } from 'tailwindcss',
-import defaultTheme from 'tailwindcss/defaultTheme',
+import type { Config } from 'tailwindcss';
+import defaultTheme from 'tailwindcss/defaultTheme';
 
 const config: Config = {
   darkMode: "class",
@@ -94,10 +94,12 @@ const config: Config = {
         },
         'gradient-x': {
           '0%, 100%': {
-            'background-size': '200% 200%background-position': 'left center'
+            'background-size': '200% 200%',
+            'background-position': 'left center'
           },
           '50%': {
-            'background-size': '200% 200%background-position': 'right center'
+            'background-size': '200% 200%',
+            'background-position': 'right center'
           }
         },
         'float': {
@@ -118,7 +120,12 @@ const config: Config = {
         }
       },
       animation: {
-        'accordion-down': 'accordion-down 0.2s ease-outaccordion-up': 'accordion-up 0.2s ease-outgradient-x': 'gradient-x 15s ease infinitefloat': 'float 6s ease-in-out infiniteglow': 'glow 2s ease-in-out infinite alternateneon-pulse': 'neon-pulse 2s ease-in-out infinite alternate'
+        'accordion-down': 'accordion-down 0.2s ease-out',
+        'accordion-up': 'accordion-up 0.2s ease-out',
+        'gradient-x': 'gradient-x 15s ease infinite',
+        'float': 'float 6s ease-in-out infinite',
+        'glow': 'glow 2s ease-in-out infinite alternate',
+        'neon-pulse': 'neon-pulse 2s ease-in-out infinite alternate'
       }
     }
   },
@@ -127,6 +134,6 @@ const config: Config = {
     require('@tailwindcss/typography'),
     require('@tailwindcss/aspect-ratio')
   ]
-},
+};
 
-export default config,
+export default config;

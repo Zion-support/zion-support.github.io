@@ -28,8 +28,7 @@ export function LoadingSpinner({
   };
   const containerClasses = fullScreen
     ? 'fixed inset-0 flex items-center justify-center bg-zion-slate-dark/95 backdrop-blur-sm z-50'
-    : 'flex items-center justify-center p-8',
-
+    : 'flex items-center justify-center p-8';
   return (
     <div className={containerClasses}>
       <div className="text-center">
@@ -196,7 +195,7 @@ export function SkeletonLoader({ lines = 3, className = '' }: SkeletonLoaderProp
             duration: 1.5,repeat: Infinity,delay: index * 0.1
           }}
           style={{
-            background: 'linear-gradient(90deg, transparent, rgba(14, 165, 233, 0.1), transparent)',
+            background: 'linear-gradient(90deg, transparent, rgba(14, 165, 233, 0.1); transparent)',
             backgroundSize: '200% 100%'
           }}
         />

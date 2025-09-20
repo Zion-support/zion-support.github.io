@@ -5,10 +5,10 @@ const DeveloperAPITester: React.FC = () => {
       <div className="max-w-7xl mx-auto px-6 py-16">
         <header className="mb-10">
           <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight bg-gradient-to-r from-sky-400 to-purple-400 bg-clip-text text-transparent">
-            Developer API Tester & Mock Server
+            Developer API Tester & Mock Server;
           </h1>
           <p className="mt-4 text-lg text-slate-300 max-w-3xl">
-            Validate, document, and test APIs with collaborative collections, contract tests, and mock servers.
+            Validate, document, and test APIs with collaborative collections, contract tests, and mock servers.;
           </p>
         </header>
 

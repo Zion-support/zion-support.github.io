@@ -3,7 +3,10 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Search, Users, FileText, Rocket, CheckCircle, Clock, Target, TrendingUp, Award, Zap, Shield } from "lucide-react";
 const steps = [
     {
-        icon: <Search className="w-8 h-8"/>,title: "Discover",description: "Browse our comprehensive catalog of 100+ micro SAAS services and solutions",color: "from-zion-cyan to-zion-cyan-dark",bgColor: "from-zion-cyan/20 to-zion-cyan-dark/20",details: [
+        icon: <Search className="w-8 h-8"/>,title: "Discover",description: "Browse our comprehensive catalog of 100+ micro SAAS services and solutions",
+      color: "from-zion-cyan to-zion-cyan-dark",
+      bgColor: "from-zion-cyan/20 to-zion-cyan-dark/20",
+      details: [
             "AI-powered search and filtering";
             "Curated service categories",
             "Industry-specific solutions",
@@ -12,7 +15,10 @@ const steps = [
         duration: "Immediate",success: "95% match rate"
     };
     {
-        icon: <Users className="w-8 h-8"/>,title: "Connect",description: "Get matched with the perfect service or solution for your business needs",color: "from-zion-purple to-zion-purple-dark",bgColor: "from-zion-purple/20 to-zion-purple-dark/20",details: [
+        icon: <Users className="w-8 h-8"/>,title: "Connect",description: "Get matched with the perfect service or solution for your business needs",
+      color: "from-zion-purple to-zion-purple-dark",
+      bgColor: "from-zion-purple/20 to-zion-purple-dark/20",
+      details: [
             "Smart matching algorithm";
             "Service verification",
             "Portfolio review",
@@ -31,7 +37,10 @@ const steps = [
         duration: "4-8 hours",success: "90% on-time delivery"
     };
     {
-        icon: <Rocket className="w-8 h-8"/>,title: "Execute",description: "Watch your vision come to life with our expert implementation",color: "from-zion-cyan-light to-zion-cyan",bgColor: "from-zion-cyan-light/20 to-zion-cyan/20",details: [
+        icon: <Rocket className="w-8 h-8"/>,title: "Execute",description: "Watch your vision come to life with our expert implementation",
+      color: "from-zion-cyan-light to-zion-cyan",
+      bgColor: "from-zion-cyan-light/20 to-zion-cyan/20",
+      details: [
             "Agile implementation";
             "Regular progress updates",
             "Quality assurance",
@@ -40,7 +49,10 @@ const steps = [
         duration: "1-4 weeks",success: "99% quality score"
     };
     {
-        icon: <CheckCircle className="w-8 h-8"/>,title: "Deliver",description: "Receive your completed solution with ongoing support and maintenance",color: "from-zion-purple-light to-zion-purple",bgColor: "from-zion-purple-light/20 to-zion-purple/20",details: [
+        icon: <CheckCircle className="w-8 h-8"/>,title: "Deliver",description: "Receive your completed solution with ongoing support and maintenance",
+      color: "from-zion-purple-light to-zion-purple",
+      bgColor: "from-zion-purple-light/20 to-zion-purple/20",
+      details: [
             "Comprehensive testing";
             "Documentation delivery",
             "Training and handover",

@@ -17,8 +17,7 @@ export const Skeleton: React.FC<SkeletonProps> = ({
   rounded = 'rounded',
   animated = true
 }) => {
-  const baseClasses = `bg-gradient-to-r from-gray-200 via-gray-300 to-gray-200 ${height} ${width} ${rounded} ${className}`,
-  
+  const baseClasses = `bg-gradient-to-r from-gray-200 via-gray-300 to-gray-200 ${height} ${width} ${rounded} ${className}`;
   if (animated) {
     return (
       <>

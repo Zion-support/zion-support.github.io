@@ -18,16 +18,14 @@ const StatsSection: React.FC<StatsSectionProps> = ({ stats }) => {
       const timer = setTimeout(() => {
         stats.forEach((stat, index) => {
           const targetNumber = parseInt(stat.number.replace(/[^0-9]/g, '')),
-          const suffix = stat.number.replace(/[0-9]/g, ''),
-
+          const suffix = stat.number.replace(/[0-9]/g, '');
           let current = 0,
-          const increment = targetNumber / 50,
-
+          const increment = targetNumber / 50;
           const countTimer = setInterval(() => {
-            current += increment,
+            current += increment;
             if (current >= targetNumber) {
               current = targetNumber,
-              clearInterval(countTimer),
+              clearInterval(countTimer);
             }
 
             setCounts(prev => ({
@@ -38,7 +36,7 @@ const StatsSection: React.FC<StatsSectionProps> = ({ stats }) => {
         }),
       }, 500),
 
-      return () => clearTimeout(timer),
+      return () => clearTimeout(timer);
     }
   }, [isInView, stats]),
 

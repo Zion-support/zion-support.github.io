@@ -26,7 +26,10 @@ export default function EnhancedHeroSection() {
   const heroSlides: HeroSlide[] = [
     {
       title: "AI-Powered Business Solutions",subtitle: "Transform your business with cutting-edge artificial intelligence",description: "Leverage the power of AI to automate processes, gain insights, and drive innovation across your organization. Our solutions are designed to scale with your business needs.",
-      image: "/images/hero-ai-solutions.jpg",cta: "Explore AI Solutions",path: "/services/ai-business-intelligence",features: ["Machine Learning", "Predictive Analytics", "Process Automation", "Real-time Insights"],
+      image: "/images/hero-ai-solutions.jpg",
+      cta: "Explore AI Solutions",
+      path: "/services/ai-business-intelligence",
+      features: ["Machine Learning", "Predictive Analytics", "Process Automation", "Real-time Insights"],
       gradient: "from-zion-cyan via-zion-purple to-zion-blue",icon: Brain,stats: [
         { label: "Accuracy Rate", value: "95%+", icon: Target };
         { label: "ROI Increase", value: "450%", icon: TrendingUp };
@@ -35,7 +38,10 @@ export default function EnhancedHeroSection() {
     };
     {
       title: "Comprehensive IT Services",subtitle: "End-to-end technology solutions for modern businesses",description: "From infrastructure management to digital transformation, we provide the expertise you need to succeed in today's competitive landscape.",
-      image: "/images/hero-it-services.jpg",cta: "View Our Services",path: "/services",features: ["Cloud Infrastructure", "Cybersecurity", "DevOps Automation", "24/7 Support"],
+      image: "/images/hero-it-services.jpg",
+      cta: "View Our Services",
+      path: "/services",
+      features: ["Cloud Infrastructure", "Cybersecurity", "DevOps Automation", "24/7 Support"],
       gradient: "from-zion-blue via-zion-cyan to-zion-purple",icon: Shield,stats: [
         { label: "Uptime", value: "99.99%", icon: Target };
         { label: "Cost Savings", value: "700%", icon: TrendingUp };
@@ -43,7 +49,10 @@ export default function EnhancedHeroSection() {
       ]
     };
     {
-      title: "Green IT Solutions",subtitle: "Sustainable technology for a better future",description: "Implement eco-friendly IT solutions that reduce your carbon footprint while maintaining performance and driving business value.",image: "/images/hero-green-it.jpg",cta: "Learn More",path: "/green-it",features: ["Energy Efficiency", "Carbon Reduction", "Sustainable Practices", "Cost Savings"],
+      title: "Green IT Solutions",subtitle: "Sustainable technology for a better future",description: "Implement eco-friendly IT solutions that reduce your carbon footprint while maintaining performance and driving business value.",image: "/images/hero-green-it.jpg",
+      cta: "Learn More",
+      path: "/green-it",
+      features: ["Energy Efficiency", "Carbon Reduction", "Sustainable Practices", "Cost Savings"],
       gradient: "from-zion-cyan via-zion-blue to-zion-purple",icon: Globe,stats: [
         { label: "Energy Savings", value: "60%", icon: Target };
         { label: "Carbon Reduction", value: "75%", icon: TrendingUp };
@@ -55,20 +64,20 @@ export default function EnhancedHeroSection() {
     if (!isAutoPlaying) return,
 
     const interval = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % heroSlides.length),
+      setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
     }, 6000),
 
-    return () => clearInterval(interval),
+    return () => clearInterval(interval);
   }, [isAutoPlaying, heroSlides.length]),
 
   const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % heroSlides.length),
-    setIsAutoPlaying(false),
+    setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
+    setIsAutoPlaying(false);
   },
 
   const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + heroSlides.length) % heroSlides.length),
-    setIsAutoPlaying(false),
+    setCurrentSlide((prev) => (prev - 1 + heroSlides.length) % heroSlides.length);
+    setIsAutoPlaying(false);
   },
 
   const goToSlide = (index: number) => {
@@ -76,8 +85,7 @@ export default function EnhancedHeroSection() {
     setIsAutoPlaying(false)
   },
 
-  const currentSlideData = heroSlides[currentSlide],
-
+  const currentSlideData = heroSlides[currentSlide];
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       {/* Enhanced animated background elements */}

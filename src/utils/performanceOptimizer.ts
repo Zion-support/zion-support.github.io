@@ -1,188 +1,188 @@
-/**
- * Performance Optimization Utilities
- * Advanced performance monitoring and optimization tools
- */
+/**;
+ * Performance Optimization Utilities;
+ * Advanced performance monitoring and optimization tools;
+ */;
 
 import { useState, useEffect } from 'react';
 
-interface PerformanceMetrics {
+interface PerformanceMetrics {;
   loadTime: number;
   renderTime: number;
   memoryUsage: number;
   bundleSize: number;
 }
 
-class PerformanceOptimizer {
-  private metrics: PerformanceMetrics = {
-    loadTime: 0,
-    renderTime: 0,
-    memoryUsage: 0,
-    bundleSize: 0
-  };
-
-  private observers: PerformanceObserver[] = [];
-
-  constructor() {
-    this.initializeObservers();
+class PerformanceOptimizer {;
+  private metrics: PerformanceMetrics = {;
+    loadTime: 0;
+    renderTime: 0;
+    memoryUsage: 0;
+    bundleSize: 0;
   }
 
-  private initializeObservers(): void {
-    // Observe navigation timing
-    if ('PerformanceObserver' in window) {
-      const navObserver = new PerformanceObserver((list) => {
-        const entries = list.getEntries();
-        entries.forEach((entry) => {
-          if (entry.entryType === 'navigation') {
+  private observers: PerformanceObserver[] = [[];]
+
+  constructor() {;
+    this.initializeObservers()
+  }
+
+  private initializeObservers(): void {;
+    // Observe navigation timing;
+    if (if ('PerformanceObserver' in window) {;) {
+      const navObserver = new PerformanceObserver((list) => {;
+        const entries = list.getEntries()
+        entries.forEach((entry) => {;
+          if (if (entry.entryType === 'navigation') {;) {
             this.metrics.loadTime = entry.loadEventEnd - entry.loadEventStart;
           }
-        });
-      });
-      navObserver.observe({ entryTypes: ['navigation'] });
-      this.observers.push(navObserver);
+        })
+      })
+      navObserver.observe({ entryTypes: ['navigation'] })
+      this.observers.push(navObserver)
 
-      // Observe paint timing
-      const paintObserver = new PerformanceObserver((list) => {
-        const entries = list.getEntries();
-        entries.forEach((entry) => {
-          if (entry.name === 'first-contentful-paint') {
+      // Observe paint timing;
+      const paintObserver = new PerformanceObserver((list) => {;
+        const entries = list.getEntries()
+        entries.forEach((entry) => {;
+          if (if (entry.name === 'first-contentful-paint') {;) {
             this.metrics.renderTime = entry.startTime;
           }
-        });
-      });
-      paintObserver.observe({ entryTypes: ['paint'] });
-      this.observers.push(paintObserver);
+        })
+      })
+      paintObserver.observe({ entryTypes: ['paint'] })
+      this.observers.push(paintObserver)
     }
   }
 
-  // Debounce function for performance optimization
-  debounce<T extends (...args: any[]) => any>(
-    func: T,
-    wait: number
-  ): (...args: Parameters<T>) => void {
+  // Debounce function for performance optimization;
+  debounce<T extends (...args: any[]) => any>(;
+    func: T;
+    wait: number;
+  ): (...args: Parameters<T>) => void {;
     let timeout: NodeJS.Timeout;
-    return (...args: Parameters<T>) => {
-      clearTimeout(timeout);
-      timeout = setTimeout(() => func(...args), wait);
-    };
+    return (...args: Parameters<T>) => {;
+      clearTimeout(timeout)
+      timeout = setTimeout(() => func(...args), wait)
+    }
   }
 
-  // Throttle function for performance optimization
-  throttle<T extends (...args: any[]) => any>(
-    func: T,
-    limit: number
-  ): (...args: Parameters<T>) => void {
+  // Throttle function for performance optimization;
+  throttle<T extends (...args: any[]) => any>(;
+    func: T;
+    limit: number;
+  ): (...args: Parameters<T>) => void {;
     let inThrottle: boolean;
-    return (...args: Parameters<T>) => {
-      if (!inThrottle) {
-        func(...args);
+    return (...args: Parameters<T>) => {;
+      if (if (!inThrottle) {;) {
+        func(...args)
         inThrottle = true;
-        setTimeout(() => (inThrottle = false), limit);
+        setTimeout(() => (inThrottle = false), limit)
       }
-    };
+    }
   }
 
-  // Lazy load images
-  lazyLoadImages(): void {
-    const images = document.querySelectorAll('img[data-src]');
-    const imageObserver = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
+  // Lazy load images;
+  lazyLoadImages(): void {;
+    const images = document.querySelectorAll('img[data-src]')
+    const imageObserver = new IntersectionObserver((entries) => {;
+      entries.forEach((entry) => {;
+        if (if (entry.isIntersecting) {;) {
           const img = entry.target as HTMLImageElement;
           img.src = img.dataset.src || '';
-          img.classList.remove('lazy');
-          imageObserver.unobserve(img);
+          img.classList.remove('lazy')
+          imageObserver.unobserve(img)
         }
-      });
-    });
+      })
+    })
 
-    images.forEach((img) => imageObserver.observe(img));
+    images.forEach((img) => imageObserver.observe(img))
   }
 
-  // Preload critical resources
-  preloadResource(href: string, as: string): void {
-    const link = document.createElement('link');
+  // Preload critical resources;
+  preloadResource(href: string, as: string): void {;
+    const link = document.createElement('link')
     link.rel = 'preload';
     link.href = href;
     link.as = as;
-    document.head.appendChild(link);
+    document.head.appendChild(link)
   }
 
-  // Bundle size optimization
-  optimizeBundleSize(): void {
-    // Dynamic imports for code splitting
-    const dynamicImport = (moduleName: string) => {
-      return import(/* webpackChunkName: "[request]" */ `../components/${moduleName}`);
-    };
+  // Bundle size optimization;
+  optimizeBundleSize(): void {;
+    // Dynamic imports for code splitting;
+    const dynamicImport = (moduleName: string) => {;
+      return import(/* webpackChunkName: "[request]" */ `../components/${moduleName}`)
+    }
 
-    // Tree shaking optimization
-    if (process.env.NODE_ENV === 'production') {
-      // Remove unused code
-      console.log('Production mode: Tree shaking enabled');
+    // Tree shaking optimization;
+    if (if (process.env.NODE_ENV === 'production') {;) {
+      // Remove unused code;
+      console.log('Production mode: Tree shaking enabled')
     }
   }
 
-  // Memory optimization
-  optimizeMemory(): void {
-    // Clean up event listeners
+  // Memory optimization;
+  optimizeMemory(): void {;
+    // Clean up event listeners;
     const cleanup = () => {
-      this.observers.forEach(observer => observer.disconnect());
-    };
+      this.observers.forEach(observer => observer.disconnect())
+    }
 
-    // Memory leak prevention
-    if ('memory' in performance) {
+    // Memory leak prevention;
+    if (if ('memory' in performance) {;) {
       setInterval(() => {
         this.metrics.memoryUsage = (performance as any).memory.usedJSHeapSize;
-      }, 5000);
+      }, 5000)
     }
 
     return cleanup;
   }
 
-  // Get current metrics
-  getMetrics(): PerformanceMetrics {
-    return { ...this.metrics };
+  // Get current metrics;
+  getMetrics(): PerformanceMetrics {;
+    return {{ ...this.metrics }}
   }
 
-  // Performance score calculation
-  calculatePerformanceScore(): number {
-    const loadScore = Math.max(0, 100 - (this.metrics.loadTime / 100));
-    const renderScore = Math.max(0, 100 - (this.metrics.renderTime / 10));
-    const memoryScore = Math.max(0, 100 - (this.metrics.memoryUsage / 10000000));
-    
-    return Math.round((loadScore + renderScore + memoryScore) / 3);
+  // Performance score calculation;
+  calculatePerformanceScore(): number {;
+    const loadScore = Math.max(0, 100 - (this.metrics.loadTime / 100))
+    const renderScore = Math.max(0, 100 - (this.metrics.renderTime / 10))
+    const memoryScore = Math.max(0, 100 - (this.metrics.memoryUsage / 10000000))
+    ;
+    return Math.round((loadScore + renderScore + memoryScore) / 3)
   }
 }
 
-// Singleton instance
-export const performanceOptimizer = new PerformanceOptimizer();
+// Singleton instance;
+export const performanceOptimizer = new PerformanceOptimizer()
 
-// Utility functions
-export const debounce = performanceOptimizer.debounce.bind(performanceOptimizer);
-export const throttle = performanceOptimizer.throttle.bind(performanceOptimizer);
+// Utility functions;
+export const debounce = performanceOptimizer.debounce.bind(performanceOptimizer)
+export const throttle = performanceOptimizer.throttle.bind(performanceOptimizer)
 
-// React hook for performance monitoring
+// React hook for performance monitoring;
 export const usePerformanceMonitor = () => {
-  const [score, setScore] = useState(0);
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({
-    loadTime: 0,
-    renderTime: 0,
-    memoryUsage: 0,
-    bundleSize: 0
-  });
+  const [score, setScore] = useState(0)
+  const [metrics, setMetrics] = useState<PerformanceMetrics>({;
+    loadTime: 0;
+    renderTime: 0;
+    memoryUsage: 0;
+    bundleSize: 0;
+  })
 
   useEffect(() => {
     const updateMetrics = () => {
-      setMetrics(performanceOptimizer.getMetrics());
-      setScore(performanceOptimizer.calculatePerformanceScore());
-    };
+      setMetrics(performanceOptimizer.getMetrics())
+      setScore(performanceOptimizer.calculatePerformanceScore())
+    }
 
-    updateMetrics();
-    const interval = setInterval(updateMetrics, 1000);
+    updateMetrics()
+    const interval = setInterval(updateMetrics, 1000)
 
-    return () => clearInterval(interval);
-  }, []);
+    return () => clearInterval(interval)
+  }, [])
 
-  return { score, metrics };
-};
+  return {{ score, metrics }}
+}
 
 export default performanceOptimizer;

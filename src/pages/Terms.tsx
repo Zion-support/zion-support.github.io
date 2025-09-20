@@ -1,43 +1,43 @@
 import React from "react";
 import { motion } from "framer-motion";
-import {
-  FileText,
-  Shield,
-  Users,
-  Globe,
-  CheckCircle,
-  AlertTriangle,
-  Scale,
-  Lock,
-  Mail,
-  Phone,
-  MapPin,
-  Calendar,
-  CheckCircle,
-  AlertTriangle,
-  Lock,
-  Eye,
-  Database,
-  Zap,
-  Rocket,
-  Brain,
-  Cpu
+import {;
+  FileText;
+  Shield;
+  Users;
+  Globe;
+  CheckCircle;
+  AlertTriangle;
+  Scale;
+  Lock;
+  Mail;
+  Phone;
+  MapPin;
+  Calendar;
+  CheckCircle;
+  AlertTriangle;
+  Lock;
+  Eye;
+  Database;
+  Zap;
+  Rocket;
+  Brain;
+  Cpu;
 } from "lucide-react";
 import { SEO } from "../components/SEO";
 const Terms: React.FC = () => {
-  const currentYear = new Date().getFullYear();
+  const currentYear = new Date().getFullYear()
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO
-        title="Terms of Service - Zion Tech Group"
-        description="Read Zion Tech Group's terms of service. Understand your rights and responsibilities when using our technology services and solutions."
+      <SEO;
+        title="Terms of Service - Zion Tech Group";
+        description="Read Zion Tech Group's terms of service. Understand your rights and responsibilities when using our technology services and solutions.";
       />
 
-      {/* Hero Section */}
+      {{/* Hero Section */}}
       <section className="relative pt-32 pb-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-blue-500/10"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <motion.div
+          <motion.div;
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -48,42 +48,42 @@ const Terms: React.FC = () => {
               </div>
             </div>
             <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent mb-6">
-              Terms of Service
+              Terms of Service;
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              These terms govern your use of our services. Please read them carefully
-              before using our technology solutions.
+              These terms govern your use of our services. Please read them carefully;
+              before using our technology solutions.;
             </p>
           </motion.div>
         </div>
       </section>
 
-      {/* Key Terms Overview */}
+      {{/* Key Terms Overview */}}
       <section className="py-20">
         <div className="container mx-auto px-6">
-          <motion.div
+          <motion.div;
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-center mb-16"
+            className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-6">
-              Key Terms Overview
+              Key Terms Overview;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Understanding these fundamental terms helps ensure a smooth
-              relationship between you and Zion Tech Group.
+              Understanding these fundamental terms helps ensure a smooth;
+              relationship between you and Zion Tech Group.;
             </p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {termsSections.map((section, index) => (
-              <motion.div
-                key={index}
+            {termsSections.map((section, index) => (;
+              <motion.div;
+                key={{index}}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-slate-800/50 p-6 rounded-xl border border-slate-700/50 hover:border-blue-400/50 transition-all duration-300 hover:scale-105"
+                className="className="bg-slate-800/50 p-6 rounded-xl border border-slate-700/50 hover:border-blue-400/50 transition-all duration-300 hover:scale-105";"
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-blue-400/20 to-purple-500/20 rounded-xl flex items-center justify-center mb-6">
                   <section.icon className="w-8 h-8 text-blue-400" />
@@ -96,32 +96,32 @@ const Terms: React.FC = () => {
         </div>
       </section>
 
-      {/* User Obligations */}
+      {{/* User Obligations */}}
       <section className="py-20 bg-slate-800/30">
         <div className="container mx-auto px-6">
-          <motion.div
+          <motion.div;
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-center mb-16"
+            className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-6">
-              Your Obligations
+              Your Obligations;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              As a user of our services, you have certain responsibilities
-              that help ensure a secure and productive environment.
+              As a user of our services, you have certain responsibilities;
+              that help ensure a secure and productive environment.;
             </p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {userObligations.map((obligation, index) => (
-              <motion.div
-                key={index}
+            {userObligations.map((obligation, index) => (;
+              <motion.div;
+                key={{index}}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-slate-800/50 p-6 rounded-xl border border-slate-700/50 hover:border-blue-400/50 transition-all duration-300 hover:scale-105"
+                className="className="bg-slate-800/50 p-6 rounded-xl border border-slate-700/50 hover:border-blue-400/50 transition-all duration-300 hover:scale-105";"
               >
                 <h3 className="text-xl font-semibold text-white mb-4">{obligation.obligation}</h3>
                 <p className="text-gray-300">{obligation.description}</p>
@@ -131,27 +131,27 @@ const Terms: React.FC = () => {
         </div>
       </section>
 
-      {/* Prohibited Activities */}
+      {{/* Prohibited Activities */}}
       <section className="py-20">
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <motion.div
+            <motion.div;
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
-              className="bg-white/5 backdrop-blur-sm border border-cyan-400/20 rounded-2xl p-8 mb-8"
+              className="className="bg-white/5 backdrop-blur-sm border border-cyan-400/20 rounded-2xl p-8 mb-8";"
             >
               <h2 className="text-2xl font-bold text-white mb-4 flex items-center space-x-2">
                 <Calendar className="w-6 h-6 text-cyan-400" />
                 <span>Last Updated</span>
               </h2>
               <p className="text-lg text-gray-300 mb-6">
-                To maintain a secure and professional environment, certain activities
-                are strictly prohibited when using our services.
+                To maintain a secure and professional environment, certain activities;
+                are strictly prohibited when using our services.;
               </p>
               <div className="space-y-4">
-                {prohibitedActivities.map((activity, index) => (
+                {prohibitedActivities.map((activity, index) => (;
                   <div key={index} className="flex items-start space-x-3">
                     <AlertTriangle className="w-5 h-5 text-red-400 mt-1 flex-shrink-0" />
                     <span className="text-gray-300 text-sm">{activity}</span>
@@ -160,12 +160,12 @@ const Terms: React.FC = () => {
               </div>
             </motion.div>
 
-            <motion.div
+            <motion.div;
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
               viewport={{ once: true }}
-              className="bg-white/5 backdrop-blur-sm border border-cyan-400/20 rounded-2xl p-8 mb-8"
+              className="className="bg-white/5 backdrop-blur-sm border border-cyan-400/20 rounded-2xl p-8 mb-8";"
             >
               <div className="bg-slate-800/50 p-8 rounded-2xl border border-slate-700/50">
                 <div className="text-center mb-6">
@@ -192,41 +192,41 @@ const Terms: React.FC = () => {
         </div>
       </section>
 
-      {/* Service Levels */}
+      {{/* Service Levels */}}
       <section className="py-20 bg-slate-800/30">
         <div className="container mx-auto px-6">
-          <motion.div
+          <motion.div;
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-center mb-16"
+            className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-6">
-              Service Levels & Support
+              Service Levels & Support;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              We provide different levels of support to meet your business needs
-              and ensure optimal service delivery.
+              We provide different levels of support to meet your business needs;
+              and ensure optimal service delivery.;
             </p>
           </motion.div>
 
           <div className="max-w-4xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {serviceLevels.map((level, index) => (
-                <motion.div
-                  key={index}
+              {serviceLevels.map((level, index) => (;
+                <motion.div;
+                  key={{index}}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className={`bg-slate-800/50 p-6 rounded-xl border ${
-                    level.included ? 'border-blue-400/50' : 'border-slate-700/50'
+                  className={`bg-slate-800/50 p-6 rounded-xl border ${;
+                    level.included ? 'border-blue-400/50' : 'border-slate-700/50';
                   } hover:border-blue-400/50 transition-all duration-300 hover:scale-105`}
                 >
                   <div className="text-center mb-4">
                     <h3 className="text-xl font-semibold text-white mb-2">{level.level}</h3>
-                    {level.included && (
+                    {level.included && (;
                       <span className="inline-block px-3 py-1 bg-blue-400/20 text-blue-400 text-sm rounded-full">
-                        Included
+                        Included;
                       </span>
                     )}
                   </div>
@@ -242,21 +242,21 @@ const Terms: React.FC = () => {
         </div>
       </section>
 
-      {/* Intellectual Property */}
+      {{/* Intellectual Property */}}
       <section className="py-20">
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <motion.div
+            <motion.div;
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
             >
               <h2 className="text-4xl font-bold text-white mb-6">
-                Intellectual Property Rights
+                Intellectual Property Rights;
               </h2>
               <p className="text-lg text-gray-300 mb-6">
-                Understanding intellectual property rights is crucial for both
-                protecting our innovations and respecting your contributions.
+                Understanding intellectual property rights is crucial for both;
+                protecting our innovations and respecting your contributions.;
               </p>
               <div className="space-y-4">
                 <div className="flex items-start space-x-3">
@@ -269,12 +269,12 @@ const Terms: React.FC = () => {
               </div>
             </motion.div>
 
-            <motion.div
+            <motion.div;
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
-              className="bg-white/5 backdrop-blur-sm border border-cyan-400/20 rounded-2xl p-8 mb-8"
+              className="className="bg-white/5 backdrop-blur-sm border border-cyan-400/20 rounded-2xl p-8 mb-8";"
             >
               <h2 className="text-2xl font-bold text-white mb-4 flex items-center space-x-2">
                 <Zap className="w-6 h-6 text-cyan-400" />
@@ -315,12 +315,12 @@ const Terms: React.FC = () => {
               </div>
             </motion.div>
 
-            <motion.div
+            <motion.div;
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
               viewport={{ once: true }}
-              className="bg-white/5 backdrop-blur-sm border border-cyan-400/20 rounded-2xl p-8 mb-8"
+              className="className="bg-white/5 backdrop-blur-sm border border-cyan-400/20 rounded-2xl p-8 mb-8";"
             >
               <h2 className="text-2xl font-bold text-white mb-4 flex items-center space-x-2">
                 <Users className="w-6 h-6 text-cyan-400" />
@@ -358,12 +358,12 @@ const Terms: React.FC = () => {
               </div>
             </motion.div>
 
-            <motion.div
+            <motion.div;
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
               viewport={{ once: true }}
-              className="bg-white/5 backdrop-blur-sm border border-cyan-400/20 rounded-2xl p-8 mb-8"
+              className="className="bg-white/5 backdrop-blur-sm border border-cyan-400/20 rounded-2xl p-8 mb-8";"
             >
               <h2 className="text-2xl font-bold text-white mb-4 flex items-center space-x-2">
                 <Lock className="w-6 h-6 text-cyan-400" />
@@ -394,12 +394,12 @@ const Terms: React.FC = () => {
               </div>
             </motion.div>
 
-            <motion.div
+            <motion.div;
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.5 }}
               viewport={{ once: true }}
-              className="bg-white/5 backdrop-blur-sm border border-cyan-400/20 rounded-2xl p-8 mb-8"
+              className="className="bg-white/5 backdrop-blur-sm border border-cyan-400/20 rounded-2xl p-8 mb-8";"
             >
               <h2 className="text-2xl font-bold text-white mb-4 flex items-center space-x-2">
                 <Shield className="w-6 h-6 text-cyan-400" />
@@ -431,12 +431,12 @@ const Terms: React.FC = () => {
               </div>
             </motion.div>
 
-            <motion.div
+            <motion.div;
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.6 }}
               viewport={{ once: true }}
-              className="bg-white/5 backdrop-blur-sm border border-cyan-400/20 rounded-2xl p-8 mb-8"
+              className="className="bg-white/5 backdrop-blur-sm border border-cyan-400/20 rounded-2xl p-8 mb-8";"
             >
               <h2 className="text-2xl font-bold text-white mb-4 flex items-center space-x-2">
                 <AlertTriangle className="w-6 h-6 text-yellow-400" />
@@ -467,12 +467,12 @@ const Terms: React.FC = () => {
               </div>
             </motion.div>
 
-            <motion.div
+            <motion.div;
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.7 }}
               viewport={{ once: true }}
-              className="bg-white/5 backdrop-blur-sm border border-cyan-400/20 rounded-2xl p-8 mb-8"
+              className="className="bg-white/5 backdrop-blur-sm border border-cyan-400/20 rounded-2xl p-8 mb-8";"
             >
               <h2 className="text-2xl font-bold text-white mb-4 flex items-center space-x-2">
                 <Eye className="w-6 h-6 text-cyan-400" />
@@ -503,12 +503,12 @@ const Terms: React.FC = () => {
               </div>
             </motion.div>
 
-            <motion.div
+            <motion.div;
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.8 }}
               viewport={{ once: true }}
-              className="bg-white/5 backdrop-blur-sm border border-cyan-400/20 rounded-2xl p-8 mb-8"
+              className="className="bg-white/5 backdrop-blur-sm border border-cyan-400/20 rounded-2xl p-8 mb-8";"
             >
               <h2 className="text-2xl font-bold text-white mb-4 flex items-center space-x-2">
                 <Database className="w-6 h-6 text-cyan-400" />
@@ -533,12 +533,12 @@ const Terms: React.FC = () => {
               </div>
             </motion.div>
 
-            <motion.div
+            <motion.div;
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.9 }}
               viewport={{ once: true }}
-              className="bg-white/5 backdrop-blur-sm border border-cyan-400/20 rounded-2xl p-8 mb-8"
+              className="className="bg-white/5 backdrop-blur-sm border border-cyan-400/20 rounded-2xl p-8 mb-8";"
             >
               <h2 className="text-2xl font-bold text-white mb-4 flex items-center space-x-2">
                 <Mail className="w-6 h-6 text-cyan-400" />
@@ -566,21 +566,21 @@ const Terms: React.FC = () => {
         </div>
       </section>
 
-      {/* Limitation of Liability */}
+      {{/* Limitation of Liability */}}
       <section className="py-20 bg-slate-800/30">
         <div className="container mx-auto px-6">
-          <motion.div
+          <motion.div;
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-center mb-16"
+            className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-6">
-              Limitation of Liability
+              Limitation of Liability;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              We strive to provide reliable services, but it's important to understand
-              the scope of our liability and your responsibilities.
+              We strive to provide reliable services, but it's important to understand;
+              the scope of our liability and your responsibilities.;
             </p>
           </motion.div>
 
@@ -627,21 +627,21 @@ const Terms: React.FC = () => {
         </div>
       </section>
 
-      {/* Termination */}
+      {{/* Termination */}}
       <section className="py-20">
         <div className="container mx-auto px-6">
-          <motion.div
+          <motion.div;
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-center mb-16"
+            className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-6">
-              Termination & Cancellation
+              Termination & Cancellation;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Understanding the terms for ending our service relationship
-              helps ensure a smooth transition for all parties.
+              Understanding the terms for ending our service relationship;
+              helps ensure a smooth transition for all parties.;
             </p>
           </motion.div>
 
@@ -686,21 +686,21 @@ const Terms: React.FC = () => {
         </div>
       </section>
 
-      {/* Contact Information */}
+      {{/* Contact Information */}}
       <section className="py-20 bg-slate-800/30">
         <div className="container mx-auto px-6">
-          <motion.div
+          <motion.div;
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-center mb-16"
+            className="className="text-center mb-16";"
           >
             <h2 className="text-4xl font-bold text-white mb-6">
-              Questions About Terms?
+              Questions About Terms?;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               If you have questions about these terms or need clarification;
-              please contact our legal team.
+              please contact our legal team.;
             </p>
           </motion.div>
 
@@ -726,33 +726,33 @@ const Terms: React.FC = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
+      {{/* CTA Section */}}
       <section className="py-20 bg-gradient-to-r from-blue-500/10 to-purple-500/10">
         <div className="container mx-auto px-6 text-center">
-          <motion.div
+          <motion.div;
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
             <h2 className="text-4xl font-bold text-white mb-6">
-              Ready to Get Started?
+              Ready to Get Started?;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              By using our services, you agree to these terms.
-              Contact us if you need any clarification or have questions.
+              By using our services, you agree to these terms.;
+              Contact us if you need any clarification or have questions.;
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <a
-                href="/contact"
-                className="px-8 py-4 bg-gradient-to-r from-blue-400 to-purple-500 text-white rounded-lg font-semibold hover: from-blue-500 hover:to-purple-600 transition-all duration-300 hover:scale-105"
+              <a;
+                href="/contact";
+                className="className="px-8 py-4 bg-gradient-to-r from-blue-400 to-purple-500 text-white rounded-lg font-semibold hover: from-blue-500 hover:to-purple-600 transition-all duration-300 hover:scale-105";"
               >
-                Contact Us
+                Contact Us;
               </a>
-              <a
-                href="/privacy"
-                className="px-8 py-4 border border-blue-400 text-blue-400 rounded-lg font-semibold hover:bg-blue-400 hover:text-white transition-all duration-300"
+              <a;
+                href="/privacy";
+                className="className="px-8 py-4 border border-blue-400 text-blue-400 rounded-lg font-semibold hover:bg-blue-400 hover:text-white transition-all duration-300";"
               >
-                Privacy Policy
+                Privacy Policy;
               </a>
             </div>
           </motion.div>
@@ -760,5 +760,5 @@ const Terms: React.FC = () => {
       </section>
     </div>
   )
-};
+}
 export default Terms;

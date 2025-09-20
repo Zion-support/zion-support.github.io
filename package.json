@@ -20,7 +20,7 @@
     "start:backend": "cd server && npm start",
     "start:hybrid": "cd server && npm start",
     "postbuild": "echo 'Build completed successfully'",
-    "lint": "eslint .",
+    "lint": "eslint src/",
     "lint:backend": "cd server && npm run lint",
     "lint:all": "npm run lint && npm run lint:backend",
     "type-check": "tsc --noEmit",
@@ -137,6 +137,9 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.35.0",
+    "@tailwindcss/aspect-ratio": "^0.4.2",
+    "@tailwindcss/forms": "^0.5.10",
+    "@tailwindcss/typography": "^0.5.18",
     "@types/jest": "^29.5.14",
     "@types/node": "^20.19.17",
     "@typescript-eslint/eslint-plugin": "^6.21.0",
