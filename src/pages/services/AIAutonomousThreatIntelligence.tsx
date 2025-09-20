@@ -386,4 +386,4 @@ export default function AIAutonomousThreatIntelligence() {
       </section>
     </div>
   )
-}
+};

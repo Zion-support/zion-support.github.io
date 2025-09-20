@@ -38,7 +38,7 @@ interface NavigationItem {
   label: string,path: string,icon: React.ComponentType<{ size?: number, className?: string }>,
   children?: NavigationItem[],
   description?: string,
-}
+};
 ;
 const navigationItems: NavigationItem[] = [
   {
@@ -74,7 +74,7 @@ const navigationItems: NavigationItem[] = [
   };
   {
     label: 'Contact',path: '/contact',icon: Phone,description: 'Get in touch with us'
-  }
+  };
 ];
 const quickActions = [
   {
@@ -85,7 +85,7 @@ const quickActions = [
   },
   {
     label: 'Documentation',path: '/docs',icon: FileText,color: 'bg-zion-blue'
-  }
+  };
 ];
 export const EnhancedMobileNavigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -344,4 +344,3 @@ export const EnhancedMobileNavigation: React.FC = () => {
       </AnimatePresence>
     </>
   );
-};

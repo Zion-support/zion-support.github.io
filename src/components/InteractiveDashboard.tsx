@@ -9,7 +9,7 @@ interface DashboardMetrics {
   activeProjects: number;
   completionRate: number;
   clientSatisfaction: number;
-}
+};
 
 interface ChartData {
   month: string;
@@ -168,7 +168,7 @@ const InteractiveDashboard: React.FC = () => {
         </motion.div>
       </div>
     );
-  }
+  };
 
   return (
     <motion.div

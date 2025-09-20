@@ -424,4 +424,4 @@ export default function AIContentCreation() {
       </div>
     </>
   )
-}
+};

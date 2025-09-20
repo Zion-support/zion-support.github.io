@@ -16,7 +16,7 @@ import {
 } from "lucide-react";
 interface AccessibilitySettings {
   fontSize: number,highContrast: boolean,reducedMotion: boolean,soundEnabled: boolean,theme: 'light' | 'dark' | 'auto'
-}
+};
 
 export function Accessibility() {
   const [isOpen, setIsOpen] = useState(false);
@@ -89,11 +89,11 @@ export function Accessibility() {
   },
 
   const updateSetting = (key: keyof AccessibilitySettings, value: any) => {
-    const newSettings = { ...settings, [key]: value },
+    const newSettings = { ...settings, [key]: value };
     setSettings(newSettings);
     applySettings(newSettings);
-    localStorage.setItem('accessibility-settings', JSON.stringify(newSettings)),
-  },
+    localStorage.setItem('accessibility-settings', JSON.stringify(newSettings));
+  };
 
   const increaseFontSize = () => {
     if (settings.fontSize < 24) {
@@ -312,4 +312,3 @@ export function Accessibility() {
       </AnimatePresence>
     </>
   );
-}

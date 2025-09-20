@@ -18,7 +18,7 @@ const featuredListings = [
   {
     id: 4,title: "IoT Edge Computing Platform",description: "Real-time IoT data processing and analytics at the edge for instant insights.",category: "IoT",price: "$449/month",image: "https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=400",rating: 4.6,reviews: 178,features: ["Edge processing", "Real-time analytics", "Device management"],
     link: "/services/iot-platform"
-  }
+  };
 ];
 export function FeaturedListingsSection() {
   const [selectedCategory, setSelectedCategory] = useState("All");
@@ -152,4 +152,4 @@ export function FeaturedListingsSection() {
       </div>
     </section>
   )
-}
+};

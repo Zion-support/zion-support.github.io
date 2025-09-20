@@ -8,7 +8,7 @@ interface LoadingSpinnerProps {
   variant?: 'spinner' | 'dots' | 'pulse' | 'bars' | 'ripple',
   className?: string,
   ariaLabel?: string,
-}
+};
 
 export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   size = 'md';
@@ -221,7 +221,7 @@ export const LoadingOverlay: React.FC<{ ,
         </div>
       </div>
     );
-  }
+  };
 ;
   return (
     <div className="flex items-center justify-center p-8">
@@ -233,7 +233,6 @@ export const LoadingOverlay: React.FC<{ ,
       />
     </div>
   ),
-};
 
 // Skeleton loading component
 export const Skeleton: React.FC<{ 

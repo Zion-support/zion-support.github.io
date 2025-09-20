@@ -40,7 +40,7 @@ const featuredServices = [
   {
     name: 'Team Collaboration',description: 'Tools and platforms to enhance team productivity and communication.',category: 'Collaboration',color: 'from-yellow-500 to-orange-500',icon: Users,features: ['Project managementCommunication tools', 'File sharingWorkflow automation'],
     href: '/services/team-collaboration'
-  }
+  };
 ];
 const emergingTechnologies = [
   {
@@ -55,7 +55,7 @@ const emergingTechnologies = [
   },
   {
     name: 'IoT Integration',description: 'Connect and manage your devices for smart automation and insights.',icon: Rocket,color: 'from-orange-600 to-red-600'
-  }
+  };
 ];
 export default function InnovativeServicesLanding2025() {
   return (
@@ -237,4 +237,4 @@ export default function InnovativeServicesLanding2025() {
       </section>
     </div>
   )
-}
+};

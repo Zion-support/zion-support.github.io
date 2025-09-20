@@ -126,5 +126,5 @@ export const EMERGING_TECHNOLOGY_SERVICES_2027: ProductListing[] = [
     marketPrice: "$20,000-40,000",
     competitors: ["Boston Dynamics", "ABB", "KUKA"],
     roi: "1200% within 30 months",setupTime: "12-16 weeks",integrations: ["Vision Systems", "Force Sensors", "AI Models", "Safety Systems", "Industrial Networks"]
-  }
+  };
 ];

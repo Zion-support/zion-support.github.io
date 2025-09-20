@@ -9,7 +9,7 @@ export interface MicroSaasService {
     verified: boolean
   },
   images: string[],createdAt: string
-}
+};
 
 export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
   // AI & Machine Learning Services
@@ -104,11 +104,10 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
       name: "Zion Tech Group",id: "zion-tech-group",avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",verified: true
     },
     images: ["https://images.unsplash.com/photo-1633412802994-5c058f151b66?auto=format&fit=crop&w=800&h=500"],createdAt: "2024-01-25T09:15:00.000Z"
-  }
+  };
 ];
 export const getMicroSaasServiceById = (id: string): MicroSaasService | undefined => {
   return MICRO_SAAS_SERVICES.find(service => service.id === id)
-};
 export const MICRO_SAAS_CATEGORIES = [
   'AI Business SolutionsIT Infrastructure';
   'Data AnalyticsAI Development';
@@ -124,14 +123,11 @@ export const PRICING_TIERS = [
   },
   {
     name: 'Enterprise',price: 299,features: ['Custom features24/7 support', 'Unlimited users']
-  }
+  };
 ],
 export const CONTACT_INFO = {
   email: 'kleber@ziontechgroup.com',phone: '+1 302 464 0950',address: '364 E Main St STE 1008 Middletown DE 19709'
-};
 export const getMicroSaasServicesByCategory = (category: string): MicroSaasService[] => {
   return MICRO_SAAS_SERVICES.filter(service => service.category === category)
-};
 export const getMicroSaasCategories = (): string[] => {
   return [...new Set(MICRO_SAAS_SERVICES.map(service => service.category))];
-};

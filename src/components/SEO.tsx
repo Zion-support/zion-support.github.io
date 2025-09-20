@@ -20,7 +20,7 @@ interface SEOProps {
   modifiedTime?: string,
   section?: string,
   tags?: string[],
-}
+};
 
 export const SEO: React.FC<SEOProps> = ({
   title,
@@ -352,7 +352,7 @@ export const SEO: React.FC<SEOProps> = ({
       <meta httpEquiv="X-XSS-Protection" content="1, mode=block" />
       <meta httpEquiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
     </Helmet>
-  )
+  );
 };
 
 export function HomePageSEO() {
@@ -375,7 +375,7 @@ export function HomePageSEO() {
       }}
     />
   );
-}
+};
 
 export function ContactPageSEO() {
   return (
@@ -402,7 +402,7 @@ export function ContactPageSEO() {
       }}
     />
   );
-}
+};
 
 export function BlogPostSEO({ 
   title, 
@@ -453,4 +453,4 @@ export function BlogPostSEO({
       }}
     />
   );
-}
+};

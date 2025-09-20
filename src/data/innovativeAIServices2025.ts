@@ -7,7 +7,7 @@ export interface InnovativeAIService {
   };
   competitors?: string[],
   marketSize?: string,
-}
+};
 
 export const INNOVATIVE_AI_SERVICES_2025: InnovativeAIService[] = [
   // AI-Powered Quantum Machine Learning Platform
@@ -449,5 +449,5 @@ export const INNOVATIVE_AI_SERVICES_2025: InnovativeAIService[] = [
     },
     competitors: ["Schneider Electric", "Siemens", "GE Digital", "ABB"],
     marketSize: ["$38.9 billion by 2027"]
-  }
+  };
 ];

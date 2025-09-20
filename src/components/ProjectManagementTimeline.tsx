@@ -27,17 +27,15 @@ import {
 } from "lucide-react";
 interface Project {
   id: string,name: string,description: string,status: 'planning' | 'active' | 'on-hold' | 'completed' | 'cancelled',priority: 'low' | 'medium' | 'high' | 'critical',startDate: string,endDate: string,progress: number,team: string[],client: string,budget: number,tags: string[],milestones: Milestone[]
-}
+};
 
 interface Milestone {
   id: string,title: string,description: string,dueDate: string,status: 'pending' | 'in-progress' | 'completed' | 'overdue',assignee: string,priority: 'low' | 'medium' | 'high'
-}
 
 interface ProjectManagementTimelineProps {
   showFilters?: boolean;
   showStats?: boolean,
   maxProjects?: number,
-}
 
 export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps> = ({
   showFilters = true;
@@ -483,4 +481,3 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
       )}
     </div>
   );
-};

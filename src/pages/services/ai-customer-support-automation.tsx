@@ -315,4 +315,4 @@ export default function AICustomerSupportAutomation() {
       </section>
     </div>
   )
-}
+};

@@ -127,5 +127,5 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2027: ProductListing[] = [
     marketPrice: "$22,000-45,000",
     competitors: ["IBM Q", "Google Quantum AI", "Microsoft Quantum"],
     roi: "1500% within 36 months",setupTime: "10-12 weeks",integrations: ["Quantum Simulators", "ML Frameworks", "Scientific Computing", "Cloud Platforms", "Research Tools"]
-  }
+  };
 ];

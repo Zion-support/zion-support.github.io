@@ -501,4 +501,4 @@ export default function AIHealthcareAnalytics() {
       </section>
     </div>
   )
-}
+};

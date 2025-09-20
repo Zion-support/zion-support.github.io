@@ -143,4 +143,4 @@ export function FeatureCTAs() {
       </div>
     </section>
   )
-}
+};

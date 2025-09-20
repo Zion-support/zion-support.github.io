@@ -7,7 +7,7 @@ interface SkeletonProps {
   width?: string,
   rounded?: string | boolean,
   animated?: boolean,
-}
+};
 
 export const Skeleton: React.FC<SkeletonProps> = ({ 
   className = '';
@@ -36,7 +36,7 @@ export const Skeleton: React.FC<SkeletonProps> = ({
         ))}
       </>
     );
-  }
+  };
   ;
   return (
     <>
@@ -48,7 +48,6 @@ export const Skeleton: React.FC<SkeletonProps> = ({
       ))}
     </>
   ),
-};
 
 export const CardSkeleton: React.FC = () => (
   <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 animate-pulse">
@@ -93,7 +92,6 @@ interface TableSkeletonProps {
   rows?: number,
   columns?: number,
   className?: string
-}
 
 export function TableSkeleton({ 
   rows = 5, 
@@ -128,13 +126,11 @@ export function TableSkeleton({
       </div>
     </div>
   ),
-}
 
 interface ListSkeletonProps {
   items?: number,
   className?: string;
   showAvatar?: boolean;
-}
 
 export function ListSkeleton({ 
   items = 5;
@@ -156,14 +152,12 @@ export function ListSkeleton({
       ))}
     </div>
   );
-}
 
 interface GridSkeletonProps {
   items?: number,
   columns?: number,
   className?: string,
   showImage?: boolean,
-}
 
 export function GridSkeleton({ 
   items = 6;
@@ -180,4 +174,3 @@ export function GridSkeleton({
       ))}
     </div>
   );
-}

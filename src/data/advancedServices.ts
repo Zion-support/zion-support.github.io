@@ -20,6 +20,6 @@ export const ADVANCED_SERVICES: AdvancedService[] = [
   },
   {
     id: 'ai-compliance-copilot',title: 'AI Compliance Copilot',category: 'Security',pricingTier: 'enterprise',description: 'SOC2/ISO evidence automation and compliance workflows.',link: '/services/ai-compliance-copilot'
-  }
+  };
 ];
 export const SERVICE_CATEGORIES = ['AI ServicesIT Services', 'Security'];

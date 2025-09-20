@@ -7,7 +7,7 @@ export interface InnovativeMicroSaasService {
   };
   competitors?: string[],
   marketSize?: string,
-}
+};
 
 export const CLEAN_INNOVATIVE_MICRO_SAAS_SERVICES_2025: InnovativeMicroSaasService[] = [
   // AI-Powered Business Intelligence & Analytics
@@ -254,6 +254,6 @@ export const CLEAN_INNOVATIVE_MICRO_SAAS_SERVICES_2025: InnovativeMicroSaasServi
     },
     competitors: ["SAP", "Oracle", "Manhattan Associates", "JDA Software"],
     marketSize: "$67.8 billion by 2025"
-  }
+  };
 ];
 export default CLEAN_INNOVATIVE_MICRO_SAAS_SERVICES_2025;

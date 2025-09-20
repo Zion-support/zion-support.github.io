@@ -7,7 +7,7 @@ interface ImageOptimizationOptions {
   lazy?: boolean,
   placeholder?: 'blur' | 'empty',
   blurDataURL?: string,
-}
+};
 
 interface OptimizedImageProps {
   src: string,alt: string;
@@ -18,7 +18,6 @@ interface OptimizedImageProps {
   loading?: 'lazy' | 'eager',
   placeholder?: 'blur' | 'empty',
   blurDataURL?: string
-}
 
 class ImageOptimizer {
   private static instance: ImageOptimizer;
@@ -26,14 +25,14 @@ class ImageOptimizer {
   private loadedImages: Set<string> = new Set();
   private constructor() {
     this.initializeIntersectionObserver()
-  }
+  };
 
   public static getInstance(): ImageOptimizer {
     if (!ImageOptimizer.instance) {
       ImageOptimizer.instance = new ImageOptimizer();
     };
     return ImageOptimizer.instance,
-  }
+  };
 
   private initializeIntersectionObserver(): void {
     if (typeof window === 'undefined' || !('IntersectionObserver' in window)) {
@@ -53,7 +52,7 @@ class ImageOptimizer {
         rootMargin: '50px 0px',threshold: 0.01
       }
     );
-  }
+  };
 
   private loadImage(img: HTMLImageElement): void {
     const src = img.dataset.src;
@@ -80,7 +79,7 @@ class ImageOptimizer {
     },
     
     imageLoader.src = src,
-  }
+  };
 
   public optimizeImageUrl(
     src: string,options: ImageOptimizationOptions = {}
@@ -113,13 +112,13 @@ class ImageOptimizer {
     }
 ;
     return optimizedUrl;
-  }
+  };
 
   public observeImage(img: HTMLImageElement): void {
     if (this.observer && img.dataset.src) {
       this.observer.observe(img)
     }
-  }
+  };
 
   public generateBlurDataURL(width: number = 10, height: number = 10): string {
     // Generate a simple blur placeholder
@@ -139,7 +138,7 @@ class ImageOptimizer {
     }
     ;
     return canvas.toDataURL('image/jpeg', 0.1);
-  }
+  };
 
   public preloadImage(src: string): Promise<void> {
     return new Promise((resolve, reject) => {
@@ -148,17 +147,16 @@ class ImageOptimizer {
       img.onerror = reject,
       img.src = src,
     }),
-  }
+  };
 
   public preloadImages(srcs: string[]): Promise<void[]> {
     return Promise.all(srcs.map(src => this.preloadImage(src)))
-  }
+  };
 
   public cleanup(): void {
     this.observer?.disconnect();
     this.loadedImages.clear();
-  }
-}
+  };
 
 // React hook for image optimization
 export const useImageOptimization = () => {
@@ -217,7 +215,7 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
         onError={handleError}
       />
     );
-  }
+  };
 ;
   return (
     <div className={`relative overflow-hidden ${className}`}>

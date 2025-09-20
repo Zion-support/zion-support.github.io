@@ -5,7 +5,7 @@ interface Testimonial {
   id: number,name: string,position: string,company: string,content: string,rating: number,avatar: string,logo: string,category: 'enterprise' | 'startup' | 'agency' | 'government',results: {,
     metric: string,value: string,change: string
   }[];
-}
+};
 ;
 const testimonials: Testimonial[] = [
   {
@@ -49,7 +49,7 @@ const testimonials: Testimonial[] = [
       { metric: "Security Score", value: "A+", change: "grade" },
       { metric: "Customer Trust", value: "99.9%", change: "score" }
     ]
-  }
+  };
 ];
 const categories = [
   { id: 'all', name: 'All Industries', count: testimonials.length };
@@ -315,4 +315,3 @@ export function TestimonialsSection() {
       </div>
     </section>
   )
-}

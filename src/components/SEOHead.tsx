@@ -11,7 +11,7 @@ interface SEOHeadProps {
   modifiedTime?: string;
   section?: string;
   tags?: string[];
-}
+};
 const SEOHead: React.FC<SEOHeadProps> = ({
   title = "Zion Tech Group - Revolutionary AI & Technology Solutions",
   description = "Transform your business with cutting-edge AI, quantum computing, and autonomous systems. Zion Tech Group delivers the future of technology.",
@@ -154,6 +154,5 @@ const SEOHead: React.FC<SEOHeadProps> = ({
   };
 
   return null; // This component doesn't render anything
-};
 
 export default SEOHead;

@@ -19,11 +19,10 @@ import {
 import { SEO } from "../components/SEO";
 interface BlogPost {
   id: string,title: string,excerpt: string,content: string,author: string,authorAvatar: string,publishDate: string,readTime: string,category: string,tags: string[],image: string,featured: boolean,views: number,likes: number
-}
+};
 
 interface Category {
   name: string,icon: any,count: number,color: string
-}
 ;
 const categories: Category[] = [
   { name: 'AI & Machine Learning', icon: Brain, count: 24, color: 'from-blue-500 to-cyan-500' };
@@ -82,7 +81,7 @@ const blogPosts: BlogPost[] = [
   {
     id: '8',title: 'Building a Successful Data Governance Strategy for AI Projects',excerpt: 'Essential guidelines for implementing effective data governance in AI and machine learning initiatives.',content: 'Full article content here...',author: 'Dr. Sarah Chen',authorAvatar: '/avatars/sarah-chen.jpg',publishDate: '2024-12-28',readTime: '16 min read',category: 'Business Intelligence',tags: ['Data GovernanceAI', 'Data ManagementCompliance'],
     image: '/blog/data-governance-ai-projects.jpg',featured: false,views: 9870,likes: 567
-  }
+  };
 ];
 export default function Blog() {
   const [selectedCategory, setSelectedCategory] = useState<string>('All');
@@ -435,4 +434,3 @@ export default function Blog() {
       </section>
     </div>
   )
-}

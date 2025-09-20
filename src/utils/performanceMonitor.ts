@@ -2,14 +2,14 @@ interface PerformanceMetric {
   name: string,startTime: number;
   endTime?: number,
   duration?: number
-}
+};
 
 class PerformanceMonitor {
   private metrics: Map<string, PerformanceMetric> = new Map();
   private observers: PerformanceObserver[] = [];
   constructor() {
     this.initializeObservers()
-  }
+  };
 
   private initializeObservers() {
     // Monitor Core Web Vitals
@@ -59,14 +59,14 @@ class PerformanceMonitor {
         console.warn('CLS observer not supported');
       }
     }
-  }
+  };
 
   startTiming(name: string): void {
     this.metrics.set(name, {
       name,
       startTime: performance.now()
     });
-  }
+  };
 
   endTiming(name: string): number | null {
     const metric = this.metrics.get(name);
@@ -83,7 +83,7 @@ class PerformanceMonitor {
 
     this.logMetric(name, duration);
     return duration;
-  }
+  };
 
   measureFunction<T>(name: string, fn: () => T): T {
     this.startTiming(name);
@@ -95,7 +95,7 @@ class PerformanceMonitor {
       this.endTiming(name);
       throw error,
     }
-  }
+  };
 
   async measureAsync<T>(name: string, fn: () => Promise<T>): Promise<T> {
     this.startTiming(name);
@@ -107,7 +107,7 @@ class PerformanceMonitor {
       this.endTiming(name);
       throw error,
     }
-  }
+  };
 
   private logMetric(name: string, value: number): void {
     if (process.env.NODE_ENV === 'development') {
@@ -118,7 +118,7 @@ class PerformanceMonitor {
     if (process.env.NODE_ENV === 'production') {
       this.sendToAnalytics(name, value);
     }
-  }
+  };
 
   private sendToAnalytics(name: string, value: number): void {
     // Implement analytics integration here
@@ -130,7 +130,7 @@ class PerformanceMonitor {
         }
       });
     }
-  }
+  };
 
   getMetrics(): Record<string, PerformanceMetric> {
     const result: Record<string, PerformanceMetric> = {},
@@ -138,17 +138,16 @@ class PerformanceMonitor {
       result[name] = { ...metric },
     }),
     return result;
-  }
+  };
 
   clearMetrics(): void {
     this.metrics.clear();
-  }
+  };
 
   disconnect(): void {
     this.observers.forEach(observer => observer.disconnect()),
     this.observers = [],
-  }
-}
+  };
 
 // Create singleton instance
 export const performanceMonitor = new PerformanceMonitor();

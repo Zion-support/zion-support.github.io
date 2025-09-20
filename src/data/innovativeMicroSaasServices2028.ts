@@ -9,7 +9,7 @@ export interface InnovativeMicroSaasService2028 {
   marketSize?: string,
   aiCapabilities?: string[],
   sustainabilityFeatures?: string[],
-}
+};
 
 export const INNOVATIVE_MICRO_SAAS_SERVICES_2028: InnovativeMicroSaasService2028[] = [
   // AI-Powered Quantum Computing Services
@@ -469,5 +469,5 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2028: InnovativeMicroSaasService2028
     competitors: ["Zillow", "Redfin", "Realtor.com", "CoStar", "Real Capital Analytics"],
     marketSize: "$35 billion by 2028",aiCapabilities: ["Predictive analytics", "Pattern recognition", "Market forecasting", "Risk assessment"],
     sustainabilityFeatures: ["Green building analysis", "Sustainability scoring", "Energy efficiency tracking"]
-  }
+  };
 ];

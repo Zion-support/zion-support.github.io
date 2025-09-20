@@ -72,23 +72,19 @@ const ServicesShowcase = React.lazy(() => import("@/components/ServicesShowcase"
 
 interface StatItem {
   value: string,label: string,description: string,icon: React.ComponentType<any>,color: string
-}
+};
 
 interface AIService {
   title: string,description: string,icon: React.ComponentType<any>,features: string[],href: string,color: string
-}
 
 interface ServiceCategory {
   name: string,description: string,icon: React.ComponentType<any>,href: string,count: number,color: string,services: string[]
-}
 
 interface EmergingTech {
   title: string,description: string,icon: React.ComponentType<any>,href: string,price: string,category: string
-}
 
 interface MicroSaasService {
   title: string,description: string,icon: React.ComponentType<any>,href: string,price: string,category: string
-}
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
@@ -194,7 +190,7 @@ export default function Home() {
         </div>
       </div>
     );
-  }
+  };
 ;
   if (error) {
     return (
@@ -211,7 +207,7 @@ export default function Home() {
         </div>
       </div>
     )
-  }
+  };
 ;
   return (
     <ErrorBoundary onError={handleError}>
@@ -478,4 +474,3 @@ export default function Home() {
       </div>
     </ErrorBoundary>
   );
-}

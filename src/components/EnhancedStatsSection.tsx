@@ -13,7 +13,7 @@ import {
 } from "lucide-react";
 interface Stat {
   id: string,icon: React.ComponentType<any>,value: string,label: string,description: string,color: string,gradient: string
-}
+};
 ;
 const stats: Stat[] = [
   {
@@ -33,7 +33,7 @@ const stats: Stat[] = [
   },
   {
     id: 'growth',icon: Rocket,value: '300%',label: 'Annual Growth',description: 'Rapidly expanding global presence',color: 'zion-blue',gradient: 'from-zion-blue to-zion-cyan'
-  }
+  };
 ];
 export default function EnhancedStatsSection() {
   const [countedValues, setCountedValues] = useState<{ [key: string]: number }>({});
@@ -230,4 +230,3 @@ export default function EnhancedStatsSection() {
       </div>
     </section>
   )
-}

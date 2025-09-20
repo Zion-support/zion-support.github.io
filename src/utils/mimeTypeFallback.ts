@@ -1,6 +1,6 @@
 interface MimeTypeMapping {
   [key: string]: string
-}
+};
 
 class MimeTypeFallback {
   private mimeTypes: MimeTypeMapping = {
@@ -13,7 +13,7 @@ class MimeTypeFallback {
   ];
   constructor() {
     this.setupFallbackUrls()
-  }
+  };
 
   private setupFallbackUrls() {
     // Map problematic URLs to CDN fallbacks
@@ -23,18 +23,18 @@ class MimeTypeFallback {
     this.fallbackUrls.set('/js/router-vendor-9KcRWrrL.jshttps: //cdn.jsdelivr.net/gh/ziontechgroup/zion-website@main/dist/js/router-vendor-9KcRWrrL.js');
     this.fallbackUrls.set('/js/ui-vendor-B31yGDq-.jshttps: //cdn.jsdelivr.net/gh/ziontechgroup/zion-website@main/dist/js/ui-vendor-B31yGDq-.js');
     this.fallbackUrls.set('/js/utils-vendor-CrFdsnXa.jshttps: //cdn.jsdelivr.net/gh/ziontechgroup/zion-website@main/dist/js/utils-vendor-CrFdsnXa.js')
-  }
+  };
 
   getMimeType(filename: string): string {
     const ext = this.getFileExtension(filename);
     return this.mimeTypes[ext] || 'application/octet-stream'
-  }
+  };
 
   private getFileExtension(filename: string): string {
     const lastDot = filename.lastIndexOf('.');
     if (lastDot === -1) return '';
     return filename.substring(lastDot).toLowerCase()
-  }
+  };
 
   async checkAndFixMimeType(url: string): Promise<boolean> {
     try {
@@ -64,7 +64,7 @@ class MimeTypeFallback {
       console.error(`Error checking MIME type for ${url}:`, error);
       return await this.tryFallbackUrl(url);
     }
-  }
+  };
 
   private async tryFallbackUrl(originalUrl: string): Promise<boolean> {
     const fallbackUrl = this.fallbackUrls.get(originalUrl);
@@ -88,7 +88,7 @@ class MimeTypeFallback {
     }
 ;
     return false;
-  }
+  };
 
   private replaceResource(originalUrl: string, fallbackUrl: string) {
     // Replace script tags
@@ -104,7 +104,7 @@ class MimeTypeFallback {
       (link as HTMLLinkElement).href = fallbackUrl,
 
     }),
-  }
+  };
 
   async preloadCriticalResources(): Promise<void> {
     const criticalResources = [
@@ -125,7 +125,7 @@ class MimeTypeFallback {
         console.error(`Error preloading resource: ${resource}`, error);
       }
     }
-  }
+  };
 
   createResourceElement(url: string, type: 'script' | 'stylesheet'): HTMLElement {
     if (type === 'script') {
@@ -141,7 +141,7 @@ class MimeTypeFallback {
       link.type = 'text/css',
       return link;
     }
-  }
+  };
 
   injectResource(url: string, type: 'script' | 'stylesheet'): Promise<void> {
     return new Promise((resolve, reject) => {
@@ -163,8 +163,7 @@ class MimeTypeFallback {
         document.head.appendChild(element);
       }
     }),
-  }
-}
+  };
 
 // Create singleton instance
 const mimeTypeFallback = new MimeTypeFallback();

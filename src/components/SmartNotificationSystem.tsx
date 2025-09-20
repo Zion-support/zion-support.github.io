@@ -24,11 +24,10 @@ interface Notification {
   },
   priority: 'low' | 'medium' | 'high',category: string;
   expiresAt?: Date
-}
+};
 
 interface Props {
   enabled?: boolean,
-}
 
 export function SmartNotificationSystem({ enabled = true }: Props) {
   const [notifications, setNotifications] = useState<Notification[]>([]);
@@ -202,7 +201,7 @@ export function SmartNotificationSystem({ enabled = true }: Props) {
         )}
       </motion.button>
     );
-  }
+  };
 ;
   return (
     <AnimatePresence>
@@ -378,4 +377,3 @@ export function SmartNotificationSystem({ enabled = true }: Props) {
       </motion.div>
     </AnimatePresence>
   );
-}

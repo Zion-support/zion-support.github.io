@@ -14,7 +14,7 @@ interface FormData {
   projectType: string;
   technologies: string[];
   requirements: string;
-}
+};
 
 interface FormErrors {
   [key: string]: string;
@@ -207,7 +207,7 @@ const EnhancedContactForm: React.FC = () => {
         </div>
       </motion.div>
     );
-  }
+  };
 
   return (
     <div className="max-w-4xl mx-auto py-12">

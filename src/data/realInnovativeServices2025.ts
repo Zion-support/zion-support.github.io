@@ -7,7 +7,7 @@ export interface RealInnovativeService {
   };
   competitors?: string[],
   marketSize?: string,
-}
+};
 
 export const REAL_INNOVATIVE_SERVICES_2025: RealInnovativeService[] = [
   // AI-Powered Business Intelligence & Analytics
@@ -545,5 +545,5 @@ export const REAL_INNOVATIVE_SERVICES_2025: RealInnovativeService[] = [
     },
     competitors: ["McKinsey", "BCG", "Bain", "Deloitte"],
     marketSize: "$67.8 billion by 2025"
-  }
+  };
 ];

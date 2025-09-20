@@ -465,4 +465,4 @@ export default function AIBusinessIntelligence() {
       </section>
     </div>
   )
-}
+};

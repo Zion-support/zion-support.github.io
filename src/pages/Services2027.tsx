@@ -90,7 +90,7 @@ const SERVICES_2027 = [
   {
     id: 8,title: "Advanced IoT Solutions",description: "Intelligent IoT networks with AI and edge computing capabilities",category: "IoT",innovationLevel: "Advanced",price: 2800,roi: "250-400%",features: ["Smart Networks", "AI Processing", "Real-time Data", "Predictive Analytics"],
     icon: Network,color: "from-blue-500 to-cyan-500"
-  }
+  };
 ];
 const Services2027: React.FC = () => {
   const [query, setQuery] = useState('');

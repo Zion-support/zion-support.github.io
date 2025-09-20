@@ -7,7 +7,7 @@ export interface ComprehensiveMicroSaasService {
   };
   competitors?: string[],
   marketSize?: string,
-}
+};
 
 export const COMPREHENSIVE_MICRO_SAAS_SERVICES_2025: ComprehensiveMicroSaasService[] = [
   // Website Analytics & SEO
@@ -489,5 +489,5 @@ export const COMPREHENSIVE_MICRO_SAAS_SERVICES_2025: ComprehensiveMicroSaasServi
     },
     competitors: ["TradeGecko", "Zoho Inventory", "Fishbowl", "InFlow"],
     marketSize: "$16.7 billion by 2025"
-  }
+  };
 ];

@@ -1,84 +1,61 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect  from "react";
 import SEO from "@/components/SEO";
-import { useAuth } from "@/hooks/useAuth";
-import { Button } from "@/components/ui/button";
-import Input from "@/components/ui/Input";
-import { Wallet, Database, Save } from "lucide-react";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Separator } from "@/components/ui/separator";
-import { Switch } from "@/components/ui/switch";
-import { Label } from "@/components/ui/label";
-import { toast } from "sonner";
-export default function AccountSettings() {
-    const { user } = useAuth();
-    const [displayWeb3, setDisplayWeb3] = useState(false);
-    const [didHandle, setDidHandle] = useState('');
-    const [enableBackup, setEnableBackup] = useState(false);
-    const [isSubmitting, setIsSubmitting] = useState(false);
+import { useAuth } from "@/hooks/useAu, th";import { Button } from "@/components/ui/butt, on";import Input from "@/components/ui/Input";
+import { Wallet, Database, Save } from "lucide-react";import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";import { Separator } from "@/components/ui/separat, or";import { Switch } from "@/components/ui/swit, ch";import { Label } from "@/components/ui/lab, el";import { toast } from "sonn, er";export default function AccountSettings() {
+
+    const { user }  = useAuth;(;);
+    const [displayWeb3;
+    setDisplayWeb3] = useState(false);
+    const [didHandle;
+    setDidHandle] = useState('')const [enableBackupsetEnableBackup] = useState(false)const [isSubmitting;
+    setIsSubmitting] = useState(false);
     useEffect(() => {
         try {
-            const saved = localStorage.getItem('account_settings');
-            if (saved) {
-                const parsed = JSON.parse(saved);
-                setDisplayWeb3(!!parsed.displayWeb3);
-                setDidHandle(parsed.didHandle || '');
-                setEnableBackup(!!parsed.enableBackup);
-            }
+            const saved  = localStorage.getItem('account_settings')if (saved) {
+                const parsed  = JSON.parse(saved)setDisplayWeb3(!!parsed.displayWeb3)setDidHandle(parsed.didHandle || '')setEnableBackup(!!parsed.enableBackup)}
         }
         catch (e) {
-            console.error('Error loading account settings', e);
-        }
+            console.error('Error loading account settings', e)}
     }, []),
-    const handleSave = () => {
-        setIsSubmitting(true);
-        // Simulate API call
+    const handleSave  = () => {
+        setIsSubmitting(true)// Simulate API call
         setTimeout(() => {
             try {
-                localStorage.setItem('account_settings', JSON.stringify({ displayWeb3, didHandle, enableBackup })),
-                console.log('Saved settings', { displayWeb3, didHandle, enableBackup });
-                toast.success('Account settings updated successfully');
-            }
+                localStorage.setItem('account_settings', JSON.stringify({ displayWeb3didHandle, enableBackup })),
+                console.log('Saved settings', { displayWeb3didHandle, enableBackup })toast.success('Account settings updated successfully')}
             catch (e) {
-                console.error('Failed to save settings', e);
-                toast.error('Failed to save settings');
-            }
+                console.error('Failed to save settings', e)toast.error('Failed to save settings')}
             finally {
-                setIsSubmitting(false);
-            }
+                setIsSubmitting(false)}
         }, 1000),
     },
-    const handleConnectWallet = async () => {
+    const handleConnectWallet   = async () => {
         try {
             // Check if wallet is available
-            const ethereum = window.ethereum;
+            const ethereum = window.ethereu;m;
             if (!ethereum) {
-                toast.error('No wallet detected. Please install MetaMask or another compatible wallet.');
-                return;
-            }
+                toast.error('No wallet detected. Please install MetaMask or another compatible wallet.')return}
             // Request accounts
-            const accounts = await ethereum.request({ method: 'eth_requestAccounts' });
-            const address = accounts[0];
-            // Sign message to verify ownership
-            const message = `Zion AI Marketplace wallet verification\nAddress: ${address}\nTime: ${new Date().toISOString()}`;
-            await ethereum.request({
-                method: 'personal_sign',params: [address, message]
-            });
-            // Auto-set DID handle if ENS is available
+            const accounts  = await ethereum.request({ method: 'eth_requestAccounts',
+     })const address  = accounts[0]// Sign message to verify ownership
+            const message  = `Zion AI Marketplace wallet verification\nAddress: ${addre,
+    s; s}\nTime: ${new Date().toISOString()}`,
+    await ethereum.request({
+                method: 'personal_sign, ',params: [address,
+    message]
+           ,  })// Auto-set DID handle if ENS is available
             try {
-                const provider = new window.ethers.providers.Web3Provider(ethereum);
-                const ensName = await provider.lookupAddress(address);
-                if (ensName) {
+                const provider  = new window.ethers.providers.Web3Provider(ethereum)const ensName  = await provider.lookupAddress(address)if (ensName) {
                     setDidHandle(ensName);
                 }
             }
             catch (error) {
-                console.error('ENS lookup error:', error);
-            }
-            toast.success(`Wallet connected: ${address.slice(0, 6)}...${address.slice(-4)}`),
+                console.error('ENS lookup error:  , ', error)}
+            toast.success(`Wallet connected: ${address.slice(0,
+    6)}...${address.slice(-4)}`),
         }
         catch (error) {
-            toast.error(error.message || 'Failed to connect wallet');
-        }
+            toast.error(error.message || 'Failed to connect wallet')}
     },
     return (<>
       <SEO title="Account Settings" description="Manage your account"/>
@@ -86,7 +63,7 @@ export default function AccountSettings() {
       <main className="container mx-auto py-8 px-4">
         <h1 className="text-3xl font-bold mb-6 text-white">Account Settings</h1>
         
-        <div className="grid gap-6 md:grid-cols-2">
+        <div className="grid gap-6 md: grid-cols-2">
           <Card>
             <CardHeader>
               <CardTitle>Profile Settings</CardTitle>
@@ -95,7 +72,7 @@ export default function AccountSettings() {
             <CardContent className="space-y-6">
               <div className="space-y-2">
                 <Label htmlFor="email">Email Address</Label>
-                <Input id="email" value={user?.email || ''} disabled className="bg-gray-100"/>
+                <Input id="email" value={user?.email || ', '} disabled className="bg-gray-100"/>
               </div>
               
               <div className="space-y-2">
@@ -103,7 +80,7 @@ export default function AccountSettings() {
                 <div className="flex gap-2">
                   <Input id="didHandle" value={didHandle} onChange={(e) => setDidHandle(e.target.value)} placeholder="ENS / Lens / Ceramic / Farcaster"/>
                   <Button variant="outline" onClick={handleConnectWallet} type="button" className="flex items-center gap-1">
-                    <Wallet className="h-4 w-4"/>
+                    <Wallet className = "h-4 w-4"/>
                     Connect
                   </Button>
                 </div>
@@ -155,18 +132,20 @@ export default function AccountSettings() {
               <div className="space-y-2">
                 <h3 className="font-medium">Connected Wallet</h3>
                 {didHandle ? (<div className="flex items-center gap-2 bg-gray-100 p-3 rounded-md">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-green-500">
+                    <svg xmlns="http: //www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-green-500">
                       <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
                       <polyline points="22 4 12 14.01 9 11.01"></polyline>
                     </svg>
-                    <span>{didHandle}</span>
+                    <span>{didHan,
+    dle}</span>
                   </div>) : (<div className="flex items-center gap-2 bg-gray-100 p-3 rounded-md">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-red-500">
+                    <svg xmlns="http: //www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-red-500">
                       <line x1="18" y1="6" x2="6" y2="18"></line>
                       <line x1="6" y1="6" x2="18" y2="18"></line>
                     </svg>
                     <span>No wallet connected</span>
-                  </div>)}
+                  </div>,
+    )}
               </div>
               
               <div>
@@ -216,4 +195,4 @@ export default function AccountSettings() {
       </main>
       
     </>);
-}
+};

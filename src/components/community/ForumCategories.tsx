@@ -6,7 +6,7 @@ interface ForumCategoryInfo {
   lastPost?: {
     title: string,author: string,date: string
   };
-}
+};
 
 export default function ForumCategories() {
   const categories: ForumCategoryInfo[] = [
@@ -131,4 +131,3 @@ export default function ForumCategories() {
       </div>
     </section>
   )
-}

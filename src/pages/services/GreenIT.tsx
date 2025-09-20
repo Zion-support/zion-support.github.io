@@ -460,4 +460,4 @@ export default function GreenIT() {
       </section>
     </div>
   )
-}
+};

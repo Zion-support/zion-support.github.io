@@ -113,9 +113,8 @@ function ClientDashboardContent() {
       </main>
       
     </>);
-}
+};
 export default function ClientDashboard() {
     return (<ProtectedRoute>
       <ClientDashboardContent />
     </ProtectedRoute>);
-}

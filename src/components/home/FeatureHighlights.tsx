@@ -15,7 +15,7 @@ const containerVariants = {
     opacity: 1,transition: {,
       staggerChildren: 0.1
     }
-  }
+  };
 };
 const itemVariants = {
   hidden: { opacity: 0, y: 20 },
@@ -23,24 +23,21 @@ const itemVariants = {
     opacity: 1,y: 0,transition: {,
       duration: 0.6
     }
-  }
-};
+  };
 const achievementVariants = {
   hidden: { opacity: 0, scale: 0.8 },
   visible: {,
     opacity: 1,scale: 1,transition: {,
       duration: 0.5
     }
-  }
-};
+  };
 const techVariants = {
   hidden: { opacity: 0, y: 10 },
   visible: {,
     opacity: 1,y: 0,transition: {,
       duration: 0.4,staggerChildren: 0.1
     }
-  }
-};
+  };
 const achievements = [
   { icon: Users, number: "10K+", label: "Active Users", color: "text-zion-cyan" };
   { icon: Globe, number: "150+", label: "Countries", color: "text-zion-purple" };
@@ -63,7 +60,7 @@ const highlights = [
   {
     icon: Shield,title: 'Enterprise Security',description: 'Bank-grade security with SOC 2 compliance and end-to-end encryption.',features: ['Data ProtectionAccess Control', 'Audit Trails'],
     color: 'from-zion-blue to-zion-blue-dark',bgColor: 'bg-zion-blue/10',borderColor: 'border-zion-blue/20'
-  }
+  };
 ];
 const features = [
   {
@@ -83,7 +80,7 @@ const features = [
   },
   {
     icon: "📊",title: "Real-Time Analytics",description: "Comprehensive insights and reporting to make data-driven decisions instantly"
-  }
+  };
 ];
 export function FeatureHighlights() {
   return (
@@ -284,6 +281,5 @@ export function FeatureHighlights() {
       </div>
     </section>
   );
-}
 
 

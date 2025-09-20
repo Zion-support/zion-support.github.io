@@ -259,7 +259,7 @@ export default function AdvancedServicesPage() {
         </div>
       </section>
     </div>)
-}
+};
 // Service Card Component
 function ServiceCard({ service }) {
     return (<Card className="h-full hover:shadow-lg transition-all duration-300 border-zion-blue-light hover:border-zion-cyan">
@@ -331,4 +331,3 @@ function ServiceCard({ service }) {
         </div>
       </CardContent>
     </Card>)
-}

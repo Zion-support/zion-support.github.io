@@ -50,4 +50,4 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }) 
                             : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan"), children: link.name }) }, link.name))), isAuthenticated && (_jsx("li", { children: _jsxs(Link, { to: "/messages", className: cn("inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors relative", location.pathname === "/messages" || location.pathname === "/inbox"
                             ? "bg-zion-purple/20 text-zion-cyan"
                             : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan"), children: [_jsx(MessageSquare, { className: "w-4 h-4 mr-1" }), t('nav.messages'), unreadCount > 0 && (_jsx("span", { className: "absolute -top-1 -right-1 bg-zion-purple text-white text-xs rounded-full h-5 w-5 flex items-center justify-center", children: unreadCount }))] }) }))] }) }));
-}
+};

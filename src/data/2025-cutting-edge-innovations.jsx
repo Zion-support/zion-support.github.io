@@ -214,7 +214,7 @@ export const CUTTING_EDGE_2025_SERVICES = [
       "Stakeholder trust"
     ],
     link: "/services/ai-governance",image: "/images/ai-governance.jpg",technology: "AI + Governance",marketSize: "$2.1B by 2025",targetIndustry: "Enterprise, Government, Healthcare"
-  }
+  };
 ],
 
 export const CUTTING_EDGE_CATEGORIES = [

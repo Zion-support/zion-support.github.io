@@ -16,11 +16,10 @@ import {
 } from "lucide-react";
 interface PerformanceMetric {
   name: string,value: number,unit: string,trend: 'up' | 'down' | 'stable',status: 'good' | 'warning' | 'critical',icon: React.ComponentType<any>
-}
+};
 
 interface PerformanceData {
   timestamp: number,metrics: PerformanceMetric[],alerts: string[],recommendations: string[]
-}
 ;
 const PerformanceAnalytics: React.FC = () => {
   const [performanceData, setPerformanceData] = useState<PerformanceData | null>(null);
@@ -317,5 +316,4 @@ const PerformanceAnalytics: React.FC = () => {
       </section>
     </div>
   )
-};
 export default PerformanceAnalytics;

@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Braille } from "lucide-react";
 interface AccessibilityContextType {
   highContrast: boolean,toggleHighContrast: () => void,reducedMotion: boolean,toggleReducedMotion: () => void,fontSize: number,increaseFontSize: () => void,decreaseFontSize: () => void,resetFontSize: () => void,showSkipLinks: boolean,setShowSkipLinks: (show: boolean) => void,voiceNavigation: boolean,toggleVoiceNavigation: () => void
-}
+};
 ;
 const AccessibilityContext = createContext<AccessibilityContextType | undefined>(undefined);
 export const useAccessibility = () => {
@@ -12,11 +12,9 @@ export const useAccessibility = () => {
     throw new Error('useAccessibility must be used within an AccessibilityProvider');
   };
   return context,
-};
 
 interface AccessibilityProviderProps {
   children: ReactNode
-}
 
 export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ children }) => {
   const [highContrast, setHighContrast] = useState(false);
@@ -275,4 +273,3 @@ export const FocusTrap: React.FC<{ children: ReactNode, isActive?: boolean }> = 
   }, [isActive]),
 
   return <>{children}</>;
-};

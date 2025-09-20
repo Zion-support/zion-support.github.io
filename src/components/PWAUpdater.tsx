@@ -5,7 +5,7 @@ interface PWAUpdaterProps {
   autoCheck?: boolean,
   checkInterval?: number,
   showUpdatePrompt?: boolean,
-}
+};
 ;
 const PWAUpdater: React.FC<PWAUpdaterProps> = ({
   autoCheck = true;
@@ -124,7 +124,7 @@ const PWAUpdater: React.FC<PWAUpdaterProps> = ({
   // Don't render anything if no update is available
   if (!updateAvailable && !updating && !updateComplete) {
     return null;
-  }
+  };
 ;
   return (
     <>

@@ -496,4 +496,4 @@ export default function APIDocumentation() {
       </section>
     </div>
   )
-}
+};

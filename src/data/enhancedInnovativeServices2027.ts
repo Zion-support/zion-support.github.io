@@ -5,7 +5,7 @@ export interface EnhancedService2027 {
     phone: string,email: string,website: string,address: string
   },
   competitors: string[],roi: string,setupTime: string,integrations: string[],freeTier: boolean,trialPeriod: string,compliance: string[],useCases: string[]
-}
+};
 
 export const enhancedInnovativeServices2027: EnhancedService2027[] = [
   // Web3 & Metaverse Solutions
@@ -319,7 +319,7 @@ export const enhancedInnovativeServices2027: EnhancedService2027[] = [
     roi: 'Privacy compliance + collaborative AI benefits',setupTime: '2-4 months',integrations: ['AI frameworksCloud platforms', 'Data platformsAnalytics tools'],
     freeTier: false,trialPeriod: '60 days',compliance: ['GDPRHIPAA', 'SOC2Data privacy regulations'],
     useCases: ['Healthcare AIFinancial modeling', 'Research collaborationPrivacy-preserving analytics']
-  }
+  };
 ],
 
 export const enhancedInnovativeServices2027Categories = [

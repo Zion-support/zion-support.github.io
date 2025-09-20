@@ -32,7 +32,7 @@ const securityFeatures = [
   },
   {
     title: "End-to-End Encryption",description: "256-bit AES encryption for all data in transit and at rest",icon: "🔐",status: "Active",color: "from-teal-500 to-green-600"
-  }
+  };
 ];
 const complianceFeatures = [
   {
@@ -58,7 +58,7 @@ const complianceFeatures = [
       "Real-time alerts",
       "Automated compliance reporting"
     ]
-  }
+  };
 ],
 
 export function SecurityComplianceSection() {
@@ -208,4 +208,4 @@ export function SecurityComplianceSection() {
       </div>
     </section>
   )
-}
+};
