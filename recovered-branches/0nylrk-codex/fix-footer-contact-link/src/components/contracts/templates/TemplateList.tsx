@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import { ContractTemplate } from "@/types/contracts";
 import { Button } from "@/components/ui/button";
@@ -134,3 +135,14 @@ export function TemplateList({
           </AlertDialogFooter>
         </AlertDialogContent>
       </AlertDialog>
+=======
+import React from 'react';
+export function OfflineToast() {
+  return (
+    <div>
+      <h1>Component</h1>
+      <p>Component placeholder</p>
+    </div>
+  );
+}
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

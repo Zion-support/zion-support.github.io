@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import React, { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
@@ -138,3 +139,14 @@ export default function TalentProfilePage() {
         isOpen={isMessageModalOpen}
         onClose={() => setIsMessageModalOpen(false)}
       />
+=======
+import React from 'react';
+export function TalentProfilePage() {
+  return (
+    <div>
+      <h1>Component</h1>
+      <p>Component placeholder</p>
+    </div>
+  );
+}
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

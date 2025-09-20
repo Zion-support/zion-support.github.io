@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export default EnhancedScrollToTop;
 import { motion, AnimatePresence  } from 'framer-motion';
 
@@ -31,3 +32,6 @@ export default function Page() {
     </AnimatePresence>)};
 export default EnhancedScrollToTop;
 }}'"
+=======
+import React, { useState, useEffect } from 'react';
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

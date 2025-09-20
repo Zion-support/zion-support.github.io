@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, } from '@/components/ui/dialog';
  from '@/components/ui/dialog';
@@ -75,3 +76,5 @@ export function ContactPublisherModal({ isOpen, onClose, publisherName, publishe
       </DialogContent>
     </Dialog>)}
 '"`
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

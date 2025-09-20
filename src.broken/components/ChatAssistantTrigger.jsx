@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState } from 'react';
 export default function Page() {
  from '@/utils/apiClient';
@@ -20,3 +21,13 @@ export default function Page() {
       </Button>
 
       {isOpen && (<ChatAssistant isOpen={isOpen} onClose={ () => setIsOpen(false) } recipient = {
+=======
+      
+      {isOpen && (<ChatAssistant isOpen={isOpen} onClose={() => setIsOpen(false)} recipient = {
+
+  {
+
+                id: 'ai-assistant',
+                name: 'AI Assistant',
+                avatarUrl: 'https://placehold.co/64x64?text=AI',"
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

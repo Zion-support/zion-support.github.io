@@ -1,3 +1,4 @@
+<<<<<<< HEAD
  from 'lucide-react';
 
   id: string;
@@ -551,3 +552,15 @@ export function SmartNotificationSystem({
 
 // Export the addNotification function for external use
 export 
+=======
+
+type SmartNotificationSystemProps = {
+  enabled?: boolean;
+};
+
+const SmartNotificationSystem: React.FC<SmartNotificationSystemProps> = ({ enabled = true }) => {
+  if(!enabled) return null;
+  return <div className="hidden" aria-hidden="true" />};
+
+export default SmartNotificationSystem;
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

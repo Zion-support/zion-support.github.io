@@ -1,3 +1,4 @@
+<<<<<<< HEAD
   Plus,
   MessageCircle,
   Phone,
@@ -346,3 +347,24 @@ const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
           animation: bounce 2s infinite}`
       `}</style>
     </>) ;
+=======
+
+type FloatingActionButtonProps = {
+  enabled?: boolean;
+};
+
+const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({ enabled = true }) => {
+  const [open, setOpen] = useState(false);
+  if(!enabled) return null;
+  return (<button
+      onClick={() => setOpen(!open)}
+      aria-expanded={open}
+      
+      className="fixed bottom-6 right-6 z-50 p-4 rounded-full shadow-lg bg-cyan-500 hover:bg-cyan-600 text-white"
+    >
+      <Plus size={24}  />
+    </button>
+  )};
+
+export default FloatingActionButton;
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

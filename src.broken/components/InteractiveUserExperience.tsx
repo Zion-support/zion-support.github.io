@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 export default function Page() {
 ,
@@ -286,3 +287,5 @@ export default function Page() {
     </div>) };
 export { InteractiveUserExperience };
 '"
+=======
+>>>>>>> cursor/fix-netlify-build-and-merge-to-main-0cd1

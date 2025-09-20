@@ -8,50 +8,38 @@ interface Props {
 interface State {
   hasError: boolean;
   error?: Error;
-  errorInfo?: ErrorInfo;
 }
 
 class ErrorBoundary extends Component<Props, State> {
-  constructor(props: Props) {
-    super(props);
-    this.state = { hasError: false };
-  }
+  public state: State = {
+    hasError: false
+  };
 
-  static getDerivedStateFromError(error: Error): State {
+  public static getDerivedStateFromError(error: Error): State {
     return { hasError: true, error };
   }
 
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+  public componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     console.error('ErrorBoundary caught an error:', error, errorInfo);
-    this.setState({
-      error,
-      errorInfo,
-    });
+    
+    // In production, you might want to send this to an error reporting service
+    if (process.env.NODE_ENV === 'production') {
+      // Send to error reporting service
+      // errorReportingService.captureException(error, { extra: errorInfo });
+    }
   }
 
-  render() {
+  public render() {
     if (this.state.hasError) {
       return this.props.fallback || (
         <div className="error-boundary">
-          <div className="error-content">
-            <h2>Something went wrong</h2>
-            <p>We're sorry, but something unexpected happened. Please try refreshing the page.</p>
-            <button 
-              className="retry-button"
-              onClick={() => window.location.reload()}
-            >
-              Refresh Page
-            </button>
-            {process.env.NODE_ENV === 'development' && this.state.error && (
-              <details className="error-details">
-                <summary>Error Details (Development)</summary>
-                <pre>{this.state.error.toString()}</pre>
-                {this.state.errorInfo && (
-                  <pre>{this.state.errorInfo.componentStack}</pre>
-                )}
-              </details>
-            )}
-          </div>
+          <h2>Something went wrong.</h2>
+          <details style={{ whiteSpace: 'pre-wrap' }}>
+            {this.state.error && this.state.error.toString()}
+          </details>
+          <button onClick={() => this.setState({ hasError: false, error: undefined })}>
+            Try again
+          </button>
         </div>
       );
     }
