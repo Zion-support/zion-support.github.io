@@ -32,7 +32,7 @@ export default defineConfig({
 		}
 	},
 	css: {
-		postcss: false,
+		postcss: './postcss.config.js',
 		// Enable CSS code splitting and optimization
 		devSourcemap: false
 	},
